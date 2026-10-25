@@ -1,9 +1,9 @@
 ---
 title: Daily Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-10-25T20:20:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: The umbrella daily checklist linking one folder per activity type
 status: unverified
 grounded_in:
@@ -37,18 +37,19 @@ date it happened and the activity it belongs to.
 - [Shop claims](../shop-claims/INDEX.md)
 - [Hero recruitment](../hero-recruitment/INDEX.md)
 
-## Task types named later, not yet in the daily round
+## Folded into the round by the owner on 2026-10-25
 
-Named by the owner and first executed on 2026-10-25 under the task
-intake workflow. They join the round above only when the owner folds
-them in, or when their own cadence calls in a future cycle.
+Named and first executed on 2026-10-25 under the task intake
+workflow, then folded into this daily round by the owner the same
+day. From the next round on they are worked with the list above.
 
-- [Troop training](../troop-training/INDEX.md) - requeue barracks as
-  batches finish, checked each round.
-- [Truck plunder](../truck-plunder/INDEX.md) - daily caps on dispatch
-  and plunder in Intercity Trade.
-- [Alliance train](../alliance-train/INDEX.md) - board a carriage when
-  a train is in preparation.
+- [Troop training](../troop-training/INDEX.md) - check every barracks
+  and requeue any that has finished, at its highest tier.
+- [Truck plunder](../truck-plunder/INDEX.md) - dispatch own trucks up
+  to the daily trade count and plunder within the daily plunder cap,
+  weak guards only.
+- [Alliance train](../alliance-train/INDEX.md) - if a train is in
+  preparation, board a carriage with the free Like and Thank.
 
 ## Standing boundaries for every round
 

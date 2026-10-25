@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T20:12:00Z
-version: 1.5.0
+modified: 2026-10-25T20:20:00Z
+version: 1.5.1
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -57,6 +57,11 @@ grounded_in:
   type and one file per execution inside it. The earlier play-sessions
   and activity-executions layouts were moved into it with their facts
   unchanged, as noted in the day record.
+- 2026-10-25 — The owner folded the three new types into the daily
+  round the same day they were intaken — from the next round on, each
+  daily round also requeues idle barracks, dispatches and plunders
+  trucks within their daily caps, and boards the alliance train when
+  one is in preparation.
 - 2026-10-25 — First task intake round under the workflow — the owner
   named a train task, a plunder and truck task, and alliance tech.
   Troop training, truck plunder (Intercity Trade) and the alliance
