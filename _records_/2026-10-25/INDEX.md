@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-10-25T21:04:00Z
 level: L0
-version: 1.3.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round and the task intake round
+version: 1.4.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round and the second intake round
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -132,6 +132,40 @@ Not done, by design — Attack a Commander (PvP), Doom Elite and zombie kills
 (stamina spent), a 10,000 food gathering march, Arms Race point grinding,
 and the Frontline Breakthrough challenge game.
 
+## 13:42 to 14:10 — Second intake round, tasks 4 to 6 and 8
+
+The owner numbered four more tasks — passes, VIP rewards, the weekly
+alliance duel, and a standing Arms Race check every four hours. The
+first attempt at 13:42 was contested by the owner iPhone session and
+stopped by design; the owner closed the phone app and later unlocked
+the Mac, and the round completed from 13:59.
+
+- Passes — EXISTING type (shop-claims), executed on the owner claim
+  instruction. At 13:42 the Drone Parts Weekly Pass Daily Pickup was
+  claimed (drone parts times 15) and the Free Supply auto claimed
+  (ruby times 10, iron times 4) before the contest stopped the
+  session. At 13:59 the Coin Weekly Pass Daily Pickup was claimed
+  (coin item times 3) and the Super Monthly Pass was verified —
+  daily gift already Claimed in the morning, 27 days and 27 rewards
+  left. The Legendary bundle button proved to be a 19 dollars 99
+  purchase under a Claim All label and was never tapped.
+- VIP rewards — NEW type, created then executed. The account is
+  VIP 13 (1,538,920 of 2,000,000 points after the claim, 48 day
+  streak). The VIP13 Daily Freebie was claimed — a puzzle piece item
+  times 2 and food, iron and coin crates times 13 each.
+- Alliance duel — NEW type, created then checked only. League S38
+  is Starting Soon, this alliance at Gold Tier 38 - 7; the Infinite
+  Roulette balance was 0 tokens, so nothing could be claimed.
+- Arms Race — NEW type, with a standing four hourly check set the
+  same afternoon. The live Unit Progression phase showed this
+  account at 75,047 points, rank 3 in its segment, scored by the
+  12:20 training queues. All three point chests (15,000, 30,000 and
+  75,000) were claimed.
+- Cross finding — the VIP screen lists Activate the Mega Mode of
+  Trade Trucks as a VIP 13 privilege, answering the truck-plunder
+  open question — Mega Mode is unlocked on this account, its
+  dispatch effect still unobserved.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -151,7 +185,7 @@ execution file states the outcome, including not performed.
 | [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md) |
 | [Daily Missions](daily-missions/INDEX.md) | Performed in part | [1100 daily round](daily-missions/1100-daily-round.md) |
 | [Event Claims](event-claims/INDEX.md) | Performed | [1100 daily round](event-claims/1100-daily-round.md) |
-| [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md) |
+| [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md), [1342 pass claims](shop-claims/1342-pass-claims.md), [1359 pass claims](shop-claims/1359-pass-claims.md) |
 | [Hero Recruitment](hero-recruitment/INDEX.md) | Performed | [1100 daily round](hero-recruitment/1100-daily-round.md) |
 | [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |
 | [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
@@ -159,6 +193,9 @@ execution file states the outcome, including not performed.
 | [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
 | [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md) |
+| [VIP Rewards](vip-rewards/INDEX.md) | Performed | [1359 first claim](vip-rewards/1359-first-claim.md) |
+| [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [1359 intake check](alliance-duel/1359-intake-check.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed | [1402 phase check](arms-race/1402-phase-check.md) |
 
 ## Reorganisation note, 2026-10-25
 

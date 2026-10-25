@@ -1,14 +1,14 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-25T20:46:00Z
+modified: 2026-10-25T21:04:00Z
 level: L1
-version: 1.0.0
+version: 1.1.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
-  - source: task intaken at the owner direction on 2026-10-25, entry steps to be confirmed in game the same day
-  - source: owner structure direction on activity folders, 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-10-25
+  - source: owner task request naming VIP rewards, 2026-10-25
 ---
 
 
@@ -23,26 +23,45 @@ Executions are recorded in `_records_/<date>/vip-rewards/`, one file per executi
 
 ## How to enter
 
-To be confirmed in game on 2026-10-25. Expected route - from the base
-screen, open the commander profile from the avatar at the top left,
-then open the VIP panel from the VIP badge. A VIP shortcut may also
-sit next to the diamond counter.
+Measured on 2026-10-25.
+
+- Tap the commander avatar at the top left of the base screen to open
+  MY PROFILE.
+- Tap the gold VIP badge on the profile (VIP13 on this account, with
+  a red dot when the freebie is waiting). The VIP screen opens.
 
 ## Cadence
 
-- The daily VIP gift can be claimed once per day.
-- VIP level milestone rewards are claimed once, when a level is reached.
+- The VIP Daily Freebie can be claimed once per day. After the claim
+  its button becomes a countdown to the 19:00 daily reset (about
+  4 hours 59 minutes at 14:00 on 2026-10-25).
+- Login points - the screen offered 200 VIP points for tomorrow
+  login, on a 48 day streak. Points appear to land without a claim.
+- VIP level milestone rewards are claimed once, when a level is
+  reached. None was pending at the first check.
 
 ## Scope and availability
 
-- VIP level grows with VIP points, which historically come from
-  spending and from daily gifts. The level on this account is to be
-  recorded at the first check.
-- Claims themselves are free. Any button that asks for payment is out
-  of scope and needs owner approval under the recording rules.
+- This account is VIP 13 - 1,538,920 of 2,000,000 points toward
+  VIP 14 after the first claim (1,538,720 on entry).
+- The Daily Freebie scales with level - at VIP 13 it paid a puzzle
+  piece item times 2 and food, iron and coin crates times 13 each.
+- The VIP Exclusive offer on the same screen (99 dollars 99) is a
+  purchase and out of scope. The points plus button and the cart
+  shortcut lead to spending - never tapped.
+- VIP 13 privileges include Activate the Mega Mode of Trade Trucks,
+  which unlocks the Mega Mode in
+  [truck-plunder](../truck-plunder/INDEX.md).
+
+## What is known from 2026-10-25
+
+- VIP13 privileges as displayed - Crafting Speed 50 percent,
+  Research Speed 20 percent, Food, Iron and Coin Output 25 percent,
+  Construction Speed 50 percent, March Speed 15 percent, Max Units
+  5 percent, Mega Mode of Trade Trucks active.
+- First freebie claim itemised in the execution record of this date.
 
 ## Open questions
 
-- The exact entry route and this account VIP level and points.
-- What the daily gift pays at this level, and whether the gift scales
-  with level.
+- Whether the freebie contents rotate or are fixed per level.
+- What reaching VIP 14 pays and unlocks.

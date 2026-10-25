@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T20:47:00Z
-version: 1.6.0
+modified: 2026-10-25T21:04:00Z
+version: 1.6.1
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -12,11 +12,6 @@ grounded_in:
 
 ## Current
 
-- [ ] Finish the 2026-10-25 intake round for tasks 4 to 6 in game -
-  the Coin Weekly Pass daily pickup, the Super Monthly Pass state,
-  the first VIP rewards claim, and the first Alliance Duel check.
-  Metadata for all three types is registered; execution waits for
-  the Mac to be unlocked (it locked while the owner was out).
 - [ ] Arms Race standing checks - the owner set a check every four
   hours on 2026-10-25 (cron lastwar-arms-race-4h-check). Each run
   completes what can be completed in the live phase inside the
@@ -47,6 +42,12 @@ grounded_in:
 
 ## Completed
 
+- 2026-10-25 — Finished the intake round for tasks 4 to 6 in game -
+  Coin Weekly Pass pickup claimed, Super Monthly Pass verified
+  claimed, VIP13 Daily Freebie claimed, Alliance Duel checked
+  (League S38 starting soon, roulette balance 0), and the live Arms
+  Race chests claimed at 75,047 points. The VIP screen also answered
+  the truck Mega Mode question - a VIP 13 privilege, unlocked here.
 - 2026-10-25 — Intaken tasks 4 to 6 and 8 at the owner numbering -
   passes fold into shop-claims (metadata updated with measured pass
   entry, cadence and scope), and three new types were registered -

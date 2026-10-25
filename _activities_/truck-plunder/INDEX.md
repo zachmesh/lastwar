@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-10-25T21:04:00Z
 level: L1
-version: 1.0.0
+version: 1.1.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -88,9 +88,13 @@ train also runs on this screen as a trade vehicle.
   other players run golden trains as trade vehicles, so parts of this
   system may be season shaped. Truck trade itself is a permanent
   system per the guides.
-- Mega Mode buttons appear on the Your Truck screen and in the
-  dispatch panel, unexplained. The fifth trade in the daily count of 5
-  may be a Mega dispatch - open question below.
+- Mega Mode is a VIP privilege - the VIP screen lists Activate the
+  Mega Mode of Trade Trucks among the VIP 13 privileges, and this
+  account is VIP 13, so Mega Mode is unlocked here (confirmed
+  2026-10-25 on the VIP screen, see
+  [vip-rewards](../vip-rewards/INDEX.md)). What a Mega dispatch does
+  differently is still unobserved. The fifth trade in the daily
+  count of 5 may be a Mega dispatch - open question below.
 
 ## What is known from 2026-10-25
 
@@ -123,7 +127,9 @@ Observed in game on this account, first execution 2026-10-25.
 
 ## Open questions
 
-- What Mega Mode does, and what the fifth daily trade is.
+- What a Mega dispatch does differently, and what the fifth daily
+  trade is. Mega Mode itself is a VIP 13 privilege, unlocked on this
+  account.
 - Whether the free refresh is one per day or one per truck - only the
   first truck of the day showed Free, later panels priced refreshes at
   1 contract from the start.
