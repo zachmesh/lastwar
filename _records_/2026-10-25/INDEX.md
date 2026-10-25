@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T21:04:00Z
+modified: 2026-10-25T21:38:00Z
 level: L0
-version: 1.4.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round and the second intake round
+version: 1.5.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round and the recheck that found the Star Ceremony
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -166,6 +166,31 @@ the Mac, and the round completed from 13:59.
   open question — Mega Mode is unlocked on this account, its
   dispatch effect still unobserved.
 
+## 14:26 to 14:36 — Recheck and the Star Ceremony
+
+The owner asked for a recheck to make sure nothing was missed, then
+corrected the one real miss himself — task 6, "weekly alliance dual
+ceremony", is the Alliance Star Ceremony, the weekly reward claim
+behind the trophy icon on the base screen, not the VS duel screens
+checked at 13:59. He taught the procedure in session — keep
+forwarding, do not wait for the presenter, act on actionable icons
+(the emotes count), then keep forwarding — and asked for love to at
+least 3 winners.
+
+- Event 38 played end to end — 13 award steps plus the MVP finale.
+  Six love emotes sent (the owner minimum was 3), each verified by
+  the winner count rising. Two award cards were forwarded past
+  before they could be acted on, recorded in the execution file.
+- Rewards claimed — the three emote tiers, the finale member
+  rewards for 14 Alliance Stars (gift boxes, badges, diamonds
+  4.0K and 1 minute speedups), and a Participation Prize of ruby
+  times 500. The trophy icon is gone from the base screen.
+- The rest of the recheck held — repository clean and in sync at
+  32f9917, the Arms Race cron enabled with its first run at about
+  17:47, passes and VIP fully claimed, trucks and the train still
+  in their measured states. The floating text fragments seen on the
+  base were ambient tooltips and tickers, not claim prompts.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -194,7 +219,7 @@ execution file states the outcome, including not performed.
 | [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed | [1359 first claim](vip-rewards/1359-first-claim.md) |
-| [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [1359 intake check](alliance-duel/1359-intake-check.md) |
+| [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
 | [Arms Race](arms-race/INDEX.md) | Performed | [1402 phase check](arms-race/1402-phase-check.md) |
 
 ## Reorganisation note, 2026-10-25

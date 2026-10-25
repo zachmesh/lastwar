@@ -1,14 +1,14 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-25T21:04:00Z
-level: L1
-version: 1.1.0
-description: The weekly Alliance Duel event - themed days, points and reward chests, one activity folder for duel knowledge
-status: unverified
+modified: 2026-10-25T21:38:00Z
+version: 1.2.0
+description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-10-25
+  - source: owner correction on 2026-10-25 - the task names the Star Ceremony, taught step by step in session
 ---
 
 
@@ -24,19 +24,63 @@ Grinding points by spending resources or speedups is a decision for
 the owner, not part of a claim check.
 Executions are recorded in `_records_/<date>/alliance-duel/`, one file per execution.
 
+The weekly claim of this cycle is the Alliance Star Ceremony. The
+owner named this task "weekly alliance dual ceremony" and corrected
+the first reading on 2026-10-25 - the claim is the ceremony, not
+anything on the VS duel screens. Never close a duel check without
+looking for the ceremony trophy icon on the base screen.
+
 ## How to enter
 
 Measured on 2026-10-25.
 
-- Tap the gold VS medallion on the right side of the base screen,
-  below the Events icon. ALLIANCE DUEL opens with two tabs - the
-  duel week tab and Infinite Roulette.
+- Duel screens — tap the gold VS medallion on the right side of the
+  base screen, below the Events icon. ALLIANCE DUEL opens with two
+  tabs - the duel week tab and Infinite Roulette.
+- Star Ceremony — tap the trophy icon on the right side of the base
+  screen, beside the Alliance icon. It opens [AP3x] ALLIANCE STAR
+  CEREMONY (EVENT 38). The icon is present only while a ceremony is
+  waiting; it disappears once the ceremony has been played and
+  claimed.
+
+## The Star Ceremony — how it runs
+
+Measured on Event 38, 2026-10-25, under the owner procedure.
+
+- The ceremony is a staged awards show. A progress track along the
+  bottom walks 13 award steps and ends in an MVP finale. Each step
+  honours one member for the week — S2 Big Shot, Little Sun, Ice
+  Sculptor, 3v3 Brawl Star, Alliance Champion, Star of Desert Storm,
+  Guardian Defender, Divine Healer, Devil Trainer, Doom Elite
+  Slayer and more.
+- Procedure set by the owner — keep tapping the forward button at
+  bottom right and do not wait for the presenter. When actionable
+  icons appear, act on them, then keep forwarding. The emote
+  reaction bar is actionable — the emotes are the mechanic, and
+  the owner asks for love (the heart emote) to at least 3 winners.
+- Measured caution — forwarding too fast can skip an award detail
+  card entirely (two cards were skipped in Event 38). When a winner
+  card is up with the emote bar visible, send the emote first, then
+  forward.
+- The chest icon at top right shows emotes sent against the tier
+  target (6 of 3 at the end of Event 38) and opens the Ceremony
+  Rewards panel. Rewards unlock at 1, 2 and 3 emotes sent — gift
+  boxes, rubies and badges per tier.
+- The finale puts a golden chest on the podium. Tapping it pays
+  every alliance member extra rewards scaled by the stars awarded
+  (14 stars in Event 38), and a separate Participation Prize
+  follows (ruby times 500 in Event 38). The Details overview shows
+  the star winners themselves receive Diamonds in Grand, 1st and
+  2nd Prize tiers.
 
 ## Cadence
 
 - Weekly league cycle. At the first check (Sunday 2026-10-25) the
   duel tab read Starting Soon for Alliance Duel League S38 - the
   week had not opened.
+- The Star Ceremony for the settled week is claimable on the
+  weekend — Event 38 was played and claimed on Sunday 2026-10-25,
+  while League S38 showed as calculating promotions and demotions.
 - Infinite Roulette spins and points reset every Sunday at 24:00 as
   displayed; the countdown matched the 19:00 local daily reset.
 
@@ -47,10 +91,16 @@ Measured on 2026-10-25.
 - Infinite Roulette needs spin tokens - balance 0 at the check,
   wheel progress 2 of 10. Spinning without tokens would mean buying
   them, which is out of scope without owner approval.
-- Between weeks there is nothing to claim on either tab.
+- The ceremony itself is free to play and claim — emotes and the
+  finale chest cost nothing. Skipping it leaves the week rewards
+  unclaimed, which is what the 1359 check did before the owner
+  correction.
 
 ## Open questions
 
 - The day themes and scoring once League S38 opens, and the current
   opponent.
 - How spin tokens are earned inside the duel week.
+- How long the ceremony trophy icon waits if unplayed, and whether
+  a skipped award card can be revisited (Event 38 suggests not).
+- Who the MVP finale honours and how the winners list is ordered.
