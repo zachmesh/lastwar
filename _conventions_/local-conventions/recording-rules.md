@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:07:00Z
+modified: 2026-10-25T19:18:00Z
 level: L2
-version: 1.2.0
+version: 1.3.0
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -49,6 +49,15 @@ builds_on:
   by opening that date, then that activity. Records are append-only
   under C1. A correction is appended as a new record and never rewrites
   the original entry.
+
+## Task intake
+
+How a task the owner names is handled — check whether its task type
+metadata exists, create it first if it does not, execute and log new
+types, and only check and update existing types without executing —
+is stated in [task intake workflow](task-intake-workflow.md). Task type
+metadata always keeps its own top level folder, `_activities_`, and is
+never nested inside `_records_`.
 
 ## Language and scope
 

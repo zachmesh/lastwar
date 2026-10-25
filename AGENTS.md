@@ -1,8 +1,8 @@
 ---
 title: Last War Agent Entry Point
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T17:56:00Z
-version: 1.0.0
+modified: 2026-10-25T19:18:00Z
+version: 1.1.0
 description: Project instructions and adoption of reflection typed-folder conventions
 grounded_in:
   - source: owner request to adopt dtadpole/reflection shared conventions
@@ -40,6 +40,16 @@ They are human-only to amend (C3), so this repository never copies or edits
 them. Play records are immutable trajectories (C1). Knowledge is versioned
 and never destroyed (C2). Every claim carries a resolvable evidence chain or
 an explicit unverified label (C4, C5).
+
+## Task intake
+
+When the owner names a task, check `_activities_` first. Task type
+metadata has its own top level folder there, separate from `_records_`
+and never nested in it. If the type is missing, create and register its
+metadata folder, then execute it and log the record by date. If it
+already exists, check it, update it if appropriate, and skip execution
+for that turn - future cycles execute it. The full rule is the
+[task intake workflow](_conventions_/local-conventions/task-intake-workflow.md).
 
 ## Delivery
 

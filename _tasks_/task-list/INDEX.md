@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:07:00Z
-version: 1.3.0
+modified: 2026-10-25T19:18:00Z
+version: 1.4.0
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -50,3 +50,9 @@ grounded_in:
   type and one file per execution inside it. The earlier play-sessions
   and activity-executions layouts were moved into it with their facts
   unchanged, as noted in the day record.
+- 2026-10-25 — Adopted the task intake workflow at the owner direction -
+  task type metadata keeps its own top level folder in `_activities_`,
+  separate from `_records_`; a newly named task is checked first, its
+  metadata created and noted if missing, then executed and logged; an
+  existing type is only checked and updated, with execution skipped
+  until a future cycle.

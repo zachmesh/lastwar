@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:07:00Z
-version: 1.2.0
+modified: 2026-10-25T19:18:00Z
+version: 1.3.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -12,6 +12,10 @@ grounded_in:
 
 Type folder, registered locally in
 [typed-folder adoption](../_conventions_/local-conventions/typed-folder-adoption.md).
+This is the top level home of task type metadata, separate from
+`_records_` and never nested inside it. New task types are added here
+first, under the
+[task intake workflow](../_conventions_/local-conventions/task-intake-workflow.md).
 One instance folder per kind of activity the account can engage in. Each
 instance is the accumulating source of knowledge for that kind - how it
 works, its costs, caps and lessons. An execution is never recorded by
