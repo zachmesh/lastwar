@@ -1,9 +1,9 @@
 ---
 title: Task Intake Workflow
 created: 2026-10-25T19:18:00Z
-modified: 2026-10-25T19:18:00Z
+modified: 2026-10-25T20:12:00Z
 level: L2
-version: 1.0.0
+version: 1.1.0
 description: How a newly named task is checked, registered as a task type, executed and recorded
 status: unverified
 grounded_in:
@@ -33,6 +33,23 @@ The owner will name more tasks over time. This workflow governs each one.
   reuses a task type name is grouping only - it indexes and holds
   executions and links back to the metadata folder. Knowledge is never
   accumulated inside a record subfolder.
+
+## What metadata must record
+
+At the owner direction on 2026-10-25, every task type folder records,
+as it is learned in game -
+
+- **How to enter** - the exact entry path, screen by screen, so the
+  task can be found again without rediscovery.
+- **Cadence** - how often the task is expected to be executed, and
+  any daily or weekly cap that paces it.
+- **Scope and availability** - limits, unlock conditions, and whether
+  the task is season specific or always available.
+
+These join the standing sections - what the task is, how it is done,
+what is known, limits and open questions. When an existing folder is
+checked under this workflow and one of these is missing, add it from
+observation where possible.
 
 ## When the owner names a task
 

@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:07:00Z
+modified: 2026-10-25T20:12:00Z
 level: L0
-version: 1.2.0
-description: Install on Mac mini, Game Center login, first base snapshot and first daily round
+version: 1.3.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round and the task intake round
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -83,6 +83,51 @@ later reached 149,351,954 after the research completions. Three other mines
 checked afterwards read Lv.28 and Lv.29. Recorded as highly likely, not
 directly confirmed. No purchase was made at any point.
 
+## 12:20 to about 13:02 — Task intake round
+
+The owner named three tasks — a train task, a plunder and truck task,
+and alliance tech — and set two standing metadata rules in the same
+minutes — record how to enter each task, and record its cadence and
+its scope and availability. Each named task was checked against the
+system first, under the task intake workflow.
+
+- Session start — reopening the game on the Mac raised a prompt that
+  the account was active on a different device. Confirm moved the
+  active session to the Mac; the app relaunched once and returned to
+  the base. Start snapshot — power 149,351,954, stamina 22 to 23,
+  food 299.4M, iron 295.8M, coin 49.6M as displayed.
+- Troop training — NEW type, created then executed. All four barracks
+  queued at their highest tier — Lv.30 barracks 793 T10 at 5.5M food
+  and 5.5M iron over 1 day 17 hours; Lv.27 barracks 726 T9 at 4.1M
+  each over 1 day 10 hours; Lv.24 barracks 666 T8 at 2.9M each over
+  1 day 4 hours; a fourth barracks 613 T7 at 2.0M each over 23 hours.
+  Total 14.5M food and 14.5M iron. No Finish Now, no upgrade shortcut.
+- Alliance train — NEW type, created then executed. The literal train
+  behind the train task name. Read the Train Operation Guidelines in
+  full, then boarded carriage 1 of the AP3x train in preparation —
+  conductor Abyss Apex, Train Rating 82,650, about 3 hours 20 minutes
+  to departure. Boarding used the free Like and Thank; no Trade
+  Contract was gifted (stock 127). Carriage 1 went from 2 of 7 to
+  3 of 7 riders.
+- Truck plunder — NEW type, created then executed. One Quick Plunder
+  against the N truck of [1ppp]Chucks army 1705 (warzone 2090, Lv.28,
+  guard 7.6M) — won, yielding iron 273.4K, food 273.4K, coin 173.9K
+  and two chest stacks of 20. Then all four own trucks dispatched —
+  the first rolled N and the one free refresh of the day rerolled it
+  to SSR (iron 3.0M, food 3.0M, coin 1.9M); the other three rolled UR
+  (iron 3.8M, food 3.8M, coin 2.4M each). Journeys run about 4 to 5
+  hours. Trade Count ended 4 of 5, Plunder Count 1 of 4. No Trade
+  Contract or diamond was spent — later refreshes cost 1 contract
+  each and were left unused.
+- Alliance tech — EXISTING type (alliance-donations), checked only,
+  execution skipped under the intake workflow. War tab — Troop
+  Movement 5 of 10, Rallied HP 5 of 10, Rallied Attack 7 of 10,
+  Rallied Defense 6 of 10. Tech Donation Today stood at 300 points,
+  matching the morning five coin donations. No donation was made.
+- Metadata — the three new types were registered with entry, cadence
+  and scope sections, and the intake workflow now requires those
+  sections for every task type.
+
 Not done, by design — Attack a Commander (PvP), Doom Elite and zombie kills
 (stamina spent), a 10,000 food gathering march, Arms Race point grinding,
 and the Frontline Breakthrough challenge game.
@@ -100,7 +145,7 @@ execution file states the outcome, including not performed.
 | [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md) |
 | [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md) |
 | [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md) |
-| [Alliance Donations](alliance-donations/INDEX.md) | Performed | [1100 daily round](alliance-donations/1100-daily-round.md) |
+| [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md) |
 | [Season Warming](season-warming/INDEX.md) | Performed | [1100 daily round](season-warming/1100-daily-round.md) |
 | [Secret Missions](secret-missions/INDEX.md) | Performed in part | [1100 daily round](secret-missions/1100-daily-round.md) |
 | [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md) |
@@ -111,6 +156,9 @@ execution file states the outcome, including not performed.
 | [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |
 | [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
 | [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md) |
+| [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md) |
+| [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md) |
 
 ## Reorganisation note, 2026-10-25
 

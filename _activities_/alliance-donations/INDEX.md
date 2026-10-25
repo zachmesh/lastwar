@@ -1,14 +1,15 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T19:07:00Z
+modified: 2026-10-25T20:12:00Z
 level: L1
-version: 1.0.1
+version: 1.1.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: owner task request naming alliance tech, 2026-10-25
 ---
 
 
@@ -21,12 +22,40 @@ donation knowledge - costs, buttons, daily limits and which technology is
 the current target. Executions are recorded in
 `_records_/<date>/alliance-donations/`, one file per execution.
 
+Alias - the owner named this activity alliance tech on 2026-10-25. The
+in-game screen is titled ALLIANCE TECHS, and donating there is this
+activity. Not a separate type.
+
+## How to enter
+
+- Tap Alliance at the bottom right of the base screen.
+- Tap the Alliance Techs tile (the flask icon) in the alliance menu.
+- The screen has Development and War tabs over a technology tree.
+  Tapping a technology node opens its donation panel.
+
 ## How it is done
 
-- Open Alliance, then Alliance Techs.
 - Donate to the current target technology with the coin button.
 - The diamond button is never used without the owner approval, under the
   recording rules on spending.
+
+## Cadence
+
+- Daily. The coin button allows 30 donations a day.
+- The screen footer tracks Tech Donation Today in contribution points,
+  with a daily reward at 1000 points. Five coin donations earned 300
+  points on 2026-10-25, so a coin donation is worth 60 points and the
+  1000 point reward sits beyond the 5 donations the daily mission asks
+  for.
+
+## Scope and availability
+
+- Always available while in an alliance, not season specific.
+- War tab tree as of the 2026-10-25 check - Troop Movement 5 of 10,
+  Rallied HP 5 of 10, Rallied Attack 7 of 10, Rallied Defense 6 of 10,
+  and the next node below at 1 of 10. Rallied Attack carries the
+  recommended marker.
+- A Development tab exists beside War. Its nodes were not inspected.
 
 ## What is known from 2026-10-25
 
@@ -36,7 +65,13 @@ the current target. Executions are recorded in
   The count shown fell from 30 to 25 after five donations.
 - Five donations completed the daily mission Donate to Alliance Tech
   5 Times. The diamond button shown cost 2 diamonds and was not used.
+- Checked again at about 13:00 the same day under the task intake
+  workflow - Rallied Attack still 7 of 10, Tech Donation Today 300
+  points. No further donation was made in that visit. Recorded as a
+  checked only execution.
 
 ## Open questions
 
 - Who sets the donation target, and when it changes.
+- What the Development tab technologies are, and whether donations
+  there share the same daily limit and points.

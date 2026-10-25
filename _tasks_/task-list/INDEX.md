@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:18:00Z
-version: 1.4.0
+modified: 2026-10-25T20:12:00Z
+version: 1.5.0
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -18,7 +18,14 @@ grounded_in:
 - [ ] Record the three squads in `_knowledge_` — heroes, levels, gear and
   troop types, from the game screens.
 - [ ] Test the device-switch rule — whether Mac login ends the iPhone
-  session, and the safe order of switching.
+  session, and the safe order of switching. Progress 2026-10-25 —
+  opening the game on the Mac while the account was live elsewhere
+  raised an active on a different device prompt; Confirm moved the
+  active session to the Mac and the app relaunched into the base. What
+  the iPhone side shows at that moment is still unobserved.
+- [ ] Backfill the entry, cadence, and scope and availability sections
+  into the 14 activity folders created before the 2026-10-25 metadata
+  standard, checking each against this account as it is done.
 - [ ] Map the six HUD resource figures from the 2026-10-25 snapshot to
   their resources, in game.
 - [ ] Spot-check guide claims in game — the counter triangle, HQ 31
@@ -50,6 +57,17 @@ grounded_in:
   type and one file per execution inside it. The earlier play-sessions
   and activity-executions layouts were moved into it with their facts
   unchanged, as noted in the day record.
+- 2026-10-25 — First task intake round under the workflow — the owner
+  named a train task, a plunder and truck task, and alliance tech.
+  Troop training, truck plunder (Intercity Trade) and the alliance
+  train were new - metadata created and registered, then executed and
+  recorded the same day (four barracks queued, four trucks dispatched,
+  one plunder won, carriage 1 of the alliance train boarded). Alliance
+  tech matched the existing alliance-donations type - alias recorded,
+  tech state checked, execution skipped per the workflow.
+- 2026-10-25 — Metadata standard extended at the owner direction -
+  every task type folder now records how to enter the task, its
+  cadence, and its scope and availability, in the task intake workflow.
 - 2026-10-25 — Adopted the task intake workflow at the owner direction -
   task type metadata keeps its own top level folder in `_activities_`,
   separate from `_records_`; a newly named task is checked first, its

@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:18:00Z
-version: 1.3.0
+modified: 2026-10-25T20:12:00Z
+version: 1.4.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -39,3 +39,6 @@ file per execution, under the date it happened.
 - [`research-queue/`](research-queue/INDEX.md)
 - [`building-queues/`](building-queues/INDEX.md)
 - [`resource-collection/`](resource-collection/INDEX.md)
+- [`troop-training/`](troop-training/INDEX.md)
+- [`truck-plunder/`](truck-plunder/INDEX.md)
+- [`alliance-train/`](alliance-train/INDEX.md)

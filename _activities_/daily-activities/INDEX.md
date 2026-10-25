@@ -1,9 +1,9 @@
 ---
 title: Daily Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:07:00Z
+modified: 2026-10-25T20:12:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: The umbrella daily checklist linking one folder per activity type
 status: unverified
 grounded_in:
@@ -36,6 +36,19 @@ date it happened and the activity it belongs to.
   [alliance donations](../alliance-donations/INDEX.md)
 - [Shop claims](../shop-claims/INDEX.md)
 - [Hero recruitment](../hero-recruitment/INDEX.md)
+
+## Task types named later, not yet in the daily round
+
+Named by the owner and first executed on 2026-10-25 under the task
+intake workflow. They join the round above only when the owner folds
+them in, or when their own cadence calls in a future cycle.
+
+- [Troop training](../troop-training/INDEX.md) - requeue barracks as
+  batches finish, checked each round.
+- [Truck plunder](../truck-plunder/INDEX.md) - daily caps on dispatch
+  and plunder in Intercity Trade.
+- [Alliance train](../alliance-train/INDEX.md) - board a carriage when
+  a train is in preparation.
 
 ## Standing boundaries for every round
 
