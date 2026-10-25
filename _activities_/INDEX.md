@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T20:12:00Z
-version: 1.4.0
+modified: 2026-10-25T20:46:00Z
+version: 1.5.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -42,3 +42,6 @@ file per execution, under the date it happened.
 - [`troop-training/`](troop-training/INDEX.md)
 - [`truck-plunder/`](truck-plunder/INDEX.md)
 - [`alliance-train/`](alliance-train/INDEX.md)
+- [`vip-rewards/`](vip-rewards/INDEX.md)
+- [`alliance-duel/`](alliance-duel/INDEX.md)
+- [`arms-race/`](arms-race/INDEX.md)

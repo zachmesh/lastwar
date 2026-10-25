@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T20:20:00Z
-version: 1.5.1
+modified: 2026-10-25T20:47:00Z
+version: 1.6.0
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -12,6 +12,15 @@ grounded_in:
 
 ## Current
 
+- [ ] Finish the 2026-10-25 intake round for tasks 4 to 6 in game -
+  the Coin Weekly Pass daily pickup, the Super Monthly Pass state,
+  the first VIP rewards claim, and the first Alliance Duel check.
+  Metadata for all three types is registered; execution waits for
+  the Mac to be unlocked (it locked while the owner was out).
+- [ ] Arms Race standing checks - the owner set a check every four
+  hours on 2026-10-25 (cron lastwar-arms-race-4h-check). Each run
+  completes what can be completed in the live phase inside the
+  standing limits and records it under `_records_/<date>/arms-race/`.
 - [ ] Confirm each activity folder in `_activities_` item by item
   against this account, then revise it - the checklist was split into
   one folder per activity type on 2026-10-25.
@@ -38,6 +47,12 @@ grounded_in:
 
 ## Completed
 
+- 2026-10-25 — Intaken tasks 4 to 6 and 8 at the owner numbering -
+  passes fold into shop-claims (metadata updated with measured pass
+  entry, cadence and scope), and three new types were registered -
+  vip-rewards, alliance-duel and arms-race. Partial execution the
+  same afternoon - the Drone Parts weekly pickup and the Free Supply
+  auto claim were collected before the session was contested.
 - 2026-10-25 — Installed Last War natively on the Mac mini and logged in
   to [AP3x]Bears Lair through Game Center. Evidence in
   [account and platforms](../../_knowledge_/account-and-platforms/INDEX.md).
