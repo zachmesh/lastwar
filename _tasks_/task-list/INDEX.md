@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T18:58:00Z
-version: 1.2.0
+modified: 2026-10-25T19:07:00Z
+version: 1.3.0
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -45,3 +45,8 @@ grounded_in:
   knowledge for its kind, and added `_records_/activity-executions/`
   with one file per activity, backfilled with the 2026-10-25 round, so
   whether and when each activity was performed can be looked back on.
+- 2026-10-25 — Reorganised `_records_` by date first, at the owner
+  direction - `_records_/2026-10-25/` holds one subfolder per activity
+  type and one file per execution inside it. The earlier play-sessions
+  and activity-executions layouts were moved into it with their facts
+  unchanged, as noted in the day record.

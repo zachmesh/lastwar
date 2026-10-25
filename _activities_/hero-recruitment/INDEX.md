@@ -1,9 +1,9 @@
 ---
 title: Hero Recruitment
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Free hero recruitment pulls on the banners, one activity folder for recruitment knowledge
 status: unverified
 grounded_in:
@@ -20,7 +20,7 @@ Taking the free recruitment pull on each banner when its timer is ready.
 This folder accumulates recruitment knowledge - banners, free pull
 timers, pity and wish counters. Spending tickets beyond the free pulls
 needs the owner approval. Executions are recorded in
-`_records_/activity-executions/hero-recruitment.md`.
+`_records_/<date>/hero-recruitment/`, one file per execution.
 
 ## How it is done
 

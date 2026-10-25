@@ -1,9 +1,9 @@
 ---
 title: Account and Platforms
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T17:56:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: The account, its Game Center binding, and the verified Mac install and login route
 status: unverified
 grounded_in:
@@ -22,7 +22,7 @@ grounded_in:
 - Apple account `zhenchen2000@icloud.com`. Game Center nickname
   **HidingAnt504**, shown by the update screen during first download.
 - Resource figures at that check are recorded in the
-  [2026-10-25 play record](../../_records_/play-sessions/2026-10-25.md),
+  [2026-10-25 play record](../../_records_/2026-10-25/INDEX.md),
   not restated here.
 
 ## Mac mini install, verified 2026-10-25

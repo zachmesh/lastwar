@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -19,7 +19,7 @@ grounded_in:
 Opening Mail, claiming every claimable reward attachment, and checking
 report tabs for anything that needs a decision. This folder accumulates
 mail knowledge - tab behaviour, claim flow and recurring reward senders.
-Executions are recorded in `_records_/activity-executions/mail-rewards.md`.
+Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execution.
 
 ## How it is done
 

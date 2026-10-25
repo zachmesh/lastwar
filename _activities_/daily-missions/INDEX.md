@@ -1,9 +1,9 @@
 ---
 title: Daily Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: The Mission daily task list and activity chests, one activity folder for mission knowledge
 status: unverified
 grounded_in:
@@ -19,7 +19,7 @@ grounded_in:
 Working the Mission daily task list to raise activity points and claim
 the activity chests. This folder accumulates mission knowledge - the task
 set, point values and chest thresholds. Executions are recorded in
-`_records_/activity-executions/daily-missions.md`.
+`_records_/<date>/daily-missions/`, one file per execution.
 
 ## How it is done
 

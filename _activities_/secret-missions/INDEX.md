@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -19,7 +19,7 @@ grounded_in:
 Dispatching the Secret Command Post tasks and assisting allies with
 theirs. This folder accumulates secret mission knowledge - task types,
 durations, rewards and the assist cap. Executions are recorded in
-`_records_/activity-executions/secret-missions.md`.
+`_records_/<date>/secret-missions/`, one file per execution.
 
 ## How it is done
 

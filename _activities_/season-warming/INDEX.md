@@ -1,9 +1,9 @@
 ---
 title: Season Warming
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Season 2 warming assists to allies, one activity folder for warming knowledge
 status: unverified
 grounded_in:
@@ -19,7 +19,7 @@ grounded_in:
 Assisting allies to warm their bases in Season 2 Polar Storm. This folder
 accumulates warming knowledge - costs, targets and season task progress.
 Background mechanics live in `_knowledge_/season-two-winter`.
-Executions are recorded in `_records_/activity-executions/season-warming.md`.
+Executions are recorded in `_records_/<date>/season-warming/`, one file per execution.
 
 ## How it is done
 

@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T18:58:00Z
-version: 1.1.0
+modified: 2026-10-25T19:07:00Z
+version: 1.2.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -15,9 +15,8 @@ Type folder, registered locally in
 One instance folder per kind of activity the account can engage in. Each
 instance is the accumulating source of knowledge for that kind - how it
 works, its costs, caps and lessons. An execution is never recorded by
-editing a checklist - it goes to `_records_/activity-executions/` under
-the same activity name, with the day narrative in
-`_records_/play-sessions/`.
+editing a checklist - it goes to `_records_/<date>/<activity>/`, one
+file per execution, under the date it happened.
 
 ## Contents
 

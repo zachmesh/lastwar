@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
 
 Claiming the gifts the alliance generates for its members. This folder
 accumulates gift knowledge - gift levels, tiers and claim flow.
-Executions are recorded in `_records_/activity-executions/alliance-gifts.md`.
+Executions are recorded in `_records_/<date>/alliance-gifts/`, one file per execution.
 
 ## How it is done
 

@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -20,7 +20,7 @@ Collecting accumulated building output - the resource bubbles over
 buildings and the Armed Truck loot. This folder accumulates collection
 knowledge - bubble behaviour, capacity and truck timing.
 Executions are recorded in
-`_records_/activity-executions/resource-collection.md`.
+`_records_/<date>/resource-collection/`, one file per execution.
 
 ## How it is done
 

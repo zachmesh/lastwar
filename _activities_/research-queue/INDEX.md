@@ -1,9 +1,9 @@
 ---
 title: Research Queue
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Completing finished research and keeping research slots working, one activity folder for research knowledge
 status: unverified
 grounded_in:
@@ -21,7 +21,7 @@ applies, and noting idle slots. This folder accumulates research
 knowledge - slot count, completion flow and research directions.
 Starting a new research is a direction decision, so idle slots are
 reported for the owner choice unless a standing choice exists.
-Executions are recorded in `_records_/activity-executions/research-queue.md`.
+Executions are recorded in `_records_/<date>/research-queue/`, one file per execution.
 
 ## How it is done
 

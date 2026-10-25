@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Radar stored tasks and Quick Execute, one activity folder for radar knowledge
 status: unverified
 grounded_in:
@@ -19,7 +19,7 @@ grounded_in:
 Clearing radar tasks - claiming stored rewards first, then spending
 stamina on Quick Execute batches. This folder accumulates radar
 knowledge - storage cap, stamina costs and reward patterns.
-Executions are recorded in `_records_/activity-executions/radar-tasks.md`.
+Executions are recorded in `_records_/<date>/radar-tasks/`, one file per execution.
 
 ## How it is done
 

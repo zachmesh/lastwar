@@ -1,9 +1,9 @@
 ---
 title: Building Queues
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Checking build queues and upgrade state, one activity folder for building knowledge
 status: unverified
 grounded_in:
@@ -21,7 +21,7 @@ noting idle slots. This folder accumulates building knowledge - queue
 count, upgrade times and panel safety lessons. Starting an upgrade
 spends resources and locks a queue for a long time, so it needs the
 owner choice unless it was already queued. Executions are recorded in
-`_records_/activity-executions/building-queues.md`.
+`_records_/<date>/building-queues/`, one file per execution.
 
 ## How it is done
 

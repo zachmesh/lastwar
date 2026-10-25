@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -20,7 +20,7 @@ Checking the Events pages for earned rewards and claiming them. This
 folder accumulates event claim knowledge - which events pay passive
 claims, and which ones only pay for active grinding. Grinding points in
 a timed event is a decision for the owner, not part of a claim round.
-Executions are recorded in `_records_/activity-executions/event-claims.md`.
+Executions are recorded in `_records_/<date>/event-claims/`, one file per execution.
 
 ## How it is done
 

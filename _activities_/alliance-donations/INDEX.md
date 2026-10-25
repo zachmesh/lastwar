@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -19,7 +19,7 @@ grounded_in:
 Donating resources to alliance technology. This folder accumulates
 donation knowledge - costs, buttons, daily limits and which technology is
 the current target. Executions are recorded in
-`_records_/activity-executions/alliance-donations.md`.
+`_records_/<date>/alliance-donations/`, one file per execution.
 
 ## How it is done
 

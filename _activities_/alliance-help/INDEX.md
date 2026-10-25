@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -19,7 +19,7 @@ grounded_in:
 Pressing Help for allies in the Alliance help page. This folder
 accumulates help knowledge - where the page lives, how the daily mission
 counts helps, and any caps. Executions are recorded in
-`_records_/activity-executions/alliance-help.md`.
+`_records_/<date>/alliance-help/`, one file per execution.
 
 ## How it is done
 

@@ -1,9 +1,9 @@
 ---
 title: Daily Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T18:58:00Z
+modified: 2026-10-25T19:07:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: The umbrella daily checklist linking one folder per activity type
 status: unverified
 grounded_in:
@@ -17,8 +17,8 @@ Umbrella checklist for one daily round. Each kind of activity has its own
 folder under `_activities_`, and that folder is where knowledge about
 that kind accumulates. This page only lists the round in order and links
 to those folders. Completion is never ticked here - each execution is
-written in `_records_/activity-executions/` under its activity, and the
-day narrative is written in `_records_/play-sessions/`.
+written as its own file in `_records_/<date>/<activity>/`, under the
+date it happened and the activity it belongs to.
 
 ## The round, in the order worked on 2026-10-25
 
