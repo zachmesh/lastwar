@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T21:38:00Z
+modified: 2026-10-25T22:00:00Z
 level: L0
-version: 1.5.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round and the recheck that found the Star Ceremony
+version: 1.6.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, and the red dot sweep with task 9 survivor intake
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -191,6 +191,43 @@ least 3 winners.
   in their measured states. The floating text fragments seen on the
   base were ambient tooltips and tickers, not claim prompts.
 
+## 14:37 to about 15:00 — Red dot sweep and task 9
+
+The owner asked for every red dot on the base to be checked -
+those usually mean something can be done - set the standing rule
+that the alliance help icon is always clicked, asked for the
+survivors at the front door to be collected as task 9, and
+repeated the standing instruction that every task type gets
+metadata. The computer use session dropped once mid sweep and
+was restarted; no action was repeated blindly.
+
+- Alliance help — the Alliance button dot was waiting helps.
+  Help All cleared the allies' requests; the page showed today's
+  help points at 400 of 1,000 and this account's own two requests
+  already full at 30 of 30.
+- Survivor intake — NEW type, metadata created first, then the
+  line at the front gate was worked to empty. Six recruits by
+  card (a Scientist, ELINA, DAVID the Hunter, HARRY, JAVIER and
+  DAVID the Attendant) plus dialog survivors who walked in. A
+  Friendly Visitor notification prompt was cancelled, not
+  enabled. Afterwards the Lv.27 Iron Mine listed Harry among its
+  Miners - posting looks automatic; Quick Dispatch not pressed.
+- Events — the badge was only the Frontline challenge attempt
+  marker; all three milestones already claimed. Not played.
+- Season passes — the Season badge of 4 held two claims. The
+  Season Battle Pass paid 500 pass points (16,300 to 16,800),
+  and the Season Weekly Pass Daily Freebie and Daily Pickup were
+  claimed (stamina item, a 10.0K rock item times 2, 5 minute
+  speedups times 60). The badge fell to 2.
+- Radar — the badge was restored stored tasks. Two Quick
+  Execute batches (4 tasks, 40 stamina) and 11 task rewards
+  claimed; stored tasks ended at 0 of 40, stamina at 11.
+- Resource bubbles — the production cluster was collected; base
+  totals ended at food 295.4M, iron 289.3M, coin 56.3M and
+  rubies 3,048. Three document icon bubbles over the
+  headquarters buildings open the Status Overview instead of
+  collecting - left alone, nature unconfirmed.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -202,25 +239,26 @@ execution file states the outcome, including not performed.
 | Activity | Status | Execution record |
 |---|---|---|
 | [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md) |
-| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md) |
 | [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md) |
 | [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md) |
 | [Season Warming](season-warming/INDEX.md) | Performed | [1100 daily round](season-warming/1100-daily-round.md) |
 | [Secret Missions](secret-missions/INDEX.md) | Performed in part | [1100 daily round](secret-missions/1100-daily-round.md) |
-| [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md) |
+| [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md), [1452 red dot sweep](radar-tasks/1452-red-dot-sweep.md) |
 | [Daily Missions](daily-missions/INDEX.md) | Performed in part | [1100 daily round](daily-missions/1100-daily-round.md) |
-| [Event Claims](event-claims/INDEX.md) | Performed | [1100 daily round](event-claims/1100-daily-round.md) |
-| [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md), [1342 pass claims](shop-claims/1342-pass-claims.md), [1359 pass claims](shop-claims/1359-pass-claims.md) |
+| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md) |
+| [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md), [1342 pass claims](shop-claims/1342-pass-claims.md), [1359 pass claims](shop-claims/1359-pass-claims.md), [1447 season passes](shop-claims/1447-season-passes.md) |
 | [Hero Recruitment](hero-recruitment/INDEX.md) | Performed | [1100 daily round](hero-recruitment/1100-daily-round.md) |
 | [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |
 | [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
-| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md) |
 | [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
 | [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed | [1359 first claim](vip-rewards/1359-first-claim.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
 | [Arms Race](arms-race/INDEX.md) | Performed | [1402 phase check](arms-race/1402-phase-check.md) |
+| [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md) |
 
 ## Reorganisation note, 2026-10-25
 

@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T20:47:00Z
+modified: 2026-10-25T21:55:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -76,6 +76,40 @@ Executions are recorded in `_records_/<date>/shop-claims/`, one file per executi
   a ruby times 10 and iron times 4 as displayed. The Coin pickup was
   still outstanding when the session was interrupted.
 
+## Season passes - in the Season hub, not the shop
+
+Two more passes pay daily claims from the Season Two hub (base
+screen Season icon). They belong to this folder's family - claim
+the free and already paid for parts, never the paid unlocks.
+
+- Season Battle Pass - a points track. Claim and Claim All take
+  the unlocked free tiers; the Advanced columns are padlocked
+  behind an Unlock Advanced Rewards button at 9 dollars 99 -
+  never tap it. On 2026-10-25 the track stood at 16,300 points;
+  claiming paid 500 pass points and moved it to 16,800. Free
+  tiers at 12,200, 13,000 and 13,800 all showed green checks, and
+  the next tiers sit at 17,000 and 17,800. The Infinity Chest at
+  the bottom unlocks at 35,000 Battle Pass points.
+- Season Weekly Pass - the Titanium Alloy Factory pass. Perks
+  shown - Titanium Alloy Factory plus 1, marching speed against
+  zombies plus 30 percent, Virus Resistance plus 250. It has a
+  Daily Freebie chest on the left of its page (a separate free
+  claim - tapping it answered Reward Claimed) and a Daily Pickup
+  taken with the green Claim Reward button. On 2026-10-25 the
+  pickup paid a stamina 50 item times 1, a dark rock item of
+  10.0K times 2, and 5 minute speedups times 60; the pass showed
+  1 day left. Lesson from that claim - the first Claim Reward tap
+  only flashed the button; a second tap produced the
+  congratulations and turned the button to Claimed. Verify the
+  button state after claiming, do not assume one tap landed.
+- The Instant Gain on Purchase row on the Weekly Pass page is
+  the paid bundle - never tap it.
+- The base Season icon badge fell from 4 to 2 after these two
+  claims, so the badge counts claimable season items among
+  other notices.
+
 ## Open questions
 
 - Whether the free Hot Deals pack rotates its contents by day.
+- What the dark rock item in the Season Weekly Pass pickup is -
+  coal or titanium alloy; the tile only showed 10.0K.

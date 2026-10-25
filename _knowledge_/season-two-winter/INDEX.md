@@ -1,9 +1,9 @@
 ---
 title: Season Two Winter
 created: 2026-10-25T17:58:00Z
-modified: 2026-10-25T17:58:00Z
+modified: 2026-10-25T21:55:00Z
 level: L1
-version: 1.0.0
+version: 1.1.0
 description: Season 2 Polar Storm — temperature zones, freezing, furnaces, coal and titanium alloy, and Rare Soil
 status: unverified
 grounded_in:
@@ -69,3 +69,15 @@ Check temperature and the next cold wave, review coal, collect factory
 output and dig-site coal, finish season quests and distressed-survivor
 radar tasks, claim the Doom Walker first-kill reward, and time large
 spending with Alliance Duel days.
+
+## Measured on this account - Status Overview, 2026-10-25
+
+The base Status Overview panel (opened from the headquarters area)
+shows this account's live season numbers:
+
+- Basic Resource Output - during the season, in-base Farmland,
+  Iron Mine and Gold Mine output plus 12.5 percent.
+- Thermal Weapon - Troop Durability Damage during game season
+  plus 150.
+- Virus Resistance - 10,500 on this account; the panel says to
+  build and upgrade the High-heat Furnace to raise it.

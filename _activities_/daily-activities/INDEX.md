@@ -1,9 +1,9 @@
 ---
 title: Daily Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T20:20:00Z
+modified: 2026-10-25T21:55:00Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: The umbrella daily checklist linking one folder per activity type
 status: unverified
 grounded_in:
@@ -50,6 +50,18 @@ day. From the next round on they are worked with the list above.
   weak guards only.
 - [Alliance train](../alliance-train/INDEX.md) - if a train is in
   preparation, board a carriage with the free Like and Thank.
+- [Survivor intake](../survivor-intake/INDEX.md) - take in every
+  survivor waiting in the line at the front gate (named task 9).
+
+## The red dot habit
+
+Red dots and numbered badges mean something can be done - sweep
+them every round, claims first. The 2026-10-25 sweep found - the
+Alliance button dot was waiting helps (Help All), the Season
+badge was two pass claims, the radar badge was restored stored
+tasks, and the Events badge was only the Frontline challenge
+attempt marker. Only free claims are taken; anything priced,
+diamond costing or PvP stays untouched without owner approval.
 
 ## Standing boundaries for every round
 
