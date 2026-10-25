@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T17:58:00Z
-version: 1.1.0
+modified: 2026-10-25T18:58:00Z
+version: 1.2.0
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -12,8 +12,9 @@ grounded_in:
 
 ## Current
 
-- [ ] Confirm the daily checklist in `_activities_/daily-activities`
-  item by item against this account, then revise it.
+- [ ] Confirm each activity folder in `_activities_` item by item
+  against this account, then revise it - the checklist was split into
+  one folder per activity type on 2026-10-25.
 - [ ] Record the three squads in `_knowledge_` — heroes, levels, gear and
   troop types, from the game screens.
 - [ ] Test the device-switch rule — whether Mac login ends the iPhone
@@ -39,3 +40,8 @@ grounded_in:
 - 2026-10-25 — Filled the first four knowledge topics from web research
   with named sources — heroes and squads, headquarters and resources,
   Season 2 winter, and events and cycles.
+- 2026-10-25 — Split the daily checklist into one `_activities_` folder
+  per activity type (14 new instances) so each folder accumulates the
+  knowledge for its kind, and added `_records_/activity-executions/`
+  with one file per activity, backfilled with the 2026-10-25 round, so
+  whether and when each activity was performed can be looked back on.
