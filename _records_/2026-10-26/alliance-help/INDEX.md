@@ -27,3 +27,6 @@ time and never edited once committed (C1).
 - [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
   started at 06:30 local; Help All pressed, only own requests listed,
   help points 1,060 of 1,000.
+- [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
+  started at 10:30 local; Help All pressed, only own requests listed,
+  help points 1,060 of 1,000.

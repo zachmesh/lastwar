@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T14:15:00Z
+modified: 2026-10-26T17:42:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -193,6 +193,12 @@ record. Inside it, one subfolder per activity type, named as in
 | [Hidden Treasures](hidden-treasures/INDEX.md) | Checked only | [0657 segment 3 run](hidden-treasures/0657-segment-3-run.md) |
 | [Shop Claims](shop-claims/INDEX.md) | Checked only | [0657 segment 3 run](shop-claims/0657-segment-3-run.md) |
 | [Event Claims](event-claims/INDEX.md) | Checked only | [0657 segment 3 run](event-claims/0657-segment-3-run.md) |
+| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1030 segment 2 run](mail-rewards/1030-segment-2-run.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [1030 segment 2 run](alliance-help/1030-segment-2-run.md) |
+| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1030 segment 2 run](alliance-gifts/1030-segment-2-run.md) |
+| [Alliance Train](alliance-train/INDEX.md) | Checked only | [1030 segment 2 run](alliance-train/1030-segment-2-run.md) |
+| [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [1030 segment 2 run](alliance-duel/1030-segment-2-run.md) |
+| [VIP Rewards](vip-rewards/INDEX.md) | Checked only | [1030 segment 2 run](vip-rewards/1030-segment-2-run.md) |
 
 ## 05:05 to about 05:20 — Recheck run, Arms Race reward claimed, target met
 
@@ -472,3 +478,49 @@ record. Inside it, one subfolder per activity type, named as in
   to finish the gold claim. Nothing bought, no diamond
   spent, no speedup or stamina item burned, no research or
   building started, no stage swap.
+
+## 10:30 to about 10:41 — Segment 2 run, Alliance mail pays big, train arrival reward claimed
+
+- Segment 2 run of the split routine (alliance and VIP). The
+  tracker showed mail, help, gifts, train and star-ceremony
+  due in this segment's new 4 hour cycle; VIP stands claimed
+  for the reset period ending 19:00 and was verified in game
+  anyway. The game opened straight onto the base — no
+  different-device dialog, no lock, no login demand. Opening
+  HUD food 326.0M, iron 315.2M, coin 3.8M, total power
+  147,287,658 — the same figures segment 1 closed on at
+  10:03, coin still under its 10M floor at the open.
+- Performed — mail (Claim All in every category; Alliance
+  paid coin 12.1M, food 19.0M, iron 19.0M, 216 of the 5m
+  speedups across five stacks, a 50.0K item and a 5.9K item;
+  Event claimed the Train arrival reward of the 0529
+  carriage 2 boarding — opened and verified checkmarked,
+  badge 50, two 2.0K stacks, a red gem 100, a grey item 32
+  and a chest stack 50 — plus three Wanted Boss individual
+  rewards; Battle Report, Season, System and Regular each
+  held no rewards; Purchases receipts only), gifts (Regular
+  Claim All 22, Premium scrolled to the end with every gift
+  already Claimed, then 4 more Regular gifts that arrived
+  during the check claimed as well — 26 in total; Gift
+  Level 28 progress 162,350,580), help (Help All pressed,
+  grateful toast; only own four requests at 30 of 30, points
+  1,060 of 1,000 already past the cap).
+- Checked only — train (no Boarding closes in banner at the
+  opening, mid-run or closing sweeps and no train icon on
+  MY PROFILE; no contract spent), star ceremony (no trophy
+  icon in the base right-side stack at any sweep; marked
+  skipped in the tracker), VIP (VIP13, 1,543,500 of
+  2,000,000 points, 49 day streak; Daily Freebie already
+  claimed this reset period, countdown 08:18:27).
+- Navigation note — the run's first tap, aimed at the tile
+  left of the Alliance shield, opened an Iron Mine upgrade
+  panel instead, and its close landed on the Operation
+  Falcon page; both were exited at once with no action
+  taken — no upgrade started, no Finish Now, nothing
+  spent — and the run then worked from the Alliance panel.
+- Close — food 345.0M, iron 334.3M, coin 15.9M (the mail
+  claim lifted coin back over its floor), diamonds 828,
+  total power 147,287,658 unchanged across this run.
+  Nothing bought, no diamond or contract spent, no speedup
+  burned, no donation made (segment 1 owns donations), no
+  furnace or coal action.

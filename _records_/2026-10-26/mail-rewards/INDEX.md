@@ -32,3 +32,7 @@ time and never edited once committed (C1).
 - [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
   started at 06:30 local; Claim All in every category, no rewards
   available, and the Abyss Apex train departure mail read.
+- [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
+  started at 10:30 local; Alliance mail paid coin 12.1M, food 19.0M and
+  iron 19.0M, Event mail claimed the train arrival reward and three
+  Wanted Boss rewards, the other categories held no rewards.

@@ -21,3 +21,6 @@ time and never edited once committed (C1).
 
 - [0149-four-hour-run.md](0149-four-hour-run.md) — the four hour run that
   started at 01:49 local.
+- [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
+  started at 10:30 local; Daily Freebie already claimed this reset
+  period, countdown 08:18:27, VIP13 at 1,543,500 points.

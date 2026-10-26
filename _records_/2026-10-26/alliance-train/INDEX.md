@@ -28,3 +28,6 @@ time and never edited once committed (C1).
 - [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
   started at 06:30 local; no boarding banner, and the 0540 train
   confirmed departed by its Event mail.
+- [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
+  started at 10:30 local; no boarding banner at any sweep, and the
+  arrival reward of the 0529 boarding claimed in Event mail.
