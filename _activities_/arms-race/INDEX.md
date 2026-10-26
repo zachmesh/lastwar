@@ -1,14 +1,15 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T04:40:00Z
+modified: 2026-10-26T11:34:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner standing instruction on 2026-10-25 to check Arms Race every four hours
+  - source: owner standing rule on 2026-10-26 - every four hour run shall meet the Arms Race target
 ---
 
 
@@ -21,7 +22,13 @@ each phase pays points for matching actions - training troops in the
 Unit Progression phase, for example - toward point chests and a phase
 ranking. The owner standing instruction of 2026-10-25 is to check
 every four hours, aligned with the phase rotation, and complete the
-tasks that can be completed under the standing limits below.
+tasks that can be completed under the standing limits below. The
+owner standing rule of 2026-10-26 raises the bar - every four hour
+run shall meet the Arms Race target of the phase live during the
+run, meaning points reach the phase top chest threshold and every
+earned chest is claimed. How the target is pursued, and what
+happens when it cannot be reached inside the limits, is set out
+under Cadence below.
 Executions are recorded in `_records_/<date>/arms-race/`, one file per execution.
 
 ## How to enter
@@ -36,6 +43,24 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   the owner check cadence and the phase timer seen in game.
 - Standing check - every four hours, complete what can be completed
   in the current phase and claim any chests already earned.
+- Standing target rule, owner 2026-10-26 - every four hour run
+  shall meet the Arms Race target of the live phase. The target is
+  the phase top (third) chest threshold - 75,000 in Unit
+  Progression, 30,000 in Base Building, read live for other phases.
+  The run works toward it from the start - read the phase and its
+  scoring table first, do the regulars that score in this phase
+  inside the phase window (training queues, radar and doom work
+  where it scores, harvests and collections, completions of
+  buildings or research already under way, donations), re-read the
+  points before closing the run, and claim every chest earned.
+- The target never overrides the red lines. Diamonds and money are
+  never spent, speedup and stamina items are never burned, no
+  research or building is started on the agent initiative, hero
+  resources are never spent, and stages are never swapped - not
+  even to reach the target. If the top threshold cannot be reached
+  inside those limits, earn what is reachable, claim what is
+  earned, and record the shortfall as a missed target in the run
+  record and in the chat report.
 
 ## Scope and availability
 
