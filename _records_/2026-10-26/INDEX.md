@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T17:42:00Z
+modified: 2026-10-26T18:16:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -199,6 +199,11 @@ record. Inside it, one subfolder per activity type, named as in
 | [Alliance Train](alliance-train/INDEX.md) | Checked only | [1030 segment 2 run](alliance-train/1030-segment-2-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [1030 segment 2 run](alliance-duel/1030-segment-2-run.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Checked only | [1030 segment 2 run](vip-rewards/1030-segment-2-run.md) |
+| [Secret Missions](secret-missions/INDEX.md) | Checked only | [1057 segment 3 run](secret-missions/1057-segment-3-run.md) |
+| [Hidden Treasures](hidden-treasures/INDEX.md) | Checked only | [1057 segment 3 run](hidden-treasures/1057-segment-3-run.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Not performed | [1057 segment 3 run](truck-plunder/1057-segment-3-run.md) |
+| [Shop Claims](shop-claims/INDEX.md) | Checked only | [1057 segment 3 run](shop-claims/1057-segment-3-run.md) |
+| [Event Claims](event-claims/INDEX.md) | Checked only | [1057 segment 3 run](event-claims/1057-segment-3-run.md) |
 
 ## 05:05 to about 05:20 — Recheck run, Arms Race reward claimed, target met
 
@@ -524,3 +529,51 @@ record. Inside it, one subfolder per activity type, named as in
   Nothing bought, no diamond or contract spent, no speedup
   burned, no donation made (segment 1 owns donations), no
   furnace or coal action.
+
+## 10:57 to about 11:15 — Segment 3 run, all claims already taken, truck entry not found
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). The tracker showed passes, secrets, treasures, trucks
+  and events due in this segment; ghost-ops is not today
+  (Thursdays only). The Mac mini opened straight onto the base -
+  no different-device dialog, no lock, no login demand. Opening
+  HUD food 345.0M, iron 334.3M, coin 15.9M, diamonds 828, total
+  power 147,287,658. Duel Day 1 (Radar Training) is not a duel
+  UR day.
+- Checked only — secrets (no Claim button; two UR tasks still
+  running, the rest PERFECT; Mega Deploy opened nothing; Assist
+  Allies 5 of 5; Reward Recovery already CLAIMED), treasures
+  (fragments unchanged - M1 13, M2 12, M3 2, M4 5, M5 0, M6 5,
+  M7 9 - 11 of 15, both Dig buttons greyed), passes (Free Supply
+  Claimed; Drone Parts and Coin weekly passes Already claimed
+  today; Monthly Pass Claimed with 26 days left; Season Weekly
+  Pass Pickup Claimed and its Daily Freebie inert; the Swift
+  Battle Pass was not among the shop tabs this run and had
+  nothing outstanding at 0657), events (full sweep, repeated at
+  the end - Arms Race rolled to the Drone Boost stage at 0 stage
+  points with the cumulative chest at 6 of 8 and no bouncing
+  chest, noted for segment 1; Season Battle Pass 17,000 with
+  Claim All answering no rewards available, login and Profession
+  EXP daily tasks complete; Halloween Day 02 still date locked;
+  Wanted Boss not yet spawned, all its challenges complete and
+  its goal tiers unreached; Community already Claimed; Level
+  Swap inspected only; Desert Storm Battlefield is an alliance
+  registration with nothing personal to claim).
+- Not performed — trucks. The Intercity Trade screen was not
+  entered: the base left column currently shows the shortcut set
+  in which the white pickup slot opens the Secret Command Post,
+  every other slot was identified (warming, radar, build,
+  Missions), and no trade slot or working flip was found. Nothing
+  could be pending - at 0657 the Trade Count already read 5 of 5
+  and the Plunder Count 4 of 4 for this trade day, the returned
+  truck was settled then, and no dispatch has been possible
+  since; trade Reward Recovery already read CLAIMED. Marked
+  skipped in the tracker with the reason, and the set
+  identification was written into the truck metadata for the
+  next segment 3 run.
+- Close — resources and total power unchanged on the closing
+  HUD. Nothing bought, no diamond or Trade Contract spent, no
+  speedup or stamina item burned, no coal donated, no furnace
+  action, no stage ground. Navigation misses (the radar task
+  list and the diamond Store, both opened by taps aimed at base
+  buildings) were exited at once with no action taken.

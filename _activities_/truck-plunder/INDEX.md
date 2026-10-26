@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T10:41:00Z
+modified: 2026-10-26T18:16:00Z
 level: L1
-version: 1.4.0
+version: 1.4.1
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -44,6 +44,17 @@ train also runs on this screen as a trade vehicle.
   Post in one set and Intercity Trade in the other. Tapping the route
   icon above the truck slot flipped the set. Always verify the screen
   that actually opened before tapping further.
+- Set identification, re-verified 2026-10-26 (1057 run) - in the set
+  currently shown, the column reads top to bottom - green face
+  (season warming panel), white pickup (Secret Command Post - the
+  pickup is the Secret Mobile Squad vehicle, NOT the trade truck),
+  satellite dish with a red count badge (radar), hammer (build
+  palette), walkie-talkie (Missions). No trade slot exists in this
+  set, and the flip described above was not reproduced that run -
+  the trade screen could not be entered at all. When the trade
+  slot is absent, check whether anything can actually be pending
+  before spending the run hunting - at a full Trade Count and
+  Plunder Count for the trade day, nothing can be.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.

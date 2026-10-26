@@ -26,18 +26,18 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-26T07:14:46",
-  "note": "0657 seg3 - Free Supply Claimed; Drone Parts and Coin weekly Already claimed today; Monthly Claimed (26d left); Season Weekly Pickup Claimed, Freebie inert; Swift BP Claim All - no rewards available"
+  "at": "2026-10-26T11:16:01",
+  "note": "1057 seg3: Free Supply Claimed, Drone Parts and Coin weekly Already claimed today, Monthly Claimed 26d left, Season Weekly Pickup Claimed and Freebie inert, Swift BP not in shop tabs"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-26T07:14:46",
-  "note": "0657 seg3 - no Claim button; 2 UR running, rest PERFECT; Mega Deploy opened nothing; Assist 5/5; Reward Recovery already CLAIMED"
+  "at": "2026-10-26T11:16:01",
+  "note": "1057 seg3: no Claim button, 2 UR still running, rest PERFECT, Mega Deploy opened nothing, Assist 5/5, Reward Recovery already CLAIMED"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-26T07:14:46",
-  "note": "0657 seg3 - fragments M1x13 M2x12 M3x2 M4x5 M5x0 M6x5 M7x9, 11/15; M5 zero, Dig greyed, no dig"
+  "at": "2026-10-26T11:16:01",
+  "note": "1057 seg3: fragments unchanged M1 13 M2 12 M3 2 M4 5 M5 0 M6 5 M7 9, 11/15, no full set, dig greyed"
  },
  "radar": {
   "status": "done",
@@ -50,9 +50,9 @@
   "note": "1003 segment 1 run - 1 dialog survivor taken in at the gate, line clear; Quick Dispatch pressed in Farmland Lv.28 details, posts already full (Anthony, Harry, Michael, Karen - all Farmer)"
  },
  "trucks": {
-  "status": "done",
-  "at": "2026-10-26T07:14:46",
-  "note": "0657 seg3 - one returned N truck settled via Truck Details (chests 60, iron 1.2M, food 1.2M, coin 810K); trade 5/5, plunder 4/4, trade Reward Recovery already CLAIMED"
+  "status": "skipped",
+  "at": "2026-10-26T11:16:01",
+  "note": "1057 seg3: trade screen entry not found in current shortcut set (vehicle slot opens Secret Post); nothing could be pending - trade 5/5 and plunder 4/4 already at cap at 0657, no dispatch possible since, recovery CLAIMED"
  },
  "train": {
   "status": "done",
@@ -71,8 +71,8 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-10-26T07:14:47",
-  "note": "0657 seg3 - full Events sweep; Arms Race Tech Research 0 stage pts, cumulative 6/8, no bouncing chest; Wanted Boss not spawned, goals unreached; Community Claimed; Halloween Day 02 date-locked; Season BP Claim All - no rewards available"
+  "at": "2026-10-26T11:16:01",
+  "note": "1057 seg3: full sweep x2, nothing claimable; Arms Race Drone Boost 0 stage pts cumulative 6/8 noted for seg1; Season BP 17000 Claim All none available; Halloween Day02 date-locked; Wanted Boss goals unreached"
  },
  "arms-race": {
   "status": "done",
