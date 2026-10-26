@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T21:55:00Z
+modified: 2026-10-26T02:26:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -31,6 +31,10 @@ counts helps, and any caps. Executions are recorded in
 - Whenever the alliance help icon shows waiting requests, click it
   and press Help All. The owner set this on 2026-10-25 - do not
   leave helps unpressed in any round or check.
+- Clarified by the owner the same evening - the help icon on
+  screen can be clicked directly whenever it becomes available,
+  in any session and at any moment, autonomously. Do not wait for
+  a round or a check, and do not ask first.
 
 ## What is known from 2026-10-25
 

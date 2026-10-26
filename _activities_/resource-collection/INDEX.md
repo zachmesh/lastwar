@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T19:07:00Z
+modified: 2026-10-26T02:27:00Z
 level: L1
-version: 1.0.1
+version: 1.1.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,16 @@ Executions are recorded in
 
 - Tap each output bubble over the base buildings.
 - Check the Armed Truck and claim it when it shows fully loaded.
+
+## Standing instruction from the owner
+
+- Set on 2026-10-25 (evening), with the same standing autonomy as
+  the alliance help icon - harvesting is collected directly
+  whenever it is ready. Tap every ready output bubble - farm
+  (food), iron, coin, and all other resources - in any session
+  and at any moment, autonomously, without asking first. The
+  Armed Truck loot is claimed the same way when fully loaded.
+  Do not leave finished output sitting uncollected.
 
 ## What is known from 2026-10-25
 
