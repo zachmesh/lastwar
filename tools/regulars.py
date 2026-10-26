@@ -14,9 +14,9 @@ Usage:
 
 The routine is every four hours, not daily (owner rule, 2026-10-26),
 and since later that day it is split into 4 segment schedules
-rotating hourly (owner design): segment 1 fires at :12, segment 2
-an hour later, segment 3 an hour after that, segment 4 an hour
-after that, each repeating every 4 hours. An every-run regular
+in the same hour, 15 minutes apart (owner design): segment 1
+fires at :12, segment 2 at :27, segment 3 at :42, segment 4 at
+:57, each repeating every 4 hours. An every-run regular
 counts as done only for its own segment's current 4 hour cycle; at
 the segment's next cycle boundary it becomes due again, whether it
 was marked done or skipped. A daily-reset regular (VIP, reset 19:00
@@ -52,7 +52,7 @@ def save_state(day, state):
     with open(state_path(day), "w") as f:
         json.dump(state, f, indent=1, ensure_ascii=False)
 
-SEGMENT_ANCHORS = {1: 6 * 60 + 12, 2: 7 * 60 + 12, 3: 8 * 60 + 12, 4: 9 * 60 + 12}
+SEGMENT_ANCHORS = {1: 6 * 60 + 12, 2: 6 * 60 + 27, 3: 6 * 60 + 42, 4: 6 * 60 + 57}
 
 def latest_cycle_start(now, anchor_min):
     """Most recent 4 hour cycle boundary for a segment whose fires
