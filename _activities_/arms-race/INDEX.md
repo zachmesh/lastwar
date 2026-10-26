@@ -1,15 +1,16 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T11:34:00Z
+modified: 2026-10-26T11:41:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner standing instruction on 2026-10-25 to check Arms Race every four hours
   - source: owner standing rule on 2026-10-26 - every four hour run shall meet the Arms Race target
+  - source: owner refinement on 2026-10-26 - make the effort just enough to reach the target, do not overdo it
 ---
 
 
@@ -53,6 +54,14 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   where it scores, harvests and collections, completions of
   buildings or research already under way, donations), re-read the
   points before closing the run, and claim every chest earned.
+- Just enough effort, owner refinement 2026-10-26 - the effort is
+  calibrated to reach the target and no further. Once the points
+  reach the top threshold, stop doing extra scoring work for that
+  phase - no additional queues, claims or actions taken only to
+  push the score higher. Overshooting wastes actions and
+  resources that score better in a later phase or on a duel day,
+  so plan the scoring actions to land at or just past the
+  threshold.
 - The target never overrides the red lines. Diamonds and money are
   never spent, speedup and stamina items are never burned, no
   research or building is started on the agent initiative, hero
