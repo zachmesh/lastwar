@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T11:59:00Z
+modified: 2026-10-26T12:01:00Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: owner instruction on 2026-10-26 - the Hero Advancement phase is met by upgrading a hero level with EXP points
   - source: owner instruction on 2026-10-26 - whenever the Arms Race goal is reached, get its reward
   - source: owner instruction on 2026-10-26 - experience boxes may be opened to increase hero level if needed
+  - source: owner instruction on 2026-10-26 - every time a run is made, check the score in Arms Race
 ---
 
 
@@ -63,6 +64,12 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   whenever it becomes claimable - if it lands after the phase
   rolls, the next run checks for it and claims it then. A reached
   target with an unclaimed reward counts as unfinished.
+- Score check every run, owner instruction 2026-10-26 - every
+  four hour run reads the live Arms Race phase and score (points
+  against the chest thresholds) and records the reading in the
+  run record, whether or not the phase is that run focus. When
+  the run is reported in chat, the current Arms Race score is
+  stated with it.
 - Just enough effort, owner refinement 2026-10-26 - the effort is
   calibrated to reach the target and no further. Once the points
   reach the top threshold, stop doing extra scoring work for that
