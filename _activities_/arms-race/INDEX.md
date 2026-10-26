@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T12:53:00Z
+modified: 2026-10-26T12:54:00Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -69,7 +69,9 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   point chests are only one reward set, not the definition of all
   Arms Race rewards. Before Arms Race is marked complete, return
   to the Events screen and scan the Arms Race card and page again,
-  including its ranking and reward areas. Treat an animated or
+  including its ranking and reward areas and the cumulative
+  counter chest at the top left of the phase page above the
+  point track. Treat an animated or
   bouncing chest, or a red dot attached to a reward, as an
   unclaimed reward until it has been opened and inspected. Claim
   every additional earned reward found. Arms Race is complete

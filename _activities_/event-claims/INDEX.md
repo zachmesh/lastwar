@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T12:36:00Z
+modified: 2026-10-26T12:54:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -112,6 +112,16 @@ Executions are recorded in `_records_/<date>/event-claims/`, one file per execut
   three point chests. A bouncing chest is therefore a completion
   check failure until the final Events-screen sweep required
   above has been performed.
+- The bouncing chest was identified in the follow-up run - it
+  is the Arms Race cumulative counter chest at the top left of
+  the phase page, above the point track. It stood full at 6 of
+  2 after the point chests were claimed, was claimed with one
+  tap (gold ticket item 1, pink puzzle-piece items 2, a red gem
+  tagged 50), and rolled to the next tier at 6 of 8 in purple.
+  Full mechanics live in the arms-race activity metadata; the
+  standing lesson for event claims is that a detail page can
+  hold several independent reward sets, and each one needs its
+  own check.
 
 ## Season knowledge gathered the same evening
 
