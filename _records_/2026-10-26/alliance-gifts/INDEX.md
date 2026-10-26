@@ -21,3 +21,5 @@ time and never edited once committed (C1).
 
 - [0149-four-hour-run.md](0149-four-hour-run.md) — the four hour run that
   started at 01:49 local.
+- [0505-four-hour-run.md](0505-four-hour-run.md) — the four hour run that
+  started at 05:05 local; 123 Regular and 3 Premium gifts claimed.

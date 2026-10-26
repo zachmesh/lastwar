@@ -23,3 +23,5 @@ time and never edited once committed (C1).
   started at 01:49 local.
 - [0435-four-hour-run.md](0435-four-hour-run.md) — the four hour run that
   started at 04:35 local.
+- [0505-four-hour-run.md](0505-four-hour-run.md) — the four hour run that
+  started at 05:05 local; four iron bubbles collected, base clear.

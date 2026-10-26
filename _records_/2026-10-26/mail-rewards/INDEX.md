@@ -26,3 +26,6 @@ time and never edited once committed (C1).
 - [0448-four-hour-run.md](0448-four-hour-run.md) — the follow-up run that
   started at 04:48 local; the leftover Season and Battle Report
   categories completed, each No rewards available.
+- [0505-four-hour-run.md](0505-four-hour-run.md) — the four hour run that
+  started at 05:05 local; Claim All in every category, no rewards
+  available anywhere.

@@ -174,5 +174,53 @@ record. Inside it, one subfolder per activity type, named as in
 | [Mail Rewards](mail-rewards/INDEX.md) | Performed | [0448 four hour run](mail-rewards/0448-four-hour-run.md) |
 | [Arms Race](arms-race/INDEX.md) | Access failed, target not met | [0448 four hour run](arms-race/0448-four-hour-run.md) |
 | [Arms Race](arms-race/INDEX.md) | Level executed, claim unfinished | [0456 four hour run](arms-race/0456-four-hour-run.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed, target met | [0505 four hour run](arms-race/0505-four-hour-run.md) |
+| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [0505 four hour run](mail-rewards/0505-four-hour-run.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [0505 four hour run](alliance-help/0505-four-hour-run.md) |
+| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [0505 four hour run](alliance-gifts/0505-four-hour-run.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [0505 four hour run](resource-collection/0505-four-hour-run.md) |
+| [Radar Tasks](radar-tasks/INDEX.md) | Performed | [0505 four hour run](radar-tasks/0505-four-hour-run.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |
+
+## 05:05 to about 05:20 — Recheck run, Arms Race reward claimed, target met
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened clean. The game opened on the Adam hero
+  page left by the 0456 run (Lv.121, EXP stock 666.2M) - no
+  different-device dialog, no lock, no login demand. Opening HUD
+  food 313.1M, iron 304.9M, coin 22.7M, stamina 185, total power
+  149,695,458. Device access held all run; one computer session
+  dropped after the harvest taps and was reopened at once, with
+  no access-authorization error anywhere in this run.
+- ARMS RACE FIRST, TARGET MET - Hero Advancement re-read at
+  37,500 points (01:52:34 left, phase end about 07:00 local),
+  segment rank 8, combined 2110. The 0456 spend of 75.0M hero
+  EXP at the displayed plus 1 per 2,000 EXP gives exactly
+  37,500 - the single authorized level cleared the 12,000 top
+  threshold on its own. One tap claimed all three chests
+  (2,000, 4,000, 12,000) - combined Skill Medals 1.6K, Arms
+  Race Badges, SR resource chests and 68 of the 5m speedups;
+  re-taps showed contents only. The ranking reward chest is
+  preview only while the phase is live - it lands after the
+  phase ends at about 07:00 local and the next run claims it.
+  No hero resources were spent in this run.
+- Performed - gifts (Regular Claim All 123 claimed, Premium
+  Claim All 3 claimed), help (Help All; only own four requests,
+  points 900 of 1,000), harvest (four iron bubbles, base
+  clear), mail (Claim All in Event, Battle Report, Alliance,
+  Season, System and Regular - no rewards anywhere; Purchases
+  receipts only), radar (release day - storage 3 of 40, Quick
+  Execute 3 tasks for 30 stamina, 185 to 155, then Claim All
+  twice for 8 plus 2 task rewards: food 4.56M, iron 2.4M, coin
+  1.56M, hero EXP 15.5M, drone parts 100; storage 0 of 40,
+  score 2,832).
+- Not redone - the daily regulars (VIP, passes, secrets,
+  treasures, survivors, trucks, train, training, donations,
+  events, star ceremony) stand as completed or skipped by the
+  0149 run; the closing base screen showed no train boarding
+  banner and no Star Ceremony trophy icon, and no survivor
+  stood at the gate. Closing HUD - food 317.7M, iron 307.3M,
+  coin 24.4M, stamina 155, total power 149,695,458, snapshot
+  saved. Nothing bought, no diamond spent, no speedup or
+  stamina item burned, no furnace or coal action.

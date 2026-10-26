@@ -5,3 +5,4 @@
 {"at": "2026-10-26T04:43:01", "note": "Four-hour run 2026-10-26 0435 opening HUD - before access was revoked mid-run", "values": {"food": 313100000, "iron": 304900000, "coin": 22700000, "stamina": 185, "total_power": 149689618}}
 {"at": "2026-10-26T04:52:27", "note": "Four-hour run 2026-10-26 0448 base HUD read before access was revoked", "values": {"food": 313100000, "iron": 304900000, "coin": 22700000, "stamina": 185}}
 {"at": "2026-10-26T05:01:34", "note": "Four-hour run 2026-10-26 0456 opening base HUD before hero upgrade and access failure", "values": {"food": 313100000, "iron": 304900000, "coin": 22700000, "stamina": 185}}
+{"at": "2026-10-26T05:19:51", "note": "Four-hour run 2026-10-26 0505 closing base HUD after Arms Race claim, gifts and radar release", "values": {"food": 317700000, "iron": 307300000, "coin": 24400000, "stamina": 155}}

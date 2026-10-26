@@ -1,23 +1,23 @@
 {
  "mail": {
   "status": "done",
-  "at": "2026-10-26T04:52:31",
-  "note": "0448 run - leftover categories completed: Regular, Season and Battle Report Claim All each No rewards available; mail now checked in every category across 0435+0448 runs"
+  "at": "2026-10-26T05:19:51",
+  "note": "0505 run - Claim All in Battle Report, Alliance, Event, Season, System, Regular - each No rewards available (Regular pressed, no popup); Purchases receipts only"
  },
  "help": {
   "status": "done",
-  "at": "2026-10-26T02:10:19",
-  "note": "Help All pressed; own 4 requests full 30/30, no ally requests waiting; help points 780/1000"
+  "at": "2026-10-26T05:19:51",
+  "note": "0505 run - Help All pressed; only own 4 requests listed, no ally requests waiting; help points 900/1000 before press"
  },
  "gifts": {
   "status": "done",
-  "at": "2026-10-26T02:10:19",
-  "note": "Regular 39 claimed, Premium 3 claimed"
+  "at": "2026-10-26T05:19:51",
+  "note": "0505 run - Regular Claim All: 123 gifts claimed; Premium Claim All: 3 claimed"
  },
  "harvest": {
   "status": "done",
-  "at": "2026-10-26T04:43:01",
-  "note": "0435 run - five iron bubbles in HQ compound collected, base clear"
+  "at": "2026-10-26T05:19:51",
+  "note": "0505 run - four iron bubbles collected in HQ compound, base clear afterwards"
  },
  "vip": {
   "status": "done",
@@ -41,8 +41,8 @@
  },
  "radar": {
   "status": "done",
-  "at": "2026-10-26T02:10:20",
-  "note": "release day checked - storage 0/40, nothing stacked to claim, next batch in about 02:51, stamina 101-103"
+  "at": "2026-10-26T05:19:52",
+  "note": "0505 run - release day: storage 3/40, Quick Execute completed 3 tasks for 30 stamina (185 to 155), Claim All x2 claimed 8+2 task rewards (food 4.56M, iron 2.4M, coin 1.56M, EXP 15.5M, drone parts 100); storage 0/40, radar score 2832, next batch restores in about 05:33"
  },
  "survivors": {
   "status": "done",
@@ -75,9 +75,9 @@
   "note": "Battle Pass 16900, Claim All answered no rewards available; Halloween Day 02 locked until the next day boundary"
  },
  "arms-race": {
-  "status": "skipped",
-  "at": "2026-10-26T05:01:41",
-  "note": "0456 run - Hero Advancement: Adam upgraded Lv.120 to 121 using 75.0M hero EXP (stock 741.2M to 666.2M), the owner-authorized one-level unit; access revoked before the points re-read and chest claims, so the reward claim is UNFINISHED and must be checked first next run (phase ends about 07:00 local)"
+  "status": "done",
+  "at": "2026-10-26T05:19:51",
+  "note": "0505 run - Hero Advancement score re-read 37,500 of 12,000 top threshold (75.0M EXP from the 0456 Adam level at +1 per 2,000 EXP); all three chests claimed in one tap (Skill Medals 1.6K total, badges, SR chests, 5m speedups 68); segment rank 8, combined 2110; ranking reward chest preview only, not claimable until phase ends about 07:00 - check next run"
  },
  "star-ceremony": {
   "status": "skipped",

@@ -31,3 +31,7 @@ time and never edited once committed (C1).
   started at 04:56 local; Adam upgraded one level with 75.0M hero
   EXP, then access failed before the points re-read and chest
   claims, so the reward claim is unfinished.
+- [0505-four-hour-run.md](0505-four-hour-run.md) — the recheck run that
+  started at 05:05 local; score re-read at 37,500 of the 12,000 top
+  threshold, all three chests claimed, target met; the ranking reward
+  chest is preview only until the phase ends at about 07:00 local.

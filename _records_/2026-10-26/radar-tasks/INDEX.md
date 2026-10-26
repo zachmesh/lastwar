@@ -23,3 +23,7 @@ time and never edited once committed (C1).
   started at 01:49 local.
 - [0435-four-hour-run.md](0435-four-hour-run.md) — the four hour run that
   started at 04:35 local; restored batch left unclaimed, access failed.
+- [0505-four-hour-run.md](0505-four-hour-run.md) — the four hour run that
+  started at 05:05 local; release day - Quick Execute completed 3 tasks
+  for 30 stamina and two Claim All rounds claimed 8 plus 2 task rewards,
+  storage 0 of 40, score 2,832.

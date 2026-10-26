@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T12:01:00Z
+modified: 2026-10-26T12:20:00Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -161,3 +161,21 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   EXP path for this phase (see Cadence) and called it the
   easiest phase to close - one hero level upgraded with EXP
   points is the intended unit of effort.
+
+- The Hero Advancement scoring and claim were verified end to
+  end on 2026-10-26 - the displayed rate is plus 1 point per
+  2,000 Hero EXP used at a time, so the 0456 one-level spend
+  of 75.0M EXP read back at the 0505 recheck as exactly
+  37,500 points (segment rank 8, combined 2110), clearing the
+  12,000 top chest on its own. One level at the Lv.120 band
+  therefore overshoots this phase by design of its cost; the
+  just-enough rule is satisfied by taking exactly one level
+  and no more. One tap on an earned chest claimed all three
+  earned chests at once (combined Skill Medals 1.6K, Arms
+  Race Badges, SR coin, food and iron chests and 68 of the
+  5m speedups), the page chest counter moved 0 of 2 to 6 of
+  2, and re-tapping a claimed chest shows only its contents.
+  The ranking row chest opened only a contents preview while
+  the phase was live, so the phase ranking reward is claimed
+  after the phase ends, in the next run, as the owner rule
+  already provides.
