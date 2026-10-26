@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T22:00:00Z
+modified: 2026-10-26T00:47:00Z
 level: L0
-version: 1.6.0
+version: 1.7.0
 description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, and the red dot sweep with task 9 survivor intake
 status: unverified
 grounded_in:
@@ -228,6 +228,19 @@ was restarted; no action was repeated blindly.
   headquarters buildings open the Status Overview instead of
   collecting - left alone, nature unconfirmed.
 
+## 17:47 — Arms Race standing check, access failed
+
+- The first scheduled four hourly Arms Race check ran under the
+  owner standing instruction of 2026-10-25. The device access check
+  returned a non-retryable result — this exact schedule lacks
+  owner-authorized device access — so the Mac mini session was never
+  opened and the game was never entered.
+- Phase, time left, points, rank and chests are unread in this run.
+  No task was completed, no chest was claimed, and nothing was spent.
+  The prior Arms Race record today was performed, so this is not a
+  third consecutive access failure and no chat escalation is made.
+  Detail in the 1747 arms-race check execution file.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -257,7 +270,7 @@ execution file states the outcome, including not performed.
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed | [1359 first claim](vip-rewards/1359-first-claim.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
-| [Arms Race](arms-race/INDEX.md) | Performed | [1402 phase check](arms-race/1402-phase-check.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed, then access-failed | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md) |
 | [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md) |
 
 ## Reorganisation note, 2026-10-25
