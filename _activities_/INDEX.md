@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T21:55:00Z
-version: 1.6.0
+modified: 2026-10-26T04:02:00Z
+version: 1.7.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -31,6 +31,8 @@ file per execution, under the date it happened.
 - [`alliance-donations/`](alliance-donations/INDEX.md)
 - [`season-warming/`](season-warming/INDEX.md)
 - [`secret-missions/`](secret-missions/INDEX.md)
+- [`hidden-treasures/`](hidden-treasures/INDEX.md)
+- [`ghost-ops/`](ghost-ops/INDEX.md)
 - [`radar-tasks/`](radar-tasks/INDEX.md)
 - [`daily-missions/`](daily-missions/INDEX.md)
 - [`event-claims/`](event-claims/INDEX.md)

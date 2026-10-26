@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-10-26T01:54:00Z
-version: 1.1.0
+modified: 2026-10-26T04:08:00Z
+version: 1.2.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -69,6 +69,16 @@ Measured on 2026-10-25.
   owner first. Reading a building panel is fine; the Lv.27 Iron
   Mine reads Output per hour plus 133,128 and Max Production Time
   11 hours 36 minutes.
+- Quick Dispatch lives at the bottom of a Building Details panel -
+  tap the building, then the paw (details) button, and the panel
+  shows output rate, max production time, the posted survivor list
+  and the blue Quick Dispatch button. On the evening of 2026-10-25
+  the Iron Mine Lv.27 and Farmland Lv.28 panels were opened after
+  the second intake; both survivor lists already showed full posts
+  with no newcomer waiting, so nothing changed there. The Iron
+  Mine output rate read plus 114,551 and later plus 126,936 the
+  same evening against plus 133,128 earlier in the day - the rate
+  moves with active buffs, so treat single readings as snapshots.
 
 ## Recruits measured on 2026-10-25
 
@@ -83,9 +93,16 @@ Measured on 2026-10-25.
   3.20 percent.
 - DAVID, Attendant, Tavern - Free Hero Recruitment cooldown
   reduced by 3 hours.
+- A Mechanic for the Factory - Crafting Speed plus 4.80 percent.
+  Recruited in the evening second intake, with one dialog survivor
+  taken in alongside. Name not captured. Whether the radar
+  Distressed Survivor reward of the same evening is one of these
+  two is unconfirmed.
 
 ## Open questions
 
+- Where the Factory building sits on the base, so the Mechanic
+  post can be verified after intake.
 - How fast the line refills and whether it has a cap.
 - Whether a recruit can be moved to a different building by hand,
   and what the second David means - names repeat across roles.

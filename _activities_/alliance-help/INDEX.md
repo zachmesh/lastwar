@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T02:26:00Z
+modified: 2026-10-26T04:06:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,14 @@ counts helps, and any caps. Executions are recorded in
   screen can be clicked directly whenever it becomes available,
   in any session and at any moment, autonomously. Do not wait for
   a round or a check, and do not ask first.
+- The easiest form of the rule, owner taught later the same
+  evening - on the main base screen a help bubble pops up at the
+  lower right when allies request help. Click it the moment it
+  appears; it works the same Help All, but it is easier on the
+  main screen than opening the Alliance panel. The owner pointed
+  out missed bubbles twice before this was learned, so treat the
+  lower right of the base screen as a watch point in every
+  session.
 
 ## What is known from 2026-10-25
 
@@ -50,6 +58,12 @@ counts helps, and any caps. Executions are recorded in
   help their own requests. Help All cleared the allies' requests
   and the page answered Allies are very grateful for your
   assistance.
+- Evening, new server day - the Help page header points had reset
+  (Today's points gained read 20 of 1,000 when opened), confirming
+  the help points tally is a daily counter. Help All cleared the
+  new requests (Ripper Apex on a Lv.23 Missile Vehicle Base,
+  K워니 on a Lv.22 Smelter, among others), after which the rows
+  turned into reduced-time displays.
 
 ## Open questions
 

@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T02:27:00Z
+modified: 2026-10-26T04:10:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -24,7 +24,16 @@ Executions are recorded in
 
 ## How it is done
 
-- Tap each output bubble over the base buildings.
+- Tap each output bubble over the base buildings - and tap the
+  center of the bubble itself. The owner corrected this on the
+  evening of 2026-10-25 after side taps missed; a tap on the edge
+  can fall through to the building underneath and open its panel
+  instead of collecting. Ground the bubble center visually before
+  tapping, and verify the resource total moved afterwards.
+- Food is special - tapping any one farmland bubble collects all
+  farmland bubbles at once (observed the same evening, food rose
+  about 0.4M in one tap and every farmland bubble cleared). Iron
+  and coin bubbles collect one by one.
 - Check the Armed Truck and claim it when it shows fully loaded.
 
 ## Standing instruction from the owner
@@ -46,6 +55,9 @@ Executions are recorded in
 - The Armed Truck, level 1 with an 8 hour loot accumulation as
   displayed, was claimed once after it showed fully loaded, and then
   returned to a Collecting state.
+- Bubbles regenerate fast - a fresh round of iron and coin bubbles
+  was ready within minutes of the evening collection. Collect what
+  is ready in a pass and move on; do not chase the regeneration.
 
 ## Open questions
 

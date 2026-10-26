@@ -1,9 +1,9 @@
 ---
 title: Daily Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T21:55:00Z
+modified: 2026-10-26T04:26:00Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: The umbrella daily checklist linking one folder per activity type
 status: unverified
 grounded_in:
@@ -46,17 +46,30 @@ day. From the next round on they are worked with the list above.
 - [Troop training](../troop-training/INDEX.md) - check every barracks
   and requeue any that has finished, at its highest tier.
 - [Truck plunder](../truck-plunder/INDEX.md) - dispatch own trucks up
-  to the daily trade count and plunder within the daily plunder cap,
-  weak guards only.
+  to the daily trade count and plunder within the daily plunder cap.
+  Plunder follows the owner shard rule in that folder - UR and SSR
+  trucks only, guards below Squad 1, shards plentiful and right
+  sided.
 - [Alliance train](../alliance-train/INDEX.md) - if a train is in
-  preparation, board a carriage with the free Like and Thank.
+  preparation, board carriage 2 with a 3 Trade Contract ticket, per
+  the standing rule in that folder (the earlier free Like and Thank
+  flow is superseded).
 - [Survivor intake](../survivor-intake/INDEX.md) - take in every
   survivor waiting in the line at the front gate (named task 9).
+- [Hidden treasures](../hidden-treasures/INDEX.md) - dig whenever a
+  full set of seven fragments is on hand (the tab badge counts the
+  digs available). Learned in the evening sweep of 2026-10-25.
+- [Ghost ops](../ghost-ops/INDEX.md) - Thursdays only; check the tab
+  on the event day inside its server time windows.
 
 ## The red dot habit
 
 Red dots and numbered badges mean something can be done - sweep
-them every round, claims first. The 2026-10-25 sweep found - the
+them every round, claims first, and page through every page of a
+hub to finish them rather than stopping at the first screen (owner
+direction, evening of 2026-10-25). A numbered red badge counts what
+can be done - the Hidden Treasures badge 1 was exactly one
+affordable dig. The 2026-10-25 sweep found - the
 Alliance button dot was waiting helps (Help All), the Season
 badge was two pass claims, the radar badge was restored stored
 tasks, and the Events badge was only the Frontline challenge

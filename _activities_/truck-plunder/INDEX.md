@@ -1,15 +1,17 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T01:27:00Z
+modified: 2026-10-26T03:47:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner task request naming a plunder and truck task, 2026-10-25
   - source: web guides on Intercity Trade and trade trucks, read 2026-10-25
+  - source: owner teach-in on plunder target selection and dispatch rules, evening of 2026-10-25
+  - source: evening dispatch and plunder executions on the new server day, 2026-10-25
 ---
 
 # Truck plunder - Intercity Trade
@@ -53,22 +55,48 @@ train also runs on this screen as a trade vehicle.
   and preassigns an escort squad. Escorts rotate - the four dispatches
   on 2026-10-25 took Squads 1, 3, 2 and 4 in that order. The panel
   states no unit losses in truck escort battles.
-- The dice button refreshes the roll. The first refresh of the day was
-  tagged Free. Later refreshes cost 1 Trade Contract each (stock 127
+- The dice button refreshes the roll. Each truck gets one free
+  refresh per day - proven on the evening of 2026-10-25, when all
+  four trucks of the new server day showed the Free tag in turn (at
+  noon only the first truck had been refreshed, which made it look
+  like one per day). After a truck free refresh is spent, its dice
+  prices further refreshes at 1 Trade Contract each (stock 127
   observed) - never spend contracts or diamonds without the owner
   approval, under the recording rules on spending.
+- A refresh replaces the whole roll and can downgrade it - observed
+  the same evening, when a free refresh took one truck from SR down
+  to N. Refresh low rolls (N, R); think twice before gambling an SR.
+- Tapping Let's Go on a low rarity truck while its free refresh
+  remains raises a TIPS dialog - the rarity of your current truck is
+  low, and you still have free refresh attempts, skip the refresh
+  and depart now. Cancel returns to the panel to refresh; Confirm
+  departs as rolled. Seen for R and SR rolls.
+- Standing dispatch rule, owner taught 2026-10-25 - on days when UR
+  truck dispatches count toward the Alliance Duel score, dispatch
+  through Mega Mode and send UR trucks only. On all other days,
+  dispatching SR, SSR or UR as rolled is fine.
 - Let's Go dispatches. Journeys observed ran about 4 to just under 5
   hours. Rewards land when the truck arrives.
 
 ## How rewards are delivered
 
-- Own truck cargo has no claim step anywhere in the trade screen, so
-  delivery appears to credit automatically when a trip completes -
-  inference from the absence of any claim affordance, not yet
-  observed end to end. The evening check on 2026-10-25 found the
-  four trucks dispatched at 12:32 still out at about 19:05 with
-  cargo uncredited, well past the 4 to 5 hour journey estimates, so
-  settlement may wait for a return leg - open question below.
+- A returned truck settles when its Truck Details are opened -
+  observed end to end on the evening of 2026-10-25, closing the
+  earlier inference that delivery was automatic. Tapping a returned
+  truck on the Your Truck view opens TRUCK DETAILS headed Intercity
+  Trade Reward, and a Congratulations overlay pays the cargo out.
+  Left and right arrows page through the returned trucks one by one;
+  each page shows the escort squad, the delivered cargo, and a
+  status line - the vehicle is safe and secure, or a Battle History
+  naming each successful plunderer with time and power, the items
+  they took listed below, and the looted cargo slots crossed out in
+  red. Reviewing all four noon trucks cleared the yard to empty
+  slots, and the HUD reconciled - food 319.7M to 334.7M and iron
+  311.7M to 326.7M across the settlements, the evening plunders and
+  harvests combined. Settlement therefore waits for the return leg,
+  not just the outbound arrival estimate - the noon trucks,
+  dispatched 12:32 with 4 to 5 hour estimates, were found returned
+  by about 20:47.
 - History is the ledger. Its Dispatch tab shows each truck cargo
   with green gained amounts and red crossed items for whatever was
   plundered off it en route; its Plunder tab logs the escort battles
@@ -86,15 +114,42 @@ train also runs on this screen as a trade vehicle.
 
 ## How it is done - plundering
 
-- On Others' Trucks, tap a vehicle. Its card shows the owner, warzone,
-  level, guard power, arrival countdown, rarity and cargo. Tapping the
-  first truck ever also runs a one time Monica tutorial on Quick
-  Plunder.
+- On Others' Trucks, tap the center of the truck body itself - the
+  owner corrected side taps that missed the vehicle. Its card shows
+  the owner, warzone, level, guard power, arrival countdown, rarity
+  and cargo. Tapping the first truck ever also runs a one time Monica
+  tutorial on Quick Plunder.
 - Plunder! marches on the World Map. Quick Plunder fights on the spot
   with the preset squad and is otherwise identical, per the tutorial.
-- Only attack guards far below this account - the observed win was
-  244.96M squad power against a 7.6M guard. The yield is a random
-  subset of the cargo, not all of it.
+  Quick Plunder still opens a battle preparation screen - press
+  Battle to fight. The yield is a random subset of the cargo, not
+  all of it.
+- The objective of plundering is to maximize the probability of
+  winning UR shards - the purple 500 point badge stacks in a cargo
+  list. Owner teach-in, evening of 2026-10-25, and now the standing
+  target rule.
+- Only UR and SSR trucks carry UR shards, so hunt only those. Color
+  cue on the road view - gold is UR, purple is SSR (blue is SR,
+  green is R, white is N).
+- The target guard power must sit below this account highest squad -
+  Squad 1 at 24.96M as observed. Lower is better.
+- The more UR shard stacks in the load, the better, and position
+  matters - a shard on the right side of the cargo row is much
+  easier to win, while a shard in the leftmost or second from left
+  slot is hard to plunder.
+- If no suitable target is on the road, tap the refresh button at
+  the top right of the Others' Trucks screen to reroll the list and
+  check again, repeating until a suitable target appears.
+- A truck that was already plundered shows the taken items crossed
+  out in its card - seen on a recheck of the same evening first
+  target, whose two badge stacks were crossed and whose resources
+  had dropped.
+- Evidence the rule works, 2026-10-25 - the first three plunders of
+  the evening, aimed at ordinary weak trucks before the teach-in,
+  yielded 1 to 2 shards between them. The fourth, picked by the
+  rule - a UR truck of [LaWA]Knights that say Ni, Lv.30, guard
+  16.5M, carrying three shard stacks - yielded badge 500 times 6
+  plus an Extra badge times 3, nine shards in one fight.
 
 ## Cadence
 
@@ -107,8 +162,10 @@ train also runs on this screen as a trade vehicle.
 
 ## Scope and availability
 
-- Rarities run N, R, SR, SSR, UR per the guides. Observed in game - N,
-  SSR and UR. Higher rarity carries more and better cargo.
+- Rarities run N, R, SR, SSR, UR per the guides. All five observed in
+  game by the evening of 2026-10-25. Road view colors - white N,
+  green R, blue SR, purple SSR, gold UR. Higher rarity carries more
+  and better cargo, and only SSR and UR carry UR shard stacks.
 - Each truck can be plundered at most twice across the server, per the
   guides, unverified here.
 - The list offers a filter that excludes trucks from the own warzone.
@@ -154,26 +211,53 @@ Observed in game on this account, first execution 2026-10-25.
   Reward Recovery record for 2026-10-24 was claimed the same visit.
   Detail in the 1812 arrival check execution record.
 
+Evening of 2026-10-25, new server day (detail in the 2047 evening
+settlement and dispatch execution record).
+
+- Settlement - the four noon trucks were found returned and were
+  settled by opening their Truck Details one by one. SSR delivered
+  in full (iron 3.0M, food 3.0M, coin 1.9M). The intact UR delivered
+  in full (3.8M, 3.8M, 2.4M). The two looted UR trucks delivered
+  2.8M, 2.8M, 1.8M each - Battle History showed DannyBhoi (131.6M)
+  at 15:26:44 and LoS indestructibles (124.6M) at 16:19:03, each
+  having taken iron 951.8K, food 951.8K, coin 607.5K plus items; one
+  item in one looter list was stamped Reclaimed.
+- Reward Recovery - the 2026-10-25 19:00 record (1 unstarted
+  transport) was claimed. Puzzle piece times 1, chest times 25,
+  gold chest times 20, iron 1.5M, food 1.5M, coin 972.5K.
+- Dispatches, Trade Count 0 of 5 to 4 of 5 - truck one rolled N, its
+  free refresh made SSR (3.0M, 3.0M, 1.9M), Squad 1. Truck two
+  rolled R, free refresh changed the cargo but kept R (2.0M, 2.0M,
+  1.2M), Squad 3. Truck three rolled SR, its free refresh downgraded
+  it to N (1.2M, 1.2M, 810.0K), Squad 2. Truck four rolled N, free
+  refresh made SR (2.5M, 2.5M, 1.6M), Squad 4. Arrivals about 3
+  hours 44 minutes to 4 hours 34 minutes out.
+- Plunders, Plunder Count 0 of 4 to 4 of 4 - [RoSt]Toy2005 N truck,
+  Lv.29, guard 7.7M, won, iron 285.7K, food 285.7K, coin 180.2K,
+  badge times 1 plus Extra badge times 1. [Majz]Altanmt, Lv.27,
+  guard 8.0M, won, 534.1K, 534.1K, 335.5K, chest times 20, badge
+  times 1. A [KvP] SSR truck, Lv.28, guard 13.9M, won, 655.7K,
+  655.7K, 417.4K plus items. [LaWA]Knights that say Ni UR truck,
+  Lv.30, guard 16.5M, won, 951.8K, 951.8K, 607.5K, UR shards times
+  6 plus Extra times 3. A [GRID]DEKBOTAK truck at guard 19.8M was
+  inspected and passed over as too strong for the shard rule.
+
 ## Limits
 
 - No Trade Contract or diamond spending on refreshes without the owner
   approval.
-- Plunder targets are chosen weak on purpose. Do not plunder alliance
-  mates or strong guards, and stop at the daily cap.
+- Plunder targets follow the shard rule above - UR or SSR trucks
+  only, guard below Squad 1 power, shards plentiful and right sided.
+  Do not plunder alliance mates, and stop at the daily cap.
 
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
   trade is. Mega Mode itself is a VIP 13 privilege, unlocked on this
-  account.
-- Whether the free refresh is one per day or one per truck - only the
-  first truck of the day showed Free, later panels priced refreshes at
-  1 contract from the start.
-- When exactly a dispatched truck settles - the 2026-10-25 trucks
-  were still out about 6.5 hours after dispatch against 4 to 5 hour
-  journey estimates, so either the estimate covers only the outbound
-  leg and settlement waits for the return, or arrivals process on a
-  later tick. The next daily round should find them delivered and
-  can close this.
+  account. The owner dispatch rule for Alliance Duel UR days (Mega
+  Mode, UR trucks only) is recorded above but not yet executed.
+- Whether the 2026-10-25 Alliance Duel day scored UR truck
+  dispatches - the daily duel category was not verified that day,
+  so the evening dispatches ran under normal day handling.
 - Whether the collapsed 2026-10-20 Reward Recovery record was
   already claimed - its toggle did not expand on 2026-10-25.

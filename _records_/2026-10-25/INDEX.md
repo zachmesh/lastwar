@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T03:26:00Z
+modified: 2026-10-26T04:24:00Z
 level: L0
-version: 1.9.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, and the evening truck and train wrap up
+version: 1.10.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, and the late evening red dot sweep with owner teach-ins
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -273,6 +273,75 @@ and no re-login.
   the gate, and an Approaching minus 50 degree cold wave notice
   about 10.5 hours out. All belong to the next daily round.
 
+## 19:37 to about 21:32 — Late evening red dot sweep and owner teach-ins
+
+The owner named a crystal task (still unidentified - the season Rare
+Soil line is the working hypothesis), then taught through the whole
+evening in chat while the sweep ran. Standing rules set or sharpened
+this session - click bubbles on their center; click the main screen
+help bubble at the lower right the moment it pops; page through
+every page to finish red dots and claim what shows; secret missions
+run Mega Deploy by default, Mega Refresh first on Alliance Duel UR
+days, and UR Only unselected so every squad deploys; truck dispatch
+on duel UR days is Mega Mode with UR trucks only, other days SR,
+SSR or UR as rolled; and the plunder goal - maximize the probability
+of UR shards, hunting only UR (gold) and SSR (purple) trucks whose
+guards sit below Squad 1, shards plentiful and right sided,
+refreshing the road list until a suitable target appears. All owner
+wording is in the input log; the rules themselves are in the
+activity metadata.
+
+- Secret missions — the four morning tasks were claimed (one Claim
+  collects all finished tasks; cards stamped PERFECT), a Reward
+  Recovery record of 8 system completed tasks was claimed, and nine
+  tasks went out by Mega Deploy in two batches under the new rules.
+  One ally assist landed (Loulou972); the UR ally assist path stays
+  an open question. At 20:37 the four 30 minute tasks finished and
+  were claimed together; five tasks remain out overnight.
+- Hidden Treasures (new type) — the tab badge 1 was exactly one
+  affordable dig. The dig was executed; M5 is the bottleneck
+  fragment. Exchange inspected only.
+- Ghost Ops (new type) — inspected only; no event running, next in
+  about 2 days 23 hours (Thursday). Guide read end to end.
+- Radar — fully cleared, including the special purple pin task A
+  Distressed Survivor (full flow in the radar metadata and the 2015
+  evening clear record). Radar score 2,811, stock 0 of 40.
+- Survivor intake — two more taken in at the gate (a Mechanic for
+  the Factory, Crafting Speed plus 4.80 percent, and one dialog
+  survivor); Quick Dispatch panels checked, no post changes needed.
+- Harvest — iron and coin bubbles tapped on their centers, one
+  farmland tap collected all farmland; bubbles regenerate fast.
+- Events and Season — every tab paged through. Arms Race had
+  rotated to Base Building with nothing free to score; Wanted Boss
+  Code 87 not yet out (best single attack 899,542,636 on Goals);
+  Community already claimed; Level Swap inspected only; Season
+  Battle Pass login claimed for plus 100 (16,900 total), the coal
+  donation daily left undone with a cold wave approaching;
+  Profession Engineer level 61 and its skills read, none used.
+- Halloween Check-In — Day 01 claimed.
+- Alliance — Help All cleared the new server day requests (daily
+  help points seen reset). Alliance Gifts claimed in full on both
+  tabs, Regular 453 plus 1 late arrival and Premium 34, per the
+  owner both pages direction. Alliance Events inspected (no train
+  entry there).
+- Trucks — the noon trucks were settled by opening their Truck
+  Details (two intact, two looted en route; settlement on open is
+  now the recorded mechanism), a fresh Reward Recovery record was
+  claimed, four new trucks were dispatched for the new server day
+  (SSR, R, N after a downgrade refresh, SR - each used its own per
+  truck free refresh), and four plunders were fought to the cap.
+  The fourth, picked by the new shard rule - a UR truck of
+  [LaWA]Knights that say Ni, guard 16.5M, three shard stacks -
+  paid 9 UR shards against 1 to 2 from the earlier ordinary
+  targets. End of session HUD - food 334.7M, iron 327.0M, coin
+  77.3M, red diamonds 2,083, power 149,351,954.
+- Still open after this sweep — the alliance train entry point for
+  the evening boarding (rule ready, section 2 and 3 contracts; no
+  train control found in the Alliance panel or Events, and the left
+  column train icon opened Intercity Trade), the crystal task
+  identity, and the day Alliance Duel category, which decides
+  whether the duel day dispatch and Mega Refresh rules applied.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -284,26 +353,28 @@ execution file states the outcome, including not performed.
 | Activity | Status | Execution record |
 |---|---|---|
 | [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md) |
-| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md) |
-| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md), [2047 evening help](alliance-help/2047-evening-help.md) |
+| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md), [2048 evening claims](alliance-gifts/2048-evening-claims.md) |
 | [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md) |
 | [Season Warming](season-warming/INDEX.md) | Performed | [1100 daily round](season-warming/1100-daily-round.md) |
-| [Secret Missions](secret-missions/INDEX.md) | Performed in part | [1100 daily round](secret-missions/1100-daily-round.md) |
+| [Secret Missions](secret-missions/INDEX.md) | Performed | [1100 daily round](secret-missions/1100-daily-round.md), [1944 evening mega](secret-missions/1944-evening-mega.md) |
+| [Hidden Treasures](hidden-treasures/INDEX.md) | Performed | [1959 first dig](hidden-treasures/1959-first-dig.md) |
+| [Ghost Ops](ghost-ops/INDEX.md) | Inspected only | [2005 inspection](ghost-ops/2005-inspection.md) |
 | [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md), [1452 red dot sweep](radar-tasks/1452-red-dot-sweep.md), [2015 evening clear](radar-tasks/2015-evening-clear.md) |
 | [Daily Missions](daily-missions/INDEX.md) | Performed in part | [1100 daily round](daily-missions/1100-daily-round.md) |
-| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md) |
+| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md), [2030 evening sweep](event-claims/2030-evening-sweep.md) |
 | [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md), [1342 pass claims](shop-claims/1342-pass-claims.md), [1359 pass claims](shop-claims/1359-pass-claims.md), [1447 season passes](shop-claims/1447-season-passes.md) |
 | [Hero Recruitment](hero-recruitment/INDEX.md) | Performed | [1100 daily round](hero-recruitment/1100-daily-round.md) |
 | [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |
 | [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
-| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md), [2025 evening harvest](resource-collection/2025-evening-harvest.md) |
 | [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
-| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md), [2047 evening settlement](truck-plunder/2047-evening-settlement.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed | [1359 first claim](vip-rewards/1359-first-claim.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
 | [Arms Race](arms-race/INDEX.md) | Performed, then access-failed | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md) |
-| [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md) |
+| [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md), [2016 second intake](survivor-intake/2016-second-intake.md) |
 
 ## Reorganisation note, 2026-10-25
 
