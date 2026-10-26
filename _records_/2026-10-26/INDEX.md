@@ -419,3 +419,56 @@ record. Inside it, one subfolder per activity type, named as in
 - Close — nothing bought, no diamond or Trade Contract spent,
   no speedup or stamina item burned, no coal donated, no
   furnace action, no stage ground.
+
+## 10:03 to about 10:47 — Segment 1 run, two radar gathers claimed, Arms Race target missed
+
+- Segment 1 run of the split routine (production and Arms
+  Race). Gates first - duel Day 1 Radar Training, radar
+  posture release; resource check opened clean. The game
+  opened with the different-device dialog - Confirm clicked
+  once, the app exited, and the reopen showed no second
+  dialog, so the run proceeded and is not contested. Opening
+  HUD food 325.2M, iron 314.5M, coin 2.2M, stamina 43, total
+  power 147,287,658 - coin and power both far below the
+  05:47 readings (owner-side change between runs).
+- Performed - harvest (bubbles cleared in the factory
+  compound, the east and west mine and farm rows, and a
+  closing accrual pass; closing HUD food 326.0M, iron
+  315.2M, coin 3.8M), radar (stored 0 of 40; both special
+  pins gathered and claimed on the release day - Diamond
+  Mine red gem 20 and blue swirl 10 via Claim All, Rare
+  Gold Mine coin 73.6K and blue swirl 10 via the pin, the
+  1.0M gather yield landing in the HUD; radar score 2,832
+  to 2,834), survivors (one dialog survivor taken in at the
+  gate; Quick Dispatch pressed in the Farmland Lv.28 panel,
+  all four Farmer posts already filled), donations (two
+  coin donations to the recommended Rallied Defense until
+  the count ran out and the button greyed at 00:13:28;
+  today 7,000 to 7,100).
+- Donation reward resolved - the trophy opens the Donation
+  ranking (Bears Lair rank 11 at 7,100) and its Rewards
+  panel shows a Donation Ranking Reward settling at the
+  19:00 reset (tier 4 to 100 at this rank) with no Claim
+  button anywhere; the claim state unverified since the
+  0547 run is closed.
+- Arms Race MISSED TARGET - Tech Research read live at 0
+  points, thresholds 6,250, 12,500 and 30,000, about 54
+  minutes left. The Research Queue (Lv.9 Defense 23h30m,
+  Lv.8 Morale 1d08h) lands no completion inside the phase,
+  and the only other scoring paths are research speedups
+  and diamond packs, both red lines - the 30,000 target is
+  unreachable in-rules this phase and is recorded as
+  missed. The Hero Advancement ranking chest still shows
+  preview only (SR chests 3 each); the cumulative chest
+  stands purple at 6 of 8; the Events tab sweep is clean.
+- Checked only - training (all four barracks carry running
+  clocks; the earliest recorded queue finish is about
+  11:31 today, so no barracks can be idle).
+- Resource flag at the close - the closing snapshot flags
+  coin LOW at 3.8M against the 10M floor (it opened at
+  2.2M after the between-runs drop and this run's gathers
+  and harvests lifted it). A computer session dropped
+  during a one minute wait and was reopened once (cc-134)
+  to finish the gold claim. Nothing bought, no diamond
+  spent, no speedup or stamina item burned, no research or
+  building started, no stage swap.

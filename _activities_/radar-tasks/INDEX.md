@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T06:44:00Z
+modified: 2026-10-26T17:47:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Radar stored tasks, Quick Execute, stamina regain and the special pin tasks that Quick Execute does not cover
 status: unverified
 grounded_in:
@@ -136,6 +136,31 @@ Two further pin types completed in the late round -
   is only real when the stamina drops by 20 and the march timer
   appears; verify both before waiting. The kill credited back at
   the radar as claimable task rewards.
+
+## Gathering pins - verified 2026-10-26
+
+- Some purple pins are gathering spots, not story tasks - a
+  Diamond Mine pin and a Rare Gold Mine pin stood together on
+  the 10:03 run map. The pin card names the spot, its rewards
+  and a despawn timer of about 3 hours, with a Go button.
+- Flow - Go jumps to the vein on the world map (a story dialog
+  may play first; advance it). Tap the big round pickaxe
+  button to open the march panel - a full squad is
+  preselected, the gathering amount equals the vein size, and
+  no stamina cost is shown (none was deducted either run).
+  Gathering speed bonuses on these veins are extreme (plus
+  100 percent on the Lv.24 Diamond Vein, plus 20000 percent
+  on the Lv.28 Gold Mine), so gathering took 00:02:11 and
+  00:09:20 for 200 and 1,080,000 units.
+- Claiming - when the diamond squad returned, the radar page
+  showed the task as claimable and Claim All paid the pin
+  rewards (red gem 20, blue swirl item 10). The gold pin was
+  claimed by tapping the finished pin, which opened the
+  rewards popup directly (coin 73.6K, blue swirl item 10).
+  Each claimed pin paid plus 1 radar point (2,832 to 2,834
+  across both). The gathered yield itself (1.0M coin) lands
+  in the HUD when the squad returns, separate from the pin
+  reward.
 
 ## What is known from 2026-10-25
 

@@ -15,9 +15,9 @@
   "note": "0630 segment 2 run - Regular Claim All - 97 gifts claimed; Premium scrolled to end, every gift already Claimed"
  },
  "harvest": {
-  "status": "skipped",
-  "at": "2026-10-26T06:12:49",
-  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
+  "status": "done",
+  "at": "2026-10-26T10:31:50",
+  "note": "1003 segment 1 run - bubbles cleared in factory compound, east mines/farms, west mines/farms plus a closing accrual pass; food 325.2M to 326.0M, iron 314.5M to 315.2M, coin helped 2.2M to 3.8M"
  },
  "vip": {
   "status": "done",
@@ -40,14 +40,14 @@
   "note": "0657 seg3 - fragments M1x13 M2x12 M3x2 M4x5 M5x0 M6x5 M7x9, 11/15; M5 zero, Dig greyed, no dig"
  },
  "radar": {
-  "status": "skipped",
-  "at": "2026-10-26T06:12:49",
-  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
+  "status": "done",
+  "at": "2026-10-26T10:31:50",
+  "note": "1003 segment 1 run - Day 1 release; stored 0/40 (12 restore in ~25m); both special pins gathered and claimed: Diamond Mine (red gem x20, blue swirl x10) via Claim All, Rare Gold Mine (coin 73.6K, blue swirl x10) via pin tap; radar pts 2832 to 2834; no stamina item used"
  },
  "survivors": {
-  "status": "skipped",
-  "at": "2026-10-26T06:12:49",
-  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
+  "status": "done",
+  "at": "2026-10-26T10:31:50",
+  "note": "1003 segment 1 run - 1 dialog survivor taken in at the gate, line clear; Quick Dispatch pressed in Farmland Lv.28 details, posts already full (Anthony, Harry, Michael, Karen - all Farmer)"
  },
  "trucks": {
   "status": "done",
@@ -60,14 +60,14 @@
   "note": "0630 segment 2 run - no Boarding closes in banner on base screen; the train boarded at 0540 (Abyss Apex) has departed, departure mail read in Event"
  },
  "training": {
-  "status": "skipped",
-  "at": "2026-10-26T06:12:49",
-  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
+  "status": "done",
+  "at": "2026-10-26T10:31:50",
+  "note": "1003 segment 1 run - checked only; all 4 barracks tents show training clocks and the 2026-10-25 queues cannot finish before about 11:31 today (T7 first); nothing requeued, no Finish Now"
  },
  "donations": {
-  "status": "skipped",
-  "at": "2026-10-26T06:12:49",
-  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
+  "status": "done",
+  "at": "2026-10-26T10:31:50",
+  "note": "1003 segment 1 run - coin donations to recommended Rallied Defense 6/10; Tech Donation Today 7000 to 7100 (+100), coin button then on about 13min cooldown; daily reward resolved - Donation Ranking Reward settles at 19:00 (rank 11, tier 4-100), no manual claim exists"
  },
  "events": {
   "status": "done",
@@ -75,9 +75,9 @@
   "note": "0657 seg3 - full Events sweep; Arms Race Tech Research 0 stage pts, cumulative 6/8, no bouncing chest; Wanted Boss not spawned, goals unreached; Community Claimed; Halloween Day 02 date-locked; Season BP Claim All - no rewards available"
  },
  "arms-race": {
-  "status": "skipped",
-  "at": "2026-10-26T06:12:50",
-  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
+  "status": "done",
+  "at": "2026-10-26T10:31:50",
+  "note": "1003 segment 1 run - MISSED TARGET: Tech Research 0 of 30000 top threshold; research queue Lv.9 Defense 23h30m and Lv.8 Morale 1d08h left, no completion lands in phase; other scoring paths are speedups and packs (red lines); ranking chest still preview only (SR chests x3 each); cumulative 6/8 static; sweep clean"
  },
  "star-ceremony": {
   "status": "skipped",

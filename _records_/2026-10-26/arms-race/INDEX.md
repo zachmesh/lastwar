@@ -1,7 +1,7 @@
 ---
 title: Arms Race on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T13:11:00Z
+modified: 2026-10-26T17:47:00Z
 version: 1.0.0
 description: Index of Arms Race executions on 2026-10-26
 grounded_in:
@@ -54,3 +54,9 @@ time and never edited once committed (C1).
   through the retries. Last verified score carried forward -
   Hero Advancement 37,500 of 12,000, target met; the phase ranking
   reward claim falls to the next segment 1 run (10:03 local).
+- [1003-segment-1-run.md](1003-segment-1-run.md) — the segment 1 run
+  that started at 10:03 local; Tech Research 0 of the 30,000 top
+  threshold - target MISSED inside the red lines (research queue
+  finishes in 23h30m and 1d08h, no completion lands in phase;
+  speedup and pack paths are red lines); ranking chest still
+  preview only; cumulative chest purple 6 of 8; sweep clean.

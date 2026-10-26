@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T12:54:00Z
+modified: 2026-10-26T17:47:00Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -220,3 +220,22 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   Cadence completion sweep above - three claimed point chests do
   not by themselves prove that every Arms Race reward has been
   claimed.
+
+- The Tech Research phase, read live on 2026-10-26 - chest
+  thresholds 6,250, 12,500 and 30,000 with the same ruby tags
+  (2,360, 4,800, 11,800). Scoring as displayed - Increase Tech
+  Power by 1pt pays 1 point, Use 1-min Research Speed-up pays
+  10, Buy Packs containing Diamonds pays 30 per diamond. The
+  10:03 run scored 0 and missed the target inside the red
+  lines: the research queue held 23h30m and 1d08h timers, so
+  no completion could land in the phase, and the remaining
+  paths are exactly the banned speedup and pack spends. A
+  Tech Research phase is therefore only winnable when a
+  research completion happens to land inside its window.
+- The ranking row lag - during the Tech Research phase the
+  ranking row still displayed the finished Hero Advancement
+  result (segment rank 8, 37,500) and its chest still opened
+  the contents preview only (Iron Chest (SR) 3, Food Chest
+  (SR) 3, Coin Chest (SR) 3), with no Claim button, hours
+  after that phase ended. Where the phase ranking reward is
+  actually paid remains an open question below.

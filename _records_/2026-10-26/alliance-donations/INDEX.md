@@ -1,7 +1,7 @@
 ---
 title: Alliance Donations on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T13:11:00Z
+modified: 2026-10-26T17:47:00Z
 version: 1.0.0
 description: Index of Alliance Donations executions on 2026-10-26
 grounded_in:
@@ -34,3 +34,9 @@ time and never edited once committed (C1).
   still unverified); the device-access error then returned at the
   Rallied Defense panel and persisted through the retries, so no
   donation was made.
+- [1003-segment-1-run.md](1003-segment-1-run.md) — the segment 1 run
+  that started at 10:03 local; two coin donations to Rallied
+  Defense (today 7,000 to 7,100) until the coin button greyed on
+  a 00:13:28 timer; the daily reward is resolved as a Donation
+  Ranking Reward settlement at the 19:00 reset (rank 11, tier
+  4 to 100), no manual claim exists.

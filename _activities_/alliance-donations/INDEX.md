@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T12:42:00Z
+modified: 2026-10-26T17:47:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -88,6 +88,23 @@ activity. Not a separate type.
   donations as done for the day. The owner corrected this - the
   donation belongs in every run whenever the daily coin count
   remains, which is the Cadence rule above.
+
+- The daily reward is resolved (10:03 run) - the trophy beside
+  Tech Donation Today opens Strength Ranking, Donation tab, and
+  its Rewards button opens the Donation Ranking Reward panel.
+  The reward is a ranking settlement paid at the 19:00 reset
+  (daily tiers by rank; the 4 to 100 tier pays a 50-count badge
+  item 4 and red gem 10), gated on at least 1000 contribution
+  points. There is no Claim button in the flow - nothing is
+  claimed by hand, which closes the claim state left unverified
+  by the 0547 and 0608 runs.
+- Donation availability runs in bursts - the Rallied Defense
+  panel showed Donation Count 2 of 30 at the 10:03 run, two
+  coin donations landed at 50 points each (today 7,000 to
+  7,100, coin cost 700 each), and the coin button then greyed
+  with a 00:13:28 timer, the same end state the 0547 run hit
+  after nine donations. Donate until the button greys, then
+  stop for that run.
 
 ## Open questions
 
