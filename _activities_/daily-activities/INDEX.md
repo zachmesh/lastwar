@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T13:28:00Z
+modified: 2026-10-26T13:36:00Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: owner design on 2026-10-26 - remove the single every four hours job and split the routine into segment schedules rotating hourly, each segment looking at a specific set of tasks
   - source: owner refinement on 2026-10-26 - the segments run in the same hour, 15 minutes apart, not one per hour
   - source: owner refinement on 2026-10-26 - the spacing is 18 minutes, so the fires are :03, :21, :39 and :57
+  - source: owner refinement on 2026-10-26 - make it 3 segments, 25 minutes apart
 ---
 
 # Routine activities
@@ -100,19 +101,19 @@ regulars is kept so it is always visible what is still expected.
   due again at each new cycle of their own segment - a regular
   done or skipped in an earlier cycle is never a reason to skip
   it in the current one.
-- Since 2026-10-26 the routine runs as 4 segment schedules in
-  the same hour, 18 minutes apart, replacing the single every
+- Since 2026-10-26 the routine runs as 3 segment schedules in
+  the same hour, 25 minutes apart, replacing the single every
   four hours job - segment 1 (production and Arms Race -
   harvest, training, donations, radar, survivors, Arms Race)
-  fires at :03, segment 2 (alliance - mail, help, gifts, train,
-  star ceremony) at :21, segment 3 (missions and logistics -
-  secrets, treasures, trucks, Ghost Ops) at :39, segment 4
-  (claims - passes, events, VIP) at :57, and each segment
-  repeats every 4 hours, so the whole routine completes inside
-  one hour of each cycle. The split was the owner design
-  against the device-access error that kept cutting the single
-  long run short mid-session - short segment runs finish inside
-  one session, and one segment failing loses only that segment.
+  fires at :03, segment 2 (alliance and VIP - mail, help,
+  gifts, train, star ceremony, VIP) at :28, segment 3 (missions,
+  logistics and claims - secrets, treasures, trucks, Ghost
+  Ops, passes, events) at :53, and each segment repeats every
+  4 hours, so the whole routine completes inside one hour of
+  each cycle. The split was the owner design against the
+  device-access error that kept cutting the single long run
+  short mid-session - short segment runs finish inside one
+  session, and one segment failing loses only that segment.
 - The tracker is `tools/regulars.py` - `list` shows every regular
   with its status for the day, `todo` shows only what is still due,
   `done <id>` and `skip <id>` record an outcome with a note. State
