@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T11:41:00Z
+modified: 2026-10-26T11:47:00Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner standing instruction on 2026-10-25 to check Arms Race every four hours
   - source: owner standing rule on 2026-10-26 - every four hour run shall meet the Arms Race target
   - source: owner refinement on 2026-10-26 - make the effort just enough to reach the target, do not overdo it
+  - source: owner instruction on 2026-10-26 - the Hero Advancement phase is met by upgrading a hero level with EXP points
 ---
 
 
@@ -62,6 +63,14 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   resources that score better in a later phase or on a duel day,
   so plan the scoring actions to land at or just past the
   threshold.
+- Hero Advancement phase, owner instruction 2026-10-26 - this
+  phase is met by upgrading hero levels with EXP points. It is
+  the easiest phase to close - spend hero EXP one level at a
+  time, only until the target is met, then stop. This is a scoped
+  authorization to spend hero EXP for this phase only. It does
+  not extend to skill medals or hero shards, and it does not
+  change the Alliance Duel Day 4 gate, where hero resources
+  remain the owner spend.
 - The target never overrides the red lines. Diamonds and money are
   never spent, speedup and stamina items are never burned, no
   research or building is started on the agent initiative, hero
@@ -123,3 +132,14 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 - The full phase rotation list and what each phase pays points for.
 - Whether the chest ruby tags also change by phase or segment.
 - When the phase ranking reward lands and where it is claimed.
+
+## What is known from 2026-10-26
+
+- The Hero Advancement phase ran on the morning of 2026-10-26
+  with a top chest threshold of 12,000 points. The 04:35 run
+  scored 0 - at the time, its only scoring paths (hero resources
+  or paid packs) were both treated as red lines, so the target
+  was missed and reported. The owner then authorized the hero
+  EXP path for this phase (see Cadence) and called it the
+  easiest phase to close - one hero level upgraded with EXP
+  points is the intended unit of effort.
