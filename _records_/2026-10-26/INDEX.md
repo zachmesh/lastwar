@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T12:01:00Z
+modified: 2026-10-26T12:53:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -180,6 +180,9 @@ record. Inside it, one subfolder per activity type, named as in
 | [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [0505 four hour run](alliance-gifts/0505-four-hour-run.md) |
 | [Resource Collection](resource-collection/INDEX.md) | Performed | [0505 four hour run](resource-collection/0505-four-hour-run.md) |
 | [Radar Tasks](radar-tasks/INDEX.md) | Performed | [0505 four hour run](radar-tasks/0505-four-hour-run.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed, bouncing chest claimed | [0529 four hour run](arms-race/0529-four-hour-run.md) |
+| [Alliance Train](alliance-train/INDEX.md) | Performed, carriage 2 boarded | [0529 four hour run](alliance-train/0529-four-hour-run.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Access failed | [0529 four hour run](resource-collection/0529-four-hour-run.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |
 
@@ -224,3 +227,46 @@ record. Inside it, one subfolder per activity type, named as in
   coin 24.4M, stamina 155, total power 149,695,458, snapshot
   saved. Nothing bought, no diamond spent, no speedup or
   stamina item burned, no furnace or coal action.
+
+## 05:29 to about 05:50 — Correction run, bouncing chest claimed, train boarded, then access failed
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened clean. The game opened straight onto the
+  base - no different-device dialog, no lock, no login demand.
+  Opening HUD food 317.7M, iron 307.3M, coin 24.4M, stamina 155,
+  total power 149,695,458.
+- TRAIN FIRST, EXPIRING WINDOW - the base carried a Boarding
+  closes in banner at 00:02:31. The banner tap was dispatched,
+  the session dropped and was reopened at once (cc-123), and the
+  STATION PLATFORM stood open: conductor Abyss Apex, Train
+  Rating 71,050, departure 00:06:41. Carriage 2 was boarded
+  under the standing rule for the first time - the conductor
+  dialog quantity was set from 1 to 3 against a stock of 143
+  Trade Contracts and Gift Contract was tapped; occupancy rose
+  11 of 7 to 12 of 7 with this account avatar seated. The
+  arrival reward comes later by Event mail.
+- ARMS RACE, THE BOUNCING CHEST - Hero Advancement re-read at
+  37,500 points (01:26:34 left, phase end about 07:03 local),
+  segment rank 8, combined 2110. All three point chests were
+  re-tapped and showed contents only - the 0505 claim stands.
+  The chest the owner reported bouncing is the cumulative
+  counter chest at the top left of the page: blue, counter 6
+  of 2, progress bar full, the Arms Race tab carrying a red
+  dot. One tap claimed it - a gold ticket item 1, pink
+  puzzle-piece items 2 and a red gem tagged 50. Afterwards the
+  chest stood purple at 6 of 8, static across two frames, and
+  the tab red dot was gone; the Events tab bar was scanned and
+  no other red dot stood anywhere. The ranking reward chest is
+  still preview only (SR Iron, Food and Coin chests, 3 each)
+  while the phase is live - it settles at about 07:03 local and
+  the next run claims it. No scoring action was taken; the
+  target was already met.
+- ACCESS FAILED AT THE HARVEST - back on the base, the first
+  harvest tap returned the device-access error; the session
+  was reopened and retried three times (two session starts,
+  one activate) and every attempt returned the same error, so
+  the run stopped under the owner retry rule. Harvest, mail,
+  help, gifts and radar were not redone; they stand completed
+  by the 0505 run about twenty-five minutes earlier. Session
+  cc-123 may still be open. Nothing bought, no diamond spent,
+  no speedup burned, no furnace or coal action.

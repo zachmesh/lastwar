@@ -55,9 +55,9 @@
   "note": "4 evening trucks settled (food/iron +8.9M each, coin +5.7M); recovery already claimed; 5th truck dispatched N after free refresh R to N; trade 5/5, plunder already 4/4"
  },
  "train": {
-  "status": "skipped",
-  "at": "2026-10-26T02:10:20",
-  "note": "no train in preparation - no boarding banner on base, no train icon in profile"
+  "status": "done",
+  "at": "2026-10-26T05:40:33",
+  "note": "0529 run - train in preparation (conductor Abyss Apex, rating 71,050); boarded carriage 2 with exactly 3 Trade Contracts (stock 143, slider 1 to 3, Gift Contract); occupancy 11/7 to 12/7; arrival reward by Event mail later"
  },
  "training": {
   "status": "done",
@@ -76,8 +76,8 @@
  },
  "arms-race": {
   "status": "done",
-  "at": "2026-10-26T05:19:51",
-  "note": "0505 run - Hero Advancement score re-read 37,500 of 12,000 top threshold (75.0M EXP from the 0456 Adam level at +1 per 2,000 EXP); all three chests claimed in one tap (Skill Medals 1.6K total, badges, SR chests, 5m speedups 68); segment rank 8, combined 2110; ranking reward chest preview only, not claimable until phase ends about 07:00 - check next run"
+  "at": "2026-10-26T05:40:33",
+  "note": "0529 run - Hero Advancement 37,500 of 12,000 top threshold; three point chests re-verified claimed; cumulative counter chest (6/2 full) claimed - gold ticket item 1, pink puzzle items 2, red gem 50 - rolled to purple 6/8, tab red dot gone; ranking reward preview only (SR chests x3 each) until phase ends about 07:03 - claim next run"
  },
  "star-ceremony": {
   "status": "skipped",

@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T06:44:00Z
+modified: 2026-10-26T12:53:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -56,10 +56,17 @@ literal train, so both readings of the request are in the system.
   board the 2nd section (carriage 2), and always use 3 Trade
   Contracts for the ticket in the conductor dialog, autonomously.
   This supersedes the first execution, which boarded carriage 1
-  with the free Like and Thank and gifted nothing. The gift flow
-  itself has never been opened, so how the 3 contracts are entered
-  and what the paid ticket changes are still to be observed on the
-  next boarding.
+  with the free Like and Thank and gifted nothing.
+- Gift flow, observed 2026-10-26 in the first execution of the
+  standing rule - the THANK THE CONDUCTOR dialog carries a
+  quantity slider starting at 1 with minus and plus buttons, a
+  stock readout (143 Trade Contracts at the time), a blue Like
+  and Thank button and a green Gift Contract button. Set the
+  quantity to 3 with the plus button, read it back, then tap
+  Gift Contract. The dialog closes, occupancy rises by one and
+  the carriage plus is replaced by the own avatar. What the
+  paid ticket changes over the free Like and Thank is still
+  unobserved.
 - Boarded state shows as the own avatar inside the carriage and the
   occupancy count rising by one.
 - After the ride, the carriage reward arrives as an Event category
@@ -137,10 +144,10 @@ Observed in game on this account, first execution 2026-10-25.
 
 ## Open questions
 
-- What the 3 Trade Contract ticket does - whether the conductor
-  dialog takes a quantity, and what the paid ticket improves over
-  the free Like and Thank (seat, reward share, rating). First
-  boarding under the standing rule will show it.
+- What the 3 Trade Contract ticket improves over the free Like
+  and Thank (seat, reward share, rating) - the dialog takes a
+  quantity (observed 2026-10-26), but the benefit of the paid
+  ticket is still unobserved.
 - How the reward split among riders works - the claimed set matched
   the carriage 1 card in kind, so a rider appears to receive the
   carriage set as displayed, but whether occupancy dilutes it is

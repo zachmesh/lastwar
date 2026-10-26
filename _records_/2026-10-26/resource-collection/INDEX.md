@@ -1,7 +1,7 @@
 ---
 title: Resource Collection on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T11:43:00Z
+modified: 2026-10-26T12:53:00Z
 version: 1.0.0
 description: Index of Resource Collection executions on 2026-10-26
 grounded_in:
@@ -25,3 +25,7 @@ time and never edited once committed (C1).
   started at 04:35 local.
 - [0505-four-hour-run.md](0505-four-hour-run.md) — the four hour run that
   started at 05:05 local; four iron bubbles collected, base clear.
+- [0529-four-hour-run.md](0529-four-hour-run.md) — the four hour run
+  that started at 05:29 local; bubbles stood on the base but the
+  first harvest tap was cut by the device-access failure (three
+  retries, same error) and nothing was collected.

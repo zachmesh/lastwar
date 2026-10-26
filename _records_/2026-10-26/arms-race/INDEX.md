@@ -1,7 +1,7 @@
 ---
 title: Arms Race on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T12:01:00Z
+modified: 2026-10-26T12:53:00Z
 version: 1.0.0
 description: Index of Arms Race executions on 2026-10-26
 grounded_in:
@@ -35,3 +35,10 @@ time and never edited once committed (C1).
   started at 05:05 local; score re-read at 37,500 of the 12,000 top
   threshold, all three chests claimed, target met; the ranking reward
   chest is preview only until the phase ends at about 07:00 local.
+- [0529-four-hour-run.md](0529-four-hour-run.md) — the correction run
+  that started at 05:29 local; the bouncing chest the owner reported
+  was the cumulative counter chest (6 of 2, full bar), claimed for a
+  gold ticket item, pink puzzle items and a 50 red gem, rolling to
+  6 of 8 on the next tier; point chests re-verified claimed, ranking
+  reward still preview only; the run was then cut by the
+  device-access failure after three retries.
