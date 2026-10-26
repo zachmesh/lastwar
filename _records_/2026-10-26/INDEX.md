@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T13:11:00Z
+modified: 2026-10-26T13:36:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -344,3 +344,36 @@ record. Inside it, one subfolder per activity type, named as in
   (10:03 local) after the phase ends at about 07:03. Session
   cc-127 may still be open. Nothing bought, no diamond spent, no
   speedup or stamina item burned, no furnace or coal action.
+
+## 06:30 to about 06:36 — Segment 2 run, 97 Regular gifts claimed
+
+- First regular segment 2 run of the split routine (alliance and
+  VIP). The tracker showed only star-ceremony due at the start —
+  mail, help, gifts and train had been done at 05:19 to 05:40,
+  inside this segment's tracker cycle, and VIP stands claimed
+  for the reset period ending 19:00 — but the Alliance panel
+  carried fresh red dots on Help and Alliance Gifts, so both
+  were worked again on availability. The game opened on the
+  Alliance Techs panel left by the segment 1 run — no
+  different-device dialog, no lock, no login demand. Opening
+  HUD food 317.7M, iron 307.3M, coin 24.3M, total power
+  149,695,458.
+- Performed — gifts (Regular Claim All claimed 97 gifts;
+  Premium scrolled to the end, every gift already Claimed),
+  help (Help All pressed; only own four requests listed, no
+  ally requests waiting; help points 1,060 of 1,000, cap
+  already passed; no help bubble on the base screen), mail
+  (Claim All in Battle Report, Alliance, Event, Season,
+  System and Regular, each No rewards available; the Event
+  mail "[AP3x] Abyss Apex's train has departed!" was read in
+  full — [AP3x]Bears Lair is on its passenger list, so the
+  0540 boarding rode this train; the mail carries no claim).
+- Checked only — train (no "Boarding closes in" banner at the
+  opening or closing sweep; no contract spent), star ceremony
+  (no trophy icon in the base screen right-side stack at
+  either sweep; marked skipped in the tracker), VIP (not due;
+  next claim after the 19:00 reset).
+- Close — resources and total power unchanged on the closing
+  HUD. Nothing bought, no diamond or contract spent, no
+  speedup burned, no donation made (segment 1 owns donations),
+  no furnace or coal action.

@@ -29,3 +29,6 @@ time and never edited once committed (C1).
 - [0505-four-hour-run.md](0505-four-hour-run.md) — the four hour run that
   started at 05:05 local; Claim All in every category, no rewards
   available anywhere.
+- [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
+  started at 06:30 local; Claim All in every category, no rewards
+  available, and the Abyss Apex train departure mail read.

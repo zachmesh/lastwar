@@ -1,18 +1,18 @@
 {
  "mail": {
   "status": "done",
-  "at": "2026-10-26T05:19:51",
-  "note": "0505 run - Claim All in Battle Report, Alliance, Event, Season, System, Regular - each No rewards available (Regular pressed, no popup); Purchases receipts only"
+  "at": "2026-10-26T06:35:43",
+  "note": "0630 segment 2 run - Claim All in Battle Report, Alliance, Event, Season, System, Regular, each No rewards available; Event Abyss Apex train departure mail (train boarded 0540) read in full, no claim inside; Purchases receipts only"
  },
  "help": {
   "status": "done",
-  "at": "2026-10-26T05:19:51",
-  "note": "0505 run - Help All pressed; only own 4 requests listed, no ally requests waiting; help points 900/1000 before press"
+  "at": "2026-10-26T06:35:43",
+  "note": "0630 segment 2 run - Help All pressed (grateful toast); only own 4 requests listed, no ally requests waiting; help points 1060/1000 cap reached; no help bubble on base screen"
  },
  "gifts": {
   "status": "done",
-  "at": "2026-10-26T05:19:51",
-  "note": "0505 run - Regular Claim All: 123 gifts claimed; Premium Claim All: 3 claimed"
+  "at": "2026-10-26T06:35:43",
+  "note": "0630 segment 2 run - Regular Claim All - 97 gifts claimed; Premium scrolled to end, every gift already Claimed"
  },
  "harvest": {
   "status": "skipped",
@@ -56,8 +56,8 @@
  },
  "train": {
   "status": "done",
-  "at": "2026-10-26T05:40:33",
-  "note": "0529 run - train in preparation (conductor Abyss Apex, rating 71,050); boarded carriage 2 with exactly 3 Trade Contracts (stock 143, slider 1 to 3, Gift Contract); occupancy 11/7 to 12/7; arrival reward by Event mail later"
+  "at": "2026-10-26T06:35:43",
+  "note": "0630 segment 2 run - no Boarding closes in banner on base screen; the train boarded at 0540 (Abyss Apex) has departed, departure mail read in Event"
  },
  "training": {
   "status": "skipped",
@@ -81,7 +81,7 @@
  },
  "star-ceremony": {
   "status": "skipped",
-  "at": "2026-10-26T02:10:20",
-  "note": "no trophy icon on the base screen this run"
+  "at": "2026-10-26T06:35:43",
+  "note": "0630 segment 2 run - no trophy icon on the base screen (right-side icon stack checked at start and at close)"
  }
 }

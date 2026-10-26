@@ -23,3 +23,6 @@ time and never edited once committed (C1).
   started at 01:49 local.
 - [0505-four-hour-run.md](0505-four-hour-run.md) — the four hour run that
   started at 05:05 local; 123 Regular and 3 Premium gifts claimed.
+- [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
+  started at 06:30 local; 97 Regular gifts claimed, Premium all
+  already claimed.

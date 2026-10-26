@@ -21,3 +21,6 @@ time and never edited once committed (C1).
 
 - [0149-four-hour-run.md](0149-four-hour-run.md) — the four hour run that
   started at 01:49 local.
+- [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
+  started at 06:30 local; Star Ceremony checked, no trophy icon on
+  the base screen.

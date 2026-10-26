@@ -25,3 +25,6 @@ time and never edited once committed (C1).
   that started at 05:29 local; a train was in preparation (conductor
   Abyss Apex, rating 71,050) and carriage 2 was boarded with the
   standing 3 Trade Contract ticket, the first execution of that rule.
+- [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
+  started at 06:30 local; no boarding banner, and the 0540 train
+  confirmed departed by its Event mail.
