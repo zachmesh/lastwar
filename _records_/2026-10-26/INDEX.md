@@ -183,6 +183,9 @@ record. Inside it, one subfolder per activity type, named as in
 | [Arms Race](arms-race/INDEX.md) | Performed, bouncing chest claimed | [0529 four hour run](arms-race/0529-four-hour-run.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed, carriage 2 boarded | [0529 four hour run](alliance-train/0529-four-hour-run.md) |
 | [Resource Collection](resource-collection/INDEX.md) | Access failed | [0529 four hour run](resource-collection/0529-four-hour-run.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed, target met | [0547 four hour run](arms-race/0547-four-hour-run.md) |
+| [Alliance Donations](alliance-donations/INDEX.md) | Performed in part, access failed at reward | [0547 four hour run](alliance-donations/0547-four-hour-run.md) |
+| [Event Claims](event-claims/INDEX.md) | Checked only, sweep clean | [0547 four hour run](event-claims/0547-four-hour-run.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |
 
@@ -270,3 +273,44 @@ record. Inside it, one subfolder per activity type, named as in
   by the 0505 run about twenty-five minutes earlier. Session
   cc-123 may still be open. Nothing bought, no diamond spent,
   no speedup burned, no furnace or coal action.
+
+## 05:47 to about 05:52 — Four hour run, donations done, then access failed
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened clean. The game opened straight onto the
+  base - no different-device dialog, no lock, no login demand.
+  Opening HUD food 317.7M, iron 307.3M, coin 24.4M, stamina 155,
+  total power 149,695,458. This run is the first of the new
+  05:47 four hour cycle under the owner cadence rule recorded
+  the same morning - every regular is due again this cycle.
+- ARMS RACE, TARGET ALREADY MET - Hero Advancement re-read at
+  37,500 points (01:11:18 left, phase end about 07:03 local),
+  segment rank 8, combined 2110, top threshold 12,000. All three
+  point chests stand claimed; the cumulative counter chest
+  stands purple at 6 of 8, not full; the ranking reward chest
+  is preview only (SR Iron, Food and Coin chests, 3 each) while
+  the phase is live - the next run claims it after about 07:03.
+  No scoring action was taken, per the just-enough rule. The
+  Events tab bar sweep found no bouncing chest or red dot.
+- DONATIONS PERFORMED - Alliance Techs, War tab, recommended
+  Rallied Defense 6 of 10. The panel Donation Count is the
+  remaining count (9 of 30, verified falling to 8 after one
+  donation). Nine coin donations at 700 coin were made with the
+  green coin button only; afterwards the button stood greyed
+  with a 00:04:45 timer. Tech Donation Today 4,700 to 5,850;
+  Tech EXP Required 920.5K to 924.8K of 3.0M; HUD coin 24.4M to
+  24.3M as displayed. The diamond button was never used.
+- ACCESS FAILED AT THE DONATION REWARD TROPHY - tapping the
+  trophy beside Tech Donation Today returned the device-access
+  error; at least three further attempts (session starts and a
+  device list) returned the same error, so the run stopped
+  under the owner retry rule. Whether the daily donation reward
+  was claimable is unverified - the next run checks it first.
+  The other regulars of this cycle (mail, help, gifts, harvest,
+  passes, secrets, treasures, radar, survivors, trucks, train,
+  training, the full events pass, star ceremony) were not
+  reached and stay due in the tracker for the next run; the
+  base screens seen showed no train boarding banner and no
+  Star Ceremony trophy icon. Sessions cc-125 and cc-126 may
+  still be open. Nothing bought, no diamond spent, no speedup
+  or stamina item burned, no furnace or coal action.

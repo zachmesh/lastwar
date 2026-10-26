@@ -42,3 +42,9 @@ time and never edited once committed (C1).
   6 of 8 on the next tier; point chests re-verified claimed, ranking
   reward still preview only; the run was then cut by the
   device-access failure after three retries.
+- [0547-four-hour-run.md](0547-four-hour-run.md) — the four hour run
+  that started at 05:47 local; score re-read at 37,500 of the 12,000
+  top threshold, target already met, completion sweep clean
+  (cumulative chest purple 6 of 8, ranking reward still preview
+  only until the phase ends at about 07:03); the run was then cut
+  by the device-access failure during donations.
