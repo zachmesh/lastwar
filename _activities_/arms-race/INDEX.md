@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T11:47:00Z
+modified: 2026-10-26T11:51:00Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: owner standing rule on 2026-10-26 - every four hour run shall meet the Arms Race target
   - source: owner refinement on 2026-10-26 - make the effort just enough to reach the target, do not overdo it
   - source: owner instruction on 2026-10-26 - the Hero Advancement phase is met by upgrading a hero level with EXP points
+  - source: owner instruction on 2026-10-26 - whenever the Arms Race goal is reached, get its reward
 ---
 
 
@@ -55,6 +56,12 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   where it scores, harvests and collections, completions of
   buildings or research already under way, donations), re-read the
   points before closing the run, and claim every chest earned.
+- Collect the reward, owner instruction 2026-10-26 - reaching the
+  target includes getting paid. Claim every earned point chest in
+  the same visit, and claim the phase ranking reward chest
+  whenever it becomes claimable - if it lands after the phase
+  rolls, the next run checks for it and claims it then. A reached
+  target with an unclaimed reward counts as unfinished.
 - Just enough effort, owner refinement 2026-10-26 - the effort is
   calibrated to reach the target and no further. Once the points
   reach the top threshold, stop doing extra scoring work for that
