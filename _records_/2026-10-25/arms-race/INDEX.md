@@ -1,8 +1,8 @@
 ---
 title: Arms Race on 2026-10-25
 created: 2026-10-26T04:50:00Z
-modified: 2026-10-26T04:50:00Z
-version: 1.0.0
+modified: 2026-10-26T06:44:00Z
+version: 1.1.0
 description: Index of Arms Race executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -25,3 +25,5 @@ time and never edited once committed (C1).
   local. Recorded access-failed.
 - [2129-late-check.md](2129-late-check.md) — the late check that started at 21:29
   local.
+- [2338-unit-progression.md](2338-unit-progression.md) — the late round phase check
+  that started at 23:38 local. Unit Progression at zero points, queues full.

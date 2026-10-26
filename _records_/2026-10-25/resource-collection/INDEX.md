@@ -1,8 +1,8 @@
 ---
 title: Resource Collection on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-26T04:50:00Z
-version: 1.2.0
+modified: 2026-10-26T06:44:00Z
+version: 1.3.0
 description: Index of Resource Collection executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -27,3 +27,5 @@ time and never edited once committed (C1).
   at 20:25 local. Session window about 20:25 to 21:32 America/Los_Angeles.
 - [2127-late-run.md](2127-late-run.md) — the late harvest that started
   at 21:27 local. Session window about 21:27 to 21:29 America/Los_Angeles.
+- [2309-late-round.md](2309-late-round.md) — the owner-requested late round
+  harvest that started at 23:09 local. Session window about 23:09 to 23:41 America/Los_Angeles.

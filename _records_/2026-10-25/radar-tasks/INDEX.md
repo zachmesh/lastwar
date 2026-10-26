@@ -1,8 +1,8 @@
 ---
 title: Radar Tasks on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-26T03:24:00Z
-version: 1.1.0
+modified: 2026-10-26T06:44:00Z
+version: 1.2.0
 description: Index of Radar Tasks executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -26,3 +26,5 @@ time and never edited once committed (C1).
 - [2015-evening-clear.md](2015-evening-clear.md) — the evening clear with the
   free stamina claim and the A Distressed Survivor special task.
   Session window about 20:00 to 20:15 America/Los_Angeles.
+- [2325-late-round.md](2325-late-round.md) — the late round claims with the Doom
+  Legion base and the Doom Walker rally. Session window about 23:25 to 23:41 America/Los_Angeles.

@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T05:20:00Z
+modified: 2026-10-26T06:44:00Z
 level: L0
-version: 1.16.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, the research brief folded into the playbook, and the late red dot follow up
+version: 1.17.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, the research brief folded into the playbook, and the late red dot follow up, and the owner-requested late round with its score and resources report
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -471,6 +471,29 @@ is still unlocated. Train: no preparation window, no entry -
 the watch continues with the regulars. Detail in the 2157
 techs recheck and the 2200 red dot follow up records.
 
+## 23:09 to about 23:41 — Owner-requested late round, score and resources report
+
+The owner asked for one more round of tasks with the total score
+and resources reported afterwards. Duel gate first - Day 1 Radar
+Training, posture release; the day tracker was already fully
+marked, so the round ran the regulars list manually. Done -
+harvest; mail checked (reports only, the Arms Race mail records
+No.6 on the day); help checked (no ally requests, own four already
+helped, 500 of 1,000 points); gifts 74 Regular and 2 Premium
+claimed; one UR secret task claimed - the report inside showed the
+waiting UR had been plundered twice for its fragment - and the
+second UR left running; radar claimed in full under release
+posture, a Doom Legion base destroyed and a Doom Walker rally
+killed on the second, stamina-verified launch; the two gate
+survivors with question bubbles worked through; the train boarding
+window finally caught - banner to profile to platform - with the
+account already aboard carriage 2; Arms Race Unit Progression at
+0 points with all queues running. Skipped - donations (coin at the
+critical low at round start, day total already 3,100) and trucks
+(still en route to about 01:35). Close - food 298.0M, iron
+289.6M, coin 12.9M recovered from the 565.1K low, stamina 73,
+radar 2,822, total power 149,689,618 unchanged.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -481,30 +504,30 @@ execution file states the outcome, including not performed.
 
 | Activity | Status | Execution record |
 |---|---|---|
-| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md), [2120 late run](mail-rewards/2120-late-run.md) |
-| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md), [2047 evening help](alliance-help/2047-evening-help.md), [2125 late run](alliance-help/2125-late-run.md) |
-| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md), [2048 evening claims](alliance-gifts/2048-evening-claims.md), [2125 late run](alliance-gifts/2125-late-run.md) |
+| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md), [2120 late run](mail-rewards/2120-late-run.md), [2313 late round](mail-rewards/2313-late-round.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md), [2047 evening help](alliance-help/2047-evening-help.md), [2125 late run](alliance-help/2125-late-run.md), [2316 late round](alliance-help/2316-late-round.md) |
+| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md), [2048 evening claims](alliance-gifts/2048-evening-claims.md), [2125 late run](alliance-gifts/2125-late-run.md), [2318 late round](alliance-gifts/2318-late-round.md) |
 | [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only; rechecked late | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md), [2157 techs recheck](alliance-donations/2157-techs-recheck.md) |
 | [Season Warming](season-warming/INDEX.md) | Performed | [1100 daily round](season-warming/1100-daily-round.md) |
-| [Secret Missions](secret-missions/INDEX.md) | Performed | [1100 daily round](secret-missions/1100-daily-round.md), [1944 evening mega](secret-missions/1944-evening-mega.md) |
+| [Secret Missions](secret-missions/INDEX.md) | Performed | [1100 daily round](secret-missions/1100-daily-round.md), [1944 evening mega](secret-missions/1944-evening-mega.md), [2320 late round](secret-missions/2320-late-round.md) |
 | [Hidden Treasures](hidden-treasures/INDEX.md) | Performed | [1959 first dig](hidden-treasures/1959-first-dig.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Inspected only | [2005 inspection](ghost-ops/2005-inspection.md) |
-| [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md), [1452 red dot sweep](radar-tasks/1452-red-dot-sweep.md), [2015 evening clear](radar-tasks/2015-evening-clear.md) |
+| [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md), [1452 red dot sweep](radar-tasks/1452-red-dot-sweep.md), [2015 evening clear](radar-tasks/2015-evening-clear.md), [2325 late round](radar-tasks/2325-late-round.md) |
 | [Daily Missions](daily-missions/INDEX.md) | Performed in part | [1100 daily round](daily-missions/1100-daily-round.md) |
-| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md), [2030 evening sweep](event-claims/2030-evening-sweep.md), [2200 red dot follow up](event-claims/2200-red-dot-followup.md) |
+| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md), [2030 evening sweep](event-claims/2030-evening-sweep.md), [2200 red dot follow up](event-claims/2200-red-dot-followup.md), [2341 late round checks](event-claims/2341-late-round-checks.md) |
 | [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md), [1342 pass claims](shop-claims/1342-pass-claims.md), [1359 pass claims](shop-claims/1359-pass-claims.md), [1447 season passes](shop-claims/1447-season-passes.md) |
 | [Hero Recruitment](hero-recruitment/INDEX.md) | Performed | [1100 daily round](hero-recruitment/1100-daily-round.md) |
 | [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |
 | [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
-| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md), [2025 evening harvest](resource-collection/2025-evening-harvest.md), [2127 late run](resource-collection/2127-late-run.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md), [2025 evening harvest](resource-collection/2025-evening-harvest.md), [2127 late run](resource-collection/2127-late-run.md), [2309 late round](resource-collection/2309-late-round.md) |
 | [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
 | [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md), [2047 evening settlement](truck-plunder/2047-evening-settlement.md) |
-| [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md) |
+| [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md), [2333 boarding aboard](alliance-train/2333-boarding-aboard.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed, then missed after reset | [1359 first claim](vip-rewards/1359-first-claim.md), [2053 evening missed](vip-rewards/2053-evening-missed.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony; schedule read late | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md), [2140 schedule read](alliance-duel/2140-schedule-read.md) |
 | [Headquarters and Resources](headquarters-and-resources/INDEX.md) | Baseline read | [2150 power baseline](headquarters-and-resources/2150-power-baseline.md) |
-| [Arms Race](arms-race/INDEX.md) | Performed, then access-failed, then checked | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md), [2129 late check](arms-race/2129-late-check.md) |
-| [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md), [2016 second intake](survivor-intake/2016-second-intake.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed, then access-failed, then checked | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md), [2129 late check](arms-race/2129-late-check.md), [2338 unit progression](arms-race/2338-unit-progression.md) |
+| [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md), [2016 second intake](survivor-intake/2016-second-intake.md), [2336 gate survivors](survivor-intake/2336-gate-survivors.md) |
 
 ## Reorganisation note, 2026-10-25
 

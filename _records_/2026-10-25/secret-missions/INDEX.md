@@ -1,8 +1,8 @@
 ---
 title: Secret Missions on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-26T03:58:00Z
-version: 1.1.0
+modified: 2026-10-26T06:44:00Z
+version: 1.2.0
 description: Index of Secret Missions executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -23,3 +23,5 @@ time and never edited once committed (C1).
   local. Session window 11:00 to 11:42 America/Los_Angeles.
 - [1944-evening-mega.md](1944-evening-mega.md) — the evening Mega deploy round that started
   at 19:44 local. Session window about 19:44 to 20:37 America/Los_Angeles.
+- [2320-late-round.md](2320-late-round.md) — the late round claim and report that
+  started at 23:20 local. One UR claimed, one UR still running.

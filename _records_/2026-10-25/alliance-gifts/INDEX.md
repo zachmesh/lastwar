@@ -1,8 +1,8 @@
 ---
 title: Alliance Gifts on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-26T04:50:00Z
-version: 1.2.0
+modified: 2026-10-26T06:44:00Z
+version: 1.3.0
 description: Index of Alliance Gifts executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -25,3 +25,5 @@ time and never edited once committed (C1).
   local. Session window about 20:48 to 20:52 America/Los_Angeles.
 - [2125-late-run.md](2125-late-run.md) — the late run that started at 21:25
   local. Session window about 21:25 to 21:27 America/Los_Angeles.
+- [2318-late-round.md](2318-late-round.md) — the late round claims that started
+  at 23:18 local. 74 Regular and 2 Premium gifts claimed.

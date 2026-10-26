@@ -1,8 +1,8 @@
 ---
 title: Alliance Help on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-26T04:50:00Z
-version: 1.2.0
+modified: 2026-10-26T06:44:00Z
+version: 1.3.0
 description: Index of Alliance Help executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -27,3 +27,5 @@ time and never edited once committed (C1).
   local. Session window about 20:47 America/Los_Angeles.
 - [2125-late-run.md](2125-late-run.md) — the late run that started at 21:25
   local. Session window about 21:25 to 21:26 America/Los_Angeles.
+- [2316-late-round.md](2316-late-round.md) — the late round help check that started
+  at 23:16 local. No ally requests pending.

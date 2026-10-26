@@ -1,8 +1,8 @@
 ---
 title: Alliance Train on 2026-10-25
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T01:27:00Z
-version: 1.1.0
+modified: 2026-10-26T06:44:00Z
+version: 1.2.0
 description: Index of Alliance Train executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -23,3 +23,5 @@ time and never edited once committed (C1).
   local. Session window 12:20 to about 13:02 America/Los_Angeles.
 - [1812-reward-claim.md](1812-reward-claim.md) — the evening reward claim that started at 18:12
   local. Session window about 18:12 to 19:10 America/Los_Angeles.
+- [2333-boarding-aboard.md](2333-boarding-aboard.md) — the late evening boarding
+  window that started at 23:31 local. Platform entry found, already aboard carriage 2.

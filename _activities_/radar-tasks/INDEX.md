@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T03:20:00Z
+modified: 2026-10-26T06:44:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Radar stored tasks, Quick Execute, stamina regain and the special pin tasks that Quick Execute does not cover
 status: unverified
 grounded_in:
@@ -117,6 +117,25 @@ from A Distressed Survivor on 2026-10-25 evening -
    the revealed rewards (here paw print 200, black rock 207.3K,
    survivor 1) and adds 1 radar point. The pin and its red dot
    disappear - the radar is fully clear.
+
+## Doom pins - Legion base and Walker rally, 2026-10-25 late
+
+Two further pin types completed in the late round -
+
+- Doom Legion base pin - tapping it jumps to a legion base on the
+  world map (level 120, suggested power about 20.1M). Attacking it
+  destroyed it outright with no return march to wait for. Loot -
+  food 1.4M, iron 1.4M and a coin amount read between 0.9M and 1.7M.
+- Doom Walker pin - a level 160 world boss, suggested power
+  21,454,000, with a daily first kill reward. Flow - pin card, Go,
+  then Initiate Rally on the boss panel and again on the rally
+  panel (rally time 1 minute default, the fight resolves after the
+  squad marches, about 7 minutes here). Rally stamina cost 20.
+- Rally launch warning - the first launch looked dispatched but
+  cost no stamina and produced no march, a silent no-op. A launch
+  is only real when the stamina drops by 20 and the march timer
+  appears; verify both before waiting. The kill credited back at
+  the radar as claimable task rewards.
 
 ## What is known from 2026-10-25
 

@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T02:24:00Z
+modified: 2026-10-26T06:44:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,16 @@ literal train, so both readings of the request are in the system.
   its conductor, its Train Rating, the departure countdown, and four
   carriage cards each showing occupancy and its reward set.
 - The i button at the top opens the Train Operation Guidelines.
+- Boarding window entry, found 2026-10-25 late evening - while a
+  train is in preparation, the base screen carries a top banner
+  reading Boarding closes in HH:MM:SS under the resource bar, and the
+  system chat announces the conductor train. Tapping the banner
+  opens MY PROFILE, and the train icon at the top right of that
+  screen opens the STATION PLATFORM directly. The window is short -
+  the banner showed 00:02:57 on first sight - so go straight there.
+  That evening the account was already aboard carriage 2, so no
+  boarding action was needed or taken; how the seat was taken (the
+  owner phone is the likely actor) is unobserved.
 
 ## How it is done
 
