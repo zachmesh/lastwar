@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-25T21:04:00Z
+modified: 2026-10-26T01:27:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,11 @@ train also runs on this screen as a trade vehicle.
   red count badge - the badge showed 4 at first entry on 2026-10-25.
   Icon rows shift as badges change, so find it by the truck glyph, not
   by position alone.
+- The icon column carries two shortcut sets, learned the hard way on
+  the evening of 2026-10-25 - the same slot opened the Secret Command
+  Post in one set and Intercity Trade in the other. Tapping the route
+  icon above the truck slot flipped the set. Always verify the screen
+  that actually opened before tapping further.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.
@@ -54,6 +59,30 @@ train also runs on this screen as a trade vehicle.
   approval, under the recording rules on spending.
 - Let's Go dispatches. Journeys observed ran about 4 to just under 5
   hours. Rewards land when the truck arrives.
+
+## How rewards are delivered
+
+- Own truck cargo has no claim step anywhere in the trade screen, so
+  delivery appears to credit automatically when a trip completes -
+  inference from the absence of any claim affordance, not yet
+  observed end to end. The evening check on 2026-10-25 found the
+  four trucks dispatched at 12:32 still out at about 19:05 with
+  cargo uncredited, well past the 4 to 5 hour journey estimates, so
+  settlement may wait for a return leg - open question below.
+- History is the ledger. Its Dispatch tab shows each truck cargo
+  with green gained amounts and red crossed items for whatever was
+  plundered off it en route; its Plunder tab logs the escort battles
+  both ways, including Defense Failed records naming the attacker.
+  Looted trucks show flame markers on the Your Truck road view.
+- Reward Recovery - the Recover button at the lower left of the
+  trade screen covers a different case, unstarted transports. The
+  system completes missed dispatches itself at partial value and
+  holds the proceeds in a REWARD RECOVERY panel, one record per
+  day, only the last 7 records retained. Claimed free on
+  2026-10-25 for the 2026-10-24 record (5 unstarted transports -
+  iron 7.6M, food 7.6M, coin 4.8M plus items). Check this panel
+  whenever the trade screen is open; the Recover button carries a
+  red dot while a record waits.
 
 ## How it is done - plundering
 
@@ -117,6 +146,13 @@ Observed in game on this account, first execution 2026-10-25.
   Count ended at 1 of 4.
 - Trade Contract stock seen in the train thank dialog the same day -
   127. None were spent.
+- Evening arrival check (about 18:12 to 19:10) - all four trucks
+  still out; two UR trucks looted en route by [ashS]LoS
+  indestructibles (warzone 2116) and [udl]DannyBhoi (warzone 2090),
+  their ledgers reduced to iron 2.8M, food 2.8M, coin 1.8M with two
+  and three cargo items crossed out; the SSR and one UR intact. A
+  Reward Recovery record for 2026-10-24 was claimed the same visit.
+  Detail in the 1812 arrival check execution record.
 
 ## Limits
 
@@ -133,5 +169,11 @@ Observed in game on this account, first execution 2026-10-25.
 - Whether the free refresh is one per day or one per truck - only the
   first truck of the day showed Free, later panels priced refreshes at
   1 contract from the start.
-- Whether arrival rewards arrive by mail or must be collected on this
-  screen.
+- When exactly a dispatched truck settles - the 2026-10-25 trucks
+  were still out about 6.5 hours after dispatch against 4 to 5 hour
+  journey estimates, so either the estimate covers only the outbound
+  leg and settlement waits for the return, or arrivals process on a
+  later tick. The next daily round should find them delivered and
+  can close this.
+- Whether the collapsed 2026-10-20 Reward Recovery record was
+  already claimed - its toggle did not expand on 2026-10-25.

@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T00:47:00Z
+modified: 2026-10-26T01:27:00Z
 level: L0
-version: 1.7.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, and the red dot sweep with task 9 survivor intake
+version: 1.8.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, and the evening truck and train wrap up
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -241,6 +241,38 @@ was restarted; no action was repeated blindly.
   third consecutive access failure and no chat escalation is made.
   Detail in the 1747 arms-race check execution file.
 
+## 18:12 to about 19:10 — Evening wrap up, trucks and train
+
+A scheduled wrap up checked the two deliveries the midday round had
+left open. The game opened straight onto the base - no device contest
+and no re-login.
+
+- Trucks — all four trucks dispatched at 12:32 were still out at
+  about 19:05, cargo uncredited (base totals unchanged from the
+  15:00 sweep before any claim this session). Two UR trucks were
+  looted en route - Defense Failed records name [ashS]LoS
+  indestructibles (warzone 2116) and [udl]DannyBhoi (warzone 2090);
+  their Dispatch ledgers are reduced to 2.8M iron, 2.8M food and
+  1.8M coin with items crossed out, while the SSR and one UR stand
+  intact. No claim control exists for own truck cargo.
+- Reward Recovery — the trade screen Recover panel held the
+  2026-10-24 record (5 unstarted transports the system completed
+  at partial value). Claimed free - iron 7.6M, food 7.6M, coin
+  4.8M plus crates, chests, badges and speedups; base totals after
+  the claim were food 303.0M, iron 296.9M, coin 61.2M, exactly the
+  recovery amounts. A collapsed 2026-10-20 record would not expand
+  and was left untouched.
+- Train — the arrival reward came as an Event mail (Train arrival
+  reward, about 17:57) and was claimed free - a Lv.3 chest, crates
+  100, a badge 2.5K, a gold chest stack of 20, a red gem item of
+  100 and about twenty 5 minute speedups. The mail Claim button was
+  gone on recheck. Delivery by mail is now the recorded mechanism
+  in the train metadata.
+- Not acted on, out of this instruction scope — four finished
+  secret missions waiting on Claim buttons, two new survivors at
+  the gate, and an Approaching minus 50 degree cold wave notice
+  about 10.5 hours out. All belong to the next daily round.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -266,8 +298,8 @@ execution file states the outcome, including not performed.
 | [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
 | [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md) |
 | [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
-| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md) |
-| [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md) |
+| [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed | [1359 first claim](vip-rewards/1359-first-claim.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
 | [Arms Race](arms-race/INDEX.md) | Performed, then access-failed | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md) |

@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-10-26T01:27:00Z
 level: L1
-version: 1.0.0
+version: 1.1.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -48,6 +48,13 @@ literal train, so both readings of the request are in the system.
   rules on spending.
 - Boarded state shows as the own avatar inside the carriage and the
   occupancy count rising by one.
+- After the ride, the carriage reward arrives as an Event category
+  mail titled Train arrival reward, with a Claim button on the mail.
+  Claim it there - the reward does not credit silently. Claiming
+  briefly opens the train DETAILS screen under a congratulations
+  banner listing the granted items. Departure and arrival also
+  generate plain notice mails about the conductor train in the same
+  Event category, with no attachments.
 - Pick the carriage by its reward set and occupancy. On 2026-10-25
   carriage 1 held the richest set and the fewest riders, 2 of 7
   before boarding.
@@ -94,6 +101,14 @@ Observed in game on this account, first execution 2026-10-25.
   of 50, a badge stack, a gold chest stack of 20 and a 100 ruby item.
   When and how carriage rewards pay out was not observed - the train
   had not departed when the round ended.
+- Evening follow up (about 18:12 to 19:10) - the reward arrived as
+  the Event mail Train arrival reward at about 17:57 local and was
+  claimed free. Granted - a Lv.3 chest (the mail grid showed it at
+  Lv.3 although the platform card had shown a Lv.5 chest), crates
+  100 in total, a badge 2.5K, a gold chest stack of 20, a red gem
+  item of 100, and about twenty 5 minute speedups across several
+  kinds. The mail Claim button was gone on recheck. Detail in the
+  1812 reward claim execution record.
 
 ## Limits
 
@@ -103,7 +118,12 @@ Observed in game on this account, first execution 2026-10-25.
 
 ## Open questions
 
-- How carriage rewards are delivered after departure, and how the
-  split among riders works.
-- What the Train Rating means and what sets it.
+- How the reward split among riders works - the claimed set matched
+  the carriage 1 card in kind, so a rider appears to receive the
+  carriage set as displayed, but whether occupancy dilutes it is
+  unobserved.
+- What the Train Rating means and what sets it. The arrival mail
+  showed a figure of 116,361,444 under the train icon on the
+  account card, distinct from base power - possibly the summed
+  rider power the rating derives from, unverified.
 - Whether a member can board more than one train per day.
