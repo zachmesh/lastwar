@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T03:47:00Z
+modified: 2026-10-26T10:41:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: web guides on Intercity Trade and trade trucks, read 2026-10-25
   - source: owner teach-in on plunder target selection and dispatch rules, evening of 2026-10-25
   - source: evening dispatch and plunder executions on the new server day, 2026-10-25
+  - source: owner standing rule on non-UR day dispatch - SR or above only, ticket refreshes authorized until reached, 2026-10-26
 ---
 
 # Truck plunder - Intercity Trade
@@ -61,8 +62,9 @@ train also runs on this screen as a trade vehicle.
   noon only the first truck had been refreshed, which made it look
   like one per day). After a truck free refresh is spent, its dice
   prices further refreshes at 1 Trade Contract each (stock 127
-  observed) - never spend contracts or diamonds without the owner
-  approval, under the recording rules on spending.
+  observed). Spending contracts on refreshes is authorized only
+  under the standing non-UR day rule below (owner, 2026-10-26);
+  diamonds are never spent on refreshes.
 - A refresh replaces the whole roll and can downgrade it - observed
   the same evening, when a free refresh took one truck from SR down
   to N. Refresh low rolls (N, R); think twice before gambling an SR.
@@ -71,10 +73,24 @@ train also runs on this screen as a trade vehicle.
   low, and you still have free refresh attempts, skip the refresh
   and depart now. Cancel returns to the panel to refresh; Confirm
   departs as rolled. Seen for R and SR rolls.
-- Standing dispatch rule, owner taught 2026-10-25 - on days when UR
-  truck dispatches count toward the Alliance Duel score, dispatch
-  through Mega Mode and send UR trucks only. On all other days,
-  dispatching SR, SSR or UR as rolled is fine.
+- Standing dispatch rules, owner taught 2026-10-25 and refined
+  2026-10-26 - on days when UR truck dispatches count toward the
+  Alliance Duel score, dispatch through Mega Mode and send UR
+  trucks only. On all other days (non-UR days), dispatch SR or
+  above only, as follows.
+  - A truck that already rolls SR, SSR or UR is dispatched as
+    rolled. Do not spend its free refresh - it already meets the
+    bar, and a refresh can downgrade it.
+  - A truck that rolls below SR (N or R) is refreshed until it
+    reaches SR, SSR or UR, then dispatched. Use the free refresh
+    first; if the roll still has not reached SR or above, keep
+    refreshing with tickets at 1 Trade Contract each until it
+    does. This ticket spending is standing-authorized by the
+    owner (2026-10-26) for this purpose; no per-run approval is
+    needed. No cap was stated.
+  - Because a refresh replaces the whole roll, a chase can pass
+    through several low rolls - keep going until SR or above
+    lands, then dispatch immediately without further refreshes.
 - Let's Go dispatches. Journeys observed ran about 4 to just under 5
   hours. Rewards land when the truck arrives.
 
@@ -244,8 +260,10 @@ settlement and dispatch execution record).
 
 ## Limits
 
-- No Trade Contract or diamond spending on refreshes without the owner
-  approval.
+- No diamond spending on refreshes, ever. Trade Contract spending
+  on refreshes is allowed only under the standing non-UR day rule
+  above (refresh until SR or above is reached); any other contract
+  spending needs the owner approval.
 - Plunder targets follow the shard rule above - UR or SSR trucks
   only, guard below Squad 1 power, shards plentiful and right sided.
   Do not plunder alliance mates, and stop at the daily cap.
