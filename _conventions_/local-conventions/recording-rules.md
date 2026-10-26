@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T05:16:00Z
+modified: 2026-10-26T12:04:00Z
 level: L2
-version: 1.4.0
+version: 1.5.0
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -67,6 +67,17 @@ never nested inside `_records_`.
   opened to inspect - where the point is, how far the base sits -
   but any move is left to the owner, even when an approval for other
   work is already in hand.
+
+## Device access
+
+- **Retry the device-access error at least 3 times** (owner rule,
+  2026-10-26). The error reporting that a run lacks owner-authorized
+  device access is unreliable - runs have held access for minutes
+  and then hit it mid-run (2026-10-26, the 0435, 0448 and 0456
+  runs). When it appears, do not abandon the run at once - reopen
+  the computer session and try again, at least 3 attempts, before
+  recording the run as access-failed. The owner has confirmed the
+  authorization stands and is not to be asked about again.
 
 ## Language and scope
 
