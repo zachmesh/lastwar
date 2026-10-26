@@ -25,3 +25,6 @@ time and never edited once committed (C1).
   started at 05:47 local; Events tab sweep only, no bouncing chest
   or red dot found; the full claim pass was not reached before the
   device-access failure, so the regular stays due this cycle.
+- [0657-segment-3-run.md](0657-segment-3-run.md) — the segment 3 run that
+  started at 06:57 local; full Events sweep repeated at the end, no
+  bouncing chest or claimable red dot remained.

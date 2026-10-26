@@ -26,18 +26,18 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-26T02:10:20",
-  "note": "checked - Free Supply Claimed, Drone and Coin pickups Already claimed today, Monthly Claimed, Season Weekly Claimed"
+  "at": "2026-10-26T07:14:46",
+  "note": "0657 seg3 - Free Supply Claimed; Drone Parts and Coin weekly Already claimed today; Monthly Claimed (26d left); Season Weekly Pickup Claimed, Freebie inert; Swift BP Claim All - no rewards available"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-26T02:10:20",
-  "note": "UR Rescue Test Subject claimed; report showed 3 plunder entries; 1 UR still running, rest PERFECT; Recovery already claimed"
+  "at": "2026-10-26T07:14:46",
+  "note": "0657 seg3 - no Claim button; 2 UR running, rest PERFECT; Mega Deploy opened nothing; Assist 5/5; Reward Recovery already CLAIMED"
  },
  "treasures": {
-  "status": "skipped",
-  "at": "2026-10-26T02:10:20",
-  "note": "no full fragment set - M5 x0, progress 11/15, dig buttons greyed"
+  "status": "done",
+  "at": "2026-10-26T07:14:46",
+  "note": "0657 seg3 - fragments M1x13 M2x12 M3x2 M4x5 M5x0 M6x5 M7x9, 11/15; M5 zero, Dig greyed, no dig"
  },
  "radar": {
   "status": "skipped",
@@ -51,8 +51,8 @@
  },
  "trucks": {
   "status": "done",
-  "at": "2026-10-26T02:10:20",
-  "note": "4 evening trucks settled (food/iron +8.9M each, coin +5.7M); recovery already claimed; 5th truck dispatched N after free refresh R to N; trade 5/5, plunder already 4/4"
+  "at": "2026-10-26T07:14:46",
+  "note": "0657 seg3 - one returned N truck settled via Truck Details (chests 60, iron 1.2M, food 1.2M, coin 810K); trade 5/5, plunder 4/4, trade Reward Recovery already CLAIMED"
  },
  "train": {
   "status": "done",
@@ -71,8 +71,8 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-10-26T02:10:20",
-  "note": "Battle Pass 16900, Claim All answered no rewards available; Halloween Day 02 locked until the next day boundary"
+  "at": "2026-10-26T07:14:47",
+  "note": "0657 seg3 - full Events sweep; Arms Race Tech Research 0 stage pts, cumulative 6/8, no bouncing chest; Wanted Boss not spawned, goals unreached; Community Claimed; Halloween Day 02 date-locked; Season BP Claim All - no rewards available"
  },
  "arms-race": {
   "status": "skipped",

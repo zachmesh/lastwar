@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T13:36:00Z
+modified: 2026-10-26T14:15:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -188,6 +188,11 @@ record. Inside it, one subfolder per activity type, named as in
 | [Event Claims](event-claims/INDEX.md) | Checked only, sweep clean | [0547 four hour run](event-claims/0547-four-hour-run.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [0657 segment 3 run](truck-plunder/0657-segment-3-run.md) |
+| [Secret Missions](secret-missions/INDEX.md) | Checked only | [0657 segment 3 run](secret-missions/0657-segment-3-run.md) |
+| [Hidden Treasures](hidden-treasures/INDEX.md) | Checked only | [0657 segment 3 run](hidden-treasures/0657-segment-3-run.md) |
+| [Shop Claims](shop-claims/INDEX.md) | Checked only | [0657 segment 3 run](shop-claims/0657-segment-3-run.md) |
+| [Event Claims](event-claims/INDEX.md) | Checked only | [0657 segment 3 run](event-claims/0657-segment-3-run.md) |
 
 ## 05:05 to about 05:20 — Recheck run, Arms Race reward claimed, target met
 
@@ -377,3 +382,40 @@ record. Inside it, one subfolder per activity type, named as in
   HUD. Nothing bought, no diamond or contract spent, no
   speedup burned, no donation made (segment 1 owns donations),
   no furnace or coal action.
+
+## 06:57 to about 07:14 — Segment 3 run, one returned truck settled
+
+- First regular segment 3 run of the split routine (missions,
+  logistics and claims). The tracker showed passes, secrets,
+  treasures, trucks and events due in this segment; ghost-ops is
+  not today (Thursdays only). The Mac mini opened straight onto
+  the base - no different-device dialog, no lock, no login
+  demand. Opening HUD food 317.7M, iron 307.3M, coin 24.3M,
+  total power 149,695,458. Duel Day 1 (Radar Training) is not a
+  duel UR day.
+- Performed — trucks (one returned N truck settled through its
+  Truck Details - chest stacks 60, iron 1.2M, food 1.2M, coin
+  810.0K; closing HUD food 319.0M, iron 308.6M, coin 25.2M
+  confirms the settlement; trade count already 5 of 5 and
+  plunder already 4 of 4 in this trade day, trade Reward
+  Recovery already CLAIMED).
+- Checked only — secrets (no Claim button; two UR tasks still
+  running, the rest PERFECT; Mega Deploy opened nothing; Assist
+  Allies 5 of 5; Reward Recovery already CLAIMED), treasures
+  (fragments unchanged, M5 still at zero, 11 of 15, both Dig
+  buttons greyed), passes (Free Supply Claimed; Drone Parts and
+  Coin weekly passes Already claimed today; Monthly Pass
+  Claimed with 26 days left; Season Weekly Pass Pickup Claimed
+  and its Daily Freebie inert; Swift Battle Pass Claim All
+  answered no rewards available), events (full sweep, repeated
+  at the end - Arms Race Tech Research at 0 stage points with
+  the cumulative chest at 6 of 8 and no bouncing chest, noted
+  for segment 1; Season Battle Pass 16,900 with Claim All
+  answering no rewards available; Halloween Day 02 still date
+  locked; Wanted Boss not yet spawned and its goal tiers
+  unreached; Community already Claimed; Level Swap inspected
+  only; Desert Storm Battlefield is an alliance registration
+  with nothing personal to claim).
+- Close — nothing bought, no diamond or Trade Contract spent,
+  no speedup or stamina item burned, no coal donated, no
+  furnace action, no stage ground.
