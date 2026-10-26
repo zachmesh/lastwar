@@ -1,0 +1,77 @@
+---
+title: Play Record 2026-10-26
+created: 2026-10-26T09:12:00Z
+modified: 2026-10-26T09:12:00Z
+level: L0
+version: 1.0.0
+description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
+status: unverified
+grounded_in:
+  - source: in-game screens observed on the owner Mac mini, 2026-10-26
+---
+
+# 2026-10-26
+
+All times America/Los_Angeles. Actor Muse, under the owner standing
+instruction of 2026-10-25 to run all the regulars every four hours.
+
+## 01:49 to 02:09 — Four hour regulars run
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened with all resources above their floors (last
+  snapshot food 298.0M, iron 289.6M, coin 12.9M). The Mac mini opened
+  straight onto the base - no different-device dialog, no lock.
+- Performed - mail (Claim All everywhere; only System paid, one
+  2.00K item), help (Help All; own four requests full, none waiting
+  from allies, points 780 of 1,000), gifts (39 Regular and 3 Premium
+  claimed), harvest (three bubble passes, farmland coins included),
+  secrets (the finished UR Rescue Test Subject claimed; one UR
+  still running, the rest PERFECT; recovery already claimed),
+  survivors (one dialog survivor at the gate worked through),
+  trucks (the four 2026-10-25 evening trucks settled - about 8.9M
+  food, 8.9M iron and 5.7M coin across their ledgers; a fifth truck
+  dispatched N after its free refresh downgraded R to N; trade
+  count 5 of 5, plunder already 4 of 4 in this trade day).
+- Checked only - VIP (freebie already claimed this reset period,
+  16:59 on its countdown), passes (every daily pickup already
+  claimed today, shop and Season pages alike), radar (release day
+  but storage 0 of 40 - the stack was claimed on 2026-10-25; next
+  batch in about 02:51), treasures (M5 at zero, no dig possible),
+  training (all four batches still running, earliest finish about
+  11:31 today), donations (Tech Donation Today already 3,100),
+  events (Battle Pass 16,900, no rewards available; Halloween
+  Day 02 locked until the next day boundary), arms-race (Unit
+  Progression, 0 points, nothing free or earned to do), train
+  (no preparation window found), star ceremony (no trophy icon),
+  ghost ops (next event in 2 days 17 hours, a Thursday).
+- Close - food 308.6M, iron 298.5M, coin 19.9M, stamina 103, total
+  power 149,650,090 (unchanged across this run; the step down from
+  the 149,689,618 baseline predates it). Nothing bought, no diamond
+  or contract spent, no speedup burned, no furnace or coal action.
+
+## Activity records for this date
+
+Records are organised by date first. This folder is the 2026-10-26
+record. Inside it, one subfolder per activity type, named as in
+`_activities_`, and inside each of those, one file per execution.
+
+| Activity | Status | Execution record |
+|---|---|---|
+| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [0149 four hour run](mail-rewards/0149-four-hour-run.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [0149 four hour run](alliance-help/0149-four-hour-run.md) |
+| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [0149 four hour run](alliance-gifts/0149-four-hour-run.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [0149 four hour run](resource-collection/0149-four-hour-run.md) |
+| [VIP Rewards](vip-rewards/INDEX.md) | Checked only | [0149 four hour run](vip-rewards/0149-four-hour-run.md) |
+| [Shop Claims](shop-claims/INDEX.md) | Checked only | [0149 four hour run](shop-claims/0149-four-hour-run.md) |
+| [Secret Missions](secret-missions/INDEX.md) | Performed | [0149 four hour run](secret-missions/0149-four-hour-run.md) |
+| [Hidden Treasures](hidden-treasures/INDEX.md) | Checked only | [0149 four hour run](hidden-treasures/0149-four-hour-run.md) |
+| [Radar Tasks](radar-tasks/INDEX.md) | Checked only | [0149 four hour run](radar-tasks/0149-four-hour-run.md) |
+| [Survivor Intake](survivor-intake/INDEX.md) | Performed | [0149 four hour run](survivor-intake/0149-four-hour-run.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [0149 four hour run](truck-plunder/0149-four-hour-run.md) |
+| [Alliance Train](alliance-train/INDEX.md) | Checked only | [0149 four hour run](alliance-train/0149-four-hour-run.md) |
+| [Troop Training](troop-training/INDEX.md) | Checked only | [0149 four hour run](troop-training/0149-four-hour-run.md) |
+| [Alliance Donations](alliance-donations/INDEX.md) | Checked only | [0149 four hour run](alliance-donations/0149-four-hour-run.md) |
+| [Event Claims](event-claims/INDEX.md) | Checked only | [0149 four hour run](event-claims/0149-four-hour-run.md) |
+| [Arms Race](arms-race/INDEX.md) | Checked only | [0149 four hour run](arms-race/0149-four-hour-run.md) |
+| [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
+| [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |

@@ -1,0 +1,87 @@
+{
+ "mail": {
+  "status": "done",
+  "at": "2026-10-26T02:10:19",
+  "note": "Claim All in every category; System paid a 2.00K item, all other categories no rewards available"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-10-26T02:10:19",
+  "note": "Help All pressed; own 4 requests full 30/30, no ally requests waiting; help points 780/1000"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-10-26T02:10:19",
+  "note": "Regular 39 claimed, Premium 3 claimed"
+ },
+ "harvest": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "bubbles cleared in three passes incl farmland coin bubbles; base clear at end"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "checked - Daily Freebie already claimed this reset period, countdown 16:59 to next claim"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "checked - Free Supply Claimed, Drone and Coin pickups Already claimed today, Monthly Claimed, Season Weekly Claimed"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "UR Rescue Test Subject claimed; report showed 3 plunder entries; 1 UR still running, rest PERFECT; Recovery already claimed"
+ },
+ "treasures": {
+  "status": "skipped",
+  "at": "2026-10-26T02:10:20",
+  "note": "no full fragment set - M5 x0, progress 11/15, dig buttons greyed"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "release day checked - storage 0/40, nothing stacked to claim, next batch in about 02:51, stamina 101-103"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "one dialog survivor at the gate worked through and walked in; gate clear afterwards"
+ },
+ "trucks": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "4 evening trucks settled (food/iron +8.9M each, coin +5.7M); recovery already claimed; 5th truck dispatched N after free refresh R to N; trade 5/5, plunder already 4/4"
+ },
+ "train": {
+  "status": "skipped",
+  "at": "2026-10-26T02:10:20",
+  "note": "no train in preparation - no boarding banner on base, no train icon in profile"
+ },
+ "training": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "checked - all four batches from 2026-10-25 still running, earliest finish about 11:31 today, nothing to requeue"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "checked - Tech Donation Today already 3100, above the 1000 reward threshold, no donation needed"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "Battle Pass 16900, Claim All answered no rewards available; Halloween Day 02 locked until the next day boundary"
+ },
+ "arms-race": {
+  "status": "done",
+  "at": "2026-10-26T02:10:20",
+  "note": "Unit Progression phase, 0 pts, segment rank 10, about 56m left; scoring tasks need speedup spend or purchases - none done"
+ },
+ "star-ceremony": {
+  "status": "skipped",
+  "at": "2026-10-26T02:10:20",
+  "note": "no trophy icon on the base screen this run"
+ }
+}
