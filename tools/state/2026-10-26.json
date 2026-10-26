@@ -26,18 +26,18 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-26T11:16:01",
-  "note": "1057 seg3: Free Supply Claimed, Drone Parts and Coin weekly Already claimed today, Monthly Claimed 26d left, Season Weekly Pickup Claimed and Freebie inert, Swift BP not in shop tabs"
+  "at": "2026-10-26T15:10:06",
+  "note": "1457 segment 3 run - Free Supply Claimed; Drone Parts and Coin weekly Already claimed today; Monthly Claimed 26d left; Season Weekly Pickup Claimed, Daily Freebie inert; Swift BP Claim All answered no rewards available"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-26T11:16:01",
-  "note": "1057 seg3: no Claim button, 2 UR still running, rest PERFECT, Mega Deploy opened nothing, Assist 5/5, Reward Recovery already CLAIMED"
+  "at": "2026-10-26T15:10:06",
+  "note": "1457 segment 3 run - no Claim button; 2 UR still running, rest PERFECT; Mega Deploy opened nothing; Assist 5/5; recovery CLAIMED"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-26T11:16:01",
-  "note": "1057 seg3: fragments unchanged M1 13 M2 12 M3 2 M4 5 M5 0 M6 5 M7 9, 11/15, no full set, dig greyed"
+  "at": "2026-10-26T15:10:06",
+  "note": "1457 segment 3 run - fragments unchanged M1 13 M2 12 M3 2 M4 5 M5 0 M6 5 M7 9; 11/15; M5 zero, Dig greyed, no dig"
  },
  "radar": {
   "status": "done",
@@ -51,8 +51,8 @@
  },
  "trucks": {
   "status": "skipped",
-  "at": "2026-10-26T11:16:01",
-  "note": "1057 seg3: trade screen entry not found in current shortcut set (vehicle slot opens Secret Post); nothing could be pending - trade 5/5 and plunder 4/4 already at cap at 0657, no dispatch possible since, recovery CLAIMED"
+  "at": "2026-10-26T15:10:06",
+  "note": "1457 segment 3 run - trade entry not in current shortcut set (white pickup opens Secret Command Post, set verified again this run); nothing pending - trade 5/5 and plunder 4/4 since 0657, returned truck settled then, recovery CLAIMED; next trade day opens at the 19:00 reset"
  },
  "train": {
   "status": "done",
@@ -71,8 +71,8 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-10-26T11:16:01",
-  "note": "1057 seg3: full sweep x2, nothing claimable; Arms Race Drone Boost 0 stage pts cumulative 6/8 noted for seg1; Season BP 17000 Claim All none available; Halloween Day02 date-locked; Wanted Boss goals unreached"
+  "at": "2026-10-26T15:10:06",
+  "note": "1457 segment 3 run - full Events sweep repeated at end; Arms Race Hero Advancement 0 stage pts, cumulative 7/8 static not bouncing, noted for segment 1; Season BP 17000 Claim All no rewards; Halloween Day 01 checked, rest locked; Wanted Boss complete not spawned; Community Claimed"
  },
  "arms-race": {
   "status": "done",

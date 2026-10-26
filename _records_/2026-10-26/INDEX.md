@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T21:53:00Z
+modified: 2026-10-26T22:10:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -204,6 +204,12 @@ record. Inside it, one subfolder per activity type, named as in
 | [Truck Plunder](truck-plunder/INDEX.md) | Not performed | [1057 segment 3 run](truck-plunder/1057-segment-3-run.md) |
 | [Shop Claims](shop-claims/INDEX.md) | Checked only | [1057 segment 3 run](shop-claims/1057-segment-3-run.md) |
 | [Event Claims](event-claims/INDEX.md) | Checked only | [1057 segment 3 run](event-claims/1057-segment-3-run.md) |
+| [Secret Missions](secret-missions/INDEX.md) | Checked only | [1457 segment 3 run](secret-missions/1457-segment-3-run.md) |
+| [Hidden Treasures](hidden-treasures/INDEX.md) | Checked only | [1457 segment 3 run](hidden-treasures/1457-segment-3-run.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Not performed | [1457 segment 3 run](truck-plunder/1457-segment-3-run.md) |
+| [Shop Claims](shop-claims/INDEX.md) | Checked only | [1457 segment 3 run](shop-claims/1457-segment-3-run.md) |
+| [Event Claims](event-claims/INDEX.md) | Checked only | [1457 segment 3 run](event-claims/1457-segment-3-run.md) |
+| [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [1457 segment 3 run](ghost-ops/1457-segment-3-run.md) |
 
 ## 05:05 to about 05:20 — Recheck run, Arms Race reward claimed, target met
 
@@ -661,3 +667,48 @@ record. Inside it, one subfolder per activity type, named as in
 - Nothing bought, no diamond spent, no speedup or stamina
   item burned, no research or building started, no stage
   swap, no donation made in this segment.
+
+## 14:57 to about 15:09 — Segment 3 run, all claims already taken, truck entry still not found
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). The tracker showed passes, secrets, treasures, trucks
+  and events due in this segment; ghost-ops is not today
+  (Thursdays only). The Mac mini opened straight onto the base -
+  no different-device dialog, no lock, no login demand. Duel
+  Day 1 (Radar Training) is not a duel UR day.
+- Checked only — secrets (no Claim button; two UR tasks still
+  running, the rest PERFECT; Mega Deploy opened nothing; Assist
+  Allies 5 of 5; Reward Recovery already CLAIMED), treasures
+  (fragments unchanged - M1 13, M2 12, M3 2, M4 5, M5 0, M6 5,
+  M7 9 - 11 of 15, both Dig buttons greyed), ghost-ops (tab
+  opened - next event in 2 days 03:58, landing Thursday),
+  passes (Free Supply Claimed; Drone Parts and Coin weekly
+  passes Already claimed today; Monthly Pass Claimed with 26
+  days left; Season Weekly Pass Pickup Claimed and its Daily
+  Freebie inert; the Swift Exclusive Weapon Battle Pass was
+  among the Hot Deals tabs this run at 4,600 points and its
+  Claim All answered no rewards available), events (full sweep,
+  repeated at the end - Arms Race rolled to the Hero
+  Advancement stage at 0 stage points with the cumulative
+  chest at 7 of 8, static and not claimable, noted for segment
+  1 whose EXP authorization covers this stage; Season Battle
+  Pass 17,000 with Claim All answering no rewards available,
+  login and Profession EXP daily tasks complete; Halloween
+  Day 02 still date locked; Wanted Boss not yet spawned, all
+  its challenges complete; Community already Claimed; Level
+  Swap inspected only; Desert Storm Battlefield is an alliance
+  registration with nothing personal to claim).
+- Not performed — trucks. The Intercity Trade screen was not
+  entered: the base left column still shows the shortcut set
+  verified at 1057 (white pickup opens the Secret Command
+  Post, used this run; warming, radar, build and Missions
+  slots), and no trade slot or working flip was found. Nothing
+  could be pending - at 0657 the Trade Count already read 5
+  of 5 and the Plunder Count 4 of 4 for this trade day, the
+  returned truck was settled then, and no dispatch has been
+  possible since; trade Reward Recovery already read CLAIMED.
+  The next trade day opens at the 19:00 reset. Marked skipped
+  in the tracker with the reason.
+- Close — nothing bought, no diamond or Trade Contract spent,
+  no speedup or stamina item burned, no coal donated, no
+  furnace action, no stage ground.
