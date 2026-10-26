@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:18:00Z
+modified: 2026-10-26T05:16:00Z
 level: L2
-version: 1.3.0
+version: 1.4.0
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -58,6 +58,15 @@ types, and only check and update existing types without executing —
 is stated in [task intake workflow](task-intake-workflow.md). Task type
 metadata always keeps its own top level folder, `_activities_`, and is
 never nested inside `_records_`.
+
+## Owner-only actions
+
+- **Assembling is the owner's alone** (owner rule, 2026-10-25). The
+  agent never teleports the base to the Alliance Assembly Point and
+  never uses a teleport item for assembly. The Assemble panel may be
+  opened to inspect - where the point is, how far the base sits -
+  but any move is left to the owner, even when an approval for other
+  work is already in hand.
 
 ## Language and scope
 
