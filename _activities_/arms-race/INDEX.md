@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-25T21:04:00Z
+modified: 2026-10-26T04:40:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -65,9 +65,27 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   Race Badges and 5 minute speedups.
 - A phase ranking reward chest sits on the ranking row; when and how
   it pays out is unconfirmed.
+- The Base Building phase pays 1 point per Building Power point
+  gained, 10 points per 1 minute Construction Speed-up used, and
+  30 points per diamond in bought packs. Its chest thresholds are
+  6,250, 12,500 and 30,000 - lower than the Unit Progression
+  thresholds - so thresholds do change by phase, while the chest
+  ruby tags (2,360, 4,800, 11,800) read the same. This account held
+  0 points in the evening Base Building check (rank 7 in segment as
+  displayed, rank 2110 in the combined list).
+- Stage Swap: the Calendar button on the Arms Race page carries a
+  red dot and opens a Stage Swap explanation. A stage can be swapped
+  for another at the listed times (00:00 and 12:00 as displayed);
+  chest status, point requirements and points earned all swap with
+  it, and earning restarts in the new stage. Swapping is a strategic
+  decision - never done autonomously.
+- On 2026-10-25 evening the owner widened the standing four-hourly
+  check from Arms Race only to all the regulars (see
+  `_activities_/daily-activities` and `tools/regulars.json`); Arms
+  Race stays on that list as one regular among the rest.
 
 ## Open questions
 
 - The full phase rotation list and what each phase pays points for.
-- Whether chest thresholds and values change by phase or segment.
+- Whether the chest ruby tags also change by phase or segment.
 - When the phase ranking reward lands and where it is claimed.

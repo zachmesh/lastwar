@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T04:35:00Z
+modified: 2026-10-26T04:55:00Z
 level: L0
-version: 1.11.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, and the late evening red dot sweep with owner teach-ins
+version: 1.12.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, and the late regulars run with the tracker tooling
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -347,6 +347,50 @@ activity metadata.
   identity, and the day Alliance Duel category, which decides
   whether the duel day dispatch and Mega Refresh rules applied.
 
+## 21:18 to about 21:36 — The regulars instruction and the late run
+
+The owner widened the standing four-hourly task - it performs all
+the regulars now, and a list of the regulars is kept. He then
+ordered three of them on the spot - check and claim all mail, help
+others, harvest all bubbles - and added the working rule that
+activities are recorded as they are done, so what is still expected
+is always known; tooling for that was requested in the same breath.
+
+- Tooling built - `tools/regulars.json` (the canonical list, 18
+  regulars with cadences) and `tools/regulars.py` (list, todo,
+  done, skip; per date state in `tools/state/`; the VIP entry knows
+  its 19:00 reset). The four-hourly cron instruction was rewritten
+  to work from the tracker. The day state was seeded with the
+  verified outcomes of the earlier rounds.
+- The session had to be taken back from the phone (different-device
+  dialog, Confirm once, app restarted once). The owner had played
+  on the phone meanwhile - his own Lv.30 building and research
+  queues were running, resources lower, power 149,689,618.
+- Mail — Claim All pressed in Alliance, Season, System, Regular
+  and Battle Report; Purchases is receipts only. Contents were
+  reports and notices; a System patch mail dated 2026-10-21 names a
+  Crystal Shop tab in Store, Building - the first concrete lead on
+  the crystal task. The in-game Store was opened afterwards and
+  its Building section was not reached this run; the lead is
+  recorded in the mail metadata.
+- Help — no bubble on the base screen. In the Alliance HELP list
+  only this account's own four requests waited; Help All pressed,
+  nothing to give.
+- Gifts — 3 new Regular gifts claimed; Premium rows all already
+  Claimed.
+- Harvest — five grounded bubble points tapped on their centers;
+  one opened the High-Heat Furnace panel (furnace not turned on;
+  an auto-turn-on in blizzard line is shown - left untouched,
+  coal decisions stay with the owner). A closing screenshot showed
+  the base clear of bubbles.
+- Arms Race — Base Building phase, 0 points, no chests earned.
+  The Calendar red dot is the Stage Swap explanation; swapping is
+  a decision and was not touched.
+- Tracker end state — mail, help, gifts, harvest and arms-race
+  done for the run; train skipped with the reason that no train in
+  preparation was found tonight and the evening boarding entry is
+  still unresolved.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -357,9 +401,9 @@ execution file states the outcome, including not performed.
 
 | Activity | Status | Execution record |
 |---|---|---|
-| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md) |
-| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md), [2047 evening help](alliance-help/2047-evening-help.md) |
-| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md), [2048 evening claims](alliance-gifts/2048-evening-claims.md) |
+| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md), [2120 late run](mail-rewards/2120-late-run.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md), [2047 evening help](alliance-help/2047-evening-help.md), [2125 late run](alliance-help/2125-late-run.md) |
+| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md), [2048 evening claims](alliance-gifts/2048-evening-claims.md), [2125 late run](alliance-gifts/2125-late-run.md) |
 | [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md) |
 | [Season Warming](season-warming/INDEX.md) | Performed | [1100 daily round](season-warming/1100-daily-round.md) |
 | [Secret Missions](secret-missions/INDEX.md) | Performed | [1100 daily round](secret-missions/1100-daily-round.md), [1944 evening mega](secret-missions/1944-evening-mega.md) |
@@ -372,13 +416,13 @@ execution file states the outcome, including not performed.
 | [Hero Recruitment](hero-recruitment/INDEX.md) | Performed | [1100 daily round](hero-recruitment/1100-daily-round.md) |
 | [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |
 | [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
-| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md), [2025 evening harvest](resource-collection/2025-evening-harvest.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md), [2025 evening harvest](resource-collection/2025-evening-harvest.md), [2127 late run](resource-collection/2127-late-run.md) |
 | [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
 | [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md), [2047 evening settlement](truck-plunder/2047-evening-settlement.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed, then missed after reset | [1359 first claim](vip-rewards/1359-first-claim.md), [2053 evening missed](vip-rewards/2053-evening-missed.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
-| [Arms Race](arms-race/INDEX.md) | Performed, then access-failed | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed, then access-failed, then checked | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md), [2129 late check](arms-race/2129-late-check.md) |
 | [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md), [2016 second intake](survivor-intake/2016-second-intake.md) |
 
 ## Reorganisation note, 2026-10-25
