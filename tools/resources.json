@@ -3,7 +3,7 @@
  "resources": {
   "black_rock": {
    "crit_below": null,
-   "label": "Black rock resource (HUD second row, name unverified - Rare Soil or coal class)",
+   "label": "Coal (Season 2 black rock HUD icon; recorded under the black_rock key in the first snapshots)",
    "push_sources": [
     "season events",
     "faction duel rewards"

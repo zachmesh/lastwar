@@ -1,9 +1,9 @@
 ---
 title: Events and Cycles
 created: 2026-10-25T17:58:00Z
-modified: 2026-10-26T04:45:00Z
+modified: 2026-10-26T05:20:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Arms Race phases, the Alliance Duel VS week, the double-dip rule, and radar task discipline
 status: unverified
 grounded_in:
@@ -105,3 +105,10 @@ research on Wednesday, hero spending on Thursday, training on Friday.
   for points. The trap is the cap — if storage fills, the refresh timer
   stops and a whole batch of tasks is lost overnight. Keep headroom
   before sleep (LDShop, single source for the timer-stop behaviour).
+- Refined by the 2026-10-25 research brief (Handbook VS guide and the
+  Kimikas guide agree): claims score on the **odd duel days (1, 3, 5)**
+  at **claim time** — so the week runs stack days (complete, do not
+  claim) and release days (claim early). The Handbook lists 10,000
+  points per claim against the 30,000 the in-game Day 1 page displays;
+  the in-game page governs and a watched one-task claim is the pending
+  test. The operational rules live in the strategy playbook.

@@ -36,8 +36,7 @@ def current():
         "hours_left": round((day_end - now).total_seconds() / 3600, 1),
         "gate": day["gate"],
         "actions_that_score": day["actions_that_score"],
-        "preserve_radar": day["day"] in (6, 7),
-        "radar_push_day": day["day"] == 1,
+        "radar_posture": {1: "release", 2: "stack", 3: "release", 4: "stack", 5: "release", 6: "stack", 7: "stack"}[day["day"]],
     }
 
 def main():
@@ -49,10 +48,10 @@ def main():
           f"(win points {info['win_points']}, ends {info['day_ends']}, "
           f"{info['hours_left']}h left)")
     print("Gate: " + info["gate"])
-    if info["preserve_radar"]:
-        print("RADAR: preserve - do not empty the radar stock today.")
-    if info["radar_push_day"]:
-        print("RADAR: push day - empty the radar completely.")
+    if info["radar_posture"] == "stack":
+        print("RADAR: stack day - complete tasks but do NOT claim; keep storage headroom under the cap.")
+    if info["radar_posture"] == "release":
+        print("RADAR: release day - complete and claim everything, early in the day.")
     print("Scores today:")
     for a in info["actions_that_score"]:
         print(" - " + a)

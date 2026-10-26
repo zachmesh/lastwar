@@ -1,1 +1,89 @@
-{"anchor_note":"Duel day boundary and week anchor as observed in game on 2026-10-25 - Day 1 Radar Training was in progress with 21h22m left at 21:37 local, and the week timer read 5d 21h. Day 1 therefore started 2026-10-25 19:00 local and duel days roll at 19:00 local. Re-verify at the next week roll.","day_boundary_local":"19:00","days":[{"actions_that_score":["complete radar tasks (+30,000 each, in game 2026-10-25)","use stamina (+375 per point)","use drone parts (+6,250 each)","gather food iron coin on the world map (+50 per 100 food, 100 iron, 60 coin; radar gathering tasks excluded)","open chip chests (+2,812.5 per premium chip material)"],"day":1,"gate":"Empty the radar completely today, special pins included. Spend stamina freely on scoring work. The day before (Day 6 and the off day) the radar is preserved instead - see the playbook.","theme":"Radar Training","win_points":1},{"actions_that_score":["to verify in game on the day - building power gains expected"],"day":2,"gate":"Building day. Queue completions and power gains land here; do not rush completions the day before with speedups (red line - no speedup burning without the owner anyway).","theme":"Base Expansion","win_points":2},{"actions_that_score":["to verify in game on the day - research power gains expected"],"day":3,"gate":"Research day. Long researches should be timed to complete today where the queue allows; starting a research is an owner decision under the red lines.","theme":"Age of Science","win_points":2},{"actions_that_score":["to verify in game on the day - hero EXP and skill items expected"],"day":4,"gate":"Hero spending day. Hero EXP, skill medals and shards are spent today, not before - coordinated with the owner, who does hero spending himself unless he delegates it.","theme":"Train Heroes","win_points":2},{"actions_that_score":["to verify in game on the day - troop training expected"],"day":5,"gate":"Mobilization day. Barracks queues should land and roll today; keep the training regular full today.","theme":"Total Mobilization","win_points":2},{"actions_that_score":["to verify in game on the day - defeating enemies expected"],"day":6,"gate":"Enemy day, worth 4 win points - the heaviest day. Radar stops being emptied from today so a full stock meets Day 1 of the next week.","theme":"Enemy Buster","win_points":4},{"actions_that_score":[],"day":7,"gate":"Off day (settlement). Preserve radar all day - Day 1 Radar Training opens at 19:00.","theme":"Off day - settlement","win_points":0}],"timezone":"America/Los_Angeles","version":1,"week_anchor_local":"2026-10-25T19:00:00"}
+{
+ "anchor_note": "Duel day boundary and week anchor as observed in game on 2026-10-25 - Day 1 Radar Training was in progress with 21h22m left at 21:37 local, and the week timer read 5d 21h. Day 1 therefore started 2026-10-25 19:00 local and duel days roll at 19:00 local. Re-verify at the next week roll. Scoring enriched 2026-10-25 from the Last War Handbook VS guide and Packsify via the research brief; per-day in game theme pages govern where they differ (Day 1 already read).",
+ "day_boundary_local": "19:00",
+ "days": [
+  {
+   "actions_that_score": [
+    "complete and claim radar tasks (+30,000 each as displayed in game; Handbook lists 10,000 on days 1, 3 and 5 - in game value governs, delta test pending)",
+    "use stamina (+375 per point, in game)",
+    "use drone parts (+6,250 each, in game)",
+    "world map gathering (+50 per 100 food, 100 iron, 60 coin as displayed; radar gathering tasks excluded)",
+    "chip chests (+2,812.5 per premium chip material, in game)"
+   ],
+   "day": 1,
+   "gate": "Radar release day (odd day). Complete and CLAIM everything in the radar, special pins included, early in the day. Claims score today (+30,000 per task as displayed in game). Wait out the roughly 5 minute dead window after the 19:00 roll before claiming.",
+   "theme": "Radar Training",
+   "win_points": 1
+  },
+  {
+   "actions_that_score": [
+    "building power gained on collecting finished upgrades (Handbook 10 pts per power point - to verify in game on the day)",
+    "UR trade truck dispatched (Handbook 100,000 each)",
+    "Legendary secret task completed (Handbook 75,000 each)",
+    "survivor recruitment (Handbook)"
+   ],
+   "day": 2,
+   "gate": "Building day. Collect finished building upgrades today (gift wrapping). UR truck dispatches score (Handbook 100,000 each) and Legendary secret tasks score (75,000) - trucks go UR today, contracts permitting. Radar - complete tasks but do NOT claim (odd-day claim rule); keep storage headroom under the cap.",
+   "theme": "Base Expansion",
+   "win_points": 2
+  },
+  {
+   "actions_that_score": [
+    "research power gained (Handbook 10 pts per point)",
+    "valor badges spent on duel research (Handbook 300 each)",
+    "drone component chests opened, this day only (Handbook L1 1,100 to L7 810,000)",
+    "radar task claims (Handbook 10,000 each)"
+   ],
+   "day": 3,
+   "gate": "Science day. Research completions land today; valor badges are spent only inside today (owner decision); drone component chests score only today (owner inventory). Radar claims score again today - release the stack built on Day 2.",
+   "theme": "Age of Science",
+   "win_points": 2
+  },
+  {
+   "actions_that_score": [
+    "hero EXP (Handbook 1 pt per 660 EXP; in game Radar day showed a 2.5 rate for a 660 batch - verify on the day)",
+    "legendary hero shard (Handbook 10,000 each)",
+    "epic shard 3,500, rare shard 1,000 (Handbook)",
+    "skill medals (Handbook 10 each)",
+    "recruitment tickets (Handbook - Elite Recruit 1,500 per use)"
+   ],
+   "day": 4,
+   "gate": "Hero day. All hero consumables (EXP, shards, skill medals, recruitment tickets) are spent today and no other day - the owner spends them; a run flags the day. Radar - complete but do not claim.",
+   "theme": "Train Heroes",
+   "win_points": 2
+  },
+  {
+   "actions_that_score": [
+    "troop training and promotion per unit, tier scaled (Handbook T10 110)",
+    "building and tech power gains",
+    "all speedup types if the owner uses them",
+    "radar task claims (Handbook 10,000 each)"
+   ],
+   "day": 5,
+   "gate": "Mobilization day - everything counts, including radar claims and promotions. Release the radar stack built on Day 4. Waterfall promotions (pre-trained low tiers promoted step by step) are the efficient training pattern; barracks stay full.",
+   "theme": "Total Mobilization",
+   "win_points": 2
+  },
+  {
+   "actions_that_score": [
+    "defeating rival alliance troops, tier scaled (Handbook T10 55 per unit)",
+    "other map kills and healing at low rates (Handbook)",
+    "UR trucks and Legendary secret tasks (Handbook, variable)"
+   ],
+   "day": 6,
+   "gate": "Enemy day, worth 4 win points. Combat is owner-led; a run does not attack outside the standing truck plunder rule. UR trucks and Legendary secret tasks also score. Radar stacking resumes - complete, do not claim, keep headroom.",
+   "theme": "Enemy Buster",
+   "win_points": 4
+  },
+  {
+   "actions_that_score": [],
+   "day": 7,
+   "gate": "Off day (settlement). Stack radar for Day 1 (complete, do not claim; never sit at the cap across a 6 hour refresh). Power freeze caution - matchmaking assesses alliance power before the new week; do not collect finished upgrades during the Sunday assessment window where avoidable.",
+   "theme": "Off day - settlement",
+   "win_points": 0
+  }
+ ],
+ "timezone": "America/Los_Angeles",
+ "version": 1,
+ "week_anchor_local": "2026-10-25T19:00:00"
+}

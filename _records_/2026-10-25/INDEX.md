@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T04:55:00Z
+modified: 2026-10-26T05:20:00Z
 level: L0
-version: 1.14.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, and the objective with its power baseline
+version: 1.15.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, and the research brief folded into the playbook
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -435,6 +435,23 @@ Total Power **149,689,618**, warzone Individual Power **rank
 24.96M. The power figure is tracked in the resource map as the
 total_power growth metric. Detail in the 2150 power baseline
 record.
+
+## 21:56 — Research brief folded into the playbook
+
+The delegated web research landed (Handbook, Packsify, Kimikas,
+LDShop, Cpt Hedge cross-checked) and was folded into the strategy
+system in the same evening. One material correction to the first
+cut: radar claims score on the **odd duel days 1, 3 and 5 at
+claim time**, so the radar now runs stack days (complete, never
+claim, keep cap headroom) and release days - duel.py, the
+playbook, the duel schedule gates and the four-hourly cron text
+all carry the corrected rule. Also added - Day 2 UR trucks and
+Legendary secret tasks score, Day 3 valor badges and drone
+component chests, Day 5 waterfall promotions, the post-reset dead
+window, the Sunday power freeze caution, and coin reframed as a
+campaign against the 500M-plus T10 research wall (Gold Zombie
+event first in the push order). The black rock HUD resource is
+Season 2 coal.
 
 ## Activity records for this date
 
