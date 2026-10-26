@@ -1,8 +1,8 @@
 {
  "mail": {
   "status": "done",
-  "at": "2026-10-26T04:43:01",
-  "note": "0435 run - Claim All in Alliance Event System Regular all No rewards available; Season and Battle Report not rechecked, device access revoked mid-run"
+  "at": "2026-10-26T04:52:31",
+  "note": "0448 run - leftover categories completed: Regular, Season and Battle Report Claim All each No rewards available; mail now checked in every category across 0435+0448 runs"
  },
  "help": {
   "status": "done",
@@ -76,8 +76,8 @@
  },
  "arms-race": {
   "status": "done",
-  "at": "2026-10-26T04:43:01",
-  "note": "0435 run - Hero Advancement phase, 0 points, top chest 12000 MISSED TARGET - only hero-resource and paid scoring paths, both red lines"
+  "at": "2026-10-26T04:52:31",
+  "note": "0448 run - ACCESS FAILED before Events page opened; Hero Advancement target not met (last verified 0/12000 at 0435), owner-authorized hero EXP path could not be executed"
  },
  "star-ceremony": {
   "status": "skipped",

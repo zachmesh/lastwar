@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T11:43:00Z
+modified: 2026-10-26T11:52:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -84,6 +84,30 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   not redone. Nothing bought, no diamond or contract spent,
   no speedup burned, no furnace or coal action.
 
+## 04:48 to about 04:52 — Follow-up run, access failed again
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened clean. Base HUD read before the failure -
+  food 313.1M, iron 304.9M, coin 22.7M, stamina 185, total power
+  149,689,618, unchanged from the 0435 opening. The game opened
+  straight onto the Regular mail list left open by the 0435 run -
+  no different-device dialog, no lock, no login demand.
+- Performed - mail leftovers from 0435 completed: Claim All in
+  Regular, Season and Battle Report, each No rewards available.
+  With 0435, every mail category has now been checked in this
+  run cycle; nothing claimed, nothing deleted.
+- ACCESS FAILED AGAIN - on returning to the base, tapping Events
+  to open the Arms Race page returned the same channel error as
+  at 04:35 (this schedule lacks owner-authorized device access,
+  non-retryable), and the run stopped at once.
+- TARGET NOT MET, NOT EXECUTED - the Hero Advancement phase page
+  was never opened; the last verified state stands from 04:35 at
+  0 of 12,000 with no chest earned. No hero EXP was spent, so the
+  owner-authorized EXP path remains unexecuted, blocked solely
+  by device access. The remaining every-run regulars were not
+  redone; the daily regulars stand on the completed 0149 run.
+  This is the second consecutive access-failed run (0435, 0448).
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-26
@@ -112,5 +136,7 @@ record. Inside it, one subfolder per activity type, named as in
 | [Resource Collection](resource-collection/INDEX.md) | Performed | [0435 four hour run](resource-collection/0435-four-hour-run.md) |
 | [Radar Tasks](radar-tasks/INDEX.md) | Checked only | [0435 four hour run](radar-tasks/0435-four-hour-run.md) |
 | [Arms Race](arms-race/INDEX.md) | Missed target, access failed | [0435 four hour run](arms-race/0435-four-hour-run.md) |
+| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [0448 four hour run](mail-rewards/0448-four-hour-run.md) |
+| [Arms Race](arms-race/INDEX.md) | Access failed, target not met | [0448 four hour run](arms-race/0448-four-hour-run.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |
