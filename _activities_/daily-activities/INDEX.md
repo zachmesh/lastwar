@@ -1,19 +1,23 @@
 ---
-title: Daily Activities
+title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T04:45:00Z
+modified: 2026-10-26T12:56:00Z
 level: L1
-version: 1.8.0
-description: The umbrella daily checklist linking one folder per activity type
+version: 1.9.0
+description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
   - source: in-game base screen observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: owner rule on 2026-10-26 - the routine is every four hours, not daily, and every regular is checked and done at every run whenever it is available
 ---
 
-# Daily activities
+# Routine activities
 
-Umbrella checklist for one daily round. Each kind of activity has its own
+Umbrella checklist for one round of the every four hours routine.
+The routine is not a daily round (owner rule, 2026-10-26) - it runs
+every four hours, and every regular in it is checked at every run
+and done whenever it is available at that moment. Each kind of activity has its own
 folder under `_activities_`, and that folder is where knowledge about
 that kind accumulates. This page only lists the round in order and links
 to those folders. Completion is never ticked here - each execution is
@@ -44,7 +48,7 @@ date it happened and the activity it belongs to.
 ## Folded into the round by the owner on 2026-10-25
 
 Named and first executed on 2026-10-25 under the task intake
-workflow, then folded into this daily round by the owner the same
+workflow, then folded into this routine by the owner the same
 day. From the next round on they are worked with the list above.
 
 - [Troop training](../troop-training/INDEX.md) - check every barracks
@@ -87,8 +91,12 @@ performs all the regulars, not only Arms Race, and a list of the
 regulars is kept so it is always visible what is still expected.
 
 - The canonical list is `tools/regulars.json` - one entry per
-  regular, with its cadence (every run, daily, daily with the
-  19:00 reset for VIP, Thursdays for Ghost Ops).
+  regular, with its cadence (every run for everything in the
+  routine, daily with the 19:00 reset for VIP, Thursdays for
+  Ghost Ops). Every-run regulars become due again at each new
+  4 hour cycle (boundaries 01:47, 05:47, 09:47, 13:47, 17:47,
+  21:47 local) - a regular done or skipped in an earlier cycle
+  is never a reason to skip it in the current one.
 - The tracker is `tools/regulars.py` - `list` shows every regular
   with its status for the day, `todo` shows only what is still due,
   `done <id>` and `skip <id>` record an outcome with a note. State

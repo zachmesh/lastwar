@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Regulars tracker for the Last War daily/4-hour rounds.
+"""Regulars tracker for the Last War every-4-hours routine rounds.
 
 Keeps one state file per local date under tools/state/, so any run can
 answer two questions fast: what regulars exist (tools/regulars.json),
-and which of them are still expected (not yet done) today.
+and which of them are still expected (not yet done) in this cycle.
 
 Usage:
   regulars.py list [--date YYYY-MM-DD]   show every regular + status
@@ -12,13 +12,18 @@ Usage:
   regulars.py skip <id> [--note TEXT]    mark a regular skipped (why)
   regulars.py reset [--date YYYY-MM-DD]  clear a day state
 
-A daily-reset regular (VIP, reset 19:00 local) counts as done only if
-it was marked after the most recent reset boundary; before the reset
-it stays done, after the reset it becomes due again automatically.
+The routine is every four hours, not daily (owner rule, 2026-10-26).
+An every-run regular counts as done only for the 4 hour cycle in
+which it was marked; at the next cycle boundary (01:47, 05:47, 09:47,
+13:47, 17:47, 21:47 local, the cron fire times) it becomes due again,
+whether it was marked done or skipped. A daily-reset regular (VIP,
+reset 19:00 local) counts as done only if it was marked after the
+most recent reset boundary; before the reset it stays done, after
+the reset it becomes due again automatically.
 A weekly-thu regular is only due on Thursdays.
 """
 import argparse, json, os, sys
-from datetime import datetime, date, time as dtime
+from datetime import datetime, date, time as dtime, timedelta
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFS = os.path.join(ROOT, "regulars.json")
@@ -43,6 +48,15 @@ def save_state(day, state):
     with open(state_path(day), "w") as f:
         json.dump(state, f, indent=1, ensure_ascii=False)
 
+def latest_cycle_start(now):
+    """Most recent 4 hour cycle boundary (cron fires at minute 47
+    every 4 hours from the 17:47 anchor)."""
+    anchor = 17 * 60 + 47
+    cur = now.hour * 60 + now.minute
+    delta = (cur - anchor) % 240
+    return now - timedelta(minutes=delta, seconds=now.second,
+                           microseconds=now.microsecond)
+
 def status_of(reg, state, now):
     """Return (due: bool, label: str)."""
     cadence = reg["cadence"]
@@ -51,16 +65,20 @@ def status_of(reg, state, now):
     entry = state.get(reg["id"])
     if not entry:
         return True, "pending"
+    done_at = datetime.fromisoformat(entry["at"])
+    if cadence == "every-run":
+        if done_at < latest_cycle_start(now):
+            return True, "due again (new 4h cycle)"
+        if entry.get("status") == "skipped":
+            return False, "skipped - " + entry.get("note", "")
+        return False, "done " + done_at.strftime("%H:%M") + " (redo next run)"
     if entry.get("status") == "skipped":
         return False, "skipped - " + entry.get("note", "")
-    done_at = datetime.fromisoformat(entry["at"])
     if cadence == "daily-reset":
         reset_t = dtime.fromisoformat(reg.get("reset_local", "19:00"))
         boundary = datetime.combine(now.date(), reset_t)
         if now >= boundary and done_at < boundary:
             return True, "due again (reset passed)"
-    if cadence == "every-run":
-        return False, "done " + done_at.strftime("%H:%M") + " (redo next run)"
     return False, "done " + done_at.strftime("%H:%M")
 
 def show(day, only_due):
