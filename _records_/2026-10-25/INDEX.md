@@ -3,8 +3,8 @@ title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
 modified: 2026-10-26T05:20:00Z
 level: L0
-version: 1.15.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, and the research brief folded into the playbook
+version: 1.16.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, the research brief folded into the playbook, and the late red dot follow up
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -453,6 +453,24 @@ campaign against the 500M-plus T10 research wall (Gold Zombie
 event first in the push order). The black rock HUD resource is
 Season 2 coal.
 
+## 21:48 to about 22:15 — Red dot follow up on the owner's handover
+
+The owner handed the game over ("Game is for you to operate
+now"); the 21:47 scheduled run was stopped first so only one
+operator drives. Findings - Alliance Techs rechecked: donation
+points **3100** (owner topped up from his phone), daily rank 16,
+the 1000 point reward minimum met, rewards settle at the next
+day boundary (badge item 4 and red gems 10 in the 4 to 100 tier).
+Assemble: the base sits **1221 km from the Assembly Point
+X:999 Y:994** - the red dot is the too-far notice; teleporting
+stays the owner's decision. Mission Daily Tasks read in full
+(activity 160, Daily Login complete, no crystal row anywhere).
+Crystal hunt: Hot Deals storefront, Alliance Store, Daily and
+Season tasks all ruled out tonight; the Store Building section
+is still unlocated. Train: no preparation window, no entry -
+the watch continues with the regulars. Detail in the 2157
+techs recheck and the 2200 red dot follow up records.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -466,14 +484,14 @@ execution file states the outcome, including not performed.
 | [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md), [2120 late run](mail-rewards/2120-late-run.md) |
 | [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md), [2047 evening help](alliance-help/2047-evening-help.md), [2125 late run](alliance-help/2125-late-run.md) |
 | [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md), [2048 evening claims](alliance-gifts/2048-evening-claims.md), [2125 late run](alliance-gifts/2125-late-run.md) |
-| [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md) |
+| [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only; rechecked late | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md), [2157 techs recheck](alliance-donations/2157-techs-recheck.md) |
 | [Season Warming](season-warming/INDEX.md) | Performed | [1100 daily round](season-warming/1100-daily-round.md) |
 | [Secret Missions](secret-missions/INDEX.md) | Performed | [1100 daily round](secret-missions/1100-daily-round.md), [1944 evening mega](secret-missions/1944-evening-mega.md) |
 | [Hidden Treasures](hidden-treasures/INDEX.md) | Performed | [1959 first dig](hidden-treasures/1959-first-dig.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Inspected only | [2005 inspection](ghost-ops/2005-inspection.md) |
 | [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md), [1452 red dot sweep](radar-tasks/1452-red-dot-sweep.md), [2015 evening clear](radar-tasks/2015-evening-clear.md) |
 | [Daily Missions](daily-missions/INDEX.md) | Performed in part | [1100 daily round](daily-missions/1100-daily-round.md) |
-| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md), [2030 evening sweep](event-claims/2030-evening-sweep.md) |
+| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md), [2030 evening sweep](event-claims/2030-evening-sweep.md), [2200 red dot follow up](event-claims/2200-red-dot-followup.md) |
 | [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md), [1342 pass claims](shop-claims/1342-pass-claims.md), [1359 pass claims](shop-claims/1359-pass-claims.md), [1447 season passes](shop-claims/1447-season-passes.md) |
 | [Hero Recruitment](hero-recruitment/INDEX.md) | Performed | [1100 daily round](hero-recruitment/1100-daily-round.md) |
 | [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |

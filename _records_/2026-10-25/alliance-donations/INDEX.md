@@ -1,8 +1,8 @@
 ---
 title: Alliance Donations on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-25T20:12:00Z
-version: 1.1.0
+modified: 2026-10-26T05:25:00Z
+version: 1.2.0
 description: Index of Alliance Donations executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -19,9 +19,13 @@ time and never edited once committed (C1).
 
 **Status — Checked only.** The 12:20 intake visit verified the tech state and donated nothing.
 
+**Status — Rechecked late.** The 21:57 recheck found donation points at 3100 (rank 16 daily), the 1000 point reward minimum met, settlement at the next day boundary.
+
 ## Executions
 
 - [1100-daily-round.md](1100-daily-round.md) — the daily round that started at 11:00
   local. Session window 11:00 to 11:42 America/Los_Angeles.
 - [1220-intake-check.md](1220-intake-check.md) — the task intake check that started at 12:20
   local. Session window 12:20 to about 13:02 America/Los_Angeles.
+- [2157-techs-recheck.md](2157-techs-recheck.md) — the techs recheck that started at 21:57
+  local.

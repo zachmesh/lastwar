@@ -1,8 +1,8 @@
 ---
 title: Event Claims on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-26T04:22:00Z
-version: 1.1.0
+modified: 2026-10-26T05:25:00Z
+version: 1.2.0
 description: Index of Event Claims executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -25,3 +25,5 @@ time and never edited once committed (C1).
   at 14:47 local.
 - [2030-evening-sweep.md](2030-evening-sweep.md) — the evening page-through that started
   at 20:30 local. Session window about 20:30 to 20:45 America/Los_Angeles.
+- [2200-red-dot-followup.md](2200-red-dot-followup.md) — the red dot follow up that started
+  at 22:00 local.
