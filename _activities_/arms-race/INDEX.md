@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T11:51:00Z
+modified: 2026-10-26T11:59:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: owner refinement on 2026-10-26 - make the effort just enough to reach the target, do not overdo it
   - source: owner instruction on 2026-10-26 - the Hero Advancement phase is met by upgrading a hero level with EXP points
   - source: owner instruction on 2026-10-26 - whenever the Arms Race goal is reached, get its reward
+  - source: owner instruction on 2026-10-26 - experience boxes may be opened to increase hero level if needed
 ---
 
 
@@ -77,7 +78,10 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   authorization to spend hero EXP for this phase only. It does
   not extend to skill medals or hero shards, and it does not
   change the Alliance Duel Day 4 gate, where hero resources
-  remain the owner spend.
+  remain the owner spend. If the EXP on hand is short, open
+  experience boxes from the inventory to top it up (owner
+  instruction, 2026-10-26) - open only what the level ups
+  actually need, in line with the just enough rule.
 - The target never overrides the red lines. Diamonds and money are
   never spent, speedup and stamina items are never burned, no
   research or building is started on the agent initiative, hero
