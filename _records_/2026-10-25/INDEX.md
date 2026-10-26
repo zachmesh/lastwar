@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T04:24:00Z
+modified: 2026-10-26T04:35:00Z
 level: L0
-version: 1.10.0
+version: 1.11.0
 description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, and the late evening red dot sweep with owner teach-ins
 status: unverified
 grounded_in:
@@ -335,6 +335,11 @@ activity metadata.
   paid 9 UR shards against 1 to 2 from the earlier ordinary
   targets. End of session HUD - food 334.7M, iron 327.0M, coin
   77.3M, red diamonds 2,083, power 149,351,954.
+- One miss, owner corrected at about 20:53 — the VIP Daily Freebie
+  was claimable again after the 19:00 reset and the sweep never
+  opened the VIP screen; the owner claimed it himself. VIP rewards
+  are on the daily umbrella list from now on, and the reset rule is
+  recorded in the VIP metadata and the 2053 evening missed record.
 - Still open after this sweep — the alliance train entry point for
   the evening boarding (rule ready, section 2 and 3 contracts; no
   train control found in the Alliance panel or Events, and the left
@@ -371,7 +376,7 @@ execution file states the outcome, including not performed.
 | [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
 | [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md), [2047 evening settlement](truck-plunder/2047-evening-settlement.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md) |
-| [VIP Rewards](vip-rewards/INDEX.md) | Performed | [1359 first claim](vip-rewards/1359-first-claim.md) |
+| [VIP Rewards](vip-rewards/INDEX.md) | Performed, then missed after reset | [1359 first claim](vip-rewards/1359-first-claim.md), [2053 evening missed](vip-rewards/2053-evening-missed.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
 | [Arms Race](arms-race/INDEX.md) | Performed, then access-failed | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md) |
 | [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md), [2016 second intake](survivor-intake/2016-second-intake.md) |

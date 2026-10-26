@@ -1,9 +1,9 @@
 ---
 title: Daily Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T04:26:00Z
+modified: 2026-10-26T04:35:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: The umbrella daily checklist linking one folder per activity type
 status: unverified
 grounded_in:
@@ -36,6 +36,10 @@ date it happened and the activity it belongs to.
   [alliance donations](../alliance-donations/INDEX.md)
 - [Shop claims](../shop-claims/INDEX.md)
 - [Hero recruitment](../hero-recruitment/INDEX.md)
+- [VIP rewards](../vip-rewards/INDEX.md) - the Daily Freebie, added
+  after the evening sweep of 2026-10-25 missed it past the 19:00
+  reset and the owner had to claim it himself. Any round after the
+  reset claims it, even if it was claimed earlier that day.
 
 ## Folded into the round by the owner on 2026-10-25
 

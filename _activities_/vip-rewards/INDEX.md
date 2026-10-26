@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-25T21:04:00Z
+modified: 2026-10-26T04:35:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,14 @@ Measured on 2026-10-25.
 - The VIP Daily Freebie can be claimed once per day. After the claim
   its button becomes a countdown to the 19:00 daily reset (about
   4 hours 59 minutes at 14:00 on 2026-10-25).
+- Reset rule, learned from a miss - because the reset is at 19:00
+  local, a round that runs after 19:00 must claim the freebie AGAIN
+  even when it was already claimed earlier the same calendar day.
+  On 2026-10-25 the afternoon claim was made, the long evening
+  sweep ran entirely after the reset and never opened the VIP
+  screen, and the owner claimed the fresh freebie himself at about
+  20:53. VIP is now on the daily umbrella list; do not close a
+  round without it.
 - Login points - the screen offered 200 VIP points for tomorrow
   login, on a 48 day streak. Points appear to land without a claim.
 - VIP level milestone rewards are claimed once, when a level is
