@@ -1,7 +1,7 @@
 ---
 title: Arms Race on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T09:12:00Z
+modified: 2026-10-26T11:43:00Z
 version: 1.0.0
 description: Index of Arms Race executions on 2026-10-26
 grounded_in:
@@ -21,3 +21,6 @@ time and never edited once committed (C1).
 
 - [0149-four-hour-run.md](0149-four-hour-run.md) — the four hour run that
   started at 01:49 local.
+- [0435-four-hour-run.md](0435-four-hour-run.md) — the four hour run that
+  started at 04:35 local; Hero Advancement target missed, access
+  failed mid run.

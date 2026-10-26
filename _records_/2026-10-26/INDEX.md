@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T09:12:00Z
+modified: 2026-10-26T11:43:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -49,6 +49,41 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   the 149,689,618 baseline predates it). Nothing bought, no diamond
   or contract spent, no speedup burned, no furnace or coal action.
 
+## 04:35 to about 04:43 — Four hour regulars run, access failed mid run
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened clean (last snapshot food 308.6M, iron
+  298.5M, coin 19.9M). Opening HUD this run - food 313.1M, iron
+  304.9M, coin 22.7M, stamina 185, total power 149,689,618.
+- Arms Race read first under the new target rule - Hero
+  Advancement, about 02:22 left, chests at 2,000, 4,000 and
+  12,000, this account at 0 points. MISSED TARGET - the only
+  scoring tasks are Hero Recruitment (plus 400), Hero EXP
+  (plus 1 per 2,000 used) and buying diamond packs (plus 30);
+  hero resources are never spent by a run (and today is not
+  duel Day 4) and packs are spending, so no path inside the
+  red lines exists and no chest was earned.
+- Performed before the failure - harvest (five HQ compound iron
+  bubbles collected, base clear; a furnace panel opened by one
+  tap was closed untouched, furnace still off, coal usage 0),
+  mail (Claim All in Alliance, Event, System and Regular, each
+  No rewards available; the Bamie train arrival mail was read
+  in full and carries no claim for this account).
+- Checked only - radar (level 12, points 2,822, storage 0 of
+  40, next batch of 12 restoring in about 11 minutes; the one
+  pin was the Rare Farmland node, left alone).
+- ACCESS FAILED - while Season mail was next, the device
+  channel reported this schedule lacks owner-authorized device
+  access, a non-retryable result, and the run stopped at once.
+  Not reached this run - Season and Battle Report mail recheck,
+  the radar restored-batch claim on a release day, help, gifts,
+  VIP, passes, secrets, treasures, survivors, trucks, train,
+  training, donations, events and star ceremony. Those daily
+  regulars stand as completed or skipped by the 0149 run
+  earlier the same morning; the every-run items among them were
+  not redone. Nothing bought, no diamond or contract spent,
+  no speedup burned, no furnace or coal action.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-26
@@ -73,5 +108,9 @@ record. Inside it, one subfolder per activity type, named as in
 | [Alliance Donations](alliance-donations/INDEX.md) | Checked only | [0149 four hour run](alliance-donations/0149-four-hour-run.md) |
 | [Event Claims](event-claims/INDEX.md) | Checked only | [0149 four hour run](event-claims/0149-four-hour-run.md) |
 | [Arms Race](arms-race/INDEX.md) | Checked only | [0149 four hour run](arms-race/0149-four-hour-run.md) |
+| [Mail Rewards](mail-rewards/INDEX.md) | Partial | [0435 four hour run](mail-rewards/0435-four-hour-run.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [0435 four hour run](resource-collection/0435-four-hour-run.md) |
+| [Radar Tasks](radar-tasks/INDEX.md) | Checked only | [0435 four hour run](radar-tasks/0435-four-hour-run.md) |
+| [Arms Race](arms-race/INDEX.md) | Missed target, access failed | [0435 four hour run](arms-race/0435-four-hour-run.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |
