@@ -1,18 +1,44 @@
 ---
 title: Strategy Playbook
 created: 2026-10-26T04:45:00Z
-modified: 2026-10-26T04:45:00Z
+modified: 2026-10-26T05:05:00Z
 level: L1
-version: 1.0.0
-description: How this account is played day to day - duel week timing gates, radar discipline, resource floors and the tools that enforce them
+version: 1.1.0
+description: How this account is played day to day - the objective, duel week timing gates, radar discipline, resource floors and the tools that enforce them
 status: unverified
 grounded_in:
   - source: owner direction on duel schedule discipline and resource mapping, 2026-10-25
+  - source: owner statement of the ultimate goal, 2026-10-25
   - source: in-game Alliance Duel schedule and theme page, observed 2026-10-25
+  - source: in-game profile and Individual Power ranking, observed 2026-10-25
   - source: events-and-cycles knowledge in this repository
 ---
 
 # Strategy playbook
+
+## Objective
+
+Owner, 2026-10-25 - the ultimate goal is to **increase Hero Power
+and Total Power**, while balancing the use of available resources
+and supporting the alliance, including the Alliance Duel and other
+alliance activities. Everything in this playbook and in the daily
+regulars is a means to that end: growth is the point, resources
+are the constraint, the duel week is the calendar, and alliance
+support is both a duty and a growth channel (gifts, help, tech and
+events flow back as resources and power).
+
+Baseline, read in game on 2026-10-25 - Total Power 149,689,618,
+warzone Individual Power rank 113. Alliance benchmarks in the same
+ranking: ItStartsWithaDream 247,971,851 (rank 2), Abyss Apex
+227,095,526 (rank 3), StarFall 205,162,283 (rank 4); warzone top
+[B3WB] RonMexico 277,043,357. The first growth gap to close is
+therefore about 55M to the alliance's 200M band. Roster state -
+the top heroes are Lv.150 five-star UR across the squads, with a
+second band at Lv.140 to 145 and reserves at Lv.120; Squad 1
+march power 24.96M as read on march panels. Progress against this
+baseline is re-read from the ranking and recorded with resource
+snapshots (`tools/resource_map.py`), so growth, not activity, is
+what gets measured.
 
 Owner direction, evening of 2026-10-25 - keep the Alliance Duel
 weekly schedule in this repository, arrange the daily work around it,
