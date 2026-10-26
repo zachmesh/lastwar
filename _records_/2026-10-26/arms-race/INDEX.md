@@ -1,7 +1,7 @@
 ---
 title: Arms Race on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T11:52:00Z
+modified: 2026-10-26T12:01:00Z
 version: 1.0.0
 description: Index of Arms Race executions on 2026-10-26
 grounded_in:
@@ -27,3 +27,7 @@ time and never edited once committed (C1).
 - [0448-four-hour-run.md](0448-four-hour-run.md) — the follow-up run that
   started at 04:48 local; access failed before the phase page could
   be opened, target not met, hero EXP path not executed.
+- [0456-four-hour-run.md](0456-four-hour-run.md) — the retry run that
+  started at 04:56 local; Adam upgraded one level with 75.0M hero
+  EXP, then access failed before the points re-read and chest
+  claims, so the reward claim is unfinished.

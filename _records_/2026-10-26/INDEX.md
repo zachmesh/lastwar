@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T11:52:00Z
+modified: 2026-10-26T12:01:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -108,6 +108,41 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   redone; the daily regulars stand on the completed 0149 run.
   This is the second consecutive access-failed run (0435, 0448).
 
+## 04:56 to about 05:01 — Retry run, hero level executed, access failed before the claim
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened clean (food 313.1M, iron 304.9M, coin
+  22.7M, stamina 185, total power 149,689,618). The regulars todo
+  printed nothing due - the daily regulars stand on the 0149 run -
+  so this run worked the one open item, the Arms Race target. The
+  game opened straight onto the base - no different-device dialog,
+  no lock, no login demand. The opening base screen showed no
+  train boarding banner and no Star Ceremony trophy icon.
+- Arms Race read first - Hero Advancement, 02:01:53 left (phase
+  end about 07:00 local), this account at 0 points, chests at
+  2,000, 4,000 and 12,000. Scoring as displayed - Hero
+  Recruitment plus 400, Use at least 2,000 Hero EXP at a time
+  plus 1, diamond packs plus 30 per diamond.
+- TARGET SPEND EXECUTED - under the owner scoped authorization,
+  UR Adam was upgraded exactly one level, Lv.120 to Lv.121, with
+  hero EXP: the stock read 741.2M before and 666.2M after, so
+  one level consumed 75.0M EXP, and Adam's power rose 1,706,906
+  to 1,712,746. No second level, no experience boxes opened, no
+  skill medals or shards, nothing bought, no stage swap.
+- ACCESS FAILED BEFORE THE CLAIM - on the tap back toward the
+  base, the device channel returned the same non-retryable
+  error as at 0435 and 0448 (this schedule lacks
+  owner-authorized device access); ending the computer session
+  was refused with the same error, so session cc-117 may still
+  be open on the Mac. The earned points were never re-read and
+  the chests were NOT claimed - under the owner rule the target
+  counts as UNFINISHED, and the next run must open Arms Race
+  first and claim every earned chest (phase ends about 07:00
+  local). Third consecutive run cut by the same device-access
+  failure, though this run held access long enough to read the
+  phase and execute the hero level. Nothing else was bought or
+  spent, no speedup burned, no furnace or coal action.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-26
@@ -138,5 +173,6 @@ record. Inside it, one subfolder per activity type, named as in
 | [Arms Race](arms-race/INDEX.md) | Missed target, access failed | [0435 four hour run](arms-race/0435-four-hour-run.md) |
 | [Mail Rewards](mail-rewards/INDEX.md) | Performed | [0448 four hour run](mail-rewards/0448-four-hour-run.md) |
 | [Arms Race](arms-race/INDEX.md) | Access failed, target not met | [0448 four hour run](arms-race/0448-four-hour-run.md) |
+| [Arms Race](arms-race/INDEX.md) | Level executed, claim unfinished | [0456 four hour run](arms-race/0456-four-hour-run.md) |
 | [Ghost Ops](ghost-ops/INDEX.md) | Checked only | [0149 four hour run](ghost-ops/0149-four-hour-run.md) |
 | [Alliance Duel](alliance-duel/INDEX.md) | Checked only | [0149 four hour run](alliance-duel/0149-four-hour-run.md) |

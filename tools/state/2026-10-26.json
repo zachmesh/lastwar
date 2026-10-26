@@ -75,9 +75,9 @@
   "note": "Battle Pass 16900, Claim All answered no rewards available; Halloween Day 02 locked until the next day boundary"
  },
  "arms-race": {
-  "status": "done",
-  "at": "2026-10-26T04:52:31",
-  "note": "0448 run - ACCESS FAILED before Events page opened; Hero Advancement target not met (last verified 0/12000 at 0435), owner-authorized hero EXP path could not be executed"
+  "status": "skipped",
+  "at": "2026-10-26T05:01:41",
+  "note": "0456 run - Hero Advancement: Adam upgraded Lv.120 to 121 using 75.0M hero EXP (stock 741.2M to 666.2M), the owner-authorized one-level unit; access revoked before the points re-read and chest claims, so the reward claim is UNFINISHED and must be checked first next run (phase ends about 07:00 local)"
  },
  "star-ceremony": {
   "status": "skipped",
