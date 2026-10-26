@@ -15,9 +15,9 @@
   "note": "0505 run - Regular Claim All: 123 gifts claimed; Premium Claim All: 3 claimed"
  },
  "harvest": {
-  "status": "done",
-  "at": "2026-10-26T05:19:51",
-  "note": "0505 run - four iron bubbles collected in HQ compound, base clear afterwards"
+  "status": "skipped",
+  "at": "2026-10-26T06:12:49",
+  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
  },
  "vip": {
   "status": "done",
@@ -40,14 +40,14 @@
   "note": "no full fragment set - M5 x0, progress 11/15, dig buttons greyed"
  },
  "radar": {
-  "status": "done",
-  "at": "2026-10-26T05:19:52",
-  "note": "0505 run - release day: storage 3/40, Quick Execute completed 3 tasks for 30 stamina (185 to 155), Claim All x2 claimed 8+2 task rewards (food 4.56M, iron 2.4M, coin 1.56M, EXP 15.5M, drone parts 100); storage 0/40, radar score 2832, next batch restores in about 05:33"
+  "status": "skipped",
+  "at": "2026-10-26T06:12:49",
+  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
  },
  "survivors": {
-  "status": "done",
-  "at": "2026-10-26T02:10:20",
-  "note": "one dialog survivor at the gate worked through and walked in; gate clear afterwards"
+  "status": "skipped",
+  "at": "2026-10-26T06:12:49",
+  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
  },
  "trucks": {
   "status": "done",
@@ -60,14 +60,14 @@
   "note": "0529 run - train in preparation (conductor Abyss Apex, rating 71,050); boarded carriage 2 with exactly 3 Trade Contracts (stock 143, slider 1 to 3, Gift Contract); occupancy 11/7 to 12/7; arrival reward by Event mail later"
  },
  "training": {
-  "status": "done",
-  "at": "2026-10-26T02:10:20",
-  "note": "checked - all four batches from 2026-10-25 still running, earliest finish about 11:31 today, nothing to requeue"
+  "status": "skipped",
+  "at": "2026-10-26T06:12:49",
+  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
  },
  "donations": {
-  "status": "done",
-  "at": "2026-10-26T05:53:29",
-  "note": "0547 run - 9 coin donations (700 each) to recommended Rallied Defense, remaining count 9/30 to greyed timer; Tech Donation Today 4700 to 5850; daily reward trophy tap blocked by device-access failure after 3+ retries - claim unverified, check next run"
+  "status": "skipped",
+  "at": "2026-10-26T06:12:49",
+  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
  },
  "events": {
   "status": "done",
@@ -75,9 +75,9 @@
   "note": "Battle Pass 16900, Claim All answered no rewards available; Halloween Day 02 locked until the next day boundary"
  },
  "arms-race": {
-  "status": "done",
-  "at": "2026-10-26T05:53:29",
-  "note": "0547 run - Hero Advancement 37,500 of 12,000 top threshold, target already met; all point chests verified claimed, cumulative chest purple 6/8 not full, ranking reward preview only (SR chests x3 each) until phase ends about 07:03 - claim next run; Events sweep clean"
+  "status": "skipped",
+  "at": "2026-10-26T06:12:50",
+  "note": "0608 segment 1 run - access failed after retries; donations panel checked only (5850, trophy inert)"
  },
  "star-ceremony": {
   "status": "skipped",

@@ -1,7 +1,7 @@
 ---
 title: Arms Race on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T12:53:00Z
+modified: 2026-10-26T13:11:00Z
 version: 1.0.0
 description: Index of Arms Race executions on 2026-10-26
 grounded_in:
@@ -48,3 +48,9 @@ time and never edited once committed (C1).
   (cumulative chest purple 6 of 8, ranking reward still preview
   only until the phase ends at about 07:03); the run was then cut
   by the device-access failure during donations.
+- [0608-segment-1-run.md](0608-segment-1-run.md) — the segment 1 run
+  that started at 06:08 local; Arms Race never reached - the
+  device-access error returned during donations and persisted
+  through the retries. Last verified score carried forward -
+  Hero Advancement 37,500 of 12,000, target met; the phase ranking
+  reward claim falls to the next segment 1 run (10:03 local).

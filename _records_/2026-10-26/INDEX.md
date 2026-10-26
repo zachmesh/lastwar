@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T12:53:00Z
+modified: 2026-10-26T13:11:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -314,3 +314,33 @@ record. Inside it, one subfolder per activity type, named as in
   Star Ceremony trophy icon. Sessions cc-125 and cc-126 may
   still be open. Nothing bought, no diamond spent, no speedup
   or stamina item burned, no furnace or coal action.
+
+## 06:08 to about 06:11 — Segment 1 run, donations checked, then access failed
+
+- Gates first - duel Day 1 Radar Training, radar posture release;
+  resource check opened clean. This is the first segment 1 run of
+  the split routine (production and Arms Race), manually triggered
+  to cover the 06:03 slot. The game opened on the Alliance Techs
+  panel left open by the 0547 run - no different-device dialog, no
+  lock, no login demand. HUD food 317.7M, iron 307.3M, coin 24.3M
+  as displayed.
+- DONATIONS CHECKED - War tab unchanged, Rallied Defense 6 of 10
+  still carrying the recommended marker, Tech Donation Today
+  5,850. The daily reward trophy (unverified since the 0547 run)
+  was tapped twice; both taps dispatched and neither opened a
+  popup or changed the screen - the trophy is inert on this panel
+  as displayed, no claim was made, and its claim state stays
+  unverified.
+- ACCESS FAILED AT THE DONATION PANEL - tapping the Rallied
+  Defense node returned the device-access error; the session was
+  reopened and the call retried at least three further times (two
+  session starts and a device list) and every attempt returned
+  the same error, so the run stopped under the owner retry rule.
+  Harvest, training, radar, survivors and Arms Race were not
+  reached and are marked skipped for this cycle in the tracker.
+  Arms Race carries forward its last verified state - Hero
+  Advancement 37,500 of the 12,000 top threshold, target met,
+  ranking reward claim deferred to the next segment 1 run
+  (10:03 local) after the phase ends at about 07:03. Session
+  cc-127 may still be open. Nothing bought, no diamond spent, no
+  speedup or stamina item burned, no furnace or coal action.

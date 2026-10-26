@@ -1,7 +1,7 @@
 ---
 title: Alliance Donations on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T12:53:00Z
+modified: 2026-10-26T13:11:00Z
 version: 1.0.0
 description: Index of Alliance Donations executions on 2026-10-26
 grounded_in:
@@ -27,3 +27,10 @@ time and never edited once committed (C1).
   greyed timer), Tech Donation Today 4,700 to 5,850; the daily
   reward trophy tap was then blocked by the device-access failure
   after at least three retries, so its claim state is unverified.
+- [0608-segment-1-run.md](0608-segment-1-run.md) — the segment 1 run
+  that started at 06:08 local; the panel was found still open at
+  Tech Donation Today 5,850 and the reward trophy was tapped twice
+  with no popup and no change (inert as displayed, claim state
+  still unverified); the device-access error then returned at the
+  Rallied Defense panel and persisted through the retries, so no
+  donation was made.
