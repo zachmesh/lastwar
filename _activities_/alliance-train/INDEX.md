@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T01:27:00Z
+modified: 2026-10-26T02:24:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -42,10 +42,14 @@ literal train, so both readings of the request are in the system.
 
 - Tap the plus on the carriage to board. Boarding opens a THANK THE
   CONDUCTOR dialog.
-- Choose Like and Thank - it is free and completes boarding. The other
-  button, Gift Contract, offers the conductor Trade Contracts as a
-  gift - never use it without the owner approval, under the recording
-  rules on spending.
+- Standing owner instruction, set on 2026-10-25 (evening) - always
+  board the 2nd section (carriage 2), and always use 3 Trade
+  Contracts for the ticket in the conductor dialog, autonomously.
+  This supersedes the first execution, which boarded carriage 1
+  with the free Like and Thank and gifted nothing. The gift flow
+  itself has never been opened, so how the 3 contracts are entered
+  and what the paid ticket changes are still to be observed on the
+  next boarding.
 - Boarded state shows as the own avatar inside the carriage and the
   occupancy count rising by one.
 - After the ride, the carriage reward arrives as an Event category
@@ -55,9 +59,11 @@ literal train, so both readings of the request are in the system.
   banner listing the granted items. Departure and arrival also
   generate plain notice mails about the conductor train in the same
   Event category, with no attachments.
-- Pick the carriage by its reward set and occupancy. On 2026-10-25
-  carriage 1 held the richest set and the fewest riders, 2 of 7
-  before boarding.
+- Historical note - on the first boarding (2026-10-25 midday, before
+  the standing rule) the carriage was picked by its reward set and
+  occupancy; carriage 1 held the richest set and the fewest riders,
+  2 of 7 before boarding. The standing rule above now fixes the
+  choice at carriage 2.
 
 ## Cadence
 
@@ -112,12 +118,19 @@ Observed in game on this account, first execution 2026-10-25.
 
 ## Limits
 
-- Never Gift Contract without the owner approval.
+- The standing ticket is exactly 3 Trade Contracts for carriage 2,
+  pre-approved by the owner instruction above. Any amount beyond
+  the 3, or any other contract spending, still needs the owner
+  approval first.
 - Conductors are assigned by alliance officers. Nothing here authorises
   summoning a train or taking the conductor role.
 
 ## Open questions
 
+- What the 3 Trade Contract ticket does - whether the conductor
+  dialog takes a quantity, and what the paid ticket improves over
+  the free Like and Thank (seat, reward share, rating). First
+  boarding under the standing rule will show it.
 - How the reward split among riders works - the claimed set matched
   the carriage 1 card in kind, so a rider appears to receive the
   carriage set as displayed, but whether occupancy dilutes it is
