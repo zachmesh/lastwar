@@ -1,15 +1,16 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T12:56:00Z
+modified: 2026-10-26T13:06:00Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
   - source: in-game base screen observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner rule on 2026-10-26 - the routine is every four hours, not daily, and every regular is checked and done at every run whenever it is available
+  - source: owner design on 2026-10-26 - remove the single every four hours job and split the routine into segment schedules rotating hourly, each segment looking at a specific set of tasks
 ---
 
 # Routine activities
@@ -93,10 +94,22 @@ regulars is kept so it is always visible what is still expected.
 - The canonical list is `tools/regulars.json` - one entry per
   regular, with its cadence (every run for everything in the
   routine, daily with the 19:00 reset for VIP, Thursdays for
-  Ghost Ops). Every-run regulars become due again at each new
-  4 hour cycle (boundaries 01:47, 05:47, 09:47, 13:47, 17:47,
-  21:47 local) - a regular done or skipped in an earlier cycle
-  is never a reason to skip it in the current one.
+  Ghost Ops) and its segment (1 to 4). Every-run regulars become
+  due again at each new cycle of their own segment - a regular
+  done or skipped in an earlier cycle is never a reason to skip
+  it in the current one.
+- Since 2026-10-26 the routine runs as 4 segment schedules
+  rotating hourly, replacing the single every four hours job -
+  segment 1 (production and Arms Race - harvest, training,
+  donations, radar, survivors, Arms Race) fires at :12, segment
+  2 (alliance - mail, help, gifts, train, star ceremony) an hour
+  later, segment 3 (missions and logistics - secrets, treasures,
+  trucks, Ghost Ops) an hour after that, segment 4 (claims -
+  passes, events, VIP) an hour after that, and each segment
+  repeats every 4 hours. The split was the owner design against
+  the device-access error that kept cutting the single long run
+  short mid-session - short segment runs finish inside one
+  session, and one segment failing loses only that segment.
 - The tracker is `tools/regulars.py` - `list` shows every regular
   with its status for the day, `todo` shows only what is still due,
   `done <id>` and `skip <id>` record an outcome with a note. State

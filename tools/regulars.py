@@ -12,15 +12,19 @@ Usage:
   regulars.py skip <id> [--note TEXT]    mark a regular skipped (why)
   regulars.py reset [--date YYYY-MM-DD]  clear a day state
 
-The routine is every four hours, not daily (owner rule, 2026-10-26).
-An every-run regular counts as done only for the 4 hour cycle in
-which it was marked; at the next cycle boundary (01:47, 05:47, 09:47,
-13:47, 17:47, 21:47 local, the cron fire times) it becomes due again,
-whether it was marked done or skipped. A daily-reset regular (VIP,
-reset 19:00 local) counts as done only if it was marked after the
-most recent reset boundary; before the reset it stays done, after
-the reset it becomes due again automatically.
+The routine is every four hours, not daily (owner rule, 2026-10-26),
+and since later that day it is split into 4 segment schedules
+rotating hourly (owner design): segment 1 fires at :12, segment 2
+an hour later, segment 3 an hour after that, segment 4 an hour
+after that, each repeating every 4 hours. An every-run regular
+counts as done only for its own segment's current 4 hour cycle; at
+the segment's next cycle boundary it becomes due again, whether it
+was marked done or skipped. A daily-reset regular (VIP, reset 19:00
+local) counts as done only if it was marked after the most recent
+reset boundary; before the reset it stays done, after the reset it
+becomes due again automatically.
 A weekly-thu regular is only due on Thursdays.
+Use --segment N with list/todo to see one segment's regulars.
 """
 import argparse, json, os, sys
 from datetime import datetime, date, time as dtime, timedelta
@@ -48,12 +52,13 @@ def save_state(day, state):
     with open(state_path(day), "w") as f:
         json.dump(state, f, indent=1, ensure_ascii=False)
 
-def latest_cycle_start(now):
-    """Most recent 4 hour cycle boundary (cron fires at minute 47
-    every 4 hours from the 17:47 anchor)."""
-    anchor = 17 * 60 + 47
+SEGMENT_ANCHORS = {1: 6 * 60 + 12, 2: 7 * 60 + 12, 3: 8 * 60 + 12, 4: 9 * 60 + 12}
+
+def latest_cycle_start(now, anchor_min):
+    """Most recent 4 hour cycle boundary for a segment whose fires
+    are anchored at anchor_min (minute of day of any one fire)."""
     cur = now.hour * 60 + now.minute
-    delta = (cur - anchor) % 240
+    delta = (cur - anchor_min) % 240
     return now - timedelta(minutes=delta, seconds=now.second,
                            microseconds=now.microsecond)
 
@@ -67,7 +72,8 @@ def status_of(reg, state, now):
         return True, "pending"
     done_at = datetime.fromisoformat(entry["at"])
     if cadence == "every-run":
-        if done_at < latest_cycle_start(now):
+        anchor = SEGMENT_ANCHORS[reg.get("segment", 1)]
+        if done_at < latest_cycle_start(now, anchor):
             return True, "due again (new 4h cycle)"
         if entry.get("status") == "skipped":
             return False, "skipped - " + entry.get("note", "")
@@ -81,12 +87,14 @@ def status_of(reg, state, now):
             return True, "due again (reset passed)"
     return False, "done " + done_at.strftime("%H:%M")
 
-def show(day, only_due):
+def show(day, only_due, segment=None):
     regs = load_defs()
     state = load_state(day)
     now = datetime.now()
     rows = []
     for reg in regs:
+        if segment is not None and reg.get("segment", 1) != segment:
+            continue
         due, label = status_of(reg, state, now)
         if only_due and not due:
             continue
@@ -101,6 +109,7 @@ def main():
     for name in ("list", "todo", "reset"):
         p = sub.add_parser(name)
         p.add_argument("--date", default=None)
+        p.add_argument("--segment", type=int, default=None)
     for name in ("done", "skip"):
         p = sub.add_parser(name)
         p.add_argument("id")
@@ -109,7 +118,7 @@ def main():
     args = ap.parse_args()
     day = date.fromisoformat(args.date) if getattr(args, "date", None) else date.today()
     if args.cmd in ("list", "todo"):
-        show(day, args.cmd == "todo")
+        show(day, args.cmd == "todo", getattr(args, "segment", None))
     elif args.cmd == "reset":
         p = state_path(day)
         if os.path.exists(p):
