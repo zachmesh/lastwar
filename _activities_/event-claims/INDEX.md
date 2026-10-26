@@ -1,15 +1,16 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T04:12:00Z
+modified: 2026-10-26T12:36:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner direction to page through every red dot and claim what is shown, evening of 2026-10-25
+  - source: owner correction on 2026-10-26 - a bouncing chest on the Events screen is an unclaimed reward signal, and the three Arms Race point chests are not all of its rewards
 ---
 
 
@@ -34,6 +35,16 @@ Executions are recorded in `_records_/<date>/event-claims/`, one file per execut
   seconds before reading the screen, or the previous page content
   will mislead the tap.
 - Claim milestone and completion rewards that are already earned.
+- Treat an animated or bouncing chest on the Events screen, an
+  event card or an event detail page as an unclaimed reward until
+  it has been opened and inspected. Do not stop at the rewards
+  inside the first detail page. After claiming, return to the
+  Events screen and scan again - the event sweep is complete only
+  when no bouncing chest or reward red dot remains, or a visible
+  chest is proven locked and its unlock condition is recorded.
+  For Arms Race in particular, the three point chests are only
+  one reward set and do not prove that all Arms Race rewards
+  have been claimed.
 - Record timed stage state without grinding it, unless the owner asked.
 
 ## Standing limits
@@ -91,6 +102,16 @@ Executions are recorded in `_records_/<date>/event-claims/`, one file per execut
   column is locked behind the 9.99 dollar unlock. The Infinity
   Chest needs 35,000. Target Tasks - Kill Polar Zombie tiers all
   complete.
+
+## What is known from 2026-10-26
+
+- After the Arms Race Hero Advancement point chests were claimed,
+  the owner could still see a bouncing reward chest connected
+  with the Events or Arms Race screen and corrected the report
+  that all rewards were done - more rewards remained beyond the
+  three point chests. A bouncing chest is therefore a completion
+  check failure until the final Events-screen sweep required
+  above has been performed.
 
 ## Season knowledge gathered the same evening
 

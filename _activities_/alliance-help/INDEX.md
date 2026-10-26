@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T04:06:00Z
+modified: 2026-10-26T12:42:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -43,6 +43,15 @@ counts helps, and any caps. Executions are recorded in
   out missed bubbles twice before this was learned, so treat the
   lower right of the base screen as a watch point in every
   session.
+- What the bubble looks like, verified in game on 2026-10-26 -
+  a yellow speech-bubble tile showing a hand holding a green
+  missile, sitting immediately to the left of the Alliance
+  shield button at the lower right of the base screen. One tap
+  on the tile centre pressed the helps - the game answered
+  Allies are very grateful for your assistance and the tile
+  disappeared. If unsure what the help icon is, this tile is
+  the reference; web guides describe the same control as the
+  holding-hands icon at the bottom right.
 
 ## What is known from 2026-10-25
 

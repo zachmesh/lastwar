@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T12:20:00Z
+modified: 2026-10-26T12:53:00Z
 level: L1
-version: 1.9.0
+version: 1.11.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: owner instruction on 2026-10-26 - whenever the Arms Race goal is reached, get its reward
   - source: owner instruction on 2026-10-26 - experience boxes may be opened to increase hero level if needed
   - source: owner instruction on 2026-10-26 - every time a run is made, check the score in Arms Race
+  - source: owner correction on 2026-10-26 - the three point chests are not all of the Arms Race rewards, and a bouncing chest on the Events or Arms Race screen means more rewards remain
 ---
 
 
@@ -64,6 +65,17 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   whenever it becomes claimable - if it lands after the phase
   rolls, the next run checks for it and claims it then. A reached
   target with an unclaimed reward counts as unfinished.
+- Completion sweep, owner correction 2026-10-26 - the three
+  point chests are only one reward set, not the definition of all
+  Arms Race rewards. Before Arms Race is marked complete, return
+  to the Events screen and scan the Arms Race card and page again,
+  including its ranking and reward areas. Treat an animated or
+  bouncing chest, or a red dot attached to a reward, as an
+  unclaimed reward until it has been opened and inspected. Claim
+  every additional earned reward found. Arms Race is complete
+  only when no bouncing chest or reward red dot remains, or when
+  the screen itself proves a visible chest is still locked and
+  its unlock condition and time are recorded.
 - Score check every run, owner instruction 2026-10-26 - every
   four hour run reads the live Arms Race phase and score (points
   against the chest thresholds) and records the reading in the
@@ -179,3 +191,30 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   the phase was live, so the phase ranking reward is claimed
   after the phase ends, in the next run, as the owner rule
   already provides.
+
+- The cumulative counter chest, found 2026-10-26 in the 0529
+  run - a separate chest icon sits at the top left of the
+  phase page, above the point track, with a counter and a
+  progress bar. It accumulates across tiers: at the 0505 claim
+  the page counter moved 0 of 2 to 6 of 2, and the chest then
+  stood full and claimable (the owner saw it bouncing, and the
+  Arms Race tab carried a red dot) even though all three point
+  chests were already claimed. Checking only the point track
+  is therefore not enough - this counter chest must be checked
+  and claimed in every run, alongside the ranking row chest.
+  One tap in the 0529 run claimed it, paying a gold ticket
+  item 1, pink puzzle-piece items 2 and a red gem tagged 50;
+  the chest then turned purple and read 6 of 8 with the bar
+  about three quarters full, so progress carries past a
+  claimed tier into the next tier's threshold. What action
+  increments the counter, and the exact item names, are still
+  unverified. The ranking reward chest preview was also read
+  in full this run - Iron Chest (SR) 3, Food Chest (SR) 3,
+  Coin Chest (SR) 3 for this account at segment rank 8.
+- Owner correction later on 2026-10-26 - after the three point
+  chests had been claimed, a bouncing reward chest was still
+  visible on the Events or Arms Race screen and the owner stated
+  that more rewards remained. The lesson is now part of the
+  Cadence completion sweep above - three claimed point chests do
+  not by themselves prove that every Arms Race reward has been
+  claimed.
