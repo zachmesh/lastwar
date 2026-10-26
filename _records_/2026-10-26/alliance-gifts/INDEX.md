@@ -29,3 +29,6 @@ time and never edited once committed (C1).
 - [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
   started at 10:30 local; 22 plus 4 Regular gifts claimed, Premium all
   already claimed.
+- [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
+  started at 14:30 local; 577 Regular and 7 Premium gifts claimed
+  across three passes as new gifts kept arriving.

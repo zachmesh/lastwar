@@ -31,3 +31,6 @@ time and never edited once committed (C1).
 - [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
   started at 10:30 local; no boarding banner at any sweep, and the
   arrival reward of the 0529 boarding claimed in Event mail.
+- [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
+  started at 14:30 local; no boarding banner at any sweep, and the
+  Nd4Spd4 arrival mail verified as a notice for a train never boarded.

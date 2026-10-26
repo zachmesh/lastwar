@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T21:19:00Z
+modified: 2026-10-26T21:53:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -628,3 +628,36 @@ record. Inside it, one subfolder per activity type, named as in
 - Nothing bought, no diamond spent, no speedup or stamina
   item burned, no research or building started, no stage
   swap.
+
+## 14:30 to about 14:52 — Segment 2 run, gifts pay 584, Regular mail pays
+
+- The Mac mini opened straight onto the base — no
+  different-device dialog, no lock, no login demand.
+- Performed - mail (Claim All in every category; only
+  Regular paid — coin 1,080,000 and ruby times 200, a
+  second Claim All answered No rewards available; Alliance,
+  Battle Report and System each answered No rewards
+  available, Season held Ice Breaking reports only, Event
+  answered No rewards available and its Nd4Spd4 train
+  arrival mail was opened and verified as a notice only —
+  Bears Lair not among the twelve passengers, no
+  attachment; Purchases receipts only), help (Help All
+  pressed, grateful toast; visible rows were own four
+  requests all 30 of 30; points 1,060 of 1,000, cap
+  already passed), gifts (Regular Claim All 566, Premium
+  Claim All 7, plus 9 and 2 Regular that arrived during
+  the run — 577 Regular and 7 Premium in total; Gift
+  Level 28, progress 162,701,800 to 162,710,530 of
+  206,300,000).
+- Checked only - train (no Boarding closes in banner at
+  the opening, mid-run or closing sweeps, no train icon
+  on MY PROFILE; no contract spent), VIP (Daily Freebie
+  already claimed this reset period, countdown 04:22:38;
+  VIP13, 1,545,390 of 2,000,000 points, 49 day streak),
+  star ceremony (no trophy icon on the base screen at
+  any sweep; the Alliance Star book shows Event 38 dated
+  2026-10-25, already performed — marked skipped in the
+  tracker).
+- Nothing bought, no diamond spent, no speedup or stamina
+  item burned, no research or building started, no stage
+  swap, no donation made in this segment.

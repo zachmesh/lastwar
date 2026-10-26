@@ -36,3 +36,7 @@ time and never edited once committed (C1).
   started at 10:30 local; Alliance mail paid coin 12.1M, food 19.0M and
   iron 19.0M, Event mail claimed the train arrival reward and three
   Wanted Boss rewards, the other categories held no rewards.
+- [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
+  started at 14:30 local; Regular mail paid coin 1,080,000 and ruby
+  times 200, no rewards in any other category, and the Nd4Spd4 train
+  arrival mail verified as a notice with no attachment.

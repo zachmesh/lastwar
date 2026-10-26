@@ -27,3 +27,6 @@ time and never edited once committed (C1).
 - [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
   started at 10:30 local; Star Ceremony checked, no trophy icon on
   the base screen.
+- [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
+  started at 14:30 local; Star Ceremony checked, no trophy icon on
+  the base screen.
