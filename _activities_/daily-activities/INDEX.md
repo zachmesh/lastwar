@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T13:44:00Z
+modified: 2026-10-26T13:52:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: owner refinement on 2026-10-26 - the spacing is 18 minutes, so the fires are :03, :21, :39 and :57
   - source: owner refinement on 2026-10-26 - make it 3 segments, 25 minutes apart
   - source: owner refinement on 2026-10-26 - 26 minutes apart
+  - source: owner refinement on 2026-10-26 - 27 minutes apart, the final spacing
 ---
 
 # Routine activities
@@ -103,13 +104,13 @@ regulars is kept so it is always visible what is still expected.
   done or skipped in an earlier cycle is never a reason to skip
   it in the current one.
 - Since 2026-10-26 the routine runs as 3 segment schedules in
-  the same hour, 26 minutes apart, replacing the single every
+  the same hour, 27 minutes apart, replacing the single every
   four hours job - segment 1 (production and Arms Race -
   harvest, training, donations, radar, survivors, Arms Race)
   fires at :03, segment 2 (alliance and VIP - mail, help,
-  gifts, train, star ceremony, VIP) at :29, segment 3 (missions,
+  gifts, train, star ceremony, VIP) at :30, segment 3 (missions,
   logistics and claims - secrets, treasures, trucks, Ghost
-  Ops, passes, events) at :55, and each segment repeats every
+  Ops, passes, events) at :57, and each segment repeats every
   4 hours, so the whole routine completes inside one hour of
   each cycle. The split was the owner design against the
   device-access error that kept cutting the single long run
