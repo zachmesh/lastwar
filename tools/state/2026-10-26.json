@@ -16,8 +16,8 @@
  },
  "harvest": {
   "status": "done",
-  "at": "2026-10-26T10:31:50",
-  "note": "1003 segment 1 run - bubbles cleared in factory compound, east mines/farms, west mines/farms plus a closing accrual pass; food 325.2M to 326.0M, iron 314.5M to 315.2M, coin helped 2.2M to 3.8M"
+  "at": "2026-10-26T14:19:36",
+  "note": "bubbles cleared in two passes plus closing accrual pass; food 345.0M to 351.5M, iron 334.3M to 339.7M, coin 16.2M to 19.5M with radar claims"
  },
  "vip": {
   "status": "done",
@@ -41,13 +41,13 @@
  },
  "radar": {
   "status": "done",
-  "at": "2026-10-26T10:31:50",
-  "note": "1003 segment 1 run - Day 1 release; stored 0/40 (12 restore in ~25m); both special pins gathered and claimed: Diamond Mine (red gem x20, blue swirl x10) via Claim All, Rare Gold Mine (coin 73.6K, blue swirl x10) via pin tap; radar pts 2832 to 2834; no stamina item used"
+  "at": "2026-10-26T14:19:36",
+  "note": "Day 1 release - Quick Execute 4 tasks for 40 stamina plus 1 task for 10, Claim All twice (10 plus 2 rewards), storage 0/40, score 2834 to 2846, stamina 42 left; free 75 claim exhausted today 0/2"
  },
  "survivors": {
   "status": "done",
-  "at": "2026-10-26T10:31:50",
-  "note": "1003 segment 1 run - 1 dialog survivor taken in at the gate, line clear; Quick Dispatch pressed in Farmland Lv.28 details, posts already full (Anthony, Harry, Michael, Karen - all Farmer)"
+  "at": "2026-10-26T14:19:36",
+  "note": "no line at the front gate; Quick Dispatch in Iron Mine Lv.27 panel answered no survivors available for dispatch"
  },
  "trucks": {
   "status": "skipped",
@@ -60,14 +60,14 @@
   "note": "1030 segment 2 run - no Boarding closes in banner at opening, mid-run or closing sweeps and no train icon on MY PROFILE; the arrival reward of the 0529 boarding was claimed in Event mail this run; no contract spent"
  },
  "training": {
-  "status": "done",
-  "at": "2026-10-26T10:31:50",
-  "note": "1003 segment 1 run - checked only; all 4 barracks tents show training clocks and the 2026-10-25 queues cannot finish before about 11:31 today (T7 first); nothing requeued, no Finish Now"
+  "status": "skipped",
+  "at": "2026-10-26T14:19:36",
+  "note": "3 of 4 barracks verified in progress (T9 08:37:59, T10 15:28:15, T8 02:34:14); 4th T7 barracks not located this run despite grounding sweep - its 2026-10-25 queue should have finished about 11:31-12:13, may be idle, needs next run"
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-26T10:31:50",
-  "note": "1003 segment 1 run - coin donations to recommended Rallied Defense 6/10; Tech Donation Today 7000 to 7100 (+100), coin button then on about 13min cooldown; daily reward resolved - Donation Ranking Reward settles at 19:00 (rank 11, tier 4-100), no manual claim exists"
+  "at": "2026-10-26T14:19:36",
+  "note": "12 coin donations to recommended Rallied Defense until count 12/30 ran out and button greyed at about 00:18:41; today 7100 to 8250; daily reward is the 19:00 ranking settlement, no claim button"
  },
  "events": {
   "status": "done",
@@ -76,8 +76,8 @@
  },
  "arms-race": {
   "status": "done",
-  "at": "2026-10-26T10:31:50",
-  "note": "1003 segment 1 run - MISSED TARGET: Tech Research 0 of 30000 top threshold; research queue Lv.9 Defense 23h30m and Lv.8 Morale 1d08h left, no completion lands in phase; other scoring paths are speedups and packs (red lines); ranking chest still preview only (SR chests x3 each); cumulative 6/8 static; sweep clean"
+  "at": "2026-10-26T14:19:36",
+  "note": "Drone Boost 5000 of 30000 - target missed in red lines; chest 1 (1500) claimed; cumulative counter 6/8 to 7/8; Events sweep clean"
  },
  "star-ceremony": {
   "status": "skipped",

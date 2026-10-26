@@ -1,7 +1,7 @@
 ---
 title: Alliance Donations on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-10-26T21:19:00Z
 version: 1.0.0
 description: Index of Alliance Donations executions on 2026-10-26
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/alliance-donations/`](../../../_activities_/all
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Checked only.** See the execution file for the detail.
+**Status — Performed.** See the execution file for the detail.
 
 ## Executions
 
@@ -40,3 +40,8 @@ time and never edited once committed (C1).
   a 00:13:28 timer; the daily reward is resolved as a Donation
   Ranking Reward settlement at the 19:00 reset (rank 11, tier
   4 to 100), no manual claim exists.
+- [1403-segment-1-run.md](1403-segment-1-run.md) — the segment 1 run
+  that started at 14:03 local; coin donations to the
+  recommended Rallied Defense until the count 12 of 30 ran
+  out and the button greyed at 00:18:41; today 7,100 to
+  8,250.

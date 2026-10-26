@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T18:16:00Z
+modified: 2026-10-26T21:19:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -577,3 +577,54 @@ record. Inside it, one subfolder per activity type, named as in
   action, no stage ground. Navigation misses (the radar task
   list and the diamond Store, both opened by taps aimed at base
   buildings) were exited at once with no action taken.
+
+## 14:03 to about 14:20 — Segment 1 run, radar claimed, Drone Boost target missed
+
+- Segment 1 run of the split routine (production and Arms
+  Race). Gates first - duel Day 1 Radar Training, radar
+  posture release; the resource check opened on the stale
+  1003 snapshot flagging coin low at 3.8M, but the live HUD
+  read coin 16.2M at the open and 19.5M at the close, so
+  the flag was stale. Opening HUD food 345.0M, iron 334.3M,
+  coin 16.2M, stamina 91, total power 147,287,658. No
+  different-device dialog, no lock, no login demand.
+- Performed - harvest (opening and closing bubble passes;
+  closing HUD food 351.5M, iron 339.7M, coin 19.5M), radar
+  (release day - Quick Execute 4 tasks for 40 stamina and
+  1 task for 10, Claim All twice paying 10 plus 2 task
+  rewards, map fully clear, storage 0 of 40, score 2,834
+  to 2,846; the free 75 stamina claim read Remaining Today
+  0 of 2, already exhausted today), donations (coin
+  donations to the recommended Rallied Defense until the
+  count 12 of 30 ran out and the button greyed at
+  00:18:41; today 7,100 to 8,250; the daily reward remains
+  the 19:00 ranking settlement, no manual claim).
+- Checked only - survivors (no line at the front gate;
+  Quick Dispatch in the Iron Mine Lv.27 panel answered no
+  survivors available for dispatch).
+- Checked in part - training (three panels verified in
+  progress - T9 08:37:59, T10 15:28:15, T8 02:34:14; the
+  fourth T7 barracks was not located despite a grounding
+  sweep of all six beige tents - the right side tents are
+  hospitals, and one hospital tap collected a finished
+  treatment of 200 units, total power 147,287,658 to
+  147,617,058; the T7 batch queued 2026-10-25 should have
+  finished about 11:31 to 12:13, so it may be idle - open
+  item for the next segment 1 run, marked skipped in the
+  tracker).
+- Arms Race MISSED TARGET - Drone Boost read live at 0
+  points, thresholds 1,500, 10,000 and 30,000, about 56
+  minutes left. The radar stamina spend scored 5,000 at
+  100 per stamina. The top target needs 300 stamina used;
+  stamina left was 42 to 44, radar storage empty with the
+  next batch past the phase end, and both free claims
+  used - even the 10,000 chest is out of reach, and the
+  remaining paths (stamina items, diamond packs) are red
+  lines. First chest (1,500) claimed - badge item 1, box
+  item 4, medal 200, food boxes 4, coin boxes 4, 5 minute
+  speedups 8 received not used. Cumulative counter 6 of 8
+  to 7 of 8, static and not claimable; segment rank 8 at
+  42,500 cumulative; Events sweep clean at the close.
+- Nothing bought, no diamond spent, no speedup or stamina
+  item burned, no research or building started, no stage
+  swap.

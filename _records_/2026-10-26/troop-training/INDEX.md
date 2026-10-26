@@ -1,7 +1,7 @@
 ---
 title: Troop Training on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-10-26T21:19:00Z
 version: 1.0.0
 description: Index of Troop Training executions on 2026-10-26
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/troop-training/`](../../../_activities_/troop-t
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Checked only.** See the execution file for the detail.
+**Status — Checked in part.** See the execution file for the detail.
 
 ## Executions
 
@@ -25,3 +25,10 @@ time and never edited once committed (C1).
   that started at 10:03 local; checked only - all four barracks
   carry running clocks and the earliest recorded queue finish is
   about 11:31 today; nothing requeued.
+- [1403-segment-1-run.md](1403-segment-1-run.md) — the segment 1 run
+  that started at 14:03 local; three barracks panels verified
+  in progress (T9 08:37:59, T10 15:28:15, T8 02:34:14); the
+  fourth T7 barracks was not located - its 2026-10-25 batch
+  should have finished about 11:31 to 12:13, open item for
+  the next run; a hospital treatment collection raised total
+  power to 147,617,058.

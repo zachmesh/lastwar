@@ -1,7 +1,7 @@
 ---
 title: Radar Tasks on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-10-26T21:19:00Z
 version: 1.0.0
 description: Index of Radar Tasks executions on 2026-10-26
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/radar-tasks/`](../../../_activities_/radar-task
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Checked only.** See the execution file for the detail.
+**Status — Performed.** See the execution file for the detail.
 
 ## Executions
 
@@ -32,3 +32,9 @@ time and never edited once committed (C1).
   gathering pins marched and claimed on the release day - Diamond
   Mine (red gem 20, blue swirl 10) and Rare Gold Mine (coin 73.6K,
   blue swirl 10); radar score 2,832 to 2,834.
+- [1403-segment-1-run.md](1403-segment-1-run.md) — the segment 1 run
+  that started at 14:03 local; release day - Quick Execute
+  batches of 4 tasks (40 stamina) and 1 task (10 stamina),
+  two Claim All rounds (10 plus 2 rewards), map fully clear,
+  storage 0 of 40, score 2,834 to 2,846; free 75 stamina
+  claim exhausted today (0 of 2).

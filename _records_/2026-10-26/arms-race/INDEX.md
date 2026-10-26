@@ -1,7 +1,7 @@
 ---
 title: Arms Race on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-10-26T21:19:00Z
 version: 1.0.0
 description: Index of Arms Race executions on 2026-10-26
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/arms-race/`](../../../_activities_/arms-race/IN
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Checked only.** See the execution file for the detail.
+**Status — Performed in part, target missed.** See the execution file for the detail.
 
 ## Executions
 
@@ -60,3 +60,10 @@ time and never edited once committed (C1).
   finishes in 23h30m and 1d08h, no completion lands in phase;
   speedup and pack paths are red lines); ranking chest still
   preview only; cumulative chest purple 6 of 8; sweep clean.
+- [1403-segment-1-run.md](1403-segment-1-run.md) — the segment 1 run
+  that started at 14:03 local; Drone Boost 5,000 of the
+  30,000 top threshold - target MISSED inside the red lines
+  (50 radar stamina scored 5,000; 42 stamina left, radar
+  storage empty, free claims exhausted; stamina items and
+  diamond packs are red lines); first chest (1,500) claimed;
+  cumulative counter 6 of 8 to 7 of 8; sweep clean.

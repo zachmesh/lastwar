@@ -1,7 +1,7 @@
 ---
 title: Resource Collection on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-10-26T21:19:00Z
 version: 1.0.0
 description: Index of Resource Collection executions on 2026-10-26
 grounded_in:
@@ -34,3 +34,7 @@ time and never edited once committed (C1).
   compound, both mine and farm rows and a closing accrual pass;
   closing HUD food 326.0M, iron 315.2M, coin 3.8M (coin flagged
   low against the 10M floor at the close).
+- [1403-segment-1-run.md](1403-segment-1-run.md) — the segment 1 run
+  that started at 14:03 local; bubbles cleared in opening and
+  closing passes; closing HUD food 351.5M, iron 339.7M, coin
+  19.5M.
