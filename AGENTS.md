@@ -1,8 +1,8 @@
 ---
 title: Last War Agent Entry Point
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:18:00Z
-version: 1.1.0
+modified: 2026-10-26T04:50:00Z
+version: 1.2.0
 description: Project instructions and adoption of reflection typed-folder conventions
 grounded_in:
   - source: owner request to adopt dtadpole/reflection shared conventions
@@ -30,6 +30,18 @@ the [local conventions](_conventions_/INDEX.md) and the
 - Every authored Markdown file carries frontmatter. Entry points carry the
   identifying fields only, with no `level` and no `status`. No value contains
   a colon. `created` never changes; `modified` and `version` move with edits.
+
+## Everything lives in this repository
+
+Owner rule, 2026-10-25 - everything that helps play this account
+lives here: schedules, strategy, tools, resource maps and records.
+Nothing load-bearing is kept only in chat or in the agent's memory.
+If a fact, rule, list or tool would matter next week, it is written
+into this repository in the same session that produced it - the
+duel schedule in `_knowledge_` and `tools/duel_schedule.json`, the
+strategy in `_knowledge_/strategy-playbook`, the resource map in
+`tools/resources.json` and its snapshots, and the working tools in
+`tools/`.
 
 ## Governance
 

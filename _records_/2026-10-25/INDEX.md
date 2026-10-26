@@ -3,8 +3,8 @@ title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
 modified: 2026-10-26T04:55:00Z
 level: L0
-version: 1.12.0
-description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, and the late regulars run with the tracker tooling
+version: 1.13.0
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, and the duel schedule read with the strategy system
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
@@ -391,6 +391,37 @@ is always known; tooling for that was requested in the same breath.
   preparation was found tonight and the evening boarding entry is
   still unresolved.
 
+## 21:35 to about 21:52 — Duel schedule read and the strategy system
+
+The owner directed a strategy layer - keep the weekly Alliance
+Duel schedule in the repository and arrange tasks by it (radar
+preserved one day to be harvested on Radar Training day, hero
+resources spent only on their day), keep a regularly updated map
+of all resources (coin named as stretched), research the strategy
+online, and build tools that enforce the playbook - everything in
+this repository.
+
+- Alliance Duel read in game — the week runs Day 1 Radar Training
+  (1 win point), Day 2 Base Expansion (2), Day 3 Age of Science
+  (2), Day 4 Train Heroes (2), Day 5 Total Mobilization (2),
+  Day 6 Enemy Buster (4), off day; boundary 19:00 local (02:00
+  UTC); this week AP3x vs [Sync] IMPERIUM. The Radar Training
+  scoring table was read in full (radar task +30,000). The
+  afternoon web research in events-and-cycles already matched this
+  order (web names differ slightly). Full detail in the 2140
+  schedule read record and the updated events knowledge.
+- Built and recorded — `tools/duel_schedule.json` and
+  `tools/duel.py` (today's day, theme, gate, radar posture);
+  `tools/resources.json` and `tools/resource_map.py` (snapshot
+  history with low water flags) with the first snapshot from the
+  late run HUD - coin flagged CRITICAL at 565.1K, push plan in
+  the playbook; `_knowledge_/strategy-playbook` holds the rules;
+  AGENTS.md now carries the owner rule that everything lives in
+  this repository.
+- The Alliance Store red dot was also closed out on the way —
+  honor shop, balance 96,560, Monday refresh; an item Buy dialog
+  was opened by a stray tap and closed untouched.
+
 ## Activity records for this date
 
 Records are organised by date first. This folder is the 2026-10-25
@@ -421,7 +452,7 @@ execution file states the outcome, including not performed.
 | [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md), [2047 evening settlement](truck-plunder/2047-evening-settlement.md) |
 | [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md) |
 | [VIP Rewards](vip-rewards/INDEX.md) | Performed, then missed after reset | [1359 first claim](vip-rewards/1359-first-claim.md), [2053 evening missed](vip-rewards/2053-evening-missed.md) |
-| [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md) |
+| [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony; schedule read late | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md), [2140 schedule read](alliance-duel/2140-schedule-read.md) |
 | [Arms Race](arms-race/INDEX.md) | Performed, then access-failed, then checked | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md), [2129 late check](arms-race/2129-late-check.md) |
 | [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md), [2016 second intake](survivor-intake/2016-second-intake.md) |
 

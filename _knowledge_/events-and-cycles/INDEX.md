@@ -1,9 +1,9 @@
 ---
 title: Events and Cycles
 created: 2026-10-25T17:58:00Z
-modified: 2026-10-25T17:58:00Z
+modified: 2026-10-26T04:45:00Z
 level: L1
-version: 1.0.0
+version: 1.1.0
 description: Arms Race phases, the Alliance Duel VS week, the double-dip rule, and radar task discipline
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: Last War Vault arms race guide, accessed 2026-10-25
   - source: Packsify alliance duel strategy guide, accessed 2026-10-25
   - source: LDShop trucks and secret tasks guide, accessed 2026-10-25
+  - source: in-game Alliance Duel weekly schedule and Radar Training theme page, observed 2026-10-25
 ---
 
 # Events and cycles
@@ -50,6 +51,43 @@ agrees day by day) —
 
 Sunday is the off day. Save speedups, hero EXP, skill items and training
 for their theme day; the week, not the day, is the planning unit.
+
+Verified in game on 2026-10-25 (Weekly Schedule page) — the day order
+above is exact, with the in-game theme names and the win points each
+day contributes to the weekly victory —
+
+| Day | In-game theme | Win points |
+|---|---|---|
+| Day 1 (Mon) | Radar Training | 1 |
+| Day 2 (Tue) | Base Expansion | 2 |
+| Day 3 (Wed) | Age of Science | 2 |
+| Day 4 (Thu) | Train Heroes | 2 |
+| Day 5 (Fri) | Total Mobilization | 2 |
+| Day 6 (Sat) | Enemy Buster | 4 |
+| Day 7 (Sun) | off day | 0 |
+
+- The duel day boundary is 02:00 UTC — 19:00 local (America Los
+  Angeles). Day 1 of the current week opened Sunday 2026-10-25
+  19:00 local with 21h22m left when read at 21:37, and the week
+  timer read 5d 21h. Server weekdays in the table above therefore
+  begin the previous local evening.
+- This week's matchup — [AP3x] The Apex (warzone 2110) against
+  [Sync] IMPERIUM (warzone 2111), week score 0 to 0 when read.
+- Radar Training scoring, read off the theme page in game — Use 1
+  Stamina +375; Complete 1 Radar Task +30,000; Use at least 660
+  Hero EXP Points at a time +2.5; Use 1 Drone Battle Data point
+  +7.5; Use 1 Drone Part +6,250; Buy Packs containing Diamonds
+  +30 per diamond; Gather 100 Food +50, Gather 100 Iron +50,
+  Gather 60 Coins +50 (radar gathering tasks excluded from the
+  three gather rows); per Chip Chest opened and Premium Chip
+  Material gained +2,812.5. Personal point chests at 2,600,000,
+  3,600,000 and 7,200,000 points, ruby tagged 24,900, 46,900 and
+  67,800. This account stood at 3,928,429 points for the day when
+  read (the evening radar clear and the owner phone play both
+  landed inside Day 1).
+- The tooling form of this schedule is `tools/duel_schedule.json`,
+  worked by `tools/duel.py`; the standing gates are in
+  `_knowledge_/strategy-playbook`.
 
 ## The double dip
 
