@@ -1,15 +1,16 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-10-26T12:42:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner task request naming alliance tech, 2026-10-25
+  - source: owner instruction on 2026-10-26 - always do alliance tech donation as part of the regular routine, each time it is available
 ---
 
 
@@ -38,10 +39,19 @@ activity. Not a separate type.
 - Donate to the current target technology with the coin button.
 - The diamond button is never used without the owner approval, under the
   recording rules on spending.
+- Donate in every run, owner instruction 2026-10-26 - alliance tech
+  donation is part of the regular routine, not a once a day check.
+  Each run opens Alliance Techs and, whenever coin donations still
+  remain today, donates them to the recommended technology until
+  the daily coin count is used up. If the recommended technology
+  completes mid way, follow the new recommended marker. If no coin
+  donations remain, record the visit as checked only. Claim the
+  daily donation reward whenever it shows as claimable.
 
 ## Cadence
 
-- Daily. The coin button allows 30 donations a day.
+- Every four hour run (owner instruction, 2026-10-26, replacing the
+  earlier daily cadence). The coin button allows 30 donations a day.
 - The screen footer tracks Tech Donation Today in contribution points,
   with a daily reward at 1000 points. Five coin donations earned 300
   points on 2026-10-25, so a coin donation is worth 60 points and the
@@ -69,6 +79,15 @@ activity. Not a separate type.
   workflow - Rallied Attack still 7 of 10, Tech Donation Today 300
   points. No further donation was made in that visit. Recorded as a
   checked only execution.
+
+## What is known from 2026-10-26
+
+- The 01:49 run only checked Alliance Techs - Tech Donation Today
+  already read 3,100 (the owner had topped it up on 2026-10-25),
+  so no coin donation was made, and later runs that day treated
+  donations as done for the day. The owner corrected this - the
+  donation belongs in every run whenever the daily coin count
+  remains, which is the Cadence rule above.
 
 ## Open questions
 
