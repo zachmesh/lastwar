@@ -1,7 +1,7 @@
 ---
 title: Mail Rewards on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T11:52:00Z
+modified: 2026-10-27T05:30:49Z
 version: 1.0.0
 description: Index of Mail Rewards executions on 2026-10-26
 grounded_in:
@@ -45,3 +45,7 @@ time and never edited once committed (C1).
   unclaimed rewards (badge 500 times 3, food, iron and coin crates
   times 16 each), no rewards in any other category, and Battle Report
   held fresh Zombie Horde victory reports.
+- [2230-segment-2-run.md](2230-segment-2-run.md) — the segment 2 run that
+  started at 22:30 local; access failed - control channel
+  unresolved-action lock across 3 reopened sessions, no input
+  dispatched; different-device dialog visible read-only.

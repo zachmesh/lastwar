@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-27T05:10:00Z
+modified: 2026-10-27T05:30:49Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -898,3 +898,35 @@ record. Inside it, one subfolder per activity type, named as in
   requeue open item remains carried forward. Nothing in
   game was verified or changed, nothing bought, no diamond
   spent.
+
+## 22:30 to about 22:35 — Segment 2 run, access failed, different-device dialog visible
+
+- Segment 2 run of the split routine (alliance and VIP).
+  Due at the open - mail, help, gifts, vip (due again after
+  the 19:00 reset), train and star-ceremony, all in the new
+  4 hour cycle.
+- ACCESS FAILED before any input reached the game - every
+  computer-control attempt returned outcome_unknown (an earlier
+  action has an unresolved outcome; a new local user submission
+  is required before input can resume). Three sessions were
+  opened under the owner retry rule (cc-158, cc-159, cc-160)
+  and each failed the same way; no tap was dispatched.
+  Read-only observation kept working. The same lock ended
+  the 1830 segment 2 run late and blocked the whole 1857
+  segment 3 and 2203 segment 1 runs, so this is the third
+  consecutive fully blocked segment run.
+- Read-only observation showed the LastWar base behind the
+  dialog Your account is currently active on a different
+  device, with a Confirm button. The standing Confirm-once
+  step could not be executed with input blocked, and the
+  dialog was never dismissed or seen to return, so the run is
+  recorded as access-failed rather than contested. No screen
+  lock, no fresh login or verification demand shown. HUD in
+  the read-only frame - total power 145,110,306, food 356.8M,
+  iron 342.6M, coin 21.8M; no boarding banner, no trophy icon
+  and no help bubble visible behind the dialog.
+- All six due regulars were marked skipped in the tracker
+  with the access-failed reason; the VIP Daily Freebie for
+  the reset period that began at 19:00 remains unclaimed.
+  Nothing in game was verified or changed, nothing bought,
+  no diamond or contract spent.

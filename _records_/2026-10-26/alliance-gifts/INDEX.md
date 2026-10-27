@@ -1,7 +1,7 @@
 ---
 title: Alliance Gifts on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T09:12:00Z
+modified: 2026-10-27T05:30:49Z
 version: 1.0.0
 description: Index of Alliance Gifts executions on 2026-10-26
 grounded_in:
@@ -36,3 +36,7 @@ time and never edited once committed (C1).
   started at 18:30 local; 1,715 Regular and 10 Premium gifts claimed
   in one pass each, Gift Level 28 progress ending at 164,111,200 of
   206,300,000.
+- [2230-segment-2-run.md](2230-segment-2-run.md) — the segment 2 run that
+  started at 22:30 local; access failed - control channel
+  unresolved-action lock across 3 reopened sessions, no input
+  dispatched; different-device dialog visible read-only.

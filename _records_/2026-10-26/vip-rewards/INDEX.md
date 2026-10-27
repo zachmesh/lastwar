@@ -1,7 +1,7 @@
 ---
 title: VIP Rewards on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T09:12:00Z
+modified: 2026-10-27T05:30:49Z
 version: 1.0.0
 description: Index of VIP Rewards executions on 2026-10-26
 grounded_in:
@@ -31,3 +31,7 @@ time and never edited once committed (C1).
   started at 18:30 local; Daily Freebie already claimed this reset
   period, countdown 00:15:57 to the 19:00 reset, VIP13 at 1,550,380
   points.
+- [2230-segment-2-run.md](2230-segment-2-run.md) — the segment 2 run that
+  started at 22:30 local; access failed - control channel
+  unresolved-action lock across 3 reopened sessions, no input
+  dispatched; different-device dialog visible read-only.

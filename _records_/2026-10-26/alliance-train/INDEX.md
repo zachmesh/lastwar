@@ -1,7 +1,7 @@
 ---
 title: Alliance Train on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T12:53:00Z
+modified: 2026-10-27T05:30:49Z
 version: 1.0.0
 description: Index of Alliance Train executions on 2026-10-26
 grounded_in:
@@ -37,3 +37,7 @@ time and never edited once committed (C1).
 - [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
   started at 18:30 local; no boarding banner at any sweep, no train
   icon on MY PROFILE, and no new train mail for this account.
+- [2230-segment-2-run.md](2230-segment-2-run.md) — the segment 2 run that
+  started at 22:30 local; access failed - control channel
+  unresolved-action lock across 3 reopened sessions, no input
+  dispatched; different-device dialog visible read-only.

@@ -1,7 +1,7 @@
 ---
 title: Alliance Help on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T09:12:00Z
+modified: 2026-10-27T05:30:49Z
 version: 1.0.0
 description: Index of Alliance Help executions on 2026-10-26
 grounded_in:
@@ -38,3 +38,7 @@ time and never edited once committed (C1).
   only own requests listed, help points 1,060 of 1,000; the Help red
   dot showed again later and its recheck was blocked by the late-run
   control lock.
+- [2230-segment-2-run.md](2230-segment-2-run.md) — the segment 2 run that
+  started at 22:30 local; access failed - control channel
+  unresolved-action lock across 3 reopened sessions, no input
+  dispatched; different-device dialog visible read-only.

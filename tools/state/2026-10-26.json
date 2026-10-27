@@ -1,18 +1,18 @@
 {
  "mail": {
-  "status": "done",
-  "at": "2026-10-26T18:48:29",
-  "note": "1830 segment 2 run - Claim All in every category; Event paid badge 500 x3 and food, iron and coin crates x16 each (Bitterly Cold Wave Unclaimed mail); Alliance, Battle Report, Season, System and Regular each no rewards (Battle Report held fresh Lv.10-15 Zombie Horde victory reports); Purchases receipts only"
+  "status": "skipped",
+  "at": "2026-10-26T22:30:30",
+  "note": "2230 segment 2 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-158/159/160), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "help": {
-  "status": "done",
-  "at": "2026-10-26T18:48:29",
-  "note": "1830 segment 2 run - Help All pressed (grateful toast); visible rows were own 4 requests; help points 1060/1000 cap already passed; no yellow help bubble on the base screen at opening or mid-run sweeps; the Alliance panel Help entry showed a red dot again after the claim, recheck blocked by the late-run input lock"
+  "status": "skipped",
+  "at": "2026-10-26T22:30:30",
+  "note": "2230 segment 2 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-158/159/160), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "gifts": {
-  "status": "done",
-  "at": "2026-10-26T18:48:29",
-  "note": "1830 segment 2 run - Regular Claim All claimed 1715; Premium Claim All claimed 10; every row Claimed on recheck, no red dots left; Gift Level 28, progress 164,078,830 to 164,111,200 of 206,300,000"
+  "status": "skipped",
+  "at": "2026-10-26T22:30:30",
+  "note": "2230 segment 2 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-158/159/160), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "harvest": {
   "status": "skipped",
@@ -20,9 +20,9 @@
   "note": "2203 segment 1 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-155/156/157), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "vip": {
-  "status": "done",
-  "at": "2026-10-26T18:48:29",
-  "note": "1830 segment 2 run - checked in game; Daily Freebie already claimed this reset period, countdown 00:15:57 to the 19:00 reset; VIP13, 1,550,380 of 2,000,000 points, 49 day login streak"
+  "status": "skipped",
+  "at": "2026-10-26T22:30:30",
+  "note": "2230 segment 2 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-158/159/160), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "passes": {
   "status": "skipped",
@@ -55,9 +55,9 @@
   "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "train": {
-  "status": "done",
-  "at": "2026-10-26T18:48:29",
-  "note": "1830 segment 2 run - no Boarding closes in banner at opening, mid-run or closing sweeps and no train icon on MY PROFILE; no contract spent"
+  "status": "skipped",
+  "at": "2026-10-26T22:30:30",
+  "note": "2230 segment 2 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-158/159/160), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "training": {
   "status": "skipped",
@@ -81,7 +81,7 @@
  },
  "star-ceremony": {
   "status": "skipped",
-  "at": "2026-10-26T18:48:29",
-  "note": "1830 segment 2 run - no trophy icon on the base screen at opening, mid-run or closing sweeps; the Alliance Star book shows Event 38 dated 2026-10-25, already performed"
+  "at": "2026-10-26T22:30:30",
+  "note": "2230 segment 2 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-158/159/160), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  }
 }
