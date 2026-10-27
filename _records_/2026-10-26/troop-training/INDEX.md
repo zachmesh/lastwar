@@ -32,3 +32,9 @@ time and never edited once committed (C1).
   should have finished about 11:31 to 12:13, open item for
   the next run; a hospital treatment collection raised total
   power to 147,617,058.
+- [1803-segment-1-run.md](1803-segment-1-run.md) — the segment 1 run
+  that started at 18:03 local; barracks tents again not
+  located in the areas swept; by the 1403 panel timers the
+  T7 batch finished about 11:31 to 12:13 and the T8 batch
+  about 16:53, both due a requeue - open item carried
+  forward, marked skipped in the tracker.

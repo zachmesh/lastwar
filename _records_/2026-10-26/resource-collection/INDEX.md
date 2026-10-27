@@ -38,3 +38,7 @@ time and never edited once committed (C1).
   that started at 14:03 local; bubbles cleared in opening and
   closing passes; closing HUD food 351.5M, iron 339.7M, coin
   19.5M.
+- [1803-segment-1-run.md](1803-segment-1-run.md) — the segment 1 run
+  that started at 18:03 local; five production bubbles collected
+  in an opening pass and a regenerated accrual pass at the close;
+  closing HUD food 356.8M, iron 342.6M, coin 21.8M.

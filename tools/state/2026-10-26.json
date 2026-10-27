@@ -16,8 +16,8 @@
  },
  "harvest": {
   "status": "done",
-  "at": "2026-10-26T14:19:36",
-  "note": "bubbles cleared in two passes plus closing accrual pass; food 345.0M to 351.5M, iron 334.3M to 339.7M, coin 16.2M to 19.5M with radar claims"
+  "at": "2026-10-26T18:28:37",
+  "note": "Iron bubbles collected twice (5 bubbles 321K tier, then regenerated small), blue resource 8.4M to 9.3M"
  },
  "vip": {
   "status": "done",
@@ -41,13 +41,13 @@
  },
  "radar": {
   "status": "done",
-  "at": "2026-10-26T14:19:36",
-  "note": "Day 1 release - Quick Execute 4 tasks for 40 stamina plus 1 task for 10, Claim All twice (10 plus 2 rewards), storage 0/40, score 2834 to 2846, stamina 42 left; free 75 claim exhausted today 0/2"
+  "at": "2026-10-26T18:28:37",
+  "note": "Release day: Quick Execute 50+10 stamina, Claim All x2, map clear 0/40, points 2846 to 2858, stamina 31"
  },
  "survivors": {
   "status": "done",
-  "at": "2026-10-26T14:19:36",
-  "note": "no line at the front gate; Quick Dispatch in Iron Mine Lv.27 panel answered no survivors available for dispatch"
+  "at": "2026-10-26T18:28:37",
+  "note": "Checked: no gate line with question bubbles in any base area swept; no intake due"
  },
  "trucks": {
   "status": "skipped",
@@ -61,13 +61,13 @@
  },
  "training": {
   "status": "skipped",
-  "at": "2026-10-26T14:19:36",
-  "note": "3 of 4 barracks verified in progress (T9 08:37:59, T10 15:28:15, T8 02:34:14); 4th T7 barracks not located this run despite grounding sweep - its 2026-10-25 queue should have finished about 11:31-12:13, may be idle, needs next run"
+  "at": "2026-10-26T18:28:37",
+  "note": "Barracks tents not located in areas swept; T7 batch finished ~12:00 and T8 ~16:53 both due requeue - open item carried forward from 1403 run"
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-26T14:19:36",
-  "note": "12 coin donations to recommended Rallied Defense until count 12/30 ran out and button greyed at about 00:18:41; today 7100 to 8250; daily reward is the 19:00 ranking settlement, no claim button"
+  "at": "2026-10-26T18:28:37",
+  "note": "Rallied Defense coin donations until button greyed (18m timer); Tech Donation Today 8250 to 9250"
  },
  "events": {
   "status": "done",
@@ -76,8 +76,8 @@
  },
  "arms-race": {
   "status": "done",
-  "at": "2026-10-26T14:19:36",
-  "note": "Drone Boost 5000 of 30000 - target missed in red lines; chest 1 (1500) claimed; cumulative counter 6/8 to 7/8; Events sweep clean"
+  "at": "2026-10-26T18:28:37",
+  "note": "Hero Advancement 38500 of 12000 target met via Adam Lv121 to 122 (77.0M EXP); all 3 chests and cumulative chest claimed; sweep clean"
  },
  "star-ceremony": {
   "status": "skipped",

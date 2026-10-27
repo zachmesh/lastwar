@@ -15,7 +15,7 @@ activity lives in [`_activities_/arms-race/`](../../../_activities_/arms-race/IN
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Performed in part, target missed.** See the execution file for the detail.
+**Status — Performed, target met (1803 run).** See the execution file for the detail.
 
 ## Executions
 
@@ -67,3 +67,10 @@ time and never edited once committed (C1).
   storage empty, free claims exhausted; stamina items and
   diamond packs are red lines); first chest (1,500) claimed;
   cumulative counter 6 of 8 to 7 of 8; sweep clean.
+- [1803-segment-1-run.md](1803-segment-1-run.md) — the segment 1 run
+  that started at 18:03 local; Hero Advancement target MET -
+  Adam upgraded one level (Lv.121 to Lv.122, 77.0M EXP) for
+  38,500 of the 12,000 top threshold; all three point chests
+  claimed in one tap and the cumulative counter chest claimed
+  at 13 of 8, rolling to 13 of 18; ranking chest preview only
+  while the phase is live; sweep clean.

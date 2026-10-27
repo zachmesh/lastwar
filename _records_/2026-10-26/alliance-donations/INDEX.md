@@ -45,3 +45,8 @@ time and never edited once committed (C1).
   recommended Rallied Defense until the count 12 of 30 ran
   out and the button greyed at 00:18:41; today 7,100 to
   8,250.
+- [1803-segment-1-run.md](1803-segment-1-run.md) — the segment 1 run
+  that started at 18:03 local; coin donations to the
+  recommended Rallied Defense until the count 11 of 30 ran
+  out and the button greyed at 00:18:27; today 8,250 to
+  9,250.

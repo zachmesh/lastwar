@@ -29,3 +29,8 @@ time and never edited once committed (C1).
   that started at 14:03 local; no line at the front gate;
   Quick Dispatch in the Iron Mine Lv.27 panel answered no
   survivors available for dispatch.
+- [1803-segment-1-run.md](1803-segment-1-run.md) — the segment 1 run
+  that started at 18:03 local; no gate line with question
+  bubbles in any base area swept; Quick Dispatch not re-run
+  (production building button row did not open), checked
+  only.

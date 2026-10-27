@@ -712,3 +712,67 @@ record. Inside it, one subfolder per activity type, named as in
 - Close — nothing bought, no diamond or Trade Contract spent,
   no speedup or stamina item burned, no coal donated, no
   furnace action, no stage ground.
+
+## 18:03 to about 18:28 — Segment 1 run, Hero Advancement target met, training tents still not located
+
+- Segment 1 run of the split routine (production and Arms
+  Race). Gates first - duel Day 1 Radar Training, radar
+  posture release (day ends 19:00 local); resource check
+  clean on the 1403 snapshot. Opening HUD food 352.1M,
+  iron 339.7M, coin 19.5M, stamina 89, total power
+  147,617,058. No different-device dialog, no lock, no
+  login demand. The computer session dropped once
+  mid-run (observation unavailable) and was reopened
+  under the owner retry rule; the run continued.
+- Performed - harvest (five production bubbles in an
+  opening pass, plus a regenerated accrual pass at the
+  close; closing HUD food 356.8M, iron 342.6M, coin
+  21.8M), radar (release day - Quick Execute 5 tasks for
+  50 stamina and 1 task for 10, Claim All twice paying
+  10 plus 2 task rewards, map fully clear, storage 0 of
+  40, score 2,846 to 2,858, stamina 31 at the close; no
+  Regain panel opened, no free claim taken), donations
+  (coin donations to the recommended Rallied Defense
+  until the count 11 of 30 ran out and the button greyed
+  at 00:18:27; today 8,250 to 9,250; the daily reward
+  remains the 19:00 ranking settlement, no manual claim).
+- Checked only - survivors (no gate line with question
+  bubbles in any base area swept; Quick Dispatch not
+  re-run - the production building button row did not
+  open this visit, and the 1403 Iron Mine panel already
+  answered no survivors available).
+- Not performed - training. The barracks tents were
+  again not located in the areas swept (HQ plateau,
+  formation and train station, truck Departures, north,
+  east, south and west edges; a grounding sweep hit only
+  production buildings). By the 1403 panel timers the T7
+  batch finished about 11:31 to 12:13 and the T8 batch
+  about 16:53 today, so both stand finished and due a
+  requeue at their highest tiers; T9 (to about 22:57) and
+  T10 (to about 05:47 on 2026-10-27) remain busy. Open
+  item carried forward; marked skipped in the tracker.
+- Arms Race TARGET MET - Hero Advancement read live at
+  0 phase points, thresholds 2,000, 4,000 and 12,000,
+  about 53 minutes left, cumulative counter 7 of 8.
+  Under the owner scoped authorization Adam was upgraded
+  exactly one level (Lv.121 to Lv.122, 77.0M EXP, stock
+  930.8M to 853.8M, power 1,712,746 to 1,719,316), scoring
+  38,500 phase points - cumulative 81,000, segment rank
+  8. One tap claimed all three point chests (Badges 6,
+  boxes 32, Skill Medals 1.6K, food boxes 32, coin boxes
+  32, 68 of the 5 minute speedups, received not used);
+  the cumulative counter then read 13 of 8 full and its
+  chest was claimed too (gold ticket 3, red gem 100
+  times 1, pink puzzle items 5), rolling to 13 of 18.
+  The ranking row chest remains preview only while the
+  phase is live (ends about 19:03). Final sweep clean -
+  no bouncing chest or reward red dot remained.
+- Observed, unverified - the HUD total power drifted
+  down across the run (147,623,628 after the hero
+  upgrade, then 147,500,103 and 147,465,516 on later
+  reads). No action of this run spends total power; the
+  cause was not established and is recorded as an
+  observation only.
+- Nothing bought, no diamond spent, no speedup or stamina
+  item burned, no research or building started, no stage
+  swap, no furnace or coal action.

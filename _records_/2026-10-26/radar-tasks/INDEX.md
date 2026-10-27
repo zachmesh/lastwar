@@ -38,3 +38,9 @@ time and never edited once committed (C1).
   two Claim All rounds (10 plus 2 rewards), map fully clear,
   storage 0 of 40, score 2,834 to 2,846; free 75 stamina
   claim exhausted today (0 of 2).
+- [1803-segment-1-run.md](1803-segment-1-run.md) — the segment 1 run
+  that started at 18:03 local; release day - Quick Execute
+  batches of 5 tasks (50 stamina) and 1 task (10 stamina),
+  two Claim All rounds (10 plus 2 rewards), map fully clear,
+  storage 0 of 40, score 2,846 to 2,858; no free stamina
+  claim was opened this run.
