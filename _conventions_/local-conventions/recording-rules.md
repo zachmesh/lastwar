@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T12:04:00Z
+modified: 2026-10-27T09:56:00Z
 level: L2
-version: 1.5.0
+version: 1.6.0
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -78,6 +78,15 @@ never nested inside `_records_`.
   the computer session and try again, at least 3 attempts, before
   recording the run as access-failed. The owner has confirmed the
   authorization stands and is not to be asked about again.
+
+- **Kick the other device out** (owner rule, 2026-10-27). When the
+  game shows the "active on a different device" dialog, the agent
+  is authorized to click Confirm and take the session over on the
+  Mac, kicking the other device - every time the dialog appears.
+  The app exits; reopen it and continue. The dialog alone never
+  ends a run. Only after two takeovers in the same run, if the
+  dialog still returns, record the run as contested - the owner
+  is likely playing on his phone at that moment - and stop.
 
 ## Language and scope
 
