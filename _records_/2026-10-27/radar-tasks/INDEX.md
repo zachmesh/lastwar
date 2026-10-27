@@ -1,7 +1,7 @@
 ---
 title: Radar Tasks on 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-27T13:03:00Z
+modified: 2026-10-27T17:03:00Z
 version: 1.0.0
 description: Index of Radar Tasks executions on 2026-10-27
 grounded_in:
@@ -27,3 +27,9 @@ time and never edited once committed (C1).
   that started at 06:03 local; access failed - control channel
   unresolved-action lock across 3 reopened sessions, no input
   dispatched; no in-game frame observed this run.
+
+- [1003-segment-1-run.md](1003-segment-1-run.md) — the segment 1 run
+  that started at 10:03 local; access failed - control channel
+  unresolved-action lock across 3 reopened sessions, no input
+  dispatched; list_apps showed LastWar running, no in-game frame
+  observed this run.

@@ -1,33 +1,33 @@
 {
  "harvest": {
   "status": "skipped",
-  "at": "2026-10-27T06:04:18",
-  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:05:46",
+  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
  },
  "radar": {
   "status": "skipped",
-  "at": "2026-10-27T06:04:18",
-  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:05:46",
+  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched; radar posture stack"
  },
  "survivors": {
   "status": "skipped",
-  "at": "2026-10-27T06:04:18",
-  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:05:46",
+  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
  },
  "training": {
   "status": "skipped",
-  "at": "2026-10-27T06:04:18",
-  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:05:46",
+  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
  },
  "donations": {
   "status": "skipped",
-  "at": "2026-10-27T06:04:18",
-  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:05:46",
+  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
  },
  "arms-race": {
   "status": "skipped",
-  "at": "2026-10-27T06:04:18",
-  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:05:46",
+  "note": "access-failed - outcome_unknown lock, phase and score unreadable, target missed by access failure"
  },
  "mail": {
   "status": "skipped",
