@@ -25,19 +25,19 @@
   "note": "1830 segment 2 run - checked in game; Daily Freebie already claimed this reset period, countdown 00:15:57 to the 19:00 reset; VIP13, 1,550,380 of 2,000,000 points, 49 day login streak"
  },
  "passes": {
-  "status": "done",
-  "at": "2026-10-26T15:10:06",
-  "note": "1457 segment 3 run - Free Supply Claimed; Drone Parts and Coin weekly Already claimed today; Monthly Claimed 26d left; Season Weekly Pickup Claimed, Daily Freebie inert; Swift BP Claim All answered no rewards available"
+  "status": "skipped",
+  "at": "2026-10-26T18:59:25",
+  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "secrets": {
-  "status": "done",
-  "at": "2026-10-26T15:10:06",
-  "note": "1457 segment 3 run - no Claim button; 2 UR still running, rest PERFECT; Mega Deploy opened nothing; Assist 5/5; recovery CLAIMED"
+  "status": "skipped",
+  "at": "2026-10-26T18:59:26",
+  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "treasures": {
-  "status": "done",
-  "at": "2026-10-26T15:10:06",
-  "note": "1457 segment 3 run - fragments unchanged M1 13 M2 12 M3 2 M4 5 M5 0 M6 5 M7 9; 11/15; M5 zero, Dig greyed, no dig"
+  "status": "skipped",
+  "at": "2026-10-26T18:59:26",
+  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "radar": {
   "status": "done",
@@ -51,8 +51,8 @@
  },
  "trucks": {
   "status": "skipped",
-  "at": "2026-10-26T15:10:06",
-  "note": "1457 segment 3 run - trade entry not in current shortcut set (white pickup opens Secret Command Post, set verified again this run); nothing pending - trade 5/5 and plunder 4/4 since 0657, returned truck settled then, recovery CLAIMED; next trade day opens at the 19:00 reset"
+  "at": "2026-10-26T18:59:26",
+  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "train": {
   "status": "done",
@@ -70,9 +70,9 @@
   "note": "Rallied Defense coin donations until button greyed (18m timer); Tech Donation Today 8250 to 9250"
  },
  "events": {
-  "status": "done",
-  "at": "2026-10-26T15:10:06",
-  "note": "1457 segment 3 run - full Events sweep repeated at end; Arms Race Hero Advancement 0 stage pts, cumulative 7/8 static not bouncing, noted for segment 1; Season BP 17000 Claim All no rewards; Halloween Day 01 checked, rest locked; Wanted Boss complete not spawned; Community Claimed"
+  "status": "skipped",
+  "at": "2026-10-26T18:59:26",
+  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "arms-race": {
   "status": "done",

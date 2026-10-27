@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-27T01:50:00Z
+modified: 2026-10-27T02:05:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -835,3 +835,33 @@ record. Inside it, one subfolder per activity type, named as in
 - Nothing bought, no diamond spent, no speedup or stamina
   item burned, no research or building started, no stage
   swap, no donation made in this segment.
+
+## 18:57 to about 19:05 — Segment 3 run, access failed, different-device dialog visible
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursday only). Duel Day 1
+  (Radar Training) was ending at the 19:00 roll; not a duel UR
+  day for trucks or secrets.
+- ACCESS FAILED before any input reached the game - every
+  computer-control attempt returned outcome_unknown (an earlier
+  action has an unresolved outcome; a new local user submission
+  is required before input can resume). Three sessions were
+  opened under the owner retry rule (cc-152, cc-153, cc-154) and
+  each failed the same way; the final attempt reported
+  input_dispatched false. Read-only observation kept working.
+  The same lock had ended the 1830 segment 2 run late in that
+  run; this run could not input at all.
+- Read-only observation showed the LastWar base behind the
+  dialog Your account is currently active on a different
+  device, with a Confirm button. The standing Confirm-once
+  step could not be executed with input blocked, and the
+  dialog was never dismissed or seen to return, so the run is
+  recorded as access-failed rather than contested. No screen
+  lock, no fresh login or verification demand was shown.
+- All five due regulars were marked skipped in the tracker
+  with the access-failed reason; nothing in game was verified
+  or changed, nothing bought, no diamond or contract spent.
+  The 19:00 reset rolled during the run, so the new day's
+  passes, secrets, treasures, trucks and events claims remain
+  for the next segment 3 cycle once input resumes.
