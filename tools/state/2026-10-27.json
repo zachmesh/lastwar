@@ -1,33 +1,33 @@
 {
  "harvest": {
   "status": "skipped",
-  "at": "2026-10-27T10:05:46",
-  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
+  "at": "2026-10-27T14:05:40",
+  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-192/193/194, no input dispatched; fourteenth consecutive blocked segment run"
  },
  "radar": {
   "status": "skipped",
-  "at": "2026-10-27T10:05:46",
-  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched; radar posture stack"
+  "at": "2026-10-27T14:05:40",
+  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-192/193/194, no input dispatched; fourteenth consecutive blocked segment run"
  },
  "survivors": {
   "status": "skipped",
-  "at": "2026-10-27T10:05:46",
-  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
+  "at": "2026-10-27T14:05:40",
+  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-192/193/194, no input dispatched; fourteenth consecutive blocked segment run"
  },
  "training": {
   "status": "skipped",
-  "at": "2026-10-27T10:05:46",
-  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
+  "at": "2026-10-27T14:05:40",
+  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-192/193/194, no input dispatched; fourteenth consecutive blocked segment run"
  },
  "donations": {
   "status": "skipped",
-  "at": "2026-10-27T10:05:46",
-  "note": "access-failed - outcome_unknown lock, 3 sessions cc-183 cc-184 cc-185, no input dispatched"
+  "at": "2026-10-27T14:05:40",
+  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-192/193/194, no input dispatched; fourteenth consecutive blocked segment run"
  },
  "arms-race": {
   "status": "skipped",
-  "at": "2026-10-27T10:05:46",
-  "note": "access-failed - outcome_unknown lock, phase and score unreadable, target missed by access failure"
+  "at": "2026-10-27T14:05:40",
+  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-192/193/194, no input dispatched; fourteenth consecutive blocked segment run"
  },
  "mail": {
   "status": "skipped",
