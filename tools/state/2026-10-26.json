@@ -26,18 +26,18 @@
  },
  "passes": {
   "status": "skipped",
-  "at": "2026-10-26T18:59:25",
-  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
+  "at": "2026-10-26T22:58:43",
+  "note": "access-failed 2257 seg3: outcome_unknown lock after 3 retries cc-161/162/163, different-device dialog visible, no input dispatched"
  },
  "secrets": {
   "status": "skipped",
-  "at": "2026-10-26T18:59:26",
-  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
+  "at": "2026-10-26T22:58:43",
+  "note": "access-failed 2257 seg3: outcome_unknown lock after 3 retries cc-161/162/163, different-device dialog visible, no input dispatched"
  },
  "treasures": {
   "status": "skipped",
-  "at": "2026-10-26T18:59:26",
-  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
+  "at": "2026-10-26T22:58:43",
+  "note": "access-failed 2257 seg3: outcome_unknown lock after 3 retries cc-161/162/163, different-device dialog visible, no input dispatched"
  },
  "radar": {
   "status": "skipped",
@@ -51,8 +51,8 @@
  },
  "trucks": {
   "status": "skipped",
-  "at": "2026-10-26T18:59:26",
-  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
+  "at": "2026-10-26T22:58:43",
+  "note": "access-failed 2257 seg3: outcome_unknown lock after 3 retries cc-161/162/163, different-device dialog visible, no input dispatched"
  },
  "train": {
   "status": "skipped",
@@ -71,8 +71,8 @@
  },
  "events": {
   "status": "skipped",
-  "at": "2026-10-26T18:59:26",
-  "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
+  "at": "2026-10-26T22:58:43",
+  "note": "access-failed 2257 seg3: outcome_unknown lock after 3 retries cc-161/162/163, different-device dialog visible, no input dispatched"
  },
  "arms-race": {
   "status": "skipped",

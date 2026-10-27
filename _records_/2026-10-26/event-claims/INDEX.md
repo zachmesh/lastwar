@@ -1,7 +1,7 @@
 ---
 title: Event Claims on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-27T02:05:00Z
+modified: 2026-10-27T05:58:00Z
 version: 1.0.0
 description: Index of Event Claims executions on 2026-10-26
 grounded_in:
@@ -36,4 +36,7 @@ time and never edited once committed (C1).
   bouncing chest or claimable red dot remained.
 - [1857-segment-3-run.md](1857-segment-3-run.md) — the segment 3 run that
   started at 18:57 local; access failed (control channel lock,
+  different-device dialog visible, no input dispatched).
+- [2257-segment-3-run.md](2257-segment-3-run.md) — the segment 3 run that
+  started at 22:57 local; access failed (control channel lock,
   different-device dialog visible, no input dispatched).

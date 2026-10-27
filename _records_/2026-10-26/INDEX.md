@@ -930,3 +930,31 @@ record. Inside it, one subfolder per activity type, named as in
   the reset period that began at 19:00 remains unclaimed.
   Nothing in game was verified or changed, nothing bought,
   no diamond or contract spent.
+
+## 22:57 to about 23:00 — Segment 3 run, access failed, different-device dialog visible
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursday only). Duel Day 2
+  Base Expansion; UR truck dispatches score today per the duel
+  gate, but no truck work could be reached.
+- ACCESS FAILED before any input reached the game - every
+  computer-control attempt returned outcome_unknown (an earlier
+  action has an unresolved outcome; a new local user submission
+  is required before input can resume). Three sessions were
+  opened under the owner retry rule (cc-161, cc-162, cc-163)
+  and each failed the same way; no tap was dispatched.
+  Read-only observation kept working. The same lock blocked
+  the whole 1857 segment 3 run and the 2203 segment 1 and
+  2230 segment 2 runs, so this is the fourth consecutive
+  fully blocked segment run.
+- Read-only observation showed the LastWar base behind the
+  dialog Your account is currently active on a different
+  device, with a Confirm button. The standing Confirm-once
+  step could not be executed with input blocked, and the
+  dialog was never dismissed or seen to return, so the run
+  is recorded as access-failed rather than contested. No
+  screen lock, no fresh login or verification demand shown.
+- All five due regulars were marked skipped in the tracker
+  with the access-failed reason; nothing in game was verified
+  or changed, nothing bought, no diamond or contract spent.
