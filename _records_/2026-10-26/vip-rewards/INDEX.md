@@ -27,3 +27,7 @@ time and never edited once committed (C1).
 - [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
   started at 14:30 local; Daily Freebie already claimed this reset
   period, countdown 04:22:38, VIP13 at 1,545,390 points.
+- [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
+  started at 18:30 local; Daily Freebie already claimed this reset
+  period, countdown 00:15:57 to the 19:00 reset, VIP13 at 1,550,380
+  points.

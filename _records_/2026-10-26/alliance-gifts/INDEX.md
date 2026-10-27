@@ -32,3 +32,7 @@ time and never edited once committed (C1).
 - [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
   started at 14:30 local; 577 Regular and 7 Premium gifts claimed
   across three passes as new gifts kept arriving.
+- [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
+  started at 18:30 local; 1,715 Regular and 10 Premium gifts claimed
+  in one pass each, Gift Level 28 progress ending at 164,111,200 of
+  206,300,000.

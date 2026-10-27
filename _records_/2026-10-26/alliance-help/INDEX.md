@@ -33,3 +33,8 @@ time and never edited once committed (C1).
 - [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
   started at 14:30 local; Help All pressed with the grateful toast,
   only own requests listed, help points 1,060 of 1,000.
+- [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
+  started at 18:30 local; Help All pressed with the grateful toast,
+  only own requests listed, help points 1,060 of 1,000; the Help red
+  dot showed again later and its recheck was blocked by the late-run
+  control lock.

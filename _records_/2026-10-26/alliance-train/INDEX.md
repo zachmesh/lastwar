@@ -34,3 +34,6 @@ time and never edited once committed (C1).
 - [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
   started at 14:30 local; no boarding banner at any sweep, and the
   Nd4Spd4 arrival mail verified as a notice for a train never boarded.
+- [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
+  started at 18:30 local; no boarding banner at any sweep, no train
+  icon on MY PROFILE, and no new train mail for this account.

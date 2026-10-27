@@ -40,3 +40,8 @@ time and never edited once committed (C1).
   started at 14:30 local; Regular mail paid coin 1,080,000 and ruby
   times 200, no rewards in any other category, and the Nd4Spd4 train
   arrival mail verified as a notice with no attachment.
+- [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
+  started at 18:30 local; Event mail paid the Bitterly Cold Wave
+  unclaimed rewards (badge 500 times 3, food, iron and coin crates
+  times 16 each), no rewards in any other category, and Battle Report
+  held fresh Zombie Horde victory reports.

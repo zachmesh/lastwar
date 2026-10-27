@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T22:10:00Z
+modified: 2026-10-27T01:50:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -776,3 +776,62 @@ record. Inside it, one subfolder per activity type, named as in
 - Nothing bought, no diamond spent, no speedup or stamina
   item burned, no research or building started, no stage
   swap, no furnace or coal action.
+
+## 18:30 to about 18:48 — Segment 2 run, gifts pay 1,715 plus 10, Event mail pays, base under cold wave attacks
+
+- Segment 2 run of the split routine (alliance and VIP).
+  The tracker showed mail, help, gifts, train and
+  star-ceremony due in the new 4 hour cycle; VIP was
+  checked as standing practice ahead of the 19:00 reset.
+  The Mac mini opened straight onto the base — no
+  different-device dialog, no lock, no login demand.
+- Performed - gifts (Regular Claim All 1,715, Premium
+  Claim All 10, every row Claimed on recheck; Gift Level
+  28, progress 164,078,830 to 164,111,200 of
+  206,300,000), mail (Claim All in every category; only
+  Event paid — the Bitterly Cold Wave Unclaimed mail,
+  badge 500 times 3 and food, iron and coin crates times
+  16 each; Alliance, Battle Report, Season, System and
+  Regular each held no rewards, Purchases receipts only),
+  help (Help All pressed, grateful toast; visible rows
+  were own four requests; points 1,060 of 1,000, cap
+  already passed; no yellow help bubble at the opening or
+  mid-run sweeps).
+- Checked only - train (no Boarding closes in banner at
+  the opening, mid-run or closing sweeps, no train icon
+  on MY PROFILE; no contract spent), VIP (Daily Freebie
+  already claimed this reset period, countdown 00:15:57
+  to the 19:00 reset; VIP13, 1,550,380 of 2,000,000
+  points, 49 day streak), star ceremony (no trophy icon
+  at any sweep; the Alliance Star book shows Event 38
+  dated 2026-10-25, already performed — marked skipped
+  in the tracker).
+- Observed - the base stood under repeated Bitterly Cold
+  Wave Zombie Horde attacks for the whole run (crossed
+  swords timers cycling about once a minute, impact
+  effects at the furnace, fresh Lv.15 to Lv.10 victory
+  reports landing in Battle Report). Total power fell
+  across the run, 147,343,638 at the open to about
+  145.36M at the close, continuing the downward drift
+  the 1803 segment 1 run recorded; no action of this run
+  spends power or resources, and no defensive action is
+  in this segment's scope.
+- Performed in part - the Help entry showed a red dot
+  again when the Alliance panel was reopened after the
+  gifts pass. Late in the run a screenshot request timed
+  out and the control channel then refused further input
+  (an unresolved-action lock); the session was reopened
+  three times under the owner retry rule and read-only
+  observation kept working, but input never resumed, so
+  the Help recheck and a final image sweep could not be
+  made. The closing state was verified read-only instead
+  (base screen, no boarding banner text, no trophy icon,
+  attack timers still cycling). The next segment 2 run
+  should recheck the Help page first.
+- A notification-permission prompt (Enable notifications
+  and never miss important messages again) appeared once
+  on leaving Mail and was dismissed with Cancel; no
+  setting was changed.
+- Nothing bought, no diamond spent, no speedup or stamina
+  item burned, no research or building started, no stage
+  swap, no donation made in this segment.
