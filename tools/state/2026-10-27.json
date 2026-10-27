@@ -31,18 +31,18 @@
  },
  "mail": {
   "status": "skipped",
-  "at": "2026-10-27T10:30:35",
-  "note": "access-failed outcome_unknown lock cc-186/187/188, list_apps ok cc-186 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T14:30:42",
+  "note": "access-failed outcome_unknown lock cc-195/196/197, list_apps ok cc-195 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
  },
  "help": {
   "status": "skipped",
-  "at": "2026-10-27T10:30:35",
-  "note": "access-failed outcome_unknown lock cc-186/187/188, list_apps ok cc-186 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T14:30:43",
+  "note": "access-failed outcome_unknown lock cc-195/196/197, list_apps ok cc-195 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
  },
  "gifts": {
   "status": "skipped",
-  "at": "2026-10-27T10:30:35",
-  "note": "access-failed outcome_unknown lock cc-186/187/188, list_apps ok cc-186 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T14:30:43",
+  "note": "access-failed outcome_unknown lock cc-195/196/197, list_apps ok cc-195 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
  },
  "vip": {
   "status": "skipped",
@@ -51,13 +51,13 @@
  },
  "train": {
   "status": "skipped",
-  "at": "2026-10-27T10:30:35",
-  "note": "access-failed outcome_unknown lock cc-186/187/188, list_apps ok cc-186 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T14:30:43",
+  "note": "access-failed outcome_unknown lock cc-195/196/197, list_apps ok cc-195 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
  },
  "star-ceremony": {
   "status": "skipped",
-  "at": "2026-10-27T10:30:36",
-  "note": "access-failed outcome_unknown lock cc-186/187/188, list_apps ok cc-186 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T14:30:43",
+  "note": "access-failed outcome_unknown lock cc-195/196/197, list_apps ok cc-195 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed"
  },
  "passes": {
   "status": "skipped",
