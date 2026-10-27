@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-27T09:32:00Z
+modified: 2026-10-27T10:01:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -74,3 +74,32 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   the reset period that began at 19:00 on 2026-10-26 remains
   unclaimed. Nothing in game was verified or changed,
   nothing bought, no diamond or contract spent.
+
+## 02:57 to about 03:01 — Segment 3 run, access failed, no in-game frame observed
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursdays only). Duel Day 2
+  Base Expansion, radar posture stack.
+- ACCESS FAILED before any input reached the game. Three
+  sessions were opened under the owner retry rule (cc-170,
+  cc-171, cc-172). The first two control attempts returned
+  outcome_unknown (unresolved-action lock, new local user
+  submission required). In cc-172 a read-only list_apps call
+  succeeded and showed LastWar frontmost (pid 40810, window
+  642 by 951), proving the Mac was online and the app running
+  with no screen lock shown; every target-selecting control
+  call after that returned a schedule authorization
+  availability error, which is dismissed under the owner
+  authorization written into this schedule and the goal, but
+  no input could be dispatched and computer.observe stayed
+  unavailable with no target selected. This is the seventh
+  consecutive fully blocked segment run.
+- Unlike the earlier runs, no in-game frame could be observed
+  this run, so whether the different-device dialog was present
+  is unverified; the owner new rule of 2026-10-27 authorizing
+  Confirm takeovers could not be executed because no tap could
+  be sent. The run is recorded as access-failed, not contested.
+- All five due regulars were marked skipped in the tracker
+  with the access-failed reason. Nothing in game was verified
+  or changed, nothing bought, no diamond or contract spent.
