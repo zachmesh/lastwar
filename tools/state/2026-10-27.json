@@ -61,27 +61,27 @@
  },
  "passes": {
   "status": "skipped",
-  "at": "2026-10-27T10:59:01",
-  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
+  "at": "2026-10-27T14:59:47",
+  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
  },
  "secrets": {
   "status": "skipped",
-  "at": "2026-10-27T10:59:01",
-  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
+  "at": "2026-10-27T14:59:47",
+  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
  },
  "treasures": {
   "status": "skipped",
-  "at": "2026-10-27T10:59:01",
-  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
+  "at": "2026-10-27T14:59:47",
+  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
  },
  "trucks": {
   "status": "skipped",
-  "at": "2026-10-27T10:59:01",
-  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
+  "at": "2026-10-27T14:59:47",
+  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
  },
  "events": {
   "status": "skipped",
-  "at": "2026-10-27T10:59:01",
-  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
+  "at": "2026-10-27T14:59:47",
+  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
  }
 }
