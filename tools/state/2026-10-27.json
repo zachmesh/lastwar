@@ -61,27 +61,27 @@
  },
  "passes": {
   "status": "skipped",
-  "at": "2026-10-27T06:59:47",
-  "note": "access-failed outcome_unknown lock cc-180/181/182, list_apps ok LastWar pid 40810 window 642x951, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:59:01",
+  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
  },
  "secrets": {
   "status": "skipped",
-  "at": "2026-10-27T06:59:47",
-  "note": "access-failed outcome_unknown lock cc-180/181/182, list_apps ok LastWar pid 40810 window 642x951, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:59:01",
+  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
  },
  "treasures": {
   "status": "skipped",
-  "at": "2026-10-27T06:59:47",
-  "note": "access-failed outcome_unknown lock cc-180/181/182, list_apps ok LastWar pid 40810 window 642x951, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:59:01",
+  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
  },
  "trucks": {
   "status": "skipped",
-  "at": "2026-10-27T06:59:47",
-  "note": "access-failed outcome_unknown lock cc-180/181/182, list_apps ok LastWar pid 40810 window 642x951, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:59:01",
+  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
  },
  "events": {
   "status": "skipped",
-  "at": "2026-10-27T06:59:47",
-  "note": "access-failed outcome_unknown lock cc-180/181/182, list_apps ok LastWar pid 40810 window 642x951, no input dispatched, no in-game frame observed"
+  "at": "2026-10-27T10:59:01",
+  "note": "access-failed 1057: outcome_unknown lock across cc-189/190/191, no input dispatched"
  }
 }

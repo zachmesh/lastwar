@@ -1,7 +1,7 @@
 ---
 title: Shop Claims on 2026-10-27
 created: 2026-10-27T10:00:00Z
-modified: 2026-10-27T14:00:00Z
+modified: 2026-10-27T17:57:00Z
 version: 1.0.0
 description: Index of Shop Claims executions on 2026-10-27
 grounded_in:
@@ -31,3 +31,9 @@ time and never edited once committed (C1).
   across three sessions cc-180, cc-181 and cc-182, list_apps showed
   LastWar pid 40810 window 642x951, no input dispatched and no
   in-game frame observed this run. Tenth consecutive blocked run.
+
+- [1057-segment-3-run.md](1057-segment-3-run.md) — the segment 3 run
+  that started at 10:57 local; access failed - outcome_unknown lock
+  across three sessions cc-189, cc-190 and cc-191, list_apps showed
+  LastWar pid 40810 window 642x951, no input dispatched and no
+  in-game frame observed this run. Thirteenth consecutive blocked run.

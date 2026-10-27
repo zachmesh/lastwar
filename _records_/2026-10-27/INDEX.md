@@ -247,3 +247,32 @@ instruction of 2026-10-25 to run all the regulars every four hours.
 - All five due regulars were marked skipped in the tracker
   with the access-failed reason. Nothing in game was verified
   or changed, nothing bought, no diamond or contract spent.
+
+## 10:57 to about 10:59 — Segment 3 run, access failed, no in-game frame observed
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursdays only). Duel Day 2
+  Base Expansion, radar posture stack.
+- ACCESS FAILED before any input reached the game - every
+  target-selecting computer-control attempt returned
+  outcome_unknown (an earlier action has an unresolved outcome;
+  a new local user submission is required before input can
+  resume). Three sessions were opened under the owner retry
+  rule (cc-189, cc-190, cc-191) and each failed the same way.
+  Read-only list_apps succeeded in cc-189 and cc-191 and showed
+  LastWar running (pid 40810, window 642 by 951) with Chrome
+  frontmost, proving the Mac was online and the app running
+  with no screen lock shown; computer.observe stayed
+  unavailable with no target selected, so no in-game frame was
+  observed this run and different-device dialog presence is
+  unverified. This is the thirteenth consecutive fully blocked
+  segment run; the previous segment run (1030 segment 2) was
+  also access-failed, so the repeated-failure chat report is due.
+- The owner 2026-10-27 Confirm takeover rule could not be
+  executed with no tap sendable; recorded as access-failed,
+  not contested.
+- All five due regulars were marked skipped in the tracker
+  with the access-failed reason. Nothing in game was verified
+  or changed, nothing bought, no diamond or contract spent.
+
