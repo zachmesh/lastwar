@@ -1,33 +1,33 @@
 {
  "harvest": {
   "status": "skipped",
-  "at": "2026-10-27T02:04:58",
-  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+  "at": "2026-10-27T06:04:18",
+  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
  },
  "radar": {
   "status": "skipped",
-  "at": "2026-10-27T02:04:58",
-  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+  "at": "2026-10-27T06:04:18",
+  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
  },
  "survivors": {
   "status": "skipped",
-  "at": "2026-10-27T02:04:58",
-  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+  "at": "2026-10-27T06:04:18",
+  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
  },
  "training": {
   "status": "skipped",
-  "at": "2026-10-27T02:04:58",
-  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+  "at": "2026-10-27T06:04:18",
+  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
  },
  "donations": {
   "status": "skipped",
-  "at": "2026-10-27T02:04:58",
-  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+  "at": "2026-10-27T06:04:18",
+  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
  },
  "arms-race": {
   "status": "skipped",
-  "at": "2026-10-27T02:04:58",
-  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+  "at": "2026-10-27T06:04:18",
+  "note": "access-failed outcome_unknown lock cc-174/175/176, no input dispatched, no in-game frame observed"
  },
  "mail": {
   "status": "skipped",

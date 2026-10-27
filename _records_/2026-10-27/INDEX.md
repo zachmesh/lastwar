@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-27T10:01:00Z
+modified: 2026-10-27T13:03:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -103,3 +103,30 @@ instruction of 2026-10-25 to run all the regulars every four hours.
 - All five due regulars were marked skipped in the tracker
   with the access-failed reason. Nothing in game was verified
   or changed, nothing bought, no diamond or contract spent.
+
+## 06:03 to about 06:05 — Segment 1 run, access failed, no in-game frame observed
+
+- Segment 1 run of the split routine (production and Arms Race).
+  Due at the open - harvest, radar, survivors, training,
+  donations and arms-race. Duel Day 2 Base Expansion, radar
+  posture stack; resource check clean on the prior snapshot.
+- ACCESS FAILED before any input reached the game - every
+  computer-control attempt returned outcome_unknown (an earlier
+  action has an unresolved outcome; a new local user submission
+  is required before input can resume). Three sessions were
+  opened under the owner retry rule (cc-174, cc-175, cc-176)
+  and each failed the same way. Read-only observation was
+  unavailable with no target selected, so no in-game frame was
+  observed this run and different-device dialog presence is
+  unverified. The same lock has blocked every segment run
+  since 1857 on 2026-10-26 - eighth consecutive fully blocked
+  segment run; the previous segment run (0257 segment 3) was
+  also access-failed, so the repeated-failure chat report is due.
+- The owner 2026-10-27 Confirm takeover rule could not be
+  executed with no tap sendable; recorded as access-failed,
+  not contested.
+- All six due regulars were marked skipped in the tracker
+  with the access-failed reason; the Arms Race phase and score
+  could not be read and its target is recorded as missed by
+  access failure. Nothing in game was verified or changed,
+  nothing bought, no diamond or contract spent.
