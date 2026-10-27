@@ -1,0 +1,32 @@
+{
+ "harvest": {
+  "status": "skipped",
+  "at": "2026-10-27T02:04:58",
+  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+ },
+ "radar": {
+  "status": "skipped",
+  "at": "2026-10-27T02:04:58",
+  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+ },
+ "survivors": {
+  "status": "skipped",
+  "at": "2026-10-27T02:04:58",
+  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+ },
+ "training": {
+  "status": "skipped",
+  "at": "2026-10-27T02:04:58",
+  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+ },
+ "donations": {
+  "status": "skipped",
+  "at": "2026-10-27T02:04:58",
+  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+ },
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-10-27T02:04:58",
+  "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+ }
+}

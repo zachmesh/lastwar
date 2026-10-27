@@ -1,0 +1,45 @@
+---
+title: Play Record 2026-10-27
+created: 2026-10-27T09:05:00Z
+modified: 2026-10-27T09:05:00Z
+level: L0
+version: 1.0.0
+description: The 0203 segment 1 run, access failed before any input reached the game
+status: unverified
+grounded_in:
+  - source: in-game screens observed read-only on the owner Mac mini, 2026-10-27
+---
+
+# 2026-10-27
+
+All times America/Los_Angeles. Actor Muse, under the owner standing
+instruction of 2026-10-25 to run all the regulars every four hours.
+
+## 02:03 to about 02:10 — Segment 1 run, access failed, different-device dialog visible
+
+- Segment 1 run of the split routine (production and Arms Race).
+  Due at the open - harvest, radar, survivors, training,
+  donations and arms-race. Duel Day 2 Base Expansion, radar
+  posture stack; resource check clean on the prior snapshot.
+- ACCESS FAILED before any input reached the game - every
+  computer-control attempt returned outcome_unknown (an earlier
+  action has an unresolved outcome; a new local user submission
+  is required before input can resume). Three sessions were
+  opened under the owner retry rule (cc-164, cc-165, cc-166)
+  and each failed the same way; the final click attempt
+  reported input_dispatched false. Read-only observation kept
+  working. The same lock blocked the 1857, 2203, 2230 and 2257
+  runs on 2026-10-26, so this is the fifth consecutive fully
+  blocked segment run.
+- Read-only observation showed the LastWar base behind the
+  dialog Your account is currently active on a different
+  device, with a Confirm button. The standing Confirm-once
+  step could not be executed with input blocked, and the
+  dialog was never dismissed or seen to return, so the run is
+  recorded as access-failed rather than contested. No screen
+  lock, no fresh login or verification demand shown.
+- All six due regulars were marked skipped in the tracker
+  with the access-failed reason; the Arms Race phase and score
+  could not be read and its target is recorded as missed by
+  access failure. Nothing in game was verified or changed,
+  nothing bought, no diamond or contract spent.
