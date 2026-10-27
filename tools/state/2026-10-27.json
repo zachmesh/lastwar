@@ -28,5 +28,35 @@
   "status": "skipped",
   "at": "2026-10-27T02:04:58",
   "note": "access-failed outcome_unknown lock cc-164/165/166, different-device dialog visible read-only, no input dispatched"
+ },
+ "mail": {
+  "status": "skipped",
+  "at": "2026-10-27T02:31:30",
+  "note": "access-failed outcome_unknown lock cc-167/168/169, different-device dialog visible read-only, no input dispatched"
+ },
+ "help": {
+  "status": "skipped",
+  "at": "2026-10-27T02:31:31",
+  "note": "access-failed outcome_unknown lock cc-167/168/169, different-device dialog visible read-only, no input dispatched"
+ },
+ "gifts": {
+  "status": "skipped",
+  "at": "2026-10-27T02:31:31",
+  "note": "access-failed outcome_unknown lock cc-167/168/169, different-device dialog visible read-only, no input dispatched"
+ },
+ "vip": {
+  "status": "skipped",
+  "at": "2026-10-27T02:31:31",
+  "note": "access-failed outcome_unknown lock cc-167/168/169, different-device dialog visible read-only, no input dispatched"
+ },
+ "train": {
+  "status": "skipped",
+  "at": "2026-10-27T02:31:31",
+  "note": "access-failed outcome_unknown lock cc-167/168/169, different-device dialog visible read-only, no input dispatched"
+ },
+ "star-ceremony": {
+  "status": "skipped",
+  "at": "2026-10-27T02:31:31",
+  "note": "access-failed outcome_unknown lock cc-167/168/169, different-device dialog visible read-only, no input dispatched"
  }
 }

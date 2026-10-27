@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-27T09:05:00Z
+modified: 2026-10-27T09:32:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -42,4 +42,35 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   with the access-failed reason; the Arms Race phase and score
   could not be read and its target is recorded as missed by
   access failure. Nothing in game was verified or changed,
+  nothing bought, no diamond or contract spent.
+
+## 02:30 to about 02:32 — Segment 2 run, access failed, different-device dialog visible
+
+- Segment 2 run of the split routine (alliance and VIP).
+  Due at the open - mail, help, gifts, vip, train and
+  star-ceremony.
+- ACCESS FAILED before any input reached the game - every
+  computer-control attempt returned outcome_unknown (an earlier
+  action has an unresolved outcome; a new local user submission
+  is required before input can resume). Three sessions were
+  opened under the owner retry rule (cc-167, cc-168, cc-169)
+  and each failed the same way; the final click attempt on the
+  Confirm button reported input_dispatched false. Read-only
+  observation kept working. The same lock blocked the 1857,
+  2203, 2230 and 2257 runs on 2026-10-26 and the 0203 segment 1
+  run today, so this is the sixth consecutive fully blocked
+  segment run.
+- Read-only observation showed the LastWar base behind the
+  dialog Your account is currently active on a different
+  device, with a Confirm button. The standing Confirm-once
+  step could not be executed with input blocked, and the
+  dialog was never dismissed or seen to return, so the run is
+  recorded as access-failed rather than contested. No screen
+  lock, no fresh login or verification demand shown. No help
+  bubble, boarding banner or trophy icon was visible in the
+  read-only frame behind the dialog.
+- All six due regulars were marked skipped in the tracker
+  with the access-failed reason; the VIP Daily Freebie for
+  the reset period that began at 19:00 on 2026-10-26 remains
+  unclaimed. Nothing in game was verified or changed,
   nothing bought, no diamond or contract spent.
