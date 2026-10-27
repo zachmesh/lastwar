@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-27T13:03:00Z
+modified: 2026-10-27T13:30:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -130,3 +130,32 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   could not be read and its target is recorded as missed by
   access failure. Nothing in game was verified or changed,
   nothing bought, no diamond or contract spent.
+
+## 06:30 to about 06:31 — Segment 2 run, access failed, no in-game frame observed
+
+- Segment 2 run of the split routine (alliance and VIP).
+  Due at the open - mail, help, gifts, train and
+  star-ceremony. VIP was not due this cycle - already attempted
+  at 02:30 in the same reset period (reset 19:00 on 2026-10-26);
+  its Daily Freebie remains unclaimed.
+- ACCESS FAILED before any input reached the game - every
+  target-selecting computer-control attempt returned
+  outcome_unknown (an earlier action has an unresolved outcome;
+  a new local user submission is required before input can
+  resume). Three sessions were opened under the owner retry
+  rule (cc-177, cc-178, cc-179) and each failed the same way.
+  In cc-178 a read-only list_apps call succeeded and showed
+  LastWar running (pid 40810, window 642 by 951), proving the
+  Mac was online and the app running with no screen lock shown;
+  computer.observe stayed unavailable with no target selected,
+  so no in-game frame was observed this run and
+  different-device dialog presence is unverified. This is the
+  ninth consecutive fully blocked segment run; the previous
+  segment run (0603 segment 1) was also access-failed, so the
+  repeated-failure chat report is due.
+- The owner 2026-10-27 Confirm takeover rule could not be
+  executed with no tap sendable; recorded as access-failed,
+  not contested.
+- All five due regulars were marked skipped in the tracker
+  with the access-failed reason. Nothing in game was verified
+  or changed, nothing bought, no diamond or contract spent.

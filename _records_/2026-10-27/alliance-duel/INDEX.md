@@ -1,7 +1,7 @@
 ---
 title: Alliance Duel on 2026-10-27
 created: 2026-10-27T09:32:00Z
-modified: 2026-10-27T09:32:00Z
+modified: 2026-10-27T13:30:00Z
 version: 1.0.0
 description: Index of Alliance Duel executions on 2026-10-27
 grounded_in:
@@ -23,3 +23,7 @@ time and never edited once committed (C1).
   that started at 02:30 local; access failed - control channel
   unresolved-action lock across 3 reopened sessions, no input
   dispatched; different-device dialog visible read-only.
+- [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run
+  that started at 06:30 local; access failed - control channel
+  unresolved-action lock across 3 reopened sessions, no input
+  dispatched; no in-game frame observed this run.
