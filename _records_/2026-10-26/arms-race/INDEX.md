@@ -1,7 +1,7 @@
 ---
 title: Arms Race on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T21:19:00Z
+modified: 2026-10-27T05:10:00Z
 version: 1.0.0
 description: Index of Arms Race executions on 2026-10-26
 grounded_in:
@@ -74,3 +74,7 @@ time and never edited once committed (C1).
   claimed in one tap and the cumulative counter chest claimed
   at 13 of 8, rolling to 13 of 18; ranking chest preview only
   while the phase is live; sweep clean.
+- [2203-segment-1-run.md](2203-segment-1-run.md) — the segment 1 run
+  that started at 22:03 local; access failed as above; live
+  phase and score could not be read, target recorded as
+  missed by access failure, no chest claimed.

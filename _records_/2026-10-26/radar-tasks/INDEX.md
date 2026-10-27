@@ -1,7 +1,7 @@
 ---
 title: Radar Tasks on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T21:19:00Z
+modified: 2026-10-27T05:10:00Z
 version: 1.0.0
 description: Index of Radar Tasks executions on 2026-10-26
 grounded_in:
@@ -44,3 +44,6 @@ time and never edited once committed (C1).
   two Claim All rounds (10 plus 2 rewards), map fully clear,
   storage 0 of 40, score 2,846 to 2,858; no free stamina
   claim was opened this run.
+- [2203-segment-1-run.md](2203-segment-1-run.md) — the segment 1 run
+  that started at 22:03 local; access failed as above; Day 2
+  stack posture could not be acted on.

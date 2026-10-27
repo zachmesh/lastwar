@@ -15,9 +15,9 @@
   "note": "1830 segment 2 run - Regular Claim All claimed 1715; Premium Claim All claimed 10; every row Claimed on recheck, no red dots left; Gift Level 28, progress 164,078,830 to 164,111,200 of 206,300,000"
  },
  "harvest": {
-  "status": "done",
-  "at": "2026-10-26T18:28:37",
-  "note": "Iron bubbles collected twice (5 bubbles 321K tier, then regenerated small), blue resource 8.4M to 9.3M"
+  "status": "skipped",
+  "at": "2026-10-26T22:04:24",
+  "note": "2203 segment 1 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-155/156/157), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "vip": {
   "status": "done",
@@ -40,14 +40,14 @@
   "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "radar": {
-  "status": "done",
-  "at": "2026-10-26T18:28:37",
-  "note": "Release day: Quick Execute 50+10 stamina, Claim All x2, map clear 0/40, points 2846 to 2858, stamina 31"
+  "status": "skipped",
+  "at": "2026-10-26T22:04:24",
+  "note": "2203 segment 1 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-155/156/157), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "survivors": {
-  "status": "done",
-  "at": "2026-10-26T18:28:37",
-  "note": "Checked: no gate line with question bubbles in any base area swept; no intake due"
+  "status": "skipped",
+  "at": "2026-10-26T22:04:25",
+  "note": "2203 segment 1 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-155/156/157), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "trucks": {
   "status": "skipped",
@@ -61,13 +61,13 @@
  },
  "training": {
   "status": "skipped",
-  "at": "2026-10-26T18:28:37",
-  "note": "Barracks tents not located in areas swept; T7 batch finished ~12:00 and T8 ~16:53 both due requeue - open item carried forward from 1403 run"
+  "at": "2026-10-26T22:04:25",
+  "note": "2203 segment 1 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-155/156/157), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "donations": {
-  "status": "done",
-  "at": "2026-10-26T18:28:37",
-  "note": "Rallied Defense coin donations until button greyed (18m timer); Tech Donation Today 8250 to 9250"
+  "status": "skipped",
+  "at": "2026-10-26T22:04:25",
+  "note": "2203 segment 1 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-155/156/157), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "events": {
   "status": "skipped",
@@ -75,9 +75,9 @@
   "note": "1857 segment 3 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-152/153/154), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "arms-race": {
-  "status": "done",
-  "at": "2026-10-26T18:28:37",
-  "note": "Hero Advancement 38500 of 12000 target met via Adam Lv121 to 122 (77.0M EXP); all 3 chests and cumulative chest claimed; sweep clean"
+  "status": "skipped",
+  "at": "2026-10-26T22:04:25",
+  "note": "2203 segment 1 run - access failed: control channel unresolved-action lock across 3 reopened sessions (cc-155/156/157), no input dispatched; different-device dialog visible read-only, Confirm could not be tapped; nothing verified or changed in game"
  },
  "star-ceremony": {
   "status": "skipped",

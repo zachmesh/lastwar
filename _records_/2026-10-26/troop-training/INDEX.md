@@ -1,7 +1,7 @@
 ---
 title: Troop Training on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T21:19:00Z
+modified: 2026-10-27T05:10:00Z
 version: 1.0.0
 description: Index of Troop Training executions on 2026-10-26
 grounded_in:
@@ -38,3 +38,6 @@ time and never edited once committed (C1).
   T7 batch finished about 11:31 to 12:13 and the T8 batch
   about 16:53, both due a requeue - open item carried
   forward, marked skipped in the tracker.
+- [2203-segment-1-run.md](2203-segment-1-run.md) — the segment 1 run
+  that started at 22:03 local; access failed as above; the T7
+  and T8 requeue open item remains carried forward.

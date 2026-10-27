@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-27T02:05:00Z
+modified: 2026-10-27T05:10:00Z
 level: L0
 version: 1.0.0
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
@@ -865,3 +865,36 @@ record. Inside it, one subfolder per activity type, named as in
   The 19:00 reset rolled during the run, so the new day's
   passes, secrets, treasures, trucks and events claims remain
   for the next segment 3 cycle once input resumes.
+
+## 22:03 to about 22:10 — Segment 1 run, access failed, different-device dialog visible
+
+- Segment 1 run of the split routine (production and Arms Race).
+  Due at the open - harvest, radar, survivors, training,
+  donations and arms-race. Duel Day 2 Base Expansion, radar
+  posture stack (complete but do NOT claim); resource check
+  clean on the 1803 snapshot (food 356.8M, iron 342.6M,
+  coin 21.8M, all above floors).
+- ACCESS FAILED before any input reached the game - every
+  computer-control attempt returned outcome_unknown (an earlier
+  action has an unresolved outcome; a new local user submission
+  is required before input can resume). Three sessions were
+  opened under the owner retry rule (cc-155, cc-156, cc-157)
+  and each failed the same way; no tap was dispatched.
+  Read-only observation kept working. The same lock ended
+  the 1830 segment 2 run late and blocked the whole 1857
+  segment 3 run, so this is the second consecutive
+  fully blocked segment run.
+- Read-only observation showed the LastWar base behind the
+  dialog Your account is currently active on a different
+  device, with a Confirm button. The standing Confirm-once
+  step could not be executed with input blocked, and the
+  dialog was never dismissed or seen to return, so the run
+  is recorded as access-failed rather than contested. No
+  screen lock, no fresh login or verification demand shown.
+- All six due regulars were marked skipped in the tracker
+  with the access-failed reason; the Arms Race live phase
+  and score could not be read and its target is recorded
+  as missed by access failure; the training T7 and T8
+  requeue open item remains carried forward. Nothing in
+  game was verified or changed, nothing bought, no diamond
+  spent.
