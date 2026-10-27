@@ -1,7 +1,7 @@
 ---
 title: Event Claims on 2026-10-27
 created: 2026-10-27T10:00:00Z
-modified: 2026-10-27T10:00:00Z
+modified: 2026-10-27T14:00:00Z
 version: 1.0.0
 description: Index of Event Claims executions on 2026-10-27
 grounded_in:
@@ -25,3 +25,9 @@ time and never edited once committed (C1).
   frontmost, then target-selecting control calls returned a
   schedule authorization availability error; no input dispatched
   and no in-game frame observed this run.
+
+- [0657-segment-3-run.md](0657-segment-3-run.md) — the segment 3 run
+  that started at 06:57 local; access failed - outcome_unknown lock
+  across three sessions cc-180, cc-181 and cc-182, list_apps showed
+  LastWar pid 40810 window 642x951, no input dispatched and no
+  in-game frame observed this run. Tenth consecutive blocked run.

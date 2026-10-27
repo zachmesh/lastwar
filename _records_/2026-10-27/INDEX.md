@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-27T13:30:00Z
+modified: 2026-10-27T14:00:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -152,6 +152,34 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   different-device dialog presence is unverified. This is the
   ninth consecutive fully blocked segment run; the previous
   segment run (0603 segment 1) was also access-failed, so the
+  repeated-failure chat report is due.
+- The owner 2026-10-27 Confirm takeover rule could not be
+  executed with no tap sendable; recorded as access-failed,
+  not contested.
+- All five due regulars were marked skipped in the tracker
+  with the access-failed reason. Nothing in game was verified
+  or changed, nothing bought, no diamond or contract spent.
+
+## 06:57 to about 07:00 — Segment 3 run, access failed, no in-game frame observed
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursdays only). Duel Day 2
+  Base Expansion, radar posture stack.
+- ACCESS FAILED before any input reached the game - every
+  target-selecting computer-control attempt returned
+  outcome_unknown (an earlier action has an unresolved outcome;
+  a new local user submission is required before input can
+  resume). Three sessions were opened under the owner retry
+  rule (cc-180, cc-181, cc-182) and each failed the same way.
+  Read-only list_apps succeeded in cc-180 and cc-182 and showed
+  LastWar running (pid 40810, window 642 by 951), proving the
+  Mac was online and the app running with no screen lock shown;
+  computer.observe stayed unavailable with no target selected,
+  so no in-game frame was observed this run and
+  different-device dialog presence is unverified. This is the
+  tenth consecutive fully blocked segment run; the previous
+  segment run (0630 segment 2) was also access-failed, so the
   repeated-failure chat report is due.
 - The owner 2026-10-27 Confirm takeover rule could not be
   executed with no tap sendable; recorded as access-failed,
