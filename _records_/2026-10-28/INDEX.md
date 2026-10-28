@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-28
 created: 2026-10-28T09:42:00Z
-modified: 2026-10-28T10:50:00Z
+modified: 2026-10-28T11:02:00Z
 level: L0
-version: 1.3.0
-description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session; the 0257 segment 3 run, all five due regulars checked in full with nothing claimable - settled secret cards only, no treasure set, trucks en route with caps reached, passes verified claimed, Events and Season sweep clean
+version: 1.4.0
+description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session; the 0257 segment 3 run, all five due regulars checked in full with nothing claimable - settled secret cards only, no treasure set, trucks en route with caps reached, passes verified claimed, Events and Season sweep clean; the 0246 Zombie Invasion round 1 session, four Lv.10 kills and the event Store mapped, three 50 stamina items redeemed for medals, zero direct coin from Lv.10 kills, stood down as the queue chain took over the Mac
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-28
@@ -184,3 +184,40 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   3 hour cap; it runs while the event lasts and only pauses
   about an hour when no zombies are nearby. Detail in
   [zombie-invasion/0347-queue-run.md](zombie-invasion/0347-queue-run.md).
+
+## 02:46 to about 04:12 — Zombie Invasion round 1 session, four Lv.10 kills, Store mapped, stood down for the chain
+
+- The owner-directed discovery session that opened this
+  activity (its metadata folder was created at the start
+  under task intake). Four distinct Lv.10 Invading Zombies
+  targets destroyed - 64 km, X794 Y764 in the snowfield,
+  16 km beside [AP3x]Crow, and about 105 km out - at 10
+  stamina and 10 event medals each; the second march is
+  jointly recorded with queue unit 001 above, the two
+  executors sharing the Mac from 03:34.
+- Coin - panel owned 34,417,273 at 02:48 and 34,416,573 at
+  the last read; the direct coin yield of Lv.10 kills is
+  zero (no coin line on the card, no drop list on the
+  banner). The event Store is the confirmed coin source -
+  medals exchange for Coin Chests, the SR chest paying
+  812.16K coins at Base Lv.30 by its tooltip, 2 already
+  owned unopened. The collection icon (gift box badge read
+  2, then 3, then 5) was not verifiably tapped this round,
+  so its yield stays unmeasured for the chain.
+- Store - the full medal price list was read (see the round
+  record). Three 50 Stamina items were redeemed for 30
+  medals under the owner stamina authorization for this
+  task and sit unused in inventory; medal balance 30 at the
+  close. Diamonds 653 throughout, nothing bought for money
+  or diamonds.
+- Boss side inspected only - a Lv.85 boss card (Suggested
+  Power 34,500,000, stamina 20) shows no coin line; no rally
+  started. Battle Report mail holds the owner's 2026-10-26
+  Lv.16 to Lv.20 Zombie Horde victories; Lv.10 event kills
+  generate no report mail.
+- Stand-down - at about 04:10 another controller was active
+  on the game (a coin panel this session had not opened, a
+  computer_busy refusal); the session stopped driving the
+  Mac there and the queue chain owns the activity onward.
+  Detail in
+  [zombie-invasion/0246-round-1-run.md](zombie-invasion/0246-round-1-run.md).

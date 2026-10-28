@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T11:20:00Z
+modified: 2026-10-28T11:02:00Z
 level: L1
-version: 1.3.5
+version: 1.4.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -124,9 +124,16 @@ execution.
   money, never tap a price tag, a paid button, Renew, Finish Now
   or the Legendary Claim All, and never assemble or teleport.
   Anything needing those is recorded as skipped-needs-owner.
-- Mechanics, stamina cost per attempt, coin yield per attempt and
-  any daily cap are not yet known - everything in this folder is
-  the owner word and first-sight notes until play confirms it.
+- Mechanics as played in round 1 - a nearby Invading Zombies
+  target costs 10 stamina charged on the march, one squad
+  wins outright at Lv.10 (Suggested Power 670,000 against
+  this account's 25.05M Squad 1), the battle resolves on
+  arrival and the squad returns on its own. Supply is per
+  wave; a cleared area answers Search with not found until
+  the next wave (about hourly). The medal the kills pay is
+  the event Store currency - see the Store entry under What
+  is known, including the coin chests that are the event's
+  confirmed coin source.
 
 ## What is known from 2026-10-28
 
@@ -167,16 +174,62 @@ execution.
 - The app crashed once (02:52) on the tap back toward the base
   screen right after the first kill and relaunched cleanly with
   state intact - stamina and march results are server-side.
+- Round 1 totals (record 0246-round-1-run) - four distinct
+  Lv.10 targets destroyed between 02:49 and about 04:10 (one
+  march jointly dispatched with queue unit 001, which shared
+  the Mac from 03:34), 40 stamina spent on marches, 40 medals
+  earned. Coin panel owned read 34,417,273 at 02:48 and
+  34,416,573 at the last read - the direct coin yield of
+  Lv.10 kills is zero, and the 700 step down is segment
+  activity, not zombie play. The collection icon was not
+  verifiably tapped in round 1, so its yield is unmeasured.
+- The event Store (read in full in round 1) - the medal is
+  the currency. Coin Chests are the confirmed coin source -
+  Coin Chest (SR) pays 812.16K coins at Base Lv.30 by its
+  tooltip (medal price unconfirmed, above the 60 held at the
+  read, digits read as about 150; Limit 100; 2 already owned
+  in inventory, unopened), Coin Chest (SSR) costs 480 medals
+  (Limit 20, yield unread). Other prices in medals - 50
+  Stamina item 10 (Limit 3), Universal Exclusive Weapon
+  Shard 120 (Limit 10), Hero Recruitment Ticket 80 (Limit
+  10), Survivor Recruitment Ticket 80 (Limit 30), iron crate
+  160 (Limit 50), badge item x10 200 (Limit 50), gear
+  component 200 (Limit 50), Lv.3 chest 360 (Limit 3), blue
+  chest 120 (Limit 3), purple chest 400 (Limit 1), 5 minute
+  speedup 4 (Limits 100 and 50), 1 hour speedup 36 (Limit
+  10). Round 1 redeemed 3 of the 50 Stamina items for 30
+  medals under the owner's stamina authorization for this
+  task - the medal loop is stamina-positive (one kill earns
+  the 10 medals a 50 stamina item costs). Medal spending
+  beyond stamina (chests versus saving) follows the owner's
+  maximize-coin objective and is the chain's call.
+- Battle reports - the owner's 2026-10-26 mail holds
+  victories over Lv.16 to Lv.20 Zombie Horde targets (the
+  Lv.20 at X990 Y954 took three squads in sequence), so
+  higher-level zombie targets exist in this event family.
+  Lv.10 Invading Zombies kills generate no battle report
+  mail, and the reports list casualties only, no rewards.
+- An unexplained plus 10 stamina read followed one kill in
+  two independent records (round 1 and queue unit 001) -
+  a stamina drop from the kill or chunked regeneration.
 
 ## Open questions
 
-- Where exactly the coins are paid - per-kill on higher levels,
-  the Zombie Bosses, the potential crates, or the Rewards track.
-- Whether stamina cost and rewards scale with zombie level, and
-  what levels Search can find.
-- Any daily attempt cap or diminishing returns.
-- Failure conditions - what a loss costs, and whether stamina is
-  refunded.
-- What Boss Search does differently from Search, and what the
-  medals buy in the event Store (the Store is never bought from
-  without owner approval).
+- What the collection icon pays per kill (chain to measure -
+  it is the remaining uncounted coin source of round 1).
+- The exact medal price of the Coin Chest (SR), and the Coin
+  Chest (SSR) yield - together they set the medal spending
+  order under the maximize-coin objective.
+- Whether zombie levels rise above Lv.10 in later waves or
+  days (Lv.16 to Lv.20 Zombie Hordes in the owner's
+  2026-10-26 reports), and how stamina cost, medals and
+  rewards scale with level.
+- Where the stamina Free Claim lives - not located in
+  round 1.
+- The plus 10 stamina read after a kill - drop or regen.
+- Any daily attempt cap or diminishing returns (none seen).
+- Failure conditions - what a loss costs, and whether stamina
+  is refunded.
+- What Boss Search does differently from Search (inspected
+  in round 1 - rally-class targets, no coin line seen; no
+  rally started).
