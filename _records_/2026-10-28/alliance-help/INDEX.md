@@ -30,3 +30,7 @@ time and never edited once committed (C1).
   that started at 06:34 local, unit
   help-2026-10-28-0630; Help All cleared two ally
   research requests at 500 of 1,000 daily help points.
+- [1112-queue-run.md](1112-queue-run.md) — the queue run
+  that started at 11:04 local, unit
+  help-2026-10-28-1030; Help All cleared ally research
+  requests at 620 of 1,000 daily help points.

@@ -24,3 +24,8 @@ time and never edited once committed (C1).
   star-ceremony-2026-10-28-0630; base screen checked in
   full, no Star Ceremony trophy icon beside the Alliance
   button, so no ceremony is waiting.
+- [1117-queue-run.md](1117-queue-run.md) — the queue run
+  that started at 11:04 local, unit
+  star-ceremony-2026-10-28-1030; base screen checked,
+  no Star Ceremony trophy icon beside Alliance, nothing
+  waiting.

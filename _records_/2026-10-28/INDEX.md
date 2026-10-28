@@ -663,3 +663,44 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   [resource-collection/1030-queue-run.md](resource-collection/1030-queue-run.md).
 - Token released, diamonds 653 throughout, nothing
   bought, no speedup or stamina item burned.
+
+## 11:04 to about 11:23 — Queue ticker pass ticker-1104, gifts, help, mail, star-ceremony and train done
+
+- Executor ticker-1104. Sync found 12 due regulars already
+  queued (planner staged); zombie chain unit 016 already
+  pending, so no seeding. Five units executed under the
+  device token; zombie unit 016 carries to the next tick
+  (pass budget).
+- Gifts - Claim All on both tabs: 118 Regular and 7
+  Premium alliance gifts; Gift Level 28 progress
+  170,483,470 to 170,484,650 after the Regular claim.
+  Detail in
+  [alliance-gifts/1104-queue-run.md](alliance-gifts/1104-queue-run.md).
+- Help - Help All pressed; Today's points 620 of 1,000
+  at the open; ally requests TravsKneeKnockr (Tank
+  Synergy - HP I) and Nd4Spd4 (Counter Defense II)
+  cleared, game answered Allies are very grateful.
+  Detail in
+  [alliance-help/1112-queue-run.md](alliance-help/1112-queue-run.md).
+- Mail - Claim All pressed in Alliance, Event, Regular,
+  Season, System and Battle Report; all answered No
+  rewards available or held reports only (Invading
+  Zombies Victory reports, Ice Breaking reports, patch
+  notes). Delete All never pressed. Detail in
+  [mail-rewards/1115-queue-run.md](mail-rewards/1115-queue-run.md).
+- Star Ceremony - base screen checked, no trophy icon
+  beside Alliance, nothing waiting. Detail in
+  [alliance-duel/1117-queue-run.md](alliance-duel/1117-queue-run.md).
+- Train - a train in preparation, conductor Nd4Spd4,
+  departure 02:19:11, Train Rating 51,200. Boarded
+  carriage 2 under the standing rule: quantity set to 3
+  and read back, 3 Trade Contracts gifted (stock 146),
+  game answered thanks sent to Nd4Spd4; occupancy 12 of
+  7 to 13 of 7 with the own avatar in the carriage.
+  Carriage 2 plus located by visual grounding at
+  normalized 495,500 after taps at 375 to 400,465
+  missed. Detail in
+  [alliance-train/1122-queue-run.md](alliance-train/1122-queue-run.md).
+- Token released, diamonds 658 on the base screen at the
+  open and the train close, nothing bought, no speedup or
+  stamina item burned.

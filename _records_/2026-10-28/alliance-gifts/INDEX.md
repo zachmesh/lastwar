@@ -24,3 +24,8 @@ time and never edited once committed (C1).
   gifts-2026-10-28-0630; 145 Regular and 23 Premium gifts
   claimed, Gift Level 28 progress 169,964,550 to
   169,994,400.
+- [1104-queue-run.md](1104-queue-run.md) — the queue run
+  that started at 11:04 local, unit
+  gifts-2026-10-28-1030; 118 Regular and 7 Premium gifts
+  claimed, Gift Level 28 progress 170,483,470 to
+  170,484,650 after the Regular claim.
