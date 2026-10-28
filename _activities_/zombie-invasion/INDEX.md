@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T10:58:00Z
+modified: 2026-10-28T11:00:00Z
 level: L1
-version: 1.3.0
+version: 1.3.1
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,14 @@ execution.
 
 - While the event is live, play it as much as possible - the owner
   wants the maximum coin yield, not a single token attempt.
+- Coin measurement (added 2026-10-28 after the owner asked for
+  the collected total) - every zombie unit records the exact
+  coin panel reading at its start and at its end in its result
+  stats (coin_before, coin_after). The activity's yield is
+  judged on those deltas, never on HUD-rounded figures. As of
+  the first two executions the verified yield is zero - the
+  Lv.10 target card carries no coin line, and coins appear only
+  as a possible drop in the reward pools.
 - Stop condition, owner instruction 2026-10-28 - do not stop
   while zombies remain nearby. Keep sweeping or attacking the
   zombies near the base until none remain nearby, refilling
