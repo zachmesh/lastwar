@@ -61,8 +61,15 @@ execution.
   marching on nearby zombies simultaneously as the game
   allows, so kills and rewards accumulate faster inside each
   unit's 15 minutes. Record how many squads ran in parallel
-  as the stat squads_parallel (and the game's parallel cap
-  once observed).
+  as the stat squads_parallel. Enforcement, owner check
+  2026-10-28 - units 001 to 004 in fact ran with
+  squads_parallel 1, which does not meet this instruction.
+  From unit 005 onward parallel dispatch is mandatory where
+  the game allows it - a unit that still records
+  squads_parallel 1 must state in its summary why parallel
+  dispatch was impossible, and any game-side cap found
+  (march queue limit, stamina supply, march slots) is
+  recorded here with the observed number.
 - Objective, owner instruction 2026-10-28 - maximize coin.
   Coin is one of the most needed resources on this account,
   and this activity exists to produce it. Units are judged on
