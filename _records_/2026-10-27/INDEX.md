@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-28T01:30:00Z
+modified: 2026-10-28T02:45:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -421,3 +421,57 @@ instruction of 2026-10-25 to run all the regulars every four hours.
 - All five due regulars were marked skipped in the tracker
   with the access-failed reason. Nothing in game was verified
   or changed, nothing bought, no diamond or contract spent.
+
+## 18:57 to about 19:42 — Segment 3 run, control restored, all five regulars done
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursdays only). The duel day
+  flipped mid-run at 19:00 from Day 2 Base Expansion to Day 3
+  Age of Science; neither is a duel UR day.
+- CONTROL RESTORED - the owner cleared the outcome_unknown lock
+  locally at 18:36, ending the streak of 18 consecutive blocked
+  segment runs, and this run played end to end. The
+  different-device dialog appeared twice; Confirm was clicked
+  both times under the owner rule of 2026-10-27 and the app
+  relaunched each time; after the second kick it did not return,
+  so the run is not contested. Base at the open - Total Power
+  149,344,693, diamonds 978.
+- Secrets - Secret Command Post, all 8 tasks showed Go with
+  nothing finished to claim; Reward Recovery latest record
+  2026-10-24 already CLAIMED; Mega Deploy sent all 8 with UR
+  Only off and no Mega Refresh (not a UR day). Treasures -
+  fragments M1 x12, M2 x13, M3 x0, M4 x5, M5 x2, M6 x4, M7 x12,
+  chest 13 of 15; M3 at 0, so no complete set and no dig.
+- Trucks - yard empty, Trade Count 0 of 5, trade recovery
+  already CLAIMED on 2026-10-25. Dispatched SR, SR and SSR as
+  rolled, plus one truck refreshed R to N on the free refresh
+  then UR with 1 Trade Contract (148 to 147); Trade Count 4
+  of 5, Mega slot untouched. Plunders 4 of 4, all victories -
+  UR of Orbeuni8 (guard 6.2M, 6 UR shards), SSR of Lambari de
+  Esgoto (14.7M, 3 shards), UR of ArmyofWun (15.4M, 3 shards),
+  UR of Alyseya (19.6M, badge stack did not drop).
+- Passes and shop claims - Hot Deals Research Speed-up Pack
+  Free Claim (1h research speedups x25, Coin Chest UR x5), Free
+  Supply (ruby x10, silver ingots x4), S1 Drone Parts and Coin
+  weekly Daily Pickups (drone parts x15, coin chests x3), Super
+  Monthly Pass Daily Gift (25 days left), Season Weekly Pass
+  Daily Pickup and Daily Freebie. The Legendary Take All at
+  19.99 dollars and every Renew and price tag were never
+  touched.
+- Events - Halloween Check-In Day 03 claimed (silver chests
+  x3); Season Battle Pass login claimed for plus 100 points
+  (17,400 total), Claim All empty; Swift Exclusive Weapon
+  Battle Pass Claim All paid 200 points and EXP chests x2
+  (5,800 points). Arms Race sat in its Drone Boost phase at 0
+  points with the cumulative chest at 0 of 2 - nothing
+  claimable for segment 1. Zombie Invasion starts in about
+  1.5 hours, Wanted Boss Code 39 tiers unreached, Community
+  already Claimed, Desert Storm is a leader registration
+  matter. Final Events sweep clean - no bouncing chest, no
+  reward red dot; the Zombie start-notice badge and the Level
+  Swap info marker are not claims.
+- All five due regulars marked done in the tracker. Diamonds
+  ended at 998, up 20 from free claims only; nothing bought,
+  no diamond spent, one Trade Contract spent under the
+  standing authorization.

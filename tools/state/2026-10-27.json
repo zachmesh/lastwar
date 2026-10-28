@@ -60,28 +60,28 @@
   "note": "access-failed outcome_unknown lock cc-204/205/206, list_apps ok cc-204/206 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; eighteenth consecutive blocked segment run"
  },
  "passes": {
-  "status": "skipped",
-  "at": "2026-10-27T14:59:47",
-  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T19:42:22",
+  "note": "Hot Deals Research Speed-up Pack Free Claim (1h research speedup x25 + Coin Chest UR x5); Free Supply claimed; S1 Drone Parts + Coin weekly Daily Pickups claimed; Super Monthly Pass Daily Gift claimed (25 days left); Legendary Claim All never touched"
  },
  "secrets": {
-  "status": "skipped",
-  "at": "2026-10-27T14:59:47",
-  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T19:42:22",
+  "note": "8 tasks Mega Deployed (UR Only off, no Mega Refresh - Day 3 not a UR day); none finished to claim; Reward Recovery latest 2026-10-24 already CLAIMED"
  },
  "treasures": {
-  "status": "skipped",
-  "at": "2026-10-27T14:59:47",
-  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T19:42:22",
+  "note": "Checked - fragments M1x12 M2x13 M3x0 M4x5 M5x2 M6x4 M7x12, chest 13/15; M3=0 so no full set of 7, no dig possible"
  },
  "trucks": {
-  "status": "skipped",
-  "at": "2026-10-27T14:59:47",
-  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T19:42:22",
+  "note": "Yard empty, recovery checked (2026-10-25 CLAIMED); dispatched SR/SR/SSR as rolled + R refreshed free->N->1 Trade Contract->UR (contracts 148->147), Trade Count 4/5; plunders 4/4 all won, 12+ UR shards"
  },
  "events": {
-  "status": "skipped",
-  "at": "2026-10-27T14:59:47",
-  "note": "access-failed 1457: outcome_unknown lock across cc-198/199/200, list_apps ok cc-198/200 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; sixteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T19:42:22",
+  "note": "Full sweep: Halloween Day 03 claimed (silver chest x3); Season Battle Pass login +100 (17400), Claim All = no rewards; Season Weekly Pass Daily Pickup + Daily Freebie claimed; Swift pass Claim All paid 200 pts + EXP chest x2 (5800); Arms Race Drone Boost 0 pts nothing claimable; Zombie starts ~1.5h; Wanted Boss Code 39 tiers unreached; final sweep clean"
  }
 }

@@ -1,7 +1,7 @@
 ---
 title: Hidden Treasures on 2026-10-27
 created: 2026-10-27T10:00:00Z
-modified: 2026-10-27T21:57:00Z
+modified: 2026-10-28T02:45:00Z
 version: 1.0.0
 description: Index of Hidden Treasures executions on 2026-10-27
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/hidden-treasures`](../../../_activities_/hidden
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Access failed.** See the execution file for the detail.
+**Status — Done.** The 1857 run completed after control was restored; earlier runs today were access failed. See the execution files for the detail.
 
 ## Executions
 
@@ -43,3 +43,9 @@ time and never edited once committed (C1).
   across three sessions cc-198, cc-199 and cc-200, list_apps showed
   LastWar pid 40810 window 642x951, no input dispatched and no
   in-game frame observed this run. Sixteenth consecutive blocked run.
+
+- [1857-segment-3-run.md](1857-segment-3-run.md) — the segment 3 run
+  that started at 18:57 local; control restored (see the secret
+  missions entry). Fragments M1 x12, M2 x13, M3 x0, M4 x5, M5 x2,
+  M6 x4, M7 x12, chest 13 of 15 - M3 at 0 means no complete set
+  of 7, so no dig was possible and nothing was spent.
