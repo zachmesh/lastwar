@@ -17,6 +17,12 @@ time and never edited once committed (C1).
 
 **Status — Checked, blocked by the game.** The 0634 queue run is the latest. See the execution files for the detail.
 
+- [1034-queue-run.md](1034-queue-run.md) — queue unit
+  training-2026-10-28-1003, partial; blue tent row labelled
+  Training Base Lv.25 (upgrade arrow not touched),
+  individual barracks not re-located and Drill Ground Full
+  not re-verified this unit.
+
 ## Executions
 
 - [0203-segment-1-run.md](0203-segment-1-run.md) — the segment 1 run

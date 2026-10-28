@@ -22,6 +22,13 @@ time and never edited once committed (C1).
   taken in at the gate, line not verified clear and Quick
   Dispatch not run before the pass budget ended.
 
+- [1034-queue-run.md](1034-queue-run.md) — queue unit
+  survivors-2026-10-28-1003, partial; gate located and
+  searched, three question mark figures sighted and one
+  tapped with no card or dialog, final gate views clear of
+  question marks with only the visitor left, Quick Dispatch
+  not run (panel opened was the season factory).
+
 ## Executions
 
 - [0203-segment-1-run.md](0203-segment-1-run.md) — the segment 1 run
