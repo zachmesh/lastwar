@@ -36,8 +36,8 @@
  },
  "mail": {
   "status": "done",
-  "at": "2026-10-28T11:15:47",
-  "note": "Claim All all categories, nothing claimable"
+  "at": "2026-10-28T15:40:45",
+  "note": "Claim All in all seven categories, nothing claimable"
  },
  "gifts": {
   "status": "done",
@@ -51,13 +51,13 @@
  },
  "train": {
   "status": "done",
-  "at": "2026-10-28T11:23:08",
-  "note": "Boarded carriage 2, Nd4Spd4, 3 contracts"
+  "at": "2026-10-28T15:47:10",
+  "note": "No Boarding closes banner, no train in preparation"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-10-28T11:16:48",
-  "note": "No trophy icon, nothing waiting"
+  "at": "2026-10-28T15:42:29",
+  "note": "No Star Ceremony trophy icon, nothing waiting"
  },
  "secrets": {
   "status": "done",
@@ -81,7 +81,7 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-10-28T11:47:49",
-  "note": "Full Events sweep plus Halloween check-in, nothing claimable"
+  "at": "2026-10-28T15:53:16",
+  "note": "Full Events sweep, nothing claimable"
  }
 }

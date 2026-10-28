@@ -29,3 +29,8 @@ time and never edited once committed (C1).
   train-2026-10-28-1030; boarded carriage 2 of conductor
   Nd4Spd4's train with 3 Trade Contracts, occupancy
   12 of 7 to 13 of 7.
+- [1547-queue-run.md](1547-queue-run.md) — the queue run
+  that started at 15:34 local, unit
+  train-2026-10-28-1430; no Boarding closes banner on
+  the base screen, so no train is in preparation and
+  there is nothing to board.

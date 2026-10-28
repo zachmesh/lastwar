@@ -29,3 +29,7 @@ time and never edited once committed (C1).
   mail-2026-10-28-1030; Claim All pressed in Alliance,
   Event, Regular, Season, System and Battle Report,
   nothing claimable.
+- [1534-queue-run.md](1534-queue-run.md) — the queue run
+  that started at 15:34 local, unit
+  mail-2026-10-28-1430; Claim All pressed in all seven
+  categories including In-app Purchases, nothing claimable.
