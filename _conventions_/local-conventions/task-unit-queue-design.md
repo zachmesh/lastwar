@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:33:00Z
-version: 0.3.0
+modified: 2026-10-28T10:40:00Z
+version: 0.4.0
 description: Proposal to run the routine as short task units drawn from a file queue instead of long segment runs
 status: proposal
 grounded_in:
@@ -53,7 +53,8 @@ session, and the evidence of 2026-10-27 and 2026-10-28 shows the cost.
 - **Executor loop** - the main agent's standing job under this
   design. It keeps executing where work is needed - take the device
   token, pick the best unit, run it, write its result, pick the next
-  one. The loop is the scheduler; there is no separate batch concept.
+  one. The loop is driven by one periodic ticker (section 6), not by
+  the three segment schedules, which this design retires.
 - **The 15 minute unit** - owner rule of 2026-10-28 - **each unit
   runs at most 15 minutes**. The unit is the scheduling quantum -
   when a unit ends, the loop re-reads the pool, so work that became
@@ -168,9 +169,44 @@ their lease - in text, YAML or JSON.
 The matching `_records_` execution file is still written as today
 (C1 append-only audit); the unit references it under `evidence`.
 
-## 6. The executor loop and the 15 minute unit
+## 6. The ticker and the executor loop
 
-The loop the main agent runs, indefinitely, while work exists.
+One scheduled job drives everything - the **ticker**, firing every
+30 minutes (owner direction 2026-10-28). The three segment
+schedules are gone; there is nothing else to coordinate. Each tick
+runs four steps.
+
+1. **Reap** - return units whose leases expired to `inbox` (or
+   dead-letter them when their attempts are spent).
+2. **Produce** - ask the tracker what is due and enqueue one unit
+   per due regular, idempotently, so a regular already queued or
+   running is never duplicated. Chain continuations are enqueued at
+   completion time by the executor (step 4 below); the producer
+   only seeds a chain's first unit and tops up chains whose next
+   unit is missing.
+3. **Execute** - run the executor loop below until no due unit
+   remains or the pass budget runs out (proposed 25 minutes,
+   inside the 30 minute interval). Partial units requeue safely,
+   so stopping mid-drain loses nothing.
+4. **Skip** - when nothing was enqueued and nothing executed, the
+   tick exits silently. An empty tick costs one tracker call.
+
+Overlap is expected and harmless - a pass still executing when the
+next tick fires holds the device token, and the new tick sees the
+token held and skips its execute step. Only one pass ever plays.
+
+Latency is bounded and measurable - a fresh unit waits at most one
+tick interval plus the remainder of the unit currently running
+(itself capped at 15 minutes). Expiry-critical work is protected by
+construction - the producer enqueues it ahead of its deadline
+(reset and phase times are known in advance) and the loop picks
+earliest expiry first. The stats report's `late` list is the
+feedback signal - if units start finishing late, the interval
+shortens to 15 minutes; the mechanism does not change.
+
+The executor loop itself, run by the main agent inside the tick's
+execute step, and equally by any owner-directed session that takes
+the token.
 
 1. Take the device token. No token, no game input - whoever holds
    it finishes their unit first (at most 15 minutes). Contention
@@ -213,13 +249,11 @@ All steps are idempotent at the unit level - before acting, the
 executor checks the game state the unit acts on (the standing
 check-first rule), so a re-executed unit does not double-claim.
 
-One honest limit - the loop runs inside agent sessions and
-scheduled triggers, not as a literal daemon. In practice the
-executor trigger fires frequently and each pass works through
-units in this order until the pool's urgent work is drained;
-between passes the pool simply waits in `inbox`. The unit cap is
-what makes that safe - no pass can be captured by one task for
-longer than 15 minutes.
+One honest limit - the loop runs inside the ticker's passes, not
+as a literal daemon; between ticks the pool simply waits in
+`inbox`. The unit cap is what makes that safe - no pass can be
+captured by one task for longer than 15 minutes, and no unit can
+starve the pool behind a long task the way the segment runs did.
 
 ## 7. What stays the same
 
@@ -229,6 +263,9 @@ longer than 15 minutes.
   activity metadata in `_activities_`.
 - The regulars tracker stays the cadence source of truth; the pool is
   a work distribution layer over it, not a replacement.
+- The `segment` field survives only as a reporting tag recording
+  which slice a regular belonged to under the old routine; nothing
+  schedules by it anymore.
 - The round summary for Slack assembles from the `done` units'
   structured result sections, gathered by `tools/queue.py stats`,
   instead of three segment records. The same command doubles as the
@@ -236,16 +273,20 @@ longer than 15 minutes.
 
 ## 8. Migration
 
-1. **Shadow mode (one day)** - the producer writes units each cycle
-   and the reaper runs, but executors do not claim; the segment crons
-   keep playing. Compare pool contents against the tracker daily to
-   prove the split is faithful.
-2. **Pilot** - segment 2 regulars (mail, help, gifts, train,
-   star-ceremony, vip) move to executor batches; segments 1 and 3 keep
-   their crons.
-3. **Full switch** - all regulars move; the three segment crons are
-   replaced by the producer plus a frequent executor trigger. The
-   segment cron definitions are retired only on the owner's word.
+1. **Shadow mode (one day)** - the ticker runs with its execute
+   step disabled - it reaps and produces, the segment crons keep
+   playing. Compare pool contents against the tracker to prove the
+   production is faithful and no regular is missed or duplicated.
+2. **Switch (on the owner's word)** - the ticker's execute step
+   turns on and the three segment crons are deleted in the same
+   move, with their definitions kept in the goal backup folder.
+   The Zombie Invasion rounds cron is replaced by chain production
+   inside the ticker; the Slack round summary switches to the
+   stats tool over `done` units.
+3. **Settle** - watch the stats report for a few days - late
+   finishes, dead letters, chain progress. Tune only two knobs if
+   the evidence asks for it - the tick interval and the pass
+   budget.
 
 ## 9. Questions put to the owner
 
