@@ -31,3 +31,8 @@ time and never edited once committed (C1).
   fifth truck refreshed N (free) then SSR for 1 Trade
   Contract (147 to 146) and dispatched, Trade Count 5 of 5,
   plunder already at the 4 of 4 daily cap.
+- [1610-queue-run.md](1610-queue-run.md) — queue ticker unit
+  trucks-2026-10-28-1457, executor ticker-1604; checked only -
+  Today's Trade Count 5 of 5 with "No more dispatches
+  available", one road truck still travelling on tap, Plunder
+  Count 4 of 4, Recover with no red dot. Nothing spent.

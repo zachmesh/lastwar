@@ -40,3 +40,9 @@ time and never edited once committed (C1).
   (2026-10-24) already CLAIMED. Nothing was dispatched or claimed.
   Entry note: the white pickup icon now sits at norm (54,650); a
   tap at (50,605) opened own-truck dispatch instead.
+
+- [1614-queue-run.md](1614-queue-run.md) — queue unit
+  secrets-2026-10-28-1457, executor ticker-1604; checked in full -
+  the same four settled cards, no Claim or Go button,
+  assists at the 5 of 5 daily cap, Reward Recovery's latest record
+  (2026-10-24 19:00) already CLAIMED. Nothing was dispatched or claimed.

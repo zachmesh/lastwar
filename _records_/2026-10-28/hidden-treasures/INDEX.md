@@ -36,3 +36,9 @@ time and never edited once committed (C1).
   unchanged - M1 x12, M2 x13, M3 x0, M4 x6, M5 x1, M6 x4, M7 x12 -
   M3 exhausted, no full set, both dig buttons grey, chest progress
   14 of 15. Nothing dug, no exchange attempted.
+
+- [1615-queue-run.md](1615-queue-run.md) — queue unit
+  treasures-2026-10-28-1457, executor ticker-1604; fragments
+  unchanged - M1 x12, M2 x13, M3 x0, M4 x6, M5 x1, M6 x4, M7 x12 -
+  M3 exhausted, no full set, both dig buttons grey, chest progress
+  14 of 15. Nothing dug, no exchange attempted.

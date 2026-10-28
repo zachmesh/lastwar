@@ -61,23 +61,23 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-28T12:43:41",
-  "note": "Checked in full: four settled cards, assists capped, Reward Recovery already CLAIMED, nothing to dispatch or claim"
+  "at": "2026-10-28T16:14:48",
+  "note": "Checked only: settled cards, assists capped, Recovery CLAIMED"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-28T12:45:04",
-  "note": "Checked in full: M3 exhausted, no full set, chest progress 14 of 15, nothing dug"
+  "at": "2026-10-28T16:15:54",
+  "note": "Checked only: M3 exhausted, no dig possible"
  },
  "trucks": {
   "status": "done",
-  "at": "2026-10-28T12:20:31",
-  "note": "Trade 5/5 Plunder 4/4 caps reached, nothing executable 1218 run"
+  "at": "2026-10-28T16:11:02",
+  "note": "Checked only: trade 5 of 5, plunder 4 of 4"
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-28T11:50:19",
-  "note": "Shop sweep, every daily pickup already claimed today, nothing bought"
+  "at": "2026-10-28T16:07:32",
+  "note": "Shop sweep, all daily pickups already claimed today, nothing bought"
  },
  "events": {
   "status": "done",
