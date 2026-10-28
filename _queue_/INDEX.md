@@ -4,7 +4,7 @@ created: 2026-10-28T10:22:00Z
 modified: 2026-10-28T10:22:00Z
 version: 0.1.0
 description: The pending, claimed and done task units of the play routine
-status: proposal
+status: live
 grounded_in:
   - source: owner request 2026-10-28 to design a task unit pool with short bounded executions
 ---
@@ -22,6 +22,6 @@ State lives in the subfolder a unit file sits in.
 - `done` - finished units carrying their structured result sections.
 
 `unit-template.md` is the shape every unit file follows. Units are
-managed with `tools/queue.py`. The design is a proposal under owner
-review - the live routine still runs on the segment schedules until
-the owner approves the migration.
+managed with `tools/queue.py`. The queue went live on 2026-10-28 -
+the ticker `lastwar-queue-ticker` produces and executes units, and
+the segment schedules are retired.

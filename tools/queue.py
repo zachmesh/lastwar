@@ -28,6 +28,10 @@ Usage:
   queue.py [--root DIR] token-release --executor NAME
   queue.py [--root DIR] reap                      # expired leases to inbox
   queue.py [--root DIR] stats [--format text|yaml|json]
+  queue.py [--root DIR] sync [--due-json FILE]
+             # one ticker production pass: reap, then enqueue one
+             # unit per regular the tracker marks due (idempotent);
+             # without --due-json it calls tools/regulars.py todo
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -41,8 +45,10 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
 DEFAULT_LEASE_MINUTES = 20
@@ -213,6 +219,131 @@ def pick_key(fields):
 # Commands
 # ---------------------------------------------------------------------
 
+# Production metadata for sync (design sections 4 and 6). Estimates
+# stay under the 15 minute unit cap; priorities follow the classes in
+# the design - vip expires at the daily reset, the windowed regulars
+# score inside live windows, the rest are standard.
+SYNC_PRIORITY = {"vip": 1, "passes": 2, "arms-race": 2, "radar": 2,
+                 "donations": 2, "trucks": 2, "events": 2}
+SYNC_EST_MINUTES = {"mail": 4, "help": 2, "gifts": 3, "vip": 2,
+                    "passes": 5, "secrets": 6, "treasures": 2,
+                    "radar": 10, "survivors": 3, "harvest": 3,
+                    "trucks": 12, "train": 4, "training": 4,
+                    "donations": 4, "events": 10, "arms-race": 12,
+                    "ghost-ops": 8, "star-ceremony": 3}
+LOCAL_TZ = ZoneInfo("America/Los_Angeles")
+
+
+def next_reset_utc(reset_local):
+    """Next occurrence of a local HH:MM reset, as a UTC ISO string."""
+    try:
+        hh, mm = (int(x) for x in reset_local.split(":"))
+    except (ValueError, AttributeError):
+        return ""
+    now_local = datetime.now(LOCAL_TZ)
+    candidate = now_local.replace(hour=hh, minute=mm, second=0,
+                                  microsecond=0)
+    if candidate <= now_local:
+        candidate += timedelta(days=1)
+    return iso(candidate.astimezone(timezone.utc))
+
+
+def typical_minutes(root, regular):
+    """Typical execution minutes for one task type, learned from the
+    pool itself - the median duration of its completed units, in
+    minutes rounded up and clamped to the unit cap, once at least 3
+    completed samples exist; the static production estimate before
+    that. Returns (minutes, sample_count)."""
+    samples = []
+    for f in list_units(root, "done"):
+        if f.get("regular") != regular:
+            continue
+        result = f.get("result", {})
+        if isinstance(result, dict) and \
+                result.get("status") == "done":
+            dur = result.get("duration_seconds")
+            if isinstance(dur, int) and dur > 0:
+                samples.append(dur)
+    if len(samples) < 3:
+        return SYNC_EST_MINUTES.get(regular, DEFAULT_EST_MINUTES), \
+            len(samples)
+    samples.sort()
+    median = samples[len(samples) // 2]
+    minutes = -(-median // 60)          # ceil to whole minutes
+    return max(1, min(UNIT_CAP_MINUTES, minutes)), len(samples)
+
+
+def write_new_unit(root, fields, regular):
+    os.makedirs(state_dir(root, "inbox"), exist_ok=True)
+    body = (f"# {regular}\n\nProduced by tools/queue.py. The "
+            "executor reads the activity metadata and the standing "
+            "rules before acting.\n")
+    write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
+
+
+def cmd_sync(args):
+    # 1. reap expired claims (same rule as the reap command)
+    reaped = 0
+    stamp = now_utc()
+    for f in list_units(args.root, "claimed"):
+        lease = parse_iso(f.get("lease_until", ""))
+        if lease and lease <= stamp and f.get("unit"):
+            if _release(args, f["unit"]) == 0:
+                reaped += 1
+    # 2. load the due list
+    if args.due_json:
+        with open(args.due_json, encoding="utf-8") as fh:
+            due_doc = json.load(fh)
+    else:
+        tracker = os.path.join(os.path.dirname(
+            os.path.abspath(__file__)), "regulars.py")
+        out = subprocess.run(
+            [sys.executable, tracker, "todo", "--json"],
+            capture_output=True, text=True, check=True)
+        due_doc = json.loads(out.stdout)
+    due_items = [i for i in due_doc.get("items", []) if i.get("due")]
+    # 3. produce, skipping regulars already queued or running
+    present = set()
+    for state in ("inbox", "claimed"):
+        for f in list_units(args.root, state):
+            if f.get("regular"):
+                present.add(f["regular"])
+    produced, already = [], []
+    for item in due_items:
+        regular = item["id"]
+        if regular in present:
+            already.append(regular)
+            continue
+        expires = ""
+        if item.get("cadence") == "daily-reset" and \
+                item.get("reset_local"):
+            expires = next_reset_utc(item["reset_local"])
+        fields = {
+            "unit": f"{regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}",
+            "regular": regular,
+            "activity": item.get("activity", ""),
+            "segment": item.get("segment", ""),
+            "priority": SYNC_PRIORITY.get(regular, 3),
+            "created_at": iso(now_utc()),
+            "expires_at": expires, "window": "",
+            "est_minutes": typical_minutes(args.root, regular)[0],
+            "chain_id": "", "chain_seq": "", "attempts": 0,
+            "max_attempts": DEFAULT_MAX_ATTEMPTS,
+            "claimed_by": "", "claimed_at": "", "lease_until": "",
+        }
+        if os.path.exists(unit_path(args.root, "inbox",
+                                    fields["unit"])):
+            already.append(regular)
+            continue
+        write_new_unit(args.root, fields, regular)
+        present.add(regular)
+        produced.append(fields["unit"])
+    print(json.dumps({"reaped": reaped, "due": len(due_items),
+                      "produced": produced, "already_queued": already},
+                     ensure_ascii=False))
+    return 0
+
+
 def chain_seq_next(root, chain_id):
     seq = 0
     for state in STATES:
@@ -232,6 +363,17 @@ def cmd_enqueue(args):
         return 1
     chain_seq = ""
     if args.chain_id:
+        # One unit, one task type - a chain is homogeneous. Refuse to
+        # extend a chain with a different regular than its existing
+        # units, so per-type statistics stay clean.
+        for state in STATES:
+            for f in list_units(args.root, state):
+                if f.get("chain_id") == args.chain_id and \
+                        f.get("regular") not in ("", args.regular):
+                    print(f"refused: chain {args.chain_id} belongs to "
+                          f"regular {f.get('regular')}, not "
+                          f"{args.regular}")
+                    return 1
         chain_seq = chain_seq_next(args.root, args.chain_id)
         unit = f"{args.regular}-{args.chain_id}-{chain_seq:03d}"
     else:
@@ -469,13 +611,16 @@ def gather_stats(root):
               "late": [], "expired_waiting": [], "overdue_claims": [],
               "result_status": {}, "chains": {}}
     durations = []
+    reg_durations = {}
     for state in STATES:
         units = list_units(root, state)
         report["by_state"][state] = len(units)
         for f in units:
             regular = f.get("regular", "?")
             entry = report["by_regular"].setdefault(
-                regular, {"inbox": 0, "claimed": 0, "done": 0})
+                regular, {"inbox": 0, "claimed": 0, "done": 0,
+                          "failed": 0, "late": 0,
+                          "duration_avg": None, "duration_max": None})
             entry[state] += 1
             chain = f.get("chain_id")
             if chain:
@@ -499,17 +644,29 @@ def gather_stats(root):
                 status = result.get("status", "?")
                 report["result_status"][status] = \
                     report["result_status"].get(status, 0) + 1
+                if status in ("failed", "skipped-needs-owner"):
+                    entry["failed"] += 1
                 dur = result.get("duration_seconds")
                 if isinstance(dur, int):
                     durations.append(dur)
+                    reg_durations.setdefault(regular, []).append(dur)
                 finished = parse_iso(result.get("finished_at", ""))
                 if expires and finished and finished > expires:
                     report["late"].append(f.get("unit"))
+                    entry["late"] += 1
     if durations:
         report["durations_seconds"] = {
             "count": len(durations),
             "avg": round(sum(durations) / len(durations), 1),
             "max": max(durations)}
+    for regular, values in reg_durations.items():
+        entry = report["by_regular"][regular]
+        entry["duration_avg"] = round(sum(values) / len(values), 1)
+        entry["duration_max"] = max(values)
+    for regular, entry in report["by_regular"].items():
+        est, samples = typical_minutes(root, regular)
+        entry["est_typical_minutes"] = est
+        entry["samples"] = samples
     return report
 
 
@@ -535,7 +692,12 @@ def cmd_stats(args):
         print("  by_regular:")
         for reg, counts in sorted(report["by_regular"].items()):
             print(f"    {reg}: inbox {counts['inbox']}, "
-                  f"claimed {counts['claimed']}, done {counts['done']}")
+                  f"claimed {counts['claimed']}, done {counts['done']}, "
+                  f"failed {counts['failed']}, late {counts['late']}, "
+                  f"duration_avg {counts['duration_avg']}, "
+                  f"duration_max {counts['duration_max']}, "
+                  f"est_typical_minutes {counts['est_typical_minutes']}"
+                  f" (n={counts['samples']})")
         if report["chains"]:
             print("  chains:")
             for chain, counts in sorted(report["chains"].items()):
@@ -558,8 +720,19 @@ def cmd_stats(args):
             if report[key]:
                 print(f"  {label}: {', '.join(report[key])}")
         for reg, counts in sorted(report["by_regular"].items()):
+            extra = ""
+            if counts["failed"]:
+                extra += f", failed {counts['failed']}"
+            if counts["late"]:
+                extra += f", late {counts['late']}"
+            if counts["duration_avg"] is not None:
+                extra += (f", dur avg {counts['duration_avg']}s"
+                          f" max {counts['duration_max']}s")
+            extra += (f", est ~{counts['est_typical_minutes']}m"
+                      f" (n={counts['samples']})")
             print(f"  {reg}: inbox {counts['inbox']}, "
-                  f"claimed {counts['claimed']}, done {counts['done']}")
+                  f"claimed {counts['claimed']}, done {counts['done']}"
+                  f"{extra}")
         for chain, counts in sorted(report["chains"].items()):
             print(f"  chain {chain}: done {counts['done']}, "
                   f"pending {counts['pending']}")
@@ -626,6 +799,10 @@ def main(argv=None):
 
     p = sub.add_parser("reap")
     p.set_defaults(fn=cmd_reap)
+
+    p = sub.add_parser("sync")
+    p.add_argument("--due-json", default="")
+    p.set_defaults(fn=cmd_sync)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],

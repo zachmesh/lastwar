@@ -87,11 +87,12 @@ def status_of(reg, state, now):
             return True, "due again (reset passed)"
     return False, "done " + done_at.strftime("%H:%M")
 
-def show(day, only_due, segment=None):
+def show(day, only_due, segment=None, as_json=False):
     regs = load_defs()
     state = load_state(day)
     now = datetime.now()
     rows = []
+    items = []
     for reg in regs:
         if segment is not None and reg.get("segment", 1) != segment:
             continue
@@ -100,6 +101,17 @@ def show(day, only_due, segment=None):
             continue
         mark = "DUE " if due else "ok  "
         rows.append(f"{mark} [{reg['id']}] {reg['name']} -- {label}")
+        items.append({
+            "id": reg["id"], "activity": reg.get("activity", ""),
+            "segment": reg.get("segment", 1),
+            "cadence": reg.get("cadence", ""),
+            "reset_local": reg.get("reset_local", ""),
+            "due": due, "label": label,
+        })
+    if as_json:
+        print(json.dumps({"date": day.isoformat(), "items": items},
+                         ensure_ascii=False))
+        return
     print(f"Regulars for {day.isoformat()} ({len(rows)} shown)")
     print("\n".join(rows) if rows else "Nothing due.")
 
@@ -110,6 +122,7 @@ def main():
         p = sub.add_parser(name)
         p.add_argument("--date", default=None)
         p.add_argument("--segment", type=int, default=None)
+        p.add_argument("--json", action="store_true")
     for name in ("done", "skip"):
         p = sub.add_parser(name)
         p.add_argument("id")
@@ -118,7 +131,8 @@ def main():
     args = ap.parse_args()
     day = date.fromisoformat(args.date) if getattr(args, "date", None) else date.today()
     if args.cmd in ("list", "todo"):
-        show(day, args.cmd == "todo", getattr(args, "segment", None))
+        show(day, args.cmd == "todo", getattr(args, "segment", None),
+             getattr(args, "json", False))
     elif args.cmd == "reset":
         p = state_path(day)
         if os.path.exists(p):

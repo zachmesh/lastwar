@@ -1,10 +1,10 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:40:00Z
-version: 0.4.0
-description: Proposal to run the routine as short task units drawn from a file queue instead of long segment runs
-status: proposal
+modified: 2026-10-28T10:50:00Z
+version: 0.5.0
+description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
+status: implemented
 grounded_in:
   - source: owner request 2026-10-28 to design a task unit pool with short bounded executions
   - source: run records of 2026-10-27 and 2026-10-28 in _records_
@@ -12,8 +12,11 @@ grounded_in:
 
 # Task unit queue design
 
-Status - proposal for owner review. Nothing in the live routine changes
-until the owner approves the migration in section 8.
+Status - implemented 2026-10-28 on the owner's direction. The ticker
+`lastwar-queue-ticker` is live, the three segment schedules and the
+Zombie Invasion rounds schedule are deleted (definitions backed up
+under the goal backup folder, cutover-2026-10-28), and execution runs
+on the queue. Section 8 records the validation evidence.
 
 ## 1. Problem
 
@@ -44,6 +47,15 @@ session, and the evidence of 2026-10-27 and 2026-10-28 shows the cost.
   and, once executed, its result and result statistics (sections 4
   and 5). The prose body is instructions for the executor; tools read
   only the YAML. Units are the only thing executors run.
+- **One unit, one task type** - owner rule of 2026-10-28. A unit
+  names exactly one regular and one activity, an executor never
+  merges two types into one unit or one result, and a chain is
+  homogeneous - every unit in it shares the same regular (the queue
+  tool refuses to extend a chain with a different regular). Work
+  that belongs to another type, even when a screen flow touches it
+  on the way, is executed and counted under that type's own unit.
+  This is what keeps the per-type statistics - durations, failures,
+  late finishes - clean enough to judge execution quality by type.
 - **Pool** - the `_queue_` type folder with three state subfolders.
   `inbox` holds pending units, `claimed` holds units under execution,
   `done` holds finished units. Moving a file is the state transition.
@@ -111,7 +123,7 @@ colon-free except timestamps, as elsewhere in this repository.
 | `created_at` | when the producer wrote the unit |
 | `expires_at` | after this the unit is worthless or degraded (reset, phase end); empty when none |
 | `window` | execution window constraint, for example an Arms Race phase or a duel posture; empty when none |
-| `est_minutes` | producer estimate; enqueue rejects anything above the 15 minute cap |
+| `est_minutes` | typical minutes for this task type, learned per section 5; enqueue rejects anything above the 15 minute cap |
 | `chain_id` | continuation chain this unit belongs to; empty for one-off units |
 | `chain_seq` | position inside the chain, 1 based |
 | `attempts` | how many times the unit has been claimed |
@@ -160,6 +172,16 @@ claimed list and count, evidence, follow-up). The `stats` mapping is
 open - each activity defines its own keys in its `_activities_`
 metadata (points gained, chests claimed, donations made, trucks
 dispatched), and executors pass them as key values at completion.
+
+**Learned estimates** - owner direction 2026-10-28. A task type's
+typical execution time is estimated from the pool itself - the
+median `duration_seconds` of its completed units, in minutes rounded
+up and clamped to the cap, once at least 3 completed samples exist;
+the static production defaults apply before that. `sync` stamps
+each new unit with the current learned estimate, and the stats
+report shows it next to the sample count, so a type whose typical
+time creeps toward the 15 minute cap is visible and gets split at
+intake instead of silently overrunning.
 Because the keys are structured, `tools/queue.py stats` aggregates
 reliably across the whole pool - counts by state and by regular,
 result status totals, duration averages and maxima, units finished
@@ -218,11 +240,12 @@ the token.
    is never requeued out from under a live executor) and
    incrementing `attempts`.
 3. Run the unit, at most 15 minutes. On time, finish the current
-   atomic in-game action, write the `_records_` file, complete the
-   unit with a `partial` result noting the remaining work, and move
-   it back to `inbox` - it keeps its `expires_at` and chain
-   position, so the loop or a later pass resumes it ahead of fresh
-   work.
+   atomic in-game action, write the `_records_` file, and complete
+   the unit with a `partial` result noting the remaining work. The
+   partial unit is an attempt record in `done`; the tracker still
+   shows the regular as due, so the next tick re-produces it and
+   the work resumes as a fresh unit - and the attempt stays in the
+   statistics instead of vanishing.
 4. On completion, write the `_records_` file, complete the unit
    (the result section lands in its frontmatter), rename `claimed`
    to `done`, and update the regulars tracker exactly as segment
@@ -271,22 +294,32 @@ starve the pool behind a long task the way the segment runs did.
   instead of three segment records. The same command doubles as the
   pool health report for the owner.
 
-## 8. Migration
+## 8. Migration - executed 2026-10-28
 
-1. **Shadow mode (one day)** - the ticker runs with its execute
-   step disabled - it reaps and produces, the segment crons keep
-   playing. Compare pool contents against the tracker to prove the
-   production is faithful and no regular is missed or duplicated.
-2. **Switch (on the owner's word)** - the ticker's execute step
-   turns on and the three segment crons are deleted in the same
-   move, with their definitions kept in the goal backup folder.
-   The Zombie Invasion rounds cron is replaced by chain production
-   inside the ticker; the Slack round summary switches to the
-   stats tool over `done` units.
+The owner directed the full move after validation, the same day.
+
+1. **Validation** - the queue tool passed scratch-root end-to-end
+   tests for enqueue, priority and expiry picking, token mutual
+   exclusion, atomic claim, completion with structured results,
+   lease reaping, dead-lettering after 3 attempts, chain numbering
+   and chain type homogeneity, sync idempotency (a second sync
+   produces nothing), VIP expiry stamping from the 19:00 reset,
+   and learned estimates (samples of 600, 660 and 720 seconds
+   produce an 11 minute estimate for the next unit of that type).
+   A live shadow sync against the real tracker produced exactly
+   the tracker's due set (zero at that moment - the skip path).
+2. **Switch** - the ticker `lastwar-queue-ticker` (every 30
+   minutes) was created with the full operating rules; the three
+   segment schedules and the Zombie Invasion rounds schedule were
+   deleted, their definitions backed up in the goal backup folder
+   under cutover-2026-10-28. Zombie Invasion became chain
+   production inside the ticker. The Slack round summary job is
+   unchanged for now - it reads `_records_`, which the ticker
+   keeps writing per unit.
 3. **Settle** - watch the stats report for a few days - late
-   finishes, dead letters, chain progress. Tune only two knobs if
-   the evidence asks for it - the tick interval and the pass
-   budget.
+   finishes, dead letters, chain progress, learned estimates.
+   Tune only two knobs if the evidence asks for it - the tick
+   interval and the pass budget.
 
 ## 9. Questions put to the owner
 
