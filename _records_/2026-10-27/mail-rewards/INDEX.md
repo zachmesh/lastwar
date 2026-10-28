@@ -1,7 +1,7 @@
 ---
 title: Mail Rewards on 2026-10-27
 created: 2026-10-27T09:32:00Z
-modified: 2026-10-28T01:30:00Z
+modified: 2026-10-28T05:53:00Z
 version: 1.0.0
 description: Index of Mail Rewards executions on 2026-10-27
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/mail-rewards/`](../../../_activities_/mail-rewa
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Access failed.** See the execution file for the detail.
+**Status — Done.** See the execution file for the detail.
 
 ## Executions
 
@@ -39,3 +39,9 @@ time and never edited once committed (C1).
   that started at 18:30 local; access failed - control channel
   unresolved-action lock across 3 reopened sessions, no input
   dispatched; no in-game frame observed this run.
+- [2230-segment-2-run.md](2230-segment-2-run.md) — the segment 2 run
+  that started at 22:30 local; Claim All in every category -
+  Alliance paid red gem x10 and badge 50 x4, Event paid the
+  Daily Participation, Glittering Market and Cold Wave mails;
+  the other categories held reports only, and no Train
+  arrival reward mail was pending.

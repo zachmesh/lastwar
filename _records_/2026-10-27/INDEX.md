@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-28T05:35:00Z
+modified: 2026-10-28T05:53:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -521,3 +521,50 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   training with their gaps in the notes). Diamonds stayed at
   998; nothing bought, no diamond spent, no speedup or stamina
   item burned.
+
+## 22:30 to about 22:52 — Segment 2 run, played end to end
+
+- Segment 2 run of the split routine (alliance and VIP).
+  Due at the open - mail, help, gifts, train and
+  star-ceremony in the new 4 hour cycle, plus VIP, unclaimed
+  all day and due again after the 19:00 reset. Control
+  worked from the first session; no different-device dialog
+  appeared. The run overlapped the tail of the 2203 segment
+  1 run - its leftover Alliance Techs detail panel was
+  closed untouched, because donations belong to segment 1.
+- Mail - Claim All in every category. Alliance paid the
+  Daily Donation Rankings mail (red gem x10, badge 50 x4);
+  Event paid Daily Participation Rewards, the Glittering
+  Market and Bitterly Cold Wave unclaimed mails (red gem
+  100 x1, food, coin and iron crates x30 each, EXP crate
+  x30). Battle Report, Season, System and Regular held
+  reports only; Purchases are receipts. No Train arrival
+  reward mail was pending - the Event train mails were
+  plain arrival and departure notices. Diamonds 998 to
+  1,008 from the claimed mail.
+- Help and gifts - Help All cleared xx HAWK xx and his two
+  research helps (own requests already full), and the
+  main-screen help bubble was tapped three times across
+  the run as new helps arrived. Gifts - Regular Claim All
+  239, Premium Claim All 20, and 9 more Regular that
+  arrived during the run; Gift Level 28 progress
+  168,946,820 to 168,970,030.
+- Train - a train was in preparation (conductor dontard,
+  Train Rating 74,750, about 23 minutes to departure) and
+  the account was verified aboard carriage 2 (own avatar
+  in the slot, 10 of 7). The 3 Trade Contract gift was NOT
+  completed - the Thank the Conductor dialog appeared
+  during entry and was closed before gifting while the
+  carriage was still unverified, and the dialog does not
+  reopen from the platform; no contracts were spent
+  (stock 147). Recorded as a miss on the ticket, not done.
+- VIP - the Daily Freebie was claimed after the reset
+  (puzzle piece x2, food, iron and coin crates x13 each),
+  and the login chest at the top right of the VIP screen
+  was claimed for 200 VIP points on a 51 day streak
+  (points 1,562,010 to 1,562,230); that chest is what kept
+  the profile VIP red dot lit after the freebie claim, and
+  the learning is folded into the VIP activity metadata.
+  Star Ceremony - no trophy icon at any sweep, checked
+  only. Nothing bought, no diamond spent, no donation
+  made in this segment.

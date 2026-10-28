@@ -30,34 +30,34 @@
   "note": "Drone Boost 11500 of 30000, rank 9; chests at 1500 and 10000 claimed plus cumulative chest at 3/2; top target missed inside red lines, next cumulative 3/8 locked, ranking reward due after phase roll"
  },
  "mail": {
-  "status": "skipped",
-  "at": "2026-10-27T18:31:45",
-  "note": "access-failed outcome_unknown lock cc-204/205/206, list_apps ok cc-204/206 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; eighteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:52:26",
+  "note": "Claim All Alliance (Daily Donation Rankings - ruby x10, badge 50x4) and Event (Daily Participation, Glittering Market, Cold Wave - ruby 100x1, food/coin/iron crates x30 each, EXP crate x30); Battle Report, Season, System, Regular Claim All pressed, reports only; Purchases receipts only; no Train arrival reward mail (train notices only)"
  },
  "help": {
-  "status": "skipped",
-  "at": "2026-10-27T18:31:45",
-  "note": "access-failed outcome_unknown lock cc-204/205/206, list_apps ok cc-204/206 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; eighteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:52:26",
+  "note": "Help All pressed in Help page (xx HAWK xx research requests cleared; own Lv30 Aircraft Center and Lv28 Drill Ground already full) plus main-screen help bubble tapped 3 times during the run, each answered Allies are very grateful"
  },
  "gifts": {
-  "status": "skipped",
-  "at": "2026-10-27T18:31:45",
-  "note": "access-failed outcome_unknown lock cc-204/205/206, list_apps ok cc-204/206 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; eighteenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:52:26",
+  "note": "Regular Claim All 239, Premium Claim All 20, plus 9 more Regular that arrived during the run; Premium all Claimed on recheck; Gift Level 28 progress 168946820 to 168970030"
  },
  "vip": {
-  "status": "skipped",
-  "at": "2026-10-27T02:31:31",
-  "note": "access-failed outcome_unknown lock cc-167/168/169, different-device dialog visible read-only, no input dispatched"
+  "status": "done",
+  "at": "2026-10-27T22:52:26",
+  "note": "Daily Freebie claimed after 19:00 reset (puzzle piece x2, food/iron/coin crates x13 each, countdown about 20h) plus daily login chest 200 VIP points (51-day streak); VIP points 1562010 to 1562230"
  },
  "train": {
   "status": "skipped",
-  "at": "2026-10-27T18:31:45",
-  "note": "access-failed outcome_unknown lock cc-204/205/206, list_apps ok cc-204/206 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; eighteenth consecutive blocked segment run"
+  "at": "2026-10-27T22:52:26",
+  "note": "Train in preparation (conductor dontard, rating 74750, about 23 min left); account aboard carriage 2 verified (own avatar in carriage 2 slot, 10/7) but the 3-contract gift was NOT completed - Thank dialog closed before gifting while verifying the carriage and does not reopen from the platform; no contracts spent, stock 147 unchanged"
  },
  "star-ceremony": {
   "status": "skipped",
-  "at": "2026-10-27T18:31:45",
-  "note": "access-failed outcome_unknown lock cc-204/205/206, list_apps ok cc-204/206 LastWar pid 40810 window 642x951 Chrome frontmost, no input dispatched, no in-game frame observed; eighteenth consecutive blocked segment run"
+  "at": "2026-10-27T22:52:26",
+  "note": "Checked at opening, station and closing sweeps - no trophy icon on the base screen at any point, no ceremony waiting; Event 38 was played and claimed on 2026-10-25"
  },
  "passes": {
   "status": "done",

@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T12:53:00Z
+modified: 2026-10-28T05:53:00Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -69,6 +69,14 @@ literal train, so both readings of the request are in the system.
   unobserved.
 - Boarded state shows as the own avatar inside the carriage and the
   occupancy count rising by one.
+- The THANK THE CONDUCTOR dialog does not reopen, learned
+  2026-10-27 - once it is closed (or the seat is otherwise
+  already held), tapping the own avatar opens MY PROFILE, the
+  carriage reward card only shows item tooltips, and the
+  conductor avatar opens the conductor profile. The gift
+  choice is made in the boarding moment or not at all, so
+  verify the carriage on the platform BEFORE tapping its plus
+  whenever the entry path allows it.
 - After the ride, the carriage reward arrives as an Event category
   mail titled Train arrival reward, with a Claim button on the mail.
   Claim it there - the reward does not credit silently. Claiming

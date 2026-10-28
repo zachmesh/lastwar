@@ -1,7 +1,7 @@
 ---
 title: Alliance Train on 2026-10-27
 created: 2026-10-27T09:32:00Z
-modified: 2026-10-28T01:30:00Z
+modified: 2026-10-28T05:53:00Z
 version: 1.0.0
 description: Index of Alliance Train executions on 2026-10-27
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/alliance-train/`](../../../_activities_/allianc
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Access failed.** See the execution file for the detail.
+**Status — Checked, aboard carriage 2; ticket gift not completed.** See the execution file for the detail.
 
 ## Executions
 
@@ -39,3 +39,9 @@ time and never edited once committed (C1).
   that started at 18:30 local; access failed - control channel
   unresolved-action lock across 3 reopened sessions, no input
   dispatched; no in-game frame observed this run.
+- [2230-segment-2-run.md](2230-segment-2-run.md) — the segment 2 run
+  that started at 22:30 local; a train was in preparation
+  (conductor dontard, rating 74,750) with the account aboard
+  carriage 2, but the 3 Trade Contract gift was not
+  completed - the Thank dialog was closed before gifting
+  while verifying the carriage and does not reopen.

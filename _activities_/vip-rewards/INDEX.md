@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T04:35:00Z
+modified: 2026-10-28T05:53:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,13 @@ Measured on 2026-10-25.
   round without it.
 - Login points - the screen offered 200 VIP points for tomorrow
   login, on a 48 day streak. Points appear to land without a claim.
+- Login chest, corrected 2026-10-27 - the points do need a claim.
+  The chest icon at the top right of the VIP screen carries a red
+  dot while the day login points wait, and the profile VIP badge
+  keeps its red dot for it even after the Daily Freebie is
+  claimed. Tapping the chest pays the day points (200 points on
+  a 51 day streak, 2026-10-27) and clears the dot. A VIP visit
+  is not finished until the chest is claimed too.
 - VIP level milestone rewards are claimed once, when a level is
   reached. None was pending at the first check.
 
