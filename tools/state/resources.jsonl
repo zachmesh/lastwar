@@ -11,3 +11,4 @@
 {"at": "2026-10-26T14:19:36", "note": "1403 segment 1 run closing HUD after harvest passes, radar claims and donations", "values": {"food": 351500000, "iron": 339700000, "coin": 19500000}}
 {"at": "2026-10-26T18:28:36", "note": "1803 segment 1 run closing HUD after harvest, radar claims, hero upgrade and donations", "values": {"food": 356800000, "iron": 342600000, "coin": 21800000}}
 {"at": "2026-10-27T22:35:32", "note": "2203 segment 1 run closing HUD after harvest, radar claims and training; coin before donation taps", "values": {"food": 110500000, "iron": 303700000, "coin": 22500000}}
+{"at": "2026-10-28T02:40:10", "note": "0203 segment 1 run closing HUD after harvest, radar claims, donations and Arms Race claims", "values": {"food": 130400000, "iron": 323600000, "coin": 33900000}}
