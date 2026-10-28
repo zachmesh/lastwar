@@ -15,7 +15,12 @@ activity lives in [`_activities_/survivor-intake/`](../../../_activities_/surviv
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Performed.** The 0203 run is the latest. See the execution files for the detail.
+**Status — Performed.** The 0203 run is the latest full run. See the execution files for the detail.
+
+- [0624-queue-run.md](0624-queue-run.md) — queue unit
+  survivors-2026-10-28-0603, partial; one dialog survivor
+  taken in at the gate, line not verified clear and Quick
+  Dispatch not run before the pass budget ended.
 
 ## Executions
 

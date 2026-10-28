@@ -17,6 +17,12 @@ time and never edited once committed (C1).
 
 **Status — Performed, target met.** The 0203 run is the latest. See the execution files for the detail.
 
+- [0604-queue-run.md](0604-queue-run.md) — queue unit
+  arms-race-2026-10-28-0603; Tech Research phase, score 0 of
+  30,000, cumulative chest 9 of 18 not claimable, nothing
+  claimed; all scoring paths are red lines, recorded as a
+  red-line miss (skipped-needs-owner).
+
 ## Executions
 
 - [0203-segment-1-run.md](0203-segment-1-run.md) — the segment 1 run

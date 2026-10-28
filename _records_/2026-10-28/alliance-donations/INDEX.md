@@ -15,7 +15,12 @@ activity lives in [`_activities_/alliance-donations/`](../../../_activities_/all
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Performed.** The 0203 run is the latest. See the execution files for the detail.
+**Status — Performed.** The 0611 run is the latest. See the execution files for the detail.
+
+- [0611-queue-run.md](0611-queue-run.md) — queue unit
+  donations-2026-10-28-0603; 10 coin donations at 700 coin
+  to Rallied Defense, Tech Donation Today 2,200 to 3,000,
+  coin button greyed with a 00:07:34 timer.
 
 ## Executions
 

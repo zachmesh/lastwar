@@ -409,3 +409,58 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   bought. cleared false, successor enqueued to start now,
   tracker untouched (partial). Detail in
   [zombie-invasion/0545-queue-run.md](zombie-invasion/0545-queue-run.md).
+
+## 06:04 to about 06:10 — Queue ticker, Arms Race unit, Tech Research red-line miss
+
+- Executor ticker-0604. Live phase Tech Research with
+  about 53 minutes left, score 0 against thresholds 6,250,
+  12,500 and 30,000; cumulative chest 9 of 18, not
+  claimable; ranking chest preview only in its lagged
+  state. Nothing claimed.
+- Every scoring path is a red line (research speedups,
+  diamond packs, or starting research), matching the known
+  Tech Research finding. Unit completed as
+  skipped-needs-owner and the tracker skipped with that
+  reason. Diamonds 653, nothing bought. Detail in
+  [arms-race/0604-queue-run.md](arms-race/0604-queue-run.md).
+
+## 06:11 to about 06:19 — Queue ticker, donations unit, 10 coin donations, today 3,000
+
+- Executor ticker-0604, unit donations-2026-10-28-0603.
+  Recommended Rallied Defense (6 of 10) took 10 coin
+  donations at 700 coin each until the count ran out and
+  the coin button greyed with a 00:07:34 timer. Tech
+  Donation Today 2,200 to 3,000 (800 points). Diamond
+  button never used; the daily reward settles at the
+  19:00 reset with no claim button. Detail in
+  [alliance-donations/0611-queue-run.md](alliance-donations/0611-queue-run.md).
+
+## 06:13 to about 06:16 — Queue ticker, radar unit, release-day clear to 0 of 40
+
+- Executor ticker-0604, unit radar-2026-10-28-0603. Duel
+  Day 3 release posture. Two Quick Execute batches (10 and
+  20 stamina) and three Claim All batches cleared stored
+  tasks 7 of 40 to 0 of 40; radar points 2,911 to 2,924
+  (13 rewards claimed, including coin 1.4M, 1.2M and
+  116.1K across the batches). Stamina 77 to 48. Four map
+  pins remain standing, as in the 0203 clear. Detail in
+  [radar-tasks/0616-queue-run.md](radar-tasks/0616-queue-run.md).
+
+## 06:17 to about 06:19 — Queue ticker, harvest unit, all bubbles collected
+
+- Executor ticker-0604, unit harvest-2026-10-28-0603.
+  All production bubbles collected: food 135.8M to
+  138.6M, iron 328.8M to 331.4M, coin 39.5M to 41.4M
+  (post-radar baselines). Two taps fell through to the
+  Iron Mine panel, closed untouched both times. No Armed
+  Truck claim observed. Detail in
+  [resource-collection/0619-queue-run.md](resource-collection/0619-queue-run.md).
+
+## 06:20 to about 06:24 — Queue ticker, survivors unit, one dialog survivor taken in, partial
+
+- Executor ticker-0604, unit survivors-2026-10-28-0603.
+  One dialog survivor at the front gate was taken in; the
+  rest of the line was not verified clear and Quick
+  Dispatch was not run before the pass budget ended.
+  Unit recorded partial, tracker untouched. Detail in
+  [survivor-intake/0624-queue-run.md](survivor-intake/0624-queue-run.md).

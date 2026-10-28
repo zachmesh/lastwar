@@ -1,13 +1,13 @@
 {
  "harvest": {
   "status": "done",
-  "at": "2026-10-28T02:40:24",
-  "note": "All bubbles collected - titanium factories x5, iron, coin (+1.8M single tap), food (+2.8M one farmland tap), Armed Truck rewards claimed EXP 12.8M iron 1.4M coin 927K food 1.4M"
+  "at": "2026-10-28T06:20:26",
+  "note": "All bubbles collected, food 138.6M iron 331.4M coin 41.4M, 0619 queue unit"
  },
  "radar": {
   "status": "done",
-  "at": "2026-10-28T02:40:24",
-  "note": "Release day - stored 8/40 to 0/40, points 2898 to 2911, three Claim All batches claimed; Quick Execute x1 (10 stamina); Rare Gold Mine pin dispatched, gathering finishes about 02:43, claim next run; 4 special pins remain"
+  "at": "2026-10-28T06:17:06",
+  "note": "Release-day clear 7/40 to 0/40, points 2911 to 2924, 0616 queue unit"
  },
  "survivors": {
   "status": "done",
@@ -21,13 +21,13 @@
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-28T02:40:24",
-  "note": "Rallied Defense (recommended) - 3 coin donations at 700 coin until coin button greyed with 00:04:16 timer; Tech Donation Today 1550 to 1950; daily reward is ranking settlement, no hand claim"
+  "at": "2026-10-28T06:12:15",
+  "note": "10 coin donations to Rallied Defense, today 2200 to 3000, 0611 queue unit"
  },
  "arms-race": {
-  "status": "done",
-  "at": "2026-10-28T02:40:25",
-  "note": "Hero Advancement TARGET MET - Adam Lv.122 to 123 with 79.0M EXP for 39500 of 12000, rank 6, cumulative 51000; all three point chests claimed plus cumulative chest at 9 of 8 (now 9 of 18); ranking chest preview only, settles at phase end, next segment 1 run checks"
+  "status": "skipped",
+  "at": "2026-10-28T06:07:57",
+  "note": "Tech Research phase score 0, all scoring paths red lines (speedups/packs/starting research), miss recorded 0604 queue unit"
  },
  "help": {
   "status": "done",

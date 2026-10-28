@@ -15,7 +15,12 @@ activity lives in [`_activities_/radar-tasks/`](../../../_activities_/radar-task
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Performed.** The 0203 run is the latest. See the execution files for the detail.
+**Status — Performed.** The 0616 run is the latest. See the execution files for the detail.
+
+- [0616-queue-run.md](0616-queue-run.md) — queue unit
+  radar-2026-10-28-0603; Day 3 release, stored 7 of 40 to
+  0 of 40, points 2,911 to 2,924 in three Claim All
+  batches, stamina 77 to 48; four pins remain standing.
 
 ## Executions
 

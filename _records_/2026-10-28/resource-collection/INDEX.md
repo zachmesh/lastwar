@@ -15,7 +15,12 @@ activity lives in [`_activities_/resource-collection/`](../../../_activities_/re
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Performed.** The 0203 run is the latest. See the execution files for the detail.
+**Status — Performed.** The 0619 run is the latest. See the execution files for the detail.
+
+- [0619-queue-run.md](0619-queue-run.md) — queue unit
+  harvest-2026-10-28-0603; all bubbles collected, food
+  135.8M to 138.6M, iron 328.8M to 331.4M, coin 39.5M to
+  41.4M; no Armed Truck claim observed.
 
 ## Executions
 
