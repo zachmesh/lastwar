@@ -65,14 +65,16 @@ execution.
 - Coin collection, owner instruction 2026-10-28 - the coins
   this event pays collect behind the task collection icon and
   are received only when it is tapped. Every zombie unit shall
-  collect from it. The icon is a tiny icon along the top of
-  the map screen, toward the left but not far right and not
-  at the far corner (owner refinements 2026-10-28, converging
-  from an initial top right mention to top left, then not too
-  right) - usually a red icon with a number on it, the
-  accumulated count. Easy to miss at a glance, so scan the
-  top-left stretch of the top edge for the small red numbered
-  icon; go straight there, tap it,
+  collect from it. The icon shows as a gift box with a red
+  dot carrying a number - the count of task rewards waiting
+  to be claimed (owner word 2026-10-28; at the owner's
+  reading the dot showed 4, four task rewards to claim). It
+  sits along the top of the map screen, toward the left but
+  not far right and not at the far corner (owner refinements
+  2026-10-28). Scan the top-left stretch of the top edge for
+  the gift box with the red numbered dot; go straight there,
+  tap it, claim the waiting task rewards - and never tap any
+  price-tagged Claim All inside (standing red line),
   and record the collected amount as coins_collected alongside
   coin_before and coin_after. The first executor to reach it
   confirms the exact appearance and position in its record.
@@ -116,10 +118,10 @@ execution.
 ## What is known from 2026-10-28
 
 - Owner word 2026-10-28 - the event's coins are collected from
-  the task collection icon (tap to collect) - a tiny icon
-  along the top of the map screen, toward the left but not
-  far right, usually red with a number on it (location
-  refined by the owner 2026-10-28). No executor had tapped it before
+  the task collection icon (tap to collect) - it shows as a
+  gift box with a red dot carrying a number, the count of
+  task rewards waiting (4 at the owner's 2026-10-28 reading),
+  along the top of the map screen toward the left. No executor had tapped it before
   this instruction; collecting from it is now part of every
   zombie unit.
 - First sight, round 1 - the event page timer read 2 days 16
