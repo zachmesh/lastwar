@@ -44,13 +44,15 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 
-BATCH_CAP_MINUTES = 15          # owner rule 2026-10-28
+UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
 DEFAULT_LEASE_MINUTES = 20
 DEFAULT_EST_MINUTES = 5
+DEFAULT_MAX_ATTEMPTS = 3
 STATES = ("inbox", "claimed", "done")
 TOKEN_NAME = "device-token.md"
 FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
             "created_at", "expires_at", "window", "est_minutes",
+            "chain_id", "chain_seq", "attempts", "max_attempts",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
                 "duration_seconds", "executor", "summary", "claimed",
@@ -211,8 +213,29 @@ def pick_key(fields):
 # Commands
 # ---------------------------------------------------------------------
 
+def chain_seq_next(root, chain_id):
+    seq = 0
+    for state in STATES:
+        for f in list_units(root, state):
+            if f.get("chain_id") == chain_id:
+                try:
+                    seq = max(seq, int(f.get("chain_seq", 0)))
+                except (TypeError, ValueError):
+                    pass
+    return seq + 1
+
+
 def cmd_enqueue(args):
-    unit = f"{args.regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}"
+    if args.est_minutes > UNIT_CAP_MINUTES:
+        print(f"refused: est_minutes {args.est_minutes} exceeds the "
+              f"{UNIT_CAP_MINUTES} minute unit cap - split the task")
+        return 1
+    chain_seq = ""
+    if args.chain_id:
+        chain_seq = chain_seq_next(args.root, args.chain_id)
+        unit = f"{args.regular}-{args.chain_id}-{chain_seq:03d}"
+    else:
+        unit = f"{args.regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}"
     path = unit_path(args.root, "inbox", unit)
     if os.path.exists(path):
         print(f"already queued: {unit}")
@@ -224,6 +247,8 @@ def cmd_enqueue(args):
         "created_at": iso(now_utc()),
         "expires_at": args.expires_at or "", "window": args.window or "",
         "est_minutes": args.est_minutes,
+        "chain_id": args.chain_id or "", "chain_seq": chain_seq,
+        "attempts": 0, "max_attempts": args.max_attempts,
         "claimed_by": "", "claimed_at": "", "lease_until": "",
     }
     body = (f"# {args.regular}\n\nProduced by tools/queue.py. The "
@@ -272,6 +297,10 @@ def cmd_claim(args):
         return 1
     fields, body = read_unit(path)
     stamp = now_utc()
+    try:
+        fields["attempts"] = int(fields.get("attempts", 0)) + 1
+    except (TypeError, ValueError):
+        fields["attempts"] = 1
     fields["claimed_by"] = args.executor
     fields["claimed_at"] = iso(stamp)
     fields["lease_until"] = iso(stamp + timedelta(
@@ -323,11 +352,40 @@ def cmd_complete(args):
     return 0
 
 
+def _dead_letter(root, path, fields, body):
+    fields["result"] = {
+        "status": "failed",
+        "started_at": fields.get("claimed_at", ""),
+        "finished_at": iso(now_utc()),
+        "duration_seconds": "",
+        "executor": fields.get("claimed_by", ""),
+        "summary": "attempts exhausted - dead lettered",
+        "claimed": [], "claimed_count": 0,
+        "evidence": "", "follow_up": "inspect and re-enqueue manually",
+        "stats": {},
+    }
+    for key in ("claimed_by", "claimed_at", "lease_until"):
+        fields[key] = ""
+    os.makedirs(state_dir(root, "done"), exist_ok=True)
+    target = unit_path(root, "done", fields.get("unit", ""))
+    write_unit(path, fields, body)
+    os.rename(path, target)
+
+
 def _release(args, unit):
     state, path = find_unit(args.root, unit)
     if state != "claimed":
         return 1
     fields, body = read_unit(path)
+    try:
+        attempts = int(fields.get("attempts", 0))
+        max_attempts = int(fields.get("max_attempts",
+                                      DEFAULT_MAX_ATTEMPTS))
+    except (TypeError, ValueError):
+        attempts, max_attempts = 0, DEFAULT_MAX_ATTEMPTS
+    if attempts >= max_attempts:
+        _dead_letter(args.root, path, fields, body)
+        return 0
     for key in ("claimed_by", "claimed_at", "lease_until"):
         fields[key] = ""
     fields.pop("result", None)
@@ -363,7 +421,7 @@ def cmd_token_acquire(args):
     fields = {"claimed_by": args.executor,
               "claimed_at": iso(now_utc()),
               "lease_until": iso(now_utc() + timedelta(
-                  minutes=BATCH_CAP_MINUTES))}
+                  minutes=UNIT_CAP_MINUTES))}
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as fh:
         fh.write("---\n"
@@ -409,7 +467,7 @@ def gather_stats(root):
     report = {"generated_at": iso(stamp),
               "by_state": {}, "by_regular": {}, "durations_seconds": {},
               "late": [], "expired_waiting": [], "overdue_claims": [],
-              "result_status": {}}
+              "result_status": {}, "chains": {}}
     durations = []
     for state in STATES:
         units = list_units(root, state)
@@ -419,6 +477,14 @@ def gather_stats(root):
             entry = report["by_regular"].setdefault(
                 regular, {"inbox": 0, "claimed": 0, "done": 0})
             entry[state] += 1
+            chain = f.get("chain_id")
+            if chain:
+                centry = report["chains"].setdefault(
+                    chain, {"done": 0, "pending": 0})
+                if state == "done":
+                    centry["done"] += 1
+                else:
+                    centry["pending"] += 1
             expires = parse_iso(f.get("expires_at", ""))
             result = f.get("result", {})
             if not isinstance(result, dict):
@@ -470,6 +536,11 @@ def cmd_stats(args):
         for reg, counts in sorted(report["by_regular"].items()):
             print(f"    {reg}: inbox {counts['inbox']}, "
                   f"claimed {counts['claimed']}, done {counts['done']}")
+        if report["chains"]:
+            print("  chains:")
+            for chain, counts in sorted(report["chains"].items()):
+                print(f"    {chain}: done {counts['done']}, "
+                      f"pending {counts['pending']}")
     else:
         print(f"queue stats at {report['generated_at']}")
         print(f"  states: " + ", ".join(
@@ -489,6 +560,9 @@ def cmd_stats(args):
         for reg, counts in sorted(report["by_regular"].items()):
             print(f"  {reg}: inbox {counts['inbox']}, "
                   f"claimed {counts['claimed']}, done {counts['done']}")
+        for chain, counts in sorted(report["chains"].items()):
+            print(f"  chain {chain}: done {counts['done']}, "
+                  f"pending {counts['pending']}")
     return 0
 
 
@@ -506,6 +580,9 @@ def main(argv=None):
     p.add_argument("--expires-at", default="")
     p.add_argument("--est-minutes", type=int, default=DEFAULT_EST_MINUTES)
     p.add_argument("--window", default="")
+    p.add_argument("--chain-id", default="")
+    p.add_argument("--max-attempts", type=int,
+                   default=DEFAULT_MAX_ATTEMPTS)
     p.set_defaults(fn=cmd_enqueue)
 
     p = sub.add_parser("list")
@@ -513,7 +590,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_list)
 
     p = sub.add_parser("next")
-    p.add_argument("--budget-minutes", type=int, default=BATCH_CAP_MINUTES)
+    p.add_argument("--budget-minutes", type=int, default=UNIT_CAP_MINUTES)
     p.set_defaults(fn=cmd_next)
 
     p = sub.add_parser("claim")

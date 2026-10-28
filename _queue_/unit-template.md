@@ -7,7 +7,11 @@ priority: <1 expiry-critical, 2 windowed, 3 standard>
 created_at: <ISO 8601 UTC>
 expires_at: <ISO 8601 UTC or empty>
 window: <phase or posture constraint or empty>
-est_minutes: <producer estimate>
+est_minutes: <producer estimate, never above 15>
+chain_id: <continuation chain id or empty>
+chain_seq: <position inside the chain or empty>
+attempts: 0
+max_attempts: 3
 claimed_by: <empty until claimed>
 claimed_at: <empty until claimed>
 lease_until: <empty until claimed>

@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:27:00Z
-version: 0.2.0
+modified: 2026-10-28T10:33:00Z
+version: 0.3.0
 description: Proposal to run the routine as short task units drawn from a file queue instead of long segment runs
 status: proposal
 grounded_in:
@@ -50,16 +50,30 @@ session, and the evidence of 2026-10-27 and 2026-10-28 shows the cost.
 - **Producer** - a short job that reads the due list from
   `tools/regulars.py` and writes one unit file per due regular into
   `inbox`. It never touches the device.
-- **Executor** - a short-lived agent session that claims units and
-  plays them. An executor batch is bounded by the owner rule of
-  2026-10-28 - **at most 15 minutes of execution, then it stops,
-  releases the device, and lets other work be scheduled**. Within a
-  batch an executor may finish several units back to back.
-- **Device token** - exactly one executor may hold the Mac window at a
-  time. The token is itself a lease file in `claimed`; taking the game
-  window without the token is out of bounds for every session,
-  including owner-directed ad hoc sessions such as Zombie Invasion,
-  which take the token the same way instead of colliding.
+- **Executor loop** - the main agent's standing job under this
+  design. It keeps executing where work is needed - take the device
+  token, pick the best unit, run it, write its result, pick the next
+  one. The loop is the scheduler; there is no separate batch concept.
+- **The 15 minute unit** - owner rule of 2026-10-28 - **each unit
+  runs at most 15 minutes**. The unit is the scheduling quantum -
+  when a unit ends, the loop re-reads the pool, so work that became
+  due or urgent in the meantime is picked up at the next boundary,
+  at most 15 minutes later. A task that cannot fit in 15 minutes is
+  split into units at intake, never stretched.
+- **Continuation chain** - a long activity is a chain of units under
+  one `chain_id`. Each finished unit reports in its result stats
+  whether the activity is exhausted; if not, the next unit of the
+  chain is enqueued and the activity keeps going across as many
+  quanta as it needs. Zombie Invasion is the model case - it runs
+  until the nearby zombies are cleared, unit after unit, under its
+  standing stop rules (cleared, or the chain budget of 3 hours),
+  while higher priority units slip in between its units whenever
+  their time arrives.
+- **Device token** - exactly one executor may hold the Mac window at
+  a time, for one unit at a time. The token is itself a lease file
+  in `claimed`; taking the game window without the token is out of
+  bounds for every session, including owner-directed ad hoc
+  sessions, which join the pool as units instead of colliding.
 
 ## 3. Pool layout
 
@@ -92,11 +106,15 @@ colon-free except timestamps, as elsewhere in this repository.
 | `regular` | regular id from tools/regulars.json |
 | `activity` | activity type folder name for the run record |
 | `segment` | owning segment under the current routine, kept for reporting |
-| `priority` | 1 expiry-critical, 2 windowed, 3 standard |
+| `priority` | 1 expiry-critical, 2 windowed, 3 standard, 4 background |
 | `created_at` | when the producer wrote the unit |
 | `expires_at` | after this the unit is worthless or degraded (reset, phase end); empty when none |
 | `window` | execution window constraint, for example an Arms Race phase or a duel posture; empty when none |
-| `est_minutes` | producer estimate, used by the batch budget rule |
+| `est_minutes` | producer estimate; enqueue rejects anything above the 15 minute cap |
+| `chain_id` | continuation chain this unit belongs to; empty for one-off units |
+| `chain_seq` | position inside the chain, 1 based |
+| `attempts` | how many times the unit has been claimed |
+| `max_attempts` | claims allowed before the unit dead-letters as failed (default 3) |
 | `claimed_by` | executor name once claimed |
 | `claimed_at` | claim time |
 | `lease_until` | claim expiry; past it the unit returns to inbox |
@@ -110,6 +128,8 @@ Priority classes from the current regulars.
   radar on release days (claims score at claim time), donations before
   the daily settlement, trucks on a duel UR day.
 - **3 standard** - everything else.
+- **4 background** - continuation chains that soak up idle quanta
+  and always yield at the next boundary (Zombie Invasion units).
 
 ## 5. Result and result statistics
 
@@ -148,37 +168,58 @@ their lease - in text, YAML or JSON.
 The matching `_records_` execution file is still written as today
 (C1 append-only audit); the unit references it under `evidence`.
 
-## 6. Claim protocol and the 15 minute batch
+## 6. The executor loop and the 15 minute unit
 
-1. The executor takes the device token first (atomic rename of the
-   token file into its claimed slot). No token, no game input - it
-   exits and the scheduler retries later. This replaces collision and
-   stand-down with waiting.
-2. It picks the inbox unit with the earliest `expires_at`, ties broken
-   by priority then by age, whose `est_minutes` fits the remaining
-   batch budget. Claiming is an atomic rename `inbox` to `claimed`
-   plus stamping `claimed_by`, `claimed_at` and `lease_until`
-   (default lease 20 minutes, longer than the batch cap so a unit is
-   never requeued out from under a live executor).
-3. It plays the unit, writes the `_records_` file, completes the unit
-   (the result section lands in its frontmatter), renames `claimed`
-   to `done`, and updates the regulars tracker exactly as segment
-   runs do today.
-4. The batch clock starts at the token claim. When 15 minutes are up
-   the executor finishes its current atomic in-game action, writes a
-   `partial` result for the unit in hand if it is mid-unit, moves that
-   unit back to `inbox` with its remaining work noted, releases the
-   token, and exits. Partial units keep their original `expires_at`,
-   so they are picked first by the next batch.
-5. A reaper pass (part of the producer job) returns any `claimed` unit
-   whose `lease_until` has passed to `inbox`, clearing the claim
-   stamps. A crashed executor therefore strands at most one unit for
-   at most one lease period - the direct fix for the 2026-10-26 lock
-   failure mode at the work level.
+The loop the main agent runs, indefinitely, while work exists.
+
+1. Take the device token. No token, no game input - whoever holds
+   it finishes their unit first (at most 15 minutes). Contention
+   becomes a short wait, never a collision or a stand-down.
+2. Pick the inbox unit with the earliest `expires_at`, ties broken
+   by priority then by age. Claim it by atomic rename `inbox` to
+   `claimed`, stamping `claimed_by`, `claimed_at`, `lease_until`
+   (default lease 20 minutes - longer than the unit cap, so a unit
+   is never requeued out from under a live executor) and
+   incrementing `attempts`.
+3. Run the unit, at most 15 minutes. On time, finish the current
+   atomic in-game action, write the `_records_` file, complete the
+   unit with a `partial` result noting the remaining work, and move
+   it back to `inbox` - it keeps its `expires_at` and chain
+   position, so the loop or a later pass resumes it ahead of fresh
+   work.
+4. On completion, write the `_records_` file, complete the unit
+   (the result section lands in its frontmatter), rename `claimed`
+   to `done`, and update the regulars tracker exactly as segment
+   runs do today. If the unit belongs to a chain and its result
+   stats say the activity is not exhausted, enqueue the next unit
+   of the chain - unless the chain's own stop rules end it (for
+   Zombie Invasion, nearby zombies cleared, or the 3 hour chain
+   budget spent; the budget is carried in the chain units'
+   structured fields, not in prose).
+5. Release the token and go back to step 1. Every unit boundary is
+   a scheduling point - a VIP unit that lands while a background
+   chain is mid-run waits at most for the current unit to end.
+6. A reaper pass (part of the producer job) returns any `claimed`
+   unit whose `lease_until` has passed to `inbox`, clearing the
+   claim stamps. A crashed executor therefore strands at most one
+   unit for at most one lease period - the direct fix for the
+   2026-10-26 lock failure mode at the work level.
+7. Dead letters - a unit whose `attempts` reach `max_attempts` is
+   not requeued again. It moves to `done` with result status
+   `failed`, and the stats report surfaces it, so a poison unit
+   cannot spin the loop forever.
 
 All steps are idempotent at the unit level - before acting, the
 executor checks the game state the unit acts on (the standing
 check-first rule), so a re-executed unit does not double-claim.
+
+One honest limit - the loop runs inside agent sessions and
+scheduled triggers, not as a literal daemon. In practice the
+executor trigger fires frequently and each pass works through
+units in this order until the pool's urgent work is drained;
+between passes the pool simply waits in `inbox`. The unit cap is
+what makes that safe - no pass can be captured by one task for
+longer than 15 minutes.
 
 ## 7. What stays the same
 
@@ -206,13 +247,14 @@ check-first rule), so a re-executed unit does not double-claim.
    replaced by the producer plus a frequent executor trigger. The
    segment cron definitions are retired only on the owner's word.
 
-## 9. Open questions for the owner
+## 9. Questions put to the owner
 
 - Lease length - 20 minutes proposed. Longer is safer against slow
-  screens, shorter recovers crashed work faster.
-- Should ad hoc owner-directed sessions (Zombie Invasion and similar)
-  join the pool as units, or only take the device token? Token-only is
-  the smaller change and already fixes the collision.
-- Batch size - time-boxed only (15 minutes), or also a unit cap
-  (proposed 5) so one batch cannot monopolize a full expiry window
-  with many tiny units.
+  screens, shorter recovers crashed work faster. **Still open.**
+- Ad hoc sessions as units or token-only - **resolved by the owner
+  2026-10-28** - they join the pool as continuation chains (section
+  2), Zombie Invasion first.
+- Batch size - **resolved by the owner 2026-10-28** - there is no
+  batch. The cap is per unit (15 minutes) and the executor loop
+  re-picks after every unit, which is what lets other tasks ingest
+  when their time arrives.

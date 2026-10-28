@@ -12,7 +12,7 @@ grounded_in:
 # Task unit queue
 
 Instance folder. Holds the task units produced from the regulars list
-and worked by short executor batches, as designed in
+and worked unit by unit by the executor loop, as designed in
 [task unit queue design](../_conventions_/local-conventions/task-unit-queue-design.md).
 
 State lives in the subfolder a unit file sits in.
