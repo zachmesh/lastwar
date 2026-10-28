@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T11:05:00Z
+modified: 2026-10-28T11:10:00Z
 level: L1
-version: 1.3.2
+version: 1.3.3
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -53,6 +53,15 @@ execution.
   the first two executions the verified yield is zero - the
   Lv.10 target card carries no coin line, and coins appear only
   as a possible drop in the reward pools.
+- Objective, owner instruction 2026-10-28 - maximize coin.
+  Coin is one of the most needed resources on this account,
+  and this activity exists to produce it. Units are judged on
+  coins collected per hour (coins_collected over duration).
+  Once the paying sources are pinned down, prefer them -
+  the best coin per stamina across target levels, any reward
+  crates the kills drop, and the event Rewards track when it
+  pays coins - and record the yield per source in the unit
+  stats so the preference is evidence, not habit.
 - Coin collection, owner instruction 2026-10-28 - the coins
   this event pays collect behind the task collection icon and
   are received only when it is tapped. Every zombie unit shall
