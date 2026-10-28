@@ -50,3 +50,9 @@ time and never edited once committed (C1).
   Free Supply, both weekly pass Daily Pickups, the Super Monthly
   Pass Daily Gift and the Season Weekly Pass Daily Pickup plus
   Daily Freebie all claimed; no paid button touched.
+
+- [2257-segment-3-run.md](2257-segment-3-run.md) — the segment 3 run
+  that started at 22:57 local; every pickup verified already
+  claimed for today - Free Supply Claimed, Drone Parts and Coin
+  weekly passes Already claimed today, Super Monthly Pass Daily
+  Pickup Claimed with 25 days left; no paid button touched.

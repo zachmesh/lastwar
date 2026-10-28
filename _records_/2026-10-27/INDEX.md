@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-28T05:53:00Z
+modified: 2026-10-28T06:16:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -568,3 +568,38 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   Star Ceremony - no trophy icon at any sweep, checked
   only. Nothing bought, no diamond spent, no donation
   made in this segment.
+
+## 22:57 to about 23:16 — Segment 3 run, completed
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursdays only). Duel Day 3
+  Age of Science, not a duel UR day.
+- Control worked from the first session (cc-15); one open_app
+  returned outcome_unknown but observation showed the game
+  already open and every later input landed, so the run
+  proceeded. No different-device dialog appeared.
+- Secrets - one Claim collected all finished tasks (SSR Train
+  Refugees x2 and SSR Protect Refugee Camp PERFECT; the UR
+  Rescue Officer had been plundered by three players at 21:05
+  to 21:07 and settled with the claim); 5 ally assists to the
+  daily cap 5 of 5; Reward Recovery already CLAIMED; no pending
+  tasks remained to deploy.
+- Treasures - fragments M1 x13, M2 x14, M3 x1, M4 x7, M5 x2,
+  M6 x5, M7 x13; one full set dug - iron and food crates x12,
+  coin crates x24, medals x900, 1 minute speedups x50 and a
+  blue gem x200.
+- Trucks - Trade Count 4 of 5, all four slots still en route
+  (arrivals about 04:00), so the fifth dispatch waits for a
+  return; plunder cap already 4 of 4 from the 1857 run; trade
+  Reward Recovery already CLAIMED.
+- Passes - verified in the shop: Free Supply Claimed, Drone
+  Parts and Coin weekly passes already claimed today, Super
+  Monthly Pass Daily Pickup Claimed (25 days left); Legendary
+  Take All and all Renew or paid buttons untouched.
+- Events - full sweep clean: Arms Race Hero Advancement at
+  11,500 points (third chest unreached, segment 1 owns it),
+  Halloween Days 01 to 03 checked with Day 04 not open, Season
+  Individual Goals all Claimed, no bouncing chest or reward
+  red dot left. Diamonds 1,008 to 1,009 from a game-side
+  credit; nothing bought, no diamond spent.

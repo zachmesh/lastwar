@@ -51,3 +51,12 @@ time and never edited once committed (C1).
   All 8 secret tasks Mega Deployed with UR Only off; none finished
   to claim; Reward Recovery latest record 2026-10-24 already
   CLAIMED.
+
+- [2257-segment-3-run.md](2257-segment-3-run.md) — the segment 3 run
+  that started at 22:57 local; control clean from the first
+  session, no different-device dialog. One Claim took all finished
+  tasks (SSR Train Refugees x2 and Protect Refugee Camp PERFECT;
+  UR Rescue Officer settled after being plundered three times at
+  21:05 to 21:07); 5 ally assists completed to the 5 of 5 cap;
+  no pending tasks left to deploy; Reward Recovery latest record
+  2026-10-24 already CLAIMED.

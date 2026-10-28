@@ -49,3 +49,9 @@ time and never edited once committed (C1).
   missions entry). Fragments M1 x12, M2 x13, M3 x0, M4 x5, M5 x2,
   M6 x4, M7 x12, chest 13 of 15 - M3 at 0 means no complete set
   of 7, so no dig was possible and nothing was spent.
+
+- [2257-segment-3-run.md](2257-segment-3-run.md) — the segment 3 run
+  that started at 22:57 local; fragments M1 x13, M2 x14, M3 x1,
+  M4 x7, M5 x2, M6 x5, M7 x13, chest 13 of 15 - one full set dug,
+  paying iron and food crates x12, coin crates x24, medals x900,
+  1 minute speedups x50 and a blue gem x200; M3 exhausted again.

@@ -51,3 +51,10 @@ time and never edited once committed (C1).
   R to N free then UR with 1 Trade Contract (148 to 147), Trade
   Count 4 of 5; plunders 4 of 4 all won, 12 UR shards from the
   first three wins plus further loot.
+
+- [2257-segment-3-run.md](2257-segment-3-run.md) — the segment 3 run
+  that started at 22:57 local; trade entered via the badged truck
+  icon after a relaunch. Trade Count 4 of 5 with all four slots
+  still en route (arrivals about 04:00), so the fifth dispatch
+  waits for a return; plunder cap already 4 of 4 from the 1857
+  run; trade Reward Recovery already CLAIMED. Nothing spent.

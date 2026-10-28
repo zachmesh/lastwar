@@ -51,3 +51,10 @@ time and never edited once committed (C1).
   Claim All paid 200 points and EXP chests x2 to 5,800; Arms
   Race Drone Boost at 0 points with nothing claimable; final
   sweep clean.
+
+- [2257-segment-3-run.md](2257-segment-3-run.md) — the segment 3 run
+  that started at 22:57 local; full Events and Season sweep -
+  Arms Race Hero Advancement at 11,500 points with the third
+  chest unreached (segment 1), Zombie and Wanted Boss previews
+  with no claims, Halloween Days 01 to 03 checked, Season
+  Individual Goals all Claimed; final sweep clean.
