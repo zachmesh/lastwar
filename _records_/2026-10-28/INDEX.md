@@ -561,3 +561,31 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   [zombie-invasion/0738-queue-run.md](zombie-invasion/0738-queue-run.md).
 - Token released, diamonds 653 throughout, nothing
   bought, no speedup or stamina item burned.
+
+## 08:04 to about 08:15 — Queue ticker pass ticker-0804, zombie unit 012 two marches dispatched
+
+- Executor ticker-0804. Sync produced nothing new (survivors
+  already queued by the planner); the zombie chain unit 012
+  was already pending, so no seeding. One unit executed
+  under the device token; all other inbox units are staged
+  for future slots (49 upcoming).
+- Zombie unit 012 - Store medals exactly 140 at the open,
+  still 20 below the Coin Chest (SR) price. Two Lv.10
+  marches dispatched - Squad 1 (march time about 1 second,
+  home cluster; kill inferred from the completed march and
+  the stamina charge, not LOOT-verified) and Squad 2, still
+  marching to X891 Y845 with 2:04 left at the unit cap
+  (March Queues 1 of 4, stamina 51 to 41). Parallel dispatch
+  was impossible on a 1-second first march, so
+  squads_parallel 1. No LOOT claim this unit (no gift badge
+  visible on the March Queues bar while the march was out),
+  coins_collected 0, coin carried at unit 011's closing
+  49,595,336 unverified (HUD 49.5M throughout), medals 140
+  to 140, chests_opened 0. cleared false, successor
+  enqueued to start now. Detail in
+  [zombie-invasion/0804-queue-run.md](zombie-invasion/0804-queue-run.md).
+- Coordinate lesson recorded in the unit record - the
+  Events page bottom buttons need normalized y about 925;
+  taps at y 899 land on the next-wave text line.
+- Token released, diamonds 653 throughout, nothing
+  bought, no speedup or stamina item burned.

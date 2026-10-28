@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T14:47:00Z
+modified: 2026-10-28T15:15:00Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -290,6 +290,15 @@ execution.
   panel (which held only unit 009's own kill), and the
   coin baseline never moved. Handovers are therefore
   evidence to check, not a guaranteed deferred kill.
+- The Events page bottom buttons (Search, Boss Search,
+  back) sit lower than their scaled-screenshot centre
+  suggests (measured by unit 012 on 2026-10-28) — taps at
+  normalized y 899 land on the next-wave text line and do
+  nothing; y about 925 dispatches. The March Queues bar
+  itself was seen on the world map at top-left under the
+  resource bar (unit 012 closing screenshot, 1 of 4 with a
+  march out to X891 Y845), with no gift badge visible at
+  its right end while that march was out.
 - The Events tab bar SHIFTS between openings in the same
   pass (measured by unit 011 on 2026-10-28) — a batched
   tap at the Zombie Invasion tab's earlier position
