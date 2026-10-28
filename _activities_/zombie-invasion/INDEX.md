@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T12:02:00Z
+modified: 2026-10-28T12:49:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -271,6 +271,25 @@ execution.
 - An unexplained plus 10 stamina read followed one kill in
   two independent records (round 1 and queue unit 001) -
   a stamina drop from the kill or chunked regeneration.
+
+- Parallel dispatch ACHIEVED by unit 010 on 2026-10-28 —
+  two batched sequences put Squad 1 and Squad 2 on the
+  march at the same time (March Queues 2 of 4 in one
+  screenshot, one Returning under a Victory banner, the
+  other still going out). The second batch inserted one
+  extra tap before March — the deploy panel's squad-2
+  tab at about 397,920 in window coordinates (the second
+  of the four squad tabs along the bottom of the deploy
+  panel). It worked because the wave's targets were
+  adjacent piles (X982 Y934 and X984 Y933) — the second
+  Search found a distinct target, not the taken one.
+  Both rows claimed together for 536,000 coins.
+- A march left in flight at a unit's end does NOT always
+  leave a LOOT row — unit 007's closing march toward
+  about X871 Y458 produced no row in unit 009's LOOT
+  panel (which held only unit 009's own kill), and the
+  coin baseline never moved. Handovers are therefore
+  evidence to check, not a guaranteed deferred kill.
 
 ## Open questions
 

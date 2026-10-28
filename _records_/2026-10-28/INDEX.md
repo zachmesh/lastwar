@@ -362,3 +362,50 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   start now, tracker untouched (partial). Diamonds 653
   throughout, nothing bought. Detail in
   [zombie-invasion/0504-queue-run.md](zombie-invasion/0504-queue-run.md).
+
+## 05:34 to about 05:44 — Queue ticker, Zombie Invasion chain unit 009, new wave kill, 268,000 coins collected, handover row absent
+
+- Executor ticker-0534. Sync produced no due regulars (all
+  planner units staged for 06:03 and later); zombie chain
+  unit 009 was the only due unit, claimed under the device
+  token.
+- Coin panel read exactly at open — Owned 36,024,573. The old
+  wave was exhausted (Search answered not found, next wave
+  about 3 minutes 41 seconds out); the unit waited out the
+  countdown and the new wave's first Search found a Lv.10
+  Invading Zombies target at once.
+- Squad 1 killed it on a 6 second march (25.05M against
+  670,000, Easy Win); its LOOT row (X986 Y950) was claimed
+  with the plain-blue Claim All — coin 36,024,573 to
+  36,292,573 exactly, 268,000 coins collected, medal x10 in
+  the same row (balance 90 to 100 by row evidence, still
+  below the 160 SR chest price, no redemption).
+- The LOOT panel held ONLY that row — unit 007's deferred
+  X871 Y458 handover march produced no claimable row
+  (recorded as a discrepancy, nothing owed). squads_parallel
+  1 — the 6 second march resolved before a second dispatch
+  could land, a march-duration limit, not the queue cap of
+  4. cleared false, successor enqueued to start now,
+  tracker untouched (partial). Diamonds 653 throughout,
+  nothing bought. Detail in
+  [zombie-invasion/0534-queue-run.md](zombie-invasion/0534-queue-run.md).
+
+## 05:45 to about 05:48 — Queue ticker, Zombie Invasion chain unit 010, parallel dispatch achieved, two kills, 536,000 coins collected
+
+- Executor ticker-0534, same pass as unit 009. Two batched
+  dispatch sequences (the second selecting the deploy
+  panel's squad-2 tab before March) put Squad 1 and Squad 2
+  on the march simultaneously — March Queues 2 of 4, one
+  Returning with a Victory banner while the other was still
+  going out. squads_parallel 2, the chain's first parallel
+  unit; the targets were adjacent piles, X982 Y934 and
+  X984 Y933.
+- Both LOOT rows were claimed in one panel (badge 2) with
+  the plain-blue Claim All — coin 36,292,573 to 36,828,573
+  exactly, 536,000 coins collected (2 rows at 268,000),
+  medals 100 to 120 by row evidence, still below the 160
+  SR chest price, no redemption. Stamina 92 to 72 on the
+  two march charges, diamonds 653 throughout, nothing
+  bought. cleared false, successor enqueued to start now,
+  tracker untouched (partial). Detail in
+  [zombie-invasion/0545-queue-run.md](zombie-invasion/0545-queue-run.md).
