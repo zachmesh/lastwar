@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T11:15:00Z
+modified: 2026-10-28T11:20:00Z
 level: L1
-version: 1.3.4
+version: 1.3.5
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: owner standing rule in main chat on 2026-10-28 - a session may run for a few hours and that is fine, keep playing until the nearby zombies are exhausted
   - source: owner correction in side chat on 2026-10-28 - do not limit zombie invasion tasks per day and no hour budget, superseding an earlier same-day instruction to also stop once 3 hours had been played
   - source: owner instruction in side chat on 2026-10-28 - pause one hour only if no zombies are nearby, otherwise keep running zombie invasion continuously during the entire activity period
+  - source: owner instruction in side chat on 2026-10-28 - dispatch multiple teams in parallel during zombie invasion so rewards accumulate faster
   - source: owner instruction in main chat on 2026-10-28 - play proceeds in rounds so other tasks get their time, and rounds keep cycling while the event is available
 ---
 
@@ -53,6 +54,14 @@ execution.
   the first two executions the verified yield is zero - the
   Lv.10 target card carries no coin line, and coins appear only
   as a possible drop in the reward pools.
+- Parallel teams, owner instruction 2026-10-28 - dispatch
+  multiple teams in parallel. Do not send one squad, wait for
+  its return, then send the next - keep as many squads
+  marching on nearby zombies simultaneously as the game
+  allows, so kills and rewards accumulate faster inside each
+  unit's 15 minutes. Record how many squads ran in parallel
+  as the stat squads_parallel (and the game's parallel cap
+  once observed).
 - Objective, owner instruction 2026-10-28 - maximize coin.
   Coin is one of the most needed resources on this account,
   and this activity exists to produce it. Units are judged on
