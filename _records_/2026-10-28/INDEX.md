@@ -704,3 +704,11 @@ instruction of 2026-10-25 to run all the regulars every four hours.
 - Token released, diamonds 658 on the base screen at the
   open and the train close, nothing bought, no speedup or
   stamina item burned.
+- Trucks (queue ticker-1204, 12:18) - Intercity Trade checked:
+  Trade Count 5 of 5 and Plunder Count 4 of 4, both daily caps
+  already reached, so no dispatch and no plunder possible this
+  slot. One truck still on the road; taps opened no Truck
+  Details, consistent with it still travelling (latest
+  Dispatch History record 2026-10-28 07:24:42 SSR). Recover
+  showed no red dot. Nothing spent. Detail in
+  [truck-plunder/1218-queue-run.md](truck-plunder/1218-queue-run.md).
