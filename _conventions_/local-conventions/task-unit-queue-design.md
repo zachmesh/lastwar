@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:50:00Z
-version: 0.5.0
+modified: 2026-10-28T10:55:00Z
+version: 0.6.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -16,7 +16,7 @@ Status - implemented 2026-10-28 on the owner's direction. The ticker
 `lastwar-queue-ticker` is live, the three segment schedules and the
 Zombie Invasion rounds schedule are deleted (definitions backed up
 under the goal backup folder, cutover-2026-10-28), and execution runs
-on the queue. Section 8 records the validation evidence.
+on the queue. Section 9 records the validation evidence.
 
 ## 1. Problem
 
@@ -122,6 +122,8 @@ colon-free except timestamps, as elsewhere in this repository.
 | `priority` | 1 expiry-critical, 2 windowed, 3 standard, 4 background |
 | `created_at` | when the producer wrote the unit |
 | `expires_at` | after this the unit is worthless or degraded (reset, phase end); empty when none |
+| `planned_for` | the cadence window (time slot) this unit serves; with `regular` it is the unit's identity |
+| `not_before` | the unit may not be claimed before this time; set to the window start for future windows |
 | `window` | execution window constraint, for example an Arms Race phase or a duel posture; empty when none |
 | `est_minutes` | typical minutes for this task type, learned per section 5; enqueue rejects anything above the 15 minute cap |
 | `chain_id` | continuation chain this unit belongs to; empty for one-off units |
@@ -278,7 +280,37 @@ as a literal daemon; between ticks the pool simply waits in
 captured by one task for longer than 15 minutes, and no unit can
 starve the pool behind a long task the way the segment runs did.
 
-## 7. What stays the same
+## 7. The planner - a 12 hour horizon
+
+Production has two layers (owner direction 2026-10-28).
+
+- **The planner** (`lastwar-queue-planner`, every 4 hours) is the
+  primary producer. Each run stages the next 12 hours of work -
+  one unit per (regular, time slot): every-run regulars at every
+  4 hour boundary inside the horizon, the daily-reset regular at
+  its reset, the Thursday regular on Thursdays. Future units carry
+  `planned_for` (their slot) and `not_before` (the slot start);
+  the executor's pick and claim both refuse a unit before its
+  time, so staged work waits in the pool until its slot arrives.
+- **No duplication** means exactly this - the same unit for the
+  same time slot is never added twice. The (regular, planned_for)
+  pair is the invariant, enforced in one shared production path:
+  if a unit with that pair exists in inbox, claimed or done, no
+  producer adds another. A regular the tracker already counts as
+  done for the current slot gets no phantom unit either - the
+  planner checks the tracker before staging the current slot.
+- **The ticker's sync** is the safety net under the planner - it
+  produces the current slot's unit for anything the tracker marks
+  due (work that appeared between planner runs, manual tracker
+  changes), through the same invariant, so the two producers can
+  never double-stage.
+- A unit whose slot has fully passed unexecuted is expired into
+  `done` with status `expired` by the next reap - the following
+  slot's unit supersedes it, and the miss stays visible in the
+  statistics. Chains are not planned; they are seeded and
+  continued by the ticker as before.
+
+## 8. What stays the same
 
 - The red lines, the kick rule for the different-device dialog, the
   Arms Race just-enough rule and every other standing order bind units
@@ -294,7 +326,7 @@ starve the pool behind a long task the way the segment runs did.
   instead of three segment records. The same command doubles as the
   pool health report for the owner.
 
-## 8. Migration - executed 2026-10-28
+## 9. Migration - executed 2026-10-28
 
 The owner directed the full move after validation, the same day.
 
@@ -321,7 +353,7 @@ The owner directed the full move after validation, the same day.
    Tune only two knobs if the evidence asks for it - the tick
    interval and the pass budget.
 
-## 9. Questions put to the owner
+## 10. Questions put to the owner
 
 - Lease length - 20 minutes proposed. Longer is safer against slow
   screens, shorter recovers crashed work faster. **Still open.**

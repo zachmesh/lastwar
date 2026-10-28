@@ -6,6 +6,8 @@ segment: <1, 2 or 3>
 priority: <1 expiry-critical, 2 windowed, 3 standard>
 created_at: <ISO 8601 UTC>
 expires_at: <ISO 8601 UTC or empty>
+planned_for: <cadence window this unit serves, ISO 8601 UTC>
+not_before: <claim not allowed before this time, or empty>
 window: <phase or posture constraint or empty>
 est_minutes: <producer estimate, never above 15>
 chain_id: <continuation chain id or empty>

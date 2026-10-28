@@ -57,7 +57,8 @@ DEFAULT_MAX_ATTEMPTS = 3
 STATES = ("inbox", "claimed", "done")
 TOKEN_NAME = "device-token.md"
 FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
-            "created_at", "expires_at", "window", "est_minutes",
+            "created_at", "expires_at", "planned_for", "not_before",
+            "window", "est_minutes",
             "chain_id", "chain_seq", "attempts", "max_attempts",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
@@ -282,14 +283,9 @@ def write_new_unit(root, fields, regular):
 
 
 def cmd_sync(args):
-    # 1. reap expired claims (same rule as the reap command)
-    reaped = 0
-    stamp = now_utc()
-    for f in list_units(args.root, "claimed"):
-        lease = parse_iso(f.get("lease_until", ""))
-        if lease and lease <= stamp and f.get("unit"):
-            if _release(args, f["unit"]) == 0:
-                reaped += 1
+    # 1. reap expired claims and expire stale inbox units
+    reaped = _reap_claimed(args.root)
+    expired = _expire_stale(args.root)
     # 2. load the due list
     if args.due_json:
         with open(args.due_json, encoding="utf-8") as fh:
@@ -302,44 +298,23 @@ def cmd_sync(args):
             capture_output=True, text=True, check=True)
         due_doc = json.loads(out.stdout)
     due_items = [i for i in due_doc.get("items", []) if i.get("due")]
-    # 3. produce, skipping regulars already queued or running
-    present = set()
-    for state in ("inbox", "claimed"):
-        for f in list_units(args.root, state):
-            if f.get("regular"):
-                present.add(f["regular"])
+    # 3. produce the unit for each due regular's current window -
+    #    the (regular, window) invariant in _produce_for_window is
+    #    what keeps sync and the planner from ever duplicating
     produced, already = [], []
+    now_local = datetime.now(LOCAL_TZ)
     for item in due_items:
-        regular = item["id"]
-        if regular in present:
-            already.append(regular)
-            continue
-        expires = ""
-        if item.get("cadence") == "daily-reset" and \
-                item.get("reset_local"):
-            expires = next_reset_utc(item["reset_local"])
-        fields = {
-            "unit": f"{regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}",
-            "regular": regular,
-            "activity": item.get("activity", ""),
-            "segment": item.get("segment", ""),
-            "priority": SYNC_PRIORITY.get(regular, 3),
-            "created_at": iso(now_utc()),
-            "expires_at": expires, "window": "",
-            "est_minutes": typical_minutes(args.root, regular)[0],
-            "chain_id": "", "chain_seq": "", "attempts": 0,
-            "max_attempts": DEFAULT_MAX_ATTEMPTS,
-            "claimed_by": "", "claimed_at": "", "lease_until": "",
-        }
-        if os.path.exists(unit_path(args.root, "inbox",
-                                    fields["unit"])):
-            already.append(regular)
-            continue
-        write_new_unit(args.root, fields, regular)
-        present.add(regular)
-        produced.append(fields["unit"])
-    print(json.dumps({"reaped": reaped, "due": len(due_items),
-                      "produced": produced, "already_queued": already},
+        planned_local = cycle_start_local(item, now_local)
+        unit = _produce_for_window(
+            args.root, item, planned_local,
+            duel_window_text(item["id"], planned_local))
+        if unit:
+            produced.append(unit)
+        else:
+            already.append(item["id"])
+    print(json.dumps({"reaped": reaped, "expired": expired,
+                      "due": len(due_items), "produced": produced,
+                      "already_queued": already},
                      ensure_ascii=False))
     return 0
 
@@ -354,6 +329,195 @@ def chain_seq_next(root, chain_id):
                 except (TypeError, ValueError):
                     pass
     return seq + 1
+
+
+SEGMENT_ANCHORS_PLAN = {1: 6 * 60 + 3, 2: 6 * 60 + 30, 3: 6 * 60 + 57}
+DUEL_ANCHOR_LOCAL = datetime(2026, 10, 25, 19, 0)
+RADAR_RELEASE_DAYS = {1, 3, 5}
+
+
+def cycle_start_local(item, when_local):
+    """Start of the cadence window containing when_local, mirroring
+    the tracker rules - every-run windows start at the segment
+    anchors every 4 hours, daily-reset at the reset time,
+    weekly-thu at Thursday 00:00."""
+    cadence = item.get("cadence", "")
+    if cadence == "daily-reset":
+        reset = item.get("reset_local") or "19:00"
+        hh, mm = (int(x) for x in reset.split(":"))
+        boundary = when_local.replace(hour=hh, minute=mm, second=0,
+                                      microsecond=0)
+        if when_local < boundary:
+            boundary -= timedelta(days=1)
+        return boundary
+    if cadence == "weekly-thu":
+        day = when_local - timedelta(days=(when_local.weekday() - 3) % 7)
+        return day.replace(hour=0, minute=0, second=0, microsecond=0)
+    anchor = SEGMENT_ANCHORS_PLAN.get(item.get("segment", 1), 363)
+    cur = when_local.hour * 60 + when_local.minute
+    delta = (cur - anchor) % 240
+    return when_local - timedelta(minutes=delta,
+                                  seconds=when_local.second,
+                                  microseconds=when_local.microsecond)
+
+
+def plan_windows(item, now_local, horizon_end):
+    """Window starts to stage for one regular - the current window
+    plus every window that starts inside the horizon."""
+    cadence = item.get("cadence", "")
+    if cadence == "daily-reset":
+        step = timedelta(days=1)
+    elif cadence == "weekly-thu":
+        step = timedelta(days=7)
+    else:
+        step = timedelta(hours=4)
+    out = []
+    cand = cycle_start_local(item, now_local)
+    while cand <= horizon_end:
+        if cadence != "weekly-thu" or \
+                cand + timedelta(days=1) > now_local:
+            out.append(cand)
+        cand += step
+    return out
+
+
+def duel_window_text(regular, planned_local):
+    naive = planned_local.replace(tzinfo=None)
+    duel_day = (naive - DUEL_ANCHOR_LOCAL).days % 7 + 1
+    if regular == "radar":
+        posture = "release" if duel_day in RADAR_RELEASE_DAYS \
+            else "stack"
+        return f"duel day {duel_day} - radar {posture}"
+    if regular == "trucks" and duel_day == 2:
+        return "duel day 2 - UR trucks, Mega UR only"
+    if regular == "arms-race":
+        return f"duel day {duel_day}"
+    return ""
+
+
+def _produce_for_window(root, item, planned_local, window=""):
+    """Enqueue the unit for one (regular, window) pair, or return
+    None when that pair already exists in any state - the pool's
+    anti-duplication invariant, shared by sync and plan."""
+    regular = item["id"]
+    planned_utc = planned_local.astimezone(timezone.utc)
+    planned_iso = iso(planned_utc)
+    for state in STATES:
+        for f in list_units(root, state):
+            if f.get("regular") == regular and \
+                    f.get("planned_for") == planned_iso:
+                return None
+    cadence = item.get("cadence", "")
+    if cadence in ("daily-reset", "weekly-thu"):
+        expires_dt = planned_utc + timedelta(days=1)
+    else:
+        expires_dt = planned_utc + timedelta(hours=4)
+    fields = {
+        "unit": f"{regular}-{planned_local.strftime('%Y-%m-%d-%H%M')}",
+        "regular": regular,
+        "activity": item.get("activity", ""),
+        "segment": item.get("segment", ""),
+        "priority": SYNC_PRIORITY.get(regular, 3),
+        "created_at": iso(now_utc()),
+        "expires_at": iso(expires_dt),
+        "planned_for": planned_iso,
+        "not_before": planned_iso if planned_utc > now_utc() else "",
+        "window": window,
+        "est_minutes": typical_minutes(root, regular)[0],
+        "chain_id": "", "chain_seq": "", "attempts": 0,
+        "max_attempts": DEFAULT_MAX_ATTEMPTS,
+        "claimed_by": "", "claimed_at": "", "lease_until": "",
+    }
+    if os.path.exists(unit_path(root, "inbox", fields["unit"])):
+        return None
+    write_new_unit(root, fields, regular)
+    return fields["unit"]
+
+
+def _reap_claimed(root):
+    moved = 0
+    stamp = now_utc()
+
+    class Shim:
+        pass
+    for f in list_units(root, "claimed"):
+        lease = parse_iso(f.get("lease_until", ""))
+        if lease and lease <= stamp and f.get("unit"):
+            shim = Shim()
+            shim.root = root
+            if _release(shim, f["unit"]) == 0:
+                moved += 1
+    return moved
+
+
+def _expire_stale(root):
+    """Inbox units whose window has fully passed move to done with
+    status expired - the next window's unit supersedes them, and the
+    statistics keep the miss visible instead of losing it."""
+    moved = 0
+    stamp = now_utc()
+    for f in list_units(root, "inbox"):
+        expires = parse_iso(f.get("expires_at", ""))
+        if expires and expires <= stamp and f.get("unit"):
+            state, path = find_unit(root, f["unit"])
+            fields, body = read_unit(path)
+            fields["result"] = {
+                "status": "expired", "started_at": "",
+                "finished_at": iso(stamp), "duration_seconds": "",
+                "executor": "",
+                "summary": "window passed before execution",
+                "claimed": [], "claimed_count": 0, "evidence": "",
+                "follow_up": "none", "stats": {}}
+            os.makedirs(state_dir(root, "done"), exist_ok=True)
+            write_unit(path, fields, body)
+            os.rename(path, unit_path(root, "done", f["unit"]))
+            moved += 1
+    return moved
+
+
+def cmd_plan(args):
+    reaped = _reap_claimed(args.root)
+    expired = _expire_stale(args.root)
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    with open(defs_path, encoding="utf-8") as fh:
+        regs = json.load(fh)["regulars"]
+    # Tracker truth for the current window - a regular the tracker
+    # already counts as done for this window gets no phantom unit;
+    # future windows are always staged.
+    if args.tracker_json:
+        with open(args.tracker_json, encoding="utf-8") as fh:
+            tracker_doc = json.load(fh)
+    else:
+        tracker = os.path.join(os.path.dirname(
+            os.path.abspath(__file__)), "regulars.py")
+        out = subprocess.run(
+            [sys.executable, tracker, "list", "--json"],
+            capture_output=True, text=True, check=True)
+        tracker_doc = json.loads(out.stdout)
+    due_now = {i["id"]: bool(i.get("due"))
+               for i in tracker_doc.get("items", [])}
+    now_local = datetime.now(LOCAL_TZ)
+    horizon_end = now_local + timedelta(hours=args.hours)
+    planned, present, skipped_done = [], 0, 0
+    for item in regs:
+        current = cycle_start_local(item, now_local)
+        for w in plan_windows(item, now_local, horizon_end):
+            if w == current and not due_now.get(item["id"], True):
+                skipped_done += 1
+                continue
+            unit = _produce_for_window(
+                args.root, item, w, duel_window_text(item["id"], w))
+            if unit:
+                planned.append(unit)
+            else:
+                present += 1
+    print(json.dumps({"horizon_hours": args.hours, "reaped": reaped,
+                      "expired": expired, "planned": planned,
+                      "already_present": present,
+                      "skipped_done_current": skipped_done},
+                     ensure_ascii=False))
+    return 0
 
 
 def cmd_enqueue(args):
@@ -387,7 +551,9 @@ def cmd_enqueue(args):
         "activity": args.activity or "", "segment": args.segment or "",
         "priority": args.priority,
         "created_at": iso(now_utc()),
-        "expires_at": args.expires_at or "", "window": args.window or "",
+        "expires_at": args.expires_at or "",
+        "planned_for": "", "not_before": args.not_before or "",
+        "window": args.window or "",
         "est_minutes": args.est_minutes,
         "chain_id": args.chain_id or "", "chain_seq": chain_seq,
         "attempts": 0, "max_attempts": args.max_attempts,
@@ -418,8 +584,16 @@ def cmd_list(args):
     return 0
 
 
+def _actionable(fields, stamp):
+    not_before = parse_iso(fields.get("not_before", ""))
+    return not (not_before and not_before > stamp)
+
+
 def cmd_next(args):
-    candidates = sorted(list_units(args.root, "inbox"), key=pick_key)
+    stamp = now_utc()
+    candidates = sorted(
+        (f for f in list_units(args.root, "inbox")
+         if _actionable(f, stamp)), key=pick_key)
     for f in candidates:
         try:
             est = int(f.get("est_minutes", DEFAULT_EST_MINUTES))
@@ -438,6 +612,10 @@ def cmd_claim(args):
         print(f"cannot claim {args.unit}: state is {state}")
         return 1
     fields, body = read_unit(path)
+    if not _actionable(fields, now_utc()):
+        print(f"cannot claim {args.unit}: not before "
+              f"{fields.get('not_before')}")
+        return 1
     stamp = now_utc()
     try:
         fields["attempts"] = int(fields.get("attempts", 0)) + 1
@@ -593,14 +771,10 @@ def cmd_token_release(args):
 
 
 def cmd_reap(args):
-    moved = 0
-    stamp = now_utc()
-    for f in list_units(args.root, "claimed"):
-        lease = parse_iso(f.get("lease_until", ""))
-        if lease and lease <= stamp and f.get("unit"):
-            if _release(args, f["unit"]) == 0:
-                moved += 1
-    print(f"reaped {moved} expired claim(s)")
+    moved = _reap_claimed(args.root)
+    expired = _expire_stale(args.root)
+    print(f"reaped {moved} expired claim(s), "
+          f"expired {expired} stale unit(s)")
     return 0
 
 
@@ -609,7 +783,7 @@ def gather_stats(root):
     report = {"generated_at": iso(stamp),
               "by_state": {}, "by_regular": {}, "durations_seconds": {},
               "late": [], "expired_waiting": [], "overdue_claims": [],
-              "result_status": {}, "chains": {}}
+              "result_status": {}, "chains": {}, "upcoming": 0}
     durations = []
     reg_durations = {}
     for state in STATES:
@@ -631,6 +805,8 @@ def gather_stats(root):
                 else:
                     centry["pending"] += 1
             expires = parse_iso(f.get("expires_at", ""))
+            if state == "inbox" and not _actionable(f, stamp):
+                report["upcoming"] += 1
             result = f.get("result", {})
             if not isinstance(result, dict):
                 result = {}
@@ -706,7 +882,8 @@ def cmd_stats(args):
     else:
         print(f"queue stats at {report['generated_at']}")
         print(f"  states: " + ", ".join(
-            f"{k} {v}" for k, v in report["by_state"].items()))
+            f"{k} {v}" for k, v in report["by_state"].items())
+            + f", upcoming {report['upcoming']}")
         print(f"  results: " + (", ".join(
             f"{k} {v}" for k, v in report["result_status"].items())
             or "none"))
@@ -751,6 +928,7 @@ def main(argv=None):
     p.add_argument("--segment", type=int, default=0)
     p.add_argument("--priority", type=int, default=3)
     p.add_argument("--expires-at", default="")
+    p.add_argument("--not-before", default="")
     p.add_argument("--est-minutes", type=int, default=DEFAULT_EST_MINUTES)
     p.add_argument("--window", default="")
     p.add_argument("--chain-id", default="")
@@ -803,6 +981,12 @@ def main(argv=None):
     p = sub.add_parser("sync")
     p.add_argument("--due-json", default="")
     p.set_defaults(fn=cmd_sync)
+
+    p = sub.add_parser("plan")
+    p.add_argument("--hours", type=int, default=12)
+    p.add_argument("--regulars-json", default="")
+    p.add_argument("--tracker-json", default="")
+    p.set_defaults(fn=cmd_plan)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],
