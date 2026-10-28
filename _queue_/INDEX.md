@@ -19,7 +19,7 @@ State lives in the subfolder a unit file sits in.
 
 - `inbox` - pending units waiting to be claimed.
 - `claimed` - units under execution, plus the device token.
-- `done` - finished units carrying their result blocks.
+- `done` - finished units carrying their structured result sections.
 
 `unit-template.md` is the shape every unit file follows. Units are
 managed with `tools/queue.py`. The design is a proposal under owner

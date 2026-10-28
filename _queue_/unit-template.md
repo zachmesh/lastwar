@@ -19,6 +19,9 @@ What to do, in the regular's own terms. The executor also reads the
 activity metadata in `_activities_/<activity>/` and the standing rules
 in the recording rules before acting.
 
-On completion the executor appends the result block defined in the
-[task unit queue design](../_conventions_/local-conventions/task-unit-queue-design.md)
-and moves this file to `done`.
+On completion the executor runs `tools/queue.py complete`, which
+writes the result section into this file's frontmatter - status,
+start and finish times, duration, claimed items and the activity's
+result statistics - and moves the file to `done`. The result shape is
+defined in the
+[task unit queue design](../_conventions_/local-conventions/task-unit-queue-design.md).

@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:22:00Z
-version: 0.1.0
+modified: 2026-10-28T10:27:00Z
+version: 0.2.0
 description: Proposal to run the routine as short task units drawn from a file queue instead of long segment runs
 status: proposal
 grounded_in:
@@ -39,9 +39,11 @@ session, and the evidence of 2026-10-27 and 2026-10-28 shows the cost.
 ## 2. Concepts
 
 - **Task unit** - one regular from `tools/regulars.json`, sized to
-  finish in a few minutes. A unit is a Markdown file with machine
-  frontmatter (section 4) and, once executed, a result block (section
-  5). Units are the only thing executors run.
+  finish in a few minutes. A unit is a Markdown file whose frontmatter
+  is one structured YAML document describing the task, its queue state
+  and, once executed, its result and result statistics (sections 4
+  and 5). The prose body is instructions for the executor; tools read
+  only the YAML. Units are the only thing executors run.
 - **Pool** - the `_queue_` type folder with three state subfolders.
   `inbox` holds pending units, `claimed` holds units under execution,
   `done` holds finished units. Moving a file is the state transition.
@@ -77,8 +79,12 @@ unique across days without a central counter.
 
 ## 4. Unit schema
 
-Frontmatter, values kept colon-free except timestamps as elsewhere in
-this repository.
+The unit frontmatter is the single structured source for the unit -
+what the task is, where it is (the state subfolder plus the claim
+fields below), and what it produced (the result section in section
+5). Status, statistics and reports are gathered from these fields by
+`tools/queue.py stats`, never by scraping prose. Values are kept
+colon-free except timestamps, as elsewhere in this repository.
 
 | Field | Meaning |
 |---|---|
@@ -105,23 +111,39 @@ Priority classes from the current regulars.
   the daily settlement, trucks on a duel UR day.
 - **3 standard** - everything else.
 
-## 5. Result block
+## 5. Result and result statistics
 
-On completion the executor appends one fenced yaml block to the unit
-file before moving it to `done`. This block is the unit's report and
-the source the round summary is assembled from.
+On completion the executor writes a `result` mapping into the same
+frontmatter (via `tools/queue.py complete`) and the unit moves to
+`done`. A completed unit therefore carries its whole life in one
+structured document - task, claim, result and statistics.
 
 ```yaml
 result:
   status: done            # done, partial, failed, skipped-needs-owner
   started_at: 2026-10-28T10:30:00Z
   finished_at: 2026-10-28T10:34:00Z
+  duration_seconds: 240
   executor: executor-1
   summary: Claimed the Daily Freebie and the login points
   claimed: [daily-freebie, login-200]
+  claimed_count: 2
   evidence: _records_/2026-10-28/vip-rewards/1030-queue-run.md
   follow_up: none
+  stats:
+    points_gained: 200
 ```
+
+Core result fields are fixed (status, times, duration, executor,
+claimed list and count, evidence, follow-up). The `stats` mapping is
+open - each activity defines its own keys in its `_activities_`
+metadata (points gained, chests claimed, donations made, trucks
+dispatched), and executors pass them as key values at completion.
+Because the keys are structured, `tools/queue.py stats` aggregates
+reliably across the whole pool - counts by state and by regular,
+result status totals, duration averages and maxima, units finished
+after their expiry, units expired while waiting, and claims past
+their lease - in text, YAML or JSON.
 
 The matching `_records_` execution file is still written as today
 (C1 append-only audit); the unit references it under `evidence`.
@@ -138,9 +160,10 @@ The matching `_records_` execution file is still written as today
    plus stamping `claimed_by`, `claimed_at` and `lease_until`
    (default lease 20 minutes, longer than the batch cap so a unit is
    never requeued out from under a live executor).
-3. It plays the unit, writes the `_records_` file, appends the result
-   block, renames `claimed` to `done`, and updates the regulars
-   tracker exactly as segment runs do today.
+3. It plays the unit, writes the `_records_` file, completes the unit
+   (the result section lands in its frontmatter), renames `claimed`
+   to `done`, and updates the regulars tracker exactly as segment
+   runs do today.
 4. The batch clock starts at the token claim. When 15 minutes are up
    the executor finishes its current atomic in-game action, writes a
    `partial` result for the unit in hand if it is mid-unit, moves that
@@ -165,8 +188,10 @@ check-first rule), so a re-executed unit does not double-claim.
   activity metadata in `_activities_`.
 - The regulars tracker stays the cadence source of truth; the pool is
   a work distribution layer over it, not a replacement.
-- The round summary for Slack assembles from `done` unit result
-  blocks instead of three segment records.
+- The round summary for Slack assembles from the `done` units'
+  structured result sections, gathered by `tools/queue.py stats`,
+  instead of three segment records. The same command doubles as the
+  pool health report for the owner.
 
 ## 8. Migration
 
