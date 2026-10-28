@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T11:10:00Z
+modified: 2026-10-28T11:15:00Z
 level: L1
-version: 1.3.3
+version: 1.3.4
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -65,14 +65,14 @@ execution.
 - Coin collection, owner instruction 2026-10-28 - the coins
   this event pays collect behind the task collection icon and
   are received only when it is tapped. Every zombie unit shall
-  collect from it. The first unit to run after this instruction
-  must LOCATE the icon - it has not been found yet; look on the
-  event page (task and rewards area) and the base screen task
-  area - then describe it in the unit record, tap it, and
-  record the collected amount as coins_collected alongside
-  coin_before and coin_after. Uncollected coins waiting behind
-  that icon are the leading explanation for the zero measured
-  yield of the first two executions.
+  collect from it. The icon sits on the map screen, top right
+  side (owner word 2026-10-28) - go straight there, tap it,
+  and record the collected amount as coins_collected alongside
+  coin_before and coin_after. The first executor to reach it
+  confirms the exact appearance and position in its record.
+  Uncollected coins waiting behind that icon are the leading
+  explanation for the zero measured yield of the first two
+  executions.
 - Stop condition, owner instruction 2026-10-28 - do not stop
   while zombies remain nearby. Keep sweeping or attacking the
   zombies near the base until none remain nearby, refilling
@@ -110,9 +110,10 @@ execution.
 ## What is known from 2026-10-28
 
 - Owner word 2026-10-28 - the event's coins are collected from
-  the task collection icon (tap to collect). No executor has
-  located or tapped it yet; locating it is the standing first
-  job of the next zombie unit.
+  the task collection icon (tap to collect), which sits on the
+  map screen, top right side. No executor had tapped it before
+  this instruction; collecting from it is now part of every
+  zombie unit.
 - First sight, round 1 - the event page timer read 2 days 16
   hours 10 minutes left, tagline - Eliminate the invading
   zombies; defend our city. The next-wave countdown read about
