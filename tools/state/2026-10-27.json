@@ -1,33 +1,33 @@
 {
  "harvest": {
-  "status": "skipped",
-  "at": "2026-10-27T18:06:38",
-  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-201/202/203, no input dispatched; seventeenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:35:32",
+  "note": "All bubbles collected in two passes; food 97.8M to 110.5M, iron 295.9M to 303.7M, coin 13.3M to 22.5M with radar loot"
  },
  "radar": {
-  "status": "skipped",
-  "at": "2026-10-27T18:06:38",
-  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-201/202/203, no input dispatched; seventeenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:35:32",
+  "note": "Release day Day 3: storage 34/40 emptied to 0/40, points 2860 to 2898, stamina 135 to 21; Distressed Survivor special pin completed and claimed"
  },
  "survivors": {
-  "status": "skipped",
-  "at": "2026-10-27T18:06:38",
-  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-201/202/203, no input dispatched; seventeenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:35:32",
+  "note": "Gate checked, no recruit line or card; visitor exclamation left untouched; Quick Dispatch not run, no intake"
  },
  "training": {
-  "status": "skipped",
-  "at": "2026-10-27T18:06:38",
-  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-201/202/203, no input dispatched; seventeenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:35:32",
+  "note": "Barracks Lv.24 requeued T8 x666 for 2.9M food and iron, 1d 04:20; other barracks not located this run"
  },
  "donations": {
-  "status": "skipped",
-  "at": "2026-10-27T18:06:38",
-  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-201/202/203, no input dispatched; seventeenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:35:32",
+  "note": "Rallied Defense recommended; 5 coin taps dispatched at 700 each from count 10/30, today 5550 at open; final count unverified due to segment 2 overlap at 2230"
  },
  "arms-race": {
-  "status": "skipped",
-  "at": "2026-10-27T18:06:38",
-  "note": "access-failed - outcome_unknown unresolved-action lock across 3 sessions cc-201/202/203, no input dispatched; seventeenth consecutive blocked segment run"
+  "status": "done",
+  "at": "2026-10-27T22:35:32",
+  "note": "Drone Boost 11500 of 30000, rank 9; chests at 1500 and 10000 claimed plus cumulative chest at 3/2; top target missed inside red lines, next cumulative 3/8 locked, ranking reward due after phase roll"
  },
  "mail": {
   "status": "skipped",

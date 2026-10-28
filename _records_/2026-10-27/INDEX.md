@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-28T02:45:00Z
+modified: 2026-10-28T05:35:00Z
 level: L0
 version: 1.0.0
 description: The 0203 segment 1 run, access failed before any input reached the game
@@ -475,3 +475,49 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   ended at 998, up 20 from free claims only; nothing bought,
   no diamond spent, one Trade Contract spent under the
   standing authorization.
+
+## 22:03 to about 22:34 — Segment 1 run, played end to end, Arms Race target missed
+
+- Segment 1 run of the split routine (production and Arms Race).
+  Due at the open - harvest, radar, survivors, training,
+  donations and arms-race. Duel Day 3 Age of Science, radar
+  posture release; resource check clean. Control worked from
+  the first session - the lock cleared on 2026-10-27 stayed
+  cleared and no different-device dialog appeared.
+- Harvest - all bubbles collected in two passes; closing HUD
+  food 110.5M, iron 303.7M, coin 22.5M (with radar loot). One
+  tap fell through to the Iron Mine upgrade panel, closed
+  untouched. Survivors - gate tapped, no recruit line; visitor
+  exclamation left alone; Quick Dispatch not run.
+- Radar - release day clear: storage 34 of 40 emptied to 0 of
+  40 in alternating Claim All and Quick Execute batches, points
+  2,860 to 2,898, stamina 135 to 21; the Distressed Survivor
+  special pin was marched (5 stamina), thawed, dialog tapped
+  through and claimed (survivor x1, paw 200, black rock
+  207.3K). No Regain Stamina offer appeared.
+- Training - Barracks Lv.24 requeued at T8 x666 (2.9M food and
+  iron, 1d 04:20). The other three barracks were not located
+  (two tents tapped proved to be Hospitals Lv.25 and Lv.20);
+  their queues are unverified this run.
+- Arms Race - Drone Boost phase, score 11,500 of the 30,000
+  top threshold, rank 9. The score is exactly this run's 115
+  radar stamina at 100 points each; the 18,500 gap needed 185
+  more stamina against 21 on hand or diamond packs, so the
+  target is recorded as MISSED inside the red lines. The 1,500
+  and 10,000 point chests were claimed, and the completion
+  sweep found the cumulative chest claimable at 3 of 2 (gold
+  ticket x1, purple shard x2, red gem 50 x1); the next tier is
+  locked at 3 of 8 and the rank 9 ranking reward falls due
+  after the phase roll for the next segment 1 run.
+- Donations - Rallied Defense held the recommended marker;
+  today 5,550 at the open and the panel showed 10 of 30 coin
+  donations left at 700 each. Five coin taps were dispatched,
+  then the panel closed. OVERLAP - segment 2 fired at 22:30
+  while this run was finishing and was seen working its own
+  gifts regular; this run stopped tapping and ended its
+  session, so the final donation count is UNVERIFIED (five
+  landed taps would make today 5,800, count 5 of 30).
+- All six due regulars marked in the tracker (donations and
+  training with their gaps in the notes). Diamonds stayed at
+  998; nothing bought, no diamond spent, no speedup or stamina
+  item burned.

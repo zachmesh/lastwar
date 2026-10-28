@@ -1,7 +1,7 @@
 ---
 title: Survivor Intake on 2026-10-27
 created: 2026-10-27T09:05:00Z
-modified: 2026-10-28T01:03:00Z
+modified: 2026-10-28T05:35:00Z
 version: 1.0.0
 description: Index of Survivor Intake executions on 2026-10-27
 grounded_in:
@@ -15,7 +15,7 @@ activity lives in [`_activities_/survivor-intake/`](../../../_activities_/surviv
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Access failed.** See the execution file for the detail.
+**Status — Checked only.** The 2203 run is the latest; earlier runs today were access failed. See the execution files for the detail.
 
 ## Executions
 
@@ -45,3 +45,8 @@ time and never edited once committed (C1).
   unresolved-action lock across 3 reopened sessions, no input
   dispatched; list_apps showed LastWar running, no in-game frame
   observed this run.
+
+- [2203-segment-1-run.md](2203-segment-1-run.md) — the segment 1 run
+  that started at 22:03 local; gate tapped, no recruit line or
+  card present, visitor exclamation left untouched; Quick
+  Dispatch not run with no intake.
