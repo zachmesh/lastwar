@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-28
 created: 2026-10-28T09:42:00Z
-modified: 2026-10-28T11:02:00Z
+modified: 2026-10-28T11:05:00Z
 level: L0
-version: 1.4.0
+version: 1.4.1
 description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session; the 0257 segment 3 run, all five due regulars checked in full with nothing claimable - settled secret cards only, no treasure set, trucks en route with caps reached, passes verified claimed, Events and Season sweep clean; the 0246 Zombie Invasion round 1 session, four Lv.10 kills and the event Store mapped, three 50 stamina items redeemed for medals, zero direct coin from Lv.10 kills, stood down as the queue chain took over the Mac
 status: unverified
 grounded_in:
@@ -184,6 +184,37 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   3 hour cap; it runs while the event lasts and only pauses
   about an hour when no zombies are nearby. Detail in
   [zombie-invasion/0347-queue-run.md](zombie-invasion/0347-queue-run.md).
+
+## 03:51 to about 04:04 — Queue ticker, Zombie Invasion chain unit 003, collection icon found, 1,072,000 coins collected
+
+- Executor ticker-0351. Sync produced no due regulars; the
+  only due unit was zombie chain unit 003, claimed under the
+  device token. The game stood on the Zombie Invasion Store
+  with a BUY ITEMS dialog (50 Stamina, 10 medals) left open
+  by an earlier session - closed untouched, nothing bought.
+- COLLECTION ICON FOUND AND TAPPED - the gift box at the
+  right end of the March Queues bar, top-left of the world
+  map, red badge 5 (tasks_badge; it read 3 at the unit open
+  and grew with this unit's kill). Its LOOT panel held one
+  row per Lv.10 zombie kill (X830 Y999, X886 Y974 - this
+  unit's kill, X980 Y967, X983 Y890, one more below the
+  fold), each row carrying a coin line among medal, crate,
+  iron and food 268.0K and EXP 263.0K. The panel's Claim
+  All is plain blue with no price tag; tapped once.
+- Coin, exact panel readings - 34,416,573 before, 35,488,573
+  after: 1,072,000 coins collected (about 214,400 per row).
+  The event's coin source is confirmed - kills pay nothing
+  directly; the coin waits in the LOOT panel until claimed.
+  Food and iron also rose about 1.1M each in the claim.
+- One Lv.10 Invading Zombies killed (Search, Squad 1,
+  stamina 110 to 100; target gone and squad Returning on
+  the check screen, its row present in the LOOT panel).
+  Event live at 2 days 15 hours, next wave about 44
+  minutes out at the last read; cleared false, successor
+  unit 004 enqueued to start now, tracker untouched
+  (partial). Diamonds 653 throughout, no refill used.
+  Detail in
+  [zombie-invasion/0351-queue-run.md](zombie-invasion/0351-queue-run.md).
 
 ## 02:46 to about 04:12 — Zombie Invasion round 1 session, four Lv.10 kills, Store mapped, stood down for the chain
 
