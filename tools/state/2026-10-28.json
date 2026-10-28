@@ -76,12 +76,12 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-28T07:17:42",
-  "note": "0714 queue shop sweep, all claimed today"
+  "at": "2026-10-28T11:50:19",
+  "note": "Shop sweep, every daily pickup already claimed today, nothing bought"
  },
  "events": {
   "status": "done",
-  "at": "2026-10-28T07:13:56",
-  "note": "0704 queue sweep clean, nothing claimable"
+  "at": "2026-10-28T11:47:49",
+  "note": "Full Events sweep plus Halloween check-in, nothing claimable"
  }
 }

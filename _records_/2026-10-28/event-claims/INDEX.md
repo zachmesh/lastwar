@@ -34,3 +34,11 @@ time and never edited once committed (C1).
   Code 39 Goals best 1,097,397,868 below the 1.5B lowest tier
   with all Claim buttons grey, Halloween Day 04 still
   date-locked (tooltip only, Drone Parts owned 65).
+- [1134-queue-run.md](1134-queue-run.md) — queue ticker unit
+  events-2026-10-28-1057, executor ticker-1134; full Events tab
+  sweep plus Halloween check-in, nothing claimable - Arms Race
+  Unit Progression phase score 0 against 15,000/30,000/75,000
+  (both chest taps opened contents previews only, no Claim
+  button; cumulative chest 9 of 18), Wanted Boss Code 39
+  Goals all grey, Community already Claimed, Halloween
+  Day 04 still date-locked with no check.
