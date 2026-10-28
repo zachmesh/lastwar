@@ -71,17 +71,17 @@
  },
  "trucks": {
   "status": "done",
-  "at": "2026-10-28T03:17:51",
-  "note": "0257 run - Trade 4/5, all 4 trucks en route (arrive 03:59-04:28), plunder 4/4 capped, trade Recovery 2026-10-25 CLAIMED, 5th dispatch blocked by full yard"
+  "at": "2026-10-28T07:25:50",
+  "note": "0717 settled 4, dispatched SSR 5th, trade 5/5 plunder 4/4"
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-28T03:17:52",
-  "note": "0257 run - verified all claimed today: Free Supply Claimed, Drone Parts + Coin weekly Already claimed, Monthly Daily Pickup Claimed (25d left), Weekly Deal no free pack"
+  "at": "2026-10-28T07:17:42",
+  "note": "0714 queue shop sweep, all claimed today"
  },
  "events": {
   "status": "done",
-  "at": "2026-10-28T03:17:52",
-  "note": "0257 run - full sweep clean, nothing claimable: Arms Race Tech Research 0pts 9/18, Battle Pass Claim All answered No rewards available, Halloween Day 04 not open yet, Season goals all Claimed"
+  "at": "2026-10-28T07:13:56",
+  "note": "0704 queue sweep clean, nothing claimable"
  }
 }

@@ -498,3 +498,37 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   run exceeds this pass's remaining budget and it carries
   to the next tick. Token released, diamonds 653
   throughout, nothing bought, no speedup burned.
+
+## 07:04 to about 07:25 — Queue ticker pass ticker-0704, events, passes and trucks done
+
+- Executor ticker-0704. Sync found 6 due regulars already
+  queued (planner staged); zombie chain unit 011 already
+  pending, so no seeding. Three units executed under the
+  device token within the pass budget; secrets and
+  treasures of the 0657 slot and zombie unit 011 carry to
+  the next tick.
+- Events - full Events tab sweep plus Halloween check-in,
+  nothing claimable. Wanted Boss Code 39 Goals read in
+  full - best single attack 1,097,397,868, below the
+  1,500,000,000 lowest tier, every Claim grey. Halloween
+  Day 04 still date-locked (Drone Parts tooltip only,
+  owned 65). Cumulative chest 9 of 18 not claimable.
+  Detail in
+  [event-claims/0704-queue-run.md](event-claims/0704-queue-run.md).
+- Passes - shop sweep, every daily pickup already claimed
+  today (Free Supply Claimed; Drone Parts and Coin weekly
+  passes Already claimed today; Super Monthly daily gift
+  Claimed, Rewards Left 24); Weekly Deal all paid, the
+  Legendary Take All $19.99 untouched. Detail in
+  [shop-claims/0714-queue-run.md](shop-claims/0714-queue-run.md).
+- Trucks - all four returned trucks settled on one Truck
+  Details opening (yard cleared); the fifth truck rolled
+  N, free refresh stayed N, one Trade Contract refresh
+  (147 to 146) rolled SSR (badge 500 x3, iron 3.0M, food
+  3.0M, coin 1.9M) and it was dispatched with Let's Go -
+  Trade Count 5 of 5. Plunder Count already 4 of 4, the
+  daily cap. Detail in
+  [truck-plunder/0717-queue-run.md](truck-plunder/0717-queue-run.md).
+- Token released, diamonds 653 throughout, nothing
+  bought, no speedup burned, contracts spent exactly 1
+  under the standing non-UR day ticket rule.

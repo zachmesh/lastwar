@@ -28,3 +28,9 @@ time and never edited once committed (C1).
   Goals read Claimed on every reached row. The completed login
   task's Claim More button was identified as the paid Advanced
   Pass upsell and left alone.
+- [0704-queue-run.md](0704-queue-run.md) — queue ticker unit
+  events-2026-10-28-0657, executor ticker-0704; full Events tab
+  sweep plus Halloween check-in, nothing claimable - Wanted Boss
+  Code 39 Goals best 1,097,397,868 below the 1.5B lowest tier
+  with all Claim buttons grey, Halloween Day 04 still
+  date-locked (tooltip only, Drone Parts owned 65).
