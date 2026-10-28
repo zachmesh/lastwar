@@ -68,7 +68,11 @@ execution.
   collect from it. The icon shows as a gift box with a red
   dot carrying a number - the count of task rewards waiting
   to be claimed (owner word 2026-10-28; at the owner's
-  reading the dot showed 4, four task rewards to claim). It
+  reading the dot showed 4, four task rewards to claim). The
+  number is live - it grows as more tasks are performed
+  (owner word 2026-10-28), so record the number seen before
+  tapping as the stat tasks_badge, and confirm it clears
+  after claiming. It
   sits along the top of the map screen, toward the left but
   not far right and not at the far corner (owner refinements
   2026-10-28). Scan the top-left stretch of the top edge for
