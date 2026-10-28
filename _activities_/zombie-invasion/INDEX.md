@@ -65,8 +65,9 @@ execution.
 - Coin collection, owner instruction 2026-10-28 - the coins
   this event pays collect behind the task collection icon and
   are received only when it is tapped. Every zombie unit shall
-  collect from it. The icon sits on the map screen, top right
-  side (owner word 2026-10-28) - go straight there, tap it,
+  collect from it. The icon is a tiny icon on the map screen,
+  top right side (owner word 2026-10-28) - easy to miss at a
+  glance, so look closely; go straight there, tap it,
   and record the collected amount as coins_collected alongside
   coin_before and coin_after. The first executor to reach it
   confirms the exact appearance and position in its record.
@@ -110,8 +111,8 @@ execution.
 ## What is known from 2026-10-28
 
 - Owner word 2026-10-28 - the event's coins are collected from
-  the task collection icon (tap to collect), which sits on the
-  map screen, top right side. No executor had tapped it before
+  the task collection icon (tap to collect) - a tiny icon on
+  the map screen, top right side. No executor had tapped it before
   this instruction; collecting from it is now part of every
   zombie unit.
 - First sight, round 1 - the event page timer read 2 days 16
