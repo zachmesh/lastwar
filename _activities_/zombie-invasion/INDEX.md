@@ -97,19 +97,19 @@ execution.
   number is live - it grows as more tasks are performed
   (owner word 2026-10-28), so record the number seen before
   tapping as the stat tasks_badge, and confirm it clears
-  after claiming. It
-  sits along the top of the map screen, toward the left but
-  not far right and not at the far corner (owner refinements
-  2026-10-28). Scan the top-left stretch of the top edge for
-  the gift box with the red numbered dot; go straight there,
-  tap it, claim the waiting task rewards - and never tap any
-  price-tagged Claim All inside (standing red line),
-  and record the collected amount as coins_collected alongside
-  coin_before and coin_after. The first executor to reach it
-  confirms the exact appearance and position in its record.
-  Uncollected coins waiting behind that icon are the leading
-  explanation for the zero measured yield of the first two
-  executions.
+  after claiming. VERIFIED by chain unit 003 on 2026-10-28 -
+  the icon is the gift box at the right end of the March
+  queue bar at the bottom of the screen (not on the event
+  page), its badge counting loot entries waiting (3 at first
+  sight, 5 at tap time). Tapping it opens the LOOT panel, one
+  row per kill, whose single Claim All button is plain blue
+  with NO price tag - that is the free claim to use; the
+  price-tagged Claim All purchase stays banned as always.
+  Kills pay nothing directly - the coin sits in the LOOT
+  panel until claimed. Unit 003 claimed 5 rows for 1,072,000
+  coins (about 214,400 per Lv.10 row), coin 34,416,573 to
+  35,488,573. Record the collected amount as coins_collected
+  alongside coin_before and coin_after, every unit.
 - Stop condition, owner instruction 2026-10-28 - do not stop
   while zombies remain nearby. Keep sweeping or attacking the
   zombies near the base until none remain nearby, refilling
