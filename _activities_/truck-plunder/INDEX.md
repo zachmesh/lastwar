@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-26T18:16:00Z
+modified: 2026-10-28T10:20:00Z
 level: L1
-version: 1.4.1
+version: 1.4.2
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -55,6 +55,15 @@ train also runs on this screen as a trade vehicle.
   slot is absent, check whether anything can actually be pending
   before spending the run hunting - at a full Trade Count and
   Plunder Count for the trade day, nothing can be.
+- Set identification, re-verified 2026-10-28 (0257 run) - in the set
+  then shown, the column reads top to bottom - green face (season
+  warming panel), blue truck-front icon with a red badge (Intercity
+  Trade; the badge read 4 with four trucks out), white pickup
+  (Secret Command Post, its badge 4 matching the four task cards),
+  satellite icon with badge 1 (radar), hammer (build palette). Each
+  was confirmed by the screen it opened. Icon centres in the
+  642 by 951 window sat near norm y 605 (trade), 657 (secret post)
+  and 720 (radar) in that set.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.

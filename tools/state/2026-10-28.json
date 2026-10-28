@@ -58,5 +58,30 @@
   "status": "skipped",
   "at": "2026-10-28T02:51:46",
   "note": "No trophy icon on base screen at run start; full check deferred - concurrent Zombie Invasion session on same Mac"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-10-28T03:17:51",
+  "note": "0257 run - 4 settled cards only, one-Claim nothing pending, assists already 5/5, Mega Deploy opened no panel, Reward Recovery latest 2026-10-24 CLAIMED"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-10-28T03:17:51",
+  "note": "0257 run - fragments M1x12 M2x13 M3x0 M4x6 M5x1 M6x4 M7x12, no full set (M3 empty), dig buttons grey, chest 14/15"
+ },
+ "trucks": {
+  "status": "done",
+  "at": "2026-10-28T03:17:51",
+  "note": "0257 run - Trade 4/5, all 4 trucks en route (arrive 03:59-04:28), plunder 4/4 capped, trade Recovery 2026-10-25 CLAIMED, 5th dispatch blocked by full yard"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-10-28T03:17:52",
+  "note": "0257 run - verified all claimed today: Free Supply Claimed, Drone Parts + Coin weekly Already claimed, Monthly Daily Pickup Claimed (25d left), Weekly Deal no free pack"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-10-28T03:17:52",
+  "note": "0257 run - full sweep clean, nothing claimable: Arms Race Tech Research 0pts 9/18, Battle Pass Claim All answered No rewards available, Halloween Day 04 not open yet, Season goals all Claimed"
  }
 }

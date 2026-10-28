@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-28
 created: 2026-10-28T09:42:00Z
-modified: 2026-10-28T09:52:00Z
+modified: 2026-10-28T10:20:00Z
 level: L0
-version: 1.1.0
-description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session
+version: 1.2.0
+description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session; the 0257 segment 3 run, all five due regulars checked in full with nothing claimable - settled secret cards only, no treasure set, trucks en route with caps reached, passes verified claimed, Events and Season sweep clean
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-28
@@ -100,3 +100,58 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   segment 2 cycle.
 - Nothing bought, no diamond spent, no donation made (segment 1
   owns donations), no Assemble touched.
+
+## 02:57 to about 03:17 — Segment 3 run, all five due regulars checked, nothing claimable
+
+- Segment 3 run of the split routine (missions, logistics and
+  claims). Due at the open - passes, secrets, treasures, trucks
+  and events; ghost-ops not today (Thursdays only). Duel Day 3
+  Age of Science, not a duel UR day.
+- Access - control worked from the first session (cc-28); the
+  first open_app returned outcome_unknown once, observation
+  showed the game already open on the base, and every later input
+  landed normally. No different-device dialog appeared, and no
+  Zombie Invasion session was active this time (stamina idle at
+  128). Opening HUD food 130.4M, iron 323.6M, coin 34.4M,
+  diamonds 653, total power 149,351,992.
+- Secrets - the post held only the four cards settled in the
+  2257 run (all PERFECT, the UR Rescue Officer with its plundered
+  marker); no Claim or Go button, Mega Deploy opened no panel,
+  assists already at the 5 of 5 cap, and Reward Recovery's latest
+  record (2026-10-24) already CLAIMED. Detail in
+  [secret-missions/0257-segment-3-run.md](secret-missions/0257-segment-3-run.md).
+- Treasures - fragments M1 x12, M2 x13, M3 x0, M4 x6, M5 x1,
+  M6 x4, M7 x12; M3 is exhausted after the 2257 dig, so no full
+  set exists and both dig buttons read grey. Chest 14 of 15.
+  Detail in
+  [hidden-treasures/0257-segment-3-run.md](hidden-treasures/0257-segment-3-run.md).
+- Trucks - Trade Count 4 of 5, all four trucks of the 1857 run
+  still en route (arrivals 03:59 to 04:28), plunder count already
+  4 of 4, trade Reward Recovery (2026-10-25) already CLAIMED; the
+  fifth dispatch waits for a return next cycle. Detail in
+  [truck-plunder/0257-segment-3-run.md](truck-plunder/0257-segment-3-run.md).
+- Passes - verified already claimed for today: Free Supply
+  Claimed, Drone Parts and Coin weekly passes Already claimed
+  today, Super Monthly Pass Daily Pickup Claimed (25 days left);
+  Weekly Deal showed no free pack. No paid button touched.
+  Detail in
+  [shop-claims/0257-segment-3-run.md](shop-claims/0257-segment-3-run.md).
+- Events - full sweep clean. Arms Race has rolled to Tech
+  Research at 0 phase points, cumulative chest 9 of 18, nothing
+  claimable for segment 1. Battle Pass at 17,400 points - Claim
+  All answered No rewards available to claim, and the completed
+  login task's Claim More button was identified as the 9.99
+  dollar Advanced Pass upsell (opened once, closed untouched; the
+  learning is recorded in the activity INDEX). Halloween Day 04
+  is not open yet (Days 01 to 03 checked). Season Individual
+  Goals all Claimed, Alliance Goals Claimed on every reached
+  tier, Season Weekly Pass pickup Claimed and its Daily Freebie
+  verified claimed. One cross-segment note - the radar was opened
+  once by a mis-tap during icon verification and showed the Rare
+  Gold Mine reward from segment 1's 0203 dispatch claimable; it
+  was left for segment 1's next run as planned. Detail in
+  [event-claims/0257-segment-3-run.md](event-claims/0257-segment-3-run.md).
+- All five due regulars were marked done in the tracker. Nothing
+  bought, no diamond spent (653 at open and close), no speedup or
+  stamina item burned, no research or building started, no stage
+  swap, no coal donated.

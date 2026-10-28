@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T12:54:00Z
+modified: 2026-10-28T10:20:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -52,6 +52,13 @@ Executions are recorded in `_records_/<date>/event-claims/`, one file per execut
 - Priced buttons are never event claims - the Battle Pass Unlock
   Advanced Rewards at 9.99 dollars and the Legendary Claim All (which
   is a 19.99 dollar purchase) stay untouched.
+- The completed Battle Pass login task's yellow Claim More button is
+  the same purchase in disguise - verified 2026-10-28, it opens the
+  Game Season Advanced Battle Pass panel (extra rewards of all tiers
+  after purchase, 9.99 dollars). A completed login task whose points
+  were already taken shows Claim More, not Claim; never tap it. The
+  bottom Claim All button is the safe completeness check - with
+  nothing pending it answers No rewards available to claim.
 - Permanent or consequential mechanics are inspected only - Level
   Swap permanently swaps two hero levels; it is never executed
   without the owner decision.
