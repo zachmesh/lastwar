@@ -61,13 +61,13 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-28T03:17:51",
-  "note": "0257 run - 4 settled cards only, one-Claim nothing pending, assists already 5/5, Mega Deploy opened no panel, Reward Recovery latest 2026-10-24 CLAIMED"
+  "at": "2026-10-28T07:37:21",
+  "note": "0734 queue - settled cards only, assists capped, nothing claimable"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-28T03:17:51",
-  "note": "0257 run - fragments M1x12 M2x13 M3x0 M4x6 M5x1 M6x4 M7x12, no full set (M3 empty), dig buttons grey, chest 14/15"
+  "at": "2026-10-28T07:38:09",
+  "note": "0737 queue - M3 x0, no full set, nothing dug"
  },
  "trucks": {
   "status": "done",

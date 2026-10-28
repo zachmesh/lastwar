@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T12:49:00Z
+modified: 2026-10-28T14:47:00Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -290,6 +290,17 @@ execution.
   panel (which held only unit 009's own kill), and the
   coin baseline never moved. Handovers are therefore
   evidence to check, not a guaranteed deferred kill.
+- The Events tab bar SHIFTS between openings in the same
+  pass (measured by unit 011 on 2026-10-28) — a batched
+  tap at the Zombie Invasion tab's earlier position
+  landed on the Level Swap event page instead (left
+  untouched, its Confirm never tapped). Batched dispatch
+  sequences must re-verify the tab by its title on sight
+  before the Search tap, or the sequence silently goes
+  to the wrong event page. Unit 011's two kills (X985
+  Y963, X992 Y963) were therefore sequential, not
+  parallel — compounded by march times of only about
+  10 seconds on home-cluster targets.
 
 ## Open questions
 

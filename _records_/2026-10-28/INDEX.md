@@ -532,3 +532,32 @@ instruction of 2026-10-25 to run all the regulars every four hours.
 - Token released, diamonds 653 throughout, nothing
   bought, no speedup burned, contracts spent exactly 1
   under the standing non-UR day ticket rule.
+
+## 07:34 to about 07:46 — Queue ticker pass ticker-0734, secrets and treasures checked, zombie unit 011 two kills
+
+- Executor ticker-0734. Sync found 3 due regulars already
+  queued (planner staged); zombie chain unit 011 already
+  pending, so no seeding. Three units executed under the
+  device token.
+- Secrets - the same four settled PERFECT cards as the 0257
+  run, no Claim or Go button, assists already at the 5 of 5
+  daily cap, Reward Recovery's latest record (2026-10-24)
+  already CLAIMED. Nothing dispatched or claimed. Detail in
+  [secret-missions/0734-queue-run.md](secret-missions/0734-queue-run.md).
+- Treasures - fragments unchanged, M1 x12, M2 x13, M3 x0,
+  M4 x6, M5 x1, M6 x4, M7 x12; M3 exhausted, no full set,
+  both dig buttons grey, chest progress 14 of 15. Nothing
+  dug. Detail in
+  [hidden-treasures/0737-queue-run.md](hidden-treasures/0737-queue-run.md).
+- Zombie unit 011 - the fresh wave spawned as the unit
+  opened; two Lv.10 kills (X985 Y963, X992 Y963) dispatched
+  sequentially - the parallel batched sequence misrouted
+  into the Level Swap page because the Events tab bar had
+  shifted (left untouched), and both marches lasted only
+  about 10 seconds. LOOT Claim All collected 536,000 coins
+  exactly (coin 49,059,336 to 49,595,336); medals 120 to
+  140, still 20 below the Coin Chest (SR) price. cleared
+  false, successor enqueued to start now. Detail in
+  [zombie-invasion/0738-queue-run.md](zombie-invasion/0738-queue-run.md).
+- Token released, diamonds 653 throughout, nothing
+  bought, no speedup or stamina item burned.

@@ -1,7 +1,7 @@
 ---
 title: Hidden Treasures on 2026-10-28
 created: 2026-10-28T10:20:00Z
-modified: 2026-10-28T10:20:00Z
+modified: 2026-10-28T14:38:00Z
 version: 1.0.0
 description: Index of Hidden Treasures executions on 2026-10-28
 grounded_in:
@@ -24,3 +24,9 @@ time and never edited once committed (C1).
   M4 x6, M5 x1, M6 x4, M7 x12 - M3 is exhausted after the 2257 dig,
   so no full set exists and both dig buttons read grey. Chest
   progress 14 of 15. Nothing dug.
+
+- [0737-queue-run.md](0737-queue-run.md) — queue unit
+  treasures-2026-10-28-0657, executor ticker-0734; fragments
+  unchanged - M1 x12, M2 x13, M3 x0, M4 x6, M5 x1, M6 x4, M7 x12 -
+  M3 exhausted, no full set, both dig buttons grey, chest progress
+  14 of 15. Nothing dug.
