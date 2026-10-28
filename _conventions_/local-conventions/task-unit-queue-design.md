@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:55:00Z
-version: 0.6.0
+modified: 2026-10-28T10:58:00Z
+version: 0.6.1
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -79,9 +79,11 @@ session, and the evidence of 2026-10-27 and 2026-10-28 shows the cost.
   chain is enqueued and the activity keeps going across as many
   quanta as it needs. Zombie Invasion is the model case - it runs
   until the nearby zombies are cleared, unit after unit, under its
-  standing stop rules (cleared, or the chain budget of 3 hours),
-  while higher priority units slip in between its units whenever
-  their time arrives.
+  standing stop rules (for Zombie Invasion there is no hour
+  budget and no daily limit - when the nearby zombies are cleared
+  the chain pauses 1 hour and then checks again, owner correction
+  2026-10-28), while higher priority units slip in between its
+  units whenever their time arrives.
 - **Device token** - exactly one executor may hold the Mac window at
   a time, for one unit at a time. The token is itself a lease file
   in `claimed`; taking the game window without the token is out of
@@ -253,10 +255,12 @@ the token.
    to `done`, and update the regulars tracker exactly as segment
    runs do today. If the unit belongs to a chain and its result
    stats say the activity is not exhausted, enqueue the next unit
-   of the chain - unless the chain's own stop rules end it (for
-   Zombie Invasion, nearby zombies cleared, or the 3 hour chain
-   budget spent; the budget is carried in the chain units'
-   structured fields, not in prose).
+   of the chain. A chain ends only when its activity ends. For
+   Zombie Invasion a unit whose stats say cleared does not end
+   the chain - its successor is enqueued with `not_before` 1 hour
+   later, because new zombies may appear (waves arrive about
+   hourly); there is no daily limit and no hour budget (owner
+   correction 2026-10-28).
 5. Release the token and go back to step 1. Every unit boundary is
    a scheduling point - a VIP unit that lands while a background
    chain is mid-run waits at most for the current unit to end.
