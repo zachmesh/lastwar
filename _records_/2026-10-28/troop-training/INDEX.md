@@ -15,7 +15,7 @@ activity lives in [`_activities_/troop-training/`](../../../_activities_/troop-t
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Checked, blocked by the game.** The 0203 run is the latest. See the execution files for the detail.
+**Status — Checked, blocked by the game.** The 0634 queue run is the latest. See the execution files for the detail.
 
 ## Executions
 
@@ -25,3 +25,9 @@ time and never edited once committed (C1).
   units - no requeue is possible while the drill ground is
   full; the Lv.24 T8 batch from the 2203 run is still
   training; other barracks not located.
+- [0634-queue-run.md](0634-queue-run.md) — the queue run
+  that started at 06:34 local, unit
+  training-2026-10-28-0603; barracks tents located
+  north-east of the drill ground, a tent tap returned
+  Drill Ground Full again - no requeue possible, nothing
+  spent.

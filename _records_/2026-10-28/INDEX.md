@@ -464,3 +464,37 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   Dispatch was not run before the pass budget ended.
   Unit recorded partial, tracker untouched. Detail in
   [survivor-intake/0624-queue-run.md](survivor-intake/0624-queue-run.md).
+
+## 06:34 to about 06:52 — Queue ticker pass ticker-0634, gifts and help claimed, training blocked again
+
+- Executor ticker-0634. Sync found 7 due regulars already
+  queued (planner staged); zombie chain unit 011 already
+  pending, so no seeding. Five units executed under the
+  device token.
+- Training (0603 slot) - barracks tents located north-east
+  of the drill ground; a tent tap returned Drill Ground
+  Full, unable to add units - the same game block as the
+  0203 run. Unit failed (execution impossible), tracker
+  skipped with the block as reason, nothing spent. Detail
+  in [troop-training/0634-queue-run.md](troop-training/0634-queue-run.md).
+- Gifts - 145 Regular and 23 Premium alliance gifts
+  claimed by Claim All on both tabs; Gift Level 28
+  progress 169,964,550 to 169,994,400. Detail in
+  [alliance-gifts/0634-queue-run.md](alliance-gifts/0634-queue-run.md).
+- Help - Help All cleared two ally research requests at
+  500 of 1,000 daily help points. Detail in
+  [alliance-help/0634-queue-run.md](alliance-help/0634-queue-run.md).
+- Mail - Claim All pressed in Event, Alliance and
+  Regular; nothing new claimable, the train arrival
+  reward attachments all read claimed. Detail in
+  [mail-rewards/0634-queue-run.md](mail-rewards/0634-queue-run.md).
+- Star Ceremony - base screen checked, no trophy icon
+  beside Alliance, no ceremony waiting. Detail in
+  [alliance-duel/0634-queue-run.md](alliance-duel/0634-queue-run.md).
+- Train - no Boarding closes banner at any sight in the
+  pass, no train in preparation, nothing boarded. Detail
+  in [alliance-train/0634-queue-run.md](alliance-train/0634-queue-run.md).
+- Zombie chain unit 011 remains in inbox - its estimated
+  run exceeds this pass's remaining budget and it carries
+  to the next tick. Token released, diamonds 653
+  throughout, nothing bought, no speedup burned.

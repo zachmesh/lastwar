@@ -26,3 +26,7 @@ time and never edited once committed (C1).
   Lv.23 Tank Base) at 480 of 1,000 daily help points. The rest of
   the segment deferred to a concurrent owner-directed Zombie
   Invasion session on the same Mac.
+- [0634-queue-run.md](0634-queue-run.md) — the queue run
+  that started at 06:34 local, unit
+  help-2026-10-28-0630; Help All cleared two ally
+  research requests at 500 of 1,000 daily help points.

@@ -15,9 +15,9 @@
   "note": "Gate line of 5 taken in - 4 dialog survivors plus 1 named recruit (Hospital, Unit Healing Speed +4.00 percent); Quick Dispatch in Iron Mine Lv.27 panel - no survivors available, posts full"
  },
  "training": {
-  "status": "done",
-  "at": "2026-10-28T02:40:24",
-  "note": "Checked - Barracks Lv.27 train tap returned Drill Ground Full, unable to add more units; no requeue possible while drill ground full; Lv.24 T8 batch from 2203 run still training (about 1d 04h at queue time)"
+  "status": "skipped",
+  "at": "2026-10-28T06:38:58",
+  "note": "Drill Ground Full verified 0634 queue run - unable to add units, no requeue possible"
  },
  "donations": {
   "status": "done",
@@ -31,18 +31,18 @@
  },
  "help": {
   "status": "done",
-  "at": "2026-10-28T02:51:46",
-  "note": "Help All pressed - cleared cute small baby Lv.23 Tank Base building help; own two requests unhelpable; points 480/1000 before press; grateful message confirmed"
+  "at": "2026-10-28T06:44:58",
+  "note": "Help All cleared 2 ally requests 0634 queue run"
  },
  "mail": {
-  "status": "skipped",
-  "at": "2026-10-28T02:51:46",
-  "note": "Deferred - concurrent owner-directed Zombie Invasion session took over the same Mac window mid-run; mail not opened this run, due again next cycle"
+  "status": "done",
+  "at": "2026-10-28T06:48:23",
+  "note": "Checked Event/Alliance/Regular 0634 queue run, nothing new claimable"
  },
  "gifts": {
-  "status": "skipped",
-  "at": "2026-10-28T02:51:46",
-  "note": "Deferred - concurrent owner-directed Zombie Invasion session on same Mac; gifts panel had a red dot, claims due again next cycle"
+  "status": "done",
+  "at": "2026-10-28T06:43:22",
+  "note": "145 Regular + 23 Premium claimed 0634 queue run"
  },
  "vip": {
   "status": "skipped",
@@ -50,14 +50,14 @@
   "note": "Deferred - concurrent owner-directed Zombie Invasion session on same Mac; VIP freebie unclaimed this run, due again next cycle"
  },
  "train": {
-  "status": "skipped",
-  "at": "2026-10-28T02:51:46",
-  "note": "Deferred - no Boarding closes banner on base screen at run start; boarding check superseded by concurrent Zombie Invasion session on same Mac"
+  "status": "done",
+  "at": "2026-10-28T06:52:07",
+  "note": "Checked 0634 queue run, no boarding banner, no train in preparation"
  },
  "star-ceremony": {
-  "status": "skipped",
-  "at": "2026-10-28T02:51:46",
-  "note": "No trophy icon on base screen at run start; full check deferred - concurrent Zombie Invasion session on same Mac"
+  "status": "done",
+  "at": "2026-10-28T06:50:15",
+  "note": "Checked 0634 queue run, no trophy icon, no ceremony waiting"
  },
  "secrets": {
   "status": "done",
