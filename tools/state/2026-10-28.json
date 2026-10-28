@@ -28,5 +28,35 @@
   "status": "done",
   "at": "2026-10-28T02:40:25",
   "note": "Hero Advancement TARGET MET - Adam Lv.122 to 123 with 79.0M EXP for 39500 of 12000, rank 6, cumulative 51000; all three point chests claimed plus cumulative chest at 9 of 8 (now 9 of 18); ranking chest preview only, settles at phase end, next segment 1 run checks"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-10-28T02:51:46",
+  "note": "Help All pressed - cleared cute small baby Lv.23 Tank Base building help; own two requests unhelpable; points 480/1000 before press; grateful message confirmed"
+ },
+ "mail": {
+  "status": "skipped",
+  "at": "2026-10-28T02:51:46",
+  "note": "Deferred - concurrent owner-directed Zombie Invasion session took over the same Mac window mid-run; mail not opened this run, due again next cycle"
+ },
+ "gifts": {
+  "status": "skipped",
+  "at": "2026-10-28T02:51:46",
+  "note": "Deferred - concurrent owner-directed Zombie Invasion session on same Mac; gifts panel had a red dot, claims due again next cycle"
+ },
+ "vip": {
+  "status": "skipped",
+  "at": "2026-10-28T02:51:46",
+  "note": "Deferred - concurrent owner-directed Zombie Invasion session on same Mac; VIP freebie unclaimed this run, due again next cycle"
+ },
+ "train": {
+  "status": "skipped",
+  "at": "2026-10-28T02:51:46",
+  "note": "Deferred - no Boarding closes banner on base screen at run start; boarding check superseded by concurrent Zombie Invasion session on same Mac"
+ },
+ "star-ceremony": {
+  "status": "skipped",
+  "at": "2026-10-28T02:51:46",
+  "note": "No trophy icon on base screen at run start; full check deferred - concurrent Zombie Invasion session on same Mac"
  }
 }

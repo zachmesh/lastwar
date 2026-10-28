@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-10-28
 created: 2026-10-28T09:42:00Z
-modified: 2026-10-28T09:42:00Z
+modified: 2026-10-28T09:52:00Z
 level: L0
-version: 1.0.0
-description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground
+version: 1.1.0
+description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-28
@@ -71,3 +71,32 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   training and radar gaps carried in their notes. Nothing
   bought, no diamond spent, no speedup or stamina item
   burned, no research or building started, no stage swap.
+
+## 02:30 to about 02:52 — Segment 2 run, Help All done, rest deferred by a concurrent Zombie Invasion session
+
+- Segment 2 run of the split routine (alliance and VIP). Due at
+  the open - mail, help, gifts, vip, train and star-ceremony.
+- Overlap and access - the delayed 0203 segment 1 run was still
+  finishing in the same window (its chest claims and radar work
+  observed live), so this run waited until segment 1 marked done
+  at 02:40. On reactivation the different-device dialog stood;
+  Confirm was clicked once under the owner rule of 2026-10-27,
+  the app exited and reopened clean, dialog did not return.
+- Help - DONE. Help page points 480 of 1,000; the only ally
+  request (cute small baby, Lv.23 Tank Base) was cleared by Help
+  All with the grateful message; this account's own two requests
+  are unhelpable by self. No main-screen help bubble stood at
+  the open. Detail in
+  [alliance-help/0230-segment-2-run.md](alliance-help/0230-segment-2-run.md).
+- Deferred - mail, gifts (red dot standing), VIP freebie, train
+  (no Boarding closes banner at the open) and star-ceremony (no
+  trophy icon at the open) were NOT completed: a separate
+  owner-directed Zombie Invasion session took over the same Mac
+  window mid-run (coin dialog, world-map Lv.10 Invading Zombies
+  panel, live march at stamina 138 down to 128, one
+  computer_busy refusal). This run stood down instead of
+  fighting a live owner-directed session; all five were marked
+  skipped in the tracker and become due again at the 06:30
+  segment 2 cycle.
+- Nothing bought, no diamond spent, no donation made (segment 1
+  owns donations), no Assemble touched.
