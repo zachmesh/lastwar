@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-28
 created: 2026-10-28T09:42:00Z
-modified: 2026-10-28T11:05:00Z
+modified: 2026-10-28T12:02:00Z
 level: L0
-version: 1.4.1
+version: 1.5.0
 description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session; the 0257 segment 3 run, all five due regulars checked in full with nothing claimable - settled secret cards only, no treasure set, trucks en route with caps reached, passes verified claimed, Events and Season sweep clean; the 0246 Zombie Invasion round 1 session, four Lv.10 kills and the event Store mapped, three 50 stamina items redeemed for medals, zero direct coin from Lv.10 kills, stood down as the queue chain took over the Mac
 status: unverified
 grounded_in:
@@ -285,3 +285,52 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   the window and stay a follow-up, as does the LOOT badge
   check. Detail in
   [zombie-invasion/0411-queue-run.md](zombie-invasion/0411-queue-run.md).
+
+## 04:35 to about 04:50 — Queue ticker, Zombie Invasion chain unit 006, one kill, 268,000 coins collected, parallel dispatch blocked by moving targets
+
+- Executor ticker-0434. Sync produced no due regulars (all
+  planner units are staged for 06:03 and later); unit 005
+  had left no successor, so this tick seeded chain unit 006
+  and claimed it under the device token.
+- The 11:42Z wave arrived on schedule. Squad 1 killed one
+  Lv.10 Invading Zombies (X980 Y925); its LOOT row was
+  claimed with the plain-blue Claim All - coin 35,488,573
+  to 35,756,573 exactly, 268,000 coins collected, medal
+  x10 in the same row (balance 70 to 80 by row evidence).
+- Parallel dispatch was attempted twice and failed both
+  times at the March tap with "The target location has
+  changed. Please try again." - no stamina charged, March
+  Queues stayed 0 of 4, so squads_parallel is 1 and the
+  march queue cap remains unmeasured; Search targets in
+  this wave move or are taken within tens of seconds.
+  Squad 2's panel was read for the first time - 20.92M,
+  five Lv.150 heroes, versus line Unknown / Evenly Matched
+  against the Lv.10 card.
+- A fourth march (Squad 1) was in flight at the unit cap
+  (timer about 00:01:22) and is handed to unit 007
+  uncounted. Medals 70 remain below the 160 Coin Chest
+  (SR) price, so no redemption; the 2 owned SR chests stay
+  unlocated. cleared false, successor enqueued to start
+  now, tracker untouched (partial). Diamonds 653
+  throughout, no refill used. Detail in
+  [zombie-invasion/0435-queue-run.md](zombie-invasion/0435-queue-run.md).
+
+## 04:50 to about 04:58 — Queue ticker, Zombie Invasion chain unit 007, handover kill claimed, another 268,000 coins, march queue cap measured at 4
+
+- Executor ticker-0434, same pass as unit 006. The march
+  006 left in flight was Returning (March Queues 1 of 4)
+  and its LOOT row (X905 Y465) was claimed - coin
+  35,756,573 to 36,024,573 exactly, a second consecutive
+  268,000 row; medals 80 to 90 by row evidence. The kill
+  is counted in this unit, where it was claimed.
+- The March Queues bar reads 0/4 and 1/4 - the march queue
+  cap is 4 squads, now measured. The parallel blocker in
+  this wave is the target-location-changed failure, not
+  the cap.
+- A further Squad 1 march was dispatched in flight at the
+  pass end (timer about 00:01:49, toward about X871 Y458)
+  and is handed to unit 008 uncounted. Medals about 90,
+  still below the 160 SR chest price. cleared false,
+  successor enqueued to start now, tracker untouched
+  (partial). Detail in
+  [zombie-invasion/0450-queue-run.md](zombie-invasion/0450-queue-run.md).

@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T11:23:00Z
+modified: 2026-10-28T12:02:00Z
 level: L1
-version: 1.5.1
+version: 1.6.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -73,8 +73,26 @@ execution.
   (2026-10-28) also could not dispatch - the wave was
   exhausted and Search answered not found, so its
   squads_parallel is 0 for lack of targets, which is not a
-  cap. The march queue cap is still unmeasured; the first
-  unit that meets a fresh wave must measure it.
+  cap. MEASURED by unit 007 on 2026-10-28 - the March
+  Queues bar reads 0/4 with no squad out and 1/4 with one
+  out, so the march queue cap is 4 squads. The binding
+  constraint in the 11:42Z wave was different (unit 006) -
+  two extra marches failed at the March tap with the
+  toast "The target location has changed. Please try
+  again." and charged no stamina; Search targets in a
+  fresh wave move or are taken within tens of seconds,
+  so a dispatch that pauses to read screens loses its
+  target. Batched click sequences (Events, Search,
+  attack, March in one action batch, no screenshot reads
+  in between) dispatched cleanly twice in units 006 and
+  007 - that is now the standard dispatch method, and a
+  parallel attempt should batch the second squad's whole
+  sequence the same way immediately after the first
+  March. Squad 2's deploy panel (unit 006) - 20.92M
+  power, five Lv.150 heroes, Unit Count 2,175 of 2,175;
+  its versus line read Unknown / Evenly Matched against
+  the same Lv.10 card Squad 1 read as 670,000 / Easy
+  Win, unexplained.
 - Objective, owner instruction 2026-10-28 - maximize coin.
   Coin is one of the most needed resources on this account,
   and this activity exists to produce it. Units are judged on
@@ -121,7 +139,13 @@ execution.
   panel until claimed. Unit 003 claimed 5 rows for 1,072,000
   coins (about 214,400 per Lv.10 row), coin 34,416,573 to
   35,488,573. Record the collected amount as coins_collected
-  alongside coin_before and coin_after, every unit.
+  alongside coin_before and coin_after, every unit. Row
+  values vary - the two rows claimed in units 006 and 007
+  on 2026-10-28 each read coin 268.0K on the row and each
+  moved the exact panel by exactly 268,000 (35,488,573 to
+  35,756,573, then 35,756,573 to 36,024,573), so later-wave
+  Lv.10 rows pay more than the round 1 average; read each
+  row's coin line rather than assuming the average.
 - Stop condition, owner instruction 2026-10-28 - do not stop
   while zombies remain nearby. Keep sweeping or attacking the
   zombies near the base until none remain nearby, refilling
@@ -250,8 +274,11 @@ execution.
 
 ## Open questions
 
-- What the collection icon pays per kill (chain to measure -
-  it is the remaining uncounted coin source of round 1).
+- What the collection icon pays per kill - partly answered
+  2026-10-28 - two consecutive later-wave Lv.10 rows paid
+  exactly 268,000 each while the 5 round 1 rows averaged
+  214,400; what sets a row's coin line (wave, distance,
+  target) is still open.
 - The Coin Chest (SSR) yield, against the confirmed SR
   terms (160 medals for 812.16K) - it sets the medal
   spending order under the maximize-coin objective once the
