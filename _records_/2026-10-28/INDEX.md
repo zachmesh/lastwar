@@ -628,3 +628,38 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   bought, no speedup or stamina item burned.
 - Zombie unit 015 - coin panel verified exactly 51,203,336 at the open (unit 014 closing, unchanged); the different-device dialog was confirmed once per the owner kick rule, the app relaunched cleanly (stamina 83), and the Zombie Invasion page was verified by title with 2d 09:22 left and the next wave about 03:20 out. The Search tap then hit the known unreliable device-access error, as did two further differently-shaped retries (3 attempts total), so no march was dispatched - zombies_killed 0, coins_collected 0, medals carried 40 to 40, chests_opened 0, squads_parallel 0 (channel failure, not a game cap), cleared false, successor enqueued to start now. Detail in [zombie-invasion/0934-queue-run.md](zombie-invasion/0934-queue-run.md).
 - Token released, diamonds 653 throughout, nothing bought, no speedup or stamina item burned.
+
+## 10:04 to about 10:32 — Queue ticker pass ticker-1004, arms-race red-line miss, donations, radar and harvest done
+
+- Executor ticker-1004. Sync found 6 due regulars already
+  queued (planner staged); zombie chain unit 016 already
+  pending, so no seeding. Four units executed under the
+  device token; survivors and training of the 1003 slot and
+  zombie unit 016 carry to the next tick (pass budget).
+- Arms Race - live phase Base Building, 00:53:36 left,
+  score 0 against thresholds 6,250, 12,500 and 30,000,
+  cumulative chest 9 of 18 not claimable. Every scoring
+  path is a red line (construction speedups, diamond
+  packs, or starting a building), so the unit is
+  skipped-needs-owner and the target is recorded as a
+  red-line miss; tracker skipped. Detail in
+  [arms-race/1004-queue-run.md](arms-race/1004-queue-run.md).
+- Donations - 12 coin donations of 700 coin each to the
+  recommended Rallied Defense (6 of 10); Tech Donation
+  Today 3,000 to 4,450 as read on the tree footer; coin
+  button greyed with a 00:08:29 timer; diamond button
+  never used. Detail in
+  [alliance-donations/1015-queue-run.md](alliance-donations/1015-queue-run.md).
+- Radar - duel Day 3 release posture; stored tasks
+  already 0 of 40, points 2,924 unchanged, stamina 90,
+  no map pins standing, nothing to execute or claim.
+  Detail in [radar-tasks/1025-queue-run.md](radar-tasks/1025-queue-run.md).
+- Harvest - central compound titanium bubbles collected,
+  titanium 12.8M to 13.6M; one tap fell through to the
+  Titanium Alloy Factory No.1 Lv.30 panel, closed
+  untouched; no Armed Truck claim observed. The computer
+  session dropped once and reopened on the first retry.
+  Detail in
+  [resource-collection/1030-queue-run.md](resource-collection/1030-queue-run.md).
+- Token released, diamonds 653 throughout, nothing
+  bought, no speedup or stamina item burned.

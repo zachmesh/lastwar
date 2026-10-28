@@ -1,13 +1,13 @@
 {
  "harvest": {
   "status": "done",
-  "at": "2026-10-28T06:20:26",
-  "note": "All bubbles collected, food 138.6M iron 331.4M coin 41.4M, 0619 queue unit"
+  "at": "2026-10-28T10:14:31",
+  "note": "Bubbles collected, titanium +0.8M to 13.6M"
  },
  "radar": {
   "status": "done",
-  "at": "2026-10-28T06:17:06",
-  "note": "Release-day clear 7/40 to 0/40, points 2911 to 2924, 0616 queue unit"
+  "at": "2026-10-28T10:12:23",
+  "note": "0/40 already cleared, points 2924, no pins"
  },
  "survivors": {
   "status": "done",
@@ -21,13 +21,13 @@
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-28T06:12:15",
-  "note": "10 coin donations to Rallied Defense, today 2200 to 3000, 0611 queue unit"
+  "at": "2026-10-28T10:10:59",
+  "note": "12 coin donations, today 3000 to 4450, button greyed"
  },
  "arms-race": {
   "status": "skipped",
-  "at": "2026-10-28T06:07:57",
-  "note": "Tech Research phase score 0, all scoring paths red lines (speedups/packs/starting research), miss recorded 0604 queue unit"
+  "at": "2026-10-28T10:06:56",
+  "note": "Base Building phase 1003 slot score 0, all scoring paths red lines, miss recorded"
  },
  "help": {
   "status": "done",
