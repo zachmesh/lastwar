@@ -30,3 +30,10 @@ time and never edited once committed (C1).
   with a 00:04:16 timer; Tech Donation Today 1,550 to
   1,950; the daily reward is a ranking settlement, nothing
   to claim by hand.
+
+- [1428-queue-run.md](1428-queue-run.md) — queue unit
+  donations-2026-10-28-1403; recommended Rallied Defense
+  6 of 10, Tech Donation Today 4450, Donation Count 12 of 30
+  at the open; donation landing unverified (one read showed
+  13 of 30, fresh re-read showed 12 of 30), recorded partial
+  with the tracker untouched.

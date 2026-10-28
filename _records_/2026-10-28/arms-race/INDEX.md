@@ -31,3 +31,10 @@ time and never edited once committed (C1).
   EXP), all three point chests and the cumulative chest
   claimed, segment rank 6; ranking chest preview only until
   the phase ends.
+
+- [1408-queue-run.md](1408-queue-run.md) — queue unit
+  arms-race-2026-10-28-1403; Unit Progression phase, score 0 of
+  75,000, cumulative chest 9 of 18 not claimable, nothing
+  claimed; training path open via the training regular in
+  this pass, recorded partial with the tracker untouched for
+  a next-tick re-check.
