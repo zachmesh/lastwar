@@ -172,6 +172,16 @@ execution.
   Arms Race and extended to this task by the owner in the task
   instruction). Stamina running out is not by itself a stop reason
   while refills remain.
+- Open the stamina resources you already hold, owner reminder
+  2026-10-28 - "For Stamina, you have Stamina Resource you can
+  open." The stamina resource items sitting in the inventory are
+  a refill source to be OPENED and used whenever stamina binds,
+  not a reserve to sit on - the event Store being sold out of
+  stamina items (Limit 0, unit 014) does not make stamina
+  exhausted. Before any unit concludes that stamina and every
+  refill source are exhausted (the only ground for delaying the
+  successor by 1 hour), it must check the inventory stamina
+  items and record their count in the unit stats.
 - Red lines hold without exception - never spend diamonds or
   money, never tap a price tag, a paid button, Renew, Finish Now
   or the Legendary Claim All, and never assemble or teleport.
