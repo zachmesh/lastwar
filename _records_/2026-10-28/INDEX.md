@@ -252,3 +252,18 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   Mac there and the queue chain owns the activity onward.
   Detail in
   [zombie-invasion/0246-round-1-run.md](zombie-invasion/0246-round-1-run.md).
+
+## 04:07 to about 04:10 — Queue ticker, Zombie Invasion chain unit 004, access failed after opening read
+
+- Executor ticker-0407. Sync produced no due regulars; the
+  only due unit was zombie chain unit 004, claimed under the
+  device token. The COIN panel stood open; Owned read
+  35,488,573 exactly, coin_before for this unit.
+- The first click returned the known unreliable
+  device-access error; the session was reopened and at
+  least 3 attempts were made in total, all blocked. No
+  in-game input landed, no kill, no LOOT collection,
+  zombies_killed 0, cleared false, coins_collected 0.
+  Unit recorded as failed, tracker untouched, successor
+  enqueued to start now. Detail in
+  [zombie-invasion/0407-queue-run.md](zombie-invasion/0407-queue-run.md).
