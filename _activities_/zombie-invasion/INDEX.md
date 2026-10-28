@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T15:58:00Z
+modified: 2026-10-28T16:20:00Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -310,6 +310,26 @@ execution.
   Y963, X992 Y963) were therefore sequential, not
   parallel — compounded by march times of only about
   10 seconds on home-cluster targets.
+- Chest naming CORRECTED by unit 014 on 2026-10-28 —
+  the 160-medal, Limit 100 chest's BUY ITEMS dialog and
+  its tooltip both name it Coin Chest (SSR); the
+  812.16K coin yield belongs to this chest. The round 1
+  and unit 005 label Coin Chest (SR) for the 160-medal
+  chest was a misread. The 480-medal, Limit 20 chest's
+  name is still unread (its button reads Go To when the
+  balance is short). Unit 014 redeemed 1 SSR chest for
+  160 medals (balance verified 190 in the Store, 30
+  after); the tooltip then read Owned 3 — the 2
+  pre-owned chests plus the new one, 2,436,480 coins in
+  total waiting to be opened, location in inventory
+  still unknown, and the Store tooltip Owned count is a
+  reliable tracker until then. The Store 50-stamina
+  item (10 medals) reads Limit 0 with a greyed Redeem —
+  round 1's 3 redemptions exhausted an event-total
+  limit; that refill source is closed for this event.
+  Unit 014's dispatch was stamina-bound (13 stamina,
+  one 10-cost march, 3 left), squads_parallel 1 for
+  that stated reason.
 
 - Parallel dispatch at the cap ACHIEVED by unit 013 on
   2026-10-28 — four batched sequences put all four squads
@@ -330,11 +350,12 @@ execution.
   exactly 268,000 each while the 5 round 1 rows averaged
   214,400; what sets a row's coin line (wave, distance,
   target) is still open.
-- The Coin Chest (SSR) yield, against the confirmed SR
-  terms (160 medals for 812.16K) - it sets the medal
-  spending order under the maximize-coin objective once the
-  balance reaches 480.
-- Where the 2 owned Coin Chest (SR) sit in the inventory -
+- The 480-medal, Limit 20 chest's name and yield -
+  unit 014 resolved the old form of this question - the
+  160-medal chest is the Coin Chest (SSR) and pays
+  812.16K. What the 480 chest pays sets the medal
+  spending order once the balance reaches 480.
+- Where the 3 owned Coin Chest (SSR) sit in the inventory -
   not found in the Special tab or the first Resources pages
   in unit 005.
 - Whether zombie levels rise above Lv.10 in later waves or

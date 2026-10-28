@@ -606,3 +606,23 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   [zombie-invasion/0840-queue-run.md](zombie-invasion/0840-queue-run.md).
 - Token released, diamonds 653 throughout, nothing
   bought, no speedup or stamina item burned.
+- Zombie unit 014 - claimed unit 013's three in-flight
+  LOOT rows (X799 Y760, X895 Y759, X895 Y771) for exactly
+  804,000 coins, then verified medals 190 in the event
+  Store and redeemed 1 Coin Chest for 160 medals under
+  the maximize-coin decision. The 160-medal, Limit 100
+  chest is named Coin Chest (SSR) in game - the round 1
+  SR label was a misread - and its tooltip reads Owned
+  3 at 812.16K coins each (2,436,480 waiting to open,
+  inventory location still unknown). Store 50-stamina
+  item reads Limit 0, exhausted for the event. One
+  Squad 1 march (stamina-bound, squads_parallel 1 with
+  the reason recorded) killed X914 Y812 and its row was
+  claimed for another exact 268,000. Totals -
+  coins_collected 1,072,000, coin exact 50,131,336 to
+  51,203,336, medals 160 to 40, chests redeemed 1,
+  chests_opened 0, cleared false, successor enqueued to
+  start now. Detail in
+  [zombie-invasion/0904-queue-run.md](zombie-invasion/0904-queue-run.md).
+- Token released, diamonds 653 throughout, nothing
+  bought, no speedup or stamina item burned.
