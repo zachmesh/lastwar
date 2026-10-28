@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-28
 created: 2026-10-28T09:42:00Z
-modified: 2026-10-28T10:20:00Z
+modified: 2026-10-28T10:50:00Z
 level: L0
-version: 1.2.0
+version: 1.3.0
 description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session; the 0257 segment 3 run, all five due regulars checked in full with nothing claimable - settled secret cards only, no treasure set, trucks en route with caps reached, passes verified claimed, Events and Season sweep clean
 status: unverified
 grounded_in:
@@ -155,3 +155,32 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   bought, no diamond spent (653 at open and close), no speedup or
   stamina item burned, no research or building started, no stage
   swap, no coal donated.
+
+## 03:34 to 03:47 — Queue ticker first unit, Zombie Invasion chain unit 001, one kill, chain continues
+
+- First execution of the task unit queue ticker (executor
+  ticker-0334). Sync produced no due regulars; the ticker
+  seeded Zombie Invasion chain zombie-2026-10-28 unit 001
+  (event live, chain at 0 of its 3 hour budget) and claimed
+  it under the device token.
+- One Lv.10 Invading Zombies march was dispatched from the
+  card left open by round 1 and completed - target pile
+  gone, squad returned; the Victory banner was not captured,
+  so the kill is recorded unverified. Coin unchanged at HUD
+  precision (34.4M), diamonds 653 throughout, no refill used.
+- The Zombie Invasion page confirmed the event live (2 days
+  15 hours left, next wave about 56 minutes out). A Search
+  centred near home but confirmed no new target inside the
+  15 minute unit cap, so the unit closed partial with
+  cleared false and the next chain unit was enqueued.
+  Detail in
+  [zombie-invasion/0334-queue-run.md](zombie-invasion/0334-queue-run.md).
+- Chain unit 002 (03:47) was claimed and its session opened,
+  then every further device call returned the known
+  unreliable authorization error - 3 attempts made, unit
+  recorded access-failed, no play, tracker untouched, chain
+  unit 003 enqueued. Note - the owner corrected the chain
+  budget at 03:44 (main chat): the zombie chain has no
+  3 hour cap; it runs while the event lasts and only pauses
+  about an hour when no zombies are nearby. Detail in
+  [zombie-invasion/0347-queue-run.md](zombie-invasion/0347-queue-run.md).

@@ -1,20 +1,22 @@
 ---
-unit: zombie-invasion-zombie-2026-10-28-001
+unit: zombie-invasion-zombie-2026-10-28-003
 regular: zombie-invasion
 activity: zombie-invasion
 segment:
 priority: 4
-created_at: 2026-10-28T10:35:08Z
+created_at: 2026-10-28T10:48:20Z
 expires_at:
+planned_for:
+not_before:
 window:
 est_minutes: 12
 chain_id: zombie-2026-10-28
-chain_seq: 1
-attempts: 1
+chain_seq: 3
+attempts: 0
 max_attempts: 3
-claimed_by: ticker-0334
-claimed_at: 2026-10-28T10:35:15Z
-lease_until: 2026-10-28T10:55:15Z
+claimed_by:
+claimed_at:
+lease_until:
 ---
 
 # zombie-invasion
