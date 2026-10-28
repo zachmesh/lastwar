@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-28
 created: 2026-10-28T09:42:00Z
-modified: 2026-10-28T12:02:00Z
+modified: 2026-10-28T12:14:00Z
 level: L0
-version: 1.5.0
+version: 1.6.0
 description: The 0203 segment 1 run, Hero Advancement target met at 39500 of 12000, radar released to empty, donations done, training blocked by a full drill ground; the 0230 segment 2 run, Help All done and the rest deferred by a concurrent owner-directed Zombie Invasion session; the 0257 segment 3 run, all five due regulars checked in full with nothing claimable - settled secret cards only, no treasure set, trucks en route with caps reached, passes verified claimed, Events and Season sweep clean; the 0246 Zombie Invasion round 1 session, four Lv.10 kills and the event Store mapped, three 50 stamina items redeemed for medals, zero direct coin from Lv.10 kills, stood down as the queue chain took over the Mac
 status: unverified
 grounded_in:
@@ -334,3 +334,31 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   successor enqueued to start now, tracker untouched
   (partial). Detail in
   [zombie-invasion/0450-queue-run.md](zombie-invasion/0450-queue-run.md).
+
+## 05:04 to about 05:15 — Queue ticker, Zombie Invasion chain unit 008, handover loot not settled, no march landed
+
+- Executor ticker-0504. Sync produced no due regulars (all
+  planner units staged for 06:03 and later); the only due
+  unit was zombie chain unit 008, claimed under the device
+  token.
+- Coin panel read exactly at open — Owned 36,024,573,
+  unit 007's closing value. Event live (2 days 13 hours
+  53 minutes left, next wave about 34 minutes out) and
+  Search found a Lv.10 Invading Zombies target, so
+  cleared is false.
+- The LOOT row from unit 007's in-flight march was NOT
+  claimed — the March Queues bar did not render in the
+  home-cluster world views reached in this unit, and the
+  row stays in the LOOT panel for unit 009 to claim (the
+  kill counts in the claiming unit, so it is deferred,
+  not lost). No march landed either — a crossed-swords
+  tap closed the Lv.10 card instead of opening the deploy
+  panel, and a batched second attempt opened a Lv.85
+  Zombie Boss card (rally class, out of scope), closed
+  untouched. squads_parallel 0, zombies_killed 0,
+  coins_collected 0, coin in and out 36,024,573, medals
+  held at 90 by unit 007's evidence (below the 160 SR
+  chest price, no redemption). Successor enqueued to
+  start now, tracker untouched (partial). Diamonds 653
+  throughout, nothing bought. Detail in
+  [zombie-invasion/0504-queue-run.md](zombie-invasion/0504-queue-run.md).
