@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T15:15:00Z
+modified: 2026-10-28T15:58:00Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -310,6 +310,18 @@ execution.
   Y963, X992 Y963) were therefore sequential, not
   parallel — compounded by march times of only about
   10 seconds on home-cluster targets.
+
+- Parallel dispatch at the cap ACHIEVED by unit 013 on
+  2026-10-28 — four batched sequences put all four squads
+  on the march at once (March Queues 4 of 4; X883 Y811,
+  X895 Y771, X895 Y759, X799 Y760; stamina 46 to 7). The
+  march queue cap of 4 is the binding parallel limit.
+  The gift box on the world map March Queues bar sits at
+  normalized 317,233 — taps at 266,253 opened the ally
+  base behind the bar instead. Unit 012's X891 Y845
+  handover march DID produce its LOOT row (claimed by
+  unit 013 for 268,000), so a march left in flight can
+  land either way; check the badge, never assume.
 
 ## Open questions
 

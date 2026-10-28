@@ -589,3 +589,20 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   taps at y 899 land on the next-wave text line.
 - Token released, diamonds 653 throughout, nothing
   bought, no speedup or stamina item burned.
+- Zombie unit 013 - four squads dispatched in parallel
+  (March Queues 4 of 4, a chain first; X883 Y811, X895
+  Y771, X895 Y759, X799 Y760; stamina 46 to 7). Two LOOT
+  rows claimed for exactly 536,000 coins - unit 012's
+  X891 Y845 handover row DID land (268,000) and Squad 1's
+  kill row (268,000); coin exact 49,595,336 to
+  50,131,336. Medals 140 to 160 inferred (two rows at
+  medal x10), exactly the Coin Chest (SR) price - the
+  successor verifies in the Store and redeems under the
+  maximize-coin decision. zombies_killed 1 verified with
+  3 marches still in flight at the cap, squads_parallel
+  4, chests_opened 0, cleared false, successor enqueued
+  to start now. Gift box position pinned at normalized
+  317,233 on the world map March Queues bar. Detail in
+  [zombie-invasion/0840-queue-run.md](zombie-invasion/0840-queue-run.md).
+- Token released, diamonds 653 throughout, nothing
+  bought, no speedup or stamina item burned.
