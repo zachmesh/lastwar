@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T11:02:00Z
+modified: 2026-10-28T11:08:00Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: owner instruction in side chat on 2026-10-28 - pause one hour only if no zombies are nearby, otherwise keep running zombie invasion continuously during the entire activity period
   - source: owner instruction in side chat on 2026-10-28 - dispatch multiple teams in parallel during zombie invasion so rewards accumulate faster
   - source: owner instruction in main chat on 2026-10-28 - play proceeds in rounds so other tasks get their time, and rounds keep cycling while the event is available
+  - source: owner decision in main chat on 2026-10-28 - execute maximize coin, redeem medals for Coin Chests in the event Store and open the 2 owned Coin Chest (SR) in inventory
 ---
 
 # Zombie invasion
@@ -71,6 +72,21 @@ execution.
   crates the kills drop, and the event Rewards track when it
   pays coins - and record the yield per source in the unit
   stats so the preference is evidence, not habit.
+- Coin chests, owner decision 2026-10-28 - execute the
+  maximize-coin conversion without asking again. (a) Open
+  Coin Chests already owned in inventory (2 Coin Chest (SR)
+  at the decision, about 812.16K coins each by tooltip) and
+  record the exact yield per chest. (b) Redeem medals for
+  Coin Chests in the event Store - until both prices and
+  yields are measured, redeem SR first; once the SR price
+  and the SSR yield are known, follow the better coins per
+  medal and record the comparison. Keep enough medals in
+  reserve only for the stamina loop (a 50 stamina item costs
+  10 medals) when stamina is the binding constraint. Record
+  medal balance and chest counts in the unit stats. This
+  authorization covers medal-denominated Store redemptions
+  for Coin Chests and the opening of owned chests only - it
+  does not extend to any diamond or money purchase.
 - Coin collection, owner instruction 2026-10-28 - the coins
   this event pays collect behind the task collection icon and
   are received only when it is tapped. Every zombie unit shall
@@ -202,7 +218,10 @@ execution.
   task - the medal loop is stamina-positive (one kill earns
   the 10 medals a 50 stamina item costs). Medal spending
   beyond stamina (chests versus saving) follows the owner's
-  maximize-coin objective and is the chain's call.
+  maximize-coin objective and is the chain's call. The owner
+  confirmed the maximize-coin execution on 2026-10-28 -
+  redeem medals for Coin Chests and open the owned chests
+  (see Coin chests under Cadence).
 - Battle reports - the owner's 2026-10-26 mail holds
   victories over Lv.16 to Lv.20 Zombie Horde targets (the
   Lv.20 at X990 Y954 took three squads in sequence), so
