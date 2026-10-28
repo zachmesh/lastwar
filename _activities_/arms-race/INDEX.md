@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-10-28T09:15:00Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: owner instruction on 2026-10-26 - experience boxes may be opened to increase hero level if needed
   - source: owner instruction on 2026-10-26 - every time a run is made, check the score in Arms Race
   - source: owner correction on 2026-10-26 - the three point chests are not all of the Arms Race rewards, and a bouncing chest on the Events or Arms Race screen means more rewards remain
+  - source: owner instruction on 2026-10-28 via Slack - stamina for Arms Race scoring may come from the Free Claim or from stamina resource items of 10 or 50
 ---
 
 
@@ -103,8 +104,20 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   experience boxes from the inventory to top it up (owner
   instruction, 2026-10-26) - open only what the level ups
   actually need, in line with the just enough rule.
+- Stamina refill, owner instruction 2026-10-28 (given via
+  Slack) - when a phase scoring path runs on stamina (radar and
+  doom work, for example), stamina may be refilled from the Free
+  Claim or from stamina resource items (the 10 stamina and 50
+  stamina items) so the scoring actions can be completed and
+  the rewards claimed fully. Take the Free Claim first, then
+  open only the stamina items the remaining gap needs, in line
+  with the just enough rule. A target is not recorded as missed
+  for lack of stamina until these refills have been used. This
+  is a scoped authorization for stamina items only - it does
+  not extend to speedup items.
 - The target never overrides the red lines. Diamonds and money are
-  never spent, speedup and stamina items are never burned, no
+  never spent and speedup items are never burned; stamina items
+  are used only under the stamina refill rule above. No
   research or building is started on the agent initiative, hero
   resources are never spent, and stages are never swapped - not
   even to reach the target. If the top threshold cannot be reached
@@ -116,9 +129,11 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 
 - Completing tasks with actions the account is doing anyway, or with
   free actions, is in scope.
-- Burning speedups, stamina items or resources purely to score, and
+- Burning speedups or resources purely to score, and
   anything costing diamonds or money, stays out of scope without
-  owner approval, under the recording rules.
+  owner approval, under the recording rules. Stamina items are
+  governed by the stamina refill rule under Cadence (owner
+  instruction, 2026-10-28).
 - Observed on 2026-10-25 - the Unit Progression phase was live with
   this account at 0 points, rank 2110 as displayed, about three and
   a half hours left in the phase at the time of the first daily round.
@@ -239,3 +254,14 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   (SR) 3, Coin Chest (SR) 3), with no Claim button, hours
   after that phase ended. Where the phase ranking reward is
   actually paid remains an open question below.
+
+## What is known from 2026-10-28
+
+- The stamina refill rule (see Cadence) was given by the owner
+  via Slack on 2026-10-28, hours after the 22:03 segment 1 run
+  of 2026-10-27 recorded a Drone Boost miss at 11,500 of
+  30,000 - the remaining gap needed about 185 stamina against
+  21 on hand, and under the rules as they then stood the only
+  paths were that stamina or paid packs, so the miss stood.
+  From the rule onward, that shortfall is closed with the Free
+  Claim and stamina items before a miss is recorded.
