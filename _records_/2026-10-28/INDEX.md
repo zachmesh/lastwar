@@ -712,3 +712,43 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   Dispatch History record 2026-10-28 07:24:42 SSR). Recover
   showed no red dot. Nothing spent. Detail in
   [truck-plunder/1218-queue-run.md](truck-plunder/1218-queue-run.md).
+
+## 12:34 to about 12:56 — Queue ticker pass ticker-1234, secrets and treasures checked, zombie unit 016 partial
+
+- Secrets (queue unit secrets-2026-10-28-1057) — Secret Command
+  Post checked in full: the same four settled cards as the 0257
+  and 0734 runs (UR Rescue Officer with its plundered marker, SSR
+  Train Refugees twice and SSR Protect Refugee Camp, the latter
+  three stamped PERFECT), no Claim or Go button, assists at the
+  5 of 5 daily cap, Plunder Others 0 of 5 untouched, Reward
+  Recovery latest record 2026-10-24 already CLAIMED. Entry note:
+  the white pickup icon now sits at norm (54,650); a tap at
+  (50,605) opened own-truck dispatch instead and was left
+  untouched. Nothing dispatched or claimed. Detail in
+  [secret-missions/1242-queue-run.md](secret-missions/1242-queue-run.md).
+- Treasures (queue unit treasures-2026-10-28-1057) — Hidden
+  Treasures checked in full: fragments unchanged M1 x12, M2 x13,
+  M3 x0, M4 x6, M5 x1, M6 x4, M7 x12, M3 exhausted so no full
+  set, both dig buttons grey, chest progress 14 of 15, no
+  exchange attempted. Nothing dug. Detail in
+  [hidden-treasures/1244-queue-run.md](hidden-treasures/1244-queue-run.md).
+- Zombie unit 016 — partial, no march dispatched. Coin panel
+  verified exactly 51,194,936 at the open (unit 015 closing
+  51,203,336, down 8,400 by intervening routine spending, not
+  this unit), stamina 120, no different-device dialog. The
+  Zombie Invasion page was verified by title (2d 06:10 left,
+  next wave about 00:51 out), yet Search found a Lv.10 target:
+  medal x10, book 1.3K, EXP 263.0K, iron 268.0K, food 268.0K,
+  Suggested Power 670,000, stamina cost 10. The target is
+  stacked with a player base, and the crossed-swords tap only
+  cycled a Choose-a-target popup (twice) instead of opening
+  the deploy panel, so no squad marched and no stamina was
+  spent. Coins unchanged, medals carried 40 to 40 unverified,
+  chests opened 0, squads_parallel 0 (stacked target, not a
+  game cap), cleared false; successor unit 017 enqueued to
+  start now. Follow-up: re-run Search for an unstacked
+  target, or tap the helicopter target directly. Detail in
+  [zombie-invasion/1254-queue-run.md](zombie-invasion/1254-queue-run.md).
+- Token released. Survivors and training units of the 1057
+  slot remain due for the next tick. Nothing bought, no
+  diamond spent, no paid button touched.

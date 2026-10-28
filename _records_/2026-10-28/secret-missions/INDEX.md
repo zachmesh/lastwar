@@ -31,3 +31,12 @@ time and never edited once committed (C1).
   the same four settled PERFECT cards, no Claim or Go button,
   assists at the 5 of 5 daily cap, Reward Recovery's latest record
   (2026-10-24) already CLAIMED. Nothing was dispatched or claimed.
+
+- [1242-queue-run.md](1242-queue-run.md) — queue unit
+  secrets-2026-10-28-1057, executor ticker-1234; checked in full -
+  the same four settled cards (UR Rescue Officer with its plundered
+  marker, the other three stamped PERFECT), no Claim or Go button,
+  assists at the 5 of 5 daily cap, Reward Recovery's latest record
+  (2026-10-24) already CLAIMED. Nothing was dispatched or claimed.
+  Entry note: the white pickup icon now sits at norm (54,650); a
+  tap at (50,605) opened own-truck dispatch instead.
