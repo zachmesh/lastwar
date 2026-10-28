@@ -267,3 +267,21 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   Unit recorded as failed, tracker untouched, successor
   enqueued to start now. Detail in
   [zombie-invasion/0407-queue-run.md](zombie-invasion/0407-queue-run.md).
+
+## 04:11 to about 04:19 — Queue unit 005, Zombie Invasion wave exhausted, Store price confirmed
+
+- Executor parallel-exec-005, dispatched with parallel
+  dispatch as its priority. The wave was exhausted -
+  Search answered "Monsters not found nearby", next wave
+  about 11:44Z - so no target existed and squads_parallel
+  is 0 for lack of targets, not a game cap; the march
+  queue cap is still unmeasured. zombies_killed 0,
+  stamina spent 0, coin 35,488,573 in and out,
+  coins_collected 0.
+- Store recon - medal balance 70; the Coin Chest (SR)
+  price is confirmed at 160 medals (Limit 100), the SSR
+  at 480 (Limit 20), so no redemption was possible. The
+  2 owned SR chests were not located in inventory inside
+  the window and stay a follow-up, as does the LOOT badge
+  check. Detail in
+  [zombie-invasion/0411-queue-run.md](zombie-invasion/0411-queue-run.md).

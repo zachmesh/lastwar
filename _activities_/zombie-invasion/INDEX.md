@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T11:08:00Z
+modified: 2026-10-28T11:23:00Z
 level: L1
-version: 1.5.0
+version: 1.5.1
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -69,7 +69,12 @@ execution.
   squads_parallel 1 must state in its summary why parallel
   dispatch was impossible, and any game-side cap found
   (march queue limit, stamina supply, march slots) is
-  recorded here with the observed number.
+  recorded here with the observed number. Unit 005
+  (2026-10-28) also could not dispatch - the wave was
+  exhausted and Search answered not found, so its
+  squads_parallel is 0 for lack of targets, which is not a
+  cap. The march queue cap is still unmeasured; the first
+  unit that meets a fresh wave must measure it.
 - Objective, owner instruction 2026-10-28 - maximize coin.
   Coin is one of the most needed resources on this account,
   and this activity exists to produce it. Units are judged on
@@ -209,10 +214,14 @@ execution.
 - The event Store (read in full in round 1) - the medal is
   the currency. Coin Chests are the confirmed coin source -
   Coin Chest (SR) pays 812.16K coins at Base Lv.30 by its
-  tooltip (medal price unconfirmed, above the 60 held at the
-  read, digits read as about 150; Limit 100; 2 already owned
-  in inventory, unopened), Coin Chest (SSR) costs 480 medals
-  (Limit 20, yield unread). Other prices in medals - 50
+  tooltip (medal price CONFIRMED 160 by chain unit 005 on
+  2026-10-28; Limit 100; 2 already owned in inventory,
+  unopened - their inventory location is still to be pinned
+  down, the Special tab's purple gold chest is a Tactical
+  Master Supply Box and not this chest), Coin Chest (SSR)
+  costs 480 medals (Limit 20, yield unread). Medal balance
+  read 70 in unit 005, below the 160 a first SR redemption
+  needs. Other prices in medals - 50
   Stamina item 10 (Limit 3), Universal Exclusive Weapon
   Shard 120 (Limit 10), Hero Recruitment Ticket 80 (Limit
   10), Survivor Recruitment Ticket 80 (Limit 30), iron crate
@@ -243,9 +252,13 @@ execution.
 
 - What the collection icon pays per kill (chain to measure -
   it is the remaining uncounted coin source of round 1).
-- The exact medal price of the Coin Chest (SR), and the Coin
-  Chest (SSR) yield - together they set the medal spending
-  order under the maximize-coin objective.
+- The Coin Chest (SSR) yield, against the confirmed SR
+  terms (160 medals for 812.16K) - it sets the medal
+  spending order under the maximize-coin objective once the
+  balance reaches 480.
+- Where the 2 owned Coin Chest (SR) sit in the inventory -
+  not found in the Special tab or the first Resources pages
+  in unit 005.
 - Whether zombie levels rise above Lv.10 in later waves or
   days (Lv.16 to Lv.20 Zombie Hordes in the owner's
   2026-10-26 reports), and how stamina cost, medals and
