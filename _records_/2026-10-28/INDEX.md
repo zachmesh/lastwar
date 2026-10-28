@@ -626,3 +626,5 @@ instruction of 2026-10-25 to run all the regulars every four hours.
   [zombie-invasion/0904-queue-run.md](zombie-invasion/0904-queue-run.md).
 - Token released, diamonds 653 throughout, nothing
   bought, no speedup or stamina item burned.
+- Zombie unit 015 - coin panel verified exactly 51,203,336 at the open (unit 014 closing, unchanged); the different-device dialog was confirmed once per the owner kick rule, the app relaunched cleanly (stamina 83), and the Zombie Invasion page was verified by title with 2d 09:22 left and the next wave about 03:20 out. The Search tap then hit the known unreliable device-access error, as did two further differently-shaped retries (3 attempts total), so no march was dispatched - zombies_killed 0, coins_collected 0, medals carried 40 to 40, chests_opened 0, squads_parallel 0 (channel failure, not a game cap), cleared false, successor enqueued to start now. Detail in [zombie-invasion/0934-queue-run.md](zombie-invasion/0934-queue-run.md).
+- Token released, diamonds 653 throughout, nothing bought, no speedup or stamina item burned.
