@@ -13,5 +13,20 @@
   "status": "done",
   "at": "2026-10-29T02:45:40",
   "note": "Farmland, coin and iron bubbles collected: food +3.0M, coin +5.3M, iron +2.8M"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-10-29T03:11:41",
+  "note": "132 Regular and 4 Premium Alliance Gifts claimed, progress 171523600"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-10-29T03:12:30",
+  "note": "Help All pressed, ally requests cleared"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-10-29T03:16:16",
+  "note": "Event batch claimed, other categories no rewards"
  }
 }

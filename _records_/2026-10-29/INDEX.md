@@ -108,3 +108,21 @@ of 2026-10-28.
 - Arms-race queue unit 0207, partial: Unit Progression phase, score 0 vs 15000/30000/75000, about 00:53 left, cumulative chest 0/2 not claimable, nothing claimed; training path open via training regular in this pass, tracker untouched for next-tick re-check. Full detail in arms-race/0207-queue-run.md.
 - Donations queue unit 0216, done: 12 coin donations of 700 coin each to recommended Rallied Defense (6/10), count 12/30 to 0, button greyed with 00:02:48 cooldown; Tech Donation Today 800 to 2000. Full detail in alliance-donations/0216-queue-run.md.
 - Radar queue unit 0224, partial (duel Day 4 stack): Free Claim 75 stamina taken (9 to 84, Remaining Today 1/2), Quick Execute 5 tasks for 50 stamina then 1 task for 10 stamina, stamina ends 25; 7 task rewards left stacked unclaimed, except one finished-pin tap that claimed a reward (points 2948 to 2949, stored 2/40 to 1/40, recorded as a stack-posture exception); special map pins still standing, tracker untouched. Full detail in radar-tasks/0224-queue-run.md.
+
+## 03:05 to about 03:11 — Queue ticker pass, gifts claimed
+
+- Gifts unit gifts-2026-10-29-0230, done: Claim All on both tabs,
+  132 Regular and 4 Premium Alliance Gifts, Gift Level 28 progress
+  171,520,830 to 171,523,600. Full detail in
+  alliance-gifts/0311-queue-run.md.
+- Help unit help-2026-10-29-0230, done: Help All pressed once,
+  ally requests cleared, own 30/30 requests remain. Full detail in
+  alliance-help/0312-queue-run.md.
+- Mail unit mail-2026-10-29-0230, done: Event Claim All batch
+  (EXP 14.2M, coin 5.7M, food/iron 4.4M); Alliance, Regular,
+  Season and System held no rewards. Full detail in
+  mail-rewards/0316-queue-run.md.
+- Train unit train-2026-10-29-0230, partial: station not reached
+  (left-column icon opened Ghost Ops, closed untouched; no
+  boarding banner at the check), tracker untouched for the next
+  tick. Full detail in alliance-train/0318-queue-run.md.
