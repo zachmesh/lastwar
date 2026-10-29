@@ -25,3 +25,8 @@ time and never edited once committed (C1).
   taps produced no recruit card or dialog and the view
   recentred, line not verified clear, Quick Dispatch
   not run, tracker untouched.
+
+- [0656-queue-run.md](0656-queue-run.md) — queue unit
+  survivors-2026-10-29-0603, partial; Mac session dropped
+  before the gate could be checked, nothing tapped, tracker
+  untouched.

@@ -23,3 +23,8 @@ time and never edited once committed (C1).
   harvest-2026-10-29-0203; farmland, coin and iron bubbles
   collected, food 205.5M to 208.5M, coin 81.7M to 87.0M,
   iron 391.9M to 394.7M; no Armed Truck claim observed.
+
+- [0653-queue-run.md](0653-queue-run.md) — queue unit
+  harvest-2026-10-29-0603; iron plus 2.5M, coin plus 1.8M,
+  food plus 2.9M from one farmland tap clearing all farmland
+  bubbles; no Armed Truck claim observed.

@@ -286,3 +286,36 @@ Full detail in zombie-invasion/0548-queue-run.md.
   then greyed with a 00:04:08 timer. Tech Donation Today
   2000 to 3550 as observed. Full record:
   alliance-donations/0611-queue-run.md.
+
+## 06:34 to about 06:44 — Radar queue unit, partial (entry rotation)
+
+- Ticker pass ticker-0634, unit radar-2026-10-29-0603.
+  Duel Day 4 Train Heroes, radar posture stack. Radar screen
+  not reached: the left-column dish icon (badge 7) opened
+  Secret Command Post on both taps - the slot is currently
+  assigned to secrets under its rotating shortcut set.
+  Magnifier opened world search, yellow device opened the
+  Mission screen (its Claim buttons belong to another regular
+  and were not tapped), a ground tap moved the camera to a
+  Lv.2 Iron Mine popup and was dismissed. Nothing claimed or
+  spent, tracker untouched, regular stays due for the next
+  tick. Full record: radar-tasks/0644-queue-run.md.
+
+## 06:45 to about 06:53 — Harvest queue unit, iron, coin and food collected
+
+- Ticker pass ticker-0634, unit harvest-2026-10-29-0603.
+  Base view reached via the BASE button (world map at open).
+  Iron 408.0M to 410.5M (plus 2.5M), coin 100.3M to 102.1M
+  (plus 1.8M), food 221.7M to 224.6M (plus 2.9M, one farmland
+  tap clearing all farmland bubbles). No Armed Truck claim
+  observed, nothing bought or burned. Full record:
+  resource-collection/0653-queue-run.md.
+
+## 06:53 to about 06:56 — Survivors queue unit, partial (session drop)
+
+- Ticker pass ticker-0634, unit survivors-2026-10-29-0603.
+  Metadata and the 02:50 record read, then the Mac computer
+  session dropped before the gate could be checked. No
+  survivor tapped, no dialog opened, tracker untouched,
+  regular stays due for the next tick. Full record:
+  survivor-intake/0656-queue-run.md.
