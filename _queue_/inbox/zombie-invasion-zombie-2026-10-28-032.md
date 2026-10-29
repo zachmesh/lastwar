@@ -1,18 +1,18 @@
 ---
-unit: zombie-invasion-zombie-2026-10-28-031
+unit: zombie-invasion-zombie-2026-10-28-032
 regular: zombie-invasion
 activity: zombie-invasion
 segment:
 priority: 4
-created_at: 2026-10-29T06:53:13Z
+created_at: 2026-10-29T07:45:48Z
 expires_at:
 planned_for:
 not_before:
 window:
 est_minutes: 12
 chain_id: zombie-2026-10-28
-chain_seq: 31
-attempts: 1
+chain_seq: 32
+attempts: 0
 max_attempts: 3
 claimed_by:
 claimed_at:
