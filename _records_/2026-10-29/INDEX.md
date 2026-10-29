@@ -49,3 +49,19 @@ of 2026-10-28.
   1 verified; medals 900 carried to 920 derived; no Coin Chest
   redeemed or opened. Full detail in
   zombie-invasion/0034-queue-run.md. Successor starts now.
+
+## 01:04 to about 01:15 — Queue ticker pass, zombie-invasion unit 032
+
+- Ticker pass ticker-0104. Sync reaped nothing and produced
+  nothing new - all 17 due regulars were already queued by the
+  planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-032 was already in inbox, so
+  no chain seeding was needed.
+- Zombie-invasion unit 032, partial: one 10-stamina item opened
+  before the first dispatch (611 to 610, 50-stamina x614
+  untouched); two Lv.10 kills (X:952 Y:980, X:934 Y:973)
+  dispatched in parallel (March Queues 2 of 4 verified) and
+  both LOOT rows claimed in-unit for 536,000 coins (HUD 78.0M
+  to 78.5M); medals 920 carried to 940 derived; no Coin Chest
+  redeemed or opened. Full detail in
+  zombie-invasion/0104-queue-run.md. Successor starts now.
