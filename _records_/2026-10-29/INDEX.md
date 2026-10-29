@@ -197,3 +197,37 @@ of 2026-10-28.
   owned Coin Chest (SSR) still unlocated. Successor
   unit 039 enqueued to start now. Full detail in
   zombie-invasion/0412-queue-run.md.
+
+Queue unit 039 (zombie-invasion, 0434) — partial: four
+Lv.10 kills claimed in-unit for 1,072,000 coins (X:829
+Y:999, X:811 Y:883, X:990 Y:942, X:982 Y:966),
+squads_parallel 2 verified by queue readings; one
+50-stamina item opened (611 to 610), stamina 22 plus
+50 minus 40 to 33; medals 1140 carried to 1180
+derived; the 4 owned Coin Chest (SSR) still
+unlocated. One MISSING ITEMS dialog from a
+fixed-point mistap was closed without buying, and
+one Escape keypress quit the game (relaunch clean,
+state intact). Successor unit 040 enqueued to start
+now. Full detail in zombie-invasion/0434-queue-run.md.
+
+Queue unit 040 (zombie-invasion, 0447) — partial: two
+Lv.10 kills claimed in-unit for 536,000 coins (X:989
+Y:974, X:985 Y:975), squads_parallel 2 verified by a
+2 of 4 queue reading; stamina 34 minus 20 to 14;
+medals 1180 carried to 1200 derived; the 4 owned Coin
+Chest (SSR) still unlocated. One transient control
+loss and one computer-session timeout were recovered
+without loss. Successor unit 041 enqueued to start
+now. Full detail in zombie-invasion/0447-queue-run.md.
+
+Queue unit 041 (zombie-invasion, 0450) — partial: one
+50-stamina item opened (610 to 609 derived), two
+Lv.10 kills claimed in-unit for 536,000 coins (X:984
+Y:977, X:994 Y:978), squads_parallel 2 verified by a
+2 of 4 queue reading; stamina 14 plus 50 minus 20 to
+45; medals 1200 carried to 1220 derived; the 4 owned
+Coin Chest (SSR) still unlocated. Inventory back
+arrow point corrected to 60,940 by grounding.
+Successor unit 042 enqueued to start now. Full detail
+in zombie-invasion/0450-queue-run.md.
