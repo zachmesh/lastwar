@@ -60,9 +60,9 @@
   "note": "No dig, M5 zero; 15/15 track guarantees UR on next dig"
  },
  "arms-race": {
-  "status": "done",
-  "at": "2026-10-29T06:10:32",
-  "note": "Hero Advancement 37500 via one Morrison level-up, all chests claimed"
+  "status": "skipped",
+  "at": "2026-10-29T10:21:49",
+  "note": "Tech Research 0 vs 30000, scoring paths are speedups/diamond packs/starting research - red lines"
  },
  "train": {
   "status": "done",

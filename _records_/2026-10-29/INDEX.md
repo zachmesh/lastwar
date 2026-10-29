@@ -485,3 +485,19 @@ Full detail in zombie-invasion/0548-queue-run.md.
   treasures checked (no dig, M5 zero), zombie kills 3
   for 804,000 coins claimed across units 044 to 046.
   Token released; pass ended at the budget.
+
+## 10:04 to about 10:21 — Queue ticker pass, arms-race unit 1003
+
+- Arms-race queue unit 1003, skipped-needs-owner: Tech
+  Research live, score 0 vs 6250/12500/30000, about 00:40
+  left; scoring paths are research speedups, diamond packs
+  or starting research, all red lines. Cumulative chest 6
+  of 8 not claimable; ranking reward preview only (UR Hero
+  Universal Shard 1, Decoration Chest 1, SR chests 24
+  each); nothing claimed. Research queue timers not
+  re-checked this run (unit cap consumed by tab-strip
+  navigation); the strip moves on a single drag action,
+  not a mouse-move drag. Full record in
+  arms-race/1021-queue-run.md.
+- Pass ended at the unit cap after this one unit; token
+  released.
