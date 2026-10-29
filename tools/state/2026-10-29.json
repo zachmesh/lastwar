@@ -26,22 +26,22 @@
  },
  "mail": {
   "status": "done",
-  "at": "2026-10-29T03:16:16",
-  "note": "Event batch claimed, other categories no rewards"
+  "at": "2026-10-29T08:38:44",
+  "note": "Event rewards claimed; other categories reports only"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-10-29T03:35:03",
-  "note": "No ceremony icon, nothing to claim"
+  "at": "2026-10-29T08:39:44",
+  "note": "Checked, no trophy icon, no ceremony waiting"
  },
  "events": {
   "status": "done",
-  "at": "2026-10-29T03:36:58",
-  "note": "Full Events sweep, nothing claimable"
+  "at": "2026-10-29T08:44:03",
+  "note": "Sweep done, nothing claimable"
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-29T03:38:42",
+  "at": "2026-10-29T08:45:59",
   "note": "All pass pickups already claimed today"
  },
  "trucks": {
@@ -63,5 +63,10 @@
   "status": "done",
   "at": "2026-10-29T06:10:32",
   "note": "Hero Advancement 37500 via one Morrison level-up, all chests claimed"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-10-29T08:40:10",
+  "note": "Checked, no train in preparation"
  }
 }

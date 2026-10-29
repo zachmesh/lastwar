@@ -364,3 +364,57 @@ Full detail in zombie-invasion/0548-queue-run.md.
   Previous pass ticker-0734 failed on the same lock, so
   this pass is reported. Full record:
   alliance-help/0806-queue-run.md.
+
+## 08:34 to 08:38 — Mail rewards queue unit, done
+
+- Ticker pass ticker-0834, unit mail-2026-10-29-0630.
+  Sync reaped 0, expired 0, 14 due regulars already queued;
+  zombie-invasion unit already in inbox, no seeding.
+  Mac mini online and control working again after the
+  outcome_unknown lock that failed the 07:34 and 08:04 passes.
+  Event Claim All claimed 280 (star medal icon), 2.4M EXP,
+  1.5K (blue icon), 10 stamina x2, 969.0K coin, 769.0K food,
+  769.0K iron. Alliance, Regular, Battle Report, Season and
+  System Claim All each had no effect (reports only).
+  In-app Purchases not claimed (receipts only). Delete All
+  never pressed. Noted only: base scouted by [WLDT] about
+  1 day ago, no decision needed. Full record:
+  mail-rewards/0838-queue-run.md.
+
+## 08:39 — Alliance Star Ceremony queue unit, done (checked only)
+
+- Ticker pass ticker-0834, unit star-ceremony-2026-10-29-0630.
+  Base screen checked: no trophy icon beside Alliance, no
+  ceremony waiting, nothing claimed. Full record:
+  alliance-duel/0839-queue-run.md.
+
+## 08:41 — Alliance train queue unit, done (checked only)
+
+- Ticker pass ticker-0834, unit train-2026-10-29-0630.
+  Base screen checked: no "Boarding closes in" banner, no
+  train in preparation, nothing boarded. Full record:
+  alliance-train/0841-queue-run.md.
+
+## 08:41 to 08:45 — Event claims queue unit, done (sweep, nothing claimed)
+
+- Ticker pass ticker-0834, unit events-2026-10-29-0657.
+  Arms Race Tech Research at 0 points, thresholds unreached,
+  cumulative chest 6 of 8 not claimable; Desert Storm waiting
+  (19:13 left, 17 vs 15 sign-ups); Winter Battlefield starting
+  soon (1d 10:17 left); Zombie Invasion live (1d 10:17 left,
+  next wave 00:58) with no claim button; Level Swap inspected
+  only; Wanted Boss Code 87 not out yet (its tab red dot
+  explains the Events badge); Community already Claimed;
+  Halloween Check-In Days 01-06 already claimed, Day 07 not
+  yet unlocked. Nothing claimed, nothing spent. Full record:
+  event-claims/0845-queue-run.md.
+
+## 08:45 — Shop claims queue unit, done (checked, nothing new)
+
+- Ticker pass ticker-0834, unit passes-2026-10-29-0657.
+  Weekly Pass Free Supply reads Claimed, Coin Weekly Pass
+  Already claimed today (5d 10:15 left), Drone and Iron cards
+  show Renew $4.99 (pickup already claimed); Super Monthly
+  Pass Daily Pickup reads Claimed, 23 days left. Legendary
+  Take All $19.99 and extension $24.99 untouched, nothing
+  spent. Full record: shop-claims/0845-queue-run.md.
