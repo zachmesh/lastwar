@@ -767,3 +767,25 @@ Full detail in zombie-invasion/0548-queue-run.md.
   in alliance-help/1545-queue-run.md.
 - The zombie-invasion chain unit 048 was not reached in this
   pass; it remains in inbox for the next tick.
+
+## 16:04 to about 16:22 — Queue ticker pass, mail done
+
+- Ticker pass ticker-1604. Sync reaped 0, expired 0, produced 0
+  - all 16 due regulars were already queued by the planner, and the
+  Zombie Invasion chain unit zombie-invasion-zombie-2026-10-28-048
+  was already in inbox, so no chain seeding was needed.
+- Mail unit mail-2026-10-29-1430, done: all categories checked
+  (Event, Alliance, Regular, Battle Report, Season, System); every
+  Claim All answered "No rewards available" or produced no change, so
+  nothing was claimed. In-app Purchases not claimed (receipts only);
+  Delete All never pressed. A mistap opened the 3rd Squad upgrade
+  panel and was closed untouched. Full detail in
+  mail-rewards/1604-queue-run.md.
+- Star-ceremony unit star-ceremony-2026-10-29-1430, done as checked only:
+  no trophy icon beside the Alliance icon on the base screen, so no
+  ceremony waiting; nothing played, nothing claimed. VS countdown
+  02:36:02 and Season II badge 3 noted only. Full detail in
+  alliance-duel/1624-queue-run.md.
+- Pass budget reached after the star-ceremony unit; remaining inbox
+  units (including zombie-invasion chain unit 048) were left for the
+  next tick.
