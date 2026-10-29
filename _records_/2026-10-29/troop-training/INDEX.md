@@ -15,7 +15,7 @@ activity lives in [`_activities_/troop-training/`](../../../_activities_/troop-t
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Partial.** The 0252 run is the latest. See the execution files for the detail.
+**Status — Failed.** The 0713 run is the latest. See the execution files for the detail.
 
 ## Executions
 
@@ -25,3 +25,9 @@ time and never edited once committed (C1).
   UNITS and the view reset, a repeat tap selected
   Hospital Lv.20 instead, no batch queued, tracker
   untouched.
+- [0713-queue-run.md](0713-queue-run.md) — queue unit
+  training-2026-10-29-0603, failed; Barracks Lv.24
+  pistol tap returned a Drill Ground Full toast and
+  no TRAIN UNITS panel, then the Mac mini channel
+  went offline through repeated retries, no batch
+  queued, tracker untouched.

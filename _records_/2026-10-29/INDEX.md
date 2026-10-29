@@ -319,3 +319,17 @@ Full detail in zombie-invasion/0548-queue-run.md.
   survivor tapped, no dialog opened, tracker untouched,
   regular stays due for the next tick. Full record:
   survivor-intake/0656-queue-run.md.
+
+## 07:04 to about 07:13 — Troop training queue unit, failed (device offline)
+
+- Ticker pass ticker-0704, unit training-2026-10-29-0603.
+  Barracks Lv.24 selected at 833,562; its pistol tap at
+  817,572 returned a Drill Ground Full toast and no
+  TRAIN UNITS panel. A neighbouring tent tap was
+  dispatched with stale evidence, then the Mac mini
+  device channel went offline (last seen
+  2026-10-29T14:07:36Z) and stayed offline through
+  five further session retries. No batch queued,
+  nothing spent, tracker untouched, regular stays due
+  for the next tick. Full record:
+  troop-training/0713-queue-run.md.
