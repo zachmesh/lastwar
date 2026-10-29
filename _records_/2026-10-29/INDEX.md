@@ -431,3 +431,57 @@ Full detail in zombie-invasion/0548-queue-run.md.
   not right-sided. Plunder Count still 1 of 4; plunder hunt
   resumes next tick, tracker untouched. Dice point corrected
   to 787,431. Full record: truck-plunder/0921-queue-run.md.
+
+## 09:37 to about 09:40 — Queue ticker pass, secret missions done
+
+- Ticker pass ticker-0934. Sync reaped nothing and produced
+  nothing new - all 9 due regulars were already queued by the
+  planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-044 was already in inbox, so
+  no chain seeding was needed.
+- Secrets unit secrets-2026-10-29-0657 executed first, the
+  earliest due unit. Own tasks nothing to claim or dispatch
+  (same four tasks as the 03:50 run, Train Refugees PERFECT
+  stamped, Mega Deploy opened no panel). Five ally assists
+  completed to the daily cap: Krazy Sully, 1717Flower, Texan
+  Apex, Comandante DT, Boss Hog 05 - counter verified 5/5.
+  First two assist rewards read identical: Mystery Supply Box
+  x15, Refined Iron Module x144, Upgrade Ore x240, Hero EXP
+  1.2M each. Full record in secret-missions/0937-queue-run.md.
+
+## 09:42 to about 09:48 — Queue ticker pass, hidden treasures and zombie chain
+
+- Treasures unit treasures-2026-10-29-0657: no dig possible,
+  M5 fragment zero (M1 x12, M2 x13, M3 x1, M4 x8, M5 x0,
+  M6 x4, M7 x13). The 15/15 chest track is a pity counter
+  guaranteeing a UR chest on the next dig, not a claimable
+  reward; the Rewards button opens only a drop-rate preview.
+  Full record in hidden-treasures/0942-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-044,
+  partial: one Lv.10 kill beside the home base (Squad 1,
+  3 second march, stamina 53 to 43), LOOT row claimed for
+  268,000 coins (HUD coins 105.0M to 105.3M, iron 414.7M
+  to 414.9M). Squads_parallel 1 - the round trip finished
+  during an app restart before a second dispatch could be
+  staged. Successor 045 enqueued to start now. Full
+  record in zombie-invasion/0943-queue-run.md.
+
+## 09:49 to about 09:56 — Queue ticker pass, zombie chain units 045 and 046
+
+- Zombie unit 045, partial: first dispatch failed on the
+  target-changed toast (no stamina charged); the retry
+  batched dispatch killed one Lv.10 at X:999 Y:969, LOOT
+  row read directly as 268,000 coins and claimed.
+  Squads_parallel 1. Successor 046 enqueued. Full
+  record in zombie-invasion/0950-queue-run.md.
+- Zombie unit 046, partial: one batched dispatch first
+  try killed one Lv.10 at X:974 Y:946, LOOT row read
+  directly as 268,000 coins and claimed. HUD coins
+  105.6M at this unit's start corroborate unit 045's
+  claim landing. Squads_parallel 1. Successor 047
+  enqueued to start now. Full record in
+  zombie-invasion/0952-queue-run.md.
+- Pass total this tick: secrets done (5 assists to cap),
+  treasures checked (no dig, M5 zero), zombie kills 3
+  for 804,000 coins claimed across units 044 to 046.
+  Token released; pass ended at the budget.
