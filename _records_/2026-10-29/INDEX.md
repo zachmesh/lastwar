@@ -789,3 +789,35 @@ Full detail in zombie-invasion/0548-queue-run.md.
 - Pass budget reached after the star-ceremony unit; remaining inbox
   units (including zombie-invasion chain unit 048) were left for the
   next tick.
+
+## 16:34 to about 16:58 — Queue ticker pass, train, events, passes, trucks
+
+- Ticker pass ticker-1634. Sync reaped 0, expired 0, produced 0
+  - all 14 due regulars were already queued by the planner, and the
+  Zombie Invasion chain unit zombie-invasion-zombie-2026-10-28-048
+  was already in inbox, so no chain seeding was needed.
+- Train unit train-2026-10-29-1430, done as checked only: no
+  "Boarding closes in" banner on the base screen, so no train in
+  preparation, nothing boarded. Full detail in
+  alliance-train/1639-queue-run.md.
+- Events unit events-2026-10-29-1457, done: full Events hub sweep
+  plus Halloween Check-In (Days 01 to 06 claimed, Day 07 not yet
+  unlocked), nothing claimable found. Arms Race Hero Advancement
+  phase, 02:18:32 left, cumulative chest 7 of 8 not full; its point
+  chests are the arms-race unit's work, not this sweep. Full detail
+  in event-claims/1644-queue-run.md.
+- Passes unit passes-2026-10-29-1457, done: Super Monthly Pass
+  Daily Pickup Claimed (23 days left), Weekly Free Supply Claimed,
+  Coin Weekly Pass Already claimed today (5d 2:13:30 left); other
+  weekly cards show only $4.99 buttons, no claim button. Legendary
+  Take All $19.99 and all price buttons untouched. Full detail in
+  shop-claims/1648-queue-run.md.
+- Trucks unit trucks-2026-10-29-1457, partial: settled 1 returned
+  SR truck intact (Squad 1, iron/food 2.5M, coin 1.6M); dispatched
+  1 SSR truck (Squad 1, 04:14:59) on the free refresh alone, Trade
+  Count now 5 of 5; plunder hunt deferred (Plunder Count still 2
+  of 4), tracker untouched. Full detail in
+  truck-plunder/1658-queue-run.md.
+- Pass budget reached after the trucks unit; remaining inbox
+  units (including zombie-invasion chain unit 048) were left for
+  the next tick.
