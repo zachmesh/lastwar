@@ -265,3 +265,24 @@ lessons: March dispatches only at about 500,755
 keyboard Return quit the app like Esc and must never
 be used. Successor unit 044 enqueued to start now.
 Full detail in zombie-invasion/0548-queue-run.md.
+
+## 06:04 to about 06:10 — Arms Race queue unit, Hero Advancement target met
+
+- Ticker pass ticker-0604, unit arms-race-2026-10-29-0603.
+  Hero Advancement phase, score 0 to 37,500 from exactly one
+  Morrison level-up (Lv.120 to Lv.121, EXP only, no boxes
+  opened). All three point chests claimed (Skill Medals 1.6K,
+  5-minute speedups 68, SR chests 32 each, Badges 6) and the
+  cumulative chest claimed (gold ticket 1, puzzle pieces 2,
+  red gem 50); cumulative counter then 6 of 8. Ranking reward
+  is preview only while the phase is live and falls to the
+  next run. Full record: arms-race/0604-queue-run.md.
+
+## 06:11 to about 06:15 — Alliance donations queue unit, 12 coin donations
+
+- Ticker pass ticker-0604, unit donations-2026-10-29-0603.
+  Recommended tech Rallied Defense 6 of 10; 12 coin donations
+  at 700 coin each, diamond button never used. Coin button
+  then greyed with a 00:04:08 timer. Tech Donation Today
+  2000 to 3550 as observed. Full record:
+  alliance-donations/0611-queue-run.md.

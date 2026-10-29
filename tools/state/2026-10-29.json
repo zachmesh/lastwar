@@ -6,8 +6,8 @@
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-29T02:16:31",
-  "note": "12 coin donations to Rallied Defense, Tech Donation Today 2000"
+  "at": "2026-10-29T06:15:11",
+  "note": "12 coin donations to Rallied Defense, button greyed with timer"
  },
  "harvest": {
   "status": "done",
@@ -58,5 +58,10 @@
   "status": "done",
   "at": "2026-10-29T03:50:51",
   "note": "No dig possible, M5 zero"
+ },
+ "arms-race": {
+  "status": "done",
+  "at": "2026-10-29T06:10:32",
+  "note": "Hero Advancement 37500 via one Morrison level-up, all chests claimed"
  }
 }
