@@ -418,3 +418,16 @@ Full detail in zombie-invasion/0548-queue-run.md.
   Pass Daily Pickup reads Claimed, 23 days left. Legendary
   Take All $19.99 and extension $24.99 untouched, nothing
   spent. Full record: shop-claims/0845-queue-run.md.
+
+## 09:21 — Trucks queue unit, partial (settlement + dispatch done)
+
+- Ticker pass ticker-0904, unit trucks-2026-10-29-0657.
+  Settled a returned SSR truck in full, intact (Squad 1,
+  iron 3.0M, food 3.0M, coin 1.9M); dispatched a new SR truck
+  (Squad 1, journey 04:19:02) after R, free-refresh R,
+  contract-refresh N, contract-refresh SR - Trade Count 2 of
+  5 to 3 of 5. One SSR plunder candidate (#2102 [ONYX]Rana7262,
+  guard 24.7M) passed over: its shard stacks sit left/middle,
+  not right-sided. Plunder Count still 1 of 4; plunder hunt
+  resumes next tick, tracker untouched. Dice point corrected
+  to 787,431. Full record: truck-plunder/0921-queue-run.md.
