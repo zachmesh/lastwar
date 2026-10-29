@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-29T12:48:00Z
+modified: 2026-10-29T21:10:00Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -397,6 +397,70 @@ execution.
   parallel attempt. Short round trips, not the
   march cap of 4, were the binding limit.
 
+- Parallel dispatch again, unit 047 on
+  2026-10-29 — a batched swords plus March
+  sequence can silently miss: its March tap
+  left stamina unchanged at 61 and the queue
+  at 0 of 4, so verify stamina or queue state
+  after a batched March, never assume it. A
+  verified deploy panel (Squad 1, Easy Win,
+  30 second march) plus the grounded March
+  point 502,750 dispatched cleanly, and a
+  second batched dispatch 13 to 18 seconds
+  later, inside the 30 second outbound
+  window, achieved squads_parallel 2 with
+  stamina 62 to 42 proving both marches.
+  Three LOOT rows claimed in-unit for
+  804,000 coins (X:951 Y:938, X:962 Y:942,
+  X:990 Y:957, each 268.0K).
+- Store medal balance live, unit 047 on
+  2026-10-29 — the Store header read 3260
+  medals. Derived medal totals carried across
+  units are repeatedly wrong (unit 043 proved
+  1220 wrong against a live 2900); only a
+  Store header read counts as a medal balance.
+- Coin Chest (UR) verified, unit 047 on
+  2026-10-29 — the gold chest row, Limit 20,
+  is Coin Chest (UR) by tooltip: Owned 25,
+  yield 2.43M coins at Base Lv.30, price 480
+  medals by row and by BUY ITEMS dialog
+  (Unit Price 480, Total Price 480, quantity
+  1), that is 5,062 coins per medal against
+  the SSR chest's 5,076. The 480 chest's name
+  and yield open question is now answered.
+- Coin Chest (SSR) row missing, unit 047 on
+  2026-10-29 — a full top-to-bottom scan of
+  the Store list (17 rows) found no
+  160-medal, Limit-98 Coin Chest (SSR) row
+  of the kind unit 043 read that morning.
+  The 160-medal purple-gold row in the first
+  screen is Food Chest (SSR) by tooltip
+  (Owned 925), not a coin chest, and must
+  never be redeemed by mistake. The SSR row
+  needs a re-check by the next unit.
+- Redeem bottleneck refined, unit 047 on
+  2026-10-29 — single taps on Redeem still
+  do nothing, including a visually grounded
+  centre tap at 741,287. A long-press
+  (mouse down, 1 second hold, mouse up) on
+  Redeem opened the BUY ITEMS dialog for the
+  first time in this chain. The Buy
+  confirmation inside the dialog did NOT
+  register by single tap, long-press or
+  double-click in background input: the
+  dialog stayed open and the balance stayed
+  3260 through all three tries. No medals
+  were spent and no chest was redeemed.
+  The next unit must try the Buy step with
+  a different input route and must re-verify
+  balance and Owned count before assuming
+  any exchange happened.
+- 50 stamina item still sold out, unit 047
+  on 2026-10-29 — greyed Redeem, Limit 0,
+  re-confirmed. Stamina closed at 43 with no
+  stamina item opened; stamina never bound
+  this unit (kills cost 30 total).
+
 ## Open questions
 
 - What the collection icon pays per kill - partly answered
@@ -405,10 +469,12 @@ execution.
   214,400; what sets a row's coin line (wave, distance,
   target) is still open.
 - The 480-medal, Limit 20 chest's name and yield -
-  unit 014 resolved the old form of this question - the
-  160-medal chest is the Coin Chest (SSR) and pays
-  812.16K. What the 480 chest pays sets the medal
-  spending order once the balance reaches 480.
+  answered by unit 047 on 2026-10-29 - it is Coin
+  Chest (UR), yield 2.43M coins at Base Lv.30.
+- Why the 160-medal Coin Chest (SSR) row that unit
+  043 read at Limit 98 on 2026-10-29 was absent from
+  unit 047's full Store scan the same afternoon, and
+  where it sits in the list now.
 - Where the 3 owned Coin Chest (SSR) sit in the inventory -
   not found in the Special tab or the first Resources pages
   in unit 005.

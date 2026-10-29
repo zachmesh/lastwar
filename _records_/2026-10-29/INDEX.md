@@ -662,3 +662,20 @@ Full detail in zombie-invasion/0548-queue-run.md.
 
 - Pass ended inside its budget after these six units;
   token released.
+
+## 14:09 — Zombie Invasion queue unit 047, partial
+
+- Ticker pass ticker-1334, unit
+  zombie-invasion-zombie-2026-10-28-047. Three Lv.10
+  kills dispatched and claimed in-unit: LOOT rows
+  X:951 Y:938, X:962 Y:942, X:990 Y:957, each 268,000
+  coins, 804,000 total; coin HUD 106.2M to 107.0M.
+  squads_parallel 2 (kill 3 marched inside kill 2's
+  30 second outbound window). Store live medal balance
+  3260; Coin Chest (UR) verified at 480 medals for
+  2.43M coins, but its Buy confirmation did not
+  register by tap, long-press or double-click, so no
+  chest was redeemed and no medals were spent; the
+  160-medal SSR row was not found in a full Store
+  scan. Stamina 43 at the close. Chain continues.
+  Full record: zombie-invasion/1340-queue-run.md.
