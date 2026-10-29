@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T16:20:00Z
+modified: 2026-10-28T18:14:00Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -346,6 +346,18 @@ execution.
   on the march at once (March Queues 4 of 4; X883 Y811,
   X895 Y771, X895 Y759, X799 Y760; stamina 46 to 7). The
   march queue cap of 4 is the binding parallel limit.
+- Auto squad selection, unit 024 on 2026-10-28 — with
+  Squad 1 out on march, the deploy panel for a second
+  Lv.10 target had already auto-selected Squad 2
+  (20.92M, 2,175 of 2,175, Easy Win; Squad 1's tab
+  carried a red X), so no squad-tab tap was needed
+  before March. Check the panel's power and unit count
+  before March rather than tapping a squad tab
+  blindly. Unit 024 also re-confirmed the gift-box tap
+  at 317,233 (an image-estimated 314,210 tap failed)
+  and Claim All at 499,765; its two parallel kills
+  (X945 Y864, X938 Y845) claimed 536,000 coins
+  together, medals 130 to 150, stamina 58 to 41.
   The gift box on the world map March Queues bar sits at
   normalized 317,233 — taps at 266,253 opened the ally
   base behind the bar instead. Unit 012's X891 Y845
