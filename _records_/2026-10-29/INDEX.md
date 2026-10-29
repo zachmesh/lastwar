@@ -749,3 +749,21 @@ Full detail in zombie-invasion/0548-queue-run.md.
   Full detail in troop-training/1528-queue-run.md.
 - The zombie-invasion chain unit 048 was not reached in this
   pass; it remains in inbox for the next tick.
+
+## 15:34 to about 15:44 — Queue ticker pass, gifts and help partials
+
+- Ticker pass ticker-1534. Sync reaped 0, expired 0, produced 0
+  - all 16 due regulars were already queued by the planner, and the
+  Zombie Invasion chain unit zombie-invasion-zombie-2026-10-28-048
+  was already in inbox, so no chain seeding was needed.
+- Gifts unit gifts-2026-10-29-1430, partial: the Alliance panel
+  could not be opened - base UI toggle worked but right-column
+  Alliance shield taps collapsed the UI instead of opening the
+  panel, so no gifts were claimed; tracker untouched. Full detail
+  in alliance-gifts/1545-queue-run.md.
+- Help unit help-2026-10-29-1430, partial: the help bubble was
+  not located or pressed; the tile tried left of the Alliance
+  shield was not the help tile; tracker untouched. Full detail
+  in alliance-help/1545-queue-run.md.
+- The zombie-invasion chain unit 048 was not reached in this
+  pass; it remains in inbox for the next tick.
