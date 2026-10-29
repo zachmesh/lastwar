@@ -39,3 +39,14 @@ time and never edited once committed (C1).
   help-2026-10-28-1430; Help All cleared two ally
   requests (specialist Donut building help, MegaLoki Apex
   healing help) at 700 of 1,000 daily help points.
+- [1901-queue-run.md](1901-queue-run.md) — the queue run
+  that started at 18:56 local, unit
+  help-2026-10-28-1830; Help All cleared Comandante DT
+  and SKRyZeRZ research helps at 920 of 1,000 daily help
+  points at close.
+- [2305-queue-run.md](2305-queue-run.md) — the queue run
+  that started at 23:04 local, unit
+  help-2026-10-28-2230; Help All cleared MegaLoki Apex
+  (Defense Training VIII research) and TigerS (Lv.27 Tank
+  Base building) at 0 of 1,000 daily help points at open
+  (header not refreshed at close).
