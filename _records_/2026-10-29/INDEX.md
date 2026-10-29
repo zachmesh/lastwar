@@ -245,3 +245,23 @@ tap twice did not respond to background clicks, so no
 medals were spent; the 4 owned chests remain unlocated.
 Successor unit 043 enqueued to start now. Full detail
 in zombie-invasion/0518-queue-run.md.
+
+Queue unit 043 (zombie-invasion, 0548) — partial: two
+Lv.10 kills claimed in-unit for 536,000 coins (X:985
+Y:968, X:980 Y:954), squads_parallel 1 sequential —
+the first squad's 10 to 15 second round trip finished
+during the navigation for the second dispatch, so no
+two squads were ever out at once; coin 99,819,332
+(unit 042 exact read, HUD corroborated) to
+100,355,332 derived; stamina 25 minus 20 plus regen
+to 6; medals 2900 read live in the Store (settling
+unit 041's derived 1220 as wrong) to 2920 derived.
+Coin Chest (SSR) redemption deferred again: the
+160-medal, Limit 98 row's Redeem tap at the grounded
+point 742,293 did not respond, so no medals were
+spent; the owned chests remain unlocated. New
+lessons: March dispatches only at about 500,755
+(taps at 726 and 735 land above the button), and a
+keyboard Return quit the app like Esc and must never
+be used. Successor unit 044 enqueued to start now.
+Full detail in zombie-invasion/0548-queue-run.md.

@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-28T18:14:00Z
+modified: 2026-10-29T12:48:00Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -364,6 +364,38 @@ execution.
   handover march DID produce its LOOT row (claimed by
   unit 013 for 268,000), so a march left in flight can
   land either way; check the badge, never assume.
+
+- March button effective point, unit 043 on
+  2026-10-29 — taps at normalized 498,726 and
+  500,735 produced no change; March at 500,755
+  dispatched at once. The button's active area
+  sits at its lower edge, below its visual
+  centre — ground March low, near 755, not at
+  the centre estimate.
+- Keyboard Return quits the app, unit 043 on
+  2026-10-29 — a Return keypress while the
+  deploy panel was open quit LastWar outright
+  (same class as the Esc crash); relaunch
+  recovered with state intact. Never use Return
+  (or Esc) on this app.
+- Medal balance resolved, unit 043 on
+  2026-10-29 — the Store header read live at
+  2900 medals, confirming unit 042 and proving
+  unit 041's derived 1220 wrong (stale base).
+  The Coin Chest (SSR) row stands at 160
+  medals, Limit 98, and its Redeem tap at the
+  grounded point 742,293 again produced no
+  change — three unresponsive Redeems in two
+  units, no medals spent, redemption still
+  deferred.
+- Sequential dispatch when round trips are
+  short, unit 043 on 2026-10-29 — with 10 to
+  15 second marches, the first squad returned
+  during the Events and Search navigation for
+  the second dispatch, so the unit ran
+  squads_parallel 1 despite an immediate
+  parallel attempt. Short round trips, not the
+  march cap of 4, were the binding limit.
 
 ## Open questions
 
