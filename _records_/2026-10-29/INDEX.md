@@ -586,3 +586,79 @@ Full detail in zombie-invasion/0548-queue-run.md.
   alliance-duel/1252-queue-run.md.
 - Pass ended inside its budget after these four units;
   token released.
+
+## 13:04 — Alliance train queue unit, done (checked only)
+
+- Ticker pass ticker-1304, unit train-2026-10-29-1030.
+  Base screen checked: no "Boarding closes in" banner, no
+  train in preparation, nothing boarded, no Trade Contracts
+  spent. Full record: alliance-train/1304-queue-run.md.
+
+## 13:07 to 13:11 — Event claims queue unit, done (sweep, nothing claimed)
+
+- Ticker pass ticker-1304, unit events-2026-10-29-1057.
+  Arms Race now in Drone Boost phase, score 0, thresholds
+  1,500 / 10,000 / 30,000 unreached, cumulative chest 6 of 8
+  not claimable; Desert Storm Battlefield waiting for battle
+  (14:47 left); Winter Battlefield starting soon (05:52
+  left); Zombie Invasion live (1d 05:51 left) with no claim
+  button on the tab page; Wanted Boss Code 87 not out yet;
+  Community already Claimed; Level Swap inspected only
+  (3d 05:51 left); Halloween Check-In Days 01-06 already
+  claimed, Day 07 still not claimable - its tile only opened
+  the Decoration Choice Chest VI (UR) reward preview, which
+  was closed without opening or choosing anything. Nothing
+  claimed, nothing spent. Full record:
+  event-claims/1304-queue-run.md.
+
+## 13:11 — Shop claims queue unit, done (checked, nothing new)
+
+- Ticker pass ticker-1304, unit passes-2026-10-29-1057.
+  Hot Deals shows no free pack (Store promo Go button not
+  tapped); Weekly Pass Free Supply reads Claimed, Coin Weekly
+  Pass Already claimed today (5d 5:47 left), Drone Components
+  card shows only its $4.99 Get Now purchase button; Super
+  Monthly Pass Daily Pickup reads Claimed, 23 days left,
+  Rewards Left 23. Legendary Take All $19.99 and extension
+  $24.99 untouched, nothing spent. Full record:
+  shop-claims/1304-queue-run.md.
+
+## 13:14 to 13:22 — Trucks queue unit, done (dispatch + plunder)
+
+- Ticker pass ticker-1304, unit trucks-2026-10-29-1057.
+  Duel day 4, Train Heroes, not a UR day: SR-or-above
+  regular dispatch, no Mega Mode. No truck returned yet
+  (09:21 SR truck due back about 13:40); Recover showed no
+  red dot. Slot 2 dispatch: first roll N, free refresh to R,
+  two standing-authorized Trade Contract refreshes
+  (139 to 138 to 137) to SSR, dispatched at once with
+  regular Let's Go, Squad 3, journey 04:16:30 - Trade Count
+  3 of 5 to 4 of 5. Quick Plunder won SSR truck #2102
+  [TOOP]hossam hak, Lv.26, guard 1.8M, battle prep 25.05M
+  vs 1.82M: iron 531.5K, food 531.5K, coin 337.0K, chest x1,
+  no badge shards from the random subset - Plunder Count
+  1 of 4 to 2 of 4. No diamonds spent, no paid buttons
+  tapped. Full record: truck-plunder/1304-queue-run.md.
+
+## 13:23 — Secret missions queue unit, done (checked only)
+
+- Ticker pass ticker-1304, unit secrets-2026-10-29-1057.
+  Secret Command Post: same four Your Tasks, no Claim
+  button on any row; Assist Allies already 5/5 (daily cap
+  reached in the 09:37 run); Plunder Others 0/5 left
+  untouched; Mega Refresh not tapped. Nothing claimed,
+  nothing spent. Full record:
+  secret-missions/1304-queue-run.md.
+
+## 13:25 — Hidden treasures queue unit, done (checked only)
+
+- Ticker pass ticker-1304, unit treasures-2026-10-29-1057.
+  Fragments unchanged: M1 x12, M2 x13, M3 x1, M4 x8,
+  M5 x0, M6 x4, M7 x13; M5 zero, so both Dig buttons are
+  greyed out and no dig was performed; chest track 15/15
+  is the UR pity counter, not a claimable reward. No
+  fragment exchange attempted, nothing spent. Full record:
+  hidden-treasures/1304-queue-run.md.
+
+- Pass ended inside its budget after these six units;
+  token released.

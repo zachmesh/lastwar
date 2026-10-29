@@ -36,28 +36,28 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-10-29T08:44:03",
-  "note": "Sweep done, nothing claimable"
+  "at": "2026-10-29T13:11:13",
+  "note": "Sweep done: nothing claimable at 13:20 PDT"
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-29T08:45:59",
-  "note": "All pass pickups already claimed today"
+  "at": "2026-10-29T13:14:16",
+  "note": "Checked: all pickups already claimed at 13:11 PDT"
  },
  "trucks": {
   "status": "done",
-  "at": "2026-10-29T03:45:24",
-  "note": "SSR dispatched, SSR #2092 plundered for 6 shards"
+  "at": "2026-10-29T13:22:37",
+  "note": "SSR dispatched, 1 SSR plundered; Trade 4/5, Plunder 2/4"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-29T09:40:55",
-  "note": "5 ally assists to cap; own tasks nothing to claim or dispatch"
+  "at": "2026-10-29T13:24:07",
+  "note": "Checked: no claims, assists already 5/5"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-29T09:42:58",
-  "note": "No dig, M5 zero; 15/15 track guarantees UR on next dig"
+  "at": "2026-10-29T13:25:26",
+  "note": "Checked: M5 still 0, no dig possible"
  },
  "arms-race": {
   "status": "skipped",
@@ -66,7 +66,7 @@
  },
  "train": {
   "status": "done",
-  "at": "2026-10-29T08:40:10",
-  "note": "Checked, no train in preparation"
+  "at": "2026-10-29T13:06:25",
+  "note": "Checked only: no train in preparation at 13:04 PDT"
  }
 }
