@@ -46,3 +46,12 @@ time and never edited once committed (C1).
   the same four settled cards, no Claim or Go button,
   assists at the 5 of 5 daily cap, Reward Recovery's latest record
   (2026-10-24 19:00) already CLAIMED. Nothing was dispatched or claimed.
+- [1930-queue-run.md](1930-queue-run.md) — queue ticker unit
+  secrets-2026-10-28-1857, executor ticker-1917; fresh task
+  batch Mega Deployed (UR Rescue Test Subject 4h, UR Rescue
+  Missing Agent 2h, SSR Train Refugees 1h, SSR Search for
+  Missing Refugees 1h, Provide Tech Support to Refugees),
+  dispatch verified by countdowns; ally list swept, all rows
+  UR with countdowns only and no Assist button, counter stays
+  0 of 5; Reward Recovery latest record (2026-10-24) already
+  CLAIMED.

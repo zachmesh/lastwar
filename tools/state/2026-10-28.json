@@ -61,13 +61,13 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-28T16:14:48",
-  "note": "Checked only: settled cards, assists capped, Recovery CLAIMED"
+  "at": "2026-10-28T19:31:05",
+  "note": "5 secret tasks Mega Deployed, verified running; no assistable ally row"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-28T16:15:54",
-  "note": "Checked only: M3 exhausted, no dig possible"
+  "at": "2026-10-28T19:32:06",
+  "note": "Fragments unchanged, M3 exhausted, no dig possible"
  },
  "trucks": {
   "status": "done",
@@ -81,7 +81,7 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-10-28T15:53:16",
-  "note": "Full Events sweep, nothing claimable"
+  "at": "2026-10-28T19:23:50",
+  "note": "Events sweep done; Halloween Day 04 Drone Parts x20 claimed"
  }
 }
