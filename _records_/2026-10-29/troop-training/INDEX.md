@@ -15,7 +15,7 @@ activity lives in [`_activities_/troop-training/`](../../../_activities_/troop-t
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Failed.** The 0713 run is the latest. See the execution files for the detail.
+**Status — Partial.** The 1219 run is the latest. See the execution files for the detail.
 
 ## Executions
 
@@ -31,3 +31,9 @@ time and never edited once committed (C1).
   no TRAIN UNITS panel, then the Mac mini channel
   went offline through repeated retries, no batch
   queued, tracker untouched.
+- [1219-queue-run.md](1219-queue-run.md) — queue unit
+  training-2026-10-29-1003, partial; game opened on
+  the world map so early taps selected world tiles,
+  base view restored and the tent row tapped twice
+  without opening a barracks button row, no TRAIN
+  UNITS panel, no batch queued, tracker untouched.
