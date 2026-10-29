@@ -126,3 +126,55 @@ of 2026-10-28.
   (left-column icon opened Ghost Ops, closed untouched; no
   boarding banner at the check), tracker untouched for the next
   tick. Full detail in alliance-train/0318-queue-run.md.
+
+## 03:34 to about 03:53 — Queue ticker pass, star, events, passes, trucks, secrets, treasures, zombie partial
+
+- Ticker pass ticker-0334. Sync reaped 0, expired 0, 12 due
+  regulars already queued by the planner, and the Zombie
+  Invasion chain unit 036 was already in inbox, so no chain
+  seeding was needed.
+- Star ceremony unit star-ceremony-2026-10-29-0230, done: no
+  ceremony trophy icon on the base screen, nothing to claim.
+  Full detail in alliance-duel/0335-queue-run.md.
+- Events unit events-2026-10-29-0257, done: full hub sweep,
+  nothing claimable. Arms Race Hero Advancement 0 points,
+  rank 2110, chests 2000/4000/12000 unreached; Desert Storm
+  waiting 1d 00:19; Winter starting soon 1d 15:24; Zombie live
+  1d 15:23; Wanted Boss Code 87 not out (Go countdown
+  14:23:43); Level Swap inspected only; Community already
+  Claimed. Events base badge still 1 after the sweep, most
+  plausibly the Wanted Boss dot. Full detail in
+  event-claims/0336-queue-run.md.
+- Passes unit passes-2026-10-29-0257, done: Super Monthly
+  Pickup Claimed (24 days left), Weekly Free Supply Claimed,
+  Coin Weekly Pass Already claimed today, Drone and Iron
+  cards on Renew 4.99 dollars; Legendary Take All 19.99
+  dollars untouched. Full detail in
+  shop-claims/0338-queue-run.md.
+- Trucks unit trucks-2026-10-29-0257, done: settled a returned
+  SR truck safe and secure (iron 2.5M, food 2.5M, coin 1.6M,
+  chests, diamonds 50); dispatched SSR after free refresh
+  R to N plus two Trade Contract refreshes (stock 143 to
+  141), Squad 1, journey 04:23:38, Trade Count 1/5 to 2/5;
+  Quick Plundered SSR 2092 Gothams protector (guard 8.3M)
+  for badge 500 x6 plus iron/food 585.3K and coin 367.4K,
+  Plunder Count 0/4 to 1/4; the same card rechecked with
+  shards crossed out, so no second plunder. Full detail in
+  truck-plunder/0345-queue-run.md.
+- Secrets unit secrets-2026-10-29-0257, done: no Claim
+  buttons, Mega Deploy opened no panel; ally Assist buttons
+  unresponsive again (counter stays 0/5), as in the 23:34
+  run. Full detail in secret-missions/0350-queue-run.md.
+- Treasures unit treasures-2026-10-29-0257, done: fragments
+  M1 12, M2 13, M3 1, M4 8, M5 0, M6 4, M7 13, so no dig
+  possible; 15/15 chest icon is display only. Full detail
+  in hidden-treasures/0350-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-036,
+  partial: no attacks. Post-screen exit needed a
+  double-click, a HUD coin tap panned the base camera
+  instead of opening a resource panel, and the computer
+  session cc-221 then closed, ending navigation. Successor
+  unit 037 enqueued to start now for the next tick. Full
+  detail in zombie-invasion/0353-queue-run.md.
+- No diamonds or money spent, no speedup burned, no
+  different-device dialog. Token released.

@@ -28,5 +28,35 @@
   "status": "done",
   "at": "2026-10-29T03:16:16",
   "note": "Event batch claimed, other categories no rewards"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-10-29T03:35:03",
+  "note": "No ceremony icon, nothing to claim"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-10-29T03:36:58",
+  "note": "Full Events sweep, nothing claimable"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-10-29T03:38:42",
+  "note": "All pass pickups already claimed today"
+ },
+ "trucks": {
+  "status": "done",
+  "at": "2026-10-29T03:45:24",
+  "note": "SSR dispatched, SSR #2092 plundered for 6 shards"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-10-29T03:50:24",
+  "note": "Nothing pending; Assist buttons unresponsive again"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-10-29T03:50:51",
+  "note": "No dig possible, M5 zero"
  }
 }
