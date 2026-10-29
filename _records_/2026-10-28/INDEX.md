@@ -786,3 +786,35 @@ instruction of 2026-10-25 to run all the regulars every four hours.
 - Executor ticker-2134. Sync found the 4 due regulars already queued (planner staged); zombie chain unit 029 was the only due unit, claimed under the device token. All other inbox units are staged for future slots.
 - Zombie unit 029 — partial, two Lv.10 kills claimed for 536,000 coins (coin 74,499,886 carried to 75,035,886 derived, HUD 74.4M to 75.0M), medals 860 to 880 derived, squads_parallel 1 (home-cluster marches resolve in seconds, Squad 1 was already returning before Squad 2's Search finished; not the queue cap of 4). Stamina inventory checked as required: Resources holds no stamina item (a tapped red-gem item read "10 Diamonds", not used); Special holds 50-stamina x612 and 10-stamina x613, one 10 Stamina opened (613 to 612, HUD stamina 23, closing 4). Old wave exhausted at first Search, new wave arrived after a 90 second wait; computer session dropped once during the wait and reopened with state intact. Kills X:987 Y:950 and X:982 Y:964, LOOT badge 2 claimed with the plain-blue Claim All. The 4 owned Coin Chest (SSR) remain unlocated (3,248,640 coins pending) and no Store redemption was made this unit; cleared false, successor enqueued to start now, tracker untouched. Detail in [zombie-invasion/2145-queue-run.md](zombie-invasion/2145-queue-run.md).
 - Token released, diamonds unchanged, nothing bought, no speedup burned.
+
+## 22:34 to about 22:55 — Queue ticker pass ticker-2234, survivors partial, training done, gifts done
+
+- Executor ticker-2234. Sync produced no new units (9 due
+  regulars already queued by the planner); zombie chain unit
+  030 was already pending, so no seeding. Three units
+  executed under the device token.
+- Survivors unit survivors-2026-10-28-2203 — partial; one
+  POLAR GUEST dialog survivor taken in at the front gate
+  (lines about a big icy house, helping out, and coal for
+  brewing), rest of the line not verified clear, Quick
+  Dispatch not run, tracker untouched. Detail in
+  [survivor-intake/2242-queue-run.md](survivor-intake/2242-queue-run.md).
+- Training unit training-2026-10-28-2203 — done; Lv.20
+  Barracks T7 batch of 613 queued for 23:11:13 at 2.0M food
+  and 2.0M iron, verified "Training in progress 23:10:52"
+  on reopening the panel, no Drill Ground Full toast on
+  this barracks. Button grounding correction: the pistol
+  button sits at 817,572, not 825,520. Detail in
+  [troop-training/2249-queue-run.md](troop-training/2249-queue-run.md).
+- Gifts unit gifts-2026-10-28-2230 — done; Regular Claim
+  All 159 and Premium Claim All 14, Gift Level 28 progress
+  171,410,960 to 171,414,700. Tap corrections: Premium tab
+  centre 694,269, Premium Claim All at bottom right
+  740,936 (a centre tap hits the name-hiding checkbox).
+  Detail in
+  [alliance-gifts/2255-queue-run.md](alliance-gifts/2255-queue-run.md).
+- Token released. Pass budget reached after these three
+  units; remaining inbox units stay due for the next tick,
+  including the zombie-invasion chain unit and the
+  22:30 help, mail, train and star-ceremony units.
+  Diamonds 658 throughout, nothing bought, no speedup burned.

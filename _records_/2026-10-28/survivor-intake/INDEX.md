@@ -42,3 +42,9 @@ time and never edited once committed (C1).
   reached the eastern perimeter then overshot outside
   the base, gate line not reached before the pass budget
   ended, Quick Dispatch not run, tracker untouched.
+
+- [2242-queue-run.md](2242-queue-run.md) — queue unit
+  survivors-2026-10-28-2203, partial; one POLAR GUEST
+  dialog survivor taken in at the front gate, rest of
+  the line not verified clear, Quick Dispatch not run,
+  tracker untouched.

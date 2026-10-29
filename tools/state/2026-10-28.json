@@ -15,9 +15,9 @@
   "note": "Gate line of 5 taken in - 4 dialog survivors plus 1 named recruit (Hospital, Unit Healing Speed +4.00 percent); Quick Dispatch in Iron Mine Lv.27 panel - no survivors available, posts full"
  },
  "training": {
-  "status": "skipped",
-  "at": "2026-10-28T06:38:58",
-  "note": "Drill Ground Full verified 0634 queue run - unable to add units, no requeue possible"
+  "status": "done",
+  "at": "2026-10-28T22:46:20",
+  "note": "Lv.20 Barracks T7 batch of 613 queued, in progress 23:10:52"
  },
  "donations": {
   "status": "done",
@@ -41,8 +41,8 @@
  },
  "gifts": {
   "status": "done",
-  "at": "2026-10-28T18:55:40",
-  "note": "Claimed 200 Regular and 6 Premium Alliance Gifts"
+  "at": "2026-10-28T22:49:42",
+  "note": "Regular 159, Premium 14, Gift Level 28 progress 171,414,700"
  },
  "vip": {
   "status": "skipped",

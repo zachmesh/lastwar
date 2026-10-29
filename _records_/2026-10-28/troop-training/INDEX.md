@@ -43,3 +43,9 @@ time and never edited once committed (C1).
   the base in fog after the survivors panning, barracks
   tents not reached before the pass budget ended, no
   batch queued, tracker untouched.
+
+- [2249-queue-run.md](2249-queue-run.md) — queue unit
+  training-2026-10-28-2203, done; Lv.20 Barracks T7
+  batch of 613 queued for 23:11:13, verified Training
+  in progress, no Drill Ground Full toast on this
+  barracks.
