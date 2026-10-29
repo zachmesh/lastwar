@@ -522,3 +522,24 @@ Full detail in zombie-invasion/0548-queue-run.md.
   alliance-donations/1035-queue-run.md.
 - Pass ended at the unit cap after this one unit; token
   released.
+
+## 11:04 to about 11:19 — Queue ticker pass, radar partial
+
+- Ticker pass ticker-1104. Sync reaped nothing and produced
+  nothing new - all due regulars were already queued by the
+  planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-047 was already in inbox, so
+  no chain seeding was needed.
+- Radar unit radar-2026-10-29-1003, partial: duel Day 4, radar
+  posture stack (complete but do not claim). The radar screen
+  was not reached - the base left-column dish slot (red badge 7,
+  grounded 52,672, tapped 54,667) still opened Secret Command
+  Post, the same rotating-shortcut assignment the 06:44 unit
+  found; that screen was left untouched and exited with its
+  back arrow. Nothing claimed, nothing spent, tracker untouched,
+  so the regular stays due for the next tick. The Alliance
+  Techs panel left from the previous unit was closed on the way
+  in (no donation made); its page back arrow grounds at 163,935.
+  Full record in radar-tasks/1119-queue-run.md.
+- Pass ended at the unit cap after this one unit; token
+  released.
