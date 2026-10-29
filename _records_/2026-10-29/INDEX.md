@@ -105,3 +105,6 @@ of 2026-10-28.
   120 medals earned (derived balance 940 to 1060), stamina
   items opened 50 x2 and 10 x1, stamina 4 at the close with
   50-stamina x612 and 10-stamina x609 in inventory.
+- Arms-race queue unit 0207, partial: Unit Progression phase, score 0 vs 15000/30000/75000, about 00:53 left, cumulative chest 0/2 not claimable, nothing claimed; training path open via training regular in this pass, tracker untouched for next-tick re-check. Full detail in arms-race/0207-queue-run.md.
+- Donations queue unit 0216, done: 12 coin donations of 700 coin each to recommended Rallied Defense (6/10), count 12/30 to 0, button greyed with 00:02:48 cooldown; Tech Donation Today 800 to 2000. Full detail in alliance-donations/0216-queue-run.md.
+- Radar queue unit 0224, partial (duel Day 4 stack): Free Claim 75 stamina taken (9 to 84, Remaining Today 1/2), Quick Execute 5 tasks for 50 stamina then 1 task for 10 stamina, stamina ends 25; 7 task rewards left stacked unclaimed, except one finished-pin tap that claimed a reward (points 2948 to 2949, stored 2/40 to 1/40, recorded as a stack-posture exception); special map pins still standing, tracker untouched. Full detail in radar-tasks/0224-queue-run.md.
