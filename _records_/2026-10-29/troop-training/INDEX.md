@@ -37,3 +37,7 @@ time and never edited once committed (C1).
   base view restored and the tent row tapped twice
   without opening a barracks button row, no TRAIN
   UNITS panel, no batch queued, tracker untouched.
+
+- [1528-queue-run.md](1528-queue-run.md) — queue unit
+  training-2026-10-29-1403, partial; no barracks queue
+  read, pass budget reached, tracker untouched.

@@ -32,3 +32,9 @@ time and never edited once committed (C1).
   untouched.
 
 - 1144 survivors queue run (partial): gate and line not located, no survivor tapped, tracker untouched.
+
+- [1525-queue-run.md](1525-queue-run.md) — queue unit
+  survivors-2026-10-29-1403, partial; one dialog-type
+  survivor processed (bubble turned smiley), line not
+  verified clear, Quick Dispatch not run, tracker
+  untouched.

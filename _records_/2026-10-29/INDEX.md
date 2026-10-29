@@ -723,3 +723,29 @@ Full detail in zombie-invasion/0548-queue-run.md.
   NOT tapped, no further pin tapped, no diamond or money
   spent. Tracker untouched. Full record:
   radar-tasks/1452-queue-run.md.
+
+## 15:04 to about 15:28 — Queue ticker pass, harvest, survivors and training partials
+
+- Ticker pass ticker-1504. Sync reaped nothing and produced
+  nothing new - all 16 due regulars were already queued by the
+  planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-048 was already in inbox, so
+  no chain seeding was needed.
+- Harvest unit harvest-2026-10-29-1403, partial: farmland tap
+  cleared all farmland bubbles (food 232.9M to 237.5M) and an
+  earlier tap moved iron 416.8M to 422.0M; coin bubbles and the
+  Armed Truck were unchecked, tracker untouched. Full detail in
+  resource-collection/1517-queue-run.md. The world-map "8 task
+  rewards" Claim All was left untouched - it belongs to the
+  zombie-invasion unit, not to harvest.
+- Survivors unit survivors-2026-10-29-1403, partial: a drag pan
+  revealed the bottom-left gate line; one dialog-type survivor
+  was processed (bubble turned smiley), the line was not
+  verified clear, Quick Dispatch was not run, tracker untouched.
+  Full detail in survivor-intake/1525-queue-run.md.
+- Training unit training-2026-10-29-1403, partial: no barracks
+  queue was read before the pass budget was reached; a 2nd
+  Squad panel was closed without changes, tracker untouched.
+  Full detail in troop-training/1528-queue-run.md.
+- The zombie-invasion chain unit 048 was not reached in this
+  pass; it remains in inbox for the next tick.

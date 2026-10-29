@@ -28,3 +28,9 @@ time and never edited once committed (C1).
   harvest-2026-10-29-0603; iron plus 2.5M, coin plus 1.8M,
   food plus 2.9M from one farmland tap clearing all farmland
   bubbles; no Armed Truck claim observed.
+
+- [1517-queue-run.md](1517-queue-run.md) — queue unit
+  harvest-2026-10-29-1403, partial; farmland tap cleared
+  all farmland bubbles, food 232.9M to 237.5M, iron
+  416.8M to 422.0M, coin bubbles and Armed Truck
+  unchecked, tracker untouched.
