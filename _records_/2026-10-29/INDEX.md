@@ -65,3 +65,43 @@ of 2026-10-28.
   to 78.5M); medals 920 carried to 940 derived; no Coin Chest
   redeemed or opened. Full detail in
   zombie-invasion/0104-queue-run.md. Successor starts now.
+
+## 01:34 to about 01:54 — Queue ticker pass, zombie-invasion units 033, 034 and 035
+
+- Ticker pass ticker-0134. Sync reaped nothing and produced
+  nothing new - all 17 due regulars were already queued by the
+  planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-033 was already in inbox, so
+  no chain seeding was needed.
+- Zombie-invasion unit 033, partial: one 50-stamina item opened
+  (614 to 613); four Lv.10 kills (X:932 Y:975, X:924 Y:969,
+  X:926 Y:985, X:921 Y:975) dispatched at the march queue cap
+  (March Queues 4 of 4 verified) and all four LOOT rows claimed
+  in-unit for 1,072,000 coins (HUD 78.5M to 79.6M); medals 940
+  carried to 980 derived; no Coin Chest redeemed or opened.
+  Full detail in zombie-invasion/0134-queue-run.md. Successor
+  starts now.
+- Zombie-invasion unit 034, partial: one 50-stamina item opened
+  (613 to 612, correcting unit 033's follow-up - 22 stamina was
+  not enough for a four-squad round); four Lv.10 kills in a new
+  wave (X:988 Y:954, X:988 Y:960, X:982 Y:960, X:993 Y:964)
+  and all four LOOT rows claimed in-unit for 1,072,000 coins
+  (HUD 79.6M to 80.7M); squads_parallel 1 verified by queue
+  reading, the short 10 km marches resolving too fast to
+  capture a higher reading; medals 980 carried to 1020
+  derived; no Coin Chest redeemed or opened. Full detail in
+  zombie-invasion/0145-queue-run.md. Successor starts now.
+- Zombie-invasion unit 035, partial: one 10-stamina item opened
+  (610 to 609); four Lv.10 kills (X:998 Y:967, X:981 Y:941,
+  X:972 Y:965, X:978 Y:934) and all four LOOT rows claimed
+  in-unit for 1,072,000 coins (HUD 80.7M to 81.7M);
+  squads_parallel 2 verified by queue reading (March Queues
+  2 of 4); medals 1020 carried to 1060 derived; no Coin Chest
+  redeemed or opened. Full detail in
+  zombie-invasion/0151-queue-run.md. The pass then ended, its
+  about 25 minute budget nearly spent; successor unit 036
+  waits in inbox for the next tick.
+- Pass totals: 12 Lv.10 kills, 3,216,000 coins collected,
+  120 medals earned (derived balance 940 to 1060), stamina
+  items opened 50 x2 and 10 x1, stamina 4 at the close with
+  50-stamina x612 and 10-stamina x609 in inventory.
