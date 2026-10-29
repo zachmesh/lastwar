@@ -679,3 +679,28 @@ Full detail in zombie-invasion/0548-queue-run.md.
   160-medal SSR row was not found in a full Store
   scan. Stamina 43 at the close. Chain continues.
   Full record: zombie-invasion/1340-queue-run.md.
+
+## 14:21 — Arms Race queue unit, partial
+
+- Ticker pass ticker-1420, unit arms-race-2026-10-29-1403.
+  Live phase Drone Boost, score 3,000 against thresholds
+  1,500 / 10,000 / 30,000, about 00:35 left at first read.
+  Earned 1,500 chest claimed: Arms Race Badge 1, Skill
+  Medals 200, 5-minute speedups 8, SR resource chests
+  4 each. Cumulative chest 6 of 8 to 7 of 8, not
+  claimable; ranking chest preview only. Tier-3 gap
+  27,000 points (270 stamina or 270,000 Drone Battle
+  Data by the displayed rates) not closed inside the
+  unit cap; tracker untouched, next tick re-produces
+  the regular. Full record: arms-race/1421-queue-run.md.
+
+## 14:31 — Alliance donations queue unit, done
+
+- Ticker pass ticker-1420, unit donations-2026-10-29-1403.
+  21 coin donations of 700 coin each to recommended
+  Rallied Defense (6 of 10), Donation Count 21 of 30
+  to exhausted, coin button greyed with a 00:02:34
+  timer. Tech Donation Today 3,850 to 6,250 (recorded
+  as observed; does not reconcile with 50 per
+  donation). Diamond button never used. Full record:
+  alliance-donations/1431-queue-run.md.
