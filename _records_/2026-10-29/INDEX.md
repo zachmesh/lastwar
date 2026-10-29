@@ -347,3 +347,20 @@ Full detail in zombie-invasion/0548-queue-run.md.
   for the next tick. Previous pass ticker-0704 also
   failed on access, so this pass is reported. Full
   record: alliance-gifts/0738-queue-run.md.
+
+## 08:04 to about 08:06 — Alliance help queue unit, failed (control channel lock)
+
+- Ticker pass ticker-0804, unit help-2026-10-29-0630.
+  Sync reaped 0, expired 0, 14 due regulars already queued;
+  zombie-invasion unit already in inbox, no seeding.
+  Mac mini online, LastWar already running, but every
+  window-selection input on session cc-252 refused with
+  outcome_unknown (open_app, activate, open_app - three
+  attempts), each stating a new local user submission is
+  required before input can resume. Read-only observe
+  confirmed the base screen but reported control stopped.
+  No game input delivered, no help claimed, nothing spent,
+  tracker untouched, regular stays due for the next tick.
+  Previous pass ticker-0734 failed on the same lock, so
+  this pass is reported. Full record:
+  alliance-help/0806-queue-run.md.
