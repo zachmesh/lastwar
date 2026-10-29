@@ -547,3 +547,42 @@ Full detail in zombie-invasion/0548-queue-run.md.
 - 1142 resource-collection queue run (partial): no resource bubble located, HUD unchanged, tracker untouched.
 
 - 1144 survivors queue run (partial): gate and line not located, no survivor tapped, tracker untouched.
+
+## 12:34 to about 12:52 — Queue ticker pass, gifts, help, mail and star-ceremony done
+
+- Ticker pass ticker-1234. Sync reaped 0 and produced 0
+  - all due regulars were already queued by the planner,
+  and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-047 was already in
+  inbox, so no chain seeding was needed. The token was
+  taken by ticker-1234.
+- Gifts unit gifts-2026-10-29-1030, done: Claim All on
+  both tabs. Regular 395 gifts (dialog verified; Gift
+  Level 28 progress 171,996,420 to 172,000,380, a gain
+  of 3,960, 10 above 395 at 10 each - reported as read,
+  not reconciled). Premium 3 gifts (R 50 plus SSR 200
+  plus MR 1,000), progress to 172,001,630. Full record
+  in alliance-gifts/1239-queue-run.md.
+- Help unit help-2026-10-29-1030, done: Help All
+  pressed twice. Today's Alliance Help points 440 to
+  500 of 1,000; StarFall's requests and a fresh
+  dontard Lv.26 Smelter request cleared. Full record
+  in alliance-help/1242-queue-run.md.
+- Mail unit mail-2026-10-29-1030, done: all categories
+  checked, Claim All in Event, Alliance, Regular,
+  Battle Report, Season and System each answered "No
+  rewards available."; In-app Purchases skipped per
+  metadata (receipts only). No mail needed an owner
+  decision. Noted only: an Alliance Leadership
+  Transfer Notice (Abyss Apex became the new leader)
+  and a New Alliance Assembly Point mail - no assembly
+  action taken. A wrong tap on a round base button
+  opened the Recruit panel and was closed untouched.
+  Full record in mail-rewards/1251-queue-run.md.
+- Star-ceremony unit star-ceremony-2026-10-29-1030,
+  done as checked only: no trophy icon on the base
+  right rail, no ceremony waiting. VS duel countdown
+  06:08:34 noted. Full record in
+  alliance-duel/1252-queue-run.md.
+- Pass ended inside its budget after these four units;
+  token released.
