@@ -35,3 +35,8 @@ time and never edited once committed (C1).
   one tap, food 170.6M to 173.2M, iron, coin and titanium
   unchanged at the rounded HUD level, no Armed Truck
   claim observed.
+
+- [2221-queue-run.md](2221-queue-run.md) — queue unit
+  harvest-2026-10-28-2203; farmland collected, food
+  196.1M to 198.6M, iron bubble collected, iron 377.8M
+  to 385.0M, no Armed Truck claim observed.

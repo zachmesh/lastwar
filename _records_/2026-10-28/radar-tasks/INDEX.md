@@ -29,3 +29,8 @@ time and never edited once committed (C1).
   40 to 0 of 40 in three Claim All batches, points 2,898 to
   2,911; Rare Gold Mine pin dispatched (gathering to about
   02:43, claim next run); four special pins remain.
+
+- [2215-queue-run.md](2215-queue-run.md) — queue unit
+  radar-2026-10-28-2203; duel Day 4 stack posture, radar
+  already clear, stored 0 of 40, points 2948, no pins,
+  nothing claimed or spent.

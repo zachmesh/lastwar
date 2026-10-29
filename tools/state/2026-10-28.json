@@ -1,13 +1,13 @@
 {
  "harvest": {
   "status": "done",
-  "at": "2026-10-28T18:39:12",
-  "note": "Farmland collected, food 170.6M to 173.2M"
+  "at": "2026-10-28T22:20:56",
+  "note": "Farmland +2.5M food, iron bubble +7.2M iron, no truck claim"
  },
  "radar": {
   "status": "done",
-  "at": "2026-10-28T18:14:14",
-  "note": "Cleared 2/40 to 0/40, points 2936 to 2948, 12 rewards, stamina 41 to 12"
+  "at": "2026-10-28T22:14:59",
+  "note": "Radar clear, stored 0 of 40, points 2948, stack posture no claim needed"
  },
  "survivors": {
   "status": "done",
@@ -21,13 +21,13 @@
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-28T18:32:53",
-  "note": "24 coin donations to Rallied Defense, Tech Donation Today 4550 to 7050"
+  "at": "2026-10-28T22:13:45",
+  "note": "11 coin donations to Rallied Attack, count to 0, 00:06:23 cooldown"
  },
  "arms-race": {
   "status": "skipped",
-  "at": "2026-10-28T18:26:40",
-  "note": "Tech Research 0 of 30000, all scoring paths red lines, nothing claimed"
+  "at": "2026-10-28T22:07:36",
+  "note": "Base Building 0 of 30000, scoring paths are red lines (speedups, diamond packs, starting a building)"
  },
  "help": {
   "status": "done",

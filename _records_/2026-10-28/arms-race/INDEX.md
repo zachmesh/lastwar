@@ -44,3 +44,9 @@ time and never edited once committed (C1).
   30,000, cumulative chest 9 of 18 not claimable, nothing
   claimed; all scoring paths are red lines, recorded as a
   red-line miss (skipped-needs-owner).
+
+- [2207-queue-run.md](2207-queue-run.md) — queue unit
+  arms-race-2026-10-28-2203; Base Building phase, score 0 of
+  30,000, cumulative chest 0 of 2 not claimable, nothing
+  claimed; all scoring paths are red lines, recorded as a
+  red-line miss (skipped-needs-owner).

@@ -43,3 +43,10 @@ time and never edited once committed (C1).
   to the recommended Rallied Defense 6 of 10, Donation Count
   24 of 30 to 0 with the coin button greyed and a 00:06:29
   timer, Tech Donation Today 4550 to 7050.
+
+- [2214-queue-run.md](2214-queue-run.md) — queue unit
+  donations-2026-10-28-2203; 11 coin donations of 800 coin
+  to Rallied Attack, count 11 to 0, button greyed with a
+  00:06:23 timer; Tech Donation Today footer read 7050 at
+  the open and 800 at the close, recorded as an unexplained
+  discrepancy.
