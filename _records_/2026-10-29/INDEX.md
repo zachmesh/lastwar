@@ -333,3 +333,17 @@ Full detail in zombie-invasion/0548-queue-run.md.
   nothing spent, tracker untouched, regular stays due
   for the next tick. Full record:
   troop-training/0713-queue-run.md.
+
+## 07:34 to about 07:38 — Alliance gifts queue unit, failed (control channel lock)
+
+- Ticker pass ticker-0734, unit gifts-2026-10-29-0630.
+  Mac mini channel offline at pick time, back online on
+  the third session attempt, then every window-selection
+  input (activate x2, open_app x1 across sessions
+  cc-249, cc-250, cc-251) refused with outcome_unknown:
+  a new local user submission is required before input
+  can resume. No game input delivered, no gift claimed,
+  nothing spent, tracker untouched, regular stays due
+  for the next tick. Previous pass ticker-0704 also
+  failed on access, so this pass is reported. Full
+  record: alliance-gifts/0738-queue-run.md.
