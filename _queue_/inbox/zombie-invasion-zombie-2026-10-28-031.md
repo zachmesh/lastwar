@@ -12,7 +12,7 @@ window:
 est_minutes: 12
 chain_id: zombie-2026-10-28
 chain_seq: 31
-attempts: 0
+attempts: 1
 max_attempts: 3
 claimed_by:
 claimed_at:
