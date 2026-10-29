@@ -178,3 +178,22 @@ of 2026-10-28.
   detail in zombie-invasion/0353-queue-run.md.
 - No diamonds or money spent, no speedup burned, no
   different-device dialog. Token released.
+- Zombie unit zombie-invasion-zombie-2026-10-28-037,
+  partial: four Lv.10 kills claimed in-unit for
+  1,072,000 coins (X:998 Y:945, X:998 Y:967, X:997
+  Y:969, X:999 Y:929), squads_parallel 2 verified by
+  a 2 of 4 queue reading; stamina 46 to 6, no refill
+  needed; medals 1060 carried to 1100 derived; the 4
+  owned Coin Chest (SSR) still unlocated. Successor
+  unit 038 enqueued to start now. Full detail in
+  zombie-invasion/0404-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-038,
+  partial: one 50-stamina item opened (612 to 611),
+  four Lv.10 kills claimed in-unit for 1,072,000
+  coins (X:924 Y:847, X:869 Y:929, X:881 Y:919,
+  X:936 Y:854), squads_parallel 4 verified by a 4
+  of 4 queue reading; stamina 6 plus 50 minus 40 to
+  18; medals 1100 carried to 1140 derived; the 4
+  owned Coin Chest (SSR) still unlocated. Successor
+  unit 039 enqueued to start now. Full detail in
+  zombie-invasion/0412-queue-run.md.
