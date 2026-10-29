@@ -543,3 +543,7 @@ Full detail in zombie-invasion/0548-queue-run.md.
   Full record in radar-tasks/1119-queue-run.md.
 - Pass ended at the unit cap after this one unit; token
   released.
+
+- 1142 resource-collection queue run (partial): no resource bubble located, HUD unchanged, tracker untouched.
+
+- 1144 survivors queue run (partial): gate and line not located, no survivor tapped, tracker untouched.

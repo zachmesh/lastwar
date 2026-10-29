@@ -30,3 +30,5 @@ time and never edited once committed (C1).
   survivors-2026-10-29-0603, partial; Mac session dropped
   before the gate could be checked, nothing tapped, tracker
   untouched.
+
+- 1144 survivors queue run (partial): gate and line not located, no survivor tapped, tracker untouched.
