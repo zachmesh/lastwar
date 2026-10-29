@@ -231,3 +231,17 @@ Coin Chest (SSR) still unlocated. Inventory back
 arrow point corrected to 60,940 by grounding.
 Successor unit 042 enqueued to start now. Full detail
 in zombie-invasion/0450-queue-run.md.
+
+Queue unit 042 (zombie-invasion, 0518) — partial: three
+Lv.10 kills claimed in-unit for 804,000 coins (X:978
+Y:987, X:938 Y:992, X:949 Y:998), squads_parallel 2
+verified by a 2 of 4 queue reading; coin 99,015,332
+derived to 99,819,332 read; stamina 47 minus 30 plus
+regen to 19; medals 2870 derived to 2900 read live in
+the Store, conflicting with unit 041 derived 1220 and
+flagged suspect. Coin Chest (SSR) redemption deferred:
+its 160-medal, Limit 98 row was found but its Redeem
+tap twice did not respond to background clicks, so no
+medals were spent; the 4 owned chests remain unlocated.
+Successor unit 043 enqueued to start now. Full detail
+in zombie-invasion/0518-queue-run.md.
