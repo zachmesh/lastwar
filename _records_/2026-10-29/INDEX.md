@@ -501,3 +501,24 @@ Full detail in zombie-invasion/0548-queue-run.md.
   arms-race/1021-queue-run.md.
 - Pass ended at the unit cap after this one unit; token
   released.
+
+## 10:35 to about 10:50 — Queue ticker pass, alliance donations partial
+
+- Ticker pass ticker-1034. Sync reaped nothing and produced
+  nothing new - all 12 due regulars were already queued by the
+  planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-047 was already in inbox, so
+  no chain seeding was needed.
+- Donations unit donations-2026-10-29-1003, partial: Alliance
+  Techs War tab, recommended Rallied Defense 6 of 10, Tech
+  Donation Today 3550 at the open. Four coin donations of 700
+  coin each landed (Donation Count 14 of 30 to 10 of 30); the
+  coin button was still enabled when the 15 minute unit cap
+  arrived, so the remaining burst donations resume next tick
+  and the tracker is untouched. Click calibration confirmed
+  again: clicks near (670, 710) land above the green button
+  and change nothing; the button centre is (655, 765).
+  Diamond button never used. Full record in
+  alliance-donations/1035-queue-run.md.
+- Pass ended at the unit cap after this one unit; token
+  released.
