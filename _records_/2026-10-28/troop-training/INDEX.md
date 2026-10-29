@@ -37,3 +37,9 @@ time and never edited once committed (C1).
   north-east of the drill ground, a tent tap returned
   Drill Ground Full again - no requeue possible, nothing
   spent.
+
+- [1844-queue-run.md](1844-queue-run.md) — queue unit
+  training-2026-10-28-1803, partial; camera still outside
+  the base in fog after the survivors panning, barracks
+  tents not reached before the pass budget ended, no
+  batch queued, tracker untouched.

@@ -37,3 +37,9 @@ time and never edited once committed (C1).
   at the open; donation landing unverified (one read showed
   13 of 30, fresh re-read showed 12 of 30), recorded partial
   with the tracker untouched.
+
+- [1832-queue-run.md](1832-queue-run.md) — queue unit
+  donations-2026-10-28-1803; 24 coin donations at 700 coin
+  to the recommended Rallied Defense 6 of 10, Donation Count
+  24 of 30 to 0 with the coin button greyed and a 00:06:29
+  timer, Tech Donation Today 4550 to 7050.

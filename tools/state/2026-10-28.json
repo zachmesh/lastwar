@@ -1,8 +1,8 @@
 {
  "harvest": {
   "status": "done",
-  "at": "2026-10-28T14:47:56",
-  "note": "Farmland collected, food 156.7M to 162.4M"
+  "at": "2026-10-28T18:39:12",
+  "note": "Farmland collected, food 170.6M to 173.2M"
  },
  "radar": {
   "status": "done",
@@ -21,13 +21,13 @@
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-28T10:10:59",
-  "note": "12 coin donations, today 3000 to 4450, button greyed"
+  "at": "2026-10-28T18:32:53",
+  "note": "24 coin donations to Rallied Defense, Tech Donation Today 4550 to 7050"
  },
  "arms-race": {
   "status": "skipped",
-  "at": "2026-10-28T10:06:56",
-  "note": "Base Building phase 1003 slot score 0, all scoring paths red lines, miss recorded"
+  "at": "2026-10-28T18:26:40",
+  "note": "Tech Research 0 of 30000, all scoring paths red lines, nothing claimed"
  },
  "help": {
   "status": "done",

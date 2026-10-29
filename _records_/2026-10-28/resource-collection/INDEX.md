@@ -29,3 +29,9 @@ time and never edited once committed (C1).
   x5, iron, coin, food) and the Armed Truck rewards claimed;
   closing HUD food 130.4M, iron 323.6M, coin 33.9M with the
   radar loot of the same run.
+
+- [1839-queue-run.md](1839-queue-run.md) — queue unit
+  harvest-2026-10-28-1803; farmland bubbles collected in
+  one tap, food 170.6M to 173.2M, iron, coin and titanium
+  unchanged at the rounded HUD level, no Armed Truck
+  claim observed.

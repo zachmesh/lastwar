@@ -36,3 +36,9 @@ time and never edited once committed (C1).
   four dialog survivors and one named recruit (Hospital,
   Unit Healing Speed plus 4.00 percent); Quick Dispatch
   answered no survivors available, posts full.
+
+- [1843-queue-run.md](1843-queue-run.md) — queue unit
+  survivors-2026-10-28-1803, partial; hold-drag panning
+  reached the eastern perimeter then overshot outside
+  the base, gate line not reached before the pass budget
+  ended, Quick Dispatch not run, tracker untouched.
