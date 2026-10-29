@@ -704,3 +704,22 @@ Full detail in zombie-invasion/0548-queue-run.md.
   as observed; does not reconcile with 50 per
   donation). Diamond button never used. Full record:
   alliance-donations/1431-queue-run.md.
+
+## 14:52 — Radar tasks queue unit, partial
+
+- Ticker pass ticker-1444, unit radar-2026-10-29-1403.
+  Duel Day 4 stack posture (complete but do not claim).
+  Radar reached on the first dish tap at norm 62,727
+  (correcting the 54,667 estimate that opened secrets in
+  the 06:44 and 11:19 units). Radar: points 2,949, stored
+  22/40, stamina 54. Bottom bar offered only Claim All
+  for 8 stacked rewards, no Quick Execute, so no ordinary
+  task could be completed without claiming the stack.
+  One purple skull pin tap claimed a finished task on
+  the spot (chest x4, blue swirl item x10, Hero EXP 2.0M,
+  item x800, food 999.3K, coin 144.9K; points to 2,950,
+  stored to 21/40) - recorded against the stack posture,
+  same trap as the 02:24 pin tap. Claim All deliberately
+  NOT tapped, no further pin tapped, no diamond or money
+  spent. Tracker untouched. Full record:
+  radar-tasks/1452-queue-run.md.

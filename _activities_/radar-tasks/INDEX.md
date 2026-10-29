@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-10-29T21:52:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Radar stored tasks, Quick Execute, stamina regain and the special pin tasks that Quick Execute does not cover
 status: unverified
 grounded_in:
@@ -57,6 +57,22 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
 - A red dot on a radar map pin means that pin is clickable and its
   task can be done now (owner, 2026-10-25). Do not treat a pin with
   a red dot as decoration - open it.
+
+## Pin tap caution - finished tasks pay on tap, 2026-10-29
+
+- A red-dotted map pin is not always a special task. Twice
+  on 2026-10-29 (a blue person pin at 02:24, a purple skull
+  pin at 14:52) tapping the pin opened a CONGRATULATIONS
+  popup and claimed a finished task at once, with no card
+  and no chance to back out. On a stack-posture day that
+  claim runs against the posture, so do not tap map pins
+  casually while stacking - inspect the pin type first
+  from the record history, and expect an instant claim.
+- Entry grounding, 2026-10-29 - the left-column dish icon
+  with its red badge sits at norm 62,727 on a fresh
+  screenshot. The earlier 54,667 estimate opened Secret
+  Command Post in the 06:44 and 11:19 units; use 62,727
+  first.
 
 ## How ordinary tasks are done
 
