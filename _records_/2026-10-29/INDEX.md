@@ -990,3 +990,19 @@ Full detail in zombie-invasion/0548-queue-run.md.
   Weekly and Super Monthly pass pickups not reached before
   the pass budget ran out, so the regular re-produces next
   tick. Full detail in shop-claims/2055-queue-run.md.
+
+## 21:07 to about 21:28 — Queue ticker pass, trucks 1857
+
+- Ticker pass ticker-2104. Sync reaped 0, expired 0, 13 due
+  regulars already queued, so no new units produced; a
+  zombie-invasion chain unit was already in inbox, so no chain
+  seeding was needed.
+- Trucks unit trucks-2026-10-29-1857, partial: settled one
+  returned SSR truck in full, intact, Squad 3 (iron 3.0M,
+  food 3.0M, coin 1.9M plus badges and items); dispatched one
+  SR truck, Squad 2, journey 04:04:21, after a free refresh
+  and 2 paid refreshes (Trade Contracts 137 to 135), regular
+  Let's Go, non-UR day, no Mega Mode; Trade Count 0 of 5 to
+  1 of 5. Plunder hunt not reached before the pass budget
+  ran out, so the regular re-produces next tick. Full detail
+  in truck-plunder/2128-queue-run.md.
