@@ -769,3 +769,20 @@ of 2026-10-28.
   batch was started. Third training unit today to end
   this way; the tent row location still needs pinning
   down. Full detail in troop-training/1119-queue-run.md.
+
+## 11:36 to about 11:53 — Queue ticker pass, Alliance Gifts unit
+
+- Gifts unit gifts-2026-10-30-1030, done: Regular Claim
+  All claimed 117 gifts, then Premium Claim All claimed
+  5 gifts, then a recheck found 2 fresh Regular gifts
+  (both PrincessEsra10xoxo Zombie Boss kills) and claimed
+  those too — 119 Regular and 5 Premium in total, both
+  tabs' rows Claimed and both Claim All badges clear.
+  Gift Level 28 progress 173,638,880 at the open to
+  173,644,620 at the end, as read on screen; the
+  progress deltas do not equal the row point values and
+  are left as an open question in the record. A first
+  tap at 912,675 missed Alliance and selected the 3rd
+  Squad; empty-ground deselection restored the UI and
+  the grounded Alliance tap at 932,720 opened the panel.
+  Full detail in alliance-gifts/1153-queue-run.md.
