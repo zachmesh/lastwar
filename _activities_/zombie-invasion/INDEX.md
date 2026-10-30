@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-30T07:45:00Z
+modified: 2026-10-30T08:18:00Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -555,6 +555,30 @@ execution.
   inventory location is still unknown, so no chest
   was opened. A fresh wave arrived during the unit,
   so cleared is false.
+
+- Batched dispatch too fast, unit 053 on
+  2026-10-30 — a 3-click batch (Search,
+  crossed-swords, March) dispatched in 1.5 seconds
+  failed silently, stamina unchanged and March
+  Queues 0/4: the later clicks landed before the
+  Search jump animation produced the card. A batch
+  needs a pause after Search, or single-step
+  dispatch with a screen read between steps, as
+  both kills in unit 053 used.
+- Gift-box point moves with the map, unit 053 on
+  2026-10-30 — taps at 317,233 and 312,225 opened
+  ally [AP3x]ZOLTAN's base profile instead of LOOT,
+  because the map was centred on that base and the
+  base sat under the gift icon. After a map drag
+  moved the base clear, a tap at 319,247 opened
+  LOOT. Re-ground the gift point on the current
+  screenshot whenever the map view has moved;
+  never re-tap a stale point blindly.
+- Computer session drop, unit 053 on
+  2026-10-30 — session cc-421 dropped mid-unit
+  (observe returned observation_unavailable);
+  session cc-422 was started, LastWar re-selected,
+  and no game state was lost.
 
 ## Open questions
 

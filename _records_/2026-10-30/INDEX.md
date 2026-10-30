@@ -67,3 +67,23 @@ of 2026-10-28.
   wave arrived during the unit, so cleared is false.
   Full detail in zombie-invasion/0044-queue-run.md.
   Successor unit 053 starts now (cleared false).
+
+## 01:04 to about 01:17 — Queue ticker pass, Zombie Invasion unit 053
+
+- Zombie-invasion unit zombie-invasion-zombie-2026-10-28-053,
+  done: two Lv.10 kills at squads_parallel 1 (X:979 Y:956,
+  X:982 Y:965, stamina 22 to 4), both LOOT rows claimed
+  in-unit for 536,000 coins at the standard 268.0K row
+  value (second row not screenshot-read, see record;
+  HUD 123.6M to about 124.1M). A 1.5 second batched
+  second dispatch failed silently (stamina unchanged),
+  and the gift-box point twice opened an ally base
+  profile because the map was centred on that base;
+  a map drag cleared it and 319,247 opened LOOT.
+  Computer session cc-421 dropped mid-unit, cc-422
+  recovered with no state lost. Store not visited,
+  no medal balance live-measured, no chest opened.
+  No diamonds or money spent. Nearby zombies not
+  cleared, so cleared is false. Full detail in
+  zombie-invasion/0104-queue-run.md. Successor unit
+  054 starts now (cleared false).
