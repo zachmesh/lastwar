@@ -736,3 +736,26 @@ of 2026-10-28.
   cooldown timer; Tech Donation Today 3,200 to
   4,450. Diamond button untouched.
   Full detail in alliance-donations/1025-queue-run.md.
+- Radar unit radar-2026-10-30-1003, performed in part:
+  the one claimable task reward claimed (radar tokens 10,
+  Hero EXP 2.6M, drone data 800, food 1.3M, coin 182.4K),
+  points 6 to 7, ordinary tasks already clear (stored
+  0 of 40, no Quick Execute offer); the orange pickaxe
+  and purple skull map pins were left unattempted per
+  the pin-tap caution, so the tracker is untouched.
+  Full detail in radar-tasks/1040-queue-run.md.
+- Harvest unit harvest-2026-10-30-1003, performed in part:
+  iron bubbles and coin bubbles collected and verified
+  (iron 474.3M to 476.6M, coin 144.3M to 145.9M); two
+  farmland taps fell through to warehouse selection
+  (Food Warehouse Lv.24, Iron Warehouse Lv.25), both
+  closed untouched, so the food bubbles stay uncollected
+  and the Armed Truck unchecked; tracker untouched.
+  Full detail in resource-collection/1048-queue-run.md.
+- Survivors unit survivors-2026-10-30-1003, performed in part:
+  gate line found by panning, but the one tap selected
+  the full Armed Truck by the gate instead of a survivor
+  and was left untouched (truck loot belongs to harvest),
+  so no recruit was captured and Quick Dispatch was not
+  run; tracker untouched.
+  Full detail in survivor-intake/1058-queue-run.md.
