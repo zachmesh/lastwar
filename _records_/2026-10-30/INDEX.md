@@ -280,3 +280,75 @@ of 2026-10-28.
   and Extension $24.99 all left untouched. Nothing new
   claimed, nothing spent. Full detail in
   shop-claims/0321-queue-run.md.
+
+## 03:34 to about 03:41 — Queue ticker pass, Trucks unit
+
+- Trucks unit trucks-2026-10-30-0257, partial: trade screen
+  never entered. Duel day 5 Total Mobilization is not a UR
+  truck day, so the non-UR rule would have applied, but it
+  was never reached. One tap at 53,713 opened a map screen
+  with a radar task timer, not trade, and was left untouched
+  on return home. An enlarged left-column crop then showed
+  no blue truck-front Intercity Trade icon in the current
+  set (hammer 2/4, flask 0/2, green face, blue bus/train
+  with red badge, white pickup, satellite, hammer,
+  walkie-talkie), matching the 2026-10-29 23:48 entry
+  failure. Settled 0, dispatched 0, plundered 0, nothing
+  spent. Tracker untouched, so the next tick re-produces
+  this regular. Full detail in
+  truck-plunder/0340-queue-run.md.
+
+## 03:41 to about 03:45 — Queue ticker pass, Secrets unit
+
+- Secrets unit secrets-2026-10-30-0257, done (checked
+  only): Secret Command Post entered at 53,643. Four
+  Your Tasks cards all PERFECT (UR Rescue Missing Agent,
+  SSR Train Refugees, SSR Protect Refugee Camp, SSR
+  Search for Missing Refugees), already claimed in the
+  2026-10-29 23:51 unit, so nothing further to claim.
+  Mega Deploy opened no panel (nothing pending);
+  Reward Recovery showed the 2026-10-24 record already
+  CLAIMED. Assists already 5 of 5, plunder untouched.
+  Correction found in this unit: a tap at 52,605 opened
+  Intercity Trade (Trade Count 1 of 5), backed out
+  untouched - so the preceding trucks unit's "no trade
+  icon" claim is corrected; the next trucks unit should
+  try 53,605 first. Full detail in
+  secret-missions/0345-queue-run.md.
+
+## 03:41 to about 03:48 — Queue ticker pass, Hidden Treasures unit
+
+- Treasures unit treasures-2026-10-30-0257, done
+  (checked only): fragments M1 x13, M2 x12, M3 x0,
+  M4 x8, M5 x1, M6 x4, M7 x13, so M3 blocks any dig;
+  both Dig buttons greyed, chest progress 0/15 after
+  today's 00:04 dig. No exchange attempted. Full detail
+  in hidden-treasures/0348-queue-run.md.
+
+## 03:41 to about 03:50 — Queue ticker pass, Zombie Invasion unit 055
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-055,
+  done: two Lv.10 kills, sequential (squads_parallel 1
+  - 6-second round trips, first squad home before the
+  second dispatch; a batched parallel attempt landed
+  on a Lv.95 Zombie Boss card and was closed
+  untouched, no boss march sent). Kills X:985 Y:951
+  and X:982 Y:951, both LOOT rows claimed in-unit for
+  536,000 coins (HUD 133.6M to 134.1M). Store
+  redemption: medals read live at 3670, one SSR Coin
+  Chest redeemed for 160 (3670 to 3510, Limit 96 to
+  95, CONGRATULATIONS verified; first Redeem tap
+  only closed the tooltip). Owned chests still not
+  located in inventory, so none opened. Cleared is
+  false, successor unit 056 starts now. Full detail
+  in zombie-invasion/0350-queue-run.md.
+
+## Pass clock note - ticker-0334
+
+- VM clock at this pass: token taken 10:34 UTC, treasures
+  unit completed 10:40 UTC, zombie unit completed
+  10:48 UTC, token released 10:49 UTC. The
+  "about" windows in the four unit sections above run a
+  few minutes ahead of that clock; the VM clock times
+  here are the calibration, and the game-state facts in
+  the unit records stand as written.
