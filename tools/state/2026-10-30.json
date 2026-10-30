@@ -11,13 +11,13 @@
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-10-30T07:38:25",
-  "note": "Checked only: no ceremony waiting at 07:40"
+  "at": "2026-10-30T12:41:52",
+  "note": "No Star Ceremony waiting, checked only"
  },
  "train": {
   "status": "done",
-  "at": "2026-10-30T07:37:58",
-  "note": "Checked only: no train in preparation at 07:37"
+  "at": "2026-10-30T12:39:25",
+  "note": "No train in preparation, checked only"
  },
  "secrets": {
   "status": "done",
@@ -46,12 +46,12 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-30T07:44:36",
-  "note": "All pickups already claimed at 07:46"
+  "at": "2026-10-30T12:53:37",
+  "note": "All shop pickups already claimed today, nothing new"
  },
  "events": {
   "status": "done",
-  "at": "2026-10-30T07:42:34",
-  "note": "Full sweep 07:43: nothing claimable"
+  "at": "2026-10-30T12:49:18",
+  "note": "Full Events hub sweep, nothing claimable"
  }
 }

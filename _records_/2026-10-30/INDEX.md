@@ -804,3 +804,49 @@ of 2026-10-28.
   cc-492 dropped its observation channel after the System Claim
   All; cc-496 resumed and confirmed the back tap had landed.
   Full detail in mail-rewards/1223-queue-run.md.
+
+## 12:34 to about 12:53 — Queue ticker pass, Train, Star Ceremony, Events and Passes
+
+- Ticker pass ticker-1234. Sync reaped nothing and
+  produced nothing new - all due regulars were
+  already queued by the planner, and the Zombie
+  Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already
+  in inbox, so no chain seeding was needed. The
+  device token was held by this pass throughout and
+  released at its end. The pass stopped at about
+  25 minutes; remaining due units stay queued for
+  the next tick.
+- Train unit train-2026-10-30-1030, done as checked
+  only: no "Boarding closes in" banner, no train in
+  preparation. Nothing boarded, no Trade Contracts
+  spent.
+  Full detail in alliance-train/1238-queue-run.md.
+- Star Ceremony unit star-ceremony-2026-10-30-1030,
+  done as checked only: no trophy icon beside the
+  Alliance icon, no ceremony waiting. A base-screen
+  bubble reading "Supplies are fully loaded, please
+  claim them" was noted in passing for a
+  harvest/truck unit, not acted on here.
+  Full detail in alliance-duel/1241-queue-run.md.
+- Events unit events-2026-10-30-1057, done: full
+  Events hub sweep, nothing claimable. Arms Race
+  is now Base Building (live score 0, thresholds
+  6,250 / 12,500 / 30,000, cumulative 15 of 18);
+  Zombie Invasion live with next wave in 00:58:21;
+  Winter Battlefield starting soon; Wanted Boss
+  Code 64 Go countdown 05:14:26 with best single
+  attack 852,929,736 below the 1.0B first tier, so
+  all Goals Claim buttons greyed; Community Discord
+  binding already Claimed. No bouncing chest or
+  unclaimed red dot remains beyond the Wanted Boss
+  tab indicator.
+  Full detail in event-claims/1248-queue-run.md.
+- Passes unit passes-2026-10-30-1057, done: all
+  shop pickups already claimed today - Weekly Free
+  Supply Claimed, Coin Weekly Already claimed
+  today (4d 6:08:06 left), Super Monthly Daily
+  Pickup Claimed (22 days left); Legendary Take
+  All $19.99, Renew $4.99 and extension $24.99 all
+  untouched.
+  Full detail in shop-claims/1253-queue-run.md.
