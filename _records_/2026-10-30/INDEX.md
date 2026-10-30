@@ -46,3 +46,24 @@ of 2026-10-28.
   medal total is reported and the SSR row re-check stays
   open. Full detail in zombie-invasion/0018-queue-run.md.
   Successor unit 052 starts now (cleared false).
+
+## 00:34 to about 00:44 — Queue ticker pass, Zombie Invasion unit 052
+
+- Zombie-invasion unit zombie-invasion-zombie-2026-10-28-052,
+  done: four Lv.10 kills dispatched in parallel at the
+  march-queue cap (squads_parallel 4 - X:887 Y:926,
+  X:877 Y:910, X:874 Y:915, X:892 Y:880, stamina 56 to
+  16 proving all four marches), all four LOOT rows
+  claimed in-unit for 1,072,000 coins (HUD 122.5M to
+  123.6M). Store redemption breakthrough: medal balance
+  read live at 3370, the 160-medal Coin Chest (SSR) row
+  found again at Limit 98 (tooltip Owned 4, yield
+  812.16K), a plain single click on Redeem opened the
+  BUY ITEMS dialog and a plain single click on Buy
+  succeeded where unit 047's Buy step had failed -
+  balance 3370 to 3210, Limit 98 to 97, CONGRATULATIONS
+  verified. No diamonds or money spent. Owned chest
+  location still unknown, so no chest opened. A fresh
+  wave arrived during the unit, so cleared is false.
+  Full detail in zombie-invasion/0044-queue-run.md.
+  Successor unit 053 starts now (cleared false).

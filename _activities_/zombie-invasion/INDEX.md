@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-30T00:35:00Z
+modified: 2026-10-30T07:45:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -524,6 +524,38 @@ execution.
   evidence). The SSR row re-check and the Buy-step
   retry from unit 047 stay open for the next unit.
 
+- Parallel dispatch at the cap, unit 052 on
+  2026-10-30 — four batched dispatches put all four
+  squads on the march at once (March Queues 4/4;
+  X:887 Y:926, X:877 Y:910, X:874 Y:915, X:892 Y:880;
+  stamina 56 to 16 proving all four marches), the
+  first cap-4 run in this chain. All four LOOT rows
+  claimed in-unit for 1,072,000 coins (each 268.0K),
+  coin HUD 122.5M to 123.6M.
+- Store redemption breakthrough, unit 052 on
+  2026-10-30 — the Store header read live at 3370
+  medals. The 160-medal Coin Chest (SSR) row was
+  found again after scrolling (Limit 98), answering
+  unit 047's missing-row question: the row exists
+  and its position shifts with scroll, so a
+  first-screen scan alone misses it. Its tooltip
+  read Owned 4, yield 812.16K coins. A 1-second
+  long-press on Redeem did nothing this time, while
+  a plain single click opened the BUY ITEMS dialog
+  (SSR x1, Unit Price 160, Total Price 160) and a
+  plain single click on Buy succeeded — the Buy-step
+  bottleneck from unit 047 is broken in this
+  session by plain single clicks, though input-route
+  behaviour varies between sessions, so the next
+  redemption must still verify balance and Owned
+  count rather than assume success. Verified live:
+  CONGRATULATIONS, balance 3370 to 3210, Limit 98
+  to 97. Owned count after the redemption was not
+  re-read in a tooltip, and the owned chests'
+  inventory location is still unknown, so no chest
+  was opened. A fresh wave arrived during the unit,
+  so cleared is false.
+
 ## Open questions
 
 - What the collection icon pays per kill - partly answered
@@ -536,8 +568,11 @@ execution.
   Chest (UR), yield 2.43M coins at Base Lv.30.
 - Why the 160-medal Coin Chest (SSR) row that unit
   043 read at Limit 98 on 2026-10-29 was absent from
-  unit 047's full Store scan the same afternoon, and
-  where it sits in the list now.
+  unit 047's full Store scan the same afternoon -
+  answered by unit 052 on 2026-10-30: the row exists
+  and its position shifts with scroll, so a
+  first-screen scan alone misses it; it was found at
+  Limit 98 (now 97 after unit 052's redemption).
 - Where the 3 owned Coin Chest (SSR) sit in the inventory -
   not found in the Special tab or the first Resources pages
   in unit 005.
