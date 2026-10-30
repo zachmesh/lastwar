@@ -704,3 +704,35 @@ of 2026-10-28.
   attempted. Cleared is false; successor unit 064
   enqueued to start now, LOOT claim first.
   Full detail in zombie-invasion/0949-queue-run.md.
+
+## 10:04 to about 10:26 — Queue ticker pass, Arms Race and Donations
+
+- Ticker pass ticker-1004. Sync reaped nothing and
+  produced nothing new - all 8 due regulars were
+  already queued by the planner, and the Zombie
+  Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already
+  in inbox, so no chain seeding was needed. The
+  device token was held by this pass throughout and
+  released at its end.
+- Arms-race unit arms-race-2026-10-30-1003, done:
+  Hero Advancement phase (thresholds 2,000 / 4,000 /
+  12,000), UR hero Morrison leveled exactly once
+  with EXP only, Lv.122 to Lv.123 (power 1,704,057
+  to 1,710,907), live score 0 to 39,500, and all
+  three point chests claimed in one tap (Skill
+  Medals 1.6K, 68 of the 5-minute speedups, chests).
+  Cumulative counter chest 15 of 18, not full;
+  ranking-row chest unresponsive while the phase
+  is live and falls to the next run after the
+  about 11:00 phase roll. Hero-list card taps must
+  be grounded on the current screenshot - the
+  Lv.122 card sits at 767,730.
+  Full detail in arms-race/1018-queue-run.md.
+- Donations unit donations-2026-10-30-1003, done:
+  13 coin donations to Rallied Attack at 800 coin
+  each (10,400 coin), Donation Count 13 of 30 to
+  0 of 30, coin button greyed on a 00:14:06
+  cooldown timer; Tech Donation Today 3,200 to
+  4,450. Diamond button untouched.
+  Full detail in alliance-donations/1025-queue-run.md.
