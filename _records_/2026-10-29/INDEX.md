@@ -1189,3 +1189,27 @@ Full detail in zombie-invasion/0548-queue-run.md.
   the base screen in this unit, so it stays unverified;
   tracker untouched and the next tick re-produces the
   regular. Full detail in event-claims/2320-queue-run.md.
+
+## 23:35 to about 23:48 — Queue ticker pass, trucks 2257
+
+- Trucks unit trucks-2026-10-29-2257, partial: trade screen
+  never entered. The left-column slot at 53,605, which opened
+  Intercity Trade in the 16:58 and 21:28 units, now selects
+  the alliance train instead — the icon set has rotated
+  since 21:28. Nothing dispatched, settled or plundered, no
+  Trade Contracts spent; tracker untouched and the next tick
+  re-produces the regular. Full detail in
+  truck-plunder/2348-queue-run.md.
+
+## 23:47 to about 23:51 — Queue ticker pass, secrets 2257
+
+- Secrets unit secrets-2026-10-29-2257, done: one Claim tap
+  collected all finished secret tasks at once (iron 3.9M,
+  food 3.9M, skill medals 1.3K, treasure map fragments,
+  SSR hero universal shard; ally JottomanCobra's help
+  liked). Assists already 5 of 5, no pending task to Mega
+  Deploy, no Reward Recovery record. Count note: Your
+  Tasks badge read 8 but only 7 distinct cards were
+  identified by name, so the record claims 7 named tasks
+  and reports the badge separately. Full detail in
+  secret-missions/2351-queue-run.md.
