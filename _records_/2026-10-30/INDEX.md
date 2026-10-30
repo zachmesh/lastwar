@@ -983,3 +983,13 @@ and food bubbles collected, HUD verified food 294.3M to 300.2M,
 iron 480.5M to 483.4M, coin 149.1M to 151.2M. Armed Truck
 unchecked; tracker untouched, next tick re-produces the regular.
 Full detail in resource-collection/1522-queue-run.md.
+
+## 1544 queue run - survivor intake (partial)
+
+Survivors unit survivors-2026-10-30-1403 by ticker-1534: gate
+line found panned to the lower left (Wall Lv.26), one
+question-mark figure tapped at 28,700 with its bubble
+cleared on the next screenshot, no recruit card or dialog
+name captured, second tap at 135,700 with no change, Quick
+Dispatch not run. Tracker untouched, next tick re-produces
+the regular. Full detail in survivor-intake/1544-queue-run.md.
