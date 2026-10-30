@@ -759,3 +759,13 @@ of 2026-10-28.
   so no recruit was captured and Quick Dispatch was not
   run; tracker untouched.
   Full detail in survivor-intake/1058-queue-run.md.
+
+## 11:05 to about 11:19 — Queue ticker pass, Troop Training unit
+
+- Training unit training-2026-10-30-1003, partial: no
+  barracks tent with a TRAIN UNITS panel was located in
+  the current camera position (taps at 520,600 and
+  180,220), so no barracks queue timer was read and no
+  batch was started. Third training unit today to end
+  this way; the tent row location still needs pinning
+  down. Full detail in troop-training/1119-queue-run.md.
