@@ -579,3 +579,42 @@ of 2026-10-28.
 - Pass ended at about 07:24 with the next unit
   (train-2026-10-30-0630) unstarted, inside the
   pass budget, for the next tick.
+- Train unit train-2026-10-30-0630, done as checked
+  only (ticker-0734, about 07:37): base screen showed
+  no "Boarding closes in" banner, so no train is in
+  preparation; nothing boarded, no Trade Contracts
+  spent.
+  Full detail in alliance-train/0737-queue-run.md.
+- Star Ceremony unit star-ceremony-2026-10-30-0630,
+  done as checked only (ticker-0734, about 07:40):
+  no trophy icon beside the Alliance icon on the
+  base screen, so no ceremony is waiting.
+  Full detail in alliance-duel/0740-queue-run.md.
+- Events unit events-2026-10-30-0657, done
+  (ticker-0734, about 07:43): full Events hub sweep,
+  nothing claimable. Arms Race rotated to Hero
+  Advancement, live score 0, thresholds 2,000 /
+  4,000 / 12,000, cumulative chest 9 of 18; Zombie
+  Rewards informational only, next wave in about
+  2 minutes; Wanted Boss Code 64 not out, best
+  852,929,736 below the 1.0B tier; Community already
+  Claimed; Desert event over; Winter starting soon.
+  Full detail in event-claims/0743-queue-run.md.
+- Passes unit passes-2026-10-30-0657, done
+  (ticker-0734, about 07:46): all shop pickups
+  already claimed today - Weekly Free Supply
+  Claimed, Coin Weekly Already claimed today
+  (4d 11:15:46 left), Monthly Daily Pickup Claimed
+  (22 days left); Legendary Take All $19.99, Renew
+  $4.99 and extension $24.99 all untouched.
+  Full detail in shop-claims/0746-queue-run.md.
+- Trucks unit trucks-2026-10-30-0657, partial
+  (ticker-0734, about 07:48): Intercity Trade screen
+  never entered - the blue truck-front icon with red
+  badge 1 (norm 52,620) took three taps with no screen
+  change, and the game tree offers no element number
+  for it; tracker untouched so the next tick
+  re-produces the regular. Duel Day 5 Total
+  Mobilization is not a UR day. Nothing dispatched,
+  nothing plundered, nothing spent.
+  Full detail in truck-plunder/0750-queue-run.md.
