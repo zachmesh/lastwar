@@ -41,3 +41,9 @@ time and never edited once committed (C1).
 - [1528-queue-run.md](1528-queue-run.md) — queue unit
   training-2026-10-29-1403, partial; no barracks queue
   read, pass budget reached, tracker untouched.
+
+- [1946-queue-run.md](1946-queue-run.md) — queue unit
+  training-2026-10-29-1803, partial; view panned back
+  to central base, one military building tapped with
+  no panel opened, no barracks queue read, no batch
+  started, tracker untouched.
