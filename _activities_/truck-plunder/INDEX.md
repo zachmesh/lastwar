@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-28T10:20:00Z
+modified: 2026-10-30T12:29:00Z
 level: L1
-version: 1.4.2
+version: 1.5.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: owner teach-in on plunder target selection and dispatch rules, evening of 2026-10-25
   - source: evening dispatch and plunder executions on the new server day, 2026-10-25
   - source: owner standing rule on non-UR day dispatch - SR or above only, ticket refreshes authorized until reached, 2026-10-26
+  - source: owner rule on daily truck quotas - dispatch 5 and plunder 4 every trade day, note it in the metadata and resolve misses, 2026-10-30
 ---
 
 # Truck plunder - Intercity Trade
@@ -195,6 +196,42 @@ train also runs on this screen as a trade vehicle.
 - Because journeys run about 4 to 5 hours, a second dispatch wave the
   same day is possible if the round is run early. Plunder whenever the
   daily round runs, targets permitting.
+
+## Daily quotas - owner rule, 2026-10-30
+
+- Every trade day, fill both counters in full - dispatch trucks
+  until Today's Trade Count reads 5 of 5, and plunder until Your
+  Plunder Count Today reads 4 of 4. The trade day follows the
+  server day and resets at 19:00 local with the duel day. These
+  are quotas to fill, not caps to stay under.
+- Every trucks unit reads both counters on entering the trade
+  screen and works the shortfall in this order - settle returned
+  trucks first, then dispatch until the Trade Count is full, then
+  plunder until the Plunder Count is full. The quality rules are
+  unchanged - SR or above on non-UR days (free refresh first, then
+  Trade Contract refreshes until reached), UR only through Mega
+  Mode on UR days; plunder targets stay UR or SSR trucks carrying
+  UR shards with guard power below Squad 1 and shards plentiful
+  and right sided, refreshing the list at top right until a
+  suitable target appears.
+- The counters on the trade screen are the source of truth for
+  the day's progress - never a tally derived across unit records.
+  A unit that runs out of its 15 minutes with a quota unfilled
+  records the live counters, stays partial, and the next trucks
+  unit resumes the same shortfall.
+- Entry failure does not close the day. When the trade slot has
+  rotated out of the visible icon set, spend the unit on entry -
+  identify which slot, if any, carries the blue truck-front icon
+  with a red badge in the current set before tapping, and try the
+  route flip described in How to enter. Later trucks units the
+  same day keep trying; a quota still unfilled in the last hours
+  of the trade day is a miss and is reported as one, with the
+  reason, in the unit record and the round summary.
+- First application, 2026-10-30 - the trade day that began
+  2026-10-29 19:00 local stood at dispatch 1 of 5 and plunder
+  0 of 4 at 05:29 local, after two units failed to enter the
+  trade screen at all. A catch-up unit was enqueued the same
+  morning to work the shortfall.
 
 ## Scope and availability
 
