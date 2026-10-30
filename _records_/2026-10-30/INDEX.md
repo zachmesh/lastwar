@@ -491,3 +491,37 @@ of 2026-10-28.
   unit and was not merged in. Completion sweep
   not finished; game left on the Arms Race page.
   Full detail in arms-race/0625-queue-run.md.
+
+## 06:34 to about 06:44 — Queue ticker pass, harvest unit
+
+- Harvest unit harvest-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  base entry food 276.9M, iron 468.5M, coin 138.7M;
+  two bubble batches collected iron plus 2.7M and
+  coin plus 1.9M, then food plus 7.9M (farmland
+  all-at-once); end totals food 284.8M, iron
+  471.2M, coin 140.6M. An Iron Mine Lv.27 panel
+  and a Gold Mine Lv.29 panel opened by
+  fall-through taps and were closed with their X
+  untouched — no upgrade, no Finish Now. Remaining
+  base icons were ambiguous (survivor and UI icons
+  among them) and were left untouched; the Armed
+  Truck was not checked.
+  Full detail in resource-collection/0644-queue-run.md.
+
+## 06:45 to about 06:54 — Queue ticker pass, survivors unit
+
+- Survivors unit survivors-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  a drag pan revealed the bottom-left gate line
+  (three question-mark figures); a tap at 273,473
+  raised only the truck driver's speech bubble and
+  claimed nothing; a tap at 295,455 changed the
+  gate area and the question-mark bubbles were
+  replaced by a green smiley, but no recruit card
+  or dialog was captured, so no survivor is counted
+  as verified processed. One remaining
+  question-mark-like icon sits on the truck and was
+  left untouched (truck claims belong to harvest).
+  Quick Dispatch was not run.
+  Full detail in survivor-intake/0654-queue-run.md.
