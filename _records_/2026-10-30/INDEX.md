@@ -993,3 +993,26 @@ cleared on the next screenshot, no recruit card or dialog
 name captured, second tap at 135,700 with no change, Quick
 Dispatch not run. Tracker untouched, next tick re-produces
 the regular. Full detail in survivor-intake/1544-queue-run.md.
+
+## 1613 queue run - troop training (partial)
+
+Training unit training-2026-10-30-1403 by ticker-1604: base screen
+in window mode, HUD food 300.2M, iron 483.4M, coin 151.2M, total
+power 146,857,078. A map drag and a scroll did not move or zoom
+the view; a tap on a beige tent at norm 840,700 opened no panel
+(those tents read as survivor shelters, not barracks). No TRAIN
+UNITS panel located, no batch started — the fourth training unit
+today to end this way. Tracker untouched, next tick re-produces
+the regular.
+Full detail in troop-training/1613-queue-run.md.
+
+## 1620 queue run - alliance gifts (done)
+
+Gifts unit gifts-2026-10-30-1430 by ticker-1604: Regular Claim All
+claimed 110 gifts (Gift Lv28 progress 173,879,000 to 173,880,100),
+Premium Claim All claimed 4 gifts. Entry notes: Alliance shield
+grounds at norm 915,695 after a title-bar tap, Alliance Gifts
+button at norm 312,615, Premium Claim All at norm 748,920;
+Alliance Wars opened twice by mis-taps and left untouched.
+Tracker marked done.
+Full detail in alliance-gifts/1620-queue-run.md.
