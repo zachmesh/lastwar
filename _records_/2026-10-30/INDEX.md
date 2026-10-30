@@ -649,7 +649,27 @@ of 2026-10-28.
   M3 at 0 blocks any dig, matching the 00:04 post-dig
   state exactly. No fragment exchange attempted.
   Full detail in hidden-treasures/0811-queue-run.md.
-- The next due unit, zombie-invasion chain 060, was
-  left in inbox for the next tick: the pass budget did
-  not leave room to fight it and still claim its LOOT
-  inside the same unit.
+- Zombie unit zombie-invasion-zombie-2026-10-28-060,
+  partial (ticker-0834, about 08:34 to 08:45): two
+  Lv.10 kills in parallel (X:998 Y:913 and X:990
+  Y:909, squads_parallel 2, stamina 93 to 73), both
+  LOOT rows claimed in-unit for 536,000 coins, coin
+  HUD 142.5M to 143.0M. Store header read live at
+  4010 medals; the 160-medal Coin Chest (SSR) row
+  at Limit 94 was verified by tooltip (812.16K
+  coins), but Redeem stayed unresponsive on a single
+  tap, a 1 second long-press and a double-click, so
+  no medals were spent and no chest was redeemed.
+  Full detail in zombie-invasion/0845-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-061,
+  partial (ticker-0834, about 08:45 to 08:49): two
+  Lv.10 kills sequential (X:989 Y:951 and X:991
+  Y:959, squads_parallel 1 for short round trips,
+  stamina 73 to 54), both LOOT rows claimed in-unit
+  for 536,000 coins, coin HUD 143.0M to 143.6M.
+  The Store step was not attempted; the SSR
+  redemption stays open for the successor.
+  Full detail in zombie-invasion/0849-queue-run.md.
+- The next due unit, zombie-invasion chain 062, was
+  left in inbox for the next tick: the pass budget
+  did not leave room for a third unit in this pass.
