@@ -12,11 +12,11 @@ window:
 est_minutes: 12
 chain_id: zombie-2026-10-28
 chain_seq: 55
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: ticker-0334
+claimed_at: 2026-10-30T10:41:11Z
+lease_until: 2026-10-30T11:01:11Z
 ---
 
 # zombie-invasion
