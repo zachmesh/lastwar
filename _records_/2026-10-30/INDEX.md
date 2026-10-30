@@ -786,3 +786,21 @@ of 2026-10-28.
   Squad; empty-ground deselection restored the UI and
   the grounded Alliance tap at 932,720 opened the panel.
   Full detail in alliance-gifts/1153-queue-run.md.
+
+## 12:05 to about 12:23 — Queue ticker pass, Alliance Help and Mail units
+
+- Help unit help-2026-10-30-1030, done: Help All pressed once
+  at 500,778, papillon707 ally requests (Infirmary Expansion I
+  research and Healing Help) cleared, own Bears Lair Lv.28 Drill
+  Ground and Lv.30 Aircraft Center rows (both 30 of 30) remain;
+  header 700 of 1,000 before and after, as observed.
+  Full detail in alliance-help/1212-queue-run.md.
+- Mail unit mail-2026-10-30-1030, done: all six claimable
+  categories checked (Event, Alliance, Season, System, Regular,
+  Battle Report), no rewards available in any of them — Event,
+  Season and System answered "No rewards available", the rest
+  produced no dialog and no change; In-app Purchases not opened
+  per metadata, Delete All never tapped. Computer session
+  cc-492 dropped its observation channel after the System Claim
+  All; cc-496 resumed and confirmed the back tap had landed.
+  Full detail in mail-rewards/1223-queue-run.md.
