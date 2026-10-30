@@ -352,3 +352,23 @@ of 2026-10-28.
   few minutes ahead of that clock; the VM clock times
   here are the calibration, and the game-state facts in
   the unit records stand as written.
+
+## 04:04 to about 04:19 — Queue ticker pass, Zombie Invasion unit 056
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-056,
+  partial (15 minute cap reached during Store
+  redemption; tracker untouched): two Lv.10 kills,
+  sequential (squads_parallel 1 - round trips of
+  seconds, first squad home before the second
+  dispatch). LOOT rows X:964 Y:952 and X:998 Y:958
+  claimed in-unit for 536,000 coins (HUD 134.1M to
+  134.6M). Windowed-mode bottom-bar clicks failed
+  until the game was put into native fullscreen, in
+  which all controls responded. Store redemption NOT
+  done: medals read live at 3530, SSR Coin Chest row
+  (160, Limit 95) identified, five Redeem attempts
+  produced no dialog, medals and Limit unchanged;
+  a Ranking panel opened by one mis-aimed tap was
+  closed untouched. Cleared is false, successor
+  starts now. Full detail in
+  zombie-invasion/0419-queue-run.md.
