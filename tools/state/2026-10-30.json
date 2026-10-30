@@ -8,5 +8,15 @@
   "status": "done",
   "at": "2026-10-30T03:17:51",
   "note": "Help All cleared waiting ally requests"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-10-30T03:37:51",
+  "note": "No ceremony trophy icon on base screen, nothing waiting"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-10-30T03:40:52",
+  "note": "No train in preparation, no boarding banner"
  }
 }

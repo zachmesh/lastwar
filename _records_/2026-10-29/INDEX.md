@@ -961,3 +961,32 @@ Full detail in zombie-invasion/0548-queue-run.md.
   Purchases not visited for pass-budget reasons. Tracker
   untouched, so the next tick re-produces the regular.
   Full detail in mail-rewards/2028-queue-run.md.
+
+- Star Ceremony unit star-ceremony-2026-10-29-1830, done as a
+  check: base screen inspected, no Star Ceremony trophy icon
+  beside the Alliance icon, so no ceremony is waiting to be
+  played or claimed. TIPS notification dialog dismissed with
+  Cancel. Full detail in alliance-duel/2037-queue-run.md.
+
+- Train unit train-2026-10-29-1830, done as a check: no
+  "Boarding closes in" banner on the base screen, so no train
+  is in preparation; nothing boarded, no contracts spent.
+  Full detail in alliance-train/2040-queue-run.md.
+
+- Events unit events-2026-10-29-1857, partial: Arms Race
+  Tech Research at 0 points (chests unreached), Winter and
+  Desert battlefields with nothing to claim, Zombie Invasion
+  live with no tab-page claim; Halloween Day 05 claimed for
+  puzzle pieces x10 (Days 01-04 and 06 already claimed, Day
+  07 locked); later Events tabs not reached after the tab
+  bar would not scroll, so the regular re-produces next
+  tick. Full detail in event-claims/2052-queue-run.md.
+
+- Passes unit passes-2026-10-29-1857, partial: Hot Deals
+  Resource Mega Pack claimed free (Resource Choice Chest
+  (UR) x5, Iron x2, Food x2, Coin x2; packs then sold out),
+  plus an auto-claim overlay of a chest x1 and a red-gem
+  tile marked 10 x1 whose source page was not pinned down;
+  Weekly and Super Monthly pass pickups not reached before
+  the pass budget ran out, so the regular re-produces next
+  tick. Full detail in shop-claims/2055-queue-run.md.
