@@ -21,13 +21,13 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-30T10:40:11",
-  "note": "Checked only: 4 PERFECT cards already claimed, no pending deploy, recovery CLAIMED"
+  "at": "2026-10-30T08:08:44",
+  "note": "08:08 secrets checked, all PERFECT, nothing pending"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-30T10:40:42",
-  "note": "Checked only: M3 x0, no dig possible, chest 0/15"
+  "at": "2026-10-30T08:09:31",
+  "note": "08:11 treasures checked, M3 0 blocks dig"
  },
  "arms-race": {
   "status": "done",

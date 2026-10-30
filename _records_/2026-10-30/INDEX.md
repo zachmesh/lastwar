@@ -618,3 +618,38 @@ of 2026-10-28.
   Mobilization is not a UR day. Nothing dispatched,
   nothing plundered, nothing spent.
   Full detail in truck-plunder/0750-queue-run.md.
+
+## 08:04 to about 08:11 — Queue ticker pass, Secrets and Treasures
+
+- Ticker pass ticker-0804. Sync reaped nothing and
+  produced nothing new - all 7 due regulars were already
+  queued by the planner, and the Zombie Invasion chain
+  unit zombie-invasion-zombie-2026-10-28-060 was already
+  in inbox, so no chain seeding was needed.
+- Secrets unit secrets-2026-10-30-0657, done
+  (ticker-0804, about 08:08): Secret Command Post
+  entered from the base left column slot at 53,643.
+  Your Tasks 7 cards all PERFECT (UR Rescue Missing
+  Agent, SSR Train Refugees, SSR Protect Refugee Camp,
+  SSR Search for Missing Refugees, SR Retrieve Agent
+  Profile, SR Retrieve Abandoned Gear, SR Retrieve Raw
+  Materials), no Claim button, no pending task on scroll
+  to the bottom; Mega Deploy opened no panel; Reward
+  Recovery showed the 2026-10-24 record already CLAIMED
+  and the 2026-10-16 record unexpandable. Assist Allies
+  5 of 5 capped, Plunder Others 0 of 5 untouched. The
+  post screen back arrow did not respond to background
+  clicks, so the game was left on the post screen.
+  Full detail in secret-missions/0808-queue-run.md.
+- Treasures unit treasures-2026-10-30-0657, done
+  (ticker-0804, about 08:11): Hidden Treasures tab tapped
+  from the post screen left by the secrets unit. Map
+  stock M1 x13, M2 x12, M3 x0, M4 x8, M5 x1, M6 x4,
+  M7 x13, chest progress 0/15, both Dig buttons greyed;
+  M3 at 0 blocks any dig, matching the 00:04 post-dig
+  state exactly. No fragment exchange attempted.
+  Full detail in hidden-treasures/0811-queue-run.md.
+- The next due unit, zombie-invasion chain 060, was
+  left in inbox for the next tick: the pass budget did
+  not leave room to fight it and still claim its LOOT
+  inside the same unit.
