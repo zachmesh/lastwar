@@ -889,3 +889,26 @@ Full detail in zombie-invasion/0548-queue-run.md.
   Tech Donation Today footer re-read was lost when Escape
   quit the game, and falls to the next tick. Full detail in
   alliance-donations/1827-queue-run.md.
+
+## 18:35 to about 18:47 — Queue ticker pass, radar 1803
+
+- Ticker pass ticker-1834. Sync reaped 0, expired 0, 17 due
+  regulars already queued, so no new units produced; Zombie
+  Invasion chain unit 050 was already in inbox, so no chain
+  seeding was needed.
+- Radar unit radar-2026-10-29-1803, partial: duel Day 5
+  Total Mobilization, release posture, so the Day 4 stack
+  was released - 39 tasks claimed across 6 Claim All
+  batches, points 2,950 to 2,989, stored 33/40 to 0/40;
+  12 Quick Execute tasks (2 plus 4 plus 3 plus 2 plus 1);
+  one free 75 stamina claim taken (Remaining Today 1/2
+  to 0/2, paid Buy never touched), stamina 70 to 26;
+  summed popup rewards about coin 7.8M, food 11.0M,
+  iron 10.1M, Hero EXP 50.7M. Ordinary tasks fully
+  cleared (bottom bar gone at the close); three map pins
+  (orange arrow, purple axe, orange axe) left unattempted,
+  so the tracker stays untouched for the next tick. Full
+  detail in radar-tasks/1847-queue-run.md.
+- No other inbox unit was executed in this pass; the
+  device token lease expired at 18:49, so the pass ended
+  after this unit rather than starting another.
