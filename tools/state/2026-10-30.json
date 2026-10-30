@@ -6,18 +6,18 @@
  },
  "help": {
   "status": "done",
-  "at": "2026-10-30T05:41:31",
-  "note": "Help All pressed, ally rows cleared"
+  "at": "2026-10-30T10:10:34",
+  "note": "Help All pressed once, ally requests cleared"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-10-30T05:49:22",
-  "note": "Checked: no trophy icon, no ceremony waiting"
+  "at": "2026-10-30T10:14:54",
+  "note": "No Star Ceremony trophy icon, no ceremony waiting"
  },
  "train": {
   "status": "done",
-  "at": "2026-10-30T05:51:15",
-  "note": "Checked: no boarding banner, no train in preparation"
+  "at": "2026-10-30T10:15:19",
+  "note": "No train in preparation, checked only"
  },
  "secrets": {
   "status": "done",
@@ -41,12 +41,17 @@
  },
  "mail": {
   "status": "done",
-  "at": "2026-10-30T05:47:41",
-  "note": "Event batch claimed; other categories nothing claimable"
+  "at": "2026-10-30T10:14:25",
+  "note": "Event mail batch claimed; other categories no rewards"
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-30T06:16:07",
-  "note": "Coin Weekly pickup, Free Supply auto-claim, Monthly daily gift claimed"
+  "at": "2026-10-30T10:21:20",
+  "note": "All pass pickups already claimed today"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-10-30T10:19:35",
+  "note": "Full Events sweep, nothing claimable; Wanted Boss Code 64 not out; Halloween Day 07 preview only"
  }
 }

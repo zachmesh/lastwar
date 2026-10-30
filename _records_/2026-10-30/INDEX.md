@@ -217,3 +217,66 @@ of 2026-10-28.
   the Gifts entry still showed a red dot at the
   close, so the next tick re-checks it. Full
   detail in alliance-gifts/0252-queue-run.md.
+
+## 03:05 to about 03:10 — Queue ticker pass, Alliance help unit
+
+- Alliance help unit help-2026-10-30-0230, done: Help All
+  pressed once from the Alliance panel; ally requests
+  (Amarky257 Lv.28 Air Force Base, Missile Apex Lv.23 2nd
+  Tech Center) cleared, only the two own 30 of 30 requests
+  remained. Today's help points still read 480 of 1,000
+  immediately after the press, recorded as observed. Full
+  detail in alliance-help/0310-queue-run.md.
+
+## 03:11 to about 03:14 — Queue ticker pass, Mail unit
+
+- Mail unit mail-2026-10-30-0230, done: Event Claim All
+  claimed a Zombie Invasion Intel Reward batch (540 medal
+  item, EXP 4.5M, 3.1K item, 10 stamina item, coin 1.8M,
+  food 1.4M, iron 1.4M as displayed). Alliance, Season,
+  System, Regular and Battle Report Claim All produced no
+  rewards; Battle Report held two scout reports ([GLAm]
+  Sapuiayat and wang Lin) with no action taken. No mail
+  deleted. Full detail in mail-rewards/0314-queue-run.md.
+
+## 03:15 — Queue ticker pass, Star Ceremony check
+
+- Star Ceremony unit star-ceremony-2026-10-30-0230, done
+  (checked only): no trophy icon on the right side of the
+  base screen beside Alliance, no ceremony waiting to play
+  or claim. Full detail in alliance-duel/0315-queue-run.md.
+
+## 03:15 to about 03:16 — Queue ticker pass, Train check
+
+- Train unit train-2026-10-30-0230, done (checked only):
+  no "Boarding closes in" banner under the resource bar,
+  so no train is in preparation. Nothing boarded, no Trade
+  Contracts spent. Full detail in alliance-train/0316-queue-run.md.
+
+## 03:16 to about 03:19 — Queue ticker pass, Events sweep unit
+
+- Events unit events-2026-10-30-0257, done: full hub sweep,
+  nothing claimed. Arms Race Unit Progression at 51,500
+  points, 03:43:59 left, thresholds 15,000 / 30,000 /
+  75,000 (first two reached, left for the arms-race unit);
+  Winter Battlefield starting soon; Desert Storm waiting
+  00:38:33; Zombie Invasion live with no tab Claim button;
+  Level Swap inspected only; Community already Claimed;
+  Wanted Boss now Code 64, not out yet (Go 14:43:09).
+  Halloween Days 01 to 06 claimed, Day 07 only opened its
+  Decoration Choice Chest VI (UR) detail with no Claim
+  button, recorded as not yet claimable. Session cc-437
+  dropped mid-unit, cc-438 resumed, no state lost. Full
+  detail in event-claims/0319-queue-run.md.
+
+## 03:20 to about 03:21 — Queue ticker pass, Shop claims check
+
+- Passes unit passes-2026-10-30-0257, done (checked only):
+  Hot Deals showed only the Last War Store promo, no free
+  pack; Weekly Pass Free Supply reads Claimed, Coin Weekly
+  Pass Already claimed today (4d 15:39:25 left); Super
+  Monthly Pass Daily Pickup reads Claimed, 23 days left.
+  Legendary Take All $19.99, Renew $4.99, Get Now $4.99
+  and Extension $24.99 all left untouched. Nothing new
+  claimed, nothing spent. Full detail in
+  shop-claims/0321-queue-run.md.
