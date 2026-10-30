@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-30T08:18:00Z
+modified: 2026-10-30T08:48:00Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -579,6 +579,35 @@ execution.
   (observe returned observation_unavailable);
   session cc-422 was started, LastWar re-selected,
   and no game state was lost.
+
+- Cap-4 again, stamina refill, and Buy centre,
+  unit 054 on 2026-10-30 — stamina 8 at entry, so
+  one 50 Stamina item was opened before dispatch
+  (Inventory Special live: 50-stamina x611,
+  10-stamina x624; Inventory opens at 900,870,
+  taps at 875,825 and 880,840 did not open it).
+  A slow single-step dispatch lost its target to
+  the stale-target toast ("The target location has
+  changed", no stamina charged), while batched
+  dispatches with a 2 second pause after Search
+  succeeded four times at the cap (X:913 Y:944,
+  X:894 Y:953, X:894 Y:934, X:862 Y:942, stamina
+  59 to 19). A LOOT row is created on arrival, not
+  on homecoming — the gift badge read 3 while two
+  squads were still Returning and 4 after the
+  fourth arrival, so rows can be claimed before
+  squads return home. All four rows claimed
+  in-unit for 1,072,000 coins. Store header read
+  live at 3270 medals (again above a derived
+  3250, so derived totals stay untrusted); one
+  SSR Coin Chest redeemed (3270 to 3110, Limit
+  97 to 96, CONGRATULATIONS verified). A Buy tap
+  at 500,640 missed (button top edge) while the
+  grounded Buy centre 499,689 succeeded — ground
+  the Buy centre, never reuse 640. Session
+  cc-423 dropped during a wait, cc-424 recovered
+  with no state lost. A fresh wave arrived during
+  the unit, so cleared is false.
 
 ## Open questions
 

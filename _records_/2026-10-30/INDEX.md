@@ -87,3 +87,29 @@ of 2026-10-28.
   cleared, so cleared is false. Full detail in
   zombie-invasion/0104-queue-run.md. Successor unit
   054 starts now (cleared false).
+
+## 01:34 to about 01:47 — Queue ticker pass, Zombie Invasion unit 054
+
+- Zombie-invasion unit zombie-invasion-zombie-2026-10-28-054,
+  done: four Lv.10 kills dispatched in parallel at the
+  march-queue cap (squads_parallel 4 - X:913 Y:944,
+  X:894 Y:953, X:894 Y:934, X:862 Y:942, stamina 59 to
+  19 proving all four marches), all four LOOT rows
+  claimed in-unit for 1,072,000 coins (HUD 124.1M to
+  125.2M). Stamina was 8 at entry, so one 50 Stamina
+  item was opened first (Inventory Special: 50-stamina
+  x611, 10-stamina x624 live; 50 x610 derived after).
+  A slow single-step dispatch hit the stale-target
+  failure; batched dispatches with a 2 second pause
+  after Search succeeded four times. Computer session
+  cc-423 dropped during a wait, cc-424 recovered with
+  no state lost. Store: medal balance read live at
+  3270, 1 SSR Coin Chest redeemed for 160 medals
+  (balance 3270 to 3110, Limit 97 to 96, CONGRATULATIONS
+  verified; the first Buy tap at 500,640 missed and
+  the grounded Buy centre 499,689 succeeded). No
+  diamonds or money spent. Owned chest location still
+  unknown, so no chest opened. A fresh wave arrived
+  during the unit, so cleared is false. Full detail in
+  zombie-invasion/0134-queue-run.md. Successor unit
+  055 starts now (cleared false).
