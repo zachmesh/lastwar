@@ -929,3 +929,38 @@ of 2026-10-28.
 - Pass ended at about 13:56 with the next unit
   (zombie-invasion-zombie-2026-10-28-065) unstarted,
   inside the pass budget, for the next tick.
+
+## 14:06 to about 14:19 — Queue ticker pass, Radar unit
+
+- Radar unit radar-2026-10-30-1403, performed in part
+  (ticker-1405, duel Day 5 release posture): two Quick
+  Execute batches and two Claim All payouts, points 7
+  to 18, stamina 59 to 21, stored tasks 3 of 40 to 0 of
+  40, bottom bar gone at the end. First claim: radar
+  tokens 80, Hero EXP 9.9M, drone data 3.2K, blue
+  triangle items 498, iron 1.3M, coin 1.5M, food 3.3M,
+  Lv.1 chest 1. Second claim: radar tokens 30, Hero
+  EXP 4.9M, drone data 800, iron 1.4M, food 696.0K,
+  coin 522.0K. Repeat-offer lesson: the bar re-offered
+  Quick Execute after the first claim, and the second
+  batch was real; keep running Quick Execute while
+  the bar keeps offering it. The blue pickaxe and
+  orange pickaxe map pins were left unattempted per
+  the pin-tap caution, so the tracker is untouched.
+  Full detail in radar-tasks/1418-queue-run.md.
+
+- Arms Race unit arms-race-2026-10-30-1403,
+  skipped-needs-owner (ticker-1405): Base Building
+  phase, score 0 against 6,250 / 12,500 / 30,000,
+  about 37 minutes left in the phase. All three
+  scoring paths sit inside red lines (start buildings,
+  burn construction speedups, buy diamond packs), and
+  the Building Queue showed no in-window completion
+  (Lv.29 Aircraft Center 13d 19h left, Lv.27 Drill
+  Ground 5d 12h left; Idle Construct buttons not
+  tapped). Cumulative chest 15 of 18 tapped with no
+  payout; ranking reward falls to the post-phase run.
+  Tracker skipped for this slot.
+  Full detail in arms-race/1427-queue-run.md.
+- Pass ended at about 14:28 with the next unit
+  unstarted, inside the pass budget, for the next tick.

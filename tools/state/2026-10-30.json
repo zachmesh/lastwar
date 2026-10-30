@@ -30,9 +30,9 @@
   "note": "M3 x0 blocks dig, chest 0/15, Dig greyed, no exchange"
  },
  "arms-race": {
-  "status": "done",
-  "at": "2026-10-30T10:19:03",
-  "note": "Hero Advancement target met: Morrison Lv122 to Lv123, score 39500, all three chests claimed"
+  "status": "skipped",
+  "at": "2026-10-30T14:26:41",
+  "note": "Base Building score 0, all scoring paths red-lined, no in-window building completion"
  },
  "donations": {
   "status": "done",
