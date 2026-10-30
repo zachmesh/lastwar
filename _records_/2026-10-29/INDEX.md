@@ -1116,3 +1116,47 @@ Full detail in zombie-invasion/0548-queue-run.md.
   TRAIN UNITS panel opened, no batch queued; pass
   budget reached, regular stays due for the next tick.
   Full detail in troop-training/2224-queue-run.md.
+
+## 22:34 to about 22:39 — Queue ticker pass, gifts 2230
+
+- Gifts unit gifts-2026-10-29-2230, done: Regular Claim
+  All 78 gifts and Premium Claim All 6 gifts by dialog;
+  both tabs re-checked empty of pending claims; Gift
+  Level 28 progress 172,857,790 to 172,860,230 of
+  206,300,000. Full detail in
+  alliance-gifts/2239-queue-run.md.
+
+## 22:40 to about 22:41 — Queue ticker pass, help 2230
+
+- Help unit help-2026-10-29-2230, done: Help All
+  pressed, "Allies are very grateful" toast, all ally
+  rows cleared, only the two own requests left at
+  30 of 30. Full detail in alliance-help/2241-queue-run.md.
+
+## 22:41 to about 22:47 — Queue ticker pass, mail 2230
+
+- Mail unit mail-2026-10-29-2230, done: Event Claim
+  All claimed a CONGRATULATIONS batch (gems and crates
+  as displayed); Alliance, Regular, Battle Report,
+  Season and System Claim All each produced no dialog -
+  reports and notices only; Purchases not opened
+  (receipts only). No mail deleted. Full detail in
+  mail-rewards/2247-queue-run.md.
+
+## 22:48 to about 22:49 — Queue ticker pass, star-ceremony 2230
+
+- Star-ceremony unit star-ceremony-2026-10-29-2230,
+  done as a check: base right rail inspected, no Star
+  Ceremony trophy icon beside the Alliance button, so
+  no ceremony is waiting; nothing claimed. Full detail
+  in alliance-duel/2249-queue-run.md.
+
+## 22:50 to about 22:51 — Queue ticker pass, train 2230
+
+- Train unit train-2026-10-29-2230, done as a check:
+  no "Boarding closes in" banner on the base screen,
+  so no train in preparation; nothing boarded, no
+  Trade Contracts spent. Computer session dropped
+  between units and was restarted (cc-407) with no
+  state lost. Full detail in
+  alliance-train/2251-queue-run.md.

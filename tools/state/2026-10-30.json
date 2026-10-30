@@ -1,23 +1,23 @@
 {
  "gifts": {
   "status": "done",
-  "at": "2026-10-30T03:15:36",
-  "note": "Claimed 567 Regular and 14 Premium alliance gifts"
+  "at": "2026-10-30T05:39:57",
+  "note": "Regular 78, Premium 6, both tabs empty"
  },
  "help": {
   "status": "done",
-  "at": "2026-10-30T03:17:51",
-  "note": "Help All cleared waiting ally requests"
+  "at": "2026-10-30T05:41:31",
+  "note": "Help All pressed, ally rows cleared"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-10-30T03:37:51",
-  "note": "No ceremony trophy icon on base screen, nothing waiting"
+  "at": "2026-10-30T05:49:22",
+  "note": "Checked: no trophy icon, no ceremony waiting"
  },
  "train": {
   "status": "done",
-  "at": "2026-10-30T03:40:52",
-  "note": "No train in preparation, no boarding banner"
+  "at": "2026-10-30T05:51:15",
+  "note": "Checked: no boarding banner, no train in preparation"
  },
  "secrets": {
   "status": "done",
@@ -38,5 +38,10 @@
   "status": "done",
   "at": "2026-10-30T05:17:50",
   "note": "11 coin donations to Rallied Attack, button greyed 00:02:24 cooldown"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-10-30T05:47:41",
+  "note": "Event batch claimed; other categories nothing claimable"
  }
 }
