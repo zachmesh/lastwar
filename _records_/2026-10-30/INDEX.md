@@ -873,3 +873,59 @@ of 2026-10-28.
   dispatch 2 and plunder 4 carries to the next trucks
   unit before the 19:00 reset.
   Full detail in truck-plunder/1305-queue-run.md.
+
+## 13:36 to about 13:43 — Queue ticker pass, Secrets
+
+- Ticker pass ticker-1334. Sync reaped nothing and
+  produced nothing new - all 8 due regulars were already
+  queued by the planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already in inbox, so
+  no chain seeding was needed.
+- Secrets unit secrets-2026-10-30-1057, done: Secret
+  Command Post entered from the base left column white
+  pickup slot at 53,643. Your Tasks 7 cards all PERFECT
+  (UR Rescue Missing Agent, SSR Train Refugees, SSR
+  Protect Refugee Camp, SSR Search for Missing Refugees,
+  SR Retrieve Agent Profile, SR Retrieve Abandoned Gear,
+  SR Retrieve Raw Materials), no Claim button, no pending
+  task on scroll to the bottom; Mega Deploy opened no
+  panel; Reward Recovery showed the 2026-10-24 record
+  already CLAIMED and the 2026-10-16 record unexpandable.
+  Assist Allies 5 of 5 capped, Plunder Others 0 of 5
+  untouched. Full detail in secret-missions/1344-queue-run.md.
+
+## 13:44 to about 13:45 — Queue ticker pass, Hidden Treasures
+
+- Treasures unit treasures-2026-10-30-1057, done
+  (checked only, same pass ticker-1334): Hidden
+  Treasures tab tapped from the post screen left by
+  the secrets unit. Fragment stock M1 x13, M2 x12,
+  M3 x0, M4 x8, M5 x1, M6 x4, M7 x13, chest progress
+  0/15, both Dig buttons greyed; M3 at 0 blocks any
+  dig, matching the 08:11 state exactly. No fragment
+  exchange attempted.
+  Full detail in hidden-treasures/1347-queue-run.md.
+
+## 13:46 to about 13:56 — Queue ticker pass, Zombie Invasion unit 064
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-064,
+  partial (ticker-1334, Store step not attempted in
+  the pass budget, tracker untouched): rescue first -
+  the unit 063 LOOT rows survived the 4-hour gap and
+  were claimed for 536,000 coins (X:987 Y:896 and
+  X:994 Y:905, each 268.0K, badge 2 to clear, HUD coin
+  145.9M to 146.5M). Then two new Lv.10 kills,
+  sequential (squads_parallel 1 - short round trips,
+  Squad 1 home before the second dispatch, so the
+  deploy panel auto-selected Squad 1 again), both
+  LOOT rows claimed in-unit for 536,000 coins
+  (X:996 Y:950 and X:995 Y:947, HUD coin to 147.0M).
+  Unit coins_collected 1,072,000 in total (536,000
+  rescue plus 536,000 new). Stamina 75 to 56, no
+  stamina item opened, no medal balance live-measured
+  (row evidence plus 40 medals). Cleared is false;
+  successor unit 065 enqueued to start now.
+  Full detail in zombie-invasion/1352-queue-run.md.
+- Pass ended at about 13:56 with the next unit
+  (zombie-invasion-zombie-2026-10-28-065) unstarted,
+  inside the pass budget, for the next tick.
