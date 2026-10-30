@@ -912,3 +912,23 @@ Full detail in zombie-invasion/0548-queue-run.md.
 - No other inbox unit was executed in this pass; the
   device token lease expired at 18:49, so the pass ended
   after this unit rather than starting another.
+
+## 19:04 to about 19:14 — Queue ticker pass, harvest 1803
+
+- Ticker pass ticker-1904. Sync reaped 0, expired 0, 17 due
+  regulars already queued, so no new units produced; Zombie
+  Invasion chain unit 050 was already in inbox, so no chain
+  seeding was needed.
+- Harvest unit harvest-2026-10-29-1803, partial: game opened
+  on the world map, Home button returned to base, no
+  different-device dialog; open and closing HUD identical
+  (food 252.0M, iron 435.7M, coin 117.6M, titanium 16.2M,
+  black rock 1.7M, diamonds 683); taps at norm 398,389 and
+  295,461 moved no HUD total and opened no panel; a
+  visual-grounding call for remaining bubbles timed out, so
+  the unit closed at its cap without further taps. No Armed
+  Truck claim observed. Tracker untouched, so the next tick
+  re-produces the regular. Full detail in
+  resource-collection/1904-queue-run.md.
+- No other inbox unit was executed in this pass; the pass
+  ended after this unit at its time cap.
