@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-30T11:45:00Z
+modified: 2026-10-30T12:15:00Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -633,6 +633,26 @@ execution.
   and no derived balance is reported. The
   successor must try a different input route
   for the Store button. Cleared is false.
+
+- Gift point moves with the map view, Store button
+  still unresponsive, unit 058 on 2026-10-30 — taps
+  at 319,247, 328,240, 340,250 and 340,257 only
+  highlighted the March Queues bar; a single tap at
+  428,240 opened LOOT at once (icon active area
+  about 406 to 438 in x, 200 to 250 in y on this
+  view). The gift badge read 1 yet the panel held
+  3 rows, so the badge is not the row count here.
+  Three Lv.10 kills (X:992 Y:943, X:993 Y:937,
+  X:995 Y:932) claimed in-unit for 804,000 coins,
+  HUD 135.2M to 136.0M, squads_parallel 1 (short
+  round trips, plus a stamina refill before the
+  third march). Stamina 5/120 at the third
+  dispatch, one 50 Stamina item used (Owned 610
+  to 609, 10 Stamina Owned 628 in the same panel),
+  stamina 46 at close. Store button unresponsive
+  to a single tap and a 1 second long-press at
+  609,221, third unit in a row, so the SSR
+  redemption and medal re-measurement stay open.
 
 ## Open questions
 

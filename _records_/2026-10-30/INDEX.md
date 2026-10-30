@@ -392,3 +392,24 @@ of 2026-10-28.
   441,940. Cleared is false, successor unit 058
   starts now. Full detail in
   zombie-invasion/0445-queue-run.md.
+
+## 05:04 to about 05:17 — Queue ticker pass, Zombie Invasion unit 058
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-058,
+  partial (Store step unexecuted, tracker untouched):
+  three Lv.10 kills, sequential (squads_parallel 1 -
+  short round trips, each squad home before the next
+  dispatch; stamina refill before the third march
+  widened the gap). LOOT rows X:992 Y:943, X:993
+  Y:937 and X:995 Y:932 claimed in-unit for 804,000
+  coins (HUD 135.2M to 136.0M). Stamina 5/120 at the
+  third dispatch, one 50 Stamina item used (Owned
+  610 to 609), stamina 46 at close. Store button
+  unresponsive to a single tap and a long-press at
+  609,221, so the SSR redemption is deferred again;
+  no medal balance re-measured live, so no derived
+  balance is reported. Gift-box point on this map
+  view was 428,240 (earlier points did not
+  transfer). Cleared is false, successor unit 059
+  starts now. Full detail in
+  zombie-invasion/0514-queue-run.md.
