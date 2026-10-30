@@ -673,3 +673,19 @@ of 2026-10-28.
 - The next due unit, zombie-invasion chain 062, was
   left in inbox for the next tick: the pass budget
   did not leave room for a third unit in this pass.
+- Zombie unit zombie-invasion-zombie-2026-10-28-062,
+  partial (ticker-0904, about 09:05 to 09:17): two
+  Lv.10 kills sequential (X:979 Y:961 and X:977
+  Y:955, squads_parallel 1 for short round trips,
+  stamina 58 to 40), both LOOT rows claimed in-unit
+  for 536,000 coins, coin HUD 143.6M to 144.1M.
+  Store breakthrough: the Store button is at
+  818,195 on this layout (the 609 to 625 points
+  units 057 and 058 tried are not the button);
+  Store header read live at 4050 medals, one SSR
+  Coin Chest redeemed (4050 to 3890, Limit 94 to
+  93, CONGRATULATIONS verified). No chest opened;
+  the owned chests' inventory location is still
+  unknown. Cleared is false; successor unit 063
+  enqueued to start now.
+  Full detail in zombie-invasion/0917-queue-run.md.
