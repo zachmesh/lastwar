@@ -113,3 +113,69 @@ of 2026-10-28.
   during the unit, so cleared is false. Full detail in
   zombie-invasion/0134-queue-run.md. Successor unit
   055 starts now (cleared false).
+
+## 02:04 to about 02:10 — Queue ticker pass, Arms Race unit
+
+- Arms-race unit arms-race-2026-10-30-0203, partial:
+  live phase Drone Boost, Contest Segment Lv.29-30,
+  score 12,000 against thresholds 1,500 / 10,000 /
+  30,000. One tap opened both the 1,500 and 10,000
+  point chests (popup read Badge 3, SR chest 12, Skill
+  Medals 600, Food 12, Coin 12, 5-minute speedups 28;
+  the 10,000 chest contents were not separately read).
+  Cumulative chest moved 6 of 8 to 9 of 8 and was
+  claimed (gold ticket-like items 3, red gem tagged
+  100 x1, pink puzzle pieces 5), then read 9 of 18.
+  Ranking chest produced no claim while the phase is
+  live. Tier-3 gap is 18,000 points (180 stamina at
+  100 each); no radar work was merged and no stamina
+  item was opened in this unit, so the tracker is
+  untouched and the next tick re-produces this
+  regular. Full detail in arms-race/0210-queue-run.md.
+
+## 02:10 to about 02:14 — Queue ticker pass, Alliance donations unit
+
+- Donations unit donations-2026-10-30-0203, done:
+  three coin donations (600 coin each) to Rallied HP
+  on the War tab, Donation Count 12 of 30 to 9 of 30
+  (remaining count), Tech EXP 196.7K to 197.0K.
+  Tech Donation Today rose 850 to 1,150 (100 points
+  per donation), crossing the 1000 point daily
+  reward threshold; the reward itself settles at
+  the 19:00 reset with no hand claim, per the
+  2026-10-26 finding. No diamonds spent. Full detail
+  in alliance-donations/0214-queue-run.md.
+
+## 02:15 to about 02:20 — Queue ticker pass, Radar unit
+
+- Radar unit radar-2026-10-30-0203, partial (duel
+  Day 5, Total Mobilization, release posture):
+  Lv.12, points 2,989 to 2,997, stored tasks 4 of 40
+  to 0 of 40. Free 75 stamina claimed first
+  (stamina 26 to 102, Remaining Today 1 of 2 left),
+  then Quick Execute 5 tasks (stamina 102 to 52).
+  Two Claim All batches paid 6 then 2 rewards
+  (first: chest 24, tokens 60, Hero EXP 10.6M,
+  drone data 800, iron 2.4M, food 1.7M, coin 1.1M;
+  second: chest 1, tokens 10, 5m speedups 6,
+  1m speedups 65, Hero EXP 1.5M, drone data 800,
+  iron 1.2M, food 468.0K, coin 121.9K). Ordinary
+  tasks are done and the bottom bar is gone, but
+  five special map pins were left unattempted, so
+  the tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  radar-tasks/0220-queue-run.md.
+
+## 02:20 to about 02:26 — Queue ticker pass, Harvest unit
+
+- Harvest unit harvest-2026-10-30-0203, partial:
+  iron 454.5M to 461.4M (plus 6.9M on the first
+  tap) and coin 126.5M to 131.7M (plus 5.2M across
+  a seven-tap batch), food unchanged at 269.3M
+  on HUD rounding. A fall-through tap opened an
+  Iron Mine Lv.27 panel, closed without Quick
+  Dispatch. The pass budget ended the unit before
+  a final bubble scan and the Armed Truck check,
+  so the tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  resource-collection/0226-queue-run.md.
