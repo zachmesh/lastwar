@@ -1006,3 +1006,52 @@ Full detail in zombie-invasion/0548-queue-run.md.
   1 of 5. Plunder hunt not reached before the pass budget
   ran out, so the regular re-produces next tick. Full detail
   in truck-plunder/2128-queue-run.md.
+
+## 21:35 to about 21:42 — Queue ticker pass, secrets 1857
+
+- Ticker pass ticker-2134. Sync reaped 0, expired 0, 13 due
+  regulars already queued, so no new units produced; a
+  zombie-invasion chain unit was already in inbox, so no chain
+  seeding was needed.
+- Secrets unit secrets-2026-10-29-1857, done: Mega Deploy
+  dispatched 5 tasks (UR Rescue Missing Agent 2h, SSR Search
+  for Missing Refugees, SSR Train Refugees, and two SSR
+  Protect Refugee Camp, each 1h), verified running by
+  countdown on reopening the post; 5 ally assists completed
+  to the daily cap (AMD Commander, PrincessEsra10xoxo, three
+  Bamie rows), counter verified 0/5 to 5/5. Plunder Others
+  untouched. Full detail in secret-missions/2142-queue-run.md.
+
+## 21:43 to about 21:45 — Queue ticker pass, treasures 1857
+
+- Treasures unit treasures-2026-10-29-1857, done as checked
+  only: fragments M1 x12, M2 x13, M3 x1, M4 x8, M5 x0,
+  M6 x4, M7 x13, unchanged from the 17:15 run; M5 zero
+  means no complete set, both Dig buttons greyed out, no
+  dig and no fragment exchange. Chest progress 15/15.
+  Full detail in hidden-treasures/2145-queue-run.md.
+
+## 21:44 to about 21:50 — Queue ticker pass, vip 1900
+
+- VIP unit vip-2026-10-29-1900, partial: post-19:00 Daily
+  Freebie claimed (puzzle piece x2, food/iron/coin crates
+  x13 each; points 1,571,510 of 2,000,000, 53 day streak);
+  the login chest at the top right still carries a red
+  dot and the profile VIP badge dot persisted, but four
+  taps on the chest produced no change (background-click
+  limitation for that control), so the login points are
+  unclaimed and the regular re-produces next tick.
+  Nothing bought. Full detail in vip-rewards/2149-queue-run.md.
+
+## 21:50 to about 21:55 — Queue ticker pass, zombie-invasion 050
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-050,
+  partial (pass budget): two Lv.10 kills (X:990 Y:938,
+  X:986 Y:936), both LOOT rows claimed in-unit for
+  536,000 coins; squads_parallel 1, the first squad
+  having returned on the short round trip before the
+  second dispatch landed. Session cc-393 dropped
+  mid-unit and was replaced by cc-397 with no state
+  lost. Store/chest work deferred to the successor,
+  which starts now. Full detail in
+  zombie-invasion/2155-queue-run.md.
