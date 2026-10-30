@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-29T21:10:00Z
+modified: 2026-10-30T00:35:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -460,6 +460,34 @@ execution.
   re-confirmed. Stamina closed at 43 with no
   stamina item opened; stamina never bound
   this unit (kills cost 30 total).
+
+- Events tab bar shifts between openings, unit 048
+  on 2026-10-29 — a batched second dispatch that
+  assumed the earlier tab position landed on the
+  Desert Storm Battlefield tab instead of Zombie
+  Invasion (no Confirm or entry button tapped there,
+  nothing spent). Recovered by clicking the
+  partially visible Zombie tab at the bar's right
+  edge and verifying the page title before Search.
+  Batched dispatch sequences must re-verify the tab
+  by title, as unit 011 already warned.
+- Missing LOOT row for a completed march, unit 048
+  on 2026-10-29 — Squad 2 marched to X:980 Y:844
+  (verified 1/4, stamina charged) and was home
+  (0/4) before the LOOT panel opened, yet the panel
+  held only Squad 1's row (X:906 Y:936, 268.0K
+  coins, claimed in-unit). This is the second
+  handover-style loss after unit 009's: a completed
+  march whose row never materialized. The successor
+  unit must re-check the gift badge — a late row
+  gets claimed then, otherwise it is lost.
+- Store redemption deferred again, unit 048 on
+  2026-10-29 — two sequential dispatches plus two
+  full march round trips ran the unit past its cap,
+  so the Store was not visited, no medal balance was
+  re-measured live, and no derived medal total is
+  reported. The SSR row re-check and the Buy-step
+  retry from unit 047 stay open for the next unit.
 
 ## Open questions
 

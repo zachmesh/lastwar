@@ -51,13 +51,13 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-29T13:24:07",
-  "note": "Checked: no claims, assists already 5/5"
+  "at": "2026-10-29T17:09:06",
+  "note": "Secret Command Post checked only, no claim or dispatch, Assist 5/5"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-29T13:25:26",
-  "note": "Checked: M5 still 0, no dig possible"
+  "at": "2026-10-29T17:10:40",
+  "note": "Hidden Treasures checked only, M5 zero so no dig"
  },
  "arms-race": {
   "status": "skipped",

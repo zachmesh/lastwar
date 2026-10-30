@@ -821,3 +821,36 @@ Full detail in zombie-invasion/0548-queue-run.md.
 - Pass budget reached after the trucks unit; remaining inbox
   units (including zombie-invasion chain unit 048) were left for
   the next tick.
+
+## 17:04 to about 17:32 — Queue ticker pass, secrets, treasures, zombie-invasion 048
+
+- Ticker pass ticker-1704. Sync reaped 0, expired 0, 11 due
+  regulars already queued, so no new units produced; Zombie
+  Invasion chain unit 048 was already in inbox, so no chain
+  seeding was needed.
+- Secrets unit secrets-2026-10-29-1457, done as checked only:
+  Secret Command Post showed the same 4 tasks as the 03:50,
+  09:37 and 13:04 runs, no Claim button, Assist Allies 5/5
+  (daily cap reached), Plunder Others 0/5 untouched. Full
+  detail in secret-missions/1708-queue-run.md.
+- Treasures unit treasures-2026-10-29-1457, done as checked
+  only: fragments unchanged (M1 x12, M2 x13, M3 x1, M4 x8,
+  M5 x0, M6 x4, M7 x13), M5 zero so no dig, chest track
+  15/15 is the UR pity counter, not a claim. Full detail in
+  hidden-treasures/1715-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-048, done:
+  2 Lv.10 kills dispatched sequentially (Squad 1 X:906 Y:936,
+  Squad 2 X:980 Y:844), squads_parallel 1 - a batched second
+  dispatch misfired on the shifting Events tab bar (landed
+  on Desert Storm, nothing tapped there) and the verified
+  stepwise dispatch finished after Squad 1 returned. Only
+  1 LOOT row materialized (Squad 1's, 268,000 coins, medal
+  x10) and was claimed in-unit; Squad 2's row never
+  appeared, a second handover-style loss after unit 009's,
+  flagged for the successor to re-check. Coin HUD 108.7M
+  to 109.0M. Store redemption deferred (unit ran past its
+  cap). Successor unit 049 enqueued to start now. Full
+  detail in zombie-invasion/1731-queue-run.md.
+- Pass budget over after the zombie unit; remaining inbox
+  units (including zombie-invasion chain unit 049) were left
+  for the next tick.
