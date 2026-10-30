@@ -854,3 +854,25 @@ Full detail in zombie-invasion/0548-queue-run.md.
 - Pass budget over after the zombie unit; remaining inbox
   units (including zombie-invasion chain unit 049) were left
   for the next tick.
+
+## 17:39 to about 17:54 — Queue ticker pass, zombie-invasion 049
+
+- Ticker pass ticker-1739. Sync reaped 0, expired 0, 9 due
+  regulars already queued, so no new units produced; Zombie
+  Invasion chain unit 049 was already in inbox, so no chain
+  seeding was needed.
+- Zombie unit zombie-invasion-zombie-2026-10-28-049, done:
+  2 Lv.10 kills (Squad 1 X:982 Y:952, Squad 2 X:985 Y:963),
+  both LOOT rows claimed in-unit for 536,000 coins (268.0K
+  each, medal x10 each), squads_parallel 1 - the 8-second-
+  class marches meant Squad 1 had fully returned before
+  the second dispatch landed, the short-round-trip limit
+  unit 043 recorded, not the march cap of 4. Coin HUD
+  109.0M to 109.5M. Unit 048's missing Squad 2 row
+  (X:980 Y:844) did not reappear and is confirmed lost.
+  Store redemption deferred again (unit cap reached at
+  loot claim; no live medal balance, no derived total).
+  Successor unit 050 enqueued to start now. Full detail
+  in zombie-invasion/1754-queue-run.md.
+- No other inbox unit was executed in this pass; the unit
+  cap was reached at the loot claim.

@@ -489,6 +489,41 @@ execution.
   reported. The SSR row re-check and the Buy-step
   retry from unit 047 stay open for the next unit.
 
+- Grounded button points, unit 049 on 2026-10-29 —
+  Search is at 358,941 (a tap at 901 hits the countdown
+  text above the button and does nothing); the target
+  card's crossed-swords button is at 499,753 (a tap at
+  836 closes the card, as unit 008 also found); the
+  deploy panel's March button is at 500,759; the
+  squad-2 tab in the deploy panel is at 397,920.
+  A batched sequence (Events, Search, crossed-swords,
+  no screenshot read in between) opens the deploy
+  panel where a single tap after a read closes the
+  card.
+- Short round trips again, unit 049 on 2026-10-29 —
+  Squad 1 marched on an 8-second-class timer and had
+  fully returned before the second batched dispatch
+  landed, so squads_parallel was 1 despite an immediate
+  parallel attempt, stamina 80 to 60 proving both
+  marches. Both LOOT rows (X:982 Y:952, X:985 Y:963)
+  claimed in-unit for 536,000 coins.
+- Unit 048 missing row confirmed lost, unit 049 on
+  2026-10-29 — the X:980 Y:844 row did not appear in
+  unit 049's two-row LOOT panel, which held only
+  unit 049's own two marches.
+- Computer session drop, unit 049 on 2026-10-29 —
+  session cc-347 closed mid-unit (observe returned
+  observation_unavailable with no session open);
+  session cc-351 was started, LastWar re-selected,
+  and no game state was lost.
+- Store redemption deferred again, unit 049 on
+  2026-10-29 — the unit cap was reached at the loot
+  claim, so the Store was not visited, no medal
+  balance was re-measured live, and no derived medal
+  total is reported (only plus 20 medals by row
+  evidence). The SSR row re-check and the Buy-step
+  retry from unit 047 stay open for the next unit.
+
 ## Open questions
 
 - What the collection icon pays per kill - partly answered
