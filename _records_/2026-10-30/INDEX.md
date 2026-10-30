@@ -975,3 +975,11 @@ of 2026-10-28.
   no Claim button. Computer session cc-527 dropped mid-unit,
   cc-531 recovered with no state lost.
   Full detail in alliance-donations/1435-queue-run.md.
+
+## 1522 queue run - resource collection (partial)
+
+Harvest unit harvest-2026-10-30-1403 by ticker-1504: iron, coin
+and food bubbles collected, HUD verified food 294.3M to 300.2M,
+iron 480.5M to 483.4M, coin 149.1M to 151.2M. Armed Truck
+unchecked; tracker untouched, next tick re-produces the regular.
+Full detail in resource-collection/1522-queue-run.md.
