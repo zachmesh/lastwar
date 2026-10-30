@@ -43,5 +43,10 @@
   "status": "done",
   "at": "2026-10-30T05:47:41",
   "note": "Event batch claimed; other categories nothing claimable"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-10-30T06:16:07",
+  "note": "Coin Weekly pickup, Free Supply auto-claim, Monthly daily gift claimed"
  }
 }

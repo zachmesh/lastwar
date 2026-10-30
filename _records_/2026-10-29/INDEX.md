@@ -1160,3 +1160,32 @@ Full detail in zombie-invasion/0548-queue-run.md.
   between units and was restarted (cc-407) with no
   state lost. Full detail in
   alliance-train/2251-queue-run.md.
+
+## 23:04 to about 23:15 — Queue ticker pass, passes 2257
+
+- Passes unit passes-2026-10-29-2257, done: Hot Deals
+  showed no free pack (store promo only, Go not tapped);
+  Coin Weekly Pass Daily Pickup claimed (coin items x3,
+  card then Already claimed today); Free Supply auto-claim
+  paid a red gem x10 and iron x4; Super Monthly Pass
+  daily gift claimed (gold tickets x2, red diamonds x100,
+  stamina x50, iron x200, 5 minute speedups x60, button
+  then Claimed). Legendary Take All $19.99, Monthly Pass
+  Extension $24.99 and all other price buttons untouched.
+  Computer session dropped mid-unit and was restarted
+  (cc-409) with the shop state intact. Full detail in
+  shop-claims/2315-queue-run.md.
+
+## 23:16 to about 23:20 — Queue ticker pass, events 2257
+
+- Events unit events-2026-10-29-2257, partial: full Events
+  hub swept with nothing claimable — Arms Race Drone
+  Boost score 0 with cumulative chest 6 of 8, Winter
+  Battlefield starting soon, Desert Storm Battlefield
+  waiting, Zombie Invasion tab with no Claim button,
+  Wanted Boss Code 64 not out until server 00:00, Level
+  Swap inspected only, Community 500 Diamonds already
+  Claimed. Halloween Check-In icon was not located on
+  the base screen in this unit, so it stays unverified;
+  tracker untouched and the next tick re-produces the
+  regular. Full detail in event-claims/2320-queue-run.md.
