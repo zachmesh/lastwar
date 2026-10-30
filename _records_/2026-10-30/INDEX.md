@@ -372,3 +372,23 @@ of 2026-10-28.
   closed untouched. Cleared is false, successor
   starts now. Full detail in
   zombie-invasion/0419-queue-run.md.
+
+## 04:34 to about 04:45 — Queue ticker pass, Zombie Invasion unit 057
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-057,
+  partial (Store step unexecuted, tracker untouched):
+  two Lv.10 kills, sequential (squads_parallel 1 -
+  short round trips, first squad home before the
+  second dispatch). LOOT rows X:960 Y:950 and X:910
+  Y:965 claimed in-unit for 536,000 coins (HUD
+  134.6M to 135.2M). Entry medals read live at 3530;
+  medals after the kills not re-measured live, so no
+  derived balance is reported. Store button grounded
+  at 618,222 twice produced no change to background
+  clicks, so the SSR redemption is deferred again; a
+  Ranking panel opened by one mis-aimed tap was
+  closed untouched. Search point corrected: taps at
+  358,941 hit the back arrow, real Search is at
+  441,940. Cleared is false, successor unit 058
+  starts now. Full detail in
+  zombie-invasion/0445-queue-run.md.

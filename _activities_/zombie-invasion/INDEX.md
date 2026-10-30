@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-30T08:48:00Z
+modified: 2026-10-30T11:45:00Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -608,6 +608,31 @@ execution.
   cc-423 dropped during a wait, cc-424 recovered
   with no state lost. A fresh wave arrived during
   the unit, so cleared is false.
+
+- Search point corrected, Store button
+  unresponsive, unit 057 on 2026-10-30 — taps
+  at 358,941 hit the back arrow, not Search
+  (back arrow grounds at 349,950; real Search
+  is at 441,940 by OCR); both mis-taps jumped
+  to the map with no target card, and the "The
+  event has ended" toast on the map belongs to
+  a Lv.10 Marshal's Guard notification, not to
+  Zombie Invasion. Events icon grounds at
+  683,150 (a tap at 645,153 opened Halloween
+  Check-In instead). Two sequential Lv.10 kills
+  (X:960 Y:950, X:910 Y:965, stamina 40 to 20),
+  both LOOT rows claimed in-unit for 536,000
+  coins, gift box grounded at 424,251 on that
+  map view, Claim All at 499,765. Session
+  cc-445 dropped during a wait, cc-446
+  recovered with no state lost. Store button
+  grounded twice at 618,222 and 625,220
+  produced no change to background clicks, so
+  the SSR redemption is deferred again; medals
+  after the kills were not re-measured live
+  and no derived balance is reported. The
+  successor must try a different input route
+  for the Store button. Cleared is false.
 
 ## Open questions
 
