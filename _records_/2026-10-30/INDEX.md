@@ -850,3 +850,26 @@ of 2026-10-28.
   All $19.99, Renew $4.99 and extension $24.99 all
   untouched.
   Full detail in shop-claims/1253-queue-run.md.
+
+## 13:04 to about 13:27 — Queue ticker pass, Trucks
+
+- Ticker pass ticker-1304. Sync reaped nothing and
+  produced nothing new - all 8 due regulars were already
+  queued by the planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already in inbox, so
+  no chain seeding was needed.
+- Trucks unit trucks-2026-10-30-1057, partial
+  (ticker-1304, about 13:27): Intercity Trade entered at
+  last - blue truck-front icon with red badge 1 grounded
+  at norm 53,555 on this base view (the 0750 unit's 52,620
+  did nothing; the column shifts). Duel Day 5 Total
+  Mobilization is not a UR day, so SR or above only.
+  Trade Count 1/5 to 3/5: one N truck free-refreshed to
+  SR (iron 2.5M, food 2.5M, coin 1.6M, Squad 1) and one
+  N truck free-refreshed to SSR (iron 3.0M, food 3.0M,
+  coin 1.9M, Squad 3); dice centre grounded at 810,417.
+  No Trade Contract spent, no Mega Mode used. Plunder
+  Count Today read 0/4 at close, untouched; shortfall
+  dispatch 2 and plunder 4 carries to the next trucks
+  unit before the 19:00 reset.
+  Full detail in truck-plunder/1305-queue-run.md.

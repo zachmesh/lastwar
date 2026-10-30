@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-30T12:29:00Z
+modified: 2026-10-30T20:30:00Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -232,6 +232,16 @@ train also runs on this screen as a trade vehicle.
   0 of 4 at 05:29 local, after two units failed to enter the
   trade screen at all. A catch-up unit was enqueued the same
   morning to work the shortfall.
+- Entry point corrected, 2026-10-30 13:05 unit - the blue
+  truck-front icon with red badge 1 grounded at norm
+  53,555 on that base view (the 07:50 unit's 52,620 did
+  nothing; the column shifts, so re-ground it every unit),
+  after a title-bar tap. The truck-panel dice centre
+  grounds at norm 810,417 (taps near 380 hit its top edge
+  and do nothing). That unit dispatched two trucks, both
+  N free-refreshed to SR and SSR, moving Trade Count
+  1 of 5 to 3 of 5 with no Trade Contract spent, and read
+  Plunder Count 0 of 4 untouched at close.
 
 ## Scope and availability
 
