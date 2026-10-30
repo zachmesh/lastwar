@@ -179,3 +179,41 @@ of 2026-10-28.
   so the tracker is untouched and the next tick
   re-produces this regular. Full detail in
   resource-collection/0226-queue-run.md.
+
+## 02:35 to about 02:43 — Queue ticker pass, Survivor intake unit
+
+- Survivor intake unit survivors-2026-10-30-0203,
+  partial: one dialog survivor taken in at the gate
+  (POLAR GUEST, "Amazing! This place feels just
+  like home." / "Can I stay here forever."), bubble
+  turned to a green smiley on the next base view.
+  A tap that opened the Armed Truck rewards panel
+  was closed untouched (that claim belongs to the
+  harvest unit). Quick Dispatch was not run, so the
+  tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  survivor-intake/0243-queue-run.md.
+
+## 02:44 to about 02:48 — Queue ticker pass, Troop training unit
+
+- Troop training unit training-2026-10-30-0203,
+  partial: base panned north-west and back, and the
+  two beige tents on the right side tapped at four
+  points, but none opened a barracks or TRAIN UNITS
+  panel, so no queue timer was read and no batch
+  was started. The tracker is untouched and the
+  next tick re-produces this regular. Full detail
+  in troop-training/0248-queue-run.md.
+
+## 02:48 to about 02:53 — Queue ticker pass, Alliance gifts unit
+
+- Alliance gifts unit gifts-2026-10-30-0230,
+  done: Regular Claim All claimed 134 gifts
+  (progress 173,006,100 to 173,007,440), Premium
+  Claim All claimed 2 gifts (SR plus 100, MR plus
+  1000; progress to 173,008,540, Gift Level 28).
+  The game was left on the Alliance panel after
+  its back arrow stopped taking background taps;
+  the Gifts entry still showed a red dot at the
+  close, so the next tick re-checks it. Full
+  detail in alliance-gifts/0252-queue-run.md.
