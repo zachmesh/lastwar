@@ -525,3 +525,57 @@ of 2026-10-28.
   left untouched (truck claims belong to harvest).
   Quick Dispatch was not run.
   Full detail in survivor-intake/0654-queue-run.md.
+
+## 07:05 to about 07:24 — Queue ticker pass, training, gifts, help, mail units
+
+- Ticker pass ticker-0704. Sync reaped nothing and
+  produced nothing new - all 7 due regulars were
+  already queued by the planner, and the Zombie
+  Invasion chain unit was already in inbox, so no
+  chain seeding was needed.
+- Training unit training-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick): base
+  entry food 284.8M, iron 471.2M, coin 140.6M,
+  total power 146,850,228. A tap at 833,562 (the
+  2026-10-28 2249 Lv.24 location) opened no barracks
+  panel in this camera position, a tap at 470,345
+  selected Gold Mine Lv.28, and taps at 120,170
+  and 190,240 selected Training Base Lv.25, whose
+  button row shows only the green upgrade arrow
+  (not touched). No individual barracks tent with
+  a TRAIN UNITS panel was located, no queue timer
+  was read, no batch was started. Session cc-457
+  dropped mid-unit, cc-458 resumed with no state
+  lost.
+  Full detail in troop-training/0714-queue-run.md.
+- Gifts unit gifts-2026-10-30-0630, done: Alliance
+  button grounded at norm 932,720 on this base
+  view; Alliance Gifts opened directly at 350,600.
+  Regular Claim All claimed 167 gifts, progress
+  173,408,060 to 173,409,730; Premium Claim All
+  claimed 4 gifts (one MR plus 1000, three SSR
+  plus 200 each), progress after 173,411,340 as
+  read, both badges cleared.
+  Full detail in alliance-gifts/0717-queue-run.md.
+- Help unit help-2026-10-30-0630, done: Help All
+  at norm 500,820 answered "Allies are very
+  grateful for your assistance"; ally requests
+  from DCna8ive (Lv.24 Barracks) and Crow Apex
+  (Lv.28 Air Force Base) cleared, leaving only
+  the own Bears Lair rows. Header still read
+  600 of 1,000 in the closing screenshot.
+  Full detail in alliance-help/0719-queue-run.md.
+- Mail unit mail-2026-10-30-0630, done: Event
+  Claim All paid out (visible rewards included
+  two resource crates x20 each, hero EXP 3.1K,
+  EXP 4.5M, a 10-count item x4, a 5m speedup item
+  x210, coin 1.8M, food 1.4M, iron 1.4M, top dialog
+  row partly obscured). Claim All in Alliance,
+  Season, System, Regular and Battle Report
+  produced no dialog and no change - reports
+  only. In-app Purchases not opened (receipts
+  only). Delete All never tapped.
+  Full detail in mail-rewards/0724-queue-run.md.
+- Pass ended at about 07:24 with the next unit
+  (train-2026-10-30-0630) unstarted, inside the
+  pass budget, for the next tick.
