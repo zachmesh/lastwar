@@ -445,3 +445,49 @@ of 2026-10-28.
   location still unknown. Cleared is false, successor
   unit 060 starts now. Full detail in
   zombie-invasion/0550-queue-run.md.
+
+## 06:05 to about 06:11 — Queue ticker pass, Alliance Donations unit
+
+- Donations unit donations-2026-10-30-0603, done:
+  21 coin donations of 600 coin each (12,600 coin in
+  total) to Rallied HP, Donation Count verified 21 of
+  30 down to exhausted, coin button greyed with a
+  00:09:10 cooldown timer. Tech EXP 323.0K to 329.4K
+  of 2.0M (alliance-shared pool, not attributed to
+  this unit alone); Tech Donation Today 1150 to 3200
+  as read, a plus 2050 that sits 50 short of 21 times
+  100 and is left unverified. No diamonds, money or
+  speedup items spent. Full detail in
+  alliance-donations/0611-queue-run.md.
+
+## 06:11 to about 06:23 — Queue ticker pass, Radar Tasks unit
+
+- Radar unit radar-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  duel Day 5 release posture; dish entry corrected
+  to 62,727 after a 53,674 tap opened Secret
+  Command Post untouched. Quick Execute 1 task
+  (stamina 29 to 19) and 3 tasks after the second
+  free 75 stamina claim (stamina 20 to 95 to 65);
+  two Claim All batches totalling 9 rewards
+  (tokens 70, Hero EXP 8.2M, ore 591, coin about
+  1.6M, food 2.4M, iron 1.1M, drone data 800).
+  Radar levelled up to Lv.13 (points 2,997 to 2
+  then to 6, displayed pins 10 to 11, rewards 15
+  percent to 20 percent). Ordinary tasks done,
+  stored 0 of 40; six map pins left unattempted.
+  Full detail in radar-tasks/0623-queue-run.md.
+
+## 06:23 to about 06:27 — Queue ticker pass, Arms Race unit
+
+- Arms-race unit arms-race-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  live phase Unit Progression (Lv.29-30, 00:35:28
+  left), phase score 0, no point chest earned,
+  cumulative chest 9 of 18 not full, ranking row
+  51,500 (ranking-row figure, not the live score).
+  Tier-3 gap is the full 75,000; the training
+  scoring path belongs to the separate training
+  unit and was not merged in. Completion sweep
+  not finished; game left on the Arms Race page.
+  Full detail in arms-race/0625-queue-run.md.
