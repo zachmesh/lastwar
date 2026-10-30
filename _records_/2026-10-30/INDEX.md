@@ -1016,3 +1016,25 @@ button at norm 312,615, Premium Claim All at norm 748,920;
 Alliance Wars opened twice by mis-taps and left untouched.
 Tracker marked done.
 Full detail in alliance-gifts/1620-queue-run.md.
+
+## 1647 queue run - alliance help (done)
+
+Help unit help-2026-10-30-1430 by ticker-1634: game slipped into
+fullscreen on a title-bar tap that snapped to the zoom button;
+a Ctrl+Right space switch bound the View menu and Exit Full
+Screen restored windowed mode. Help All at norm 498,799 cleared
+ally rows Lost Boyz Lv.20 3rd Squad and Kkkayyyyy Lv.25 Missile
+Center, leaving only the own 30 of 30 rows; header points stayed
+at 820 of 1,000 in the closing screenshot, so no points delta is
+reported. Tracker marked done.
+Full detail in alliance-help/1647-queue-run.md.
+
+## 1651 queue run - mail rewards (partial)
+
+Mail unit mail-2026-10-30-1430 by ticker-1634: entry was the
+Alliance page left over from the help unit; back-arrow taps at
+norm 53,953, 86,952, 93,952, 70,945 and a double-click at 93,952
+all dispatched with no change, so no mail category was opened
+or claimed. No Delete All touched. Tracker untouched, the
+regular re-produces next tick.
+Full detail in mail-rewards/1651-queue-run.md.
