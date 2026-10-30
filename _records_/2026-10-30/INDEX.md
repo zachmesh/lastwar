@@ -964,3 +964,14 @@ of 2026-10-28.
   Full detail in arms-race/1427-queue-run.md.
 - Pass ended at about 14:28 with the next unit
   unstarted, inside the pass budget, for the next tick.
+
+- Alliance donations unit donations-2026-10-30-1403, done
+  (ticker-1434): Rallied HP 5/10, coin Donate 600 each.
+  Donation Count verified 13/30 to 7/30 (6 donations, 3,600
+  coin); a final batch ended with the coin button greyed on a
+  00:09:47 cooldown, the standing stop condition, exact
+  final-batch count not separately verified. Tech Donation
+  Today 4,450 to 5,450; reward settles at the 19:00 reset with
+  no Claim button. Computer session cc-527 dropped mid-unit,
+  cc-531 recovered with no state lost.
+  Full detail in alliance-donations/1435-queue-run.md.
