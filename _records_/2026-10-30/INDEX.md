@@ -413,3 +413,35 @@ of 2026-10-28.
   transfer). Cleared is false, successor unit 059
   starts now. Full detail in
   zombie-invasion/0514-queue-run.md.
+
+## 05:34 to about 05:40 — Queue ticker pass, trucks unit (partial, entry failed)
+
+- Trucks unit trucks-2026-10-30-1230, partial (trade screen
+  never entered, tracker untouched): fullscreen clicks reached
+  nothing until View then Exit Full Screen restored windowed
+  clicks; the left column in this set holds green face, train,
+  white pickup, radar, magnifier and walkie-talkie, with no
+  blue truck-front trade icon, so no dispatch, settlement or
+  plunder was done. A tap at 53,536 opened the temperature
+  panel and was closed untouched, furnace unchanged. The
+  day's counters stay dispatch 1 of 5 and plunder 0 of 4 for
+  the trade day that began 2026-10-29 19:00 local. Full detail
+  in truck-plunder/0540-queue-run.md.
+
+## 05:40 to about 05:50 — Queue ticker pass, Zombie Invasion unit 059
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-059,
+  partial (chain continues, tracker untouched): three
+  Lv.10 kills (X:994 Y:954, X:984 Y:949, X:994 Y:974),
+  all LOOT rows claimed in-unit for 804,000 coins
+  (HUD 136.0M to 136.8M), squads_parallel 1 (round
+  trips of seconds, not the march cap of 4). Store
+  redemption breakthrough in windowed mode: Store
+  opened at 823,178 after three fullscreen units
+  failed on it; one Coin Chest (SSR) redeemed for
+  160 medals (balance 3600 to 3440, Limit 95 to 94,
+  CONGRATULATIONS verified; Owned 7 before, post
+  count not re-read). No chest opened, inventory
+  location still unknown. Cleared is false, successor
+  unit 060 starts now. Full detail in
+  zombie-invasion/0550-queue-run.md.
