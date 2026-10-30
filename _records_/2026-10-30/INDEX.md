@@ -689,3 +689,18 @@ of 2026-10-28.
   unknown. Cleared is false; successor unit 063
   enqueued to start now.
   Full detail in zombie-invasion/0917-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-063,
+  partial (ticker-0934, about 09:35 to 09:49): two
+  Lv.10 kills in parallel (X:994 Y:905 Squad 1 and
+  X:987 Y:896 Squad 2, squads_parallel 2, stamina
+  44 to 25), but the in-unit LOOT claim failed:
+  three gift-box taps each opened an ally base
+  profile instead, and a map drag opened a Lv.75
+  Zombie Boss card that was closed untouched
+  (no attack, no rally). The two LOOT rows
+  (badge 2, 536,000 coins expected) remain
+  unclaimed at close and are at risk; coin HUD
+  unchanged at 144.1M. The Store step was not
+  attempted. Cleared is false; successor unit 064
+  enqueued to start now, LOOT claim first.
+  Full detail in zombie-invasion/0949-queue-run.md.

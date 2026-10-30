@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-30T12:15:00Z
+modified: 2026-10-30T16:50:00Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -653,6 +653,23 @@ execution.
   to a single tap and a 1 second long-press at
   609,221, third unit in a row, so the SSR
   redemption and medal re-measurement stay open.
+
+- Gift tap radius is small, base tap radius is
+  large, unit 063 on 2026-10-30 — the gift icon
+  sits immediately right of the March Queues bar
+  with a red badge (2 for this unit's two kills),
+  but three taps at its cropped positions
+  (275,235, 420,275 and 335,278 on successive
+  map views) each opened an ally base profile
+  instead of LOOT, and a map drag from a target
+  tile opened a Lv.75 Zombie Boss card (closed
+  untouched, no attack, no rally). Re-ground the
+  gift point on the current screenshot before
+  tapping, and if a tap opens a base profile,
+  reset with BASE and re-ground rather than
+  dragging blindly. The two LOOT rows from unit
+  063 stayed unclaimed at its close and are at
+  risk of the handover-style loss.
 
 ## Open questions
 
