@@ -38,3 +38,10 @@ time and never edited once committed (C1).
   survivor processed (bubble turned smiley), line not
   verified clear, Quick Dispatch not run, tracker
   untouched.
+
+- [1934-queue-run.md](1934-queue-run.md) — queue unit
+  survivors-2026-10-29-1803, partial; gate line not
+  located in this unit, 0 survivors processed, taps
+  opened building labels only and were closed clean,
+  line not verified clear, Quick Dispatch not run,
+  tracker untouched.
