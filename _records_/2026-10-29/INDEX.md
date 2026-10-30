@@ -932,3 +932,32 @@ Full detail in zombie-invasion/0548-queue-run.md.
   resource-collection/1904-queue-run.md.
 - No other inbox unit was executed in this pass; the pass
   ended after this unit at its time cap.
+
+## 20:04 to about 20:15 — Queue ticker pass, gifts 1830
+
+- Ticker pass ticker-2004. Sync reaped 0, expired 0, 17 due
+  regulars already queued, so no new units produced; a
+  zombie-invasion chain unit was already in inbox, so no chain
+  seeding was needed.
+- Gifts unit gifts-2026-10-29-1830, done: Regular Claim All
+  564 plus 3 arrived mid-unit, Premium Claim All 13 plus 1
+  arrived mid-unit; Gift Level 28, progress 172,735,340 to
+  172,748,270 of 206,300,000 across the unit (part of the
+  rise is ally activity in the same minutes). Both tabs
+  verified with only Claimed entries at the final re-check.
+  Full detail in alliance-gifts/2014-queue-run.md.
+
+- Help unit help-2026-10-29-1830, done: Help All cleared the
+  waiting ally requests (xChroniApex, ANGEL777 Apex and
+  others); only the account's own two 30/30 requests remained.
+  Header still read 0/1,000 after the press. Full detail in
+  alliance-help/2016-queue-run.md.
+
+- Mail unit mail-2026-10-29-1830, partial: Alliance and Event
+  Claim All each produced a CONGRATULATIONS reward batch;
+  Regular held only Invading Zombies victory reports and
+  Battle Report only Lv.15-20 Zombie Horde victories, both
+  with nothing claimable; Season, System and In-app
+  Purchases not visited for pass-budget reasons. Tracker
+  untouched, so the next tick re-produces the regular.
+  Full detail in mail-rewards/2028-queue-run.md.
