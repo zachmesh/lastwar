@@ -876,3 +876,16 @@ Full detail in zombie-invasion/0548-queue-run.md.
   in zombie-invasion/1754-queue-run.md.
 - No other inbox unit was executed in this pass; the unit
   cap was reached at the loot claim.
+
+- Arms Race unit arms-race-2026-10-29-1803, done (ticker-1804):
+  Hero Advancement, score 0 to 38,500, Morrison Lv.121 to Lv.122
+  with EXP only, all three point chests and the cumulative chest
+  claimed; ranking chest preview only while the phase is live.
+  Full detail in arms-race/1815-queue-run.md.
+
+- Donations unit donations-2026-10-29-1803, done (ticker-1804):
+  12 coin donations to Rallied Attack (7/10), daily coin count
+  used up, coin button greyed with a 00:42:54 cooldown; the
+  Tech Donation Today footer re-read was lost when Escape
+  quit the game, and falls to the next tick. Full detail in
+  alliance-donations/1827-queue-run.md.

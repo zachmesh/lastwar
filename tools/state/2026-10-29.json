@@ -6,8 +6,8 @@
  },
  "donations": {
   "status": "done",
-  "at": "2026-10-29T14:36:55",
-  "note": "21 coin donations to Rallied Defense, count exhausted, Tech Donation Today 3850 to 6250"
+  "at": "2026-10-29T18:27:39",
+  "note": "12 coin donations to Rallied Attack, daily count used up, cooldown 00:42:54"
  },
  "harvest": {
   "status": "done",
@@ -60,9 +60,9 @@
   "note": "Hidden Treasures checked only, M5 zero so no dig"
  },
  "arms-race": {
-  "status": "skipped",
-  "at": "2026-10-29T10:21:49",
-  "note": "Tech Research 0 vs 30000, scoring paths are speedups/diamond packs/starting research - red lines"
+  "status": "done",
+  "at": "2026-10-29T18:16:19",
+  "note": "Hero Advancement tier-3 met, Morrison Lv122, score 38500, point and cumulative chests claimed"
  },
  "train": {
   "status": "done",
