@@ -1055,3 +1055,64 @@ Full detail in zombie-invasion/0548-queue-run.md.
   lost. Store/chest work deferred to the successor,
   which starts now. Full detail in
   zombie-invasion/2155-queue-run.md.
+
+## 22:04 to about 22:12 — Queue ticker pass, arms-race 2203
+
+- Arms-race unit arms-race-2026-10-29-2203, done: live phase
+  Tech Research, score 0 to 34,500, clearing the 30,000
+  tier-3 threshold by claiming two already-completed
+  researches (Defense Boost II, Morale) from the research
+  queue — no new research started, no speedup burned, no
+  diamond spent. All three point chests claimed at once
+  (6, 32, 1.6K Skill Medals, 32, 32, 68 of the 5-minute
+  speedups) and the cumulative chest claimed (gold ticket
+  1, pink puzzle 2, red gem tile 50 / 1,000); cumulative
+  counter now 6 of 8. Ranking reward not claimable while
+  the phase is live. Full detail in
+  arms-race/2212-queue-run.md.
+
+## 22:13 to about 22:17 — Queue ticker pass, donations 2203
+
+- Donations unit donations-2026-10-29-2203, done: 11 coin
+  donations (800 coin each, diamond button never used)
+  to Rallied Attack 7 of 10 until the coin button greyed
+  with a 00:02:24 cooldown timer; Donation Count 11 of 30
+  to 0, Tech EXP 5.8K to 6.6K of 4.5M, Tech Donation Today
+  footer 740 to 850 as displayed. Full detail in
+  alliance-donations/2217-queue-run.md.
+
+## 22:18 to about 22:21 — Queue ticker pass, radar 2203
+
+- Radar unit radar-2026-10-29-2203, partial: ordinary
+  tasks already cleared (stored 0 of 40, points 2,989,
+  stamina 49, 12 tasks restoring in 00:33:12), no Claim
+  All or Quick Execute offer; special map pins left
+  unattempted, regular stays due for the next tick.
+  Full detail in radar-tasks/2221-queue-run.md.
+
+## 22:20 to about 22:21 — Queue ticker pass, harvest 2203
+
+- Harvest unit harvest-2026-10-29-2203, partial: one
+  tap at the old iron coordinate landed on a ground
+  tile (Teleport / Profession tooltip, dismissed, no
+  collection); HUD unchanged (food 260.0M, iron
+  443.6M, coin 122.0M); no Armed Truck claim observed;
+  regular stays due for the next tick. Full detail in
+  resource-collection/2221-queue-run.md.
+
+## 22:22 to about 22:24 — Queue ticker pass, survivors 2203
+
+- Survivors unit survivors-2026-10-29-2203, partial:
+  no new survivor or question-mark figure sighted on
+  the base view read, so no tap and no Quick Dispatch;
+  line not verified clear, regular stays due for the
+  next tick. Full detail in
+  survivor-intake/2222-queue-run.md.
+
+## 22:23 to about 22:24 — Queue ticker pass, training 2203
+
+- Training unit training-2026-10-29-2203, partial: no
+  barracks tent row located in the base view read, no
+  TRAIN UNITS panel opened, no batch queued; pass
+  budget reached, regular stays due for the next tick.
+  Full detail in troop-training/2224-queue-run.md.

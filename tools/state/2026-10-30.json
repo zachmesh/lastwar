@@ -28,5 +28,15 @@
   "status": "done",
   "at": "2026-10-30T04:43:45",
   "note": "Checked only: M5 zero, no dig"
+ },
+ "arms-race": {
+  "status": "done",
+  "at": "2026-10-30T05:12:49",
+  "note": "Tech Research 0 to 34500 via two completed researches, all chests claimed"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-10-30T05:17:50",
+  "note": "11 coin donations to Rallied Attack, button greyed 00:02:24 cooldown"
  }
 }
