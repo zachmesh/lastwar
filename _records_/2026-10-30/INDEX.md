@@ -1143,3 +1143,13 @@ Full detail in shop-claims/1949-queue-run.md.
 
 Events unit events-2026-10-30-1857 by ticker-1934: Arms Race Unit Progression at 0 points (chests 15,000/30,000/75,000, cumulative 0/2, nothing claimable, no grinding under this unit); Desert Storm Battlefield reads "The event is over!" with nothing to claim. Winter Battlefield and further tabs unscanned when the pass budget was reached. Tracker untouched.
 Full detail in event-claims/1953-queue-run.md.
+
+## 2017 queue run - trucks (partial)
+
+Trucks unit trucks-2026-10-30-1857 by ticker-2004: new trade day after the 19:00 reset, Trade Count 0/5 at entry; settled 1 returned SSR truck (delivered iron 2.2M, food 2.2M, coin 1.4M after a LadyDeja314 plunder), dispatched 2 in regular mode (UR 3.8M/3.8M/2.4M and SSR 3.0M/3.0M/1.9M) using 4 standing-authorized Trade Contract refreshes, Trade Count 2/5; plunder not started and its count not re-read this unit. Tracker untouched.
+Full detail in truck-plunder/2017-queue-run.md.
+
+## 2027 queue run - secrets (partial)
+
+Secrets unit secrets-2026-10-30-1857 by ticker-2004: new-day task list of 8 pending tasks Mega-deployed with UR Only off (UR Disrupt electric grid 2:00 plus 7 shorter tasks), verified running by countdowns; ally assists 0/5 uncompleted after 3 unresponsive Assist-button taps (next unit must try a different input route); Reward Recovery unchecked. Tracker untouched.
+Full detail in secret-missions/2027-queue-run.md.
