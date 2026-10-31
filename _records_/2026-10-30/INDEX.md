@@ -1078,3 +1078,8 @@ Full detail in hidden-treasures/1744-queue-run.md.
 
 Zombie unit zombie-invasion-zombie-2026-10-28-065 by ticker-1734: two new Lv.10 kills (X:990 Y:952 and X:990 Y:946), each 268.0K coin, both LOOT rows claimed in-unit for 536,000 coins; squads_parallel 1 (short round trips); stamina 53 to 43 across the second march; event timer about 01:06 left at close, cleared false. Store SSR redemption not attempted inside the unit cap and stays open for successor unit 066. No tracker change for a partial unit.
 Full detail in zombie-invasion/1755-queue-run.md.
+
+## 1817 queue run - arms race (partial)
+
+Arms-race unit arms-race-2026-10-30-1803 by ticker-1804: Unit Progression live, score 0, thresholds 15,000 / 30,000 / 75,000, phase ends about 19:03; tier-3 gap 75,000, training scoring path left to the separate training unit under one-unit-one-type; cumulative chest 15 of 18, detail opened with no Claim button, ranking-row chest tapped with no claim; no bouncing chest or red dot remained. Tracker untouched. Entry note: a stale computer session (cc-558) stopped delivering clicks to Events; ending it and starting cc-561 restored input at once.
+Full detail in arms-race/1817-queue-run.md.
