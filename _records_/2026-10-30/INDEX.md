@@ -1225,3 +1225,18 @@ Full detail in alliance-duel/2320-queue-run.md.
 
 Passes unit passes-2026-10-30-2257 by ticker-2304 (session cc-588 dropped, cc-590 resumed): Hot Deals showed only the Store promo, no new free pack (post-reset pack already claimed by the 1949 unit); Weekly Pass Coin Daily Pickup still green Claim with red dot, answering 1949's open question (its second tap did not register) - this unit tried single taps, double-click and a 1-second long-press at 810,625 and the button still reads Claim, so the next unit must try title-bar fronting or click_foreground first; Legendary Claim All ($19.99 bundle) and S2 Drone Get Now $4.99 were NOT tapped. Super Monthly Pass Daily Gift claimed in one tap (gold ticket x2, red diamond 100, stamina 50 x2, iron 200, 5m speedup x60; button now Claimed). Tracker untouched.
 Full detail in shop-claims/2323-queue-run.md.
+
+## 2338 queue run - event claims (done)
+
+Events unit events-2026-10-30-2257 by ticker-2334: full Events tab sweep, nothing claimed. Arms Race Tech Research at 0 (thresholds 6,250 / 12,500 / 30,000, cumulative chest 0/2, no grinding under this unit); Wanted Boss Code 39 not yet out (Go timer 18:23, reward needs an attack, no attack made); Community binding still Claimed; Desert Storm Battlefield reads "The event is over!"; Winter Battlefield matchmaking in about 04:22, no personal claim; Level Swap no red dot, inspect-only. Zombie Invasion not seeded - chain closed, event ended about the 19:00 reset. Tracker marked done.
+Full detail in event-claims/2338-queue-run.md.
+
+## 2342 queue run - trucks (partial)
+
+Trucks unit trucks-2026-10-30-2257 by ticker-2334: entry failed again (third evening failure). Left column re-grounded from an enlarged crop: green face / train front with red badge / white pickup with red badge / radar / hammer - no trade slot. Train tap at measured centre after a separate title-bar tap changed nothing; WORLD tapped twice, no map opened. Trade and Plunder counts not re-read (last: Trade 2 of 5, plunder presumed 0 of 4). Nothing spent. Tracker untouched.
+Full detail in truck-plunder/2342-queue-run.md.
+
+## 2344 queue run - secret missions (partial)
+
+Secrets unit secrets-2026-10-30-2257 by ticker-2334: Secret Command Post never opened. Pickup tap at norm 70,685 (grounded from the trucks-unit crop) did not open the post; instead the base view switched to a zoomed interior view with no left icon column and no bottom bar. Scroll, drag pan and an app relaunch all failed to restore the default exterior view. Nothing claimed or dispatched, no assists used. Tracker untouched; next secrets unit must first solve the base camera reset.
+Full detail in secret-missions/2344-queue-run.md.
