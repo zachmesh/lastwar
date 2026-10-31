@@ -1,8 +1,8 @@
 {
  "treasures": {
   "status": "done",
-  "at": "2026-10-31T04:36:01",
-  "note": "1 dig, M3/M5 now 0, chest progress 1/15"
+  "at": "2026-10-31T08:17:27",
+  "note": "Checked only: M3/M5 zero, no dig"
  },
  "arms-race": {
   "status": "skipped",
@@ -38,5 +38,10 @@
   "status": "done",
   "at": "2026-10-31T07:42:15",
   "note": "Coin Weekly Daily Pickup claimed; Free Supply auto-claimed"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-10-31T08:12:02",
+  "note": "Full hub sweep, nothing claimed; Day 07 still unclaimable by tap"
  }
 }
