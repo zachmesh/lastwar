@@ -1063,3 +1063,18 @@ Full detail in event-claims/1718-queue-run.md.
 
 Trucks unit trucks-2026-10-30-1457 by ticker-1704, duel day 5 Total Mobilization (non-UR rule, regular dispatch): settled one returned SR truck (iron 2.5M, food 2.5M, coin 1.6M, vehicle safe); dispatch 4 rolled N, free refresh to R, 1 Trade Contract ticket refresh to UR (3.8M/3.8M/2.4M) and dispatched; dispatch 5 rolled R, free refresh to UR (3.8M/3.8M/2.4M) and dispatched. Trade Count 3/5 to 5/5 - dispatch quota met. Others' Trucks read Your Plunder Count Today 0/4; no plunder fought before the pass budget ended. Plunder 0/4 carries to the next trucks unit before the 19:00 reset. Entry note: Intercity Trade icon at norm 53,555, not the 52,611 white pickup. Tracker untouched.
 Full detail in truck-plunder/1728-queue-run.md.
+
+## 1736 queue run - secrets (done, checked only)
+
+Secrets unit secrets-2026-10-30-1457 by ticker-1734: Secret Command Post showed the same 7 PERFECT cards as the 13:44 unit (UR Rescue Missing Agent, SSR Train Refugees, SSR Protect Refugee Camp, SSR Search for Missing Refugees, SR Retrieve Agent Profile, SR Retrieve Abandoned Gear, SR Retrieve Raw Materials), no Claim button, no pending task; Mega Deploy opened no panel; Assist Allies 5 of 5, Plunder Others 0 of 5 untouched; Reward Recovery showed only the already-CLAIMED 2026-10-24 record. Nothing claimed or deployed. Tracker marked done.
+Full detail in secret-missions/1736-queue-run.md.
+
+## 1744 queue run - hidden treasures (done, checked only)
+
+Treasures unit treasures-2026-10-30-1457 by ticker-1734: fragment stock M1 x13, M2 x12, M3 x0, M4 x8, M5 x1, M6 x4, M7 x13, chest progress 0/15, both Dig buttons greyed, no tab badge - identical to the 13:47 unit, M3 at 0 blocking any dig. No exchange attempted. Tracker marked done.
+Full detail in hidden-treasures/1744-queue-run.md.
+
+## 1755 queue run - zombie invasion (partial)
+
+Zombie unit zombie-invasion-zombie-2026-10-28-065 by ticker-1734: two new Lv.10 kills (X:990 Y:952 and X:990 Y:946), each 268.0K coin, both LOOT rows claimed in-unit for 536,000 coins; squads_parallel 1 (short round trips); stamina 53 to 43 across the second march; event timer about 01:06 left at close, cleared false. Store SSR redemption not attempted inside the unit cap and stays open for successor unit 066. No tracker change for a partial unit.
+Full detail in zombie-invasion/1755-queue-run.md.

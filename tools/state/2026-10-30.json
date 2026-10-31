@@ -21,13 +21,13 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-10-30T13:43:07",
-  "note": "All 7 tasks PERFECT, assists 5/5, no pending deploy, recovery already CLAIMED"
+  "at": "2026-10-30T17:39:52",
+  "note": "7 PERFECT cards, nothing to claim or deploy, assists 5 of 5"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-30T13:45:02",
-  "note": "M3 x0 blocks dig, chest 0/15, Dig greyed, no exchange"
+  "at": "2026-10-30T17:41:20",
+  "note": "M3 at 0, no dig possible"
  },
  "arms-race": {
   "status": "skipped",
