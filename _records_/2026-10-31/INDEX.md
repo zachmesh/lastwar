@@ -263,3 +263,13 @@ of 2026-10-28.
   fully-loaded notice in the base view; the 0242
   unit's unclaimed truck loot stays open). Full
   detail in resource-collection/0625-queue-run.md.
+
+## 06:34 to about 06:50 — Queue ticker pass, survivors (partial)
+
+- Survivors unit survivors-2026-10-31-0603, partial:
+  gate line not found in this pass despite panning
+  (window-cover drag failure, then a 68 percent pan to
+  the outer-wall and snow area) and two timed-out
+  grounding calls; no recruit captured, Quick Dispatch
+  not run, tracker untouched for the next tick.
+  Full detail in survivor-intake/0649-queue-run.md.
