@@ -188,3 +188,19 @@ of 2026-10-28.
 ## 04:19 to about 04:25 — Queue ticker pass, secrets (partial)
 
 - Secrets unit secrets-2026-10-31-0257, partial: Secret Command Post entered at the grounded pickup point 52,633 (correcting the 2344 camera-pan failure, which was an off-centre tap); finished tasks claimed (5 cards PERFECT, 3 running, none undispatched, so Mega Deploy correctly did nothing); one ally assisted ([AP3x]Amarky257, Mystery Supply Box x3, Refined Iron Module x29, Hero EXP 247.7K), Assist Allies 1/5. Recovery panel unchecked and assists below cap, so the next tick re-produces the regular. Full detail in secret-missions/0419-queue-run.md.
+
+## 04:34 to about 04:45 — Queue ticker pass, Hidden Treasures dig
+
+- Ticker pass ticker-0434. Sync reaped 0, expired 0, produced 0 new
+  units - all 11 due regulars were already queued by the planner.
+  No zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30 (chain unit 066) and the
+  activity metadata bars seeding until a Zombie Invasion tab is
+  seen live in the Events hub again.
+- Hidden Treasures unit treasures-2026-10-31-0257, done: 1 dig
+  executed (M1 x14, M2 x12, M3 x1, M4 x10, M5 x1, M6 x5, M7 x14
+  before; M1 x13, M2 x11, M3 x0, M4 x9, M5 x0, M6 x4, M7 x13
+  after), chest progress 0 of 15 to 1 of 15, tab badge cleared.
+  CONGRATULATIONS popup showed 7 reward tiles (see the unit record).
+  No fragment exchange executed. No further unit was due after
+  this one; the remaining inbox units are future-planned slots.
