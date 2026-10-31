@@ -6,18 +6,18 @@
  },
  "help": {
   "status": "done",
-  "at": "2026-10-30T19:36:56",
-  "note": "HELP panel 0/1000, only own two 30/30 requests, Help All pressed, no ally request waiting"
+  "at": "2026-10-30T23:08:02",
+  "note": "Help bubble tapped, allies grateful toast, bubble cleared"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-10-30T19:49:01",
-  "note": "No trophy icon beside Alliance, no Star Ceremony waiting, checked only"
+  "at": "2026-10-30T23:14:52",
+  "note": "Checked only: no ceremony waiting"
  },
  "train": {
   "status": "done",
-  "at": "2026-10-30T19:47:58",
-  "note": "No Boarding closes banner, no train in preparation, checked only"
+  "at": "2026-10-30T23:14:02",
+  "note": "Checked only: no train in preparation"
  },
  "secrets": {
   "status": "done",
@@ -41,8 +41,8 @@
  },
  "mail": {
   "status": "done",
-  "at": "2026-10-30T19:46:55",
-  "note": "Alliance and Event Claim All claimed; Regular/Season/System/Battle checked empty"
+  "at": "2026-10-30T23:13:12",
+  "note": "All categories swept, Event claimed, others no rewards"
  },
  "passes": {
   "status": "done",

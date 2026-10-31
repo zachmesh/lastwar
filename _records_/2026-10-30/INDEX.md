@@ -1200,3 +1200,28 @@ Training unit training-2026-10-30-2203 by ticker-2234: no new blind barracks sea
 ## 2246 queue run - alliance gifts (partial)
 
 Gifts unit gifts-2026-10-30-2230 by ticker-2234: Alliance panel never opened - repeated Alliance button taps produced no change in the background window; an accidental fullscreen from a title-bar tap at 100,17 (too close to the zoom button) was recovered via View then Exit Full Screen back to 642x951 window mode. No gifts claimed. Tracker untouched. Full detail in alliance-gifts/2246-queue-run.md.
+
+## 2308 queue run - alliance help (done)
+
+Help unit help-2026-10-30-2230 by ticker-2304: help bubble present at lower right (yellow tile, hand holding green missile, norm 825,690); one tap answered "Allies are very grateful for your assistance", bubble gone and Alliance red dot cleared on the follow-up screenshot. Tracker marked done.
+Full detail in alliance-help/2308-queue-run.md.
+
+## 2313 queue run - mail rewards (done)
+
+Mail unit mail-2026-10-30-2230 by ticker-2304: all claimable categories swept - Event Claim All claimed (second tap confirmed "No rewards available"), Alliance, Season (Ice Breaking Reports only), System, Regular and Battle Report all answered "No rewards available"; Purchases not opened (receipts only per metadata). Delete All never pressed. Tracker marked done.
+Full detail in mail-rewards/2313-queue-run.md.
+
+## 2317 queue run - alliance train (done, checked only)
+
+Train unit train-2026-10-30-2230 by ticker-2304: no "Boarding closes in" banner under the resource bar on the base screen, so no train in preparation at this check (matching the 0316, 0737, 1238, 1710 and 1948 runs today). Nothing boarded, no Trade Contracts spent. Tracker marked done.
+Full detail in alliance-train/2317-queue-run.md.
+
+## 2320 queue run - star ceremony (done, checked only)
+
+Star-ceremony unit star-ceremony-2026-10-30-2230 by ticker-2304 (session cc-588 dropped mid-unit, cc-590 resumed, no state lost): right-side icon column showed Halloween Check-in (1), Events (1), Faction Duel, VS, Season II (3), Alliance, Mail, Inventory, WORLD - no trophy icon beside Alliance, so no Star Ceremony waiting (matching the 0315, 0740, 1241, 1708 and 1949 checks today). Tracker marked done.
+Full detail in alliance-duel/2320-queue-run.md.
+
+## 2323 queue run - shop claims (partial)
+
+Passes unit passes-2026-10-30-2257 by ticker-2304 (session cc-588 dropped, cc-590 resumed): Hot Deals showed only the Store promo, no new free pack (post-reset pack already claimed by the 1949 unit); Weekly Pass Coin Daily Pickup still green Claim with red dot, answering 1949's open question (its second tap did not register) - this unit tried single taps, double-click and a 1-second long-press at 810,625 and the button still reads Claim, so the next unit must try title-bar fronting or click_foreground first; Legendary Claim All ($19.99 bundle) and S2 Drone Get Now $4.99 were NOT tapped. Super Monthly Pass Daily Gift claimed in one tap (gold ticket x2, red diamond 100, stamina 50 x2, iron 200, 5m speedup x60; button now Claimed). Tracker untouched.
+Full detail in shop-claims/2323-queue-run.md.
