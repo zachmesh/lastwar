@@ -1,0 +1,38 @@
+---
+title: Shop claims queue run 1712
+created: 2026-10-30T17:12:00-07:00
+modified: 2026-10-30T17:12:00-07:00
+version: 1.0.0
+description: Ticker pass ticker-1704 passes unit, done - all shop pickups already claimed today, nothing new
+status: unverified
+grounded_in:
+  - source: in-game screens observed on the owner Mac mini, 2026-10-30
+---
+
+# Shop claims, 1712 queue run
+
+Session window: about 17:10-17:12 PDT, executor
+ticker-1704, Mac mini session cc-547, game account
+[AP3x]Bears Lair.
+
+Performed: checked only, nothing claimed new,
+nothing spent, no paid button tapped.
+
+- Hot Deals: no free pack showing, only the Last
+  War Store promo carousel with a Go button, which
+  was not tapped.
+- Weekly Pass: Free Supply chest reads Claimed.
+  Coin Weekly Pass reads Already claimed today,
+  Remaining 4d 1:48:15 at the read; its Renew
+  $4.99 left untouched. Legendary Take All $19.99
+  left untouched. S2 Drone Components Weekly Pass
+  shows only its $4.99 Get Now purchase button,
+  not a claim button - untouched.
+- Super Monthly Pass: Daily Pickup button reads
+  Claimed, Days Left 22, Rewards Left 22.
+  Monthly Pass Extension $24.99 left untouched.
+- Game left on the base screen after the shop back
+  arrow (norm 58,946).
+
+Outcome: done. All shop pickups for today were
+already claimed; nothing new to claim.

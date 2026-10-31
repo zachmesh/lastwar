@@ -1038,3 +1038,28 @@ all dispatched with no change, so no mail category was opened
 or claimed. No Delete All touched. Tracker untouched, the
 regular re-produces next tick.
 Full detail in mail-rewards/1651-queue-run.md.
+
+## 1708 queue run - star ceremony (done, checked only)
+
+Star-ceremony unit star-ceremony-2026-10-30-1430 by ticker-1704: base screen in windowed mode showed Halloween Check-in, Events (badge 1), Faction Duel, VS (01:51:29), Season II (badge 3), Alliance, Mail, Inventory and WORLD, with no trophy icon beside Alliance, so no Star Ceremony is waiting. Entry note: back-arrow centre at norm 140,936 worked after the 1651 mail unit's edge taps failed. No ceremony opened, no rewards claimed. Tracker marked done.
+Full detail in alliance-duel/1708-queue-run.md.
+
+## 1710 queue run - alliance train (done, checked only)
+
+Train unit train-2026-10-30-1430 by ticker-1704: base screen showed no "Boarding closes in" banner under the resource bar, so no train is in preparation. No station panel opened, nothing boarded, no Trade Contracts spent. Tracker marked done.
+Full detail in alliance-train/1710-queue-run.md.
+
+## 1712 queue run - shop claims (done)
+
+Passes unit passes-2026-10-30-1457 by ticker-1704: Hot Deals showed no free pack, only the store promo carousel (Go not tapped); Weekly Pass Free Supply Claimed, Coin Weekly Pass Already claimed today (Remaining 4d 1:48:15), Legendary Take All $19.99 and Renew $4.99 untouched; Super Monthly Pass Daily Pickup Claimed, Days Left 22, Rewards Left 22, Extension $24.99 untouched. Nothing new to claim. Tracker marked done.
+Full detail in shop-claims/1712-queue-run.md.
+
+## 1718 queue run - event claims (done)
+
+Events unit events-2026-10-30-1457 by ticker-1704: Arms Race has rotated to Unit Progression (live score 0, thresholds 15,000 / 30,000 / 75,000, cumulative 15 of 18, about 01:45 left); Zombie Invasion live with 01:44:50 remaining and next wave in 00:26:24; Wanted Boss Code 64 not out yet (Go countdown 00:44:08), Goals best 852,929,736 below the 1.0B first tier so all tier claims greyed. No bouncing chest or unclaimed red dot beyond the Wanted Boss tab indicator. Nothing claimed, nothing spent. Entry note: Events back-arrow centre is about norm 159,948. Tracker marked done.
+Full detail in event-claims/1718-queue-run.md.
+
+## 1728 queue run - trucks (partial)
+
+Trucks unit trucks-2026-10-30-1457 by ticker-1704, duel day 5 Total Mobilization (non-UR rule, regular dispatch): settled one returned SR truck (iron 2.5M, food 2.5M, coin 1.6M, vehicle safe); dispatch 4 rolled N, free refresh to R, 1 Trade Contract ticket refresh to UR (3.8M/3.8M/2.4M) and dispatched; dispatch 5 rolled R, free refresh to UR (3.8M/3.8M/2.4M) and dispatched. Trade Count 3/5 to 5/5 - dispatch quota met. Others' Trucks read Your Plunder Count Today 0/4; no plunder fought before the pass budget ended. Plunder 0/4 carries to the next trucks unit before the 19:00 reset. Entry note: Intercity Trade icon at norm 53,555, not the 52,611 white pickup. Tracker untouched.
+Full detail in truck-plunder/1728-queue-run.md.
