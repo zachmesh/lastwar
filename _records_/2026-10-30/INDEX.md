@@ -1093,3 +1093,23 @@ Full detail in alliance-donations/1850-queue-run.md.
 
 Radar unit radar-2026-10-30-1803 by ticker-1834, duel day 5 release window: Quick Execute 3 tasks for 30 stamina (55 to 25); two Claim All batches, points 18 to 29, stored 2/40 to 0/40; first batch tokens 90, Hero EXP 10.6M, coin 2.1M; second batch tokens 20, Hero EXP 1.5M, coin 374.4K; bottom bar gone at close. Map pins left unattempted per the pin-tap caution. One mid-unit session drop recovered with no state lost. Tracker marked done.
 Full detail in radar-tasks/1856-queue-run.md.
+
+## 1904 queue run - resource collection (partial)
+
+Harvest unit harvest-2026-10-30-1803 by ticker-1904: different-device dialog at activation, Confirm clicked once (kick 1), app exited and relaunched cleanly; central Titanium Alloy Factory cluster bubbles tapped (413,452 and 288,478), no standing bubbles left there after deselect, but HUD totals unchanged at 0.1M precision (food 306.8M, iron 493.7M, coin 157.4M) so no verified gain is claimed; Armed Truck unchecked. Tracker untouched.
+Full detail in resource-collection/1904-queue-run.md.
+
+## 1912 queue run - survivor intake (partial)
+
+Survivors unit survivors-2026-10-30-1803 by ticker-1904: session cc-566 dropped, cc-567 resumed with no state lost; map drag did not reveal the gate area, and a probe tap at 420,300 (a visual-grounding candidate) produced no change and opened no card. No recruit claimed, Quick Dispatch not run. Tracker untouched. Next unit should pan to the gate the way the 15:44 unit did rather than trust a fresh grounding point on the central-cluster view.
+Full detail in survivor-intake/1912-queue-run.md.
+
+## 1918 queue run - troop training (partial)
+
+Training unit training-2026-10-30-1803 by ticker-1904: no new blind barracks search, following four failed location units today (0248, 0714, 1119, 1613); the tent row location remains unresolved and should be pinned from a known-good camera position or building list before further attempts. No batch started. Tracker untouched.
+Full detail in troop-training/1918-queue-run.md.
+
+## 1919 queue run - alliance gifts (done)
+
+Gifts unit gifts-2026-10-30-1830 by ticker-1904: first Alliance-panel tap at 327,499 landed on Alliance Wars (left untouched, closed); Gifts opened at 330,595. Regular Claim All claimed 170 gifts (progress 174,225,760 to 174,230,430), Premium Claim All claimed 12 gifts (progress to 174,239,060, Level 28). Game left on the Alliance panel after two bottom-left back taps produced no change. Tracker marked done.
+Full detail in alliance-gifts/1919-queue-run.md.
