@@ -43,5 +43,10 @@
   "status": "done",
   "at": "2026-10-31T12:43:33",
   "note": "Full Events hub sweep, nothing claimable, nothing claimed"
+ },
+ "harvest": {
+  "status": "done",
+  "at": "2026-10-31T15:15:58",
+  "note": "Collected ready base bubbles; verified iron 19.1M to 20.9M; truck not fully loaded, left"
  }
 }
