@@ -273,3 +273,54 @@ of 2026-10-28.
   grounding calls; no recruit captured, Quick Dispatch
   not run, tracker untouched for the next tick.
   Full detail in survivor-intake/0649-queue-run.md.
+
+## 07:04 to about 07:10 — Queue ticker pass, troop training (partial)
+
+- Troop Training unit training-2026-10-31-0603, partial:
+  the 03:04 Lv.30 position selected the Drill Ground in
+  this camera position, and its panel confirmed Unit
+  Count 39460/39460 — the drill ground is full, which
+  blocks collection of the Lv.20 and Lv.24 finished
+  batches until the owner frees space; Lv.30 is already
+  training from the 03:04 requeue, Lv.27 was not
+  located, and no batch was started or collected.
+  Two panel-X taps did not close the panel and an
+  Escape press exited the app (known crash behaviour);
+  the app was reopened to the same base screen with
+  no login or different-device dialog. Tracker
+  untouched for the next tick. Full detail in
+  troop-training/0704-queue-run.md.
+
+## 07:10 to about 07:13 — Queue ticker pass, alliance gifts (done)
+
+- Alliance Gifts unit gifts-2026-10-31-0630, done:
+  Regular Claim All 54, then Premium Claim All 3
+  (two MR +1000 and one SSR +200, progress
+  174,968,310 to 174,970,510), then 4 newly arrived
+  Regular gifts claimed on re-check, for a unit total
+  of 58 Regular and 3 Premium. No purchase, no
+  diamond spent. Full detail in
+  alliance-gifts/0711-queue-run.md.
+
+## 07:13 to about 07:15 — Queue ticker pass, alliance help (done)
+
+- Alliance Help unit help-2026-10-31-0630, done:
+  Help All pressed once at 500,778, toast "Allies
+  are very grateful for your assistance"; ally
+  requests (Kkkayyyyy research, Boss Hog 05 building
+  and further rows) cleared, leaving only the two own
+  requests at 30/30; points header still 320 of 1,000
+  in the closing screenshot, so no points increase
+  claimed. Full detail in alliance-help/0713-queue-run.md.
+
+## 07:16 to about 07:18 — Queue ticker pass, mail rewards (partial)
+
+- Mail unit mail-2026-10-31-0630, partial: the game
+  was left on the Alliance panel and its back arrow
+  (norm 104,936) did not respond to repeated taps,
+  so no mail category was reached or claimed; a
+  title-bar tap at 100,18 briefly put the game into
+  fullscreen and it was recovered with View then
+  Exit Full Screen, back in window mode on the
+  Alliance panel. Tracker untouched for the next
+  tick. Full detail in mail-rewards/0716-queue-run.md.
