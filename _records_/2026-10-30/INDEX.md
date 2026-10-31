@@ -1168,3 +1168,23 @@ Full detail in vip-rewards/2042-queue-run.md.
 
 Zombie unit zombie-invasion-zombie-2026-10-28-066 by ticker-2034: the Zombie Invasion event has ended - the Events hub tab bar (Arms Race through Community, six tabs) has no Zombie Invasion tab, and the timers from units 064 (05:08 left at 13:46) and 065 (01:16 left at 17:42) both point to an end at about the 19:00 reset. No kills, no loot, no Store step; NO successor enqueued, chain zombie-2026-10-28 closed. Activity metadata updated to 1.22.0.
 Full detail in zombie-invasion/2048-queue-run.md.
+
+## 2210 queue run - arms race (partial)
+
+Arms-race unit arms-race-2026-10-30-2203 by ticker-2204: Unit Progression live, score 0, thresholds 15,000 / 30,000 / 75,000, phase ends about 23:00; tier-3 gap 75,000, training scoring path left to the separate training unit under one-unit-one-type; cumulative chest 0 of 2, detail opened (tiers 0, 2, 8, 18) with no Claim button, ranking-row chest tapped with no claim; no bouncing chest or red dot remained. Tracker untouched. Entry note: the Events tab strip's left tab was cut off and two taps on it did not switch pages; one rightward drag (200,135 to 450,135) revealed the full Arms Race tab.
+Full detail in arms-race/2210-queue-run.md.
+
+## 2218 queue run - alliance donations (partial)
+
+Donations unit donations-2026-10-30-2203 by ticker-2204: target Rallied HP 5/10 (recommended marker, same as the 1850 unit), Donation Count 10/30 at entry, Tech Donation Today 0 at entry; the green coin Donate button (600 coin) stayed unresponsive across nine taps in three input routes (single taps at several points on the button, a 1-second long-press, a double-click), surviving a title-bar fronting tap, a full computer session restart (cc-580 to cc-582) and a panel close/reopen — count still 10/30, no coin spent, diamond button never touched. Tracker untouched; the next unit must try a different input route for this button.
+Full detail in alliance-donations/2218-queue-run.md.
+
+## 2224 queue run - radar tasks (done, checked only)
+
+Radar unit radar-2026-10-30-2203 by ticker-2204 on duel Day 6 stack posture: Lv.13, stored tasks 0/40, 12 tasks restoring in 00:31:54, stamina 67; no Quick Execute bar and no Claim All offered, so no task was completed and nothing was claimed; the single orange map pin was left untapped under the 2026-10-29 pin-tap caution (a tap could pay a finished task at once against the stack posture). Tracker marked done.
+Full detail in radar-tasks/2224-queue-run.md.
+
+## 2226 queue run - resource collection (partial)
+
+Harvest unit harvest-2026-10-30-2203 by ticker-2204: 5 bubbles seen at entry, first tap at norm 398,413 cleared 4 with iron 18.7M to 19.1M; the second tap at norm 435,428 selected the High-heat Furnace Lv.30 instead of a bubble (grounding had misread a building button), selection cleared by tapping empty ground with nothing upgraded; Armed Truck not checked and no further bubble verified before the pass budget ran out. Tracker untouched.
+Full detail in resource-collection/2226-queue-run.md.
