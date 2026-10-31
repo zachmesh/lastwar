@@ -172,3 +172,11 @@ of 2026-10-28.
   check; its source is unverified and no reward
   count is claimed for it. Game left on the base
   screen. Full detail in mail-rewards/0317-queue-run.md.
+
+## 03:36 to about 03:41 — Queue ticker pass, star ceremony, train, events (partial)
+
+- Star-ceremony unit star-ceremony-2026-10-31-0230, done as checked only: no trophy icon beside the Alliance icon, no ceremony waiting. Full detail in alliance-duel/0336-queue-run.md.
+- Train unit train-2026-10-31-0230, done as checked only: no "Boarding closes in" banner, no train in preparation. Full detail in alliance-train/0337-queue-run.md.
+- Events unit events-2026-10-31-0257, partial: Arms Race Base Building page at 0 points with no chest reached and nothing to claim; the HOW TO GET POINTS schedule popup was read (next stages 07:00 Drone Boost, 11:00 Hero Advancement, 15:00 Base Building) and dismissed; the remaining tab sweep was blocked because background tab taps did not switch tabs while Chrome stayed frontmost. Tracker not marked; the next tick re-produces the regular. Full detail in event-claims/0340-queue-run.md.
+
+- Passes unit passes-2026-10-31-0257, partial: Hot Deals showed no new free pack; on the Weekly Pass page the Legendary Claim All ($19.99 bundle) and the $4.99 Drone pass offer were left untouched, and the Coin Weekly Pass Daily Pickup still did not register its Claim tap even after a separate title-bar fronting step (game stayed behind Chrome). Tracker not marked; the Coin pickup stays outstanding. Full detail in shop-claims/0353-queue-run.md.

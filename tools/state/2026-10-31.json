@@ -23,5 +23,15 @@
   "status": "done",
   "at": "2026-10-31T03:19:15",
   "note": "All categories checked, no claimable rewards"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-10-31T03:36:43",
+  "note": "Checked only: no trophy icon beside Alliance, no ceremony waiting"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-10-31T03:37:04",
+  "note": "Checked only: no train in preparation"
  }
 }
