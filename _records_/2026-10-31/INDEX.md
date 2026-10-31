@@ -180,3 +180,11 @@ of 2026-10-28.
 - Events unit events-2026-10-31-0257, partial: Arms Race Base Building page at 0 points with no chest reached and nothing to claim; the HOW TO GET POINTS schedule popup was read (next stages 07:00 Drone Boost, 11:00 Hero Advancement, 15:00 Base Building) and dismissed; the remaining tab sweep was blocked because background tab taps did not switch tabs while Chrome stayed frontmost. Tracker not marked; the next tick re-produces the regular. Full detail in event-claims/0340-queue-run.md.
 
 - Passes unit passes-2026-10-31-0257, partial: Hot Deals showed no new free pack; on the Weekly Pass page the Legendary Claim All ($19.99 bundle) and the $4.99 Drone pass offer were left untouched, and the Coin Weekly Pass Daily Pickup still did not register its Claim tap even after a separate title-bar fronting step (game stayed behind Chrome). Tracker not marked; the Coin pickup stays outstanding. Full detail in shop-claims/0353-queue-run.md.
+
+## 04:04 to about 04:19 — Queue ticker pass, trucks (partial)
+
+- Trucks unit trucks-2026-10-31-0257, partial: trade entry recovered (front icon at grounded 53,576 after a camera-pan miss at 52,542); no returned truck to settle, all four trucks still en route, no dispatch slot, Trade Count 2/5 unchanged; one plunder won against UR truck #2104 [ROKa] (guard 24.0M) for iron 913.8K, food 913.8K, coin 583.2K, no UR shards dropped; Plunder Count 1/4. Two inspected targets passed under the shard rule (UR #2087 guard 25.7M, R #2087). Tracker not marked; the next tick re-produces the regular. Full detail in truck-plunder/0404-queue-run.md.
+
+## 04:19 to about 04:25 — Queue ticker pass, secrets (partial)
+
+- Secrets unit secrets-2026-10-31-0257, partial: Secret Command Post entered at the grounded pickup point 52,633 (correcting the 2344 camera-pan failure, which was an off-centre tap); finished tasks claimed (5 cards PERFECT, 3 running, none undispatched, so Mega Deploy correctly did nothing); one ally assisted ([AP3x]Amarky257, Mystery Supply Box x3, Refined Iron Module x29, Hero EXP 247.7K), Assist Allies 1/5. Recovery panel unchecked and assists below cap, so the next tick re-produces the regular. Full detail in secret-missions/0419-queue-run.md.
