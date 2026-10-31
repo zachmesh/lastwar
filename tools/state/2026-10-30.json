@@ -26,8 +26,8 @@
  },
  "treasures": {
   "status": "done",
-  "at": "2026-10-30T17:41:20",
-  "note": "M3 at 0, no dig possible"
+  "at": "2026-10-30T20:36:45",
+  "note": "Hidden Treasures checked, M3 x0 blocks dig"
  },
  "arms-race": {
   "status": "skipped",
@@ -58,5 +58,10 @@
   "status": "done",
   "at": "2026-10-30T18:53:13",
   "note": "Quick Execute 3 tasks, points 18 to 29, stored 0/40"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-10-30T20:43:12",
+  "note": "Daily Freebie + login 200 points claimed, now 1,575,460"
  }
 }

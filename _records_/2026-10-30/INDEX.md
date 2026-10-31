@@ -1153,3 +1153,18 @@ Full detail in truck-plunder/2017-queue-run.md.
 
 Secrets unit secrets-2026-10-30-1857 by ticker-2004: new-day task list of 8 pending tasks Mega-deployed with UR Only off (UR Disrupt electric grid 2:00 plus 7 shorter tasks), verified running by countdowns; ally assists 0/5 uncompleted after 3 unresponsive Assist-button taps (next unit must try a different input route); Reward Recovery unchecked. Tracker untouched.
 Full detail in secret-missions/2027-queue-run.md.
+
+## 2036 queue run - hidden treasures (done, checked only)
+
+Treasures unit treasures-2026-10-30-1857 by ticker-2034: fragment stock M1 x13, M2 x12, M3 x0, M4 x8, M5 x1, M6 x4, M7 x13, chest 0/15; M3 at 0 blocks any dig, both Dig buttons greyed. Tracker marked done.
+Full detail in hidden-treasures/2036-queue-run.md.
+
+## 2042 queue run - VIP rewards (done)
+
+VIP unit vip-2026-10-30-1900 by ticker-2034: Daily Freebie claimed (puzzle x2, food/iron/coin crates x13 each) and login chest claimed (+200 VIP points, 1,575,260 to 1,575,460 of 2,000,000, 54-day streak). Tracker marked done.
+Full detail in vip-rewards/2042-queue-run.md.
+
+## 2048 queue run - zombie invasion (done, chain closed)
+
+Zombie unit zombie-invasion-zombie-2026-10-28-066 by ticker-2034: the Zombie Invasion event has ended - the Events hub tab bar (Arms Race through Community, six tabs) has no Zombie Invasion tab, and the timers from units 064 (05:08 left at 13:46) and 065 (01:16 left at 17:42) both point to an end at about the 19:00 reset. No kills, no loot, no Store step; NO successor enqueued, chain zombie-2026-10-28 closed. Activity metadata updated to 1.22.0.
+Full detail in zombie-invasion/2048-queue-run.md.

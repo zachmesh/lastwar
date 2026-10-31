@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-30T16:50:00Z
+modified: 2026-10-31T03:48:00Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -670,6 +670,18 @@ execution.
   dragging blindly. The two LOOT rows from unit
   063 stayed unclaimed at its close and are at
   risk of the handover-style loss.
+
+- Chain close, unit 066 on 2026-10-30 — the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30: unit 064 read 05:08 left at 13:46 and
+  unit 065 read 01:16 left at 17:42, and unit 066
+  found the Events hub tab bar (Arms Race, Desert
+  Storm Battlefield, Winter Battlefield, Level Swap,
+  Wanted Boss, Community — six tabs) with no Zombie
+  Invasion tab. No successor unit was enqueued; the
+  chain zombie-2026-10-28 is closed. Do NOT seed a
+  fresh zombie chain until a Zombie Invasion tab is
+  seen live in the Events hub again.
 
 ## Open questions
 
