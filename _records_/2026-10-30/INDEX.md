@@ -1083,3 +1083,13 @@ Full detail in zombie-invasion/1755-queue-run.md.
 
 Arms-race unit arms-race-2026-10-30-1803 by ticker-1804: Unit Progression live, score 0, thresholds 15,000 / 30,000 / 75,000, phase ends about 19:03; tier-3 gap 75,000, training scoring path left to the separate training unit under one-unit-one-type; cumulative chest 15 of 18, detail opened with no Claim button, ranking-row chest tapped with no claim; no bouncing chest or red dot remained. Tracker untouched. Entry note: a stale computer session (cc-558) stopped delivering clicks to Events; ending it and starting cc-561 restored input at once.
 Full detail in arms-race/1817-queue-run.md.
+
+## 1850 queue run - alliance donations (done)
+
+Donations unit donations-2026-10-30-1803 by ticker-1834: Rallied HP 5/10 (recommended marker), Current +5% / Next +6%, 12 coin donations of 600 coin each (7,200 coin total), Donation Count 12/30 to 0/30 with the coin button greyed on a 00:10:54 cooldown; Tech Donation Today 6,550 at close; no diamonds spent. Entry note: the Events back arrow grounds at norm 154,915, not the 85-102 x-range tried first. Tracker marked done.
+Full detail in alliance-donations/1850-queue-run.md.
+
+## 1856 queue run - radar tasks (done)
+
+Radar unit radar-2026-10-30-1803 by ticker-1834, duel day 5 release window: Quick Execute 3 tasks for 30 stamina (55 to 25); two Claim All batches, points 18 to 29, stored 2/40 to 0/40; first batch tokens 90, Hero EXP 10.6M, coin 2.1M; second batch tokens 20, Hero EXP 1.5M, coin 374.4K; bottom bar gone at close. Map pins left unattempted per the pin-tap caution. One mid-unit session drop recovered with no state lost. Tracker marked done.
+Full detail in radar-tasks/1856-queue-run.md.
