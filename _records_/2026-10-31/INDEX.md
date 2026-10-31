@@ -347,3 +347,20 @@ of 2026-10-28.
 ## 10:13 to about 10:23 — Queue ticker pass, alliance donations (partial)
 
 - Donations unit donations-2026-10-31-1003, partial: Rallied HP 5/10, count 11/30 at entry (replenished since the 0620 unit's arithmetic 0), batches of 5 and 5 verified to 1/30, a burst-blocked tap on a 00:01:02 timer that left the count at 1/30 after the wait, then a final tap greyed on a 00:48:04 timer with the count hidden, so the final 0/30 is arithmetic, not directly read. 11 coin donations at 600 coin each, Tech Donation Today 3850 to 5150. Tracker untouched; next tick re-reads the count once the timer clears (about 11:09 local). Full detail in alliance-donations/1013-queue-run.md.
+
+## 10:34 to about 10:40 — Queue ticker pass, radar (partial)
+
+- Ticker pass ticker-1034. Sync reaped 0, expired 0, produced 0 new units - all 14 due regulars were already queued by the planner. No zombie chain was seeded: the Zombie Invasion event ended at about the 19:00 reset on 2026-10-30 (chain unit 066 closed the chain) and no zombie-invasion unit sits in inbox or claimed.
+- Radar unit radar-2026-10-31-1003, partial: duel day 6 stack posture. Quick Execute ran 1 task, stamina 120 to 110, points unchanged at 29, stored 9/40. The bar now reads 10 task rewards claimable (7 at the 06:12 close; only 1 of the increase is this unit's task, the other 2 not observed arriving). Claim All deliberately NOT tapped; pins untapped. Tracker untouched; next tick re-produces this regular. Full detail in radar-tasks/1040-queue-run.md.
+
+## 10:41 to about 10:46 — Queue ticker pass, harvest (partial)
+
+- Harvest unit harvest-2026-10-31-1003, partial: one farmland tap at norm 382,415 collected all farmland bubbles at once, food 329.1M to 337.1M verified on the HUD (about 8.0M); iron 523.2M and coin 177.1M unchanged. A visual-grounding call timed out after 3 minutes and was not retried. Iron and coin bubbles remain and the Armed Truck was not checked, so the 0242 unit's unclaimed truck loot stays open. Tracker untouched; next tick re-produces this regular. Full detail in resource-collection/1046-queue-run.md.
+
+## 10:47 to about 10:49 — Queue ticker pass, survivors (partial)
+
+- Survivors unit survivors-2026-10-31-1003, partial: gate line not located in the visible base view (the 06:49 unit likewise failed to find it after a longer search). One mis-tap at norm 93,510 opened the base temperature panel — Nuclear Furnace Lv.7 on, High-Heat Furnace Lv.30 not on — closed with its X without changing anything; the left-edge green faces are the temperature control, not the survivor line. No intake counted. Tracker untouched; next tick re-produces this regular. Full detail in survivor-intake/1049-queue-run.md.
+
+## 10:50 to about 10:55 — Queue ticker pass, training (partial)
+
+- Training unit training-2026-10-31-1003, partial: Lv.30 tent located at pinned norm 708,602. A tap at norm 623,615 meant for TRAIN UNITS opened Building Details instead (Training Count +793, instructors Marcus/Taylor/Daniel/Michael); Quick Dispatch NOT tapped, panel closed untouched. A second tap at norm 720,615 opened nothing. Pistol-button norm point still unpinned for the next unit. No batch collected or started; Lv.24 requeue, Lv.27 location and the Lv.20 drill-ground block remain open. Tracker untouched; next tick re-produces this regular. Full detail in troop-training/1055-queue-run.md.
