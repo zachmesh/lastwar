@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-30T20:30:00Z
+modified: 2026-10-31T04:35:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -242,6 +242,26 @@ train also runs on this screen as a trade vehicle.
   N free-refreshed to SR and SSR, moving Trade Count
   1 of 5 to 3 of 5 with no Trade Contract spent, and read
   Plunder Count 0 of 4 untouched at close.
+- Icon identification corrected, 2026-10-30 evening
+  (2052 and 2124 units) - enlarged crops of the left
+  column show the light-blue front icon is a TRAIN
+  front (windshield, headlights, cowcatcher), not a
+  truck, and the white vehicle below it is a pickup.
+  The column set green face / train / pickup / dish /
+  hammer carries no trade slot, and tapping the train
+  icon neither opens anything nor flips the set
+  (verified twice, screenshots compared - the set is
+  identical before and after). Both evening units
+  failed to enter the trade screen at 53,555 and at
+  55,582 while all four trucks were en route with no
+  settlement pending. Unverified hypothesis: the
+  trade slot surfaces in the column only while a
+  returned truck awaits settlement - every successful
+  entry on 2026-10-30 (1305, 1728, 2017) had one
+  pending. Next trucks unit: check for a pending
+  settlement first; if none, look for the trade
+  entry on the World map or via the station area
+  instead of re-tapping the train icon.
 
 ## Scope and availability
 
