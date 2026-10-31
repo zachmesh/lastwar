@@ -26,12 +26,17 @@
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-10-31T03:36:43",
-  "note": "Checked only: no trophy icon beside Alliance, no ceremony waiting"
+  "at": "2026-10-31T07:38:43",
+  "note": "Checked only: no ceremony waiting, no trophy icon"
  },
  "train": {
   "status": "done",
-  "at": "2026-10-31T03:37:04",
-  "note": "Checked only: no train in preparation"
+  "at": "2026-10-31T07:37:52",
+  "note": "Checked only: no train in preparation, no Boarding closes in banner"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-10-31T07:42:15",
+  "note": "Coin Weekly Daily Pickup claimed; Free Supply auto-claimed"
  }
 }
