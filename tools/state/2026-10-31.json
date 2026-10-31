@@ -8,5 +8,20 @@
   "status": "skipped",
   "at": "2026-10-31T02:11:58",
   "note": "Tech Research 0, research queue Idle, no completion in window, paths inside red lines"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-10-31T03:15:43",
+  "note": "Claimed 116 Regular and 12 Premium Alliance Gifts"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-10-31T03:16:27",
+  "note": "Help All pressed, ally requests cleared"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-10-31T03:19:15",
+  "note": "All categories checked, no claimable rewards"
  }
 }

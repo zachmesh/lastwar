@@ -93,3 +93,82 @@ of 2026-10-28.
   regular. Session cc-599 dropped mid-unit, cc-601
   recovered with no state lost. Full detail in
   survivor-intake/0248-queue-run.md.
+
+## 03:04 to about 03:14 — Queue ticker pass, Troop Training (partial)
+
+- Ticker pass ticker-0304. Sync reaped nothing and produced
+  nothing new - all 16 due regulars were already queued by the
+  planner. No zombie chain was seeded: the Zombie Invasion
+  event ended at about the 19:00 reset on 2026-10-30 (chain
+  unit 066) and its activity metadata forbids seeding a fresh
+  chain until a Zombie Invasion tab is seen live in the Events
+  hub again.
+- Troop Training unit training-2026-10-31-0203, partial:
+  the barracks tent row was pinned down (Lv.30 at norm
+  708,602). Lv.30 finished batch of 793 T10 collected
+  (power 146,857,078 to 148,163,149, exactly 793 x 1647)
+  and requeued at cap for 5.5M food and 5.5M iron, verified
+  "Training in progress 1d 17:14:20". Lv.24 finished batch
+  of 666 T8 collected (power to 148,939,659; the rise does
+  not equal 666 x 1063, so the per-unit yield is left
+  unverified), but its requeue was not completed after the
+  tent selection was lost. Lv.20 was blocked by "Drill
+  Ground Full: Unable to add more units" and stays
+  uncollected. Lv.27 was not located. Tracker untouched;
+  the next tick re-produces this regular. Full detail in
+  troop-training/0304-queue-run.md.
+
+## 03:14 to about 03:17 — Queue ticker pass, Alliance Gifts (done)
+
+- Alliance Gifts unit gifts-2026-10-31-0230, done:
+  Alliance panel opened from the base right column
+  (Alliance button norm 932,720) and Alliance Gifts
+  opened at norm 444,610 with its red dot. Regular
+  Claim All claimed 116 gifts, dialog verified, gift
+  progress 174,663,090 to 174,664,250 (plus 1160, 116
+  x 10). Premium Claim All is at the bottom-right
+  (a tap at 500,935 missed it and hit the name-hiding
+  area); the tap at 730,935 claimed 12 Premium gifts,
+  dialog verified. No purchase, no diamond spent, no
+  Alliance Store Buy. The Alliance panel back arrow
+  did not respond to taps at 50,935 and 90,930, so
+  the game was left on the Alliance panel. Full
+  detail in alliance-gifts/0314-queue-run.md.
+
+## 03:16 to about 03:19 — Queue ticker pass, Alliance Help (done)
+
+- Alliance Help unit help-2026-10-31-0230, done:
+  Help opened at norm 687,504 from the Alliance panel
+  left open by the gifts unit. Today's points read
+  100 of 1,000 at open; own requests were Bears Lair
+  Lv.30 Aircraft Center and Lv.28 Drill Ground (both
+  30 of 30), allies waiting were PrincessEsra10xoxo
+  Lv.28 Missile Vehicle Base, miss direction
+  Infirmary / Expansion III research, and further rows
+  below. Help All pressed once at 500,778, answered
+  "Allies are very grateful for your assistance", and
+  all ally rows cleared, leaving only the two own
+  requests (now showing time-reduced displays). The
+  points header still read 100 of 1,000 in the
+  closing screenshot, so no points increase is
+  claimed. Panel closed with its X at 838,184. Full
+  detail in alliance-help/0316-queue-run.md.
+
+## 03:17 to about 03:21 — Queue ticker pass, Mail Rewards (done, nothing claimable)
+
+- Mail Rewards unit mail-2026-10-31-0230, done:
+  Mail opened from the base right rail (envelope
+  norm 938,770). Category red dots were on Alliance,
+  Event and In-app Purchases. Claim All pressed in
+  Event, Alliance, Season, System, Regular and Battle
+  Report: Event, Alliance, System, Regular and Battle
+  Report each answered "No rewards available"; Season
+  showed only Ice Breaking Reports from [AP3x]Abyss
+  Apex and Claim All changed nothing. In-app
+  Purchases was not opened (receipts only, per
+  activity metadata). Delete All was never pressed.
+  A transient "Doom Walker Loot received!" toast
+  text appeared in one observation after the System
+  check; its source is unverified and no reward
+  count is claimed for it. Game left on the base
+  screen. Full detail in mail-rewards/0317-queue-run.md.
