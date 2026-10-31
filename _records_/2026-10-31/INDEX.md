@@ -70,3 +70,26 @@ of 2026-10-28.
   explains the 2026-10-30 2218 unit's misses at
   y 699. Full detail in
   alliance-donations/0220-queue-run.md.
+- Radar unit radar-2026-10-31-0203, partial: duel day 6
+  stack posture - Quick Execute completed 6 tasks
+  (stamina 118 to 59), 7 rewards deliberately left
+  unclaimed, points stayed 29, stored 1/40; special
+  map pins left untapped under the pin-tap caution, so
+  the tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  radar-tasks/0239-queue-run.md.
+- Harvest unit harvest-2026-10-31-0203, partial: one
+  tap collected iron 515.0M to 522.1M; later taps
+  panned the map instead of collecting, and the Armed
+  Truck fully-loaded notice was seen but not claimed,
+  so the tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  resource-collection/0242-queue-run.md.
+- Survivors unit survivors-2026-10-31-0203, partial:
+  front gate inspected in this pan shows only
+  processed smiley bubbles, no question-mark bubbles
+  found, no intake; Quick Dispatch not run; tracker
+  untouched and the next tick re-produces this
+  regular. Session cc-599 dropped mid-unit, cc-601
+  recovered with no state lost. Full detail in
+  survivor-intake/0248-queue-run.md.
