@@ -38,3 +38,35 @@ of 2026-10-28.
   hidden-treasures/0010-queue-run.md.
 - No further unit was due in this pass (next returned
   empty), so the pass ended after this one unit.
+
+## 02:04 to about 02:11 — Queue ticker pass, Arms Race check
+
+- Ticker pass ticker-0204. Sync reaped nothing and produced
+  nothing new - all 16 due regulars were already queued by
+  the planner. No zombie chain was seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30 (chain unit 066) and its activity metadata
+  forbids seeding a fresh chain until a Zombie Invasion
+  tab is seen live in the Events hub again.
+- Arms Race unit arms-race-2026-10-31-0203,
+  skipped-needs-owner: live phase Tech Research, score 0,
+  thresholds 6,250 / 12,500 / 30,000, about 00:50 left in
+  the phase at first read. The Research Queue panel
+  showed both slots Idle, so no research completion can
+  land in the phase window; the remaining scoring paths
+  are the banned speedup and pack spends, and no
+  research was started. Cumulative chest 0 of 2 and
+  the ranking-row chest were both checked and neither
+  was claimable; no bouncing chest remained. Full
+  detail in arms-race/0211-queue-run.md.
+- Donations unit donations-2026-10-31-0203, partial:
+  22 coin donations to Rallied HP (5/10) at 600 coin
+  each, count verified step by step from 22/30 to
+  1/30, Tech EXP 817.6K to 820.1K; the final tap
+  greyed the button on a 00:48:50 timer with the
+  count label hidden, so the tracker is untouched
+  and the next tick verifies the count at 0. The
+  grounded coin Donate point is 660,765, which
+  explains the 2026-10-30 2218 unit's misses at
+  y 699. Full detail in
+  alliance-donations/0220-queue-run.md.
