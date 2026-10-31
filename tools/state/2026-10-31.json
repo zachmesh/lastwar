@@ -36,12 +36,12 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-10-31T07:42:15",
-  "note": "Coin Weekly Daily Pickup claimed; Free Supply auto-claimed"
+  "at": "2026-10-31T12:47:15",
+  "note": "All daily pickups already claimed today, nothing new claimed"
  },
  "events": {
   "status": "done",
-  "at": "2026-10-31T08:12:02",
-  "note": "Full hub sweep, nothing claimed; Day 07 still unclaimable by tap"
+  "at": "2026-10-31T12:43:33",
+  "note": "Full Events hub sweep, nothing claimable, nothing claimed"
  }
 }
