@@ -204,3 +204,62 @@ of 2026-10-28.
   CONGRATULATIONS popup showed 7 reward tiles (see the unit record).
   No fragment exchange executed. No further unit was due after
   this one; the remaining inbox units are future-planned slots.
+
+## 06:04 to about 06:12 — Queue ticker pass, radar (partial)
+
+- Radar unit radar-2026-10-31-0603, partial: duel day 6
+  Enemy Buster, stack posture. Radar Lv.13, points 29
+  (unchanged), stored tasks 13/40, stamina 101, 12 tasks
+  restoring in 04:40:36. The 7 rewards stacked by the
+  02:39 unit were deliberately left unclaimed (Claim All
+  not tapped); no Quick Execute bar was offered while
+  the Claim All bar stands, so the stored tasks could
+  not be run without claiming first. Map pins left
+  untapped under the pin-tap caution. Nothing claimed,
+  nothing spent. Full detail in radar-tasks/0612-queue-run.md.
+- No zombie chain was seeded: the Zombie Invasion event
+  ended at about the 19:00 reset on 2026-10-30 (chain
+  unit 066) and the activity metadata bars seeding until
+  a Zombie Invasion tab is seen live in the Events hub
+  again.
+
+## 06:13 to about 06:15 — Queue ticker pass, arms race (skipped-needs-owner)
+
+- Arms-race unit arms-race-2026-10-31-0603,
+  skipped-needs-owner: live phase Base Building
+  (Lv.29-30 segment, 00:46:42 left, ends about 07:03),
+  score 0, thresholds 6,250 / 12,500 / 30,000. Building
+  Queue holds only a Lv.29 Aircraft Center upgrade
+  (13d left) and a Lv.27 Drill Ground upgrade (4d
+  left), so no completion lands in the phase window;
+  the remaining paths are banned speedups and packs.
+  Completion sweep done: cumulative chest 0 of 2 and
+  ranking chest both tapped with no claim, no bouncing
+  chest or reward red dot left. Full detail in
+  arms-race/0615-queue-run.md.
+
+## 06:15 to about 06:20 — Queue ticker pass, donations (partial)
+
+- Donations unit donations-2026-10-31-0603, partial:
+  target Rallied HP 5/10, count 11/30 at entry falling
+  by verified steps to 1/30, then a final tap that
+  greyed the button on a 00:19:19 timer, so the final
+  0/30 is arithmetic, not directly read, and the
+  tracker is untouched for the next tick to verify.
+  11 coin donations, 6,600 coin spent, Tech Donation
+  Today footer 2500 to 3850 (above the 1000 reward
+  threshold; the ranking reward settles at the 19:00
+  reset with no hand claim). Diamond button never
+  touched. Full detail in alliance-donations/0620-queue-run.md.
+
+## 06:20 to about 06:25 — Queue ticker pass, harvest (partial)
+
+- Harvest unit harvest-2026-10-31-0603, partial:
+  one coin bubble tapped at its grounded centre
+  (norm 162,447) collected about 5.3M coin, HUD
+  171.5M to 176.8M verified; food and iron unchanged
+  at this rounding. Other bubbles remain and the
+  Armed Truck was not checked in this unit (no
+  fully-loaded notice in the base view; the 0242
+  unit's unclaimed truck loot stays open). Full
+  detail in resource-collection/0625-queue-run.md.
