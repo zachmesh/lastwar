@@ -1113,3 +1113,33 @@ Full detail in troop-training/1918-queue-run.md.
 
 Gifts unit gifts-2026-10-30-1830 by ticker-1904: first Alliance-panel tap at 327,499 landed on Alliance Wars (left untouched, closed); Gifts opened at 330,595. Regular Claim All claimed 170 gifts (progress 174,225,760 to 174,230,430), Premium Claim All claimed 12 gifts (progress to 174,239,060, Level 28). Game left on the Alliance panel after two bottom-left back taps produced no change. Tracker marked done.
 Full detail in alliance-gifts/1919-queue-run.md.
+
+## 1934 queue run - alliance help (done)
+
+Help unit help-2026-10-30-1830 by ticker-1934: HELP panel showed Today's points 0/1,000 and only the account's own two requests, both already 30/30 (Lv.28 Drill Ground, Lv.30 Aircraft Center); Help All pressed at 500,690 with no change, confirming no ally request was waiting. Tracker marked done.
+Full detail in alliance-help/1934-queue-run.md.
+
+## 1937 queue run - mail rewards (done)
+
+Mail unit mail-2026-10-30-1830 by ticker-1934: Alliance Claim All and Event Claim All both produced CONGRATULATIONS (Alliance: 12.1M coin, 19.0M food, 19.0M iron plus speedups; Event: Duel/Participation/Arms Race/Weekly Pass/Glittering Market/VIP rewards); Regular, Season, System and Battle Report checked with Claim All producing no change (reports/notices only). Mail label tap at 935,785 is the reliable entry on this view after icon taps failed; back arrow needed the re-grounded 162,935 point. Tracker marked done.
+Full detail in mail-rewards/1937-queue-run.md.
+
+## 1948 queue run - alliance train (done, checked only)
+
+Train unit train-2026-10-30-1830 by ticker-1934: base screen showed no "Boarding closes in" banner under the resource bar, so no train is in preparation; nothing boarded, no Trade Contracts spent. Tracker marked done.
+Full detail in alliance-train/1948-queue-run.md.
+
+## 1949 queue run - star ceremony (done, checked only)
+
+Star-ceremony unit star-ceremony-2026-10-30-1830 by ticker-1934: base screen right column showed no trophy icon beside Alliance, so no Star Ceremony is waiting; session cc-569 dropped mid-unit, cc-572 resumed with no state lost. Tracker marked done.
+Full detail in alliance-duel/1949-queue-run.md.
+
+## 1949 queue run - shop claims (partial)
+
+Passes unit passes-2026-10-30-1857 by ticker-1934: post-reset Hot Deals Military Training Pack claimed free (5m x200, Iron/Food/Coin Chest (UR) x1 each, then "Packs sold out"); Legendary Claim All ($19.99 purchase) and Drone Get Now $4.99 deliberately untouched; Coin Weekly Pass Claim tapped twice, then the different-device dialog appeared and Confirm was clicked (kick 1, app exited and relaunched cleanly) - whether the Coin pickup registered before the dialog is unverified and must be re-read next unit, along with the Super Monthly Pass pickup. Tracker untouched.
+Full detail in shop-claims/1949-queue-run.md.
+
+## 1953 queue run - event claims (partial)
+
+Events unit events-2026-10-30-1857 by ticker-1934: Arms Race Unit Progression at 0 points (chests 15,000/30,000/75,000, cumulative 0/2, nothing claimable, no grinding under this unit); Desert Storm Battlefield reads "The event is over!" with nothing to claim. Winter Battlefield and further tabs unscanned when the pass budget was reached. Tracker untouched.
+Full detail in event-claims/1953-queue-run.md.
