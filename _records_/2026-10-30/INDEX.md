@@ -1188,3 +1188,15 @@ Full detail in radar-tasks/2224-queue-run.md.
 
 Harvest unit harvest-2026-10-30-2203 by ticker-2204: 5 bubbles seen at entry, first tap at norm 398,413 cleared 4 with iron 18.7M to 19.1M; the second tap at norm 435,428 selected the High-heat Furnace Lv.30 instead of a bubble (grounding had misread a building button), selection cleared by tapping empty ground with nothing upgraded; Armed Truck not checked and no further bubble verified before the pass budget ran out. Tracker untouched.
 Full detail in resource-collection/2226-queue-run.md.
+
+## 2234 queue run - survivor intake (partial)
+
+Survivors unit survivors-2026-10-30-2203 by ticker-2234: gate line found at the top-right edge after panning back down-left from the central cluster; one question-mark tap cleared a bubble without a captured card or dialog, and one dialog survivor (POLAR GUEST, three lines, ending with an offer of coal for brewing) was taken in and walked in. No recruit card captured, Quick Dispatch not run. Tracker untouched. Zombie seeding skipped: zombie chain closed, event ended 2026-10-30 ~19:00, no Zombie tab in Events hub. Full detail in survivor-intake/2234-queue-run.md.
+
+## 2245 queue run - troop training (partial)
+
+Training unit training-2026-10-30-2203 by ticker-2234: no new blind barracks search, following five failed location units today (0248, 0714, 1119, 1613, 1918); no queue read, no batch started. Tracker untouched. Next attempt should pin the tent row from a known-good camera position or building list first. Full detail in troop-training/2245-queue-run.md.
+
+## 2246 queue run - alliance gifts (partial)
+
+Gifts unit gifts-2026-10-30-2230 by ticker-2234: Alliance panel never opened - repeated Alliance button taps produced no change in the background window; an accidental fullscreen from a title-bar tap at 100,17 (too close to the zoom button) was recovered via View then Exit Full Screen back to 642x951 window mode. No gifts claimed. Tracker untouched. Full detail in alliance-gifts/2246-queue-run.md.
