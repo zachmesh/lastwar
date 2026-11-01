@@ -1341,3 +1341,29 @@ of 2026-10-28.
   pushed on records/2026-11-01 for the integrator sweep,
   never directly to main.
   Full detail in tool-development/1336-run.md.
+
+## 13:32 to about 13:44 - Knowledge organization pass (profiles updated, PR 97)
+
+- Organizer run knowledge-organization-2026-11-01-1332,
+  worked from the 1232 watermark: zero open PRs at pass
+  start (PR 91 stands MERGED with no comments and no
+  reviews; PR 85 likewise), improvements backlog
+  unchanged at version 1.1.1, and one window of new
+  profile knowledge - the ticker-1304 mail, star-ceremony
+  and train units.
+- Profiles updated, PR 97 (OPEN, Owner
+  lastwar-knowledge-organizer): mail-rewards 1.2.0 to
+  1.3.0 (0139 entry blocker resolved by fresh grounding
+  at norm 915, 790; Alliance Exercise and train/event
+  claims with popup figures; all report tabs checked),
+  alliance-duel 1.4.0 to 1.5.0 (checked only, no trophy
+  icon; resource-bar deltas confirm the mail claims
+  landed exactly) and alliance-train 1.6.0 to 1.7.0
+  (banner-only check qualified by the 0110 station
+  evidence: banner absence alone does not prove no
+  train in preparation). Two contradictions resolved
+  (mail entry framing, train banner conclusion); no
+  record file overwritten.
+- No gap filed, no stale item marked. Next run checks
+  PR 97 review feedback first. Full detail in
+  knowledge-organization/1332-run.md.
