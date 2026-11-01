@@ -1,8 +1,8 @@
 {
   "events": {
-    "at": "2026-11-01T01:17:33",
-    "note": "Hub swept; nothing claimable outside Arms Race",
-    "status": "done"
+    "status": "done",
+    "at": "2026-11-01T10:55:34",
+    "note": "Hub swept, nothing claimable"
   },
   "gifts": {
     "at": "2026-11-01T09:39:05",
@@ -15,9 +15,9 @@
     "status": "done"
   },
   "passes": {
-    "at": "2026-11-01T01:14:20",
-    "note": "All pickups already claimed; no free pack today",
-    "status": "done"
+    "status": "done",
+    "at": "2026-11-01T10:40:27",
+    "note": "Shop checked: all daily pickups already claimed, nothing new"
   },
   "star-ceremony": {
     "at": "2026-11-01T01:08:45",

@@ -909,3 +909,31 @@ of 2026-10-28.
   synced to the owner Slack DM. End-of-pass sweep:
   zero open PRs. Full detail in
   pr-integration/1100-run.md.
+
+## 10:39 — Queue ticker pass, shop claims (done, checked)
+
+- Passes unit passes-2026-11-01-0657, done: Hot Deals showed only
+  the external-store promo, Weekly Free Supply claimed, Coin Weekly
+  Pass already claimed today, Super Monthly Pass claimed. Nothing
+  new to claim; no paid, Renew or Legendary button tapped. Full
+  detail in shop-claims/1039-queue-run.md.
+
+## 10:53 — Queue ticker pass, truck plunder (partial)
+
+- Trucks unit trucks-2026-11-01-0657, partial: trade screen
+  entered at the freshly measured truck icon centre (52,571);
+  live counters dispatch 3/5, plunder 1/4. The empty-slot plus
+  sign took four tap variants with no dispatch panel opening,
+  so no truck was dispatched and plunder was not attempted.
+  Shortfall carried forward: dispatch 2 more, plunder 3 more
+  before the 19:00 deadline. Full detail in
+  truck-plunder/1053-queue-run.md.
+
+## 10:55 — Queue ticker pass, event claims (done, checked)
+
+- Events unit events-2026-11-01-0657, done: full hub sweep -
+  Arms Race Unit Progression below chest thresholds, Frontline
+  rewards all checked, Level Swap inspected only, Community
+  claimed, Rampage Bosses with no claim button. Nothing
+  claimable, nothing paid. Full detail in
+  event-claims/1055-queue-run.md.
