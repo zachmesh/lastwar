@@ -113,3 +113,26 @@
   this pass's comment decision; no unprocessed PRs,
   no merges, no escalations. Full detail in
   pr-integration/0345-run.md.
+
+## 04:00 - PR integration 0400 run
+
+- Integrator run pr-integration-2026-11-01-0400, done:
+  one open PR at pass start (PR 49, records
+  2026-11-01, Owner: lastwar-pr-integrator).
+- Own-PR check: newest PR 49 comment is this job's
+  own 0345 hold comment; nothing addressed to this
+  job, no owner-gated escalation outstanding.
+- PR 49 HELD again, not merged: the 1ba06f3f5
+  truncation is unrepaired (branch INDEX 115 lines
+  vs 627 on main; branch action log 7 lines vs 373
+  on main). No author-side commit since the 0345
+  review except the 0345 run record itself, so no
+  duplicate feedback was posted, per the no-repeat
+  rule. No merge, so no merge-time log lines, no
+  local-main sync-back, and no Slack DM (feedback
+  lives on PR 49 from the 0345 comment).
+- records/2026-10-31 verified contained in main, no
+  PR needed. End-of-pass sweep: PR 49 only, holding
+  this pass's verified-hold decision; no unprocessed
+  PRs, no merges, no escalations. Full detail in
+  pr-integration/0400-run.md.
