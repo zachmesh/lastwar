@@ -1,17 +1,17 @@
 ---
-unit: scout-midday-2026-10-31-0700
+unit: scout-midday-scout-mid-2026-10-31-001
 regular: scout-midday
 activity: perception-scout
-segment: 2
+segment:
 priority: 2
-created_at: 2026-11-01T05:34:34Z
-expires_at: 2026-11-01T14:00:00Z
-planned_for: 2026-10-31T14:00:00Z
+created_at: 2026-11-01T10:17:29Z
+expires_at:
+planned_for:
 not_before:
-window:
+window: scout-base remainder plus scout-events, scout-store, scout-alliance groups of scout-midday-2026-10-31-0700
 est_minutes: 10
-chain_id:
-chain_seq:
+chain_id: scout-mid-2026-10-31
+chain_seq: 1
 attempts: 0
 max_attempts: 3
 claimed_by:

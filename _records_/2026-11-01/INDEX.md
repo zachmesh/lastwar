@@ -457,3 +457,23 @@ of 2026-10-28.
 ## 02:00 to about 02:10 - PR integration
 
 - PR integration run pr-integration-2026-11-01-0200, done: open PRs at pass start 0; own-PR check first, PR 37 from the previous pass stands MERGED with zero comments, nothing addressed to this job. Records/2026-10-31 verified contained in main; records/2026-11-01 held one commit beyond main (the 0145-pst run record), so this pass opened records PR 38 (Owner lastwar-pr-integrator) and merged it with merge commit 17df2ffca, branch not deleted; the PR read MERGEABLE and CLEAN, 3 files, +212/-0, all records-path types, no log line owed for the merged content beyond its own merge-time action-log line. Local main fast-forwarded 950f5a071 to 17df2ffca via the bundle route, no force, other agent worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. Full detail in pr-integration/0200-run.md.
+
+## 02:04 to about 02:15 — Queue ticker pass, scout-base (partial)
+
+- Scout unit scout-midday-2026-10-31-0700, partial:
+  first observation file of the reset day opened. Game
+  found on the Secret Command Post Hidden Treasure
+  screen (treasure 1/15; M1 x13, M2 x11, M3 x0, M4 x9,
+  M5 x0, M6 x4, M7 x13); Rewards Preview read only
+  (single dig UR 10.0 percent, SSR 30.0 percent,
+  SR 60.0 percent). Back arrow re-grounded at norm
+  112,946 after two dead taps near 83,938. Base screen
+  read live: [AP3x]Bears Lair level 30, power
+  148,957,193; HUD 289.2M, 477.2M, 10.6M, 2,366.
+  Red dots 7 seen, 4 explained, 3 unexplained
+  (Alliance dot, building badge 5, NEW! chest badge 3).
+  Scout-base remainder plus events, store and alliance
+  groups carried to a successor unit. Nothing claimed,
+  nothing spent. Full detail in
+  perception-scout/0215-queue-run.md and the day
+  observation file perception-scout/observation.md.
