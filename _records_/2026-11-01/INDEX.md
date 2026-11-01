@@ -1320,3 +1320,74 @@ of 2026-10-28.
   so no train is in preparation. Nothing boarded, no
   Trade Contracts spent. Full detail in
   alliance-train/1325-queue-run.md.
+
+## 13:30 - PR integration pass (PR 96 merged)
+
+- Integrator run pr-integration-2026-11-01-1330, one open PR at pass start (PR 96, records, ticker-1304 mail done plus star-ceremony and train checked only, Owner lastwar-pr-integrator, no comments, CLEAN). Prior integrator records PR 95 stands MERGED, no comments outstanding. Branch 2026-10-31 at 4c72f0b5 verified contained in main, no PR needed; branch 2026-11-01 at 88ff01cc ahead by three commits, covered by PR 96.
+- Records PR 96 merged ca4aea22e, branch kept (verified still at 88ff01cc after merge). No knowledge/code PRs, no feedback, no owner-gated escalations, no conflicts. No local main sync-back owed (records-only merge). Merge synced to the owner Slack DM. End-of-pass sweep: zero open PRs. Full detail in pr-integration/1330-run.md.
+
+## 13:32 to about 13:36 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-1336,
+  no-op: zero open PRs at pass start and at re-check after
+  the 1330 integrator pass merged records PR 96, own
+  tooling PRs 73, 42, 36, 30, 23 and 11 all merged, backlog
+  version 1.1.1 unchanged with every tooling entry
+  implemented, and standing tool queue items (1), (2) and
+  (3) all merged. The 1247 planner repeat of the 02:15
+  narrative gap is the gap PR 73 already implemented;
+  narrative free-text parsing stays deliberately not taken
+  up. No tool branch, no PR, no backlog change. Record
+  pushed on records/2026-11-01 for the integrator sweep,
+  never directly to main.
+  Full detail in tool-development/1336-run.md.
+
+## 13:32 to about 13:44 - Knowledge organization pass (profiles updated, PR 97)
+
+- Organizer run knowledge-organization-2026-11-01-1332,
+  worked from the 1232 watermark: zero open PRs at pass
+  start (PR 91 stands MERGED with no comments and no
+  reviews; PR 85 likewise), improvements backlog
+  unchanged at version 1.1.1, and one window of new
+  profile knowledge - the ticker-1304 mail, star-ceremony
+  and train units.
+- Profiles updated, PR 97 (OPEN, Owner
+  lastwar-knowledge-organizer): mail-rewards 1.2.0 to
+  1.3.0 (0139 entry blocker resolved by fresh grounding
+  at norm 915, 790; Alliance Exercise and train/event
+  claims with popup figures; all report tabs checked),
+  alliance-duel 1.4.0 to 1.5.0 (checked only, no trophy
+  icon; resource-bar deltas confirm the mail claims
+  landed exactly) and alliance-train 1.6.0 to 1.7.0
+  (banner-only check qualified by the 0110 station
+  evidence: banner absence alone does not prove no
+  train in preparation). Two contradictions resolved
+  (mail entry framing, train banner conclusion); no
+  record file overwritten.
+- No gap filed, no stale item marked. Next run checks
+  PR 97 review feedback first. Full detail in
+  knowledge-organization/1332-run.md.
+
+## 13:39 to about 13:46 - PR catch-all pass (no-op)
+
+- Catchall run pr-catchall-2026-11-01-1339, no-op: own-PR
+  check first, no adopted PR to re-check; one open PR at
+  pass start and at the end-of-pass re-read, PR 97, docs
+  activities naming Owner lastwar-knowledge-organizer,
+  matching its three-file diff, with zero comments and zero
+  reviews. PR 91 verified MERGED. No adoption, no fix, no
+  hand-off, no owner-gated escalation, no stale-owner flag.
+  Full detail in pr-catchall/1339-run.md.
+
+## 13:40 to about 13:50 — Queue planning pass (no-op)
+
+- Planner run queue-planning-2026-11-01-1350, no-op:
+  plan staged 0 units to the 01:40 horizon, 65 already
+  present, 6 skipped done current, 0 reaped, 0 expired.
+  Pre-reset sweep production skipped (13:00 hour, not
+  17:00; sweep pairs for 2026-11-01 and 2026-11-02 already
+  in pool). scout_diff dry and applied on the 02:15
+  observation with 0 items parsed - the observation carries
+  no observed_items block - 0 enqueued, 0 candidates,
+  0 unexplained in the diff. Queue cleanup 0 withdrawn.
+  Full detail in queue-planning/1350-run.md.
