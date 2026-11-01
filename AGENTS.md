@@ -1,8 +1,8 @@
 ---
 title: Last War Agent Entry Point
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:26:52Z
-version: 1.4.1
+modified: 2026-11-01T07:58:31Z
+version: 1.4.2
 description: Project instructions and adoption of reflection typed-folder conventions
 grounded_in:
   - source: owner request to adopt dtadpole/reflection shared conventions
@@ -38,10 +38,10 @@ lives here: schedules, strategy, tools, resource maps and records.
 Nothing load-bearing is kept only in chat or in the agent's memory.
 If a fact, rule, list or tool would matter next week, it is written
 into this repository in the same session that produced it - the
-duel schedule in `_knowledge_` and `tools/duel_schedule.json`, the
+duel schedule in `_knowledge_` and `_tools_/duel_schedule.json`, the
 strategy in `_knowledge_/strategy-playbook`, the resource map in
-`tools/resources.json` and its snapshots, and the working tools in
-`tools/`.
+`_tools_/resources.json` and its snapshots, and the working tools in
+`_tools_/`.
 
 ## Governance
 

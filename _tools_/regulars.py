@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Regulars tracker for the Last War every-4-hours routine rounds.
 
-Keeps one state file per local date under tools/state/, so any run can
-answer two questions fast: what regulars exist (tools/regulars.json),
+Keeps one state file per local date under _tools_/state/, so any run can
+answer two questions fast: what regulars exist (_tools_/regulars.json),
 and which of them are still expected (not yet done) in this cycle.
 
 Usage:

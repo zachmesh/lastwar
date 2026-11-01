@@ -1,9 +1,9 @@
 ---
 title: Miss Audit 2026-10-31
 created: 2026-11-01T04:53:00Z
-modified: 2026-11-01T04:55:00Z
+modified: 2026-11-01T07:58:31Z
 level: L2
-version: 1.1.0
+version: 1.1.1
 description: Root cause audit of every non-done queue unit executed on 2026-10-30 and 2026-10-31 plus the owner expanded collection checklist of eight items
 status: audit-complete
 grounded_in:
@@ -33,8 +33,8 @@ estimating.
   (2052 and 2124 queue runs). They are included, which brings the
   audited total to 198 units - exactly the 198 execution record files
   in the two date folders (116 plus 82, day INDEX files excluded).
-- The day trackers in `tools/state/2026-10-30.json` and
-  `tools/state/2026-10-31.json` are last-write snapshots per regular
+- The day trackers in `_tools_/state/2026-10-30.json` and
+  `_tools_/state/2026-10-31.json` are last-write snapshots per regular
   (13 and 11 entries), not unit counts. Each shows one skipped entry,
   the Base Building Arms Race miss of that day. Both are already
   counted once in the queue scope and are not double counted here.
@@ -508,7 +508,7 @@ either day.
   activity metadata (`_activities_/daily-missions/INDEX.md`, which
   still carries only 2026-10-25 knowledge, activity 100 points with
   the 40 and 80 point chests claimed that day) but it is not one of
-  the 18 regulars in `tools/regulars.json`, so the planner never
+  the 18 regulars in `_tools_/regulars.json`, so the planner never
   produced a unit for it. This was not a failed execution. It was
   never scheduled.
 - Whether the chests were claimed some other way, for example by
@@ -655,7 +655,7 @@ by-design partials, so this cause is lettered I.
   mention of any kind.
 - Age and mechanism of the suspension - named by the owner on
   2026-10-25, hunted once that night, and then dropped. It is not
-  in `tools/regulars.json`, no unit type produces it, no follow-up
+  in `_tools_/regulars.json`, no unit type produces it, no follow-up
   was ever enqueued, and no report in the six days since has named
   it as still open. Unlike every other item in this audit, it did
   not fail in execution. It was never executed again.

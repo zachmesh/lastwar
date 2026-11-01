@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Resource map for the Last War account.
 
-Keeps an append-only snapshot history (tools/state/resources.jsonl) of
+Keeps an append-only snapshot history (_tools_/state/resources.jsonl) of
 every resource a run reads off the HUD, and checks the newest snapshot
-against the floors in tools/resources.json so a stretched resource
+against the floors in _tools_/resources.json so a stretched resource
 (coin at 565K on 2026-10-25) is flagged instead of discovered late.
 
 Usage:

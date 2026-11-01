@@ -1,0 +1,34 @@
+---
+title: Repository Tools
+created: 2026-11-01T07:58:31Z
+modified: 2026-11-01T07:58:31Z
+version: 1.0.0
+description: Executable helpers, configuration and runtime state
+---
+
+# Repository tools
+
+Run commands from the repository root with Python 3. These helpers use the
+standard library and locate their data relative to their script or repository.
+
+| Tool | Purpose | Data |
+|---|---|---|
+| [queue.py](queue.py) | Enqueue, claim and complete execution units | `../_queue_/` |
+| [regulars.py](regulars.py) | Track recurring activities | [regulars.json](regulars.json) and [state](state/INDEX.md) |
+| [duel.py](duel.py) | Calculate the active duel day and advice | [duel_schedule.json](duel_schedule.json) |
+| [resource_map.py](resource_map.py) | Record resource snapshots and check floors | [resources.json](resources.json) and [state](state/INDEX.md) |
+| [scout_diff.py](scout_diff.py) | Compare observations with activities and plan work | `../_activities_/` and `../_queue_/` |
+| [retro_report.py](retro_report.py) | Aggregate queue results into review metrics | `../_queue_/` and `../_records_/retro/` |
+
+For example, run `python3 _tools_/regulars.py todo --json` or
+`python3 _tools_/queue.py next --budget-minutes 15`.
+
+`_tools_/` is the canonical directory. The root `tools` symlink keeps existing
+external job commands and historical paths working during migration. It shares
+all configuration and state with `_tools_/`; it is not a second installation.
+New job commands, stage pathspecs and documentation use `_tools_/`. Keep the
+compatibility link until external callers have been verified to use that path.
+
+This executable payload retains its existing Python and JSON filenames as
+specified in the [type registry](../_conventions_/local-conventions/typed-folder-adoption.md).
+Validate write operations against an isolated pool and output directory.

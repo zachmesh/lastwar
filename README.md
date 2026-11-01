@@ -1,8 +1,8 @@
 ---
 title: Last War Records
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:26:52Z
-version: 1.4.1
+modified: 2026-11-01T07:58:31Z
+version: 1.4.2
 description: Record library for one Last War Survival account, covering knowledge, tasks, activities and play records
 grounded_in:
   - source: human-authored
@@ -19,6 +19,7 @@ evidence live in
 - [`_activities_/`](_activities_/INDEX.md) — one folder per activity type, each accumulating the knowledge for that type, plus the umbrella daily checklist.
 - [`_records_/`](_records_/INDEX.md) — append-only play records, organised by date, then one folder per activity type, then one file per execution.
 - [`_conventions_/`](_conventions_/INDEX.md) — how this repository is kept.
+- [`_tools_/`](_tools_/INDEX.md) — executable helpers, configuration and runtime state.
 - [`_logs_/`](_logs_/INDEX.md) — append-only repository action and input logs.
 
 One-off improvement work is tracked in the [improvements backlog](_records_/retro/improvements.md).

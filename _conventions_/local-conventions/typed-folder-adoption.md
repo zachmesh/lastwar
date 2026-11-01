@@ -1,9 +1,9 @@
 ---
 title: Typed-folder Adoption
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-01T07:58:31Z
 level: L2
-version: 1.3.1
+version: 1.3.2
 description: Adoption of reflection typed-folder format and constitutions, with the local type registry
 status: unverified
 grounded_in:
@@ -45,7 +45,14 @@ Introducing a type registers it here in the same commit.
 | `_logs_` | append-only repository entries | reflection vocabulary |
 | `_conventions_` | convention articles, agent-maintainable | reflection vocabulary |
 | `_queue_` | task units of the play routine, in inbox, claimed and done state subfolders | local, registered 2026-10-28 |
+| `_tools_` | executable helpers, configuration and runtime state | local, registered 2026-11-01 |
 | `_context_` | gathered source material that grounds a topic | reflection vocabulary |
+
+Executable tools are a payload exception to the instance-folder rule. Their
+Python filenames, JSON configuration files and `state/` layout stay stable for
+callers. `_tools_/INDEX.md` inventories them. The root `tools` symlink is a
+compatibility entry point for existing external job commands; new commands use
+`_tools_/`. Both paths address the same files and state.
 
 ## Read next
 

@@ -1,8 +1,8 @@
 ---
 title: Push and PR Policy
 created: 2026-11-01T05:31:00Z
-modified: 2026-11-01T06:28:00Z
-version: 2.2.1
+modified: 2026-11-01T07:58:31Z
+version: 2.2.2
 status: draft
 description: PR-only main policy - main advances only by pull request merge, records ride date branches, every pull request carries a named owning scheduled job, and every executor run checks its own pull requests first and ends by opening one
 grounded_in:
@@ -44,7 +44,7 @@ without touching main directly:
   append-only under C1.
 - `_queue_` - the task unit pool and its state transitions.
 - `_logs_` - the input and action logs.
-- `tools/state/` - runtime state written by the tools
+- `_tools_/state/` - runtime state written by the tools
   themselves (for example the regulars tracker state).
 
 Writers commit these paths to a date branch named
@@ -95,8 +95,8 @@ resumes once the branch is clean.
 ## Knowledge and code pull requests
 
 Everything outside the four records paths is load-bearing and
-lands by its own pull request: `tools/` (the only exception
-inside `tools/` is `tools/state/` above), `_conventions_`,
+lands by its own pull request: `_tools_/` (the only exception
+inside `_tools_/` is `_tools_/state/` above), `_conventions_`,
 `_activities_`, the root documents and `AGENTS.md`, and
 anything not listed under the records flow by default.
 
@@ -143,7 +143,7 @@ merging stays with the integrator, exactly as above.
 
 Ownership is assigned by the class of the change:
 
-- `tools/` code and tool behaviour changes -
+- `_tools_/` code and tool behaviour changes -
   `lastwar-tool-developer`.
 - `_activities_`, `_conventions_` and profile/convention
   changes - `lastwar-knowledge-organizer`.
@@ -380,7 +380,7 @@ change in the changelog below.
   its body at creation (an `Owner:` line); the owner fixes
   review feedback on the same branch, replies on the PR, and
   drives it to mergeable, while merging stays with the
-  integrator. Assignment is by change class - `tools/` to
+  integrator. Assignment is by change class - `_tools_/` to
   `lastwar-tool-developer`, `_activities_` and
   `_conventions_` to `lastwar-knowledge-organizer`, records
   PRs to `lastwar-pr-integrator` - and anything no class

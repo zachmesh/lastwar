@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:38:00Z
-version: 0.14.0
+modified: 2026-11-01T07:58:31Z
+version: 0.14.1
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -42,7 +42,7 @@ session, and the evidence of 2026-10-27 and 2026-10-28 shows the cost.
 
 ## 2. Concepts
 
-- **Task unit** - one regular from `tools/regulars.json`, sized to
+- **Task unit** - one regular from `_tools_/regulars.json`, sized to
   finish in a few minutes. A unit is a Markdown file whose frontmatter
   is one structured YAML document describing the task, its queue state
   and, once executed, its result and result statistics (sections 4
@@ -61,7 +61,7 @@ session, and the evidence of 2026-10-27 and 2026-10-28 shows the cost.
   `inbox` holds pending units, `claimed` holds units under execution,
   `done` holds finished units. Moving a file is the state transition.
 - **Producer** - a short job that reads the due list from
-  `tools/regulars.py` and writes one unit file per due regular into
+  `_tools_/regulars.py` and writes one unit file per due regular into
   `inbox`. It never touches the device.
 - **Executor loop** - the main agent's standing job under this
   design. It keeps executing where work is needed - take the device
@@ -113,13 +113,13 @@ The unit frontmatter is the single structured source for the unit -
 what the task is, where it is (the state subfolder plus the claim
 fields below), and what it produced (the result section in section
 5). Status, statistics and reports are gathered from these fields by
-`tools/queue.py stats`, never by scraping prose. Values are kept
+`_tools_/queue.py stats`, never by scraping prose. Values are kept
 colon-free except timestamps, as elsewhere in this repository.
 
 | Field | Meaning |
 |---|---|
 | `unit` | unit id, matches the file name |
-| `regular` | regular id from tools/regulars.json |
+| `regular` | regular id from _tools_/regulars.json |
 | `activity` | activity type folder name for the run record |
 | `segment` | owning segment under the current routine, kept for reporting |
 | `priority` | 1 expiry-critical, 2 windowed, 3 standard, 4 background |
@@ -152,7 +152,7 @@ Priority classes from the current regulars.
 ## 5. Result and result statistics
 
 On completion the executor writes a `result` mapping into the same
-frontmatter (via `tools/queue.py complete`) and the unit moves to
+frontmatter (via `_tools_/queue.py complete`) and the unit moves to
 `done`. A completed unit therefore carries its whole life in one
 structured document - task, claim, result and statistics.
 
@@ -187,7 +187,7 @@ each new unit with the current learned estimate, and the stats
 report shows it next to the sample count, so a type whose typical
 time creeps toward the 15 minute cap is visible and gets split at
 intake instead of silently overrunning.
-Because the keys are structured, `tools/queue.py stats` aggregates
+Because the keys are structured, `_tools_/queue.py stats` aggregates
 reliably across the whole pool - counts by state and by regular,
 result status totals, duration averages and maxima, units finished
 after their expiry, units expired while waiting, and claims past
@@ -327,7 +327,7 @@ Production has two layers (owner direction 2026-10-28).
   which slice a regular belonged to under the old routine; nothing
   schedules by it anymore.
 - The round summary for Slack assembles from the `done` units'
-  structured result sections, gathered by `tools/queue.py stats`,
+  structured result sections, gathered by `_tools_/queue.py stats`,
   instead of three segment records. The same command doubles as the
   pool health report for the owner.
 
@@ -466,13 +466,13 @@ planner (section 7) stages windows from three cadences - the 4
 hour segment anchors, the daily reset and Thursdays. It cannot
 yet express fixed clock slots such as 17:30 and 18:30, so until
 it can, the sweep pair is enqueued manually with
-`tools/queue.py enqueue` - regular `zero-sweep`, one chain per
+`_tools_/queue.py enqueue` - regular `zero-sweep`, one chain per
 reset day (chain id `pre-reset-sweep-<local date>`), priority 1,
 `not_before` set to the slot start in UTC, `expires_at` set to
 the reset, `est_minutes` 15. The pair for the 2026-11-01 reset
 (chain pre-reset-sweep-2026-11-01, units 001 and 002) was enqueued
 this way with the 0.7.0 change. The planner-side interface still
-to build - a fixed-slot daily cadence in `tools/queue.py plan`,
+to build - a fixed-slot daily cadence in `_tools_/queue.py plan`,
 taking a list of local clock slots per regular and staging them
 through the same (regular, planned_for) invariant, so the sweep
 becomes a produced regular with two daily slots instead of a
@@ -500,7 +500,7 @@ section fixes the queue-level contract.
   name the activity `perception-scout`. Scout units are windowed
   work - priority 2; the production priority table carries
   their entries since the Phase 2 change (SYNC_PRIORITY and the
-  SYNC_EST_MINUTES seeds of 10 minutes in `tools/queue.py`). A
+  SYNC_EST_MINUTES seeds of 10 minutes in `_tools_/queue.py`). A
   scout unit observes and records only - it never claims,
   fights, dispatches or buys. The work it finds belongs to the
   owning regular own unit.
@@ -541,7 +541,7 @@ section fixes the queue-level contract.
   window text when the diff creates them. Unknown items enter as
   priority 2 exploration units and are governed by rule R5 from
   their first day. The diff itself is a program since Phase 2 -
-  `tools/scout_diff.py` reads the day observation file, diffs it
+  `_tools_/scout_diff.py` reads the day observation file, diffs it
   against the regulars, the `_activities_` roster with its
   candidate register, the ledger and the pool, and produces the
   enqueue plan, the candidate filings and the coverage report
@@ -652,7 +652,7 @@ work, not paperwork after it.
 ### Aggregation - the retro_report.py specification
 
 Aggregation is specified here and implemented as
-`tools/retro_report.py` (landed 2026-11-01). The tool
+`_tools_/retro_report.py` (landed 2026-11-01). The tool
 aggregates by task type, per day and over a rolling window -
 
 ```text
@@ -759,7 +759,7 @@ depth and oldest unit age the 2026-10-31 loop review found
 missing. The daily retro computes its core set, the weekly
 comparison reads the trend, and threshold breaches are named
 the day they are computed. Its computation extends
-`tools/retro_report.py` as a `system_metrics` object in the
+`_tools_/retro_report.py` as a `system_metrics` object in the
 same data appendix, filed in the tool-developer backlog in the
 specification's own terms.
 
@@ -786,9 +786,9 @@ reached main unreviewed.
   companion that measures execution efficiency, perception,
   discovery, retro effectiveness and the impact of the tool
   developer and the knowledge organiser, with its computation
-  extending tools/retro_report.py.
+  extending _tools_/retro_report.py.
 - 0.11.0, 2026-11-01 - the aggregation of section 14 is
-  implemented as `tools/retro_report.py` - per regular, per
+  implemented as `_tools_/retro_report.py` - per regular, per
   day and rolling window aggregates over the done pool, the
   records INDEX fallback for result-less units, parse errors
   listed rather than skipped, no-data regulars stated, and
@@ -798,11 +798,11 @@ reached main unreviewed.
   pool; fixture validated in /tmp against hand-computed
   figures.
 - 0.10.0, 2026-11-01 - Phase 2 of the perception layer landed
-  in section 13 - `tools/scout_diff.py` implemented (dry run by
+  in section 13 - `_tools_/scout_diff.py` implemented (dry run by
   default, `--apply` only against an explicitly named pool
   root, scratch-pool validated), the scout and scout-midday
   production priorities and estimate seeds recorded as landed
-  in `tools/queue.py`, and the learning and knowledge hardening
+  in `_tools_/queue.py`, and the learning and knowledge hardening
   protocol of the perception document (its section 10)
   referenced, with radar-tasks as the first retrospective
   hardening target. Section 14 added under the owner direction
@@ -811,7 +811,7 @@ reached main unreviewed.
   per-unit result stats keys (target, achieved,
   resources_gained, points, costs, verified, blocker_category
   in the miss audit classes), the aggregation specification
-  for a later `tools/retro_report.py` writing only into
+  for a later `_tools_/retro_report.py` writing only into
   `_records_/retro/`, and the daily rolling retro whose
   improvement actions split into execution knowledge and meta
   knowledge, each carrying a verification method and a next-day

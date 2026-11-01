@@ -1,9 +1,9 @@
 ---
 title: Perception-Driven Queue
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-01T05:24:07Z
+modified: 2026-11-01T07:58:31Z
 level: L2
-version: 1.2.1
+version: 1.2.2
 description: The scout layer - daily work is determined by what the game screen actually offers, perceived first and scheduled by observation triggers rather than fixed slots, with the regulars kept as a capability profile library and new tasks discovered, profiled and scheduled automatically
 status: phase-2-landed
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
 ## 1. Principle
 
 Until now the day was defined by a static list - the 19 regulars
-in `tools/regulars.json`. The planner staged one unit per regular
+in `_tools_/regulars.json`. The planner staged one unit per regular
 per window, and the executor worked the list. The miss audit of
 2026-10-31 showed the structural cost of that definition - work
 the list did not name did not exist. Daily missions were modelled
@@ -253,7 +253,7 @@ State vocabulary -
 
 ### The capability profile
 
-Under the owner refinement, `tools/regulars.json` is the index
+Under the owner refinement, `_tools_/regulars.json` is the index
 of a profile library, and each regular profile - the index row
 plus its `_activities_` metadata - carries these fields -
 
@@ -529,7 +529,7 @@ section 4. The file is the single input the diff works from,
 and the evidence every scout unit result points at.
 
 **Scout unit results.** A scout unit completes through
-`tools/queue.py complete` like any unit. Its result must carry -
+`_tools_/queue.py complete` like any unit. Its result must carry -
 
 - `evidence` - the day observation file.
 - `stats` - surfaces_walked, items_observed, red_dots_seen,
@@ -538,9 +538,9 @@ and the evidence every scout unit result points at.
   unknowns awaiting their exploration unit, named - never a bare
   `none` while the pass holds an open signal.
 
-## 9. Tool - tools/scout_diff.py (Phase 2, implemented)
+## 9. Tool - _tools_/scout_diff.py (Phase 2, implemented)
 
-Implemented 2026-11-01 as `tools/scout_diff.py` (standard library
+Implemented 2026-11-01 as `_tools_/scout_diff.py` (standard library
 only), to the design this section fixed in Phase 1. The tool is
 the diff of section 5 as a program, so the step from observation
 to queue stops depending on an executor remembering to do it.
@@ -548,7 +548,7 @@ to queue stops depending on an executor remembering to do it.
 **CLI usage**
 
 ```text
-tools/scout_diff.py --observation FILE [--date YYYY-MM-DD]
+_tools_/scout_diff.py --observation FILE [--date YYYY-MM-DD]
                     [--out DIR] [--root POOL] [--repo DIR]
                     [--regulars FILE] [--ledger FILE]
                     [--now ISO] [--apply] [--format text|json]
@@ -562,7 +562,7 @@ tools/scout_diff.py --observation FILE [--date YYYY-MM-DD]
   at any depth.
 - Without `--apply` the tool is a dry run - it writes its three
   outputs and changes no pool. With `--apply` it writes the
-  enqueue plan into the pool through `tools/queue.py enqueue`,
+  enqueue plan into the pool through `_tools_/queue.py enqueue`,
   one call per unit, so every unit it creates passes the same
   validation as a manual enqueue - the cap check, the chain
   homogeneity check, the file layout. `--apply` refuses to run
@@ -590,7 +590,7 @@ tools/scout_diff.py --observation FILE [--date YYYY-MM-DD]
 - The candidate register - the provisional profiles under
   `_activities_` and their states (section 6), so a candidate
   already filed is recognised, not rediscovered.
-- `tools/regulars.json` - the profile library index, read for
+- `_tools_/regulars.json` - the profile library index, read for
   its trigger conditions and deadline shapes, not only its
   cadences - the planner evolution of section 5 consumes
   observations plus profile triggers, and this tool is that
@@ -603,7 +603,7 @@ tools/scout_diff.py --observation FILE [--date YYYY-MM-DD]
 **Outputs**
 
 1. **The enqueue plan** - one entry per unit to create or raise,
-   in the exact field shape `tools/queue.py enqueue` consumes -
+   in the exact field shape `_tools_/queue.py enqueue` consumes -
    regular, activity, priority computed by the formula of
    section 5, expires_at from the item deadline, not_before,
    window text naming the observation and the trigger it came
@@ -747,7 +747,7 @@ retro review mechanism (task unit queue design, section 14) -
 what units measured, gained and were blocked by is aggregated
 there, and its execution-knowledge actions land back here as
 profile hardening. The aggregation tool of that mechanism,
-`tools/retro_report.py`, is implemented (2026-11-01) to the
+`_tools_/retro_report.py`, is implemented (2026-11-01) to the
 section 14 specification and writes its metrics appendix into
 `_records_/retro/`.
 
@@ -757,7 +757,7 @@ section 14 specification and writes its metrics appendix into
   change).** This design, the perception layer section of the
   task unit queue design, the observed items schema, the
   traversal checklist, and the scout regulars in
-  `tools/regulars.json` with their activity metadata. Scout
+  `_tools_/regulars.json` with their activity metadata. Scout
   passes run as executor-produced chains under the existing
   planner; the diff of section 5 is applied by the executor
   from the observation file, by hand, under the rules above.
@@ -770,12 +770,12 @@ section 14 specification and writes its metrics appendix into
   perception. The executor applies those rules by hand in this
   phase exactly as it applies the diff.
 - **Phase 2 - the diff tool and the planner hookup
-  (implemented 2026-11-01).** `tools/scout_diff.py` is
+  (implemented 2026-11-01).** `_tools_/scout_diff.py` is
   implemented to the design of section 9 - dry run by default,
   `--apply` only against an explicitly named pool root - and
   the queue tool priority entries for the scout regulars are
   landed (SYNC_PRIORITY and SYNC_EST_MINUTES in
-  `tools/queue.py`). The tool was validated on a scratch pool
+  `_tools_/queue.py`). The tool was validated on a scratch pool
   against a synthetic observation covering a known actionable
   item, known items blocked by state and by red line, an unknown
   candidate and unmatched labels - classification, the priority
