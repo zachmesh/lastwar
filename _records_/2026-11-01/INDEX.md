@@ -737,3 +737,16 @@ of 2026-10-28.
   route. Merges synced to the owner Slack DM.
   End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0945-run.md.
+
+## 10:00 to about 10:03 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1000. Zero
+  open PRs at pass start; records/2026-11-01 ahead of
+  main by the 0945 run record only, so records PR 75 was
+  opened and merged with a merge commit (973bfbf7),
+  branch not deleted. Records/2026-10-31 verified
+  contained in main, so no PR needed. Local main
+  fast-forwarded to the merge via the bundle route.
+  Merge synced to the owner Slack DM. End-of-pass sweep:
+  zero open PRs.
+  Full detail in pr-integration/1000-run.md.
