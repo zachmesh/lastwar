@@ -675,3 +675,31 @@ of 2026-10-28.
   fix, no hand-off, no owner-gated point, no stale-owner
   flag. Quiet run, no Slack DM sync. PR 68 MERGED.
   Full detail in pr-catchall/0939-run.md.
+## 09:40 to about 09:44 — Queue planning pass (no-op)
+
+- Planner run queue-planning-2026-11-01-0944, no-op:
+  plan staged 0 units to the 21:40 horizon, 69 already
+  present, 2 skipped as done for the current slot, 0
+  reaped, 0 expired. The 0745 run had already staged
+  the pool to the 19:40 horizon; the next regular
+  slots (22:03, 22:30, 22:57) lie beyond this run's window.
+- Pre-reset sweep production skipped (09:00 hour, not
+  17:00); the sweep pairs for 2026-11-01 and 2026-11-02
+  already sit in the pool, pending 2 each.
+- scout_diff dry and applied on the 02:15 observation:
+  0 items parsed (narrative-only observation, no
+  observed_items block), 0 enqueued, 0 candidates,
+  0 unexplained in the diff - matching the 0344, 0445,
+  0543, 0644, 0745 and 0844 runs on the same observation. The
+  observation frontmatter's 3 unexplained red dots are
+  not captured by the diff; PR 73 (tool-developer, open)
+  implements carrying the frontmatter day counters, and
+  the gap is left for the retro and tool-development,
+  not a chat report.
+- Queue cleanup: 0 units withdrawn - the diff classified
+  nothing as already satisfied, the observation shows
+  pending badges rather than any queued task read as
+  claimed, done or gone, and the observation predates
+  the units staged after it.
+- Delivered on records/2026-11-01 under policy 2.0.0.
+  Full detail in queue-planning/0944-run.md.
