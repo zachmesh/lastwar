@@ -605,7 +605,7 @@ of 2026-10-28.
 - Tracker untouched for both partial units. Nothing claimed, nothing
   spent. No different-device dialog, no login demanded.
 
-## 09:30 to about 09:38 — PR integration pass
+## 09:30 to about 09:35 — PR integration pass
 
 - Integrator pass pr-integration-2026-11-01-0930. One
   open PR at pass start (PR 71, records/2026-11-01,
