@@ -1,37 +1,47 @@
 {
-  "events": {
-    "status": "done",
-    "at": "2026-11-01T10:55:34",
-    "note": "Hub swept, nothing claimable"
-  },
-  "gifts": {
-    "at": "2026-11-01T09:39:05",
-    "note": "Regular 222 + Premium 18 claimed",
-    "status": "done"
-  },
-  "help": {
-    "at": "2026-11-01T09:40:59",
-    "note": "Help All pressed, gratitude confirmed",
-    "status": "done"
-  },
-  "passes": {
-    "status": "done",
-    "at": "2026-11-01T10:40:27",
-    "note": "Shop checked: all daily pickups already claimed, nothing new"
-  },
-  "star-ceremony": {
-    "at": "2026-11-01T01:08:45",
-    "note": "No ceremony waiting; weekly rank 190, 17240439 pts; daily total unverified",
-    "status": "done"
-  },
-  "train": {
-    "at": "2026-11-01T01:11:06",
-    "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure",
-    "status": "done"
-  },
-  "treasures": {
-    "status": "done",
-    "at": "2026-11-01T01:45:43",
-    "note": "Fragments checked, no complete set, Dig greyed out"
-  }
+ "donations": {
+  "at": "2026-11-01T11:32:46",
+  "note": "9 coin donations to Rallied HP",
+  "status": "done"
+ },
+ "events": {
+  "at": "2026-11-01T10:55:34",
+  "note": "Hub swept, nothing claimable",
+  "status": "done"
+ },
+ "gifts": {
+  "at": "2026-11-01T09:39:05",
+  "note": "Regular 222 + Premium 18 claimed",
+  "status": "done"
+ },
+ "help": {
+  "at": "2026-11-01T09:40:59",
+  "note": "Help All pressed, gratitude confirmed",
+  "status": "done"
+ },
+ "passes": {
+  "at": "2026-11-01T10:40:27",
+  "note": "Shop checked: all daily pickups already claimed, nothing new",
+  "status": "done"
+ },
+ "radar": {
+  "at": "2026-11-01T11:20:15",
+  "note": "Stack execute 5 tasks unclaimed, pending rewards 11",
+  "status": "done"
+ },
+ "star-ceremony": {
+  "at": "2026-11-01T01:08:45",
+  "note": "No ceremony waiting; weekly rank 190, 17240439 pts; daily total unverified",
+  "status": "done"
+ },
+ "train": {
+  "at": "2026-11-01T01:11:06",
+  "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure",
+  "status": "done"
+ },
+ "treasures": {
+  "at": "2026-11-01T01:45:43",
+  "note": "Fragments checked, no complete set, Dig greyed out",
+  "status": "done"
+ }
 }
