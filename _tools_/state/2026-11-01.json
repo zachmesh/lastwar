@@ -1,47 +1,47 @@
 {
- "donations": {
-  "at": "2026-11-01T11:32:46",
-  "note": "9 coin donations to Rallied HP",
-  "status": "done"
- },
- "events": {
-  "at": "2026-11-01T10:55:34",
-  "note": "Hub swept, nothing claimable",
-  "status": "done"
- },
  "gifts": {
-  "at": "2026-11-01T09:39:05",
-  "note": "Regular 222 + Premium 18 claimed",
-  "status": "done"
+  "status": "done",
+  "at": "2026-11-01T12:21:55",
+  "note": "Claim All both tabs: 22 Regular + 3 Premium gifts"
  },
  "help": {
+  "status": "done",
   "at": "2026-11-01T09:40:59",
-  "note": "Help All pressed, gratitude confirmed",
-  "status": "done"
- },
- "passes": {
-  "at": "2026-11-01T10:40:27",
-  "note": "Shop checked: all daily pickups already claimed, nothing new",
-  "status": "done"
- },
- "radar": {
-  "at": "2026-11-01T11:20:15",
-  "note": "Stack execute 5 tasks unclaimed, pending rewards 11",
-  "status": "done"
+  "note": "Help All pressed, gratitude confirmed"
  },
  "star-ceremony": {
+  "status": "done",
   "at": "2026-11-01T01:08:45",
-  "note": "No ceremony waiting; weekly rank 190, 17240439 pts; daily total unverified",
-  "status": "done"
+  "note": "No ceremony waiting; weekly rank 190, 17240439 pts; daily total unverified"
  },
  "train": {
+  "status": "done",
   "at": "2026-11-01T01:11:06",
-  "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure",
-  "status": "done"
+  "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-01T10:40:27",
+  "note": "Shop checked: all daily pickups already claimed, nothing new"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-01T10:55:34",
+  "note": "Hub swept, nothing claimable"
  },
  "treasures": {
+  "status": "done",
   "at": "2026-11-01T01:45:43",
-  "note": "Fragments checked, no complete set, Dig greyed out",
-  "status": "done"
+  "note": "Fragments checked, no complete set, Dig greyed out"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-01T11:20:15",
+  "note": "Stack execute 5 tasks unclaimed, pending rewards 11"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-11-01T11:32:46",
+  "note": "9 coin donations to Rallied HP"
  }
 }
