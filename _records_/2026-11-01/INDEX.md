@@ -1264,3 +1264,16 @@ of 2026-10-28.
   nothing as already satisfied, and the observation
   predates the units staged since 02:15 local.
   Full detail in queue-planning/1247-run.md.
+## 12:41 to about 12:58 — Queue ticker pass, Crystal Shop (partial)
+
+- Crystal Shop unit crystal-shop-2026-11-01-0500, partial:
+  the Crystal Shop tab was not located. The shop tab row was
+  scrolled fully and read live, Official Event, Weekly Deal,
+  Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall,
+  Hot Sale Packs, with no Building tab and no Crystal Shop
+  tab. The MALL header tap did not switch sections, and the
+  Gold Brick Mall tab opened only a four step tutorial popup
+  that two X taps did not dismiss. No spending, no claims.
+  Next unit uses a changed method, Diamond tab inner
+  categories first. Full detail in
+  crystal-shop/1241-queue-run.md.
