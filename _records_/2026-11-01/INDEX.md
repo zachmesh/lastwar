@@ -1178,3 +1178,9 @@ of 2026-10-28.
   the unit stopped tapping rather than repeat a dead method.
   Next unit needs a verified foreground session first.
   Full detail in alliance-help/1226-queue-run.md.
+
+## 12:30 - PR integration pass (PR 90 merged)
+
+- Integrator run pr-integration-2026-11-01-1230, one open PR at pass start (PR 90, records branch 2026-11-01, ticker-1204 content, no comments outstanding). Prior integrator records PR 89 stands merged, no comments outstanding. Branch 2026-10-31 verified contained in main, no PR needed.
+- Records PR 90 merged with merge commit acb53043a, branch kept at 43e3f4a1d (ticker-1204 pass, the 1215 run record, their INDEX appends and action-log lines).
+- No feedback, no owner-gated escalation, no conflicts. Merged main fast-forwarded to the local repo (acb53043a). Merge synced to the owner Slack DM. End-of-pass sweep: zero open PRs. Full detail in pr-integration/1230-run.md.
