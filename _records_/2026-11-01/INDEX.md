@@ -295,3 +295,90 @@ of 2026-10-28.
   route. Merge synced to the owner Slack DM.
   End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0715-run.md.
+
+## 07:30 to about 07:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0730. Zero
+  open PRs at pass start; records/2026-11-01 held 1
+  commit beyond main (the 0715 run record), so this
+  pass opened records PR 62 and merged it with a
+  merge commit (96f7bf6f); the date branch was not
+  deleted. Records/2026-10-31 verified contained in
+  main, so no PR needed. Local main fast-forwarded
+  to the merge via the bundle route. Merge synced
+  to the owner Slack DM. End-of-pass sweep: zero
+  open PRs.
+  Full detail in pr-integration/0730-run.md.
+
+## 07:32 to about 07:35 - Knowledge organization pass (no-op)
+
+- Knowledge organizer run knowledge-organization-2026-11-01-0732, no-op: own-PR check first, zero open PRs at run start, PR 62 stands MERGED at 07:31 local with no comments and no reviews, nothing addressed to this job and nothing taken over. Backlog on main version 1.1.1: no new knowledge-organization entry; IMP-20261101-01 stays open with the retro. New records since the 0632 watermark carry no profile knowledge: ticker-0634 shop-claims and ticker-0704 donations both access-failed on the offline device channel with zero game observation, tool-development 0635 is a no-op, pr-catchall 0639 is a no-op, queue-planning 0644 staged 11 units with no new observation, and pr-integration 0645, 0700, 0715 and 0730 are meta merges and an INDEX fix (PRs 59, 60, 61 and 62). No profile updated, no PR opened. Full detail in knowledge-organization/0732-run.md.
+## 07:32 to about 07:35 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-0735,
+  no-op: zero open PRs at pass start and at re-check,
+  so no own-PR feedback or question was owed; every
+  tooling backlog entry already implemented
+  (IMP-20261031-04, -09, -03, IMP-20261101-06,
+  IMP-20261101-07); the remaining open entries are
+  knowledge-organization and execution-knowledge, not
+  this job class; standing tool queue items (c)(1) to
+  (c)(3) are the merged PR 30, PR 11, PR 36 and PR 42.
+  No tool branch pushed, no tool PR opened, no backlog
+  entry changed. Record pushed on records/2026-11-01
+  for the integrator sweep, never directly to main.
+  Full detail in tool-development/0735-run.md.
+
+## 07:34 to about 07:45 — Queue ticker pass, radar tasks (failed, device offline)
+
+- Radar unit radar-2026-11-01-0603, failed:
+  Mac mini device channel offline across five attempts
+  (connection.health, connection.repair, computer.session
+  start, second connection.health after a 30 second wait,
+  and a timed-out recovery-channel repair; node_offline,
+  no wake-up path), last seen 01:47 local and unmoved
+  across the pass. No screen read, no radar screen opened,
+  no pin tapped, no Claim All tapped, nothing claimed,
+  nothing spent. Tracker untouched. Eleventh consecutive
+  access-failed pass after the 02:34, 03:04, 03:34, 04:04,
+  04:34, 05:04, 05:34, 06:04, 06:34 and 07:04 passes; the
+  channel has been down since 01:47 local. Full detail in
+  radar-tasks/0734-queue-run.md.
+
+## 07:39 to about 07:41 - PR catch-all pass (no-op)
+
+- Catchall run pr-catchall-2026-11-01-0739, no-op: own-PR
+  check first, no adopted PR to re-check; one open PR only,
+  PR 63, records for 2026-11-01 naming Owner
+  lastwar-pr-integrator, matching its diff, with zero
+  comments and zero reviews, so nothing adopted, nothing
+  fixed, nothing handed off, nothing escalated. PR 59 stands
+  MERGED at 14:46:56Z. Full detail in
+  pr-catchall/0739-run.md.
+
+## 07:40 to about 07:45 — Queue planning pass (8 units staged)
+
+- Planner run queue-planning-2026-11-01-0745, done:
+  plan staged 8 units to the 19:40 horizon
+  (vip and daily-missions at 1900; passes, secrets,
+  treasures, trucks and events at 1857; scout at 1900),
+  63 already present, 0 reaped, 0 expired.
+- Pre-reset sweep production skipped (07:00 hour, not
+  17:00); the sweep pairs for 2026-11-01 and 2026-11-02
+  already sit in the pool, pending 2 each.
+- scout_diff dry and applied on the 02:15 observation:
+  0 items parsed (narrative-only observation, no
+  observed_items block), 0 enqueued, 0 candidates,
+  0 unexplained in the diff - matching the 0344, 0445,
+  0543 and 0644 runs on the same observation. The
+  observation frontmatter's 3 unexplained red dots are
+  not captured by the diff; left for the retro and
+  tool-development, not a chat report.
+- Queue cleanup: 0 units withdrawn - the diff classified
+  nothing as already satisfied, the observation shows
+  pending badges rather than any queued task read as
+  claimed, done or gone, and the observation predates
+  the units it could speak to.
+- Delivered on records/2026-11-01 through the already-open
+  PR 63 under policy 2.0.0. Full detail in
+  queue-planning/0745-run.md.
