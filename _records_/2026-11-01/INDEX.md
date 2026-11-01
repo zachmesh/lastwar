@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-01
 created: 2026-11-01T07:11:50Z
-modified: 2026-11-01T07:22:18Z
+modified: 2026-11-01T07:37:57Z
 level: L0
 version: 1.0.0
 description: PR integration pass, PR 17 and PR 18 merged, records PR 19 merged
@@ -54,3 +54,34 @@ of 2026-10-28.
   the bundle route. No owner-gated items, no conflicts,
   no unprocessed PRs at the end-of-pass sweep. Full
   detail in pr-integration/0022-run.md.
+
+## 00:30 to about 00:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0030. Open PR
+  list at pass start: PR 20 only (docs: simplify
+  repository content, 189 files). No open PR was
+  shepherded by this job from an earlier pass, so nothing
+  addressed to the integrator needed clearing before the
+  sweep.
+- Records branches at pass start: records/2026-10-31
+  fully contained in main, no action;
+  records/2026-11-01 one commit beyond main (the 0022 run
+  record), no open PR, so cadence A required opening one.
+- Records PR 21 opened and merged with merge commit
+  6827f175; the date branch was not deleted and its head
+  is contained in main. Local main fast-forwarded
+  20143c17 to 6827f175 via the bundle route, no force,
+  other agent's worktree checkout untouched.
+- PR 20 reviewed, not merged: review comment posted (3
+  points) - restore the deleted 2026-10-31 pr-integration
+  2345 run record (129 lines) with the same
+  neutral-reference treatment, restore its day-INDEX
+  section and its action-log line (ts
+  2026-11-01T07:02:00Z), correct the tool-state file count
+  from one to two. Owner line lastwar-knowledge-organizer
+  accepted; the other 188 files are neutralization-only
+  edits; no code, schedule, or policy changes; merge state
+  CLEAN, so the PR is mergeable once points 1-2 are fixed.
+  No owner-gated items, no conflicts, no unprocessed PRs
+  at the end-of-pass sweep. Full detail in
+  pr-integration/0030-run.md.
