@@ -1,6 +1,6 @@
 ---
 title: Evaluation Metrics
-version: 1.0.0
+version: 1.1.0
 status: active
 created: 2026-10-31
 description: How the play system measures itself - execution efficiency per task type, perception completeness and discovery generalisation, retro effectiveness, and the measured impact of the tool developer and the knowledge organiser
@@ -174,14 +174,22 @@ explicit state-change dates.
 
 ## D. Retro effectiveness
 
-Per retro and rolling. Source - the improvements backlog
-`_records_/retro/improvements.md`, one entry per improvement
-task carrying its id, its class (execution-knowledge,
-meta-knowledge, tooling, knowledge-organization), the leak it
-addresses, its target metric with the value at filing, its
-verification method, its opened date, its status and its
-closing date. The file is created by the first retro; every
-metric in this family is a data-gap until it exists.
+Per retro and rolling. Sources - the retro's own execution
+records at `_records_/<date>/retro-review/` are the
+authoritative source for the run itself (that it ran, when,
+what it filed), under the
+[ops execution records](ops-execution-records.md) standard;
+the improvements backlog `_records_/retro/improvements.md`,
+one entry per improvement task carrying its id, its class
+(execution-knowledge, meta-knowledge, tooling,
+knowledge-organization), the leak it addresses, its target
+metric with the value at filing, its verification method, its
+opened date, its status and its closing date, is the source
+for entry state. Commit and PR traces are cross-check only,
+never the source. The backlog file is created by the first
+retro that files into it; entry-state metrics are data-gaps
+until it exists, while run metrics read from the execution
+records from 2026-10-31 onward (period 0 reconstructed).
 
 - **Critical improvements proposed** - entries filed per retro,
   split by class. Critical means the entry addresses a named
@@ -214,10 +222,16 @@ the tool-developer backlog is the fix both families wait on.
 
 ## E. Tool developer impact
 
-Per tool landing, rolled up weekly. Sources - the tooling
-entries of the improvements backlog, the git history of
-`tools/` (the landing commit of each tool or change), and the
-target metric series in the dated retro data files.
+Per tool landing, rolled up weekly. Sources - the tool
+developer's execution records at
+`_records_/<date>/tool-development/` are authoritative for
+deliveries, validation and timing, under the
+[ops execution records](ops-execution-records.md) standard;
+the tooling entries of the improvements backlog carry the
+filed dates and target metrics; the target metric series
+lives in the dated retro data files. The git history of
+`tools/` is cross-check only - a landing with no execution
+record is treated as not proven to have happened.
 
 - **Tools delivered** - tooling entries reaching implemented
   per period, and the median days from filed to implemented.
@@ -245,13 +259,18 @@ that way in the retro file.
 
 ## F. Knowledge organiser impact
 
-Per organiser run, rolled up weekly. Sources - the organiser
-notes at `_records_/knowledge-organizer/<date>.md` (profiles
-updated, contradictions resolved, stale items marked - the
-standing organiser job writes these counts), the frontmatter of
-`_activities_/*/INDEX.md` (`version`, `modified`,
-`proficiency`), and the execution records that name a profile
-error.
+Per organiser run, rolled up weekly. Sources - the
+organiser's execution records at
+`_records_/<date>/knowledge-organization/` are authoritative
+for the run counts (profiles updated, contradictions
+resolved, stale items marked, carried in the record stats),
+under the
+[ops execution records](ops-execution-records.md) standard;
+the frontmatter of `_activities_/*/INDEX.md` (`version`,
+`modified`, `proficiency`), and the execution records that
+name a profile error. The pre-standard note series at
+`_records_/knowledge-organizer/` is history and cross-check,
+not a source.
 
 - **Consolidation volume** - profiles updated per run,
   contradictions resolved per run, stale markings per run,
@@ -282,20 +301,23 @@ by design - only records that explicitly name the profile count
 
 Daily snapshot at the retro, from the records the loop itself
 leaves. Sources - the queue run records under `_records_/<date>/`,
-the retro files under `_records_/retro/`, the organiser notes,
-the improvements backlog, the pool itself through
-`tools/queue.py stats` and the unit frontmatter, and the git log
-for tool landings.
+the ops execution records of the loop activities under the
+[ops execution records](ops-execution-records.md) standard,
+the retro files under `_records_/retro/`, the improvements
+backlog, and the pool itself through `tools/queue.py stats`
+and the unit frontmatter. The git log is cross-check only.
 
 - **Standing job run rate** - for each standing job, runs that
-  left their expected artifact over runs expected: ticker passes
+  left their execution record over runs expected: ticker passes
   (queue run records against the 30 minute cadence), planner
-  cycles (units produced and the planner log), the daily retro
-  (its dated file), the daily organiser (its dated note), the
-  tool developer (a backlog touch or a landing, on its 4 hour
-  cadence, read over the week rather than the day). Each job's
-  rate is reported separately; an average across jobs would hide
-  exactly the failure this family exists to see.
+  cycles (units produced and the planner log - the one job
+  still proxied, below), the daily retro (its dated file and
+  its execution record), the organiser and the tool developer
+  and the PR integrator (their execution records, no-op runs
+  included - a recorded no-op is a run, an absent record is a
+  miss). Each job's rate is reported separately; an average
+  across jobs would hide exactly the failure this family
+  exists to see.
 - **Backlog depth and oldest open age** - open entries in the
   improvements backlog, and the age in days of the oldest.
 - **Queue depth and oldest unit age** - units waiting in inbox
@@ -315,9 +337,11 @@ under 90 percent of the cadence expectation.
 
 Known defects - the planner's own log lives outside the
 repository (in the goal workspace), so its run rate is proxied
-by produced units until the log is mirrored in. The retro's own
-run rate has the one-day blind spot the loop review accepted -
-a retro that never ran is only visible to the next one. Device
+by produced units until the log is mirrored in as execution
+records - the migration item the ops standard names. The
+retro's own run rate has the one-day blind spot the loop
+review accepted - a retro that never ran leaves neither file
+nor record, and is only visible to the next one. Device
 locks and maintenance distort the ticker expectation; the retro
 annotates known distortions rather than treating the raw rate
 as a verdict.
@@ -387,8 +411,9 @@ terms:
 > aggregates (adding the attempts distribution and the duration
 > p90 to family A in the same change), the scout coverage
 > reports, the candidate register in _activities_, the
-> improvements backlog, the organiser notes, and a pool snapshot
-> for queue depth and oldest unit age. Target metric - the
+> improvements backlog, the ops execution records of the loop
+> activities, and a pool snapshot for queue depth and oldest
+> unit age. Target metric - the
 > share of the specification's metrics emitted as figures
 > rather than data-gaps in the daily appendix, from its current
 > value (family A only, partially) toward the full set.
@@ -407,6 +432,19 @@ than merging the two jobs into one unmeasurable lump.
 
 ## Changelog
 
+- 1.1.0, 2026-11-01 - families D to G re-sourced onto the ops
+  execution records of the
+  [ops execution records](ops-execution-records.md) standard:
+  the retro's, tool developer's, organiser's and integrator's
+  own runs are now measured from their structured execution
+  records under `_records_/<date>/<ops-activity>/`, and commit
+  and PR traces are demoted to cross-check only. The
+  data-gap statements move accordingly - run metrics exist
+  from 2026-10-31 (period 0 reconstructed), entry-state
+  metrics still wait on the improvements backlog, and the
+  planner remains proxied until its log migrates in. The
+  tool-route backlog text is aligned (ops execution records
+  among its readers).
 - 1.0.0, 2026-10-31 - first version, under the owner direction
   of 2026-10-31 to create evaluation metrics for the system
   itself and monitor them - seven families (execution

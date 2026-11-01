@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:35:00Z
-version: 1.7.0
+modified: 2026-11-01T05:38:00Z
+version: 1.8.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -41,6 +41,17 @@ in this repository.
   effectiveness, the measured impact of the tool developer and the
   knowledge organiser, and loop health, with the monitoring
   thresholds the daily retro enforces.
+- [Ops execution records](ops-execution-records.md) — a
+  mental-model convention for the whole repository, not only a
+  record format: what is recorded is always an execution,
+  never a session, and every activity of the loop (game
+  execution, perception, planning, retro, tool development,
+  knowledge organisation, PR integration) is itself an
+  execution that leaves a structured record the retro measures
+  with one ruler. It operationalises, for the loop's own work,
+  the single-source-of-truth statement of the task unit queue
+  design's section 14, and is cross-referenced with it rather
+  than redefining it.
 - [Push and PR policy](push-and-pr-policy.md) — the two-tier push
   policy the owner approved on 2026-10-31: execution records,
   queue state, logs and tool state push straight to main, while

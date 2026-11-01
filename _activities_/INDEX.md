@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:00:00Z
-version: 1.9.0
+modified: 2026-11-01T05:38:00Z
+version: 1.10.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -52,3 +52,7 @@ file per execution, under the date it happened.
 - [`crystal-shop/`](crystal-shop/INDEX.md)
 - [`glittering-market/`](glittering-market/INDEX.md)
 - [`perception-scout/`](perception-scout/INDEX.md)
+- [`retro-review/`](retro-review/INDEX.md)
+- [`tool-development/`](tool-development/INDEX.md)
+- [`knowledge-organization/`](knowledge-organization/INDEX.md)
+- [`pr-integration/`](pr-integration/INDEX.md)
