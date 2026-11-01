@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T04:10:00Z
+modified: 2026-11-01T07:45:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -59,7 +59,40 @@ Executions are recorded in
   was ready within minutes of the evening collection. Collect what
   is ready in a pass and move on; do not chase the regeneration.
 
+## What the 2026-10-31 late unit and the 2026-11-01 early unit measured
+
+- Not every round floating icon is a bubble - measured 2026-10-31
+  (2343 unit): the orange confetti balloon over the central
+  helicopter pad is not a resource bubble. The chat line in the
+  same view mentions fireworks, and the balloon was left untapped.
+  Confirm the point is an output bubble before tapping: visual
+  grounding can return HUD buttons as bubbles - in the same unit
+  a grounding-returned point at norm 694,860 opened the Chat
+  panel instead (that point is the chat button; the chat back
+  arrow at norm 85,953 returns to the base).
+- Base-view panning failed in both units - measured 2026-10-31
+  (2343) and 2026-11-01 (0016 survivors unit, same zoomed
+  central-pad view): drags (500,600 to 200,600; 200,500 to
+  600,500; 600,700 to 300,300; and 500,500 to 200,500) left the
+  view unchanged, so building sectors beyond the zoomed view
+  could not be inspected and the Armed Truck fully-loaded state
+  went unchecked in the 2343 unit. A slow manual drag (mouse
+  down, stepped move, mouse up) or a scroll zoom-out, starting
+  from the wider relaunched view, stands as the untried next
+  method from the 0016 record - proposed, not verified.
+- Negative result, same units: three fresh base screenshots in
+  2343 showed no verifiable bubble; HUD unchanged across the
+  unit (food 289.2M, iron 477.2M, coin 10.6M); bubbles collected
+  0; tracker untouched, so the regular stays due.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
   accumulating when bubbles are left uncollected.
+
+## Changelog
+
+- 1.3.0 (2026-11-01): balloon-versus-bubble distinction, HUD
+  button mis-tap point, base-view pan failure mode, and the
+  2343 negative result, folded from the 2343 harvest unit and
+  the 0016 survivors unit; no earlier claim superseded.
