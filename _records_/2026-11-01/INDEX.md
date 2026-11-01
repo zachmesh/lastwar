@@ -1019,3 +1019,46 @@ of 2026-10-28.
 - No gap filed, no stale item marked. Next run checks
   PR 85 review feedback first. Full detail in
   knowledge-organization/1132-run.md.
+
+## 11:22 — Queue ticker pass, radar tasks (done, stack)
+
+- Radar unit radar-2026-11-01-1003, done: duel day 7 off day,
+  stack posture. Quick Execute ran the 5 offered tasks for 50
+  stamina (135 to 85), nothing claimed, radar points stayed 45.
+  Closing reads: stored 33 of 40, restore 12 tasks in 03:28:04,
+  pending rewards 11 with the bar flipped to Claim All only, no
+  further Quick Execute offer (blocker carried forward, Claim All
+  not tapped). Three red-dotted map pins inventoried untapped.
+  Full detail in radar-tasks/1122-queue-run.md.
+
+## 11:35 — Queue ticker pass, arms race (partial)
+
+- Arms-race unit arms-race-2026-11-01-1003, partial: live phase
+  Unit Progression, score 6,000 of the 75,000 tier-3 threshold,
+  gap 69,000. Only legal scoring path is training queues
+  (plus 31 per Lv.10 unit; speedups and packs are red lines).
+  Barracks tents not located this unit (one tap selected
+  Titanium Alloy Factory No.4, deselected untouched), so no
+  batch was queued. Completion sweep clean: cumulative chest
+  1 of 2 not full, ranking chest preview-only, no bouncing
+  chest, nothing claimed. Full detail in
+  arms-race/1135-queue-run.md.
+
+## 11:41 — Queue ticker pass, alliance donations (done)
+
+- Donations unit donations-2026-11-01-1003, done: 9 coin
+  donations to the recommended tech Rallied HP at 600 coins
+  each (5,400 total), Donation Count 30 of 30 to 21 of 30.
+  Diamond button untouched. Tech Donation Today re-read
+  2,750 after the donations, up from 1,450 at entry. Daily
+  ranking reward settles at the 19:00 reset, so nothing
+  claimable in-unit. Full detail in
+  alliance-donations/1141-queue-run.md.
+
+## 11:49 — Queue ticker pass, resource collection (partial)
+
+- Harvest unit harvest-2026-11-01-1003, partial: all 5 ready
+  base bubbles collected with one tap (second-row resource
+  18.1M to 18.2M confirms the collection). Armed Truck not
+  checked in this unit; it falls to the next harvest unit.
+  Full detail in resource-collection/1149-queue-run.md.
