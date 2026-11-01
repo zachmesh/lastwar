@@ -1,10 +1,10 @@
 ---
 title: Miss Audit 2026-10-31
 created: 2026-11-01T04:53:00Z
-modified: 2026-11-01T04:53:00Z
+modified: 2026-11-01T04:55:00Z
 level: L2
-version: 1.0.0
-description: Root cause audit of every non-done queue unit executed on 2026-10-30 and 2026-10-31 plus the owner expanded collection checklist
+version: 1.1.0
+description: Root cause audit of every non-done queue unit executed on 2026-10-30 and 2026-10-31 plus the owner expanded collection checklist of eight items
 status: audit-complete
 grounded_in:
   - source: execution records of 2026-10-30 and 2026-10-31 in _records_
@@ -358,9 +358,22 @@ summary, so the daily miss count only counts units that failed
 their own objective. A raw partial count overstates failure and
 hides the real blockers of categories C and E inside noise.
 
+### I. Owner-named task with no escalation path - 0 units, 1 task
+
+A ninth cause sits outside the unit table because it produced no
+units at all - an owner-named task that was never scheduled, never
+aged and never escalated. Its count of executed units in the audit
+window is zero, so it does not change the 100 unit total above.
+The case is the crystal task, item 8 of the expanded checklist
+below. Prevention rule I - every owner-named task that cannot be
+completed in its first session enters a named open-items list with
+its age in days, is re-attempted or re-reported at least once per
+day, and is never allowed to age in silence. An item older than 3
+days is surfaced to the owner by name until it closes.
+
 ## 4. Owner-expanded checklist audit
 
-Seven owner-named collection items, checked line by line against
+Eight owner-named collection items, checked line by line against
 the same two days of records. A claim is written only where a
 record proves it. Everything else is written as cannot be confirmed
 from the records, with the gap named. One prevention rule per item
@@ -604,6 +617,58 @@ never skips the other item, and a failed claim re-enters the
 master checklist for the pre-reset sweep instead of waiting a
 full day.
 
+### Item 8. Crystal and the Crystal Shop
+
+Verdict - no Crystal Shop visit and no crystal task work of any
+kind on either day. The task the owner named on 2026-10-25 is
+still open, 6 days later at the audit date of 2026-10-31 (7 days
+at this writing on 2026-11-01), and its root cause is category I
+of section 3 - an owner-named task with no escalation path,
+suspended in silence. Category H was already taken by the
+by-design partials, so this cause is lettered I.
+
+- Crystal Shop - no shop unit on 2026-10-30 or 2026-10-31 entered
+  a Building section of the Store or opened a Crystal Shop tab.
+  The word building does not appear in either day shop records at
+  all. The shop units of both days worked the Hot Deals storefront
+  and the pass pages only. The one lead has been sitting in the
+  mail metadata since 2026-10-25 - a system patch-notes mail dated
+  2026-10-21 announced the Crystal Shop tab added to Store,
+  Building section (`_activities_/mail-rewards/INDEX.md`,
+  `_records_/2026-10-25/mail-rewards/2120-late-run.md`) - and no
+  unit since has walked into that Building section to check it.
+- Crystal task - no unit on either day searched for, opened or
+  progressed any crystal task, and no regular produces one. The
+  2026-10-25 hunt already ruled out Daily Tasks, Season tasks, the
+  Hot Deals storefront and the Alliance Store, and left the task
+  identity itself unconfirmed and the Building section unlocated
+  (`_records_/2026-10-25/event-claims/2200-red-dot-followup.md`).
+  Nothing in the two audited days moves that state at all.
+- One incidental crystal-named claim exists and is not the task -
+  the 2026-10-31 mail 1947 unit claimed an Event Claim All batch
+  whose popup, as read from its screenshot, included a crystal
+  item 1.6K among food, coin and gem items
+  (`_records_/2026-10-31/mail-rewards/1947-queue-run.md`). A
+  similar mail batch on 2026-10-29 read crystal 2.8K. These are
+  mail reward contents as displayed. They are not a Crystal Shop
+  visit, not crystal task progress, and 2026-10-30 has no crystal
+  mention of any kind.
+- Age and mechanism of the suspension - named by the owner on
+  2026-10-25, hunted once that night, and then dropped. It is not
+  in `tools/regulars.json`, no unit type produces it, no follow-up
+  was ever enqueued, and no report in the six days since has named
+  it as still open. Unlike every other item in this audit, it did
+  not fail in execution. It was never executed again.
+
+Prevention rule 8 - the crystal item goes on the master
+collection checklist and the open-items list by name, with its
+age counted from 2026-10-25. The next shop visit of any kind must
+enter the Store Building section and read the Crystal Shop tab
+live, or record on screen why that section cannot be reached, and
+the item stays in every round summary by name until the owner
+closes it. An owner-named task may never again age without a
+daily named mention.
+
 ## 5. Headline conclusions
 
 1. Repetition without a pivot is the system failure, not the game.
@@ -620,7 +685,10 @@ full day.
    were never scheduled, the duel daily total was never read on
    either day, the train was never checked per service, the Armed
    Truck was never claimed in two days, and screws and drone
-   components have no claim record of any kind. These are
+   components have no claim record of any kind, and the crystal
+   task the owner named on 2026-10-25 was never located at all -
+   it produced zero units in six days because nothing owned its
+   escalation. These are
    checklist and scheduling gaps, invisible in a per-unit status
    count, and they are what the master collection checklist and
    the pre-reset zero sweep exist to close. Against that, only 4
