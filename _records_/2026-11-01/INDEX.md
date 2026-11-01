@@ -1745,3 +1745,39 @@ of 2026-10-28.
   owner-gated escalations, no conflicts. Local main
   synced to 0f3aed3825; merges synced to the owner
   Slack DM. Full detail in pr-integration/1530-run.md.
+
+## 15:40 to about 15:47 — Queue planner pass
+
+- Planner pass planner-1540. Plan staged 16 units for the
+  2026-11-02 0203, 0230 and 0257 slots (mail, help, gifts,
+  train and star-ceremony at 0230; harvest, radar,
+  survivors, training, donations and arms-race at 0203;
+  passes, secrets, treasures, trucks and events at 0257);
+  54 already present, 1 skipped as done for the current
+  slot, 0 reaped, 0 expired. 11 of the 16 were already on
+  the records branch (ticker passes landed them), so only
+  the 5 0257 units are new in this commit. Pre-reset sweep
+  pair not due: this run falls outside the 17:00 hour, and
+  tonight's pair (pre-reset-sweep-2026-11-01) is already in
+  the inbox. Scout diff over the two-pass observation
+  applied with zero changes: the observation carries
+  narrative sections but no observed_items block, so the
+  tool reads 0 items; its frontmatter counts 6 unexplained
+  red dots, which stay open for the scout successor units
+  and the retro threshold check. No queue withdrawals: the
+  diff classified nothing as satisfied and the newest
+  observation pass predates this run's staged units. Pool
+  by_state at 15:43: inbox 74, claimed 1, done 496. Full
+  detail in queue-planning/1540-run.md.
+
+## 1545 to about 1555 - PR integration pass
+
+- PR integration 1545 run: done. Zero open PRs at pass
+  start; records/2026-10-31 contained in main, no PR
+  needed. Records PR 112 opened by this run for the
+  1530 run record and merged with merge commit
+  e01874eb09, branch kept, zero open PRs at the
+  end-of-pass sweep. No feedback, no owner-gated
+  escalations, no conflicts. Local main synced to
+  e01874eb09; merge synced to the owner Slack DM.
+  Full detail in pr-integration/1545-run.md.
