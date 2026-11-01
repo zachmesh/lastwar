@@ -612,3 +612,16 @@ of 2026-10-28.
   0300 record sweep line claiming zero open PRs is
   corrected by the addendum in pr-integration/0300-run.md.
   Pass ends with zero open PRs.
+
+## 03:20 - PR integration 0315 run
+
+- No open PRs at pass start; own-PR check: PR 46
+  merged, zero comments, nothing addressed to this job.
+- records/2026-11-01 carried one commit beyond main
+  (0300 sweep addendum for PR 46), so records PR 47
+  was opened and merged with merge commit f98dd315,
+  branch kept; local main synced back to f98dd315
+  via the bundle route.
+- records/2026-10-31 verified contained in main.
+  Pass ends with zero open PRs. Full detail in
+  pr-integration/0315-run.md.
