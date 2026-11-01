@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T09:36:45Z
+modified: 2026-11-01T19:40:31Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner direction to page through every red dot and claim what is shown, evening of 2026-10-25
   - source: owner correction on 2026-10-26 - a bouncing chest on the Events screen is an unclaimed reward signal, and the three Arms Race point chests are not all of its rewards
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1055 events unit)
 ---
 
 
@@ -185,6 +186,49 @@ that drag is the sweep-completeness check, not wasted motion.
 - No bouncing chest or reward red dot remained on any swept
   tab outside the Arms Race stage left for its own unit.
 
+
+
+## What the 2026-11-01 1055 unit added
+
+- Unit events-2026-11-01-0657 by ticker-1034, session
+  about 10:51 to 10:55, status done, checked. Full Events
+  hub sweep completed, nothing claimable found, nothing
+  paid, no Legendary or Battle Pass purchase touched.
+  No different-device dialog.
+- Arms Race, Unit Progression stage (Contest Segment
+  Lv.29-30): score bar at 6,000 against thresholds
+  15,000 / 30,000 / 75,000, rank #2110, stage timer
+  03:08:03 at entry. No point chest claimable at this
+  score; the tier push belongs to the arms-race unit,
+  and no grinding was done here. This is a different
+  stage from the 0117 unit's Hero Advancement stage, so
+  the two reads do not conflict.
+- Frontline Breakthrough: Saving Soldiers 100%, bottom
+  Reward row all six items green-checked (already
+  claimed). The top-right Reward icon took two
+  no-change taps and was left alone under the tap-method
+  rule; with the reward row fully checked there is no
+  unclaimed item visible on this page.
+- Level Swap: inspected only, no hero selected, Confirm
+  not tapped (permanent mechanic, owner decision only).
+- Community: Discord binding reward reads Claimed.
+- Rampage Bosses: Mutated Bear Lv.9 at 0.0% damage,
+  three Lv.9 bosses (Vulnerable, Appeared, Appeared),
+  rewards sent via Mail after the event ends. No claim
+  button; Go (attack) was not tapped - attacking is
+  grinding, not a claim. The bear damage read 42.0% at
+  0117 and 0.0% here; that reads as a new boss cycle,
+  recorded as observed, not as a rewind or a
+  contradiction.
+- Tab bar scrolled to its end after Community; no
+  further event tab exists. No bouncing chest was seen
+  on any page visited.
+- Control note: one transient control error ("target app
+  exited") mid-unit proved false - the game process was
+  still present and the page state was unchanged on
+  re-select. A single such error is unverified until a
+  re-select confirms it. Tracker marked done. Game left
+  on the base screen.
 
 ## Open questions
 
