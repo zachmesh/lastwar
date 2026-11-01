@@ -1277,3 +1277,9 @@ of 2026-10-28.
   Next unit uses a changed method, Diamond tab inner
   categories first. Full detail in
   crystal-shop/1241-queue-run.md.
+
+## 12:45 - PR integration pass (PRs 91, 92, 93 merged)
+
+- Integrator run pr-integration-2026-11-01-1245, one open PR at pass start (PR 91, knowledge, work/knowledge-organizer-1232, eight activity profile bumps from the 1122-1226 units, Owner lastwar-knowledge-organizer, no comments, CLEAN). Prior integrator records PRs 89 and 90 stand merged, no comments outstanding. Branch 2026-10-31 verified contained in main, no PR needed; branch 2026-11-01 at a58ba291 ahead by four commits.
+- PR 91 merged squash f03c1f77, branch deleted (one transient GitHub GraphQL error on the first merge attempt; retry verified MERGED). Records PR 92 opened by this run and merged 9f2a4f77, branch kept. Mid-pass records PR 93 (queue-planning 1247 run) merged f7de5ce3, branch kept at 8af7bc63.
+- No feedback, no owner-gated escalation, no conflicts. Merged main fast-forwarded to the local repo (f7de5ce3). Merges synced to the owner Slack DM. End-of-pass sweep: zero open PRs. Full detail in pr-integration/1245-run.md.
