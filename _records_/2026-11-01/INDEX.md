@@ -484,3 +484,20 @@ of 2026-10-28.
 ## 02:30 to about 02:40 - PR integration
 
 - PR integration run pr-integration-2026-11-01-0230, done: open PRs at pass start 1 (PR 40, records/2026-11-01, already open); own-PR check first, PR 39 from the previous pass stands MERGED with zero comments, nothing addressed to this job. Records/2026-10-31 verified contained in main; records/2026-11-01 held two commits beyond main (ticker-0204 scout-base partial and the 0215 run record), covered by already-open PR 40, so no new records PR was opened. PR 40 read MERGEABLE and CLEAN, 7 files, +420/-8, all records-path types, and was merged with merge commit 48b6e7293, branch not deleted. Local main fast-forwarded 17df2ffca to 48b6e7293 via the bundle route, no force, other agent worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. Full detail in pr-integration/0230-run.md.
+
+## 02:39 to about 02:45 - PR catch-all (no-op)
+
+- PR catch-all run pr-catchall-2026-11-01-0239, no-op:
+  own-PR check first found no PR adopted by this job (no
+  catchall comment on PRs 29 to 41, prior passes covered
+  PRs 1 to 30). One open PR, newly opened and correctly
+  owned: PR 41 (_activities_ profiles 1.2.0, 1.1.0 and
+  1.1.0, Owner lastwar-knowledge-organizer, diff exactly
+  the three profile files). No review or comment, no red
+  line, authorisation, cron definition or PR policy text,
+  and far under the 48 hour stale-owner threshold, so no
+  adoption, fix, hand-off or flag. The missing
+  pr-catchall/2345-run.md on records/2026-10-31 (folder
+  holds only 2350-run.md, re-verified by ls-tree) is
+  carried forward for the integrator, not reconstructed.
+  Full detail in pr-catchall/0239-run.md.
