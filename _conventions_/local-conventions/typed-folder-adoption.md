@@ -1,13 +1,14 @@
 ---
 title: Typed-folder Adoption
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-28T17:56:00Z
+modified: 2026-11-01T06:53:49Z
 level: L2
-version: 1.1.0
+version: 1.2.0
 description: Adoption of reflection typed-folder format and constitutions, with the local type registry
 status: unverified
 grounded_in:
   - source: human-authored, owner request 2026-10-25 to follow reflection shared conventions
+  - source: owner request 2026-10-31 to remove the credentials folder
 ---
 
 # Typed-folder adoption
@@ -46,7 +47,6 @@ Introducing a type registers it here in the same commit.
 | `_logs_` | append-only repository entries | reflection vocabulary |
 | `_conventions_` | convention articles, agent-maintainable | reflection vocabulary |
 | `_queue_` | task units of the play routine, in inbox, claimed and done state subfolders | local, registered 2026-10-28 |
-| `_credentials_` | an index of accounts and retrieval routes, never values | reflection vocabulary |
 | `_context_` | gathered source material that grounds a topic | reflection vocabulary |
 
 ## Read next

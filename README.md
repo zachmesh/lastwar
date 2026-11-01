@@ -1,11 +1,12 @@
 ---
 title: Last War Records
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T19:07:00Z
-version: 1.2.0
+modified: 2026-11-01T06:53:49Z
+version: 1.3.0
 description: Record library for one Last War Survival account, covering knowledge, tasks, activities and play records
 grounded_in:
   - source: human-authored
+  - source: owner request 2026-10-31 to remove the credentials folder
 ---
 
 # Last War Survival — record library
@@ -20,7 +21,6 @@ evidence live in
 - [`_activities_/`](_activities_/INDEX.md) — one folder per activity type, each accumulating the knowledge for that type, plus the umbrella daily checklist.
 - [`_records_/`](_records_/INDEX.md) — append-only play records, organised by date, then one folder per activity type, then one file per execution.
 - [`_conventions_/`](_conventions_/INDEX.md) — how this repository is kept.
-- [`_credentials_/`](_credentials_/INDEX.md) — account index, never values.
 - [`_logs_/`](_logs_/INDEX.md) — append-only repository action and input logs.
 
 Agents read [AGENTS.md](AGENTS.md) first.
