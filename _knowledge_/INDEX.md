@@ -1,8 +1,8 @@
 ---
 title: Knowledge
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T04:45:00Z
-version: 1.2.0
+modified: 2026-11-01T07:09:43Z
+version: 1.2.1
 description: Game knowledge for Last War Survival, one instance per topic
 grounded_in:
   - source: human-authored
@@ -33,5 +33,5 @@ Holds versioned claims about the game. Each child is one topic; the topic's
   `tools/resource_map.py`, `tools/regulars.py`).
 
 Further topics are added as instances when their research lands. Planned
-topics are listed in the `task-list` instance under `_tasks_`, not here, so
-this index names only what exists.
+knowledge work is tracked in the [improvements backlog](../_records_/retro/improvements.md),
+so this index names only topics that already exist.

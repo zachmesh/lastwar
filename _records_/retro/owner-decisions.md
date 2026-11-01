@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T05:42:09Z
-version: 1.0.0
+modified: 2026-11-01T07:09:43Z
+version: 1.1.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -92,6 +92,25 @@ one mention in a summary.
 - age tracking: opened 2026-10-31, age 0 days at filing;
   the retro recomputes and reports the age every run. Note
   the item is event-bound and can expire undecided.
+- status: open
+
+
+### OD-20261101-01 - whether to add a Season 2 event calendar
+
+- opened: 2026-11-01
+- item: whether the old unconfirmed event-calendar proposal should become scoped work.
+- context: the legacy idea combined a Season 2 topic page with an event calendar. `_knowledge_/season-two-winter/` already supplies the topic page; a live event calendar is not established by that article. The task intake workflow migration table preserves the proposal's source.
+- decision needed: whether an account-relevant event calendar is wanted, and its scope and freshness expectations if approved. This migration does not approve it or claim the present season was rechecked.
+- age tracking: opened 2026-11-01, age 0 days at filing; recompute on each retro run.
+- status: open
+
+### OD-20261101-02 - whether to extend end-of-event results recording
+
+- opened: 2026-11-01
+- item: whether every VS and alliance event should gain a dedicated end-of-event results record beyond existing execution records and duel-total reads.
+- context: this was an unconfirmed idea in the retired task list. Existing `_activities_/alliance-duel/` already requires the personal daily total and dated results; that does not approve a new reporting scope for every event. The migration table retains the distinction.
+- decision needed: whether the broader reporting is wanted, which events it covers, and the minimum result fields. Leave it unapproved until the owner decides; continue existing recording duties.
+- age tracking: opened 2026-11-01, age 0 days at filing; recompute on each retro run.
 - status: open
 
 ## Decided

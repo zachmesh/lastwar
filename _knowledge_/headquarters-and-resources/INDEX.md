@@ -1,9 +1,9 @@
 ---
 title: Headquarters and Resources
 created: 2026-10-25T17:58:00Z
-modified: 2026-10-25T17:58:00Z
+modified: 2026-11-01T07:09:43Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: The core resources, headquarters gating, troop tier milestones and the Age of Oil step past level 30
 status: unverified
 grounded_in:
@@ -57,6 +57,7 @@ table, single-source and to be spot-checked in game —
 
 The 2026-10-25 snapshot shows resource figures of 260.9M, 255.3M, 24.4M,
 9.9M, 444.4K and 8.22K as displayed. Mapping each figure to its resource
-icon on the HUD is an open check, listed in the task list. The 8.22K star
+icon on the HUD is an open check, tracked as IMP-20261101-04 in the
+[improvements backlog](../../_records_/retro/improvements.md). The 8.22K star
 figure is consistent with Valor Badges, but is not asserted until seen in
 the Tech Center.

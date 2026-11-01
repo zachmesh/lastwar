@@ -1,8 +1,8 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T06:42:56Z
-version: 1.0.0
+modified: 2026-11-01T07:09:43Z
+version: 1.1.0
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
 grounded_in:
@@ -113,6 +113,52 @@ entries to implemented.
   fixture pool shows p90 and attempts values that match hand
   calculation, byte-identical on re-run, and a system_metrics
   object the retro file can cite.
+- status: open
+
+
+### IMP-20261101-01 - reconcile activity verification and metadata coverage
+
+- source: owner instruction of 2026-11-01 to retire the standalone task list; legacy open items 2 and 5, preserved in the task intake workflow migration table.
+- class: knowledge-organization
+- leak: verification of every activity against this account and backfilling the entry, cadence, scope and availability sections were two overlapping legacy obligations with no reconciled coverage ledger.
+- target metric and current value: profile coverage (evaluation metrics family F). Current inventory is 32 activity profiles; the legacy obligations have no complete profile-by-profile verification map, so verified coverage is a data gap rather than assumed zero.
+- verification: the knowledge organizer audits all current activity profiles, links each required section to existing dated evidence or an explicitly unverified gap, and routes missing game observations into bounded execution work. New profiles enter the same audit. Reuse existing profile-hardening entries instead of duplicating them.
+- status: open
+
+### IMP-20261101-02 - document the account's three squads
+
+- source: legacy open item 3, retained by the owner-directed task-list retirement.
+- class: execution-knowledge
+- leak: the heroes-and-squads article still says the owned roster has not been recorded; generic team recommendations do not establish this account's three formations.
+- target metric and current value: squad evidence coverage, an explicit acceptance measure for this one-off investigation. Current value is unverified for all three complete formations, not a claim that no hero observations exist elsewhere.
+- verification: bounded game observations record all three squads' heroes, levels, stars where shown, gear and troop types, with dated evidence and unknown fields marked. The knowledge organizer reconciles the evidence into `_knowledge_/heroes-and-squads/`. No resource spending or squad changes are authorized by this item.
+- status: open
+
+### IMP-20261101-03 - verify device-switch behavior on both devices
+
+- source: legacy open item 4, retained by the owner-directed task-list retirement.
+- class: execution-knowledge
+- leak: the account-and-platforms article records the Mac-side takeover but explicitly leaves the iPhone-side outcome unobserved.
+- target metric and current value: device-switch evidence coverage. Mac takeover is observed; the corresponding iPhone behavior and safe switch sequence remain unverified.
+- verification: an owner-coordinated observation records what both devices display during a switch and writes the supported sequence into `_knowledge_/account-and-platforms/`, preserving the old observation as dated evidence. Until then the conservative existing device-switch rule remains in force; no disruptive test is performed merely because this backlog item exists.
+- status: open
+
+### IMP-20261101-04 - reconcile HUD labels and resource definitions
+
+- source: legacy open item 6, retained by the owner-directed task-list retirement.
+- class: execution-knowledge
+- leak: headquarters-and-resources still leaves the six-figure 2026-10-25 HUD mapping unverified, while `tools/resources.json` already contains some named resource definitions. The two sources have not been explicitly reconciled.
+- target metric and current value: resource-label verification coverage. The six-figure historical mapping remains unverified in the knowledge article; current resource definitions are partial inputs, not proof of that old screen.
+- verification: read the HUD labels and relevant detail panels in a bounded observation, link each supported mapping to dated evidence, and reconcile the article with `tools/resources.json`. If the historical screen cannot be reconstructed, retain its mapping as unverified and add a separately dated current mapping rather than assigning old figures by inference.
+- status: open
+
+### IMP-20261101-05 - reconcile the remaining guide-claim checks
+
+- source: legacy open item 7, retained by the owner-directed task-list retirement.
+- class: execution-knowledge
+- leak: the counter triangle, HQ 31 requirements and radar storage-cap behavior were named for live spot-checking, but the old task list never linked the three claims to verified completion evidence.
+- target metric and current value: claim verification coverage across those three checks. The first two knowledge articles remain unverified; radar has later observations and the existing IMP-20261031-05 follow-up, which must be reviewed before any new test is created.
+- verification: the knowledge organizer first reuses existing evidence, including radar profile/playbook findings and IMP-20261031-05. Remaining gaps get bounded, non-spending observation units. Each claim ends with a dated supported statement, a corrected statement, or an explicit unresolved limitation in its canonical article; this item does not authorize spending or changing the account to create a test.
 - status: open
 
 ## In progress
