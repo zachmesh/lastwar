@@ -428,3 +428,17 @@ of 2026-10-28.
   04:34, 05:04, 05:34, 06:04, 06:34, 07:04 and 07:34 passes;
   the channel has been down since 01:47 local. Full detail
   in arms-race/0804-queue-run.md.
+
+## 08:15 to about 08:22 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0815. One
+  open PR at pass start (PR 66, records 2026-11-01,
+  Owner lastwar-pr-integrator, no comments, no reviews);
+  PR 66 merged with a merge commit (f67221e7); the
+  date branch was not deleted. Records/2026-10-31
+  was fully contained in main, so no PR was needed
+  for it. No knowledge or code PR was open. Local
+  main fast-forwarded to the merge via the bundle
+  route. Merge synced to the owner Slack DM.
+  End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0815-run.md.
