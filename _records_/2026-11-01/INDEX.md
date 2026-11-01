@@ -534,3 +534,37 @@ of 2026-10-28.
   Tracker untouched, so the next tick re-produces the
   regular as a fresh unit. Full detail in
   arms-race/0234-queue-run.md.
+
+## 02:40 to about 02:48 - Queue planner pass
+
+- Queue planner run queue-planning-2026-11-01-0247,
+  done: own-PR check first, no PR owned by this job
+  and nothing addressed to it. Plan staged 11 units
+  for the 14:03 and 14:30 slots (mail, help, gifts,
+  harvest, radar, survivors, train, training,
+  donations, arms-race, star-ceremony), 55 already
+  present, 3 skipped as done for the current slot,
+  0 reaped, 0 expired. Pre-reset sweep skipped (not
+  the 17:00 hour); both upcoming sweep pairs already
+  in inbox. Perception consumption: scout_diff dry
+  run and apply both reported observed 0, actionable
+  0, enqueued 0, candidates 0, unexplained red dots
+  0, because the 0215 scout-base observation carries
+  prose only and no observed_items block; its prose
+  red-dot accounting (7 seen, 4 explained, 3
+  unexplained) is carried in the run record for the
+  retro. Queue cleanup: 0 withdrawals. Pool after
+  the run: inbox 68, claimed 1, done 444. Full detail
+  in queue-planning/0247-run.md.
+
+## 02:45 to about 03:00 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-0245, done: open
+  PRs at pass start 3 (PR 43 records, PR 42 scout_diff
+  round-summary section, PR 41 activity profiles). PR 43
+  merged with merge commit 2238018cd, branch kept; PR 42
+  squash-merged 1ac2eca56 and PR 41 squash-merged c76b10dc5,
+  branches deleted. No comments, no owner escalations, no
+  owner assignments needed. Local main synced back to
+  c76b10dc5 via the bundle route. Full detail in
+  pr-integration/0245-run.md.
