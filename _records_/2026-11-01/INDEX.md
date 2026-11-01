@@ -724,3 +724,16 @@ of 2026-10-28.
   account's own, all already 30/30; header stayed at
   540/1,000 points. Full detail in
   alliance-help/0940-queue-run.md.
+
+## 09:45 to about 09:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0945. Three
+  open PRs at pass start (PR 74 records/2026-11-01, PR 72
+  docs, PR 73 tools); all three merged - PR 74 with a
+  merge commit (0a8fe78f), branch not deleted; PR 72 and
+  PR 73 squash-merged with branches deleted. Records/
+  2026-10-31 verified contained in main, so no PR needed.
+  Local main fast-forwarded to the merge via the bundle
+  route. Merges synced to the owner Slack DM.
+  End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0945-run.md.
