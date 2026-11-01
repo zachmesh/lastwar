@@ -556,3 +556,15 @@ of 2026-10-28.
   retro. Queue cleanup: 0 withdrawals. Pool after
   the run: inbox 68, claimed 1, done 444. Full detail
   in queue-planning/0247-run.md.
+
+## 02:45 to about 03:00 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-0245, done: open
+  PRs at pass start 3 (PR 43 records, PR 42 scout_diff
+  round-summary section, PR 41 activity profiles). PR 43
+  merged with merge commit 2238018cd, branch kept; PR 42
+  squash-merged 1ac2eca56 and PR 41 squash-merged c76b10dc5,
+  branches deleted. No comments, no owner escalations, no
+  owner assignments needed. Local main synced back to
+  c76b10dc5 via the bundle route. Full detail in
+  pr-integration/0245-run.md.
