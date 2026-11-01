@@ -1,14 +1,16 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-01T10:45:00Z
 level: L1
-version: 1.0.1
+version: 1.1.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner direction to register each learned task type as metadata, 2026-10-25
+  - source: hidden-treasures execution record 2026-11-01 0150 PST
+  - source: perception-scout execution record 2026-11-01 0215 PST, cross-check read
 ---
 
 # Hidden treasures
@@ -44,7 +46,10 @@ itself and its dispatches belong to
   60 percent, and an opened chest pays 10 rewards.
 - Tick Skip Animation, then tap Dig 1 time.
 - A chest progress track sits at the right of the screen - it read
-  9 of 15 before the dig and 10 of 15 after.
+  9 of 15 before the dig and 10 of 15 after on 2026-10-25, and it
+  read 1 of 15 on 2026-11-01. The track appears reset since
+  2026-10-25 - noted, not assumed, as the record words it; whether
+  it reset, restarted, or counts a new track is unconfirmed.
 
 ## Cadence
 
@@ -73,6 +78,34 @@ itself and its dispatches belong to
   progress 10 of 15; the red badge cleared and the Dig button greyed
   out, as expected with no complete set left.
 
+## What is known from 2026-11-01
+
+Measured in the 0150 unit (ticker-0136, unit
+treasures-2026-10-31-2257, status done, checked, nothing to dig),
+entered from the Secret Command Post already open from the secrets
+unit of the same pass, Hidden Treasures tab tapped, screen verified
+as Hidden Treasure.
+
+- Fragment counts read live on the map - M1 x13, M2 x11, M3 x0,
+  M4 x9, M5 x0, M6 x4, M7 x13. No complete set of seven fragments -
+  M3 and M5 are both 0, so no dig is possible. Both Dig buttons
+  (Dig 1 time, Dig 2 time(s)) are greyed out. Skip Animation is
+  checked.
+- Chest progress track reads 1 of 15, against 10 of 15 on
+  2026-10-25 - see the reset note in the how-it-is-done section.
+- No fragment exchange executed - exchanges need owner approval
+  per the activity limits and none was attempted. Nothing claimed,
+  no diamonds or money touched.
+- Cross-check - the scout 0204 unit about half an hour later read
+  the identical counts and the identical 1 of 15 track from the
+  same screen, so the 0150 read is confirmed by a second live read
+  the same morning, not a single-read figure.
+- Forward note from the record, not a measured fact - the 9 secret
+  tasks dispatched in the preceding secrets unit will drop
+  fragments when they finish, and M3 and M5 may refill then. The
+  next treasures unit re-reads the counts rather than assuming
+  that refill.
+
 ## Limits
 
 - No fragment exchange is executed without owner approval - fragments
@@ -81,6 +114,9 @@ itself and its dispatches belong to
 ## Open questions
 
 - What the chest progress track pays at 15 of 15.
+- Whether the 1 of 15 track read on 2026-11-01 is a reset of the
+  10 of 15 track, a new track, or a different counter - the change
+  is recorded, the mechanism is not.
 - Whether particular secret missions drop particular fragment kinds -
   the morning claims dropped fragments number 7, 4 and 1, and the
   recovery record dropped five kinds, but no controlled mapping yet.
