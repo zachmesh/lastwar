@@ -182,6 +182,35 @@ entries to implemented.
   _records_ in the standard's shape.
 - status: in-progress
 
+### IMP-20261101-07 - scout_diff round-summary section
+
+- source: owner instruction of 2026-10-31 (standing tool
+  queue, item (c)(3) - scout_diff / planner
+  trigger-consumption follow-ups, roadmap Phase 3)
+- class: tooling
+- leak: the coverage report existed as a file, but no
+  round-summary section carried it - the Phase 3 step that
+  the coverage report joins the round summary as a standing
+  section had no program output, so a summary could only
+  cite perception by hand transcription, with drift between
+  the summary numbers and the diff counts.
+- target metric: perception coverage cited in the day round
+  summary (evaluation metrics family F, candidate promotion
+  coverage companion - the perception scoreboard reaching
+  the summary). Current value - no round-summary section
+  output existed before this change; the first value lands
+  with the next round summary that pastes the section in.
+- verification: a diff run on an isolated fixture pool
+  emits scout-round-summary-<date>.md whose figures match
+  the same run's coverage report by hand, byte-identical
+  on re-run, with the four pre-existing outputs unchanged
+  from the pre-change tool; the retro then reads a round
+  summary carrying the section rather than hand-copied
+  perception numbers.
+- status: in-progress
+
+- status: in-progress
+
 ## Implemented, awaiting retro verification
 
 ### IMP-20261031-01 - perception to queue auto-wiring
