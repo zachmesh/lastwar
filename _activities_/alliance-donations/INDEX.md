@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T05:00:00Z
+modified: 2026-11-01T06:36:48Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,8 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner task request naming alliance tech, 2026-10-25
   - source: owner instruction on 2026-10-26 - always do alliance tech donation as part of the regular routine, each time it is available
+  - source: alliance donations execution record 2026-10-31 2306 queue run
+  - source: daily retro 2026-10-31 action M4 proposed not applied
 ---
 
 
@@ -144,3 +146,61 @@ hard, and they override any earlier closing habit in this file.
 - Who sets the donation target, and when it changes.
 - What the Development tab technologies are, and whether donations
   there share the same daily limit and points.
+- Whether the queue tool records donation counts under one semantics (remaining counts read live, made counts under donations_made only) - daily retro 2026-10-31 action M4, proposed not applied, tool side pending; the profile side is settled by the 2306 live-read close above.
+
+## What is known from 2026-10-31
+
+- Entry failure mode, measured 2026-10-31 in the 2306 unit
+  - a first tap on the Alliance button area opened a
+  MISSING ITEMS dialog for an Advanced Teleporter instead
+  of the alliance menu. No Buy button was tapped and the
+  dialog was closed with its X. A fresh measured tap on
+  the Alliance shield then opened the alliance menu, and
+  Alliance Techs was entered from its tile. A MISSING
+  ITEMS dialog on Alliance entry is a mis-tap surface, not
+  a purchase prompt to act on.
+- Donation Count replenishment, measured 2026-10-31 in the
+  2306 unit - the count replenishes in small bursts behind
+  a cooldown timer, so the 30 count is not a single pool
+  drained once per day. The unit entered at Donation Count
+  4 of 30 on Rallied Attack, cost 800 coin per donation,
+  Donation Reward 50 plus 50 per donation as displayed,
+  and landed five coin donations, each confirmed by a live
+  re-read - 4 of 30 to 3 of 30 to 2 of 30 to 1 of 30, then
+  the coin button greyed with a 00:03:52 timer. The
+  cooldown was waited out inside the unit; the panel then
+  read Donation Count 1 of 30 again with the coin button
+  active, so the count had replenished by one during the
+  cooldown. A fifth coin donation was made and the coin
+  button greyed again, this time with a 00:18:27 timer.
+  Tech EXP on Rallied Attack moved 7.9K to 8.2K. A later
+  unit in the same reset day may therefore find a fresh
+  allowance, and later bursts belong to later donations
+  units, not to the unit that found the first burst.
+- Correction to the hard closing rule above, in favour of
+  the newest verified record - the 2306 unit closed done
+  on the game exhausted state, not on an arithmetic figure
+  and not on reading 0 remaining. Because the count
+  regenerates behind cooldowns, 0 remaining is not a
+  stable day-done state, so the two single-pool phrasings
+  in the hard closing rule - the day is done only when it
+  reads 0 remaining, and the daily target as 30 of 30
+  drained once - are superseded. What stands, and what the
+  2306 unit confirms, is the live-read core - every
+  donation confirmed by a live count step and a Tech EXP
+  step, and the unit closing on the greyed coin button
+  with its timer read live. Day completeness is judged at
+  the rule R3 checkpoints by live reads before the 19:00
+  reset, never by subtraction across units.
+- War tab nodes as read 2026-10-31 - Troop Movement 5 of
+  10, Rallied HP 5 of 10, Rallied Attack 7 of 10, Rallied
+  Defense 7 of 10, next node 1 of 10, Tech Donation Today
+  1100 at entry, above the 1000 reward threshold. Rallied
+  Defense moved from 6 of 10 on 2026-10-25 to 7 of 10 here.
+  No hand claim exists for the daily donation reward
+  (ranking settlement at the 19:00 reset), so nothing was
+  claimed by hand. Cost varies by node as measured -
+  Rallied Attack 800 coin per donation in this unit,
+  against Rallied Defense 700 coin per donation in the
+  2026-10-26 run - so no single cost is assumed across
+  nodes.
