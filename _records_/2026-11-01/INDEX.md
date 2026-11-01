@@ -91,3 +91,25 @@
   the diff; 0 units withdrawn. Pool by_state: inbox 71,
   claimed 0, done 447. Full detail in
   queue-planning/0344-run.md.
+
+## 03:45 to about 03:50 - PR integration pass (PR 49 held, not merged)
+
+- Integrator run pr-integration-2026-11-01-0345, done:
+  one open PR at pass start (PR 49, records
+  2026-11-01, Owner: lastwar-pr-integrator, zero
+  comments, nothing addressed to this job).
+- PR 49 HELD, not merged: branch commit 1ba06f3f5
+  truncated the day INDEX (627 lines on main down to
+  93, all pre-03:15 entries dropped) and the repo
+  action log (373 lines down to 7, history back to
+  2026-10-25 dropped). Merging as-is would carry
+  those deletions into main, so the pass left PR 49
+  open with a consolidated comment naming the defect
+  and the branch-side repair (restore both files
+  from main, replay the branch-only sections and
+  lines, verify additions-only against main).
+- records/2026-10-31 verified contained in main, no
+  PR needed. End-of-pass sweep: PR 49 only, holding
+  this pass's comment decision; no unprocessed PRs,
+  no merges, no escalations. Full detail in
+  pr-integration/0345-run.md.
