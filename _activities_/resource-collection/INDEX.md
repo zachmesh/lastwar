@@ -1,14 +1,15 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T07:45:00Z
+modified: 2026-11-01T20:40:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: resource collection execution record 2026-11-01 1149 queue run
 ---
 
 
@@ -85,6 +86,30 @@ Executions are recorded in
   unit (food 289.2M, iron 477.2M, coin 10.6M); bubbles collected
   0; tracker untouched, so the regular stays due.
 
+## What the 2026-11-01 1149 unit added
+
+- Bubble inventory at entry, located by visual grounding
+  on the base screen: five green bubbles at norm 371,413,
+  279,466, 472,462, 372,503 and 472,571. A single tap on
+  the 371,413 bubble cleared all five bubbles from the
+  screen at once, consistent with the farmland rule that
+  one farmland tap collects all farmland bubbles. No
+  bubble remained on the closing screenshot.
+- HUD precision note: food 289.2M, iron 477.2M and coin
+  10.6M read the same rounded values before and after,
+  while the second-row blue resource moved 18.1M to
+  18.2M, confirming a collection landed. Gains below the
+  0.1M display precision do not move the rounded food,
+  iron and coin figures, so an unchanged rounded HUD is
+  not proof that nothing was collected - read the
+  second-row resource and the bubble clearance together.
+- Armed Truck not checked in this unit: the pass time
+  budget was already exceeded when the base screen was
+  reached, so the truck check falls to the next harvest
+  unit, and no claim is made about whether its loot is
+  fully loaded. The unit closed partial and the tracker
+  is left untouched, so the regular stays due.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -96,3 +121,8 @@ Executions are recorded in
   button mis-tap point, base-view pan failure mode, and the
   2343 negative result, folded from the 2343 harvest unit and
   the 0016 survivors unit; no earlier claim superseded.
+- 1.4.0 (2026-11-01): five-bubble inventory with the
+  one-tap-clears-all farmland confirmation, the HUD
+  rounding precision note, and the Armed Truck check
+  deferred to the next harvest unit, folded from the 1149
+  harvest unit; no earlier claim superseded.

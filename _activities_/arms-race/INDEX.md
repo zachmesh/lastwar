@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-01T20:40:00Z
 level: L1
-version: 1.15.1
+version: 1.16.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: owner instruction on 2026-10-28 via Slack - stamina for Arms Race scoring may come from the Free Claim or from stamina resource items of 10 or 50
   - source: arms-race execution record 2026-10-31 2241 queue run
   - source: arms-race execution record 2026-10-31 2212 queue run
+  - source: arms-race execution record 2026-11-01 1135 queue run
 ---
 
 
@@ -322,3 +323,49 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   read happened with no queue arms-race unit between, so
   it is recorded as an unverified inter-unit change, not
   attributed to the queue.
+
+## What the 2026-11-01 1135 unit added
+
+- Unit Progression live again, read twice in the 1135 unit
+  (ticker-1114, session about 11:20 to 11:35): Contest
+  Segment Lv.29-30, score 6,000 at entry and again at
+  close, segment rank 2110, time left 02:36:20 at entry
+  and 02:32:38 at close, so the phase window ends about
+  14:06. Chest thresholds 15,000, 30,000 and 75,000, so
+  the tier-3 gap stands at 69,000 points. The 6,000
+  figure matches the 1055 events-unit read folded into
+  event-claims 1.6.0 - consistent, not a correction.
+- Scoring table read live in the same unit: Train a
+  Lv.10 unit plus 31, Use 1-min Training Speed-up plus
+  10, Buy Packs containing Diamonds plus 30 per diamond.
+  The speedup and pack paths are red lines and were not
+  used. The only legal path is training queues: 69,000
+  divided by 31 is about 2,226 Lv.10 units, roughly four
+  full barracks batches at the usual training counts, if
+  the queues are idle. That path runs through the
+  training regular's own unit, and any batch it queues
+  scores here when queued inside the phase window - but
+  the training regular's Drill Ground gate has not been
+  read live since 2026-10-31 (see troop-training 1.4.0),
+  so the training path is available in principle and
+  blocked in practice until that gate is re-read.
+- Training path not executed in this unit: the barracks
+  tents were not located in the base view. One candidate
+  tap in the lower-middle cluster selected Titanium Alloy
+  Factory No.4 Lv.30 instead and was deselected untouched
+  (no panel opened, nothing spent) - the same wrong-
+  building pattern the 1216 training unit met in its
+  factory pan. The training regular remains the route
+  that can queue the batches.
+- Completion sweep at close: no point chest earned (6,000
+  below the 15,000 first threshold), the cumulative
+  counter chest at top left reads 1 of 2 with a partial
+  bar and no bounce, and the ranking row chest is
+  preview-only with no claim. No bouncing chest or reward
+  red dot remains on the Arms Race page. Nothing was
+  claimed.
+- Session-drop recovery, same pattern as the 0917
+  training and 1017 survivors units: the computer-use
+  session dropped once mid-unit, a new session was
+  started, and the Arms Race page was still open with
+  state intact, so no game state was lost.

@@ -1,15 +1,16 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T17:40:00Z
+modified: 2026-11-01T20:40:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner task request naming a train task, 2026-10-25
   - source: web guides on barracks and troop tiers, read 2026-10-25
+  - source: troop training execution record 2026-11-01 1216 queue run
 ---
 
 # Troop training
@@ -179,6 +180,50 @@ Observed in game on this account, first execution 2026-10-25.
   login demanded.
 
 
+## What the 2026-11-01 1216 unit added
+
+- Changed method per queue rule R2: instead of repeating
+  taps in the factory pan, this unit panned the base view
+  in four directions looking for the tent row. The opening
+  pan showed the Titanium Alloy Factory cluster in the
+  walled compound; one tap at norm 400,535 selected
+  Titanium Alloy Factory No.4 Lv.30 and was left untouched
+  (no upgrade shortcut, no Train, no Finish Now). Four
+  drags then swept the view - up, right, diagonal
+  down-left, and up again - showing the HQ and furnace
+  sector, the vehicle Formation 2 and 3 parking sector,
+  and empty snowfield to the south and east. No barracks
+  tent row appeared in any swept pan, so no TRAIN UNITS
+  panel was reached, no batch was collected or started,
+  and the Drill Ground panel was not re-read in this unit.
+- Drill Ground Full carried forward unverified a third
+  consecutive unit: 0045, 0917 and now 1216 all never
+  reached a barracks, so the 39,460 of 39,460 block
+  remains a 2026-10-31 read, not a 2026-11-01
+  re-confirmation, and no clearing method is claimed.
+- Next-unit instruction, from the record itself: try a
+  zoomed-out whole-base view first (the current pans
+  cover the compound and the surrounding snowfield but
+  never show a tent row), and ground the Drill Ground
+  building itself before any further tent taps, since the
+  drill-ground gate is the standing blocker and its panel
+  has not been read live since 2026-10-31. This is the
+  same zoom-out-first variant the 1159 survivors unit
+  names for its own gate search - the two searches share
+  the method, not the target.
+- Not a live read: the chat line visible during the unit,
+  "thorsey: need to lose some troops", is consistent with
+  a full drill ground but is not a live read of the Drill
+  Ground panel and is not used as one. The red target icon
+  with a countdown seen at the right edge of the closing
+  pan was left untouched: it belongs to another task type,
+  not this unit.
+- HUD at open: food 289.2M, iron 477.2M, coin 10.6M,
+  total power 148,957,193, unchanged at close. No
+  diamonds, money, speedups or paid buttons used; the
+  tracker is untouched, so the next tick re-produces
+  this regular.
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -203,3 +248,12 @@ Observed in game on this account, first execution 2026-10-25.
   unverified a second consecutive unit, and the mid-unit
   session-drop recovery, folded from the 0917 training
   unit.
+
+- 1.4.0 (2026-11-01): four-direction pan sweep with no tent
+  row (factory cluster, HQ and furnace sector, Formation
+  2 and 3 parking, snowfield south and east), Drill Ground
+  Full carried forward unverified a third consecutive
+  unit, the zoomed-out whole-base view plus ground-the-
+  Drill-Ground-first next-unit instruction, and the chat
+  line explicitly not a live Drill Ground read, folded
+  from the 1216 training unit.

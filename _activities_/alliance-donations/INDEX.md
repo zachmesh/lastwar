@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T06:36:48Z
+modified: 2026-11-01T20:40:00Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,8 @@ grounded_in:
   - source: owner instruction on 2026-10-26 - always do alliance tech donation as part of the regular routine, each time it is available
   - source: alliance donations execution record 2026-10-31 2306 queue run
   - source: daily retro 2026-10-31 action M4 proposed not applied
+  - source: alliance donations execution record 2026-11-01 1141 queue run
+  - source: resource collection execution record 2026-11-01 1149 queue run (footer re-read)
 ---
 
 
@@ -204,3 +206,49 @@ hard, and they override any earlier closing habit in this file.
   against Rallied Defense 700 coin per donation in the
   2026-10-26 run - so no single cost is assumed across
   nodes.
+
+## What the 2026-11-01 1141 unit added
+
+- Recommended tech is Rallied HP 5 of 10, marked with
+  the red thumbs-up badge, entered from the Alliance
+  menu Alliance Techs tile (red dot), Development tab.
+  Nine coin donations landed, all to Rallied HP, at 600
+  coins each - 5,400 coins spent, the diamond button
+  untouched. Donation Count moved 30 of 30 to 29 of 30
+  after the first tap, 25 of 30 after five, and 21 of 30
+  after nine, each step read live.
+- Correction to the grey-out precedent: the coin button
+  stayed green and active after nine donations in this
+  unit - the earlier precedent of it greying after nine
+  (2026-10-26, and the 0547 run) did not repeat. Grey-out
+  is burst and cooldown dependent, not a fixed
+  nine-donation rule, and no grey-out was reached here.
+  The unit closed done on its nine confirmed donations,
+  not on an exhausted state.
+- Tech state at close: Rallied HP Tech EXP 1.6M of 2.0M,
+  Current plus 5 percent, Next Level plus 6 percent,
+  Donation Reward plus 20 percent. Weekly settlement
+  timer read 06:26:54 at close.
+- Footer reads and an unresolved arithmetic tension:
+  Tech Donation Today read 1,450 at entry, already above
+  the 1,000 point reward line, and 2,750 on the re-read
+  taken during the 1149 harvest unit's opening moves -
+  a rise of 1,300 that exceeds nine donations at the
+  previously measured 50 to 60 points each. No new
+  per-donation value is derived from this pair: the
+  footer may count contributions beyond this unit's nine
+  donations, or the per-donation value may vary by node.
+  The two reads stand as measured; the footer is not a
+  clean per-unit counter until that gap is explained.
+- Daily reward timing re-confirmed: the donation ranking
+  reward settles at the 19:00 reset, so no reward was
+  claimable inside this unit and none was tapped; the
+  trophy icon beside Tech Donation Today was left alone.
+- Panel close quirk: the Rallied HP detail panel was
+  still open at unit close (one X tap did not close it);
+  leaving it open spends nothing and changes nothing.
+  The footer re-read after the nine donations was skipped
+  in the donations unit itself for the pass time budget;
+  the entry read of 1,450 stands as that unit's last
+  measured footer value, with the 2,750 re-read recorded
+  here from the harvest unit that took it.

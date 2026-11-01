@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-01T20:40:00Z
 level: L1
-version: 1.6.1
+version: 1.7.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -16,6 +16,7 @@ grounded_in:
   - source: GrindnStrat radar tasks guide, accessed 2026-11-01
   - source: Last War Handbook VS schedule guide, accessed 2026-11-01
   - source: lastwar.wiki Alliance Duel page, accessed 2026-11-01
+  - source: radar tasks execution record 2026-11-01 1122 queue run
 ---
 
 
@@ -395,6 +396,49 @@ Profile level stays learning - the weakest key fields
 (scoring value, pin taxonomy, Quick Execute re-offer rule)
 are still open, per the protocol.
 
+## What the 2026-11-01 1122 unit added
+
+- Stack posture held throughout, status done
+  (ticker-1114, session about 11:16 to 11:22, duel day 7
+  off-day settlement, radar posture stack per
+  tools/duel.py): tasks executed, nothing claimed, no
+  map pin tapped. This unit was missed by the 1132
+  organizer run's input list and is folded here, so the
+  watermark gap is closed, not carried.
+- Entry verified on the radar screen itself: satellite
+  dish icon at norm 62,727 opened the radar on the first
+  tap. Lv.13, radar points 45, stored 33 of 40, stamina
+  135, restore line 12 tasks in 03:29:29.
+- Quick Execute: the bottom bar offered 5 tasks for 50
+  stamina and no Claim All at entry, so the batch ran.
+  Stamina 135 to 85, exactly 5 tasks at 10 stamina each.
+  Radar points stayed 45, confirming nothing was
+  claimed.
+- Closing reads: stored 33 of 40 (unchanged by execution;
+  the executed tasks moved to the pending-reward count),
+  restore 12 tasks in 03:28:04, stamina 85, radar points
+  45.
+- Named blocker carried forward: after the batch the bar
+  flipped to Claim All only, 11 task rewards pending (6
+  already pending at entry plus the 5 just executed),
+  with no further Quick Execute offer. Claim All was NOT
+  tapped, per the stack-day red line. The next radar unit
+  inherits this blocker and the pending count of 11, per
+  the stack-day completion standard's named-blocker rule.
+- Pin inventory, untapped per the stack handling rule,
+  all red-dotted: grey handshake pin, green handshake
+  pin, and orange skull pin on the radar map. No pin was
+  tapped, so no claim leaked onto this non-scoring day.
+- Headroom warning with a deadline: stored 33 of 40 sits
+  below the 39 cap guard, but the 12-task restore landing
+  in about 3.5 hours - about 14:50 - would overshoot the
+  40 cap if no unit executes or claims before then. A
+  later unit must act before the restore lands; on a
+  stack day that action is execution, not a claim, and
+  execution is currently locked behind the Claim All
+  only bar above, so the next radar unit faces the
+  blocker and the deadline together.
+
 ## Open questions
 
 - Duel delta test - on the next release day, read the duel
@@ -453,3 +497,12 @@ are still open, per the protocol.
   2026-10-25 to 2026-10-29 executions (entry grounding,
   pin tap caution, special pin flow, doom pins, gathering
   pins), preserved in git history.
+- 1.7.0, 2026-11-01 - stack-day 1122 unit folded (missed
+  by the 1132 run's input list, gap closed here): 5-task
+  Quick Execute batch at 10 stamina each, points held at
+  45, bar flipped to Claim All only with 11 rewards
+  pending, handshake and skull pins inventoried untapped,
+  and the 12-task restore landing about 14:50 that would
+  overshoot the 40 cap. (1.6.1 was a minor bump without
+  a changelog line; the numbering is preserved, not
+  rewritten.)

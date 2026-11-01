@@ -1,15 +1,16 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T18:39:17Z
+modified: 2026-11-01T20:40:00Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0940 help unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1226 help unit)
 ---
 
 
@@ -162,6 +163,52 @@ Measured in the 0135 help unit (ticker-0134, window mode
   leaving the game on the Alliance panel. Nothing else
   spent - no diamonds, no money, no speedup items burned,
   no building or research started, no Assemble.
+
+## What the 2026-11-01 1226 unit added
+
+- Performed, ticker-1204, session about 12:26, status
+  partial: the game was already on the Alliance panel
+  from the gifts unit, and the Help entry carried a red
+  dot, so waiting requests were present. No Help All
+  press happened, so no help count or points figure is
+  reported.
+- Help entry route, failed in this session: the Alliance
+  panel Help button was tapped three times with no change
+  - twice at the start of the unit (norm 629,467 and
+  695,471) and once more after re-entering the Alliance
+  panel (695,471). The base-screen help bubble tile left
+  of the Alliance shield button was tapped twice with no
+  change either (norm 819,667 and 819,675); the tile
+  stayed visible and no "Allies are very grateful" toast
+  appeared. The control layer itself advised after the
+  second bubble tap that background clicks do not reach
+  some controls and suggested a foreground element click
+  or keyboard instead; the game canvas exposes no
+  accessibility element for these controls, and a LastWar
+  open_app request returned outcome unknown with no
+  verified change, so no further identical tap was made.
+- Foreground precondition refined: this failure is
+  control-specific, not session-wide - background input
+  reached every other control used in this pass
+  (Alliance, Gifts, Claim All, tabs, back arrows) but
+  not Help. The next help unit needs a verified
+  foreground session before tapping Help, not just a
+  retry of the same taps. This extends, and does not
+  supersede, the 2026-10-31 foreground note above: the
+  0135 unit proved background input can work on panel
+  screens, and this unit proves Help is the control it
+  does not reach.
+- Changed method per queue rule R2: after the two
+  no-change Help taps the unit switched entry route to
+  the base-screen bubble tile, and after that route also
+  failed twice it re-entered the Alliance panel for one
+  final Help tap instead of repeating the bubble tap.
+- No rule R2 metadata rewrite is triggered by this unit:
+  this is not a third consecutive partial for help - the
+  previous help unit of the day (help-2026-11-01-0630)
+  closed done. The blocker is named here for the next
+  unit, and the tracker is untouched, so the next tick
+  re-produces this regular.
 
 ## Open questions
 
