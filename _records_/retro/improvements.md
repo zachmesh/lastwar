@@ -1,7 +1,7 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T06:42:56Z
+modified: 2026-11-01T07:39:20Z
 version: 1.0.0
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
@@ -94,7 +94,7 @@ entries to implemented.
   unit's effective priority with wait time, demonstrated on
   an isolated fixture pool replaying the 2026-10-30
   starvation pattern without starving the chain.
-- status: open
+- status: implemented - PR 23 (branch work/queue-aging-boost, commit e30a588b74fb9f5e48ca4f222ece820abd3f8a7c), effective priority plus 1 per 2 hours waited floored at 1 and a 2 hour soft deadline for no-expiry units in queue.py pick_key; fixture validation passed on isolated scratch pools including a starvation replay first picking the chain at beat 3 (90 minutes)
 
 ### IMP-20261031-03 - retro report extensions, p90, attempts, system metrics
 
