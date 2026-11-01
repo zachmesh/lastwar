@@ -1,8 +1,8 @@
 ---
 title: Alliance help queue run
 created: 2026-10-30T03:19:00Z
-modified: 2026-10-30T03:19:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-2004 help unit, done - Help All cleared waiting ally requests
 status: unverified
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
   Header read "Today's points gained from Alliance Help:
   0/1,000" at first sight.
 - Waiting rows at first sight: this account's own two
-  requests (Bears Lair Lv.28 Drill Ground and Lv.30
+  requests ([redacted-character-name] Lv.28 Drill Ground and Lv.30
   Aircraft Center, both 30/30, not helpable by self) and
   ally requests including xChroniApex (Endurance Upgrade
   research) and ANGEL777 Apex (Efficient Healing

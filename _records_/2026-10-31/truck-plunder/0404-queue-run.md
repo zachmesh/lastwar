@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 0404
 created: 2026-10-31T04:04:00-07:00
-modified: 2026-10-31T04:19:00-07:00
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-0404 trucks unit, partial - trade entry recovered, 1 plunder won, dispatch quota still open
 status: partial
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 04:04-04:19 PDT, executor
 ticker-0404, Mac mini session cc-606, game account
-[AP3x]Bears Lair, window mode 642x951. Duel day 6,
+[redacted-character-name], window mode 642x951. Duel day 6,
 Enemy Buster (non-UR day), so the non-UR dispatch
 rule applies: SR or above only, regular dispatch,
 no Mega Mode.

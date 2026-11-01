@@ -1,8 +1,8 @@
 ---
 title: Star Ceremony queue run 0740
 created: 2026-10-30T14:40:00Z
-modified: 2026-10-30T14:40:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-0734 star-ceremony unit, done as a check - no trophy icon on the base screen
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 07:38-07:40 PDT, executor
 ticker-0734, Mac mini session cc-461, game account
-[AP3x]Bears Lair.
+[redacted-character-name].
 
 Performed: checked only.
 

@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-29 1021 Queue Run
 created: 2026-10-29T17:21:00Z
-modified: 2026-10-29T17:21:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-29-1003 - live phase Tech Research, score 0 against thresholds 6250, 12500 and 30000, cumulative chest 6 of 8 not claimable, ranking reward preview only; every scoring path is a red line, so the unit is skipped-needs-owner and the target is recorded as a red-line miss
 status: unverified
 grounded_in:
@@ -40,7 +40,7 @@ tab strip (see navigation note).
 - Completion sweep — the cumulative counter chest at the
   top left of the phase page read 6 of 8, purple, about
   three quarters full, not full and not claimable. The
-  ranking row displayed Bears Lair at #2110 with 37,500
+  ranking row displayed [redacted-character-name] at #2110 with 37,500
   points, the lagging Hero Advancement result, and its
   chest opened a contents preview only — UR Hero
   Universal Shard 1, Decoration Chest 1, Iron Chest (SR)

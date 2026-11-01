@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion Execution 2026-10-28 0334 Queue Run
 created: 2026-10-28T10:50:00Z
-modified: 2026-10-28T10:50:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: First ticker queue unit - zombie-invasion chain unit 001, one Lv.10 Invading Zombies march completed, Search found no confirmed new target before the 15 minute unit cap, chain continues
 status: unverified
 grounded_in:
@@ -51,7 +51,7 @@ this type lives in
   15 hours 14 minutes left - the event is still live. Next
   wave countdown read about 56 minutes. Search was tapped;
   the map centred near the home base (16 km home marker,
-  Bears Lair visible) but no new Invading Zombies card
+  [redacted-character-name] visible) but no new Invading Zombies card
   opened and no new target was confirmed inside the unit
   window. A small unlabelled pile at the left centre of
   that view was left unverified and untapped.

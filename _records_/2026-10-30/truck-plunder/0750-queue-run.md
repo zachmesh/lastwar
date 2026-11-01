@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 0750 entry failed
 created: 2026-10-30T14:50:00Z
-modified: 2026-10-30T14:50:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-0734 trucks unit, partial - Intercity Trade screen never entered
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 07:44-07:48 PDT, executor
 ticker-0734, Mac mini session cc-461, game account
-[AP3x]Bears Lair.
+[redacted-character-name].
 
 Performed in part: trade screen never entered,
 tracker untouched, so the next tick re-produces

@@ -1,8 +1,8 @@
 ---
 title: Secret missions queue run 0419
 created: 2026-10-31T04:19:00-07:00
-modified: 2026-10-31T04:25:00-07:00
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-0404 secrets unit, partial - finished tasks claimed, 1 ally assisted, no pending deploy
 status: partial
 grounded_in:
@@ -14,7 +14,7 @@ grounded_in:
 Session window: about 04:19-04:25 PDT, executor
 ticker-0404, Mac mini sessions cc-606 (dropped
 once, recovered) and cc-612, game account
-[AP3x]Bears Lair, window mode 642x951. Duel day 6,
+[redacted-character-name], window mode 642x951. Duel day 6,
 Enemy Buster.
 
 Performed in part: finished tasks claimed, one

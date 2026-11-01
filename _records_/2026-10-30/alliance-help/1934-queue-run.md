@@ -1,8 +1,8 @@
 ---
 title: Alliance Help queue run 1934
 created: 2026-10-30T19:36:00Z
-modified: 2026-10-30T19:36:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Help unit help-2026-10-30-1830 by ticker-1934
 status: done
 grounded_in:
@@ -19,8 +19,8 @@ window mode 642x951, no different-device dialog, no control lock.
   HELP panel.
 - HELP panel header read Today's points gained from Alliance
   Help 0/1,000. The only rows were the account's own requests,
-  both already full and unhelpable by the owner: Bears Lair
-  Lv.28 Drill Ground 30/30, and Bears Lair Lv.30 Aircraft
+  both already full and unhelpable by the owner: [redacted-character-name]
+  Lv.28 Drill Ground 30/30, and [redacted-character-name] Lv.30 Aircraft
   Center 30/30. No ally request was waiting.
 - Help All pressed at 500,690. No toast, no change: points
   stayed 0/1,000 and both own rows stayed 30/30, confirming

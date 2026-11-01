@@ -1,8 +1,8 @@
 ---
 title: Event claims queue run 1953
 created: 2026-10-30T19:53:00Z
-modified: 2026-10-30T19:53:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Events unit events-2026-10-30-1857 by ticker-1934
 status: partial
 grounded_in:
@@ -16,7 +16,7 @@ session cc-572 (relaunch after the passes-unit
 different-device kick), window mode 642x951.
 
 - Events opened on the Arms Race Unit Progression
-  page: score 0, rank #2110 [AP3x]Bears Lair, chest
+  page: score 0, rank #2110 [redacted-character-name], chest
   thresholds 15,000 / 30,000 / 75,000, cumulative
   chest 0/2 at top left. No chest reached, nothing
   to claim on this page. No Arms Race grinding was

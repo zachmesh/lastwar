@@ -1,9 +1,9 @@
 ---
 title: Alliance Help Execution 2026-10-25 Red Dot Sweep
 created: 2026-10-25T22:00:00Z
-modified: 2026-10-25T22:00:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for pressing Help All during the red dot sweep, 2026-10-25
 status: unverified
 grounded_in:
@@ -26,7 +26,7 @@ Metadata for this type lives in
   Today's points gained from Alliance Help 400 of 1,000.
 - Waiting requests - allies building, Abyss Apex on a Lv.25
   Farmland and Kkkayyyyy among them, plus this account's own two
-  requests, Bears Lair on the Lv.30 Drill Ground and the Lv.30
+  requests, [redacted-character-name] on the Lv.30 Drill Ground and the Lv.30
   Aircraft Center, both already full at 30 of 30 - a player
   cannot help their own requests.
 - Help All was pressed. The page answered Allies are very

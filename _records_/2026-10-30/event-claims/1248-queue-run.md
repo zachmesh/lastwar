@@ -1,8 +1,8 @@
 ---
 title: Event claims queue sweep 1248
 created: 2026-10-30T19:48:00Z
-modified: 2026-10-30T19:48:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-1234 events unit, done - full Events hub sweep, nothing claimable
 status: unverified
 grounded_in:
@@ -14,7 +14,7 @@ grounded_in:
 Session window: about 12:42-12:48 PDT, executor
 ticker-1234, Mac mini sessions cc-497 and cc-498
 (cc-497 dropped its observation channel, cc-498
-resumed), game account [AP3x]Bears Lair.
+resumed), game account [redacted-character-name].
 
 Performed: checked only, nothing claimed, nothing
 spent, no paid button tapped.

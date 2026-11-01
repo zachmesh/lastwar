@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-26 Four Hour Run
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T09:12:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 0149 four hour run, checked only
 status: unverified
 grounded_in:
@@ -25,8 +25,7 @@ Metadata for this type lives in
   - no different-device dialog, no lock, no login demand.
 - Phase - Unit Progression, Contest Segment Lv.29-30, about
   56 minutes left in the phase as displayed. This account at 0
-  points, ranked 10 in the segment green band (#2110 [AP3x]
-  Bears Lair). Chests at 15,000, 30,000 and 75,000 points, none
+  points, ranked 10 in the segment green band (#2110 [redacted-character-name]). Chests at 15,000, 30,000 and 75,000 points, none
   earned, nothing to claim.
 - Scoring tasks on the page - Train a Lv.10 unit (plus 31,
   recommended), Use 1-min Training Speed-up (plus 10), Buy

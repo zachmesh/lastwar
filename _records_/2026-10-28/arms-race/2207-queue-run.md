@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-28 2207 Queue Run
 created: 2026-10-29T05:07:00Z
-modified: 2026-10-29T05:07:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-28-2203 - live phase Base Building with about 53 minutes left, score 0 against thresholds 6250, 12500 and 30000, cumulative chest 0 of 2 not claimable, no reward claimed; every scoring path is a red line (construction speedups, diamond packs, or starting a building), so the unit is skipped-needs-owner and the target is recorded as a red-line miss
 status: unverified
 grounded_in:
@@ -37,7 +37,7 @@ red lines, recorded as skipped-needs-owner.
   and the 10:04 queue unit this same day.
 - Completion sweep — the cumulative counter chest at the
   top left of the phase page read 0 of 2, not full and not
-  claimable. The ranking row displayed Bears Lair at
+  claimable. The ranking row displayed [redacted-character-name] at
   #2110 with 0 points in this live phase; no ranking
   reward chest stood claimable. No bouncing chest or
   reward red dot stood on the Arms Race page; the

@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-31 0615 Queue Run
 created: 2026-10-31T13:15:00Z
-modified: 2026-10-31T13:15:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-31-0603 - live phase Base Building, phase score 0, no point chest earned, cumulative chest 0 of 2 not claimable, tier-3 gap 30000, building queue holds only long upgrades so no completion lands in the phase window
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ skipped for this slot.
   diamond (red line, never spent).
 - Live score — the phase page score bar read 0, so no
   point chest was earned in this phase yet and none was
-  claimed. The ranking row read #2110 [AP3x]Bears Lair
+  claimed. The ranking row read #2110 [redacted-character-name]
   with 0; per the 2026-10-31 0211 precedent, the ranking
   row figure is recorded as the ranking-row figure, not
   as the live phase score.

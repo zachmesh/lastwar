@@ -8,7 +8,7 @@ status: done
 # Star Ceremony check, 2037 queue run
 
 Session window: 20:34-20:37 PDT, executor ticker-2034, Mac mini
-session cc-373, game account [AP3x]Bears Lair.
+session cc-373, game account [redacted-character-name].
 
 Performed: checked only.
 

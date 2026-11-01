@@ -8,7 +8,7 @@ status: done
 # Train queue run 2040
 
 Session window: 20:37-20:40 PDT, executor ticker-2034, Mac mini
-session cc-373, game account [AP3x]Bears Lair.
+session cc-373, game account [redacted-character-name].
 
 Performed: checked only.
 

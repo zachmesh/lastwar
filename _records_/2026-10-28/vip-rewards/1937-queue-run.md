@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards Execution 2026-10-28 1937 Queue Run
 created: 2026-10-29T02:37:00Z
-modified: 2026-10-29T02:37:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 1937 queue run, unit vip-2026-10-28-1900, login points claimed, Daily Freebie Claim button unresponsive, unit partial
 status: unverified
 grounded_in:
@@ -24,7 +24,7 @@ Unit vip-2026-10-28-1900, executor ticker-1917.
 - Profile opened from the commander avatar at the top left
   of the base screen; a "You're very popular!" popup (3
   people liked, hearts 1,784 to 1,788) was dismissed with
-  Awesome! first. Profile reads Lv.30 [AP3x]Bears Lair,
+  Awesome! first. Profile reads Lv.30 [redacted-character-name],
   power 149.3M, VIP13 badge with a red dot.
 - VIP screen - 52 days logged in a row, points 1,567,110
   of 2,000,000 toward VIP 14, Daily Freebie row showing

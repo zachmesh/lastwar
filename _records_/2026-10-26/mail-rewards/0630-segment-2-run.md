@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-26 0630 Segment 2 Run
 created: 2026-10-26T13:36:00Z
-modified: 2026-10-26T13:36:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 0630 segment 2 run, Claim All in every mail category with no rewards available and the Abyss Apex train departure mail read
 status: unverified
 grounded_in:
@@ -25,8 +25,7 @@ Metadata for this type lives in
   dialog, no lock, no login demand.
 - The Event category carried the only red dot. Its top mail,
   "[AP3x] Abyss Apex's train has departed!" (54 minutes old),
-  was read in full — the passenger list includes [AP3x]Bears
-  Lair, confirming the 0540 boarding rode this train. The mail
+  was read in full — the passenger list includes [redacted-character-name], confirming the 0540 boarding rode this train. The mail
   carries no claim; the arrival reward, if any, comes later.
 - Claim All was pressed in Battle Report, Alliance, Event,
   Season, System and Regular — each answered No rewards

@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-30 1018 Queue Run
 created: 2026-10-30T17:18:00Z
-modified: 2026-10-30T17:18:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-30-1003 - Hero Advancement phase, one UR hero level spent with EXP only, score 0 to 39500, all three point chests claimed
 status: unverified
 grounded_in:
@@ -31,7 +31,7 @@ earned point chest was claimed.
   spent).
 - Live score at entry — the phase page score bar read 0, so
   no point chest was earned yet. The ranking row read
-  #2110 [AP3x]Bears Lair with 51,500; per the 2026-10-30
+  #2110 [redacted-character-name] with 51,500; per the 2026-10-30
   0210 precedent the ranking row figure is recorded as the
   ranking-row figure, not as the live phase score.
 - Navigation note — the Events screen opened on its Zombie

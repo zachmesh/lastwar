@@ -8,7 +8,7 @@ status: partial
 # Event claims sweep, 2052 queue run
 
 Session window: 20:41-20:52 PDT, executor ticker-2034, Mac mini
-session cc-373, game account [AP3x]Bears Lair.
+session cc-373, game account [redacted-character-name].
 
 Performed in part.
 

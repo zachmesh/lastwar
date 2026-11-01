@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 1305 dispatch partial
 created: 2026-10-30T20:05:00Z
-modified: 2026-10-30T20:27:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-1304 trucks unit, partial - two trucks dispatched, plunder untouched
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 13:05-13:27 PDT, executor
 ticker-1304, Mac mini sessions cc-501 and cc-502,
-game account [AP3x]Bears Lair.
+game account [redacted-character-name].
 
 Performed in part: trade screen entered, two trucks
 dispatched, plunder not started, tracker untouched,

@@ -1,8 +1,8 @@
 ---
 title: Alliance help queue run
 created: 2026-10-30T23:47:00Z
-modified: 2026-10-30T23:47:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Queue unit help-2026-10-30-1430 execution
 status: done
 ---
@@ -38,7 +38,7 @@ Status done: Help All pressed and all ally requests cleared.
 
 - Help panel header read Today's points gained from
   Alliance Help 820 of 1,000 at entry.
-- Rows at entry: own Bears Lair Lv.28 Drill Ground and
+- Rows at entry: own [redacted-character-name] Lv.28 Drill Ground and
   Lv.30 Aircraft Center (both already at 30 of 30, not
   helpable by the owner), plus ally rows Lost Boyz
   Lv.20 3rd Squad and Kkkayyyyy Lv.25 Missile Center.

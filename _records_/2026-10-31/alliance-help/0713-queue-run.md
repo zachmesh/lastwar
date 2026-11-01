@@ -1,9 +1,9 @@
 ---
 title: Alliance Help Execution 2026-10-31 0713 Queue Run
 created: 2026-10-31T14:20:00Z
-modified: 2026-10-31T14:20:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Help queue unit help-2026-10-31-0630 - done, Help All pressed once, ally requests cleared
 status: unverified
 grounded_in:
@@ -24,8 +24,7 @@ Status — done.
   left open by the preceding gifts unit. Help carried
   waiting requests.
 - Help page at the open: Today's points gained from
-  Alliance Help 320 of 1,000. Own requests: Bears
-  Lair Lv.28 Drill Ground and Lv.30 Aircraft Center,
+  Alliance Help 320 of 1,000. Own requests: [redacted-character-name] Lv.28 Drill Ground and Lv.30 Aircraft Center,
   both already 30 of 30 and unhelpable by self. Ally
   requests waiting: Kkkayyyyy Reaper II research,
   Boss Hog 05 Lv.28 Aircraft Center building, and

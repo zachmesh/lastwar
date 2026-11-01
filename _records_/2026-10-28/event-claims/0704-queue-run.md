@@ -1,9 +1,9 @@
 ---
 title: Event Claims Execution 2026-10-28 0704 Queue Run
 created: 2026-10-28T14:13:00Z
-modified: 2026-10-28T14:13:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 0704 queue ticker run, events unit - full Events tab sweep plus Halloween check-in, nothing claimable
 status: unverified
 grounded_in:
@@ -28,7 +28,7 @@ Unit events-2026-10-28-0657, executor ticker-0704.
   phase score 0 against thresholds 6,250, 12,500 and
   30,000. Cumulative chest tapped - no change, it stands
   at 9 of 18 and is not claimable. Cumulative score in the
-  ranking footer 51,000 for [AP3x]Bears Lair, rank 8 shown
+  ranking footer 51,000 for [redacted-character-name], rank 8 shown
   on the footer row. Scoring paths are building power,
   1-minute construction speedups (item burn, red line)
   and diamond packs (paid, red line) - nothing free.

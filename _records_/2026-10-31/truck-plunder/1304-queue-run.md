@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 1304
 created: 2026-10-31T13:04:00-07:00
-modified: 2026-10-31T13:22:00-07:00
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-1304 trucks unit, partial - trade screen entry not achieved, no settlement, dispatch or plunder this unit
 status: partial
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 13:04-13:22 PDT, executor
 ticker-1304, Mac mini session cc-651, game account
-[AP3x]Bears Lair, window mode 642x951. Duel day 6,
+[redacted-character-name], window mode 642x951. Duel day 6,
 Enemy Buster (non-UR day), so the non-UR dispatch
 rule applies: SR or above only, regular dispatch,
 no Mega Mode.

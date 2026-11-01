@@ -1,8 +1,8 @@
 ---
 title: Task List
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-25T21:04:00Z
-version: 1.6.1
+modified: 2026-11-01T07:00:34Z
+version: 1.6.2
 description: Current and completed tasks for the Last War record project
 grounded_in:
   - source: human-authored
@@ -55,7 +55,7 @@ grounded_in:
   same afternoon - the Drone Parts weekly pickup and the Free Supply
   auto claim were collected before the session was contested.
 - 2026-10-25 — Installed Last War natively on the Mac mini and logged in
-  to [AP3x]Bears Lair through Game Center. Evidence in
+  to [redacted-character-name] through Game Center. Evidence in
   [account and platforms](../../_knowledge_/account-and-platforms/INDEX.md).
 - 2026-10-25 — Created this repository as the record library for
   knowledge, tasks, activities and play records, in reflection typed-folder
