@@ -1240,3 +1240,27 @@ of 2026-10-28.
   PR 85 and PR 90 verified MERGED. No adoption, no fix, no
   hand-off, no owner-gated escalation, no stale-owner flag.
   Full detail in pr-catchall/1239-run.md.
+## 12:40 to about 12:47 — Queue planning pass (no-op)
+
+- Planner run queue-planning-2026-11-01-1247, no-op:
+  plan staged 0 units to the 00:40 horizon, 68 already
+  present, 3 skipped as done for the current slot, 0
+  reaped, 0 expired. The 1155 run had already staged
+  the pool through the 22:57 slots; the next regular
+  slots (02:03, 02:30, 02:57 on 2026-11-02) lie beyond
+  this run's window.
+- Pre-reset sweep production skipped (12:00 hour, not
+  17:00); the sweep pairs for 2026-11-01 and 2026-11-02
+  already sit in the pool, pending 2 each.
+- scout_diff dry and applied on the 02:15 observation:
+  0 items parsed (narrative-only observation, no
+  observed_items block), 0 enqueued, 0 candidates,
+  0 unexplained in the diff - matching the 0344 through
+  1155 runs on the same observation. The observation
+  frontmatter's 3 unexplained red dots are not captured
+  by the diff; left for the retro and tool-development,
+  not a chat report.
+- Queue cleanup: 0 units withdrawn - the diff classified
+  nothing as already satisfied, and the observation
+  predates the units staged since 02:15 local.
+  Full detail in queue-planning/1247-run.md.
