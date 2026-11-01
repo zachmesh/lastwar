@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-01T07:45:00Z
-version: 1.4.0
+modified: 2026-11-01T08:36:31Z
+version: 1.5.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -140,6 +140,44 @@ Measured on 2026-10-25.
   this unit either (one drag, 500,500 to 200,500, no change),
   matching the 2343 harvest unit's three failed drags.
 
+## What the 2026-11-01 0041 unit added
+
+- Duplicate re-run, not a new distinct partial: the 0041 unit
+  re-ran unit survivors-2026-10-31-2203, already completed
+  partial by ticker-0004 (the 0016 record), because the local
+  working tree still carried it in inbox while the records
+  branch had it done. The queue-state divergence between the
+  working tree and the records branch is an open process item
+  for the next queue review, not a game-state change. The
+  distinct-unit streak therefore stays at 23 consecutive
+  queue-era partials; 0041 must not be counted as a 24th.
+- Gate search, four pans, three counted: the opening pan showed
+  the central base with production houses carrying resource
+  bubbles and no question-mark survivor line; a drag from norm
+  400,600 to 650,350 moved the view to the headquarters corner;
+  a drag from 623,736 to 389,526 moved it to the outer snow
+  field, where enlarged crops of the left edge and the
+  top-right road showed turrets, a STOP sign and formation
+  vehicles, but no gate line and no question-mark bubbles. A
+  fourth drag from 350,350 to 600,600 moved nothing after
+  focus was lost again and is not counted as a searched pan.
+- Grounding gap: a visual-grounding call for the survivor line
+  timed out without a result and was not retried, so every
+  conclusion in the 0041 record rests on the screenshots and
+  crops read directly, not on grounding output.
+- Focus recurrence, same fix: the game was not frontmost at the
+  start (UserNotificationCenter was) and background pans did
+  not move the view until a title-bar left-segment tap at norm
+  274,18, clear of the green zoom button, brought the game
+  forward; focus loss recurred later in the pass and was fixed
+  the same way. The window stayed in window mode throughout.
+- Claim discipline: the unit does not claim the gate is empty,
+  only that no waiting line was found in the pans searched; no
+  survivor figure was tapped, no recruit card or dialog was
+  opened, Quick Dispatch did not run, and the tracker is
+  untouched, so the next tick re-produces this regular.
+
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -160,3 +198,10 @@ Measured on 2026-10-25.
   transient Arms Race side observation in that record (a live
   Hero Advancement phase score) was deliberately not folded -
   it belongs to the queued arms-race unit.
+
+- 1.5.0 (2026-11-01): duplicate re-run disclosure (0041 re-ran
+  the 0016 unit id through working-tree/records divergence;
+  distinct-unit partial streak stays 23), the four-pan search
+  with only three pans counted, the unretried grounding
+  timeout, and the focus-loss recurrence with the same
+  274,18 title-bar fix, folded from the 0041 survivors unit.
