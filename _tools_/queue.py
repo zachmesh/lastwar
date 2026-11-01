@@ -506,12 +506,25 @@ def _reap_claimed(root):
 def _expire_stale(root):
     """Inbox units whose window has fully passed move to done with
     status expired - the next window's unit supersedes them, and the
-    statistics keep the miss visible instead of losing it."""
+    statistics keep the miss visible instead of losing it. A done
+    file already carrying an execution result for the same unit is
+    never overwritten: the stale inbox copy is dropped and the
+    executed record kept. A records-branch snapshot can hold both
+    copies at once, and expiry used to clobber the executed result
+    with an expiry (queue-planning 1457 follow-up)."""
     moved = 0
     stamp = now_utc()
     for f in list_units(root, "inbox"):
         expires = parse_iso(f.get("expires_at", ""))
         if expires and expires <= stamp and f.get("unit"):
+            done_path = unit_path(root, "done", f["unit"])
+            if os.path.exists(done_path):
+                print(f"warning: {f['unit']} already has a done "
+                      f"record - dropping the stale inbox copy "
+                      f"instead of overwriting it with an expiry",
+                      file=sys.stderr)
+                os.remove(unit_path(root, "inbox", f["unit"]))
+                continue
             state, path = find_unit(root, f["unit"])
             fields, body = read_unit(path)
             fields["result"] = {
