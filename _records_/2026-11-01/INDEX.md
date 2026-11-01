@@ -230,3 +230,7 @@ of 2026-10-28.
 ## 01:30 to about 01:36 — PR integration pass
 
 - PR integrator run pr-integration-2026-11-01-0130, done: no open PRs at pass start; live records/2026-11-01 carried one commit beyond main (the 0115 run record), so PR 28 was opened for it (Owner lastwar-pr-integrator) and merged with merge commit cd1e73dac, branch not deleted. Records/2026-10-31 verified contained in main, no PR needed. Local main fast-forwarded 28ad9dc5 to cd1e73dac via bundle route, no force, other agent's worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. Full detail in pr-integration/0130-run.md.
+
+## 01:32 to about 01:38 — Knowledge organization pass
+
+- Knowledge organizer run knowledge-organization-2026-11-01-0132, done: own-PR check first, zero open PRs at pass start (PR 22 merged, no comments), nothing to address, nothing taken over. Backlog on main version 1.1.1: no open knowledge-organization entry covers these types. Folded survivor-intake 0041, troop-training 0045 and alliance-gifts 0110 into profiles 1.5.0, 1.2.0 and 1.3.0 on PR 29 (commit 3181427f5, Owner lastwar-knowledge-organizer). No contradictions; two guards noted instead: 0041 is a re-run of the 0016 unit, so distinct-unit partials stay 23, and the Drill Ground Full block is carried forward unverified by 0045, which never reached a barracks. Full detail in knowledge-organization/0132-run.md.
