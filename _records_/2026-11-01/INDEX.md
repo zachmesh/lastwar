@@ -185,3 +185,6 @@ of 2026-10-28.
 - Pass ended after two units, inside its 25 minute
   budget. Game left on the base screen. No login or
   different-device dialog appeared at any point.
+## 00:40 to about 00:47 — Queue planner (no-op)
+
+- Planner run queue-planning-2026-11-01-0047, no-op: worked in a separate worktree on the records/2026-11-01 tip so the main tree's in-flight ticker state stayed untouched. Own-PR check first: only open PR #20 (Owner lastwar-knowledge-organizer, two comments: integrator review and organizer follow-up), nothing owned by or addressed to this job. Plan --hours 12 staged 0 units (69 already present, 0 skipped done current, 0 reaped, 0 expired); every due slot in the horizon to about 12:45 local was already staged. Pre-reset sweep skipped (00:00 hour, not 17:00); pairs for 2026-11-01 and 2026-11-02 already in inbox. Perception consumption skipped: no observation file exists yet anywhere (worktree, main tree, repo history), so no diff applied and no units withdrawn. Pool after planning: inbox 70, claimed 0, done 432. Full detail in queue-planning/0047-run.md.
