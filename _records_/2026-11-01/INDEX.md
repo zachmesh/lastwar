@@ -876,3 +876,22 @@ of 2026-10-28.
   satisfied and the observation predates today's units.
   Pool by_state at 10:43: inbox 75, claimed 1, done 473.
   Full detail in queue-planning/1040-run.md.
+
+## 10:45 to about 10:56 - PR integration pass (PRs 79 and 80 merged)
+
+- Integrator run pr-integration-2026-11-01-1045, one open
+  PR at pass start: PR 79, knowledge docs, Owner
+  lastwar-knowledge-organizer, zero comments. Records
+  branch 2026-11-01 ahead of main by four commits
+  (1030 integration, tool-development no-op, 1039
+  catchall no-op, 1032 knowledge-organization); branch
+  2026-10-31 verified contained in main, no PR needed.
+- Records PR 80 opened and merged with merge commit
+  a57a097f9, branch kept at cdda816e3. PR 79
+  squash-merged as e9b734c3e (survivor-intake 1.7.0,
+  alliance-gifts 1.4.0, alliance-help 1.7.0), work
+  branch deleted. No feedback, no owner-gated
+  escalation, no conflicts. Local main fast-forwarded
+  0c9cab7b to e9b734c3e via bundle; merges synced to
+  the owner Slack DM. End-of-pass sweep: zero open
+  PRs. Full detail in pr-integration/1045-run.md.
