@@ -130,3 +130,27 @@ of 2026-10-28.
   integrator rebase, was committed to records/2026-10-31
   as dc426f35 via a separate worktree and the bundle
   route, with the shared VPS checkout untouched.
+  pr-integration/0030-run.md.
+## 00:32 to about 00:40 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-01-0032,
+  worked from the 2332 watermark. Own PRs first: PR 9
+  (this job, 2332 run) stands merged with no comments; the
+  only open PR at run start, PR 20 (docs simplification,
+  Owner lastwar-knowledge-organizer), carries no review
+  comment or question, so nothing addressed there. No open
+  knowledge-organization backlog entry covers these types.
+- New records folded: resource-collection 2343 (ticker-2334
+  harvest partial, no bubble found) and survivor-intake
+  0016 (ticker-0004 survivors partial, gate line never
+  verified). Profiles updated via PR 22 (branch
+  work/knowledge-organizer-0032, commit 299c893f3):
+  resource-collection 1.2.0 to 1.3.0 (balloon-versus-bubble
+  distinction, HUD-button mis-tap, pan failure mode, 2343
+  negative result) and survivor-intake 1.3.0 to 1.4.0
+  (partial streak to 23, background input
+  control-dependent, Escape re-confirmed, shared pan
+  failure). Contradictions resolved 0, gaps filed 0; the
+  transient Arms Race side observation in 0016 was
+  deliberately not folded. Slack DM sync sent.
+  Full detail in knowledge-organization/0032-run.md.
