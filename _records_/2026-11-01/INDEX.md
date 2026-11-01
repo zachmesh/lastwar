@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-01
 created: 2026-11-01T07:11:50Z
-modified: 2026-11-01T07:37:57Z
+modified: 2026-11-01T07:52:36Z
 level: L0
 version: 1.0.0
 description: PR integration pass, PR 17 and PR 18 merged, records PR 19 merged
@@ -188,3 +188,7 @@ of 2026-10-28.
 ## 00:40 to about 00:47 — Queue planner (no-op)
 
 - Planner run queue-planning-2026-11-01-0047, no-op: worked in a separate worktree on the records/2026-11-01 tip so the main tree's in-flight ticker state stayed untouched. Own-PR check first: only open PR #20 (Owner lastwar-knowledge-organizer, two comments: integrator review and organizer follow-up), nothing owned by or addressed to this job. Plan --hours 12 staged 0 units (69 already present, 0 skipped done current, 0 reaped, 0 expired); every due slot in the horizon to about 12:45 local was already staged. Pre-reset sweep skipped (00:00 hour, not 17:00); pairs for 2026-11-01 and 2026-11-02 already in inbox. Perception consumption skipped: no observation file exists yet anywhere (worktree, main tree, repo history), so no diff applied and no units withdrawn. Pool after planning: inbox 70, claimed 0, done 432. Full detail in queue-planning/0047-run.md.
+
+## 00:45 to about 00:52 — PR integration pass
+
+- PR integrator run pr-integration-2026-11-01-0045, done: 1 open PR at pass start (PR 20, docs simplification), re-verified after its fix commit 61d5ad8a (2345 run record restored at 129 lines with zero diff, day INDEX section restored, action-log line restored, tool-state count corrected to two) and squash-merged as d1043c79, branch deleted. Records PR 25 opened and merged with merge commit 0267fb8c (records/2026-10-31, pr-catchall 2350 run), branch not deleted, branch head verified contained in main. Mid-pass arrival PR 24 (records/2026-11-01, ticker-0034) left open on a conflict in _records_/retro/improvements.md only, conflict comment posted, resolution on the branch side. Local main fast-forwarded 51dee951 to d1043c79 via bundle route, no force, other agent's worktree checkout untouched. Slack DM merge notice sent. Full detail in pr-integration/0045-run.md.
