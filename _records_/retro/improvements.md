@@ -113,7 +113,7 @@ entries to implemented.
   fixture pool shows p90 and attempts values that match hand
   calculation, byte-identical on re-run, and a system_metrics
   object the retro file can cite.
-- status: open
+- status: in-progress - tool-developer run 2026-11-01 0132, branch work/retro-report-p90-attempts
 
 
 ### IMP-20261101-01 - reconcile activity verification and metadata coverage
