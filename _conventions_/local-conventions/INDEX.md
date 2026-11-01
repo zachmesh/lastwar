@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-28T10:22:00Z
-version: 1.2.0
+modified: 2026-11-01T04:53:00Z
+version: 1.3.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -25,3 +25,6 @@ in this repository.
 - [Task unit queue design](task-unit-queue-design.md) — the proposal
   to run the routine as short task units drawn from a file queue
   instead of long segment runs, with a 15 minute batch cap.
+- [Miss audit 2026-10-31](miss-audit-2026-10-31.md) — the root cause
+  audit of every non-done queue unit of 2026-10-30 and 2026-10-31,
+  with the owner expanded collection checklist checked line by line.
