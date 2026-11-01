@@ -296,7 +296,7 @@ of 2026-10-28.
   End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0715-run.md.
 
-## 07:30 to about 07:45 - PR integration pass
+## 07:30 to about 07:35 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-01-0730. Zero
   open PRs at pass start; records/2026-11-01 held 1
