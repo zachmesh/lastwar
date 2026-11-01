@@ -1142,3 +1142,39 @@ of 2026-10-28.
   Merges synced to the owner Slack DM.
   End-of-pass sweep: zero open PRs. Full detail in
   pr-integration/1200-run.md.
+
+## 12:15 - PR integration pass (PR 89 merged)
+
+- Integrator run pr-integration-2026-11-01-1215, zero open PRs at pass start. Prior integrator records PRs 87 and 88 stand merged, no comments outstanding. Branch 2026-10-31 verified contained in main, no PR needed.
+- Records PR 89 opened by this run for branch 2026-11-01 (the 1200 run record, its INDEX append and its own action-log line) and merged with merge commit 3b9656731, branch kept at 3d4440463.
+- No feedback, no owner-gated escalation, no conflicts. Merged main fast-forwarded to the local repo (3b9656731). Merge synced to the owner Slack DM. End-of-pass sweep: zero open PRs. Full detail in pr-integration/1215-run.md.
+
+## 12:16 — Queue ticker pass, troop training (partial)
+
+- Training unit training-2026-11-01-1003, partial: barracks tent
+  row not located after a four-direction pan sweep of the base
+  view (factory cluster, HQ and furnace, Formation parking, and
+  snowfield all shown, no tent row); one Titanium Alloy Factory
+  No.4 tap left untouched. No batch collected or started, Drill
+  Ground not re-read live, so its full state stays unverified.
+  Full detail in troop-training/1216-queue-run.md.
+
+## 12:21 — Queue ticker pass, alliance gifts (done)
+
+- Gifts unit gifts-2026-11-01-1030, done: Claim All on both
+  tabs, 22 Regular gifts and 3 Premium gifts claimed (25 total,
+  including one Regular gift that arrived mid-unit and was
+  claimed on re-check). Gift Level 28 progress 178,322,940 to
+  178,324,560 at last live read. Full detail in
+  alliance-gifts/1221-queue-run.md.
+
+## 12:26 — Queue ticker pass, alliance help (partial)
+
+- Help unit help-2026-11-01-1030, partial: waiting requests
+  present (Help red dot) but Help All never pressed - the
+  Alliance panel Help button took three no-change background
+  taps and the base-screen help bubble tile two, and the
+  game canvas exposes no foreground element for either, so
+  the unit stopped tapping rather than repeat a dead method.
+  Next unit needs a verified foreground session first.
+  Full detail in alliance-help/1226-queue-run.md.
