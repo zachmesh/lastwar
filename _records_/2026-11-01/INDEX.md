@@ -604,3 +604,16 @@ of 2026-10-28.
   Full detail in troop-training/0917-queue-run.md.
 - Tracker untouched for both partial units. Nothing claimed, nothing
   spent. No different-device dialog, no login demanded.
+
+## 09:30 to about 09:38 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0930. One
+  open PR at pass start (PR 71, records/2026-11-01,
+  Owner lastwar-pr-integrator, no comments), merged
+  with a merge commit (8c50e012); the date branch was
+  not deleted. Records/2026-10-31 was fully contained
+  in main, so no PR was needed for it. No knowledge or
+  code PR was open. Local main fast-forwarded to the
+  merge via the bundle route. Merge synced to the
+  owner Slack DM. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0930-run.md.
