@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-28T09:47:00Z
-version: 1.8.0
+modified: 2026-11-01T05:00:00Z
+version: 1.9.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -49,3 +49,5 @@ file per execution, under the date it happened.
 - [`arms-race/`](arms-race/INDEX.md)
 - [`survivor-intake/`](survivor-intake/INDEX.md)
 - [`zombie-invasion/`](zombie-invasion/INDEX.md)
+- [`crystal-shop/`](crystal-shop/INDEX.md)
+- [`glittering-market/`](glittering-market/INDEX.md)

@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-25T21:38:00Z
-version: 1.2.0
+modified: 2026-11-01T05:00:00Z
+version: 1.3.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -95,6 +95,33 @@ Measured on Event 38, 2026-10-25, under the owner procedure.
   finale chest cost nothing. Skipping it leaves the week rewards
   unclaimed, which is what the 1359 check did before the owner
   correction.
+
+## Daily total read - the 3.6M target (2026-10-31 fix)
+
+The owner target is **3,600,000 personal Alliance Duel points per
+duel day**. The miss audit of 2026-10-31 found that no record on
+either audited day ever read a personal daily total - this folder
+held only Star Ceremony checks, and fragment scores (an Arms Race
+phase score, a radar points figure) are not a duel total and never
+substitute for one.
+
+- The star-ceremony unit - the alliance-duel regular - reads the
+  personal daily total live on the duel panel (the gold VS
+  medallion) on its runs, and the read of the last run before the
+  19:00 reset is the day closing figure.
+- The closing figure is recorded in the day alliance-duel record
+  and in the unit result stats as the total and its gap against
+  3,600,000. The Duel Progress mail is a cross-check only, never
+  the source.
+- If the total cannot be read, the unit closes that line as
+  unverified and a re-read is enqueued before the reset (rule R1
+  of the task unit queue design). A duel day with no total read
+  is reported in the round summary as **total unread** - never
+  passed over in silence, and never estimated from fragments.
+- This read is part of the alliance-duel type, alongside the
+  ceremony. It does not merge the ceremony claim into a duel
+  result or the other way round - one unit still reports one
+  type, and the total read is that type own work.
 
 ## Open questions
 

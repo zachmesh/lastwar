@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T17:47:00Z
+modified: 2026-11-01T05:00:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -105,6 +105,39 @@ activity. Not a separate type.
   with a 00:13:28 timer, the same end state the 0547 run hit
   after nine donations. Donate until the button greys, then
   stop for that run.
+
+## Hard closing rule - live read or unverified (2026-10-31 fix)
+
+The owner named the incomplete donations himself on 2026-10-31 -
+the day closed without the donations completed. The audit found
+the mechanism - four donation units that day closed on an
+arithmetic final count that was never read live, because the
+greyed coin button timer hid the count label. These rules are
+hard, and they override any earlier closing habit in this file.
+
+- The daily target is the full count - **30 of 30 coin donations
+  every reset day**. The Donation Count is a remaining count (it
+  fell from 30 to 25 after five donations on 2026-10-25), so the
+  day is done only when it reads 0 remaining.
+- A donations unit closes only on a **live Donation Count read
+  inside that same unit**. An arithmetic final - donations made
+  subtracted from 30 - is never a closing figure, in any record,
+  summary or tracker note. This is rule R1 of the task unit queue
+  design, stated here for its worst offender.
+- When the button timer hides the count, the executor waits out
+  the cooldown inside the unit if the budget allows, or re-reads
+  the day state from another surface - the Tech Donation Today
+  footer, or the Donation tab of Strength Ranking. If the count
+  still cannot be read, the unit closes as **unverified**, the
+  tracker stays untouched, and a named re-read unit is enqueued
+  for after the cooldown.
+- Scheduling - donation units run in the early cycles of the day
+  (this regular is segment 1, produced from the 02:03 local slot
+  onward) and burn the 30 down early, not in the evening units.
+  The quota checkpoints of rule R3 apply - the remaining count is
+  read live six hours and two hours before the 19:00 reset, and a
+  shortfall raises the next donations unit to priority 1. A day
+  may not discover an un-donated remainder at its end.
 
 ## Open questions
 
