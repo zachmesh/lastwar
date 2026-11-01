@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:00:00Z
-version: 0.7.0
+modified: 2026-11-01T05:10:00Z
+version: 0.8.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -481,8 +481,73 @@ pass enqueues the pair for the next reset as part of its run,
 and a reset with no sweep pair staged is itself reported in the
 round summary.
 
+## 13. The perception layer (scout)
+
+The day work set is no longer defined by the static regulars
+alone. Under the owner direction of 2026-10-31, a perception
+layer sits in front of production - scout units walk the game
+interface first, record what is actually available to do, and
+the pool is then diffed and filled from that observation. The
+full design - the traversal checklist, the observed items
+schema, the diff rules, the tool design and the phased roadmap -
+is [perception-driven queue](perception-driven-queue.md). This
+section fixes the queue-level contract.
+
+- **Scout unit type.** The regular is `scout` (the post-reset
+  full pass, daily-reset cadence anchored at the 19:00 local
+  reset) and `scout-midday` (the midday pass, daily-reset cadence
+  anchored at 07:00 local, the middle of the reset day). Both
+  name the activity `perception-scout`. Scout units are windowed
+  work - priority 2 by intent; the production priority table
+  gains their entries with the Phase 2 diff tool, as the
+  perception document records. A scout unit observes and records
+  only - it never claims, fights, dispatches or buys. The work
+  it finds belongs to the owning regular own unit.
+- **Chain splitting.** One pass is one homogeneous chain of
+  scout units, split by surface group - scout-base, scout-events,
+  scout-store, scout-alliance - because a full traversal does not
+  fit the 15 minute unit cap. The chain id is `scout-<reset
+  date>` for the post-reset pass and `scout-mid-<reset date>`
+  for the midday pass; the units run in order inside the pass
+  window, and a unit that cannot finish its group closes partial
+  with the unwalked surfaces named and a successor enqueued for
+  the remainder. The regulars schema cannot express the split -
+  cadence stages one unit per regular per window - so the staged
+  unit is the chain head, and the executor extends the chain
+  from it under the chain rules of section 2.
+- **The observation output.** Every scout unit appends its
+  surface sections to the day observation file,
+  `_records_/<local date>/perception-scout/observation.md` - one
+  file per reset day, append-only inside the day, carrying the
+  day counters in its frontmatter and the observed items in the
+  schema the perception document defines. The zero sweep of
+  section 12 reads this file alongside the ledger, so observed
+  items are swept by the same standard as modelled lines.
+- **Result contract.** A scout unit result must reference the
+  observed items it produced - `evidence` names the day
+  observation file, `stats` carries surfaces_walked,
+  items_observed, red_dots_seen, red_dots_explained,
+  unexplained_red_dots and unknown_items, and `follow_up` names
+  the units the diff enqueued or raised, or the unknowns
+  awaiting exploration. A pass that closes with unexplained red
+  dots closes partial - the zero unexplained red dots standard
+  of the perception document is a closing condition, not a
+  report nicety.
+- **Dynamic production.** Units created from an observation are
+  ordinary units - they pass the same enqueue validation, obey
+  the (regular, planned_for) invariant where the planner
+  produces them, and carry their source observation in their
+  window text when the diff creates them. Unknown items enter as
+  priority 2 exploration units and are governed by rule R5 from
+  their first day.
+
 ## Changelog
 
+- 0.8.0, 2026-11-01 - section 13 added under the owner direction
+  of 2026-10-31 for perception-driven daily tasks - the scout
+  unit type, its chain splitting, the observation output and its
+  result contract, referencing the new perception-driven queue
+  design document.
 - 0.7.0, 2026-11-01 - sections 11 and 12 added under the owner
   instruction of 2026-10-31 to reflect and fix the miss audit -
   execution discipline rules R1 to R8, the daily collection

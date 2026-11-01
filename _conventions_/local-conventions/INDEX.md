@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:00:00Z
-version: 1.4.0
+modified: 2026-11-01T05:10:00Z
+version: 1.5.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -34,3 +34,7 @@ in this repository.
   list of everything collectible or due in one reset day, each line
   with the live read that closes it, walked by the pre-reset zero
   sweeps.
+- [Perception-driven queue](perception-driven-queue.md) — the scout
+  layer; daily work is determined by what the game screen actually
+  offers, observed first into structured items and enqueued
+  dynamically, with the static regulars as the baseline.
