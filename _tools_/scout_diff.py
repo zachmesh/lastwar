@@ -7,7 +7,7 @@ sections 5, 6 and 9). A scout pass observes the game and writes
 its observed items into the day observation file; this tool reads
 that observation, diffs it against the modelled work - the
 regulars profile library, the _activities_ roster with its
-candidate register, and the pool itself - and produces three
+candidate register, and the pool itself - and produces four
 outputs in an output directory:
 
   1. the enqueue plan (JSONL, one queue.py enqueue argument set
@@ -19,7 +19,15 @@ outputs in an output directory:
   3. the coverage report - items observed, actionable, queued,
      already satisfied, not actionable with reasons, candidates,
      unexplained red dots, and the day unmatched_labels printed
-     in full (an empty list is printed as empty, never omitted).
+     in full (an empty list is printed as empty, never omitted);
+  4. the promotion proposals - one entry per registered
+     candidate with a completed exploration unit in the pool,
+     naming the exploration evidence and the decision owed
+     (promote, reject, or keep exploring). A proposal never
+     applies itself: promotion or rejection is a metadata edit
+     made by the knowledge organizer or the owner, never by
+     this tool, and the proposal never blocks the next
+     exploration unit the plan enqueues.
 
 Without --apply the tool is a dry run: it writes its outputs and
 changes nothing in any pool. With --apply it feeds the plan's
@@ -481,6 +489,85 @@ def candidate_draft(slug, label, surface, clues, stamp, date):
 
 
 # ---------------------------------------------------------------------
+# Promotion proposals (Phase 3 slice)
+# ---------------------------------------------------------------------
+
+def exploration_done_units(units, slug):
+    """Completed exploration units for one candidate slug, from
+    any date. Exploration units carry their source in their
+    window text - "scout <date> - exploration - <slug> - ..." -
+    so the window marker, not the run date, is the match; a
+    candidate explored on an earlier day is found by a later
+    run instead of aging in silence."""
+    needle = f"exploration - {slug} -"
+    done = [f for f in units
+            if f.get("_state") == "done"
+            and needle in str(f.get("window", ""))]
+    return sorted(done, key=lambda f: str(f.get("_file", "")))
+
+
+def _result_text(result, key):
+    if not isinstance(result, dict):
+        return ""
+    value = result.get(key, "")
+    return "" if value is None else str(value)
+
+
+def promotion_proposals(units, roster, candidates):
+    """One proposal per registered candidate with a completed
+    exploration unit. The proposal aggregates the exploration
+    record - it never judges mechanism clarity itself, because
+    the pool carries the exploration result, not the judgment:
+    the decision owed is promote once the mechanism is clear
+    and inside the free and safe envelope, reject with the
+    reason kept if priced, red-lined, owner-only or not a task
+    at all, and keep exploring otherwise. Candidates with no
+    completed exploration unit get no proposal, and a proposal
+    changes nothing in the pool or the roster."""
+    slugs = set(candidates)
+    for name, entry in roster.items():
+        if entry.get("status") in ("candidate", "exploring"):
+            slugs.add(name)
+    proposals = []
+    for slug in sorted(slugs):
+        done = exploration_done_units(units, slug)
+        if not done:
+            continue
+        rec = candidates.get(slug, {})
+        entry = roster.get(slug, {})
+        explorations = []
+        for f in done:
+            result = f.get("result", {})
+            stats = result.get("stats", {}) \
+                if isinstance(result, dict) else {}
+            if not isinstance(stats, dict):
+                stats = {}
+            explorations.append({
+                "file": f.get("_file", ""),
+                "status": _result_text(result, "status"),
+                "finished_at": _result_text(result,
+                                            "finished_at"),
+                "duration_seconds": _result_text(
+                    result, "duration_seconds"),
+                "summary": _result_text(result, "summary"),
+                "evidence": _result_text(result, "evidence"),
+                "follow_up": _result_text(result, "follow_up"),
+                "stats": {str(k): str(v)
+                          for k, v in stats.items()}})
+        proposals.append({
+            "slug": slug,
+            "label": rec.get("label", "") or
+                     entry.get("title", slug),
+            "surface": rec.get("surface", "") or
+                       "not observed in this pass",
+            "register_status": entry.get("status", "") or
+                               rec.get("status", ""),
+            "observed_today": slug in candidates,
+            "explorations": explorations})
+    return proposals
+
+
+# ---------------------------------------------------------------------
 # Main diff
 # ---------------------------------------------------------------------
 
@@ -700,6 +787,12 @@ def run(args):
                     {"entry": entry["regular"],
                      "output": text or out.stderr.strip()})
 
+    # Promotion proposals - read-only aggregation over the pool
+    # units already loaded above; without --root the pool is
+    # unread, so no proposal can be grounded and none is made.
+    proposals = promotion_proposals(units, roster, candidates) \
+        if args.root else []
+
     # Outputs.
     out_dir = args.out or os.path.join(
         os.path.dirname(os.path.abspath(args.observation)),
@@ -746,6 +839,78 @@ def run(args):
     with open(cand_path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(cand_lines))
 
+    prom_path = os.path.join(
+        out_dir, f"scout-promotions-{date}.md")
+    prom_lines = ["---",
+                  f"title: Scout Promotion Proposals {date}",
+                  f"created: {iso(stamp)}",
+                  "description: Promotion or rejection proposals "
+                  "for candidates whose exploration completed - "
+                  "proposals only, never applied by this tool",
+                  "---", "",
+                  f"# Promotion proposals - {date}", ""]
+    if not args.root:
+        prom_lines.append(
+            "Pool not read (no --root), so completed "
+            "explorations could not be checked and no proposal "
+            "is grounded in this run.")
+    elif not proposals:
+        prom_lines.append(
+            "No registered candidate has a completed "
+            "exploration unit in the pool - no promotion "
+            "decision is owed by this run.")
+    for prop in proposals:
+        prom_lines.append(f"## {prop['slug']}")
+        prom_lines.append("")
+        prom_lines.append(
+            f"Label - {prop['label']}; surface - "
+            f"{prop['surface']}; register status - "
+            f"{prop['register_status']}; observed in this "
+            f"pass - {'yes' if prop['observed_today'] else 'no'}.")
+        prom_lines.append("")
+        prom_lines.append(
+            "Decision owed - promote to active once the "
+            "mechanism is clear and inside the free and safe "
+            "envelope, reject with the reason kept if priced, "
+            "red-lined, owner-only or not a task at all, "
+            "otherwise keep exploring. This proposal changes "
+            "nothing: promotion or rejection is a metadata "
+            "edit made by the knowledge organizer or the "
+            "owner."
+            + (" The next exploration unit in the enqueue "
+               "plan is still enqueued, so a keep-exploring "
+               "decision keeps its unit."
+               if prop["observed_today"] else
+               " No exploration unit is enqueued for it by "
+               "this pass, since it was not observed today - "
+               "a keep-exploring decision needs its next "
+               "unit staged by the planner."))
+        prom_lines.append("")
+        for ex in prop["explorations"]:
+            prom_lines.append(
+                f"- exploration unit {ex['file']} - result "
+                f"{ex['status'] or 'unrecorded'}"
+                + (f", finished {ex['finished_at']}"
+                   if ex["finished_at"] else "")
+                + (f", {ex['duration_seconds']}s"
+                   if ex["duration_seconds"] else ""))
+            if ex["summary"]:
+                prom_lines.append(f"  summary - {ex['summary']}")
+            if ex["evidence"]:
+                prom_lines.append(
+                    f"  evidence - {ex['evidence']}")
+            if ex["follow_up"]:
+                prom_lines.append(
+                    f"  follow-up - {ex['follow_up']}")
+            if ex["stats"]:
+                prom_lines.append(
+                    "  stats - " + ", ".join(
+                        f"{k}={v}"
+                        for k, v in sorted(ex["stats"].items())))
+        prom_lines.append("")
+    with open(prom_path, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(prom_lines))
+
     to_enqueue = [e for e in plan if e["action"] == "enqueue"]
     already = [e for e in plan if e["action"] == "already-queued"]
     raises = [e for e in plan if e["action"] == "raise"]
@@ -778,8 +943,10 @@ def run(args):
                                       if c["registered"]]),
         "unexplained_red_dots": unexplained_count,
         "unmatched_labels": unmatched,
+        "promotion_proposals": len(proposals),
         "outputs": {"enqueue_plan": plan_path,
-                    "candidates": cand_path},
+                    "candidates": cand_path,
+                    "promotions": prom_path},
     }
     cov_path = os.path.join(
         out_dir, f"scout-coverage-{date}.md")
@@ -809,7 +976,23 @@ def run(args):
            f"{coverage['candidates_registered']})",
            f"- unexplained red dots - "
            f"{coverage['unexplained_red_dots']}",
-           "", "## By surface", ""]
+           f"- promotion proposals - "
+           f"{coverage['promotion_proposals']} (registered "
+           f"candidates with a completed exploration unit, "
+           f"decision owed)",
+           "", "## Promotion proposals", ""]
+    if not args.root:
+        cov.append("Pool not read (no --root) - completed "
+                   "explorations could not be checked.")
+    elif not proposals:
+        cov.append("None.")
+    for prop in proposals:
+        cov.append(f"- {prop['slug']} - "
+                   f"{len(prop['explorations'])} completed "
+                   f"exploration unit(s), register status "
+                   f"{prop['register_status']} - decision owed: "
+                   f"promote, reject, or keep exploring.")
+    cov += ["", "## By surface", ""]
     for surface in sorted(surfaces):
         cov.append(f"- {surface} - {surfaces[surface]}")
     cov += ["", "## Not actionable, with reasons", ""]
@@ -859,7 +1042,9 @@ def run(args):
               f"raises {coverage['raises']}, "
               f"candidates {len(candidates)}, "
               f"unexplained red dots "
-              f"{coverage['unexplained_red_dots']}")
+              f"{coverage['unexplained_red_dots']}, "
+              f"promotion proposals "
+              f"{coverage['promotion_proposals']}")
         print(f"outputs in {out_dir}")
         if applied:
             print(f"applied {len(applied)} - "
