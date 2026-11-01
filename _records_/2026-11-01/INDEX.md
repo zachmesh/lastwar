@@ -856,3 +856,23 @@ of 2026-10-28.
 - No gap filed, no stale item marked. Next run checks
   PR 79 review feedback first. Full detail in
   knowledge-organization/1032-run.md.
+
+## 10:40 to about 10:52 — Queue planner pass
+
+- Planner pass planner-1040. Plan staged 11 units for the
+  2203 and 2230 slots (mail, help, gifts, train and
+  star-ceremony at 2230; harvest, radar, survivors, training,
+  donations and arms-race at 2203); 59 already present, 1
+  skipped as done for the current slot, 0 reaped, 0 expired.
+  Pre-reset sweep pair not due: this run falls outside the
+  17:00 hour. Scout diff over the 02:15 observation applied
+  with zero changes: the observation carries narrative
+  sections but no observed_items block, so the tool reads 0
+  items; its own 3 unexplained red dots (Alliance dot,
+  building badge 5, NEW! chest badge 3) and 2 unknown items
+  (furnace toast, second HUD row labels) stay open for the
+  scout successor units and the retro threshold check. No
+  queue withdrawals: the diff classified nothing as
+  satisfied and the observation predates today's units.
+  Pool by_state at 10:43: inbox 75, claimed 1, done 473.
+  Full detail in queue-planning/1040-run.md.
