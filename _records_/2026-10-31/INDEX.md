@@ -587,3 +587,24 @@ unrecoverable fields written unknown:
 ## 23:45 to about 00:02 — PR integration (done)
 
 - PR integrator run pr-integration-2026-10-31-2345, done: 1 open PR at pass start (PR 13, credentials folder removal), reviewed clean and squash-merged as af6a9589c (Owner lastwar-pr-catchall-owner correct for the README plus registry change; scope exactly the four claimed files; PR-head tree grep finds zero credential paths; no red-line loosening, authorisation widening, schedule or policy change, so not owner-gated). Records PR 14 opened and merged with merge commit f96c1b3a4, branch not deleted, branch head verified contained in main. Local main fast-forwarded 8f3e8053c to f96c1b3a4 via the bundle route, no force, other agent's worktree checkout untouched. Merge-time action-log line appended (PR branches carry no _logs_ appends); no input-log line for the PR 13 owner instruction, whose exact chat timestamp is not evidenced in this pass. End-of-pass sweep found zero open PRs. Slack DM merge notice sent. Full detail in pr-integration/2345-run.md.
+
+## 23:39 to about 23:49 — PR catch-all (no-op, record appended late)
+
+- PR catch-all run pr-catchall-2026-10-31-2350, no-op: own-PR
+  check first found no PR adopted by this job (no catchall
+  comment on PRs 1 to 10, no pr-catchall record folder on the
+  records branch). Open PR list at pass start was empty, then
+  PR 11 (queue complete stats validation, tools/queue.py only,
+  Owner lastwar-tool-developer, matching its diff) and PR 12
+  (2026-10-31 records ticker-2334 harvest, Owner
+  lastwar-pr-integrator, tier-1 records paths only) were seen;
+  neither is this job's to adopt or fix, neither touches a red
+  line, an authorisation, a cron definition or PR policy text,
+  and both are minutes old, so no stale-owner flag applies.
+  No adoption comment, no fix, no hand-off, no escalation.
+  Full detail in pr-catchall/2350-run.md.
+- This record was appended to the records/2026-10-31 branch
+  late, in the 2026-11-01 0039 catchall pass, after the
+  integrator rebase that blocked the 2350 pass had cleared;
+  the shared VPS checkout was left untouched and the record
+  was pushed via a separate worktree and the bundle route.
