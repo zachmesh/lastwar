@@ -661,6 +661,7 @@ of 2026-10-28.
   directly to main.
   Full detail in tool-development/0940-run.md.
 
+
 ## 09:39 - PR catch-all pass
 
 - Catchall pass pr-catchall-2026-11-01-0939. Two open PRs
@@ -675,6 +676,7 @@ of 2026-10-28.
   fix, no hand-off, no owner-gated point, no stale-owner
   flag. Quiet run, no Slack DM sync. PR 68 MERGED.
   Full detail in pr-catchall/0939-run.md.
+
 ## 09:40 to about 09:44 — Queue planning pass (no-op)
 
 - Planner run queue-planning-2026-11-01-0944, no-op:
@@ -703,3 +705,22 @@ of 2026-10-28.
   the units staged after it.
 - Delivered on records/2026-11-01 under policy 2.0.0.
   Full detail in queue-planning/0944-run.md.
+## 09:35 to about 09:38 — Queue ticker pass, alliance gifts (performed)
+
+- Gifts unit gifts-2026-11-01-0630, performed: Regular
+  Claim All 222 gifts (progress 178,139,340 to
+  178,141,560) and Premium Claim All 18 gifts, closing
+  progress at 178,149,760 of 206,300,000, Gift Level 28.
+  First Alliance tap showed only a press effect
+  (background-input pattern); a title-bar left-segment
+  tap plus a retry opened the panel. Full detail in
+  alliance-gifts/0935-queue-run.md.
+
+## 09:39 to about 09:41 — Queue ticker pass, alliance help (performed)
+
+- Help unit help-2026-11-01-0630, performed: Help All
+  pressed, game answered "Allies are very grateful for
+  your assistance!". Visible requests were only this
+  account's own, all already 30/30; header stayed at
+  540/1,000 points. Full detail in
+  alliance-help/0940-queue-run.md.

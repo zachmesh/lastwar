@@ -1,37 +1,37 @@
 {
- "events": {
-  "at": "2026-11-01T01:17:33",
-  "note": "Hub swept; nothing claimable outside Arms Race",
-  "status": "done"
- },
- "gifts": {
-  "at": "2026-11-01T01:10:34",
-  "note": "47 Regular + 8 Premium claimed, progress 177055050/206300000",
-  "status": "done"
- },
- "help": {
-  "at": "2026-11-01T01:39:14",
-  "note": "Help All pressed, points 80 to 160",
-  "status": "done"
- },
- "passes": {
-  "at": "2026-11-01T01:14:20",
-  "note": "All pickups already claimed; no free pack today",
-  "status": "done"
- },
- "star-ceremony": {
-  "at": "2026-11-01T01:08:45",
-  "note": "No ceremony waiting; weekly rank 190, 17240439 pts; daily total unverified",
-  "status": "done"
- },
- "train": {
-  "at": "2026-11-01T01:11:06",
-  "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure",
-  "status": "done"
- },
- "treasures": {
-  "status": "done",
-  "at": "2026-11-01T01:45:43",
-  "note": "Fragments checked, no complete set, Dig greyed out"
- }
+  "events": {
+    "at": "2026-11-01T01:17:33",
+    "note": "Hub swept; nothing claimable outside Arms Race",
+    "status": "done"
+  },
+  "gifts": {
+    "at": "2026-11-01T09:39:05",
+    "note": "Regular 222 + Premium 18 claimed",
+    "status": "done"
+  },
+  "help": {
+    "at": "2026-11-01T09:40:59",
+    "note": "Help All pressed, gratitude confirmed",
+    "status": "done"
+  },
+  "passes": {
+    "at": "2026-11-01T01:14:20",
+    "note": "All pickups already claimed; no free pack today",
+    "status": "done"
+  },
+  "star-ceremony": {
+    "at": "2026-11-01T01:08:45",
+    "note": "No ceremony waiting; weekly rank 190, 17240439 pts; daily total unverified",
+    "status": "done"
+  },
+  "train": {
+    "at": "2026-11-01T01:11:06",
+    "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure",
+    "status": "done"
+  },
+  "treasures": {
+    "status": "done",
+    "at": "2026-11-01T01:45:43",
+    "note": "Fragments checked, no complete set, Dig greyed out"
+  }
 }
