@@ -223,15 +223,20 @@ def pick_key(fields):
 # Production metadata for sync (design sections 4 and 6). Estimates
 # stay under the 15 minute unit cap; priorities follow the classes in
 # the design - vip expires at the daily reset, the windowed regulars
-# score inside live windows, the rest are standard.
+# score inside live windows, the rest are standard. The scout
+# entries are the Phase 2 seeds of the perception design (section 9
+# of perception-driven-queue.md) - scout passes are windowed work at
+# priority 2, seeded at 10 minutes until the pool learns better.
 SYNC_PRIORITY = {"vip": 1, "passes": 2, "arms-race": 2, "radar": 2,
-                 "donations": 2, "trucks": 2, "events": 2}
+                 "donations": 2, "trucks": 2, "events": 2,
+                 "scout": 2, "scout-midday": 2}
 SYNC_EST_MINUTES = {"mail": 4, "help": 2, "gifts": 3, "vip": 2,
                     "passes": 5, "secrets": 6, "treasures": 2,
                     "radar": 10, "survivors": 3, "harvest": 3,
                     "trucks": 12, "train": 4, "training": 4,
                     "donations": 4, "events": 10, "arms-race": 12,
-                    "ghost-ops": 8, "star-ceremony": 3}
+                    "ghost-ops": 8, "star-ceremony": 3,
+                    "scout": 10, "scout-midday": 10}
 LOCAL_TZ = ZoneInfo("America/Los_Angeles")
 
 
