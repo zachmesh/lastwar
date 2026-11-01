@@ -1054,3 +1054,36 @@ of 2026-10-28.
   757ee47e92 via the bundle route. End-of-pass sweep:
   zero open PRs, no unprocessed PRs. Full detail in
   pr-integration/0545-run.md.
+
+## 06:00 to about 06:03 - PR integration 0600 run
+
+- Integrator run pr-integration-2026-11-01-0600, done:
+  zero open PRs at pass start, records PR 56 opened
+  and merged.
+- Own-PR check first: no open PRs, so nothing was
+  addressed to this job; PRs 51 to 55 stand MERGED.
+- Records PR 56 OPENED then MERGED, merge commit
+  4130814816, branch kept: it carries 1 commit
+  beyond main (the 0545 run record, the day INDEX
+  append and its action-log line). Merge state
+  CLEAN.
+- records/2026-10-31 verified contained in main, no
+  PR needed. Local main fast-forwarded 757ee47e92
+  to 4130814816 via the bundle route. End-of-pass
+  sweep: zero open PRs, no unprocessed PRs. Full
+  detail in pr-integration/0600-run.md.
+
+## 06:04 to about 06:15 — Queue ticker pass, gifts (failed, device offline)
+
+- Gifts unit gifts-2026-11-01-0230, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path)
+  plus a failed health probe and one timed-out
+  recovery-channel attempt, last seen 01:47 local and
+  unmoved across the pass. No screen read, no Alliance
+  panel opened, no Regular or Premium gift count
+  observed, nothing claimed, nothing spent. Tracker
+  untouched. Eighth consecutive access-failed pass after
+  the 02:34, 03:04, 03:34, 04:04, 04:34, 05:04 and 05:34
+  passes; the channel has been down since 01:47 local.
+  Full detail in alliance-gifts/0604-queue-run.md.
