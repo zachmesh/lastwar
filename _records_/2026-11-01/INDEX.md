@@ -588,3 +588,17 @@ of 2026-10-28.
   made, nothing spent. Tracker untouched. Second
   consecutive access-failed pass after the 02:34 pass.
   Full detail in alliance-donations/0310-queue-run.md.
+
+## 03:34 to about 03:42 — Queue ticker pass, radar (failed, device offline)
+
+- Radar unit radar-2026-11-01-0203, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path)
+  plus a failed health probe and two timed-out recovery
+  channel attempts, last seen 01:47 local and unmoved
+  across the pass. Radar screen never entered, no stored
+  count, stamina or pin inventory observed, no Quick
+  Execute run, nothing claimed, nothing spent. Tracker
+  untouched. Third consecutive access-failed pass after
+  the 02:34 and 03:04 passes. Full detail in
+  radar-tasks/0334-queue-run.md.
