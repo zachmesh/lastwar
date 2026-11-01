@@ -196,3 +196,29 @@ of 2026-10-28.
 ## 01:00 to about 01:10 — PR integration pass
 
 - PR integrator run pr-integration-2026-11-01-0100, done: 2 open PRs at pass start, zero at the end-of-pass sweep. PR 26 (tools standardization, Owner lastwar-tool-developer) reviewed clean in full - owner correct, 17 files moved to _tools_/ with a compatibility symlink, policy file changed only in path mentions, code spot-checked (six sources compile, canonical and compatibility regulars outputs match) - but merged by a concurrent pass during this pass window as squash commit 92583ce before this pass issued its merge; the merged commit was verified against the reviewed head including its second docs commit, and no duplicate merge was issued. PR 24 (records/2026-11-01) first re-verified against true main 92583ce as conflict-blocked on _records_/retro/improvements.md only, left untouched with the 0045 comment standing; mid-pass the branch side merged main into the branch (06f1a58), after which the improvements diff was only the IMP-20261031-09 implemented status, and this pass merged PR 24 with merge commit 3ac4a4f, branch not deleted. Records/2026-10-31 verified contained in main, no PR needed. Local main fast-forwarded d1043c79 to 92583ce and then to 3ac4a4f via the bundle route, no force. Slack DM sent with a correction once PR 24 merged. No owner-gated items, no unprocessed PRs. Full detail in pr-integration/0100-run.md.
+
+## 01:04 to about 01:10 — Queue ticker pass, gifts (done)
+
+- Ticker pass ticker-0104. Own-PR check first: PR 24
+  (records/2026-11-01, ticker-0034) was conflict-blocked
+  on _records_/retro/improvements.md only; this pass
+  merged current main into the branch in a separate
+  worktree, reconciled the frontmatter to version
+  1.1.1, keeping both the main IMP-20261101-01
+  through IMP-20261101-05 entries and the branch
+  IMP-20261031-09 implemented status, pushed as
+  06f1a587 and replied on PR 24; the integrator
+  merged PR 24 during this pass window (3ac4a4f).
+  Sync reaped 0, expired 0, produced 0 new units
+  (all due regulars already queued). No zombie chain
+  seeded: the Zombie Invasion event ended 2026-10-30
+  about 19:00 and no Zombie tab is live.
+- Gifts unit gifts-2026-10-31-2230, done: Regular
+  Claim All 47, Premium Claim All 6 plus a second
+  sweep of 2 (8 Premium total); Gift Level 28
+  progress 177,052,730 to 177,055,050 of
+  206,300,000. Tracker marked done for the slot.
+  Full detail in alliance-gifts/0110-queue-run.md.
+- Pass ended after one unit, inside its 25 minute
+  budget. Game left on the Alliance Gifts Premium
+  list. No login or different-device dialog appeared.
