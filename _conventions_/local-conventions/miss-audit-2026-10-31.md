@@ -695,3 +695,25 @@ daily named mention.
    of 100 non-done units were true red-line misses, and 11 were
    by-design partials - the routine was far less impossible than
    its partial count makes it look.
+
+## Addendum - the Glittering Market, 2026-11-01
+
+Added after the audit closed, at the owner naming of 2026-10-31.
+This addendum appends one item of the same unmodelled class as
+item 8 above and changes no conclusion of the audit.
+
+The Glittering Market was never opened, located or worked on
+either audited day - zero visits, like the Crystal Shop. Its only
+trace in the records is a mail titled Glittering Market
+Unclaimed, whose unclaimed rewards were taken by Event Claim All
+inside mail units - seen in the audited window on 2026-10-30
+(`_records_/2026-10-30/mail-rewards/1937-queue-run.md` and
+`_records_/2026-10-30/mail-rewards/2313-queue-run.md`), and
+outside the window on 2026-10-27 and 2026-10-29. The mail is
+unclaimed residue of a market not worked - whatever the market
+offers at the source was never taken on any recorded day. The fix
+pass modelled it as its own activity type
+(`_activities_/glittering-market/INDEX.md`), put it on the daily
+collection ledger with a closing standard that mail residue can
+never satisfy, and queued a priority 1 locating unit
+(glittering-market-2026-11-01-0501).

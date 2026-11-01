@@ -1,13 +1,14 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:58:00Z
-version: 0.6.1
+modified: 2026-11-01T05:00:00Z
+version: 0.7.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
   - source: owner request 2026-10-28 to design a task unit pool with short bounded executions
   - source: run records of 2026-10-27 and 2026-10-28 in _records_
+  - source: miss audit of 2026-10-31 and the owner instruction of 2026-10-31 to reflect and fix
 ---
 
 # Task unit queue design
@@ -368,3 +369,124 @@ The owner directed the full move after validation, the same day.
   batch. The cap is per unit (15 minutes) and the executor loop
   re-picks after every unit, which is what lets other tasks ingest
   when their time arrives.
+
+## 11. Execution discipline rules - the 2026-10-31 audit fixes
+
+The miss audit of 2026-10-31 classified the 100 non-done units of
+2026-10-30 and 2026-10-31 by root cause. 61 of them were one
+failure repeated - a tap or search method that did not work, used
+again in the next unit with no pivot and no escalation (audit
+categories C and E). Only 4 were true red-line misses. The rules
+below are the fix. They bind every executor and every unit, and
+the [reflection of 2026-10-31](reflection-2026-10-31.md) maps each
+one to the audit cause it answers.
+
+- **R1 - live read or unverified.** A unit closes only on figures
+  read live on screen inside that same unit. If a closing counter
+  is hidden or blocked - the greyed donation button timer is the
+  standing example - the unit closes as unverified, the tracker
+  stays untouched, and the executor enqueues a named re-read unit
+  for after the blocker clears. Arithmetic, presumed, by-result
+  and ranking-row figures are banned as closing counts. Donation
+  counts and truck trade counts are the named cases; the rule is
+  general.
+- **R2 - pivot, then escalate.** Two no-change taps at one point
+  end that method inside the unit. The executor re-grounds the
+  point fresh (entry icons are measured in every unit, never
+  inherited), takes a second observation, and switches variant -
+  fresh measured centre, long-press, or a different entry path.
+  The second consecutive partial of a regular with the same
+  blocker must arrive with a changed method. The third writes the
+  blocker into the activity metadata, changes the entry route
+  before any further unit of that type runs, and is named in that
+  day round summary. A fourth identical partial is a process
+  failure, not a result, and is reported to the owner as one.
+- **R3 - quota checkpoints.** Quota types - trucks (dispatch 5,
+  plunder 4 per trade day) and donations (30 coin donations per
+  reset day), and any type that later gains a per-cycle quota -
+  carry two checkpoints per cycle, six hours and two hours
+  before the cycle end (the 19:00 local reset for reset-day
+  quotas, the trade-day end for trucks). Each checkpoint reads
+  the counter live. A shortfall at a checkpoint raises the next
+  unit of that type to priority 1 and is named in the round
+  summary - a quota may never be discovered short in the cycle
+  final unit for the first time.
+- **R4 - Arms Race judged at the phase start.** The first unit
+  inside a phase reads the phase, the score and every scoring
+  path, and works the just-enough plan from there. A phase whose
+  paths all sit inside the red lines is reported to the owner as
+  skipped-needs-owner early in the phase, with the queue contents
+  as evidence - never discovered in the phase last minutes, and
+  never re-checked identically inside the same phase.
+- **R5 - owner-named tasks escalate.** A task the owner named
+  that is not completed within 24 hours rises to priority 1 and
+  is named in every round summary, with its age in days, until
+  it closes. No owner-named task ages in silence. Crystal, named
+  2026-10-25 and unlocated for six days, is the case this rule
+  exists for; the Glittering Market, named 2026-10-31, entered
+  under it from its first day.
+- **R6 - no gap crosses a window boundary at the end.** Inside
+  the last 60 minutes of a window - a phase, a trade day, a
+  reset - a remaining gap is never left for the next re-check.
+  The unit finishes inside itself, or enqueues a priority 1
+  successor with its expiry set to the window close and names
+  that successor in its closing summary.
+- **R7 - starved subtasks are promoted.** A subtask deferred
+  twice in one day inside its unit - radar map pins after the
+  claims, truck plunder after dispatch, a shop step after combat
+  work - becomes the first action of the next unit of that type,
+  or a unit of its own. It is never again the last action of a
+  unit that has already spent its budget.
+- **R8 - reporting splits by-design partials.** Chain
+  continuation and radar stack posture carry their own label in
+  the round summary, split from misses. The daily miss count
+  counts only units that failed their own objective, so the real
+  blockers stay visible instead of hiding inside a raw partial
+  count.
+
+## 12. The daily collection ledger and the pre-reset zero sweep
+
+The [daily collection ledger](daily-collection-ledger.md) is the
+master list of everything collectible or due in one reset day,
+each line with the live read that closes it. It is part of this
+design - a unit that works a ledger line closes it by the ledger
+standard, and the round summary reports ledger lines with no
+producing unit as unscheduled, never as absent.
+
+**The zero sweep.** Twice before each 19:00 local reset, at about
+17:30 and about 18:30 local, a sweep unit walks the ledger item
+by item. Each line is read live - at zero, not at zero, or
+unreadable. A line not at zero gets a priority 1 unit of its own
+type enqueued before the sweep closes, named in the sweep record;
+the final sweep repeats the walk so the fix-up units it spawned
+are themselves verified. Both sweeps expire at the reset.
+
+**Generation - current practice and the planner interface.** The
+planner (section 7) stages windows from three cadences - the 4
+hour segment anchors, the daily reset and Thursdays. It cannot
+yet express fixed clock slots such as 17:30 and 18:30, so until
+it can, the sweep pair is enqueued manually with
+`tools/queue.py enqueue` - regular `zero-sweep`, one chain per
+reset day (chain id `pre-reset-sweep-<local date>`), priority 1,
+`not_before` set to the slot start in UTC, `expires_at` set to
+the reset, `est_minutes` 15. The pair for the 2026-11-01 reset
+(chain pre-reset-sweep-2026-11-01, units 001 and 002) was enqueued
+this way with the 0.7.0 change. The planner-side interface still
+to build - a fixed-slot daily cadence in `tools/queue.py plan`,
+taking a list of local clock slots per regular and staging them
+through the same (regular, planned_for) invariant, so the sweep
+becomes a produced regular with two daily slots instead of a
+manual enqueue. Until that lands, the operator or the planner
+pass enqueues the pair for the next reset as part of its run,
+and a reset with no sweep pair staged is itself reported in the
+round summary.
+
+## Changelog
+
+- 0.7.0, 2026-11-01 - sections 11 and 12 added under the owner
+  instruction of 2026-10-31 to reflect and fix the miss audit -
+  execution discipline rules R1 to R8, the daily collection
+  ledger reference, and the pre-reset zero sweep with its manual
+  enqueue practice and pending planner interface.
+- 0.6.1, 2026-10-28 - implemented version, as written at the
+  queue cutover.
