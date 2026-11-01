@@ -253,3 +253,33 @@ of 2026-10-28.
   main fast-forwarded to the merge via the bundle
   route. End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0645-run.md.
+
+## 07:00 to about 07:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0700. Zero
+  open PRs at pass start; records/2026-11-01 held one
+  commit beyond main (the 0645 run record), so this
+  pass opened records PR 60 and merged it with a
+  merge commit (a46e57d); the date branch was not
+  deleted. Records/2026-10-31 verified contained in
+  main, so no PR needed. Local main fast-forwarded
+  to the merge via the bundle route. Merge synced
+  to the owner Slack DM. End-of-pass sweep: zero
+  open PRs.
+  Full detail in pr-integration/0700-run.md.
+
+## 07:04 to about 07:20 — Queue ticker pass, donations (failed, device offline)
+
+- Donations unit donations-2026-11-01-0603, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path)
+  plus a failed health probe and a timed-out
+  recovery-channel attempt, last seen 01:47 local and
+  unmoved across the pass. No screen read, no Alliance
+  Techs opened, no Donation Count observed, nothing
+  donated, nothing claimed, nothing spent. Tracker
+  untouched. Tenth consecutive access-failed pass after
+  the 02:34, 03:04, 03:34, 04:04, 04:34, 05:04, 05:34,
+  06:04 and 06:34 passes; the channel has been down
+  since 01:47 local. Full detail in
+  alliance-donations/0704-queue-run.md.
