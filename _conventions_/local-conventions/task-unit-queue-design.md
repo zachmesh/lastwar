@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:34:00Z
-version: 0.12.0
+modified: 2026-11-01T05:35:00Z
+version: 0.13.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -757,8 +757,20 @@ the day they are computed. Its computation extends
 same data appendix, filed in the tool-developer backlog in the
 specification's own terms.
 
+Pushes follow the two-tier policy of
+[push and PR policy](push-and-pr-policy.md): the records,
+queue state and logs this design produces are tier 1 and push
+directly to main, while changes to this design, the tools and
+the activity profiles are tier 2 and land by pull request, with
+the retro's loop-health check auditing that no tier-2 change
+reached main unreviewed.
+
 ## Changelog
 
+- 0.13.0, 2026-11-01 - a cross-reference to the new push and
+  PR policy: the queue's own outputs are tier-1 direct pushes,
+  and changes to the design and tools are tier-2 pull requests
+  under the audit of section 14's loop-health check.
 - 0.12.0, 2026-11-01 - section 14 gains a cross-reference to
   the new evaluation metrics specification - the system-level
   companion that measures execution efficiency, perception,

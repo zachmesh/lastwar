@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:34:00Z
-version: 1.6.0
+modified: 2026-11-01T05:35:00Z
+version: 1.7.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -41,6 +41,13 @@ in this repository.
   effectiveness, the measured impact of the tool developer and the
   knowledge organiser, and loop health, with the monitoring
   thresholds the daily retro enforces.
+- [Push and PR policy](push-and-pr-policy.md) — the two-tier push
+  policy the owner approved on 2026-10-31: execution records,
+  queue state, logs and tool state push straight to main, while
+  load-bearing knowledge and code (tools, conventions, activity
+  profiles, the regulars) land by pull request through the VPS
+  `gh` route, enforced by discipline and the retro audit while
+  the Free plan offers no branch protection.
 - [Daily collection ledger](daily-collection-ledger.md) — the master
   list of everything collectible or due in one reset day, each line
   with the live read that closes it, walked by the pre-reset zero

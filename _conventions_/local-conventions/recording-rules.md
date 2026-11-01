@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-27T09:56:00Z
+modified: 2026-11-01T05:35:00Z
 level: L2
-version: 1.6.0
+version: 1.7.0
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -58,6 +58,26 @@ types, and only check and update existing types without executing —
 is stated in [task intake workflow](task-intake-workflow.md). Task type
 metadata always keeps its own top level folder, `_activities_`, and is
 never nested inside `_records_`.
+
+## Commit discipline - execution commits stay in tier 1
+
+Pushes run under the two-tier policy of
+[push and PR policy](push-and-pr-policy.md) (owner decision,
+2026-10-31). An execution commit - the ticker's per-pass
+record commits and any other commit an executor makes while
+doing the work - stages only the tier-1 paths, by explicit
+pathspec, never a blanket add:
+
+- `_records_`, `_queue_`, `_logs_`, `tools/state/`
+
+A change under `tools/`, `_conventions_` or `_activities_` is
+tier 2 and must never be swept into a record commit, however
+small it looks - the scout production seeds in
+`tools/queue.py` landed exactly that way once, inside a
+ticker records commit (d1fa5b9, 2026-10-31). When an executor
+finds tier-2 changes sitting in the working tree, it leaves
+them exactly as they are, notes them in the run record, and
+leaves them for the pull request flow.
 
 ## Owner-only actions
 
