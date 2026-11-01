@@ -308,3 +308,79 @@ of 2026-10-28.
 ## 01:00 to about 01:15 — PR integration (second 01:00 hour, PST after DST fallback)
 
 - PR integration run pr-integration-2026-11-01-0100-pst, done: no open PRs at pass start; own-PR check first, PRs 29, 30 and 31 from the previous pass carried zero comments and zero reviews, nothing addressed to this job. Live records/2026-11-01 carried one commit beyond main (the 0145 run record), so PR 32 was opened for it (Owner lastwar-pr-integrator) and merged with merge commit 502de6932, branch not deleted. Records/2026-10-31 verified contained in main, no PR needed. Local main fast-forwarded fe87b043e to 502de6932 via the bundle route, no force, other agent worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. File note: this run is filed as 0100-pst-run.md because 0100-run.md already holds the first-hour PDT 0100 run. Full detail in pr-integration/0100-pst-run.md.
+
+## 01:15 to about 01:30 — PR integration (second 01:00 hour, PST after DST fallback)
+
+- PR integration run pr-integration-2026-11-01-0115-pst, done: no open PRs at pass start; own-PR check first, PR 32 from the previous pass carried zero comments and zero reviews, nothing addressed to this job. Live records/2026-11-01 carried one commit beyond main (the 0100-pst run record), so PR 33 was opened for it (Owner lastwar-pr-integrator) and merged with merge commit 3378a2a09, branch not deleted. Records/2026-10-31 verified contained in main, no PR needed. Local main fast-forwarded 502de6932 to 3378a2a09 via the bundle route, no force, other agent worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. File note: this run is filed as 0115-pst-run.md because 0115-run.md already holds the first-hour PDT 0115 run. Full detail in pr-integration/0115-pst-run.md.
+## 01:05 to about 01:09 — Queue ticker pass, Star Ceremony check
+
+- Ticker pass ticker-0104 (second 01:04 hour, PST).
+  Sync reaped nothing and produced nothing new -
+  all 18 due regulars were already queued by the
+  planner. No zombie chain was seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30 (chain unit 066) and no Zombie
+  Invasion tab is live.
+- Star ceremony unit star-ceremony-2026-10-31-2230,
+  done (checked only): no gold trophy icon on the
+  base screen right rail, so no Star Ceremony is
+  waiting. Duel League S38 read live: Gold Tier
+  38-7, AP3x rank 3, Match Record Week 2 AP3x vs
+  [Sync] IMPERIUM 7-6, Weekly Ranking Bears Lair
+  rank 190 with 17,240,439 points (weekly
+  cumulative, not a daily total). The personal daily
+  total against the 3,600,000 target is unverified
+  for this unit: no themed duel-day panel was
+  present in the calculating inter-week state.
+  Full detail in alliance-duel/0108-queue-run.md.
+
+## 01:09 to about 01:10 — Queue ticker pass, Train check
+
+- Train unit train-2026-10-31-2230, done (checked
+  only): a train is in preparation with conductor
+  Missile Apex, Train Rating 59,350, about 58 minutes
+  to departure, and the account already holds a seat
+  in carriage 2 (7/7), so no boarding was needed. A
+  THANK THE CONDUCTOR dialog opened from an
+  unverified world-view plus was closed without
+  gifting; no Trade Contracts spent. Full detail in
+  alliance-train/0110-queue-run.md.
+
+## 01:11 to about 01:14 — Queue ticker pass, Shop claims check
+
+- Passes unit passes-2026-10-31-2257, done: shop
+  checked end to end - Free Supply chest Claimed,
+  Coin Weekly Pass Already claimed today, Monthly
+  Pass Daily Pickup Claimed, no free Hot Deals pack
+  today, Weekly Deal all paid. Nothing claimed,
+  nothing spent, Legendary Take All $19.99 and all
+  Renew/Get Now buttons untouched. Full detail in
+  shop-claims/0114-queue-run.md.
+
+## 01:14 to about 01:17 — Queue ticker pass, Event claims sweep
+
+- Events unit events-2026-10-31-2257, done: all
+  hub tabs swept - Frontline Breakthrough rewards
+  all checked off, Community 500 diamonds Claimed,
+  Level Swap inspected only, Rampage Bosses no
+  claim (fight not started). Arms Race Hero
+  Advancement stage state recorded only, its
+  chests left for the arms-race unit. Nothing
+  claimed, nothing spent. Full detail in
+  event-claims/0117-queue-run.md.
+
+## 01:17 to about 01:24 — Queue ticker pass, Truck plunder (partial)
+
+- Trucks unit trucks-2026-10-31-2257, partial:
+  trade entry corrected in-unit (truck icon centre
+  norm 55,596, snap off; a snapped tap at 630 had
+  opened the Secret Command Post and was backed
+  out with no secrets work done). Live counters
+  for the current trade day: Trade 0/5 to 3/5,
+  Plunder 1/4 untouched. Dispatched UR (Squad 1),
+  UR after free plus 1 contract refresh (Squad 3),
+  and SR after a free refresh (Squad 2); 1 Trade
+  Contract spent, stock 156 to 155. Shortfall
+  carried forward: dispatch 2 more, plunder 3 more
+  before 19:00. Full detail in
+  truck-plunder/0124-queue-run.md.
