@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T05:00:00Z
-version: 1.3.0
+modified: 2026-11-01T07:26:52Z
+version: 1.3.1
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -38,7 +38,7 @@ Measured on 2026-10-25.
   base screen, below the Events icon. ALLIANCE DUEL opens with two
   tabs - the duel week tab and Infinite Roulette.
 - Star Ceremony — tap the trophy icon on the right side of the base
-  screen, beside the Alliance icon. It opens [AP3x] ALLIANCE STAR
+  screen, beside the Alliance icon. It opens an alliance ALLIANCE STAR
   CEREMONY (EVENT 38). The icon is present only while a ceremony is
   waiting; it disappears once the ceremony has been played and
   claimed.

@@ -1,14 +1,13 @@
 ---
 title: Typed-folder Adoption
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:09:43Z
+modified: 2026-11-01T07:26:52Z
 level: L2
-version: 1.3.0
+version: 1.3.1
 description: Adoption of reflection typed-folder format and constitutions, with the local type registry
 status: unverified
 grounded_in:
   - source: human-authored, owner request 2026-10-25 to follow reflection shared conventions
-  - source: owner request 2026-10-31 to remove the credentials folder
 ---
 
 # Typed-folder adoption

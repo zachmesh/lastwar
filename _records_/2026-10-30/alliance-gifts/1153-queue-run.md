@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts Execution 2026-10-30 1153 Queue Run
 created: 2026-10-30T18:53:00Z
-modified: 2026-10-30T18:53:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: Gifts queue unit gifts-2026-10-30-1030 - done, 119 Regular and 5 Premium gifts claimed, Gift Level 28 progress 173638880 to 173644620
 status: unverified
 grounded_in:
@@ -52,7 +52,7 @@ Status — done.
 - Recheck — the Regular tab still showed a red dot after
   the Premium claim. Back on the Regular tab (tap at norm
   313,271) two fresh Regular gifts had arrived, both from
-  PrincessEsra10xoxo defeating a Zombie Boss. Claim All
+  another commander defeating a Zombie Boss. Claim All
   at norm 500,930 claimed 2 more Regular gifts, summary
   dialog "A total of 2 Regular Alliance Gifts were
   claimed this time". Both tabs' rows then read Claimed

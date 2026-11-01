@@ -1,8 +1,8 @@
 ---
 title: Event claims queue run 0340
 created: 2026-10-31T10:41:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Events unit events-2026-10-31-0257 by ticker-0334, partial
 status: partial
 grounded_in:
@@ -23,7 +23,7 @@ cc-605 resumed with no state lost), window mode
   the Events hub tab bar shows no Zombie Invasion tab.
 - Events hub opened on the Arms Race Base Building
   page (Contest Segment Lv.29-30): score 0, rank 9 at
-  #2110 [redacted-character-name], chest thresholds 6,250 /
+  #2110 owner account, chest thresholds 6,250 /
   12,500 / 30,000, cumulative chest 0/2 at top left,
   about 03:22 left on the stage at entry. No chest
   reached, nothing to claim on this page. No Arms

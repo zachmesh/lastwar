@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-28T05:53:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.5.0
+version: 1.5.1
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -108,7 +108,7 @@ literal train, so both readings of the request are in the system.
   prepared, the commander can summon a Mega Express Train and becomes
   its conductor automatically; the train has four carriages numbered
   1 to 4 from top to bottom, each carrying different rewards.
-- This account - AP3x has 91 of 100 members and a 5.0 rating, and a
+- This account - the alliance has 91 of 100 members and a 5.0 rating, and a
   train was in preparation at midday, so the alliance is active in
   this system. Whether the boarded train was regular or Mega Express
   was not displayed on the screens seen.
@@ -120,7 +120,7 @@ literal train, so both readings of the request are in the system.
 
 Observed in game on this account, first execution 2026-10-25.
 
-- A train was in preparation with conductor Abyss Apex of AP3x, Train
+- A train was in preparation with conductor another commander of the alliance, Train
   Rating 82,650, and about 3 hours 20 minutes to departure.
 - Carriage occupancy before boarding - carriage 1 at 2 of 7, carriage
   2 at 3 of 7, carriage 3 at 7 of 7, carriage 4 at 12 of 7 as

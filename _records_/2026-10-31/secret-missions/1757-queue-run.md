@@ -1,8 +1,8 @@
 ---
 title: Secret missions queue run 1757
 created: 2026-11-01T00:57:00Z
-modified: 2026-11-01T00:57:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Secrets unit secrets-2026-10-31-1457 by ticker-1734, done - Secret Command Post entered, one ally assist completed, recovery panel clean
 status: unverified
 grounded_in:
@@ -43,13 +43,11 @@ no Mega Refresh used, no Plunder Others tapped.
   Protect Refugee Camp all stamped PERFECT,
   already claimed, no Claim button outstanding.
 - Ally Tasks: Assist Allies 1/5 at entry, four
-  rows with blue Assist buttons (Krazy Sully plus
+  rows with blue Assist buttons (another commander plus
   three IgorSantos13, all UR - UR ally rows do
   carry Assist buttons now, superseding the
   metadata open question that UR rows showed only
-  a countdown). One assist tapped on the Krazy
-  Sully row: ASSIST SUCCESSFUL for [AP3x]Krazy
-  Sully, paying Mystery Supply Box x6, 5m Training
+  a countdown). One assist tapped on the another commander row: ASSIST SUCCESSFUL for another commander, paying Mystery Supply Box x6, 5m Training
   Speed-up x1, Refined Iron Module x48 and 5m
   Healing Speed-up x3 (plus a partially visible
   second reward row, not itemised). Counter moved

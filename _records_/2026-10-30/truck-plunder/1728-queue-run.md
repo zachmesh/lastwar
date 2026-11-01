@@ -1,8 +1,8 @@
 ---
 title: Truck queue run 1728
 created: 2026-10-30T17:28:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-1704 trucks unit, partial - dispatch quota met 5/5, plunder 0/4 pending before the 19:00 reset
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 17:19-17:28 PDT, executor
 ticker-1704, Mac mini session cc-550, game account
-[redacted-character-name]. Duel day 5, Total Mobilization
+owner account. Duel day 5, Total Mobilization
 (non-UR day), so the non-UR dispatch rule applies:
 SR or above only, regular dispatch, no Mega Mode.
 

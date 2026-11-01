@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-27 2230 Segment 2 Run
 created: 2026-10-28T05:53:00Z
-modified: 2026-10-28T05:53:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-27 2230 segment 2 run, Claim All pressed in every category with Alliance and Event rewards claimed
 status: unverified
 grounded_in:
@@ -38,8 +38,8 @@ Metadata for this type lives in
   Bitterly Cold Wave Unclaimed - paying red gem 100 x1, food
   crates x30, coin crates x30, iron crates x30 and an EXP crate
   stack x30 as displayed in the congratulations grid. The three
-  train notices below them ([AP3x] Nd4Spd4's train arrived and
-  departed, [AP3x] StarFall's train arrived) carried no
+  train notices below them (another commander's train arrived and
+  departed, another commander's train arrived) carried no
   attachments, and scrolling the category back about a day
   (Base Frozen notices, Mega Express notices, Title Assignment,
   the previous Daily Participation Rewards) found no mail titled

@@ -1,8 +1,8 @@
 ---
 title: Mail Rewards Queue Run
 created: 2026-10-29T15:38:00Z
-modified: 2026-10-29T15:38:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit mail-2026-10-29-0630 execution
 status: done
 ---
@@ -24,7 +24,7 @@ Unit: mail-2026-10-29-0630, executor ticker-0834.
 - Regular: pressed Claim All - no change; the list is zombie Victory
   battle reports only.
 - Battle Report: pressed Claim All - no change; reports only. One
-  report noted, no decision needed: the base was scouted by [WLDT]
+  report noted, no decision needed: the base was scouted by an alliance
   about 1 day ago.
 - Season: pressed Claim All - no change; Ice Breaking reports only.
 - System: pressed Claim All - no change; patch notes, maintenance

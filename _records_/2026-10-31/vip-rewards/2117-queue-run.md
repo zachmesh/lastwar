@@ -1,8 +1,8 @@
 ---
 title: VIP rewards queue run 2117
 created: 2026-10-31T21:17:00-07:00
-modified: 2026-10-31T21:17:00-07:00
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: VIP unit vip-2026-10-31-1900 by ticker-2104, partial - Daily Freebie Claim button unresponsive to background input, nothing claimed
 status: unverified
 grounded_in:
@@ -26,7 +26,7 @@ nothing claimed, nothing spent.
   177.4M, power 148,947,193, matching the 2048
   trucks reconciliation). The commander avatar
   at norm 60,85 opened MY PROFILE; the "You're
-  very popular!" popup ([AP3x]Krazy Sully,
+  very popular!" popup (another commander,
   1 person, likes 1,795 +1) was dismissed with
   its Awesome button at norm 500,663, likes
   then reading 1,796. The VIP13 badge at norm

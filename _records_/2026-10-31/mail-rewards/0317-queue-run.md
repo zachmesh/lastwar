@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-31 0317 Queue Run
 created: 2026-10-31T10:20:00Z
-modified: 2026-10-31T10:20:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Mail queue unit mail-2026-10-31-0230 - done, all categories checked, no claimable rewards
 status: unverified
 grounded_in:
@@ -33,7 +33,7 @@ claimable found.
   Daily Donation Rankings, Zombie Siege Report
   (Alliance) and (Individual). Claim All answered
   "No rewards available".
-- Season — Ice Breaking Reports from [AP3x]Abyss Apex
+- Season — Ice Breaking Reports from another commander
   only. Claim All pressed; reports remained and no
   reward dialog appeared.
 - System — President Mail, Maintenance Complete and

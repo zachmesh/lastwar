@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-26 1030 Segment 2 Run
 created: 2026-10-26T17:42:00Z
-modified: 2026-10-26T17:42:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 1030 segment 2 run, Alliance mail paying coin 12.1M food 19.0M and iron 19.0M, Event mail claiming the train arrival reward and three Wanted Boss rewards, and no rewards in the other categories
 status: unverified
 grounded_in:
@@ -33,8 +33,8 @@ Metadata for this type lives in
   15.9M against the opening HUD of this run.
 - Event — Claim All claimed the category. The list afterwards
   stood all read — three Wanted Boss Individual Reward mails
-  (1h old), the Abyss Apex train departure notice (2h old),
-  the Nd4Spd4 Mega Express notice (3h old) and the Train
+  (1h old), the another commander train departure notice (2h old),
+  the another commander Mega Express notice (3h old) and the Train
   arrival reward mail (2h old). That arrival mail was opened
   and verified — every reward item carries a green checkmark
   and no Claim button remains — badge stack 50, two 2.0K

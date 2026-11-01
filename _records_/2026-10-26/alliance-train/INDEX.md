@@ -1,8 +1,8 @@
 ---
 title: Alliance Train on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-27T05:30:49Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Index of Alliance Train executions on 2026-10-26
 grounded_in:
   - source: human-authored
@@ -23,7 +23,7 @@ time and never edited once committed (C1).
   started at 01:49 local.
 - [0529-four-hour-run.md](0529-four-hour-run.md) — the four hour run
   that started at 05:29 local; a train was in preparation (conductor
-  Abyss Apex, rating 71,050) and carriage 2 was boarded with the
+  another commander, rating 71,050) and carriage 2 was boarded with the
   standing 3 Trade Contract ticket, the first execution of that rule.
 - [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
   started at 06:30 local; no boarding banner, and the 0540 train
@@ -33,7 +33,7 @@ time and never edited once committed (C1).
   arrival reward of the 0529 boarding claimed in Event mail.
 - [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
   started at 14:30 local; no boarding banner at any sweep, and the
-  Nd4Spd4 arrival mail verified as a notice for a train never boarded.
+  another commander arrival mail verified as a notice for a train never boarded.
 - [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
   started at 18:30 local; no boarding banner at any sweep, no train
   icon on MY PROFILE, and no new train mail for this account.

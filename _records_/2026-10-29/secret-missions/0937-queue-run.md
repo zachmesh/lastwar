@@ -19,8 +19,8 @@ status: done
   03:50 run.
 - Ally Tasks: Assist Allies counter 0/5 at first sight. Five
   assists completed in order, each confirmed by an ASSIST
-  SUCCESSFUL popup: [AP3x]Krazy Sully, [AP3x]1717Flower,
-  [AP3x]Texan Apex, [AP3x]Comandante DT, [AP3x]Boss Hog 05.
+  SUCCESSFUL popup: another commander, another commander,
+  the alliance leader, another commander, another commander.
   Reward rows read in full for the first two assists, identical
   both times: Mystery Supply Box x15, Refined Iron Module x144,
   Upgrade Ore x240, Hero EXP 1.2M. The later three popups were

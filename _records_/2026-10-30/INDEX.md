@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-30
 created: 2026-10-30T07:07:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: The 0004 queue ticker pass, Hidden Treasures dig and Zombie Invasion chain unit 051
 status: unverified
 grounded_in:
@@ -222,7 +222,7 @@ of 2026-10-28.
 
 - Alliance help unit help-2026-10-30-0230, done: Help All
   pressed once from the Alliance panel; ally requests
-  (Amarky257 Lv.28 Air Force Base, Missile Apex Lv.23 2nd
+  (another commander Lv.28 Air Force Base, Missile Apex Lv.23 2nd
   Tech Center) cleared, only the two own 30 of 30 requests
   remained. Today's help points still read 480 of 1,000
   immediately after the press, recorded as observed. Full
@@ -235,8 +235,7 @@ of 2026-10-28.
   item, EXP 4.5M, 3.1K item, 10 stamina item, coin 1.8M,
   food 1.4M, iron 1.4M as displayed). Alliance, Season,
   System, Regular and Battle Report Claim All produced no
-  rewards; Battle Report held two scout reports ([GLAm]
-  Sapuiayat and wang Lin) with no action taken. No mail
+  rewards; Battle Report held two scout reports (another commander and another commander) with no action taken. No mail
   deleted. Full detail in mail-rewards/0314-queue-run.md.
 
 ## 03:15 — Queue ticker pass, Star Ceremony check
@@ -560,9 +559,9 @@ of 2026-10-28.
 - Help unit help-2026-10-30-0630, done: Help All
   at norm 500,820 answered "Allies are very
   grateful for your assistance"; ally requests
-  from DCna8ive (Lv.24 Barracks) and Crow Apex
+  from DCna8ive (Lv.24 Barracks) and another commander Apex
   (Lv.28 Air Force Base) cleared, leaving only
-  the own [redacted-character-name] rows. Header still read
+  the own owner account rows. Header still read
   600 of 1,000 in the closing screenshot.
   Full detail in alliance-help/0719-queue-run.md.
 - Mail unit mail-2026-10-30-0630, done: Event
@@ -775,7 +774,7 @@ of 2026-10-28.
 - Gifts unit gifts-2026-10-30-1030, done: Regular Claim
   All claimed 117 gifts, then Premium Claim All claimed
   5 gifts, then a recheck found 2 fresh Regular gifts
-  (both PrincessEsra10xoxo Zombie Boss kills) and claimed
+  (both another commander Zombie Boss kills) and claimed
   those too — 119 Regular and 5 Premium in total, both
   tabs' rows Claimed and both Claim All badges clear.
   Gift Level 28 progress 173,638,880 at the open to
@@ -791,7 +790,7 @@ of 2026-10-28.
 
 - Help unit help-2026-10-30-1030, done: Help All pressed once
   at 500,778, papillon707 ally requests (Infirmary Expansion I
-  research and Healing Help) cleared, own [redacted-character-name] Lv.28 Drill
+  research and Healing Help) cleared, own owner account Lv.28 Drill
   Ground and Lv.30 Aircraft Center rows (both 30 of 30) remain;
   header 700 of 1,000 before and after, as observed.
   Full detail in alliance-help/1212-queue-run.md.

@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 0404
 created: 2026-10-31T04:04:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-0404 trucks unit, partial - trade entry recovered, 1 plunder won, dispatch quota still open
 status: partial
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 04:04-04:19 PDT, executor
 ticker-0404, Mac mini session cc-606, game account
-[redacted-character-name], window mode 642x951. Duel day 6,
+owner account, window mode 642x951. Duel day 6,
 Enemy Buster (non-UR day), so the non-UR dispatch
 rule applies: SR or above only, regular dispatch,
 no Mega Mode.
@@ -51,7 +51,7 @@ so the next tick re-produces this regular.
   no TRUCK DETAILS panel opened for any truck,
   so all four read as still en route, nothing to
   settle. The fourth tap opened the card of
-  [AP3x]Missile Apex's golden UR train (Arrives
+  an allianceMissile Apex's golden UR train (Arrives
   in 01:05:21, Lv.30, 117.9M) - an alliance mate's
   vehicle, left untouched, no View/Share tapped.
   The 2017 dispatches (UR, Arrives in 04:05; SSR,
@@ -60,15 +60,15 @@ so the next tick re-produces this regular.
   no free slot exists, so no dispatch was possible
   this unit. Trade Count stays 2/5.
 - Plunder, inspected and passed: UR truck
-  #2087 [GLYD], Lv.30, guard 25.7M, Arrives in
+  #2087 an alliance, Lv.30, guard 25.7M, Arrives in
   02:58:27, cargo badge 500 x3 in the leftmost
   slot - passed, guard above Squad 1 24.96M and
-  shards leftmost. R truck #2087 [ArkD], Lv.27,
+  shards leftmost. R truck #2087 an alliance, Lv.27,
   guard 7.6M - passed, R rarity only, outside the
   UR/SSR-only rule despite a badge 500 x1 in its
   cargo.
 - Plunder, won: after a list refresh, UR truck
-  #2104 [ROKa], Lv.30, guard 24.0M (battle prep
+  #2104 an alliance, Lv.30, guard 24.0M (battle prep
   read 24.07M against Squad 1 25.05M), Arrives in
   00:44:02, cargo badge 500 x3 (leftmost slot,
   uncrossed) plus iron/food/coin, two cargo slots

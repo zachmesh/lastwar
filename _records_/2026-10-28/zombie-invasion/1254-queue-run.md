@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion Execution 2026-10-28 1254 Queue Run
 created: 2026-10-28T19:54:00Z
-modified: 2026-10-28T19:54:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: Zombie-invasion chain unit 016 - partial, no march dispatched: Search found a Lv.10 target stacked with a player base, and the crossed-swords tap only cycled a Choose-a-target popup instead of opening the deploy panel, so no squad marched, coins unchanged, cleared false, successor starts now
 status: unverified
 grounded_in:
@@ -47,10 +47,10 @@ the chain continues via its successor starting now.
   Suggested Power 670,000, stamina cost 10, timer
   1h49:41 falling to 1h48:12 across the unit (despawn
   countdown, not march time). The target sits stacked with
-  a player base (#2110 [W77] in the stack list).
+  a player base (#2110 an alliance in the stack list).
 - Dispatch blocked by the stack — tapping the crossed-swords
   button at norm (498,647) opened a Choose a target popup
-  listing #2110 [W77] and Lv.10 Invading Zombies, instead of
+  listing #2110 an alliance and Lv.10 Invading Zombies, instead of
   the deploy panel. Tapping the Lv.10 row returned to the
   target card, and tapping crossed-swords again reopened
   the same popup — a loop, twice observed. No squad tab and

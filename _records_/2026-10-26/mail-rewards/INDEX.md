@@ -1,8 +1,8 @@
 ---
 title: Mail Rewards on 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-27T05:30:49Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Index of Mail Rewards executions on 2026-10-26
 grounded_in:
   - source: human-authored
@@ -31,14 +31,14 @@ time and never edited once committed (C1).
   available anywhere.
 - [0630-segment-2-run.md](0630-segment-2-run.md) — the segment 2 run that
   started at 06:30 local; Claim All in every category, no rewards
-  available, and the Abyss Apex train departure mail read.
+  available, and the another commander train departure mail read.
 - [1030-segment-2-run.md](1030-segment-2-run.md) — the segment 2 run that
   started at 10:30 local; Alliance mail paid coin 12.1M, food 19.0M and
   iron 19.0M, Event mail claimed the train arrival reward and three
   Wanted Boss rewards, the other categories held no rewards.
 - [1430-segment-2-run.md](1430-segment-2-run.md) — the segment 2 run that
   started at 14:30 local; Regular mail paid coin 1,080,000 and ruby
-  times 200, no rewards in any other category, and the Nd4Spd4 train
+  times 200, no rewards in any other category, and the another commander train
   arrival mail verified as a notice with no attachment.
 - [1830-segment-2-run.md](1830-segment-2-run.md) — the segment 2 run that
   started at 18:30 local; Event mail paid the Bitterly Cold Wave

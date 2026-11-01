@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-26 1030 Segment 2 Run
 created: 2026-10-26T17:42:00Z
-modified: 2026-10-26T17:42:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 1030 segment 2 run, no train in preparation at any sweep and the arrival reward of the 0529 boarding claimed in Event mail
 status: unverified
 grounded_in:
@@ -28,7 +28,7 @@ Metadata for this type lives in
   was boarded and no Trade Contract was spent.
 - The arrival side of the cycle did pay this run — the
   Train arrival reward mail of the 2026-10-26 0529 carriage
-  2 boarding (conductor Abyss Apex) was claimed through
+  2 boarding (conductor another commander) was claimed through
   Event mail Claim All and verified item by item in the
   opened mail; see the mail record of this run for the
   itemised set.

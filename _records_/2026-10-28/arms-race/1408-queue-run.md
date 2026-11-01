@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-28 1408 Queue Run
 created: 2026-10-28T21:08:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.1
+version: 0.1.2
 description: Arms-race queue unit arms-race-2026-10-28-1403 - live phase Unit Progression with about 52 minutes left, score 0 against thresholds 15000, 30000 and 75000, cumulative chest 9 of 18 not claimable, no reward claimed; scoring path is troop training, which belongs to the training regular due in this same pass, so the target is left open for the next tick re-check rather than marked missed
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ this regular for a re-check and claim.
 - Completion sweep — the cumulative counter chest at the
   top left of the phase page read 9 of 18, not full and not
   claimable. The ranking row still displayed the finished
-  Hero Advancement result ([redacted-character-name] 51,000), a known
+  Hero Advancement result (owner account 51,000), a known
   ranking lag, and its chest is a contents preview only in
   this state. No bouncing chest or reward red dot stood on
   the Arms Race page. Nothing was claimed.

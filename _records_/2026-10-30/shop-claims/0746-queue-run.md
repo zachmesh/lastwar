@@ -1,8 +1,8 @@
 ---
 title: Shop claims queue run 0746
 created: 2026-10-30T14:46:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-0734 passes unit, done - all shop pickups already claimed today, nothing new
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 07:43-07:46 PDT, executor
 ticker-0734, Mac mini session cc-461, game account
-[redacted-character-name].
+owner account.
 
 Performed: checked only, nothing claimed new,
 nothing spent, no paid button tapped.

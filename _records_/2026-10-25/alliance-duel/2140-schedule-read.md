@@ -1,7 +1,7 @@
 ---
 title: Alliance Duel Schedule Read 2140
 created: 2026-10-26T04:52:00Z
-modified: 2026-10-26T04:52:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
 status: unverified
 grounded_in:
@@ -19,8 +19,8 @@ and `tools/duel_schedule.json` now rests on.
 
 ## What was read
 
-- Duel League A. Weekly Schedule page - matchup [AP3x] The Apex
-  (warzone 2110) vs [Sync] IMPERIUM (warzone 2111), week score 0-0,
+- Duel League A. Weekly Schedule page - matchup the alliance
+  (the current warzone) vs the opposing alliance (the opposing warzone), week score 0-0,
   week timer 5d 21h22m. Days - 1 Radar Training (1 win point),
   2 Base Expansion (2), 3 Age of Science (2), 4 Train Heroes (2),
   5 Total Mobilization (2), 6 Enemy Buster (4), then the off day.

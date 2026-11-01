@@ -1,9 +1,9 @@
 ---
 title: Alliance Duel Execution 2026-10-25 Star Ceremony
 created: 2026-10-25T21:38:00Z
-modified: 2026-10-25T21:38:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the Alliance Star Ceremony, 2026-10-25
 status: unverified
 grounded_in:
@@ -27,7 +27,7 @@ Metadata for this type lives in
 - The owner directed the recheck at 14:26 and then taught the
   ceremony procedure step by step. Entry — the trophy icon on the
   right side of the base screen, beside the Alliance icon. It
-  opens [AP3x] ALLIANCE STAR CEREMONY (EVENT 38).
+  opens an alliance ALLIANCE STAR CEREMONY (EVENT 38).
 - The ceremony is a staged awards show on a bottom progress track —
   13 award steps plus an MVP finale. Operating procedure, as set by
   the owner — keep tapping the forward button at bottom right and
@@ -36,21 +36,19 @@ Metadata for this type lives in
   forwarding. The emotes are actionable icons. The owner asked for
   love to at least 3 winners.
 - Six love emotes were sent, each verified by the winner count
-  rising by one — Ice Sculptor (Abyss Apex), 3v3 Brawl Star (Abyss
-  Apex), Alliance Champion (a Korean-named member), Star of Desert
-  Storm (VouGo2), Guardian Defender and Divine Healer (Abyss
-  Apex). The Ceremony Rewards panel confirmed the count — "You
+  rising by one — Ice Sculptor (another commander), 3v3 Brawl Star (another commander), Alliance Champion (a Korean-named member), Star of Desert
+  Storm (VouGo2), Guardian Defender and Divine Healer (another commander). The Ceremony Rewards panel confirmed the count — "You
   have sent 6 emote messages".
 - Disclosure — two award cards were forwarded past before their
   detail cards could be acted on (Little Sun and Devil Trainer),
   an effect of fast forwarding measured during this run.
 - Winners observed — S2 Big Shot, RipperApex (53 first kills of
   Doom Elites assisted); Little Sun, ANGEL77 Apex; Ice Sculptor,
-  Abyss Apex (328 ice breaks assisted); 3v3 Brawl Star, Abyss Apex
+  another commander (328 ice breaks assisted); 3v3 Brawl Star, another commander
   (rank 6 in 3v3 Brawl); Alliance Champion, a Korean-named member
   (rank 1 in this week of the duel); Star of Desert Storm, VouGo2
   (6,362,574 points); Guardian Defender, name not fully read (105
-  defensive support wins); Divine Healer, Abyss Apex (249,529 units
+  defensive support wins); Divine Healer, another commander (249,529 units
   healed this week); Devil Trainer, card skipped; Doom Elite
   Slayer, name truncated on screen.
 - Rewards claimed. Emote tiers unlock at 1, 2 and 3 emotes sent —

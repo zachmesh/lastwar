@@ -8,7 +8,7 @@ status: partial
 # Passes queue run 2055
 
 Session window: 20:52-20:55 PDT, executor ticker-2034, Mac mini
-session cc-373, game account [redacted-character-name].
+session cc-373, game account owner account.
 
 Performed in part.
 

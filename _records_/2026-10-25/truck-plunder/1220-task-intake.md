@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder Execution 2026-10-25 Task Intake
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-25 task intake round
 status: unverified
 grounded_in:
@@ -23,8 +23,7 @@ A single execution, recorded as its own file. Status — Performed.
   far below this account.
 - Entered through the truck icon in the base left column. The screen
   opened on Others' Trucks with Plunder Count Today at 0 of 4.
-- Plunder - tapped an N truck and read its card first - owner [1ppp]
-  Chucks army 1705, warzone 2090, Lv.28, guard power 7.6M, listed
+- Plunder - tapped an N truck and read its card first - owner another commander, the relevant warzone, Lv.28, guard power 7.6M, listed
   cargo iron 1.0M, food 1.0M, coin 695.7K, chest 20, chest 20 and a
   500 badge. A first time Monica tutorial explained Quick Plunder.
   Quick Plunder fought with the preset squad at 244.96M against

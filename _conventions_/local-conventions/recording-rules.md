@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:09:43Z
+modified: 2026-11-01T07:26:52Z
 level: L2
-version: 1.9.0
+version: 1.9.1
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -135,7 +135,7 @@ race main's records commits and conflict by construction
 ## Language and scope
 
 - Tracked content and logs are English. Replies to the owner are Chinese.
-- No credential values, verification codes, payment details, or other
+- No private account data, verification codes, payment details, or other
   players' private chat text, anywhere in this repository.
 - In-game purchases, spending, alliance diplomacy, war declarations and
   city moves require the owner's approval before they happen, and the

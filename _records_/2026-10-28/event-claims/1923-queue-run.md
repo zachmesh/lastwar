@@ -1,9 +1,9 @@
 ---
 title: Event Claims Execution 2026-10-28 1923 Queue Run
 created: 2026-10-29T02:23:00Z
-modified: 2026-10-29T02:23:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 1923 queue run, unit events-2026-10-28-1857, full Events tab sweep, Halloween Day 04 claimed
 status: unverified
 grounded_in:
@@ -30,7 +30,7 @@ Unit events-2026-10-28-1857, executor ticker-1917.
   the arms-race unit.
 - Desert Battlefield tab - Desert Storm Battlefield,
   alliance matchmaking in progress, 05:40:32 left,
-  17 total sign-ups for [AP3x] The Apex. No personal claim;
+  17 total sign-ups for the alliance. No personal claim;
   Enter Battlefield and Go to Watch untouched.
 - Winter Battlefield tab - new tab since the last sweep.
   Event starting soon, 1d 23:40 left, match windows 10/30

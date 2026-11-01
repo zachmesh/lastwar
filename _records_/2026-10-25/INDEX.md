@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.17.1
+version: 1.17.2
 description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, the research brief folded into the playbook, and the late red dot follow up, and the owner-requested late round with its score and resources report
 status: unverified
 grounded_in:
@@ -27,9 +27,9 @@ All times America/Los_Angeles. Actor Muse, on the owner's instruction.
 ## 10:46 to 10:52 — First launch and login
 
 - Age gate passed, then a game update of 891.85 MB downloaded.
-- The update screen showed Signed in as [redacted-game-center-nickname] (Game Center).
+- The update screen confirmed Game Center sign-in.
 - Start, then Already Have an Account, then Game Center opened Manage
-  Characters with one character — [redacted-character-name], Warzone 2110, level 30,
+  Characters with one character — owner account, the current warzone, level 30,
   power 149,307,154. Confirmed with Yes. A further 67.19 MB update ran.
 
 ## Base snapshot at login
@@ -51,7 +51,7 @@ window was moved to the left side of the screen, as the owner requested.
 - Mail — Alliance and Event tabs claimed in full; System and Regular held no
   claimable attachments. Alliance Help All pressed; Alliance Gifts claimed —
   844 plus 2 Regular and 72 Premium.
-- Season II warming — assists on [AP3x]Amarky257 completed 10 of 10, at 100
+- Season II warming — assists on another commander completed 10 of 10, at 100
   coal per assist.
 - Secret Command Post — all 8 own tasks dispatched; 5 ally assists used,
   reaching the daily assist cap. Plunder not touched.
@@ -104,13 +104,13 @@ system first, under the task intake workflow.
   Total 14.5M food and 14.5M iron. No Finish Now, no upgrade shortcut.
 - Alliance train — NEW type, created then executed. The literal train
   behind the train task name. Read the Train Operation Guidelines in
-  full, then boarded carriage 1 of the AP3x train in preparation —
-  conductor Abyss Apex, Train Rating 82,650, about 3 hours 20 minutes
+  full, then boarded carriage 1 of the alliance train in preparation —
+  conductor another commander, Train Rating 82,650, about 3 hours 20 minutes
   to departure. Boarding used the free Like and Thank; no Trade
   Contract was gifted (stock 127). Carriage 1 went from 2 of 7 to
   3 of 7 riders.
 - Truck plunder — NEW type, created then executed. One Quick Plunder
-  against the N truck of [1ppp]Chucks army 1705 (warzone 2090, Lv.28,
+  against the N truck of another commander (the relevant warzone, Lv.28,
   guard 7.6M) — won, yielding iron 273.4K, food 273.4K, coin 173.9K
   and two chest stacks of 20. Then all four own trucks dispatched —
   the first rolled N and the one free refresh of the day rerolled it
@@ -250,8 +250,7 @@ and no re-login.
 - Trucks — all four trucks dispatched at 12:32 were still out at
   about 19:05, cargo uncredited (base totals unchanged from the
   15:00 sweep before any claim this session). Two UR trucks were
-  looted en route - Defense Failed records name [ashS]LoS
-  indestructibles (warzone 2116) and [udl]DannyBhoi (warzone 2090);
+  looted en route - Defense Failed records name another commander (the relevant warzone) and another commander (the relevant warzone);
   their Dispatch ledgers are reduced to 2.8M iron, 2.8M food and
   1.8M coin with items crossed out, while the SSR and one UR stand
   intact. No claim control exists for own truck cargo.
@@ -331,7 +330,7 @@ activity metadata.
   (SSR, R, N after a downgrade refresh, SR - each used its own per
   truck free refresh), and four plunders were fought to the cap.
   The fourth, picked by the new shard rule - a UR truck of
-  [LaWA]Knights that say Ni, guard 16.5M, three shard stacks -
+  another commander, guard 16.5M, three shard stacks -
   paid 9 UR shards against 1 to 2 from the earlier ordinary
   targets. End of session HUD - food 334.7M, iron 327.0M, coin
   77.3M, red diamonds 2,083, power 149,351,954.
@@ -405,7 +404,7 @@ this repository.
   (1 win point), Day 2 Base Expansion (2), Day 3 Age of Science
   (2), Day 4 Train Heroes (2), Day 5 Total Mobilization (2),
   Day 6 Enemy Buster (4), off day; boundary 19:00 local (02:00
-  UTC); this week AP3x vs [Sync] IMPERIUM. The Radar Training
+  UTC); this week the alliance vs the opposing alliance. The Radar Training
   scoring table was read in full (radar task +30,000). The
   afternoon web research in events-and-cycles already matched this
   order (web names differ slightly). Full detail in the 2140
@@ -430,7 +429,7 @@ including the Alliance Duel and other alliance activities. It now
 heads the strategy playbook, and a baseline was read in game -
 Total Power **149,689,618**, warzone Individual Power **rank
 113**; alliance benchmarks 247,971,851 (ItStartsWithaDream),
-227,095,526 (Abyss Apex) and 205,162,283 (StarFall), warzone top
+227,095,526 (another commander) and 205,162,283 (another commander), warzone top
 277,043,357; top heroes Lv.150 five-star UR, Squad 1 march power
 24.96M. The power figure is tracked in the resource map as the
 total_power growth metric. Detail in the 2150 power baseline

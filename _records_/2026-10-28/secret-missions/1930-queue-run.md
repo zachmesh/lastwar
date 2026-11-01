@@ -1,9 +1,9 @@
 ---
 title: Secret Missions Execution 2026-10-28 1930 Queue Run
 created: 2026-10-29T02:30:00Z
-modified: 2026-10-29T02:30:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 1930 queue run, unit secrets-2026-10-28-1857, Mega Deploy of 5 fresh tasks, no assistable ally row, Recovery already CLAIMED
 status: unverified
 grounded_in:
@@ -50,8 +50,8 @@ Unit secrets-2026-10-28-1857, executor ticker-1917.
   fold). Mega Deploy and Mega Refresh buttons greyed out
   while tasks run.
 - Ally Tasks - the list was swept top to bottom: Jerry Apex,
-  JAGX, Nuna Knuckles, Sanction Apex, xChroni Apex,
-  PrincessEsra10xoxo, cute small baby, AMD Commander - every
+  JAGX, another commander, Sanction Apex, xChroni Apex,
+  another commander, cute small baby, another commander - every
   visible row is UR with only a countdown (about 03:32 to
   03:36) and no Assist button, so no assist was possible
   and the counter stays 0 of 5. This matches the standing

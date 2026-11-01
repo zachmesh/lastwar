@@ -1,8 +1,8 @@
 ---
 title: Event Claims Queue Sweep
 created: 2026-10-29T20:07:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Queue unit events-2026-10-29-1057 execution
 status: done
 ---
@@ -19,7 +19,7 @@ Unit: events-2026-10-29-1057, executor ticker-1304.
   chest at top left reads 6 of 8, not full, not claimable.
   No grinding done here - the phase is the arms-race unit's
   work, not this claim sweep. Ranking row still shows
-  #2110 [redacted-character-name] at 37,500, carried from the previous
+  #2110 owner account at 37,500, carried from the previous
   Hero Advancement phase.
 - Desert Storm Battlefield: waiting for battle to start,
   14:47:20 left at the read. No claim button.

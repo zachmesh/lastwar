@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-26 1403 Segment 1 Run
 created: 2026-10-26T21:19:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: One execution record for the 2026-10-26 1403 segment 1 run, Drone Boost at 5000 of 30000 with the first chest claimed and the top target missed inside the red lines
 status: unverified
 grounded_in:
@@ -59,7 +59,7 @@ Metadata for this type lives in
   (received, not used). The cumulative counter chest
   advanced 6 of 8 to 7 of 8 on the claim; the bar is not
   full, the chest stands purple and static, not claimable.
-- RANKING - the segment row reads rank 8, [redacted-character-name]
+- RANKING - the segment row reads rank 8, owner account
   42,500 cumulative (37,500 carried plus this phase
   5,000); the grey ranking chest beside it is the earlier
   phase reward in the preview-only state recorded by

@@ -74,7 +74,7 @@ shard stacks, to the daily caps.
 ## Plunder - one SSR inspected and passed over
 
 - Others' Trucks tab: Your Plunder Count Today 1 of 4.
-- Inspected SSR truck #2102 [ONYX]Rana7262, Lv.30, guard
+- Inspected SSR truck #2102 another commander, Lv.30, guard
   24.7M, arriving in about 02:35. Its two badge 500 x3
   stacks sit in cargo slots 1 and 3 (left and middle), not
   right-sided, and its guard sits only just below the

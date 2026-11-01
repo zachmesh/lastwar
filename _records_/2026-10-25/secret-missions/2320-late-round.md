@@ -1,9 +1,9 @@
 ---
 title: Secret Missions Execution 2026-10-25 Late Round Claim And Report
 created: 2026-10-26T06:44:00Z
-modified: 2026-10-26T06:44:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the late round secret task claim, the plundered-while-waiting report and the remaining tasks, 2026-10-25
 status: unverified
 grounded_in:
@@ -30,8 +30,8 @@ part. Metadata for this type lives in
 - The Claim button position on the task card opens the Secret Task
   Report panel. The report showed two allies had helped claim task
   rewards, and that this account UR task had been plundered twice
-  while it waited - by a level 30 commander of warzone 2094 for
-  79.7K, and by a level 29 commander of warzone 2092 for 31.9K, the
+  while it waited - by a level 30 commander of the relevant warzone for
+  79.7K, and by a level 29 commander of the relevant warzone for 31.9K, the
   taken good being the UR fragment piece. Like All was pressed on
   the helpers.
 - The Reward Recovery panel held only the two old October records,

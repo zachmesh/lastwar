@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-28 1004 Queue Run
 created: 2026-10-28T17:12:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.1
+version: 0.1.2
 description: Arms-race queue unit arms-race-2026-10-28-1003 - live phase Base Building with about 53 minutes left, score 0 against thresholds 6250, 12500 and 30000, cumulative chest 9 of 18 not claimable, no reward claimed; every scoring path is a red line (construction speedups, diamond packs, or starting a building), so the unit is skipped-needs-owner and the target is recorded as a red-line miss
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ as skipped-needs-owner.
 - Completion sweep — the cumulative counter chest at the
   top left of the phase page read 9 of 18, not full and not
   claimable. The ranking row still displayed the finished
-  Hero Advancement result (segment rank 8, 51,000 for [redacted-character-name]) and its chest is a contents preview only in this
+  Hero Advancement result (segment rank 8, 51,000 for owner account) and its chest is a contents preview only in this
   state, per the known ranking lag. No bouncing chest or
   reward red dot stood on the Arms Race page. Nothing was
   claimed.
