@@ -1607,3 +1607,36 @@ of 2026-10-28.
   section and to pr-integration/1445-run.md committed
   to records/2026-11-01 for the next records PR.
   Full detail in pr-integration/1445-run.md.
+## 14:40 to about 14:57 — Queue planning pass (11 units staged)
+
+- Planner run queue-planning-2026-11-01-1457, done:
+  plan staged 11 units to the 02:30 horizon 2026-11-02
+  (mail, help, gifts, train and star-ceremony at 0230;
+  harvest, radar, survivors, training, donations and
+  arms-race at 0203), 58 already present, 2 skipped as
+  done for the current slot, 0 reaped, 23 expired.
+- Expiry repair: of the 23 expired, 13 are genuine
+  expiries and 10 were stale inbox copies of units already
+  executed (failed) on the branch; the plan expiry
+  overwrote those 10 executed done records and all 10
+  were restored from the branch tip before committing,
+  so the commit only removes their stale inbox copies.
+- Pre-reset sweep production skipped (14:00 hour, not
+  17:00); the sweep pairs for 2026-11-01 and 2026-11-02
+  already sit in the pool, pending 2 each.
+- scout_diff dry and applied on the newest observation
+  (02:15 + 14:37 passes): 0 items parsed
+  (narrative-only observation, no observed_items block),
+  0 enqueued, 0 candidates, 0 unexplained in the diff -
+  matching the earlier runs on the same observation. The
+  observation frontmatter's 6 unexplained red dots are
+  not captured by the diff; left for the retro and
+  tool-development, not a chat report.
+- Queue cleanup: 0 units withdrawn - the diff classified
+  nothing as already satisfied and the observation shows
+  pending badges, not any queued task read as claimed,
+  done or gone.
+- Delivered on records/2026-11-01 under policy 2.0.0;
+  no open records PR existed at push time, so this run
+  opens a new records PR after pushing. Full detail in
+  queue-planning/1457-run.md.
