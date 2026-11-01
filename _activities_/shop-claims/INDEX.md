@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T21:55:00Z
+modified: 2026-11-01T09:36:45Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -75,6 +75,37 @@ Executions are recorded in `_records_/<date>/shop-claims/`, one file per executi
   claimed (drone parts times 15), and the Free Supply auto claim paid
   a ruby times 10 and iron times 4 as displayed. The Coin pickup was
   still outstanding when the session was interrupted.
+
+## What is known from 2026-11-01
+
+Measured in the 0114 passes unit (ticker-0104, window mode
+642x951, no different-device dialog). Outcome: done, nothing
+claimable - every daily pickup for today was already claimed.
+
+- Shop opened from the base cart icon. HOT DEALS showed only
+  promo banners: a FREE GIFT check-in banner and a 1000 POINTS
+  banner. Tapping the FREE GIFT banner only advanced the
+  carousel to the points banner, so it was not treated as a
+  claim, and the Go button was not tapped (external store, not
+  a claim).
+- Weekly Pass page: Free Supply chest reads Claimed. Legendary
+  row shows Take All $19.99 - never tapped. Coin Weekly Pass,
+  Remaining 2d 16:47:31, Daily Pickup reads Already claimed
+  today; Renew $4.99 not tapped. S2 Drone Components Weekly
+  Pass and Iron Weekly Pass show Get Now $4.99 - offers to
+  buy, not owned pickups; not tapped.
+- Super Monthly Pass page: Days Left 21, Rewards Left 21,
+  Daily Pickup reads Claimed. Monthly Pass Extension $24.99
+  not tapped.
+- Weekly Deal page: Valor Badge $99.99, Base Upgrade $19.99,
+  UR Set $49.99 - all paid packs, no free pack showing today.
+- Unresolved display, do not overwrite the cadence above: the
+  0114 screen read "Weekly Pass rewards reset at 18:00:00",
+  against this profile's standing "reset daily at 19:00 as
+  displayed in game". The next passes unit must re-read that
+  line and establish whether it is a clock time or a
+  countdown before either figure is treated as settled.
+
 
 ## Season passes - in the Season hub, not the shop
 

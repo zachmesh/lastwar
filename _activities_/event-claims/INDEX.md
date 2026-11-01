@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-01T09:36:45Z
 level: L1
-version: 1.4.1
+version: 1.5.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -153,6 +153,38 @@ Executions are recorded in `_records_/<date>/event-claims/`, one file per execut
   alliance leader (the alliance leader) and is never touched. Individual
   Goals rows (High-heat Furnace Level, Titanium upgrade) all read
   Claimed.
+
+## What is known from 2026-11-01
+
+Measured in the 0117 events unit (ticker-0104, window mode
+642x951, no different-device dialog). Outcome: done, nothing
+claimed, nothing spent. Hub tabs swept in full, Community
+proving the last tab (a further tab-bar drag moved nothing) -
+that drag is the sweep-completeness check, not wasted motion.
+
+- Arms Race, Hero Advancement, Contest Segment Lv.29-30,
+  timer 00:44:53, cumulative chest 1/2, chest thresholds
+  2,000 / 4,000 / 12,000, tasks 1 Hero Recruitment +400, Use
+  at least 2,000 Hero EXP at a time +1, Buy Packs containing
+  Diamonds +30. State recorded only: no Arms Race chest was
+  claimed in this unit, that stage is the arms-race unit's
+  work, and the ranking row figure (6,000) is not reported as
+  a stage score - re-confirming the standing rule.
+- Frontline Breakthrough, Saving Soldiers 81%, timer
+  16:34:12: the Reward row shows green checks on all six
+  tiers (100, 10, 18, 18, 3, 3) - all already claimed, no claim
+  button.
+- Level Swap, timer 16:43:58: inspected only. Permanent hero
+  level swap, never executed without the owner decision.
+- Rampage Bosses: Mutated Bear Lv.9 at 42.0%, Attacks left 3,
+  No Ranking, rewards sent via mail after the event ends. No
+  claim button; the Go fight button was not tapped -
+  attacking is grinding, not a claim.
+- Community: Discord binding reward reads 500 Diamonds
+  Claimed. Nothing new.
+- No bouncing chest or reward red dot remained on any swept
+  tab outside the Arms Race stage left for its own unit.
+
 
 ## Open questions
 

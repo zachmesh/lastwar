@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-01T09:36:45Z
 level: L1
-version: 1.5.1
+version: 1.6.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -140,6 +140,38 @@ Observed in game on this account, first execution 2026-10-25.
   item of 100, and about twenty 5 minute speedups across several
   kinds. The mail Claim button was gone on recheck. Detail in the
   1812 reward claim execution record.
+
+## What is known from 2026-11-01
+
+Measured in the 0110 train unit (ticker-0104, window mode
+642x951, no different-device dialog).
+
+- No boarding banner on the base screen, so the station was
+  checked directly: the left-column train-head icon panned the
+  camera to the station, where a train is in preparation with
+  conductor Missile Apex and a 00:58:50 countdown.
+- A carriage plus bubble on the world view opened a departure
+  animation, skipped with one tap, landing on STATION PLATFORM
+  with a THANK THE CONDUCTOR dialog at quantity 1 and a 156
+  Trade Contract stock readout. That dialog was closed with its
+  X without gifting: the carriage tapped on the world view had
+  not been verified as carriage 2, and no contract is spent on
+  an unverified carriage. This is the 2026-10-27 discipline in
+  action - verify the carriage on the platform BEFORE tapping
+  its plus whenever the entry path allows it.
+- Platform verified, top to bottom: conductor Missile Apex,
+  Train Rating 59,350, countdown 00:57:56. Carriage 1 at 3/7
+  with a plus, carriage 2 at 7/7 holding a portrait with a
+  "Bears Lair - Oops, you stepped on me!" tooltip, carriage 3
+  at 4/7 with a plus, carriage 4 at 10/7 with a plus. The
+  account already holds its seat in carriage 2, the
+  standing-rule carriage, so no boarding action was needed or
+  taken, and no second carriage was boarded. Backed out to the
+  station view, train still in preparation at 00:57:35. No
+  Trade Contracts spent.
+- Carriage 4 at 10/7 repeats the 2026-10-25 observation that
+  the denominator is not a hard cap.
+
 
 ## Limits
 
