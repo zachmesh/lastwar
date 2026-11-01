@@ -874,3 +874,26 @@ of 2026-10-28.
   PR needed. End-of-pass sweep: zero open PRs, no
   unprocessed PRs, no escalations. Full detail in
   pr-integration/0445-run.md.
+## 05:00 - PR integration 0500 run
+
+- Integrator run pr-integration-2026-11-01-0500, done:
+  zero open PRs at pass start, records PR 52 opened
+  and merged.
+- Own-PR check first: previous own PR 51 already
+  MERGED (9e64dce4e6), no comments, no reviews, no
+  owner answer outstanding; earlier own PR 50 also
+  MERGED.
+- Records PR 52 opened by this run (the branch head
+  had no open PR) and MERGED, merge commit
+  657097f9c2, branch kept: it carries 1 commit since
+  the PR 51 merge (the 0445 run record, its day INDEX
+  append, and its merge-time action-log line).
+  GitHub merge state verified CLEAN and MERGEABLE
+  before the merge. The merged files are records and
+  log only, no knowledge, code, policy or schedule
+  change, so nothing is owner-gated. Local main
+  synced back to 657097f9c2 via the bundle route.
+- records/2026-10-31 verified contained in main, no
+  PR needed. End-of-pass sweep: zero open PRs, no
+  unprocessed PRs, no escalations. Full detail in
+  pr-integration/0500-run.md.
