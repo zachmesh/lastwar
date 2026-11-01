@@ -982,3 +982,18 @@ of 2026-10-28.
   (tool-development 0534 no-op, head 1a403c21);
   record re-applied on that head and pushed. Full
   detail in pr-integration/0530-run.md.
+
+## 05:34 to about 05:36 — Queue ticker pass, training (failed, device offline)
+
+- Training unit training-2026-11-01-0203, failed:
+  Mac mini device channel offline across four
+  computer.session starts (node_offline, no wake-up path)
+  plus a failed health probe and two timed-out
+  recovery-channel attempts, last seen 01:47 local and
+  unmoved across the pass. No screen read, no barracks
+  opened, no Drill Ground figure verified, no batch
+  queued, nothing claimed, nothing spent. Tracker
+  untouched. Seventh consecutive access-failed pass after
+  the 02:34, 03:04, 03:34, 04:04, 04:34 and 05:04 passes;
+  the channel has been down since 01:47 local. Full
+  detail in troop-training/0534-queue-run.md.
