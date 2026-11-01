@@ -1553,3 +1553,52 @@ of 2026-10-28.
 - No gap filed, no stale item marked. Next run checks
   PR 102 review feedback first. Full detail in
   knowledge-organization/1432-run.md.
+## 14:37 — Queue ticker pass, perception scout base group (partial)
+
+- Scout unit scout-2026-10-31-1900, partial: post-reset pass
+  for 2026-10-31 executed late in its reset day, group
+  scout-base only. Secret Command Post re-read (treasure
+  2/15; M1 x12, M2 x12, M3 x0, M4 x9, M5 x2, M6 x6, M7 x12)
+  and fresh base HUD (power 148,957,193; stamina 120;
+  top row 312.5M, 500.5M, 22.7M). Back arrow re-grounded
+  at norm 163,947 after 112,946 proved dead. Red dots:
+  seen 5, explained 2 (radio 3 to help, Events x2 to
+  events), unexplained 3 (Alliance, Inventory, 99+).
+  Events, store and alliance groups unwalked; successor
+  scout unit enqueued for the events group under chain
+  scout-2026-10-31. Observe-only, nothing claimed.
+  Full detail in perception-scout/1437-queue-run.md and
+  the day observation file.
+
+## 14:44 — Queue ticker pass, daily missions (done)
+
+- Daily missions unit daily-missions-2026-10-31-1900, done:
+  claimed Help Allies 5 Times (18/5) and Dispatch Trade
+  Trucks 3 (3/3) — both rows left the list after a single
+  Help Claim tap, mechanism unverified, activity 110 to
+  150 — plus the 120 point chest (gear x2, red crystal
+  x20, milk x1, blueprints x6, food crate x6, iron 1.2K,
+  5m speedup x2). Tab badge cleared. Not done and
+  reported: Doom Elite, Recruit Heroes, Kill 5 zombies,
+  three 10,000 gathers, Train 100, Tavern recruit, Secret
+  Task plunder, Drone data training, PvP Commander attack
+  and the paid-purchase task (red line).
+  Full detail in daily-missions/1444-queue-run.md.
+
+## 14:45 - PR integration pass (done)
+
+- Knowledge PR 102 merged by squash (bee3c0f7):
+  truck-plunder 1.11.0, secret-missions 1.3.0,
+  hidden-treasures 1.2.0, shop-claims 1.5.0 and
+  event-claims 1.7.0; work branch deleted.
+- Records PR 103 opened and merged with merge commit
+  6142dafc (1430, pr-catchall 1439, tool-development
+  1442 and knowledge-organization 1432 run records);
+  records/2026-11-01 branch kept, records/2026-10-31
+  verified contained in main. Merge-time action-log
+  lines added for the 1439 and 1442 runs, which
+  carried none of their own. No feedback, no
+  owner-gated escalations, no conflicts. Local main
+  synced to 6142dafc; merges synced to the owner
+  Slack DM. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/1445-run.md.
