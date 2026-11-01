@@ -27,7 +27,15 @@ outputs in an output directory:
      applies itself: promotion or rejection is a metadata edit
      made by the knowledge organizer or the owner, never by
      this tool, and the proposal never blocks the next
-     exploration unit the plan enqueues.
+     exploration unit the plan enqueues;
+  5. the round-summary section - the perception coverage
+     scoreboard as one short section, written to be pasted
+     verbatim into the day round summary (roadmap Phase 3).
+     It carries no new numbers: every figure is copied from
+     the coverage counts computed above, and when the pool
+     was not read (--root absent) it says the promotion
+     proposals were not checked instead of reporting zero
+     as a finding.
 
 Without --apply the tool is a dry run: it writes its outputs and
 changes nothing in any pool. With --apply it feeds the plan's
@@ -1028,6 +1036,94 @@ def run(args):
     with open(cov_path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(cov))
     coverage["outputs"]["coverage"] = cov_path
+
+    # Round-summary section - the Phase 3 standing section of
+    # the day round summary, paste-ready. It derives every
+    # figure from the coverage counts above and adds none of
+    # its own, so it can never drift from the coverage report
+    # it summarises. An empty observation is reported as no
+    # observation, never as a coverage claim.
+    exec_entries = [e for e in plan if e["kind"] == "execution"]
+    expl_entries = [e for e in plan if e["kind"] == "exploration"]
+    new_filings = [c for c in candidates.values()
+                   if not c["registered"]]
+    rs = ["---",
+          f"title: Scout Round Summary Section {date}",
+          f"created: {iso(stamp)}",
+          "description: Perception coverage section, ready to "
+          "paste verbatim into the day round summary - every "
+          "figure copied from the coverage report of the same "
+          "run, no new numbers",
+          "---", "",
+          f"## Perception coverage - {date}", ""]
+    if coverage["items_observed"] == 0:
+        rs.append("No items were observed in this pass, so "
+                  "this section carries no coverage claim - "
+                  "the passes, not the summary, are the gap "
+                  "to check.")
+    elif coverage["unexplained_red_dots"] == 0:
+        rs.append("Zero unexplained red dots.")
+    else:
+        rs.append(f"{coverage['unexplained_red_dots']} "
+                  f"unexplained red dot(s) - the pass is "
+                  f"partial until each is named below.")
+    rs.append("")
+    rs.append(f"- observed {coverage['items_observed']} items; "
+              f"queue entries {coverage['queued_entries']} "
+              f"({len(exec_entries)} execution, "
+              f"{len(expl_entries)} exploration; to enqueue "
+              f"{coverage['to_enqueue']}, already queued "
+              f"{coverage['already_queued']}, priority raises "
+              f"{coverage['raises']}, applied this run "
+              f"{coverage['applied']}); already satisfied "
+              f"{coverage['already_satisfied']}, known not "
+              f"actionable {coverage['not_actionable']}.")
+    rs.append(f"- unknown items - "
+              f"{coverage['unknown_items']} filed as "
+              f"candidates ({coverage['candidates_filed']} "
+              f"new filings, "
+              f"{coverage['candidates_registered']} already "
+              f"registered).")
+    for rec in sorted(new_filings, key=lambda c: c["slug"]):
+        rs.append(f"  - new candidate {rec['slug']} - "
+                  f"{rec['label'] or rec['slug']} "
+                  f"({rec['surface']}).")
+    if unmatched:
+        rs.append("- unmatched labels - every label the "
+                  "passes met that no roster entry owns:")
+        for lbl in unmatched:
+            rs.append(f"  - {lbl}")
+    else:
+        rs.append("- unmatched labels - none: the passes "
+                  "looked and found nothing outside the "
+                  "roster.")
+    if not args.root:
+        rs.append("- promotion proposals - not checked: the "
+                  "pool was not read (no --root), so a zero "
+                  "here would be an unread pool, not a "
+                  "finding.")
+    elif not proposals:
+        rs.append("- promotion proposals - none owed: no "
+                  "registered candidate has a completed "
+                  "exploration unit in the pool.")
+    else:
+        rs.append("- promotion proposals - decision owed:")
+        for prop in proposals:
+            rs.append(f"  - {prop['slug']} - "
+                      f"{len(prop['explorations'])} completed "
+                      f"exploration unit(s), register status "
+                      f"{prop['register_status']} - promote, "
+                      f"reject, or keep exploring.")
+    rs.append("")
+    rs.append("Source - the coverage report and the "
+              "promotion proposals file in the same output "
+              "directory; this section adds no new numbers.")
+    rs.append("")
+    rs_path = os.path.join(
+        out_dir, f"scout-round-summary-{date}.md")
+    with open(rs_path, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(rs))
+    coverage["outputs"]["round_summary"] = rs_path
     coverage["apply_failures"] = apply_failures
     coverage["applied_units"] = applied
 
