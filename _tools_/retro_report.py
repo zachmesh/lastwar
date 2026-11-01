@@ -25,7 +25,22 @@ What is counted, per section 14 -
     units that carry both figures and as a per-unit mean ratio;
   - resources gained itemised by type, and points, with output
     per minute against total execution minutes;
-  - total duration and median duration;
+  - total duration, median duration and p90 duration
+    (nearest-rank 90th percentile over the bucket's durations);
+  - attempts per execution - mean, maximum and the share that
+    needed more than one attempt. Attempts are read from the
+    unit's top-level attempts field, which queue.py increments
+    on claim; result.attempts is accepted as a fallback. This
+    corrects the evaluation-metrics text, which names
+    result.attempts - the live pool carries attempts only at
+    top level, never under result. Units without a result
+    contribute no attempts figure, never an invented zero;
+  - a top-level system_metrics object, versioned by this
+    tool's version, carrying the window totals for p90 and
+    attempts, the same pair per regular (rolling), and the
+    remaining data gaps by name - regulars with no p90, with
+    no attempts figure, and with no data at all - so the retro
+    file can cite one object instead of re-deriving them;
   - the top repeated blockers, by blocker_category (the miss
     audit classes a to i) and by the named blocker when a unit
     records one in stats.blocker;
@@ -66,6 +81,7 @@ land in <root>/_records_/retro unless --out-dir says otherwise.
 import argparse
 import hashlib
 import importlib.util
+import math
 import json
 import os
 import re
@@ -74,7 +90,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.0.0"
+TOOL_VERSION = "1.1.0"
 
 
 def _load_queue():
@@ -124,6 +140,20 @@ def _clean(number):
     if float(number).is_integer():
         return int(number)
     return round(float(number), 4)
+
+
+def _p90(values):
+    """Nearest-rank 90th percentile, or None when empty.
+
+    Sorted ascending, rank ceil(0.9 * n), 1-based: for 10 values
+    the 9th, for a single value that value. The method is fixed
+    here so a hand calculation reproduces the emitted figure.
+    """
+    if not values:
+        return None
+    ordered = sorted(values)
+    rank = max(1, math.ceil(0.9 * len(ordered)))
+    return ordered[rank - 1]
 
 
 def _is_verified(value):
@@ -260,6 +290,11 @@ def load_units(root):
         if not isinstance(result, dict) or not result.get("status"):
             result = None
         day, date_source = _local_date(fields, unit_name)
+        # Attempts live at top level in the pool (queue.py claim
+        # increments them); result.attempts is a fallback only.
+        attempts = _num(fields.get("attempts"))
+        if attempts is None and isinstance(result, dict):
+            attempts = _num(result.get("attempts"))
         units.append({
             "unit": unit_name,
             "file": name,
@@ -268,6 +303,7 @@ def load_units(root):
             "date": day,
             "date_source": date_source,
             "result": result,
+            "attempts": attempts,
             "data_source": "unit-result" if result else "missing",
         })
     return units, parse_errors, scanned
@@ -317,6 +353,7 @@ def _empty_bucket():
         "statuses": {},
         "durations": [],
         "duration_total": 0.0,
+        "attempts": [],
         "target_sum": 0.0,
         "achieved_sum": 0.0,
         "attainment_units": 0,
@@ -351,6 +388,9 @@ def _feed(bucket, unit):
     if duration is not None:
         bucket["durations"].append(duration)
         bucket["duration_total"] += duration
+    attempts = unit.get("attempts")
+    if attempts is not None:
+        bucket["attempts"].append(attempts)
     stats = result.get("stats")
     if not isinstance(stats, dict):
         stats = {}
@@ -413,6 +453,17 @@ def _summarise(bucket):
         "duration_median_seconds": _clean(
             statistics.median(bucket["durations"]))
             if bucket["durations"] else None,
+        "duration_p90_seconds": _clean(_p90(bucket["durations"])),
+        "attempts_units": len(bucket["attempts"]),
+        "attempts_mean": _clean(
+            sum(bucket["attempts"]) / len(bucket["attempts"]))
+            if bucket["attempts"] else None,
+        "attempts_max": _clean(max(bucket["attempts"]))
+            if bucket["attempts"] else None,
+        "attempts_gt1_share": _clean(
+            sum(1 for a in bucket["attempts"] if a > 1)
+            / len(bucket["attempts"]))
+            if bucket["attempts"] else None,
         "target_sum": _clean(bucket["target_sum"]),
         "achieved_sum": _clean(bucket["achieved_sum"]),
         "attainment_summed": _clean(
@@ -471,6 +522,52 @@ def aggregate(units, start, end):
     return regulars, _summarise(totals_bucket)
 
 
+def _attempts_p90_pair(summary):
+    """The p90 and attempts fields a retro file cites, per bucket."""
+    return {
+        "duration_p90_seconds": summary["duration_p90_seconds"],
+        "attempts_units": summary["attempts_units"],
+        "attempts_mean": summary["attempts_mean"],
+        "attempts_max": summary["attempts_max"],
+        "attempts_gt1_share": summary["attempts_gt1_share"],
+    }
+
+
+def build_system_metrics(regulars, totals, no_data, window):
+    """Top-level system_metrics object for the retro file to cite.
+
+    Totals plus the same pair per regular (rolling), with the
+    remaining data gaps named rather than dropped: regulars
+    with no p90 (no durations at all), with no attempts figure
+    (no result unit carrying attempts), and with no data in the
+    window. Families A and G rows that were data-gap before
+    this extension now carry values wherever the pool has them.
+    """
+    per_regular = {name: _attempts_p90_pair(entry["rolling"])
+                   for name, entry in sorted(regulars.items())}
+    totals_pair = _attempts_p90_pair(totals)
+    totals_pair["executions"] = totals["executions"]
+    totals_pair["unverified"] = totals["unverified"]
+    totals_pair["unverified_rate"] = _clean(
+        totals["unverified"] / totals["executions"]) \
+        if totals["executions"] else None
+    return {
+        "tool_version": TOOL_VERSION,
+        "window": window,
+        "totals": totals_pair,
+        "per_regular_rolling": per_regular,
+        "data_gaps": {
+            "regulars_without_duration_p90": sorted(
+                name for name, pair in per_regular.items()
+                if pair["duration_p90_seconds"] is None),
+            "regulars_without_attempts": sorted(
+                name for name, pair in per_regular.items()
+                if pair["attempts_units"] == 0),
+            "no_data_regulars": list(no_data),
+        },
+    }
+
+
 def pool_state_hash(units):
     lines = []
     for unit in units:
@@ -517,15 +614,31 @@ def render_markdown(data):
         f"- Attainment summed {totals['attainment_summed']} over "
         f"{totals['attainment_units']} units with both figures",
         f"- Duration total {totals['duration_total_seconds']}s, "
-        f"median {totals['duration_median_seconds']}s",
+        f"median {totals['duration_median_seconds']}s, "
+        f"p90 {totals['duration_p90_seconds']}s",
+        f"- Attempts over {totals['attempts_units']} units: mean "
+        f"{totals['attempts_mean']}, max {totals['attempts_max']}, "
+        f"share over 1 attempt {totals['attempts_gt1_share']}",
         f"- Points {totals['points_total']}; unverified closings "
         f"{totals['unverified']}",
+        "",
+        "## System metrics",
+        "",
+        f"- Totals p90 {totals['duration_p90_seconds']}s; attempts "
+        f"mean {totals['attempts_mean']}, max "
+        f"{totals['attempts_max']}, share over 1 "
+        f"{totals['attempts_gt1_share']}; unverified rate "
+        f"{data['system_metrics']['totals']['unverified_rate']}",
+        f"- Data gaps - no p90: "
+        f"{', '.join(data['system_metrics']['data_gaps']['regulars_without_duration_p90']) or 'none'}; "
+        f"no attempts: "
+        f"{', '.join(data['system_metrics']['data_gaps']['regulars_without_attempts']) or 'none'}",
         "",
         "## Per regular (rolling window)",
         "",
         "| Regular | Exec | Done | Partial | Skipped | Attainment | "
-        "Points | Median s | Unverified | Top blockers |",
-        "|---|---|---|---|---|---|---|---|---|---|",
+        "Points | Median s | P90 s | Attempts mean/max | Unverified | Top blockers |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for regular, entry in data["regulars"].items():
         roll = entry["rolling"]
@@ -538,6 +651,8 @@ def render_markdown(data):
             f"{roll['statuses'].get('skipped-needs-owner', 0)} | "
             f"{roll['attainment_summed']} | {roll['points_total']} | "
             f"{roll['duration_median_seconds']} | "
+            f"{roll['duration_p90_seconds']} | "
+            f"{roll['attempts_mean']}/{roll['attempts_max']} | "
             f"{roll['unverified']} | {blockers} |")
     lines += ["", "## No data in window", ""]
     if data["no_data_regulars"]:
@@ -581,11 +696,14 @@ def run(args):
         if u["result"] is None and u["date"] is not None
         and start <= u["date"] <= end
     ]
+    window = {"start": start.isoformat(), "end": end.isoformat(),
+              "days": args.days}
     data = {
         "tool": "retro_report",
         "version": TOOL_VERSION,
-        "window": {"start": start.isoformat(), "end": end.isoformat(),
-                   "days": args.days},
+        "window": window,
+        "system_metrics": build_system_metrics(
+            regulars, totals, no_data, window),
         "derived_from": {
             "done_units_scanned": scanned,
             "in_window": in_window,
