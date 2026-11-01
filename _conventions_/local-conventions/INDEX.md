@@ -32,6 +32,9 @@ in this repository.
   with the owner expanded collection checklist checked line by line.
 - [Reflection 2026-10-31](reflection-2026-10-31.md) — the reflection
   on that audit, with every fix mapped to the file it landed in.
+- [Loop review 2026-10-31](loop-review-2026-10-31.md) — the review of
+  whether the feedback and improvement loop is closed, with the four
+  open links filed for the first retro.
 - [Daily collection ledger](daily-collection-ledger.md) — the master
   list of everything collectible or due in one reset day, each line
   with the live read that closes it, walked by the pre-reset zero
