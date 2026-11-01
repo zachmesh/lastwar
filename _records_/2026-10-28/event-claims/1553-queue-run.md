@@ -1,9 +1,9 @@
 ---
 title: Event Claims Execution 2026-10-28 1553 Queue Run
 created: 2026-10-28T22:53:00Z
-modified: 2026-10-28T22:53:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 1553 queue run, unit events-2026-10-28-1457, full Events tab sweep, nothing claimable
 status: unverified
 grounded_in:
@@ -25,7 +25,7 @@ Metadata for this type lives in
   first check and 03:08 at recheck, phase score 0 against
   thresholds 6,250, 12,500 and 30,000. The cumulative chest
   stands at 9 of 18, not full, not claimable. The ranking
-  footer 51,000 for [AP3x]Bears Lair is the cumulative
+  footer 51,000 for [redacted-character-name] is the cumulative
   score, not the phase score. The 6,250 chest tap opened
   only its contents preview (Valued 2,360, Skill Medal 200,
   Arms Race Badge 1, Coin, Food and Iron Chest SR 4 each,

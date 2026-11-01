@@ -1,9 +1,9 @@
 ---
 title: Event Claims Execution 2026-10-28 1134 Queue Run
 created: 2026-10-28T18:47:00Z
-modified: 2026-10-28T18:47:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 1134 queue ticker run, events unit - full Events tab sweep plus Halloween check-in, nothing claimable
 status: unverified
 grounded_in:
@@ -32,7 +32,7 @@ Unit events-2026-10-28-1057, executor ticker-1134.
   Medal 400) - neither showed a Claim button, so neither
   is claimable this phase. Cumulative chest stands at 9 of
   18, not full, not claimable. Ranking footer 51,000 for
-  [AP3x]Bears Lair. Arms Race grinding belongs to its own
+  [redacted-character-name]. Arms Race grinding belongs to its own
   unit.
 - Desert Battlefield tab - Desert Storm Battlefield
   registration page only, registration ends in about

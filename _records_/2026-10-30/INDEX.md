@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-30
 created: 2026-10-30T07:07:00Z
-modified: 2026-10-30T07:07:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: The 0004 queue ticker pass, Hidden Treasures dig and Zombie Invasion chain unit 051
 status: unverified
 grounded_in:
@@ -562,7 +562,7 @@ of 2026-10-28.
   grateful for your assistance"; ally requests
   from DCna8ive (Lv.24 Barracks) and Crow Apex
   (Lv.28 Air Force Base) cleared, leaving only
-  the own Bears Lair rows. Header still read
+  the own [redacted-character-name] rows. Header still read
   600 of 1,000 in the closing screenshot.
   Full detail in alliance-help/0719-queue-run.md.
 - Mail unit mail-2026-10-30-0630, done: Event
@@ -791,7 +791,7 @@ of 2026-10-28.
 
 - Help unit help-2026-10-30-1030, done: Help All pressed once
   at 500,778, papillon707 ally requests (Infirmary Expansion I
-  research and Healing Help) cleared, own Bears Lair Lv.28 Drill
+  research and Healing Help) cleared, own [redacted-character-name] Lv.28 Drill
   Ground and Lv.30 Aircraft Center rows (both 30 of 30) remain;
   header 700 of 1,000 before and after, as observed.
   Full detail in alliance-help/1212-queue-run.md.

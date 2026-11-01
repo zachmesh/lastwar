@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-28 1825 Queue Run
 created: 2026-10-29T01:25:00Z
-modified: 2026-10-29T01:25:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-28-1803 - live phase Tech Research with about 35 minutes left, score 0 against thresholds 6250, 12500 and 30000, cumulative chest 9 of 18 not claimable, no reward claimed; every scoring path is a red line (research speedups, diamond packs, or starting research), so the unit is skipped-needs-owner and the target is recorded as a red-line miss
 status: unverified
 grounded_in:
@@ -39,7 +39,7 @@ red lines, recorded as skipped-needs-owner.
 - Completion sweep — the cumulative counter chest at the
   top left of the phase page read 9 of 18, not full and not
   claimable. The ranking row still displayed the finished
-  Hero Advancement result (Bears Lair 51,000, combined
+  Hero Advancement result ([redacted-character-name] 51,000, combined
   rank 2110 as displayed) and its chest did not open a
   claim on tap. No bouncing chest or reward red dot stood
   on the Arms Race page; the Calendar button carried its

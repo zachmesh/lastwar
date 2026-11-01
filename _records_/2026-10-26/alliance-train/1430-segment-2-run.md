@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-26 1430 Segment 2 Run
 created: 2026-10-26T21:53:00Z
-modified: 2026-10-26T21:53:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 1430 segment 2 run, no train in preparation at any sweep and the only train mail a notice for a train this account never boarded
 status: unverified
 grounded_in:
@@ -29,7 +29,6 @@ Metadata for this type lives in
 - One train completed its run during the window — the
   Nd4Spd4 train (departed about 2h before the run, arrived
   about 59 minutes before it). Its arrival mail was opened
-  in the mail pass and verified as a notice only — Bears
-  Lair is not among the twelve listed passengers, and the
+  in the mail pass and verified as a notice only — [redacted-character-name] is not among the twelve listed passengers, and the
   mail carries no attachment; see the mail record of this
   run.

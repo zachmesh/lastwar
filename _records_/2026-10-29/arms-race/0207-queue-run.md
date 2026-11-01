@@ -7,7 +7,7 @@ created: 2026-10-29T09:07:00Z
 
 - Executor: ticker-0204. Session window about 02:04-02:10 PT.
 - Phase read live on the Events / Arms Race page: Unit Progression,
-  Contest Segment Lv.29-30, score 0, rank #2110 [AP3x]Bears Lair,
+  Contest Segment Lv.29-30, score 0, rank #2110 [redacted-character-name],
   thresholds 15,000 / 30,000 / 75,000, about 00:53 left in the phase
   at first sight (phase ends about 03:03 PT).
 - Scoring paths on the page: Train a Lv.10 unit +31, Use 1-min

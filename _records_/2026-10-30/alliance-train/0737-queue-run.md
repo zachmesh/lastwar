@@ -1,8 +1,8 @@
 ---
 title: Train queue run 0737
 created: 2026-10-30T14:37:00Z
-modified: 2026-10-30T14:37:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-0734 train unit, done as a check - no boarding banner, no train in preparation
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 07:34-07:37 PDT, executor
 ticker-0734, Mac mini session cc-461, game account
-[AP3x]Bears Lair.
+[redacted-character-name].
 
 Performed: checked only.
 

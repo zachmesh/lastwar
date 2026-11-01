@@ -1,8 +1,8 @@
 ---
 title: Event Claims Queue Sweep
 created: 2026-10-29T15:45:00Z
-modified: 2026-10-29T15:45:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Queue unit events-2026-10-29-0657 execution
 status: done
 ---
@@ -19,7 +19,7 @@ Unit: events-2026-10-29-0657, executor ticker-0834.
   chest at top left reads 6 of 8, not full, not claimable.
   No grinding done here - the phase is the arms-race unit's
   work, not this claim sweep. Ranking row still shows
-  #2110 [AP3x]Bears Lair at 37,500, carried from the previous
+  #2110 [redacted-character-name] at 37,500, carried from the previous
   Hero Advancement phase.
 - Desert Storm Battlefield: waiting for battle to start,
   19:13:43 left, [AP3x] The Apex 17 sign-ups vs [SUlb] 15.

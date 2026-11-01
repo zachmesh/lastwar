@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-31
 created: 2026-10-31T07:10:00Z
-modified: 2026-10-31T07:10:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: The 0004 queue ticker pass, Hidden Treasures check
 status: unverified
 grounded_in:
@@ -140,7 +140,7 @@ of 2026-10-28.
 - Alliance Help unit help-2026-10-31-0230, done:
   Help opened at norm 687,504 from the Alliance panel
   left open by the gifts unit. Today's points read
-  100 of 1,000 at open; own requests were Bears Lair
+  100 of 1,000 at open; own requests were [redacted-character-name]
   Lv.30 Aircraft Center and Lv.28 Drill Ground (both
   30 of 30), allies waiting were PrincessEsra10xoxo
   Lv.28 Missile Vehicle Base, miss direction

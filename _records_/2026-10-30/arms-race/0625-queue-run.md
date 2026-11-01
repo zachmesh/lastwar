@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-30 0625 Queue Run
 created: 2026-10-30T13:27:00Z
-modified: 2026-10-30T13:27:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-30-0603 - live phase Unit Progression, phase score 0, no point chests earned, cumulative chest 9 of 18 not full, tier-3 gap 75000, training scoring path left to the separate training unit
 status: unverified
 grounded_in:
@@ -38,7 +38,7 @@ re-produces this regular.
   and none was claimed. The cumulative counter
   chest at the top left of the phase page read 9
   of 18, not full, so it was not claimed either.
-  The ranking row read #2110 [AP3x]Bears Lair
+  The ranking row read #2110 [redacted-character-name]
   with 51,500; per the 2026-10-30 0210 precedent,
   where the ranking row lagged at 46,500 while the
   live phase score was 12,000, the ranking row

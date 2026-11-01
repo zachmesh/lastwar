@@ -1,8 +1,8 @@
 ---
 title: Truck queue run 2017
 created: 2026-10-30T20:17:00-07:00
-modified: 2026-10-30T20:17:00-07:00
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-2004 trucks unit, partial - settled 1 returned truck, dispatched 2, Trade Count 2/5, plunder untouched
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 20:04-20:17 PDT, executor
 ticker-2004, Mac mini sessions cc-573 and cc-574,
-game account [AP3x]Bears Lair. Duel day 6,
+game account [redacted-character-name]. Duel day 6,
 Enemy Buster (non-UR day), so the non-UR dispatch
 rule applies: SR or above only, regular dispatch,
 no Mega Mode.

@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-25
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T06:44:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.17.0
+version: 1.17.1
 description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, the research brief folded into the playbook, and the late red dot follow up, and the owner-requested late round with its score and resources report
 status: unverified
 grounded_in:
@@ -27,9 +27,9 @@ All times America/Los_Angeles. Actor Muse, on the owner's instruction.
 ## 10:46 to 10:52 — First launch and login
 
 - Age gate passed, then a game update of 891.85 MB downloaded.
-- The update screen showed Signed in as HidingAnt504 (Game Center).
+- The update screen showed Signed in as [redacted-game-center-nickname] (Game Center).
 - Start, then Already Have an Account, then Game Center opened Manage
-  Characters with one character — [AP3x]Bears Lair, Warzone 2110, level 30,
+  Characters with one character — [redacted-character-name], Warzone 2110, level 30,
   power 149,307,154. Confirmed with Yes. A further 67.19 MB update ran.
 
 ## Base snapshot at login

@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-26 1430 Segment 2 Run
 created: 2026-10-26T21:53:00Z
-modified: 2026-10-26T21:53:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 1430 segment 2 run, Regular mail paying coin 1,080,000 and ruby times 200, no rewards in any other category, and the Nd4Spd4 train arrival mail verified as a notice with no attachment
 status: unverified
 grounded_in:
@@ -32,8 +32,7 @@ Metadata for this type lives in
 - Event — Claim All answered No rewards available. The top
   mail, [AP3x] Nd4Spd4's train has arrived (59 minutes old),
   was opened and verified — a plain arrival notice listing
-  the conductor (90,328,831) and twelve passengers; Bears
-  Lair is not among them, and the mail carries a Details
+  the conductor (90,328,831) and twelve passengers; [redacted-character-name] is not among them, and the mail carries a Details
   button only, no Claim button and no attachment. The train
   was never boarded by this account, so no arrival reward
   exists for it. Below it stood the matching departure

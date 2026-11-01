@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-31 1010 Queue Run
 created: 2026-10-31T17:10:00Z
-modified: 2026-10-31T17:10:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-31-1003 - live phase Drone Boost, phase score 0, no point chest earned, cumulative chest 0 of 2 not claimable, tier-3 gap 30000, gap left for the next re-check unit following the 2026-10-30 Drone Boost precedent
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ this regular.
   (red line, never spent).
 - Live score — the phase page score bar read 0, so no
   point chest was earned in this phase yet and none was
-  claimed. The ranking row read #2110 [AP3x]Bears Lair
+  claimed. The ranking row read #2110 [redacted-character-name]
   with 0, matching the live score on this read.
 - Scoring-path check — the tier-3 gap is the full
   30,000 points, equal to 300 stamina at 100 points each

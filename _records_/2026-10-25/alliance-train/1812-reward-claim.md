@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-25 Arrival Reward Claimed by Mail
 created: 2026-10-26T01:27:00Z
-modified: 2026-10-26T01:27:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-25 evening claim of the alliance train arrival reward from Event mail
 status: unverified
 grounded_in:
@@ -28,7 +28,7 @@ Metadata for this type lives in
   at about 17:57 local. The Event category also held notice mails
   about the same conductor trains (departure and arrival notices
   and a Mega Express notice) - informational, no attachments seen.
-- The reward mail showed the account card ([AP3x]Bears Lair, Lv.30,
+- The reward mail showed the account card ([redacted-character-name], Lv.30,
   a figure of 116,361,444 under the train icon) and the carriage 1
   reward set - a Lv.3 chest, two crate stacks of 50, a badge 2.5K,
   a gold chest stack of 20 and a red gem item of 100.

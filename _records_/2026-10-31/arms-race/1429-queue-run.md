@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-31 1429 Queue Run
 created: 2026-10-31T21:29:00Z
-modified: 2026-10-31T21:29:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Arms-race queue unit arms-race-2026-10-31-1403 - Hero Advancement phase, Morrison Lv.123 to Lv.124 with EXP only, score 0 to 40500, all three point chests plus the cumulative chest claimed
 status: unverified
 grounded_in:
@@ -33,7 +33,7 @@ earned chest found in the completion sweep was claimed.
   Diamonds plus 30 per diamond (red line, never spent).
 - Live score at entry — the phase page score bar read
   0, so no point chest was earned yet. The ranking row
-  read #2110 [AP3x]Bears Lair with 41,500; per the
+  read #2110 [redacted-character-name] with 41,500; per the
   2026-10-30 precedent the ranking-row figure is
   recorded as the ranking-row figure, not as the live
   phase score.

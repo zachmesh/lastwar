@@ -1,8 +1,8 @@
 ---
 title: Last War Agent Entry Point
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T04:50:00Z
-version: 1.2.0
+modified: 2026-11-01T07:00:34Z
+version: 1.3.0
 description: Project instructions and adoption of reflection typed-folder conventions
 grounded_in:
   - source: owner request to adopt dtadpole/reflection shared conventions
@@ -72,3 +72,12 @@ scoped Conventional Commits together with the
 [input log](_logs_/user-inputs/INDEX.md). Never record a credential value.
 In-game purchases, alliance diplomacy and other consequential actions need
 the owner's approval first.
+
+## Personal account privacy
+
+Do not record Apple account email addresses, Game Center nicknames, or the
+owner's in-game character name in repository content, including screenshots
+transcribed into records and logs. Use `[redacted-apple-email]`,
+`[redacted-game-center-nickname]`, and `[redacted-character-name]` where
+an identifier must be acknowledged. GitHub usernames and repository links
+are outside this redaction scope.

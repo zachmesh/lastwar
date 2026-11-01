@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-26 0630 Segment 2 Run
 created: 2026-10-26T13:36:00Z
-modified: 2026-10-26T13:36:00Z
+modified: 2026-11-01T07:00:34Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 0630 segment 2 run, no train in preparation and the 0540 train confirmed departed by its Event mail
 status: unverified
 grounded_in:
@@ -28,6 +28,6 @@ Metadata for this type lives in
 - The train boarded in the 0529 run (conductor Abyss Apex,
   carriage 2, 3 Trade Contracts) has departed — its Event
   mail "[AP3x] Abyss Apex's train has departed!" was read in
-  the mail sweep of this run, with [AP3x]Bears Lair on the
+  the mail sweep of this run, with [redacted-character-name] on the
   passenger list. Any arrival reward is expected by Event
   mail in a later run.

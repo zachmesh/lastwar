@@ -1,8 +1,8 @@
 ---
 title: Alliance help queue run
 created: 2026-10-29T19:42:00Z
-modified: 2026-10-29T19:42:00Z
-version: 1.0.0
+modified: 2026-11-01T07:00:34Z
+version: 1.0.1
 description: Ticker pass ticker-1234 help unit, Help All pressed twice
 status: unverified
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
   Help opened at 687,497.
 - Help page at the open: Today's points gained from
   Alliance Help 440 of 1,000. Own requests on top
-  (Bears Lair Lv.30 Aircraft Center and Lv.28 Drill
+  ([redacted-character-name] Lv.30 Aircraft Center and Lv.28 Drill
   Ground, both already at 30 of 30 / time-reduced, not
   actionable by the owner), plus ally requests from
   StarFall (Lv.27 3rd Squad, Lv.28 Tank Base).
