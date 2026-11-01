@@ -1,20 +1,21 @@
 ---
 title: Push and PR Policy
 created: 2026-11-01T05:31:00Z
-modified: 2026-11-01T06:03:00Z
-version: 2.1.0
+modified: 2026-11-01T06:04:00Z
+version: 2.2.0
 status: draft
-description: PR-only main policy - main advances only by pull request merge, records ride date branches, and every pull request carries a named owning scheduled job
+description: PR-only main policy - main advances only by pull request merge, records ride date branches, every pull request carries a named owning scheduled job, and every executor run checks its own pull requests first and ends by opening one
 grounded_in:
   - source: owner decision 2026-10-31 - disallow direct commits to main and require a pull request for all pushes
   - source: owner decision 2026-10-31 - records PR merge cadence option A, the integrator merges every 15 minutes when new commits exist
   - source: owner instruction 2026-10-31 23:00 PDT - every pull request must name an owning scheduled job, with a catch-all owner job when no class matches
+  - source: owner instruction 2026-10-31 23:02 PDT - every executor checks its own previous pull requests before doing anything else, and opens a pull request at the end of every run that produces output
   - source: platform check 2026-10-31 - the GitHub account is on the Free plan and branch protection and rulesets return 403 on this private repository
 ---
 
 # Push and PR policy
 
-This is version 2.1.0 in draft. It states the owner's direction
+This is version 2.2.0 in draft. It states the owner's direction
 of 2026-10-31: main becomes PR-only and direct pushes to main
 are disallowed. It takes effect only when it lands on main
 through its own pull request and the standing jobs' push steps
@@ -175,6 +176,53 @@ decision, and records the outcome. Any fix the decision
 calls for is executed afterwards by the job of the change's
 own class, not by the integrator.
 
+## Executor PR discipline
+
+Owner instruction, 2026-10-31 at 23:02 PDT: an executor's
+pull requests are part of its run, at both ends. This
+section is the temporal side of the ownership section
+above - ownership says whose a PR is; this section says
+when its owner must attend to it. The integrator's
+full-sweep review and reassignment rules are unchanged by
+it.
+
+**Own PRs first.** Before an executor job does any new
+work in a run, it checks the pull requests it opened or
+owns - the PRs whose body `Owner:` line names the job,
+plus the records PRs it opened itself. It reads the latest
+comments on each one. Every question on one of its PRs is
+answered on the PR, whether or not the answer needs a code
+change; every piece of review feedback is fixed on the
+same branch first and replied to on the PR. A job does not
+start new work while one of its own PRs still carries an
+unanswered question or unaddressed feedback it can act on.
+
+**A run ends by opening a PR.** A run is not finished
+until its output is inside a pull request:
+
+- Work output (knowledge, code, conventions) is opened as
+  a PR in the same run that produces it, per the knowledge
+  and code flow above.
+- Records output is pushed to the live records date
+  branch, and the run then confirms the records PR for
+  that branch exists - a fresh PR for the new commits, on
+  top of whatever was merged before. If none exists, the
+  executor opens it itself (`gh pr create`, base main,
+  head `records/<date>`, body naming the date, this
+  policy, and `Owner: lastwar-pr-integrator`, which owns
+  records PRs end to end); it does not wait for the
+  integrator to notice the branch.
+- A run that cannot open or confirm its PR records itself
+  partial, with the reason, in its execution record.
+  Finished output is never left sitting on a local branch
+  as the run's final state.
+
+The daily retro's loop-health check extends to this
+section in the same pass as its other scans: run records
+are checked for the own-PRs-first step and for the closing
+PR, and a run that skipped either is named in the retro
+and counted in the loop-health family.
+
 ## PR branches carry no log appends
 
 A pull request branch - records or work - never carries
@@ -282,6 +330,32 @@ record the change in the changelog below.
 
 ## Changelog
 
+- 2.2.0, 2026-11-01 - executor PR discipline, on the owner's
+  instruction of 2026-10-31 at 23:02 PDT that every executor
+  check the questions and issues on its own previous pull
+  requests before doing anything else, and open a pull
+  request every time a run finishes. Each executor run now
+  starts by clearing its own PRs - answering every question
+  on the PR, fixing review feedback on the same branch -
+  before starting new work, and ends only when its output
+  is inside a PR: work output opened as a PR in the same
+  run, records output pushed to the date branch with the
+  records PR confirmed to exist or opened by the executor
+  itself when missing (owned by `lastwar-pr-integrator`).
+  A run that cannot open or confirm its PR records itself
+  partial with the reason; finished output never ends a run
+  sitting on a local branch. The section is the temporal
+  side of pull request ownership and leaves the
+  integrator's sweep and reassignment rules unchanged; the
+  retro audit gains an own-PRs-first and closing-PR check
+  on run records. The seven standing executor jobs' texts
+  were updated to these two rules the same evening, ahead
+  of this amendment; the amendment codifies them so future
+  jobs are bound automatically. This amendment changes the
+  PR policy itself and is therefore owner-gated; it lands
+  by bootstrap squash merge on the owner's recorded in-chat
+  instruction of 2026-10-31 23:02 PDT, the same precedent
+  as PR #3 and PR #4.
 - 2.1.0, 2026-11-01 - pull request ownership, on the owner's
   instruction of 2026-10-31 at 23:00 PDT that every PR have
   an owner and that a catch-all scheduled task own any PR no
