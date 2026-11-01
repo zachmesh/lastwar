@@ -504,3 +504,29 @@ of 2026-10-28.
 - Radar unit radar-2026-10-31-2203, partial: duel day 7 off-day settlement, radar posture stack. Radar screen read live at norm 62,727 entry: Lv.13, points 45, stored 16/40, stamina 135, 12 tasks restoring in 00:45:31, bottom bar "4 task rewards can be claimed". Claim All deliberately NOT tapped; Quick Execute not offered while the Claim All bar stands; pins untapped. Change since the 18:38 unit (stored 32 to 16, rewards 10 to 4, points 29 to 45) is not from the queue — no queue radar unit completed between those reads — and is recorded as an unverified inter-unit change. Cap headroom is ample (16 plus 12 restoring reach 28/40). Tracker untouched. Full detail in radar-tasks/2206-queue-run.md.
 - Arms-race unit arms-race-2026-10-31-2203, partial: Drone Boost phase, Contest Segment Lv.29-30, score 6,000 against thresholds 1,500 / 10,000 / 30,000, about 00:50 left at the read, cumulative chest 1/2. Score rose 0 to 6,000 since the 20:12 events read with no queue arms-race unit between, recorded as an unverified inter-unit change. Tier-3 gap 24,000 judged against all three paths: packs banned, stamina path blocked (radar Quick Execute unavailable while the Claim All bar stands under the day-7 stack posture, doom-pin spends risk instant claims), drone-data path checked on the Tactical Drone screen (Lv.130, Stage 4/5, 5.37M data against a 42.00K upgrade cost — one upgrade pays only about 4,200 points and is not an authorised spend, so Upgrade was never tapped). First chest tapped once with no popup and no change, treated as already claimed, unverified. Completion sweep on the Arms Race page found no bouncing chest or reward red dot. Priority-1 successor arms-race-2026-11-01-0512 enqueued expiring at the phase end (23:00 local) under rule R6 and left in inbox for the 22:34 tick. Tracker untouched. Full detail in arms-race/2212-queue-run.md.
 - Pass ended at about 22:12, inside its 25 minute budget. Game left on the base screen. The new trade day's trucks shortfall (dispatch 0/5 blocked, plunder 1/4 by battle result, last live at 20:48) and the Drone Boost tier-3 gap both carry to the next tick.
+
+## Loop operations — reconstructed execution records (added 2026-11-01)
+
+The evening's loop work was recorded only in commits and chat
+at the time. Under the ops execution records standard the four
+runs are reconstructed here, verified as reconstructed, with
+unrecoverable fields written unknown:
+
+- Knowledge organization, 2223 run — the radar-tasks profile
+  hardening (1.5.0 to 1.6.0). Full detail in
+  knowledge-organization/2223-run.md.
+- Tool development, 2224 run — scout_diff and retro_report
+  delivered and fixture-validated. Full detail in
+  tool-development/2224-run.md.
+- Retro review, 2231 run — the manual miss audit and
+  reflection as period 0, closed by the first daily retro
+  file. Full detail in retro-review/2231-run.md.
+- PR integration, 2234 run — PR #1 (the two-tier push policy)
+  reviewed and squash-merged as the bootstrap pass. Full
+  detail in pr-integration/2234-run.md.
+
+## 22:34 to about 22:41 — Queue ticker pass, arms-race (partial, phase-final miss)
+
+- Ticker pass ticker-2234. Sync reaped 0, expired 0, produced 2 new units (scout-2026-10-31-1900, scout-midday-2026-10-31-0700); the other 17 due regulars were already queued. No zombie chain was seeded: the Zombie Invasion event ended at about the 19:00 reset on 2026-10-30 and no Zombie Invasion tab is live. Token acquired, no other pass holding it.
+- Arms-race unit arms-race-2026-11-01-0512, partial, phase-final: Drone Boost phase, Contest Segment Lv.29-30, score 6,000 against thresholds 1,500 / 10,000 / 30,000, time left 00:22:45 at first read and 00:19:53 at the sweep re-read, cumulative chest 1/2. Tier-3 gap 24,000. Changed-method check under rule R2: the stamina scoring row arrow opened the world-map Search panel (Doom Elite Lv.1) — a stamina route the earlier units of this phase had not opened — but closing 240 stamina of marches inside about 20 minutes was not feasible, so no Search tap, no march, and no refill was spent for a missed phase; packs banned, drone upgrades unauthorised. Completion sweep found no bouncing chest or reward red dot; first chest already open, second and third locked. Phase miss recorded as final for this phase, no successor enqueued (phase ends 23:00 local, before the next tick), tracker untouched. Full detail in arms-race/2241-queue-run.md.
+- Pass ended at about 22:41, inside its 25 minute budget. Game left on the Arms Race page.
