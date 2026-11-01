@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T19:40:31Z
+modified: 2026-11-01T22:40:43Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: owner direction to page through every red dot and claim what is shown, evening of 2026-10-25
   - source: owner correction on 2026-10-26 - a bouncing chest on the Events screen is an unclaimed reward signal, and the three Arms Race point chests are not all of its rewards
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1055 events unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1348 events unit)
 ---
 
 
@@ -229,6 +230,37 @@ that drag is the sweep-completeness check, not wasted motion.
   re-select. A single such error is unverified until a
   re-select confirms it. Tracker marked done. Game left
   on the base screen.
+
+## What the 2026-11-01 1348 unit added
+
+- Unit events-2026-11-01-1057 by ticker-1334, session
+  about 13:42 to 13:50, status done, checked only. Full
+  hub sweep, all five tabs visited, nothing claimed, no
+  bouncing chest and no unclaimed reward red dot left on
+  any visited page. No diamonds or money spent, no paid
+  button tapped. Game left on the base screen.
+- Arms Race, Unit Progression, Contest Segment Lv.29-30:
+  score 0, point chests at 15,000, 30,000 and 75,000 all
+  unearned, cumulative chest at 1 of 2, rank 2,110, phase
+  timer about 00:17 remaining at about 13:44 local, so
+  the phase ends around 14:01 local. Nothing claimable
+  here; no grinding was done in this claim unit. Flag
+  for the arms-race unit: its 14:03 slot falls after this
+  phase end, so that unit should expect a fresh phase,
+  not this stage's chests.
+- Level Swap: inspect only, two empty hero slots,
+  Confirm not touched. Nothing to claim.
+- Rampage Bosses: Mutated Bear Lv.9, 0 of
+  35,000,000,000,000 HP at 0.0 percent, one Vulnerable
+  and two Appeared cards. No claim button on the page;
+  the Go button is a fight entry, not a claim, and no
+  fight was started. Rewards go via Mail after the event
+  ends. Consistent with the 1055 new-boss-cycle read
+  (0.0 percent after 42.0 percent at 0117).
+- Community: Discord binding reward reads Claimed.
+- Frontline Breakthrough: Saving Soldiers 100 percent,
+  all six Reward tiles show green checks. The Challenge
+  button is active play, not a claim, and was not tapped.
 
 ## Open questions
 
