@@ -328,3 +328,19 @@ of 2026-10-28.
   entry changed. Record pushed on records/2026-11-01
   for the integrator sweep, never directly to main.
   Full detail in tool-development/0735-run.md.
+
+## 07:34 to about 07:45 — Queue ticker pass, radar tasks (failed, device offline)
+
+- Radar unit radar-2026-11-01-0603, failed:
+  Mac mini device channel offline across five attempts
+  (connection.health, connection.repair, computer.session
+  start, second connection.health after a 30 second wait,
+  and a timed-out recovery-channel repair; node_offline,
+  no wake-up path), last seen 01:47 local and unmoved
+  across the pass. No screen read, no radar screen opened,
+  no pin tapped, no Claim All tapped, nothing claimed,
+  nothing spent. Tracker untouched. Eleventh consecutive
+  access-failed pass after the 02:34, 03:04, 03:34, 04:04,
+  04:34, 05:04, 05:34, 06:04, 06:34 and 07:04 passes; the
+  channel has been down since 01:47 local. Full detail in
+  radar-tasks/0734-queue-run.md.
