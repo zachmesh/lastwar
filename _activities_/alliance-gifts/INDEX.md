@@ -1,15 +1,16 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T08:36:31Z
+modified: 2026-11-01T18:39:17Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner direction to claim both gift pages, evening of 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0935 gifts unit)
 ---
 
 
@@ -108,6 +109,50 @@ one file per execution.
   background-input method inside a unit.
 
 
+
+## What the 2026-11-01 0935 unit added
+
+- Performed, ticker-0934, session about 09:35 to 09:38:
+  both tabs claimed. This pass is the first successful game
+  execution after the device-offline run on 2026-11-01
+  (last seen 01:47 local, thirteen consecutive
+  access-failed passes through 0834); the Mac mini channel
+  was online again at pass start. Alliance panel read
+  [AP3x] The Apex, 95/100 members.
+- Entry, reconciling the 0110 unit: the first Alliance tap
+  at norm 933,735 showed only a press effect and left the
+  base screen unchanged - the background-input pattern
+  recorded in the 2026-10-31 retro - while the 0110 unit
+  had opened the panel at once from the same point. The
+  difference is foreground state, not a superseded point:
+  a title-bar left-segment tap followed by a second
+  Alliance tap at norm 924,733 opened the panel at once.
+  Chrome stayed the frontmost app throughout and input
+  still reached the game after the title-bar tap, so no
+  foreground escalation was needed. If the first Alliance
+  tap shows only a press effect, tap the title-bar left
+  segment first and retry before concluding entry failed.
+- Alliance Gifts button at norm 314,614 opened the gifts
+  screen, matching the 2026-10-31 1924 unit. Gift Level 28,
+  progress 178,139,340 of 206,300,000 at entry.
+- Regular Claim All at norm 498,931, dialog-confirmed:
+  "A total of 222 Regular Alliance Gifts were claimed this
+  time". A second sweep showed no new badge and rows
+  reading Claimed; progress read 178,141,560 (plus 2,220,
+  matching 222 gifts at 10 points each). No third sweep
+  was needed this unit.
+- Premium tab tapped at norm 694,269. Premium Claim All
+  at norm 767,931 - the 2026-10-31 1924 unit point of
+  763,931 within a few points, so ground the Premium point
+  fresh each unit rather than reusing a pinned point. Badge
+  and dialog both read 18 Premium gifts: "A total of 18
+  Premium Alliance Gifts were claimed this time". The "Hide
+  your name on Gifts" checkbox was left unchecked and
+  untouched. Verification: Premium rows read Claimed, the
+  Claim All badge was gone, and Gift Level progress closed
+  at 178,149,760 of 206,300,000. The game was left on the
+  Alliance Gifts Premium list.
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -122,3 +167,4 @@ one file per execution.
   the 500,850 dismiss behaviour, the two-sweep rule, and the
   Chrome-frontmost background-input nuance, folded from the
   0110 gifts unit.
+- 1.4.0 (2026-11-01): measured 0935 entry and per-tab Claim All points, dialog-confirmed counts (222 Regular, 18 Premium), first successful execution after the device-offline run, and the title-bar-then-retry entry reconciliation, folded from the 0935 gifts unit.
