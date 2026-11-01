@@ -874,3 +874,40 @@ of 2026-10-28.
   PR needed. End-of-pass sweep: zero open PRs, no
   unprocessed PRs, no escalations. Full detail in
   pr-integration/0445-run.md.
+## 05:00 - PR integration 0500 run
+
+- Integrator run pr-integration-2026-11-01-0500, done:
+  zero open PRs at pass start, records PR 52 opened
+  and merged.
+- Own-PR check first: previous own PR 51 already
+  MERGED (9e64dce4e6), no comments, no reviews, no
+  owner answer outstanding; earlier own PR 50 also
+  MERGED.
+- Records PR 52 opened by this run (the branch head
+  had no open PR) and MERGED, merge commit
+  657097f9c2, branch kept: it carries 1 commit since
+  the PR 51 merge (the 0445 run record, its day INDEX
+  append, and its merge-time action-log line).
+  GitHub merge state verified CLEAN and MERGEABLE
+  before the merge. The merged files are records and
+  log only, no knowledge, code, policy or schedule
+  change, so nothing is owner-gated. Local main
+  synced back to 657097f9c2 via the bundle route.
+- records/2026-10-31 verified contained in main, no
+  PR needed. End-of-pass sweep: zero open PRs, no
+  unprocessed PRs, no escalations. Full detail in
+  pr-integration/0500-run.md.
+
+## 05:04 to about 05:20 — Queue ticker pass, survivors (failed, device offline)
+
+- Survivors unit survivors-2026-11-01-0203, failed:
+  Mac mini device channel offline across five
+  computer.session starts (node_offline, no wake-up path)
+  plus a failed health probe, last seen 01:47 local and
+  unmoved across the pass. No screen read, no gate line
+  verified, no survivor recruited, no Quick Dispatch run,
+  nothing claimed, nothing spent. Tracker untouched.
+  Sixth consecutive access-failed pass after the 02:34,
+  03:04, 03:34, 04:04 and 04:34 passes; the channel has
+  been down since 01:47 local. Full detail in
+  survivor-intake/0504-queue-run.md.
