@@ -1,15 +1,16 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T09:36:45Z
+modified: 2026-11-01T21:37:13Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: in-game Train Operation Guidelines text, read 2026-10-25
   - source: owner task request naming a train task, 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1325 train unit)
 ---
 
 # Alliance train
@@ -181,6 +182,33 @@ Measured in the 0110 train unit (ticker-0104, window mode
   approval first.
 - Conductors are assigned by alliance officers. Nothing here authorises
   summoning a train or taking the conductor role.
+
+
+## What the 2026-11-01 1325 unit added
+
+- Unit train-2026-11-01-1030 by ticker-1304, session
+  about 13:22 to 13:23, status done as checked only.
+- Base screen inspected: no "Boarding closes in" banner
+  under the resource bar. The lines under the bar were
+  a treasure announcement and the furnace overdrive
+  line, plus the breaking-news ticker, so no train is
+  in preparation at this check, matching the
+  2026-10-31 checks.
+- No station panel was opened and no carriage state
+  was verified beyond the banner check. Nothing
+  boarded, no Trade Contracts spent, no train summoned,
+  no conductor role taken, no other task type touched.
+- Precision qualification, recorded against the unit's
+  own conclusion: banner absence alone does NOT prove
+  no train is in preparation. The 0110 unit found no
+  banner yet a train in preparation at the station
+  (conductor Missile Apex, 00:58:50 countdown), so a
+  banner-only check is a banner-only check, not a
+  station-verified no-train finding. The next train
+  unit that needs certainty must open the station panel
+  (left-column train-head icon) rather than closing on
+  the banner alone. The 2026-10-31 banner-only checks
+  stand as banner-only checks under this same reading.
 
 ## Open questions
 

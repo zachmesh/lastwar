@@ -1,14 +1,15 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T09:36:45Z
-version: 1.4.0
+modified: 2026-11-01T21:37:13Z
+version: 1.5.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner correction on 2026-10-25 - the task names the Star Ceremony, taught step by step in session
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1324 star-ceremony unit)
 ---
 
 
@@ -154,6 +155,26 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   1030) are the re-reads before the 19:00 reset; no extra unit
   was enqueued.
 
+
+
+## What the 2026-11-01 1324 unit added
+
+- Unit star-ceremony-2026-11-01-1030 by ticker-1304,
+  session about 13:21 to 13:22, status done as checked
+  only.
+- Base screen inspected in the wide view: right rail
+  showed Alliance, Mail, Inventory and WORLD, with
+  Events, Faction Duel, VS and Season icons at top
+  right. No trophy icon beside the Alliance icon, so no
+  Star Ceremony is waiting, matching the checked-only
+  units of 2026-10-31.
+- No ceremony was opened, no emotes sent, no rewards
+  claimed, no other task type touched.
+- Incidental live read confirming the mail unit's
+  claims landed: food 308.2M (was 289.2M), iron 496.2M
+  (was 477.2M), coins 22.7M (was 10.6M) on the base
+  resource bar - deltas matching the 1306 mail popup
+  exactly (see mail-rewards 1.3.0).
 
 ## Open questions
 
