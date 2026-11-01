@@ -41,12 +41,17 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-10-31T12:43:33",
-  "note": "Full Events hub sweep, nothing claimable, nothing claimed"
+  "at": "2026-10-31T17:46:48",
+  "note": "Full Events hub sweep plus Halloween Check-In, nothing claimable, Day 07 still unclaimable by tap"
  },
  "harvest": {
   "status": "done",
   "at": "2026-10-31T15:15:58",
   "note": "Collected ready base bubbles; verified iron 19.1M to 20.9M; truck not fully loaded, left"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-10-31T17:56:53",
+  "note": "1 ally assist (Krazy Sully), recovery clean, UR grid running"
  }
 }
