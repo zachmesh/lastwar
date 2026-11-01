@@ -551,3 +551,7 @@ unrecoverable fields written unknown:
 ## 23:15 to about 23:27 — PR integration (records merge, addendum)
 
 - Addendum to pr-integration-2026-10-31-2315: the end-of-pass sweep found records PR 7 (ticker-2304 donations, opened mid-pass by the ticker run, Owner: lastwar-pr-integrator), polled CLEAN / MERGEABLE and merged with merge commit d48d7037; the date branch was not deleted. Pass totals updated to 2 records PRs merged and 0 open PRs. Repo transfer noted: the PR 7 merge commit shows the head repo as zachmesh/lastwar (transferred from dtadpole/lastwar 2026-10-31, now public); dtadpole/lastwar operations still work through the redirect. Full detail in pr-integration/2315-run.md.
+
+## 23:32 to about 23:45 — Knowledge organization (done)
+
+- Knowledge-organizer run knowledge-organization-2026-10-31-2332, done: feedback order checked (only open PR 8, Owner pr-integrator, no review or question; backlog with no open knowledge-organization entry for these types; retro E1 to E4 already applied, M3 and M4 proposed not applied); arms-race profile 1.14.0 to 1.15.0 and alliance-donations profile 1.4.0 to 1.5.0 folded from the 2241 and 2306 late units, with the donations single-pool closing phrasings superseded by the 2306 live reads; PR 9 opened with Owner lastwar-knowledge-organizer, branch work/knowledge-organizer-2332, commit b1e1462a5, ls-remote verified; Slack DM sync sent. Full detail in knowledge-organization/2332-run.md.
