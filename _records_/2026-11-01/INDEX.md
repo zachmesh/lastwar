@@ -1200,6 +1200,36 @@ of 2026-10-28.
   pushed on records/2026-11-01 for the integrator sweep,
   never directly to main.
   Full detail in tool-development/1239-run.md.
+
+## 12:32 - Knowledge organization pass (PR 91)
+
+- Knowledge-organizer run knowledge-organization-2026-11-01-1232,
+  worked from the 1132 watermark. Own-PR check first: PR 85
+  (this job) stands MERGED with no comments and no reviews;
+  the one open PR at pass start (records PR 90) was not owned
+  by this job, so no owned PR feedback was addressed.
+  Improvements backlog unchanged at version 1.1.1.
+- Eight profiles updated on branch work/knowledge-organizer-1232
+  (commit e683b1590, PR 91, Owner lastwar-knowledge-organizer):
+  arms-race 1.16.0, donations 1.6.0, harvest 1.4.0, survivors
+  1.8.0, training 1.4.0, gifts 1.5.0, help 1.8.0, radar 1.7.0,
+  from the 1122, 1135, 1141, 1149, 1159, 1216, 1221 and 1226
+  units. The radar 1122 unit was missed by the 1132 run input
+  list and is folded here, closing that gap.
+- One contradiction corrected: the donations coin button stayed
+  green after nine donations in the 1141 unit, superseding the
+  2026-10-26 grey-after-nine precedent (grey-out is burst and
+  cooldown dependent). One tension flagged unresolved: the
+  donations footer rise of 1,300 exceeds nine donations at the
+  previously measured 50 to 60 points each, so no new
+  per-donation value is derived.
+- Live next-unit instructions carried in the profiles: Unit
+  Progression phase window ends about 14:06, radar 12-task
+  restore lands about 14:50 and would overshoot the 40 cap,
+  Drill Ground panel not re-read live since 2026-10-31, and
+  the next help unit needs a verified foreground session.
+  Full detail in knowledge-organization/1232-run.md.
+
 ## 12:39 to about 12:42 - PR catch-all pass (no-op)
 
 - Catchall run pr-catchall-2026-11-01-1239, no-op: own-PR
@@ -1210,4 +1240,3 @@ of 2026-10-28.
   PR 85 and PR 90 verified MERGED. No adoption, no fix, no
   hand-off, no owner-gated escalation, no stale-owner flag.
   Full detail in pr-catchall/1239-run.md.
-
