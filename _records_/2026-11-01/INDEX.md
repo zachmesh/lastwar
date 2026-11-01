@@ -1178,3 +1178,65 @@ of 2026-10-28.
   the unit stopped tapping rather than repeat a dead method.
   Next unit needs a verified foreground session first.
   Full detail in alliance-help/1226-queue-run.md.
+
+## 12:30 - PR integration pass (PR 90 merged)
+
+- Integrator run pr-integration-2026-11-01-1230, one open PR at pass start (PR 90, records branch 2026-11-01, ticker-1204 content, no comments outstanding). Prior integrator records PR 89 stands merged, no comments outstanding. Branch 2026-10-31 verified contained in main, no PR needed.
+- Records PR 90 merged with merge commit acb53043a, branch kept at 43e3f4a1d (ticker-1204 pass, the 1215 run record, their INDEX appends and action-log lines).
+- No feedback, no owner-gated escalation, no conflicts. Merged main fast-forwarded to the local repo (acb53043a). Merge synced to the owner Slack DM. End-of-pass sweep: zero open PRs. Full detail in pr-integration/1230-run.md.
+
+## 12:32 to about 12:39 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-1239,
+  no-op: zero open PRs at pass start and at re-check after
+  the 1230 integrator pass merged records PR 90, own
+  tooling PRs 73, 42, 36, 30, 23 and 11 all merged, backlog
+  version 1.1.1 unchanged with every tooling entry
+  implemented, and standing tool queue items (1), (2) and
+  (3) all merged. The 1155 planner repeat of the 02:15
+  narrative gap is the gap PR 73 already implemented;
+  narrative free-text parsing stays deliberately not taken
+  up. No tool branch, no PR, no backlog change. Record
+  pushed on records/2026-11-01 for the integrator sweep,
+  never directly to main.
+  Full detail in tool-development/1239-run.md.
+
+## 12:32 - Knowledge organization pass (PR 91)
+
+- Knowledge-organizer run knowledge-organization-2026-11-01-1232,
+  worked from the 1132 watermark. Own-PR check first: PR 85
+  (this job) stands MERGED with no comments and no reviews;
+  the one open PR at pass start (records PR 90) was not owned
+  by this job, so no owned PR feedback was addressed.
+  Improvements backlog unchanged at version 1.1.1.
+- Eight profiles updated on branch work/knowledge-organizer-1232
+  (commit e683b1590, PR 91, Owner lastwar-knowledge-organizer):
+  arms-race 1.16.0, donations 1.6.0, harvest 1.4.0, survivors
+  1.8.0, training 1.4.0, gifts 1.5.0, help 1.8.0, radar 1.7.0,
+  from the 1122, 1135, 1141, 1149, 1159, 1216, 1221 and 1226
+  units. The radar 1122 unit was missed by the 1132 run input
+  list and is folded here, closing that gap.
+- One contradiction corrected: the donations coin button stayed
+  green after nine donations in the 1141 unit, superseding the
+  2026-10-26 grey-after-nine precedent (grey-out is burst and
+  cooldown dependent). One tension flagged unresolved: the
+  donations footer rise of 1,300 exceeds nine donations at the
+  previously measured 50 to 60 points each, so no new
+  per-donation value is derived.
+- Live next-unit instructions carried in the profiles: Unit
+  Progression phase window ends about 14:06, radar 12-task
+  restore lands about 14:50 and would overshoot the 40 cap,
+  Drill Ground panel not re-read live since 2026-10-31, and
+  the next help unit needs a verified foreground session.
+  Full detail in knowledge-organization/1232-run.md.
+
+## 12:39 to about 12:42 - PR catch-all pass (no-op)
+
+- Catchall run pr-catchall-2026-11-01-1239, no-op: own-PR
+  check first, no adopted PR to re-check; zero open PRs at
+  pass start, PR 91 opened during the pass and scanned, docs
+  activities naming Owner lastwar-knowledge-organizer,
+  matching its diff, with zero comments and zero reviews.
+  PR 85 and PR 90 verified MERGED. No adoption, no fix, no
+  hand-off, no owner-gated escalation, no stale-owner flag.
+  Full detail in pr-catchall/1239-run.md.
