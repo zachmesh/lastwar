@@ -1,8 +1,8 @@
 ---
 title: Push and PR Policy
 created: 2026-11-01T05:31:00Z
-modified: 2026-11-01T06:04:00Z
-version: 2.2.0
+modified: 2026-11-01T06:28:00Z
+version: 2.2.1
 status: draft
 description: PR-only main policy - main advances only by pull request merge, records ride date branches, every pull request carries a named owning scheduled job, and every executor run checks its own pull requests first and ends by opening one
 grounded_in:
@@ -10,12 +10,12 @@ grounded_in:
   - source: owner decision 2026-10-31 - records PR merge cadence option A, the integrator merges every 15 minutes when new commits exist
   - source: owner instruction 2026-10-31 23:00 PDT - every pull request must name an owning scheduled job, with a catch-all owner job when no class matches
   - source: owner instruction 2026-10-31 23:02 PDT - every executor checks its own previous pull requests before doing anything else, and opens a pull request at the end of every run that produces output
-  - source: platform check 2026-10-31 - the GitHub account is on the Free plan and branch protection and rulesets return 403 on this private repository
+  - source: platform check 2026-10-31 - the GitHub account is on the Free plan and branch protection and rulesets returned 403 on this then-private repository
 ---
 
 # Push and PR policy
 
-This is version 2.2.0 in draft. It states the owner's direction
+This is version 2.2.1 in draft. It states the owner's direction
 of 2026-10-31: main becomes PR-only and direct pushes to main
 are disallowed. It takes effect only when it lands on main
 through its own pull request and the standing jobs' push steps
@@ -311,11 +311,15 @@ coverage of 100 percent of merged PRs.
 
 This policy is enforced by pipeline discipline, a push-route
 guard and the retro audit - not by the platform. Measured on
-2026-10-31: the GitHub account is on the Free plan, and for
-this private repository both branch protection and rulesets
-return 403; they require a paid plan. Pull requests work, and
-the VPS route carries a `gh` login with the scope to open and
-merge them.
+2026-10-31, while this repository was still private: the
+GitHub account is on the Free plan, and for this repository
+both branch protection and rulesets returned 403; on a
+private repository they require a paid plan. The repository
+was transferred to zachmesh/lastwar and made public later on
+2026-10-31, so that measurement no longer describes the
+repository's platform limits and is to be re-measured for the
+public repository. Pull requests work, and the VPS route
+carries a `gh` login with the scope to open and merge them.
 
 The push-route guard is a step in the standard route: the
 `~/lastwar-push` clone refuses any direct push of the main ref
@@ -324,12 +328,25 @@ the route every writer uses cannot push main even by mistake.
 Branch pushes are unaffected, and `gh pr merge` operates on
 GitHub's side, so merges are unaffected. A hard server-side
 lock - branch protection requiring pull requests on main -
-needs GitHub Pro; if the account is upgraded, enable it, keep
-this policy as the operating procedure on top of it, and
-record the change in the changelog below.
+needed GitHub Pro while the repository was private; for a
+public repository it is available on the Free plan. Enabling
+it is an owner decision; if it is enabled, keep this policy
+as the operating procedure on top of it, and record the
+change in the changelog below.
 
 ## Changelog
 
+- 2.2.1, 2026-11-01 - factual correction only, no rule
+  change, on the owner's instruction of 2026-10-31 at 23:25
+  PDT. The repository was transferred from its previous
+  home under the dtadpole account to zachmesh/lastwar and
+  made public on 2026-10-31. The
+  platform-facts statements that described this repository as
+  private are corrected to past tense, and the
+  branch-protection measurement taken while the repository
+  was private is marked stale pending re-measurement for the
+  public repository. The living-doc references to the old
+  repository name are updated in the same change.
 - 2.2.0, 2026-11-01 - executor PR discipline, on the owner's
   instruction of 2026-10-31 at 23:02 PDT that every executor
   check the questions and issues on its own previous pull
