@@ -1,8 +1,8 @@
 ---
 title: Last War Agent Entry Point
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.3.0
+modified: 2026-11-01T07:58:31Z
+version: 1.4.2
 description: Project instructions and adoption of reflection typed-folder conventions
 grounded_in:
   - source: owner request to adopt dtadpole/reflection shared conventions
@@ -10,7 +10,7 @@ grounded_in:
 
 # Last War
 
-This project records knowledge, tasks, activities and play records for the
+This project records knowledge, activity definitions, queued work and play records for the
 owner's Last War Survival account. It adopts **dtadpole/reflection's
 typed-folder format**. Read the [canonical conventions](https://github.com/dtadpole/reflection/blob/78195f50d43cc96b8cdd09b00b8118204b22715d/shared/_conventions_/core-conventions/INDEX.md),
 the [local conventions](_conventions_/INDEX.md) and the
@@ -38,10 +38,16 @@ lives here: schedules, strategy, tools, resource maps and records.
 Nothing load-bearing is kept only in chat or in the agent's memory.
 If a fact, rule, list or tool would matter next week, it is written
 into this repository in the same session that produced it - the
-duel schedule in `_knowledge_` and `tools/duel_schedule.json`, the
+duel schedule in `_knowledge_` and `_tools_/duel_schedule.json`, the
 strategy in `_knowledge_/strategy-playbook`, the resource map in
-`tools/resources.json` and its snapshots, and the working tools in
-`tools/`.
+`_tools_/resources.json` and its snapshots, and the working tools in
+`_tools_/`.
+
+Use `_tools_/` in every new tool command and Git stage pathspec. The root
+`tools` compatibility symlink supports old Python commands, but Git cannot
+stage a path through a symlink. Records writers must stage `_tools_/state/`
+explicitly alongside their other records paths, even when an older job
+prompt still names the previous path.
 
 ## Governance
 
@@ -55,13 +61,18 @@ an explicit unverified label (C4, C5).
 
 ## Task intake
 
-When the owner names a task, check `_activities_` first. Task type
-metadata has its own top level folder there, separate from `_records_`
-and never nested in it. If the type is missing, create and register its
-metadata folder, then execute it and log the record by date. If it
-already exists, check it, update it if appropriate, and skip execution
-for that turn - future cycles execute it. The full rule is the
+For an in-game activity request, check `_activities_` first. Activity
+definitions live there, concrete executions live in `_queue_`, and
+execution evidence lives under `_records_` by date. Preserve the
+existing new-type versus existing-type execution rule in the
 [task intake workflow](_conventions_/local-conventions/task-intake-workflow.md).
+
+One-off investigation and improvement work is tracked only in the
+[improvements backlog](_records_/retro/improvements.md), with a
+checkable completion condition. Pending proposals and owner-only
+choices go to the [owner decisions register](_records_/retro/owner-decisions.md).
+The former standalone task list is retired; do not recreate it or
+maintain a second backlog.
 
 ## Delivery
 
@@ -69,15 +80,12 @@ Reply to the owner in Chinese. Tracked content and the append-only logs are
 in English, following reflection's working agreements. Commit and push
 scoped Conventional Commits together with the
 [action log](_logs_/repo-actions/INDEX.md) and the
-[input log](_logs_/user-inputs/INDEX.md). Never record a credential value.
+[input log](_logs_/user-inputs/INDEX.md). Keep private account data out of repository content.
 In-game purchases, alliance diplomacy and other consequential actions need
 the owner's approval first.
 
-## Personal account privacy
+## Account privacy
 
-Do not record Apple account email addresses, Game Center nicknames, or the
-owner's in-game character name in repository content, including screenshots
-transcribed into records and logs. Use `[redacted-apple-email]`,
-`[redacted-game-center-nickname]`, and `[redacted-character-name]` where
-an identifier must be acknowledged. GitHub usernames and repository links
-are outside this redaction scope.
+Refer to the account as `owner account`. Follow the
+[account privacy convention](_conventions_/local-conventions/account-privacy.md)
+for public repository content and executor output.

@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue
 created: 2026-10-28T10:22:00Z
-modified: 2026-10-28T10:22:00Z
-version: 0.1.0
+modified: 2026-11-01T07:58:31Z
+version: 0.1.1
 description: The pending, claimed and done task units of the play routine
 status: live
 grounded_in:
@@ -22,6 +22,6 @@ State lives in the subfolder a unit file sits in.
 - `done` - finished units carrying their structured result sections.
 
 `unit-template.md` is the shape every unit file follows. Units are
-managed with `tools/queue.py`. The queue went live on 2026-10-28 -
+managed with `_tools_/queue.py`. The queue went live on 2026-10-28 -
 the ticker `lastwar-queue-ticker` produces and executes units, and
 the segment schedules are retired.

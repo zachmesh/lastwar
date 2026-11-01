@@ -1,6 +1,6 @@
 ---
 title: Evaluation Metrics
-version: 1.1.0
+version: 1.1.1
 status: active
 created: 2026-10-31
 description: How the play system measures itself - execution efficiency per task type, perception completeness and discovery generalisation, retro effectiveness, and the measured impact of the tool developer and the knowledge organiser
@@ -230,7 +230,7 @@ deliveries, validation and timing, under the
 the tooling entries of the improvements backlog carry the
 filed dates and target metrics; the target metric series
 lives in the dated retro data files. The git history of
-`tools/` is cross-check only - a landing with no execution
+`_tools_/` is cross-check only - a landing with no execution
 record is treated as not proven to have happened.
 
 - **Tools delivered** - tooling entries reaching implemented
@@ -304,7 +304,7 @@ leaves. Sources - the queue run records under `_records_/<date>/`,
 the ops execution records of the loop activities under the
 [ops execution records](ops-execution-records.md) standard,
 the retro files under `_records_/retro/`, the improvements
-backlog, and the pool itself through `tools/queue.py stats`
+backlog, and the pool itself through `_tools_/queue.py stats`
 and the unit frontmatter. The git log is cross-check only.
 
 - **Standing job run rate** - for each standing job, runs that
@@ -381,7 +381,7 @@ reason written into that retro file):
 
 ## Tool route
 
-The computation extends `tools/retro_report.py`; it does not
+The computation extends `_tools_/retro_report.py`; it does not
 become a second tool. Reasons - the families that read the done
 pool (A, the recurrence half of D, the series E reads) must
 share one scan and one unit-date attribution with the retro
@@ -402,7 +402,7 @@ coverage report degrades family B, never the run.
 Filed into the tool-developer backlog, in the backlog's own
 terms:
 
-> IMP tooling - extend tools/retro_report.py with the system
+> IMP tooling - extend _tools_/retro_report.py with the system
 > evaluation metrics of
 > _conventions_/local-conventions/evaluation-metrics.md. Add a
 > top-level system_metrics object to
@@ -452,4 +452,4 @@ than merging the two jobs into one unmeasurable lump.
   discovery, retro effectiveness, tool developer impact,
   knowledge organiser impact, loop health), the monitoring
   cadence and first threshold set, and the tool route extending
-  tools/retro_report.py, filed into the tool-developer backlog.
+  _tools_/retro_report.py, filed into the tool-developer backlog.

@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-26
 created: 2026-10-26T09:12:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: The 0149 four hour regulars run - truck settlements, gift and mail claims, secret task claim, and a full set of checked regulars on duel Day 1
 status: unverified
 grounded_in:
@@ -263,7 +263,7 @@ record. Inside it, one subfolder per activity type, named as in
 - TRAIN FIRST, EXPIRING WINDOW - the base carried a Boarding
   closes in banner at 00:02:31. The banner tap was dispatched,
   the session dropped and was reopened at once (cc-123), and the
-  STATION PLATFORM stood open: conductor Abyss Apex, Train
+  STATION PLATFORM stood open: conductor another commander, Train
   Rating 71,050, departure 00:06:41. Carriage 2 was boarded
   under the standing rule for the first time - the conductor
   dialog quantity was set from 1 to 3 against a stock of 143
@@ -387,8 +387,8 @@ record. Inside it, one subfolder per activity type, named as in
   already passed; no help bubble on the base screen), mail
   (Claim All in Battle Report, Alliance, Event, Season,
   System and Regular, each No rewards available; the Event
-  mail "[AP3x] Abyss Apex's train has departed!" was read in
-  full — [redacted-character-name] is on its passenger list, so the
+  mail "another commander's train has departed!" was read in
+  full — owner account is on its passenger list, so the
   0540 boarding rode this train; the mail carries no claim).
 - Checked only — train (no "Boarding closes in" banner at the
   opening or closing sweep; no contract spent), star ceremony
@@ -463,7 +463,7 @@ record. Inside it, one subfolder per activity type, named as in
   the count ran out and the button greyed at 00:13:28;
   today 7,000 to 7,100).
 - Donation reward resolved - the trophy opens the Donation
-  ranking ([redacted-character-name] rank 11 at 7,100) and its Rewards
+  ranking (owner account rank 11 at 7,100) and its Rewards
   panel shows a Donation Ranking Reward settling at the
   19:00 reset (tier 4 to 100 at this rank) with no Claim
   button anywhere; the claim state unverified since the
@@ -644,9 +644,9 @@ record. Inside it, one subfolder per activity type, named as in
   second Claim All answered No rewards available; Alliance,
   Battle Report and System each answered No rewards
   available, Season held Ice Breaking reports only, Event
-  answered No rewards available and its Nd4Spd4 train
+  answered No rewards available and its another commander train
   arrival mail was opened and verified as a notice only —
-  [redacted-character-name] not among the twelve passengers, no
+  owner account not among the twelve passengers, no
   attachment; Purchases receipts only), help (Help All
   pressed, grateful toast; visible rows were own four
   requests all 30 of 30; points 1,060 of 1,000, cap

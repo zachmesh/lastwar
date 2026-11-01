@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations Check 2026-10-25 Task Intake
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One checked only record for the 2026-10-25 task intake round
 status: unverified
 grounded_in:
@@ -21,8 +21,8 @@ A single check, recorded as its own file. Status — Checked only.
   a check and metadata update only - execution skipped for this turn
   and left to future cycles. The owner was told this plainly.
 - Path verified - Alliance at the bottom right, then the Alliance
-  Techs tile. The alliance header read [AP3x] The Apex, power
-  12,291,000,483, members 91 of 100, leader Texan Apex.
+  Techs tile. The alliance header read the alliance, power
+  12,291,000,483, members 91 of 100, leader the alliance leader.
 - War tab state - Troop Movement 5 of 10, Rallied HP 5 of 10, Rallied
   Attack 7 of 10 with the recommended marker, Rallied Defense 6 of
   10, next node 1 of 10.

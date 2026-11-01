@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T05:24:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.5.0
+version: 1.5.1
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -69,7 +69,7 @@ counts helps, and any caps. Executions are recorded in
 - The red dot on the base Alliance button signals waiting helps.
   In the afternoon sweep the Help page header read Today's points
   gained from Alliance Help 400 of 1,000. Requests included allies
-  building (Abyss Apex on a Lv.25 Farmland, Kkkayyyyy) and this
+  building (another commander on a Lv.25 Farmland, Kkkayyyyy) and this
   account's own two requests - Lv.30 Drill Ground and Lv.30
   Aircraft Center - both already at 30 of 30, so a player cannot
   help their own requests. Help All cleared the allies' requests

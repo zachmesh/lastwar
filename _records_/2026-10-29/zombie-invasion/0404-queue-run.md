@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion Execution 2026-10-29 0404 Queue Run
 created: 2026-10-29T11:12:00Z
-modified: 2026-10-29T11:12:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: Zombie-invasion chain unit 037 - partial, four Lv.10 kills claimed in-unit for 1,072,000 coins, squads_parallel 2 verified by a 2 of 4 queue reading, chain continues, successor starts now
 status: unverified
 grounded_in:
@@ -52,7 +52,7 @@ were resolved and claimed inside it.
   1.3K, hero EXP 263.0K, iron 268.0K, food 268.0K;
   Potential Reward crate x1, box x4, ticket x1;
   Suggested Power 670,000; stamina cost 10; despawn
-  11:32:00; beside ally base [aP3x]JohnD6921. The
+  11:32:00; beside ally base an allianceJohnD6921. The
   crossed-swords button at the grounded point 498,720
   opened the deploy panel, and March at 499,750
   dispatched Squad 1 to X:998 Y:945. March Queues

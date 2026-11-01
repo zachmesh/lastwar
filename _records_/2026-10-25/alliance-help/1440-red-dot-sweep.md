@@ -1,9 +1,9 @@
 ---
 title: Alliance Help Execution 2026-10-25 Red Dot Sweep
 created: 2026-10-25T22:00:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: One execution record for pressing Help All during the red dot sweep, 2026-10-25
 status: unverified
 grounded_in:
@@ -24,9 +24,9 @@ Metadata for this type lives in
   help icon where you can help your alliance members.
 - Opened Alliance, then the Alliance Help page. The header read
   Today's points gained from Alliance Help 400 of 1,000.
-- Waiting requests - allies building, Abyss Apex on a Lv.25
+- Waiting requests - allies building, another commander on a Lv.25
   Farmland and Kkkayyyyy among them, plus this account's own two
-  requests, [redacted-character-name] on the Lv.30 Drill Ground and the Lv.30
+  requests, owner account on the Lv.30 Drill Ground and the Lv.30
   Aircraft Center, both already full at 30 of 30 - a player
   cannot help their own requests.
 - Help All was pressed. The page answered Allies are very

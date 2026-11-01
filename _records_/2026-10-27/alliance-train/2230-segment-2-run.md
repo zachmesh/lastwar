@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-27 2230 Segment 2 Run
 created: 2026-10-28T05:53:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: One execution record for the 2026-10-27 2230 segment 2 run, a train in preparation with the account aboard carriage 2 and the 3-contract gift not completed
 status: unverified
 grounded_in:
@@ -25,7 +25,7 @@ Metadata for this type lives in
   segment 2 of the split routine (alliance and VIP). No
   Boarding closes banner stood on the base screen, but the
   station view showed a golden train in preparation -
-  conductor dontard of AP3x, departure countdown 00:23:46 on
+  conductor dontard of the alliance, departure countdown 00:23:46 on
   arrival, Train Rating 74,750 on the platform.
 - Tapping the train opened the platform through its boarding
   cinematic. The THANK THE CONDUCTOR dialog appeared once
@@ -39,7 +39,7 @@ Metadata for this type lives in
   and carriage 2 (the standing-rule carriage) already held
   this account: its plus was replaced by the own avatar, and
   tapping it opened this account's own profile (Lv.30
-  [redacted-character-name]). Whether the seat was taken by this run's
+  owner account). Whether the seat was taken by this run's
   entry tap or beforehand is unobserved; the seat itself is
   confirmed.
 - The 3 Trade Contract gift could not be completed - the

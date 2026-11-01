@@ -1,8 +1,8 @@
 ---
 title: Help queue run 1901
 created: 2026-10-28T18:56:00Z
-modified: 2026-10-28T18:56:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit help-2026-10-28-1830 execution record
 status: done
 ---
@@ -18,7 +18,7 @@ about 18:56 local (file named for the pass minute; completed
 - Alliance panel Help button answered at the grounded point
   690,491, opening the Help page.
 - Help page at open: Today's points gained from Alliance Help
-  920 of 1,000. Waiting ally requests: Comandante DT (Counter
+  920 of 1,000. Waiting ally requests: another commander (Counter
   Defense I research) and SKRyZeRZ (Counter Defense II
   research). Own requests already reduced: Lv.28 Drill Ground
   and Lv.30 Aircraft Center.
@@ -30,5 +30,5 @@ about 18:56 local (file named for the pass minute; completed
 
 ## Result
 
-- Helps given: 2 (Comandante DT, SKRyZeRZ)
+- Helps given: 2 (another commander, SKRyZeRZ)
 - No diamonds or money spent.

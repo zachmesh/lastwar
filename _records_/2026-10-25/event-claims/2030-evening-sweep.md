@@ -1,9 +1,9 @@
 ---
 title: Event Claims Execution 2026-10-25 Evening Events and Season Sweep
 created: 2026-10-26T04:22:00Z
-modified: 2026-10-26T04:22:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-25 evening page-through of the Events hub, the Season hub and the Halloween check-in
 status: unverified
 grounded_in:
@@ -47,7 +47,7 @@ Metadata for this type lives in
   to claim.
 - Season hub (Season II Polar World) - twelve cards, most with
   about 6 days 22 hours left (the season week). Season main page
-  - Assign Rewards is the alliance leader control (Texan Apex),
+  - Assign Rewards is the alliance leader control (the alliance leader),
   untouched; Individual Goals rows all Claimed. Profession Hall -
   Engineer level 61, EXP 37,794 of 1,500,000, cap 70; the skills
   book carried a red dot and lists learned active skills with Use

@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts Execution 2026-10-25 Evening Claims
 created: 2026-10-26T04:14:00Z
-modified: 2026-10-26T04:14:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-25 evening alliance gift claims on both tabs
 status: unverified
 grounded_in:
@@ -21,7 +21,7 @@ Metadata for this type lives in
 
 - Session window about 20:48 to 20:52 America/Los_Angeles, actor
   Muse, during the evening red dot sweep. The Alliance panel
-  showed [AP3x] The Apex, leader Texan Apex, alliance power
+  showed the alliance, leader the alliance leader, alliance power
   12,394,685,241, members 91 of 100; the Alliance Gifts entry
   carried a red dot.
 - Gift Level 28, progress 161,149,070 of 206,300,000 on entry.

@@ -1,8 +1,8 @@
 ---
 title: Alliance Train on 2026-10-28
 created: 2026-10-28T13:51:00Z
-modified: 2026-10-28T13:51:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Index of Alliance Train executions on 2026-10-28
 grounded_in:
   - source: human-authored
@@ -27,7 +27,7 @@ time and never edited once committed (C1).
 - [1122-queue-run.md](1122-queue-run.md) — the queue run
   that started at 11:04 local, unit
   train-2026-10-28-1030; boarded carriage 2 of conductor
-  Nd4Spd4's train with 3 Trade Contracts, occupancy
+  another commander's train with 3 Trade Contracts, occupancy
   12 of 7 to 13 of 7.
 - [1547-queue-run.md](1547-queue-run.md) — the queue run
   that started at 15:34 local, unit

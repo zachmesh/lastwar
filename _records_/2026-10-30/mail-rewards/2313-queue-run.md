@@ -1,8 +1,8 @@
 ---
 title: Mail rewards queue run 2313
 created: 2026-10-31T06:13:00Z
-modified: 2026-10-31T06:13:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Mail unit mail-2026-10-30-2230 by ticker-2304
 status: done
 grounded_in:
@@ -18,7 +18,7 @@ window mode 642x951, no different-device dialog, no control lock.
   938,770; an earlier tap at 875,740 hit the round icon above
   Mail and opened nothing lasting). Category list showed red
   dots on Event and In-app Purchases.
-- Event (6 items, all 4h ago): [AP3x] specialist Donut's
+- Event (6 items, all 4h ago): an alliance specialist Donut's
   train mail, Duel Progress / Alliance Duel Individual Reward,
   Daily Participation Rewards, Arms Race Ranking Reward,
   "Weekly Pass" Unclaimed Rewards, "Glittering Market"
@@ -29,7 +29,7 @@ window mode 642x951, no different-device dialog, no control lock.
 - Alliance: Alliance Exercise, Daily Donation Ranking, Zombie
   Siege Report (individual) - Claim All answered "No rewards
   available".
-- Season: Ice Breaking Reports from [AP3x]Abyss Apex only -
+- Season: Ice Breaking Reports from another commander only -
   Claim All pressed twice, reports remain, no rewards.
 - System: President Mail / Maintenance / Planned Update
   notices - Claim All answered "No rewards available".

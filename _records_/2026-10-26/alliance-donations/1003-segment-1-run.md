@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations Execution 2026-10-26 1003 Segment 1 Run
 created: 2026-10-26T17:47:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: One execution record for the 2026-10-26 1003 segment 1 run, two coin donations to Rallied Defense until the button greyed, and the daily reward mechanism resolved as a ranking settlement
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ Performed. Metadata for this type lives in
   0547 run recorded. No further donation was possible this
   run; the diamond button was never touched.
 - DAILY REWARD RESOLVED - the trophy beside Tech Donation
-  Today opens Strength Ranking, Donation tab, where [redacted-character-name] stands rank 11 today at 7,100 points. Its Rewards
+  Today opens Strength Ranking, Donation tab, where owner account stands rank 11 today at 7,100 points. Its Rewards
   button opens the Donation Ranking Reward panel - daily
   tiers by rank (rank 1 pays a 50-count badge item 10 and
   red gem 30; the 4 to 100 tier pays the badge item 4 and

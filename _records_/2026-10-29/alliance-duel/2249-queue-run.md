@@ -1,8 +1,8 @@
 ---
 title: Star Ceremony queue run 2252
 created: 2026-10-30T05:49:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-2234 star-ceremony unit, done as a check - no ceremony trophy icon
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 22:48-22:49 PDT, executor
 ticker-2234, Mac mini session cc-403, game account
-[redacted-character-name].
+owner account.
 
 Performed: checked only.
 

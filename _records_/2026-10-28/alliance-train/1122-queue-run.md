@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-28 1122 Queue Run
 created: 2026-10-28T18:28:00Z
-modified: 2026-10-28T18:28:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 1122 queue run, unit train-2026-10-28-1030, boarded carriage 2 with 3 Trade Contracts
 status: unverified
 grounded_in:
@@ -17,11 +17,11 @@ A single execution, recorded as its own file. Status — performed.
 Metadata for this type lives in
 [`_activities_/alliance-train/`](../../../_activities_/alliance-train/INDEX.md).
 
-## 2026-10-28 — Boarded carriage 2, conductor Nd4Spd4
+## 2026-10-28 — Boarded carriage 2, conductor another commander
 
 - Queue unit train-2026-10-28-1030, executor ticker-1104.
   A train was in preparation at the station, conductor
-  Nd4Spd4, departure countdown 02:19:11 at the platform
+  another commander, departure countdown 02:19:11 at the platform
   open, Train Rating 51,200.
 - Carriage 2 at the open - occupancy 12 of 7, reward set
   as displayed (2.5K and 2.0K blue triangles, a 100 red
@@ -32,7 +32,7 @@ Metadata for this type lives in
   1 to 3 with the plus button and read back as 3, stock
   146 Trade Contracts, then Gift Contract tapped under
   the standing 3-contract ticket rule. The game answered
-  Your sincere thanks have been sent to Nd4Spd4.
+  Your sincere thanks have been sent to another commander.
 - Boarded state verified - carriage 2 occupancy rose to
   13 of 7 and the own avatar appears in the carriage.
   Nothing else bought, no Assemble touched.

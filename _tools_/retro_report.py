@@ -47,7 +47,7 @@ execution with status unknown and data source records-index, and
 no figure is invented for it; not found, its data source is
 missing. A file that cannot be parsed at all is listed under
 parse_errors, never silently skipped. A regular from the
-tools/regulars.json roster with no executions in the window is
+_tools_/regulars.json roster with no executions in the window is
 listed under no_data_regulars, stated, not omitted.
 
 A unit belongs to the local date of its result.finished_at in
@@ -292,8 +292,8 @@ def apply_records_fallback(root, units):
 
 
 def roster(root):
-    """The regular ids from tools/regulars.json, or []."""
-    path = os.path.join(root, "tools", "regulars.json")
+    """The regular ids from _tools_/regulars.json, or []."""
+    path = os.path.join(root, "_tools_", "regulars.json")
     try:
         with open(path, encoding="utf-8") as fh:
             data = json.load(fh)
@@ -494,8 +494,8 @@ def render_markdown(data):
         "---",
         f"title: Retro Data {end}",
         "description: Machine generated metrics appendix for the "
-        "daily retro, produced by tools/retro_report.py",
-        "generated_by: tools/retro_report.py",
+        "daily retro, produced by _tools_/retro_report.py",
+        "generated_by: _tools_/retro_report.py",
         f"window_end: {end}",
         "---",
         "",

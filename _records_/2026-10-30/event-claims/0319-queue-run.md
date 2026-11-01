@@ -22,7 +22,7 @@ dropped mid-unit; cc-438 resumed with no game state lost.
 - Winter Battlefield: starting soon, 15:43:38 left at the
   read. No claim button.
 - Desert Storm Battlefield: waiting for battle to start,
-  00:38:33 left at the read; [AP3x] The Apex vs [SUlb].
+  00:38:33 left at the read; the alliance vs the opposing alliance.
   No claim button.
 - Zombie Invasion: event live, no Claim button on the tab
   page; fighting and LOOT collection belong to the

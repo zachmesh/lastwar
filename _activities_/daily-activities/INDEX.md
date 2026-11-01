@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-10-26T13:52:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.15.0
+version: 1.15.1
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -96,7 +96,7 @@ Owner direction, late evening of 2026-10-25 - the four-hourly run
 performs all the regulars, not only Arms Race, and a list of the
 regulars is kept so it is always visible what is still expected.
 
-- The canonical list is `tools/regulars.json` - one entry per
+- The canonical list is `_tools_/regulars.json` - one entry per
   regular, with its cadence (every run for everything in the
   routine, daily with the 19:00 reset for VIP, Thursdays for
   Ghost Ops) and its segment (1 to 4). Every-run regulars become
@@ -116,10 +116,10 @@ regulars is kept so it is always visible what is still expected.
   device-access error that kept cutting the single long run
   short mid-session - short segment runs finish inside one
   session, and one segment failing loses only that segment.
-- The tracker is `tools/regulars.py` - `list` shows every regular
+- The tracker is `_tools_/regulars.py` - `list` shows every regular
   with its status for the day, `todo` shows only what is still due,
   `done <id>` and `skip <id>` record an outcome with a note. State
-  is kept per local date in `tools/state/`.
+  is kept per local date in `_tools_/state/`.
 - Every run starts from `todo` and ends with `list`, so an expected
   regular is either done, skipped with a reason, or still visibly
   due - never silently dropped. The four-hourly cron instruction

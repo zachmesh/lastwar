@@ -1,8 +1,8 @@
 ---
 title: Mail Rewards Queue Run
 created: 2026-10-29T23:21:00Z
-modified: 2026-10-29T23:21:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit mail-2026-10-29-1430 execution
 status: done
 ---
@@ -23,13 +23,13 @@ Unit: mail-2026-10-29-1430, executor ticker-1604.
   train arrival mails, a Zombie Invasion - Intel Reward mail and an Attack
   Canceled / Stamina Returned mail as read entries.
 - Alliance: pressed Claim All - answered "No rewards available." Noted, no
-  action taken: a Leadership Transfer Notice (Abyss Apex became the new
+  action taken: a Leadership Transfer Notice (another commander became the new
   Alliance leader, as displayed) and New Alliance Assembly Point mails.
   No assembly or leader action was taken - assembling is the owner's alone.
 - Regular: pressed Claim All - no change, no popup; the list is zombie
   Victory battle reports only (2h and 6h ago).
 - Battle Report: pressed Claim All - answered "No rewards available." One
-  report noted, no decision needed: the base was scouted by [WLDT] about
+  report noted, no decision needed: the base was scouted by an alliance about
   1 day ago, as in the 08:38 and 12:42 runs.
 - Season: pressed Claim All - answered "No rewards available." Ice
   Breaking reports only.

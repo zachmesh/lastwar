@@ -1,8 +1,8 @@
 ---
 title: Event claims queue sweep 0743
 created: 2026-10-30T14:43:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-0734 events unit, done - full Events hub sweep, nothing claimable
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 07:39-07:43 PDT, executor
 ticker-0734, Mac mini session cc-461, game account
-[redacted-character-name].
+owner account.
 
 Performed: checked only, nothing claimed, nothing
 spent, no paid button tapped.

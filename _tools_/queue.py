@@ -35,7 +35,7 @@ Usage:
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: reap, then enqueue one
              # unit per regular the tracker marks due (idempotent);
-             # without --due-json it calls tools/regulars.py todo
+             # without --due-json it calls _tools_/regulars.py todo
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -59,7 +59,7 @@ DEFAULT_LEASE_MINUTES = 20
 DEFAULT_EST_MINUTES = 5
 DEFAULT_MAX_ATTEMPTS = 3
 # Required result.stats keys, per section 14 of the task unit queue
-# design (mirrored in tools/retro_report.py REQUIRED_KEYS):
+# design (mirrored in _tools_/retro_report.py REQUIRED_KEYS):
 # target, achieved, resources_gained, costs and verified are always
 # required; blocker_category is required whenever the unit fell short
 # of its target or closed partial, failed or skipped-needs-owner.
@@ -215,17 +215,53 @@ def list_units(root, state):
     return out
 
 
-def pick_key(fields):
-    """Earliest expiry first, then priority, then age."""
-    expires = parse_iso(fields.get("expires_at", "")) or \
-        datetime.max.replace(tzinfo=timezone.utc)
+# Aging against starvation (IMP-20261031-09, loop review
+# 2026-10-31 open link 4): a no-expiry low-priority chained unit
+# used to sort behind every expiring unit forever, because expiry
+# is the primary pick key and age was only a tiebreak - the
+# 2026-10-30 zombie chain successor was crowded out for five
+# beats that way. Two bounded boosts, both computed from
+# created_at at pick time and never written back to the unit:
+# - effective priority improves by 1 per AGING_STEP_HOURS waited,
+#   floored at 1, so a waiting unit climbs the tiebreak order;
+# - a unit with no expiry gets a soft deadline of
+#   NO_EXPIRY_SOFT_DEADLINE_HOURS after creation, so its
+#   effective expiry stops being "never" and it eventually sorts
+#   ahead of expiring units whose deadlines are still further out,
+#   while still yielding to genuinely imminent expiries. A unit
+#   with a real expiry keeps that expiry - aging never moves a
+#   hard deadline.
+AGING_STEP_HOURS = 2
+NO_EXPIRY_SOFT_DEADLINE_HOURS = 2
+
+
+def pick_key(fields, now=None):
+    """Pick order with aging: effective expiry, then effective
+    priority, then age. Units with a real expiry sort as before
+    when fresh; no-expiry units gain the soft deadline above."""
+    if now is None:
+        now = now_utc()
+    expires = parse_iso(fields.get("expires_at", ""))
     try:
         priority = int(fields.get("priority", 3))
     except (TypeError, ValueError):
         priority = 3
-    created = parse_iso(fields.get("created_at", "")) or \
-        datetime.min.replace(tzinfo=timezone.utc)
-    return (expires, priority, created)
+    created = parse_iso(fields.get("created_at", ""))
+    if expires is not None:
+        effective_expires = expires
+    elif created is not None:
+        effective_expires = created + timedelta(
+            hours=NO_EXPIRY_SOFT_DEADLINE_HOURS)
+    else:
+        effective_expires = datetime.max.replace(tzinfo=timezone.utc)
+    if created is not None and now > created:
+        age_hours = (now - created).total_seconds() / 3600.0
+        steps = int(age_hours // AGING_STEP_HOURS)
+        effective_priority = max(1, priority - steps)
+    else:
+        effective_priority = priority
+    created_sort = created or datetime.min.replace(tzinfo=timezone.utc)
+    return (effective_expires, effective_priority, created_sort)
 
 
 # ---------------------------------------------------------------------
@@ -293,7 +329,7 @@ def typical_minutes(root, regular):
 
 def write_new_unit(root, fields, regular):
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
-    body = (f"# {regular}\n\nProduced by tools/queue.py. The "
+    body = (f"# {regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
@@ -576,7 +612,7 @@ def cmd_enqueue(args):
         "attempts": 0, "max_attempts": args.max_attempts,
         "claimed_by": "", "claimed_at": "", "lease_until": "",
     }
-    body = (f"# {args.regular}\n\nProduced by tools/queue.py. The "
+    body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
     os.makedirs(state_dir(args.root, "inbox"), exist_ok=True)
@@ -610,7 +646,8 @@ def cmd_next(args):
     stamp = now_utc()
     candidates = sorted(
         (f for f in list_units(args.root, "inbox")
-         if _actionable(f, stamp)), key=pick_key)
+         if _actionable(f, stamp)),
+        key=lambda f: pick_key(f, stamp))
     for f in candidates:
         try:
             est = int(f.get("est_minutes", DEFAULT_EST_MINUTES))
@@ -668,7 +705,7 @@ def _stat_number(value):
 def missing_stats_keys(status, stats):
     """Required result.stats keys absent from a closing.
 
-    Mirrors the retro aggregation in tools/retro_report.py: the
+    Mirrors the retro aggregation in _tools_/retro_report.py: the
     five always-required keys, plus blocker_category when the
     unit fell short of its numeric target or closed with a
     short status. Presence counts - a key supplied with an

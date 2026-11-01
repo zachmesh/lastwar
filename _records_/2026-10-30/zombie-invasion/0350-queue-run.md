@@ -1,8 +1,8 @@
 ---
 title: Zombie invasion queue run
 created: 2026-10-30T10:50:00Z
-modified: 2026-10-30T10:50:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit zombie-invasion-zombie-2026-10-28-055 execution
 status: done
 ---
@@ -39,7 +39,7 @@ lost).
   Queues 1/4, Go X:985 Y:951, stamina 69 to 59.
 - Parallel attempt, wrong card, aborted untouched -
   an immediate batched second dispatch landed on a
-  Lv.95 Zombie Boss card (Found by [AP3x]MesutCLK
+  Lv.95 Zombie Boss card (Found by an allianceMesutCLK
   Apex, Suggested Power 37,500,000, stamina cost
   20, despawn 00:47:46) instead of an Invading
   Zombies target, the same tab-shift class as units

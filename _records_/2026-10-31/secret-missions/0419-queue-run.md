@@ -1,8 +1,8 @@
 ---
 title: Secret missions queue run 0419
 created: 2026-10-31T04:19:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-0404 secrets unit, partial - finished tasks claimed, 1 ally assisted, no pending deploy
 status: partial
 grounded_in:
@@ -14,7 +14,7 @@ grounded_in:
 Session window: about 04:19-04:25 PDT, executor
 ticker-0404, Mac mini sessions cc-606 (dropped
 once, recovered) and cc-612, game account
-[redacted-character-name], window mode 642x951. Duel day 6,
+owner account, window mode 642x951. Duel day 6,
 Enemy Buster.
 
 Performed in part: finished tasks claimed, one
@@ -37,9 +37,9 @@ regular.
 - Claim: the first Claim tap at 780,435 landed
   on a reward icon and did nothing; the grounded
   Claim button at 785,475 opened the
-  CONGRATULATIONS report - helpers [AP3x]LAMP 1
-  (10-31 01:54), [AP3x]Raze Cromwell (02:18),
-  [AP3x]RoadHouse54 (04:18, twice) helped claim
+  CONGRATULATIONS report - helpers an allianceLAMP 1
+  (10-31 01:54), an allianceRaze Cromwell (02:18),
+  an allianceRoadHouse54 (04:18, twice) helped claim
   task rewards. Like All tapped (likes filled
   blue); the popup was dismissed by tapping the
   dimmed area at 500,250.
@@ -60,12 +60,12 @@ regular.
 - Ally assist: Ally Tasks tab opened at its
   grounded centre 500,388 (taps at 561,379 and
   607,379 did not switch tabs). First row
-  [AP3x]Amarky257, SSR, Assist at grounded
+  another commander, SSR, Assist at grounded
   787,485: ASSIST SUCCESSFUL - Mystery Supply
   Box x3, Refined Iron Module x29, Hero EXP
   247.7K. Counter re-read after dismissing the
   popup at 500,200: Assist Allies 1/5. UR ally
-  rows (jenixs, sebFin13) show countdowns only,
+  rows (jenixs, another commander) show countdowns only,
   no Assist button, as the metadata open
   question notes.
 - Mega Deploy: tapped at 623,952 and 623,966,

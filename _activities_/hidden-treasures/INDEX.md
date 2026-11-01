@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-10-26T04:00:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -60,7 +60,7 @@ itself and its dispatches belong to
   Exchange. One completed own history was visible (gained M5, lost
   M6, partner Mistress Sam). One open ally offer was visible
   (receive M4 with 3 owned, send M3 with 3 owned, from
-  BLACKDRAGONKALAMEET). Trading fragments away is an exchange of
+  another commander). Trading fragments away is an exchange of
   account assets - it was inspected only on 2026-10-25, not executed.
 
 ## What is known from 2026-10-25

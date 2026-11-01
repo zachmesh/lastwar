@@ -1,8 +1,8 @@
 ---
 title: Truck dispatch and plunder queue run
 created: 2026-10-29T20:14:00Z
-modified: 2026-10-29T20:14:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit trucks-2026-10-29-1057 execution
 status: done
 ---
@@ -48,7 +48,7 @@ above only, regular dispatch, no Mega Mode.
 
 - Others' Trucks tab: Your Plunder Count Today 1 of 4 at
   open.
-- Inspected SSR truck #2102 [TOOP]hossam hak, Lv.26, guard
+- Inspected SSR truck #2102 another commander, Lv.26, guard
   1.8M (below the 24.96M Squad 1 bar), arriving in about
   02:14:16. Its cargo held one badge 500 x3 stack in the
   third slot, plus iron 1.5M, food 1.5M, coin 1.0M, a chest

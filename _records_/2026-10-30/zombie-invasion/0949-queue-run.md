@@ -1,8 +1,8 @@
 ---
 title: Zombie invasion queue run
 created: 2026-10-30T16:49:00Z
-modified: 2026-10-30T16:49:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit zombie-invasion-zombie-2026-10-28-063 execution
 status: partial
 ---
@@ -65,7 +65,7 @@ change is made for a partial unit.
   opened yet another ally base profile. A map
   drag to move bases clear instead opened a
   Lv.75 Zombie Boss card (Suggested Power
-  31,500,000, Found by [TS]Texas Korean BBQ);
+  31,500,000, Found by another commander);
   the boss was NOT attacked, no rally button
   was tapped, and the card was closed by
   tapping empty ground. Lesson for the

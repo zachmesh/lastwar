@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T04:40:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.1.0
+version: 1.1.1
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -35,7 +35,7 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
 
 ## Cadence
 
-- Checked every round - the mail regular on `tools/regulars.json`.
+- Checked every round - the mail regular on `_tools_/regulars.json`.
 
 ## Scope and availability
 

@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T06:36:48Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.15.0
+version: 1.15.1
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -173,7 +173,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   decision - never done autonomously.
 - On 2026-10-25 evening the owner widened the standing four-hourly
   check from Arms Race only to all the regulars (see
-  `_activities_/daily-activities` and `tools/regulars.json`); Arms
+  `_activities_/daily-activities` and `_tools_/regulars.json`); Arms
   Race stays on that list as one regular among the rest.
 
 ## Open questions

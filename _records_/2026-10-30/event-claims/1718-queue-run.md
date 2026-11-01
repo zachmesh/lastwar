@@ -1,8 +1,8 @@
 ---
 title: Event claims queue sweep 1727
 created: 2026-10-30T17:18:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-1704 events unit, done - full Events hub sweep, nothing claimable
 status: unverified
 grounded_in:
@@ -14,7 +14,7 @@ grounded_in:
 Session window: about 17:13-17:18 PDT, executor
 ticker-1704, Mac mini sessions cc-547 and cc-549
 (cc-547 dropped its observation channel before
-this unit), game account [redacted-character-name].
+this unit), game account owner account.
 
 Performed: checked only, nothing claimed, nothing
 spent, no stage swap.

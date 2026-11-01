@@ -1,9 +1,9 @@
 ---
 title: Strategy Playbook
 created: 2026-10-26T04:45:00Z
-modified: 2026-10-26T05:20:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.2.0
+version: 1.2.2
 description: How this account is played day to day - the objective, duel week timing gates, radar discipline, resource floors and the tools that enforce them
 status: unverified
 grounded_in:
@@ -29,15 +29,15 @@ events flow back as resources and power).
 
 Baseline, read in game on 2026-10-25 - Total Power 149,689,618,
 warzone Individual Power rank 113. Alliance benchmarks in the same
-ranking: ItStartsWithaDream 247,971,851 (rank 2), Abyss Apex
-227,095,526 (rank 3), StarFall 205,162,283 (rank 4); warzone top
-[B3WB] RonMexico 277,043,357. The first growth gap to close is
+ranking: ItStartsWithaDream 247,971,851 (rank 2), another commander
+227,095,526 (rank 3), another commander 205,162,283 (rank 4); warzone top
+another commander 277,043,357. The first growth gap to close is
 therefore about 55M to the alliance's 200M band. Roster state -
 the top heroes are Lv.150 five-star UR across the squads, with a
 second band at Lv.140 to 145 and reserves at Lv.120; Squad 1
 march power 24.96M as read on march panels. Progress against this
 baseline is re-read from the ranking and recorded with resource
-snapshots (`tools/resource_map.py`), so growth, not activity, is
+snapshots (`_tools_/resource_map.py`), so growth, not activity, is
 what gets measured.
 
 Owner direction, evening of 2026-10-25 - keep the Alliance Duel
@@ -124,9 +124,9 @@ that lands them on theme, without burning anything to force it.
 ## Resource map and floors
 
 - Every run that reads the HUD records a snapshot with
-  `tools/resource_map.py snap`, and every run checks
-  `tools/resource_map.py check` before spending anything.
-- Floors live in `tools/resources.json`: coin warns below 10M and
+  `_tools_/resource_map.py snap`, and every run checks
+  `_tools_/resource_map.py check` before spending anything.
+- Floors live in `_tools_/resources.json`: coin warns below 10M and
   is critical below 2M; food and iron warn below 50M.
 - State on 2026-10-25 evening - **coin is critical at 565.1K**
   (the owner's own Lv.30 building and research session spent it
@@ -152,14 +152,14 @@ that lands them on theme, without burning anything to force it.
 
 ## Enforcement
 
-- `tools/duel.py` prints today's duel day, theme, gate and radar
+- `_tools_/duel.py` prints today's duel day, theme, gate and radar
   posture. Every scheduled run reads it first and follows the gate:
   on preserve days the radar regular is marked skip with the duel
   reason instead of being emptied; on Day 1 it is worked first.
-- `tools/regulars.py` remains the per-day ledger of what was done;
+- `_tools_/regulars.py` remains the per-day ledger of what was done;
   the gates change how a regular is worked, never whether it is
   accounted for.
-- `tools/resource_map.py check` output rides along in run reports
+- `_tools_/resource_map.py check` output rides along in run reports
   whenever a flag is raised.
 
 ## Standing boundaries

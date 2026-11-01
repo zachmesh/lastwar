@@ -23,7 +23,7 @@ no Mega Mode.
   Let's Go, Squad 1 escort, journey 04:23:38. SSR cargo: badge
   500 x3 x3, item x1, chest x10, iron 3.0M, food 3.0M, coin 1.9M.
   Today's Trade Count moved 1/5 to 2/5.
-- Plunder: SSR truck #2092 [k35o]Gothams protector, Lv.27, guard
+- Plunder: SSR truck #2092 another commander, Lv.27, guard
   8.3M (below the 24.96M Squad 1 bar), two 500-badge stacks.
   Quick Plunder, battle prep 25.05M vs 8.34M, won. Yield: iron
   585.3K, food 585.3K, coin 367.4K, badge 500 x6, item x1.

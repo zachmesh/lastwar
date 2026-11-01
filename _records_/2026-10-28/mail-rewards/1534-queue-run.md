@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-28 1534 Queue Run
 created: 2026-10-28T22:40:00Z
-modified: 2026-10-28T22:40:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 1534 queue run, unit mail-2026-10-28-1430, Claim All pressed in all seven categories, nothing claimable
 status: unverified
 grounded_in:
@@ -25,7 +25,7 @@ Metadata for this type lives in
   In-app Purchases at entry.
 - Alliance - Claim All answered No rewards available.
   Contents are Daily Donation Rankings, appointment reports
-  (StarFall appointed as Muse, KAGE appointed as Recruiter)
+  (another commander appointed as Muse, KAGE appointed as Recruiter)
   and New Alliance Marker notices - reports only.
 - Event - Claim All answered No rewards available.
   Contents are train arrival and departure notices and
@@ -33,7 +33,7 @@ Metadata for this type lives in
 - Regular - Claim All answered No rewards available.
   Contents are Invading Zombies victory battle reports only.
 - Season - Claim All pressed, Ice Breaking reports only
-  (from [AP3x]Abyss Apex), no reward claimed; the No rewards
+  (from another commander), no reward claimed; the No rewards
   available toast was still visible on the next screen.
 - System - Claim All pressed, no reward dialog observed.
   Contents are President Mail, Maintenance Completed,

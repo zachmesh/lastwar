@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-31 0211 Queue Run
 created: 2026-10-31T09:11:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.1
+version: 0.1.2
 description: Arms-race queue unit arms-race-2026-10-31-0203 - live phase Tech Research, phase score 0, no point chest earned, cumulative chest 0 of 2 not claimable, tier-3 gap 30000, research queue Idle in both slots so no completion lands in the phase window
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ skipped for this slot.
   (red line, never spent).
 - Live score — the phase page score bar read 0, so no
   point chest was earned in this phase yet and none was
-  claimed. The ranking row read #2110 [redacted-character-name]
+  claimed. The ranking row read #2110 owner account
   with 0; per the 2026-10-30 0210 precedent, the ranking
   row figure is recorded as the ranking-row figure, not
   as the live phase score.

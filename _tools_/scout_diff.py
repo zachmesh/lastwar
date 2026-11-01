@@ -23,7 +23,7 @@ outputs in an output directory:
 
 Without --apply the tool is a dry run: it writes its outputs and
 changes nothing in any pool. With --apply it feeds the plan's
-enqueue entries to tools/queue.py enqueue, one call per unit, so
+enqueue entries to _tools_/queue.py enqueue, one call per unit, so
 every unit it creates passes the same validation as a manual
 enqueue - and --apply refuses to run unless the pool root is
 given explicitly with --root.
@@ -493,7 +493,7 @@ def run(args):
             LOCAL_TZ).strftime("%Y-%m-%d")
     repo = os.path.abspath(args.repo)
     regulars_path = args.regulars or os.path.join(
-        repo, "tools", "regulars.json")
+        repo, "_tools_", "regulars.json")
     regulars = load_regulars(regulars_path)
     roster = load_roster(repo)
     reg_by_activity = {}

@@ -1,9 +1,9 @@
 ---
 title: Tool Development
 created: 2026-11-01T05:38:00Z
-modified: 2026-11-01T05:38:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: The tool developer - building and fixing the tools the loop runs on, from the improvement backlog and the review feedback the integrator leaves
 status: active
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
 The loop's builder. It takes the tooling improvement tasks
 the retro files, and the numbered review feedback the PR
 integrator leaves on tool branches, and turns them into
-working, validated tools in `tools/`. It does not operate the
+working, validated tools in `_tools_/`. It does not operate the
 game and never touches the live queue pool beyond reading it.
 
 ## Cadence

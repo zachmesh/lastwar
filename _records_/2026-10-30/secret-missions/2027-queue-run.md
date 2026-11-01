@@ -1,8 +1,8 @@
 ---
 title: Secrets queue run 2027
 created: 2026-10-30T20:27:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-2004 secrets unit, partial - 8 tasks Mega-deployed, ally assists uncompleted after unresponsive Assist button
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 20:18-20:27 PDT, executor
 ticker-2004, Mac mini sessions cc-575 and cc-576,
-game account [redacted-character-name]. Duel day 6,
+game account owner account. Duel day 6,
 Enemy Buster.
 
 Performed: in part.
@@ -64,8 +64,7 @@ Performed: in part.
   used - its cost is unobserved and no refresh
   was needed. No diamonds spent.
 - Assists, NOT completed: Ally Tasks showed SR
-  rows with Assist buttons (spac3cadet, Boss
-  Hog 05, AshenRise twice, one more below the
+  rows with Assist buttons (spac3cadet, another commander, AshenRise twice, one more below the
   fold). Three Assist taps on the first row
   produced no change - an estimated 833,454, a
   visually grounded 785,470, and 785,470 again

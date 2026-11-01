@@ -1,9 +1,9 @@
 ---
 title: Events and Cycles
 created: 2026-10-25T17:58:00Z
-modified: 2026-10-26T05:20:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.2.0
+version: 1.2.2
 description: Arms Race phases, the Alliance Duel VS week, the double-dip rule, and radar task discipline
 status: unverified
 grounded_in:
@@ -71,8 +71,8 @@ day contributes to the weekly victory —
   19:00 local with 21h22m left when read at 21:37, and the week
   timer read 5d 21h. Server weekdays in the table above therefore
   begin the previous local evening.
-- This week's matchup — [AP3x] The Apex (warzone 2110) against
-  [Sync] IMPERIUM (warzone 2111), week score 0 to 0 when read.
+- This week's matchup — the alliance (the current warzone) against
+  the opposing alliance (the opposing warzone), week score 0 to 0 when read.
 - Radar Training scoring, read off the theme page in game — Use 1
   Stamina +375; Complete 1 Radar Task +30,000; Use at least 660
   Hero EXP Points at a time +2.5; Use 1 Drone Battle Data point
@@ -85,8 +85,8 @@ day contributes to the weekly victory —
   67,800. This account stood at 3,928,429 points for the day when
   read (the evening radar clear and the owner phone play both
   landed inside Day 1).
-- The tooling form of this schedule is `tools/duel_schedule.json`,
-  worked by `tools/duel.py`; the standing gates are in
+- The tooling form of this schedule is `_tools_/duel_schedule.json`,
+  worked by `_tools_/duel.py`; the standing gates are in
   `_knowledge_/strategy-playbook`.
 
 ## The double dip

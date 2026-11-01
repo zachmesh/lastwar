@@ -1,9 +1,9 @@
 ---
 title: Alliance Help Execution 2026-10-30 0719 Queue Run
 created: 2026-10-30T14:19:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: Help queue unit help-2026-10-30-0630 - done, Help All pressed, ally requests cleared
 status: unverified
 grounded_in:
@@ -29,15 +29,15 @@ Status — done.
   Alliance panel, and a tap at norm 700,505 opened
   Help. Header read Today's points gained from
   Alliance Help 600 of 1,000. Waiting ally requests
-  were DCna8ive on a Lv.24 Barracks and Crow Apex
+  were DCna8ive on a Lv.24 Barracks and another commander Apex
   on a Lv.28 Air Force Base, alongside this
-  account's own [redacted-character-name] requests (Lv.28 Drill
+  account's own owner account requests (Lv.28 Drill
   Ground and Lv.30 Aircraft Center, both already
   showing Time reduced and not helpable by the owner).
 - Help All — a tap at norm 500,820 pressed Help
   All; the game answered "Allies are very grateful
   for your assistance". The ally rows cleared from
-  the page, leaving only the own [redacted-character-name] rows.
+  the page, leaving only the own owner account rows.
   The header still read 600 of 1,000 in the closing
   screenshot, unchanged from the open read.
 - Nothing bought, no diamond spent, no assembly or

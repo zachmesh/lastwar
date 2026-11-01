@@ -1,8 +1,8 @@
 ---
 title: Alliance Help on 2026-10-28
 created: 2026-10-28T09:52:00Z
-modified: 2026-10-28T09:52:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Index of Alliance Help executions on 2026-10-28
 grounded_in:
   - source: human-authored
@@ -41,7 +41,7 @@ time and never edited once committed (C1).
   healing help) at 700 of 1,000 daily help points.
 - [1901-queue-run.md](1901-queue-run.md) — the queue run
   that started at 18:56 local, unit
-  help-2026-10-28-1830; Help All cleared Comandante DT
+  help-2026-10-28-1830; Help All cleared another commander
   and SKRyZeRZ research helps at 920 of 1,000 daily help
   points at close.
 - [2305-queue-run.md](2305-queue-run.md) — the queue run

@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks Execution 2026-10-25 Red Dot Sweep
 created: 2026-10-25T22:00:00Z
-modified: 2026-10-25T22:00:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the radar stored tasks during the red dot sweep, 2026-10-25
 status: unverified
 grounded_in:
@@ -26,7 +26,7 @@ Metadata for this type lives in
   stamina.
 - Two Quick Execute batches were run, 2 tasks each at 20
   stamina - 4 tasks executed, stamina 51 down to 11. One ally,
-  Amarky257 of AP3x, was shown as having helped with a task.
+  another commander of the alliance, was shown as having helped with a task.
 - Claims - Claim All was pressed after each batch, and once more
   for a single reward that landed late - 11 task rewards claimed
   in total. The first Claim All showed its full list - a radar

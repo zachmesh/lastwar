@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-01T05:24:00Z
-version: 1.3.0
+modified: 2026-11-01T07:45:00Z
+version: 1.4.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -113,6 +113,33 @@ Measured on 2026-10-25.
   unit if the line cannot be verified, instead of closing on a
   presumed line state.
 
+## What the 2026-11-01 early unit added
+
+- The streak continues past the retro's window: the first
+  2026-11-01 survivors unit (0016, ticker-0004) also closed
+  partial, gate line never verified, nothing recruited, tracker
+  untouched - 23 consecutive queue-era partials on the 0016
+  record's own count (22 through 2026-10-31, plus this unit).
+- Background input is control-dependent, measured 0016: a
+  title-bar click did not bring the game forward (Speedtest
+  stayed frontmost) but that was not the blocker - an
+  Events-icon tap reached the game in background, while two
+  Events back-arrow taps produced no change. Do not read a
+  failed bring-to-front as total input blockage. This matches
+  the truck profile's standing "not reliably" framing; no
+  profile claim is superseded.
+- Escape re-confirmed, 0016: an Escape key press quit Last War
+  outright (the same crash behaviour already recorded for Esc)
+  - recovered by relaunch straight to the base with no login
+  or device dialog, HUD unchanged. Never Escape. The relaunch
+  reset the camera to a wider winter view; the record's
+  proposed next method is a slow manual drag or a scroll
+  zoom-out starting from that wider view rather than
+  re-entering the zoomed pad view - proposed, not verified.
+  The same zoomed central-pad view could not be panned in
+  this unit either (one drag, 500,500 to 200,500, no change),
+  matching the 2343 harvest unit's three failed drags.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -123,3 +150,13 @@ Measured on 2026-10-25.
 - The three document icon bubbles over the headquarters area
   buildings open the Status Overview when tapped - what they are
   is unconfirmed; they are not collected like output bubbles.
+
+## Changelog
+
+- 1.4.0 (2026-11-01): streak carried past the retro window
+  (0016 partial), background-input control dependence, Escape
+  re-confirmation, and the pan failure shared with the 2343
+  harvest unit, folded from the 0016 survivors unit; the
+  transient Arms Race side observation in that record (a live
+  Hero Advancement phase score) was deliberately not folded -
+  it belongs to the queued arms-race unit.

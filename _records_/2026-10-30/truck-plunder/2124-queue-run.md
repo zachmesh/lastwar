@@ -1,8 +1,8 @@
 ---
 title: Truck queue run 2124
 created: 2026-10-30T21:34:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Second owner-requested plunder unit, partial - entry failed again, icon misidentification corrected, the blue front icon is a train and this column set has no trade slot
 status: unverified
 grounded_in:
@@ -16,7 +16,7 @@ Session window: about 21:24-21:34 PDT, executor
 owner-req-2123 (second attempt on the owner's
 direct plunder request), unit
 trucks-2026-10-31-0423, Mac mini session cc-579,
-game account [redacted-character-name]. Duel day 6,
+game account owner account. Duel day 6,
 Enemy Buster (non-UR day). Objective: plunder
 to 4 of 4 for the trade day that began 19:00
 (2017 close: Trade 2 of 5, plunder presumed

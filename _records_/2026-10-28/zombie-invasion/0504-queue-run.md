@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion Execution 2026-10-28 0504 Queue Run
 created: 2026-10-28T12:14:00Z
-modified: 2026-10-28T12:14:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Zombie-invasion chain unit 008 - coin panel read exactly at 36024573, event live with next wave about 34 minutes out, Search found a Lv.10 target so cleared is false, but no march was dispatched and the LOOT row handed over by unit 007 was not claimed in this unit - the March Queues bar was not located in the home cluster views and the crossed-swords tap closed the target card instead of opening the deploy panel, a second batched attempt opened a Lv.85 Zombie Boss card which was closed untouched
 status: unverified
 grounded_in:
@@ -54,7 +54,7 @@ performed in part; the handover settlement did not land.
   (Events, Search, crossed-swords coordinates in one batch,
   per the unit 006/007 method) landed its second tap on a
   Lv.85 Zombie Boss card (Suggested Power 34,500,000,
-  stamina 20, found by [AP3x]sebfin13) — a rally-class
+  stamina 20, found by another commander) — a rally-class
   target, out of scope; the card was closed untouched, no
   rally started, nothing tapped on it. squads_parallel 0 —
   no squad marched in this unit.

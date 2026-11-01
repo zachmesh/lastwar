@@ -1,8 +1,8 @@
 ---
 title: Zombie invasion queue run
 created: 2026-10-30T08:05:00Z
-modified: 2026-10-30T08:17:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit zombie-invasion-zombie-2026-10-28-053 execution
 status: done
 ---
@@ -46,7 +46,7 @@ state lost).
   043 and 049, not the march cap of 4.
 - Second LOOT row, gift-box hunting: the first two
   taps at the grounded gift point (317,233, then
-  312,225) opened ally [AP3x]ZOLTAN's base profile
+  312,225) opened ally another commander's base profile
   instead, because the map was centred on that base
   and the base sat under the gift icon. After a map
   drag moved the base clear, a tap at 319,247 opened

@@ -1,6 +1,6 @@
 ---
 unit: <regular-id>-<yyyy-mm-dd>-<hhmm>
-regular: <regular-id from tools/regulars.json>
+regular: <regular-id from _tools_/regulars.json>
 activity: <activity type folder name>
 segment: <1, 2 or 3>
 priority: <1 expiry-critical, 2 windowed, 3 standard>
@@ -25,7 +25,7 @@ What to do, in the regular's own terms. The executor also reads the
 activity metadata in `_activities_/<activity>/` and the standing rules
 in the recording rules before acting.
 
-On completion the executor runs `tools/queue.py complete`, which
+On completion the executor runs `_tools_/queue.py complete`, which
 writes the result section into this file's frontmatter - status,
 start and finish times, duration, claimed items and the activity's
 result statistics - and moves the file to `done`. The result shape is

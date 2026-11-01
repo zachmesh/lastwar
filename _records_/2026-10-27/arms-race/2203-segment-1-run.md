@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-27 2203 Segment 1 Run
 created: 2026-10-28T05:35:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: One execution record for the 2026-10-27 2203 segment 1 run, Drone Boost phase at 11500 of 30000, two point chests and the cumulative chest claimed, top target missed inside the red lines
 status: unverified
 grounded_in:
@@ -27,8 +27,8 @@ Metadata for this type lives in
 - Live phase read at about 22:47 local - Drone Boost, Contest
   Segment Lv.29-30, 00:33:16 left in the phase. Score 11,500;
   point chests at 1,500 (value 2,360), 10,000 (value 4,800) and
-  30,000 (value 11,800). Warzone ranking - [redacted-character-name] rank 9 in
-  warzone 2110, leader [CReW]Hohohahahe of warzone 2091.
+  30,000 (value 11,800). Warzone ranking - owner account rank 9 in
+  the current warzone, leader another commander of the relevant warzone.
 - Scoring table read live - Use 10 Drone Battle Data points
   plus 1, Use 1 Stamina plus 100, Buy Packs containing
   Diamonds plus 30 per diamond (paid - red line, never used).
