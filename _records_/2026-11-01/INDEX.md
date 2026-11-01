@@ -1294,3 +1294,29 @@ of 2026-10-28.
 - Integrator run pr-integration-2026-11-01-1315, zero open PRs at pass start and at the end-of-pass sweep. Prior integrator records PR 94 stands MERGED, no comments outstanding. Branch 2026-10-31 at 4c72f0b5 verified contained in main, no PR needed; branch 2026-11-01 at e49694a62 ahead by one commit (the 1300 run record).
 - Records PR 95 opened by this run and merged eab94a059, branch kept (verified still at e49694a62 after merge). Merge pre-tested clean in a scratch worktree. No extra log lines owed at merge: the merged commit already carried its own action-log line, and no user input means no input-log line.
 - No knowledge/code PRs, no feedback, no owner-gated escalations, no conflicts. No local main sync-back owed (records-only merge). Merge synced to the owner Slack DM. End-of-pass sweep: zero open PRs. Full detail in pr-integration/1315-run.md.
+## 13:20 — Queue ticker pass, mail rewards (done)
+
+- Mail unit mail-2026-11-01-1030, done: Alliance Claim All
+  claimed the [Alliance Exercise] reward (EXP 105.8M, coins
+  12.1M, food 19.0M, iron 19.0M, speedups); Event Claim All
+  claimed train arrival and event rewards. Battle Report,
+  Season, System and Regular checked, reports only, nothing
+  further claimable. Nothing deleted. Mail entry needed a
+  freshly grounded tap at normalised 915, 790 after the
+  earlier 755-760 point failed twice, as in the 0139 unit.
+  Full detail in mail-rewards/1306-queue-run.md.
+
+## 13:22 — Queue ticker pass, star ceremony (done, checked only)
+
+- Star ceremony unit star-ceremony-2026-11-01-1030, done as
+  checked only: no trophy icon beside the Alliance icon on
+  the base screen, so no ceremony is waiting. No emotes, no
+  rewards. Full detail in alliance-duel/1324-queue-run.md.
+
+## 13:23 — Queue ticker pass, alliance train (done, checked only)
+
+- Train unit train-2026-11-01-1030, done as checked only:
+  no "Boarding closes in" banner under the resource bar,
+  so no train is in preparation. Nothing boarded, no
+  Trade Contracts spent. Full detail in
+  alliance-train/1325-queue-run.md.
