@@ -17,7 +17,7 @@ grounded_in:
 
 Audit only. This document reads the records and the queue results of
 2026-10-30 and 2026-10-31, classifies every non-done unit by primary
-root cause, and checks seven owner-named collection items against the
+root cause, and checks eight owner-named collection items against the
 records. It changes no game state, no queue code and no schedule.
 Where the records cannot prove a claim, this audit says so instead of
 estimating.
@@ -377,7 +377,7 @@ Eight owner-named collection items, checked line by line against
 the same two days of records. A claim is written only where a
 record proves it. Everything else is written as cannot be confirmed
 from the records, with the gap named. One prevention rule per item
-follows its verdict. The umbrella rule for all seven - a single
+follows its verdict. The umbrella rule for all eight - a single
 master collection checklist, swept item by item to zero in a
 dedicated pass before the 19:00 reset, where every line closes on a
 live read from that day and not on silence.
