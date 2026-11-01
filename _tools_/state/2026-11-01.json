@@ -11,13 +11,13 @@
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-11-01T01:08:45",
-  "note": "No ceremony waiting; weekly rank 190, 17240439 pts; daily total unverified"
+  "at": "2026-11-01T13:22:16",
+  "note": "Checked only: no trophy icon, no ceremony waiting"
  },
  "train": {
   "status": "done",
-  "at": "2026-11-01T01:11:06",
-  "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure"
+  "at": "2026-11-01T13:23:33",
+  "note": "Checked only: no Boarding banner, no train in preparation"
  },
  "passes": {
   "status": "done",
@@ -43,5 +43,10 @@
   "status": "done",
   "at": "2026-11-01T11:32:46",
   "note": "9 coin donations to Rallied HP"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-01T13:20:55",
+  "note": "Alliance Exercise and Event train rewards claimed; other categories reports only"
  }
 }
