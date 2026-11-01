@@ -1,7 +1,7 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T09:43:19Z
+modified: 2026-11-01T10:45:05Z
 version: 1.1.1
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
@@ -180,6 +180,44 @@ entries to implemented.
   reviewed and merged by the integrator, and the next runs of
   the standing jobs each leave a live execution record under
   _records_ in the standard's shape.
+- status: in-progress
+
+### IMP-20261101-07 - scout_diff round-summary section
+
+- source: owner instruction of 2026-10-31 (standing tool
+  queue, item (c)(3) - scout_diff / planner
+  trigger-consumption follow-ups, roadmap Phase 3)
+- class: tooling
+- leak: the coverage report existed as a file, but no
+  round-summary section carried it - the Phase 3 step that
+  the coverage report joins the round summary as a standing
+  section had no program output, so a summary could only
+  cite perception by hand transcription, with drift between
+  the summary numbers and the diff counts.
+- target metric: perception coverage cited in the day round
+  summary (evaluation metrics family F, candidate promotion
+  coverage companion - the perception scoreboard reaching
+  the summary). Current value - no round-summary section
+  output existed before this change; the first value lands
+  with the next round summary that pastes the section in.
+- verification: a diff run on an isolated fixture pool
+  emits scout-round-summary-<date>.md whose figures match
+  the same run's coverage report by hand, byte-identical
+  on re-run, with the four pre-existing outputs unchanged
+  from the pre-change tool; the retro then reads a round
+  summary carrying the section rather than hand-copied
+  perception numbers.
+- status: implemented - PR 42 (branch
+  work/scout-round-summary-section, commit
+  d53509a5a043482d3771f87458e78ca87e5fe853), scout_diff.py
+  emits scout-round-summary-<date>.md plus a round_summary
+  path in the JSON summary; fixture validation passed on
+  isolated scratch pools (four pre-existing outputs
+  byte-identical to the pre-change tool, hand-checked
+  section counts, byte-identical re-run, no-root honest
+  pool-not-read wording, empty-observation no-claim
+  wording, real-pool-copy dry run clean)
+
 - status: in-progress
 
 ## Implemented, awaiting retro verification

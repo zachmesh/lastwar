@@ -480,3 +480,57 @@ of 2026-10-28.
 ## 02:15 to about 02:27 - PR integration
 
 - PR integration run pr-integration-2026-11-01-0215, done: open PRs at pass start 0; own-PR check first, PR 38 from the previous pass stands MERGED with zero comments, nothing addressed to this job. Records/2026-10-31 verified contained in main; records/2026-11-01 held one commit beyond main (the 0200 run record), so this pass opened records PR 39 (Owner lastwar-pr-integrator) and merged it with merge commit 3a3654210, branch not deleted; the PR read MERGEABLE and CLEAN, 3 files, +119/-0, all records-path types. A ticker push landed mid-pass (ticker-0204 scout-base partial, 962794f46) after the merge; this run record is committed on top of that tip and rides the next pass records PR. Local main fast-forwarded 17df2ffca to 3a3654210 via the bundle route, no force, other agent worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. Full detail in pr-integration/0215-run.md.
+
+## 02:30 to about 02:40 - PR integration
+
+- PR integration run pr-integration-2026-11-01-0230, done: open PRs at pass start 1 (PR 40, records/2026-11-01, already open); own-PR check first, PR 39 from the previous pass stands MERGED with zero comments, nothing addressed to this job. Records/2026-10-31 verified contained in main; records/2026-11-01 held two commits beyond main (ticker-0204 scout-base partial and the 0215 run record), covered by already-open PR 40, so no new records PR was opened. PR 40 read MERGEABLE and CLEAN, 7 files, +420/-8, all records-path types, and was merged with merge commit 48b6e7293, branch not deleted. Local main fast-forwarded 17df2ffca to 48b6e7293 via the bundle route, no force, other agent worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. Full detail in pr-integration/0230-run.md.
+
+## 02:32 to about 02:45 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-01-0245.
+  Own PRs checked first: zero open PRs at pass start, so
+  no integrator feedback was owed; own PRs 36, 30, 23 and
+  11 are all merged. No open tooling backlog entry, so the
+  run took the remaining standing-queue Phase 3 slice -
+  the scout_diff round-summary section - filed as
+  IMP-20261101-07 and implemented in _tools_/scout_diff.py
+  as PR 42 (branch work/scout-round-summary-section,
+  commit d53509a5a). The diff now emits
+  scout-round-summary-<date>.md, a paste-ready perception
+  coverage section derived from the same run's coverage
+  counts with no new numbers. Fixture validation passed
+  on isolated scratch pools, including byte-identical
+  pre-existing outputs and a clean dry run over a real
+  pool copy. Full detail in
+  tool-development/0245-run.md.
+## 02:39 to about 02:45 - PR catch-all (no-op)
+
+- PR catch-all run pr-catchall-2026-11-01-0239, no-op:
+  own-PR check first found no PR adopted by this job (no
+  catchall comment on PRs 29 to 41, prior passes covered
+  PRs 1 to 30). One open PR, newly opened and correctly
+  owned: PR 41 (_activities_ profiles 1.2.0, 1.1.0 and
+  1.1.0, Owner lastwar-knowledge-organizer, diff exactly
+  the three profile files). No review or comment, no red
+  line, authorisation, cron definition or PR policy text,
+  and far under the 48 hour stale-owner threshold, so no
+  adoption, fix, hand-off or flag. The missing
+  pr-catchall/2345-run.md on records/2026-10-31 (folder
+  holds only 2350-run.md, re-verified by ls-tree) is
+  carried forward for the integrator, not reconstructed.
+  Full detail in pr-catchall/0239-run.md.
+## 02:32 to about 02:45 - Knowledge organization pass
+
+- Knowledge organizer run knowledge-organization-2026-11-01-0232, done: own-PR check first, zero open PRs at pass start, PR 35 stands MERGED with no comments, nothing addressed to this job and nothing taken over. Backlog on main version 1.1.1: no open knowledge-organization entry covers these types. Folded secret-missions 0145, hidden-treasures 0150 and perception-scout 0215 into profiles 1.2.0, 1.1.0 and 1.1.0 on PR 41 (commit 4d10bab8e, Owner lastwar-knowledge-organizer). One contradiction resolved: the 2026-10-25 note that UR ally rows show no Assist button is superseded by the 0145 UR rows carrying blue Assist buttons that four taps did not consume. Full detail in knowledge-organization/0232-run.md.
+## 02:34 to about 02:42 - Queue ticker pass, arms-race access-failed
+
+- Ticker pass ticker-0234, unit arms-race-2026-11-01-0203,
+  failed: the Mac mini device channel returned node_offline
+  with no wake-up path on six computer.session starts, last
+  seen 2026-11-01T09:47:27Z and unmoved across the pass;
+  two recovery-channel attempts timed out after 25 seconds
+  each. No game input was dispatched, no Arms Race phase
+  or score was read, nothing claimed, nothing spent.
+  Tracker untouched, so the next tick re-produces the
+  regular as a fresh unit. Full detail in
+  arms-race/0234-queue-run.md.
