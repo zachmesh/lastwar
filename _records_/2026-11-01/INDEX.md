@@ -516,3 +516,30 @@ of 2026-10-28.
   66 and 67 stand MERGED. PR 64 closed the carried 2345
   dangling-pointer gap with a never-committed note. Full
   detail in pr-catchall/0839-run.md.
+
+## 08:40 to about 08:44 — Queue planning pass (no-op)
+
+- Planner run queue-planning-2026-11-01-0844, no-op:
+  plan staged 0 units to the 20:40 horizon, 71 already
+  present, 0 reaped, 0 expired. The 0745 run had already
+  staged the pool to the 19:40 horizon; the next regular
+  slots (22:03, 22:30, 22:57) lie beyond this run's window.
+- Pre-reset sweep production skipped (08:00 hour, not
+  17:00); the sweep pairs for 2026-11-01 and 2026-11-02
+  already sit in the pool, pending 2 each.
+- scout_diff dry and applied on the 02:15 observation:
+  0 items parsed (narrative-only observation, no
+  observed_items block), 0 enqueued, 0 candidates,
+  0 unexplained in the diff - matching the 0344, 0445,
+  0543, 0644 and 0745 runs on the same observation. The
+  observation frontmatter's 3 unexplained red dots are
+  not captured by the diff; left for the retro and
+  tool-development, not a chat report.
+- Queue cleanup: 0 units withdrawn - the diff classified
+  nothing as already satisfied, the observation shows
+  pending badges rather than any queued task read as
+  claimed, done or gone, and the observation predates
+  the units staged after it.
+- Delivered on records/2026-11-01 through the already-open
+  PR 68 under policy 2.0.0. Full detail in
+  queue-planning/0844-run.md.
