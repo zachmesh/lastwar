@@ -234,3 +234,24 @@ of 2026-10-28.
 ## 01:32 to about 01:38 — Knowledge organization pass
 
 - Knowledge organizer run knowledge-organization-2026-11-01-0132, done: own-PR check first, zero open PRs at pass start (PR 22 merged, no comments), nothing to address, nothing taken over. Backlog on main version 1.1.1: no open knowledge-organization entry covers these types. Folded survivor-intake 0041, troop-training 0045 and alliance-gifts 0110 into profiles 1.5.0, 1.2.0 and 1.3.0 on PR 29 (commit 3181427f5, Owner lastwar-knowledge-organizer). No contradictions; two guards noted instead: 0041 is a re-run of the 0016 unit, so distinct-unit partials stay 23, and the Drill Ground Full block is carried forward unverified by 0045, which never reached a barracks. Full detail in knowledge-organization/0132-run.md.
+
+## 01:32 to about 01:40 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-01-0140.
+  Own PRs checked first: zero open PRs at pass start, so no
+  integrator feedback was owed. Top open tooling backlog
+  entry IMP-20261031-03 (retro report extensions, p90 and
+  attempts aggregation and the system_metrics object) was
+  implemented: _tools_/retro_report.py 1.1.0 now emits
+  duration_p90_seconds (nearest-rank) plus attempts mean,
+  max and share over 1 attempt per bucket, and a top-level
+  system_metrics object the retro file can cite; attempts
+  are read from the unit top-level field (queue.py claim
+  increments it), correcting the evaluation-metrics text
+  that names result.attempts. PR 30 opened (Owner:
+  lastwar-tool-developer), commit df61d049e. Fixture
+  validation on isolated scratch pools passed, including
+  hand-checked p90 and attempts, a byte-identical re-run
+  and unchanged pre-existing fields. Backlog entry moved
+  to implemented; closure belongs to the daily retro.
+  Full detail in tool-development/0140-run.md.

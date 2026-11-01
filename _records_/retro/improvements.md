@@ -113,7 +113,7 @@ entries to implemented.
   fixture pool shows p90 and attempts values that match hand
   calculation, byte-identical on re-run, and a system_metrics
   object the retro file can cite.
-- status: in-progress - tool-developer run 2026-11-01 0132, branch work/retro-report-p90-attempts
+- status: implemented - PR 30 (branch work/retro-report-p90-attempts, commit df61d049e5d9d2d3ae90799d6533a855060a573b), retro_report.py 1.1.0; fixture validation passed on isolated scratch pools (hand-checked p90 and attempts, byte-identical re-run, backward-compatible fields, real-pool copy 431 units with 0 parse errors)
 
 
 ### IMP-20261101-01 - reconcile activity verification and metadata coverage
