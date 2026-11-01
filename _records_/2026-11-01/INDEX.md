@@ -557,6 +557,27 @@ of 2026-10-28.
   the run: inbox 68, claimed 1, done 444. Full detail
   in queue-planning/0247-run.md.
 
+## 02:45 to about 03:00 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-0245, done: open
+  PRs at pass start 3 (PR 43 records, PR 42 scout_diff
+  round-summary section, PR 41 activity profiles). PR 43
+  merged with merge commit 2238018cd, branch kept; PR 42
+  squash-merged 1ac2eca56 and PR 41 squash-merged c76b10dc5,
+  branches deleted. No comments, no owner escalations, no
+  owner assignments needed. Local main synced back to
+  c76b10dc5 via the bundle route. Full detail in
+  pr-integration/0245-run.md.
+
+## 03:00 - PR integration sweep addendum
+
+- Same pass, after the 0245 record push: the end-of-pass
+  sweep found PR 44 (records, queue-planning 0247 run,
+  opened mid-pass) still open. It was reviewed and merged
+  with merge commit be00ce3cd, branch kept; local main
+  synced back to be00ce3cd. The 0245 record sweep line
+  claiming zero open PRs is corrected by the addendum in
+  pr-integration/0245-run.md. Pass ends with zero open PRs.
 ## 03:04 to about 03:10 — Queue ticker pass, donations (failed, device offline)
 
 - Donations unit donations-2026-11-01-0203, failed:
