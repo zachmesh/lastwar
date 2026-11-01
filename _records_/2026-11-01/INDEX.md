@@ -1455,3 +1455,43 @@ of 2026-10-28.
   route. Merge synced to the owner Slack DM.
   End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/1400-run.md.
+
+## 14:15 to about 14:22 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1415. Zero
+  open PRs at pass start; records PR 100 opened for
+  the 1400 run record and merged with a merge commit
+  (c4b014101); the date branch was not deleted.
+  Records/2026-10-31 verified contained in main, so
+  no PR needed. Local main fast-forwarded to the merge
+  via the bundle route. Merge synced to the owner
+  Slack DM. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/1415-run.md.
+
+## 14:17 — Queue ticker pass, secret missions (partial)
+
+- Secrets unit secrets-2026-11-01-1057, partial: one Claim tap
+  collected 6 finished own tasks (PERFECT: UR Disrupt electric
+  grid, SSR Train Refugees, SSR Search for Missing Refugees, SR
+  Retrieve Raw Materials, SR Retrieve Abandoned Gear, SR Retrieve
+  Valuable Supplies); UR Rescue Test Subject and SR Retrieve Agent
+  Profile are still running. Ally assists broke through the
+  unresponsive list Assist buttons via the name-to-world-map
+  handshake path: 2 assists done, Assist Allies 2/5 live, Ally
+  Tasks badge 5 to 3. Assist rewards: Mystery Supply Box x6 and
+  Hero EXP 412.8K in both, plus Skill Medal x144 and 5m Training
+  Speed-up x5 in the first, Resource Chest x30, Upgrade Ore x80
+  and 5m Research Speed-up x5 in the second. Next unit: assists
+  to the 5 cap by handshake only, then claim the 2 running tasks.
+  Full detail in secret-missions/1417-queue-run.md.
+
+## 14:20 — Queue ticker pass, hidden treasures (done)
+
+- Treasures unit treasures-2026-11-01-1057, done: 1 dig executed
+  with Skip Animation on, from M1 x13, M2 x13, M3 x1, M4 x10,
+  M5 x3, M6 x7, M7 x13. Rewards: crate-type icon x12, coin-pile
+  icon x12, 1m speedup x25, 1m speedup x100, blue triangles x400,
+  silver ingots x100 (first two tiles unlabelled in the panel).
+  After: every fragment down exactly 1 (M3 x0), chest progress
+  1/15 to 2/15, badge cleared, Dig greyed. No exchange executed.
+  Full detail in hidden-treasures/1420-queue-run.md.
