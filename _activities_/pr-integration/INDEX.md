@@ -1,9 +1,9 @@
 ---
 title: PR Integration
 created: 2026-11-01T05:38:00Z
-modified: 2026-11-01T05:38:00Z
+modified: 2026-11-01T06:28:00Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: The PR integrator - reviewing the loop tier-2 pull requests, merging the clean ones, leaving critical feedback on the rest, and escalating owner-gated changes
 status: active
 grounded_in:
@@ -18,7 +18,7 @@ grounded_in:
 
 The loop's reviewer and gatekeeper for the tier-2 flow of the
 [push and PR policy](../../_conventions_/local-conventions/push-and-pr-policy.md).
-It reads every open pull request on dtadpole/lastwar, checks
+It reads every open pull request on zachmesh/lastwar, checks
 scope, body completeness, safety and consistency, and either
 merges it, leaves one consolidated critical review, or
 escalates it to the owner. It authors nothing itself.
@@ -30,7 +30,7 @@ working through the VPS `gh` route.
 
 ## Inputs
 
-- The open PR list, bodies and diffs on dtadpole/lastwar.
+- The open PR list, bodies and diffs on zachmesh/lastwar.
 - The two-tier policy's review checklist and the improvement
   backlog the PRs cite.
 
