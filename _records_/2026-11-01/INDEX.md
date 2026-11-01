@@ -76,3 +76,18 @@
   threshold, not owner-gated. PRs 41 to 48 all merged. No
   adoption, no fix, no hand-off, no escalation. Full
   detail in pr-catchall/0339-run.md.
+
+## 03:40 to about 03:44 — Queue planner pass
+
+- Planner pass queue-planning-2026-11-01-0344. Plan staged
+  5 units (passes, secrets, treasures, trucks, events
+  2026-11-01-1457), 64 already present, 0 reaped, 0
+  expired. Pre-reset sweep production skipped (03:00 hour,
+  not 17:00); the 2026-11-01 and 2026-11-02 sweep pairs
+  already sit in the pool. Scout diff applied on the
+  02:15 observation with the explicit pool root: 0 items
+  parsed (narrative-only observation, no observed_items
+  block), so 0 enqueued, 0 candidates, 0 unexplained in
+  the diff; 0 units withdrawn. Pool by_state: inbox 71,
+  claimed 0, done 447. Full detail in
+  queue-planning/0344-run.md.
