@@ -504,3 +504,15 @@ of 2026-10-28.
   06:04, 06:34, 07:04, 07:34 and 08:04 passes; the channel
   has been down since 01:47 local. Full detail in
   resource-collection/0834-queue-run.md.
+
+## 08:39 to about 08:41 — PR catch-all pass
+
+- Catchall run pr-catchall-2026-11-01-0839, no-op: own-PR
+  check first, no adopted PR to re-check; one open PR only,
+  PR 68, records for 2026-11-01 naming Owner
+  lastwar-pr-integrator, matching its diff, with zero
+  comments and zero reviews, so nothing adopted, nothing
+  fixed, nothing handed off, nothing escalated. PRs 64, 65,
+  66 and 67 stand MERGED. PR 64 closed the carried 2345
+  dangling-pointer gap with a never-committed note. Full
+  detail in pr-catchall/0839-run.md.
