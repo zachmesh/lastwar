@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:38:00Z
-version: 1.8.0
+modified: 2026-11-01T07:13:58Z
+version: 1.9.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -19,6 +19,8 @@ in this repository.
   conventions, the constitution clauses in force, and the local type registry.
 - [Recording rules](recording-rules.md) — evidence, language, approvals and
   append-only rules for knowledge, tasks, activities and play records.
+- [Account privacy](account-privacy.md) — the executor rule against publishing
+  game-account identifiers, names, personal account data and identifying combinations.
 - [Task intake workflow](task-intake-workflow.md) — how a newly named task
   is checked against the task types, registered if missing, executed if
   new, and only checked and updated if it already exists.
