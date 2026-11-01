@@ -601,3 +601,14 @@ of 2026-10-28.
   made, nothing spent. Tracker untouched. Second
   consecutive access-failed pass after the 02:34 pass.
   Full detail in alliance-donations/0310-queue-run.md.
+
+## 03:15 - PR integration sweep addendum
+
+- Same pass, after the 0300 record push: the end-of-pass
+  sweep found PR 46 (records, ticker-0304 donations and
+  0300 records, opened mid-pass) still open. It was
+  reviewed and merged with merge commit 3f3bf25b,
+  branch kept; local main synced back to 3f3bf25b. The
+  0300 record sweep line claiming zero open PRs is
+  corrected by the addendum in pr-integration/0300-run.md.
+  Pass ends with zero open PRs.
