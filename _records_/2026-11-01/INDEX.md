@@ -578,3 +578,26 @@ of 2026-10-28.
   synced back to be00ce3cd. The 0245 record sweep line
   claiming zero open PRs is corrected by the addendum in
   pr-integration/0245-run.md. Pass ends with zero open PRs.
+
+## 03:00 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-0300, done: zero
+  open PRs at pass start (PR 44 already merged, zero
+  comments). Records/2026-11-01 carried one unmerged
+  commit, the 0245 sweep addendum for PR 44, so this
+  pass opened records PR 45 and merged it with merge
+  commit fc089cbdf, branch kept. Records/2026-10-31
+  verified contained in main. Local main synced back
+  to fc089cbdf via the bundle route. End-of-pass
+  sweep: zero open PRs, no unprocessed PRs. Full
+  detail in pr-integration/0300-run.md.
+## 03:04 to about 03:10 — Queue ticker pass, donations (failed, device offline)
+
+- Donations unit donations-2026-11-01-0203, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path),
+  last seen 01:47 local and unmoved across the pass. No
+  screen read, no Donation Count observed, no donation
+  made, nothing spent. Tracker untouched. Second
+  consecutive access-failed pass after the 02:34 pass.
+  Full detail in alliance-donations/0310-queue-run.md.
