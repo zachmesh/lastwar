@@ -215,3 +215,30 @@ of 2026-10-28.
   stale-owner threshold. PRs 55 to 58 stand merged. No
   adoption, no fix, no hand-off, no escalation. Full detail
   in pr-catchall/0639-run.md.
+
+## 06:40 to about 06:44 — Queue planning pass (11 units staged)
+
+- Planner run queue-planning-2026-11-01-0644, done:
+  plan staged 11 units to the 18:40 horizon
+  (mail, help, gifts, train and star-ceremony at 1830;
+  harvest, radar, survivors, training, donations and
+  arms-race at 1803), 58 already present, 0 reaped,
+  0 expired.
+- Pre-reset sweep production skipped (06:00 hour, not
+  17:00); the sweep pairs for 2026-11-01 and 2026-11-02
+  already sit in the pool, pending 2 each.
+- scout_diff dry and applied on the 02:15 observation:
+  0 items parsed (narrative-only observation, no
+  observed_items block), 0 enqueued, 0 candidates,
+  0 unexplained in the diff - matching the 0344, 0445
+  and 0543 runs on the same observation. The
+  observation frontmatter's 3 unexplained red dots are
+  not captured by the diff; left for the retro and
+  tool-development, not a chat report.
+- Queue cleanup: 0 units withdrawn - the diff classified
+  nothing as already satisfied and the observation shows
+  pending badges, not any queued task read as claimed,
+  done or gone.
+- Delivered on records/2026-11-01 through the already-open
+  PR 59 under policy 2.0.0. Full detail in
+  queue-planning/0644-run.md.
