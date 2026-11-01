@@ -1391,3 +1391,17 @@ of 2026-10-28.
   no observed_items block - 0 enqueued, 0 candidates,
   0 unexplained in the diff. Queue cleanup 0 withdrawn.
   Full detail in queue-planning/1350-run.md.
+
+## 13:45 to about 13:53 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-1345, done:
+  knowledge PR 97 merged by squash (mail-rewards 1.3.0,
+  alliance-duel 1.5.0, alliance-train 1.7.0, Owner
+  lastwar-knowledge-organizer, review clean); records
+  PR 98 merged with a merge commit (records/2026-11-01
+  runs 1330, 1336, 1332, 1339 and queue-planning 1350),
+  date branch kept. No feedback comments, no
+  owner-gated escalations, no conflicts. End-of-pass
+  sweep: zero open PRs. Local main synced to 7bfb84dc0.
+  Merges synced to the owner Slack DM. Full detail in
+  pr-integration/1345-run.md.
