@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:35:00Z
-version: 0.13.0
+modified: 2026-11-01T05:38:00Z
+version: 0.14.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -740,6 +740,12 @@ standing list, never a one-day note. The retro's headline
 findings join the round summary as pointers to the retro file;
 the file is the record, the summary is the pointer.
 
+The retro itself, and every other standing activity of the
+loop, is an execution and leaves its own record under the
+[ops execution records](ops-execution-records.md) standard -
+the retro measures the loop from those records, not from
+session traces.
+
 ### System evaluation metrics
 
 This section measures the work; the companion specification
@@ -767,6 +773,10 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.14.0, 2026-11-01 - section 14 gains a cross-reference to
+  the ops execution records standard: the loop's own
+  activities are executions and record themselves in the
+  repository, and the retro measures them from those records.
 - 0.13.0, 2026-11-01 - a cross-reference to the new push and
   PR policy: the queue's own outputs are tier-1 direct pushes,
   and changes to the design and tools are tier-2 pull requests
