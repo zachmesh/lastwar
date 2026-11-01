@@ -856,3 +856,42 @@ of 2026-10-28.
 - No gap filed, no stale item marked. Next run checks
   PR 79 review feedback first. Full detail in
   knowledge-organization/1032-run.md.
+
+## 10:40 to about 10:52 — Queue planner pass
+
+- Planner pass planner-1040. Plan staged 11 units for the
+  2203 and 2230 slots (mail, help, gifts, train and
+  star-ceremony at 2230; harvest, radar, survivors, training,
+  donations and arms-race at 2203); 59 already present, 1
+  skipped as done for the current slot, 0 reaped, 0 expired.
+  Pre-reset sweep pair not due: this run falls outside the
+  17:00 hour. Scout diff over the 02:15 observation applied
+  with zero changes: the observation carries narrative
+  sections but no observed_items block, so the tool reads 0
+  items; its own 3 unexplained red dots (Alliance dot,
+  building badge 5, NEW! chest badge 3) and 2 unknown items
+  (furnace toast, second HUD row labels) stay open for the
+  scout successor units and the retro threshold check. No
+  queue withdrawals: the diff classified nothing as
+  satisfied and the observation predates today's units.
+  Pool by_state at 10:43: inbox 75, claimed 1, done 473.
+  Full detail in queue-planning/1040-run.md.
+
+## 10:45 to about 10:56 - PR integration pass (PRs 79 and 80 merged)
+
+- Integrator run pr-integration-2026-11-01-1045, one open
+  PR at pass start: PR 79, knowledge docs, Owner
+  lastwar-knowledge-organizer, zero comments. Records
+  branch 2026-11-01 ahead of main by four commits
+  (1030 integration, tool-development no-op, 1039
+  catchall no-op, 1032 knowledge-organization); branch
+  2026-10-31 verified contained in main, no PR needed.
+- Records PR 80 opened and merged with merge commit
+  a57a097f9, branch kept at cdda816e3. PR 79
+  squash-merged as e9b734c3e (survivor-intake 1.7.0,
+  alliance-gifts 1.4.0, alliance-help 1.7.0), work
+  branch deleted. No feedback, no owner-gated
+  escalation, no conflicts. Local main fast-forwarded
+  0c9cab7b to e9b734c3e via bundle; merges synced to
+  the owner Slack DM. End-of-pass sweep: zero open
+  PRs. Full detail in pr-integration/1045-run.md.
