@@ -1,14 +1,15 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T09:36:45Z
+modified: 2026-11-01T21:37:13Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1306 mail unit)
 ---
 
 
@@ -91,6 +92,57 @@ the next tick re-produces this regular as a fresh unit.
   before repeating the rail tap. Do not spend another unit
   on four more identical rail variants.
 
+
+
+## What the 2026-11-01 1306 unit added
+
+- Unit mail-2026-11-01-1030 by ticker-1304, session
+  about 13:06 to 13:20, status done. The game was left on
+  a Gold Brick Mall tutorial popup over the Mall screen;
+  the popup was closed with its X, the Mall back arrow
+  returned to the base screen, and no price tag or paid
+  button was tapped.
+- Mail entry, blocker resolved by fresh grounding: two
+  taps at the earlier measured base-rail point
+  (normalised 900-902, 755-757) showed no change, the
+  same blocker the 0139 unit recorded. A fresh visual
+  grounding put the Mail envelope at normalised 915,
+  790, and a tap there opened Mail. Method rule under
+  queue rule R2: measure the Mail icon fresh in each
+  unit, do not reuse the 755-760 point. This refines
+  the 0139 instruction, which framed the base-rail
+  method as exhausted pending a foreground window or a
+  different entry route: the stale point was exhausted,
+  not the rail tap itself, and fresh grounding in the
+  current window sufficed.
+- Alliance: Claim All claimed the [Alliance Exercise]
+  Alliance reward mail (3h ago). Congratulations popup
+  read: EXP 105.8M, 50.0K, 4.6K, 5m speedups 12, 21, 41,
+  26 and 20, coins 12.1M, food 19.0M, iron 19.0M. The
+  mail's gift icon was gone afterwards. Remaining
+  Alliance mails were markers and the Daily Donation
+  Rankings report, nothing further claimable.
+- Event: Claim All claimed the train arrival and event
+  reward mails. Congratulations popup read: chests 3
+  and 100, 2.5K medal 1, 100 gem 1, 8.5K, 5m speedups
+  10, 9, 5, 4 and 12.
+- Battle Report, Season, System and Regular were
+  checked in turn: Battle Report held scout reports and
+  Lv.17-20 Zombie Horde victory reports, Season held
+  Ice Breaking reports, System held President mails and
+  a Maintenance Completed notice, Regular held Invading
+  Zombies victory reports. No claimable attachment was
+  found in any of them; Claim All in Battle Report
+  produced no popup and no change.
+- Nothing was deleted. Delete All was never pressed. No
+  other task type was touched. The pass ended at the
+  base screen.
+- Cross-unit confirmation, not a new claim: the 1324
+  star-ceremony unit's base resource bar read food
+  308.2M (was 289.2M), iron 496.2M (was 477.2M), coins
+  22.7M (was 10.6M) - deltas of +19.0M, +19.0M and
+  +12.1M, matching this unit's popup exactly, so the
+  claims landed.
 
 ## Open questions
 
