@@ -911,3 +911,27 @@ of 2026-10-28.
   03:04, 03:34, 04:04 and 04:34 passes; the channel has
   been down since 01:47 local. Full detail in
   survivor-intake/0504-queue-run.md.
+
+## 05:15 - PR integration 0515 run
+
+- Integrator run pr-integration-2026-11-01-0515, done:
+  one open PR at pass start (PR 53, records
+  2026-11-01), merged.
+- Own-PR check first: PR 53 is this job's own records
+  PR (Owner lastwar-pr-integrator), no comments, no
+  reviews, nothing addressed to this job outstanding;
+  previous own PR 52 already MERGED (657097f9c2).
+- Records PR 53 MERGED, merge commit de29e38a0f,
+  branch kept: it carries 2 commits since the PR 52
+  merge (the 0500 run record and the ticker-0504
+  survivors access-failed record, with day INDEX
+  appends and action-log lines). GitHub merge state
+  verified CLEAN and MERGEABLE before the merge.
+  The merged files are records, log and one queue
+  done marker only, no knowledge, code, policy or
+  schedule change, so nothing is owner-gated.
+- records/2026-10-31 verified contained in main, no
+  PR needed. Local main synced back to de29e38a0f
+  via the bundle route. End-of-pass sweep: zero open
+  PRs, no unprocessed PRs, no escalations. Full
+  detail in pr-integration/0515-run.md.
