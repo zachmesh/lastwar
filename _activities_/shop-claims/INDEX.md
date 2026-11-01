@@ -1,14 +1,15 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T09:36:45Z
+modified: 2026-11-01T19:40:31Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1039 passes unit)
 ---
 
 
@@ -138,6 +139,42 @@ the free and already paid for parts, never the paid unlocks.
 - The base Season icon badge fell from 4 to 2 after these two
   claims, so the badge counts claimable season items among
   other notices.
+
+
+## What the 2026-11-01 1039 unit added
+
+- Unit passes-2026-11-01-0657 by ticker-1034, session
+  about 10:36 to 10:39, status done, checked. Window
+  mode, no different-device dialog. Game was on the base
+  screen at entry. Nothing was claimed in this unit
+  because every claimable item already reads claimed
+  today.
+- Hot Deals: only the external-store promo ("Visit the
+  Last War Store for more rewards!", 1000 points card, Go
+  button). No free pack, no Free Claim button on this
+  page at this check - consistent with the 0114
+  promo-only read.
+- Weekly Pass: Free Supply chest reads Claimed.
+  Legendary bundle row reads Take All $19.99 - not
+  tapped, per the red lines. Coin Weekly Pass reads
+  Remaining 2d 7:21:58 and Already claimed today, with a
+  Renew $4.99 button - Renew not tapped. The drop from
+  the 0114 read of 2d 16:47:31 matches the roughly nine
+  and a half hours elapsed, so no discrepancy stands.
+  The other weekly cards below (Drone Components, EXP,
+  Iron) show $4.99 Get Now purchase buttons - purchase
+  offers, not claims, none tapped.
+- Super Monthly Pass: Monthly Pass, Squad 4 Lv.20, Days
+  Left 20, Rewards Left 20, Daily Pickup button reads
+  Claimed. The $24.99 Monthly Pass Extension button was
+  not tapped. Days Left 21 at 0114 to 20 here is
+  consistent with the day rollover since that unit.
+- Still unresolved, carried forward unchanged: the 0114
+  display "Weekly Pass rewards reset at 18:00:00"
+  against this profile's standing "reset daily at 19:00
+  as displayed in game". This unit did not re-read that
+  line, so neither figure is treated as settled. Game
+  left on the shop Super Monthly Pass page.
 
 ## Open questions
 

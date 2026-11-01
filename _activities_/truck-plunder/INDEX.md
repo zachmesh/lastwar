@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T09:36:45Z
+modified: 2026-11-01T19:40:31Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: evening dispatch and plunder executions on the new server day, 2026-10-25
   - source: owner standing rule on non-UR day dispatch - SR or above only, ticket refreshes authorized until reached, 2026-10-26
   - source: owner rule on daily truck quotas - dispatch 5 and plunder 4 every trade day, note it in the metadata and resolve misses, 2026-10-30
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1053 trucks unit)
 ---
 
 # Truck plunder - Intercity Trade
@@ -430,6 +431,63 @@ settlement and dispatch execution record).
 - Plunder targets follow the shard rule above - UR or SSR trucks
   only, guard below Squad 1 power, shards plentiful and right sided.
   Do not plunder alliance mates, and stop at the daily cap.
+
+
+## What the 2026-11-01 1053 unit added
+
+- Unit trucks-2026-11-01-0657 by ticker-1034, session
+  about 10:40 to 10:53, status partial. Duel day 7, Off
+  day settlement, so non-UR rules apply: dispatch SR or
+  above, plunder UR or SSR with guard below Squad 1 at
+  24.96M. No different-device dialog.
+- Entry, re-grounded fresh in-unit: the blue
+  delivery-truck icon in a speech bubble with red badge 3
+  sits above the white pickup and the radar dish; its
+  measured centre norm 52,571 opened Intercity Trade at
+  once with snap off. Foreground first: an observe call
+  had flipped the target to a frontmost Chrome window, and
+  a title-bar left-segment tap at norm 180,15
+  re-foregrounded the game before the trade tap. This is
+  the foreground pivot variant of the 2026-10-31 retro
+  note, not a new rule.
+- Live counters, current trade day (reset 19:00 on
+  2026-10-31, ends 19:00 today): Today's Trade Count 3/5,
+  read on the Your Truck tab, and Your Plunder Count
+  Today 1/4, read on the Others' Trucks tab. These match
+  the 0124 unit close exactly, so no counter moved between
+  the two units and no contradiction stands. Your Truck
+  road view showed the three trucks dispatched at 01:24
+  still on the road (two gold, one blue - the UR, UR and
+  SR dispatches of the 0124 unit) plus one empty dashed
+  slot with a plus sign. No returned truck was presented
+  for settlement; tapping a truck body opened no details
+  card, same as the 2048 unit.
+- Dispatch, blocked on the slot tap - audit class c, a
+  tap-method blocker, not a red-line miss: the empty-slot
+  plus sign was tapped at norm 714,414 and 714,418 (two
+  no-change taps), then at 714,460, then double-clicked
+  at 714,418 - every tap showed no change on the second
+  observation. No dispatch panel opened, so no roll, no
+  refresh and no Trade Contract was spent, and no truck
+  was dispatched in this unit. This refines the standing
+  "tap a free slot plus sign" step: those points, in the
+  current window, did not open the panel. The next trucks
+  unit must arrive with a changed method (a
+  foreground-first tap, or a re-measured slot point in
+  the current 763 by 1050 window) rather than repeating
+  these points. The window geometry itself is new against
+  the standing 642 by 951 window - coordinates here are
+  norm, so they transfer in proportion, but slot points
+  must still be re-measured fresh each unit.
+- Plunder was not attempted: the unit budget closed on
+  the dispatch block, so the plunder shortfall stands.
+  Outcome partial, counters unchanged at dispatch 3/5
+  and plunder 1/4. Shortfall carried forward: dispatch 2
+  more, plunder 3 more, before the 19:00 deadline.
+  Tracker untouched; the next trucks unit resumes the
+  same shortfall. Nothing paid, no diamonds spent, no
+  Mega Mode used, no alliance mate plundered. Game left
+  on the trade screen, Your Truck tab.
 
 ## Open questions
 
