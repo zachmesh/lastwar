@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-28T09:15:00Z
+modified: 2026-11-01T06:36:48Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,8 @@ grounded_in:
   - source: owner instruction on 2026-10-26 - every time a run is made, check the score in Arms Race
   - source: owner correction on 2026-10-26 - the three point chests are not all of the Arms Race rewards, and a bouncing chest on the Events or Arms Race screen means more rewards remain
   - source: owner instruction on 2026-10-28 via Slack - stamina for Arms Race scoring may come from the Free Claim or from stamina resource items of 10 or 50
+  - source: arms-race execution record 2026-10-31 2241 queue run
+  - source: arms-race execution record 2026-10-31 2212 queue run
 ---
 
 
@@ -180,6 +182,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 - Whether the chest ruby tags also change by phase or segment.
 - When the phase ranking reward lands and where it is claimed.
 
+- Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read.
 ## What is known from 2026-10-26
 
 - The Hero Advancement phase ran on the morning of 2026-10-26
@@ -265,3 +268,57 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   paths were that stamina or paid packs, so the miss stood.
   From the rule onward, that shortfall is closed with the Free
   Claim and stamina items before a miss is recorded.
+
+## What is known from 2026-10-31
+
+- The Drone Boost phase, read live on 2026-10-31 - Contest
+  Segment Lv.29-30, chest thresholds 1,500, 10,000 and
+  30,000. Scoring as displayed, measured 2026-10-31 - Use
+  10 Drone Battle Data points pays 1 point, Use 1 Stamina
+  pays 100 points, Buy Packs containing Diamonds pays 30
+  points per diamond. The pack path stays banned by the red
+  lines.
+- The stamina scoring row is itself an entry point, first
+  opened in the 2241 unit - tapping the stamina scoring row
+  arrow at norm 849,641 opens the world-map Search panel
+  (tabs Zombies, Gather, Doom Elite, with Doom Elite Lv.1
+  selected and a Search button). No Search tap was made and
+  no march was started in that unit. The panel closes by
+  tapping an empty map tile at norm 500,300, returning to
+  the base with nothing spent and nothing started. This is
+  a stamina-spend route the earlier units of this phase had
+  not opened, and it is now the changed-method check for
+  Drone Boost stamina reasoning, alongside the radar route.
+- The drone-data path, checked in the 2212 unit - the
+  Tactical Drone screen read Lv.130, Stage 4 of 5, 5.37M
+  data against a 42.00K upgrade cost, so one upgrade pays
+  only about 4,200 points. A drone upgrade is not an
+  authorised spend for this phase, so Upgrade was never
+  tapped.
+- Phase-final miss rule, from the 2241 unit - the phase
+  closed at score 6,000 against the 30,000 top chest, a gap
+  of 24,000 points equal to 240 stamina or 240,000 Drone
+  Battle Data points. With about 20 minutes left in the
+  phase, that many marches could not close inside the
+  window, so no march was started and no refill was spent
+  for a missed phase. This refines the 2026-10-28 stamina
+  refill rule - Free Claim and stamina items are opened
+  before a miss is recorded only when the gap is closable
+  inside the remaining window; spending them for a phase
+  whose arithmetic cannot close wastes resources that score
+  better in a later phase. No successor was enqueued for
+  this phase, because the phase ends at 23:00 local, before
+  the next tick, and a successor expiring at the phase end
+  could do no further work; the next tick arms-race unit
+  serves the new phase.
+- Phase result, Drone Boost 2026-10-31 - final score 6,000,
+  cumulative chest 1 of 2, first point chest treated as
+  already claimed (a tap produced no popup and no change,
+  unverified, as in the 2212 unit), second and third point
+  chests locked, completion sweep found no bouncing chest
+  or reward red dot, nothing claimed by the final unit
+  because nothing new was earned in it. The score rise
+  from 0 at the 20:12 events read to 6,000 at the 22:12
+  read happened with no queue arms-race unit between, so
+  it is recorded as an unverified inter-unit change, not
+  attributed to the queue.
