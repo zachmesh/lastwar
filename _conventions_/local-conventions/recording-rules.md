@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:51:00Z
+modified: 2026-11-01T07:09:43Z
 level: L2
-version: 1.8.0
+version: 1.9.0
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -24,12 +24,18 @@ builds_on:
 - Screenshots are evidence, not records. The record is the text written from
   them the same day.
 
-## The four record kinds
+## Where work and evidence live
 
 - **Knowledge** (`_knowledge_`) — versioned claims about the game. Edit in
   place, bump `version` and `modified`, keep the grounding current.
-- **Tasks** (`_tasks_`) — the live list in the `task-list` instance. A
-  finished task moves to its completed section with its date.
+- **Execution units** (`_queue_`) — concrete work that moves through
+  inbox, claimed and done, with a result linked to its dated record.
+- **One-off improvements** — the existing
+  [improvements backlog](../../_records_/retro/improvements.md), with
+  evidence, ownership and a verification condition. Proposals that
+  still need an owner decision go to its companion
+  [owner decisions register](../../_records_/retro/owner-decisions.md).
+  Do not maintain a separate current/completed task list.
 - **Activities** (`_activities_`) — one instance folder per kind of
   activity, named in kebab-case like the activity it covers. Each folder
   is the accumulating source of knowledge for that kind - how it works,

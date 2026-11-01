@@ -1,8 +1,8 @@
 ---
 title: Last War Agent Entry Point
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.3.0
+modified: 2026-11-01T07:09:43Z
+version: 1.4.0
 description: Project instructions and adoption of reflection typed-folder conventions
 grounded_in:
   - source: owner request to adopt dtadpole/reflection shared conventions
@@ -10,7 +10,7 @@ grounded_in:
 
 # Last War
 
-This project records knowledge, tasks, activities and play records for the
+This project records knowledge, activity definitions, queued work and play records for the
 owner's Last War Survival account. It adopts **dtadpole/reflection's
 typed-folder format**. Read the [canonical conventions](https://github.com/dtadpole/reflection/blob/78195f50d43cc96b8cdd09b00b8118204b22715d/shared/_conventions_/core-conventions/INDEX.md),
 the [local conventions](_conventions_/INDEX.md) and the
@@ -55,13 +55,18 @@ an explicit unverified label (C4, C5).
 
 ## Task intake
 
-When the owner names a task, check `_activities_` first. Task type
-metadata has its own top level folder there, separate from `_records_`
-and never nested in it. If the type is missing, create and register its
-metadata folder, then execute it and log the record by date. If it
-already exists, check it, update it if appropriate, and skip execution
-for that turn - future cycles execute it. The full rule is the
+For an in-game activity request, check `_activities_` first. Activity
+definitions live there, concrete executions live in `_queue_`, and
+execution evidence lives under `_records_` by date. Preserve the
+existing new-type versus existing-type execution rule in the
 [task intake workflow](_conventions_/local-conventions/task-intake-workflow.md).
+
+One-off investigation and improvement work is tracked only in the
+[improvements backlog](_records_/retro/improvements.md), with a
+checkable completion condition. Pending proposals and owner-only
+choices go to the [owner decisions register](_records_/retro/owner-decisions.md).
+The former standalone task list is retired; do not recreate it or
+maintain a second backlog.
 
 ## Delivery
 

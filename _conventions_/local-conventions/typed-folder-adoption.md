@@ -1,9 +1,9 @@
 ---
 title: Typed-folder Adoption
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T06:53:49Z
+modified: 2026-11-01T07:09:43Z
 level: L2
-version: 1.2.0
+version: 1.3.0
 description: Adoption of reflection typed-folder format and constitutions, with the local type registry
 status: unverified
 grounded_in:
@@ -41,7 +41,6 @@ Introducing a type registers it here in the same commit.
 | Type | Holds | Source |
 |---|---|---|
 | `_knowledge_` | game knowledge, one instance per topic | local, registered 2026-10-25 |
-| `_tasks_` | task lists and task records | local, registered 2026-10-25 |
 | `_activities_` | activity checklists and activity records | local, registered 2026-10-25 |
 | `_records_` | append-only audit records of play on the game account | reflection vocabulary |
 | `_logs_` | append-only repository entries | reflection vocabulary |

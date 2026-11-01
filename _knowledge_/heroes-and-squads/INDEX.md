@@ -1,9 +1,9 @@
 ---
 title: Heroes and Squads
 created: 2026-10-25T17:58:00Z
-modified: 2026-10-25T17:58:00Z
+modified: 2026-11-01T07:09:43Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Hero types, the counter triangle, formation bonuses, tier consensus and canonical squads
 status: unverified
 grounded_in:
@@ -68,5 +68,6 @@ bottom by most lists.
 ## For this account
 
 The roster itself has not been recorded yet. Which of these heroes the
-account owns, and at what level and star, is the next data to collect, in
-the task list. Investment advice waits for that evidence (C5).
+account owns, and at what level and star, is tracked as IMP-20261101-02
+in the [improvements backlog](../../_records_/retro/improvements.md).
+Investment advice waits for that evidence (C5).
