@@ -1098,3 +1098,15 @@ of 2026-10-28.
   in main, so no PR needed. Local main fast-forwarded to
   the merge via the bundle route. End-of-pass sweep: zero
   open PRs. Full detail in pr-integration/0615-run.md.
+
+## 06:30 to about 06:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0630. Zero open
+  PRs at pass start; records/2026-11-01 carried one
+  unmerged commit (the 0615 run record), so records PR 58
+  was opened by this pass and merged with a merge commit
+  (8b5a8106); the date branch was not deleted.
+  Records/2026-10-31 verified contained in main, so no PR
+  needed. Local main fast-forwarded to the merge via the
+  bundle route. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0630-run.md.
