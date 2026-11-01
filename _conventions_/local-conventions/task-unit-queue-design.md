@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:24:07Z
-version: 0.11.0
+modified: 2026-11-01T05:34:00Z
+version: 0.12.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -740,8 +740,31 @@ standing list, never a one-day note. The retro's headline
 findings join the round summary as pointers to the retro file;
 the file is the record, the summary is the pointer.
 
+### System evaluation metrics
+
+This section measures the work; the companion specification
+[evaluation metrics](evaluation-metrics.md) measures the system
+that does the work - execution efficiency per task type,
+perception completeness and discovery generalisation, retro
+effectiveness (including the recurrence rate of closed
+improvements), the measured impact of the tool developer and
+the knowledge organiser, and loop health, including the queue
+depth and oldest unit age the 2026-10-31 loop review found
+missing. The daily retro computes its core set, the weekly
+comparison reads the trend, and threshold breaches are named
+the day they are computed. Its computation extends
+`tools/retro_report.py` as a `system_metrics` object in the
+same data appendix, filed in the tool-developer backlog in the
+specification's own terms.
+
 ## Changelog
 
+- 0.12.0, 2026-11-01 - section 14 gains a cross-reference to
+  the new evaluation metrics specification - the system-level
+  companion that measures execution efficiency, perception,
+  discovery, retro effectiveness and the impact of the tool
+  developer and the knowledge organiser, with its computation
+  extending tools/retro_report.py.
 - 0.11.0, 2026-11-01 - the aggregation of section 14 is
   implemented as `tools/retro_report.py` - per regular, per
   day and rolling window aggregates over the done pool, the

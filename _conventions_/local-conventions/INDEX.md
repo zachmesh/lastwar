@@ -1,8 +1,8 @@
 ---
 title: Local Conventions
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:10:00Z
-version: 1.5.0
+modified: 2026-11-01T05:34:00Z
+version: 1.6.0
 description: The local convention articles of this repository
 grounded_in:
   - source: human-authored
@@ -35,6 +35,12 @@ in this repository.
 - [Loop review 2026-10-31](loop-review-2026-10-31.md) — the review of
   whether the feedback and improvement loop is closed, with the four
   open links filed for the first retro.
+- [Evaluation metrics](evaluation-metrics.md) — the specification for
+  measuring the play system itself: execution efficiency per task
+  type, perception completeness and discovery generalisation, retro
+  effectiveness, the measured impact of the tool developer and the
+  knowledge organiser, and loop health, with the monitoring
+  thresholds the daily retro enforces.
 - [Daily collection ledger](daily-collection-ledger.md) — the master
   list of everything collectible or due in one reset day, each line
   with the live read that closes it, walked by the pre-reset zero
