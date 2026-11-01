@@ -28,6 +28,9 @@ external job commands and historical paths working during migration. It shares
 all configuration and state with `_tools_/`; it is not a second installation.
 New job commands, stage pathspecs and documentation use `_tools_/`. Keep the
 compatibility link until external callers have been verified to use that path.
+Git cannot stage files through a directory symlink. Records writers must use
+`git add -- _tools_/state/` for runtime state; update any external job stage
+pathspecs before relying on them to publish state.
 
 This executable payload retains its existing Python and JSON filenames as
 specified in the [type registry](../_conventions_/local-conventions/typed-folder-adoption.md).

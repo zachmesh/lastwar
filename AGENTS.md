@@ -43,6 +43,12 @@ strategy in `_knowledge_/strategy-playbook`, the resource map in
 `_tools_/resources.json` and its snapshots, and the working tools in
 `_tools_/`.
 
+Use `_tools_/` in every new tool command and Git stage pathspec. The root
+`tools` compatibility symlink supports old Python commands, but Git cannot
+stage a path through a symlink. Records writers must stage `_tools_/state/`
+explicitly alongside their other records paths, even when an older job
+prompt still names the previous path.
+
 ## Governance
 
 Constitutions C1 to C5 of dtadpole/reflection govern this repository by
