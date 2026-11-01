@@ -1391,3 +1391,55 @@ of 2026-10-28.
   no observed_items block - 0 enqueued, 0 candidates,
   0 unexplained in the diff. Queue cleanup 0 withdrawn.
   Full detail in queue-planning/1350-run.md.
+
+## 13:45 to about 13:53 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-1345, done:
+  knowledge PR 97 merged by squash (mail-rewards 1.3.0,
+  alliance-duel 1.5.0, alliance-train 1.7.0, Owner
+  lastwar-knowledge-organizer, review clean); records
+  PR 98 merged with a merge commit (records/2026-11-01
+  runs 1330, 1336, 1332, 1339 and queue-planning 1350),
+  date branch kept. No feedback comments, no
+  owner-gated escalations, no conflicts. End-of-pass
+  sweep: zero open PRs. Local main synced to 7bfb84dc0.
+  Merges synced to the owner Slack DM. Full detail in
+  pr-integration/1345-run.md.
+
+## 13:40 — Queue ticker pass, shop claims (partial, checked only)
+
+- Passes unit passes-2026-11-01-1057, partial: shop tabs all
+  checked live and nothing new was claimable. Weekly Pass Free
+  Supply reads Claimed, Coin Weekly Pass Already claimed today
+  with 2d 4:23:02 remaining, S1 Drone Parts pass not currently
+  owned, Monthly Pass Claimed with 20 days and 20 rewards left,
+  Season Battle Pass at 17,800 points with no rewards available
+  to claim. No paid button tapped. The Season Weekly Pass tile
+  was not opened in this unit and stays the first action of the
+  next passes unit. Full detail in shop-claims/1340-queue-run.md.
+
+## 13:48 — Queue ticker pass, event claims (done, checked only)
+
+- Events unit events-2026-11-01-1057, done as checked only:
+  all five hub tabs swept, nothing claimable. Arms Race Unit
+  Progression at score 0 with chests unearned and about 00:17
+  of phase left at 13:44, so the phase ends around 14:01,
+  ahead of the arms-race 14:03 slot. Level Swap inspected only.
+  Rampage Bosses Mutated Bear Lv.9 at 0 percent with no claim
+  button, no fight started. Community Claimed. Frontline
+  Breakthrough all six rewards green-checked. Full detail in
+  event-claims/1348-queue-run.md.
+
+## 13:52 — Queue ticker pass, truck plunder (partial)
+
+- Trucks unit trucks-2026-11-01-1057, partial: one SR truck
+  dispatched (R rolled, free refresh to N, two Trade Contract
+  refreshes to SR, stock 155 to 153, Let's Go, Squad 4),
+  moving Trade Count 3 of 5 to 4 of 5 live. The empty-slot
+  plus re-measured at 625,440 opened the panel, closing the
+  1053 tap blocker. Plunder stays 1 of 4: one SSR passed over
+  for no shard stacks, one for guard 79.6M, and the refreshed
+  list's top purple trucks would not open after two corrected
+  taps, so no fight was started. Shortfall carried forward:
+  dispatch 1 more and plunder 3 more before 19:00. Full detail
+  in truck-plunder/1352-queue-run.md.
