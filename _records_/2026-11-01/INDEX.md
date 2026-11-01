@@ -1674,3 +1674,61 @@ of 2026-10-28.
   escalations, no conflicts. Local main synced to
   9a2b2033; merges synced to the owner Slack DM. Full
   detail in pr-integration/1515-run.md.
+
+## 15:32 to about 15:55 - Knowledge organization pass (profiles updated, PR 109)
+
+- Organizer run knowledge-organization-2026-11-01-1532,
+  worked from the 1432 watermark: zero open PRs at pass
+  start (PR 102 stands MERGED with no comments and no
+  reviews), improvements backlog unchanged at version
+  1.1.1, and three windows of new profile knowledge -
+  the ticker-1434 scout and daily-missions units and
+  the ticker-1504 arms-race unit.
+- Profiles updated, PR 109 (OPEN, Owner
+  lastwar-knowledge-organizer): perception-scout 1.1.0
+  to 1.2.0 (112,946 back-arrow point superseded - failed
+  at 14:47, fresh measurement 163,947 works, never
+  inherit a point; treasure progress 2/15 with fragment
+  counts; HUD 14:47 read; red dots seen 5, explained 2,
+  unexplained 3; building badge 5 and NEW! chest badge
+  3 not re-seen and not cleared; furnace toast [22/60]
+  still unexplained), daily-missions 1.0.1 to 1.1.0
+  (entry orange terminal norm 45,865; activity 110 to
+  150; one-tap-two-claims recorded as unverified
+  mechanism with the individual-claim rule unchanged;
+  120 chest contents and No double reward popup;
+  chests 40/80/120 opened with 160/200 ahead) and
+  arms-race 1.16.0 to 1.17.0 (Tech Research phase ending
+  about 17:57, score 0, tier-3 gap 30,000, measured
+  research timers 4d 16:36:32 and 1d 19:08:09 so no
+  completion lands in the window, later-unit shortcut
+  of re-reading score and sweep only, tab re-ground
+  from OCR every opening, scoring-row arrow method
+  dead). One contradiction resolved (scout back-arrow
+  standing point); no gaps filed, no stale items
+  marked. Full detail in knowledge-organization/1532-run.md.
+
+- Catchall run pr-catchall-2026-11-01-1539, no-op: one
+  open PR scanned, PR 109 docs activities, Owner
+  lastwar-knowledge-organizer, diff three _activities_
+  profiles, no reviews and no comments, opened 23:37Z so
+  far under the 48 hour stale-owner threshold; no PR
+  adopted by this job to re-check, PR 102 stands MERGED;
+  no adoption, no fix, no hand-off, no escalation.
+  Full detail in pr-catchall/1539-run.md.
+
+## 1542 to about 1542 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-1542,
+  done: plan-expiry done guard in `_tools_/queue.py`, PR 110
+  opened (branch work/plan-expiry-done-guard, commit
+  9ce56b4f33). The queue-planning 1457 follow-up reported
+  plan expiry overwriting done files that already carried
+  execution results (10 repaired by hand); expiry now
+  drops the stale inbox copy, keeps the executed record
+  byte-identical, and warns on stderr. Validation on an
+  isolated scratch pool passed, and the same fixture
+  against unpatched main fails as expected. No backlog
+  entry changed (the hazard has none yet; filing is left
+  to the retro). Full detail in
+  tool-development/1542-run.md.
