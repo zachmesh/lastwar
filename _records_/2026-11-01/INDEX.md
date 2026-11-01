@@ -413,3 +413,18 @@ of 2026-10-28.
   the bundle route. Merge synced to the owner Slack
   DM. End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0800-run.md.
+
+## 08:04 to about 08:12 — Queue ticker pass, arms-race (failed, device offline)
+
+- Arms-race unit arms-race-2026-11-01-0603, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path)
+  plus a failed health probe, a failed repair attempt and
+  a timed-out recovery-channel attempt, last seen 01:47
+  local and unmoved across the pass. No screen read, no
+  Arms Race phase or score observed, nothing claimed,
+  nothing spent. Tracker untouched. Twelfth consecutive
+  access-failed pass after the 02:34, 03:04, 03:34, 04:04,
+  04:34, 05:04, 05:34, 06:04, 06:34, 07:04 and 07:34 passes;
+  the channel has been down since 01:47 local. Full detail
+  in arms-race/0804-queue-run.md.
