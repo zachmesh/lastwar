@@ -572,7 +572,7 @@ of 2026-10-28.
   owner Slack DM. End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0900-run.md.
 
-## 09:15 to about 17:18 — PR integration pass
+## 09:15 to about 09:18 — PR integration pass
 
 - Integrator pass pr-integration-2026-11-01-0915. Zero
   open PRs at pass start. Records/2026-11-01 carried
