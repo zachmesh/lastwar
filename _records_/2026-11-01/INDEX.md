@@ -643,3 +643,20 @@ of 2026-10-28.
 - No gap filed, no stale item marked. Next run checks
   PR 72 review feedback first. Full detail in
   knowledge-organization/0932-run.md.
+## 09:32 to about 09:40 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-0940,
+  done: scout_diff day-counters fix, PR 73 opened (branch
+  work/scout-day-counters, commit b86898484). The planner
+  0844 diff reported 0 unexplained red dots while the
+  2026-11-01 observation frontmatter reports 3; the tool
+  now carries the frontmatter day counters in the coverage
+  report and the round-summary section, separately from
+  the classified counts, with a match/mismatch line.
+  Validation on isolated scratch pools: 24 fixture
+  assertions pass, pre-existing outputs byte-identical to
+  the pre-change tool. No backlog entry changed (none
+  files this gap); the retro may file one. Record pushed
+  on records/2026-11-01 for the integrator sweep, never
+  directly to main.
+  Full detail in tool-development/0940-run.md.
