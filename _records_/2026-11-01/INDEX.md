@@ -604,3 +604,123 @@ of 2026-10-28.
   Full detail in troop-training/0917-queue-run.md.
 - Tracker untouched for both partial units. Nothing claimed, nothing
   spent. No different-device dialog, no login demanded.
+
+## 09:30 to about 09:35 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0930. One
+  open PR at pass start (PR 71, records/2026-11-01,
+  Owner lastwar-pr-integrator, no comments), merged
+  with a merge commit (8c50e012); the date branch was
+  not deleted. Records/2026-10-31 was fully contained
+  in main, so no PR was needed for it. No knowledge or
+  code PR was open. Local main fast-forwarded to the
+  merge via the bundle route. Merge synced to the
+  owner Slack DM. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0930-run.md.
+
+## 09:32 to about 09:40 — Knowledge organization pass (profiles updated, PR 72)
+
+- Organizer run knowledge-organization-2026-11-01-0932,
+  worked from the 0832 watermark: zero open PRs at pass
+  start (PRs 68, 69, 70 and 71 records MERGED, no
+  comments, no reviews), improvements backlog unchanged
+  at version 1.1.1, and one window of new profile
+  knowledge - the ticker-0904 survivors and training
+  partials.
+- Profiles updated, PR 72 (OPEN, Owner
+  lastwar-knowledge-organizer): survivor-intake 1.5.0
+  to 1.6.0 (distinct-unit partial streak reaches 24;
+  pet icon, green temperature button and STOP-barrier
+  tap point corrected to look-alikes, not survivor
+  bubbles) and troop-training 1.2.0 to 1.3.0
+  (pinned coordinate 617,570 selected Missile Vehicle
+  Base Lv.10 in the 0917 camera position, so pinned
+  points can select a wrong building, not just miss;
+  pan to the tent row first; Drill Ground Full
+  39,460 of 39,460 carried forward unverified a second
+  consecutive unit). Three contradictions resolved;
+  no record file overwritten.
+- No gap filed, no stale item marked. Next run checks
+  PR 72 review feedback first. Full detail in
+  knowledge-organization/0932-run.md.
+## 09:32 to about 09:40 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-0940,
+  done: scout_diff day-counters fix, PR 73 opened (branch
+  work/scout-day-counters, commit b86898484). The planner
+  0844 diff reported 0 unexplained red dots while the
+  2026-11-01 observation frontmatter reports 3; the tool
+  now carries the frontmatter day counters in the coverage
+  report and the round-summary section, separately from
+  the classified counts, with a match/mismatch line.
+  Validation on isolated scratch pools: 24 fixture
+  assertions pass, pre-existing outputs byte-identical to
+  the pre-change tool. No backlog entry changed (none
+  files this gap); the retro may file one. Record pushed
+  on records/2026-11-01 for the integrator sweep, never
+  directly to main.
+  Full detail in tool-development/0940-run.md.
+
+
+## 09:39 - PR catch-all pass
+
+- Catchall pass pr-catchall-2026-11-01-0939. Two open PRs
+  at pass start and at the end-of-pass re-read, neither
+  owned by this job. PR 72 (OPEN, Owner
+  lastwar-knowledge-organizer): survivor-intake 1.5.0 to
+  1.6.0 and troop-training 1.2.0 to 1.3.0. PR 73 (OPEN,
+  Owner lastwar-tool-developer): scout_diff carries the
+  observation frontmatter day counters. Both newly opened
+  minutes before the pass, far under the 48 hour stale
+  threshold, zero comments, zero reviews. No adoption, no
+  fix, no hand-off, no owner-gated point, no stale-owner
+  flag. Quiet run, no Slack DM sync. PR 68 MERGED.
+  Full detail in pr-catchall/0939-run.md.
+
+## 09:40 to about 09:44 — Queue planning pass (no-op)
+
+- Planner run queue-planning-2026-11-01-0944, no-op:
+  plan staged 0 units to the 21:40 horizon, 69 already
+  present, 2 skipped as done for the current slot, 0
+  reaped, 0 expired. The 0745 run had already staged
+  the pool to the 19:40 horizon; the next regular
+  slots (22:03, 22:30, 22:57) lie beyond this run's window.
+- Pre-reset sweep production skipped (09:00 hour, not
+  17:00); the sweep pairs for 2026-11-01 and 2026-11-02
+  already sit in the pool, pending 2 each.
+- scout_diff dry and applied on the 02:15 observation:
+  0 items parsed (narrative-only observation, no
+  observed_items block), 0 enqueued, 0 candidates,
+  0 unexplained in the diff - matching the 0344, 0445,
+  0543, 0644, 0745 and 0844 runs on the same observation. The
+  observation frontmatter's 3 unexplained red dots are
+  not captured by the diff; PR 73 (tool-developer, open)
+  implements carrying the frontmatter day counters, and
+  the gap is left for the retro and tool-development,
+  not a chat report.
+- Queue cleanup: 0 units withdrawn - the diff classified
+  nothing as already satisfied, the observation shows
+  pending badges rather than any queued task read as
+  claimed, done or gone, and the observation predates
+  the units staged after it.
+- Delivered on records/2026-11-01 under policy 2.0.0.
+  Full detail in queue-planning/0944-run.md.
+## 09:35 to about 09:38 — Queue ticker pass, alliance gifts (performed)
+
+- Gifts unit gifts-2026-11-01-0630, performed: Regular
+  Claim All 222 gifts (progress 178,139,340 to
+  178,141,560) and Premium Claim All 18 gifts, closing
+  progress at 178,149,760 of 206,300,000, Gift Level 28.
+  First Alliance tap showed only a press effect
+  (background-input pattern); a title-bar left-segment
+  tap plus a retry opened the panel. Full detail in
+  alliance-gifts/0935-queue-run.md.
+
+## 09:39 to about 09:41 — Queue ticker pass, alliance help (performed)
+
+- Help unit help-2026-11-01-0630, performed: Help All
+  pressed, game answered "Allies are very grateful for
+  your assistance!". Visible requests were only this
+  account's own, all already 30/30; header stayed at
+  540/1,000 points. Full detail in
+  alliance-help/0940-queue-run.md.
