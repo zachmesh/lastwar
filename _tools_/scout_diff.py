@@ -20,6 +20,11 @@ outputs in an output directory:
      already satisfied, not actionable with reasons, candidates,
      unexplained red dots, and the day unmatched_labels printed
      in full (an empty list is printed as empty, never omitted);
+     plus the observation frontmatter day counters (passes
+     completed, items observed, red dots seen, explained and
+     unexplained), reported separately from the classified
+     counts, so a narrative-only observation never reads as
+     zero unexplained when its own frontmatter says otherwise;
   4. the promotion proposals - one entry per registered
      candidate with a completed exploration unit in the pool,
      naming the exploration evidence and the decision owed
@@ -32,10 +37,11 @@ outputs in an output directory:
      scoreboard as one short section, written to be pasted
      verbatim into the day round summary (roadmap Phase 3).
      It carries no new numbers: every figure is copied from
-     the coverage counts computed above, and when the pool
-     was not read (--root absent) it says the promotion
-     proposals were not checked instead of reporting zero
-     as a finding.
+     the coverage counts computed above, including the
+     frontmatter day counters when the observation carries
+     them, and when the pool was not read (--root absent) it
+     says the promotion proposals were not checked instead
+     of reporting zero as a finding.
 
 Without --apply the tool is a dry run: it writes its outputs and
 changes nothing in any pool. With --apply it feeds the plan's
@@ -249,6 +255,61 @@ def load_observation(path):
     except ValueError:
         pass
     return parse_observation_text(text)
+
+
+# ---------------------------------------------------------------------
+# Observation day counters - the observation's own accounting
+# ---------------------------------------------------------------------
+
+DAY_COUNTER_KEYS = ("passes_completed", "items_observed",
+                    "red_dots_seen", "red_dots_explained",
+                    "unexplained_red_dots")
+
+
+def _counter_value(value):
+    """A day counter is a non-negative int, or None when absent.
+
+    Absent or malformed values read as None, never as zero: an
+    absent counter is unknown, not a finding.
+    """
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int) and value >= 0:
+        return value
+    if isinstance(value, float) and value.is_integer() \
+            and value >= 0:
+        return int(value)
+    if isinstance(value, str) and value.strip().isdigit():
+        return int(value.strip())
+    return None
+
+
+def day_counters_from_fields(fields):
+    return {key: _counter_value(fields.get(key))
+            for key in DAY_COUNTER_KEYS}
+
+
+def load_day_counters(path):
+    """Read the observation's own day counters, if it carries any.
+
+    Text observations carry them in the leading frontmatter
+    block (the design's day counters); JSON observations carry
+    them as top-level keys. This reads only the observation's
+    own accounting - it classifies nothing, enqueues nothing
+    and files nothing, so a narrative-only observation keeps
+    its dots visible instead of collapsing to a classified
+    zero.
+    """
+    with open(path, encoding="utf-8") as fh:
+        text = fh.read()
+    try:
+        doc = json.loads(text)
+    except ValueError:
+        doc = None
+    if isinstance(doc, dict):
+        return day_counters_from_fields(doc)
+    fields, _ = Q.parse_frontmatter(text)
+    return day_counters_from_fields(fields)
 
 
 # ---------------------------------------------------------------------
@@ -605,6 +666,7 @@ def run(args):
     ledger_regulars = load_ledger_regulars(ledger_path,
                                            set(regulars))
     items, unmatched = load_observation(args.observation)
+    day_counters = load_day_counters(args.observation)
     units = pool_units(args.root)
     now_local = stamp.astimezone(LOCAL_TZ)
 
@@ -950,6 +1012,7 @@ def run(args):
                                       candidates.values()
                                       if c["registered"]]),
         "unexplained_red_dots": unexplained_count,
+        "observation_day_counters": day_counters,
         "unmatched_labels": unmatched,
         "promotion_proposals": len(proposals),
         "outputs": {"enqueue_plan": plan_path,
@@ -987,8 +1050,34 @@ def run(args):
            f"- promotion proposals - "
            f"{coverage['promotion_proposals']} (registered "
            f"candidates with a completed exploration unit, "
-           f"decision owed)",
-           "", "## Promotion proposals", ""]
+           f"decision owed)"]
+    cov += ["", "## Observation day counters", ""]
+    if all(v is None for v in day_counters.values()):
+        cov.append("The observation carries no day counters in "
+                   "its frontmatter - the classified counts "
+                   "above are the only signal, and no day "
+                   "total is claimed.")
+    else:
+        for key in DAY_COUNTER_KEYS:
+            value = day_counters[key]
+            cov.append(f"- {key} - "
+                       f"{value if value is not None else 'not stated'}")
+        front_unexplained = day_counters["unexplained_red_dots"]
+        if front_unexplained is not None:
+            if front_unexplained == unexplained_count:
+                cov.append("The frontmatter unexplained count "
+                           "matches the classified count above.")
+            else:
+                cov.append(
+                    f"Mismatch - the frontmatter reports "
+                    f"{front_unexplained} unexplained red dots "
+                    f"while {unexplained_count} were classified "
+                    f"from structured items. The difference is "
+                    f"narrative-only dots not yet filed as "
+                    f"observed items: this run neither enqueues "
+                    f"nor files them, and the classified count "
+                    f"above is not the day total.")
+    cov += ["", "## Promotion proposals", ""]
     if not args.root:
         cov.append("Pool not read (no --root) - completed "
                    "explorations could not be checked.")
@@ -1056,11 +1145,28 @@ def run(args):
           "run, no new numbers",
           "---", "",
           f"## Perception coverage - {date}", ""]
+    day_unexplained = day_counters["unexplained_red_dots"]
     if coverage["items_observed"] == 0:
-        rs.append("No items were observed in this pass, so "
-                  "this section carries no coverage claim - "
-                  "the passes, not the summary, are the gap "
-                  "to check.")
+        if day_unexplained is None and \
+                day_counters["items_observed"] is None:
+            rs.append("No items were observed in this pass, so "
+                      "this section carries no coverage claim - "
+                      "the passes, not the summary, are the gap "
+                      "to check.")
+        else:
+            day_items_txt = str(day_counters["items_observed"]) \
+                if day_counters["items_observed"] is not None \
+                else "an unstated number of"
+            day_unexp_txt = str(day_unexplained) \
+                if day_unexplained is not None \
+                else "an unstated number of"
+            rs.append(
+                f"No structured items were parsed, but the "
+                f"observation frontmatter reports "
+                f"{day_items_txt} items observed and "
+                f"{day_unexp_txt} unexplained red dot(s) - "
+                f"the pass is narrative-only and those dots "
+                f"are unclassified, not zero.")
     elif coverage["unexplained_red_dots"] == 0:
         rs.append("Zero unexplained red dots.")
     else:
@@ -1078,6 +1184,20 @@ def run(args):
               f"{coverage['applied']}); already satisfied "
               f"{coverage['already_satisfied']}, known not "
               f"actionable {coverage['not_actionable']}.")
+    if any(v is not None for v in day_counters.values()):
+        parts = ", ".join(
+            f"{key} {day_counters[key]}"
+            for key in DAY_COUNTER_KEYS
+            if day_counters[key] is not None)
+        rs.append(f"- observation day counters (frontmatter, "
+                  f"not classified items) - {parts}.")
+        if day_unexplained is not None and \
+                day_unexplained != coverage["unexplained_red_dots"]:
+            rs.append(f"  - mismatch - frontmatter unexplained "
+                      f"{day_unexplained} against classified "
+                      f"{coverage['unexplained_red_dots']}: the "
+                      f"difference is narrative-only dots not "
+                      f"yet filed as observed items.")
     rs.append(f"- unknown items - "
               f"{coverage['unknown_items']} filed as "
               f"candidates ({coverage['candidates_filed']} "
