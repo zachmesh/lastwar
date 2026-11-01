@@ -1663,3 +1663,14 @@ of 2026-10-28.
   bounce, no reward red dot, ranking row lag figure 6,000 not used
   as the score. Nothing claimed, tracker untouched.
   Full detail in arms-race/1523-queue-run.md.
+- PR integration 1515 run: done. Zero open PRs at pass
+  start; records/2026-10-31 contained in main, no PR
+  needed. Records PR 106 opened by this run for the
+  1500 run record and merged with merge commit
+  87f246eff, branch kept, zero open PRs at the
+  end-of-pass sweep. Mid-pass records PR 107
+  (ticker-1504) also merged in this pass with merge
+  commit 9a2b2033. No feedback, no owner-gated
+  escalations, no conflicts. Local main synced to
+  9a2b2033; merges synced to the owner Slack DM. Full
+  detail in pr-integration/1515-run.md.
