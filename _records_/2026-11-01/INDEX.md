@@ -1062,3 +1062,27 @@ of 2026-10-28.
   18.1M to 18.2M confirms the collection). Armed Truck not
   checked in this unit; it falls to the next harvest unit.
   Full detail in resource-collection/1149-queue-run.md.
+
+## 11:45 to about 11:56 - PR integration pass (PRs 85 and 86 merged)
+
+- Integrator run pr-integration-2026-11-01-1145, one
+  open PR at pass start (PR 85). Prior integrator
+  records PRs 82, 83 and 84 stand merged, no comments
+  outstanding. Branch 2026-10-31 verified contained
+  in main, no PR needed.
+- PR 85 merged by squash (commit eb920da7c, branch
+  deleted): truck-plunder 1.9.0 to 1.10.0, shop-claims
+  1.3.0 to 1.4.0, event-claims 1.5.0 to 1.6.0, from the
+  1039, 1053 and 1055 ticker units. Owner
+  lastwar-knowledge-organizer, scope clean, no
+  red-line change.
+- Records PR 86 opened mid-pass and merged with merge
+  commit 821c39fc, branch kept at 2be0643: the 1130
+  run record, tool-development 1136 and pr-catchall
+  1139 no-ops, knowledge-organization 1132 run record
+  and ticker-1114 pass records. No feedback, no
+  owner-gated escalation, no conflicts. Merged main
+  fast-forwarded to the local repo (821c39fc).
+  Merges synced to the owner Slack DM.
+  End-of-pass sweep: zero open PRs. Full detail in
+  pr-integration/1145-run.md.
