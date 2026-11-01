@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T03:55:00Z
+modified: 2026-11-01T10:45:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner standing rules on Mega deploy taught 2026-10-25
   - source: evening dispatch and claim executions, 2026-10-25
+  - source: secret-missions execution record 2026-11-01 0145 PST
 ---
 
 
@@ -33,6 +34,9 @@ post screen carries two sibling tabs registered as their own types -
   rotating shortcut sets, so the same slot can open Intercity Trade
   or the radar instead - always verify the title SECRET COMMAND POST
   before tapping further.
+- Measured 2026-11-01 - a first tap at norm (52,643) opened the post
+  and the title was verified before acting, a third observed slot
+  point for this entry.
 - The screen has three tabs - Secret Tasks, Hidden Treasures and
   Ghost Ops. Secret Tasks itself shows Your Tasks with a count badge
   and an Others' Tasks or Ally Tasks list below.
@@ -93,11 +97,23 @@ post screen carries two sibling tabs registered as their own types -
   Loulou972 with an SSR task, carried a blue Assist button, and one
   tap assisted it and paid rewards on the spot (Iron, a Mystery
   Supply Box, Food, Hero EXP). Counter went 0 of 5 to 1 of 5.
-- Open question - UR ally rows (three observed) showed only a
-  countdown of about 3 hours and no Assist button. Tapping the
-  avatar, the reward icons, the countdown and the name - which jumps
-  to a world map task card with a round handshake button - none of
-  these consumed an assist.
+- Corrected 2026-11-01 - UR ally rows CAN carry a blue Assist button,
+  superseding the 2026-10-25 note that they showed no Assist button.
+  In the 0145 unit the UR rows carried blue Assist buttons, but four
+  attempts consumed nothing - two single taps on the first row at its
+  measured centre (782,485), one 1 second long press at the same
+  centre, and one single tap on the second row, each verified by a
+  second observation, with the counter staying 0 of 5 and no reward
+  popup. This differs from the 2026-10-25 SSR assist, which succeeded
+  on one tap. The record's next-variant hypothesis, untested, is
+  that UR rows need the world-map handshake entry path instead.
+- Open question - UR ally rows (three observed 2026-10-25) showed
+  only a countdown of about 3 hours and no Assist button. Tapping
+  the avatar, the reward icons, the countdown and the name - which
+  jumps to a world map task card with a round handshake button -
+  none of these consumed an assist. That no-button observation is
+  now superseded for rows that do carry an Assist button, above;
+  the world-map handshake route itself remains untested.
 - The Others' Tasks panel carries a Monica note - sharing a Secret
   Task from the World Map into the Alliance Channel marks it
   automatically; only a secret task that is currently plunderable or
@@ -149,6 +165,42 @@ Per task play data, as the owner documentation standard requires.
   Disrupt electric grid, both Provide Tech Support to Refugees and
   Protect Refugee Camp - for the next round to claim.
 
+## What is known from 2026-11-01
+
+Measured in the 0145 unit (ticker-0136, unit
+secrets-2026-10-31-2257, status partial).
+
+- Duel posture at 01:39 PST - day 7, Off day settlement, no scoring
+  actions, so no Mega Refresh was used and its cost is still
+  unobserved. The Mega Refresh cost question is unchanged.
+- Own tasks pending, badge 9, all with Go buttons and no finished
+  task to claim - UR Rescue Test Subject, UR Disrupt electric grid,
+  SSR Search for Missing Refugees x2, SSR Train Refugees, SR
+  Retrieve Agent Profile, SR Retrieve Abandoned Gear, SR Retrieve
+  Raw Materials, SR Retrieve Valuable Supplies.
+- Mega Deploy panel - all 9 tasks checked, UR Only already off at
+  panel open (the filter does not always start on - verify its
+  state before checking), no price tag on Perform Now. Perform Now
+  tapped once and the panel closed to the base with a dispatch
+  animation.
+- Dispatch verified live on re-entry - Your Tasks badge cleared,
+  Mega Refresh and Mega Deploy greyed out, running countdowns read
+  on screen - Rescue Test Subject 03:59:53 (4h), Disrupt electric
+  grid 01:59:58 (2h), Train Refugees 00:59:34 (1h), Search for
+  Missing Refugees 00:59:37 (1h). These match the catalogue
+  durations for the same tasks, a cross-check, not a new duration.
+- Ally assists NOT completed, blocker recorded - Assist Allies
+  stayed 0 of 5 after the four Assist-button attempts described in
+  the assist section. Plunder Others not touched (0 of 5, PvP, no
+  owner instruction).
+- Next-unit work, carried from the record - the next secrets unit
+  should retry ally assists first via a different entry variant
+  (tap the ally name or avatar to the world-map task card and its
+  handshake button), not by repeating the Assist-button taps. If
+  that also fails, the blocker is written into this profile under
+  rule R2. Own tasks are all running, so no new dispatch is due
+  until they return.
+
 ## Limits
 
 - Plunder Others is PvP. It is not touched without the owner explicit
@@ -159,7 +211,9 @@ Per task play data, as the owner documentation standard requires.
 
 ## Open questions
 
-- How a UR ally task is assisted (see the assist section).
+- How a UR ally task is assisted (see the assist section) - the
+  0145 Assist-button attempts failed, so the world-map handshake
+  entry variant is the next test, not a repeat of those taps.
 - The cost of Mega Refresh, and whether it can be used freely.
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.
