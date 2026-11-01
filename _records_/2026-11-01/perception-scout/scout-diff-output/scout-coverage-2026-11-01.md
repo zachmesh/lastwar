@@ -1,6 +1,6 @@
 ---
 title: Scout Coverage 2026-11-01
-created: 2026-11-01T14:42:11Z
+created: 2026-11-01T15:42:45Z
 description: Coverage report of the scout diff for this date
 ---
 
