@@ -571,3 +571,36 @@ of 2026-10-28.
   merge via the bundle route. Merge synced to the
   owner Slack DM. End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0900-run.md.
+
+## 09:15 to about 09:18 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0915. Zero
+  open PRs at pass start. Records/2026-11-01 carried
+  one commit beyond main (the 0900 run record), so
+  this pass opened records PR 70 and merged it with a
+  merge commit (fdf0b965); the date branch was not
+  deleted. Records/2026-10-31 was fully contained in
+  main, so no PR was needed for it. No knowledge or
+  code PR was open. Local main fast-forwarded to the
+  merge via the bundle route. Merge synced to the
+  owner Slack DM. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0915-run.md.
+
+## 09:04 to about 09:18 — Queue ticker pass, survivors and training (both partial)
+
+- Survivors unit survivors-2026-11-01-0603, partial: gate line not
+  verified. Fresh grounding plus enlarged crops of the restored base
+  view found no question-mark survivor line; one tap near the
+  bottom-left STOP barrier produced no change, the centre-right
+  circular icon was a pet icon and the left-edge green button a
+  temperature control, not survivor bubbles. No survivor tapped, no
+  recruit taken in, Quick Dispatch not run without an intake.
+  Full detail in survivor-intake/0913-queue-run.md.
+- Training unit training-2026-11-01-0603, partial: barracks tent row
+  not located in this pan. Taps selected Titanium Alloy Factory No.1
+  Lv.30, Titanium Alloy Factory No.2 Lv.30 and Missile Vehicle Base
+  Lv.10; no TRAIN UNITS panel reached, no batch collected or
+  started, Drill Ground state carried forward unverified.
+  Full detail in troop-training/0917-queue-run.md.
+- Tracker untouched for both partial units. Nothing claimed, nothing
+  spent. No different-device dialog, no login demanded.
