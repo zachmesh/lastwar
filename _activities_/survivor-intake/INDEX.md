@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-01T08:36:31Z
-version: 1.5.0
+modified: 2026-11-01T17:40:00Z
+version: 1.6.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -30,6 +30,12 @@ Measured on 2026-10-25.
 - Tap a survivor figure to open their card or dialog. Tapping the
   bubble alone can miss; the figure is the reliable target, and
   visual grounding found them reliably when taps drifted.
+- Look-alikes measured 2026-11-01 (0913 unit): a centre-right
+  circular icon is a pet icon, not a question-mark bubble -
+  grounding had misread it as one - and the left-edge green
+  0 degree button is a temperature control, not a smiley
+  bubble. An icon read alone never verifies a survivor; the
+  figure is the target.
 - A bubble with an exclamation mark is a visitor, not a recruit -
   one opened a Friendly Visitor dialog asking to enable
   notifications. Cancel left it untouched; nothing was enabled.
@@ -177,6 +183,33 @@ Measured on 2026-10-25.
   opened, Quick Dispatch did not run, and the tracker is
   untouched, so the next tick re-produces this regular.
 
+## What the 2026-11-01 0913 unit added
+
+- Distinct-unit streak reaches 24: this unit
+  (survivors-2026-11-01-0603, ticker-0904) is the 24th
+  consecutive distinct queue-era partial, counting only
+  distinct units as the 0041 accounting does - the
+  access-failed 0504 unit is a failure, not a partial, and
+  does not extend the streak. Gate line never verified,
+  nothing recruited, tracker untouched.
+- Look-alike corrections, measured in the restored base view
+  with enlarged crops: the bottom-left crop shows only the
+  STOP road barrier, cannons and a tree, with no
+  question-mark bubble and no survivor figure - a tap at
+  norm 293,648 near the barrier produced no change on a
+  second observation, so that point was not a survivor.
+  The centre-right circular icon is a pet icon, which the
+  grounding had misread as a question-mark bubble, and the
+  left-edge green 0 degree button is a temperature control,
+  not a smiley bubble. Neither is a survivor or a bubble to
+  tap.
+- Claim discipline re-affirmed: the unit does not claim the
+  gate is empty, only that no waiting line was found in
+  the pans searched; Quick Dispatch was not run, because
+  no named recruit was taken in during this unit, and
+  running it without an intake would not satisfy the
+  standing blocker.
+
 
 ## Open questions
 
@@ -205,3 +238,9 @@ Measured on 2026-10-25.
   with only three pans counted, the unretried grounding
   timeout, and the focus-loss recurrence with the same
   274,18 title-bar fix, folded from the 0041 survivors unit.
+
+- 1.6.0 (2026-11-01): distinct-unit partial streak reaches
+  24, and the look-alike corrections (pet icon misread as a
+  question-mark bubble, green temperature button misread
+  as a smiley bubble, STOP-barrier tap point with no
+  change), folded from the 0913 survivors unit.
