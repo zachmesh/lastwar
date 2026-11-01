@@ -1,7 +1,7 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T05:42:09Z
+modified: 2026-11-01T06:42:56Z
 version: 1.0.0
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
@@ -75,7 +75,7 @@ entries to implemented.
   whose required stats keys are missing, demonstrated on an
   isolated fixture pool; the retro then reads the post-rule
   unverified rate falling week over week.
-- status: open
+- status: implemented - PR 11 (branch work/queue-complete-stats-validation, commit 1b2dd38d252fca74eaa20ef49c4187607675b2d1), warning in queue.py complete; fixture validation 9/9 plus retro cross-check passed on an isolated scratch pool.
 
 ### IMP-20261031-09 - queue aging boost against starvation
 
