@@ -503,3 +503,22 @@ of 2026-10-28.
   pre-existing outputs and a clean dry run over a real
   pool copy. Full detail in
   tool-development/0245-run.md.
+## 02:39 to about 02:45 - PR catch-all (no-op)
+
+- PR catch-all run pr-catchall-2026-11-01-0239, no-op:
+  own-PR check first found no PR adopted by this job (no
+  catchall comment on PRs 29 to 41, prior passes covered
+  PRs 1 to 30). One open PR, newly opened and correctly
+  owned: PR 41 (_activities_ profiles 1.2.0, 1.1.0 and
+  1.1.0, Owner lastwar-knowledge-organizer, diff exactly
+  the three profile files). No review or comment, no red
+  line, authorisation, cron definition or PR policy text,
+  and far under the 48 hour stale-owner threshold, so no
+  adoption, fix, hand-off or flag. The missing
+  pr-catchall/2345-run.md on records/2026-10-31 (folder
+  holds only 2350-run.md, re-verified by ls-tree) is
+  carried forward for the integrator, not reconstructed.
+  Full detail in pr-catchall/0239-run.md.
+## 02:32 to about 02:45 - Knowledge organization pass
+
+- Knowledge organizer run knowledge-organization-2026-11-01-0232, done: own-PR check first, zero open PRs at pass start, PR 35 stands MERGED with no comments, nothing addressed to this job and nothing taken over. Backlog on main version 1.1.1: no open knowledge-organization entry covers these types. Folded secret-missions 0145, hidden-treasures 0150 and perception-scout 0215 into profiles 1.2.0, 1.1.0 and 1.1.0 on PR 41 (commit 4d10bab8e, Owner lastwar-knowledge-organizer). One contradiction resolved: the 2026-10-25 note that UR ally rows show no Assist button is superseded by the 0145 UR rows carrying blue Assist buttons that four taps did not consume. Full detail in knowledge-organization/0232-run.md.
