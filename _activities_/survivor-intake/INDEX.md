@@ -1,13 +1,14 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-01T18:39:17Z
-version: 1.7.0
+modified: 2026-11-01T20:40:00Z
+version: 1.8.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1017 survivors diagnostic unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1159 survivors unit)
 ---
 
 
@@ -277,6 +278,56 @@ Measured on 2026-10-25.
   was tapped, no recruit card or dialog was opened, no live
   Quick Dispatch was completed, 0 recruited, 0 dispatched.
 
+## What the 2026-11-01 1159 unit added
+
+- Regular-unit partial streak reaches 25: this unit
+  (survivors-2026-11-01-1003, ticker-1151) is the 25th
+  consecutive distinct regular-unit partial by the 0041
+  and 0913 counting rule - the 1017 diagnostic partial
+  is counted separately and does not extend the regular
+  streak, and the access-failed 0504 unit is a failure,
+  not a partial. No survivor was verified, tapped as a
+  recruit, or taken in; no Quick Dispatch ran; the
+  tracker is untouched, so the next tick re-produces
+  this regular.
+- Entry path measured fresh in this unit (no coordinate
+  copied from an earlier unit): base screen in window
+  mode (763 by 1050), HUD power 148,957,193, food
+  289.2M, iron 477.2M, coin 10.6M, second-row resource
+  18.2M. Centre base view showed the resource-house row
+  with ready bubbles, a helicopter vehicle, a green
+  turret building and the large gift box; no
+  question-mark bubble and no survivor figure verified
+  in this view.
+- Opposite-direction pan, a changed method versus the
+  1017 diagnostic (which panned base-to-top-left): a
+  drag from norm 300,400 to norm 650,650 shifted the view
+  only slightly (about 3 percent changed area) and
+  returned essentially the same centre base view. The
+  bottom-right outside the wall now showed a small
+  walking figure near a bare tree, with no question-mark
+  bubble visible over it. One fresh tap probe on that
+  newly revealed figure, at norm 620,670, produced no
+  change - no card or dialog opened. Per rule R2 the
+  method ends there for this unit; the same point was
+  not tapped again.
+- Gate line: NOT READ. The signed "Zombies" front gate
+  itself was not located in this unit, so no gate line
+  can be quoted verbatim and the gate is NOT claimed
+  empty. Claim discipline holds: the unit claims only
+  that no waiting line was found in the pans searched.
+- Next-unit instruction, from the record itself, with a
+  process warning attached: the next survivors unit must
+  change the entry route again before repeating this work
+  (rule R2) - the concrete untried variant is a zoom-out
+  to read the full base perimeter and locate the signed
+  gate first, rather than another centre-view pan or
+  single-figure tap. A further identical partial is a
+  process failure to be reported to the owner, not a
+  result. Quick Dispatch is recorded as not located in
+  this unit, never inferred from the older metadata
+  description.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -310,3 +361,14 @@ Measured on 2026-10-25.
   question-mark bubble, green temperature button misread
   as a smiley bubble, STOP-barrier tap point with no
   change), folded from the 0913 survivors unit.
+
+- 1.8.0 (2026-11-01): distinct regular-unit partial streak
+  reaches 25, the opposite-direction pan with only about
+  3 percent view shift, the no-change tap probe at
+  620,670 on the bottom-right walking figure, the gate
+  line still not read and not claimed empty, and the
+  zoom-out-to-the-perimeter-first next-unit instruction
+  with its process-failure warning, folded from the 1159
+  survivors unit. (1.7.0 carried the 1017 diagnostic
+  section without a changelog line; the numbering is
+  preserved, not rewritten.)

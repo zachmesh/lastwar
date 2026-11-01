@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T18:39:17Z
+modified: 2026-11-01T20:40:00Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner direction to claim both gift pages, evening of 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0935 gifts unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1221 gifts unit)
 ---
 
 
@@ -153,6 +154,44 @@ one file per execution.
   at 178,149,760 of 206,300,000. The game was left on the
   Alliance Gifts Premium list.
 
+## What the 2026-11-01 1221 unit added
+
+- Performed, ticker-1204, session about 12:21, status
+  done: the Alliance panel opened from the base on the
+  first tap, and the Alliance Gifts entry carried a red
+  dot. Gift Level 28, progress 178,322,940 at entry.
+- Regular tab: Claim All badge 20 claimed 21 gifts in one
+  tap (one arrived during the claim), summary dialog "A
+  total of 21 Regular Alliance Gifts were claimed this
+  time". Progress moved 178,322,940 to 178,323,150,
+  plus 210, exactly 21 times 10 points - the same
+  badge-versus-dialog arrival gap the 0110 unit measured,
+  so a badge count is never the claimed count until the
+  dialog confirms it.
+- Premium tab: the first tab tap did not switch the tab,
+  the second tap at norm 700,250 did (one no-change tap,
+  not a blocker). Claim All badge 3 claimed 3 gifts: two
+  Alliance Gift (SSR) at plus 200 points each and one
+  Alliance Gift (MR) at plus 1000 points. Progress moved
+  178,323,150 to 178,324,550, plus 1400, exactly 200 plus
+  200 plus 1000.
+- Re-check discipline, the two-sweep rule in action:
+  back on the Alliance panel the Gifts entry still showed
+  a red dot, so the unit re-entered the gifts screen
+  instead of closing. One new Regular gift had arrived
+  (ANGEL777 Apex, Defeated Doom Elite, plus 10) and was
+  claimed with Claim All badge 1; the summary dialog
+  confirmed 1 Regular gift claimed. Unit total: 22
+  Regular gifts and 3 Premium gifts, 25 gifts claimed.
+  Progress after the final gift was not re-read live, so
+  the last live progress figure is 178,324,560, read on
+  the re-entry screen before the final claim; the final
+  gift's plus 10 points are counted in the claimed total,
+  not in a derived progress figure.
+- No Alliance Store opened, no purchase made. The game
+  was left on the Alliance panel, not on another
+  regular's screen.
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -168,3 +207,9 @@ one file per execution.
   Chrome-frontmost background-input nuance, folded from the
   0110 gifts unit.
 - 1.4.0 (2026-11-01): measured 0935 entry and per-tab Claim All points, dialog-confirmed counts (222 Regular, 18 Premium), first successful execution after the device-offline run, and the title-bar-then-retry entry reconciliation, folded from the 0935 gifts unit.
+- 1.5.0 (2026-11-01): dialog-confirmed counts (22 Regular,
+  3 Premium, 25 total) with the badge-versus-dialog arrival
+  gap repeated, the Premium tab no-change first tap at
+  700,250, the SSR 200 and MR 1000 point values, and the
+  re-check re-entry that caught a newly arrived gift,
+  folded from the 1221 gifts unit.
