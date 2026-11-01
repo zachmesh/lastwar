@@ -275,3 +275,25 @@ of 2026-10-28.
   (day-INDEX still references it) is carried forward for the
   integrator, not reconstructed. Full detail in
   pr-catchall/0139-run.md.
+
+## 01:35 to 01:42 — Ticker (help done, mail partial)
+
+- Help unit help-2026-10-31-2230, executor ticker-0134, done:
+  Help All pressed once; header read live 80/1,000 before and
+  160/1,000 on a close-and-reopen re-read, confirming 80 points
+  gained in the unit. Full detail in
+  alliance-help/0135-queue-run.md.
+- Mail unit mail-2026-10-31-2230, executor ticker-0134, partial:
+  the Mail panel would not open from the base-screen right rail;
+  two standard clicks, one exact-pointer click and one long press
+  at the freshly measured Mail point all showed no change, while
+  panel-screen taps worked in the same pass. Nothing claimed,
+  nothing deleted; the tracker is untouched so the next tick
+  re-produces the regular, and the next mail unit must arrive
+  with a changed entry method under queue rule R2. Full detail
+  in mail-rewards/0139-queue-run.md.
+- Zombie seeding skipped: the zombie-invasion chain is closed
+  (event ended 2026-10-30 about 19:00); no zombie unit was due.
+- Own-PR check first: no open PR owned by this job; the records
+  branch carried no open PR at push time, so this pass opens its
+  own records PR (Owner lastwar-pr-integrator) after pushing.
