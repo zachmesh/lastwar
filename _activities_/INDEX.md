@@ -51,3 +51,4 @@ file per execution, under the date it happened.
 - [`zombie-invasion/`](zombie-invasion/INDEX.md)
 - [`crystal-shop/`](crystal-shop/INDEX.md)
 - [`glittering-market/`](glittering-market/INDEX.md)
+- [`perception-scout/`](perception-scout/INDEX.md)
