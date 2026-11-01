@@ -534,3 +534,7 @@ unrecoverable fields written unknown:
 ## 22:45 to about 22:50 — PR integration (feedback only)
 
 - PR integrator run pr-integration-2026-10-31-2250, done: 1 open PR seen (PR 2, ops execution records standard), 0 merged, 1 review comment posted, 0 escalated. PR 2 was not mergeable - GitHub reports CONFLICTING and a scratch merge reproduced conflicts in _logs_/repo-actions/action-log.jsonl and _logs_/user-inputs/input-log.jsonl only. The comment asks the author to rebase onto current main and re-append the two log lines, and notes the rest of the review as clean. PR left open, no sync-back (nothing merged), no backlog edit (no linked improvement task id yet). Full detail in pr-integration/2250-run.md.
+
+## 23:00 to about 23:2314 - PR integration (merge)
+
+- PR integrator run pr-integration-2026-10-31-2314, done: 1 open PR seen at pass start (PR 2, ops execution records standard), 1 squash-merged, 0 commented, 0 escalated, 0 conflicts. PR 2 had been rebased onto current main since the 2250 feedback, GitHub reported CLEAN / MERGEABLE, and two scratch merges confirmed no conflicts, so it merged as commit 0de6558e with its branch deleted. Sync-back fast-forwarded local main c6d56114 to 0de6558e with no force. No backlog edit (PR 2 names no improvement task id). No live records branches existed at pass start; this run's record rides the new records/2026-10-31 branch, whose records PR the next pass opens under cadence A. Full detail in pr-integration/2314-run.md.
