@@ -1640,3 +1640,13 @@ of 2026-10-28.
   no open records PR existed at push time, so this run
   opens a new records PR after pushing. Full detail in
   queue-planning/1457-run.md.
+- PR integration 1500 run: done. Zero open PRs at pass
+  start; records/2026-10-31 contained in main, no PR
+  needed. Records PR 105 (queue-planning 1457 run
+  records plus the 1445 record correction) opened
+  mid-pass by the planning run and merged by this run
+  with merge commit 76d5966d9, branch kept, zero open
+  PRs at the end-of-pass sweep. No feedback, no
+  owner-gated escalations, no conflicts. Local main
+  synced to 76d5966d9; merge synced to the owner
+  Slack DM. Full detail in pr-integration/1500-run.md.
