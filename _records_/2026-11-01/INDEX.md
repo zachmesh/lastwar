@@ -617,3 +617,29 @@ of 2026-10-28.
   merge via the bundle route. Merge synced to the
   owner Slack DM. End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0930-run.md.
+
+## 09:32 to about 09:40 — Knowledge organization pass (profiles updated, PR 72)
+
+- Organizer run knowledge-organization-2026-11-01-0932,
+  worked from the 0832 watermark: zero open PRs at pass
+  start (PRs 68, 69, 70 and 71 records MERGED, no
+  comments, no reviews), improvements backlog unchanged
+  at version 1.1.1, and one window of new profile
+  knowledge - the ticker-0904 survivors and training
+  partials.
+- Profiles updated, PR 72 (OPEN, Owner
+  lastwar-knowledge-organizer): survivor-intake 1.5.0
+  to 1.6.0 (distinct-unit partial streak reaches 24;
+  pet icon, green temperature button and STOP-barrier
+  tap point corrected to look-alikes, not survivor
+  bubbles) and troop-training 1.2.0 to 1.3.0
+  (pinned coordinate 617,570 selected Missile Vehicle
+  Base Lv.10 in the 0917 camera position, so pinned
+  points can select a wrong building, not just miss;
+  pan to the tent row first; Drill Ground Full
+  39,460 of 39,460 carried forward unverified a second
+  consecutive unit). Three contradictions resolved;
+  no record file overwritten.
+- No gap filed, no stale item marked. Next run checks
+  PR 72 review feedback first. Full detail in
+  knowledge-organization/0932-run.md.
