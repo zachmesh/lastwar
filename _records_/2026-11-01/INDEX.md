@@ -345,7 +345,7 @@ of 2026-10-28.
   channel has been down since 01:47 local. Full detail in
   radar-tasks/0734-queue-run.md.
 
-## 07:39 to about 07:45 - PR catch-all pass (no-op)
+## 07:39 to about 07:41 - PR catch-all pass (no-op)
 
 - Catchall run pr-catchall-2026-11-01-0739, no-op: own-PR
   check first, no adopted PR to re-check; one open PR only,
