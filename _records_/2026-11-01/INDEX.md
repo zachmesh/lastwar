@@ -489,3 +489,18 @@ of 2026-10-28.
   entry changed. Record pushed on records/2026-11-01
   for the integrator sweep, never directly to main.
   Full detail in tool-development/0835-run.md.
+
+## 08:34 to about 08:37 — Queue ticker pass, harvest (failed, device offline)
+
+- Harvest unit harvest-2026-11-01-0603, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path)
+  plus a failed health probe and a failed repair attempt,
+  last seen 01:47 local and unmoved across the pass. No
+  screen read, no bubble, HUD or Armed Truck state
+  observed, nothing collected, nothing spent. Tracker
+  untouched. Thirteenth consecutive access-failed pass
+  after the 02:34, 03:04, 03:34, 04:04, 04:34, 05:04, 05:34,
+  06:04, 06:34, 07:04, 07:34 and 08:04 passes; the channel
+  has been down since 01:47 local. Full detail in
+  resource-collection/0834-queue-run.md.
