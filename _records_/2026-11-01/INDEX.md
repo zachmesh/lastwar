@@ -998,7 +998,7 @@ of 2026-10-28.
   the channel has been down since 01:47 local. Full
   detail in troop-training/0534-queue-run.md.
 
-## 05:39 to about 05:49 - PR catch-all pass (no-op)
+## 05:39 to about 05:42 - PR catch-all pass (no-op)
 
 - Catchall pass pr-catchall-2026-11-01-0539, no-op. Own-PR
   check first: no PR adopted by this job, so no review
