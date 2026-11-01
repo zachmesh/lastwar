@@ -1288,3 +1288,9 @@ of 2026-10-28.
 
 - Integrator run pr-integration-2026-11-01-1300, zero open PRs at pass start and at the end-of-pass sweep. Prior integrator records PRs 89, 90, 92 and 93 and PR 94 stand MERGED, no comments outstanding. Branch 2026-10-31 at 4c72f0b5 and branch 2026-11-01 at 361296c92 both verified fully contained in main, 0 commits beyond main, so no records PR was needed.
 - No merges, no feedback comments, no owner-gated escalations, no conflicts, no local main sync-back owed. This no-op record rides the next records PR. Full detail in pr-integration/1300-run.md.
+
+## 13:15 - PR integration pass (PR 95 merged)
+
+- Integrator run pr-integration-2026-11-01-1315, zero open PRs at pass start and at the end-of-pass sweep. Prior integrator records PR 94 stands MERGED, no comments outstanding. Branch 2026-10-31 at 4c72f0b5 verified contained in main, no PR needed; branch 2026-11-01 at e49694a62 ahead by one commit (the 1300 run record).
+- Records PR 95 opened by this run and merged eab94a059, branch kept (verified still at e49694a62 after merge). Merge pre-tested clean in a scratch worktree. No extra log lines owed at merge: the merged commit already carried its own action-log line, and no user input means no input-log line.
+- No knowledge/code PRs, no feedback, no owner-gated escalations, no conflicts. No local main sync-back owed (records-only merge). Merge synced to the owner Slack DM. End-of-pass sweep: zero open PRs. Full detail in pr-integration/1315-run.md.
