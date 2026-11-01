@@ -568,3 +568,18 @@ unrecoverable fields written unknown:
 ## 23:40 to about 23:44 — Queue planner (done)
 
 - Planner run queue-planning-2026-10-31-2344, done: worked in a separate worktree on the records/2026-10-31 tip so the main tree's in-flight ticker state stayed untouched. Own-PR check first: only open PR #11 (Owner lastwar-tool-developer, no comments), nothing owned by or addressed to this job. Plan --hours 12 staged 17 units (mail, help, gifts, train, star-ceremony 1030; harvest, radar, survivors, training, donations, arms-race 1003; passes, secrets, treasures, trucks, events 1057; scout-midday-2026-11-01-0700), 51 already present, 1 skipped done current, 0 reaped, 0 expired. Pre-reset sweep skipped (23:00 hour, not 17:00); pairs for 2026-11-01 and 2026-11-02 already in inbox. Perception consumption skipped: no observation file exists yet anywhere (worktree, main tree, repo history, VPS records tip), so no diff applied and no units withdrawn. Pool after planning: inbox 72, claimed 0, done 430. Full detail in queue-planning/2344-run.md.
+## 23:39 to about 23:45 — PR catch-all (no-op)
+
+- PR catch-all run pr-catchall-2026-10-31-2345, no-op: own-PR
+  check first found no PR adopted by this job (no catchall
+  comment on PRs 1 to 10, no pr-catchall record folder on the
+  records branch). The only open PR, PR 11 (queue complete
+  stats validation, tools/queue.py only), names Owner
+  lastwar-tool-developer, which matches its diff, so it is not
+  this job's to adopt or fix; it has no reviews or comments
+  yet and is minutes old, so no stale-owner flag applies.
+  Full detail in pr-catchall/2345-run.md.
+
+## 23:30 to about 23:45 - PR integration (merge)
+
+- PR integrator run pr-integration-2026-10-31-2330, done: 1 open PR at pass start (PR 8, repo-transfer refs), 3 merged knowledge/code PRs, 1 records PR opened and merged, 1 review comment, 0 escalated, 0 conflicts. PR 8 squash-merged as de25919ed after a review comment assigning the rightful owner lastwar-knowledge-organizer (body Owner line naming the integrator was incorrect for _activities_/_conventions_ changes) and judging the policy-file edit factual-only under the owner 23:25 PDT transfer instruction; local main synced d48d7037 to de25919e. Records PR 10 merged with merge commit 8a9df4fd, branch not deleted. PR 9 (arms-race 1.15.0, donations 1.5.0, opened mid-pass) squash-merged as d9a3f7ac; local main synced to d9a3f7ac. PR 11 (queue complete stats warning, IMP-20261031-04, opened mid-pass) squash-merged as 8f3e8053; local main synced to 8f3e8053; IMP-20261031-04 flipped to implemented on the records branch (closure stays with the retro). Merge-time action-log line appended (PR branches carry no _logs_ appends). Slack DM merge notice sent. Full detail in pr-integration/2330-run.md.

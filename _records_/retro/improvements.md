@@ -75,7 +75,7 @@ entries to implemented.
   whose required stats keys are missing, demonstrated on an
   isolated fixture pool; the retro then reads the post-rule
   unverified rate falling week over week.
-- status: implemented - PR 11 (branch work/queue-complete-stats-validation, commit 1b2dd38d252fca74eaa20ef49c4187607675b2d1), warning in queue.py complete; fixture validation 9/9 plus retro cross-check passed on an isolated scratch pool.
+- status: implemented - PR 11 (squash merge 8f3e8053, 2026-11-01; branch work/queue-complete-stats-validation, commit 1b2dd38d252fca74eaa20ef49c4187607675b2d1), warning in queue.py complete; fixture validation 9/9 plus retro cross-check passed on an isolated scratch pool.
 
 ### IMP-20261031-09 - queue aging boost against starvation
 
