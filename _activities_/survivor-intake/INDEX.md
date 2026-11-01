@@ -1,12 +1,13 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-01T17:40:00Z
-version: 1.6.0
+modified: 2026-11-01T18:39:17Z
+version: 1.7.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1017 survivors diagnostic unit)
 ---
 
 
@@ -210,6 +211,71 @@ Measured on 2026-10-25.
   running it without an intake would not satisfy the
   standing blocker.
 
+
+
+## What the 2026-11-01 1017 diagnostic unit added
+
+- Diagnostic unit survivors-diagnostic-001 (ticker-1004,
+  session about 10:05 to 10:17, status partial): the gate was
+  not located and Quick Dispatch was not located. This
+  diagnostic partial is counted separately from the
+  regular-unit streak - the regular streak stays at 24
+  distinct partials from the 0913 unit; this is the first
+  diagnostic-unit partial under the 2026-10-31 retro
+  method-change decision, not a 25th regular partial.
+- Verified negative, measured 1017: the Titanium Alloy
+  Factory No.1 Lv.30 Building Details panel carries NO
+  Quick Dispatch and NO survivor list. Panel read verbatim:
+  "TITANIUM ALLOY FACTORY NO.1", "Lv.30", "Power 36,900",
+  "Output/hr 21,600", "Max Production Time 1d 00:00:00",
+  "Maximum Level Reached", and "This building will
+  disappear when the season ends". This refines the
+  standing "Quick Dispatch lives at the bottom of a Building
+  Details panel" claim: it holds for survivor-post panels
+  (Iron Mine, Farmland), not for every panel. The next
+  attempt must try a survivor-post building specifically,
+  not a seasonal factory.
+- Entry path measured fresh in this unit (no coordinate
+  copied from an earlier unit): a map drag pan from norm
+  600,600 to 300,400, reversed 300,400 to 600,600,
+  restoring the original base view, both pans visibly
+  shifting the map; a resource house tapped at norm
+  144,295 in the panned view selected Titanium Alloy
+  Factory No.1 Lv.30; its orange info "i" button at norm
+  111,329 opened the panel above; the panel closed with
+  the X at norm 900,186 and the base screen returned,
+  verified on a second observation. A second selection in
+  the original view, centre resource house at norm
+  472,448 then central tower at norm 478,438, selected
+  High-heat Furnace Lv.30; its flame button at about norm
+  459,448 and info "i" button at about norm 524,448 are
+  measured points for the next unit only - the furnace
+  panel was NOT opened in this unit (unit time cap), so
+  those points are not a verified panel.
+- Gate line: NOT READ. The signed "Zombies" front gate
+  itself was not located, so no gate line can be quoted
+  verbatim and the gate is NOT claimed empty. Areas
+  inspected: the original base view centre resource row
+  (small houses with 286.4K resource bubbles, a helicopter
+  vehicle, a green turret building; no question-mark bubble,
+  no survivor figure); the bottom-left STOP road barrier
+  area (STOP sign, cannons, a tree, a brown circular ground
+  mark; no bubble, no figure); the top-left road in an
+  enlarged crop (a zombie figure with red splatter and a
+  small walking figure near the headquarters; no bubble,
+  no survivor line); and the panned view (same resource row
+  and snow area; no bubble, no line).
+- Session-drop recovery, same pattern as the 0917 training
+  unit: one computer session drop mid-unit (cc-4 lost,
+  cc-5 restarted, LastWar re-selected, no game state lost).
+  Session window signed in as HidingAnt504, HUD power read
+  148,957,193 in this unit.
+- Side-effect discipline: a tap at norm 472,448 collected a
+  resource bubble as a side effect of selecting a building
+  (iron read 16.7M before, 18.1M after in the HUD); that
+  collection is not claimed as survivor work. No survivor
+  was tapped, no recruit card or dialog was opened, no live
+  Quick Dispatch was completed, 0 recruited, 0 dispatched.
 
 ## Open questions
 

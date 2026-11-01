@@ -1,14 +1,15 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T09:36:45Z
+modified: 2026-11-01T18:39:17Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0940 help unit)
 ---
 
 
@@ -130,6 +131,37 @@ Measured in the 0135 help unit (ticker-0134, window mode
   any action in the mail unit. Do not count inter-unit
   help-received rises as help-given gains.
 
+
+
+## What the 2026-11-01 0940 unit added
+
+- Performed, ticker-0934, session about 09:39 to 09:41:
+  Help All pressed. Entry from the Alliance Gifts screen
+  left by the previous gifts unit: the back arrow at norm
+  45,965 returned to the Alliance panel, and the Help tile
+  grounded fresh on this unit's own screenshot at norm
+  676,514 (close to the 2026-10-31 units point of 687,504)
+  opened the Help page at once.
+- Help page header read "Today's points gained from
+  Alliance Help: 540/1,000". Every visible request was
+  this account's own, each already at 30/30: Lv.28 Drill
+  Ground building, Precision Targeting II research, Lv.30
+  Aircraft Center building, Morale research. A player
+  cannot help their own requests.
+- Help All at norm 498,757 was pressed anyway per the
+  standing rule, and the game answered "Allies are very
+  grateful for your assistance!". The header still read
+  540/1,000 after the press and the list still showed only
+  the own 30/30 requests, so no further ally request was
+  left waiting in this unit. Contrast with the 0135 unit,
+  where a close-and-reopen re-read revealed a lagging
+  header: here the own-only list composition corroborates
+  the unchanged header, so the conclusion rests on list
+  plus header together, not on a single re-read alone.
+- The Help panel was closed with its X at norm 826,205,
+  leaving the game on the Alliance panel. Nothing else
+  spent - no diamonds, no money, no speedup items burned,
+  no building or research started, no Assemble.
 
 ## Open questions
 
