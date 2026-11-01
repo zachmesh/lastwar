@@ -534,3 +534,25 @@ of 2026-10-28.
   Tracker untouched, so the next tick re-produces the
   regular as a fresh unit. Full detail in
   arms-race/0234-queue-run.md.
+
+## 02:40 to about 02:48 - Queue planner pass
+
+- Queue planner run queue-planning-2026-11-01-0247,
+  done: own-PR check first, no PR owned by this job
+  and nothing addressed to it. Plan staged 11 units
+  for the 14:03 and 14:30 slots (mail, help, gifts,
+  harvest, radar, survivors, train, training,
+  donations, arms-race, star-ceremony), 55 already
+  present, 3 skipped as done for the current slot,
+  0 reaped, 0 expired. Pre-reset sweep skipped (not
+  the 17:00 hour); both upcoming sweep pairs already
+  in inbox. Perception consumption: scout_diff dry
+  run and apply both reported observed 0, actionable
+  0, enqueued 0, candidates 0, unexplained red dots
+  0, because the 0215 scout-base observation carries
+  prose only and no observed_items block; its prose
+  red-dot accounting (7 seen, 4 explained, 3
+  unexplained) is carried in the run record for the
+  retro. Queue cleanup: 0 withdrawals. Pool after
+  the run: inbox 68, claimed 1, done 444. Full detail
+  in queue-planning/0247-run.md.
