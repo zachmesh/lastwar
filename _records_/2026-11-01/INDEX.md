@@ -84,7 +84,11 @@ of 2026-10-28.
   CLEAN, so the PR is mergeable once points 1-2 are fixed.
   No owner-gated items, no conflicts, no unprocessed PRs
   at the end-of-pass sweep. Full detail in
-  pr-integration/0030-run.md.
+  pr-integration/0030-run.md. Mid-pass arrivals PR 22 and
+  PR 23 were handled in the same pass (see the addendum
+  in 0030-run.md): both squash-merged, branches deleted;
+  IMP-20261031-09 was marked implemented on the records
+  branch by the concurrent tool-development run.
 
 ## 00:32 to about 00:39 - Tool development pass
 
