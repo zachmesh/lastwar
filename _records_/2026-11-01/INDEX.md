@@ -1601,4 +1601,9 @@ of 2026-10-28.
   owner-gated escalations, no conflicts. Local main
   synced to 6142dafc; merges synced to the owner
   Slack DM. End-of-pass sweep: zero open PRs.
+  Records PR 104 (ticker-1434 records plus this run
+  record) merged with merge commit 6c418253 after
+  the final re-list; branch kept. Correction to this
+  section and to pr-integration/1445-run.md committed
+  to records/2026-11-01 for the next records PR.
   Full detail in pr-integration/1445-run.md.
