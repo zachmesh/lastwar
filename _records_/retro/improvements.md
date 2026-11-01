@@ -1,7 +1,7 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T09:43:19Z
+modified: 2026-11-01T10:45:05Z
 version: 1.1.1
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
@@ -207,7 +207,16 @@ entries to implemented.
   from the pre-change tool; the retro then reads a round
   summary carrying the section rather than hand-copied
   perception numbers.
-- status: in-progress
+- status: implemented - PR 42 (branch
+  work/scout-round-summary-section, commit
+  d53509a5a043482d3771f87458e78ca87e5fe853), scout_diff.py
+  emits scout-round-summary-<date>.md plus a round_summary
+  path in the JSON summary; fixture validation passed on
+  isolated scratch pools (four pre-existing outputs
+  byte-identical to the pre-change tool, hand-checked
+  section counts, byte-identical re-run, no-root honest
+  pool-not-read wording, empty-observation no-claim
+  wording, real-pool-copy dry run clean)
 
 - status: in-progress
 
