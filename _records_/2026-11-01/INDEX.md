@@ -895,3 +895,17 @@ of 2026-10-28.
   0c9cab7b to e9b734c3e via bundle; merges synced to
   the owner Slack DM. End-of-pass sweep: zero open
   PRs. Full detail in pr-integration/1045-run.md.
+
+## 11:00 to about 11:10 - PR integration pass (PR 82 merged)
+
+- Integrator run pr-integration-2026-11-01-1100, zero
+  open PRs at pass start. Records branch 2026-11-01
+  ahead of main by one commit (the 1045 run addendum
+  for PR 81); branch 2026-10-31 verified contained
+  in main, no PR needed.
+- Records PR 82 opened and merged with merge commit
+  4f1b0a9ce, branch kept at 5c7ec68c2. No feedback,
+  no owner-gated escalation, no conflicts. Merge
+  synced to the owner Slack DM. End-of-pass sweep:
+  zero open PRs. Full detail in
+  pr-integration/1100-run.md.
