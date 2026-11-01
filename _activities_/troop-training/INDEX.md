@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T05:24:00Z
+modified: 2026-11-01T08:36:31Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -114,6 +114,40 @@ Observed in game on this account, first execution 2026-10-25.
   blocked read. This is a third-strike blocker under queue
   rule R2.
 
+## What the 2026-11-01 0045 unit added
+
+- Inherited points went stale after camera drift: a tap at norm
+  708,602 (the pinned Drill Ground / Lv.30 point from the
+  2026-10-31 03:04 and 07:04 units) selected nothing visible in
+  this camera view, and a tap at norm 617,570 (the pinned Lv.27
+  tent point from the 15:44 unit) likewise selected nothing -
+  no label, no button row. The camera had drifted through the
+  preceding survivors unit's pans. This is the queue rule R2
+  failure mode in miniature: points must be measured fresh in
+  the unit's own camera view, never inherited, and this unit
+  recorded the miss instead of repeating the taps.
+- No ungrounded tap followed: an enlarged crop of the base
+  centre in this view showed production houses carrying 59.6K
+  resource bubbles, a helicopter pad and a green military
+  vehicle, but no barracks tent row that could be grounded
+  with confidence, so no TRAIN UNITS panel opened, no Drill
+  Ground panel opened, and no toast (including Drill Ground
+  Full) was read live in this unit.
+- Full-block status carried forward unverified: the standing
+  Drill Ground Full block from 2026-10-31 (39,460 of 39,460)
+  is carried forward unverified by this unit, not
+  re-confirmed and not cleared, because the unit never reached
+  a barracks.
+- Focus note, shared with the survivors unit in the same pass:
+  pans stopped moving the view after a focus loss and resumed
+  only after a title-bar left-segment tap at norm 274,18.
+- Not attempted: no batch collected or started, no troops
+  deployed or dismissed to free drill-ground space (an
+  owner-side decision, outside this unit), no Finish Now, no
+  green upgrade shortcut, no purchase, no diamond spend, no
+  speedup item burned. The game was left on the base screen.
+
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -121,3 +155,11 @@ Observed in game on this account, first execution 2026-10-25.
 - How promotion actually engages, and its cost against training fresh.
 - Whether the Lv.30 barracks button row differs - its pistol position
   opened Details twice before the panel opened from another button.
+
+## Changelog
+
+- 1.2.0 (2026-11-01): inherited-point staleness after camera
+  drift (708,602 and 617,570 both missed), the no-ungrounded-tap
+  rule applied to a crop with no groundable barracks row, the
+  Drill Ground Full block carried forward unverified, and the
+  shared 274,18 focus fix, folded from the 0045 training unit.
