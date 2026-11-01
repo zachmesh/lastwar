@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:17:00Z
-version: 0.10.0
+modified: 2026-11-01T05:24:07Z
+version: 0.11.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -651,10 +651,31 @@ work, not paperwork after it.
 
 ### Aggregation - the retro_report.py specification
 
-Aggregation is specified here and implemented later as
-`tools/retro_report.py`; this section is its specification,
-and no code lands with it. The tool aggregates by task type,
-per day and over a rolling 7 day window -
+Aggregation is specified here and implemented as
+`tools/retro_report.py` (landed 2026-11-01). The tool
+aggregates by task type, per day and over a rolling window -
+
+```text
+retro_report.py [--days 7] [--end YYYY-MM-DD] [--root DIR]
+                [--out-dir DIR] [--format text|json]
+```
+
+`--root` is the repository root (default - the repository the
+tool lives in); the pool is read at `<root>/_queue_` and the
+appendix written to `<root>/_records_/retro` unless
+`--out-dir` says otherwise. A unit belongs to the local date
+of its `result.finished_at` in the queue timezone, falling
+back to `started_at`, `planned_for`, and the date in its file
+name. A unit file with no result is resolved against its day
+INDEX in `_records_` and counted with status unknown and no
+invented figures; a file that cannot be parsed is listed
+under `parse_errors`, never silently skipped. The required
+keys are `target`, `achieved`, `resources_gained`, `costs`
+and `verified`, plus `blocker_category` whenever the unit
+fell short of its target or closed partial, failed or
+skipped-needs-owner; `points` is aggregated whenever present
+but is not a required key, since it applies to scoring types
+only and the pool carries no authoritative list of them.
 
 - execution count, and the done, partial and
   skipped-needs-owner distribution;
@@ -670,14 +691,28 @@ per day and over a rolling 7 day window -
 
 Its only data sources are inside the repository - the unit
 results in `_queue_/done` and the execution records in
-`_records_`. Its only outputs are inside the repository - one
+`_records_`. Its only outputs are inside the repository, in
+the standing cross-day series at `_records_/retro/` beside
+the date folders, registered here as its convention - one
 daily retro file per local date at `_records_/retro/<date>.md`
-and the rolling metrics file at `_records_/retro/rolling-7d.md`
-- a standing cross-day series beside the date folders,
-registered here as its convention. The retro files are derived
+and the rolling metrics file at `_records_/retro/rolling-7d.md`,
+both written by the retro pass, and the tool's metrics
+appendix for the window ending on a date at
+`_records_/retro/<date>-data.json` (canonical) with the same
+numbers rendered as tables at `_records_/retro/<date>-data.md`
+for the retro file to cite. The retro files are derived
 artifacts: they are regenerated from the unit results, which
-remain the immutable source (C1), and a regenerated day states
-the pool state it was derived from.
+remain the immutable source (C1), and a regenerated appendix
+states the pool state it was derived from - the scanned unit
+count and a hash over the scanned units. Re-running the tool
+over the same window and the same pool overwrites the
+appendix with identical content; it never appends a copy.
+The tool was validated on a fixture pool in /tmp - units with
+complete stats, legacy stats missing the required keys, a
+result-less unit resolved through its day INDEX, a file with
+no frontmatter, and a unit outside the window - with the
+aggregates asserted against hand-computed figures and a
+second run byte-identical to the first.
 
 ### The daily rolling retro
 
@@ -707,6 +742,16 @@ the file is the record, the summary is the pointer.
 
 ## Changelog
 
+- 0.11.0, 2026-11-01 - the aggregation of section 14 is
+  implemented as `tools/retro_report.py` - per regular, per
+  day and rolling window aggregates over the done pool, the
+  records INDEX fallback for result-less units, parse errors
+  listed rather than skipped, no-data regulars stated, and
+  the metrics appendix landed at
+  `_records_/retro/<date>-data.json` with its Markdown
+  rendering, byte-identical on a re-run over an unchanged
+  pool; fixture validated in /tmp against hand-computed
+  figures.
 - 0.10.0, 2026-11-01 - Phase 2 of the perception layer landed
   in section 13 - `tools/scout_diff.py` implemented (dry run by
   default, `--apply` only against an explicitly named pool

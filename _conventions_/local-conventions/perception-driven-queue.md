@@ -1,9 +1,9 @@
 ---
 title: Perception-Driven Queue
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-01T05:17:00Z
+modified: 2026-11-01T05:24:07Z
 level: L2
-version: 1.2.0
+version: 1.2.1
 description: The scout layer - daily work is determined by what the game screen actually offers, perceived first and scheduled by observation triggers rather than fixed slots, with the regulars kept as a capability profile library and new tasks discovered, profiled and scheduled automatically
 status: phase-2-landed
 grounded_in:
@@ -746,7 +746,10 @@ Execution results under this protocol are also the data of the
 retro review mechanism (task unit queue design, section 14) -
 what units measured, gained and were blocked by is aggregated
 there, and its execution-knowledge actions land back here as
-profile hardening.
+profile hardening. The aggregation tool of that mechanism,
+`tools/retro_report.py`, is implemented (2026-11-01) to the
+section 14 specification and writes its metrics appendix into
+`_records_/retro/`.
 
 ## 11. Phased roadmap
 
