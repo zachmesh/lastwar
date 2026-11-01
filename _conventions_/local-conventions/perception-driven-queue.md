@@ -1,13 +1,14 @@
 ---
 title: Perception-Driven Queue
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-01T05:10:00Z
+modified: 2026-11-01T05:16:00Z
 level: L2
-version: 1.0.0
-description: The scout layer - daily work is determined by what the game screen actually offers, observed first and enqueued dynamically, with the static regulars as the baseline
+version: 1.1.0
+description: The scout layer - daily work is determined by what the game screen actually offers, perceived first and scheduled by observation triggers rather than fixed slots, with the regulars kept as a capability profile library and new tasks discovered, profiled and scheduled automatically
 status: phase-1-landed
 grounded_in:
   - source: owner direction of 2026-10-31 - daily tasks shall be determined by what is observed on screen, perceive the game first, see what is available to do, and place it into the queue dynamically
+  - source: owner refinement of 2026-10-31 - no fixed schedule; check and perceive where tasks are needed and schedule them automatically; discover potentially new tasks, learn about them, create their task profile and metadata, and start scheduling executions for them
   - source: miss audit of 2026-10-31 - whole classes of work had no execution channel because no static model named them
   - source: reflection of 2026-10-31 in this folder
 ---
@@ -42,6 +43,37 @@ The owner direction of 2026-10-31 inverts the flow -
   the two things the list cannot do - discovering work outside
   the models, and confirming the real availability of work inside
   them.
+
+The owner refinement of 2026-10-31 sharpens the principle one
+step further -
+
+- **Scheduling is observation-triggered, not fixed-slot.** No
+  execution unit exists because a clock slot said so. A unit is
+  produced when perception fires a trigger from the list in
+  section 5 - a badge turned claimable, a deadline approaching,
+  a storage about to fill, a phase rotated, a train entering
+  preparation, a quota behind pace, a new element on screen.
+  Fixed time slots survive only as the safety net underneath -
+  the cadence checks and the two anchored scout passes of
+  section 7 are the floor that guarantees nothing modelled is
+  ever left unchecked, never the primary mechanism and never
+  the ceiling.
+- **The regulars are a capability profile library.** Each known
+  task is kept as a profile, not a timetable entry - its entry
+  point, its rules, its red lines, the live read that verifies
+  it, its trigger conditions, its deadline shape, its cooldown
+  and its expected duration. Section 5 fixes the profile fields.
+  The clock keeps only two jobs - the perception heartbeat (the
+  ticker cadence that keeps perception rolling) and the game
+  hard deadlines (the 19:00 reset, Arms Race phase windows, the
+  quota checkpoints of rule R3).
+- **New tasks are discovered, not waited for.** Anything the
+  screen shows that no profile owns enters the discovery
+  protocol of section 6 - filed as a provisional candidate,
+  learned by exploration units, promoted to an active profile
+  and scheduled by the same triggers, or rejected with the
+  reason kept. Discovery is part of comprehensiveness, not an
+  exception path.
 
 A scout unit never does the work it finds. It observes, records
 and hands over. Execution stays one unit, one task type, under
@@ -156,10 +188,24 @@ unexplained red dots closes as partial, however much it walked.
 This standard is the perception form of rule R1 - nothing closes
 on silence.
 
+**The unmatched labels list.** Every full pass closes with an
+explicit roster-out scan - the `unmatched_labels` list of every
+label, icon and tab the pass met that no roster entry owns -
+the regulars index, the ledger, the checklist, the candidate
+register. The list is part of the coverage report of section 9,
+printed even when it is empty, because an absent list and an
+empty list are different claims - the first is a pass that did
+not look, the second is a pass that looked and found nothing
+outside the roster. Every entry on a non-empty list enters the
+discovery protocol of section 6 in the same session; an
+unmatched label that is neither filed as a candidate nor
+recorded with a reason counts as an unexplained red dot under
+the standard above.
+
 ## 4. The observed items schema
 
 Every signal a scout records is one observed item, written in
-the day observation file (section 7) as a structured block in
+the day observation file (section 8) as a structured block in
 the same frontmatter style the queue already uses - values
 colon-free except timestamps.
 
@@ -203,32 +249,109 @@ State vocabulary -
 - **info-only** - read for the record - a total, a ranking, a
   notice with nothing to claim or do.
 
-## 5. Diff and dynamic enqueue rules
+## 5. Trigger-based scheduling - profiles, triggers and the diff
+
+### The capability profile
+
+Under the owner refinement, `tools/regulars.json` is the index
+of a profile library, and each regular profile - the index row
+plus its `_activities_` metadata - carries these fields -
+
+| Field | Meaning |
+|---|---|
+| entry point | where the task lives on screen, re-grounded at execution like every entry point |
+| rules | how the task is worked - the standing method, quality rules and caps from its metadata |
+| red lines | what must never be pressed or spent while working it |
+| verification | the live read that closes it - the counter, balance or panel state of rule R1 |
+| triggers | the observation conditions of the trigger list below that produce its units |
+| deadline shape | when its value dies - the reset, a phase end, a preparation close, a displayed countdown, or none |
+| cooldown | the wait after an attempt before a trigger may fire it again - a greyed button timer, a return trip, a phase length |
+| expected duration | the learned estimate of section 5 of the queue design, used by the priority formula below |
+
+A profile with no trigger written yet is a gap, not a default -
+writing its triggers is part of keeping the library honest, and
+a profile whose screen has died is closed by the modelled but
+absent rule below, not left to fire forever.
+
+### The trigger list
+
+A unit is produced when one of these fires in an observation -
+
+- **Claimable now** - a red dot, badge or counter turned
+  claimable or doable since the last observation of that
+  surface.
+- **Deadline approaching** - a visible countdown, the reset, a
+  phase end or a preparation close enters the window where one
+  unit plus one retry still fits before it.
+- **About to fill** - a bubble field, a warehouse, a gift or
+  inbox badge count, or any capped store is at or near its cap,
+  so uncollected value would stop accruing or overflow.
+- **State rotation** - an Arms Race phase rotated, a duel day
+  posture changed, a market refreshed, a pass day rolled.
+- **Preparation opened** - a train entered preparation, a boss
+  spawned, a limited activity opened its window.
+- **Quota behind pace** - a quota counter (rule R3) reads behind
+  the pace its cycle end demands at a checkpoint or at any
+  observation that reads it.
+- **New element** - a label, icon or tab no profile owns - this
+  fires the discovery protocol of section 6, not an execution
+  unit.
+- **Floor check** - the cadence safety net - a profile not
+  observed inside its cadence window is perceived and checked
+  anyway, so silence never masquerades as nothing to do.
+
+### Priority
+
+Produced units are ordered by a score, not by the slot that
+bore them -
+
+```text
+priority score = deadline pressure x value / expected duration
+```
+
+- **Deadline pressure** rises as the time left before the
+  item deadline approaches one unit duration plus one retry -
+  inside that band the unit is priority 1, expiry-critical.
+  Items with no deadline carry the lowest pressure.
+- **Value** is what the item visibly carries - duel or phase
+  score first on scoring days, then resources, then progress -
+  read from the observation, never assumed.
+- **Expected duration** is the profile learned estimate, so a
+  cheap quick claim outranks a long grind of equal value.
+- Dependencies and cooldowns gate before the score applies - a
+  unit whose precondition is unmet (no empty truck slot, a drill
+  ground still full) is not produced until the observation shows
+  the precondition met, and a profile inside its cooldown does
+  not refire.
+- The score maps onto the queue priority classes of the queue
+  design (1 expiry-critical, 2 windowed, 3 standard, 4
+  background); ties break by deadline, then by age, exactly as
+  the executor pick already does.
+
+### The diff rules
 
 After each pass, the observation is diffed against three
 references - the regulars, the daily collection ledger, and the
 pool in all three states.
 
-- **Known item, actionable.** A unit of its regular is produced
-  for the current window through the shared (regular,
-  planned_for) invariant - already queued, claimed or done means
-  no duplicate. When the item carries a deadline nearer than its
-  window end, the queued unit is raised in priority instead -
-  priority 2 normally, priority 1 when the deadline falls inside
-  the current window.
+- **Known item, triggered.** When a trigger from the list above
+  fires for a profiled item, a unit of its regular is produced
+  through the shared (regular, planned_for) invariant - already
+  queued, claimed or done for that trigger window means no
+  duplicate. When the same item is already queued and a later
+  observation raises its deadline pressure, the queued unit is
+  raised in priority instead of duplicated - priority 2
+  normally, priority 1 inside the expiry band of the priority
+  formula.
 - **Known item, already done.** When the observation shows a
   modelled line already satisfied - collected, claimed, boarded -
   no unit is produced, and the observation stands as the day
   evidence for that ledger line.
-- **Unknown item.** An item whose suggested_unit is `new` gets an
-  exploration unit at priority 2, enqueued manually in Phase 1
-  (the diff tool of section 8 automates it in Phase 2). The
-  unknown is named in that day round summary. Its first execution
-  backfills activity metadata for the item and decides its fate -
-  promoted to a modelled regular or ledger line, kept as a
-  recurring exploration, or recorded as info-only with the reason.
-  No unknown item ages unnamed - rule R5 applies to it from its
-  first day.
+- **Unknown item.** An item whose suggested_unit is `new` enters
+  the discovery protocol of section 6 - it is filed as a
+  candidate and gets its exploration unit from there, never an
+  execution unit directly. No unknown item ages unnamed - rule
+  R5 applies to it from its first day.
 - **Modelled but absent.** When the models expect something the
   screen does not have - an activity that has ended, a tab that
   is gone, a pass that expired - the diff closes the expectation
@@ -241,7 +364,105 @@ pool in all three states.
   and the metadata is corrected in the same session. Perception
   never defers to the file against the game.
 
-## 6. Perception points in the day
+## 6. The new task discovery protocol
+
+Comprehensiveness cannot rest on the checklist alone - the game
+adds surfaces the checklist has never seen. Discovery is the
+protocol that turns an unknown element into owned work, in four
+steps.
+
+### Discovery - where candidates come from
+
+- **Roster matching.** Every scout traversal compares each
+  label, icon and tab it meets against the known roster - the
+  regulars index, the ledger lines, the traversal checklist
+  itself and the candidate register below. Anything on screen
+  that matches nothing is registered as a **candidate** in that
+  pass observation, with its surface and the on-screen text
+  transcribed exactly.
+- **Announcement signals.** System mail and update notices are a
+  discovery source in their own right, read as signals, not
+  noise. The precedent is the Crystal Shop - the maintenance
+  mail of 2026-10-21 announced the new Store tab days before any
+  pass walked the Building section. A mail or notice that names
+  a feature, tab, shop or activity no roster owns files a
+  candidate the same day it is read, pointing at the surface the
+  notice names.
+- **Mail residue.** Unclaimed-reward mail from an unworked
+  source - the Glittering Market Unclaimed mail is the standing
+  case - is a discovery signal for its source, under the mail
+  rule of section 2. The residue is claimed by the mail unit;
+  the source still goes through this protocol.
+
+### Filing - the provisional profile
+
+A candidate is filed automatically, in the same session that
+discovers it -
+
+- A provisional metadata file under `_activities_`, in the
+  candidate register the activities index keeps, carrying only
+  what is known - discovery time, the surface it was seen on,
+  the on-screen text transcribed, and every clue already in hand
+  (the announcing mail, the residue mail, a ledger near-match).
+- Its state, one of the state machine below, starting at
+  `candidate`.
+
+The state machine -
+
+```text
+candidate -> exploring -> active
+                       -> rejected (reason recorded)
+```
+
+### Learning - exploration units
+
+A candidate gets exploration units, ahead of any execution -
+
+- The first exploration unit is read-only about the task
+  itself - it enters by the discovered surface, and learns and
+  records the entry point, the mechanism, the rewards, the
+  cost, the cycle, the deadline shape, whether it scores
+  anywhere, and the live read that would verify it.
+- Where acting on the candidate would touch a price, diamonds,
+  or any red line - or where the rules are still unclear after
+  the read - exploration stays learn-only. The candidate is
+  named in that day round summary for the owner, and no
+  execution unit is produced until the mechanism is clear.
+- A candidate that one exploration pass cannot resolve stays
+  `exploring` and is re-perceived on the next pass - it does not
+  age in silence (rule R5 applies from its first day).
+
+### Promotion and scheduling
+
+- When the mechanism is clear and the task sits inside the free
+  and safe envelope - no price, no diamond spend, no red line -
+  the profile is completed with its trigger conditions (section
+  5) and the candidate turns `active`. From that moment the
+  trigger-based scheduler produces its execution units like any
+  profiled task, with no per-item owner approval - the owner
+  approves the envelope, not each task inside it.
+- A candidate that turns out priced, red-lined, owner-only or
+  not a task at all is `rejected`, and its file and reason are
+  kept - a rejected candidate is never rediscovered and
+  re-explored from zero; a later observation that contradicts
+  the rejection reopens it explicitly, with the contradiction
+  recorded.
+- Promotion is reported in the round summary of the day it
+  happens - what was found, what it turned out to be, and the
+  triggers it now schedules under.
+
+## 7. Perception points in the day
+
+Perception is a heartbeat, not an appointment. The two anchored
+passes below are the guaranteed floor - the minimum perception a
+day ever gets - and they are not the ceiling. A full pass also
+fires whenever the layer detects a state change it cannot price
+from partial views - a phase rotation boundary crossed, a reset
+of any sub-cycle, an announcement mail read - and partitioned
+perception rolls with every ticker heartbeat, each tick
+re-perceiving the surface groups whose state is volatile or
+whose last observation is stale, so a trigger rarely waits for
+the next anchored pass to be seen.
 
 - **Post-reset full pass** - the first pass of the reset day,
   staged at the 19:00 local reset. It walks the whole checklist.
@@ -253,6 +474,17 @@ pool in all three states.
   availability the morning cannot show - trains entering
   preparation, Arms Race phases rotated, markets refreshed,
   trucks returned.
+- **Change-triggered full pass** - a full pass fired by a
+  detected state change between the anchors, under the rule
+  above. It walks the whole checklist like an anchored pass and
+  lands in the same observation file, marked with its trigger.
+- **Rolling partitioned perception** - between full passes, the
+  surface-group chains of section 8 re-walk their groups on the
+  ticker heartbeat - base and HUD every tick, events and store
+  on rotation-sensitive ticks, alliance and mail with their own
+  traffic. Their sections append to the same observation file,
+  each stamped with its pass time, so the diff always works
+  from the freshest read of each surface.
 - **Handover to the zero sweep.** The pre-reset zero sweep
   (queue design section 12) walks the merged list - the daily
   collection ledger plus the day observed items - so anything
@@ -261,7 +493,7 @@ pool in all three states.
   sweep gets its fix-up unit enqueued by the sweep, exactly like
   a ledger line not at zero.
 
-## 7. Budget, chain splitting and the observation file
+## 8. Budget, chain splitting and the observation file
 
 A scout pass is bound by the same 15 minute unit cap as all
 work. A full traversal does not fit in one unit, so a pass is a
@@ -306,7 +538,7 @@ and the evidence every scout unit result points at.
   unknowns awaiting their exploration unit, named - never a bare
   `none` while the pass holds an open signal.
 
-## 8. Tool design - tools/scout_diff.py (Phase 2)
+## 9. Tool design - tools/scout_diff.py (Phase 2)
 
 Design only in this phase - no code is written here. The tool is
 the diff of section 5 as a program, so the step from observation
@@ -331,8 +563,17 @@ tools/scout_diff.py [--root DIR] [--date YYYY-MM-DD] [--enqueue]
 - The day observation file,
   `_records_/<date>/perception-scout/observation.md`, parsed for
   its observed items.
-- `tools/regulars.json` - the modelled regulars and their
-  cadences.
+- The observation `unmatched_labels` list - every label the
+  passes met that no roster entry owns (section 3), the raw
+  material of discovery.
+- The candidate register - the provisional profiles under
+  `_activities_` and their states (section 6), so a candidate
+  already filed is recognised, not rediscovered.
+- `tools/regulars.json` - the profile library index, read for
+  its trigger conditions and deadline shapes, not only its
+  cadences - the planner evolution of section 5 consumes
+  observations plus profile triggers, and this tool is that
+  consumer in program form.
 - The daily collection ledger - its lines and the regular that
   produces each.
 - The pool itself, read through the queue tool list and stats
@@ -342,19 +583,31 @@ tools/scout_diff.py [--root DIR] [--date YYYY-MM-DD] [--enqueue]
 
 1. **The enqueue plan** - one entry per unit to create or raise,
    in the exact field shape `tools/queue.py enqueue` consumes -
-   regular, activity, priority, expires_at from the item
-   deadline, not_before, window text naming the observation it
-   came from, and a chain id `scout-followup-<date>` for
-   exploration units. Known items map to their regular; unknown
-   items map to exploration units at priority 2.
+   regular, activity, priority computed by the formula of
+   section 5, expires_at from the item deadline, not_before,
+   window text naming the observation and the trigger it came
+   from, and a chain id `scout-followup-<date>` for exploration
+   units. Known items map to their regular when one of their
+   profile triggers fired.
 2. **The unknown items list** - every observed item with no
    owning model, with its surface, label and state, formatted
    for the round summary naming rule R5 requires.
 3. **The coverage report** - the perception scoreboard for the
    day - items observed, items queued, items already done, red
-   dots seen, red dots explained, unexplained red dots - totalled
-   and split by surface. The unexplained count is the headline -
+   dots seen, red dots explained, unexplained red dots, and the
+   day `unmatched_labels` list printed in full - totalled and
+   split by surface. The unexplained count is the headline -
    the day perception is judged by it reaching zero.
+4. **The candidate filings and exploration plan** - one entry
+   per unmatched label not already in the candidate register -
+   the provisional profile to file under `_activities_` (surface,
+   transcribed text, clues in hand) and the exploration unit to
+   enqueue for it at priority 2 under chain id
+   `scout-discovery-<date>`. Candidates already exploring get
+   their next exploration unit here instead of a duplicate
+   filing; candidates whose exploration completed get their
+   promotion or rejection recorded as a proposed metadata edit,
+   never applied silently.
 
 **Idempotency** - the tool obeys the pool invariant it feeds.
 Produced units dedupe on (regular, planned_for) exactly as sync
@@ -374,7 +627,7 @@ table, which has no scout entries yet. Adding `scout` and
 named part of the Phase 2 change, landed with this tool rather
 than silently defaulting scout production to priority 3.
 
-## 9. Phased roadmap
+## 10. Phased roadmap
 
 - **Phase 1 - this document and the modelling (landed with this
   change).** This design, the perception layer section of the
@@ -384,20 +637,35 @@ than silently defaulting scout production to priority 3.
   passes run as executor-produced chains under the existing
   planner; the diff of section 5 is applied by the executor
   from the observation file, by hand, under the rules above.
+  Version 1.1.0 of this design, landed the same day under the
+  owner refinement, re-based the layer on trigger-based
+  scheduling - profiles instead of timetable entries, the
+  trigger list and priority formula of section 5, the discovery
+  protocol of section 6, and the anchored passes demoted to a
+  guaranteed floor under rolling and change-triggered
+  perception. The executor applies those rules by hand in this
+  phase exactly as it applies the diff.
 - **Phase 2 - the diff tool and the planner hookup.** `tools/scout_diff.py`
-  implemented to the design of section 8, the queue tool priority
+  implemented to the design of section 9, the queue tool priority
   entries for the scout regulars, and the planner pass running
   the diff after each scout chain completes, so dynamic units
   land in the pool without waiting for an executor to transcribe
-  them.
+  them. This is also where the planner changes species - from
+  staging units by time slot to consuming observations plus
+  profile trigger conditions and producing units when triggers
+  fire, with the slot staging kept only as the floor check of
+  section 5.
 - **Phase 3 - reporting and promotion automated.** The coverage
-  report joins the round summary as a standing section, the
-  unknown items naming becomes automatic, and the promotion of a
-  proven unknown into a regular or a ledger line is proposed by
-  the tool from execution history - the owner still approves
-  promotions, the tool only brings the evidence.
+  report, unmatched labels included, joins the round summary as
+  a standing section, the unknown items naming becomes
+  automatic, candidate filings and exploration units are
+  produced by the tool from the unmatched labels, and the
+  promotion of a proven candidate into an active profile is
+  proposed by the tool from its exploration record - free and
+  safe promotions land under the envelope of section 6, the
+  rest still come to the owner with the evidence.
 
-## 10. Standing rules this layer inherits
+## 11. Standing rules this layer inherits
 
 - The red lines bind perception exactly as they bind execution -
   a scout reads a priced button, it never presses it. Reading
@@ -410,3 +678,7 @@ than silently defaulting scout production to priority 3.
   every unit. An unwalked surface is named, never smoothed over.
 - The ledger standard - an observed line and a ledger line close
   by the same evidence, a live read from that day.
+- The discovery duty - an unmatched label met by any unit, scout
+  or executor, is filed as a candidate in the same session under
+  section 6. Seeing a new surface and walking past it is the
+  failure this layer exists to end.

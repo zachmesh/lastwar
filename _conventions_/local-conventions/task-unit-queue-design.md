@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:10:00Z
-version: 0.8.0
+modified: 2026-11-01T05:16:00Z
+version: 0.9.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -540,9 +540,69 @@ section fixes the queue-level contract.
   window text when the diff creates them. Unknown items enter as
   priority 2 exploration units and are governed by rule R5 from
   their first day.
+- **Scheduling is trigger-based (owner refinement 2026-10-31).**
+  Fixed time slots are not the primary production mechanism.
+  The regulars are repositioned as a capability profile library
+  - each profile carries its entry point, rules, red lines,
+  verification read, trigger conditions, deadline shape,
+  cooldown and expected duration (perception document section
+  5). A unit is produced when an observation fires one of the
+  profile triggers - claimable now, deadline approaching, about
+  to fill, state rotation, preparation opened, quota behind
+  pace, or the floor check - and is ordered by the priority
+  formula of the perception document (deadline pressure times
+  value over expected duration, gated by dependencies and
+  cooldowns) mapped onto the priority classes of section 4. The
+  clock keeps two jobs only - the ticker cadence as the
+  perception heartbeat, and the game hard deadlines (the 19:00
+  reset, Arms Race phase windows, the rule R3 quota
+  checkpoints). The planner of section 7 evolves accordingly -
+  from staging one unit per (regular, time slot) to consuming
+  observations plus profile trigger conditions and producing
+  units when triggers fire; slot staging remains only as the
+  floor check that guarantees no profile goes unobserved past
+  its cadence. That evolution lands with the Phase 2 diff tool;
+  until then the executor applies the trigger rules by hand from
+  the observation file, and the section 7 planner keeps staging
+  the floor.
+- **Perception points are a floor, not a ceiling.** The two
+  anchored scout passes (post-reset and midday) are the
+  guaranteed minimum perception of a day. A full pass also
+  fires on a detected state change, and partitioned perception
+  of the volatile surface groups rolls with every ticker
+  heartbeat, appending to the same day observation file - so a
+  trigger is seen when it fires, not at the next anchor.
+- **New task discovery (perception document section 6).** Every
+  scout traversal roster-matches the labels it meets; an
+  unmatched label is filed the same session as a provisional
+  candidate profile under `_activities_`, and system mail and
+  update notices are discovery signals in their own right (the
+  Crystal Shop was announced by the maintenance mail of
+  2026-10-21 before any pass found it). Candidates move
+  candidate, exploring, then active or rejected with the reason
+  kept. Exploration units learn a candidate read-only first -
+  entry, mechanism, rewards, cost, cycle, deadline, scoring -
+  and anything touching a price, diamonds, a red line or an
+  unclear rule stays learn-only and is named to the owner in
+  that day round summary. A candidate whose mechanism is clear
+  and inside the free and safe envelope is completed as a
+  profile with trigger conditions and turns active - from then
+  on the trigger scheduler produces its execution units with no
+  per-item owner approval. Every full pass closes with the
+  `unmatched_labels` roster-out list as part of its coverage
+  report, printed even when empty.
 
 ## Changelog
 
+- 0.9.0, 2026-11-01 - section 13 extended under the owner
+  refinement of 2026-10-31 - scheduling is trigger-based rather
+  than fixed-slot, the regulars repositioned as a capability
+  profile library, the planner evolution from slot staging to
+  consuming observations plus profile triggers, perception
+  points as a floor under rolling and change-triggered passes,
+  and the new task discovery protocol with its candidate state
+  machine and unmatched labels coverage; the perception-driven
+  queue design rises to version 1.1.0 alongside.
 - 0.8.0, 2026-11-01 - section 13 added under the owner direction
   of 2026-10-31 for perception-driven daily tasks - the scout
   unit type, its chain splitting, the observation output and its

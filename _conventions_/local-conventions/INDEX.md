@@ -36,5 +36,7 @@ in this repository.
   sweeps.
 - [Perception-driven queue](perception-driven-queue.md) — the scout
   layer; daily work is determined by what the game screen actually
-  offers, observed first into structured items and enqueued
-  dynamically, with the static regulars as the baseline.
+  offers, perceived first into structured items and scheduled by
+  observation triggers rather than fixed slots, with the regulars
+  kept as a capability profile library and new tasks discovered,
+  profiled and scheduled under the discovery protocol.
