@@ -1,14 +1,15 @@
 ---
 title: Daily Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T19:07:00Z
+modified: 2026-11-01T23:45:00Z
 level: L1
-version: 1.0.1
+version: 1.1.0
 description: The Mission daily task list and activity chests, one activity folder for mission knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
+  - source: daily-missions execution record 2026-11-01 1444 queue run
 ---
 
 
@@ -44,7 +45,62 @@ set, point values and chest thresholds. Executions are recorded in
 - Warning from that round - batch tapping one spot is unsafe here, one
   tap landed on Go after the list reordered and jumped to the world map.
 
+## What is known from 2026-11-01
+
+Claim run by ticker-1434 (unit daily-missions-2026-10-31-1900,
+status done). Evidence in
+`_records_/2026-11-01/daily-missions/1444-queue-run.md`.
+
+- Entry - Mission opened from the orange terminal icon on
+  the base screen, grounded at norm 45,865. Daily Tasks
+  tab read live on entry - Next Refresh 03:15:35,
+  activity 110, tab badge 2.
+- Claimed - Help Allies 5 Times (18/5): green Claim
+  tapped once at norm 781,426. Rewards on its row - 10
+  activity points, 5.0K food, 5.0K iron. Dispatch Trade
+  Trucks 3 time(s) (3/3): its green Claim row (30 points,
+  6.0K coin) left the list after that same single Help
+  Claim tap, with no second tap made on it. After the
+  one tap the activity read 150 (110 plus exactly 10
+  plus 30), the tab badge read 1, and neither completed
+  row remained in the list. The mechanism is unverified
+  - the record does not assert how one tap claimed both
+  rows, and a later unit should watch for the same
+  behaviour before assuming it. The standing rule above
+  is unchanged: claim each task individually and re-read
+  the list and the activity total after each claim tap.
+  Do not batch-tap - the list reorders after each claim
+  and a stale tap can land on Go and jump to the world
+  map (standing warning from 2026-10-25).
+- 120 point activity chest - tapped at norm 560,247
+  after the activity reached 150. CONGRATULATIONS popup
+  read "No double reward this time. Good luck next time,
+  Commander!" Contents read live - gear component x2,
+  red crystal x20, milk jar x1, blueprint stack x6, food
+  crate x6, iron 1.2K, 5m speedup x2.
+- Closing state, read live - activity 150. Chests 40, 80
+  and 120 opened; 160 and 200 still ahead (10 points
+  short of 160). Daily Tasks tab badge cleared to none.
+  Daily Login (1/1) sits at the list bottom with no
+  Claim or Go button - already claimed earlier, not by
+  this unit.
+- Not done, reported not skipped - Defeat any Doom Elite
+  1 (0/1), Recruit Heroes 1 (0/1), Kill 5 zombies on
+  World Map (0/5), Gather Food, Iron and Coin 10,000
+  each (0/10,000), Train 100 units (0/100), Recruit
+  Survivors 1 in the Tavern (0/1), Plunder others
+  Secret Task reward 1 (0/1), Perform Data Training on
+  Drone 1 (0/1): incomplete, needing combat, gathering
+  or other regulars gameplay, none attempted in this
+  unit. Attack a Commander 1 (0/1): PvP, stays undone
+  without the owner instruction. Make any paid purchase
+  once (0/1): red line, never attempted.
+
 ## Open questions
 
-- The full daily task set and its reset time, and the highest chest
-  threshold above 80 points.
+- The full daily task set and its reset time, and the chest
+  thresholds above 120 points - 160 and 200 were seen ahead
+  at the 1444 close, not yet claimed.
+- The one-tap-two-claims mechanism of the 1444 unit -
+  unverified, not a rule to rely on until a later unit
+  watches the same behaviour.

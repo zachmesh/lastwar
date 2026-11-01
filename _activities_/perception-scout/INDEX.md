@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-01T10:45:00Z
+modified: 2026-11-01T23:45:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: perception-driven queue design in the local conventions
   - source: task unit queue design section 13
   - source: perception-scout execution record 2026-11-01 0215 PST, first day observation
+  - source: perception-scout execution record 2026-11-01 1437 queue run
 ---
 
 
@@ -144,12 +145,93 @@ observation file plus queue-run file.
   unit. Resource bubbles - none clearly standing on the base
   in this capture, recorded as none seen, not as none present.
 
+## What the 2026-11-01 1437 unit added
+
+Second base-group pass of the day (ticker-1434, unit
+scout-2026-10-31-1900, group scout-base, status partial,
+observe-only, nothing claimed). Evidence in
+`_records_/2026-11-01/perception-scout/1437-queue-run.md`.
+
+- Back-arrow correction, superseding the 0215 point - a tap
+  at norm 112,946 did nothing in this window (it lands on
+  the portrait icon overlapping the arrow left edge, not
+  the arrow). The arrow was re-grounded by visual
+  measurement at bbox x 105 to 222, y 917 to 977, centre
+  norm 163,947, and that tap returned to the base screen
+  at once. The 112,946 point worked at 02:15 and failed
+  at 14:47, so no back-arrow point is standing - every
+  unit re-grounds the arrow fresh by visual measurement,
+  and 163,947 is the current measured point only, not a
+  rule to inherit. This resolves the contradiction in
+  favour of the newest verified record.
+- Hidden Treasure read on entry, measured about 14:47
+  local - treasure progress 2/15 (was 1/15 at the 02:15
+  read), map pieces M1 x12, M2 x12, M3 x0, M4 x9, M5 x2,
+  M6 x6, M7 x12. The change since 02:15 (M1 13 to 12,
+  M2 11 to 12, M5 0 to 2, M6 4 to 6, M7 13 to 12,
+  progress 1/15 to 2/15) is consistent with
+  treasures-regular digs during the day. This unit dug
+  nothing, so the change is not attributed to it.
+- Base screen and HUD read live about 14:47 local -
+  level 30, power 148,957,193 (unchanged from the 02:15
+  read). Top row 312.5M, 500.5M, 22.7M; second row 18.3M,
+  8.1K, 11.72K with a plus button; lightning stamina 120
+  (was 135 at 02:15); cart 2,366 (unchanged). Left
+  column top to bottom - green face icon 0C, radio with
+  badge 3 (was 4), truck, magnifier, survivor portrait.
+  Right column - home icon 780 km, Events with an x2
+  badge, Faction Duel, VS, Season II, Alliance with a
+  red dot, Mail with no dot visible in this capture,
+  Inventory with a red dot, BASE. Bottom - HEROES,
+  megaphone, chat ticker, a 99+ badge above the chat
+  area. No building badge 5 and no NEW! chest badge 3
+  were visible in this capture, unlike the 02:15 read.
+  Recorded as not seen, not as claimed or cleared - the
+  two badges stay unexplained, not closed.
+- Red dot accounting - seen 5, explained 2, unexplained
+  3. Explained - radio badge 3 to the help regular,
+  Events x2 to the events regular, with units for both
+  already queued for the current slots. Unexplained -
+  Alliance dot (alliance group not walked), Inventory
+  dot (store group not walked), 99+ badge (chat surface
+  not walked). Unknown items carried - the furnace
+  overdrive toast line, read again as "Furnace total
+  overdrive time (in sec) [22/60]", still unexplained,
+  furnace observed only, never switched on or off, a
+  red-line surface; and the 780 km home icon meaning,
+  Armed Truck state not verified this unit.
+- Unwalked, carried to the successor - the scout-events
+  group in full (Events hub tabs, duel page, Arms Race
+  phase and score, radar), the scout-store group in
+  full (Store sections, markets, VIP, passes, daily
+  missions, Inventory red dot resolution), the
+  scout-alliance group in full (alliance panel and
+  station, Alliance dot resolution, 99+ badge
+  resolution), and the scout-base remainder (building
+  badges building by building, Armed Truck state
+  verification, gate and wall signals, resource bubbles
+  re-read). Unmatched labels - none in the surfaces
+  actually walked; the roster-out scan covers only
+  those surfaces, not the unwalked groups. A successor
+  scout unit is enqueued for the scout-events group
+  under chain scout-2026-10-31. The unit closes
+  partial under the zero-unexplained-red-dots closing
+  condition.
+- The scout-diff outputs filed with this pass read zero
+  items observed and zero candidates (see the 1532 run
+  record) - they carry no profile knowledge and change
+  nothing above; the learnings here come from the
+  1437 queue-run record itself.
+
 ## Open questions
 
-- The three unexplained red dots above (Alliance dot, building
-  badge 5, NEW! chest badge 3) and the two unknown items (furnace
-  overdrive toast, second HUD row labels) - carried to the
-  successor scout unit, not closed on silence.
+- The unexplained red dots as restated by the 1437 unit
+  (Alliance dot seen again, Inventory dot, 99+ badge,
+  plus building badge 5 and NEW! chest badge 3 not
+  re-seen and not cleared) and the unknown items
+  (furnace overdrive toast now reading [22/60], second
+  HUD row labels, 780 km home icon meaning) - carried
+  to the successor scout unit, not closed on silence.
 - Whether stale staged scout units execute or expire - see the
   filing question in the 2026-11-01 section; a queue-rule
   decision, not a scout-unit decision.

@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T20:40:00Z
+modified: 2026-11-01T23:45:00Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: arms-race execution record 2026-10-31 2241 queue run
   - source: arms-race execution record 2026-10-31 2212 queue run
   - source: arms-race execution record 2026-11-01 1135 queue run
+  - source: arms-race execution record 2026-11-01 1523 queue run
 ---
 
 
@@ -369,3 +370,80 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   session dropped once mid-unit, a new session was
   started, and the Arms Race page was still open with
   state intact, so no game state was lost.
+
+## What the 2026-11-01 1523 unit added
+
+Tech Research phase live again, first unit inside the
+phase (ticker-1504, unit arms-race-2026-11-01-1403,
+status partial, tier-3 target unreached inside the red
+lines, tracker untouched so the next tick re-produces
+this regular). Evidence in
+`_records_/2026-11-01/arms-race/1523-queue-run.md`.
+
+- Phase read twice, at entry and at the sweep -
+  Tech Research, Contest Segment Lv.29-30, time left
+  02:45:25 at entry and 02:37:12 at the sweep, so the
+  phase window ends about 17:57 local. Score 0 both
+  reads. Chest thresholds 6,250, 12,500 and 30,000, so
+  the tier-3 gap stands at 30,000 points. No point chest
+  earned, nothing claimed.
+- Scoring table read live, matching the 2026-10-26
+  Tech Research read - Increase Tech Power by 1pt pays
+  plus 1, Use 1-min Research Speed-up pays plus 10, Buy
+  Packs containing Diamonds pays plus 30 per diamond.
+  The speedup and pack paths are red lines and were not
+  used.
+- Tech Power path judged by live read, not by
+  assumption - the research queue, opened from the base
+  screen queue icons (flask icon, 2/2), holds Lv.1
+  Precision Targeting II with Time Left 4d 16:36:32 and
+  Lv.9 Morale upgrade in progress with Time Left
+  1d 19:08:09, read twice across two computer sessions.
+  No research completes inside this phase window, so the
+  only legal path cannot score here. This is the same
+  shape as the 2026-10-26 Tech Research miss, with the
+  timers now measured instead of carried over. The
+  tier-3 shortfall is recorded here at the phase start,
+  not discovered in the phase last minutes.
+- Later-unit shortcut for this phase, from the unit
+  follow-up - the measured research timers settle this
+  phase, so later units of this phase need only re-read
+  the score and the completion sweep, not re-judge the
+  Tech Power path or re-open the research queue
+  identically.
+- Entry-point lessons, rule R2 - the Arms Race tab bar
+  position shifted between openings: the first two taps
+  at norm 92,128 and 111,128 did nothing, and the
+  OCR-grounded tab centre at norm 187,128 switched the
+  page. Tab positions must be re-grounded from OCR on
+  every opening, never inherited. The scoring-row arrow
+  method ended after two no-change taps: a tap on the
+  Increase Tech Power arrow at norm 849,550 and a tap
+  on the row text at norm 450,548 both produced no
+  change, so that method was abandoned inside this unit
+  and the research queue was reached instead through
+  the base queue icons, a different entry path. The
+  Events page back arrow was first mis-measured at norm
+  63,924 (that point hit a small round icon); the
+  grounded back square at norm 190,962 returned to the
+  base. The research panel was closed with its X at
+  norm 806,338.
+- Completion sweep at the close, on the Arms Race page -
+  no bouncing chest and no reward red dot. The
+  cumulative counter chest at top left reads 1 of 2
+  with a partial bar and no bounce. The ranking row
+  still shows the previous phase figure (#2110
+  [AP3x]Bears Lair, 6,000); per precedent that row is
+  not used as the phase score, and its chest is
+  preview-only with no claim and was not tapped.
+  Nothing was claimed.
+- Session-drop recovery - the computer-use session
+  dropped three times mid-unit
+  (observation_unavailable); sessions were started in
+  turn and the game state was intact at each recovery,
+  so no game state was lost. The unit ran about 17
+  minutes against the 15 minute cap because of the
+  three session recoveries; no scoring action was
+  started late to compensate. No different-device dialog
+  was seen, no login or verification was demanded, and
+  no password or Touch ID step was used.
