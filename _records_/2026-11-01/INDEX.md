@@ -1495,3 +1495,13 @@ of 2026-10-28.
   After: every fragment down exactly 1 (M3 x0), chest progress
   1/15 to 2/15, badge cleared, Dig greyed. No exchange executed.
   Full detail in hidden-treasures/1420-queue-run.md.
+## 14:30 - PR integration pass (done)
+
+- Records PR 101 merged with merge commit 07704a65
+  (ticker-1404 secrets partial and treasures done);
+  records/2026-11-01 branch kept, records/2026-10-31
+  verified contained in main. No feedback, no
+  owner-gated escalations, no conflicts. Local main
+  synced to 07704a65; merge synced to the owner
+  Slack DM. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/1430-run.md.
