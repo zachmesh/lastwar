@@ -1769,3 +1769,23 @@ of 2026-10-28.
   observation pass predates this run's staged units. Pool
   by_state at 15:43: inbox 74, claimed 1, done 496. Full
   detail in queue-planning/1540-run.md.
+
+## 15:34 to about 16:13 — Queue ticker urgent harvest pass
+
+- Urgent owner-directed pass ticker-urgent-harvest on
+  unit harvest-2026-11-01-1403 after the owner reported
+  the production bubbles full at 15:33. Full-base sweep:
+  food, iron, coin (gold mines and far-left coin
+  buildings), experience and screws bubbles all
+  collected, plus the west-compound workshop bubbles
+  and three completed-truck completion bubbles on the
+  trade screen (UR truck return read on Truck Details:
+  food 3.8M, iron 3.8M, coin 2.4M and a squad row).
+  Totals 323.9M food / 512.1M iron / 29.8M coin at
+  entry, 341.2M / 528.7M / 41.0M at the end. The drone
+  component bubble was missed by the executor and
+  collected by the owner himself at about 15:52 -
+  disclosed in the record, not claimed. Record carries
+  the full bubble location map with screenshots, headed
+  for the resource-collection profile. Full detail in
+  resource-collection/1534-queue-run.md.
