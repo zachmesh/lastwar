@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-31T04:35:00Z
+modified: 2026-11-01T05:24:00Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -68,6 +68,17 @@ train also runs on this screen as a trade vehicle.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.
+- Foreground precondition, recorded by the retro of 2026-10-31 -
+  on 2026-10-31 the 1030 gifts unit, the 1030 help unit and the
+  1057 truck unit all failed entry with Chrome frontmost, and
+  background input does not reliably reach the game. Two
+  no-change taps end the background-input method inside the
+  unit under queue rule R2 - the next variant is to bring the
+  game window to the foreground and re-observe before tapping
+  again, never a third identical background tap. A later
+  2026-10-31 truck record notes background input reaching the
+  game throughout, so foreground is a pivot variant, not a
+  claim that background input never works.
 
 ## How it is done - dispatching
 

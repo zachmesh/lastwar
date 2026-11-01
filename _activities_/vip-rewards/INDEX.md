@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-10-28T05:53:00Z
+modified: 2026-11-01T05:24:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,17 @@ Measured on 2026-10-25.
   MY PROFILE.
 - Tap the gold VIP badge on the profile (VIP13 on this account, with
   a red dot when the freebie is waiting). The VIP screen opens.
+- Claim buttons are intermittently unresponsive, recorded by the
+  retro of 2026-10-31 - 3 of the 4 queue-era VIP units closed
+  partial. 2026-10-28 took the login chest but not the freebie,
+  2026-10-29 took the freebie but not the login chest, and
+  2026-10-31 took neither after 5 input variants on the freebie.
+  Only 2026-10-30 took both. Attempt the freebie and the login
+  chest independently, each with a live points read before and
+  after, so one unresponsive button never skips the other item,
+  and a failed claim re-enters the pre-reset sweep instead of
+  waiting a full day. This is a repeat blocker under queue
+  rule R2, not a one-day failure.
 
 ## Cadence
 

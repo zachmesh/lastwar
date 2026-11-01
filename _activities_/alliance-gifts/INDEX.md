@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T04:05:00Z
+modified: 2026-11-01T05:24:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,14 @@ one file per execution.
 - Open the Alliance panel from the base right column (Alliance)
   and tap Alliance Gifts. The entry carries a red dot while gifts
   wait.
+- Foreground precondition, recorded by the retro of 2026-10-31 -
+  the 2026-10-31 1030 unit never opened the Alliance panel
+  because Chrome stayed frontmost and background taps did not
+  reach the Alliance button. Two no-change taps end the
+  background-input method inside the unit under queue rule R2 -
+  bring the game window to the foreground and re-observe before
+  tapping again. The same-day later units recovered, so this
+  blocker is transient, not a dead entry route.
 
 ## How it is done
 

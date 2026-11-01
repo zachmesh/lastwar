@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-26T12:42:00Z
+modified: 2026-11-01T05:24:00Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,14 @@ counts helps, and any caps. Executions are recorded in
 
 - Open Alliance, then the Help page.
 - Press Help All. Individual helps are used only if Help All is not offered.
+- Foreground precondition, recorded by the retro of 2026-10-31 -
+  the 2026-10-31 1030 unit never opened the Alliance panel
+  because Chrome stayed frontmost and background taps did not
+  reach the Alliance button. Two no-change taps end the
+  background-input method inside the unit under queue rule R2 -
+  bring the game window to the foreground and re-observe before
+  tapping again. The same-day later units recovered, so this
+  blocker is transient, not a dead entry route.
 
 ## Standing instruction from the owner
 

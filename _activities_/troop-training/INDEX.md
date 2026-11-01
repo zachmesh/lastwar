@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-11-01T05:24:00Z
 level: L1
-version: 1.0.0
+version: 1.1.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -98,6 +98,21 @@ Observed in game on this account, first execution 2026-10-25.
 - Never tap Finish Now or the green upgrade shortcut while training.
 - Training spends food and iron from stock. The 2026-10-25 round spent
   14.5M of each across four batches, small against roughly 290M stocks.
+
+## Standing blocker recorded by the retro of 2026-10-31
+
+- Queue era 2026-10-28 to 2026-10-31 - 21 of 22 training units
+  closed non-done, 19 partial and 2 failed, 1 done. The dominant
+  late-window blocker is Drill Ground Full, reading 39,460 of
+  39,460, which blocked both collection and requeue in every
+  2026-10-31 unit that reached a barracks.
+- How a full Drill Ground is cleared is not yet known from a
+  live read, and no clearing method is claimed here. The next
+  unit reads the Drill Ground screen live first, records what
+  controls it actually shows, and spends itself on the nearest
+  allowed preparatory action instead of closing as a bare
+  blocked read. This is a third-strike blocker under queue
+  rule R2.
 
 ## Open questions
 

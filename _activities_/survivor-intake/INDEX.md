@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-10-26T04:08:00Z
-version: 1.2.0
+modified: 2026-11-01T05:24:00Z
+version: 1.3.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -98,6 +98,20 @@ Measured on 2026-10-25.
   taken in alongside. Name not captured. Whether the radar
   Distressed Survivor reward of the same evening is one of these
   two is unconfirmed.
+
+## Standing blocker recorded by the retro of 2026-10-31
+
+- Queue era 2026-10-28 to 2026-10-31 - 22 of 22 survivor units
+  closed partial, 0 done. Quick Dispatch did not run in any of
+  them. This is a third-strike blocker under queue rule R2, and
+  the fourth identical partial is a process failure to be
+  reported to the owner, not a result.
+- The repeated failure modes are a gate line not found or not
+  verified, and control channel stalls. The next unit starts at
+  the gate with a fresh grounding, verifies a survivor figure
+  before any tap, and closes unverified with a named re-read
+  unit if the line cannot be verified, instead of closing on a
+  presumed line state.
 
 ## Open questions
 
