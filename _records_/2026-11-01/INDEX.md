@@ -253,3 +253,17 @@ of 2026-10-28.
   main fast-forwarded to the merge via the bundle
   route. End-of-pass sweep: zero open PRs.
   Full detail in pr-integration/0645-run.md.
+
+## 07:00 to about 07:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0700. Zero
+  open PRs at pass start; records/2026-11-01 held one
+  commit beyond main (the 0645 run record), so this
+  pass opened records PR 60 and merged it with a
+  merge commit (a46e57d); the date branch was not
+  deleted. Records/2026-10-31 verified contained in
+  main, so no PR needed. Local main fast-forwarded
+  to the merge via the bundle route. Merge synced
+  to the owner Slack DM. End-of-pass sweep: zero
+  open PRs.
+  Full detail in pr-integration/0700-run.md.
