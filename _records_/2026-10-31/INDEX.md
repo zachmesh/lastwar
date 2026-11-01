@@ -547,3 +547,7 @@ unrecoverable fields written unknown:
 ## 23:15 to about 23:23 — PR integration (records merge)
 
 - PR integrator run pr-integration-2026-10-31-2315, done: 0 open knowledge/code PRs at pass start and at the end-of-pass sweep, 0 commented, 0 escalated, 0 conflicts. First records PR under cadence A: PR 6 for records/2026-10-31 (the 2314 run record plus its INDEX section, 2 files, 124 insertions) opened, polled CLEAN / MERGEABLE, merged with merge commit 207c20145; the date branch was not deleted and keeps taking the day's appends. Merge-time action-log line for the 2314 work appended to the records branch (PR branches carry no _logs_ appends); the two known pre-existing non-parsing historical action-log lines were left untouched. Slack DM merge notice sent. No sync-back (records merge only) and no backlog edit (no linked improvement task id). Full detail in pr-integration/2315-run.md.
+
+## 23:15 to about 23:27 — PR integration (records merge, addendum)
+
+- Addendum to pr-integration-2026-10-31-2315: the end-of-pass sweep found records PR 7 (ticker-2304 donations, opened mid-pass by the ticker run, Owner: lastwar-pr-integrator), polled CLEAN / MERGEABLE and merged with merge commit d48d7037; the date branch was not deleted. Pass totals updated to 2 records PRs merged and 0 open PRs. Repo transfer noted: the PR 7 merge commit shows the head repo as zachmesh/lastwar (transferred from dtadpole/lastwar 2026-10-31, now public); dtadpole/lastwar operations still work through the redirect. Full detail in pr-integration/2315-run.md.
