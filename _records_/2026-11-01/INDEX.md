@@ -522,3 +522,15 @@ of 2026-10-28.
 ## 02:32 to about 02:45 - Knowledge organization pass
 
 - Knowledge organizer run knowledge-organization-2026-11-01-0232, done: own-PR check first, zero open PRs at pass start, PR 35 stands MERGED with no comments, nothing addressed to this job and nothing taken over. Backlog on main version 1.1.1: no open knowledge-organization entry covers these types. Folded secret-missions 0145, hidden-treasures 0150 and perception-scout 0215 into profiles 1.2.0, 1.1.0 and 1.1.0 on PR 41 (commit 4d10bab8e, Owner lastwar-knowledge-organizer). One contradiction resolved: the 2026-10-25 note that UR ally rows show no Assist button is superseded by the 0145 UR rows carrying blue Assist buttons that four taps did not consume. Full detail in knowledge-organization/0232-run.md.
+## 02:34 to about 02:42 - Queue ticker pass, arms-race access-failed
+
+- Ticker pass ticker-0234, unit arms-race-2026-11-01-0203,
+  failed: the Mac mini device channel returned node_offline
+  with no wake-up path on six computer.session starts, last
+  seen 2026-11-01T09:47:27Z and unmoved across the pass;
+  two recovery-channel attempts timed out after 25 seconds
+  each. No game input was dispatched, no Arms Race phase
+  or score was read, nothing claimed, nothing spent.
+  Tracker untouched, so the next tick re-produces the
+  regular as a fresh unit. Full detail in
+  arms-race/0234-queue-run.md.
