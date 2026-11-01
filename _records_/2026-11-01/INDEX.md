@@ -1650,3 +1650,16 @@ of 2026-10-28.
   owner-gated escalations, no conflicts. Local main
   synced to 76d5966d9; merge synced to the owner
   Slack DM. Full detail in pr-integration/1500-run.md.
+
+## 15:23 — Queue ticker pass, arms race (partial)
+
+- Arms-race unit arms-race-2026-11-01-1403, partial: Tech Research
+  phase, Segment Lv.29-30, score 0 both reads (02:45:25 left at entry,
+  02:37:12 at the sweep), thresholds 6,250 / 12,500 / 30,000, tier-3
+  gap 30,000. Speedup and pack paths are red lines; the Tech Power
+  path cannot score because the research queue holds only Lv.1
+  Precision Targeting II (4d 16:36 left) and Lv.9 Morale (1d 19:08
+  left), read twice. Completion sweep: cumulative chest 1/2, no
+  bounce, no reward red dot, ranking row lag figure 6,000 not used
+  as the score. Nothing claimed, tracker untouched.
+  Full detail in arms-race/1523-queue-run.md.
