@@ -1,11 +1,11 @@
 ---
 title: Perception-Driven Queue
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-01T05:16:00Z
+modified: 2026-11-01T05:17:00Z
 level: L2
-version: 1.1.0
+version: 1.2.0
 description: The scout layer - daily work is determined by what the game screen actually offers, perceived first and scheduled by observation triggers rather than fixed slots, with the regulars kept as a capability profile library and new tasks discovered, profiled and scheduled automatically
-status: phase-1-landed
+status: phase-2-landed
 grounded_in:
   - source: owner direction of 2026-10-31 - daily tasks shall be determined by what is observed on screen, perceive the game first, see what is available to do, and place it into the queue dynamically
   - source: owner refinement of 2026-10-31 - no fixed schedule; check and perceive where tasks are needed and schedule them automatically; discover potentially new tasks, learn about them, create their task profile and metadata, and start scheduling executions for them
@@ -538,25 +538,46 @@ and the evidence every scout unit result points at.
   unknowns awaiting their exploration unit, named - never a bare
   `none` while the pass holds an open signal.
 
-## 9. Tool design - tools/scout_diff.py (Phase 2)
+## 9. Tool - tools/scout_diff.py (Phase 2, implemented)
 
-Design only in this phase - no code is written here. The tool is
+Implemented 2026-11-01 as `tools/scout_diff.py` (standard library
+only), to the design this section fixed in Phase 1. The tool is
 the diff of section 5 as a program, so the step from observation
 to queue stops depending on an executor remembering to do it.
 
-**Interface sketch**
+**CLI usage**
 
 ```text
-tools/scout_diff.py [--root DIR] [--date YYYY-MM-DD] [--enqueue]
-                    [--format text|json]
+tools/scout_diff.py --observation FILE [--date YYYY-MM-DD]
+                    [--out DIR] [--root POOL] [--repo DIR]
+                    [--regulars FILE] [--ledger FILE]
+                    [--now ISO] [--apply] [--format text|json]
 ```
 
-- Without `--enqueue` the tool is a dry run - it prints its three
-  outputs and changes nothing. With `--enqueue` it writes the
+- The observation is the day observation file, or any file in the
+  same shape - a Markdown or YAML text carrying `observed_items`
+  blocks (frontmatter, fenced or body blocks all count, because
+  every pass of the day appends to one file) plus any
+  `unmatched_labels` lists, or a JSON document with the same keys
+  at any depth.
+- Without `--apply` the tool is a dry run - it writes its three
+  outputs and changes no pool. With `--apply` it writes the
   enqueue plan into the pool through `tools/queue.py enqueue`,
   one call per unit, so every unit it creates passes the same
   validation as a manual enqueue - the cap check, the chain
-  homogeneity check, the file layout.
+  homogeneity check, the file layout. `--apply` refuses to run
+  unless the pool root is named explicitly with `--root`; pool
+  reads for the dedupe checks and the learned estimates likewise
+  happen only against a named root.
+- Outputs land in `--out` (default - a `scout-diff-output` folder
+  beside the observation file), named with the date - the enqueue
+  plan as JSONL (one `queue.py enqueue` argument set per line,
+  each entry carrying its action - enqueue, already-queued or
+  raise - and its source items), the candidate filings, and the
+  coverage report.
+- `--now` pins the clock for the priority formula and the
+  production windows; it exists for tests and replays. Production
+  runs leave it unset.
 
 **Inputs**
 
@@ -619,15 +640,115 @@ observation produces an empty enqueue plan and an unchanged
 pool. The tool never completes, claims or deletes a unit - it
 only proposes and, with `--enqueue`, enqueues.
 
-**Priority support it needs from the queue tool** - produced
-scout units should stage at priority 2, windowed work. The
-queue tool takes production priority from its SYNC_PRIORITY
-table, which has no scout entries yet. Adding `scout` and
-`scout-midday` at priority 2, with learned-estimate seeds, is a
-named part of the Phase 2 change, landed with this tool rather
-than silently defaulting scout production to priority 3.
+**Priority support from the queue tool** - produced scout units
+stage at priority 2, windowed work. The queue tool takes
+production priority from its SYNC_PRIORITY table; the Phase 2
+change landed `scout` and `scout-midday` there at priority 2,
+with SYNC_EST_MINUTES seeds of 10 minutes each until the pool
+learns better, instead of silently defaulting scout production
+to priority 3. The tool reads its expected durations through
+the queue tool learned estimates, so its priority formula and
+the planner seeds never drift apart.
 
-## 10. Phased roadmap
+## 10. Learning and knowledge hardening
+
+Discovery files a task; execution works it. Neither, alone,
+makes the routine know the task - and the audit showed the cost
+of shallow knowledge as plainly as the cost of missing tasks:
+units repeated a wrong entry belief for days, because nothing
+forced what was learned to be written down, checked and
+hardened. Every task therefore carries a learning loop beside
+its execution loop. The loop binds candidates in their
+exploration stage and known tasks whose executions keep failing
+alike - a repeated failure is treated as a knowledge defect
+first and an execution defect second.
+
+### In-game learning
+
+An execution or exploration unit reads the task's own interface
+in full - the rules and help text, the reward table, the costs,
+the timers, the preconditions, and every sub-tab, not only the
+screen the work itself touches. What can be tested safely is
+tested, and the value is recorded as measured. What cannot be
+tested is recorded as untested, never presented as known - the
+distinction is part of the record, under constitution C4.
+
+### Web research
+
+The game is not the only source, and memory of the game is the
+weakest one. For each task under hardening, the official
+announcements, the wiki, mature guides and community sources
+are checked, with at least two independent sources
+cross-checked against each other. Where the sources disagree
+with each other or with the in-game read, the in-game live read
+wins, and the disagreement and the choice are written into the
+profile with the sources and their dates - a later unit must be
+able to see why the profile believes what it believes.
+
+### Knowledge hardening - the profile and its proficiency
+
+What is learned is written back into the task's `_activities_`
+profile the same session, with the profile version raised -
+entry point, mechanism, cost, rewards, cycle and deadline
+shape, scoring rules, red lines, the live read that verifies
+it, and the open questions still outstanding. The profile
+carries a proficiency state -
+
+- **proficient** - every key field (mechanism, cost, rewards,
+  deadline shape) is supported by a measured in-game read or by
+  two independent sources in agreement.
+- **learning** - anything less. A profile in this state is a
+  work order, not a reference: its execution units learn first
+  and execute second, filling the missing fields before or
+  while they work, and a unit that cannot close the gap says so
+  instead of executing on a guess.
+
+### The feedback loop
+
+When an execution finds the profile wrong - a count, a
+mechanism, a state the profile asserts - the profile is
+corrected in the same session and its version raised. No second
+unit may spend itself on a belief already known to be wrong.
+This is the learning form of rule R2: the pivot is recorded
+knowledge, not only a changed tap.
+
+### The exploration closing standard
+
+Under this protocol, an exploration unit for a candidate does
+not close on "the surface was visited". It closes when the
+profile fields are filled far enough to decide - the candidate
+can be completed as a profile and turned active, or it is
+explicitly rejected with the reason kept (section 6). A pass
+that ends with the fields still open ends as partial with the
+missing fields named, and the candidate stays in exploring.
+
+### First retrospective hardening target - radar-tasks
+
+The first profile named for retrospective hardening under this
+protocol is radar-tasks. Its failure history in the audited
+days is specific: on a stack day a radar unit never entered the
+radar screen at all (the rotating base entry icon pointed at
+the wrong target and the pass closed without the screen); on
+the release day the map pins - the subtask rule R7 now protects
+- went untapped while claims were worked; and the special pin
+tasks that Quick Execute does not cover were left without a
+closing read. The hardening goal is a complete radar profile:
+the task types and their refresh, the exact coverage of Quick
+Execute and its exceptions, the handling of each pin task type,
+the stack and release scoring rules, and the inventory cap
+management that keeps stored tasks refreshing. The completion
+standard is not this document's say-so - later execution units
+verify the profile field by field against the game, under the
+feedback loop above, and the profile rises to proficient only
+when the key fields carry measured or dual-source support.
+
+Execution results under this protocol are also the data of the
+retro review mechanism (task unit queue design, section 14) -
+what units measured, gained and were blocked by is aggregated
+there, and its execution-knowledge actions land back here as
+profile hardening.
+
+## 11. Phased roadmap
 
 - **Phase 1 - this document and the modelling (landed with this
   change).** This design, the perception layer section of the
@@ -645,16 +766,29 @@ than silently defaulting scout production to priority 3.
   guaranteed floor under rolling and change-triggered
   perception. The executor applies those rules by hand in this
   phase exactly as it applies the diff.
-- **Phase 2 - the diff tool and the planner hookup.** `tools/scout_diff.py`
-  implemented to the design of section 9, the queue tool priority
-  entries for the scout regulars, and the planner pass running
-  the diff after each scout chain completes, so dynamic units
-  land in the pool without waiting for an executor to transcribe
-  them. This is also where the planner changes species - from
-  staging units by time slot to consuming observations plus
-  profile trigger conditions and producing units when triggers
-  fire, with the slot staging kept only as the floor check of
-  section 5.
+- **Phase 2 - the diff tool and the planner hookup
+  (implemented 2026-11-01).** `tools/scout_diff.py` is
+  implemented to the design of section 9 - dry run by default,
+  `--apply` only against an explicitly named pool root - and
+  the queue tool priority entries for the scout regulars are
+  landed (SYNC_PRIORITY and SYNC_EST_MINUTES in
+  `tools/queue.py`). The tool was validated on a scratch pool
+  against a synthetic observation covering a known actionable
+  item, known items blocked by state and by red line, an unknown
+  candidate and unmatched labels - classification, the priority
+  formula, apply and rerun idempotency (second run zero new)
+  all asserted. What remains of this phase is operational, not
+  design: the planner pass runs the tool after each scout chain
+  completes, so dynamic units land in the pool without waiting
+  for an executor to transcribe them; wiring that invocation
+  into the scheduled planner's instructions is an operations
+  step outside this document. This is also where the planner
+  changes species - from staging units by time slot to
+  consuming observations plus profile trigger conditions and
+  producing units when triggers fire, with the slot staging
+  kept only as the floor check of section 5. Version 1.2.0 of
+  this design, landed the same day, adds the learning and
+  knowledge hardening protocol of section 10.
 - **Phase 3 - reporting and promotion automated.** The coverage
   report, unmatched labels included, joins the round summary as
   a standing section, the unknown items naming becomes
@@ -665,7 +799,7 @@ than silently defaulting scout production to priority 3.
   safe promotions land under the envelope of section 6, the
   rest still come to the owner with the evidence.
 
-## 11. Standing rules this layer inherits
+## 12. Standing rules this layer inherits
 
 - The red lines bind perception exactly as they bind execution -
   a scout reads a priced button, it never presses it. Reading
@@ -682,3 +816,8 @@ than silently defaulting scout production to priority 3.
   or executor, is filed as a candidate in the same session under
   section 6. Seeing a new surface and walking past it is the
   failure this layer exists to end.
+- The retro duty - every unit, scout or executor, closes with
+  the measurement stats the retro review mechanism aggregates
+  (task unit queue design, section 14). Perception that is not
+  measured cannot be reviewed, and what cannot be reviewed
+  repeats.

@@ -1,9 +1,10 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-29T21:52:00Z
+modified: 2026-11-01T05:18:00Z
 level: L1
-version: 1.4.0
+version: 1.5.0
+proficiency: learning
 description: Radar stored tasks, Quick Execute, stamina regain and the special pin tasks that Quick Execute does not cover
 status: unverified
 grounded_in:
@@ -202,3 +203,22 @@ Two further pin types completed in the late round -
   (the skull and handshake pins seen earlier) follow the same flow.
 - Where a survivor gained from a special radar task reports to -
   base gate queue or straight onto the roster.
+
+## Knowledge hardening backlog - first target, 2026-11-01
+
+This profile is the first retrospective hardening target under
+the learning and knowledge hardening protocol (perception-driven
+queue design, section 10), and carries proficiency learning
+until the fields below carry measured or dual-source support.
+The failure history being hardened against: on a stack day a
+radar unit never entered the radar screen (the rotating base
+entry icon pointed at the wrong target and the pass closed
+without the screen); on the release day the map pins went
+untapped while claims were worked; and special pin tasks that
+Quick Execute does not cover closed without a completing read.
+Hardening fields to complete: the task types and their refresh;
+the exact coverage of Quick Execute and its exceptions; the
+handling of each pin task type; the stack and release scoring
+rules; and the inventory cap management that keeps stored
+tasks refreshing. Completion is verified by later execution
+units against this profile, field by field - not by this note.

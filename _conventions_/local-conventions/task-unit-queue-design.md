@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T05:16:00Z
-version: 0.9.0
+modified: 2026-11-01T05:17:00Z
+version: 0.10.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -498,11 +498,12 @@ section fixes the queue-level contract.
   reset) and `scout-midday` (the midday pass, daily-reset cadence
   anchored at 07:00 local, the middle of the reset day). Both
   name the activity `perception-scout`. Scout units are windowed
-  work - priority 2 by intent; the production priority table
-  gains their entries with the Phase 2 diff tool, as the
-  perception document records. A scout unit observes and records
-  only - it never claims, fights, dispatches or buys. The work
-  it finds belongs to the owning regular own unit.
+  work - priority 2; the production priority table carries
+  their entries since the Phase 2 change (SYNC_PRIORITY and the
+  SYNC_EST_MINUTES seeds of 10 minutes in `tools/queue.py`). A
+  scout unit observes and records only - it never claims,
+  fights, dispatches or buys. The work it finds belongs to the
+  owning regular own unit.
 - **Chain splitting.** One pass is one homogeneous chain of
   scout units, split by surface group - scout-base, scout-events,
   scout-store, scout-alliance - because a full traversal does not
@@ -539,7 +540,13 @@ section fixes the queue-level contract.
   produces them, and carry their source observation in their
   window text when the diff creates them. Unknown items enter as
   priority 2 exploration units and are governed by rule R5 from
-  their first day.
+  their first day. The diff itself is a program since Phase 2 -
+  `tools/scout_diff.py` reads the day observation file, diffs it
+  against the regulars, the `_activities_` roster with its
+  candidate register, the ledger and the pool, and produces the
+  enqueue plan, the candidate filings and the coverage report
+  (dry run by default; `--apply` enqueues through this tool,
+  only against an explicitly named pool root).
 - **Scheduling is trigger-based (owner refinement 2026-10-31).**
   Fixed time slots are not the primary production mechanism.
   The regulars are repositioned as a capability profile library
@@ -591,9 +598,134 @@ section fixes the queue-level contract.
   per-item owner approval. Every full pass closes with the
   `unmatched_labels` roster-out list as part of its coverage
   report, printed even when empty.
+- **Learning and knowledge hardening (perception document
+  section 10).** Every task - a discovered candidate, and a
+  known task whose executions keep failing - carries a learning
+  loop beside its execution loop: the task's own interface read
+  in full with values marked measured or untested, web research
+  cross-checked across at least two independent sources with
+  disagreements resolved in favour of the in-game read and
+  recorded, and the result hardened into the `_activities_`
+  profile under a proficiency state (proficient only when the
+  key fields - mechanism, cost, rewards, deadline shape - carry
+  measured or dual-source support; a profile still learning
+  makes its units learn first). An exploration unit closes not
+  on having visited the surface but on the profile fields being
+  complete enough to turn the candidate active or explicitly
+  rejected. The first retrospective hardening target is
+  radar-tasks, named in the perception document.
+
+## 14. Retro review mechanism
+
+**The repository is the single source of truth (owner rule,
+2026-10-31).** Everything this game line knows - its knowledge,
+mechanisms, measurements, reviews and reflections - lives in
+this repository and nowhere else. Chat and Slack carry
+summaries and pointers only, never the sole copy of anything
+load-bearing. A finding that exists only in a conversation does
+not exist.
+
+### Per-unit measurement
+
+Every unit already closes with a structured result (section
+5). The retro mechanism fixes the `result.stats` keys every
+task type must fill, so outcomes are comparable across units
+and days -
+
+| Key | Meaning |
+|---|---|
+| `target` | the quantity this unit set out to reach - a count, a quota, a threshold |
+| `achieved` | the quantity actually reached, read live in the same unit (rule R1) |
+| `resources_gained` | what the unit gained, itemised by resource type as displayed |
+| `points` | score gained, for scoring types (duel, Arms Race, radar) |
+| `costs` | what the unit spent - its duration, stamina, items consumed |
+| `verified` | whether the closing figures are same-unit live reads - yes or no |
+| `blocker_category` | when the unit did not reach its target, the miss audit root cause class - a window closure, b crowding out, c tap method, d inference over live read, e repeated blocker, f missing precondition, g true red-line miss, h by-design partial, i owner-named without escalation |
+
+`duration_seconds`, `attempts` and the `claimed` list are
+already core result fields and are not repeated in stats. A
+unit that closes without its required stats keys is counted as
+unverified in the retro aggregation, exactly as a unit whose
+`verified` reads no - producing the numbers is part of the
+work, not paperwork after it.
+
+### Aggregation - the retro_report.py specification
+
+Aggregation is specified here and implemented later as
+`tools/retro_report.py`; this section is its specification,
+and no code lands with it. The tool aggregates by task type,
+per day and over a rolling 7 day window -
+
+- execution count, and the done, partial and
+  skipped-needs-owner distribution;
+- target attainment - achieved over target, summed and per
+  unit;
+- output per minute - resources gained and points, divided by
+  execution minutes;
+- total duration and median duration;
+- the top repeated blockers, by `blocker_category` and by the
+  named blocker;
+- the unverified closing count - `verified` no, plus the units
+  missing required stats keys.
+
+Its only data sources are inside the repository - the unit
+results in `_queue_/done` and the execution records in
+`_records_`. Its only outputs are inside the repository - one
+daily retro file per local date at `_records_/retro/<date>.md`
+and the rolling metrics file at `_records_/retro/rolling-7d.md`
+- a standing cross-day series beside the date folders,
+registered here as its convention. The retro files are derived
+artifacts: they are regenerated from the unit results, which
+remain the immutable source (C1), and a regenerated day states
+the pool state it was derived from.
+
+### The daily rolling retro
+
+Once a day, timed with the post-reset perception round, a
+retro pass looks back over the past 7 days. Per task type it
+reads the trends and names the largest loss points - where
+target attainment leaks, where a blocker repeats, where time
+goes without output. It produces improvement actions of two
+kinds -
+
+- **Execution knowledge** - what the game taught, written back
+  into the corresponding `_activities_` profile with its
+  version raised, under the hardening protocol of the
+  perception document (section 10).
+- **Meta knowledge** - what the system taught about itself -
+  revisions to the scheduling triggers, the priority formula,
+  the queue rules of section 11 or this design, proposed as
+  document changes with their changelog entries.
+
+Every improvement action carries its verification method and
+the next-day recheck item that will prove or close it, written
+into that day's retro file. An action not closed by its recheck
+rolls into the next day's retro list - open actions are a
+standing list, never a one-day note. The retro's headline
+findings join the round summary as pointers to the retro file;
+the file is the record, the summary is the pointer.
 
 ## Changelog
 
+- 0.10.0, 2026-11-01 - Phase 2 of the perception layer landed
+  in section 13 - `tools/scout_diff.py` implemented (dry run by
+  default, `--apply` only against an explicitly named pool
+  root, scratch-pool validated), the scout and scout-midday
+  production priorities and estimate seeds recorded as landed
+  in `tools/queue.py`, and the learning and knowledge hardening
+  protocol of the perception document (its section 10)
+  referenced, with radar-tasks as the first retrospective
+  hardening target. Section 14 added under the owner direction
+  of 2026-10-31 - the retro review mechanism: the repository as
+  the single source of truth for this game line, the required
+  per-unit result stats keys (target, achieved,
+  resources_gained, points, costs, verified, blocker_category
+  in the miss audit classes), the aggregation specification
+  for a later `tools/retro_report.py` writing only into
+  `_records_/retro/`, and the daily rolling retro whose
+  improvement actions split into execution knowledge and meta
+  knowledge, each carrying a verification method and a next-day
+  recheck.
 - 0.9.0, 2026-11-01 - section 13 extended under the owner
   refinement of 2026-10-31 - scheduling is trigger-based rather
   than fixed-slot, the regulars repositioned as a capability

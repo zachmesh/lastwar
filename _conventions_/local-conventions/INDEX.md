@@ -22,9 +22,11 @@ in this repository.
 - [Task intake workflow](task-intake-workflow.md) — how a newly named task
   is checked against the task types, registered if missing, executed if
   new, and only checked and updated if it already exists.
-- [Task unit queue design](task-unit-queue-design.md) — the proposal
-  to run the routine as short task units drawn from a file queue
-  instead of long segment runs, with a 15 minute batch cap.
+- [Task unit queue design](task-unit-queue-design.md) — the design
+  the routine runs on: short task units drawn from a file queue
+  instead of long segment runs, the execution discipline rules,
+  the perception layer contract, and the retro review mechanism
+  of section 14.
 - [Miss audit 2026-10-31](miss-audit-2026-10-31.md) — the root cause
   audit of every non-done queue unit of 2026-10-30 and 2026-10-31,
   with the owner expanded collection checklist checked line by line.
@@ -38,5 +40,7 @@ in this repository.
   layer; daily work is determined by what the game screen actually
   offers, perceived first into structured items and scheduled by
   observation triggers rather than fixed slots, with the regulars
-  kept as a capability profile library and new tasks discovered,
-  profiled and scheduled under the discovery protocol.
+  kept as a capability profile library, new tasks discovered,
+  profiled and scheduled under the discovery protocol, the
+  scout_diff tool of Phase 2, and the learning and knowledge
+  hardening protocol.
