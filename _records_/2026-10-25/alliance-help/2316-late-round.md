@@ -1,9 +1,9 @@
 ---
 title: Alliance Help Execution 2026-10-25 Late Round Check
 created: 2026-10-26T06:44:00Z
-modified: 2026-10-26T06:44:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the late round alliance help check, no ally requests pending, 2026-10-25
 status: unverified
 grounded_in:
@@ -25,5 +25,5 @@ Metadata for this type lives in
   own requests.
 - Help points for the day stood at 500 of 1,000 on the alliance Help
   ranking, rank 54, with 10 helps given.
-- Alliance state re-read in the same visit - The Apex, leader Texan
+- Alliance state re-read in the same visit - the alliance, leader Texan
   Apex, members 91 of 100, alliance power 12,463,347,597.

@@ -10,7 +10,7 @@ status: done
 Session window: 23:04-23:15 PDT, executor ticker-2304, Mac mini
 sessions cc-408 and cc-409 (cc-408 dropped mid-unit, re-opened
 as cc-409 with the shop page state intact), game account
-[redacted-character-name].
+owner account.
 
 Performed in full.
 

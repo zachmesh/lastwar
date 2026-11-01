@@ -1,8 +1,8 @@
 ---
 title: Mail rewards queue run 1937
 created: 2026-10-30T19:48:00Z
-modified: 2026-10-30T19:48:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Mail unit mail-2026-10-30-1830 by ticker-1934
 status: done
 grounded_in:
@@ -43,7 +43,7 @@ window mode 642x951, no different-device dialog.
 - Regular: only Victory / Invading Zombies reports (1h,
   5h, 10h ago); Claim All produced no change, no
   attachment. Season: only Ice Breaking Reports from
-  [AP3x]Abuss Apex, 3d ago; Claim All produced no
+  an allianceAbuss Apex, 3d ago; Claim All produced no
   change. System: President Mail and Planned Update
   Notice items; Claim All produced no change. Battle
   Report: scout reports plus Lv.17 to Lv.20 Zombie

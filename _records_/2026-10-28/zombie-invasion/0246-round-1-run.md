@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion Execution 2026-10-28 0246 Round 1 Run
 created: 2026-10-28T10:35:00Z
-modified: 2026-10-28T11:02:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: Round 1 of the owner-directed Zombie Invasion play - discovery, four Lv.10 kills, boss inspection, the event Store mapped and three 50 stamina items redeemed for medals, zero direct coin from Lv.10 kills, stood down when the queue chain took over the same Mac
 status: unverified
 grounded_in:
@@ -57,7 +57,7 @@ coin line on the Lv.10 card, and no drop list was shown on
 any victory banner.
 
 - Kill 1, about 02:49 - Search centred on a target beside
-  [aP3x]Brosephski base, about 64 km from home. Coin baseline
+  another commander base, about 64 km from home. Coin baseline
   before any zombie play - the coin panel read 34,417,273
   owned at 02:48, stamina 138. Squad 1 marched (25.05M
   against 670.00K, Easy Win), stamina 138 to 128 charged on
@@ -78,7 +78,7 @@ any victory banner.
   a plus 10 neither record explains (a stamina drop from the
   kill or chunked regeneration are the candidates).
 - Kill 3, about 03:52 - a target 16 km away beside
-  [AP3x]Crow base. Marched from this session's Search; the
+  another commander base. Marched from this session's Search; the
   zombie was gone and March Queues read 0 of 4 afterwards.
 - Kill 4, about 04:05 - a target about 105 km away, marched
   from this session's Search after the Store visit below;
@@ -119,7 +119,7 @@ any victory banner.
 ## Boss inspection (no stamina spent)
 
 - Boss Search centred on a Lv.85 Zombie Boss found by
-  [aP3x]GingaNinjaRedd. Card - Suggested Power 34,500,000,
+  another commander. Card - Suggested Power 34,500,000,
   stamina 20, despawn 01:19:55 at the read. Rally Initiator
   Rewards - chest x2, medal x80, book 2.1K, EXP 3.5M, iron
   1.0M (row cut off at the read). Discoverer Reward - chest

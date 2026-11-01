@@ -1,8 +1,8 @@
 ---
 title: Train queue run 1238
 created: 2026-10-30T19:38:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-1234 train unit, done as a check - no boarding banner, no train in preparation
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 12:34-12:38 PDT, executor
 ticker-1234, Mac mini session cc-497, game account
-[redacted-character-name].
+owner account.
 
 Performed: checked only.
 
@@ -24,7 +24,7 @@ Performed: checked only.
 - Base screen inspected in windowed mode (642x951):
   no "Boarding closes in" banner under the resource
   bar. The top banner was the alliance appointment
-  announcement ([VR4L]SAPPER1006 dug up 2 Golden
+  announcement (another commander dug up 2 Golden
   Mobile Squad) plus the high-temp furnace overdrive
   line, so no train is in preparation at this check.
   Resource bar read coin 145.9M, matching the

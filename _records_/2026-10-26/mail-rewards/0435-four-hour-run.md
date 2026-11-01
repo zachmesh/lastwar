@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-26 0435 Four Hour Run
 created: 2026-10-26T11:43:00Z
-modified: 2026-10-26T11:43:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 0435 four hour run, partial before access failed
 status: unverified
 grounded_in:
@@ -27,7 +27,7 @@ Metadata for this type lives in
 - Claim All was pressed in Alliance, Event, System and Regular
   in turn; each answered No rewards available. Nothing was
   claimed and nothing was deleted anywhere.
-- The Event list held a train arrival notice - the AP3x Bamie
+- The Event list held a train arrival notice - the alliance Bamie
   train. It was opened and read in full; the passenger list did
   not include this account in the part read and the mail carries
   no Claim button, only a Details button over a battle history.

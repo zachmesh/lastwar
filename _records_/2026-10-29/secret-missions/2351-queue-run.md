@@ -1,8 +1,8 @@
 ---
 title: Secret tasks claim queue run
 created: 2026-10-30T06:52:00Z
-modified: 2026-10-30T06:52:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit secrets-2026-10-29-2257 execution
 status: done
 ---
@@ -50,7 +50,7 @@ records. CONGRATULATIONS! rewards shown:
 - Skill Medal 1.3K
 - Refined Iron Module 150
 
-Secret Task Report: [AP3x]JottomanCobra helped claim task
+Secret Task Report: an allianceJottomanCobra helped claim task
 rewards at 10-29 23:46; Like All tapped (thumbs-up then
 shown liked). The popup was dismissed by tapping its
 CONGRATULATIONS! banner. After dismissal every one of

@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-30 1427 Queue Run
 created: 2026-10-30T21:27:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.1
+version: 0.1.2
 description: Arms-race queue unit arms-race-2026-10-30-1403 - Base Building phase at score 0, every scoring path inside a red line, no in-window building completion, recorded skipped-needs-owner
 status: unverified
 grounded_in:
@@ -32,7 +32,7 @@ the tracker is skipped for this slot per the ticker rules.
   10, Buy Packs containing Diamonds plus 30 per diamond.
 - Live score at entry — the phase page score bar read 0,
   so no point chest was earned yet. The ranking row read
-  #2110 [redacted-character-name] with 91,000; per the 2026-10-30
+  #2110 owner account with 91,000; per the 2026-10-30
   0210 precedent the ranking row figure is recorded as
   the ranking-row figure, not as the live phase score.
 - Navigation note — the Events screen opened on its

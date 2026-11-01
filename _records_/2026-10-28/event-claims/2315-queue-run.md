@@ -1,8 +1,8 @@
 ---
 title: Event claims queue run 2315
 created: 2026-10-28T23:15:00-07:00
-modified: 2026-10-28T23:15:00-07:00
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit events-2026-10-28-2257 execution record
 status: done
 ---
@@ -21,7 +21,7 @@ about 23:11 to 23:15 local. Status performed, nothing claimed.
   this unit; grinding belongs to the arms-race unit.
 - Desert Battlefield tab - Desert Storm Battlefield, alliance
   matchmaking in progress, 01:48:01 left, 17 total sign-ups
-  for [AP3x] The Apex. No personal claim; Enter Battlefield
+  for the alliance. No personal claim; Enter Battlefield
   and Go to Watch untouched.
 - Winter Battlefield tab - Starting soon, match windows
   10/30 21:00-23:00, 10/31 04:00-06:00 and 14:00-16:00, as

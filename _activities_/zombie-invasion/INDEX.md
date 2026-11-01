@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-10-31T03:48:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.22.0
+version: 1.22.1
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -217,7 +217,7 @@ execution.
   targets far from home, a different thing from the nearby
   Invading Zombies that Search finds.
 - The first Search found a Lv.10 Invading Zombies target beside
-  an alliance member base ([aP3x]Brosephski), about 64 km from
+  an alliance member base (another commander), about 64 km from
   the home base. Its card read - Suggested Power 670,000,
   stamina cost 10, despawn timer about 11 hours 52 minutes.
   Guaranteed Reward - event medal x10, a book item 1.3K, hero
@@ -567,7 +567,7 @@ execution.
   both kills in unit 053 used.
 - Gift-box point moves with the map, unit 053 on
   2026-10-30 — taps at 317,233 and 312,225 opened
-  ally [AP3x]ZOLTAN's base profile instead of LOOT,
+  ally another commander's base profile instead of LOOT,
   because the map was centred on that base and the
   base sat under the gift icon. After a map drag
   moved the base clear, a tap at 319,247 opened

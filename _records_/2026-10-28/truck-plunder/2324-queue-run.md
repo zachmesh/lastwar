@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 2324
 created: 2026-10-28T23:24:00-07:00
-modified: 2026-10-28T23:24:00-07:00
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit trucks-2026-10-28-2257 execution record
 status: partial
 ---
@@ -44,7 +44,7 @@ plunder hunt not completed, tracker untouched.
   spent.
 - Plunder: Others' Trucks tab showed Your Plunder Count
   Today 0 of 4. One purple SSR truck was inspected by its
-  card: #2088 [AKCF]ガク88, Lv.30, guard 30.7M, arriving in
+  card: #2088 another commander, Lv.30, guard 30.7M, arriving in
   about 00:34. Its guard sits above this account's highest
   squad (Squad 1, 24.96M), so it was passed over under the
   standing shard rule and no plunder was attempted. No

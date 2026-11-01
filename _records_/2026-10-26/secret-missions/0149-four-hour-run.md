@@ -1,9 +1,9 @@
 ---
 title: Secret Missions Execution 2026-10-26 Four Hour Run
 created: 2026-10-26T09:12:00Z
-modified: 2026-10-26T09:12:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 0149 four hour run, performed
 status: unverified
 grounded_in:
@@ -26,8 +26,8 @@ Metadata for this type lives in
 - Your Tasks - the finished UR task Rescue Test Subject carried
   the one Claim button; claiming it opened the Secret Task Report.
   The report showed three plunder entries against the waiting UR
-  rewards at 2026-10-25 23:49 (two by [AGNI] players, one above
-  them cut off in the panel) and one ally help entry - [AP3x]
+  rewards at 2026-10-25 23:49 (two by an alliance players, one above
+  them cut off in the panel) and one ally help entry - an alliance
   Lisas49ers helped claim task rewards at 2026-10-26 00:01. Like
   All was pressed on the report.
 - One UR task, Disrupt electric grid, is still running. Every

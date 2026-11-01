@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-30 1223 Queue Run
 created: 2026-10-30T19:23:00Z
-modified: 2026-10-30T19:23:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: Mail queue unit mail-2026-10-30-1030 - done, all six claimable categories checked, no rewards available
 status: unverified
 grounded_in:
@@ -34,7 +34,7 @@ Status — done.
   read 145.9M at the open, matching the prior harvest record.
 - Event — Claim All at norm 746,948 answered "No rewards
   available." The list held a Base Frozen mail (2h ago),
-  [AP3x] Missile Apex train mails and Zombie Invasion -
+  an alliance Missile Apex train mails and Zombie Invasion -
   Intel Reward mails.
 - Alliance — Claim All at norm 746,948 produced no dialog
   and no change; the list held Zombie Siege and Alliance

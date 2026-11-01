@@ -1,9 +1,9 @@
 ---
 title: Strategy Playbook
 created: 2026-10-26T04:45:00Z
-modified: 2026-10-26T05:20:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.2.0
+version: 1.2.1
 description: How this account is played day to day - the objective, duel week timing gates, radar discipline, resource floors and the tools that enforce them
 status: unverified
 grounded_in:
@@ -29,9 +29,9 @@ events flow back as resources and power).
 
 Baseline, read in game on 2026-10-25 - Total Power 149,689,618,
 warzone Individual Power rank 113. Alliance benchmarks in the same
-ranking: ItStartsWithaDream 247,971,851 (rank 2), Abyss Apex
-227,095,526 (rank 3), StarFall 205,162,283 (rank 4); warzone top
-[B3WB] RonMexico 277,043,357. The first growth gap to close is
+ranking: ItStartsWithaDream 247,971,851 (rank 2), another commander
+227,095,526 (rank 3), another commander 205,162,283 (rank 4); warzone top
+another commander 277,043,357. The first growth gap to close is
 therefore about 55M to the alliance's 200M band. Roster state -
 the top heroes are Lv.150 five-star UR across the squads, with a
 second band at Lv.140 to 145 and reserves at Lv.120; Squad 1

@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-25 Task Intake
 created: 2026-10-25T20:12:00Z
-modified: 2026-10-25T20:12:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-25 task intake round
 status: unverified
 grounded_in:
@@ -27,12 +27,12 @@ A single execution, recorded as its own file. Status — Performed.
   button - participation conditions, one regular and two Mega Express
   trains per alliance per day, top 50 alliances only for the regular
   train, conductor rules, and four carriages with different rewards.
-- A train was in preparation - conductor Abyss Apex of AP3x, Train
+- A train was in preparation - conductor another commander of the alliance, Train
   Rating 82,650, departure in about 3 hours 20 minutes.
 - Tapped the plus on carriage 1, whose reward set was the richest and
   occupancy the lowest at 2 of 7. The THANK THE CONDUCTOR dialog
   offered a Trade Contract gift. Chose Like and Thank, which is free -
-  the toast confirmed thanks sent to Abyss Apex, carriage 1 occupancy
+  the toast confirmed thanks sent to another commander, carriage 1 occupancy
   rose to 3 of 7, and the own avatar appeared in the carriage. No
   contract was gifted. The account held 127 Trade Contracts.
 - The train had not departed when the round ended, so reward delivery

@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-28T10:20:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.4.0
+version: 1.4.1
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -150,7 +150,7 @@ Executions are recorded in `_records_/<date>/event-claims/`, one file per execut
   the Rare Soil War and Rare Soil Showdown cards sit in the same
   hub with about 6 days 22 hours left.
 - Season main page - the Assign Rewards control belongs to the
-  alliance leader (Texan Apex) and is never touched. Individual
+  alliance leader (the alliance leader) and is never touched. Individual
   Goals rows (High-heat Furnace Level, Titanium upgrade) all read
   Claimed.
 

@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-26 1830 Segment 2 Run
 created: 2026-10-27T01:50:00Z
-modified: 2026-10-27T01:50:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 1830 segment 2 run, Event mail paying the Bitterly Cold Wave unclaimed rewards, no rewards in any other category, and fresh Zombie Horde victory reports in Battle Report
 status: unverified
 grounded_in:
@@ -28,7 +28,7 @@ Metadata for this type lives in
   Unclaimed (1h old). The congratulations grid read a 500
   badge times 3 and food, iron and coin crates times 16
   each, as displayed. The rest of the category was the
-  Nd4Spd4 train arrival and departure notices (5h and 7h
+  another commander train arrival and departure notices (5h and 7h
   old, verified as notices in the 1430 run) and three Wanted
   Boss Individual Reward mails (9h old) already claimed in
   the 1030 run. No train arrival reward for this account

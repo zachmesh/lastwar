@@ -1,9 +1,9 @@
 ---
 title: Arms Race Execution 2026-10-31 1844 Queue Run
 created: 2026-11-01T01:44:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.1
+version: 0.1.2
 description: Arms-race queue unit arms-race-2026-10-31-1803 - live phase Base Building, phase score 0, no point chest earned, cumulative chest 6/8 not claimable, tier-3 gap 30000, building queue holds only long upgrades so no completion lands in the phase window
 status: unverified
 grounded_in:
@@ -37,7 +37,7 @@ skipped for this slot.
   diamond (red line, never spent).
 - Live score — the phase page score bar read 0, so no
   point chest was earned in this phase yet and none was
-  claimed. The ranking row read #2110 [redacted-character-name]
+  claimed. The ranking row read #2110 owner account
   with 41,500; per the 2026-10-30 precedent, the ranking
   row figure is recorded as the ranking-row figure, not
   as the live phase score. Segment rank shown as 9.

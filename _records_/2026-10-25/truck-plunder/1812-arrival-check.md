@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder Execution 2026-10-25 Evening Arrival Check and Reward Recovery
 created: 2026-10-26T01:27:00Z
-modified: 2026-10-26T01:27:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-25 evening check of the four dispatched trucks, their en route plunder losses, and the Reward Recovery claim
 status: unverified
 grounded_in:
@@ -33,8 +33,8 @@ Metadata for this type lives in
   not produce a delivery by early evening; whether settlement waits
   for a return leg is an open question, carried in the metadata.
 - En route plunder, from History, Plunder tab - two Defense Failed
-  records against this account trucks, by [ashS]LoS indestructibles
-  of warzone 2116 and by [udl]DannyBhoi of warzone 2090. Three
+  records against this account trucks, by another commander
+  of the relevant warzone and by another commander of the relevant warzone. Three
   further victory rows in the same tab are defensive wins by the
   escorts. The two looted UR trucks showed flame markers on the
   road view.

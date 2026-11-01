@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-26 0505 Four Hour Run
 created: 2026-10-26T12:20:00Z
-modified: 2026-10-26T12:20:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 0505 four hour run, Claim All pressed in every mail category
 status: unverified
 grounded_in:
@@ -27,7 +27,7 @@ Metadata for this type lives in
   already read and showed no rewards panel. Nothing was
   claimed and nothing was deleted anywhere.
 - The Event list held the already-read train mails of the
-  previous evening (Abyss Apex Mega Express, 3h ago, and two
+  previous evening (another commander Mega Express, 3h ago, and two
   Bamie train mails, 3h and 5h ago) and a Base Frozen notice
   5 minutes old; the category red dot was unread mail, not a
   reward. The category list again carried a red dot on

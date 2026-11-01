@@ -1,8 +1,8 @@
 ---
 title: Truck queue run 2052
 created: 2026-10-30T21:02:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Owner-requested plunder unit, partial - trade screen entry failed, left column in the no-trade-slot set, plunder untouched at 0 of 4
 status: unverified
 grounded_in:
@@ -16,7 +16,7 @@ Session window: about 20:50-21:02 PDT, executor
 owner-req-2050 (owner direct request in the main
 chat, unit trucks-2026-10-31-0350, priority 1),
 Mac mini session cc-578, game account
-[redacted-character-name]. Duel day 6, Enemy Buster
+owner account. Duel day 6, Enemy Buster
 (non-UR day). Objective: plunder only, from the
 2017 unit's close - Trade Count 2 of 5, Plunder
 Count not re-read that unit, presumed 0 of 4 on

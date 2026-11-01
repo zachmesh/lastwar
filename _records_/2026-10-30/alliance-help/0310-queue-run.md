@@ -1,8 +1,8 @@
 ---
 title: Help queue run 0310
 created: 2026-10-30T10:10:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Queue unit help-2026-10-30-0230 execution record
 status: done
 ---
@@ -19,12 +19,12 @@ about 03:05 to 03:10 America/Los_Angeles. Status performed.
 - Help opened at 687,504 after two earlier clicks landed high on
   the tile and did not navigate.
 - Help page at the open: Today's points gained from Alliance Help
-  480 of 1,000. Waiting requests: own [redacted-character-name] Lv.28 Drill
+  480 of 1,000. Waiting requests: own owner account Lv.28 Drill
   Ground and Lv.30 Aircraft Center (both already 30 of 30,
-  unhelpable by self), Amarky257 Lv.28 Air Force Base building,
+  unhelpable by self), another commander Lv.28 Air Force Base building,
   and Missile Apex Lv.23 2nd Tech Center building.
 - Help All pressed once at 500,778. The game answered "Allies are
-  very grateful for your assistance". Ally requests (Amarky257,
+  very grateful for your assistance". Ally requests (another commander,
   Missile Apex) cleared from the list; only the two own requests
   remained.
 - Header at close still read 480 of 1,000 in the screenshot taken

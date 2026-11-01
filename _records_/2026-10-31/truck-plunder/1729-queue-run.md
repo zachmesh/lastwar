@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 1729
 created: 2026-11-01T00:29:00Z
-modified: 2026-11-01T00:29:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Trucks unit trucks-2026-10-31-1457 by ticker-1704, partial - trade screen entered, no settlement or dispatch possible, two N targets passed, plunder shortfall carried forward
 status: partial
 grounded_in:
@@ -41,12 +41,11 @@ background input reached the game throughout.
 - Dispatch: no free slot existed, so no dispatch
   was possible. Trade Count stays 2/5.
 - Plunder, inspected and passed: truck #2102
-  [PIRO]Commander 236842102, Lv.20, guard 1.6M,
+  another commander, Lv.20, guard 1.6M,
   rarity N, cargo chest 20 x3 plus iron 692.0K,
   food 692.0K, coin 346.0K, no UR shard stacks -
   passed under the UR/SSR-only shard rule.
-- Plunder, inspected and passed: truck #2091
-  [WUZZ]smalls1206, Lv.25, guard 5.6M, rarity N,
+- Plunder, inspected and passed: truck another commander, Lv.25, guard 5.6M, rarity N,
   cargo chest 20 x2, badge 500 x1 in the third
   slot, iron 843.0K, food 843.0K, coin 540.0K -
   passed: N rarity despite the single shard

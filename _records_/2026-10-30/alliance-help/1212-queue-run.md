@@ -1,9 +1,9 @@
 ---
 title: Alliance Help Execution 2026-10-30 1212 Queue Run
 created: 2026-10-30T19:12:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.1
+version: 1.0.2
 description: Help queue unit help-2026-10-30-1030 - done, Help All pressed, ally requests cleared
 status: unverified
 grounded_in:
@@ -31,13 +31,13 @@ Status — done.
 - Help page — header read Today's points gained from Alliance
   Help 700 of 1,000. Waiting ally requests were papillon707 on
   an Infirmary Expansion I research and papillon707 Need Healing
-  Help, alongside this account's own [redacted-character-name] requests
+  Help, alongside this account's own owner account requests
   (Lv.28 Drill Ground and Lv.30 Aircraft Center, both already
   30 of 30 and not helpable by the owner).
 - Help All — a tap at norm 500,778 pressed Help All; the game
   answered "Allies are very grateful for your assistance".
   The ally rows cleared from the page, leaving only the own
-  [redacted-character-name] rows. The header still read 700 of 1,000 in the
+  owner account rows. The header still read 700 of 1,000 in the
   closing screenshot, unchanged from the open read, recorded
   as observed.
 - Help panel closed with its X at 838,184, back on the Alliance

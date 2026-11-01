@@ -1,9 +1,9 @@
 ---
 title: Season Warming
 created: 2026-10-25T18:58:00Z
-modified: 2026-10-25T19:07:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.0.1
+version: 1.0.2
 description: Season 2 warming assists to allies, one activity folder for warming knowledge
 status: unverified
 grounded_in:
@@ -29,7 +29,7 @@ Executions are recorded in `_records_/<date>/season-warming/`, one file per exec
 ## What is known from 2026-10-25
 
 - Each assist cost Coal times 100 per Confirm.
-- Assists on ally [AP3x]Amarky257 were completed 10 of 10.
+- Assists on ally another commander were completed 10 of 10.
 - Season task progress afterwards read warming 10 of 15 as displayed.
 - The own furnace Overdrive was not enabled to chase the count, because
   Overdrive burns coal at four times the normal rate per the season notes.

@@ -1,8 +1,8 @@
 ---
 title: Season Warming on 2026-10-25
 created: 2026-10-25T19:07:00Z
-modified: 2026-10-25T19:07:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Index of Season Warming executions on 2026-10-25
 grounded_in:
   - source: human-authored
@@ -15,7 +15,7 @@ activity lives in [`_activities_/season-warming/`](../../../_activities_/season-
 Each execution on this date is one file in this folder, added one at a
 time and never edited once committed (C1).
 
-**Status — Performed.** Warming assists on [AP3x]Amarky257 completed 10 of 10 at 100 coal each.
+**Status — Performed.** Warming assists on another commander completed 10 of 10 at 100 coal each.
 
 ## Executions
 

@@ -1,9 +1,9 @@
 ---
 title: Ghost Ops
 created: 2026-10-26T04:02:00Z
-modified: 2026-10-26T04:02:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: Weekly Ghost Ops event missions at the Secret Command Post, one activity folder for ghost ops knowledge
 status: unverified
 grounded_in:
@@ -70,7 +70,7 @@ From the in-game guide (No.2487 Ghost Ops Guide), read 2026-10-25.
 
 - What the 3 weekly missions look like in practice, their durations
   and their reward table.
-- Whether the account warzone (2110) posts missions other warzones
+- Whether the account warzone posts missions other warzones
   can run, and what hosting pays.
 - Whether Auto Smart Task Execution should stay ticked - it was on
   at first sight and was left as found.

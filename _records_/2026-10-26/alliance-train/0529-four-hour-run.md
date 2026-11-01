@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-26 0529 Four Hour Run
 created: 2026-10-26T12:53:00Z
-modified: 2026-10-26T12:53:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 0529 four hour run, boarded carriage 2 with the standing 3 Trade Contract ticket, first execution of the standing ticket rule
 status: unverified
 grounded_in:
@@ -27,7 +27,7 @@ type lives in
   after the 0149 run found none. The banner tap was dispatched;
   the computer session dropped and was reopened at once
   (cc-123), and the STATION PLATFORM stood open.
-- The train - conductor Abyss Apex (nameplate read at the
+- The train - conductor another commander (nameplate read at the
   station), Train Rating 71,050, departure countdown 00:06:41
   at the first platform read. Carriage occupancy before
   boarding, top to bottom - carriage 1 at 7 of 7, carriage 2

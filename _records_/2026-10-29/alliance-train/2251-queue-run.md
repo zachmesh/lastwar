@@ -1,8 +1,8 @@
 ---
 title: Train queue run 2253
 created: 2026-10-30T05:51:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-2234 train unit, done as a check - no boarding banner, no train in preparation
 status: unverified
 grounded_in:
@@ -15,7 +15,7 @@ Session window: about 22:50-22:51 PDT, executor
 ticker-2234, Mac mini sessions cc-403 then cc-407
 (the first session dropped between units, as in
 earlier runs; LastWar was re-selected with no game
-state lost), game account [redacted-character-name].
+state lost), game account owner account.
 
 Performed: checked only.
 

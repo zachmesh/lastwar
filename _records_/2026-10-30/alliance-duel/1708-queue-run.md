@@ -1,8 +1,8 @@
 ---
 title: Star Ceremony queue run 1708
 created: 2026-10-30T17:08:00-07:00
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Ticker pass ticker-1704 star-ceremony unit, done as a check - no trophy icon on the base screen
 status: unverified
 grounded_in:
@@ -13,7 +13,7 @@ grounded_in:
 
 Session window: about 17:04-17:08 PDT, executor
 ticker-1704, Mac mini session cc-547, game account
-[redacted-character-name].
+owner account.
 
 Performed: checked only.
 

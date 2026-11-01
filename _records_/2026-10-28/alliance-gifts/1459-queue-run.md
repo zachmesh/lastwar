@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts Execution 2026-10-28 1459 Queue Run
 created: 2026-10-28T21:59:00Z
-modified: 2026-10-28T21:59:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Gifts queue unit gifts-2026-10-28-1430 - partial, no gift claimed: the base right-column Alliance button did not open the Alliance panel on background taps at 913,675 (twice, no change), while a tap at 913,660 opened the Alliance Wars screen instead, which was left untouched (no rally joined) and exited with the back arrow to base; the Alliance Gifts entry's red dot state was not verified on the panel, tracker untouched
 status: unverified
 grounded_in:
@@ -31,8 +31,7 @@ in part (checked only, nothing claimed).
 - Alliance entry — background taps on the right-column
   Alliance shield button at 913,675 produced no change
   twice, even with a 4 second wait. A tap at 913,660
-  opened the Alliance Wars screen (Rally Intel, Krazy
-  Sully rallying on Lv.90 and Lv.80 Zombie Bosses) instead
+  opened the Alliance Wars screen (Rally Intel, another commander rallying on Lv.90 and Lv.80 Zombie Bosses) instead
   of the Alliance panel; no rally was joined, no Attack
   button was touched, and the back arrow returned to base.
 - No gift tab was reached, so neither Regular nor Premium

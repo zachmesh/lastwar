@@ -1,9 +1,9 @@
 ---
 title: Secret Missions Execution 2026-10-28 2334 Queue Run
 created: 2026-10-29T06:34:00Z
-modified: 2026-10-29T06:42:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-28 2334 queue run, unit secrets-2026-10-28-2257, four finished tasks claimed, no new tasks to dispatch, Reward Recovery already CLAIMED, ally Assist buttons unresponsive
 status: unverified
 grounded_in:
@@ -30,8 +30,8 @@ Unit secrets-2026-10-28-2257, executor ticker-2334.
   UR Rescue Test Subject, UR Rescue Missing Agent, SSR Train
   Refugees, SSR Search for Missing Refugees - the same four
   the 19:30 run dispatched. One Claim tap collected all four:
-  the CONGRATULATIONS panel listed helpers [AP3x]TrapQueen97,
-  [AP3x]Nuna Knuckles (twice) and [AP3x]You Go 2, Like All was
+  the CONGRATULATIONS panel listed helpers another commander,
+  another commander (twice) and another commander, Like All was
   tapped, and the panel was then closed by tapping outside it.
   On return the Your Tasks badge had cleared and the cards
   carried PERFECT stamps, so the claim is verified, not assumed.

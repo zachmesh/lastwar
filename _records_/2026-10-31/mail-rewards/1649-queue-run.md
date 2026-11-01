@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards Execution 2026-10-31 1649 Queue Run
 created: 2026-10-31T23:49:00Z
-modified: 2026-10-31T23:49:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 0.1.0
+version: 0.1.1
 description: Mail queue unit mail-2026-10-31-1430 - done, all claimable categories swept, nothing claimable
 status: verified
 grounded_in:
@@ -37,17 +37,17 @@ Claim All; nothing was claimable, so nothing was claimed.
   Voting Results mail, Daily Donation Rankings and an
   Alliance Exercise mail.
 - Event: Claim All answered "No rewards available." List
-  held [AP3x] Missile Apex train arrival and Mega
+  held an alliance Missile Apex train arrival and Mega
   Exercise mails.
 - Battle Report: Claim All answered "No rewards
-  available." List held scout reports (two [GLAm] players
+  available." List held scout reports (two an alliance players
   scouted the base, 1d ago) and Invading Zombie Horde
   victory reports Lv.17 to Lv.20. Noted, not acted on;
   no decision is attached to a scout report.
 - Season: Claim All pressed twice (the first receipt
   carried no toast); the second answered "No rewards
   available." List held only Ice Breaking Reports from
-  [AP3x]Abyss Apex, 4d ago.
+  another commander, 4d ago.
 - System: Claim All pressed once; the receipt carried no
   toast and the list was unchanged on screenshot (President
   Mail notices, Maintenance Completed, Patch Notes - no

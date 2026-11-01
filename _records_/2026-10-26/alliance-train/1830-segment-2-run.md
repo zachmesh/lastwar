@@ -1,9 +1,9 @@
 ---
 title: Alliance Train Execution 2026-10-26 1830 Segment 2 Run
 created: 2026-10-27T01:50:00Z
-modified: 2026-10-27T01:50:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-26 1830 segment 2 run, no train in preparation at any sweep and no new train mail for this account
 status: unverified
 grounded_in:
@@ -26,7 +26,7 @@ Metadata for this type lives in
   opened for the VIP check — carried no train icon at its
   top right. No train was in preparation, so no carriage
   was boarded and no Trade Contract was spent.
-- The Event mail category held only the older Nd4Spd4
+- The Event mail category held only the older another commander
   arrival and departure notices (5h and 7h old) for a train
   this account never boarded; no new train arrival mail
   for this account arrived during the window. See the mail

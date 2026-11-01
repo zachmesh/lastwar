@@ -16,7 +16,7 @@ claimed, nothing spent.
   cumulative counter chest at 0/2, not full. No grinding done here;
   the phase is the arms-race unit's work, not this claim sweep.
 - Desert Storm Battlefield: waiting for battle to start, 1d 00:19
-  left; [AP3x] The Apex 17 sign-ups vs [SUlb] 15. No claim button.
+  left; the alliance 17 sign-ups vs the opposing alliance 15. No claim button.
 - Winter Battlefield: event starting soon, 1d 15:24 left. No claim.
 - Zombie Invasion: event live, 1d 15:23 left. No claim button on
   the tab page; its fighting and LOOT collection belong to the

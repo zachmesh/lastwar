@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 0751
 created: 2026-10-31T14:51:00Z
-modified: 2026-10-31T14:51:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Trucks unit trucks-2026-10-31-0657 by ticker-0734, partial
 status: partial
 grounded_in:
@@ -40,8 +40,7 @@ SR or above only, regular dispatch, no Mega Mode.
   settlement, so nothing was settled.
 - Dispatch: no free slot existed, so no
   dispatch was possible. Trade Count stays 2/5.
-- Plunder, won: SSR truck #2086 [xchz]Insinyur
-  joe, Lv.23, guard 5.2M (battle prep read
+- Plunder, won: SSR truck #2086 another commander, Lv.23, guard 5.2M (battle prep read
   5.27M against Squad 1 25.05M), Arrives in
   02:14:23, cargo badge 500 x3 in the third
   slot plus iron 1.4M, food 1.4M, coin 894.7K
@@ -52,7 +51,7 @@ SR or above only, regular dispatch, no Mega Mode.
   chest 100 x1, no UR shards dropped. Plunder
   Count re-read 2/4 after Return.
 - Plunder, second attempt, NOT credited:
-  SSR truck #2087 [ARKD]..., Lv.30, guard
+  SSR truck #2087 an alliance..., Lv.30, guard
   13.4M, Arrives in 02:19:51, cargo badge 500
   x3 in slots 1, 2 and 4 plus iron 2.2M, food
   2.2M, coin 1.4M and one crossed-out slot.

@@ -1,9 +1,9 @@
 ---
 title: Play Record 2026-10-29
 created: 2026-10-29T07:07:00Z
-modified: 2026-10-29T07:07:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: The 0004 queue ticker pass, Ghost Ops Thursday check with the event live and an empty ally list
 status: unverified
 grounded_in:
@@ -156,7 +156,7 @@ of 2026-10-28.
   chests, diamonds 50); dispatched SSR after free refresh
   R to N plus two Trade Contract refreshes (stock 143 to
   141), Squad 1, journey 04:23:38, Trade Count 1/5 to 2/5;
-  Quick Plundered SSR 2092 Gothams protector (guard 8.3M)
+  Quick Plundered SSR 2092 another commander (guard 8.3M)
   for badge 500 x6 plus iron/food 585.3K and coin 367.4K,
   Plunder Count 0/4 to 1/4; the same card rechecked with
   shards crossed out, so no second plunder. Full detail in
@@ -377,7 +377,7 @@ Full detail in zombie-invasion/0548-queue-run.md.
   769.0K iron. Alliance, Regular, Battle Report, Season and
   System Claim All each had no effect (reports only).
   In-app Purchases not claimed (receipts only). Delete All
-  never pressed. Noted only: base scouted by [WLDT] about
+  never pressed. Noted only: base scouted by an alliance about
   1 day ago, no decision needed. Full record:
   mail-rewards/0838-queue-run.md.
 
@@ -426,7 +426,7 @@ Full detail in zombie-invasion/0548-queue-run.md.
   iron 3.0M, food 3.0M, coin 1.9M); dispatched a new SR truck
   (Squad 1, journey 04:19:02) after R, free-refresh R,
   contract-refresh N, contract-refresh SR - Trade Count 2 of
-  5 to 3 of 5. One SSR plunder candidate (#2102 [ONYX]Rana7262,
+  5 to 3 of 5. One SSR plunder candidate (#2102 another commander,
   guard 24.7M) passed over: its shard stacks sit left/middle,
   not right-sided. Plunder Count still 1 of 4; plunder hunt
   resumes next tick, tracker untouched. Dice point corrected
@@ -443,8 +443,8 @@ Full detail in zombie-invasion/0548-queue-run.md.
   earliest due unit. Own tasks nothing to claim or dispatch
   (same four tasks as the 03:50 run, Train Refugees PERFECT
   stamped, Mega Deploy opened no panel). Five ally assists
-  completed to the daily cap: Krazy Sully, 1717Flower, Texan
-  Apex, Comandante DT, Boss Hog 05 - counter verified 5/5.
+  completed to the daily cap: another commander, another commander, Texan
+  Apex, another commander, another commander - counter verified 5/5.
   First two assist rewards read identical: Mystery Supply Box
   x15, Refined Iron Module x144, Upgrade Ore x240, Hero EXP
   1.2M each. Full record in secret-missions/0937-queue-run.md.
@@ -565,7 +565,7 @@ Full detail in zombie-invasion/0548-queue-run.md.
   in alliance-gifts/1239-queue-run.md.
 - Help unit help-2026-10-29-1030, done: Help All
   pressed twice. Today's Alliance Help points 440 to
-  500 of 1,000; StarFall's requests and a fresh
+  500 of 1,000; another commander's requests and a fresh
   dontard Lv.26 Smelter request cleared. Full record
   in alliance-help/1242-queue-run.md.
 - Mail unit mail-2026-10-29-1030, done: all categories
@@ -574,7 +574,7 @@ Full detail in zombie-invasion/0548-queue-run.md.
   rewards available."; In-app Purchases skipped per
   metadata (receipts only). No mail needed an owner
   decision. Noted only: an Alliance Leadership
-  Transfer Notice (Abyss Apex became the new leader)
+  Transfer Notice (another commander became the new leader)
   and a New Alliance Assembly Point mail - no assembly
   action taken. A wrong tap on a round base button
   opened the Recruit panel and was closed untouched.
@@ -634,7 +634,7 @@ Full detail in zombie-invasion/0548-queue-run.md.
   (139 to 138 to 137) to SSR, dispatched at once with
   regular Let's Go, Squad 3, journey 04:16:30 - Trade Count
   3 of 5 to 4 of 5. Quick Plunder won SSR truck #2102
-  [TOOP]hossam hak, Lv.26, guard 1.8M, battle prep 25.05M
+  another commander, Lv.26, guard 1.8M, battle prep 25.05M
   vs 1.82M: iron 531.5K, food 531.5K, coin 337.0K, chest x1,
   no badge shards from the random subset - Plunder Count
   1 of 4 to 2 of 4. No diamonds spent, no paid buttons
@@ -1018,7 +1018,7 @@ Full detail in zombie-invasion/0548-queue-run.md.
   for Missing Refugees, SSR Train Refugees, and two SSR
   Protect Refugee Camp, each 1h), verified running by
   countdown on reopening the post; 5 ally assists completed
-  to the daily cap (AMD Commander, PrincessEsra10xoxo, three
+  to the daily cap (another commander, another commander, three
   Bamie rows), counter verified 0/5 to 5/5. Plunder Others
   untouched. Full detail in secret-missions/2142-queue-run.md.
 

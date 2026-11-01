@@ -8,7 +8,7 @@ status: partial
 # Event claims sweep, 2320 queue run
 
 Session window: 23:16-23:20 PDT, executor ticker-2304, Mac mini
-session cc-410, game account [redacted-character-name].
+session cc-410, game account owner account.
 
 Performed in part.
 
@@ -22,7 +22,7 @@ Performed in part.
   sweep.
 - Winter Battlefield: starting soon, no claim button.
 - Desert Storm Battlefield: waiting for battle to start,
-  about 04:36 left at the read, [AP3x] The Apex vs [SUlb].
+  about 04:36 left at the read, the alliance vs the opposing alliance.
   No claim; Participate not used.
 - Zombie Invasion tab: no Claim button on the tab page;
   fighting and LOOT collection belong to the

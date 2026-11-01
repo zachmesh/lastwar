@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion Execution 2026-10-28 1317 Queue Run
 created: 2026-10-28T20:17:00Z
-modified: 2026-10-28T20:17:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: Zombie-invasion chain unit 017 - partial, one Squad 1 march dispatched and verified to X951 Y765, second parallel dispatch blocked when Search returned a Lv.95 rally-class Zombie Boss that was correctly not engaged, march still in flight at the unit cap so no kill or LOOT claim verified in this unit, cleared false, successor starts now
 status: unverified
 grounded_in:
@@ -60,7 +60,7 @@ the chain continues via its successor starting now.
   neither stamina nor the queue cap bound it) returned
   not a nearby Lv.10 but a Lv.95 Zombie Boss card:
   Rally Initiator Rewards, Discoverer's Reward, Found by
-  [AP3x]blackdragonkalameet, Suggested Power 37,500,000,
+  another commander, Suggested Power 37,500,000,
   stamina cost 20, timer 01:17:35. That is a rally-class
   boss target, not a nearby Invading Zombies sweep
   target, and Squad 2 (20.92M per unit 006) sits below

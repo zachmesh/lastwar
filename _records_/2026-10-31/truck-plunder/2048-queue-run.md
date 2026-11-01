@@ -1,8 +1,8 @@
 ---
 title: Trucks queue run 2048
 created: 2026-11-01T03:48:00Z
-modified: 2026-11-01T03:48:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Trucks unit trucks-2026-10-31-1857 by ticker-2034, partial - new trade day counters read, one SSR plunder won, dispatch blocked by full slots
 status: partial
 grounded_in:
@@ -47,7 +47,7 @@ background input reached the game throughout.
   body); it was left unexamined rather than
   assumed, and the grounded train point
   748,480 was measured but not tapped.
-- Plunder, won: truck #2092 [JUDO]Lt Murph,
+- Plunder, won: truck #2092 another commander,
   Lv.29, guard 15.1M, rarity SSR, cargo badge
   500 x3 in the second slot plus iron 2.3M and
   food 2.3M. Guard is below Squad 1 at 24.96M

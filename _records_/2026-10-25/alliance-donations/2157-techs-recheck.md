@@ -1,7 +1,7 @@
 ---
 title: Alliance Techs Recheck 2157
 created: 2026-10-26T05:25:00Z
-modified: 2026-11-01T07:00:34Z
+modified: 2026-11-01T07:26:52Z
 level: L0
 status: unverified
 grounded_in:
@@ -20,7 +20,7 @@ from the evening sweep.
   thumb), Rallied Defense 6/10, next node 1/10.
 - **Tech Donation Today reads 3100 points** for this account
   (300 at midday - the owner donated further from his phone).
-  The Strength Ranking Donation daily board puts [redacted-character-name] at
+  The Strength Ranking Donation daily board puts owner account at
   **rank 16** with those 3100 points.
 - Donation Ranking Reward (Daily) - settlement countdown read
   21:09:33, so rewards settle at the next day boundary, not by

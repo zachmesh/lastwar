@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures Execution 2026-10-25 First Dig
 created: 2026-10-26T04:00:00Z
-modified: 2026-10-26T04:00:00Z
+modified: 2026-11-01T07:26:52Z
 level: L0
-version: 1.0.0
+version: 1.0.1
 description: One execution record for the 2026-10-25 first treasure dig at the Secret Command Post
 status: unverified
 grounded_in:
@@ -36,7 +36,7 @@ Metadata for this type lives in
   progress 10 of 15. The badge cleared and Dig greyed out.
 - Exchange Items was inspected only. Your Exchange held one
   completed trade (gained M5, lost M6, with Mistress Sam). Allies
-  Exchange held one open offer from BLACKDRAGONKALAMEET - receive
+  Exchange held one open offer from another commander - receive
   M4 (owned 3), send M3 (owned 3). Not executed - M3 and M4 are
   nearly as scarce as M5 on this account, and no exchange is run
   without owner approval.

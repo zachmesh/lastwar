@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T05:24:00Z
+modified: 2026-11-01T07:26:52Z
 level: L1
-version: 1.8.0
+version: 1.8.1
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -195,7 +195,7 @@ train also runs on this screen as a trade vehicle.
 - Evidence the rule works, 2026-10-25 - the first three plunders of
   the evening, aimed at ordinary weak trucks before the teach-in,
   yielded 1 to 2 shards between them. The fourth, picked by the
-  rule - a UR truck of [LaWA]Knights that say Ni, Lv.30, guard
+  rule - a UR truck of another commander, Lv.30, guard
   16.5M, carrying three shard stacks - yielded badge 500 times 6
   plus an Extra badge times 3, nine shards in one fight.
 
@@ -309,8 +309,7 @@ Observed in game on this account, first execution 2026-10-25.
   52 minutes, Squad 2.
 - Dispatch four - UR. Iron 3.8M, food 3.8M, coin 2.4M. About 4 hours
   53 minutes, Squad 4. Trade Count ended at 4 of 5.
-- Plunder - one Quick Plunder against the N truck of [1ppp]Chucks army
-  1705, warzone 2090, Lv.28, guard power 7.6M. Won with no difficulty.
+- Plunder - one Quick Plunder against the N truck of another commander, the relevant warzone, Lv.28, guard power 7.6M. Won with no difficulty.
   Yield - iron 273.4K, food 273.4K, coin 173.9K, chest 20 and chest 20
   marked Extra, from a listed cargo of 1.0M iron, 1.0M food, 695.7K
   coin, two chest stacks and a badge stack that did not drop. Plunder
@@ -318,8 +317,7 @@ Observed in game on this account, first execution 2026-10-25.
 - Trade Contract stock seen in the train thank dialog the same day -
   127. None were spent.
 - Evening arrival check (about 18:12 to 19:10) - all four trucks
-  still out; two UR trucks looted en route by [ashS]LoS
-  indestructibles (warzone 2116) and [udl]DannyBhoi (warzone 2090),
+  still out; two UR trucks looted en route by another commander (the relevant warzone) and another commander (the relevant warzone),
   their ledgers reduced to iron 2.8M, food 2.8M, coin 1.8M with two
   and three cargo items crossed out; the SSR and one UR intact. A
   Reward Recovery record for 2026-10-24 was claimed the same visit.
@@ -332,8 +330,8 @@ settlement and dispatch execution record).
   settled by opening their Truck Details one by one. SSR delivered
   in full (iron 3.0M, food 3.0M, coin 1.9M). The intact UR delivered
   in full (3.8M, 3.8M, 2.4M). The two looted UR trucks delivered
-  2.8M, 2.8M, 1.8M each - Battle History showed DannyBhoi (131.6M)
-  at 15:26:44 and LoS indestructibles (124.6M) at 16:19:03, each
+  2.8M, 2.8M, 1.8M each - Battle History showed another commander (131.6M)
+  at 15:26:44 and another commander (124.6M) at 16:19:03, each
   having taken iron 951.8K, food 951.8K, coin 607.5K plus items; one
   item in one looter list was stamped Reclaimed.
 - Reward Recovery - the 2026-10-25 19:00 record (1 unstarted
@@ -346,14 +344,14 @@ settlement and dispatch execution record).
   it to N (1.2M, 1.2M, 810.0K), Squad 2. Truck four rolled N, free
   refresh made SR (2.5M, 2.5M, 1.6M), Squad 4. Arrivals about 3
   hours 44 minutes to 4 hours 34 minutes out.
-- Plunders, Plunder Count 0 of 4 to 4 of 4 - [RoSt]Toy2005 N truck,
+- Plunders, Plunder Count 0 of 4 to 4 of 4 - another commander N truck,
   Lv.29, guard 7.7M, won, iron 285.7K, food 285.7K, coin 180.2K,
-  badge times 1 plus Extra badge times 1. [Majz]Altanmt, Lv.27,
+  badge times 1 plus Extra badge times 1. another commander, Lv.27,
   guard 8.0M, won, 534.1K, 534.1K, 335.5K, chest times 20, badge
-  times 1. A [KvP] SSR truck, Lv.28, guard 13.9M, won, 655.7K,
-  655.7K, 417.4K plus items. [LaWA]Knights that say Ni UR truck,
+  times 1. A an alliance SSR truck, Lv.28, guard 13.9M, won, 655.7K,
+  655.7K, 417.4K plus items. another commander UR truck,
   Lv.30, guard 16.5M, won, 951.8K, 951.8K, 607.5K, UR shards times
-  6 plus Extra times 3. A [GRID]DEKBOTAK truck at guard 19.8M was
+  6 plus Extra times 3. A another commander truck at guard 19.8M was
   inspected and passed over as too strong for the shard rule.
 
 ## Limits

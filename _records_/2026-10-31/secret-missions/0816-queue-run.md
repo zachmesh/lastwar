@@ -1,8 +1,8 @@
 ---
 title: Secret missions queue run 0816
 created: 2026-10-31T15:16:00Z
-modified: 2026-10-31T15:16:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Secrets unit secrets-2026-10-31-0657 by ticker-0804, partial - claims and deploy checked, ally Assist buttons unresponsive
 status: unverified
 grounded_in:
@@ -40,7 +40,7 @@ deployed, nothing spent.
 - Ally Tasks: header reads Assist Allies 1/5,
   Plunder Others 0/5; tab badge 3. Rows at top:
   MrCallejon UR with Assist button, MrCallejon UR
-  with Assist button, Crow Apex UR with Assist
+  with Assist button, another commander Apex UR with Assist
   button, QueenSTX Apex UR with countdown only
   (03:00:54 falling to 02:59:25 across the unit).
   ASSIST NOT PERFORMED - the first row's Assist

@@ -1,8 +1,8 @@
 ---
 title: Event claims queue run 2338
 created: 2026-10-30T23:38:00Z
-modified: 2026-11-01T07:00:34Z
-version: 1.0.1
+modified: 2026-11-01T07:26:52Z
+version: 1.0.2
 description: Events unit events-2026-10-30-2257 by ticker-2334
 status: done
 grounded_in:
@@ -23,7 +23,7 @@ zombie-2026-10-28 is closed in the activity metadata
   closed with the back arrow; nothing was bought and
   no priced button was tapped.
 - Events hub opened on the Arms Race Tech Research
-  page: score 0, rank 8 at #2110 [redacted-character-name],
+  page: score 0, rank 8 at #2110 owner account,
   chest thresholds 6,250 / 12,500 / 30,000,
   cumulative chest 0/2 at top left, 03:23 left on
   the stage. No chest reached, nothing to claim on

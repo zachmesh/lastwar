@@ -1,8 +1,8 @@
 ---
 title: Truck entry failed queue run
 created: 2026-10-30T06:48:00Z
-modified: 2026-10-30T06:48:00Z
-version: 1.0.0
+modified: 2026-11-01T07:26:52Z
+version: 1.0.1
 description: Queue unit trucks-2026-10-29-2257 execution
 status: partial
 ---
@@ -34,7 +34,7 @@ caps. None of that was reached in this unit.
     Intercity Trade in the 16:58 and 21:28 units, produced
     no trade screen. The screenshot after them still
     showed the base, with the alliance train selected
-    (Abyss Apex, timer about 03:22).
+    (another commander, timer about 03:22).
   - A drag up the left icon column produced no change.
   - One tap at 53,590 also produced no trade screen.
 - Left-column identification in this unit (enlarged crop
