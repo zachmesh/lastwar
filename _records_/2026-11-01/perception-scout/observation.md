@@ -3,10 +3,10 @@ title: Day observation 2026-11-01
 created: 2026-11-01T10:15:00Z
 modified: 2026-11-01T10:15:00Z
 passes_completed: 0
-items_observed: 12
-red_dots_seen: 7
-red_dots_explained: 4
-unexplained_red_dots: 3
+items_observed: 24
+red_dots_seen: 12
+red_dots_explained: 6
+unexplained_red_dots: 6
 unmatched_labels: []
 ---
 
@@ -107,3 +107,62 @@ left there by an earlier unit, not on the base screen.
 - unmatched_labels: none in the surfaces actually walked;
   the roster-out scan covers only those surfaces, not
   the unwalked groups.
+## Pass scout-2026-10-31-1900, unit ticker-1434, group scout-base (partial)
+
+Post-reset pass staged for 2026-10-31 19:00 local, executed
+2026-11-01 about 14:37 to 14:42 local, late in its reset day.
+Observe-only; nothing claimed, fought, dispatched, donated
+or bought. Full unit record at
+`perception-scout/1437-queue-run.md`.
+
+### Encountered surface - Secret Command Post, Hidden Treasure
+
+- Treasure progress 2/15 (was 1/15 at the 02:15 read).
+- Map piece counts read live: M1 x12, M2 x12, M3 x0, M4 x9,
+  M5 x2, M6 x6, M7 x12.
+- Back arrow re-grounded by visual measurement at centre
+  norm 163,947 (bbox x 105 to 222, y 917 to 977); a tap at
+  the older point 112,946 did nothing, landing on the
+  overlapping portrait icon. Next units use 163,947.
+
+### Base screen and HUD, read live 2026-11-01 about 14:47 local
+
+- Account: level 30, power 148,957,193 (unchanged from
+  02:15).
+- HUD totals as displayed: top row 312.5M, 500.5M, 22.7M;
+  second row 18.3M, 8.1K, 11.72K with a plus button;
+  lightning stamina 120 (was 135); cart 2,366.
+- Left column: green face 0C, radio badge 3 (was 4),
+  truck, magnifier, survivor portrait.
+- Right column: home icon 780 km, Events x2 badge,
+  Faction Duel, VS, Season II, Alliance red dot, Mail
+  with no dot visible, Inventory red dot, BASE.
+- Bottom: HEROES, megaphone, chat ticker "Breaking News:
+  Intense battle ...", 99+ badge above the chat area.
+- Furnace toast again: "Furnace total overdrive time (in
+  sec) [22/60]", still unexplained, red-line surface
+  observed only.
+- Building badge 5 and NEW! chest badge 3 from the 02:15
+  read were not visible in this capture; recorded as not
+  seen, not as cleared.
+
+### Red dot accounting for this section
+
+- Seen 5: radio 3, Events x2, Alliance dot, Inventory
+  dot, 99+ badge.
+- Explained 2: radio 3 maps to the help regular, Events
+  x2 to the events regular.
+- Unexplained 3: Alliance dot, Inventory dot, 99+ badge.
+- Unknown items: furnace overdrive toast, 780 km home
+  icon meaning.
+- Carried unexplained from 02:15: Alliance dot (seen
+  again), building badge 5 and NEW! chest badge 3 (not
+  re-seen).
+
+### Unwalked in this unit, carried to the successor
+
+- scout-events, scout-store and scout-alliance groups in
+  full, plus the scout-base remainder (building badges,
+  Armed Truck state, gate and wall signals, resource
+  bubbles).
+- unmatched_labels: none in the surfaces actually walked.
