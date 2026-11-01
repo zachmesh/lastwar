@@ -591,3 +591,13 @@ of 2026-10-28.
   to fc089cbdf via the bundle route. End-of-pass
   sweep: zero open PRs, no unprocessed PRs. Full
   detail in pr-integration/0300-run.md.
+## 03:04 to about 03:10 — Queue ticker pass, donations (failed, device offline)
+
+- Donations unit donations-2026-11-01-0203, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path),
+  last seen 01:47 local and unmoved across the pass. No
+  screen read, no Donation Count observed, no donation
+  made, nothing spent. Tracker untouched. Second
+  consecutive access-failed pass after the 02:34 pass.
+  Full detail in alliance-donations/0310-queue-run.md.
