@@ -1716,3 +1716,19 @@ of 2026-10-28.
   adopted by this job to re-check, PR 102 stands MERGED;
   no adoption, no fix, no hand-off, no escalation.
   Full detail in pr-catchall/1539-run.md.
+
+## 1542 to about 1542 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-1542,
+  done: plan-expiry done guard in `_tools_/queue.py`, PR 110
+  opened (branch work/plan-expiry-done-guard, commit
+  9ce56b4f33). The queue-planning 1457 follow-up reported
+  plan expiry overwriting done files that already carried
+  execution results (10 repaired by hand); expiry now
+  drops the stale inbox copy, keeps the executed record
+  byte-identical, and warns on stderr. Validation on an
+  isolated scratch pool passed, and the same fixture
+  against unpatched main fails as expected. No backlog
+  entry changed (the hazard has none yet; filing is left
+  to the retro). Full detail in
+  tool-development/1542-run.md.
