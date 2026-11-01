@@ -1123,3 +1123,22 @@ of 2026-10-28.
   must change entry route (zoom-out to locate the signed
   gate) before repeating this work. Full detail in
   survivor-intake/1159-queue-run.md.
+
+## 12:00 to about 12:10 - PR integration pass (PRs 87 and 88 merged)
+
+- Integrator run pr-integration-2026-11-01-1200, one
+  open PR at pass start (PR 87). Prior integrator
+  records PRs 82, 83, 84 and 86 stand merged, no comments
+  outstanding. Branch 2026-10-31 verified contained
+  in main, no PR needed.
+- PR 87 merged with merge commit 6dbc31034, branch kept
+  at 7365c2ba: the 1145 run record and the 1155
+  queue-planning run (5 units staged for the 2257 slots).
+- PR 88 opened mid-pass by the ticker-1151 run and merged
+  with merge commit e1005cac, branch kept at ebd278d3b:
+  the ticker-1151 survivors partial record.
+- No feedback, no owner-gated escalation, no conflicts.
+  Merged main fast-forwarded to the local repo (e1005cac).
+  Merges synced to the owner Slack DM.
+  End-of-pass sweep: zero open PRs. Full detail in
+  pr-integration/1200-run.md.
