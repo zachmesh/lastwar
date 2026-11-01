@@ -297,3 +297,6 @@ of 2026-10-28.
 - Own-PR check first: no open PR owned by this job; the records
   branch carried no open PR at push time, so this pass opens its
   own records PR (Owner lastwar-pr-integrator) after pushing.
+## 01:40 to about 01:44 — Queue planner
+
+- Planner run queue-planning-2026-11-01-0144, done: own-PR check first, open PRs #29 (Owner lastwar-knowledge-organizer) and #30 (Owner lastwar-tool-developer), no comments on either, nothing owned by or addressed to this job. Plan --hours 12 staged 17 units in the live main-tree pool to about 13:42 local (50 already present, 2 skipped done current, 0 reaped, 0 expired); all 17 already sit in inbox on the records tip (created 06:43Z), differing only in created_at, so no queue file rides this commit. Pre-reset sweep skipped (01:00 hour, not 17:00); pairs for 2026-11-01 and 2026-11-02 already in inbox. Perception consumption skipped: no observation file exists anywhere (main tree, worktree, repo history), so no diff applied and no units withdrawn. Pool after planning, live main-tree state: inbox 65, claimed 1, done 435. Full detail in queue-planning/0144-run.md.
