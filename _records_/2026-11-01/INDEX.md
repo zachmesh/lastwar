@@ -750,3 +750,40 @@ of 2026-10-28.
   Merge synced to the owner Slack DM. End-of-pass sweep:
   zero open PRs.
   Full detail in pr-integration/1000-run.md.
+
+## 10:05 to about 10:17 — Queue ticker pass, survivors diagnostic (partial)
+
+- Diagnostic unit survivors-diagnostic-001, partial: gate
+  not located and Quick Dispatch not located, so no
+  survivor was tapped, recruited or dispatched. Fresh
+  measured path: base screen, map drag pan and reverse,
+  resource house tap at norm 144,295 in the panned view,
+  orange info button at norm 111,329, Building Details
+  panel for Titanium Alloy Factory No.1 Lv.30 (Power
+  36,900, Output/hr 21,600, Max Production Time
+  1d 00:00:00, Maximum Level Reached) with no survivor
+  list and no Quick Dispatch button - that building type
+  does not carry the path. A centre house tap at norm
+  472,448 and a second tap at norm 478,438 selected the
+  High-heat Furnace Lv.30 (flame about norm 459,448,
+  info about norm 524,448, panel not opened before the
+  unit cap). Inspected gate areas showed a STOP barrier,
+  cannons, a tree, resource houses and a zombie figure
+  on the top-left road, with no question-mark bubble
+  and no survivor line. One computer session drop
+  mid-unit, recovered with no state lost. Tracker
+  untouched. Full detail in
+  survivor-intake/1017-queue-run.md.
+
+## 10:15 to about 10:23 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1015. Zero
+  open PRs at pass start; records/2026-11-01 ahead of
+  main by the 1000 run record only, so records PR 76 was
+  opened and merged with a merge commit (78978677),
+  branch not deleted. Records/2026-10-31 verified
+  contained in main, so no PR needed. Local main
+  fast-forwarded to the merge via the bundle route.
+  Merge synced to the owner Slack DM. End-of-pass sweep:
+  zero open PRs.
+  Full detail in pr-integration/1015-run.md.
