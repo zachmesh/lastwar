@@ -1113,3 +1113,13 @@ of 2026-10-28.
   policy 2.0.0; a new records PR opened by this run
   because no open PR existed for the branch at push time.
   Full detail in queue-planning/1155-run.md.
+
+## 11:59 — Queue ticker pass, survivor intake (partial)
+
+- Survivors unit survivors-2026-11-01-1003, partial: gate line
+  not verified, one fresh tap probe on a newly revealed
+  bottom-right figure with no change, no survivor recruited,
+  Quick Dispatch not located. Tracker untouched; next unit
+  must change entry route (zoom-out to locate the signed
+  gate) before repeating this work. Full detail in
+  survivor-intake/1159-queue-run.md.
