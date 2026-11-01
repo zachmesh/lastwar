@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-01T10:45:00Z
+modified: 2026-11-01T22:40:43Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner direction to register each learned task type as metadata, 2026-10-25
   - source: hidden-treasures execution record 2026-11-01 0150 PST
   - source: perception-scout execution record 2026-11-01 0215 PST, cross-check read
+  - source: hidden-treasures execution record 2026-11-01 1420 PST
 ---
 
 # Hidden treasures
@@ -106,6 +107,41 @@ as Hidden Treasure.
   next treasures unit re-reads the counts rather than assuming
   that refill.
 
+## What the 2026-11-01 1420 unit added
+
+- Unit treasures-2026-11-01-1057 by ticker-1404, status
+  done. Entered from the Secret Command Post screen left
+  open by the secrets unit of the same pass; the Hidden
+  Treasures tab was tapped at norm (439,133) and the tab
+  title was verified.
+- Live before dig: tab badge 1; fragments M1 x13, M2
+  x13, M3 x1, M4 x10, M5 x3, M6 x7, M7 x13; chest progress
+  1/15; Skip Animation ticked; Dig 1 time enabled, Dig 2
+  time(s) greyed. Scarcest fragment M3 x1 caps the
+  account at exactly the 1 dig the badge advertised - a
+  second confirmation of the badge-equals-digs rule.
+- Dig: Dig 1 time tapped at norm (380,938) with Skip
+  Animation on; the CONGRATULATIONS panel read live: 6
+  reward tiles - crate-type icon x12, coin-pile icon x12,
+  1m speedup x25, 1m speedup x100, blue triangles x400,
+  silver ingots x100. The first two tiles carried no text
+  label in the panel, so their item names are recorded
+  as icons only, not named. No chest tier was displayed.
+  Reward counts differ from the 2026-10-25 dig, so
+  per-dig figures are not fixed - re-read each dig.
+- Live after dig, panel closed by a tap at norm
+  (500,850): tab badge cleared; fragments M1 x12, M2 x12,
+  M3 x0, M4 x9, M5 x2, M6 x6, M7 x12 - exactly one of
+  each consumed; chest progress 2/15; both Dig buttons
+  greyed. No complete set remains, so no further dig is
+  due. The 1/15 to 2/15 advance confirms the track
+  increments one per dig on the current track; whether
+  the 1/15 start was a reset of the 2026-10-25 10/15
+  track is still unconfirmed.
+- No fragment exchange was executed (owner approval
+  required, and none was sought). No diamonds, money or
+  paid button touched.
+
 ## Limits
 
 - No fragment exchange is executed without owner approval - fragments
@@ -116,7 +152,9 @@ as Hidden Treasure.
 - What the chest progress track pays at 15 of 15.
 - Whether the 1 of 15 track read on 2026-11-01 is a reset of the
   10 of 15 track, a new track, or a different counter - the change
-  is recorded, the mechanism is not.
+  is recorded, the mechanism is not. The 1420 dig advanced it
+  1 of 15 to 2 of 15, so it increments per dig; the reset
+  question itself is still open.
 - Whether particular secret missions drop particular fragment kinds -
   the morning claims dropped fragments number 7, 4 and 1, and the
   recovery record dropped five kinds, but no controlled mapping yet.

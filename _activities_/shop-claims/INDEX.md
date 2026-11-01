@@ -1,15 +1,16 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T19:40:31Z
+modified: 2026-11-01T22:40:43Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1039 passes unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1340 passes unit)
 ---
 
 
@@ -175,6 +176,44 @@ the free and already paid for parts, never the paid unlocks.
   as displayed in game". This unit did not re-read that
   line, so neither figure is treated as settled. Game
   left on the shop Super Monthly Pass page.
+
+## What the 2026-11-01 1340 unit added
+
+- Unit passes-2026-11-01-1057 by ticker-1334, session
+  about 13:37 to 13:55, status partial (checked, nothing
+  claimed). No different-device dialog.
+- Shop Hot Deals tab: store promo only, no free pack
+  showing - consistent with the 0114 and 1039 promo-only
+  reads.
+- Weekly Pass tab: Free Supply chest reads Claimed; Coin
+  Weekly Pass reads Already claimed today with Remaining
+  2d 4:23:02 (against 2d 7:21:58 at 1039, a drop matching
+  the roughly three hours elapsed, so no discrepancy
+  stands); S1 Drone Parts Weekly Pass shows no Remaining
+  line and no claimable pickup row, so it is not
+  currently owned and pays nothing today. The Legendary
+  Take All 19.99 button and the Renew 4.99 buttons were
+  not tapped.
+- Super Monthly Pass tab: Monthly Pass Days Left 20,
+  Rewards Left 20, button reads Claimed - unchanged from
+  1039. The 24.99 extension was not tapped.
+- Season Battle Pass: 17,800 points, the 17,800 free tier
+  shows a green check, next tiers at 18,600 and 19,400
+  not reached. Claim All answered No rewards available
+  to claim. The 9.99 Unlock Advanced Rewards button was
+  not tapped. This supersedes the 2026-10-25 next-tier
+  read (17,000 and 17,800) - the 17,800 tier is now
+  reached and checked.
+- Not finished: the Season Weekly Pass tile in the
+  Season hub was not opened in this unit; its Daily
+  Freebie and Daily Pickup state is unverified for this
+  slot. It is the first action of the next passes unit.
+- Still unresolved, carried forward unchanged: the 0114
+  display "Weekly Pass rewards reset at 18:00:00"
+  against this profile's standing "reset daily at 19:00
+  as displayed in game". This unit did not re-read that
+  line, so neither figure is treated as settled. Game
+  left on the base screen.
 
 ## Open questions
 

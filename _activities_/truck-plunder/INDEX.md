@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T19:40:31Z
+modified: 2026-11-01T22:40:43Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: owner standing rule on non-UR day dispatch - SR or above only, ticket refreshes authorized until reached, 2026-10-26
   - source: owner rule on daily truck quotas - dispatch 5 and plunder 4 every trade day, note it in the metadata and resolve misses, 2026-10-30
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1053 trucks unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1352 trucks unit)
 ---
 
 # Truck plunder - Intercity Trade
@@ -488,6 +489,60 @@ settlement and dispatch execution record).
   same shortfall. Nothing paid, no diamonds spent, no
   Mega Mode used, no alliance mate plundered. Game left
   on the trade screen, Your Truck tab.
+
+## What the 2026-11-01 1352 unit added
+
+- Unit trucks-2026-11-01-1057 by ticker-1334, session
+  about 13:46 to 14:00, status partial. Duel day 7, Off
+  day settlement, so non-UR rules apply: dispatch SR or
+  above, plunder UR or SSR trucks carrying UR shards with
+  guard below Squad 1 at 24.96M. No different-device dialog.
+- Entry, re-grounded fresh in-unit: the blue
+  delivery-truck icon in a speech bubble with red badge 3
+  sits at norm 48,565 and opened Intercity Trade at once.
+  Slot points shift between units - the 1053 centre
+  52,571 and this 48,565 differ - so re-measure the entry
+  icon fresh each unit, never reuse a prior point.
+- Live counters at entry, current trade day ending 19:00
+  today: Today's Trade Count 3 of 5, Your Plunder Count
+  Today 1 of 4, matching the 1053 unit exactly, so no
+  counter moved between the two units.
+- Dispatch, 1053 blocker closed: the empty-slot plus sign
+  was re-measured fresh at norm 625,440 and opened the
+  truck panel at once. This closes the 1053 tap blocker -
+  the 1053 points near 714 failed in that window, but the
+  step itself works when the point is measured in the
+  current window. The standing rule stands: measure the
+  plus sign fresh each unit, never reuse old points.
+- Rolls in this unit: the panel first rolled R (iron
+  2.0M, food 2.0M, coin 1.2M, Squad 4 escort). A free
+  refresh downgraded it to N (iron 1.2M, food 1.2M, coin
+  810.0K). Two Trade Contract refreshes followed, R then
+  SR, spending 2 contracts (stock 155 to 153). The SR roll
+  (iron 2.5M, food 2.5M, coin 1.6M, arrives in 03:43:56,
+  Squad 4) was dispatched at once with Let's Go, not Mega
+  Mode. Trade Count read live after dispatch: 4 of 5.
+- Plunder, shortfall carried forward: Plunder Count read
+  live 1 of 4, unchanged. First list inspected: SSR
+  #2104 [GOMP]4FINGAZ, Lv.27, guard 15.5M, passed over
+  because its cargo shows no UR shard stacks; a second
+  card, #2091 [OlyM]Conan416, Lv.28, guard 79.6M, passed
+  over as far above Squad 1. The list was refreshed once.
+  On the new list the two purple SSR trucks at the top of
+  the road did not open their cards after two corrected
+  taps (norm 400,225 then 400,240), so no further target
+  could be inspected in this unit. This is a tap-method
+  blocker (audit class c): the next trucks unit must
+  arrive with a changed method for top-of-road trucks
+  (element tap, or a re-measured body centre after the
+  toast banner clears) rather than repeating these points.
+- Outcome partial, counters at close read live: dispatch
+  4 of 5, plunder 1 of 4. Shortfall carried forward:
+  dispatch 1 more and plunder 3 more before the 19:00
+  deadline. Tracker untouched; the next trucks unit
+  resumes the same shortfall. No plunder fought, no
+  alliance mate plundered, no Mega Mode used, no diamonds
+  spent. Game left on the trade screen, Others' Trucks tab.
 
 ## Open questions
 

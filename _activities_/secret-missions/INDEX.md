@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T10:45:00Z
+modified: 2026-11-01T22:40:43Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: owner standing rules on Mega deploy taught 2026-10-25
   - source: evening dispatch and claim executions, 2026-10-25
   - source: secret-missions execution record 2026-11-01 0145 PST
+  - source: secret-missions execution record 2026-11-01 1417 PST
 ---
 
 
@@ -105,15 +106,18 @@ post screen carries two sibling tabs registered as their own types -
   centre, and one single tap on the second row, each verified by a
   second observation, with the counter staying 0 of 5 and no reward
   popup. This differs from the 2026-10-25 SSR assist, which succeeded
-  on one tap. The record's next-variant hypothesis, untested, is
-  that UR rows need the world-map handshake entry path instead.
+  on one tap. The record's next-variant hypothesis was that UR
+  rows need the world-map handshake entry path instead -
+  tested 2026-11-01 (1417 unit), it holds; see below.
 - Open question - UR ally rows (three observed 2026-10-25) showed
   only a countdown of about 3 hours and no Assist button. Tapping
   the avatar, the reward icons, the countdown and the name - which
   jumps to a world map task card with a round handshake button -
   none of these consumed an assist. That no-button observation is
   now superseded for rows that do carry an Assist button, above;
-  the world-map handshake route itself remains untested.
+  the world-map handshake route is now tested and works
+  for UR rows (1417 unit, below); the list Assist button
+  stays unresponsive for UR rows.
 - The Others' Tasks panel carries a Monica note - sharing a Secret
   Task from the World Map into the Alliance Channel marks it
   automatically; only a secret task that is currently plunderable or
@@ -201,6 +205,73 @@ secrets-2026-10-31-2257, status partial).
   rule R2. Own tasks are all running, so no new dispatch is due
   until they return.
 
+## What the 2026-11-01 1417 unit added
+
+- Unit secrets-2026-11-01-1057 by ticker-1404, status
+  partial. Entry: the game was left on the Trucks Others
+  screen from the previous pass; the back arrow at norm
+  (45,960) returned to base, then the base left-column
+  slot at norm (48,643) opened SECRET COMMAND POST on
+  the first tap; the title was verified before acting.
+  No truck work was done in this unit.
+- Own tasks, live at entry: Your Tasks badge 9 at first
+  sight, but the list itself holds 8 rows - the badge
+  count and the row count differ by one, unexplained,
+  not assumed. One Claim tap on the UR Rescue Test
+  Subject row opened a CONGRATULATIONS panel listing
+  allies who helped claim task rewards, closed with Like
+  All.
+- Claim result, verified live on re-entry: 6 tasks
+  stamped PERFECT - UR Disrupt electric grid, SSR Train
+  Refugees, SSR Search for Missing Refugees, SR Retrieve
+  Raw Materials, SR Retrieve Abandoned Gear, SR Retrieve
+  Valuable Supplies. 2 tasks show the running icon, not
+  yet claimable - UR Rescue Test Subject and SR Retrieve
+  Agent Profile. These are the tasks dispatched by unit
+  ticker-0136 at 01:36 PST (Mega Deploy, 9 tasks); no new
+  pending task was available, and Mega Refresh and Mega
+  Deploy stayed greyed out, so nothing was dispatched in
+  this unit.
+- Ally assists, breakthrough: Assist Allies started 0/5,
+  Ally Tasks badge 5, all rows [AP3x]TTS Rage Apex UR.
+  - The list Assist buttons are unresponsive, as in unit
+    0136: single taps at norm (839,471) and (839,476)
+    and a 1 second long-press at (839,476) produced no
+    change, counter stayed 0/5. Do NOT repeat these taps.
+  - Avatar tap opens the Player Profile only (Lv.30
+    [AP3x]TTS Rage Apex, closed untouched with the X) -
+    not a task card.
+  - Name tap is the working path: tapping the ally name
+    at norm (433,448) jumps to the world-map task card,
+    which carries a green handshake button at norm
+    (505,600). Two handshakes succeeded in-unit, each
+    verified by an ASSIST SUCCESSFUL panel and by the
+    counter on re-entry. This answers the profile open
+    question for UR rows (the 2026-10-25 SSR assist was
+    by list button; UR rows need the handshake path).
+  - Assist 1 card rewards: Mystery Supply Box x6, 5m
+    Training Speed-up x5, Hero EXP 412.8K, Skill Medal
+    x144; the success panel confirmed the same four
+    rewards.
+  - Assist 2 card rewards: Mystery Supply Box x6,
+    Resource Chest x30, Upgrade Ore x80, 5m Research
+    Speed-up x5, Hero EXP 412.8K; the success panel
+    confirmed the first four rows clearly, the Hero EXP
+    row was cropped at the panel foot, so the EXP figure
+    is card-read, not panel-read.
+  - Closing live read: Assist Allies 2/5, Ally Tasks
+    badge 3.
+- Follow-up carried forward: continue assists to the 5
+  cap via the name-to-handshake path (3 remain), do NOT
+  repeat the list Assist-button taps; claim UR Rescue
+  Test Subject and SR Retrieve Agent Profile when their
+  running icons clear. Tracker untouched; the next
+  secrets unit resumes the same shortfall.
+- Plunder Others not touched (0/5, PvP, no owner
+  instruction). No diamonds, money, speedup or paid
+  button touched. No Mega Refresh used (its cost is
+  still unobserved).
+
 ## Limits
 
 - Plunder Others is PvP. It is not touched without the owner explicit
@@ -211,9 +282,10 @@ secrets-2026-10-31-2257, status partial).
 
 ## Open questions
 
-- How a UR ally task is assisted (see the assist section) - the
-  0145 Assist-button attempts failed, so the world-map handshake
-  entry variant is the next test, not a repeat of those taps.
+- Answered 2026-11-01 (1417 unit) - UR ally tasks are assisted
+  via the name-to-world-map handshake path (see the assist
+  section); the list Assist button stays unresponsive for UR
+  rows and is not repeated.
 - The cost of Mega Refresh, and whether it can be used freely.
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.
