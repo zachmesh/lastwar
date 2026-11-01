@@ -154,3 +154,34 @@ of 2026-10-28.
   transient Arms Race side observation in 0016 was
   deliberately not folded. Slack DM sync sent.
   Full detail in knowledge-organization/0032-run.md.
+
+## 00:34 to about 00:46 - Queue ticker pass
+
+- Ticker pass ticker-0034. Sync reaped 0, expired 0,
+  produced 0 new units; all 20 due regulars were already
+  queued. No zombie chain was seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30 and no Zombie Invasion tab is live. Token
+  acquired, no other pass holding it. Own-PR check
+  first: no open PR is owned by this job (the only open
+  PR, PR 20, is the docs simplification, not a ticker
+  record; the ticker-0004 records PR 19 stands merged).
+- Survivors unit survivors-2026-10-31-2203, partial:
+  gate line not found in four pans, no question-mark
+  bubbles verified, no recruit taken, Quick Dispatch
+  not run, tracker untouched. Disclosure: this unit id
+  had already been completed partial by ticker-0004
+  earlier the same morning; this pass re-ran it because
+  the local working tree still carried it in inbox.
+  The branch's done file for the unit is left as
+  ticker-0004 wrote it. Full detail in
+  survivor-intake/0041-queue-run.md.
+- Training unit training-2026-10-31-2203, partial:
+  no barracks selected in a drifted camera view,
+  inherited tap points at 708,602 and 617,570 both
+  missed, Drill Ground panel not reached, no batch
+  collected or started, tracker untouched. Full detail
+  in troop-training/0045-queue-run.md.
+- Pass ended after two units, inside its 25 minute
+  budget. Game left on the base screen. No login or
+  different-device dialog appeared at any point.
