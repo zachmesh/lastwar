@@ -283,3 +283,15 @@ of 2026-10-28.
   06:04 and 06:34 passes; the channel has been down
   since 01:47 local. Full detail in
   alliance-donations/0704-queue-run.md.
+
+## 07:15 to about 07:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0715. One
+  open PR at pass start (PR 61, records 2026-11-01);
+  PR 61 merged with a merge commit (69d0b02e); the
+  date branch was not deleted. Records/2026-10-31
+  verified contained in main, so no PR needed. Local
+  main fast-forwarded to the merge via the bundle
+  route. Merge synced to the owner Slack DM.
+  End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0715-run.md.
