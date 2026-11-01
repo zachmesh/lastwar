@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T08:36:31Z
+modified: 2026-11-01T17:40:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -30,7 +30,10 @@ troops and riding the train are different systems and are kept apart.
 ## How to enter
 
 - On the base screen, tap a Barracks tent. The four tents stand in the
-  lower middle of the base in this layout.
+  lower middle of the base in this layout. The tent row's screen
+  position is camera-dependent: measure it fresh in the unit's
+  own view, never from a pinned coordinate - a reused point has
+  selected a wrong building (0917 unit, below).
 - A row of round buttons appears under the selected tent. The pistol
   icon button opens the TRAIN UNITS panel. The paw icon opens Building
   Details, and the green up arrow is the upgrade shortcut - do not tap
@@ -147,6 +150,34 @@ Observed in game on this account, first execution 2026-10-25.
   green upgrade shortcut, no purchase, no diamond spend, no
   speedup item burned. The game was left on the base screen.
 
+## What the 2026-11-01 0917 unit added
+
+- Pinned-point failure escalated from a miss to a wrong
+  building: in this camera position, norm 617,570 (the
+  pinned Lv.27 tent point from the 2026-10-31 15:44 unit,
+  which merely missed in the 0045 unit) positively
+  selected Missile Vehicle Base Lv.10. The other two taps
+  in this pan selected Titanium Alloy Factory No.1 Lv.30
+  at norm 405,475 and Titanium Alloy Factory No.2 Lv.30
+  at norm 330,540 - so the unit was searching a factory
+  pan, not the tent row. A reused coordinate therefore
+  does not just miss across camera positions; it can
+  select a wrong building. Leave any wrongly selected
+  building untouched (no upgrade shortcut, no Finish
+  Now, no Train pressed) and pan to the tent row first
+  rather than repeating taps in the same pan - the
+  record's own next-unit instruction.
+- Drill Ground Full carried forward unverified a second
+  consecutive unit: 0045 and 0917 both never reached a
+  barracks, and the Drill Ground panel was not re-read in
+  0917, so the 39,460 of 39,460 block remains a
+  2026-10-31 read, not a 2026-11-01 re-confirmation, and
+  no clearing method is claimed.
+- Control-channel recovery: the computer session dropped
+  mid-unit; a new session re-selected Last War with no
+  game state lost, no different-device dialog, and no
+  login demanded.
+
 
 ## Open questions
 
@@ -163,3 +194,12 @@ Observed in game on this account, first execution 2026-10-25.
   rule applied to a crop with no groundable barracks row, the
   Drill Ground Full block carried forward unverified, and the
   shared 274,18 focus fix, folded from the 0045 training unit.
+
+- 1.3.0 (2026-11-01): pinned-point failure escalated to a
+  wrong-building selection (617,570 selected Missile
+  Vehicle Base Lv.10; factory-pan landmarks Factory No.1
+  and No.2 Lv.30 measured), the pan-to-the-tent-row-first
+  next-unit rule, Drill Ground Full carried forward
+  unverified a second consecutive unit, and the mid-unit
+  session-drop recovery, folded from the 0917 training
+  unit.
