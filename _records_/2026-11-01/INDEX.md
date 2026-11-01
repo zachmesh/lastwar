@@ -739,3 +739,21 @@ of 2026-10-28.
   this pass's verified-hold decision; no unprocessed
   PRs, no merges, no escalations. Full detail in
   pr-integration/0400-run.md.
+
+## 04:04 to about 04:10 — Queue ticker pass, crystal-shop (failed, device offline)
+
+- Own PRs first: PR 49 (records/2026-11-01) held by the
+  integrator for the 1ba06f3f5 truncation; this pass
+  repaired the branch before game work (both files
+  restored from main, branch-only sections and lines
+  re-appended, additions-only verified, commit
+  5963cfa81 pushed, repair comment posted on PR 49
+  for re-review).
+- Crystal-shop unit crystal-shop-2026-11-01-0500,
+  failed: Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up
+  path), last seen 01:47 local and unmoved across the
+  pass. No screen read, no Store entry, nothing
+  claimed, nothing spent. Tracker untouched. Fourth
+  consecutive access-failed ticker pass. Full detail in
+  crystal-shop/0404-queue-run.md.
