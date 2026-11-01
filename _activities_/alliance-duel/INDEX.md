@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T07:26:52Z
-version: 1.3.1
+modified: 2026-11-01T09:36:45Z
+version: 1.4.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -122,6 +122,38 @@ substitute for one.
   ceremony. It does not merge the ceremony claim into a duel
   result or the other way round - one unit still reports one
   type, and the total read is that type own work.
+
+## What is known from 2026-11-01
+
+Measured in the 0108 star-ceremony unit (ticker-0104, window mode
+642x951, no different-device dialog).
+
+- No Star Ceremony waiting: the base screen showed no gold trophy
+  icon beside the Alliance button on the right rail. No ceremony
+  panel was opened, no hearts sent, no rewards claimed. The right
+  rail read Halloween Check-In, Events, Faction Duel, VS, Season
+  II, Alliance, Mail, Inventory.
+- Duel panel read live in the inter-week calculating state:
+  Infinite Roulette shows 0 spin tokens, wheel 0/10, spins and
+  points reset Sunday at 24:00. Duel League S38 shows Gold Tier
+  38-7, AP3x rank 3, Week 1 Win, Week 2 Win, Week 3 crossed out,
+  Week 4 sleeping, and the banner "Calculating the number of
+  Alliances promoted and demoted..." with 13d 18:53 left. Match
+  Record Week 2 shows [AP3x]The Apex vs [Sync] IMPERIUM 7-6.
+  Weekly Ranking shows [AP3x]Bears Lair rank 190 with 17,240,439
+  points - a weekly cumulative figure, NOT a daily total, and
+  never to be reported as one.
+- Daily total line closed as unverified, per the 2026-10-31 fix:
+  no themed duel-day panel with a personal daily total was found
+  on the duel screens in this calculating state, the Achievements
+  pill (8/16 Completed) did not open a panel, and the Your
+  Alliance control on the Ranking panel produced no change on
+  two taps, so that route was dropped under the pivot rule. No
+  fragment score was substituted for the daily total. Later
+  star-ceremony units already staged for today (0230, 0630,
+  1030) are the re-reads before the 19:00 reset; no extra unit
+  was enqueued.
+
 
 ## Open questions
 

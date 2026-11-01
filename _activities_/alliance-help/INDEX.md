@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-01T09:36:45Z
 level: L1
-version: 1.5.1
+version: 1.6.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -81,6 +81,55 @@ counts helps, and any caps. Executions are recorded in
   new requests (Ripper Apex on a Lv.23 Missile Vehicle Base,
   K워니 on a Lv.22 Smelter, among others), after which the rows
   turned into reduced-time displays.
+
+## What is known from 2026-11-01
+
+Measured in the 0135 help unit (ticker-0134, window mode
+642x951, no different-device dialog). Outcome: done.
+
+- Background-input nuance, same pass as the 0139 mail
+  failure: the game window was already open in window mode
+  but covered by a Chrome window, with
+  UserNotificationCenter frontmost. A title-bar click at the
+  visible left segment did not change the frontmost app, but
+  background input to the selected Last War window reached
+  the game, so the unit proceeded on background input and
+  every tap was verified by a fresh observation. This
+  refines the 2026-10-31 foreground note above: background
+  input is screen-dependent, not uniformly dead - panel
+  screens accepted it in this pass while the base-screen
+  right rail did not (see mail-rewards, 0139).
+- The game opened on the Alliance Gifts panel, all listed
+  gifts already Claimed. The back arrow returned to the
+  Alliance menu, where the Help tile carried a red dot.
+- Help page opened from the Alliance menu. Header read
+  live: Today's points gained from Alliance Help 80/1,000.
+  The visible requests were all the account's own (Bears
+  Lair, each 30/30), which cannot be helped by the account
+  itself.
+- Help All pressed once. The game answered "Allies are very
+  grateful for your assistance." A second observation still
+  read 80/1,000, so the panel was closed and reopened rather
+  than trusting the first re-read: the reopened header read
+  live 160/1,000, confirming Help All added 80 points in
+  this unit. Lesson: after Help All, close and reopen the
+  panel for the confirming re-read; a single re-read can
+  lag behind the true header.
+- Note for the next unit: the Help tile red dot at menu
+  entry did not correspond to visible ally requests in the
+  list shown; the points gain confirms ally helps were
+  cleared by Help All. A red dot is not proof of a visible
+  request row, and a list of only own requests is not proof
+  that Help All did nothing - read the header before and
+  after.
+- Incidental observation from the 0139 mail unit, not an
+  action of that unit: while it opened, the Help panel
+  header read 360/1,000, up from the 160/1,000 live re-read
+  that closed this help unit; the rise came from allies
+  helping this account's requests between units, not from
+  any action in the mail unit. Do not count inter-unit
+  help-received rises as help-given gains.
+
 
 ## Open questions
 

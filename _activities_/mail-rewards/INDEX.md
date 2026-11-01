@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-01T09:36:45Z
 level: L1
-version: 1.1.1
+version: 1.2.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -60,6 +60,37 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
   Crystal Shop tab to Store, Building section - the only in-game
   mention of anything crystal found so far (see the open question in
   `_activities_/daily-activities`).
+
+## What is known from 2026-11-01
+
+Measured in the 0139 mail unit (ticker-0134, window mode
+642x951, no different-device dialog). Outcome: partial - no
+mail was claimed, nothing was deleted, tracker untouched, so
+the next tick re-produces this regular as a fresh unit.
+
+- From the Alliance menu left open by the previous unit,
+  the Help panel was closed and the Alliance menu back arrow
+  returned to the base screen. The base screen showed the
+  Mail envelope button on the right rail with a red dot, so
+  claimable mail may exist - unverified, not claimed.
+- Mail entry failed in this unit. Four input variants at the
+  freshly measured Mail point (normalised 920-929, 755-760)
+  all showed no change on a second observation each time:
+  two standard clicks, one exact-pointer click with control
+  snapping off, and one 1-second long press. The game stayed
+  on the base screen and no Mail panel opened.
+- Contrast, same pass: background input to panel screens
+  worked (Alliance Gifts back arrow, Alliance menu Help
+  tile, Help All, panel close and menu back arrow). The
+  blocker is specific to the base-screen right rail in this
+  background-input mode, not to game input in general.
+- Blocker for the next mail unit (queue rule R2): the
+  base-rail Mail entry method is exhausted for this unit.
+  The next unit must arrive with a changed method - a
+  foreground game window or a different entry route -
+  before repeating the rail tap. Do not spend another unit
+  on four more identical rail variants.
+
 
 ## Open questions
 
