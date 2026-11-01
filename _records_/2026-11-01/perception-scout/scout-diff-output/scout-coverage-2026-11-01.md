@@ -1,12 +1,12 @@
 ---
 title: Scout Coverage 2026-11-01
-created: 2026-11-01T21:42:56Z
+created: 2026-11-01T22:50:01Z
 description: Coverage report of the scout diff for this date
 ---
 
 # Scout coverage - 2026-11-01
 
-Observation - _records_/2026-11-01/perception-scout/observation.md
+Observation - /home/hatch/workspace/lastwar/_records_/2026-11-01/perception-scout/observation.md
 
 - items observed - 0
 - actionable items - 0
