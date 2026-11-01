@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-01T05:10:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -57,7 +57,7 @@ queue design fixes the unit contract.
 
 ## Cadence
 
-Two passes per reset day, both regulars in tools/regulars.json -
+Two passes per reset day, both regulars in _tools_/regulars.json -
 
 - `scout` - the post-reset full pass, daily-reset cadence
   anchored at the 19:00 local reset.

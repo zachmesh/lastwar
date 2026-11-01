@@ -1,9 +1,9 @@
 ---
 title: Recording Rules
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-01T07:58:31Z
 level: L2
-version: 1.9.1
+version: 1.9.2
 description: Evidence, language and append-only rules for knowledge, tasks, activities and play records
 status: unverified
 grounded_in:
@@ -78,12 +78,12 @@ doing the work - is made on the date branch
 never on main, and stages only the records paths, by
 explicit pathspec, never a blanket add:
 
-- `_records_`, `_queue_`, `_logs_`, `tools/state/`
+- `_records_`, `_queue_`, `_logs_`, `_tools_/state/`
 
-A change under `tools/`, `_conventions_` or `_activities_` is
+A change under `_tools_/`, `_conventions_` or `_activities_` is
 load-bearing and must never be swept into a record commit,
 however small it looks - the scout production seeds in
-`tools/queue.py` landed exactly that way once, inside a
+`_tools_/queue.py` landed exactly that way once, inside a
 ticker records commit (d1fa5b9, 2026-10-31). When an executor
 finds load-bearing changes sitting in the working tree, it
 leaves them exactly as they are, notes them in the run

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Alliance Duel day calculator and gating advisor.
 
-Reads tools/duel_schedule.json, works out which duel day is live right
+Reads _tools_/duel_schedule.json, works out which duel day is live right
 now (duel days roll at 19:00 local per the 2026-10-25 observation) and
 prints the gating advice the playbook attaches to that day - most
 importantly when to preserve radar tasks for Radar Training day.

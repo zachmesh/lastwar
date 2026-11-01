@@ -1,8 +1,8 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T07:09:43Z
-version: 1.1.0
+modified: 2026-11-01T07:58:31Z
+version: 1.1.1
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
 grounded_in:
@@ -147,9 +147,9 @@ entries to implemented.
 
 - source: legacy open item 6, retained by the owner-directed task-list retirement.
 - class: execution-knowledge
-- leak: headquarters-and-resources still leaves the six-figure 2026-10-25 HUD mapping unverified, while `tools/resources.json` already contains some named resource definitions. The two sources have not been explicitly reconciled.
+- leak: headquarters-and-resources still leaves the six-figure 2026-10-25 HUD mapping unverified, while `_tools_/resources.json` already contains some named resource definitions. The two sources have not been explicitly reconciled.
 - target metric and current value: resource-label verification coverage. The six-figure historical mapping remains unverified in the knowledge article; current resource definitions are partial inputs, not proof of that old screen.
-- verification: read the HUD labels and relevant detail panels in a bounded observation, link each supported mapping to dated evidence, and reconcile the article with `tools/resources.json`. If the historical screen cannot be reconstructed, retain its mapping as unverified and add a separately dated current mapping rather than assigning old figures by inference.
+- verification: read the HUD labels and relevant detail panels in a bounded observation, link each supported mapping to dated evidence, and reconcile the article with `_tools_/resources.json`. If the historical screen cannot be reconstructed, retain its mapping as unverified and add a separately dated current mapping rather than assigning old figures by inference.
 - status: open
 
 ### IMP-20261101-05 - reconcile the remaining guide-claim checks
@@ -212,7 +212,7 @@ entries to implemented.
   the first retro would have been aggregated by hand - slow,
   error-prone, and not repeatable byte for byte.
 - target metric: retro aggregation produced by
-  tools/retro_report.py from _queue_/done (evaluation
+  _tools_/retro_report.py from _queue_/done (evaluation
   metrics family A inputs). Current value - the tool is live
   and produced the 2026-10-31 appendix from 428 done units
   with zero parse errors.

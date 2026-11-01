@@ -1,9 +1,9 @@
 ---
 title: Task Intake Workflow
 created: 2026-10-25T19:18:00Z
-modified: 2026-11-01T07:09:43Z
+modified: 2026-11-01T07:58:31Z
 level: L2
-version: 1.2.0
+version: 1.2.1
 description: How a newly named task is checked, registered as a task type, executed and recorded
 status: unverified
 grounded_in:
@@ -108,7 +108,7 @@ performed or completed.
 
 | Former item | Canonical destination and disposition |
 |---|---|
-| Arms Race standing four-hour checks | Existing `_activities_/arms-race/` and `tools/regulars.json`, with concrete `_queue_` units and dated results. Preserve the phase cadence; do not restore the retired standalone cron. |
+| Arms Race standing four-hour checks | Existing `_activities_/arms-race/` and `_tools_/regulars.json`, with concrete `_queue_` units and dated results. Preserve the phase cadence; do not restore the retired standalone cron. |
 | Verify all activity profiles against the account | IMP-20261101-01 in the improvements backlog. |
 | Record the three squads, heroes, levels, gear and troop types | IMP-20261101-02. |
 | Observe both sides of a Mac/iPhone device switch | IMP-20261101-03. Existing Mac-side observation is retained; iPhone-side behavior remains unverified. |

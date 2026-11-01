@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T05:22:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.6.0
+version: 1.6.1
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -266,7 +266,7 @@ Handling by posture (binding):
 
 ## Scoring - duel days
 
-- Posture follows the duel day (tools/duel.py) - stack on
+- Posture follows the duel day (_tools_/duel.py) - stack on
   even days (complete, do not claim), release on odd days
   1, 3 and 5 (claims score). Radar claims score at the
   moment of claiming, not at completion - the whole stack
@@ -277,7 +277,7 @@ Handling by posture (binding):
   list Complete 1 Radar Task at 10,000 points (base, before
   Alliance Duel research bonuses). The in-game VS panel on
   this account displays plus 30,000 per task (recorded in
-  tools/duel_schedule.json). The in-game value governs
+  _tools_/duel_schedule.json). The in-game value governs
   planning; the gap is presumed to be duel research bonus
   but is NOT verified - the delta test (read duel score,
   claim one batch, read again) is still owed and heads the

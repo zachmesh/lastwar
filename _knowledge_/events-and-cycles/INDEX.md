@@ -1,9 +1,9 @@
 ---
 title: Events and Cycles
 created: 2026-10-25T17:58:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.2.1
+version: 1.2.2
 description: Arms Race phases, the Alliance Duel VS week, the double-dip rule, and radar task discipline
 status: unverified
 grounded_in:
@@ -85,8 +85,8 @@ day contributes to the weekly victory —
   67,800. This account stood at 3,928,429 points for the day when
   read (the evening radar clear and the owner phone play both
   landed inside Day 1).
-- The tooling form of this schedule is `tools/duel_schedule.json`,
-  worked by `tools/duel.py`; the standing gates are in
+- The tooling form of this schedule is `_tools_/duel_schedule.json`,
+  worked by `_tools_/duel.py`; the standing gates are in
   `_knowledge_/strategy-playbook`.
 
 ## The double dip

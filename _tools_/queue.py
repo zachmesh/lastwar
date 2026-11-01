@@ -35,7 +35,7 @@ Usage:
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: reap, then enqueue one
              # unit per regular the tracker marks due (idempotent);
-             # without --due-json it calls tools/regulars.py todo
+             # without --due-json it calls _tools_/regulars.py todo
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -59,7 +59,7 @@ DEFAULT_LEASE_MINUTES = 20
 DEFAULT_EST_MINUTES = 5
 DEFAULT_MAX_ATTEMPTS = 3
 # Required result.stats keys, per section 14 of the task unit queue
-# design (mirrored in tools/retro_report.py REQUIRED_KEYS):
+# design (mirrored in _tools_/retro_report.py REQUIRED_KEYS):
 # target, achieved, resources_gained, costs and verified are always
 # required; blocker_category is required whenever the unit fell short
 # of its target or closed partial, failed or skipped-needs-owner.
@@ -329,7 +329,7 @@ def typical_minutes(root, regular):
 
 def write_new_unit(root, fields, regular):
     os.makedirs(state_dir(root, "inbox"), exist_ok=True)
-    body = (f"# {regular}\n\nProduced by tools/queue.py. The "
+    body = (f"# {regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
@@ -612,7 +612,7 @@ def cmd_enqueue(args):
         "attempts": 0, "max_attempts": args.max_attempts,
         "claimed_by": "", "claimed_at": "", "lease_until": "",
     }
-    body = (f"# {args.regular}\n\nProduced by tools/queue.py. The "
+    body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
     os.makedirs(state_dir(args.root, "inbox"), exist_ok=True)
@@ -705,7 +705,7 @@ def _stat_number(value):
 def missing_stats_keys(status, stats):
     """Required result.stats keys absent from a closing.
 
-    Mirrors the retro aggregation in tools/retro_report.py: the
+    Mirrors the retro aggregation in _tools_/retro_report.py: the
     five always-required keys, plus blocker_category when the
     unit fell short of its numeric target or closed with a
     short status. Presence counts - a key supplied with an

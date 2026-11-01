@@ -1,9 +1,9 @@
 ---
 title: Retro Review
 created: 2026-11-01T05:38:00Z
-modified: 2026-11-01T05:38:00Z
+modified: 2026-11-01T07:58:31Z
 level: L1
-version: 1.0.0
+version: 1.0.1
 description: The daily retro pass - measuring the past 7 days of executions, naming the top leaks, and filing the improvement tasks the loop then works
 status: active
 grounded_in:
@@ -32,7 +32,7 @@ as the standing job `lastwar-daily-retro`.
 ## Inputs
 
 - The done pool and the execution records of the window,
-  through `tools/retro_report.py`.
+  through `_tools_/retro_report.py`.
 - The ops execution records of the loop activities
   (tool-development, knowledge-organization, pr-integration,
   and its own previous runs).
