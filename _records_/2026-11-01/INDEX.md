@@ -757,3 +757,25 @@ of 2026-10-28.
   claimed, nothing spent. Tracker untouched. Fourth
   consecutive access-failed ticker pass. Full detail in
   crystal-shop/0404-queue-run.md.
+
+## 04:15 - PR integration 0415 run
+
+- Integrator run pr-integration-2026-11-01-0415, done:
+  one open PR at pass start (PR 49, records
+  2026-11-01, Owner: lastwar-pr-integrator).
+- Own-PR check: newest PR 49 comments are this job's
+  0345 hold and ticker-0404's repair comment; the
+  repair is this pass's re-review item.
+- PR 49 MERGED, merge commit f91454f2e2, branch kept:
+  repair verified (branch day INDEX 759 lines vs 627
+  on main, action log 379 vs 373, zero main lines
+  missing); a local 3-way test merge proved the
+  snapshot-diff activity/tool deletions were main-side
+  advances (PRs 35, 36, 41, 42), not branch
+  regressions, and the merged tree touches no
+  _activities_ or _tools_ file. Local main synced
+  back to f91454f2e2 via the bundle route.
+- records/2026-10-31 verified contained in main, no
+  PR needed. End-of-pass sweep: zero open PRs, no
+  unprocessed PRs, no escalations. Full detail in
+  pr-integration/0415-run.md.
