@@ -23,6 +23,10 @@ Usage:
   queue.py [--root DIR] complete --unit UNIT --status done
              [--summary TEXT] [--claimed-items a,b] [--evidence PATH]
              [--follow-up TEXT] [--stat key=value ...]
+             # complete warns on stdout (exit still 0) when the closing
+             # omits a required result.stats key, so an incomplete
+             # closing is flagged at the moment it is made instead of
+             # surfacing only in the retro aggregation.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
@@ -54,6 +58,14 @@ UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
 DEFAULT_LEASE_MINUTES = 20
 DEFAULT_EST_MINUTES = 5
 DEFAULT_MAX_ATTEMPTS = 3
+# Required result.stats keys, per section 14 of the task unit queue
+# design (mirrored in tools/retro_report.py REQUIRED_KEYS):
+# target, achieved, resources_gained, costs and verified are always
+# required; blocker_category is required whenever the unit fell short
+# of its target or closed partial, failed or skipped-needs-owner.
+REQUIRED_STATS_KEYS = ("target", "achieved", "resources_gained",
+                       "costs", "verified")
+SHORT_CLOSING_STATUSES = ("partial", "failed", "skipped-needs-owner")
 STATES = ("inbox", "claimed", "done")
 TOKEN_NAME = "device-token.md"
 FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
@@ -639,6 +651,40 @@ def cmd_claim(args):
     return 0
 
 
+def _stat_number(value):
+    """Coerce a stats scalar to a number, or None (retro _num)."""
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        try:
+            return float(value.replace(",", "").strip())
+        except ValueError:
+            return None
+    return None
+
+
+def missing_stats_keys(status, stats):
+    """Required result.stats keys absent from a closing.
+
+    Mirrors the retro aggregation in tools/retro_report.py: the
+    five always-required keys, plus blocker_category when the
+    unit fell short of its numeric target or closed with a
+    short status. Presence counts - a key supplied with an
+    empty value is present, exactly as the retro counts it.
+    """
+    missing = [key for key in REQUIRED_STATS_KEYS if key not in stats]
+    target = _stat_number(stats.get("target"))
+    achieved = _stat_number(stats.get("achieved"))
+    fell_short = (target is not None and achieved is not None
+                  and achieved < target)
+    if (fell_short or status in SHORT_CLOSING_STATUSES) \
+            and "blocker_category" not in stats:
+        missing.append("blocker_category")
+    return missing
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
     if state != "claimed":
@@ -669,11 +715,17 @@ def cmd_complete(args):
         "follow_up": args.follow_up or "none",
         "stats": stats,
     }
+    missing = missing_stats_keys(args.status, stats)
     target = unit_path(args.root, "done", args.unit)
     os.makedirs(state_dir(args.root, "done"), exist_ok=True)
     write_unit(path, fields, body)
     os.rename(path, target)
     print(f"completed {args.unit} with status {args.status}")
+    if missing:
+        print(f"warning: {args.unit} closes with missing required "
+              f"result.stats keys: {', '.join(missing)} - the "
+              f"closing counts as unverified in the retro "
+              f"aggregation")
     return 0
 
 
