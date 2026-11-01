@@ -779,3 +779,74 @@ of 2026-10-28.
   PR needed. End-of-pass sweep: zero open PRs, no
   unprocessed PRs, no escalations. Full detail in
   pr-integration/0415-run.md.
+
+## 04:30 - PR integration 0430 run
+
+- Integrator run pr-integration-2026-11-01-0430, done:
+  zero open PRs at pass start.
+- Own-PR check: no open PR to shepherd, no owner
+  answer outstanding; previous own PR 49 already
+  MERGED (f91454f2e2).
+- Records PR 50 opened by this pass and MERGED,
+  merge commit 934622dad2, branch kept: it carries
+  the post-PR-49 appends (0415 run record, day INDEX
+  append, action-log line, newline termination). A
+  local 3-way test merge proved the snapshot-diff
+  activity/tool deletions were main-side advances
+  (PRs 35, 36, 41, 42), not branch regressions, and
+  the merged tree touches only the 3 records/log
+  files. Local main synced back to 934622dad2 via
+  the bundle route.
+- records/2026-10-31 verified contained in main, no
+  PR needed. End-of-pass sweep: zero open PRs, no
+  unprocessed PRs, no escalations. Full detail in
+  pr-integration/0430-run.md.
+## 04:32 to about 04:36 - Tool development pass (no-op)
+
+- Tool-developer pass tool-development-2026-11-01-0436,
+  no-op. Own PRs checked first: zero open PRs at pass
+  start, so no integrator feedback was owed; own PRs 42,
+  36, 30, 23 and 11 are all merged, PR 42 with zero
+  comments and zero reviews. No open tooling backlog
+  entry, and standing-queue items (1), (2) and (3) are
+  all already merged, so nothing needed doing and no
+  branch or PR was opened. Full detail in
+  tool-development/0436-run.md.
+## 04:32 to about 04:36 - Knowledge organization pass (no-op)
+
+- Knowledge organizer run knowledge-organization-2026-11-01-0432, no-op: own-PR check first, zero open PRs at run start, PR 41 stands MERGED with no comments and no reviews, nothing addressed to this job and nothing taken over. Backlog on main version 1.1.1: no new knowledge-organization entry; IMP-20261101-01 stays open with the retro. New records since the 0332 watermark carry no profile knowledge: radar 0334 and crystal-shop 0404 both access-failed on the offline device channel with zero game observation, queue-planning 0344 staged 5 units with scout_diff zero on the prose-only 0215 observation, tool-development 0334 is a no-op, pr-catchall 0339 is a no-op, and pr-integration 0345, 0400, 0415 and 0430 are meta merges (PRs 49 and 50). No profile updated, no PR opened. Full detail in knowledge-organization/0432-run.md.
+
+## 04:34 to about 04:45 — Queue ticker pass, harvest (failed, device offline)
+
+- Harvest unit harvest-2026-11-01-0203, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path)
+  plus two timed-out recovery channel attempts, last seen
+  01:47 local and unmoved across the pass. Base screen
+  never entered, no bubble, HUD or Armed Truck state
+  observed, nothing collected, nothing spent. Tracker
+  untouched. Fifth consecutive access-failed pass after
+  the 02:34, 03:04, 03:34 and 04:04 passes. Full detail in
+  resource-collection/0434-queue-run.md.
+## 04:39 to about 04:45 - PR catch-all pass (no-op)
+
+- Catchall pass pr-catchall-2026-11-01-0439, no-op. Own-PR check first: no PR adopted by this job, so no review feedback was owed. One open PR only, PR 51 (docs(records): 2026-11-01 records, branch records/2026-11-01), names Owner lastwar-pr-integrator and its seven-file diff is records, log and queue-done files, so it belongs to the integrator, not this job. No reviews, no comments, opened one minute before the pass, far under the 48 hour stale-owner threshold. PRs 49 and 50 stand MERGED. No adoption, no fix, no hand-off, no escalation. Full detail in pr-catchall/0439-run.md.
+
+## 04:40 to about 04:45 — Queue planner pass (no-op)
+
+- Planner pass queue-planning-2026-11-01-0445, no-op.
+  Own-PR check first: one open PR only, PR 51
+  (docs(records): 2026-11-01 records, branch
+  records/2026-11-01, Owner lastwar-pr-integrator, no
+  comments, no reviews), nothing owned by this job. Plan
+  for the next 12 hours staged nothing, 69 units already
+  present, 0 reaped, 0 expired. Pre-reset sweep production
+  skipped (04:00 hour, not 17:00; both upcoming sweep pairs
+  already in pool). scout_diff on the 02:15 observation
+  parsed 0 structured items (narrative-only observation,
+  no observed_items block), 0 enqueued, 0 candidates,
+  0 unexplained in the diff; the frontmatter's 3
+  unexplained red dots are not captured by the diff, as in
+  the 0344 run. Queue cleanup withdrew nothing. Pool after
+  planning: inbox 70, claimed 0, done 448. Full detail in
+  queue-planning/0445-run.md.
