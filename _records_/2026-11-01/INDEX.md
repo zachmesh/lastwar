@@ -543,3 +543,17 @@ of 2026-10-28.
 - Delivered on records/2026-11-01 through the already-open
   PR 68 under policy 2.0.0. Full detail in
   queue-planning/0844-run.md.
+
+## 08:45 to about 08:50 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0845. One
+  open PR at pass start (PR 68, records 2026-11-01,
+  Owner lastwar-pr-integrator, no comments, no reviews).
+  PR 68 merged with a merge commit (6a47e8ec); the date
+  branch was not deleted. Records/2026-10-31 was fully
+  contained in main, so no PR was needed for it. No
+  knowledge or code PR was open. Local main
+  fast-forwarded to the merge via the bundle route.
+  Merge synced to the owner Slack DM.
+  End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0845-run.md.
