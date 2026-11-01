@@ -815,3 +815,16 @@ of 2026-10-28.
 ## 04:32 to about 04:36 - Knowledge organization pass (no-op)
 
 - Knowledge organizer run knowledge-organization-2026-11-01-0432, no-op: own-PR check first, zero open PRs at run start, PR 41 stands MERGED with no comments and no reviews, nothing addressed to this job and nothing taken over. Backlog on main version 1.1.1: no new knowledge-organization entry; IMP-20261101-01 stays open with the retro. New records since the 0332 watermark carry no profile knowledge: radar 0334 and crystal-shop 0404 both access-failed on the offline device channel with zero game observation, queue-planning 0344 staged 5 units with scout_diff zero on the prose-only 0215 observation, tool-development 0334 is a no-op, pr-catchall 0339 is a no-op, and pr-integration 0345, 0400, 0415 and 0430 are meta merges (PRs 49 and 50). No profile updated, no PR opened. Full detail in knowledge-organization/0432-run.md.
+
+## 04:34 to about 04:45 — Queue ticker pass, harvest (failed, device offline)
+
+- Harvest unit harvest-2026-11-01-0203, failed:
+  Mac mini device channel offline across three
+  computer.session starts (node_offline, no wake-up path)
+  plus two timed-out recovery channel attempts, last seen
+  01:47 local and unmoved across the pass. Base screen
+  never entered, no bubble, HUD or Armed Truck state
+  observed, nothing collected, nothing spent. Tracker
+  untouched. Fifth consecutive access-failed pass after
+  the 02:34, 03:04, 03:34 and 04:04 passes. Full detail in
+  resource-collection/0434-queue-run.md.
