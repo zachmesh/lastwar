@@ -1,7 +1,7 @@
 ---
 title: Improvements backlog
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-01T09:43:19Z
 version: 1.1.1
 description: The standing backlog of improvement tasks for the play system - filed by retros and by owner instruction, worked by the tool developer and the knowledge organizer, closed by the retro only when the target metric moves or the stated verification passes
 status: active
@@ -308,6 +308,42 @@ entries to implemented.
 - status: implemented - the register was created in the same
   batch as this backlog, and the retro job body gained the
   maintenance step on 2026-10-31.
+
+### IMP-20261101-06 - scout_diff promotion proposals from completed exploration
+
+- source: owner instruction of 2026-10-31 (standing tool
+  queue, item (c)(3) - scout_diff / planner
+  trigger-consumption follow-ups, roadmap Phase 3)
+- class: tooling
+- leak: the diff filed candidates and enqueued their
+  exploration units, but a candidate whose exploration
+  completed never surfaced a promotion decision - its
+  evidence stayed buried in the pool's done files, so an
+  explored candidate could age in silence with no decision
+  owed anywhere.
+- target metric: promotion decisions owed for explored
+  candidates named in the diff output (evaluation metrics
+  family F, candidate promotion coverage). Current value -
+  no proposal output existed before this change; the first
+  value lands with the next diff run over a pool holding a
+  completed exploration unit.
+- verification: a diff run on an isolated fixture pool
+  shows a promotion proposal per registered candidate with
+  a completed exploration unit, carrying the exploration
+  evidence and the decision owed (promote, reject, or keep
+  exploring), byte-identical on re-run, with the enqueue
+  plan and candidate filings unchanged from the pre-change
+  tool; the retro then reads promotion decisions named
+  rather than aging unrecorded.
+- status: implemented - PR 36 (branch
+  work/scout-promotion-proposals, commit
+  e2a826ad2e295ca1e131a50bb278309fd602886a), scout_diff.py
+  emits scout-promotions-<date>.md plus a coverage section
+  and a promotion_proposals count; fixture validation
+  passed on isolated scratch pools (3 proposals including
+  a result-less unit read as unrecorded, inbox-only
+  candidate excluded, apply plus second-run idempotency,
+  no-root honest zero, real-pool-copy smoke run).
 
 ## Closed
 

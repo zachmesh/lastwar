@@ -256,6 +256,30 @@ of 2026-10-28.
   to implemented; closure belongs to the daily retro.
   Full detail in tool-development/0140-run.md.
 
+## 01:32 to about 01:43 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-01-0143.
+  Own PRs checked first: zero open tooling PRs at pass
+  start (only PR 34, records, not this job's class); own
+  PRs 30, 23 and 11 all merged, so no integrator feedback
+  was owed. No open tooling backlog entry remained, so the
+  run took standing tool queue item (c)(3), the roadmap
+  Phase 3 promotion-proposal slice, and filed backlog
+  entry IMP-20261101-06 for it. _tools_/scout_diff.py now
+  emits scout-promotions-<date>.md plus a coverage
+  section and a promotion_proposals count: every
+  registered candidate with a completed exploration unit
+  in the pool gets a proposal naming the exploration
+  evidence and the decision owed (promote, reject, or
+  keep exploring), never applied by the tool and never
+  blocking the next exploration unit. PR 36 opened
+  (Owner: lastwar-tool-developer), commit e2a826ad2.
+  Fixture validation on isolated scratch pools passed,
+  including byte-identical re-runs and plan/candidates
+  identical to the pre-change tool. Backlog entry marked
+  implemented; closure belongs to the daily retro. Full
+  detail in tool-development/0143-run.md.
+
 ## 01:39 to about 01:45 — PR catch-all (no-op)
 
 - PR catch-all run pr-catchall-2026-11-01-0139, no-op: own-PR
@@ -275,6 +299,28 @@ of 2026-10-28.
   (day-INDEX still references it) is carried forward for the
   integrator, not reconstructed. Full detail in
   pr-catchall/0139-run.md.
+
+## 01:39 PST to about 01:45 PST - PR catch-all (no-op)
+
+- PR catch-all run pr-catchall-2026-11-01-0139-pst, no-op:
+  own-PR check first found no PR adopted by this job (no
+  catchall comment on PRs 1 to 35, pr-catchall folder on
+  records/2026-11-01 holds only the 0039 and 0139 run
+  records). Two open PRs at end of pass, both newly opened
+  and correctly owned: PR 35 (_activities_ profiles 1.4.0,
+  1.6.0, 1.3.0, 1.5.0, 1.9.0, 1.6.0 and 1.2.0, Owner
+  lastwar-knowledge-organizer, diff exactly the seven
+  profile files) and PR 36 (_tools_/scout_diff.py, Owner
+  lastwar-tool-developer, diff exactly that file). Neither
+  carries a review or comment, neither touches a red line,
+  authorisation, cron definition or PR policy text, and
+  neither is near the 48 hour stale-owner threshold, so no
+  adoption, fix, hand-off or flag. PR 29 and PR 30 merged
+  during the previous hour. The missing
+  pr-catchall/2345-run.md on records/2026-10-31 (folder
+  holds only 2350-run.md, re-verified by ls-tree) is
+  carried forward for the integrator, not reconstructed.
+  Full detail in pr-catchall/0139-pst-run.md.
 
 ## 01:35 to 01:42 — Ticker (help done, mail partial)
 
@@ -384,3 +430,22 @@ of 2026-10-28.
   carried forward: dispatch 2 more, plunder 3 more
   before 19:00. Full detail in
   truck-plunder/0124-queue-run.md.
+
+## 01:30 to about 01:45 — PR integration (second 01:00 hour, PST after DST fallback)
+
+- PR integration run pr-integration-2026-11-01-0130-pst, done: no open PRs at pass start; own-PR check first, PR 33 from the previous pass carried zero comments and zero reviews, nothing addressed to this job. Live records/2026-11-01 carried one commit beyond main at pass start (the 0115-pst run record) and advanced to the ticker-0104 records commit before this pass opened its PR, so PR 34 was opened for both (Owner lastwar-pr-integrator) and merged with merge commit ffccc4a86, branch not deleted. Records/2026-10-31 verified contained in main, no PR needed. Local main fast-forwarded 3378a2a09 to ffccc4a86 via the bundle route, no force, other agent worktree checkout untouched. Slack DM merge notice sent. End-of-pass sweep: zero open PRs, no unprocessed PRs. File note: this run is filed as 0130-pst-run.md because 0130-run.md already holds the first-hour PDT 0130 run. Full detail in pr-integration/0130-pst-run.md.
+
+## 01:32 to about 01:45 - Knowledge organization pass (second 01:32, PST)
+
+- Knowledge organizer run knowledge-organization-2026-11-01-0132-pst, done: own-PR check first, PR 29 stands MERGED with no comments and no other open PR is owned by this job, nothing to address, nothing taken over. Backlog on main version 1.1.1: no open knowledge-organization entry covers these types. Folded alliance-duel 0108, alliance-train 0110, shop-claims 0114, event-claims 0117, truck-plunder 0124, alliance-help 0135 and mail-rewards 0139 into profiles 1.4.0, 1.6.0, 1.3.0, 1.5.0, 1.9.0, 1.6.0 and 1.2.0 on PR 35 (commit 366697272, Owner lastwar-knowledge-organizer). One contradiction resolved: the 2026-10-30 trade-slot-only-on-settlement hypothesis is superseded by the 0124 entry, which entered with nothing to settle. Full detail in knowledge-organization/0132-pst-run.md.
+
+## 01:36 to 01:51 — Ticker (secrets partial, treasures done)
+
+- Secrets unit secrets-2026-10-31-2257, executor ticker-0136, partial: Mega Deploy dispatched all 9 pending secret tasks (UR Rescue Test Subject 4h, UR Disrupt electric grid 2h, SSR Search for Missing Refugees x2 1h, SSR Train Refugees 1h, SR Retrieve Agent Profile, SR Retrieve Abandoned Gear, SR Retrieve Raw Materials, SR Retrieve Valuable Supplies 30m each), UR Only already off, no price tag; dispatch verified live on re-entry (Your Tasks badge cleared, Mega buttons greyed, countdowns 03:59:53, 01:59:58, 00:59:34, 00:59:37). Ally assists NOT done: Assist Allies stayed 0/5 after two single taps and one 1 second long-press at the measured first-row Assist centre (782,485) plus one tap on row 2, each verified by a second observation; the tracker is untouched so the next tick re-produces the regular, and the next secrets unit must retry assists via a different entry variant (ally name or avatar to the world-map handshake button) under queue rule R2, not by repeating the Assist-button taps. Plunder Others not touched. Full detail in secret-missions/0145-queue-run.md.
+- Treasures unit treasures-2026-10-31-2257, executor ticker-0136, done: Hidden Treasures fragments read live M1 13, M2 11, M3 0, M4 9, M5 0, M6 4, M7 13; M3 and M5 at 0 mean no complete set, both Dig buttons greyed out, chest progress 1/15, nothing claimed, no exchange attempted. Full detail in hidden-treasures/0150-queue-run.md.
+- Zombie seeding skipped: the zombie-invasion chain is closed (event ended 2026-10-30 about 19:00); no zombie unit was due.
+- Next unit in the pass, scout-midday-2026-10-31-0700, was deliberately not executed: its window belongs to the 2026-10-31 reset day, which closed at 19:00 on 2026-10-31, so a perception pass now would append current-day observations to a closed day file; it expires 06:00 local today and the reap will expire it.
+- Own-PR check first: no open PR owned by this job; the records PR for this branch had been merged, so this pass opens its own records PR (Owner lastwar-pr-integrator) after pushing.
+## 01:40 to about 01:46 — Queue planner (second 01:00 hour, PST after DST fallback)
+
+- Planner run queue-planning-2026-11-01-0140-pst, done: own-PR check first, open PRs #35 (Owner lastwar-knowledge-organizer) and #36 (Owner lastwar-tool-developer), no comments on either, nothing owned by or addressed to this job. Plan --hours 12 staged 0 new units in the live main-tree pool (63 already present, 6 skipped as done for the current slot, 0 claims reaped, 0 units expired) - the next 12 hours to about 13:40 local were already staged by the first-hour 0144 run. Pre-reset sweep skipped (01:00 hour, not 17:00); pairs for 2026-11-01 and 2026-11-02 already in inbox. Perception consumption skipped: no observation file exists anywhere, so no diff applied and no units withdrawn. Pool after planning, live main-tree state: inbox 59, claimed 1, done 441. Full detail in queue-planning/0147-run.md.

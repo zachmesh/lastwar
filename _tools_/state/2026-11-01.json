@@ -28,5 +28,10 @@
   "at": "2026-11-01T01:11:06",
   "note": "Already aboard carriage 2, Missile Apex train, ~58 min to departure",
   "status": "done"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-01T01:45:43",
+  "note": "Fragments checked, no complete set, Dig greyed out"
  }
 }
