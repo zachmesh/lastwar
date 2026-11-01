@@ -382,3 +382,21 @@ of 2026-10-28.
 - Delivered on records/2026-11-01 through the already-open
   PR 63 under policy 2.0.0. Full detail in
   queue-planning/0745-run.md.
+
+## 07:45 to about 07:51 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-0745. One
+  open PR at pass start (PR 63, records 2026-11-01);
+  PR 63 merged with a merge commit (d1014a43); the
+  date branch was not deleted. Carried gap decided:
+  pr-catchall/2345-run.md was never committed in any
+  reachable history, so no reconstruction; the
+  2026-10-31 INDEX dangling pointer was replaced with
+  a never-committed note via records PR 64, merged
+  with a merge commit (bd11f1dc); that branch was not
+  deleted either. Records/2026-10-31 and
+  records/2026-11-01 both verified contained in main
+  at pass end. Local main fast-forwarded to the merges
+  via the bundle route. Merges synced to the owner
+  Slack DM. End-of-pass sweep: zero open PRs.
+  Full detail in pr-integration/0745-run.md.
