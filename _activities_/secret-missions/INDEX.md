@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T22:40:43Z
+modified: 2026-11-02T02:44:38Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: evening dispatch and claim executions, 2026-10-25
   - source: secret-missions execution record 2026-11-01 0145 PST
   - source: secret-missions execution record 2026-11-01 1417 PST
+  - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (panel visit, no task tapped)
 ---
 
 
@@ -279,6 +280,31 @@ secrets-2026-10-31-2257, status partial).
 - No refresh or deploy option that costs diamonds or items is used
   without owner approval. Mega Refresh cost is unobserved - check
   before first use on a duel day.
+
+## What the 2026-11-01 1757 sweep visit added
+
+- Panel visit, not a secrets unit: the sweep reached the
+  Secret Command Post panel by a wrong-entry tap on the
+  left rail (the same set-dependence lesson as
+  truck-plunder and alliance-train - verify the screen
+  that actually opened before acting). Secret Mobile Squad
+  read Assist Allies 2/3, Plunder Others 0/3, with UR and
+  SSR tasks standing. No task was tapped. Fix-up
+  secrets-2026-11-01-1857 was enqueued for the line.
+- Denominator note, not a correction: the sweep panel read
+  shows Assist Allies 2/3, while the 1417 unit closed at
+  Assist Allies 2/5. The two denominators are not merged
+  here - the panel figure and the unit closing figure may
+  count different sets, and the next secrets unit must
+  read the panel live and state which denominator it is
+  closing against.
+- Open blocker for the next unit: the panel back arrow
+  resisted three background-click variants (two at norm
+  42,940, one at the re-measured button centre 66,957)
+  and the panel was left open at sweep close. The next
+  unit must exit with a fresh method (foreground click or
+  another route) before reaching the base screen.
+
 
 ## Open questions
 
