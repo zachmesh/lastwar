@@ -409,3 +409,19 @@ of 2026-10-28.
   per the records_batch.py checker. Local main synced to
   91291d16eb; merge synced to the owner's Slack DM.
   Full detail in pr-integration/0251-run.md.
+
+- Arms Race unit arms-race-2026-11-02-0203, partial: Hero
+  Advancement phase, Adam Lv.123 to Lv.124 on EXP only, score
+  read live 40,500 against the 12,000 top chest, all three
+  point chests claimed in one tap; cumulative counter chest
+  6/2 would not claim on two measured taps and is left for
+  the next arms-race unit to re-check. Tracker untouched.
+  Full detail in arms-race/0247-queue-run.md.
+
+- Donations unit donations-2026-11-02-0203, partial: 9 coin
+  donations to Garrison Defense, count read live 9 to 8 to 4
+  to 1, final tap landed (Tech EXP 31.5K), but the button
+  greyed with a 00:18:20 timer hiding the closing count, so
+  0/30 is not claimed; a re-read unit is enqueued for after
+  the timer. Tracker untouched. Full detail in
+  alliance-donations/0259-queue-run.md.
