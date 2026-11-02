@@ -2288,3 +2288,23 @@ of 2026-10-28.
   this pass does not merge again inside the same window.
   End-of-pass sweep: PR 142 only, decided. Full detail in
   pr-integration/1915-run.md.
+  sat on the gate road and were not tapped; two southward
+  pans reached the map south edge (Season 2 zone) with no
+  barracks tent in view, ruling out the south of the vehicle
+  lots. Tracker untouched; the next unit must start from a
+  zoomed-out full-base view or a building list, not pan south
+  again. Full detail in troop-training/1651-queue-run.md.
+
+## 19:05 to 19:35 — Queue ticker pass, radar release (partial)
+
+- Radar unit radar-2026-11-01-1803, partial: duel day 1
+  release posture (live duel.py, overriding the stale
+  day-7 stack window text). 11 tasks executed in three
+  Quick Execute batches, 25 rewards claimed, radar
+  points 66 to 91, stamina 145 to 35, stored 0 of 40 at
+  close. Coin across the three claim popups 4.6M.
+  Left for the next radar unit: the 1-task Quick
+  Execute offer still standing and the map pins
+  untapped (purple question-mark story pin, purple
+  skull, orange axe, blue skull). Full detail in
+  radar-tasks/1904-queue-run.md.
