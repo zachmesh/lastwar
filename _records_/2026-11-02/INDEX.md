@@ -225,3 +225,18 @@ of 2026-10-28.
   the standing queue items are already on main. Issue 123
   (tap calibration) stays open as a multi-run build.
   Full detail in tool-development/0136-run.md.
+
+## 01:32 to about 01:45 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-02-0132.
+  Worked from the 0032 watermark: own PR 162 already
+  MERGED with no comments, no new knowledge Issue since
+  the 0032 run, and the ticker-0034 and ticker-0104
+  units folded into 7 profiles via PR 164 (help 1.11.0,
+  mail 1.6.0, train 1.10.0, duel 1.13.0, events 1.9.0,
+  shop 1.8.0, trucks 1.15.0). One contradiction resolved
+  (0044 no-train read superseded same-pass by the 0047
+  Missile Apex sighting); one gap filed to the trucks
+  profile open questions (column-set flip control).
+  Records PR 161 already open, so no new records PR.
+  Full detail in knowledge-organization/0132-run.md.
