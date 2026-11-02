@@ -161,6 +161,15 @@ entries to implemented.
 - verification: the knowledge organizer first reuses existing evidence, including radar profile/playbook findings and IMP-20261031-05. Remaining gaps get bounded, non-spending observation units. Each claim ends with a dated supported statement, a corrected statement, or an explicit unresolved limitation in its canonical article; this item does not authorize spending or changing the account to create a test.
 - status: open
 
+### IMP-20261101-08 - screenshot-grounded tap calibration and verification tooling
+
+- source: owner direction of 2026-11-01 (given live during the urgent harvest) - the owner observed executor clicks are often imprecise and directed that tap accuracy become a tooling problem with measured coordinates, not an executor eyesight problem.
+- class: tooling
+- leak: executors estimate tap coordinates by eye from screenshots. In the 2026-11-01 urgent harvest (unit harvest-2026-11-01-1403) the owner had to correct the pass live five times - bubbles on the left side of the base, the need to scroll, the screws bubble toward the top left, the screws bubble still full after the experience bubbles were collected, and the drone component bubble missed outright and collected by the owner himself. Every missed tap costs a re-observation cycle, and a missed bubble is production left sitting stopped at its cap.
+- target metric and current value: tap first-try success rate in execution records, and harvest/truck units completing with zero owner corrections. Current value - the 1534 urgent harvest stands at five owner corrections inside one unit, and no first-try tap rate is measured anywhere yet.
+- verification: tooling that (1) takes the game screenshot and measures and calculates target coordinates instead of estimating by eye; (2) runs a tap-verify loop - tap, screenshot, confirm the state changed, and on a miss measure the miss vector and compensate on retry; (3) keeps per-activity visual reference anchors (screenshot plus normalized coordinates plus landmark) that executors ground against before tapping; (4) measures any systematic click offset per session against a fixed anchor (the top resource bar) and stores the compensation. Validated on isolated fixtures first, then in bounded live units whose execution records carry the tap first-try rate and the owner-correction count for the retro to read.
+- status: open
+
 ## In progress
 
 ### IMP-20261031-10 - ops execution records standard landed
