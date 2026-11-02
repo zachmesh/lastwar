@@ -214,3 +214,60 @@ bought. Full unit record at `perception-scout/0539-queue-run.md`.
   scout-midday-2026-11-02-0700, already in inbox, so
   no successor unit is enqueued (no duplication).
 - unmatched_labels: none in the surfaces walked.
+
+## Pass scout-midday-2026-11-02-0700, unit ticker-1336, group scout-base (partial)
+
+Midday pass head unit, executed 2026-11-02 about 13:54 to
+13:57 local. Observe-only; nothing claimed, fought,
+dispatched, donated, dug or bought. Full unit record at
+`perception-scout/1357-queue-run.md`.
+
+### Base screen and HUD, read live 2026-11-02 about 13:56 local
+
+- Account power 149,311,528 (was 149,296,925 at the
+  04:36 read).
+- HUD totals as displayed: top row 387.7M, 577.5M, 54.0M;
+  second row 20.1M, 1.5M, power 149,311,528, 11.72K with
+  a plus button; cart 2,536; stamina 120.
+- Left column: hammer 2/4, flask 2/2, chat badge 2,
+  truck, question-mark icon, backpack 8, hammer icon,
+  vehicle icon; weather widget 6.5C.
+- Right column: Events with no red badge visible in
+  this capture (was badge 1 at 04:36; the 12:34 events
+  unit found nothing claimable), Capitol, VS timer
+  04:07:34, Season II badge 1, Alliance, Mail,
+  Inventory.
+- Bottom: HEROES, chat ticker, 99+ badge, WORLD.
+- Timers visible: 13d 04:07:34 near Season II, 2d
+  01:32:41 near Inventory.
+- Resource bubbles visible on many left and centre
+  buildings, observed only, not collected.
+- Furnace toast again: "Furnace total overdrive time
+  (in sec) [22/60]", still unexplained, red-line
+  surface observed only.
+
+### Red dot accounting for this section
+
+- Seen 4 badges: Season II 1, chat 2, backpack 8,
+  99+ badge; plus 2 counters: hammer 2/4, flask 2/2.
+- Explained 0 within the base group alone: the
+  counters and badges map to owning groups (help,
+  alliance chat, inventory, Season II) that this unit
+  did not walk, and no badge was resolved by opening
+  its surface.
+- Unexplained 4: Season II 1, chat 2, backpack 8,
+  99+ badge - carried to their owning groups.
+- Unknown items: furnace overdrive toast [22/60]
+  (recurring, third sighting), the 13d and 2d timer
+  meanings (not verified by opening).
+- Carried unwalked: scout-events, scout-store and
+  scout-alliance groups in full; successor unit
+  enqueued under chain scout-mid-2026-11-02.
+- unmatched_labels: none in the surfaces walked.
+
+### Correction to the scout-base section above (same pass)
+
+- The section's time window is corrected: the unit file
+  records 21:51:14Z to 21:54:05Z, i.e. 13:51 to 13:54
+  local, and the base capture was read about 13:53,
+  not 13:56. All readings themselves stand.

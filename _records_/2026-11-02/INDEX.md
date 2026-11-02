@@ -2337,3 +2337,30 @@ of 2026-10-28.
   (2026-11-01) and 161 (2026-11-02) await the 1500
   batch (both trial-merged clean). Full detail in
   pr-integration/1355-run.md.
+## 13:36 to 13:54 - Queue ticker pass, secrets and treasures done, scout-base partial
+
+- Secrets unit secrets-2026-11-02-1057, done checked
+  only: Your Tasks 8 rows all PERFECT (4 SSR Lv.5 and
+  4 SR Lv.5), Assist Allies 5 of 5, Mega buttons
+  greyed, nothing to claim or dispatch. A list scroll
+  revealed the 4 SR rows the 0952 record missed;
+  SECRET TASK REPORT Assist tab holds only
+  already-rewarded 11-2 04:19 to 04:21 rows. Full
+  detail in secret-missions/1345-queue-run.md.
+- Treasures unit treasures-2026-11-02-1057, done
+  checked only: M1 x13, M2 x14, M3 x0, M4 x9, M5 x3,
+  M6 x6, M7 x13, chest 2 of 15, both Dig buttons
+  greyed, no dig possible, no exchange. Full detail
+  in hidden-treasures/1352-queue-run.md.
+- Scout-midday head unit scout-midday-2026-11-02-0700,
+  partial: base group only, HUD and badges read live
+  (power 149,311,528; 387.7M, 577.5M, 54.0M; Season
+  II badge 1, chat 2, backpack 8, 99+ badge all
+  unexplained within the base group). Successor unit
+  scout-midday-scout-mid-2026-11-02-001 enqueued
+  under chain scout-mid-2026-11-02 for the remaining
+  groups; tracker untouched. Full detail in
+  perception-scout/1357-queue-run.md and the day
+  observation file.
+- No zombie chain seeded: the event ended 2026-10-30
+  and no unit in this pass opened the Events hub.

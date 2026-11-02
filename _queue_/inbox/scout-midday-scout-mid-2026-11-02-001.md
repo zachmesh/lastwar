@@ -1,17 +1,17 @@
 ---
-unit: scout-midday-2026-11-02-0700
+unit: scout-midday-scout-mid-2026-11-02-001
 regular: scout-midday
 activity: perception-scout
-segment: 2
+segment:
 priority: 2
-created_at: 2026-11-02T03:42:02Z
-expires_at: 2026-11-03T15:00:00Z
-planned_for: 2026-11-02T15:00:00Z
-not_before: 2026-11-02T15:00:00Z
+created_at: 2026-11-02T21:53:41Z
+expires_at:
+planned_for:
+not_before:
 window:
 est_minutes: 10
-chain_id:
-chain_seq:
+chain_id: scout-mid-2026-11-02
+chain_seq: 1
 attempts: 0
 max_attempts: 3
 claimed_by:
