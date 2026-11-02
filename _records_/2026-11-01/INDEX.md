@@ -2073,3 +2073,33 @@ of 2026-10-28.
   deferred — no regular invented, duel-score awaits PR 137
   merging. Pool by_state at 17:44: inbox 67, claimed 1,
   done 504. Full detail in queue-planning/1740-run.md.
+
+## 17:39 to about 17:45 — Queue ticker pass, Alliance Star Ceremony
+
+- Star ceremony unit star-ceremony-2026-11-01-1430, done as
+  checked only: no trophy icon beside the Alliance button, so
+  no Star Ceremony is waiting. Duel panel read live: Roulette
+  0 tokens, 0/10; League S38 calculating, AP3x rank 3; Weekly
+  Ranking Bears Lair rank 190 with 17,240,439 points
+  (unchanged, weekly cumulative only). The personal daily
+  total against 3,600,000 stays unverified in this inter-week
+  calculating state, as in the 0108 unit.
+  Full detail in alliance-duel/1745-queue-run.md.
+
+## 17:46 to about 17:57 — Queue ticker pass, pre-reset zero sweep first pass
+
+- Zero sweep unit zero-sweep-pre-reset-sweep-2026-11-01-001,
+  partial (first sweep ever run; not all 23 lines live-read
+  in-unit): harvest bubbles standing on the 17:55 base view;
+  trucks last live 4/5 dispatch, 1/4 plunder; donations count
+  unverified; mail partial from the previous pass; VIP Freebie
+  and login chest never attempted today; missions activity 150
+  with 160/200 chests ahead; duel daily total unverified;
+  Crystal not located (7 days), Glittering Market not located
+  (1 day). Two priority-1 fix-ups enqueued expiring at the
+  19:00 reset: vip-2026-11-02-0151 and
+  daily-missions-2026-11-02-0151; all other not-at-zero lines
+  already had a pre-reset unit in inbox, named per line.
+  Blocker: the Secret Command Post back arrow resisted three
+  background-click variants and the panel was left open.
+  Full detail in daily-activities/1757-queue-run.md.

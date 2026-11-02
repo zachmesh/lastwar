@@ -12,11 +12,30 @@ window: pre-reset zero sweep, first pass
 est_minutes: 15
 chain_id: pre-reset-sweep-2026-11-01
 chain_seq: 1
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: ticker-1738
+claimed_at: 2026-11-02T01:45:22Z
+lease_until: 2026-11-02T02:05:22Z
+result:
+  status: partial
+  started_at: 2026-11-02T01:45:22Z
+  finished_at: 2026-11-02T01:52:57Z
+  duration_seconds: 455
+  executor: ticker-1738
+  summary: First zero sweep partial: harvest bubbles standing, trucks 4/5 and 1/4 last live, VIP never attempted today, missions 150 with 160/200 ahead; 2 priority-1 fix-ups enqueued expiring at reset
+  claimed: [none]
+  claimed_count: 1
+  evidence: _records_/2026-11-01/daily-activities/1757-queue-run.md
+  follow_up: none
+  stats:
+    lines_walked: 23
+    lines_not_at_zero: 11
+    lines_unreadable: 6
+    fixups_enqueued: 2
+    target: 23
+    verified: no
+    blocker_category: c
 ---
 
 # zero-sweep
