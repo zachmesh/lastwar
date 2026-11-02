@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-02
 created: 2026-11-02T08:16:00Z
-modified: 2026-11-02T16:32:53Z
+modified: 2026-11-02T18:27:31Z
 level: L0
 version: 1.0.0
 description: The 0004 queue ticker pass, survivor intake check
@@ -1737,3 +1737,37 @@ of 2026-10-28.
   on the append-only action log, as noted for the
   1100 batch. No comments, no escalations, no
   conflicts. Full detail in pr-integration/1015-run.md.
+## 10:05 to about 10:15 - Ticker treasures and arms-race units
+
+- Treasures unit treasures-2026-11-02-0657, done as
+  checked only: stocks identical to the 0424 run (M1 13,
+  M2 14, M3 0, M4 9, M5 3, M6 6, M7 13), no complete set
+  and both Dig buttons greyed; chest progress 2 of 15;
+  tab-switch note: single taps on the Hidden Treasures
+  tab did nothing twice, a double-click switched at
+  once. Full detail in
+  hidden-treasures/1009-queue-run.md.
+
+- Arms-race unit arms-race-2026-11-02-1003, partial,
+  first unit of the Drone Boost phase: live score 0
+  (the ranking row's 40,500 is the lagging previous
+  phase), thresholds 1,500 / 10,000 / 30,000, phase
+  03:47 left at first read; tier-3 gap 30,000 points
+  equals 300 stamina or 300,000 Drone Battle Data;
+  cumulative chest 6 of 8, not claimable; no scoring
+  done, stamina and data balances unmeasured (neither
+  shows on the base top bar), next unit measures both
+  before any spend. Tracker untouched. Full detail in
+  arms-race/1015-queue-run.md.
+
+- Donations unit donations-2026-11-02-1003, partial:
+  Alliance menu not reached; the Alliance icon tap
+  pans the camera to the Drill Ground cluster, the
+  same entry blocker as the 0621 unit (a re-grounded
+  tap point was tried per rule R2, same result); no
+  donations made, no count read live. Last live count
+  remains 1/30 remaining from the 0545 unit. Tracker
+  untouched; next donations unit must try a changed
+  entry route (map Alliance HQ building, or a
+  different camera framing). Full detail in
+  alliance-donations/1020-queue-run.md.
