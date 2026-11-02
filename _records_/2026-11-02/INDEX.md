@@ -2054,3 +2054,43 @@ of 2026-10-28.
   mergeable, await the 1500 batch. No owner-gated PR,
   no conflict, no escalation, no comments posted.
   Full detail in pr-integration/1220-run.md.
+
+## 12:06 to 12:15 - Queue ticker pass, gifts done
+
+- Gifts unit gifts-2026-11-02-1030, done: Regular Claim All
+  claimed 182 gifts (progress 180,734,910 to 180,736,730,
+  exactly 182 x 10), Premium Claim All claimed 10 gifts
+  (progress to 180,772,310), then 5 Regular gifts that
+  arrived mid-unit claimed in a second Claim All (progress
+  to 180,779,650); Gift Level 28 unchanged, both tabs clear
+  at close. Counter note: the Premium-window (+35,580) and
+  second-Regular-window (+7,340) progress deltas exceed this
+  unit's own claims; per-gift points for the 6 below-fold
+  premium rows unverified (list scroll and drag both
+  no-change, retired per rule R2); leading hypothesis is
+  concurrent alliance claims moving a shared counter,
+  filed as issue #183. Full detail in
+  alliance-gifts/1215-queue-run.md.
+
+## 12:18 to 12:20 - Queue ticker pass, help done
+
+- Help unit help-2026-11-02-1030, done: Help All pressed
+  (toast "Allies are very grateful for your assistance");
+  header points unchanged live at 400 of 1,000, so 0 helps
+  counted; visible list held only this account's own four
+  requests, all at 30/30 after the press; a drag scroll
+  surfaced no further rows, so no ally request was
+  verified waiting. Full detail in
+  alliance-help/1220-queue-run.md.
+
+## 12:21 to 12:26 - Queue ticker pass, mail done
+
+- Mail unit mail-2026-11-02-1030, done: Claim All pressed
+  in Event, Alliance, Season, System, Regular and Battle
+  Report, each answered "No rewards available"; contents
+  were train mails, donation ranking / marker mails, Ice
+  Breaking reports, President Mail notices, battle
+  reports, scout reports and Zombie Horde victories.
+  In-app Purchases (receipts only, red dot unread) was
+  not claimed; Delete All never pressed. Full detail in
+  mail-rewards/1226-queue-run.md.

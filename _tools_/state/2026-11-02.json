@@ -1,47 +1,47 @@
 {
- "events": {
-  "at": "2026-11-02T09:10:37",
-  "note": "Hub sweep 0910: nothing claimable, nothing claimed",
-  "status": "done"
- },
  "gifts": {
-  "at": "2026-11-02T16:18:35",
-  "note": "Regular 1 +10, Premium 1 +50, progress to 180508680",
-  "status": "done"
+  "status": "done",
+  "at": "2026-11-02T12:17:34",
+  "note": "Regular 187 and Premium 10 claimed, both tabs clear"
  },
  "help": {
-  "at": "2026-11-02T08:36:59",
-  "note": "Help All pressed; no ally request waiting, points 400/1000 unchanged",
-  "status": "done"
+  "status": "done",
+  "at": "2026-11-02T12:20:38",
+  "note": "Help All pressed, 0 helps counted, points 400 of 1000"
  },
  "mail": {
-  "at": "2026-11-02T08:39:51",
-  "note": "All claimable categories swept; no rewards available",
-  "status": "done"
- },
- "passes": {
-  "at": "2026-11-02T08:46:14",
-  "note": "All shop claims already claimed today",
-  "status": "done"
- },
- "secrets": {
-  "at": "2026-11-02T09:52:37",
-  "note": "Checked only: assists 5/5, four SSR tasks PERFECT, nothing pending",
-  "status": "done"
- },
- "star-ceremony": {
-  "at": "2026-11-02T08:41:08",
-  "note": "No ceremony waiting; no trophy icon",
-  "status": "done"
+  "status": "done",
+  "at": "2026-11-02T12:26:25",
+  "note": "All claimable categories swept, no rewards available"
  },
  "train": {
+  "status": "done",
   "at": "2026-11-02T08:44:40",
-  "note": "No train in preparation",
-  "status": "done"
+  "note": "No train in preparation"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-02T08:41:08",
+  "note": "No ceremony waiting; no trophy icon"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-02T09:10:37",
+  "note": "Hub sweep 0910: nothing claimable, nothing claimed"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-02T08:46:14",
+  "note": "All shop claims already claimed today"
  },
  "treasures": {
+  "status": "done",
   "at": "2026-11-02T10:09:39",
-  "note": "Checked only: M3 x0, no complete set, Dig greyed, chest 2/15",
-  "status": "done"
+  "note": "Checked only: M3 x0, no complete set, Dig greyed, chest 2/15"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-02T09:52:37",
+  "note": "Checked only: assists 5/5, four SSR tasks PERFECT, nothing pending"
  }
 }
