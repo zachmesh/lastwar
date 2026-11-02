@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T12:32:00Z
+modified: 2026-11-02T17:05:00Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: alliance-gifts execution record 2026-11-01 2122 queue run (ticker-2104 unit, done, 221 Regular plus 70 Premium)
   - source: alliance-gifts execution record 2026-11-02 0023 queue run (ticker-0004 unit, done, 45 Regular plus 5 Premium)
   - source: ticker-0334 alliance-gifts execution record 2026-11-02 0338 queue run (done, 54 Regular and 12 Premium)
+  - source: ticker-0804 alliance-gifts execution record 2026-11-02 0817 queue run (done, 1 Regular and 1 Premium)
 ---
 
 
@@ -357,6 +358,45 @@ one file per execution.
 - Evidence in `_records_/2026-11-02/alliance-gifts/0338-queue-run.md`.
 
 
+## What the 2026-11-02 0817 unit added
+
+- Done, Claim All on BOTH tabs: unit gifts-2026-11-02-0630
+  by ticker-0804, session 08:11 to 08:17. Regular tab: Claim
+  All at norm 498,952 claimed 1 gift (Commander Supa
+  defeated Doom Elite, +10), progress 180,508,620 to
+  180,508,630, and the pending gift showed Claimed with no
+  Claim All button remaining on the Regular tab. Premium
+  tab: Claim All at norm 763,952 claimed 1 gift (Alliance
+  Gift R, +50, Drone Components Weekly Pass, 23:49:27
+  remaining), the summary dialog read "A total of 1
+  Premium Alliance Gifts were claimed this time", and
+  progress moved to 180,508,680. Gift Level 28 unchanged,
+  against 206,300,000. Total gift progress 180,508,620 to
+  180,508,680 (+60).
+- Completion sweep: returning to the Alliance panel, the
+  Alliance Gifts entry no longer carried a red dot, and
+  both tabs showed no pending Claim All.
+- Entry lessons, measured fresh: the Alliance panel was
+  opened from the base right column (Alliance button at
+  norm 903,731). A first tap on the Alliance panel at norm
+  311,515 opened Alliance Wars, not Alliance Gifts: the
+  panel's button rows sit at norm y 509, 595, 679, 766 and
+  849 (read from the panel's OCR labels), so 515 landed on
+  the Wars row. The corrected tap at norm 303,595 opened
+  Alliance Gifts, re-confirming the 595 row the 0023 and
+  0338 units measured (313,595), with a 10-point x
+  variance that the next unit re-grounds fresh.
+- The Premium Claim All point 763,952 differs from the
+  2122 unit's 718,967; the next unit re-grounds it fresh
+  rather than treating either as fixed.
+- Exit nuance, not a failure: the game was left on the
+  Alliance panel after two back-arrow taps (norm 62,941
+  and 62,973) produced no change, so that method was
+  stopped under queue rule R2 rather than repeated. This
+  does not affect the unit's result.
+- Evidence in `_records_/2026-11-02/alliance-gifts/0817-queue-run.md`.
+
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -393,3 +433,5 @@ one file per execution.
 - 1.8.0 (2026-11-02): dialog-confirmed 45 Regular and 5 Premium, Gift Level 28 progress 179,803,870 to 179,805,720 of 206,300,000, the title-bar 30-pixel offset correction (Gifts 313,595, not 536), and the Alliance star icon centre 941,701, folded from the 0023 gifts unit.
 
 - 1.9.0 (2026-11-02): dialog-confirmed 54 Regular and 12 Premium, Gift Level 28 progress 180,150,630 to 180,153,970 of 206,300,000, Alliance base icon 934,707 and Gifts button 313,595 re-grounded, folded from the 0338 gifts unit.
+
+- 1.10.0 (2026-11-02): dialog-confirmed 1 Regular (+10) and 1 Premium (+50), Gift Level 28 progress 180,508,620 to 180,508,680 of 206,300,000, Alliance Wars row at y 509 versus the Gifts row at y 595 with the 303,595 corrected tap, Premium Claim All at 763,952 against the 2122 unit's 718,967, and the no-change back-arrow exit, folded from the 0817 gifts unit.

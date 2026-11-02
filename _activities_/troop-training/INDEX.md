@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T11:34:36Z
+modified: 2026-11-02T17:05:00Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: troop training execution record 2026-11-01 1651 queue run
   - source: troop-training execution record 2026-11-01 2120 queue run (ticker-2104 unit, partial, barracks tents not located after north and south pans)
   - source: troop-training execution record 2026-11-02 0322 queue run (ticker-0308 unit, partial, pistol tap opened upgrade panel)
+  - source: troop-training execution record 2026-11-02 0811 queue run (ticker-0804 unit, partial, action-row taps switched to the world map)
 ---
 
 # Troop training
@@ -38,16 +39,23 @@ troops and riding the train are different systems and are kept apart.
   position is camera-dependent: measure it fresh in the unit's
   own view, never from a pinned coordinate - a reused point has
   selected a wrong building (0917 unit, below).
-- A row of round buttons appears under the selected tent. The pistol
-  icon button opens the TRAIN UNITS panel. The paw icon opens Building
-  Details, and the green up arrow is the upgrade shortcut - do not tap
-  it. DISPUTED 2026-11-02 (0322 unit): a pistol tap at norm
-  (405, 568) on a re-selected Lv.27 tent opened the Lv.27 to 28
-  UPGRADE panel, not TRAIN UNITS - whether the mapping is stale
-  or the tap landed on a neighbouring control is unresolved. Until
-  a unit re-grounds the action row and reproduces a TRAIN UNITS
-  opening, treat the pistol mapping as unconfirmed and re-ground
-  the row before tapping.
+- A row of round buttons appears under the selected tent: paw,
+  pistol and green up arrow. The green up arrow is the upgrade
+  shortcut - do not tap it. The paw-to-Details and
+  pistol-to-TRAIN-UNITS mapping this profile previously carried is
+  SUSPENDED 2026-11-02 (0811 unit): on a Lv.24 tent selected at
+  norm (825, 578), the pistol tap at norm (763, 510) switched to
+  the world map instead of TRAIN UNITS, and the paw tap at norm
+  (623, 499) on the re-selected tent switched to the world map
+  instead of Building Details; re-tapping the tent body only
+  re-showed the row. This differs from the 0322 unit, where the
+  pistol tap opened the upgrade panel, so the mapping is not
+  merely stale in one direction - it is unstable across camera
+  positions. DO NOT TAP THE ACTION ROW AS THE ENTRY ROUTE until
+  a unit establishes a fresh, verified mapping and reproduces a
+  panel opening; the next unit tries a different entry route (a
+  building-list or label entry, or a long-press variant on the
+  selected tent).
 - In TRAIN UNITS, the tier cards run left to right with the highest
   unlocked tier preselected, the count slider sits at the Training
   Count cap, and the blue Train button starts the batch. The yellow
@@ -428,6 +436,51 @@ Observed in game on this account, first execution 2026-10-25.
   tapping; no new issue is filed here.
 
 
+## What the 2026-11-02 0811 unit added
+
+- Unit training-2026-11-02-0603 by ticker-0804, session 08:05
+  to 08:11, status partial. No batch was queued and no
+  training state was verified. The tracker is left untouched,
+  so the next tick re-produces the regular and the work
+  resumes as a fresh unit. Evidence in
+  `_records_/2026-11-02/troop-training/0811-queue-run.md`.
+- Barracks located in this unit's camera view by visual
+  inspection of a cropped lower band: three tents in the
+  lower-middle base area. Tapping the upper-right tent at
+  norm (825, 578) selected Barracks Lv.24, with the
+  three-button action row under its label: blue paw circle
+  at about norm (623, 499), orange pistol circle at about
+  norm (763, 510), green up-arrow circle at about norm
+  (903, 494). The green arrow was not tapped, per the red
+  lines.
+- Entry failure, both routes: the pistol tap switched to the
+  world map (radar fan, Radar Task restore countdown), not
+  TRAIN UNITS and not an upgrade panel; Home at norm
+  (903, 941) returned to base. The paw tap on the
+  re-selected tent gave the same world-map switch, not
+  Building Details. Re-tapping the tent body only re-showed
+  the same action row; no panel opened. The action-row
+  mapping is therefore suspended in How to enter above -
+  it is unstable across camera positions, not merely stale
+  in one direction, since the 0322 pistol tap opened the
+  upgrade panel instead.
+- TRAIN UNITS was not reached, so no barracks queue state
+  was read, no idle barracks was requeued, and the Drill
+  Ground state was not read. The other three barracks were
+  not inspected. Drill Ground Full is therefore carried
+  forward unverified an eighth consecutive unit (0322 was
+  the seventh). The record commented on Issue #150 with
+  the measured tent coordinate, action-row coordinates and
+  the world-map result for both taps, so the next unit does
+  not repeat the action-row route; no new issue is filed
+  here.
+- One different-device takeover, handled under the owner
+  rule: the dialog appeared at unit start, Confirm was
+  tapped once, the app exited as expected, and it was
+  relaunched and back at the base screen with no login or
+  verification demanded. No second dialog appeared.
+
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -474,3 +527,5 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.7.0 (2026-11-02): east pan to the formation lots ruled out as the barracks tent row, the lower-middle-base next-unit rule, Drill Ground Full carried unverified a sixth consecutive unit, and the recurrence commented onto Issue #150, folded from the 0017 training unit.
 
 - 1.8.0 (2026-11-02): barracks tent rows grounded at four measured points, the pistol tap opening the Lv.27 to 28 upgrade panel instead of TRAIN UNITS so the pistol mapping is now disputed, Drill Ground Full carried unverified a seventh consecutive unit, and the recurrence commented onto Issue #150, folded from the 0322 training unit.
+
+- 1.9.0 (2026-11-02): Lv.24 tent selected at 825,578 with the action row measured (paw 623,499, pistol 763,510, up arrow 903,494), both action-row taps switching to the world map so the pistol/paw mapping is suspended, not merely disputed, Drill Ground Full carried unverified an eighth consecutive unit, and the recurrence commented onto Issue #150, folded from the 0811 training unit; the How to enter pistol-to-TRAIN-UNITS claim is corrected to suspended, not silently kept.
