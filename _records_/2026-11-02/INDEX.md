@@ -2179,3 +2179,50 @@ of 2026-10-28.
   (2026-11-02) await the 1500 batch on a non-batch pass
   (checker _tools_/records_batch.py: not due, next
   batch 15:00). Full detail in pr-integration/1251-run.md.
+
+## 12:37 to 12:41 - Queue ticker pass, star-ceremony done
+
+- Star-ceremony unit star-ceremony-2026-11-02-1030, done:
+  no trophy icon beside the Alliance icon on the base
+  screen, so no Star Ceremony is waiting. Nothing played,
+  claimed or emoted. Duel totals were not read here: per
+  the 2026-11-01 handover they belong to the duel-score
+  regular, and this checkout's tools/regulars.json carries
+  no duel-score entry. Full detail in
+  alliance-duel/1241-queue-run.md.
+
+## 12:41 to 12:42 - Queue ticker pass, train done
+
+- Train unit train-2026-11-02-1030, done as checked only:
+  no "Boarding closes in" banner, and the station check
+  (left-column train icon) showed no yellow train, no
+  plus bubble and no station countdown. Nothing boarded,
+  no Trade Contracts spent. Full detail in
+  alliance-train/1246-queue-run.md.
+
+## 12:42 to 12:51 - Queue ticker pass, events done
+
+- Events unit events-2026-11-02-1057, done: full hub sweep
+  of Arms Race (Drone Boost, Lv.29-30, 01:10:39 left;
+  cumulative chest 6/8, score 0, point chests unreached),
+  Wanted Boss (best single attack 899,542,636, all Goal
+  tiers grey), Community (Discord binding Claimed) and
+  Desert Battlefield (registration ends in 2d 05:09,
+  top-32 alliances). Nothing claimable anywhere, nothing
+  claimed. The train unit had left the camera panned with
+  the side rails hidden; drags did not restore them, so
+  the window was closed and relaunched, restoring the
+  full UI with state intact. The Events hub back arrow
+  again did not respond to background clicks. Full detail
+  in event-claims/1250-queue-run.md.
+
+## 12:51 to 12:56 - Queue ticker pass, passes done
+
+- Passes unit passes-2026-11-02-1057, done: shop sweep.
+  Free Supply chest Claimed, Coin Weekly Pass already
+  claimed today, Monthly Pass daily gift Claimed; the
+  other weekly cards (Drone Parts, EXP, Iron) are $4.99
+  offers with no claim button. No free pack showing on
+  Hot Deals. Legendary Take All $19.99, Renew $4.99 and
+  Monthly Extension $24.99 all left untouched. Full
+  detail in shop-claims/1300-queue-run.md.
