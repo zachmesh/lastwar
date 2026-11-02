@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T07:38:29Z
+modified: 2026-11-02T11:34:36Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: arms-race execution record 2026-11-01 1523 queue run
   - source: arms-race execution record 2026-11-01 1934 queue run
   - source: ticker-2304 arms-race execution record 2026-11-01 2327 queue run
+  - source: arms-race execution record 2026-11-02 0247 queue run (ticker-0235 unit, partial, Hero Advancement tier-3 met)
 ---
 
 
@@ -586,3 +587,56 @@ slot. Evidence in
   chest tapped that was not earned. Tracker untouched for
   partial, per the queue rules.
 
+## What the 2026-11-02 0247 unit added
+
+- Unit arms-race-2026-11-02-0203 by ticker-0235, session about
+  02:37 to 02:46, status partial. Live phase: Hero Advancement,
+  Contest Segment Lv.29-30, time left 03:20:36 at first read,
+  chest thresholds 2,000 / 4,000 / 12,000. Scoring rows read
+  live: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP
+  at a time +1, Buy Packs containing Diamonds +30 per diamond
+  (red line, not used).
+- Entry pivot, rule R2: the Arms Race tab at the cut-off left
+  edge took two no-change taps; a drag of the tab bar to the
+  right revealed the full tab, and the next tap opened the
+  phase page. Same drag remedy as the 2327 unit - tab
+  positions must be re-grounded from OCR on every opening,
+  never inherited.
+- Scoring action, EXP only: hero Adam (UR Titan) Lv.123, EXP
+  bar 75,142,142 / 81,000,000, gap 5,857,858. The Upgrade
+  panel's Collect row tap produced no change, so Replenish
+  All was used instead; it collected the available resources
+  (Hero EXP 16.9M, iron 1.9M, coin 1.2M, food 1.9M) and the
+  bar rose to 99,961,664 / 81,000,000. One Upgrade tap
+  levelled Adam to Lv.124 (hero power 1,731,615 to
+  1,739,645, new bar 18.9M / 83.0M; the 18,961,664
+  carry-over matches the bar overflow arithmetic). No
+  diamonds, money, speedups or skill medals were spent; the
+  resource collection was incidental to the EXP replenish,
+  not a harvest unit.
+- Score read live after the level-up: 40,500 points, segment
+  rank 9, clearing the 12,000 top chest. The 40,500 equals
+  the 81,000,000 EXP bar divided by 2,000, consistent with
+  the 2026-10-26 measured rate of 1 point per 2,000 Hero
+  EXP - a second confirmation of that rate.
+- Claims: one tap on the 2,000 chest claimed all three
+  earned point chests at once (popup contents: star badge
+  6, SR chests 32 and 32, Arms Race Badges 1.6K, coin chest
+  32, 5m speedups 68). Re-read: all three point chests open
+  and claimed.
+- Completion sweep, unresolved item: the cumulative counter
+  chest at the top left read 0/2 before the claim and 6/2
+  after it. Two taps on it at its measured centre produced
+  no change (background-click limit noted by the control
+  channel), so it is NOT recorded as claimed. The next
+  arms-race unit must re-check it with a changed tap
+  method. The ranking-row chest was not tapped: while the
+  phase is live it opens a preview only per the
+  2026-10-26 knowledge, and its reward is claimed by the
+  next run after the phase ends. No bouncing chest or
+  reward red dot was visible elsewhere on the page.
+- Status partial only because of the 6/2 cumulative chest;
+  the phase target itself (12,000) was met and all three
+  point chests claimed. Tracker untouched for partial, per
+  the queue rules. Evidence in
+  `_records_/2026-11-02/arms-race/0247-queue-run.md`.

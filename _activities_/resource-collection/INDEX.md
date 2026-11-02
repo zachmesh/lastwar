@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T08:32:00Z
+modified: 2026-11-02T11:34:36Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-01 1149 queue run
   - source: resource collection execution record 2026-11-01 1534 queue run (same-unit screen reads and owner live corrections)
   - source: resource collection execution record 2026-11-01 2006 queue run
+  - source: resource collection execution record 2026-11-02 0308 queue run (ticker-0308 unit, partial, edge drag unverified)
 ---
 
 
@@ -345,6 +346,53 @@ due. Evidence in
   2026-11-01 rule, but were still not inspected). All
   fall to the next harvest unit.
 
+## What the 2026-11-02 0308 unit added
+
+Unit harvest-2026-11-02-0203 by ticker-0308, session 03:08
+to 03:17, status partial. The tracker is untouched, so the
+regular stays due. Evidence in
+`_records_/2026-11-02/resource-collection/0308-queue-run.md`.
+
+- Entry: the game was left on the Alliance Techs panel from
+  an earlier session. The panels were closed without
+  donating (donations belong to their own unit) and the
+  view returned to the base.
+- Sweep: the visible main base bubbles were collected; one
+  farmland tap collected all farmland at once, as
+  documented. Iron, coin and food bubbles in the visible
+  area were collected.
+- HUD figures, rounded as displayed: food 366.2M before,
+  373.3M after, plus about 7.1M; second top bar resource
+  (iron) 558.8M before, 565.3M after, plus about 6.5M;
+  coins 39.1M before, 43.7M after, plus about 4.6M.
+  Figures are HUD-rounded millions, not exact panel
+  readings.
+- Why partial, not done: the full-map acceptance needs the
+  base dragged to each edge with zero bubbles remaining.
+  Remote drags barely panned the map (two attempts moved
+  the view only slightly), so the extreme edges were not
+  verified. The visible main base is bubble-free across
+  two overlapping views, but the edge check is incomplete
+  - a third instance of the remote-drag pan failure mode
+  (see the 2343 and 0016 units). Next harvest unit: retry
+  the edge drag with a longer drag on empty road, and
+  re-check the armed truck loot bubble.
+- Incidents, all closed without action: a bubble tap opened
+  the Iron Mine upgrade panel (Lv.27 to 28 offer), closed
+  with the panel X - no Upgrade, no Finish Now, no speedup
+  used, no building started. A later tap opened the Store
+  cosmetics Preview panel (Silverclaw Fighter), closed
+  with the panel X and the Store back arrow - nothing
+  bought, nothing equipped. A tap on the parked truck body
+  produced no panel; the truck marker tap also produced
+  no panel. The parked truck shows its marker but no
+  collectable loot bubble, so it was left alone (not fully
+  loaded, nothing claimed).
+- The Season 2 area at the bottom was left out of the
+  sweep, per the standing rule that it is not main base
+  harvest.
+
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -359,6 +407,8 @@ due. Evidence in
 - 1.6.0 (2026-11-01): centre-cluster one-tap five-bubble clearance with iron plus 0.4M measured, Titanium Alloy Factory No.3 panel fall-through on the second tap, ambiguous far-left edge shape deliberately untapped, Season 2 bottom area and Armed Truck checks deferred to the next harvest unit, folded from the 2006 harvest unit; no earlier claim superseded.
 
 - 1.7.0 (2026-11-02): centre-tap four-bubble cluster clearance as the third same-day instance, no gain claimed at 0.1M HUD precision, and the carried sweep remainder (opposite pan, far-left edge shape, Armed Truck, Season 2 area), folded from the 2356 harvest unit.
+
+- 1.8.0 (2026-11-02): visible-base sweep with HUD-rounded gains (food +7.1M, iron +6.5M, coins +4.6M), remote-drag edge check incomplete so partial, Iron Mine upgrade and Store cosmetics panels closed untouched, parked truck with marker but no loot bubble left alone, folded from the 0308 harvest unit; no earlier claim superseded.
 
 - 1.3.0 (2026-11-01): balloon-versus-bubble distinction, HUD
   button mis-tap point, base-view pan failure mode, and the
