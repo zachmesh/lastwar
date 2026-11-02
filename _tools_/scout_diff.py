@@ -23,8 +23,13 @@ outputs in an output directory:
      plus the observation frontmatter day counters (passes
      completed, items observed, red dots seen, explained and
      unexplained), reported separately from the classified
-     counts, so a narrative-only observation never reads as
-     zero unexplained when its own frontmatter says otherwise;
+     counts. When no structured item was parsed at all, the
+     headline items and unexplained figures fall back to those
+     frontmatter counts (basis recorded as frontmatter-fallback,
+     classified counts kept alongside), so a narrative-only
+     observation never reads as zero unexplained when its own
+     frontmatter says otherwise; a structured observation is
+     never overridden;
   4. the promotion proposals - one entry per registered
      candidate with a completed exploration unit in the pool,
      naming the exploration evidence and the decision owed
@@ -992,9 +997,38 @@ def run(args):
         [lbl for lbl in unmatched
          if slugify(lbl) not in candidates
          and slugify(lbl) not in roster])
+    # Coverage headline fallback (issue 149): with no structured
+    # item parsed, the classified counts are 0 by construction,
+    # not a finding, and the evaluation metric reads the
+    # headline - so a narrative-only day would report 0 items
+    # and 0 unexplained dots against its own frontmatter.
+    # The headline then reports the observation's own
+    # frontmatter counts; the classified counts are kept
+    # alongside so the basis stays auditable. A structured
+    # observation (at least one parsed item) is never
+    # overridden, and an observation with neither parsed items
+    # nor frontmatter counters stays honestly empty.
+    classified_items = len(items)
+    classified_unexplained = unexplained_count
+    headline_items = classified_items
+    headline_unexplained = classified_unexplained
+    fallback_used = False
+    if classified_items == 0:
+        if day_counters["items_observed"] is not None:
+            headline_items = day_counters["items_observed"]
+            fallback_used = True
+        if day_counters["unexplained_red_dots"] is not None:
+            headline_unexplained = \
+                day_counters["unexplained_red_dots"]
+            fallback_used = True
+    coverage_basis = ("frontmatter-fallback" if fallback_used
+                      else "classified" if classified_items > 0
+                      else "empty")
     coverage = {
         "date": date, "observation": args.observation,
-        "items_observed": len(items),
+        "items_observed": headline_items,
+        "items_observed_classified": classified_items,
+        "coverage_basis": coverage_basis,
         "actionable_items": sum(len(e["items"]) for e in
                                 actionable.values()),
         "queued_entries": len(plan),
@@ -1011,7 +1045,8 @@ def run(args):
         "candidates_registered": len([c for c in
                                       candidates.values()
                                       if c["registered"]]),
-        "unexplained_red_dots": unexplained_count,
+        "unexplained_red_dots": headline_unexplained,
+        "unexplained_red_dots_classified": classified_unexplained,
         "observation_day_counters": day_counters,
         "unmatched_labels": unmatched,
         "promotion_proposals": len(proposals),
@@ -1047,6 +1082,18 @@ def run(args):
            f"{coverage['candidates_registered']})",
            f"- unexplained red dots - "
            f"{coverage['unexplained_red_dots']}",
+           f"- coverage basis - {coverage_basis}"
+           + (" (no structured observed_items parsed; the "
+              "items and unexplained figures above are the "
+              "observation frontmatter counts, classified "
+              f"items {classified_items}, classified "
+              f"unexplained {classified_unexplained})"
+              if coverage_basis == "frontmatter-fallback"
+              else " (no structured items parsed and no "
+              "frontmatter counters stated; the zeros above "
+              "are an absence of signal, not a finding)"
+              if coverage_basis == "empty"
+              else " (classified structured items)"),
            f"- promotion proposals - "
            f"{coverage['promotion_proposals']} (registered "
            f"candidates with a completed exploration unit, "
@@ -1064,7 +1111,15 @@ def run(args):
                        f"{value if value is not None else 'not stated'}")
         front_unexplained = day_counters["unexplained_red_dots"]
         if front_unexplained is not None:
-            if front_unexplained == unexplained_count:
+            if coverage_basis == "frontmatter-fallback":
+                cov.append(
+                    "Headline fallback - the items and "
+                    "unexplained figures above are these "
+                    "frontmatter counts, because no structured "
+                    "items were parsed; the classified counts "
+                    f"are items {classified_items}, unexplained "
+                    f"{classified_unexplained}.")
+            elif front_unexplained == unexplained_count:
                 cov.append("The frontmatter unexplained count "
                            "matches the classified count above.")
             else:
@@ -1184,6 +1239,17 @@ def run(args):
               f"{coverage['applied']}); already satisfied "
               f"{coverage['already_satisfied']}, known not "
               f"actionable {coverage['not_actionable']}.")
+    if coverage_basis == "frontmatter-fallback":
+        rs.append("- coverage basis - frontmatter fallback: "
+                  "no structured items were parsed, so the "
+                  "observed and unexplained figures above are "
+                  "the observation frontmatter counts, not "
+                  "classified items.")
+    elif coverage_basis == "empty":
+        rs.append("- coverage basis - empty: no structured "
+                  "items parsed and no frontmatter counters "
+                  "stated, so the zeros above are an absence "
+                  "of signal, not a finding.")
     if any(v is not None for v in day_counters.values()):
         parts = ", ".join(
             f"{key} {day_counters[key]}"
