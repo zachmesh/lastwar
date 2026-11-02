@@ -45,6 +45,13 @@ Usage:
              # one ticker production pass: reap, then enqueue one
              # unit per regular the tracker marks due (idempotent);
              # without --due-json it calls _tools_/regulars.py todo
+  queue.py [--root DIR] plan [--hours N]
+             # stage the horizon's windows: segment anchors,
+             # daily resets, Thursdays, and fixed local clock
+             # slots (cadence fixed-slots, slots in fixed_slots,
+             # expiry clock time in expires_local, chain prefix
+             # in chain_id_prefix); sync never stages fixed-slot
+             # regulars, plan owns them
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -292,7 +299,7 @@ def pick_key(fields, now=None):
 # entries are the Phase 2 seeds of the perception design (section 9
 # of perception-driven-queue.md) - scout passes are windowed work at
 # priority 2, seeded at 10 minutes until the pool learns better.
-SYNC_PRIORITY = {"vip": 1, "passes": 2, "arms-race": 2, "radar": 2,
+SYNC_PRIORITY = {"vip": 1, "zero-sweep": 1, "passes": 2, "arms-race": 2, "radar": 2,
                  "donations": 2, "trucks": 2, "events": 2,
                  "scout": 2, "scout-midday": 2}
 SYNC_EST_MINUTES = {"mail": 4, "help": 2, "gifts": 3, "vip": 2,
@@ -302,7 +309,7 @@ SYNC_EST_MINUTES = {"mail": 4, "help": 2, "gifts": 3, "vip": 2,
                     "donations": 4, "events": 10, "arms-race": 12,
                     "ghost-ops": 8, "star-ceremony": 3,
                     "duel-score": 2,
-                    "scout": 10, "scout-midday": 10}
+                    "scout": 10, "scout-midday": 10, "zero-sweep": 15}
 LOCAL_TZ = ZoneInfo("America/Los_Angeles")
 
 
@@ -428,6 +435,12 @@ def cmd_sync(args):
     produced, already = [], []
     now_local = datetime.now(LOCAL_TZ)
     for item in due_items:
+        if item.get("cadence") == "fixed-slots":
+            # Plan-produced only: the tracker carries no per-slot
+            # done state, so sync staging here would mint slot
+            # units outside the plan's (regular, planned_for)
+            # staging; plan owns fixed-slot production.
+            continue
         planned_local = cycle_start_local(item, now_local)
         unit = _produce_for_window(
             args.root, item, planned_local,
@@ -465,12 +478,59 @@ DUEL_ANCHOR_LOCAL = datetime(2026, 10, 25, 19, 0)
 RADAR_RELEASE_DAYS = {1, 3, 5}
 
 
+def _parse_hhmm(text):
+    """Parse a local HH:MM clock time, or return None when malformed."""
+    try:
+        hh, mm = (int(x) for x in str(text).split(":"))
+    except (ValueError, AttributeError):
+        return None
+    if not 0 <= hh <= 23 or not 0 <= mm <= 59:
+        return None
+    return hh, mm
+
+
+def _fixed_slots(item):
+    """Sorted (hour, minute) fixed slots of a fixed-slots regular."""
+    slots = []
+    for raw in item.get("fixed_slots", []) or []:
+        parsed = _parse_hhmm(raw)
+        if parsed is not None:
+            slots.append(parsed)
+    return sorted(set(slots))
+
+
+def _next_local_time(after_local, hhmm):
+    """Next occurrence of a local HH:MM strictly after after_local."""
+    hh, mm = hhmm
+    cand = after_local.replace(hour=hh, minute=mm, second=0,
+                               microsecond=0)
+    if cand <= after_local:
+        cand += timedelta(days=1)
+    return cand
+
+
 def cycle_start_local(item, when_local):
     """Start of the cadence window containing when_local, mirroring
     the tracker rules - every-run windows start at the segment
     anchors every 4 hours, daily-reset at the reset time,
-    weekly-thu at Thursday 00:00."""
+    weekly-thu at Thursday 00:00, fixed-slots at the latest
+    listed slot at or before now (yesterday's last slot before
+    the first slot of the day)."""
     cadence = item.get("cadence", "")
+    if cadence == "fixed-slots":
+        slots = _fixed_slots(item)
+        if slots:
+            cur = when_local.hour * 60 + when_local.minute
+            past = [s for s in slots if s[0] * 60 + s[1] <= cur]
+            if past:
+                hh, mm = past[-1]
+                return when_local.replace(hour=hh, minute=mm, second=0,
+                                          microsecond=0)
+            hh, mm = slots[-1]
+            day = when_local - timedelta(days=1)
+            return day.replace(hour=hh, minute=mm, second=0,
+                               microsecond=0)
+        # No slots listed: fall through to the anchor handling below.
     if cadence == "daily-reset":
         reset = item.get("reset_local") or "19:00"
         hh, mm = (int(x) for x in reset.split(":"))
@@ -494,6 +554,21 @@ def plan_windows(item, now_local, horizon_end):
     """Window starts to stage for one regular - the current window
     plus every window that starts inside the horizon."""
     cadence = item.get("cadence", "")
+    if cadence == "fixed-slots":
+        slots = _fixed_slots(item)
+        if not slots:
+            return []
+        out = []
+        start = cycle_start_local(item, now_local)
+        day = start.replace(hour=0, minute=0, second=0, microsecond=0)
+        while day <= horizon_end:
+            for hh, mm in slots:
+                cand = day.replace(hour=hh, minute=mm, second=0,
+                                   microsecond=0)
+                if start <= cand <= horizon_end:
+                    out.append(cand)
+            day += timedelta(days=1)
+        return out
     if cadence == "daily-reset":
         step = timedelta(days=1)
     elif cadence == "weekly-thu":
@@ -539,10 +614,25 @@ def _produce_for_window(root, item, planned_local, window=""):
                     f.get("planned_for") == planned_iso:
                 return None
     cadence = item.get("cadence", "")
-    if cadence in ("daily-reset", "weekly-thu"):
+    if cadence == "fixed-slots" and item.get("expires_local"):
+        exp = _parse_hhmm(item.get("expires_local"))
+        if exp is not None:
+            expires_dt = _next_local_time(
+                planned_local, exp).astimezone(timezone.utc)
+        else:
+            expires_dt = planned_utc + timedelta(hours=4)
+    elif cadence in ("daily-reset", "weekly-thu"):
         expires_dt = planned_utc + timedelta(days=1)
     else:
         expires_dt = planned_utc + timedelta(hours=4)
+    chain_id, chain_seq = "", ""
+    prefix = item.get("chain_id_prefix", "")
+    if prefix:
+        chain_id = prefix + planned_local.strftime("%Y-%m-%d")
+        slots = _fixed_slots(item)
+        hhmm = (planned_local.hour, planned_local.minute)
+        if cadence == "fixed-slots" and hhmm in slots:
+            chain_seq = slots.index(hhmm) + 1
     fields = {
         "unit": f"{regular}-{planned_local.strftime('%Y-%m-%d-%H%M')}",
         "regular": regular,
@@ -555,7 +645,7 @@ def _produce_for_window(root, item, planned_local, window=""):
         "not_before": planned_iso if planned_utc > now_utc() else "",
         "window": window,
         "est_minutes": typical_minutes(root, regular)[0],
-        "chain_id": "", "chain_seq": "", "attempts": 0,
+        "chain_id": chain_id, "chain_seq": chain_seq, "attempts": 0,
         "max_attempts": DEFAULT_MAX_ATTEMPTS,
         "claimed_by": "", "claimed_at": "", "lease_until": "",
     }
@@ -647,7 +737,12 @@ def cmd_plan(args):
     for item in regs:
         current = cycle_start_local(item, now_local)
         for w in plan_windows(item, now_local, horizon_end):
-            if w == current and not due_now.get(item["id"], True):
+            # The tracker has no per-slot done state, so the
+            # current-window skip must not drop a fixed-slot unit;
+            # the (regular, planned_for) dedupe in _produce already
+            # prevents re-staging an existing window.
+            if w == current and item.get("cadence") != "fixed-slots" \
+                    and not due_now.get(item["id"], True):
                 skipped_done += 1
                 continue
             unit = _produce_for_window(

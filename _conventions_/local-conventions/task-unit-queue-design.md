@@ -461,25 +461,26 @@ type enqueued before the sweep closes, named in the sweep record;
 the final sweep repeats the walk so the fix-up units it spawned
 are themselves verified. Both sweeps expire at the reset.
 
-**Generation - current practice and the planner interface.** The
-planner (section 7) stages windows from three cadences - the 4
-hour segment anchors, the daily reset and Thursdays. It cannot
-yet express fixed clock slots such as 17:30 and 18:30, so until
-it can, the sweep pair is enqueued manually with
-`_tools_/queue.py enqueue` - regular `zero-sweep`, one chain per
-reset day (chain id `pre-reset-sweep-<local date>`), priority 1,
-`not_before` set to the slot start in UTC, `expires_at` set to
-the reset, `est_minutes` 15. The pair for the 2026-11-01 reset
-(chain pre-reset-sweep-2026-11-01, units 001 and 002) was enqueued
-this way with the 0.7.0 change. The planner-side interface still
-to build - a fixed-slot daily cadence in `_tools_/queue.py plan`,
-taking a list of local clock slots per regular and staging them
-through the same (regular, planned_for) invariant, so the sweep
-becomes a produced regular with two daily slots instead of a
-manual enqueue. Until that lands, the operator or the planner
-pass enqueues the pair for the next reset as part of its run,
-and a reset with no sweep pair staged is itself reported in the
-round summary.
+**Generation - the planner interface.** The planner (section 7)
+stages windows from four cadences - the 4 hour segment anchors,
+the daily reset, Thursdays, and fixed local clock slots. A
+regular with cadence `fixed-slots` lists its slots in
+`fixed_slots`, its expiry clock time in `expires_local` and its
+chain prefix in `chain_id_prefix`, and `_tools_/queue.py plan`
+stages one unit per slot through the same (regular,
+planned_for) invariant, with `not_before` at the slot start,
+`expires_at` at the next expiry clock time and the chain id
+`<prefix><local date>` with one sequence number per slot. The
+sweep pair is that regular (`zero-sweep`, slots 17:30 and 18:30,
+expiry 19:00, chain `pre-reset-sweep-<local date>`, priority 1,
+`est_minutes` 15, activity `daily-activities`); `sync` never
+stages it, because the tracker carries no per-slot done state
+and plan owns its production. Before this interface landed the
+pair was enqueued manually with `_tools_/queue.py enqueue`
+(the pair for the 2026-11-01 reset, chain
+pre-reset-sweep-2026-11-01, units 001 and 002, was enqueued this
+way). A reset with no sweep pair staged is itself reported in
+the round summary.
 
 ## 13. The perception layer (scout)
 
