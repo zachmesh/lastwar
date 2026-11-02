@@ -1930,3 +1930,24 @@ of 2026-10-28.
   16:45: inbox 71, claimed 1, done 500. Full detail in
   queue-planning/1640-run.md.
 
+## 16:44 — Queue ticker pass, survivor intake (done)
+
+- Survivors unit survivors-2026-11-01-1403, done: one gate
+  survivor processed (question-mark bubble turned smiley on a
+  tap at norm 458,678, then walked in) and the gate line is
+  clear in the closing view. No recruit card appeared, so no
+  building post and no Quick Dispatch applied. Tracker marked
+  done. This breaks the survivor partial streak: the gate was
+  located fresh by visual grounding in the 642 by 951 window.
+  Full detail in survivor-intake/1644-queue-run.md.
+
+## 16:51 — Queue ticker pass, troop training (partial)
+
+- Training unit training-2026-11-01-1403, partial: no barracks
+  panel opened and no batch queued. Fresh grounding points
+  sat on the gate road and were not tapped; two southward
+  pans reached the map south edge (Season 2 zone) with no
+  barracks tent in view, ruling out the south of the vehicle
+  lots. Tracker untouched; the next unit must start from a
+  zoomed-out full-base view or a building list, not pan south
+  again. Full detail in troop-training/1651-queue-run.md.
