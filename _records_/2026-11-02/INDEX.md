@@ -976,3 +976,11 @@ of 2026-10-28.
   covers the post-timer check). War tree top tier
   (Rallied row) is reached by scrolling the tree up.
   Full detail in alliance-donations/0547-queue-run.md.
+
+## 05:45 to about 05:52 — PR integration pass
+
+- Integrator pass pr-integration/0545-run.md: merged PR 172
+  (tapcal measurement half, issue #123) and PR 173
+  (knowledge-organizer 0532, 5 profiles); records PRs 167
+  (2026-11-01) and 161 (2026-11-02) left awaiting the 07:00
+  batch (non-batch pass). No owner-gated PRs, no conflicts.
