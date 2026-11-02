@@ -514,3 +514,24 @@ of 2026-10-28.
   has its tool half merged and awaits retro closure, and
   issue 123 remains a multi-run device-control build.
   Full detail in tool-development/0335-run.md.
+
+## 03:32 to about 03:42 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-02-0332,
+  worked from the 0232 watermark. Own PR 166 stands MERGED
+  with no comments and no reviews; no new knowledge Issue
+  since the 0232 run (#160 already folded at 0132; #118-#122,
+  #124, #131 remain open, none resolved by these records).
+  New records folded: ticker-0235 arms-race 0247 and
+  donations 0259, ticker-0308 harvest 0308, survivors 0320
+  and training 0322, plus the queue-planning 0240,
+  pr-catchall 0239, tool-development 0238 and pr-integration
+  0245, 0300, 0315 runs (meta only). Profile changes ride
+  PR 169 (Owner lastwar-knowledge-organizer): arms-race
+  1.19.0 to 1.20.0, alliance-donations 1.9.0 to 1.10.0,
+  resource-collection 1.7.0 to 1.8.0, survivor-intake
+  1.11.0 to 1.12.0, troop-training 1.7.0 to 1.8.0. One
+  contradiction resolved: the troop-training
+  pistol-to-TRAIN-UNITS claim is qualified as disputed
+  after the 0322 unit opened the upgrade panel instead.
+  Full detail in knowledge-organization/0332-run.md.
