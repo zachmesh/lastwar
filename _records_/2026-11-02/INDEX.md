@@ -889,3 +889,28 @@ of 2026-10-28.
   a per-activity anchor store. Live tap driving stays with
   the executor; issue #123 awaits retro closure.
   Full detail in tool-development/0537-run.md.
+
+## 05:32 to about 05:38 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-02-0532,
+  worked from the 0432 watermark. Own PR 170 stands MERGED
+  with no comments and no reviews; no new knowledge Issue
+  since the 0432 run (#160 not moved, no donations unit
+  in this window; #118-#122, #124, #131 remain open, none
+  resolved by these records). New records folded: the
+  ticker-0434 scout 0436, VIP 0438, scout 0441,
+  daily-missions 0444 and crystal-shop 0446 units and the
+  ticker-0504 glittering-market 0508 and scout 0514 units,
+  plus the pr-integration 0530 run (meta only). Profile
+  changes ride PR 173 (Owner lastwar-knowledge-organizer):
+  vip-rewards 1.6.0 to 1.7.0, daily-missions 1.2.0 to
+  1.3.0, crystal-shop 1.1.0 to 1.2.0, glittering-market
+  1.0.0 to 1.1.0, perception-scout 1.2.0 to 1.3.0. Two
+  contradictions resolved: the VIP general input-failure
+  reading is refined to a button-specific failure by the
+  0438 same-session live reads, and the back-arrow point
+  163,947 is narrowed to a per-screen point by the 0446
+  Mission-screen centre 62,941. Events 0441, shop banner
+  0514, resource bubbles and the train glimpse were
+  repeats or transient signals and were not folded.
+  Full detail in knowledge-organization/0532-run.md.
