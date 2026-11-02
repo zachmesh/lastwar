@@ -1838,3 +1838,17 @@ of 2026-10-28.
   first read must be the stored count, since the 14:45 restore
   may have pushed stored to the 40 cap.
   Full detail in radar-tasks/1629-queue-run.md.
+## 16:15 to about 16:37 — PR integration pass
+- Standing integrator pass pr-integration-2026-11-01-1615:
+  zero open PRs at pass start; records PR 115
+  (pr-integration 1600 run record) opened by this run
+  and merged by merge commit 6f919a3ff0, branch kept;
+  records/2026-10-31 contained in main, no PR needed.
+  Mid-pass arrivals: policy PR 116 (batch cadence
+  2.3.0) reviewed, owner-gated and escalated, not
+  merged; records PR 117 held for the 19:00 batch,
+  not merged. No knowledge or code PRs open, no
+  conflicts. Local main synced to 6f919a3ff0; merge
+  and escalation synced to the owner Slack DM.
+  End-of-pass sweep: 2 open PRs, both with decisions.
+  Full detail in pr-integration/1615-run.md.
