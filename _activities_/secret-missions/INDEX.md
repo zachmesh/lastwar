@@ -304,6 +304,12 @@ secrets-2026-10-31-2257, status partial).
   and the panel was left open at sweep close. The next
   unit must exit with a fresh method (foreground click or
   another route) before reaching the base screen.
+- Exit follow-up: by the 1849 final sweep the game was back
+  on the base screen, but no record states how the panel
+  was exited, so the exit method remains unrecorded. The
+  next unit that meets a resisting panel back arrow must
+  record the exit method that worked, not just the
+  failure.
 
 
 ## Open questions

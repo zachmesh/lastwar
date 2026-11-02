@@ -104,6 +104,14 @@ Measured on 2026-10-25.
   the lines before the reset, the mechanism worked as
   designed; if it does not, the recurrence belongs in the
   daily retro, not in a silent carry-over.
+- Final-sweep outcome: the 1849 final sweep found the
+  vip-2026-11-02-0151 fix-up still in inbox at 18:43,
+  never attempted that trade day, about 17 minutes before
+  the reset. The sweep's own assessment is that the lines
+  were likely to expire unclaimed at 19:00. Whether they
+  did is for the next trade day's records to show, not
+  claimed here; the recurrence, if confirmed, belongs in
+  the daily retro.
 
 
 ## Open questions
