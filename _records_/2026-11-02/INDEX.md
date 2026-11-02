@@ -1144,7 +1144,7 @@ of 2026-10-28.
   conflict status synced to the owner Slack DM. Full
   detail in pr-integration/0709-run.md.
 
-## 07:18 to about 07:18 - PR integration pass
+## 07:15 to about 07:18 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-02-0715.
   Non-batch pass: the records_batch.py checker
