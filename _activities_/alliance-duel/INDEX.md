@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T09:32:00Z
-version: 1.13.0
+modified: 2026-11-02T12:32:00Z
+version: 1.14.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-0034 star-ceremony execution record 2026-11-02 0047 queue run (latest live duel total 1,113,750)
   - source: ticker-2142 star-ceremony execution record 2026-11-01 2154 queue run and queue-planning execution record 2026-11-01 2140 run
   - source: queue-planning execution record 2026-11-01 2240 run
+  - source: ticker-0334 star-ceremony execution record 2026-11-02 0348 queue run (done, no ceremony waiting)
 ---
 
 
@@ -484,6 +485,31 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   unit's no-train read earlier this pass. No carriage
   was tapped and no boarding was attempted here.
   Evidence in `_records_/2026-11-02/alliance-duel/0047-queue-run.md`.
+
+## What the 2026-11-02 0348 unit added for duel tracking
+
+- Unit star-ceremony-2026-11-02-0230 by ticker-0334,
+  session about 03:44 to 03:48, status done. No Star
+  Ceremony waiting: no trophy icon sits beside the
+  Alliance icon on the base screen. The right-side
+  icon column was inspected: Events, Capitol, the
+  gold VS medallion, Season II, Alliance, Mail and
+  Inventory. Nothing was played, claimed or emoted.
+- Handover followed: duel totals were NOT read in
+  this unit. Per the 2026-11-01 handover, duel-score
+  reading belongs to the duel-score regular, not to
+  star-ceremony. The 0047 read stands as the last
+  star-ceremony duel read, not as the standing
+  method.
+- Look-alike, not the trophy: a skull icon with a red
+  1 badge and a 00:00:45 countdown sits above the
+  Alliance button on the right rail. It is not the
+  ceremony trophy and was left untouched; its identity
+  is not established here and nothing is claimed for
+  it. A skull plus countdown must not be mistaken for
+  the trophy beside the Alliance icon.
+  Evidence in `_records_/2026-11-02/alliance-duel/0348-queue-run.md`.
+
 
 ## Open questions
 

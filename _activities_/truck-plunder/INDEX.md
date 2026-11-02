@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T09:32:00Z
+modified: 2026-11-02T12:32:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: daily retro 2026-11-01, trucks 1457 expiry and counter tension (issues 147 and 148)
   - source: ticker-2212 trucks execution record 2026-11-01 2231 queue run
   - source: ticker-0104 truck-plunder execution record 2026-11-02 0114 queue run (partial, trade-screen entry blocker)
+  - source: ticker-0404 truck-plunder execution record 2026-11-02 0416 queue run (partial, trade entry corrected)
 ---
 
 # Truck plunder - Intercity Trade
@@ -692,6 +693,92 @@ settlement and dispatch execution record).
   with guard below Squad 1.
   Evidence in `_records_/2026-11-02/truck-plunder/0114-queue-run.md`.
 
+## What the 2026-11-02 0416 unit added - trade entry corrected, quotas 3 of 5 and 2 of 4
+
+- Unit trucks-2026-11-02-0257 by ticker-0404, session
+  about 04:05 to 04:16, status partial: the trade-day
+  quotas are not yet full, so the tracker is untouched
+  (partial units do not mark the tracker).
+- ENTRY CORRECTION, in favour of the newest verified
+  record, superseding the 0114 section above: in this
+  column set the train-front icon IS the trade entry.
+  The column was re-grounded fresh on the live base
+  screenshot - green face [54,493], light-blue
+  train-front icon [52,552], white pickup [54,617] -
+  and the route that worked was a title-bar tap
+  [180,15] first, followed by a tap on the freshly
+  grounded train-front centre [52,552], which opened
+  Intercity Trade at once. Correction to the 0114
+  record and to the 2026-10-30 evening finding: the
+  0114 taps at [55,584] missed the centre by about 30
+  pixels vertically, and the snapped [53,555] tap
+  predates the foregrounding variant, so the 0114
+  failure was point plus foregrounding, not a missing
+  slot - the set the 0114 unit read as slot-less does
+  carry the trade entry. The World map route was tried
+  first and rejected: it showed alliance bases and no
+  trade entry, so the game was returned to base.
+  Successor instruction: re-ground the icon fresh every
+  unit, and use the title-bar foregrounding tap before
+  the icon tap if a background tap does nothing.
+- Proximity note, not a settled identity: this
+  train-front point [52,552] sits 4 pixels from the
+  alliance-train profile's station icon point (52,548).
+  Whether the two units tapped the same column slot
+  acting differently by context, or two neighbouring
+  icons, is unresolved - do not copy one profile's
+  point into the other unit's entry step without
+  verifying the screen that opens.
+- Counters, read live: at trade-screen entry Today's
+  Trade Count 1 of 5 and Your Plunder Count Today 1
+  of 4; after settling the returned truck and
+  dispatching twice, Trade Count 3 of 5; after the
+  plunder below, Plunder Count 2 of 4. Shortfall
+  carried forward: dispatch 2 more, plunder 2 more
+  before the trade day ends 19:00 on 2026-11-02.
+- Settlement, one returned truck: the 22:31 SR truck
+  returned, Squad 1 escort, iron 2.5M, food 2.5M, coin
+  1.6M, chests 20 plus 20 plus 20, red gem 50 x1, badge
+  500 x1, status line "The vehicle is safe and
+  secure" - not plundered en route. This matches the
+  22:31 dispatch, so the settlement is verified, not
+  assumed.
+- Dispatch, two trucks sent: slot one rolled N (iron
+  1.2M, food 1.2M, coin 810K, Squad 1), free refresh to
+  R, then one Trade Contract refresh to SSR (iron
+  3.0M, food 3.0M, coin 1.9M, arrives 04:21:54, Squad
+  1), dispatched at once. Slot two rolled SSR as
+  rolled (same cargo, arrives 03:58:30, Squad 3); the
+  free refresh was deliberately not spent, and no TIPS
+  dialog appeared on Let's Go. Slot three left open on
+  an N roll (iron 1.2M, food 1.2M, coin 810K, Squad 2)
+  after a free refresh to R and one Trade Contract
+  refresh back to N; the next trucks unit continues it
+  with contract refreshes until SR or above, per the
+  standing rule. Trade Contract stock 163 to 161, two
+  spent in this unit, no diamonds spent, no paid
+  button tapped.
+- Plunder, one fight won: first card checked and
+  rejected under the shard rule - SSR #2092 [NROM]
+  Masoncy, Lv.27, guard 11.9M, cargo gold bars, chests
+  and resources but no UR shard 500 stacks. Second
+  card, after one list refresh: SSR #2088, Lv.26,
+  guard 3.3M (screenshot read; the compact OCR
+  "73.3M" is wrong, the same garble pattern as the
+  2231 unit's "73.6M"), cargo with three UR shard 500
+  stacks x3 each, guard far below Squad 1 at 24.96M,
+  so the shard rule is met. Quick Plunder, Battle at
+  25.12M vs 3.38M, Mission Completed. Loot, read live
+  on the victory screen: iron 531.5K, food 531.5K,
+  coin 337.0K, UR badge 500 x9, Extra red gem x1. No
+  alliance mate plundered (the gold [AP3x] train on
+  the road was left alone). A stray tap meant for
+  empty road opened the red gem 100 tooltip ("100
+  Diamonds, Owned: 905") - harmless, no Use tapped,
+  no diamonds spent.
+  Evidence in `_records_/2026-11-02/truck-plunder/0416-queue-run.md`.
+
+
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
@@ -703,4 +790,4 @@ settlement and dispatch execution record).
   so the evening dispatches ran under normal day handling.
 - Whether the collapsed 2026-10-20 Reward Recovery record was
   already claimed - its toggle did not expand on 2026-10-25.
-- What flips the base left-column icon set to the set that carries the trade slot - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it.
+- What flips the base left-column icon set to the set that carries the trade slot - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it. (2026-11-02 0416 update: for this set the premise is corrected - the train-front icon at [52,552], reached after a title-bar foregrounding tap, is the trade entry; the flip question remains for sets where no train-front icon is present.)

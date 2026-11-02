@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-02T10:32:00Z
+modified: 2026-11-02T12:32:00Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: perception-scout execution record 2026-11-01 0215 PST, cross-check read
   - source: hidden-treasures execution record 2026-11-01 1420 PST
   - source: ticker-0204 hidden-treasures execution record 2026-11-02 0207 queue run
+  - source: ticker-0404 hidden-treasures execution record 2026-11-02 0424 queue run (done, checked only)
 ---
 
 # Hidden treasures
@@ -174,6 +175,44 @@ as Hidden Treasure.
   attempted. Nothing claimed, no diamonds or money
   touched.
   Evidence in `_records_/2026-11-02/hidden-treasures/0207-queue-run.md`.
+
+## What the 2026-11-02 0424 unit added - fragment income resumed, M3 still 0
+
+- Unit treasures-2026-11-02-0257 by ticker-0404,
+  session about 04:24, status done as checked only:
+  the tab was opened and read live, and no dig is
+  possible, so the tracker is marked done for the
+  regular.
+- Entry: the game was already on the Secret Command
+  Post screen from the preceding secrets work, with
+  the Reward Recovery panel still open. The panel's X
+  button took no effect twice (background tap, then
+  title-bar foregrounding tap plus X tap) - per queue
+  rule R2 that method ended there. The post screen's
+  back arrow at norm [62,962] closed the panel, and
+  the Hidden Treasures tab opened at once.
+- Fragment stocks, read live: M1 x13, M2 x14, M3 x0,
+  M4 x9, M5 x3, M6 x6, M7 x13. Against the 0207 read:
+  M1 plus 1, M2 plus 2, M5 plus 1, M7 plus 1; M3, M4
+  and M6 unchanged. The zero-income interval recorded
+  at 0207 has therefore ended - fragments arrived
+  between the 02:07 and 04:24 reads. Attribution is
+  partial only: the same-pass secrets claims (0426)
+  paid Treasure Map Fragment #1 x1, #5 x1 and #7 x1,
+  matching the M1, M5 and M7 gains of 1 each, but the
+  M2 gain of 2 is NOT explained by that report and is
+  not attributed here.
+- M3 at zero still means no complete set of seven
+  exists, so no dig is possible: both Dig buttons
+  (Dig 1 time, Dig 2 time(s)) are greyed out, Skip
+  Animation is ticked, chest progress reads 2 of 15,
+  unchanged, and the tab carries no red badge. No
+  fragment exchange was executed (exchanges need
+  owner approval per the activity limits) and none
+  was inspected beyond the map stocks. Nothing
+  claimed, no diamonds or money touched.
+  Evidence in `_records_/2026-11-02/hidden-treasures/0424-queue-run.md`.
+
 
 ## Open questions
 
