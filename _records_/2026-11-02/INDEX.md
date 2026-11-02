@@ -308,3 +308,29 @@ of 2026-10-28.
   open. Nothing merged, commented or escalated. Both PR
   heads were unchanged during the pass.
   Full detail in pr-integration/0215-run.md.
+
+## 02:04 to about 02:28 — Queue ticker pass, hidden treasures and radar
+
+- Ticker pass ticker-0204. Sync reaped nothing and produced
+  nothing new - all due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30 and its chain is closed.
+- Own PRs checked first: records PR 161 (2026-11-02) and PR 157
+  (2026-11-01 post-2300 appends) are both open, mergeable, with
+  no comments and no questions; both await the 03:00 batch merge
+  by lastwar-pr-integrator, so nothing to address this pass.
+- Treasures unit treasures-2026-11-01-2257, done (checked,
+  nothing to dig): fragments read live M1 x12, M2 x12, M3 x0,
+  M4 x9, M5 x2, M6 x6, M7 x12; M3 at 0 means no complete set,
+  both Dig buttons greyed, chest progress 2/15. Tracker marked
+  done. Full detail in hidden-treasures/0207-queue-run.md.
+- Radar unit radar-2026-11-02-0203, partial: entry took
+  three corrections (true back-arrow centre norm
+  (132,948); no-HUD base frame unusable for grounding;
+  dish grounded fresh at norm (58,736) with red badge 2)
+  plus two computer-session drops, then Claim All claimed
+  2 rewards, radar points 101 to 103, popup coin 1.2M;
+  stored 0/40, restore 01:09:44 remaining, all seven pins
+  left unattempted and the Doom Walker rally result still
+  unverified; tracker untouched. Full detail in
+  radar-tasks/0226-queue-run.md.
