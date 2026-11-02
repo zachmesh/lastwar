@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T20:40:00Z
+modified: 2026-11-02T00:42:39Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: daily retro 2026-10-31 action M4 proposed not applied
   - source: alliance donations execution record 2026-11-01 1141 queue run
   - source: resource collection execution record 2026-11-01 1149 queue run (footer re-read)
+  - source: alliance donations execution record 2026-11-01 1619 queue run
 ---
 
 
@@ -252,3 +253,54 @@ hard, and they override any earlier closing habit in this file.
   the entry read of 1,450 stands as that unit's last
   measured footer value, with the 2,750 re-read recorded
   here from the harvest unit that took it.
+
+## What the 2026-11-01 1619 unit added
+
+- Unit donations-2026-11-01-1403 by ticker-1604,
+  session about 16:06 to 16:19, status partial and
+  unverified under the 2026-10-31 hard rule. The
+  tracker is untouched and a re-read unit is enqueued
+  for after the cooldown (not before 16:34 local).
+- Alliance entry mis-tap, same center-tap lesson as
+  the harvest profile: a first tap at 927,795 on the
+  base screen opened Mail instead of Alliance. No mail
+  was read, claimed or changed; the back arrow returned
+  to the base screen. Alliance was then grounded at
+  931,705 and opened, and the Alliance Techs tile at
+  686,685.
+- War tab nodes read live, unchanged from the
+  2026-10-31 read: Troop Movement 5 of 10, Rallied HP
+  5 of 10, Rallied Attack 7 of 10, Rallied Defense 7 of
+  10, next node 1 of 10. Tech Donation Today read 5600
+  before the donation.
+- One coin donation to Rallied Attack at 800 coin:
+  the Rallied Attack panel read Current plus 7 percent,
+  Next Level plus 8 percent, Tech EXP Required 8.2K of
+  4.5M, Donation Reward 50 EXP and 50 alliance coin,
+  Donation Count 1 of 30 with the coin Donate button
+  active. A first Donate tap at 662,731 produced no
+  change (count still 1 of 30, button still green); a
+  second tap at the grounded button centre 657,755
+  donated. Proof in the same unit: Tech EXP moved 8.2K
+  to 8.3K and Tech Donation Today moved 5600 to 5700,
+  a plus 100 point move for one coin donation. The
+  diamond Donate button at 2 diamonds was never tapped.
+- Count-read rule from this unit: read the Donation
+  Count BEFORE donating. After the donation the coin
+  button greyed with a 00:16:24 cooldown timer that
+  hides the count label, so no live final count exists
+  for this unit and no arithmetic final count is
+  claimed. Cooldown expiry about 16:33 local.
+- The plus 100 single-unit footer move stands as a
+  measured pair only. It does not resolve the footer
+  tension recorded from the 1141 unit (a 1,300 rise
+  against nine donations at 50 to 60 points each), and
+  no new universal per-donation value is derived from
+  it: the footer may count contributions beyond one
+  unit's donations, or the per-donation value may vary
+  by node. The 1141 tension stands unchanged.
+- Session note, confirming the standing device rule:
+  the different-device dialog was showing at entry;
+  Confirm was tapped once, the session was taken over,
+  the app exited as expected and was relaunched, and
+  no second dialog appeared in this unit.

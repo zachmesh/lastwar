@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T20:40:00Z
+modified: 2026-11-02T00:42:39Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -17,6 +17,7 @@ grounded_in:
   - source: Last War Handbook VS schedule guide, accessed 2026-11-01
   - source: lastwar.wiki Alliance Duel page, accessed 2026-11-01
   - source: radar tasks execution record 2026-11-01 1122 queue run
+  - source: radar tasks execution record 2026-11-01 1629 queue run
 ---
 
 
@@ -439,6 +440,48 @@ are still open, per the protocol.
   only bar above, so the next radar unit faces the
   blocker and the deadline together.
 
+
+## What the 2026-11-01 1629 unit added
+
+- Unit radar-2026-11-01-1403 by ticker-1604, session
+  about 16:19 to 16:29, status partial. Duel day 7,
+  off-day settlement, radar posture stack. Nothing was
+  executed and nothing was claimed. The tracker is
+  untouched, so the next tick re-produces this regular.
+- Entry failure mode: radar entry was attempted from
+  a fresh base screenshot. The dish icon was grounded
+  at 53,688 on that screenshot and tapped. The
+  resulting screen was not the radar screen - it showed
+  base buildings and production bubbles in a panned
+  view, with no radar level, no stored count, no
+  stamina figure and no bottom action bar. Entry
+  verification therefore failed. No Secret Command
+  Post and no Intercity Trade opened, and no other
+  activity was worked from this unit. A dish tap that
+  lands on a panned base view is a failed entry, not a
+  radar read; the entry must be re-grounded from a
+  verified base view, not retried blind.
+- Recovery cut short, and correctly stopped: the
+  computer session dropped twice during this pass and
+  had to be restarted, and a visual grounding call for
+  the recovery controls timed out after three minutes.
+  With the pass budget nearly spent, no further
+  navigation tap was attempted, because a blind tap on
+  an ungrounded control risked opening another
+  activity. No map pin was tapped and no Claim All was
+  tapped, so the stack posture held with no claim
+  leaked onto this non-scoring day.
+- First read owed by the next radar unit: the stored
+  count. The opening state carried in (1122 unit,
+  11:22 local) was entry verified Lv.13, radar points
+  45, stored 33 of 40, stamina 85, restore 12 tasks in
+  03:29:29, with the bar flipped to Claim All only and
+  11 task rewards pending. The 12-task restore landing
+  about 14:45 local would have pushed stored toward
+  the 40 cap. This unit obtained no fresh stored count,
+  so whether stored now sits at the cap is unverified
+  and is the first read the next unit must make.
+
 ## Open questions
 
 - Duel delta test - on the next release day, read the duel
@@ -467,6 +510,12 @@ are still open, per the protocol.
 
 ## Changelog
 
+- 1.8.0, 2026-11-01 - 1629 entry-failure unit folded:
+  dish tap at 53,688 landing on a panned base view is a
+  failed entry, not a radar read; recovery correctly stopped
+  rather than blind-tapped; stack posture held on duel day 7
+  off-day settlement; the next unit's first read is the stored
+  count against the 40 cap after the about 14:45 restore.
 - 1.6.0, 2026-11-01 - first retrospective hardening pass,
   worked as the knowledge organizer's first work order under
   the learning and knowledge hardening protocol. Entry
