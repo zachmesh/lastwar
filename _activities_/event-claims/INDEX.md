@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T17:38:46Z
+modified: 2026-11-02T18:40:59Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-0034 event-claims execution record 2026-11-02 0050 queue run
   - source: ticker-0334 event-claims execution record 2026-11-02 0359 queue run (partial, Escape crash)
   - source: ticker-0904 event-claims execution record 2026-11-02 0910 queue run (done, full hub sweep, nothing claimable, hub back arrow unresponsive to background clicks)
+  - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (hub back arrow centre re-measurement)
 ---
 
 
@@ -488,4 +489,4 @@ that drag is the sweep-completeness check, not wasted motion.
   wave days, and the coal cost per donation.
 - What the Wanted Boss Code 87 fight pays in practice when it is
   out at server 00:00.
-- Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit.
+- Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.)

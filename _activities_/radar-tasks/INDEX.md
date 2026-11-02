@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T15:35:33Z
+modified: 2026-11-02T18:40:59Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-2304 radar execution record 2026-11-01 2319 queue run
   - source: ticker-0204 radar execution record 2026-11-02 0226 queue run
   - source: radar tasks execution record 2026-11-02 0636 queue run
+  - source: ticker-1004 radar-tasks execution record 2026-11-02 1026 queue run (partial, radar screen never entered)
 ---
 
 
@@ -811,6 +812,47 @@ are still open, per the protocol.
   untouched.
   Evidence in `_records_/2026-11-02/radar-tasks/0636-queue-run.md`.
 
+## What the 2026-11-02 1026 unit added
+
+- Unit radar-2026-11-02-1003 by ticker-1004, session about
+  10:20 to 10:25, status partial, tracker untouched.
+  Duel day 1, Radar Training, release posture confirmed
+  by tools/duel.py (radar_posture release) before the unit
+  started, but the radar screen was never entered, so
+  this unit executed and claimed nothing. Evidence in
+  `_records_/2026-11-02/radar-tasks/1026-queue-run.md`.
+- Entry state: the game was left by the donations unit
+  with the base camera panned onto the Drill Ground
+  cluster (Drill Ground Lv.27, three floating round
+  buttons at the bottom right). The left icon column with
+  the radar dish is not visible in this framing. A fresh
+  screenshot was taken and a visual grounding call for
+  the satellite dish icon was attempted, but the call
+  timed out after 180 seconds, consuming the rest of the
+  pass budget. No tap was made on any ungrounded icon,
+  and no other activity's work was done from this unit.
+- Entry precondition added: when the camera is panned
+  (here, by the previous unit's failed entry taps),
+  restore the full base view first - re-centre the camera
+  away from the Drill Ground cluster - then ground the
+  dish fresh from that screenshot. The 0636 unit's
+  working point was norm (53,708), and the profile's
+  measured point is (62,727); neither transfers across
+  framings - verify the radar screen (Lv.13, stored
+  count, stamina) before any work.
+- Release posture still applies: execute and claim
+  everything stored, then scan the map pins to a closing
+  read each. The 0636 unit's pin inventory is still open
+  (two standing orange arrow pins, classes unknown), and
+  the Doom Legion pin from that unit expired about 07:09.
+- Result stats: target unverified, achieved 0, verified
+  no, blocker_category c (entry-route: dish icon not
+  locatable in the panned camera framing, plus a
+  grounding tool timeout). Lesson: a grounding-tool
+  timeout can consume the whole pass budget - treat a
+  timed-out grounding as the unit's blocker and stop,
+  rather than tapping ungrounded points.
+
 ## Open questions
 
 - Duel delta test - on the next release day, read the duel
@@ -845,6 +887,8 @@ are still open, per the protocol.
   Execute (cost or reward difference), untested.
 
 ## Changelog
+
+- 1.13.0, 2026-11-02 - 1026 duel day 1 release unit folded: radar screen never entered (camera panned to Drill Ground by the donations unit's failed taps, dish column not visible, dish grounding timed out after 180s consuming the pass budget); entry precondition added (restore full base view before grounding dish); 0636 pin inventory still open, Doom Legion pin expired about 07:09; release posture still applies; duel delta test still owed.
 
 - 1.12.0, 2026-11-02 - 0636 duel day 1 release unit folded: dish groundings disagreed in one unit (55,677 nothing, 53,575 Trucks, 53,708 radar; tool twice mislabelled truck as dish); entry Lv.13, points 103, stored 4 of 40, stamina 112; 12 claims over two batches, points 103 to 115, stored 0 of 40, stamina 53; portrait Doom Legion pin left on an ambiguous alliance-tagged card plus contested toast, expiry about 07:09; two orange arrow pins unattempted so the unit stays partial; duel delta test still owed.
 
