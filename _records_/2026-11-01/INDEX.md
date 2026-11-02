@@ -2986,3 +2986,6 @@ of 2026-10-28.
   and ls-remote verified before PR 158 opened; no force
   push used. Slack DM summary sent. Full detail in
   knowledge-organization/2332-run.md.
+## 23:32 to about 23:44 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-2332: own PRs checked first (only PR 157 open, integrator-owned, none owned); took open tooling issue 128 as a follow-up to merged PR 143 over 149/147 (implemented by merged PRs 153/156, closure belongs to the retro) and 136/130/133/126 (implemented by merged PRs 137/139/146/135), 129 (summary-job clause), 125 (already claims PR 42) and 123 (large device-control build). PR 143 windowed aged priority-1 units only in sync, never in plan, and the 2240 planner run staged 11 units yet left glittering-market unwindowed - plan now calls the same idempotent windowing step, so whichever producer runs first attaches planned_for now and a 4 hour expiry. PR 159 opened, issue 128 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (16 checks) plus an unpatched-main control run. Full detail in tool-development/2332-run.md.
