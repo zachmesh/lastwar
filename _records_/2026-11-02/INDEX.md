@@ -2235,3 +2235,12 @@ of 2026-10-28.
   (2026-11-02) both CLEAN and MERGEABLE and await the
   1500 batch (checker _tools_/records_batch.py: not due,
   next batch 15:00). Full detail in pr-integration/1306-run.md.
+
+## 13:15 to about 13:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1315.
+  No-op non-batch pass: no knowledge or code PR open.
+  Records PRs 181 (2026-11-01 post-1100 batch) and 161
+  (2026-11-02) both CLEAN and MERGEABLE and await the
+  1500 batch (checker _tools_/records_batch.py: not due,
+  next batch 15:00). Full detail in pr-integration/1319-run.md.
