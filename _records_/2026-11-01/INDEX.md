@@ -1813,3 +1813,28 @@ of 2026-10-28.
   conflicts. Local main synced to f236c666e1; merge
   synced to the owner Slack DM. End-of-pass sweep: zero
   open PRs. Full detail in pr-integration/1600-run.md.
+
+## 16:19 — Queue ticker pass, donations (partial, unverified)
+
+- Donations unit donations-2026-11-01-1403, partial: one 800-coin
+  donation to Rallied Attack (7 of 10, plus 7 percent to plus 8
+  percent), Tech EXP 8.2K to 8.3K, Tech Donation Today 5600 to
+  5700. Donation Count read live as 1 of 30 before the donation;
+  after it the coin button greyed with a 00:16:24 timer that hides
+  the count, so no live final count exists and no arithmetic final
+  is claimed. Tracker untouched. Re-read unit
+  donations-2026-11-02-0019 enqueued for after the cooldown
+  (not before 16:34 local).
+  Full detail in alliance-donations/1619-queue-run.md.
+
+## 16:29 — Queue ticker pass, radar (partial)
+
+- Radar unit radar-2026-11-01-1403, partial: entry not achieved.
+  The dish tap at 53,688 landed on a panned base view, not the
+  radar screen, so no radar read was obtained; session drops and
+  a grounding timeout spent the recovery window. Nothing
+  executed, nothing claimed, no pin tapped, stack posture held.
+  Tracker untouched; the next tick re-produces radar, and its
+  first read must be the stored count, since the 14:45 restore
+  may have pushed stored to the 40 cap.
+  Full detail in radar-tasks/1629-queue-run.md.
