@@ -1,15 +1,16 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T21:37:13Z
+modified: 2026-11-02T01:41:06Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1306 mail unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1730 mail unit)
 ---
 
 
@@ -26,7 +27,9 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
 
 - Base screen, Mail button on the right rail (envelope icon).
 - The category rail, top to bottom, reads - Battle Report, Alliance,
-  Season, System, Regular, Purchases. The train arrival reward mail of
+  Event, Season, System, Regular, In-app Purchases (corrected
+  2026-11-01 by the 1730 unit; the earlier list omitted Event and
+  named the last category "Purchases"). The train arrival reward mail of
   the daily round was presented as an Event mail in game.
 - Every category list ends with Delete All and Claim All buttons.
   Claim All claims every claimable attachment in that category at
@@ -143,6 +146,41 @@ the next tick re-produces this regular as a fresh unit.
   22.7M (was 10.6M) - deltas of +19.0M, +19.0M and
   +12.1M, matching this unit's popup exactly, so the
   claims landed.
+
+## What the 2026-11-01 1730 unit added
+
+- Status partial: unit mail-2026-11-01-1430 by
+  ticker-1704, third unit of the pass, session about
+  17:23 to 17:31. No mail claimed, nothing deleted.
+  Tracker untouched; the next tick re-produces the mail
+  regular and the claim sweep resumes as a fresh unit.
+- Navigation cost, measured: the Help dialog close X
+  measured at norm 840,213 (an earlier tap at 888,219
+  missed), and the Alliance panel back arrow measured
+  at 162,934 (an earlier tap at 62,936 hit the small
+  avatar below it instead). The unit reached Mail
+  through the Alliance-panel exit path after the help
+  unit; the pass budget (about 25 minutes from token
+  taken at 17:06) ran out before any category was
+  opened or any Claim All pressed. Next-unit lesson: a
+  mail unit that inherits the Alliance-panel exit path
+  pays this navigation cost first - entering Mail from
+  the base rail is the cheaper route when the unit
+  starts fresh.
+- Category list corrected, read live: Battle Report,
+  Alliance, Event, Season, System, Regular, In-app
+  Purchases. No category showed a red dot. This
+  corrects the profile's rail list, which omitted Event
+  and named the last category "Purchases": Event sits
+  between Alliance and Season, and the last category
+  reads "In-app Purchases". The 1306 note that the
+  train arrival reward mail was presented as an Event
+  mail is consistent with Event being a full category,
+  not a one-off label. No-red-dot here is a
+  category-list read only - no category was opened, so
+  no claimable mail is ruled in or out by this unit.
+- Nothing was deleted. Delete All was never pressed. No
+  other task type was touched.
 
 ## Open questions
 

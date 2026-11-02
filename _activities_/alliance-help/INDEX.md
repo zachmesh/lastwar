@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T20:40:00Z
+modified: 2026-11-02T01:41:06Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0940 help unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1226 help unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1722 help unit)
 ---
 
 
@@ -209,6 +210,37 @@ Measured in the 0135 help unit (ticker-0134, window mode
   closed done. The blocker is named here for the next
   unit, and the tracker is untouched, so the next tick
   re-produces this regular.
+
+## What the 2026-11-01 1722 unit added
+
+- Performed, ticker-1704, session about 17:19 to 17:22
+  (session cc-70 after the first computer session closed
+  between units), status done: checked and Help All
+  pressed.
+- Header read live: Today's points gained from Alliance
+  Help 1,040 of 1,000 - already over the daily tally.
+  The tally display can read above 1,000; 1,000 is the
+  displayed target, not a cap that stops the count. The
+  daily help cap question stays open - this read does
+  not answer what helpers or helped players receive.
+- Visible requests were all the account's own (Bears
+  Lair): Lv.30 Aircraft Center building, Precision
+  Targeting II research, Morale research, Lv.28 Drill
+  Ground building. A player cannot help their own
+  requests - and Help All was pressed anyway per the
+  standing rule. The game answered with the "Allies are
+  very grateful for your assistance" toast, read live in
+  the post-tap observation. Standing rule clarified by
+  this unit: press Help All even when only own requests
+  are visible; the toast confirms the press registered.
+- This unit closes the 1226 failure mode for this
+  control: Help, which background input could not reach
+  in the 1226 unit, was reached and pressed here after
+  the session change between units. The 1226 foreground
+  precondition is not superseded - the session, not the
+  tap, changed - but Help is reachable in a fresh
+  session, so a Help failure is not a dead entry route.
+- No diamonds or money spent, no red line touched.
 
 ## Open questions
 
