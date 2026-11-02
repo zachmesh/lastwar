@@ -1482,3 +1482,15 @@ of 2026-10-28.
   hours old) both current, neither over 24 hours. Quiet
   run, no Slack or chat report. Full detail in
   pr-catchall/0839-run.md.
+
+## 08:40 to about 08:43 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-0840. Staged 0
+  units (already_present 67, skipped_done_current 4,
+  reaped 0, expired 0): every window in the next 12 hours
+  was already covered, including the 18:57 and 19:00 slots
+  staged by the 0740 run. Tonight's pre-reset sweep pair
+  already in inbox, scout diff on the 2026-11-02
+  observation applied with all zero counts, 0 withdrawals.
+  Pool inbox 63, claimed 1, done 585, upcoming 53. Full
+  detail in queue-planning/0840-run.md.
