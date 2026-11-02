@@ -174,3 +174,22 @@ of 2026-10-28.
   Missile Apex train found during the star-ceremony
   unit's camera recovery); its boarding window still
   had about 01:36 left at pass end.
+## 01:05 to about 01:13 — Queue ticker pass, shop claims and trucks
+
+- Ticker pass ticker-0104. Sync reaped nothing and produced
+  nothing new - all due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30 and its chain is closed.
+- Passes unit passes-2026-11-01-2257, done (checked, nothing
+  outstanding): Weekly Pass Free Supply Claimed, Coin Weekly
+  Pass already claimed today, Monthly Pass Claimed, no free
+  Hot Deals pack showing; Season hub badge is the
+  "Calculating." card, not a claim. Tracker marked done.
+  Full detail in shop-claims/0104-queue-run.md.
+- Trucks unit trucks-2026-11-01-2257, partial: the trade
+  screen could not be entered after four tap variants
+  (snapped, unsnapped, title-bar foregrounding), so no
+  live counter was read and nothing was dispatched or
+  plundered; tracker untouched. The next trucks unit
+  must try a different entry route, not re-tap the
+  left column. Full detail in truck-plunder/0114-queue-run.md.
