@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T08:32:00Z
+modified: 2026-11-02T11:34:36Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: alliance donations execution record 2026-11-01 1619 queue run
   - source: alliance donations execution record 2026-11-01 1944 queue run
   - source: alliance donations execution record 2026-11-01 2348 queue run (ticker-2334 unit, partial, count replenishment, GitHub Issue #160)
+  - source: alliance donations execution record 2026-11-02 0259 queue run (ticker-0235 unit, partial, timer-hidden close)
 ---
 
 
@@ -229,6 +230,52 @@ before about 23:55 local). Evidence in
   button at norm 658,761. Tile centres must be
   re-grounded from the screenshot on every opening,
   never inherited.
+
+## What the 2026-11-02 0259 unit added
+
+Unit donations-2026-11-02-0203 by ticker-0235, session about
+02:46 to 02:55, status partial with an unverified close under
+the hard closing rule above. The tracker is untouched and a
+named re-read unit is enqueued for after the cooldown (not
+before 03:17 local). Evidence in
+`_records_/2026-11-02/alliance-donations/0259-queue-run.md`.
+
+- Entry correction: the first base-screen tap at the estimated
+  Alliance spot opened Inventory instead; the Alliance button
+  was then grounded by visual measurement at norm (935, 706)
+  and the Alliance Techs tile at norm (687, 691). Both later
+  taps landed first time. These centres are consistent with
+  the 2348 re-grounding (935, 701 and 688, 690) within a few
+  pixels; tile centres must still be re-grounded from the
+  screenshot on every opening, never inherited.
+- Target: Garrison Defense (recommended marker), War tab,
+  7/10, +7% toward +8%, Tech Donation Today already 1,900
+  points at entry (above the 1,000 reward threshold).
+- Donation Count, every figure read live in this unit:
+  9/30 at entry, then 8/30 after 1 donation, 4/30 after 4
+  more, and 1/30 after the cooldown re-read. Tech EXP moved
+  30.6K to 30.7K to 31.1K to 31.4K, i.e. +100 per landed
+  donation, which caught one missed tap: the last batch of
+  4 landed only 3 (31.1K to 31.4K, not 31.5K). Lesson: the
+  Tech EXP step is the per-tap landing check; a batch count
+  must be verified by the EXP delta, not by taps sent.
+- Final donation: 1/30 remaining, one coin tap landed, Tech
+  EXP 31.4K to 31.5K. The coin button then greyed with a
+  00:18:20 timer that hides the count label, so the closing
+  0/30 was NOT read live in this unit. Per the hard closing
+  rule, this unit does not claim the day done on arithmetic:
+  status partial, verified no, tracker untouched.
+- Count-model note: this unit's chain is monotonic
+  decreasing 9 to 1 with no in-unit replenishment, so it
+  does not by itself move GitHub Issue #160 - the 2348 rise
+  happened between units, over about 3 hours 41 minutes.
+  The mechanism measurement (short-interval reads across
+  one cooldown cycle, the cap, the 19:00 reset behaviour)
+  is still owed, and the hard closing rule's live-read
+  core still binds every unit.
+- Result: 9 coin donations landed, 7,200 coin spent (800
+  coin each), Tech EXP +900. No diamond button was used.
+
 
 ## Open questions
 
