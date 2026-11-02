@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T20:40:00Z
+modified: 2026-11-02T01:41:06Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner task request naming a train task, 2026-10-25
   - source: web guides on barracks and troop tiers, read 2026-10-25
   - source: troop training execution record 2026-11-01 1216 queue run
+  - source: troop training execution record 2026-11-01 1651 queue run
 ---
 
 # Troop training
@@ -224,6 +225,57 @@ Observed in game on this account, first execution 2026-10-25.
   tracker is untouched, so the next tick re-produces
   this regular.
 
+## What the 2026-11-01 1651 unit added
+
+- Status partial: unit training-2026-11-01-1403 by
+  ticker-1638, session about 16:45 to 16:51. No barracks
+  panel opened, no batch queued, no Drill Ground screen
+  read, nothing claimed. Tracker untouched; the next
+  tick re-produces the regular.
+- Centre view, no tent verified: the base screen in the
+  642 by 951 window showed the resource-house row, the
+  signed front gate and the vehicle formation lots; no
+  barracks tent was verified in this view. The profile's
+  "four tents stand in the lower middle of the base"
+  line is therefore not confirmed in this camera
+  framing - it stands as the 2026-10-25 layout
+  description, not as a verified point in this unit,
+  and no tent point is claimed from it.
+- Grounding points NOT tapped: fresh visual grounding
+  for a barracks tent returned points that sat on the
+  gate road area, not on a verified tent. Those points
+  were not tapped: tapping the gate would have repeated
+  the survivors unit, a different task type. Ungrounded
+  or wrong-target points are not tapped - the same
+  discipline as the 0045 and 0917 pinned-point failures.
+- South ruled out to the map edge: changed method
+  versus earlier units - two upward pans to walk the
+  view south. The first pan reached the vehicle depot
+  and the Season 2 structures at the map edge; the
+  second pan reached the map south edge itself (Season
+  2 house cluster, a tank, a STOP sign, formation lots
+  2 and 3 at the top of the view). No barracks tent
+  appeared in either panned view. Barracks tents are NOT
+  south of the vehicle formation lots down to the map
+  south edge.
+- Next-unit instruction, from the record itself (rule
+  R2): start from a zoomed-out full-base view and
+  locate the four tents first, or find a building-list
+  entry, rather than panning south again or tapping
+  grounding points that sit on the gate road. This is
+  the zoom-out-first variant the 1216 unit already
+  named - still untried, now with the south route
+  closed.
+- Drill Ground Full carried forward unverified a fourth
+  consecutive unit: 0045, 0917, 1216 and now 1651 all
+  never reached a barracks, so the 39,460 of 39,460
+  block remains a 2026-10-31 read, not a 2026-11-01
+  re-confirmation, and no clearing method is claimed.
+  This unit differs from the 2026-10-31 Drill Ground
+  Full partials: no barracks was reached at all, so the
+  blocker was neither confirmed nor cleared here, and
+  no Drill Ground figure is claimed.
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -257,3 +309,10 @@ Observed in game on this account, first execution 2026-10-25.
   Drill-Ground-first next-unit instruction, and the chat
   line explicitly not a live Drill Ground read, folded
   from the 1216 training unit.
+
+- 1.5.0 (2026-11-01): south of the vehicle lots ruled
+  out to the map south edge, gate-road grounding points
+  correctly not tapped, the zoom-out-or-building-list
+  next-unit rule, and Drill Ground Full carried forward
+  unverified a fourth consecutive unit, folded from the
+  1651 training unit.

@@ -1,14 +1,15 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-01T20:40:00Z
-version: 1.8.0
+modified: 2026-11-02T01:41:06Z
+version: 1.9.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1017 survivors diagnostic unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1159 survivors unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1644 survivors unit)
 ---
 
 
@@ -328,6 +329,51 @@ Measured on 2026-10-25.
   this unit, never inferred from the older metadata
   description.
 
+## What the 2026-11-01 1644 unit added
+
+- Regular-unit partial streak BROKEN at 25: this unit
+  (survivors-2026-11-01-1403, ticker-1638, session about
+  16:38 to 16:44) closed done - the first done survivors
+  unit of the queue era after 25 consecutive distinct
+  regular-unit partials (0016 through 1159, counted per
+  the 0041 rule). The standing blocker section's 22-of-22
+  retro count and the 25-streak count are now history,
+  not the current state; the next unit starts from a
+  done, not from a streak.
+- Entry path measured fresh in this unit, in the 642 by
+  951 window: base screen read live food 341.3M, iron
+  528.8M, coin 17.6M, diamonds 2,396. Fresh visual
+  grounding located the gate survivor at the bottom
+  centre of the base - question-mark bubble at norm
+  460,632, survivor figure at norm 458,678, in front of
+  the signed gate. The gate reads bottom-centre in this
+  window framing; the 2026-10-25 "right side of the
+  base" description is a different framing, not a
+  contradiction to overwrite.
+- Figure tap, not bubble tap: one tap on the figure at
+  norm 458,678 (after an initial stale-observation retry
+  that sent nothing) turned the question-mark bubble
+  into a smiley bubble at the gate, and a second
+  screenshot showed no question-mark bubble anywhere at
+  the gate and the processed survivor already walked in.
+  Gate line clear by the activity standard. This
+  confirms the profile's figure-is-the-reliable-target
+  rule and the smiley-means-processed rule with a live
+  done.
+- Dialog-type survivor, no post, no Quick Dispatch gap:
+  no recruit card appeared, so this was a dialog-type
+  survivor, not a named recruit with a building post;
+  no card, no reward line, no claimed item, no
+  resources gained. Quick Dispatch was not run, and
+  that is not a gap here - the standing Quick Dispatch
+  instruction applies to new survivors taken in with
+  posts, and this survivor took none. This refines, not
+  contradicts, the Quick Dispatch rule: run it after an
+  intake with posts, not after every dialog survivor.
+- No different-device dialog, no login or verification
+  demanded, no diamonds or money spent, no paid button
+  tapped. Tracker marked done for this regular.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -372,3 +418,10 @@ Measured on 2026-10-25.
   survivors unit. (1.7.0 carried the 1017 diagnostic
   section without a changelog line; the numbering is
   preserved, not rewritten.)
+
+- 1.9.0 (2026-11-01): partial streak broken at 25 by the
+  1644 done (fresh grounding in the 642 by 951 window,
+  figure tap at 458,678, question-mark to smiley, gate
+  line clear), and the dialog-type survivor with no post
+  so no Quick Dispatch gap, folded from the 1644
+  survivors unit.

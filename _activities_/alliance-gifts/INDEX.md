@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T20:40:00Z
+modified: 2026-11-02T01:41:06Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: owner direction to claim both gift pages, evening of 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0935 gifts unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1221 gifts unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1718 gifts unit)
 ---
 
 
@@ -192,6 +193,49 @@ one file per execution.
   was left on the Alliance panel, not on another
   regular's screen.
 
+## What the 2026-11-01 1718 unit added
+
+- Performed, ticker-1704, session about 17:06 to 17:18,
+  status done: Regular 4 claimed, Premium 0 new. Gift
+  Level 28 throughout.
+- Device takeover, first of the pass: the game showed
+  the "account active on a different device" dialog at
+  session start; Confirm was tapped once, the app
+  exited as expected, and the game was reopened on the
+  Mac. No second dialog appeared. This is the standing
+  kick rule working as written, not a blocker.
+- Entry correction, measured fresh: the first
+  Alliance-button tap landed on the Alliance Wars rally
+  screen. Visual grounding corrected the base Alliance
+  button centre to norm 929,688 and Alliance Gifts on
+  the Alliance panel to norm 313,621. The Alliance
+  Gifts entry carried a red dot.
+- Regular tab: Claim All badge 4 claimed 4 gifts; the
+  summary dialog read live "A total of 4 Regular
+  Alliance Gifts were claimed this time". Badge and
+  dialog agree this time - unlike the 1221
+  badge-20-to-21 arrival gap, no gift arrived mid-claim
+  here, so the badge-versus-dialog rule stands (dialog
+  confirms), with this unit as the agree-case.
+- Reward icons read live in the dialog: 1.0K, 5 and
+  600. Progress bar read 178,677,740 of 206,300,000 on
+  entry and 178,687,430 after the Regular claim; the
+  bar moved during the unit, so the plus 9,690 delta is
+  NOT attributed to this unit's 4 gifts alone, and no
+  per-gift point value is derived from it. This
+  contrasts with the 1221 exact plus 210 for 21 gifts -
+  a progress delta is only evidence when the unit
+  attributes it.
+- Premium tab: every visible row read Claimed,
+  including one scrolled page further down (SSR, MR
+  and UR rows from Supreme, Premium and Luxury Glitter
+  Coin Packs and the Super Monthly Pass). No Claim All
+  button was offered on Premium. Premium new claims: 0.
+  A Premium tab with nothing claimable offers no Claim
+  All - the claim-both-pages rule is satisfied by
+  checking both tabs, not by a button existing on both.
+- No diamonds or money spent, no red line touched.
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -213,3 +257,12 @@ one file per execution.
   700,250, the SSR 200 and MR 1000 point values, and the
   re-check re-entry that caught a newly arrived gift,
   folded from the 1221 gifts unit.
+
+- 1.6.0 (2026-11-01): dialog-confirmed 4 Regular and 0
+  Premium, the entry correction (Alliance 929,688;
+  Gifts 313,621; first tap landed on the Alliance Wars
+  rally screen), the device-takeover Confirm once with
+  no second dialog, the progress delta explicitly not
+  attributed to the 4 gifts, and Premium all-Claimed
+  with no Claim All offered, folded from the 1718 gifts
+  unit.
