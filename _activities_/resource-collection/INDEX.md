@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T11:34:36Z
+modified: 2026-11-02T17:05:00Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-01 1534 queue run (same-unit screen reads and owner live corrections)
   - source: resource collection execution record 2026-11-01 2006 queue run
   - source: resource collection execution record 2026-11-02 0308 queue run (ticker-0308 unit, partial, edge drag unverified)
+  - source: resource collection execution record 2026-11-02 0741 queue run (ticker-0734 unit, partial, fast regeneration over the left-side buildings)
 ---
 
 
@@ -393,6 +394,55 @@ regular stays due. Evidence in
   harvest.
 
 
+## What the 2026-11-02 0741 unit added
+
+- Unit harvest-2026-11-02-0603 by ticker-0734, session 07:35
+  to 07:41, status partial. Tracker untouched, so the regular
+  stays due. Evidence in
+  `_records_/2026-11-02/resource-collection/0741-queue-run.md`.
+- Entry: the game was left on the Alliance Techs panel from
+  an earlier session, as in the 0308 unit. The panels were
+  closed without donating (donations belong to their own
+  unit); the Alliance screen back arrow needed three taps
+  before it registered, the first two showing no change,
+  the third returning to the base.
+- Sweep: a visual grounding pass located 16 bubbles in the
+  starting view, and bubble centres were tapped grounded on
+  live screenshots. One tap selected the Iron Mine and one
+  later tap selected the Coin Vault Lv.24; both were
+  deselected with an empty-road tap, no panel action taken
+  - fall-throughs on bubble taps, as documented, not
+  collections.
+- Pan: one long drag on empty road toward the right edge
+  did move the view, and the panned right-side view showed
+  no resource bubbles over its buildings - a longer drag
+  succeeded where the 0308 unit's drags barely panned, so
+  drag length, not the drag route, is the suspect in that
+  failure mode. The view was dragged back to restore the
+  starting view.
+- HUD figures, rounded as displayed: food 383.9M before,
+  387.0M after, plus about 3.1M (one farmland tap collected
+  all farmland at once, as documented); second top bar
+  resource 574.0M before, 576.9M after, plus about 2.9M;
+  coins 48.7M before, 50.7M after, plus about 2.0M.
+  Figures are HUD-rounded millions, not exact panel
+  readings.
+- Why partial, not done: the full-map acceptance needs zero
+  bubbles remaining. The restored starting view still showed
+  a few small bubbles over the left-side buildings,
+  consistent with fast regeneration (bubbles regenerate
+  within minutes of a collection), and the top and left
+  edges were not dragged to their extremes. Next harvest
+  unit: re-sweep the left-side buildings first, since
+  regeneration lands there fastest, then drag to the top
+  and left edges, and re-check the armed truck loot bubble.
+- Armed truck: the parked truck shows its marker but no
+  collectable loot bubble, so it was left alone (not fully
+  loaded, nothing claimed), as in the 0308 unit.
+- The Season 2 area at the bottom was left out of the sweep,
+  per the standing rule that it is not main base harvest.
+
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -403,6 +453,8 @@ regular stays due. Evidence in
   rather than assuming the candidate.
 
 ## Changelog
+
+- 1.9.0 (2026-11-02): visible-base sweep with HUD-rounded gains (food +3.1M, second resource +2.9M, coins +2.0M), 16 bubbles grounded in the starting view, long-drag right-edge pan succeeding where the 0308 drags barely moved, fast regeneration over the left-side buildings so partial, parked truck with marker but no loot bubble left alone, folded from the 0741 harvest unit; no earlier claim superseded.
 
 - 1.6.0 (2026-11-01): centre-cluster one-tap five-bubble clearance with iron plus 0.4M measured, Titanium Alloy Factory No.3 panel fall-through on the second tap, ambiguous far-left edge shape deliberately untapped, Season 2 bottom area and Armed Truck checks deferred to the next harvest unit, folded from the 2006 harvest unit; no earlier claim superseded.
 
