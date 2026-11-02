@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-02T12:32:00Z
+modified: 2026-11-02T18:40:59Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: hidden-treasures execution record 2026-11-01 1420 PST
   - source: ticker-0204 hidden-treasures execution record 2026-11-02 0207 queue run
   - source: ticker-0404 hidden-treasures execution record 2026-11-02 0424 queue run (done, checked only)
+  - source: ticker-1004 hidden-treasures execution record 2026-11-02 1009 queue run (done, checked only)
 ---
 
 # Hidden treasures
@@ -213,6 +214,35 @@ as Hidden Treasure.
   claimed, no diamonds or money touched.
   Evidence in `_records_/2026-11-02/hidden-treasures/0424-queue-run.md`.
 
+
+## What the 2026-11-02 1009 unit added
+
+- Unit treasures-2026-11-02-0657 by ticker-1004, session
+  about 10:09, status done as checked only: the tab was
+  opened and read live, and no dig is possible, so the
+  tracker is marked done. Evidence in
+  `_records_/2026-11-02/hidden-treasures/1009-queue-run.md`.
+- Entry: the game was already on the Secret Command Post
+  screen (Secret Mobile Squad tab) when the unit started.
+  Tab-switching quirk, per queue rule R2: a click on the
+  Hidden Treasures tab's grounded point (374,147) did
+  nothing twice (once as click_element, once as a
+  coordinate click; the first click only opened a Hero
+  EXP reward tooltip on a task row). A double-click at
+  the same point switched to the Hidden Treasures page at
+  once. Single taps on this tab are unreliable in this
+  session; double-click is the working variant.
+- Fragment stocks, read live: M1 x13, M2 x14, M3 x0,
+  M4 x9, M5 x3, M6 x6, M7 x13. Identical to the 0424 run's
+  stocks: no fragment movement since then. M3 at zero
+  means no complete set of seven exists, so no dig is
+  possible: both Dig buttons (Dig 1 time, Dig 2 time(s))
+  are greyed out, Skip Animation is ticked, chest
+  progress reads 2 of 15, and the tab carries no red
+  badge. No fragment exchange was executed (exchanges
+  need owner approval per the activity limits) and none
+  was inspected beyond the map stocks. Nothing claimed,
+  nothing spent.
 
 ## Open questions
 

@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T12:32:00Z
+modified: 2026-11-02T18:40:59Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-2243 secrets execution record 2026-11-01 2243 queue run
   - source: ticker-0134 secret-missions execution record 2026-11-02 0150 queue run
   - source: ticker-0404 secret-missions execution record 2026-11-02 0426 queue run (done, assists 5 of 5)
+  - source: ticker-0934 secret-missions execution record 2026-11-02 0952 queue run (done, checked only)
 ---
 
 
@@ -560,6 +561,37 @@ secrets-2026-10-31-2257, status partial).
   no paid button, no speedup, no Mega Refresh.
   Evidence in `_records_/2026-11-02/secret-missions/0426-queue-run.md`.
 
+
+## What the 2026-11-02 0952 unit added
+
+- Unit secrets-2026-11-02-0657 by ticker-0934, session about
+  09:52 to 09:55, status done as checked only: nothing was
+  pending, so nothing was claimed or dispatched, and the
+  tracker is marked done. Evidence in
+  `_records_/2026-11-02/secret-missions/0952-queue-run.md`.
+- Entry: the Secret Command Post opened from the base left
+  column white pickup icon, grounded at norm (54,636) in
+  this base view - another slot variant beside the
+  (56,643) and (48,643) groundings recorded above. Title
+  verified SECRET COMMAND POST before any further tap.
+- State, read live: Assist Allies 5 of 5 (full, no assist
+  available). Plunder Others 0 of 5, not acted on: the
+  secret-post plunder mechanic is outside this unit's
+  known scope and no target was inspected for it. Your
+  Tasks: four SSR tasks, all stamped PERFECT, all Lv.5 -
+  Train Refugees, Provide Tech Support to Refugees,
+  Search for Missing Refugees, Protect Refugee Camp. No
+  Claim button on any row: PERFECT is the claimed stamp,
+  so these were already collected by an earlier unit.
+  Scrolling the task list showed no further row; the Mega
+  Refresh and Mega Deploy buttons are greyed, confirming
+  no pending task to deploy. The Ally Tasks tab was not
+  opened: with assists already 5 of 5 there is no assist
+  to perform.
+- Outcome: nothing claimed, nothing dispatched. Counters
+  at close, read live: Assist Allies 5 of 5, Your Tasks
+  4 of 4 PERFECT. Nothing spent, no button tapped beyond
+  entry and one list scroll.
 
 ## Open questions
 

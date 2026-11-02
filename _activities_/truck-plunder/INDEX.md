@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T12:32:00Z
+modified: 2026-11-02T18:40:59Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-2212 trucks execution record 2026-11-01 2231 queue run
   - source: ticker-0104 truck-plunder execution record 2026-11-02 0114 queue run (partial, trade-screen entry blocker)
   - source: ticker-0404 truck-plunder execution record 2026-11-02 0416 queue run (partial, trade entry corrected)
+  - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (partial, dispatch quota filled, plunder shortfall 2 remains)
 ---
 
 # Truck plunder - Intercity Trade
@@ -778,6 +779,69 @@ settlement and dispatch execution record).
   no diamonds spent.
   Evidence in `_records_/2026-11-02/truck-plunder/0416-queue-run.md`.
 
+
+## What the 2026-11-02 0935 unit added
+
+- Unit trucks-2026-11-02-0657 by ticker-0934, session about
+  09:35 to 09:48, status partial: the dispatch quota is
+  filled but the plunder quota is not, so the tracker is
+  untouched. Evidence in
+  `_records_/2026-11-02/truck-plunder/0935-queue-run.md`.
+- Entry: the game was found on the Events hub Code 87 page.
+  The hub back arrow only responded once its centre was
+  re-measured at norm (158,947); earlier taps near
+  (97,906) missed the button. Lesson repeated from the
+  dice button: tap measured centres, not edges. This
+  bears on the event-claims hub back-arrow open question
+  - point accuracy, not background clicks alone, may be
+  the cause there too.
+- Trade entry: the badged icon in the left column,
+  grounded at norm (51,571) with badge 2 at entry. A tap
+  at (54,546), near the top edge of the same icon, did
+  nothing; the centre tap opened Intercity Trade directly
+  on the Your Truck view. The game window had been moved
+  to x1270 so its left column cleared the covering Chrome
+  window; it was restored to 79,30 at unit close.
+- Counters, read live: at trade-screen entry Today's Trade
+  Count 3 of 5, Your Plunder Count Today 2 of 4 (the same
+  counters the 0416 unit closed with); at close Trade
+  Count 5 of 5, Plunder Count 2 of 4, and the screen
+  confirms "No more dispatches available." No returned
+  truck awaited settlement: the road showed two SSR
+  trucks out and two empty slots, and the screen carried
+  no settlement prompt.
+- Dispatches (2, quota filled): Slot 1 rolled N (iron
+  1.2M, food 1.2M, coin 810.0K); the free refresh rerolled
+  it to SR (iron 2.5M, food 2.5M, coin 1.6M); dispatched
+  at once, Squad 2 escort, Trade Count 3 of 5 to 4 of 5.
+  Slot 2 rolled SSR as rolled (iron 3.0M, food 3.0M, coin
+  1.9M); the free refresh was deliberately not spent;
+  dispatched at once, Squad 4 escort, Trade Count 4 of 5
+  to 5 of 5. Trade Contracts spent: 0. No diamonds spent,
+  no paid button tapped.
+- Plunder (0 this unit, shortfall 2 remains): one target
+  inspected and passed - SSR #2092 [SOVN]bassslayer,
+  Lv.26, guard 5.7M, arriving in about 1 hour. Its cargo
+  row showed chests, iron 1.5M, food 1.5M, coin 1.0M and
+  three crossed-out slots, with no UR shard stack visible,
+  so it fails the shard rule and was left alone. The
+  golden train on the road ([MYpp] train) was not
+  inspected: it stays a candidate for the next unit's
+  shard hunt (it is not an alliance train, but its cargo
+  was never read). Reason the shortfall stands: the
+  unit's 15 minutes were spent on entry and the two
+  dispatches; no battle was started rather than overrun
+  the unit cap. The next trucks unit works the plunder
+  shortfall first, hunting a UR or SSR truck with
+  visible, right-sided UR shard stacks. The trade day
+  ends at 19:00 local, so the shortfall is not a
+  last-hour miss.
+- Duel posture: Duel day 1, Radar Training (radar release
+  day), from tools/duel.py at unit start. Non-UR day
+  rules applied: dispatch SR or above only (free refresh
+  first, then Trade Contracts until reached), plunder UR
+  or SSR trucks carrying UR shards with guard below
+  Squad 1.
 
 ## Open questions
 

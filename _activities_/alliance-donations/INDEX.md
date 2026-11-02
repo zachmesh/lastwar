@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T15:35:33Z
+modified: 2026-11-02T18:40:59Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: alliance donations execution record 2026-11-02 0259 queue run
   - source: alliance donations execution records 2026-11-02 0545 0547 0621 queue runs
   - source: alliance donations execution record 2026-11-02 0719 queue run
+  - source: ticker-1004 alliance-donations execution record 2026-11-02 1020 queue run (partial, entry blocker repeats 0621)
 ---
 
 
@@ -528,6 +529,58 @@ before 03:17 local). Evidence in
 - Game left safe: Garrison Defense panel open, coin button
   still green at 5/30, nothing spent, no other task type
   touched.
+
+## What the 2026-11-02 1020 unit added
+
+- Unit donations-2026-11-02-1003 by ticker-1004, status
+  partial: no donations made, no Donation Count read
+  live, no coin or diamond spent, tracker untouched.
+  This unit does NOT close on arithmetic - no count
+  figure is claimed anywhere in this record, per the
+  hard closing rule and rule R1. Evidence in
+  `_records_/2026-11-02/alliance-donations/1020-queue-run.md`.
+- Entry attempt, changed method per rule R2 (the 0621 unit
+  hit the same blocker): instead of reusing the 0621 tap
+  point, the Alliance icon was re-grounded on the current
+  full-base screenshot. The visual grounding tool twice
+  returned (928,685), but the fresh screenshot shows the
+  Alliance shield icon at the bottom right of the right
+  column, so the tap went to the screenshot-grounded
+  point (916,829) instead. Result identical to 0621: the
+  tap panned the base camera to the Drill Ground cluster
+  (Drill Ground Lv.27, three floating round buttons at
+  the bottom right) and no Alliance menu opened. The
+  (928,685) grounding point was also tried first (single
+  tap, then double-click) with no change at all, so it is
+  not the Alliance button in this framing either.
+- This is the second unit with this entry-route blocker
+  (after 0621). Qualification of the 0621/0719
+  instruction: fresh re-grounding from the current
+  screenshot did NOT fix it this time (the 0719 success
+  at 930,700 does not transfer across framings), so the
+  next donations unit must arrive with a changed method,
+  not another right-column icon tap: candidates are
+  tapping the Alliance HQ building on the map itself
+  (the blue tower at the top right of the panned view),
+  or changing the camera zoom/framing first and
+  re-grounding the Alliance entry from that framing. No
+  new re-read unit is enqueued from this unit: the
+  re-read unit donations-2026-11-02-1344 already sits in
+  the inbox.
+- Prior state carried, not re-verified: the 0545 unit read
+  the count 8/30 down to 1/30 before the coin button
+  greyed on a timer, so the day is one coin donation
+  short of 30/30 on the last live read, pending a
+  successful menu entry.
+- Carryover: this unit's camera pan left the base panned
+  onto the Drill Ground cluster, which the following
+  radar unit (1026) then could not enter from - a failed
+  entry's camera state is the next unit's entry state.
+- Result stats: target 30, achieved unverified, verified
+  no, blocker_category c (entry-route tap method:
+  Alliance icon tap pans the camera to Drill Ground
+  instead of opening the Alliance menu, in this camera
+  framing). Donations landed in this unit: 0.
 
 ## Open questions
 
