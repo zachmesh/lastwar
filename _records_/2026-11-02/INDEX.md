@@ -2168,3 +2168,14 @@ of 2026-10-28.
   withdrawals. Pool inbox 63, claimed 1, done 601,
   upcoming 53. Full detail in
   queue-planning/1240-run.md.
+
+## 12:45 to about 12:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1245.
+  Knowledge PR 184 merged (squash, branch deleted):
+  organizer 1232 folding the 1146 training, 1215
+  gifts, 1220 help and 1226 mail units into 4 profiles.
+  Records PRs 181 (2026-11-01 post-1100 batch) and 161
+  (2026-11-02) await the 1500 batch on a non-batch pass
+  (checker _tools_/records_batch.py: not due, next
+  batch 15:00). Full detail in pr-integration/1251-run.md.
