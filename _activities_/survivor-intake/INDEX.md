@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-02T01:41:06Z
-version: 1.9.0
+modified: 2026-11-02T05:37:14Z
+version: 1.10.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -10,6 +10,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1017 survivors diagnostic unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1159 survivors unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1644 survivors unit)
+  - source: survivor-intake execution record 2026-11-01 2048 queue run (ticker-2034 unit, partial, gate line unverified)
 ---
 
 
@@ -374,6 +375,60 @@ Measured on 2026-10-25.
   demanded, no diamonds or money spent, no paid button
   tapped. Tracker marked done for this regular.
 
+## What the 2026-11-01 2034 unit added
+
+- First regular-unit partial since the 1644 done: unit
+  survivors-2026-11-01-1803 by ticker-2034, session about
+  20:35 to 20:48, status partial. No survivor was processed,
+  no recruit card or dialog was opened, and Quick Dispatch
+  did not run - correctly, since no intake with a post took
+  place. Tracker untouched, so the next tick re-produces
+  this regular. This is a single partial after a done, not a
+  new streak count: the 25-partial streak ended at the 1644
+  done and is not resumed by counting this unit.
+- Close discipline held, as the 2026-11-01 retro's A3
+  verification asks: the gate line at close is explicitly
+  unverified, not claimed clear and not claimed occupied.
+  The unit claims only that no question-mark bubble and no
+  survivor line was visible in the views it searched.
+- Entry snapshot, read live on the opening base screen:
+  food 353.1M, iron 543.9M, coin 30.1M, diamonds 2,396,
+  total power 149,288,895, window 642 by 951. No
+  different-device dialog, no login or verification
+  demanded, no diamonds or money spent, no paid button
+  tapped.
+- Gate search by panning, after a visual-grounding call on
+  the opening base screenshot timed out at 180 seconds
+  with no result: one horizontal drag produced no view
+  change; two vertical drags panned south past the base
+  edge into empty snow and rock; a partial drag back
+  showed the south-west wall; a diagonal drag panned
+  north-east to the built area's east wall and fence
+  corner; a further diagonal drag in the same direction
+  hit the pan limit with no view change; a return drag
+  south-west also produced no view change. The
+  north-east direction was the wrong way: the re-read
+  pointer below says the gate sits at the bottom centre.
+- New look-alike, measured 2034: a small round world icon
+  at norm 249,641 (pixel about 160,610) is not a tappable
+  survivor figure - one tap produced no change and no
+  dialog, and it was left alone after that single tap.
+  It joins the pet icon, the temperature button and the
+  STOP-barrier point as icons that are not survivors.
+- Re-read pointer for the next unit, from the same day's
+  successful 1644 run: that unit located the gate survivor
+  fresh by visual grounding at question-mark bubble norm
+  460,632 and survivor figure norm 458,678, in front of
+  the signed gate at the bottom centre of the base. The
+  next unit should start from the opening base view and
+  pan toward the base's bottom centre, not north-east,
+  and should ground the gate figure before any tap.
+  Evidence in `_records_/2026-11-01/survivor-intake/2048-queue-run.md`;
+  the executor commented this unit's evidence onto open
+  Issue #123 (tap calibration), so no duplicate comment
+  was left here.
+
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -425,3 +480,5 @@ Measured on 2026-10-25.
   line clear), and the dialog-type survivor with no post
   so no Quick Dispatch gap, folded from the 1644
   survivors unit.
+
+- 1.10.0 (2026-11-01): first regular-unit partial since the 1644 done (2034 unit, gate line explicitly unverified, close discipline held), the failed pan sequence that went north-east instead of toward the bottom-centre gate, the non-tappable world icon at 249,641 as a new look-alike, and the 1644 re-read pointer (bubble 460,632, figure 458,678) for the next unit, folded from the 2048 survivors record.
