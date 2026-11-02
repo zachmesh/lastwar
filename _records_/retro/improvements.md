@@ -11,6 +11,8 @@ grounded_in:
   - source: owner instruction of 2026-10-31 - add or modify steps so every open item has a closed loop
 ---
 
+**FROZEN 2026-11-01 by owner direction: new ideas, directions and improvement candidates are filed as GitHub Issues on zachmesh/lastwar, not here. Existing entries were mirrored to Issues; this file is an archive.**
+
 # Improvements backlog
 
 The register of improvement tasks for the improvement loop.
