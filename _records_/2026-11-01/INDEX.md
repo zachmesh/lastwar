@@ -1803,3 +1803,13 @@ of 2026-10-28.
   the full bubble location map with screenshots, headed
   for the resource-collection profile. Full detail in
   resource-collection/1534-queue-run.md.
+## 16:00 to about 16:10 — PR integration pass
+- Standing integrator pass pr-integration-2026-11-01-1600:
+  one open PR at pass start, records PR 114 (2026-11-01
+  through urgent harvest 1534), reviewed and merged by
+  merge commit f236c666e1, branch kept; records/2026-10-31
+  contained in main, no PR needed. No knowledge or code
+  PRs open, no feedback, no owner-gated escalations, no
+  conflicts. Local main synced to f236c666e1; merge
+  synced to the owner Slack DM. End-of-pass sweep: zero
+  open PRs. Full detail in pr-integration/1600-run.md.
