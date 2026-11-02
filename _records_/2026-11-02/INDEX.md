@@ -557,3 +557,23 @@ of 2026-10-28.
   observation applied with all zero counts, 0 withdrawals.
   Pool inbox 70, claimed 1, done 556, upcoming 51. Full
   detail in queue-planning/0340-run.md.
+
+## 03:45 to about 03:49 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0345.
+  Knowledge PR 169 merged (squash, merge 141b357b):
+  organizer 0332 folding of ticker-0235 arms/donations
+  and ticker-0308 harvest/survivors/training into 5
+  profiles, troop-training pistol mapping disputed.
+  Non-batch pass for records purposes: checker
+  (_tools_/records_batch.py) reports due inside the
+  03:00-04:00 window, but the 03:00 batch was already
+  consumed by the 0300 pass merging PR 157, so no
+  records merge this pass (same already-consumed-window
+  reading as the 0315 and 0330 passes). Records PR 167
+  (2026-11-01 post-0300 batch, head b36bf22) and PR 161
+  (2026-11-02, head cdafaedf, conflict resolved on the
+  branch side) await the 07:00 batch. Local main
+  synced 91291d16 to 141b357b. Merge synced to the
+  owner's Slack DM.
+  Full detail in pr-integration/0349-run.md.
