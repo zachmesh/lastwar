@@ -2695,3 +2695,46 @@ of 2026-10-28.
   PR 142 left awaiting the 23:00 batch. Local main
   synced to 1ce2d80ce. Full detail in
   pr-integration/2152-run.md.
+
+## 21:43 to 21:49 — Queue ticker pass, alliance train (done, already aboard)
+
+- Train unit train-2026-11-01-1830, done: a train was in
+  preparation at the station (departure countdown 00:19:30,
+  Train Rating 70,850), unlike the earlier 2026-11-01 checks
+  that found none. Carriage 2 carries the account's own
+  avatar in place of its plus button (verified by tapping
+  its avatar badge, which opened MY PROFILE for Lv.30
+  [AP3x]Bears Lair), so the account is already aboard
+  carriage 2 as the standing rule requires. A THANK THE
+  CONDUCTOR dialog opened on platform arrival was closed
+  with its X unspent (stock 163 Trade Contracts untouched).
+  Nothing boarded, nothing spent. Full detail in
+  alliance-train/2149-queue-run.md.
+
+## 21:51 to 21:54 — Queue ticker pass, alliance duel / star ceremony (done)
+
+- Star-ceremony unit star-ceremony-2026-11-01-1830, done:
+  no trophy icon beside the Alliance icon, so no Star
+  Ceremony is waiting. Personal daily duel total read live
+  on the Today's Theme tab: 791,250 on Radar Training day
+  against the 3,600,000 target, a gap of 2,808,750.
+  Alliance duel score 262,665,994 (39 percent) against
+  [Kmf] 415,384,521 (61 percent). A tap on the first theme
+  chest (threshold 660,000) produced no change and the
+  Reward button opened only the tier panel, so no chest
+  claim is asserted. Full detail in
+  alliance-duel/2154-queue-run.md.
+
+## 21:55 to 22:00 — Queue ticker pass, event claims (partial)
+
+- Events unit events-2026-11-01-1857, partial: Arms Race
+  Base Building at 0 points (noted only, its own type),
+  Desert Battlefield registration only, Wanted Boss not
+  out (Go countdown 19:03:22; Rewards subpage is only a
+  ranking table, no claim), Community Discord reward
+  already Claimed. Nothing was claimable on the four
+  pages visited. Level Swap and Winter Battlefield tabs
+  were not reached before the pass budget ended, and the
+  Events back arrow produced no change, leaving the game
+  on the Wanted Boss page. Tracker untouched. Full detail
+  in event-claims/2200-queue-run.md.
