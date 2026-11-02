@@ -2275,3 +2275,16 @@ of 2026-10-28.
   main fast-forwarded to 949a025f. End-of-pass sweep:
   zero open PRs. Full detail in
   pr-integration/1900-run.md.
+
+## 19:15 to about 19:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1915.
+  Non-batch pass: no PR was open at pass start (PR 117
+  batch-merged at 19:04, PR 141 merged at 19:04). Fresh
+  records PR 142 opened for the post-1900 appends on
+  records/2026-11-01 (the 1900 run record), awaiting the
+  23:00 batch; checker window 19:00-20:00 reports due but
+  the batch was already consumed by the 1900 pass, so
+  this pass does not merge again inside the same window.
+  End-of-pass sweep: PR 142 only, decided. Full detail in
+  pr-integration/1915-run.md.
