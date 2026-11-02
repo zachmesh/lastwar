@@ -2142,7 +2142,7 @@ of 2026-10-28.
   game was left in the trucks view. Full detail in
   alliance-train/1813-queue-run.md.
 
-## 18:15 to about 18:22 — PR integration pass
+## 18:15 to about 18:19 — PR integration pass
 
 - Integrator pass pr-integration-2026-11-01-1815. No-op
   pass: the only open PR is records PR 117, held for
