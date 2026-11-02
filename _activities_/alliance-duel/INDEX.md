@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T06:38:16Z
-version: 1.10.0
+modified: 2026-11-02T07:38:29Z
+version: 1.11.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -15,6 +15,7 @@ grounded_in:
   - source: queue-planning execution record 2026-11-01 1840 run (duel-score staging gap: live pool tree predates the PR 137 merge)
   - source: queue-planning execution record 2026-11-01 2040 run (third consecutive plan staging no duel-score unit) and daily retro 2026-11-01 (gap commented on Issue #136, kept open)
   - source: ticker-2142 star-ceremony execution record 2026-11-01 2154 queue run and queue-planning execution record 2026-11-01 2140 run
+  - source: queue-planning execution record 2026-11-01 2240 run
 ---
 
 
@@ -386,6 +387,37 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   measurement.
 - This unit's total read is a same-unit live read, not a
   fragment score and not an estimate.
+
+## What the 2026-11-01 2240 planner run added for duel tracking
+
+- Duel-score staging gap, fifth confirmation: the 2240
+  planner pass staged 11 units for the 2026-11-02 1003
+  and 1030 slots (arms-race, donations, harvest, radar,
+  survivors, training for 1003; gifts, help, mail,
+  star-ceremony, train for 1030) and still staged no
+  duel-score unit, because the live pool tree still runs
+  pre-merge tools/regulars.json. The gap now stands at
+  five consecutive planner passes (1840, 1940, 2040,
+  2140, 2240). The retro already commented this gap onto
+  Issue #136 and kept #136 open; no duplicate comment
+  was left here. The 1030 star-ceremony unit keeps
+  ceremony coverage, but it does not carry the
+  daily-total read under the split; #136's target metric
+  (duel-score units in the pool closing with numeric
+  target/achieved pairs) is still unmet, and the 791,250
+  total from the 2154 pre-split unit remains the latest
+  live total for this duel day.
+- The 1904 delta test is still owed - the VS panel was
+  not opened for a before-and-after claim measurement in
+  any unit of this window.
+- Same-run scout note: the 2240 scout diff still read 0
+  items / 0 unexplained dots against the narrative-only
+  observation (frontmatter reports 24 items, 6
+  unexplained), because the live pool tree runs the
+  pre-merge scout_diff.py; the merged PR 153 frontmatter
+  fallback will report the fallback counts once the live
+  tree syncs to main. This does not change the duel gap;
+  it shares the same live-tree sync root cause.
 ## Open questions
 
 - The day themes and scoring once League S38 opens, and the current

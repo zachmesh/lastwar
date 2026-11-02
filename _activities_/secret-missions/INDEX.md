@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T02:44:38Z
+modified: 2026-11-02T07:38:29Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: secret-missions execution record 2026-11-01 0145 PST
   - source: secret-missions execution record 2026-11-01 1417 PST
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (panel visit, no task tapped)
+  - source: ticker-2243 secrets execution record 2026-11-01 2243 queue run
 ---
 
 
@@ -312,6 +313,76 @@ secrets-2026-10-31-2257, status partial).
   failure.
 
 
+
+## What the 2026-11-01 2243 unit added
+
+- Unit secrets-2026-11-01-1857 by ticker-2243, session
+  about 22:43 to 22:57, status partial. Entry: the game
+  was left on the Trucks Others screen from the previous
+  pass; back arrow at norm (59,931) returned to base,
+  then the base left-column slot at norm (48,643) opened
+  SECRET COMMAND POST on the first tap; title verified
+  before acting. No truck work was done in this unit.
+- Duel posture at 22:45 (tools/duel.py): day 1, Radar
+  Training, ends 2026-11-02 19:00. Secret tasks do not
+  score today (scoring actions are radar claims, stamina,
+  drone parts, gathering and chip chests), so no Mega
+  Refresh was used for UR rolling; its cost is still
+  unobserved.
+- Own tasks, live at entry: Your Tasks badge 8, all 8
+  rows with Go buttons, none finished and none claimable
+  - SSR Train Refugees, SSR Search for Missing Refugees,
+  SSR Protect Refugee Camp, SSR Provide Tech Support to
+  Refugees, SR Retrieve Valuable Supplies, SR Retrieve
+  Raw Materials, SR Retrieve Abandoned Gear, SR Retrieve
+  Agent Profile. No Claim button was due, so nothing was
+  claimed in this unit.
+- Record-internal tension, flagged not resolved: the same
+  2243 record both lists SR Retrieve Agent Profile as a
+  Go row and says the two tasks still running at the
+  1417 unit (UR Rescue Test Subject, SR Retrieve Agent
+  Profile) are no longer in the list. No identity is
+  asserted here - the next secrets unit must read the
+  list live and state whether the Agent Profile row is a
+  re-issued task or the same task now dispatchable.
+- Assist Allies: 0/5 on the fresh trade day (19:00
+  reset), Ally Tasks badge 5. The fresh-day 0/5 read
+  matches the 1417 unit denominator (5), not the 1757
+  sweep panel's 2/3, so the sweep figure stays
+  unreconciled. Plunder Others: 0/5, not touched (PvP,
+  no owner instruction).
+- BLOCKER, first occurrence for this regular, recorded
+  here and NOT yet an Issue or a metadata change under
+  rule R2: dispatch unresponsive in this session. Mega
+  Deploy produced no panel after three single taps at
+  its measured centre norm (498,900) and (500,915) and
+  one 1-second long-press at (498,900), each verified by
+  a second observation. Pivot variant tried: a single tap
+  on the Go button of SR Retrieve Valuable Supplies at
+  norm (755,452) also produced no dispatch panel and no
+  countdown; a re-read after scrolling back showed that
+  row still carrying Go, so the tap is verified
+  undispatched (the one-frame button visual change was
+  press state only). Input itself was not dead in this
+  session: the base back arrow, the post entry tap and
+  list drags all worked.
+- Result: 0 tasks dispatched, 0 claimed, assists
+  untouched at 0/5. The tracker is left untouched so the
+  next tick re-produces the regular.
+- Follow-up for the next secrets unit (changed method
+  required, do NOT repeat the taps above): re-enter the
+  post fresh and try a double-tap on Mega Deploy, or tap
+  a Go button and wait for a hero assignment panel
+  instead of assuming a single tap dispatches. If the
+  next unit also fails with the same blocker, file it as
+  a GitHub Issue (class play) and, on a third
+  consecutive failure, write the blocker into the
+  secret-missions activity metadata per rule R2. Assists
+  to the 5 cap via the name-to-handshake path (proven by
+  the 1417 unit) remain outstanding after dispatch is
+  restored.
+- No diamonds, money, speedup or paid button touched.
+  No Mega Refresh used.
 ## Open questions
 
 - Answered 2026-11-01 (1417 unit) - UR ally tasks are assisted

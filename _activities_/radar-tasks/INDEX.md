@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T03:47:03Z
+modified: 2026-11-02T07:38:29Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -19,6 +19,7 @@ grounded_in:
   - source: lastwar.wiki Alliance Duel page, accessed 2026-11-01
   - source: radar tasks execution record 2026-11-01 1122 queue run
   - source: radar tasks execution record 2026-11-01 1629 queue run
+  - source: ticker-2304 radar execution record 2026-11-01 2319 queue run
 ---
 
 
@@ -562,6 +563,88 @@ are still open, per the protocol.
   untouched for partial, per the queue rules.
 
 
+
+## What the 2026-11-01 2319 unit added
+
+- Unit radar-2026-11-01-2203 by ticker-2304, session about
+  23:06 to 23:19, status partial. Live duel posture from
+  tools/duel.py at entry: duel day 1, Radar Training, radar
+  posture release, day ends 2026-11-02 19:00 local. Release
+  posture governs, so this unit claimed everything claimable
+  and worked pins toward a closing read.
+- Entry lesson, rotating-shortcut trap again: the app opened
+  on Secret Command Post, not the radar. It was backed out
+  untouched with two back-arrow taps, then the dish icon
+  grounded fresh on the base screenshot at norm 55,699
+  entered radar on the first tap: Lv.13, radar points 91,
+  stored 6 of 40, stamina 82, restore line "12 Radar
+  Task(s) will be restored in 04:22:08".
+- Live re-read supersedes the 1904 close: the 1904 unit
+  closed at stored 0 of 40 and stamina 35, but this unit's
+  live entry read is stored 6 of 40 and stamina 82
+  (restore accumulation between the units, not a
+  correction of the 1904 close). The standing rule holds:
+  re-read live, never trust a carried figure.
+- Batch 1: Quick Execute 3 tasks, stamina 82 to 52. Bar
+  flipped to Claim All, 5 task rewards. Claim All claimed
+  5, radar points 91 to 96. Rewards: radar item 50, EXP
+  5.6M, blue triangle 540, iron 1.1M, food 1.1M, coin
+  1.3M, Lv1 chest 1.
+- Batch 2: Quick Execute 1 task, stamina 52 to 42. Bar
+  flipped to Claim All, 4 task rewards. Claim All claimed
+  4, radar points 96 to 100. Rewards: radar item 40, EXP
+  7.2M, drone item 2.4K, iron 2.2M, food 1.2M, coin
+  668.4K. One control-channel error mid-popup ("target
+  app exited") proved transient: the app was still open
+  with the popup intact, and the dismiss re-sent on a
+  fresh observation succeeded with no state lost.
+- Batch 3: Claim All 1 task reward, radar points 100 to
+  101. Rewards: radar item 10, EXP 1.5M, drone item 800,
+  iron 789.6K, coin 127.2K. Bottom bar then offered
+  nothing further.
+- Totals in this unit: 4 tasks executed, 10 rewards
+  claimed, radar points 91 to 101, coin claimed across
+  the three popups 1.3M plus 668.4K plus 127.2K equals
+  about 2.10M (popup figures, not HUD totals).
+- Pin work, Doom Walker rally launched: the purple skull
+  pin with a red dot opened a "Kill a Doom Walker" card
+  (Kill 1 Doom Walker regardless of level, rewards food
+  975.6K, iron 975.6K, coin 622.8K, radar item 300, plus
+  a gold ticket item, pin timer 00:19:45). Go jumped to
+  a Lv.160 Doom Walker on the world map (Suggested Power
+  21,454,000, stamina cost 20). Rally panel: Squad 1 at
+  25.12M versus 21.45M, Evenly Matched, Unit Count 2,231
+  of 2,231, Rally Time 1min checked. Rally tapped and
+  verified real: stamina 23 at launch, March Queues 1
+  of 4, Rallying 00:00:55 remaining at the closing
+  screenshot. The rally departs after its 1 minute
+  assembly and then marches 340 km; its kill and claim
+  fall to the next radar unit, not this one.
+- Pin inventory at close (radar screen, after the
+  claims): purple question-mark story pin top centre,
+  orange axe pin right, orange axe pin lower left (two
+  axe pins lower left in total), portrait pin left
+  middle, blue skull pin lower centre without a red
+  dot. The blue skull and grey skull pins with red dots
+  seen at entry are no longer standing after the claims;
+  the Doom Walker pin is replaced by the live rally on
+  the world map. Per the release standard, pins left
+  unattempted make this unit partial, never done.
+- Closing state (live reads, same unit): Radar Lv.13,
+  radar points 101, stored 0 of 40, stamina 23 at rally
+  launch, restore line "12 Radar Task(s) will be
+  restored in 04:19:37" at the last radar-screen read.
+- Next radar unit, first actions in order: check the
+  Doom Walker rally result and claim its pin reward if
+  the kill landed; then work the story pin, the orange
+  axe pins, the portrait pin and the blue skull pin to a
+  closing read each; then run any new Quick Execute or
+  Claim All offer the bar shows. Duel delta test still
+  owed: the VS panel was not opened in this unit.
+- No diamonds or money spent, no Buy tapped, no other
+  activity worked from this unit. No map pin was tapped
+  except the Doom Walker pin above. Tracker untouched
+  for partial, per the queue rules.
 ## Open questions
 
 - Duel delta test - on the next release day, read the duel
@@ -589,6 +672,8 @@ are still open, per the protocol.
   Execute (cost or reward difference), untested.
 
 ## Changelog
+
+- 1.10.0, 2026-11-01 - 2319 duel day 1 release unit folded: live re-read supersedes the 1904 close (stored 6 of 40 at entry, 0 of 40 at close; points 91 to 101 over 4 tasks and 10 claims); Doom Walker rally launched (Lv.160, Squad 1 25.12M, rally cost 20, kill and claim fall to the next unit); pins left unattempted so the unit stays partial; duel delta test still owed.
 
 - 1.9.0, 2026-11-01 - 1904 duel day 1 release unit folded:
   live re-read supersedes the 1629 carried figures (stored 19
