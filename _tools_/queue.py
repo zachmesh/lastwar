@@ -284,6 +284,7 @@ SYNC_EST_MINUTES = {"mail": 4, "help": 2, "gifts": 3, "vip": 2,
                     "trucks": 12, "train": 4, "training": 4,
                     "donations": 4, "events": 10, "arms-race": 12,
                     "ghost-ops": 8, "star-ceremony": 3,
+                    "duel-score": 2,
                     "scout": 10, "scout-midday": 10}
 LOCAL_TZ = ZoneInfo("America/Los_Angeles")
 
@@ -445,6 +446,8 @@ def duel_window_text(regular, planned_local):
         return "duel day 2 - UR trucks, Mega UR only"
     if regular == "arms-race":
         return f"duel day {duel_day}"
+    if regular == "duel-score":
+        return f"duel day {duel_day} - target 3600000"
     return ""
 
 
