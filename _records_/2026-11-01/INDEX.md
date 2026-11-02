@@ -2865,3 +2865,14 @@ of 2026-10-28.
 ## 22:32 to about 22:53 - Tool development pass
 
 - Tool-developer run tool-development-2026-11-01-2253: own PRs checked first (only PR 142 open, records-owned, none owned); took open tooling issue 147 over 149 (coverage half implemented by merged PR 153, remainder play-side) and 136/130/128/133/126 (already implemented by merged PRs 137, 139, 143, 146 and 135, closure belongs to the retro), 129 (summary-job clause), 125 (already claims PR 42) and 123 (large device-control build). Built the fixed-slot daily cadence in queue.py plan and made zero-sweep a produced regular (slots 17:30/18:30, expiry 19:00, chain pre-reset-sweep-<date>, priority 1, est 15); sync never stages fixed-slot regulars and the current-window tracker skip does not drop them. Slots deliberately unchanged (moving the pair earlier is now a one-line config change for the owner/planner); no pick_key change (next already orders reset-expiring priority-1 fix-ups first). PR 156 opened, issue 147 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (24 checks) plus an unpatched-main control run. Full detail in tool-development/2253-run.md.
+- Integrator pass pr-integration-2026-11-01-2245.
+  PR 155 merged (squash): five activity profiles bumped
+  (train 1.9.0, duel 1.10.0, events 1.8.0, shop-claims
+  1.7.0, truck-plunder 1.14.0). PR 156 merged (squash):
+  fixed-slot daily cadence in plan, zero-sweep as a
+  produced regular (Refs #147, metric unmoved, closure
+  belongs to the retro). Non-batch pass per checker
+  (_tools_/records_batch.py reports not due, next batch
+  point 23:00): records PR 142 left awaiting the 23:00
+  batch. Local main fast-forwarded by bundle to
+  c60afcd19. Full detail in pr-integration/2245-run.md.
