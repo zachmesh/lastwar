@@ -483,3 +483,24 @@ of 2026-10-28.
   Upgrade/Finish Now/Obtain); paw tap opened no panel; no queue
   state verified, no batch queued, Drill Ground unread. Issue
   #150 commented. Full detail in troop-training/0322-queue-run.md.
+
+
+## 03:30 to about 03:33 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0330.
+  Non-batch pass for records purposes: checker
+  (_tools_/records_batch.py) reports due inside the
+  03:00-04:00 window, but the 03:00 batch was already
+  consumed by the 0300 pass merging PR 157, so no
+  records merge this pass (same already-consumed-window
+  reading as the 0315 pass). Records PR 167
+  (2026-11-01 post-0300 batch, head b36bf22,
+  MERGEABLE) awaits the 07:00 batch. Records PR 161
+  (2026-11-02, head f7a8f30f) is now MERGEABLE: the
+  0300 conflict on _logs_/repo-actions/action-log.jsonl
+  was resolved on the branch side by ticker-0308
+  (union of branch and main log lines), verified by a
+  clean local trial merge, and it awaits the 07:00
+  batch. No knowledge or code PR open, no escalation,
+  no feedback. Silent run per the delivery rule.
+  Full detail in pr-integration/0332-run.md.
