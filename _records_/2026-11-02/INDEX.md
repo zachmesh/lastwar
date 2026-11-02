@@ -1601,7 +1601,7 @@ of 2026-10-28.
   no backlog edit.
   Full detail in pr-integration/0915-run.md.
 
-## 09:30 to about 09:37 - PR integration pass
+## 09:30 to about 09:34 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-02-0930:
   no-op non-batch pass. No knowledge or code PR open.
