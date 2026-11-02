@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-02T13:45:00Z
+modified: 2026-11-02T14:36:25Z
 level: L1
-version: 1.3.0
+version: 1.4.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: perception-scout execution record 2026-11-01 0215 PST, first day observation
   - source: perception-scout execution record 2026-11-01 1437 queue run
   - source: perception-scout execution records 2026-11-02 0436 0441 0514 queue runs
+  - source: perception-scout execution record 2026-11-02 0539 queue run
 ---
 
 
@@ -376,6 +377,77 @@ observe-only, nothing claimed). Evidence in
   screen it is on. The 1437 "current measured point only, not
   a rule to inherit" wording is extended from one screen to
   all screens.
+
+
+## What the 2026-11-02 0539 unit added
+
+- Unit scout-scout-2026-10-31-001 by ticker-0534, session about
+  05:35 to 05:39, status done, observe-only. This is the stale
+  post-reset pass of 2026-10-31 executed late in the current
+  reset day (started 2026-11-01 19:00); its sections land on
+  the 2026-11-02 day file, following the ticker-0434 and
+  ticker-0504 precedent for stale scout units. Evidence in
+  `_records_/2026-11-02/perception-scout/0539-queue-run.md`
+  and the appended 2026-11-02 observation sections.
+- Entry recovery, rule R2 - the first tap at the 0441 grounding
+  [895,142] landed on the Gold Tank building in the panned base
+  view (its label appeared) instead of opening the hub, and the
+  right UI column was not visible in that view. A tap on empty
+  road at [400,700] deselected the building and restored the
+  full base UI, after which the Events icon re-grounded at
+  [935,168] (badge 1) opened the hub at once. Ground the Events
+  icon on the current capture, never on a stale point, when the
+  base view has panned.
+- Hub entry state - the hub opened on the Community page, the
+  page the 0514 pass left it on. A drag on the tab strip from
+  [300,131] to [700,131] revealed the left end of the strip.
+  The hub back arrow at [163,947] returned to the base screen
+  at once, confirming the 1437 grounding again.
+- Events hub, all four pages read live - Arms Race: current
+  phase Hero Advancement, Contest Segment Lv.29-30, timer
+  00:22:12 remaining, personal score 40,500, rank #2110
+  [AP3x]Bears Lair, chest thresholds 2,000 / 4,000 / 12,000
+  shown. Score and rank are unchanged from the 0441 read at
+  04:41 the same morning; the timer is consistent with that
+  read (01:20:18 then, about 58 minutes elapsed). Observed
+  only - the arms-race regular owns any tier work, and its
+  0603 unit is already queued. Desert Storm Battlefield:
+  Registration ends in 2d 12:22:01, Task Force A and Task
+  Force B shown, registration limited to Top 32 Power ranked
+  Alliances. The Sign Up button was NOT tapped. Wanted Boss:
+  Code 87, appears at server time 00:00, Tank heroes deal
+  extra damage on the Wanted Boss, complete 1 attack rewards
+  shown, Go timer 11:21:52. The Go button was NOT tapped.
+  Community: join-community text, 200 Diamonds visit bonus,
+  500 Diamonds Discord-link bonus after Headquarters Lv.8,
+  the 500 shown as Claimed. No social link was tapped.
+- Resolved unknown from 0441 - the tab-strip leftmost icon tab
+  identity, left unlabelled by the 0441 unit, is Arms Race:
+  the drag revealed its label in place, and tapping it opened
+  the Arms Race page. Every hub label now matches the roster;
+  no candidate filing arises from this.
+- Tab strip verified at both ends: Arms Race (left end),
+  Desert Storm Battlefield, Wanted Boss, Community (right
+  end). There is no fifth page and no Zombie Invasion tab -
+  the chain-close rule from unit 066 stands, and no fresh
+  zombie chain is seeded.
+- Red dot accounting - seen 3 badge signals: Arms Race tab
+  dot, Wanted Boss tab dot, base Events badge 1. Explained 3
+  in the roll-up sense: the two tab dots map to the arms-race
+  and events regulars, both with units already queued
+  (arms-race-2026-11-02-0603, events-2026-11-02-0657); the
+  base Events badge 1 is the hub-level roll-up of the two
+  dots, not an additional dot. Unexplained hub dots: none.
+  Base-screen dots outside this unit's group (Season II
+  badge 1, 99+ badge, furnace toast) are carried by the
+  current day's scout pass, not by this unit.
+- Unwalked, carried - none from this unit. No successor unit
+  is enqueued from this unit: the remaining groups of the
+  current reset day (scout-store, scout-alliance, duel page,
+  radar panel) belong to scout-midday-2026-11-02-0700,
+  already in inbox for the 07:00 pass; a stale-chain
+  successor would duplicate it. The Oct31 post-reset chain
+  is spent.
 
 ## Open questions
 
