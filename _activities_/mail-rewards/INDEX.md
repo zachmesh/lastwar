@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T12:32:00Z
+modified: 2026-11-02T17:38:46Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: mail-rewards execution record 2026-11-01 2131 queue run (ticker-2104 unit, partial, Alliance-panel back arrow stalled on background input)
   - source: ticker-0034 mail-rewards execution record 2026-11-02 0042 queue run
   - source: ticker-0334 mail-rewards execution record 2026-11-02 0343 queue run (done, System 50 diamonds)
+  - source: ticker-0834 mail-rewards execution record 2026-11-02 0840 queue run (done, all claimable categories answered No rewards available)
 ---
 
 
@@ -295,6 +296,46 @@ the next tick re-produces this regular as a fresh unit.
   back-arrow point across screens.
   Evidence in `_records_/2026-11-02/mail-rewards/0343-queue-run.md`.
 
+
+## What the 2026-11-02 0840 unit added
+
+- Unit mail-2026-11-02-0630 by ticker-0834, session about
+  08:37 to 08:40, status done. All claimable mail
+  categories swept; no reward was available to claim in
+  any of them. Evidence in
+  `_records_/2026-11-02/mail-rewards/0840-queue-run.md`.
+- Mail entry, fresh grounding again: from the Help page,
+  Help and the Alliance panel were closed back to the
+  base screen, and a first tap meant for Mail opened the
+  Alliance panel instead. The Mail button was re-grounded
+  by visual measurement at norm (931,789) on the base
+  screenshot (Alliance sits at norm (930,702)), and the
+  corrected tap opened Mail. The two buttons share
+  almost the same x, separated by only about 87 in y, so
+  a mis-grounded Mail tap lands on Alliance; measure the
+  Mail icon fresh in each unit, per the 1306 rule.
+- Category list at entry: Event carried a red dot,
+  In-app Purchases carried a red dot, the other
+  categories showed none. Claim All pressed in each
+  claimable category, each answered with the toast "No
+  rewards available":
+  - Event: train mails only (Abyss Apex, Missile Apex,
+    Skinner Box trains, 22m to 8h ago); the red dot was
+    unread train mail, not a reward.
+  - Alliance: Weekly Donation Ranking and New Alliance
+    Marker mails only.
+  - Season: Ice Breaking reports only.
+  - System: President Mail (Warzone 2110) notices only.
+  - Regular: battle reports only (Victory over Lv.160
+    Doom Walker, Invading Zombies victories).
+  - Battle Report: scout reports and Lv.17 to Lv.20
+    Zombie Horde victories only.
+- Red-dot rule strengthened: a category red dot does not
+  prove a reward - it can mean unread non-reward mail, as
+  the Event dot here, and In-app Purchases was not
+  claimed at all, since it holds receipts only, per the
+  activity metadata, and nothing there is claimable.
+  Delete All was never pressed in any category.
 
 ## Open questions
 

@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T09:32:00Z
+modified: 2026-11-02T17:38:46Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1722 help unit)
   - source: alliance-help execution record 2026-11-01 2127 queue run (ticker-2104 unit, done, Help All pressed with only own requests visible)
   - source: ticker-0034 alliance-help execution record 2026-11-02 0039 queue run
+  - source: ticker-0834 alliance-help execution record 2026-11-02 0836 queue run (done, Help All pressed, header 400 of 1000 unchanged)
 ---
 
 
@@ -307,6 +308,41 @@ Measured in the 0135 help unit (ticker-0134, window mode
   unlike the 0135 unit, where the reopened header
   revealed a lagging gain.
   Evidence in `_records_/2026-11-02/alliance-help/0039-queue-run.md`.
+
+## What the 2026-11-02 0836 unit added
+
+- Unit help-2026-11-02-0630 by ticker-0834, session about
+  08:34 to 08:37, status done. Help All pressed; no ally
+  request was waiting. Evidence in
+  `_records_/2026-11-02/alliance-help/0836-queue-run.md`.
+- Help entry, centre tap beats a top-edge miss: the Alliance
+  panel was already open on game entry, a first tap at the
+  Help button's top edge produced no change, and a second
+  tap at the visually grounded button centre, norm
+  (688,500), opened the Help page. The Chrome window
+  covering the game window did not block the centre tap
+  and no foreground switch was needed; this qualifies the
+  foreground precondition in How it is done above, in the
+  same direction as the 2026-11-01 0135 panel-screen
+  background-input note - panel screens accepted the tap
+  here, while the base-screen right rail did not in the
+  0139 mail failure.
+- Help page header read live: Today's points gained from
+  Alliance Help 400 of 1,000, unchanged before and after
+  Help All. The visible list held only this account's own
+  four requests (Bears Lair: Lv.28 Drill Ground building,
+  Lv.30 Aircraft Center building, Morale research,
+  Precision Targeting II research), all at 30/30 on entry.
+  A drag scroll of the list surfaced no further rows, so
+  no ally request was waiting.
+- Help All pressed at norm (500,775). No toast and no
+  points change followed, which matches no ally request
+  waiting. The player's own requests cannot be helped by
+  the player; after the press their rows showed Time
+  reduced displays, as in the 0039 unit. The Help page
+  was left open; the Alliance panel behind it still
+  showed the Help entry without a waiting-request badge
+  change to verify beyond the header counter.
 
 ## Open questions
 
