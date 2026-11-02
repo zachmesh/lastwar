@@ -1,9 +1,9 @@
 ---
 title: Crystal Shop
 created: 2026-11-01T05:00:00Z
-modified: 2026-11-02T03:47:03Z
+modified: 2026-11-02T13:45:00Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: The Crystal Shop tab in the Store Building section - locating it, its collection mechanism and the daily crystal collection
 status: unlocated
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: system patch-notes mail of 2026-10-21, recorded in the mail-rewards metadata
   - source: miss audit of 2026-10-31, item 8
   - source: crystal-shop execution record 2026-11-01 1241 queue run (first executed unit, tab row read live)
+  - source: crystal-shop execution record 2026-11-02 0446 queue run
 ---
 
 
@@ -125,7 +126,63 @@ summary, with its age counted from 2026-10-25.
   age still counts from 2026-10-25.
 
 
+
+## What the 2026-11-02 0446 unit added
+
+- Unit crystal-shop-2026-11-01-0500 by ticker-0434, about 04:45
+  to 04:46, status partial, nothing claimed. Evidence in
+  `_records_/2026-11-02/crystal-shop/0446-queue-run.md`.
+  Delivery note, not a second hunt: this unit id was already in
+  the done pool from ticker-1234 on 2026-11-01, and this pass
+  claimed a stale copy still sitting in the local working-tree
+  inbox and re-ran the hunt. The ticker-1234 done file stands
+  untouched (records are append-only); this record is a
+  re-execution observation, not the unit first completion, and
+  it is folded here as confirmation, not as an independent
+  hunt.
+- Tab row re-confirmed exactly - shop opened from the base cart
+  icon at norm 940,85, confirming the 2017 grounding; the Mall
+  tab strip scrolled to its end (drag 800,125 to 300,125,
+  twice) reads in order: Official Event, Weekly Deal, Super
+  Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall, Hot Sale
+  Packs. No Building tab and no Crystal Shop tab exists in this
+  strip, matching the 1241 read tab for tab.
+- Diamond tab read, closing the 1241 follow-up first step -
+  diamond purchase packs only (10000 for 99 dollars 99, 5000
+  for 49 dollars 99, 2000 for 19 dollars 99, 1000 for 9 dollars
+  99, 500 and 100 below the fold), Initial Buy Reward double
+  diamonds banner. No Building sub-section inside it, and no
+  pack was tapped.
+- MALL header tap, closing the 1241 follow-up second step - a
+  tap on the top MALL header at norm 670,63 changed nothing; it
+  is a screen title, not a section switch.
+- Finding, stated not resolved by guesswork - the 2026-10-21
+  patch-notes lead says "Store, Building section", but that
+  section was not found under any Mall tab walked, so either
+  the section lives outside the Mall tab strip or the lead's
+  section naming does not match the current UI.
+- Not walked in this unit (time, and purchase surfaces) - Gold
+  Brick Mall and Hot Sale Packs tab contents, and any non-Mall
+  store surface. The one untried route from the 1241 follow-up
+  remains: whether the Building section sits outside the cart
+  shop, for example as a building panel on the base screen.
+  That is the next hunt's first route.
+- Issue 128 commented from this unit (its crystal-shop half was
+  claimed and run, but not located); the item remains open
+  under R5, age counted from 2026-10-25 (8 days at this run).
+- Back-arrow note from this unit's exit - the Mission screen
+  back-arrow centre is re-grounded at norm 62,941: taps at
+  101,941 and 163,947 both missed on that screen (the first
+  near the arrow right edge, the second in the dark margin
+  right of it). Back arrows differ per screen; do not inherit
+  one screen grounding. Folded in full in the daily-missions
+  and perception-scout profiles.
+
 ## Open questions
 
 - Everything about the tab itself - it has never been opened.
-- Whether the Building section sits outside the cart shop (base-screen building panel) or inside the Diamond tab's inner categories - the two routes the next unit tries, in that order after the Diamond read.
+- Whether the Building section sits outside the cart shop
+  (base-screen building panel) - the Diamond inner-category
+  route and the MALL header route are both closed negative by
+  the 0446 unit; the base-screen building route is the next
+  hunt's first route.
