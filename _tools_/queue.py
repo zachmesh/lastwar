@@ -41,6 +41,13 @@ Usage:
              # saw no executed closing, under stall_expired, so
              # the retro can triage stall-attributable expiries
              # instead of counting every expiry as ordinary.
+             # stats also reports the newest executed closing
+             # (newest_finished_at, newest_finished_age_minutes,
+             # evidence_stale over 180 minutes), so the round
+             # summary can tell a stalled pipeline from a quiet
+             # one without hand-reading records; the 3-hour
+             # active-window alert and its once-per-stall dedup
+             # stay the summary job clause (issue #129).
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: reap, then enqueue one
              # unit per regular the tracker marks due (idempotent);
@@ -256,6 +263,10 @@ NO_EXPIRY_SOFT_DEADLINE_HOURS = 2
 # a real window and stats names every stalled one, so no
 # owner-named unit ages in silence.
 STALLED_PRIORITY1_HOURS = 4
+EVIDENCE_STALE_MINUTES = 180  # issue #129: the round-summary
+# stall clause fires when the newest execution evidence is over
+# 3 hours old; the tool reports the age, the summary job owns
+# the active window and the once-per-stall alert.
 AGED_P1_WINDOW_HOURS = 4
 
 
@@ -1107,10 +1118,14 @@ def gather_stats(root):
               "stalled_priority1": [],
               "result_status": {}, "chains": {}, "upcoming": 0,
               "stats_incomplete": 0, "stats_incomplete_units": [],
-              "stall_expired": 0, "stall_expired_units": []}
+              "stall_expired": 0, "stall_expired_units": [],
+              "newest_finished_at": None,
+              "newest_finished_age_minutes": None,
+              "evidence_stale": False}
     durations = []
     reg_durations = {}
     executed_finishes = []
+    newest = None
     for f in list_units(root, "done"):
         result = f.get("result", {})
         if not isinstance(result, dict):
@@ -1146,6 +1161,10 @@ def gather_stats(root):
             result = f.get("result", {})
             if not isinstance(result, dict):
                 result = {}
+            if result.get("status") in EXECUTED_RESULT_STATUSES:
+                fin = parse_iso(result.get("finished_at", ""))
+                if fin is not None and (newest is None or fin > newest):
+                    newest = fin
             if state == "inbox" and expires and expires <= stamp:
                 report["expired_waiting"].append(f.get("unit"))
             if ((state == "done"
@@ -1214,6 +1233,11 @@ def gather_stats(root):
         est, samples = typical_minutes(root, regular)
         entry["est_typical_minutes"] = est
         entry["samples"] = samples
+    if newest is not None:
+        report["newest_finished_at"] = iso(newest)
+        age = int((stamp - newest).total_seconds() // 60)
+        report["newest_finished_age_minutes"] = age
+        report["evidence_stale"] = age > EVIDENCE_STALE_MINUTES
     report["stalled_priority1"].sort(key=lambda s: -s["age_hours"])
     report["stall_expired_units"].sort(
         key=lambda s: s["expires_at"])
@@ -1227,6 +1251,13 @@ def cmd_stats(args):
     elif args.format == "yaml":
         print("queue_stats:")
         print(f"  generated_at: {report['generated_at']}")
+        print(f"  newest_finished_at: "
+              f"{report['newest_finished_at'] or '-'}")
+        age = report["newest_finished_age_minutes"]
+        print(f"  newest_finished_age_minutes: "
+              f"{age if age is not None else 'null'}")
+        print(f"  evidence_stale: "
+              f"{str(report['evidence_stale']).lower()}")
         print("  by_state:")
         for k, v in report["by_state"].items():
             print(f"    {k}: {v}")
@@ -1276,6 +1307,15 @@ def cmd_stats(args):
         print(f"  results: " + (", ".join(
             f"{k} {v}" for k, v in report["result_status"].items())
             or "none"))
+        if report["newest_finished_at"] is None:
+            print("  newest executed closing: none on record")
+        else:
+            stale = (" (stale: over 3h without an executed closing)"
+                     if report["evidence_stale"] else "")
+            print(f"  newest executed closing: "
+                  f"{report['newest_finished_at']} "
+                  f"({report['newest_finished_age_minutes']} min ago)"
+                  f"{stale}")
         if report["stats_incomplete"]:
             print(f"  stats incomplete: {report['stats_incomplete']} "
                   f"({', '.join(report['stats_incomplete_units'])})")
