@@ -2521,3 +2521,14 @@ of 2026-10-28.
 ## 20:35 to 20:48 — Queue ticker pass, survivors (partial)
 
 - Survivors unit survivors-2026-11-01-1803, partial: the gate line was never verified after a base sweep (visual grounding timed out; pans went south past the base edge and north-east to the east wall; one tap on a non-responsive world icon at norm 249,641). No survivor processed, tracker untouched. Re-read pointer for the next unit: the 1644 run the same day located the gate survivor by grounding at ? bubble norm 460,632 / figure norm 458,678, gate at the bottom centre of the base — pan there, not north-east. Full detail in survivor-intake/2048-queue-run.md.
+- Integrator pass pr-integration-2026-11-01-2045.
+  Non-batch pass (checker _tools_/records_batch.py
+  reports not due, next batch point 23:00): merged
+  knowledge PR 145 (arms-race 1.18.0, donations 1.8.0,
+  resource-collection 1.6.0) and code PR 146
+  (stall-attributable expiry triage in queue.py stats,
+  Refs #133, PR link commented on issue #133, issue
+  stays open for the retro); records PR 142 left
+  awaiting the 23:00 batch (head a828513 at pass
+  start, 34adac34 at sweep). Local main synced to
+  c6002bcd. Full detail in pr-integration/2045-run.md.
