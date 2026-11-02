@@ -1,67 +1,67 @@
 {
+ "daily-missions": {
+  "at": "2026-11-01T14:49:44",
+  "note": "Claimed Help Allies, Trucks rows and 120 chest; activity 110 to 150",
+  "status": "done"
+ },
+ "donations": {
+  "at": "2026-11-01T11:32:46",
+  "note": "9 coin donations to Rallied HP",
+  "status": "done"
+ },
+ "events": {
+  "at": "2026-11-01T13:44:22",
+  "note": "Hub swept, nothing claimable",
+  "status": "done"
+ },
  "gifts": {
-  "status": "done",
   "at": "2026-11-01T17:19:08",
-  "note": "Regular 4 claimed, Premium 0 new"
+  "note": "Regular 4 claimed, Premium 0 new",
+  "status": "done"
+ },
+ "harvest": {
+  "at": "2026-11-01T23:54:03",
+  "note": "urgent full sweep done; all full bubbles collected incl 3 truck returns; drone bubble owner-collected 15:52 (executor miss, disclosed)",
+  "status": "done"
  },
  "help": {
-  "status": "done",
   "at": "2026-11-01T17:22:54",
-  "note": "Help All pressed, 1040/1000"
+  "note": "Help All pressed, 1040/1000",
+  "status": "done"
  },
- "star-ceremony": {
-  "status": "done",
-  "at": "2026-11-01T17:45:14",
-  "note": "No ceremony waiting; daily duel total unverified in inter-week calculating state"
- },
- "train": {
-  "status": "done",
-  "at": "2026-11-01T18:14:36",
-  "note": "No boarding banner, no train in preparation; checked only"
+ "mail": {
+  "at": "2026-11-01T13:20:55",
+  "note": "Alliance Exercise and Event train rewards claimed; other categories reports only",
+  "status": "done"
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-01T10:40:27",
-  "note": "Shop checked: all daily pickups already claimed, nothing new"
- },
- "events": {
-  "status": "done",
-  "at": "2026-11-01T13:44:22",
-  "note": "Hub swept, nothing claimable"
- },
- "treasures": {
-  "status": "done",
-  "at": "2026-11-01T14:20:54",
-  "note": "1 dig executed, fragments each -1, chest progress 2/15"
+  "at": "2026-11-01T22:21:18",
+  "note": "Coin pickup claimed, Free Supply auto claimed, Season Photo rewards gated Issue 154"
  },
  "radar": {
-  "status": "done",
   "at": "2026-11-01T11:20:15",
-  "note": "Stack execute 5 tasks unclaimed, pending rewards 11"
+  "note": "Stack execute 5 tasks unclaimed, pending rewards 11",
+  "status": "done"
  },
- "donations": {
-  "status": "done",
-  "at": "2026-11-01T11:32:46",
-  "note": "9 coin donations to Rallied HP"
- },
- "mail": {
-  "status": "done",
-  "at": "2026-11-01T13:20:55",
-  "note": "Alliance Exercise and Event train rewards claimed; other categories reports only"
- },
- "daily-missions": {
-  "status": "done",
-  "at": "2026-11-01T14:49:44",
-  "note": "Claimed Help Allies, Trucks rows and 120 chest; activity 110 to 150"
- },
- "harvest": {
-  "status": "done",
-  "at": "2026-11-01T23:54:03",
-  "note": "urgent full sweep done; all full bubbles collected incl 3 truck returns; drone bubble owner-collected 15:52 (executor miss, disclosed)"
+ "star-ceremony": {
+  "at": "2026-11-01T21:54:11",
+  "note": "No ceremony waiting; duel total 791250/3600000",
+  "status": "done"
  },
  "survivors": {
-  "status": "done",
   "at": "2026-11-01T16:44:56",
-  "note": "One gate survivor processed, gate line clear"
+  "note": "One gate survivor processed, gate line clear",
+  "status": "done"
+ },
+ "train": {
+  "at": "2026-11-01T21:50:47",
+  "note": "Already aboard carriage 2; dialog closed unspent",
+  "status": "done"
+ },
+ "treasures": {
+  "at": "2026-11-01T14:20:54",
+  "note": "1 dig executed, fragments each -1, chest progress 2/15",
+  "status": "done"
  }
 }
