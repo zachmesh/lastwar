@@ -2103,3 +2103,18 @@ of 2026-10-28.
   Blocker: the Secret Command Post back arrow resisted three
   background-click variants and the panel was left open.
   Full detail in daily-activities/1757-queue-run.md.
+
+## 17:45 to about 17:55 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1745. Three
+  open PRs at pass start: PR 137 (duel-score tracking)
+  re-reviewed after its _logs_ fix and merged (squash
+  ed9cb643), PR 138 (five activity profiles) reviewed
+  clean and merged (squash 074fc77e), and records PR
+  117 held for the 19:00 batch (non-batch pass: the
+  _tools_/records_batch.py checker reports not due).
+  Issue #136 commented with the PR 137 link, not
+  closed. Local main fast-forwarded b3fdf57f to
+  074fc77e via the bundle route. End-of-pass sweep:
+  only PR 117 open, decided under the batch exception.
+  Full detail in pr-integration/1745-run.md.
