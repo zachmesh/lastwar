@@ -2244,3 +2244,18 @@ of 2026-10-28.
   (2026-11-02) both CLEAN and MERGEABLE and await the
   1500 batch (checker _tools_/records_batch.py: not due,
   next batch 15:00). Full detail in pr-integration/1319-run.md.
+
+## 13:07 to 13:25 - Queue ticker pass, trucks partial
+
+- Trucks unit trucks-2026-11-02-1057, partial: Trade
+  Count 5 of 5 already full, no settlement pending, no
+  dispatch. Plunder 2 of 4 to 3 of 4: one Quick Plunder
+  against SSR #2092 [OOPz]hawk237 (Lv.25, guard 5.5M)
+  won by Squad 1 (25.12M), yielding iron 505.5K, food
+  505.5K, coin 324.0K and Extra UR shards x3 - the full
+  leftmost shard stack dropped. Two earlier targets
+  passed for carrying no visible shard stack (UR #2088
+  [OFAJ], SSR #2088 [4017]). Plunder shortfall 1
+  remains for the next trucks unit, raised to priority
+  1 under rule R3. Full detail in
+  truck-plunder/1325-queue-run.md.
