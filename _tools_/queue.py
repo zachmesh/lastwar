@@ -34,6 +34,9 @@ Usage:
   queue.py [--root DIR] token-release --executor NAME
   queue.py [--root DIR] reap                      # expired leases to inbox
   queue.py [--root DIR] stats [--format text|yaml|json]
+             # stats names stalled priority-1 inbox units
+             # (age over 4h) under stalled_priority1, for the
+             # round summary to name instead of staying silent.
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: reap, then enqueue one
              # unit per regular the tracker marks due (idempotent);
@@ -236,6 +239,13 @@ def list_units(root, state):
 #   hard deadline.
 AGING_STEP_HOURS = 2
 NO_EXPIRY_SOFT_DEADLINE_HOURS = 2
+# Aged priority-1 escalation (issue #128): an inbox unit at
+# priority 1 that has waited longer than STALLED_PRIORITY1_HOURS
+# without being claimed is stalled - sync gives unscheduled ones
+# a real window and stats names every stalled one, so no
+# owner-named unit ages in silence.
+STALLED_PRIORITY1_HOURS = 4
+AGED_P1_WINDOW_HOURS = 4
 
 
 def pick_key(fields, now=None):
@@ -339,6 +349,59 @@ def write_new_unit(root, fields, regular):
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
 
 
+def _window_aged_priority1(root):
+    """Attach a real window to aged unscheduled priority-1 inbox
+    units (issue #128 fix 1). The windowed execution path keys on
+    planned_for windows, so a unit produced without one - the
+    owner-named crystal-shop and glittering-market units - is
+    bypassed indefinitely even though queue.py next already sorts
+    it first. Giving it planned_for=now, an empty not_before and a
+    4 hour expiry puts it inside the windowed path and, if it
+    still is not executed, makes it surface as an expired miss
+    instead of aging silently. Idempotent: a unit with a
+    planned_for is never touched again, and the (regular,
+    planned_for) invariant is respected. Returns the units
+    windowed."""
+    stamp = now_utc()
+    planned_iso = iso(stamp)
+    taken = {(f.get("regular"), f.get("planned_for"))
+             for state in STATES for f in list_units(root, state)
+             if f.get("planned_for")}
+    windowed = []
+    for f in list_units(root, "inbox"):
+        unit = f.get("unit")
+        if not unit or f.get("planned_for"):
+            continue
+        try:
+            priority = int(f.get("priority", 3))
+        except (TypeError, ValueError):
+            continue
+        if priority != 1:
+            continue
+        created = parse_iso(f.get("created_at", ""))
+        if created is None:
+            continue
+        if (stamp - created).total_seconds() <= \
+                STALLED_PRIORITY1_HOURS * 3600:
+            continue
+        if (f.get("regular"), planned_iso) in taken:
+            continue
+        state, path = find_unit(root, unit)
+        if state != "inbox" or path is None:
+            continue
+        fields, body = read_unit(path)
+        if fields.get("planned_for"):
+            continue
+        fields["planned_for"] = planned_iso
+        fields["not_before"] = ""
+        fields["expires_at"] = iso(
+            stamp + timedelta(hours=AGED_P1_WINDOW_HOURS))
+        write_unit(path, fields, body)
+        taken.add((f.get("regular"), planned_iso))
+        windowed.append(unit)
+    return windowed
+
+
 def cmd_sync(args):
     # 1. reap expired claims and expire stale inbox units
     reaped = _reap_claimed(args.root)
@@ -369,9 +432,14 @@ def cmd_sync(args):
             produced.append(unit)
         else:
             already.append(item["id"])
+    # 4. window aged unscheduled priority-1 units (issue #128) -
+    #    runs every tick, so the next tick after the 4 hour mark
+    #    windows the unit instead of letting it age further.
+    aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"reaped": reaped, "expired": expired,
                       "due": len(due_items), "produced": produced,
-                      "already_queued": already},
+                      "already_queued": already,
+                      "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
     return 0
 
@@ -897,6 +965,7 @@ def gather_stats(root):
     report = {"generated_at": iso(stamp),
               "by_state": {}, "by_regular": {}, "durations_seconds": {},
               "late": [], "expired_waiting": [], "overdue_claims": [],
+              "stalled_priority1": [],
               "result_status": {}, "chains": {}, "upcoming": 0,
               "stats_incomplete": 0, "stats_incomplete_units": []}
     durations = []
@@ -927,6 +996,20 @@ def gather_stats(root):
                 result = {}
             if state == "inbox" and expires and expires <= stamp:
                 report["expired_waiting"].append(f.get("unit"))
+            if state == "inbox":
+                try:
+                    prio = int(f.get("priority", 3))
+                except (TypeError, ValueError):
+                    prio = 3
+                created = parse_iso(f.get("created_at", ""))
+                if prio == 1 and created is not None and \
+                        (stamp - created).total_seconds() > \
+                        STALLED_PRIORITY1_HOURS * 3600:
+                    report["stalled_priority1"].append({
+                        "unit": f.get("unit"),
+                        "age_hours": round(
+                            (stamp - created).total_seconds() / 3600.0, 1),
+                        "planned_for": f.get("planned_for", "")})
             if state == "claimed":
                 lease = parse_iso(f.get("lease_until", ""))
                 if lease and lease <= stamp:
@@ -969,6 +1052,7 @@ def gather_stats(root):
         est, samples = typical_minutes(root, regular)
         entry["est_typical_minutes"] = est
         entry["samples"] = samples
+    report["stalled_priority1"].sort(key=lambda s: -s["age_hours"])
     return report
 
 
@@ -994,6 +1078,11 @@ def cmd_stats(args):
                   f"avg {d['avg']}, max {d['max']}")
         for key in ("late", "expired_waiting", "overdue_claims"):
             print(f"  {key}: [{', '.join(report[key])}]")
+        if report["stalled_priority1"]:
+            print("  stalled_priority1:")
+            for s in report["stalled_priority1"]:
+                print(f"    - {s['unit']} age_hours {s['age_hours']} "
+                      f"planned_for {s['planned_for'] or '-'}")
         print("  by_regular:")
         for reg, counts in sorted(report["by_regular"].items()):
             print(f"    {reg}: inbox {counts['inbox']}, "
@@ -1028,6 +1117,10 @@ def cmd_stats(args):
                            ("overdue_claims", "claims past lease")):
             if report[key]:
                 print(f"  {label}: {', '.join(report[key])}")
+        if report["stalled_priority1"]:
+            print("  stalled priority-1: " + ", ".join(
+                f"{s['unit']} ({s['age_hours']}h)"
+                for s in report["stalled_priority1"]))
         for reg, counts in sorted(report["by_regular"].items()):
             extra = ""
             if counts["failed"]:
