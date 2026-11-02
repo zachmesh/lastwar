@@ -943,3 +943,36 @@ of 2026-10-28.
   0 withdrawals. Live pool by_state: inbox 56, claimed 0,
   done 573, upcoming 52. Full detail in
   queue-planning/0540-run.md.
+
+- Perception scout unit scout-scout-2026-10-31-001,
+  done: stale post-reset events group executed late -
+  all four Events hub pages read live (Arms Race Hero
+  Advancement 40,500 rank #2110 timer 00:22:12, Desert
+  Storm Battlefield registration 2d 12:22:01, Wanted
+  Boss Code 87 Go 11:21:52, Community 500 Claimed),
+  no Zombie Invasion tab, tab-strip leftmost icon tab
+  resolved as Arms Race (unknown from 0441 closed),
+  no unexplained hub dots. No successor enqueued;
+  remaining groups belong to scout-midday-2026-11-02-0700.
+  Full detail in perception-scout/0539-queue-run.md.
+
+- Alliance donations unit donations-2026-11-02-0354,
+  partial: 8 coin donations to Garrison Defense
+  (count read live 8/30 down to 1/30, 6,400 coin),
+  closing 0/30 not read live as the button greyed on
+  a 00:09:54 timer; tracker untouched, re-read unit
+  donations-2026-11-02-1344 enqueued for after the
+  timer. Count replenishment (0 at 02:59 to 8/30 at
+  05:41) filed as Issue #174, noted as duplicate of
+  Issue #160 with new evidence commented there.
+  Full detail in alliance-donations/0545-queue-run.md.
+
+- Alliance donations unit donations-2026-11-02-0748,
+  partial: re-read of the Rallied HP panel found the
+  node upgrading (Upgrade Countdown 07:28:29, no
+  donation interface and no count offered); Confirm
+  not tapped, no donations in this unit, tracker
+  untouched, no new re-read unit (1344 already
+  covers the post-timer check). War tree top tier
+  (Rallied row) is reached by scrolling the tree up.
+  Full detail in alliance-donations/0547-queue-run.md.

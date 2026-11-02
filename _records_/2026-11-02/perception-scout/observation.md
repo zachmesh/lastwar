@@ -164,3 +164,53 @@ here as scout observations.
 - Carried unwalked: scout-alliance group, to the chain
   successor.
 - unmatched_labels: none in the surfaces actually walked.
+
+## Pass scout-2026-10-31-1900 (stale chain remainder), unit ticker-0534, group scout-events (done)
+
+Stale post-reset chain head from 2026-10-31 19:00, executed
+2026-11-02 about 05:35 to 05:39 local. Observe-only; nothing
+claimed, fought, dispatched, donated, signed up for, or
+bought. Full unit record at `perception-scout/0539-queue-run.md`.
+
+### Events hub, all four pages read live
+
+- Arms Race: phase Hero Advancement, Contest Segment
+  Lv.29-30, timer 00:22:12, personal score 40,500,
+  rank #2110 [AP3x]Bears Lair, chest thresholds
+  2,000 / 4,000 / 12,000. Unchanged score and rank from
+  the 0441 read at 04:41 the same morning.
+- Desert Storm Battlefield: registration ends in
+  2d 12:22:01, Task Force A and B, limited to Top 32
+  Power ranked Alliances, Sign Up not tapped.
+- Wanted Boss: Code 87, appears at server time
+  00:00, Tank heroes extra damage, 1-attack rewards
+  shown, Go timer 11:21:52, Go not tapped.
+- Community: 200 Diamonds visit bonus, 500 Diamonds
+  Discord-link bonus after HQ Lv.8, 500 shown as
+  Claimed, no social link tapped.
+- Tab strip verified at both ends: Arms Race, Desert
+  Storm Battlefield, Wanted Boss, Community. No fifth
+  page, no Zombie Invasion tab; no fresh zombie chain
+  seeded.
+- Resolved unknown from 0441: the tab-strip leftmost
+  icon tab is Arms Race (label revealed by a strip
+  drag, page confirmed by tap).
+- Navigation note: a tap at the stale 0441 Events point
+  [895,142] hit the Gold Tank building in this panned
+  base view; tapping empty road at [400,700] restored
+  the UI and the Events icon re-grounded at [935,168]
+  opened the hub. Re-ground on the current capture
+  after a base pan.
+
+### Red dot accounting for this section
+
+- Seen 3: Arms Race dot, Wanted Boss dot, base
+  Events badge 1 (hub roll-up of the two).
+- Explained 3 in that roll-up sense; no unexplained
+  hub dot remains.
+- Unknown items: none in the surfaces walked.
+- Carried unwalked: none from this unit; remaining
+  groups of the current reset day belong to
+  scout-midday-2026-11-02-0700, already in inbox, so
+  no successor unit is enqueued (no duplication).
+- unmatched_labels: none in the surfaces walked.
