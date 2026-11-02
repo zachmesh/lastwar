@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T02:49:21Z
+modified: 2026-11-02T06:40:55Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1039 passes unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1340 passes unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1843 passes unit)
+  - source: ticker-2212 passes execution record 2026-11-01 2220 queue run
 ---
 
 
@@ -266,6 +267,70 @@ the free and already paid for parts, never the paid unlocks.
   the S2 Drone Components Weekly Pass $4.99 offer was
   likewise not tapped.
 
+
+## What the 2026-11-01 2220 unit added
+
+- Unit passes-2026-11-01-1857 by ticker-2212, session about
+  22:11 to 22:20, status done. Tracker marked done. Every
+  claimable shop item for this slot is claimed or already
+  claimed; no diamonds or money spent, no paid button
+  tapped. Game left on the base screen.
+- Coin Weekly Pass blocker resolved: Weekly Pass, Coin
+  Weekly Pass (Elite), Remaining 1d 19:44 at entry - Daily
+  Pickup claimed. The Claim button that was unresponsive
+  through three grounded taps plus a card-body pivot in
+  the 1843 unit answered on the first tap of this unit at
+  the fresh measured centre [841,664] (R2 changed method:
+  the 1843 points were [790,640], centre [840,652] and
+  [815,648]; the working point sits lower, near the
+  button's bottom edge). The Congratulations panel paid
+  coin items x3, and the button then read Already claimed
+  today. The 1843 follow-up rule is therefore discharged:
+  this is not a third consecutive blocked unit, and the
+  entry-route change (fresh measured centre, lower near
+  the bottom edge) is recorded here. The Renew $4.99
+  button was not tapped.
+- Free Supply auto claim: on dismissing the Coin panel, a
+  second Congratulations panel followed at once: "Free
+  rewards have been automatically claimed", ruby x10 and
+  iron x4. Note the contents differ from the 1843 auto
+  claim (chest x1 and ruby x10) - the auto-claim contents
+  vary by slot, and no refresh rule is derived from the
+  pair.
+- Hot Deals: only the external-store promo ("Visit the
+  Last War Store for more rewards!", 1000 points card).
+  No free pack showing, nothing to claim - consistent
+  with the 1340 promo-only read, against the 1843 free
+  pack claim; whether the pack rotates stays open.
+- Super Monthly Pass: Monthly Pass, Squad 4 Lv.20, Days
+  Left 20, Rewards Left 20, button reads Claimed. Nothing
+  new to claim. The $24.99 Monthly Pass Extension button
+  was not touched. Note: the 1843 tension (1340 read
+  Claimed at 13:55 yet a claimable gift present at 18:35)
+  is not re-tested here - the button reads Claimed with
+  nothing new, so the refresh rule stays unrecorded.
+- Season hub discovery: the Season hub no longer shows
+  the Season Battle Pass or Season Weekly Pass tiles
+  recorded on 2026-10-25; it holds only a "Calculating."
+  card (6d 18:39 left) and a Season Photo card (6d 19:39
+  left, red badge 1). The hub page does not scroll.
+  Season Photo page (Alliance Photo tab, #2110 [AP3x]
+  The Apex, Season S2 11/2/2026, empty frame) - Rewards
+  panel: "Edit and save your group photo 1 time(s)" for
+  100 red diamonds and "Post 1 message(s) in the
+  alliance message board" for 100 red diamonds, both Not
+  Achieved, Claim All greyed. Achieving either is an
+  alliance-facing action, so under the recording rules
+  it needs owner approval first and was not done in this
+  unit. Filed as GitHub Issue #154 (owner-decision) for
+  the owner to decide. The Season Photo red badge is
+  therefore explained, not a missed shop claim. This
+  supersedes any reading of the Season hub tiles from
+  2026-10-25 as current - those tiles are gone.
+- Red lines held: the Legendary row Take All $19.99 was
+  never tapped, and the S2 Drone Components Weekly Pass
+  $4.99 Get Now offer was not tapped (a purchase offer,
+  not a claim).
 ## Open questions
 
 - Whether the free Hot Deals pack rotates its contents by day.

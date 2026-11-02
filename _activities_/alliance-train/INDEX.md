@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T02:44:38Z
+modified: 2026-11-02T06:38:16Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: owner task request naming a train task, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1325 train unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1813 train unit)
+  - source: ticker-2142 train execution record 2026-11-01 2149 queue run
 ---
 
 # Alliance train
@@ -258,6 +259,56 @@ Measured in the 0110 train unit (ticker-0104, window mode
   touched.
 
 
+
+## What the 2026-11-01 2149 unit added
+
+- Unit train-2026-11-01-1830 by ticker-2142, session about
+  21:43 to 21:49, status done as checked and already boarded.
+- Base screen inspected: no "Boarding closes in" banner under
+  the resource bar, and the station check was still made -
+  reinforcing the 1325 qualification that banner absence
+  alone does not prove no train is in preparation.
+- Left-column train icon tapped: the camera panned to the
+  station at the base edge, showing a yellow train with a
+  plus bubble and a station countdown of 00:20:42 at first
+  sight. This qualifies the 1813 note: in the 1813 no-train
+  state the left-column tap opened the trucks view, while
+  here, with a train in preparation, the train icon entry
+  reached the station - so the entry icon's presence follows
+  the train state, and a no-train tap result does not rule
+  out a train-icon entry when a train is preparing.
+- The map plus bubble was tapped, which played a train
+  animation ("Tap the screen twice to skip"); skipping it
+  opened the STATION PLATFORM with a THANK THE CONDUCTOR
+  dialog already open (quantity 1, Trade Contract stock
+  163). No button of that dialog was tapped: it was closed
+  with its X, so no contract was gifted and no seat was
+  taken by this unit.
+- Platform read live: departure countdown 00:19:30 falling
+  to 00:16:09 during the check, Train Rating 70,850. No
+  conductor name is recorded for this train in the unit
+  record. Carriage occupancies top to bottom: carriage 1
+  at 9/7 with a plus button, carriage 2 at 21/7 with no
+  plus button, carriage 3 at 13/7 with a plus button,
+  carriage 4 at 15/7 with a plus button. All four
+  occupancies exceed the 7 denominator, strengthening the
+  standing note that the denominator is not a hard cap
+  (previously carriage 4 at 10/7 in the 0110 unit).
+- Carriage 2 verified as the account's own seat by a new
+  check: where the other carriages carry a plus button,
+  carriage 2 carries a framed scenic picture, and tapping
+  the small round avatar badge at that picture's lower
+  right opened MY PROFILE for Lv.30 [AP3x]Bears Lair
+  (149.2M power, VIP 13, [AP3x]The Apex). The
+  avatar-badge-to-own-profile tap is now the verified
+  boarded-state check, stronger than the 0110 portrait
+  tooltip. No second boarding was attempted, and no
+  carriage other than 2 was touched.
+- MY PROFILE was closed with its X and the platform back
+  arrow returned the game to the base screen, verified by
+  the resource bar and total power 149,288,895.
+- Nothing boarded, no Trade Contracts spent, no train
+  summoned, no conductor role taken.
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like

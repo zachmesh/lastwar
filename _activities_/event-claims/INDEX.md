@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T22:40:43Z
+modified: 2026-11-02T06:38:16Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: owner correction on 2026-10-26 - a bouncing chest on the Events screen is an unclaimed reward signal, and the three Arms Race point chests are not all of its rewards
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1055 events unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1348 events unit)
+  - source: ticker-2142 events execution record 2026-11-01 2200 queue run
 ---
 
 
@@ -262,6 +263,61 @@ that drag is the sweep-completeness check, not wasted motion.
   all six Reward tiles show green checks. The Challenge
   button is active play, not a claim, and was not tapped.
 
+
+## What the 2026-11-01 2200 unit added
+
+- Unit events-2026-11-01-1857 by ticker-2142, session
+  about 21:55 to 22:00, status partial. Four hub pages
+  were checked and nothing was claimable on them; the
+  remaining hub tabs were not reached before the pass
+  budget ended, so the sweep is incomplete and the
+  tracker is untouched.
+- Events hub opened from the base Events icon (red 1
+  badge). Arms Race, Base Building stage, Contest
+  Segment Lv.29-30, timer 00:04:19 at first sight:
+  account score 0, chest thresholds 6,250, 12,500 and
+  30,000 all unreached. Noted only; Arms Race is its own
+  unit type and nothing was ground or claimed here.
+- Desert Battlefield page: registration ends in 2d
+  20:03:46, Task Force A and B, Sign Up button. This is
+  an alliance-level registration with nothing personal
+  to claim, so Sign Up was left untouched - consistent
+  with the 2026-10-25 registration-only read.
+- Wanted Boss page: Code 87, appears at server time
+  00:00, Go button countdown 19:03:22 at first sight, so
+  the boss is not out. The 1-attack reward list is a
+  future payout, not a claim. Its tab carries a red dot
+  that survived the visit, so the Rewards subpage was
+  opened: it holds only the Ranking Reward table (No.1,
+  No.2, No.3, No.4 to 10) with no claim button. Lesson:
+  a surviving Wanted Boss red dot does not by itself
+  prove a claim - the Rewards subpage must be opened
+  and can prove to hold only a ranking table. No claim
+  exists on this page at this check.
+- Community page: the Discord binding reward reads
+  Claimed (500 diamonds), so nothing new is claimable
+  there - unchanged across every 2026-11-01 sweep.
+- Tab-bar method note: the tab bar scrolls sideways;
+  two drags moved it as far as Community, and the tabs
+  beyond Community (Level Swap and Winter Battlefield
+  in earlier hub listings) were not opened in this unit.
+  A sweep that stops at Community is incomplete by the
+  standing rule, not a full sweep.
+- Closing navigation lesson: the Rewards panel closed
+  cleanly with its X back to Wanted Boss, but the Events
+  panel back arrow then produced no observed change, so
+  the game was left on the Wanted Boss page in the
+  Events hub. The next executor should expect to start
+  there, not on the base screen - the same start-state
+  rule as the 1813 train unit's trucks-view close.
+- Incidental train note, not a train action: a base
+  "Boarding closes in" banner was visible behind the hub
+  during this unit (00:01:44 falling to 00:00:45); the
+  train unit of this same pass already confirmed the
+  account aboard carriage 2, so no train action was
+  taken here.
+- Nothing claimed, nothing spent, no paid button tapped,
+  no Sign Up tapped, no Level Swap executed.
 ## Open questions
 
 - Which recurring events hold claims that expire unclaimed.
