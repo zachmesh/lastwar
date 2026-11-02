@@ -2023,3 +2023,32 @@ of 2026-10-28.
   for the 19:00 batch. Issue triage: 16 open, all labeled;
   owner-decision issue 132 is current and under one hour old.
   Full detail in pr-catchall/1739-run.md.
+## 17:32 to about 17:50 — Knowledge organization pass
+
+- Knowledge-organization run knowledge-organization-2026-11-01-1732,
+  worked from the 1632 watermark. Own PRs 127 and 134 stand MERGED
+  with no comments or reviews, so no owned-PR feedback was owed;
+  open PR 137 (catchall) and PR 117 (integrator) were not taken over.
+  Open knowledge Issues 118-122, 124 and 131 were checked; none is
+  resolved by these records and none was closed.
+- Profiles updated, PR 138 (Owner lastwar-knowledge-organizer,
+  verified OPEN): survivor-intake 1.8.0 to 1.9.0 (1644 done breaks
+  the 25-partial streak; figure tap 458,678, question-mark to smiley,
+  gate clear; dialog survivor with no post, so no Quick Dispatch gap);
+  troop-training 1.4.0 to 1.5.0 (1651 partial; south of the vehicle
+  lots ruled out to the map south edge; Drill Ground Full carried
+  forward unverified a fourth consecutive unit); alliance-gifts 1.5.0
+  to 1.6.0 (1718 done, 4 Regular dialog-confirmed, 0 Premium new;
+  entry correction 929,688 / 313,621; progress delta not attributed
+  to the 4 gifts); alliance-help 1.8.0 to 1.9.0 (1722 done, header
+  1,040 of 1,000, all requests own, Help All pressed anyway, grateful
+  toast); mail-rewards 1.3.0 to 1.4.0 (1730 partial; category list
+  corrected in place to Battle Report, Alliance, Event, Season,
+  System, Regular, In-app Purchases).
+- Contradictions resolved: 2 (survivor streak now history; mail rail
+  corrected in place). Gaps filed: 0. Observed: the pr-integration
+  1730 commit reverted the ticker-1704 records from the tip via a
+  shared-tree race, and repair commit 76e069b1 already restored them
+  before this run folded them; PR 137's _logs_ feedback was fixed by
+  the tool-development 1742 pass, not by this job. Full detail in
+  knowledge-organization/1732-run.md.
