@@ -2451,3 +2451,16 @@ of 2026-10-28.
   End-of-pass sweep: PR 142 only, decided under the
   batch exception. Full detail in
   pr-integration/2015-run.md.
+
+## 20:06 to 20:17 — Queue ticker pass, harvest (partial)
+
+- Harvest unit harvest-2026-11-01-1803, partial: the first tap on
+  the centre bubble cluster cleared the 5 visible base bubbles in
+  one tap, iron 18.7M to 19.1M, food 353.1M and coin 30.1M unchanged.
+  A second tap selected the Titanium Alloy Factory No.3 panel
+  instead of collecting, with no verified gain. East and west pans
+  showed no further clear bubble; one far-left-edge shape was left
+  untapped as indistinguishable from UI widgets, and the bottom
+  Season 2 area and the Armed Truck were not checked, so the
+  full-map zero-remaining acceptance is not met. Tracker untouched.
+  Full detail in resource-collection/2006-queue-run.md.
