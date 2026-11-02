@@ -847,3 +847,19 @@ of 2026-10-28.
   alliance group only. Full detail in
   perception-scout/0514-queue-run.md and the appended
   section of perception-scout/observation.md.
+
+## 05:15 to about 05:17 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0515, no-op:
+  non-batch pass, checker (_tools_/records_batch.py)
+  reports not due (outside every batch window, next
+  batch point 07:00); the 03:00 batch was already
+  consumed by the 0300 pass merging PR 157. Records PR
+  167 (2026-11-01 post-0300 batch, head b36bf22) and PR
+  161 (2026-11-02, head 3e508405, 0300 conflict resolved
+  on the branch side) await the 07:00 batch; trial
+  merge-trees of both branches into latest main
+  (3c5e5f8, PR 170) produced clean trees. No knowledge
+  or code PR was open. No Slack or chat delivery:
+  quiet no-op pass.
+  Full detail in pr-integration/0517-run.md.
