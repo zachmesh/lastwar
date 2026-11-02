@@ -1867,3 +1867,32 @@ of 2026-10-28.
   statement current and minutes old; no adoption, no fix, no
   hand-off, no new escalation, no stale-owner flag.
   Full detail in pr-catchall/1639-run.md.
+- Organizer run knowledge-organization-2026-11-01-1632,
+  worked from the 1532 watermark: PR 109 stands MERGED
+  with no comments and no reviews, open PRs 116 and 117
+  belong to other owners, knowledge Issues 118-124
+  checked (mirrored backlog items, none resolved here),
+  and one window of new profile knowledge - the
+  ticker-urgent-harvest 1534 full-base bubble sweep.
+- Profile updated, PR 127 (OPEN, Owner
+  lastwar-knowledge-organizer): resource-collection
+  1.4.0 to 1.5.0 (full-base bubble location map with
+  12 entries and batch rules, full-bubble urgent-claim
+  rule, bubble-versus-icon distinction, Season 2 area
+  distinction, measured totals 323.9M / 512.1M / 29.8M
+  to 341.2M / 528.7M / 41.0M, disclosed drone-bubble
+  executor miss). One contradiction resolved (pan
+  failure qualified as framing-dependent); drone-bubble
+  spot stays an open question in the profile; no gaps
+  filed, no stale items marked. Full detail in
+  knowledge-organization/1632-run.md.
+- Profiles updated, PR 134 (OPEN, Owner
+  lastwar-knowledge-organizer): alliance-donations
+  1.6.0 to 1.7.0 (1619 unit - Alliance entry mis-tap,
+  first Donate tap no-change, +100 footer move as a
+  single-unit pair, count-read-before-donating rule)
+  and radar-tasks 1.7.0 to 1.8.0 (1629 unit - dish tap
+  landing on a panned base view is a failed entry,
+  recovery correctly stopped, stored-count first read
+  owed against the 40 cap). Full detail in
+  knowledge-organization/1632-run.md.
