@@ -263,6 +263,18 @@ of 2026-10-28.
   with all zero counts, 0 withdrawals. Pool inbox 63, claimed
   1, done 546, upcoming 51. Full detail in
   queue-planning/0140-run.md.
+## 02:40 to about 02:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-0240. Staged 11
+  units (already_present 55, skipped_done_current 3,
+  reaped 0, expired 0): mail, help, gifts, train and
+  star-ceremony for 14:30, harvest, radar, survivors,
+  training, donations and arms-race for 14:03.
+  Tonight's pre-reset sweep pair already in inbox, scout
+  diff on the 2026-11-01 observation applied with all zero
+  counts, 0 withdrawals. Pool inbox 71, claimed 1,
+  done 549, upcoming 51. Full detail in
+  queue-planning/0240-run.md.
 ## 01:45 to about 01:52 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-02-0145.
