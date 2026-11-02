@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-02
 created: 2026-11-02T08:16:00Z
-modified: 2026-11-02T08:16:00Z
+modified: 2026-11-02T08:41:32Z
 level: L0
 version: 1.0.0
 description: The 0004 queue ticker pass, survivor intake check
@@ -44,6 +44,29 @@ of 2026-10-28.
   open. Nothing merged, commented or escalated.
   Full detail in pr-integration/0030-run.md.
 
+## 00:32 to about 00:42 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-02-0032,
+  worked from the 2332 watermark. Own PR 158 stands
+  MERGED with no comments and no reviews, so no owned
+  PR feedback was addressed. New knowledge Issue #160
+  (Donation Count replenishes) folded here; #118-#122,
+  #124 and #131 still open, none resolved by these
+  records. Six profiles updated via PR 162 (Owner
+  lastwar-knowledge-organizer): donations 1.8.0 to 1.9.0
+  (2348 replenishment scale, Issue #160 measurement
+  still owed), gifts 1.7.0 to 1.8.0 (45 Regular and 5
+  Premium, title-bar 30-pixel offset correction),
+  survivors 1.10.0 to 1.11.0 (second partial since the
+  1644 done, 1644 pointer tested not tapped),
+  training 1.6.0 to 1.7.0 (east pan ruled out,
+  recurrence commented onto #150), harvest 1.6.0 to
+  1.7.0 (four-bubble cluster, third same-day instance),
+  duel 1.11.0 to 1.12.0 (sixth consecutive plan staging
+  no duel-score unit). Contradictions resolved: 1
+  (donations fixed-pool model superseded by the 2348
+  live read). Full detail in
+  knowledge-organization/0032-run.md.
 ## 00:39 to about 00:41 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-02-0039. No-op: no
