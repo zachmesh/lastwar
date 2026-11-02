@@ -2575,3 +2575,48 @@ of 2026-10-28.
   PR 142 left awaiting the 23:00 batch; no merges, no
   comments, no escalations. Full detail in
   pr-integration/2130-run.md.
+## 21:07 to 21:20 — Queue ticker pass, troop training (partial)
+
+- Training unit training-2026-11-01-1803, partial: one
+  different-device dialog handled under the owner rule (Confirm
+  tapped once, app relaunched, no login demanded, no second
+  dialog). No barracks panel opened, no batch queued, no Drill
+  Ground screen read, nothing claimed. Visual grounding timed
+  out and was not retried; scroll gestures did nothing, drag
+  pans mapped (down = south, up = north). South and north map
+  edges both checked and ruled out for the barracks tents; the
+  dense red-roofed formation of the opening screenshot lies
+  further east or north-east, unreached. Tracker untouched.
+  Full detail in troop-training/2120-queue-run.md.
+
+## 21:16 to 21:22 — Queue ticker pass, alliance gifts (done)
+
+- Gifts unit gifts-2026-11-01-1830, done: Claim All on both
+  tabs, 221 Regular plus 70 Premium, each confirmed by its
+  summary dialog. Gift Level 28 progress 179,652,510 to
+  179,664,120 of 206,300,000. One mis-tap opened Alliance Wars
+  and was left at once via the back arrow; the Premium Claim
+  All sits right-shifted beside the name-hiding checkbox, not
+  centred like the Regular one. Closing verification read both
+  tabs clear with no red dot. Full detail in
+  alliance-gifts/2122-queue-run.md.
+
+## 21:23 to 21:27 — Queue ticker pass, alliance help (done)
+
+- Help unit help-2026-11-01-1830, done: Help All pressed.
+  Header read 80 of 1,000 before and after; all visible
+  requests were the account's own (Bears Lair: Lv.30 Aircraft
+  Center, Morale, Precision Targeting II, Lv.28 Drill Ground),
+  reading 30/30 after the tap. No ally request was waiting.
+  Full detail in alliance-help/2127-queue-run.md.
+
+## 21:26 to 21:31 — Queue ticker pass, mail rewards (partial)
+
+- Mail unit mail-2026-11-01-1830, partial: the mail screen
+  was never reached. After closing the Help dialog, the
+  Alliance panel's back arrow took three no-change taps
+  (55,964 then 97,964 twice, last after a fresh activate) and
+  the panel stayed open, so background input was stopped
+  under rule R2 instead of repeated. Nothing claimed, Delete
+  All never touched, tracker untouched. Full detail in
+  mail-rewards/2131-queue-run.md.
