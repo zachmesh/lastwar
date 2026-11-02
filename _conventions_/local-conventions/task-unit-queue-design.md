@@ -309,6 +309,13 @@ Production has two layers (owner direction 2026-10-28).
   due (work that appeared between planner runs, manual tracker
   changes), through the same invariant, so the two producers can
   never double-stage.
+- Aged unscheduled priority-1 units (issue #128 - owner-named
+  units that are not regulars, so no producer ever stages them)
+  get a real window from both producers: `sync` and `plan` each
+  call the same idempotent windowing step, so whichever producer
+  runs first attaches `planned_for` now and a 4 hour expiry, and
+  the unit then surfaces as an expired miss instead of aging
+  silently if it still is not executed.
 - A unit whose slot has fully passed unexecuted is expired into
   `done` with status `expired` by the next reap - the following
   slot's unit supersedes it, and the miss stays visible in the

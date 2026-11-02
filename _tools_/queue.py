@@ -362,7 +362,10 @@ def write_new_unit(root, fields, regular):
 
 def _window_aged_priority1(root):
     """Attach a real window to aged unscheduled priority-1 inbox
-    units (issue #128 fix 1). The windowed execution path keys on
+    units (issue #128 fix 1). Called by both producers - sync and
+    plan - so whichever runs first windows the unit; the function
+    is idempotent, so the second producer is a no-op for it.
+    The windowed execution path keys on
     planned_for windows, so a unit produced without one - the
     owner-named crystal-shop and glittering-market units - is
     bypassed indefinitely even though queue.py next already sorts
@@ -751,10 +754,18 @@ def cmd_plan(args):
                 planned.append(unit)
             else:
                 present += 1
+    # Window aged unscheduled priority-1 units (issue #128) - plan
+    # is the hourly producer that demonstrably runs, while sync
+    # runs only when the ticker invokes it; the 2240 planner run
+    # staged 11 units yet left the aged glittering-market unit
+    # unwindowed because plan never called this step. Idempotent,
+    # so sync calling it too is harmless.
+    aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"horizon_hours": args.hours, "reaped": reaped,
                       "expired": expired, "planned": planned,
                       "already_present": present,
-                      "skipped_done_current": skipped_done},
+                      "skipped_done_current": skipped_done,
+                      "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
     return 0
 
