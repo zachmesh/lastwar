@@ -2989,3 +2989,21 @@ of 2026-10-28.
 ## 23:32 to about 23:44 - Tool development pass
 
 - Tool-developer run tool-development-2026-11-01-2332: own PRs checked first (only PR 157 open, integrator-owned, none owned); took open tooling issue 128 as a follow-up to merged PR 143 over 149/147 (implemented by merged PRs 153/156, closure belongs to the retro) and 136/130/133/126 (implemented by merged PRs 137/139/146/135), 129 (summary-job clause), 125 (already claims PR 42) and 123 (large device-control build). PR 143 windowed aged priority-1 units only in sync, never in plan, and the 2240 planner run staged 11 units yet left glittering-market unwindowed - plan now calls the same idempotent windowing step, so whichever producer runs first attaches planned_for now and a 4 hour expiry. PR 159 opened, issue 128 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (16 checks) plus an unpatched-main control run. Full detail in tool-development/2332-run.md.
+
+## 23:40 to 23:45 — Queue planning pass (2340 run)
+
+- Plan staged 5 units: events, passes, secrets, treasures,
+  trucks for the 2026-11-02 1057 slot (already_present 63,
+  skipped_done_current 1, reaped 0, expired 0). Tomorrow's
+  pre-reset sweep pair (chain pre-reset-sweep-2026-11-02)
+  already in inbox; scout diff dry run and apply both all
+  zero; 0 withdrawals. Pool: inbox 73, claimed 1, done 534.
+  Owner-decision Issues checked: #132 answer unchanged
+  (duel-score only, building and research deferred), #154
+  has no owner answer yet so no alliance-facing unit was
+  staged. Diff-parse gap carried for the retro: the live
+  tree runs pre-merge scout_diff.py, so the diff reads 0
+  items against frontmatter items_observed 24 and
+  unexplained_red_dots 6; PR 153's frontmatter fallback
+  will surface those counts once the live tree syncs to
+  main. Full detail in queue-planning/2340-run.md.
