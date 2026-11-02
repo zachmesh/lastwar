@@ -2240,3 +2240,26 @@ of 2026-10-28.
   being folded; the amendments ride PR 141, OPEN with its
   Owner line at record time. Full detail in
   knowledge-organization/1832-run.md.
+## 18:40 to about 18:50 — Queue planner pass
+
+- Planner pass planner-1840, 11 units staged for the 0603
+  and 0630 slots of 2026-11-02 (mail, help, gifts, harvest,
+  radar, survivors, train, training, donations, arms-race,
+  star-ceremony; already_present 58, skipped_done_current
+  2, reaped 0, expired 0). Pre-reset sweep pair not due:
+  this run falls in the 18:00 hour, not the 17:00 hour;
+  tonight's pair (pre-reset-sweep-2026-11-01, both passes)
+  is already done and tomorrow's pair
+  (pre-reset-sweep-2026-11-02) is already in the inbox.
+  Scout diff over the two-pass observation applied with
+  zero changes: the observation carries narrative sections
+  but no observed_items block, so the tool reads 0 items;
+  its frontmatter counts 6 unexplained red dots, which
+  stay open for the scout successor units and the retro
+  threshold check. No queue withdrawals. Pool by_state at
+  18:46: inbox 76, claimed 0, done 509. Owner-decision
+  Issue #132 acted on: no building or research regular
+  staged; duel-score is merged on main (PR 137) but the
+  live pool tree still predates it, so no duel-score unit
+  was staged — live-tree sync is the follow-up. Full
+  detail in queue-planning/1840-run.md.
