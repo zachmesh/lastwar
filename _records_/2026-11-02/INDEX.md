@@ -1024,3 +1024,12 @@ of 2026-10-28.
   Tracker untouched; the 1344 re-read unit already in
   the inbox covers the post-timer check. Full detail in
   alliance-donations/0621-queue-run.md.
+
+## 06:30 to about 06:40 — PR integration pass
+
+- Integrator pass pr-integration/0630-run.md: no-op.
+  No knowledge or code PR open; records PRs 167
+  (2026-11-01) and 161 (2026-11-02) left awaiting the
+  07:00 batch (non-batch pass, checker not due). Both
+  re-read MERGEABLE and CLEAN; trial merges against main
+  clean. No merges, comments or escalations.
