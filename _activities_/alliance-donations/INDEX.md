@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T04:45:00Z
+modified: 2026-11-02T08:32:00Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-01 1149 queue run (footer re-read)
   - source: alliance donations execution record 2026-11-01 1619 queue run
   - source: alliance donations execution record 2026-11-01 1944 queue run
+  - source: alliance donations execution record 2026-11-01 2348 queue run (ticker-2334 unit, partial, count replenishment, GitHub Issue #160)
 ---
 
 
@@ -145,7 +146,96 @@ hard, and they override any earlier closing habit in this file.
   shortfall raises the next donations unit to priority 1. A day
   may not discover an un-donated remainder at its end.
 
+## What the 2026-11-01 2348 unit added
+
+Unit donations-2026-11-01-2203 by ticker-2334, session about
+23:35 to 23:48, status partial with an unverified close under
+the hard closing rule above. The tracker is untouched and a
+named re-read unit is enqueued for after the cooldown (not
+before about 23:55 local). Evidence in
+`_records_/2026-11-01/alliance-donations/2348-queue-run.md`.
+
+- Target unchanged from the 1944 unit: Rallied HP, War tab,
+  level 5/10, Current plus 5 percent, Next Level plus 6
+  percent, Tech EXP 1.9M/2.0M, Donation Reward plus 20
+  percent. Coin button cost 600 coin per donation; the
+  diamond button (2 diamonds) was never used.
+- Donation Count, every figure read live in this unit:
+  11/30 at entry, then 10/30, 9/30, 8/30, 7/30, 6/30
+  (image-verified; the compact OCR misreads 6 as 5),
+  5/30, 4/30, 3/30, 2/30, 1/30, one coin tap each. Ten coin
+  donations are confirmed by those two live reads at the
+  ends of the chain.
+- One last coin donation was then dispatched from the
+  live-read 1/30. The button greyed with a 00:05:39
+  cooldown timer (00:05:20 on the closing screenshot),
+  hiding the count label. The 0/30 final is therefore NOT
+  claimed as a live read: it is the expected result of 1
+  remaining minus 1 dispatched tap, but the count itself
+  was not seen after that tap. The unit closes unverified
+  on that point, exactly the 1944 close shape.
+- Replenishment at a larger scale, GitHub Issue #160:
+  this unit entered at 11/30 although the 1944 unit left
+  the same Rallied HP panel at a live-read 1/30 plus one
+  dispatched tap. Between about 19:54 and 23:35 the
+  remaining count rose by about 10 over about 3 hours 41
+  minutes, about 1 per 20 minutes as a two-endpoint
+  estimate only, NOT a measured rate. The cooldown timers
+  seen (00:18:42 at the 1944 close, 00:05:39 here) do not
+  match that rate, so no mechanism is asserted. This
+  fires the 1944 follow-up's third branch (a re-read
+  above 1/30 confirms replenishment and the count model
+  needs revision): the 2306 correction stands and is
+  strengthened - a 0/30 read is not a stable day-done
+  state, and day completeness is judged at the rule R3
+  checkpoints by live reads, never by subtraction across
+  units. What is still owed is the mechanism measurement
+  per Issue #160 (short-interval reads across one
+  cooldown cycle, the cap, and the 19:00 reset
+  behaviour); until it lands, the hard closing rule's
+  live-read core still binds every unit.
+- Footer pair, observed only: Tech Donation Today 800 at
+  entry, 850 after the first donation - plus 50 for one
+  donation. It is not converted into a count and no
+  universal per-donation value is derived from it: it
+  stands alongside the 1619 unit's plus 100 single-unit
+  pair, and the 1141 tension stands unchanged.
+- Hold-to-donate, untested: a tap on the coin button
+  surfaced the tooltip "Hold down for continuous
+  donations" - the button supports hold for continuous
+  donations. It was NOT used in this unit and is untested
+  against the live-read closing rule, so no unit may use
+  hold-donate as a closing method until a unit tests it
+  with live count steps.
+- Batch-tap failure mode: the game app quit mid-unit
+  during a batched tap sequence - the first batch click
+  dispatched, the second failed with the app exited, and
+  the batch tap did not land (count stayed 10/30, footer
+  stayed 850). The app was relaunched with no
+  different-device dialog and no login demand, and the
+  panel was re-entered and re-read live before donating
+  resumed; single taps were used for the rest of the
+  unit. Rule: batched taps are unsafe for donations - a
+  batch that straddles an app exit must be re-read live
+  before continuing.
+- Entry re-grounding, rule R2: first Alliance tile taps
+  at norm 885,660 and 885,673 hit above the tile and
+  opened nothing; visual grounding on the fresh base
+  screenshot put the Alliance tile at norm 924,713
+  (935,701 after the relaunch) and that tap opened the
+  alliance menu. Alliance Techs tile at norm 686,676
+  (688,690 after the relaunch); Rallied HP node at norm
+  272,506 (268,515 after the relaunch); coin Donate
+  button at norm 658,761. Tile centres must be
+  re-grounded from the screenshot on every opening,
+  never inherited.
+
 ## Open questions
+
+- Donation Count replenishment mechanism - rate, cap, timer link,
+  and whether the count resets at the 19:00 reset or only refills
+  (GitHub Issue #160; measurement owed: short-interval reads
+  across one cooldown cycle).
 
 - Who sets the donation target, and when it changes.
 - What the Development tab technologies are, and whether donations

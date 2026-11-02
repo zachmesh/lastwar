@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T04:45:00Z
+modified: 2026-11-02T08:32:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -306,6 +306,45 @@ base. Evidence in
   the next harvest unit. The tracker is untouched, so
   the regular stays due.
 
+## What the 2026-11-01 2356 unit added
+
+Unit harvest-2026-11-01-2203 by ticker-2334, status
+partial. The tracker is untouched, so the regular stays
+due. Evidence in
+`_records_/2026-11-01/resource-collection/2356-queue-run.md`.
+
+- Entry: the game was left on the Rallied HP donation
+  panel from the previous unit of the pass. The panel
+  and the Alliance Techs tree were closed with their X
+  buttons (no donation button touched), and the Alliance
+  menu back arrow returned the view to the base.
+- First base view (snowy northern strip): 4 green
+  resource bubbles over the central buildings, visually
+  grounded at norm 393,415, 293,466, 499,467 and
+  394,518. One tap on the centre of the first bubble
+  cleared all 4 at once - the third same-day instance
+  of the centre-tap-clears-cluster pattern (11:49, 20:06
+  and 23:56 runs). The white speech bubble near the
+  central buildings is not a resource bubble and was
+  not tapped.
+- No gain figure is claimed: HUD totals read live
+  before and after the tap (food 362.4M, iron 19.4M,
+  stone 1.5M, coin 36.7M) did not move at the displayed
+  0.1M precision, so the collected amount sits below
+  the HUD display precision.
+- Sweep state, why partial: the base was panned in one
+  direction (drag norm 500,500 to 200,500). The panned
+  strip showed no green resource bubble: only the white
+  speech bubble and a red arrow marker over buildings.
+  Not covered in this unit, so the 2026-11-01 full-map
+  zero-remaining acceptance is not met: the opposite pan
+  direction, the far-left edge partial bubble shape
+  left unidentified by the 20:06 run, the Armed Truck
+  loot state, and the bottom Season 2 area (whose
+  bubbles do not count as main-base harvest under the
+  2026-11-01 rule, but were still not inspected). All
+  fall to the next harvest unit.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -318,6 +357,8 @@ base. Evidence in
 ## Changelog
 
 - 1.6.0 (2026-11-01): centre-cluster one-tap five-bubble clearance with iron plus 0.4M measured, Titanium Alloy Factory No.3 panel fall-through on the second tap, ambiguous far-left edge shape deliberately untapped, Season 2 bottom area and Armed Truck checks deferred to the next harvest unit, folded from the 2006 harvest unit; no earlier claim superseded.
+
+- 1.7.0 (2026-11-02): centre-tap four-bubble cluster clearance as the third same-day instance, no gain claimed at 0.1M HUD precision, and the carried sweep remainder (opposite pan, far-left edge shape, Armed Truck, Season 2 area), folded from the 2356 harvest unit.
 
 - 1.3.0 (2026-11-01): balloon-versus-bubble distinction, HUD
   button mis-tap point, base-view pan failure mode, and the
