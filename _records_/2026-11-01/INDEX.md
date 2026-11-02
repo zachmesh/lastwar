@@ -3007,3 +3007,18 @@ of 2026-10-28.
   unexplained_red_dots 6; PR 153's frontmatter fallback
   will surface those counts once the live tree syncs to
   main. Full detail in queue-planning/2340-run.md.
+
+## 23:45 to about 23:55 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-2345. Three
+  open PRs at pass start (157 records, 158 knowledge,
+  159 code); PR 158 and PR 159 merged (squash,
+  branches deleted); records PR 157 left awaiting the
+  03:00 batch — non-batch pass for records purposes
+  because the 23:00 batch was already consumed by the
+  2300 pass (PR 142 merged 23:03:56 PT), even though
+  the batch checker reports due inside the 23:00 clock
+  window. Issue #128 commented with the PR 159 merge
+  link, not closed. Local main fast-forwarded to
+  8470c508e via bundle. End-of-pass sweep: only PR 157
+  open. Full detail in pr-integration/2345-run.md.
