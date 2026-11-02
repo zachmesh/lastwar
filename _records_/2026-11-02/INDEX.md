@@ -1128,3 +1128,48 @@ of 2026-10-28.
   batch 07:00), so records PRs 167 (2026-11-01) and 161
   (2026-11-02) were not merged and await the 07:00 batch.
   Full detail in pr-integration/0645-run.md.
+
+## 07:06 to about 07:19 - ticker pass ticker-0704
+
+- Own PR check first: records PR 161 (records/2026-11-02,
+  Owner lastwar-pr-integrator) carries no unanswered
+  question for this job; its last comment is the
+  ticker-0308 branch update resolving the main conflict,
+  and it awaits the 07:00 batch. PR 167
+  (records/2026-11-01 post-0300 batch) has no comments.
+  No action taken on either.
+- Zombie seeding skipped: the Zombie Invasion event
+  ended at about the 19:00 reset on 2026-10-30 (unit
+  066), the chain zombie-2026-10-28 is closed, and no
+  fresh chain is seeded until a Zombie Invasion tab is
+  seen live in the Events hub again. No zombie unit
+  sits in inbox.
+- Train unit train-2026-11-02-0847, done as checked
+  only: no boarding banner, BASE-recentred base view
+  shows no train, left column shows no train-head
+  icon. One left-column tap misfired into the Secret
+  Command Post screen and was left untouched at once.
+  Qualification: the station panel itself was not
+  opened, so this is not a station-verified no-train
+  finding. The staged 00:47 train (countdown about
+  01:39) departed at about 02:26, so its boarding
+  state is unrecoverable from this unit. Tracker
+  marked done for train on the checked-only basis.
+  Full detail in alliance-train/0715-queue-run.md.
+- Donations unit donations-2026-11-02-1055, partial:
+  Alliance Techs War tab read live (Garrison Defense
+  7/10 carries the recommended marker, Tech Donation
+  Today 3500), Garrison Defense panel read live at
+  Donation Count 5/30, coin cost 800, Tech EXP
+  163.8K/4.5M. The green coin Donate button did not
+  respond to three routes (coordinate centre
+  735,647, lower point 735,640, click_element on the
+  cost control); 0 donations landed, nothing spent,
+  tracker untouched. Commented on GitHub Issue 171
+  (same green-action-button background-input failure
+  family) rather than filing a duplicate. Full detail
+  in alliance-donations/0719-queue-run.md.
+- Sync note: the pass sync dropped stale inbox copies
+  that already had done records and expired 3 units;
+  no new unit was produced (22 due, all already
+  queued).
