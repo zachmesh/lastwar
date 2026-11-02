@@ -1959,3 +1959,7 @@ of 2026-10-28.
 ## 17:05 to about 17:20 - PR integration pass
 
 - Integrator run pr-integration-2026-11-01-1700 (non-batch pass; checker on main reports not due, next records batch 19:00): PR 137 re-read, head unchanged since the 1645 feedback, so no repeat comment posted - it stays open awaiting the author dropping the _logs_ appends; records PR 117 held for the 19:00 batch. No merges, no escalations, no conflicts. Full detail in pr-integration/1700-run.md.
+
+## 17:20 to about 17:35 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-1715 (non-batch pass; checker on main reports not due, next records batch 19:00): PR 137 re-read, head unchanged since the 1645 feedback, so no repeat comment posted - it stays open awaiting the author dropping the _logs_ appends; records PR 117 held for the 19:00 batch. No merges, no escalations, no conflicts. Full detail in pr-integration/1715-run.md.
