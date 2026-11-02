@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T10:32:00Z
+modified: 2026-11-02T15:35:33Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -21,6 +21,7 @@ grounded_in:
   - source: radar tasks execution record 2026-11-01 1629 queue run
   - source: ticker-2304 radar execution record 2026-11-01 2319 queue run
   - source: ticker-0204 radar execution record 2026-11-02 0226 queue run
+  - source: radar tasks execution record 2026-11-02 0636 queue run
 ---
 
 
@@ -80,6 +81,12 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   first tap. The earlier estimate norm 54,667 opened Secret
   Command Post in the 06:44 and 11:19 units of 2026-10-29 -
   two whole units lost to a stale coordinate.
+- 2026-11-02 0636: three fresh groundings in one unit
+  disagreed - (55,677) did nothing, (53,575) opened Trucks,
+  (53,708) opened the radar. The grounding tool twice
+  mislabelled the truck icon as the dish. Ground the dish
+  below the truck icon and verify the radar screen (level,
+  stored count, stamina) before any work.
 - ENTRY VERIFICATION, mandatory before any work - the radar
   screen is confirmed only when the screen shows radar level
   and points top left, stored tasks out of 40, and the
@@ -732,6 +739,78 @@ are still open, per the protocol.
   activity worked from this unit.
   Evidence in `_records_/2026-11-02/radar-tasks/0226-queue-run.md`.
 
+## What the 2026-11-02 0636 unit added - 12 claims, Doom Legion pin left on an ambiguous card, duel delta still owed
+
+- Unit radar-2026-11-02-0603 by ticker-0634, session about
+  06:35 to 06:43, status partial. Live duel posture from
+  tools/duel.py at entry: duel day 1, Radar Training,
+  radar posture release. Release posture governs.
+- Entry struggle, recorded for the next unit: the dish icon
+  was grounded fresh three times with disagreeing points. A
+  tap at norm 55,677 did nothing. A tap at norm 53,575
+  opened the Trucks screen instead (plunder count read 2/4
+  in passing, NOT acted on - one unit, one type). Backed out
+  untouched via the bottom-left back arrow. The tap that
+  opened the radar was norm 53,708 on the current
+  screenshot. The grounding tool twice mislabelled the truck
+  icon as the dish. Next unit: ground the dish below the
+  truck icon and verify the radar screen (level, stored
+  count, stamina) before any work, as the profile requires.
+  Prior dish points (62,727 on 2026-10-29, 58,736 on
+  2026-11-02 0226) do not transfer across framings.
+- Entry reads, live on the verified radar screen: Lv.13,
+  radar points 103, stored 4/40, stamina 112. Restore line
+  at entry: fully restore at 11-2 21:31:43 local time.
+- Quick Execute offered 5 tasks for 50 stamina. Executed:
+  stamina 112 to 62. Bar then offered Claim All for 8
+  rewards. Claim All batch 1 popup: spiral icon 80, EXP
+  9.7M, triangle 855, iron 1.9M, food 1.9M, coin 2.2M, Lv.1
+  chest x2. Radar points 103 to 111.
+- Bar then offered 1 more task for 10 stamina. Executed:
+  stamina 62 to 52. Bar then offered Claim All for 4
+  rewards. Claim All batch 2 popup: spiral icon 40, EXP
+  5.3M, chip item 1.6K, triangle 183, iron 316.8K, food
+  2.2M, coin 717.6K. Radar points 111 to 115.
+- Closing reads: stored 0/40, radar points 115, stamina 53
+  (one point regenerated), restore line "12 Radar Task(s)
+  will be restored in 02:50:07", no bottom-bar offer left.
+  Ordinary work is complete; 12 claims total (8 plus 4).
+  The entry full-restore time (21:31:43) and the closing
+  next-12 restore line (02:50:07) are different quantities
+  and are not conflated here; the restore-shape question
+  below stays open.
+- Map pins, closing inventory, all red-dotted: portrait pin,
+  left-mid, norm about 304,468 - TAPPED. Card: "Eliminate
+  the Doom Legion - Destroy Doom Legion's base!", rewards
+  food 11.2M, iron 11.2M, coin 7.4M, radar points 300, one
+  chip item, countdown 00:27:23 at tap time (expiry about
+  07:09 local). Go jumped to the world map and opened a
+  card showing Power 6,937,000, Kills 0, Alliance [AP3x]The
+  Apex, rewards 21.3M, 21.3M, 13.6M. The alliance tag on
+  the card made the target ambiguous, so the attack button
+  was NOT tapped. Closing the card produced the toast
+  "Other commanders are currently conducting radar tasks
+  here. Please wait or change location." The pin is
+  therefore identified but left for a contested location
+  plus an ambiguous card - the next unit must re-read the
+  card before any attack, and must not attack an alliance
+  member's base. The about 07:09 expiry has passed by the
+  next unit's window, so the next unit verifies whether
+  the pin still stands rather than assuming it does.
+- Orange arrow pin, right side, norm about 810,410 -
+  unattempted, class unknown (one of the standing arrow
+  pins open since 2026-10-29). Orange arrow pin, lower
+  left, norm about 296,673 - unattempted, class unknown.
+  Per the release standard, pins left unattempted make
+  this unit partial, never done. Tracker untouched.
+- Duel score before and after was NOT read (VS panel not
+  visited); the radar delta test is still owed.
+- No diamonds or money spent, no price tag tapped, no Buy
+  in any panel, no other activity's rewards claimed. The
+  Trucks screen was entered by a mis-grounded tap and left
+  untouched.
+  Evidence in `_records_/2026-11-02/radar-tasks/0636-queue-run.md`.
+
 ## Open questions
 
 - Duel delta test - on the next release day, read the duel
@@ -748,6 +827,13 @@ are still open, per the protocol.
   axe, orange axe and portrait pins (class, cost, reward)
   on the next release day, by tapping them under the
   release handling rule.
+- Doom Legion pin card ambiguity - 0636: the portrait pin
+  card named a Doom Legion base, but the world-map card
+  carried the own-alliance tag [AP3x]The Apex and closing
+  it produced the contested-location toast; when a pin card
+  names an alliance base, and whether the toast blocks only
+  that location, is unmeasured. Never attack on an ambiguous
+  card.
 - Restore shape - does the 12-task restore land as a batch
   at the 6 hour mark or trickle? Compare stored counts
   against the restore line across one full cycle.
@@ -759,6 +845,8 @@ are still open, per the protocol.
   Execute (cost or reward difference), untested.
 
 ## Changelog
+
+- 1.12.0, 2026-11-02 - 0636 duel day 1 release unit folded: dish groundings disagreed in one unit (55,677 nothing, 53,575 Trucks, 53,708 radar; tool twice mislabelled truck as dish); entry Lv.13, points 103, stored 4 of 40, stamina 112; 12 claims over two batches, points 103 to 115, stored 0 of 40, stamina 53; portrait Doom Legion pin left on an ambiguous alliance-tagged card plus contested toast, expiry about 07:09; two orange arrow pins unattempted so the unit stays partial; duel delta test still owed.
 
 - 1.11.0, 2026-11-02 - 0226 duel day 1 release unit folded: entry corrections (back arrow true centre 132,948; no-HUD base frame unusable; dish fresh at 58,736, badge 2); points 101 to 103 over 2 claims, stored 0 of 40, stamina 60 to 61; claimed rewards do not match the 2319 Doom Walker rally card, so the rally kill/claim stays unverified; seven pins left unattempted so the unit stays partial; duel delta test still owed.
 

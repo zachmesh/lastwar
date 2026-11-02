@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T12:32:00Z
+modified: 2026-11-02T15:35:33Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: ticker-2142 train execution record 2026-11-01 2149 queue run
   - source: ticker-0034 train execution record 2026-11-02 0044 queue run (checked only, no train read, superseded same-pass by the 0047 sighting)
   - source: ticker-0334 alliance-train execution record 2026-11-02 0348 queue run (done, checked only)
+  - source: ticker-0704 alliance-train execution record 2026-11-02 0715 queue run (done, checked only)
 ---
 
 # Alliance train
@@ -384,6 +385,75 @@ Measured in the 0110 train unit (ticker-0104, window mode
   Evidence in `_records_/2026-11-02/alliance-train/0348-queue-run.md`.
 
 
+## What the 2026-11-02 0715 unit added - staged correction now moot, station panel still unopened
+
+- Unit train-2026-11-02-0847 by ticker-0704, session about
+  07:06 to 07:15, status done as checked only. No
+  different-device dialog, no login demand, nothing spent,
+  no carriage tapped, no train summoned, no conductor role
+  taken. Evidence in
+  `_records_/2026-11-02/alliance-train/0715-queue-run.md`.
+- Why this unit exists: unit train-2026-11-01-2230
+  (ticker-0034, 0044) read no train in preparation, but the
+  star-ceremony unit later in the same pass (0047)
+  incidentally saw a train in preparation at the station
+  (conductor Missile Apex, countdown about 01:39 at about
+  00:47). That sighting superseded the 0044 read, and this
+  unit was staged to correct it. No carriage was tapped and
+  no boarding was attempted in the 0047 unit either.
+- The staged purpose is now moot for boarding: the 00:47
+  train carried a countdown of about 01:39, so it departed
+  at about 02:26, long before this 07:06 check. Whether the
+  account boarded carriage 2 on that train before departure
+  was never verified by any unit; if it was aboard, its
+  arrival reward will surface as an Event mail for a mail
+  unit to claim, and that mail is the only remaining
+  evidence for that train.
+- Entry and state read live: game opened on the world map
+  left by the radar unit (0634), showing the
+  contested-radar toast. A tap at norm 52,548 returned the
+  view to the base screen (resource bar food 383.9M, iron
+  574.0M, coin 48.7M, diamonds 2,526, total power
+  149,296,925, March Queues 0/4). No "Boarding closes in"
+  banner under the resource bar. The lines under the bar
+  were the furnace overdrive line and the breaking-news
+  ticker, as in the 1325 and 1813 checks.
+- Misfire, grounding failure not a train finding:
+  left-column icon tap at norm 54,645 opened the Secret
+  Command Post screen (Secret Mobile Squad, Assist Allies
+  5/5, Plunder Others 0/3, four SSR task rows). Nothing on
+  that screen was tapped, claimed, dispatched or refreshed;
+  it was left at once via the bottom-left back arrow at
+  norm 132,936, back on the base screen. The visual
+  grounding tool labelled the secrets icon as a train icon,
+  and its second grounding (locomotive at 48,860) pointed
+  at the lower column chest area, which was not tapped. Per
+  rule R2 no further blind column-icon taps were made in
+  this unit. Note the context dependence: the (52,548) tap
+  from the world map returned to the base, while the same
+  point from the base in the 0044 and 0348 units panned to
+  the station - the point's effect differs by starting view.
+- Pivot method: the BASE button at norm 903,967 recentred
+  the camera on the own base, showing the base interior
+  (buildings, resource tiles, survivors, no station, no
+  yellow train, no plus bubble). The left column in this
+  view carries hammer 2/4, flask 2/2, weather, chat badge
+  2, truck, radar dish, magnifier, hero portrait and chest
+  icons, and no visible train-head icon.
+- Outcome and qualification, stated plainly: no train in
+  preparation found by banner, by BASE-recentred base view,
+  or by left-column scan. Nothing boarded, no Trade
+  Contracts spent. The station panel itself was NOT opened,
+  so this is not a station-verified no-train finding. It
+  stands at the same level as the 1325 and 1813
+  banner-only checks, strengthened only by the BASE view
+  and the column scan. A later same-pass sighting of a
+  train in preparation would supersede it, as 0047
+  superseded 0044.
+- Tracker: marked done for train by this pass, on the
+  checked-only basis above, with this qualification in the
+  record.
+
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like
@@ -400,3 +470,4 @@ Measured in the 0110 train unit (ticker-0104, window mode
   rider power the rating derives from, unverified.
 - Whether a member can board more than one train per day.
 - Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit).
+- Station-panel verification owed: the 0715 check never opened the station panel, so a station-verified no-train read is still owed on a checked-only unit; banner plus BASE view plus column scan is a strengthened banner-only check, not a station verification.
