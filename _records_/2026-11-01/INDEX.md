@@ -2556,3 +2556,10 @@ of 2026-10-28.
   at 20:44 local: inbox 71, claimed 1, done 520.
   Full detail in queue-planning/2040-run.md.
 - Retro-review run retro-review-2026-11-01-2110: second daily retro under section 14, window ending 2026-11-01, 521 executions aggregated with _tools_/retro_report.py (done 246, partial 226, expired 20, failed 19, skipped 10); threshold breaches named (unexplained red dots 6, expired units 20, quota attainment trucks 0.2 and donations 0.0923, unverified trajectory 79 percent on Nov 1); issues filed #147-#150, issues commented #129, #130, #133, #128, #136, #125, issues closed none; batch compliance audited (38 merges, 0 post-policy violations); owner-decisions register 1.2.0 with new item OD-20261031-03; metadata PR #151 (truck-plunder 1.13.0); records ride PR #142 awaiting the 23:00 batch. Full detail in retro-review/2110-run.md.
+- Integrator pass pr-integration-2026-11-01-2100.
+  Non-batch pass (checker _tools_/records_batch.py
+  reports not due, next batch point 23:00): merged
+  knowledge PR 151 (truck-plunder 1.13.0, retro
+  action A1, Refs #147/#148); records PR 142 left
+  awaiting the 23:00 batch. Local main synced to
+  991e492b. Full detail in pr-integration/2100-run.md.
