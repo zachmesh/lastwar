@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T05:35:00Z
+modified: 2026-11-02T06:40:55Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1352 trucks unit)
   - source: incidental trucks-view read in the alliance-train execution record 2026-11-01 1813 queue run (not a trucks unit)
   - source: daily retro 2026-11-01, trucks 1457 expiry and counter tension (issues 147 and 148)
+  - source: ticker-2212 trucks execution record 2026-11-01 2231 queue run
 ---
 
 # Truck plunder - Intercity Trade
@@ -586,6 +587,68 @@ settlement and dispatch execution record).
   expiry in issue #147.
 
 
+
+## What the 2026-11-01 2231 unit added
+
+- Unit trucks-2026-11-01-1857 by ticker-2212, session
+  about 22:21 to 22:31, status partial. Tracker untouched,
+  as partial units do not mark the tracker. Game left on
+  the trade screen, Others' Trucks tab.
+- First trucks unit of the new trade day (began 19:00
+  local), and the counter-tension resolution: at entry,
+  Today's Trade Count 0 of 5, Your Plunder Count Today
+  0 of 4, read live on the trade screen by a trucks unit
+  - the read the retro addendum required. No returned
+  truck awaited settlement - the Your Truck yard held
+  four empty slots. The 0/5 entry counters are the new
+  trade day's reset counters, not a revision of the
+  ended day: the ended day's tension (1352 close 4/5
+  against the 1813 and 1849 incidental 0/5 reads)
+  closed unresolved at the 19:00 reset with trucks 1457
+  expired, and this unit's counters belong to the new
+  day. The old tension is therefore closed as
+  unresolvable for the ended day, not carried as a live
+  shortfall - the live shortfall is this unit's close
+  (see below). Tracked in retro issues #147 and #148;
+  no new issue filed here.
+- Entry re-grounded fresh: the base left column
+  re-grounded from an enlarged crop - the blue
+  delivery-truck icon in a speech bubble with red badge
+  4 sits at norm [55,584] (the 1352 point [48,565] has
+  shifted with the column) and opened Intercity Trade at
+  once. The white pickup below it (badge 8) is the Secret
+  Command Post vehicle, not the trade truck - a
+  look-alike note for the next entry.
+- Dispatch, one truck sent: the first empty-slot plus
+  sign measured fresh at norm [335,442] opened the truck
+  panel at once. The panel rolled SR as rolled - iron
+  2.5M, food 2.5M, coin 1.6M, arrives in 04:11:18, Squad 1
+  escort. The free refresh was deliberately not spent:
+  SR already meets the non-UR day bar. Let's Go raised
+  the expected TIPS dialog (low rarity, free refresh
+  remaining); Confirm departed as rolled, not Mega Mode.
+  No diamonds spent, no Trade Contract spent. Duel-day
+  rule in force: duel day 1, Radar Training (radar
+  release day), so non-UR rules apply - dispatch SR or
+  above, plunder UR or SSR trucks carrying UR shards
+  with guard below Squad 1.
+- Plunder, one fight won: changed method for opening
+  road trucks (R2, after the 1352 top-of-road failures)
+  - the purple SSR truck body centre at norm [545,326]
+  opened its card at once. Target: SSR #2091 [SS12]
+  goobiedog, Lv.27, guard 3.6M (screenshot read; the
+  compact OCR garble "73.6M" is wrong), cargo with two
+  UR shard 500 stacks x3 each on the right side. Guard
+  far below Squad 1 at 24.96M, so the shard rule is met.
+  Quick Plunder, Battle at 25.12M vs 3.66M, Mission
+  Completed. Loot, read live on the victory screen:
+  iron 557.5K, food 557.5K, coin 350.0K, UR badge 500 x6,
+  puzzle piece x1. No alliance mate plundered (the gold
+  [AP3x]Skinner Box train on the road was left alone).
+- Close counters read live: Trade Count 1 of 5, Plunder
+  Count 1 of 4. Shortfall carried forward: dispatch 4
+  more, plunder 3 more before the trade day ends 19:00
+  on 2026-11-02.
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
