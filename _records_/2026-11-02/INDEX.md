@@ -2094,3 +2094,13 @@ of 2026-10-28.
   In-app Purchases (receipts only, red dot unread) was
   not claimed; Delete All never pressed. Full detail in
   mail-rewards/1226-queue-run.md.
+
+## 12:30 to about 12:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1230.
+  No-op non-batch pass for records (checker: not due,
+  outside every batch window, next batch 1500 PST):
+  no knowledge or code PR open. Records PRs #181
+  (2026-11-01 post-1100 batch) and #161 (2026-11-02)
+  both CLEAN and MERGEABLE, awaiting the 1500 batch.
+  Full detail in pr-integration/1236-run.md.
