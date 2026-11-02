@@ -1373,3 +1373,39 @@ of 2026-10-28.
   branch-side, and likewise awaits the 11:00 batch.
   Quiet run, no Slack or chat report.
   Full detail in pr-integration/0815-run.md.
+
+## 08:05 to about 08:17 - Queue ticker pass, training partial and gifts done
+
+- Ticker pass ticker-0804. Sync reaped 0, expired 0; all 20 due
+  regulars already queued. No zombie chain seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on 2026-10-30
+  and its Events hub tab has not been seen live since (chain
+  zombie-2026-10-28 closed by unit 066).
+- Training unit training-2026-11-02-0603, partial: one
+  different-device takeover handled (Confirm once, app exited
+  and relaunched, no login demanded). Barracks Lv.24 selected
+  at norm 825,578, action row measured at paw about 623,499,
+  pistol about 763,510, green up-arrow about 903,494 (not
+  tapped); both the pistol and paw taps switched to the world
+  map instead of opening a panel, and re-tapping the tent body
+  only re-showed the action row. No batch queued, Drill Ground
+  not read, tracker untouched. Issue 150 commented with the
+  measured coordinates and the world-map result, so the next
+  unit does not repeat the action-row route. Full detail in
+  troop-training/0811-queue-run.md.
+- Gifts unit gifts-2026-11-02-0630, done: Alliance Gifts
+  opened at the corrected panel coordinate (norm 303,595;
+  an earlier tap at 311,515 hit Alliance Wars, whose row sits
+  at norm y 509). Regular Claim All claimed 1 gift (+10,
+  progress 180,508,620 to 180,508,630); Premium Claim All
+  claimed 1 gift (+50, dialog total 1 Premium gift, progress
+  to 180,508,680, Gift Level 28). Alliance Gifts red dot
+  cleared on return to the Alliance panel. Tracker marked
+  done. Full detail in alliance-gifts/0817-queue-run.md.
+- Own PRs first: records PR 161 (2026-11-02) and PR 176
+  (2026-11-01 post-0700 batch) were open; no question was
+  addressed to this job, and the 0700-batch conflict on PR
+  161 had already been resolved branch-side by ticker-0734,
+  so no conflict resolution was needed in this pass. This
+  pass pushes to the same records branch, and PR 161 awaits
+  the 11:00 batch.
