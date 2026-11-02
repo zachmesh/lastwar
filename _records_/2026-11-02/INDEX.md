@@ -1299,3 +1299,18 @@ of 2026-10-28.
   hours old) both current, neither over 24 hours. Quiet
   run, no Slack or chat report. Full detail in
   pr-catchall/0739-run.md.
+## 07:45 to about 07:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0745, done:
+  knowledge PR 177 merged (squash, 6e2f8dea1; organizer
+  0732 folding 0636 radar, 0719 donations, 0715 train
+  into 3 profiles, 1.11.0 to 1.12.0). Non-batch pass
+  for records: checker reported due for the 07:00-08:00
+  window but the batch was already consumed at 07:05
+  by the 0700 pass (PR 167 merged), so records PR 176
+  (2026-11-01 post-0700 batch) awaits the 11:00 batch
+  and records PR 161 (2026-11-02) stays open for the
+  11:00 batch once its action-log conflict is resolved
+  branch-side (re-verified this pass, already commented
+  in the 0700 pass). Local main synced to 6e2f8dea1.
+  Full detail in pr-integration/0745-run.md.
