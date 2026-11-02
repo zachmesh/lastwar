@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-02T05:37:14Z
-version: 1.10.0
+modified: 2026-11-02T08:32:00Z
+version: 1.11.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -11,6 +11,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1159 survivors unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1644 survivors unit)
   - source: survivor-intake execution record 2026-11-01 2048 queue run (ticker-2034 unit, partial, gate line unverified)
+  - source: survivor-intake execution record 2026-11-02 0016 queue run (ticker-0004 unit, partial, gate line unverified)
 ---
 
 
@@ -429,6 +430,60 @@ Measured on 2026-10-25.
   was left here.
 
 
+## What the 2026-11-02 0016 unit added
+
+- Second regular-unit partial since the 1644 done, not a
+  streak resumption: unit survivors-2026-11-01-2203 by
+  ticker-0004, session about 00:05 to 00:16, status
+  partial. No survivor was processed, no recruit card or
+  dialog was opened, and Quick Dispatch did not run -
+  correctly, since no intake with a post took place.
+  Tracker untouched, so the next tick re-produces this
+  regular. The 25-partial streak ended at the 1644 done
+  and is not resumed by counting this unit, the same
+  discipline the 2034 section records.
+- Close discipline held: the gate line at close is
+  explicitly unverified, not claimed clear and not
+  claimed occupied. The unit claims only that no
+  question-mark bubble and no survivor line was visible
+  in the views it searched.
+- Gate search: one tap on a visual-grounding box at norm
+  207,556 produced no change and no dialog - that box
+  did not resolve to a survivor figure. Two further
+  visual-grounding calls on fresh base screenshots
+  returned unreliable boxes (top-left UI icons, and a
+  vehicle parking area), so no tap was taken from them.
+  Lesson: a grounding box that resolves to UI chrome or
+  a parking area is not a survivor figure; tap only a
+  box that resolves to a figure.
+- Panning: a horizontal drag moved the view north-east
+  and a reverse drag returned it to the opening view; a
+  vertical drag produced no view change. No
+  question-mark bubble and no survivor line was visible
+  in any view. The computer session dropped once
+  mid-unit and was restarted; the game window was
+  re-selected and the base screen re-read live after
+  the restart.
+- The 1644 pointer tested, not tapped on a guess: in
+  this unit's opening view, norm 458,678 showed only
+  snow, a bare tree and a wall corner - no survivor
+  figure - so the pointer was not tapped. Rule restated:
+  the 1644 coordinates (bubble 460,632, figure 458,678)
+  are a re-read pointer for the bottom-centre gate
+  area, never a fixed tap point; the next unit
+  re-grounds the gate figure fresh before any tap.
+- Entry snapshot, read live on the opening base screen:
+  food 362.4M, iron 555.0M, coin 36.7M, diamonds 2,476,
+  total power 149,198,310, window 642 by 951. No
+  different-device dialog, no login or verification
+  demanded, no diamonds or money spent, no paid button
+  tapped.
+- No new issue filed: this is the known repeated gate
+  verification failure mode already recorded as a
+  standing blocker in this profile and in Issue #123
+  (screenshot-grounded tap calibration), not a new gap.
+  Evidence in `_records_/2026-11-02/survivor-intake/0016-queue-run.md`.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -482,3 +537,5 @@ Measured on 2026-10-25.
   survivors unit.
 
 - 1.10.0 (2026-11-01): first regular-unit partial since the 1644 done (2034 unit, gate line explicitly unverified, close discipline held), the failed pan sequence that went north-east instead of toward the bottom-centre gate, the non-tappable world icon at 249,641 as a new look-alike, and the 1644 re-read pointer (bubble 460,632, figure 458,678) for the next unit, folded from the 2048 survivors record.
+
+- 1.11.0 (2026-11-02): second regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the unreliable grounding boxes (UI icons, parking area) not tapped, and the 1644 pointer tested but not tapped on a guess at 458,678, folded from the 0016 survivors record.

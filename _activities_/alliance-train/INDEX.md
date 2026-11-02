@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T06:38:16Z
+modified: 2026-11-02T09:32:00Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1325 train unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1813 train unit)
   - source: ticker-2142 train execution record 2026-11-01 2149 queue run
+  - source: ticker-0034 train execution record 2026-11-02 0044 queue run (checked only, no train read, superseded same-pass by the 0047 sighting)
 ---
 
 # Alliance train
@@ -309,6 +310,41 @@ Measured in the 0110 train unit (ticker-0104, window mode
   the resource bar and total power 149,288,895.
 - Nothing boarded, no Trade Contracts spent, no train
   summoned, no conductor role taken.
+
+## What the 2026-11-02 0044 unit added - and its same-pass correction
+
+- Unit train-2026-11-01-2230 by ticker-0034, session about
+  00:42 to 00:44, status done as checked only - no train
+  in preparation, as first read. Base screen inspected
+  first: no "Boarding closes in" banner under the
+  resource bar. Station check: the left-column train
+  icon (visually grounded at norm 52,548 on this unit's
+  base screenshot) panned the camera to the base edge.
+  The station area showed no yellow train, no plus
+  bubble and no station countdown - unlike the
+  2026-11-01 21:43 check, which found a train in
+  preparation with a 00:20:42 countdown and has since
+  departed. The camera was dragged back toward the base
+  after the check; the final view showed the base edge
+  with Titanium Alloy Factory No.3 and still no train.
+  Nothing boarded, no Trade Contracts spent.
+- Contradiction resolved in favour of the newest verified
+  same-pass record: the star-ceremony unit later in this
+  same pass (0047, below in alliance-duel) incidentally
+  saw, while restoring the camera, a train in
+  preparation at the station (conductor Missile Apex,
+  countdown about 01:39). That sighting supersedes this
+  unit's no-train read - the 0044 check missed a train
+  that was in preparation. Lesson: a station check made
+  from a base-edge pan can miss a train in preparation;
+  a "no train" close is provisional, and a later
+  same-pass sighting of a train overrides it. The
+  correction is handled as its own train unit (staged
+  as train-2026-11-02-0847); no carriage was tapped and
+  no boarding was attempted in the 0047 unit.
+  Evidence in `_records_/2026-11-02/alliance-train/0044-queue-run.md`
+  and `_records_/2026-11-02/alliance-duel/0047-queue-run.md`.
+
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like

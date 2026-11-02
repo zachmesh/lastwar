@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T05:39:49Z
+modified: 2026-11-02T08:32:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -339,6 +339,49 @@ Observed in game on this account, first execution 2026-10-25.
   `_records_/2026-11-01/troop-training/2120-queue-run.md`.
 
 
+## What the 2026-11-02 0017 unit added
+
+- Unit training-2026-11-01-2203 by ticker-0004, session
+  about 00:16 to 00:17, status partial. No barracks panel
+  was opened, no batch was queued, no Drill Ground screen
+  was read, and nothing was claimed. The tracker is left
+  untouched, so the next tick re-produces the regular
+  and the work resumes as a fresh unit.
+- Changed route taken, per queue rule R2 and the 2120
+  next-unit rule: one east pan (drag norm 320,450 to
+  120,450) from the opening base view. The resulting view
+  shows formation lots 2 and 3, parked tanks and a blue
+  structure at the top, and production buildings at the
+  left edge - no row of four barracks tents, and no tent
+  was visually verified, so no tent was tapped on a
+  guess. The east-pan formation-lot view is ruled out as
+  the barracks tent row at this camera position.
+- Next-unit rule, from the record under rule R2: change
+  the route again - pan from the opening view toward the
+  lower-middle base area where the pinned coordinates
+  were measured (Lv.30 tent at norm 708,602, Lv.27 tent
+  at 617,570), and only tap a tent visually verified as
+  a tent. Do not repeat the east pan to the formation
+  lots, nor the south or north pans.
+- Drill Ground Full status, sixth consecutive carry
+  without a live read: the 2026-10-31 Drill Ground Full
+  blocker was neither confirmed nor cleared in this
+  unit - no barracks was reached, so no Drill Ground
+  figure is claimed here. The profile therefore still
+  carries it unverified, now a sixth consecutive unit
+  without a live Drill Ground read (2120 was the fifth).
+  This recurrence is the failure open Issue #150 tracks
+  (barracks tent rows not located, Drill Ground never
+  re-read); the recurrence is commented onto #150, not
+  filed as a new issue.
+- Base screen read live at unit start: food 362.4M, iron
+  555.0M, coin 36.7M, diamonds 2,476, total power
+  149,198,310. No different-device dialog, no login or
+  verification demanded. No diamonds or money spent, no
+  paid button tapped, no Finish Now, no upgrade
+  shortcut. Evidence in
+  `_records_/2026-11-02/troop-training/0017-queue-run.md`.
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -381,3 +424,5 @@ Observed in game on this account, first execution 2026-10-25.
   1651 training unit.
 
 - 1.6.0 (2026-11-01): north and south map edges ruled out at this zoom level, the measured drag mapping (y 300 to 700 moves south, reverse north), the 3-minute grounding timeout abandoned not retried, the device-takeover Confirm once with clean relaunch, the east-toward-the-red-roofed-formation next-unit rule, and Drill Ground Full still carried unverified a fifth consecutive unit, folded from the 2120 training unit.
+
+- 1.7.0 (2026-11-02): east pan to the formation lots ruled out as the barracks tent row, the lower-middle-base next-unit rule, Drill Ground Full carried unverified a sixth consecutive unit, and the recurrence commented onto Issue #150, folded from the 0017 training unit.
