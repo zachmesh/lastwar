@@ -2392,3 +2392,21 @@ of 2026-10-28.
   through the pass). No-op run, silent per the
   delivery rule. Full detail in
   pr-integration/1440-run.md.
+- Donations unit donations-2026-11-02-1403, partial:
+  Alliance menu not reached, third consecutive unit with
+  the entry-route blocker (Alliance icon tap pans the
+  camera to Drill Ground instead of opening the menu);
+  no donations made, no count read live, tracker
+  untouched. Blocker written into the
+  alliance-donations activity metadata as a working-tree
+  change for the PR flow, and the next donations unit
+  must restore the base framing first and tap the fresh
+  measured Alliance centre (903,787). Full detail in
+  alliance-donations/1427-queue-run.md.
+- Radar unit radar-2026-11-02-1403, partial: radar screen
+  never entered, second consecutive unit with the Drill
+  Ground camera-pan entry blocker; Drill Ground panel
+  opened and its X did not respond to background clicks,
+  game left safe with the panel open, tracker untouched.
+  Release posture still applies to the next radar unit.
+  Full detail in radar-tasks/1439-queue-run.md.
