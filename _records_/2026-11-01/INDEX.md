@@ -2669,3 +2669,7 @@ of 2026-10-28.
   owner-decision issue 132 about five hours old, its decision
   statement current.
   Full detail in pr-catchall/2139-run.md.
+
+## 21:32 to about 21:45 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-2145: own PRs checked first (only PR 142 open, records-owned, none owned); took open tooling issue 149 over 147 (sweep fix-up scheduling, left for a later run) and 133/128/130/129/126 (already implemented by merged PRs 146, 143, 139 and 135, closure belongs to the retro), 125 and 123. Built the scout coverage headline frontmatter fallback in scout_diff.py: a narrative-only observation no longer reports 0 items / 0 unexplained dots against its own frontmatter (Nov 1 example moves to 24 items / 6 unexplained, basis frontmatter-fallback, classified counts kept alongside). PR 153 opened, issue 149 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (25 checks) plus an unpatched-main control run. Full detail in tool-development/2145-run.md.
