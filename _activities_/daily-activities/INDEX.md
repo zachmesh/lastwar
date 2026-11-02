@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-02T02:44:38Z
 level: L1
-version: 1.15.1
+version: 1.16.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: owner refinement on 2026-10-26 - make it 3 segments, 25 minutes apart
   - source: owner refinement on 2026-10-26 - 26 minutes apart
   - source: owner refinement on 2026-10-26 - 27 minutes apart, the final spacing
+  - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (first zero sweep)
 ---
 
 # Routine activities
@@ -130,3 +131,73 @@ regulars is kept so it is always visible what is still expected.
 
 - No purchases, no diamond spending, no PvP, no alliance diplomacy, no
   city moves without the owner approval, per the recording rules.
+
+## Pre-reset zero sweep - first pass, 2026-11-01 1757 (partial)
+
+The first zero sweep ever run, under queue design section 12
+and the daily-collection ledger: walk all 23 ledger lines
+before the 19:00 reset, enqueue a priority 1 unit of its own
+type for every line not at zero, and re-walk the list in the
+final sweep at 18:30. This section records the first pass
+only; the final sweep is a separate record.
+
+- Unit zero-sweep-pre-reset-sweep-2026-11-01-001 by
+  ticker-1738, session cc-72 then cc-75 (the control session
+  dropped once and was restarted), window mode 642x951, no
+  different-device dialog, session window about 17:46 to
+  17:57. Status partial: not all 23 lines were live-read
+  inside this unit. Lines rest on a live read in this unit,
+  on the day's last live read named per line, or as
+  unreadable, and every not-at-zero line names its fix-up
+  unit. No other task type was worked inside this unit: no
+  bubble collected, no truck dispatched or plundered, no
+  donation made, no chest claimed, no secret task tapped.
+- Live reads in this unit: base screen about 17:55 showed
+  harvest bubbles standing over the central building cluster
+  (lines 1-4 not at zero as a group; the per-resource split
+  was not read, so no split is claimed per line). Resource
+  bar read food 344.7M, iron 532.2M, coin 25.4M. The Events
+  icon carried a red x2 badge, so the Events surface is not
+  at zero; fix-up events-2026-11-01-1857. The Secret
+  Command Post panel, reached by a wrong-entry tap on the
+  left rail, read Secret Mobile Squad Assist Allies 2/3,
+  Plunder Others 0/3, with UR and SSR tasks standing; no
+  task was tapped; fix-up secrets-2026-11-01-1857. The duel
+  total line was read in this pass's star-ceremony unit,
+  not in the sweep unit itself (League S38 calculating,
+  Weekly Ranking Bears Lair rank 190 with 17,240,439
+  weekly points, personal daily total unverified);
+  re-read fix-up star-ceremony-2026-11-01-1830.
+- Count: 23 lines walked - 11 not at zero, 6 unreadable,
+  the rest at zero per a last live read or re-check. The
+  sweep itself enqueued two fix-ups: vip-2026-11-02-0151
+  (priority 1, expires at the 19:00 reset) and
+  daily-missions-2026-11-02-0151 (priority 1, expires at
+  the 19:00 reset). All other not-at-zero lines already had
+  an eligible unit in inbox, so no duplicate was enqueued;
+  those units are named per line in the sweep record.
+- Gaps the sweep discovered, not new Issues (fix-ups are in
+  flight and the final sweep re-walks the list; the retro
+  judges any recurrence): VIP lines 12-13 never attempted
+  that trade day (no vip entry in the state file, no
+  pre-reset vip unit existed); daily activity chests line
+  14 at 150 with chests 160 and 200 still ahead and no
+  pre-reset missions unit existed; donations line 17 still
+  unverified (11:32 tracker note 9 coin donations, 16:06
+  unit Donation Count 1 of 30 before donating, final count
+  hidden behind the cooldown timer - no closing count,
+  consistent with the donations profile); trucks line 18
+  shortfall dispatch 1 and plunder 3 from the 1352 close
+  (4 of 5, 1 of 4); crystal line 22 age 7 days from
+  2026-10-25 and Glittering Market line 23 age 1 day from
+  2026-10-31, both with standing priority 1 units already
+  in inbox (see Issue #128, not re-filed).
+- Open blocker for the next unit: the Secret Command Post
+  back arrow resisted three background-click variants (two
+  at norm 42,940, one at the re-measured button centre
+  66,957); the panel was left open at sweep close. The next
+  unit must exit this panel with a fresh method (foreground
+  click or another route) before reaching the base screen.
+  The panel back control was the only control in this pass
+  that resisted background clicks; back arrows from Mail
+  and Duel League worked normally earlier in the pass.

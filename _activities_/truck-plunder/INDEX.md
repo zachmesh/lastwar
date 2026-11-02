@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T22:40:43Z
+modified: 2026-11-02T02:44:38Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: owner rule on daily truck quotas - dispatch 5 and plunder 4 every trade day, note it in the metadata and resolve misses, 2026-10-30
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1053 trucks unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1352 trucks unit)
+  - source: incidental trucks-view read in the alliance-train execution record 2026-11-01 1813 queue run (not a trucks unit)
 ---
 
 # Truck plunder - Intercity Trade
@@ -543,6 +544,26 @@ settlement and dispatch execution record).
   resumes the same shortfall. No plunder fought, no
   alliance mate plundered, no Mega Mode used, no diamonds
   spent. Game left on the trade screen, Others' Trucks tab.
+
+## Unresolved counter tension - 2026-11-01 1813 incidental read
+
+- The 1813 train unit opened the trucks view by a mis-tap
+  on the left column (see alliance-train 1.8.0) and read
+  Today's Trade Count 0/5 there. That read conflicts with
+  the trucks 1352 close the same trade day (dispatch 4 of
+  5, plunder 1 of 4), and no trucks unit ran between the
+  two reads, so no dispatch, plunder or reset explains a
+  move from 4 to 0 before the 19:00 reset.
+- The 0/5 read is recorded here as an unresolved tension,
+  NOT as a quota update: the trade-screen counters from
+  trucks units remain the source of truth for the quota,
+  and the standing shortfall stays dispatch 1 more and
+  plunder 3 more before the 19:00 deadline. The next trucks
+  unit must re-read both counters live on the trade screen
+  and explain the discrepancy in its record - whether the
+  mis-tap view showed a different counter, a different tab,
+  or a genuine reset - before any counter is overwritten.
+
 
 ## Open questions
 

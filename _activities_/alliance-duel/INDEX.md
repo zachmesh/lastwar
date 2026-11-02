@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T01:02:00Z
-version: 1.6.0
+modified: 2026-11-02T02:44:38Z
+version: 1.7.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -10,6 +10,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner correction on 2026-10-25 - the task names the Star Ceremony, taught step by step in session
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1324 star-ceremony unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1745 star-ceremony unit)
 ---
 
 
@@ -205,6 +206,49 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   (was 477.2M), coins 22.7M (was 10.6M) on the base
   resource bar - deltas matching the 1306 mail popup
   exactly (see mail-rewards 1.3.0).
+
+## What the 2026-11-01 1745 unit added
+
+- Unit star-ceremony-2026-11-01-1430 by ticker-1738,
+  session cc-72, window mode 642x951, no
+  different-device dialog. The game was left on the Mail
+  screen by the previous pass (mail unit partial); the back
+  arrow returned it to the base screen.
+- No Star Ceremony waiting: the base screen showed no gold
+  trophy icon beside the Alliance button on the right rail.
+  The right rail read Halloween Check-In, Events, Faction
+  Duel, VS, Season II, Alliance, Mail, Inventory. No
+  ceremony panel was opened, no hearts sent, no rewards
+  claimed.
+- Duel panel read live in the inter-week calculating state:
+  Infinite Roulette shows 0 spin tokens, wheel 0/10, spins
+  and points reset Sunday at 24:00. Duel League S38 shows
+  Gold Tier 38-7, AP3x rank 3, Week 1 Win, Week 2 Win, Week
+  3 crossed out, Week 4 sleeping, and the banner
+  "Calculating the number of Alliances promoted and
+  demoted..." with 13d 02:16 left, down from 13d 18:53 at
+  the 0108 read, consistent with the time elapsed. Match
+  Record Week 2 shows [AP3x]The Apex vs [Sync] IMPERIUM
+  7-6. Weekly Ranking shows [AP3x]Bears Lair rank 190
+  with 17,240,439 points, unchanged from the 0108 read -
+  a weekly cumulative figure, NOT a daily total, and never
+  to be reported as one.
+- Daily total line closed as unverified, matching the 0108
+  unit: no themed duel-day panel with a personal daily
+  total was found on the duel screens in this calculating
+  state, and no fragment score was substituted. Note on
+  ownership: this unit was staged before the duel-score
+  split merged (PR 137 merged in the 1745 integrator
+  pass), so it still carried the daily-total line in its
+  unit stats (daily_total_unverified, target 3600000,
+  verified no). Ceremony-only units after the split do not
+  carry it; the duel-score regular owns the total read.
+  The 1757 zero sweep named a star-ceremony re-read for
+  the total line (star-ceremony-2026-11-01-1830); under
+  the split that read belongs to the duel-score regular,
+  and the 1830 unit result will show which type carried
+  it.
+
 
 ## Open questions
 

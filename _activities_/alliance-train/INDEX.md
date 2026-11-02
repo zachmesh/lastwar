@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T21:37:13Z
+modified: 2026-11-02T02:44:38Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: in-game Train Operation Guidelines text, read 2026-10-25
   - source: owner task request naming a train task, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1325 train unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1813 train unit)
 ---
 
 # Alliance train
@@ -33,6 +34,15 @@ literal train, so both readings of the request are in the system.
 
 - On the base screen, the left icon column carries a train icon. It
   pans the camera to the station at the base edge.
+- Entry-icon correction, 2026-10-28 and 2026-11-01: in the
+  default column set there is no separate train icon (2026-10-28
+  1903: construction, research, season, chat, truck with badge 9,
+  radar and hammer), and the 1813 tap on the supposed train icon
+  opened the trucks view instead. The train-head entry worked in
+  the 0110 unit while a train was in preparation. Treat the icon
+  as set- and state-dependent: always verify the screen that
+  actually opened before tapping further, the same rule as
+  truck-plunder.
 - Tap a carriage plus bubble at the station, or the train itself, to
   open the STATION PLATFORM screen - the train from top to bottom,
   its conductor, its Train Rating, the departure countdown, and four
@@ -209,6 +219,44 @@ Measured in the 0110 train unit (ticker-0104, window mode
   (left-column train-head icon) rather than closing on
   the banner alone. The 2026-10-31 banner-only checks
   stand as banner-only checks under this same reading.
+
+## What the 2026-11-01 1813 unit added
+
+- Unit train-2026-11-01-1430 by ticker-1804, session about
+  18:05 to 18:13, status done as checked only.
+- Base screen inspected: no "Boarding closes in" banner
+  under the resource bar. The lines under the bar were the
+  furnace overdrive line and the breaking-news ticker, plus
+  a President announcement, so no train is in preparation
+  at this check, matching the 2026-10-31 and 1325 checks.
+  Precision note, per the 1325 qualification: banner
+  absence alone does NOT prove no train is in preparation,
+  and this unit's station-direct attempt did not verify
+  the station either (see below), so this check stands as
+  banner-only plus a failed station attempt, not as a
+  station-verified no-train finding.
+- Station direct check attempted and corrected: the
+  left-column icon tapped as a supposed train icon opened
+  the trucks view instead, confirming the 2026-10-28 record
+  that the left column carries a truck icon and no separate
+  train icon in this set. No truck was dispatched,
+  plundered or touched beyond opening that view. The view
+  read Today's Trade Count 0/5 incidentally; that read is
+  NOT adopted as a quota update, because it conflicts with
+  the trucks 1352 close the same trade day (dispatch 4 of
+  5, plunder 1 of 4) and no trucks unit ran between the two
+  reads. The next trucks unit's live trade-screen read
+  governs (see truck-plunder 1.12.0).
+- Return navigation from the trucks view did not succeed
+  in background mode: back-area clicks, an empty-area tap
+  and a map drag all showed no change, so the game was
+  left in the trucks view at unit close. The next executor
+  should expect to start from the trucks view, not the base
+  screen.
+- Nothing boarded, no Trade Contracts spent, no train
+  summoned, no conductor role taken, no other task type
+  touched.
+
 
 ## Open questions
 

@@ -1,14 +1,15 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T05:24:00Z
+modified: 2026-11-02T02:44:38Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner task request naming VIP rewards, 2026-10-25
+  - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (lines 12-13)
 ---
 
 
@@ -86,6 +87,24 @@ Measured on 2026-10-25.
   Construction Speed 50 percent, March Speed 15 percent, Max Units
   5 percent, Mega Mode of Trade Trucks active.
 - First freebie claim itemised in the execution record of this date.
+
+## What the 2026-11-01 1757 sweep found
+
+- VIP lines 12 (Daily Freebie) and 13 (login chest) were
+  not at zero at about 17:55: never attempted that trade
+  day. The state file carries no vip entry for 2026-11-01
+  and no pre-reset vip unit existed, so the sweep itself
+  enqueued the fix-up vip-2026-11-02-0151 (priority 1,
+  expires at the 19:00 reset). The outcome is pending the
+  final sweep and is NOT claimed here.
+- This is the same miss pattern the profile warns about
+  from 2026-10-25 (a trade day closing with VIP unopened),
+  caught this time by the sweep mechanism itself instead
+  of by the owner after the reset. If the fix-up closes
+  the lines before the reset, the mechanism worked as
+  designed; if it does not, the recurrence belongs in the
+  daily retro, not in a silent carry-over.
+
 
 ## Open questions
 
