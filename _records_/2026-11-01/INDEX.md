@@ -2424,3 +2424,16 @@ of 2026-10-28.
   Today footer 0 at entry, 750 after the first donation phase
   (recorded as observed, not converted to a count). No diamonds
   used. Full detail in alliance-donations/1944-queue-run.md.
+## 20:00 to about 20:10 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-2000.
+  No-op non-batch pass: sole open PR 142 (records
+  2026-11-01 post-1900 appends, head da94cf0f) left
+  awaiting the 23:00 batch; checker _tools_/records_batch.py
+  reports not due (outside every batch window, next
+  batch point 23:00). No knowledge or code PR open, no
+  new records branch needing a PR (records/2026-10-31
+  fully contained in main). No conflicts, no escalations.
+  End-of-pass sweep: PR 142 only, decided under the
+  batch exception. Full detail in
+  pr-integration/2000-run.md.
