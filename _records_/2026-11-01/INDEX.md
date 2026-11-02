@@ -1964,3 +1964,32 @@ of 2026-10-28.
 
 - Integrator run pr-integration-2026-11-01-1715 (non-batch pass; checker on main reports not due, next records batch 19:00): PR 137 re-read, head unchanged since the 1645 feedback, so no repeat comment posted - it stays open awaiting the author dropping the _logs_ appends; records PR 117 held for the 19:00 batch. No merges, no escalations, no conflicts. Full detail in pr-integration/1715-run.md.
 - Integrator run pr-integration-2026-11-01-1730 (non-batch pass; checker on main reports not due, next records batch 19:00): PR 137 re-read, head unchanged since the 1645 feedback, so no repeat comment posted - it stays open awaiting the author dropping the _logs_ appends; records PR 117 held for the 19:00 batch. No merges, no escalations, no conflicts. Full detail in pr-integration/1730-run.md.
+## 17:06 to about 17:19 — Queue ticker pass, Alliance Gifts
+
+- Ticker pass ticker-1704. Device takeover: the game showed the
+  "account active on a different device" dialog at session start;
+  Confirm was tapped once, the app exited as expected, and the
+  game was reopened. No second dialog appeared.
+- Gifts unit gifts-2026-11-01-1430, done: Regular Claim All
+  claimed 4 gifts (dialog read live "A total of 4 Regular
+  Alliance Gifts were claimed this time"); Premium tab rows all
+  read Claimed across two scrolled pages, 0 new. Gift Level 28.
+  Full detail in alliance-gifts/1718-queue-run.md.
+
+## 17:19 to about 17:23 — Queue ticker pass, Alliance Help
+
+- Help unit help-2026-11-01-1430, done: Help All pressed, the
+  game answered "Allies are very grateful for your assistance".
+  Header read 1,040 of 1,000 for the day; visible requests were
+  all the account's own (Bears Lair), which cannot be helped.
+  Full detail in alliance-help/1722-queue-run.md.
+
+## 17:23 to about 17:31 — Queue ticker pass, Mail Rewards (partial)
+
+- Mail unit mail-2026-11-01-1430, partial: Mail screen reached
+  and the category list read (Battle Report, Alliance, Event,
+  Season, System, Regular, In-app Purchases; no red dot), but
+  the pass budget ran out before any category was opened or
+  any Claim All pressed. No mail claimed, nothing deleted.
+  Tracker untouched; the next tick re-produces the mail
+  regular. Full detail in mail-rewards/1730-queue-run.md.
