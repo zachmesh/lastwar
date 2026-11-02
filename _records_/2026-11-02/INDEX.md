@@ -2382,3 +2382,13 @@ of 2026-10-28.
   through the pass). No-op run, silent per the
   delivery rule. Full detail in
   pr-integration/1420-run.md.
+## 14:30 to about 14:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1430.
+  Non-batch pass (checker reports not due, next batch
+  1500); no knowledge or code PR open; records PRs 181
+  (2026-11-01) and 161 (2026-11-02) await the 1500
+  batch (both trial-merged clean, 161 head unchanged
+  through the pass). No-op run, silent per the
+  delivery rule. Full detail in
+  pr-integration/1440-run.md.
