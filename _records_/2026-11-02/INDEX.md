@@ -927,3 +927,19 @@ of 2026-10-28.
   records awaiting the 07:00 batch; 25 open issues all
   class-labeled, no owner-decision issue over 24 hours.
   Full detail in pr-catchall/0539-run.md.
+
+## 05:40 to about 05:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-0540. Plan
+  staged 6 units for the next 12 hours: four duel-score
+  slots (0230, 0630, 1030, 1430 local) and two zero-sweep
+  backfills (2026-11-01-1830 chain second pass, already
+  expired at staging, and 2026-11-02-1730); already_present
+  63, skipped_done_current 6, reaped 0, expired 1.
+  Pre-reset sweep production skipped (not the 17:00 hour
+  run); tonight's pair already in inbox. Scout diff on
+  the newest observation (live tree, adds the 0534
+  events-hub pass) all zero, no candidates, no new Issue.
+  0 withdrawals. Live pool by_state: inbox 56, claimed 0,
+  done 573, upcoming 52. Full detail in
+  queue-planning/0540-run.md.
