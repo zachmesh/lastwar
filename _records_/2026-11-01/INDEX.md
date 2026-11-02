@@ -1896,3 +1896,14 @@ of 2026-10-28.
   recovery correctly stopped, stored-count first read
   owed against the 40 cap). Full detail in
   knowledge-organization/1632-run.md.
+
+- Standing integrator pass pr-integration-2026-11-01-1630:
+  non-batch pass (batch checker tools/records_batch.py
+  not on main yet; next batch 19:00). PR 116 (policy
+  2.3.0) MERGED under the owner-decided amendment
+  exception (body records owner approval 2026-11-01
+  about 16:19 PST, precedent PR 3 and PR 4); PR 127
+  (resource-collection 1.5.0) MERGED clean; records PR
+  117 held for the 19:00 batch, counts as decided.
+  Local main synced to 8687721. Full detail in
+  pr-integration/1630-run.md.
