@@ -11,6 +11,8 @@ grounded_in:
   - source: owner instruction of 2026-10-31 - add or modify steps so every open item has a closed loop
 ---
 
+**FROZEN 2026-11-01 by owner direction: new ideas, directions and improvement candidates are filed as GitHub Issues on zachmesh/lastwar, not here. Existing entries were mirrored to Issues; this file is an archive.**
+
 # Improvements backlog
 
 The register of improvement tasks for the improvement loop.
@@ -168,6 +170,15 @@ entries to implemented.
 - leak: executors estimate tap coordinates by eye from screenshots. In the 2026-11-01 urgent harvest (unit harvest-2026-11-01-1403) the owner had to correct the pass live five times - bubbles on the left side of the base, the need to scroll, the screws bubble toward the top left, the screws bubble still full after the experience bubbles were collected, and the drone component bubble missed outright and collected by the owner himself. Every missed tap costs a re-observation cycle, and a missed bubble is production left sitting stopped at its cap.
 - target metric and current value: tap first-try success rate in execution records, and harvest/truck units completing with zero owner corrections. Current value - the 1534 urgent harvest stands at five owner corrections inside one unit, and no first-try tap rate is measured anywhere yet.
 - verification: tooling that (1) takes the game screenshot and measures and calculates target coordinates instead of estimating by eye; (2) runs a tap-verify loop - tap, screenshot, confirm the state changed, and on a miss measure the miss vector and compensate on retry; (3) keeps per-activity visual reference anchors (screenshot plus normalized coordinates plus landmark) that executors ground against before tapping; (4) measures any systematic click offset per session against a fixed anchor (the top resource bar) and stores the compensation. Validated on isolated fixtures first, then in bounded live units whose execution records carry the tap first-try rate and the owner-correction count for the retro to read.
+- status: open
+
+### IMP-20261101-09 - records batch-cadence compliance - checker tool plus retro audit
+
+- source: owner chat decision of 2026-11-01 (about 16:22 PST) - the owner chose a checker tool plus a retro audit to enforce the records batch cadence, and explicitly declined the GitHub status-check hard block for now.
+- class: tooling
+- leak: the records batch cadence (records PRs merge only at the first integrator pass at or after 19:00, 23:00, 03:00, 07:00, 11:00 and 15:00 America/Los_Angeles, per policy 2.3.0) is currently enforced only by the integrator judging clock time from its written instructions. An off-batch records merge breaks no tool, fails no check and leaves no automatic trace, so a violation is invisible unless a human re-reads merge timestamps by hand.
+- target metric and current value: off-batch records merges per day, trending to 0. Current value is unmeasured - no checker and no audit exist yet, and the cadence itself only took effect on 2026-11-01.
+- verification: two components. (A) tools/records_batch.py - a stdlib-only command (due, with an optional --at ISO-time override) that reports whether a records batch merge is currently due, which batch window applies, and the next batch point; its exit code distinguishes due from not-due so the integrator gates on it mechanically instead of judging the clock itself. (B) a retro_report.py compliance extension - for the retro's trade day it lists the records PR merges on main (merge timestamps from gh) that fell outside any batch window, as a named compliance section with the violation count and PR numbers; a day with zero violations is reported as an explicit clean line, not omitted. Every violation the audit finds is filed as a backlog item by the retro per the governance loop.
 - status: open
 
 ## In progress

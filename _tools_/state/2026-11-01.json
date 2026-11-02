@@ -1,23 +1,23 @@
 {
  "gifts": {
   "status": "done",
-  "at": "2026-11-01T12:21:55",
-  "note": "Claim All both tabs: 22 Regular + 3 Premium gifts"
+  "at": "2026-11-01T17:19:08",
+  "note": "Regular 4 claimed, Premium 0 new"
  },
  "help": {
   "status": "done",
-  "at": "2026-11-01T09:40:59",
-  "note": "Help All pressed, gratitude confirmed"
+  "at": "2026-11-01T17:22:54",
+  "note": "Help All pressed, 1040/1000"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-11-01T13:22:16",
-  "note": "Checked only: no trophy icon, no ceremony waiting"
+  "at": "2026-11-01T17:45:14",
+  "note": "No ceremony waiting; daily duel total unverified in inter-week calculating state"
  },
  "train": {
   "status": "done",
-  "at": "2026-11-01T13:23:33",
-  "note": "Checked only: no Boarding banner, no train in preparation"
+  "at": "2026-11-01T18:14:36",
+  "note": "No boarding banner, no train in preparation; checked only"
  },
  "passes": {
   "status": "done",
@@ -53,5 +53,15 @@
   "status": "done",
   "at": "2026-11-01T14:49:44",
   "note": "Claimed Help Allies, Trucks rows and 120 chest; activity 110 to 150"
+ },
+ "harvest": {
+  "status": "done",
+  "at": "2026-11-01T23:54:03",
+  "note": "urgent full sweep done; all full bubbles collected incl 3 truck returns; drone bubble owner-collected 15:52 (executor miss, disclosed)"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-11-01T16:44:56",
+  "note": "One gate survivor processed, gate line clear"
  }
 }
