@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-01T07:09:43Z
-version: 1.1.0
+modified: 2026-11-02T05:05:00Z
+version: 1.2.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -72,6 +72,13 @@ one mention in a summary.
   answered.
 - age tracking: opened 2026-10-31, age 0 days at filing;
   the retro recomputes and reports the age every run.
+  2026-11-01 retro: age 1 day. Recurrence noted -
+  Nov 1 adds a Base Building skipped-needs-owner
+  (1803 unit, building timers 11d and 2d, tier-3 gap
+  30,000) and a Tech Research partial at 0 of 30,000
+  (1403 unit, no research completing in window).
+  No owner decision appeared for this item in the
+  records, chat or Slack DM since it opened.
 - status: open
 
 ### OD-20261031-02 - Halloween Day 07 decoration choice
@@ -92,8 +99,43 @@ one mention in a summary.
 - age tracking: opened 2026-10-31, age 0 days at filing;
   the retro recomputes and reports the age every run. Note
   the item is event-bound and can expire undecided.
+  2026-11-01 retro: age 1 day. Unaddressed on Nov 1 -
+  no Nov 1 events record mentions the Day 07 tile or a
+  decoration choice. If the event window passes
+  undecided, this item is marked decided by expiry
+  per the maintenance rules, never silently deleted.
 - status: open
 
+
+### OD-20261031-03 - whether to keep, change or pause the survivor method
+
+- opened: 2026-10-31
+- item: whether the survivor intake method should be
+  kept running as-is, changed, or paused pending a
+  method change.
+- context: the Oct 31 retro named this decision (its
+  action M5, 22 consecutive partials meeting the
+  fourth-identical-partial threshold) but never
+  registered it; this entry files it. The question
+  has narrowed since: Nov 1 produced the first
+  verified survivors done of the queue era (1403
+  unit, record _records_/2026-11-01/survivor-intake/1644-queue-run.md,
+  gate line clear, target 1 over achieved 1),
+  folded as survivor-intake 1.9.0 (streak broken
+  at 25) - but Quick Dispatch has still never run
+  (no recruit card in the done unit), and the
+  other Nov 1 survivors units closed partial or
+  failed with the gate line explicitly not
+  verified. Intake is no longer 0-done; the
+  method as a whole is still unproven.
+- decision needed: keep the current method
+  running, change it, or pause the type pending a
+  method change - with Quick Dispatch unproven
+  either way.
+- age tracking: opened 2026-10-31 (first needed
+  by the Oct 31 retro), age 1 day at the
+  2026-11-01 retro; recompute on each retro run.
+- status: open
 
 ### OD-20261101-01 - whether to add a Season 2 event calendar
 
