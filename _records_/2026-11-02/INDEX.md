@@ -398,3 +398,14 @@ of 2026-10-28.
   (about ten hours old, building/research part still
   undecided) are both under 24 hours.
   Full detail in pr-catchall/0239-run.md.
+## 02:45 to about 02:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0245.
+  Merged PR 166 (knowledge, organizer 0232): secret-missions
+  1.5.0 to 1.6.0, hidden-treasures 1.2.0 to 1.3.0, radar-tasks
+  1.10.0 to 1.11.0, owner lastwar-knowledge-organizer, Issue
+  165 referenced. Records PRs 157 (2026-11-01) and 161
+  (2026-11-02) await the 03:00 batch on this non-batch pass
+  per the records_batch.py checker. Local main synced to
+  91291d16eb; merge synced to the owner's Slack DM.
+  Full detail in pr-integration/0251-run.md.
