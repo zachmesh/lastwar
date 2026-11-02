@@ -2361,3 +2361,27 @@ of 2026-10-28.
   so no duel-score unit was staged. Full detail in
   queue-planning/1940-run.md.
 - Tool-developer run tool-development-2026-11-01-1947: own PRs checked first (only PR 142 open, records-owned, none owned); took open tooling issue 128 over 129/133/125/123 (136, 130 and 126 already implemented by merged PRs 137, 139 and 135, closure belongs to the retro). Built aged priority-1 windowing in sync plus the stalled_priority1 stats list: sync gives unscheduled P1 units older than 4 hours a real window, stats names every stalled P1 unit for the round summary. PR 143 opened, issue 128 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools plus an unpatched-main control run. Full detail in tool-development/1947-run.md.
+
+## 19:32 to about 19:50 — Knowledge organization pass (first after the 19:00 reset)
+
+- Pass knowledge-organization-2026-11-01-1932, worked from
+  the 1832 watermark, with the full ended-trade-day sweep
+  (first run after the reset). Folded the ticker-1904 radar
+  release unit (partial), the ticker-1904 sync reap (7 units
+  expired at the reset), the 1840 and 1940 duel-score staging
+  gap, and the sweep-caught 1241 crystal-shop unit into six
+  profiles: radar-tasks 1.9.0, crystal-shop 1.1.0,
+  alliance-duel 1.8.0, vip-rewards 1.6.0, daily-missions 1.2.0,
+  daily-activities 1.17.0. Three contradictions resolved in
+  place (radar carried reads superseded by the 1904 live
+  re-read; crystal entry claim qualified by the 1241 tab-row
+  read; VIP and missions fix-up outcomes confirmed expired by
+  the reap). The sweep closed its one gap: the 1241 unit had
+  been missed by the 1332 run and its profile still stood at
+  1.0.0. Issue #128 commented with the 1241 evidence (first
+  executed crystal-shop unit recorded; tab stays unlocated;
+  not closed). Own PR 141 stands MERGED with no comments or
+  reviews, so no PR feedback was owed. PR 144 (six profiles,
+  amended once with the 1940 confirmation) OPEN with its Owner
+  line at record time. Full detail in
+  knowledge-organization/1932-run.md.
