@@ -2297,3 +2297,13 @@ of 2026-10-28.
   fifteen hours) and 132 (about twenty-one hours) both under
   24 hours with statements current, no escalation. Full
   detail in pr-catchall/1339-run.md.
+## 13:40 to about 13:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-1340. Staged 0
+  units (already_present 64, skipped_done_current 7,
+  reaped 0, expired 0). Tonight's pre-reset sweep pair
+  already in inbox, scout diff on the 2026-11-02
+  observation applied with all zero counts, 0
+  withdrawals. Pool inbox 59, claimed 1, done 605,
+  upcoming 53. Full detail in
+  queue-planning/1340-run.md.
