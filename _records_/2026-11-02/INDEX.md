@@ -425,3 +425,19 @@ of 2026-10-28.
   0/30 is not claimed; a re-read unit is enqueued for after
   the timer. Tracker untouched. Full detail in
   alliance-donations/0259-queue-run.md.
+
+## 03:00 to about 03:09 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0300.
+  Batch pass per checker (_tools_/records_batch.py
+  reports due, window 03:00-04:00): records PR 157
+  merged by merge commit 3707155 (10 commits, branch
+  not deleted). Records PR 161 now conflicts with main
+  on _logs_/repo-actions/action-log.jsonl after the
+  157 merge; commented, not force-merged, not dropped,
+  resolution on the branch side. Records PR 167 opened
+  for the 2026-11-01 post-0300 batch log line, awaiting
+  the 07:00 batch. Local main sync-back withheld: local
+  main has diverged from remote main. Merge synced to
+  the owner Slack DM. Full detail in
+  pr-integration/0309-run.md.
