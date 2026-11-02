@@ -2887,3 +2887,19 @@ of 2026-10-28.
   escalation, no feedback. Local main fast-forwarded
   by bundle to ef4d78006. End-of-pass sweep: zero
   open PRs. Full detail in pr-integration/2300-run.md.
+## 23:15 to about 23:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-2315.
+  Non-batch pass for records purposes: the checker
+  (_tools_/records_batch.py) reports due inside the
+  23:00-00:00 window, but the 23:00 batch was already
+  consumed by the 2300 pass (records PR 142 merged
+  23:03:56 PST, merge commit ef4d7800), and only the
+  first pass at or after a batch point merges, so no
+  records merge in this pass. Records PR 157 opened
+  for the post-2300 appends (head ffa68950c at open
+  time, plus this run record) and awaits the 03:00
+  batch. No knowledge or code PR open, no escalation,
+  no feedback. Local main already at ef4d78006, no
+  sync-back needed. End-of-pass sweep: PR 157 open,
+  awaiting batch. Full detail in pr-integration/2315-run.md.
