@@ -2472,3 +2472,19 @@ of 2026-10-28.
   trial-merged clean against the new main). Local
   main synced to c67f144c by bundle ref update.
   Full detail in pr-integration/1455-run.md.
+
+## 15:00 to about 15:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1500.
+  Batch pass (checker reports due, window 1500 to
+  1600); merged records PR 181 (2026-11-01
+  post-1100 batch, merge 31bdabf55, branch not
+  deleted); records PR 161 (2026-11-02) conflicted
+  on _logs_/repo-actions/action-log.jsonl after the
+  merge, commented, not force-merged, stays open
+  for the 1900 batch once resolved on the branch
+  side; merge-time action-log line committed to
+  records/2026-11-01 as 2be5df83 and new records
+  PR 187 opened for it, awaiting the 1900 batch.
+  Local main synced to 31bdabf55 by bundle ref
+  update. Full detail in pr-integration/1521-run.md.
