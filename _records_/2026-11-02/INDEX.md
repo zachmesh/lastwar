@@ -2410,3 +2410,16 @@ of 2026-10-28.
   game left safe with the panel open, tracker untouched.
   Release posture still applies to the next radar unit.
   Full detail in radar-tasks/1439-queue-run.md.
+
+## 14:40 to about 14:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-1440. Staged 11
+  units for the 2026-11-03 0203/0230 slots (mail, help,
+  gifts, harvest, radar, survivors, train, training,
+  donations, arms-race, star-ceremony; already_present 56,
+  skipped_done_current 4, reaped 0, expired 0). Tonight's
+  pre-reset sweep pair already in inbox, scout diff on the
+  2026-11-02 observation applied with all zero counts, 0
+  withdrawals. Pool inbox 67, claimed 0, done 610,
+  upcoming 53. Full detail in
+  queue-planning/1440-run.md.
