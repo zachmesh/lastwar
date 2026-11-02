@@ -796,3 +796,18 @@ of 2026-10-28.
   tab holds purchase packs only, none tapped.
   Issue #128 commented. Full detail in
   crystal-shop/0446-queue-run.md.
+## 04:45 to about 04:49 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0445, done:
+  knowledge PR 170 merged (squash, merge commit
+  3c5e5f8): organizer 0432 run folding 0338-0426
+  execution records into 8 activity profiles, with the
+  trucks trade-entry correction and the secrets Assist
+  unblocking; local main synced back to 3c5e5f8. Non-batch
+  pass, checker (_tools_/records_batch.py) reports not
+  due (outside every batch window, next batch point
+  07:00). Records PR 167 (2026-11-01 post-0300 batch,
+  head b36bf22) and PR 161 (2026-11-02, head d322c13,
+  0300 conflict resolved on the branch side) await the
+  07:00 batch. Merge synced to the owner Slack DM.
+  Full detail in pr-integration/0449-run.md.
