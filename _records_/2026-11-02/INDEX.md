@@ -880,3 +880,12 @@ of 2026-10-28.
   after its new head. No knowledge or code PR was open.
   No Slack or chat delivery: quiet no-op pass.
   Full detail in pr-integration/0532-run.md.
+
+- Tool-developer pass tool-development-2026-11-02-0537.
+  Built the tapcal measurement half for issue #123 (PR 172,
+  branch work/tapcal-score-20261102): tap-log scoring with
+  first-try rate and owner corrections, session offset
+  calibration from fixed anchors, target compensation, and
+  a per-activity anchor store. Live tap driving stays with
+  the executor; issue #123 awaits retro closure.
+  Full detail in tool-development/0537-run.md.
