@@ -3,5 +3,30 @@
   "status": "done",
   "at": "2026-11-02T00:23:04",
   "note": "45 Regular + 5 Premium claimed, Level 28"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-02T00:39:05",
+  "note": "Help All pressed; 240/1000 verified live, no ally requests visible"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-02T00:42:05",
+  "note": "Claim All Alliance 2 and Event 3 gift mails; icons gone on re-read"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-11-02T00:44:08",
+  "note": "Checked only: no train in preparation"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-02T00:47:49",
+  "note": "No ceremony waiting; duel total 1113750, gap 2486250"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-02T00:50:05",
+  "note": "Arms Race 0pts, Wanted Boss not out; nothing claimable"
  }
 }

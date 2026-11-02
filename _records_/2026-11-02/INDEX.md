@@ -105,3 +105,63 @@ of 2026-10-28.
   unexplained red dots); 0 withdrawals. Pool inbox 67,
   claimed 1, done 541. Full detail in
   queue-planning/0040-run.md.
+## 00:34 to about 00:39 — Queue ticker pass, alliance help
+
+- Ticker pass ticker-0034. Sync reaped nothing; all due
+  regulars were already queued by the planner. No zombie
+  chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30.
+- Help unit help-2026-11-01-2230, done: Help All pressed
+  once; header verified live 240/1,000 before and after
+  reopening, no ally requests visible, only the account's
+  own 30/30 requests. Tracker marked done. Full detail in
+  alliance-help/0039-queue-run.md.
+
+## 00:39 to about 00:42 — Queue ticker pass, mail rewards
+
+- Mail unit mail-2026-11-01-2230, done: Claim All in
+  Alliance (Daily and Weekly Donation Rankings) and in
+  Event (Season Rewards, Season Settlement, Arms Race
+  Ranking Reward) - 5 gift mails claimed, gift icons gone
+  on re-read, nothing deleted. Tracker marked done. Full
+  detail in mail-rewards/0042-queue-run.md.
+
+## 00:42 to about 00:44 — Queue ticker pass, alliance train
+
+- Train unit train-2026-11-01-2230, done as checked
+  only: no boarding banner, station pan showed no train
+  or plus bubble, so no train is in preparation. Nothing
+  boarded, nothing spent. Tracker marked done. Full
+  detail in alliance-train/0044-queue-run.md.
+
+## 00:44 to about 00:48 — Queue ticker pass, star ceremony and duel read
+
+- Star-ceremony unit star-ceremony-2026-11-01-2230,
+  done: no ceremony trophy icon beside the Alliance
+  icon, so no ceremony is waiting. Duel total read live
+  on the VS panel: 1,113,750 on Radar Training day,
+  gap 2,486,250 against the 3,600,000 target. Tracker
+  marked done. Full detail in
+  alliance-duel/0047-queue-run.md.
+- Correction to the train unit above: while restoring
+  the camera in this unit, the station came into view
+  with a train in preparation (conductor Missile Apex,
+  countdown about 01:39), superseding the 0044 record's
+  "no train in preparation" finding, which checked the
+  wrong base edge. A fresh train unit
+  train-2026-11-02-0847 was queued for the boarding
+  check; no carriage was touched in this unit.
+
+## 00:48 to about 00:50 — Queue ticker pass, event claims
+
+- Events unit events-2026-11-01-2257, done: Arms
+  Race Unit Progression at 0 points with no chests
+  earned; Wanted Boss Code 87 not out (about 16:10 to
+  go) and its Rewards panel carries no Claim buttons.
+  Nothing claimed, nothing ground. Tracker marked
+  done. Full detail in event-claims/0050-queue-run.md.
+- Left queued for the next tick: train unit
+  train-2026-11-02-0847 (the boarding check for the
+  Missile Apex train found during the star-ceremony
+  unit's camera recovery); its boarding window still
+  had about 01:36 left at pass end.
