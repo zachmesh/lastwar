@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T04:45:00Z
+modified: 2026-11-02T07:38:29Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: arms-race execution record 2026-11-01 1135 queue run
   - source: arms-race execution record 2026-11-01 1523 queue run
   - source: arms-race execution record 2026-11-01 1934 queue run
+  - source: ticker-2304 arms-race execution record 2026-11-01 2327 queue run
 ---
 
 
@@ -513,3 +514,75 @@ slot. Evidence in
   re-selecting the same LastWar window (pid unchanged)
   and clicking with a fresh observation id succeeded,
   so no game state was lost.
+
+## What the 2026-11-01 2327 unit added
+
+- Unit arms-race-2026-11-01-2203 by ticker-2304, session
+  about 23:16 to 23:27, status partial. Live phase, read
+  at entry and again at the sweep: Unit Progression,
+  Contest Segment Lv.29-30, time left 02:40:31 at entry
+  and 02:38:22 at the sweep. Score 0 on both reads.
+- Chest thresholds 15,000, 30,000 and 75,000, same as the
+  1135 read. Tier-3 gap: the full 75,000 points. No point
+  chest earned (score 0 below the first threshold),
+  nothing claimed.
+- Scoring table, read live: Train a Lv.10 unit pays plus
+  31, Use 1-min Training Speed-up pays plus 10, Buy Packs
+  containing Diamonds pays plus 30 per diamond. The
+  speedup and pack paths are red lines and were not used.
+- Training path judged by live read, in part: the Train
+  a Lv.10 unit row arrow opened a TRAIN UNITS panel for
+  one barracks. That barracks trains up to Lv.8 only
+  (Lv.9 and Lv.10 shown locked), its slider stood at 666
+  units at Lv.8, and its Train button carried a batch
+  timer of 1d 04:20:26, so it is busy and cannot queue
+  Lv.10 units. No Train was tapped and no Finish Now was
+  tapped. The other three barracks were NOT checked
+  inside this unit's cap, so the training path is judged
+  blocked at one barracks, not settled for the account -
+  a one-barracks read must not be written up as an
+  account-wide block.
+- Next arms-race unit must check the other three
+  barracks for an idle Lv.30 barracks that can queue
+  Lv.10 units (2,420 units score 75,000 at plus 31 each,
+  before any batch-size cap, per this unit's follow-up),
+  before concluding the training path is blocked for
+  this phase. If such a barracks is idle, queue just
+  enough Lv.10 units to reach 75,000 and claim all three
+  chests in that unit.
+- Completion sweep at the close, on the Arms Race page:
+  no bouncing chest and no reward red dot. The cumulative
+  counter chest at top left reads 0/2, static, no bounce,
+  and was not tapped. The ranking row reads #2110
+  [AP3x]Bears Lair with score 0, matching the phase score
+  on this read; its chest is preview-only per precedent
+  and was not tapped. Nothing was claimed. The game was
+  left on the Arms Race page.
+- Entry-point lessons: the Events tab bar shifted between
+  openings again - the first two taps on the partially
+  visible Arms Race tab did nothing, backing out to base
+  and re-entering still landed on Wanted Boss, and a
+  rightward drag of the tab bar revealed the Arms Race
+  tab fully, after which a tap on its OCR-grounded
+  centre switched the page. On the sweep return the same
+  drag switched straight to the Arms Race page. Tab
+  positions must be re-grounded from OCR on every
+  opening, never inherited. One stale-observation retry:
+  a tab tap sent with an image observation id was
+  refused, and the same tap re-sent with the latest
+  receipt observation id succeeded, so no game state was
+  lost.
+- Cross-unit note, not an arms action: the radar unit of
+  this same pass launched a Doom Walker rally (March
+  Queues 1 of 4, marching at this unit's entry); its
+  result falls to the next radar unit, not to this
+  arms-race unit.
+- Zombie seeding: not done. The zombie-invasion activity
+  INDEX records chain close at unit 066: the event ended
+  at about the 19:00 reset on 2026-10-30, so no chain unit
+  was seeded, per the standing do-not-seed rule.
+- No diamonds or money spent, no speedup item burned, no
+  building or research started, no stage swapped, no
+  chest tapped that was not earned. Tracker untouched for
+  partial, per the queue rules.
+
