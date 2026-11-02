@@ -621,7 +621,7 @@ of 2026-10-28.
   left for the next tick; tracker untouched. Full detail in
   event-claims/0359-queue-run.md.
 
-## 04:00 to about 0403 - PR integration pass
+## 04:00 to about 04:03 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-02-0400, no-op:
   non-batch pass, checker (_tools_/records_batch.py)
