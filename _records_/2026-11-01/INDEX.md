@@ -2830,3 +2830,23 @@ of 2026-10-28.
   resolved 4, stale marked 0, gaps filed 0, PR feedback
   addressed 0. Full detail in
   knowledge-organization/2232-run.md.
+
+## 22:40 to 22:52 — Queue planning pass (2240 run)
+
+- Plan staged 11 units: arms-race, donations, harvest, radar,
+  survivors, training for the 2026-11-02 1003 slot, and gifts,
+  help, mail, star-ceremony, train for the 2026-11-02 1030 slot
+  (already_present 56, skipped_done_current 2, reaped 0,
+  expired 0). Tomorrow's pre-reset sweep pair (chain
+  pre-reset-sweep-2026-11-02) already in inbox; scout diff
+  dry run and apply both all zero; 0 withdrawals. Pool:
+  inbox 73, claimed 0, done 530. Owner-decision Issues
+  checked: #132 answer unchanged (duel-score only, building
+  and research deferred), #154 has no owner answer yet so no
+  alliance-facing unit was staged. Diff-parse gap carried
+  for the retro: the live tree runs pre-merge scout_diff.py,
+  so the diff reads 0 items against frontmatter
+  items_observed 24 and unexplained_red_dots 6; PR 153's
+  frontmatter fallback will surface those counts once the
+  live tree syncs to main. Full detail in
+  queue-planning/2240-run.md.
