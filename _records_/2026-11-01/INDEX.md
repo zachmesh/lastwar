@@ -2744,3 +2744,9 @@ of 2026-10-28.
   PR 142 left awaiting the 23:00 batch, no knowledge
   or code PR open. Full detail in
   pr-integration/2200-run.md.
+- Integrator pass pr-integration-2026-11-01-2215.
+  No-op non-batch pass (checker _tools_/records_batch.py
+  reports not due, next batch point 23:00): sole open
+  PR 142 left awaiting the 23:00 batch, no knowledge
+  or code PR open. Full detail in
+  pr-integration/2215-run.md.
