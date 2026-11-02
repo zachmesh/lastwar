@@ -2903,3 +2903,28 @@ of 2026-10-28.
   no feedback. Local main already at ef4d78006, no
   sync-back needed. End-of-pass sweep: PR 157 open,
   awaiting batch. Full detail in pr-integration/2315-run.md.
+
+## 23:06 to 23:19 — Queue ticker pass, radar tasks (partial)
+
+- Radar unit radar-2026-11-01-2203, partial, duel day 1
+  release: 4 tasks executed, 10 rewards claimed, radar
+  points 91 to 101, stamina 82 to 23, stored 0 of 40 at
+  close, about 2.10M coin claimed across the three
+  popups. Doom Walker pin worked to a launched rally
+  (Lv.160, Squad 1 25.12M, 20 stamina, March Queues 1
+  of 4, kill and claim fall to the next unit). Story,
+  axe, portrait and blue skull pins left unattempted,
+  so the unit stays partial. Full detail in
+  radar-tasks/2319-queue-run.md.
+
+## 23:16 to 23:27 — Queue ticker pass, arms race (partial)
+
+- Arms-race unit arms-race-2026-11-01-2203, partial: live
+  phase Unit Progression (Lv.29-30), score 0, tier-3 gap
+  75,000, time left about 02:38 at the sweep. One barracks
+  judged live: Lv.10 locked, batch busy 1d 04:20:26, so it
+  cannot score; speedup and pack paths are red lines.
+  Sweep clean (cumulative chest 0/2 static, no bounce,
+  no red dot), nothing claimed. Next unit must check the
+  other three barracks for an idle Lv.30 barracks. Full
+  detail in arms-race/2327-queue-run.md.
