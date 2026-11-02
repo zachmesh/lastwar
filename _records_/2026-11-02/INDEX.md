@@ -1891,3 +1891,15 @@ of 2026-10-28.
   batch. Merged main synced back to the local
   repo. Full detail in
   pr-integration/1115-run.md.
+
+## 11:07 to 11:22 - Queue ticker pass, survivors partial
+
+- Survivors unit survivors-2026-11-02-1003, partial: gate
+  corner grounded fresh (bubble norm 72,662, figure norm
+  70,692) but taps at the figure point opened no survivor
+  dialog and no recruit card; two drag-pans produced no view
+  change and were retired inside the unit per rule R2; gate
+  line at close unverified, 0 survivors processed, no Quick
+  Dispatch (no recruit taken in). Tracker untouched. Evidence
+  commented on open issue #168 (gate pinning). Full detail in
+  survivor-intake/1107-queue-run.md.
