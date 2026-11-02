@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T07:38:29Z
+modified: 2026-11-02T10:32:00Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -20,6 +20,7 @@ grounded_in:
   - source: radar tasks execution record 2026-11-01 1122 queue run
   - source: radar tasks execution record 2026-11-01 1629 queue run
   - source: ticker-2304 radar execution record 2026-11-01 2319 queue run
+  - source: ticker-0204 radar execution record 2026-11-02 0226 queue run
 ---
 
 
@@ -645,6 +646,92 @@ are still open, per the protocol.
   activity worked from this unit. No map pin was tapped
   except the Doom Walker pin above. Tracker untouched
   for partial, per the queue rules.
+
+## What the 2026-11-02 0226 unit added - entry corrections, 2 claims, Doom Walker rally still unverified, pins unattempted
+
+- Unit radar-2026-11-02-0203 by ticker-0204, session
+  about 02:08 to 02:26, status partial. Live duel posture
+  from tools/duel.py at entry: duel day 1, Radar
+  Training, radar posture release, day ends 2026-11-02
+  19:00 local. Release posture governs.
+- Entry, three corrections, all recorded for the next
+  unit: the game was open at the Secret Command Post
+  from the preceding treasures unit. The back arrow's
+  true centre, measured on an enlarged crop, is norm
+  (132,948); the first two taps at (94,944) hit the small
+  avatar badge overlapping the button's left edge and
+  changed nothing - do not repeat the 94,944 point
+  (R2 pivot: re-ground, then switch variant). The tap
+  at (132,948) exited the post to the base.
+- The base view first rendered without the HUD (no top
+  resource bar, no right column) and showed no shortcut
+  column; a tap on the in-base dish structure restored
+  the full HUD. The shortcut column is only groundable
+  on the full-HUD base view - the no-HUD frame is not a
+  usable grounding screenshot. The dish icon was then
+  grounded fresh on the full-HUD strip: white satellite
+  dish on a dark circle with a red badge 2, at norm
+  (58,736) on the left edge. One tap opened the radar
+  on the first try. Visual-grounding points offered
+  earlier in this unit were wrong - one landed on the
+  train icon, one on the in-base dish structure - and
+  were not used blindly; re-ground from the live
+  screenshot before tapping a suggested point.
+- Opening state (live, radar screen verified): Radar
+  Lv.13, radar points 101, stored 0/40, stamina 60.
+  Restore line: 12 Radar Task(s) will be restored in
+  01:09:44 at the claim popup read, about 03:35 local
+  for the next restore. Bottom bar at entry: 2 task
+  rewards can be claimed, with a Claim All button. No
+  Quick Execute offer: stored reads 0/40, so no
+  ordinary task was executable.
+- Pin inventory at entry (from the entry screenshot):
+  purple skull pin with red dot (top left), purple
+  question-mark story pin with red dot (top centre),
+  orange axe pin (right), portrait pin (left middle),
+  orange axe pin (lower left), orange axe pin (lower
+  centre-left), blue skull pin with red dot (lower
+  centre). Seven pins standing.
+- Claim All claimed the 2 pending rewards. Radar points
+  101 to 103. CONGRATULATIONS popup read live: gold paw
+  item x3, radar item x600, drone item x1.6K, iron 1.8M,
+  food 1.8M, coin 1.2M (item names for the first three
+  tiles by icon; the last three tiles are the labelled
+  resource rows). Popup dismissed by a tap at norm
+  (500,850). No stamina was spent; stamina read 61 at
+  the popup (regeneration tick during the unit).
+- Non-verification, stated plainly: the 2 claimed
+  rewards do NOT match the Doom Walker rally card
+  figures from the 2026-11-01 2319 unit (food 975.6K,
+  iron 975.6K, coin 622.8K, radar item 300, gold ticket),
+  so the rally kill/claim is NOT verified by this claim
+  and remains open. Do not read this claim as the rally
+  reward.
+- Closing state (live reads, same unit): Radar Lv.13,
+  radar points 103, stored 0/40, stamina 61, restore
+  line 01:09:44 remaining at the popup read. No pin was
+  tapped in this unit; all seven entry pins stand
+  unattempted. Per the release standard, pins left
+  unattempted make this unit partial, never done.
+  Tracker untouched for partial, per the queue rules.
+- Next radar unit, first actions in order, from the unit
+  record: check the Doom Walker rally result from the
+  2026-11-01 2319 launch and claim its pin reward if
+  the kill landed (still unverified); work each standing
+  pin to a closing read (the story pin, the purple skull
+  pin, the three orange axe pins, the portrait pin and
+  the blue skull pin); run any new Quick Execute or
+  Claim All offer the bar shows (the next 12-task
+  restore lands about 03:35); duel delta test still
+  owed - read the VS panel duel score before and after
+  one claim batch.
+- The computer-use session dropped twice mid-unit
+  (cc-130, then cc-131); each time a new session was
+  started and work resumed with no state lost.
+- No diamonds or money spent, no Buy tapped, no other
+  activity worked from this unit.
+  Evidence in `_records_/2026-11-02/radar-tasks/0226-queue-run.md`.
+
 ## Open questions
 
 - Duel delta test - on the next release day, read the duel
@@ -672,6 +759,8 @@ are still open, per the protocol.
   Execute (cost or reward difference), untested.
 
 ## Changelog
+
+- 1.11.0, 2026-11-02 - 0226 duel day 1 release unit folded: entry corrections (back arrow true centre 132,948; no-HUD base frame unusable; dish fresh at 58,736, badge 2); points 101 to 103 over 2 claims, stored 0 of 40, stamina 60 to 61; claimed rewards do not match the 2319 Doom Walker rally card, so the rally kill/claim stays unverified; seven pins left unattempted so the unit stays partial; duel delta test still owed.
 
 - 1.10.0, 2026-11-01 - 2319 duel day 1 release unit folded: live re-read supersedes the 1904 close (stored 6 of 40 at entry, 0 of 40 at close; points 91 to 101 over 4 tasks and 10 claims); Doom Walker rally launched (Lv.160, Squad 1 25.12M, rally cost 20, kill and claim fall to the next unit); pins left unattempted so the unit stays partial; duel delta test still owed.
 

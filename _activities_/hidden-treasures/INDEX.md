@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-01T22:40:43Z
+modified: 2026-11-02T10:32:00Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: hidden-treasures execution record 2026-11-01 0150 PST
   - source: perception-scout execution record 2026-11-01 0215 PST, cross-check read
   - source: hidden-treasures execution record 2026-11-01 1420 PST
+  - source: ticker-0204 hidden-treasures execution record 2026-11-02 0207 queue run
 ---
 
 # Hidden treasures
@@ -146,6 +147,33 @@ as Hidden Treasure.
 
 - No fragment exchange is executed without owner approval - fragments
   are scarce (M5 above all) and an exchange is hard to undo.
+
+
+## What the 2026-11-02 0207 unit added - checked, nothing to dig, no fragment income since the 1420 dig
+
+- Unit treasures-2026-11-01-2257 by ticker-0204, status
+  done (checked, nothing to dig). Entry: the game was
+  already open on the Secret Command Post screen from
+  the preceding secrets work; the Hidden Treasures tab
+  was tapped at norm (439,133) and the screen was
+  verified as Hidden Treasure.
+- Fragment counts read live on the map: M1 x12, M2 x12,
+  M3 x0, M4 x9, M5 x2, M6 x6, M7 x12. These are identical
+  to the post-dig counts of the 2026-11-01 1420 unit, so
+  no fragment income has arrived since that dig - a
+  measured zero-income interval from the 1420 dig to this
+  02:07 read. No complete set of seven fragments exists:
+  M3 is 0, so no dig is possible. Both Dig buttons (Dig
+  1 time, Dig 2 time(s)) are greyed out. Skip Animation
+  is checked.
+- Chest progress track reads 2/15, unchanged since the
+  1420 dig, corroborating the per-dig increment with no
+  intervening dig.
+- No fragment exchange executed: exchanges need owner
+  approval per the activity limits and none was
+  attempted. Nothing claimed, no diamonds or money
+  touched.
+  Evidence in `_records_/2026-11-02/hidden-treasures/0207-queue-run.md`.
 
 ## Open questions
 

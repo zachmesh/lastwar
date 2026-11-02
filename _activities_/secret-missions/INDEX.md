@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T07:38:29Z
+modified: 2026-11-02T10:32:00Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: secret-missions execution record 2026-11-01 1417 PST
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (panel visit, no task tapped)
   - source: ticker-2243 secrets execution record 2026-11-01 2243 queue run
+  - source: ticker-0134 secret-missions execution record 2026-11-02 0150 queue run
 ---
 
 
@@ -383,12 +384,107 @@ secrets-2026-10-31-2257, status partial).
   restored.
 - No diamonds, money, speedup or paid button touched.
   No Mega Refresh used.
+
+## What the 2026-11-02 0150 unit added - Go dispatch works, assists blocked a second session
+
+- Unit secrets-2026-11-01-2257 by ticker-0134, session about
+  01:37 to 01:50, status partial. Entry: base left-column slot
+  at norm (48,643) opened SECRET COMMAND POST on the first
+  tap; title verified before acting. No truck work was done
+  in this unit.
+- Duel posture at 01:42 (tools/duel.py): day 1, Radar
+  Training, ends 2026-11-02 19:00. Secret tasks do not score
+  today (scoring actions are radar claims, stamina, drone
+  parts, gathering and chip chests), so no Mega Refresh was
+  used for UR rolling; its cost is still unobserved.
+- Own tasks, live at entry: Your Tasks badge 8, all 8 rows
+  with Go buttons, none finished and none claimable - SSR
+  Train Refugees, SSR Search for Missing Refugees, SSR
+  Protect Refugee Camp, SSR Provide Tech Support to
+  Refugees, SR Retrieve Valuable Supplies, SR Retrieve Raw
+  Materials, SR Retrieve Abandoned Gear, SR Retrieve Agent
+  Profile. The same 8 rows the 2243 unit saw, which
+  corroborates the 2243 list; whether the Agent Profile
+  row is a re-issued task or the same task now
+  dispatchable is still not identity-proven, so the 2243
+  tension stays open on identity only.
+- DISPATCH UNBLOCKED by the Go route (rule R2 changed
+  method): the 2243 unit's Mega Deploy taps all failed,
+  and this unit's double-tap on Mega Deploy at its
+  grounded centre norm (498,941) also produced no panel,
+  verified by screenshot - Mega Deploy is now dead across
+  two sessions. The Go route works instead: a single tap
+  on a row's Go button at norm (825,475) opens its
+  dispatch panel, Quick Deploy at norm (312,941)
+  auto-fills the team (Train Refugees read 2/2 SSR and
+  2/2 level 90), and Dispatch at norm (623,941) sends
+  it. The 2243 unit's Go tap at norm (755,452) missed
+  the button; the button centre is x about 825, not 755.
+  Do not repeat the 755 point or Mega Deploy taps.
+- All 8 tasks dispatched in this unit, verified live:
+  Your Tasks badge stepped 8 to 7 to 6 to 4 and then
+  cleared, and the closing read shows the four SSR tasks
+  running with countdowns - Train Refugees 00:55:30,
+  Provide Tech Support to Refugees 00:57:42, Search for
+  Missing Refugees 00:58:38, Protect Refugee Camp
+  00:58:58. The four SR tasks sit below the fold on the
+  same dispatched list; the cleared badge proves no Go
+  row remains. No Claim button was due, so nothing was
+  claimed. Rewards land when the timers finish; the next
+  secrets unit claims them. Claim timing from the unit
+  record: the four SR tasks finish about 02:20, the four
+  SSR tasks about 02:45 to 02:50.
+- ASSISTS BLOCKED, second reset-day deferral (rule R7):
+  Assist Allies stayed 0/5 all unit, Ally Tasks badge 5.
+  The Assist button took no effect under four input
+  variants, each verified by screenshot: single tap on
+  the first row (MesutCLK Apex UR) at norm (825,475),
+  double-tap on the same button, 1-second long-press on
+  the same button, and a single tap on a second row (AMD
+  Commander SSR) at the same x. The name-tap path also
+  failed: tapping the ally name jumped to the world map
+  location but opened no task card, and tapping the map
+  marker at norm (312,305) opened nothing.
+- Correction to the 1417 answer, in favour of the newest
+  verified record: the 1417 unit's name-to-world-map
+  handshake path did NOT reproduce in this session, so
+  the handshake route is no longer recorded as a settled
+  answer - it is session- or row-dependent until a unit
+  reproduces it. The open-questions line below is amended
+  accordingly; the Assist button itself is unresponsive
+  across two rows and four variants in this unit alone,
+  and Mega Deploy and Assist are both unresponsive in
+  this session while Go, Quick Deploy, Dispatch, tab
+  switches, post entry and base navigation all respond,
+  so input itself is not dead.
+- Blocker filed as GitHub Issue #165 (class play) from
+  this record. No activity metadata change is made for
+  the blocker yet: the Go dispatch route keeps own tasks
+  moving. Follow-up for the next secrets unit (rule R7,
+  assists deferred twice in this reset day): assists
+  FIRST, before any other secrets work - try the Assist
+  button fresh, then the name path again; if both still
+  fail, the Issue carries the third session of evidence
+  and the blocker goes into the secret-missions activity
+  metadata. Plunder Others: 0/5, not touched (PvP, no
+  owner instruction).
+- Result: 8 tasks dispatched, 0 claimed, 0 assists. The
+  tracker is left untouched so the next tick
+  re-produces the regular. One control-channel drop
+  mid-unit recovered by re-selecting the window with no
+  game state lost.
+  Evidence in `_records_/2026-11-02/secret-missions/0150-queue-run.md`.
+
 ## Open questions
 
-- Answered 2026-11-01 (1417 unit) - UR ally tasks are assisted
-  via the name-to-world-map handshake path (see the assist
-  section); the list Assist button stays unresponsive for UR
-  rows and is not repeated.
+- Answered 2026-11-01 (1417 unit), NOT reproduced 2026-11-02
+  (0150 unit) - UR ally tasks were assisted via the
+  name-to-world-map handshake path in the 1417 unit (see
+  the assist section), but the 0150 unit's name tap opened
+  no task card and its map-marker tap opened nothing, so
+  the handshake route is session- or row-dependent until
+  reproduced again; the list Assist button stays
+  unresponsive for UR rows and is not repeated.
 - The cost of Mega Refresh, and whether it can be used freely.
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.
