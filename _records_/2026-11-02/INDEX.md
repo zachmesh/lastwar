@@ -1903,3 +1903,21 @@ of 2026-10-28.
   Dispatch (no recruit taken in). Tracker untouched. Evidence
   commented on open issue #168 (gate pinning). Full detail in
   survivor-intake/1107-queue-run.md.
+
+## 11:15 to about 11:23 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1115,
+  a non-batch pass: the checker reported due for
+  the 11:00 to 12:00 window, but the 1100 batch
+  (records PR 176, merge 7bcd2ae38b) had already
+  merged inside this window, so under the
+  first-pass rule nothing was merged here. Records
+  PR 181 (2026-11-01 post-1100 batch) is clean and
+  mergeable and awaits the 15:00 batch; records PR
+  161 (2026-11-02) was conflicted on
+  _logs_/repo-actions/action-log.jsonl at pass
+  start, then resolved on the branch side by the
+  ticker-1104 merge of main (3c880cd04) and is now
+  clean and mergeable, awaiting the 15:00 batch.
+  No knowledge or code PR was open. Full detail in
+  pr-integration/1123-run.md.
