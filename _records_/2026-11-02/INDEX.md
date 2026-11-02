@@ -1033,3 +1033,27 @@ of 2026-10-28.
   07:00 batch (non-batch pass, checker not due). Both
   re-read MERGEABLE and CLEAN; trial merges against main
   clean. No merges, comments or escalations.
+
+## 06:32 to about 06:37 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-02-0632,
+  worked from the 0532 watermark. Own PR 173 stands MERGED
+  with no comments and no reviews; new knowledge Issue #174
+  duplicates #160 (0545 evidence commented on #160, #174
+  noted there for the retro to consolidate, not self-closed);
+  #118-#122, #124, #131 remain open, none resolved by these
+  records. New records folded: the ticker-0534 scout 0539,
+  donations 0545 and 0547 units and the ticker-0604
+  arms-race 0608 and donations 0621 units, plus the
+  pr-integration and planner-0540 runs (meta only). Profile
+  changes ride PR 175 (Owner lastwar-knowledge-organizer):
+  perception-scout 1.3.0 to 1.4.0, alliance-donations 1.10.0
+  to 1.11.0, arms-race 1.20.0 to 1.21.0. Two contradictions
+  resolved: the 0247 ranking-reward expectation is corrected
+  by the 0608 live read (preview only after phase end), and
+  the 0247 cumulative-chest no-change taps are superseded by
+  the 0608 fresh-centre-tap claim. Three gaps added to
+  profile open-questions lists (replenishment re-read rule,
+  upgrading-node no-count state, Drill Ground framing entry);
+  0 new Issues. Full detail in
+  knowledge-organization/0632-run.md.
