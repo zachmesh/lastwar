@@ -1921,3 +1921,18 @@ of 2026-10-28.
   clean and mergeable, awaiting the 15:00 batch.
   No knowledge or code PR was open. Full detail in
   pr-integration/1123-run.md.
+
+## 11:30 to about 11:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1130,
+  a non-batch pass: the checker reported due for
+  the 11:00 to 12:00 window, but the 1100 batch
+  (records PR 176, merge 7bcd2ae38b) had already
+  merged inside this window, so under the
+  first-pass rule nothing was merged here. Records
+  PR 181 (2026-11-01 post-1100 batch) and records
+  PR 161 (2026-11-02) are both clean and mergeable
+  (verified by trial merge against remote main)
+  and await the 15:00 batch. No knowledge or code
+  PR was open. Full detail in
+  pr-integration/1135-run.md.
