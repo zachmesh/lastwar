@@ -1438,3 +1438,31 @@ of 2026-10-28.
   backlog edit, no issue comment, silent per the quiet
   no-op rule. Full detail in
   tool-development/0832-run.md.
+
+## 08:32 to about 08:52 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-02-0832,
+  worked from the 0732 watermark. Own PR 177 stands MERGED
+  with no comments and no reviews; no new knowledge Issue
+  since 0732 (#160 latest comment is the 0732 run itself;
+  #174 already noted as a duplicate of #160 in the 0632
+  run); #118-#122, #124 and #131 remain open, none
+  resolved by these records. New records folded: the
+  ticker-0734 harvest 0741 and survivors 0747 units and
+  the ticker-0804 training 0811 and gifts 0817 units, plus
+  the planner-0740, pr-catchall 0739, tool-development
+  0736 and pr-integration 0745/0800/0815/0830 runs (meta
+  only). Profile changes ride PR 178 (Owner
+  lastwar-knowledge-organizer): resource-collection 1.8.0
+  to 1.9.0, survivor-intake 1.12.0 to 1.13.0,
+  troop-training 1.8.0 to 1.9.0, alliance-gifts 1.9.0 to
+  1.10.0. One contradiction corrected as such: the
+  training pistol-to-TRAIN-UNITS claim, disputed after
+  the 0322 unit, is now SUSPENDED, since the 0811 pistol
+  and paw taps both switched to the world map - the
+  mapping is unstable across camera positions, and the
+  action row must not be tapped as the entry route until
+  a fresh, verified mapping reproduces a panel opening.
+  Issue #168 commented with the 0747 panned-down
+  left-fence gate location lead; 0 new Issues.
+  Full detail in knowledge-organization/0832-run.md.
