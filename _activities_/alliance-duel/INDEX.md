@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T02:44:38Z
-version: 1.7.0
+modified: 2026-11-02T03:47:03Z
+version: 1.8.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -11,6 +11,8 @@ grounded_in:
   - source: owner correction on 2026-10-25 - the task names the Star Ceremony, taught step by step in session
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1324 star-ceremony unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1745 star-ceremony unit)
+  - source: radar execution record 2026-11-01 1904 queue run (duel delta test still owed after 25 release-day claims)
+  - source: queue-planning execution record 2026-11-01 1840 run (duel-score staging gap: live pool tree predates the PR 137 merge)
 ---
 
 
@@ -248,6 +250,37 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   the split that read belongs to the duel-score regular,
   and the 1830 unit result will show which type carried
   it.
+
+
+## What the 2026-11-01 1904 radar unit and 1840 planner run added for duel tracking
+
+- Duel delta test still owed after the 1904 release unit:
+  the VS panel was not opened in that unit, so no duel
+  score before and after its 25 release-day radar claims
+  was read. The 10,000 versus 30,000 versus another figure
+  question stands, and the 25-claim batch is the batch the
+  test should measure against on the next release day.
+  The radar points figure (66 to 91) is not a duel total
+  and never substitutes for one.
+- Duel-score staging gap at the 1840 plan: the live pool
+  tree still ran pre-merge tools/regulars.json (PR 137
+  merged to main at 16:51 local, after that tree's sync),
+  so the 1840 plan staged no duel-score unit and none was
+  in the pool. The daily total against the 3,600,000
+  target therefore had no staged read from that plan. The
+  next planner or ticker pass after the live tree syncs
+  to main stages duel-score units automatically under its
+  every-run cadence; no unit was hand-enqueued by the
+  planner, because the local activity metadata predated
+  the regular and a hand-built unit would carry no
+  task-specific instructions. This is a sync gap, not a
+  profile gap - if the sync still has not landed by the
+  next duel-score slot, it becomes a retro item.
+- New duel day context from the 1904 record: duel day 1,
+  Radar Training, radar posture release, day ends
+  2026-11-02 19:00 local. The last duel-score unit
+  executed before that reset carries the new day's closing
+  figure.
 
 
 ## Open questions

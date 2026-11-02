@@ -1,15 +1,16 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T02:44:38Z
+modified: 2026-11-02T03:47:03Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner task request naming VIP rewards, 2026-10-25
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (lines 12-13)
+  - source: ticker-1904 queue sync reap of expired units, 2026-11-01 (vip fix-up expired, attempts 0)
 ---
 
 
@@ -108,10 +109,14 @@ Measured on 2026-10-25.
   vip-2026-11-02-0151 fix-up still in inbox at 18:43,
   never attempted that trade day, about 17 minutes before
   the reset. The sweep's own assessment is that the lines
-  were likely to expire unclaimed at 19:00. Whether they
-  did is for the next trade day's records to show, not
-  claimed here; the recurrence, if confirmed, belongs in
-  the daily retro.
+  were likely to expire unclaimed at 19:00. Confirmed by the ticker-1904 sync reap: the fix-up
+  expired with attempts 0 (result finished
+  2026-11-02T03:04:31Z), so lines 12-13 did expire
+  unclaimed at the 19:00 reset. The sweep detected the
+  miss but the schedule did not close it; the recurrence
+  belongs in the daily retro. A new-day vip unit
+  (vip-2026-11-01-1900) sits in inbox for the new trade
+  day, so the new day's VIP lines start fresh there.
 
 
 ## Open questions

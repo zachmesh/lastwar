@@ -1,15 +1,16 @@
 ---
 title: Daily Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T23:45:00Z
+modified: 2026-11-02T03:47:03Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: The Mission daily task list and activity chests, one activity folder for mission knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: daily-missions execution record 2026-11-01 1444 queue run
+  - source: ticker-1904 queue sync reap of expired units, 2026-11-01 (missions fix-up expired, attempts 0)
 ---
 
 
@@ -95,6 +96,22 @@ status done). Evidence in
   unit. Attack a Commander 1 (0/1): PvP, stays undone
   without the owner instruction. Make any paid purchase
   once (0/1): red line, never attempted.
+
+## What the 2026-11-01 reset close added
+
+- The sweep's missions fix-up daily-missions-2026-11-02-0151
+  (priority 1, expires at the 19:00 reset) expired with
+  attempts 0 in the ticker-1904 sync reap (result finished
+  2026-11-02T03:04:31Z). No missions execution record after
+  the 1444 unit exists for the ended trade day, so the day
+  closed at activity 150 with the 160 and 200 chests
+  unclaimed.
+- The 1444 close stands as the day's last live missions
+  read (activity 150, chests 40, 80 and 120 opened). The
+  one-tap-two-claims mechanism stays unverified, and the
+  160 and 200 thresholds are not carried as progress into
+  the new trade day.
+
 
 ## Open questions
 
