@@ -1,42 +1,47 @@
 {
- "gifts": {
-  "status": "done",
-  "at": "2026-11-02T16:18:35",
-  "note": "Regular 1 +10, Premium 1 +50, progress to 180508680"
- },
- "help": {
-  "status": "done",
-  "at": "2026-11-02T03:40:11",
-  "note": "Help All pressed, none waiting, dot cleared"
- },
- "mail": {
-  "status": "done",
-  "at": "2026-11-02T03:43:51",
-  "note": "System 50 diamonds claimed, other categories no rewards"
- },
- "train": {
-  "status": "done",
-  "at": "2026-11-02T07:14:16",
-  "note": "Checked only 0715 - no banner, no train-head icon, BASE view no train; station panel not opened"
- },
- "star-ceremony": {
-  "status": "done",
-  "at": "2026-11-02T03:44:30",
-  "note": "No ceremony waiting"
- },
- "events": {
-  "status": "done",
-  "at": "2026-11-02T00:50:05",
-  "note": "Arms Race 0pts, Wanted Boss not out; nothing claimable"
- },
- "passes": {
-  "status": "done",
-  "at": "2026-11-02T03:50:58",
-  "note": "All claimed already, nothing outstanding"
- },
- "treasures": {
-  "status": "done",
-  "at": "2026-11-02T02:08:29",
-  "note": "Checked, M3 0, no dig possible"
- }
+  "gifts": {
+    "status": "done",
+    "at": "2026-11-02T16:18:35",
+    "note": "Regular 1 +10, Premium 1 +50, progress to 180508680"
+  },
+  "help": {
+    "status": "done",
+    "at": "2026-11-02T08:36:59",
+    "note": "Help All pressed; no ally request waiting, points 400/1000 unchanged"
+  },
+  "mail": {
+    "status": "done",
+    "at": "2026-11-02T08:39:51",
+    "note": "All claimable categories swept; no rewards available"
+  },
+  "train": {
+    "status": "done",
+    "at": "2026-11-02T08:44:40",
+    "note": "No train in preparation"
+  },
+  "star-ceremony": {
+    "status": "done",
+    "at": "2026-11-02T08:41:08",
+    "note": "No ceremony waiting; no trophy icon"
+  },
+  "events": {
+    "status": "done",
+    "at": "2026-11-02T00:50:05",
+    "note": "Arms Race 0pts, Wanted Boss not out; nothing claimable"
+  },
+  "passes": {
+    "status": "done",
+    "at": "2026-11-02T08:46:14",
+    "note": "All shop claims already claimed today"
+  },
+  "treasures": {
+    "status": "done",
+    "at": "2026-11-02T04:24:35",
+    "note": "Checked only, M3 x0, no dig possible"
+  },
+  "secrets": {
+    "status": "done",
+    "at": "2026-11-02T04:23:22",
+    "note": "Assists 5/5, 8 tasks claimed, recovery clear"
+  }
 }

@@ -1494,3 +1494,58 @@ of 2026-10-28.
   observation applied with all zero counts, 0 withdrawals.
   Pool inbox 63, claimed 1, done 585, upcoming 53. Full
   detail in queue-planning/0840-run.md.
+
+## 08:34 to 08:46 - Queue ticker pass, help, mail, star-ceremony, train and passes done
+
+- Ticker pass ticker-0834. Sync reaped 0, expired 0; all 19 due
+  regulars already queued. No zombie chain seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on 2026-10-30
+  and its Events hub tab has not been seen live since (chain
+  zombie-2026-10-28 closed by unit 066).
+- Own PRs first: records PRs 161 (2026-11-02) and 176
+  (2026-11-01 post-0700 batch) are owned by
+  lastwar-pr-integrator, not by this job; PR 161 carries no
+  unanswered question addressed to this job (the 0734 ticker
+  pass already resolved its main conflict on the branch side
+  for the 11:00 batch). No action taken on either PR.
+- Help unit help-2026-11-02-0630, done: Help All pressed, no
+  ally request waiting; header 400 of 1,000 unchanged before
+  and after. First tap at the button's top edge produced no
+  change; the grounded centre (688,500) opened the page.
+  Full detail in alliance-help/0836-queue-run.md.
+- Mail unit mail-2026-11-02-0630, done: Claim All pressed in
+  Event, Alliance, Season, System, Regular and Battle Report;
+  every category answered "No rewards available". Event's red
+  dot was unread train mail, not a reward. In-app Purchases
+  (receipts only) not claimed; Delete All never pressed. A
+  first tap meant for Mail opened Alliance instead; Mail was
+  re-grounded at (931,789) (Alliance at (930,702)). Full
+  detail in mail-rewards/0840-queue-run.md.
+- Star-ceremony unit star-ceremony-2026-11-02-0630, done: no
+  trophy icon beside the Alliance icon on the base screen, so
+  no ceremony waiting. Duel totals not read here: per the
+  2026-11-01 handover they belong to duel-score. Full detail
+  in alliance-duel/0841-queue-run.md.
+- Train unit train-2026-11-02-0630, done as checked only: no
+  "Boarding closes in" banner and no train in preparation;
+  the station pan showed no train, plus bubble or countdown.
+  Same wrong tap as unit 0348 (53,638 opens Secret Command
+  Post, left untouched); the panel back arrow re-grounded at
+  (160,945) after taps at (65,946) and (65,955) hit the small
+  avatar beside it. Nothing boarded, no contracts spent.
+  Full detail in alliance-train/0844-queue-run.md.
+- Passes unit passes-2026-11-02-0657, done as checked only:
+  Hot Deals showed no free pack; Super Monthly Pass Claimed
+  (Days Left 19); Weekly Pass Free Supply Claimed and Coin
+  Weekly Pass "Already claimed today" (Remaining 1d 9:14).
+  Legendary Take All $19.99, Renew $4.99 and the $24.99
+  Monthly Pass Extension were not tapped. Full detail in
+  shop-claims/0846-queue-run.md.
+- Delivery note: the main working tree sits on another job's
+  branch (work/ops-execution-records), so this pass's records
+  were committed from a temporary worktree off the remote
+  records/2026-11-02 tip, tier-1 paths only, leaving that
+  state undisturbed. No main merge was done: main has since
+  moved a tier-2 knowledge file (alliance-gifts INDEX) that
+  would conflict, and the standing action-log divergence is
+  the integrator's batch work, as before.
