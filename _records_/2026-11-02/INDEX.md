@@ -1,34 +1,36 @@
 ---
 title: Play Record 2026-11-02
-created: 2026-11-02T08:10:00Z
-modified: 2026-11-02T08:10:00Z
+created: 2026-11-02T08:16:00Z
+modified: 2026-11-02T08:16:00Z
 level: L0
 version: 1.0.0
-description: Day record for 2026-11-02 opened by the 0000 PR integrator no-op pass
-status: done
+description: The 0004 queue ticker pass, survivor intake check
+status: unverified
 grounded_in:
-  - source: PR integrator pass pr-integration-2026-11-02-0000 on the VPS
+  - source: in-game screens observed on the owner Mac mini, 2026-11-02
 ---
 
 # 2026-11-02
 
-All times America/Los_Angeles.
+All times America/Los_Angeles. Actor Muse, under the owner standing
+instruction of 2026-10-25 to run the regulars and the queue design
+of 2026-10-28.
 
-## 00:00 to about 00:10 — PR integrator pass, no-op
+## 00:05 to about 00:16 — Queue ticker pass, survivor intake check
 
-- Integrator pass pr-integration-2026-11-02-0000, done
-  (no-op): the only open PR is records PR 157 awaiting
-  the 03:00 batch, and the checker reports this pass is
-  not a batch pass, so nothing was merged. Full detail
-  in pr-integration/0000-run.md.
-
-## 00:15 to about 00:19 — PR integrator pass, non-batch
-
-- Integrator pass pr-integration-2026-11-02-0015, done
-  (non-batch): the only open PR at pass start is records
-  PR 157 awaiting the 03:00 batch, and the checker
-  reports this pass is not a batch pass, so nothing was
-  merged. Records PR 161 was opened for
-  records/2026-11-02, which had the 0000 run record
-  beyond main and no open PR; it likewise awaits the
-  03:00 batch. Full detail in pr-integration/0015-run.md.
+- Ticker pass ticker-0004. Sync reaped nothing and produced
+  nothing new - all 20 due regulars were already queued by the
+  planner. No zombie chain was seeded: the Zombie Invasion
+  event ended at about the 19:00 reset on 2026-10-30.
+- Survivors unit survivors-2026-11-01-2203, partial: the
+  front-gate line was never verified after a base sweep, so
+  no survivor was processed and the tracker is untouched.
+  Full detail in survivor-intake/0016-queue-run.md.
+- Training unit training-2026-11-01-2203, partial: the
+  barracks tent row was not located after the changed east
+  pan, so no batch was queued and the tracker is untouched.
+  Full detail in troop-training/0017-queue-run.md.
+- Gifts unit gifts-2026-11-01-2230, done: Claim All on both
+  tabs - 45 Regular and 5 Premium gifts claimed, Gift Level
+  28 progress 179,805,720 of 206,300,000. Tracker marked
+  done. Full detail in alliance-gifts/0023-queue-run.md.
