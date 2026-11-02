@@ -460,3 +460,26 @@ of 2026-10-28.
   no escalation, no feedback. Silent run per the
   delivery rule. Full detail in
   pr-integration/0318-run.md.
+
+- Harvest unit harvest-2026-11-02-0203, partial: visible main base
+  swept bubble-free across two overlapping views; food 366.2M to
+  373.3M, iron 558.8M to 565.3M, coins 39.1M to 43.7M (HUD-rounded);
+  armed truck checked, no loot bubble, nothing claimed; Iron Mine
+  upgrade and Store preview panels opened by stray taps and closed
+  with no action; full edge-drag verification incomplete (remote
+  drags barely panned), so the tracker is untouched. Full detail in
+  resource-collection/0308-queue-run.md.
+
+- Survivors unit survivors-2026-11-02-0203, partial: gate line
+  not verified, no survivor recruited, no Quick Dispatch; a
+  candidate tap opened Hero Recruit (closed untouched) and a
+  ground tap switched to the world map (returned home); one
+  computer-session drop mid-unit, restarted. Issue #168 filed.
+  Full detail in survivor-intake/0320-queue-run.md.
+
+- Training unit training-2026-11-02-0203, partial: four barracks
+  tents grounded but TRAIN UNITS panel not reached; pistol tap
+  opened the Lv.27 to 28 upgrade panel (closed untouched, no
+  Upgrade/Finish Now/Obtain); paw tap opened no panel; no queue
+  state verified, no batch queued, Drill Ground unread. Issue
+  #150 commented. Full detail in troop-training/0322-queue-run.md.
