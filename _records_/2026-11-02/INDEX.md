@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-02
 created: 2026-11-02T08:16:00Z
-modified: 2026-11-02T18:43:27Z
+modified: 2026-11-02T18:55:00Z
 level: L0
 version: 1.0.0
 description: The 0004 queue ticker pass, survivor intake check
@@ -1850,3 +1850,16 @@ of 2026-10-28.
   zero counts, 0 withdrawals. Pool inbox 65, claimed 1,
   done 594, upcoming 53. Full detail in
   queue-planning/1040-run.md.
+
+## 10:45 to about 10:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1045.
+  Merged knowledge PR 180 (organizer 1032, 0935
+  trucks, 0952 secrets, 1009 treasures, 1015
+  arms-race, 1020 donations and 1026 radar into 7
+  profiles); records PRs 176 (2026-11-01 post-0700
+  batch) and 161 (2026-11-02) await the 1100 batch
+  on a non-batch pass (checker not due, next batch
+  1100). No comments, no escalations, no conflicts.
+  Merged main synced back to the local repo. Full
+  detail in pr-integration/1055-run.md.
