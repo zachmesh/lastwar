@@ -1,15 +1,16 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-02T02:44:38Z
+modified: 2026-11-02T03:47:03Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
   - source: in-game base screen observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: owner rule on 2026-10-26 - the routine is every four hours, not daily, and every regular is checked and done at every run whenever it is available
+  - source: ticker-1904 queue sync reap of expired units, 2026-11-01 (ended-trade-day close confirmed)
   - source: owner design on 2026-10-26 - remove the single every four hours job and split the routine into segment schedules rotating hourly, each segment looking at a specific set of tasks
   - source: owner refinement on 2026-10-26 - the segments run in the same hour, 15 minutes apart, not one per hour
   - source: owner refinement on 2026-10-26 - the spacing is 18 minutes, so the fires are :03, :21, :39 and :57
@@ -265,3 +266,27 @@ claims cited below were read in this pass's passes unit
   same blocker, it is the third consecutive unit with it
   and must change the entry route and write the change
   into the shop-claims metadata (R2).
+
+## Trade-day close - 2026-11-01 19:00 reset (reap confirmed)
+
+- The ticker-1904 sync reap expired 7 units at the reset:
+  daily-missions-2026-11-02-0151 and vip-2026-11-02-0151
+  (the sweep's own fix-ups, attempts 0),
+  donations-2026-11-02-0019, and
+  events/secrets/treasures/trucks-2026-11-01-1457 (regular
+  units unrun). The reap is recorded in the queue done
+  pool, not as execution records, and no unit in the list
+  was attempted.
+- This confirms the final sweep's scheduling-shortfall
+  assessment: the detector worked (VIP lines 12-13 and the
+  missions 160/200 gap were found and fix-ups enqueued)
+  but the schedule did not run them before the reset, so
+  both lines expired unclaimed. See vip-rewards 1.6.0 and
+  daily-missions 1.2.0 for the confirmed outcomes; the
+  recurrence belongs in the daily retro.
+- First new-day execution: radar-2026-11-01-1803 by
+  ticker-1904 (19:05 to 19:35, partial, duel day 1 release;
+  see radar-tasks 1.9.0). The 1457 expiries do not change
+  the standing truck counter tension (truck-plunder
+  1.12.0) or the secrets denominator note (secret-missions
+  1.4.0); both still await their next live unit reads.
