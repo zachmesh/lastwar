@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T03:47:03Z
+modified: 2026-11-02T13:45:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner task request naming VIP rewards, 2026-10-25
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (lines 12-13)
   - source: ticker-1904 queue sync reap of expired units, 2026-11-01 (vip fix-up expired, attempts 0)
+  - source: vip-rewards execution record 2026-11-02 0438 queue run
 ---
 
 
@@ -118,6 +119,51 @@ Measured on 2026-10-25.
   (vip-2026-11-01-1900) sits in inbox for the new trade
   day, so the new day's VIP lines start fresh there.
 
+
+
+## What the 2026-11-02 0438 unit found
+
+- Unit vip-2026-11-01-1900 by ticker-0434, about 04:36 to 04:38,
+  status partial. Evidence in
+  `_records_/2026-11-02/vip-rewards/0438-queue-run.md`.
+- Entry re-grounded - commander avatar at norm 60,85 opened MY
+  PROFILE (Lv.30 [AP3x]Bears Lair, likes 1,797, up from 1,796 on
+  2026-10-31, no popularity popup this time); VIP13 badge at norm
+  514,352, carrying a red dot, opened the VIP screen.
+- State read live - VIP13, 56 days logged in a row, 200 VIP points
+  tomorrow, points 1,585,960 of 2,000,000 toward VIP 14 on entry.
+- Login chest claimed, measured - chest at norm 833,195 tapped
+  once: CONGRATULATIONS popup read Today's VIP Points 200,
+  Consecutive Login Days 56, Next Day's VIP Points 200. Points
+  after: 1,586,160, exactly plus 200, and the chest red dot
+  cleared on the closing screenshot.
+- Popup dismissal method, corrected - two taps on the popup X at
+  norm 802,384 and 799,382 (the second a double tap) left the
+  popup open; a tap on the dimmed area outside the popup at norm
+  120,700 dismissed it at once. Dismiss this popup via the dimmed
+  area, not the X.
+- Daily Freebie, button-specific failure - contents shown: puzzle
+  piece x2, food crate x13, iron crate x13, coin crate x13, with
+  a green Claim button. Two single taps on the freshly grounded
+  Claim centre, at norm 818,631 and 825,628, each verified by a
+  following screenshot: button stayed green, points stayed
+  1,586,160, no popup appeared. Per queue rule R2 the Claim
+  method ends inside this unit after two no-change taps.
+- The distinction is new and refines the blocker paragraph above -
+  the login chest on the same screen, in the same session, via
+  the same background input, worked at once, so the failure is
+  specific to the Daily Freebie Claim button, not a general
+  background-input failure. The same pattern appears in the
+  daily-missions 0444 unit the same morning (green Claim buttons
+  unresponsive on the Mission screen while navigation taps
+  worked), filed as GitHub Issue 171 (play class). The freebie
+  remains unclaimed for the current reset day and is the
+  pre-reset sweep's item; the next tick re-produces this
+  regular.
+- Contents note - the freebie contents match the VIP 13 scale
+  already in this profile (puzzle x2, crates x13 each); the open
+  question whether contents rotate stays open, with one more
+  same-contents observation.
 
 ## Open questions
 
