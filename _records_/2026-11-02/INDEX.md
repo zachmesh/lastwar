@@ -1863,3 +1863,15 @@ of 2026-10-28.
   1100). No comments, no escalations, no conflicts.
   Merged main synced back to the local repo. Full
   detail in pr-integration/1055-run.md.
+
+- Harvest unit harvest-2026-11-02-1003, partial:
+  swept the visible main base, coin bubble plus about
+  1.2M (51.6M to 52.8M), food plus about 1.9M (388.3M to
+  390.2M), second top-bar resource plus about 1.8M
+  (578.2M to 580.0M); no panel opened, nothing bought.
+  Armed truck showed no loot bubble, nothing claimed.
+  Top and left edges not dragged to their extremes and
+  small left-side and farmland bubbles still present or
+  regenerating, so the zero-bubble acceptance is not met.
+  Tracker untouched. Full detail in
+  resource-collection/1052-queue-run.md.
