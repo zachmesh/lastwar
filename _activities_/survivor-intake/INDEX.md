@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-02T17:05:00Z
-version: 1.13.0
+modified: 2026-11-02T19:37:08Z
+version: 1.14.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -14,6 +14,7 @@ grounded_in:
   - source: survivor-intake execution record 2026-11-02 0016 queue run (ticker-0004 unit, partial, gate line unverified)
   - source: survivor-intake execution record 2026-11-02 0320 queue run (ticker-0308 unit, partial, gate line unverified, Issue #168)
   - source: survivor-intake execution record 2026-11-02 0747 queue run (ticker-0734 unit, partial, gate line unverified, Polar Guest dialog)
+  - source: survivor-intake execution record 2026-11-02 1107 queue run (ticker-1104 unit, partial, gate line unverified, drag-pan retired)
 ---
 
 
@@ -570,6 +571,61 @@ Measured on 2026-10-25.
   so the gap is tracked on #168 and no duplicate issue is
   filed here.
 
+## What the 2026-11-02 1107 unit added
+
+- Fifth regular-unit partial since the 1644 done (after the
+  2034, 0016, 0320 and 0747 units), not a streak resumption:
+  unit survivors-2026-11-02-1003 by ticker-1104, session
+  11:07 to 11:22, status partial. No survivor was processed:
+  0 dialogs opened, 0 recruit cards, 0 recruits taken in.
+  Tracker untouched, so the next tick re-produces this
+  regular. Evidence in
+  `_records_/2026-11-02/survivor-intake/1107-queue-run.md`.
+- Close discipline held: the gate line at close is
+  explicitly unverified, not claimed clear and not claimed
+  occupied. A mid-unit visual-grounding call to recount the
+  line timed out, so no recount figure is claimed.
+- Gate grounding, fresh in this unit's starting view:
+  question-mark bubble at norm 72,662 and a survivor figure
+  at norm 70,692. A tap at 70,692 changed the gate corner
+  (the question-mark bubble cleared and a small portrait
+  icon appeared at about norm 69,715) but opened no
+  survivor dialog and no recruit card. A second tap at
+  70,692 again changed only the gate corner region and
+  switched the base view to a wider framing with the left
+  menu rail visible (Events, Capitol, VS, Season II,
+  Alliance, Mail, Inventory, WORLD, HEROES); still no
+  dialog and no recruit card. Lesson: a tap that only
+  changes the gate corner is not a gate hit - the figure
+  remains the target, and the next unit grounds the figure
+  fresh again and taps the figure itself rather than the
+  bubble point.
+- Drag-pan method RETIRED inside this unit, per queue rule
+  R2: two drags meant to pan the base down (norm 400,700
+  to 400,400, then norm 350,650 to 350,350) produced no
+  view change at all, so the method was ended inside the
+  unit, not repeated. This retires the 0747 section's
+  re-read pointer drag (400,700 to 400,400) as a carried
+  instruction: the next unit must not reuse that drag
+  unchanged. The 0747 panned-down left-fence view itself
+  is not disproven - only the drag route to it failed
+  here - but it is no longer the standing route to that
+  view.
+- Quick Dispatch was not run: no recruit-card survivor was
+  taken in during this unit, so no newcomer building post
+  was created to dispatch. This does not change the
+  standing Quick Dispatch blocker, and it is not a further
+  identical partial on that blocker: the failure here is
+  dialog-opening at a grounded gate point, after the
+  drag-pan method was retired inside the unit.
+- Closing HUD reading, not a unit result: Total Power
+  149,311,528 visible in the closing wide view. No
+  resources gained.
+- Issue #168 (gate line not verifiable) is not resolved by
+  this unit - the line still closes unverified - but the
+  executor commented this unit's evidence there, so the
+  gap is tracked on #168 and no duplicate issue is filed
+  here.
 
 ## Open questions
 
@@ -628,5 +684,7 @@ Measured on 2026-10-25.
 - 1.11.0 (2026-11-02): second regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the unreliable grounding boxes (UI icons, parking area) not tapped, and the 1644 pointer tested but not tapped on a guess at 458,678, folded from the 0016 survivors record.
 
 - 1.12.0 (2026-11-02): third regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the candidate-figure tap resolving to the Hero Recruit panel as a new look-alike, the tents-figure tap switching to the world map, and Issue #168 filed by the record, folded from the 0320 survivors record.
+
+- 1.14.0 (2026-11-02): fifth regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), fresh gate grounding at bubble 72,662 and figure 70,692 with taps changing only the gate corner and opening no dialog, the drag-pan method retired inside the unit per rule R2 (which retires the 0747 drag pointer as a carried instruction), no Quick Dispatch gap since no recruit was taken in, and Issue #168 commented by the executor, folded from the 1107 survivors record.
 
 - 1.13.0 (2026-11-02): fourth regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the panned-down left-fence gate line with the 132,336 Polar Guest dialog tap and no recruit card so no Quick Dispatch gap, the three non-hit taps, and Issue #168 commented with the location lead, folded from the 0747 survivors record.

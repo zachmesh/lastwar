@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T17:05:00Z
+modified: 2026-11-02T19:37:08Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-01 2006 queue run
   - source: resource collection execution record 2026-11-02 0308 queue run (ticker-0308 unit, partial, edge drag unverified)
   - source: resource collection execution record 2026-11-02 0741 queue run (ticker-0734 unit, partial, fast regeneration over the left-side buildings)
+  - source: resource collection execution record 2026-11-02 1052 queue run (ticker-1040 unit, partial, edges undragged)
 ---
 
 
@@ -442,6 +443,44 @@ regular stays due. Evidence in
 - The Season 2 area at the bottom was left out of the sweep,
   per the standing rule that it is not main base harvest.
 
+## What the 2026-11-02 1052 unit added
+
+- Unit harvest-2026-11-02-1003 by ticker-1040, session 10:39
+  to 10:52, status partial. Tracker untouched, so the regular
+  stays due. Evidence in
+  `_records_/2026-11-02/resource-collection/1052-queue-run.md`.
+- Sweep: the visible main base was swept, tapping bubble
+  centres grounded on live screenshots - one visual-grounding
+  pass timed out without returning points, so the taps that
+  followed were grounded on the screenshots themselves.
+  First tap (left-side coin bubble, 50,405) collected coins;
+  batched taps on a farmland bubble (325,470) and an iron
+  bubble (140,300) collected food and iron with no panel
+  opened.
+- HUD figures, rounded as displayed: food 388.3M before,
+  390.2M after, plus about 1.9M; second top-bar resource
+  578.2M before, 580.0M after, plus about 1.8M; coins
+  51.6M before, 52.8M after, plus about 1.2M. Figures are
+  HUD-rounded millions, not exact panel readings.
+- Armed truck: the parked armed truck area at the bottom of
+  the base was checked; no collectable loot bubble over the
+  parked vehicles, so nothing was claimed there (not fully
+  loaded), as in the 0308 and 0741 units.
+- Why partial, not done: the full-map acceptance needs zero
+  bubbles remaining with the base dragged to each edge. The
+  top and left edges were not dragged to their extremes, and
+  small bubbles over the left-side buildings and the farmland
+  were still present or regenerating at close (bubbles
+  regenerate within minutes of a collection). The Season 2
+  area at the bottom was left out of the sweep, per the
+  standing rule that it is not main base harvest.
+- Follow-up carried, not completed: the 0741 unit's
+  next-unit instruction (re-sweep the left-side buildings
+  first, then drag to the top and left edges, and re-check
+  the armed truck loot bubble) is still open after this
+  unit - the visible base was swept but the edges were
+  again not dragged to their extremes, so the same
+  instruction passes to the next harvest unit unchanged.
 
 ## Open questions
 
@@ -453,6 +492,8 @@ regular stays due. Evidence in
   rather than assuming the candidate.
 
 ## Changelog
+
+- 1.10.0 (2026-11-02): visible-base sweep with HUD-rounded gains (food +1.9M, second resource +1.8M, coins +1.2M), screenshot-grounded taps after a grounding timeout, parked truck with no loot bubble left alone, edges again undragged so partial with the 0741 follow-up carried unchanged, folded from the 1052 harvest unit; no earlier claim superseded.
 
 - 1.9.0 (2026-11-02): visible-base sweep with HUD-rounded gains (food +3.1M, second resource +2.9M, coins +2.0M), 16 bubbles grounded in the starting view, long-drag right-edge pan succeeding where the 0308 drags barely moved, fast regeneration over the left-side buildings so partial, parked truck with marker but no loot bubble left alone, folded from the 0741 harvest unit; no earlier claim superseded.
 
