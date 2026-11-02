@@ -2478,3 +2478,29 @@ of 2026-10-28.
   End-of-pass sweep: PR 142 only, decided under the
   batch exception. Full detail in
   pr-integration/2030-run.md.
+
+## 20:32 to about 20:58 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-01-2032,
+  worked from the 1932 watermark. Own PRs checked first:
+  PR 141 and PR 144 both MERGED with no comments and no
+  reviews; sole other open PR 142 belongs to
+  lastwar-pr-integrator (23:00 batch). Knowledge Issues
+  #118-#122, #124, #131 still open, none resolved here.
+- Three profiles bumped via PR 145 (OPEN, Owner
+  lastwar-knowledge-organizer): arms-race 1.17.0 to 1.18.0
+  (1934 Base Building timers - Aircraft Center Lv.29
+  11d 02:46:59, Drill Ground Lv.27 2d 19:45:47, score 0,
+  tier-3 gap 30,000, later-unit score-plus-sweep
+  shortcut); alliance-donations 1.7.0 to 1.8.0 (1944
+  Rallied HP - 7 coin donations proven by live reads
+  8/30 to 1/30, final 0/30 unclaimed under the 00:18:42
+  timer, re-read enqueued for about 20:15 local, footer
+  tension standing); resource-collection 1.5.0 to 1.6.0
+  (2006 centre-cluster clearance of 5 bubbles, iron
+  18.7M to 19.1M, factory-panel fall-through, ambiguous
+  far-left-edge shape untapped, Season 2 bottom area
+  and Armed Truck deferred to the next harvest unit).
+  Contradictions resolved 0, stale marked 0, gaps filed
+  0, PR feedback addressed 0. Full detail in
+  knowledge-organization/2032-run.md.
