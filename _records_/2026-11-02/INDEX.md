@@ -263,3 +263,14 @@ of 2026-10-28.
   with all zero counts, 0 withdrawals. Pool inbox 63, claimed
   1, done 546, upcoming 51. Full detail in
   queue-planning/0140-run.md.
+## 01:45 to about 01:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0145.
+  Merged knowledge PR 164 (organizer 0132, 7 profiles:
+  help 1.11.0, mail 1.6.0, train 1.10.0, duel 1.13.0,
+  events 1.9.0, shop 1.8.0, trucks 1.15.0) by squash
+  merge; local main fast-forwarded to the merge commit
+  and the merge synced to the owner Slack DM. Records
+  PRs 157 and 161 were not merged: non-batch pass per
+  the records_batch.py checker, both await the 03:00
+  batch. Full detail in pr-integration/0145-run.md.
