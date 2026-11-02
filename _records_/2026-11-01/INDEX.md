@@ -2437,3 +2437,17 @@ of 2026-10-28.
   End-of-pass sweep: PR 142 only, decided under the
   batch exception. Full detail in
   pr-integration/2000-run.md.
+
+## 20:15 to about 20:25 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-2015.
+  No-op non-batch pass: sole open PR 142 (records
+  2026-11-01 post-1900 appends, head f10cb888b) left
+  awaiting the 23:00 batch; checker _tools_/records_batch.py
+  reports not due (outside every batch window, next
+  batch point 23:00). No knowledge or code PR open, no
+  new records branch needing a PR (records/2026-10-31
+  fully contained in main). No conflicts, no escalations.
+  End-of-pass sweep: PR 142 only, decided under the
+  batch exception. Full detail in
+  pr-integration/2015-run.md.
