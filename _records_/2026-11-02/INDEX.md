@@ -1092,3 +1092,28 @@ of 2026-10-28.
   2026-11-02 observation applied with all zero counts, 0
   withdrawals. Pool inbox 63, claimed 1, done 576,
   upcoming 51. Full detail in queue-planning/0640-run.md.
+
+## 06:35 to about 06:50 - Queue ticker pass, radar release
+
+- Ticker pass ticker-0634. Sync reaped 0, expired 0; all 17
+  due regulars already queued. No zombie chain seeded: the
+  Zombie Invasion event ended at about the 19:00 reset on
+  2026-10-30 and its Events hub tab has not been seen live
+  since (chain zombie-2026-10-28 closed by unit 066).
+- Radar unit radar-2026-11-02-0603, partial: release day
+  (duel day 1, Radar Training). Entry took three groundings
+  (a tap at 55,677 did nothing; 53,575 opened Trucks and was
+  backed out untouched; radar opened at 53,708). Ordinary
+  work fully done: Quick Execute 5 tasks (stamina 112 to 62)
+  plus 1 task (62 to 52), Claim All 8 then 4 rewards, radar
+  points 103 to 115, stored 0/40, restore 12 tasks in
+  02:50:07. Pins not closed: the portrait pin's Doom Legion
+  card (rewards 11.2M food, 11.2M iron, 7.4M coin, 300 radar
+  points, countdown 00:27:23, expiry about 07:09) was left
+  unattacked because its world-map card carried an
+  [AP3x]The Apex alliance tag and the spot toasted
+  "Other commanders are currently conducting radar tasks
+  here"; two orange arrow pins left unattempted. Tracker
+  untouched. Next radar unit's first actions: re-check the
+  Doom pin before 07:09, then identify the two arrow pins.
+  Full detail in radar-tasks/0636-queue-run.md.
