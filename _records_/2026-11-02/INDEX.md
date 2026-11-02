@@ -659,3 +659,18 @@ of 2026-10-28.
   or code PR was open. No Slack or chat delivery: quiet
   no-op pass.
   Full detail in pr-integration/0419-run.md.
+
+- Secrets unit secrets-2026-11-02-0257, done: Assist
+  Allies 5 of 5 (two-session assist blocker broken on a
+  freshly grounded first-row tap), all 8 finished tasks
+  claimed in one Claim, Reward Recovery clear, no
+  dispatchable tasks pending; Issue #165 commented
+  (Assist resolved, Mega Deploy untested), left open
+  for the retro. Full detail in
+  secret-missions/0426-queue-run.md.
+
+- Treasures unit treasures-2026-11-02-0257, done as
+  checked only: M1 13, M2 14, M3 0, M4 9, M5 3, M6 6,
+  M7 13, so no complete set and both Dig buttons
+  greyed; chest progress 2 of 15; no exchange made.
+  Full detail in hidden-treasures/0424-queue-run.md.
