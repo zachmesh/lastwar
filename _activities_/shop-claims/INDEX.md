@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T17:38:46Z
+modified: 2026-11-02T21:44:07Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: ticker-2212 passes execution record 2026-11-01 2220 queue run
   - source: ticker-0104 shop-claims execution record 2026-11-02 0104 queue run
   - source: ticker-0834 shop-claims execution record 2026-11-02 0846 queue run (done as checked only, monthly pass 19 of 19, coin weekly pass already claimed today)
+  - source: ticker-1234 shop-claims execution record 2026-11-02 1300 queue run (done, nothing new, all owned daily claims already taken)
 ---
 
 
@@ -390,6 +391,44 @@ the free and already paid for parts, never the paid unlocks.
 - Qualification: a drag scroll of the list did not move
   it, so cards below the Drone card were not re-verified
   this unit; the visible cards match the earlier check.
+
+## What the 2026-11-02 1300 unit added
+
+- Unit passes-2026-11-02-1057 by ticker-1234, session
+  about 12:51 to 12:56, status done. Nothing new to
+  claim; all owned daily claims already taken today.
+  Evidence in
+  `_records_/2026-11-02/shop-claims/1300-queue-run.md`.
+- Entry, second relaunch instance this pass: the Events
+  hub back arrow again did not respond to background
+  clicks (same stall as the 0910 events unit), so the
+  game window was closed and relaunched, which restored
+  the base UI with state intact and no login or
+  verification demanded. Cross-reference: the
+  event-claims profile's hub back-arrow open question
+  now records relaunch as the verified exit route.
+- Shop, Hot Deals tab: only a promo carousel (Visit
+  the Last War Store, points card) with a Go button -
+  no free pack showing; Go was not tapped.
+- Shop, Weekly Pass tab: Free Supply chest reads
+  Claimed; the Legendary Take All $19.99 bundle was
+  left untouched; Coin Weekly Pass reads Already
+  claimed today (Renew $4.99 left untouched). The
+  remaining weekly cards (Drone Parts Epic, EXP
+  Legendary, Iron Elite) show a Daily Pickup row with
+  no claim button and a Get Now $4.99 purchase button
+  - offers, not owned claims. Scrolled to the list end
+  (Iron card); no further cards. This discharges the
+  0846 qualification for this unit: the full card list
+  was verified to its end, not just the visible cards.
+- Shop, Super Monthly Pass tab: Monthly Pass, Days
+  Left 19, Squad 4 Lv.20; the Daily Pickup button reads
+  Claimed. Days Left 19 is unchanged from the 0846 read
+  on the same game day, as expected - the count falls
+  at the day boundary, not within the day. The Monthly
+  Pass Extension $24.99 was not touched.
+- No diamonds, money, speedups or other resources
+  spent; no Renew, no purchase button tapped.
 
 ## Open questions
 

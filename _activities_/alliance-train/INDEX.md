@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T17:38:46Z
+modified: 2026-11-02T21:44:07Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-0334 alliance-train execution record 2026-11-02 0348 queue run (done, checked only)
   - source: ticker-0704 alliance-train execution record 2026-11-02 0715 queue run (done, checked only)
   - source: ticker-0834 alliance-train execution record 2026-11-02 0844 queue run (done as checked only, third Secret Command Post wrong-tap instance, station empty)
+  - source: ticker-1234 alliance-train execution record 2026-11-02 1246 queue run (done as checked only, station empty)
 ---
 
 # Alliance train
@@ -483,6 +484,27 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Nothing boarded, no Trade Contracts spent, no train
   summoned, no conductor role taken.
 
+## What the 2026-11-02 1246 unit added - station empty again
+
+- Unit train-2026-11-02-1030 by ticker-1234, session
+  about 12:41 to 12:42, status done as checked only. No
+  train in preparation. Evidence in
+  `_records_/2026-11-02/alliance-train/1246-queue-run.md`.
+- Base screen inspected first: no "Boarding closes in"
+  banner under the resource bar.
+- Station check: the left-column train icon, measured
+  at normalized (52,548) from earlier units, panned the
+  camera to the base edge. The station area showed no
+  yellow train, no plus bubble and no station countdown
+  - the same empty state as the 0348 and 0844 checks.
+  The prior measured point worked again.
+- Qualification, as with the earlier checked-only
+  units: the station panel itself was NOT opened, so
+  this is a banner-plus-station-view check, not a
+  station-verified no-train finding.
+- Nothing boarded, no Trade Contracts spent, no train
+  summoned, no conductor role taken.
+
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like
@@ -498,5 +520,5 @@ Measured in the 0110 train unit (ticker-0104, window mode
   account card, distinct from base power - possibly the summed
   rider power the rating derives from, unverified.
 - Whether a member can board more than one train per day.
-- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit).
+- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit). (2026-11-02 1325 update: the trucks unit grounded the trade entry at (52,553), 5 pixels from this point, and the 1246 station pan at (52,548) worked again - the near-coincidence now has three instances, but the tap outcomes still differ by context, so the identity stays unresolved.)
 - Station-panel verification owed: the 0715 check never opened the station panel, so a station-verified no-train read is still owed on a checked-only unit; banner plus BASE view plus column scan is a strengthened banner-only check, not a station verification.
