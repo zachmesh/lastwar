@@ -2010,3 +2010,16 @@ of 2026-10-28.
   (lastwar-pr-catchall-owner) is untouched; merge decision stays
   with the integrator. No new PR opened; no backlog entry updated
   (frozen archive). Full detail in tool-development/1742-run.md.
+
+## 17:39 to about 17:45 — PR catch-all pass
+
+- Catchall run pr-catchall-2026-11-01-1739: adopted PR 137
+  (duel-score tracking, Refs #136 and #132) and verified its
+  sole integrator review point fixed - branch head e09a6480,
+  diff vs main only the 3 intended files, no _logs_ diff,
+  queue.py compiles, duel-score in regulars.json; adoption
+  comment posted on PR 137 and the outcome synced to the owner
+  Slack DM. PR 117 (records) stays with the integrator, held
+  for the 19:00 batch. Issue triage: 16 open, all labeled;
+  owner-decision issue 132 is current and under one hour old.
+  Full detail in pr-catchall/1739-run.md.
