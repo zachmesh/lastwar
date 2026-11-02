@@ -1907,3 +1907,7 @@ of 2026-10-28.
   117 held for the 19:00 batch, counts as decided.
   Local main synced to 8687721. Full detail in
   pr-integration/1630-run.md.
+
+## 16:32 to about 16:49 - Tool-developer pass, records batch compliance (PR 135)
+
+- Tool-developer run tool-development-2026-11-01-1649: own PRs checked first (only PR 116 and PR 117 open, neither tool-developer owned); took open tooling issue 126 over 125 (already claims PR 42 implementation, contradictory status left for the retro) and 123 (large device-control build). Built the records batch-cadence checker `_tools_/records_batch.py` (due gate plus audit) and the retro_report.py 1.2.0 compliance section, defining the batch window as 60 minutes from each batch point where policy 2.3.0 names points but no window. PR 135 opened, issue 126 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools plus an unpatched-main control run. Full detail in tool-development/1649-run.md.
