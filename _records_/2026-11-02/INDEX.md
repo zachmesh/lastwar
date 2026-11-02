@@ -1345,3 +1345,17 @@ of 2026-10-28.
   only. This pass resolved that conflict on the branch side
   (merge of main, union of the log lines in timestamp order)
   when pushing, for the 11:00 batch.
+## 08:00 to about 08:04 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0800, no-op:
+  no knowledge or code PR open, and this is a non-batch
+  pass for records (checker _tools_/records_batch.py not
+  due, outside every batch window, next batch 11:00;
+  the 07:00 window was already consumed at 07:05 by the
+  0700 pass, PR 167 merged). Records PR 176 (2026-11-01
+  post-0700 batch) awaits the 11:00 batch, and records
+  PR 161 (2026-11-02) is verified mergeable by trial
+  merge-tree against current main, its action-log
+  conflict resolved branch-side, and likewise awaits
+  the 11:00 batch. Quiet run, no Slack or chat report.
+  Full detail in pr-integration/0800-run.md.
