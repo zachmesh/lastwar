@@ -2158,3 +2158,13 @@ of 2026-10-28.
   commented by the executors). Star-ceremony 1241 landed
   during this run and falls to the next run. Full detail in
   knowledge-organization/1232-run.md.
+## 12:40 to about 12:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-1240. Staged 0
+  units (already_present 67, skipped_done_current 4,
+  reaped 0, expired 0). Tonight's pre-reset sweep pair
+  already in inbox, scout diff on the 2026-11-02
+  observation applied with all zero counts, 0
+  withdrawals. Pool inbox 63, claimed 1, done 601,
+  upcoming 53. Full detail in
+  queue-planning/1240-run.md.
