@@ -1658,3 +1658,14 @@ of 2026-10-28.
   added for the hub back arrow, unresponsive to
   background clicks in the 0910 unit; 0 new Issues.
   Full detail in knowledge-organization/0932-run.md.
+
+## 09:40 to about 09:43 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-0940. Staged 0
+  units (already_present 64, skipped_done_current 7,
+  reaped 0, expired 0): every window in the next 12 hours
+  was already covered. Tonight's pre-reset sweep pair
+  already in inbox, scout diff on the 2026-11-02
+  observation applied with all zero counts, 0 withdrawals.
+  Pool inbox 60, claimed 1, done 588, upcoming 53. Full
+  detail in queue-planning/0940-run.md.
