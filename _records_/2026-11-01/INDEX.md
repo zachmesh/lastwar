@@ -2464,3 +2464,17 @@ of 2026-10-28.
   Season 2 area and the Armed Truck were not checked, so the
   full-map zero-remaining acceptance is not met. Tracker untouched.
   Full detail in resource-collection/2006-queue-run.md.
+
+## 20:30 to about 20:45 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-2030.
+  No-op non-batch pass: sole open PR 142 (records
+  2026-11-01 post-1900 appends, head 014006ad5) left
+  awaiting the 23:00 batch; checker _tools_/records_batch.py
+  reports not due (outside every batch window, next
+  batch point 23:00). No knowledge or code PR open, no
+  new records branch needing a PR (records/2026-10-31
+  fully contained in main). No conflicts, no escalations.
+  End-of-pass sweep: PR 142 only, decided under the
+  batch exception. Full detail in
+  pr-integration/2030-run.md.
