@@ -2129,3 +2129,15 @@ of 2026-10-28.
   comments, no escalations, no conflicts. End-of-pass
   sweep: only PR 117 open, decided under the batch
   exception. Full detail in pr-integration/1800-run.md.
+
+## 18:05 to 18:13 — Queue ticker pass, alliance train (done, checked only)
+
+- Train unit train-2026-11-01-1430, done as checked only:
+  no "Boarding closes in" banner under the resource bar,
+  so no train is in preparation. Nothing boarded, no
+  Trade Contracts spent. A left-column icon tapped as a
+  supposed train icon opened the trucks view instead
+  (Trade Count 0/5, nothing dispatched or plundered);
+  background return navigation did not succeed, so the
+  game was left in the trucks view. Full detail in
+  alliance-train/1813-queue-run.md.
