@@ -276,6 +276,13 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   task-specific instructions. This is a sync gap, not a
   profile gap - if the sync still has not landed by the
   next duel-score slot, it becomes a retro item.
+- Confirmed again at the 1940 plan, the first planner pass
+  after the reset: the live pool tools/regulars.json still
+  carries no duel-score regular, so that plan also staged
+  no duel-score unit. Two consecutive planner passes
+  (1840, 1940) now show the gap; the next run checks
+  whether the sync has landed, and the gap goes to the
+  retro if a third plan still stages none.
 - New duel day context from the 1904 record: duel day 1,
   Radar Training, radar posture release, day ends
   2026-11-02 19:00 local. The last duel-score unit
