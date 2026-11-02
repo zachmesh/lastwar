@@ -577,3 +577,46 @@ of 2026-10-28.
   synced 91291d16 to 141b357b. Merge synced to the
   owner's Slack DM.
   Full detail in pr-integration/0349-run.md.
+
+- Gifts unit gifts-2026-11-02-0230, done: Claim All on both tabs -
+  54 Regular and 12 Premium alliance gifts claimed, both tab red
+  dots cleared; Gift Level 28 progress 180,150,630 to 180,153,970
+  of 206,300,000. Full detail in
+  alliance-gifts/0338-queue-run.md.
+
+- Help unit help-2026-11-02-0230, done: Help All pressed, no ally
+  request waiting (only the account's own 4 requests listed),
+  points stayed 240 of 1,000, Help red dot cleared. Full detail in
+  alliance-help/0345-queue-run.md.
+
+- Mail unit mail-2026-11-02-0230, done: Claim All swept Event,
+  Regular, Alliance, Season, System and Battle Report; System
+  claimed 50 diamonds, the rest held no rewards; Purchases
+  receipts left untouched. Battle Report notes the base was
+  scouted 3 days ago by two [GLAm] players. Full detail in
+  mail-rewards/0343-queue-run.md.
+
+- Star ceremony unit star-ceremony-2026-11-02-0230, done: no
+  trophy icon beside Alliance on the base screen, no ceremony
+  waiting, nothing played or claimed. Full detail in
+  alliance-duel/0348-queue-run.md.
+
+- Train unit train-2026-11-02-0230, done as checked only: no
+  "Boarding closes in" banner, station area shows no train,
+  no plus bubble, no countdown. Full detail in
+  alliance-train/0348-queue-run.md.
+
+- Passes unit passes-2026-11-02-0257, done as checked only:
+  Weekly Free Supply claimed, Coin Weekly and Monthly already
+  claimed today, other pass cards are unowned offers, Season
+  badge sits on the Calculating card; nothing new claimed.
+  Full detail in shop-claims/0350-queue-run.md.
+
+- Events unit events-2026-11-02-0257, partial: hub landed on
+  Arms Race Hero Advancement (score 40,500, rank #2110,
+  countdown 02:08:44); the 2,000 chest tap opened a reward
+  preview only, no claim button; the sweep was cut short
+  when an Escape key crashed the app - relaunched directly
+  to base with no login demand. Remaining tabs and chests
+  left for the next tick; tracker untouched. Full detail in
+  event-claims/0359-queue-run.md.

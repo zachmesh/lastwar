@@ -1,28 +1,28 @@
 {
  "gifts": {
   "status": "done",
-  "at": "2026-11-02T00:23:04",
-  "note": "45 Regular + 5 Premium claimed, Level 28"
+  "at": "2026-11-02T03:38:50",
+  "note": "54 Regular + 12 Premium claimed, dots cleared"
  },
  "help": {
   "status": "done",
-  "at": "2026-11-02T00:39:05",
-  "note": "Help All pressed; 240/1000 verified live, no ally requests visible"
+  "at": "2026-11-02T03:40:11",
+  "note": "Help All pressed, none waiting, dot cleared"
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-02T00:42:05",
-  "note": "Claim All Alliance 2 and Event 3 gift mails; icons gone on re-read"
+  "at": "2026-11-02T03:43:51",
+  "note": "System 50 diamonds claimed, other categories no rewards"
  },
  "train": {
   "status": "done",
-  "at": "2026-11-02T00:44:08",
-  "note": "Checked only: no train in preparation"
+  "at": "2026-11-02T03:48:16",
+  "note": "No train in preparation"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-11-02T00:47:49",
-  "note": "No ceremony waiting; duel total 1113750, gap 2486250"
+  "at": "2026-11-02T03:44:30",
+  "note": "No ceremony waiting"
  },
  "events": {
   "status": "done",
@@ -31,7 +31,12 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-02T01:09:33",
-  "note": "Shop claims checked live 0104, all already claimed today"
+  "at": "2026-11-02T03:50:58",
+  "note": "All claimed already, nothing outstanding"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-02T02:08:29",
+  "note": "Checked, M3 0, no dig possible"
  }
 }
