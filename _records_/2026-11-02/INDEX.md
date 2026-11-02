@@ -1689,3 +1689,25 @@ of 2026-10-28.
 ## 09:45 to about 09:52 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-02-0945. Merged knowledge PR 179 (organizer 0932, 0836 help, 0840 mail, 0844 train, 0846 passes and 0910 events into 5 profiles); records PRs 176 (2026-11-01 post-0700 batch) and 161 (2026-11-02) await the 1100 batch on a non-batch pass (checker not due, next batch 1100). No comments, no escalations, no conflicts. Merged main synced back to the local repo. Full detail in pr-integration/0945-run.md.
+
+## 09:35 to about 09:48 - Ticker trucks unit
+
+- Trucks unit trucks-2026-11-02-0657, partial: dispatch
+  quota filled, plunder shortfall remains. Trade Count
+  3 of 5 to 5 of 5 (one N free-refreshed to SR, one SSR
+  as rolled, 0 Trade Contracts spent); Plunder Count
+  2 of 4 unchanged. One SSR target inspected and passed
+  (no UR shard stack visible, three slots already
+  crossed out). Entry corrected: trade icon centre at
+  norm 51,571 opens Intercity Trade; edge taps miss.
+  Tracker untouched. Full detail in
+  truck-plunder/0935-queue-run.md.
+
+## 09:52 to about 09:55 - Ticker secrets unit
+
+- Secrets unit secrets-2026-11-02-0657, done (checked
+  only): Secret Command Post shows Assist Allies 5 of 5
+  and four SSR tasks all stamped PERFECT, Mega buttons
+  greyed, no further row on scroll. Nothing pending to
+  claim, dispatch or assist. Full detail in
+  secret-missions/0952-queue-run.md.
