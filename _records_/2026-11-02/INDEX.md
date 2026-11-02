@@ -1840,3 +1840,13 @@ of 2026-10-28.
   per-page reads and not merged with the Hero Advancement
   6/2 read. 0 new Issues. Full detail in
   knowledge-organization/1032-run.md.
+## 10:40 to about 10:45 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-1040. Staged 11
+  units for the 2203/2230 slots (already_present 56,
+  skipped_done_current 4, reaped 0, expired 0).
+  Tonight's pre-reset sweep pair already in inbox, scout
+  diff on the 2026-11-02 observation applied with all
+  zero counts, 0 withdrawals. Pool inbox 65, claimed 1,
+  done 594, upcoming 53. Full detail in
+  queue-planning/1040-run.md.
