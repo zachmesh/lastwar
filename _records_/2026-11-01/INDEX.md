@@ -2263,3 +2263,15 @@ of 2026-10-28.
   live pool tree still predates it, so no duel-score unit
   was staged — live-tree sync is the follow-up. Full
   detail in queue-planning/1840-run.md.
+
+## 19:00 to about 19:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1900.
+  Batch pass (the _tools_/records_batch.py checker
+  reports due, window 19:00-20:00): records PR 117
+  merged by merge commit 949a025f, branch not deleted;
+  knowledge PR 141 merged by squash e331e3cf
+  (shop-claims 1.6.0 and final zero sweep notes). Local
+  main fast-forwarded to 949a025f. End-of-pass sweep:
+  zero open PRs. Full detail in
+  pr-integration/1900-run.md.
