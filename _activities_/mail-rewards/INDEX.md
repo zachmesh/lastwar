@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T01:41:06Z
+modified: 2026-11-02T05:39:49Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1306 mail unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1730 mail unit)
+  - source: mail-rewards execution record 2026-11-01 2131 queue run (ticker-2104 unit, partial, Alliance-panel back arrow stalled on background input)
 ---
 
 
@@ -181,6 +182,41 @@ the next tick re-produces this regular as a fresh unit.
   no claimable mail is ruled in or out by this unit.
 - Nothing was deleted. Delete All was never pressed. No
   other task type was touched.
+
+## What the 2026-11-01 2131 unit added
+
+- Partial, mail screen never reached: unit
+  mail-2026-11-01-1830 by ticker-2104, fourth unit of the
+  same pass after the training partial, gifts done and
+  help done. The unit reached the Alliance panel (after
+  closing the Help dialog from the previous unit with its
+  X) but the panel's bottom-left back arrow took three
+  no-change taps in a row - norm 55,964, then 97,964
+  twice, the last after a fresh activate - and the panel
+  stayed open each time, confirmed by screenshots.
+- Under queue rule R2 (foreground precondition, retro of
+  2026-10-31) two no-change taps end the background-input
+  method inside the unit, so tapping stopped instead of
+  repeating: the game window stays covered by Chrome and
+  background input stopped reaching this control. A
+  click_foreground attempt was refused for missing
+  element_number, and no Escape key was used (it has
+  crashed this app before). No foreground route was
+  available inside this unit.
+- Outcome discipline: no mail category was opened,
+  nothing was claimed, and Delete All was never touched.
+  Tracker untouched, so the next tick re-produces the
+  regular. Note for the next mail unit: try the panel
+  exit first with a fresh observation, and if the back
+  arrow stalls again, treat it as the known foreground
+  precondition rather than a dead entry route - earlier
+  units the same day recovered from it. This also
+  re-affirms the 1730 lesson: a mail unit that inherits
+  the Alliance-panel exit path pays this navigation cost
+  first, and entering Mail from the base rail is the
+  cheaper route when the unit starts fresh.
+  Evidence in `_records_/2026-11-01/mail-rewards/2131-queue-run.md`.
+
 
 ## Open questions
 

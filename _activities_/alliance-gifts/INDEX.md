@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T01:41:06Z
+modified: 2026-11-02T05:39:49Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0935 gifts unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1221 gifts unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1718 gifts unit)
+  - source: alliance-gifts execution record 2026-11-01 2122 queue run (ticker-2104 unit, done, 221 Regular plus 70 Premium)
 ---
 
 
@@ -236,6 +237,42 @@ one file per execution.
   checking both tabs, not by a button existing on both.
 - No diamonds or money spent, no red line touched.
 
+## What the 2026-11-01 2122 unit added
+
+- Done, Claim All on BOTH tabs as the owner directed:
+  unit gifts-2026-11-01-1830 by ticker-2104, session about
+  21:16 to 21:22. Regular 221 gifts and Premium 70 gifts,
+  each confirmed by its own summary dialog. Gift Level 28
+  progress read live: 179,652,510 of 206,300,000 before
+  the Regular claim, 179,654,720 after it (plus 2,210,
+  exactly 221 times 10 points), and 179,664,120 after the
+  Premium claim (plus 9,400). Closing verification read
+  live: both tabs show their visible gifts as Claimed, no
+  Claim All button and no red dot remains on either tab.
+  No new gifts arrived between the two claims and the
+  closing read.
+- Entry lessons, measured fresh: the Alliance panel
+  carried a red dot on Gifts, but the first tap aimed at
+  the Gifts button from a screenshot estimate opened
+  Alliance Wars instead; the back arrow returned to the
+  panel, and the second tap used the OCR text position
+  (norm 303,595) and opened Alliance Gifts. Lesson for
+  the next unit: trust OCR norm positions over screenshot
+  pixel estimates for panel buttons. Regular tab Claim
+  All sits centred (norm 498,967); Premium tab Claim All
+  sits right-shifted beside the "Hide your name on
+  Gifts" checkbox (norm 718,967) - a tap at the Regular
+  position missed it and left the 70 badge standing, and
+  the corrected tap paid 70. Each Claim All summary
+  dialog was dismissed with a tap on the dialog itself,
+  and the unit closed only after both tabs were re-read
+  live. The accidental Alliance Wars open was left
+  immediately via the back arrow and nothing was done
+  there.
+- No diamonds or money spent, no paid button tapped.
+  Evidence in `_records_/2026-11-01/alliance-gifts/2122-queue-run.md`.
+
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -266,3 +303,5 @@ one file per execution.
   attributed to the 4 gifts, and Premium all-Claimed
   with no Claim All offered, folded from the 1718 gifts
   unit.
+
+- 1.7.0 (2026-11-01): dialog-confirmed 221 Regular and 70 Premium, Gift Level 28 progress 179,652,510 to 179,664,120 of 206,300,000, the OCR-over-screenshot-estimate panel-button lesson, and the right-shifted Premium Claim All point (718,967) versus the centred Regular point (498,967), folded from the 2122 gifts unit.

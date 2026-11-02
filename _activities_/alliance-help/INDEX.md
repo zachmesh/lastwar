@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T01:41:06Z
+modified: 2026-11-02T05:39:49Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (0940 help unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1226 help unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1722 help unit)
+  - source: alliance-help execution record 2026-11-01 2127 queue run (ticker-2104 unit, done, Help All pressed with only own requests visible)
 ---
 
 
@@ -241,6 +242,29 @@ Measured in the 0135 help unit (ticker-0134, window mode
   tap, changed - but Help is reachable in a fresh
   session, so a Help failure is not a dead entry route.
 - No diamonds or money spent, no red line touched.
+
+## What the 2026-11-01 2127 unit added
+
+- Done (checked and Help All pressed): unit
+  help-2026-11-01-1830 by ticker-2104, third unit of the
+  same pass after the training partial and the gifts done.
+  Help page header read live: Today's points gained from
+  Alliance Help 80 of 1,000, before and after the tap.
+- Visible requests were all the account's own (Bears
+  Lair): Lv.30 Aircraft Center building, Morale research,
+  Precision Targeting II research, Lv.28 Drill Ground
+  building. A player cannot help their own requests, and
+  no ally request was visible - and Help All was pressed
+  anyway per the standing rule and the 1722 precedent.
+  After the tap the four rows read 30/30 (they read
+  reduced-time displays before the tap); the header tally
+  stayed 80 of 1,000, as expected with no ally request to
+  help. The grateful toast was not captured in the
+  post-tap screenshot, so no toast wording is claimed
+  here - unlike the 1722 unit, where the toast was read
+  live. No diamonds or money spent, no red line touched.
+  Evidence in `_records_/2026-11-01/alliance-help/2127-queue-run.md`.
+
 
 ## Open questions
 

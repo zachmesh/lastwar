@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T01:41:06Z
+modified: 2026-11-02T05:39:49Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: web guides on barracks and troop tiers, read 2026-10-25
   - source: troop training execution record 2026-11-01 1216 queue run
   - source: troop training execution record 2026-11-01 1651 queue run
+  - source: troop-training execution record 2026-11-01 2120 queue run (ticker-2104 unit, partial, barracks tents not located after north and south pans)
 ---
 
 # Troop training
@@ -276,6 +277,68 @@ Observed in game on this account, first execution 2026-10-25.
   blocker was neither confirmed nor cleared here, and
   no Drill Ground figure is claimed.
 
+## What the 2026-11-01 2120 unit added
+
+- Partial, barracks tents still not located: unit
+  training-2026-11-01-1803 by ticker-2104, session about
+  21:07 to 21:20. No barracks panel was opened, no batch
+  was queued, no Drill Ground screen was read, and
+  nothing was claimed. Tracker untouched, so the next
+  tick re-produces the regular.
+- Device takeover handled under the owner rule: the
+  "active on a different device" dialog appeared
+  mid-unit, Confirm was tapped once, the app exited as
+  expected, and it was relaunched and back at the base
+  screen with no login or verification demanded. No
+  second dialog appeared. HUD after the relaunch read
+  food 359.5M, iron 550.3M, coin 34.2M, diamonds 2,416,
+  same power 149,288,895 as the unit-start read (food
+  353.1M, iron 543.9M, coin 30.1M, diamonds 2,396) -
+  production ticks only, no claim made.
+- Grounding discipline, measured: a visual-grounding call
+  for a barracks tent timed out at 3 minutes with no
+  result and was abandoned, not retried - do not repeat
+  a grounding call inside a 15-minute unit after a
+  timeout. Scroll gestures did nothing to the game view;
+  drag pans are the working move, and their mapping is
+  now measured: a drag from norm y 300 to y 700 moves
+  the view south, the reverse moves it north, and a
+  full-length drag crosses most of the base.
+- Pan results, both edges ruled out at this zoom level:
+  the south pan reached the map south edge again - the
+  Season 2 house cluster, a tank, a STOP sign, formation
+  lots 2 and 3 at the top - repeating the 1651 south
+  route and adding nothing new; the houses there are
+  not verified barracks. The north pan reached the map
+  north edge - the same house cluster at the top and
+  empty snow below, no barracks tent in either edge
+  view. A half-length drag back south landed near the
+  start view (house cluster top left, cannon and tank,
+  empty snow below); the dense red-roofed formation of
+  the unit's very first screenshot was not in this view
+  either, so it lies further east or north-east of the
+  start view, unreached in this unit.
+- Next-unit rule, from the record under rule R2: change
+  the route again before repeating this work - pan east
+  from the start view toward the dense red-roofed
+  formation seen in the first screenshot, and only tap
+  a tent that is visually verified as a tent, never a
+  point that sits on the gate road or the house cluster.
+  Do not repeat the south or north pans, and do not
+  spend a grounding call inside the unit budget after a
+  timeout.
+- Drill Ground Full status, fifth consecutive carry
+  without a live read: the 2026-10-31 Drill Ground Full
+  blocker was neither confirmed nor cleared in this
+  unit - no barracks was reached, so no Drill Ground
+  figure is claimed here. The profile therefore still
+  carries it unverified, now a fifth consecutive unit
+  without a live Drill Ground read (1651 was the fourth).
+  No diamonds or money spent, no Finish Now, no upgrade
+  shortcut. Evidence in
+  `_records_/2026-11-01/troop-training/2120-queue-run.md`.
+
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -316,3 +379,5 @@ Observed in game on this account, first execution 2026-10-25.
   next-unit rule, and Drill Ground Full carried forward
   unverified a fourth consecutive unit, folded from the
   1651 training unit.
+
+- 1.6.0 (2026-11-01): north and south map edges ruled out at this zoom level, the measured drag mapping (y 300 to 700 moves south, reverse north), the 3-minute grounding timeout abandoned not retried, the device-takeover Confirm once with clean relaunch, the east-toward-the-red-roofed-formation next-unit rule, and Drill Ground Full still carried unverified a fifth consecutive unit, folded from the 2120 training unit.
