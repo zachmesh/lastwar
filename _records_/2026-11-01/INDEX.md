@@ -2333,3 +2333,30 @@ of 2026-10-28.
   about three hours old, its decision statement current.
   Quiet pass, no Slack sync.
   Full detail in pr-catchall/1939-run.md.
+
+## 19:40 to about 19:46 - Queue planner pass
+
+- Planner pass planner-1940, 6 units staged for the 0657
+  and 0700 slots of 2026-11-02 (passes, secrets, treasures,
+  trucks, events, scout-midday; already_present 61,
+  skipped_done_current 2, reaped 0, expired 0). Pre-reset
+  sweep pair not due: this run falls in the 19:00 hour,
+  not the 17:00 hour; tonight's pair
+  (pre-reset-sweep-2026-11-01, both passes) is already
+  done and tomorrow's pair (pre-reset-sweep-2026-11-02)
+  is already in the inbox. Scout diff over the two-pass
+  observation applied with zero changes: the observation
+  carries narrative sections with no observed_items block,
+  so the tool parses 0 items against frontmatter
+  items_observed 24 and unexplained_red_dots 6, the same
+  diff-parse gap as the 1540 through 1840 runs; the
+  narrative's open dots stay open for the scout successor
+  units and the retro's threshold check. No withdrawals:
+  the 14:47 observation pass predates the inbox units
+  that postdate it, and the store group is never walked,
+  so the crystal-shop and glittering-market units
+  (Issue #128) were not withdrawn. Pool by_state: inbox
+  72, claimed 1, done 518. Follow-up: live pool tree
+  still predates the merged duel-score regular (PR 137),
+  so no duel-score unit was staged. Full detail in
+  queue-planning/1940-run.md.
