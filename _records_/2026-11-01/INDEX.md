@@ -2862,3 +2862,6 @@ of 2026-10-28.
   day. Next unit must try a changed method (double-tap Mega
   Deploy or a Go tap held for a hero panel), not repeat these
   taps. Full detail in secret-missions/2243-queue-run.md.
+## 22:32 to about 22:53 - Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-2253: own PRs checked first (only PR 142 open, records-owned, none owned); took open tooling issue 147 over 149 (coverage half implemented by merged PR 153, remainder play-side) and 136/130/128/133/126 (already implemented by merged PRs 137, 139, 143, 146 and 135, closure belongs to the retro), 129 (summary-job clause), 125 (already claims PR 42) and 123 (large device-control build). Built the fixed-slot daily cadence in queue.py plan and made zero-sweep a produced regular (slots 17:30/18:30, expiry 19:00, chain pre-reset-sweep-<date>, priority 1, est 15); sync never stages fixed-slot regulars and the current-window tracker skip does not drop them. Slots deliberately unchanged (moving the pair earlier is now a one-line config change for the owner/planner); no pick_key change (next already orders reset-expiring priority-1 fix-ups first). PR 156 opened, issue 147 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (24 checks) plus an unpatched-main control run. Full detail in tool-development/2253-run.md.
