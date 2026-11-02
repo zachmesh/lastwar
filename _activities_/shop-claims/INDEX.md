@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T06:40:55Z
+modified: 2026-11-02T09:32:00Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1340 passes unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1843 passes unit)
   - source: ticker-2212 passes execution record 2026-11-01 2220 queue run
+  - source: ticker-0104 shop-claims execution record 2026-11-02 0104 queue run
 ---
 
 
@@ -331,6 +332,35 @@ the free and already paid for parts, never the paid unlocks.
   never tapped, and the S2 Drone Components Weekly Pass
   $4.99 Get Now offer was not tapped (a purchase offer,
   not a claim).
+
+## What the 2026-11-02 0104 unit added
+
+- Unit passes-2026-11-01-2257 by ticker-0104, session
+  01:05 to 01:09, status done (checked, nothing
+  outstanding). Every claimable shop item for this game
+  day was already claimed, so nothing new was claimed in
+  this unit. Tracker marked done for this slot.
+- Shop, Hot Deals tab: no free pack showing, only the
+  "Visit the Last War Store" promo. No claim taken.
+- Shop, Weekly Pass tab: Free Supply chest reads
+  Claimed. Coin Weekly Pass (Remaining 1d 16:53) reads
+  "Already claimed today" - consistent with the 22:20
+  unit on 2026-11-01 claiming this day's pickup. The
+  Legendary "Take All $19.99" bundle was not tapped.
+  EXP, Iron and Drone pass cards show only the $4.99
+  purchase button and no claim control - unowned offers,
+  not tapped.
+- Shop, Super Monthly Pass tab: Monthly Pass, Days Left
+  20, Rewards Left 20, button reads Claimed - unchanged
+  from the 2220 read. The $24.99 Monthly Pass Extension
+  was not tapped.
+- Season hub (base Season icon badge 1): the badge sits
+  on the "Calculating." season card, not on a claimable
+  pass. Season Photo remains the gated item already
+  tracked under Issue #154; nothing was tapped there.
+  The badge is therefore explained, not a missed claim.
+  Evidence in `_records_/2026-11-02/shop-claims/0104-queue-run.md`.
+
 ## Open questions
 
 - Whether the free Hot Deals pack rotates its contents by day.
