@@ -1314,3 +1314,34 @@ of 2026-10-28.
   branch-side (re-verified this pass, already commented
   in the 0700 pass). Local main synced to 6e2f8dea1.
   Full detail in pr-integration/0745-run.md.
+
+## 07:35 to 07:47 - Queue ticker pass, harvest and survivors partials
+
+- Ticker pass ticker-0734. Sync reaped 0, expired 1; all 20 due
+  regulars already queued. No zombie chain seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on 2026-10-30
+  and its Events hub tab has not been seen live since (chain
+  zombie-2026-10-28 closed by unit 066).
+- Harvest unit harvest-2026-11-02-0603, partial: closed the
+  leftover Alliance Techs panels without donating, swept the
+  visible main base (food 383.9M to 387.0M, second resource
+  574.0M to 576.9M, coins 48.7M to 50.7M, HUD-rounded), panned
+  to the right edge with no bubbles there, armed truck not
+  loaded. Small left-side bubbles remained (fast regeneration)
+  and the top and left edges were not dragged to their
+  extremes. Tracker untouched. Full detail in
+  resource-collection/0741-queue-run.md.
+- Survivors unit survivors-2026-11-02-0603, partial: one dialog
+  survivor processed (Polar Guest, two lines, dialog closed),
+  4 question-mark bubbles remained in the panned-down gate
+  view, line not verified clear. Quick Dispatch not run: no
+  recruit-card survivor was taken in, so no newcomer post was
+  created. Tracker untouched. Re-read pointer: panned-down
+  view, verified tap norm 132,336. Full detail in
+  survivor-intake/0747-queue-run.md.
+- Own PRs first: records PR 161 (2026-11-02) carried a 0700
+  batch integrator note that it conflicts with main again
+  after PR 167 merged, in _logs_/repo-actions/action-log.jsonl
+  only. This pass resolved that conflict on the branch side
+  (merge of main, union of the log lines in timestamp order)
+  when pushing, for the 11:00 batch.
