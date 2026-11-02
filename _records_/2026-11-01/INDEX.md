@@ -1951,3 +1951,7 @@ of 2026-10-28.
   lots. Tracker untouched; the next unit must start from a
   zoomed-out full-base view or a building list, not pan south
   again. Full detail in troop-training/1651-queue-run.md.
+
+## 16:45 to about 17:05 - PR integration pass
+
+- Integrator run pr-integration-2026-11-01-1645 (non-batch pass; next records batch 19:00): PR 134 merged (alliance-donations 1.7.0, radar-tasks 1.8.0), PR 135 merged (records batch checker plus retro compliance audit, now on main for later passes), PR 137 reviewed with one fixable defect (log appends on a work branch) and left open, records PR 117 held for the 19:00 batch. Local main synced to b3fdf57f. Full detail in pr-integration/1645-run.md.
