@@ -2052,3 +2052,24 @@ of 2026-10-28.
   before this run folded them; PR 137's _logs_ feedback was fixed by
   the tool-development 1742 pass, not by this job. Full detail in
   knowledge-organization/1732-run.md.
+
+## 17:40 to about 17:50 — Queue planner pass
+
+- Planner pass planner-1740, no-op: plan staged nothing new
+  (planned 0, already_present 66, skipped_done_current 5,
+  reaped 0, expired 0) — the pool already covers every
+  regular cadence window inside the next 12 hours, to about
+  05:40 local 2026-11-02. Pre-reset sweep production checked
+  in the 17:00 hour: tonight's pair
+  (pre-reset-sweep-2026-11-01, both passes) is already in
+  the inbox, so nothing was enqueued. Scout diff over the
+  two-pass observation applied with zero changes: the
+  observation carries narrative sections but no
+  observed_items block, so the tool reads 0 items; its
+  frontmatter counts 6 unexplained red dots, which stay
+  open for the scout successor units and the retro
+  threshold check. No queue withdrawals. Owner-decision
+  Issue #132 checked: duel-score only, building/research
+  deferred — no regular invented, duel-score awaits PR 137
+  merging. Pool by_state at 17:44: inbox 67, claimed 1,
+  done 504. Full detail in queue-planning/1740-run.md.
