@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T23:45:00Z
+modified: 2026-11-02T04:45:00Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: arms-race execution record 2026-10-31 2212 queue run
   - source: arms-race execution record 2026-11-01 1135 queue run
   - source: arms-race execution record 2026-11-01 1523 queue run
+  - source: arms-race execution record 2026-11-01 1934 queue run
 ---
 
 
@@ -447,3 +448,68 @@ this regular). Evidence in
   started late to compensate. No different-device dialog
   was seen, no login or verification was demanded, and
   no password or Touch ID step was used.
+
+## What the 2026-11-01 1934 unit added
+
+Unit arms-race-2026-11-01-1803 by ticker-1934,
+session about 19:34 to 19:41, status
+skipped-needs-owner, tracker marked skipped for this
+slot. Evidence in
+`_records_/2026-11-01/arms-race/1934-queue-run.md`.
+
+- Phase read twice, at entry and at the sweep - Base
+  Building, Contest Segment Lv.29-30, time left
+  02:21:47 at entry, 02:20:00 at the sweep re-read and
+  02:19:55 at the sweep screenshot, so the phase window
+  ends about 21:57 local. Score 0 on every read. Chest
+  thresholds 6,250, 12,500 and 30,000, matching the
+  2026-10-25 Base Building read, so the tier-3 gap
+  stands at the full 30,000 points. No point chest
+  earned, nothing claimed.
+- Scoring table read live, matching the 2026-10-25
+  read - Increase Building Power by 1pt pays plus 1,
+  Use 1-min Construction Speed-up pays plus 10, Buy
+  Packs containing Diamonds pays plus 30 per diamond.
+  The speedup and pack paths are red lines and were
+  not used.
+- Building Power path judged by live read, not by
+  assumption - the Building Queue panel, opened from
+  the first scoring row arrow at norm 853,537, holds
+  Lv.29 Aircraft Center upgrade in progress with Time
+  Left 11d 02:46:59 and Lv.27 Drill Ground upgrade in
+  progress with Time Left 2d 19:45:47, and slots 3 and
+  4 Idle. No building completes inside this phase
+  window, so the only legal path cannot score here.
+  No Construct was tapped - starting a building is a
+  red line - and no Speed Up was tapped. This is the
+  same shape as the 2026-10-26 Tech Research miss and
+  the 1523 Tech Research re-read, with the timers now
+  measured instead of carried over.
+- Later-unit shortcut for this phase, from the unit
+  follow-up - the measured building timers settle this
+  phase, so later units of this phase need only re-read
+  the score and the completion sweep, not re-judge the
+  Building Power path or re-open the building queue
+  identically.
+- Completion sweep at the close, on the Arms Race
+  page - no bouncing chest and no reward red dot. The
+  cumulative counter chest at top left reads 0/2,
+  static, no bounce, and was not tapped. The ranking
+  row reads #2110 [AP3x]Bears Lair with score 0,
+  matching the phase score on this read; its chest is
+  preview-only per precedent and was not tapped.
+  Nothing was claimed. The game was left on the base
+  screen.
+- Entry-point lessons, rule R2 - the game opened on
+  the world map; the Home button at norm 886,945
+  returned to the base. The Events icon at norm
+  925,130 opened Events directly on the Arms Race
+  page. The Building Queue panel X at norm 804,209
+  closed it to the base, and re-entering Events
+  reopened directly on the Arms Race tab with no drag
+  needed. One stale-observation retry: a click without
+  an observation id was refused, and a second attempt
+  reported the target app exited or restarted;
+  re-selecting the same LastWar window (pid unchanged)
+  and clicking with a fresh observation id succeeded,
+  so no game state was lost.

@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T00:36:57Z
+modified: 2026-11-02T04:45:00Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: resource collection execution record 2026-11-01 1149 queue run
   - source: resource collection execution record 2026-11-01 1534 queue run (same-unit screen reads and owner live corrections)
+  - source: resource collection execution record 2026-11-01 2006 queue run
 ---
 
 
@@ -267,6 +268,44 @@ Executions are recorded in
   exited and was reopened, and the pass continued on
   the Mac.
 
+## What the 2026-11-01 2006 unit added
+
+Unit harvest-2026-11-01-1803 by ticker-2006, status
+partial. The game was already open on the Mac mini,
+left on the Alliance Tech panel from an earlier unit.
+The panels were closed without touching any donation
+button, and the back arrow returned the view to the
+base. Evidence in
+`_records_/2026-11-01/resource-collection/2006-queue-run.md`.
+
+- The first tap, on the centre bubble cluster,
+  cleared the 5 visible base bubbles in one tap,
+  matching the pattern of the 11:49 run the same day.
+  HUD iron moved 18.7M to 19.1M, a plus 0.4M measured
+  gain. Food stayed 353.1M, coin stayed 30.1M, stone
+  stayed 543.9M at display rounding.
+- A second tap at the one remaining centre bubble
+  position selected the Titanium Alloy Factory No.3
+  panel instead of collecting; no gain was verified
+  from that tap, and the panel was closed by tapping
+  empty ground. This is the same edge fall-through
+  the center-tap rule guards against: a tap that
+  misses a bubble centre can open the building
+  underneath instead of collecting.
+- Sweep state, why partial: the base was panned east
+  and west. No further clear resource bubble was
+  identified in either panned view. One partial bubble
+  shape at the far left edge could not be
+  distinguished from the left-column UI widgets and
+  was deliberately not tapped. Rule from this unit:
+  do not tap an ambiguous edge shape that cannot be
+  distinguished from UI widgets.
+- The bottom Season 2 area and the Armed Truck were
+  not checked in this unit, so the full-map
+  zero-remaining acceptance is not met. Both fall to
+  the next harvest unit. The tracker is untouched, so
+  the regular stays due.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -277,6 +316,8 @@ Executions are recorded in
   rather than assuming the candidate.
 
 ## Changelog
+
+- 1.6.0 (2026-11-01): centre-cluster one-tap five-bubble clearance with iron plus 0.4M measured, Titanium Alloy Factory No.3 panel fall-through on the second tap, ambiguous far-left edge shape deliberately untapped, Season 2 bottom area and Armed Truck checks deferred to the next harvest unit, folded from the 2006 harvest unit; no earlier claim superseded.
 
 - 1.3.0 (2026-11-01): balloon-versus-bubble distinction, HUD
   button mis-tap point, base-view pan failure mode, and the
