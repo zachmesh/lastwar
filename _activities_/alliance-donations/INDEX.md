@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T14:36:25Z
+modified: 2026-11-02T15:35:33Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: alliance donations execution record 2026-11-01 2348 queue run (ticker-2334 unit, partial, count replenishment, GitHub Issue #160)
   - source: alliance donations execution record 2026-11-02 0259 queue run
   - source: alliance donations execution records 2026-11-02 0545 0547 0621 queue runs
+  - source: alliance donations execution record 2026-11-02 0719 queue run
 ---
 
 
@@ -42,6 +43,12 @@ activity. Not a separate type.
 - Tap the Alliance Techs tile (the flask icon) in the alliance menu.
 - The screen has Development and War tabs over a technology tree.
   Tapping a technology node opens its donation panel.
+- Groundings are framing-specific: the 0719 full-base
+  groundings, Alliance button (930,700) and Alliance Techs
+  tile (748,665), opened at once, while the 0621 Drill
+  Ground framing tap (880,831) failed twice. Re-ground the
+  entry from the full-base view; do not carry a grounding
+  across framings.
 
 ## How it is done
 
@@ -448,6 +455,80 @@ before 03:17 local). Evidence in
   boarding is the train unit's work, not this unit's, and
   was left alone).
 
+## What the 2026-11-02 0719 unit added
+
+- Unit donations-2026-11-02-1055 by ticker-0704, session about
+  07:19, status partial. No donations landed, no coin or
+  diamond spent. Status partial, tracker untouched. This unit
+  does NOT close on arithmetic - the only count figure claimed
+  is the live read below, per the hard closing rule and rule
+  R1. Evidence in
+  `_records_/2026-11-02/alliance-donations/0719-queue-run.md`.
+- Entry, re-grounded fresh from the base screenshot (never
+  inherited): Alliance right-column button at norm 930,700
+  opened the alliance menu ([AP3x] The Apex, 94/100 members)
+  at once; Alliance Techs tile at norm 748,665 opened
+  ALLIANCE TECHS at once. War tab selected. This confirms the
+  0621 instruction: re-ground the entry from the full-base
+  view instead of repeating the (880,831) tap. These
+  groundings differ again from the 0545 groundings, Alliance
+  button (935,706) and Alliance Techs tile (687,690) - a
+  third framing instance, not a standing coordinate.
+- Tree read live: Expert Nurse 1/10 top, Garrison HP 7/10,
+  Garrison Attack 7/10, Garrison Defense 7/10 carrying the
+  red thumbs-up recommended marker, one lower node 7/10
+  partly visible. Tech Donation Today 3500, above the 1000
+  reward line; no reward was claimed by hand, as the ranking
+  reward settles at the 19:00 reset.
+- Tree change noted, not acted on: the War tab tree now reads
+  Garrison HP, Attack and Defense at 7/10, where earlier units
+  read Troop Movement and Rallied nodes. Whether the Rallied
+  tier completed or the tree scrolled is unmeasured; the
+  recommended marker governed this unit, and the tree change
+  is named here for the next unit to confirm, not asserted
+  as a completion. This sits in tension with the 0547 read of
+  Rallied HP upgrading until about 13:20 local - a later unit
+  must settle whether the 0719 view is a scrolled tree or a
+  completed tier.
+- Recommended node panel, read live: Garrison Defense 7/10,
+  Increased Hero Defense in Defense Support for Alliance
+  members, Donation Reward plus 20 percent, Tech EXP Required
+  163.8K/4.5M, Current plus 7 percent, Next Level plus 8
+  percent, Donation Reward 50 plus 50, Donation Count 5/30,
+  Donate buttons diamond 2 (never tapped) and coin 800.
+- Donate failure, three methods, rule R2:
+  - Single coordinate tap on the green coin Donate button
+    centre at norm 735,647: no change, count still 5/30,
+    Tech EXP still 163.8K/4.5M.
+  - Pivot point within the same button at norm 735,640: no
+    change. The control channel then warned that background
+    clicks do not reach some controls and advised
+    click_element instead of clicking there again.
+  - Pivot method click_element on the cost OCR control
+    (element 29, 800): dispatched, no change, count still
+    5/30 on the following screenshot.
+  - Method ends here inside this unit. No keyboard input was
+    used (Return and Esc quit this app), and no hold-to-donate
+    was used (untested as a closing method, and it would break
+    the live count-step verification).
+- Failure-mode reading: the 0719 coin-button centre (735,647)
+  sits close to the 0632-corrected centre (732,760), yet the
+  button failed across three input routes while navigation
+  taps in this same session all worked at once (Alliance
+  menu, Alliance Techs tile, Garrison Defense node). This is
+  therefore recorded as an input-route failure, not a
+  coordinate miss to fix by re-grounding alone; the next
+  unit must not re-tap the same button blindly. It matches
+  the pattern of GitHub Issue 171 (green action buttons
+  unresponsive to background input while navigation taps
+  worked); the ticker unit commented there rather than
+  filing a duplicate. The diamond Donate button was never
+  tapped, so whether it shares the failure is untested and
+  must stay untested without owner approval.
+- Game left safe: Garrison Defense panel open, coin button
+  still green at 5/30, nothing spent, no other task type
+  touched.
+
 ## Open questions
 
 - Donation Count replenishment mechanism - rate, cap, timer link,
@@ -457,6 +538,12 @@ before 03:17 local). Evidence in
   0545: about 8 counts back over about 2 hours 40 minutes after
   an arithmetic 0 at about 02:59, consistent with the roughly
   1-per-20-minutes two-endpoint estimate, NOT a measured rate.
+  Third data point 2026-11-02 0719: live 5/30 at 07:19 after
+  the 0545 1/30 read, with no donations landed in between
+  (0621 made none), about 4 back over about 1 hour 34
+  minutes - consistent with the roughly 1-per-20-minutes
+  estimate, NOT a measured rate, and this run does not close
+  the day on arithmetic.
   Duplicate Issue #174 is noted on #160 for the daily retro to
   consolidate, not self-closed. The re-read rule for a
   replenishing count (re-read after the timer; donate again if
@@ -469,6 +556,12 @@ before 03:17 local). Evidence in
   unverified and must not be tapped as a routine act; whether
   donations reopen at countdown end is for a later unit to
   discover.
+  The 0719 tree read (Garrison HP, Attack and Defense at
+  7/10, recommended marker on Garrison Defense) differs from
+  the earlier Troop Movement and Rallied node reads; whether
+  the Rallied tier completed or the tree was scrolled is
+  unmeasured - the next unit must confirm the tree composition
+  before asserting a completion.
 - Alliance entry from the Drill Ground camera framing: the
   Alliance right-column tap at (880,831) pans to the Drill
   Ground cluster instead of opening the Alliance menu (two
