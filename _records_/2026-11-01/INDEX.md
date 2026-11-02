@@ -3022,3 +3022,32 @@ of 2026-10-28.
   link, not closed. Local main fast-forwarded to
   8470c508e via bundle. End-of-pass sweep: only PR 157
   open. Full detail in pr-integration/2345-run.md.
+## 23:35 to 23:48 — Queue ticker pass, alliance donations (partial, unverified close)
+
+- Donations unit donations-2026-11-01-2203, partial: Rallied HP
+  (War tab, 5/10, plus 5 percent toward plus 6 percent, Tech EXP
+  1.9M/2.0M), coin button 600 coin per donation, diamond button
+  never used. Donation Count read live at every step from 11/30
+  down to 1/30 (ten coin donations confirmed), then one last tap
+  from 1/30 greyed the button under a 00:05:39 cooldown timer
+  that hides the count, so the 0/30 final is not claimed. Game
+  app quit mid-unit during a batched tap sequence and was
+  relaunched with no device dialog and no login demand; the
+  batch tap did not land. Entry count 11/30 against the previous
+  unit's 1/30 close exposes a count replenishment mechanism the
+  metadata does not model, filed as a GitHub Issue. Re-read unit
+  enqueued for about 23:55 local. Full detail in
+  alliance-donations/2348-queue-run.md.
+
+## 23:51 to 23:57 — Queue ticker pass, resource collection (partial)
+
+- Harvest unit harvest-2026-11-01-2203, partial: closed the
+  donation panel and Alliance menu without touching any donation
+  button, then cleared one cluster of 4 green resource bubbles
+  in the first base view with a single centre tap. HUD totals
+  (food 362.4M, iron 19.4M, stone 1.5M, coin 36.7M) did not move
+  at 0.1M display precision, so no gain figure is claimed. One
+  panned strip showed no resource bubble. Opposite pan, far-left
+  edge, Armed Truck and bottom Season 2 area remain unchecked,
+  so full-map zero-remaining acceptance is not met. Full detail
+  in resource-collection/2356-queue-run.md.
