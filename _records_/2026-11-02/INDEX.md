@@ -1117,3 +1117,14 @@ of 2026-10-28.
   untouched. Next radar unit's first actions: re-check the
   Doom pin before 07:09, then identify the two arrow pins.
   Full detail in radar-tasks/0636-queue-run.md.
+
+## 06:45 to about 06:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0645. Merged
+  PR 175 (knowledge organizer 0632, 0539 scout,
+  0545/0547/0621 donations and 0608 arms-race into 3
+  profiles); local main synced forward to c25bc918b.
+  Non-batch pass per the records_batch.py checker (next
+  batch 07:00), so records PRs 167 (2026-11-01) and 161
+  (2026-11-02) were not merged and await the 07:00 batch.
+  Full detail in pr-integration/0645-run.md.
