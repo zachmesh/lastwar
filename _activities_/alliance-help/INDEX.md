@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T17:38:46Z
+modified: 2026-11-02T20:41:21Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: alliance-help execution record 2026-11-01 2127 queue run (ticker-2104 unit, done, Help All pressed with only own requests visible)
   - source: ticker-0034 alliance-help execution record 2026-11-02 0039 queue run
   - source: ticker-0834 alliance-help execution record 2026-11-02 0836 queue run (done, Help All pressed, header 400 of 1000 unchanged)
+  - source: alliance-help execution record 2026-11-02 1220 queue run (ticker-1204 unit, done, toast fired with 0 counted helps)
 ---
 
 
@@ -343,6 +344,40 @@ Measured in the 0135 help unit (ticker-0134, window mode
   was left open; the Alliance panel behind it still
   showed the Help entry without a waiting-request badge
   change to verify beyond the header counter.
+
+## What the 2026-11-02 1220 unit added
+
+- Unit help-2026-11-02-1030 by ticker-1204, session
+  12:18 to 12:20, status done. Evidence in
+  `_records_/2026-11-02/alliance-help/1220-queue-run.md`.
+- Help All pressed at norm (500,775). Header read
+  live before and after: Today's points gained from
+  Alliance Help 400 of 1,000, unchanged, so 0 helps
+  counted. The visible list held only this account's
+  own four requests - the same four the 0836 unit
+  listed (Lv.28 Drill Ground building, Lv.30 Aircraft
+  Center building, Morale research, Precision
+  Targeting II research) - all at 30/30 after the
+  press. A drag scroll surfaced no further rows, so no
+  ally request was verified waiting.
+- Toast correction: the press DID produce the toast
+  "Allies are very grateful for your assistance" with
+  0 counted helps. The toast therefore proves nothing
+  in either direction - it can fire with no counted
+  help, and its absence in the 0836 unit does not by
+  itself prove no help was waiting either. The header
+  points counter governs: a counted help moves it,
+  the toast does not. This qualifies the 0836 unit's
+  no-toast reading above; it does not erase it.
+- Entry nuance: from the Alliance Gifts screen left
+  over from the previous unit, the back arrow at norm
+  55,949 returned to the Alliance panel first try.
+  That is screen-specific - it contrasts the 0817
+  gifts unit, where panel back-arrow taps produced no
+  change - so a working back arrow on one screen is
+  not evidence it works on another. The Help page was
+  left open.
+
 
 ## Open questions
 

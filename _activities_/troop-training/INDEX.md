@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T17:05:00Z
+modified: 2026-11-02T20:41:21Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: troop-training execution record 2026-11-01 2120 queue run (ticker-2104 unit, partial, barracks tents not located after north and south pans)
   - source: troop-training execution record 2026-11-02 0322 queue run (ticker-0308 unit, partial, pistol tap opened upgrade panel)
   - source: troop-training execution record 2026-11-02 0811 queue run (ticker-0804 unit, partial, action-row taps switched to the world map)
+  - source: troop-training execution record 2026-11-02 1146 queue run (ticker-1134 unit, partial, Lv.24 batch queued, Lv.20 pistol route retired)
 ---
 
 # Troop training
@@ -41,21 +42,7 @@ troops and riding the train are different systems and are kept apart.
   selected a wrong building (0917 unit, below).
 - A row of round buttons appears under the selected tent: paw,
   pistol and green up arrow. The green up arrow is the upgrade
-  shortcut - do not tap it. The paw-to-Details and
-  pistol-to-TRAIN-UNITS mapping this profile previously carried is
-  SUSPENDED 2026-11-02 (0811 unit): on a Lv.24 tent selected at
-  norm (825, 578), the pistol tap at norm (763, 510) switched to
-  the world map instead of TRAIN UNITS, and the paw tap at norm
-  (623, 499) on the re-selected tent switched to the world map
-  instead of Building Details; re-tapping the tent body only
-  re-showed the row. This differs from the 0322 unit, where the
-  pistol tap opened the upgrade panel, so the mapping is not
-  merely stale in one direction - it is unstable across camera
-  positions. DO NOT TAP THE ACTION ROW AS THE ENTRY ROUTE until
-  a unit establishes a fresh, verified mapping and reproduces a
-  panel opening; the next unit tries a different entry route (a
-  building-list or label entry, or a long-press variant on the
-  selected tent).
+  shortcut - do not tap it. The paw-to-Details and pistol-to-TRAIN-UNITS mapping is camera-position dependent, not dead: the 0811 suspension is LIFTED IN PART 2026-11-02 (1146 unit), which re-grounded the Lv.24 row fresh (paw about 670,584; pistol 794,605; green up arrow 930,584) and opened TRAIN UNITS with the pistol tap. The 0811 world-map result and the 0322 upgrade-panel result do not carry across camera views. The standing rule is fresh grounding of the whole row in every unit's own view, never inherited coordinates. The Lv.20 pistol route is separately RETIRED 2026-11-02 (1146 unit): two fresh pistol points (818,584 and 829,575) both only cleared the selection, so the next Lv.20 attempt tries a different entry route (a long-press variant on the selected tent, or the paw Details route with freshly grounded coordinates).
 - In TRAIN UNITS, the tier cards run left to right with the highest
   unlocked tier preselected, the count slider sits at the Training
   Count cap, and the blue Train button starts the batch. The yellow
@@ -101,8 +88,7 @@ Observed in game on this account, first execution 2026-10-25.
   load 2000, HP 4121.49, attack 33.13, defense 6.6.
 - Lv.24 barracks - T8, count 666, cost 2.9M food and 2.9M iron, time
   1 day 4 hours 20 minutes. T8 stats - power 1063 in game (one web
-  table says 800 - the in-game figure governs), morale 510.01, load
-  1800, HP 3527.4, attack 28.37, defense 5.65.
+  table says 800 - the in-game figure governs), morale 520.63 (2026-11-02 live read, superseding the 2026-10-25 figure 510.01), load 1800, HP 3527.4, attack 28.37, defense 5.72 (superseding 5.65).
 - Fourth barracks - highest tier T7, count 613, cost 2.0M food and
   2.0M iron, time 23 hours 11 minutes. T7 stats - power 779, morale
   444.01, load 1600, HP 2942.73, attack 23.75, defense 4.7. Its own
@@ -481,6 +467,70 @@ Observed in game on this account, first execution 2026-10-25.
   verification demanded. No second dialog appeared.
 
 
+## What the 2026-11-02 1146 unit added
+
+- Unit training-2026-11-02-1003 by ticker-1134, session 11:36
+  to 11:46, status partial: 1 of 4 barracks queued (Lv.24),
+  Lv.20 selected only, Lv.27 and Lv.30 not inspected. The
+  tracker is left untouched, so the next tick re-produces
+  the regular. Evidence in
+  `_records_/2026-11-02/troop-training/1146-queue-run.md`.
+- Entry mapping re-established for Lv.24, suspension
+  lifted in part: the Lv.24 tent was selected at norm
+  (806,581) and its action row re-grounded fresh (paw
+  about 670,584; pistol 794,605; green up arrow 930,584)
+  - the row sits about 90 pixels lower than the 0811
+  row, so the 0811 world-map result does not carry to
+  this camera view. The pistol tap opened TRAIN UNITS.
+  The 0811 suspension's own condition is therefore met
+  for Lv.24: a fresh, verified mapping reproduced a
+  panel opening. The standing rule is now fresh
+  grounding in every unit's own view, never inherited
+  coordinates - the mapping is camera-position
+  dependent, not dead.
+- Lv.20 pistol route retired inside the unit per queue
+  rule R2: the Lv.20 tent was selected at norm (857,531)
+  and its row re-grounded (paw about 704,552; pistol
+  829,575; green 942,549), but two pistol taps - the
+  visual-grounding point (818,584) and the crop-measured
+  centre (829,575) - both only cleared the selection and
+  returned to the base screen; neither opened TRAIN
+  UNITS. The next Lv.20 attempt tries a different entry
+  route (a long-press variant on the selected tent, or
+  the paw Details route with freshly grounded
+  coordinates) and does not repeat the pistol taps. A
+  clock badge above the Lv.20 tents was visible but not
+  read, so no claim is made that Lv.20 is already
+  training.
+- Train button lesson, measured: taps at the estimated
+  centre (561,715), (561,720) and (561,740), plus a
+  1-second long-press at (561,715), all produced no
+  change; visual grounding put the blue Train button at
+  norm (628,793), about 70 pixels below the estimate.
+  Never estimate the Train button centre from panel
+  proportions - ground it fresh before tapping. The
+  (628,793) tap queued the batch.
+- Batch queued, verified by the live resource drop: Lv.24,
+  T8 x666, 2.9M food and 2.9M iron, 1d 04:20:26, matching
+  the profile cost and time; food 390.2M to 387.2M and
+  iron 580.0M to 577.0M at HUD rounding. The panel shows
+  no Drill Ground figure and no queue-progress line.
+- Drill Ground Full, ninth consecutive unit without a
+  live read, but now with counter-evidence: no Drill
+  Ground Full toast appeared on the successful Train
+  tap, no Drill Ground figure was read live, and the
+  successful Lv.24 queue is evidence against a
+  universal block - but it is not a Drill Ground read,
+  so the 39,460 of 39,460 figure remains a 2026-10-31
+  read, neither confirmed nor cleared here. The next
+  unit still reads the Drill Ground screen live first
+  if a panel route to it is found.
+- The recurrence was commented onto Issue #150 by the
+  executor (Lv.24 success coordinates, the Train-button
+  mis-estimate lesson, the Lv.20 pistol failure), so no
+  duplicate comment is filed here.
+
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -529,3 +579,5 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.8.0 (2026-11-02): barracks tent rows grounded at four measured points, the pistol tap opening the Lv.27 to 28 upgrade panel instead of TRAIN UNITS so the pistol mapping is now disputed, Drill Ground Full carried unverified a seventh consecutive unit, and the recurrence commented onto Issue #150, folded from the 0322 training unit.
 
 - 1.9.0 (2026-11-02): Lv.24 tent selected at 825,578 with the action row measured (paw 623,499, pistol 763,510, up arrow 903,494), both action-row taps switching to the world map so the pistol/paw mapping is suspended, not merely disputed, Drill Ground Full carried unverified an eighth consecutive unit, and the recurrence commented onto Issue #150, folded from the 0811 training unit; the How to enter pistol-to-TRAIN-UNITS claim is corrected to suspended, not silently kept.
+
+- 1.10.0 (2026-11-02): Lv.24 pistol entry re-established with a fresh-grounded row (tent 806,581; pistol 794,605) so the 0811 suspension is lifted in part for Lv.24, the Lv.20 pistol route retired after two fresh-point failures, the Train button grounded at 628,793 against a 70-pixel-low estimate, the Lv.24 T8 batch queued and verified by the live resource drop, and Drill Ground Full carried unverified a ninth consecutive unit with a successful queue as counter-evidence, folded from the 1146 training unit.
