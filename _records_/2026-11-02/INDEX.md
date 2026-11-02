@@ -1093,6 +1093,18 @@ of 2026-10-28.
   withdrawals. Pool inbox 63, claimed 1, done 576,
   upcoming 51. Full detail in queue-planning/0640-run.md.
 
+## 07:40 to about 07:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-0740. Staged 8
+  units (already_present 63, skipped_done_current 0,
+  reaped 0, expired 0): passes, secrets, treasures, trucks
+  and events for 18:57; vip, daily-missions and scout for
+  19:00. Tonight's pre-reset sweep pair already in inbox,
+  scout diff on the 2026-11-02 observation applied with
+  all zero counts, 0 withdrawals. Pool inbox 69, claimed
+  1, done 579, upcoming 53. Full detail in
+  queue-planning/0740-run.md.
+
 ## 06:35 to about 06:50 - Queue ticker pass, radar release
 
 - Ticker pass ticker-0634. Sync reaped 0, expired 0; all 17
