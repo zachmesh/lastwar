@@ -2620,3 +2620,39 @@ of 2026-10-28.
   under rule R2 instead of repeated. Nothing claimed, Delete
   All never touched, tracker untouched. Full detail in
   mail-rewards/2131-queue-run.md.
+
+## 21:32 to about 21:45 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-01-2132,
+  worked from the 2032 watermark. Own PRs checked first:
+  PR 145 MERGED with no comments and no reviews; sole
+  other open PR 142 belongs to lastwar-pr-integrator
+  (23:00 batch). Knowledge Issues #118-#122, #124, #131
+  still open, none resolved here.
+- Six profiles bumped via PR 152 (OPEN, Owner
+  lastwar-knowledge-organizer): survivor-intake 1.9.0 to
+  1.10.0 (2034 first partial since the 1644 done, gate
+  line explicitly unverified, north-east pan the wrong
+  way, world icon 249,641 a new look-alike, 1644
+  re-read pointer bubble 460,632 figure 458,678);
+  alliance-duel 1.8.0 to 1.9.0 (2040 third consecutive
+  plan staging no duel-score unit, retro commented on
+  #136 and kept it open, Nov 1 duel total still unknown
+  not zero); alliance-gifts 1.6.0 to 1.7.0 (2122 done,
+  221 Regular plus 70 Premium, Gift Level 28 to
+  179,664,120 of 206,300,000, OCR-over-estimate lesson,
+  Premium Claim All at 718,967); alliance-help 1.9.0 to
+  1.10.0 (2127 done, Help All pressed with only own
+  requests visible, header 80 of 1,000 unchanged, toast
+  not captured); mail-rewards 1.4.0 to 1.5.0 (2131
+  partial, Alliance-panel back arrow stalled on
+  background input, mail screen never reached);
+  troop-training 1.5.0 to 1.6.0 (2120 partial, north
+  and south map edges ruled out, drag mapping measured,
+  grounding timeout abandoned, east-to-red-roofs
+  next-unit rule, Drill Ground Full unverified a fifth
+  consecutive unit). Retro A1-A4 checked, no duplicate
+  edits (A1 applied by the retro itself as truck-plunder
+  1.13.0 via PR 151). Contradictions resolved 0, stale
+  marked 0, gaps filed 0, PR feedback addressed 0.
+  Full detail in knowledge-organization/2132-run.md.
