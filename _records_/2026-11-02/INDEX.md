@@ -1080,3 +1080,15 @@ of 2026-10-28.
   records awaiting the 07:00 batch; 26 open issues all
   class-labeled, no owner-decision issue over 24 hours.
   Full detail in pr-catchall/0639-run.md.
+
+## 06:40 to about 06:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-0640. Staged 11
+  units (already_present 55, skipped_done_current 3,
+  reaped 0, expired 0): harvest, radar, survivors, training,
+  donations and arms-race for 18:03; mail, help, gifts,
+  train and star-ceremony for 18:30. Tonight's pre-reset
+  sweep pair already in inbox, scout diff on the new
+  2026-11-02 observation applied with all zero counts, 0
+  withdrawals. Pool inbox 63, claimed 1, done 576,
+  upcoming 51. Full detail in queue-planning/0640-run.md.
