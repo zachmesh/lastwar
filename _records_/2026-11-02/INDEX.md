@@ -1549,3 +1549,18 @@ of 2026-10-28.
   moved a tier-2 knowledge file (alliance-gifts INDEX) that
   would conflict, and the standing action-log divergence is
   the integrator's batch work, as before.
+## 08:45 to about 08:49 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0845:
+  knowledge PR 178 merged (organizer 0832, 0741
+  harvest, 0747 survivors, 0811 training and 0817
+  gifts into 4 profiles, squash merge to main
+  66882d54, local main fast-forwarded to match).
+  This is a non-batch pass for records (checker
+  _tools_/records_batch.py not due, outside every
+  batch window, next batch 11:00). Records PR 176
+  (2026-11-01 post-0700 batch) and records PR 161
+  (2026-11-02) both trial-merge cleanly against the
+  new main and await the 11:00 batch; no conflict
+  comment owed. No escalation, no backlog edit.
+  Full detail in pr-integration/0845-run.md.
