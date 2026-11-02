@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T08:32:00Z
+modified: 2026-11-02T11:34:36Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: troop training execution record 2026-11-01 1216 queue run
   - source: troop training execution record 2026-11-01 1651 queue run
   - source: troop-training execution record 2026-11-01 2120 queue run (ticker-2104 unit, partial, barracks tents not located after north and south pans)
+  - source: troop-training execution record 2026-11-02 0322 queue run (ticker-0308 unit, partial, pistol tap opened upgrade panel)
 ---
 
 # Troop training
@@ -40,7 +41,13 @@ troops and riding the train are different systems and are kept apart.
 - A row of round buttons appears under the selected tent. The pistol
   icon button opens the TRAIN UNITS panel. The paw icon opens Building
   Details, and the green up arrow is the upgrade shortcut - do not tap
-  it.
+  it. DISPUTED 2026-11-02 (0322 unit): a pistol tap at norm
+  (405, 568) on a re-selected Lv.27 tent opened the Lv.27 to 28
+  UPGRADE panel, not TRAIN UNITS - whether the mapping is stale
+  or the tap landed on a neighbouring control is unresolved. Until
+  a unit re-grounds the action row and reproduces a TRAIN UNITS
+  opening, treat the pistol mapping as unconfirmed and re-ground
+  the row before tapping.
 - In TRAIN UNITS, the tier cards run left to right with the highest
   unlocked tier preselected, the count slider sits at the Training
   Count cap, and the blue Train button starts the batch. The yellow
@@ -382,6 +389,45 @@ Observed in game on this account, first execution 2026-10-25.
   shortcut. Evidence in
   `_records_/2026-11-02/troop-training/0017-queue-run.md`.
 
+## What the 2026-11-02 0322 unit added
+
+- Unit training-2026-11-02-0203 by ticker-0308, session about
+  03:22 to 03:30, status partial. No batch was queued and no
+  training state was verified. The tracker is left untouched,
+  so the next tick re-produces the regular and the work
+  resumes as a fresh unit. Evidence in
+  `_records_/2026-11-02/troop-training/0322-queue-run.md`.
+- Barracks tents grounded on the live base screenshot: norm
+  (308, 552), (409, 606), (546, 544), (608, 518). This locates
+  the tent rows that Issue #150 records as not located.
+- First tent tapped and selection confirmed: Barracks Lv.27
+  with the three-button action row - paw (details), pistol
+  (train per this profile), green up arrow (upgrade). The
+  pistol button tapped at norm (405, 568) opened the Lv.27
+  to 28 UPGRADE panel, not TRAIN UNITS: Unit Training Cap
+  540 to 550, Unit Training Level 9 to 9, cost coins 43.7M
+  of 127.5M and iron 565.3M of 314.5M, Upgrade timer 19d
+  14:30:46, Finish Now 187,490. It was closed with the panel
+  X. No Upgrade, no Finish Now, no Obtain, no building
+  started. Whether the pistol mapping is stale or the tap
+  landed on a neighbouring control is unresolved - the
+  profile's pistol-to-TRAIN-UNITS claim is therefore
+  qualified as disputed above, not silently kept and not
+  silently erased.
+- Paw button tapped at norm (311, 552) on the re-selected
+  tent: no panel opened. Deselected with a tap on empty
+  ground, leaving the game on the base screen.
+- TRAIN UNITS was not reached, so no barracks queue state
+  was read, no idle barracks was requeued, and the Drill
+  Ground state was not read. The other three barracks were
+  not inspected. Drill Ground Full is therefore carried
+  forward unverified a seventh consecutive unit (0017 was
+  the sixth). The record commented on Issue #150 with the
+  located tent rows and the unresolved TRAIN UNITS entry,
+  so the next unit re-grounds the action row before
+  tapping; no new issue is filed here.
+
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -426,3 +472,5 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.6.0 (2026-11-01): north and south map edges ruled out at this zoom level, the measured drag mapping (y 300 to 700 moves south, reverse north), the 3-minute grounding timeout abandoned not retried, the device-takeover Confirm once with clean relaunch, the east-toward-the-red-roofed-formation next-unit rule, and Drill Ground Full still carried unverified a fifth consecutive unit, folded from the 2120 training unit.
 
 - 1.7.0 (2026-11-02): east pan to the formation lots ruled out as the barracks tent row, the lower-middle-base next-unit rule, Drill Ground Full carried unverified a sixth consecutive unit, and the recurrence commented onto Issue #150, folded from the 0017 training unit.
+
+- 1.8.0 (2026-11-02): barracks tent rows grounded at four measured points, the pistol tap opening the Lv.27 to 28 upgrade panel instead of TRAIN UNITS so the pistol mapping is now disputed, Drill Ground Full carried unverified a seventh consecutive unit, and the recurrence commented onto Issue #150, folded from the 0322 training unit.

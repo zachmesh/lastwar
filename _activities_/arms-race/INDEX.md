@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T07:38:29Z
+modified: 2026-11-02T14:36:25Z
 level: L1
-version: 1.19.0
+version: 1.21.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,8 @@ grounded_in:
   - source: arms-race execution record 2026-11-01 1523 queue run
   - source: arms-race execution record 2026-11-01 1934 queue run
   - source: ticker-2304 arms-race execution record 2026-11-01 2327 queue run
+  - source: arms-race execution record 2026-11-02 0247 queue run (ticker-0235 unit, partial, Hero Advancement tier-3 met)
+  - source: arms-race execution record 2026-11-02 0608 queue run
 ---
 
 
@@ -586,3 +588,131 @@ slot. Evidence in
   chest tapped that was not earned. Tracker untouched for
   partial, per the queue rules.
 
+## What the 2026-11-02 0247 unit added
+
+- Unit arms-race-2026-11-02-0203 by ticker-0235, session about
+  02:37 to 02:46, status partial. Live phase: Hero Advancement,
+  Contest Segment Lv.29-30, time left 03:20:36 at first read,
+  chest thresholds 2,000 / 4,000 / 12,000. Scoring rows read
+  live: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP
+  at a time +1, Buy Packs containing Diamonds +30 per diamond
+  (red line, not used).
+- Entry pivot, rule R2: the Arms Race tab at the cut-off left
+  edge took two no-change taps; a drag of the tab bar to the
+  right revealed the full tab, and the next tap opened the
+  phase page. Same drag remedy as the 2327 unit - tab
+  positions must be re-grounded from OCR on every opening,
+  never inherited.
+- Scoring action, EXP only: hero Adam (UR Titan) Lv.123, EXP
+  bar 75,142,142 / 81,000,000, gap 5,857,858. The Upgrade
+  panel's Collect row tap produced no change, so Replenish
+  All was used instead; it collected the available resources
+  (Hero EXP 16.9M, iron 1.9M, coin 1.2M, food 1.9M) and the
+  bar rose to 99,961,664 / 81,000,000. One Upgrade tap
+  levelled Adam to Lv.124 (hero power 1,731,615 to
+  1,739,645, new bar 18.9M / 83.0M; the 18,961,664
+  carry-over matches the bar overflow arithmetic). No
+  diamonds, money, speedups or skill medals were spent; the
+  resource collection was incidental to the EXP replenish,
+  not a harvest unit.
+- Score read live after the level-up: 40,500 points, segment
+  rank 9, clearing the 12,000 top chest. The 40,500 equals
+  the 81,000,000 EXP bar divided by 2,000, consistent with
+  the 2026-10-26 measured rate of 1 point per 2,000 Hero
+  EXP - a second confirmation of that rate.
+- Claims: one tap on the 2,000 chest claimed all three
+  earned point chests at once (popup contents: star badge
+  6, SR chests 32 and 32, Arms Race Badges 1.6K, coin chest
+  32, 5m speedups 68). Re-read: all three point chests open
+  and claimed.
+- Completion sweep, unresolved item: the cumulative counter
+  chest at the top left read 0/2 before the claim and 6/2
+  after it. Two taps on it at its measured centre produced
+  no change (background-click limit noted by the control
+  channel), so it is NOT recorded as claimed. The next
+  arms-race unit must re-check it with a changed tap
+  method. The ranking-row chest was not tapped: while the
+  phase is live it opens a preview only per the
+  2026-10-26 knowledge, and its reward is claimed by the
+  next run after the phase ends. No bouncing chest or
+  reward red dot was visible elsewhere on the page.
+- Status partial only because of the 6/2 cumulative chest;
+  the phase target itself (12,000) was met and all three
+  point chests claimed. Tracker untouched for partial, per
+  the queue rules. Evidence in
+  `_records_/2026-11-02/arms-race/0247-queue-run.md`.
+
+## What the 2026-11-02 0608 unit added
+
+- Unit arms-race-2026-11-02-0603 by ticker-0604, session about
+  06:03 to 06:08, window duel day 1, status partial. The
+  previous phase is fully closed except the ranking reward,
+  whose claim location is still unknown; the new Tech
+  Research phase target stands as a red-line miss for this
+  phase. Tracker untouched for partial, per the queue rules.
+  Evidence in `_records_/2026-11-02/arms-race/0608-queue-run.md`.
+- Phase rollover inside this unit: the unit opened in the tail
+  of the Hero Advancement phase (previous unit 0247 had scored
+  40,500 and claimed all three point chests) and the phase
+  rolled to Tech Research at about 06:07 local, during
+  navigation to the Arms Race page.
+- Entry pivot, rule R2, reused from 0247: the Arms Race tab sat
+  at the cut-off left edge of the Events tab bar; one drag of
+  the tab bar to the right revealed the full tab and the next
+  tap opened the phase page. No repeat of the failed cut-off
+  tap.
+- Previous-phase close-out, claimed live: the cumulative
+  counter chest at the top left read 6/2 before the tap. One
+  tap at its centre claimed it (the 0247 no-change taps are
+  superseded - the changed method this unit is a fresh
+  measured centre tap after the tab-bar drag, and it worked on
+  the first tap). Popup contents read live: gold ticket 1,
+  pink puzzle-piece items 2, red gem tagged 50 x1. After the
+  claim the counter read 6/8 with the chest purple and the bar
+  about three quarters full, matching the 2026-10-26 pattern
+  of progress carrying into the next tier. The 0247
+  completion-sweep item is therefore closed: the cumulative
+  chest is claimed, and the 6/2 no-change taps stand as a
+  superseded tap method, not a blocked chest.
+- Ranking-row chest, not claimed: the ranking row still shows
+  the finished Hero Advancement result (#2110 [AP3x]Bears
+  Lair, 40,500). One tap on its chest opened only the
+  contents preview (Iron Chest (SR) 3, Food Chest (SR) 3,
+  Coin Chest (SR) 3), with no Claim button, even though the
+  phase has ended. Correction to the 0247 expectation: the
+  ranking reward is NOT claimed by the next run after the
+  phase ends - after the phase end it still opens a preview
+  only. Where the phase ranking reward is actually paid
+  remains an open question; nothing was tapped a second time
+  and no reward is recorded as claimed here. The open
+  question "when the phase ranking reward lands and where it
+  is claimed" stands, strengthened.
+- New phase read live (rule R4, first unit inside the phase):
+  Tech Research, Contest Segment Lv.29-30, time left
+  03:53:41 at first read, score 0, chest thresholds 6,250 /
+  12,500 / 30,000. Scoring rows read live: Increase Tech
+  Power by 1pt +1, Use 1-min Research Speed-up +10, Buy
+  Packs containing Diamonds +30 per diamond.
+- Research queue read live via the scoring row jump: Lv.1
+  Precision Targeting II upgrade in progress, Time Left 4d
+  01:51:02; Lv.9 Morale upgrade in progress, Time Left 1d
+  04:22:39. Neither completion lands before this phase ends
+  (about 10:01 local). The other two scoring paths are red
+  lines (speedups never burned, packs never bought). Tier-3
+  at 30,000 is therefore unreachable inside the red lines for
+  this phase, assessed early in the phase, not discovered in
+  its last minutes - the same shape as the 2026-10-26 Tech
+  Research miss. No diamonds, money, speedups, skill medals
+  or hero resources were spent in this unit.
+- Completion sweep: after the cumulative claim and the ranking
+  preview, the phase page showed no bouncing chest and no
+  reward red dot besides the locked point chests (0 points)
+  and the 6/8 cumulative chest. The Events screen Arms Race
+  card was entered from, not re-scanned after the sweep,
+  because the phase page itself carried no remaining
+  claimable item.
+- Result stats: target 30000, achieved 0, points 0,
+  resources_gained gold-ticket 1, puzzle-pieces 2,
+  red-gem-50 1 (previous-phase cumulative chest), verified
+  yes, blocker_category g (true red-line miss for the new
+  phase).

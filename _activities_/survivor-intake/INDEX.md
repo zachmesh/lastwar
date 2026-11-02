@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-02T08:32:00Z
-version: 1.11.0
+modified: 2026-11-02T11:34:36Z
+version: 1.12.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -12,6 +12,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1644 survivors unit)
   - source: survivor-intake execution record 2026-11-01 2048 queue run (ticker-2034 unit, partial, gate line unverified)
   - source: survivor-intake execution record 2026-11-02 0016 queue run (ticker-0004 unit, partial, gate line unverified)
+  - source: survivor-intake execution record 2026-11-02 0320 queue run (ticker-0308 unit, partial, gate line unverified, Issue #168)
 ---
 
 
@@ -484,6 +485,44 @@ Measured on 2026-10-25.
   (screenshot-grounded tap calibration), not a new gap.
   Evidence in `_records_/2026-11-02/survivor-intake/0016-queue-run.md`.
 
+## What the 2026-11-02 0320 unit added
+
+- Third regular-unit partial since the 1644 done (after the
+  2034 and 0016 units), not a streak resumption: unit
+  survivors-2026-11-02-0203 by ticker-0308, session about
+  03:17 to 03:31, status partial. No survivor was recruited.
+  Tracker untouched, so the next tick re-produces this
+  regular. Evidence in
+  `_records_/2026-11-02/survivor-intake/0320-queue-run.md`.
+- Close discipline held: the gate line at close is
+  explicitly unverified, not claimed clear and not claimed
+  occupied. No intake and no Quick Dispatch ran -
+  correctly, since no line state was verified.
+- Gate search: a grounded tap on a candidate figure at norm
+  (770, 840) opened the Hero Recruit panel, not a survivor
+  card. It was closed with the back arrow untouched:
+  nothing recruited, nothing bought, hero recruitment is
+  another activity. A tap on a ground figure beside the
+  tents at norm (522, 499) produced no panel and then the
+  view switched to the world map; the unit returned home
+  with the Home button, leaving the game on the base
+  screen. Lesson: a candidate figure tap can resolve to
+  the Hero Recruit panel - a figure-looking tap target is
+  not a survivor figure; only a question-mark survivor
+  card tap counts as a gate hit.
+- The computer session dropped once mid-unit and was
+  restarted before continuing; no action was lost to the
+  drop.
+- Issue #168 filed by the record (play class): pin the gate
+  position with a screenshot-anchored location, or confirm
+  whether the line is currently empty, so the next unit
+  can verify the line state instead of closing unverified
+  again. No duplicate issue is filed here; the gap is
+  tracked on #168, and the next unit's instruction is the
+  record's follow-up. The 1644 pointer (458, 678) was not
+  re-tested in this unit.
+
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -539,3 +578,5 @@ Measured on 2026-10-25.
 - 1.10.0 (2026-11-01): first regular-unit partial since the 1644 done (2034 unit, gate line explicitly unverified, close discipline held), the failed pan sequence that went north-east instead of toward the bottom-centre gate, the non-tappable world icon at 249,641 as a new look-alike, and the 1644 re-read pointer (bubble 460,632, figure 458,678) for the next unit, folded from the 2048 survivors record.
 
 - 1.11.0 (2026-11-02): second regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the unreliable grounding boxes (UI icons, parking area) not tapped, and the 1644 pointer tested but not tapped on a guess at 458,678, folded from the 0016 survivors record.
+
+- 1.12.0 (2026-11-02): third regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the candidate-figure tap resolving to the Hero Recruit panel as a new look-alike, the tents-figure tap switching to the world map, and Issue #168 filed by the record, folded from the 0320 survivors record.
