@@ -2850,3 +2850,15 @@ of 2026-10-28.
   frontmatter fallback will surface those counts once the
   live tree syncs to main. Full detail in
   queue-planning/2240-run.md.
+
+## 22:43 to 22:57 — Queue ticker pass, secret missions (partial)
+
+- Secrets unit secrets-2026-11-01-1857, partial: 8 pending own
+  tasks (4 SSR, 4 SR), none claimable, but dispatch was
+  unresponsive in-session - Mega Deploy gave no panel after
+  three taps and a long-press, and a single Go tap on Retrieve
+  Valuable Supplies verified undispatched on re-read. 0
+  dispatched, 0 claimed, assists untouched at 0/5 on the fresh
+  day. Next unit must try a changed method (double-tap Mega
+  Deploy or a Go tap held for a hero panel), not repeat these
+  taps. Full detail in secret-missions/2243-queue-run.md.
