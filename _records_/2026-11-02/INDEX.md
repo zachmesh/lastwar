@@ -1576,3 +1576,16 @@ of 2026-10-28.
   main 66882d54 and await the 11:00 batch; no conflict
   comment owed, no escalation, no backlog edit.
   Full detail in pr-integration/0900-run.md.
+
+## 09:05 to about 09:10 - Ticker pass ticker-0904, events unit
+
+- Events sweep unit events-2026-11-02-0657: full hub scan (Arms
+  Race Tech Research, Desert Battlefield, Wanted Boss Code 87,
+  Community). Nothing claimable anywhere: Arms Race cumulative
+  chest 6/8, point chests locked at phase score 0; Desert
+  Battlefield alliance registration only; Wanted Boss not out
+  (server 00:00, about 07:50 away), Goals tiers all above the
+  899,542,636 best; Community Discord reward already Claimed.
+  Nothing claimed, nothing spent. Game left on the Events hub
+  Wanted Boss page (hub back arrow unresponsive to background
+  clicks). Full detail in event-claims/0910-queue-run.md.

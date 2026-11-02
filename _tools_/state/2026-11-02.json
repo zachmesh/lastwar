@@ -1,47 +1,47 @@
 {
-  "gifts": {
-    "status": "done",
-    "at": "2026-11-02T16:18:35",
-    "note": "Regular 1 +10, Premium 1 +50, progress to 180508680"
-  },
-  "help": {
-    "status": "done",
-    "at": "2026-11-02T08:36:59",
-    "note": "Help All pressed; no ally request waiting, points 400/1000 unchanged"
-  },
-  "mail": {
-    "status": "done",
-    "at": "2026-11-02T08:39:51",
-    "note": "All claimable categories swept; no rewards available"
-  },
-  "train": {
-    "status": "done",
-    "at": "2026-11-02T08:44:40",
-    "note": "No train in preparation"
-  },
-  "star-ceremony": {
-    "status": "done",
-    "at": "2026-11-02T08:41:08",
-    "note": "No ceremony waiting; no trophy icon"
-  },
-  "events": {
-    "status": "done",
-    "at": "2026-11-02T00:50:05",
-    "note": "Arms Race 0pts, Wanted Boss not out; nothing claimable"
-  },
-  "passes": {
-    "status": "done",
-    "at": "2026-11-02T08:46:14",
-    "note": "All shop claims already claimed today"
-  },
-  "treasures": {
-    "status": "done",
-    "at": "2026-11-02T04:24:35",
-    "note": "Checked only, M3 x0, no dig possible"
-  },
-  "secrets": {
-    "status": "done",
-    "at": "2026-11-02T04:23:22",
-    "note": "Assists 5/5, 8 tasks claimed, recovery clear"
-  }
+ "events": {
+  "at": "2026-11-02T09:10:37",
+  "note": "Hub sweep 0910: nothing claimable, nothing claimed",
+  "status": "done"
+ },
+ "gifts": {
+  "at": "2026-11-02T16:18:35",
+  "note": "Regular 1 +10, Premium 1 +50, progress to 180508680",
+  "status": "done"
+ },
+ "help": {
+  "at": "2026-11-02T08:36:59",
+  "note": "Help All pressed; no ally request waiting, points 400/1000 unchanged",
+  "status": "done"
+ },
+ "mail": {
+  "at": "2026-11-02T08:39:51",
+  "note": "All claimable categories swept; no rewards available",
+  "status": "done"
+ },
+ "passes": {
+  "at": "2026-11-02T08:46:14",
+  "note": "All shop claims already claimed today",
+  "status": "done"
+ },
+ "secrets": {
+  "at": "2026-11-02T04:23:22",
+  "note": "Assists 5/5, 8 tasks claimed, recovery clear",
+  "status": "done"
+ },
+ "star-ceremony": {
+  "at": "2026-11-02T08:41:08",
+  "note": "No ceremony waiting; no trophy icon",
+  "status": "done"
+ },
+ "train": {
+  "at": "2026-11-02T08:44:40",
+  "note": "No train in preparation",
+  "status": "done"
+ },
+ "treasures": {
+  "at": "2026-11-02T04:24:35",
+  "note": "Checked only, M3 x0, no dig possible",
+  "status": "done"
+ }
 }
