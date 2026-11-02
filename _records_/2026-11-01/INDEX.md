@@ -2385,3 +2385,16 @@ of 2026-10-28.
   amended once with the 1940 confirmation) OPEN with its Owner
   line at record time. Full detail in
   knowledge-organization/1932-run.md.
+
+## 19:45 to about 19:59 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1945.
+  Merged PR 143 (queue aged-P1 windowing, Refs #128)
+  and PR 144 (six activity profiles, Refs #128
+  evidence); records PR 142 left awaiting the 23:00
+  batch (checker window 19:00-20:00 reports due but
+  the batch was already consumed by the 1900 pass,
+  PR 117 merged 19:04, same judgement as the 1930
+  pass). No conflicts, no escalations. End-of-pass
+  sweep: PR 142 only, decided. Full detail in
+  pr-integration/1945-run.md.
