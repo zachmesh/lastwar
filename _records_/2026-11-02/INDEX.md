@@ -2226,3 +2226,12 @@ of 2026-10-28.
   Hot Deals. Legendary Take All $19.99, Renew $4.99 and
   Monthly Extension $24.99 all left untouched. Full
   detail in shop-claims/1300-queue-run.md.
+
+## 13:00 to about 13:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1300.
+  No-op non-batch pass: no knowledge or code PR open.
+  Records PRs 181 (2026-11-01 post-1100 batch) and 161
+  (2026-11-02) both CLEAN and MERGEABLE and await the
+  1500 batch (checker _tools_/records_batch.py: not due,
+  next batch 15:00). Full detail in pr-integration/1306-run.md.
