@@ -2670,6 +2670,19 @@ of 2026-10-28.
   statement current.
   Full detail in pr-catchall/2139-run.md.
 
+## 21:40 to 21:50 — Queue planning pass, no-op (2140 run)
+
+- Plan staged 0 units: every (regular, time slot) pair in the
+  next 12 hours was already covered (already_present 65,
+  skipped_done_current 4, reaped 0, expired 0). Tomorrow's
+  pre-reset sweep pair (chain pre-reset-sweep-2026-11-02)
+  already in inbox; scout diff dry run and apply both all
+  zero; 0 withdrawals. Pool: inbox 67, claimed 0, done 525.
+  Diff-parse gap carried for the retro: the observation
+  file has no observed_items block, so the diff reads 0
+  items against frontmatter items_observed 24 and
+  unexplained_red_dots 6. Full detail in
+  queue-planning/2140-run.md.
 ## 21:32 to about 21:45 - Tool development pass
 
 - Tool-developer run tool-development-2026-11-01-2145: own PRs checked first (only PR 142 open, records-owned, none owned); took open tooling issue 149 over 147 (sweep fix-up scheduling, left for a later run) and 133/128/130/129/126 (already implemented by merged PRs 146, 143, 139 and 135, closure belongs to the retro), 125 and 123. Built the scout coverage headline frontmatter fallback in scout_diff.py: a narrative-only observation no longer reports 0 items / 0 unexplained dots against its own frontmatter (Nov 1 example moves to 24 items / 6 unexplained, basis frontmatter-fallback, classified counts kept alongside). PR 153 opened, issue 149 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (25 checks) plus an unpatched-main control run. Full detail in tool-development/2145-run.md.
