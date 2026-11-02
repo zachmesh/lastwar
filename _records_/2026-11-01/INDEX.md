@@ -2686,3 +2686,12 @@ of 2026-10-28.
 ## 21:32 to about 21:45 - Tool development pass
 
 - Tool-developer run tool-development-2026-11-01-2145: own PRs checked first (only PR 142 open, records-owned, none owned); took open tooling issue 149 over 147 (sweep fix-up scheduling, left for a later run) and 133/128/130/129/126 (already implemented by merged PRs 146, 143, 139 and 135, closure belongs to the retro), 125 and 123. Built the scout coverage headline frontmatter fallback in scout_diff.py: a narrative-only observation no longer reports 0 items / 0 unexplained dots against its own frontmatter (Nov 1 example moves to 24 items / 6 unexplained, basis frontmatter-fallback, classified counts kept alongside). PR 153 opened, issue 149 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (25 checks) plus an unpatched-main control run. Full detail in tool-development/2145-run.md.
+- Integrator pass pr-integration-2026-11-01-2152.
+  Non-batch pass (checker _tools_/records_batch.py
+  reports not due, next batch point 23:00): merged
+  knowledge PR 152 (six activity profiles from 2034
+  and ticker-2104 units) and code PR 153 (scout
+  coverage frontmatter fallback, Refs #149); records
+  PR 142 left awaiting the 23:00 batch. Local main
+  synced to 1ce2d80ce. Full detail in
+  pr-integration/2152-run.md.
