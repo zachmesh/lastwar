@@ -2532,3 +2532,26 @@ of 2026-10-28.
   awaiting the 23:00 batch (head a828513 at pass
   start, 34adac34 at sweep). Local main synced to
   c6002bcd. Full detail in pr-integration/2045-run.md.
+
+## 20:40 to about 20:46 — Queue planning pass (no-op)
+
+- Planner run queue-planning-2026-11-01-2040, no-op:
+  plan staged 0 units to the 08:40 horizon 2026-11-02,
+  67 already present, 2 skipped as done for the current
+  slot, 0 reaped, 0 expired. The 1940 run had already
+  staged the pool through the 0657 and 0700 slots of
+  2026-11-02, and the next regular slots lie beyond
+  this run's window.
+- Pre-reset sweep production skipped (20:00 hour, not
+  17:00); tonight's pair already done and tomorrow's
+  pair (chain pre-reset-sweep-2026-11-02, both passes)
+  already in the inbox.
+- scout_diff dry and applied on the 02:15 and 14:47
+  observation with 0 items parsed - the observation
+  carries no observed_items block - 0 enqueued, 0
+  candidates, 0 unexplained in the diff. Queue cleanup
+  0 withdrawn; the crystal-shop and glittering-market
+  priority-1 units (Issue #128) were not withdrawn, the
+  observation never walks the store group. Pool by_state
+  at 20:44 local: inbox 71, claimed 1, done 520.
+  Full detail in queue-planning/2040-run.md.
