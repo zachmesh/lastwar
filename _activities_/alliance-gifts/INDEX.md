@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T05:39:49Z
+modified: 2026-11-02T08:32:00Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1221 gifts unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1718 gifts unit)
   - source: alliance-gifts execution record 2026-11-01 2122 queue run (ticker-2104 unit, done, 221 Regular plus 70 Premium)
+  - source: alliance-gifts execution record 2026-11-02 0023 queue run (ticker-0004 unit, done, 45 Regular plus 5 Premium)
 ---
 
 
@@ -273,6 +274,49 @@ one file per execution.
   Evidence in `_records_/2026-11-01/alliance-gifts/2122-queue-run.md`.
 
 
+## What the 2026-11-02 0023 unit added
+
+- Done, Claim All on BOTH tabs as the owner directed:
+  unit gifts-2026-11-01-2230 by ticker-0004, session about
+  00:18 to 00:23. Regular 45 gifts and Premium 5 gifts,
+  each confirmed by its own summary dialog. Gift Level 28
+  progress read live: 179,803,870 of 206,300,000 before
+  the Regular claim, 179,804,320 after it (plus 450,
+  exactly 45 times 10 points), and 179,805,720 after the
+  Premium claim (plus 1,400; list entries SSR plus 200, R
+  plus 50, SR plus 100, R plus 50, and a fifth gift below
+  the fold). Closing verification read live: both tabs
+  show their visible gifts as Claimed, and the Alliance
+  Gifts entry red dot cleared on both tabs.
+- Entry lessons, measured fresh: a first tap on the base
+  right column at norm 849,683 hit the tan button left of
+  Alliance, not Alliance itself, and produced no change.
+  The right-column crop then measured the Alliance star
+  icon centre at norm 941,701, and one tap there opened
+  the Alliance panel ([AP3x] The Apex, 95/100 members,
+  power 12,845,055,755). A first tap inside the panel at
+  norm 311,536 opened Alliance Wars instead of Alliance
+  Gifts: the window's title bar shifts content
+  coordinates, so the Gifts button centre is norm
+  313,595, not 536. Correction for the next unit that
+  taps panel buttons from a screenshot: add about 30
+  pixels of title bar to the content pixel before
+  normalising. This refines the 2122 OCR-over-estimate
+  lesson - the offset is the title bar.
+- The accidental Alliance Wars open was left immediately
+  via the back arrow from its Rally Intel screen ("No
+  Alliance Rally currently"); nothing was joined,
+  started or changed there.
+- Foreground nuance: the two no-change taps in this unit
+  were both coordinate misses, not background-input
+  failures - the drags and corrected taps all reached the
+  game while Chrome stayed frontmost, so the 2026-10-31
+  foreground precondition did not recur here. This does
+  not supersede the queue rule R2 practice that two
+  no-change taps end the background-input method inside
+  a unit, as the 0110 nuance already records.
+- Evidence in `_records_/2026-11-02/alliance-gifts/0023-queue-run.md`.
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -305,3 +349,5 @@ one file per execution.
   unit.
 
 - 1.7.0 (2026-11-01): dialog-confirmed 221 Regular and 70 Premium, Gift Level 28 progress 179,652,510 to 179,664,120 of 206,300,000, the OCR-over-screenshot-estimate panel-button lesson, and the right-shifted Premium Claim All point (718,967) versus the centred Regular point (498,967), folded from the 2122 gifts unit.
+
+- 1.8.0 (2026-11-02): dialog-confirmed 45 Regular and 5 Premium, Gift Level 28 progress 179,803,870 to 179,805,720 of 206,300,000, the title-bar 30-pixel offset correction (Gifts 313,595, not 536), and the Alliance star icon centre 941,701, folded from the 0023 gifts unit.
