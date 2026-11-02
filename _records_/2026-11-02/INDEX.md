@@ -44,6 +44,18 @@ of 2026-10-28.
   open. Nothing merged, commented or escalated.
   Full detail in pr-integration/0030-run.md.
 
+## 00:45 to about 00:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0045.
+  Non-batch pass per the checker (next batch 03:00):
+  merged PR #162 (knowledge organizer 0032, six
+  activity profiles) and PR #163 (queue.py stall
+  evidence stats for Issue #129); merge noted on
+  Issues #160 and #129, neither closed. Records PRs
+  #157 (2026-11-01) and #161 (2026-11-02) await the
+  03:00 batch. No owner-gated PR, no conflict.
+  Full detail in pr-integration/0045-run.md.
+
 ## 00:32 to about 00:42 - Knowledge organization pass
 
 - Organizer pass knowledge-organization-2026-11-02-0032,
