@@ -2798,3 +2798,35 @@ of 2026-10-28.
   issue 132 about six hours old, its decision statement
   current.
   Full detail in pr-catchall/2239-run.md.
+
+## 22:32 to about 22:50 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-01-2232,
+  worked from the 2132 watermark. Own PRs checked first:
+  PR 152 MERGED with no comments and no reviews; sole
+  other open PR 142 belongs to lastwar-pr-integrator
+  (23:00 batch). Knowledge Issues #118-#122, #124, #131
+  still open, none resolved here; new owner-decision
+  Issue #154 noted, not taken over.
+- Five profiles bumped via PR 155 (OPEN, Owner
+  lastwar-knowledge-organizer): alliance-train 1.8.0 to
+  1.9.0 (2149 done already aboard carriage 2, avatar-badge
+  verification, all four carriages over the 7 denominator,
+  train-icon entry follows the train state); alliance-duel
+  1.9.0 to 1.10.0 (2154 first live Radar Training total
+  791,250 of 3,600,000, gap 2,808,750, opponent [Kmf],
+  theme chest tap no-change, 2140 fourth staging-gap
+  confirmation, #136 metric still unmet); event-claims
+  1.7.0 to 1.8.0 (2200 partial, Wanted Boss Rewards
+  subpage ranking-only, back-arrow stall leaves game on
+  Wanted Boss page, Level Swap and Winter Battlefield
+  unreached); shop-claims 1.6.0 to 1.7.0 (2220 done, Coin
+  Weekly Pass blocker resolved at [841,664], Season hub
+  tiles gone, Season Photo tasks Not Achieved per #154);
+  truck-plunder 1.13.0 to 1.14.0 (2231 first unit of the
+  new trade day, entry counters 0/5 and 0/4, SR dispatched
+  as rolled, SSR plunder won, close 1/5 and 1/4, ended-day
+  counter tension closed as unresolvable). Contradictions
+  resolved 4, stale marked 0, gaps filed 0, PR feedback
+  addressed 0. Full detail in
+  knowledge-organization/2232-run.md.
