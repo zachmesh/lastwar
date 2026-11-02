@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-02T14:36:25Z
+modified: 2026-11-02T22:43:53Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: perception-scout execution record 2026-11-01 1437 queue run
   - source: perception-scout execution records 2026-11-02 0436 0441 0514 queue runs
   - source: perception-scout execution record 2026-11-02 0539 queue run
+  - source: ticker-1336 perception-scout execution record 2026-11-02 1357 queue run (base group partial)
 ---
 
 
@@ -448,6 +449,56 @@ observe-only, nothing claimed). Evidence in
   already in inbox for the 07:00 pass; a stale-chain
   successor would duplicate it. The Oct31 post-reset chain
   is spent.
+
+
+## What the 2026-11-02 1357 unit added
+
+- Unit scout-midday-2026-11-02-0700 by ticker-1336,
+  session about 13:51 to 13:54 by unit timestamps (the
+  file name 1357 reflects the estimate at writing time;
+  the base capture was read about 13:53, not 13:56),
+  status partial: only the scout-base group was walked
+  inside this unit; the events, store and alliance
+  groups are unwalked and carried to the successor unit,
+  so the tracker is left untouched. Evidence in
+  `_records_/2026-11-02/perception-scout/1357-queue-run.md`
+  and the appended 2026-11-02 observation sections.
+- Base screen and HUD, read live about 13:53: account
+  power 149,311,528 (was 149,296,925 at the 04:36 read);
+  HUD top row 387.7M, 577.5M, 54.0M; second row 20.1M,
+  1.5M, 11.72K with a plus button; cart 2,536; stamina
+  120.
+- Left column: hammer 2/4, flask 2/2, chat badge 2,
+  truck, question-mark icon, backpack 8, hammer icon,
+  vehicle icon; weather widget 6.5C. Right column:
+  Events with no red badge visible (was badge 1 at
+  04:36; the 12:34 events unit found nothing claimable,
+  so the badge cleared with no claim in between -
+  observed, not explained), Capitol, VS timer 04:07:34,
+  Season II badge 1, Alliance, Mail, Inventory. Bottom:
+  HEROES, chat ticker, 99+ badge, WORLD. Timers: 13d
+  04:07:34 near Season II, 2d 01:32:41 near Inventory -
+  meanings not verified by opening.
+- Resource bubbles on many buildings observed only, not
+  collected. Furnace toast again: "Furnace total
+  overdrive time (in sec) [22/60]", still unexplained -
+  third sighting, observed only.
+- Red dot accounting: seen 4 badges (Season II 1, chat
+  2, backpack 8, 99+) plus 2 counters (hammer 2/4, flask
+  2/2). Explained 0 within the base group alone; the
+  badges map to owning groups this unit did not walk,
+  and none was resolved by opening its surface.
+  Unexplained 4, carried to their owning groups.
+  unmatched_labels: none in the surfaces walked.
+- Outcome: partial (base group only). Successor unit
+  scout-midday-scout-mid-2026-11-02-001 enqueued under
+  chain scout-mid-2026-11-02 for the remaining groups.
+  Production note: the staged head unit carried no chain
+  id; the chain starts with the successor unit.
+- Persistence note for the open questions below:
+  Season II badge 1 is still unexplained at this read,
+  and the furnace toast [22/60] is now on its third
+  sighting; neither is closed on silence.
 
 ## Open questions
 

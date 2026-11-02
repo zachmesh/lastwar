@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-02T18:40:59Z
+modified: 2026-11-02T22:43:53Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: ticker-0204 hidden-treasures execution record 2026-11-02 0207 queue run
   - source: ticker-0404 hidden-treasures execution record 2026-11-02 0424 queue run (done, checked only)
   - source: ticker-1004 hidden-treasures execution record 2026-11-02 1009 queue run (done, checked only)
+  - source: ticker-1336 hidden-treasures execution record 2026-11-02 1352 queue run (done, checked only)
 ---
 
 # Hidden treasures
@@ -243,6 +244,44 @@ as Hidden Treasure.
   need owner approval per the activity limits) and none
   was inspected beyond the map stocks. Nothing claimed,
   nothing spent.
+
+
+## What the 2026-11-02 1352 unit added
+
+- Unit treasures-2026-11-02-1057 by ticker-1336, session
+  about 13:47 to 13:50 by unit timestamps (the file name
+  1352 reflects the estimate at writing time; the unit
+  timestamps govern), status done as checked only: the
+  tab was opened and read live, and no dig is possible,
+  so the tracker is marked done for the regular.
+  Evidence in
+  `_records_/2026-11-02/hidden-treasures/1352-queue-run.md`.
+- Entry: the base left-column slot norm (48,643) opened
+  SECRET COMMAND POST on the first tap, title verified -
+  the same entry point the same-pass secrets unit used.
+  The Hidden Treasures tab switched with a double-click
+  at norm (374,147), the working variant from the 1009
+  run; the page verified as Hidden Treasure before
+  reading.
+- Fragment stocks, read live: M1 x13, M2 x14, M3 x0,
+  M4 x9, M5 x3, M6 x6, M7 x13. Identical to the 1009
+  run's stocks and to the 0424 stocks: no fragment
+  movement since the 04:24 read. M3 at zero means no
+  complete set of seven exists, so no dig is possible:
+  both Dig buttons (Dig 1 time, Dig 2 time(s)) are
+  greyed out, Skip Animation is ticked, chest progress
+  reads 2 of 15, and the tab carries no red badge.
+- No fragment exchange was executed (exchanges need
+  owner approval per the activity limits) and none was
+  inspected beyond the map stocks.
+- Exit corroboration: the back arrow centre norm
+  (128,959) returned to base on the first tap - the same
+  point the same-pass secrets unit re-grounded to after
+  (88,957) failed. The (128,959) centre is now the
+  standing exit point for this panel; see the secrets
+  profile's 1345 section.
+- Outcome: no dig made, nothing claimed, nothing
+  exchanged. Tracker marked done.
 
 ## Open questions
 

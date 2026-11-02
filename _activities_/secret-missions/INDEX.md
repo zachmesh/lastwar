@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T18:40:59Z
+modified: 2026-11-02T22:43:53Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-0134 secret-missions execution record 2026-11-02 0150 queue run
   - source: ticker-0404 secret-missions execution record 2026-11-02 0426 queue run (done, assists 5 of 5)
   - source: ticker-0934 secret-missions execution record 2026-11-02 0952 queue run (done, checked only)
+  - source: ticker-1336 secret-missions execution record 2026-11-02 1345 queue run (done, checked only)
 ---
 
 
@@ -592,6 +593,65 @@ secrets-2026-10-31-2257, status partial).
   at close, read live: Assist Allies 5 of 5, Your Tasks
   4 of 4 PERFECT. Nothing spent, no button tapped beyond
   entry and one list scroll.
+
+
+## What the 2026-11-02 1345 unit added
+
+- Unit secrets-2026-11-02-1057 by ticker-1336, session about
+  13:41 to 13:45, status done as checked only: nothing was
+  pending, so nothing was claimed or dispatched, and the
+  tracker is marked done. Evidence in
+  `_records_/2026-11-02/secret-missions/1345-queue-run.md`.
+- Entry: the game was left on the Trucks Others screen from
+  the previous pass (Your Plunder Count Today 3/4,
+  confirming the trucks partial; no truck work was done in
+  this unit). Back arrow tap returned to base, then the
+  base left-column slot at norm (48,643) opened SECRET
+  COMMAND POST on the first tap; title verified before
+  acting.
+- State, read live: Assist Allies 5 of 5 (full, no assist
+  available). Plunder Others 0 of 5, not acted on: the
+  secret-post plunder mechanic is PvP and outside this
+  unit's scope; no target was inspected for it. Your
+  Tasks: eight rows, all stamped PERFECT, no Claim button
+  on any row - four SSR Lv.5 (Train Refugees, Provide Tech
+  Support to Refugees, Search for Missing Refugees,
+  Protect Refugee Camp) and four SR Lv.5 (Retrieve Agent
+  Profile, Retrieve Raw Materials, Retrieve Abandoned
+  Gear, Retrieve Valuable Supplies).
+- Correction to the 0952 section above, in favour of the
+  newest verified record: a first list scroll revealed
+  the four SR rows below the SSR rows, and a second
+  scroll produced no change, confirming the list bottom
+  at eight rows. No secrets unit ran between 09:52 and
+  this unit, so the SR rows were present but unrevealed
+  in the 0952 unit's scroll, not newly arrived. The 0952
+  section's "Scrolling the task list showed no further
+  row" line is therefore a scroll-coverage limit, not a
+  list-end finding, and its closing count "Your Tasks 4
+  of 4 PERFECT" counted only the rows that scroll
+  revealed. The eight-row list matches the 0426 claims
+  (all 8 tasks claimed in one tap) and the 0150 dispatch
+  (all 8 dispatched).
+- Mega Refresh and Mega Deploy greyed, confirming no
+  pending task to deploy. Duel posture for today
+  (tools/duel.py): day 1, Radar Training; secret tasks do
+  not score today, so the duel-day Mega Refresh rule is
+  not triggered - and there is nothing pending to deploy
+  in any case.
+- SECRET TASK REPORT (Record panel, Assist tab): rows
+  dated 11-2 04:19 to 04:21 recording assists already
+  rewarded; no Claim button on any row, informational
+  only. Plunder tab not opened.
+- Exit, rule R2 pivot: the post back arrow first tap at
+  norm (88,957) produced no change; re-grounded to the
+  arrow centre norm (128,959), which returned to base.
+  Do not reuse the (88,957) point on this panel; the
+  (128,959) centre is corroborated by the same-pass
+  treasures unit, where it worked on the first tap.
+- Outcome: nothing claimed, nothing dispatched. Counters
+  at close, read live: Assist Allies 5 of 5, Your Tasks 8
+  of 8 PERFECT.
 
 ## Open questions
 
