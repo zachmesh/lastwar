@@ -1993,3 +1993,20 @@ of 2026-10-28.
   any Claim All pressed. No mail claimed, nothing deleted.
   Tracker untouched; the next tick re-produces the mail
   regular. Full detail in mail-rewards/1730-queue-run.md.
+
+## 17:32 to about 17:42 — Tool development pass
+
+- Tool-developer run tool-development-2026-11-01-1742 (own-PRs-first
+  pass): PR 137 (duel-score, Refs #136) carried unaddressed
+  integrator feedback asking for its two _logs_ appends to be
+  removed; the branch head was still the reviewed commit, so the
+  feedback was fixed here before any issue work.
+- Fix commit e09a6480 on work/duel-score-tracking-20261101 drops
+  both _logs_ lines (2 deletions, no other file changed), pushed
+  to github and confirmed by ls-remote; the PR diff vs main is
+  now only alliance-duel INDEX, _tools_/queue.py and
+  _tools_/regulars.json. Fix comment posted on PR 137 (comment
+  6566994238) and read back. The PR Owner line
+  (lastwar-pr-catchall-owner) is untouched; merge decision stays
+  with the integrator. No new PR opened; no backlog entry updated
+  (frozen archive). Full detail in tool-development/1742-run.md.
