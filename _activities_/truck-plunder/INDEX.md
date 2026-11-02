@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T06:40:55Z
+modified: 2026-11-02T09:32:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: incidental trucks-view read in the alliance-train execution record 2026-11-01 1813 queue run (not a trucks unit)
   - source: daily retro 2026-11-01, trucks 1457 expiry and counter tension (issues 147 and 148)
   - source: ticker-2212 trucks execution record 2026-11-01 2231 queue run
+  - source: ticker-0104 truck-plunder execution record 2026-11-02 0114 queue run (partial, trade-screen entry blocker)
 ---
 
 # Truck plunder - Intercity Trade
@@ -649,6 +650,48 @@ settlement and dispatch execution record).
   Count 1 of 4. Shortfall carried forward: dispatch 4
   more, plunder 3 more before the trade day ends 19:00
   on 2026-11-02.
+
+## What the 2026-11-02 0114 unit added - entry blocker, partial
+
+- Unit trucks-2026-11-01-2257 by ticker-0104, session
+  about 01:09 to 01:13, status partial: the trade screen
+  could not be entered, so no counter was read live, no
+  truck was dispatched and no plunder was made. Tracker
+  untouched (partial units do not mark the tracker).
+  Blocker category e (repeated blocker, entry method).
+- Column set on this view, re-grounded fresh on the
+  current screenshot, top to bottom: green face, blue
+  bus/train-front icon, white pickup (red badge 8),
+  walkie-talkie (red badge 2), hammer, chest. No icon in
+  the column carries a speech-bubble delivery-truck
+  glyph with a badge in this view, unlike the 22:31
+  unit's [55,584] entry point. This is the column-set
+  flip already recorded for 2026-10-30 evening: the
+  current set carries no trade slot, and the flip
+  control that summons the trade set is still unknown.
+- Taps tried, all with no screen change, and NOT to be
+  repeated by the successor under queue rule R2:
+  [53,595] snapped; [53,555] snapped; [55,584] with snap
+  disabled (the 22:31 unit's successful method);
+  title-bar tap [180,15] followed by [55,584] snap
+  disabled (the 1053 unit's foregrounding variant).
+  Successor instruction from the unit record: try a
+  different entry route first - the World map trade
+  entry or the station area - and re-ground the column
+  from a fresh screenshot before any column tap. If the
+  column set has flipped, identify the flip control
+  before tapping a vehicle icon.
+- Quota carried from the 22:31 unit on 2026-11-01, NOT
+  re-read live here: Trade Count 1 of 5, Plunder Count
+  1 of 4 at that unit's close, trade day ending 19:00 on
+  2026-11-02. Shortfall still open: dispatch 4 more,
+  plunder 3 more before the day ends. Duel posture for
+  this day: Duel day 1, Radar Training (radar release
+  day), so non-UR rules apply - dispatch SR or above
+  only, plunder UR or SSR trucks carrying UR shards
+  with guard below Squad 1.
+  Evidence in `_records_/2026-11-02/truck-plunder/0114-queue-run.md`.
+
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
@@ -660,3 +703,4 @@ settlement and dispatch execution record).
   so the evening dispatches ran under normal day handling.
 - Whether the collapsed 2026-10-20 Reward Recovery record was
   already claimed - its toggle did not expand on 2026-10-25.
+- What flips the base left-column icon set to the set that carries the trade slot - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it.

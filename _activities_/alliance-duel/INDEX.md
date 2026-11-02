@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T08:32:00Z
-version: 1.12.0
+modified: 2026-11-02T09:32:00Z
+version: 1.13.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -15,6 +15,7 @@ grounded_in:
   - source: queue-planning execution record 2026-11-01 1840 run (duel-score staging gap: live pool tree predates the PR 137 merge)
   - source: queue-planning execution record 2026-11-01 2040 run (third consecutive plan staging no duel-score unit) and daily retro 2026-11-01 (gap commented on Issue #136, kept open)
   - source: queue-planning execution record 2026-11-01 2340 run (sixth consecutive plan staging no duel-score unit)
+  - source: ticker-0034 star-ceremony execution record 2026-11-02 0047 queue run (latest live duel total 1,113,750)
   - source: ticker-2142 star-ceremony execution record 2026-11-01 2154 queue run and queue-planning execution record 2026-11-01 2140 run
   - source: queue-planning execution record 2026-11-01 2240 run
 ---
@@ -447,6 +448,43 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   tree syncs to main. This does not change the duel gap;
   it shares the same live-tree sync root cause.
   Evidence in `_records_/2026-11-01/queue-planning/2340-run.md`.
+
+## What the 2026-11-02 0047 unit added for duel tracking
+
+- Unit star-ceremony-2026-11-01-2230 by ticker-0034,
+  session about 00:44 to 00:47, status done. No Star
+  Ceremony waiting: no trophy icon beside the Alliance
+  icon on the restored base screen. Nothing was played
+  or claimed, and no emote was sent.
+- Camera recovery lesson: the unit began with the camera
+  panned to the base edge from the train unit, where the
+  base UI rail was not rendered. Two southeast drags
+  moved the camera over the base, and a tap on empty map
+  restored the standard base UI (right rail, HEROES and
+  WORLD buttons visible). A missing rail after a station
+  pan is a camera position, not a broken UI - drag back
+  over the base and tap empty map before concluding
+  anything is absent.
+- Latest live daily total, superseding the 791,250 read
+  from the 2154 unit: the VS panel (gold VS medallion,
+  norm 927,273) read personal total 1,113,750 under
+  Today's Theme Radar Training, countdown 17:12:52,
+  against the owner target of 3,600,000, a gap of
+  2,486,250. The progress bar sits past the 1,000,000
+  tier and below the 2,300,000 tier, consistent with the
+  total read. This duel day ends 2026-11-02 19:00 local.
+  Note for Issue #136's target metric: this total came
+  from a star-ceremony unit, not from a duel-score unit,
+  so the metric (duel-score units in the pool closing
+  with numeric target/achieved pairs) is still unmet.
+- Incidental train correction, owned by alliance-train:
+  while restoring the camera, the station came into view
+  with a train in preparation (conductor Missile Apex,
+  countdown about 01:39), superseding the 0044 train
+  unit's no-train read earlier this pass. No carriage
+  was tapped and no boarding was attempted here.
+  Evidence in `_records_/2026-11-02/alliance-duel/0047-queue-run.md`.
+
 ## Open questions
 
 - The day themes and scoring once League S38 opens, and the current

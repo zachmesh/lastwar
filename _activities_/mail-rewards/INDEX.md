@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T05:39:49Z
+modified: 2026-11-02T09:32:00Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1306 mail unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1730 mail unit)
   - source: mail-rewards execution record 2026-11-01 2131 queue run (ticker-2104 unit, partial, Alliance-panel back arrow stalled on background input)
+  - source: ticker-0034 mail-rewards execution record 2026-11-02 0042 queue run
 ---
 
 
@@ -217,6 +218,41 @@ the next tick re-produces this regular as a fresh unit.
   cheaper route when the unit starts fresh.
   Evidence in `_records_/2026-11-01/mail-rewards/2131-queue-run.md`.
 
+
+
+## What the 2026-11-02 0042 unit added
+
+- Unit mail-2026-11-01-2230 by ticker-0034, session about
+  00:39 to 00:42, status done. Entry: from the Alliance
+  menu left by the help unit, the Alliance panel back
+  arrow stalled twice on background input at norm 45,965
+  and 55,967, then the proven point norm 162,934 returned
+  to the base screen. Note the screen-dependence: 45,965
+  served as a working back arrow in the 2026-11-01 0940
+  help entry, but stalled here - when the panel back arrow
+  stalls, try the proven 162,934 point before concluding
+  the exit is blocked. The Mail envelope on the right
+  rail opened Mail at norm 931,791.
+- Category list, read live: Battle Report, Alliance,
+  Event, Season, System, Regular, In-app Purchases -
+  consistent with the corrected list. Gift icons
+  (claimable attachments) showed only on Alliance and
+  Event. Regular and In-app Purchases carried red dots
+  only, no gift icons; the other categories showed
+  neither. Lesson: a red dot on Regular or In-app
+  Purchases is not a claim signal - only a gift icon
+  marks a claimable attachment.
+- Alliance: Claim All pressed at norm 766,946. The gift
+  icons on Daily Donation Rankings (6h ago) and Weekly
+  Donation Ranking (6h ago) were gone on the re-read;
+  the rows remained as read mail. Event: Claim All
+  pressed at the same point. The gift icons on Season
+  Rewards (3h ago), Season Settlement - Faction Rewards
+  (6h ago) and Arms Race Ranking Reward (6h ago) were
+  gone on the re-read; the train mails above them were
+  reports with red dots only. Totals: 5 mails with gifts
+  claimed (2 Alliance, 3 Event). Nothing deleted.
+  Evidence in `_records_/2026-11-02/mail-rewards/0042-queue-run.md`.
 
 ## Open questions
 

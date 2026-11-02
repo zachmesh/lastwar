@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T05:39:49Z
+modified: 2026-11-02T09:32:00Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1226 help unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1722 help unit)
   - source: alliance-help execution record 2026-11-01 2127 queue run (ticker-2104 unit, done, Help All pressed with only own requests visible)
+  - source: ticker-0034 alliance-help execution record 2026-11-02 0039 queue run
 ---
 
 
@@ -265,6 +266,47 @@ Measured in the 0135 help unit (ticker-0134, window mode
   live. No diamonds or money spent, no red line touched.
   Evidence in `_records_/2026-11-01/alliance-help/2127-queue-run.md`.
 
+
+
+## What the 2026-11-02 0039 unit added
+
+- Unit help-2026-11-01-2230 by ticker-0034, session about
+  00:34 to 00:39, status done. The game was already open on
+  the Alliance Gifts panel, all listed gifts already
+  Claimed; the back arrow returned to the Alliance menu,
+  where the Help tile carried a red dot.
+- Help entry correction: two taps at norm 717,447 and
+  755,450 produced no navigation, and a back-arrow tap
+  also left the Alliance panel unchanged. The Help tile
+  was then re-grounded from the proven coordinates of
+  recent help units and tapped at norm 676,514 - the same
+  point that opened the page at once in the 2026-11-01
+  0940 unit - which opened the Help page at once. The
+  earlier misses were a coordinate error (taps above the
+  tile), not a dead entry route. Lesson: when Help taps
+  miss, re-ground from the proven 676,514 point before
+  concluding the route is dead.
+- Help page header read live: Today's points gained from
+  Alliance Help 240/1,000. Every visible request was the
+  account's own (Bears Lair, each 30/30): Precision
+  Targeting II research, Morale research, Lv.28 Drill
+  Ground building, Lv.30 Aircraft Center building. A
+  player cannot help their own requests.
+- Help All pressed once at norm 498,733 per the standing
+  rule. No "Allies are very grateful" toast was seen and
+  the header still read 240/1,000 on the immediate
+  re-read. Verification by reopening, per the 2026-11-01
+  0135 unit: the panel was closed with its X and reopened
+  from the Alliance menu, and the reopened header still
+  read live 240/1,000, confirming no points were gained
+  in this unit. The reopened rows showed "Time reduced"
+  displays instead of 30/30 bars. Conclusion method,
+  corroborating the 0940 unit: an unchanged header plus
+  an own-only list plus Time-reduced rows together mean
+  no ally request was left waiting in the visible list -
+  unlike the 0135 unit, where the reopened header
+  revealed a lagging gain.
+  Evidence in `_records_/2026-11-02/alliance-help/0039-queue-run.md`.
 
 ## Open questions
 

@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T06:38:16Z
+modified: 2026-11-02T09:32:00Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1055 events unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1348 events unit)
   - source: ticker-2142 events execution record 2026-11-01 2200 queue run
+  - source: ticker-0034 event-claims execution record 2026-11-02 0050 queue run
 ---
 
 
@@ -318,6 +319,43 @@ that drag is the sweep-completeness check, not wasted motion.
   taken here.
 - Nothing claimed, nothing spent, no paid button tapped,
   no Sign Up tapped, no Level Swap executed.
+
+## What the 2026-11-02 0050 unit added
+
+- Unit events-2026-11-01-2257 by ticker-0034, session
+  about 00:48 to 00:50, status done - inspected, nothing
+  claimable. Events hub opened from the base right rail
+  at norm 927,137. No bouncing chest was seen on the hub.
+- Arms Race, Unit Progression stage, read live: account
+  score 0, rank #2110 [AP3x]Bears Lair, stage countdown
+  about 01:11. Point chests at 15,000, 30,000 and 75,000
+  are all unearned at 0 points, and the top chest reads
+  0/2, so no Arms Race chest was claimable. No grinding
+  was done; Arms Race point work belongs to the
+  arms-race unit, not this sweep.
+- Wanted Boss, Code 87, read live: appears at server
+  time 00:00, Go countdown about 16:10, so the boss is
+  not out yet. Its Rewards panel shows ranking tiers
+  No.1 to No.10 as prospective rewards with no Claim
+  buttons. The red dots on the Wanted Boss tab and Go
+  button are the event's active markers, not claims -
+  no Claim button exists on the page before the boss
+  appears. Go was not tapped and no attack was started.
+  This strengthens the 2200 lesson: a surviving Wanted
+  Boss red dot does not by itself prove a claim.
+- Desert Battlefield and Community tabs were not
+  reopened in this unit: the activity metadata records
+  Desert Battlefield as an alliance registration event
+  with nothing personal to claim, and Community's
+  Discord binding reward as already Claimed. Tabs
+  further right than Community were not reached, so
+  like the 2200 sweep this unit's sweep stops at
+  Community and is incomplete by the standing rule for
+  the unreached tabs - recorded honestly, not as a full
+  sweep. Events hub closed with its back arrow, leaving
+  the game on the base screen.
+  Evidence in `_records_/2026-11-02/event-claims/0050-queue-run.md`.
+
 ## Open questions
 
 - Which recurring events hold claims that expire unclaimed.
