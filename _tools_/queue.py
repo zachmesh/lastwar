@@ -37,6 +37,10 @@ Usage:
              # stats names stalled priority-1 inbox units
              # (age over 4h) under stalled_priority1, for the
              # round summary to name instead of staying silent.
+             # stats also names expired units whose whole window
+             # saw no executed closing, under stall_expired, so
+             # the retro can triage stall-attributable expiries
+             # instead of counting every expiry as ordinary.
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: reap, then enqueue one
              # unit per regular the tracker marks due (idempotent);
@@ -960,6 +964,35 @@ def cmd_reap(args):
     return 0
 
 
+# Stall-attributable expiry (issue #133): an expired unit is
+# stall-suspect when no executed closing finished inside its
+# window. Executed closings are done/partial/failed/
+# skipped-needs-owner records with a started_at - an expired
+# record's finished_at is the reap time, not an execution, so
+# it must never count as activity in another unit's window.
+# Units whose window cannot be parsed are never suspects: the
+# test stays conservative rather than inventing a stall.
+EXECUTED_RESULT_STATUSES = ("done", "partial", "failed",
+                            "skipped-needs-owner")
+
+
+def window_start(fields):
+    for key in ("not_before", "planned_for", "created_at"):
+        stamp = parse_iso(fields.get(key, ""))
+        if stamp is not None:
+            return stamp
+    return None
+
+
+def is_stall_suspect(fields, executed_finishes):
+    expires = parse_iso(fields.get("expires_at", ""))
+    start = window_start(fields)
+    if expires is None or start is None or not start < expires:
+        return False
+    return not any(start <= fin <= expires
+                   for fin in executed_finishes)
+
+
 def gather_stats(root):
     stamp = now_utc()
     report = {"generated_at": iso(stamp),
@@ -967,9 +1000,22 @@ def gather_stats(root):
               "late": [], "expired_waiting": [], "overdue_claims": [],
               "stalled_priority1": [],
               "result_status": {}, "chains": {}, "upcoming": 0,
-              "stats_incomplete": 0, "stats_incomplete_units": []}
+              "stats_incomplete": 0, "stats_incomplete_units": [],
+              "stall_expired": 0, "stall_expired_units": []}
     durations = []
     reg_durations = {}
+    executed_finishes = []
+    for f in list_units(root, "done"):
+        result = f.get("result", {})
+        if not isinstance(result, dict):
+            continue
+        if result.get("status") not in EXECUTED_RESULT_STATUSES:
+            continue
+        if not result.get("started_at"):
+            continue
+        finished = parse_iso(result.get("finished_at", ""))
+        if finished is not None:
+            executed_finishes.append(finished)
     for state in STATES:
         units = list_units(root, state)
         report["by_state"][state] = len(units)
@@ -996,6 +1042,16 @@ def gather_stats(root):
                 result = {}
             if state == "inbox" and expires and expires <= stamp:
                 report["expired_waiting"].append(f.get("unit"))
+            if ((state == "done"
+                    and result.get("status") == "expired")
+                    or (state == "inbox" and expires
+                        and expires <= stamp)) and \
+                    is_stall_suspect(f, executed_finishes):
+                report["stall_expired"] += 1
+                report["stall_expired_units"].append({
+                    "unit": f.get("unit"),
+                    "window_start": iso(window_start(f)),
+                    "expires_at": f.get("expires_at", "")})
             if state == "inbox":
                 try:
                     prio = int(f.get("priority", 3))
@@ -1053,6 +1109,8 @@ def gather_stats(root):
         entry["est_typical_minutes"] = est
         entry["samples"] = samples
     report["stalled_priority1"].sort(key=lambda s: -s["age_hours"])
+    report["stall_expired_units"].sort(
+        key=lambda s: s["expires_at"])
     return report
 
 
@@ -1083,6 +1141,13 @@ def cmd_stats(args):
             for s in report["stalled_priority1"]:
                 print(f"    - {s['unit']} age_hours {s['age_hours']} "
                       f"planned_for {s['planned_for'] or '-'}")
+        print(f"  stall_expired: {report['stall_expired']}")
+        if report["stall_expired_units"]:
+            print("  stall_expired_units:")
+            for s in report["stall_expired_units"]:
+                print(f"    - {s['unit']} window_start "
+                      f"{s['window_start']} expires_at "
+                      f"{s['expires_at']}")
         print("  by_regular:")
         for reg, counts in sorted(report["by_regular"].items()):
             print(f"    {reg}: inbox {counts['inbox']}, "
@@ -1121,6 +1186,11 @@ def cmd_stats(args):
             print("  stalled priority-1: " + ", ".join(
                 f"{s['unit']} ({s['age_hours']}h)"
                 for s in report["stalled_priority1"]))
+        if report["stall_expired_units"]:
+            print("  stall-attributable expired: " + ", ".join(
+                f"{s['unit']} (window {s['window_start']} to "
+                f"{s['expires_at']})"
+                for s in report["stall_expired_units"]))
         for reg, counts in sorted(report["by_regular"].items()):
             extra = ""
             if counts["failed"]:
