@@ -62,6 +62,11 @@ What is counted, per section 14 -
     are target, achieved, resources_gained, costs and verified,
     plus blocker_category whenever the unit fell short of its
     target or closed partial, failed or skipped-needs-owner.
+    A closing whose result carries stats_missing (written by
+    queue.py complete since this change) is counted from that
+    flag, unioned with the keys recomputed from its stats, so
+    legacy closings without the flag are still counted exactly
+    as before and no closing is double-counted.
     points is aggregated whenever present but is not a required
     key - it applies to scoring types only, and the pool carries
     no authoritative list of which types those are.
@@ -112,7 +117,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.2.0"
+TOOL_VERSION = "1.3.0"
 
 
 def _load_queue():
@@ -476,12 +481,14 @@ def _feed(bucket, unit):
     for name, number in costs.items():
         bucket["costs"][name] = bucket["costs"].get(name, 0.0) + number
     # Unverified accounting, per the section 14 definition.
-    missing = [key for key in REQUIRED_KEYS if key not in stats]
-    fell_short = (target is not None and achieved is not None
-                  and achieved < target)
-    if (fell_short or status in SHORT_STATUSES) and \
-            "blocker_category" not in stats:
-        missing.append("blocker_category")
+    # Recompute from the stats (the legacy path), then union
+    # with the close-out flag when the result carries one.
+    missing = Q.missing_stats_keys(status, stats)
+    flagged = result.get("stats_missing")
+    if isinstance(flagged, list):
+        for key in flagged:
+            if key not in missing:
+                missing.append(key)
     unverified = False
     if not _is_verified(stats.get("verified")):
         bucket["unverified_reasons"]["verified_not_yes"] += 1

@@ -23,10 +23,12 @@ Usage:
   queue.py [--root DIR] complete --unit UNIT --status done
              [--summary TEXT] [--claimed-items a,b] [--evidence PATH]
              [--follow-up TEXT] [--stat key=value ...]
-             # complete warns on stdout (exit still 0) when the closing
-             # omits a required result.stats key, so an incomplete
-             # closing is flagged at the moment it is made instead of
-             # surfacing only in the retro aggregation.
+             # complete records the missing keys in
+             # result.stats_missing (empty when complete) and warns
+             # on stdout (exit still 0) when the closing omits a
+             # required result.stats key, so an incomplete closing
+             # is flagged in the result itself at the moment it is
+             # made instead of surfacing only in the retro.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
@@ -75,7 +77,8 @@ FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
             "claimed_by", "claimed_at", "lease_until", "result"]
 RESULT_ORDER = ["status", "started_at", "finished_at",
                 "duration_seconds", "executor", "summary", "claimed",
-                "claimed_count", "evidence", "follow_up", "stats"]
+                "claimed_count", "evidence", "follow_up", "stats",
+                "stats_missing"]
 
 
 def now_utc():
@@ -755,6 +758,7 @@ def cmd_complete(args):
         if "=" in pair:
             key, value = pair.split("=", 1)
             stats[key.strip()] = _scalar(value)
+    missing = missing_stats_keys(args.status, stats)
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -767,8 +771,8 @@ def cmd_complete(args):
         "evidence": args.evidence or "",
         "follow_up": args.follow_up or "none",
         "stats": stats,
+        "stats_missing": missing,
     }
-    missing = missing_stats_keys(args.status, stats)
     target = unit_path(args.root, "done", args.unit)
     os.makedirs(state_dir(args.root, "done"), exist_ok=True)
     write_unit(path, fields, body)
@@ -893,7 +897,8 @@ def gather_stats(root):
     report = {"generated_at": iso(stamp),
               "by_state": {}, "by_regular": {}, "durations_seconds": {},
               "late": [], "expired_waiting": [], "overdue_claims": [],
-              "result_status": {}, "chains": {}, "upcoming": 0}
+              "result_status": {}, "chains": {}, "upcoming": 0,
+              "stats_incomplete": 0, "stats_incomplete_units": []}
     durations = []
     reg_durations = {}
     for state in STATES:
@@ -930,6 +935,17 @@ def gather_stats(root):
                 status = result.get("status", "?")
                 report["result_status"][status] = \
                     report["result_status"].get(status, 0) + 1
+                flagged = result.get("stats_missing")
+                if isinstance(flagged, list):
+                    incomplete = flagged
+                else:
+                    stats = result.get("stats")
+                    incomplete = missing_stats_keys(
+                        status, stats if isinstance(stats, dict) else {})
+                if incomplete:
+                    report["stats_incomplete"] += 1
+                    report["stats_incomplete_units"].append(
+                        f.get("unit"))
                 if status in ("failed", "skipped-needs-owner"):
                     entry["failed"] += 1
                 dur = result.get("duration_seconds")
@@ -969,6 +985,9 @@ def cmd_stats(args):
         print("  result_status:")
         for k, v in report["result_status"].items():
             print(f"    {k}: {v}")
+        print(f"  stats_incomplete: {report['stats_incomplete']}")
+        print("  stats_incomplete_units: "
+              f"[{', '.join(report['stats_incomplete_units'])}]")
         d = report["durations_seconds"]
         if d:
             print(f"  durations_seconds: count {d['count']}, "
@@ -997,6 +1016,9 @@ def cmd_stats(args):
         print(f"  results: " + (", ".join(
             f"{k} {v}" for k, v in report["result_status"].items())
             or "none"))
+        if report["stats_incomplete"]:
+            print(f"  stats incomplete: {report['stats_incomplete']} "
+                  f"({', '.join(report['stats_incomplete_units'])})")
         d = report["durations_seconds"]
         if d:
             print(f"  durations: n={d['count']} avg={d['avg']}s "
