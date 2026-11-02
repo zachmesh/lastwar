@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T21:37:13Z
-version: 1.5.0
+modified: 2026-11-02T01:02:00Z
+version: 1.6.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -110,6 +110,36 @@ substitute for one.
   personal daily total live on the duel panel (the gold VS
   medallion) on its runs, and the read of the last run before the
   19:00 reset is the day closing figure.
+- Superseded in part by the owner decision of 2026-11-01 on
+  Issue #132 - the daily total read moves to a dedicated
+  duel-score regular (Issue #136), because in practice the read
+  was skipped whenever no ceremony was waiting (for example
+  star-ceremony-2026-11-01-1030 closed with no total read). The
+  star-ceremony unit keeps the ceremony claim only.
+
+## Duel score tracking - the duel-score regular (2026-11-01)
+
+Owner decision on Issue #132 - add duel-score tracking only;
+building and research queues were left untouched by that
+decision (deferred, not ruled non-goals).
+
+- The duel-score regular runs every 4 hour cycle (segment 2,
+  activity alliance-duel) and is staged by the queue planner
+  like every other regular.
+- Each unit is read-only - open the duel panel from the gold VS
+  medallion, read the personal daily total, and close with the
+  unit result stats target 3600000, achieved set to the total
+  read live, and the gap target minus achieved. Fragment scores
+  never substitute, and the Duel Progress mail is a cross-check
+  only.
+- The last unit executed before the 19:00 reset carries the
+  day closing figure, recorded in the day alliance-duel record.
+- A tracking unit never grinds, spends or buys to chase the
+  target - scoring actions stay with the themed-day regulars
+  under the duel day gates in _tools_/duel_schedule.json.
+- If the total cannot be read, the unit closes that line as
+  unverified and a re-read is enqueued before the reset (rule
+  R1 of the task unit queue design), as already stated above.
 - The closing figure is recorded in the day alliance-duel record
   and in the unit result stats as the total and its gap against
   3,600,000. The Duel Progress mail is a cross-check only, never
