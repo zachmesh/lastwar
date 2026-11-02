@@ -2360,3 +2360,4 @@ of 2026-10-28.
   still predates the merged duel-score regular (PR 137),
   so no duel-score unit was staged. Full detail in
   queue-planning/1940-run.md.
+- Tool-developer run tool-development-2026-11-01-1947: own PRs checked first (only PR 142 open, records-owned, none owned); took open tooling issue 128 over 129/133/125/123 (136, 130 and 126 already implemented by merged PRs 137, 139 and 135, closure belongs to the retro). Built aged priority-1 windowing in sync plus the stalled_priority1 stats list: sync gives unscheduled P1 units older than 4 hours a real window, stats names every stalled P1 unit for the round summary. PR 143 opened, issue 128 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools plus an unpatched-main control run. Full detail in tool-development/1947-run.md.
