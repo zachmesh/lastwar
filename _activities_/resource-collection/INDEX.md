@@ -1,15 +1,16 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T20:40:00Z
+modified: 2026-11-02T00:36:57Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-10-25
   - source: owner structure direction on activity folders, 2026-10-25
   - source: resource collection execution record 2026-11-01 1149 queue run
+  - source: resource collection execution record 2026-11-01 1534 queue run (same-unit screen reads and owner live corrections)
 ---
 
 
@@ -110,10 +111,170 @@ Executions are recorded in
   fully loaded. The unit closed partial and the tracker
   is left untouched, so the regular stays due.
 
+
+## What the 2026-11-01 1534 urgent full sweep added
+
+- Unit harvest-2026-11-01-1403 by ticker-urgent-harvest,
+  session about 15:34 to 16:13, status done with one
+  disclosed executor miss (the drone bubble, below).
+  The unit was claimed out of the queue on the owner's
+  urgent report at 15:33 that the production bubbles
+  were full and sitting uncollected. Standing rule
+  confirmed by this pass: a full bubble means production
+  has stalled, so a harvest reported full is claimed
+  urgently, not left to wait for its regular slot.
+- Measured totals (same-unit screen reads): before
+  collection food 323.9M, iron 512.1M, coin 29.8M,
+  second-row blue ingots 18.7M, dark stone 265.5K,
+  diamonds 11.72K, power 148,967,493; at the end food
+  341.2M, iron 528.7M, coin 41.0M, the other figures
+  unchanged at display rounding. The deltas combine
+  the bubble collections below, the three truck
+  returns, and three small regenerated rounds collected
+  during the sweep.
+- Full-base bubble location map. Coordinates are
+  normalised 0-1000 within the 642x951 game window in
+  the named screenshot's camera framing; the landmark
+  and base area are the durable locator, the
+  coordinates are the framing-specific tap point.
+  Every entry was verified cleared on a follow-up
+  screenshot unless marked otherwise:
+  1. FOOD - wheat farms, center of the main base.
+     One tap on any farmland bubble collects all
+     farmland bubbles at once (tap used 364,554 in
+     the center-north framing). Round 1 gain: food
+     323.9M to 331.8M.
+  2. IRON / STONE - iron mine row, left-center of the
+     main base, beside the farms. Collected one by
+     one. Round 1 gain: iron 512.1M to 519.3M.
+  3. COIN - gold mines, bottom-left (southwest) of
+     the main base, the flaming buildings. Collected;
+     coin 29.8M to 35.0M. A stray extra tap after the
+     last bubble opened the Gold Mine survivor panel;
+     it was closed with no dispatch change.
+  4. COIN - far-left blue coin buildings, west edge
+     of the main base, partially cut off in the
+     centered view; pan west to see them whole.
+     Tapped and cleared.
+  5. EXPERIENCE - green bubbles over the iron-mine /
+     left-side production rows, same left-side area
+     as entries 2-4. Collected in one batch; the
+     owner confirmed on screen that the experience
+     bubbles were collected.
+  6. SCREWS - row of small blue workshops along the
+     TOP-LEFT (northwest) edge of the main base,
+     beside the coin and stone rows. In the centered
+     view this row is half hidden under the top
+     resource bar; pan north a bit to bring the
+     bubbles fully into view. A single tap on the
+     center bubble collected all five at once
+     (gold circles with a wrench/screw icon). This
+     was the last full bubble the owner flagged live
+     at about 15:49.
+  7. WEST COMPOUND WORKSHOPS - small white bubbles
+     with a blue gem icon over the red-roof workshop
+     buildings inside the walled compound at the far
+     west of the base (tank/artillery yard). One tap
+     collected all five at once.
+  8. BLUE BUBBLES, FURNACE ROW BY HQ - three blue
+     bubbles over the round furnace buildings in the
+     top-center of the base, below Headquarters.
+     Tapped in the first batch; no total moved at
+     display rounding, type unverified.
+  9. COIN - red/white building, center of the base.
+     Seen at entry, gone in the closing views.
+  10. TRUCK COMPLETION BUBBLES - Trade screen, Your
+     Truck tab: a completed dispatched truck shows a
+     speech bubble with a blue chest on top of the
+     truck; collect it. Owner-stated rule from this
+     pass: "a completed dispatched truck shows a
+     bubble on top of the truck; collect it." Three
+     finished trucks showed bubbles; the fourth had
+     none (still en route). Tapping the first bubble
+     ran one collection flow that collected all three
+     finished trucks (the Your Truck tab badge dropped
+     3 to 1). Rewards read on the Truck Details screen
+     for the UR truck, Intercity Trade Reward, vehicle
+     safe and secure: food 3.8M, iron 3.8M, coin 2.4M,
+     plus a squad row of food 2.5M, iron 2.5M, coin
+     1.6M, chest x80, red gem 50 x1, badge 500 x6
+     total, gold tickets x2, puzzle piece x1,
+     notebook x1, red gem 100 x1 and 5-minute
+     speedups. The other two trucks' returns were
+     collected in the same flow without a separate
+     details read.
+  11. DRONE COMPONENTS - MISSED BY THE EXECUTOR. The
+     standing instruction names the drone component
+     bubble as always-collect; this pass did not
+     identify or collect it. The owner collected it
+     himself at about 15:52 and reported so live. It
+     is NOT claimed as collected here. Its spot was
+     not identified in this pass's screenshots; the
+     only unverified candidate seen is the blue
+     diamond bubble at the top-left corner in the
+     center-north framing (164,116, over the corner
+     building by Headquarters) - unverified, marked
+     owner-collected / missed-by-executor. Do not
+     treat that candidate as the located drone spot.
+  12. SEASON 2 AREA (NOT main base) - panning to the
+     bottom of the map leaves the main base and
+     reaches the Season 2 area (vehicle bays 2 and 3,
+     drill grounds). The owner corrected this live:
+     the bottom-area bubble belongs to the Season 2
+     area and is a different thing from the main-base
+     production bubbles; do not confuse the two areas
+     in future passes. No production bubbles were
+     found or collected in the Season 2 area in this
+     pass.
+- Bubble-versus-icon distinction, refined: the Gear
+  Factory chip icon, the Decoration Gallery book icon
+  and the green survivor-stationed markers are building
+  entry or status icons, NOT collectible bubbles. A
+  collectible bubble is a circle carrying a resource
+  icon and an amount label. Bubble-edge taps can still
+  fall through to the building underneath (this pass
+  opened, and closed with nothing bought or changed:
+  Emergency Center, Iron Mine upgrade panel twice
+  with Finish Now never tapped, Gold Mine survivor
+  list and building panel, Trade screen, Secret
+  Command Post, Gear Factory, Decoration Gallery) -
+  consistent with the 2026-10-25 center-tap rule.
+- Pan correction, qualifying the 1.3.0 note: the whole
+  base was panned in every direction to its edges and
+  re-checked in this pass (north to Headquarters and
+  the airport, west to the walled compound and the
+  far-left coin buildings, southwest to the gold
+  mines, south to the vehicle bays, east to the drill
+  grounds and tents, and the center), and the closing
+  verification found zero full or ready bubbles
+  remaining in the main base. Panning failed in the
+  zoomed central-pad view of the 2343 and 0016 units,
+  but succeeded in this pass's framing, so the pan
+  failure is framing-dependent, not universal.
+- Armed Truck: checked in the base and south parking
+  views during the sweep; no full / Collect bubble was
+  seen over any vehicle, so there was no Armed Truck
+  loot to claim in this pass.
+- Regeneration rule reaffirmed: production regenerates
+  continuously; three small regenerated rounds were
+  collected during the sweep itself, and any
+  micro-bubbles appearing after the closing screenshot
+  belong to the next harvest pass by design (collect
+  what is ready, do not chase regeneration).
+- Session note, confirming the standing device rule:
+  the game showed the "active on a different device"
+  dialog at entry; Confirm was clicked once, the app
+  exited and was reopened, and the pass continued on
+  the Mac.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
   accumulating when bubbles are left uncollected.
+- The drone component bubble's spot: still unidentified after
+  the 1534 pass (the 164,116 top-left-corner candidate is
+  unverified); the next harvest pass must locate it on screen
+  rather than assuming the candidate.
 
 ## Changelog
 
@@ -126,3 +287,12 @@ Executions are recorded in
   rounding precision note, and the Armed Truck check
   deferred to the next harvest unit, folded from the 1149
   harvest unit; no earlier claim superseded.
+- 1.5.0 (2026-11-01): full-base bubble location map with
+  batch-collection rules (farmland, screws row, west compound,
+  truck completion flow), the full-bubble urgent-claim rule,
+  the bubble-versus-icon distinction, the framing-dependent
+  pan correction, the Season 2 area distinction, and the
+  disclosed drone-bubble executor miss, folded from the 1534
+  urgent harvest unit; the 1.3.0 pan-failure claim is
+  qualified, not erased, and the drone spot stays an open
+  question.
