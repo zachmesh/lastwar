@@ -201,3 +201,67 @@ only; the final sweep is a separate record.
   The panel back control was the only control in this pass
   that resisted background clicks; back arrows from Mail
   and Duel League worked normally earlier in the pass.
+
+## Pre-reset zero sweep - final pass, 2026-11-01 1849 (partial)
+
+Second and final walk of the ledger before the 19:00 reset,
+verification-only: no bubble collected, no truck dispatched
+or plundered, no donation made, no chest claimed, no secret
+task tapped, no pass button tapped inside this unit. Pass
+claims cited below were read in this pass's passes unit
+(1843 record), not in this unit.
+
+- Unit zero-sweep-pre-reset-sweep-2026-11-01-002 by
+  ticker-1834, session cc-78, window mode 642x951, no
+  different-device dialog, session window about 18:43 to
+  18:49, immediately before the reset.
+- Live reads: base screen about 18:47 showed harvest
+  bubbles still standing over the central building cluster,
+  as in the first sweep's 17:55 view. Resource bar read
+  food 344.7M, iron 532.2M, coin 25.4M, unchanged from
+  17:55 - nothing was collected between the two sweeps.
+  Badges about 18:47: Events icon red x2, Mail icon red
+  dot, Season icon red x1, and an "Alliance Gift (SSR)
+  received!" banner on the base screen.
+- Count: 15 of 23 lines not at zero at 18:47. Gifts line 16
+  reversed against the first sweep: the SSR gift banner
+  means gifts are not at zero, against the first sweep's
+  at-zero read from 17:19; gifts-2026-11-01-1830 was still
+  in inbox. Train line 19 stayed at zero per the last
+  live read cited as 13:23 (the 1813 banner-only check at
+  18:13 also found no train); the sweep did not re-read
+  the line, and train-2026-11-01-1830 was still in inbox.
+  Duel line 21 stayed unverified with no duel panel read
+  in this unit; star-ceremony-2026-11-01-1830 was still in
+  inbox. Drone components line 7 stayed unreadable as a
+  zero line (the passes unit claimed Drone Parts 20 in
+  the free pack, but no drone-component zero read was
+  taken). Shop line 10 and pass line 11 were not at zero
+  on the passes unit's outcome (Hot Deals free pack and
+  Free Supply claimed, but the Weekly Pass page still
+  carried its badge and the Coin pickup below was
+  unclaimed).
+- The risk this sweep surfaces is different from the first
+  sweep's: no duplicates were enqueued, because every
+  not-at-zero line already had a pre-reset unit in inbox
+  - but those fix-up units were still unrun at 18:43,
+  about 17 minutes before the reset, so several lines
+  were likely to expire unclaimed at 19:00. That is a
+  scheduling shortfall, not a sweep finding to fix by
+  duplication. The 18:30-slot fix-ups (gifts, help, mail,
+  star-ceremony, train) and the 18:03/18:57 units
+  (donations, harvest, secrets, events, radar, trucks)
+  plus vip-2026-11-02-0151 and
+  daily-missions-2026-11-02-0151 were all still in inbox
+  at sweep time.
+- Truck counter, second read: the truck screen about
+  18:35 read "Today's Trade Count: 0/5", recorded as read
+  and not reconciled against the 13:52 read of 4/5 and 1/4
+  plunder. See truck-plunder 1.12.0 for the standing
+  tension and the re-read rule.
+- Blocker carried forward: the Coin Weekly Pass Claim
+  button unresponsive in the passes unit (see
+  shop-claims 1.6.0); if the next passes unit hits the
+  same blocker, it is the third consecutive unit with it
+  and must change the entry route and write the change
+  into the shop-claims metadata (R2).
