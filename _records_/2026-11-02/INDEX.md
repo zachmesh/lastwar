@@ -1711,3 +1711,15 @@ of 2026-10-28.
   greyed, no further row on scroll. Nothing pending to
   claim, dispatch or assist. Full detail in
   secret-missions/0952-queue-run.md.
+
+## 10:00 to about 10:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1000.
+  No-op: no knowledge or code PR was open, and
+  records PRs 176 (2026-11-01 post-0700 batch, head
+  6f72217a2) and 161 (2026-11-02, head bbe54e1e)
+  await the 1100 batch on a non-batch pass (checker
+  not due, next batch 1100). Both read CLEAN and
+  MERGEABLE on gh and trial-merged clean against
+  remote main. No comments, no escalations, no
+  conflicts. Full detail in pr-integration/1000-run.md.
