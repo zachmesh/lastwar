@@ -547,3 +547,13 @@ of 2026-10-28.
   the ticker-0308 branch-side conflict resolution); 24 open
   issues all class-labeled, no owner-decision issue over
   24 hours. Full detail in pr-catchall/0339-run.md.
+## 03:40 to about 03:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-0340. Staged 5
+  units (already_present 62, skipped_done_current 2,
+  reaped 0, expired 0): events, passes, secrets, treasures
+  and trucks for 14:57. Tonight's pre-reset sweep pair
+  already in inbox, scout diff on the 2026-11-01
+  observation applied with all zero counts, 0 withdrawals.
+  Pool inbox 70, claimed 1, done 556, upcoming 51. Full
+  detail in queue-planning/0340-run.md.
