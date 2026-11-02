@@ -2398,3 +2398,29 @@ of 2026-10-28.
   pass). No conflicts, no escalations. End-of-pass
   sweep: PR 142 only, decided. Full detail in
   pr-integration/1945-run.md.
+## 19:34 to 19:41 — Queue ticker pass, arms race (skipped-needs-owner)
+
+- Arms-race unit arms-race-2026-11-01-1803, skipped-needs-owner:
+  live phase Base Building (Lv.29-30), score 0 on every read,
+  tier-3 threshold 30,000 unreached inside the red lines.
+  Building queue holds Lv.29 Aircraft Center (11d 02:46:59 left)
+  and Lv.27 Drill Ground (2d 19:45:47 left), slots 3 and 4 Idle,
+  so no completion lands in the phase window ending about 21:57
+  local. Completion sweep clean: no bouncing chest or reward
+  red dot, cumulative chest 0/2 static. Nothing claimed.
+  Tracker marked skipped for this slot. Full detail in
+  arms-race/1934-queue-run.md.
+
+## 19:44 to 19:54 — Queue ticker pass, alliance donations (partial, unverified close)
+
+- Donations unit donations-2026-11-01-1803, partial: Rallied HP
+  coin donations from a live-read 8/30 remaining down to a
+  live-read 1/30 remaining (7 landed; the sixth batch tap hit
+  the greyed button), then one last coin donation dispatched
+  from 1/30. The button greyed again with a 00:18:42 timer
+  hiding the count, so the 0/30 final is not claimed as a
+  live read; tracker untouched and a re-read unit is enqueued
+  for after the cooldown (about 20:15 local). Tech Donation
+  Today footer 0 at entry, 750 after the first donation phase
+  (recorded as observed, not converted to a count). No diamonds
+  used. Full detail in alliance-donations/1944-queue-run.md.
