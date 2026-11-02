@@ -826,3 +826,24 @@ of 2026-10-28.
   went clean. No knowledge or code PR was open. No Slack
   or chat delivery: quiet no-op pass.
   Full detail in pr-integration/0502-run.md.
+
+- Glittering Market unit glittering-market-2026-11-01-0501,
+  partial, first execution attempt: market not located on
+  the Events tab strip (Arms Race, Desert Battlefield,
+  Wanted Boss, Community) or the Mall tab strip (Official
+  Event, Weekly Deal, Super Monthly Pass, Weekly Pass,
+  Diamond, Gold Brick Mall, Hot Sale Packs); Gold Brick
+  Mall is paid packs only, no price tapped. Unverified
+  under R1, tracker untouched, Issue #128 commented.
+  Full detail in glittering-market/0508-queue-run.md.
+
+- Perception scout unit scout-midday-scout-mid-2026-10-31-001,
+  partial: events tabs re-verified, store strip walked,
+  base remainder walked (12 items); alliance group
+  unwalked - right icon column lost after a base pan and
+  not restored by pan down, pan up or idle wait.
+  Unexplained dots carried: Season II 1, 99+ badge.
+  Successor scout-mid-2026-10-31-002 enqueued for the
+  alliance group only. Full detail in
+  perception-scout/0514-queue-run.md and the appended
+  section of perception-scout/observation.md.

@@ -93,3 +93,74 @@ up for, or bought. Full unit record at
   scout-midday-2026-11-02-0700 already in inbox.
 - unmatched_labels: none in the surfaces actually
   walked, apart from the icon-tab identity note.
+
+## Pass scout-mid-2026-10-31 (stale chain remainder), unit ticker-0504, groups scout-events, scout-store, scout-base remainder (partial)
+
+Stale midday chain head from 2026-10-31 07:00, executed
+2026-11-02 about 05:05 to 05:14 local. Observe-only; nothing
+claimed, fought, dispatched, donated, signed up for, or bought.
+Full unit record at `perception-scout/0514-queue-run.md`.
+This unit also carried the glittering-market location attempt
+(record `glittering-market/0508-queue-run.md`); the tab strips
+below were walked live inside that attempt and are recorded
+here as scout observations.
+
+### Events hub, tab strip re-verified (pages per 0441)
+
+- Tab strip scrolled to both ends: Arms Race (red dot),
+  Desert Battlefield, Wanted Boss (red dot), Community.
+  No fifth page and no Glittering Market tab. The four pages
+  were read in full by unit ticker-0434 at 04:41 the same
+  morning (record `perception-scout/0441-queue-run.md`);
+  this unit re-verified the strip only.
+- Community page: 500 diamond Discord-link bonus shown as
+  Claimed; no social link tapped.
+
+### Store (Mall), full tab strip read live
+
+- Tab strip scrolled to both ends: Official Event, Weekly
+  Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold
+  Brick Mall, Hot Sale Packs. No Glittering Market tab
+  and no Crystal Shop tab.
+- Gold Brick Mall, opened by tab tap only: paid gold-brick
+  packs ($4.99 and up). No price tapped.
+- Hot Deals check-in banner: FREE GIFT "Claim your gift
+  today!" and a FREE TOMORROW row. Observed only, not
+  claimed; belongs to the shop-claims regular to verify.
+
+### Base remainder
+
+- Resource bubbles ready on farms, iron, stone and gold
+  buildings in both base views (harvest regular owns).
+- Alliance train visible at the top-left of the panned
+  base view; Drill Ground Lv.27 visible.
+- Furnace overdrive toast still showing ("High-temp
+  Furnace total overdrive time"), carried unknown.
+- Bottom badge 99+ still showing, carried unknown.
+- Season II badge 1 on the right icon column in the
+  opening base capture, carried unexplained.
+
+### Alliance group NOT walked (carried)
+
+- The right icon column (Events, Capitol, VS, Season II,
+  Alliance, Mail, Inventory, WORLD) vanished from the base
+  view after the first base pan of this pass and did not
+  return after three recovery variants: pan down, pan up,
+  idle wait. The Alliance panel entry was therefore not
+  reached, and no alliance dot state was read.
+- Carried to the successor chain unit of
+  scout-mid-2026-10-31 (alliance group only).
+
+### Red dot accounting for this section
+
+- Seen 4: Arms Race dot, Wanted Boss dot, Season II 1,
+  99+ badge. Base Events badge 1 is the roll-up of the
+  two tab dots, not an additional dot.
+- Explained 2: the two tab dots map to the events and
+  arms-race regulars, both with units already queued.
+- Unexplained 2: Season II badge 1, 99+ badge.
+- Unknown items: furnace overdrive toast, alliance dot
+  state (panel not reached).
+- Carried unwalked: scout-alliance group, to the chain
+  successor.
+- unmatched_labels: none in the surfaces actually walked.

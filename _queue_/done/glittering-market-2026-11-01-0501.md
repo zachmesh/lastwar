@@ -12,11 +12,25 @@ window: owner-named 2026-10-31, unlocated, escalation rule R5
 est_minutes: 10
 chain_id:
 chain_seq:
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: ticker-0504
+claimed_at: 2026-11-02T13:05:08Z
+lease_until: 2026-11-02T13:25:08Z
+result:
+  status: partial
+  started_at: 2026-11-02T13:05:08Z
+  finished_at: 2026-11-02T13:08:37Z
+  duration_seconds: 209
+  executor: ticker-0504
+  summary: Glittering Market not located: Events tabs (Arms Race, Desert Battlefield, Wanted Boss, Community) and Mall tabs (incl. Gold Brick Mall, paid packs only) searched, no entry; unverified per R1, tracker untouched
+  claimed: []
+  claimed_count: 0
+  evidence: _records_/2026-11-02/glittering-market/0508-queue-run.md
+  follow_up: none
+  stats:
+    located: false
+    screens_searched: events-mall-base
 ---
 
 # glittering-market
