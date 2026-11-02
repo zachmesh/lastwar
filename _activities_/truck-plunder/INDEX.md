@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T02:44:38Z
+modified: 2026-11-02T05:35:00Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1053 trucks unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1352 trucks unit)
   - source: incidental trucks-view read in the alliance-train execution record 2026-11-01 1813 queue run (not a trucks unit)
+  - source: daily retro 2026-11-01, trucks 1457 expiry and counter tension (issues 147 and 148)
 ---
 
 # Truck plunder - Intercity Trade
@@ -569,6 +570,20 @@ settlement and dispatch execution record).
   and explain the discrepancy in its record - whether the
   mis-tap view showed a different counter, a different tab,
   or a genuine reset - before any counter is overwritten.
+- Retro addendum, 2026-11-01 daily retro: the unit that
+  could have resolved the tension, trucks 1457, expired
+  unexecuted at 18:57 local (afternoon starvation, not
+  outage - the ticker executed other units through the
+  afternoon), and the sweep fix-ups expired at the
+  19:00 reset with it. The Nov 1 trade day therefore
+  closes with the tension unresolved: dispatch unknown
+  between 0 and 4 of 5, plunder 1 of 4 on the last
+  trucks-unit read. Next trucks unit instruction
+  restated: open on the trade screen first, read both
+  counters live, and name the reconciliation in its
+  record before dispatching or plundering anything.
+  Tracked in retro issue #148; the sweep fix-up
+  expiry in issue #147.
 
 
 ## Open questions
