@@ -747,3 +747,52 @@ of 2026-10-28.
   dry run and apply both all zero, 0 withdrawals, and
   tonight's pre-reset sweep pair already in inbox. Full
   detail in queue-planning/0440-run.md.
+
+
+- Scout unit scout-midday-2026-11-01-0700, partial, base
+  group only: staged for the 2026-11-01 midday pass, executed
+  late in the current reset day; power 149,296,925, Events
+  badge 1, Season II badge 1, many resource bubbles seen
+  but not collected, furnace toast [22/60] still
+  unexplained; events, store and alliance groups carried
+  to scout-2026-11-01-1900 already in inbox. Full detail in
+  perception-scout/0436-queue-run.md.
+
+
+- VIP unit vip-2026-11-01-1900, partial: login chest
+  claimed live (+200 points, 1,585,960 to 1,586,160,
+  56-day streak); Daily Freebie Claim button
+  unresponsive to two grounded taps, button-specific
+  (the chest on the same screen worked by the same
+  input), freebie still pending for the pre-reset
+  sweep. Full detail in vip-rewards/0438-queue-run.md.
+
+
+- Scout unit scout-2026-11-01-1900, partial, events
+  group hub pages only: Arms Race Hero Advancement
+  40,500 points with 01:20:18 left, Desert Battlefield
+  registration 2d 13:19:58, Wanted Boss Code 87, Community
+  500 Diamonds already Claimed; duel page and radar panel
+  carried to the 07:00 midday scout already in inbox.
+  Full detail in perception-scout/0441-queue-run.md.
+
+
+- Daily missions unit daily-missions-2026-11-01-1900,
+  partial: activity 70, three completed rows
+  (Doom Elite, Help Allies 12/5, Trucks 3/3, together
+  50 points) all unclaimed - green Claim buttons
+  unresponsive to five taps across two rows, same
+  session pattern as the VIP freebie; filed as
+  Issue #171. Full detail in
+  daily-missions/0444-queue-run.md.
+
+
+- Crystal shop unit crystal-shop-2026-11-01-0500,
+  partial, owner-named since 2026-10-25 (8 days, R5):
+  Mall tabs enumerated live (Official Event, Weekly
+  Deal, Super Monthly Pass, Weekly Pass, Diamond,
+  Gold Brick Mall, Hot Sale Packs) - no Building
+  section and no Crystal Shop tab found; Diamond
+  tab holds purchase packs only, none tapped.
+  Issue #128 commented. Full detail in
+  crystal-shop/0446-queue-run.md.
