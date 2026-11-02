@@ -1589,3 +1589,14 @@ of 2026-10-28.
   Nothing claimed, nothing spent. Game left on the Events hub
   Wanted Boss page (hub back arrow unresponsive to background
   clicks). Full detail in event-claims/0910-queue-run.md.
+- Integrator pass pr-integration-2026-11-02-0915:
+  no-op non-batch pass. No knowledge or code PR open.
+  Checker _tools_/records_batch.py not due (outside
+  every batch window, next batch 11:00). Records PR 176
+  (2026-11-01 post-0700 batch) and records PR 161
+  (2026-11-02) both trial-merge cleanly against remote
+  main 66882d54 and await the 11:00 batch; PR 161 head
+  advanced to 061f16633 (ticker-0904) with no new
+  comment; no conflict comment owed, no escalation,
+  no backlog edit.
+  Full detail in pr-integration/0915-run.md.
