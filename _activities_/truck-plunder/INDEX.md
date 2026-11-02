@@ -554,7 +554,13 @@ settlement and dispatch execution record).
   5, plunder 1 of 4), and no trucks unit ran between the
   two reads, so no dispatch, plunder or reset explains a
   move from 4 to 0 before the 19:00 reset.
-- The 0/5 read is recorded here as an unresolved tension,
+- Second read, same tension: the 1849 final zero sweep read
+  Today's Trade Count 0/5 again on the truck screen at
+  about 18:35, and recorded it as read, not reconciled,
+  against the same 13:52 4/5 read. Two post-1352 reads now
+  show 0/5, both from non-trucks-unit entries, and neither
+  explains a move from 4 to 0 before the 19:00 reset.
+- The 0/5 reads are recorded here as an unresolved tension,
   NOT as a quota update: the trade-screen counters from
   trucks units remain the source of truth for the quota,
   and the standing shortfall stays dispatch 1 more and

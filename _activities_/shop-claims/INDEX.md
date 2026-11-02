@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-01T22:40:43Z
+modified: 2026-11-02T02:49:21Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1039 passes unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1340 passes unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1843 passes unit)
 ---
 
 
@@ -214,6 +215,56 @@ the free and already paid for parts, never the paid unlocks.
   as displayed in game". This unit did not re-read that
   line, so neither figure is treated as settled. Game
   left on the base screen.
+
+## What the 2026-11-01 1843 unit added
+
+- Unit passes-2026-11-01-1457 by ticker-1834, session
+  about 18:35 to 18:43, status partial (checked and
+  claimed, one item left unclaimed). No different-device
+  dialog is recorded. Tracker untouched, as partial units
+  do not mark the tracker.
+- Claimed, read live: Hot Deals free pack - Drone Great
+  Value Pack, Free Claim tapped once, Congratulations panel
+  paid Drone Parts 20, Skill Chip Chest (SR) 2, Battle Data
+  40.0K (4 x 10K); the panel then read "Packs sold out".
+  This is the first Hot Deals free pack claim recorded
+  today (1340 found promo only), and its contents are now
+  observed; whether the pack rotates its contents by day
+  stays open.
+- Free Supply auto claim: a second Congratulations panel
+  followed at once - "Free rewards have been automatically
+  claimed", a chest x1 and ruby x10. Recorded as read;
+  it sits against the 1340 "Free Supply chest reads
+  Claimed" without a reconciling refresh rule, so no
+  refresh claim is derived from the pair.
+- Super Monthly Pass: Monthly Pass page, Days Left 20,
+  Rewards Left 20. Claim Reward tapped once; the Daily
+  Gift panel paid gold tickets 2, red diamonds 100,
+  stamina 50 x2, iron 200, 5m speedups x60, and the button
+  then read Claimed (grey). The $24.99 Monthly Pass
+  Extension button was not touched. Tension carried
+  forward, not resolved: the 1340 unit read this button
+  as Claimed at 13:55, yet a claimable daily gift was
+  present again at 18:35; the refresh rule is unrecorded
+  and the next passes unit must read the button state on
+  entry.
+- Not claimed, tap-method blocker (audit class c): Weekly
+  Pass page, Coin Weekly Pass (Elite), Remaining
+  1d 23:20:41 at entry. Its green Claim button stayed Claim
+  with its red badge after three grounded taps ([790,640],
+  centre [840,652], [815,648], each re-grounded from a
+  fresh screenshot) and a card-body pivot tap at [450,560],
+  all with no screen change. No congratulations panel, no
+  button-state change, so the pickup is recorded as
+  unclaimed, not assumed claimed. Follow-up rule from the
+  1849 final sweep: if the next passes unit hits the same
+  blocker, it is the third consecutive unit with it and
+  must change the entry route and write the change into
+  this metadata (R2).
+- Red lines held: the Legendary row's green Claim All
+  ($19.99 purchase) was deliberately never tapped, and
+  the S2 Drone Components Weekly Pass $4.99 offer was
+  likewise not tapped.
 
 ## Open questions
 
