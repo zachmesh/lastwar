@@ -2002,3 +2002,17 @@ of 2026-10-28.
   named. No adoption, no fix, no hand-off, no escalation,
   silent per the quiet no-op rule. Full detail in
   pr-catchall/1139-run.md.
+
+## 11:36 to 11:46 - Queue ticker pass, training partial
+
+- Training unit training-2026-11-02-1003, partial: Lv.24
+  batch queued (T8 x666, 2.9M food, 2.9M iron, 1d 04:20:26),
+  verified by the live resource drop (food 390.2M to
+  387.2M, iron 580.0M to 577.0M); Lv.20 selected but its
+  TRAIN UNITS panel not reached (pistol taps at 818,584
+  and 829,575 both only cleared the selection); Lv.27 and
+  Lv.30 not inspected. Train button grounded at norm
+  628,793 - the earlier (561,715) estimate missed low by
+  about 70 pixels. No Drill Ground figure read live.
+  Tracker untouched. Full detail in
+  troop-training/1146-queue-run.md.
