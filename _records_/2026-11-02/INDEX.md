@@ -635,3 +635,12 @@ of 2026-10-28.
   or code PR was open. No Slack or chat delivery: quiet
   no-op pass.
   Full detail in pr-integration/0403-run.md.
+
+- Trucks unit trucks-2026-11-02-0257, partial: settled the
+  returned SR truck (iron 2.5M, food 2.5M, coin 1.6M,
+  unplundered), dispatched two SSR trucks, won one SSR
+  plunder (UR shards x9); counters at close Trade 3 of 5,
+  Plunder 2 of 4, shortfall dispatch 2 plunder 2; entry
+  corrected - title-bar tap plus freshly grounded
+  train-front icon [52,552] opens Intercity Trade.
+  Full detail in truck-plunder/0416-queue-run.md.
