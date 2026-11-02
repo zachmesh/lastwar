@@ -12,11 +12,33 @@ window: pre-reset zero sweep, final pass
 est_minutes: 15
 chain_id: pre-reset-sweep-2026-11-01
 chain_seq: 2
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: ticker-1834
+claimed_at: 2026-11-02T02:41:35Z
+lease_until: 2026-11-02T03:01:35Z
+result:
+  status: partial
+  started_at: 2026-11-02T02:41:35Z
+  finished_at: 2026-11-02T02:43:21Z
+  duration_seconds: 106
+  executor: ticker-1834
+  summary: Final pre-reset sweep partial: base bubbles still standing, Events badge 2, Mail badge 1; 15 lines not at zero, all already have a pre-reset fix-up unit in inbox so no duplicates enqueued
+  claimed: [none]
+  claimed_count: 1
+  evidence: _records_/2026-11-01/daily-activities/1849-queue-run.md
+  follow_up: none
+  stats:
+    target: 23
+    achieved: 2
+    lines_walked: 23
+    lines_not_at_zero: 15
+    lines_unreadable: 6
+    fixups_enqueued: 0
+    resources_gained: none - sweep is verification only
+    costs: about 6 minutes
+    verified: no
+    blocker_category: b
 ---
 
 # zero-sweep

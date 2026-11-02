@@ -2175,3 +2175,28 @@ of 2026-10-28.
   sole owner-decision issue 132 under two hours old, its
   decision statement current. Quiet pass, no Slack sync.
   Full detail in pr-catchall/1839-run.md.
+
+## 18:35 to 18:49 — Queue ticker pass, shop claims (partial) and final pre-reset zero sweep (partial)
+
+- Passes unit passes-2026-11-01-1457, partial: Hot Deals free
+  pack claimed (Drone Parts 20, Skill Chip Chest (SR) 2,
+  Battle Data 40.0K), Free Supply auto claim (chest 1,
+  ruby 10), Super Monthly Pass daily gift claimed (gold
+  tickets 2, red diamonds 100, stamina 50 x2, iron 200,
+  5m speedups 60). Coin Weekly Pass Daily Pickup left
+  unclaimed: its Claim button stayed unchanged after
+  three grounded taps plus a card-tap pivot. Legendary
+  Claim All ($19.99) and the $4.99 S2 Drone pass offer
+  deliberately untouched. Full detail in
+  shop-claims/1843-queue-run.md.
+- Final zero sweep unit
+  zero-sweep-pre-reset-sweep-2026-11-01-002, partial:
+  15 of 23 ledger lines not at zero at 18:47 (base
+  bubbles still standing, Events badge x2, Mail badge,
+  SSR gift banner; VIP, missions, mail, gifts,
+  donations, trucks, secrets, radar, Crystal and
+  Glittering Market fix-ups still in inbox). No
+  duplicates enqueued: every short line already had a
+  pre-reset unit in inbox, but those units were still
+  unrun about 17 minutes before the reset. Full detail
+  in daily-activities/1849-queue-run.md.
