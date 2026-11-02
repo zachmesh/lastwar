@@ -1771,3 +1771,17 @@ of 2026-10-28.
   entry route (map Alliance HQ building, or a
   different camera framing). Full detail in
   alliance-donations/1020-queue-run.md.
+
+## 10:30 to about 10:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1030.
+  No-op: no knowledge or code PR was open, and
+  records PRs 176 (2026-11-01 post-0700 batch, head
+  6f72217a2) and 161 (2026-11-02, head 9542b3495)
+  await the 1100 batch on a non-batch pass (checker
+  not due, next batch 1100). Both read CLEAN and
+  MERGEABLE on gh and trial-merged clean against
+  remote main alone; the stacking-conflict carried
+  note for the 1100 batch stands. No comments, no
+  escalations, no conflicts. Full detail in
+  pr-integration/1030-run.md.
