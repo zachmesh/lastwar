@@ -2141,3 +2141,14 @@ of 2026-10-28.
   background return navigation did not succeed, so the
   game was left in the trucks view. Full detail in
   alliance-train/1813-queue-run.md.
+
+## 18:15 to about 18:22 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-1815. No-op
+  pass: the only open PR is records PR 117, held for
+  the 19:00 batch (non-batch pass: the
+  _tools_/records_batch.py checker reports not due).
+  No knowledge or code PR open, no merges, no
+  comments, no escalations, no conflicts. End-of-pass
+  sweep: only PR 117 open, decided under the batch
+  exception. Full detail in pr-integration/1815-run.md.
