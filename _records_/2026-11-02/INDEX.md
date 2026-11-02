@@ -1359,3 +1359,17 @@ of 2026-10-28.
   conflict resolved branch-side, and likewise awaits
   the 11:00 batch. Quiet run, no Slack or chat report.
   Full detail in pr-integration/0800-run.md.
+## 08:15 to about 08:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-0815, no-op:
+  no knowledge or code PR open, and this is a non-batch
+  pass for records (checker _tools_/records_batch.py not
+  due, outside every batch window, next batch 11:00;
+  the 07:00 window was already consumed at 07:05 by the
+  0700 pass, PR 167 merged). Records PR 176 (2026-11-01
+  post-0700 batch) awaits the 11:00 batch, and records
+  PR 161 (2026-11-02) is mergeable (gh MERGEABLE, CLEAN
+  against current main), its action-log conflict resolved
+  branch-side, and likewise awaits the 11:00 batch.
+  Quiet run, no Slack or chat report.
+  Full detail in pr-integration/0815-run.md.
