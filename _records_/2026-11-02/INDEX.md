@@ -1972,3 +1972,14 @@ of 2026-10-28.
   1107 unit. 0 new Issues (#168 already carries the 1107
   evidence, commented by the executor). Full detail in
   knowledge-organization/1132-run.md.
+
+## 11:40 to about 11:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-1140. Staged 5
+  units for the 2257 slot (already_present 66,
+  skipped_done_current 0, reaped 0, expired 0).
+  Tonight's pre-reset sweep pair already in inbox, scout
+  diff on the 2026-11-02 observation applied with all
+  zero counts, 0 withdrawals. Pool inbox 68, claimed 1,
+  done 596, upcoming 53. Full detail in
+  queue-planning/1140-run.md.
