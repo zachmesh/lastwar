@@ -2259,3 +2259,12 @@ of 2026-10-28.
   remains for the next trucks unit, raised to priority
   1 under rule R3. Full detail in
   truck-plunder/1325-queue-run.md.
+
+## 13:30 to about 13:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1330.
+  No-op non-batch pass: no knowledge or code PR open.
+  Records PRs 181 (2026-11-01 post-1100 batch) and 161
+  (2026-11-02) both CLEAN and MERGEABLE and await the
+  1500 batch (checker _tools_/records_batch.py: not due,
+  next batch 15:00). Full detail in pr-integration/1340-run.md.
