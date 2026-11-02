@@ -2928,3 +2928,19 @@ of 2026-10-28.
   no red dot), nothing claimed. Next unit must check the
   other three barracks for an idle Lv.30 barracks. Full
   detail in arms-race/2327-queue-run.md.
+## 23:30 to about 23:34 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-01-2330.
+  Non-batch pass for records purposes: the checker
+  (_tools_/records_batch.py) reports due inside the
+  23:00-00:00 window, but the 23:00 batch was already
+  consumed by the 2300 pass (records PR 142 merged
+  23:03:56 PST, merge commit ef4d7800), and only the
+  first pass at or after a batch point merges, so no
+  records merge in this pass. Records PR 157 remains
+  open, head 7750e2c39 at pass start plus this run
+  record, and awaits the 03:00 batch. No knowledge or
+  code PR open, no escalation, no feedback. Remote
+  main unchanged at ef4d78006, no sync-back needed.
+  End-of-pass sweep: PR 157 open, awaiting batch.
+  Full detail in pr-integration/2330-run.md.
