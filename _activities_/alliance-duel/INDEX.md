@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T05:37:14Z
-version: 1.9.0
+modified: 2026-11-02T06:38:16Z
+version: 1.10.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -14,6 +14,7 @@ grounded_in:
   - source: radar execution record 2026-11-01 1904 queue run (duel delta test still owed after 25 release-day claims)
   - source: queue-planning execution record 2026-11-01 1840 run (duel-score staging gap: live pool tree predates the PR 137 merge)
   - source: queue-planning execution record 2026-11-01 2040 run (third consecutive plan staging no duel-score unit) and daily retro 2026-11-01 (gap commented on Issue #136, kept open)
+  - source: ticker-2142 star-ceremony execution record 2026-11-01 2154 queue run and queue-planning execution record 2026-11-01 2140 run
 ---
 
 
@@ -324,6 +325,67 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   and `_records_/retro/2026-11-01.md`.
 
 
+
+## What the 2026-11-01 2154 unit added for duel tracking
+
+- Unit star-ceremony-2026-11-01-1830 by ticker-2142,
+  session about 21:51 to 21:54, status done. No Star
+  Ceremony waiting: no trophy icon beside the Alliance
+  icon on the base screen.
+- First live daily total read of the current duel day:
+  the Today's Theme tab read personal duel points 791,250
+  under the Radar Training header (countdown 20:07:23 at
+  read), against the owner target of 3,600,000, a gap of
+  2,808,750. This duel day ends 2026-11-02 19:00 local
+  (see the 1904 radar context). The 2040 section's "still
+  unknown" line is superseded for this duel day by this
+  read; the read does not backfill any earlier day's
+  closing figure.
+- Why this unit carried the read after the split: the
+  1830 unit was staged by the 1757 zero sweep before the
+  duel-score split merged, so it still carried the
+  daily-total line - the same transitional position the
+  1745 section recorded. Ceremony-only units staged after
+  the split do not carry it; the duel-score regular owns
+  the total read once its units stage.
+- Alliance duel score read on the same panel: [AP3x]The
+  Apex 262,665,994 (39 percent) against [Kmf] 415,384,521
+  (61 percent). The current duel opponent is therefore
+  [Kmf], not the [Sync] IMPERIUM of the Week 2 match
+  record in the calculating state - a partial answer to
+  the open question on the current opponent.
+- Entry lesson: the MVP list on the Duel Progress tab is
+  alliance-wide and carries no personal total, so it was
+  not used as one. A personal total comes from the
+  Today's Theme tab, not the MVP list.
+- Theme chest claim route still unknown: the first theme
+  chest threshold is 660,000, so the 791,250 total already
+  passes it, but a tap on the first chest produced no
+  change, and the Reward button opened the tier
+  ranking-reward panel rather than a theme chest claim.
+  No chest was claimed in this unit and no chest state is
+  asserted beyond the no-change tap - the chest claim
+  method is neither the first-chest tap nor the Reward
+  button as tapped here.
+- Duel-score staging gap, fourth confirmation: the 2140
+  planner pass (0 units staged, pool already covered)
+  also staged no duel-score unit, because the live pool
+  tree still runs pre-merge tools/regulars.json. The gap
+  now stands at four consecutive planner passes (1840,
+  1940, 2040, 2140). The retro already commented this gap
+  onto Issue #136 and kept #136 open; no duplicate
+  comment was left here. Note the distinction for #136's
+  target metric: this 791,250 total came from a pre-split
+  star-ceremony unit, not from a duel-score unit, so the
+  metric (duel-score units in the pool closing with
+  numeric target/achieved pairs) is still unmet. The
+  1904 delta test (10,000 versus 30,000 versus another
+  figure, measured against the 25-claim radar batch) is
+  still owed - the VS panel was opened here for the
+  total read only, not for a before-and-after claim
+  measurement.
+- This unit's total read is a same-unit live read, not a
+  fragment score and not an estimate.
 ## Open questions
 
 - The day themes and scoring once League S38 opens, and the current
