@@ -1875,3 +1875,19 @@ of 2026-10-28.
   regenerating, so the zero-bubble acceptance is not met.
   Tracker untouched. Full detail in
   resource-collection/1052-queue-run.md.
+
+## 11:00 to about 11:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1100,
+  a batch pass per the checker (window 11:00 to
+  12:00). Merged records PR 176 (2026-11-01
+  post-0700 batch) by merge commit 7bcd2ae38b;
+  records PR 161 (2026-11-02) conflicted on
+  _logs_/repo-actions/action-log.jsonl after the
+  merge, commented, not force-merged, and stays
+  open for the 15:00 batch once resolved on the
+  branch side; records PR 181 opened for
+  2026-11-01 post-1100 batch, awaiting the 15:00
+  batch. Merged main synced back to the local
+  repo. Full detail in
+  pr-integration/1115-run.md.
