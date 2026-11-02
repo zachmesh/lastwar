@@ -2218,3 +2218,25 @@ of 2026-10-28.
   main fast-forwarded to af0b80357. End-of-pass sweep:
   only PR 117 open. Full detail in
   pr-integration/1845-run.md.
+
+## 18:32 to about 18:54 — Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-01-1832, worked from
+  the 1732 watermark. Folded the ticker-1738 star-ceremony
+  unit (1745, done) and first pre-reset zero sweep (1757,
+  partial), the ticker-1804 train unit (1813, done, checked
+  only), and the mid-run ticker-1834 passes unit (1843,
+  partial) and final zero sweep (1849, partial) into seven
+  profiles: alliance-duel 1.7.0, alliance-train 1.8.0,
+  daily-activities 1.16.0, truck-plunder 1.12.0, vip-rewards
+  1.5.0, secret-missions 1.4.0, shop-claims 1.6.0. One
+  contradiction resolved in place (train entry icon is
+  set- and state-dependent); the Trade Count 0/5 tension,
+  the monthly-pass refresh tension and the VIP gap stay open
+  in their profiles, and no new Issue was filed. Own PR 138
+  stands MERGED with no comments or reviews, so no PR
+  feedback was owed. PR 140 (first six profiles) merged
+  clean during the run while the mid-run amendments were
+  being folded; the amendments ride PR 141, OPEN with its
+  Owner line at record time. Full detail in
+  knowledge-organization/1832-run.md.
