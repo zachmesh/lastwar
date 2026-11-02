@@ -1003,3 +1003,24 @@ of 2026-10-28.
   07:00 batch (non-batch pass, checker not due). Both
   re-read MERGEABLE and CLEAN; trial merges against main
   clean. No merges, comments or escalations.
+
+- Arms Race unit arms-race-2026-11-02-0603, partial:
+  Hero-phase cumulative chest 6/2 claimed (gold ticket 1,
+  puzzle pieces 2, red gem 50), counter now 6/8; ranking
+  reward still preview only (Iron/Food/Coin SR 3 each, no
+  Claim button) after the phase ended. New Tech Research
+  phase read live at 0/30,000, research queue 4d and 1d out,
+  so tier-3 is unreachable inside the red lines, assessed
+  early in the phase. Tracker untouched. Full detail in
+  arms-race/0608-queue-run.md.
+
+- Alliance donations unit donations-2026-11-02-0603,
+  partial: Alliance menu not reached - the Alliance
+  right-column tap in this camera framing pans to the
+  Drill Ground cluster state instead of opening the
+  Alliance menu, so no Donation Count was read live and
+  no donations were made. Panel X re-grounded at
+  (836,193). No upgrade, purchase or dispatch touched.
+  Tracker untouched; the 1344 re-read unit already in
+  the inbox covers the post-timer check. Full detail in
+  alliance-donations/0621-queue-run.md.
