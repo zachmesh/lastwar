@@ -2016,3 +2016,17 @@ of 2026-10-28.
   about 70 pixels. No Drill Ground figure read live.
   Tracker untouched. Full detail in
   troop-training/1146-queue-run.md.
+
+## 11:45 to about 11:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1145.
+  Non-batch pass for records (the 1100 batch already
+  merged inside this window, PR 176 at 11:05 PST):
+  merged PR #182 (knowledge organizer 1132, 1052
+  harvest and 1107 survivors into 2 profiles,
+  squash commit 26e0c2c75, branch deleted), synced
+  back to the local clone main. Records PRs #181
+  (2026-11-01 post-1100 batch) and #161 (2026-11-02)
+  both clean and mergeable, await the 1500 batch.
+  No owner-gated PR, no conflict, no escalation.
+  Full detail in pr-integration/1153-run.md.
