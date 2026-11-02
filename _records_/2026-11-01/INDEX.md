@@ -2756,3 +2756,32 @@ of 2026-10-28.
   PR 142 left awaiting the 23:00 batch, no knowledge
   or code PR open. Full detail in
   pr-integration/2230-run.md.
+
+## 22:11 to 22:20 — Queue ticker pass, shop claims (done)
+
+- Passes unit passes-2026-11-01-1857, done: Coin Weekly
+  Pass Daily Pickup claimed (coin items x3) on a fresh
+  measured centre tap [841,664], resolving the 18:43
+  unresponsive-button blocker; Free Supply auto claim paid
+  ruby x10 and iron x4; Hot Deals held no free pack;
+  Super Monthly Pass already Claimed (Days Left 20,
+  Rewards Left 20). No paid button tapped. Season hub
+  checked: the old Season pass tiles are gone, and the
+  Season Photo Rewards panel (edit group photo and post
+  an alliance message, 100 red diamonds each, both Not
+  Achieved) was left for an owner decision as GitHub
+  Issue #154. Full detail in
+  shop-claims/2220-queue-run.md.
+
+## 22:21 to 22:31 — Queue ticker pass, truck plunder (partial)
+
+- Trucks unit trucks-2026-11-01-1857, partial, first unit
+  of the new trade day: entry counters 0 of 5 dispatch and
+  0 of 4 plunder; one SR truck dispatched as rolled (iron
+  2.5M, food 2.5M, coin 1.6M, Squad 1, no refresh spent);
+  one SSR plunder won against #2091 [SS12]goobiedog
+  (guard 3.6M, two right-side shard stacks) for iron
+  557.5K, food 557.5K, coin 350.0K, UR badge 500 x6 and a
+  puzzle piece. Close counters read live: dispatch 1 of
+  5, plunder 1 of 4; shortfall carried forward. Full
+  detail in truck-plunder/2231-queue-run.md.
