@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T15:35:33Z
+modified: 2026-11-02T17:38:46Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: ticker-0034 train execution record 2026-11-02 0044 queue run (checked only, no train read, superseded same-pass by the 0047 sighting)
   - source: ticker-0334 alliance-train execution record 2026-11-02 0348 queue run (done, checked only)
   - source: ticker-0704 alliance-train execution record 2026-11-02 0715 queue run (done, checked only)
+  - source: ticker-0834 alliance-train execution record 2026-11-02 0844 queue run (done as checked only, third Secret Command Post wrong-tap instance, station empty)
 ---
 
 # Alliance train
@@ -453,6 +454,34 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Tracker: marked done for train by this pass, on the
   checked-only basis above, with this qualification in the
   record.
+
+## What the 2026-11-02 0844 unit added - third wrong-icon instance, station empty again
+
+- Unit train-2026-11-02-0630 by ticker-0834, session about
+  08:41 to 08:44, status done as checked only. No train in
+  preparation. Evidence in
+  `_records_/2026-11-02/alliance-train/0844-queue-run.md`.
+- Base screen inspected first: no "Boarding closes in"
+  banner under the resource bar.
+- Wrong-tap recovery, third instance this day after the
+  0348 and 0715 units: a tap at norm (53,638) opened the
+  Secret Command Post panel (Secret Mobile Squad). No
+  Claim, Mega Refresh or Mega Deploy was tapped there -
+  secrets are another unit's work. The panel's back arrow
+  was re-grounded visually at norm (160,945) after taps
+  at norm (65,946) and norm (65,955) hit the small avatar
+  circle beside it and produced no change; the corrected
+  tap closed the panel back to the base screen.
+- Station check: the left-column train icon, measured at
+  normalized (52,548) from the 0044 unit's record, panned
+  the camera to the base edge. The station area showed no
+  yellow train, no plus bubble and no station countdown -
+  the same empty state as the 0348 check. The prior
+  measured point worked again, corroborating the 0348
+  rule: a prior unit's measured point beats a fresh
+  guess.
+- Nothing boarded, no Trade Contracts spent, no train
+  summoned, no conductor role taken.
 
 ## Open questions
 

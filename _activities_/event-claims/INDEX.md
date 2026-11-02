@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T12:32:00Z
+modified: 2026-11-02T17:38:46Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: ticker-2142 events execution record 2026-11-01 2200 queue run
   - source: ticker-0034 event-claims execution record 2026-11-02 0050 queue run
   - source: ticker-0334 event-claims execution record 2026-11-02 0359 queue run (partial, Escape crash)
+  - source: ticker-0904 event-claims execution record 2026-11-02 0910 queue run (done, full hub sweep, nothing claimable, hub back arrow unresponsive to background clicks)
 ---
 
 
@@ -409,6 +410,76 @@ that drag is the sweep-completeness check, not wasted motion.
   Evidence in `_records_/2026-11-02/event-claims/0359-queue-run.md`.
 
 
+## What the 2026-11-02 0910 unit added - full hub sweep, nothing claimable
+
+- Unit events-2026-11-02-0657 by ticker-0904, session
+  about 09:10, status done. Full Events hub sweep
+  performed, nothing claimable anywhere in the hub,
+  nothing claimed. Evidence in
+  `_records_/2026-11-02/event-claims/0910-queue-run.md`.
+- Entry: the game was left on a leftover HOT DEALS and
+  Weekly Pass shop panel from a previous session; that
+  panel was closed with its back arrow before the sweep
+  started. No paid button was touched: the Legendary
+  Take All $19.99 and the Coin Weekly Pass Renew $4.99
+  buttons were visible on that panel and were left
+  alone. No "active on a different device" dialog
+  appeared.
+- Arms Race (Tech Research, Contest Segment Lv.29-30,
+  about 00:52 left at first read): cumulative counter
+  chest at top left reads 6/8, not full, nothing to
+  claim. The three point chests (thresholds 6,250 /
+  12,500 / 30,000) show no claim state; one tap on the
+  6,250 chest produced no change, consistent with the
+  phase score still at 0 as recorded by the 0608
+  arms-race unit. The bottom ranking row still shows the
+  finished Hero Advancement result (#2110 [AP3x]Bears
+  Lair, 40,500), whose ranking chest was already
+  inspected in the 0608 unit (contents preview only, no
+  Claim button). No bouncing chest, no reward red dot
+  on this page.
+- Cumulative-chest denominator note, kept as two
+  phase-page reads, not merged: this Tech Research
+  page reads 6/8, while the 0359 Hero Advancement page
+  read 6/2. Until a unit reads both pages in one pass,
+  do not treat either figure as the standing cumulative
+  total - the counter may be per-phase, and merging the
+  two would invent a total neither page showed.
+- Desert Battlefield (Desert Storm Battlefield):
+  registration ends in 2d 08:52, registration limited
+  to top-32 power-rank alliances. Alliance-level
+  registration event, nothing personal to claim.
+- Wanted Boss (Code 87, giant polar bear, appears at
+  server time 00:00, countdown about 07:50 at read):
+  Goals page re-checked - best single attack
+  899,542,636 against tiers 1.0B / 1.5B / 2.0B / 2.5B /
+  3.0B, all above the best, all grey, nothing
+  claimable. The red dot seen on the Wanted Boss tab in
+  one hub render is the upcoming-boss marker, not a
+  reward: the page itself and its Goals list were both
+  opened and inspected and hold no claim. This
+  strengthens the 0050 lesson - a surviving Wanted Boss
+  red dot does not by itself prove a claim. Attacking
+  the boss is grinding, not a claim, and the boss is not
+  out yet.
+- Community: Discord binding reward reads Claimed (500
+  diamonds tier), unchanged from prior knowledge.
+  Nothing to claim.
+- Hub completeness: the tab bar was dragged to its end;
+  the four tabs above are the whole hub (Arms Race,
+  Desert Battlefield, Wanted Boss, Community). No
+  Zombie Invasion tab - the event ended 2026-10-30,
+  consistent with the 2026-10-28 unit 066 record.
+- Exit failure, for the next unit: the game was left on
+  the Events hub Wanted Boss page, because the hub back
+  arrow did not respond to background clicks (two
+  attempts; system guidance says background clicks do
+  not reach that control). The exit to base was left
+  for the next unit's navigation rather than forcing
+  it. The next unit should bring the game window to the
+  foreground before using the hub back arrow, or exit
+  by another route.
+
 ## Open questions
 
 - Which recurring events hold claims that expire unclaimed.
@@ -417,3 +488,4 @@ that drag is the sweep-completeness check, not wasted motion.
   wave days, and the coal cost per donation.
 - What the Wanted Boss Code 87 fight pays in practice when it is
   out at server 00:00.
+- Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit.

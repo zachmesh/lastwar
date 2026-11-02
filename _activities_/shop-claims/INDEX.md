@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T09:32:00Z
+modified: 2026-11-02T17:38:46Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1843 passes unit)
   - source: ticker-2212 passes execution record 2026-11-01 2220 queue run
   - source: ticker-0104 shop-claims execution record 2026-11-02 0104 queue run
+  - source: ticker-0834 shop-claims execution record 2026-11-02 0846 queue run (done as checked only, monthly pass 19 of 19, coin weekly pass already claimed today)
 ---
 
 
@@ -360,6 +361,35 @@ the free and already paid for parts, never the paid unlocks.
   tracked under Issue #154; nothing was tapped there.
   The badge is therefore explained, not a missed claim.
   Evidence in `_records_/2026-11-02/shop-claims/0104-queue-run.md`.
+
+## What the 2026-11-02 0846 unit added
+
+- Unit passes-2026-11-02-0657 by ticker-0834, session
+  about 08:45 to 08:46, status done as checked only.
+  Every claimable shop item for this game day was already
+  claimed, so nothing new was claimed in this unit.
+  Evidence in
+  `_records_/2026-11-02/shop-claims/0846-queue-run.md`.
+- Shop, Hot Deals tab: no free pack showing, only the
+  "Visit the Last War Store" promo and a "FREE TOMORROW"
+  card. No claim taken; the Go button was not tapped.
+- Shop, Super Monthly Pass tab: Monthly Pass, Days Left
+  19, Rewards Left 19, button reads Claimed - down one
+  day from the 20 and 20 read at 0104, as expected for a
+  new day count, not a missed claim. The $24.99 Monthly
+  Pass Extension was not tapped.
+- Shop, Weekly Pass tab: Free Supply chest reads Claimed
+  (auto-claimed on page open). Coin Weekly Pass (Elite,
+  Remaining 1d 9:14) reads "Already claimed today" - the
+  countdown fell from 1d 16:53 at 0104, consistent with
+  the same day's pickup already taken. The Legendary
+  "Take All $19.99" bundle was not tapped. The S2 Drone
+  Components Weekly Pass card shows only the $4.99
+  purchase button and no claim control - an unowned
+  offer, not tapped. No Renew button was tapped.
+- Qualification: a drag scroll of the list did not move
+  it, so cards below the Drone card were not re-verified
+  this unit; the visible cards match the earlier check.
 
 ## Open questions
 
