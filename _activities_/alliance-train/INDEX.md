@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T09:32:00Z
+modified: 2026-11-02T12:32:00Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1813 train unit)
   - source: ticker-2142 train execution record 2026-11-01 2149 queue run
   - source: ticker-0034 train execution record 2026-11-02 0044 queue run (checked only, no train read, superseded same-pass by the 0047 sighting)
+  - source: ticker-0334 alliance-train execution record 2026-11-02 0348 queue run (done, checked only)
 ---
 
 # Alliance train
@@ -345,6 +346,44 @@ Measured in the 0110 train unit (ticker-0104, window mode
   Evidence in `_records_/2026-11-02/alliance-train/0044-queue-run.md`
   and `_records_/2026-11-02/alliance-duel/0047-queue-run.md`.
 
+## What the 2026-11-02 0348 unit added - prior point beats fresh grounding, still no train
+
+- Unit train-2026-11-02-0230 by ticker-0334, session
+  about 03:45 to 03:48, status done as checked only.
+  Base screen inspected first: no "Boarding closes
+  in" banner under the resource bar. Station check:
+  the left-column train icon, measured at normalized
+  (52,548) from the 0044 unit's record, panned the
+  camera to the base edge. The station area showed no
+  yellow train, no plus bubble and no station
+  countdown - the same empty state as the 0044 first
+  read, and unlike the 2026-11-01 21:43 check, which
+  found a train in preparation that has since
+  departed. Nothing boarded, no Trade Contracts spent,
+  no train summoned, no conductor role taken.
+- Entry lesson, second instance this day (see also
+  the trucks 0416 entry correction): two wrong taps
+  in this unit, both recovered without action. A tap
+  at (53,630) opened the Secret Command Post panel
+  (closed with its back arrow, no Claim tapped -
+  secrets are another unit's work), and a fresh visual
+  grounding put the train icon at (52,650), which is
+  the same wrong icon. The correct train icon point
+  is (52,548), taken from the 0044 unit's record.
+  Rule restated: re-grounding is not always right; a
+  prior unit's measured point beats a fresh guess.
+  Re-ground fresh only after the proven point fails,
+  not instead of it.
+- Proximity note, carried as an open question below:
+  the trucks 0416 trade-entry icon grounds at
+  [52,552], 4 pixels from this station point. The
+  0348 station pan and the 0416 trade open differ,
+  so whether these are the same column slot acting
+  differently by context or two neighbouring icons is
+  unresolved.
+  Evidence in `_records_/2026-11-02/alliance-train/0348-queue-run.md`.
+
+
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like
@@ -360,3 +399,4 @@ Measured in the 0110 train unit (ticker-0104, window mode
   account card, distinct from base power - possibly the summed
   rider power the rating derives from, unverified.
 - Whether a member can board more than one train per day.
+- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit).

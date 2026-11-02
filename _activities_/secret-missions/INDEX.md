@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T10:32:00Z
+modified: 2026-11-02T12:32:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (panel visit, no task tapped)
   - source: ticker-2243 secrets execution record 2026-11-01 2243 queue run
   - source: ticker-0134 secret-missions execution record 2026-11-02 0150 queue run
+  - source: ticker-0404 secret-missions execution record 2026-11-02 0426 queue run (done, assists 5 of 5)
 ---
 
 
@@ -475,6 +476,91 @@ secrets-2026-10-31-2257, status partial).
   game state lost.
   Evidence in `_records_/2026-11-02/secret-missions/0150-queue-run.md`.
 
+## What the 2026-11-02 0426 unit added - assists unblocked, all 8 claims in one tap
+
+- Unit secrets-2026-11-02-0257 by ticker-0404, session
+  about 04:18 to 04:22, status done: every action this
+  regular defines for this run is complete, so the
+  tracker is marked done for the regular.
+- Entry: from the trade screen, two back-arrow taps
+  returned to base. The base left column was
+  re-grounded fresh: the white pickup (Secret Command
+  Post vehicle) at norm [54,650] opened SECRET COMMAND
+  POST on the first tap. Title verified before acting.
+- ASSISTS UNBLOCKED, correction to the 0150 section
+  above in favour of the newest verified record: the
+  Assist button is not dead. At entry, Assist Allies
+  0 of 5, Ally Tasks badge 5. The first-row Assist
+  button, freshly grounded at centre norm [782,488],
+  succeeded on a single tap with ASSIST SUCCESSFUL at
+  once, and four further single taps on the first-row
+  button each produced their own ASSIST SUCCESSFUL
+  popup. At close, read live: Assist Allies 5 of 5,
+  Ally Tasks badge cleared. First assist rewards, read
+  live: iron 195.0K, food 195.0K, Mystery Supply Box
+  x3, Hero EXP 247.7K, for [AP3x]Buckeye16; fifth
+  assist rewards, read live: Mystery Supply Box x3,
+  Refined Iron Module 29, Hero EXP 247.7K, for
+  [AP3x]HiveMinded. Assists two to four were
+  popup-verified only, their rewards were not
+  screenshotted and are not stated here.
+- Assessment for GitHub Issue #165 (commented from
+  this unit, left open for the retro): the Assist half
+  is resolved in this session. The 0134 unit tapped at
+  norm (825,475) - the Go-button x carried across
+  tabs - while the button centre in this session
+  grounds at x about 782, the same x the 0145 unit
+  measured at (782,485), so the 0150 misses may have
+  been a grounding offset, not a dead button. The
+  point must be re-grounded per tab and row, never
+  carried from the Go tab. Caveat kept, not smoothed
+  over: the 0145 unit's failure at (782,485) for UR
+  rows stands as a separate, row-dependent observation
+  - the 0426 rows' rarities are not stated in the
+  record, so this success does not retroactively
+  explain the 0145 failure. The Mega Deploy half is
+  UNTESTED here, not resolved: after claiming, Your
+  Tasks showed only PERFECT rows and no Go rows, so
+  there was nothing to batch-deploy. Per the issue's
+  own next step, the blocker is therefore NOT written
+  into this profile as a standing blocker - the Assist
+  evidence goes to the issue instead, and Mega Deploy
+  stays open.
+- Claims, all finished tasks in one tap: at entry,
+  Your Tasks badge 8, the four SSR tasks all showing
+  Claim buttons (Train Refugees, Provide Tech Support
+  to Refugees, Search for Missing Refugees, Protect
+  Refugee Camp), with the four SR tasks below the
+  fold. One tap on the first row's Claim button at
+  norm [797,482] collected ALL finished tasks - the
+  third observation of the one-tap-all claim rule, the
+  record noting it as observed twice before. Secret
+  Task Report, read live: Hero EXP 14.8M, iron 2.9M,
+  food 2.9M, Refined Iron Module 440, Skill Medal
+  1.3K, Lv.1 Drone Component Chest x5, Treasure Map
+  Fragment #1 x1, SSR Hero Universal Shard x1,
+  Treasure Map Fragment #5 x1, Treasure Map Fragment
+  #7 x1. A helper note named [AP3x]Nuna Knuckles as
+  helping claim task rewards. The Like All button was
+  left untapped (social action, not part of this
+  unit). After dismissal, all visible rows were
+  stamped PERFECT in gold and the Your Tasks badge
+  had cleared, which confirms all 8 tasks claimed,
+  not only the four seen.
+- Reward Recovery, checked, nothing outstanding: the
+  2026-10-24 record shows CLAIMED and the collapsed
+  2026-10-16 record sits below it. No unclaimed record
+  exists.
+- Dispatch, nothing available: after claiming, no Go
+  rows appeared - the task list holds only PERFECT
+  rows, so there is nothing to Mega Deploy in this
+  unit. The next secrets unit dispatches whatever the
+  list refills with. Plunder Others stayed 0 of 5,
+  not touched (no owner instruction). No diamonds,
+  no paid button, no speedup, no Mega Refresh.
+  Evidence in `_records_/2026-11-02/secret-missions/0426-queue-run.md`.
+
+
 ## Open questions
 
 - Answered 2026-11-01 (1417 unit), NOT reproduced 2026-11-02
@@ -484,7 +570,7 @@ secrets-2026-10-31-2257, status partial).
   no task card and its map-marker tap opened nothing, so
   the handshake route is session- or row-dependent until
   reproduced again; the list Assist button stays
-  unresponsive for UR rows and is not repeated.
+  unresponsive for UR rows and is not repeated. (2026-11-02 0426 update: first-row Assist succeeded 5 of 5 at freshly grounded [782,488]; the 0150 point 825 must not be reused on this tab. The 0145 UR-row failure at 782 stands as a separate row-dependent observation.)
 - The cost of Mega Refresh, and whether it can be used freely.
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.

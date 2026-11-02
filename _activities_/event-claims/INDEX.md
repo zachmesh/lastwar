@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T09:32:00Z
+modified: 2026-11-02T12:32:00Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1348 events unit)
   - source: ticker-2142 events execution record 2026-11-01 2200 queue run
   - source: ticker-0034 event-claims execution record 2026-11-02 0050 queue run
+  - source: ticker-0334 event-claims execution record 2026-11-02 0359 queue run (partial, Escape crash)
 ---
 
 
@@ -355,6 +356,58 @@ that drag is the sweep-completeness check, not wasted motion.
   sweep. Events hub closed with its back arrow, leaving
   the game on the base screen.
   Evidence in `_records_/2026-11-02/event-claims/0050-queue-run.md`.
+
+## What the 2026-11-02 0359 unit added - partial, Escape crash recurrence
+
+- Unit events-2026-11-02-0257 by ticker-0334, session
+  about 03:52 to 03:59, status partial. The hub sweep
+  was cut short by an app crash at the pass budget
+  end; the tracker is untouched and the next tick
+  re-produces this regular.
+- Events hub opened from the base right rail. It
+  landed on the current Arms Race phase page, Hero
+  Advancement, Contest Segment Lv.29-30, read live:
+  account score 40,500, rank #2110 [AP3x]Bears Lair,
+  phase countdown 02:08:44 falling. Point chest
+  thresholds 2,000, 4,000 and 12,000 are all passed at
+  this score. The top-left cumulative chest reads 6/2.
+  Score-context note: this 40,500 is the Hero
+  Advancement phase score, not the 0050 unit's Unit
+  Progression stage score of 0 - different sub-pages,
+  so the two reads do not contradict each other.
+- The 2,000 point chest was tapped: it opened only a
+  reward preview popup ("Valued: 2,360" - Skill Medal
+  200, Arms Race Badge 1, Coin Chest (SR) 4, Food
+  Chest (SR) 4, Iron Chest (SR) 4, 5m Speed-up 8) with
+  no Claim button visible. A preview-only tap is
+  consistent with that chest already having been
+  claimed by an earlier arms-race unit, but the
+  claimed state was not verified before the crash
+  below, so no chest state is asserted here. The
+  4,000 and 12,000 chests and the cumulative chest
+  were not tapped. No grinding was done; Arms Race
+  point work belongs to the arms-race unit. No paid
+  button was tapped: no Legendary Take All, no Battle
+  Pass unlock, no Level Swap.
+- App crash, self-inflicted, recovered: to close the
+  chest preview popup, an Escape key was sent.
+  LastWar quit immediately after the key reached it.
+  This re-affirms the standing rule recorded in the
+  workspace notes - never use Esc (or Ctrl-Cmd-F) on
+  this app, it crashes it. The Escape key must not be
+  used on LastWar again. Recovery: the app was
+  relaunched and came back directly to the base
+  screen (power 149,196,915, no login demand, no
+  "active on a different device" dialog). Nothing was
+  lost beyond this unit's unfinished sweep.
+- Not done in this unit: the 4,000 and 12,000 point
+  chests, the cumulative chest, and the remaining hub
+  tabs (Desert Battlefield, Wanted Boss, Community
+  and further right tabs) were not swept. The next
+  tick's events unit resumes the sweep; the arms-race
+  unit owns any unclaimed Arms Race chest.
+  Evidence in `_records_/2026-11-02/event-claims/0359-queue-run.md`.
+
 
 ## Open questions
 

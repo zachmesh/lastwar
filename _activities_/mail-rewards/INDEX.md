@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T09:32:00Z
+modified: 2026-11-02T12:32:00Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1730 mail unit)
   - source: mail-rewards execution record 2026-11-01 2131 queue run (ticker-2104 unit, partial, Alliance-panel back arrow stalled on background input)
   - source: ticker-0034 mail-rewards execution record 2026-11-02 0042 queue run
+  - source: ticker-0334 mail-rewards execution record 2026-11-02 0343 queue run (done, System 50 diamonds)
 ---
 
 
@@ -253,6 +254,47 @@ the next tick re-produces this regular as a fresh unit.
   reports with red dots only. Totals: 5 mails with gifts
   claimed (2 Alliance, 3 Event). Nothing deleted.
   Evidence in `_records_/2026-11-02/mail-rewards/0042-queue-run.md`.
+
+## What the 2026-11-02 0343 unit added
+
+- Unit mail-2026-11-02-0230 by ticker-0334, session
+  about 03:40 to 03:43, status done. Every claimable
+  category was Claim All swept; one reward was
+  claimed. Delete All was never pressed.
+- By category: Event, two unread mails (red dot) -
+  "[AP3x] Abuss Apex's Mega Exp..." and "[AP3x]
+  Missile Apex's train has...", both 1h ago - Claim
+  All answered "No rewards available.", both mails now
+  read. Regular, battle reports (Victory vs Lv.160
+  Doom Walker and Invading Zombies) - "No rewards
+  available." Alliance, Weekly Donation Ranking,
+  Daily Donation Ranking and New Alliance Marker
+  mails - "No rewards available." Season, Ice Breaking
+  Reports only - "No rewards available." System,
+  Season Conclusion and (President Mail) items -
+  Claim All produced a REWARD CLAIMED dialog showing
+  50 diamonds, the unit's only claim. Battle Report,
+  scout reports and Victory vs Lv.17 to Lv.20 Zombie
+  Horde reports - Claim All pressed, no reward dialog
+  appeared and the list was unchanged, no claimable
+  attachment. In-app Purchases was not swept: it holds
+  receipts only, per the activity metadata, and its
+  red dot is unread receipts, not rewards.
+- System is therefore claim-bearing in this unit, not
+  report-only: the 50-diamond System claim is the
+  first System claim recorded since the 2026-10-25
+  note that System held no claimable attachments that
+  day. The gift-icon rule from the 0042 unit still
+  governs which rows are swept - Claim All answers
+  "No rewards available." where no gift icon stands.
+- Back-arrow screen-dependence, new measured point:
+  the mail list arrow sits at normalized (64,952),
+  while the Alliance panel arrow measured (163,935)
+  - essentially the 0042 unit's (162,934) point, within
+  rounding. Re-ground per screen, never reuse a
+  back-arrow point across screens.
+  Evidence in `_records_/2026-11-02/mail-rewards/0343-queue-run.md`.
+
 
 ## Open questions
 
