@@ -3343,6 +3343,7 @@ of 2026-10-28.
   stay silent except this record.
   Full detail in tool-development/2036-run.md.
 
+<<<<<<< HEAD
 ## 20:39 to about 20:45 - PR catch-all pass
 
 - PR catch-all pass pr-catchall-2026-11-02-2039. No-op:
@@ -3424,3 +3425,33 @@ of 2026-10-28.
   commented at 1900, not force-merged. No records PR opened,
   no comment posted, no escalation. Full detail in
   pr-integration/2045-run.md.
+=======
+## 20:39 to about 21:10 - Daily retro pass (2026-11-02)
+
+- Retro pass lastwar-daily-retro for the window ending
+  2026-11-02, from the records/2026-11-02 branch pool
+  (snapshot tip b391b6f35, appendix pool state sha256
+  7c4da9b62aae35b13d7879668d1c3c8d83659890c414f37c3980e9dcf2f221b6).
+  Window 633 units: done 290, partial 285, expired 26,
+  failed 22, skipped-needs-owner 10. Nov 2 alone: 97
+  finished, done 39, partial 49, expired 6, failed 3.
+  Full detail in _records_/retro/2026-11-02.md and its
+  data appendix, and in retro-review/2039-run.md.
+- Issues filed: #196 (locating successor), #197
+  (points misuse), #198 (planner divergence), #199
+  (reaper lag). Issue closed: #128 (claiming).
+  Issues commented: #136, #130, #129, #133, #147,
+  #148, #149, #150, #174, #168.
+- Metadata PR by this run (Owner: lastwar-daily-retro):
+  alliance-duel 1.15.0 to 1.16.0 (duel-score expiry).
+  Other execution knowledge already folded by the
+  organiser (truck-plunder 1.18.0, alliance-donations
+  1.14.0, crystal-shop 1.2.0, glittering-market 1.1.0).
+- Owner-decisions register 1.2.0 to 1.3.0: ages
+  recomputed, new item OD-20261101-03 (Season Photo,
+  issue #154). No item decided this run; oldest items
+  2 days, none over 48 hours yet.
+- Records commit rides open records PR #193 (post-1900
+  batch, awaiting the 23:00 batch). No force push, no
+  direct main push.
+>>>>>>> retro-1102-delivery
