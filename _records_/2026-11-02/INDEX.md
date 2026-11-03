@@ -4036,6 +4036,9 @@ of 2026-10-28.
   done 660, upcoming 49. Full detail in
   queue-planning/2340-run.md.
 
+- 2338 shop-claims passes unit (ticker-2334): sweep done, all owned daily claims already taken, 0 new claims; record shop-claims/2338-queue-run.md.
+- 2341 event-claims events unit (ticker-2334): full hub sweep done, nothing claimable, 0 claims; record event-claims/2341-queue-run.md.
+- 2347 truck-plunder trucks unit (ticker-2334): partial, trade-screen entry failed (station route did not reproduce), counters unread, shortfall carried forward; record truck-plunder/2347-queue-run.md.
 
 ## 23:45 to about 23:52 - PR integration pass
 

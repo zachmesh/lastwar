@@ -1,8 +1,8 @@
 {
  "events": {
-  "at": "2026-11-03T05:13:46",
-  "note": "Events sweep done: 4 tabs, nothing claimable",
-  "status": "done"
+  "status": "done",
+  "at": "2026-11-03T07:41:33",
+  "note": "Hub sweep 2341: nothing claimable, 0 claims"
  },
  "gifts": {
   "at": "2026-11-03T07:10:53",
@@ -20,9 +20,9 @@
   "status": "done"
  },
  "passes": {
-  "at": "2026-11-03T05:10:07",
-  "note": "Shop sweep done: all owned claims already taken, no new claim",
-  "status": "done"
+  "status": "done",
+  "at": "2026-11-03T07:39:07",
+  "note": "Shop sweep 2338: all owned daily claims already taken, 0 new claims"
  },
  "radar": {
   "at": "2026-11-03T03:14:01",
