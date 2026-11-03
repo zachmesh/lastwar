@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T12:34:45Z
+modified: 2026-11-03T17:40:00Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-2104 secret-missions execution record 2026-11-02 2127 queue run (partial, four claims in one tap, assists and dispatch pending)
   - source: ticker-0004 secret-missions execution record 2026-11-03 0005 queue run (done, assists 5 of 5, UR Assist question stale)
   - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry, assists 5 of 5)
+  - source: ticker-0834 secret-missions execution record 2026-11-03 0837 queue run (done, unsnapped exact-centre entry re-confirmed, assists at cap, nothing pending)
 ---
 
 
@@ -896,6 +897,52 @@ secrets-2026-10-31-2257, status partial).
   Plunder Others 0/5, Your Tasks badge 0. Claimed in this
   unit: none (nothing was pending). Tracker: marked done
   for secrets by this pass. Game left on the base screen.
+
+## What the 2026-11-03 0837 unit added - unsnapped entry re-confirmed, assists at cap, done
+
+- Unit secrets-2026-11-03-0657 by ticker-0834, session
+  about 08:37 local, status done. Evidence in
+  `_records_/2026-11-03/secret-missions/0837-queue-run.md`.
+  No "active on a different device" dialog appeared. No
+  diamonds, no money, no speedup, no paid button, no
+  Others plunder touched.
+- Entry, re-confirmed: the unsnapped exact-centre tap at
+  norm [55,632] opened SECRET COMMAND POST on the first
+  try, title verified before any further tap, matching
+  the 0346 unit lesson (snapped taps in this column land
+  on Intercity Trade instead). Second first-try
+  confirmation of the unsnapped route in one day.
+- State, read live, unchanged from the 0346 unit: Secret
+  Command Post header Assist Allies 5/5, Plunder Others
+  0/5. Your Tasks, four cards: UR Disrupt electric grid
+  (no PERFECT stamp, no Claim button visible), SSR Search
+  for Missing Refugees PERFECT, SSR Provide Tech Support
+  to Refugees PERFECT, SSR Train Refugees PERFECT. The
+  PERFECT stamps mark already-claimed tasks; no finished
+  task was left unclaimed. Mega Refresh and Mega Deploy
+  both greyed out, as in the 0346 unit: with no pending
+  task to deploy there is nothing to deploy or refresh,
+  and no Mega Refresh cost could be checked.
+- Ally Tasks tab: Dw1968 UR rows with blue Assist buttons
+  visible, but the counter stands at the 5/5 cap, so no
+  assist was tapped. Secret Task Report (Record icon):
+  Assist history for today, [AP3x]Buckeye16 rows at 11-3
+  00:09 and 00:10 and a further row at 00:08, confirming
+  the assists were used today to reach the cap. Read
+  only, nothing claimed.
+- Reward Recovery (Recover icon at norm [845,205]): the
+  2026-10-24 19:00 record reads CLAIMED, the 2026-10-16
+  record is collapsed as before, no new claimable record
+  exists. Panel closed with its X; nothing claimed.
+- Outcome: done. The regular is fully done for this
+  window: ally assists at the 5/5 cap, no finished task
+  left unclaimed, Reward Recovery checked with nothing
+  new, and no pending task available to dispatch.
+  Counters at close, read live: Assist Allies 5/5,
+  Plunder Others 0/5. Claimed in this unit: none
+  (nothing was pending). Tracker: marked done for
+  secrets by this pass. Game left on the base screen.
+
 
 ## Open questions
 
