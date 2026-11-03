@@ -3270,3 +3270,29 @@ of 2026-10-28.
   records PR 187 conflict on action-log.jsonl carried,
   already commented at 1900, not force-merged. Full
   detail in pr-integration/1945-run.md.
+- Harvest unit harvest-2026-11-02-1803, partial (ticker-1934):
+  one farmland bubble collected (food 226.5M to 227.1M, about
+  plus 0.6M); two mis-taps (Iron Mine Lv.27 selection, Survivor
+  List panel) were closed without action, nothing spent or
+  started. Full-map sweep to zero bubbles, the left-side
+  gold/stone bubbles and the armed truck loot bubble remain
+  unverified; Season 2 area excluded per standing rule.
+  Tracker untouched. Full detail in
+  resource-collection/1945-queue-run.md.
+
+- Survivors unit survivors-2026-11-02-1803, partial (ticker-1934):
+  one question-mark figure seen at the gate, but two taps at
+  its point selected a squad vehicle instead of opening a
+  survivor card, so no survivor was taken in and Quick
+  Dispatch did not run. Method at that point ended per R2;
+  next unit to re-ground at the gate and try a different
+  entry variant. Tracker untouched. Full detail in
+  survivor-intake/1948-queue-run.md.
+
+- Training unit training-2026-11-02-1803, partial (ticker-1934):
+  no barracks panel opened and no batch queued; the upward
+  drag to expose the barracks tents did not pan the view
+  (possibly intercepted by the open squad selection radial).
+  No Drill Ground figure read live. Tracker untouched.
+  Further data point for open issue #150, not a new issue.
+  Full detail in troop-training/1949-queue-run.md.
