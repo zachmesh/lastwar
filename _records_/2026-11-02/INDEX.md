@@ -3918,3 +3918,23 @@ of 2026-10-28.
   3,600,000 is reported. Tracker untouched; the next tick
   re-produces the regular. Full detail in
   alliance-duel/2326-queue-run.md.
+
+
+## 23:30 to about 23:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-2330,
+  no-op non-batch pass (checker
+  _tools_/records_batch.py reports due in the
+  23:00-24:00 America/Los_Angeles window, but the
+  23:00 batch already merged as PR #193 at 23:02
+  PST, so this is the third pass in the window,
+  not a batch pass): no records PR merged.
+  Records PR #204 (2026-11-02, head 51e90657)
+  awaiting the 03:00 batch; records PR
+  #187 (2026-11-01, head 2be5df83) still
+  conflicted on _logs_/repo-actions/action-log.jsonl,
+  the conflict comment from the 1900 pass stands,
+  not force-merged, awaiting branch-side
+  resolution. No knowledge or code PR open, no
+  owner-gated PR. Full detail in
+  pr-integration/2330-run.md.
