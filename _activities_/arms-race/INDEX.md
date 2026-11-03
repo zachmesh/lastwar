@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T00:55:00Z
+modified: 2026-11-03T06:38:05Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: arms-race execution record 2026-11-02 0608 queue run
   - source: ticker-1004 arms-race execution record 2026-11-02 1015 queue run (partial, first unit of Drone Boost phase)
   - source: ticker-1452 arms-race execution record 2026-11-02 1508 queue run (partial, first unit of Hero Advancement phase, 20.0M EXP shortfall)
+  - source: ticker-2204 arms-race execution record 2026-11-02 2209 queue run
 ---
 
 
@@ -916,3 +917,59 @@ slot. Evidence in
 - Red lines held: no diamonds or money spent, no speedup
   item burned, no stage swapped, no research or building
   started, no chest tapped that was not earned.
+
+## What the 2026-11-02 2209 unit added - Tech Research, 0 of 30,000, partial
+
+- Unit arms-race-2026-11-02-2203 by ticker-2204, status partial,
+  tracker untouched. First unit inside the new Tech Research
+  phase. Evidence in
+  `_records_/2026-11-02/arms-race/2209-queue-run.md`.
+- Live phase and score, read twice: Tech Research, Contest
+  Segment Lv.29-30, time left 03:52:51 at entry and 03:50:31 at
+  the sweep; the phase window ends about 02:01 PST. Score 0, read
+  from the star bar at the top left of the phase page at entry
+  and again at the sweep. The ranking row figure 9,300 for
+  [AP3x]Bears Lair is the lagging previous-phase row (same
+  pattern as the 1508 record) and was NOT used as this phase
+  score - never carry the ranking row into the phase score.
+- Chest thresholds: 6,250 / 12,500 / 30,000 (ruby tags 2,360 /
+  4,800 / 11,800). Tier-3 gap: 30,000 points.
+- Scoring table, read live: Increase Tech Power by 1pt +1, Use
+  1-min Research Speed-up +10, Buy Packs containing Diamonds +30
+  per diamond. The speedup and pack paths are red lines and were
+  not used.
+- Tech Power path NOT closed this unit: whether a research
+  completion already under way lands inside this phase window
+  could not be read live (navigation blockers below), so no
+  unreachable verdict is claimed here. The next arms-race unit
+  must read the research queue first, from the base screen,
+  before judging tier-3.
+- Completion sweep (phase page): no point chest earned (score 0
+  is below the 6,250 first threshold), so nothing was claimed and
+  nothing earned was left unclaimed. Cumulative counter chest at
+  top left reads 0 of 2 with no bounce and no red dot - not
+  claimable. Ranking row chest tapped once: contents preview only
+  (Iron Chest (SR) 6, Food Chest (SR) 6, Coin Chest (SR) 6), no
+  Claim button. Nothing claimed from it. No bouncing chest or
+  reward red dot remains on the Arms Race page. The Events hub
+  card re-scan was not completed: the phase page back arrow did
+  not navigate (see below), so the hub was not re-scanned after
+  the sweep; the phase page itself shows no unclaimed reward.
+- Method notes, rule R2: Events tab bar - one drag to the right
+  revealed the Arms Race tab, and the next tap opened the phase
+  page, reusing the 0608 pivot. Scoring-row jump failed: two taps
+  on the Increase Tech Power row (arrow, then row centre)
+  produced no navigation; the method ended inside this unit per
+  R2. Back arrow failed: one tap at norm 90,947 did not leave the
+  Arms Race page, matching the 1924 record. Next-unit route
+  change: enter the research queue from the base screen queue
+  icons (flask icon) instead of the scoring-row jump, and do not
+  rely on the phase page back arrow.
+- Result stats: phase Tech Research, score 0, target 30000, gap
+  30000, chests_claimed 0, scoring_actions 0, verified no (score
+  and thresholds are same-unit live reads, but the in-window
+  completion judgment was not completed), blocker_category e
+  (repeated navigation blocker).
+- Red lines held: no diamonds or money spent, no speedup item
+  burned, no stage swapped, no research or building started, no
+  chest tapped that was not earned.
