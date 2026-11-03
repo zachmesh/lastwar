@@ -499,3 +499,21 @@ of 2026-10-28.
   2026-10-31 branch head verified already in main,
   so no PR was opened for it.
   Full detail in pr-integration/0230-run.md.
+## 02:32 to about 02:37 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-03-0232.
+  Own PRs checked first (none open in the tooling class;
+  PR 210 merged, 0132 run no-op); open tooling issue 213
+  taken as the single item (filed 01:53 by ticker-0134,
+  zero comments, no other worker on it). Fix: queue.py
+  sync and plan now drop inbox copies of units already
+  closed in done (counted as stale_done_dropped), and
+  next skips and claim refuses such units, so a delivered
+  unit cannot be re-executed from a stale working-tree
+  pool - both #213 units carry an empty expires_at, so
+  _expire_stale never saw them. PR 214 opened (branch
+  work/done-duplicate-drop-213, commit 35673dddb4);
+  issue 213 commented, not closed. Validation: 15
+  fixture assertions on scratch pools under /tmp, all
+  passed, including unpatched-main controls reproducing
+  the bug. Full detail in tool-development/0232-run.md.
