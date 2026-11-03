@@ -2337,3 +2337,22 @@ of 2026-10-28.
   applied agree, all zero; 0 withdrawals. Pool: inbox 60,
   claimed 1, done 726, upcoming 51. Full detail in
   queue-planning/1140-run.md.
+
+## 11:45 to about 12:00 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1145,
+  knowledge PR 231 merged (organizer 1132, 7 profile
+  folds: 1044 harvest, 1050 survivors, 1051 training,
+  1055 mail, 1113 gifts, 1121 help, 1124 train;
+  squash commit 7b646e42, branch deleted, local main
+  fast-forwarded to 7b646e42). Non-batch pass for
+  records purposes (checker _tools_/records_batch.py
+  on main said due yes for the 11:00 window, but the
+  1100 batch merge of PR 224 already happened in this
+  window, so only the first pass merges). Records PR
+  229 (records/2026-11-02) left awaiting the 15:00
+  batch. Records PR 207 (records/2026-11-03) and PR
+  187 (records/2026-11-01) conflicts carried, comments
+  from the 0300 and 1900 batch passes stand, no
+  duplicate comment posted. No owner-gated PR.
+  Full detail in pr-integration/1145-run.md.
