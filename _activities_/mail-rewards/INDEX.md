@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T07:37:53Z
+modified: 2026-11-03T11:36:26Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: mail-rewards execution record 2026-11-02 1226 queue run (ticker-1204 unit, done, all categories swept, no reward available)
   - source: mail-rewards execution record 2026-11-02 2012 queue run (ticker-2004 unit, done, 7 mails claimed)
   - source: mail rewards execution record 2026-11-02 2313 queue run
+  - source: ticker-0304 mail-rewards execution record 2026-11-03 0312 queue run (done, all categories empty, Escape crash recurrence)
 ---
 
 
@@ -486,6 +487,36 @@ the next tick re-produces this regular as a fresh unit.
   notifications and never miss important messages
   again."). Cancel was tapped; Enable Now was not
   touched and no system setting was changed.
+
+
+## What the 2026-11-03 0312 unit added - all categories empty, Escape crash recurrence
+
+- Ticker-0304, unit mail-2026-11-03-0230, about 03:12
+  local, status done. Evidence in
+  `_records_/2026-11-03/mail-rewards/0312-queue-run.md`.
+- Claim All pressed in every mail category, one at a
+  time. Each answered "No rewards available": Event (the
+  only claimable category carrying a red dot on entry),
+  Alliance, Season, System, Regular, Battle Report, and
+  In-app Purchases (receipts only, as recorded in the
+  activity metadata; its red dot was receipts, not
+  rewards). A red dot on a mail category is therefore
+  not by itself a claimable reward: the Event category
+  carried a red dot and still answered No rewards
+  available.
+- 0 rewards claimed, 0 mail deleted. Delete All was
+  never pressed in any category.
+- Reaching Mail, Escape crash recurrence: the Alliance
+  panel back arrow took three background taps with no
+  change, so the Esc key was tried and the game app
+  quit. Esc is a known crash trigger for this app and
+  must not be used again; this unit re-affirms the ban
+  in this profile as well as in event-claims. The app
+  was reopened with open_app, returned to the base
+  screen with no takeover dialog, and Mail was then
+  opened from the base right rail and swept normally.
+  The gifts and help units completed before this
+  incident were unaffected.
 
 ## Open questions
 

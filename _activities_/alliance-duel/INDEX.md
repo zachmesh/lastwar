@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T07:37:53Z
-version: 1.17.0
+modified: 2026-11-03T11:36:26Z
+version: 1.18.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-0334 star-ceremony execution record 2026-11-02 0348 queue run (done, no ceremony waiting)
   - source: ticker-1234 star-ceremony execution record 2026-11-02 1241 queue run (done, no ceremony waiting)
   - source: alliance duel execution record 2026-11-02 2326 queue run
+  - source: ticker-0304 alliance-duel execution record 2026-11-03 0314 queue run (done, ceremony none waiting, personal total unread by design)
 ---
 
 
@@ -616,6 +617,32 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   duel-score unit, where present, is the other
   reader of this same line. No duel-score figure is
   claimed from this unit.
+
+
+## What the 2026-11-03 0314 unit added - ceremony none waiting, alliance totals snapshot, personal total unread by design
+
+- Ticker-0304, unit star-ceremony-2026-11-03-0230,
+  about 03:14 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-duel/0314-queue-run.md`.
+- Base screen right rail inspected: Events, Capitol, the
+  gold VS medallion, Season II, Alliance, Mail and
+  Inventory. No trophy icon sits beside the Alliance
+  icon, so no Star Ceremony is waiting to be played.
+  Nothing was played, claimed or emoted. The trophy
+  beside Alliance remains the ceremony-waiting signal.
+- Duel panel opened for a look only: today's theme Base
+  Expansion, countdown 14:47:56, alliance totals The Apex
+  337,971,369 (42 percent) against Kmf 460,462,861 (58
+  percent). These are alliance figures, not a personal
+  total, and they are recorded as a snapshot only.
+- Personal daily total NOT read in this unit, by design:
+  per the 2026-11-01 handover, the total read belongs to
+  the duel-score regular, not star-ceremony. No ranking
+  scroll was attempted, and no total or gap against
+  3,600,000 is reported here. This unit complies with
+  the handover; the division of labour stands.
+- Duel panel closed with its back arrow, leaving the game
+  on the base screen.
 
 ## Open questions
 

@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-03T07:37:53Z
-version: 1.17.0
+modified: 2026-11-03T11:36:26Z
+version: 1.18.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -19,6 +19,7 @@ grounded_in:
   - source: survivor-intake execution record 2026-11-02 1718 queue run (ticker-1703 unit, partial, 89,722 radar-entry correction)
   - source: survivor-intake execution record 2026-11-02 1948 queue run (ticker-1934 unit, partial, figure taps select squad vehicle)
   - source: survivor intake execution record 2026-11-02 2252 queue run
+  - source: ticker-0234 survivor-intake execution record 2026-11-03 0247 queue run (partial, bubble change not intake proof, re-ground before every tap)
 ---
 
 
@@ -818,6 +819,64 @@ Measured on 2026-10-25.
   as issue #168; this unit's bubble-centre evidence
   is commented there by the executor, not filed anew.
 
+
+## What the 2026-11-03 0247 unit added - bubble change is not intake proof, re-ground before every tap
+
+- Unit survivors-2026-11-03-0203 by ticker-0234, about
+  02:47 local, status partial. Evidence in
+  `_records_/2026-11-03/survivor-intake/0247-queue-run.md`.
+- Entered from the harvest unit's top-edge panned view:
+  the front gate (walled entrance with the yellow sign,
+  top-centre of the view) was already in frame. Fresh
+  visual grounding counted 3 survivor figures with
+  question-mark bubbles at the gate, at norm (475,384),
+  (506,378) and (535,372).
+- Tap 1 at the first grounded figure (475,384): no card
+  or dialog opened. The next screenshot showed two
+  smiley-face bubbles where question marks had been, and
+  a re-ground counted 1 question-mark bubble left at
+  (450,330). No name, role or recruit card was read for
+  any survivor, so no intake is claimed as verified from
+  the bubble change alone: the bubble state moved, but
+  the intake itself was never confirmed on a card. This
+  is the standing proof rule, re-confirmed: a
+  question-mark to smiley change without a card is not
+  an intake.
+- Tap 2 at the estimated figure point under the last
+  question mark (450,375): misfired. It selected the 1st
+  Squad Lv.20 map marker instead and opened its squad
+  controls (tank icon and green arrow). The point was
+  stale: the view had shifted slightly between the
+  grounding screenshot and the tap, and the figure
+  estimate was never re-grounded on the current frame.
+  Nothing was dispatched from the squad controls; an
+  empty-ground tap at (600,700) deselected them cleanly.
+  The lesson is now absolute for this activity:
+  re-ground the gate figures fresh on the current
+  screenshot before EVERY tap, never reuse a figure
+  point across screenshots, because the map drifts
+  between frames.
+- Closing gate state, unverified: the closing screenshot
+  shows no question-mark bubbles at the gate itself, but
+  a grounding pass on it returned one ambiguous
+  question mark at (638,693), away from the gate and not
+  identifiable as a gate survivor, so it is not counted
+  as a remaining line member. The line is therefore
+  neither confirmed clear nor confirmed staffed.
+- Quick Dispatch did not run: with no verified intake
+  and no building panel opened, there was nothing to
+  post, and the unit budget was spent. It stays as
+  follow-up for the next unit if an intake is verified
+  there.
+- Result stats: target 3, achieved 0, verified no,
+  blocker category c. Tracker untouched, per the rule
+  for partial units; the next tick re-produces survivors
+  and resumes at the gate. Follow-up: re-ground fresh
+  before every tap, tap figures only, and if a card
+  opens, record the name, role and trait before Recruit.
+  This unit's evidence is commented onto Issue #168 by
+  this run; the issue stays open.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -890,3 +949,5 @@ Measured on 2026-10-25.
 - 1.16.0 (2026-11-02): seventh distinct partial since the 1644 done (1803 unit, gate line explicitly unverified, close discipline held), figure taps at 485,680 and 490,690 selecting the 1st Squad Lv.20 vehicle instead of a survivor card so the figure point is a squad-vehicle selection in this view, deselect tap at 750,500 selecting a Farmland Lv.28 building, squad radial left open at close, fresh-grounding plus different-variant re-read named, and Issue #168 evidence commented by this run, folded from the 1948 survivors record.
 
 - 1.17.0 (2026-11-02): eighth distinct partial since the 1644 done (2252 unit, gate line explicitly unverified, close discipline held), rule R2 bubble-centre method tried and failed with (447,550) and (448,580) resolving to Titanium Alloy Factory No.3, no second tap per rule R2, deselect at (750,800), do-not-reuse list extended with both points, and Issue #168 evidence commented by the executor, folded from the 2252 survivors record.
+
+- 1.18.0 (2026-11-03): ninth distinct partial since the 1644 done (0247 unit, gate line explicitly unverified, close discipline held), bubble change to smiley without a card explicitly not counted as an intake, stale figure point (450,375) selecting the 1st Squad Lv.20 vehicle so re-grounding before every tap is now absolute, ambiguous question mark at (638,693) away from the gate not counted, Quick Dispatch not run with no verified intake, and Issue #168 evidence commented by this run, folded from the 0247 survivors record.

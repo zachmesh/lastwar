@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T07:37:53Z
+modified: 2026-11-03T11:36:26Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: alliance-help execution record 2026-11-02 1741 queue run (ticker-1729 unit, partial, Healing Help request unhelped)
   - source: ticker-2034 alliance-help execution record 2026-11-02 2038 queue run (done, base-screen bubble, Alliance red dot is not remaining help)
   - source: alliance help execution record 2026-11-02 2311 queue run
+  - source: ticker-0304 alliance-help execution record 2026-11-03 0308 queue run (done, header 980 unchanged by Help All)
 ---
 
 
@@ -490,6 +491,31 @@ Measured in the 0135 help unit (ticker-0134, window mode
   unchanged header means the press found no ally
   request to help. Closed the Help panel back to the
   Alliance panel.
+
+
+## What the 2026-11-03 0308 unit added - done, header 980 unchanged by Help All, toast again not proof
+
+- Ticker-0304, unit help-2026-11-03-0230, about 03:08
+  local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/0308-queue-run.md`.
+- From the Alliance Gifts screen, backed out to the
+  Alliance panel and opened Help at the visually grounded
+  position.
+- Help page header read Today's points gained from
+  Alliance Help 980 of 1,000. The listed requests were
+  all this account's own (Bears Lair, 30 of 30):
+  Precision Targeting II research, Lv.30 Aircraft Center
+  building, Morale research, and Healing Help.
+- Pressed Help All. The game answered "Allies are very
+  grateful for your assistance". The header stayed 980
+  of 1,000 afterwards, and the own requests then showed
+  time reduced instead of 30 of 30. This re-confirms the
+  2311 resolution: the grateful toast alone is not
+  delivery proof, and the header re-read (980 before and
+  after) supersedes any toast-counted reading, since the
+  visible rows were all the account's own requests.
+- No individual help was tapped, no other screen was
+  changed.
 
 ## Open questions
 

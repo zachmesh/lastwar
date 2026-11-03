@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T10:36:50Z
+modified: 2026-11-03T11:36:26Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-2204 alliance-donations execution record 2026-11-02 2220 queue run
   - source: ticker-0104 alliance-donations execution record 2026-11-03 0127 queue run (done, 19 coin donations, entry centre corrected, re-read pending)
   - source: ticker-0134 alliance-donations execution record 2026-11-03 0144 queue run (done, 2 coin donations, count replenished 0 to 2, re-read pending)
+  - source: ticker-0234 alliance-donations execution record 2026-11-03 0235 queue run (partial, entry centre framing, 2 verified donations, re-read retimed)
 ---
 
 
@@ -1298,6 +1299,90 @@ enqueued for after the cooldown (not before about
   stands. The pool divergence is filed as Issue #213
   (label tooling, owned by lastwar-tool-developer, not
   duplicated here).
+- Red lines held: no diamonds spent, no paid button
+  tapped, no alliance diplomacy, no assembly, no
+  teleport.
+
+
+## What the 2026-11-03 0235 unit added - entry centre framing, 2 verified donations, re-read retimed
+
+- Ticker-0234, unit donations-2026-11-03-0203, about 02:35
+  local, partial. Coin button only: no diamonds, no money,
+  no paid button tapped. Evidence in
+  `_records_/2026-11-03/alliance-donations/0235-queue-run.md`.
+- Entry, correction in favour of the newest verified
+  record: the three 2026-11-02 donations units (0621,
+  1020, 1427) failed to open the Alliance menu, and this
+  unit broke the blocker with a single tap at the freshly
+  measured Alliance shield centre (910,720) on the current
+  screenshot, base framing already correct on entry. The
+  (903,787) centre recorded by the 1427 unit did not
+  match this screenshot's Alliance position (the shield
+  sits higher on this view), and the (930,689) centre
+  corrected by the 0127 unit is a third, different point.
+  No recorded shield centre is universal: the shield
+  centre is framing-specific, and the standing rule is
+  re-grounding on the current screenshot, not reusing a
+  recorded point. The earlier points are qualified, not
+  erased.
+- Alliance menu read: [AP3x] The Apex, 94/100 members.
+  The Help and Alliance Gifts red dots on the menu belong
+  to their own units and were left untouched.
+- State, read live: War tab Troop Movement 5/10, Rallied
+  HP 6/10, Rallied Attack 7/10, Rallied Defense 7/10, next
+  node below 1/10. Tech Donation Today 5250 at entry, the
+  same figure as the 0144 close. Rallied Attack panel:
+  Tech EXP 10.3K/4.5M, Current +7 percent, Next Level +8
+  percent, Donation Reward 50/50, Donation Count 2/30,
+  coin Donate green at 800 coin, diamond Donate untouched
+  at 2 diamonds.
+- Donations, per-tap evidence: tap 1 at the green coin
+  Donate centre (709,783) moved Donation Count 2/30 to
+  1/30, verified by screenshot, and Tech EXP 10.3K to
+  10.4K, so it landed. Tap 2 at the same centre greyed
+  the button with a 00:02:27 cooldown timer, verified by
+  screenshot, while Tech EXP stayed 10.4K (display rounds
+  to 0.1K, so this neither proves nor disproves a
+  landing). The cooldown was waited out inside the unit
+  (100 seconds, then 30 seconds); after expiry the panel
+  re-read Donation Count 1/30 live. Either tap 2 did not
+  land, or the count replenished by 1 across the 2:27
+  cooldown: this unit does not decide between the two,
+  and the replenishment rule stays tracked as Issue #174
+  (and #160). Tap 3 at the same centre showed no visual
+  change on the tap itself, but the next screenshot
+  showed Tech EXP 10.4K to 10.5K and the coin button
+  greyed with a 00:18:45 cooldown timer, so a donation
+  landed on this tap (EXP move is the evidence). A
+  tooltip line seen in the tap-3 observation reads "Hold
+  down for easier continuous donations": a hold-to-donate
+  route exists and is untested; the next unit may try it
+  if single taps stop registering.
+- Coin spent by arithmetic only (HUD coin reads 5.9M
+  throughout, too coarse to show 800-coin steps): 3 taps
+  times 800 coin = 2,400 coin, with only taps 1 and 3
+  verified as landings. Honor HUD moved 193.3K to 193.5K
+  across the unit; not claimed as this unit's alone.
+- Closing state, unverified by the hard rule: at close
+  the Donation Count cannot be read live, because the
+  00:18:45 timer from tap 3 (started about 02:42) runs
+  until about 03:01 local, past this unit's budget, and
+  the count label is hidden behind it. This unit closes
+  partial and unverified, not done, and no arithmetic
+  final count is claimed. Tracker left untouched,
+  following the 0144 precedent.
+- Re-read retiming, measured: the re-read unit
+  donations-2026-11-03-0910 was already queued with
+  not_before 02:10 local, which predates this unit's
+  18:45 timer; claiming it before about 03:02 would find
+  the timer still running and waste an attempt. Its
+  not_before was moved to 2026-11-03T11:02:00Z (03:02
+  local) and its window text updated to the tap-3
+  00:18:45 timer, so the next claimable tick after the
+  cooldown does the re-read. No new issue filed:
+  replenishment is already Issue #174, commented with
+  this unit's cooldown data points by the executor, so
+  no duplicate organizer comment was made there.
 - Red lines held: no diamonds spent, no paid button
   tapped, no alliance diplomacy, no assembly, no
   teleport.
