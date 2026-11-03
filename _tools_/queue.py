@@ -33,6 +33,9 @@ Usage:
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
   queue.py [--root DIR] reap                      # expired leases to inbox
+             # reap, sync and plan warn on stdout (exit still 0)
+             # when the root holds no pool state directory at
+             # all, so a wrong root never reports a silent zero
   queue.py [--root DIR] stats [--format text|yaml|json]
              # stats names stalled priority-1 inbox units
              # (age over 4h) under stalled_priority1, for the
@@ -239,6 +242,24 @@ def list_units(root, state):
     return out
 
 
+def pool_root_warning(root):
+    """Warning when root holds no pool state directory at all.
+
+    A wrong root reads as an empty pool today: list_units returns
+    [] for a missing folder, so reap on a root that is not a pool
+    reports expired 0 with nothing to show it never saw the pool
+    (issue #199 follow-up: the 2143 run's wrong-root scratch run
+    did exactly that). A pool that exists but is empty still has
+    its state directories, so only the no-directory case warns.
+    Warning only, never a block, matching complete's convention.
+    """
+    if any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        return ""
+    return (f"warning: pool root {root} holds no inbox, claimed "
+            "or done directory - the counts below describe an "
+            "empty or wrong root, not the live pool")
+
+
 # Aging against starvation (IMP-20261031-09, loop review
 # 2026-10-31 open link 4): a no-expiry low-priority chained unit
 # used to sort behind every expiring unit forever, because expiry
@@ -428,6 +449,9 @@ def _window_aged_priority1(root):
 
 
 def cmd_sync(args):
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
     # 1. reap expired claims and expire stale inbox units
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
@@ -724,6 +748,9 @@ def _expire_stale(root):
 
 
 def cmd_plan(args):
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
     defs_path = args.regulars_json or os.path.join(
@@ -1104,6 +1131,9 @@ def cmd_token_release(args):
 
 
 def cmd_reap(args):
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
     moved = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
     print(f"reaped {moved} expired claim(s), "
