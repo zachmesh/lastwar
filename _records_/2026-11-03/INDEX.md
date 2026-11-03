@@ -1149,3 +1149,18 @@ of 2026-10-28.
   panel, loot box and mail category lists carried to
   successor scout-midday-scout-mid-2026-10-31-004. Full
   detail in perception-scout/0446-queue-run.md.
+
+## 04:45 to about 04:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0445.
+  Non-batch pass per the checker (next batch 07:00):
+  knowledge PR 219 merged by squash (organizer 0432,
+  trucks 0344 entry failure, secrets 0346 unsnapped
+  entry, treasures 0349 into 3 profiles; merge commit
+  fa7c5272). Records PR 216 (2026-11-02, clean test
+  merge) awaits the 07:00 batch. Records PR 207
+  (2026-11-03) and PR 187 (2026-11-01) still conflicted
+  on the action log (207 also on the Nov 3 state
+  file); the standing conflict comments stand, not
+  force-merged. No owner-gated PR.
+  Full detail in pr-integration/0445-run.md.
