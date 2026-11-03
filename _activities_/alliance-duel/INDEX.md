@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T05:30:00Z
-version: 1.16.0
+modified: 2026-11-03T07:37:53Z
+version: 1.17.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -20,6 +20,7 @@ grounded_in:
   - source: queue-planning execution record 2026-11-01 2240 run
   - source: ticker-0334 star-ceremony execution record 2026-11-02 0348 queue run (done, no ceremony waiting)
   - source: ticker-1234 star-ceremony execution record 2026-11-02 1241 queue run (done, no ceremony waiting)
+  - source: alliance duel execution record 2026-11-02 2326 queue run
 ---
 
 
@@ -575,6 +576,46 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   `_queue_/done/duel-score-2026-11-02-*.md`, and
   planner records `_records_/2026-11-02/
   queue-planning/1440-run.md` and `1940-run.md`.
+
+## What the 2026-11-02 2326 unit added - ceremony none waiting, alliance totals snapshot, personal total unread
+
+- Unit star-ceremony-2026-11-02-2230 by ticker-2304,
+  session about 23:26 to 23:30, status partial.
+  Tracker untouched, so the next tick re-produces
+  this regular. Evidence in
+  `_records_/2026-11-02/alliance-duel/2326-queue-run.md`.
+- Ceremony check, done, nothing waiting: base screen
+  inspected, no trophy icon beside the Alliance icon
+  on the right side. Per the activity metadata the
+  icon is present only while a ceremony is waiting
+  and disappears once it has been played and
+  claimed. No ceremony was played in this unit
+  because none was waiting.
+- Duel panel read live from the VS icon: Duel
+  Progress, Today's Duel, theme Base Expansion,
+  countdown 18:33:56 at entry. Alliance totals read
+  live: The Apex 260,334,917 (46%) against [Kmf]
+  311,756,756 (54%). These are alliance totals only
+  and never substitute for the personal total.
+- Personal total read, unverified, pass budget
+  ended the hunt: the visible MVP list showed Abyss
+  Apex 18,306,600, [Kmf] 11,296,350 and [Kmf] Maison
+  JP 10,407,300. One upward drag scrolled the list
+  to further rows, but the account's own row (Bears
+  Lair) was not reached before the pass budget
+  ended. The personal daily total is therefore
+  UNREAD in this unit, and no total or gap against
+  3,600,000 is reported: a fragment or alliance
+  figure never substitutes for the personal total.
+- Follow-up, carried to the next unit: the next tick
+  re-produces this regular, and that unit should
+  resume the ranking scroll to the account's own
+  row. The owner decision of 2026-11-01 moved the
+  total read to the duel-score regular; this unit
+  followed the metadata in front of it, and the
+  duel-score unit, where present, is the other
+  reader of this same line. No duel-score figure is
+  claimed from this unit.
 
 ## Open questions
 

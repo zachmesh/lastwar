@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-03T04:41:07Z
-version: 1.16.0
+modified: 2026-11-03T07:37:53Z
+version: 1.17.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -18,6 +18,7 @@ grounded_in:
   - source: survivor-intake execution record 2026-11-02 1640 queue run (ticker-1631 recovery unit, partial, gate point no-change, recovery-written)
   - source: survivor-intake execution record 2026-11-02 1718 queue run (ticker-1703 unit, partial, 89,722 radar-entry correction)
   - source: survivor-intake execution record 2026-11-02 1948 queue run (ticker-1934 unit, partial, figure taps select squad vehicle)
+  - source: survivor intake execution record 2026-11-02 2252 queue run
 ---
 
 
@@ -768,6 +769,55 @@ Measured on 2026-10-25.
   here.
 
 
+## What the 2026-11-02 2252 unit added
+
+- Unit survivors-2026-11-02-2203 by ticker-2234,
+  session about 22:47 to 22:52, status partial: 0
+  survivors processed, gate line unverified, tracker
+  untouched, so the next tick re-produces this
+  regular. This is the eighth distinct partial since
+  the 1644 done, by the 0041 counting rule
+  (re-attempts of one unit do not add to the count).
+  No Quick Dispatch ran, since no intake happened.
+  Evidence in
+  `_records_/2026-11-02/survivor-intake/2252-queue-run.md`.
+- Method change under rule R2, following the 1948
+  unit's named re-read on open issue #168: instead
+  of repeating the figure taps that selected a squad
+  vehicle in 1948, this unit tried the bubble centre
+  itself, on the undragged restored base view left by
+  the harvest unit in the same pass.
+- Visual grounding on that base screenshot returned
+  a survivor figure at norm (448,580) and a
+  question-mark bubble at norm (447,550). The
+  bubble-centre tap at (447,550) selected Titanium
+  Alloy Factory No.3 Lv.30 (orange info button,
+  building label), not a survivor card, dialog or
+  recruit. The grounding point was a building area
+  mislabelled as a survivor, the same mislabelling
+  class as the 0636 radar grounding notes.
+- Per rule R2 the method at this point ends inside
+  the unit: no second tap was made at (447,550). An
+  empty-ground tap at norm (750,800) deselected the
+  building; no Upgrade, no panel action, nothing
+  bought, nothing dispatched from any selection.
+- What was not done, named re-read for the next
+  survivors unit: the gate line was not verified,
+  whether survivors wait at the gate and whether any
+  figure seen is a recruit or a visitor is unknown.
+  Do not reuse the (447,550) bubble point or the
+  (448,580) figure point - both resolve to the
+  Titanium Alloy Factory No.3 area on this camera
+  view - and do not reuse the 1948 dragged-view
+  figure points (485,680 / 490,690), which select a
+  squad vehicle. The next unit must ground the gate
+  line fresh on its own screenshot and verify a
+  survivor figure before any tap.
+- Issue handling: no new issue filed. This is the
+  known gate-verification failure mode already open
+  as issue #168; this unit's bubble-centre evidence
+  is commented there by the executor, not filed anew.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -778,6 +828,11 @@ Measured on 2026-10-25.
 - The three document icon bubbles over the headquarters area
   buildings open the Status Overview when tapped - what they are
   is unconfirmed; they are not collected like output bubbles.
+- Do-not-reuse points (2252): bubble (447,550) and figure
+  (448,580) on the undragged restored base view resolve to
+  Titanium Alloy Factory No.3, not a survivor; the 1948
+  dragged-view figure points (485,680 / 490,690) select a
+  squad vehicle. Ground the gate line fresh each unit.
 
 ## Changelog
 
@@ -833,3 +888,5 @@ Measured on 2026-10-25.
 - 1.15.0 (2026-11-02): sixth regular-unit partial since the 1644 done (1640 unit, recovery-written after the ticker pass timed out, gate-corner taps at the 70,692 area changing nothing unlike the 1107 corner change, so the point is a re-read pointer not a fixed hit, unit reaped to inbox unclaimed attempt 1 of 3), the 1718 re-attempt of the same 1403 unit (not a seventh distinct partial by the 0041 rule, drag-pan re-confirming its 1107 retirement, 89,722 corrected to a radar entry point not a survivor figure, bubble tap at 109,626 with no change, 180-second grounding recount timeout), and the #168 comment gap for 1640 closed by this run, folded from the 1640 and 1718 survivors records.
 
 - 1.16.0 (2026-11-02): seventh distinct partial since the 1644 done (1803 unit, gate line explicitly unverified, close discipline held), figure taps at 485,680 and 490,690 selecting the 1st Squad Lv.20 vehicle instead of a survivor card so the figure point is a squad-vehicle selection in this view, deselect tap at 750,500 selecting a Farmland Lv.28 building, squad radial left open at close, fresh-grounding plus different-variant re-read named, and Issue #168 evidence commented by this run, folded from the 1948 survivors record.
+
+- 1.17.0 (2026-11-02): eighth distinct partial since the 1644 done (2252 unit, gate line explicitly unverified, close discipline held), rule R2 bubble-centre method tried and failed with (447,550) and (448,580) resolving to Titanium Alloy Factory No.3, no second tap per rule R2, deselect at (750,800), do-not-reuse list extended with both points, and Issue #168 evidence commented by the executor, folded from the 2252 survivors record.

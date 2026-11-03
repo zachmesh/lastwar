@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T05:40:46Z
+modified: 2026-11-03T07:37:53Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: alliance-help execution record 2026-11-02 1220 queue run (ticker-1204 unit, done, toast fired with 0 counted helps)
   - source: alliance-help execution record 2026-11-02 1741 queue run (ticker-1729 unit, partial, Healing Help request unhelped)
   - source: ticker-2034 alliance-help execution record 2026-11-02 2038 queue run (done, base-screen bubble, Alliance red dot is not remaining help)
+  - source: alliance help execution record 2026-11-02 2311 queue run
 ---
 
 
@@ -452,6 +453,43 @@ Measured in the 0135 help unit (ticker-0134, window mode
   No items spent, no diamonds or money touched, no
   red line approached.
 
+
+## What the 2026-11-02 2311 unit added - done, Help All toast but 0 countable helps
+
+- Unit help-2026-11-02-2230 by ticker-2304, session
+  about 23:11 to 23:12, status done. Evidence in
+  `_records_/2026-11-02/alliance-help/2311-queue-run.md`.
+- Navigation correction, from the Alliance Gifts
+  screen: the back arrow's first two taps (35,902)
+  and (40,902) produced no navigation. Per queue
+  rule R2 the method changed: a fresh screenshot
+  re-grounded the arrow glyph centre at (62,920),
+  and that tap returned to the Alliance panel. The
+  earlier taps had landed on the tile's top-left
+  edge, not on the glyph. Lesson: tap the glyph
+  centre, not the tile edge, for this back arrow.
+- Opened Help from the Alliance panel. Header read
+  live before the press: Today's points gained from
+  Alliance Help 760 of 1,000. Pressed Help All. The
+  game answered "Allies are very grateful for your
+  assistance".
+- Header re-read live after the press: still 760 of
+  1,000, unchanged. The visible rows were all this
+  account's own requests (Bears Lair: Morale
+  research, Lv.30 Aircraft Center building, Healing
+  Help, Lv.27 Drill Ground building), each showing
+  30 of 30 after the press. A player cannot help
+  their own requests, so the unchanged header means
+  this press delivered no newly countable ally help
+  in the list shown; no ally request row was visible
+  in the list shown.
+- Completion-criterion note: the grateful toast
+  alone is not delivery proof. Helps verifiably
+  delivered by this press: 0 by the header counter.
+  The header re-read is the count; a toast with an
+  unchanged header means the press found no ally
+  request to help. Closed the Help panel back to the
+  Alliance panel.
 
 ## Open questions
 
