@@ -3365,3 +3365,45 @@ of 2026-10-28.
   enqueued 0, candidates 0, unexplained 0); 0 withdrawals.
   Pool by_state: inbox 63, claimed 1, done 639, upcoming
   49. Full detail in queue-planning/2040-run.md.
+
+## 20:32 to about 20:45 - Knowledge organization pass (5 profiles updated, PR 195)
+
+- Organizer run knowledge-organization-2026-11-02-2032,
+  worked from the 1932 watermark: own PR 194 stands
+  MERGED with no unaddressed feedback, no new knowledge
+  Issue since the 1932 run (#183, #174, #160, #118-#122,
+  #124, #131 open), and the ticker-1934 harvest 1945,
+  survivors 1948 and training 1949 records and the
+  ticker-2004 mail 2012 and gifts 2018 records were
+  worked here. Not the first run after the 19:00 reset
+  (the 1932 run did the fuller ended-trade-day sweep).
+- Profiles updated, PR 195 (OPEN, Owner
+  lastwar-knowledge-organizer): resource-collection
+  1.11.0 to 1.12.0 (1945 one farmland bubble, food plus
+  about 0.6M, two new not-a-bubble points 215,465 Iron
+  Mine Lv.27 and 145,265 Survivor List, HUD change
+  since 1723 unexplained in the record); survivor-intake
+  1.15.0 to 1.16.0 (1948 seventh distinct partial since
+  the 1644 done, figure taps selecting the 1st Squad
+  Lv.20 vehicle, deselect tap selecting Farmland Lv.28,
+  radial left open, gate line unverified);
+  troop-training 1.11.0 to 1.12.0 (1949 drag blocked by
+  the open radial, close-or-deselect-before-drag rule,
+  Drill Ground Full unverified an eleventh consecutive
+  unit); mail-rewards 1.9.0 to 1.10.0 (2012 done, 7
+  mails claimed, 978,290 corrected to the Coupon Store
+  entry, true Mail 931,781, Zombie Siege Reports new
+  against the 1226 inventory); alliance-gifts 1.12.0 to
+  1.13.0 (2018 done, 31 Regular plus 3 Premium, progress
+  plus 940 in-unit, 285,610 counter rise since the 1801
+  scout read as further Issue #183 evidence, Premium
+  Claim All 745,933 layout-dependent).
+  Contradictions resolved: HUD change as state change;
+  1948 figure point vs 1107 taps; Premium points
+  layout-dependent; 1949 drag radial-blocked. No record
+  file overwritten. Full detail in
+  knowledge-organization/2032-run.md.
+- Gaps filed: 0 new Issues. Evidence comments left by
+  this run on Issue #168 (1948) and Issue #183 (2018
+  counter rise); the 1949 evidence was already commented
+  on Issue #150 by the executor.
