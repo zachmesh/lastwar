@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-03T01:37:57Z
-version: 1.15.0
+modified: 2026-11-03T04:41:07Z
+version: 1.16.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -17,6 +17,7 @@ grounded_in:
   - source: survivor-intake execution record 2026-11-02 1107 queue run (ticker-1104 unit, partial, gate line unverified, drag-pan retired)
   - source: survivor-intake execution record 2026-11-02 1640 queue run (ticker-1631 recovery unit, partial, gate point no-change, recovery-written)
   - source: survivor-intake execution record 2026-11-02 1718 queue run (ticker-1703 unit, partial, 89,722 radar-entry correction)
+  - source: survivor-intake execution record 2026-11-02 1948 queue run (ticker-1934 unit, partial, figure taps select squad vehicle)
 ---
 
 
@@ -715,6 +716,58 @@ Measured on 2026-10-25.
   executor commented this unit's findings there, so no
   duplicate comment was left here.
 
+## What the 2026-11-02 1948 unit added
+
+- Unit survivors-2026-11-02-1803 by ticker-1934, session
+  about 19:46 to 19:48, status partial. Seventh distinct
+  partial since the 1644 done by the 0041 counting rule
+  (1718 was a re-attempt of the 1403 unit, not a
+  distinct one). No survivor was processed: 0 dialogs
+  opened, 0 recruit cards, 0 Quick Dispatch runs.
+  Tracker untouched, so the next tick re-produces this
+  regular. Evidence in
+  `_records_/2026-11-02/survivor-intake/1948-queue-run.md`.
+- Gate figure: a single question-mark bubble over a
+  small figure at the gate entrance, bottom centre of
+  the dragged base view (bubble about norm 490,650,
+  figure just below it).
+- Figure taps select a squad vehicle, not a survivor:
+  taps at norm 485,680 and norm 490,690 both selected
+  "1st Squad Lv.20" (tank and up-arrow radial), no
+  survivor card opened, no dialog, no recruit. Per
+  queue rule R2, the method ended inside the unit
+  after two no-change taps; no further tap was made
+  at the same point. Correction for the next unit:
+  the figure point below the gate bubble is a
+  squad-vehicle selection point in this view, not a
+  recruit tap point.
+- Deselect hazard: an empty-ground tap at norm 750,500
+  to deselect selected a Farmland Lv.28 building
+  instead (paw and up-arrow radial) - deselect taps can
+  land on buildings. No action was taken from any
+  selection radial.
+- Close discipline held: the squad-vehicle selection
+  radial was left open on the base view at close, and
+  the next unit screenshots first (the 1949 training
+  unit confirms the radial still open at its entry).
+  The gate line at close is explicitly unverified,
+  not claimed clear and not claimed occupied: whether
+  more survivors wait behind the one figure, and
+  whether that figure is a recruit or a visitor, is
+  unknown.
+- Named re-read for the next survivors unit: start at
+  the gate with a fresh grounding, verify a survivor
+  figure before any tap, and try a different entry
+  variant (the bubble centre itself, or the gate from
+  an undragged base view) instead of repeating the
+  figure taps used here.
+- Issue #168 (gate line not verifiable) is not
+  resolved by this unit; its evidence is commented
+  there by this run, since the record itself does not
+  claim a comment, so no duplicate comment is left
+  here.
+
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -778,3 +831,5 @@ Measured on 2026-10-25.
 - 1.13.0 (2026-11-02): fourth regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the panned-down left-fence gate line with the 132,336 Polar Guest dialog tap and no recruit card so no Quick Dispatch gap, the three non-hit taps, and Issue #168 commented with the location lead, folded from the 0747 survivors record.
 
 - 1.15.0 (2026-11-02): sixth regular-unit partial since the 1644 done (1640 unit, recovery-written after the ticker pass timed out, gate-corner taps at the 70,692 area changing nothing unlike the 1107 corner change, so the point is a re-read pointer not a fixed hit, unit reaped to inbox unclaimed attempt 1 of 3), the 1718 re-attempt of the same 1403 unit (not a seventh distinct partial by the 0041 rule, drag-pan re-confirming its 1107 retirement, 89,722 corrected to a radar entry point not a survivor figure, bubble tap at 109,626 with no change, 180-second grounding recount timeout), and the #168 comment gap for 1640 closed by this run, folded from the 1640 and 1718 survivors records.
+
+- 1.16.0 (2026-11-02): seventh distinct partial since the 1644 done (1803 unit, gate line explicitly unverified, close discipline held), figure taps at 485,680 and 490,690 selecting the 1st Squad Lv.20 vehicle instead of a survivor card so the figure point is a squad-vehicle selection in this view, deselect tap at 750,500 selecting a Farmland Lv.28 building, squad radial left open at close, fresh-grounding plus different-variant re-read named, and Issue #168 evidence commented by this run, folded from the 1948 survivors record.

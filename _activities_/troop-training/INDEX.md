@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T01:37:57Z
+modified: 2026-11-03T04:41:07Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: troop-training execution record 2026-11-02 0811 queue run (ticker-0804 unit, partial, action-row taps switched to the world map)
   - source: troop-training execution record 2026-11-02 1146 queue run (ticker-1134 unit, partial, Lv.24 batch queued, Lv.20 pistol route retired)
   - source: troop-training execution record 2026-11-02 1723 queue run (ticker-1703 unit, partial, Lv.24 panel not opened from inherited points)
+  - source: troop-training execution record 2026-11-02 1949 queue run (ticker-1934 unit, partial, drag blocked by open radial)
 ---
 
 # Troop training
@@ -579,6 +580,53 @@ Observed in game on this account, first execution 2026-10-25.
   data point for open Issue #150, commented there by
   the executor, so no duplicate comment is filed here.
 
+## What the 2026-11-02 1949 unit added
+
+- Unit training-2026-11-02-1803 by ticker-1934, session
+  about 19:48 to 19:49, inside the pass budget, status
+  partial. No batch was queued. The tracker is left
+  untouched, so the next tick re-produces the regular.
+  Evidence in
+  `_records_/2026-11-02/troop-training/1949-queue-run.md`.
+- Entry state: the squad-vehicle selection radial left
+  open by the previous survivors unit was still showing
+  on the base view at entry - a cross-unit handover
+  confirmed on screen.
+- New failure mode: an upward drag (norm 500,600 to
+  500,300) to expose the lower-middle barracks tents
+  did not pan the view at all; the screenshot after
+  the drag was unchanged, so no barracks tent was
+  brought into view and no tent point was tapped in
+  this unit. The drag may have been intercepted by
+  the open selection radial. Next-unit rule: close or
+  deselect any open selection radial before attempting
+  a pan drag; a drag that leaves the screenshot
+  unchanged is a blocked drag, not a "no tents here"
+  result.
+- No training state was verified: 0 barracks checked,
+  no TRAIN UNITS panel opened, no Drill Ground figure
+  read live in this unit. Lv.24 queued at 11:34 today
+  for T8 x666 per the 1723 record is carried as
+  expectation only, not a live read here.
+- Drill Ground Full carried forward unverified an
+  eleventh consecutive unit without a live read (1146
+  was the ninth, 1723 the tenth): no barracks was
+  reached, so the 39,460 of 39,460 figure remains a
+  2026-10-31 read, neither confirmed nor cleared here,
+  and the 1146 successful queue remains the
+  counter-evidence against a universal block, not a
+  Drill Ground read.
+- HUD measured in this unit: food 227.1M, iron 561.8M,
+  coins 5.9M - matching the 1945 harvest snapshot in
+  the same pass, a consistent stock picture, not a
+  unit result. Base screen confirmed live at entry;
+  game left safe on the base screen with the squad
+  radial still open; no action was taken from it.
+- The recurrence is a further data point for open
+  Issue #150, commented there by the executor, so no
+  duplicate comment is filed here.
+
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -631,3 +679,5 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.10.0 (2026-11-02): Lv.24 pistol entry re-established with a fresh-grounded row (tent 806,581; pistol 794,605) so the 0811 suspension is lifted in part for Lv.24, the Lv.20 pistol route retired after two fresh-point failures, the Train button grounded at 628,793 against a 70-pixel-low estimate, the Lv.24 T8 batch queued and verified by the live resource drop, and Drill Ground Full carried unverified a ninth consecutive unit with a successful queue as counter-evidence, folded from the 1146 training unit.
 
 - 1.11.0 (2026-11-02): inherited 1146 Lv.24 points (tent 806,581, pistol 794,605) failing to open any panel in this camera view, so the fresh-grounding rule is re-affirmed against reusing a verified entry, Lv.24 busy status carried as expectation only with no live panel read, Lv.27 and Lv.30 not inspected, Drill Ground Full carried unverified a tenth consecutive unit without a live read, and the HUD stock snapshot (food 387.7M, iron 577.5M, coins 54.0M) matching the 1520 harvest read, folded from the 1723 training record.
+
+- 1.12.0 (2026-11-02): upward drag (500,600 to 500,300) not panning at all with the screenshot unchanged, so the drag was likely intercepted by the squad-vehicle radial left open by the previous survivors unit, close-or-deselect-before-drag next-unit rule, 0 barracks checked with no TRAIN UNITS panel, Drill Ground Full carried unverified an eleventh consecutive unit, Lv.24 busy carried as expectation only, HUD matching the 1945 harvest snapshot, and the recurrence commented onto Issue #150 by the executor, folded from the 1949 training unit.

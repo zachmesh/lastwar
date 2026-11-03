@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T00:55:00Z
+modified: 2026-11-03T04:41:07Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-02 0741 queue run (ticker-0734 unit, partial, fast regeneration over the left-side buildings)
   - source: resource collection execution record 2026-11-02 1052 queue run (ticker-1040 unit, partial, edges undragged)
   - source: resource collection execution record 2026-11-02 1520 queue run (ticker-1452 unit, partial, sweep barely started, campaign mis-tap)
+  - source: resource collection execution record 2026-11-02 1945 queue run (ticker-1934 unit, partial, one farmland bubble, two new not-a-bubble points)
 ---
 
 
@@ -523,6 +524,55 @@ regular stays due. Evidence in
   and screenshot-first navigation from an unverified
   screen all pass to the next harvest unit.
 
+## What the 2026-11-02 1945 unit added
+
+- Unit harvest-2026-11-02-1803 by ticker-1934, session
+  about 19:34 to 19:45, status partial: one bubble
+  collected, the full-map sweep not complete, tracker
+  untouched, so the next tick re-produces this regular.
+  Evidence in
+  `_records_/2026-11-02/resource-collection/1945-queue-run.md`.
+- Entry: the game was found on the Events screen (Unit
+  Progression); the bottom-left back button at norm
+  157,947 returned the game to the base view.
+- HUD measured at unit start: food 226.5M, second
+  top-bar resource 561.8M, coins 5.9M (HUD-rounded
+  figures as displayed). A farmland bubble at norm
+  280,535 collected: food 226.5M to 227.1M, about plus
+  0.6M - one farmland tap collects all farmland bubbles
+  at once, re-confirming the standing rule. These
+  figures differ from the 1723 snapshot the same day
+  (food 387.7M, iron 577.5M, coins 54.0M); the change
+  is measured but its cause is not established by this
+  record, so no spend is claimed here.
+- Not-a-bubble lessons, two new: norm 215,465 in the
+  pre-drag view selects an Iron Mine Lv.27 building
+  (no HUD change); norm 145,265 in the post-drag view
+  opens the Survivor List panel (Overview/All/Dispatch)
+  and no survivor was dispatched or changed. With the
+  1520 campaign entry at norm 486,216, three points
+  are now known not to be bubbles. Future sweeps must
+  ground bubble centres on a fresh screenshot and must
+  not re-tap these three points as bubbles.
+- Deselect note: an empty-ground tap at norm 600,700
+  deselected with no building action. Drag note: the
+  base dragged rightwards (norm 300,500 to 700,500)
+  exposed the left/top edge.
+- What was not done: the full-map sweep to zero
+  bubbles was not completed; the left-side gold/stone
+  building bubbles (experience, screw bubbles) and the
+  armed truck loot bubble were not verified or
+  collected; the Season 2 area at the bottom was left
+  out of the sweep, per the standing rule that it is
+  not main base harvest.
+- Session reliability note: the computer-use session
+  dropped once during the unit and was restarted
+  without disturbing the game.
+- Follow-up carried, not completed: the full-map
+  sweep, the armed truck loot bubble check and the
+  left-side bubbles pass to the next harvest unit.
+
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -533,6 +583,8 @@ regular stays due. Evidence in
   rather than assuming the candidate.
 
 ## Changelog
+
+- 1.12.0 (2026-11-02): one farmland bubble collected (food plus about 0.6M, one-tap-clears-all re-confirmed), two new not-a-bubble points (215,465 Iron Mine Lv.27 building, 145,265 Survivor List panel) joining the 1520 campaign entry, HUD measured food 226.5M, second resource 561.8M, coins 5.9M with the change since the 1723 snapshot unexplained in the record, full-map sweep and armed truck loot check outstanding, folded from the 1945 harvest unit; no earlier claim superseded.
 
 - 1.11.0 (2026-11-02): sweep barely started so partial with no bubble collected, base-screen glow at norm 486,216 identified as the Operation Falcon campaign entry and not a bubble, campaign back-out dispatched but return unverified after a session drop so the next unit screenshots first, full-map sweep and armed truck loot check entirely outstanding, HUD measured food 387.7M, iron 577.5M, coins 54.0M, diamonds 2,536, folded from the 1520 harvest unit; no earlier claim superseded.
 
