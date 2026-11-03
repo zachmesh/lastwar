@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T18:40:59Z
+modified: 2026-11-02T23:40:00Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -88,6 +88,14 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   mislabelled the truck icon as the dish. Ground the dish
   below the truck icon and verify the radar screen (level,
   stored count, stamina) before any work.
+- Entry precondition, binding from the 1026 and 1439
+  units: when the camera is panned onto the Drill Ground
+  cluster, restore the full base view first - if a
+  building panel is open, close it first (foreground the
+  LastWar window and re-tap the X, click_element, or
+  relaunch the app; a background-click X may not reach
+  the control, and Esc is never used) - then ground the
+  dish fresh from that screenshot.
 - ENTRY VERIFICATION, mandatory before any work - the radar
   screen is confirmed only when the screen shows radar level
   and points top left, stored tasks out of 40, and the
@@ -853,6 +861,71 @@ are still open, per the protocol.
   timed-out grounding as the unit's blocker and stop,
   rather than tapping ungrounded points.
 
+## What the 2026-11-02 1439 unit added
+
+- Unit radar-2026-11-02-1403 by ticker-1412, session
+  about 14:27 to 14:39, status partial, tracker
+  untouched. Duel day 1, Radar Training, release
+  posture confirmed by tools/duel.py (radar_posture
+  release, day ends 19:00, 4.5 hours left) before the
+  unit started, but the radar screen was never entered,
+  so this unit executed and claimed nothing. Evidence
+  in `_records_/2026-11-02/radar-tasks/1439-queue-run.md`.
+- Entry state: the game was left by the donations unit
+  (1427) with the base camera panned onto the Drill
+  Ground cluster (Drill Ground Lv.25, three floating
+  round buttons at the bottom right). The left icon
+  column with the radar dish is not visible in this
+  framing. This is the second consecutive radar unit
+  with this entry blocker, after 1026 the same day.
+- Changed method per rule R2 (the 1026 unit burned its
+  budget on a grounding timeout): instead of grounding
+  the dish, this unit tried to restore the base view
+  through the building panel. Tapping the Drill Ground
+  area at (810,778) opened the DRILL GROUND panel
+  (Unit Count 39460 of 39460, In Base Lv.7 x701, Lv.8
+  x1332, Lv.10 x37.4K, Outside no units outside) -
+  figures consistent with the 1020 donations unit's
+  Drill Ground panel read. No Promote button was
+  tapped and nothing was spent.
+- Panel close failure, two no-change taps, method
+  retired in this unit: the panel X at (799,203) and
+  again at (802,200) produced no change. The control
+  channel noted background clicks do not reach some
+  controls and suggested click_element with a visible
+  label or the keyboard instead; neither was tried in
+  this unit, and Esc was not used (standing rule: Esc
+  has crashed this app before). The game is left safe
+  with the DRILL GROUND panel open, no purchase, no
+  dispatch, no march, no pin tapped, no other
+  activity's rewards claimed.
+- Handover for the next radar unit: the panel must be
+  closed first (candidates: foreground the LastWar
+  window and re-tap the X, click_element, or relaunch
+  the app to restore the base overview), then restore
+  the full base view, then ground the dish fresh from
+  that screenshot (the 0636 unit working point was
+  norm 53,708; the profile measured point is 62,727)
+  and verify the radar screen (Lv.13, stored count,
+  stamina) before any work. Release posture still
+  applies: execute and claim everything stored, then
+  scan the map pins to a closing read each. The 0636
+  unit pin inventory (two standing orange arrow pins,
+  classes unknown) is still open. If the next radar
+  unit also fails on entry, it is the third consecutive
+  unit with this blocker and must write the blocker
+  into the radar-tasks activity metadata per rule R2.
+- Cross-unit note, binding on donations units: a
+  donations unit that pans the camera should restore
+  the base framing before it closes, or the following
+  unit inherits a panned view with no icon column.
+- Result stats: target unverified, achieved 0,
+  verified no, blocker_category c (entry-route: base
+  camera panned onto Drill Ground with no icon column,
+  and the Drill Ground panel X unresponsive to
+  background clicks; second consecutive radar unit
+  with this blocker).
+
 ## Open questions
 
 - Duel delta test - on the next release day, read the duel
@@ -887,6 +960,8 @@ are still open, per the protocol.
   Execute (cost or reward difference), untested.
 
 ## Changelog
+
+- 1.14.0, 2026-11-02 - 1439 duel day 1 release unit folded: radar screen never entered (camera panned to Drill Ground by the donations unit's failed taps, dish column not visible); Drill Ground panel opened at (810,778) with figures matching the 1020 read, but its X was unresponsive to background clicks twice and the game was left with the panel open; handover is close panel, restore full base view, ground dish fresh; a third consecutive entry failure writes the blocker into this metadata per rule R2; 0636 pin inventory still open, release posture still applies, duel delta test still owed.
 
 - 1.13.0, 2026-11-02 - 1026 duel day 1 release unit folded: radar screen never entered (camera panned to Drill Ground by the donations unit's failed taps, dish column not visible, dish grounding timed out after 180s consuming the pass budget); entry precondition added (restore full base view before grounding dish); 0636 pin inventory still open, Doom Legion pin expired about 07:09; release posture still applies; duel delta test still owed.
 
