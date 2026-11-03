@@ -868,3 +868,33 @@ of 2026-10-28.
   (about 29 hours, Season Photo decision) over 24 hours
   with statements current, named in the run record.
   Full detail in pr-catchall/0339-run.md.
+
+## 03:40 to about 03:43 — Queue planner pass, 5 units staged
+
+- Planner pass queue-planning-2026-11-03-0340. Own PRs
+  checked first: PR 217 (knowledge-organizer-owned),
+  PR 216, PR 207 and PR 187 (all integrator-owned) —
+  none owned by this job, no reply or fix owed. Owner-
+  decision Issues checked: #154 still without an owner
+  answer (0 comments), #132's duel-score-only answer
+  stands; no building, research or alliance-facing unit
+  staged or invented, no new Issue filed (Alliance Wars
+  dot already Issue #212).
+- Plan for the next 12 hours staged 5 units for the
+  14:57 slot (passes, secrets, treasures, trucks,
+  events), already_present 57, skipped_done_current 7,
+  reaped 0, expired 0. Pre-reset sweep pair skipped
+  (not the 17:00 hour); tonight's pair for the 19:00
+  reset is not yet in the pool and is the 17:00 run's
+  job. Scout diff on the Nov 3 observation (base pass
+  about 00:17, alliance pass about 01:36–01:44 local)
+  dry and applied agree, all zero; 0 withdrawals. Pool
+  by_state at 03:41 local: inbox 55, claimed 1, done
+  682. Diff-parse gap carried for the retro: the
+  narrative observation has no observed_items block and
+  no frontmatter counts, so the tool reads 0 items
+  against the narrative's red dots (Alliance Wars dot
+  unexplained, Issue #212). Live-tree sync gap carried:
+  tools/regulars.json still lacks the duel-score
+  regular, so no duel-score unit was staged. Full
+  detail in queue-planning/0340-run.md.
