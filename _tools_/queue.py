@@ -99,7 +99,7 @@ FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
 RESULT_ORDER = ["status", "started_at", "finished_at",
                 "duration_seconds", "executor", "summary", "claimed",
                 "claimed_count", "evidence", "follow_up", "stats",
-                "stats_missing"]
+                "stats_missing", "stats_warnings"]
 
 
 def now_utc():
@@ -930,6 +930,28 @@ def missing_stats_keys(status, stats):
     return missing
 
 
+def points_duplicates_achieved(stats):
+    """True when stats.points copies stats.achieved (issue #197).
+
+    points is score gained in this unit, not a running total
+    read: a duel total read belongs in achieved only. A nonzero
+    points value exactly equal to achieved is therefore a copy
+    suspect - the star-ceremony unit of 2026-11-01 closed with
+    points 791250 equal to its duel total achieved 791250, and
+    the retro summed it as points gained. Zero equals zero is
+    not flagged: a unit that gained nothing and reached nothing
+    is not a copy. This is a warning, never a block: a scoring
+    unit that genuinely gained its whole achieved total in one
+    unit still closes, flagged for the retro to read.
+    """
+    if not isinstance(stats, dict):
+        return False
+    points = _stat_number(stats.get("points"))
+    achieved = _stat_number(stats.get("achieved"))
+    return (points is not None and achieved is not None
+            and points != 0 and points == achieved)
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
     if state != "claimed":
@@ -948,6 +970,7 @@ def cmd_complete(args):
             key, value = pair.split("=", 1)
             stats[key.strip()] = _scalar(value)
     missing = missing_stats_keys(args.status, stats)
+    points_dup = points_duplicates_achieved(stats)
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -961,6 +984,8 @@ def cmd_complete(args):
         "follow_up": args.follow_up or "none",
         "stats": stats,
         "stats_missing": missing,
+        "stats_warnings": (["points duplicates achieved"]
+                           if points_dup else []),
     }
     target = unit_path(args.root, "done", args.unit)
     os.makedirs(state_dir(args.root, "done"), exist_ok=True)
@@ -972,6 +997,11 @@ def cmd_complete(args):
               f"result.stats keys: {', '.join(missing)} - the "
               f"closing counts as unverified in the retro "
               f"aggregation")
+    if points_dup:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"equal to stats.achieved - points is score gained "
+              f"in this unit, not a running total read; a duel "
+              f"total read belongs in achieved only")
     return 0
 
 
@@ -1118,6 +1148,7 @@ def gather_stats(root):
               "stalled_priority1": [],
               "result_status": {}, "chains": {}, "upcoming": 0,
               "stats_incomplete": 0, "stats_incomplete_units": [],
+              "stats_points_dup": 0, "stats_points_dup_units": [],
               "stall_expired": 0, "stall_expired_units": [],
               "newest_finished_at": None,
               "newest_finished_age_minutes": None,
@@ -1210,6 +1241,13 @@ def gather_stats(root):
                     report["stats_incomplete"] += 1
                     report["stats_incomplete_units"].append(
                         f.get("unit"))
+                dup_stats = result.get("stats")
+                if points_duplicates_achieved(
+                        dup_stats if isinstance(dup_stats, dict)
+                        else {}):
+                    report["stats_points_dup"] += 1
+                    report["stats_points_dup_units"].append(
+                        f.get("unit"))
                 if status in ("failed", "skipped-needs-owner"):
                     entry["failed"] += 1
                 dur = result.get("duration_seconds")
@@ -1267,6 +1305,9 @@ def cmd_stats(args):
         print(f"  stats_incomplete: {report['stats_incomplete']}")
         print("  stats_incomplete_units: "
               f"[{', '.join(report['stats_incomplete_units'])}]")
+        print(f"  stats_points_dup: {report['stats_points_dup']}")
+        print("  stats_points_dup_units: "
+              f"[{', '.join(report['stats_points_dup_units'])}]")
         d = report["durations_seconds"]
         if d:
             print(f"  durations_seconds: count {d['count']}, "
@@ -1319,6 +1360,10 @@ def cmd_stats(args):
         if report["stats_incomplete"]:
             print(f"  stats incomplete: {report['stats_incomplete']} "
                   f"({', '.join(report['stats_incomplete_units'])})")
+        if report["stats_points_dup"]:
+            print(f"  stats points duplicates achieved: "
+                  f"{report['stats_points_dup']} "
+                  f"({', '.join(report['stats_points_dup_units'])})")
         d = report["durations_seconds"]
         if d:
             print(f"  durations: n={d['count']} avg={d['avg']}s "
