@@ -1001,3 +1001,20 @@ of 2026-10-28.
   the action log, standing comment carried. No owner
   escalation, no new comment. Full detail in
   pr-integration/0415-run.md.
+
+- Integrator pass pr-integration-2026-11-03-0430.
+  Non-batch pass per the checker (_tools_/records_batch.py
+  on main reported not due at 04:31, next batch 07:00;
+  the 03:00 batch had already merged PR 204, so no
+  records PR was merged this pass). No knowledge or
+  code PR was open. PR 216 (records/2026-11-02,
+  post-0300 batch) awaits the 07:00 batch. Records PR
+  207 (2026-11-03) still CONFLICTING on
+  _logs_/repo-actions/action-log.jsonl and
+  _tools_/state/2026-11-03.json, conflict re-verified
+  by test merge against current main, standing 0300
+  comment carried, branch-side resolution pending.
+  Records PR 187 (2026-11-01) still CONFLICTING on
+  the action log, standing comment carried. No owner
+  escalation, no new comment. Full detail in
+  pr-integration/0430-run.md.
