@@ -518,7 +518,7 @@ of 2026-10-28.
   passed, including unpatched-main controls reproducing
   the bug. Full detail in tool-development/0232-run.md.
 
-## 02:32 to about 02:45 - Knowledge organization pass
+## 02:32 to about 02:39 - Knowledge organization pass
 
 - Knowledge organization pass
   knowledge-organization-2026-11-03-0232, worked from
