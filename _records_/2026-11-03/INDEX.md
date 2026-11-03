@@ -2852,3 +2852,29 @@ of 2026-10-28.
   fixture assertions passed. Issue 235 commented, not
   closed; closure belongs to the daily retro.
   Full detail in tool-development/1532-run.md.
+## 15:32 to about 15:50 - Knowledge-organization pass, 2 profile folds
+
+- Knowledge-organization pass
+  knowledge-organization-2026-11-03-1532. Own PRs
+  checked first (PR 234 MERGED, no reviews or comments,
+  no feedback pending; open PRs 236, 207 and 187 are
+  integrator-owned); open knowledge issues checked with
+  the own PRs (no new knowledge-labeled issue since the
+  1432 run, newest remains #230). Folded the ticker-1434
+  radar 1450 record and the ticker-1504 harvest 1524
+  record into two profiles on PR 238: radar-tasks 1.21.0
+  (release-day unit, 27 claims, points 139 to 166, stored
+  0 of 40, stamina 70, bottom-bar hitbox corrected to y
+  925, live TIPS dialog contradicting duel.py carried as
+  UNSETTLED under Issue #235, 6 pins inventoried
+  unattempted so partial), resource-collection 1.17.0
+  (batch taps mixed bubbles with building panels, 0
+  collections verified, HUD unchanged at rounding, full
+  edge sweep and truck loot unchecked so partial,
+  blocker category c, next unit must re-measure bubble
+  centres fresh; the 1044 left/top-first follow-up
+  carries forward, not closed). Contradictions resolved
+  0; Issue #235 commented with the fold and the PR 237
+  timezone proposal noted as unverified, with the same
+  addendum on PR 238. No issue closed here. Full detail
+  in knowledge-organization/1532-run.md.
