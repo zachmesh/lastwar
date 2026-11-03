@@ -2402,6 +2402,22 @@ of 2026-10-28.
   posted. No owner-gated PR.
   Full detail in pr-integration/1234-run.md.
 
+## 12:54 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1254.
+  Non-batch pass per the checker
+  (_tools_/records_batch.py on main: due no, outside
+  every batch window, next batch 15:00): merged
+  knowledge PR 232 (organizer 1232, 5 profile folds,
+  squash). Records PR 229 (records/2026-11-02, head
+  962d3fee, CLEAN) awaits the 15:00 batch. Records PR
+  207 (records/2026-11-03, head f5f9e462, merge state
+  recomputing) and PR 187 (records/2026-11-01, head
+  2be5df83, CONFLICTING) conflicts carried, standing
+  comments stand, no duplicate comment posted. No
+  owner-gated PR.
+  Full detail in pr-integration/1254-run.md.
+
 ## 12:32 to about 12:40 - Tool-developer pass, no-op
 
 - Tool-developer pass tool-development-2026-11-03-1232.
