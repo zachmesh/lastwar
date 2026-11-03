@@ -3255,3 +3255,18 @@ of 2026-10-28.
   unexplained 0); 0 withdrawals. Pool by_state: inbox
   69, claimed 1, done 633, upcoming 49. Full detail in
   queue-planning/1940-run.md.
+
+## 19:45 to about 19:56 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-1945.
+  Non-batch pass for records (checker window 19:00-20:00
+  open, but the 19:00 batch was already consumed by the
+  1900 pass merging PR 161, so only the first pass in
+  the window merges). Knowledge PR 194 merged clean
+  (squash, merge commit b4bb8374; organizer 1932, five
+  activity profiles, owner lastwar-knowledge-organizer)
+  and synced back to local main by bundle
+  fast-forward. Records PR 193 awaits the 23:00 batch;
+  records PR 187 conflict on action-log.jsonl carried,
+  already commented at 1900, not force-merged. Full
+  detail in pr-integration/1945-run.md.
