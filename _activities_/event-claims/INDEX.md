@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T08:32:17Z
+modified: 2026-11-03T11:36:26Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-1234 event-claims execution record 2026-11-02 1250 queue run (done, full hub sweep, nothing claimable, relaunch restores hidden rails)
   - source: ticker-2104 event-claims execution record 2026-11-02 2113 queue run (done, full hub sweep, Wanted Boss rotated to Code 64)
   - source: ticker-2334 event-claims execution record 2026-11-02 2341 queue run (done, full hub sweep, nothing claimable, Arms Race rotated to Tech Research, Wanted Boss tab dot is a live-event marker)
+  - source: ticker-0304 event-claims execution record 2026-11-03 0318 queue run (done, full hub sweep, 0 claimed, Desert Storm registered)
 ---
 
 
@@ -662,6 +663,36 @@ that drag is the sweep-completeness check, not wasted motion.
   target 1 full hub sweep performed, achieved 1,
   verified yes.
 
+
+
+## What the 2026-11-03 0318 unit added - full hub sweep, 0 claimed, Desert Storm registered, Boss Code 64
+
+- Ticker-0304, unit events-2026-11-03-0257, about 03:18
+  local, status done. Evidence in
+  `_records_/2026-11-03/event-claims/0318-queue-run.md`.
+- Events hub swept tab by tab, with a sideways tab-bar
+  scroll to reach the last tab.
+- Arms Race (first tab): Base Building phase, contest
+  segment Lv.29-30, score 9,300, countdown 02:42:45. Tier
+  chests at 6,250, 12,500 and 30,000; the tier-1 chest
+  was already claimed in the earlier arms-race unit and
+  tiers 2 and 3 are locked by score. No phase action was
+  taken here: Arms Race work belongs to its own unit,
+  and no grinding was done. This read is a hub sweep
+  only and is not folded into the arms-race profile.
+- Desert Storm Battlefield: Registration ends in 1d
+  14:42:34, Battle Day 2026-11-6 03:00-03:30,
+  Participants 19 of 20 including this account: already
+  registered, no claim button, nothing changed.
+- Wanted Boss (Code 64): appears at server time 00:00,
+  Go button with a 13:42:24 countdown. Go would start
+  an attack, which is grinding, not a claim, so it was
+  not tapped; the 1-attack rewards are not earned.
+- Community: the link reward reads Claimed, no new
+  claim.
+- Final sweep: no bouncing chest and no claimable reward
+  red dot remained on the hub tabs checked. 0 rewards
+  claimed, no purchase tapped.
 
 ## Open questions
 

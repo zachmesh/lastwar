@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T07:37:53Z
+modified: 2026-11-03T11:36:26Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-02 1520 queue run (ticker-1452 unit, partial, sweep barely started, campaign mis-tap)
   - source: resource collection execution record 2026-11-02 1945 queue run (ticker-1934 unit, partial, one farmland bubble, two new not-a-bubble points)
   - source: resource collection execution record 2026-11-02 2247 queue run
+  - source: ticker-0234 resource-collection execution record 2026-11-03 0244 queue run (partial, four central bubbles, left edge undragged)
 ---
 
 
@@ -621,6 +622,65 @@ regular stays due. Evidence in
   loot bubble. Tracker untouched, so the next tick
   re-produces this regular.
 
+
+## What the 2026-11-03 0244 unit added - four central bubbles, left edge still undragged
+
+- Unit harvest-2026-11-03-0203 by ticker-0234, about 02:44
+  local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/0244-queue-run.md`.
+- Entered from the Alliance Techs panel left over from
+  the donations unit: closed the tech panel, closed
+  Alliance Techs, tapped the Alliance menu back arrow to
+  reach the base view. Nothing else tapped on the way;
+  no other activity's rewards claimed.
+- Base HUD at unit start, rounded as displayed: food
+  230.7M, second top-bar resource 565.3M, coins 5.9M,
+  second-row first resource 18.7M, second-row second
+  resource 505.1K. Power 149,940,141.
+- Four green resource bubbles grounded on the starting
+  screenshot over the central building cluster, at norm
+  (396,399), (294,455), (497,458) and (397,510): the same
+  four-position central cluster as the 2026-11-02 2247
+  unit, with small coordinate drift by framing (2247
+  read (396,416), (292,468), (499,468), (397,516)), so
+  the cluster is near-identical, not exactly re-pinned.
+  All four centres were tapped in one batch. No panel
+  opened; the closing tap left a building highlighted
+  (Titanium Alloy Factory No.1 Lv.30 label), deselected
+  with an empty-ground tap at norm (600,700). No Upgrade,
+  no Finish Now, no speedup, nothing bought.
+- HUD after the batch, rounded: food 230.7M, second
+  top-bar 565.3M, coins 5.9M, second-row first resource
+  19.0M (up about 0.3M from 18.7M), second-row second
+  505.1K. The food, iron and coin figures did not move
+  at HUD rounding, so the collected amount is recorded
+  only as the second-row movement plus the four bubbles
+  cleared, not as an exact total.
+- Sweep remainder, why partial: dragged the base
+  (300,500 to 700,500) and the panned view showed the
+  right-side buildings with no green resource bubbles;
+  dragged back and then vertically (500,300 to 500,650)
+  and the top-edge view showed the farmland plots and
+  their small crop icons plus two question-mark figures,
+  but no green collectible bubbles. The left edge was
+  not dragged to its limit, and bubbles regenerate
+  within minutes of a collection, so a zero-remaining
+  claim for the whole map is not proven. The top edge
+  is now checked (it was undragged in the 2247 unit), so
+  the remainder narrows to the left edge.
+- Armed truck check: the parked vehicles at the top
+  right of the base showed no collectable loot bubble in
+  the starting view, so nothing was claimed there (not
+  fully loaded). Season 2 area at the bottom was left
+  out of the sweep, per the standing rule that it is not
+  main base harvest.
+- Follow-up for the next harvest unit, carried with the
+  left-edge-first order: drag to the left edge first,
+  re-check the central cluster for regenerated bubbles,
+  and re-check the armed truck loot bubble. Tracker
+  untouched, per the rule for partial units; the next
+  tick re-produces harvest and resumes the sweep.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -666,3 +726,5 @@ regular stays due. Evidence in
   question.
 
 - 1.13.0 (2026-11-02): four central-cluster bubbles cleared in one batch at (396,416), (292,468), (499,468) and (397,516), second-row first resource up about 0.4M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and restored views bubble-free but top and left extremes undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-side-first re-sweep carried to the next unit, folded from the 2247 harvest unit; no earlier claim superseded.
+
+- 1.14.0 (2026-11-03): four central-cluster bubbles cleared in one batch at (396,399), (294,455), (497,458) and (397,510), second-row first resource up about 0.3M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and top-edge views bubble-free but the left edge undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-edge-first re-sweep carried to the next unit, folded from the 0244 harvest unit; no earlier claim superseded.
