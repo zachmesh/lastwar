@@ -255,3 +255,16 @@ of 2026-10-28.
   no, and a re-read unit is queued after the timer.
   Issue 174 commented with the evidence. Full detail in
   alliance-donations/0127-queue-run.md.
+
+## 01:15 to about 01:22 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0115.
+  Non-batch pass per the checker (next batch 03:00):
+  no knowledge or code PR was open. Records PR 207
+  (2026-11-03, head 4c90f342) and PR 204
+  (2026-11-02, head 65cb6605) await the 0300 batch.
+  Records PR 187 (2026-11-01) still conflicts on
+  _logs_/repo-actions/action-log.jsonl; the conflict
+  comment from the 1900 pass stands, not
+  force-merged. No owner-gated PR.
+  Full detail in pr-integration/0115-run.md.
