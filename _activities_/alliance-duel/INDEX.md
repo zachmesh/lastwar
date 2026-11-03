@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T11:36:26Z
-version: 1.18.0
+modified: 2026-11-03T15:45:00Z
+version: 1.19.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-1234 star-ceremony execution record 2026-11-02 1241 queue run (done, no ceremony waiting)
   - source: alliance duel execution record 2026-11-02 2326 queue run
   - source: ticker-0304 alliance-duel execution record 2026-11-03 0314 queue run (done, ceremony none waiting, personal total unread by design)
+  - source: ticker-0704 alliance-duel execution record 2026-11-03 0718 queue run (done, ceremony none waiting, personal total snapshot 1,714,950)
 ---
 
 
@@ -643,6 +644,56 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   the handover; the division of labour stands.
 - Duel panel closed with its back arrow, leaving the game
   on the base screen.
+
+## What the 2026-11-03 0718 unit added - ceremony none waiting, personal total snapshot 1,714,950
+
+- Ticker-0704, unit star-ceremony-2026-11-03-0630,
+  about 07:15 to 07:18 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-duel/0718-queue-run.md`.
+- Base screen ceremony check, read live: no Star
+  Ceremony trophy icon beside the Alliance shield, so
+  no ceremony was waiting to be played or claimed. A
+  visual grounding hit for a trophy below the VS
+  medallion was checked against the screenshot itself
+  and rejected - that icon is the Season II badge, not
+  a ceremony trophy. New look-alike distinction: the
+  Season II badge below the VS medallion is not a
+  ceremony signal; the trophy beside Alliance remains
+  the ceremony-waiting signal.
+- Duel panel, read live via the gold VS medallion:
+  Today's Duel, theme Base Expansion, timer 10:42:50 at
+  entry; [AP3x] The Apex 43 percent (452,542,821)
+  against [Kmf] Oden-en 57 percent (608,585,563). Top 3:
+  [AP3x] Abyss Apex 18,890,100, [AP3x] IgorSantos13
+  14,218,350, [Kmf] Maison JP 12,555,150. These are
+  alliance figures, recorded as a snapshot only, up
+  from the 0314 snapshot (42 percent 337,971,369
+  against 58 percent 460,462,861).
+- Personal daily total, read live on the Ranking
+  panel, Daily Rank tab, Tues. day tab: this account's
+  highlighted row reads rank 162, Bears Lair [AP3x] The
+  Apex, 1,714,950 points. That is 1,714,950 of the
+  3,600,000 target, gap 1,885,050, about 47.6 percent
+  of target. Handover note: per the 2026-11-01
+  handover the personal-total read belongs to the
+  duel-score regular, not star-ceremony, and the 0314
+  unit complied by not reading it. This unit's total
+  is therefore recorded here as a snapshot only, not
+  as the duel-score regular's measurement, and the
+  division of labour stands - the next duel-score unit
+  still owns the measured read.
+- Entry correction for the next unit: a first tap at
+  norm 210,962 on the duel panel missed its back arrow
+  and changed nothing; the arrow's grounded box is
+  norm 96,918 to 198,980, centre 147,949, and that tap
+  returned the game to the base screen.
+- Nothing claimed, nothing bought, no diamonds or money
+  spent. Costs: 167 seconds, no stamina or items
+  spent. The game was left on the base screen. Note on
+  the record itself: the unit file's evidence path was
+  first written as 0726-queue-run.md at completion
+  time and corrected to 0718-queue-run.md - a
+  record-hygiene note, not a play claim.
 
 ## Open questions
 

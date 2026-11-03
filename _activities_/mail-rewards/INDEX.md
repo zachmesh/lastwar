@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T15:45:00Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: mail-rewards execution record 2026-11-02 2012 queue run (ticker-2004 unit, done, 7 mails claimed)
   - source: mail rewards execution record 2026-11-02 2313 queue run
   - source: ticker-0304 mail-rewards execution record 2026-11-03 0312 queue run (done, all categories empty, Escape crash recurrence)
+  - source: ticker-0704 mail-rewards execution record 2026-11-03 0715 queue run (done, six categories swept, all answered No rewards available)
 ---
 
 
@@ -517,6 +518,53 @@ the next tick re-produces this regular as a fresh unit.
   opened from the base right rail and swept normally.
   The gifts and help units completed before this
   incident were unaffected.
+
+## What the 2026-11-03 0715 unit added - six categories swept, all empty, Battle Report double-tap
+
+- Ticker-0704, unit mail-2026-11-03-0630, about 07:10
+  to 07:15 local, status done. Evidence in
+  `_records_/2026-11-03/mail-rewards/0715-queue-run.md`.
+- From the base screen, Mail opened to the category
+  list: Battle Report, Alliance, Event (red dot),
+  Season, System (red dot), Regular, In-app Purchases.
+  The game was left on the base screen at the close.
+- Every claimable category was swept with its Claim All
+  button (Delete All never pressed), each answering
+  "No rewards available" live: Event (train arrival
+  notices only, [AP3x] Sanction, [AP3x] Abyss Apex,
+  [AP3x] KpyKat, 1h to 9h ago); System (Planned Update
+  Notice 3h ago, President Mail purge request and
+  conclusion 1d ago, correction and greeting mails);
+  Alliance (announcements 10h ago, Daily Donation
+  Rankings, Zombie War Report, Defense Success Reward
+  (Zombie), Daily Donation Ranking - one Rankings row
+  was not re-read by OCR in the post-tap observation,
+  but the Claim All answer was "No rewards available",
+  so nothing is recorded as claimed there); Season (Ice
+  Breaking Reports from [AP3x] Abyss Apex, 6d ago);
+  Regular (Victory battle reports: Lv.60 Doom Elite,
+  Lv.160 Doom Walker, Lv.55 Doom Elite); Battle Report
+  (Victory in Attack against RebelNova, 1,770 units
+  defeated, 12h ago; Lv.20 Zombie Raider and Lv.19,
+  Lv.18, Lv.17, Lv.16 Zombie Horde, 13h ago).
+- Battle Report method note: the first Claim All tap's
+  toast was missed by OCR timing, so Claim All was
+  tapped a second time and its "No rewards available"
+  answer was read live. When a toast is missed, re-tap
+  to confirm the answer rather than assuming it.
+- In-app Purchases was not swept: per the activity
+  metadata it holds receipts only, nothing to claim.
+  Red dots on Event and System again carried no
+  rewards, re-affirming that a category red dot is not
+  by itself a claimable reward.
+- Result statistics: target 6 categories, achieved 6,
+  verified yes. Nothing claimed, nothing bought,
+  nothing deleted. Costs: 259 seconds, no stamina or
+  items spent. Note on the record itself: the unit
+  file's evidence path was first written as
+  0728-queue-run.md at completion time and corrected
+  to 0715-queue-run.md - a record-hygiene note, not a
+  play claim.
 
 ## Open questions
 

@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T15:45:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: alliance-gifts execution record 2026-11-02 2018 queue run (ticker-2004 unit, done, 31 Regular plus 3 Premium)
   - source: alliance gifts execution record 2026-11-02 2305 queue run
   - source: ticker-0304 alliance-gifts execution record 2026-11-03 0308 queue run (done, 64 Regular and 5 Premium, Regular jump unexplained)
+  - source: ticker-0634 alliance-gifts execution record 2026-11-03 0650 queue run (done, 250 Regular and 6 Premium, per-tab Claim All points re-grounded)
 ---
 
 
@@ -624,6 +625,69 @@ one file per execution.
   event ended at about the 19:00 reset on 2026-10-30,
   and no zombie unit sits in inbox or claimed.
 
+## What the 2026-11-03 0650 unit added - 250 Regular and 6 Premium, per-tab Claim All points re-grounded
+
+- Ticker-0634, unit gifts-2026-11-03-0630, about 06:50
+  local, status done. Evidence in
+  `_records_/2026-11-03/alliance-gifts/0650-queue-run.md`.
+- Entry corrections, grounded fresh: a tap at norm
+  927,641 on the base right rail opened Alliance Wars,
+  not the Alliance panel; the Alliance button's grounded
+  box centre is norm 936,698, and that tap opened the
+  panel. On the panel, a tap at norm 312,526 opened
+  Alliance Wars again - the Gifts button's grounded box
+  is norm 135,561 to 493,637, centre 314,599, and that
+  tap opened Alliance Gifts. Eyeballed y estimates run
+  about 70 low on this panel; use grounded box centres,
+  not estimates. This repeats the 0308 one-row-high Wars
+  pattern, so verify the screen title after the Gifts
+  tap.
+- Regular tab, read live: Gift Level 28, progress
+  185,745,450 of 206,300,000, Claim All badge 250.
+  Claim All at its grounded centre 501,926 claimed 250
+  Regular gifts by its summary dialog; progress moved
+  live to 185,747,950, plus 2,500, exactly 250 times 10.
+  Rows read Claimed afterwards.
+- Premium tab, read live: Claim All badge 5. A first
+  tap at 501,926 - the Regular tab's Claim All point -
+  did nothing on the Premium screen: the Premium Claim
+  All button sits at the right, grounded box 600,888 to
+  889,976, centre 744,932, while 501,926 falls on the
+  Hide-your-name-on-Gifts checkbox area. The second tap
+  at 744,932 claimed 6 Premium gifts by its summary
+  dialog, one more than the badge 5, a gift arrived
+  during the claim. Progress moved live to 185,748,340,
+  plus 390 over the Regular close. Rows read Claimed
+  afterwards and no Claim All button remained on the
+  Premium tab. Standing rule re-affirmed: never reuse
+  the Regular Claim All point on the Premium tab; ground
+  each tab's point fresh.
+- Checkbox hazard, carried to the next unit: the
+  mis-aimed first Premium tap may have toggled the
+  Hide-your-name checkbox; its state was not verified
+  afterwards and no setting change is claimed. The next
+  gifts unit reads that checkbox state on entry and
+  restores it if it changed. This is the second unit
+  (after 0308) in which a Premium Claim All tap missed
+  onto the checkbox area.
+- Completion sweep: Claim All used on both tabs, visible
+  rows Claimed on both tabs, no Claim All button
+  remaining on Premium. A small red dot remained on the
+  Premium tab edge in the closing screenshot with no
+  Claim All button present; it is recorded unexplained,
+  not as a pending claim.
+- Counter note for Issue #183: this unit's progress
+  movement is exactly accounted (Regular plus 2,500 for
+  250 gifts, Premium plus 390 for 6 gifts), unlike the
+  0308 Regular jump; the residual Premium tab red dot
+  is the only unexplained counter evidence here,
+  commented onto Issue #183 by this run; the issue
+  stays open.
+- Exit: Gifts back arrow to the Alliance panel, then
+  the panel back arrow 164,931 to the base screen.
+  Alliance Wars was opened twice by mis-aimed entry
+  taps and left untouched both times.
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -672,3 +736,5 @@ one file per execution.
 - 1.14.0 (2026-11-02): dialog-confirmed 46 Regular and 64 Premium (110 total), Gift Level 28 progress 182,891,070 to 183,001,720 of 206,300,000 (plus 110,650 in-unit), Premium badge 82 against dialog 62 as a new badge-versus-dialog gap, Regular re-sweep plus 1,260 for 6 gifts against about 10 each in the first window so per-gift progress movement is unstable within one tab, both tabs verified badge-clear at close with the zero-badge state momentary, and the anomaly evidence commented onto Issue #183 by this run, folded from the 2305 gifts unit.
 
 - 1.15.0 (2026-11-03): dialog-confirmed 64 Regular and 5 Premium, Gift Level 28 progress 183,887,030 to 183,946,860 of 206,300,000 (plus 59,830 in-unit), Regular jump 56,930 against 64 gifts at 10 points each as further Issue #183 evidence commented by this run, Premium jump 2,900 matching visible points, first Gifts tap landing one row high onto Alliance Wars as in the 1718 unit, Premium first Claim All tap missing onto the Hide-your-name area, both tabs verified badge-clear at close, folded from the 0308 gifts unit.
+
+- 1.16.0 (2026-11-03): dialog-confirmed 250 Regular and 6 Premium, Gift Level 28 progress 185,745,450 to 185,748,340 of 206,300,000 (plus 2,890 in-unit, exactly accounted: Regular plus 2,500 for 250 gifts, Premium plus 390 for 6 gifts), Alliance button grounded centre 936,698 against the 927,641 Wars mis-tap, Gifts button grounded box 135,561 to 493,637 centre 314,599 against the 312,526 Wars mis-tap with y estimates about 70 low, Premium Claim All grounded box 600,888 to 889,976 centre 744,932 against the Regular point 501,926 falling on the Hide-your-name checkbox area with the checkbox state left unverified and carried to the next unit, residual Premium tab red dot with no Claim All button as the only unexplained counter evidence commented onto Issue #183 by this run, folded from the 0650 gifts unit.

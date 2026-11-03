@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T13:34:48Z
+modified: 2026-11-03T15:45:00Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: alliance help execution record 2026-11-02 2311 queue run
   - source: ticker-0304 alliance-help execution record 2026-11-03 0308 queue run (done, header 980 unchanged by Help All)
   - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (observe-only, Help panel 1,240/1,000 over gate, four Bears Lair requests 30/30)
+  - source: ticker-0704 alliance-help execution record 2026-11-03 0710 queue run (done, base-screen bubble, header 1,240/1,000 unchanged by Help All)
 ---
 
 
@@ -538,6 +539,57 @@ Measured in the 0135 help unit (ticker-0134, window mode
   no delivery claim is made from this walk. The Help dot
   maps to the help regular (already queued) with nothing
   new to claim here.
+
+## What the 2026-11-03 0710 unit added - done through the base-screen bubble, header 1,240 unchanged
+
+- Ticker-0704, unit help-2026-11-03-0630, about 07:05
+  to 07:10 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/0710-queue-run.md`.
+- Base screen at entry: power 149,940,141, stamina 120,
+  March Queues 0/4, coins 5.9M on the HUD. The help
+  bubble was present at the lower right, immediately
+  left of the Alliance shield: grounded box norm
+  778,654 to 873,738, centre 825,696. One tap at the
+  bubble centre pressed the waiting helps: the game
+  answered "Allies are very grateful for your
+  assistance" and the bubble cleared on the next
+  screenshot. Background input reached the game on the
+  first tap; no foreground recovery was needed. One
+  click without an observation id was rejected by the
+  control channel before any input was sent; the retry
+  carried a fresh observation id.
+- Verification on the Alliance Help page, read live:
+  header "Today's points gained from Alliance Help:
+  1,240/1,000", matching the 0446 scout read, already
+  over the 1,000 gate. All listed rows are this
+  account's own Bears Lair requests (Lv.27 Drill
+  Ground, Lv.30 Aircraft Center, Morale research,
+  Precision Targeting research), each carrying a green
+  "Time reduced" badge; no ally rows were pending. A
+  Help All tap on that page left the header unchanged
+  at 1,240/1,000, confirming no further ally help was
+  waiting. This re-confirms the 2311 and 0308
+  resolution: the grateful toast alone is not delivery
+  proof, and the header re-read supersedes any
+  toast-counted reading.
+- Entry correction for the next unit: a first tap at
+  norm 657,455 on the Alliance panel landed above the
+  Help button and changed nothing; the Help button's
+  grounded box is norm 507,490 to 865,574, centre
+  686,532, and that tap opened the Help page.
+  Eyeballed y estimates run low on this panel; use
+  grounded box centres, not estimates. The centre is
+  consistent with the 0446 scout's grounded 687,497.
+- Result statistics: target 1, achieved 1, verified
+  yes. Nothing claimed beyond the helps, nothing
+  bought, no diamonds or money spent. Costs: 251
+  seconds, no stamina or items spent. Note on the
+  record itself: the unit file's evidence path was
+  first written as 0717-queue-run.md at completion
+  time and corrected to 0710-queue-run.md, and the
+  costs stat was added to the unit file by hand after
+  completion, since the complete call did not carry it
+  - a record-hygiene note, not a play claim.
 
 ## Open questions
 

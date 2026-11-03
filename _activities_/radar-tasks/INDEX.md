@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T10:36:50Z
+modified: 2026-11-03T15:45:00Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-1004 radar-tasks execution record 2026-11-02 1026 queue run (partial, radar screen never entered)
   - source: radar tasks execution record 2026-11-02 2242 queue run
   - source: ticker-0204 radar-tasks execution record 2026-11-03 0212 queue run (partial by design, single-offer trap in at-entry form)
+  - source: ticker-0634 radar-tasks execution record 2026-11-03 0636 queue run (partial by design, dish centre re-grounded, Claim All-only bar again)
 ---
 
 
@@ -1164,6 +1165,64 @@ are still open, per the protocol.
   device_takeovers 0, blocker single-offer Claim All
   standing at entry.
 
+## What the 2026-11-03 0636 unit added - stack day, dish centre re-grounded, Claim All-only bar again
+
+- Ticker-0634, unit radar-2026-11-03-0603, about 06:36
+  local, partial by design under the stack posture, not
+  a miss. Duel day 2: stack, claims score on release
+  days only. Nothing was claimed in this unit, no map
+  pin was tapped, no stamina was spent.
+- Entry: the game was left open on the Alliance Techs
+  panel by the previous donations unit (Donation Count
+  read live 1/30 at entry, not this unit's work, nothing
+  donated). The Alliance back arrow stalled twice at
+  norm 98,919 and 100,920, then the visually grounded
+  centre norm 164,931 returned to the base screen - the
+  same proven point as the 2026-11-02 mail unit, and
+  consistent with the 0212 x correction from 104 to
+  grounded 162.
+- Dish correction, measured: a first tap at norm 53,682
+  opened an ally base profile ([AP3x]Amarky257) instead
+  of the radar; the profile was dismissed by tapping
+  empty ground. A second tap at the bounding-box centre
+  norm 57,704 opened the radar, verified by its own
+  reads. Lesson: the dish icon's effective centre is
+  57,704 on this framing, not the 53,682 point. The
+  0212 point 53,711 was not tested in this unit and is
+  not claimed wrong; the re-ground-fresh rule stands,
+  and the fresh point, not the carried point, is what
+  opened the screen.
+- Radar screen, read live: Lv.13, radar points 139
+  unchanged, stored 13 of 40, stamina 120, restore line
+  "12 Radar Task(s) will be restored in 02:50:41",
+  full restore at 11-3 21:31:43 local time. Stored rose
+  from 1 of 40 at 0212 to 13 of 40 here, consistent with
+  one 12-task restore landing between the two units;
+  headroom to the 40 cap is not a concern. Restore-line
+  semantics stay unverified, not assumed.
+- Single-offer trap, at-entry form again: the bottom
+  bar read "11 task rewards can be claimed" with a
+  Claim All button only, no Quick Execute offer, so
+  stack-day execution is locked out while the pending
+  rewards stand. This is the named blocker carried into
+  the next unit's opening read, per the stack-day
+  completion standard; the next unit reads the bar
+  offer first and plans around it before any other
+  radar work.
+- Pin inventory (stack posture - inventory only,
+  nothing tapped): three skull pins standing on the
+  radar map - a green skull pin top-centre-left, a
+  purple skull pin mid-left, and a blue skull pin
+  mid-right. No other radar pin was visible on the map
+  shown. The portrait squares on the map are alliance
+  member markers, not radar pins - a new distinction
+  for the inventory rule.
+- Closing reads: points 139, stored 13 of 40, pending
+  rewards on the Claim All bar 11, stamina 120, tasks
+  executed 0, rewards claimed 0, pins tapped 0.
+  Blocker category e (repeated blocker - Claim
+  All-only bar).
+
 ## Changelog
 
 - 1.16.0, 2026-11-02 - 1913 new-trade-day stack-day unit folded: dish 62,727 first-tap entry resolves the 1439 entry blocker, entry-failure count resets to 0; Lv.13, points 139, stored 0 of 40, stamina 56, 12 tasks restoring about 21:32; no Quick Execute / Claim All bar with 0 stored and 0 pending (consistent, not the 2026-10-31 lockout); pin scan empty, nothing left unattempted; one takeover, dialog did not return, not contested.
@@ -1236,3 +1295,5 @@ are still open, per the protocol.
 - 1.17.0, 2026-11-02 - 2242 stack-day unit folded: dish fresh at 53,710 first-tap entry; Lv.13, points 139, stored 1 of 40, stamina 97 to 38; Quick Execute 6 tasks for 60 stamina, then Claim All for 11 rewards with no second Quick Execute offer (single-offer trap, post-execution form); 11 rewards left unclaimed per stack posture; restore line predicting 12 tasks by about 21:32 against only 1 stored at 22:34, so restore semantics stay unverified; three red-dotted pins inventoried, none tapped; stored-versus-completable gap recorded as an open measurement question.
 
 - 1.18.0, 2026-11-03 - 0212 stack-day unit folded: dish fresh at 53,711 first-tap entry; Lv.13, points 139 unchanged, stored 1 of 40, stamina 79; single-offer trap in at-entry form (Claim All only at entry, no Quick Execute offer, contrast 2242 post-execution form); 11 rewards left unclaimed per stack posture; restore line in a second form ("12 Radar Task(s) will be restored in 01:22:23"), semantics still unverified; three red-dotted pins inventoried, same as 2242; Alliance back-arrow x corrected 104 to grounded 162; radar home button 907,952.
+
+- 1.19.0, 2026-11-03 - 0636 stack-day unit folded: dish centre re-grounded at 57,704 after the 53,682 tap opened an ally base profile (0212 point 53,711 untested here, not claimed wrong); Lv.13, points 139 unchanged, stored 13 of 40 (one 12-task restore since 0212), stamina 120, restore line "12 tasks in 02:50:41" with full restore 11-3 21:31:43, semantics still unverified; Claim All-only bar with 11 pending again in at-entry form, stack-day lockout carried as the named blocker; three skull pins inventoried (green top-centre-left, purple mid-left, blue mid-right), portrait squares distinguished as member markers, not pins; Alliance back arrow stalls at 98,919 and 100,920 with grounded 164,931 working.
