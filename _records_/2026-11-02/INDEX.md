@@ -2622,3 +2622,9 @@ of 2026-10-28.
   mis-tap opened the campaign map and was closed without
   action. Tracker untouched. Full detail in
   resource-collection/1520-queue-run.md.
+
+## 16:32 to about 16:53 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-02-1653.
+  Own PRs checked first (only records PRs 187 and 161 open, none owned); took open tooling issue #149 over the other tooling issues (all already implemented by merged PRs, closure belongs to the retro), for its one named deferred slice: the scout_diff narrative-parse gap. Built the per-pass red-dot accounting parse and frontmatter reconciliation in scout_diff.py (sections, totals, matches/differs/not-comparable per count; round-summary line from the same coverage counts; headline fallback untouched). On the Nov 1 observation the two sections sum to 12/6/6, reconciling exactly against frontmatter. PR 189 opened, issue #149 commented and not closed, Slack DM summary sent. Fixture validation on isolated scratch pools (18 checks) plus an unpatched-main control run.
+  Full detail in tool-development/1653-run.md.
