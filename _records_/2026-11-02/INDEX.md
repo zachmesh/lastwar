@@ -3664,3 +3664,14 @@ of 2026-10-28.
   open issue #171, not filed anew. Tracker untouched.
   Full detail in alliance-donations/2220-queue-run.md
   (file name overstates the close; actual close 22:16).
+
+- PR integration pass pr-integration-2026-11-02-2230.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00).
+  No knowledge or code PR open. Records PR 193
+  (post-1900 batch, head 45a747b7) awaits the 23:00
+  batch; records PR 187 conflict on action-log.jsonl
+  carried, already commented at 1900, not force-merged.
+  No records PR opened, no comment, no escalation.
+  No-op pass, silent under the delivery rule.
+  Full detail in pr-integration/2230-run.md.
