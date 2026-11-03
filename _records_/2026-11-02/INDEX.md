@@ -2684,3 +2684,23 @@ of 2026-10-28.
   had expired by recovery time, so the unit was reaped back to
   inbox unclaimed for the next tick. Tracker untouched. Full
   detail in survivor-intake/1640-queue-run.md.
+
+## 17:00 to about 17:14 - PR integration pass
+
+- Non-batch pass, status done: checker
+  _tools_/records_batch.py on main reported due no,
+  outside every batch window, next batch point
+  19:00 PT. Merged PR 189 (tools, scout_diff
+  narrative red-dot accounting, Refs 149, Owner
+  lastwar-tool-developer, squash) and PR 190
+  (knowledge, organizer 1632, 1508 arms-race and
+  1520 harvest into 3 profiles, Owner
+  lastwar-knowledge-organizer, squash); main
+  synced back to the local repo by bundle to
+  f31b10bd. Records PRs 187 (2026-11-01 post-1500
+  batch, head 2be5df83) and 161 (2026-11-02, head
+  6fbd9a6e, prior action-log conflict resolved on
+  the branch side, mergeable clean) both await the
+  1900 batch. records/2026-10-31 verified contained
+  in main, no PR needed. Full detail in
+  pr-integration/1700-run.md.
