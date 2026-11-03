@@ -698,3 +698,53 @@ of 2026-10-28.
   log, standing comment carried. No knowledge or code
   PR open, no owner escalation, no new comment.
   Full detail in pr-integration/0315-run.md.
+
+## 03:04 to about 03:18 — Queue ticker pass, gifts, help, mail, star ceremony, train, passes, events
+
+- Ticker pass ticker-0304. Sync reaped nothing and produced
+  nothing new - all due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30, and no zombie unit sits in
+  inbox or claimed. Owned records PRs checked first: PRs 216,
+  207 and 187 are integrator-owned with no question addressed
+  to this job, so no PR action was taken on them.
+- Gifts unit gifts-2026-11-03-0230, done: Claim All on both
+  tabs, 64 Regular plus 5 Premium; Gift Level 28 progress
+  183,887,030 to 183,946,860 of 206,300,000. One mis-tap
+  opened Alliance Wars first and was backed out of
+  untouched. Full detail in alliance-gifts/0308-queue-run.md.
+- Help unit help-2026-11-03-0230, done: Help All pressed,
+  toast confirmed; header unchanged 980 of 1,000, own
+  requests 30 of 30. Full detail in
+  alliance-help/0308-queue-run.md.
+- Mail unit mail-2026-11-03-0230, done: Claim All in every
+  category, no rewards available, 0 claimed, 0 deleted.
+  Reaching Mail cost one app crash: the Alliance panel
+  back arrow took three background taps with no change,
+  Esc was tried and the game quit (Esc is a known crash
+  trigger for this app and must not be used again); the
+  app was reopened and Mail was swept normally. Full
+  detail in mail-rewards/0312-queue-run.md.
+- Star-ceremony unit star-ceremony-2026-11-03-0230, done:
+  no trophy icon beside the Alliance icon, nothing played.
+  Duel panel alliance totals Apex 337,971,369 against
+  Kmf 460,462,861; the personal total was not read here,
+  it belongs to the duel-score regular. Full detail in
+  alliance-duel/0314-queue-run.md.
+- Train unit train-2026-11-03-0230, partial: no station
+  view achieved - the measured train tap (52, 548) did
+  not pan and no Boarding banner showed; a grounding tap
+  opened Secret Command Post and was closed untouched.
+  Tracker untouched. Gap already tracked as Issue #205;
+  this repeat is commented there. Full detail in
+  alliance-train/0315-queue-run.md.
+- Passes unit passes-2026-11-03-0257, done: shop sweep,
+  Free Supply Claimed, Coin pass Already claimed today,
+  Monthly Pass Claimed (19 days left), S2 Drone pass an
+  unowned offer; 0 new claims, no paid button tapped.
+  Full detail in shop-claims/0316-queue-run.md.
+- Events unit events-2026-11-03-0257, done: hub sweep,
+  Arms Race Base Building score 9,300 (tier-1 already
+  claimed), Desert Storm already registered, Wanted Boss
+  Go not tapped (grinding), Community Claimed; 0 rewards.
+  Full detail in event-claims/0318-queue-run.md.
