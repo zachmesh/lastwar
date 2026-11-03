@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T08:32:17Z
+modified: 2026-11-03T12:34:45Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,8 @@ grounded_in:
   - source: ticker-1307 truck-plunder execution record 2026-11-02 1325 queue run (partial, leftmost shard stack x3 pays in full, plunder shortfall 1 remains)
   - source: ticker-2104 truck-plunder execution record 2026-11-02 2120 queue run (partial, station-tap entry, counters 4/5 and 4/4, fifth dispatch shortfall)
   - source: ticker-2334 truck-plunder execution record 2026-11-02 2347 queue run (partial, station-tap entry failed, counters not read)
+  - source: ticker-0334 truck-plunder execution record 2026-11-03 0344 queue run (partial, station-tap entry failed again, grounding mislabels Furnace and Wall)
+  - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry lesson; incidental live trade counters 4/5)
 ---
 
 # Truck plunder - Intercity Trade
@@ -84,6 +86,20 @@ train also runs on this screen as a trade vehicle.
   the Others' Trucks view, with no settlement pending.
   Use this route before hunting the column set flip when
   the column carries no trade slot.
+- Station-tap qualification, 2026-11-03 (0344 unit): the
+  [491,195] station tap is no-change for the second
+  consecutive trucks unit after 2347, so it must not be
+  re-tapped blindly. Fresh grounding in the same unit
+  mislabelled buildings as the station: [488,378]
+  selected High-temp Furnace Lv.30, [637,170] selected
+  Wall Lv.26 with the same unidentified two-button popup
+  (home icon, up arrow) seen at 2347, and [357,200] was
+  no-change. Do not re-tap [491,195], [488,378],
+  [637,170] or [357,200] blindly. Next variant, from the
+  same pass (see the 0344 section below): an unsnapped
+  exact-centre tap on the trade icon, not a snapped tap
+  on a grounded station point - snapped taps in the left
+  column mis-route, as the 0346 secrets unit proved.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.
@@ -1149,6 +1165,82 @@ settlement and dispatch execution record).
   dialog appeared. Game left on the base screen.
 
 
+
+## What the 2026-11-03 0344 unit added - entry failed again, grounding mislabels buildings, partial
+
+- Unit trucks-2026-11-03-0257 by ticker-0334, session
+  about 03:34 to 03:44, status partial, entry failed.
+  Evidence in
+  `_records_/2026-11-03/truck-plunder/0344-queue-run.md`.
+  GitHub Issue #218 filed in this unit (labels play,
+  knowledge) for this repeated failure mode.
+- Entry failure, in detail: the 2120 station tap at norm
+  [491,195] was tried first and was no-change, matching
+  the 2347 unit - the second consecutive trucks unit for
+  which the old station point does nothing. Fresh visual
+  grounding put a station box at norm 398-578 x 308-448;
+  tapping its centre [488,378] selected High-temp
+  Furnace Lv.30, not a station. After panning the base
+  (drag [500,400] to [500,650]), grounding put a station
+  box at norm 545-730 x 105-235; tapping its centre
+  [637,170] selected Wall Lv.26, with the same
+  unidentified two-button popup (home icon, up arrow)
+  seen in the 2347 unit. Neither button was tapped.
+  After a second pan (drag [600,400] to [300,400]),
+  grounding put a station box at norm 280-435 x 140-260;
+  tapping its centre [357,200] was no-change. The
+  furnace and wall popups were dismissed by tapping
+  empty ground; no furnace was turned on or off and no
+  upgrade was touched.
+- The left column in this unit was re-grounded fresh and
+  carries no trade slot in this set: hammer 2/4, flasks
+  2/2, green face 6.5 degrees C at norm 53,483,
+  light-blue train front with a red dot at norm 61,563,
+  white pickup at norm 61,643, satellite dish with
+  badge 11 at norm 62,723, hammer below. Per the
+  2026-10-30 evening units, the train-front icon neither
+  opens trade nor flips the set, so it was not tapped.
+- The foreground variant suggested by the 2347 unit
+  (moving the covering Chrome window aside) was not
+  attempted: this control channel sends input in the
+  background and never brings the game to the front, so
+  that variant is not available from here.
+- Counters were NOT read live in this unit: the trade
+  screen was never entered, so no live counter is
+  asserted here. Carried, not re-read, from the 2120
+  unit: Trade 4/5, Plunder 4/4, for the trade day ending
+  19:00 local 2026-11-03, so the 1-dispatch shortfall
+  remains unfilled. Corroboration, not trucks work: the
+  secrets unit of the same pass (0346) saw Trade 4/5
+  with four trucks out incidentally while exiting trade
+  screens opened by snapped taps - that read matches the
+  carried 4/5 but was not acted on as trucks work.
+- Duel posture: day 2, Base Expansion, UR truck
+  dispatches score (Handbook 100,000 each); trucks go UR
+  today, contracts permitting. The fifth dispatch, when
+  entry succeeds, must still be UR (Mega UR only per the
+  unit window). A returned truck may await settlement;
+  that is not established in this unit.
+- Outcome: partial, entry failed, dispatch shortfall
+  carried forward (not a miss: the trade day runs to
+  19:00 local 2026-11-03, and later trucks units keep
+  trying entry). No dispatch, no plunder, no settlement
+  performed. No diamonds, no Trade Contracts, no paid
+  button, no plunder, no dispatch. Tracker untouched
+  (partial units do not mark the tracker).
+  Blocker_category: e (repeated blocker - trade screen
+  entry method). Next trucks unit: do not re-tap
+  [491,195], [488,378], [637,170] or [357,200] blindly.
+  Until Issue #218 is answered, later units should spend
+  their budget on finding a verified Intercity Trade
+  entry route for the current base framing rather than
+  repeating these four points - first variant to try, by
+  analogy with the 0346 secrets entry: an unsnapped
+  exact-centre tap on the trade icon, since snapped taps
+  in the left column demonstrably land on the wrong slot.
+  Game left on the base screen, panned east from its
+  starting framing by the two drags in this unit.
+
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
@@ -1173,3 +1265,12 @@ settlement and dispatch execution record).
   entry point - no new Issue filed yet, because the
   next trucks unit retries entry first with the
   re-grounding and the Chrome-window-aside variant.
+  (2026-11-03 0344 update: the station tap failed a
+  second consecutive unit and grounded station points
+  mislabelled Furnace Lv.30 and Wall Lv.26, so the
+  re-grounding retry is exhausted as a variant on its
+  own; GitHub Issue #218 is now open for this failure
+  mode, and the next variant is the unsnapped
+  exact-centre tap proposed by the 0344 section above.
+  The Chrome-window-aside variant is not available from
+  the background control channel, per the 0344 record.)

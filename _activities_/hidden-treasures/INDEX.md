@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-03T08:32:17Z
+modified: 2026-11-03T12:34:45Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-1336 hidden-treasures execution record 2026-11-02 1352 queue run (done, checked only)
   - source: ticker-2134 hidden-treasures execution record 2026-11-02 2135 queue run
   - source: ticker-0004 hidden-treasures execution record 2026-11-03 0014 queue run (done, checked only, M3 at zero)
+  - source: ticker-0334 hidden-treasures execution record 2026-11-03 0349 queue run (done, checked only, counts identical to 0014, M3 at zero)
 ---
 
 # Hidden treasures
@@ -379,3 +380,33 @@ as Hidden Treasure.
   achieved 0 digs, for the stated reason - M3 x0 is
   the binding fragment. No diamonds, no money, no
   exchange touched. Game left on the base screen.
+
+## What the 2026-11-03 0349 unit added - checked only, counts identical to 0014, M3 still binding
+
+- Unit treasures-2026-11-03-0257 by ticker-0334, session
+  about 03:49 local, status done, checked only. Evidence
+  in `_records_/2026-11-03/hidden-treasures/0349-queue-run.md`.
+  No diamonds, no money, no exchange touched.
+- Entry: Secret Command Post entered with the unsnapped
+  exact-centre pickup tap [55,632] learned in the
+  secrets unit of this pass (see secret-missions); title
+  verified as SECRET COMMAND POST before any further
+  tap. Hidden Treasures tab tapped at norm [369,139];
+  title verified as Hidden Treasure. The tab carried no
+  red dig badge at entry.
+- Fragment counts, read live from the map, unchanged
+  from the 2026-11-03 0014 unit in every figure: M1 x12,
+  M2 x12, M3 x0, M4 x7, M5 x2, M6 x5, M7 x11. Chest
+  progress track reads 4/15 at the top right of the map
+  screen, also unchanged from 0014. Skip Animation is
+  ticked. Both Dig buttons are greyed out.
+- Outcome: done, checked only. M3 is at zero, so no
+  complete set of seven fragments is on hand and no dig
+  is possible; no dig was attempted and no fragment
+  exchange was executed (exchanges need owner approval
+  per the metadata limits). Target: 1 dig if a full set
+  were on hand; achieved: 0 digs, for the stated reason
+  - M3 x0 is the binding fragment, now for the second
+  consecutive treasures read with zero fragment movement
+  between them (0014 to 0349). Tracker: marked done for
+  treasures by this pass. Game left on the base screen.
