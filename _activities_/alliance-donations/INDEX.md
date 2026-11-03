@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T13:34:48Z
+modified: 2026-11-03T14:37:12Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,8 @@ grounded_in:
   - source: ticker-0134 alliance-donations execution record 2026-11-03 0144 queue run (done, 2 coin donations, count replenished 0 to 2, re-read pending)
   - source: ticker-0234 alliance-donations execution record 2026-11-03 0235 queue run (partial, entry centre framing, 2 verified donations, re-read retimed)
   - source: ticker-0434 alliance-donations execution record 2026-11-03 0441 queue run (partial, entry centre (903,787) is Mail, 4 verified coin donations, tap-5 timer no-landing, tap-6 timer unverified, Issue #220)
+  - source: ticker-0504 alliance-donations execution record 2026-11-03 0521 queue run (partial, re-read after 0441 timer, tap 6 did not land, greyed-timer tap third instance, 3-second hold no change, Issue 174)
+  - source: ticker-0604 alliance-donations execution record 2026-11-03 0621 queue run (partial, 2 verified coin donations, count replenished 1 to 3, greyed-timer tap fourth instance, idle-then-tap retired for the 1-30 value, Issue 174)
 ---
 
 
@@ -70,6 +72,8 @@ activity. Not a separate type.
   the Mail envelope grounds at (930,764) and the
   Alliance shield at (930,689), and the (930,689) tap
   opened the Alliance menu on the first try.
+
+- Entry, 2026-11-03 0621: a tap at (678,615) opened the Members list instead of Alliance Techs on that framing; the back arrow at (60,955) returned to the menu and the proven (687,682) opened Techs at once. The (930,700) shield centre worked twice in one morning (0521 fresh ground, 0621 fallback after a grounding point and a double-click both failed), so it is the standing fallback when fresh grounding fails, not a carried default: every unit still re-grounds on its current screenshot first.
 
 ## How it is done
 
@@ -860,7 +864,7 @@ before 03:17 local). Evidence in
   executor, so no duplicate organizer comment was made
   there. Tap 6 at the same centre greyed the button with
   a 00:19:35 timer, count label hidden, Tech EXP 11.3K;
-  whether tap 6 landed is not decided by this unit.
+  whether tap 6 landed is not decided by this unit. Correction, 2026-11-03 0521: RESOLVED. The 0521 re-read read Donation Count 1/30 live after the timer, so tap 6 did not land. The 0532 open question is closed by the record, not by arithmetic.
 - Closing state, unverified by the hard rule: at close the
   Donation Count cannot be read live, because the 00:19:35
   timer from tap 6 (started about 04:41 local) runs until
@@ -875,6 +879,123 @@ before 03:17 local). Evidence in
   no alliance diplomacy, no assembly, no teleport. Mail
   was opened only by the mis-aimed entry tap; no mail was
   claimed or deleted, and Delete All was never tapped.
+
+
+## What the 2026-11-03 0521 and 0621 units added
+
+- Ticker-0504, unit donations-2026-11-03-1241, about 05:21
+  local, status partial; ticker-0604, unit
+  donations-2026-11-03-0603, about 06:21 local, status
+  partial. Coin button only in both: no diamonds, no
+  money, no paid button tapped. Evidence in
+  `_records_/2026-11-03/alliance-donations/0521-queue-run.md`
+  and `_records_/2026-11-03/alliance-donations/0621-queue-run.md`.
+- 0521 entry: Alliance shield grounded fresh at (930,700)
+  opened the menu at once ([AP3x] The Apex, 94/100
+  members), no Mail mis-tap, confirming the Issue #220
+  prescription. Alliance Techs tile at (687,682), as in
+  0441. Help and Alliance Gifts red dots belong to their
+  own units and were left untouched.
+- 0521 state, read live: War tab Troop Movement 5/10,
+  Rallied HP 6/10, Rallied Attack 7/10, Rallied Defense
+  7/10, next node below 1/10, unchanged. Tech Donation
+  Today 6200, unchanged from the 0441 close
+  (alliance-wide footer, not this unit's). Rallied Attack
+  panel: Current +7 percent, Next Level +8 percent,
+  Tech EXP 11.3K/4.5M, Donation Reward 50/50, Donation
+  Count 1/30 live at entry. The re-read did NOT confirm
+  0 remaining: ticker-0434 tap 6 did not land, exactly
+  as its post-timer read implied, and the 0441 open
+  question is resolved by this record.
+- 0521 taps: a plain tap on the green coin Donate centre
+  (660,787) greyed the button with a 00:07:24 timer;
+  after the timer was waited out inside the unit the
+  panel read Donation Count 1/30 again, live, green
+  button active. This is the third consecutive
+  greyed-timer tap that leaves 1/30 standing, after
+  ticker-0434 taps 5 and 6 in unit 0441. Changed method
+  per rule R2: a 3-second hold on the same centre
+  produced no change at all, count still 1/30, button
+  still green, no timer. The hold does not donate.
+  Unit closed partial and unverified, tracker untouched,
+  re-read unit donations-2026-11-03-1321 queued with a
+  window naming the blocker.
+- 0621 entry: the game was left on the world map with a
+  player card open by the previous arms-race unit. The
+  red X button at norm 855,685 on the world map
+  returned the game to the base screen on the first
+  tap; that X is the world-to-base return control. The
+  shield: a visual-grounding point (936,680) produced
+  no change, and a double-click at the fresh measured
+  centre (927,662) also produced no change; per rule R2
+  both methods were retired inside this unit, and the
+  changed method, a single tap at (930,700), the proven
+  centre from the 0521 unit, opened the Alliance menu
+  at once. Alliance Techs: a tap at (678,615) opened
+  the Members list instead of Alliance Techs, so that
+  point is wrong on this framing; the back arrow at
+  (60,955) returned to the menu, and the proven
+  (687,682) point opened Alliance Techs at once. Each
+  donations unit must re-ground on its current
+  screenshot and fall back to the proven points, not
+  reuse a single recorded point blindly.
+- 0621 state, read live: War tab unchanged from 0521.
+  Tech Donation Today 6300 at entry (alliance-wide
+  footer). Rallied Attack panel: Current +7 percent,
+  Next Level +8 percent, Tech EXP 11.4K/4.5M at entry,
+  Donation Reward 50/50, Donation Count 3/30. The 3/30
+  entry count is itself new evidence: the 0521 unit
+  closed at 1/30 live, so the count rose by 2 between
+  about 05:21 and 06:15 local. The count replenishes
+  over time; the rate is not yet measured and is not
+  claimed here.
+- 0621 donations, per-tap evidence: tap 1, after a
+  60-second idle on the fresh panel, at the proven green
+  Donate centre (660,787), moved Donation Count 3/30 to
+  2/30, verified by screenshot, Tech EXP 11.4K to 11.5K.
+  Tap 2, immediate, at the same centre, moved 2/30 to
+  1/30, verified by screenshot, Tech EXP 11.5K to 11.7K.
+  The EXP bar is alliance-wide, so the EXP moves are
+  not claimed as this unit's alone; the count moves are
+  the evidence. Tap 3, after a second 60-second idle, at
+  the same centre, greyed the button with a 00:02:28
+  timer, count label hidden, tooltip "Hold down for
+  easier continuous donations" seen. After the timer
+  was waited out inside the unit (150 seconds) the
+  panel read Donation Count 1/30 again, live, green
+  button active. Tap 3 therefore did not move the
+  count. This is the fourth greyed-timer tap that
+  leaves the pre-tap count standing, after ticker-0434
+  tap 5, ticker-0434 tap 6 (inferred from the 0521
+  re-read) and ticker-0504's tap in unit 0521.
+- 0621 method retirement: no fourth tap was made.
+  Post-timer taps have now failed in three consecutive
+  units (0441, 0521 and this one), and repeating the
+  idle-then-tap method a third time in this unit would
+  be the same method with no change. Per rule R2 the
+  idle-then-tap method is retired for the 1/30 value
+  and the failure is escalated to Issue #174, commented
+  from this unit. The 0521 prescription is therefore
+  refined, not overturned: fresh panel re-entry plus a
+  60-second idle landed two taps in this unit (3 to 2
+  to 1) and then failed at 1/30.
+- 0621 closing, unverified by the hard rule: at close
+  the Donation Count reads 1/30 live, so the day is NOT
+  done. No arithmetic final count is claimed, and the
+  tracker is left untouched. Arithmetic note, not a
+  closing figure: landed donations counted in today's
+  records sum to 29 (19 in 0127, 2 in 0144, 2 verified
+  in 0235, 4 in 0441, 0 in 0521, 2 here), which is why
+  the 0521 record's 29/30 throttle hypothesis is worth
+  investigating, but the count also replenished from 1
+  to 3 before this unit, so a fixed 30 cap does not
+  explain the state on its own. The standing re-read
+  unit donations-2026-11-03-1321 already sits in inbox;
+  no duplicate re-read unit was enqueued.
+- Red lines held in both units: no diamonds spent, no
+  paid button tapped, no alliance diplomacy, no
+  assembly, no teleport. No mail was opened, claimed or
+  deleted in either unit.
 
 ## Open questions
 
@@ -895,7 +1016,7 @@ before 03:17 local). Evidence in
   consolidate, not self-closed. The re-read rule for a
   replenishing count (re-read after the timer; donate again if
   above zero; a live 0 read closes only that unit, not the day,
-  until the model says otherwise) is still unrecorded.
+  until the model says otherwise) is still unrecorded. Fourth data point 2026-11-03 0621: live 3/30 at entry after the 0521 1/30 close, about 2 back over about 54 minutes, rate still NOT measured.
 - Donation Count 30/30 read 2026-11-02 1810, ambiguous and
   NOT asserted as a replenishment measurement: the read
   conflicts with the sweep's last live count of 1 remaining

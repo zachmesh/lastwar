@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T10:36:50Z
+modified: 2026-11-03T14:37:12Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-1452 arms-race execution record 2026-11-02 1508 queue run (partial, first unit of Hero Advancement phase, 20.0M EXP shortfall)
   - source: ticker-2204 arms-race execution record 2026-11-02 2209 queue run
   - source: ticker-0204 arms-race execution record 2026-11-03 0228 queue run (partial, Base Building tier-1 claimed, tiers 2 and 3 unreachable inside the red lines)
+  - source: ticker-0604 arms-race execution record 2026-11-03 0609 queue run (partial, first unit of new Drone Boost phase, stamina 120 measured, Lv-1 Doom Elite 20 stamina for 2000 points, tier arithmetic, ranking-row chest taps retired)
 ---
 
 
@@ -244,13 +245,125 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   chest 1 of 2" read, until a unit reads both pages in
   one pass.
 
+
+## What the 2026-11-03 0609 unit added
+
+- Unit arms-race-2026-11-03-0603 by ticker-0604, about
+  06:09 local, status partial, first unit inside the new
+  Drone Boost phase (rule R4): phase, score, thresholds
+  and every scoring path read live, completion sweep done
+  as far as the screens allowed, no scoring action
+  executed, no chest claimed, tracker untouched. The
+  next tick re-produces this regular and the scoring plan
+  below falls to the next unit. Evidence in
+  `_records_/2026-11-03/arms-race/0609-queue-run.md`.
+- Live phase read: Drone Boost, Contest Segment Lv.29-30,
+  time left 03:53:58 at the first read, 03:53:23 at the
+  sweep re-read. Phase window ends about 10:00 local.
+  Live score: 0, read from the star bar at the top left
+  of the phase page. The ranking row figure 9,300 for
+  [AP3x]Bears Lair is the lagging previous-phase row
+  (the same figure the 2026-11-03 0228 Base Building
+  unit recorded, and the same lag pattern the
+  2026-11-02 1015 and 1508 records flagged) and was NOT
+  used as this phase score.
+- Point chest thresholds: 1,500 / 10,000 / 30,000 (ruby
+  tags 2,360 / 4,800 / 11,800), identical to the 1015 and
+  2026-10-31 Drone Boost reads. No chest is earned at
+  score 0; no red dot or bouncing chest on the page.
+  Cumulative counter chest at the top left: 0 of 2, not
+  full, not claimable, no bounce. Kept as a per-page
+  read: it is NOT merged with the 1015 page read of 6
+  of 8, per the discrepancy handling in the 1015
+  section.
+- Scoring table, read live: Use 10 Drone Battle Data
+  points +1, Use 1 Stamina +100, Buy Packs containing
+  Diamonds +30 per diamond (red line, never used).
+  Tier gaps at score 0: tier 1 1,500 points, tier 2
+  10,000 points, tier 3 30,000 points.
+- Stamina path, measured live: tapping the stamina
+  scoring-row arrow opened the world-map Search panel
+  (tabs Zombies, Gather, Doom Elite), as the 2026-10-31
+  2241 unit recorded. Search found a Lv.1 Doom Elite:
+  Guaranteed Reward Drone Battle Data 910, EXP 3.0K,
+  iron 3.0K, food 3.0K, coin 1.0K; Suggested Power
+  1,096,500; Virus Resistance Required 10,250/200 (held
+  10,250 against a 200 requirement, so the requirement
+  is met). The attack button opened the rally panel,
+  read live: squad 5 heroes Lv.150, Unit Count
+  2,231/2,231, 25.17M power vs 1.09M, Easy Win, Rally
+  Time 1min checked. Stamina bar at the bottom of the
+  rally panel: cost -20, balance 120. So one Lv.1 Doom
+  Elite attack costs 20 stamina and scores 2,000 Arms
+  Race points. This answers the 1015 section's
+  measure-first item for stamina; the Drone Battle Data
+  balance was not measured in this unit.
+- Stamina arithmetic, from the measured 120 balance:
+  tier 1 needs 1 attack (20 stamina, 2,000 points),
+  tier 2 needs 5 attacks (100 stamina, 10,000 points),
+  tier 3 needs 15 attacks (300 stamina, 30,000 points)
+  and is therefore unreachable on the current 120
+  stamina balance alone, even before march time and the
+  Free Claim / stamina-item refills are counted. The
+  Drone Battle Data path needs 300,000 data points for
+  tier 3 at 1 point per 10.
+- Just-enough plan for the next unit: first re-read the
+  phase score live (radar and other regulars may already
+  have scored stamina in this phase), then measure the
+  stamina balance again in the rally panel before
+  committing anything. Tier 1 is one Lv.1 Doom Elite
+  attack (20 stamina). Tier 2 is five such attacks (100
+  stamina) if the balance plus Free Claim and 10/50
+  stamina items cover it. Do not chase tier 3 on stamina
+  alone: 300 stamina is not on hand, and spending
+  stamina items for an unreachable tier would waste
+  resources that score better in a later phase. No rally
+  was started in this unit: a rally is a world action
+  with a 1-minute rally window plus march and battle
+  time, and this first-phase unit is an assessment unit
+  under R4, not a scoring unit.
+- Completion sweep: no point chest earned at score 0, so
+  nothing was claimed and nothing earned was left
+  unclaimed. Cumulative chest 0/2, not claimable, not
+  tapped. Ranking-row chest: two taps at its measured
+  centre (norm 850,862, single then double-click)
+  produced no change on either attempt; per rule R2 that
+  tap method is retired inside this unit. The chest is
+  preview-only while the phase is live in the 2026-11-02
+  precedents, so this is recorded as a navigation miss,
+  not a reward left behind. Events hub re-scan not
+  completed: the phase page back arrow was not reached
+  because the stamina-row jump left the Events hub for
+  the world map, and the world-map panels below would
+  not close on empty-tile taps. The phase page itself
+  showed no bouncing chest or reward red dot.
+- Method notes (rule R2): Events tab bar, one drag to
+  the right revealed the Arms Race tab at norm 233,131,
+  and the next tap opened the phase page, reusing the
+  2026-11-02 0608 pivot. Rally panel closed by tapping
+  an empty map tile at norm 920,550; that tap selected
+  a neighbouring player base card instead of returning
+  to the base, so the game was left on the world map
+  with that player card open. The next unit must close
+  that card and return to the base before its own work;
+  the remedy is recorded by the next unit itself
+  (donations 0621): the world-map red X at norm 855,685
+  returns to base on the first tap. No attack, rally,
+  march or purchase was started anywhere in this unit.
+  No different-device dialog was seen, no login or
+  verification was demanded, and no password or Touch
+  ID step was used.
+- Red lines held: nothing spent, no Buy tapped, no
+  speedup burned, no building or research started, no
+  stage swapped, no other activity's rewards claimed.
+
 ## Open questions
 
 - The full phase rotation list and what each phase pays points for.
 - Whether the chest ruby tags also change by phase or segment.
 - When the phase ranking reward lands and where it is claimed.
 
-- Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read.
+- Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read. Answered in part 2026-11-03 0609: the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase, so the route is the live stamina scoring path for this phase; generality across phases stays open.
 ## What is known from 2026-10-26
 
 - The Hero Advancement phase ran on the morning of 2026-10-26

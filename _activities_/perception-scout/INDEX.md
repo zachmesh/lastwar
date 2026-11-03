@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T13:34:48Z
+modified: 2026-11-03T14:37:12Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: ticker-0004 perception-scout execution record 2026-11-03 0016 queue run (base group partial, power 149,940,141)
   - source: ticker-0134 perception-scout execution record 2026-11-03 0136 queue run (alliance group remainder partial, Wars dot filed as Issue #212)
   - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (partial, alliance remainder walked, grounded taps, Wars tabs empty, Issue #212 open)
+  - source: ticker-0504 perception-scout execution records 2026-11-03 0508 and 0510 queue runs (partial, observe-only, store-group re-walk, Mall 7-tab strip identical, MALL label static, no Crystal Shop or Glittering Market tab)
 ---
 
 
@@ -858,6 +859,99 @@ observe-only, nothing claimed). Evidence in
   box were not located, so any signal they carry is still
   unknown. unmatched_labels: none in the surfaces actually
   walked. Game left on the base screen.
+
+
+## What the 2026-11-03 0508 and 0510 units added
+
+- Ticker-0504, units scout-midday-scout-mid-2026-11-02-002
+  (about 05:05 to 05:08 local) and
+  scout-scout-2026-11-02-002 (about 05:09 to 05:10
+  local), both status partial, observe-only throughout:
+  nothing claimed, fought, dispatched, donated, signed
+  up for, or bought, and no price tag was tapped.
+  Evidence in
+  `_records_/2026-11-03/perception-scout/0508-queue-run.md`
+  and `_records_/2026-11-03/perception-scout/0510-queue-run.md`.
+  The 0508 unit is the stale chain remainder of the
+  2026-11-02 midday pass and the 0510 unit the
+  post-reset pass for the reset day started 2026-11-02
+  19:00; the store group is now walked for both passes
+  and the alliance group is carried to the successor
+  units 003. Both units close partial with blocker
+  category h (by-design chain continuation), not as a
+  miss, and the observations were appended to the
+  2026-11-02 observation file.
+- Base screen, read live in both units: account power
+  149,940,141, unchanged from the 0410 read and
+  unchanged between the two units minutes apart. HUD
+  totals as displayed: top row 230.7M, 565.3M, 5.9M;
+  second row 19.0M, 505.1K, diamonds 12.72K; cart 2,836.
+  Left column: hammer 2/4, flask 2/2, backpack 11,
+  weather widget 6.5C. Right column: Events badge 1,
+  Capitol, VS timer 12:54:01 falling to 12:50:25, Season
+  II timer 12d 12:54:01 falling to 12d 12:50:25, Alliance,
+  Mail, Inventory. Bottom: 99+ badge, HEROES, WORLD.
+  Furnace toast again, value unchanged: "High-temp
+  Furnace total overdrive time (in sec) [22/60]", still
+  unexplained, red-line surface observed only. No
+  "active on a different device" dialog appeared.
+- Store (Mall), walked live in both units: the cart icon
+  at the top right of the base screen, re-grounded fresh
+  in each unit, opened the Mall on its HOT DEALS section
+  on the first tap, centre [910, 68] in 0508 and [872,
+  48] in 0510. The cart grounding varies per session;
+  every unit re-grounds on its own capture. Tab strip
+  verified at both ends in both units; full strip, 7
+  tabs: Official Event, Weekly Deal, Super Monthly
+  Pass, Weekly Pass, Diamond, Gold Brick Mall, Hot Sale
+  Packs. Identical in both walks minutes apart and
+  identical to the 2026-11-02 store walk. No Glittering
+  Market tab and no Crystal Shop tab. No red dot on any
+  tab. Observation only for Issue #128: the tabs behind
+  its unclaimed priority-1 units are absent from the
+  Mall strip as walked; the issue stays open for the
+  daily retro and is not resolved by this observation.
+- Check-in banner (Official Event page): "Participate
+  in the check-in event and claim great rewards!" with
+  FREE GIFT "Claim your gift today!" and a FREE
+  TOMORROW row (x5, x5, x5, "Randomly obtain one").
+  Observed only, not claimed; belongs to the
+  shop-claims regular to verify.
+- Gold Brick Mall, opened by tab tap only: banner "Gold
+  Brick Mall Extra 5% Bonus". Packs shown, no price
+  tapped: x500 $4.99, x1000 $9.99, x50000 $499.9,
+  x100000 $999.9, each with an Initial Buy Reward free
+  gift (x500, x1000, x2500, x5000 respectively as
+  displayed). No red dot on the tab.
+- Hot Sale Packs, opened by tab tap only: empty state,
+  a gift-box graphic with "Packs sold out". No offers
+  listed, nothing tappable as a purchase.
+- MALL top label: tapped twice, first at an estimated
+  point [630, 68] and then at the visually grounded
+  label centre [574, 60]; neither tap changed the page
+  (rule R2: method ended after two no-change taps). The
+  MALL label is recorded as a static screen title, not
+  a separate section switch; no red dot or signal hides
+  behind it.
+- Tabs strip-verified only, not opened: Weekly Deal,
+  Super Monthly Pass, Weekly Pass and Diamond were
+  verified on the strip but not opened, the same scope
+  as the 2026-11-02 store walk. All are paid pass or
+  diamond sections with no red dot; opening them would
+  add nothing to the observation beyond their labels.
+- Red dot accounting for these units: seen in the store
+  group 0, explained 0, unexplained 0. Not resolved by
+  these units, carried by their owning groups: Season II
+  badge 1, backpack 11, 99+ badge, the furnace toast
+  (base group, already carried by unit 001).
+  unmatched_labels: none in the surfaces walked.
+- Tap-method notes (rule R2): strip drag from [550,
+  120] to [200, 120] revealed the right end of the tab
+  strip. Gold Brick Mall tab tap at [707, 128] and Hot
+  Sale Packs tab tap at [909, 128] each opened its page
+  on the first tap. These grounded points are for this
+  base and Mall layout only; every unit re-grounds on
+  its own capture.
 
 ## Open questions
 
