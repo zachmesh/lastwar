@@ -2571,3 +2571,20 @@ of 2026-10-28.
   no PR needed. No merges, no comments, no
   escalations, no Slack sync owed. Full detail in
   pr-integration/1642-run.md.
+- Integrator pass pr-integration-2026-11-02-1630.
+  Non-batch pass: checker reports outside every
+  batch window, next batch 19:00. Open PRs 187
+  (records 2026-11-01 post-1500 batch, head
+  2be5df83, mergeable clean, 1 commit beyond
+  main) and 161 (records 2026-11-02, head
+  0993ae43, conflicting) both await the 1900
+  batch; no knowledge or code PR was open. PR 161
+  trial merge against current main conflicts only
+  on _logs_/repo-actions/action-log.jsonl, the
+  same conflict already commented at the 1500
+  pass, with no branch-side resolution attempted
+  since, so no duplicate comment was posted.
+  records/2026-10-31 verified contained in main,
+  no PR needed. No merges, no comments, no
+  escalations, no Slack sync owed. Full detail in
+  pr-integration/1645-run.md.
