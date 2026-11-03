@@ -444,3 +444,28 @@ of 2026-10-28.
   2026-10-31 branch head verified already in main
   via PR 64, so no PR was opened for it.
   Full detail in pr-integration/0200-run.md.
+
+## 02:04 to about 02:28 — Queue ticker pass, radar and arms race
+
+- Ticker pass ticker-0204. Sync reaped nothing and produced
+  nothing new - all due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30, and no zombie unit sits in
+  inbox or claimed.
+- Own PRs checked first: no PR owned by this job with open
+  questions (PR 207 for records/2026-11-03 is
+  integrator-owned, no comments addressed to this job).
+- Radar unit radar-2026-11-03-0203, partial by design under
+  the stack posture: no Quick Execute offer at entry, the
+  Claim All bar standing with 11 pending rewards, stored
+  1 of 40, radar points 139, stamina 79, three skull pins
+  inventoried and untapped, nothing claimed. Tracker
+  untouched. Full detail in radar-tasks/0212-queue-run.md.
+- Arms-race unit arms-race-2026-11-03-0203, partial: Base
+  Building phase, score 9,300, segment rank 8, tier-1 chest
+  tapped (Skill Medal 200, Arms Race Badge 1, SR chests 4
+  each, 5m Speed-up 8), tier-2 gap 3,200 and tier-3 gap
+  20,700 unreachable inside the red lines - no building
+  completion lands in the phase window (Aircraft Center
+  9d 20h left, Drill Ground 6d 16h left). Tracker untouched.
+  Full detail in arms-race/0228-queue-run.md.
