@@ -2733,3 +2733,27 @@ of 2026-10-28.
 ## 14:39 - PR catch-all
 
 - No-op pass: 3 open PRs scanned (229, 207, 187), all integrator-owned, none owned by this job; prior adoption PR 137 stays merged. 37 open issues triaged, all class-labeled, none new. Owner-decision issues over 24 hours: 132 (building/research deferred, statement current) and 154 (Season Photo decision, unchanged). Full detail in pr-catchall/1439-run.md.
+## 14:32 to about 14:45 - Knowledge-organization pass, 2 profile folds
+
+- Knowledge-organization pass
+  knowledge-organization-2026-11-03-1432. Own PRs
+  checked first (PR 233 MERGED, no reviews or comments,
+  no feedback pending; open PRs 229, 207 and 187 are
+  integrator-owned); open knowledge issues checked with
+  the own PRs (no new knowledge-labeled issue since the
+  1332 run, newest remains #230). Folded the ticker-1404
+  arms-race 1412 record and donations 1421 record into
+  two profiles on PR 234: arms-race 1.29.0 (Base Building
+  live score 50,800 rank 9 above the 30,000 top threshold
+  with no scoring work; all three point chests claimed,
+  bundle matches the 2026-10-26 claim; cumulative 6/8
+  with milestone preview; ranking-row preview SR 3 each
+  at rank 9 deferred to the post-phase run),
+  alliance-donations 1.26.0 (Alliance entry pivot
+  (899,716) first; Techs tile unresponsive first
+  occurrence recorded, not yet standing metadata per
+  rule R2; 1/30 count carried not confirmed, 17:00 R3
+  checkpoint owed; no new replenishment data point).
+  Contradictions resolved 0; Issue 220 commented with
+  the entry fold. No issue closed here. Full detail in
+  knowledge-organization/1432-run.md.
