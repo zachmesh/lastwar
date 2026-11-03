@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T06:38:05Z
+modified: 2026-11-03T10:36:50Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-1004 arms-race execution record 2026-11-02 1015 queue run (partial, first unit of Drone Boost phase)
   - source: ticker-1452 arms-race execution record 2026-11-02 1508 queue run (partial, first unit of Hero Advancement phase, 20.0M EXP shortfall)
   - source: ticker-2204 arms-race execution record 2026-11-02 2209 queue run
+  - source: ticker-0204 arms-race execution record 2026-11-03 0228 queue run (partial, Base Building tier-1 claimed, tiers 2 and 3 unreachable inside the red lines)
 ---
 
 
@@ -973,3 +974,75 @@ slot. Evidence in
 - Red lines held: no diamonds or money spent, no speedup item
   burned, no stage swapped, no research or building started, no
   chest tapped that was not earned.
+
+## What the 2026-11-03 0228 unit added - Base Building, tier 1 claimed on indirect confirmation, tiers 2 and 3 unreachable inside the red lines
+
+- Ticker-0204, unit arms-race-2026-11-03-0203, about
+  02:28 local, partial, not a miss of effort. Phase:
+  Base Building, Contest Segment Lv.29-30. Time left
+  03:49:02 at first read, about 03:45:55 at the re-read
+  after the chest tap. Phase ends about 06:02 local.
+- Phase read live: score 9,300, segment rank 8,
+  warzone 2110 ([AP3x]Bears Lair). Chest thresholds
+  6,250 / 12,500 / 30,000. Scoring rows read live:
+  Increase Building Power by 1pt +1, Use 1-min
+  Construction Speed-up +10 (red line, not used), Buy
+  Packs containing Diamonds +30 per diamond (red line,
+  not used). Gap to tier 2: 3,200 points. Gap to
+  tier 3: 20,700 points.
+- Tier-1 claim, with an honest caveat: the tier-1
+  (6,250) chest was tapped once. The tap opened the
+  chest contents panel - Skill Medal 200, Arms Race
+  Badge 1, Coin Chest (SR) 4, Food Chest (SR) 4, Iron
+  Chest (SR) 4, 5m Speed-up 8, valued 2,360 rubies.
+  Per the 2026-10-26 precedent (one tap on an earned
+  chest claims it, the panel lists its contents), this
+  is recorded as the tier-1 chest claimed. Caveat,
+  carried, not smoothed over: the panel presented as
+  a contents list with no separate Claim button, and
+  the cumulative counter chest at the top left of the
+  page still read 0/2 after the tap, so the claim
+  confirmation is indirect, not a rewards toast. The
+  next arms-race unit must re-check the tier-1 chest
+  state before treating the claim as settled.
+- No other chest was tapped: tier 2 (12,500) and
+  tier 3 (30,000) were not earned at the 9,300 score.
+- Unreachable verdict, measured: building queue checked
+  from the base (hammer icon, grounded at norm
+  55,182): two upgrades in progress and two idle
+  slots. Lv.29 Aircraft Center upgrade, time left
+  9d 20:11:01; Lv.26 Drill Ground upgrade, time left
+  6d 16:49:11. No building completion lands inside
+  this phase, and no finished upgrade waited to be
+  collected. No new building or research was started
+  (red line), no speedup was burned (red line), no
+  pack was bought (red line). The remaining scoring
+  paths are exactly the banned ones, so tier 2 and
+  tier 3 are unreachable inside the red lines in this
+  unit. This is a measured unreachable verdict for
+  this phase window, not a standing claim about Base
+  Building phases generally.
+- Completion sweep: phase page re-read after the chest
+  tap - score still 9,300, no bouncing chest and no
+  reward red dot visible on the point track,
+  cumulative counter chest still 0/2 (not full, not
+  claimable on this read). The ranking row still shows
+  segment rank 8 at 9,300; per the 2026-10-26
+  knowledge its reward chest opens a preview only
+  while the phase is live and is claimed after the
+  phase ends, so it falls to the next arms-race unit
+  after 06:02.
+- Method notes: Events screen left via the back arrow
+  (grounded at norm 159,947) and the Building Queue
+  panel via the same back arrow; the base view was
+  the closing screen.
+- Result stats: phase Base Building, score_before
+  9300, score_after 9300, tier1_threshold 6250,
+  tier2_threshold 12500, tier3_threshold 30000,
+  tier1_claimed yes (indirect confirmation, see
+  caveat above), tier2_gap 3200, tier3_gap 20700,
+  rank_segment 8, device_takeovers 0, blocker no
+  building completion in phase window.
+- Red lines held: nothing spent, no Buy tapped, no
+  speedup burned, no building or research started, no
+  stage swapped, no other activity's rewards claimed.

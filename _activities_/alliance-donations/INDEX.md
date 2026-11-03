@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T09:38:32Z
+modified: 2026-11-03T10:36:50Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-1004 alliance-donations execution record 2026-11-02 1020 queue run (partial, entry blocker repeats 0621)
   - source: ticker-2204 alliance-donations execution record 2026-11-02 2220 queue run
   - source: ticker-0104 alliance-donations execution record 2026-11-03 0127 queue run (done, 19 coin donations, entry centre corrected, re-read pending)
+  - source: ticker-0134 alliance-donations execution record 2026-11-03 0144 queue run (done, 2 coin donations, count replenished 0 to 2, re-read pending)
 ---
 
 
@@ -1225,3 +1226,78 @@ enqueued for after the cooldown (not before about
   daily retro, with evidence.
 - Red lines held: no diamonds spent, no paid button
   tapped, no alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-03 0144 unit added - 2 donations, count replenished 0 to 2, re-read still pending
+
+- Ticker-0134, unit donations-2026-11-02-1344 (record
+  title run 0156), about 01:44 local, done. Coin button
+  only: no diamonds, no money, no paid button tapped.
+- State, read live: War tab Troop Movement 5/10, Rallied
+  HP 6/10 (small red badge on its card, meaning not
+  established in this unit), Rallied Attack 7/10, Rallied
+  Defense 7/10, next node below 1/10 (partly cut off).
+  Tech Donation Today 5100 at entry, 5250 at close.
+- Count replenishment, measured sequence for open issue
+  #174: the 0127 unit ended at 0 with a 00:40:56 timer,
+  yet this unit opened at Donation Count 2/30 on both
+  the Rallied Defense and Rallied Attack panels. The
+  count therefore replenished from 0 to 2 within about
+  17 minutes, inside the timer window - any reading that
+  the count stays at 0 until the timer expires is
+  superseded. The replenish rule itself is still not
+  understood and is NOT asserted here; this unit's
+  evidence is commented onto Issue #174 by this run,
+  and #174 stays open. The re-read unit
+  donations-2026-11-03-0910 (not-before
+  2026-11-03T10:10:00Z, after the timer) is already
+  queued and its outcome is the pending evidence.
+- Donations made: two coin donations to Rallied Attack
+  at the grounded green Donate centre (658,750) from
+  the 0127 unit, working on the first tap in this
+  framing - count 2/30 to 1/30 (verified by screenshot),
+  then 1/30 to the greyed button with a 00:42:20
+  cooldown timer (verified by screenshot). Total: 2
+  coin donations, 1,600 coin spent. Tech EXP read
+  10.3K/4.5M at close; the bar is alliance-wide, so the
+  rise from 10.2K is not claimed as this unit's alone.
+  Honor shown 193.1K at entry, 193.3K at close, a rise
+  of about 200 across the unit, recorded as observed,
+  not attributed to the donations alone.
+- Footer counter, corrected reading: Tech Donation Today
+  moved 5100 to 5250 across this unit, and the 0127
+  unit's 19 donations cannot account for the 3250 to
+  5100 move between units. The footer counter is
+  evidently not purely personal - the +150 delta here
+  is not claimed as this unit's alone, and no future
+  unit should reconcile the footer against its own
+  donations only.
+- Entry lesson: this unit's first tap opened the Rallied
+  Defense panel, not Attack - a tap that landed on
+  Defense. Verify the panel title before donating;
+  a wrong-panel open is a mistap to correct, not a
+  donation to the wrong tech (no donation was made
+  from the Defense panel in this unit).
+- Daily donation reward: no claim button was observed.
+  The list footer shows only the 5250 figure with a
+  plain trophy icon (no red dot, no claim state), and
+  the detail panel shows Donation Reward 50/50 with no
+  claim control. Nothing was claimed for the reward in
+  this unit, matching the 0127 unit. Whether a reward
+  claim exists at all stays an open measurement, not a
+  claim that none exists.
+- Tracker left untouched, following the 0127 unit's
+  precedent, pending the 02:10 local re-read above.
+- Queue state note (process, not donation knowledge):
+  this unit had already been completed in the delivered
+  branch by ticker-1755 (evidence
+  _records_/2026-11-02/alliance-donations/1810-queue-run.md,
+  0 donations landed). The 2 coin donations in this
+  record are real routine work performed by this pass
+  and are recorded here; the delivered branch unit file
+  was NOT overwritten, so the ticker-1755 result
+  stands. The pool divergence is filed as Issue #213
+  (label tooling, owned by lastwar-tool-developer, not
+  duplicated here).
+- Red lines held: no diamonds spent, no paid button
+  tapped, no alliance diplomacy, no assembly, no
+  teleport.
