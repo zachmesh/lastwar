@@ -2484,3 +2484,6 @@ of 2026-10-28.
   applied agree, all zero; 0 withdrawals. Pool: inbox 56,
   claimed 1, done 730, upcoming 51. Full detail in
   queue-planning/1240-run.md.
+## 12:43 - Treasures
+
+- Treasures unit treasures-2026-11-03-1057 done, checked only: M1x12 M2x12 M3x0 M4x7 M5x2 M6x5 M7x11, M3 binds, Dig greyed, chest 4/15. Entry via freshly measured pickup centre 52,630 after closing the leftover Gold Mine panel. Detail in hidden-treasures/1243-queue-run.md.
