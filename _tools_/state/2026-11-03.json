@@ -1,52 +1,52 @@
 {
- "radar": {
-  "status": "done",
-  "at": "2026-11-03T03:14:01",
-  "note": "Stack day verified 0/40 stored, 12 restoring, nothing claimed"
- },
- "mail": {
-  "status": "done",
-  "at": "2026-11-03T04:13:06",
-  "note": "Mail swept: Alliance 4 and Event 3 gift mails claimed"
+ "events": {
+  "at": "2026-11-03T05:13:46",
+  "note": "Events sweep done: 4 tabs, nothing claimable",
+  "status": "done"
  },
  "gifts": {
-  "status": "done",
-  "at": "2026-11-03T04:18:36",
-  "note": "Alliance gifts swept: Regular 31 and Premium 3 claimed"
+  "at": "2026-11-03T07:10:53",
+  "note": "Alliance Gifts both tabs: Regular 46, Premium 64, total 110; Lv28 progress to 183,001,720",
+  "status": "done"
  },
  "help": {
-  "status": "done",
-  "at": "2026-11-03T04:38:48",
-  "note": "Help bubble tapped, toast confirmed, bubble gone"
+  "at": "2026-11-03T07:13:09",
+  "note": "Help All pressed, toast confirmed; header unchanged 760/1000, own requests 30/30",
+  "status": "done"
  },
- "train": {
-  "status": "done",
-  "at": "2026-11-03T04:45:58",
-  "note": "Already aboard carriage 2 of preparing train, countdown about 01:21"
- },
- "star-ceremony": {
-  "status": "done",
-  "at": "2026-11-03T04:47:18",
-  "note": "No trophy icon, no ceremony waiting"
+ "mail": {
+  "at": "2026-11-03T07:19:38",
+  "note": "Mail Claim All all categories: no rewards available, 0 claimed, 0 deleted",
+  "status": "done"
  },
  "passes": {
-  "status": "done",
   "at": "2026-11-03T05:10:07",
-  "note": "Shop sweep done: all owned claims already taken, no new claim"
+  "note": "Shop sweep done: all owned claims already taken, no new claim",
+  "status": "done"
  },
- "events": {
-  "status": "done",
-  "at": "2026-11-03T05:13:46",
-  "note": "Events sweep done: 4 tabs, nothing claimable"
+ "radar": {
+  "at": "2026-11-03T03:14:01",
+  "note": "Stack day verified 0/40 stored, 12 restoring, nothing claimed",
+  "status": "done"
+ },
+ "star-ceremony": {
+  "at": "2026-11-03T04:47:18",
+  "note": "No trophy icon, no ceremony waiting",
+  "status": "done"
+ },
+ "train": {
+  "at": "2026-11-03T04:45:58",
+  "note": "Already aboard carriage 2 of preparing train, countdown about 01:21",
+  "status": "done"
  },
  "treasures": {
-  "status": "done",
   "at": "2026-11-03T05:41:57",
-  "note": "2 digs executed, M3 2 to 0, chest progress 4/15"
+  "note": "2 digs executed, M3 2 to 0, chest progress 4/15",
+  "status": "done"
  },
  "vip": {
-  "status": "done",
   "at": "2026-11-03T05:41:57",
-  "note": "Checked only, freebie and login chest already claimed, points 1589450"
+  "note": "Checked only, freebie and login chest already claimed, points 1589450",
+  "status": "done"
  }
 }

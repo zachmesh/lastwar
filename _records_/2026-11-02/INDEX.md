@@ -3870,3 +3870,51 @@ of 2026-10-28.
   resolution. No knowledge or code PR open, no
   owner-gated PR. Full detail in
   pr-integration/2315-run.md.
+
+- Gifts unit gifts-2026-11-02-2230, done (ticker-2304): Alliance
+  Gifts Claim All on both tabs, plus one re-sweep each as new gifts
+  arrived during play. Regular 46 (40 plus 6), Premium 64 (62 plus
+  2), total 110 gifts. Gift Level 28 progress read live at each
+  step, 182,891,070 to 183,001,720 of 206,300,000. Both tabs
+  verified badge-clear at close. Premium first-claim badge read 82
+  against a dialog count of 62, recorded as read, difference
+  unexplained. Full detail in alliance-gifts/2305-queue-run.md.
+
+- Help unit help-2026-11-02-2230, done (ticker-2304): Help All
+  pressed from the Alliance panel, toast "Allies are very grateful
+  for your assistance" confirmed. Header re-read live, unchanged at
+  760 of 1,000; visible rows were all the account's own requests at
+  30 of 30, so no newly countable ally help this press. Back-arrow
+  method note: edge taps at (35,902) and (40,902) did nothing, the
+  glyph-centre tap at (62,920) navigated. Full detail in
+  alliance-help/2311-queue-run.md.
+
+- Mail unit mail-2026-11-02-2230, done (ticker-2304): Claim All in
+  Alliance, Event, Regular, Battle Report and Season, each answered
+  "No rewards available"; System Claim All pressed twice with no
+  toast captured and the list unchanged, read as no claimable
+  attachment. 0 rewards claimed, 0 mails deleted. Mid-unit, a tap
+  at (162,935) quit LastWar; relaunched with state intact and the
+  unit continued. A notification-permission dialog on return to
+  base was dismissed with Cancel. Full detail in
+  mail-rewards/2313-queue-run.md.
+
+- Train unit train-2026-11-02-2230, partial (ticker-2304): no
+  "Boarding closes in" banner on the base screen, but no station
+  view was achieved. A tap at (35,675) opened Secret Command Post
+  by mistake (left untouched); the 2045 train-icon point (52,548)
+  did not pan; visual grounding mislabelled the truck icon
+  (53,576) as the train icon and opened the truck screen (left
+  untouched). No boarding action taken, tracker untouched. Entry
+  drift filed as GitHub Issue #205 (knowledge). Full detail in
+  alliance-train/2320-queue-run.md.
+
+- Star-ceremony unit star-ceremony-2026-11-02-2230, partial
+  (ticker-2304): no trophy icon on the base screen, so no ceremony
+  was waiting or played. Duel panel read live: The Apex 260,334,917
+  (46%) vs [Kmf] 311,756,756 (54%), theme Base Expansion. Personal
+  daily total UNREAD: one ranking scroll did not reach the account's
+  own row before the pass budget ended, so no total or gap against
+  3,600,000 is reported. Tracker untouched; the next tick
+  re-produces the regular. Full detail in
+  alliance-duel/2326-queue-run.md.
