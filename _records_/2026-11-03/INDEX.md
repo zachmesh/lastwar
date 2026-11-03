@@ -1184,3 +1184,13 @@ of 2026-10-28.
   conflict comments stand, not force-merged. No
   owner-gated PR.
   Full detail in pr-integration/0515-run.md.
+- Integrator pass pr-integration-2026-11-03-0530.
+  Non-batch pass per the checker (next batch 07:00):
+  no knowledge or code PR open. Records PR 216
+  (2026-11-02, clean merge-tree) awaits the 07:00
+  batch. Records PR 207 (2026-11-03) and PR 187
+  (2026-11-01) still conflicted on the action log
+  (207 also on the Nov 3 state file); the standing
+  conflict comments stand, not force-merged. No
+  owner-gated PR.
+  Full detail in pr-integration/0530-run.md.
