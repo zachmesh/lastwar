@@ -2757,3 +2757,28 @@ of 2026-10-28.
   Contradictions resolved 0; Issue 220 commented with
   the entry fold. No issue closed here. Full detail in
   knowledge-organization/1432-run.md.
+
+## 14:40 to about 14:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-03-1440. Own PRs
+  checked first: PR 234, PR 229, PR 207 and PR 187 (none
+  owned by this job, no reply or fix owed; PR 207 and
+  PR 187 carry integrator batch notes only).
+  Owner-decision Issues checked: #154 still without an
+  owner answer (0 comments), #132's duel-score-only
+  answer stands; no building, research or alliance-facing
+  unit staged or invented, no new Issue filed (diff
+  classified nothing new, observation unknowns are
+  carried items only).
+- Plan for the next 12 hours staged 11 units into the
+  live pool (the 2026-11-04 0203/0230 slots),
+  already_present 55, skipped_done_current 5, reaped 0,
+  expired 0. A plan first run inside the worktree
+  against stale branch-tip pool state was discarded in
+  full; the live-pool numbers above are authoritative.
+  Pre-reset sweep pair skipped (not the 1700 hour);
+  tonight's pair for the 1900 reset is the 1700 run's
+  job. Scout diff on the Nov 3 observation dry and
+  applied agree, all zero; 0 withdrawals. Pool: inbox 63,
+  claimed 1, done 737, upcoming 51. Full detail in
+  queue-planning/1440-run.md.
