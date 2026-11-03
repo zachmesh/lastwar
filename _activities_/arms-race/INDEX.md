@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T18:45:00Z
+modified: 2026-11-03T22:38:00Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-1004 arms-race execution record 2026-11-02 1015 queue run (partial, first unit of Drone Boost phase)
   - source: ticker-1452 arms-race execution record 2026-11-02 1508 queue run (partial, first unit of Hero Advancement phase, 20.0M EXP shortfall)
   - source: ticker-2204 arms-race execution record 2026-11-02 2209 queue run
+  - source: ticker-1404 arms-race execution record 2026-11-03 1412 queue run
   - source: ticker-0204 arms-race execution record 2026-11-03 0228 queue run (partial, Base Building tier-1 claimed, tiers 2 and 3 unreachable inside the red lines)
   - source: ticker-0604 arms-race execution record 2026-11-03 0609 queue run (partial, first unit of new Drone Boost phase, stamina 120 measured, Lv-1 Doom Elite 20 stamina for 2000 points, tier arithmetic, ranking-row chest taps retired)
   - source: ticker-1004 arms-race execution record 2026-11-03 1021 queue run (done, Hero Advancement tier 3 met on one Adam level-up, 41500 points, all point and cumulative chests claimed)
@@ -1260,3 +1261,64 @@ slot. Evidence in
   skill medals or hero shards spent; no recruitment,
   no pack purchase, no other activity's work done
   from this unit.
+
+## What the 2026-11-03 1412 unit added - Base Building, top threshold met, all three point chests claimed
+
+- Unit arms-race-2026-11-03-1403 by ticker-1404,
+  about 14:05 to 14:12 local, status done. Evidence
+  in `_records_/2026-11-03/arms-race/1412-queue-run.md`.
+- Live phase read: Base Building, Contest Segment
+  Lv.29-30, time left 03:52:43 at entry, 03:48:27 at
+  close. Score read live 50,800, segment rank 9,
+  combined rank 2110. Thresholds read live 6,250,
+  12,500 and 30,000, matching the Base Building
+  thresholds recorded on 2026-10-25 and in the 0228
+  unit. The 50,800 here is the live phase score, not
+  the ranking-row figure the 1021 unit reported.
+- Just-enough rule applied with no scoring work: the
+  score already stood above the top (third)
+  threshold, so no scoring action was taken and none
+  was needed.
+- Point chests claimed, claim-by-tap as on
+  2026-10-26: each chest tap opened a contents popup
+  with no separate Claim button. Contents read live:
+  - Tier 1 (6,250, valued 2,360): Skill Medal 200,
+    Arms Race Badge 1, Coin Chest (SR) 4, Food Chest
+    (SR) 4, Iron Chest (SR) 4, 5m Speed-up 8.
+  - Tier 2 (12,500, valued 4,800): Skill Medal 400,
+    Arms Race Badge 2, Coin Chest (SR) 8, Food Chest
+    (SR) 8, Iron Chest (SR) 8, 5m Speed-up 20.
+  - Tier 3 (30,000, valued 11,800): Skill Medal 1000,
+    Arms Race Badge 3, Coin Chest (SR) 20, Food Chest
+    (SR) 20, Iron Chest (SR) 20, 5m Speed-up 40.
+  - Totals claimed in this unit: Skill Medal 1600,
+    Arms Race Badge 6, Coin Chest (SR) 32, Food Chest
+    (SR) 32, Iron Chest (SR) 32, 5m Speed-up 68. The
+    bundle matches the 2026-10-26 Hero Advancement
+    claim bundle exactly, so the point-chest bundle is
+    phase-independent at these ruby tags.
+- Completion sweep: cumulative counter chest reads 6
+  of 8, progress bar partial, not full and not
+  claimable. Its track shows milestone chests labelled
+  2, 8 and 18. One milestone chest preview read live:
+  50 Diamonds 1, Hero Recruitment Ticket 1, SSR Hero
+  Universal Shard 2. Nothing was tapped to claim from
+  this track, since the counter had not reached its
+  tier. Kept as a per-page read, not merged with other
+  pages' cumulative reads.
+- Ranking-row chest: tapped, opened a contents preview
+  only, as expected while the phase is live: Iron
+  Chest (SR) 3, Food Chest (SR) 3, Coin Chest (SR) 3
+  at segment rank 9. This confirms the rank-8 preview
+  bundle from 2026-10-26 at rank 9. Per the standing
+  rule, this reward is claimed after the phase ends,
+  so the next run after the phase roll must check for
+  it.
+- No bouncing chest or reward red dot remained on the
+  Arms Race page at close, apart from the not-yet-full
+  cumulative counter. Events hub at entry showed no
+  Zombie Invasion tab, consistent with the 2026-10-30
+  chain close, so no zombie chain was seeded.
+- Red lines held: no diamonds or money spent, no
+  speedup burned, no stage swap, no research or
+  building started.
