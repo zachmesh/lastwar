@@ -2750,3 +2750,33 @@ of 2026-10-28.
   contained in main, no PR needed. No merges, no
   comments, no escalations. Full detail in
   pr-integration/1730-run.md.
+
+## 17:32 to about 17:50 - Knowledge organization pass (2 profiles updated, PR 191)
+
+- Organizer run knowledge-organization-2026-11-02-1732,
+  worked from the 1632 watermark: own PR 190 stands
+  MERGED with no comments and no reviews, no new
+  knowledge Issue since the 1632 run, and the
+  ticker-1631 recovery survivors 1640 and ticker-1703
+  survivors 1718 and training 1723 partials were
+  folded here.
+- Profiles updated, PR 191 (OPEN, Owner
+  lastwar-knowledge-organizer): survivor-intake 1.14.0
+  to 1.15.0 (1640 sixth partial since the 1644 done,
+  recovery-written, 70,692-area taps changing nothing
+  unlike the 1107 corner change so the point is a
+  re-read pointer; 1718 re-attempt of the same 1403
+  unit, not a seventh distinct partial, drag pan
+  re-confirming its 1107 retirement, 89,722 corrected
+  to a radar entry point) and troop-training 1.10.0
+  to 1.11.0 (inherited 1146 Lv.24 points opening no
+  panel in this camera view, fresh-grounding rule
+  re-affirmed, Lv.24 busy expectation only, Drill
+  Ground Full carried unverified a tenth consecutive
+  unit without a live read). Contradictions resolved:
+  70,692 as camera-view dependence, and 1723 as a
+  confirmation of the camera-dependent mapping rule
+  rather than an overturn of the 1146 read. No new
+  gap filed; the missing 1640 comment on Issue #168
+  was left by this run, and #168 and #150 stay open.
+  Full detail in knowledge-organization/1732-run.md.
