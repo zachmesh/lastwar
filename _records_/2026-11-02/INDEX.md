@@ -2884,3 +2884,55 @@ of 2026-10-28.
   (2026-11-02) not merged, both trial-merge clean
   against the new main and awaiting the 1900 batch.
   Full detail in pr-integration/1745-run.md.
+
+## 17:55 to about 18:01 - Ticker pass, scout alliance group partial
+
+- Scout unit scout-midday-scout-mid-2026-10-31-002,
+  partial (ticker-1755): stale alliance-group chain
+  unit executed late in the current reset day,
+  observe-only, nothing claimed. Base HUD read
+  387.7M/577.5M/54.0M, radio badge 4, Season II
+  badge 1, backpack 8, 99+ badge, furnace toast
+  [22/60] fourth sighting. Alliance panel read:
+  [AP3x] The Apex, 94/100 members, six panel dots
+  (Help, Gifts, Store, Techs, Events, City);
+  alliance Power read 12,873,290,481 then
+  12,900,451,256 two minutes later, change
+  unexplained. Alliance Wars: no ongoing wars, one
+  Individual Intel march row. Alliance Gifts:
+  Level 28, 181,429,280/206,300,000, Claim All
+  badge 201, rows observed, none claimed. Tap
+  grounding correction: panel taps land about 90
+  norm units higher than screenshot positions
+  (Gifts opened at 327,633, not 327,542),
+  consistent with the ticker-1729 Help centre
+  686,531. Red dots seen 10, explained 5,
+  unexplained 5. No duplicate successor: remaining
+  groups belong to
+  scout-midday-scout-mid-2026-11-02-001 already in
+  inbox; the scout-mid-2026-10-31 chain is spent.
+  Tracker untouched. Full detail in
+  perception-scout/1801-queue-run.md.
+
+- Donations unit donations-2026-11-02-1344, partial
+  (ticker-1755): entry worked via the measured
+  Alliance Techs centre 687,672 (a first tap at
+  686,735 opened Strength Ranking instead).
+  Development tab: Expert Nurse 1/10, Garrison HP /
+  Attack / Defense all 7/10, Defense recommended.
+  Garrison Defense panel: Current +7%, Next +8%,
+  coin button 800 active, Donation Count read live
+  30/30, Tech Donation Today 0 points - a reading
+  that conflicts with the 1729 sweep note of 1
+  remaining, flagged unresolved for the next unit
+  to re-read live and donate on. Zero donations
+  landed: the "active on a different device"
+  dialog appeared on the panel and was taken over
+  per the owner rule (Confirm at measured centre
+  501,568, takeover 1 of the pass, app exited and
+  relaunched straight to base with no login
+  demand, dialog did not recur). Side read:
+  Strength Ranking own account rank 31 at
+  149,311,528, confirming the 146,610,448 HUD
+  figure is not account power. Tracker untouched.
+  Full detail in alliance-donations/1810-queue-run.md.
