@@ -2812,3 +2812,24 @@ of 2026-10-28.
   (2026-11-01, head 2be5df83) still conflicted, standing
   comment stands. No knowledge or code PR open, no
   owner-gated PR. Full detail in pr-integration/1500-run.md.
+
+## 15:15 to about 15:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-1515.
+  Non-batch pass: the checker window was open
+  (15:00-16:00) but the 15:00 batch had already been
+  merged by the 1500 pass (PR 229, merge commit
+  3c3c0c5f), so only the first pass at or after a
+  batch point merges and no records PR was merged
+  here. Records PR 236 (2026-11-02, head 6a2fa166,
+  MERGEABLE CLEAN) awaits the 19:00 batch. Records PR
+  207 (2026-11-03, head 3cd77066) still conflicted on
+  _logs_/repo-actions/action-log.jsonl and
+  _tools_/state/2026-11-03.json, re-verified by test
+  merge; the 1500 conflict comment stands. Records PR
+  187 (2026-11-01, head 2be5df83) still conflicted on
+  _logs_/repo-actions/action-log.jsonl, re-verified by
+  test merge; the 1900 (Nov 2) conflict comment
+  stands. No knowledge or code PR open, no
+  owner-gated PR.
+  Full detail in pr-integration/1515-run.md.
