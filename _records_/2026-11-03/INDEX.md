@@ -1721,3 +1721,18 @@ of 2026-10-28.
   still conflicted on action-log.jsonl, standing
   conflict comments carried, not force-merged.
   Full detail in pr-integration/0745-run.md.
+
+- Integrator pass pr-integration-2026-11-03-0800.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported not due (outside every batch window,
+  next batch 11:00). Records PR 224 (2026-11-02,
+  head f88fed3e5) clean but awaits the 11:00 batch.
+  Records PR 207 (2026-11-03, head 83a424113) still
+  conflicts on _logs_/repo-actions/action-log.jsonl
+  and _tools_/state/2026-11-03.json; records PR 187
+  (2026-11-01, head 2be5df83) still conflicts on
+  action-log.jsonl; both standing conflict comments
+  carried, not force-merged. No knowledge or code
+  PR open, no new comments, no owner-gated PR.
+  Status no-op.
+  Full detail in pr-integration/0800-run.md.
