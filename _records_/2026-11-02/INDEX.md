@@ -2736,3 +2736,17 @@ of 2026-10-28.
   Game left safe on base. Tracker untouched. Full detail in
   troop-training/1723-queue-run.md.
 
+
+## 17:30 to about 17:35 - PR integration pass
+
+- Non-batch pass, status no-op: checker
+  _tools_/records_batch.py on main reported due no,
+  outside every batch window, next batch point
+  19:00 PT. No knowledge or code PR was open.
+  Records PRs 187 (2026-11-01 post-1500 batch, head
+  2be5df83) and 161 (2026-11-02, head 05f35da1,
+  local trial merge against main clean) both await
+  the 1900 batch. records/2026-10-31 verified
+  contained in main, no PR needed. No merges, no
+  comments, no escalations. Full detail in
+  pr-integration/1730-run.md.
