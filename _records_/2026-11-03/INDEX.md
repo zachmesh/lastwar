@@ -2422,3 +2422,31 @@ of 2026-10-28.
   Standing tool queue items (1) to (3) remain present
   on main and were not re-taken. No live pool touched.
   Full detail in tool-development/1232-run.md.
+
+## 12:32 to about 12:41 - Knowledge-organization pass, 5 profile folds
+
+- Knowledge-organization pass
+  knowledge-organization-2026-11-03-1232. Own PRs
+  checked first (PR 231 MERGED, no reviews or comments,
+  no feedback pending; open PRs 229, 207 and 187 are
+  integrator-owned); open knowledge issues checked with
+  the own PRs (no new knowledge-labeled issue since the
+  1132 run, newest remains #230). Folded the ticker-1134
+  records (1141 star-ceremony, 1151 passes) and the
+  ticker-1204 records (1211 trucks done, 1217 events
+  done, 1223 secrets partial) into five profiles on PR
+  232: alliance-duel 1.20.0 (personal total snapshot
+  1,714,950 unchanged, rank 162 to 169), shop-claims
+  1.15.0 (cart entry re-grounded to box centre 912,68,
+  S2 Drone/EXP/Iron cards all offers), truck-plunder
+  1.24.0 (quotas full 5/5 and 4/4, badged-icon entry at
+  55,589, UR dispatched as rolled), event-claims 1.19.0
+  (Hero Advancement 41,500, Boss Code 64 not yet out,
+  tab dot a new-boss notice), secret-missions 1.14.0
+  (pan precondition qualifying the unsnapped
+  exact-centre entry lesson). Contradictions resolved 0;
+  the panel-timer versus tools/duel.py day-3 disagreement
+  is flagged as an open question in the duel profile,
+  not adopted. Issue 218 commented with the 1211 entry
+  evidence; no issue closed here. Full detail in
+  knowledge-organization/1232-run.md.
