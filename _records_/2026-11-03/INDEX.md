@@ -178,6 +178,22 @@ of 2026-10-28.
   54, claimed 1, done 665, upcoming 49. Full detail in
   queue-planning/0040-run.md.
 
+## 01:40 to about 01:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-03-0140. Staged 0
+  units (already_present 61, skipped_done_current 8,
+  reaped 0, expired 0): every window in the next 12 hours
+  was already covered. Pre-reset sweep production skipped
+  (not the 17:00 hour); tonight's pair for the 19:00 reset
+  of 2026-11-03 is due to be produced by the 17:00 run.
+  Scout diff on the Nov 3 post-reset observation applied
+  with all zero counts, 0 withdrawals. A first plan run
+  inside the delivery worktree staged 69 units against a
+  stale pool copy; recognised as duplication and fully
+  reverted, nothing from it ships. Pool inbox 53, claimed
+  1, done 667, upcoming 50. Full detail in
+  queue-planning/0140-run.md.
+
 ## 00:35 to about 00:44 - Queue ticker pass, alliance train
 
 - Ticker pass ticker-0034. Sync reaped 0, expired 0; all 12
