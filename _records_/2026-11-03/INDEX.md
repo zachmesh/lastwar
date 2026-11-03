@@ -2253,3 +2253,19 @@ of 2026-10-28.
   duplicate comment posted. No knowledge or code PR
   open, no owner-gated PR.
   Full detail in pr-integration/1115-run.md.
+
+## 11:30 to about 11:35 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1135,
+  non-batch pass for records purposes (checker
+  _tools_/records_batch.py on main said due yes for
+  the 11:00 window, but the 1100 batch merge of PR 224
+  already happened in this window, so only the first
+  pass merges). Records PR 229
+  (records/2026-11-02) left awaiting the 15:00 batch.
+  Records PR 207 (records/2026-11-03) and PR 187
+  (records/2026-11-01) conflicts carried, comments
+  from the 0300 and 1900 batch passes stand, no
+  duplicate comment posted. No knowledge or code PR
+  open, no owner-gated PR.
+  Full detail in pr-integration/1135-run.md.
