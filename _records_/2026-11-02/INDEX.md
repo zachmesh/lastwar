@@ -2800,3 +2800,27 @@ of 2026-10-28.
   backlog edit, or Slack message: quiet runs stay silent
   except this record.
   Full detail in tool-development/1732-run.md.
+
+## 16:40 to about 17:16 - Queue planning pass (record picked up by the 1740 pass)
+
+- Planner pass queue-planning-2026-11-02-1640. Staged 0
+  units (already_present 71, skipped_done_current 0,
+  reaped 0, expired 0). Tonight's pre-reset sweep pair
+  already in inbox, scout diff on the 2026-11-02
+  observation applied with all zero counts, 0
+  withdrawals. Pool inbox 69, claimed 1, done 612,
+  upcoming 53. Full detail in
+  queue-planning/1640-run.md.
+
+## 17:40 to about 17:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-1740. Staged 0
+  units (already_present 71, skipped_done_current 0,
+  reaped 0, expired 0). Pre-reset sweep check in the
+  17:00 hour: tonight's pair already present (001
+  claimed, 002 inbox), 0 enqueued. Scout diff on the
+  2026-11-02 observation applied with all zero counts,
+  0 withdrawals. Pool inbox 66, claimed 1, done 615,
+  upcoming 52. Also picked up the pending 1640 planner
+  record into this delivery. Full detail in
+  queue-planning/1740-run.md.
