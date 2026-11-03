@@ -299,3 +299,36 @@ of 2026-10-28.
   section PR 42 - all present on github main. No-op: no
   PR opened, no issue commented, no live pool touched.
   Full detail in tool-development/0132-run.md.
+
+## 01:32 to about 01:45 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-03-0132.
+  Own PRs checked first: no own PR is open (PR 209
+  merged); open PRs 207, 204 and 187 are
+  integrator-owned. No new knowledge-labeled issue
+  since the 0032 run; Issue #205 already carries the
+  executor comment on the 0035 train mapping and
+  Issue #174 already carries the executor comment on
+  the 0127 donations evidence, so neither was
+  duplicated.
+- Profiles updated, 2, on branch
+  work/knowledge-organizer-2026-11-03-0132, opened as
+  PR 211 (Owner lastwar-knowledge-organizer, verified
+  OPEN): alliance-train 1.16.0 to 1.17.0 (0035 column
+  map measured - 508 temperature, 567 trucks, 626
+  secrets, none the train entry; base-centre drag is
+  not a station check; conditional-appearance
+  hypothesis carried as unproven; Issue #205 stays
+  open), alliance-donations 1.17.0 to 1.18.0 (1427
+  centre 903,787 withdrawn - it opens Mail, not
+  Alliance; 0127 shield measured at 930,689; 19 coin
+  donations to Rallied Attack, 19 to 18 to 13 to 7,
+  greyed on a 00:40:56 timer, final 0 unverified per
+  the hard rule, re-read unit 0910 pending for
+  Issue #174).
+- Contradictions resolved, 2: donations entry centre
+  corrected and entry failures re-attributed to wrong
+  coordinates; train pan point further qualified by
+  the neighbour map. Stale marked, 1 (the 903,787
+  centre). Gaps filed: 0 new Issues, 0 issue comments.
+  Full detail in knowledge-organization/0132-run.md.
