@@ -1678,3 +1678,27 @@ of 2026-10-28.
   per the pr-integration 0730 run (integrator-owned),
   so no new records PR was opened.
   Full detail in knowledge-organization/0732-run.md.
+
+## 07:40 to about 07:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-03-0740. Own PRs
+  checked first: PR 225 (knowledge-organizer-owned),
+  PR 224, PR 207 and PR 187 (all integrator-owned) —
+  none owned by this job, no reply or fix owed.
+  Owner-decision Issues checked: #154 still without an
+  owner answer (0 comments), #132's duel-score-only
+  answer stands (2 comments verified); no building,
+  research or alliance-facing unit staged or invented,
+  no new Issue filed (observation unchanged since 0640,
+  carried unknowns only).
+- Plan for the next 12 hours staged 8 units (reset-hour
+  slots 1857/1900: vip, passes, daily-missions, secrets,
+  treasures, trucks, events, scout), already_present 58,
+  skipped_done_current 5, reaped 0, expired 0.
+  Pre-reset sweep pair skipped (not the 1700 hour);
+  tonight's pair for the 1900 reset is the 1700 run's
+  job. Scout diff on the Nov 3 observation (passes
+  about 0017 to 0541 local) dry and applied agree, all
+  zero; 0 withdrawals. Pool: inbox 61, claimed 0,
+  done 705.
+  Full detail in queue-planning/0740-run.md.
