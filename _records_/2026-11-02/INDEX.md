@@ -3850,3 +3850,23 @@ of 2026-10-28.
   2026-11-02 was opened for this run record and the
   merge-time action-log line. Full detail in
   pr-integration/2300-run.md.
+
+
+## 23:15 to about 23:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-2315,
+  no-op non-batch pass (checker
+  _tools_/records_batch.py reports due in the
+  23:00-24:00 America/Los_Angeles window, but the
+  23:00 batch already merged as PR #193 at 23:02
+  PST, so this is the second pass in the window,
+  not a batch pass): no records PR merged.
+  Records PR #204 (2026-11-02, head 59ecc88f)
+  clean and awaiting the 03:00 batch; records PR
+  #187 (2026-11-01, head 2be5df83) still
+  conflicted on _logs_/repo-actions/action-log.jsonl,
+  the conflict comment from the 1900 pass stands,
+  not force-merged, awaiting branch-side
+  resolution. No knowledge or code PR open, no
+  owner-gated PR. Full detail in
+  pr-integration/2315-run.md.
