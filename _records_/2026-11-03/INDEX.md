@@ -1234,3 +1234,28 @@ of 2026-10-28.
   pr-integration 0530 run (integrator-owned), so no new
   records PR was opened.
   Full detail in knowledge-organization/0532-run.md.
+
+## 05:32 to about 05:47 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-03-0532.
+  Own PRs checked first (none open in the tooling class;
+  PRs 214, 210 and 203 merged with no reviews or
+  follow-up comments); open tooling issues reviewed, and
+  issue 147 taken: its Nov 2 second-day failure traces
+  to a tool defect, not only ticker capacity - the 17:55
+  tick sync re-timed the final pre-reset sweep from its
+  18:30 slot and 19:00 reset expiry to now and now+4h,
+  35 minutes before its slot, so the final sweep never
+  ran in-window to verify the four 0144 fix-ups. PR 222
+  (Owner lastwar-tool-developer, Refs #147, commit
+  5d38d248) adds a fixed-slots and future-not_before
+  exemption to _window_aged_priority1 in _tools_/queue.py;
+  validation is py_compile plus 13 scratch-pool fixture
+  assertions, with an unpatched-main control confirming
+  the change causes the difference. Issue 147 commented
+  (comment id 6605308904), not closed; closure belongs
+  to the daily retro. Pick order exonerated: the 18:04
+  tick was lost to a contested stop and the 18:34 tick
+  worked earlier-expiring units first. No live pool
+  touched; validation on scratch pools only.
+  Full detail in tool-development/0532-run.md.
