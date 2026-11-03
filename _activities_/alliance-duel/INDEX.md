@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T15:45:00Z
-version: 1.19.0
+modified: 2026-11-03T20:39:44Z
+version: 1.20.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -23,6 +23,7 @@ grounded_in:
   - source: alliance duel execution record 2026-11-02 2326 queue run
   - source: ticker-0304 alliance-duel execution record 2026-11-03 0314 queue run (done, ceremony none waiting, personal total unread by design)
   - source: ticker-0704 alliance-duel execution record 2026-11-03 0718 queue run (done, ceremony none waiting, personal total snapshot 1,714,950)
+  - source: ticker-1134 alliance-duel execution record 2026-11-03 1141 queue run (done, ceremony none waiting, personal total snapshot 1,714,950 unchanged, rank 162 to 169)
 ---
 
 
@@ -695,6 +696,51 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   time and corrected to 0718-queue-run.md - a
   record-hygiene note, not a play claim.
 
+## What the 2026-11-03 1141 unit added - ceremony none waiting, personal total unchanged, rank slipped
+
+- Ticker-1134, unit star-ceremony-2026-11-03-1030,
+  about 11:36 to 11:41 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-duel/1141-queue-run.md`.
+- Base screen ceremony check, read live: no Star
+  Ceremony trophy icon beside the Alliance shield on
+  the right rail (Events, Capitol, gold VS medallion,
+  Season II badge, Alliance shield all present, no
+  trophy), so no ceremony was waiting to be played
+  or claimed. Nothing played, claimed or emoted.
+- Duel panel, read live via the gold VS medallion
+  (grounded centre norm 930,277): Today's Duel, theme
+  Base Expansion, timer 06:21:36 at entry; [AP3x] The
+  Apex 44 percent (490,734,321) against [Kmf] 56
+  percent (626,777,393). Top 3: [AP3x] Abyss Apex
+  18,890,100, [AP3x] IgorSantos13 14,218,350,
+  [AP3x] bell-a-da 12,756,450. Alliance figures are a
+  snapshot only, up from the 0718 snapshot (43 percent
+  452,542,821 against 57 percent 608,585,563).
+- Personal daily total, read live on the Ranking
+  panel, Daily Rank tab, Tues. day tab: this account's
+  highlighted row reads rank 169, Bears Lair [AP3x] The
+  Apex, 1,714,950 points. That is 1,714,950 of the
+  3,600,000 target, gap 1,885,050, about 47.6 percent
+  of target. The total is unchanged since the 0718
+  read, while the rank slipped 162 to 169 and the
+  number 3 row changed, so this is a fresh live read,
+  not a stale screen. As in the 0718 section, this
+  total is recorded here as a snapshot only, not as
+  the duel-score regular's measurement, and the
+  division of labour stands - the next duel-score unit
+  still owns the measured read. The duel day still
+  has about 6 hours 19 minutes left on the panel
+  timer, so the gap is a mid-day position, not a day
+  miss.
+- Panel closed with the Ranking back arrow (grounded
+  norm 63,927) and the duel panel back arrow (grounded
+  centre norm 147,949, as recorded in the 0718 run),
+  leaving the game on the base screen.
+- Nothing claimed, nothing bought, no diamonds or money
+  spent. Costs: about 5 minutes, no stamina or items
+  spent. The resource bubbles visible on the base screen
+  were left for the harvest unit, one unit one task type.
+
 ## Open questions
 
 - The day themes and scoring once League S38 opens, and the current
@@ -703,3 +749,16 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - How long the ceremony trophy icon waits if unplayed, and whether
   a skipped award card can be revisited (Event 38 suggests not).
 - Who the MVP finale honours and how the winners list is ordered.
+
+- Duel day end and theme disagree between sources
+  (2026-11-03 1141 and 1211 units): the duel panel
+  reads theme Base Expansion with a timer pointing to
+  about 18:00 local on 2026-11-03 (10:42:50 at 07:18,
+  06:21:36 at 11:36, mutually consistent), while
+  tools/duel.py at the 1204 trucks unit reports day 3,
+  theme Age of Science, day ends 2026-11-04 19:00 with
+  22.9 hours left - and the tool's own hours-left and
+  end time do not reconcile with each other (30.9 hours
+  from 12:06 to 19:00 next day). The panel is the
+  on-screen source; the tool output is unresolved, not
+  adopted, until a duel-score or panel read settles it.

@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T16:40:00Z
+modified: 2026-11-03T20:39:44Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-2334 truck-plunder execution record 2026-11-02 2347 queue run (partial, station-tap entry failed, counters not read)
   - source: ticker-0334 truck-plunder execution record 2026-11-03 0344 queue run (partial, station-tap entry failed again, grounding mislabels Furnace and Wall)
   - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry lesson; incidental live trade counters 4/5)
+  - source: ticker-1204 truck-plunder execution record 2026-11-03 1211 queue run (done, trade quota 5 of 5 and plunder quota 4 of 4 full, UR dispatched as rolled)
 ---
 
 # Truck plunder - Intercity Trade
@@ -127,6 +128,14 @@ train also runs on this screen as a trade vehicle.
   2026-10-31 truck record notes background input reaching the
   game throughout, so foreground is a pivot variant, not a
   claim that background input never works.
+
+- 2026-11-03 1211 unit: the badged vehicle icon at norm
+  55,589 opened Intercity Trade on the first tap, on the
+  Others' Trucks view. This settles the stale-window
+  question left by the 2026-10-30 evening units: the icon
+  they found dead opens the trade screen when it carries
+  a badge. Find it by the badge and the vehicle-front
+  glyph, not by a fixed point - the column set rotates.
 
 ## How it is done - dispatching
 
@@ -1353,6 +1362,64 @@ settlement and dispatch execution record).
   and these counters onto #218, and this run comments
   the fold onto #218 as well; the issue stays open,
   and closure belongs to the daily retro, with evidence.
+
+## What the 2026-11-03 1211 unit added - quotas full, badged-icon entry, UR dispatched as rolled, done
+
+- Ticker-1204, unit trucks-2026-11-03-1057, about
+  12:06 to 12:11 local, status done. Evidence in
+  `_records_/2026-11-03/truck-plunder/1211-queue-run.md`.
+- Entry: base view left column, measured fresh: green
+  face, then the light-blue vehicle-front icon with red
+  badge 1 at norm about 55,589, then the white pickup,
+  then the radar dish with badge 11, then the hammer.
+  One tap at 55,589 opened Intercity Trade on the
+  Others' Trucks view. This settles the stale-window
+  question left by the 2026-10-30 evening units: the
+  icon they found dead opens the trade screen when it
+  carries a badge. The 0821 route (53,555) and this
+  badged-icon point are two verified entries; find the
+  icon by badge and glyph, not by a fixed point alone.
+- Live counters read on screen: Your Plunder Count
+  Today 4/4, already full at entry, nothing to plunder;
+  Today's Trade Count 4/5 at entry, 5/5 after this
+  unit's dispatch. Both counters are live screen reads
+  in this unit, not tallies.
+- Duel posture applied: tools/duel.py at entry reports
+  duel day 3, theme Age of Science, scoring actions
+  today research, valor badges, drone component chests
+  and radar claims, and truck dispatches do not score
+  today. The unit's window text still reads "duel day
+  2 - UR trucks, Mega UR only". That text is stale:
+  the live posture is day 3, so the non-UR day rule
+  governed this unit (dispatch SR or above only, free
+  refresh first, then Trade Contract refreshes until
+  reached). The stale window text is noted here for the
+  planner pass, not acted on. See also the
+  alliance-duel profile open question: the duel panel
+  itself reads theme Base Expansion with a timer
+  pointing to about 18:00 on 2026-11-03, which does not
+  match the tool's day-3 report - the tool output is
+  unresolved there, and this unit's dispatch needed no
+  resolution because the roll below already cleared the
+  SR bar.
+- Dispatch: Your Truck view showed four empty slots.
+  First slot tapped. Panel rolled UR as rolled: iron
+  3.8M, food 3.8M, coin 2.4M, journey 03:18:02, Squad 1
+  escort, free refresh still unused. UR already clears
+  the SR bar, so no refresh was spent and the truck was
+  dispatched as rolled with Let's Go. After dispatch:
+  Today's Trade Count reads 5/5, banner "No more
+  dispatches available", one gold truck on the road. No
+  Trade Contract spent, no diamond spent.
+- Other checks: Recover button on the trade screen
+  showed no red dot, so no Reward Recovery record was
+  waiting. Nothing claimed there. No plunder action:
+  Plunder Count already 4/4, and the standing shard
+  rule was not needed this unit.
+- Outcome: done. Trade quota 5/5 and plunder quota 4/4
+  both full for this trade day. Tracker marked done for
+  trucks. Costs: about 5 minutes of unit time, 0 Trade
+  Contracts, 0 diamonds.
 
 ## Open questions
 
