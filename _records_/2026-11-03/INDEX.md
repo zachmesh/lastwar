@@ -222,3 +222,16 @@ of 2026-10-28.
   comment from the 1900 pass stands, not
   force-merged. No owner-gated PR.
   Full detail in pr-integration/0045-run.md.
+
+## 01:00 to about 01:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0100.
+  Non-batch pass per the checker (next batch 03:00):
+  no knowledge or code PR was open. Records PR 207
+  (2026-11-03, head 954f8a8b) and PR 204
+  (2026-11-02, head 65cb6605) await the 0300 batch.
+  Records PR 187 (2026-11-01) still conflicts on
+  _logs_/repo-actions/action-log.jsonl; the conflict
+  comment from the 1900 pass stands, not
+  force-merged. No owner-gated PR.
+  Full detail in pr-integration/0100-run.md.
