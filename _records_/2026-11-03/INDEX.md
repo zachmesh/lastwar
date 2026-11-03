@@ -1870,3 +1870,22 @@ of 2026-10-28.
   zero; 0 withdrawals. Pool: inbox 56, claimed 0,
   done 711, upcoming 51.
   Full detail in queue-planning/0840-run.md.
+
+## 08:45 to about 08:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0845.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported not due (outside every batch window,
+  next batch 11:00). Knowledge PR 226 (organizer
+  0832, 4 activity profiles) merged by squash,
+  commit 29d6ee571; local main fast-forwarded to
+  the same commit. Records PR 224 (2026-11-02,
+  head f88fed3e5) clean but awaits the 11:00 batch.
+  Records PR 207 (2026-11-03, head 1af883f1e) still
+  conflicts on _logs_/repo-actions/action-log.jsonl
+  and _tools_/state/2026-11-03.json; records PR 187
+  (2026-11-01, head 2be5df83) still conflicts on
+  action-log.jsonl; both standing conflict comments
+  carried, not force-merged. No new comments, no
+  owner-gated PR. Status done.
+  Full detail in pr-integration/0845-run.md.
