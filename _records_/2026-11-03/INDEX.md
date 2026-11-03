@@ -1195,7 +1195,7 @@ of 2026-10-28.
   owner-gated PR.
   Full detail in pr-integration/0530-run.md.
 
-## 05:32 to about 05:47 - Knowledge organization pass
+## 05:32 to about 05:36 - Knowledge organization pass
 
 - Knowledge organization pass
   knowledge-organization-2026-11-03-0532, worked from
