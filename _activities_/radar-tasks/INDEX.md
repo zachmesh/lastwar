@@ -3,7 +3,7 @@ title: Radar Tasks
 created: 2026-10-25T18:58:00Z
 modified: 2026-11-03T00:55:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -975,7 +975,55 @@ are still open, per the protocol.
   Evidence in
   `_records_/2026-11-02/arms-race/1508-queue-run.md`.
 
+## What the 2026-11-02 1913 unit added - new trade day stack day, done, pin scan empty
+
+- Unit radar-2026-11-02-1803 by ticker-1904, session
+  about 19:13, status done. New trade day, stack day
+  (duel day 2, Base Expansion): complete tasks but do
+  NOT claim - claims score on odd days only. Nothing was
+  claimed in this unit, and no map pin was tapped.
+  Evidence in
+  `_records_/2026-11-02/radar-tasks/1913-queue-run.md`.
+- Entry: the left-column dish icon at norm 62,727 opened
+  the radar on the first tap. This resolves the 1439
+  entry blocker (panned camera, unresponsive panel X):
+  the base view was restored and the profile measured
+  point worked. The consecutive entry-failure count
+  resets to 0 on this successful entry.
+- Entry verification (radar screen itself): Radar Lv.13,
+  radar points 139, stored tasks 0 of 40, restore line
+  12 Radar Task(s) will be restored in 02:18:56 (landing
+  about 21:32 PST, before the 22:03 radar slot), stamina
+  56 top right.
+- No bottom Quick Execute / Claim All bar was presented:
+  with 0 stored and 0 rewards pending there is no offer,
+  which is consistent, not the 2026-10-31 Claim All
+  lockout.
+- Work done: no ordinary task was executable (stored
+  reads 0 of 40), so there was nothing for Quick Execute
+  to run. No stamina was spent and no free stamina claim
+  was needed.
+- Pin scan: the radar map showed no standing pins at all
+  - no finished-task pins, no story pins, no gathering
+  pins, and none of the unidentified arrow/axe pins from
+  earlier units. Pin inventory is empty as of this unit,
+  so nothing was left unattempted; the 0636 pin items
+  are long expired and are superseded by this empty
+  scan, not carried.
+- Device: one "active on a different device" dialog on
+  entry, Confirm tapped once (first takeover this pass);
+  the app exited as the owner rule predicts, was
+  reopened, and the dialog did not return, so the pass
+  continued (not contested - the dialog appeared once,
+  not three times as in the contested 1834 pass).
+- Closing reads: stored 0 of 40, radar points 139,
+  stamina 56, restore 12 tasks in about 02:19. Returned
+  to the base view at close. Stack-day standard met with
+  zero executable tasks.
+
 ## Changelog
+
+- 1.16.0, 2026-11-02 - 1913 new-trade-day stack-day unit folded: dish 62,727 first-tap entry resolves the 1439 entry blocker, entry-failure count resets to 0; Lv.13, points 139, stored 0 of 40, stamina 56, 12 tasks restoring about 21:32; no Quick Execute / Claim All bar with 0 stored and 0 pending (consistent, not the 2026-10-31 lockout); pin scan empty, nothing left unattempted; one takeover, dialog did not return, not contested.
 
 - 1.15.0, 2026-11-02 - 1508 arms-race unit closed the Drill Ground panel-close handover from the 1532 run: panel X at norm 869,139 closed to base on the first tap, panel no longer left open; entry-blocker count unchanged (a close is not an entry attempt, rule R2 third-failure write-up not triggered); 0636 pin inventory still open, release posture still applies, duel delta test still owed.
 

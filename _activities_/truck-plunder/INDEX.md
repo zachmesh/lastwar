@@ -3,7 +3,7 @@ title: Truck Plunder
 created: 2026-10-25T20:12:00Z
 modified: 2026-11-02T21:44:07Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -952,6 +952,68 @@ settlement and dispatch execution record).
   no pending unit, and no new chain was seeded on an
   ended event.
 
+## What the 2026-11-02 1845 unit added - trade entry blocked in current column set, partial
+
+- Unit trucks-2026-11-02-1457 by ticker-1834, session
+  about 18:35 to 18:43, status partial, tracker untouched.
+  Evidence in
+  `_records_/2026-11-02/truck-plunder/1845-queue-run.md`.
+- Device dialog, two takeovers in this unit: Confirm was
+  tapped at its measured centre, norm 501,568, twice; the
+  app exited after each takeover as the owner rule
+  expects, was reopened, and the base stayed clean after
+  the second takeover, with no third dialog in this unit.
+  Grounding lesson, consistent with (not contradicting)
+  the 1810 measured-centre rule: OCR coordinates in this
+  control channel are already 0 to 1000 normalised, not
+  window pixels - do NOT rescale them. The earlier
+  mis-read in this unit rescaled them and sent two taps
+  to norm 780,597, near the dialog right edge, which did
+  nothing. Tap coordinates come from measured grounding
+  boxes or OCR element positions in tap space, never from
+  a rescaled or image-pixel conversion.
+- Left column re-grounded fresh from the current
+  screenshot: green face at norm 53,577, white pickup at
+  53,639, radar dish at 53,707, hammer below. No blue
+  train-front trade icon is present in this set, and no
+  left-column icon carries a trade badge.
+- Tap at norm 52,553 (the 0935 and 1325 grounding) opened
+  the season warming panel (Location final temp 6.5
+  degrees C, Permafrost Area, Alliance Furnace), not
+  trade. The panel was closed with its X, first at
+  896,152 missed, then at 915,150 closed it. The
+  0416 train-front premise at 52,552 does NOT transfer
+  to this set: 52,553 here opens the season panel.
+- World map route tried next, per the 0114 successor
+  instruction: WORLD opened the map centred on the own
+  base [AP3x]Bears Lair, showing alliance bases only and
+  no trade entry on that view. BASE returned to the base
+  screen.
+- White pickup at 53,639 opened the Secret Command Post
+  (Secret Mobile Squad, Your Tasks), as the metadata
+  predicts, not trade. Its back arrow returned to the
+  base. No Mega button was touched.
+- Successor direction, standing under queue rule R2: do
+  NOT re-tap the points above. The next trucks unit must
+  find the set-flip control or another trade entry route
+  before any column tap, and re-ground the column from a
+  fresh screenshot.
+- The 2026-10-30 hypothesis still fits: the trade slot
+  surfaces only while a returned truck awaits settlement,
+  and none awaited here (Trade Count already 5 of 5 at
+  the 1325 close).
+- Counters NOT read live in this unit: the trade screen
+  was never entered. The plunder shortfall of 1 (Plunder
+  Count 3 of 4, Trade Count 5 of 5) is carried from the
+  1325 record only, NOT re-read, and is not claimed as a
+  live figure.
+- Ended-day close: the trade day ended at 19:00 local,
+  under 20 minutes after this unit closed, so the
+  shortfall expired unfilled at the reset. The next
+  trucks unit is a new trade day and must read both
+  counters live on entry; no new-day counter is claimed
+  here.
+
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
@@ -963,4 +1025,4 @@ settlement and dispatch execution record).
   so the evening dispatches ran under normal day handling.
 - Whether the collapsed 2026-10-20 Reward Recovery record was
   already claimed - its toggle did not expand on 2026-10-25.
-- What flips the base left-column icon set to the set that carries the trade slot - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it. (2026-11-02 0416 update: for this set the premise is corrected - the train-front icon at [52,552], reached after a title-bar foregrounding tap, is the trade entry; the flip question remains for sets where no train-front icon is present.)
+- What flips the base left-column icon set to the set that carries the trade slot (2026-11-02 1845 update: the 1845 set - green face / pickup / radar dish / hammer - carries no train-front icon at all and no trade badge; 52,553 opens the season warming panel, not trade; the successor must find the set-flip control or another entry route first) - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it. (2026-11-02 0416 update: for this set the premise is corrected - the train-front icon at [52,552], reached after a title-bar foregrounding tap, is the trade entry; the flip question remains for sets where no train-front icon is present.)

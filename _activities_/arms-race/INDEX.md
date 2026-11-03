@@ -3,7 +3,7 @@ title: Arms Race
 created: 2026-10-25T20:46:00Z
 modified: 2026-11-03T00:55:00Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -853,3 +853,66 @@ slot. Evidence in
   ID step was used. Nothing spent, no paid button
   tapped, no stage swap, no research or building
   started.
+
+## What the 2026-11-02 1924 unit added - Unit Progression, 9,300 of 75,000, partial
+
+- Unit arms-race-2026-11-02-1803 by ticker-1904, status
+  partial, tracker untouched. Evidence in
+  `_records_/2026-11-02/arms-race/1924-queue-run.md`.
+- Time correction, recorded in the record itself and
+  applied here for sequencing: the file name and
+  frontmatter time 19:24 overstate the close - the unit
+  actually completed at 19:16 PST (token released 19:16),
+  and all game reads below are from the 19:14-19:16
+  window. Pass order this evening is therefore radar
+  1913, then arms 19:14-19:16, then the donations unit
+  that failed stranded on this page (1923).
+- Live phase and score, read twice: Unit Progression
+  (phase rotated from Hero Advancement, which ended
+  about 17:57), Contest Segment Lv.29-30, 02:45:21 left
+  at entry (phase ends about 22:05 PST). Score 9,300,
+  segment rank 2110, account [AP3x]Bears Lair. Chest
+  thresholds 15,000 / 30,000 / 75,000 - do NOT carry the
+  Hero Advancement thresholds (2,000 / 4,000 / 12,000)
+  into this phase. Tier-3 gap: 75,000 minus 9,300 equals
+  65,700 points.
+- Scoring table, read live: Train a Lv.10 unit +31, Use
+  1-min Training Speed-up +10, Buy Packs containing
+  Diamonds +30 per diamond. The speedup and pack paths
+  are red lines and were not used. The only legal path
+  is training queues: 65,700 divided by 31 is about
+  2,120 Lv.10 units - roughly four full barracks batches
+  at the usual training counts, if the queues are idle.
+  That work belongs to the training regular's own unit
+  (as the 2026-11-01 11:35 Unit Progression unit
+  concluded); it was not started from this arms-race
+  unit, and the pass budget (about 25 minutes from
+  token) did not leave room to queue batches inside this
+  unit in any case.
+- Completion sweep (phase page): no point chest earned
+  (score 9,300 is below the 15,000 first threshold), so
+  nothing was claimed and nothing earned was left
+  unclaimed. Cumulative counter chest at top left reads
+  0 of 2 with no bounce and no red dot - not claimable.
+  Ranking row chest is preview-only with no claim. No
+  bouncing chest or reward red dot remains on the Arms
+  Race page.
+- Navigation miss, not a reward left behind: the Events
+  hub re-scan was not completed - the back arrow
+  (single tap, then double-click at norm 90,947) did not
+  navigate off the Arms Race page in either attempt, so
+  the hub card was not re-scanned this unit. The next
+  arms-race unit should re-check the hub card on entry.
+  The same unresponsive back arrow then stranded the
+  following donations unit (1923, four failed taps) -
+  cross-unit handover: relaunch first if stranded on
+  this page.
+- Navigation notes: the Events icon at norm 905,145
+  opened Events directly on the Arms Race page, as in
+  the 0608 record. No different-device dialog was seen
+  in this unit (the pass's single takeover happened in
+  the radar unit), no login or verification was
+  demanded, and no password or Touch ID step was used.
+- Red lines held: no diamonds or money spent, no speedup
+  item burned, no stage swapped, no research or building
+  started, no chest tapped that was not earned.

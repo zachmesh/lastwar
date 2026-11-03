@@ -3,7 +3,7 @@ title: Alliance Donations
 created: 2026-10-25T18:58:00Z
 modified: 2026-11-03T02:40:01Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -741,6 +741,56 @@ before 03:17 local). Evidence in
   this pass is NOT account power; its identity remains
   unknown (see perception-scout).
 
+## What the 2026-11-02 1923 unit added - stranded on Arms Race page, failed, no count read
+
+- Unit donations-2026-11-02-1803 by ticker-1904, session
+  closing about 19:23, status failed, tracker untouched.
+  No donation was made and no live Donation Count was
+  read, so nothing is claimed about the new day's
+  donation state. Evidence in
+  `_records_/2026-11-02/alliance-donations/1923-queue-run.md`.
+- Blocker: the game was stranded on the Arms Race page
+  left open by the previous (arms-race) unit, and its
+  back arrow did not navigate in four attempts: single
+  tap at norm 90,947, double-click at norm 90,947,
+  single tap at norm 89,949, single tap at norm 58,945
+  (the coordinate that worked for the radar screen's
+  back arrow earlier this pass). Every attempt
+  dispatched with no observed change; the Arms Race
+  page stayed open with its timer running (02:45:21
+  down to about 02:40:15 across the attempts), proving
+  the game was live and responsive to the clock but not
+  to these back-arrow taps. The base screen, and
+  therefore the Alliance menu and Alliance Techs, was
+  never reached. The pass budget (about 25 minutes from
+  the first token) did not leave room for a full app
+  relaunch plus Alliance entry inside this unit, so the
+  relaunch route was not attempted here.
+- Handover, standing under queue rule R2: relaunch the
+  app first (the 1439 radar handover notes a relaunch
+  restores the base overview), then open the Alliance
+  menu from a verified base view, then Alliance Techs.
+  Do not start from a stranded event page. If the
+  relaunch shows the different-device dialog, that is
+  the pass's next allowed takeover (this pass used one,
+  in the radar unit).
+- Mechanism distinction: this is the same stranded-page
+  family as the 2026-11-02 donations entry blocker
+  (camera panned to Drill Ground), but the mechanism
+  here is different - the page is the Arms Race page
+  itself, and its back button ignores background taps.
+  Record it as a distinct failure mode, not the same
+  cause. It does not contradict the earlier back-arrow
+  successes on other pages (for example the Events back
+  arrow at norm 160,947 on a double-click in the 1508
+  arms-race unit): the failure is page-specific.
+- No evidence about Donation Count: the 1810 Donation
+  Count 30/30 ambiguity is UNCHANGED by this unit - it
+  read no count, so it neither confirms replenishment
+  nor the sweep's 1-remaining figure. The 1810 direction
+  stands: the next unit re-reads live on the Garrison
+  Defense panel first, and never closes on arithmetic.
+
 ## Open questions
 
 - Donation Count replenishment mechanism - rate, cap, timer link,
@@ -767,7 +817,7 @@ before 03:17 local). Evidence in
   (0545 unit), and the unit landed no donation to test the
   counter's direction, while Tech Donation Today read 0.
   Evidence commented on Issue #160 by this run (a link, not
-  a closure claim). The next unit re-reads live on the
+  a closure claim). (2026-11-02 1923 update: the failed unit read no count, so the ambiguity is unchanged and the live re-read direction stands.) The next unit re-reads live on the
   Garrison Defense panel first; see the 1810 unit section.
 - Upgrading-node no-count state: a node in its upgrade countdown
   (Rallied HP, countdown 07:28:29 at the 0547 read, completing
