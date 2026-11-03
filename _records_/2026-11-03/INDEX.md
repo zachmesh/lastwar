@@ -2620,6 +2620,9 @@ of 2026-10-28.
   re-verified by merge-tree: action-log and state
   file, same as the standing note).
   Full detail in pr-integration/1345-run.md.
+  Addendum: knowledge PR 233 opened mid-pass, reviewed
+  and merged in this pass (squash, main 29c9a7ff);
+  see the addendum in pr-integration/1345-run.md.
 
 ## 13:32 to about 13:54 - Knowledge-organization pass, 4 profile folds
 
