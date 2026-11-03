@@ -206,3 +206,19 @@ of 2026-10-28.
   re-executed it and its done file now carries the
   partial result. The duplicate production needs a
   queue-tool look, not a silent overwrite.
+
+## 00:45 to about 00:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0045.
+  Non-batch pass per the checker (next batch 03:00):
+  knowledge PR 209 (organizer 0032, 7 profiles)
+  and code PR 210 (reap/sync/plan wrong-root
+  warning, Refs 199) merged by squash; local main
+  fast-forwarded to 6aa22fb918. Records PR 207
+  (2026-11-03, head a4661f10) and PR 204
+  (2026-11-02, head 65cb6605) await the 0300 batch.
+  Records PR 187 (2026-11-01) still conflicts on
+  _logs_/repo-actions/action-log.jsonl; the conflict
+  comment from the 1900 pass stands, not
+  force-merged. No owner-gated PR.
+  Full detail in pr-integration/0045-run.md.
