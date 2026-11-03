@@ -2047,3 +2047,19 @@ of 2026-10-28.
   zero; 0 withdrawals. Pool: inbox 55, claimed 1,
   done 714, upcoming 51.
   Full detail in queue-planning/0940-run.md.
+
+## 09:45 to about 09:50 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-0945,
+  non-batch pass (checker _tools_/records_batch.py
+  on main: due no, next batch point 1100).
+  Knowledge PR 227 merged (squash, branch deleted),
+  remote main 29d6ee57 to 0645fe85, local main
+  fast-forwarded to 0645fe85. Records PR 224
+  (records/2026-11-02) awaiting the 1100 batch.
+  Records PR 207 (records/2026-11-03) and PR 187
+  (records/2026-11-01) conflict carried, comments
+  from the 0300 and 1900 batch passes stand, no
+  duplicate comment posted, neither force-merged.
+  No records PR opened, no owner-gated escalation.
+  Full detail in pr-integration/0945-run.md.
