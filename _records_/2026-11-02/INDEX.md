@@ -3608,3 +3608,16 @@ of 2026-10-28.
   commented at 1900, not force-merged. No records PR
   opened, no escalation. Merges synced to the owner
   Slack DM. Full detail in pr-integration/2145-run.md.
+
+## 22:00 to about 22:06 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-2200.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00).
+  No knowledge or code PR open. Records PR 193
+  (post-1900 batch, head d9eef7a3d) awaits the 23:00
+  batch; records PR 187 conflict on action-log.jsonl
+  carried, already commented at 1900, not force-merged.
+  No records PR opened, no comment, no escalation.
+  No-op pass, silent under the delivery rule.
+  Full detail in pr-integration/2200-run.md.
