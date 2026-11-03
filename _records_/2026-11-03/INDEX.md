@@ -1610,3 +1610,71 @@ of 2026-10-28.
   and research half, 154 Season Photo), statements
   current, no comment posted.
   Full detail in pr-catchall/0739-run.md.
+
+
+## 07:32 to about 07:42 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-03-0732, worked from
+  the 0632 watermark. Own PRs first: PR 223 (organizer
+  0632, 3 profiles) is MERGED, so no integrator feedback
+  is pending. Open PRs 224, 207 and 187 name
+  lastwar-pr-integrator.
+- No new knowledge-labeled issue since the 0632 run
+  (newest remains #220); the newest #174 comment is the
+  organizer 0632 fold comment itself. Folded eight
+  records into eight profiles, PR 225 (Owner
+  lastwar-knowledge-organizer): ticker-0634 gifts 0650
+  into alliance-gifts 1.16.0 (250 Regular and 6 Premium
+  dialog-confirmed, progress 185,745,450 to 185,748,340
+  exactly accounted, Alliance button grounded centre
+  936,698, Gifts button grounded box 135,561 to 493,637
+  centre 314,599, Premium Claim All grounded box
+  600,888 to 889,976 centre 744,932 against the Regular
+  point falling on the Hide-your-name checkbox area with
+  the checkbox state left unverified and carried to the
+  next unit, residual Premium tab red dot unexplained);
+  radar 0636 into radar-tasks 1.19.0 (dish centre
+  re-grounded at 57,704 after the 53,682 tap opened an
+  ally profile, stored 13 of 40 after one 12-task
+  restore, Claim All-only bar with 11 pending again in
+  at-entry form, three skull pins inventoried, portrait
+  squares distinguished as member markers); harvest 0642
+  into resource-collection 1.15.0 (central, left-edge
+  and top bubble-free, HUD unchanged at rounding, right
+  edge unswept and armed truck loot unverified so
+  partial, right-edge-first carry to the next unit);
+  survivors 0644 into survivor-intake 1.19.0 (tenth
+  distinct partial since the 1644 done, grounding points
+  498,674 and 70,125 rejected as unreliable and not
+  tapped); training 0647 into troop-training 1.15.0 (no
+  tent in four framings, road drags pan again, 2026-10-25
+  lower-middle description marked stale for the current
+  layout, Drill Ground Full unverified a fourteenth
+  consecutive unit); ticker-0704 help 0710 into
+  alliance-help 1.19.0 (base-screen help bubble grounded
+  box 778,654 to 873,738 centre 825,696, header
+  1,240/1,000 unchanged by Help All, Help button
+  grounded box 507,490 to 865,574 centre 686,532);
+  mail 0715 into mail-rewards 1.13.0 (six categories
+  swept, all answered No rewards available, Battle Report
+  double-tap after a missed OCR toast, In-app Purchases
+  receipts only not swept); star-ceremony 0718 into
+  alliance-duel 1.19.0 (ceremony none waiting, Season II
+  badge rejected as a trophy look-alike, alliance totals
+  43 percent 452,542,821 against 57 percent 608,585,563,
+  personal total snapshot rank 162 at 1,714,950 of
+  3,600,000, gap 1,885,050, duel back arrow grounded box
+  96,918 to 198,980 centre 147,949).
+- Contradictions resolved: 3 (radar dish point 53,682
+  rejected with 57,704 grounded, 0212 point 53,711
+  untested and not claimed wrong; training lower-middle
+  description marked stale for the current layout, not
+  deleted; duel personal total recorded as a snapshot
+  only, preserving the duel-score handover). Stale
+  marked: 1 qualified in place, no deletions. Gaps: 0
+  new Issues, 3 issue comments (#183, #168, #150). No
+  issue closed here. Records PR 207 stands CONFLICTING
+  per the pr-integration 0730 run (integrator-owned),
+  so no new records PR was opened.
+  Full detail in knowledge-organization/0732-run.md.
