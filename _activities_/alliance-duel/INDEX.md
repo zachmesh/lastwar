@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T12:32:00Z
-version: 1.14.0
+modified: 2026-11-02T21:44:07Z
+version: 1.15.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -19,6 +19,7 @@ grounded_in:
   - source: ticker-2142 star-ceremony execution record 2026-11-01 2154 queue run and queue-planning execution record 2026-11-01 2140 run
   - source: queue-planning execution record 2026-11-01 2240 run
   - source: ticker-0334 star-ceremony execution record 2026-11-02 0348 queue run (done, no ceremony waiting)
+  - source: ticker-1234 star-ceremony execution record 2026-11-02 1241 queue run (done, no ceremony waiting)
 ---
 
 
@@ -510,6 +511,34 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   the trophy beside the Alliance icon.
   Evidence in `_records_/2026-11-02/alliance-duel/0348-queue-run.md`.
 
+
+## What the 2026-11-02 1241 unit added
+
+- Unit star-ceremony-2026-11-02-1030 by ticker-1234,
+  session about 12:37 to 12:41, status done. No Star
+  Ceremony waiting: no trophy icon sits beside the
+  Alliance icon on the base screen. Nothing was played,
+  claimed or emoted. Evidence in
+  `_records_/2026-11-02/alliance-duel/1241-queue-run.md`.
+- Entry: the game window opened on the Mail screen
+  (categories All, Alliance, Season, System, Regular,
+  In-app Purchases); the back arrow at bottom left
+  returned the game to the base screen.
+- Right-side icon column inspected: Events (red 1
+  badge), Capitol, the gold VS medallion (countdown
+  05:19:20), Season II (red 1 badge), Alliance, Mail
+  and Inventory.
+- Handover followed again: duel totals were NOT read
+  in this unit. Per the 2026-11-01 handover, duel-score
+  reading belongs to the duel-score regular, not to
+  star-ceremony. The 0047 read (1,113,750) stands as
+  the last star-ceremony duel read, not as the standing
+  method. Corroboration of the known gap, not a new
+  one: this checkout's tools/regulars.json carries no
+  duel-score regular entry and no duel-score unit sat
+  in the inbox, so no total read was attempted here and
+  none is claimed. Issue #136 already tracks the
+  duel-score staging gap; no duplicate issue filed.
 
 ## Open questions
 

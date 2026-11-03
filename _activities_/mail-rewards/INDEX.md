@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T17:38:46Z
+modified: 2026-11-02T20:41:21Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: ticker-0034 mail-rewards execution record 2026-11-02 0042 queue run
   - source: ticker-0334 mail-rewards execution record 2026-11-02 0343 queue run (done, System 50 diamonds)
   - source: ticker-0834 mail-rewards execution record 2026-11-02 0840 queue run (done, all claimable categories answered No rewards available)
+  - source: mail-rewards execution record 2026-11-02 1226 queue run (ticker-1204 unit, done, all categories swept, no reward available)
 ---
 
 
@@ -336,6 +337,48 @@ the next tick re-produces this regular as a fresh unit.
   claimed at all, since it holds receipts only, per the
   activity metadata, and nothing there is claimable.
   Delete All was never pressed in any category.
+
+## What the 2026-11-02 1226 unit added
+
+- Unit mail-2026-11-02-1030 by ticker-1204, session
+  12:21 to 12:26, status done. All claimable categories
+  swept; no reward was available in any of them.
+  Evidence in
+  `_records_/2026-11-02/mail-rewards/1226-queue-run.md`.
+- Claim All pressed in Event, Alliance, Season,
+  System, Regular and Battle Report, each answered
+  "No rewards available". Contents repeat the 0840
+  inventory exactly: train mails under Event, Weekly
+  Donation Ranking and New Alliance Marker mails
+  under Alliance, Ice Breaking reports under Season,
+  President Mail (Warzone 2110) notices under System,
+  battle reports under Regular, scout reports and
+  Lv.17 to Lv.20 Zombie Horde victories under Battle
+  Report. No new sender type appeared.
+- In-app Purchases was not claimed: it holds receipts
+  only, per the activity metadata, and its red dot is
+  unread receipts, not a reward - re-confirming the
+  0840 red-dot rule. Delete All was never pressed in
+  any category. The game was left on the Mail
+  category list.
+- Back-arrow grounding lesson: from the Help page,
+  the Help X at norm 877,210 closed Help to the
+  Alliance panel, and a first panel back-arrow tap at
+  norm 55,949 missed the button's centre and produced
+  no change; the corrected centre at norm 117,946
+  worked first try, and the same point then worked as
+  the mail back arrow. Measure the back arrow's centre
+  fresh in each unit; 55,949 is not a fixed point.
+- Bounded re-press rule: the first System Claim All
+  tap's toast was not captured in its receipt, so
+  Claim All was pressed a second time and the toast
+  was then read live - no further tap after
+  confirmation. Re-press only until the answer is
+  confirmed, then stop.
+- Entry point re-confirmed: Mail at norm 931,789,
+  the re-grounded point from the 0840 unit, opened
+  Mail (Alliance sits at 930,702).
+
 
 ## Open questions
 

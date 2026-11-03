@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T18:40:59Z
+modified: 2026-11-02T23:40:00Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -50,6 +50,13 @@ activity. Not a separate type.
   Ground framing tap (880,831) failed twice. Re-ground the
   entry from the full-base view; do not carry a grounding
   across framings.
+- Entry precondition, binding from the 1427 unit: when
+  the camera is panned onto the Drill Ground cluster,
+  restore the base framing first (tap the Alliance HQ
+  building on the map itself, or re-enter the base view)
+  and then tap the fresh measured Alliance centre
+  (903,787), never a grounding-tool point above the
+  button; drag-pan does not restore the framing.
 
 ## How it is done
 
@@ -581,6 +588,74 @@ before 03:17 local). Evidence in
   Alliance icon tap pans the camera to Drill Ground
   instead of opening the Alliance menu, in this camera
   framing). Donations landed in this unit: 0.
+
+## What the 2026-11-02 1427 unit added
+
+- Unit donations-2026-11-02-1403 by ticker-1412, status
+  partial: no donations made, no Donation Count read
+  live, no coin or diamond spent, tracker untouched.
+  This unit does NOT close on arithmetic - no count
+  figure is claimed anywhere in this record, per the
+  hard closing rule and rule R1. Evidence in
+  `_records_/2026-11-02/alliance-donations/1427-queue-run.md`.
+- Entry attempt, changed method per rule R2 (the third
+  unit with this entry-route blocker, after 0621 and
+  1020): the Alliance icon was re-grounded on the
+  current full-base screenshot, which returned
+  (934,747), and the tap went there. Result identical
+  to 0621 and 1020: the tap panned the base camera to
+  the Drill Ground cluster (Drill Ground Lv.25, three
+  floating round buttons at the bottom right) and no
+  Alliance menu opened. The fresh measured centre of
+  the Alliance shield icon on that same screenshot is
+  (903,787), about 38 normalized units below the
+  grounding point, so the grounding point likely landed
+  on map terrain above the button; the measured centre
+  was not tried in this unit because the camera had
+  already panned and the Alliance button was no longer
+  in frame.
+- Recovery attempts, both no-change and retired per
+  rule R2: a tap on empty ground at (500,550) only
+  scrolled the announcement banner, and drag-pans in
+  both directions, (300,400) to (550,650) and back,
+  moved the camera not at all. Drag-pan is retired
+  for restoring the base framing from the Drill Ground
+  view, matching the survivors unit experience.
+- Rule R2 third-unit consequence, now recorded here:
+  the entry route for the next donations unit changes -
+  it must restore the base framing first (candidates
+  are tapping the Alliance HQ building on the map
+  itself, or re-entering the base view) and then tap
+  the fresh measured Alliance centre (903,787), never
+  a grounding-tool point above the button. A fourth
+  identical partial is a process failure and is
+  reported to the owner as one. No new re-read unit is
+  enqueued from this unit: the re-read unit
+  donations-2026-11-02-1344 already sits in the inbox.
+- Prior state carried, not re-verified: the 0545 unit
+  read the count 8/30 down to 1/30 before the coin
+  button greyed on a timer, so the day is one coin
+  donation short of 30/30 on the last live read,
+  pending a successful menu entry.
+- Carryover, repeated: this unit's camera pan left the
+  base panned onto the Drill Ground cluster, which the
+  following radar unit (1439) then could not enter
+  from - a donations unit that pans the camera should
+  restore the base framing before it closes, or the
+  following unit inherits a panned view with no icon
+  column.
+- Label discrepancy, unreconciled: the 1427 unit reads
+  the Drill Ground building as Lv.25, while the 1020
+  and 1026 units read Lv.27 in the same cluster view.
+  Which label is current is unmeasured; the next unit
+  to see the cluster verifies the level before either
+  figure is asserted again.
+- Result stats: target 30, achieved unverified,
+  verified no, blocker_category c (entry-route tap
+  method: Alliance icon tap pans the camera to Drill
+  Ground instead of opening the Alliance menu, in this
+  camera framing; third consecutive unit with this
+  blocker). Donations landed in this unit: 0.
 
 ## Open questions
 

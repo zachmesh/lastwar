@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T18:40:59Z
+modified: 2026-11-02T21:44:07Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-0334 event-claims execution record 2026-11-02 0359 queue run (partial, Escape crash)
   - source: ticker-0904 event-claims execution record 2026-11-02 0910 queue run (done, full hub sweep, nothing claimable, hub back arrow unresponsive to background clicks)
   - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (hub back arrow centre re-measurement)
+  - source: ticker-1234 event-claims execution record 2026-11-02 1250 queue run (done, full hub sweep, nothing claimable, relaunch restores hidden rails)
 ---
 
 
@@ -481,6 +482,62 @@ that drag is the sweep-completeness check, not wasted motion.
   foreground before using the hub back arrow, or exit
   by another route.
 
+## What the 2026-11-02 1250 unit added - full hub sweep, nothing claimable
+
+- Unit events-2026-11-02-1057 by ticker-1234, session
+  about 12:51, status done. Full Events hub sweep
+  performed, nothing claimable anywhere in the hub,
+  nothing claimed. Evidence in
+  `_records_/2026-11-02/event-claims/1250-queue-run.md`.
+- Camera recovery lesson, qualifying the 0047 lesson:
+  the train unit had left the camera panned to the base
+  edge with the side icon rails hidden; drags moved the
+  camera but did not restore the rails, and taps on a
+  building and on empty map produced no change. Per
+  rule R2 the method was switched: the game window was
+  closed and relaunched, which restored the full base
+  UI with rails intact, state intact, and no login or
+  verification demanded. No "active on a different
+  device" dialog appeared. Drags plus an empty-map tap
+  do NOT always restore hidden rails - relaunch is the
+  verified fallback, and it costs nothing here.
+- Arms Race (Drone Boost, Contest Segment Lv.29-30,
+  about 01:10:39 left at first read): cumulative counter
+  chest at top left reads 6/8, not full, nothing to
+  claim. Score reads 0; the three point chests
+  (thresholds 1,500 / 10,000 / 30,000) show no claim
+  state. The bottom ranking row still shows the
+  finished Hero Advancement result (#2110 [AP3x]Bears
+  Lair, 40,500), whose ranking chest was already
+  inspected in earlier units (contents preview only, no
+  Claim button). No bouncing chest, no reward red dot
+  on this page. Phase work itself belongs to the
+  arms-race unit, not this sweep. Phase note: the phase
+  has rotated from Tech Research (0910) to Drone Boost,
+  so the point-chest thresholds differ (1,500 / 10,000 /
+  30,000 here against 6,250 / 12,500 / 30,000 at 0910) -
+  do not carry thresholds across phases.
+- Wanted Boss (Code 87, giant polar bear, appears at
+  server time 00:00, countdown about 04:09:55 at read):
+  Goals page re-checked - best single attack
+  899,542,636 against tiers 1.0B / 1.5B / 2.0B / 2.5B /
+  3.0B, all above the best, all Claim buttons grey,
+  nothing claimable. Attacking the boss is grinding,
+  not a claim, and the boss is not out yet.
+- Community: Discord binding reward reads Claimed,
+  unchanged from prior knowledge. Nothing to claim.
+- Desert Battlefield (Desert Storm Battlefield):
+  registration ends in 2d 05:09, registration limited
+  to top-32 power-rank alliances. Alliance-level
+  registration event, nothing personal to claim.
+- Hub completeness: the tab bar was dragged to its end;
+  the four tabs above are the whole hub (Arms Race,
+  Desert Battlefield, Wanted Boss, Community). No
+  Zombie Invasion tab - the event ended 2026-10-30,
+  consistent with unit zombie-invasion-zombie-2026-10-28-066.
+- Game left on the Events hub Desert Battlefield page
+  at unit close, for the next unit's navigation.
+
 ## Open questions
 
 - Which recurring events hold claims that expire unclaimed.
@@ -489,4 +546,4 @@ that drag is the sweep-completeness check, not wasted motion.
   wave days, and the coal cost per donation.
 - What the Wanted Boss Code 87 fight pays in practice when it is
   out at server 00:00.
-- Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.)
+- Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.) (2026-11-02 1250/1300 update: window close-and-relaunch is now a verified exit and recovery route - the 1250 unit restored hidden side rails by relaunch, and the 1300 passes unit exited the stalled hub by relaunch, both with state intact and no login or device dialog; the foreground-first exit itself is still unverified.)

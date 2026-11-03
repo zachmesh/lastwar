@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T17:05:00Z
+modified: 2026-11-02T20:41:21Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: alliance-gifts execution record 2026-11-02 0023 queue run (ticker-0004 unit, done, 45 Regular plus 5 Premium)
   - source: ticker-0334 alliance-gifts execution record 2026-11-02 0338 queue run (done, 54 Regular and 12 Premium)
   - source: ticker-0804 alliance-gifts execution record 2026-11-02 0817 queue run (done, 1 Regular and 1 Premium)
+  - source: alliance-gifts execution record 2026-11-02 1215 queue run (ticker-1204 unit, done, counter anomaly filed as issue 183)
 ---
 
 
@@ -397,6 +398,55 @@ one file per execution.
 - Evidence in `_records_/2026-11-02/alliance-gifts/0817-queue-run.md`.
 
 
+## What the 2026-11-02 1215 unit added
+
+- Done, Claim All on BOTH tabs plus a mid-unit second
+  Regular claim: unit gifts-2026-11-02-1030 by
+  ticker-1204, session 12:06 to 12:15. Evidence in
+  `_records_/2026-11-02/alliance-gifts/1215-queue-run.md`.
+- Dialog-confirmed counts: Regular 182, then 5 more
+  that arrived mid-unit, 187 total; Premium 10. Gift
+  Level 28 unchanged, progress 180,734,910 to
+  180,779,650 of 206,300,000 across the three claims.
+- Regular points exact in a quiet window: the first
+  Regular claim moved progress 180,734,910 to
+  180,736,730, exactly 182 x 10. Premium visible rows:
+  R +50 (Daily Sale Transfer Pack), SR +100 (Daily
+  Premium Transfer Pack), R +50 (Advanced Training
+  Pass), SSR +200 (Premium Training Pass); the other 6
+  claimed premium rows sat below the fold and their
+  per-gift points are unverified.
+- Counter anomaly, filed as Issue #183: the Premium
+  window delta (+35,580) and the second Regular window
+  delta (+7,340, against 5 x 10 = +50 expected) both
+  exceed this unit's own claims in those windows. The
+  progress counter is therefore NOT attributable to
+  the unit's own claims during an active window - the
+  claimed counts are governed by the summary dialogs,
+  not the counter. Leading hypothesis, unverified:
+  the counter is alliance-shared and concurrent ally
+  claims moved it (allies were demonstrably active -
+  new gifts arrived every minute); alternative: an
+  unmeasured high-value premium tier (a partly visible
+  MR row sat below the fold). Earlier quiet-window
+  units matched exactly, which favours the concurrent
+  activity hypothesis. The list scroll and drag both
+  produced no view change and were retired inside the
+  unit per queue rule R2, so below-fold rows are not
+  re-read that way.
+- Completion sweep rule confirmed: after the first
+  claims, the Regular tab showed a fresh red dot - 5
+  new Regular gifts (LAMP 1 defeating Doom Elites, +10
+  each) - and a second Claim All cleared them; both
+  tabs showed no red dot and no Claim All button at
+  close. Re-check both tabs after claiming; gifts keep
+  arriving mid-unit.
+- Entry and claim points re-confirmed, not just
+  reused: Alliance 903,731, Gifts 303,595, Regular
+  Claim All 498,952, Premium Claim All 763,952 - the
+  same points the 0817 unit measured.
+
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -435,3 +485,5 @@ one file per execution.
 - 1.9.0 (2026-11-02): dialog-confirmed 54 Regular and 12 Premium, Gift Level 28 progress 180,150,630 to 180,153,970 of 206,300,000, Alliance base icon 934,707 and Gifts button 313,595 re-grounded, folded from the 0338 gifts unit.
 
 - 1.10.0 (2026-11-02): dialog-confirmed 1 Regular (+10) and 1 Premium (+50), Gift Level 28 progress 180,508,620 to 180,508,680 of 206,300,000, Alliance Wars row at y 509 versus the Gifts row at y 595 with the 303,595 corrected tap, Premium Claim All at 763,952 against the 2122 unit's 718,967, and the no-change back-arrow exit, folded from the 0817 gifts unit.
+
+- 1.11.0 (2026-11-02): dialog-confirmed 187 Regular (182 plus 5 mid-unit arrivals) and 10 Premium, Gift Level 28 progress 180,734,910 to 180,779,650 of 206,300,000, the exact 182 x 10 Regular window, the visible premium rows R 50, SR 100, R 50 and SSR 200, the counter anomaly filed as Issue #183 with the alliance-shared-counter hypothesis, the below-fold scroll and drag retired per rule R2, and the completion sweep that caught 5 mid-unit arrivals, folded from the 1215 gifts unit.
