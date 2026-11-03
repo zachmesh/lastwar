@@ -3,7 +3,7 @@ title: Event Claims
 created: 2026-10-25T18:58:00Z
 modified: 2026-11-02T21:44:07Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -537,6 +537,32 @@ that drag is the sweep-completeness check, not wasted motion.
   consistent with unit zombie-invasion-zombie-2026-10-28-066.
 - Game left on the Events hub Desert Battlefield page
   at unit close, for the next unit's navigation.
+
+## What the 2026-11-02 1850 unit added - contested stop, failed, nothing claimed
+
+- Unit events-2026-11-02-1457 by ticker-1834, session
+  about 18:44 to 18:50, status failed (contested),
+  tracker untouched. No Events screen was reached and
+  nothing was claimed. Evidence in
+  `_records_/2026-11-02/event-claims/1850-queue-run.md`.
+- Contested counting clarified, cross-unit within one
+  pass: the "active on a different device" dialog
+  returned for a third time in this pass, after two
+  Confirm takeovers earlier in the same pass (during
+  the trucks unit, at norm 501,568 each, the app
+  exiting and being reopened each time). Per the owner
+  rule of 2026-10-27, after two takeovers a returning
+  dialog means the owner is likely playing on his phone,
+  so the pass stopped: the dialog was NOT confirmed a
+  third time, the device token was released, and the
+  game was left with the dialog on screen, leaving the
+  owner session on the other device undisturbed.
+- Contrast, same evening: the ticker-1904 radar unit
+  (1913) saw the dialog once, confirmed once, and the
+  dialog did not return, so that pass continued - not
+  contested. The contested stop is therefore the third
+  return in a pass, counting takeovers across the
+  units of that pass, not per unit.
 
 ## Open questions
 
