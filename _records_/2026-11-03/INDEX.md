@@ -2671,3 +2671,22 @@ of 2026-10-28.
   file, same as the standing note; 187 action-log
   only, same as its standing note).
   Full detail in pr-integration/1400-run.md.
+
+## 14:15 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1415.
+  Non-batch pass per the checker
+  (_tools_/records_batch.py on main: due no, outside
+  every batch window, next batch 15:00); no-op pass,
+  no knowledge or code PR open. Records PR 229
+  (records/2026-11-02, head 962d3fee, MERGEABLE) awaits
+  the 15:00 batch. Records PR 207 (records/2026-11-03,
+  head 1b7778b1, GitHub verdict UNKNOWN at first read
+  but merge-tree confirms CONFLICTING) and PR 187
+  (records/2026-11-01, head 2be5df83, CONFLICTING)
+  conflicts carried, standing comments stand, no
+  duplicate comment posted (207 conflict files
+  re-verified by merge-tree: action-log and state
+  file, same as the standing note; 187 action-log
+  only, same as its standing note).
+  Full detail in pr-integration/1415-run.md.
