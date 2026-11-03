@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T18:45:00Z
+modified: 2026-11-03T21:52:04Z
 level: L1
-version: 1.12.0
+version: 1.14.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -23,6 +23,8 @@ grounded_in:
   - source: ticker-0834 perception-scout execution record 2026-11-03 0839 queue run (partial, base and events groups, Drone Boost 9300, Wanted Boss Code 64, no Zombie entry)
   - source: ticker-0904 perception-scout execution record 2026-11-03 0910 queue run (partial, alliance group, stale 11-02 post-reset unit executed, Wars dot still open on Issue #212, OCR-row grounding lesson)
   - source: ticker-0934 perception-scout execution records 2026-11-03 0940 and 0949 queue runs (partial, stale alliance remainder chains, Wars dot live cause seen departing, Elite Exercise Commendation Notice, Issue #212)
+  - source: ticker-1304 perception-scout execution records 2026-11-03 1309 and 1314 queue runs (partial, base group and alliance remainder, Wars dot clearing answered, store and techs re-read, Issue #212)
+  - source: ticker-1334 perception-scout execution record 2026-11-03 1345 queue run (partial, LOOT box located, station preparation-only surface, Wars dot present again, Issue #212 open)
 ---
 
 
@@ -1334,7 +1336,7 @@ observe-only, nothing claimed). Evidence in
   Donation tabs, the station panel and the loot box
   (both covered in this pass's 0940 unit, still
   unlocated), and whether the Wars dot clears after
-  a rally departs.
+  a rally departs (2026-11-03 1314 update: answered, the dot clears when no rally is running; see the 1309 and 1314 section).
 - Tooling finding - grounded taps: Alliance panel
   button rows ground at about 80 apart from the Wars
   anchor: Wars [312,547], Members [690,627],
@@ -1363,6 +1365,273 @@ observe-only, nothing claimed). Evidence in
   seen departing; dot cause observed directly). No
   issue is closed here - closure belongs to the daily
   retro, with evidence.
+
+## What the 2026-11-03 1309 and 1314 units added - base group and alliance remainder, Wars dot clearing answered, store and techs re-read
+
+- Units by ticker-1304, session cc-352, both
+  observe-only, both partial with blocker category h
+  (by-design chain continuation), not misses. Evidence
+  in `_records_/2026-11-03/perception-scout/1309-queue-run.md`
+  and `_records_/2026-11-03/perception-scout/1314-queue-run.md`.
+  Nothing claimed, fought, dispatched, donated,
+  collected, dug or bought; no price tag tapped.
+- 1309, scout-base head unit of the fresh midday chain
+  scout-mid-2026-11-03, about 13:05 to 13:09 local. Entry
+  state: the game opened on the Secret Command Post
+  panel, left there by the previous session, not on the
+  base screen. Three back-arrow taps failed before the
+  exit worked: taps at [86,907] and [86,862] and
+  [62,951] left the panel unchanged (the first produced
+  an Achievements 8/16 Completed toast at the top, no
+  navigation). A visual-grounding point for the blue
+  arrow button at [158,946] exited the panel at once to
+  the base screen. Grounded point for this panel: back
+  arrow [158,946], not the earlier estimates.
+- 1309 secrets surface, read live at entry, observed
+  only: Secret Command Post, Secret Mobile Squad tab:
+  Assist Allies 5/5, Plunder Others 0/3, unchanged from
+  the 0539 read today. Your Tasks, all Lv.5: UR Disrupt
+  electric grid; SSR Search for Missing Refugees
+  (PERFECT badge); SSR Provide Tech Support to Refugees
+  (PERFECT badge); SSR Train Refugees (PERFECT badge).
+  Hidden Treasures and Ghost Ops tabs not opened,
+  carried to the secrets regular, not to this chain.
+  Reading: the secrets state maps to the secrets
+  regular, already queued for the 14:03 slot
+  (secrets-2026-11-03-1457 in inbox). No new secrets
+  signal beyond the standing state.
+- 1309 base screen and HUD, read live about 13:09
+  local: account power 149,948,901, up from 149,940,141
+  at the 09:38 read today. HUD totals as displayed: top
+  row food 240.3M, iron 575.0M, coin 12.1M; second row
+  19.0M, 505.1K; power row 149,948,901, diamonds 12.72K
+  with a plus button; cart 2,836. Left column: avatar
+  Lv.30, stamina 120, hammer 2/4, flask 1/2 (was 2/2 at
+  the 00:17 read), green face, white truck, wrench,
+  megaphone-style radar icon badge 11, yellow radio;
+  weather widget 6.5C. Right column: Events badge 1,
+  Capitol, VS timer 04:51:03, Season II timer 12d
+  04:51:04, target icon badge 1 with countdown 00:00:40,
+  Alliance, Mail, Inventory. Bottom: HEROES, chat
+  ticker, 99+ badge, WORLD. Resource bubbles visible on
+  many left and centre buildings, observed only, not
+  collected. Furnace toast again at the bottom:
+  "High-temp Furnace total overdrive time (in ...",
+  still unexplained, red-line surface observed only. No
+  "Boarding closes in" banner on this view; no train
+  icon in the left column; no station building in this
+  frame. The station panel stays carried, consistent
+  with the 0940 read.
+- 1309 red dot accounting: seen 4 - Events badge 1,
+  target-icon badge 1, radar badge 11, 99+ badge - plus
+  2 counters (hammer 2/4, flask 1/2). Explained 4:
+  Events maps to the events surface (events regular
+  queued for 14:57); the target-icon badge 1 with its
+  short recurring countdown maps to the world-map rally
+  surface, unopened; the radar badge 11 maps to the
+  radar regular; the 99+ badge maps to chat and mail
+  surfaces. Unexplained red dots: 0 in the surfaces
+  walked. Unknown items: the furnace overdrive toast
+  (recurring, unexplained since 00:17 today), the flask
+  1/2 change (a queue slot freed since 00:17, not a red
+  dot). Carried unwalked: scout-events, scout-store and
+  scout-alliance groups in full; the station panel and
+  the loot box pin, both still unlocated (2026-11-03 1345 update: the loot box is located, see the 1345 section; the station panel stays carried as a preparation-only surface).
+  unmatched_labels: none in the surfaces actually walked.
+- 1314, scout-alliance remainder unit of the stale
+  post-reset chain scout-2026-11-02, about 13:11 to
+  13:14 local. Note on staleness: the queue `next` pick
+  returned this stale unit of the closed 2026-11-02
+  post-reset pass. It still yielded live reads, notably
+  the Wars-dot clearing evidence and the first
+  Development-tab read of this chain, so it was executed
+  rather than skipped, as the 0949 unit did for the
+  midday chain. The planner or retro may expire the
+  chain.
+- 1314 alliance panel, read live: [AP3x] The Apex, 5.0
+  stars, Leader Abŷss Apex, Power 13,091,557,850 (up
+  from 13,085,838,780 at the 09:42 read), Members 94/100,
+  Language English, motto unchanged including the
+  Korean line. Red dots on the panel: Help and Alliance
+  Gifts only. No dot on Alliance Wars, Alliance Store,
+  Members, Assemble, Strength Ranking, Alliance Events
+  or Alliance City (City button shown highlighted, as
+  before). Entry: Alliance icon re-grounded at [903,699]
+  on the base screen, as in 0910.
+- 1314 Wars dot clearing - the 0949 carried question
+  answered: Alliance Wars, walked live (Rally Intel tab
+  only), reads "No Alliance Rally currently."
+  Individual Intel tab not opened. Reading: the Wars dot
+  is gone from the panel at the same time the tab is
+  empty. Combined with the 0949 read (a live rally
+  departing mid-walk, dot still present then), this is
+  the dot-clearing re-read that unit left open: the Wars
+  dot clears when no rally is running. Commented on
+  Issue #212 by the executor; this fold is commented
+  there by this run. The dot is therefore explained,
+  not merely observed. Join slots: none present while
+  no rally runs; joining is not scout work in any case.
+- 1314 Alliance Techs, walked live (both tabs): War tab:
+  Troop Movement 5/10, Rallied HP 6/10, Rallied Attack
+  7/10, Rallied Defense 7/10, next tier 1/10 partially
+  visible, unchanged from the 01:40 read. Development
+  tab, first read in this chain: Auto Rally Max Level,
+  Quick Construction 8/10, Great Helper Max Level, next
+  tier 2/10 partially visible. Tech Donation Today:
+  8000, up from 6700 at the 09:06 read and 5100 at 01:40.
+  Requires at least 1000 contribution points to earn
+  the reward. Maps to the donations regular, queued for
+  14:03. Techs closes at the panel X [838,150], as in
+  0539. Donation controls observed only.
+- 1314 Alliance Store, walked live (Alliance tab,
+  read-only): Honor 199.2K, up from 193.1K at the 01:36
+  read. UR Hero Universal Shard SOLD, Survivor
+  Recruitment Ticket SOLD, Violet Shard SOLD, Mason
+  Shard 30/30 at 1,000, Drone Parts SOLD, Lv.1 Drone
+  Component Chest SOLD, Skill Chip Chest (SR), Drone
+  Combat Boost EXP Card, 8-Hour Shield 7/7. Refreshes
+  Monday 00:00 server time, 5d 04:45:22 remaining. State
+  otherwise identical to the 01:36 read. No Buy button
+  tapped, per the red line.
+- 1314 red dot accounting: seen on surfaces walked:
+  Help and Gifts dots on the alliance panel. Explained
+  2: Help maps to the help regular; Gifts maps to the
+  gifts regular. The absent Wars dot is explained above
+  as the cleared state. Unexplained: 0 in the surfaces
+  walked. Carried unwalked: Members, Strength Ranking
+  (Kills and Donation tabs), Alliance Events, Record,
+  Applicants, Alliance Star, Settings, the station panel
+  and the loot box pin (2026-11-03 1345 update: loot box located, see the 1345 section). Note that Members, Strength
+  Ranking (Power tab) and Alliance Events were walked
+  today in the midday chains (0940 and 0949 records),
+  so the successor need only re-read them if it wants
+  this chain's own copy. unmatched_labels: none in the
+  surfaces actually walked.
+- Issue #212: the executor commented the Wars-dot
+  clearing evidence; this fold is commented there by
+  this run. No issue is closed here - closure belongs
+  to the daily retro, with evidence.
+
+
+## What the 2026-11-03 1345 unit added - LOOT box located, station panel is a preparation-only surface
+
+- Unit scout-midday-scout-mid-2026-10-31-006 by
+  ticker-1334, session cc-357, about 13:36 to 13:44
+  local, status partial with blocker category h
+  (by-design chain continuation), not a miss: the loot
+  box is now located, and only the station panel
+  remainder is carried to the successor. Observe-only;
+  nothing claimed, fought, dispatched, donated,
+  boarded, dug or bought; no price tag tapped. The
+  Alliance Techs Donate buttons and the LOOT Claim All
+  button were observed only, never tapped. No carriage
+  plus bubble was tapped, so no boarding action was
+  taken. No world map pin was tapped. Evidence in
+  `_records_/2026-11-03/perception-scout/1345-queue-run.md`.
+  Appended to the 2026-11-03 observation file.
+- Alliance Techs, read live on entry from the previous
+  unit's end state: Rallied Attack 7/10, Tech EXP
+  14.0K/4.5M (up from 12.7K at the 0940 read,
+  consistent with the 1322 donations unit landing 7
+  coin donations today), Current +7%, Next Level +8%.
+  Donation Reward 50 Tech EXP and 50 coin. Donation
+  Count 1/30, Unlimited Attempts. Donate buttons: 2 red
+  gems and 800 coin, observed only. This read
+  corroborates the 1322 donations close (EXP 14.0K,
+  count 1/30). Techs list, read live: War tab rows
+  Troop Movement 5/10, Rallied HP 6/10, Rallied Attack
+  7/10, Rallied Defense 7/10, next tier 1/10 partially
+  visible. Tech Donation Today: 9000, up from 8000 at
+  the 1314 read (alliance-wide footer; the rise is
+  recorded, not attributed to any donor). Detail closed
+  at [818,225], then the panel at [818,150].
+- Alliance panel, read live: [AP3x] The Apex, 5.0
+  stars, Leader Abŷss Apex, Power 13,091,657,850 (up
+  from 13,091,557,850 at the 1314 read), Members 94/100,
+  Language English. Red dots on the panel: Alliance
+  Wars, Help, Alliance Gifts, Alliance Techs. No dot
+  on Members, Alliance Store, Assemble, Strength
+  Ranking, Alliance Events or Alliance City (City
+  button shown highlighted, as before). No Station
+  button on this panel, as established in 0539 and
+  0940. Note: the Wars dot is present again here after
+  its absence at 13:14; no rally was opened in this
+  unit, so whether a rally is running is unverified -
+  the clearing rule predicts one is, but that
+  prediction is not verified by this read.
+- Station panel hunt, changed method versus 0940
+  (which used drag pans only): this unit closed the
+  panels to a clean base view, screenshot-read the
+  left icon column, and checked the two
+  train-preparation signals before any pan. Base
+  screen, read live about 13:40 local: account power
+  149,948,901, HUD food 240.3M, iron 575.0M, coin
+  12.1M, second row 19.0M, 505.1K, diamonds 12.72K,
+  cart 2,836, stamina 120. Left icon column: avatar
+  Lv.30, hammer 2/4, flask 1/2, green face, white
+  truck, wrench, radar badge 11, yellow radio. No train
+  icon in this frame. No "Boarding closes in" banner
+  under the resource bar on the base view. Reading:
+  with neither preparation signal present, no train is
+  preparing in this window, so the STATION PLATFORM
+  screen has no live state to read. The platform
+  screen itself remains unlocated, and it is a
+  preparation-only surface, not a standing panel: it
+  can only be read when a train is preparing. This
+  stays carried, not closed, and the successor should
+  re-check the two preparation signals first rather
+  than re-panning the base edge.
+- LOOT box, LOCATED. Changed method versus 0940 and
+  0539 (which only far-observed the left-edge gift
+  icon): on the world map, centred on the own base
+  [AP3x]Bears Lair with March Queues 0/4, one east
+  drag pan, then a grounded tap on the left-edge gift
+  icon at [311,237] opened the panel titled LOOT. That
+  icon is the loot box. Claim All was observed only,
+  never tapped, so the loot stays unclaimed for its
+  owning regular. Panel title: LOOT, with an info
+  button and an X close at about [818,216]. Three
+  rows, all Lv.60 Doom Elite, all marked Member, all
+  with a 0 lightning counter: row 1 crate stack x4,
+  iron 16.0K, food 16.0K, coin 11.0K; row 2 crate stack
+  x4, iron 28.5K, food 28.5K, coin 19.4K; row 3 crate
+  stack x4, iron 16.0K, food 16.0K, coin 11.0K. The
+  world-map gift badge was 3 at entry, matching the
+  three rows. Panel closed at its X, then the BASE
+  toggle at [913,975] returned to the base view. Game
+  left on the own base screen. Follow-up for the
+  owning regular: the three Doom Elite loot rows are
+  unclaimed work, not scout work. The gifts units
+  queued for 14:30 should claim them, or a diff should
+  raise them if the gifts regular does not cover LOOT.
+  No new Issue filed: the loot box is a located
+  surface, not a new gap or failure mode, and the
+  station remainder is a pre-existing carried item.
+- Red dot accounting: seen on surfaces walked:
+  Alliance panel Wars, Help, Gifts and Techs dots;
+  base Events badge 1, radar badge 11, 99+ badge;
+  world-map gift badge 3. Explained: Wars, Help,
+  Gifts and Techs map to their owning regulars; Events
+  badge 1 maps to the events surface; radar badge 11
+  maps to the radar regular; 99+ maps to chat and mail
+  surfaces; the world-map gift badge 3 maps to the LOOT
+  panel above, with three unclaimed rows. Unexplained:
+  0 in the surfaces walked. Carried unwalked: the
+  station panel only (see above), and the standing
+  furnace overdrive toast.
+- Tooling finding - grounded taps: a click needs a
+  fresh observation_id from a compact or image
+  observation taken immediately before it; the close,
+  panel and toggle taps in this unit all used the
+  observation just taken. LOOT entry grounded at
+  [311,237] on the world map; LOOT close at about
+  [818,216]; BASE/WORLD toggle at [913,975].
+- Carried forward: successor unit enqueued in chain
+  scout-mid-2026-10-31
+  (scout-midday-scout-mid-2026-10-31-007) for the
+  remainder: the station panel only, to be re-checked
+  when a train is preparing.
+
 
 ## Open questions
 
