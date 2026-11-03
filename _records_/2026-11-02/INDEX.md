@@ -2646,7 +2646,162 @@ of 2026-10-28.
   escalations, no Slack sync owed. Full detail in
   pr-integration/1651-run.md.
 
-## 16:40 to about 17:05 - Queue planning pass
+## 16:32 to about 17:05 - Knowledge organization pass (3 profiles updated, PR 190)
+
+- Organizer run knowledge-organization-2026-11-02-1632,
+  worked from the 1532 watermark: own PR 188 stands
+  MERGED with no comments and no reviews, no new
+  knowledge Issue since the 1332 run, and the
+  ticker-1452 arms-race 1508 and harvest 1520 records
+  landed late on the branch during this run (delayed
+  by a timed-out push) and were folded here instead
+  of left as a no-op.
+- Profiles updated, PR 190 (OPEN, Owner
+  lastwar-knowledge-organizer): arms-race 1.22.0 to
+  1.23.0 (Hero Advancement phase read live, Adam
+  124 to 125 just-enough plan, 20.0M EXP shortfall
+  blocker, EXP-box top-up first for the next unit),
+  resource-collection 1.10.0 to 1.11.0 (1520 partial,
+  no bubble collected, glow at norm 486,216 is the
+  Operation Falcon campaign entry not a bubble,
+  back-out return unverified, full sweep outstanding)
+  and radar-tasks 1.14.0 to 1.15.0 (Drill Ground
+  panel-close handover from the 1532 run completed
+  by the 1508 unit, X at 869,139 first tap;
+  entry-blocker count unchanged). The Lv.25/Lv.27
+  Drill Ground label discrepancy stays open for the
+  next unit to verify. No gap filed. Full detail in
+  knowledge-organization/1632-run.md.
+## 16:40 to 16:57 - Queue ticker pass, survivors partial (record written by recovery)
+
+- Survivors unit survivors-2026-11-02-1403, partial: gate corner
+  grounded fresh (norm 70,692 area) but two taps opened no
+  survivor dialog and no recruit card, screen unchanged; 0
+  survivors processed, gate line at close unverified. Pass timed
+  out before writing its record or releasing the device token;
+  recovery released the token and wrote this record from the
+  pass report, claimed unit file and session screenshots. Claim
+  had expired by recovery time, so the unit was reaped back to
+  inbox unclaimed for the next tick. Tracker untouched. Full
+  detail in survivor-intake/1640-queue-run.md.
+
+## 17:00 to about 17:14 - PR integration pass
+
+- Non-batch pass, status done: checker
+  _tools_/records_batch.py on main reported due no,
+  outside every batch window, next batch point
+  19:00 PT. Merged PR 189 (tools, scout_diff
+  narrative red-dot accounting, Refs 149, Owner
+  lastwar-tool-developer, squash) and PR 190
+  (knowledge, organizer 1632, 1508 arms-race and
+  1520 harvest into 3 profiles, Owner
+  lastwar-knowledge-organizer, squash); main
+  synced back to the local repo by bundle to
+  f31b10bd. Records PRs 187 (2026-11-01 post-1500
+  batch, head 2be5df83) and 161 (2026-11-02, head
+  6fbd9a6e, prior action-log conflict resolved on
+  the branch side, mergeable clean) both await the
+  1900 batch. records/2026-10-31 verified contained
+  in main, no PR needed. Full detail in
+  pr-integration/1700-run.md.
+
+## 17:15 to about 17:26 - PR integration pass
+
+- Non-batch pass, status no-op: checker
+  _tools_/records_batch.py on main reported due no,
+  outside every batch window, next batch point
+  19:00 PT. No knowledge or code PR was open.
+  Records PRs 187 (2026-11-01 post-1500 batch, head
+  2be5df83) and 161 (2026-11-02, head 75e5eeee,
+  prior action-log conflict resolved on the branch
+  side, mergeable clean) both await the 1900 batch.
+  records/2026-10-31 verified contained in main, no
+  PR needed. No merges, no comments, no escalations.
+  Full detail in pr-integration/1715-run.md.
+- Survivors unit survivors-2026-11-02-1403, partial (ticker-1703):
+  re-claimed after the ticker-1631 attempt's lease expired; changed
+  methods under rule R2, not a repeat of the 70,692 tap: a drag pan
+  400,700 to 400,400 changed nothing, a tap at norm 89,722 opened
+  the radar world map (no radar work done, HOME returned safely to
+  base; that point is a radar entry, not the survivor figure), and
+  a tap at norm 109,626 on the question-mark bubble opened nothing.
+  0 survivors processed, gate line unverified, no Quick Dispatch.
+  Tracker untouched. Full detail in survivor-intake/1718-queue-run.md.
+
+- Training unit training-2026-11-02-1403, partial (ticker-1703):
+  Lv.24 tent point norm 806,581 tapped, no selection row seen;
+  pistol point norm 794,605 tapped, small visual change in the
+  tent area but no TRAIN UNITS panel opened. 0 batches queued,
+  Lv.27/Lv.30 not inspected, no Drill Ground figure read live.
+  Game left safe on base. Tracker untouched. Full detail in
+  troop-training/1723-queue-run.md.
+
+
+## 17:30 to about 17:35 - PR integration pass
+
+- Non-batch pass, status no-op: checker
+  _tools_/records_batch.py on main reported due no,
+  outside every batch window, next batch point
+  19:00 PT. No knowledge or code PR was open.
+  Records PRs 187 (2026-11-01 post-1500 batch, head
+  2be5df83) and 161 (2026-11-02, head 05f35da1,
+  local trial merge against main clean) both await
+  the 1900 batch. records/2026-10-31 verified
+  contained in main, no PR needed. No merges, no
+  comments, no escalations. Full detail in
+  pr-integration/1730-run.md.
+
+## 17:32 to about 17:50 - Knowledge organization pass (2 profiles updated, PR 191)
+
+- Organizer run knowledge-organization-2026-11-02-1732,
+  worked from the 1632 watermark: own PR 190 stands
+  MERGED with no comments and no reviews, no new
+  knowledge Issue since the 1632 run, and the
+  ticker-1631 recovery survivors 1640 and ticker-1703
+  survivors 1718 and training 1723 partials were
+  folded here.
+- Profiles updated, PR 191 (OPEN, Owner
+  lastwar-knowledge-organizer): survivor-intake 1.14.0
+  to 1.15.0 (1640 sixth partial since the 1644 done,
+  recovery-written, 70,692-area taps changing nothing
+  unlike the 1107 corner change so the point is a
+  re-read pointer; 1718 re-attempt of the same 1403
+  unit, not a seventh distinct partial, drag pan
+  re-confirming its 1107 retirement, 89,722 corrected
+  to a radar entry point) and troop-training 1.10.0
+  to 1.11.0 (inherited 1146 Lv.24 points opening no
+  panel in this camera view, fresh-grounding rule
+  re-affirmed, Lv.24 busy expectation only, Drill
+  Ground Full carried unverified a tenth consecutive
+  unit without a live read). Contradictions resolved:
+  70,692 as camera-view dependence, and 1723 as a
+  confirmation of the camera-dependent mapping rule
+  rather than an overturn of the 1146 read. No new
+  gap filed; the missing 1640 comment on Issue #168
+  was left by this run, and #168 and #150 stay open.
+  Full detail in knowledge-organization/1732-run.md.
+
+## 17:32 to about 17:48 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-02-1732.
+  No-op: own PRs checked first (only records PRs 187 and
+  161 open at pass start, none owned; PR 189 stands MERGED
+  with no reviews or comments, so no feedback owed), all
+  ten open tooling issues already implemented by merged
+  PRs with closure belonging to the daily retro, and the
+  standing tool queue re-verified on main (retro_report
+  p90/attempts/system_metrics present, result-schema
+  validation merged as PR 139, scout_diff follow-ups
+  merged as PRs 153 and 189). Issue 136 staging
+  re-verified on a scratch pool copy: sync produced
+  duel-score-2026-11-02-1430, so the staging code path
+  works and the earlier absence stays a live-tree sync
+  gap, not a tool defect. No branch, PR, issue comment,
+  backlog edit, or Slack message: quiet runs stay silent
+  except this record.
+  Full detail in tool-development/1732-run.md.
+
+## 16:40 to about 17:16 - Queue planning pass (record picked up by the 1740 pass)
 
 - Planner pass queue-planning-2026-11-02-1640. Staged 0
   units (already_present 71, skipped_done_current 0,
@@ -2656,6 +2811,19 @@ of 2026-10-28.
   withdrawals. Pool inbox 69, claimed 1, done 612,
   upcoming 53. Full detail in
   queue-planning/1640-run.md.
+
+## 17:40 to about 17:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-02-1740. Staged 0
+  units (already_present 71, skipped_done_current 0,
+  reaped 0, expired 0). Pre-reset sweep check in the
+  17:00 hour: tonight's pair already present (001
+  claimed, 002 inbox), 0 enqueued. Scout diff on the
+  2026-11-02 observation applied with all zero counts,
+  0 withdrawals. Pool inbox 66, claimed 1, done 615,
+  upcoming 52. Also picked up the pending 1640 planner
+  record into this delivery. Full detail in
+  queue-planning/1740-run.md.
 
 ## 17:39 to about 17:45 - PR catch-all pass
 
