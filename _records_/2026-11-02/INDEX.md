@@ -2870,3 +2870,17 @@ of 2026-10-28.
   all other lines already had an eligible unit in inbox.
   Final sweep at 18:30 re-walks. Full detail in
   daily-activities/1752-queue-run.md.
+
+## 17:45 to about 17:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1745,
+  non-batch pass (checker _tools_/records_batch.py
+  reports outside every batch window, next batch
+  19:00): knowledge PR 191 merged clean by squash
+  (organizer 1732, survivors 1640/1718 and training
+  1723 into 2 profiles, merge ce36e6d7d, branch
+  deleted, local main fast-forwarded f31b10bd to
+  ce36e6d7d); records PRs 187 (2026-11-01) and 161
+  (2026-11-02) not merged, both trial-merge clean
+  against the new main and awaiting the 1900 batch.
+  Full detail in pr-integration/1745-run.md.
