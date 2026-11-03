@@ -3453,7 +3453,7 @@ of 2026-10-28.
   batch, awaiting the 23:00 batch). No force push, no
   direct main push.
 
-## 21:15 to about 21:35 - PR integration pass
+## 21:15 to about 21:20 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-02-2115.
   Non-batch pass for records (checker reports outside
