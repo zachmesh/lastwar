@@ -3621,3 +3621,16 @@ of 2026-10-28.
   No records PR opened, no comment, no escalation.
   No-op pass, silent under the delivery rule.
   Full detail in pr-integration/2200-run.md.
+
+## 22:15 to about 22:18 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-2215.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00).
+  No knowledge or code PR open. Records PR 193
+  (post-1900 batch, head d1b3b1e6) awaits the 23:00
+  batch; records PR 187 conflict on action-log.jsonl
+  carried, already commented at 1900, not force-merged.
+  No records PR opened, no comment, no escalation.
+  No-op pass, silent under the delivery rule.
+  Full detail in pr-integration/2215-run.md.
