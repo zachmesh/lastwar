@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-02T05:05:00Z
-version: 1.2.0
+modified: 2026-11-03T05:30:00Z
+version: 1.3.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -79,6 +79,13 @@ one mention in a summary.
   (1403 unit, no research completing in window).
   No owner decision appeared for this item in the
   records, chat or Slack DM since it opened.
+  2026-11-02 retro: age 2 days. No new
+  skipped-needs-owner on Nov 2 - arms units closed
+  partial, not skipped (1803 unit, Unit Progression,
+  score 9,300, tier-3 gap 65,700, training queues
+  named as the only legal path). The gap persists in
+  partial form. No owner decision appeared for this
+  item in the records, chat or Slack DM.
 - status: open
 
 ### OD-20261031-02 - Halloween Day 07 decoration choice
@@ -104,6 +111,14 @@ one mention in a summary.
   decoration choice. If the event window passes
   undecided, this item is marked decided by expiry
   per the maintenance rules, never silently deleted.
+  2026-11-02 retro: age 2 days. Unaddressed a second
+  day - no Nov 2 events record mentions the Day 07
+  tile or a decoration choice, and the Nov 2 events
+  hub reads contain no Halloween surface. The window
+  is treated as possibly passed, but the item is NOT
+  marked decided by expiry: no record states the
+  Halloween event ended. It crosses the 48-hour
+  naming line at the next retro if still undecided.
 - status: open
 
 
@@ -135,6 +150,11 @@ one mention in a summary.
 - age tracking: opened 2026-10-31 (first needed
   by the Oct 31 retro), age 1 day at the
   2026-11-01 retro; recompute on each retro run.
+  2026-11-02 retro: age 2 days. Nov 2 survivors units
+  (5 partial) keep the close discipline (gate line
+  explicitly not verified, never presumed); Quick
+  Dispatch still never ran. The decision (keep,
+  change, or pause the method) is unchanged.
 - status: open
 
 ### OD-20261101-01 - whether to add a Season 2 event calendar
@@ -144,6 +164,7 @@ one mention in a summary.
 - context: the legacy idea combined a Season 2 topic page with an event calendar. `_knowledge_/season-two-winter/` already supplies the topic page; a live event calendar is not established by that article. The task intake workflow migration table preserves the proposal's source.
 - decision needed: whether an account-relevant event calendar is wanted, and its scope and freshness expectations if approved. This migration does not approve it or claim the present season was rechecked.
 - age tracking: opened 2026-11-01, age 0 days at filing; recompute on each retro run.
+  2026-11-02 retro: age 1 day, unaddressed.
 - status: open
 
 ### OD-20261101-02 - whether to extend end-of-event results recording
@@ -153,6 +174,35 @@ one mention in a summary.
 - context: this was an unconfirmed idea in the retired task list. Existing `_activities_/alliance-duel/` already requires the personal daily total and dated results; that does not approve a new reporting scope for every event. The migration table retains the distinction.
 - decision needed: whether the broader reporting is wanted, which events it covers, and the minimum result fields. Leave it unapproved until the owner decides; continue existing recording duties.
 - age tracking: opened 2026-11-01, age 0 days at filing; recompute on each retro run.
+  2026-11-02 retro: age 1 day, unaddressed.
+- status: open
+
+### OD-20261101-03 - whether to do the Season Photo alliance-facing actions
+
+- opened: 2026-11-01
+- item: whether to edit and save the alliance group
+  photo once and post once in the alliance message
+  board, and if so which photo edit and what message.
+- context: discovered 2026-11-01 about 22:19 local by
+  ticker unit passes-2026-11-01-1857 (record
+  _records_/2026-11-01/shop-claims/2220-queue-run.md),
+  filed as GitHub issue #154 after the 2026-11-01
+  retro. Season hub (Season II) Season Photo page,
+  Rewards panel: two tasks, both Not Achieved, Claim
+  All greyed - edit and save your group photo 1 time
+  (100 red diamonds); post 1 message in the alliance
+  message board (100 red diamonds). Achieving either
+  is an alliance-facing action, which under the
+  recording rules needs owner approval before it
+  happens, so the ticker did not do them. Until
+  decided, the 200 red diamonds stay unclaimed and
+  the Season Photo red badge is explained, not a
+  missed shop claim.
+- decision needed: do these two actions, and if so
+  which photo edit and what message - or leave the
+  rewards unclaimed.
+- age tracking: opened 2026-11-01, age 1 day at the
+  2026-11-02 retro; recompute on each retro run.
 - status: open
 
 ## Decided

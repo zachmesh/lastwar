@@ -1,13 +1,15 @@
 ---
 title: Rolling 7 day metrics
 created: 2026-11-01T05:30:00Z
-modified: 2026-11-02T05:05:00Z
-version: 1.1.0
+modified: 2026-11-03T05:30:00Z
+version: 1.2.0
 description: Standing cross-day series beside the daily retro files, regenerated from unit results
 status: complete
 grounded_in:
   - source: unit results in _queue_ done
   - source: daily retro 2026-10-31 in this folder
+  - source: daily retro 2026-11-01 in this folder
+  - source: daily retro 2026-11-02 in this folder
 ---
 
 # Rolling 7 day metrics
@@ -84,3 +86,52 @@ remain the immutable source.
   merged 16:41 PST Nov 1); post-policy merges 1
   (PR #117, in-window), violations 0.
 - Detail - daily retro 2026-11-01 in this folder.
+
+## Entry 2026-11-02
+
+- Derived from - 633 done units, finished local
+  2026-10-28 to 2026-11-02, read 2026-11-03T04:41Z
+  from the records/2026-11-02 branch tip b391b6f35.
+  Pool state sha256
+  7c4da9b62aae35b13d7879668d1c3c8d83659890c414f37c3980e9dcf2f221b6.
+  Unit data covers 6 days, not 7, because the queue
+  cut over on 2026-10-28.
+- Totals - done 290, partial 285, skipped-needs-owner
+  10, expired 26, failed 22. Executor time 3,747.1
+  minutes, median unit 302 seconds, p90 767 seconds.
+  Attempts mean 0.9605, maximum 2.
+- Nov 2 alone - 97 finished: done 39, partial 49,
+  expired 6, failed 3, skipped 0. Median 243 seconds,
+  p90 689 seconds. Unverified 74 of 97 (76 percent);
+  all-five stats keys 37 of 97 (38 percent).
+- Worst types by done percent - duel-score 0 of 3
+  (all expired), zero-sweep 0 of 4, crystal-shop 0 of
+  1, glittering-market 0 of 1, survivors 1 of 34,
+  training 1 of 33, arms-race 5 of 35, trucks 5 of 36.
+- Best types - star-ceremony 30 of 32, train 30 of
+  33, treasures 28 of 32, gifts 27 of 33, help 27 of
+  33.
+- Measurement state - numeric target over achieved
+  pairs 77, summed attainment 0.2194, mean ratio
+  0.538. Points_total 878,233 is corrupted by one
+  copied duel total (791,250, issue #197) and is not
+  comparable to the previous window. Blocker_category
+  named in the tool vocabulary on 77 units; 312 carry
+  the key with a value outside the vocabulary, 244
+  lack the key. Tool parse errors 0; strict
+  yaml.safe_load flags 37 of 97 Nov 2 frontmatters.
+- Threshold breaches - unexplained red dots 5 at the
+  last pass; expired and unexecuted units (6 reaped
+  plus 16 past-expiry in inbox at snapshot); quota
+  attainment under 0.8 (trucks 0.3, donations
+  0.1509). Unverified rate falling week over week
+  (rolling 96 to 92 percent, day 79 to 76 percent),
+  but the 20 percent line for after the first full
+  post-specification week, ending Nov 7, is a
+  trajectory warning. No breach on oldest open
+  improvement, closed-improvement recurrence (0 over
+  0), daily job artifacts, or final-sweep ledger
+  coverage (final sweep pending at snapshot).
+- Batch compliance - 6 records merges audited, all
+  inside batch windows, violations 0.
+- Detail - daily retro 2026-11-02 in this folder.

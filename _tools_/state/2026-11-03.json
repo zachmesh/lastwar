@@ -1,0 +1,52 @@
+{
+ "radar": {
+  "status": "done",
+  "at": "2026-11-03T03:14:01",
+  "note": "Stack day verified 0/40 stored, 12 restoring, nothing claimed"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-03T04:13:06",
+  "note": "Mail swept: Alliance 4 and Event 3 gift mails claimed"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-03T04:18:36",
+  "note": "Alliance gifts swept: Regular 31 and Premium 3 claimed"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-03T04:38:48",
+  "note": "Help bubble tapped, toast confirmed, bubble gone"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-11-03T04:45:58",
+  "note": "Already aboard carriage 2 of preparing train, countdown about 01:21"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-03T04:47:18",
+  "note": "No trophy icon, no ceremony waiting"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-03T05:10:07",
+  "note": "Shop sweep done: all owned claims already taken, no new claim"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-03T05:13:46",
+  "note": "Events sweep done: 4 tabs, nothing claimable"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-03T05:41:57",
+  "note": "2 digs executed, M3 2 to 0, chest progress 4/15"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-03T05:41:57",
+  "note": "Checked only, freebie and login chest already claimed, points 1589450"
+ }
+}
