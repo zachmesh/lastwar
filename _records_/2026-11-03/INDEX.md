@@ -365,3 +365,20 @@ of 2026-10-28.
   owner-decision Issues 132 and 154 both over 24 hours
   with statements current, named in the run record. Full
   detail in pr-catchall/0139-run.md.
+
+## 01:45 to about 01:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0145.
+  Non-batch pass per the checker (next batch 03:00):
+  knowledge PR 211 (organizer 0132, 0035 train
+  column map and 0127 donations entry correction
+  into 2 profiles) MERGED by squash, merge commit
+  30fcd06d0b, branch deleted; local main synced back
+  to 30fcd06d0b. Records PR 207 (2026-11-03, head
+  64173275) and PR 204 (2026-11-02, head 65cb6605)
+  await the 0300 batch. Records PR 187 (2026-11-01)
+  still conflicts on
+  _logs_/repo-actions/action-log.jsonl; the conflict
+  comment from the 1900 pass stands, not
+  force-merged. No owner-gated PR.
+  Full detail in pr-integration/0145-run.md.
