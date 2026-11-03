@@ -2503,3 +2503,17 @@ of 2026-10-28.
 ## 12:43 - Treasures
 
 - Treasures unit treasures-2026-11-03-1057 done, checked only: M1x12 M2x12 M3x0 M4x7 M5x2 M6x5 M7x11, M3 binds, Dig greyed, chest 4/15. Entry via freshly measured pickup centre 52,630 after closing the leftover Gold Mine panel. Detail in hidden-treasures/1243-queue-run.md.
+## 13:05 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1305.
+  Non-batch pass per the checker
+  (_tools_/records_batch.py on main: due no, outside
+  every batch window, next batch 15:00); no-op pass,
+  no knowledge or code PR open. Records PR 229
+  (records/2026-11-02, head 962d3fee, CLEAN) awaits
+  the 15:00 batch. Records PR 207 (records/2026-11-03,
+  head 93b71eac, CONFLICTING) and PR 187
+  (records/2026-11-01, head 2be5df83, CONFLICTING)
+  conflicts carried, standing comments stand, no
+  duplicate comment posted. No owner-gated PR.
+  Full detail in pr-integration/1305-run.md.
