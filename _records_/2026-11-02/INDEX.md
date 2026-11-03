@@ -3296,3 +3296,16 @@ of 2026-10-28.
   No Drill Ground figure read live. Tracker untouched.
   Further data point for open issue #150, not a new issue.
   Full detail in troop-training/1949-queue-run.md.
+
+## 20:01 to about 20:10 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-2001.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00). No
+  knowledge or code PR open. Records PR 193
+  (post-1900 batch, head 3d1138f42, mergeable CLEAN)
+  awaits the 23:00 batch; records PR 187 conflict on
+  action-log.jsonl carried, already commented at 1900,
+  not force-merged. No records PR opened, no comment
+  posted, no merge. Full detail in
+  pr-integration/2001-run.md.
