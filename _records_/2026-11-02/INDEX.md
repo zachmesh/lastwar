@@ -2645,3 +2645,30 @@ of 2026-10-28.
   no PR needed. No merges, no comments, no
   escalations, no Slack sync owed. Full detail in
   pr-integration/1651-run.md.
+
+## 16:32 to about 17:05 - Knowledge organization pass (3 profiles updated, PR 190)
+
+- Organizer run knowledge-organization-2026-11-02-1632,
+  worked from the 1532 watermark: own PR 188 stands
+  MERGED with no comments and no reviews, no new
+  knowledge Issue since the 1332 run, and the
+  ticker-1452 arms-race 1508 and harvest 1520 records
+  landed late on the branch during this run (delayed
+  by a timed-out push) and were folded here instead
+  of left as a no-op.
+- Profiles updated, PR 190 (OPEN, Owner
+  lastwar-knowledge-organizer): arms-race 1.22.0 to
+  1.23.0 (Hero Advancement phase read live, Adam
+  124 to 125 just-enough plan, 20.0M EXP shortfall
+  blocker, EXP-box top-up first for the next unit),
+  resource-collection 1.10.0 to 1.11.0 (1520 partial,
+  no bubble collected, glow at norm 486,216 is the
+  Operation Falcon campaign entry not a bubble,
+  back-out return unverified, full sweep outstanding)
+  and radar-tasks 1.14.0 to 1.15.0 (Drill Ground
+  panel-close handover from the 1532 run completed
+  by the 1508 unit, X at 869,139 first tap;
+  entry-blocker count unchanged). The Lv.25/Lv.27
+  Drill Ground label discrepancy stays open for the
+  next unit to verify. No gap filed. Full detail in
+  knowledge-organization/1632-run.md.
