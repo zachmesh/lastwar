@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T07:37:53Z
+modified: 2026-11-03T10:36:50Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -24,6 +24,7 @@ grounded_in:
   - source: radar tasks execution record 2026-11-02 0636 queue run
   - source: ticker-1004 radar-tasks execution record 2026-11-02 1026 queue run (partial, radar screen never entered)
   - source: radar tasks execution record 2026-11-02 2242 queue run
+  - source: ticker-0204 radar-tasks execution record 2026-11-03 0212 queue run (partial by design, single-offer trap in at-entry form)
 ---
 
 
@@ -1093,6 +1094,76 @@ are still open, per the protocol.
   any other radar work. Tracker untouched, so the
   next tick re-produces this regular.
 
+## What the 2026-11-03 0212 unit added - stack day, single-offer trap in at-entry form
+
+- Ticker-0204, unit radar-2026-11-03-0203, about 02:12
+  local, partial by design under the stack posture, not
+  a miss. Duel day 2, theme Base Expansion: radar_posture
+  stack, day ends 2026-11-03T19:00:00 local. Complete
+  tasks but do NOT claim - claims score on odd days
+  only. Nothing was claimed in this unit, and no map
+  pin was tapped.
+- Entry: the game was left open on the Alliance Techs
+  panel (a donations-screen leftover, not this unit's
+  work). The panel X was closed untouched - no donation
+  was tapped - and the Alliance screen back arrow
+  returned to the base view. Entry correction, measured:
+  an early coordinate estimate for the Alliance back
+  arrow was wrong in x (104 instead of the grounded
+  162); the grounded point worked at once. Ground the
+  back arrow fresh; do not trust the 104 estimate.
+- Dish icon grounded fresh at norm 53,711 (visual
+  grounding on the current screenshot; close to the
+  2242 unit's 53,710 and to the profile measured point
+  62,727) opened the radar on the first tap. The
+  re-ground-fresh rule stands: the fresh point, not
+  the carried point, is what opened the screen.
+- Entry verification, read live: Radar Lv.13, radar
+  points 139 (unchanged from the 2242 unit close,
+  confirming nothing was claimed since). Stored tasks
+  1 of 40. Stamina 79 top right. Bottom bar at entry:
+  "11 task rewards can be claimed" with a Claim All
+  button. No Quick Execute offer was shown at entry.
+- Single-offer trap, second form measured: the trap
+  measured on 2026-10-31 and in post-execution form at
+  2242 (Quick Execute at entry, 6 tasks run, then the
+  bar flipped to Claim All only) appears here in
+  at-entry form - the bar presented Claim All only
+  from the start, so no Quick Execute offer existed to
+  run, and the stored 1 of 40 sits behind the Claim All
+  bar, which the stack posture forbids clearing. No
+  task was executed and nothing was claimed. The next
+  unit's opening read must check whether a Quick
+  Execute offer returns, and whether the pending count
+  is still 11, before any other radar work.
+- Restore line, semantics still unverified: "12 Radar
+  Task(s) will be restored in 01:22:23" at entry. This
+  differs in form from the 2242 close ("Fully restore
+  at 11-3 21:31:43 local time"); neither form is assumed
+  to mean the other, and the restore-line semantics
+  stay unverified, not assumed.
+- No free stamina claim was needed and none was taken;
+  no stamina items were opened; no Buy was tapped.
+  Returned to the base view at close via the radar
+  home button (grounded at norm 907,952).
+- Closing reads: stored 1 of 40, radar points 139,
+  stamina 79, pending rewards on the Claim All bar 11,
+  unclaimed. Restore line unchanged in form at close.
+- Pin scan (stack posture - inventory only, nothing
+  tapped): three standing pins on the closing radar
+  map, all with red dots, all left untapped per the
+  stack handling rule - the same three as the 2242
+  inventory: green skull pin upper left near an ally
+  base, purple skull pin mid left, green skull pin mid
+  right. No orange arrow, orange axe or portrait pins
+  were visible in this map framing. The three pins are
+  the release-day unit's checklist, not a surprise.
+- Result stats: stored_count 1, radar_points 139,
+  stamina_before 79, stamina_after 79, tasks_executed
+  0, tasks_claimed 0, pending_rewards 11, pins_found 3,
+  device_takeovers 0, blocker single-offer Claim All
+  standing at entry.
+
 ## Changelog
 
 - 1.16.0, 2026-11-02 - 1913 new-trade-day stack-day unit folded: dish 62,727 first-tap entry resolves the 1439 entry blocker, entry-failure count resets to 0; Lv.13, points 139, stored 0 of 40, stamina 56, 12 tasks restoring about 21:32; no Quick Execute / Claim All bar with 0 stored and 0 pending (consistent, not the 2026-10-31 lockout); pin scan empty, nothing left unattempted; one takeover, dialog did not return, not contested.
@@ -1163,3 +1234,5 @@ are still open, per the protocol.
   rewritten.)
 
 - 1.17.0, 2026-11-02 - 2242 stack-day unit folded: dish fresh at 53,710 first-tap entry; Lv.13, points 139, stored 1 of 40, stamina 97 to 38; Quick Execute 6 tasks for 60 stamina, then Claim All for 11 rewards with no second Quick Execute offer (single-offer trap, post-execution form); 11 rewards left unclaimed per stack posture; restore line predicting 12 tasks by about 21:32 against only 1 stored at 22:34, so restore semantics stay unverified; three red-dotted pins inventoried, none tapped; stored-versus-completable gap recorded as an open measurement question.
+
+- 1.18.0, 2026-11-03 - 0212 stack-day unit folded: dish fresh at 53,711 first-tap entry; Lv.13, points 139 unchanged, stored 1 of 40, stamina 79; single-offer trap in at-entry form (Claim All only at entry, no Quick Execute offer, contrast 2242 post-execution form); 11 rewards left unclaimed per stack posture; restore line in a second form ("12 Radar Task(s) will be restored in 01:22:23"), semantics still unverified; three red-dotted pins inventoried, same as 2242; Alliance back-arrow x corrected 104 to grounded 162; radar home button 907,952.

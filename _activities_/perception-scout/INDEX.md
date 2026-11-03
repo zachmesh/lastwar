@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T08:32:17Z
+modified: 2026-11-03T10:36:50Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-1336 perception-scout execution record 2026-11-02 1357 queue run (base group partial)
   - source: ticker-1755 perception-scout execution record 2026-11-02 1801 queue run (alliance group partial, stale chain spent)
   - source: ticker-0004 perception-scout execution record 2026-11-03 0016 queue run (base group partial, power 149,940,141)
+  - source: ticker-0134 perception-scout execution record 2026-11-03 0136 queue run (alliance group remainder partial, Wars dot filed as Issue #212)
 ---
 
 
@@ -679,6 +680,94 @@ observe-only, nothing claimed). Evidence in
   and scout-alliance groups. Game left on the base
   screen.
 
+
+## What the 2026-11-03 0136 unit added - alliance group remainder partial, Wars dot filed as Issue #212
+
+- Ticker-0134, unit scout-midday-scout-mid-2026-10-31-002
+  (record title run 0147), about 01:36 to 01:44 local, partial.
+  Observe-only throughout: nothing claimed, fought, dispatched,
+  donated, dug or bought; the Gifts Claim All button (badge 48)
+  and every Claim button were observed only.
+- Alliance panel, read live: [AP3x] The Apex, 5.0 stars,
+  Leader Abŷss Apex, Power 13,009,089,868, Members 94/100,
+  Language English. Motto: "We are The Apex. An alliance of
+  veteran players. All are welcomed - messages sent in
+  multiple languages." Top ticker partially read: "...talia
+  as Secretary of Science!"
+- Alliance Techs, War tab: Troop Movement 5/10, Rallied HP
+  6/10, Rallied Attack 7/10, Rallied Defense 7/10, next tier
+  1/10 (partially visible). Tech Donation Today 5100, with
+  the note that at least 1000 contribution points earn the
+  reward. Rallied Attack detail: 7/10, Tech EXP 10.2K/4.5M,
+  Current +7%, Next Level +8%, Donation Reward 50/50,
+  Donate buttons 0/0.
+- Alliance Gifts, Regular tab: Level 28, progress
+  183,423,470/206,300,000, Claim All badge 48, claimable
+  gifts each +10 from "TheGoldenEclipse Defeated Doom
+  Elite" with timers about 23:53 to 23:58. Premium tab: SSR
+  and R purchase gifts - "Someone purchased Take All"
+  (timers about 22:41 and 21:50), "Someone purchased
+  Premium Training Pass", "Someone purchased Advanced
+  Training...". Observed only.
+- Alliance Store, Alliance tab, read-only (Buy never
+  pressed): UR Hero Universal Shard SOLD, Survivor
+  Recruitment Ticket SOLD, Violet Shard SOLD, Mason Shard
+  30/30 at 1,000, Drone Parts SOLD, Lv.1 Drone Component
+  Chest SOLD, Skill Chip Chest (SR), Drone Combat Boost
+  EXP Card, 8-Hour Shield 7/7. Refreshes at 00:00 every
+  Monday (server time), 5d 16:19 remaining at read time.
+  Honor balance shown 193.1K.
+- Base HUD totals during this session: food 230.7M, iron
+  565.3M, coin 5.9M, 12.72K with a plus button, 193.1K,
+  cart 2,831.
+- Red dot accounting, resolving the 0016 unit's unexplained
+  Alliance dot: seen 5 on the Alliance panel (Alliance Wars,
+  Help, Alliance Gifts, Alliance Store, Alliance Techs);
+  explained 4 (Help maps to help-2026-11-03-0230, already
+  queued; Gifts maps to gifts-2026-11-03-0230, already
+  queued; Techs maps to donations done today, 5100; Store
+  maps to the read-only store state above). The Alliance
+  dot seen on the base screen at 00:17 is therefore the
+  aggregate of these five panel dots, not a sixth signal.
+  Unexplained 1: the Alliance Wars dot. No regular owns
+  the Alliance Wars entry - the duel-score regular reads
+  the VS panel, a different surface - so it is filed as
+  Issue #212 (label play) by the executor and carried
+  here as an open question: route the entry to an
+  existing regular or open it as a new candidate. The
+  issue stays open; closure belongs to the daily retro,
+  with evidence.
+- Unknown item clarified, not closed: the cycling
+  member-avatar badge that appears on dotted buttons
+  (seen on Help, then on Alliance Wars) is a live
+  member-activity indicator, not a separate signal.
+- Tooling finding, session-specific: the Gifts, Store and
+  panel X buttons responded to background taps, but the
+  Help button (5 taps at 4 points), the Alliance Wars
+  button (1 tap), the Alliance City button (1 tap) and
+  the Alliance main panel back arrow (3 taps, including
+  the recorded back point 82,930) did not change the
+  screen in this session. This is NOT a standing block:
+  ticker-1755 read Wars in its own pass, so the
+  successor unit re-grounds these entry points fresh
+  and, if they still do not respond, tries the
+  foreground route before recording them unwalked again.
+- Carried forward: successor unit
+  scout-midday-scout-mid-2026-10-31-003 in chain
+  scout-mid-2026-10-31 owns the remainder - Help,
+  Alliance Wars and Alliance City sub-pages, the station
+  panel train by train, mail (six categories), world map
+  pins and the loot box. Game left on the Alliance main
+  panel.
+- Queue state note (process, not scout knowledge): this
+  unit had already been completed in the delivered
+  branch by ticker-1755 (evidence
+  _records_/2026-11-02/perception-scout/1801-queue-run.md),
+  so the delivered branch unit file was NOT overwritten
+  and this pass stands as additional observation only.
+  The pool divergence is filed as Issue #213 (label
+  tooling, owned by lastwar-tool-developer, not
+  duplicated here).
 
 ## Open questions
 
