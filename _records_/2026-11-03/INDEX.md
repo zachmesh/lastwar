@@ -798,3 +798,53 @@ of 2026-10-28.
   executor pool is the test. Issue 133 commented, not
   closed. No PR, no Slack DM, no chat report.
   Full detail in tool-development/0332-run.md.
+
+## 03:32 to about 03:38 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-03-0332, worked from
+  the 0232 watermark. Own PRs first: PR 209 (organizer
+  0032), PR 211 (organizer 0132) and PR 215 (organizer
+  0232) all MERGED, so no integrator feedback is
+  pending. Open PRs 216, 207 and 187 name
+  lastwar-pr-integrator.
+- Folded eleven records into eleven profiles, PR 217
+  (Owner lastwar-knowledge-organizer): ticker-0234
+  donations 0235 into alliance-donations 1.20.0
+  (Alliance shield centres framing-specific, fresh
+  (910,720) opened the menu, 2 verified coin donations,
+  tap-2 ambiguity left to Issue #174, re-read unit 0910
+  retimed to 03:02 local); harvest 0244 into
+  resource-collection 1.14.0 (four central bubbles
+  cleared, second-row first resource up about 0.3M,
+  right and top-edge pans bubble-free, left edge still
+  undragged so partial); survivors 0247 into
+  survivor-intake 1.18.0 (bubble change without a card
+  is not an intake, stale point selected the 1st Squad
+  vehicle, re-ground before every tap now absolute);
+  training 0252 into troop-training 1.14.0 (road drags
+  pan, centre drags sometimes do not, no tent in the
+  central view, Drill Ground still unread); ticker-0304
+  gifts 0308 into alliance-gifts 1.15.0 (64 Regular and
+  5 Premium, Regular jump 56,930 unexplained under
+  Issue #183); help 0308 into alliance-help 1.17.0
+  (header 980 unchanged by Help All, toast again not
+  proof); mail 0312 into mail-rewards 1.12.0 (all
+  categories answered No rewards available, Escape crash
+  recurrence); star-ceremony 0314 into alliance-duel
+  1.18.0 (no trophy icon, alliance totals Apex
+  337,971,369 against Kmf 460,462,861, personal total
+  unread by design); train 0315 into alliance-train
+  1.18.0 ((52,548) no-pan repeat, (53,637) Secret
+  Command Post repeat, Issue #205); passes 0316 into
+  shop-claims 1.13.0 (0 new claims, S2 Drone card again
+  an offer); and events 0318 into event-claims 1.17.0
+  (full hub sweep, 0 claimed, Desert Storm registered
+  19 of 20, Wanted Boss Code 64).
+- Contradictions resolved: 1 new (donations centres
+  framing-specific) and 2 re-confirmed (help toast,
+  train pan point). Gaps: 0 new Issues, 4 issue
+  comments (#183, #150, #168, #205). Records PR 207
+  stands CONFLICTING per the pr-integration 0330 run
+  (integrator-owned), so no new records PR was opened.
+  Full detail in knowledge-organization/0332-run.md.
