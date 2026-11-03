@@ -5,9 +5,9 @@ activity: daily-activities
 segment: 3
 priority: 1
 created_at: 2026-11-01T05:23:42Z
-expires_at: 2026-11-03T03:00:00Z
-planned_for:
-not_before: 2026-11-03T02:30:00Z
+expires_at: 2026-11-03T05:55:15Z
+planned_for: 2026-11-03T01:55:15Z
+not_before:
 window: pre-reset zero sweep, final pass
 est_minutes: 15
 chain_id: pre-reset-sweep-2026-11-02
