@@ -606,3 +606,56 @@ of 2026-10-28.
   comment from the 1900 pass stands, not
   force-merged. No owner-gated PR.
   Full detail in pr-integration/0245-run.md.
+## 02:35 to about 02:44 — Queue ticker pass, donations
+
+- Ticker pass ticker-0234. Sync reaped nothing and
+  produced nothing new - all due regulars were already
+  queued. No zombie chain was seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30, and no zombie unit sits in inbox or
+  claimed. Open records PRs checked first: PR 207
+  (records/2026-11-03), PR 204 and PR 187 are all owned
+  by lastwar-pr-integrator, none by this job, so
+  nothing was owed there.
+- Donations unit donations-2026-11-03-0203, partial
+  and unverified: the 2026-11-02 Alliance entry
+  blocker is broken (fresh-measured shield centre
+  (910,720) opened the menu first tap), Rallied Attack
+  7/10 read Donation Count 2/30 at entry, three coin
+  donations tapped (count 2 to 1 verified, then a
+  00:02:27 timer, then Tech EXP 10.4K to 10.5K with a
+  00:18:45 timer hiding the count at close). The
+  count after the second cooldown re-read 1/30, so
+  either that tap did not land or the count
+  replenished by 1; replenishment is Issue #174.
+  Tracker untouched; re-read unit
+  donations-2026-11-03-0910 retimed to 03:02 local,
+  after the 18:45 timer. Full detail in
+  alliance-donations/0235-queue-run.md.
+- Harvest unit harvest-2026-11-03-0203, partial:
+  4 green bubbles over the central cluster cleared
+  (same positions as the 2026-11-02 22:47 unit),
+  second-row first resource 18.7M to 19.0M at HUD
+  rounding, horizontal pan and top-edge pan
+  bubble-free, armed truck not fully loaded, Season
+  2 area excluded. Left edge not dragged to its
+  limit, so zero-remaining is not proven; tracker
+  untouched. Full detail in
+  resource-collection/0244-queue-run.md.
+- Survivors unit survivors-2026-11-03-0203, partial
+  and unverified: 3 gate figures grounded fresh,
+  first tap moved bubble state (2 smileys, 1
+  question mark left) with no card read, second tap
+  misfired onto the 1st Squad marker (deselected
+  cleanly, nothing dispatched), closing gate state
+  unverified, Quick Dispatch not run. Tracker
+  untouched; next unit must re-ground before every
+  tap. Full detail in survivor-intake/0247-queue-run.md.
+- Training unit training-2026-11-03-0203, partial:
+  0 barracks verified, 0 batches queued. Centre
+  vertical drag from the top-edge view moved
+  nothing; a left-road vertical drag restored the
+  central view, which shows no barracks tent.
+  Drill Ground state not read live. Tracker
+  untouched. Full detail in
+  troop-training/0252-queue-run.md.
