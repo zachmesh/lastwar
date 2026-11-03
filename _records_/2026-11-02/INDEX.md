@@ -3738,3 +3738,16 @@ of 2026-10-28.
   Scratch validation 6 checks passed, including an
   unpatched-main control that still sums 791250.
   Full detail in tool-development/2232-run.md.
+
+- Queue-planning pass queue-planning-2026-11-02-2140.
+  Plan staged 0 units (already_present 61,
+  skipped_done_current 8, reaped 0, expired 0).
+  Pre-reset sweep check skipped outside the 17:00 hour;
+  tonight's pair already done. Scout diff on the Nov 2
+  observation applied all zero (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained 0); 0 withdrawals.
+  Pool by_state: inbox 56, claimed 0, done 647, upcoming
+  49. Delivery partial: push deferred (VPS tree diverged
+  on another job's unpushed commit), commit left on the
+  local records branch. Full detail in
+  queue-planning/2140-run.md.
