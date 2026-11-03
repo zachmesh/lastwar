@@ -3309,3 +3309,16 @@ of 2026-10-28.
   not force-merged. No records PR opened, no comment
   posted, no merge. Full detail in
   pr-integration/2001-run.md.
+
+## 20:15 to about 20:23 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-2015.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00). No
+  knowledge or code PR open. Records PR 193
+  (post-1900 batch, head b01fdbf98, mergeable CLEAN)
+  awaits the 23:00 batch; records PR 187 conflict on
+  action-log.jsonl carried, already commented at 1900,
+  not force-merged. No records PR opened, no comment
+  posted, no merge. Full detail in
+  pr-integration/2015-run.md.
