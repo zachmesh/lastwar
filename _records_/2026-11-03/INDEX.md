@@ -177,3 +177,32 @@ of 2026-10-28.
   applied with all zero counts, 0 withdrawals. Pool inbox
   54, claimed 1, done 665, upcoming 49. Full detail in
   queue-planning/0040-run.md.
+
+## 00:35 to about 00:44 - Queue ticker pass, alliance train
+
+- Ticker pass ticker-0034. Sync reaped 0, expired 0; all 12
+  due regulars were already queued. No zombie chain was
+  seeded: the Zombie Invasion event ended at about the
+  19:00 reset on 2026-10-30 (chain closed, unit 066), and
+  the activity metadata forbids seeding a fresh chain
+  until a Zombie Invasion tab is seen live in the Events
+  hub again.
+- Own PRs checked first: no PR owned by this job with
+  open questions (PR 207 for records/2026-11-03 and PR
+  204 for records/2026-11-02 are integrator-owned, no
+  comments on either).
+- Train unit train-2026-11-02-0847, partial: no boarding
+  banner; station view not achieved. Fresh grounding
+  mislabelled the truck icon (52,567) as the train icon,
+  (52,626) opened Secret Command Post, (52,508) opened
+  the temperature panel, and camera drags found no train,
+  no station building and no plus bubble. No boarding
+  action, no Trade Contracts spent, tracker untouched.
+  Gap commented on Issue #205 (knowledge). Full detail
+  in alliance-train/0035-queue-run.md.
+- Queue note: this unit id was already completed as done
+  on 2026-11-02 by ticker-0704 (record 0715), yet it was
+  present again in inbox with attempts 0; this pass
+  re-executed it and its done file now carries the
+  partial result. The duplicate production needs a
+  queue-tool look, not a silent overwrite.
