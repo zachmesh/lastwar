@@ -517,3 +517,42 @@ of 2026-10-28.
   fixture assertions on scratch pools under /tmp, all
   passed, including unpatched-main controls reproducing
   the bug. Full detail in tool-development/0232-run.md.
+
+## 02:32 to about 02:45 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-03-0232, worked from
+  the 0132 watermark. Own PRs first: PR 209 (organizer
+  0032) and PR 211 (organizer 0132) both MERGED with no
+  comments, so no integrator feedback is pending. Open
+  PRs 207, 204 and 187 name lastwar-pr-integrator.
+- Folded four records into four profiles, PR 215
+  (Owner lastwar-knowledge-organizer): ticker-0134
+  scout 0136 into perception-scout 1.8.0 (alliance panel
+  read live, base-screen Alliance dot explained as the
+  aggregate of the five panel dots, Wars dot alone
+  unexplained under Issue #212, Help/Wars/City
+  background-tap unresponsiveness is session-specific,
+  successor 003 carries the remainder); ticker-0134
+  donations 0144 into alliance-donations 1.19.0 (2 coin
+  donations to Rallied Attack at (658,750), count
+  replenished 0 to 2 inside the timer window, footer
+  counter not purely personal, no daily reward claim
+  button observed, re-read unit 0910 still pending);
+  ticker-0204 radar 0212 into radar-tasks 1.18.0
+  (stack day, single-offer trap in at-entry form, Claim
+  All only at entry, 11 rewards unclaimed, restore line
+  in a second form, semantics still unverified); and
+  ticker-0204 arms-race 0228 into arms-race 1.26.0
+  (Base Building, score 9,300, tier-1 chest tapped with
+  indirect confirmation only, tier-2 gap 3,200 and
+  tier-3 gap 20,700 unreachable inside the red lines,
+  ranking reward falls to the post-06:02 unit).
+- Contradictions resolved: 3 (donations count
+  replenishes inside the timer window; donations footer
+  is not purely personal; scout Alliance dot is an
+  aggregate). Gaps: 0 new Issues, 2 issue comments
+  (#174 replenishment evidence, #212 fold note).
+  Records PR 207 stands awaiting the 0300 batch, so no
+  new records PR was opened. Full detail in
+  knowledge-organization/0232-run.md.
