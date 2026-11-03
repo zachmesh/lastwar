@@ -2519,3 +2519,6 @@ of 2026-10-28.
   at the 1500 pass, no duplicate comment) both await
   the 1900 batch. No knowledge or code PR was open.
   Full detail in pr-integration/1559-run.md.
+## 15:32 to about 15:55 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-02-1532, worked from the 1432 watermark. Own PR 186 stands MERGED with no comments and no reviews; no new knowledge Issue since 1332 (#183 already folded in the 1232 run); #118-#122, #124, #131, #160 and #174 remain open, none resolved by these records. New records folded: the ticker-1412 donations 1427 and radar 1439 units, plus the queue-planning 1440, tool-development 1452, pr-integration 1445/1500/1515 and pr-catchall 1439 runs (meta only). Profile changes ride PR 188 (Owner lastwar-knowledge-organizer): alliance-donations 1.13.0 to 1.14.0, radar-tasks 1.13.0 to 1.14.0. Flagged unreconciled: the Drill Ground level label reads Lv.25 in the 1427/1439 units against Lv.27 in the 1020/1026 units. Full detail in knowledge-organization/1532-run.md.
