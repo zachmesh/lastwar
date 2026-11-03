@@ -2605,3 +2605,20 @@ of 2026-10-28.
   building and research half awaiting a decision), and issue
   154 is about eighteen hours old with its statement current.
   Full detail in pr-catchall/1639-run.md.
+## 14:52 to about 15:57 - Queue ticker pass (recovered after timeout)
+
+- Ticker pass ticker-1452, recovered after an execution timeout:
+  the pass ran two units to partial, wrote both records, but did
+  not release the device token and did not push; this recovery
+  commit carries its records and unit files, and the token was
+  released separately.
+- Arms-race unit arms-race-2026-11-02-1403, partial: first unit
+  of the Hero Advancement phase, phase and score read live
+  (score 0), chosen level-up blocked by a 20M hero EXP
+  shortfall; scoring falls to the next unit. Tracker untouched.
+  Full detail in arms-race/1508-queue-run.md.
+- Harvest unit harvest-2026-11-02-1403, partial: sweep barely
+  started inside the pass budget, no bubble collected, one
+  mis-tap opened the campaign map and was closed without
+  action. Tracker untouched. Full detail in
+  resource-collection/1520-queue-run.md.
