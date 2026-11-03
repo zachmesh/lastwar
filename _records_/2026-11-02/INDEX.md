@@ -3452,3 +3452,19 @@ of 2026-10-28.
 - Records commit rides open records PR #193 (post-1900
   batch, awaiting the 23:00 batch). No force push, no
   direct main push.
+
+## 21:15 to about 21:35 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-2115.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00).
+  Knowledge PR 200 (alliance-duel 1.16.0) reviewed
+  with owner-assignment feedback only: Owner line
+  must read lastwar-knowledge-organizer per policy
+  2.1.0, otherwise clean; left open, not merged.
+  Records PR 193 (post-1900 batch, head b3e00e9e)
+  awaits the 23:00 batch; records PR 187 conflict
+  on action-log.jsonl carried, already commented at
+  1900, not force-merged. No records PR opened, no
+  merge, no escalation. Full detail in
+  pr-integration/2115-run.md.
