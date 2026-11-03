@@ -2833,3 +2833,22 @@ of 2026-10-28.
   stands. No knowledge or code PR open, no
   owner-gated PR.
   Full detail in pr-integration/1515-run.md.
+
+## 15:32 to about 15:45 - Tool-developer pass, issue 235 fixed
+
+- Tool-developer pass tool-development-2026-11-03-1532.
+  Own PRs checked first: only open PRs 236, 207 and 187,
+  all integrator-owned, no tooling PR feedback owed.
+  Open tooling issue 235 (duel.py radar scoring vs the
+  live game dialog, filed since the 1432 run) taken and
+  fixed: duel.py used naive datetime.now(), so on a UTC
+  host it rolled to the next duel day at 11:00 PT, eight
+  hours early; the schedule itself was not stale. Fix in
+  PR 237 (commit 6aa30a7380, Refs #235): the duel day is
+  now computed in America/Los_Angeles on wall-clock
+  calendar days, and the #235 instant correctly reads
+  Day 2 stack, matching the live dialog. Validation on a
+  scratch pool under /tmp only: py_compile plus 14
+  fixture assertions passed. Issue 235 commented, not
+  closed; closure belongs to the daily retro.
+  Full detail in tool-development/1532-run.md.
