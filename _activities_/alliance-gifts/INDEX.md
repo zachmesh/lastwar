@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T20:41:21Z
+modified: 2026-11-03T02:40:01Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-0334 alliance-gifts execution record 2026-11-02 0338 queue run (done, 54 Regular and 12 Premium)
   - source: ticker-0804 alliance-gifts execution record 2026-11-02 0817 queue run (done, 1 Regular and 1 Premium)
   - source: alliance-gifts execution record 2026-11-02 1215 queue run (ticker-1204 unit, done, counter anomaly filed as issue 183)
+  - source: perception-scout execution record 2026-11-02 1801 queue run (ticker-1755 unit, partial, Gift Level 28 progress read, Issue #183 evidence)
 ---
 
 
@@ -447,6 +448,36 @@ one file per execution.
   same points the 0817 unit measured.
 
 
+## What the 2026-11-02 1801 scout read added
+
+- Observe-only scout read, not a gifts claim: unit
+  scout-midday-scout-mid-2026-10-31-002 by ticker-1755,
+  session about 17:58 to 18:01, status partial. Evidence in
+  `_records_/2026-11-02/perception-scout/1801-queue-run.md`.
+- Gift Level 28, progress 181,429,280 of 206,300,000 read
+  live about 18:00 (measured value). Regular tab selected,
+  Premium tab carrying a red dot, Claim All button badge
+  201, visible Regular rows +10 each (PrincessEsra10xoxo
+  Defeated Doom Elite 23:51:32; Niermeat 23:40:52; Niermeat
+  23:4x partially obscured; Niermeat 23:28:11; further rows
+  below the fold, not read). Nothing claimed - the gifts
+  regular owns claims.
+- Counter movement with no intervening own claim, new
+  evidence for Issue #183: no gifts unit ran between the
+  1215 close (progress 180,779,650) and this 18:00 read
+  (181,429,280), yet the counter rose 649,630. Movement
+  with zero intervening own claims excludes an
+  own-claims-only attribution of the counter and is
+  consistent with the alliance-shared-counter hypothesis;
+  the below-fold premium-tier alternative cannot explain
+  movement with no own claims in between. The hypothesis
+  stays unverified - the counter's exact sharing rule is
+  still unmeasured - but the 1215 anomaly is no longer a
+  single-unit curiosity: the counter moves without this
+  account claiming. Evidence commented on Issue #183 by
+  this run.
+
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -487,3 +518,5 @@ one file per execution.
 - 1.10.0 (2026-11-02): dialog-confirmed 1 Regular (+10) and 1 Premium (+50), Gift Level 28 progress 180,508,620 to 180,508,680 of 206,300,000, Alliance Wars row at y 509 versus the Gifts row at y 595 with the 303,595 corrected tap, Premium Claim All at 763,952 against the 2122 unit's 718,967, and the no-change back-arrow exit, folded from the 0817 gifts unit.
 
 - 1.11.0 (2026-11-02): dialog-confirmed 187 Regular (182 plus 5 mid-unit arrivals) and 10 Premium, Gift Level 28 progress 180,734,910 to 180,779,650 of 206,300,000, the exact 182 x 10 Regular window, the visible premium rows R 50, SR 100, R 50 and SSR 200, the counter anomaly filed as Issue #183 with the alliance-shared-counter hypothesis, the below-fold scroll and drag retired per rule R2, and the completion sweep that caught 5 mid-unit arrivals, folded from the 1215 gifts unit.
+
+- 1.12.0 (2026-11-02): Gift Level 28 progress 181,429,280 of 206,300,000 read live about 18:00 by the observe-only 1801 scout unit (Claim All badge 201, Premium tab dotted, nothing claimed), and the 649,630 counter rise since the 1215 close with no intervening gifts unit, folded as new evidence for Issue #183.

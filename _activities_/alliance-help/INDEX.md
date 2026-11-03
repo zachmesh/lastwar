@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T20:41:21Z
+modified: 2026-11-03T02:40:01Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: ticker-0034 alliance-help execution record 2026-11-02 0039 queue run
   - source: ticker-0834 alliance-help execution record 2026-11-02 0836 queue run (done, Help All pressed, header 400 of 1000 unchanged)
   - source: alliance-help execution record 2026-11-02 1220 queue run (ticker-1204 unit, done, toast fired with 0 counted helps)
+  - source: alliance-help execution record 2026-11-02 1741 queue run (ticker-1729 unit, partial, Healing Help request unhelped)
 ---
 
 
@@ -379,6 +380,45 @@ Measured in the 0135 help unit (ticker-0134, window mode
   left open.
 
 
+## What the 2026-11-02 1741 unit added
+
+- Unit help-2026-11-02-1430 by ticker-1729, session about
+  17:33 to 17:41, status partial. Evidence in
+  `_records_/2026-11-02/alliance-help/1741-queue-run.md`.
+- Entry grounding correction: the first three taps on the
+  Help button missed because they were measured too high
+  (norm y 431 to 433); the visual grounding of the Alliance
+  screenshot put the Help button centre at norm 686,531,
+  and a tap there opened the Help page. That centre is
+  consistent with the measured Help box centre 687,500
+  recorded the same pass by the donations unit (inside the
+  Help box 508-866, 465-536), so the two readings settle
+  the panel grounding rather than conflicting.
+- Help page header read live: Today's points gained from
+  Alliance Help 440 of 1,000. Visible rows at entry: four
+  own (Bears Lair) requests, all already time-reduced -
+  Morale research, Precision Targeting II research, Lv.30
+  Aircraft Center building, Lv.28 Drill Ground building.
+  A player cannot help their own requests.
+- New failure mode, first of its kind: one ally request
+  below the own rows, papillon707, Need Healing Help, with
+  no time-reduced label and no individual Help button on
+  its row. Help All pressed twice at norm 498,731 produced
+  no observed change (no toast, header still 440 of 1,000),
+  and a tap on the papillon707 row itself at norm 498,631
+  (the rule R2 pivot) also changed nothing. Result: 0 helps
+  verified given; the Healing Help request remains unhelped
+  and its mechanism is unknown. This differs from the three
+  earlier help units of 2026-11-02 (0345, 0836, 1220), which
+  closed done with no ally request waiting.
+- Remaining work, carried: determine how a Healing Help
+  request is helped - whether Help All covers it at all, or
+  whether it needs a different surface such as the hospital -
+  then help it. Do not record Help All as clearing Healing
+  Help requests until a unit verifies it.
+
+
 ## Open questions
 
 - The daily help cap and what helpers and helped players each receive.
+- How a Healing Help request is helped (Help All, or a different surface such as the hospital) - first seen 2026-11-02 1741, papillon707 request unhelped after two Help All presses and a row tap.
