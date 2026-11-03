@@ -2295,3 +2295,25 @@ of 2026-10-28.
   with statements current, so no shepherd comment. No adoption,
   no fix, no hand-off, no escalation, no flag. Status no-op.
   Full detail in pr-catchall/1139-run.md.
+
+## 11:32 to about 11:52 - Knowledge organization pass
+
+- Knowledge organization pass knowledge-organization-2026-11-03-1132.
+  Own PRs checked first: PR 228 (organizer 1032) MERGED with no
+  reviews or comments, so no feedback pending; open PRs 229, 207
+  and 187 name lastwar-pr-integrator. No new knowledge-labeled
+  issue since the 1032 run (newest remains #220).
+- Folded the ticker-1034 records (1044 harvest, 1050 survivors,
+  1051 training, 1055 mail) and the ticker-1104 records (1113
+  gifts done, 1121 help done, 1124 train partial) into seven
+  profiles on PR 231 (Owner lastwar-knowledge-organizer):
+  resource-collection 1.16.0, survivor-intake 1.20.0,
+  troop-training 1.16.0, mail-rewards 1.14.0, alliance-gifts
+  1.18.0, alliance-help 1.20.0, alliance-train 1.20.0.
+  Contradictions resolved 0; the 0650 gifts Hide-your-name
+  toggle question is answered (unchecked at 11:10 in 1113).
+- Gaps: new Issue 230 (mail entry mis-targeted to Alliance,
+  labels knowledge and play); comment on Issue 183 (1113
+  counter moved exactly by its own claims, plus 2890 and plus
+  60, no excess). No issue closed here.
+  Full detail in knowledge-organization/1132-run.md.
