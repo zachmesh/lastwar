@@ -2207,3 +2207,17 @@ of 2026-10-28.
   observation dry and applied agree, all zero;
   0 withdrawals. Pool: inbox 63, claimed 1, done 718,
   upcoming 51. Full detail in queue-planning/1040-run.md.
+
+## 10:45 to about 10:58 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1045,
+  non-batch pass (checker _tools_/records_batch.py
+  on main: due no, next batch point 1100).
+  Knowledge PR 228 merged (organizer 1032 fold,
+  merge commit 1a66d227e, local main synced).
+  Records PR 224 (records/2026-11-02) awaiting the
+  1100 batch. Records PR 207 (records/2026-11-03)
+  and PR 187 (records/2026-11-01) conflict carried,
+  comments from the 0300 and 1900 batch passes
+  stand, no duplicate comment posted.
+  Full detail in pr-integration/1045-run.md.
