@@ -2620,3 +2620,33 @@ of 2026-10-28.
   re-verified by merge-tree: action-log and state
   file, same as the standing note).
   Full detail in pr-integration/1345-run.md.
+
+## 13:32 to about 13:54 - Knowledge-organization pass, 4 profile folds
+
+- Knowledge-organization pass
+  knowledge-organization-2026-11-03-1332. Own PRs
+  checked first (PR 232 MERGED, no reviews or comments,
+  no feedback pending; open PRs 229, 207 and 187 are
+  integrator-owned); open knowledge issues checked with
+  the own PRs (no new knowledge-labeled issue since the
+  1232 run, newest remains #230). Folded the ticker-1234
+  treasures 1243 record, the ticker-1304 scout 1309/1314
+  and donations 1322 records, the late ticker-0834
+  treasures 0838 record, and the ticker-1334 scout 1345
+  record that landed mid-run into four profiles on PR
+  233: alliance-donations 1.25.0 (Strength Ranking tab
+  gives points only, re-read method retired; 7 coin
+  donations 8 to 1; regeneration 1 to 8; R3 1300
+  checkpoint answered, shortfall stands),
+  hidden-treasures 1.10.0 (four consecutive reads with
+  zero fragment movement since the 2135 post-dig
+  stocks, M3 x0 still binding), perception-scout 1.14.0
+  (Wars dot clearing answered; LOOT box located on the
+  world map at [311,237], three Lv.60 Doom Elite rows
+  unclaimed; station panel is a preparation-only
+  surface), alliance-train 1.21.0 (station
+  preparation-only note, LOOT cross-ref). Contradictions
+  resolved 1 (Strength Ranking re-read retired). Issues
+  174 and 212 commented with fold notes. No issue
+  closed here. Full detail in
+  knowledge-organization/1332-run.md.
