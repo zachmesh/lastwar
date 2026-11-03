@@ -3762,3 +3762,56 @@ of 2026-10-28.
   unexplained 0); 0 withdrawals. Pool by_state: inbox 64,
   claimed 1, done 649, upcoming 49. Full detail in
   queue-planning/2240-run.md.
+
+## 22:34 to about 22:55 - Queue ticker pass, radar, harvest, survivors and training partials
+
+- Radar unit radar-2026-11-02-2203, partial by design under
+  the stack posture (ticker-2234): duel day 2, Base Expansion.
+  Entry via the Alliance Tech leftover (closed untouched, no
+  donation) and the dish grounded fresh at norm 53,710.
+  Lv.13, points 139, stored 1 of 40, stamina 97, restore
+  "Fully restore at 11-3 21:31:43 local time" - against the
+  1913 close predicting 12 tasks by about 21:32, so the
+  restore-line semantics stay unverified. Quick Execute ran
+  the sole offer, 6 tasks for 60 stamina (97 to 37); the bar
+  then showed Claim All for 11 rewards with no Quick Execute
+  offer, and the 11 were deliberately left unclaimed on the
+  stack day. Stored still 1 of 40 behind that Claim All
+  single-offer lockout, points unchanged at 139, stamina 38
+  at close. Pin inventory, all red-dotted and untapped: green
+  skull upper left, purple skull mid left, green skull mid
+  right. Tracker untouched. Full detail in
+  radar-tasks/2242-queue-run.md.
+
+- Harvest unit harvest-2026-11-02-2203, partial (ticker-2234):
+  4 green bubbles grounded on the starting screenshot and
+  tapped (396,416; 292,468; 499,468; 397,516); central cluster
+  cleared, right-panned view and restored view bubble-free;
+  second-row first resource 18.3M to 18.7M at HUD rounding,
+  food 230.0M, second top-bar 564.7M and coins 5.9M unchanged
+  at rounding. Armed truck showed no loot bubble. Top and
+  left extremes not dragged to their limits, so the full-map
+  zero-remaining acceptance is unproven. Tracker untouched.
+  Full detail in resource-collection/2247-queue-run.md.
+
+- Survivors unit survivors-2026-11-02-2203, partial (ticker-2234):
+  changed method per rule R2 from the 1948 re-read on issue
+  #168: bubble centre itself on the undragged base view.
+  Grounding returned figure (448,580) and bubble (447,550);
+  the bubble tap selected Titanium Alloy Factory No.3 Lv.30,
+  not a survivor card - a building area mislabelled as a
+  survivor. No second tap at that point; deselected with
+  an empty-ground tap. 0 processed, gate line unverified,
+  no Quick Dispatch, tracker untouched. Evidence commented
+  on issue #168, not filed anew. Full detail in
+  survivor-intake/2252-queue-run.md.
+
+- Training unit training-2026-11-02-2203, partial (ticker-2234):
+  base confirmed live, Alliance Gifts toast left untouched
+  (gifts regular). Upward drag (500,700 to 500,400) moved the
+  view this time, unlike 1949, but brought no barracks tent
+  into view, so no tent was tapped and no TRAIN UNITS panel
+  opened. 0 barracks verified, 0 batches queued, no Drill
+  Ground figure read live, tracker untouched. Further data
+  point for open issue #150, not filed anew. Full detail in
+  troop-training/2255-queue-run.md.
