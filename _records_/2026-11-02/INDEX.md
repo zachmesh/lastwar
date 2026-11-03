@@ -3046,6 +3046,33 @@ of 2026-10-28.
   with its decision statement current; issue 154 is about 20
   hours old. Full detail in pr-catchall/1839-run.md.
 
+## 18:35 to 18:43 - Queue ticker pass, trucks entry blocked
+
+- Trucks unit trucks-2026-11-02-1457, partial (ticker-1834):
+  the trade screen could not be entered. Two different-device
+  dialogs were confirmed in turn (measured centre norm 501,568;
+  an earlier coordinate rescale error sent taps to 780,597, which
+  did nothing) and the base stayed clean after the second
+  takeover. Entry methods tried: the 0935/1325 grounding 52,553
+  opened the season warming panel, the World map showed alliance
+  bases only with no trade entry, and the white pickup at 53,639
+  opened the Secret Command Post as the metadata predicts. No
+  blue train-front trade icon is present in the current
+  left-column set. No counter was read live; the plunder
+  shortfall of 1 is carried unverified from the 1325 record
+  (Trade Count 5 of 5, Plunder Count 3 of 4 at that close) and
+  is a last-hour shortfall with the trade day ending 19:00.
+  Tracker untouched. Full detail in
+  truck-plunder/1845-queue-run.md.
+
+- Events unit events-2026-11-02-1457, failed (contested, ticker-1834):
+  the "active on a different device" dialog returned a third time
+  in this pass, after two Confirm takeovers during the trucks unit,
+  so per the 2026-10-27 owner rule the pass stopped as contested
+  (owner likely playing on his phone) and the dialog was not
+  confirmed a third time. No Events screen was reached, nothing
+  claimed. Tracker untouched. Full detail in
+  event-claims/1850-queue-run.md.
 ## 18:40 to about 18:47 - Queue-planning pass
 
 - Queue-planning pass queue-planning-2026-11-02-1840.
