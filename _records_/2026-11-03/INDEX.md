@@ -1311,3 +1311,30 @@ of 2026-10-28.
   to 05:50 and a third scout unit could not finish its
   device work inside it; the remaining queue stays for the
   next tick. Tracker untouched for both partial units.
+
+## 05:40 to about 05:47 — Queue planner pass, done
+
+- Planner pass queue-planning-2026-11-03-0540. Own PRs
+  checked first: PR 222 (tool-developer-owned), PR 221
+  (knowledge-organizer-owned), PR 216, PR 207 and PR 187
+  (all integrator-owned) — none owned by this job, no
+  reply or fix owed. Owner-decision Issues checked: #154
+  still without an owner answer (0 comments), #132's
+  duel-score-only answer stands; no building, research
+  or alliance-facing unit staged or invented, no new
+  Issue filed (Alliance Wars dot already Issue #212).
+- Plan for the next 12 hours staged 0 units,
+  already_present 60, skipped_done_current 9,
+  reaped 0, expired 0. Pre-reset sweep pair skipped
+  (not the 1700 hour); tonight's pair for the 1900
+  reset is the 1700 run's job. Scout diff on the Nov 3
+  observation (passes about 0017 to 0539 local) dry and
+  applied agree, all zero; 0 withdrawals. Pool by_state
+  at 0541 local: inbox 52, claimed 1, done 693,
+  upcoming 49. Diff-parse gap carried for the retro:
+  the narrative observation has no observed_items block,
+  so the tool reads 0 items against the narrative's red
+  dots (base 3, alliance panel 1, events 0). Live-tree
+  sync gap carried: tools/regulars.json still lacks the
+  duel-score regular, so no duel-score unit was staged.
+  Full detail in queue-planning/0540-run.md.
