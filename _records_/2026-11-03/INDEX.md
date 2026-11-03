@@ -590,3 +590,19 @@ of 2026-10-28.
   plus midday-chain alliance remainder) applied with all zero
   counts, 0 withdrawals. Pool inbox 61, claimed 1, done 671,
   upcoming 49. Full detail in queue-planning/0240-run.md.
+
+## 02:45 to about 02:47 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0245.
+  Non-batch pass per the checker (next batch 03:00):
+  PR 215 (knowledge organizer 0232, 4 profiles) and
+  PR 214 (tools fix for issue #213, drop inbox copies
+  already closed in done) both reviewed clean and
+  merged with squash, main now b72f8d25, local main
+  fast-forwarded to the same commit. Records PR 207
+  (2026-11-03) and PR 204 (2026-11-02) await the 0300
+  batch. Records PR 187 (2026-11-01) still conflicted
+  on _logs_/repo-actions/action-log.jsonl, the conflict
+  comment from the 1900 pass stands, not
+  force-merged. No owner-gated PR.
+  Full detail in pr-integration/0245-run.md.
