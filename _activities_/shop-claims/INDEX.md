@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T16:40:00Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -540,6 +540,49 @@ the free and already paid for parts, never the paid unlocks.
 - 0 new claims in this unit; every owned daily claim was
   already taken. No price button, Renew button, or paid
   bundle was tapped anywhere in the shop.
+
+## What the 2026-11-03 0811 unit added - done, 0 new claims, S2 Drone card again an offer, back arrows re-grounded
+
+- Ticker-0804, unit passes-2026-11-03-0657, about 08:11
+  local, status done. Evidence in
+  `_records_/2026-11-03/shop-claims/0811-queue-run.md`.
+- Shop opened from the base cart icon. Hot Deals showed
+  a store promo only, no free pack on display, and its
+  Go button was not tapped.
+- Weekly Pass page: the Free Supply chest reads Claimed;
+  the Coin Weekly Pass Daily Pickup reads Already claimed
+  today, with a Renew 4 dollars 99 button that was not
+  tapped. The Legendary row Take All 19 dollars 99 was
+  not tapped. Coin Weekly Pass Remaining 09:50:16,
+  consistent with the 2338 read (about 18:21 some 8.5
+  hours earlier) as a running countdown.
+- S2 Drone Components Weekly Pass: its Daily Pickup row
+  shows the Lv.4 chest reward icon and no claim button;
+  the card's only action is Get Now 4 dollars 99, so this
+  pass is an unowned offer, not an owned pass with a
+  pickup due - the purchase was not tapped. This repeats
+  the 2109, 2338 and 0316 finding; the card stays
+  classified as an offer, not an owned pass. Rule for
+  the next unit: a pass card whose only action is a
+  purchase button, with no claim button on its Daily
+  Pickup row, is an offer - do not tap the purchase to
+  "claim" it.
+- Super Monthly Pass page: Daily Pickup reads Claimed,
+  Days Left 18, Rewards Left 18. The Monthly Pass
+  Extension 24 dollars 99 button was not tapped. Days
+  Left 18 follows 19 at the 0316 unit, a normal daily
+  decrement.
+- 0 new claims in this unit; every owned daily claim was
+  already taken. No price button, Renew button, or paid
+  bundle was tapped anywhere in the shop.
+- Navigation lesson: the Events back arrow needed a
+  re-grounded point (159,947) after two taps at 95,920
+  showed no change; the shop back arrow was then
+  grounded fresh at 47,950 and worked on the first tap.
+  Back-arrow points drift between units - ground them
+  fresh each unit instead of reusing a stale point, and
+  treat two no-change taps as the signal to re-ground,
+  not to tap a third time.
 
 ## Open questions
 
