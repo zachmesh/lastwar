@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T07:37:53Z
+modified: 2026-11-03T09:38:32Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: ticker-1234 alliance-train execution record 2026-11-02 1246 queue run (done as checked only, station empty)
   - source: ticker-2034 alliance-train execution record 2026-11-02 2045 queue run (done, station check corrected, already aboard carriage 2)
   - source: alliance train execution record 2026-11-02 2320 queue run
+  - source: ticker-0034 alliance-train execution record 2026-11-03 0035 queue run (partial, left-column mapping measured, no station view)
 ---
 
 # Alliance train
@@ -51,6 +52,11 @@ literal train, so both readings of the request are in the system.
   as set- and state-dependent: always verify the screen that
   actually opened before tapping further, the same rule as
   truck-plunder.
+- Measured column map, 2026-11-03 0035: on that unit's base
+  screenshot (52,508) opened the temperature panel, (52,567)
+  opened the truck screen and (52,626) opened Secret Command
+  Post. None of them is the train entry; do not reuse any of
+  them as one. Detail in the 0035 section below.
 - Tap a carriage plus bubble at the station, or the train itself, to
   open the STATION PLATFORM screen - the train from top to bottom,
   its conductor, its Train Rating, the departure countdown, and four
@@ -628,6 +634,69 @@ Measured in the 0110 train unit (ticker-0104, window mode
   #205 stays open - closure belongs to the daily
   retro, with evidence.
 
+## What the 2026-11-03 0035 unit added - column map measured, no station view
+
+- Unit train-2026-11-02-0847 by ticker-0034, session about
+  00:35 to 00:44, status partial. No station view was achieved,
+  so no preparing train was confirmed and none was ruled out
+  beyond the absent banner. No boarding action was taken, no
+  Trade Contracts spent, no train summoned, no conductor role
+  taken. Tracker untouched, so the next tick re-produces this
+  regular. Evidence in
+  `_records_/2026-11-03/alliance-train/0035-queue-run.md`.
+- Base screen inspected first: no "Boarding closes in" banner
+  under the resource bar.
+- Empirical left-column mapping, measured live in this unit,
+  the second grounding-label instance after the 2320 unit:
+  visual grounding labelled (52,567) as the train icon, but
+  tapping it opened the truck screen ("Your Truck" tab).
+  Nothing on that screen was tapped: no dispatch, no plunder,
+  no tab change. Returned to the base with the back point
+  (82,930). Two further probes: (52,626) opened Secret
+  Command Post (Secret Mobile Squad), exited with the blue
+  back arrow measured fresh at (160,945) - an earlier tap
+  at (55,930) missed that arrow and left the screen
+  unchanged - and (52,508) opened the temperature panel
+  (base temperature 6.5 degrees C, Permafrost Area,
+  Alliance Furnace, High-Heat Furnace lines), closed with
+  its X at (850,137). No furnace was turned on or off and
+  no temperature setting was changed. None of the three
+  points is the train entry, and none may be reused as one.
+- Hypothesis, unproven, carried for the next unit: the
+  train icon may only appear while a train is preparing.
+  That would explain both the 2320 no-pan at (52,548)
+  and this unit's neighbour hits, since no banner showed
+  and no train was confirmed in either unit. The 2045
+  pan at (52,548) worked while a train was preparing
+  (conductor KpyKat, countdown near 01:22:57).
+- Drag route, qualified: dragging the camera from
+  (600,600) to (300,300) reached empty snow southwest of
+  the base, with no train, no station building and no
+  plus bubble. Reversing the drag and a further diagonal
+  drag returned the view to the base centre, and a final
+  drag from (300,300) to (600,600) produced no view
+  change. The 2045 drag route therefore needs the station
+  building in view first; a drag from the base centre is
+  not a station check, and a base-centre-only view is not
+  a completed station check.
+- Warning restated: the 2026-11-02 0044 correction stands
+  here - a single pan view once missed a preparing train
+  that a later camera restore revealed - so this unit's
+  no-train read is banner-only, not station-verified.
+- Pass-through rule restated: nothing read on the truck
+  or Secret Command Post screens in this unit is that
+  activity's data; the trucks and secrets units must
+  re-read their own counters live in their own units.
+- Gap, already filed: the executor commented this mapping
+  on GitHub Issue #205, class knowledge. The re-grounding
+  itself is still owed by a future train unit, and Issue
+  #205 stays open - closure belongs to the daily retro,
+  with evidence. Next train unit method, from the record:
+  probe the remaining left-column icons one at a time
+  from a fresh screenshot, or wait for a "Boarding closes
+  in" banner, and do not reuse (52,508), (52,567) or
+  (52,626) as the train entry.
+
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like
@@ -643,5 +712,5 @@ Measured in the 0110 train unit (ticker-0104, window mode
   account card, distinct from base power - possibly the summed
   rider power the rating derives from, unverified.
 - Whether a member can board more than one train per day.
-- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit). (2026-11-02 1325 update: the trucks unit grounded the trade entry at (52,553), 5 pixels from this point, and the 1246 station pan at (52,548) worked again - the near-coincidence now has three instances, but the tap outcomes still differ by context, so the identity stays unresolved.) (2026-11-02 2320 update: the (52,548) tap produced no pan at all, so entry instability now outranks the identity question - re-ground the icon fresh each unit and use the station-drag route; see Issue #205.)
-- Station-panel verification owed: the 0715 check never opened the station panel, so a station-verified no-train read is still owed on a checked-only unit; banner plus BASE view plus column scan is a strengthened banner-only check, not a station verification.
+- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit). (2026-11-02 1325 update: the trucks unit grounded the trade entry at (52,553), 5 pixels from this point, and the 1246 station pan at (52,548) worked again - the near-coincidence now has three instances, but the tap outcomes still differ by context, so the identity stays unresolved.) (2026-11-02 2320 update: the (52,548) tap produced no pan at all, so entry instability now outranks the identity question - re-ground the icon fresh each unit and use the station-drag route; see Issue #205.) (2026-11-03 0035 update: the neighbours are now measured - (52,508) temperature, (52,567) trucks, (52,626) Secret Command Post - so the train entry is none of the three probed neighbours; the 0035 unit's hypothesis is that the train icon only appears while a train is preparing, which would explain both the 2320 no-pan and these neighbour hits. The re-grounding owed by Issue #205 is still owed.)
+- Station-panel verification owed: the 0715 check never opened the station panel, so a station-verified no-train read is still owed on a checked-only unit; banner plus BASE view plus column scan is a strengthened banner-only check, not a station verification. (2026-11-03 0035 note: a drag from the base centre, (600,600) to (300,300), reached empty snow southwest of the base with no station building in view, so a base-centre drag is not a station check either - the 2045 drag route needs the station building in view first.)
