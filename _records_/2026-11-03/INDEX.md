@@ -94,3 +94,39 @@ of 2026-10-28.
   comment from the 1900 pass stands, not
   force-merged. No owner-gated PR.
   Full detail in pr-integration/0030-run.md.
+
+## 00:32 to about 00:40 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-03-0032.
+  Own PRs checked first: no own PR is open (PR 206
+  merged); open PRs 207, 204 and 187 are
+  integrator-owned. No new knowledge-labeled issue
+  since the 2332 run; Issue 208 (daily chest claim
+  path, play class) was filed by the ticker-0004
+  executor and is folded here, not duplicated.
+- Profiles updated, 7, on branch
+  work/knowledge-organizer-2026-11-03-0032, opened as
+  PR 209 (Owner lastwar-knowledge-organizer, verified
+  OPEN): event-claims 1.15.0 to 1.16.0 (Tech Research
+  phase rotated in, Wanted Boss tab dot is a live-event
+  marker, not claim proof), shop-claims 1.11.0 to 1.12.0
+  (nothing new, tab taps land off-centre, verify each
+  page switch by screenshot), truck-plunder 1.20.0 to
+  1.21.0 (station tap [491,195] failed twice at 2347, so
+  entry is framing-dependent and must be re-grounded;
+  squad-slot popup unidentified, do not tap its
+  buttons), daily-missions 1.3.0 to 1.4.0 (activity 160,
+  40 chest tap shows only a contents preview, no chest
+  asserted claimed, Issue 208), hidden-treasures 1.7.0
+  to 1.8.0 (M3 x0 binding, no dig, stocks unchanged
+  since the 2135 dig), perception-scout 1.6.0 to 1.7.0
+  (base group partial, power 149,940,141, 3 badges
+  unexplained within the base group, successor chain
+  scout-2026-11-02), secret-missions 1.10.0 to 1.11.0
+  (assists 5 of 5, UR Assist question marked stale).
+- Contradictions resolved, 3: trucks entry qualified,
+  secrets UR Assist corrected, events tab dot
+  discriminated. Gaps filed: 0 new Issues (trucks
+  entry carried as a profile open question pending the
+  next unit's retry). Full detail in
+  knowledge-organization/0032-run.md.
