@@ -3569,3 +3569,25 @@ of 2026-10-28.
   items read as already claimed for this reset day; nothing
   claimed, nothing spent. Full detail in
   vip-rewards/2138-queue-run.md.
+## 21:32 to about 21:43 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-02-2143.
+  Took new tooling issue 199 (retro-filed threshold breach,
+  16 expired-but-unexecuted units at the snapshot) and
+  diagnosed it to a conclusion, no tool code change owed:
+  main queue.py reap on an isolated scratch copy of the
+  exact branch inbox expired exactly the 16 named units;
+  the live pool already holds 4 executed partial, 10
+  reaped expired with reap stamps, and 2 absent from every
+  local state (duel-score-1430, zero-sweep-1730, flagged
+  unexplained). Root cause is the records-branch mirror,
+  not the reaper: branch commits add done files without
+  the matching inbox deletions (ticker-2104 commit
+  40f40a4af adds 4 done, deletes 0 inbox), so stale inbox
+  copies accumulate and the retro snapshot overcounts.
+  Comment posted on issue 199 with the evidence and a
+  handoff to the integrator and ticker passes to record
+  _queue_ moves with deletions; issue not closed,
+  closure belongs to the daily retro. No branch, PR,
+  backlog edit, Slack DM, or chat report. Full detail in
+  tool-development/2143-run.md.
