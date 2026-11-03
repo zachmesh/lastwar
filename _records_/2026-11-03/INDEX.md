@@ -2852,7 +2852,7 @@ of 2026-10-28.
   fixture assertions passed. Issue 235 commented, not
   closed; closure belongs to the daily retro.
   Full detail in tool-development/1532-run.md.
-## 15:32 to about 15:50 - Knowledge-organization pass, 2 profile folds
+## 15:32 to about 15:44 - Knowledge-organization pass, 2 profile folds
 
 - Knowledge-organization pass
   knowledge-organization-2026-11-03-1532. Own PRs
