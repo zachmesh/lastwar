@@ -3832,3 +3832,21 @@ of 2026-10-28.
   point for open issue #150, not filed anew. Full detail in
   troop-training/2255-queue-run.md.
 
+
+## 23:00 to about 23:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-2300,
+  batch pass (checker _tools_/records_batch.py
+  reports due, window 23:00-24:00
+  America/Los_Angeles): merged records PR #193
+  (2026-11-02, head f69787ac28) by merge commit
+  efd3ee63, branch not deleted; records PR #187
+  (2026-11-01, head 2be5df83) still conflicted on
+  _logs_/repo-actions/action-log.jsonl, the
+  conflict comment from the 1900 pass stands,
+  not force-merged, awaiting branch-side
+  resolution. No knowledge or code PR open, no
+  owner-gated PR. A fresh records PR for
+  2026-11-02 was opened for this run record and the
+  merge-time action-log line. Full detail in
+  pr-integration/2300-run.md.
