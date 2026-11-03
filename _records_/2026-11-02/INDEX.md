@@ -2672,3 +2672,15 @@ of 2026-10-28.
   Drill Ground label discrepancy stays open for the
   next unit to verify. No gap filed. Full detail in
   knowledge-organization/1632-run.md.
+## 16:40 to 16:57 - Queue ticker pass, survivors partial (record written by recovery)
+
+- Survivors unit survivors-2026-11-02-1403, partial: gate corner
+  grounded fresh (norm 70,692 area) but two taps opened no
+  survivor dialog and no recruit card, screen unchanged; 0
+  survivors processed, gate line at close unverified. Pass timed
+  out before writing its record or releasing the device token;
+  recovery released the token and wrote this record from the
+  pass report, claimed unit file and session screenshots. Claim
+  had expired by recovery time, so the unit was reaped back to
+  inbox unclaimed for the next tick. Tracker untouched. Full
+  detail in survivor-intake/1640-queue-run.md.
