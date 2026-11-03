@@ -3763,6 +3763,22 @@ of 2026-10-28.
   claimed 1, done 649, upcoming 49. Full detail in
   queue-planning/2240-run.md.
 
+- PR integration pass pr-integration-2026-11-02-2245.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00).
+  Knowledge and code PRs 203 (tools points-duplicate
+  warning, Refs #197) and 202 (organizer 2232, four
+  profiles) reviewed clean and merged by squash, merge
+  commits 2941d74662 and 8a4d69e82a; local main
+  fast-forwarded to 8a4d69e82a by bundle. Records PR
+  193 (post-1900 batch, head dbe3cd60) awaits the
+  23:00 batch; records PR 187 conflict on
+  action-log.jsonl carried, already commented at 1900,
+  not force-merged. No records PR opened, no comment,
+  no escalation. Merges reported in chat and synced to
+  the Slack DM. Full detail in
+  pr-integration/2245-run.md.
+
 ## 22:34 to about 22:55 - Queue ticker pass, radar, harvest, survivors and training partials
 
 - Radar unit radar-2026-11-02-2203, partial by design under
@@ -3815,3 +3831,4 @@ of 2026-10-28.
   Ground figure read live, tracker untouched. Further data
   point for open issue #150, not filed anew. Full detail in
   troop-training/2255-queue-run.md.
+
