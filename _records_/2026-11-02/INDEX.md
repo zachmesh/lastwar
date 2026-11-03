@@ -3938,3 +3938,19 @@ of 2026-10-28.
   resolution. No knowledge or code PR open, no
   owner-gated PR. Full detail in
   pr-integration/2330-run.md.
+
+
+## 23:32 to about 23:50 - Tool developer pass
+
+- Tool-developer pass tool-development-2026-11-02-2332.
+  Diagnosed open tooling issue 198 (planner claims no
+  duel-score regular while the live pool stages duel-score
+  units): a working-tree sync gap, not a queue.py defect.
+  Main roster carries duel-score, the planner tree runs
+  pre-PR-137 tools/regulars.json without it, scratch sync on
+  main tools stages duel-score-2026-11-02-2230
+  idempotently, and planner runs 2040/2140/2240 already name
+  the gap with its cause. No code change owed, no PR;
+  issue commented, not closed; handoff is a planner/ticker
+  tree sync to current main. Full detail in
+  tool-development/2332-run.md.
