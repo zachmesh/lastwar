@@ -3507,3 +3507,45 @@ of 2026-10-28.
   issue 132 (building and research deferral) over 24 hours
   with its statement current, issue 154 still under 24 hours.
   Full detail in pr-catchall/2139-run.md.
+
+## 21:32 to about 21:43 - Knowledge organization pass (6 profiles updated, PR 201; PR 200 owned)
+
+- Organizer run knowledge-organization-2026-11-02-2132,
+  worked from the 2032 watermark: own-PR feedback first -
+  PR 200 (retro A1, alliance-duel 1.16.0) carried the
+  integrator 2115-pass review asking for the Owner line
+  to be corrected to lastwar-knowledge-organizer;
+  corrected in the PR body and by comment, and this job
+  now owns PR 200 (no diff change, otherwise clean).
+  No new knowledge Issue since the 2032 run (#183, #174,
+  #160, #118-#122, #124, #131 open), none resolved here.
+  The daily retro 2026-11-02 actions A2-A4 were already
+  folded by earlier organiser runs; B-items stay tracked
+  as #147, #136, #198, #199. Not the first run after the
+  19:00 reset (the 1932 run did the fuller ended-trade-day
+  sweep).
+- Profiles updated, PR 201 (OPEN, Owner
+  lastwar-knowledge-organizer): truck-plunder 1.19.0 to
+  1.20.0 (2120 station-tap entry [491,195] supersedes the
+  2026-10-30 settlement-pends hypothesis; counters 4/5
+  and 4/4 live; fifth dispatch waits first return ~22:10
+  local and must be UR; counters provenance gap
+  unexplained); secret-missions 1.9.0 to 1.10.0 (2127
+  claim geometry, one claim collected all four tasks,
+  banner-tap panel dismissal, assists 0/5 and dispatch
+  carried); event-claims 1.14.0 to 1.15.0 (2113 full hub
+  sweep, Wanted Boss rotated to Code 64, Arms Race
+  9,300, Desert Battlefield 2026-11-6 19/20 Enlisted);
+  shop-claims 1.10.0 to 1.11.0 (2109 nothing new, S2 Drone
+  card is an offer, scroll failure unit-specific);
+  alliance-train 1.14.0 to 1.15.0 (2045 station-check
+  correction, platform 86,000, carriage 2 aboard);
+  alliance-help 1.14.0 to 1.15.0 (2038 bubble plus toast
+  equals done, Alliance red dot alone is not remaining
+  help). The 2047 star-ceremony record only confirms the
+  PR 200 duel-read split, so alliance-duel was untouched
+  here. Contradictions resolved: 3 (hypothesis
+  superseded; 2045 sighting qualifies earlier pan-view
+  empties; 2120 counters as new-day state). Gaps filed:
+  0, no issue comments. Full detail in
+  knowledge-organization/2132-run.md.
