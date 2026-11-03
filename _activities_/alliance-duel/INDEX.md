@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T21:44:07Z
-version: 1.15.0
+modified: 2026-11-03T05:30:00Z
+version: 1.16.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -539,6 +539,42 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   in the inbox, so no total read was attempted here and
   none is claimed. Issue #136 already tracks the
   duel-score staging gap; no duplicate issue filed.
+
+## What the 2026-11-02 retro added for duel tracking
+
+- The gap changed phase on Nov 2, from staging to
+  claiming. Ticker sync staged duel-score units for 4
+  cycles (0230, 0630, 1030, 1430, created 13:42Z):
+  all 4 went unexecuted. Three are reaped as expired
+  in `_queue_/done`; 1430 still sat in inbox past its
+  18:30 expiry at the retro snapshot (20:41 PST).
+  Zero duel-score units closed with a numeric
+  target/achieved pair, so issue #136's target metric
+  is still unmet and the issue stays open.
+- The duel read did not migrate in practice. After
+  the 0047 star-ceremony read (1,113,750 at Nov 2
+  00:47 PST), star units followed the handover and
+  stopped reading totals (1241 unit explicitly did
+  not read), while the duel-score units that were
+  supposed to carry the read expired unclaimed. No
+  duel total was read after 00:47 before the 19:00
+  reset, so the Nov 2 close total is unread, not
+  zero. The next duel-score unit to execute is the
+  first real test of the split; until one closes
+  with a pair, star-unit reads remain the only source
+  and must be marked as interim when cited.
+- Planner divergence, filed as issue #198: planner
+  passes 1440 and 1940 on Nov 2 still claim
+  regulars.json carries no duel-score regular and no
+  duel-score unit is in the pool, while the live
+  pool contains both. The planner reads a stale
+  main-tree pool copy; its duel statements are
+  stale-read errors, not evidence about the live pool.
+- Source: daily retro 2026-11-02 in
+  `_records_/retro/`, duel-score done units
+  `_queue_/done/duel-score-2026-11-02-*.md`, and
+  planner records `_records_/2026-11-02/
+  queue-planning/1440-run.md` and `1940-run.md`.
 
 ## Open questions
 
