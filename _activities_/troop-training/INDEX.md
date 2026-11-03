@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T20:41:21Z
+modified: 2026-11-03T01:37:57Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: troop-training execution record 2026-11-02 0322 queue run (ticker-0308 unit, partial, pistol tap opened upgrade panel)
   - source: troop-training execution record 2026-11-02 0811 queue run (ticker-0804 unit, partial, action-row taps switched to the world map)
   - source: troop-training execution record 2026-11-02 1146 queue run (ticker-1134 unit, partial, Lv.24 batch queued, Lv.20 pistol route retired)
+  - source: troop-training execution record 2026-11-02 1723 queue run (ticker-1703 unit, partial, Lv.24 panel not opened from inherited points)
 ---
 
 # Troop training
@@ -531,6 +532,53 @@ Observed in game on this account, first execution 2026-10-25.
   duplicate comment is filed here.
 
 
+## What the 2026-11-02 1723 unit added
+
+- Unit training-2026-11-02-1403 by ticker-1703, session
+  about 17:19 to 17:23, inside the pass budget, status
+  partial. No batch was queued. The tracker is left
+  untouched, so the next tick re-produces the regular.
+  Evidence in
+  `_records_/2026-11-02/troop-training/1723-queue-run.md`.
+- Inherited 1146 points did not reproduce in this camera
+  view: the Lv.24 tent point from the 1146 unit, norm
+  806,581, was tapped and no selection label or action
+  row was visible on the next screenshot; the Lv.24
+  pistol point from the 1146 unit, norm 794,605, was
+  tapped and the control reported only a small visual
+  change in the tent area, with no TRAIN UNITS panel
+  opened and the base screen otherwise unchanged. This
+  is the standing fresh-grounding rule cutting both
+  ways: the 1146 pistol entry was verified only in the
+  1146 camera view, and its coordinates are not a
+  reusable shortcut in any later view. The next unit
+  re-grounds the tent and the whole action row fresh
+  before tapping either point, and does not re-tap the
+  1146 points on a guess.
+- No training state was verified: Lv.24 was queued at
+  11:34 today for T8 x666 with a 1 day 4 hour timer, so
+  it is expected to still be busy, but its panel was
+  not read live in this unit and that is not claimed
+  as a verified state. Lv.27 and Lv.30 were not
+  inspected. No Drill Ground figure was read live in
+  this unit.
+- Drill Ground Full carried forward unverified a tenth
+  consecutive unit without a live read (1146 was the
+  ninth): no barracks was reached, so the 39,460 of
+  39,460 figure remains a 2026-10-31 read, neither
+  confirmed nor cleared here, and the 1146 successful
+  queue remains the counter-evidence against a
+  universal block, not a Drill Ground read.
+- HUD measured 2026-11-02 in this unit: food 387.7M,
+  iron 577.5M, coins 54.0M - matching the 1520 harvest
+  unit's HUD snapshot the same day, a consistent
+  stock picture, not a unit result. Base screen
+  confirmed live at entry; game left safe on the base
+  screen. No diamonds or money spent, no Finish Now,
+  no upgrade shortcut. The recurrence is a further
+  data point for open Issue #150, commented there by
+  the executor, so no duplicate comment is filed here.
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -581,3 +629,5 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.9.0 (2026-11-02): Lv.24 tent selected at 825,578 with the action row measured (paw 623,499, pistol 763,510, up arrow 903,494), both action-row taps switching to the world map so the pistol/paw mapping is suspended, not merely disputed, Drill Ground Full carried unverified an eighth consecutive unit, and the recurrence commented onto Issue #150, folded from the 0811 training unit; the How to enter pistol-to-TRAIN-UNITS claim is corrected to suspended, not silently kept.
 
 - 1.10.0 (2026-11-02): Lv.24 pistol entry re-established with a fresh-grounded row (tent 806,581; pistol 794,605) so the 0811 suspension is lifted in part for Lv.24, the Lv.20 pistol route retired after two fresh-point failures, the Train button grounded at 628,793 against a 70-pixel-low estimate, the Lv.24 T8 batch queued and verified by the live resource drop, and Drill Ground Full carried unverified a ninth consecutive unit with a successful queue as counter-evidence, folded from the 1146 training unit.
+
+- 1.11.0 (2026-11-02): inherited 1146 Lv.24 points (tent 806,581, pistol 794,605) failing to open any panel in this camera view, so the fresh-grounding rule is re-affirmed against reusing a verified entry, Lv.24 busy status carried as expectation only with no live panel read, Lv.27 and Lv.30 not inspected, Drill Ground Full carried unverified a tenth consecutive unit without a live read, and the HUD stock snapshot (food 387.7M, iron 577.5M, coins 54.0M) matching the 1520 harvest read, folded from the 1723 training record.

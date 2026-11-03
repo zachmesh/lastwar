@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-02T19:37:08Z
-version: 1.14.0
+modified: 2026-11-03T01:37:57Z
+version: 1.15.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -15,6 +15,8 @@ grounded_in:
   - source: survivor-intake execution record 2026-11-02 0320 queue run (ticker-0308 unit, partial, gate line unverified, Issue #168)
   - source: survivor-intake execution record 2026-11-02 0747 queue run (ticker-0734 unit, partial, gate line unverified, Polar Guest dialog)
   - source: survivor-intake execution record 2026-11-02 1107 queue run (ticker-1104 unit, partial, gate line unverified, drag-pan retired)
+  - source: survivor-intake execution record 2026-11-02 1640 queue run (ticker-1631 recovery unit, partial, gate point no-change, recovery-written)
+  - source: survivor-intake execution record 2026-11-02 1718 queue run (ticker-1703 unit, partial, 89,722 radar-entry correction)
 ---
 
 
@@ -627,6 +629,92 @@ Measured on 2026-10-25.
   gap is tracked on #168 and no duplicate issue is filed
   here.
 
+## What the 2026-11-02 1640 unit added
+
+- Sixth regular-unit partial since the 1644 done (after the
+  2034, 0016, 0320, 0747 and 1107 units), not a streak
+  resumption: unit survivors-2026-11-02-1403 by ticker-1631,
+  session 16:40 to 16:57, status partial. No survivor was
+  processed: 0 dialogs opened, 0 recruit cards, 0 recruits
+  taken in. Tracker untouched, so the next tick
+  re-produces this regular. Evidence in
+  `_records_/2026-11-02/survivor-intake/1640-queue-run.md`.
+- Recovery provenance, stated plainly: the ticker-1631 pass
+  timed out before writing its record or releasing the
+  device token, so this record was written by the recovery
+  pass from the timed-out pass's own report, its claimed
+  unit file and its session screenshots - not from a fresh
+  game session, and no game was operated during recovery.
+  The claim had expired by recovery time, so the unit was
+  reaped back to inbox unclaimed (attempt 1 of 3) and
+  remains available for the next ticker pass to resume.
+- Gate point, same norm as 1107, different outcome: the
+  gate corner was grounded fresh in this unit in the norm
+  70,692 area, and taps there produced no survivor dialog
+  and no recruit card, with the screen unchanged across
+  two attempts. In the 1107 unit, taps at 70,692 changed
+  the gate corner region. The two readings do not
+  contradict: the same norm point behaves differently
+  across camera views, so 70,692 is a re-read pointer
+  for the gate-corner area, never a fixed gate hit, and
+  the next unit still grounds the figure fresh before
+  any tap. The retired drag-pan method was not reused
+  here.
+- Close discipline held: the gate line at close is
+  explicitly unverified, not claimed clear and not
+  claimed occupied. Quick Dispatch did not run -
+  correctly, since no recruit-card survivor was taken
+  in. No different-device dialog appeared; the game was
+  live on the Mac for the whole unit. No Upgrade, no
+  Finish Now, no speedup, nothing bought, no harvest
+  bubble tapped.
+- Issue #168: the record states its evidence is commented
+  there, but no 1640 comment was found on #168 at the
+  1732 organizer pass, so this run left the 1640 comment
+  itself rather than assuming the record's claim.
+
+## What the 2026-11-02 1718 unit added
+
+- Second attempt at the same unit, not a new distinct
+  partial: unit survivors-2026-11-02-1403 by ticker-1703,
+  session about 17:03 to 17:18, status partial. This unit
+  was already attempted in this cycle by ticker-1631
+  (the 1640 record, partial, 0 processed); it was reaped
+  after its lease expired and re-claimed in this pass.
+  By the 0041 counting rule, the distinct-unit count
+  since the 1644 done stays at six - 1718 is a
+  re-attempt of the 1403 unit, not a seventh distinct
+  partial. No survivor was processed: 0 dialogs opened,
+  0 recruit cards, 0 Quick Dispatch runs. Tracker
+  untouched, so the next tick re-produces this regular.
+  Evidence in
+  `_records_/2026-11-02/survivor-intake/1718-queue-run.md`.
+- Changed methods under queue rule R2, not a repeat of
+  the 70,692 starting-view tap: a drag pan from norm
+  400,700 to norm 400,400 on the road produced no view
+  change - a further confirmation of the drag-pan
+  retirement from the 1107 unit, not a new route. A tap
+  at norm 89,722, estimated from a cropped enlargement
+  as the survivor figure below the question-mark bubble,
+  opened the radar world map instead (13/40 tasks, Quick
+  Execute button); no radar work was done, and HOME at
+  norm 925,945 returned the game safely to the base
+  screen. Correction for the next unit: norm 89,722 is
+  a radar entry point, not the survivor figure. A tap
+  at norm 109,626 on the question-mark bubble itself
+  produced no change and no dialog.
+- Grounding discipline: a mid-unit visual-grounding call
+  made to recount the line timed out after 180 seconds;
+  that tool is not a useful recount route inside a
+  15-minute unit - the same timeout already recorded in
+  the 1107, 2034 and 0041 units.
+- Close discipline held: the gate line at close is
+  explicitly unverified, not claimed clear and not
+  claimed occupied. Issue #168 (gate line not
+  verifiable) is not resolved by this unit, but the
+  executor commented this unit's findings there, so no
+  duplicate comment was left here.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -688,3 +776,5 @@ Measured on 2026-10-25.
 - 1.14.0 (2026-11-02): fifth regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), fresh gate grounding at bubble 72,662 and figure 70,692 with taps changing only the gate corner and opening no dialog, the drag-pan method retired inside the unit per rule R2 (which retires the 0747 drag pointer as a carried instruction), no Quick Dispatch gap since no recruit was taken in, and Issue #168 commented by the executor, folded from the 1107 survivors record.
 
 - 1.13.0 (2026-11-02): fourth regular-unit partial since the 1644 done (gate line explicitly unverified, close discipline held), the panned-down left-fence gate line with the 132,336 Polar Guest dialog tap and no recruit card so no Quick Dispatch gap, the three non-hit taps, and Issue #168 commented with the location lead, folded from the 0747 survivors record.
+
+- 1.15.0 (2026-11-02): sixth regular-unit partial since the 1644 done (1640 unit, recovery-written after the ticker pass timed out, gate-corner taps at the 70,692 area changing nothing unlike the 1107 corner change, so the point is a re-read pointer not a fixed hit, unit reaped to inbox unclaimed attempt 1 of 3), the 1718 re-attempt of the same 1403 unit (not a seventh distinct partial by the 0041 rule, drag-pan re-confirming its 1107 retirement, 89,722 corrected to a radar entry point not a survivor figure, bubble tap at 109,626 with no change, 180-second grounding recount timeout), and the #168 comment gap for 1640 closed by this run, folded from the 1640 and 1718 survivors records.
