@@ -576,3 +576,17 @@ of 2026-10-28.
   212 (play). Owner-decision issues 132 and 154 both
   over 24 hours with statements current, named in the
   run record. Full detail in pr-catchall/0239-run.md.
+
+## 02:40 to about 02:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-03-0240. Staged 11
+  units (already_present 53, skipped_done_current 5,
+  reaped 0, expired 0): harvest, radar, survivors, training,
+  donations and arms-race for 14:03; mail, help, gifts, train
+  and star-ceremony for 14:30. Pre-reset sweep production
+  skipped (not the 17:00 hour); tonight's pair for the 19:00
+  reset of 2026-11-03 is due to be produced by the 17:00 run.
+  Scout diff on the Nov 3 observation (post-reset base pass
+  plus midday-chain alliance remainder) applied with all zero
+  counts, 0 withdrawals. Pool inbox 61, claimed 1, done 671,
+  upcoming 49. Full detail in queue-planning/0240-run.md.
