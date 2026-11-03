@@ -23,8 +23,11 @@ outputs in an output directory:
      plus the observation frontmatter day counters (passes
      completed, items observed, red dots seen, explained and
      unexplained), reported separately from the classified
-     counts. When no structured item was parsed at all, the
-     headline items and unexplained figures fall back to those
+     counts, and the per-pass red-dot accounting sections of
+     a narrative observation, reconciled section total
+     against frontmatter counter. When no structured item
+     was parsed at all, the headline items and unexplained
+     figures fall back to those
      frontmatter counts (basis recorded as frontmatter-fallback,
      classified counts kept alongside), so a narrative-only
      observation never reads as zero unexplained when its own
@@ -315,6 +318,95 @@ def load_day_counters(path):
         return day_counters_from_fields(doc)
     fields, _ = Q.parse_frontmatter(text)
     return day_counters_from_fields(fields)
+
+
+# ---------------------------------------------------------------------
+# Narrative red-dot accounting - the per-pass accounting sections
+# ---------------------------------------------------------------------
+
+ACCOUNTING_KEYS = ("seen", "explained", "unexplained")
+ACCOUNTING_FRONTMATTER = {
+    "seen": "red_dots_seen",
+    "explained": "red_dots_explained",
+    "unexplained": "unexplained_red_dots",
+}
+_ACCOUNTING_LINE = re.compile(
+    r"^-\s*(seen|explained|unexplained)\s+(\d+)\b",
+    re.IGNORECASE)
+
+
+def parse_narrative_accounting(text):
+    """Per-pass red-dot accounting sections of a narrative
+    observation, in file order. A section starts at a heading
+    naming red dot accounting and ends at the next heading;
+    its Seen, Explained and Unexplained lines carry that
+    pass's own counts. A count a section does not state
+    reads as None, never as zero, and a carried-forward line
+    (for example "Carried unexplained from ...") is not a
+    count line, so carried dots are never double-counted.
+    Structured items are untouched: this reads the
+    narrative's own accounting only, so the coverage report
+    can reconcile it against the frontmatter day counters
+    instead of presenting either figure unexamined."""
+    sections = []
+    current = None
+    for raw in text.splitlines():
+        stripped = raw.strip()
+        if stripped.startswith("#"):
+            if "red dot accounting" in stripped.lower():
+                current = {key: None for key in ACCOUNTING_KEYS}
+                sections.append(current)
+            else:
+                current = None
+            continue
+        if current is None:
+            continue
+        m = _ACCOUNTING_LINE.match(stripped)
+        if m:
+            current[m.group(1).lower()] = int(m.group(2))
+    return sections
+
+
+def narrative_accounting_summary(sections, day_counters):
+    """Totals and frontmatter reconciliation for parsed
+    accounting sections. A total is the sum over the sections
+    that state that count, or None when no section states
+    it; reconciliation per count is matches when the total
+    equals the frontmatter counter, differs by N when both
+    are stated and unequal, and not comparable otherwise."""
+    totals = {}
+    for key in ACCOUNTING_KEYS:
+        stated = [s[key] for s in sections if s[key] is not None]
+        totals[key] = sum(stated) if stated else None
+    reconciliation = {}
+    for key in ACCOUNTING_KEYS:
+        front = day_counters.get(ACCOUNTING_FRONTMATTER[key])
+        total = totals[key]
+        if front is None or total is None:
+            reconciliation[key] = "not comparable"
+        elif total == front:
+            reconciliation[key] = "matches"
+        else:
+            reconciliation[key] = f"differs by {total - front:+d}"
+    return {"sections": sections, "totals": totals,
+            "reconciliation": reconciliation}
+
+
+def load_narrative_accounting(path):
+    """Narrative accounting summary for one observation file.
+    JSON observations carry no markdown accounting sections,
+    so they read as an empty summary, never as an error."""
+    with open(path, encoding="utf-8") as fh:
+        text = fh.read()
+    try:
+        doc = json.loads(text)
+    except ValueError:
+        doc = None
+    if isinstance(doc, dict):
+        return narrative_accounting_summary([], {})
+    return narrative_accounting_summary(
+        parse_narrative_accounting(text),
+        load_day_counters(path))
 
 
 # ---------------------------------------------------------------------
@@ -672,6 +764,8 @@ def run(args):
                                            set(regulars))
     items, unmatched = load_observation(args.observation)
     day_counters = load_day_counters(args.observation)
+    narrative_accounting = load_narrative_accounting(
+        args.observation)
     units = pool_units(args.root)
     now_local = stamp.astimezone(LOCAL_TZ)
 
@@ -1048,6 +1142,7 @@ def run(args):
         "unexplained_red_dots": headline_unexplained,
         "unexplained_red_dots_classified": classified_unexplained,
         "observation_day_counters": day_counters,
+        "narrative_accounting": narrative_accounting,
         "unmatched_labels": unmatched,
         "promotion_proposals": len(proposals),
         "outputs": {"enqueue_plan": plan_path,
@@ -1132,6 +1227,43 @@ def run(args):
                     f"observed items: this run neither enqueues "
                     f"nor files them, and the classified count "
                     f"above is not the day total.")
+    cov += ["", "## Narrative red-dot accounting", ""]
+    if not narrative_accounting["sections"]:
+        cov.append("No red-dot accounting section was found in "
+                   "the observation narrative - the passes wrote "
+                   "no per-pass Seen, Explained and Unexplained "
+                   "counts to reconcile against the frontmatter.")
+    else:
+        for idx, section in enumerate(
+                narrative_accounting["sections"], 1):
+            parts = ", ".join(
+                f"{key} "
+                f"{section[key] if section[key] is not None else 'not stated'}"
+                for key in ACCOUNTING_KEYS)
+            cov.append(f"- pass section {idx} - {parts}")
+        totals = narrative_accounting["totals"]
+        cov.append("- totals over the sections stating each "
+                   "count - " + ", ".join(
+                       f"{key} "
+                       f"{totals[key] if totals[key] is not None else 'not stated'}"
+                       for key in ACCOUNTING_KEYS))
+        for key in ACCOUNTING_KEYS:
+            front = day_counters[ACCOUNTING_FRONTMATTER[key]]
+            recon = narrative_accounting["reconciliation"][key]
+            if recon == "matches":
+                cov.append(f"- frontmatter {key} reconciles - "
+                           f"the section total {totals[key]} "
+                           f"equals the frontmatter count.")
+            elif recon.startswith("differs"):
+                cov.append(f"- frontmatter {key} mismatch - "
+                           f"the section total {totals[key]} "
+                           f"{recon} against the frontmatter "
+                           f"count {front}; one of the two "
+                           f"accountings is stale.")
+            else:
+                cov.append(f"- frontmatter {key} not comparable "
+                           f"- the section total or the "
+                           f"frontmatter count is unstated.")
     cov += ["", "## Promotion proposals", ""]
     if not args.root:
         cov.append("Pool not read (no --root) - completed "
@@ -1264,6 +1396,18 @@ def run(args):
                       f"{coverage['unexplained_red_dots']}: the "
                       f"difference is narrative-only dots not "
                       f"yet filed as observed items.")
+    if narrative_accounting["sections"]:
+        totals = narrative_accounting["totals"]
+        recon = narrative_accounting["reconciliation"]
+        rs.append("- narrative red-dot accounting - "
+                  f"{len(narrative_accounting['sections'])} "
+                  "pass section(s), totals " + ", ".join(
+                      f"{key} "
+                      f"{totals[key] if totals[key] is not None else 'not stated'}"
+                      for key in ACCOUNTING_KEYS) + "; "
+                  "frontmatter reconciliation - " + ", ".join(
+                      f"{key} {recon[key]}"
+                      for key in ACCOUNTING_KEYS) + ".")
     rs.append(f"- unknown items - "
               f"{coverage['unknown_items']} filed as "
               f"candidates ({coverage['candidates_filed']} "

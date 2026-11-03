@@ -617,7 +617,11 @@ _tools_/scout_diff.py --observation FILE [--date YYYY-MM-DD]
    day - items observed, items queued, items already done, red
    dots seen, red dots explained, unexplained red dots, and the
    day `unmatched_labels` list printed in full - totalled and
-   split by surface. The unexplained count is the headline -
+   split by surface. Narrative observations also carry
+   their per-pass red-dot accounting sections, reconciled
+   section total against frontmatter counter in the same
+   report, so a narrative-only day's dots are checked,
+   not just carried. The unexplained count is the headline -
    the day perception is judged by it reaching zero.
 4. **The candidate filings and exploration plan** - one entry
    per unmatched label not already in the candidate register -
