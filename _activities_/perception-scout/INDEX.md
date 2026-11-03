@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T10:36:50Z
+modified: 2026-11-03T13:34:48Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-1755 perception-scout execution record 2026-11-02 1801 queue run (alliance group partial, stale chain spent)
   - source: ticker-0004 perception-scout execution record 2026-11-03 0016 queue run (base group partial, power 149,940,141)
   - source: ticker-0134 perception-scout execution record 2026-11-03 0136 queue run (alliance group remainder partial, Wars dot filed as Issue #212)
+  - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (partial, alliance remainder walked, grounded taps, Wars tabs empty, Issue #212 open)
 ---
 
 
@@ -768,6 +769,95 @@ observe-only, nothing claimed). Evidence in
   The pool divergence is filed as Issue #213 (label
   tooling, owned by lastwar-tool-developer, not
   duplicated here).
+
+
+## What the 2026-11-03 0446 unit added
+
+- Ticker-0434, unit scout-midday-scout-mid-2026-10-31-003,
+  about 04:42 to 04:46 local, status partial, observe-only
+  throughout: nothing claimed, fought, dispatched, donated,
+  dug or bought. Evidence in
+  `_records_/2026-11-03/perception-scout/0446-queue-run.md`.
+  Walked: Help, Alliance Wars (both tabs), Alliance City
+  (both tabs), the mail category list and one world map
+  frame. Carried to successor unit 004: the station panel,
+  the loot box and the individual mail category lists, so
+  the tracker is left untouched.
+- Tooling finding, mechanism established: the 0136 unit's
+  Help, Wars and City buttons did not respond to
+  background taps; in this session all three opened on
+  the first tap at a freshly grounded point (Help
+  (687,497), Wars (313,497), City (687,835)). The
+  difference is grounding on the current screenshot, not
+  a game-side block. The Alliance menu back arrow
+  grounded at (162,935) and the Mail and sub-page back
+  arrows at (62,951) all worked. This corroborates the
+  donations re-ground-per-session rule: fresh grounding
+  first, never a carried point.
+- Alliance panel, read live: [AP3x] The Apex, 5.0 stars,
+  Leader Abyss Apex, Power 13,016,623,359, Members 94/100,
+  Language English. Top ticker partly read: "...pointed
+  DR.POO as Secretary of Development!"
+- Alliance Techs tree (already open from the previous unit
+  in this pass): War tab Troop Movement 5/10, Rallied HP
+  6/10, Rallied Attack 7/10, Rallied Defense 7/10, next
+  node below 1/10. Tech Donation Today 6200 at close of
+  the previous unit.
+- Help panel: Today's points gained from Alliance Help
+  1,240/1,000, already over the 1,000 gate. Four Bears
+  Lair requests, all 30/30: building Lv.27 Drill Ground,
+  building Lv.30 Aircraft Center, Morale research,
+  Precision Targeting II research (fourth row partly cut
+  off). Help All button present, observed only, not
+  tapped. The Help dot maps to the help regular (already
+  queued) with nothing new to claim in this walk.
+- Alliance Wars: Rally Intel tab reads "No Alliance Rally
+  currently." Individual Intel tab reads "There are no
+  ongoing Alliance Wars currently." No rally, no war, no
+  action available on either tab, so the Wars dot
+  (Issue #212) is not explained by a live Wars action; it
+  reads as the cycling member-activity indicator noted in
+  the 0136 unit, or a stale badge. Left open on Issue
+  #212, not closed by this unit.
+- Alliance City: City List, Produces Rare Soil tab:
+  Production Rate 5.88K/h, Captured Cities 6/6. Fully
+  visible cities: Lv.6 X:499 Y:411 +1,000/h, Lv.5 X:336
+  Y:411 +900/h, Lv.5 X:587 Y:336 +900/h, Lv.5 X:411 Y:336
+  +900/h, Lv.4 X:499 Y:262 +800/h, Lv.4 X:336 Y:262
+  +800/h, with a third row (Lv.6, Lv.6, Lv.5) cut off at
+  the bottom of the frame. Produces Coal tab: Production
+  Rate 13.53K/h, Digging Strongholds captured 4/4. Cities:
+  Lv.6 X:587 Y:411 +3,456/h, Lv.6 X:411 Y:411 +3,456/h,
+  Lv.5 X:662 Y:336 +3,312/h, Lv.5 X:336 Y:336 +3,312/h.
+  Footer on both tabs: Server Time 2026-11-3 10:44 (as
+  displayed), Digging Stronghold captures left today 2/2,
+  War declarations left today 2/2. City Buff button and
+  the Coal tab Claim All button observed only, never
+  tapped.
+- Mail list, opened from the base screen on a grounded tap
+  at (931,777): categories Battle Report, Alliance, Event
+  (red dot), Season, System (red dot), Regular, In-app
+  Purchases. Footer: "Mails older than 30 days will be
+  automatically deleted." No category list was opened and
+  nothing was claimed or deleted; Delete All was never
+  tapped. The (931,777) Mail grounding corroborates the
+  0441 donations entry correction and Issue #220. Event
+  and System dots map to the mail regular (already
+  queued); no claim state is recorded for them.
+- World map, one frame centred on alliance territory:
+  Glacial Area -10C, [AP3x] The Apex member bases
+  clustered, March Queues 0/4, no squad out. No zombie pin
+  and no loot box pin visible in this frame. The furnace
+  toast ("High-temp Furnace total overdrive time") recurs
+  at the bottom, observed only.
+- Base HUD totals as displayed during this session: food
+  230.7M, iron 565.3M, coin 5.9M, 12.72K with a plus
+  button, 193.9K to 194.5K honor, cart 2,836, account
+  power 149,940,141.
+- Unexplained in this walk: the station panel and the loot
+  box were not located, so any signal they carry is still
+  unknown. unmatched_labels: none in the surfaces actually
+  walked. Game left on the base screen.
 
 ## Open questions
 

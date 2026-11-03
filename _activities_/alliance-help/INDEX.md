@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T13:34:48Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: ticker-2034 alliance-help execution record 2026-11-02 2038 queue run (done, base-screen bubble, Alliance red dot is not remaining help)
   - source: alliance help execution record 2026-11-02 2311 queue run
   - source: ticker-0304 alliance-help execution record 2026-11-03 0308 queue run (done, header 980 unchanged by Help All)
+  - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (observe-only, Help panel 1,240/1,000 over gate, four Bears Lair requests 30/30)
 ---
 
 
@@ -516,6 +517,27 @@ Measured in the 0135 help unit (ticker-0134, window mode
   visible rows were all the account's own requests.
 - No individual help was tapped, no other screen was
   changed.
+
+
+## What the 2026-11-03 0446 scout walk added - observe-only, Help panel over the gate
+
+- Ticker-0434 perception-scout unit, about 04:42 to 04:46
+  local, observe-only: the Help panel was opened on a
+  grounded tap at (687,497) and nothing was tapped there.
+  Evidence in
+  `_records_/2026-11-03/perception-scout/0446-queue-run.md`.
+- Help page header read Today's points gained from
+  Alliance Help 1,240/1,000, already over the 1,000 gate,
+  against 980/1,000 at the 0308 unit: the header moves
+  between units and the gate is passed for the day.
+- The listed requests were all this account's own (Bears
+  Lair, 30/30): building Lv.27 Drill Ground, building
+  Lv.30 Aircraft Center, Morale research, Precision
+  Targeting II research (fourth row partly cut off).
+  Help All button present, observed only, not tapped, so
+  no delivery claim is made from this walk. The Help dot
+  maps to the help regular (already queued) with nothing
+  new to claim here.
 
 ## Open questions
 
