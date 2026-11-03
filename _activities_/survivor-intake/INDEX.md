@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-03T11:36:26Z
-version: 1.18.0
+modified: 2026-11-03T15:45:00Z
+version: 1.19.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -20,6 +20,7 @@ grounded_in:
   - source: survivor-intake execution record 2026-11-02 1948 queue run (ticker-1934 unit, partial, figure taps select squad vehicle)
   - source: survivor intake execution record 2026-11-02 2252 queue run
   - source: ticker-0234 survivor-intake execution record 2026-11-03 0247 queue run (partial, bubble change not intake proof, re-ground before every tap)
+  - source: ticker-0634 survivor-intake execution record 2026-11-03 0644 queue run (partial, gate line unverified, two grounding points rejected)
 ---
 
 
@@ -877,6 +878,48 @@ Measured on 2026-10-25.
   This unit's evidence is commented onto Issue #168 by
   this run; the issue stays open.
 
+## What the 2026-11-03 0644 unit added - tenth distinct partial since the 1644 done, two grounding points rejected
+
+- Ticker-0634, unit survivors-2026-11-03-0603, about
+  06:44 local, status partial. Evidence in
+  `_records_/2026-11-03/survivor-intake/0644-queue-run.md`.
+- Computer session cc-316 (carried from the radar and
+  harvest units in this pass) dropped between units;
+  session cc-318 was started, LastWar re-selected, and
+  no game state was lost. Transient, as in other units
+  this pass.
+- Gate search: from the central base view, dragged to
+  the upper base area twice ((500,300 to 500,650), then
+  (500,250 to 500,700)); the second drag reached the
+  upper view with the Capitol pyramid at top-right, the
+  pink central building and the parked helicopter. No
+  front-gate line with question-mark bubbles was
+  identified in the central view or in the upper view.
+- Grounding rejections, do not reuse: a
+  visual-grounding pass on the upper view returned a
+  survivor figure at norm 498,674 and a gate at norm
+  70,125; both are rejected as unreliable - the first
+  point sits on a small map marker by the gold building,
+  not on a verified gate figure, and the second sits in
+  the top bar. Neither point was tapped: the 0247 unit's
+  stale-figure tap misfired onto a squad marker, and
+  tapping an unidentified marker risks a dispatch.
+- No survivor card or dialog was opened, no recruit was
+  taken in, no building panel was opened, and Quick
+  Dispatch did not run (nothing verified to post).
+  Tracker untouched, per the rule for partial units.
+- Count: this is the tenth distinct partial since the
+  1644 done (ninth was 0247). The standing blocker
+  stands: gate line not found or verified, and the unit
+  closes unverified with a named re-read instead of
+  closing on a presumed line state.
+- Follow-up for the next survivors unit: start at the
+  gate with a fresh grounding on the live frame, and
+  verify a survivor figure before any tap; if the line
+  still cannot be verified, close unverified again with
+  this blocker named. This unit's evidence is commented
+  onto Issue #168 by this run; the issue stays open.
+
 ## Open questions
 
 - Where the Factory building sits on the base, so the Mechanic
@@ -951,3 +994,5 @@ Measured on 2026-10-25.
 - 1.17.0 (2026-11-02): eighth distinct partial since the 1644 done (2252 unit, gate line explicitly unverified, close discipline held), rule R2 bubble-centre method tried and failed with (447,550) and (448,580) resolving to Titanium Alloy Factory No.3, no second tap per rule R2, deselect at (750,800), do-not-reuse list extended with both points, and Issue #168 evidence commented by the executor, folded from the 2252 survivors record.
 
 - 1.18.0 (2026-11-03): ninth distinct partial since the 1644 done (0247 unit, gate line explicitly unverified, close discipline held), bubble change to smiley without a card explicitly not counted as an intake, stale figure point (450,375) selecting the 1st Squad Lv.20 vehicle so re-grounding before every tap is now absolute, ambiguous question mark at (638,693) away from the gate not counted, Quick Dispatch not run with no verified intake, and Issue #168 evidence commented by this run, folded from the 0247 survivors record.
+
+- 1.19.0 (2026-11-03): tenth distinct partial since the 1644 done (0644 unit, gate line explicitly unverified, close discipline held), upper-view grounding points (498,674) and (70,125) rejected as unreliable (map marker by the gold building, top bar) and neither tapped, session drop cc-316 to cc-318 transient with no state lost, Quick Dispatch not run with no verified intake, and Issue #168 evidence commented by this run, folded from the 0644 survivors record.

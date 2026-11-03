@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T15:45:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-02 1945 queue run (ticker-1934 unit, partial, one farmland bubble, two new not-a-bubble points)
   - source: resource collection execution record 2026-11-02 2247 queue run
   - source: ticker-0234 resource-collection execution record 2026-11-03 0244 queue run (partial, four central bubbles, left edge undragged)
+  - source: ticker-0634 resource-collection execution record 2026-11-03 0642 queue run (partial, central, left and top bubble-free, right edge unswept)
 ---
 
 
@@ -681,6 +682,48 @@ regular stays due. Evidence in
   untouched, per the rule for partial units; the next
   tick re-produces harvest and resumes the sweep.
 
+## What the 2026-11-03 0642 unit added - central, left and top bubble-free, right edge unswept so partial
+
+- Ticker-0634, unit harvest-2026-11-03-0603, about 06:42
+  local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/0642-queue-run.md`.
+- Entered from the radar screen (previous unit in this
+  pass): the radar back arrow returned to the base view.
+- Base HUD at unit start and close, rounded as displayed,
+  unchanged: food 230.7M, second top-bar resource 565.3M,
+  coins 5.9M, second-row first resource 19.0M, second-row
+  second resource 505.1K. Power 149,940,141, stamina 120.
+- Sweep: central cluster bubble-free at the four positions
+  cleared by the 0244 unit, nothing tapped there.
+  Left-edge follow-up from 0244 done: dragged (700,500
+  to 300,500) to the neighbouring-base cluster west of
+  the own base, no own-building resource bubble visible
+  there; dragged back (300,500 to 700,500) to the central
+  view. Top edge: dragged (500,300 to 500,650); the upper
+  base area (farmland plots, upper buildings, parked
+  helicopter) showed no green collectible bubble;
+  dragged back (500,650 to 500,300) to the central view.
+- Armed truck: no fully-loaded loot bubble was seen in
+  any view swept, so nothing was claimed there, but the
+  truck's loaded state was not separately verified with
+  a dedicated tap and no vehicle panel was opened.
+  Season 2 area at the bottom was left out of the sweep,
+  per the standing rule that it is not main base harvest.
+- Why partial, not done: the full-map acceptance needs
+  zero bubbles remaining with the base dragged to each
+  edge. Central, left-edge neighbouring cluster and top
+  edge are bubble-free in this unit, but the right edge
+  was not swept in this unit and the armed truck loot
+  state was not separately verified, so a whole-map zero
+  claim is not proven. Tracker untouched, per the rule
+  for partial units; the next tick re-produces harvest
+  and resumes the sweep.
+- Follow-up for the next harvest unit, carried with the
+  right-edge-first order: sweep the right edge first,
+  re-check the central cluster for regenerated bubbles,
+  and verify the armed truck loot bubble explicitly. The
+  0244 left-edge-first carry is now closed.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -728,3 +771,5 @@ regular stays due. Evidence in
 - 1.13.0 (2026-11-02): four central-cluster bubbles cleared in one batch at (396,416), (292,468), (499,468) and (397,516), second-row first resource up about 0.4M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and restored views bubble-free but top and left extremes undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-side-first re-sweep carried to the next unit, folded from the 2247 harvest unit; no earlier claim superseded.
 
 - 1.14.0 (2026-11-03): four central-cluster bubbles cleared in one batch at (396,399), (294,455), (497,458) and (397,510), second-row first resource up about 0.3M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and top-edge views bubble-free but the left edge undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-edge-first re-sweep carried to the next unit, folded from the 0244 harvest unit; no earlier claim superseded.
+
+- 1.15.0 (2026-11-03): central cluster bubble-free at the four positions cleared by the 0244 unit with nothing tapped, left-edge follow-up from 0244 done (drag 700,500 to 300,500 to the neighbouring-base cluster west of the own base, no own-building bubble), top edge bubble-free (drag 500,300 to 500,650, farmland plots, upper buildings, parked helicopter), HUD unchanged at rounding (food 230.7M, second top-bar resource 565.3M, coins 5.9M, second-row first resource 19.0M, second-row second resource 505.1K, power 149,940,141, stamina 120), right edge not swept and armed truck loot state not separately verified so partial with tracker untouched, Season 2 area excluded per standing rule, right-edge-first re-sweep with explicit armed-truck loot verification carried to the next unit (the 0244 left-edge carry is now closed), folded from the 0642 harvest unit; no earlier claim superseded.

@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T15:45:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: troop-training execution record 2026-11-02 1949 queue run (ticker-1934 unit, partial, drag blocked by open radial)
   - source: troop training execution record 2026-11-02 2255 queue run
   - source: ticker-0234 troop-training execution record 2026-11-03 0252 queue run (partial, road drag pans, centre drag does not, no tent)
+  - source: ticker-0634 troop-training execution record 2026-11-03 0647 queue run (partial, no tent in four framings, road drags pan)
 ---
 
 # Troop training
@@ -708,6 +709,51 @@ Observed in game on this account, first execution 2026-10-25.
   batches queued, tracker untouched, so the next tick
   re-produces this regular.
 
+## What the 2026-11-03 0647 unit added - four framings, no tent, road drags pan again
+
+- Ticker-0634, unit training-2026-11-03-0603, about
+  06:47 local, status partial. Evidence in
+  `_records_/2026-11-03/troop-training/0647-queue-run.md`.
+- Tent search, four framings, no tent tapped: from the
+  survivors unit's upper view, a left-road drag
+  (200,600 to 200,300) restored the central view; a road
+  drag down (200,300 to 200,650) returned to the upper
+  view; two more road drags up (200,600 to 200,300,
+  twice) returned to the central view; a horizontal drag
+  (300,500 to 700,500) reached the right-side view (own
+  blue-roofed buildings on the left, neighbouring bases
+  on the right). No barracks tent was identified in any
+  framing: the central lower-middle holds the furnace
+  and the house cluster, the upper view holds the
+  Capitol pyramid and pink buildings, and the right-side
+  view holds tower and house buildings - none presented
+  as a barracks tent, and no TRAIN UNITS panel was
+  opened.
+- Drag-surface distinction re-confirmed, consistent
+  with the 0252 unit: road drags pan while centre
+  drags over buildings sometimes do not. This is a
+  further data point for Issue #150, commented onto
+  #150 by this run.
+- The 2026-10-25 "lower middle" tent description does
+  not match the current framings: the central
+  lower-middle now reads as furnace and house cluster,
+  not tents. The description is marked stale for the
+  current layout as of 2026-11-03, not deleted from
+  history; the next unit re-grounds the four tent
+  positions on the current base layout before any tap.
+- No batch was queued, no barracks queue state was
+  verified, and no Drill Ground figure was read live in
+  this unit, so the 2026-10-31 Drill Ground Full blocker
+  is neither confirmed nor cleared here, now a
+  fourteenth consecutive unit without a live Drill
+  Ground read.
+- Result stats: target 4, achieved 0, verified no.
+  Partial: 0 barracks verified, 0 batches queued,
+  tracker untouched, so the next tick re-produces this
+  regular. Follow-up: re-ground the four tent positions
+  on the current base layout before any tap, and read
+  the Drill Ground screen live first if a panel opens.
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -766,3 +812,5 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.13.0 (2026-11-02): upward drag (500,700 to 500,400) moved the view this time unlike 1949 but brought no barracks tent into view, only empty snow below the shifted central cluster, so 0 barracks checked with no TRAIN UNITS panel, Drill Ground Full carried unverified a twelfth consecutive unit, Lv.24 busy carried as expectation only with no live panel read, HUD matching the 2247 harvest close, and the recurrence commented onto Issue #150 by this run, folded from the 2255 training unit.
 
 - 1.14.0 (2026-11-03): centre vertical drag (500,650 to 500,300) moving nothing while the left-road drag (200,600 to 200,300) restored the central cluster, so drag-pan responsiveness varies by start surface, no barracks tent in the restored central view with no TRAIN UNITS panel, Drill Ground Full carried unverified a thirteenth consecutive unit, pass budget ending mid-unit, and the recurrence commented onto Issue #150 by this run, folded from the 0252 training unit.
+
+- 1.15.0 (2026-11-03): no barracks tent in four framings (central, upper, right-side) with no TRAIN UNITS panel, road drags panning again consistent with 0252 as a further Issue #150 data point commented by this run, 2026-10-25 "lower middle" tent description marked stale for the current layout (furnace and house cluster, not tents) without deleting history, Drill Ground Full carried unverified a fourteenth consecutive unit, 0 barracks verified and 0 batches queued, folded from the 0647 training unit.
