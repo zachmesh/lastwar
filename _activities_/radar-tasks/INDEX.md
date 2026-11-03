@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T23:40:00Z
+modified: 2026-11-03T00:55:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -959,7 +959,26 @@ are still open, per the protocol.
 - Whether manual per-task execution ever beats Quick
   Execute (cost or reward difference), untested.
 
+## What the 2026-11-02 1508 unit closed for radar
+
+- The Drill Ground panel-close handover written in the
+  1532 run is completed, not by a radar unit but by the
+  1508 arms-race unit, which found the game on the
+  panel the 1412 radar unit left open and closed it to
+  the base on the first tap of its X at norm 869,139
+  (measured). The panel is no longer left open.
+- Entry-blocker counting is unchanged: closing a left
+  open panel is not a radar entry attempt, so the
+  consecutive entry-failure count from the 1026 and
+  1439 units does not advance on this unit, and the
+  rule R2 third-failure write-up is not triggered.
+  Evidence in
+  `_records_/2026-11-02/arms-race/1508-queue-run.md`.
+
 ## Changelog
+
+- 1.15.0, 2026-11-02 - 1508 arms-race unit closed the Drill Ground panel-close handover from the 1532 run: panel X at norm 869,139 closed to base on the first tap, panel no longer left open; entry-blocker count unchanged (a close is not an entry attempt, rule R2 third-failure write-up not triggered); 0636 pin inventory still open, release posture still applies, duel delta test still owed.
+
 
 - 1.14.0, 2026-11-02 - 1439 duel day 1 release unit folded: radar screen never entered (camera panned to Drill Ground by the donations unit's failed taps, dish column not visible); Drill Ground panel opened at (810,778) with figures matching the 1020 read, but its X was unresponsive to background clicks twice and the game was left with the panel open; handover is close panel, restore full base view, ground dish fresh; a third consecutive entry failure writes the blocker into this metadata per rule R2; 0636 pin inventory still open, release posture still applies, duel delta test still owed.
 
