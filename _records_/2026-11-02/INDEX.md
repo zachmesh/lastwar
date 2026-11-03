@@ -2966,3 +2966,14 @@ of 2026-10-28.
   on his phone). No mail screen was reached, nothing
   claimed. Tracker untouched. Full detail in
   mail-rewards/1821-queue-run.md.
+
+## 18:30 to about 18:33 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1830,
+  non-batch no-op pass (checker _tools_/records_batch.py
+  reports outside every batch window, next batch
+  19:00): no knowledge or code PR open; records PRs
+  187 (2026-11-01, head 2be5df83) and 161 (2026-11-02,
+  head 034910655) not merged, both mergeable and
+  awaiting the 1900 batch. Full detail in
+  pr-integration/1830-run.md.
