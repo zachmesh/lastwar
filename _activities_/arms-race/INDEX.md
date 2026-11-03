@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T14:37:12Z
+modified: 2026-11-03T18:45:00Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-2204 arms-race execution record 2026-11-02 2209 queue run
   - source: ticker-0204 arms-race execution record 2026-11-03 0228 queue run (partial, Base Building tier-1 claimed, tiers 2 and 3 unreachable inside the red lines)
   - source: ticker-0604 arms-race execution record 2026-11-03 0609 queue run (partial, first unit of new Drone Boost phase, stamina 120 measured, Lv-1 Doom Elite 20 stamina for 2000 points, tier arithmetic, ranking-row chest taps retired)
+  - source: ticker-1004 arms-race execution record 2026-11-03 1021 queue run (done, Hero Advancement tier 3 met on one Adam level-up, 41500 points, all point and cumulative chests claimed)
 ---
 
 
@@ -1159,3 +1160,103 @@ slot. Evidence in
 - Red lines held: nothing spent, no Buy tapped, no
   speedup burned, no building or research started, no
   stage swapped, no other activity's rewards claimed.
+
+
+## What the 2026-11-03 1021 unit added - Hero Advancement tier 3 met on one level-up, all chests claimed
+
+- Ticker-1004, unit arms-race-2026-11-03-1003, about
+  10:21 local, status done. Hero Advancement phase
+  tier 3 met and every earned reward claimed in this
+  unit. Tracker marked done. Evidence in
+  `_records_/2026-11-03/arms-race/1021-queue-run.md`.
+- Live phase and score: Hero Advancement, Contest
+  Segment Lv.29-30, time left 03:47:10 at the first
+  read (phase window runs to about 14:00 local; this
+  is the first unit of the new phase after the Drone
+  Boost phase ended about 10:00). Live score at first
+  read: 0, read from the star bar at the top left of
+  the phase page. The ranking row figure 9,300 for
+  [AP3x]Bears Lair was the lagging previous-phase row
+  (the same lag pattern the 0609 unit flagged) and
+  was NOT used as this phase score.
+- Point chest thresholds: 2,000 / 4,000 / 12,000
+  (ruby tags 2,360 / 4,800 / 11,800). Cumulative
+  counter chest at the top left: 0/2, not full, not
+  claimable at first read.
+- Scoring table, read live: 1 Hero Recruitment +400,
+  Use at least 2,000 Hero EXP at a time +1 (per 2,000
+  EXP, per the 2026-11-02 0247 measured rate of 1
+  point per 2,000 Hero EXP), Buy Packs containing
+  Diamonds +30 per diamond (red line, never used).
+- Scoring action, EXP only: Hero Adam (UR Titan)
+  Lv.124, power 1,748,826, EXP bar 283.2M / 83.0M -
+  far over the requirement, so no replenish was
+  needed and no resource collection was triggered.
+  One Upgrade tap levelled Adam to Lv.125 (power
+  1,757,586, +8,760; new bar 200.2M / 85.0M; the
+  200.2M carry-over matches the 283.2M minus 83.0M
+  overflow arithmetic). Score read live after the
+  level-up: 41,500 points, which equals the
+  83,000,000 requirement divided by 2,000,
+  consistent with the 0247 measured rate. This
+  clears the 12,000 top chest by a wide margin. The
+  ranking row updated to 50,800 (9,300 lagging figure
+  plus 41,500), confirming the attribution.
+- Just-enough rule: exactly one level-up was done.
+  Adam's bar still exceeds its new 85.0M requirement,
+  but a second level-up was NOT taken - it would
+  overshoot this phase and waste scoring for a later
+  Hero Advancement phase.
+- Claims: one tap on the 2,000 point chest claimed
+  all three earned point chests at once (popup
+  contents: star badge 6, SR chests 32 and 32, Arms
+  Race Badges 1.6K, coin chest 32, 5m speedups 68 -
+  the same bundle the 0247 unit recorded). Re-read:
+  all three point chests open and emptied. Cumulative
+  counter chest: read 6/2 after the point claim. One
+  tap on it claimed it too (popup contents: gold card
+  1, purple fragment 2, red gem 50 x1) - unlike the
+  0247 unit, where cumulative taps produced no
+  change. Re-read after dismissal: the counter
+  advanced to 6/8, confirming the claim.
+- Ranking-row chest: not tapped. While the phase is
+  live it opens a preview only per the 2026-11-02
+  precedents, and the 0609 unit retired that tap
+  method after no-change attempts. Its reward, if
+  any, falls to a later run after the phase ends.
+- Method notes: entry pivot (rule R2, reused from
+  0609): one drag of the Events tab bar to the right
+  revealed the Arms Race tab at norm 233,131, and
+  the next tap opened the phase page. Navigation
+  stall, resolved by relaunch: after the level-up,
+  the Hero List back arrow took five no-change taps
+  (single, double, move-wait-click, and
+  post-activate) - background clicks did not reach
+  that control. The window was closed with its chrome
+  close button and the app relaunched; it landed
+  directly on the base with no login and no
+  device-takeover dialog, and the Events tap reopened
+  the Arms Race phase page (last-tab memory). The
+  Hero List back-arrow stall is a carried method note
+  for the next hero-panel unit; the same
+  background-click stall pattern appears on the
+  Attack panel X in the 1030 donations unit this
+  pass.
+- Entry note for the next unit: this unit left the
+  game on the Arms Race phase page, and the radar
+  unit before it navigated past the Commendation
+  Notice popup left open by ticker-0934 (View tapped
+  to the Exercise panel, then backed out untouched to
+  base; dish grounded fresh at norm 52,711).
+- Closing figures: phase Hero Advancement, Lv.29-30,
+  03:39:18 left at close. Score: 41,500 (target
+  12,000, achieved 41,500). Adam: Lv.124 to Lv.125,
+  power 1,748,826 to 1,757,586. Point chests: 3/3
+  claimed. Cumulative chest: claimed (6/8 after).
+  Ranking row: 50,800, chest preview-only, untapped.
+  Result stats: target 12000, achieved 41500, points
+  41500, verified yes.
+- Red lines held: no diamonds, money, speedups,
+  skill medals or hero shards spent; no recruitment,
+  no pack purchase, no other activity's work done
+  from this unit.
