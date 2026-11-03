@@ -2884,3 +2884,14 @@ of 2026-10-28.
   (2026-11-02) not merged, both trial-merge clean
   against the new main and awaiting the 1900 batch.
   Full detail in pr-integration/1745-run.md.
+
+## 18:00 to about 18:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1803,
+  non-batch no-op pass (checker _tools_/records_batch.py
+  reports outside every batch window, next batch
+  19:00): no knowledge or code PR open; records PRs
+  187 (2026-11-01, head 2be5df83) and 161 (2026-11-02,
+  head c97c4e01) not merged, both mergeable and
+  awaiting the 1900 batch. Full detail in
+  pr-integration/1803-run.md.
