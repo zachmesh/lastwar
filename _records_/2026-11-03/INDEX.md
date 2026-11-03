@@ -2092,3 +2092,20 @@ of 2026-10-28.
   PR 207 conflict re-verified by local test merge.
   No records PR opened, no owner-gated escalation.
   Full detail in pr-integration/1015-run.md.
+
+## 10:30 to about 10:35 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1030,
+  non-batch pass (checker _tools_/records_batch.py
+  on main: due no, next batch point 1100).
+  No knowledge or code PR open. Records PR 224
+  (records/2026-11-02) awaiting the 1100 batch.
+  Records PR 207 (records/2026-11-03) and PR 187
+  (records/2026-11-01) conflict carried, comments
+  from the 0300 and 1900 batch passes stand, no
+  duplicate comment posted, neither force-merged.
+  PR 207 and PR 187 conflicts re-verified by
+  git merge-tree against main; PR 224 verified
+  clean by merge-tree. No records PR opened, no
+  owner-gated escalation.
+  Full detail in pr-integration/1030-run.md.
