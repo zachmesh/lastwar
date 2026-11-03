@@ -3475,3 +3475,18 @@ of 2026-10-28.
 - 2113 event-claims: events unit done - full hub sweep, 4 tabs, nothing claimable; Arms Race Unit Progression score 9,300 below the 15,000 chest, cumulative chest 0/2; Desert Storm enlisted 19/20, battle 2026-11-6; Wanted Boss rotated Code 87 to Code 64 (Missile Vehicle heroes +50%), best single attack 852,929,736 below the 1.0B tier, all Claim buttons grey; Community 500 Claimed; no Zombie Invasion tab. Full detail in event-claims/2113-queue-run.md.
 - 2120 truck-plunder: trucks unit partial - Trade Count 4/5, Plunder Count 4/4 read live; 1 dispatch shortfall, all 4 slots out, first return about 00:50 away; station-building tap is a new working trade entry route (left column has no trade slot); Mega Dispatch greyed ("all current trade trucks dispatched"), no contracts spent; Reward Recovery 2026-10-31 record already CLAIMED. Tracker untouched. Full detail in truck-plunder/2120-queue-run.md.
 - 2127 secret-missions: secrets unit partial - 4 finished tasks claimed (UR Disrupt electric grid + 3 SSR, PERFECT stamps, Your Tasks badge cleared); ally assists 0/5 and new Mega dispatch pending for the next secrets unit (pass budget out). Tracker untouched. Full detail in secret-missions/2127-queue-run.md.
+
+## 21:30 to about 21:33 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-2130.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00).
+  Knowledge PR 200 (alliance-duel 1.16.0) unchanged
+  since the 2115 feedback, so no repeat comment;
+  Owner line still to be corrected to
+  lastwar-knowledge-organizer. Records PR 193
+  (post-1900 batch, head 40f40a4a) awaits the 23:00
+  batch; records PR 187 conflict on action-log.jsonl
+  carried, already commented at 1900, not force-merged.
+  No records PR opened, no merge, no escalation.
+  Full detail in pr-integration/2130-run.md.
