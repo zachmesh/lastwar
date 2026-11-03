@@ -1338,3 +1338,22 @@ of 2026-10-28.
   sync gap carried: tools/regulars.json still lacks the
   duel-score regular, so no duel-score unit was staged.
   Full detail in queue-planning/0540-run.md.
+
+## 05:45 to about 05:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0545.
+  Non-batch pass per the checker (next batch 07:00):
+  merged knowledge PR 221 (organizer 0532, Refs #220)
+  and code PR 222 (aged-P1 slot guard, Refs #147),
+  both squash-merged, main synced back to the local
+  repo. Records PR 216 (2026-11-02, head 2547e171,
+  MERGEABLE CLEAN) awaits the 07:00 batch. Records PR
+  207 (2026-11-03, head 12a1f561) still conflicts on
+  _logs_/repo-actions/action-log.jsonl and
+  _tools_/state/2026-11-03.json, re-verified by a
+  scratch test-merge; the conflict comment from the
+  0300 pass stands. Records PR 187 (2026-11-01, head
+  2be5df83) still conflicts on action-log.jsonl, the
+  conflict comment from the 1900 pass stands. No
+  owner-gated PR. Merges synced to the owner Slack DM.
+  Full detail in pr-integration/0545-run.md.
