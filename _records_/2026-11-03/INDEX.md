@@ -677,3 +677,24 @@ of 2026-10-28.
   conflicted, comment stands. No knowledge or code PR
   open, no owner escalation.
   Full detail in pr-integration/0300-run.md.
+
+## 03:15 to about 03:20 - PR integration pass (non-batch: 03:00 batch already merged)
+
+- Integrator pass pr-integration-2026-11-03-0315.
+  Non-batch pass for records purposes: the checker
+  (_tools_/records_batch.py on main) reported due for
+  the 03:00 window, but the 03:00 batch had already
+  merged in this window (PR 204, merge commit
+  e6226c13, 03:02), and only the first pass at or
+  after a batch point merges - so no records PR was
+  merged this pass. PR 216 (records/2026-11-02,
+  post-0300 batch log line, MERGEABLE) awaits the
+  07:00 batch. Records PR 207 (2026-11-03) still
+  CONFLICTING on _logs_/repo-actions/action-log.jsonl
+  and _tools_/state/2026-11-03.json, conflict
+  re-verified by test merge, standing 0300 comment
+  carried, branch-side resolution pending. Records PR
+  187 (2026-11-01) still CONFLICTING on the action
+  log, standing comment carried. No knowledge or code
+  PR open, no owner escalation, no new comment.
+  Full detail in pr-integration/0315-run.md.
