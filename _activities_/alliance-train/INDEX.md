@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T19:45:00Z
+modified: 2026-11-03T21:52:04Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-0034 alliance-train execution record 2026-11-03 0035 queue run (partial, left-column mapping measured, no station view)
   - source: ticker-0304 alliance-train execution record 2026-11-03 0315 queue run (partial, 52,548 no-pan repeat, grounding mislabels Secret Command Post)
   - source: ticker-1104 alliance-train execution record 2026-11-03 1124 queue run (partial, fourth same-blocker partial today, banner absent, station not viewed, Issue 205)
+  - source: ticker-1334 perception-scout execution record 2026-11-03 1345 queue run (partial, station preparation-only surface, LOOT box located on the world map)
 ---
 
 # Alliance train
@@ -869,3 +870,42 @@ Measured in the 0110 train unit (ticker-0104, window mode
   the next tick re-produces train and resumes the
   check. The re-grounding owed by Issue 205 is still
   owed. No earlier claim superseded.
+
+## What the 2026-11-03 1345 scout unit added - station panel is a preparation-only surface, LOOT located (scout read, not a train execution)
+
+- Scout unit scout-midday-scout-mid-2026-10-31-006 by
+  ticker-1334, about 13:36 to 13:44 local, observe-only.
+  Evidence in
+  `_records_/2026-11-03/perception-scout/1345-queue-run.md`,
+  folded in full into perception-scout. This section
+  carries only the train-relevant findings; claiming
+  the LOOT rows belongs to the gifts regular, not to
+  this activity.
+- Station panel, preparation-only surface: the unit
+  closed the panels to a clean base view,
+  screenshot-read the left icon column, and checked
+  the two train-preparation signals before any pan -
+  no train icon in the left column, no "Boarding
+  closes in" banner under the resource bar. With
+  neither signal present, no train is preparing in
+  this window, so the STATION PLATFORM screen has no
+  live state to read. The platform screen itself
+  remains unlocated, and it is a preparation-only
+  surface, not a standing panel: it can only be read
+  when a train is preparing. Successor scout unit
+  scout-midday-scout-mid-2026-10-31-007 carries the
+  station panel only, to be re-checked when a train is
+  preparing; the successor should re-check the two
+  preparation signals first rather than re-panning the
+  base edge.
+- LOOT box, located on the world map (cross-ref, not a
+  train claim): on the world map centred on the own
+  base with March Queues 0/4, one east drag pan, then
+  a grounded tap on the left-edge gift icon at
+  [311,237] opened the panel titled LOOT, with three
+  Lv.60 Doom Elite Member rows unclaimed (Claim All
+  observed only, never tapped). The world-map gift
+  badge was 3 at entry, matching the three rows. The
+  gifts units queued for 14:30 should claim them, or a
+  diff should raise them if the gifts regular does not
+  cover LOOT.
