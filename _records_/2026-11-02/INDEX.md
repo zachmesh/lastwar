@@ -3102,3 +3102,20 @@ of 2026-10-28.
   at sweep) not merged, both awaiting the 1900
   batch. No owner-gated PR, no conflict.
   Full detail in pr-integration/1845-run.md.
+
+## 19:00 to about 19:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1900,
+  batch pass (checker _tools_/records_batch.py
+  reports due, window 19:00-20:00
+  America/Los_Angeles): merged records PR #161
+  (2026-11-02, head 957e4e066) by merge commit
+  71aa427d4, branch not deleted; records PR #187
+  (2026-11-01, head 2be5df83) conflicted on
+  _logs_/repo-actions/action-log.jsonl after the
+  161 merge, commented, not force-merged, awaiting
+  branch-side resolution. No knowledge or code PR
+  open, no owner-gated PR. A fresh records PR for
+  2026-11-02 was opened for this run record and the
+  merge-time action-log line. Full detail in
+  pr-integration/1900-run.md.
