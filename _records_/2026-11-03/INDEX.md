@@ -235,3 +235,23 @@ of 2026-10-28.
   comment from the 1900 pass stands, not
   force-merged. No owner-gated PR.
   Full detail in pr-integration/0100-run.md.
+## 01:04 to about 01:27 - Queue ticker pass, alliance donations
+
+- Ticker pass ticker-0104. Sync reaped nothing and produced
+  nothing new - all 12 due regulars were already queued.
+  No zombie chain was seeded: the Zombie Invasion event
+  ended at about the 19:00 reset on 2026-10-30 and no
+  zombie unit sits in inbox or claimed.
+- Own PRs checked first: open records PRs 207 (2026-11-03),
+  204 (2026-11-02) and 187 (2026-11-01) all name Owner
+  lastwar-pr-integrator and carry no comment addressed to
+  this job, so nothing was owed before game work.
+- Donations unit donations-2026-11-02-1055, done: 19 coin
+  donations to Rallied Attack, count read live 19 to 18
+  to 13 to 7, then greyed button with a 00:40:56 timer.
+  The recorded Alliance centre (903,787) was found wrong
+  (it opens Mail); the true centre (930,689) opened the
+  menu first try. Final 0 remaining is inferred, verified
+  no, and a re-read unit is queued after the timer.
+  Issue 174 commented with the evidence. Full detail in
+  alliance-donations/0127-queue-run.md.
