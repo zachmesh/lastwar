@@ -659,3 +659,21 @@ of 2026-10-28.
   Drill Ground state not read live. Tracker
   untouched. Full detail in
   troop-training/0252-queue-run.md.
+
+## 03:00 to about 03:05 - PR integration pass (batch)
+
+- Integrator pass pr-integration-2026-11-03-0300.
+  Batch pass per the checker (_tools_/records_batch.py
+  on main reported due for the 03:00 window): records
+  PR 204 (2026-11-02, head 65cb6605) merged with a
+  merge commit (e6226c13), branch kept; its merge-time
+  action-log line rides fresh PR 216 for
+  records/2026-11-02. Records PR 207 (2026-11-03,
+  head 36a529d9) turned CONFLICTING after the PR 204
+  merge, on _logs_/repo-actions/action-log.jsonl and
+  _tools_/state/2026-11-03.json; conflict commented
+  this pass, not force-merged, awaiting branch-side
+  resolution. Records PR 187 (2026-11-01) still
+  conflicted, comment stands. No knowledge or code PR
+  open, no owner escalation.
+  Full detail in pr-integration/0300-run.md.
