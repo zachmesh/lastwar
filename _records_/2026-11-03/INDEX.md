@@ -1498,3 +1498,36 @@ of 2026-10-28.
   and research half, 154 Season Photo), statements
   current, no comment posted.
   Full detail in pr-catchall/0639-run.md.
+
+## 06:40 to about 06:47 — Queue planner pass, done
+
+- Planner pass queue-planning-2026-11-03-0640. Own PRs
+  checked first: PR 223 (knowledge-organizer-owned),
+  PR 216, PR 207 and PR 187 (all integrator-owned) —
+  none owned by this job, no reply or fix owed; PR 222
+  and PR 221 merged since the 0539 pass. Owner-decision
+  Issues checked: #154 still without an owner answer
+  (0 comments), #132's duel-score-only answer stands;
+  no building, research or alliance-facing unit staged
+  or invented, no new Issue filed (carried unknowns
+  only: station panel, loot box, furnace toast, banner).
+- Plan for the next 12 hours staged 11 units (evening
+  slots 1803/1830: mail, help, gifts, harvest, radar,
+  survivors, train, training, donations, arms-race,
+  star-ceremony), already_present 53,
+  skipped_done_current 5, reaped 0, expired 0.
+  Pre-reset sweep pair skipped (not the 1700 hour);
+  tonight's pair for the 1900 reset is the 1700 run's
+  job. Scout diff on the Nov 3 observation (passes
+  about 0017 to 0541 local) dry and applied agree, all
+  zero; 0 withdrawals (claimed harvest-2026-11-03-0603
+  in flight, never a candidate). Pool by_state at 0642
+  local: inbox 60, claimed 1, done 697, upcoming 49.
+  Diff-parse gap carried for the retro: the narrative
+  observation has no observed_items block, so the tool
+  reads 0 items against the narrative's red dots (base
+  3, Alliance Wars dot already Issue #212, 0541
+  alliance section 0). Live-tree sync gap carried:
+  tools/regulars.json still lacks the duel-score
+  regular, so no duel-score unit was staged.
+  Full detail in queue-planning/0640-run.md.
