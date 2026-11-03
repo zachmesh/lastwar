@@ -3591,3 +3591,20 @@ of 2026-10-28.
   closure belongs to the daily retro. No branch, PR,
   backlog edit, Slack DM, or chat report. Full detail in
   tool-development/2143-run.md.
+
+## 21:45 to about 21:52 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-02-2145.
+  Non-batch pass for records (checker reports outside
+  every batch window, next batch point 23:00).
+  Knowledge PR 200 (alliance-duel 1.16.0) merged:
+  Owner line corrected to lastwar-knowledge-organizer
+  after the 2115 feedback, diff otherwise clean.
+  Knowledge PR 201 (organizer 2132, 6 activity
+  profiles) merged clean. Local main fast-forwarded
+  to 3cba1b50. Records PR 193 (post-1900 batch, head
+  f2b5caad) awaits the 23:00 batch; records PR 187
+  conflict on action-log.jsonl carried, already
+  commented at 1900, not force-merged. No records PR
+  opened, no escalation. Merges synced to the owner
+  Slack DM. Full detail in pr-integration/2145-run.md.
