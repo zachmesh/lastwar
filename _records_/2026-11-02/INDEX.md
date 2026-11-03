@@ -3138,3 +3138,9 @@ of 2026-10-28.
   branch-side resolution. No knowledge or code PR
   open, no owner-gated PR. Full detail in
   pr-integration/1915-run.md.
+
+- Radar unit radar-2026-11-02-1803, done (ticker-1904): stack day (duel day 2) - radar screen verified (Lv.13, points 139, stored 0 of 40, stamina 56, 12 tasks restoring in about 02:19); no stored task to execute, no bottom-bar offer, map pin scan empty, nothing claimed. One device takeover (Confirm once, app reopened, dialog did not return). Full detail in radar-tasks/1913-queue-run.md.
+
+- Arms Race unit arms-race-2026-11-02-1803, partial (ticker-1904): live phase Unit Progression, score 9,300 against tier-3 75,000 (gap 65,700 = about 2,120 Lv.10 units at +31 each; speedup and diamond-pack paths are red lines, training batches belong to the training regular). No chest earned, none claimed; cumulative chest 0 of 2, ranking chest preview-only, no bouncing chest on the phase page. Events hub re-scan not completed (back arrow unresponsive to single and double taps). Tracker untouched. Full detail in arms-race/1924-queue-run.md.
+
+- Donations unit donations-2026-11-02-1803, failed (ticker-1904): game stranded on the Arms Race page from the previous unit; its back arrow ignored four background taps (90,947 single and double, 89,949, 58,945), so Alliance Techs was never reached, no donation made, no live count read. Tracker untouched. Next donations unit should relaunch the app first to restore the base view. Full detail in alliance-donations/1923-queue-run.md.
