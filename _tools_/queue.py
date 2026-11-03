@@ -394,6 +394,24 @@ def write_new_unit(root, fields, regular):
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
 
 
+def _fixed_slot_regulars():
+    """Ids of fixed-slots regulars from the roster beside this tool.
+
+    Returns an empty set when the roster is unreadable, so the
+    caller degrades to the not_before guard instead of failing
+    the producer pass.
+    """
+    try:
+        with open(os.path.join(os.path.dirname(
+            os.path.abspath(__file__)), "regulars.json"),
+            encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return set()
+    return {r.get("id") for r in regs
+            if r.get("cadence") == "fixed-slots" and r.get("id")}
+
+
 def _window_aged_priority1(root):
     """Attach a real window to aged unscheduled priority-1 inbox
     units (issue #128 fix 1). Called by both producers - sync and
@@ -409,9 +427,21 @@ def _window_aged_priority1(root):
     instead of aging silently. Idempotent: a unit with a
     planned_for is never touched again, and the (regular,
     planned_for) invariant is respected. Returns the units
-    windowed."""
+    windowed.
+    Two exemptions (issue #147): a fixed-slots regular is never
+    re-timed - plan owns its slot timing, and re-timing destroyed
+    the 2026-11-02 final pre-reset sweep (its 18:30 slot and 19:00
+    reset expiry were rewritten to now and now+4h by the 17:55
+    tick, 35 minutes before its slot); and a unit whose
+    not_before is still in the future is waiting for its slot,
+    not stalled, so it is never re-timed either. A fixed-slot
+    unit past its slot is still covered by expiry: it always
+    carries a reset expiry, so _expire_stale surfaces it as a
+    miss without any windowing.
+    """
     stamp = now_utc()
     planned_iso = iso(stamp)
+    fixed_slots = _fixed_slot_regulars()
     taken = {(f.get("regular"), f.get("planned_for"))
              for state in STATES for f in list_units(root, state)
              if f.get("planned_for")}
@@ -425,6 +455,11 @@ def _window_aged_priority1(root):
         except (TypeError, ValueError):
             continue
         if priority != 1:
+            continue
+        if f.get("regular") in fixed_slots:
+            continue
+        not_before = parse_iso(f.get("not_before", ""))
+        if not_before is not None and not_before > stamp:
             continue
         created = parse_iso(f.get("created_at", ""))
         if created is None:
