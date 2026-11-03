@@ -898,3 +898,45 @@ of 2026-10-28.
   tools/regulars.json still lacks the duel-score
   regular, so no duel-score unit was staged. Full
   detail in queue-planning/0340-run.md.
+
+## 03:34 to about 03:50 — Queue ticker pass, trucks, secrets, treasures
+
+- Ticker pass ticker-0334. Sync reaped nothing and produced
+  nothing new - all due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30, and no zombie unit sits in
+  inbox or claimed. Open records PRs checked first: PR 207
+  (records/2026-11-03), PR 216 (records/2026-11-02) and PR 187
+  (records/2026-11-01) are all owned by lastwar-pr-integrator,
+  none by this job, so nothing was owed there.
+- Trucks unit trucks-2026-11-03-0257, partial: trade screen
+  entry failed again - old station tap [491,195] no-change
+  (second consecutive unit), grounded station points
+  selected High-temp Furnace Lv.30 and Wall Lv.26 or were
+  no-change, left column carries no trade slot in this set.
+  No counters read live; the 1-dispatch shortfall (Trade
+  4/5, Plunder 4/4 from the 2026-11-02 21:20 unit) is carried,
+  not re-read. Tracker untouched. GitHub Issue 218 filed
+  for this repeated failure mode. Full detail in
+  truck-plunder/0344-queue-run.md.
+- Secrets unit secrets-2026-11-03-0257, done: Secret Command
+  Post checked - Assist Allies 5/5 capped, no finished task
+  left unclaimed (three SSR cards PERFECT, UR Disrupt
+  electric grid with no Claim button), Reward Recovery
+  2026-10-24 record already CLAIMED, Mega buttons greyed.
+  Entry lesson: snapped left-column taps land on the trade
+  slot; the unsnapped exact-centre pickup tap [55,632]
+  opens the post, and that finding was commented on Issue
+  218. Full detail in secret-missions/0346-queue-run.md.
+- Treasures unit treasures-2026-11-03-0257, done, checked
+  only: fragment counts M1 x12, M2 x12, M3 x0, M4 x7,
+  M5 x2, M6 x5, M7 x11, chest progress 4/15, Dig buttons
+  greyed - M3 x0 is the binding fragment, no dig possible,
+  no exchange executed. Full detail in
+  hidden-treasures/0349-queue-run.md.
+- Loop stopped at the pass budget with one stale unit left
+  unexecuted: scout-midday-scout-mid-2026-11-02-001, the
+  successor of the closed 2026-11-02 midday pass, was not
+  run - executing it now would append to a closed reset
+  day. It stays in inbox for the planner or retro to
+  expire.

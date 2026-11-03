@@ -6,18 +6,18 @@
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-03T04:13:06",
-  "note": "Mail swept: Alliance 4 and Event 3 gift mails claimed"
+  "at": "2026-11-03T11:11:37",
+  "note": "Mail Claim All all categories: no rewards available, 0 claimed, 0 deleted"
  },
  "gifts": {
   "status": "done",
-  "at": "2026-11-03T04:18:36",
-  "note": "Alliance gifts swept: Regular 31 and Premium 3 claimed"
+  "at": "2026-11-03T11:08:12",
+  "note": "Both tabs claimed: 64 Regular + 5 Premium; Lv28 183,946,860/206,300,000"
  },
  "help": {
   "status": "done",
-  "at": "2026-11-03T04:38:48",
-  "note": "Help bubble tapped, toast confirmed, bubble gone"
+  "at": "2026-11-03T11:09:00",
+  "note": "Help All pressed, toast confirmed; header unchanged 980/1000"
  },
  "train": {
   "status": "done",
@@ -26,23 +26,23 @@
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-11-03T04:47:18",
-  "note": "No trophy icon, no ceremony waiting"
+  "at": "2026-11-03T11:12:32",
+  "note": "No ceremony trophy icon, nothing played"
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-03T05:10:07",
-  "note": "Shop sweep done: all owned claims already taken, no new claim"
+  "at": "2026-11-03T11:16:48",
+  "note": "Shop sweep: all owned daily claims already taken, 0 new claims"
  },
  "events": {
   "status": "done",
-  "at": "2026-11-03T05:13:46",
-  "note": "Events sweep done: 4 tabs, nothing claimable"
+  "at": "2026-11-03T11:18:09",
+  "note": "Hub sweep: nothing claimable, 0 claims"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-11-03T08:16:01",
-  "note": "M3 x0, no dig possible"
+  "at": "2026-11-03T11:47:00",
+  "note": "Checked only: M3 x0, no dig possible, chest 4/15"
  },
  "vip": {
   "status": "done",
@@ -51,7 +51,7 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-03T08:14:32",
-  "note": "Assists 5/5; nothing pending to claim or dispatch"
+  "at": "2026-11-03T11:46:11",
+  "note": "Assists 5/5 capped, no finished task unclaimed, recovery claimed, Mega greyed"
  }
 }
