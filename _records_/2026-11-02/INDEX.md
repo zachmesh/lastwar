@@ -3726,3 +3726,15 @@ of 2026-10-28.
   (Season Photo alliance-facing actions) both over 24 hours
   with their statements current.
   Full detail in pr-catchall/2239-run.md.
+- Tool-developer pass tool-development-2026-11-02-2232.
+  Fixed open tooling issue 197 (star-ceremony unit copied
+  its duel total into points, inflating window points):
+  queue.py complete now warns when nonzero points equals
+  achieved and records stats_warnings, stats flags legacy
+  copies as stats_points_dup, and retro_report.py 1.4.0
+  excludes the copied figure from points totals under
+  points_dup_excluded. PR 203 opened (commit 125b035db2),
+  issue 197 commented and not closed, Slack DM sent.
+  Scratch validation 6 checks passed, including an
+  unpatched-main control that still sums 791250.
+  Full detail in tool-development/2232-run.md.
