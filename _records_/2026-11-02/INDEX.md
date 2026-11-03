@@ -3322,3 +3322,6 @@ of 2026-10-28.
   not force-merged. No records PR opened, no comment
   posted, no merge. Full detail in
   pr-integration/2015-run.md.
+
+- 2012 mail-rewards: mail unit done - Alliance 4 and Event 3 gift mails claimed, all gift icons gone on re-read (mail-rewards/2012-queue-run.md).
+- 2018 alliance-gifts: gifts unit done - Regular 31 and Premium 3 claimed, gift progress 181,714,890 to 181,715,830 (alliance-gifts/2018-queue-run.md).
