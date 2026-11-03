@@ -3353,3 +3353,15 @@ of 2026-10-28.
   no escalation. Owner-decision issue 132 is past 24 hours
   with its decision statement current; issue 154 is about 22
   hours old. Full detail in pr-catchall/2039-run.md.
+
+## 20:40 to about 20:50 - Queue-planning pass
+
+- Queue-planning pass queue-planning-2026-11-02-2040.
+  Plan staged 0 units (already_present 65,
+  skipped_done_current 4, reaped 0, expired 0).
+  Pre-reset sweep check skipped outside the 17:00 hour;
+  tonight's pair already done. Scout diff on the Nov 2
+  observation applied all zero (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained 0); 0 withdrawals.
+  Pool by_state: inbox 63, claimed 1, done 639, upcoming
+  49. Full detail in queue-planning/2040-run.md.
