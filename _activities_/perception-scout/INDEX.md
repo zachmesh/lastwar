@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T14:37:12Z
+modified: 2026-11-03T17:40:00Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -20,6 +20,8 @@ grounded_in:
   - source: ticker-0134 perception-scout execution record 2026-11-03 0136 queue run (alliance group remainder partial, Wars dot filed as Issue #212)
   - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (partial, alliance remainder walked, grounded taps, Wars tabs empty, Issue #212 open)
   - source: ticker-0504 perception-scout execution records 2026-11-03 0508 and 0510 queue runs (partial, observe-only, store-group re-walk, Mall 7-tab strip identical, MALL label static, no Crystal Shop or Glittering Market tab)
+  - source: ticker-0834 perception-scout execution record 2026-11-03 0839 queue run (partial, base and events groups, Drone Boost 9300, Wanted Boss Code 64, no Zombie entry)
+  - source: ticker-0904 perception-scout execution record 2026-11-03 0910 queue run (partial, alliance group, stale 11-02 post-reset unit executed, Wars dot still open on Issue #212, OCR-row grounding lesson)
 ---
 
 
@@ -953,6 +955,155 @@ observe-only, nothing claimed). Evidence in
   base and Mall layout only; every unit re-grounds on
   its own capture.
 
+## What the 2026-11-03 0839 and 0910 units added - base and events walk, alliance group with OCR-row grounding
+
+- Ticker-0834, unit scout-midday-2026-11-03-0700 (chain
+  head of the midday pass), about 08:39 local, status
+  partial: the base screen and the Events hub (Arms Race
+  and Wanted Boss tabs) were walked live; the Desert
+  Battlefield and fourth Events tabs, the Alliance panel
+  group, the store group, mail category lists and the
+  world map frame for this pass are unwalked and carried
+  to the successor unit in chain scout-mid-2026-11-03, so
+  the tracker is left untouched. Evidence in
+  `_records_/2026-11-03/perception-scout/0839-queue-run.md`.
+  Observe-only throughout: nothing claimed, fought,
+  dispatched, donated, dug or bought. The Wanted Boss Go
+  button was observed only, never tapped; no Buy button
+  was tapped.
+- 0839 base screen, read live: account power 149,940,141,
+  unchanged from the 0710 help read; food 240.3M, iron
+  575.0M, coin 12.1M, second row 19.0M, 505.1K, 12.72K
+  with a plus button, diamonds 2,836, stamina 120, March
+  Queues 0/4. Left column badges: green face with a red
+  badge 1 nearby, radar dish badge 11. Right column:
+  Events red badge 1, Capitol, VS timer 09:21:09, second
+  timer 12d 09:21:09, Season II icon, Alliance, Mail,
+  Inventory. Bottom 99+ badge, target icon with red badge
+  1 and a 00:00:52 countdown, furnace toast "High-temp
+  Furnace total overdrive time (in sec)" again,
+  unexplained red-line surface observed only.
+- 0839 Events hub, read live: Arms Race phase Drone
+  Boost, Contest Segment Lv.29-30, chest progress 0/2,
+  star counter 0, time left 01:20:50, tier thresholds
+  1,500, 10,000, 30,000, player row #2110 [AP3x]Bears
+  Lair with 9,300 shown below the row - consistent with
+  the 0808 events read folded in the 0832 run, not a new
+  score. Wanted Boss tab: Code 64, appears at server
+  time 00:00, Go timer 08:20:35, Missile Vehicle heroes
+  deal 50 percent extra damage on the Wanted Boss,
+  rewards for completing 1 attack listed (stamina 50 and
+  four other items). No Zombie Invasion entry seen in
+  the Events hub tabs walked, consistent with the event
+  having ended 2026-10-30. Red dot accounting for the
+  surfaces walked: 0 unexplained (Events badge 1 maps to
+  the Wanted Boss dot and the Arms Race phase, radar 11
+  to the radar surface, 99+ to chat/mail surfaces, the
+  target-icon badge to the world-map rally surface).
+- Ticker-0904, unit scout-scout-2026-11-02-003, about
+  09:05 to 09:12 local, status partial (alliance group
+  walked in part; the remainder is carried to the
+  successor). Note on staleness: the 0834 pass left this
+  unit unexecuted as a stale unit of the closed 2026-11-02
+  post-reset pass. This pass executed it because the
+  queue `next` pick returned it and it still yielded live
+  reads (notably the 238 claimable Regular gifts); the
+  remainder is carried to the successor per design
+  section 13, and the planner or retro may expire the
+  chain. Evidence in
+  `_records_/2026-11-03/perception-scout/0910-queue-run.md`.
+  Observe-only: nothing claimed, fought, dispatched,
+  donated, signed up for, or bought. No price tag was
+  tapped. The Help All button, the Gifts Claim and Claim
+  All buttons, the Gifts Go buttons and the Techs
+  donation controls were observed only, never tapped.
+  Appended to the 2026-11-02 observation file.
+- 0910 base screen, read live about 09:06 local: account
+  power 149,940,141, unchanged from the 0839 read; HUD
+  totals as displayed food 240.3M, iron 575.0M, coin
+  12.1M, second row 19.0M, 505.1K, diamonds 12.72K with a
+  plus button, stamina 120, cart 2,836. March Queues 0/4.
+  Right column: Events badge 1, Capitol, VS timer
+  08:53:52, Season II timer 12d 08:53:52, Alliance, Mail,
+  Inventory. Bottom: 99+ badge, HEROES, chat ticker
+  "Breaking News: Alliance War!", BASE, target icon with
+  red badge 3 and a 00:00:31 countdown, radar badge 11
+  on the left column. Furnace toast again: "High-temp
+  Furnace total overdrive time (in sec) [22/60]", still
+  unexplained, red-line surface observed only.
+- 0910 Alliance panel, read live: entry by the Alliance
+  icon on the base right column, re-grounded fresh on
+  the screenshot (centre about [903,699]); the recorded
+  (903,787) centre is Mail, not Alliance, as the
+  donations unit already noted. Panel header: [AP3x] The
+  Apex, 5.0 stars, Leader Abyss Apex, Power
+  13,086,499,653 (up from 13,016,623,359 at the 0446
+  read), Members 94/100, Language English. Motto
+  unchanged, including the Korean line. Red dots on the
+  panel: Alliance Wars, Help, Alliance Gifts, Alliance
+  Techs. No dot on Alliance Store, Members, Assemble,
+  Strength Ranking, Alliance Events or Alliance City
+  (City button shown highlighted, as before). Footer:
+  Record, Applicants, Alliance Star, Settings, all
+  unwalked in this unit.
+- 0910 Help, walked live: today's points gained from
+  Alliance Help 1,240/1,000, over the gate, unchanged
+  from 0446. Four Bears Lair requests, all 30/30: Morale
+  research, Precision Targeting II research, building
+  Lv.27 Drill Ground, building Lv.30 Aircraft Center.
+  Help All button present, observed only, not tapped.
+  The Help dot maps to the help regular (already queued);
+  the owner's own requests are full and the daily points
+  are over the gate, so nothing new to claim is recorded
+  for this walk.
+- 0910 Alliance Wars, walked live (both tabs): Rally
+  Intel tab "No Alliance Rally currently."; Individual
+  Intel tab "There are no ongoing Alliance Wars
+  currently." Both tabs empty, as in 0446. The Wars dot
+  is not explained by a live Wars action; it stays open
+  on Issue #212 (cycling member-activity indicator or
+  stale badge), not closed by this unit.
+- 0910 Alliance Gifts and Techs, walked live: see the
+  gifts profile for the 238 claimable Regular gifts and
+  the 186,155,650 progress read, and the donations
+  profile for the 6700 Tech Donation Today read. War
+  tab levels identical to the 0446 read (Troop Movement
+  5/10, Rallied HP 6/10, Rallied Attack 7/10, Rallied
+  Defense 7/10, next node below 1/10 with its name cut
+  off at the frame edge). Tech Donation Today 6700, up
+  from 6200 at 0446; "Requires at least 1000
+  contribution points to earn the reward". No separate
+  claim button was visible on this tab. Top ticker,
+  partially read: "President Abyss Apex appointed
+  Mav6776 as Secretary of Development!" Development tab
+  not opened, carried to successor.
+- 0910 red dot accounting for this unit: seen on surfaces
+  walked 5 (Help, Wars, Gifts panel, Premium tab,
+  Techs); explained 3 (Help, Gifts Regular with 238
+  claimable, Techs mapped to the donations regular);
+  unexplained 2 (Wars dot, open on Issue #212; Premium
+  tab dot, visible rows all Claimed and below-fold rows
+  unverified). Carried unwalked, dots unknown:
+  Development tab, Alliance Store, Members, Strength
+  Ranking, Alliance Events, Record, Applicants, Alliance
+  Star, Settings, the station panel and the loot box
+  (both still unlocated since 0446). unmatched_labels:
+  none in the surfaces walked.
+- Tooling finding, ground alliance panel taps on the
+  current OCR label rows, never on a screenshot estimate
+  alone: the first Help tap at [730,455] produced no
+  change, while the 0446 grounding [687,497] opened Help
+  on the first tap. The Alliance panel button rows sit
+  lower than a fresh screenshot estimate suggests: OCR
+  label rows are 509, 595, 679, 766, 849, so a tap at
+  [312,547] falls on the Wars button's lower area and
+  opened Wars, while [303,595] opened Gifts. The Premium
+  tab tap at [725,231] produced no change; the
+  OCR-grounded [694,269] opened it. This repeats the
+  0650 gifts lesson that eyeballed y estimates run low
+  on this panel.
+
+
 ## Open questions
 
 - Season II badge 1, seen in the 0436 and 0514 units of
@@ -968,6 +1119,6 @@ observe-only, nothing claimed). Evidence in
   to the successor scout unit, not closed on silence.
 - Whether stale staged scout units execute or expire - see the
   filing question in the 2026-11-01 section; a queue-rule
-  decision, not a scout-unit decision.
+  decision, not a scout-unit decision. (2026-11-03 0910 update: a stale 11-02 post-reset scout unit DID execute when the queue `next` pick returned it and still yielded live reads, so execution of stale units is observed, not merely hypothesised; whether the planner or retro expires the chain is still open.)
 
 - The 146,610,448 mid-HUD figure is NOT account power (donations 1810 unit: own power 149,311,528, rank 31, unchanged from the 13:53 read); what the figure is remains unknown.
