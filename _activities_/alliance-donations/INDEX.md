@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T13:34:48Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0104 alliance-donations execution record 2026-11-03 0127 queue run (done, 19 coin donations, entry centre corrected, re-read pending)
   - source: ticker-0134 alliance-donations execution record 2026-11-03 0144 queue run (done, 2 coin donations, count replenished 0 to 2, re-read pending)
   - source: ticker-0234 alliance-donations execution record 2026-11-03 0235 queue run (partial, entry centre framing, 2 verified donations, re-read retimed)
+  - source: ticker-0434 alliance-donations execution record 2026-11-03 0441 queue run (partial, entry centre (903,787) is Mail, 4 verified coin donations, tap-5 timer no-landing, tap-6 timer unverified, Issue #220)
 ---
 
 
@@ -639,7 +640,16 @@ before 03:17 local). Evidence in
   are tapping the Alliance HQ building on the map
   itself, or re-entering the base view) and then tap
   the fresh measured Alliance centre (903,787), never
-  a grounding-tool point above the button. A fourth
+  a grounding-tool point above the button.
+- Correction, 2026-11-03 0441: this instruction is
+  WITHDRAWN. On the 0441 full-base screenshot the
+  (903,787) tap opened Mail, not the Alliance menu;
+  the Mail envelope grounds at (931,777) and the
+  Alliance shield at (931,691), which opened the menu
+  on the first try. (903,787) stays only as the 1427
+  screenshot's measured centre, never as a tap point.
+  The standing rule remains re-grounding on the current
+  screenshot, per the 0235 section and Issue #220. A fourth
   identical partial is a process failure and is
   reported to the owner as one. No new re-read unit is
   enqueued from this unit: the re-read unit
@@ -801,6 +811,70 @@ before 03:17 local). Evidence in
   nor the sweep's 1-remaining figure. The 1810 direction
   stands: the next unit re-reads live on the Garrison
   Defense panel first, and never closes on arithmetic.
+
+
+## What the 2026-11-03 0441 unit added
+
+- Ticker-0434, unit donations-2026-11-03-0910, about 04:41
+  local, status partial. Coin button only: no diamonds, no
+  money, no paid button tapped. Evidence in
+  `_records_/2026-11-03/alliance-donations/0441-queue-run.md`.
+- Entry, correction in favour of the newest verified
+  record: the R2 section's standing instruction to tap
+  the fresh measured Alliance centre (903,787) is
+  withdrawn. On this unit's full-base screenshot that tap
+  opened Mail, not the Alliance menu. Visual grounding on
+  the same screenshot puts the Mail envelope at (931,777)
+  and the Alliance shield at (931,691); a single tap at
+  (931,691) opened the Alliance menu at once: [AP3x] The
+  Apex, 94/100 members. This is the third distinct shield
+  centre in one day, after (930,689) at 0127 and (910,720)
+  at 0235, so the shield centre drifts per session and no
+  recorded point is reusable: every donations unit
+  re-grounds on its current screenshot before tapping.
+  Filed as Issue #220 (labels knowledge, play); the
+  profile correction here closes the issue's fix request,
+  closure itself belongs to the daily retro.
+- Alliance Techs tile tapped at grounded (687,682). State,
+  read live: War tab Troop Movement 5/10, Rallied HP 6/10,
+  Rallied Attack 7/10, Rallied Defense 7/10, next node
+  below 1/10. Tech Donation Today 5450 at entry, 6200 at
+  close; the footer counter is alliance-wide, so the +750
+  move is not claimed as this unit's alone.
+- Rallied Attack panel: Current +7 percent, Next Level +8
+  percent, Tech EXP 10.5K/4.5M at entry, Donation Reward
+  50/50, Donation Count 5/30, coin Donate green at 800
+  coin, diamond Donate at 2 diamonds (never used). This
+  unit was the re-read named by ticker-0234 and did NOT
+  confirm 0 remaining: 5 coin donations remained, so it
+  donated instead of closing as checked only.
+- Donations, per-tap evidence: green coin Donate centre
+  grounded at (659,786). Taps 1 to 4 moved the count 5/30
+  to 1/30, each verified by OCR; tap 3 showed the tooltip
+  "Hold down for easier continuous donations". Tap 5
+  greyed the button with a 00:01:36 timer and the count
+  label hidden; after the timer was waited out inside the
+  unit (about 100 seconds) the panel re-read Donation
+  Count 1/30 live, so tap 5 did not land, the same shape
+  as ticker-0234 tap 2. Commented on Issue #174 by the
+  executor, so no duplicate organizer comment was made
+  there. Tap 6 at the same centre greyed the button with
+  a 00:19:35 timer, count label hidden, Tech EXP 11.3K;
+  whether tap 6 landed is not decided by this unit.
+- Closing state, unverified by the hard rule: at close the
+  Donation Count cannot be read live, because the 00:19:35
+  timer from tap 6 (started about 04:41 local) runs until
+  about 05:01 local, past this unit's budget, and the
+  count label is hidden behind it. This unit closes
+  partial and unverified, not done, and no arithmetic
+  final count is claimed. Tracker left untouched.
+- Re-read enqueued: donations-2026-11-03-1241, not-before
+  2026-11-03T13:02:00Z (05:02 local, after the 00:19:35
+  timer), to confirm the count state.
+- Red lines held: no diamonds spent, no paid button tapped,
+  no alliance diplomacy, no assembly, no teleport. Mail
+  was opened only by the mis-aimed entry tap; no mail was
+  claimed or deleted, and Delete All was never tapped.
 
 ## Open questions
 
