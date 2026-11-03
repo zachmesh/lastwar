@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T21:45:53Z
+modified: 2026-11-03T22:38:00Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-0904 alliance-donations execution record 2026-11-03 0920 queue run (partial, 8 verified coin donations 9 to 1, fifth greyed-timer failure at 1/30, 10-second hold no change, count replenished 1 to 9, fixed daily-30 cap superseded, Issue 174, Issue 220)
   - source: ticker-1004 alliance-donations execution record 2026-11-03 1030 queue run (partial, 3 verified coin donations 4 to 1, sixth greyed-timer failure at 1/30 first via Rallied Defense, blocker not node-specific, Issue 174)
   - source: ticker-1304 alliance-donations execution record 2026-11-03 1322 queue run (partial, 7 verified coin donations 8 to 1, Strength Ranking re-read retired, regeneration 1 to 8, R3 1300 checkpoint answered, Issue 174)
+  - source: ticker-1404 alliance-donations execution record 2026-11-03 1421 queue run (partial, Alliance entry pivot 899,716, Techs tile unresponsive first occurrence, count carried not confirmed, Issue 220)
 ---
 
 
@@ -77,6 +78,8 @@ activity. Not a separate type.
   opened the Alliance menu on the first try.
 
 - Entry, 2026-11-03 0621: a tap at (678,615) opened the Members list instead of Alliance Techs on that framing; the back arrow at (60,955) returned to the menu and the proven (687,682) opened Techs at once. The (930,700) shield centre worked twice in one morning (0521 fresh ground, 0621 fallback after a grounding point and a double-click both failed), so it is the standing fallback when fresh grounding fails, not a carried default: every unit still re-grounds on its current screenshot first.
+
+- Entry, 2026-11-03 1421: taps on the base right column at the previously recorded Alliance centre (903,787) and the fresh measured centre (899,794) both opened the MAIL panel, not the Alliance panel. The pivot that worked, per rule R2, is a tap one icon-height above the shield centre, at (899,716), which opened the Alliance panel at once. The next donations unit enters the Alliance panel with (899,716) first, not the shield centre. The base-column offset is local to that column, not a global input shift: inside the Alliance panel itself taps landed exactly where aimed.
 
 ## How it is done
 
@@ -1879,3 +1882,68 @@ enqueued for after the cooldown (not before about
 - This fold is commented on Issue #174 by this run.
   Neither issue is closed here - closure belongs to the
   daily retro, with evidence.
+
+## What the 2026-11-03 1421 unit added - Alliance entry pivot, Techs tile unresponsive first occurrence, count carried not confirmed
+
+- Unit donations-2026-11-03-1403 by ticker-1404,
+  about 14:13 to 14:21 local, status partial. No
+  donation made, no count read live, tracker
+  untouched, day not marked done. Evidence in
+  `_records_/2026-11-03/alliance-donations/1421-queue-run.md`.
+- Entry, changed method that worked (Issue #220): two
+  taps on the base right column at the previously
+  recorded Alliance centre (903,787) and the fresh
+  measured centre (899,794) both opened the MAIL
+  panel, not the Alliance panel, the same
+  Mail/Alliance confusion the 10:52 mail unit
+  reported in reverse. Pivot, per rule R2: a tap one
+  icon-height above the shield centre, at (899,716),
+  opened the Alliance panel at once ([AP3x] The Apex,
+  94/100). The next donations unit enters the Alliance
+  panel with (899,716) first, not the shield centre.
+  This pivot is also recorded in How to enter above.
+- The base-column offset is local to that column, not
+  a global input shift: inside the Alliance panel
+  itself taps landed exactly where aimed (a tap at
+  (693,563) opened Members as expected).
+- Blocker, first occurrence, recorded here and named
+  for the next unit, NOT yet promoted to the standing
+  blocker list (rule R2): on the Alliance panel, the
+  Alliance Techs tile (fresh measured centre
+  (720,638), tile spanning about x 355 to 570 and y
+  575 to 640 in window pixels) did not respond to
+  single taps at (693,641) and (720,638), a
+  double-click at (720,638), or a 1-second long-press
+  at (720,638); every observation after these inputs
+  still showed the Alliance panel unchanged. The tile
+  carries a red dot. No donation panel was reached, so
+  no Donation Count was read live and no coin donation
+  was made. If the next donations unit hits the same
+  unresponsive tile, that second consecutive partial
+  must arrive with a further changed method, and a
+  third writes the blocker into the standing metadata.
+- Background-click stall pattern, same session: the
+  Alliance panel back arrow at (78,940) and (81,941)
+  also showed no change, and the tool noted that
+  background clicks do not reach some controls. The
+  game was left on the Alliance panel, harmless for the
+  next unit.
+- Day state carried, NOT confirmed: the 13:22
+  donations unit (ticker-1304) last read the Rallied
+  Attack count live at 1 of 30 remaining. That figure
+  was NOT re-read in this unit, so it is carried, not
+  confirmed, and is not a closing figure. The day is
+  therefore still 1 donation short of the 30 of 30
+  target as far as live evidence goes. The 17:00
+  two-hour checkpoint (rule R3) must re-read the count
+  live; a shortfall there raises the next donations
+  unit to priority 1. No new replenishment data point
+  for Issues #160 and #174: with no live re-read, this
+  unit neither confirms nor moves the regeneration
+  series.
+- Red lines held: no diamonds spent, no paid button
+  tapped, no alliance diplomacy, no assembly, no
+  teleport. The diamond Donate button was never tapped.
+- This fold is commented on Issue #220 by this run.
+  Neither issue is closed here - closure belongs to
+  the daily retro, with evidence.
