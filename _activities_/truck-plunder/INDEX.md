@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T21:44:07Z
+modified: 2026-11-03T05:40:46Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-0404 truck-plunder execution record 2026-11-02 0416 queue run (partial, trade entry corrected)
   - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (partial, dispatch quota filled, plunder shortfall 2 remains)
   - source: ticker-1307 truck-plunder execution record 2026-11-02 1325 queue run (partial, leftmost shard stack x3 pays in full, plunder shortfall 1 remains)
+  - source: ticker-2104 truck-plunder execution record 2026-11-02 2120 queue run (partial, station-tap entry, counters 4/5 and 4/4, fifth dispatch shortfall)
 ---
 
 # Truck plunder - Intercity Trade
@@ -74,6 +75,14 @@ train also runs on this screen as a trade vehicle.
   was confirmed by the screen it opened. Icon centres in the
   642 by 951 window sat near norm y 605 (trade), 657 (secret post)
   and 720 (radar) in that set.
+- Station-building entry, measured 2026-11-02 (2120 unit):
+  with the column set carrying no trade slot (green face /
+  pickup / dish / hammer), fresh visual grounding put the
+  station building at norm 352-630 x 105-285, and a tap at
+  its centre [491,195] opened Intercity Trade directly on
+  the Others' Trucks view, with no settlement pending.
+  Use this route before hunting the column set flip when
+  the column carries no trade slot.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.
@@ -1014,6 +1023,71 @@ settlement and dispatch execution record).
   counters live on entry; no new-day counter is claimed
   here.
 
+## What the 2026-11-02 2120 unit added - station-tap entry, counters 4 of 5 and 4 of 4, partial
+
+- Unit trucks-2026-11-02-1857 by ticker-2104, session
+  about 21:05 to 21:20, status partial, dispatch
+  shortfall 1 remains, tracker untouched for the
+  shortfall. Evidence in
+  `_records_/2026-11-02/truck-plunder/2120-queue-run.md`.
+- Entry breakthrough: no left-column point was
+  re-tapped, per the 1845 successor instruction.
+  Fresh visual grounding put the station building at
+  norm 352-630 x 105-285, and a tap at its centre
+  [491,195] opened Intercity Trade directly on the
+  Others' Trucks view. This is a new, working entry
+  route for the current column set (green face /
+  pickup / dish / hammer, no trade slot).
+- Supersession, in favour of the newest verified
+  record: this entry succeeded with no settlement
+  pending, so the 2026-10-30 hypothesis that the
+  trade slot surfaces only while a settlement pends
+  is superseded as an entry rule. The 1845 section's
+  "hypothesis still fits" line stands as that unit's
+  read only; it is not the standing rule. The
+  column-set flip question below stays open, but it
+  no longer blocks entry - the station tap answers
+  the 1845 successor direction.
+- Counters, read live at entry and unchanged at
+  close: Your Plunder Count Today 4/4, Today's Trade
+  Count 4/5. The counters are the source of truth.
+  Four trucks are out: two SR blue, two SSR purple,
+  the SSR pair carrying flame markers for looting en
+  route. No returned truck awaited settlement.
+- Mega Mode inspected, nothing spent: Mega Refresh
+  lists the four out trucks (No.1 SR 01:00:57 left,
+  No.2 SR 00:50:11, No.3 SSR 01:14:39, No.4 SSR
+  00:56:57) with a "Refresh all to Reindeer Sleigh
+  Ride" checkbox and Refresh Selected 0/165 -
+  nothing selected or refreshed, no contract spent.
+  Mega Dispatch reads "All current trade trucks have
+  been dispatched. Time for a coffee break!",
+  Today's Dispatches 4/5, with Select All / Dispatch
+  Selected greyed.
+- Fifth dispatch waits for the first return, about
+  00:50 away at read time (about 22:10 local). This
+  is a UR duel day (day 2, Base Expansion), so that
+  dispatch must be UR; whether the Mega Dispatch
+  bulk route or a single-slot roll produces the UR
+  truck is still unobserved, because no slot was
+  free to try it on. Next unit: settle first if the
+  returned truck needs it, then dispatch the freed
+  slot as UR.
+- Counters provenance, explicitly not inferred: how
+  the new trade day reached 4/5 and 4/4 before this
+  unit is not established in this record - no agent
+  trucks record sits between 1845 (previous day
+  close 5/5, 3/4) and this unit. The record notes it
+  may be owner evening play, when the 1834 pass was
+  contested twice. Do not attribute the gap to any
+  unit.
+- Reward Recovery checked: the 2026-10-31 19:00
+  record (3 unstarted transports) reads CLAIMED; no
+  new record waits. Nothing claimed in this unit.
+  No diamonds, no Trade Contracts, no paid button,
+  no alliance mate plundered.
+
+
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
@@ -1025,4 +1099,4 @@ settlement and dispatch execution record).
   so the evening dispatches ran under normal day handling.
 - Whether the collapsed 2026-10-20 Reward Recovery record was
   already claimed - its toggle did not expand on 2026-10-25.
-- What flips the base left-column icon set to the set that carries the trade slot (2026-11-02 1845 update: the 1845 set - green face / pickup / radar dish / hammer - carries no train-front icon at all and no trade badge; 52,553 opens the season warming panel, not trade; the successor must find the set-flip control or another entry route first) - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it. (2026-11-02 0416 update: for this set the premise is corrected - the train-front icon at [52,552], reached after a title-bar foregrounding tap, is the trade entry; the flip question remains for sets where no train-front icon is present.)
+- What flips the base left-column icon set to the set that carries the trade slot (2026-11-02 1845 update: the 1845 set - green face / pickup / radar dish / hammer - carries no train-front icon at all and no trade badge; 52,553 opens the season warming panel, not trade; the successor must find the set-flip control or another entry route first) (2026-11-02 2120 update: the station-building tap at [491,195] opens Intercity Trade directly for this column set, so entry no longer depends on finding the set flip; the flip itself stays unknown) - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it. (2026-11-02 0416 update: for this set the premise is corrected - the train-front icon at [52,552], reached after a title-bar foregrounding tap, is the trade entry; the flip question remains for sets where no train-front icon is present.)

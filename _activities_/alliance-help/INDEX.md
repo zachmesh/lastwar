@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T02:40:01Z
+modified: 2026-11-03T05:40:46Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-0834 alliance-help execution record 2026-11-02 0836 queue run (done, Help All pressed, header 400 of 1000 unchanged)
   - source: alliance-help execution record 2026-11-02 1220 queue run (ticker-1204 unit, done, toast fired with 0 counted helps)
   - source: alliance-help execution record 2026-11-02 1741 queue run (ticker-1729 unit, partial, Healing Help request unhelped)
+  - source: ticker-2034 alliance-help execution record 2026-11-02 2038 queue run (done, base-screen bubble, Alliance red dot is not remaining help)
 ---
 
 
@@ -416,6 +417,40 @@ Measured in the 0135 help unit (ticker-0134, window mode
   whether it needs a different surface such as the hospital -
   then help it. Do not record Help All as clearing Healing
   Help requests until a unit verifies it.
+
+
+## What the 2026-11-02 2038 unit added - done through the base-screen bubble
+
+- Unit help-2026-11-02-1830 by ticker-2034, session
+  about 20:34 to 20:38, status done. Waiting helps
+  present at entry were cleared through the
+  base-screen bubble, the standing easiest form of
+  this rule. Evidence in
+  `_records_/2026-11-02/alliance-help/2038-queue-run.md`.
+- Base screen showed the help bubble at the lower
+  right, the yellow tile with a hand holding a green
+  missile, immediately left of the Alliance shield
+  button, as described in the activity metadata.
+- Bubble centre tap (window coordinates about 821,
+  720): the first tap attempt sent no input because
+  the control observation was stale; a fresh
+  observation followed by the same tap succeeded,
+  so this was a tool retry, not a game blocker.
+- The game answered with the toast "Allies are very
+  grateful for your assistance", and a re-screenshot
+  confirmed the help bubble had disappeared.
+- Completion-criterion note: the Alliance button
+  still showed a red dot after the press; that dot
+  also covers other alliance notifications and was
+  not counted as remaining help requests, since the
+  bubble itself was gone and the toast confirmed the
+  Help All action. Bubble gone plus toast equals
+  done; an Alliance red dot alone is not remaining
+  help.
+- Help page header points tally was not read in this
+  unit; no helps count or points figure is claimed.
+  No items spent, no diamonds or money touched, no
+  red line approached.
 
 
 ## Open questions

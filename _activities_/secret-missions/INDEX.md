@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T22:43:53Z
+modified: 2026-11-03T05:40:46Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: ticker-0404 secret-missions execution record 2026-11-02 0426 queue run (done, assists 5 of 5)
   - source: ticker-0934 secret-missions execution record 2026-11-02 0952 queue run (done, checked only)
   - source: ticker-1336 secret-missions execution record 2026-11-02 1345 queue run (done, checked only)
+  - source: ticker-2104 secret-missions execution record 2026-11-02 2127 queue run (partial, four claims in one tap, assists and dispatch pending)
 ---
 
 
@@ -652,6 +653,70 @@ secrets-2026-10-31-2257, status partial).
 - Outcome: nothing claimed, nothing dispatched. Counters
   at close, read live: Assist Allies 5 of 5, Your Tasks 8
   of 8 PERFECT.
+
+## What the 2026-11-02 2127 unit added - four claims in one tap, assists and dispatch pending, partial
+
+- Unit secrets-2026-11-02-1857 by ticker-2104, session
+  about 21:20 to 21:27, status partial, claims done,
+  assists and dispatch pending. Evidence in
+  `_records_/2026-11-02/secret-missions/2127-queue-run.md`.
+- Entry: the base left-column pickup icon at norm
+  54,642 opened the Secret Command Post, the current
+  column set's Secret Post slot, confirmed in the
+  1845 trucks record.
+- State at entry, read live: Assist Allies 0/5,
+  Plunder Others 0/5, Your Tasks badge 4, Ally Tasks
+  badge 5. Four finished tasks, each with a green
+  Claim button: UR Disrupt electric grid, SSR Search
+  for Missing Refugees, SSR Provide Tech Support to
+  Refugees, SSR Train Refugees.
+- Claim geometry, measured: the tab bar at norm y
+  about 407 overlaps the first row's Claim y. The
+  first Claim tap at norm 785,410 missed the button
+  and landed on the Others' Tasks tab instead, which
+  showed the empty state "No marked Secret Tasks".
+  Two further taps at the tab's assumed centre
+  (200,375 / 200,365) also missed; the working point
+  was the OCR centre 254,407, which restored Your
+  Tasks. Fresh visual grounding then put the four
+  Claim buttons at x 716-860, y 472-510 / 574-611 /
+  679-717 / 785-822; the first (UR) at centre
+  788,491 claimed. Do not reuse the 785,410 point
+  for the first-row Claim button; re-ground the
+  button row first, and use the OCR tab centre when
+  the tab bar must be re-tapped.
+- One claim collected all four finished tasks, as
+  the metadata states. After dismissal the Your
+  Tasks badge cleared, all four cards show no Claim
+  button, and the three SSR cards carry gold PERFECT
+  stamps.
+- Congratulations panel: "Alliance Gift (MR)
+  received!", rewards row (mystery box x6, 5-minute
+  speedup x5, 324.9K, 324.9K, 412.5K) plus three
+  helper rows [AP3x]spac3cadet "helped you claim
+  task rewards" 11-2 19:24. Like All (free, no price
+  tag) was tapped; all three like icons turned blue.
+  The panel dismissed on a tap at the banner
+  (500,330); taps on the rewards row and the dark
+  margin did not dismiss it.
+- Not done, carried to the next unit: Ally assists
+  still 0/5 at close, Ally Tasks badge 5 untouched;
+  no new tasks dispatched via Mega Deploy. The pass
+  budget (about 25 minutes from the 21:04 token)
+  left under 3 minutes at claim close, too little
+  for the assist list plus a new dispatch - blocker
+  b (crowding out), not a screen failure. Duel
+  posture day 2, Base Expansion: Legendary secret
+  tasks score 75,000 each today; the UR task claimed
+  here is a Legendary task. The next unit must
+  dispatch and work the 0/5 ally assists, and check
+  the Mega Refresh cost before first use, per the
+  metadata limits.
+- Counters at close, read live: Assist Allies 0/5,
+  Plunder Others 0/5, Your Tasks badge 0, Ally Tasks
+  badge 5. Others' Tasks empty state, nothing to
+  share or claim.
+
 
 ## Open questions
 
