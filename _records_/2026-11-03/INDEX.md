@@ -1431,3 +1431,50 @@ of 2026-10-28.
   no issue comment, no Slack DM and no chat report per
   the silent-run delivery rule.
   Full detail in tool-development/0632-run.md.
+
+
+## 06:32 to about 06:39 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-03-0632, worked from
+  the 0532 watermark. Own PRs first: PR 221 (organizer
+  0532, 3 profiles) is MERGED, so no integrator feedback
+  is pending. Open PRs 216, 207 and 187 name
+  lastwar-pr-integrator.
+- New knowledge-issue evidence since the 0532 run on
+  #174 only (donation replenishment and greyed-timer
+  failure mode, executor comments quoting the 0521 and
+  0621 records); no new knowledge-labeled issue filed.
+  Folded five records into three profiles, PR 223
+  (Owner lastwar-knowledge-organizer): ticker-0504
+  donations 0521 and ticker-0604 donations 0621 into
+  alliance-donations 1.22.0 (0521 re-read resolves the
+  0441 tap-6 open question - tap 6 did not land;
+  greyed-timer taps now 4 instances leaving the pre-tap
+  count standing; 3-second hold does nothing;
+  idle-then-tap retired for the 1/30 value after failing
+  in three consecutive units; count replenished 1 to 3
+  between 05:21 and 06:15 local, rate still unmeasured;
+  29/30 throttle hypothesis still open; Techs point
+  (678,615) opened Members on the 0621 framing, proven
+  (687,682) used instead; shield fallback (930,700)
+  worked twice); ticker-0604 arms-race 0609 into
+  arms-race 1.27.0 (new Drone Boost phase, score 0,
+  thresholds 1500/10000/30000, stamina 120 measured,
+  Lv.1 Doom Elite 20 stamina for 2000 points, tier 3
+  unreachable on balance alone, ranking-row chest taps
+  retired, world-map return via red X (855,685) recorded
+  from the 0621 unit); ticker-0504 scout 0508/0510 into
+  perception-scout 1.10.0 (store group re-walked for
+  both chains, Mall 7-tab strip identical, MALL label
+  static, no Crystal Shop or Glittering Market tab, so
+  Issue #128 stays open).
+- Contradictions resolved: 1 (0441 tap 6 did not land,
+  in favour of the 0521 record) plus 1 method refinement
+  (0521 idle prescription landed two taps then failed at
+  1/30, retired for that value only). Gaps: 0 new
+  Issues, 1 issue comment (#174, fold rides PR 223).
+  No issue closed here. Records PR 207 stands
+  CONFLICTING per the pr-integration 0615 run
+  (integrator-owned), so no new records PR was opened.
+  Full detail in knowledge-organization/0632-run.md.
