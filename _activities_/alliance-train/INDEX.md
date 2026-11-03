@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T21:44:07Z
+modified: 2026-11-03T05:40:46Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-0704 alliance-train execution record 2026-11-02 0715 queue run (done, checked only)
   - source: ticker-0834 alliance-train execution record 2026-11-02 0844 queue run (done as checked only, third Secret Command Post wrong-tap instance, station empty)
   - source: ticker-1234 alliance-train execution record 2026-11-02 1246 queue run (done as checked only, station empty)
+  - source: ticker-2034 alliance-train execution record 2026-11-02 2045 queue run (done, station check corrected, already aboard carriage 2)
 ---
 
 # Alliance train
@@ -504,6 +505,61 @@ Measured in the 0110 train unit (ticker-0104, window mode
   station-verified no-train finding.
 - Nothing boarded, no Trade Contracts spent, no train
   summoned, no conductor role taken.
+
+## What the 2026-11-02 2045 unit added - station check corrected, already aboard carriage 2
+
+- Unit train-2026-11-02-1830 by ticker-2034, session
+  about 20:38 to 20:45, status done. The account is
+  already aboard carriage 2, the standing-rule
+  carriage, so no boarding action was needed and
+  none was taken. Evidence in
+  `_records_/2026-11-02/alliance-train/2045-queue-run.md`.
+- Base screen inspected first: no "Boarding closes
+  in" banner under the resource bar.
+- Station-check correction, in favour of the newest
+  verified record: tapping the left-column train
+  icon at normalized (52, 548), the point measured
+  by earlier units, panned the camera to a base-edge
+  view (4th Squad area) that showed no train, no
+  plus bubble and no station countdown. That view
+  alone would have concluded no train. Dragging the
+  camera toward the station building then revealed a
+  yellow train at the base edge, with conductor
+  label KpyKat and a countdown near 01:22:57. A
+  preparing train was therefore present, and the pan
+  point alone is not a sufficient station check; the
+  next train unit must drag toward the station
+  building and look for the yellow train before
+  concluding none is preparing. This qualifies, not
+  erases, the 0348, 0844 and 1246 checked-only
+  empties, which used the pan view only - their
+  no-train readings carry that qualification.
+- Tapped the train. A train cinematic played ("Tap
+  the screen twice to skip"). Double-tapping to skip
+  opened MY PROFILE, consistent with the metadata
+  note that tapping the own avatar opens MY PROFILE.
+  Closing MY PROFILE with its X revealed the
+  STATION PLATFORM screen.
+- STATION PLATFORM, read live: departure countdown
+  01:21:39 falling to 01:20:07 by the end of the
+  unit, Train Rating 86,000, conductor KpyKat.
+  Carriage occupancy top to bottom: carriage 1 at
+  12/7 with a plus button, carriage 2 at 10/7
+  showing the own avatar (the starry landscape
+  profile photo, confirmed on zoom), carriage 3 at
+  16/7 with a plus button, carriage 4 at 23/7 with a
+  plus button.
+- No Trade Contracts spent, no train summoned, no
+  conductor role taken. The platform back arrow
+  returned the view to the base world at the station
+  area, train and station building visible,
+  countdown 01:20:07.
+- Note for the open question below: the platform
+  screen opened by the train tap is the station
+  verification surface; the station-verified
+  no-train read is still owed on a checked-only
+  (empty) unit, where no train exists to tap.
+
 
 ## Open questions
 

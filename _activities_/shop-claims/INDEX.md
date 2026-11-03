@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T21:44:07Z
+modified: 2026-11-03T05:40:46Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: ticker-0104 shop-claims execution record 2026-11-02 0104 queue run
   - source: ticker-0834 shop-claims execution record 2026-11-02 0846 queue run (done as checked only, monthly pass 19 of 19, coin weekly pass already claimed today)
   - source: ticker-1234 shop-claims execution record 2026-11-02 1300 queue run (done, nothing new, all owned daily claims already taken)
+  - source: ticker-2104 shop-claims execution record 2026-11-02 2109 queue run (done, nothing new, S2 Drone card is an offer)
 ---
 
 
@@ -429,6 +430,45 @@ the free and already paid for parts, never the paid unlocks.
   Pass Extension $24.99 was not touched.
 - No diamonds, money, speedups or other resources
   spent; no Renew, no purchase button tapped.
+
+## What the 2026-11-02 2109 unit added - done, nothing new, S2 Drone card is an offer
+
+- Unit passes-2026-11-02-1857 by ticker-2104, session
+  about 21:05 to 21:09, status done. Nothing new to
+  claim; all owned daily claims already taken today.
+  Evidence in
+  `_records_/2026-11-02/shop-claims/2109-queue-run.md`.
+- Shop opened from the base cart icon. Hot Deals
+  shows only the external-store promo ("Visit the
+  Last War Store for more rewards!", 1000 points
+  card) with a Go button - no free pack showing; Go
+  was not tapped.
+- Weekly Pass page: Free Supply chest reads Claimed;
+  the Legendary Take All $19.99 bundle was left
+  untouched; Coin Weekly Pass (Elite, Remaining
+  about 20:52) reads Already claimed today, Renew
+  $4.99 left untouched. The S2 Drone Components
+  Weekly Pass card below shows a Daily Pickup row
+  with no claim button and a Get Now $4.99 purchase
+  button - an offer, not an owned claim, as the 1300
+  unit already established for the remaining weekly
+  cards; it was not tapped.
+- Weekly Pass list did not respond to scroll or drag
+  attempts in this unit, so the below-fold cards
+  were not re-scrolled; the 1300 unit had already
+  walked the list to its end (Iron card) with no
+  further claimable card. The scroll failure here is
+  unit-specific, not a list change - the list end
+  from the 1300 read still stands.
+- Super Monthly Pass page: Monthly Pass, Squad 4
+  Lv.20, Days Left 19, Rewards Left 19, button reads
+  Claimed. The Monthly Pass Extension $24.99 was not
+  touched.
+- Result statistics: claimed_count 0, target 1 shop
+  claim sweep performed, achieved 1, resources
+  gained none, verified yes. Game left on the base
+  screen.
+
 
 ## Open questions
 

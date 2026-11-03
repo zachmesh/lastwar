@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T21:44:07Z
+modified: 2026-11-03T05:40:46Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: ticker-0904 event-claims execution record 2026-11-02 0910 queue run (done, full hub sweep, nothing claimable, hub back arrow unresponsive to background clicks)
   - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (hub back arrow centre re-measurement)
   - source: ticker-1234 event-claims execution record 2026-11-02 1250 queue run (done, full hub sweep, nothing claimable, relaunch restores hidden rails)
+  - source: ticker-2104 event-claims execution record 2026-11-02 2113 queue run (done, full hub sweep, Wanted Boss rotated to Code 64)
 ---
 
 
@@ -564,6 +565,50 @@ that drag is the sweep-completeness check, not wasted motion.
   return in a pass, counting takeovers across the
   units of that pass, not per unit.
 
+## What the 2026-11-02 2113 unit added - full hub sweep, Wanted Boss rotated to Code 64
+
+- Unit events-2026-11-02-1857 by ticker-2104, session
+  about 21:05 to 21:13, status done. Full sweep
+  performed, nothing claimable anywhere in the hub,
+  nothing claimed. Evidence in
+  `_records_/2026-11-02/event-claims/2113-queue-run.md`.
+- Arms Race, Unit Progression (Contest Segment
+  Lv.29-30, about 00:49 left at first read):
+  cumulative counter chest at top left reads 0/2,
+  not full, nothing to claim. Score reads 9,300; the
+  three point chests (thresholds 15,000 / 30,000 /
+  75,000) are all above the score, no claim state.
+  The bottom ranking row shows #2110 [AP3x]Bears
+  Lair, 9,300. Phase work itself belongs to the
+  arms-race unit, not this sweep. No bouncing chest,
+  no reward red dot on this page.
+- Desert Battlefield (Desert Storm Battlefield):
+  Battle Day 2026-11-6, 03:00-03:30, Participants
+  19/20 (including you), stamped Enlisted.
+  Registration ends in 1d 20:48. Alliance
+  registration event; Select Time / Select
+  Participants were not tapped, nothing personal to
+  claim.
+- Wanted Boss rotation, measured 2026-11-02: now
+  Code 64 (was Code 87), a giant gorilla; Missile
+  Vehicle heroes deal 50% extra damage (was tank
+  heroes for Code 87). Appears at server time 00:00,
+  Go countdown about 19:48 at read - not out yet,
+  attacking is grinding, not a claim. Goals page:
+  best single attack 852,929,736 against tiers 1.0B
+  / 1.5B / 2.0B / 2.5B / 3.0B, all Claim buttons
+  grey, nothing claimable.
+- Community: Discord binding reward reads 500
+  Claimed, unchanged. Nothing to claim.
+- Tab bar dragged to its end: the four tabs above
+  are the whole hub (Arms Race, Desert Battlefield,
+  Wanted Boss, Community). No Zombie Invasion tab -
+  the event ended 2026-10-30, consistent with unit
+  zombie-invasion-zombie-2026-10-28-066.
+- No diamonds, money, speedups or other resources
+  spent. Game left on the base screen.
+
+
 ## Open questions
 
 - Which recurring events hold claims that expire unclaimed.
@@ -571,5 +616,5 @@ that drag is the sweep-completeness check, not wasted motion.
 - Whether the Battle Pass Donate Coal daily should be done on cold
   wave days, and the coal cost per donation.
 - What the Wanted Boss Code 87 fight pays in practice when it is
-  out at server 00:00.
+  out at server 00:00. (2026-11-02 2113 update: the boss has rotated to Code 64, a giant gorilla, with Missile Vehicle heroes dealing 50% extra damage; best single attack read 852,929,736 against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B, all Claim buttons grey - the Code 87 payout question is moot until it rotates back.)
 - Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.) (2026-11-02 1250/1300 update: window close-and-relaunch is now a verified exit and recovery route - the 1250 unit restored hidden side rails by relaunch, and the 1300 passes unit exited the stalled hub by relaunch, both with state intact and no login or device dialog; the foreground-first exit itself is still unverified.)
