@@ -3634,3 +3634,33 @@ of 2026-10-28.
   No records PR opened, no comment, no escalation.
   No-op pass, silent under the delivery rule.
   Full detail in pr-integration/2215-run.md.
+
+## 22:04 to about 22:17 - Queue ticker pass, arms-race and donations partial
+
+- Arms-race unit arms-race-2026-11-02-2203, partial (ticker-2204):
+  first unit inside the new Tech Research phase (rule R4):
+  score 0 read live twice from the star bar, thresholds
+  6,250 / 12,500 / 30,000, time left 03:52:51 at entry;
+  ranking row 9,300 is the lagging previous-phase figure
+  and was not used as the score. Cumulative chest 0/2, no
+  bounce; ranking chest preview only (Iron, Food, Coin
+  SR chests 6 each, no Claim button). The tier-3 judgment
+  was not closed: the scoring-row jump and the phase page
+  back arrow both produced no navigation, so the research
+  queue timers were not read live. Next arms-race unit
+  must read the research queue from the base screen first.
+  Tracker untouched. Full detail in
+  arms-race/2209-queue-run.md.
+
+- Donations unit donations-2026-11-02-2203, partial (ticker-2204):
+  entry blocker broken by relaunching the app (Cmd+Q, new
+  pid) and tapping the Alliance shield at its fresh
+  measured centre (907,731): Alliance menu and Alliance
+  Techs opened. Rallied HP 6/10, Donation Count 10/30
+  remaining read live, coin button Donate 700. The green
+  coin button ignored five tap variants (snapped click x2,
+  exact pointer click, long-press, double-click); Tech EXP
+  stayed 200/3.0M, so 0 donations landed. Commented on
+  open issue #171, not filed anew. Tracker untouched.
+  Full detail in alliance-donations/2220-queue-run.md
+  (file name overstates the close; actual close 22:16).
