@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-03T15:45:00Z
-version: 1.19.0
+modified: 2026-11-03T19:45:00Z
+version: 1.20.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -21,6 +21,7 @@ grounded_in:
   - source: survivor intake execution record 2026-11-02 2252 queue run
   - source: ticker-0234 survivor-intake execution record 2026-11-03 0247 queue run (partial, bubble change not intake proof, re-ground before every tap)
   - source: ticker-0634 survivor-intake execution record 2026-11-03 0644 queue run (partial, gate line unverified, two grounding points rejected)
+  - source: ticker-1034 survivor-intake execution record 2026-11-03 1050 queue run (partial, gate line not found, grounding timed out twice, no tap on unidentified markers)
 ---
 
 
@@ -996,3 +997,52 @@ Measured on 2026-10-25.
 - 1.18.0 (2026-11-03): ninth distinct partial since the 1644 done (0247 unit, gate line explicitly unverified, close discipline held), bubble change to smiley without a card explicitly not counted as an intake, stale figure point (450,375) selecting the 1st Squad Lv.20 vehicle so re-grounding before every tap is now absolute, ambiguous question mark at (638,693) away from the gate not counted, Quick Dispatch not run with no verified intake, and Issue #168 evidence commented by this run, folded from the 0247 survivors record.
 
 - 1.19.0 (2026-11-03): tenth distinct partial since the 1644 done (0644 unit, gate line explicitly unverified, close discipline held), upper-view grounding points (498,674) and (70,125) rejected as unreliable (map marker by the gold building, top bar) and neither tapped, session drop cc-316 to cc-318 transient with no state lost, Quick Dispatch not run with no verified intake, and Issue #168 evidence commented by this run, folded from the 0644 survivors record.
+
+
+## What the 2026-11-03 1050 unit added - gate line not found again, grounding timed out twice, no tap on unidentified markers
+
+- Ticker-1034, unit survivors-2026-11-03-1003, about
+  10:45 to 10:50 local, status partial. Evidence in
+  `_records_/2026-11-03/survivor-intake/1050-queue-run.md`.
+- Session: computer session cc-337 dropped between
+  units (observation unavailable); session cc-339 was
+  started, Last War re-selected, no game state lost,
+  base view intact. No different-device dialog.
+- Gate search: from the central base view, dragged to
+  the upper base area twice ((500,300 to 500,650)
+  with no visible view change, then (500,250 to
+  500,700)); the second drag reached the upper view
+  with the railway at top, the Capitol pyramid at
+  top-right, the pink central building and the parked
+  helicopter - the same upper view the 0644 unit
+  reached. No front-gate line with question-mark
+  bubbles was identified in the central view or in
+  the upper view. An orange sign near the top-centre
+  fenced enclosure was visible but not readable as a
+  gate sign on this frame, and no survivor figure
+  with a question-mark bubble was verified.
+- Grounding lesson, re-confirmed: visual grounding
+  was attempted twice on the live frames (once on
+  the central view, once on the upper view); both
+  attempts timed out at the tool level with no points
+  returned. Per the 0644 lesson, no unidentified
+  marker was tapped: the 0247 unit stale-figure tap
+  misfired onto a squad marker, and tapping an
+  unverified point risks a dispatch. No survivor card
+  or dialog was opened, no recruit was taken in, no
+  building panel was opened, and Quick Dispatch did
+  not run (nothing verified to post).
+- Why partial, not done: gate line not found or
+  verified in this unit, the standing blocker in this
+  profile (queue era 2026-10-28 to 2026-10-31: 22 of
+  22 survivor units partial; today 0247 and 0644 also
+  partial, now joined by 1050). Per this profile
+  rule, the unit closes unverified with a named
+  re-read instead of closing on a presumed line
+  state. Tracker untouched.
+- Follow-up for the next survivors unit: start at
+  the gate with a fresh grounding on the live frame,
+  and verify a survivor figure before any tap; if
+  the line still cannot be verified, close unverified
+  again with this blocker named. No earlier claim
+  superseded.

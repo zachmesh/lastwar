@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T15:45:00Z
+modified: 2026-11-03T19:45:00Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: mail rewards execution record 2026-11-02 2313 queue run
   - source: ticker-0304 mail-rewards execution record 2026-11-03 0312 queue run (done, all categories empty, Escape crash recurrence)
   - source: ticker-0704 mail-rewards execution record 2026-11-03 0715 queue run (done, six categories swept, all answered No rewards available)
+  - source: ticker-1034 mail-rewards execution record 2026-11-03 1055 queue run (partial, mail entry mis-targeted to Alliance twice then no-change, Issue 230)
 ---
 
 
@@ -570,3 +571,49 @@ the next tick re-produces this regular as a fresh unit.
 
 - Which recurring senders are worth keeping unread as evidence, and which
   reward mails expire if not claimed in time.
+
+
+## What the 2026-11-03 1055 unit added - mail entry mis-targeted to Alliance twice, then no-change, filed as Issue 230
+
+- Ticker-1034, unit mail-2026-11-03-1030, about
+  10:52 to 10:55 local, status partial. Evidence in
+  `_records_/2026-11-03/mail-rewards/1055-queue-run.md`.
+- Mail entry failed three times from the base view,
+  so no mail category was swept and nothing was
+  claimed: tap 1 at norm (895,725), measured from
+  the training unit restored central frame, opened
+  the Alliance panel instead of Mail; tap 2 at norm
+  (895,731), measured fresh on the then-current base
+  frame (envelope icon visible on the right edge),
+  again opened the Alliance panel; tap 3 at norm
+  (895,760), aiming lower to allow for a possible
+  title-bar offset, produced no visible change (the
+  base view stayed, no panel opened). Each Alliance
+  panel was closed with its back arrow, returning to
+  base. The Alliance panel Help and Alliance Gifts
+  red dots were visible while it was open; both
+  belong to other units and were left untouched.
+- No Claim All was tapped, Delete All was never
+  pressed, nothing was claimed, bought or deleted.
+  Tracker untouched, per the rule for partial units.
+- Rule R2, applied: the method ends inside this unit
+  after the repeated misfires; the pass budget also
+  ran out during this unit (the pass started at
+  10:36), so the sweep could not be retried here even
+  with a new method.
+- Contrast with the 2026-11-01 rail failure already
+  in this profile (four variants, all no-change):
+  this failure is a mis-target, not a no-change, so
+  the right-edge stack hit mapping itself, not only
+  foreground mode, is suspect. Gap filed as Issue
+  230 (labels knowledge, play), related entry-drift
+  issues 220, 218 and 205.
+- Follow-up for the next mail unit: re-measure the
+  Mail envelope centre on the live frame before
+  tapping, and verify the panel that opens is Mail
+  before sweeping any category; if the fresh centre
+  still opens Alliance, a different entry path is
+  owed before further right-edge-stack taps. No
+  profile claim is superseded: this profile records
+  no Mail coordinate, only the right-rail envelope
+  icon.
