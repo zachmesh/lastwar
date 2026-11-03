@@ -1702,3 +1702,22 @@ of 2026-10-28.
   zero; 0 withdrawals. Pool: inbox 61, claimed 0,
   done 705.
   Full detail in queue-planning/0740-run.md.
+
+## 07:45 - PR integration pass (non-batch: 07:00 batch already merged; PR 225 merged)
+
+- Checker _tools_/records_batch.py reported due for
+  the 07:00 window, but the 0700 pass had already
+  merged records PR 216 in that window (merge commit
+  be86001cb at 07:03:20 PST), so this pass is not a
+  batch pass and no records PR was merged. Next
+  batch point 11:00.
+- PR 225 (docs(knowledge): organizer 0732 - 0634 and
+  0704 record folds into 8 profiles) MERGED with a
+  squash commit 8e752b802, branch deleted; local main
+  fast-forwarded to 8e752b802 by bundle.
+- PR 224 (records/2026-11-02 post-0700 batch) clean
+  but awaits the 11:00 batch. PR 207
+  (records/2026-11-03) and PR 187 (records/2026-11-01)
+  still conflicted on action-log.jsonl, standing
+  conflict comments carried, not force-merged.
+  Full detail in pr-integration/0745-run.md.
