@@ -1531,3 +1531,23 @@ of 2026-10-28.
   tools/regulars.json still lacks the duel-score
   regular, so no duel-score unit was staged.
   Full detail in queue-planning/0640-run.md.
+
+## 06:45 to about 06:48 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0645.
+  Non-batch pass per the checker (next batch 0700):
+  knowledge PR 223 merged (squash, organizer 0632 -
+  0521/0621 donations greyed-timer pattern and
+  replenishment, 0609 Drone Boost stamina measure,
+  0508/0510 store re-walk; local main fast-forwarded
+  to 6d004953). Records PR 216 (2026-11-02, head
+  2547e171, MERGEABLE CLEAN) awaits the 0700 batch.
+  Records PR 207 (2026-11-03, head db4c7440) still
+  conflicts on _logs_/repo-actions/action-log.jsonl
+  and _tools_/state/2026-11-03.json; the standing
+  conflict comment from the 0300 pass stands.
+  Records PR 187 (2026-11-01, head 2be5df83) still
+  conflicts on action-log.jsonl; the standing conflict
+  comment from the 1900 pass on 2026-11-02 stands.
+  No new comments, no owner-gated PR.
+  Full detail in pr-integration/0645-run.md.
