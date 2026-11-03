@@ -2782,3 +2782,17 @@ of 2026-10-28.
   applied agree, all zero; 0 withdrawals. Pool: inbox 63,
   claimed 1, done 737, upcoming 51. Full detail in
   queue-planning/1440-run.md.
+
+## 14:45 to about 14:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-1445.
+  Non-batch pass per the checker (next batch 15:00):
+  knowledge PR 234 (organizer 1432, arms-race 1412 and
+  donations 1421 folds) merged by squash, local main
+  fast-forwarded to 0f5b4b39. Records PR 229
+  (2026-11-02, head 962d3fee, MERGEABLE CLEAN) awaits
+  the 15:00 batch. Records PR 207 (2026-11-03, head
+  0ae3129f) and PR 187 (2026-11-01, head 2be5df83)
+  still conflicted on the standing files, the conflict
+  comments stand, not force-merged. No owner-gated PR.
+  Full detail in pr-integration/1445-run.md.
