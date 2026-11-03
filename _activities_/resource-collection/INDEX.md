@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T19:37:08Z
+modified: 2026-11-03T00:55:00Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-02 0308 queue run (ticker-0308 unit, partial, edge drag unverified)
   - source: resource collection execution record 2026-11-02 0741 queue run (ticker-0734 unit, partial, fast regeneration over the left-side buildings)
   - source: resource collection execution record 2026-11-02 1052 queue run (ticker-1040 unit, partial, edges undragged)
+  - source: resource collection execution record 2026-11-02 1520 queue run (ticker-1452 unit, partial, sweep barely started, campaign mis-tap)
 ---
 
 
@@ -482,6 +483,46 @@ regular stays due. Evidence in
   again not dragged to their extremes, so the same
   instruction passes to the next harvest unit unchanged.
 
+## What the 2026-11-02 1520 unit added
+
+- Unit harvest-2026-11-02-1403 by ticker-1452, session
+  about 15:11 to 15:20, status partial: the sweep
+  barely started inside the pass budget, no bubble was
+  collected, tracker untouched, so the next tick
+  re-produces this regular. Evidence in
+  `_records_/2026-11-02/resource-collection/1520-queue-run.md`.
+- HUD figures measured at unit start: food 387.7M, iron
+  577.5M, coins 54.0M, diamonds 2,536. Unchanged at
+  close - no bubble was collected.
+- Not-a-bubble lesson, new: the base-screen glow at
+  norm 486,216 is the Operation Falcon campaign entry
+  (Chapter 15), not a resource bubble. Tapping it
+  opened the campaign map; no stage was entered, no
+  battle started, nothing spent. Future sweeps must
+  not tap this glow as a bubble.
+- Return unverified: the campaign back arrow at norm
+  62,988 was tapped and dispatched, but the control
+  session dropped before a fresh screenshot could
+  verify the return, so the final screen is recorded
+  as unverified. The game was last seen on the
+  Operation Falcon screen with the back-out tap
+  dispatched and no action taken on that screen. The
+  next unit screenshots first and navigates from
+  wherever the game sits; no state was changed.
+- What was not done: no resource bubble was collected,
+  no edge drag was attempted, and the armed truck loot
+  bubble was not checked. The full-map sweep (all
+  bubbles to zero, Season 2 area excluded) is entirely
+  outstanding for the next harvest unit.
+- Session reliability note: computer-use sessions
+  dropped repeatedly this pass (three restarts); each
+  restart re-selected the Last War window without
+  disturbing the game.
+- Follow-up carried, not completed: the full-map sweep
+  to zero bubbles, the armed truck loot bubble check,
+  and screenshot-first navigation from an unverified
+  screen all pass to the next harvest unit.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -492,6 +533,8 @@ regular stays due. Evidence in
   rather than assuming the candidate.
 
 ## Changelog
+
+- 1.11.0 (2026-11-02): sweep barely started so partial with no bubble collected, base-screen glow at norm 486,216 identified as the Operation Falcon campaign entry and not a bubble, campaign back-out dispatched but return unverified after a session drop so the next unit screenshots first, full-map sweep and armed truck loot check entirely outstanding, HUD measured food 387.7M, iron 577.5M, coins 54.0M, diamonds 2,536, folded from the 1520 harvest unit; no earlier claim superseded.
 
 - 1.10.0 (2026-11-02): visible-base sweep with HUD-rounded gains (food +1.9M, second resource +1.8M, coins +1.2M), screenshot-grounded taps after a grounding timeout, parked truck with no loot bubble left alone, edges again undragged so partial with the 0741 follow-up carried unchanged, folded from the 1052 harvest unit; no earlier claim superseded.
 

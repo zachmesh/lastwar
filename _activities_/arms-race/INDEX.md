@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T18:40:59Z
+modified: 2026-11-03T00:55:00Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: arms-race execution record 2026-11-02 0247 queue run (ticker-0235 unit, partial, Hero Advancement tier-3 met)
   - source: arms-race execution record 2026-11-02 0608 queue run
   - source: ticker-1004 arms-race execution record 2026-11-02 1015 queue run (partial, first unit of Drone Boost phase)
+  - source: ticker-1452 arms-race execution record 2026-11-02 1508 queue run (partial, first unit of Hero Advancement phase, 20.0M EXP shortfall)
 ---
 
 
@@ -775,3 +776,80 @@ slot. Evidence in
   red-gem-50 1 (previous-phase cumulative chest), verified
   yes, blocker_category g (true red-line miss for the new
   phase).
+
+## What the 2026-11-02 1508 unit added
+
+- Unit arms-race-2026-11-02-1403 by ticker-1452, session
+  about 14:55 to 15:08, status partial under queue rule
+  R4: this is the first unit inside the Hero Advancement
+  phase, so it reads the phase, the score and every
+  scoring path and sets the just-enough plan; the scoring
+  itself falls to the next unit because the chosen
+  level-up is short of hero EXP. Tracker untouched, so
+  the next tick re-produces this regular. Evidence in
+  `_records_/2026-11-02/arms-race/1508-queue-run.md`.
+- Live phase read: Hero Advancement, Contest Segment
+  Lv.29-30, 03:00:17 left at the first read (about
+  14:57). Phase window runs to about 17:57 local. Live
+  score: 0, read from the star bar at the top left of
+  the phase page. The ranking row's 40,500 for
+  [AP3x]Bears Lair is the lagging previous-phase row
+  (the same figure the 1015 record flagged as lag), not
+  this phase's score - consistent, not a new
+  discrepancy.
+- Point chest thresholds: 2,000 / 4,000 / 12,000 (ruby
+  tags 2,360 / 4,800 / 11,800). No chest is earned yet;
+  no red dot or bouncing chest on the page. Cumulative
+  counter chest at the top left: 6 of 8, purple, not
+  full, not claimable. Ranking row chest: not tapped
+  this unit; preview-only is expected while the phase
+  is live, and the sweep falls to the scoring unit.
+- Scoring paths, read live: 1 Hero Recruitment +400
+  points; Use at least 2,000 Hero EXP at a time +1
+  point per 2,000 EXP (verified rate, 2026-10-26
+  record: a 75.0M EXP one-level spend read back as
+  37,500 points); Buy Packs containing Diamonds +30
+  per diamond - red line, never used. Tier-3 gap:
+  12,000 points, equal to 24,000,000 Hero EXP used.
+- Just-enough plan: level UR Titan Adam Lv.124 to
+  Lv.125 exactly once and no further. Adam's level cost
+  reads 83.0M EXP, so one level spends 83.0M EXP and
+  scores about 41,500 points, clearing the 12,000
+  tier-3 threshold by design of the level cost; the
+  just-enough rule is satisfied by taking exactly one
+  level and no more, as in the 2026-10-26 Hero
+  Advancement close.
+- What blocked the scoring: Adam's EXP bar reads
+  63.0M / 83.0M with the current figure in red, a
+  20.0M EXP shortfall against the level cost. The
+  Upgrade button was tapped twice on the hero detail
+  screen (single tap, then a double-click on the
+  freshly grounded centre at norm 502,813) with no
+  change on either attempt; per queue rule R2 that tap
+  method is retired inside this unit, and the
+  shortfall, not the tap, is the blocker.
+- Next unit's first action: open experience boxes from
+  the inventory to top up at least 20.0M Hero EXP
+  (owner instruction, 2026-10-26, recorded in the
+  activity metadata), then level Adam once, re-read
+  the phase score live, claim all three earned point
+  chests, and run the completion sweep (cumulative
+  counter chest, ranking row chest, Events screen
+  re-scan) before closing. Result stats so far:
+  target 12000, achieved 0, partial, blocker EXP
+  shortfall.
+- Navigation notes: the Events icon at norm 925,130
+  opened Events directly on the Arms Race page, as in
+  the 0608 record. The Events back arrow at norm
+  160,947 worked on a double-click, as in the 1015
+  record. The game was found on the Drill Ground panel
+  the 1412 radar unit left open; its X at norm
+  869,139 closed it to the base on the first tap -
+  the radar panel-close handover written in the 1532
+  run is therefore completed, and the panel is no
+  longer left open.
+- No different-device dialog was seen, no login or
+  verification was demanded, and no password or Touch
+  ID step was used. Nothing spent, no paid button
+  tapped, no stage swap, no research or building
+  started.
