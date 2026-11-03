@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T17:40:00Z
+modified: 2026-11-03T20:39:44Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-0004 secret-missions execution record 2026-11-03 0005 queue run (done, assists 5 of 5, UR Assist question stale)
   - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry, assists 5 of 5)
   - source: ticker-0834 secret-missions execution record 2026-11-03 0837 queue run (done, unsnapped exact-centre entry re-confirmed, assists at cap, nothing pending)
+  - source: ticker-1204 secret-missions execution record 2026-11-03 1223 queue run (partial, post never entered, base view panned between measurement and tap)
 ---
 
 
@@ -67,6 +68,17 @@ post screen carries two sibling tabs registered as their own types -
   exited by their back arrows with no trucks action: no
   truck was dispatched, plundered or settled, and no Mega
   button was touched there.
+- Pan precondition, 2026-11-03 (1223 unit): a freshly
+  measured pickup centre is only valid in the framing it
+  was measured in. The base view panned between the fresh
+  crop measurement and the entry tap, so the 68,683
+  centre missed the post and the panned framing hid the
+  standard left column. Re-centre the base view first
+  and re-measure the column in the same screenshot the
+  tap is taken from, before tapping. This qualifies, not
+  replaces, the unsnapped exact-centre lesson above: the
+  tap variant is verified only in the standard framing.
+
 - The screen has three tabs - Secret Tasks, Hidden Treasures and
   Ghost Ops. Secret Tasks itself shows Your Tasks with a count badge
   and an Others' Tasks or Ally Tasks list below.
@@ -943,6 +955,60 @@ secrets-2026-10-31-2257, status partial).
   (nothing was pending). Tracker: marked done for
   secrets by this pass. Game left on the base screen.
 
+
+## What the 2026-11-03 1223 unit added - entry failed, base view panned between measurement and tap, partial
+
+- Ticker-1204, unit secrets-2026-11-03-1057, about
+  12:18 to 12:23 local, status partial. Evidence in
+  `_records_/2026-11-03/secret-missions/1223-queue-run.md`.
+  The Secret Command Post was never entered, so no task
+  was dispatched, claimed or assisted, and no ally task
+  was touched. Tracker untouched, per the partial rule.
+- Session note: computer session cc-347 dropped between
+  the events unit and this unit and was restarted as
+  cc-350 with no state lost (the same session-drop
+  pattern as the 1104 pass).
+- Entry failure, with a method change recorded: base
+  view left column measured fresh from a crop: green
+  face centre about norm 68,578, white pickup (Secret
+  Command Post) centre about norm 68,683, radar dish
+  with badge 11 below, hammer below that. The trade
+  icon had rotated out of this set.
+- First tap at norm 60,590, taken from the previous
+  crop's misread mapping, opened the season temperature
+  panel instead (Location final temp 6.5 degrees,
+  Permafrost Area Lv.6, Alliance Furnace Lv.20,
+  High-Heat Furnace Lv.30 not turned on). The panel was
+  closed with its X, no furnace control touched, no
+  temperature setting changed. Lesson: never tap from a
+  previous crop's mapping - a stale mapping opens the
+  wrong panel.
+- Second tap at the freshly measured pickup centre
+  68,683 did not open the post; the base view was found
+  panned to a different framing (Gold Mine Lv.29 area,
+  train tracks at top), and the left icon column was no
+  longer in its standard position in that framing.
+- A third tap, aimed at a green arrow in the panned
+  view, opened the Gold Mine Lv.29 building panel
+  instead (Output/hr +93751, Max Production Time 11hr
+  52min, Survivors Charles, David, Karen, Michael as
+  Gold Miners). The panel was closed with its X. Quick
+  Dispatch was not tapped.
+- Blocker, named for the next unit: the base view panned
+  between the fresh measurement and the entry tap, so the
+  measured pickup centre no longer matched the screen,
+  and the panned framing hides the standard left icon
+  column. Next secrets unit: re-centre the base view
+  first (or find the post from a known anchor) and
+  re-measure the column in the same screenshot it taps
+  from, before tapping.
+- This qualifies, not replaces, the 0346 and 0837
+  unsnapped exact-centre lesson: the tap variant is
+  verified only in the standard framing. A measured
+  centre from a panned-away framing is not a valid entry
+  point.
+- Costs: about 5 minutes of unit time, 0 diamonds.
+  Game left on the base view with all panels closed.
 
 ## Open questions
 

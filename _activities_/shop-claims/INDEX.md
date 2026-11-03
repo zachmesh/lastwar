@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T16:40:00Z
+modified: 2026-11-03T20:39:44Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: ticker-2104 shop-claims execution record 2026-11-02 2109 queue run (done, nothing new, S2 Drone card is an offer)
   - source: ticker-2334 shop-claims execution record 2026-11-02 2338 queue run (done, nothing new, tab-tap mapping offset)
   - source: ticker-0304 shop-claims execution record 2026-11-03 0316 queue run (done, 0 new claims, S2 Drone card an offer)
+  - source: ticker-1134 shop-claims execution record 2026-11-03 1151 queue run (done, 0 new claims, cart entry re-grounded, S2 Drone/EXP/Iron cards all offers)
 ---
 
 
@@ -583,6 +584,55 @@ the free and already paid for parts, never the paid unlocks.
   fresh each unit instead of reusing a stale point, and
   treat two no-change taps as the signal to re-ground,
   not to tap a third time.
+
+## What the 2026-11-03 1151 unit added - done, 0 new claims, cart entry re-grounded, three S2 cards all offers
+
+- Ticker-1134, unit passes-2026-11-03-1057, about
+  11:43 to 11:51 local, status done. Evidence in
+  `_records_/2026-11-03/shop-claims/1151-queue-run.md`.
+- Shop opened from the base cart icon. Entry
+  correction: the first tap at the grounded point norm
+  874,38 changed nothing; the cart icon box norm
+  829,37 to 995,100, centre 912,68, opened the shop on
+  the first tap. The 38 height point sat on the icon
+  top edge and missed. Ground the cart icon by its box
+  centre, not by a top-edge point.
+- Hot Deals: store promo only, no free pack on
+  display. The check-in banner shows FREE GIFT "Claim
+  your gift today!" with a Go button; the Go button was
+  not tapped, as in the 0811 unit - it leads out to the
+  check-in event, not a direct shop claim.
+- Weekly Pass page, read live and scrolled through
+  all cards: the Free Supply chest reads Claimed; the
+  Legendary row Take All 19 dollars 99 was not tapped;
+  the Coin Weekly Pass reads Remaining 06:11:49 with
+  Daily Pickup Already claimed today and a Renew
+  4 dollars 99 button that was not tapped; the S2 Drone
+  Components, EXP and Iron Weekly Pass cards each show
+  only Get Now 4 dollars 99, so all three are unowned
+  offers, not owned passes with a pickup due - none was
+  tapped. The EXP and Iron cards join the Drone card as
+  classified offers under the 0811 rule: a pass card
+  whose only action is a purchase button, with no claim
+  button on its Daily Pickup row, is an offer.
+- Scroll lesson: the second drag at first did not move
+  the list; a longer drag from norm 500,850 to 500,250
+  moved it and exposed the Iron card button. On this
+  page, a short drag that does nothing is a drag-length
+  failure, not a page end - drag longer before concluding
+  the list is exhausted.
+- Super Monthly Pass page, read live: Daily Pickup
+  reads Claimed, Days Left 18, Rewards Left 18. The
+  Monthly Pass Extension 24 dollars 99 button was not
+  tapped. Days Left 18 repeats the 0811 read, not a
+  decrement - the monthly day boundary had not passed.
+- 0 new claims in this unit; every owned daily claim
+  was already taken, matching the 0811 unit. No price
+  button, Renew button, or paid bundle was tapped
+  anywhere in the shop. Shop left with the back arrow
+  at norm 47,950, as recorded in the 0811 unit,
+  returning to the base screen on the first tap.
+- Costs: about 8 minutes, no stamina or items spent.
 
 ## Open questions
 
