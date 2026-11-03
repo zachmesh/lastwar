@@ -52,8 +52,10 @@ Usage:
              # active-window alert and its once-per-stall dedup
              # stay the summary job clause (issue #129).
   queue.py [--root DIR] sync [--due-json FILE]
-             # one ticker production pass: reap, then enqueue one
-             # unit per regular the tracker marks due (idempotent);
+             # one ticker production pass: reap, expire stale
+             # units, drop inbox copies already closed in done
+             # (issue #213), then enqueue one unit per regular
+             # the tracker marks due (idempotent);
              # without --due-json it calls _tools_/regulars.py todo
   queue.py [--root DIR] plan [--hours N]
              # stage the horizon's windows: segment anchors,
@@ -452,9 +454,11 @@ def cmd_sync(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
-    # 1. reap expired claims and expire stale inbox units
+    # 1. reap expired claims, expire stale inbox units, and drop
+    # inbox copies of units already closed in done (issue #213)
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
+    stale_done_dropped = _drop_done_duplicates(args.root)
     # 2. load the due list
     if args.due_json:
         with open(args.due_json, encoding="utf-8") as fh:
@@ -492,6 +496,7 @@ def cmd_sync(args):
     #    windows the unit instead of letting it age further.
     aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"reaped": reaped, "expired": expired,
+                      "stale_done_dropped": stale_done_dropped,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "aged_p1_windowed": aged_p1_windowed},
@@ -747,12 +752,61 @@ def _expire_stale(root):
     return moved
 
 
+def _has_done_record(root, unit):
+    """True when done holds a result-bearing record for unit.
+
+    A bare done file with no result status is not a completed
+    execution - it may be a placeholder or a half-written move -
+    so it does not suppress the inbox copy. Any result status
+    (done, partial, failed, skipped-needs-owner, or expired)
+    does: the unit already closed, and the inbox copy is a
+    stale duplicate, not fresh work.
+    """
+    if not unit:
+        return False
+    path = unit_path(root, "done", unit)
+    if not os.path.exists(path):
+        return False
+    fields, _ = read_unit(path)
+    result = fields.get("result", {})
+    return isinstance(result, dict) and bool(result.get("status"))
+
+
+def _drop_done_duplicates(root):
+    """Drop inbox copies of units already closed in done (issue #213).
+
+    The two units in issue #213 both carry an empty expires_at,
+    so _expire_stale never sees them: expiry is gated on a window
+    that no-expiry chain and enqueue units do not have, and
+    cmd_next / cmd_claim then re-present and re-claim the stale
+    inbox copy - ticker-0134 re-executed both units after
+    ticker-1755 had already closed them on the delivered branch.
+    Dropping is result-preserving by construction: the done
+    record is never touched, only the duplicate inbox file is
+    removed, with a stderr warning naming the unit. Runs after
+    _expire_stale in sync and plan, so an expired duplicate still
+    takes the expiry path (and its existing warning) and only
+    the unexpired remainder is counted here.
+    """
+    dropped = []
+    for f in list_units(root, "inbox"):
+        unit = f.get("unit")
+        if unit and _has_done_record(root, unit):
+            print(f"warning: {unit} already has a done record - "
+                  f"dropping the stale inbox copy instead of "
+                  f"re-executing it", file=sys.stderr)
+            os.remove(unit_path(root, "inbox", unit))
+            dropped.append(unit)
+    return dropped
+
+
 def cmd_plan(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
+    stale_done_dropped = _drop_done_duplicates(args.root)
     defs_path = args.regulars_json or os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "regulars.json")
     with open(defs_path, encoding="utf-8") as fh:
@@ -800,7 +854,9 @@ def cmd_plan(args):
     # so sync calling it too is harmless.
     aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"horizon_hours": args.hours, "reaped": reaped,
-                      "expired": expired, "planned": planned,
+                      "expired": expired,
+                      "stale_done_dropped": stale_done_dropped,
+                      "planned": planned,
                       "already_present": present,
                       "skipped_done_current": skipped_done,
                       "aged_p1_windowed": aged_p1_windowed},
@@ -881,7 +937,8 @@ def cmd_next(args):
     stamp = now_utc()
     candidates = sorted(
         (f for f in list_units(args.root, "inbox")
-         if _actionable(f, stamp)),
+         if _actionable(f, stamp)
+         and not _has_done_record(args.root, f.get("unit"))),
         key=lambda f: pick_key(f, stamp))
     for f in candidates:
         try:
@@ -899,6 +956,11 @@ def cmd_claim(args):
     state, path = find_unit(args.root, args.unit)
     if state != "inbox":
         print(f"cannot claim {args.unit}: state is {state}")
+        return 1
+    if _has_done_record(args.root, args.unit):
+        print(f"cannot claim {args.unit}: already has a done "
+              f"record - the inbox copy is stale, run sync to "
+              f"drop it instead of re-executing it")
         return 1
     fields, body = read_unit(path)
     if not _actionable(fields, now_utc()):
