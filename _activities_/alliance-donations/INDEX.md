@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T06:38:05Z
+modified: 2026-11-03T09:38:32Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: alliance donations execution record 2026-11-02 0719 queue run
   - source: ticker-1004 alliance-donations execution record 2026-11-02 1020 queue run (partial, entry blocker repeats 0621)
   - source: ticker-2204 alliance-donations execution record 2026-11-02 2220 queue run
+  - source: ticker-0104 alliance-donations execution record 2026-11-03 0127 queue run (done, 19 coin donations, entry centre corrected, re-read pending)
 ---
 
 
@@ -56,9 +57,16 @@ activity. Not a separate type.
   the camera is panned onto the Drill Ground cluster,
   restore the base framing first (tap the Alliance HQ
   building on the map itself, or re-enter the base view)
-  and then tap the fresh measured Alliance centre
-  (903,787), never a grounding-tool point above the
-  button; drag-pan does not restore the framing.
+  and then tap a freshly measured Alliance centre from
+  that screenshot, never a carried point and never a
+  grounding-tool point above the button; drag-pan does
+  not restore the framing. Correction, 2026-11-03 0127:
+  the centre this rule named, (903,787), opened Mail,
+  not Alliance, on the 0127 full-base screenshot, so it
+  is withdrawn as a standing point. On that screenshot
+  the Mail envelope grounds at (930,764) and the
+  Alliance shield at (930,689), and the (930,689) tap
+  opened the Alliance menu on the first try.
 
 ## How it is done
 
@@ -1155,3 +1163,65 @@ enqueued for after the cooldown (not before about
   burned, no other activity's work done from this unit. The
   Assemble tile was visible in the Alliance menu and was not
   opened.
+
+## What the 2026-11-03 0127 unit added - entry centre corrected, 19 donations, re-read pending
+
+- Unit donations-2026-11-02-1055 by ticker-0104, session
+  about 01:27 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-donations/0127-queue-run.md`.
+- Entry route, corrected live, in favour of the newest
+  verified record over the 1427 section: the base framing
+  at entry was already correct, not the Drill Ground
+  panned view of the 2026-11-02 failures. The metadata
+  centre (903,787) opened Mail, not Alliance. Visual
+  grounding on the entry screenshot puts the Mail
+  envelope at (930,764) and the Alliance shield at
+  (930,689); tapping (930,689) opened the Alliance menu
+  on the first try, and Alliance Techs opened from its
+  tile. The (903,787) centre is therefore withdrawn as a
+  standing point in the How to enter section above.
+  Attribution corrected: the 2026-11-02 entry failures
+  trace to wrong coordinates, not a game-side block.
+  The re-ground-fresh-every-unit rule stands unchanged -
+  (930,689) is this framing's measured point, not a new
+  standing point.
+- Live reads, unchanged from the 2220 unit: War tab
+  Troop Movement 5/10, Rallied HP 6/10, Rallied Attack
+  7/10, Rallied Defense 7/10, next node below 1/10.
+  Tech Donation Today 3250 at entry, above the 1000
+  point reward gate.
+- Rallied Attack panel: Increased Hero Attack in Rallies
+  for Allies, Current +7 percent, Next Level +8 percent,
+  Tech EXP 8.3K/4.5M at entry. Donation Count 19/30,
+  falling with each donation, so it is the remaining
+  count as the metadata states. Coin Donate button green
+  at 800 coin; diamond Donate at 2 diamonds, never used.
+- Donations made: a first estimated button tap left the
+  count at 19/30, a no-change tap; the grounded green
+  Donate centre (658,750) then moved it 19 to 18.
+  Batched taps on (658,750) moved it 18 to 13 (5
+  donations), then 13 to 7 (6 donations, confirmed by
+  screenshot), then 7 further taps with the button
+  greying afterwards and a 00:40:56 timer shown above
+  it. Total in this unit: 19 coin donations, 15,200 coin
+  spent (19 times 800). Tech EXP read 10.2K/4.5M at
+  close; the bar is alliance-wide, so the rise from
+  8.3K is not claimed as this unit's alone.
+- Closing honesty, under the hard closing rule: the
+  final 0 remaining label was not read as text because
+  the cooldown timer hides the count label, exactly the
+  case the hard rule covers. The unit closes done on the
+  live read sequence 19 to 18 to 13 to 7 plus exactly 7
+  further taps on the active button and the greyed
+  button end state, with verified recorded as no, and
+  the tracker left untouched pending a re-read. Re-read
+  unit donations-2026-11-03-0910 is enqueued, not-before
+  2026-11-03T10:10:00Z, after the 00:40:56 timer. That
+  re-read's outcome bears directly on open issue #174
+  (count replenishment after reaching 0): the
+  ticker-0104 executor already commented this unit's
+  evidence there, so no further comment was filed
+  here, and #174 stays open - closure belongs to the
+  daily retro, with evidence.
+- Red lines held: no diamonds spent, no paid button
+  tapped, no alliance diplomacy, no assembly, no teleport.
