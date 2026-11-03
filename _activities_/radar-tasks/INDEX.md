@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T18:45:00Z
+modified: 2026-11-03T23:40:05Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -202,6 +202,13 @@ execution records):
   06:12 close, and ran it. What selects which offer the bar
   presents is not understood (open question); never assume
   either way - read the bar that is actually shown.
+- Bottom-bar hitbox, measured 2026-11-03 1450: taps at norm y
+  890, 905, 910 and 912 on the Claim All button did NOTHING
+  (five taps across two attempts, including a double-click);
+  the taps landed on the map/label area above the button's
+  true hitbox. A tap at norm (498,925) opened the button.
+  Next units: tap the bottom-bar buttons at y 925, not at
+  their visual centre (~910).
 - With too little stamina, tapping Quick Execute opens the
   Regain Stamina panel instead of failing - use the free
   claim there and continue.
@@ -309,6 +316,22 @@ Handling by posture (binding):
   open questions.
 - Do not read the radar points counter as duel score - it
   moves 1 point per claim and says nothing about the duel.
+- Live-dialog contradiction, 2026-11-03 1450, UNSETTLED
+  (Issue #235, tooling): on duel day 3, Age of Science, radar
+  posture release per tools/duel.py, tapping Claim All opened
+  a TIPS dialog reading verbatim: "Completing Radar Tasks
+  today will not grant Alliance Duel points, and you are about
+  to claim 10 radar task rewards at once. Continue?" This
+  contradicts the tool's gate text that radar claims score
+  again today. The unit claimed anyway (resources certain,
+  holding the stack risks task expiry, release standard
+  governs), but the posture rule above is NOT rewritten on
+  this evidence alone: either the VS rotation in
+  tools/duel_schedule.json is stale for this week, or the
+  dialog means something narrower. The next radar release
+  decision needs the settled reading, ideally from the VS
+  panel itself. No duel score read was taken in the 1450
+  unit, so the delta test is still owed.
 
 ## Stack day completion standard
 
@@ -970,7 +993,12 @@ are still open, per the protocol.
   1 of 40 at entry, 6 tasks completable by Quick Execute,
   11 rewards pending after execution. The top-left stored
   figure is not an inventory of the Quick Execute offer;
-  do not infer completable tasks from it.
+  do not infer completable tasks from it. (2026-11-03 1450 update: after Quick Execute 3 tasks
+  the bar offered Claim All 8 rewards, and after Quick Execute
+  2 tasks it again offered Claim All 8 rewards; the pending
+  count after a Quick Execute batch exceeds the batch size.
+  Marches returning from earlier batches are the leading
+  hypothesis, recorded in the unit, not verified.)
 
 ## What the 2026-11-02 1508 unit closed for radar
 
@@ -1224,7 +1252,125 @@ are still open, per the protocol.
   Blocker category e (repeated blocker - Claim
   All-only bar).
 
+## What the 2026-11-03 1450 unit added - release day, 27 claims, duel-dialog contradiction
+
+- Ticker-1434, unit radar-2026-11-03-1403, about 14:35 to
+  14:50 local, status partial. Evidence in
+  `_records_/2026-11-03/radar-tasks/1450-queue-run.md`.
+- Posture note, read live at entry: tools/duel.py reported
+  duel day 3, Age of Science, radar posture release, day
+  ends 2026-11-04 19:00 local. The unit window text still
+  read "duel day 2 - radar stack" (stamped at production
+  before the posture flipped); the live posture governs,
+  so this unit ran as a release unit. Lesson: stamped unit
+  text can lag a posture flip; re-read the live posture
+  at entry, never trust the stamp.
+- Entry: the game was left on the Alliance panel by the
+  1404 pass; the back arrow at norm (148,907) exited to
+  the base on the first try. The dish tap at the
+  documented norm (62,727) opened the radar on the first
+  try, confirming the 1913 dish point again. Entry reads:
+  Lv.13, stored 25/40, stamina 120, restore line "12
+  Radar Task(s) will be restored in 00:53:xx", full
+  restore 11-4 03:31:43 local time.
+- Pin claim first: a green skull pin with a red dot (top
+  left of the entry map) tapped at norm (312,300) claimed
+  instantly, as the finished-task pin rule predicts.
+  CONGRATULATIONS popup: radar item x10, EXP 1.5M, drone
+  item 800, food 789.6K, coin 127.2K. Radar points 139 to
+  140, stored 25/40 to 24/40, pending rewards 11 to 10.
+  The finished-task instant-claim rule is confirmed again.
+- Claim All hitbox correction, measured: taps at norm y
+  890, 905, 910 and 912 on the Claim All button did
+  NOTHING (five taps across two attempts, including a
+  double-click); a tap at norm (498,925) opened the
+  button. Standing rule updated in the Quick Execute
+  section: tap bottom-bar buttons at y 925, not at their
+  visual centre (~910).
+- Claim All opened a TIPS dialog, verbatim: "Completing
+  Radar Tasks today will not grant Alliance Duel points,
+  and you are about to claim 10 radar task rewards at
+  once. Continue?" This contradicts tools/duel.py, which
+  said radar claims score again today. The unit claimed
+  anyway: the resources are certain, holding the stack
+  for a later scoring day risks task expiry, and the
+  release standard governs. The contradiction is filed
+  as Issue #235 (tooling) for the planner/retro to settle
+  against a live VS panel read; it is NOT closed here,
+  and the scoring section is NOT rewritten on this
+  evidence alone. Confirm tapped at norm (638,702).
+- Claim All 1: 10 rewards claimed. Popup: radar item
+  100, EXP 19.4M, drone item 2.4K, blue triangle 225,
+  iron 2.8M, food 5.6M, coin 2.3M. Radar points 140 to
+  150, stored 24/40 to 14/40. Bar flipped to Quick
+  Execute: "You can complete 3 tasks, requires 30
+  Stamina."
+- Quick Execute 1: 3 tasks, stamina 120 to 90, stored
+  stayed 14/40. Bar flipped to Claim All: "8 task rewards
+  can be claimed". The pending count after a Quick
+  Execute batch exceeds the batch size; the mechanism is
+  not settled - marches returning from earlier batches
+  are the leading hypothesis, recorded here, not
+  verified. This instance is appended to the stored
+  versus completable open question.
+- Claim All 2: 8 rewards claimed (same TIPS dialog,
+  Confirm at (638,702)). Popup: radar item 80, EXP
+  13.5M, blue triangle 183, drone item 3.2K, iron 5.1M,
+  food 1.1M, coin 1.4M. Radar points 150 to 158, stored
+  14/40 to 6/40. Bar flipped to Quick Execute: "You can
+  complete 2 tasks, requires 20 Stamina."
+- Quick Execute 2: 2 tasks, stamina 90 to 70, stored
+  stayed 6/40. Bar flipped to Claim All: "8 task rewards
+  can be claimed" again.
+- Claim All 3: 8 rewards claimed (same dialog, same
+  Confirm). Popup: radar item 80, EXP 11.5M, drone item
+  4.0K, blue triangle 225, iron 2.2M, coin 1.3M, food
+  3.2M. Radar points 158 to 166, stored 6/40 to 0/40.
+  Bar flipped to Quick Execute: "You can complete 4
+  tasks, requires 40 Stamina" - left for the next unit.
+- Totals in this unit: rewards claimed 27 (1 pin + 10 +
+  8 + 8). Radar points 139 to 166 (+27, exactly the
+  claim count). Tasks executed 5 via Quick Execute (3 +
+  2), 50 stamina. Popup resources summed: coin 5.127M,
+  EXP 45.9M, iron 10.1M, food 10.69M, drone items 10.4K,
+  radar items 270, blue triangles 633. No diamonds or
+  money spent, no Buy tapped, no stamina item used,
+  no free stamina claim taken (not needed).
+- Closing state, live reads: Lv.13, radar points 166,
+  stored 0/40, stamina 70, restore line "12 Radar Task(s)
+  will be restored in 00:42:21" at close, full restore
+  11-4 03:31:43 local (unchanged from entry). Bottom bar
+  at close: Quick Execute, 4 tasks, 40 stamina -
+  carried to the next radar unit. Restore-line semantics
+  stay unverified, not assumed.
+- Pin inventory at close (untapped, visible frame only,
+  not a whole-map census): orange skull pin with red dot
+  (top centre), purple axe pin (top right), green pin
+  (left middle, partly behind a portrait), portrait pins
+  (left middle), purple axe pin (centre), blue axe pin
+  (lower centre). All pins left unattempted, so per the
+  release handling rule this unit is partial, never done.
+  Pin types stay unidentified; they head the open
+  questions, not a guessed taxonomy.
+- Duel-points note: per the live TIPS dialog, none of
+  today's radar claims granted Alliance Duel points; the
+  duel-score delta test remains open and is now Issue
+  #235. No duel score read was taken in this unit.
+  No earlier claim superseded; the 0636 pin inventory is
+  superseded in place by this close inventory, not erased.
+
 ## Changelog
+
+- 1.21.0, 2026-11-03 - 1450 release-day unit folded: dish
+  62,727 first-tap entry confirmed again; green skull pin
+  instant claim (+1 point) re-confirms the finished-task
+  rule; bottom-bar hitbox corrected to y 925 (y 890-912
+  no-change); 27 rewards claimed, points 139 to 166, stored
+  0 of 40, stamina 70, Quick Execute 4 tasks / 40 stamina
+  carried; live TIPS dialog says today's radar claims grant
+  no duel points, contradicting duel.py - filed as Issue
+  #235 (tooling), scoring section NOT rewritten, delta test
+  still owed; 6 pins inventoried unattempted so partial.
 
 - 1.16.0, 2026-11-02 - 1913 new-trade-day stack-day unit folded: dish 62,727 first-tap entry resolves the 1439 entry blocker, entry-failure count resets to 0; Lv.13, points 139, stored 0 of 40, stamina 56, 12 tasks restoring about 21:32; no Quick Execute / Claim All bar with 0 stored and 0 pending (consistent, not the 2026-10-31 lockout); pin scan empty, nothing left unattempted; one takeover, dialog did not return, not contested.
 
