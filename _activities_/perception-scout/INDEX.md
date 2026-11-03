@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T02:40:01Z
+modified: 2026-11-03T08:32:17Z
 level: L1
-version: 1.6.0
+version: 1.7.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: perception-scout execution record 2026-11-02 0539 queue run
   - source: ticker-1336 perception-scout execution record 2026-11-02 1357 queue run (base group partial)
   - source: ticker-1755 perception-scout execution record 2026-11-02 1801 queue run (alliance group partial, stale chain spent)
+  - source: ticker-0004 perception-scout execution record 2026-11-03 0016 queue run (base group partial, power 149,940,141)
 ---
 
 
@@ -624,6 +625,60 @@ observe-only, nothing claimed). Evidence in
   the furnace toast [22/60] is now on its fourth sighting,
   and the Store and City panel dots are still unexplained;
   none is closed on silence.
+
+## What the 2026-11-03 0016 unit added - base group partial, power up, successor chain
+
+- Unit scout-2026-11-02-1900 by ticker-0004, session
+  about 00:16 to 00:19 local, status partial: only the
+  scout-base group was walked inside this unit; the
+  events, store and alliance groups are unwalked and
+  carried to the successor unit in chain
+  scout-2026-11-02, so the tracker is left untouched.
+  Observe-only throughout: nothing claimed, fought,
+  dispatched, donated, dug or bought. Evidence in
+  `_records_/2026-11-03/perception-scout/0016-queue-run.md`
+  and the day observation file
+  `_records_/2026-11-03/perception-scout/observation.md`.
+- Base screen and HUD, read live about 00:17 local:
+  power 149,940,141 (was 149,311,528 at the
+  2026-11-02 13:56 read); HUD top row food 230.7M,
+  iron 565.3M, coin 5.9M; second row 18.7M, 505.1K;
+  12.72K with a plus button; cart 2,831.
+- Left column: avatar Lv.30, hammer 2/4, flask 2/2,
+  green face, robot head, white truck, wrench,
+  megaphone badge 11, yellow radio; weather 6.5C.
+- Right column: Events with no red badge visible,
+  Capitol, VS timer 17:43:17, a second timer
+  12d 17:43:17, Alliance with a red dot, Mail,
+  Inventory.
+- Bottom: HEROES, chat ticker, 99+ badge, WORLD.
+  Timers as read, not interpreted: the two 17:43:17
+  readings are reported as displayed.
+- Resource bubbles on many buildings observed only,
+  not collected. Furnace toast again: "High-temp
+  Furnace total overdrive time (in ...", still
+  unexplained, observed only - a further sighting
+  past the fourth counted at 1801, carried, not
+  closed on silence. Top banner partially visible
+  ("Important: President Ab..."), not opened, not
+  read in full.
+- Red dot accounting: seen 3 badges (megaphone 11,
+  Alliance dot, 99+ badge) plus 2 counters (hammer
+  2/4, flask 2/2). Explained 0 within the base group
+  alone; the badges map to owning groups this unit
+  did not walk. Unexplained 3: megaphone 11,
+  Alliance dot, 99+ badge. Unknown items: furnace
+  overdrive toast, truncated President banner.
+- unmatched_labels: none in the surfaces actually
+  walked. No zombie sighting check was made in this
+  unit (Events hub unwalked); no zombie chain seeded,
+  per the standing rule that the event ended
+  2026-10-30 and no live return sighting exists.
+- Carried forward: successor unit enqueued in chain
+  scout-2026-11-02 for the scout-events, scout-store
+  and scout-alliance groups. Game left on the base
+  screen.
+
 
 ## Open questions
 
