@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T15:45:00Z
+modified: 2026-11-03T19:45:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-02 2247 queue run
   - source: ticker-0234 resource-collection execution record 2026-11-03 0244 queue run (partial, four central bubbles, left edge undragged)
   - source: ticker-0634 resource-collection execution record 2026-11-03 0642 queue run (partial, central, left and top bubble-free, right edge unswept)
+  - source: ticker-1034 resource-collection execution record 2026-11-03 1044 queue run (partial, central and right-bottom bubble-free, 0 collected, left and top unswept since 0642)
 ---
 
 
@@ -773,3 +774,59 @@ regular stays due. Evidence in
 - 1.14.0 (2026-11-03): four central-cluster bubbles cleared in one batch at (396,399), (294,455), (497,458) and (397,510), second-row first resource up about 0.3M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and top-edge views bubble-free but the left edge undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-edge-first re-sweep carried to the next unit, folded from the 0244 harvest unit; no earlier claim superseded.
 
 - 1.15.0 (2026-11-03): central cluster bubble-free at the four positions cleared by the 0244 unit with nothing tapped, left-edge follow-up from 0244 done (drag 700,500 to 300,500 to the neighbouring-base cluster west of the own base, no own-building bubble), top edge bubble-free (drag 500,300 to 500,650, farmland plots, upper buildings, parked helicopter), HUD unchanged at rounding (food 230.7M, second top-bar resource 565.3M, coins 5.9M, second-row first resource 19.0M, second-row second resource 505.1K, power 149,940,141, stamina 120), right edge not swept and armed truck loot state not separately verified so partial with tracker untouched, Season 2 area excluded per standing rule, right-edge-first re-sweep with explicit armed-truck loot verification carried to the next unit (the 0244 left-edge carry is now closed), folded from the 0642 harvest unit; no earlier claim superseded.
+
+
+## What the 2026-11-03 1044 unit added - central and right-bottom bubble-free, 0 collected, left and top unswept since 0642
+
+- Ticker-1034, unit harvest-2026-11-03-1003, about
+  10:36 to 10:44 local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/1044-queue-run.md`.
+- Entry, left open by the previous pass: the game was
+  NOT on the base view at unit start - the Alliance
+  Tech detail panel for Rallied Defense (7/10) was
+  left open by ticker-1004, coin Donate button greyed
+  with its timer at 00:02:53. Nothing was donated
+  here; that panel belongs to the donations unit.
+  The panel X closed to the Alliance Techs list,
+  whose X revealed the Alliance main panel ([AP3x]
+  The Apex, 94/100 members, power 13,091,657,850),
+  and its back arrow returned to base. Help and
+  Alliance Gifts red dots were visible in that panel
+  and were left untouched as other units work.
+- HUD at unit start and close, rounded as displayed,
+  unchanged: food 240.3M, second top-bar resource
+  575.0M, coins 12.1M, second-row first resource
+  19.0M, second-row second resource 505.1K, power
+  149,948,901, stamina 120.
+- Central cluster (starting view and restored view):
+  no green resource bubble over any building, nothing
+  tapped, nothing collected. Right-edge follow-up
+  from the 0642 unit: a first drag (300,500 to
+  700,500) produced no visible view change; the
+  reverse drag (700,500 to 250,500) panned to the
+  right-bottom base area (gold HQ, radar towers,
+  troop tents, Season 2 structures at the bottom
+  right). No green bubble in that view either.
+  Dragged back (250,500 to 700,500) to central.
+- Armed truck loot check: the parked trucks in the
+  central view (red and blue trucks by the lower
+  gate) and the blue truck by the gold HQ in the
+  panned view showed no green loot bubble, so
+  nothing was claimed there (not fully loaded). The
+  loot state was verified visually only; no truck
+  panel was opened. The Season 2 area at the bottom
+  was left out of the sweep, per the standing rule
+  that it is not main base harvest.
+- Why partial, not done: the full-map acceptance
+  needs zero bubbles with the base dragged to each
+  edge. Central and right-bottom are bubble-free in
+  this unit, but the left edge and top edge were last
+  swept by the 0642 unit, not this one, and bubbles
+  regenerate within minutes of a collection, so a
+  whole-map zero claim is not proven. Tracker
+  untouched, per the rule for partial units.
+- Follow-up for the next harvest unit, order flipped
+  from the 0642 carry: sweep the left edge and top
+  edge first, re-check the central cluster for
+  regenerated bubbles, and re-check the armed truck
+  loot bubble. No earlier claim superseded.

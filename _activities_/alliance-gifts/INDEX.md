@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T17:40:00Z
+modified: 2026-11-03T19:45:00Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-0304 alliance-gifts execution record 2026-11-03 0308 queue run (done, 64 Regular and 5 Premium, Regular jump unexplained)
   - source: ticker-0634 alliance-gifts execution record 2026-11-03 0650 queue run (done, 250 Regular and 6 Premium, per-tab Claim All points re-grounded)
   - source: ticker-0904 perception-scout execution record 2026-11-03 0910 queue run (partial, alliance group, observe-only, 238 Regular claimable, Gift Level 28 progress read, Issue #183 evidence)
+  - source: ticker-1104 alliance-gifts execution record 2026-11-03 1113 queue run (done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked, Issue 183 evidence)
 ---
 
 
@@ -785,3 +786,56 @@ one file per execution.
 - 1.16.0 (2026-11-03): dialog-confirmed 250 Regular and 6 Premium, Gift Level 28 progress 185,745,450 to 185,748,340 of 206,300,000 (plus 2,890 in-unit, exactly accounted: Regular plus 2,500 for 250 gifts, Premium plus 390 for 6 gifts), Alliance button grounded centre 936,698 against the 927,641 Wars mis-tap, Gifts button grounded box 135,561 to 493,637 centre 314,599 against the 312,526 Wars mis-tap with y estimates about 70 low, Premium Claim All grounded box 600,888 to 889,976 centre 744,932 against the Regular point 501,926 falling on the Hide-your-name checkbox area with the checkbox state left unverified and carried to the next unit, residual Premium tab red dot with no Claim All button as the only unexplained counter evidence commented onto Issue #183 by this run, folded from the 0650 gifts unit.
 
 - 1.17.0 (2026-11-03): observe-only scout read, Gift Level 28 progress 186,155,650 of 206,300,000 (up 407,310 from the 0650 close with no intervening gifts unit, not attributed to this account's claims, Issue #183), 238 Regular gifts claimable observed only and never claimed by the scout unit, Premium visible rows all Claimed with below-fold rows unverified so the Premium tab dot stays unexplained as in the 0650 residual dot, and the Alliance entry re-grounded at [903,699] against the withdrawn (903,787) Mail centre, folded from the 0910 scout read.
+
+
+## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
+
+- Ticker-1104, unit gifts-2026-11-03-1030, about
+  11:06 to 11:13 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-gifts/1113-queue-run.md`.
+- Entry, re-grounded and matching prior centres:
+  Alliance button grounded fresh at norm (934,705),
+  matching the prior grounded centre (936,698); the
+  tap opened the Alliance panel. Alliance Gifts
+  button grounded fresh at norm (315,608), matching
+  the prior grounded centre (314,599); the tap
+  opened Alliance Gifts. Its red dot was visible on
+  entry.
+- Regular tab, read live: Gift Level 28, progress
+  186,529,660 of 206,300,000, Claim All badge 289.
+  Claim All at grounded (500,925) claimed 289 Regular
+  gifts by its summary dialog. After dismissing the
+  dialog with an empty-area tap, progress read live
+  186,532,550 (plus 2,890, exactly 289 x 10), visible
+  rows read Claimed, and no Claim All button remained
+  on the Regular tab.
+- Premium tab, read live: Claim All badge 2, with two
+  unclaimed rows visible ((R) plus 50 from an
+  Advanced Training Pass purchase, (N) plus 10 from a
+  Diamond purchase). The Hide your name on Gifts
+  checkbox read unchecked on entry and was left
+  untouched. This answers the 0650 unit unverified
+  toggle question for this unit: unchecked at 11:10.
+  Claim All at grounded (760,933) claimed 2 Premium
+  gifts by its summary dialog, matching the badge.
+  After dismissing the dialog, progress read live
+  186,532,610 (plus 60, exactly 50 plus 10), visible
+  rows read Claimed, and no Claim All button remained
+  on the Premium tab. No red dot remained on either
+  tab edge in the closing screenshot.
+- Completion sweep: Claim All used on both tabs, rows
+  Claimed on both tabs, no Claim All button remaining
+  on either tab. Exited with the Gifts back arrow
+  (grounded (62,948)) to the Alliance panel, then the
+  panel back arrow (164,931) to the base screen.
+- Closing figures: Gift Level 28 (unchanged);
+  progress 186,529,660 to 186,532,610 (plus 2,950);
+  Regular claimed 289; Premium claimed 2; total 291.
+- Consistency note for Issue 183, commented there
+  (not a closure claim): this unit counter moved
+  EXACTLY by its own claims on both tabs, with no
+  excess on either tab. The Issue 183 anomaly was an
+  excess on the Premium window on 2026-11-02; this
+  unit only bounds it to units where the counter is
+  read cleanly around the claim. No earlier claim
+  superseded.

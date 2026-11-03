@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T15:45:00Z
+modified: 2026-11-03T19:45:00Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-0304 alliance-help execution record 2026-11-03 0308 queue run (done, header 980 unchanged by Help All)
   - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (observe-only, Help panel 1,240/1,000 over gate, four Bears Lair requests 30/30)
   - source: ticker-0704 alliance-help execution record 2026-11-03 0710 queue run (done, base-screen bubble, header 1,240/1,000 unchanged by Help All)
+  - source: ticker-1104 alliance-help execution record 2026-11-03 1121 queue run (done, bubble press, header 1240 over 1000 unchanged, Help All no requests yet)
 ---
 
 
@@ -595,3 +596,46 @@ Measured in the 0135 help unit (ticker-0134, window mode
 
 - The daily help cap and what helpers and helped players each receive.
 - How a Healing Help request is helped (Help All, or a different surface such as the hospital) - first seen 2026-11-02 1741, papillon707 request unhelped after two Help All presses and a row tap.
+
+
+## What the 2026-11-03 1121 unit added - done through the base-screen bubble, header 1240 unchanged, Help All no requests yet
+
+- Ticker-1104, unit help-2026-11-03-1030, about
+  11:15 to 11:18 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/1121-queue-run.md`.
+- Entry: base screen at entry showed the help bubble
+  at the lower right, immediately left of the Alliance
+  shield, grounded fresh at norm (823,700) -
+  matching the 0710 unit grounded centre (825,696).
+  One tap at the bubble centre pressed the waiting
+  helps: the game answered Allies are very grateful
+  for your assistance (captured in the control
+  channel OCR) and the bubble was gone on the next
+  screenshot.
+- Verification on the Alliance Help page, read live:
+  header Todays points gained from Alliance Help
+  1,240 over 1,000, unchanged from the 0710 close.
+  All listed rows are this account own Bears Lair
+  requests (Lv.27 Drill Ground, Lv.30 Aircraft
+  Center, Precision Targeting II research), each
+  carrying a green Time reduced badge; no ally rows
+  were pending. A Help All tap on that page
+  (grounded (500,779)) answered No help requests yet,
+  confirming no further ally help was waiting.
+- Session: computer session cc-342 (carried from the
+  gifts unit, dropped between units) restarted as
+  cc-344 with no state lost. No different-device
+  dialog.
+- Entry notes carried forward: the Alliance button
+  grounded centre on the base view is (931,709); the
+  Help button grounded centre on the Alliance panel
+  is (686,532), as recorded by the 0710 unit. Exited
+  with the Help panel X to the Alliance panel, then
+  the panel back arrow (164,931) to the base screen.
+- Consistency note, not a contradiction: the header
+  is unchanged despite the bubble press, but the
+  header already reads above its 1,000 cap
+  (1,240 over 1,000), so a bubble press is not header
+  proof - the same lesson as the 0308 unit (Help All
+  toast is not proof either). No earlier claim
+  superseded.
