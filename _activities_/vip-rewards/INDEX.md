@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T13:45:00Z
+modified: 2026-11-03T06:38:05Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -12,6 +12,7 @@ grounded_in:
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (lines 12-13)
   - source: ticker-1904 queue sync reap of expired units, 2026-11-01 (vip fix-up expired, attempts 0)
   - source: vip-rewards execution record 2026-11-02 0438 queue run
+  - source: ticker-2134 vip-rewards execution record 2026-11-02 2138 queue run
 ---
 
 
@@ -169,3 +170,42 @@ Measured on 2026-10-25.
 
 - Whether the freebie contents rotate or are fixed per level.
 - What reaching VIP 14 pays and unlocks.
+
+## What the 2026-11-02 2138 unit found - checked only, both items already claimed
+
+- Unit vip-2026-11-02-1900 by ticker-2134, about 21:38 to 21:41,
+  status done as checked only: the VIP screen was opened and read
+  live, and neither the Daily Freebie nor the login chest had
+  anything left to claim. Evidence in
+  `_records_/2026-11-02/vip-rewards/2138-queue-run.md`.
+- Entry: commander avatar at norm (60,85) opened MY PROFILE
+  (Lv.30 [AP3x]Bears Lair, likes 1,800, up from 1,797 in the 0438
+  run). Gold VIP13 badge, grounded on the fresh screenshot at
+  (575,328), opened the VIP screen.
+- VIP state read live: VIP13, logged in 57 days in a row, points
+  1,589,450 of 2,000,000 toward VIP 14. The rise from the 0438
+  post-claim 1,586,160 is recorded, not attributed: this record
+  does not say what paid it.
+- Daily Freebie: the button is grey with a countdown (20:20:15 at
+  first read, ticking down on re-reads), not a green Claim button
+  - the freebie for this reset day is already claimed.
+- Login chest: the profile VIP13 badge carried no red dot, and
+  the chest icon at the top right of the VIP screen (grounded at
+  (800,195)) carried no red dot either. Two taps on it, each
+  verified by a following screenshot, produced no popup and no
+  points change (points stayed 1,589,450). That is consistent
+  with the chest already claimed, not with the unresponsive
+  button blocker of earlier units: in the 0438 run a live chest
+  claim paid at once with a CONGRATULATIONS popup, and here
+  there is no dot to claim. Diagnostic distinction added: no dot
+  plus no popup plus no points change means already claimed; a
+  green Claim button that stays green after taps means button
+  failure, the 0438 freebie pattern.
+- The VIP Exclusive $99.99 offer was not tapped, and no
+  points-plus button or cart shortcut was tapped.
+- Open note, carried not resolved: who claimed this reset day's
+  freebie and login chest is not established by this unit (no VIP
+  record after the 19:00 reset precedes it today); the screen
+  state alone proves they are claimed, not who claimed them.
+- Exit: VIP screen back arrow returned to MY PROFILE, and the
+  profile X returned to base, both on the first tap.

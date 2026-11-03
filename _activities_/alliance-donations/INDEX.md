@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T02:40:01Z
+modified: 2026-11-03T06:38:05Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: alliance donations execution record 2026-11-02 1810 queue run (ticker-1755 unit, partial, Donation Count 30/30 ambiguity)
   - source: alliance donations execution record 2026-11-02 0719 queue run
   - source: ticker-1004 alliance-donations execution record 2026-11-02 1020 queue run (partial, entry blocker repeats 0621)
+  - source: ticker-2204 alliance-donations execution record 2026-11-02 2220 queue run
 ---
 
 
@@ -818,14 +819,14 @@ before 03:17 local). Evidence in
   counter's direction, while Tech Donation Today read 0.
   Evidence commented on Issue #160 by this run (a link, not
   a closure claim). (2026-11-02 1923 update: the failed unit read no count, so the ambiguity is unchanged and the live re-read direction stands.) The next unit re-reads live on the
-  Garrison Defense panel first; see the 1810 unit section.
+  Garrison Defense panel first; see the 1810 unit section. (2026-11-02 2220 update: the re-read landed live as 10/30 on the Rallied HP panel, but against the ambiguous 1810 30/30 with no donation landed in between, the movement is unexplained - see the 2220 unit section; the live re-read direction stands.)
 - Upgrading-node no-count state: a node in its upgrade countdown
   (Rallied HP, countdown 07:28:29 at the 0547 read, completing
   about 13:20 local 2026-11-02) offers no donation interface at
   all; the Confirm button's function during a countdown is
-  unverified and must not be tapped as a routine act; whether
-  donations reopen at countdown end is for a later unit to
-  discover.
+  unverified and must not be tapped as a routine act; whether donations reopen at countdown end is answered yes
+  for Rallied HP by the 2220 unit, which found the panel offering
+  donations at 6/10 after the countdown.
   The 0719 tree read (Garrison HP, Attack and Defense at
   7/10, recommended marker on Garrison Defense) differs from
   the earlier Troop Movement and Rallied node reads; whether
@@ -1078,3 +1079,79 @@ enqueued for after the cooldown (not before about
   donation was lost or doubled by it. The game was
   left on the Rallied HP panel with the coin button
   greyed under its 00:18:42 timer.
+
+## What the 2026-11-02 2220 unit added - entry blocker broken, Donate button unresponsive, partial
+
+- Unit donations-2026-11-02-2203 by ticker-2204, status partial.
+  Donations made 0, tracker untouched, day target not closed.
+  Evidence in
+  `_records_/2026-11-02/alliance-donations/2220-queue-run.md`.
+- Time correction, recorded in the record itself and applied here
+  for sequencing: the file name and frontmatter time 22:20
+  overstate the close - the unit actually completed at 22:16 PST,
+  and all game reads below are from the 22:10-22:16 window.
+- Entry blocker broken: the pass started stranded on the Arms
+  Race page (left open by the arms-race unit, whose back arrow
+  again did not navigate). The app was quit with Cmd+Q (menu
+  Quit confirmed) and relaunched (new pid, same window
+  geometry), restoring the base view with no different-device
+  dialog. The Alliance shield was then tapped at its fresh
+  measured centre on the relaunch screenshot, norm 907,731, and
+  the Alliance menu opened on the first tap. The 2026-11-02 entry
+  blocker (camera panning to Drill Ground) is broken by this
+  route; the metadata hypothesis about the grounding point above
+  the button is consistent with the miss but the
+  relaunch-plus-fresh-centre route is what is verified here.
+  This answers the open question's working-route unknown: the
+  next stranded unit relaunches first and re-grounds the shield
+  from the relaunch screenshot.
+- Live reads: Alliance [AP3x] The Apex, Leader Abuss Apex, Power
+  12,969,422,116, Members 94/100, Language English. Alliance
+  Techs, War tab: Troop Movement 5/10, Rallied HP 6/10, Rallied
+  Attack 7/10, Rallied Defense 7/10, next node below 1/10.
+  Rallied HP panel: Increased Hero HP in Rallies for Allies,
+  Donation Reward +20%, Tech EXP Required 200/3.0M, Current +6%,
+  Next Level +7%, Donation Reward 50 and 50. Coin button: Donate
+  700 coin, green, enabled-looking. Coin balance on the HUD reads
+  5.9M (rounded), so cost is not the blocker. Diamond button
+  (Donate 2) was never touched.
+- Donation Count: 10/30, read live at panel entry and again after
+  every tap variant, unchanged. Under the hard closing rule this
+  is the remaining count, so 10 coin donations remain today and
+  the day is not done.
+- Donate button, five variants, all no-change: (1) snapped click
+  at norm 678,731; (2) repeat snapped click after a 5 second wait;
+  (3) exact pointer click at the same point with snap off;
+  (4) long-press (mouse down, 1 second, up); (5) double-click at
+  the same point. After each, the count still read 10/30 and Tech
+  EXP still 200/3.0M, which proves no donation landed (a landed
+  donation pays Tech EXP and moves the count). Navigation taps
+  worked in this same session (Alliance shield, Alliance Techs
+  tile), and a claim-style tap worked in the previous unit
+  (ranking chest preview), so this is a button-specific failure,
+  matching open issue #171 (green buttons unresponsive to
+  background input). The executor commented on #171 rather than
+  filing a new issue; no new issue from this run.
+- Handover for the next donations unit: try a different point on
+  the same button first (the coin icon at its left end, away from
+  the small portrait badge at its right edge), then a foreground
+  click if the route allows it. Do not repeat the five variants
+  above unchanged. Do not touch the diamond button.
+- Rallied HP level note: Rallied HP now reads 6/10 (5/10 at the
+  1944 and 1810 reads) and the panel offers a donation interface,
+  so donations reopened after its upgrade countdown (countdown
+  07:28:29 at the 0547 read, completing about 13:20 local
+  2026-11-02, per the open question). That open question's
+  whether-donations-reopen-at-countdown-end is now answered yes
+  for this node.
+- Count tension, NOT resolved: the 1810 ambiguous 30/30 read
+  against this 10/30 live read, with no donation landed in
+  between (the 1923 unit made none), is unexplained by this
+  record - it may be owner donations, or the 1810 read may not
+  have been a remaining count. It is a new data point for issue
+  #160, not a closure claim, and the live re-read direction
+  stands.
+- Red lines held: no diamonds or money spent, no speedup item
+  burned, no other activity's work done from this unit. The
+  Assemble tile was visible in the Alliance menu and was not
+  opened.
