@@ -2704,3 +2704,21 @@ of 2026-10-28.
   1900 batch. records/2026-10-31 verified contained
   in main, no PR needed. Full detail in
   pr-integration/1700-run.md.
+
+- Survivors unit survivors-2026-11-02-1403, partial (ticker-1703):
+  re-claimed after the ticker-1631 attempt's lease expired; changed
+  methods under rule R2, not a repeat of the 70,692 tap: a drag pan
+  400,700 to 400,400 changed nothing, a tap at norm 89,722 opened
+  the radar world map (no radar work done, HOME returned safely to
+  base; that point is a radar entry, not the survivor figure), and
+  a tap at norm 109,626 on the question-mark bubble opened nothing.
+  0 survivors processed, gate line unverified, no Quick Dispatch.
+  Tracker untouched. Full detail in survivor-intake/1718-queue-run.md.
+
+- Training unit training-2026-11-02-1403, partial (ticker-1703):
+  Lv.24 tent point norm 806,581 tapped, no selection row seen;
+  pistol point norm 794,605 tapped, small visual change in the
+  tent area but no TRAIN UNITS panel opened. 0 batches queued,
+  Lv.27/Lv.30 not inspected, no Drill Ground figure read live.
+  Game left safe on base. Tracker untouched. Full detail in
+  troop-training/1723-queue-run.md.
