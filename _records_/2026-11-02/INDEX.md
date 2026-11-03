@@ -3468,3 +3468,10 @@ of 2026-10-28.
   1900, not force-merged. No records PR opened, no
   merge, no escalation. Full detail in
   pr-integration/2115-run.md.
+
+## 21:04 to about 21:27 - ticker pass ticker-2104
+
+- 2109 shop-claims: passes unit done - shop sweep, Free Supply claimed, Coin Weekly already claimed today, Monthly Pass claimed (Days Left 19, Rewards Left 19); Hot Deals no free pack; Legendary Take All $19.99 and all purchase buttons untouched. Full detail in shop-claims/2109-queue-run.md.
+- 2113 event-claims: events unit done - full hub sweep, 4 tabs, nothing claimable; Arms Race Unit Progression score 9,300 below the 15,000 chest, cumulative chest 0/2; Desert Storm enlisted 19/20, battle 2026-11-6; Wanted Boss rotated Code 87 to Code 64 (Missile Vehicle heroes +50%), best single attack 852,929,736 below the 1.0B tier, all Claim buttons grey; Community 500 Claimed; no Zombie Invasion tab. Full detail in event-claims/2113-queue-run.md.
+- 2120 truck-plunder: trucks unit partial - Trade Count 4/5, Plunder Count 4/4 read live; 1 dispatch shortfall, all 4 slots out, first return about 00:50 away; station-building tap is a new working trade entry route (left column has no trade slot); Mega Dispatch greyed ("all current trade trucks dispatched"), no contracts spent; Reward Recovery 2026-10-31 record already CLAIMED. Tracker untouched. Full detail in truck-plunder/2120-queue-run.md.
+- 2127 secret-missions: secrets unit partial - 4 finished tasks claimed (UR Disrupt electric grid + 3 SSR, PERFECT stamps, Your Tasks badge cleared); ally assists 0/5 and new Mega dispatch pending for the next secrets unit (pass budget out). Tracker untouched. Full detail in secret-missions/2127-queue-run.md.

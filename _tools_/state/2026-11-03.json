@@ -28,5 +28,15 @@
   "status": "done",
   "at": "2026-11-03T04:47:18",
   "note": "No trophy icon, no ceremony waiting"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-03T05:10:07",
+  "note": "Shop sweep done: all owned claims already taken, no new claim"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-03T05:13:46",
+  "note": "Events sweep done: 4 tabs, nothing claimable"
  }
 }
