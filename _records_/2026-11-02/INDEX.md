@@ -3144,3 +3144,22 @@ of 2026-10-28.
 - Arms Race unit arms-race-2026-11-02-1803, partial (ticker-1904): live phase Unit Progression, score 9,300 against tier-3 75,000 (gap 65,700 = about 2,120 Lv.10 units at +31 each; speedup and diamond-pack paths are red lines, training batches belong to the training regular). No chest earned, none claimed; cumulative chest 0 of 2, ranking chest preview-only, no bouncing chest on the phase page. Events hub re-scan not completed (back arrow unresponsive to single and double taps). Tracker untouched. Full detail in arms-race/1924-queue-run.md.
 
 - Donations unit donations-2026-11-02-1803, failed (ticker-1904): game stranded on the Arms Race page from the previous unit; its back arrow ignored four background taps (90,947 single and double, 89,949, 58,945), so Alliance Techs was never reached, no donation made, no live count read. Tracker untouched. Next donations unit should relaunch the app first to restore the base view. Full detail in alliance-donations/1923-queue-run.md.
+
+## 19:30 to about 19:37 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-02-1930,
+  non-batch pass (checker _tools_/records_batch.py
+  reports due in the 19:00-20:00
+  America/Los_Angeles window, but the 1900 batch
+  was already consumed in this window by the 1900
+  pass merging PR 161, merge commit 71aa427d4, so
+  only the first pass at or after the point merges):
+  no merge, no new comment, no new records PR.
+  Records PR 193 (2026-11-02, head d9fc56c2a)
+  awaits the 2300 batch; records PR 187
+  (2026-11-01, head 2be5df83) stays conflicted on
+  _logs_/repo-actions/action-log.jsonl, already
+  commented at the 1900 pass, unchanged, awaiting
+  branch-side resolution. No knowledge or code PR
+  open, no owner-gated PR. Full detail in
+  pr-integration/1930-run.md.
