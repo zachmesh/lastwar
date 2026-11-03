@@ -2796,3 +2796,19 @@ of 2026-10-28.
   still conflicted on the standing files, the conflict
   comments stand, not force-merged. No owner-gated PR.
   Full detail in pr-integration/1445-run.md.
+## 15:00 to about $FIN_PST - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-1500.
+  Batch pass per the checker (15:00 window, due):
+  records PR 229 (2026-11-02, head 962d3fee, MERGEABLE
+  CLEAN) merged with a merge commit (3c3c0c5f);
+  merge-time action-log line committed to
+  records/2026-11-02 as 6a2fa1666b and fresh PR 236
+  opened for it, awaiting the 19:00 batch. Records PR
+  207 (2026-11-03, head 068da0d6) conflict re-verified
+  by test merge on _logs_/repo-actions/action-log.jsonl
+  and _tools_/state/2026-11-03.json, updated conflict
+  comment posted, not force-merged. Records PR 187
+  (2026-11-01, head 2be5df83) still conflicted, standing
+  comment stands. No knowledge or code PR open, no
+  owner-gated PR. Full detail in pr-integration/1500-run.md.
