@@ -108,3 +108,41 @@ unit record at `perception-scout/0136-queue-run.md`.
   the loot box; carried to the successor unit in chain
   scout-mid-2026-10-31.
 - unmatched_labels: none in the surfaces actually walked.
+
+## Pass scout-mid-2026-10-31 chain unit ticker-0434, group scout-alliance remainder (partial)
+
+Midday-chain unit for the 2026-10-31 midday pass, executed
+2026-11-03 about 04:42 to 04:46 local. Observe-only; nothing
+claimed, fought, dispatched, donated, dug or bought. Full
+unit record at `perception-scout/0446-queue-run.md`.
+
+### Alliance sub-pages, read live 2026-11-03 about 04:44 local
+
+- Alliance panel: [AP3x] The Apex, 5.0 stars, Leader Abŷss
+  Apex, Power 13,016,623,359, Members 94/100, Language
+  English.
+- Help: today's points 1,240/1,000; four Bears Lair requests
+  all 30/30 (Lv.27 Drill Ground, Lv.30 Aircraft Center,
+  Morale research, Precision Targeting II research).
+- Alliance Wars: Rally Intel "No Alliance Rally currently";
+  Individual Intel "There are no ongoing Alliance Wars
+  currently."
+- Alliance City: Rare Soil 5.88K/h, Captured Cities 6/6;
+  Coal 13.53K/h, Digging Strongholds captured 4/4; captures
+  left today 2/2, war declarations left today 2/2.
+- Mail list: Battle Report, Alliance, Event (red dot),
+  Season, System (red dot), Regular, In-app Purchases.
+- World map frame: Glacial Area -10C, alliance cluster,
+  March Queues 0/4, no zombie or loot box pin visible.
+
+### Red dot accounting for this section
+
+- Explained: Help maps to the help regular with requests
+  already full; mail Event and System dots map to the mail
+  regular.
+- Unexplained: the Alliance Wars dot (Issue #212) - both
+  Wars tabs empty; the station panel and loot box unlocated.
+- Carried unwalked: station panel, loot box, individual
+  mail category lists; carried to successor unit
+  scout-midday-scout-mid-2026-10-31-004.
+- unmatched_labels: none in the surfaces actually walked.

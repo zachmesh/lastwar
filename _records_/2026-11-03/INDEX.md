@@ -1126,3 +1126,26 @@ of 2026-10-28.
   duel-score regular, so no duel-score unit was staged.
   Full detail in queue-planning/0440-run.md.
 
+- Donations unit donations-2026-11-03-0910, partial,
+  ticker-0434 about 04:35 to 04:41: the re-read after
+  ticker-0234's 00:18:45 timer did not confirm 0 remaining -
+  Rallied Attack read 5/30 live, then 4, 3, 2, 1 on verified
+  coin taps; a greyed-timer tap (00:01:36) left the count at
+  1/30 after the timer was waited out, and a further tap
+  greyed the button with a 00:19:35 timer hiding the count
+  at close, so the unit closes unverified with the tracker
+  untouched and re-read unit donations-2026-11-03-1241
+  queued for 05:02 local. Entry correction: the recorded
+  (903,787) centre opens Mail, Alliance shield grounded at
+  (931,691) this session; filed as Issue #220, replenishment
+  data commented on Issue #174. Full detail in
+  alliance-donations/0441-queue-run.md.
+- Scout unit scout-midday-scout-mid-2026-10-31-003, partial,
+  ticker-0434 about 04:42 to 04:46: alliance remainder walked
+  observe-only - Help 1,240/1,000 with four 30/30 Bears Lair
+  requests, Wars empty on both tabs, City Rare Soil 5.88K/h
+  and Coal 13.53K/h, mail Event and System red dots, one
+  world map frame (Glacial Area, March Queues 0/4); station
+  panel, loot box and mail category lists carried to
+  successor scout-midday-scout-mid-2026-10-31-004. Full
+  detail in perception-scout/0446-queue-run.md.

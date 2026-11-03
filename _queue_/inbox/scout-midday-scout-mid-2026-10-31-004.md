@@ -1,17 +1,17 @@
 ---
-unit: scout-midday-scout-mid-2026-10-31-003
+unit: scout-midday-scout-mid-2026-10-31-004
 regular: scout-midday
 activity: perception-scout
 segment:
 priority: 2
-created_at: 2026-11-03T09:44:37Z
+created_at: 2026-11-03T12:46:13Z
 expires_at:
 planned_for:
 not_before:
-window: scout-alliance remainder: Help/Wars/City sub-pages, station, mail, world map pins and loot box
+window: scout-alliance remainder: station panel, loot box, mail category lists
 est_minutes: 10
 chain_id: scout-mid-2026-10-31
-chain_seq: 3
+chain_seq: 4
 attempts: 0
 max_attempts: 3
 claimed_by:
