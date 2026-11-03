@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-03T06:38:05Z
+modified: 2026-11-03T08:32:17Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-1004 hidden-treasures execution record 2026-11-02 1009 queue run (done, checked only)
   - source: ticker-1336 hidden-treasures execution record 2026-11-02 1352 queue run (done, checked only)
   - source: ticker-2134 hidden-treasures execution record 2026-11-02 2135 queue run
+  - source: ticker-0004 hidden-treasures execution record 2026-11-03 0014 queue run (done, checked only, M3 at zero)
 ---
 
 # Hidden treasures
@@ -347,3 +348,34 @@ as Hidden Treasure.
 - No fragment exchange was executed (exchanges need owner
   approval per the activity limits). Nothing spent, no paid button
   tapped.
+
+
+## What the 2026-11-03 0014 unit added - checked only, M3 at zero, no dig
+
+- Unit treasures-2026-11-02-2257 by ticker-0004, session
+  about 00:14 local, status done, checked only.
+  Evidence in
+  `_records_/2026-11-03/hidden-treasures/0014-queue-run.md`.
+- Entry: Secret Command Post entered from the base
+  left-column white pickup icon at norm 53,653 (same
+  slot as the secrets unit this pass). Hidden
+  Treasures tab tapped at norm 369,139; title
+  verified as Hidden Treasure. The Hidden Treasures
+  tab carried no red dig badge at entry, consistent
+  with the counts below.
+- Fragment counts, read live from the map: M1 x12, M2
+  x12, M3 x0, M4 x7, M5 x2, M6 x5, M7 x11. Chest
+  progress track reads 4/15 at the top right of the
+  map screen. These stocks are exactly the post-dig
+  stocks of the 2135 unit - no fragment income
+  between the 2135 dig and this read is recorded,
+  and none is attributed.
+- Outcome: M3 is at zero, so no complete set of seven
+  fragments is on hand and no dig is possible; both
+  Dig buttons are greyed out. No dig was attempted
+  and no fragment exchange was executed (exchanges
+  need owner approval per the metadata limits).
+  Target 1 dig if a full set were on hand;
+  achieved 0 digs, for the stated reason - M3 x0 is
+  the binding fragment. No diamonds, no money, no
+  exchange touched. Game left on the base screen.

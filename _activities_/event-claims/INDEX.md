@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T05:40:46Z
+modified: 2026-11-03T08:32:17Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (hub back arrow centre re-measurement)
   - source: ticker-1234 event-claims execution record 2026-11-02 1250 queue run (done, full hub sweep, nothing claimable, relaunch restores hidden rails)
   - source: ticker-2104 event-claims execution record 2026-11-02 2113 queue run (done, full hub sweep, Wanted Boss rotated to Code 64)
+  - source: ticker-2334 event-claims execution record 2026-11-02 2341 queue run (done, full hub sweep, nothing claimable, Arms Race rotated to Tech Research, Wanted Boss tab dot is a live-event marker)
 ---
 
 
@@ -607,6 +608,59 @@ that drag is the sweep-completeness check, not wasted motion.
   zombie-invasion-zombie-2026-10-28-066.
 - No diamonds, money, speedups or other resources
   spent. Game left on the base screen.
+
+
+## What the 2026-11-02 2341 unit added - full hub sweep, nothing claimable, phase rotated
+
+- Unit events-2026-11-02-2257 by ticker-2334, session
+  about 23:34 to 23:41, status done. Full hub sweep
+  performed, nothing claimable anywhere in the hub,
+  nothing claimed. Evidence in
+  `_records_/2026-11-02/event-claims/2341-queue-run.md`.
+- Arms Race phase rotated since the 2113 sweep: now
+  Tech Research phase, Contest Segment Lv.29-30,
+  score 0, cumulative chest 0/2 (not full, not
+  bouncing), point chests 6,250 / 12,500 / 30,000
+  all locked. The bottom rank row reads #2110
+  [AP3x]Bears Lair with 9,300 - phase context only,
+  not a claim, and not the current phase score.
+  Pushing the phase is the arms-race unit's job,
+  not this sweep.
+- Desert Storm Battlefield: Battle Day 2026-11-6,
+  03:00-03:30, Participants 19/20 (including you),
+  stamped Enlisted on Task Force A. Registration
+  ends in 1d 18:20:11 at read (about 2.5 hours on
+  from the 2113 read, consistent). Alliance
+  registration event; Select Time / Select
+  Participants were not tapped, nothing personal
+  to claim.
+- Wanted Boss: still Code 64 (giant gorilla,
+  unchanged since the 2113 sweep); Missile Vehicle
+  heroes deal 50% extra damage. Appears at server
+  time 00:00, Go countdown about 17:19 at read -
+  not out yet, attacking is grinding, not a claim.
+  Goals page: best single attack 852,929,736
+  against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B,
+  all Claim buttons grey, nothing claimable.
+  Discrimination rule for sweeps: the Wanted Boss
+  tab carries a small red dot, but the page itself
+  holds no claimable reward - the dot marks the
+  live event, not a pending claim. A tab dot alone
+  is not claim proof.
+- Community: Discord binding reward reads 500
+  Claimed, unchanged. Nothing to claim.
+- Tab bar dragged to its end: the four tabs above
+  are the whole hub (Arms Race, Desert Battlefield,
+  Wanted Boss, Community). No Zombie Invasion tab -
+  the event ended 2026-10-30, consistent with unit
+  zombie-invasion-zombie-2026-10-28-066.
+- No bouncing chest, no reward red dot on any swept
+  page other than the Wanted Boss tab dot explained
+  above. No diamonds, money, speedups or other
+  resources spent. Game left on the base screen.
+- Result statistics: tabs_swept 4, claimed_count 0,
+  target 1 full hub sweep performed, achieved 1,
+  verified yes.
 
 
 ## Open questions

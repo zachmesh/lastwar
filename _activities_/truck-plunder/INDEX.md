@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T05:40:46Z
+modified: 2026-11-03T08:32:17Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (partial, dispatch quota filled, plunder shortfall 2 remains)
   - source: ticker-1307 truck-plunder execution record 2026-11-02 1325 queue run (partial, leftmost shard stack x3 pays in full, plunder shortfall 1 remains)
   - source: ticker-2104 truck-plunder execution record 2026-11-02 2120 queue run (partial, station-tap entry, counters 4/5 and 4/4, fifth dispatch shortfall)
+  - source: ticker-2334 truck-plunder execution record 2026-11-02 2347 queue run (partial, station-tap entry failed, counters not read)
 ---
 
 # Truck plunder - Intercity Trade
@@ -1088,6 +1089,66 @@ settlement and dispatch execution record).
   no alliance mate plundered.
 
 
+## What the 2026-11-02 2347 unit added - entry failed, station tap not stable, partial
+
+- Unit trucks-2026-11-02-2257 by ticker-2334, session
+  about 23:41 to 23:47, status partial, entry failed.
+  Evidence in
+  `_records_/2026-11-02/truck-plunder/2347-queue-run.md`.
+- Entry failure, in detail: the 2120 unit entered
+  Intercity Trade by tapping the station building
+  at norm [491,195]. This unit tried that exact tap
+  twice (once before and once after a title-bar
+  focus tap as the foreground pivot) - both
+  no-change. A visually grounded station box (norm
+  395-860 x 120-355) tapped at its centre [627,237]
+  selected a squad parking slot ("2nd Squad Lv.20")
+  and opened a two-button popup (vehicle icon, up
+  arrow) with no labels. Neither button was tapped -
+  the popup's meaning was not established and a
+  wrong tap could march a squad. The popup was
+  dismissed by tapping empty ground; the base view
+  returned unchanged. A further tap at [662,163]
+  (upper station structure) was also no-change.
+  That is two no-change entry taps, so the
+  background-input method was ended inside this
+  unit under queue rule R2; the title-bar focus
+  pivot did not change the outcome for the
+  [491,195] tap.
+- Correction, in favour of the newest verified
+  record: the 2120 station-tap entry is qualified,
+  not erased. The [491,195] tap worked at 2120 and
+  failed twice at 2347 on the same trade day, so it
+  is a framing-dependent entry point, not a stable
+  one. The next unit must re-ground the station
+  hotspot on the live base framing first, and must
+  not re-tap the [491,195] / [662,163] points
+  blindly. The squad-slot popup (vehicle icon, up
+  arrow) is unidentified until a labelled read
+  proves what it opens - do not tap its buttons.
+  Foreground variant not yet tried: moving the
+  covering Chrome window aside before tapping.
+- Counters were NOT read this unit - entry never
+  reached the trade screen, so no counter values
+  are asserted here. Last read counters (2120
+  unit): Trade 4/5, Plunder 4/4, with the first
+  return due about 22:10 local. A return and
+  settlement may therefore be pending, but that is
+  the 2120 read, not a fresh observation - do not
+  quote it as a 2347 reading.
+- Outcome: partial, dispatch shortfall carried
+  forward (not a miss: the trade day runs to 19:00
+  local 2026-11-03, and later trucks units keep
+  trying entry). No dispatch, no plunder, no
+  settlement performed. No diamonds, no Trade
+  Contracts, no paid button, no plunder.
+  Blocker category f (missing precondition - trade
+  screen entry not reached). Computer session
+  dropped mid-pass and restarted with no game
+  state lost; no "active on a different device"
+  dialog appeared. Game left on the base screen.
+
+
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
@@ -1100,3 +1161,15 @@ settlement and dispatch execution record).
 - Whether the collapsed 2026-10-20 Reward Recovery record was
   already claimed - its toggle did not expand on 2026-10-25.
 - What flips the base left-column icon set to the set that carries the trade slot (2026-11-02 1845 update: the 1845 set - green face / pickup / radar dish / hammer - carries no train-front icon at all and no trade badge; 52,553 opens the season warming panel, not trade; the successor must find the set-flip control or another entry route first) (2026-11-02 2120 update: the station-building tap at [491,195] opens Intercity Trade directly for this column set, so entry no longer depends on finding the set flip; the flip itself stays unknown) - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it. (2026-11-02 0416 update: for this set the premise is corrected - the train-front icon at [52,552], reached after a title-bar foregrounding tap, is the trade entry; the flip question remains for sets where no train-front icon is present.)
+- Station-tap entry stability (2026-11-02 2347 update):
+  the [491,195] station tap that entered trade at
+  2120 failed twice at 2347, so entry is
+  framing-dependent and must be re-grounded on the
+  live base view each unit; the squad-slot popup
+  (vehicle icon, up arrow) reached from a station-box
+  centre tap is unidentified and its buttons must
+  not be tapped. This belongs to this profile's open
+  questions until a later unit re-grounds a working
+  entry point - no new Issue filed yet, because the
+  next trucks unit retries entry first with the
+  re-grounding and the Chrome-window-aside variant.

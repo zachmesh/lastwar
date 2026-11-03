@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T05:40:46Z
+modified: 2026-11-03T08:32:17Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-0834 shop-claims execution record 2026-11-02 0846 queue run (done as checked only, monthly pass 19 of 19, coin weekly pass already claimed today)
   - source: ticker-1234 shop-claims execution record 2026-11-02 1300 queue run (done, nothing new, all owned daily claims already taken)
   - source: ticker-2104 shop-claims execution record 2026-11-02 2109 queue run (done, nothing new, S2 Drone card is an offer)
+  - source: ticker-2334 shop-claims execution record 2026-11-02 2338 queue run (done, nothing new, tab-tap mapping offset)
 ---
 
 
@@ -464,6 +465,45 @@ the free and already paid for parts, never the paid unlocks.
   Lv.20, Days Left 19, Rewards Left 19, button reads
   Claimed. The Monthly Pass Extension $24.99 was not
   touched.
+- Result statistics: claimed_count 0, target 1 shop
+  claim sweep performed, achieved 1, resources
+  gained none, verified yes. Game left on the base
+  screen.
+
+
+## What the 2026-11-02 2338 unit added - done, nothing new, tab taps land off-centre
+
+- Unit passes-2026-11-02-2257 by ticker-2334, session
+  about 23:34 to 23:38, status done. Nothing new to
+  claim; all owned daily claims already taken today.
+  Evidence in
+  `_records_/2026-11-02/shop-claims/2338-queue-run.md`.
+- Base screen reached with no "active on a different
+  device" dialog; the game was already running on
+  the Mac. Shop opened from the cart icon (Hot Deals
+  page, no free pack showing on the visible row).
+- Super Monthly Pass page: Monthly Pass, Squad 4
+  Lv.20, Days Left 19, Rewards Left 19, button reads
+  Claimed. The Monthly Pass Extension $24.99 was not
+  touched.
+- Weekly Pass page: Free Supply chest reads Claimed;
+  the Coin Weekly Pass (Elite, Remaining about
+  18:21) reads Already claimed today, Renew $4.99
+  left untouched. The S2 Drone Components Weekly
+  Pass card below shows a Daily Pickup row with no
+  claim button and a Get Now $4.99 purchase button -
+  an offer, not an owned claim, as the 2109 passes
+  unit already established; it was not tapped. The
+  Legendary Take All $19.99 button was not tapped
+  (red line).
+- Tab-click method note: a tap at normalized 573
+  first landed on the Super Monthly Pass tab and a
+  tap at 700 landed on Weekly Pass; coordinates on
+  this window do not map one to one to the visible
+  tab centres, so each page switch was verified by
+  screenshot before reading its cards. Lesson for
+  the next unit: verify the switched page by
+  screenshot, never trust the tap point alone.
 - Result statistics: claimed_count 0, target 1 shop
   claim sweep performed, achieved 1, resources
   gained none, verified yes. Game left on the base
