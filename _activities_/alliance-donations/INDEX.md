@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T23:40:00Z
+modified: 2026-11-03T02:40:01Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: alliance donations execution record 2026-11-01 2348 queue run (ticker-2334 unit, partial, count replenishment, GitHub Issue #160)
   - source: alliance donations execution record 2026-11-02 0259 queue run
   - source: alliance donations execution records 2026-11-02 0545 0547 0621 queue runs
+  - source: alliance donations execution record 2026-11-02 1810 queue run (ticker-1755 unit, partial, Donation Count 30/30 ambiguity)
   - source: alliance donations execution record 2026-11-02 0719 queue run
   - source: ticker-1004 alliance-donations execution record 2026-11-02 1020 queue run (partial, entry blocker repeats 0621)
 ---
@@ -657,6 +658,89 @@ before 03:17 local). Evidence in
   camera framing; third consecutive unit with this
   blocker). Donations landed in this unit: 0.
 
+## What the 2026-11-02 1810 unit added
+
+- Unit donations-2026-11-02-1344 by ticker-1755, session
+  about 18:04 to 18:09, status partial, zero donations
+  landed, tracker untouched. Evidence in
+  `_records_/2026-11-02/alliance-donations/1810-queue-run.md`.
+- Entry, worked, grounding corrected: the game was left on
+  the Alliance panel by the previous unit, so entry started
+  there. A first Techs-tile tap at norm 686,735 opened
+  Strength Ranking instead - that tap lands on the row
+  below the intended tile. Measured panel centres from the
+  visual grounding tool on the panel capture: Help
+  687,500, Wars 313,500, Techs 687,672, Strength 687,758.
+  A tap at the measured Techs centre 687,672 opened
+  Alliance Techs at once, and every measured-centre tap in
+  this unit landed exactly.
+- Grounding rule going forward, superseding the plus-90
+  correction written in the same pass's scout record
+  (perception-scout/1801-queue-run.md, correction appendix
+  added there, record not rewritten): tap coordinates must
+  come from measured grounding boxes or OCR element
+  positions in tap space, never from image-pixel conversion
+  of a screenshot. The image-pixel conversions used earlier
+  in this pass underestimated y by roughly 40 to 90 norm
+  units. The Help centre 686,531 recorded by the 1741 help
+  unit is consistent with the measured 687,500 (inside the
+  Help box 508-866, 465-536), so the panel grounding is
+  settled, not conflicting. Re-ground fresh every unit all
+  the same - these are measured points, not standing rules.
+- Alliance Techs read about 18:07 (measured values):
+  Development tab, Expert Nurse 1/10 at the top; Garrison
+  HP 7/10, Garrison Attack 7/10, Garrison Defense 7/10
+  carrying the recommended thumbs-up marker; a further 7/10
+  node below the fold, not identified. The War tab was not
+  opened. Garrison Defense donation panel (recommended
+  node, measured centre 730,530): "Increased Hero Defense
+  in Defense Support for Alliance members", Current +7%,
+  Next Level +8%. Donate buttons: diamond 2 ("Unlimited
+  Attempts", never tapped) and coin 800 (active, not
+  greyed). Footer: Tech Donation Today 0, with the trophy
+  icon and the line "Requires at least 1000 contribution
+  points to earn the reward".
+- Donation Count ambiguity, flagged, NOT resolved: the
+  live read was 30/30, which under the hard rule's
+  remaining-count reading would mean 30 remaining, with
+  Tech Donation Today 0 as corroboration that nothing has
+  been donated today - but that reading is NOT asserted,
+  because the pre-reset zero sweep's last live count was 1
+  remaining (0545 unit) and this unit landed no donation to
+  test the counter's direction. The 30/30 read is
+  consistent in direction with the #160/#174 replenishment
+  picture (a count back at full after an arithmetic 0), but
+  it is not proof of it, and Tech Donation Today 0 sits
+  uneasily with a day that already saw donations. No
+  profile claim is changed on this read.
+- Direction to the next donations unit, standing: re-read
+  the Donation Count live on the Garrison Defense panel
+  first. If it still reads 30 remaining (or any positive
+  remaining count), donate with the coin button only until
+  the count reads 0 live or the button greys, then stop
+  for that run. If it reads 0 remaining, record
+  checked-only. Never close on arithmetic; only on a live
+  read in that same unit.
+- Device takeover, owner rule applied once: while the
+  Garrison Defense panel was open, the "active on a
+  different device" dialog appeared; Confirm was tapped
+  (first at a mis-grounded image-pixel point, which
+  missed, then at the measured Confirm centre 501,568,
+  which landed). The app exited as the rule states, was
+  relaunched, and returned straight to the base screen
+  with no login or verification demand. The dialog did
+  not recur in this pass, so the contested stop condition
+  was not reached. The game window then ended at the
+  token lease boundary, so the panel was not re-entered
+  and no donation was attempted.
+- Side reads: Strength Ranking Power tab - rank 1
+  ItStartsWithaDream 270,322,299; rank 2 Abuss Apex
+  216,125,369; own account rank 31, R3, Bears Lair,
+  power 149,311,528, unchanged from the 13:53 scout read.
+  This confirms the 146,610,448 mid-HUD figure seen in
+  this pass is NOT account power; its identity remains
+  unknown (see perception-scout).
+
 ## Open questions
 
 - Donation Count replenishment mechanism - rate, cap, timer link,
@@ -677,6 +761,14 @@ before 03:17 local). Evidence in
   replenishing count (re-read after the timer; donate again if
   above zero; a live 0 read closes only that unit, not the day,
   until the model says otherwise) is still unrecorded.
+- Donation Count 30/30 read 2026-11-02 1810, ambiguous and
+  NOT asserted as a replenishment measurement: the read
+  conflicts with the sweep's last live count of 1 remaining
+  (0545 unit), and the unit landed no donation to test the
+  counter's direction, while Tech Donation Today read 0.
+  Evidence commented on Issue #160 by this run (a link, not
+  a closure claim). The next unit re-reads live on the
+  Garrison Defense panel first; see the 1810 unit section.
 - Upgrading-node no-count state: a node in its upgrade countdown
   (Rallied HP, countdown 07:28:29 at the 0547 read, completing
   about 13:20 local 2026-11-02) offers no donation interface at

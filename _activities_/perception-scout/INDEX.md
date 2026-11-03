@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-02T22:43:53Z
+modified: 2026-11-03T02:40:01Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -15,6 +15,7 @@ grounded_in:
   - source: perception-scout execution records 2026-11-02 0436 0441 0514 queue runs
   - source: perception-scout execution record 2026-11-02 0539 queue run
   - source: ticker-1336 perception-scout execution record 2026-11-02 1357 queue run (base group partial)
+  - source: ticker-1755 perception-scout execution record 2026-11-02 1801 queue run (alliance group partial, stale chain spent)
 ---
 
 
@@ -500,6 +501,130 @@ observe-only, nothing claimed). Evidence in
   and the furnace toast [22/60] is now on its third
   sighting; neither is closed on silence.
 
+## What the 2026-11-02 1801 unit added
+
+- Unit scout-midday-scout-mid-2026-10-31-002 by ticker-1755,
+  session about 17:58 to 18:01, status partial, observe-only:
+  the alliance group only (base, Alliance panel, Alliance
+  Wars, Alliance Gifts). Evidence in
+  `_records_/2026-11-02/perception-scout/1801-queue-run.md`
+  and the appended 2026-11-02 observation sections. This is
+  a stale-chain unit executed late in the current reset day,
+  following the ticker-0434 and ticker-0534 precedent:
+  observations are filed under 2026-11-02 as reads of the
+  current game state, not of the old midday window.
+- Base screen and HUD, read live about 17:58: HUD top row
+  387.7M, 577.5M, 54.0M; second row 20.1M, 1.5M, 11.72K;
+  stamina 120; shield-icon figure 146,610,448 displayed,
+  identity not verified (see the exclusion below). Left
+  column: hammer 2/4, flask 2/2, radio badge 4 (was 3 at
+  13:53), truck, question-mark icon, backpack 8. Weather
+  widget 6.5C. Right column: Events with no red badge
+  visible, Capitol, VS timer 00:02:58, Season II badge 1,
+  Alliance with no red dot visible in this capture, Mail
+  with no dot visible, Inventory with a 1d 21:28:04 timer.
+  Bottom: HEROES, chat ticker, 99+ badge, WORLD. A 13d
+  00:02:58 timer shown near Season II - meaning not
+  verified by opening.
+- Resource bubbles standing on many buildings, observed
+  only, not collected; the harvest regular owns collection
+  and its 1803 unit was already queued.
+- Furnace toast again: "High-temp Furnace total overdrive
+  time (in sec) [22/60]" - fourth sighting in this record
+  series, still unexplained, furnace observed only, never
+  switched on or off, a red-line surface.
+- Alliance panel read about 17:59 to 18:01: [AP3x] The
+  Apex, Overall Rating 5.0, Leader Abuss Apex, Members
+  94/100, Language English. Alliance Power read
+  12,873,290,481 on the first panel capture and
+  12,900,451,256 on the second capture about two minutes
+  later - both recorded as displayed; the change is
+  unexplained (live member power movement is possible,
+  read variance is possible) and is not asserted either
+  way. Panel red dots, six: Help, Alliance Gifts,
+  Alliance Store, Alliance Techs, Alliance Events,
+  Alliance City. No dot on Alliance Wars, Members,
+  Assemble or Strength Ranking. Bottom row: Record,
+  Applicants, Alliance Star, Settings - none opened this
+  unit. Transient toast on panel entry: "Achievements
+  8/16 Completed" - recorded as seen only; no achievement
+  surface was opened. Base Alliance icon showed no red
+  dot in the entry capture while the panel carries six
+  dots - recorded as a visibility difference in this
+  capture, not as the dots being cleared.
+- Tap grounding, corrected and then superseded in the
+  same pass: a tap aimed at Alliance Gifts at norm
+  327,542 opened Alliance Wars instead, and a tap at norm
+  327,633 opened Alliance Gifts, which first suggested a
+  plus-90-in-y correction (buttons sit lower in tap terms
+  than screenshots suggest). That correction is
+  SUPERSEDED by the same pass's donations unit: measured
+  grounding boxes on the panel capture give Help centre
+  687,500, Wars centre 313,500, Techs centre 687,672,
+  Strength centre 687,758, and taps at measured centres
+  land exactly. Rule going forward: tap coordinates come
+  from measured grounding boxes or OCR element positions
+  in tap space, never from image-pixel conversion of a
+  screenshot, which underestimates y by roughly 40 to 90
+  norm units. The Help centre 686,531 recorded by the
+  1741 help unit is consistent with the measured 687,500
+  (inside the Help box 508-866, 465-536). Re-ground fresh
+  every unit all the same.
+- Alliance Wars page read (not the intended target):
+  "There are no ongoing Alliance Wars currently."
+  Individual Intel tab selected, one march intel row:
+  [AP3x]Janet^A at X:478 Y:436 marching 00:01:15 toward
+  [CHIA] TripleCs69 at X:468 Y:551. Rally Intel tab not
+  selected. No rally joined.
+- Alliance Gifts page read: Gift Level 28, progress
+  181,429,280 of 206,300,000. Regular tab selected;
+  Premium tab also carries a red dot. Banner: "Defeat the
+  Doom Elite for a Regular Alliance Gift" with a Go
+  button, not tapped. Gift rows, each +10 with a Claim
+  button, none claimed (observe-only; the gifts regular
+  owns claims): PrincessEsra10xoxo Defeated Doom Elite
+  23:51:32; Niermeat 23:40:52; Niermeat 23:4x (third row
+  partially obscured); Niermeat 23:28:11; further rows
+  below the fold, not read. Claim All button badge 201,
+  not tapped. (The counter rise since the 1215 gifts
+  close is folded in alliance-gifts, Issue #183.)
+- Red dot accounting: seen 10 badge signals (base radio
+  4, Season II 1, backpack 8, 99+ badge; panel Help,
+  Gifts, Store, Techs, Events, City dots). Explained 5,
+  mapped to owning regulars with units already queued or
+  in inbox: radio 4 and the panel Help dot to the help
+  regular, Gifts dot to the gifts regular, Techs dot to
+  the donations regular, Events dot to the events
+  regular. Unexplained 5, carried: Season II badge 1,
+  backpack 8, 99+ badge, panel Store dot (alliance shop
+  surface; Buy never opened per the red line), panel City
+  dot (owning regular not identified). Unknown items 3:
+  furnace overdrive toast [22/60], the alliance Power
+  figure change between two captures, the 146,610,448
+  HUD figure identity - the last now partly resolved:
+  the same pass's donations unit read own power
+  149,311,528 (rank 31, unchanged from the 13:53 read),
+  so the 146,610,448 figure is NOT account power; what it
+  is remains unknown.
+- unmatched_labels: none in the surfaces walked. No
+  zombie sighting: this unit did not open the Events hub,
+  so no Zombie Invasion return check was made; no zombie
+  chain seeded, per the standing rule that the event ended
+  2026-10-30 and no live return sighting exists in this
+  pass.
+- Outcome: partial (alliance group only). No successor
+  unit is enqueued from this unit: the remaining groups of
+  the current reset day belong to
+  scout-midday-scout-mid-2026-11-02-001, already in inbox
+  under chain scout-mid-2026-11-02; a stale-chain
+  successor would duplicate it. The
+  scout-mid-2026-10-31 chain is spent with this unit.
+- Persistence note for the open questions below:
+  Season II badge 1 is still unexplained at this read,
+  the furnace toast [22/60] is now on its fourth sighting,
+  and the Store and City panel dots are still unexplained;
+  none is closed on silence.
+
 ## Open questions
 
 - Season II badge 1, seen in the 0436 and 0514 units of
@@ -516,3 +641,5 @@ observe-only, nothing claimed). Evidence in
 - Whether stale staged scout units execute or expire - see the
   filing question in the 2026-11-01 section; a queue-rule
   decision, not a scout-unit decision.
+
+- The 146,610,448 mid-HUD figure is NOT account power (donations 1810 unit: own power 149,311,528, rank 31, unchanged from the 13:53 read); what the figure is remains unknown.
