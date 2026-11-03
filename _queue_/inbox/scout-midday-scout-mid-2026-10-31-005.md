@@ -1,17 +1,17 @@
 ---
-unit: scout-midday-scout-mid-2026-10-31-004
+unit: scout-midday-scout-mid-2026-10-31-005
 regular: scout-midday
 activity: perception-scout
 segment:
 priority: 2
-created_at: 2026-11-03T12:46:13Z
+created_at: 2026-11-03T13:40:17Z
 expires_at:
 planned_for:
 not_before:
-window: scout-alliance remainder: station panel, loot box, mail category lists
+window: scout-alliance remainder: station panel, loot box
 est_minutes: 10
 chain_id: scout-mid-2026-10-31
-chain_seq: 4
+chain_seq: 5
 attempts: 0
 max_attempts: 3
 claimed_by:

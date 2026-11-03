@@ -146,3 +146,86 @@ unit record at `perception-scout/0446-queue-run.md`.
   mail category lists; carried to successor unit
   scout-midday-scout-mid-2026-10-31-004.
 - unmatched_labels: none in the surfaces actually walked.
+## Pass scout-mid-2026-10-31 chain unit ticker-0534, group scout-alliance remainder (partial)
+
+Midday-chain unit for the 2026-10-31 midday pass, executed
+2026-11-03 about 05:34 to 05:39 local. Observe-only; nothing
+claimed, fought, dispatched, donated, dug or bought. Full
+unit record at `perception-scout/0539-queue-run.md`.
+
+### Alliance and mail, read live 2026-11-03 about 05:36 local
+
+- Alliance panel: [AP3x] The Apex, 5.0 stars, Leader Abŷss
+  Apex, Power 13,069,833,614, Members 94/100, Language
+  English. No Station button on this panel.
+- Alliance Techs detail: Rallied Attack 7/10, Tech EXP
+  11.4K/4.5M, Current +7%, Next +8%, Donation Reward
+  50/50, Donation Count 1/30.
+- Mail categories: Battle Report, Alliance, Event (red dot),
+  Season, System (red dot), Regular, In-app Purchases.
+- Event list: six train notices, newest 1h ago Abŷss Apex's
+  train (unread); then 3h Sanction Apex Mega Express, 3h
+  Abŷss train, 5h KpyKat train arrived, 7h Abŷss Mega
+  Express, 7h KpyKat train departed.
+- System list: 1h ago Planned Update Notice (unread); 11h
+  (President Mail) Purge requests; 1d Season Conclusion;
+  2d (President Mail) 2110 plan, Correction, Good day 2110.
+- Secret Command Post (opened by accident, closed at once):
+  Assist Allies 5/5, Plunder Others 0/3; tasks UR Disrupt
+  electric grid, SSR Search for Missing Refugees, SSR Provide
+  Tech Support to Refugees, SSR Train Refugees.
+- World map frame: alliance cluster, March Queues 0/4, no
+  zombie or loot box pin visible, gift badge 3 at left edge.
+- Base HUD: food 230.7M, iron 565.3M, coin 5.9M, power
+  149,940,141.
+
+### Red dot accounting for this section
+
+- Explained: Help, Gifts, Techs dots map to the help, gifts
+  and donations regulars; Event dot is the unread 1h train
+  mail, System dot the unread Planned Update Notice, both
+  mapping to the mail regular; world gift badge 3 maps to
+  the gifts regular.
+- Unexplained red dots: 0. Unknown items carried: station
+  panel and loot box, neither located.
+- Carried unwalked: station panel, loot box; carried to
+  successor unit scout-midday-scout-mid-2026-10-31-005.
+- unmatched_labels: none in the surfaces actually walked.
+
+## Pass scout-mid-2026-11-02 chain unit ticker-0534, group scout-alliance (partial)
+
+Midday-chain unit for the 2026-11-02 midday pass, executed
+2026-11-03 about 05:40 to 05:42 local. Observe-only; nothing
+claimed, fought, dispatched, donated, dug or bought. Full
+unit record at `perception-scout/0542-queue-run.md`.
+
+### Alliance sub-pages, read live 2026-11-03 about 05:41 local
+
+- Alliance panel: [AP3x] The Apex, 5.0 stars, Leader Abŷss
+  Apex, Power 13,069,833,614, Members 94/100, Language
+  English.
+- Help: today's points 1,240/1,000; four Bears Lair requests
+  (Lv.27 Drill Ground, Lv.30 Aircraft Center, Morale
+  research, Precision Targeting II research).
+- Alliance Gifts: Level 28, 185,336,600/206,300,000; Regular
+  and Premium tabs both dotted; Regular gifts +10 each with
+  Claim buttons, timers 23:53:15, 23:42:11, 23:40:48,
+  23:40:34; Claim All badge 45, observed only.
+- Alliance Store, Alliance tab: honor 194.6K; UR Hero
+  Universal Shard, Survivor Recruitment Ticket, Violet
+  Shard, Drone Parts, Lv.1 Drone Component Chest all SOLD;
+  Mason Shard 30/30 at 1,000 honor; Skill Chip Chest (SR),
+  Drone Combat Boost EXP Card, 8-Hour Shield 7/7; refresh
+  Monday server time, countdown 5d 12:18:21; Campaign tab
+  dotted, unopened.
+
+### Red dot accounting for this section
+
+- Explained: Help, Gifts, Techs dots map to the help, gifts
+  and donations regulars; Store Campaign dot maps to the
+  store surface, content unopened.
+- Unexplained red dots: 0 in the surfaces walked.
+- Carried unwalked: Wars, City, Events, Members, Strength
+  Ranking, station panel, mail, world map; carried to
+  successor unit scout-midday-scout-mid-2026-11-02-004.
+- unmatched_labels: none in the surfaces actually walked.
