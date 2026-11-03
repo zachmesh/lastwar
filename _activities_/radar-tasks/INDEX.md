@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T15:45:00Z
+modified: 2026-11-03T18:45:00Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -26,6 +26,7 @@ grounded_in:
   - source: radar tasks execution record 2026-11-02 2242 queue run
   - source: ticker-0204 radar-tasks execution record 2026-11-03 0212 queue run (partial by design, single-offer trap in at-entry form)
   - source: ticker-0634 radar-tasks execution record 2026-11-03 0636 queue run (partial by design, dish centre re-grounded, Claim All-only bar again)
+  - source: ticker-1004 radar-tasks execution record 2026-11-03 1010 queue run (partial by design, third consecutive Claim All-only bar, stored 25 of 40, three skull pins inventoried)
 ---
 
 
@@ -1297,3 +1298,26 @@ are still open, per the protocol.
 - 1.18.0, 2026-11-03 - 0212 stack-day unit folded: dish fresh at 53,711 first-tap entry; Lv.13, points 139 unchanged, stored 1 of 40, stamina 79; single-offer trap in at-entry form (Claim All only at entry, no Quick Execute offer, contrast 2242 post-execution form); 11 rewards left unclaimed per stack posture; restore line in a second form ("12 Radar Task(s) will be restored in 01:22:23"), semantics still unverified; three red-dotted pins inventoried, same as 2242; Alliance back-arrow x corrected 104 to grounded 162; radar home button 907,952.
 
 - 1.19.0, 2026-11-03 - 0636 stack-day unit folded: dish centre re-grounded at 57,704 after the 53,682 tap opened an ally base profile (0212 point 53,711 untested here, not claimed wrong); Lv.13, points 139 unchanged, stored 13 of 40 (one 12-task restore since 0212), stamina 120, restore line "12 tasks in 02:50:41" with full restore 11-3 21:31:43, semantics still unverified; Claim All-only bar with 11 pending again in at-entry form, stack-day lockout carried as the named blocker; three skull pins inventoried (green top-centre-left, purple mid-left, blue mid-right), portrait squares distinguished as member markers, not pins; Alliance back arrow stalls at 98,919 and 100,920 with grounded 164,931 working.
+
+
+- 1.20.0, 2026-11-03 - 1010 stack-day unit folded: dish
+  grounded fresh at 52,711 first-tap entry (consistent
+  with the proven 57,704 centre from 0636, not claimed
+  against the untested 0212 point); Lv.13, points 139
+  unchanged, stored 25 of 40 (one 12-task restore since
+  the 0636 read of 13 of 40), stamina 120, restore line
+  "12 tasks in 05:21:27" with full restore 11-3 21:31:43
+  (same full-restore clock as 0636), semantics still
+  unverified; Claim All-only bar with 11 pending for
+  the third consecutive radar unit (0203, 0636, now
+  1010), stack-day lockout carried as the named
+  blocker, the next unit must read the bar offer first
+  and plan around it; three skull pins inventoried
+  (green top-centre-left, blue mid-right, purple
+  mid-left), portrait squares distinguished as member
+  markers, not pins; Commendation Notice popup
+  navigated past via its View button to the Exercise
+  panel (Preparing 04:51:29, Offline Participation
+  checked, untouched), then backed out untouched to
+  base; headroom to the 40 cap is not a concern
+  (25/40, below 39).

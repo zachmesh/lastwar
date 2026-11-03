@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T17:40:00Z
+modified: 2026-11-03T18:45:00Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -31,6 +31,7 @@ grounded_in:
   - source: ticker-0504 alliance-donations execution record 2026-11-03 0521 queue run (partial, re-read after 0441 timer, tap 6 did not land, greyed-timer tap third instance, 3-second hold no change, Issue 174)
   - source: ticker-0604 alliance-donations execution record 2026-11-03 0621 queue run (partial, 2 verified coin donations, count replenished 1 to 3, greyed-timer tap fourth instance, idle-then-tap retired for the 1-30 value, Issue 174)
   - source: ticker-0904 alliance-donations execution record 2026-11-03 0920 queue run (partial, 8 verified coin donations 9 to 1, fifth greyed-timer failure at 1/30, 10-second hold no change, count replenished 1 to 9, fixed daily-30 cap superseded, Issue 174, Issue 220)
+  - source: ticker-1004 alliance-donations execution record 2026-11-03 1030 queue run (partial, 3 verified coin donations 4 to 1, sixth greyed-timer failure at 1/30 first via Rallied Defense, blocker not node-specific, Issue 174)
 ---
 
 
@@ -1681,4 +1682,113 @@ enqueued for after the cooldown (not before about
   by the executor, and this fold is commented there by
   this run; the entry confirmation is commented on Issue
   #220 by this run. Neither issue is closed here -
+  closure belongs to the daily retro, with evidence.
+
+
+## What the 2026-11-03 1030 unit added - 3 donations, count 4 to 1, sixth 1/30 failure, first via Rallied Defense, blocker not node-specific
+
+- Ticker-1004, unit donations-2026-11-03-1003, about
+  10:30 local, status partial. Coin button only: no
+  diamonds, no money, no paid button tapped. Evidence
+  in
+  `_records_/2026-11-03/alliance-donations/1030-queue-run.md`.
+- Entry, confirmed again in favour of the newest
+  verified record: the Alliance shield tap at [903,699]
+  opened the Alliance menu on the first tap ([AP3x] The
+  Apex, 94/100 members, power 13,091,557,850). The
+  withdrawn (903,787) centre stays withdrawn: it is
+  Mail, not Alliance, and is never a tap point.
+  Alliance Techs tap at [677,679] opened the Techs
+  tree on the first tap. Rallied Attack node tap at
+  the grounded [501,499] opened its panel on the
+  first tap.
+- State, read live: War tab unchanged (Troop Movement
+  5/10, Rallied HP 6/10, Rallied Attack 7/10, Rallied
+  Defense 7/10, next node below 1/10). Tech Donation
+  Today 7650 at entry (alliance-wide footer, up from
+  6700 at the 0920 entry). Rallied Attack panel:
+  Current +7 percent, Next Level +8 percent, Tech EXP
+  Required 12.7K/4.5M at entry, Donation Reward 50/50,
+  Donation Count 4/30 live at entry.
+- Replenishment, measured interval, rate still NOT
+  measured: the 4/30 entry count follows the 0920
+  close at 1/30 live, so the count rose by 3 between
+  about 09:20 and 10:26 local, about 66 minutes. The
+  allowance regenerates over time; this is the next
+  data point in that series, not a measured rate.
+- Donations, per-tap evidence: 3 taps on the green
+  coin Donate centre [732,773], 800 coin each, each
+  verified by an OCR count read after the tap, moving
+  Donation Count 4/30 down to 1/30 step by step, Tech
+  EXP 12.7K to 13.0K. Total landed in this unit: 3 coin
+  donations, 2,400 coin spent. Donation Reward still
+  50/50; no claim button was presented on either
+  panel, so nothing was claimed. The transient "Hold
+  down for easier continuous donations" tooltip was
+  seen after tap 3, as in the 0920 unit. Landed coin
+  donations counted in today's records now sum to 40
+  (37 through 0920, plus 3 here), further past any
+  fixed 30 cap, confirming the regenerating allowance
+  superseding the fixed daily-30 cap in the 0920 fold.
+- The 1/30 block, sixth consecutive failure, first via
+  a different node: the prescribed method from the
+  0920 unit was tried - the 1/30 remainder through
+  the Rallied Defense panel, never tried at 1/30
+  before (all five earlier failures used Rallied
+  Attack). Route note: the Attack panel X took two
+  no-change taps (the same background-click stall
+  seen on the Hero List back arrow in the 1021 arms
+  unit this pass), so the panel was left via the
+  bottom-left back arrow to the Techs tree, and the
+  Rallied Defense node was tapped at [740,500] on
+  the first tap. Rallied Defense panel, read live:
+  Increased Hero Defense in Rallies for Allies, 7/10,
+  Current +7 percent, Next Level +8 percent, Tech EXP
+  Required 500/4.5M, Donation Count 1/30 (shared
+  daily count, confirmed), Donation Reward 50/50.
+  One coin Donate tap at [732,773] greyed the button,
+  hid the count label, and showed a green timer
+  00:14:37 at screenshot (a timer of about 15
+  minutes, not the 00:04:00 timer seen in the five
+  Rallied Attack failures). The donation did not
+  land. The timer was NOT waited out in this unit
+  (pass budget), so a post-expiry Defense-panel count
+  is NOT verified here: the 0920 post-expiry return
+  to 1/30 was established on Rallied Attack, not on
+  Defense, and is not transferred across nodes
+  without a read.
+- Contradiction resolved, in favour of the newest
+  verified record: the blocker is NOT node-specific.
+  The node-specific reading of the 1/30 block (that a
+  different node panel would clear it) is superseded
+  by this sixth failure on a different node. The
+  Rallied Defense tap is retired at 1/30, joining
+  Rallied Attack taps, idles, re-entries and holds
+  retired for that value. What stays open is the 1/30
+  floor behaviour itself and the regeneration rate,
+  tracked on Issues #160 and #174.
+- Next method, named instead of repeating any retired
+  method: re-read the day state from the Strength
+  Ranking Donation tab. Do not repeat Rallied Attack
+  taps, idles, re-entries or holds at 1/30, and do
+  not repeat the Rallied Defense tap at 1/30. The
+  standing re-read unit donations-2026-11-03-1721
+  carries that method.
+- Quota checkpoint (rule R3): the 13:00 checkpoint
+  (six hours before the 19:00 reset) must re-read
+  this count live; if it still reads 1/30, the next
+  donations unit rises to priority 1.
+- Closing state, partial, day not done: at close the
+  Donation Count stands at 1/30 behind the Defense
+  panel timer. No arithmetic final count is claimed,
+  and the tracker is left untouched. Panel left open
+  on the Rallied Defense panel with its timer
+  running.
+- Red lines held: no diamonds spent, no paid button
+  tapped, no alliance diplomacy, no assembly, no
+  teleport. The diamond Donate button was never
+  tapped.
+- The blocker is commented on Issue #174 from this
+  unit by the executor, and this fold is commented
+  there by this run. Neither issue is closed here -
   closure belongs to the daily retro, with evidence.

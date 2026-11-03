@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T17:40:00Z
+modified: 2026-11-03T18:45:00Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-0504 perception-scout execution records 2026-11-03 0508 and 0510 queue runs (partial, observe-only, store-group re-walk, Mall 7-tab strip identical, MALL label static, no Crystal Shop or Glittering Market tab)
   - source: ticker-0834 perception-scout execution record 2026-11-03 0839 queue run (partial, base and events groups, Drone Boost 9300, Wanted Boss Code 64, no Zombie entry)
   - source: ticker-0904 perception-scout execution record 2026-11-03 0910 queue run (partial, alliance group, stale 11-02 post-reset unit executed, Wars dot still open on Issue #212, OCR-row grounding lesson)
+  - source: ticker-0934 perception-scout execution records 2026-11-03 0940 and 0949 queue runs (partial, stale alliance remainder chains, Wars dot live cause seen departing, Elite Exercise Commendation Notice, Issue #212)
 ---
 
 
@@ -1103,6 +1104,265 @@ observe-only, nothing claimed). Evidence in
   0650 gifts lesson that eyeballed y estimates run low
   on this panel.
 
+
+## What the 2026-11-03 0940 and 0949 units added - alliance remainder chains, Wars dot cause seen live, Elite Exercise notice
+
+- Ticker-0934, units scout-midday-scout-mid-2026-10-31-005
+  (about 09:36 to 09:41 local, 0940 record) and
+  scout-midday-scout-mid-2026-11-02-004 (about 09:42 to
+  09:49 local, 0949 record), both status partial with
+  blocker category h (by-design chain continuation),
+  not misses. Note on staleness, in both units: the
+  queue `next` pick returned these stale units of the
+  closed 2026-10-31 and 2026-11-02 midday passes. They
+  still yielded live reads, so they were executed
+  rather than skipped; the planner or retro may
+  expire the chains. Observe-only throughout: nothing
+  claimed, fought, dispatched, donated, boarded, dug,
+  joined or bought. Evidence in
+  `_records_/2026-11-03/perception-scout/0940-queue-run.md`
+  and
+  `_records_/2026-11-03/perception-scout/0949-queue-run.md`.
+- 0940 Alliance Techs detail, read live and closed
+  without action: Rallied Attack 7/10, Tech EXP
+  12.7K/4.5M, Current +7 percent, Next Level +8
+  percent, Donation Reward 50 Tech EXP and 50 coin,
+  Donation Count 1/30, Unlimited Attempts. Donate
+  buttons (2 red gems and 800 coin) observed only,
+  never tapped.
+- 0940 Alliance panel, read live: [AP3x] The Apex,
+  5.0 stars, Leader Abyss Apex, Power 13,085,838,780
+  (down from 13,086,499,653 at the 0910 read),
+  Members 94/100, Language English. The panel's other
+  buttons were not re-walked in this unit; the 0910
+  read stands for them.
+- 0940 base screen, read live about 09:38 local:
+  account power 149,940,141, unchanged from the 0910
+  read; HUD totals food 240.3M, iron 575.0M, coin
+  12.1M, second row 19.0M, 505.1K, diamonds 12.72K
+  with a plus button, stamina 120, cart 2,836; March
+  Queues 0/4. Right column: Events badge 1, Capitol,
+  VS timer 08:22:43, Season II timer 12d 08:22:44,
+  Alliance, Mail, Inventory. Target icon badge 1 with
+  a recurring short countdown ticking 00:01:36,
+  00:00:43, 00:00:05 and restarting at 00:01:00 and
+  00:00:37 across views: a recurring short timer,
+  still mapped to the world-map rally surface,
+  unopened. Bottom: 99+ badge, HEROES, chat ticker
+  "Breaking News: Alliance War!", BASE/WORLD toggle.
+  Furnace toast again: "High-temp Furnace total
+  overdrive time (in sec) [22/60]", still unexplained,
+  red-line surface observed only. Resource bubbles
+  visible on many own-base buildings, observed only,
+  never collected: they belong to the harvest
+  regular's unit. No "Boarding closes in" banner on
+  any view in this unit. No device-takeover dialog,
+  no Touch ID, no password used.
+- 0940 station panel hunt, not located: the alliance
+  panel carries no Station button, as the 0539 unit
+  established; the station panel is the train station
+  platform screen reached from the base, not an
+  alliance panel entry. The left icon column on the
+  base and territory views shows no train icon in
+  this unit, consistent with the 0752 train-unit
+  hypothesis that the icon appears only while a train
+  is preparing. Drag pans across alliance territory
+  and the own base (centre drags, and the BASE button
+  at about [895,950] to centre the own base) showed
+  no station building, no train, no carriage plus
+  bubble, and no station countdown in any frame.
+  Reading: with no boarding banner and no train icon,
+  no train is preparing in this window, so the
+  platform has no live train state to read; the
+  platform screen itself remains unlocated. This
+  stays carried, not closed.
+- 0940 world map frames, loot box not located: world
+  map reached with the WORLD toggle at about
+  [913,975]; the frame centres on the own base
+  [AP3x]Bears Lair (blue crystal base) with alliance
+  members around. A further pan right showed a red
+  truck vehicle near [TSSU] Dwg0534, a blue dome
+  structure with badge 12, and the chat ticker
+  "[BIOd]Robertinho Supineiro dug up 1 Golden Mobile
+  Squad with the treasure map": a treasure-map
+  digging signal on the world map, recorded as an
+  observed item pointing at world-map activity, never
+  worked. No loot box pin was visible in either world
+  map frame. The left-edge gift icon with badge 3
+  seen in the 0539 frame was not re-sighted in these
+  frames. No pin was tapped: on a stack day, pin
+  tapping is an execution act, not perception.
+  Reading: the loot box stays unlocated and stays
+  carried, not closed.
+- 0940 tooling finding - grounded taps: a click
+  without a fresh observation_id is rejected
+  (stale_observation); an image-only observation does
+  not attach its id for the next control call. Take a
+  compact observation first, then click with that
+  observation_id. Inner Tech detail closes at about
+  [818,225], outer Alliance Techs panel at about
+  [818,150], alliance panel back arrow at about
+  [115,936]. The BASE/WORLD toggle sits at about
+  [895,950] (BASE) and [913,975] (WORLD); it centres
+  the own base and opens the world map respectively.
+  Drag pans move the camera but ground taps in
+  alliance territory risk opening player profile cards
+  (0752 lesson); this unit used drags only, no ground
+  taps, and opened no card.
+- 0949 Alliance panel, read live: [AP3x] The Apex,
+  5.0 stars, Leader Abyss Apex, Power 13,085,838,780
+  (same as the 0940 read), Members 94/100, Language
+  English, motto unchanged including the Korean line.
+  Red dots on the panel: Alliance Wars, Help,
+  Alliance Gifts, Alliance Techs. No dot on Alliance
+  Store, Members, Assemble, Strength Ranking,
+  Alliance Events or Alliance City (City button shown
+  highlighted, as before). Top ticker, partially read:
+  "President Abyss Apex appointed ...scott as
+  Secretary of Interior!"
+- 0949 Alliance Wars, walked live (both tabs) - the
+  dot's live cause seen directly: Rally Intel tab,
+  first sight, a LIVE rally - [AP3x]Krazy Sully,
+  "Rallying... 00:00:30", target Lv.40 Doom Elite,
+  24km away, Attack button, four empty join slots,
+  Count/Limit (1/5). The join slots were observed
+  only; joining is not scout work and no slot was
+  tapped. Under a minute later the same tab read "No
+  Alliance Rally currently.": the rally had departed
+  while it was being watched. Individual Intel tab:
+  "There are no ongoing Alliance Wars currently.", as
+  in 0910. Reading: the Wars dot maps to a live rally
+  when one is running. This walk caught the dot's
+  live cause directly, where 0910 saw both tabs empty
+  and left the dot open on Issue #212. The dot is
+  still not closed here: after the rally departed,
+  whether the dot clears with it was not re-read on
+  the panel. Commented on Issue #212 with this
+  evidence by the executor.
+- 0949 Strength Ranking, walked live (Power tab
+  only): 1 ItStartsWithaDream (R4) 270,322,299;
+  2 Abyss Apex (R5) 248,620,590; 3 StarFall (R4)
+  207,866,377; 4 Missile Apex (R3) 203,332,272;
+  5 papillon707 (R3) 203,299,470; 6 Echo Apex (R3)
+  196,836,790. Own row pinned at the foot: 31 Bears
+  Lair (R3) 149,940,141. Kills and Donation tabs not
+  opened, carried to successor.
+- 0949 Members, walked live (list head only): online
+  count 15. Leader R5 Abyss Apex. Officer row:
+  Warlord ItStartsWithaDream, Recruiter KAGE OG, Muse
+  StarFall, Butler KillerInstinct14. Search for
+  Members field, observed only. Groups: R4 The
+  elected 1/10 (collapsed), R3 Armed Guards 10/58
+  (expanded). Visible Armed Guards rows, all Online,
+  Lv.30, Manage buttons observed only: QueenSTX Apex
+  109.6M, Missile Apex 203.3M, RoadHouse54 140.1M,
+  ArmyLucas 115.0M. Rows below the fold not verified.
+- 0949 Alliance City, walked live (Rare Soil tab
+  only): Production Rate 5.88K/h, Captured Cities
+  6/6. Visible Rare Soil cities: Lv.6 X:499 Y:411
+  +1,000/h; Lv.5 X:336 Y:411 +900/h; Lv.5 X:587 Y:336
+  +900/h; Lv.5 X:411 Y:336 +900/h; Lv.4 X:499 Y:262
+  +800/h; Lv.4 X:336 Y:262 +800/h. A further row
+  (Lv.6, Lv.6, Lv.5) is below the fold, yields cut
+  off. Footer: Server Time 2026-11-3 15:46:52 as
+  displayed; Digging Stronghold captures left today
+  2/2; War declarations left today 2/2; City Buff
+  button observed only, never tapped. Produces Coal
+  tab not opened, carried to successor.
+- 0949 Alliance Events, walked live (Exercise card):
+  Alliance Exercise: Battle Stage lasts 30 minutes,
+  highest total Alliance damage earns massive rewards
+  for all members; the Commander dealing the most
+  damage has a chance to multiply all Alliance
+  members' rewards by 10x; Offline Participation
+  automatically joins allies' rallies against the
+  Exercise monster when offline (if open slots remain
+  20 seconds before departure). Preparing countdown
+  05:12:34 at first sight, ticking; War Time Zone
+  2026-11-3 15:00:00. Offline Participation checkbox
+  already checked, observed only, never toggled.
+  View, Rewards and Build buttons observed only,
+  never tapped. Top ticker again: "...dug up 1 Golden
+  Mobile Squad with the treasure map-congrats!",
+  matching the 0940 record's treasure-map digging
+  signal.
+- 0949 Commendation Notice popup, left open: the
+  Events page carried a "Tap to view message"
+  envelope overlay. A tap meant for the page back
+  arrow was consumed by the pending message and
+  opened it instead of navigating back: a
+  "Commendation Notice" popup reading, in full,
+  "Dear Commander, We are pleased to inform you that
+  thanks to your and your allies' remarkable
+  performance and tireless dedication, your Alliance
+  has unlocked Elite Exercise and can now challenge
+  the new Level 11 and 12 difficulties! Tougher
+  challenges bring better rewards! We look forward
+  to witnessing your courage and strategy as you
+  unite with your allies for even more glorious
+  victories!" The popup's View button was NOT tapped
+  in this unit: it navigates to the Exercise, which
+  is not scout work. A dimmed-area tap and a repeat
+  back-arrow tap both showed no change while the
+  popup is modal (the control channel notes
+  background clicks do not reach some controls). The
+  popup was therefore left open on the Events page
+  for the next unit to handle - the 1010 radar unit
+  later navigated past it via View to the Exercise
+  panel and backed out untouched, folded in the
+  radar 1.20.0 entry. No Esc key was used: Esc
+  crashes this app.
+- 0949 Mail, not walked in this unit: the mail
+  category lists were not opened before the unit cap.
+  The Mail icon showed no red badge on the base views
+  of this pass, so no new mail signal is recorded;
+  the category lists stay carried. The 0539 mail read
+  (Event dot = unread train mail, System dot =
+  Planned Update Notice) stands as the last full read,
+  and the mail regular is queued separately.
+- Red dot accounting for the 0949 unit: seen on
+  surfaces walked, Wars, Help, Gifts and Techs dots
+  on the alliance panel. Explained: Wars maps to the
+  live rally seen departing in this walk
+  (dot-clearing after departure not re-read); Help
+  maps to the help regular; Gifts maps to the gifts
+  regular; Techs maps to the donations regular.
+  Unexplained: 0 in the surfaces walked, with the
+  standing open items below carried, not closed.
+  Carried unwalked, dots unknown: mail category
+  lists, City Produces Coal tab, Ranking Kills and
+  Donation tabs, the station panel and the loot box
+  (both covered in this pass's 0940 unit, still
+  unlocated), and whether the Wars dot clears after
+  a rally departs.
+- Tooling finding - grounded taps: Alliance panel
+  button rows ground at about 80 apart from the Wars
+  anchor: Wars [312,547], Members [690,627],
+  Strength Ranking [690,787], Alliance Events
+  [310,867], Alliance City [690,867]. A
+  visual-centre estimate alone misses: [310,468] did
+  not open Wars, and [690,787] opens Strength
+  Ranking, not City. Sub-page back arrows ground at
+  about [117,948]; [62,950] misses left of the button
+  on the Strength Ranking and Member List pages. A
+  modal message popup swallows back-arrow and
+  dimmed-area taps; only its own button responds.
+  Do not use Esc on this app.
+- Carried forward: successor unit enqueued in chain
+  scout-mid-2026-11-02
+  (scout-midday-scout-mid-2026-11-02-005) for the
+  remainder: mail category lists, City Produces Coal
+  tab, Ranking Kills and Donation tabs, the station
+  panel and the loot box, and the Wars-dot-after-
+  departure re-read. Successor unit enqueued in chain
+  scout-mid-2026-10-31
+  (scout-midday-scout-mid-2026-10-31-006) for the
+  remainder: the station panel and the loot box.
+- Issue #212: this unit's rally evidence was
+  commented on the issue by the executor (live rally
+  seen departing; dot cause observed directly). No
+  issue is closed here - closure belongs to the daily
+  retro, with evidence.
 
 ## Open questions
 
