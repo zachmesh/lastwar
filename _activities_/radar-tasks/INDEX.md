@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T00:55:00Z
+modified: 2026-11-03T07:37:53Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-0204 radar execution record 2026-11-02 0226 queue run
   - source: radar tasks execution record 2026-11-02 0636 queue run
   - source: ticker-1004 radar-tasks execution record 2026-11-02 1026 queue run (partial, radar screen never entered)
+  - source: radar tasks execution record 2026-11-02 2242 queue run
 ---
 
 
@@ -952,12 +953,21 @@ are still open, per the protocol.
 - Restore shape - does the 12-task restore land as a batch
   at the 6 hour mark or trickle? Compare stored counts
   against the restore line across one full cycle.
+  (2026-11-02 2242 update: the 1913 close predicted 12
+  tasks by about 21:32, but the 2242 entry read only 1
+  stored at 22:34, so the restore line as written does
+  not predict the stored count; semantics unverified.)
 - Where a survivor gained from a special radar task reports
   to - base gate queue or straight onto the roster.
 - How often special pins appear, and whether the skull and
   handshake pins seen on 2026-10-25 follow the story flow.
 - Whether manual per-task execution ever beats Quick
   Execute (cost or reward difference), untested.
+- Stored versus completable versus pending (2242): stored
+  1 of 40 at entry, 6 tasks completable by Quick Execute,
+  11 rewards pending after execution. The top-left stored
+  figure is not an inventory of the Quick Execute offer;
+  do not infer completable tasks from it.
 
 ## What the 2026-11-02 1508 unit closed for radar
 
@@ -1020,6 +1030,68 @@ are still open, per the protocol.
   stamina 56, restore 12 tasks in about 02:19. Returned
   to the base view at close. Stack-day standard met with
   zero executable tasks.
+
+## What the 2026-11-02 2242 unit added - stack day, single-offer trap in post-execution form, restore line still unverified
+
+- Unit radar-2026-11-02-2203 by ticker-2234, session
+  about 22:34 to 22:42, status partial by design under
+  the stack posture (duel day 2, Base Expansion).
+  Nothing was claimed, and no map pin was tapped.
+  Evidence in
+  `_records_/2026-11-02/radar-tasks/2242-queue-run.md`.
+- Entry: the game was left open on the Alliance Tech
+  panel, a donations-screen leftover. Its inner X and
+  the Alliance Techs X were closed untouched, no
+  donation was tapped, and the Alliance back arrow at
+  norm 120,920 returned to the base view. The
+  left-column dish icon grounded fresh at norm 53,710
+  opened the radar on the first tap, close to the
+  profile measured point 62,727 and to the 0636
+  working point 53,708, so the dish point stays a
+  fresh-grounding point, not a fixed hit.
+- Entry verification: Radar Lv.13, radar points 139
+  unchanged from the 1913 close, confirming nothing
+  was claimed since; stored tasks 1 of 40; stamina 97.
+  Restore line: "Fully restore at 11-3 21:31:43 local
+  time". Against the 1913 close, which read 12 tasks
+  restoring in 02:18:56 and landing about 21:32, only
+  1 stored task was present by 22:34, not 12, so the
+  restore-line semantics stay unverified, not assumed.
+  The restore-shape open question below carries this
+  data point.
+- Work done: Quick Execute ran the sole offer, 6 tasks
+  for 60 stamina (97 to 37). After the batch the bar
+  flipped to "11 task rewards can be claimed" with a
+  Claim All button and no Quick Execute offer
+  remained. The 11 pending rewards were deliberately
+  NOT claimed under the stack posture, so radar
+  points stayed at 139. A second Quick Execute offer
+  never appeared while the Claim All bar stood: this
+  is the single-offer trap measured on 2026-10-31, in
+  its post-execution form.
+- Closing reads: stored 1 of 40, radar points 139,
+  stamina 38 at close (37 at the post-batch read,
+  plus 1 regenerated during the closing wait),
+  pending rewards 11 unclaimed, restore line
+  unchanged. Returned to base via the radar home
+  button.
+- Pin scan, inventory only, nothing tapped: green
+  skull upper left near an ally base, purple skull
+  mid left, green skull mid right, all red-dotted.
+  No orange arrow, orange axe or portrait pins were
+  visible in this map framing. These three pins are
+  the release-day unit's checklist, not a surprise.
+- Completion standard, carried to the next unit: the
+  stored-count versus Quick Execute-count gap (stored
+  1 at entry, 6 completable, 11 pending after) is an
+  open measurement question - the top-left 1 of 40
+  figure does not behave as a simple inventory of the
+  Quick Execute offer, and the next unit must not
+  infer completable tasks from it. Its opening read
+  must check whether the stored 1 becomes executable
+  and whether the pending count is still 11, before
+  any other radar work. Tracker untouched, so the
+  next tick re-produces this regular.
 
 ## Changelog
 
@@ -1089,3 +1161,5 @@ are still open, per the protocol.
   overshoot the 40 cap. (1.6.1 was a minor bump without
   a changelog line; the numbering is preserved, not
   rewritten.)
+
+- 1.17.0, 2026-11-02 - 2242 stack-day unit folded: dish fresh at 53,710 first-tap entry; Lv.13, points 139, stored 1 of 40, stamina 97 to 38; Quick Execute 6 tasks for 60 stamina, then Claim All for 11 rewards with no second Quick Execute offer (single-offer trap, post-execution form); 11 rewards left unclaimed per stack posture; restore line predicting 12 tasks by about 21:32 against only 1 stored at 22:34, so restore semantics stay unverified; three red-dotted pins inventoried, none tapped; stored-versus-completable gap recorded as an open measurement question.

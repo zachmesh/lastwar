@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T04:41:07Z
+modified: 2026-11-03T07:37:53Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-0834 mail-rewards execution record 2026-11-02 0840 queue run (done, all claimable categories answered No rewards available)
   - source: mail-rewards execution record 2026-11-02 1226 queue run (ticker-1204 unit, done, all categories swept, no reward available)
   - source: mail-rewards execution record 2026-11-02 2012 queue run (ticker-2004 unit, done, 7 mails claimed)
+  - source: mail rewards execution record 2026-11-02 2313 queue run
 ---
 
 
@@ -428,6 +429,63 @@ the next tick re-produces this regular as a fresh unit.
   category back arrow twice. No different-device
   dialog was seen in this unit.
 
+
+## What the 2026-11-02 2313 unit added
+
+- Unit mail-2026-11-02-2230 by ticker-2304, session
+  about 23:13 to 23:19, status done. 0 rewards
+  claimed, 0 mails deleted. Evidence in
+  `_records_/2026-11-02/mail-rewards/2313-queue-run.md`.
+- Mail category list at entry carried red dots on
+  Battle Report, Alliance, Event, Regular and In-app
+  Purchases. Season and System carried none.
+- Claim All pressed in every category except In-app
+  Purchases (receipts only, nothing to claim, per
+  the activity metadata): Alliance, Event, Regular,
+  Battle Report and Season each answered "No rewards
+  available." Alliance list held Voting Results
+  (unread, 2h ago, "Do you read the
+  Announcements?"), Daily Donation Rankings, Zombie
+  Siege Reports and a Defense Success Reward, all 5h
+  or older. Event list held train departure notices,
+  a Competition Item Expired notice, a Daily
+  Participation Reward and a Race Ranking Reward row.
+  Regular list held Victory reports (Lv.60 Doom
+  Elite, Lv.160 Doom Walker, Lv.55 Doom Elite).
+  Battle Report list held attack Victory reports
+  (Lv.20 Zombie Raider, Lv.19 to Lv.16 Zombie
+  Horde). Season list held Ice Breaking Reports only.
+- System: Claim All pressed twice, no toast captured
+  either time and the list unchanged (President
+  Mails, Season Conclusion). Per queue rule R2 the
+  method ended there; the honest read is no
+  claimable attachment observed in System, not a
+  captured "No rewards" toast. A System no-toast
+  read must not be written up as a toast.
+- Delete All was never pressed in any category. The
+  Alliance Voting Results mail was left unread: it
+  is a results announcement, not a claimable reward,
+  and opening it was not needed to close this unit.
+  Its unread state is why the Alliance category dot
+  may persist - an unread announcement, not an
+  unclaimed reward, keeps the dot.
+- In-app Purchases was not opened: receipts only,
+  nothing to claim.
+- Mid-unit incident, do-not-reuse point: leaving
+  the Alliance panel for the base, a tap grounded by
+  visual grounding at (162,935) quit LastWar
+  outright (app-exited evidence). The tap was not
+  repeated. The game was relaunched with open_app
+  plus activate, recovered with state intact at the
+  base screen (power 149,940,141), and the mail unit
+  continued from the base Mail button. Background
+  input worked while Chrome stayed frontmost for the
+  rest of the unit.
+- On returning to the base at the end of the unit, a
+  notification permission dialog appeared ("Enable
+  notifications and never miss important messages
+  again."). Cancel was tapped; Enable Now was not
+  touched and no system setting was changed.
 
 ## Open questions
 

@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T05:40:46Z
+modified: 2026-11-03T07:37:53Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: ticker-0834 alliance-train execution record 2026-11-02 0844 queue run (done as checked only, third Secret Command Post wrong-tap instance, station empty)
   - source: ticker-1234 alliance-train execution record 2026-11-02 1246 queue run (done as checked only, station empty)
   - source: ticker-2034 alliance-train execution record 2026-11-02 2045 queue run (done, station check corrected, already aboard carriage 2)
+  - source: alliance train execution record 2026-11-02 2320 queue run
 ---
 
 # Alliance train
@@ -561,6 +562,72 @@ Measured in the 0110 train unit (ticker-0104, window mode
   (empty) unit, where no train exists to tap.
 
 
+## What the 2026-11-02 2320 unit added - entry drift, 2045 pan point no longer pans, filed as Issue #205
+
+- Unit train-2026-11-02-2230 by ticker-2304, session
+  about 23:20 to 23:24, status partial. No station
+  view was achieved, so no preparing train was
+  confirmed and none was ruled out beyond the absent
+  banner. No boarding action was taken, no Trade
+  Contracts spent, no train summoned, no conductor
+  role taken. Tracker untouched, so the next tick
+  re-produces this regular. Evidence in
+  `_records_/2026-11-02/alliance-train/2320-queue-run.md`.
+- Base screen inspected first: no "Boarding closes
+  in" banner under the resource bar.
+- First entry attempt, wrong icon: a tap at (35,675)
+  in the left column opened Secret Command Post
+  (Secret Mobile Squad), not the station. Nothing
+  inside it was tapped: no task, no Mega Deploy, no
+  refresh. Exited by the visually grounded back point
+  (158,945) back to the base.
+- Second entry attempt, stale point, in favour of
+  the newest verified record over the 2045 section:
+  the 2045 record's left-column train icon point
+  (52,548) produced no camera pan this time; the
+  base view was unchanged on screenshot. The 2045
+  pan point is therefore NOT a stable entry point -
+  it worked at 1246 and 2045 and failed at 2320, so
+  the next train unit must re-ground the icon from
+  its own base screenshot before tapping, and must
+  fall back to the 2045 station-drag route (drag
+  toward the station building and look for the
+  yellow train) rather than trusting the pan point.
+  This qualifies, not erases, the 2045 station-check
+  correction: the drag route stands, the pan point
+  does not.
+- Third entry attempt, mislabelled grounding:
+  visual grounding on the base screenshot labelled
+  the point (53,576) as the train icon, but tapping
+  it opened the truck screen ("Today's Trade Count:
+  4/5", "Your Truck" tab, a yellow truck labelled
+  [AP3x]KpyKat). Nothing on that screen was tapped:
+  no dispatch, no plunder, no tab change beyond the
+  view itself. Returned to the base with the back
+  tile point (82,930). Lesson: the truck screen is
+  not the station, and a grounding label calling a
+  left-column point the train icon must be verified
+  by the screen it opens before any action is taken
+  on that screen.
+- Incidental observation, explicitly NOT trucks-unit
+  data: the truck screen read "Today's Trade Count:
+  4/5" while passing through. It was read outside
+  the trucks unit, so the trucks unit must re-read
+  its own counter live in its own unit; this figure
+  must never be quoted as a trucks-unit closing
+  count.
+- Gap found, filed as GitHub Issue #205, class
+  knowledge, by the executor: re-ground the train
+  icon point from a current base screenshot, update
+  this entry section, record a station-drag route
+  that does not depend on the stale point, and note
+  the truck-icon confusion explicitly. This run
+  folds the drift evidence and the truck-confusion
+  warning into this section; the re-grounding itself
+  is still owed by a future train unit, and Issue
+  #205 stays open - closure belongs to the daily
+  retro, with evidence.
+
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like
@@ -576,5 +643,5 @@ Measured in the 0110 train unit (ticker-0104, window mode
   account card, distinct from base power - possibly the summed
   rider power the rating derives from, unverified.
 - Whether a member can board more than one train per day.
-- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit). (2026-11-02 1325 update: the trucks unit grounded the trade entry at (52,553), 5 pixels from this point, and the 1246 station pan at (52,548) worked again - the near-coincidence now has three instances, but the tap outcomes still differ by context, so the identity stays unresolved.)
+- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit). (2026-11-02 1325 update: the trucks unit grounded the trade entry at (52,553), 5 pixels from this point, and the 1246 station pan at (52,548) worked again - the near-coincidence now has three instances, but the tap outcomes still differ by context, so the identity stays unresolved.) (2026-11-02 2320 update: the (52,548) tap produced no pan at all, so entry instability now outranks the identity question - re-ground the icon fresh each unit and use the station-drag route; see Issue #205.)
 - Station-panel verification owed: the 0715 check never opened the station panel, so a station-verified no-train read is still owed on a checked-only unit; banner plus BASE view plus column scan is a strengthened banner-only check, not a station verification.

@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T04:41:07Z
+modified: 2026-11-03T07:37:53Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: resource collection execution record 2026-11-02 1052 queue run (ticker-1040 unit, partial, edges undragged)
   - source: resource collection execution record 2026-11-02 1520 queue run (ticker-1452 unit, partial, sweep barely started, campaign mis-tap)
   - source: resource collection execution record 2026-11-02 1945 queue run (ticker-1934 unit, partial, one farmland bubble, two new not-a-bubble points)
+  - source: resource collection execution record 2026-11-02 2247 queue run
 ---
 
 
@@ -573,6 +574,53 @@ regular stays due. Evidence in
   left-side bubbles pass to the next harvest unit.
 
 
+## What the 2026-11-02 2247 unit added
+
+- Unit harvest-2026-11-02-2203 by ticker-2234, session
+  about 22:42 to 22:47, status partial. Evidence in
+  `_records_/2026-11-02/resource-collection/2247-queue-run.md`.
+- Base HUD at unit start, rounded as displayed: food
+  230.0M, second top-bar resource 564.7M, coins 5.9M,
+  second-row first resource 18.3M, second-row second
+  resource 504.7K. A computer session drop mid-pass
+  was restarted without disturbing the game, and the
+  base view was intact.
+- Four green bubbles grounded on the starting
+  screenshot over the central building cluster, at
+  norm (396,416), (292,468), (499,468) and (397,516).
+  All four centres were tapped in one batch. No panel
+  was opened except that the closing tap left a
+  building highlighted (Titanium Alloy Factory No.1
+  Lv.30 label); an empty-ground tap at norm
+  (600,700) deselected it. No Upgrade, no Finish Now,
+  no speedup, nothing bought.
+- HUD after the batch, rounded: food 230.0M, second
+  top-bar 564.7M, coins 5.9M, second-row first
+  resource 18.7M (up about 0.4M from 18.3M),
+  second-row second 504.7K. Food, iron and coin
+  figures did not move at HUD rounding, so the
+  collected amount is recorded only as the
+  second-row movement plus the four bubbles cleared,
+  not as an exact total.
+- Sweep remainder, why partial: the right-panned view
+  (drag 300,500 to 700,500) showed no bubbles, and
+  the restored starting view again showed none, but
+  the top and left extremes were not dragged to
+  their limits, and bubbles regenerate within
+  minutes of a collection, so a whole-map
+  zero-remaining claim is not proven. Armed truck
+  check: the parked vehicles at the top right showed
+  no collectable loot bubble, so nothing was claimed
+  there (not fully loaded). Season 2 area at the
+  bottom was left out of the sweep, per the standing
+  rule that it is not main base harvest.
+- Follow-up for the next harvest unit, carried
+  unchanged: re-sweep the left-side buildings first
+  (regeneration lands there fastest), drag to the
+  top and left edges, and re-check the armed truck
+  loot bubble. Tracker untouched, so the next tick
+  re-produces this regular.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -616,3 +664,5 @@ regular stays due. Evidence in
   urgent harvest unit; the 1.3.0 pan-failure claim is
   qualified, not erased, and the drone spot stays an open
   question.
+
+- 1.13.0 (2026-11-02): four central-cluster bubbles cleared in one batch at (396,416), (292,468), (499,468) and (397,516), second-row first resource up about 0.4M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and restored views bubble-free but top and left extremes undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-side-first re-sweep carried to the next unit, folded from the 2247 harvest unit; no earlier claim superseded.

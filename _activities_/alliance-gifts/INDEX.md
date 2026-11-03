@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T04:41:07Z
+modified: 2026-11-03T07:37:53Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: alliance-gifts execution record 2026-11-02 1215 queue run (ticker-1204 unit, done, counter anomaly filed as issue 183)
   - source: perception-scout execution record 2026-11-02 1801 queue run (ticker-1755 unit, partial, Gift Level 28 progress read, Issue #183 evidence)
   - source: alliance-gifts execution record 2026-11-02 2018 queue run (ticker-2004 unit, done, 31 Regular plus 3 Premium)
+  - source: alliance gifts execution record 2026-11-02 2305 queue run
 ---
 
 
@@ -533,6 +534,50 @@ one file per execution.
   base screen. Back-arrow positions are panel-specific.
 
 
+## What the 2026-11-02 2305 unit added
+
+- Unit gifts-2026-11-02-2230 by ticker-2304, session
+  about 23:05 to 23:10, status done. Evidence in
+  `_records_/2026-11-02/alliance-gifts/2305-queue-run.md`.
+- Opened the Alliance panel from the base and tapped
+  Alliance Gifts (entry carried a red dot). Gift
+  Level 28 throughout. Progress bar read live at each
+  step: 182,891,070 of 206,300,000 at entry.
+- Regular tab, first Claim All: badge 40, dialog "A
+  total of 40 Regular Alliance Gifts were claimed
+  this time". Progress after: 182,891,480 of
+  206,300,000 (plus 410 for 40 gifts, about 10 each,
+  matching the 1215 Regular window).
+- Premium tab, first Claim All: button badge read 82,
+  dialog "A total of 62 Premium Alliance Gifts were
+  claimed this time". Progress after: 182,998,450 of
+  206,300,000. The badge read (82) and the dialog
+  count (62) differ by 20; both are recorded as read
+  and the difference is unexplained, not derived
+  away. This badge-versus-dialog gap is new evidence
+  for the gift-counting anomaly tracked as Issue
+  #183, commented there by this run.
+- Re-sweep, Regular tab: badge 6, dialog 6 Regular
+  gifts claimed. Progress after: 182,999,710 of
+  206,300,000 (plus 1,260 for 6 gifts, 210 each -
+  against about 10 each in the first Regular window,
+  so the per-gift progress movement is not stable
+  within one tab in one unit; further #183 evidence).
+  All Regular rows read Claimed and the Regular
+  Claim All badge cleared.
+- Re-sweep, Premium tab: badge 2 (one SSR, one R),
+  dialog 2 Premium gifts claimed. Progress after:
+  183,001,720 of 206,300,000. All Premium rows read
+  Claimed and the Premium Claim All badge cleared.
+- Totals: Regular claimed 46 (40 plus 6), Premium
+  claimed 64 (62 plus 2), total 110 gifts. Gift level
+  progress 182,891,070 to 183,001,720 of 206,300,000
+  (plus 110,650 over the unit, as read live at each
+  step). Both tabs were verified badge-clear at
+  close. Gifts keep arriving while allies play, so
+  the zero-badge state is momentary by the
+  activity's own note, not a permanent clear.
+
 ## Open questions
 
 - What raises the gift level, and what each level unlocks.
@@ -577,3 +622,5 @@ one file per execution.
 - 1.12.0 (2026-11-02): Gift Level 28 progress 181,429,280 of 206,300,000 read live about 18:00 by the observe-only 1801 scout unit (Claim All badge 201, Premium tab dotted, nothing claimed), and the 649,630 counter rise since the 1215 close with no intervening gifts unit, folded as new evidence for Issue #183.
 
 - 1.13.0 (2026-11-02): dialog-confirmed 31 Regular and 3 Premium, Gift Level 28 progress 181,714,890 to 181,715,830 of 206,300,000 (plus 940 in-unit), the 285,610 counter rise since the 1801 scout read with no intervening gifts unit as further Issue #183 evidence commented by this run, the Premium Claim All point 745,933 against 718,967 and 763,952 so the point is layout-dependent and the Regular centre must never be reused, the panel-specific Alliance back arrow at 120,939, and the Premium re-read verification, folded from the 2018 gifts unit.
+
+- 1.14.0 (2026-11-02): dialog-confirmed 46 Regular and 64 Premium (110 total), Gift Level 28 progress 182,891,070 to 183,001,720 of 206,300,000 (plus 110,650 in-unit), Premium badge 82 against dialog 62 as a new badge-versus-dialog gap, Regular re-sweep plus 1,260 for 6 gifts against about 10 each in the first window so per-gift progress movement is unstable within one tab, both tabs verified badge-clear at close with the zero-badge state momentary, and the anomaly evidence commented onto Issue #183 by this run, folded from the 2305 gifts unit.
