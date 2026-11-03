@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T20:41:21Z
+modified: 2026-11-03T04:41:07Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: ticker-0334 mail-rewards execution record 2026-11-02 0343 queue run (done, System 50 diamonds)
   - source: ticker-0834 mail-rewards execution record 2026-11-02 0840 queue run (done, all claimable categories answered No rewards available)
   - source: mail-rewards execution record 2026-11-02 1226 queue run (ticker-1204 unit, done, all categories swept, no reward available)
+  - source: mail-rewards execution record 2026-11-02 2012 queue run (ticker-2004 unit, done, 7 mails claimed)
 ---
 
 
@@ -378,6 +379,54 @@ the next tick re-produces this regular as a fresh unit.
 - Entry point re-confirmed: Mail at norm 931,789,
   the re-grounded point from the 0840 unit, opened
   Mail (Alliance sits at 930,702).
+
+
+## What the 2026-11-02 2012 unit added
+
+- Unit mail-2026-11-02-1830 by ticker-2004, session
+  about 20:05 to 20:12, status done. 7 mails claimed,
+  target 7 achieved 7, about 7 minutes. No diamonds
+  spent, no purchase made, nothing deleted. Evidence
+  in `_records_/2026-11-02/mail-rewards/2012-queue-run.md`.
+- Entry correction: the right-rail icon first grounded
+  as mail at norm 978,290 opened the Store Coupon Store
+  page instead - a wrong entry, not the Mail button.
+  The back arrow at norm 119,937 returned the game to
+  the base screen with nothing bought. The true Mail
+  button was then grounded at norm 885-978,740-823
+  (centre 931,781, matching the standing record) and
+  opened Mail. Lesson: 978,290 is the Coupon Store
+  entry, not Mail; re-ground Mail fresh rather than
+  trusting the first right-rail icon.
+- Category list, read live at entry: gift icons
+  (claimable attachments) on Alliance and Event only.
+  Battle Report, Season and System showed neither gift
+  icon nor red dot; Regular and In-app Purchases
+  carried red dots only (reports and receipts,
+  nothing claimable) - re-confirming the red-dot rule.
+- Alliance: 4 mails with gift icons, all 2h ago -
+  Daily Donation Rankings, Zombie Siege Report
+  (Alliance), Zombie Siege Report (Individual),
+  Defense Success Reward (Zombie). Claim All at norm
+  749,949 pressed; re-read shows all 4 gift icons gone
+  and the rows greyed as read. The two Zombie Siege
+  Reports and the Defense Success Reward (Zombie) are
+  new against the 1226 inventory. Nothing deleted.
+- Event: 3 mails with gift icons, all 2h ago - Arms
+  Race Ranking Reward, Unclaimed VIP Daily Level
+  Reward, Unclaimed "Daily Task" Reward. Claim All at
+  norm 749,949 pressed; re-read shows all 3 gift icons
+  gone and the rows greyed as read. Title Assignment
+  (1h ago), Daily Participation Rewards (2h ago) and
+  Event Task EXP Reissue (2h ago) carried no gift icon
+  and were left untouched. Nothing deleted.
+- Navigation miss, recovered: the first tap on the
+  Event row (norm 500,315) did not navigate; a second
+  tap at the row centre (norm 500,334) opened Event.
+  No repeat of the failed point.
+- Mail closed back to the base screen with the
+  category back arrow twice. No different-device
+  dialog was seen in this unit.
 
 
 ## Open questions
