@@ -2674,3 +2674,31 @@ of 2026-10-28.
   half awaiting a decision), and issue 154 is about
   nineteen and a half hours old with its statement current.
   Full detail in pr-catchall/1739-run.md.
+
+- Help unit help-2026-11-02-1430, partial (ticker-1729):
+  Alliance Help page opened after a grounding correction (Help
+  button centre norm 686,531, not the too-high y 431-433 taps);
+  header points read live 440 of 1,000; four own requests already
+  time-reduced; Help All pressed twice with no change and no
+  toast; one ally request found on scroll, papillon707 Need
+  Healing Help, still unhelped after a second Help All and a
+  direct row tap - its mechanism is unknown and remains open.
+  Tracker untouched. Full detail in
+  alliance-help/1741-queue-run.md.
+
+- Zero sweep unit zero-sweep-pre-reset-sweep-2026-11-02-001, partial (ticker-1729):
+  first pre-reset pass walked all 23 ledger lines; base view 17:44
+  showed bubbles standing (HUD 387.7M/577.5M/54.0M) and the
+  pass help unit read 440/1,000 with one ally Healing Help
+  unhelped. Not at zero: harvest lines 1-4, VIP Freebie,
+  daily activity chests, mail, donations (last live count 1
+  remaining, entry blocker on three straight units), trucks
+  plunder shortfall 1, radar release claims; unreadable:
+  titanium, armed truck, ore, screws; duel total unread (no
+  duel-score regular in this checkout). Four NEW priority 1
+  fix-ups enqueued expiring at the 19:00 reset:
+  vip-2026-11-03-0144, daily-missions-2026-11-03-0144,
+  crystal-shop-2026-11-03-0144, glittering-market-2026-11-03-0144;
+  all other lines already had an eligible unit in inbox.
+  Final sweep at 18:30 re-walks. Full detail in
+  daily-activities/1752-queue-run.md.

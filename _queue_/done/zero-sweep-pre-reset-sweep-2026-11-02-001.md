@@ -5,18 +5,38 @@ activity: daily-activities
 segment: 3
 priority: 1
 created_at: 2026-11-01T05:23:41Z
-expires_at: 2026-11-02T19:06:12Z
-planned_for: 2026-11-02T15:06:12Z
-not_before:
+expires_at: 2026-11-03T03:00:00Z
+planned_for:
+not_before: 2026-11-03T01:30:00Z
 window: pre-reset zero sweep, first pass
 est_minutes: 15
 chain_id: pre-reset-sweep-2026-11-02
 chain_seq: 1
-attempts: 0
+attempts: 1
 max_attempts: 3
-claimed_by:
-claimed_at:
-lease_until:
+claimed_by: ticker-1729
+claimed_at: 2026-11-03T01:41:29Z
+lease_until: 2026-11-03T02:01:29Z
+result:
+  status: partial
+  started_at: 2026-11-03T01:41:29Z
+  finished_at: 2026-11-03T01:45:32Z
+  duration_seconds: 243
+  executor: ticker-1729
+  summary: First pre-reset sweep walked 23 lines; 4 new priority-1 fix-ups enqueued expiring at reset (vip, missions, crystal, glittering); trucks plunder shortfall 1 and donations 1 remaining named
+  claimed: [none]
+  claimed_count: 1
+  evidence: _records_/2026-11-02/daily-activities/1752-queue-run.md
+  follow_up: none
+  stats:
+    target: 23
+    achieved: 2
+    lines_not_at_zero: 11
+    lines_unreadable: 5
+    fixups_enqueued: 4
+    verified: no
+    blocker_category: h
+    costs: about 10 minutes, no items spent
 ---
 
 # zero-sweep
