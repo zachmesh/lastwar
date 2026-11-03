@@ -80,3 +80,17 @@ of 2026-10-28.
   (play class), distinct from Issue #171. Tracker
   untouched. Full detail in
   daily-missions/0017-queue-run.md.
+
+## 00:30 to about 00:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-0030.
+  Non-batch pass per the checker (next batch 03:00):
+  no knowledge or code PR was open. Records PR 207
+  (2026-11-03, head ae07be1f, MERGEABLE CLEAN) and
+  PR 204 (2026-11-02, head 65cb6605, MERGEABLE CLEAN)
+  await the 03:00 batch. Records PR 187 (2026-11-01,
+  head 2be5df83) still conflicted on
+  _logs_/repo-actions/action-log.jsonl, the conflict
+  comment from the 1900 pass stands, not
+  force-merged. No owner-gated PR.
+  Full detail in pr-integration/0030-run.md.
