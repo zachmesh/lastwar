@@ -2994,6 +2994,58 @@ of 2026-10-28.
   runs stay silent except this record.
   Full detail in tool-development/1832-run.md.
 
+## 18:32 to about 18:55 - Knowledge organization pass (4 profiles updated, PR 192)
+
+- Organizer run knowledge-organization-2026-11-02-1832,
+  worked from the 1732 watermark: own PR 191 stands
+  MERGED with no unaddressed feedback, no new knowledge
+  Issue since the 1732 run (#183 already folded in the
+  1232 run; #160/#174 replenishment, #118-#122, #124,
+  #131 open), and the ticker-1729 help 1741, pre-reset
+  zero sweep 1752, ticker-1755 scout 1801 and donations
+  1810, and ticker-1817 mail contested records were
+  worked here.
+- Profiles updated, PR 192 (OPEN, Owner
+  lastwar-knowledge-organizer): alliance-help 1.13.0 to
+  1.14.0 (1741 Help centre 686,531 entry correction and
+  the new Healing Help failure mode - papillon707 request
+  unhelped after two Help All presses and a row tap, 0
+  helps verified, mechanism unknown); alliance-donations
+  1.14.0 to 1.15.0 (1810 measured panel centres, the
+  measured-centre grounding rule superseding plus-90,
+  Garrison Defense 7/10 +7% to +8% read, Donation Count
+  30/30 ambiguity flagged NOT resolved, next-unit live
+  re-read direction); alliance-gifts 1.11.0 to 1.12.0
+  (1801 Gift Level 28 progress 181,429,280, 649,630
+  counter rise with no intervening gifts unit as new
+  Issue #183 evidence); perception-scout 1.5.0 to 1.6.0
+  (1801 alliance group, red-dot accounting seen 10
+  explained 5, furnace toast fourth sighting, stale chain
+  spent, 146,610,448 figure excluded as account power).
+  Contradictions resolved: Help centres consistent
+  (same box); plus-90 superseded by the measured-centre
+  rule; 30/30 held open as ambiguity, not replenishment
+  proof. No record file overwritten. Full detail in
+  knowledge-organization/1832-run.md.
+- Gaps filed: 0 new Issues; evidence comments left on
+  #160 (1810 ambiguity) and #183 (1801 counter rise).
+  Carried: the 1752 sweep 18:30 final sweep had no
+  record at this pass cutoff and its four priority-1
+  fix-ups expire at the 19:00 reset - next run verifies;
+  duel total unread today tracked under Issue #136.
+  Quiet run: no Slack sync, no chat report (no relied-on
+  claim overturned, no owner decision needed).
+## 18:39 to about 18:43 - PR catch-all pass
+
+- PR catch-all pass pr-catchall-2026-11-02-1839. No-op:
+  own-PR check first (adopted PR 137 stays merged, nothing
+  addressed to this job), two open PRs scanned (187 and 161,
+  both integrator-owned records, neither this job's), 27 open
+  issues all class-labeled, no adoption, no fix, no hand-off,
+  no escalation. Owner-decision issue 132 is past 24 hours
+  with its decision statement current; issue 154 is about 20
+  hours old. Full detail in pr-catchall/1839-run.md.
+
 ## 18:35 to 18:43 - Queue ticker pass, trucks entry blocked
 
 - Trucks unit trucks-2026-11-02-1457, partial (ticker-1834):
