@@ -2946,3 +2946,12 @@ of 2026-10-28.
   head c97c4e01) not merged, both mergeable and
   awaiting the 1900 batch. Full detail in
   pr-integration/1803-run.md.
+## 18:17 to 18:21 - Queue ticker pass, mail contested
+
+- Mail unit mail-2026-11-02-1430, failed (contested):
+  the "active on a different device" dialog returned after
+  two Confirm takeovers in this pass, so per the owner
+  rule the pass stopped as contested (owner likely playing
+  on his phone). No mail screen was reached, nothing
+  claimed. Tracker untouched. Full detail in
+  mail-rewards/1821-queue-run.md.
