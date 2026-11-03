@@ -41,12 +41,17 @@
  },
  "treasures": {
   "status": "done",
-  "at": "2026-11-03T05:41:57",
-  "note": "2 digs executed, M3 2 to 0, chest progress 4/15"
+  "at": "2026-11-03T08:16:01",
+  "note": "M3 x0, no dig possible"
  },
  "vip": {
   "status": "done",
   "at": "2026-11-03T05:41:57",
   "note": "Checked only, freebie and login chest already claimed, points 1589450"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-03T08:14:32",
+  "note": "Assists 5/5; nothing pending to claim or dispatch"
  }
 }
