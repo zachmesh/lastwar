@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T11:36:26Z
+modified: 2026-11-03T16:40:00Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -693,6 +693,49 @@ that drag is the sweep-completeness check, not wasted motion.
 - Final sweep: no bouncing chest and no claimable reward
   red dot remained on the hub tabs checked. 0 rewards
   claimed, no purchase tapped.
+
+## What the 2026-11-03 0808 unit added - full hub sweep, 0 claimed, Drone Boost phase, Desert Storm registered, Boss Code 64
+
+- Ticker-0804, unit events-2026-11-03-0657, about 08:08
+  local, status done. Evidence in
+  `_records_/2026-11-03/event-claims/0808-queue-run.md`.
+- Events hub swept tab by tab, with sideways tab-bar
+  scrolls to reach the last tab and back to the first.
+- Arms Race (first tab): Drone Boost phase, contest
+  segment Lv.29-30, score 9,300, rank 2110, countdown
+  01:53:47 falling to 01:52:21 on the final sweep. Tier
+  chests at 1,500, 10,000 and 30,000; tier 1 already
+  claimed in an earlier unit and tiers 2 and 3 are locked
+  by score. Cumulative chest at top left reads 0 of 2,
+  not claimable. No phase action was taken here - Arms
+  Race work belongs to its own unit, and no grinding was
+  done. This read is a hub sweep only and is not folded
+  into the arms-race profile. Note the phase and tier
+  thresholds differ from the 0318 hub read (Base
+  Building phase, tiers 6,250 / 12,500 / 30,000): tier
+  thresholds are per-phase, so do not carry them across
+  a phase rotation.
+- Desert Storm Battlefield: Registration ends in 1d
+  09:52:38, Battle Day 2026-11-6 03:00-03:30,
+  Participants 19 of 20 including this account - already
+  registered, no claim button, nothing changed. The
+  registration countdown is consistent with the 0318
+  read (1d 14:42:34 then, about 4h50m earlier).
+- Wanted Boss (Code 64): appears at server time 00:00,
+  Go button with a 08:53:34 countdown. Go would start
+  an attack, which is grinding, not a claim, so it was
+  not tapped; the 1-attack rewards are not earned. Its
+  Rewards panel was inspected read-only: ranking reward
+  tiers No.1 to No.4-10 only, no claim button.
+- Community: the 500 Diamonds row reads Claimed, no new
+  claim.
+- Discrimination rule, confirmed again: the red dot on
+  the Wanted Boss tab is the boss countdown indicator,
+  not a claim - it stays lit while the boss is not yet
+  out. A tab dot alone is not claim proof.
+- Final sweep back to Arms Race: no bouncing chest and
+  no claimable reward red dot remained on the hub tabs
+  checked. 0 rewards claimed, no purchase tapped.
 
 ## Open questions
 

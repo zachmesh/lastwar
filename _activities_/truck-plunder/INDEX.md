@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T12:34:45Z
+modified: 2026-11-03T16:40:00Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -100,6 +100,19 @@ train also runs on this screen as a trade vehicle.
   exact-centre tap on the trade icon, not a snapped tap
   on a grounded station point - snapped taps in the left
   column mis-route, as the 0346 secrets unit proved.
+- Working entry route, 2026-11-03 (0821 unit): on the
+  current base framing, the left-column icon at norm
+  53,555 - the speech-bubble icon above the truck slot
+  in that set - opened Intercity Trade directly. This
+  route was not tried in the 0344 unit and resolves the
+  entry blocker tracked as Issue #218; the next unit
+  reopens the trade screen by this route first. The
+  truck icon at norm 53,657 opened Secret Command Post
+  (Secret Mobile Squad, Your Tasks, Mega Refresh and
+  Mega Deploy buttons - none tapped), not trade: do not
+  use it for trade entry. The old station points from
+  the 0344 unit were not re-tapped. Detail in the 0821
+  section below.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.
@@ -1241,12 +1254,112 @@ settlement and dispatch execution record).
   Game left on the base screen, panned east from its
   starting framing by the two drags in this unit.
 
+## What the 2026-11-03 0821 unit added - trade entry by the 53,555 route, one SR settled, SSR held for the UR chase, partial
+
+- Unit trucks-2026-11-03-0657 by ticker-0804, session
+  about 08:04 to 08:21, status partial, quota shortfall
+  carried forward (not a miss: the trade day runs to
+  19:00 local 2026-11-03, and later trucks units keep
+  trying). Evidence in
+  `_records_/2026-11-03/truck-plunder/0821-queue-run.md`.
+  No "active on a different device" dialog appeared. No
+  diamonds, no paid button, no plunder, no dispatch in
+  this unit.
+- Duel posture: day 2, Base Expansion, from tools/duel.py
+  at unit start. UR truck dispatches score (Handbook
+  100,000 each); trucks go UR today, contracts
+  permitting. Radar posture stack. Window on the unit:
+  duel day 2 - UR trucks, Mega UR only.
+- Entry, SUCCESS by a new route: the left-column icon at
+  norm 53,555 on the current base framing - the
+  speech-bubble icon above the truck slot in that set -
+  opened Intercity Trade directly. This route was not
+  tried in the 0344 unit and is the entry breakthrough
+  for the repeated entry blocker tracked as Issue #218.
+  The truck icon at norm 53,657 opened Secret Command
+  Post (Secret Mobile Squad, Your Tasks, Mega Refresh
+  and Mega Deploy buttons - none tapped), not trade. Do
+  not use it for trade entry. The old station points
+  from the 0344 unit (491,195 and 488,378 and 637,170
+  and 357,200) were not re-tapped. The entry blocker
+  itself is resolved by the 53,555 route; Issue #218
+  stays open, and closure belongs to the daily retro,
+  with evidence.
+- Counters read live on entry: Today's Trade Count 4 of
+  5; Your Plunder Count Today 4 of 4 (full). The
+  1-dispatch shortfall is the only open quota item, and
+  the trade day runs to 19:00 local 2026-11-03.
+- Settlement: Mega Mode from the road view first showed
+  Mega Refresh with four Arrived trucks (SR, SR, SSR,
+  SSR) and Mega Dispatch showing no dispatchable truck
+  ("All current trade trucks have been dispatched",
+  Today's Dispatches 4 of 5). The first road truck,
+  tapped at its trailer centre (352,450 - a tap at
+  352,415 on its chest icon did nothing), opened Truck
+  Details: SR, Intercity Trade Reward, cargo iron 2.5M,
+  food 2.5M, coin 1.6M, chests 20 x3 and a red diamond
+  item 1. Battle History: 2026-11-2 20:05:30,
+  [EoBH]jeffr46 Power 41.9M, Plunder Failed - delivered
+  in full. Opening the details settled the truck and
+  freed its slot. The other three arrived trucks were
+  not settled in this unit: the freed slot's dispatch
+  panel took the remaining unit time. Settlement tap
+  lesson: tap the trailer centre, not the chest icon.
+- Fifth dispatch, UR chase, SSR held, not dispatched:
+  the freed slot's dispatch panel first rolled R (iron
+  2.0M, food 2.0M, coin 1.2M, arrives 04:20:52, Escorts
+  Squad 1, free refresh available). Free refresh: R to
+  SR (iron 2.5M, food 2.5M, coin 1.6M, badge 500 x1,
+  arrives 04:33:00). Contract refresh 1: SR to SR (iron
+  2.5M, food 2.5M, coin 1.6M, badge 500 x1, arrives
+  04:01:35, contracts 165 to 164). Contract refresh 2:
+  SR to R (iron 2.0M, food 2.0M, coin 1.2M, arrives
+  03:53:19, contracts 164 to 163). Contract refresh 3:
+  R to SSR (iron 3.0M, food 3.0M, coin 1.9M, badge 500
+  x3, chest 25, arrives 03:52:51, contracts 163 to 162).
+  The SSR roll was verified still held after closing
+  and reopening the slot panel (arrives 03:52:51
+  unchanged), so it survives across units. Mega Mode
+  tapped from the dispatch panel only reopens the Mega
+  summary; Mega Dispatch still lists no dispatchable
+  truck. Mega Mode does not convert a roll to UR, as far
+  as this unit could observe.
+- The SSR was NOT dispatched: this is a UR duel day and
+  SSR is not UR. Spending more contracts chasing UR, or
+  dispatching the SSR and forfeiting the UR duel points,
+  is left to the next trucks unit - the quota deadline is
+  19:00 local, not this unit. No Trade Contract spending
+  beyond the 3 refreshes above; no diamonds spent
+  anywhere.
+- Outcome: partial, quota shortfall carried forward.
+  Settled in this unit: 1 truck (SR, above). Dispatched
+  in this unit: none. Plundered: none. Counters at close,
+  live: Trade 4 of 5, Plunder 4 of 4. Held roll at close:
+  SSR, arrives 03:52:51, in the freed slot; contracts
+  162 remaining. Tracker untouched (partial units do not
+  mark the tracker). Blocker_category: h (by-design
+  partial - quota work resumed across units) with e noted
+  for the entry history; the entry blocker itself is
+  resolved by the 53,555 route above.
+- Next trucks unit: reopen the trade screen by the
+  53,555 route, settle the remaining arrived trucks if
+  any are still unsettled, then either continue the UR
+  chase from the held SSR roll or dispatch the SSR
+  before the 19:00 deadline - do not re-tap the old
+  station points or the 53,657 Secret Post icon for
+  trade entry. Game left on the base screen.
+- Gap: already tracked as GitHub Issue #218 (labels
+  play, knowledge). The executor commented this route
+  and these counters onto #218, and this run comments
+  the fold onto #218 as well; the issue stays open,
+  and closure belongs to the daily retro, with evidence.
+
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
   trade is. Mega Mode itself is a VIP 13 privilege, unlocked on this
   account. The owner dispatch rule for Alliance Duel UR days (Mega
-  Mode, UR trucks only) is recorded above but not yet executed.
+  Mode, UR trucks only) is recorded above but not yet executed. (2026-11-03 0821 update: Mega Mode tapped from the dispatch panel only reopens the Mega summary and Mega Dispatch still lists no dispatchable truck, and Mega Mode does not convert a held roll to UR as far as that unit could observe - the dispatch-difference question itself is still open.)
 - Whether the 2026-10-25 Alliance Duel day scored UR truck
   dispatches - the daily duel category was not verified that day,
   so the evening dispatches ran under normal day handling.
@@ -1274,3 +1387,13 @@ settlement and dispatch execution record).
   exact-centre tap proposed by the 0344 section above.
   The Chrome-window-aside variant is not available from
   the background control channel, per the 0344 record.)
+  (2026-11-03 0821 update: the entry blocker itself is
+  resolved - the left-column icon at norm 53,555, the
+  speech-bubble icon above the truck slot, opened
+  Intercity Trade directly, a route not tried in the
+  0344 unit, so the unsnapped-variant proposal was not
+  needed; the 53,657 truck icon opens Secret Command
+  Post, not trade. Issue #218 stays open pending retro
+  closure with evidence, but later units reopen trade
+  by the 53,555 route first and do not re-tap the old
+  station points.)
