@@ -13,5 +13,20 @@
   "status": "done",
   "at": "2026-11-03T04:18:36",
   "note": "Alliance gifts swept: Regular 31 and Premium 3 claimed"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-03T04:38:48",
+  "note": "Help bubble tapped, toast confirmed, bubble gone"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-11-03T04:45:58",
+  "note": "Already aboard carriage 2 of preparing train, countdown about 01:21"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-03T04:47:18",
+  "note": "No trophy icon, no ceremony waiting"
  }
 }

@@ -3407,3 +3407,7 @@ of 2026-10-28.
   this run on Issue #168 (1948) and Issue #183 (2018
   counter rise); the 1949 evidence was already commented
   on Issue #150 by the executor.
+
+- 2038 alliance-help: help unit done - base-screen help bubble (yellow tile, hand holding green missile, left of Alliance) tapped, toast "Allies are very grateful for your assistance" confirmed, bubble gone on re-screenshot. Full detail in alliance-help/2038-queue-run.md.
+- 2045 alliance-train: train unit done - a train IS in preparation (conductor KpyKat, countdown about 01:21, Train Rating 86,000), and the account is already aboard carriage 2 (10/7, own avatar), so nothing boarded and no contracts spent. Method note: the (52,548) pan alone showed a train-less base edge; the train was found only after dragging toward the station building. Full detail in alliance-train/2045-queue-run.md.
+- 2047 alliance-duel: star-ceremony unit done as checked only - no trophy icon beside Alliance on the right column, so no ceremony waiting; nothing played or claimed. Help bubble had reappeared but was left for the next help unit. Full detail in alliance-duel/2047-queue-run.md.
