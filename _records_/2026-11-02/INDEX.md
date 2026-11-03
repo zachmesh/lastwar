@@ -3343,7 +3343,6 @@ of 2026-10-28.
   stay silent except this record.
   Full detail in tool-development/2036-run.md.
 
-<<<<<<< HEAD
 ## 20:39 to about 20:45 - PR catch-all pass
 
 - PR catch-all pass pr-catchall-2026-11-02-2039. No-op:
@@ -3425,7 +3424,6 @@ of 2026-10-28.
   commented at 1900, not force-merged. No records PR opened,
   no comment posted, no escalation. Full detail in
   pr-integration/2045-run.md.
-=======
 ## 20:39 to about 21:10 - Daily retro pass (2026-11-02)
 
 - Retro pass lastwar-daily-retro for the window ending
@@ -3454,4 +3452,3 @@ of 2026-10-28.
 - Records commit rides open records PR #193 (post-1900
   batch, awaiting the 23:00 batch). No force push, no
   direct main push.
->>>>>>> retro-1102-delivery
