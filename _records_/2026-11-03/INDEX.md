@@ -81,7 +81,7 @@ of 2026-10-28.
   untouched. Full detail in
   daily-missions/0017-queue-run.md.
 
-## 00:30 to about 00:45 - PR integration pass
+## 00:30 to about 00:34 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-03-0030.
   Non-batch pass per the checker (next batch 03:00):
