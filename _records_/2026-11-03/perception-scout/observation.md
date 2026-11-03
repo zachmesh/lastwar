@@ -45,3 +45,66 @@ Full unit record at `perception-scout/0016-queue-run.md`.
   scout-alliance groups in full; carried to the
   successor unit in chain scout-2026-11-02.
 - unmatched_labels: none in the surfaces actually walked.
+
+## Pass scout-mid-2026-10-31 chain unit ticker-0134, group scout-alliance remainder (partial)
+
+Midday-chain unit for the 2026-10-31 midday pass, executed
+2026-11-03 about 01:36 to 01:44 local. Observe-only; nothing
+claimed, fought, dispatched, donated, dug or bought. Full
+unit record at `perception-scout/0136-queue-run.md`.
+
+### Alliance panel, read live 2026-11-03 about 01:40 local
+
+- [AP3x] The Apex, 5.0 stars, Leader Abŷss Apex, Power
+  13,009,089,868, Members 94/100, Language English.
+- Motto: "We are The Apex. An alliance of veteran players.
+  All are welcomed - messages sent in multiple languages."
+- Top ticker partially read: "...talia as Secretary of
+  Science!"
+- Red dots on the panel: Alliance Wars, Help, Alliance
+  Gifts, Alliance Store, Alliance Techs.
+- Alliance Techs, War tab: Troop Movement 5/10, Rallied HP
+  6/10, Rallied Attack 7/10, Rallied Defense 7/10, next tier
+  1/10 (partially visible). Tech Donation Today: 5100
+  (at least 1000 contribution points earn the reward).
+  Rallied Attack detail: 7/10, Tech EXP 10.2K/4.5M,
+  Current +7%, Next Level +8%, Donation Reward 50/50.
+- Alliance Gifts, Regular tab: Level 28, progress
+  183,423,470/206,300,000, Claim All badge 48, claimable
+  Doom Elite gifts +10 each with timers about 23:53 to
+  23:58. Premium tab: SSR and R purchase gifts (Take All,
+  Premium Training Pass, Advanced Training...). Observed
+  only, nothing claimed.
+- Alliance Store, Alliance tab, read-only: UR Hero
+  Universal Shard SOLD, Survivor Recruitment Ticket SOLD,
+  Violet Shard SOLD, Mason Shard 30/30 at 1,000, Drone
+  Parts SOLD, Lv.1 Drone Component Chest SOLD, Skill Chip
+  Chest (SR), Drone Combat Boost EXP Card, 8-Hour Shield
+  7/7. Refreshes Monday 00:00 server time, 5d 16:19
+  remaining. Honor 193.1K.
+- HUD totals during this session: food 230.7M, iron
+  565.3M, coin 5.9M, 12.72K with a plus button, 193.1K,
+  cart 2,831.
+
+### Red dot accounting for this section
+
+- Seen 5: Alliance Wars, Help, Alliance Gifts, Alliance
+  Store, Alliance Techs.
+- Explained 4: Help maps to help-2026-11-03-0230 (queued);
+  Gifts maps to gifts-2026-11-03-0230 (queued); Techs maps
+  to donations done today (5100); Store maps to the
+  read-only store state above.
+- Unexplained 1: Alliance Wars dot, no owning regular,
+  filed as Issue #212 (label play).
+- The Alliance dot seen on the base screen at 00:17 today
+  is explained as the aggregate of these five panel dots.
+- Unknown items: Help, Alliance Wars and Alliance City
+  sub-pages, which did not open under background taps in
+  this session (5 Help taps, 1 Wars tap, 1 City tap, 3
+  back-arrow taps on the Alliance main panel); game left
+  on the Alliance main panel.
+- Carried unwalked: Help, Alliance Wars and Alliance City
+  sub-pages, the station panel, mail, world map pins and
+  the loot box; carried to the successor unit in chain
+  scout-mid-2026-10-31.
+- unmatched_labels: none in the surfaces actually walked.

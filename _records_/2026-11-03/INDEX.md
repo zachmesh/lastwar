@@ -382,3 +382,50 @@ of 2026-10-28.
   comment from the 1900 pass stands, not
   force-merged. No owner-gated PR.
   Full detail in pr-integration/0145-run.md.
+
+## 01:35 to about 01:50 - Queue ticker pass
+
+- Ticker pass ticker-0134. Two units executed, both
+  observe-first, game work on the Mac mini Last War window
+  (session cc-283).
+- Perception scout, unit
+  scout-midday-scout-mid-2026-10-31-002, partial: the
+  alliance group remainder of the 2026-10-31 midday chain
+  - Alliance panel, Techs, Gifts on both tabs and the
+  Alliance Store tab read live ([AP3x] The Apex, 5.0
+  stars, 94/100 members, Tech Donation Today 5100, Gifts
+  Level 28 with Claim All badge 48, observed only, nothing
+  claimed); Help, Alliance Wars and Alliance City
+  sub-pages did not open under background taps, and the
+  station, mail and world map surfaces are unwalked.
+  Successor scout-midday-scout-mid-2026-10-31-003
+  enqueued. Red dots seen 5, explained 4; the Alliance
+  Wars dot has no owning regular and was filed as Issue
+  #212 (label play). The Alliance dot seen on the base
+  screen at 00:17 is explained as the aggregate of these
+  five panel dots. Game left on the Alliance main panel.
+  Full detail in perception-scout/0136-queue-run.md.
+- Alliance donations, unit donations-2026-11-02-1344,
+  done: 2 coin donations to Rallied Attack at 800 coin
+  each (count 2/30 to 0, button greyed with a 00:42:20
+  cooldown timer, verified by screenshot). Tech
+  Donation Today 5100 to 5250 across the unit, not
+  claimed as this unit's alone. No claim button observed
+  for the daily donation reward. Tracker left untouched,
+  following the 01:27 unit's precedent; the re-read unit
+  donations-2026-11-03-0910 (after the timer) is already
+  queued. Full detail in
+  alliance-donations/0144-queue-run.md.
+- No zombie seeding: the Zombie Invasion event ended
+  2026-10-30 and the chain has no pending units.
+- Queue state note: both units this pass executed had
+  already been completed in the delivered branch by
+  ticker-1755; the working-tree pool is stale relative
+  to the delivered pool. The delivered branch unit files
+  were NOT overwritten, so the ticker-1755 results stand;
+  this pass's observations and donations are recorded in
+  the two run records above. Filed as Issue #213 (label
+  tooling).
+- No ticker-owned PR carried open questions: PR 207
+  (records/2026-11-03) is integrator-owned and carries no
+  comments.
