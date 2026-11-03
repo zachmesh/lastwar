@@ -2604,3 +2604,19 @@ of 2026-10-28.
   applied agree, all zero; 0 withdrawals. Pool: inbox 54,
   claimed 1, done 734, upcoming 51. Full detail in
   queue-planning/1340-run.md.
+## 13:45 - PR integration pass
+
+- PR integrator pass pr-integration-2026-11-03-1345.
+  Non-batch pass per the checker
+  (_tools_/records_batch.py on main: due no, outside
+  every batch window, next batch 15:00); no-op pass,
+  no knowledge or code PR open. Records PR 229
+  (records/2026-11-02, head 962d3fee, CLEAN) awaits
+  the 15:00 batch. Records PR 207 (records/2026-11-03,
+  head 0ddc8f8c, CONFLICTING) and PR 187
+  (records/2026-11-01, head 2be5df83, CONFLICTING)
+  conflicts carried, standing comments stand, no
+  duplicate comment posted (207 conflict files
+  re-verified by merge-tree: action-log and state
+  file, same as the standing note).
+  Full detail in pr-integration/1345-run.md.
