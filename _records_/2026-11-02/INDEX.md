@@ -2704,3 +2704,17 @@ of 2026-10-28.
   1900 batch. records/2026-10-31 verified contained
   in main, no PR needed. Full detail in
   pr-integration/1700-run.md.
+
+## 17:15 to about 17:26 - PR integration pass
+
+- Non-batch pass, status no-op: checker
+  _tools_/records_batch.py on main reported due no,
+  outside every batch window, next batch point
+  19:00 PT. No knowledge or code PR was open.
+  Records PRs 187 (2026-11-01 post-1500 batch, head
+  2be5df83) and 161 (2026-11-02, head 75e5eeee,
+  prior action-log conflict resolved on the branch
+  side, mergeable clean) both await the 1900 batch.
+  records/2026-10-31 verified contained in main, no
+  PR needed. No merges, no comments, no escalations.
+  Full detail in pr-integration/1715-run.md.
