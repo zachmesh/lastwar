@@ -3549,3 +3549,23 @@ of 2026-10-28.
   empties; 2120 counters as new-day state). Gaps filed:
   0, no issue comments. Full detail in
   knowledge-organization/2132-run.md.
+## 21:35 to about 21:42 - Queue ticker pass, treasures and VIP done
+
+- Treasures unit treasures-2026-11-02-1857, done (ticker-2134):
+  M3 back to x2 since the 1352 run, so Dig 2 time(s) was used;
+  a first mis-aimed tap at (810,950) opened the Exchange Items
+  history panel instead (no new exchange made) and was closed,
+  then the grounded point (627,955) dispatched the dig. Post-dig
+  stocks M1 x12, M2 x12, M3 x0, M4 x7, M5 x2, M6 x5, M7 x11,
+  chest progress 2 of 15 to 4 of 15; rewards panel read coin
+  piles x24, medal 1.2K, 1 minute speedups x50/x75/x125, blue
+  triangles x400, silver ingots x100, grey boxes x12. Full detail
+  in hidden-treasures/2135-queue-run.md.
+
+- VIP unit vip-2026-11-02-1900, done as checked only
+  (ticker-2134): VIP13, 57 day streak, points 1,589,450 of
+  2,000,000; Daily Freebie grey with countdown and login chest
+  without a red dot, two chest taps with no change, so both
+  items read as already claimed for this reset day; nothing
+  claimed, nothing spent. Full detail in
+  vip-rewards/2138-queue-run.md.

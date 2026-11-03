@@ -38,5 +38,15 @@
   "status": "done",
   "at": "2026-11-03T05:13:46",
   "note": "Events sweep done: 4 tabs, nothing claimable"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-03T05:41:57",
+  "note": "2 digs executed, M3 2 to 0, chest progress 4/15"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-03T05:41:57",
+  "note": "Checked only, freebie and login chest already claimed, points 1589450"
  }
 }
