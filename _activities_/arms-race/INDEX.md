@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T04:40:00Z
+modified: 2026-11-04T08:32:00Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-0604 arms-race execution record 2026-11-03 0609 queue run (partial, first unit of new Drone Boost phase, stamina 120 measured, Lv-1 Doom Elite 20 stamina for 2000 points, tier arithmetic, ranking-row chest taps retired)
   - source: ticker-1004 arms-race execution record 2026-11-03 1021 queue run (done, Hero Advancement tier 3 met on one Adam level-up, 41500 points, all point and cumulative chests claimed)
   - source: ticker-1934 arms-race execution record 2026-11-03 1945 queue run (partial, Drone Boost tiers 1 and 2 claimed, tier 3 short, drone Upgrade tap method retired)
+  - source: ticker-0004 arms-race execution record 2026-11-04 0019 queue run (partial, Hero Advancement score 0, hero detail blocked, swipe-back pivot)
 ---
 
 
@@ -375,6 +376,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   R2 inside that unit; the next phase unit tests a
   changed approach from the foreground path if it
   retries.
+- Hero detail tap blocked, 2026-11-04 0019: the Hero List bottom-right Lv.124 card (hero unconfirmed) took two taps at its measured centre plus one long-press with no change, so no EXP was spent and tier 3 stayed unmet. The next unit in the phase retries with a changed method (a class tab filter, a different card, or a foreground tap path); if the detail still does not open, the blocker is written into the activity metadata per rule R2 and promoted to a standing blocker.
 ## What is known from 2026-10-26
 
 - The Hero Advancement phase ran on the morning of 2026-10-26
@@ -1432,3 +1434,96 @@ slot. Evidence in
 - Red lines held: no diamonds or money spent, no
   speedup burned, no stage swap, no research or
   building started, no Buy button tapped.
+
+## What the 2026-11-04 0019 unit added - Hero Advancement score 0, hero detail blocked, swipe-back pivot
+
+- Unit arms-race-2026-11-03-2203 by ticker-0004,
+  about 00:04 to 00:19 local, status partial. No
+  diamonds or money spent, no speedup burned, no
+  stage swap, no research or building started, no
+  recruitment made, no hero levelled, no chest
+  claimed. Evidence in
+  `_records_/2026-11-04/arms-race/0019-queue-run.md`.
+- Session start: the game was left on an Alliance
+  Techs detail panel (Rallied Attack 7/10, Tech EXP
+  16.6K/4.5M, Donation Count 3/30 - the
+  short-interval replenishment read folded into the
+  alliance-donations profile). The detail panel and
+  the tech list were closed without donating:
+  donations belong to their own unit under the
+  one-unit-one-type rule. The Alliance screen back
+  arrow needed two taps before it returned to the
+  base.
+- Live phase read: Hero Advancement, Contest
+  Segment Lv.29-30, time left 01:52:03 at entry,
+  phase ends about 02:04 local - the phase window
+  following the 1945 Drone Boost phase (ended about
+  22:04), consistent with the four-hour rotation.
+  Live score read: 0, from the star bar at the top
+  left of the phase page. Point chest thresholds:
+  2,000 / 4,000 / 12,000 (ruby tags 2,360 / 4,800 /
+  11,800), identical to the 1021 same-segment read.
+  Scoring rows read live: 1 Hero Recruitment +400;
+  Use at least 2,000 Hero EXP at a time +1; Buy
+  Packs containing Diamonds +30 per diamond (red
+  line, never used). Cumulative counter chest at
+  the top left: 3/8, partial, not claimable.
+  Ranking row read: segment rank 10, combined
+  #2110 [AP3x]Bears Lair, row figure 10,000. The
+  row figure is NOT used as the score: all three
+  point chests showed locked and one tap on the
+  tier 1 chest produced no change, consistent with
+  a live score of 0. The row figure's provenance is
+  still unexplained; the 1021 / 0609 lag pattern is
+  the standing hypothesis for such figures, not a
+  proven account of this read.
+- Navigation blockers and pivot (rule R2): the
+  Events screen back arrow took two background
+  taps with no change, and the Recruit screen back
+  arrow likewise took two taps plus a re-centred
+  tap with no change. Both methods ended inside
+  this unit per R2. Pivot that worked: a left-edge
+  swipe drag (from x 15 to x 500 at mid height)
+  returned from the Recruit screen to the base.
+  This swipe-back is the changed method for the
+  next unit when a back arrow does not respond.
+- Wrong-row tap, no action taken: one tap intended
+  for the Hero EXP scoring row arrow opened the
+  Recruit screen instead (Recruitment Timer 3d
+  17:50, Recruit x1 Free shown). Nothing was
+  recruited; the screen was left via the swipe
+  above.
+- Hero level-up not executed: from the base,
+  HEROES opened the Hero List. The bottom-right
+  card read Lv.124 (the level Adam reached in the
+  2026-11-02 Hero Advancement unit); the list shows
+  no names, so the card is not confirmed as Adam,
+  and Adam levelled to Lv.125 in the 1021 unit, so
+  this card is not assumed to be Adam. Two taps on
+  that card at its measured centre produced no
+  change, and one long-press variant also produced
+  no change. The hero detail was never opened, so
+  no EXP was spent and no level-up was executed.
+  This is the unit's closing blocker. Tier 3
+  (12,000) therefore stays unmet: gap 12,000, score
+  0, recorded as a missed target in this unit per
+  the standing rule.
+- Events hub tabs seen at entry: Arms Race, Desert
+  Battlefield, General's Trial, and a further tab
+  cut off at the right edge. No Zombie Invasion
+  tab, consistent with the event close of
+  2026-10-30.
+- Follow-up: the next arms-race unit in this phase
+  (ends about 02:04 local) should retry the hero
+  detail with a changed method - a class tab
+  filter, a different card, or a foreground tap
+  path - and then level one hero with EXP only, per
+  the 2026-11-02 precedent cited in the record. If
+  the hero detail still does not open, the blocker
+  must be written into the activity metadata per
+  rule R2; see the open question added by this
+  fold.
+- Red lines held: no diamonds, money, speedups,
+  skill medals or hero shards spent; no
+  recruitment, no pack purchase, no other
+  activity's work done from this unit.
