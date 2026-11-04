@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-04T12:37:48Z
-version: 1.24.0
+modified: 2026-11-04T16:37:19Z
+version: 1.25.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-2104 survivor-intake execution record 2026-11-03 2112 queue run (partial, gate line unverified, thirteenth distinct partial since the 1644 done)
   - source: ticker-0104 survivor-intake execution record 2026-11-04 0110 queue run (partial, contested, different-device dialog after two kick takeovers, server maintenance at entry)
   - source: ticker-0404 survivor-intake execution record 2026-11-04 0416 queue run (partial, gate still not located, tent/parking-area re-read named)
+  - source: ticker-0734 survivor-intake execution record 2026-11-04 0757 queue run (partial unverified, gate sign never pinned, grounding candidates untapped, center-view re-read named)
 ---
 
 
@@ -1208,5 +1209,14 @@ Measured on 2026-10-25.
 - The base was panned across the full width - left-edge iron-mine row, center-right HQ and tent area, far-right decoration and radar area, bottom snow edge with the Season 2 troop area - and no Zombies gate sign was seen in any of these views.
 - Visual grounding on the center-right view returned candidate points (front gate 511,728; survivor line 668,789; survivor figure 744,852), but on the restored view those points fall on the tent and parking area and no survivor figure or question-mark bubble could be verified there at this screenshot resolution, so none of them was tapped as a survivor: a parking area is not a survivor figure.
 - 0 survivors processed, no recruit card appeared, no Quick Dispatch ran. The gate line is NOT READ and is NOT claimed clear or empty: the gate was never located, so the line state is unverified, not empty. This continues the standing survivor blocker (Quick Dispatch never run); tracker untouched, so the next tick re-produces this regular.
-- Named re-read for the next survivors unit: start from the center-right view, check the tent and parking-area figures first, and pin the Zombies gate sign before any intake tap.
+- Named re-read for the next survivors unit: start from the center-right view, check the tent and parking-area figures first, and pin the Zombies gate sign before any intake tap. (2026-11-04 0757 correction: the view prescription is corrected to the center view - the 0757 unit entered on a top-edge view and its reverse drag (500,600) to (500,300) did not restore the center view; pin the 'Zombies' sign text on a screenshot before any intake tap, and treat the 0757 candidates (118,285) and (272,412) as unverified until that pin exists.)
 - No earlier claim superseded; no new issue filed - the gate-location blocker is already the standing R2 item for this regular.
+
+## What the 2026-11-04 0757 unit added - gate sign never pinned, candidates untapped, center-view re-read named, partial unverified
+
+- Unit survivors-2026-11-04-0603 by ticker-0734, about 07:54 to 07:57 local, status partial unverified. Session cc-431 (same session as the harvest unit). No different-device dialog appeared. Evidence in `_records_/2026-11-04/survivor-intake/0757-queue-run.md`.
+- Entry framing: the base view at entry was the top-edge view left by the harvest unit (hero statues, Eiffel Tower, ferris wheel). A reverse drag (500,600) to (500,300), intended to restore the center view, left the framing essentially unchanged (still top-edge on the closing screenshot) - that drag does not restore the center view.
+- Grounding candidates on the top-edge screenshot, NONE tapped: front gate (118,285), survivor figure with question-mark bubble (272,412), survivor line (185,350). Per queue rule R2 and the 0416 precedent, no intake tap was made on an unpinned grounding point: the 0416 unit already showed grounding candidates falling on tent and parking area with no verifiable figure there, and this unit's candidates are in the same unverified class.
+- What was not done: no survivor was processed, no recruit card appeared, no Quick Dispatch ran. The gate line is NOT claimed clear and no survivor count is reported: the 'Zombies' gate sign was never pinned - no 'Zombies' text is readable on the top-edge screenshot - so the line state is unverified, not empty. This continues the standing survivor blocker (queue-era units partial, Quick Dispatch never run). Tracker untouched, per the rule for partial units, so the next tick re-produces this regular.
+- Named re-read for the next survivors unit, correcting the 0416 re-read's view prescription (see the qualification in that section): start from the center view (not the top edge), pin the 'Zombies' gate sign text on a screenshot before any intake tap, and treat the (118,285) and (272,412) candidates above as unverified until that pin exists.
+- No earlier claim superseded; no new issue filed - the gate-location blocker is already the standing R2 item for this regular. No diamonds, money, speedup or paid button touched; no assembly, no teleport; no notification dialog enabled (no visitor dialog was opened).

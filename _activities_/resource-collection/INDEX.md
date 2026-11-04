@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T12:37:48Z
+modified: 2026-11-04T16:37:19Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-2034 resource-collection execution record 2026-11-03 2034 queue run (partial, one verified +1.6M second-row collection, factory-top grounding confusion filed as Issue #250)
   - source: ticker-0034 resource-collection execution record 2026-11-04 0034 queue run (failed, server maintenance blocked login, no base view reached)
   - source: ticker-0404 resource-collection execution record 2026-11-04 0413 queue run (partial, farmland +2.0M verified, factory-row marker confusion, Issue #250 evidence)
+  - source: ticker-0734 resource-collection execution record 2026-11-04 0755 queue run (partial, farmland +2.6M verified, left-side +3.0M unattributed, Alliance back arrow corrected to (161,935), marker confusion repeats, Issue #250 already commented by the ticker pass)
 ---
 
 
@@ -981,4 +982,14 @@ regular stays due. Evidence in
 - Verified again: one farmland bubble tap at (395,415) moved food 395.0M to 397.0M (+2.0M, HUD read live on the next screenshot), reaffirming that one farmland tap collects all farmland bubbles at once.
 - Marker confusion, Issue #250 evidence (already commented on #250 by the ticker pass, so no duplicate comment here): the gold circles and small icons above the iron-mine and factory row are building markers, not collectible bubbles, at this screenshot resolution. Taps at (148,405) on a left-side marker and (86,315) on the small icon floating above the leftmost blue building moved no HUD figure; taps at (833,391), (369,273), (389,363) and (467,405) selected Headquarters Lv.30, Gear Factory, Component Factory Lv.20 and Iron Mine Lv.27 and were closed without spending (Craft at 495.0K coin was NOT tapped). The floating-icon tap at (86,315) is the closest miss and the next unit's first retry candidate.
 - The full edge-drag sweep of the Nov 1 rule was NOT completed: the left-side coin and stone building bubbles, the drone-component bubbles, the EXP and screw bubbles and the armed-truck loot check were not reached or verified inside the unit cap, so the sweep falls further behind; the next harvest unit resumes from the sweep with the marker-confusion caution above as its first note. No truck top bubble was claimed (truck work belongs to the trucks unit). No diamonds, money, speedup or paid button was touched.
+- No earlier claim superseded.
+
+## What the 2026-11-04 0755 unit added - farmland +2.6M verified, left-side +3.0M unattributed, Alliance back arrow corrected to (161,935), partial
+
+- Unit harvest-2026-11-04-0603 by ticker-0734, about 07:43 to 07:55 local, status partial. Session dropped between units (cc-430 to cc-431); the token was re-acquired at 07:51 after the first 15 minute lease expired, and no other executor held the token. No different-device dialog appeared. Evidence in `_records_/2026-11-04/resource-collection/0755-queue-run.md`.
+- Entry route, corrected: the unit started on the Rallied Attack panel left open by the donations unit. Both panel X buttons closed cleanly (Alliance Tech panel, then Alliance Techs tree). The Alliance menu back arrow did NOT respond at (106,910) (two taps, no change) nor at (106,925) (one tap, no change). Visual grounding on the menu screenshot placed the arrow centre at (161,935); a tap there returned to the base on the first try. Next unit: use (161,935) for this back arrow, not the left-edge estimates (106,910) or (106,925).
+- Verified gains, by HUD deltas only: base HUD at entry (live screenshot reads) first value 412.6M, second 745.8M, third 12.2M, total power 150,028,269. Farmland tap at (364,481): first HUD value 412.6M to 415.2M (+2.6M) on the next screenshot. Per the standing farmland rule one tap collects all farmland bubbles; the +2.6M is the verified gain, consistent with the 0413 unit's +2.0M farmland tap. Left-side tap at (88,406): third HUD value 12.2M to 15.2M (+3.0M) on the next screenshot, and the left-side buildings showed tall orange bars on that same screenshot (normal buildings again on the following screenshot). The +3.0M HUD delta is verified; the bubble identity behind it is NOT separately verified, so no bubble count is claimed for it.
+- Marker confusion, Issue #250 evidence (already commented on #250 by the ticker pass, so no duplicate comment here): tap at (90,448) selected Gold Mine Lv.30 (label and info icons shown, HUD unchanged) - a building selection, not a bubble. This repeats the 0413 pattern - small icons above the left-side buildings are building markers at this screenshot resolution, not reliably collectible bubbles. An empty-ground tap at (500,700) deselected the Gold Mine; no panel was opened and nothing was spent.
+- Sweep coverage: left edge viewed after a (300,500) to (600,500) drag (the two taps above are the only left-side attempts); right side (Capitol, VS, Season II header area) viewed after a (600,500) to (300,500) drag - no collectible bubbles seen, only building markers and red-dot badges; top edge (hero statues, Eiffel Tower, ferris wheel) viewed after a (500,300) to (500,600) drag - no collectible bubbles seen; bottom Season 2 zone NOT swept as main-base harvest, per the 2026-11-01 rule (its bubbles are not main-base harvest).
+- Why partial, not done: the full edge-drag sweep of the 2026-11-01 rule was not completed to zero remaining - EXP, screw and drone-component bubbles were not located or verified, and the remaining left-side bubbles were not distinguished from building markers. The next harvest unit resumes from the sweep, with the back-arrow correction (161,935) and the marker-confusion caution above as its first notes. No truck top bubble was claimed; truck work belongs to the trucks unit under one-unit-one-type. No diamonds, money, speedup, or paid button was touched. Tracker untouched, per the rule for partial units.
 - No earlier claim superseded.
