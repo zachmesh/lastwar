@@ -2904,3 +2904,24 @@ of 2026-10-28.
   applied agree, all zero; 0 withdrawals. Pool: inbox 66,
   claimed 1, done 739, upcoming 51. Full detail in
   queue-planning/1540-run.md.
+
+## 16:32 to about 16:37 - Tool-developer pass, PR 237 integrator feedback fixed
+
+- Tool-developer pass tool-development-2026-11-03-1632.
+  Own PRs checked first: open PRs 237, 236, 207 and 187;
+  PR 237 (work/duel-tz-235, Owner lastwar-tool-developer,
+  Refs #235) carried unaddressed integrator feedback from
+  the 2026-11-03 1545 pass, NOT MERGED, one blocking defect
+  plus a validation gap. Branch head predated the review,
+  so no other worker was on it; taken as the single item.
+  Fix pushed as commit 06d6e82028: _tools_/duel.py main()
+  print lines restored to quoted dict keys, fixing the
+  plain-invocation NameError that --json had masked.
+  Validation gap closed on a scratch pool under /tmp only:
+  py_compile, plain duel.py and TZ=UTC plain duel.py
+  (both print Day 2 Base Expansion stack at 2026-11-03
+  daytime PT), --json, and fixture assertions for the
+  #235 instant all pass. Reply posted on PR 237, ready
+  for re-review; merge belongs to the integrator and
+  issue 235 closure belongs to the daily retro.
+  Full detail in tool-development/1632-run.md.
