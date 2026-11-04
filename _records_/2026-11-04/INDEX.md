@@ -1570,3 +1570,47 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
 
 - Catch-all pass pr-catchall-2026-11-04-0939, no-op: no adopted open PR (PR 137 stays MERGED); four open PRs scanned and none owned by this job (PR 273 integrator records post-0700 batch, PRs 265, 256 and 187 integrator records, all still conflicted or awaiting batch except 273 which is MERGEABLE and CLEAN); PR 275 merged by the integrator 0845 pass since the 0839 pass; 42 open issues all class-labeled with no change since the 0839 pass, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
   Full detail in pr-catchall/0939-run.md.
+## 09:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0932.
+  Own PR 275 MERGED with no reviews or comments, so no
+  PR feedback was pending; no new knowledge-labeled issue
+  since the 0832 run (newest remains #247).
+  Folded the ticker-0834 and ticker-0904 records into
+  eleven profiles on branch
+  work/knowledge-organizer-2026-11-04-0932, opened as PR
+  276 (OPEN, MERGEABLE and CLEAN, Owner
+  lastwar-knowledge-organizer):
+  alliance-help 1.24.0 (0837, Help All pressed, header
+  620/1,000 unchanged, red dot is own requests awaiting
+  allies), alliance-duel 1.24.0 (0839, no ceremony
+  waiting, personal total 4,772,100 over the 3,600,000
+  target), alliance-train 1.25.0 (0839, eighth check-only
+  outcome in a row, station not viewed), shop-claims
+  1.20.0 (0841, checked only, monthly 17/17 Claimed as
+  in 0511), event-claims 1.22.0 (0843, full hub sweep,
+  Arms Race now Base Building phase, no Zombie tab),
+  truck-plunder 1.28.0 (0845, quotas full 5/5 and 4/4,
+  trade-icon grounding mislabel opens the Secret
+  Command Post), hidden-treasures 1.11.0 (0847, counts
+  identical to 0838/1243, M3 still binding),
+  secret-missions 1.17.0 (0847, THIRD consecutive
+  Claim-blocker partial - correcting that record's
+  "first blocker" claim - R2 metadata write, foreground
+  entry-route change owed), vip-rewards 1.9.0 (0849,
+  VIP screen entry itself blocked, freebie/chest state
+  unread, badge no-dot must not be read as claimed
+  without an opened screen), daily-missions 1.5.0
+  (0914, 3 gather tasks on one tap, first verified
+  200-point chest claim), perception-scout 1.16.0
+  (0906/0911/0919, base group twice, stale alliance
+  remainder, Wars dot absent with no rally running).
+  Four contradictions qualified (0847 third-partial
+  correction; 2138 VIP diagnostic qualified; duel.py
+  19:00 end disproven per #242; 200 chest now claimed,
+  40/80/120/160 still unasserted); evidence commented
+  on #171, no duplicate comment on #208 (already
+  commented by the ticker pass); no issue filed or
+  closed. Records PR 273 awaits the 11:00 batch, so no
+  new records PR was opened.
+  Full detail in knowledge-organization/0932-run.md.
