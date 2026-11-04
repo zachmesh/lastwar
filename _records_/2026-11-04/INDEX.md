@@ -1038,3 +1038,30 @@ of 2026-10-28.
   #132 (duel-score only, building/research deferred)
   unchanged. Delivered to open records PR 264.
   Full detail in queue-planning/0540-run.md.
+- Trucks unit trucks-2026-11-04-0257, done,
+  ticker-0534: quotas already full at entry, Trade 5/5
+  and Plunder 4/4 read live, no dispatch or plunder made.
+  Entry confirmed the badged vehicle-front icon rule
+  (norm 55,578 opens trade when badged); the WORLD-corner
+  tap opened the World map, not trade directly.
+  Full detail in truck-plunder/0538-queue-run.md.
+- Secrets unit secrets-2026-11-04-0257, partial,
+  ticker-0534: post read live, 4 finished tasks unclaimed
+  (UR Rescue Test Subject, UR Rescue Scientist, SSR
+  Protect Refugee Camp, SSR Search for Missing
+  Refugees). Claim buttons ignored a moved-window tap, a
+  long-press, an alternate-row tap and a title-bar raise
+  attempt; the control channel never achieved foreground
+  mode, so foreground remains untested, not failed.
+  Evidence commented on open issue #171 (correction
+  comment for the record filename included).
+  Full detail in secret-missions/0545-queue-run.md.
+- Pass closed after 2 units (trucks done, secrets
+  partial). Token released.
+- Note: the working tree holds a tier-2 change
+  (_activities_/alliance-donations/INDEX.md, modified)
+  and other jobs' uncommitted _queue_ and
+  tools/state/ entries; all were left exactly as
+  found and none was swept into this pass's commit.
+  Only this pass's own tier-1 files were committed,
+  from a detached worktree at the live branch head.

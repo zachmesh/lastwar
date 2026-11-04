@@ -14,6 +14,11 @@
   "at": "2026-11-04T12:45:56",
   "note": "Event train arrival reward claimed; other categories empty"
  },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-04T12:55:57",
+  "note": "No trophy icon waiting on base screen"
+ },
  "passes": {
   "status": "done",
   "at": "2026-11-04T13:12:16",
@@ -21,17 +26,12 @@
  },
  "trucks": {
   "status": "done",
-  "at": "2026-11-04T10:42:18",
-  "note": "0242 quotas full at entry 5/5 and 4/4"
+  "at": "2026-11-04T13:39:34",
+  "note": "Quotas full at entry 5/5 and 4/4, no action"
  },
  "events": {
   "status": "done",
   "at": "2026-11-04T13:19:48",
   "note": "0519 hub sweep, nothing claimable"
- },
- "star-ceremony": {
-  "status": "done",
-  "at": "2026-11-04T12:55:57",
-  "note": "No trophy icon waiting on base screen"
  }
 }
