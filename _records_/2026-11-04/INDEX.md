@@ -1070,3 +1070,8 @@ of 2026-10-28.
 
 - Integrator pass pr-integration-2026-11-04-0545.
   Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. Knowledge PR 270 (organizer 0532: training, mail, gifts, help, duel) reviewed and merged (squash, merged 05:47 PST, main now 4a15c99f8); local main fast-forwarded to the merged commit. Records PR 264 awaits the 07:00 batch as clean (head cfe422e); PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0545-run.md.
+
+## 06:00 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0600.
+  Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. No knowledge or code PR open. Records PR 264 awaits the 07:00 batch as clean (head 33d899f); PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, conflict shape re-verified against main 4a15c99f8, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0600-run.md.
