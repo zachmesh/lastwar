@@ -867,3 +867,5 @@ of 2026-10-28.
   pool inbox 65, claimed 1, done 791, upcoming 49.
   Full record:
   _records_/2026-11-04/queue-planning/0440-run.md.
+- Integrator pass pr-integration-2026-11-04-0445.
+  Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. Knowledge PR 269 (organizer 0432) reviewed clean and merged by squash to 4cd54283e, local main fast-forwarded to the same commit. Records PR 264 awaits the 07:00 batch; PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0445-run.md.
