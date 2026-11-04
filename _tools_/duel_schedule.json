@@ -1,6 +1,7 @@
 {
- "anchor_note": "Duel day boundary and week anchor as observed in game on 2026-10-25 - Day 1 Radar Training was in progress with 21h22m left at 21:37 local, and the week timer read 5d 21h. Day 1 therefore started 2026-10-25 19:00 local and duel days roll at 19:00 local. Re-verify at the next week roll. Scoring enriched 2026-10-25 from the Last War Handbook VS guide and Packsify via the research brief; per-day in game theme pages govern where they differ (Day 1 already read).",
- "day_boundary_local": "19:00",
+ "anchor_note": "Duel day boundary and week anchor as observed in game on 2026-10-25 - Day 1 Radar Training was in progress with 21h22m left at 21:37 local, and the week timer read 5d 21h. Day 1 therefore started 2026-10-25 19:00 local. Correction 2026-11-03 (issue #242): the boundary is an absolute 24 hour cycle from the anchor, 02:00 UTC daily, so the local wall time shifts with daylight saving - 19:00 PDT before the 2026-11-02 DST end, 18:00 PST after (the 2026-11-03 18:07 PST panel already showed the new Age of Science day with 23:52 left). Do not read day_boundary_local as a fixed wall time year-round. Scoring enriched 2026-10-25 from the Last War Handbook VS guide and Packsify via the research brief; per-day in game theme pages govern where they differ (Day 1 already read).",
+ "day_boundary_local": "18:00 PST / 19:00 PDT",
+ "day_boundary_utc": "02:00",
  "days": [
   {
    "actions_that_score": [
@@ -11,7 +12,7 @@
     "chip chests (+2,812.5 per premium chip material, in game)"
    ],
    "day": 1,
-   "gate": "Radar release day (odd day). Complete and CLAIM everything in the radar, special pins included, early in the day. Claims score today (+30,000 per task as displayed in game). Wait out the roughly 5 minute dead window after the 19:00 roll before claiming.",
+   "gate": "Radar release day (odd day). Complete and CLAIM everything in the radar, special pins included, early in the day. Claims score today (+30,000 per task as displayed in game). Wait out the roughly 5 minute dead window after the roll (18:00 PST / 19:00 PDT) before claiming.",
    "theme": "Radar Training",
    "win_points": 1
   },
