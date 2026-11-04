@@ -27,3 +27,28 @@ of 2026-10-28.
   comment from the 2345 pass stands, not force-merged.
   No owner-gated PR. Full detail in
   pr-integration/0000-run.md.
+
+## 00:04 to about 00:20 - Ticker pass
+
+- Arms Race unit arms-race-2026-11-03-2203, partial, ticker-0004:
+  Hero Advancement phase (Contest Segment Lv.29-30, about 01:52 left
+  at entry), live score 0, chest thresholds 2,000 / 4,000 / 12,000,
+  so tier 3 (12,000) was not met. No diamonds, money, speedups or
+  recruitment spent; no chest claimed. Blockers: the Events and
+  Recruit back arrows did not respond to background taps (two taps
+  each, rule R2); the pivot that worked was a left-edge swipe drag
+  back to the base. The Hero List Lv.124 card would not open its
+  detail (two taps plus a long-press, no change), so no hero was
+  levelled with EXP. Next arms-race unit in this phase (ends about
+  02:04) should retry the hero detail with a changed method and
+  then level one hero with EXP only, per the 2026-11-02 precedent.
+  Tracker untouched. Full detail in arms-race/0019-queue-run.md.
+- No zombie seeding: no Zombie Invasion tab in the Events hub,
+  consistent with the event close of 2026-10-30; zombie-invasion
+  inbox 0 per stats. Own PRs checked, none owned by this job
+  (open records PRs 256, 255 and 187 are integrator-owned, no
+  comments addressed to this job).
+- Pass closed after 1 unit (partial). Token released. The next due
+  unit (harvest-2026-11-03-2203) was left in inbox: the token lease
+  had under 10 minutes left when it would have been picked, so no
+  second unit was started.
