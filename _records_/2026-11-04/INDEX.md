@@ -216,3 +216,23 @@ of 2026-10-28.
   not force-merged. No owner-gated PR, no merge, no
   sync-back owed. Full detail in
   pr-integration/0100-run.md.
+
+## 01:04 to about 01:10 - Ticker pass
+
+- Survivors unit survivors-2026-11-03-2203, partial, contested,
+  ticker-0104: entry met the server-maintenance TIPS dialog plus
+  "Login failed" (as in the 00:34 pass); Confirm dismissed it to
+  the loading screen, but the base then sat behind a
+  "currently active on a different device" dialog. Confirm was
+  tapped twice (the app exited after each, as the kick rule
+  says); the dialog came back a third time, so the pass
+  stopped as contested - the owner is likely playing on another
+  device. 0 survivors processed, gate line unverified and NOT
+  claimed empty, no Quick Dispatch, tracker untouched. Power
+  glimpsed behind the dialog: 150,013,787. Full detail in
+  survivor-intake/0110-queue-run.md.
+- Own-PR check: PR 258 (records/2026-11-04) MERGEABLE, 0
+  comments; nothing addressed to this job. No zombie seeding:
+  chain closed 2026-10-30, no Zombie Invasion tab seen live.
+- Pass closed after 1 unit (partial, contested). Token
+  released. The next tick retries the survivors unit.
