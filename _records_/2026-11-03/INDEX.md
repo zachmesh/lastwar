@@ -3411,3 +3411,26 @@ of 2026-10-28.
 - Pass closed about 21:14 local, within the 25-minute pass budget after 1 unit (partial). Token lease to 21:20 local left under 10 minutes when the next unit would be picked, so no second unit was started, as in the 1934 and 2004 passes. No zombie seeding (event closed 2026-10-30, chain closed unit 066, zombie-invasion inbox 0 per stats). Own PRs checked, none owned by this job (PRs 245, 207, 187 integrator-owned; PR 207 clean at the 2100 integrator re-check, awaiting the 23:00 batch).
 
 2130 pass (non-batch per the checker, next batch 23:00): no knowledge or code PR open. Records PR 207 re-verified clean at new head f2fa3de against current main 00bef68b and commented, awaiting the 23:00 batch with records PR 245 (clean, head unchanged); records PR 187 conflict carried, head unchanged. No owner-gated PR. Full detail in pr-integration/2130-run.md.
+
+## 21:32 to about 21:41 - Tool-developer pass, harvest tap verification
+
+- Fix pass tool-development-2026-11-03-2132. Own PRs
+  checked first: only open PRs are 245, 207 and 187, all
+  integrator-owned records branches; previous own PR 249
+  stands merged. New tooling issues since the 2032 run
+  are 250 and 251: 251 carries no new tool slice (PR 207
+  jam resolved branch-side after the retro snapshot, its
+  verification is the next retro recompute), and 250 is
+  implemented here: grounding for a harvest bubble
+  returned factory-top markers in ticker-2034
+  harvest-2026-11-03-1803. PR 252 opened (branch
+  work/harvest-verify-250, commit d47114523): new
+  _tools_/harvest_verify.py classifies each harvest tap
+  as verified, suspect-factory, suspect, not-a-bubble,
+  or unverified, and only verified taps count as
+  collected. Validation: py_compile plus 19 fixture
+  assertions on scratch pools under /tmp only, all
+  passed. Issue 250 commented, not closed; INDEX entry
+  wording left to the organizer; template/colour check
+  flagged as future work. Full detail in
+  tool-development/2132-run.md.
