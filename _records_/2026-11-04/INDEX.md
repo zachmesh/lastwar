@@ -1152,3 +1152,14 @@ of 2026-10-28.
   PR 273 opened for 2026-11-04 for the merge line
   and this run record, awaiting the 11:00 batch.
   Full detail in pr-integration/0700-run.md.
+
+## 06:40 to about 07:09 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-0640. Staged 11
+  units for the 1803/1830 slots (already_present 55,
+  skipped_done_current 3, reaped 0, expired 0).
+- Pre-reset sweep skipped (not the 1700 hour run).
+  Scout diff on the Nov 3 observation dry and applied
+  agree, all zero counts, 0 withdrawals. Pool inbox 68,
+  claimed 0, done 800, upcoming 49. Full detail in
+  queue-planning/0640-run.md.
