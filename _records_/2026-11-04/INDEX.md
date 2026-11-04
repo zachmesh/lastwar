@@ -1276,3 +1276,25 @@ of 2026-10-28.
   still conflicted on the action log at unchanged
   heads, so no comment was repeated; no owner-gated
   PR arose. Full detail in pr-integration/0745-run.md.
+- Donations unit donations-2026-11-04-0603, partial, ticker-0734:
+  13 coin donations to Rallied Attack (7/10), Donation Count 14/30
+  to 1/30 live (one of the first 13 taps did not land, proven by the
+  2/30 closing image; a make-up tap reached 1/30), Tech EXP 16.9K
+  to 18.7K, 10,400 coin spent; day not done under rule R1 (live 0
+  read required), tracker untouched, no test tap at 1/30. Full
+  detail in alliance-donations/0741-queue-run.md.
+- Harvest unit harvest-2026-11-04-0603, partial, ticker-0734:
+  farmland tap verified first HUD value 412.6M to 415.2M (+2.6M);
+  left-side tap verified third HUD value 12.2M to 15.2M (+3.0M,
+  bubble identity unverified); Gold Mine selection tap collected
+  nothing; right and top edges swept with no collectible bubbles
+  seen; EXP/screw/drone bubbles not located, full zero-remaining
+  sweep not achieved, tracker untouched. Alliance back arrow
+  corrected to (161,935). Full detail in
+  resource-collection/0755-queue-run.md.
+- Survivors unit survivors-2026-11-04-0603, partial unverified,
+  ticker-0734: top-edge view could not be restored to center;
+  grounding candidates gate (118,285) and survivor (272,412)
+  were not tapped because the "Zombies" gate sign was never
+  pinned; no survivor processed, line state unverified, tracker
+  untouched. Full detail in survivor-intake/0757-queue-run.md.
