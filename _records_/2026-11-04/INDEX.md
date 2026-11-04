@@ -1788,3 +1788,10 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   the action log at unchanged heads, so no comment
   was repeated. Full detail in
   pr-integration/1115-run.md.
+- Survivors unit survivors-2026-11-04-1003, partial, ticker-1104:
+  gate line verified live (3 question mark survivors in front of
+  the gate wall), 0 recruited, no card opened, Quick Dispatch not
+  run, tracker untouched; fullscreen crop-grounded figure taps
+  dispatched but opened no dialog, so the next unit must try the
+  bubble itself or a long-press with a fresh grounding first.
+  Full detail in survivor-intake/1122-queue-run.md.
