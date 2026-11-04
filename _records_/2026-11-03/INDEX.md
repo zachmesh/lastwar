@@ -3306,3 +3306,17 @@ of 2026-10-28.
   all zero counts, 0 withdrawals. Pool inbox 70,
   claimed 1, done 754, upcoming 49. Full detail in
   queue-planning/1940-run.md.
+
+## Retro review pass (daily retro 2026-11-03)
+
+- Retro file _records_/retro/2026-11-03.md with its
+  machine appendix (branch pool 670 units, live pool
+  756 units, gap filed as issue #251); rolling series
+  entry and owner-decisions register updated (three
+  Oct 31 items now over 48 hours, none decided);
+  issue #197 closed (points reconciled 878,233 to
+  46,481), issue #251 filed, 13 issues commented.
+  Batch compliance 6 merges, 0 violations. No
+  metadata PR by this run (all Nov 3 corrections
+  already folded or in flight with the organiser).
+  Full detail in retro-review/2050-run.md.

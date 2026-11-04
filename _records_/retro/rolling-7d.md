@@ -1,8 +1,8 @@
 ---
 title: Rolling 7 day metrics
 created: 2026-11-01T05:30:00Z
-modified: 2026-11-03T05:30:00Z
-version: 1.2.0
+modified: 2026-11-04T04:50:00Z
+version: 1.3.0
 description: Standing cross-day series beside the daily retro files, regenerated from unit results
 status: complete
 grounded_in:
@@ -135,3 +135,55 @@ remain the immutable source.
 - Batch compliance - 6 records merges audited, all
   inside batch windows, violations 0.
 - Detail - daily retro 2026-11-02 in this folder.
+
+## Entry 2026-11-03
+
+- Derived from - 670 done units, finished local
+  2026-10-28 to 2026-11-03, read 2026-11-04T04:40Z
+  from the records/2026-11-03 branch tip a0048c5d.
+  Pool state sha256
+  68e5f024a3cd48b5bc331c42cf6030d760ec90d7f924d9297fc56f1ae754182d.
+  First full 7-day window of unit data. Live-pool
+  read the same hour: 756 units, pool state sha256
+  e5f8dfcc01358962614bf1a74255e0ce236b8fcfe0239656df6566f0a90e036c;
+  the 86-unit gap is issue #251, and the branch
+  figures below understate Nov 3 (branch day 16
+  units, live day 95).
+- Totals - done 307, partial 305, skipped-needs-owner
+  10, expired 26, failed 22. Executor time 3,921.0
+  minutes, median unit 300.5 seconds, p90 762
+  seconds. Attempts mean 0.9627, maximum 2.
+- Nov 3 alone, live pool - 95 finished: done 34,
+  partial 56, expired 5, skipped 0. Duration total
+  29,507 seconds. Unverified 56 of 95 (59 percent);
+  all-five stats keys 57 of 95 (60 percent).
+- Worst types by done percent - duel-score 0 of 3
+  (no Nov 3 unit in the live pool), zero-sweep 0 of
+  4, crystal-shop 0 of 1, glittering-market 0 of 1,
+  survivors 1 of 35, training 1 of 34, trucks 5 of
+  39, arms-race 5 of 37.
+- Best types - star-ceremony 31 of 34, treasures 32
+  of 36, train 30 of 35, help 29 of 35, gifts 28 of
+  34.
+- Measurement state - numeric target over achieved
+  pairs 106 branch (158 live), summed attainment
+  0.2177 branch, mean ratio 0.5779. Points_total
+  46,481 reconciled: 3 copied-points units excluded
+  under PR 203, issue #197 closed. Blocker_category
+  named in the tool vocabulary on 91 branch units;
+  251 lack the key. Tool parse errors 0.
+- Threshold breaches - expired and unexecuted (32
+  past-expiry in branch inbox, breach on the branch
+  pool, 0 parsed on the live pool); quota attainment
+  under 0.8 rolling (trucks 0.3611, donations 0.28)
+  with trucks day quota met verified; unverified
+  day rate falling (59 percent live Nov 3) but the
+  20 percent line by Nov 7 is a trajectory warning.
+  No breach on unexplained red dots (0 in walked
+  surfaces), oldest open improvement, closed
+  improvement recurrence (#128 checked, none), or
+  daily standing job artifacts. Ledger coverage is
+  a data-gap (no sweep ran), not a pass or fail.
+- Batch compliance - 6 records merges audited, all
+  inside batch windows, violations 0.
+- Detail - daily retro 2026-11-03 in this folder.
