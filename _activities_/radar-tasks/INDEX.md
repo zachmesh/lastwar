@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T07:36:34Z
+modified: 2026-11-04T12:37:48Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -30,6 +30,7 @@ grounded_in:
   - source: PR 237 merged 2026-11-03 16:38 local (duel.py timezone fix, Refs #235) settling the 1450 live-dialog contradiction
   - source: ticker-1904 radar-tasks execution record 2026-11-03 1913 queue run (partial, release day, 17 claims, no TIPS dialog on any Claim All, 4 pins carried, Issue #235 evidence)
   - source: ticker-2304 radar-tasks execution record 2026-11-03 2317 queue run (partial, release day, story pin completed, March centre 500,751, 11 claims, no TIPS dialog, Issue #235 evidence)
+  - source: ticker-0334 radar-tasks execution record 2026-11-04 0334 queue run (partial, Doom Elite pin identified, rally blocked Issue #268, stamina 156 over the old 120 cap, Rare Farmland pin identified)
 ---
 
 
@@ -167,8 +168,7 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
 
 ## Stamina
 
-- Cap 120, regenerating 1 point every 300 seconds
-  (measured).
+- Cap 120 (measured to 2026-11-03) SUPERSEDED 2026-11-04: the 0334 unit entered reading stamina 156 and spent to 136 on Quick Execute alone, so the cap is at least 156 and the old 120 figure is not a cap. No new cap value is claimed - the mechanism is unverified, so do not quote 156 as the cap. Regenerating 1 point every 300 seconds (measured, not re-measured here).
 - Ordinary task through Quick Execute - 10 stamina each
   (measured across dozens of batches).
 - Pin task march costs vary by type (measured) - story pin
@@ -1800,3 +1800,5 @@ are still open, per the protocol.
   reuse the positions recorded here blindly.
 - Tracker untouched for partial, per the queue rules.
   No earlier claim superseded.
+
+- 1.25.0 (2026-11-04): 0334 unit folded: Esc crash route repeated - the Alliance panel back arrow stalled on two taps and an Esc press exited the app outright (standing rule reaffirmed: Esc is never used); relaunch restored the session with no observed state loss. Dish entry on the first tap at norm (53,708) with badge 6, verified by Lv.13, points 194, stored 3/40, stamina 156. STAMINA CAP CORRECTED: the 156 entry read supersedes the old cap 120 - the cap is at least 156, the old 120 figure is not a cap, and no new cap value is claimed (mechanism unverified); Quick Execute spent 20 (156 to 136) for 2 tasks, consistent with 10 per task. Five finished-task pins claimed instantly, +1 point each (points 194 to 199, stored 3/40 to 0/40). Doom Elite pin identified: the red-dotted blue skull pin (552,360) is Defeat Doom Elite 1 times (food 920.4K, iron 920.4K, coin 588.0K, radar item 300, drone item, countdown 07:56:50); the rally is BLOCKED - the Rally button did not launch on two clicks and one long-press at grounded (501,735), no march, no stamina change, filed as Issue #268; per rule R2 the next unit must change method (different squad, different rally time, or a fresh entry route) before retrying. Rare Farmland gathering pin identified: purple axe pin bottom centre (433,720), food 132.0K, radar item 10, countdown 07:52:38, NOT started (a march near unit end would leave its reward unclaimed) - left first for the next unit via Go, the pickaxe step and the radar claim. R7 next-unit order is now: Doom Elite rally retry with changed method first, then the Rare Farmland pin, then remaining pins re-grounded on the unit's own screenshot. Bottom-bar buttons respond at norm (500,952). Claim All: 6 rewards, points 199 to 205 (+6, exactly the claim count), no TIPS dialog (consistent with the post-rollover units; the duel delta test is still owed, no VS panel read was taken). Unit totals: 11 rewards claimed, 2 tasks executed, popup resources radar items 390, EXP 6.1M, blue triangles 906, coin 2.4948M, iron 2.5076M, food 3.1028M, drone items 800, paw prints 3, 5-minute speedups 6, 1-minute speedups 65, Lv.1 chest 1. Closing state: Lv.13, points 205, stored 0/40, stamina 136, restore line Fully restore at 11-5 03:xx partly obscured by a toast (not quoted as an exact figure). Base-view harvest bubbles seen on return were not touched (one unit, one type). No earlier claim superseded except the stamina cap above.
