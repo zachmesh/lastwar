@@ -3913,3 +3913,12 @@ grounded_in:
   main at a195311dd. No code changed, no PR opened, no
   comment posted. Full detail in
   tool-development/2332-run.md.
+
+
+## Knowledge organization 2332 run (ends 23:38 PST)
+
+- Hourly organizer pass: own PR 254 MERGED with no feedback pending; no new knowledge-labeled issue since the 2232 run.
+- Folded 3 records into 3 profiles (PR 257, OPEN, Owner lastwar-knowledge-organizer): gifts 2208 into alliance-gifts 1.20.0 (235 Regular + 20 Premium, panel row geometry re-confirmed, progress deltas as Issue #183 evidence); passes 2234 into shop-claims 1.17.0 (checked only, 0 claims, 1812 cycle state confirmed); radar 2317 into radar-tasks 1.24.0 (story pin completed, March centre 500,751, 11 claims, no TIPS dialog as Issue #235 evidence, third consecutive partial carrying the same pin blocker).
+- Contradictions resolved: 0 superseded; 1 unresolved discrepancy recorded (2317 story march shown -5 never moved the radar stamina read).
+- Gaps filed: 0 new Issues; issue comments: #183, #235. No issue closed here.
+- Full record: `_records_/2026-11-03/knowledge-organization/2332-run.md`.
