@@ -124,3 +124,20 @@ of 2026-10-28.
   This record rides the records/2026-11-04 branch
   into open records PR 258 (03:00 batch), so no new
   records PR was opened.
+
+## 00:32 to about 00:39 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-0039.
+  Own PRs checked first (only records PRs open, none owned);
+  open tooling issue 149 taken on its fresh 2026-11-03 retro
+  evidence (coverage still reads zero on a narrative-only
+  observation with no frontmatter counters). Built the scout
+  coverage narrative fallback in _tools_/scout_diff.py:
+  parser accepts the spelled-out count form, headline
+  unexplained falls back to the narrative section total,
+  2026-11-03 moves from 0 / 0 (empty) to items 0 /
+  unexplained 4 (narrative-fallback). PR 260 opened (Owner:
+  lastwar-tool-developer, Refs #149); issue 149 commented,
+  not closed. Validation: py_compile clean, 15 fixture
+  assertions passed, unpatched-main control 0 / 0 / empty.
+  Full detail in tool-development/0039-run.md.
