@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T23:40:05Z
+modified: 2026-11-04T05:40:00Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-0234 resource-collection execution record 2026-11-03 0244 queue run (partial, four central bubbles, left edge undragged)
   - source: ticker-0634 resource-collection execution record 2026-11-03 0642 queue run (partial, central, left and top bubble-free, right edge unswept)
   - source: ticker-1034 resource-collection execution record 2026-11-03 1044 queue run (partial, central and right-bottom bubble-free, 0 collected, left and top unswept since 0642)
+  - source: ticker-2034 resource-collection execution record 2026-11-03 2034 queue run (partial, one verified +1.6M second-row collection, factory-top grounding confusion filed as Issue #250)
 ---
 
 
@@ -736,6 +737,16 @@ regular stays due. Evidence in
 
 ## Changelog
 
+- 1.18.0 (2026-11-03): one verified teal-bubble collection
+  (+1.6M second-row resource, name unclaimed), factory-top
+  grounding confusion at (435,442) and (501,532) selecting
+  Titanium Alloy Factory No.1 and No.3 Lv.30 (Issue #250),
+  season-entry white bubble at (485,575) toast-only, entry
+  Techs-panel closures and the donations-counter attribution
+  caution, full edge sweep and armed-truck loot still
+  outstanding, partial blocker category b, folded from the
+  2034 harvest unit; no earlier claim superseded.
+
 - 1.17.0 (2026-11-03): batch taps over left-side buildings
   and farmland mixed bubble centres with building panels
   (Gear Factory Lv.20 to 21 and Iron Mine Lv.27 panels
@@ -893,3 +904,63 @@ regular stays due. Evidence in
   carries forward, now with the added fresh-measure
   requirement above and the full edge-to-edge sweep
   before closing. No earlier claim superseded.
+
+## What the 2026-11-03 2034 unit added - one verified +1.6M second-row collection, factory-top grounding confusion, season icon not a bubble
+
+- Ticker-2034, unit harvest-2026-11-03-1803, about
+  20:50 to 21:05 local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/2034-queue-run.md`.
+- Entry, left open by the previous pass: the Alliance
+  Techs panel was open, left over from the 2004
+  donations unit. The inner detail closed at (855,195),
+  the Techs list at (854,146), the Alliance screen
+  with its back arrow at (140,915). Nothing was
+  donated here. The Donation Count 2/30 read at entry
+  belongs to the donations unit, not this one - do not
+  fold another unit's counter into a harvest read.
+- HUD at entry, read live: food 275.0M, iron 612.5M,
+  coin 34.2M, second-row resource 19.0M, second-row
+  second resource 505.1K, total power 149,948,901.
+  The power read matches the 1044 and 1524 reads
+  exactly; it is a repeated measurement, not a
+  correction.
+- One verified collection: the first-view teal bubble
+  tap at (397,413) moved the second-row resource from
+  19.0M to 20.6M (+1.6M, HUD read live on the next
+  screenshot). No resource name is claimed for that
+  row; the record states only the row and the delta,
+  so this profile claims only the row and the delta.
+- Factory-top confusion, a new failure mode (Issue
+  #250, tooling): grounding points (435,442) and
+  (501,532) for "small circular resource bubble above
+  a building" selected Titanium Alloy Factory No.1 and
+  No.3 (both Lv.30) instead. Factory-top markers look
+  like bubbles to the grounding pass. Both selections
+  were cleared by tapping empty ground (200,780); no
+  panel was opened, nothing was built or spent.
+  Method, carried to the next unit: verify every tap
+  against HUD movement, and treat grounding hits over
+  factory rows as suspect.
+- Season icon, not a bubble: the white bubble above
+  the central house cluster, tapped at (485,575),
+  produced only the toast "Game season event not yet
+  started or has ended" and stayed on screen. It is a
+  season entry icon, not a collectible bubble; do not
+  re-tap it as harvest.
+- Why partial, not done: the Nov 1 full edge-drag
+  sweep was not completed - the left-side coin and
+  stone buildings, the drone-component bubbles and
+  the armed-truck loot check were not reached inside
+  the unit cap. The pass opened with own-PR work
+  (PR 207's branch-side conflict resolution), blocker
+  category b. The "ready to depart again" tooltip near
+  the top of the base view was not probed; truck work
+  belongs to the trucks unit. Tracker untouched, per
+  the rule for partial units.
+- Follow-up for the next harvest unit, carried not
+  closed: the 1044 and 1524 follow-ups (left edge and
+  top edge first, central re-check, armed-truck loot
+  verification, fresh-measure bubble centres before
+  tapping) still outstanding, now with the factory-row
+  caution from Issue #250 first. No earlier claim
+  superseded.
