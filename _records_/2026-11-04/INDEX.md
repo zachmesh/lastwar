@@ -820,3 +820,27 @@ of 2026-10-28.
   scout_diff round-summary, candidate filings,
   exploration units and promotion proposals.
   Full detail in tool-development/0432-run.md.
+
+## 04:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0432.
+  Own PR 266 MERGED before the pass with no reviews or
+  comments, so no feedback was pending; no new
+  knowledge-labeled issue since the 0332 run. Folded the
+  ticker-0334 radar 0334, ticker-0404 harvest 0413 and
+  survivors 0416 records into radar-tasks 1.25.0
+  (stamina cap 120 corrected to at least 156, Doom Elite
+  pin identified with rally blocked as Issue #268, Rare
+  Farmland pin identified, R7 order updated),
+  resource-collection 1.20.0 (farmland +2.0M verified
+  again, factory-row marker confusion) and
+  survivor-intake 1.24.0 (gate still not located,
+  tent/parking-area re-read named), plus the queued #147
+  design-doc fold (queue design section 12 sweep
+  geometry reset-anchored per merged PR 267) as
+  task-unit-queue-design 0.15.0. Profile changes ride PR
+  269 (OPEN, Owner lastwar-knowledge-organizer). Issue
+  evidence commented on #268 and #147; #250 already
+  carries the ticker's own 0413 evidence. No game
+  operated, no queue code or cron definition edited.
+  Full detail in knowledge-organization/0432-run.md.
