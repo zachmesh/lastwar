@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T20:39:44Z
+modified: 2026-11-04T11:50:00Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-2334 event-claims execution record 2026-11-02 2341 queue run (done, full hub sweep, nothing claimable, Arms Race rotated to Tech Research, Wanted Boss tab dot is a live-event marker)
   - source: ticker-0304 event-claims execution record 2026-11-03 0318 queue run (done, full hub sweep, 0 claimed, Desert Storm registered)
   - source: ticker-1204 event-claims execution record 2026-11-03 1217 queue run (done, full hub sweep, 0 claimed, Arms Race Hero Advancement 41,500, Boss Code 64 not yet out)
+  - source: ticker-0234 event-claims execution record 2026-11-04 0245 queue run (done, full hub sweep, nothing claimable)
 ---
 
 
@@ -798,6 +799,18 @@ that drag is the sweep-completeness check, not wasted motion.
   in this sweep. Costs: about 5 minutes of unit time,
   0 diamonds. Game left on the base view.
 
+## What the 2026-11-04 0245 unit added - full hub sweep, 0 claimed, General's Trial badge explained, back-arrow centre corrected
+
+- Ticker-0234, unit events-2026-11-03-2257, about 02:43 to 02:45 local, status done. Evidence in `_records_/2026-11-04/event-claims/0245-queue-run.md`.
+- Tabs seen in this sweep, in order: Arms Race, Desert Battlefield, General's Trial, Wanted Boss, Community. A further tab-bar drag to the right produced no change, so Community is the last tab. No Zombie Invasion tab is present in the hub, which re-confirms the zombie chain stays closed.
+- Arms Race page: current phase Tech Research, Contest Segment Lv.29-30, 03:17:16 left at entry. Score 0, cumulative chest 3/8 (not full, not claimable), point chests at 6,250 / 12,500 / 30,000 all unreached at score 0. Scoring paths are Tech Power (+1 per point), 1-minute Research Speed-ups (+10, burning items - not done) and diamond packs (+30, paid - not done). No Arms Race grinding was done in this unit; that belongs to the arms-race unit type. Phase state is recorded here for that unit's next run.
+- Desert Storm Battlefield: Registration ends in 15:17:04, Battle Day 2026-11-6 03:00-03:30, Participants 19/20 (including You) - already registered, no Claim button, nothing to claim. The Select Time and Select Participants buttons were not tapped (alliance registration choices, not claims).
+- General's Trial (carries a red 1 badge on its tab): Solo Challenge page, 2d 15:16:26 left, "Defeat 3/10 instructors to obtain" rewards row. The Rewards panel reads "Get rewards for all completed challenges at the end of the event!" with milestones 3/10, 3/15, 3/20, 3/25 - none complete, no Claim button anywhere. The Challenge buttons are grinding and were not tapped. The tab badge is therefore explained as a new-event marker, not a claimable reward - the same tab-dot-alone-is-not-claim-proof lesson as the 1217 Wanted Boss caveat.
+- Wanted Boss Code 39: appears at server time 00:00, aircraft heroes deal 50 percent extra damage, Go button countdown 14:15:37 at entry (boss not out yet). "Complete 1 attacks to get the following rewards" - no attack was made in this claim unit. Goals page inspected: best single attack 1,097,397,868 against tiers 1,500,000,000 / 2,000,000,000 / 2,500,000,000 / 3,000,000,000 / 4,000,000,000 - no tier reached, no Claim button. Evidence caveat: the Goals screenshot file failed to persist, so these figures are recorded from the live OCR element read, a weaker read than a persisted screenshot.
+- Community: Discord binding reward reads Claimed.
+- 0 claims in this unit. No priced button, no paid unlock, no Challenge or Go button was tapped.
+- Leaving the hub, back-arrow centre corrected: the first back-arrow tap at norm 86,952 closed the Goals panel to the Wanted Boss page, a second tap at the same point did nothing, and a tap at the corrected arrow centre norm 132,952 returned to the base screen on the first tap. Back-arrow centre for the Events hub is 132,952, not 86,952 (the latter hits the corner avatar icon). The same correction held for the Secret Command Post exit in the same pass (see the 0248 section in the secret-missions profile).
+- No bouncing chest or unexplained red dot remains except the General's Trial tab badge, explained above as a new-event marker with rewards payable only at event end. Costs: about 2 minutes of unit time, 0 diamonds.
 ## Open questions
 
 - Which recurring events hold claims that expire unclaimed.
@@ -806,4 +819,4 @@ that drag is the sweep-completeness check, not wasted motion.
   wave days, and the coal cost per donation.
 - What the Wanted Boss Code 87 fight pays in practice when it is
   out at server 00:00. (2026-11-02 2113 update: the boss has rotated to Code 64, a giant gorilla, with Missile Vehicle heroes dealing 50% extra damage; best single attack read 852,929,736 against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B, all Claim buttons grey - the Code 87 payout question is moot until it rotates back.)
-- Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.) (2026-11-02 1250/1300 update: window close-and-relaunch is now a verified exit and recovery route - the 1250 unit restored hidden side rails by relaunch, and the 1300 passes unit exited the stalled hub by relaunch, both with state intact and no login or device dialog; the foreground-first exit itself is still unverified.)
+- Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.) (2026-11-02 1250/1300 update: window close-and-relaunch is now a verified exit and recovery route - the 1250 unit restored hidden side rails by relaunch, and the 1300 passes unit exited the stalled hub by relaunch, both with state intact and no login or device dialog; the foreground-first exit itself is still unverified.) (2026-11-04 0245 update: back-arrow centre corrected - taps at norm 86,952 do nothing because that point hits the corner avatar icon; the corrected centre norm 132,952 returned to the base screen on the first tap, verified in both the Events hub exit and the Secret Command Post exit in the same pass. The foreground-first exit itself is still unverified.)
