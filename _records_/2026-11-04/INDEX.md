@@ -1163,3 +1163,17 @@ of 2026-10-28.
   agree, all zero counts, 0 withdrawals. Pool inbox 68,
   claimed 0, done 800, upcoming 49. Full detail in
   queue-planning/0640-run.md.
+
+## 07:15 to about 07:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0715.
+  Non-batch pass in effect: the checker reported due
+  for the 07:00 window, but the 07:00 batch already
+  merged in this window (PR 264 at 07:05:40 PST), so
+  nothing merged. No knowledge or code PR open.
+  Records PR 273 (records/2026-11-04, 3 commits,
+  merge-tree clean) awaits the 11:00 batch; PRs 187,
+  256 and 265 still conflicted on the action log at
+  unchanged heads, so no comment was repeated;
+  carried for branch-side resolution.
+  Full detail in pr-integration/0715-run.md.
