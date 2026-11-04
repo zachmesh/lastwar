@@ -337,3 +337,9 @@ of 2026-10-28.
   fast-forwarded to 954c32fa. Records PRs 258, 256, 255
   await the 03:00 batch; PR 187 conflict carried.
   Full detail in pr-integration/0145-run.md.
+- Integrator pass pr-integration-2026-11-04-0200.
+  Non-batch pass (checker not due, next batch 03:00);
+  no knowledge or code PR open, nothing merged or
+  commented. Records PRs 258, 256, 255 await the 03:00
+  batch; PR 187 conflict re-verified and carried.
+  Full detail in pr-integration/0200-run.md.
