@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T20:39:44Z
+modified: 2026-11-04T11:50:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry, assists 5 of 5)
   - source: ticker-0834 secret-missions execution record 2026-11-03 0837 queue run (done, unsnapped exact-centre entry re-confirmed, assists at cap, nothing pending)
   - source: ticker-1204 secret-missions execution record 2026-11-03 1223 queue run (partial, post never entered, base view panned between measurement and tap)
+  - source: ticker-0234 secret-missions execution record 2026-11-04 0248 queue run (partial, post entered, Claim buttons unresponsive)
 ---
 
 
@@ -1010,6 +1011,16 @@ secrets-2026-10-31-2257, status partial).
 - Costs: about 5 minutes of unit time, 0 diamonds.
   Game left on the base view with all panels closed.
 
+## What the 2026-11-04 0248 unit added - post entered by same-screenshot grounding, four SSR claims blocked, partial
+
+- Ticker-0234, unit secrets-2026-11-03-2257, about 02:46 to 02:48 local, status partial. Evidence in `_records_/2026-11-04/secret-missions/0248-queue-run.md`. Tracker untouched, per the partial rule. No diamonds or items spent, no ally task touched, no Plunder Others touched.
+- Session note: computer session cc-404 dropped between the events unit and this unit and was restarted as cc-407 with no game state lost (the same session-drop pattern as the 2026-11-03 1223 unit).
+- Entry, worked this time: base view left column grounded fresh on the same screenshot it was tapped from - white pickup icon at norm 53,650. One tap opened SECRET COMMAND POST on the Secret Tasks tab, verified by title. This answers the 1223 unit's entry blocker: measure and tap from the same screenshot. This qualifies, not replaces, the 0346 and 0837 unsnapped exact-centre lesson: the tap variant is verified only in the standard framing, and the 1223 failure was a framing pan between measurement and tap, not a tap-variant failure.
+- Live post state, read live: Assist Allies 5/5 (full - no assists needed or made today). Plunder Others 4/3 (not touched - PvP, forbidden without owner instruction). Your Tasks: four finished SSR tasks, each with a green Claim button, none yet claimed - Protect Refugee Camp (Lv.5), Search for Missing Refugees (Lv.5), Provide Tech Support to Refugees (Lv.5), Train Refugees (Lv.5). Per the standing rule, claiming any one finished task should collect all finished tasks at once - that claim never landed (see blocker). The row 1 Hero EXP tooltip was read live: Owned 824.4M, "It grants EXP to a specific Hero".
+- Blocker, first occurrence, named for the next unit: the Claim buttons did not respond to five background-input variants, all verified by fresh screenshot after each - single tap row 1 Claim centre norm 810,436; single tap row 1 Claim centre norm 833,436; double-click row 1 Claim centre norm 833,436; exact-pointer tap (snap_to_control false) row 1 Claim centre norm 833,436; single tap row 2 Claim centre norm 833,542. A click_element attempt on the OCR 'Claim' element instead opened the Hero EXP reward tooltip for row 1 (closed afterwards by tapping the banner area; no reward was taken, no setting changed). Background input is not dead in general this session: shop tabs, trade tabs, Events tabs and the post entry tap itself all landed. The failure is specific to the Claim buttons on this panel (and to the post back arrow at norm 86,952, which also did nothing; the working back-arrow centre, as in the Events hub, is norm 132,952, which returned to the base screen on the first tap).
+- Nothing was claimed, nothing was dispatched: no Mega Deploy was attempted, since dispatching on top of unclaimed finished tasks would stack work behind the same blocker.
+- Next secrets unit: try the Claim buttons again first (the blocker may be session-specific); if they still do not respond, the foreground-input variant from the queue design's retro note is the remaining route, since background input is the only route tried here. If this Claim blocker repeats in a second consecutive secrets unit, it must be written into this profile's metadata under rule R2 and named in the round summary - this first occurrence is recorded here as a pending retest, not yet as a permanent R2 entry.
+- Costs: about 2 minutes of unit time, 0 diamonds.
 ## Open questions
 
 - Answered 2026-11-01 (1417 unit), NOT reproduced 2026-11-02

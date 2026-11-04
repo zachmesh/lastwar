@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T07:36:34Z
+modified: 2026-11-04T11:50:00Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-1134 shop-claims execution record 2026-11-03 1151 queue run (done, 0 new claims, cart entry re-grounded, S2 Drone/EXP/Iron cards all offers)
   - source: ticker-1804 shop-claims execution record 2026-11-03 1812 queue run (done, 3 claims, Weekly Pass reset 18:00:00 confirmed, Coin pass lapsed, monthly gift re-claimed, Issue #242)
   - source: ticker-2234 shop-claims execution record 2026-11-03 2234 queue run (done as checked only, 0 claims, Hot Deals sold out after the 1812 claim, monthly still Claimed)
+  - source: ticker-0234 shop-claims execution record 2026-11-04 0237 queue run (done, checked only, nothing claimable)
 ---
 
 
@@ -764,3 +765,13 @@ the free and already paid for parts, never the paid unlocks.
 - No earlier claim superseded: this unit confirms the
   1812 cycle state on every surface rather than changing
   it.
+
+## What the 2026-11-04 0237 unit added - checked only, 0 claims, 2234 cycle state confirmed again
+
+- Ticker-0234, unit passes-2026-11-03-2257, about 02:34 to 02:37 local, status done as checked only. Evidence in `_records_/2026-11-04/shop-claims/0237-queue-run.md`.
+- Shop opened from the base cart icon (norm about 885,77 on this unit). The first click attempt was refused for a stale observation and was re-sent with the fresh observation id, no input dispatched twice.
+- Hot Deals: no free pack on display and no Free Supply auto-claim popup fired on this shop open. The page shows only the Last War Store banner carousel and the Go button, which leads out to the store and was not tapped.
+- Weekly Pass page, read live and scrolled with the drag from norm 500,850 to 500,250: the Free Supply chest reads Claimed. The Legendary row Take All 19 dollars 99 was not tapped. The S2 Drone Components, S1 Drone Parts and Coin Weekly Pass cards each show only Get Now 4 dollars 99, so all three are unowned offers, not owned passes with a pickup due; none was tapped. The Coin pass remains an offer, consistent with the 2026-11-03 2234 unit.
+- Super Monthly Pass page, read live: Days Left 18, Rewards Left 18, and the Daily Pickup button reads Claimed, as expected after the previous cycle's claim in this reset day. The Monthly Pass Extension 24 dollars 99 button was not tapped.
+- 0 claims in this unit: every shop pass surface was checked live and nothing was claimable. No price button, Renew button, or paid bundle was tapped anywhere in the shop. Shop left with the back arrow on the first tap, returning to the base screen.
+- No earlier claim superseded: this unit confirms the 2234 cycle state on every surface rather than changing it. Costs: about 4 minutes, no stamina or items spent.

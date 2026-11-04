@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T08:32:00Z
+modified: 2026-11-04T11:50:00Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -34,6 +34,7 @@ grounded_in:
   - source: ticker-1004 arms-race execution record 2026-11-03 1021 queue run (done, Hero Advancement tier 3 met on one Adam level-up, 41500 points, all point and cumulative chests claimed)
   - source: ticker-1934 arms-race execution record 2026-11-03 1945 queue run (partial, Drone Boost tiers 1 and 2 claimed, tier 3 short, drone Upgrade tap method retired)
   - source: ticker-0004 arms-race execution record 2026-11-04 0019 queue run (partial, Hero Advancement score 0, hero detail blocked, swipe-back pivot)
+  - source: ticker-0304 arms-race execution record 2026-11-04 0307 queue run (partial, Tech Research phase verdict, tier 3 unreachable inside the red lines)
 ---
 
 
@@ -1527,3 +1528,15 @@ slot. Evidence in
   skill medals or hero shards spent; no
   recruitment, no pack purchase, no other
   activity's work done from this unit.
+
+## What the 2026-11-04 0307 unit added - Tech Research phase verdict, tier 3 unreachable inside the red lines, partial
+
+- Unit arms-race-2026-11-04-0203 by ticker-0304, about 03:04 to 03:07 local, status partial. No diamonds or money spent, no speedup burned, no stage swapped, no research or building started, no chest claimed, no scoring action executed. Evidence in `_records_/2026-11-04/arms-race/0307-queue-run.md`.
+- Live phase reading (rule R4, first unit of the phase): Tech Research, Contest Segment Lv.29-30, time left 02:53:57 at entry, phase ends about 05:58 PST. Score read live: 0, from the star bar at the top left of the phase page. Chest thresholds read live: 6,250, 12,500 and 30,000, ruby tags 2,360, 4,800, 11,800. Tier-3 gap: 30,000. Scoring rows read live: Increase Tech Power by 1pt +1; Use 1-min Research Speed-up +10; Buy Packs containing Diamonds +30 per diamond. The speedup and pack paths are red lines and were not used.
+- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the lagging previous-phase row (same figure as the 0019 Hero Advancement record) and was NOT used as this phase score - the same lag pattern as the 0019 unit, re-confirmed, not a new contradiction.
+- Research queue read (the R4 judgment): entered from the base screen via the left-side flask queue icon - the Research Queue panel opened on the first tap, and this flask-icon route is the route for future queue reads, not the scoring-row jump. Lv.3 Weapon Training VIII, upgrade in progress, Time Left 1d 15:14:44 at the screenshot read. Lv.3 Defense Training VIII, upgrade in progress, Time Left 1d 11:12:03 at the screenshot read. Both completions land more than a day after this phase ends, so no research completion lands inside this phase window. The only in-scope scoring path (Tech Power from a completion) therefore cannot score in this phase, and the other two paths are red lines.
+- Judgment: tier 3 (30,000) is unreachable in this phase inside the red lines. This is the phase's R4 verdict; later units in this phase need only re-read the score and chests, not re-litigate the queue read, unless a research timer changes.
+- Completion sweep: no point chest earned - score 0 is below the 6,250 first threshold, so nothing was claimed. Nothing earned was left unclaimed. Cumulative counter chest at the top left reads 3/8, partial, not claimable, no bounce. Ranking row chest tapped once: no visible change, no preview and no claim. Nothing claimed from it. No bouncing chest or reward red dot remains on the Arms Race page.
+- Sweep caveat, recorded not smoothed over: the Events hub re-scan after the sweep was not completed - the swipe-back from the phase page went straight to the base screen, bypassing the hub. The phase page itself shows no unclaimed reward, but the hub was not re-checked in this unit.
+- Method notes (rule R2): Events tab bar - one drag to the right revealed the Arms Race tab, and the next tap opened the phase page (same pivot as prior units). Phase page back arrow failed again: one tap at norm 93,946 left the Arms Race page unchanged, matching the 2026-11-02 2209 record. Pivot that worked: a left-edge swipe drag (from x 15 to x 500 at mid height) returned from the phase page to the base screen, matching the 0019 swipe-back. This swipe-back stays the changed method when a back arrow does not respond.
+- Follow-up: status partial. Tracker left untouched; the next tick re-produces the regular, but the R4 verdict above stands for this phase. Result stats: target 30000, achieved 0, points 0, chests_claimed 0, scoring_actions 0, verified yes, blocker_category f (missing precondition, no research completion inside the phase window).

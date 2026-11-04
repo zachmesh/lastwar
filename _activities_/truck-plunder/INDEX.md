@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T03:37:56Z
+modified: 2026-11-04T11:50:00Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry lesson; incidental live trade counters 4/5)
   - source: ticker-1204 truck-plunder execution record 2026-11-03 1211 queue run (done, trade quota 5 of 5 and plunder quota 4 of 4 full, UR dispatched as rolled)
   - source: ticker-1834 truck-plunder execution record 2026-11-03 1846 queue run (partial, new trade day 0 of 5 and 0 of 4 at 18:34 entry, 3 dispatches, 2 plunders, trade counters reset with the about-18:00 rollover, Issue #242 follow-up)
+  - source: ticker-0234 truck-plunder execution record 2026-11-04 0242 queue run (done, quotas full at entry, WORLD-corner entry route)
 ---
 
 # Truck plunder - Intercity Trade
@@ -145,6 +146,8 @@ train also runs on this screen as a trade vehicle.
   vehicle-front, white pickup badge 9, radar dish badge 4,
   hammer, chest). Find it by badge and glyph, not by a
   fixed point.
+
+- Working entry route, 2026-11-04 (0242 unit): when the left-column vehicle-front icon carries NO badge, it does not open trade - a tap at norm 54,568 only panned the base map and a tap at the grounded centre 55,578 did nothing, matching the 2026-10-30 evening no-badge pattern. The route that worked: a tap at norm 913,940, on the bottom-right WORLD corner of the base screen, opened Intercity Trade directly on the Others' Trucks view. Next trucks units try this WORLD-corner route first when the column icon carries no badge. The mechanism (why that corner opens trade) is unverified, only the observed result. Do not re-tap the station building at 592,189 blindly: it produced no change in this framing, a third framing failure for station taps after 2347 and 0344. Detail in the 0242 section below.
 
 ## How it is done - dispatching
 
@@ -1522,6 +1525,17 @@ settlement and dispatch execution record).
   but no live read was taken there - unverified, not
   claimed).
 
+## What the 2026-11-04 0242 unit added - WORLD-corner entry route, quotas full, done
+
+- Ticker-0234, unit trucks-2026-11-03-2257, about 02:38 to 02:42 local, status done, quotas already full at entry, no action needed. Evidence in `_records_/2026-11-04/truck-plunder/0242-queue-run.md`. No diamonds spent, no paid button tapped, no Mega Mode dispatch.
+- Duel posture applied: tools/duel.py at entry reports duel day 3, theme Age of Science, day ends 2026-11-04 19:00 local. Scoring actions today are research, valor badges, drone component chests and radar claims. Truck dispatches do not score today, so the non-UR day rule would have governed any dispatch (SR or above only) - but no dispatch was needed or made.
+- Entry, new route found, and a dead route confirmed: the left-column vehicle-front icon (grounded fresh at norm 54,577, no red badge visible on it in this view) did not open trade - a tap at norm 54,568 only panned the base map, and a tap at the grounded centre 55,578 produced no change. A tap at norm 55,531 opened the season warming panel instead (the green-face icon sits above the vehicle icon, grounded at norm 54,494), and the panel was closed with its X on the first tap. This matches the 2026-10-30 evening pattern: the vehicle icon tap does nothing when it carries no badge. Background input is not the cause here - the same session's shop taps all landed in the previous unit.
+- A tap on the station building (norm 592,189) produced no change, a third framing failure for station taps after 2347 and 0344. Do not re-tap station points blindly.
+- Entry that worked: a tap at norm 913,940, on the bottom-right WORLD corner of the base screen, opened Intercity Trade directly on the Others' Trucks view. Next trucks units try this route first when the left-column icon carries no badge. The mechanism (why that corner opens trade) is unverified, only the observed result.
+- Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both pairs are live screen reads, not tallies.
+- Attribution gap, recorded not smoothed over: the previous local trucks record (2026-11-03 1846 unit) closed at Trade 3/5, Plunder 2/4, so the quotas were filled between then and this entry by passes whose records are not in this working tree. This record does not attribute the fill to any specific pass.
+- Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." The right-hand truck's card was opened (a tap on the left truck's body produced no change, as in the 1846 unit): own SR truck, [AP3x] Bears Lair Lv.30, guard 25.1M, arrives in 01:52:13, cargo including badge stacks, iron 2.5M, food 2.5M, coin 1.6M. It is outbound, not returned, so nothing was settled. No chest icon stands above either road truck. The Recover button carries no red dot, and one tap on it produced no panel, so no Reward Recovery record is waiting to be claimed.
+- Outcome: done. Trade quota 5/5 and plunder quota 4/4 both full for this trade day. No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Costs: about 4 minutes of unit time.
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
@@ -1565,3 +1579,4 @@ settlement and dispatch execution record).
   closure with evidence, but later units reopen trade
   by the 53,555 route first and do not re-tap the old
   station points.)
+  (2026-11-04 0242 update: the station tap at 592,189 again produced no change in a third framing, while the WORLD-corner tap at 913,940 opened trade directly when the column icon was badgeless - see the 0242 section below. The WORLD-corner route is now the first route to try for a badgeless column icon, ahead of any station re-tap. Issue #218 stays open pending retro closure with evidence.)
