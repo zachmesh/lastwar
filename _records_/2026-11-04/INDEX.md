@@ -1907,3 +1907,17 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   repeated. No new records PR opened: records/2026-10-31
   is contained in main. Full detail in
   pr-integration/1200-run.md.
+
+## 12:15 to about 12:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1215.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported not due, next batch point 15:00
+  America/Los_Angeles. No knowledge or code PR open.
+  PR 279 (2026-11-04, post-1100 batch, head
+  899a8f70, merge-tree clean) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on the
+  action log at unchanged heads, so no comment was
+  repeated. No new records PR opened: records/2026-10-31
+  is contained in main. Full detail in
+  pr-integration/1215-run.md.
