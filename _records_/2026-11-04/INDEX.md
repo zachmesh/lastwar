@@ -150,3 +150,22 @@ of 2026-10-28.
   issues over 24 hours: 132 (building/research deferred,
   statement current) and 154 (Season Photo decision,
   unchanged). Full detail in pr-catchall/0039-run.md.
+
+## 00:34 to about 00:50 - Ticker pass
+
+- Harvest unit harvest-2026-11-03-2203, failed, ticker-0034:
+  game login impossible - the server is under maintenance.
+  Entry showed a "Server disconnected" dialog (Confirm quit
+  the app), then an "Update complete, please restart the
+  game" announcement, then the login screen with a TIPS
+  dialog "The server is under maintenance" plus "Login
+  failed". Two Confirm retries about 4 minutes apart left
+  the dialog unchanged. No base view reached, nothing
+  collected, no HUD read. Full detail in
+  resource-collection/0034-queue-run.md.
+- Own-PR check: PR 258 (records/2026-11-04) has no comments;
+  nothing addressed to this job. No zombie seeding: chain
+  closed 2026-10-30 and no live Events hub was reached.
+- Pass closed after 1 unit (failed). Token released. The
+  next tick retries login; the harvest sweep is two units
+  behind.
