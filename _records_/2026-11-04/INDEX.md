@@ -700,3 +700,27 @@ of 2026-10-28.
   statements current, no shepherd comment posted. No adoption,
   fix, hand-off, or escalation.
   Full detail in pr-catchall/0339-run.md.
+## 03:40 to about 03:43 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-0340.
+  Own PRs checked first (none owned, no comments owed);
+  owner-decision Issues #154 (still no owner answer, 0
+  comments) and #132 (duel-score-only answer stands,
+  building/research deferred) checked, no unit staged
+  or invented for either.
+  Plan staged 5 units (passes, secrets, treasures,
+  trucks, events for the 14:57 local slot;
+  already_present 64, reaped 0, expired 0); pre-reset
+  sweep skipped (03:00 hour, not 17:00; tonight's pair
+  is the 17:00 run's job); scout diff on the Nov 3
+  observation applied with zero changes (observed 0,
+  actionable 0, enqueued 0, candidates 0, unexplained
+  red dots 0); 0 withdrawals; pool inbox 69, claimed 1,
+  done 787.
+  Carried follow-ups: PR 260 narrative fallback merged
+  to main 00:47 PST but live tree still runs old
+  scout_diff, so the diff headline stays 0 until the
+  live tree syncs; duel-score regular still absent from
+  the live pool tree, no duel-score unit staged.
+  Full record:
+  _records_/2026-11-04/queue-planning/0340-run.md.
