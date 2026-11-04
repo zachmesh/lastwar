@@ -1551,6 +1551,15 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   unchanged heads, so no comment was repeated; no
   owner-gated PR arose. Full detail in
   pr-integration/0930-run.md.
+- Integrator pass pr-integration-2026-11-04-0945.
+  Knowledge PR 276 merged (squash, 2b2d0b95):
+  organizer 0932, eleven activity profiles; non-batch
+  pass per the checker (not due, next batch 11:00);
+  records PR 273 (records/2026-11-04, head f40d8573)
+  awaits the 11:00 batch; PRs 187, 256 and 265 still
+  conflicted on the action log at unchanged heads, so
+  no comment was repeated; no owner-gated PR arose.
+  Full detail in pr-integration/0945-run.md.
 
 ## 09:32 to about 09:34 - Tool development pass
 
