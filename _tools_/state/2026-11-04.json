@@ -1,32 +1,37 @@
 {
  "gifts": {
   "status": "done",
-  "at": "2026-11-04T10:16:23",
-  "note": "Regular 10 claimed, Premium nothing waiting"
+  "at": "2026-11-04T12:50:25",
+  "note": "Regular 20 and Premium 6 gifts claimed"
  },
  "help": {
   "status": "done",
-  "at": "2026-11-04T10:08:42",
-  "note": "Help All pressed, 520/1000, no ally requests pending"
+  "at": "2026-11-04T12:51:54",
+  "note": "Base help bubble pressed, tile cleared"
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-04T10:12:56",
-  "note": "All categories swept, Alliance donation rewards claimed, 0 deleted"
+  "at": "2026-11-04T12:45:56",
+  "note": "Event train arrival reward claimed; other categories empty"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-04T12:55:57",
+  "note": "No trophy icon waiting on base screen"
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-04T10:37:25",
-  "note": "0237 shop surfaces checked, nothing claimable"
+  "at": "2026-11-04T13:12:16",
+  "note": "0511 shop surfaces checked, nothing claimable"
  },
  "trucks": {
   "status": "done",
-  "at": "2026-11-04T10:42:18",
-  "note": "0242 quotas full at entry 5/5 and 4/4"
+  "at": "2026-11-04T13:39:34",
+  "note": "Quotas full at entry 5/5 and 4/4, no action"
  },
  "events": {
   "status": "done",
-  "at": "2026-11-04T10:45:42",
-  "note": "0245 hub sweep, nothing claimable"
+  "at": "2026-11-04T13:19:48",
+  "note": "0519 hub sweep, nothing claimable"
  }
 }
