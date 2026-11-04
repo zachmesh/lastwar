@@ -2070,3 +2070,22 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
 ## 13:32 to about 13:55 - Knowledge organization pass
 
 - Knowledge-organizer pass knowledge-organization-2026-11-04-1332, done: own PR 281 merged with no reviews or comments, no knowledge-labeled issue created or updated between the 1232 run and the mail 1333 landing, one new execution record folded (ticker-1327 mail-rewards 1333, Mac screen-capture channel failure recurring after help 1235), mail-rewards profile 1.18.0 to 1.19.0 on PR 283 (Owner lastwar-knowledge-organizer, verified OPEN), recurrence escalation filed as Issue 282; profiles updated 1, contradictions resolved 0, gaps filed 1. Meta records checked with no fold: pr-catchall 1239, queue-planning 1240, pr-integration 1245/1300/1315/1330, tool-development 1232/1332. Records landing during the push window (pr-catchall 1339) fall to the next run per convention. Full detail in knowledge-organization/1332-run.md.
+
+## 13:40 to about 13:44 - Ticker pass
+
+- Alliance Duel unit star-ceremony-2026-11-04-1030, failed,
+  ticker-1340: Mac screen capture failed repeatedly
+  (audio/video capture failure) on observe, screenshot and
+  activate across two computer sessions, although the Mac
+  connection was healthy and LastWar was running fullscreen
+  with Chrome frontmost. No game input was dispatched, so no
+  ceremony check was made and no duel total was read; the
+  tracker stays untouched and the next tick re-produces the
+  unit. Third consecutive ticker pass to fail this way
+  (ticker-1224, ticker-1327, ticker-1340), so the repeated
+  blocker is filed as GitHub Issue #284 (tooling). Full
+  detail in alliance-duel/1344-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
