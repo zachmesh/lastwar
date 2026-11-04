@@ -349,6 +349,15 @@ of 2026-10-28.
   commented. Records PRs 258, 256, 255 await the 03:00
   batch; PR 187 conflict re-verified and carried.
   Full detail in pr-integration/0215-run.md.
+- Integrator pass pr-integration-2026-11-04-0230.
+  Non-batch pass (checker not due, next batch 03:00);
+  no knowledge or code PR open, nothing merged or
+  commented. Records PRs 258, 256, 255 await the 03:00
+  batch; PR 187 conflict re-verified and carried.
+  PR 258 head lag noted: branch head 252b18815 is two
+  commits ahead of the PR head f4c3a482d, to re-verify
+  at the 03:00 batch.
+  Full detail in pr-integration/0230-run.md.
 
 ## 02:04 to about 02:08 - Ticker pass
 
