@@ -1762,3 +1762,15 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   at the unit cap, right side and top edge unswept, EXP/screw/
   drone bubbles not located. Full detail in
   resource-collection/1101-queue-run.md.
+## 11:00 to about 11:14 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1100.
+  Batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window. Records PR
+  273 (2026-11-04, 44 commits) merged by merge
+  commit d2cef2e60, branch kept; merge line
+  committed to records/2026-11-04 for the next
+  batch. PR 187, 256 and 265 still conflicted on
+  the action log at unchanged heads, so no comment
+  was repeated. Full detail in
+  pr-integration/1100-run.md.
