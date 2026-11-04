@@ -1921,3 +1921,18 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   repeated. No new records PR opened: records/2026-10-31
   is contained in main. Full detail in
   pr-integration/1215-run.md.
+
+## 12:24 to about 12:27 - Ticker pass
+
+- Alliance Help unit help-2026-11-04-1030, failed, ticker-1224:
+  Mac screen capture failed repeatedly (audio/video capture
+  failure) on activate, observe, describe and screenshot attempts,
+  although the Mac connection was healthy and LastWar was running
+  fullscreen with Chrome frontmost. No game input was dispatched,
+  so Help All was not pressed and no help count was read; the
+  tracker stays untouched and the next tick re-produces the unit.
+  Full detail in alliance-help/1235-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
