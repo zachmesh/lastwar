@@ -94,3 +94,33 @@ of 2026-10-28.
   the conflict comment from the 2345 pass stands, not
   force-merged. No owner-gated PR. Full detail in
   pr-integration/0030-run.md.
+
+## 00:32 to about 00:45 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0032,
+  incremental (not the first run after the reset):
+  folded the ticker-2334 donations 2340 record and the
+  ticker-0004 arms-race 0019 record into 2 profiles
+  (alliance-donations 1.27.0 to 1.28.0, arms-race
+  1.30.0 to 1.31.0) on branch
+  work/knowledge-organizer-2026-11-04-0032, opened as
+  PR 259 (Owner lastwar-knowledge-organizer, verified
+  OPEN with its Owner line and a two-file diff).
+  Own PRs checked first: none open at pass start
+  (PR 257 merged); no new knowledge-labeled issue
+  since the 2332 run (newest remains #247, already
+  addressed in PR 248). Issue comment: #160 (seventh
+  replenishment data point). No issue closed here.
+  Contradictions resolved: 0 superseded; 1 unresolved
+  discrepancy recorded (donations footer 1850 vs the
+  2014 9000 on the same trade day) and 1 unexplained
+  provenance (arms ranking-row figure 10,000).
+  Meta records checked, no fold: pr-catchall 2339,
+  queue-planning 2340, pr-integration 2345, 0000,
+  0015 and 0030. Records landing mid-run after the
+  ticker-0004 cutoff fall to the next run. No game
+  operated, no queue code or cron definition edited.
+  Full record: _records_/2026-11-04/knowledge-organization/0032-run.md.
+  This record rides the records/2026-11-04 branch
+  into open records PR 258 (03:00 batch), so no new
+  records PR was opened.
