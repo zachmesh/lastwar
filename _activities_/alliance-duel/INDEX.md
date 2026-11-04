@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T03:37:56Z
-version: 1.22.0
+modified: 2026-11-04T13:37:48Z
+version: 1.23.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-1134 alliance-duel execution record 2026-11-03 1141 queue run (done, ceremony none waiting, personal total snapshot 1,714,950 unchanged, rank 162 to 169)
   - source: ticker-1804 alliance-duel execution record 2026-11-03 1809 queue run (done, duel day rolled about 18:00 local, closed Tues. day total 2,014,950 of 3,600,000 a MISS, Issue #242)
   - source: ticker-1834 truck-plunder execution record 2026-11-03 1846 queue run (partial, trade counters 0 of 5 and 0 of 4 at 18:34 entry after 5 of 5 and 4 of 4 at 12:11, trade reset follows the about-18:00 rollover, Issue #242 follow-up)
+  - source: ticker-0434 alliance-duel execution record 2026-11-04 0456 queue run (done, star-ceremony trophy watch, no ceremony waiting, right-rail read, grounding timeout caveat)
 ---
 
 
@@ -846,3 +847,9 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   closing day (Base Expansion). The duel day tabs follow
   the server day: on a Tuesday evening in PST the Wed. tab
   is already selected, because the new duel day has begun.
+
+## What the 2026-11-04 0456 unit added - ceremony none waiting, right-rail read, grounding timeout stated
+
+- Unit star-ceremony-2026-11-04-0230 by ticker-0434, 04:56 local, status done. The regular check is the trophy watch; the watch was performed and no ceremony waits. No "active on a different device" dialog appeared.
+- Base screen read live: the right rail inspected top to bottom reads Events, Capitol, VS medallion, Season II, Alliance shield, Mail, Inventory. No trophy icon beside the Alliance icon, so no Star Ceremony is waiting to be played or claimed this unit. No ceremony screen was opened, no hearts sent, nothing claimed - there was nothing waiting to claim.
+- Caveat stated, not hidden: a visual-grounding call to double-check the trophy icon timed out (180 seconds) as the pass budget ended, so the absence rests on the live screenshot read above. A timed-out grounding call is not evidence for or against the trophy; this unit's done rests on the screenshot read alone. Tracker marked done. Nothing spent.

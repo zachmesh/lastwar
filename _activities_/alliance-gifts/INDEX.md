@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T10:32:00Z
+modified: 2026-11-04T13:37:48Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: alliance gifts execution record 2026-11-03 1619 queue run (ticker-1604 unit, done, 86 gifts, progress anomaly, Escape app-kill exit lesson)
   - source: ticker-2204 alliance-gifts execution record 2026-11-03 2208 queue run (done, 235 Regular and 20 Premium, progress deltas as Issue #183 evidence, panel row geometry re-confirmed)
   - source: ticker-0204 alliance-gifts execution record 2026-11-04 0216 queue run (done, 10 Regular exact plus 100, Premium tab point corrected to 694,269, Issue 183 evidence)
+  - source: ticker-0434 alliance-gifts execution record 2026-11-04 0450 queue run (done, 20 Regular plus 6 Premium, progress exact plus 200 within the unit, cross-unit rise 118,040 unexplained, Issue 183 evidence)
 ---
 
 
@@ -1041,3 +1042,12 @@ one file per execution.
 - Exited with the gifts back arrow to the
   Alliance panel, then the panel back arrow
   (164,931) to the base screen.
+
+## What the 2026-11-04 0450 unit added - 20 Regular and 6 Premium, progress exact plus 200 within the unit, Premium Claim All sits right
+
+- Unit gifts-2026-11-04-0230 by ticker-0434, 04:50 local, status done. No "active on a different device" dialog appeared.
+- Entry: the Alliance panel opened first tap at the grounded Alliance button centre (925,695) - re-ground per session, against the 0208/0216 centre (931,709). The Alliance Gifts entry carried a red dot. A first mis-aimed tap at norm (311,547) opened Alliance Wars ("No Alliance Rally currently") - the panel rows sit lower than eyeballed; the grounded Alliance Gifts point is norm (315,600), consistent with the 0216 point (314,599). No Alliance Wars action was taken; back returned to the panel.
+- Regular tab, read live: Gift Level 28, progress 188,412,330 of 206,300,000 before the claim, Claim All badge 20. Claim All claimed a total of 20 Regular Alliance Gifts, per the summary dialog (rewards as displayed: 600 coin x84, 10.0K food x56, 1.0K iron x84, 5m speedup x2, 6.0K coin x28, 1.0K food x28). Progress after: 188,412,530 - plus 200, exactly 20 gifts at 10 points each, no excess within this unit. This is the third exact within-unit window (1113, 0216, this unit).
+- Premium tab: a first tap at norm (685,242) did not switch tabs; the grounded Premium point norm (688,255) did. The tab point drifts per session - the 0216 point (694,269) also worked, while (631,242) and (685,242) are recorded misses. The list showed Alliance Gift (SSR) x2, (UR) and (R) from ally purchases. A tap at norm (498,947) missed Claim All and hit the "Hide your name on Gifts" area - Premium Claim All sits RIGHT, unlike the centred Regular button; the tap at norm (763,947) claimed a total of 6 Premium Alliance Gifts, per the summary dialog.
+- Verification: after both claims the Alliance Gifts entry red dot was gone on the Alliance panel. The game was left on the base screen via the grounded back arrow norm (162,935); the eyeballed (55,947) point missed the hit area.
+- Issue #183, two-sided evidence commented there by this run (not a closure claim): within the unit the counter moved exactly by its own claims (+200), but the before-read (188,412,330) sits 118,040 above the 0216 after-read (188,294,290) with no intervening gifts unit in this record set, so the cross-unit rise is still unexplained and remains the open part of #183. Nothing spent; Premium gifts come from allies' purchases, not this account.
