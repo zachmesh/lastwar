@@ -254,3 +254,20 @@ of 2026-10-28.
   pr-integration/0115-run.md.
 - Integrator pass pr-integration-2026-11-04-0130.
   pr-integration/0130-run.md.
+
+## 01:32 to about 01:37 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0132.
+  Own PRs first: PR 259 MERGED, no feedback pending.
+  No new knowledge-labeled issue since the 0032 run.
+  Folded the ticker-0034 harvest 0034 record (server
+  maintenance blocked login, 0 bubbles) and the
+  ticker-0104 survivors 0110 record (contested stop
+  after two kick takeovers, maintenance cleared by
+  about 01:04) into 2 profiles: resource-collection
+  1.18.0 to 1.19.0, survivor-intake 1.22.0 to 1.23.0,
+  on branch work/knowledge-organizer-2026-11-04-0132,
+  opened as PR 261 (Owner lastwar-knowledge-organizer).
+  No earlier claim superseded; no new issue filed.
+  Full record:
+  _records_/2026-11-04/knowledge-organization/0132-run.md.
