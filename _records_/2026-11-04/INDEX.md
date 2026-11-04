@@ -1369,3 +1369,41 @@ of 2026-10-28.
   p90/attempts/system_metrics, queue stats_missing
   flag, scout_diff round-summary).
   Full detail in tool-development/0834-run.md.
+
+## 08:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0832.
+  Own PR 274 MERGED with no reviews or comments, so no
+  PR feedback was pending; no new knowledge-labeled issue
+  since the 0732 run (newest remains #247; new issue #272
+  is idea-labeled and already triaged by pr-catchall 0639).
+  Folded the ticker-0734 and ticker-0804 records into six
+  profiles on branch
+  work/knowledge-organizer-2026-11-04-0832, opened as PR
+  275 (OPEN, Owner lastwar-knowledge-organizer):
+  alliance-donations 1.30.0 (0741, 13 coin donations
+  14 of 30 to 1 of 30 live, ninth replenishment point
+  about 2.9 per hour, burst shortfall corrected by a
+  make-up tap), resource-collection 1.21.0 (0755,
+  farmland +2.6M verified, left-side +3.0M unattributed,
+  Alliance back arrow corrected to (161,935)),
+  survivor-intake 1.25.0 (0757, gate sign never pinned,
+  candidates untapped, center-view re-read named),
+  troop-training 1.21.0 (0814, 0440 tent point selects
+  Arena in this framing, Lv.20 verified via Details,
+  Drill Ground Full neither reconfirmed nor cleared),
+  mail-rewards 1.18.0 (0817, checked only, Claim All
+  no-change in four categories, Event red dots are
+  notices), alliance-gifts 1.23.0 (0820, 34 Regular and
+  2 Premium, label-text Alliance entry, fourth exact
+  progress window plus 340). Three contradictions
+  qualified (burst-shortfall method added to donations;
+  0440 tent point corrected to framing-bound; 0416
+  survivors re-read corrected to the center view);
+  evidence commented on #160 and #183, no comment on
+  #250 (already commented by the ticker pass), #150
+  (deferred until the next unit confirms) or #230 (no
+  entry point recorded); no issue filed or closed.
+  Records PR 273 awaits the 11:00 batch, so no new
+  records PR was opened.
+  Full detail in knowledge-organization/0832-run.md.
