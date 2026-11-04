@@ -419,3 +419,28 @@ of 2026-10-28.
   scout round-summary output). No branch, no PR, no
   issue comment, silent except this record.
   Full detail in tool-development/0235-run.md.
+## 02:32 to about 02:50 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0232.
+  Own PRs first: PR 261 MERGED, no feedback pending.
+  No new knowledge-labeled issue since the 0132 run.
+  Folded the ticker-0134 training 0143 record
+  (factories confirmed again, 1552 tent point not
+  re-tried, Tank Base upgrade in progress) and the
+  ticker-0204 help 0208 (Alliance centre 931,709
+  re-confirmed, 880,720 miss, header 520/1000), mail
+  0212 (Alliance claim verified by checkmarks,
+  Regular notices already credited, notifications
+  prompt declined), gifts 0216 (10 Regular exact plus
+  100, Premium tab point corrected to 694,269) and
+  train 0217 (sixth check-only outcome in a row)
+  records into 5 profiles: troop-training 1.18.0 to
+  1.19.0, alliance-help 1.21.0 to 1.22.0, mail-rewards
+  1.15.0 to 1.16.0, alliance-gifts 1.20.0 to 1.21.0,
+  alliance-train 1.22.0 to 1.23.0, on branch
+  work/knowledge-organizer-2026-11-04-0232, opened as
+  PR 263 (Owner lastwar-knowledge-organizer).
+  Evidence commented onto Issues #150, #230 and
+  #183; none closed here. No earlier claim
+  superseded. Full record:
+  _records_/2026-11-04/knowledge-organization/0232-run.md.
