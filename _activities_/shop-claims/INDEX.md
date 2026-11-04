@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T20:39:44Z
+modified: 2026-11-04T02:50:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: ticker-2334 shop-claims execution record 2026-11-02 2338 queue run (done, nothing new, tab-tap mapping offset)
   - source: ticker-0304 shop-claims execution record 2026-11-03 0316 queue run (done, 0 new claims, S2 Drone card an offer)
   - source: ticker-1134 shop-claims execution record 2026-11-03 1151 queue run (done, 0 new claims, cart entry re-grounded, S2 Drone/EXP/Iron cards all offers)
+  - source: ticker-1804 shop-claims execution record 2026-11-03 1812 queue run (done, 3 claims, Weekly Pass reset 18:00:00 confirmed, Coin pass lapsed, monthly gift re-claimed, Issue #242)
 ---
 
 
@@ -48,13 +49,24 @@ Executions are recorded in `_records_/<date>/shop-claims/`, one file per executi
 
 ## Cadence
 
-- Weekly Pass page rewards reset daily at 19:00 as displayed in game.
+- Weekly Pass page rewards reset daily at 18:00:00 as displayed in
+  game. CORRECTED 2026-11-03 1812 (Issue #242): this supersedes
+  the 19:00 figure this profile carried, and resolves the
+  18:00:00-versus-19:00 discrepancy first noted at 0114 and
+  carried unresolved through the 1039 and 1340 sections - the
+  1812 unit both re-read the line and confirmed it
+  behaviourally (Coin pass lapsed about 18:03, new-cycle
+  Free Supply auto-claim fired on shop open).
 - Each owned pass pays one Daily Pickup per day; after claiming, the
   card reads Already claimed today and its button turns into Renew.
 - The Free Supply chest on the Weekly Pass page auto claims when the
   page is opened - on the second visit of 2026-10-25 it paid out on
   its own with the note Free rewards have been automatically claimed.
-- The monthly pass daily gift is once per day.
+- The monthly pass daily gift is once per day, and it refreshes
+  at the 18:00 reset with the Weekly Pass cycle (measured
+  2026-11-03: button read Claimed at 11:51, Claim Reward
+  again at about 18:19 after the reset - single-day evidence,
+  consistent with the 18:00:00 reset line).
 
 ## Scope and availability
 
@@ -633,6 +645,68 @@ the free and already paid for parts, never the paid unlocks.
   at norm 47,950, as recorded in the 0811 unit,
   returning to the base screen on the first tap.
 - Costs: about 8 minutes, no stamina or items spent.
+
+## What the 2026-11-03 1812 unit added - 18:00 reset confirmed, Coin pass lapsed, monthly gift re-claimed, 3 claims
+
+- Ticker-1804, unit passes-2026-11-03-1457, about
+  18:09 to 18:12 local, status done. Evidence in
+  `_records_/2026-11-03/shop-claims/1812-queue-run.md`.
+- Shop opened from the base cart icon (grounded
+  centre norm 912,68, as recorded in the 11:51 unit) -
+  the cart entry re-grounding from 1151 holds.
+- Hot Deals: a free pack was on display, unlike the
+  11:51 check. RESEARCH SPEED-UP PACK, Availability 1,
+  green Free Claim button tapped once:
+  congratulations popup paid Coin Chest (UR) times 5
+  and 1h Research Speed-up times 25. A second popup
+  followed, "Free rewards have been automatically
+  claimed", showing a supply chest times 1 and ruby
+  times 10; this is the new cycle Free Supply
+  auto-claim firing on shop open. Hot Deals then read
+  Packs sold out.
+- Weekly Pass page, read live and scrolled: the page
+  states on screen "Weekly Pass rewards reset at
+  18:00:00". The Legendary row Take All 19 dollars 99
+  was not tapped. The S2 Drone Components and S1 Drone
+  Parts Weekly Pass cards each show only Get Now
+  4 dollars 99, so both are unowned offers, not owned
+  passes with a pickup due; neither was tapped. The
+  Coin Weekly Pass card, owned at the 11:51 check
+  with Remaining 06:11:49, now also shows only Get
+  Now 4 dollars 99: the pass lapsed at about 18:03
+  and is now an offer, not a pickup. It was not
+  tapped. The list was scrolled with the long drag
+  from norm 500,850 to 500,250 recorded in the 11:51
+  unit - the drag lesson holds.
+- Reset correction: this unit settles the discrepancy
+  carried since 0114. The page line reads 18:00:00,
+  the Coin pass lapsed about 18:03, and the new-cycle
+  Free Supply auto-claim fired on open - three
+  agreeing evidences against the 19:00 figure this
+  profile carried in Cadence. Cadence is corrected to
+  18:00:00 in this fold. Gap filed as Issue #242
+  (labels knowledge); the ticker pass edited no
+  knowledge file, the correction rides this fold.
+- Super Monthly Pass page, read live: Days Left 18,
+  Rewards Left 18, and the Daily Pickup button read
+  Claim Reward in green, not Claimed as at 11:51.
+  Tapped once: DAILY GIFT popup paid gold tickets
+  times 2, red diamonds times 100, stamina 50 items
+  times 2, iron 200, and 5 minute speedups times 60.
+  The button then read Claimed. The Monthly Pass
+  Extension 24 dollars 99 button was not tapped. The
+  monthly gift being claimable again at about 18:19
+  after reading Claimed at 11:51 answers the second
+  ask in Issue #242: the monthly daily gift refreshes
+  at the 18:00 reset with the Weekly Pass cycle,
+  recorded in Cadence as single-day measured evidence.
+- 3 claims in this unit: the Hot Deals free pack,
+  the Free Supply auto-claim, and the monthly Daily
+  Gift. No price button, Renew button, or paid bundle
+  was tapped anywhere in the shop. Shop left with the
+  back arrow, returning to the base screen on the
+  first tap. Costs: about 3 minutes, no stamina or
+  items spent.
 
 ## Open questions
 

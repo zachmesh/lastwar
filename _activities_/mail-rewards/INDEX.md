@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T19:45:00Z
+modified: 2026-11-04T02:50:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-0304 mail-rewards execution record 2026-11-03 0312 queue run (done, all categories empty, Escape crash recurrence)
   - source: ticker-0704 mail-rewards execution record 2026-11-03 0715 queue run (done, six categories swept, all answered No rewards available)
   - source: ticker-1034 mail-rewards execution record 2026-11-03 1055 queue run (partial, mail entry mis-targeted to Alliance twice then no-change, Issue 230)
+  - source: ticker-1734 mail-rewards execution record 2026-11-03 1740 queue run (done, R2 fresh grounding opens Mail first try, Alliance Exercise claim, red dot is unread not claimable)
 ---
 
 
@@ -617,3 +618,77 @@ the next tick re-produces this regular as a fresh unit.
   profile claim is superseded: this profile records
   no Mail coordinate, only the right-rail envelope
   icon.
+
+## What the 2026-11-03 1740 unit added - R2 fresh grounding opens Mail first try, Alliance Exercise claim, red dot is unread not claimable
+
+- Ticker-1734, unit mail-2026-11-03-1430, about
+  17:35 to 17:40 local, status done. Evidence in
+  `_records_/2026-11-03/mail-rewards/1740-queue-run.md`.
+- The game was found on the Alliance panel (left from
+  the previous help unit), not on the base view. No
+  "active on a different device" dialog appeared.
+- Entry method changed per rule R2 after the 1055
+  unit's misfires: instead of reusing the recorded
+  right-edge tap, every centre was freshly measured
+  on the live frame with visual grounding before
+  tapping. The Alliance panel back arrow at grounded
+  (162,936) returned to the base view; the earlier
+  (89,941) estimate had produced no change. The Mail
+  envelope on the right rail at grounded (929,783)
+  opened the Mail category list. This is the first
+  mail entry this day that did not open Alliance
+  instead, and it answers the 1055 follow-up (fresh
+  centre on the live frame, verify the panel that
+  opens is Mail before sweeping) - the fresh centre
+  worked on the first tap. Standing rule restated:
+  re-ground the envelope on the live frame per
+  session; (929,783) is this unit's measured centre,
+  not a standing coordinate, and no profile claim is
+  superseded - this profile still records no standing
+  Mail coordinate, only the right-rail envelope icon.
+  Related Issue #230 stays open: closure belongs to
+  the daily retro, with evidence.
+- Category screen on entry: Alliance carried a gift
+  icon, Event carried a red dot, the other categories
+  carried no gift icon and no red dot.
+- Alliance: the top mail, [Alliance Exercise]
+  Alliance R... dated 2h ago, carried the gift icon.
+  Claim All claimed it. The congratulations popup
+  read live: EXP 105.8M, a 50.0K card item, 4.6K of
+  a blue item, 5m speedups in five stacks of 39, 21,
+  16, 13 and 31 (120 in total), coin 12.1M, food
+  19.0M, iron 19.0M. The popup was dismissed and the
+  Alliance Exercise mail had left the list; the
+  "Alliance Gifts received!" toast confirmed. HUD
+  corroboration on the later base view: food 247.0M
+  to 266.0M, iron 588.5M to 607.5M, coin 17.4M to
+  29.5M, matching the popup food, iron and coin
+  figures exactly.
+- Event: train arrival mails (Sanction Apex, Abyss
+  Apex, KpyKat trains, 9h to 17h ago) with no gift
+  icons. Claim All produced no popup and no change,
+  consistent with reports only. Lesson: the Event
+  red dot was an unread train mail, not a claimable
+  attachment - a category red dot signals unread, not
+  claimable; only a gift icon evidences a claim.
+- Battle Report, Season, System and Regular: swept
+  by one batched tap sequence (category row, Claim
+  All, back, repeated), ending cleanly back at the
+  category list with no congratulations popup at any
+  step, so no additional claimables are evidenced.
+  Honest limit of this sweep, recorded not smoothed
+  over: no per-category screenshot was taken during
+  the batch, so the per-category evidence is the
+  category screen's lack of gift or red-dot
+  indicators plus the clean batch return, not a
+  per-category live read.
+- In-app Purchases was not opened: receipts only,
+  nothing to claim, per the activity metadata.
+  Delete All was never pressed. Nothing was bought,
+  deleted or spent. The game was left on the Mail
+  category list.
+- Result stats: target 6, achieved 6, categories
+  swept 6, resources gained EXP 105.8M plus coin
+  12.1M plus food 19.0M plus iron 19.0M plus 120 5m
+  speedups plus card items, costs 0 stamina,
+  verified yes, blocker none.
