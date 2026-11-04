@@ -1309,3 +1309,14 @@ of 2026-10-28.
   still conflicted on the action log at unchanged
   heads, so no comment was repeated; no owner-gated
   PR arose. Full detail in pr-integration/0800-run.md.
+
+## 08:15 to about 08:24 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0815.
+  Non-batch pass per the checker (not due, next batch
+  11:00): no knowledge or code PR was open. Records PR
+  273 (records/2026-11-04, head 05be4ba6, merge-tree
+  clean) awaits the 11:00 batch; PRs 187, 256 and 265
+  still conflicted on the action log at unchanged
+  heads, so no comment was repeated; no owner-gated
+  PR arose. Full detail in pr-integration/0815-run.md.
