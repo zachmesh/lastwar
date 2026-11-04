@@ -180,3 +180,20 @@ of 2026-10-28.
   Pool by_state: inbox 68, claimed 0, done 773. Delivered to
   open records PR 258. Full record:
   _records_/2026-11-04/queue-planning/0040-run.md.
+
+## 00:45 to about 00:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0050.
+  Non-batch pass per the checker (not due, next batch
+  03:00): knowledge PR 259 (organizer 0032, donations
+  2340 and arms-race 0019) and code PR 260 (scout
+  narrative fallback, Refs #149) merged by squash.
+  Records PRs 258 (2026-11-04, head 37f59a246),
+  256 (2026-11-03, head a8ddb8eca) and 255 (2026-11-02,
+  head 248677fc0) await the 03:00 batch. Records PR 187
+  (2026-11-01, head 2be5df83) still conflicted on
+  _logs_/repo-actions/action-log.jsonl, re-verified
+  against new main, the conflict comment from the 2345
+  pass stands, not force-merged. No owner-gated PR.
+  Main synced back to the local clone by bundle.
+  Full detail in pr-integration/0050-run.md.
