@@ -1876,3 +1876,20 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   Full detail in queue-planning/1140-run.md.
 
 - 11:47 ticker-1134 pass: training partial and gifts partial, nothing claimed. Training: four grounded tent taps on the fullscreen base frame opened no barracks panel, one drag did not move the view, 0 barracks verified, 0 batches queued, no Drill Ground figure read live (tent blocker already Issue 150). Gifts: Alliance panel never opened after two background taps while Chrome was frontmost on the Mac, 0 gifts claimed, foreground precondition per queue rule R2; game not forced to foreground while the user works in Chrome. Full detail in troop-training/1147-queue-run.md and alliance-gifts/1147-queue-run.md.
+
+## 11:45 to about 11:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1145.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window, but the 11:00
+  batch already merged in this window (PR 273 at
+  11:06), so this pass merges no records PR. PR 280
+  (organizer 1132) reviewed clean and merged by squash
+  (merge commit 2ae2ac63f), main synced back to the
+  local repo. PR 279 (2026-11-04, post-1100 batch, head
+  fd3893db, MERGEABLE/CLEAN) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on the
+  action log at unchanged heads, so no comment was
+  repeated. No new records PR opened: records/2026-10-31
+  is contained in main. Full detail in
+  pr-integration/1145-run.md.
