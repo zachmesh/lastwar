@@ -1298,3 +1298,14 @@ of 2026-10-28.
   were not tapped because the "Zombies" gate sign was never
   pinned; no survivor processed, line state unverified, tracker
   untouched. Full detail in survivor-intake/0757-queue-run.md.
+
+## 08:00 to about 08:09 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0800.
+  Non-batch pass per the checker (not due, next batch
+  11:00): no knowledge or code PR was open. Records PR
+  273 (records/2026-11-04, head 21f0f751, merge-tree
+  clean) awaits the 11:00 batch; PRs 187, 256 and 265
+  still conflicted on the action log at unchanged
+  heads, so no comment was repeated; no owner-gated
+  PR arose. Full detail in pr-integration/0800-run.md.
