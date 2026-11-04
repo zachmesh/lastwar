@@ -1320,3 +1320,26 @@ of 2026-10-28.
   still conflicted on the action log at unchanged
   heads, so no comment was repeated; no owner-gated
   PR arose. Full detail in pr-integration/0815-run.md.
+- Troop training unit training-2026-11-04-0603, partial, ticker-0804:
+  1 of 4 barracks verified (Lv.20 Details, Training Count +613,
+  instructors Alexis/Joe/Jolene/Anthony, no timer); inherited tent
+  points again failed across framings (0440 point selected Arena
+  Lv.1 here), the middle button opened Details not Train Units, a
+  post-panel re-tap mis-opened chat (closed at once, nothing sent),
+  and two fresh tent taps after a drag-pan down selected nothing;
+  0 batches queued, tracker untouched. Full detail in
+  troop-training/0814-queue-run.md.
+- Mail unit mail-2026-11-04-0630, done, ticker-0804:
+  all dotted categories checked (Event, Regular, Battle Report, plus
+  System reached on a mis-aimed tap); Claim All changed nothing in
+  any of them, and the newest unread Event mail opened individually
+  proved to be a train arrival notice with no attachment; 0 items
+  claimed, nothing deleted. Full detail in mail-rewards/0817-queue-run.md.
+- Gifts unit gifts-2026-11-04-0630, done, ticker-0804:
+  Regular Claim All 34 gifts, Premium Claim All 2 gifts (SSR +200,
+  R +50), Gift Level 28 progress 188,573,310 to 188,573,650;
+  Alliance shield icon took two no-change taps, entry recovered via
+  the Alliance label tap, Premium Claim All sits bottom-right not
+  centre; game left on the Alliance panel after its back arrow took
+  two no-change background taps. Full detail in
+  alliance-gifts/0820-queue-run.md.
