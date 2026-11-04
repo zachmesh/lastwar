@@ -1417,3 +1417,17 @@ of 2026-10-28.
 
 - Planner pass queue-planning-2026-11-04-0840, no-op: plan staged 0 units (already_present 66, skipped_done_current 5, reaped 0, expired 0), pre-reset sweep step skipped (not the 1700 hour), scout diff on the 2026-11-03 observation applied all zero, 0 withdrawals, pool inbox 62 claimed 1 done 813 upcoming 51.
   Full detail in queue-planning/0840-run.md.
+
+## 08:45 to about 08:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0845.
+  Non-batch pass per the checker (not due, next batch
+  11:00): knowledge PR 275 merged (squash 0ed17ae0,
+  six activity profiles, owner lastwar-knowledge-
+  organizer); records PR 273 (records/2026-11-04,
+  head 36c784d, merge-tree clean) awaits the 11:00
+  batch; PRs 187, 256 and 265 still conflicted on
+  the action log at unchanged heads, so no comment
+  was repeated; no owner-gated PR arose; local main
+  fast-forwarded to 0ed17ae0. Full detail in
+  pr-integration/0845-run.md.
