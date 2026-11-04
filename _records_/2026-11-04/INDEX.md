@@ -757,3 +757,17 @@ of 2026-10-28.
   conflicted on the action log, awaiting branch-side
   resolution. No owner-gated PR. Full detail in
   pr-integration/0345-run.md.
+
+## 04:00 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0400.
+  Non-batch pass: the checker reports outside every
+  batch window, next batch 07:00, so no records PR
+  merges this pass. No knowledge or code PR open.
+  Records PR 264 awaits the 07:00 batch; PR 256 is
+  now GitHub-conflicting as well as content-defective
+  on the action log and must not merge at 07:00 until
+  reconciled by entry identity; PRs 265 and 187 stay
+  conflicted on the action log, awaiting branch-side
+  resolution. No owner-gated PR. Full detail in
+  pr-integration/0400-run.md.
