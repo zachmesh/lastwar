@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-04T16:37:19Z
-version: 1.25.0
+modified: 2026-11-04T19:40:23Z
+version: 1.26.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0104 survivor-intake execution record 2026-11-04 0110 queue run (partial, contested, different-device dialog after two kick takeovers, server maintenance at entry)
   - source: ticker-0404 survivor-intake execution record 2026-11-04 0416 queue run (partial, gate still not located, tent/parking-area re-read named)
   - source: ticker-0734 survivor-intake execution record 2026-11-04 0757 queue run (partial unverified, gate sign never pinned, grounding candidates untapped, center-view re-read named)
+  - source: ticker-1104 survivor-intake execution record 2026-11-04 1122 queue run (partial, gate line verified live with 3 question-mark survivors, fullscreen method change, figure tap dispatched but no card opened)
 ---
 
 
@@ -952,6 +953,8 @@ Measured on 2026-10-25.
 
 ## Changelog
 
+- 1.26.0 (2026-11-04): gate line verified live (three question-mark bubbles above three survivor figures on the road in front of the gate wall, fullscreen screenshot and 4x crop), moving the blocker from line-not-found to taps-not-opening-cards; method change per rule R2 (windowed background taps and WORLD calibration both no-change, so native fullscreen via the green zoom button plus crop-grounded figure taps, which dispatched a visual change but opened no card); focus guard blocking one tap while Chrome was frontmost; session dropped twice mid-unit (cc-449, cc-450) with recovery and no state lost; window left in native fullscreen for the next unit; next unit must try the question-mark bubble itself in fullscreen or a long-press on a freshly grounded figure, re-grounding from a fresh screenshot immediately before tapping; 0 recruited by live read, Quick Dispatch not run, tracker untouched; folded from the 1122 survivors record, evidence already commented on Issue #168 by the ticker pass so no duplicate comment here; no earlier claim superseded. (1.24.0 and 1.25.0 carry the 0416 and 0757 sections without changelog lines; the numbering is preserved, not rewritten.)
+
 - 1.23.0 (2026-11-04): contested stop after two kick takeovers (0110 unit, first recorded instance of the owner two-kick rule firing, no third takeover, tracker untouched so the next tick re-produces the regular), server maintenance at entry matching the 0034 harvest unit and cleared by about 01:04 (maintenance Confirm dismissing to the loading screen, distinguished from the disconnected-dialog crash path), gate line NOT READ and not claimed empty, glimpsed power figure explicitly not used as a closing figure, folded from the 0110 survivors record; no earlier claim superseded.
 
 - 1.22.0 (2026-11-03): thirteenth distinct partial since the
@@ -1220,3 +1223,12 @@ Measured on 2026-10-25.
 - What was not done: no survivor was processed, no recruit card appeared, no Quick Dispatch ran. The gate line is NOT claimed clear and no survivor count is reported: the 'Zombies' gate sign was never pinned - no 'Zombies' text is readable on the top-edge screenshot - so the line state is unverified, not empty. This continues the standing survivor blocker (queue-era units partial, Quick Dispatch never run). Tracker untouched, per the rule for partial units, so the next tick re-produces this regular.
 - Named re-read for the next survivors unit, correcting the 0416 re-read's view prescription (see the qualification in that section): start from the center view (not the top edge), pin the 'Zombies' gate sign text on a screenshot before any intake tap, and treat the (118,285) and (272,412) candidates above as unverified until that pin exists.
 - No earlier claim superseded; no new issue filed - the gate-location blocker is already the standing R2 item for this regular. No diamonds, money, speedup or paid button touched; no assembly, no teleport; no notification dialog enabled (no visitor dialog was opened).
+
+## What the 2026-11-04 1122 unit added - gate line verified live (3 question-mark survivors), fullscreen method change, figure tap dispatched but no card, partial
+
+- Unit survivors-2026-11-04-1003 by ticker-1104, about 11:04 to 11:22 local, status partial. The 15 minute unit cap was reached mid-work. No survivor was recruited, no card was opened, Quick Dispatch did not run, and the tracker is untouched, so the next tick re-produces this regular as a fresh unit. Evidence in `_records_/2026-11-04/survivor-intake/1122-queue-run.md`.
+- Gate line VERIFIED live: after dragging the base view, three question-mark bubbles stood in a row above three small survivor figures on the road in front of the gate wall, seen clearly in a fullscreen screenshot and in a 4x crop of the cluster. This moves the standing blocker past its line-not-found form: the line exists and holds waiting survivors, and the blocker is now taps-not-opening-cards. This evidence was already commented on Issue #168 by the ticker pass, so no duplicate comment is made here. No recruit card, dialog, or visitor dialog was opened in this unit, so recruits equal 0 by live read, not by assumption.
+- Method changes in this unit (rule R2): windowed background taps on bubble points missed twice with no screen change, and a WORLD calibration tap also showed no change, so the method changed: the game was moved to native fullscreen (entered via the green zoom button during this unit) and the survivor figures were re-grounded from a 4x crop of the cluster instead of inherited points. The crop-grounded figure tap did dispatch (the observation reported a visual change over the survivor area), but no card opened, and the view afterwards showed a panned base with no dialog. A focus guard blocked one tap while Google Chrome was frontmost, and the computer session dropped twice mid-unit (cc-449, cc-450) with recovery and no game state lost.
+- Window state carried forward: the game window was left in native fullscreen. The next unit inherits fullscreen geometry. Taps dispatch in fullscreen, so no restore was attempted inside the unit cap.
+- Follow-up for the next survivors unit: the next unit must change method again before repeating this one - try the question-mark bubble itself in fullscreen, or a long-press on a grounded figure, and re-ground from a fresh screenshot immediately before tapping, since the figures may shift between screenshots.
+- No diamonds, money, price tags, paid buttons, speedups, research, buildings, assembly or teleport were touched. Nothing was claimed. No earlier claim superseded; no new issue filed - the gate-location blocker is already the standing R2 item for this regular, now in its taps-not-opening-cards form.
