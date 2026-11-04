@@ -3198,3 +3198,19 @@ of 2026-10-28.
   trade-day reset, so no full-day sweep file was
   written; the 1932 run owns that sweep. Full detail
   in knowledge-organization/1832-run.md.
+
+## 18:40 to about 18:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-03-1840. Staged 11
+  units by plan for the 2026-11-04 0603 and 0630 slots
+  (mail, help, gifts, harvest, radar, survivors, train,
+  training, donations, arms-race, star-ceremony;
+  already_present 59, skipped_done_current 1, reaped 0,
+  expired 0). Pre-reset sweep pair for tonight's 19:00
+  reset already in the live pool inbox (chain
+  pre-reset-sweep-2026-11-03, produced by the 1740 run),
+  so this run enqueued none. Scout diff on the Nov 3
+  observation (last updated 13:45 local) applied with
+  all zero counts, 0 withdrawals. Pool inbox 71,
+  claimed 1, done 747, upcoming 51. Full detail in
+  queue-planning/1840-run.md.
