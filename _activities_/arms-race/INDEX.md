@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T15:40:00Z
+modified: 2026-11-04T18:37:28Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,7 @@ grounded_in:
   - source: ticker-0004 arms-race execution record 2026-11-04 0019 queue run (partial, Hero Advancement score 0, hero detail blocked, swipe-back pivot)
   - source: ticker-0304 arms-race execution record 2026-11-04 0307 queue run (partial, Tech Research phase verdict, tier 3 unreachable inside the red lines)
   - source: ticker-0706 arms-race execution record 2026-11-04 0722 queue run (partial, first unit of the new Base Building phase, tier 3 unreachable inside the red lines)
+  - source: ticker-1004 arms-race execution record 2026-11-04 1025 queue run (partial, first unit of the new Unit Progression phase, score 0, tier-3 gap 75,000, training path only, no scoring action, no chest claimed)
 ---
 
 
@@ -1552,3 +1553,14 @@ slot. Evidence in
 - Completion sweep: no point chest earned - score 0 is below the 6,250 first threshold, so nothing was claimed. Nothing earned was left unclaimed. Cumulative counter chest at the top left reads 3/8, partial, not claimable, no bounce. No bouncing chest or reward red dot was visible on the Arms Race page at entry. Sweep caveats, recorded not smoothed over: the page was not re-scanned after the queue read (nothing changed on it in between, so the entry sweep stands), and the Events hub re-scan after the sweep was not completed - the same caveat as the 0307 unit.
 - Method notes (rule R2): the Events tab bar needed one drag to the right to reveal the Arms Race tab (dragging left reached the end of the bar without showing it), matching the 0307 record. The phase page back arrow behaviour is not re-tested in this unit; the 0019/0307 swipe-back (left-edge swipe drag) stays the changed method when a back arrow does not respond.
 - Follow-up: status partial. Tracker left untouched; the next tick re-produces the regular, but the R4 verdict above stands for this phase. Result stats: target 30000, achieved 0, points 0, chests_claimed 0, scoring_actions 0, verified yes, blocker_category f (missing precondition, no building completion inside the phase window).
+
+## What the 2026-11-04 1025 unit added - Unit Progression phase verdict, tier 3 reachable only through the training regular, partial
+
+- Unit arms-race-2026-11-04-1003 by ticker-1004, about 10:12 to 10:26 local, status partial. First unit inside the new phase, so this record carries the phase verdict per rule R4. Evidence in `_records_/2026-11-04/arms-race/1025-queue-run.md`. No diamonds spent, no speedup burned, no stage swapped, no research or building started, no scoring action executed, no chest earned, nothing claimed.
+- Live phase reading: Unit Progression, Contest Segment Lv.29-30. Time left at entry 03:44:34, phase ends about 14:10 local. This is a new phase instance, not a continuation of the 0722 Base Building phase (which ended about 10:05) - that phase's outcomes do not carry into this one. Score read live: 0, from the star bar at the top left of the phase page. Chest thresholds read live: 15,000, 30,000 and 75,000, ruby tags 2,360, 4,800, 11,800 - matching the 2026-10-25 Unit Progression read. Tier-3 gap: 75,000.
+- Scoring rows read live: Train a Lv.10 unit +31; Use 1-min Training Speed-up +10; Buy Packs containing Diamonds +30 per diamond. The speedup and pack paths are red lines and were not used.
+- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the lagging previous-phase row (the same figure as the 0722 Base Building record) and was NOT used as this phase score - the lag pattern is re-confirmed again, not a new contradiction.
+- Judgment (rule R4): tier 3 is reachable in principle only through the training path - points score when a training batch is queued, and the training queues belong to the training regular, which has its own queued unit (training-2026-11-04-1003). Under one-unit-one-type, this arms-race unit does not queue troops itself; the next arms-race unit re-reads the score after the training unit runs and judges again from that read. At this run's cutoff no record for that training unit had landed, so the re-read is still pending, not assumed.
+- Completion sweep: cumulative counter chest at the top left of the phase page 3 of 8, progress bar partial, not bouncing, not claimable - the same 3/8 read as the 0722 phase page and the 0843 event-claims sweep, kept as a per-page read. Ranking row chest present but, per standing knowledge, preview-only while the phase is live; no red dot and no bouncing animation observed on it. Events tab bar: no red dot observed on the Arms Race tab. No bouncing chest or reward red dot remains unopened on the Arms Race page.
+- Navigation note, cross-unit: the unit opened with the game on a world-map Doom Elite card left open by the previous radar unit. Taps to dismiss it selected alliance member base cards instead (HiveMinded, then Lost Boyz) - no Set Off or march button was tapped on either. A map drag returned the view to the world map, and the BASE button returned to the base interior; Events then opened normally. The Doom Elite pin march from the radar unit is still pending and is untouched by this unit. March Queues read 1 of 4 on the world map during this navigation; that march is not this unit's - no march was launched from either unit in this pass - and its owner is not established from this screen, so it is recorded as read, not attributed.
+- Tracker untouched for partial, per the queue rules; the next tick re-produces this regular, but the R4 verdict above stands for this phase unless the training-unit re-read changes the score.
