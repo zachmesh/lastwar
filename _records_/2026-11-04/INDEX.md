@@ -869,3 +869,65 @@ of 2026-10-28.
   _records_/2026-11-04/queue-planning/0440-run.md.
 - Integrator pass pr-integration-2026-11-04-0445.
   Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. Knowledge PR 269 (organizer 0432) reviewed clean and merged by squash to 4cd54283e, local main fast-forwarded to the same commit. Records PR 264 awaits the 07:00 batch; PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0445-run.md.
+## 04:40 - Ticker pass, troop training (partial, Drill Ground Full confirmed live)
+
+- Training unit training-2026-11-04-0203, partial,
+  ticker-0434: measured tent point norm (585,548)
+  selected Barracks Lv.24; its grounded pistol
+  button norm (544,580) answered with the toast
+  "Drill Ground Full: Unable to add more units"
+  and no Train Units panel, confirming the
+  2026-10-31 blocker live at this barracks.
+  Details panel read Training Count +666 with
+  instructors Maria, Hannah, James, Christopher.
+  0 batches queued, 1 of 4 barracks verified.
+  Tracker untouched. Full detail in
+  troop-training/0440-queue-run.md.
+
+## 04:45 - Ticker pass, mail rewards (done)
+
+- Mail unit mail-2026-11-04-0230, done,
+  ticker-0434: Event "Train arrival reward!"
+  claimed (CONGRATULATIONS popup: 2.5K badge
+  item x1, 50 crates, 8.5K triangle resource
+  as displayed; gift icon and Claim All dot
+  gone after). Alliance answered "No rewards
+  available"; Season, System, Regular and
+  Battle Report Claim All taps changed nothing
+  (reports/notices only). Delete All never
+  pressed. Full detail in
+  mail-rewards/0445-queue-run.md.
+
+## 04:50 - Ticker pass, alliance gifts (done)
+
+- Gifts unit gifts-2026-11-04-0230, done,
+  ticker-0434: Regular Claim All 20 gifts
+  (Gift Level 28, 188,412,330 to 188,412,530
+  progress); Premium Claim All 6 gifts;
+  Alliance Gifts entry red dot cleared after.
+  One mis-tap opened Alliance Wars (no action
+  taken) and Premium Claim All sits right at
+  norm (763,947) unlike Regular's centred
+  button - both grounded for the next unit.
+  Full detail in alliance-gifts/0450-queue-run.md.
+
+## 04:51 - Ticker pass, alliance help (done)
+
+- Help unit help-2026-11-04-0230, done,
+  ticker-0434: base help bubble tile at norm
+  (814,688) tapped once; game answered
+  "Allies are very grateful for your
+  assistance!" and the tile disappeared.
+  Full detail in alliance-help/0451-queue-run.md.
+
+## 04:56 - Ticker pass, star ceremony check (done, none waiting)
+
+- Star ceremony unit star-ceremony-2026-11-04-0230,
+  done, ticker-0434: base right rail read live
+  (Events, Capitol, VS, Season II, Alliance,
+  Mail, Inventory) - no trophy icon beside
+  Alliance, so no ceremony waits. Grounding
+  double-check timed out at pass end; absence
+  rests on the screenshot read, stated in the
+  record. Full detail in
+  alliance-duel/0456-queue-run.md.
