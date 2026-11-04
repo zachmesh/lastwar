@@ -2213,5 +2213,5 @@ Full detail in pr-integration/1430-run.md.
   unit 066 on 2026-10-30 (event ended about the 19:00 reset
   2026-10-30, no Zombie tab in the Events hub).
 - Pass closed after 1 unit (failed). Token released.
-- Integrator pass pr-integration-2026-11-04-1500, done (batch pass): records PR 279 merged with a merge commit (4ec325a156, inside the 1500 batch window, branch kept); three older records PRs carried on unchanged single-file action-log conflicts (187, 256, 265, no repeat comment); fresh post-1500 records PR opened for records/2026-11-04; no knowledge or code PR open, no escalation.
+- Integrator pass pr-integration-2026-11-04-1500, done (batch pass): records PR 279 merged with a merge commit (4ec325a156, inside the 1500 batch window, branch kept); three older records PRs carried on unchanged single-file action-log conflicts (187, 256, 265, no repeat comment); PR 286 (post-1500 batch) found already open at the sweep (this pass opened no duplicate); no knowledge or code PR open, no escalation.
   Full detail in pr-integration/1500-run.md.
