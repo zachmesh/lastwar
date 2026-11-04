@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T10:32:00Z
+modified: 2026-11-04T13:37:48Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-1034 mail-rewards execution record 2026-11-03 1055 queue run (partial, mail entry mis-targeted to Alliance twice then no-change, Issue 230)
   - source: ticker-1734 mail-rewards execution record 2026-11-03 1740 queue run (done, R2 fresh grounding opens Mail first try, Alliance Exercise claim, red dot is unread not claimable)
   - source: ticker-0204 mail-rewards execution record 2026-11-04 0212 queue run (done, Alliance claim verified by checkmarks, Regular notices already credited, notifications prompt declined, Issue 230)
+  - source: ticker-0434 mail-rewards execution record 2026-11-04 0445 queue run (done, category rows grounded, Event train arrival reward claimed and verified gone)
 ---
 
 
@@ -745,3 +746,12 @@ the next tick re-produces this regular as a fresh unit.
   Enable Now was not touched, and the prompt
   closed. Lesson: decline the prompt, do not
   enable it.
+
+## What the 2026-11-04 0445 unit added - category rows grounded, Event train arrival reward claimed
+
+- Unit mail-2026-11-04-0230 by ticker-0434, 04:45 local, status done. The computer session dropped between units and was restarted (cc-414 to cc-415); no game state was lost. No "active on a different device" dialog appeared.
+- Entry: Mail opened from the base right rail at the grounded point norm (930,800), consistent with the 0212 point (931,804) within session drift.
+- Category rows grounded on the live list, because the first Event tap missed: Battle Report (500,152), Alliance (498,216), Event (500,368), Season (500,467), System (500,572), Regular (500,677). The earlier Event miss at norm (498,310) fell between rows - do not reuse it; the Event row is (500,368).
+- Event claim: the list showed [AP3x] Abyss Apex train notices (35m ago, 2h ago), a "Train arrival reward!" (35m ago, gift icon), [AP3x] Missile Apex Mega Express (2h ago), Title Assignment (3h ago) and [AP3x] Nuna Knuckles train (4h ago). Claim All claimed the train arrival reward: the CONGRATULATIONS popup showed a 2.5K badge item x1, 50 crates and 8.5K triangle resource (item names from icons, figures as displayed). After dismissal the gift icon and the Claim All red dot were both gone from the Event list, verifying the claim complete.
+- Other categories, no claim: Alliance (Daily Donation Rankings, Alliance Exercise, Voting Results, Zombie Siege Reports) answered Claim All with the toast "No rewards available." Season Ice Breaking Reports, System Patch Notes / President Mail / Season Conclusion, Regular Victory reports (Vanguard Instructor Lv.3/2/1 and Lv.55 Doom Elite) and Battle Report Victory reports (Lv.150 Walker, Rebel, Lv.20 Zombie Raider, Lv.19/18/17 Zombie Horde) all answered Claim All with no visible change. In-app Purchases was not opened: receipts only, nothing to claim, per the activity metadata. Delete All was never pressed in any category.
+- Exit: Mail closed back to the base screen with the two back arrows. Nothing spent.

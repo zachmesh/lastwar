@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T10:32:00Z
+modified: 2026-11-04T13:37:48Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-1534 troop-training execution record 2026-11-03 1552 queue run (partial, Lv.27 T9 batch queued and HUD-verified, tent blocker breakthrough, Issue 150)
   - source: ticker-2134 troop-training execution record 2026-11-03 2144 queue run (partial, production grid is factories not tents, 1552 point selects Factory No.3 in this framing, Issue 150)
   - source: ticker-0134 troop-training execution record 2026-11-04 0143 queue run (partial, factories confirmed again, 1552 tent point not re-tried, Tank Base Lv.28 to 29 upgrade in progress, Issue 150)
+  - source: ticker-0434 troop-training execution record 2026-11-04 0440 queue run (partial, tent point 585,548 selects Barracks Lv.24, Drill Ground Full confirmed live again, Training Count +666, Issue 150)
 ---
 
 # Troop training
@@ -1016,3 +1017,12 @@ Observed in game on this account, first execution 2026-10-25.
   live in this unit, so the 2026-10-31 Drill Ground
   Full blocker is neither confirmed nor cleared
   here.
+
+## What the 2026-11-04 0440 unit added - tent point resolved for Lv.24, Drill Ground Full confirmed live again, clearing method still open
+
+- Unit training-2026-11-04-0203 by ticker-0434, about 04:40 local, status partial. No "active on a different device" dialog appeared.
+- Tent search resolved on this framing: visual grounding on the live central frame returned a tent point at norm (585,548), and the tap selected Barracks Lv.24 with its button row (paw Details, pistol Train Units, green upgrade arrow never tapped). This point is distinct from the factory-row points that misled the 0143 unit and from the 1552 point (630,592). The next unit starts from (585,548).
+- Train attempt: the pistol button, grounded on the live frame at norm (544,580), was tapped and the game answered with the toast "Drill Ground Full: Unable to add more units" - no Train Units panel opened. The 2026-10-31 Drill Ground Full blocker is therefore CONFIRMED live again at this barracks, by the Train tap itself, not assumed from an earlier unit. An earlier mis-aimed tap at norm (465,505) landed on the world map instead of the button row; it was undone with the home button and no world action was taken. Do not re-aim at (465,505).
+- Preparatory read, per the activity metadata: the Lv.24 barracks Details panel was opened (paw button, norm (468,580) by offset from the grounded pistol point). It reads Training Count +666, matching the T8 count in the activity metadata, with instructors Maria, Hannah, James and Christopher assigned, and no training timer shown in Details. The panel was closed with X; nothing was queued, dispatched or spent.
+- HUD resources at end, unchanged by this unit: food 397.0M, iron 732.0M, coins 3.1M, power 150,028,269 - consistent with the 0413 harvest and 0416 reads, not a contradiction. 0 of 4 barracks queued, 1 of 4 verified (Lv.24, blocked by Drill Ground Full); the other three barracks remain unverified this unit. Tracker untouched, per the rule for partial units.
+- Open question carried, not closed: the clearing method for a full Drill Ground is still unknown - no clearing method was found or claimed in this unit. The 0143 follow-up (re-ground the tents first) is satisfied for Lv.24 on this framing by the (585,548) point; the blocker that remains is the Drill Ground itself. Evidence commented onto Issue #150 by the ticker unit, fold noted here.

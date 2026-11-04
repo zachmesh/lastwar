@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T10:32:00Z
+modified: 2026-11-04T13:37:48Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-1104 alliance-help execution record 2026-11-03 1121 queue run (done, bubble press, header 1240 over 1000 unchanged, Help All no requests yet)
   - source: ticker-1706 alliance-help execution record 2026-11-03 1716 queue run (done, Help All cleared one ally row, bubble first tap lost to foreground switch)
   - source: ticker-0204 alliance-help execution record 2026-11-04 0208 queue run (done, Alliance centre 931,709 re-confirmed, 880,720 miss recorded, header 520/1000 on new trade day)
+  - source: ticker-0434 alliance-help execution record 2026-11-04 0451 queue run (done, bubble tile 814,688 left of shield 932,695, one tap clears)
 ---
 
 
@@ -748,3 +749,9 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Exited with the Help panel X to the Alliance
   panel, then the panel back arrow (164,931) to
   the base screen. Nothing spent.
+
+## What the 2026-11-04 0451 unit added - bubble tile (814,688) left of the shield, one tap clears
+
+- Unit help-2026-11-04-0230 by ticker-0434, 04:51 local, status done. The computer session dropped between units and was restarted (cc-415 to cc-418); no game state was lost. No "active on a different device" dialog appeared.
+- Base screen watch point checked: the help bubble tile was present at the lower right, grounded at norm (814,688), immediately left of the Alliance shield button grounded at norm (932,695) - against the 0208 Alliance centre (931,709), the shield centre drifts per session as usual.
+- One tap on the bubble tile centre pressed Help All: the game answered with the toast "Allies are very grateful for your assistance!" and the tile disappeared from the base screen, verified on the following screenshot (Alliance shield remains, help tile gone). No Help page was opened, no individual helps were needed, and no count of helped allies was displayed by the game - the toast and the vanished tile are the verification, not a number. Tracker marked done. Nothing spent.
