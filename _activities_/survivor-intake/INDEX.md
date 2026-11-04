@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-04T05:40:00Z
-version: 1.22.0
+modified: 2026-11-04T09:36:11Z
+version: 1.23.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-1034 survivor-intake execution record 2026-11-03 1050 queue run (partial, gate line not found, grounding timed out twice, no tap on unidentified markers)
   - source: survivor-intake execution record 2026-11-03 1543 queue run (ticker-1534 unit, partial, gate-cluster grounding, no verified recruit)
   - source: ticker-2104 survivor-intake execution record 2026-11-03 2112 queue run (partial, gate line unverified, thirteenth distinct partial since the 1644 done)
+  - source: ticker-0104 survivor-intake execution record 2026-11-04 0110 queue run (partial, contested, different-device dialog after two kick takeovers, server maintenance at entry)
 ---
 
 
@@ -949,6 +950,8 @@ Measured on 2026-10-25.
 
 ## Changelog
 
+- 1.23.0 (2026-11-04): contested stop after two kick takeovers (0110 unit, first recorded instance of the owner two-kick rule firing, no third takeover, tracker untouched so the next tick re-produces the regular), server maintenance at entry matching the 0034 harvest unit and cleared by about 01:04 (maintenance Confirm dismissing to the loading screen, distinguished from the disconnected-dialog crash path), gate line NOT READ and not claimed empty, glimpsed power figure explicitly not used as a closing figure, folded from the 0110 survivors record; no earlier claim superseded.
+
 - 1.22.0 (2026-11-03): thirteenth distinct partial since the
   1644 done (2112 unit, gate line explicitly unverified,
   close discipline held), 1644 re-read pointer (460,632 /
@@ -1190,3 +1193,10 @@ Measured on 2026-10-25.
   line still cannot be verified, close unverified
   again with this blocker named. No earlier claim
   superseded; the 1644 pointer is qualified as above.
+
+## What the 2026-11-04 0110 unit added - contested stop after two kick takeovers, maintenance cleared mid-pass
+
+- First recorded contested stop in this profile: the ticker-0104 pass met the different-device dialog, tapped Confirm twice (each kick exited the app, per the owner kick rule), and met the same dialog a third time, so the pass stopped with no third takeover, per the owner rule that two kicks in one pass followed by a returning dialog means the owner is likely playing on another device. No survivor was processed, no recruit card appeared, no Quick Dispatch ran, tracker untouched so the next tick re-produces this regular.
+- Entry carried the same server-maintenance state as the 0034 harvest unit: a TIPS dialog "The server is under maintenance. Please wait a moment, we'll be back with you shortly!" over the login screen with a "Login failed. Please retry or contact support." toast. Confirm on the maintenance dialog dismissed it to the loading screen, and the base was then reached behind the different-device dialog - so the maintenance had lifted by about 01:04, roughly half an hour after it blocked the 0034 pass outright. The maintenance dialog's Confirm is not the crash path: the 0034 record distinguishes it from the "Server disconnected" dialog, whose Confirm quits the app.
+- Nothing from this unit is a closing figure: the base was never reached interactively, the gate line was NOT READ and is not claimed empty, and the power figure glimpsed behind the dialog (150,013,787) is explicitly not used - the record marks the unit unverified, blocker category f. The previous unit's rejected points (505,590) and (545,740) were not re-tapped.
+- No earlier claim superseded; no new issue filed - the contested stop is the owner rule working as written, and the maintenance episode resolved within the pass.
