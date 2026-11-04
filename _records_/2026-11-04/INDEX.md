@@ -1177,3 +1177,17 @@ of 2026-10-28.
   unchanged heads, so no comment was repeated;
   carried for branch-side resolution.
   Full detail in pr-integration/0715-run.md.
+- Radar unit radar-2026-11-04-0603, partial, ticker-0706:
+  release day, stored 0/40 at entry (Day 2 stack already empty);
+  Doom Legion base pin claimed (iron 11.2M, food 11.2M, coin 7.4M,
+  300, 1.6K; radar points 205 to 206); Rare Farmland gathering
+  dispatched (1.8M, due about 07:25, reward claim pending); blue
+  skull pin opens no card after 3 taps and 1 long-press (named
+  blocker carried forward). Full detail in
+  radar-tasks/0720-queue-run.md.
+- Arms Race unit arms-race-2026-11-04-0603, partial, ticker-0706:
+  first unit of the Base Building phase (ends about 10:05 PT),
+  score 0, tier-3 30,000 judged unreachable inside the red lines
+  (Aircraft Center 8d 05:03:48 and Drill Ground 5d 01:41:58 left;
+  speedup and diamond-pack paths are red lines), nothing claimed.
+  Full detail in arms-race/0722-queue-run.md.
