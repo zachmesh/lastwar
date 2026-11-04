@@ -2,9 +2,11 @@
 """Alliance Duel day calculator and gating advisor.
 
 Reads _tools_/duel_schedule.json, works out which duel day is live right
-now (duel days roll at 19:00 local per the 2026-10-25 observation) and
-prints the gating advice the playbook attaches to that day - most
-importantly when to preserve radar tasks for Radar Training day.
+now (duel days roll every 24 hours absolute from the 2026-10-25 anchor,
+02:00 UTC daily - 19:00 PDT before the 2026-11-02 daylight-saving end,
+18:00 PST after it) and prints the gating advice the playbook attaches
+to that day - most importantly when to preserve radar tasks for Radar
+Training day.
 
 The schedule declares its timezone (America/Los_Angeles) and the anchor
 is a local wall time, so the day is always computed in that timezone,
@@ -13,6 +15,14 @@ used to roll to the next duel day at 11:00 PT, eight hours early - that
 is what made 2026-11-03 14:03 PT read as Day 3 (Age of Science, release)
 while the live game dialog said radar tasks score nothing today (Day 2,
 Base Expansion, stack). See issue #235.
+
+The boundary is NOT a fixed local wall time: the 2026-11-03 18:07 PST
+panel in issue #242 already showed the new Age of Science day running
+with 23:52 left, while the old wall-clock count would have kept Day 2
+until 19:00 PST. Both observations fit one absolute cycle - the anchor
+2026-10-25 19:00 PDT and the 2026-11-03 18:00 PST roll are both
+02:00 UTC - so day boundaries are counted in absolute 24 hour steps
+from the anchor, and the local wall time shifts with daylight saving.
 
 Usage:
   duel.py            human readable status for today
@@ -41,25 +51,29 @@ def current(now=None):
         now = now.replace(tzinfo=tz)
     else:
         now = now.astimezone(tz)
-    # Day boundaries are 19:00 local wall times, so count calendar days
-    # on the wall clock. Absolute timedeltas would slip an hour across
-    # a daylight-saving transition; wall arithmetic never does.
-    anchor_wall = anchor.replace(tzinfo=None)
-    now_wall = now.replace(tzinfo=None)
-    delta = now_wall - anchor_wall
-    day_index = delta.days  # full duel days since Day 1 opened
+    # Day boundaries are absolute 24 hour steps from the anchor
+    # (02:00 UTC daily), NOT fixed local wall times: across the
+    # 2026-11-02 daylight-saving end the wall time of the roll
+    # moved from 19:00 PDT to 18:00 PST (issue #242). Counting
+    # calendar wall days would keep the old day an hour too long
+    # after the transition; absolute elapsed time never does.
+    # NOTE: subtracting two aware datetimes that share one
+    # tzinfo object is wall-clock arithmetic in CPython, and
+    # adding a timedelta to an aware datetime is wall-clock
+    # too, so neither can measure absolute elapsed time here.
+    # Timestamps are the absolute measure.
+    day_index = int((now.timestamp() - anchor.timestamp()) // 86400)
     pos = day_index % 7  # 0..5 duel days, 6 = off day
     day = cfg["days"][pos]
-    day_start_wall = anchor_wall + timedelta(days=day_index)
-    day_end_wall = day_start_wall + timedelta(days=1)
-    day_end = day_end_wall.replace(tzinfo=tz)
+    day_end = datetime.fromtimestamp(
+        anchor.timestamp() + (day_index + 1) * 86400, tz=tz)
     return {
         "now": now.isoformat(timespec="seconds"),
         "duel_day": day["day"],
         "theme": day["theme"],
         "win_points": day["win_points"],
         "day_ends": day_end.isoformat(timespec="seconds"),
-        "hours_left": round((day_end - now).total_seconds() / 3600, 1),
+        "hours_left": round((day_end.timestamp() - now.timestamp()) / 3600, 1),
         "gate": day["gate"],
         "actions_that_score": day["actions_that_score"],
         "radar_posture": {1: "release", 2: "stack", 3: "release", 4: "stack", 5: "release", 6: "stack", 7: "stack"}[day["day"]],
