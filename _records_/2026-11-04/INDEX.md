@@ -1080,3 +1080,8 @@ of 2026-10-28.
 
 - Integrator pass pr-integration-2026-11-04-0615.
   Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. No knowledge or code PR open. Records PR 264 awaits the 07:00 batch as clean (head 361386b); PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, conflict shape re-verified against main 4a15c99f8, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0615-run.md.
+
+## 06:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0630.
+  Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. No knowledge or code PR open. Records PR 264 awaits the 07:00 batch as clean (head 819e4a6 at review; this record rides it after push); PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, conflict shape re-verified against main 4a15c99f8, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0630-run.md.
