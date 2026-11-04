@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-04T23:36:33Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-0234 shop-claims execution record 2026-11-04 0237 queue run (done, checked only, nothing claimable)
   - source: ticker-0504 shop-claims execution record 2026-11-04 0511 queue run (done, checked only, 0 claims, monthly Days Left 17, tab taps need a re-read after each tap)
   - source: ticker-0834 shop-claims execution record 2026-11-04 0841 queue run (done, checked only, 0 claims, monthly 17/17 Claimed as in 0511)
+  - source: ticker-1434 shop-claims execution record 2026-11-04 1434 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fifth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -795,3 +796,12 @@ the free and already paid for parts, never the paid unlocks.
 - Super Monthly Pass page, read live: Days Left 17, Rewards Left 17, and the Daily Pickup button reads Claimed - identical to the 0511 read, so no within-day decrement is claimed. The Monthly Pass Extension 24 dollars 99 button was not tapped.
 - Weekly Pass page, read live and scrolled with the drag from norm 500,850 to 500,250: the Free Supply chest reads Claimed. The Legendary row Take All 19 dollars 99 was not tapped. The S2 Drone Components, S1 Drone Parts and Coin Weekly Pass cards each show only Get Now 4 dollars 99, so all three are unowned offers, not owned passes with a pickup due; none was tapped.
 - 0 claims in this unit: every shop pass surface was checked live and nothing was claimable. This is the third checked-only shop unit today (0237, 0511, 0841), confirming the 1812 cycle state on every surface rather than changing it. Shop left with the back arrow on the first tap, returning to the base screen.
+
+## What the 2026-11-04 1434 unit added - screen-capture failure, fifth consecutive pass, nothing checked or claimed
+
+- Unit passes-2026-11-04-1057 by ticker-1434, about 14:36 to 14:45 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1344 and 1404 sections). Evidence in `_records_/2026-11-04/shop-claims/1434-queue-run.md`. No different-device dialog appeared.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: computer.control activate (session cc-462) selected the LastWar window for background input but captured no observation with "Failed to start stream due to audio/video capture failure"; computer.observe (compact) failed with the same error; a fresh computer session (cc-463, after ending cc-462) failed identically on activate and on observe (image view).
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The shop, the Weekly Pass page and the Season passes were never opened, no free pack or daily pickup was checked or claimed, and no claim was verified.
+- Recurrence, not a new failure class: this is the fifth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434), now across five activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the fifth and sixth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 0841 checked-only state above rests on a live read; this one rests on no read at all.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The inbox held 64 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
