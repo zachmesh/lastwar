@@ -1968,3 +1968,13 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
 
 - Catch-all pass pr-catchall-2026-11-04-1239, no-op: no adopted open PR (PR 137 stays MERGED); four open PRs scanned and none owned by this job (PR 279 integrator post-1100 batch, MERGEABLE and CLEAN, PRs 265, 256 and 187 integrator records, the latter three still CONFLICTING on the action log from the 0415 re-check), no PR opened, merged or closed since the 1139 pass, 43 open issues all class-labeled with no change since the 1139 pass, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
   Full detail in pr-catchall/1239-run.md.
+
+## 12:40 to about 12:52 - Queue planning pass
+
+- Planner pass 1240, done: plan staged 1 unit
+  (ghost-ops-2026-11-05-0000 for the Thursday slot);
+  scout diff on the Nov 4 observation applied with zero
+  changes; 0 withdrawals; pool inbox 67, claimed 0,
+  done 831, upcoming 52. Pre-reset sweep step skipped
+  (not the 17:00 hour run). Full detail in
+  queue-planning/1240-run.md.
