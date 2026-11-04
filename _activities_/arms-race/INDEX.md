@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T11:50:00Z
+modified: 2026-11-04T15:40:00Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-1934 arms-race execution record 2026-11-03 1945 queue run (partial, Drone Boost tiers 1 and 2 claimed, tier 3 short, drone Upgrade tap method retired)
   - source: ticker-0004 arms-race execution record 2026-11-04 0019 queue run (partial, Hero Advancement score 0, hero detail blocked, swipe-back pivot)
   - source: ticker-0304 arms-race execution record 2026-11-04 0307 queue run (partial, Tech Research phase verdict, tier 3 unreachable inside the red lines)
+  - source: ticker-0706 arms-race execution record 2026-11-04 0722 queue run (partial, first unit of the new Base Building phase, tier 3 unreachable inside the red lines)
 ---
 
 
@@ -1540,3 +1541,14 @@ slot. Evidence in
 - Sweep caveat, recorded not smoothed over: the Events hub re-scan after the sweep was not completed - the swipe-back from the phase page went straight to the base screen, bypassing the hub. The phase page itself shows no unclaimed reward, but the hub was not re-checked in this unit.
 - Method notes (rule R2): Events tab bar - one drag to the right revealed the Arms Race tab, and the next tap opened the phase page (same pivot as prior units). Phase page back arrow failed again: one tap at norm 93,946 left the Arms Race page unchanged, matching the 2026-11-02 2209 record. Pivot that worked: a left-edge swipe drag (from x 15 to x 500 at mid height) returned from the phase page to the base screen, matching the 0019 swipe-back. This swipe-back stays the changed method when a back arrow does not respond.
 - Follow-up: status partial. Tracker left untouched; the next tick re-produces the regular, but the R4 verdict above stands for this phase. Result stats: target 30000, achieved 0, points 0, chests_claimed 0, scoring_actions 0, verified yes, blocker_category f (missing precondition, no research completion inside the phase window).
+
+## What the 2026-11-04 0722 unit added - Base Building phase verdict, tier 3 unreachable inside the red lines, partial
+
+- Unit arms-race-2026-11-04-0603 by ticker-0706, about 07:19 to 07:22 local, status partial, device session cc-427. No "active on a different device" dialog appeared. No diamonds or money spent, no speedup burned, no stage swapped, no research or building started, no chest claimed, no scoring action executed. Evidence in `_records_/2026-11-04/arms-race/0722-queue-run.md`.
+- Live phase reading (rule R4, first unit of the phase): Base Building, Contest Segment Lv.29-30, time left 02:39:03 at entry, phase ends about 10:05 PT. This is a new phase instance, not a continuation of the 2026-11-03 Base Building phase (0228 tier 1 claimed, 1412 top threshold met) - that phase's outcomes do not carry into this one. Score read live: 0, from the star bar at the top left of the phase page. Chest thresholds read live: 6,250, 12,500 and 30,000, ruby tags 2,360, 4,800, 11,800 - the same thresholds and tags as the 0307 Tech Research phase, so the threshold set does not vary by phase in this segment. Tier-3 gap: 30,000. Scoring rows read live: Increase Building Power by 1pt +1; Use 1-min Construction Speed-up +10; Buy Packs containing Diamonds +30 per diamond. The speedup and pack paths are red lines and were not used.
+- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the lagging previous-phase row (same figure as the 0307 Tech Research record and the 0019 Hero Advancement record) and was NOT used as this phase score - the lag pattern is now re-confirmed a third time, not a new contradiction.
+- Building queue read (the R4 judgment): entered from the base screen via the left-side hammer queue icon, grounded fresh at norm (55,179) on the base screenshot. One earlier tap at (55,182) taken from the post-Events screen landed on the world map instead and was corrected by returning via the BASE button and re-grounding - grounding must be taken from the current screen, never carried across screens. Lv.29 Aircraft Center upgrade in progress, Time Left 8d 05:03:48 at the screenshot read. Lv.26 Drill Ground upgrade in progress, Time Left 5d 01:41:58 at the screenshot read. Two further queue slots Idle. Starting a new building is a red line and was not done.
+- Judgment: both completions land days after this phase ends, so no building completion lands inside this phase window. The only in-scope scoring path (Building Power from a completion) therefore cannot score in this phase, and the other two paths are red lines. Tier 3 (30,000) is unreachable in this phase inside the red lines. This is the phase's R4 verdict; later units in this phase need only re-read the score and chests, not re-litigate the queue read, unless a building timer changes.
+- Completion sweep: no point chest earned - score 0 is below the 6,250 first threshold, so nothing was claimed. Nothing earned was left unclaimed. Cumulative counter chest at the top left reads 3/8, partial, not claimable, no bounce. No bouncing chest or reward red dot was visible on the Arms Race page at entry. Sweep caveats, recorded not smoothed over: the page was not re-scanned after the queue read (nothing changed on it in between, so the entry sweep stands), and the Events hub re-scan after the sweep was not completed - the same caveat as the 0307 unit.
+- Method notes (rule R2): the Events tab bar needed one drag to the right to reveal the Arms Race tab (dragging left reached the end of the bar without showing it), matching the 0307 record. The phase page back arrow behaviour is not re-tested in this unit; the 0019/0307 swipe-back (left-edge swipe drag) stays the changed method when a back arrow does not respond.
+- Follow-up: status partial. Tracker left untouched; the next tick re-produces the regular, but the R4 verdict above stands for this phase. Result stats: target 30000, achieved 0, points 0, chests_claimed 0, scoring_actions 0, verified yes, blocker_category f (missing precondition, no building completion inside the phase window).
