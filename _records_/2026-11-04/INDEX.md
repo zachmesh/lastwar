@@ -579,3 +579,20 @@ of 2026-10-28.
   to 544.9K). No test tap at 1/30 per prior proof. Day not done
   under rule R1; tracker untouched. Full detail in
   alliance-donations/0309-queue-run.md.
+
+## 03:00 to about 03:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0300.
+  Batch pass (checker due for the 03:00 window).
+  Records PR 255 (2026-11-02, 1 commit) merged with a
+  merge commit (5ff172387); records PR 258
+  (2026-11-04, 33 commits) merged with a merge commit
+  (206f23b1f77) after a branch-side union resolution
+  of the action-log append-append conflict. Records PR
+  256 (2026-11-03) conflicts on the action-log with a
+  diverged branch lineage and was commented and
+  carried, not merged; records PR 187 (2026-11-01)
+  conflict re-verified and carried. Merge lines for
+  PRs 255 and 258 committed to their branches for the
+  next batch PRs. Full detail in
+  pr-integration/0300-run.md.
