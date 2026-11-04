@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T16:37:19Z
+modified: 2026-11-04T19:40:23Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-0034 resource-collection execution record 2026-11-04 0034 queue run (failed, server maintenance blocked login, no base view reached)
   - source: ticker-0404 resource-collection execution record 2026-11-04 0413 queue run (partial, farmland +2.0M verified, factory-row marker confusion, Issue #250 evidence)
   - source: ticker-0734 resource-collection execution record 2026-11-04 0755 queue run (partial, farmland +2.6M verified, left-side +3.0M unattributed, Alliance back arrow corrected to (161,935), marker confusion repeats, Issue #250 already commented by the ticker pass)
+  - source: ticker-1034 resource-collection execution record 2026-11-04 1101 queue run (partial, farmland +2.1M food and left-side +1.4M coin verified, entry corrections re-confirmed, sweep incomplete at unit cap)
 ---
 
 
@@ -740,6 +741,8 @@ regular stays due. Evidence in
 
 ## Changelog
 
+- 1.22.0 (2026-11-04): farmland +2.1M food (417.9M to 420.0M) and left-side +1.4M coin (18.0M to 19.4M) verified by HUD deltas, farmland one-tap-clears-all and the 0755 left-side point (88,406) re-confirmed, Alliance back arrow (161,935) and panel X closures (848,213) and (848,150) re-confirmed, donations timer 00:11:45 corroborating the 1046 timer running, right side and top edge unswept and EXP, screw and drone-component bubbles unlocated so the full edge-drag sweep stays incomplete, marker confusion caution (Issue #250) carried with no new failure mode, folded from the 1101 harvest unit; no earlier claim superseded. (1.20.0 and 1.21.0 carry the 0413 and 0755 sections without changelog lines; the numbering is preserved, not rewritten.)
+
 - 1.19.0 (2026-11-04): server maintenance blocking login (0034 unit failed, 0 bubbles, no base view reached), disconnected dialog distinguished from maintenance dialog (disconnected Confirm quits the app, maintenance Confirm safe to retry and login impossible only while maintenance is active), sweep now two units behind after the partial 2034 unit, folded from the 0034 harvest record with the 0110 survivors record as the clearing corroboration; no earlier claim superseded.
 
 - 1.18.0 (2026-11-03): one verified teal-bubble collection
@@ -993,3 +996,11 @@ regular stays due. Evidence in
 - Sweep coverage: left edge viewed after a (300,500) to (600,500) drag (the two taps above are the only left-side attempts); right side (Capitol, VS, Season II header area) viewed after a (600,500) to (300,500) drag - no collectible bubbles seen, only building markers and red-dot badges; top edge (hero statues, Eiffel Tower, ferris wheel) viewed after a (500,300) to (500,600) drag - no collectible bubbles seen; bottom Season 2 zone NOT swept as main-base harvest, per the 2026-11-01 rule (its bubbles are not main-base harvest).
 - Why partial, not done: the full edge-drag sweep of the 2026-11-01 rule was not completed to zero remaining - EXP, screw and drone-component bubbles were not located or verified, and the remaining left-side bubbles were not distinguished from building markers. The next harvest unit resumes from the sweep, with the back-arrow correction (161,935) and the marker-confusion caution above as its first notes. No truck top bubble was claimed; truck work belongs to the trucks unit under one-unit-one-type. No diamonds, money, speedup, or paid button was touched. Tracker untouched, per the rule for partial units.
 - No earlier claim superseded.
+
+## What the 2026-11-04 1101 unit added - farmland +2.1M food, left-side +1.4M coin, entry corrections re-confirmed, sweep still incomplete, partial
+
+- Unit harvest-2026-11-04-1003 by ticker-1034, about 10:48 to 11:01 local, status partial. Session dropped between units (cc-446 to cc-448); the unit cap (15 minutes from claim) and the mid-pass session drop left only about 7 minutes of game time in this unit, blocker category b. No diamonds, money, speedup items or paid button touched. No building or research started, no assembly, no teleport. Evidence in `_records_/2026-11-04/resource-collection/1101-queue-run.md`.
+- Entry route, corrections re-confirmed: the unit started on the Rallied Attack panel left open by the donations unit. Both panel X buttons closed cleanly (Alliance Tech panel at (848,213), then Alliance Techs tree at (848,150)). The Alliance menu back arrow responded at (161,935) on the first tap, confirming the 0755 correction; the left-edge estimate (106,910) was not used. Incidental donations state at entry: the coin button was still greyed with a 00:11:45 regen timer, down from 00:16:35 at the donations unit's close, consistent with the timer running (see the donations 1046 fold).
+- Verified gains, by HUD deltas only: base HUD at entry (live screenshot reads) food 417.9M, iron 749.5M, coin 18.0M, second row 21.0M, 922.2K, diamonds 12.72K, total power 150,028,269. Farmland tap at (364,481): food 417.9M to 420.0M (+2.1M) on the next screenshot, and the farmland cluster's round value bubbles cleared. Per the standing farmland rule one tap collects all farmland bubbles; the +2.1M is the verified gain. Left-edge drag (300,500) to (600,500) shifted the camera to the left-side buildings. Left-side tap at (88,406): coin 18.0M to 19.4M (+1.4M) on the next screenshot, food and iron unchanged. The +1.4M HUD delta is verified; the bubble identity behind it is NOT separately verified, so no bubble count is claimed for it. This replicates the 0755 unit's left-side collection point. Total HUD-verified gain in this unit: food +2.1M, coin +1.4M.
+- Sweep coverage: farmland cluster collected, bubbles cleared. Left edge viewed after the drag; one tap collected. Remaining small icons above the left-side buildings were not distinguished from building markers and were not tapped (the 0755 marker-confusion caution, Issue #250). Right side and top edge NOT swept in this unit. Bottom Season 2 zone NOT swept as main-base harvest, per the 2026-11-01 rule (its bubbles are not main-base harvest).
+- Why partial, not done: the full edge-drag sweep of the 2026-11-01 rule was not completed to zero remaining - EXP, screw and drone-component bubbles were not located or verified, and the right side and top edge were not swept. The next harvest unit resumes from the sweep. No truck top bubble was claimed; truck work belongs to the trucks unit under one-unit-one-type. No new issue filed: Issue #250 already covers the bubble-grounding confusion, and this unit's left-side tap succeeded at the 0755 point rather than adding a new failure mode. No earlier claim superseded.
