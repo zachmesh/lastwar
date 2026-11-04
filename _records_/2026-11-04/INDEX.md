@@ -557,3 +557,25 @@ of 2026-10-28.
   dispatched and the tracker is untouched. Next secrets
   unit retries the Claim buttons first. Full detail in
   secret-missions/0248-queue-run.md.
+
+## 03:07 - Ticker pass, Arms Race (Tech Research, R4 verdict)
+
+- Arms Race unit arms-race-2026-11-04-0203, partial, ticker-0304:
+  first unit of the new Tech Research phase (ends about 05:58 PST),
+  score 0, thresholds 6,250 / 12,500 / 30,000. Research queue read
+  live from the base flask icon: Lv.3 Weapon Training VIII 1d 15:14
+  left, Lv.3 Defense Training VIII 1d 11:12 left, so no completion
+  lands in this phase and tier 3 is unreachable inside the red lines
+  (speedup and diamond-pack paths not used). Nothing claimed;
+  cumulative chest 3/8 not claimable, ranking chest tap no visible
+  change. Phase back arrow failed again; left-edge swipe-back worked.
+  Tracker untouched. Full detail in arms-race/0307-queue-run.md.
+
+## 03:09 - Ticker pass, alliance donations
+
+- Donations unit donations-2026-11-04-0203, partial, ticker-0304:
+  5 coin donations to Rallied Attack (7/10), Donation Count 6/30 to
+  1/30 live, Tech EXP 16.6K to 16.9K, 4,000 coin spent (HUD 548.9K
+  to 544.9K). No test tap at 1/30 per prior proof. Day not done
+  under rule R1; tracker untouched. Full detail in
+  alliance-donations/0309-queue-run.md.
