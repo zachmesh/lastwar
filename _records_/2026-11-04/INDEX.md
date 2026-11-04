@@ -740,3 +740,20 @@ of 2026-10-28.
   Alliance panel crashed the app; relaunch restored the
   session with no observed loss. Tracker untouched.
   Full detail in radar-tasks/0334-queue-run.md.
+
+## 03:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0345.
+  Non-batch pass: the checker reports due for the
+  03:00 window, but the 03:00 batch already merged in
+  this window (PR 258 at 03:10), so no records PR
+  merges this pass; next batch 07:00. Knowledge PR
+  266 (organizer 0332) and code PR 267 (reset-anchored
+  zero-sweep, Refs #147) merged by squash; issue #147
+  stays open, closure belongs to the retro. Records PR
+  264 awaits the 07:00 batch; PR 256 is GitHub-clean
+  but must not merge as-is until its action log is
+  reconciled by entry identity; PRs 265 and 187 stay
+  conflicted on the action log, awaiting branch-side
+  resolution. No owner-gated PR. Full detail in
+  pr-integration/0345-run.md.
