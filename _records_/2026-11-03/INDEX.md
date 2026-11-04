@@ -3149,7 +3149,7 @@ of 2026-10-28.
   head unchanged. Full detail in
   pr-integration/1830-run.md.
 
-## 18:32 to about 18:45 - Tool-developer pass, duel DST boundary fix (PR 243)
+## 18:32 to about 18:41 - Tool-developer pass, duel DST boundary fix (PR 243)
 
 - Tool-developer pass tool-development-2026-11-03-1832.
   Fix, not a no-op: issue 242 (filed after the 1732 run)
