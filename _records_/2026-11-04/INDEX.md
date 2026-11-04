@@ -2091,7 +2091,7 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
 - Pass closed after 1 unit (failed). Token released.
 ## 13:40 to about 13:49 - Queue planning pass
 
-- Planner pass 1340, no-op: plan staged 0 units
+- Planner pass 1340, partial (delivery pending): plan staged 0 units
   (horizon already covered, already_present 72);
   scout diff on the Nov 4 observation applied with zero
   changes; 0 withdrawals; pool inbox 65, claimed 1,
