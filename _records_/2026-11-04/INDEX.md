@@ -1261,3 +1261,18 @@ of 2026-10-28.
   agree, all zero counts, 0 withdrawals. Pool inbox 71,
   claimed 1, done 804, upcoming 51. Full detail in
   queue-planning/0740-run.md.
+
+## 07:45 to about 07:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0745.
+  Merged knowledge PR 274 (organizer 0732: radar-tasks
+  1.26.0, arms-race 1.33.0, squash merge 73e0a8f16).
+  Non-batch pass in effect: the checker reported due
+  for the 07:00 window, but the 07:00 batch already
+  merged in this window (PR 264 at 07:05:40 PST), so
+  no records PR merged. Records PR 273
+  (records/2026-11-04, head bae715935, merge-tree
+  clean) awaits the 11:00 batch; PRs 187, 256 and 265
+  still conflicted on the action log at unchanged
+  heads, so no comment was repeated; no owner-gated
+  PR arose. Full detail in pr-integration/0745-run.md.
