@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T03:37:56Z
+modified: 2026-11-04T07:36:34Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-1004 radar-tasks execution record 2026-11-03 1010 queue run (partial by design, third consecutive Claim All-only bar, stored 25 of 40, three skull pins inventoried)
   - source: PR 237 merged 2026-11-03 16:38 local (duel.py timezone fix, Refs #235) settling the 1450 live-dialog contradiction
   - source: ticker-1904 radar-tasks execution record 2026-11-03 1913 queue run (partial, release day, 17 claims, no TIPS dialog on any Claim All, 4 pins carried, Issue #235 evidence)
+  - source: ticker-2304 radar-tasks execution record 2026-11-03 2317 queue run (partial, release day, story pin completed, March centre 500,751, 11 claims, no TIPS dialog, Issue #235 evidence)
 ---
 
 
@@ -1526,6 +1527,8 @@ are still open, per the protocol.
   pins-first for the next unit; trade-counter reset
   correction cross-referenced from the 1846 trucks unit.
 
+- 1.24.0 (2026-11-03): 2317 release-day unit folded: story pin completed through the verified flow (revealed rewards survivor x1, paw print 200, black rock 207.3K, dialog to the treasure-map banner, pin gone at close); March true centre (500,751) in this window geometry, estimates above the active area all dead, matching the zombie-invasion March lesson (500,755); ground contextual buttons, never estimate them (hammer 490,600, magnifier 499,599, estimates dead); radar stamina read did NOT move with the story march (shown -5, read stayed 120) - unresolved discrepancy, dispatch proven by the pin-card reward reveal, not by stamina; 11 rewards claimed, points 183 to 194, stored 0 of 40, stamina 91, full restore 11-5 03:31:43; NO TIPS dialog on either Claim All tap, further Issue #235 evidence commented by this run, delta test still owed; third consecutive partial carrying the same pin blocker, R7 next-unit order is the red-dotted blue skull pin first, then the axe pins, every pin point re-grounded on the unit's own screenshot.
+
 
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
@@ -1657,3 +1660,143 @@ are still open, per the protocol.
   in the activity metadata, before any Quick Execute
   batch. Tracker untouched for partial, per the queue
   rules.
+
+
+## What the 2026-11-03 2317 unit added - release day, story pin completed, March centre 500,751, 11 claims, pins carried third time
+
+- Ticker-2304, unit radar-2026-11-03-2203, about 23:05
+  to 23:17 local, status partial. Evidence in
+  `_records_/2026-11-03/radar-tasks/2317-queue-run.md`.
+  Posture: release (live duel.py at entry: duel day 3,
+  Age of Science, radar posture release; the unit window
+  text reads "duel day 3 - radar release", matching the
+  live posture).
+- Entry: radar entry on the first tap at norm (57,715),
+  the proven dish cluster from the 0636, 1010, 1450 and
+  1913 units. Entry verified by its own reads: Lv.13,
+  radar points 183, stored 2/40, stamina 120, restore
+  line "12 Radar Task(s) will be restored in 04:24:25"
+  at entry (later frames 04:23:18 down to 04:15:18, and
+  the full-restore line "Fully restore at 11-5 03:31:43
+  local time" once stored hit 0/40). Bottom-bar buttons
+  in this window respond at norm (500,952), confirmed
+  by two successful Quick Execute taps and two
+  successful Claim All taps at that point.
+- Pins first (rule R7, from the 1913 unit): the 1913
+  unit's first-action pin was the purple question-mark
+  story pin top left. This unit worked it first, before
+  any Quick Execute batch. Pin tap at norm (231,323)
+  opened the card: "A Distressed Survivor", "Look for
+  survivors after the cold wave...", "Break the ice to
+  view rewards", countdown 04:03:28. Go at norm
+  (500,946) jumped to the world map task location:
+  "Thawing Soon 00:02:51", snowflake bar 1,000/1,000.
+- Ground contextual buttons, never estimate them: a
+  hammer tap at the estimate (449,548) did nothing; a
+  visually grounded tap at (490,600) opened the deploy
+  panel (Squad 1, 25.17M vs Unknown, Evenly Matched,
+  Unit Count 2,231/2,231, march 8 seconds, stamina cost
+  shown as -5). March button: taps at (500,691),
+  (500,715) and (500,730), a 1 second long-press at
+  (500,700) and a double-click at (500,691) all left
+  the panel open with stamina unchanged. A visually
+  grounded tap at (500,751) closed the panel. The March
+  button's true centre is (500,751) in this window
+  geometry, matching the zombie-invasion March lesson
+  (500,755) - the visual centre estimate sits above
+  the button's active area.
+- Story completion, verified step by step: march
+  verification came from the pin itself, not from
+  stamina - back on the radar, the same pin's card now
+  showed the revealed rewards (survivor x1, paw print
+  x200, black rock 207.3K), exactly the verified story
+  flow's step 4. Go again at (500,946) returned to the
+  task location with the simplified card; the green
+  magnifier button grounded at (499,599) (an estimate
+  tap at (449,553) did nothing) opened the story dialog
+  ("Are you Violet?"). Tapping the bottom of the dialog
+  advanced it through "...and helped delay CL-7." to
+  the closing line "Take me to your base. I'll prove it
+  through my actions!" and the top banner "...th the
+  treasure map - congrats!". One more bottom tap closed
+  the dialog. Back on the radar, the story pin is gone
+  in the closing frames: the pin completed and its
+  reward was paid through the Claim All below. This is
+  the first story-pin completion recorded since the
+  2026-10-25 pin.
+- Stamina discrepancy, unresolved and recorded, not
+  smoothed over: the radar stamina read stayed 120
+  through the story march despite the shown -5 cost,
+  and the panel close plus March Queues 0/4 did not by
+  themselves prove dispatch. Dispatch is proven by the
+  pin-card reward reveal above. The story march's shown
+  -5 never moved the radar stamina read in this unit.
+- What was done: Quick Execute 1: 2 tasks, stamina 120
+  to 100, stored stayed 2/40. Bar flipped to Claim All:
+  "9 task rewards can be claimed". Claim All 1: 9
+  rewards claimed, no TIPS dialog (as in the 1913 unit;
+  contrast the 1450 unit's pre-rollover TIPS dialog).
+  Popup: radar item 80, paw print 200, blue triangle
+  948, EXP 7.6M, drone item 1.6K, black rock 207.3K,
+  coin 1.9M, iron 2.0M, food 1.5M, Lv.1 chest 1,
+  survivor portrait 1. Radar points 183 to 192 (plus 9,
+  exactly the claim count), stored 2/40 to 0/40. Bar
+  flipped to Quick Execute: "You can complete 1 tasks,
+  requires 10 Stamina." Quick Execute 2: 1 task, stamina
+  100 to 91 (10 spent, 1 regenerated), stored stayed
+  0/40. Bar flipped to Claim All: "2 task rewards can
+  be claimed". Claim All 2: 2 rewards claimed, again
+  with no TIPS dialog. Popup: radar item 20, EXP 3.3M,
+  drone item 800, food 1.2M, coin 319.2K, iron 316.8K.
+  Radar points 192 to 194 (plus 2, exactly the claim
+  count), stored 0/40. The bottom bar then showed no
+  offer at all: no Quick Execute, no Claim All.
+- Totals in this unit: rewards claimed 11 (9 + 2);
+  radar points 183 to 194 (plus 11, exactly the claim
+  count); tasks executed 3 via Quick Execute (2 + 1),
+  plus the story pin task completed through its full
+  flow. Popup resources summed: radar items 100, EXP
+  10.9M, drone items 2.4K, blue triangles 948, coin
+  2.2192M, iron 2.3168M, food 2.7M, plus paw prints 200,
+  black rock 207.3K, Lv.1 chest 1, survivor 1. Stamina
+  120 to 91 net (minus 29: 30 spent on Quick Execute, 1
+  regenerated; the story march's shown -5 never moved
+  the radar stamina read, see above).
+- Duel-points note, NOT a settlement: no TIPS dialog
+  on either Claim All tap, matching the 1913
+  post-rollover unit and continuing the evidence for
+  Issue #235 (duel.py says radar claims score on day 3;
+  the 1450 unit's pre-rollover TIPS dialog said they do
+  not). No VS panel read was taken and no duel-points
+  figure is claimed. The delta test (read duel score,
+  claim one batch, read again) is still owed, and Issue
+  #235 closure belongs to the daily retro.
+- Closing state (live reads, same unit): radar Lv.13,
+  radar points 194, stored 0/40, stamina 91, restore
+  line "Fully restore at 11-5 03:31:43 local time",
+  bottom bar with no offer.
+- Pin inventory at close (visible frames only, not a
+  whole-map census): a blue axe pin top left, a purple
+  arrow pin centre, and a blue skull pin top centre
+  carrying a red dot (seen in the frame before Claim
+  All 2; the closing frame's map view had shifted and
+  showed only the axe and arrow pins, both with no red
+  dot visible). The story question-mark pin is gone,
+  completed in-unit.
+- Per the release standard, pins left unattempted make
+  this unit partial, never done. The axe and skull pins
+  are the same standing pins carried since the 1450 and
+  1913 units, so this is the third consecutive partial
+  carrying the same pin blocker. Under rule R7 the pins
+  become the FIRST action of the next radar unit,
+  starting with the red-dotted blue skull pin (a
+  finished-task pin pays instantly on tap, per the
+  activity metadata) and then the axe pins, whose class
+  is still unidentified - the next unit must tap them
+  under the release handling rule rather than inventory
+  them again. The map-view shift between the pre-claim
+  and closing frames means the next unit must re-ground
+  every pin point on its own current screenshot, never
+  reuse the positions recorded here blindly.
+- Tracker untouched for partial, per the queue rules.
+  No earlier claim superseded.
