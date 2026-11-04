@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T21:52:04Z
+modified: 2026-11-04T02:50:00Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-0304 alliance-train execution record 2026-11-03 0315 queue run (partial, 52,548 no-pan repeat, grounding mislabels Secret Command Post)
   - source: ticker-1104 alliance-train execution record 2026-11-03 1124 queue run (partial, fourth same-blocker partial today, banner absent, station not viewed, Issue 205)
   - source: ticker-1334 perception-scout execution record 2026-11-03 1345 queue run (partial, station preparation-only surface, LOOT box located on the world map)
+  - source: ticker-1734 alliance-train execution record 2026-11-03 1742 queue run (partial, fifth check-only outcome today, banner absent, station not viewed)
 ---
 
 # Alliance train
@@ -870,6 +871,39 @@ Measured in the 0110 train unit (ticker-0104, window mode
   the next tick re-produces train and resumes the
   check. The re-grounding owed by Issue 205 is still
   owed. No earlier claim superseded.
+
+## What the 2026-11-03 1742 unit added - fifth check-only outcome today, banner absent, station not viewed
+
+- Ticker-1734, unit train-2026-11-03-1430, about
+  17:41 to 17:42 local, status partial. Evidence in
+  `_records_/2026-11-03/alliance-train/1742-queue-run.md`.
+- Left the Mail category list with its back arrow at
+  grounded (62,952) and inspected the live base view.
+  No "Boarding closes in" banner under the resource
+  bar, and the left icon column (temperature, Secret
+  Command Post badge 1, trucks, radar, hammer) shows
+  no train icon. This is the same state as the 0035,
+  0315, 0752 and 1124 train units today, the fifth
+  such check-only outcome of the day.
+- No boarding action was taken, no Trade Contracts
+  spent, no train summoned, no conductor role
+  touched. The station itself was not viewed, so a
+  preparing train is neither confirmed nor ruled out
+  beyond the absent banner - the same honest caveat
+  as the earlier units today. Ground taps were not
+  used to probe for the station, per the 0752 lesson
+  that they open other players' profile cards on this
+  map.
+- No new Issue was filed for this repetition: the
+  blocker is a missing boarding window (trains run
+  1 regular plus 2 Mega Express per day with short
+  windows), not a tap-method failure, so rule R2's
+  method-escalation ladder does not apply; the
+  repetition is named here and in the pass note for
+  the retro instead. Tracker untouched, per the rule
+  for partial units; the next tick re-produces train
+  and resumes the check. Game left on the base view.
+  No earlier claim superseded.
 
 ## What the 2026-11-03 1345 scout unit added - station panel is a preparation-only surface, LOOT located (scout read, not a train execution)
 
