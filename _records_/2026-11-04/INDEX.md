@@ -2215,3 +2215,8 @@ Full detail in pr-integration/1430-run.md.
 - Pass closed after 1 unit (failed). Token released.
 - Integrator pass pr-integration-2026-11-04-1500, done (batch pass): records PR 279 merged with a merge commit (4ec325a156, inside the 1500 batch window, branch kept); three older records PRs carried on unchanged single-file action-log conflicts (187, 256, 265, no repeat comment); PR 286 (post-1500 batch) found already open at the sweep (this pass opened no duplicate); no knowledge or code PR open, no escalation.
   Full detail in pr-integration/1500-run.md.
+
+## 15:19 to about 15:27 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1519, done (non-batch): no knowledge or code PR open; four records PRs carried with a decision (286 clean awaiting the 19:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); checker reported due for the 15:00 window but the 15:00 batch had already landed via PR 279 at 15:10, so this pass is not a batch pass; no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1519-run.md.
