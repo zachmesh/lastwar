@@ -849,3 +849,21 @@ of 2026-10-28.
 
 - Catch-all pass pr-catchall-2026-11-04-0439, no-op: no adopted open PR, five open PRs scanned and none owned by this job (PR 269 organizer 0432, PRs 265, 264, 256 and 187 integrator records), 41 open issues all class-labeled, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
   Full detail in pr-catchall/0439-run.md.
+
+## 04:40 to about 04:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-0440.
+  Own PRs checked first (none owned, no comments owed);
+  owner-decision Issues #154 (still no owner answer, 0
+  comments) and #132 (duel-score-only answer stands,
+  building/research deferred) checked, no unit staged
+  or invented for either.
+  Plan staged 0 units (already_present 69, reaped 0,
+  expired 0); pre-reset sweep skipped (04:00 hour, not
+  17:00; tonight's pair is the 17:00 run's job); scout
+  diff on the Nov 3 observation applied with zero
+  changes (observed 0, actionable 0, enqueued 0,
+  candidates 0, unexplained red dots 0); 0 withdrawals;
+  pool inbox 65, claimed 1, done 791, upcoming 49.
+  Full record:
+  _records_/2026-11-04/queue-planning/0440-run.md.
