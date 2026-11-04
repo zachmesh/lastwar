@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T19:40:23Z
+modified: 2026-11-04T23:36:33Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-0304 alliance-donations execution record 2026-11-04 0309 queue run (partial, 5 coin donations, count 6 of 30 to 1 of 30 live)
   - source: ticker-0734 alliance-donations execution record 2026-11-04 0741 queue run (partial, 13 coin donations 14 of 30 to 1 of 30 live, ninth replenishment data point, burst shortfall corrected by a make-up tap)
   - source: ticker-1034 alliance-donations execution record 2026-11-04 1046 queue run (partial, 10 coin donations 10 of 30 to 1 of 30 plus a landing 1 of 30 test tap, tenth replenishment point, 1 of 30 avoidance superseded)
+  - source: ticker-1504 alliance-donations execution record 2026-11-04 1504 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, sixth consecutive ticker pass to fail this way, describe route also failed, 30-second wait retry failed, Issue 284)
 ---
 
 
@@ -2210,3 +2211,12 @@ enqueued for after the cooldown (not before about
 - Closing state, partial, day not done: at close the coin button is greyed with a regen timer (00:16:35 at the test-tap read), so the numeric Donation Count is hidden and a live 0/30 label cannot be read in this unit. Under the hard closing rule (rule R1) the unit closes partial, the tracker stays untouched, and a named re-read unit is enqueued for after the cooldown (not-before about 11:02 local, after the 16.5 minute timer clears). The panel was left open on the Rallied Attack panel, button greyed with timer.
 - Replenishment, tenth data point: the 10/30 entry count is regeneration since the 0741 unit's 1/30 close at 07:41, about 9 counts in about 2 hours 55 minutes, about 3.1 per hour, back in line with the sixth, seventh and ninth points. The timer-implied rate, about 16.5 minutes per count (about 3.6 per hour), matches the roughly 3 per hour rate observed across the day. Corroboration from the next unit: the harvest 1101 entry read the same greyed button at 00:11:45, down from 00:16:35, consistent with the timer running. The rate is still NOT measured (the eighth point's bursty or clock-gated pattern stands). See the tenth data point in Open questions. Issues #160 and duplicate #174 stay open pending retro consolidation; this run comments the tenth point onto #160, neither issue is closed here.
 - Red lines held: no diamonds spent, no paid button tapped, no alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-04 1504 unit added - screen-capture failure, sixth consecutive pass, nothing measured
+
+- Unit donations-2026-11-04-1403 by ticker-1504, about 15:04 to 15:15 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1344, 1404 and 1434 sections). Evidence in `_records_/2026-11-04/alliance-donations/1504-queue-run.md`. No different-device dialog appeared.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: computer.control activate (session cc-464) selected the LastWar window for background input but captured no observation with "Failed to start stream due to audio/video capture failure"; computer.control screenshot, computer.observe (compact) and computer.observe (image view) failed with the same error. A fresh computer session (cc-465, after ending cc-464): open_app LastWar returned outcome_unknown and was not repeated, computer.observe (image view) failed with the same error, computer.control describe failed with the same error, so even the accessibility-tree route was unavailable, and a final computer.observe after a 30-second wait failed with the same error. The device connection health was healthy on both native and web transports, LastWar (pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost.
+- No blind taps were dispatched, under the check-first rule. The Alliance menu, the Alliance Techs tree and the Rallied Attack panel were never opened, no Donation Count was read live, and no coin donation was made or verified.
+- Recurrence, not a new failure class: this is the sixth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504), now across six activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the fifth and sixth occurrences onto #282. The 1504 detail that a 30-second wait does not clear the failure, and that describe fails as well, is new evidence against a transient-stream reading, but it adds no new diagnosis beyond the game-window capture stream already narrowed in the 1404 section.
+- Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The sync reaped 4 expired units in this pass and the inbox held 70 units. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
