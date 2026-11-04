@@ -3148,3 +3148,19 @@ of 2026-10-28.
   and re-commented; records PR 187 conflict carried,
   head unchanged. Full detail in
   pr-integration/1830-run.md.
+
+## 18:32 to about 18:45 - Tool-developer pass, duel DST boundary fix (PR 243)
+
+- Tool-developer pass tool-development-2026-11-03-1832.
+  Fix, not a no-op: issue 242 (filed after the 1732 run)
+  showed the duel day rolling at 18:00 PST, not 19:00,
+  after the daylight-saving end. PR 243 (branch
+  work/duel-dst-boundary-242, commit fe8dee1240) moves
+  _tools_/duel.py to absolute 24 hour boundaries
+  (02:00 UTC daily) and records the boundary in
+  _tools_/duel_schedule.json; validated on an isolated
+  scratch pool only (py_compile plus 13 fixture
+  assertions, including the 18:07 PST panel reading
+  Day 3 with 23.9h left). Issue 242 commented, not
+  closed; knowledge pages left to the organizer. Full
+  detail in tool-development/1832-run.md.
