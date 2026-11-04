@@ -3031,3 +3031,16 @@ of 2026-10-28.
   advanced the head; records PR 187 conflict carried,
   head unchanged. Full detail in
   pr-integration/1715-run.md.
+
+## 17:30 to about 17:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-1730.
+  Non-batch pass per the checker (outside every batch
+  window, next batch 19:00): no knowledge or code PR
+  open; records PR 236 (2026-11-02) clean and awaiting
+  the 19:00 batch; records PR 207 conflict re-verified
+  at current head e50e214a (same two files), no
+  duplicate comment since only run records advanced the
+  head since the 1700 re-check; records PR 187 conflict
+  carried, head unchanged. Full detail in
+  pr-integration/1730-run.md.
