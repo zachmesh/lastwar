@@ -1654,3 +1654,16 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   unchanged heads, so no comment was repeated; no
   owner-gated PR arose. Full detail in
   pr-integration/1015-run.md.
+- Radar unit radar-2026-11-04-1003, partial, ticker-1004: duel day 3
+  release, 13 claims, radar points 206 to 219, stored 0/40, stamina
+  131 to 81. Blue skull pin identified as Defeat Doom Elite 1 time
+  (Lv.1, 20 stamina, suggested power 1,096,500); march not started,
+  unit 15 minute cap reached, card left open on the target - first
+  action of the next radar unit per rule R7. Full detail in
+  radar-tasks/1005-queue-run.md.
+- Arms Race unit arms-race-2026-11-04-1003, partial, ticker-1004:
+  first unit of the Unit Progression phase (ends about 14:10 local),
+  score 0, tier-3 gap 75,000; only in-scope path is training queues,
+  which belong to the training unit, so this unit scored nothing and
+  claimed nothing; counter chest 3/8 not claimable, no bouncing chest
+  or reward red dot. Full detail in arms-race/1025-queue-run.md.
