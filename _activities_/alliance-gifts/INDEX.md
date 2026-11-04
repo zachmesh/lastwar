@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T16:37:19Z
+modified: 2026-11-04T20:48:17Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-0204 alliance-gifts execution record 2026-11-04 0216 queue run (done, 10 Regular exact plus 100, Premium tab point corrected to 694,269, Issue 183 evidence)
   - source: ticker-0434 alliance-gifts execution record 2026-11-04 0450 queue run (done, 20 Regular plus 6 Premium, progress exact plus 200 within the unit, cross-unit rise 118,040 unexplained, Issue 183 evidence)
   - source: ticker-0804 alliance-gifts execution record 2026-11-04 0820 queue run (done, 34 Regular and 2 Premium, label-text Alliance entry, Premium Claim All sits right, fourth exact within-unit progress window, Issue #183)
+  - source: ticker-1134 alliance-gifts execution record 2026-11-04 1147 queue run (partial, Alliance entry twice no panel, foreground precondition repeat, re-grounding did not rescue background input)
 ---
 
 
@@ -1062,3 +1063,11 @@ one file per execution.
 - Exit note: the gifts screen was exited to the Alliance panel with its back arrow, but the Alliance panel's own back arrow then took two background taps with no change (the same no-reach class as the shield icon above), so that method was stopped under rule R2 and the game was left on the Alliance panel, open and idle. No Esc key was used. The next unit should navigate from the Alliance panel rather than assuming the base screen.
 - Why done: both tabs were claimed per the owner rule (Claim All on Regular and Premium every round): 34 Regular plus 2 Premium, 36 gifts in total, both counts read live from the summary dialogs.
 - Issue #183, two-sided evidence commented there by this run (not a closure claim): within the unit the counter moved exactly by its own claims (plus 340) - the fourth exact within-unit window (1113, 0216, 0450, this unit) - but the before-read (188,573,310) sits 160,780 above the 0450 after-read (188,412,530) with no intervening gifts unit in this record set, so the cross-unit rise is still unexplained and remains the open part of #183. Nothing bought; no Alliance Store Buy opened; Premium gifts come from allies' purchases, not this account.
+
+## What the 2026-11-04 1147 unit added - foreground precondition repeat, re-grounded Alliance point also no-change, partial
+
+- Unit gifts-2026-11-04-1030 by ticker-1134, about 11:47 local, status partial. No "active on a different device" dialog appeared. Evidence in `_records_/2026-11-04/alliance-gifts/1147-queue-run.md`.
+- Alliance entry attempted twice from the live base frame: norm (691,750), then the re-grounded Alliance button point norm (640,722). Both taps dispatched, but the Alliance panel never opened and the following screenshots still show the base view, so neither the Regular nor the Premium tab was reached and no Claim All was tapped.
+- Repeat of the foreground precondition already in "How to enter" (retro of 2026-10-31): while Chrome stays frontmost on the Mac, background taps do not reach the Alliance button. New qualification from this unit: re-grounding the button point did NOT rescue background input - the failure is the input channel, not the point, so a third re-grounded tap in the same session is not the next step.
+- Under queue rule R2 the two no-change taps end the background-input method inside this unit. The game window was deliberately NOT forced to the foreground, because Chrome is the user's active window on the Mac and stealing its focus mid-use would disrupt the user - the rationale is recorded explicitly here, not left as an omission.
+- Transient per the 2026-10-31 precedent (later units the same day recovered), so the next tick retries rather than escalating. No gift count was read, no gift was claimed, and no red-dot state is claimed for either tab in this unit.

@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-04T20:48:17Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0204 alliance-help execution record 2026-11-04 0208 queue run (done, Alliance centre 931,709 re-confirmed, 880,720 miss recorded, header 520/1000 on new trade day)
   - source: ticker-0434 alliance-help execution record 2026-11-04 0451 queue run (done, bubble tile 814,688 left of shield 932,695, one tap clears)
   - source: ticker-0834 alliance-help execution record 2026-11-04 0837 queue run (done, Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies)
+  - source: ticker-1224 alliance-help execution record 2026-11-04 1235 queue run (failed, Mac screen-capture channel failure, no game input dispatched, not authorization, not a different-device dialog)
 ---
 
 
@@ -764,3 +765,12 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Header, read live: Today's points gained from Alliance Help 620/1,000. Visible requests were all this account's own, each already 30/30 and therefore not helpable by this account: Lv.30 Aircraft Center building, Defense Training VIII research, Weapon Training VIII research, Lv.27 Drill Ground building - the same four own rows as the 0208 and 0451 units. A list drag did not reveal further rows.
 - Help All pressed once. Header unchanged after the press at 620/1,000, so no ally help was actually available to press in this unit; the red dot reflects the own requests awaiting other allies, not pressable ally requests. This repeats the 0208 lesson (Alliance red dot is not remaining help) on the Help page itself.
 - Help panel closed with the X, back to the Alliance panel. Nothing spent.
+
+## What the 2026-11-04 1235 unit added - NEW failure mode: screen-capture channel failure before any observation, failed
+
+- Unit help-2026-11-04-1030 by ticker-1224, about 12:24 to 12:27 local, status failed (access-failed). Evidence in `_records_/2026-11-04/alliance-help/1235-queue-run.md`. This is a NEW failure class for this activity, distinct from every foreground and tap failure recorded above: the unit never reached an observation at all.
+- Capture sequence, all failed with the same error: activate LastWar, computer.observe, open_app LastWar, computer.observe again, computer.control describe, and a screenshot action - every screen-capture step failed with "Failed to start stream due to audio/video capture failure". Device state at the time: Mac online, LastWar app running fullscreen, Google Chrome frontmost; connection health connected on both native and web transports.
+- Classification, stated explicitly: this is a screen-capture channel failure, NOT a missing owner authorization and NOT a different-device dialog (no such dialog appeared). It does not contradict the foreground notes above - those concern taps that dispatch but do not reach a control, while here no screenshot existed to tap from.
+- No game input was dispatched and no tap was sent, so no in-game state changed. Help All was NOT pressed and no help count was read; nothing observed is claimed.
+- Retry rule satisfied: at least 3 capture attempts were made in this pass (activate plus repeated observe, describe and screenshot attempts) before the access failure was recorded.
+- Follow-up from the record itself: the tracker is untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit with this unit retried first. If the capture failure persists across passes, it escalates as a device-channel fault, not as a repeat of the same taps.
