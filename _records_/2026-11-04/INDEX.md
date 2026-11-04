@@ -1667,3 +1667,16 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   which belong to the training unit, so this unit scored nothing and
   claimed nothing; counter chest 3/8 not claimable, no bouncing chest
   or reward red dot. Full detail in arms-race/1025-queue-run.md.
+
+## 10:30 to about 10:38 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1030.
+  No-op pass per the checker (not due, next batch
+  11:00): no knowledge or code PR open; records PR
+  273 (records/2026-11-04, head 3ae1025, merge
+  state MERGEABLE, merge-tree clean against main
+  2b2d0b95) awaits the 11:00 batch; PRs 187,
+  256 and 265 still conflicted on the action log at
+  unchanged heads, so no comment was repeated; no
+  owner-gated PR arose. Full detail in
+  pr-integration/1030-run.md.
