@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T11:50:00Z
+modified: 2026-11-04T14:35:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-0834 secret-missions execution record 2026-11-03 0837 queue run (done, unsnapped exact-centre entry re-confirmed, assists at cap, nothing pending)
   - source: ticker-1204 secret-missions execution record 2026-11-03 1223 queue run (partial, post never entered, base view panned between measurement and tap)
   - source: ticker-0234 secret-missions execution record 2026-11-04 0248 queue run (partial, post entered, Claim buttons unresponsive)
+  - source: ticker-0534 secret-missions execution record 2026-11-04 0545 queue run (partial, second consecutive Claim-blocker partial, four variants tried, foreground still untested, Issue #171 commented by the executor)
 ---
 
 
@@ -1019,7 +1020,7 @@ secrets-2026-10-31-2257, status partial).
 - Live post state, read live: Assist Allies 5/5 (full - no assists needed or made today). Plunder Others 4/3 (not touched - PvP, forbidden without owner instruction). Your Tasks: four finished SSR tasks, each with a green Claim button, none yet claimed - Protect Refugee Camp (Lv.5), Search for Missing Refugees (Lv.5), Provide Tech Support to Refugees (Lv.5), Train Refugees (Lv.5). Per the standing rule, claiming any one finished task should collect all finished tasks at once - that claim never landed (see blocker). The row 1 Hero EXP tooltip was read live: Owned 824.4M, "It grants EXP to a specific Hero".
 - Blocker, first occurrence, named for the next unit: the Claim buttons did not respond to five background-input variants, all verified by fresh screenshot after each - single tap row 1 Claim centre norm 810,436; single tap row 1 Claim centre norm 833,436; double-click row 1 Claim centre norm 833,436; exact-pointer tap (snap_to_control false) row 1 Claim centre norm 833,436; single tap row 2 Claim centre norm 833,542. A click_element attempt on the OCR 'Claim' element instead opened the Hero EXP reward tooltip for row 1 (closed afterwards by tapping the banner area; no reward was taken, no setting changed). Background input is not dead in general this session: shop tabs, trade tabs, Events tabs and the post entry tap itself all landed. The failure is specific to the Claim buttons on this panel (and to the post back arrow at norm 86,952, which also did nothing; the working back-arrow centre, as in the Events hub, is norm 132,952, which returned to the base screen on the first tap).
 - Nothing was claimed, nothing was dispatched: no Mega Deploy was attempted, since dispatching on top of unclaimed finished tasks would stack work behind the same blocker.
-- Next secrets unit: try the Claim buttons again first (the blocker may be session-specific); if they still do not respond, the foreground-input variant from the queue design's retro note is the remaining route, since background input is the only route tried here. If this Claim blocker repeats in a second consecutive secrets unit, it must be written into this profile's metadata under rule R2 and named in the round summary - this first occurrence is recorded here as a pending retest, not yet as a permanent R2 entry.
+- Next secrets unit: try the Claim buttons again first (the blocker may be session-specific); if they still do not respond, the foreground-input variant from the queue design's retro note is the remaining route, since background input is the only route tried here. If this Claim blocker repeats in a second consecutive secrets unit, it must be written into this profile's metadata under rule R2 and named in the round summary - this first occurrence is recorded here as a pending retest, not yet as a permanent R2 entry. (2026-11-04 0545 correction: this sentence misstates rule R2 - the design text requires a changed method on the second consecutive partial, and only the third writes the blocker into the metadata and changes the entry route before further units run. The 0545 unit arrived with changed methods, satisfying the second-partial requirement; the metadata write falls due on a third consecutive partial, not this one. See the 0545 section below.)
 - Costs: about 2 minutes of unit time, 0 diamonds.
 ## Open questions
 
@@ -1039,3 +1040,13 @@ secrets-2026-10-31-2257, status partial).
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
   new own tasks after the dispatched ones return.
+
+## What the 2026-11-04 0545 unit added - second consecutive Claim-blocker partial, foreground still untested
+
+- Ticker-0534, unit secrets-2026-11-04-0257, about 05:40 to 05:45 local, status partial - post entered and read live, but no Claim button responded to any input variant, so nothing was claimed or dispatched. Tracker untouched, per the partial rule. Evidence in `_records_/2026-11-04/secret-missions/0545-queue-run.md`. Second consecutive partial on this blocker (the 0248 unit of 2026-11-04 02:48 failed the same claims with 5 background taps); this unit arrived with changed methods under queue rule R2 and commented the matching open issue instead of filing a duplicate.
+- Entry, worked: base view left column grounded fresh with visual grounding on the same screenshot - green face norm y 462 to 518, light-blue vehicle-front icon y 538 to 594, white pickup y 614 to 670, all at x 10 to 90. One tap at norm 50,642 on the pickup opened SECRET COMMAND POST, verified by title. This is the same entry the 0248 unit used.
+- Live post state, read live: Assist Allies 5/5 (full - no assists needed or made today). Plunder Others 4/3 (not touched - PvP, forbidden without owner instruction). Your Tasks badge 9. Four finished tasks, each with a green Claim button, none yet claimed: UR Rescue Test Subject (Lv.5), UR Rescue Scientist (Lv.5), SSR Protect Refugee Camp (Lv.5), SSR Search for Missing Refugees (Lv.5). Per the standing rule, claiming any one finished task should collect all finished tasks at once - that claim never landed. Note the roster change from the 0248 read (four SSR tasks including Provide Tech Support and Train Refugees): the finished-task list is a live read that rotates as tasks complete, not a fixed roster - do not treat the 0248 list as still current.
+- Blocker, four variants tried, each verified no-change by a fresh screenshot after it: (1) window moved to (100,30) via set_window_frame, then a tap on row 1 Claim at norm 810,435 - no change; (2) long-press on row 1 Claim (mouse down, 1.5 second hold, up) at norm 810,435 - no change; (3) tap on row 4 Claim at norm 810,770 (a different row - the claim-all rule means any row should collect all) - no change; (4) title-bar click at norm 320,18 to raise the window, then re-observed: the control channel still reports mode background_window. set_window_frame moves the window but never brings it to the foreground, and the title-bar click did not raise it either. A true foreground tap was therefore never actually achieved in this unit, so foreground remains an untested variant, not a failed one. click_foreground is unavailable for this game: it requires an Accessibility control and the game exposes only OCR controls. Navigation taps in the same session all landed (trade entry, tab switch, back in the trucks unit), so input reaches the game - only the Claim buttons do not respond.
+- Rule R2 status, corrected: the design text requires a changed method on the second consecutive partial (satisfied here: window move, long-press, different row, title-bar raise) and only the third consecutive partial writes the blocker into the activity metadata, changes the entry route before any further unit of this type runs, and is named in that day's round summary. A fourth identical partial is a process failure reported to the owner. This corrects the 0248 section's wording, which had the metadata write falling due on the second partial.
+- Issue linkage: the executor commented on existing open issue #171 (Green Claim buttons unresponsive to background input across two screens) with this unit's evidence; related open issue #165 covers the same screen's Mega Deploy and Assist buttons. No new issue filed here. Next unit: try a genuine foreground route (for example Dock or app-icon activation) before concluding the buttons are dead.
+- Costs: about 6 minutes, no stamina or items spent.
