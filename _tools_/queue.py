@@ -590,7 +590,9 @@ def _next_local_time(after_local, hhmm):
 def cycle_start_local(item, when_local):
     """Start of the cadence window containing when_local, mirroring
     the tracker rules - every-run windows start at the segment
-    anchors every 4 hours, daily-reset at the reset time,
+    anchors every 4 hours, daily-reset at the reset boundary
+    (the absolute reset_utc instant when the regular carries one,
+    else the reset_local wall time),
     weekly-thu at Thursday 00:00, fixed-slots at the latest
     listed slot at or before now (yesterday's last slot before
     the first slot of the day)."""
@@ -610,6 +612,25 @@ def cycle_start_local(item, when_local):
                                microsecond=0)
         # No slots listed: fall through to the anchor handling below.
     if cadence == "daily-reset":
+        parsed_utc = _parse_hhmm(item.get("reset_utc", ""))
+        if parsed_utc is not None:
+            # Absolute UTC boundary (issue #247): the game day
+            # resets at 02:00 UTC, so the local wall time shifts
+            # with daylight saving - 18:00 PST / 19:00 PDT. A wall
+            # step would keep the old day an hour too long after
+            # the transition, exactly the duel.py failure in #242.
+            # Timestamps are the absolute measure here, as in
+            # duel.py: wall-clock arithmetic on an aware datetime
+            # sharing one tzinfo is not elapsed time.
+            hh, mm = parsed_utc
+            if when_local.tzinfo is None:
+                when_local = when_local.replace(tzinfo=LOCAL_TZ)
+            when_utc = when_local.astimezone(timezone.utc)
+            cand = when_utc.replace(hour=hh, minute=mm, second=0,
+                                    microsecond=0)
+            if cand > when_utc:
+                cand -= timedelta(days=1)
+            return cand.astimezone(LOCAL_TZ)
         reset = item.get("reset_local") or "19:00"
         hh, mm = (int(x) for x in reset.split(":"))
         boundary = when_local.replace(hour=hh, minute=mm, second=0,
@@ -659,7 +680,14 @@ def plan_windows(item, now_local, horizon_end):
         if cadence != "weekly-thu" or \
                 cand + timedelta(days=1) > now_local:
             out.append(cand)
-        cand += step
+        if cadence == "daily-reset" and item.get("reset_utc"):
+            # Absolute 24h step, not a wall-clock day: across the
+            # daylight-saving transition a wall step would move
+            # the boundary to 03:00 UTC instead of 02:00 UTC.
+            cand = datetime.fromtimestamp(cand.timestamp() + 86400,
+                                          tz=LOCAL_TZ)
+        else:
+            cand += step
     return out
 
 
