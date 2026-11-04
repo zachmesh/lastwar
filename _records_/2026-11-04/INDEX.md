@@ -1431,3 +1431,70 @@ of 2026-10-28.
   was repeated; no owner-gated PR arose; local main
   fast-forwarded to 0ed17ae0. Full detail in
   pr-integration/0845-run.md.
+
+## 08:35 to about 08:49 - Ticker pass
+
+- Help unit help-2026-11-04-0630, done, ticker-0834: Help All
+  pressed; only this account's own 30/30 requests visible,
+  points unchanged 620/1,000, no ally helps available.
+- Star-ceremony unit star-ceremony-2026-11-04-0630, done,
+  ticker-0834: no trophy icon beside the Alliance icon, so
+  no Star Ceremony waiting; duel total read live on the
+  Today's Theme tab at 4,772,100 against the 3,600,000
+  target (exceeded by 1,172,100, Age of Science day,
+  09:21:00 remaining at the read); alliance totals Apex
+  549,654,034 (40 percent) vs [Kmf] 811,024,302
+  (60 percent).
+- Train unit train-2026-11-04-0630, partial, ticker-0834:
+  no "Boarding closes in" banner and no train icon in the
+  left column; station not viewed, preparing train
+  neither confirmed nor ruled out beyond the absent
+  banner. Tracker untouched.
+- Passes unit passes-2026-11-04-0657, done, ticker-0834:
+  checked only, nothing claimable - Monthly Pass Daily
+  Pickup Claimed at 17 days left, Weekly Free Supply
+  Claimed, S2 Drone Components, S1 Drone Parts and Coin
+  weekly passes all unowned 4 dollars 99 offers;
+  Legendary Take All 19 dollars 99 not tapped.
+- Events unit events-2026-11-04-0657, done, ticker-0834:
+  full hub sweep, nothing claimable - Arms Race Base
+  Building phase score 0 (chests 6,250/12,500/30,000
+  unreached, cumulative 3/8), General's Trial 3/10
+  instructors (rewards pay at event end, none complete),
+  Desert Battlefield registered 19/20, Wanted Boss
+  Code 39 not out (Go countdown 08:16:51, best attack
+  1,097,397,868 vs 1.5B+ tiers), Community Discord
+  binding Claimed. No Zombie Invasion tab in the hub,
+  re-confirming the zombie chain stays closed.
+- Trucks unit trucks-2026-11-04-0657, done, ticker-0834:
+  quotas already full at live entry read, Trade 5/5 and
+  Plunder 4/4, no settlement pending, no action; one
+  wrong tap opened the Secret Command Post and was
+  left untouched before the trade entry at norm
+  55,578 opened Intercity Trade.
+- Secrets unit secrets-2026-11-04-0657, partial,
+  ticker-0834: four finished tasks (UR Rescue Test
+  Subject, UR Rescue Scientist, SSR Protect Refugee
+  Camp, SSR Search for Missing Refugees) unclaimed -
+  Claim buttons unresponsive to background taps (two
+  taps on row 1, one pivot tap on row 2, screen
+  verified unchanged, badge still 9); Mega Deploy and
+  Reward Recovery not reached. Tracker untouched.
+- Treasures unit treasures-2026-11-04-0657, done,
+  ticker-0834: fragments M1 12, M2 12, M3 0, M4 7,
+  M5 2, M6 5, M7 11, chest progress 4/15; M3 at zero
+  means no complete set, so no dig made.
+- VIP unit vip-2026-11-03-1900, partial, ticker-0834:
+  VIP screen never reached - VIP13 badge taps
+  unresponsive (two taps, then a fresh profile
+  re-entry pivot and a third tap, all no change), so
+  the Daily Freebie and login chest states are unread;
+  this is the standing repeat blocker recorded in the
+  activity metadata. Tracker untouched.
+- No zombie seeding: no Zombie Invasion tab in the
+  Events hub, consistent with the event close of
+  2026-10-30 and unit 066 closing the chain.
+- Computer sessions cc-439 (dropped mid-pass) and
+  cc-440 (restarted, no game state lost). No
+  different-device dialog appeared in this pass.
+  Token released.

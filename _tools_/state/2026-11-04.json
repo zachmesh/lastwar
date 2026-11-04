@@ -6,8 +6,8 @@
  },
  "help": {
   "status": "done",
-  "at": "2026-11-04T12:51:54",
-  "note": "Base help bubble pressed, tile cleared"
+  "at": "2026-11-04T16:37:29",
+  "note": "Help All pressed; own 30/30 requests only, points 620/1000 unchanged"
  },
  "mail": {
   "status": "done",
@@ -16,22 +16,27 @@
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-11-04T12:55:57",
-  "note": "No trophy icon waiting on base screen"
+  "at": "2026-11-04T16:39:21",
+  "note": "No ceremony waiting; duel total 4772100 vs 3600000 target"
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-04T13:12:16",
-  "note": "0511 shop surfaces checked, nothing claimable"
+  "at": "2026-11-04T16:41:24",
+  "note": "Checked only, nothing claimable"
  },
  "trucks": {
   "status": "done",
-  "at": "2026-11-04T13:39:34",
+  "at": "2026-11-04T16:46:00",
   "note": "Quotas full at entry 5/5 and 4/4, no action"
  },
  "events": {
   "status": "done",
-  "at": "2026-11-04T13:19:48",
-  "note": "0519 hub sweep, nothing claimable"
+  "at": "2026-11-04T16:43:47",
+  "note": "Full hub sweep, nothing claimable"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-04T16:47:55",
+  "note": "No complete set (M3 0), no dig"
  }
 }
