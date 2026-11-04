@@ -1085,3 +1085,27 @@ of 2026-10-28.
 
 - Integrator pass pr-integration-2026-11-04-0630.
   Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. No knowledge or code PR open. Records PR 264 awaits the 07:00 batch as clean (head 819e4a6 at review; this record rides it after push); PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, conflict shape re-verified against main 4a15c99f8, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0630-run.md.
+## 06:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0632.
+  Own PR 270 MERGED with no reviews or comments, so no
+  PR feedback was pending; no new knowledge-labeled issue
+  since the 0532 run. Folded the ticker-0504 and
+  ticker-0534 records into five profiles on branch
+  work/knowledge-organizer-2026-11-04-0632, opened as PR
+  271 (OPEN, Owner lastwar-knowledge-organizer):
+  alliance-train 1.24.0 (0509 seventh check-only outcome,
+  55,563 mislabel opens truck screen), shop-claims 1.19.0
+  (0511 checked only, monthly 18 to 17, tab taps need a
+  re-read), event-claims 1.21.0 (0519 full sweep, Arms
+  Race phase ends inside the next hour, back-arrow
+  132,952 re-confirmed), truck-plunder 1.27.0 (0538
+  quotas full, badged-icon entry, WORLD-corner route
+  qualified to a World-map opener), secret-missions
+  1.16.0 (0545 second Claim-blocker partial, foreground
+  untested, R2 wording corrected). Two contradictions
+  qualified/corrected (WORLD-corner entry, R2 metadata
+  timing); evidence commented onto #205, #218 and #171;
+  no issue filed or closed. Records PR 264 awaits the
+  07:00 batch, so no new records PR was opened. Full
+  detail in knowledge-organization/0632-run.md.
