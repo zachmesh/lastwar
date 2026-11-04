@@ -1343,3 +1343,14 @@ of 2026-10-28.
   centre; game left on the Alliance panel after its back arrow took
   two no-change background taps. Full detail in
   alliance-gifts/0820-queue-run.md.
+
+## 08:30 to about 08:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0830.
+  Non-batch pass per the checker (not due, next batch
+  11:00): no knowledge or code PR was open. Records PR
+  273 (records/2026-11-04, head 57c44191, merge-tree
+  clean) awaits the 11:00 batch; PRs 187, 256 and 265
+  still conflicted on the action log at unchanged
+  heads, so no comment was repeated; no owner-gated
+  PR arose. Full detail in pr-integration/0830-run.md.
