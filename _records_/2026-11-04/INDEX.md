@@ -2091,3 +2091,5 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
 - Pass closed after 1 unit (failed). Token released.
 - Integrator pass pr-integration-2026-11-04-1345, done (non-batch): PR 283 merged (squash, branch deleted, local main synced to 35871b47); four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
  Full detail in pr-integration/1345-run.md.
+- Integrator pass pr-integration-2026-11-04-1400, done (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+ Full detail in pr-integration/1400-run.md.
