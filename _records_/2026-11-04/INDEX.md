@@ -1825,3 +1825,37 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   the action log at unchanged heads, so no comment
   was repeated. Full detail in
   pr-integration/1130-run.md.
+
+## 11:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-1132.
+  Own PR 277 MERGED with no reviews or comments, so no
+  PR feedback was pending; no new knowledge-labeled issue
+  since the 1032 run (newest remains #247). Folded the
+  ticker-1034 and ticker-1104 records into three profiles
+  on branch work/knowledge-organizer-2026-11-04-1132,
+  opened as PR 280 (OPEN, Owner
+  lastwar-knowledge-organizer): alliance-donations
+  1.31.0 (1046, 10 coin donations 10/30 to 1/30, test
+  tap at 1/30 LANDED on Tech EXP 19.7K to 19.9K, so the
+  greyed 00:16:35 timer is the exhausted state, not a
+  failed tap - the 1/30-avoidance note in the 2014,
+  2340, 0309 and 0741 sections is superseded, with the
+  six earlier failures standing as history and the
+  mechanism difference unexplained; tenth
+  replenishment point, about 9 counts in about 2 hours
+  55 minutes, commented on Issue #160), resource-
+  collection 1.22.0 (1101, farmland +2.1M food and
+  left-side +1.4M coin verified by HUD deltas, 0755
+  points re-confirmed, right side and top edge unswept
+  so the full sweep stays incomplete), survivor-intake
+  1.26.0 (1122, gate line verified live with 3
+  question-mark survivors, fullscreen crop-grounded
+  figure tap dispatched but no card opened, so the
+  blocker is now taps-not-opening-cards; evidence
+  already commented on Issue #168 by the ticker pass).
+  1 contradiction superseded, 0 stale marked, 0 gaps
+  filed, no issue closed - closure belongs to the daily
+  retro. Records PR 279 awaits the 15:00 batch, so no
+  new records PR was opened. Full detail in
+  knowledge-organization/1132-run.md.
