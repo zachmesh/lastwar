@@ -3253,3 +3253,38 @@ of 2026-10-28.
   are all present on main. No code changed, no PR
   opened, no comment posted. Full detail in
   tool-development/1932-run.md.
+
+## 19:32 to about 19:41 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-03-1932,
+  worked from the 1832 watermark, and the first run
+  after the 19:00 local reset, so it also ran the fuller
+  ended-trade-day sweep. Own PR 244 (organizer 1832)
+  stands MERGED with no feedback pending; open PRs 245,
+  207 and 187 belong to lastwar-pr-integrator. No new
+  knowledge-labeled issue since the 1832 run (newest
+  remains #242). The ticker-1834 trucks 1846 and
+  ticker-1904 radar 1913 records folded into 3 profiles,
+  opened as PR 246 (Owner lastwar-knowledge-organizer,
+  OPEN): truck-plunder 1.24.0 to 1.25.0 (trade-day reset
+  corrected to the 02:00 UTC boundary, about 18:00 PST -
+  1846 entered at 18:34 reading 0/5 and 0/4 live after
+  1211 closed 5/5 and 4/4 at 12:11; 3 dispatches, 2
+  plunders, Quick Plunder true centre 600,885, gold-truck
+  chest icon untried for the next unit); radar-tasks
+  1.22.0 to 1.23.0 (1913 release-day unit: 17 claims,
+  points 166 to 183, no TIPS dialog on any post-rollover
+  Claim All - new Issue #235 evidence, not a settlement,
+  delta test still owed; bottom-bar hitbox 500,952 in
+  this window geometry, y-925 does not transfer; 4 pins
+  carried, R7 pins-first next unit); alliance-duel
+  1.21.0 to 1.22.0 (the 1832 "trade day still resets at
+  19:00" sentence corrected - duel and trade days share
+  the about-18:00 rollover). Contradictions resolved 2,
+  gaps filed 1 new Issue (#247, scout anchor and
+  organizer sweep trigger still state 19:00, unverified),
+  issue comments on #242 and #235, no issue closed.
+  Sweep result: all 100 record files for 2026-11-03
+  accounted for, no record missed between hourly
+  watermarks. Full detail in
+  knowledge-organization/1932-run.md.
