@@ -495,3 +495,15 @@ of 2026-10-28.
   the live pool tree, no duel-score unit staged.
   Full record:
   _records_/2026-11-04/queue-planning/0240-run.md.
+
+## 02:45 to about 02:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0245.
+  Non-batch pass (checker not due, next batch 03:00).
+  Knowledge PR 263 merged by squash (merge commit
+  9701217ac): organizer 0232 - 0143 training, 0208
+  help, 0212 mail, 0216 gifts, 0217 train; local main
+  fast-forwarded to the merge. Records PRs 258, 256
+  and 255 clean and awaiting the 03:00 batch; PR 187
+  conflict carried unchanged (head 2be5df83d).
+  Full detail in pr-integration/0245-run.md.
