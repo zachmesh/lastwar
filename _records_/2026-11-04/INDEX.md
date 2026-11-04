@@ -349,3 +349,46 @@ of 2026-10-28.
   commented. Records PRs 258, 256, 255 await the 03:00
   batch; PR 187 conflict re-verified and carried.
   Full detail in pr-integration/0215-run.md.
+
+## 02:04 to about 02:08 - Ticker pass
+
+- Help unit help-2026-11-03-2230, done, ticker-0204:
+  help bubble tap answered "Allies are very grateful for
+  your assistance" and the tile cleared; Alliance Help
+  page read live 520/1,000, only this account's own
+  Bears Lair rows listed, and a Help All tap answered
+  "No help requests yet". Grounding correction: the
+  Alliance button centre is (931,709), not (880,720).
+  Full detail in alliance-help/0208-queue-run.md.
+- Own-PR check: PR 258 (records/2026-11-04) open,
+  0 comments; nothing addressed to this job. No zombie
+  seeding: chain closed 2026-10-30, event ended.
+
+- Mail unit mail-2026-11-03-2230, done, ticker-0204:
+  Claim All swept all 7 categories; Alliance Daily
+  Donation Rankings rewards verified claimed by green
+  checkmarks in the mail detail, other categories held
+  reports, notices or receipts only, 0 mail deleted.
+  A notifications opt-in prompt on exit was cancelled.
+  Full detail in mail-rewards/0212-queue-run.md.
+
+- Gifts unit gifts-2026-11-03-2230, done, ticker-0204:
+  Regular Claim All collected 10 gifts (progress
+  188,294,190 to 188,294,290, still Level 28); Premium
+  had nothing waiting, every visible entry Claimed and
+  no Claim All button. Grounding correction: Premium
+  tab taps at (694,269), not (631,242). Full detail in
+  alliance-gifts/0216-queue-run.md.
+
+- Train unit train-2026-11-03-2230, partial,
+  ticker-0204: no "Boarding closes in" banner and no
+  train icon in the left column, sixth check-only train
+  outcome in a row; no boarding action, tracker
+  untouched. Full detail in alliance-train/0217-queue-run.md.
+- Pass closed after 4 units (help done, mail done,
+  gifts done, train partial). Token released.
+- Note: the working tree holds a tier-2 change
+  (_activities_/alliance-donations/INDEX.md, modified)
+  and other jobs' uncommitted _queue_ and
+  tools/state/ entries; all were left exactly as
+  found and none was swept into this pass's commit.

@@ -1,4 +1,19 @@
 {
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-04T10:16:23",
+  "note": "Regular 10 claimed, Premium nothing waiting"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-04T10:08:42",
+  "note": "Help All pressed, 520/1000, no ally requests pending"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-04T10:12:56",
+  "note": "All categories swept, Alliance donation rewards claimed, 0 deleted"
+ },
  "passes": {
   "status": "done",
   "at": "2026-11-04T06:39:18",
