@@ -2114,3 +2114,5 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   unit 066 on 2026-10-30 (event ended about the 19:00 reset
   2026-10-30, no Zombie tab in the Events hub).
 - Pass closed after 1 unit (failed). Token released.
+- Integrator pass pr-integration-2026-11-04-1415, no-op (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+Full detail in pr-integration/1415-run.md.
