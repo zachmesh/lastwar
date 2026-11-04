@@ -1744,3 +1744,17 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   conflicted on the action log at unchanged heads,
   so no comment was repeated. Full detail in
   pr-integration/1045-run.md.
+- Donations unit donations-2026-11-04-1003, partial, ticker-1034:
+  10 coin donations to Rallied Attack (count 10/30 to exhausted live,
+  Tech EXP 18.7K to 19.9K, 8,000 coin); the test tap at 1/30 landed
+  (EXP move proves it) and the button then greyed with a 00:16:35
+  regen timer, correcting the 0309/0741 avoidance note. Numeric 0/30
+  unreadable behind the timer, so per rule R1 the tracker stays
+  untouched and a re-read unit is enqueued for after the cooldown.
+  Full detail in alliance-donations/1046-queue-run.md.
+- Harvest unit harvest-2026-11-04-1003, partial, ticker-1034:
+  farmland +2.1M food (417.9M to 420.0M) and left-side +1.4M coin
+  (18.0M to 19.4M), both HUD-verified; full edge sweep incomplete
+  at the unit cap, right side and top edge unswept, EXP/screw/
+  drone bubbles not located. Full detail in
+  resource-collection/1101-queue-run.md.
