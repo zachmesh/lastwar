@@ -3310,3 +3310,26 @@ of 2026-10-28.
 ## 20:39 to about 20:52 - PR catch-all pass
 
 - No-op pass: 3 open PRs scanned (245, 207, 187), all with matching named owners, none owned by this job; prior adoption PR 137 stays merged; PR 246 merged between passes. 40 open issues triaged, all class-labeled, none new since the 1939 pass. Owner-decision issues over 24 hours: 132 (building/research deferred, statement current) and 154 (Season Photo decision, unchanged). Full detail in pr-catchall/2039-run.md.
+
+## 20:32 to about 20:45 - Tool-developer pass, daily-reset UTC boundary fix
+
+- Fix pass tool-development-2026-11-03-2032. Own PRs
+  checked first: only open PRs are 245, 207 and 187, all
+  integrator-owned records branches; previous own PRs
+  243 and 237 stay merged. New issue since the 1932 run
+  is 247 (labeled knowledge), whose tooling slice is
+  implemented here: the daily-reset boundary in
+  regulars.py and queue.py was a fixed 19:00 wall time,
+  not the settled 02:00 UTC boundary, so a scout done
+  pre-reset stayed not-due until 19:00, an hour after
+  the true 18:00 PST reset. PR 249 opened (branch
+  work/daily-reset-utc-247, commit b00aee9356):
+  reset_utc 02:00 for vip, daily-missions and scout,
+  absolute-UTC boundary in both tools, plan_windows
+  stepping by absolute 24h across DST. Validation:
+  py_compile plus 23 fixture assertions plus 2 extra
+  checks on scratch pools under /tmp only, all passed.
+  Issue 247 commented, not closed; knowledge pages and
+  the organizer sweep trigger left to the organizer;
+  zero-sweep slots flagged as follow-up. Full detail in
+  tool-development/2032-run.md.
