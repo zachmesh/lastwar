@@ -637,3 +637,22 @@ of 2026-10-28.
   by entry identity. Records PR 187 (2026-11-01)
   still conflicting on the action-log and carried.
   Full detail in pr-integration/0330-run.md.
+
+## 03:32 to about 03:40 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-0332.
+  Fix built: reset-anchored pre-reset sweep slots for issue
+  #147 (third failure running). The Nov 3 pair was staged
+  at wall-clock 17:30/18:30 expiring 19:00 local while the
+  reset is absolute 02:00 UTC (18:00 PST), so the final
+  pass was not_before 18:30, after the reset, and the pair
+  could not close the trade day. queue.py gains
+  reset-anchored fixed slots and the zero-sweep roster
+  entry becomes reset_utc 02:00 with offsets [90, 30]
+  (16:30/17:30 PST, 17:30/18:30 PDT, expiring at the
+  reset); wall-clock behaviour unchanged. PR 267 opened
+  (Owner: lastwar-tool-developer, Refs #147), issue 147
+  commented, not closed (closure belongs to the retro).
+  Validation: py_compile plus 26 fixture assertions on
+  isolated scratch pools under /tmp.
+  Full detail in tool-development/0332-run.md.
