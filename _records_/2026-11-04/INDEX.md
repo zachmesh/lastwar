@@ -2281,3 +2281,14 @@ Full detail in pr-integration/1430-run.md.
   unit 066 on 2026-10-30 (event ended about the 19:00 reset
   2026-10-30, no Zombie tab in the Events hub).
 - Pass closed after 1 unit (failed). Token released.
+
+## 15:40 to about 15:47 - Queue planning pass
+
+- Planner pass 1540, done: plan staged 5 units
+  (passes, secrets, treasures, trucks, events for the
+  2026-11-05 0257 slot; already_present 67);
+  scout diff on the Nov 4 observation applied with zero
+  changes; 0 withdrawals; pool inbox 73, claimed 0,
+  done 841, upcoming 52. Pre-reset sweep step skipped
+  (not the 17:00 hour run). Full detail in
+  queue-planning/1540-run.md.
