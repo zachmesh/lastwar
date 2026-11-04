@@ -1863,3 +1863,14 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
 
 - Catch-all pass pr-catchall-2026-11-04-1139, no-op: no adopted open PR (PR 137 stays MERGED); four open PRs scanned and none owned by this job (PR 279 integrator post-1100 batch, PRs 265, 256 and 187 integrator records, the latter three still CONFLICTING on the action log from the 0415 re-check), PR 277 merged 10:47 PST and PR 273 merged 11:06 PST as the 11:00 batch since the 1039 pass, 43 open issues all class-labeled with no change since the 1039 pass, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
   Full detail in pr-catchall/1139-run.md.
+## 11:40 to about 11:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-1140: plan staged
+  5 units for the 2257 slot (passes, secrets, treasures,
+  trucks, events) for the next 12 hours; already_present 66,
+  reaped 0, expired 0; pre-reset sweep skipped (not the
+  17:00 hour run); scout diff on the Nov 4 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained 0); 0 withdrawals.
+  Pool by_state: inbox 68, claimed 1, done 828, upcoming 51.
+  Full detail in queue-planning/1140-run.md.
