@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T06:32:17Z
+modified: 2026-11-04T10:32:00Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-1034 troop-training execution record 2026-11-03 1051 queue run (partial, three framings no tent, road drag pans where centre drag does not, Issue 150)
   - source: ticker-1534 troop-training execution record 2026-11-03 1552 queue run (partial, Lv.27 T9 batch queued and HUD-verified, tent blocker breakthrough, Issue 150)
   - source: ticker-2134 troop-training execution record 2026-11-03 2144 queue run (partial, production grid is factories not tents, 1552 point selects Factory No.3 in this framing, Issue 150)
+  - source: ticker-0134 troop-training execution record 2026-11-04 0143 queue run (partial, factories confirmed again, 1552 tent point not re-tried, Tank Base Lv.28 to 29 upgrade in progress, Issue 150)
 ---
 
 # Troop training
@@ -970,3 +971,48 @@ Observed in game on this account, first execution 2026-10-25.
   this is the known tent blocker already tracked
   as Issue #150; this run comments the recurrence
   onto #150.
+
+## What the 2026-11-04 0143 unit added - factories confirmed again, 1552 tent point not re-tried, Tank Base upgrade in progress
+
+- Unit training-2026-11-03-2203 by ticker-0134,
+  about 01:43 local, status partial. The "active on
+  a different device" dialog appeared on entry;
+  Confirm was tapped once per the owner rule (kick
+  1 of this pass), the app exited as usual, and it
+  was reopened and reached the base screen.
+- Tank Base Lv.28 selected on the central frame
+  (607,468): its button row shows the green upgrade
+  arrow (never tapped) and a red-panda Details
+  button. The Details panel confirms an upgrade
+  Lv.28 to 29 in progress with 21:17:49 remaining,
+  cost line iron 922,228/1.7M, and a Finish Now
+  price of 2,032 diamonds - none of these were
+  tapped. Panel closed with X.
+- Tent search: fresh visual grounding on the live
+  central frame returned points that selected
+  Titanium Alloy Factories, not barracks - norm
+  (389,463) gave Factory No.1 Lv.30, norm (504,626)
+  gave Factory (Weekly Pass) Lv.30. This confirms
+  2144: the dark-roofed grid buildings are
+  factories. Grounding on the upper-base frame
+  converged on norm (938,240) at the far right
+  edge; the tap produced only an Alliance Gifts
+  toast, no selection.
+- Pans used: one upward drag reached empty snow
+  below the grid, one downward drag reached the
+  formation parking areas above, one upward drag
+  returned the view to the central frame. Game left
+  on the central base view.
+- Not re-tried: the 1552 tent point (630,592) was
+  not re-tried in this unit's framings. Follow-up
+  stands: re-ground the tents on the live frame
+  first, and do not re-tap the factory row as if it
+  were tents. Known blocker Issue #150; this run
+  comments the recurrence onto #150.
+- HUD resources at end, unchanged by this unit:
+  food 391.8M, iron 727.5M, coins 548.9K, power
+  150,028,269. No batch was queued, 0 of 4 barracks
+  verified, and no Drill Ground figure was read
+  live in this unit, so the 2026-10-31 Drill Ground
+  Full blocker is neither confirmed nor cleared
+  here.
