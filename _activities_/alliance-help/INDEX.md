@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T01:38:00Z
+modified: 2026-11-04T10:32:00Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-0704 alliance-help execution record 2026-11-03 0710 queue run (done, base-screen bubble, header 1,240/1,000 unchanged by Help All)
   - source: ticker-1104 alliance-help execution record 2026-11-03 1121 queue run (done, bubble press, header 1240 over 1000 unchanged, Help All no requests yet)
   - source: ticker-1706 alliance-help execution record 2026-11-03 1716 queue run (done, Help All cleared one ally row, bubble first tap lost to foreground switch)
+  - source: ticker-0204 alliance-help execution record 2026-11-04 0208 queue run (done, Alliance centre 931,709 re-confirmed, 880,720 miss recorded, header 520/1000 on new trade day)
 ---
 
 
@@ -702,3 +703,48 @@ Measured in the 0135 help unit (ticker-0134, window mode
   re-read alone is not.
 - Exited with the Help panel X to the Alliance panel.
   Nothing spent, no red line touched.
+
+## What the 2026-11-04 0208 unit added - Alliance centre (931,709) re-confirmed, header 520/1000 on new trade day
+
+- Unit help-2026-11-03-2230 by ticker-0204,
+  02:04 to 02:08 local, status done. No "active on
+  a different device" dialog appeared; the base
+  screen carried a "Signed in as HidingAnt504"
+  toast, confirming the owner's account.
+- Entry: the help bubble was present at the lower
+  right, immediately left of the Alliance shield.
+  One tap at the bubble tile answered "Allies are
+  very grateful for your assistance" and the tile
+  was gone on the next screenshot.
+- Grounding correction inside this unit: the first
+  two Alliance-button taps at (880,720) produced no
+  panel change (rule R2 ends that method). The
+  (880,720) point lands left of the shield, on the
+  small round icon below it. Re-grounding from the
+  2026-11-03 1121 record gave the Alliance button
+  centre as (931,709); one tap there opened the
+  panel. Future units should use (931,709) for
+  Alliance, (686,532) for Help on the panel, and
+  (500,779) for Help All on the Help page. This is
+  consistent with the 1716 note that the shield
+  centre sits near the 1121 (931,709) point,
+  session drift as usual - not a new correction to
+  the shield centre itself, but (880,720) is now a
+  recorded miss, not a usable Alliance point.
+- Verification on the Alliance Help page, read
+  live: header "Today's points gained from
+  Alliance Help: 520/1,000". This is the first
+  sub-gate read after the 2026-11-03 1,240/1,000
+  reads, on the new trade day - not a
+  contradiction, the daily counter resets. All
+  listed rows are this account's own Bears Lair
+  requests (Defense Training VIII research, Lv.30
+  Aircraft Center building, Weapon Training VIII
+  research, Lv.27 Drill Ground building), each
+  carrying a green "Time reduced" badge; no ally
+  rows were pending. A Help All tap on that page
+  answered "No help requests yet", confirming no
+  further ally help was waiting.
+- Exited with the Help panel X to the Alliance
+  panel, then the panel back arrow (164,931) to
+  the base screen. Nothing spent.

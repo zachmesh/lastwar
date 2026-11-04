@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T04:40:00Z
+modified: 2026-11-04T08:32:00Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-1304 alliance-donations execution record 2026-11-03 1322 queue run (partial, 7 verified coin donations 8 to 1, Strength Ranking re-read retired, regeneration 1 to 8, R3 1300 checkpoint answered, Issue 174)
   - source: ticker-1404 alliance-donations execution record 2026-11-03 1421 queue run (partial, Alliance entry pivot 899,716, Techs tile unresponsive first occurrence, count carried not confirmed, Issue 220)
   - source: ticker-2004 alliance-donations execution record 2026-11-03 2014 queue run (partial, 20 coin donations 21 to 1, Techs tile root cause, burst grey-out not count-fixed, Issue 160)
+  - source: ticker-2334 alliance-donations execution record 2026-11-03 2340 queue run (partial, 10 coin donations 11 to 1, entry failure chain broken, grounding offset re-confirmed, Issue 160)
 ---
 
 
@@ -1032,7 +1033,7 @@ before 03:17 local). Evidence in
   consolidate, not self-closed. The re-read rule for a
   replenishing count (re-read after the timer; donate again if
   above zero; a live 0 read closes only that unit, not the day,
-  until the model says otherwise) is still unrecorded. Fourth data point 2026-11-03 0621: live 3/30 at entry after the 0521 1/30 close, about 2 back over about 54 minutes, rate still NOT measured. Fifth data point 2026-11-03 0920: live 9/30 at entry after the 0621 1/30 close, about 8 back over about 2 hours 52 minutes, so the allowance regenerates over time and is not a fixed daily 30; the 29/30 throttle hypothesis does not explain a regenerating allowance on its own, and the rate is still NOT measured. Sixth data point 2026-11-03 2014: live 21/30 at entry after the 1322 1/30 close, about 20 back over about 6 hours 50 minutes, about 2.9 per hour, consistent with the roughly 1-per-20-minutes estimate, NOT a controlled rate measurement. The interval straddles the trade-day boundary (about 18:00 local) with no donations landed in between (the 1421 unit made none), and the count read 21/30, not 30/30, so no reset-to-full jump occurred at the boundary: the count only refills. The alliance-wide footer did reset (Tech Donation Today 9000, new trade day, against the 1322 8000), so the footer and the Donation Count follow different boundary rules.
+  until the model says otherwise) is still unrecorded. Fourth data point 2026-11-03 0621: live 3/30 at entry after the 0521 1/30 close, about 2 back over about 54 minutes, rate still NOT measured. Fifth data point 2026-11-03 0920: live 9/30 at entry after the 0621 1/30 close, about 8 back over about 2 hours 52 minutes, so the allowance regenerates over time and is not a fixed daily 30; the 29/30 throttle hypothesis does not explain a regenerating allowance on its own, and the rate is still NOT measured. Sixth data point 2026-11-03 2014: live 21/30 at entry after the 1322 1/30 close, about 20 back over about 6 hours 50 minutes, about 2.9 per hour, consistent with the roughly 1-per-20-minutes estimate, NOT a controlled rate measurement. The interval straddles the trade-day boundary (about 18:00 local) with no donations landed in between (the 1421 unit made none), and the count read 21/30, not 30/30, so no reset-to-full jump occurred at the boundary: the count only refills. The alliance-wide footer did reset (Tech Donation Today 9000, new trade day, against the 1322 8000), so the footer and the Donation Count follow different boundary rules. Seventh data point 2026-11-03 2340: live 11/30 at entry after the 2014 1/30 close, about 10 back over about 3 hours 20 minutes, about 3 per hour, consistent with the roughly 1-per-20-minutes estimate, NOT a measured rate. Short-interval corroboration from the next pass: the ticker-0004 arms-race unit's session start on 2026-11-04 read the same Rallied Attack panel at 3/30, about 2 back over about 24 minutes after the 2340 1/30 close - a two-endpoint observation only, NOT a rate, and it does not by itself move the estimate.
 - Donation Count 30/30 read 2026-11-02 1810, ambiguous and
   NOT asserted as a replenishment measurement: the read
   conflicts with the sweep's last live count of 1 remaining
@@ -2061,3 +2062,114 @@ enqueued for after the cooldown (not before about
   (sixth replenishment data point, no reset jump at
   the boundary). Neither issue is closed here -
   closure belongs to the daily retro, with evidence.
+
+## What the 2026-11-03 2340 unit added - 10 coin donations, entry failure chain broken, grounding offset re-confirmed
+
+- Unit donations-2026-11-03-2203 by ticker-2334,
+  about 23:34 to 23:40 local, status partial. Coin
+  button only, no diamonds, no money, no paid button
+  tapped. The diamond Donate button (2 diamonds) was
+  never tapped. Evidence in
+  `_records_/2026-11-03/alliance-donations/2340-queue-run.md`.
+- Entry, prior blocker cleared: the game was on a
+  world-map view at entry, not the base. The home
+  button at the bottom right returned to the base
+  screen, restoring the full-base framing first per
+  the 2026-11-02 changed entry route. The Alliance
+  shield then opened the Alliance menu on the first
+  tap at its fresh measured centre (929,697)
+  ([AP3x] The Apex, leader Abyss Apex, power
+  13,065,237,196, members 94/100). This breaks the
+  2026-11-02 three-unit entry failure chain (0621,
+  1020, 1427), which panned to the Drill Ground
+  cluster instead: the fresh-centre tap on a
+  restored full-base framing is what landed. This
+  is not a contradiction of the 1421 pivot
+  (899,716): that pivot was for the panned framing,
+  while on a restored full-base framing the shield
+  centre works, consistent with the standing
+  (930,700) / (930,689) centres. The next unit
+  still re-grounds on its current screenshot first.
+- Alliance Techs tile opened on the first tap at
+  its fresh centre (688,686), consistent with the
+  2014 unit's (720,678) / (688,680) within session
+  drift; the re-ground-first rule stands. War tab
+  tree at entry, unchanged: Troop Movement 5/10,
+  Rallied HP 6/10, Rallied Attack 7/10, Rallied
+  Defense 7/10, next node below 1/10. Tech
+  Donation Today read 1850 on the tree footer.
+  Rallied Attack node tap (500,521) opened its
+  panel on the first tap.
+- State, read live: Rallied Attack panel at entry
+  7/10, Current +7 percent, Next Level +8 percent,
+  Tech EXP Required 15.9K/4.5M, Donation Reward
+  50/50, Donation Count 11/30, coin Donate 800
+  green and active. The 11/30 entry count is
+  regeneration since the 2014 unit's 1/30 close at
+  20:14, about 10 counts in about 3 hours 20
+  minutes, consistent with the roughly 3 counts per
+  hour rate recorded there; see the seventh data
+  point in Open questions.
+- Donations made, per-tap evidence: coin Donate
+  taps at (660,770), 800 coin each, the identical
+  point the 2014 unit proved. One tap-point note:
+  the first tap in this unit used the
+  visual-grounding centre (659,808) and did NOT
+  land (count stayed 11/30, Tech EXP stayed 15.9K
+  on the closing image check); the proven 2014
+  point (660,770) landed on every tap after that.
+  The grounding bbox for this button sits about 38
+  units low, the same offset pattern as the earlier
+  Alliance shield grounding miss. Next donations
+  unit: use (660,770) for the coin Donate button,
+  not a fresh grounding centre, unless the panel
+  framing changes.
+- Tap chain: tap 1, 11/30 to 10/30 (Tech EXP 15.9K
+  to 16.0K), verified by image; taps 2 to 4, to
+  9/30, 8/30, 7/30 (Tech EXP 16.3K), verified by
+  image at 7/30, the hold-down tooltip appearing
+  during this burst as in 2014; taps 5 to 7, to
+  6/30, 5/30, 4/30, verified by OCR at 4/30; taps 8
+  to 10, to 3/30, 2/30, 1/30 (Tech EXP 16.6K),
+  verified by closing image. Total landed in this
+  unit: 10 coin donations, 8,000 coin spent.
+  Donation Reward still 50/50; no claim button was
+  presented, so nothing was claimed, consistent
+  with the ranking reward settling at the reset
+  rather than by hand. The coin HUD read 36.5M at
+  entry and at close, too coarse to show an 8,000
+  move; the count and Tech EXP moves are the
+  donation evidence, not the HUD.
+- Footer note, unresolved discrepancy, not a
+  superseded claim: the tree footer read Tech
+  Donation Today 1850 at this unit's entry,
+  against the 2014 unit's 9000 on the same trade
+  day. The drop is unexplained and is recorded as
+  such; it does not overturn any standing claim,
+  since the footer is already disqualified as a
+  count-closing figure (see the 0545 unit section),
+  but the next unit should re-read the footer and
+  note whether it tracks an alliance-wide figure or
+  a per-session figure.
+- Closing state, partial, day not done: at close
+  the Donation Count reads 1/30 live by image on
+  the Rallied Attack panel. The day is NOT done
+  under rule R1, which requires a live 0 read to
+  close. No arithmetic final count is claimed, and
+  the tracker is left untouched. No test tap was
+  made at 1/30: six prior units proved the 1/30 tap
+  greys the button with a timer and does not land,
+  and this unit's green button at 1/30 does not
+  overturn that proof. The panel was left open on
+  the Rallied Attack panel at 1/30. Next: a later
+  donations unit re-reads the count after
+  regeneration.
+- Red lines held: no diamonds spent, no paid
+  button tapped, no alliance diplomacy, no
+  assembly, no teleport.
+- This fold is commented on Issue #160 by this run
+  (seventh replenishment data point, plus the
+  short-interval 3/30 corroboration from the
+  ticker-0004 session start). Neither issue is
+  closed here - closure belongs to the daily retro,
+  with evidence.
