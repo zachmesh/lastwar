@@ -310,3 +310,24 @@ of 2026-10-28.
   zombie seeding: chain closed 2026-10-30.
 - Pass closed after 1 unit (partial). Token
   released.
+## 01:40 to about 01:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-0140.
+  Own PRs checked first (none owned, no comments owed);
+  owner-decision Issues #154 (still no owner answer, 0
+  comments) and #132 (duel-score-only answer stands,
+  building/research deferred) checked, no unit staged
+  or invented for either.
+  Plan staged 0 units (already_present 69, reaped 0,
+  expired 0); pre-reset sweep skipped (01:00 hour, not
+  17:00); scout diff on the Nov 3 observation applied
+  with zero changes (observed 0, actionable 0, enqueued
+  0, candidates 0, unexplained red dots 0); 0
+  withdrawals; pool inbox 66, claimed 1, done 774.
+  Carried follow-ups: PR 260 narrative fallback merged
+  to main 00:47 PST but live tree still runs old
+  scout_diff, so the diff headline stays 0 until the
+  live tree syncs; duel-score regular still absent from
+  the live pool tree, no duel-score unit staged.
+  Full record:
+  _records_/2026-11-04/queue-planning/0140-run.md.
