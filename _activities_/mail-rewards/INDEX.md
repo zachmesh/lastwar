@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T07:37:53Z
+modified: 2026-11-04T02:50:00Z
 level: L1
-version: 1.11.0
+version: 1.15.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,10 @@ grounded_in:
   - source: mail-rewards execution record 2026-11-02 1226 queue run (ticker-1204 unit, done, all categories swept, no reward available)
   - source: mail-rewards execution record 2026-11-02 2012 queue run (ticker-2004 unit, done, 7 mails claimed)
   - source: mail rewards execution record 2026-11-02 2313 queue run
+  - source: ticker-0304 mail-rewards execution record 2026-11-03 0312 queue run (done, all categories empty, Escape crash recurrence)
+  - source: ticker-0704 mail-rewards execution record 2026-11-03 0715 queue run (done, six categories swept, all answered No rewards available)
+  - source: ticker-1034 mail-rewards execution record 2026-11-03 1055 queue run (partial, mail entry mis-targeted to Alliance twice then no-change, Issue 230)
+  - source: ticker-1734 mail-rewards execution record 2026-11-03 1740 queue run (done, R2 fresh grounding opens Mail first try, Alliance Exercise claim, red dot is unread not claimable)
 ---
 
 
@@ -487,7 +491,204 @@ the next tick re-produces this regular as a fresh unit.
   again."). Cancel was tapped; Enable Now was not
   touched and no system setting was changed.
 
+
+## What the 2026-11-03 0312 unit added - all categories empty, Escape crash recurrence
+
+- Ticker-0304, unit mail-2026-11-03-0230, about 03:12
+  local, status done. Evidence in
+  `_records_/2026-11-03/mail-rewards/0312-queue-run.md`.
+- Claim All pressed in every mail category, one at a
+  time. Each answered "No rewards available": Event (the
+  only claimable category carrying a red dot on entry),
+  Alliance, Season, System, Regular, Battle Report, and
+  In-app Purchases (receipts only, as recorded in the
+  activity metadata; its red dot was receipts, not
+  rewards). A red dot on a mail category is therefore
+  not by itself a claimable reward: the Event category
+  carried a red dot and still answered No rewards
+  available.
+- 0 rewards claimed, 0 mail deleted. Delete All was
+  never pressed in any category.
+- Reaching Mail, Escape crash recurrence: the Alliance
+  panel back arrow took three background taps with no
+  change, so the Esc key was tried and the game app
+  quit. Esc is a known crash trigger for this app and
+  must not be used again; this unit re-affirms the ban
+  in this profile as well as in event-claims. The app
+  was reopened with open_app, returned to the base
+  screen with no takeover dialog, and Mail was then
+  opened from the base right rail and swept normally.
+  The gifts and help units completed before this
+  incident were unaffected.
+
+## What the 2026-11-03 0715 unit added - six categories swept, all empty, Battle Report double-tap
+
+- Ticker-0704, unit mail-2026-11-03-0630, about 07:10
+  to 07:15 local, status done. Evidence in
+  `_records_/2026-11-03/mail-rewards/0715-queue-run.md`.
+- From the base screen, Mail opened to the category
+  list: Battle Report, Alliance, Event (red dot),
+  Season, System (red dot), Regular, In-app Purchases.
+  The game was left on the base screen at the close.
+- Every claimable category was swept with its Claim All
+  button (Delete All never pressed), each answering
+  "No rewards available" live: Event (train arrival
+  notices only, [AP3x] Sanction, [AP3x] Abyss Apex,
+  [AP3x] KpyKat, 1h to 9h ago); System (Planned Update
+  Notice 3h ago, President Mail purge request and
+  conclusion 1d ago, correction and greeting mails);
+  Alliance (announcements 10h ago, Daily Donation
+  Rankings, Zombie War Report, Defense Success Reward
+  (Zombie), Daily Donation Ranking - one Rankings row
+  was not re-read by OCR in the post-tap observation,
+  but the Claim All answer was "No rewards available",
+  so nothing is recorded as claimed there); Season (Ice
+  Breaking Reports from [AP3x] Abyss Apex, 6d ago);
+  Regular (Victory battle reports: Lv.60 Doom Elite,
+  Lv.160 Doom Walker, Lv.55 Doom Elite); Battle Report
+  (Victory in Attack against RebelNova, 1,770 units
+  defeated, 12h ago; Lv.20 Zombie Raider and Lv.19,
+  Lv.18, Lv.17, Lv.16 Zombie Horde, 13h ago).
+- Battle Report method note: the first Claim All tap's
+  toast was missed by OCR timing, so Claim All was
+  tapped a second time and its "No rewards available"
+  answer was read live. When a toast is missed, re-tap
+  to confirm the answer rather than assuming it.
+- In-app Purchases was not swept: per the activity
+  metadata it holds receipts only, nothing to claim.
+  Red dots on Event and System again carried no
+  rewards, re-affirming that a category red dot is not
+  by itself a claimable reward.
+- Result statistics: target 6 categories, achieved 6,
+  verified yes. Nothing claimed, nothing bought,
+  nothing deleted. Costs: 259 seconds, no stamina or
+  items spent. Note on the record itself: the unit
+  file's evidence path was first written as
+  0728-queue-run.md at completion time and corrected
+  to 0715-queue-run.md - a record-hygiene note, not a
+  play claim.
+
 ## Open questions
 
 - Which recurring senders are worth keeping unread as evidence, and which
   reward mails expire if not claimed in time.
+
+
+## What the 2026-11-03 1055 unit added - mail entry mis-targeted to Alliance twice, then no-change, filed as Issue 230
+
+- Ticker-1034, unit mail-2026-11-03-1030, about
+  10:52 to 10:55 local, status partial. Evidence in
+  `_records_/2026-11-03/mail-rewards/1055-queue-run.md`.
+- Mail entry failed three times from the base view,
+  so no mail category was swept and nothing was
+  claimed: tap 1 at norm (895,725), measured from
+  the training unit restored central frame, opened
+  the Alliance panel instead of Mail; tap 2 at norm
+  (895,731), measured fresh on the then-current base
+  frame (envelope icon visible on the right edge),
+  again opened the Alliance panel; tap 3 at norm
+  (895,760), aiming lower to allow for a possible
+  title-bar offset, produced no visible change (the
+  base view stayed, no panel opened). Each Alliance
+  panel was closed with its back arrow, returning to
+  base. The Alliance panel Help and Alliance Gifts
+  red dots were visible while it was open; both
+  belong to other units and were left untouched.
+- No Claim All was tapped, Delete All was never
+  pressed, nothing was claimed, bought or deleted.
+  Tracker untouched, per the rule for partial units.
+- Rule R2, applied: the method ends inside this unit
+  after the repeated misfires; the pass budget also
+  ran out during this unit (the pass started at
+  10:36), so the sweep could not be retried here even
+  with a new method.
+- Contrast with the 2026-11-01 rail failure already
+  in this profile (four variants, all no-change):
+  this failure is a mis-target, not a no-change, so
+  the right-edge stack hit mapping itself, not only
+  foreground mode, is suspect. Gap filed as Issue
+  230 (labels knowledge, play), related entry-drift
+  issues 220, 218 and 205.
+- Follow-up for the next mail unit: re-measure the
+  Mail envelope centre on the live frame before
+  tapping, and verify the panel that opens is Mail
+  before sweeping any category; if the fresh centre
+  still opens Alliance, a different entry path is
+  owed before further right-edge-stack taps. No
+  profile claim is superseded: this profile records
+  no Mail coordinate, only the right-rail envelope
+  icon.
+
+## What the 2026-11-03 1740 unit added - R2 fresh grounding opens Mail first try, Alliance Exercise claim, red dot is unread not claimable
+
+- Ticker-1734, unit mail-2026-11-03-1430, about
+  17:35 to 17:40 local, status done. Evidence in
+  `_records_/2026-11-03/mail-rewards/1740-queue-run.md`.
+- The game was found on the Alliance panel (left from
+  the previous help unit), not on the base view. No
+  "active on a different device" dialog appeared.
+- Entry method changed per rule R2 after the 1055
+  unit's misfires: instead of reusing the recorded
+  right-edge tap, every centre was freshly measured
+  on the live frame with visual grounding before
+  tapping. The Alliance panel back arrow at grounded
+  (162,936) returned to the base view; the earlier
+  (89,941) estimate had produced no change. The Mail
+  envelope on the right rail at grounded (929,783)
+  opened the Mail category list. This is the first
+  mail entry this day that did not open Alliance
+  instead, and it answers the 1055 follow-up (fresh
+  centre on the live frame, verify the panel that
+  opens is Mail before sweeping) - the fresh centre
+  worked on the first tap. Standing rule restated:
+  re-ground the envelope on the live frame per
+  session; (929,783) is this unit's measured centre,
+  not a standing coordinate, and no profile claim is
+  superseded - this profile still records no standing
+  Mail coordinate, only the right-rail envelope icon.
+  Related Issue #230 stays open: closure belongs to
+  the daily retro, with evidence.
+- Category screen on entry: Alliance carried a gift
+  icon, Event carried a red dot, the other categories
+  carried no gift icon and no red dot.
+- Alliance: the top mail, [Alliance Exercise]
+  Alliance R... dated 2h ago, carried the gift icon.
+  Claim All claimed it. The congratulations popup
+  read live: EXP 105.8M, a 50.0K card item, 4.6K of
+  a blue item, 5m speedups in five stacks of 39, 21,
+  16, 13 and 31 (120 in total), coin 12.1M, food
+  19.0M, iron 19.0M. The popup was dismissed and the
+  Alliance Exercise mail had left the list; the
+  "Alliance Gifts received!" toast confirmed. HUD
+  corroboration on the later base view: food 247.0M
+  to 266.0M, iron 588.5M to 607.5M, coin 17.4M to
+  29.5M, matching the popup food, iron and coin
+  figures exactly.
+- Event: train arrival mails (Sanction Apex, Abyss
+  Apex, KpyKat trains, 9h to 17h ago) with no gift
+  icons. Claim All produced no popup and no change,
+  consistent with reports only. Lesson: the Event
+  red dot was an unread train mail, not a claimable
+  attachment - a category red dot signals unread, not
+  claimable; only a gift icon evidences a claim.
+- Battle Report, Season, System and Regular: swept
+  by one batched tap sequence (category row, Claim
+  All, back, repeated), ending cleanly back at the
+  category list with no congratulations popup at any
+  step, so no additional claimables are evidenced.
+  Honest limit of this sweep, recorded not smoothed
+  over: no per-category screenshot was taken during
+  the batch, so the per-category evidence is the
+  category screen's lack of gift or red-dot
+  indicators plus the clean batch return, not a
+  per-category live read.
+- In-app Purchases was not opened: receipts only,
+  nothing to claim, per the activity metadata.
+  Delete All was never pressed. Nothing was bought,
+  deleted or spent. The game was left on the Mail
+  category list.
+- Result stats: target 6, achieved 6, categories
+  swept 6, resources gained EXP 105.8M plus coin
+  12.1M plus food 19.0M plus iron 19.0M plus 120 5m
+  speedups plus card items, costs 0 stamina,
+  verified yes, blocker none.

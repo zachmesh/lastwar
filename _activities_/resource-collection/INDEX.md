@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T07:37:53Z
+modified: 2026-11-03T23:40:05Z
 level: L1
-version: 1.13.0
+version: 1.17.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,9 @@ grounded_in:
   - source: resource collection execution record 2026-11-02 1520 queue run (ticker-1452 unit, partial, sweep barely started, campaign mis-tap)
   - source: resource collection execution record 2026-11-02 1945 queue run (ticker-1934 unit, partial, one farmland bubble, two new not-a-bubble points)
   - source: resource collection execution record 2026-11-02 2247 queue run
+  - source: ticker-0234 resource-collection execution record 2026-11-03 0244 queue run (partial, four central bubbles, left edge undragged)
+  - source: ticker-0634 resource-collection execution record 2026-11-03 0642 queue run (partial, central, left and top bubble-free, right edge unswept)
+  - source: ticker-1034 resource-collection execution record 2026-11-03 1044 queue run (partial, central and right-bottom bubble-free, 0 collected, left and top unswept since 0642)
 ---
 
 
@@ -621,6 +624,107 @@ regular stays due. Evidence in
   loot bubble. Tracker untouched, so the next tick
   re-produces this regular.
 
+
+## What the 2026-11-03 0244 unit added - four central bubbles, left edge still undragged
+
+- Unit harvest-2026-11-03-0203 by ticker-0234, about 02:44
+  local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/0244-queue-run.md`.
+- Entered from the Alliance Techs panel left over from
+  the donations unit: closed the tech panel, closed
+  Alliance Techs, tapped the Alliance menu back arrow to
+  reach the base view. Nothing else tapped on the way;
+  no other activity's rewards claimed.
+- Base HUD at unit start, rounded as displayed: food
+  230.7M, second top-bar resource 565.3M, coins 5.9M,
+  second-row first resource 18.7M, second-row second
+  resource 505.1K. Power 149,940,141.
+- Four green resource bubbles grounded on the starting
+  screenshot over the central building cluster, at norm
+  (396,399), (294,455), (497,458) and (397,510): the same
+  four-position central cluster as the 2026-11-02 2247
+  unit, with small coordinate drift by framing (2247
+  read (396,416), (292,468), (499,468), (397,516)), so
+  the cluster is near-identical, not exactly re-pinned.
+  All four centres were tapped in one batch. No panel
+  opened; the closing tap left a building highlighted
+  (Titanium Alloy Factory No.1 Lv.30 label), deselected
+  with an empty-ground tap at norm (600,700). No Upgrade,
+  no Finish Now, no speedup, nothing bought.
+- HUD after the batch, rounded: food 230.7M, second
+  top-bar 565.3M, coins 5.9M, second-row first resource
+  19.0M (up about 0.3M from 18.7M), second-row second
+  505.1K. The food, iron and coin figures did not move
+  at HUD rounding, so the collected amount is recorded
+  only as the second-row movement plus the four bubbles
+  cleared, not as an exact total.
+- Sweep remainder, why partial: dragged the base
+  (300,500 to 700,500) and the panned view showed the
+  right-side buildings with no green resource bubbles;
+  dragged back and then vertically (500,300 to 500,650)
+  and the top-edge view showed the farmland plots and
+  their small crop icons plus two question-mark figures,
+  but no green collectible bubbles. The left edge was
+  not dragged to its limit, and bubbles regenerate
+  within minutes of a collection, so a zero-remaining
+  claim for the whole map is not proven. The top edge
+  is now checked (it was undragged in the 2247 unit), so
+  the remainder narrows to the left edge.
+- Armed truck check: the parked vehicles at the top
+  right of the base showed no collectable loot bubble in
+  the starting view, so nothing was claimed there (not
+  fully loaded). Season 2 area at the bottom was left
+  out of the sweep, per the standing rule that it is not
+  main base harvest.
+- Follow-up for the next harvest unit, carried with the
+  left-edge-first order: drag to the left edge first,
+  re-check the central cluster for regenerated bubbles,
+  and re-check the armed truck loot bubble. Tracker
+  untouched, per the rule for partial units; the next
+  tick re-produces harvest and resumes the sweep.
+
+## What the 2026-11-03 0642 unit added - central, left and top bubble-free, right edge unswept so partial
+
+- Ticker-0634, unit harvest-2026-11-03-0603, about 06:42
+  local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/0642-queue-run.md`.
+- Entered from the radar screen (previous unit in this
+  pass): the radar back arrow returned to the base view.
+- Base HUD at unit start and close, rounded as displayed,
+  unchanged: food 230.7M, second top-bar resource 565.3M,
+  coins 5.9M, second-row first resource 19.0M, second-row
+  second resource 505.1K. Power 149,940,141, stamina 120.
+- Sweep: central cluster bubble-free at the four positions
+  cleared by the 0244 unit, nothing tapped there.
+  Left-edge follow-up from 0244 done: dragged (700,500
+  to 300,500) to the neighbouring-base cluster west of
+  the own base, no own-building resource bubble visible
+  there; dragged back (300,500 to 700,500) to the central
+  view. Top edge: dragged (500,300 to 500,650); the upper
+  base area (farmland plots, upper buildings, parked
+  helicopter) showed no green collectible bubble;
+  dragged back (500,650 to 500,300) to the central view.
+- Armed truck: no fully-loaded loot bubble was seen in
+  any view swept, so nothing was claimed there, but the
+  truck's loaded state was not separately verified with
+  a dedicated tap and no vehicle panel was opened.
+  Season 2 area at the bottom was left out of the sweep,
+  per the standing rule that it is not main base harvest.
+- Why partial, not done: the full-map acceptance needs
+  zero bubbles remaining with the base dragged to each
+  edge. Central, left-edge neighbouring cluster and top
+  edge are bubble-free in this unit, but the right edge
+  was not swept in this unit and the armed truck loot
+  state was not separately verified, so a whole-map zero
+  claim is not proven. Tracker untouched, per the rule
+  for partial units; the next tick re-produces harvest
+  and resumes the sweep.
+- Follow-up for the next harvest unit, carried with the
+  right-edge-first order: sweep the right edge first,
+  re-check the central cluster for regenerated bubbles,
+  and verify the armed truck loot bubble explicitly. The
+  0244 left-edge-first carry is now closed.
+
 ## Open questions
 
 - The capacity cap per building, and how long until output stops
@@ -631,6 +735,19 @@ regular stays due. Evidence in
   rather than assuming the candidate.
 
 ## Changelog
+
+- 1.17.0 (2026-11-03): batch taps over left-side buildings
+  and farmland mixed bubble centres with building panels
+  (Gear Factory Lv.20 to 21 and Iron Mine Lv.27 panels
+  opened and closed untouched, farmland bubbles still
+  visible), so 0 collections verified and HUD unchanged at
+  rounding (food 251.1M, iron 592.7M, coins 17.4M, power
+  149,948,901); full edge sweep, Season 2 area and armed
+  truck loot unchecked so partial, blocker category c;
+  next unit must re-measure bubble centres fresh before
+  tapping; the 1044 left/top-first follow-up carries
+  forward, not closed; folded from the 1524 harvest unit;
+  no earlier claim superseded.
 
 - 1.12.0 (2026-11-02): one farmland bubble collected (food plus about 0.6M, one-tap-clears-all re-confirmed), two new not-a-bubble points (215,465 Iron Mine Lv.27 building, 145,265 Survivor List panel) joining the 1520 campaign entry, HUD measured food 226.5M, second resource 561.8M, coins 5.9M with the change since the 1723 snapshot unexplained in the record, full-map sweep and armed truck loot check outstanding, folded from the 1945 harvest unit; no earlier claim superseded.
 
@@ -666,3 +783,113 @@ regular stays due. Evidence in
   question.
 
 - 1.13.0 (2026-11-02): four central-cluster bubbles cleared in one batch at (396,416), (292,468), (499,468) and (397,516), second-row first resource up about 0.4M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and restored views bubble-free but top and left extremes undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-side-first re-sweep carried to the next unit, folded from the 2247 harvest unit; no earlier claim superseded.
+
+- 1.14.0 (2026-11-03): four central-cluster bubbles cleared in one batch at (396,399), (294,455), (497,458) and (397,510), second-row first resource up about 0.3M at HUD rounding with food, iron and coins unmoved at rounding, right-panned and top-edge views bubble-free but the left edge undragged so partial, armed truck with no loot bubble left alone, Season 2 area excluded per standing rule, left-edge-first re-sweep carried to the next unit, folded from the 0244 harvest unit; no earlier claim superseded.
+
+- 1.15.0 (2026-11-03): central cluster bubble-free at the four positions cleared by the 0244 unit with nothing tapped, left-edge follow-up from 0244 done (drag 700,500 to 300,500 to the neighbouring-base cluster west of the own base, no own-building bubble), top edge bubble-free (drag 500,300 to 500,650, farmland plots, upper buildings, parked helicopter), HUD unchanged at rounding (food 230.7M, second top-bar resource 565.3M, coins 5.9M, second-row first resource 19.0M, second-row second resource 505.1K, power 149,940,141, stamina 120), right edge not swept and armed truck loot state not separately verified so partial with tracker untouched, Season 2 area excluded per standing rule, right-edge-first re-sweep with explicit armed-truck loot verification carried to the next unit (the 0244 left-edge carry is now closed), folded from the 0642 harvest unit; no earlier claim superseded.
+
+
+## What the 2026-11-03 1044 unit added - central and right-bottom bubble-free, 0 collected, left and top unswept since 0642
+
+- Ticker-1034, unit harvest-2026-11-03-1003, about
+  10:36 to 10:44 local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/1044-queue-run.md`.
+- Entry, left open by the previous pass: the game was
+  NOT on the base view at unit start - the Alliance
+  Tech detail panel for Rallied Defense (7/10) was
+  left open by ticker-1004, coin Donate button greyed
+  with its timer at 00:02:53. Nothing was donated
+  here; that panel belongs to the donations unit.
+  The panel X closed to the Alliance Techs list,
+  whose X revealed the Alliance main panel ([AP3x]
+  The Apex, 94/100 members, power 13,091,657,850),
+  and its back arrow returned to base. Help and
+  Alliance Gifts red dots were visible in that panel
+  and were left untouched as other units work.
+- HUD at unit start and close, rounded as displayed,
+  unchanged: food 240.3M, second top-bar resource
+  575.0M, coins 12.1M, second-row first resource
+  19.0M, second-row second resource 505.1K, power
+  149,948,901, stamina 120.
+- Central cluster (starting view and restored view):
+  no green resource bubble over any building, nothing
+  tapped, nothing collected. Right-edge follow-up
+  from the 0642 unit: a first drag (300,500 to
+  700,500) produced no visible view change; the
+  reverse drag (700,500 to 250,500) panned to the
+  right-bottom base area (gold HQ, radar towers,
+  troop tents, Season 2 structures at the bottom
+  right). No green bubble in that view either.
+  Dragged back (250,500 to 700,500) to central.
+- Armed truck loot check: the parked trucks in the
+  central view (red and blue trucks by the lower
+  gate) and the blue truck by the gold HQ in the
+  panned view showed no green loot bubble, so
+  nothing was claimed there (not fully loaded). The
+  loot state was verified visually only; no truck
+  panel was opened. The Season 2 area at the bottom
+  was left out of the sweep, per the standing rule
+  that it is not main base harvest.
+- Why partial, not done: the full-map acceptance
+  needs zero bubbles with the base dragged to each
+  edge. Central and right-bottom are bubble-free in
+  this unit, but the left edge and top edge were last
+  swept by the 0642 unit, not this one, and bubbles
+  regenerate within minutes of a collection, so a
+  whole-map zero claim is not proven. Tracker
+  untouched, per the rule for partial units.
+- Follow-up for the next harvest unit, order flipped
+  from the 0642 carry: sweep the left edge and top
+  edge first, re-check the central cluster for
+  regenerated bubbles, and re-check the armed truck
+  loot bubble. No earlier claim superseded.
+
+## What the 2026-11-03 1524 unit added - batch taps mixed bubbles with building panels, 0 verified collections
+
+- Ticker-1504, unit harvest-2026-11-03-1403, about
+  15:05 to 15:24 local, status partial. Evidence in
+  `_records_/2026-11-03/resource-collection/1524-queue-run.md`.
+- Entry: the game was left on the Radar tasks screen from
+  the previous unit; returned to base with the grounded
+  home button.
+- Base HUD read live at close: food 251.1M, iron 592.7M,
+  coin 17.4M, diamonds 12.72K, total power 149,948,901.
+  These figures are unchanged at displayed precision
+  from the unit start, so no collection amount is
+  verified for this unit. The power read matches the
+  1044 HUD read exactly; it is a repeated measurement,
+  not a correction.
+- Bubbles tapped: one single tap, then a batch of eight
+  taps, on the gold circles visible over the left-side
+  buildings and farmland (measured centres in the unit,
+  e.g. [234, 363], [164, 394], [304, 400], [382, 394]).
+  No panel opened for the single tap, but the batch
+  ended on a building panel, and the farmland bubbles
+  were still visible afterwards, so the taps cannot be
+  counted as verified collections. Lesson, stated as the
+  next unit's method (R2 pivot): the batch-tap method
+  used here mixed bubble centres with building panels;
+  the next unit must re-measure bubble centres fresh
+  from a new screenshot before tapping, and must not
+  batch taps across bubble and building targets.
+- Building panels opened by mistake and closed without
+  action: Gear Factory Lv.20 to 21 (Upgrade and Finish
+  Now NOT tapped, per the red lines) and Iron Mine Lv.27
+  (Output/hr +115325, Max Production Time 11hr 36min,
+  survivors Charles, Jolene, Alyssa, Harry, all Miner;
+  Quick Dispatch NOT tapped). No building, research or
+  assembly action was taken; no diamonds or money spent.
+- Full sweep NOT completed: the base was not dragged to
+  its edges in all directions, the Season 2 area bubbles
+  and the armed truck loot were not checked, and no
+  bubble count was closed live. This unit is partial,
+  never done. Tracker untouched, per the partial rule.
+- Blocker category: c (tap method - bubble centre versus
+  building panel confusion at this zoom).
+- Follow-up carried, not closed: the 1044 follow-up
+  (sweep the left edge and top edge first, re-check the
+  central cluster for regenerated bubbles, re-check the
+  armed truck loot bubble) was NOT done by this unit and
+  carries forward, now with the added fresh-measure
+  requirement above and the full edge-to-edge sweep
+  before closing. No earlier claim superseded.

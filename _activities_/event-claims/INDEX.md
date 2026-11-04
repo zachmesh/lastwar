@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T05:40:46Z
+modified: 2026-11-03T20:39:44Z
 level: L1
-version: 1.15.0
+version: 1.19.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,9 @@ grounded_in:
   - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (hub back arrow centre re-measurement)
   - source: ticker-1234 event-claims execution record 2026-11-02 1250 queue run (done, full hub sweep, nothing claimable, relaunch restores hidden rails)
   - source: ticker-2104 event-claims execution record 2026-11-02 2113 queue run (done, full hub sweep, Wanted Boss rotated to Code 64)
+  - source: ticker-2334 event-claims execution record 2026-11-02 2341 queue run (done, full hub sweep, nothing claimable, Arms Race rotated to Tech Research, Wanted Boss tab dot is a live-event marker)
+  - source: ticker-0304 event-claims execution record 2026-11-03 0318 queue run (done, full hub sweep, 0 claimed, Desert Storm registered)
+  - source: ticker-1204 event-claims execution record 2026-11-03 1217 queue run (done, full hub sweep, 0 claimed, Arms Race Hero Advancement 41,500, Boss Code 64 not yet out)
 ---
 
 
@@ -608,6 +611,192 @@ that drag is the sweep-completeness check, not wasted motion.
 - No diamonds, money, speedups or other resources
   spent. Game left on the base screen.
 
+
+## What the 2026-11-02 2341 unit added - full hub sweep, nothing claimable, phase rotated
+
+- Unit events-2026-11-02-2257 by ticker-2334, session
+  about 23:34 to 23:41, status done. Full hub sweep
+  performed, nothing claimable anywhere in the hub,
+  nothing claimed. Evidence in
+  `_records_/2026-11-02/event-claims/2341-queue-run.md`.
+- Arms Race phase rotated since the 2113 sweep: now
+  Tech Research phase, Contest Segment Lv.29-30,
+  score 0, cumulative chest 0/2 (not full, not
+  bouncing), point chests 6,250 / 12,500 / 30,000
+  all locked. The bottom rank row reads #2110
+  [AP3x]Bears Lair with 9,300 - phase context only,
+  not a claim, and not the current phase score.
+  Pushing the phase is the arms-race unit's job,
+  not this sweep.
+- Desert Storm Battlefield: Battle Day 2026-11-6,
+  03:00-03:30, Participants 19/20 (including you),
+  stamped Enlisted on Task Force A. Registration
+  ends in 1d 18:20:11 at read (about 2.5 hours on
+  from the 2113 read, consistent). Alliance
+  registration event; Select Time / Select
+  Participants were not tapped, nothing personal
+  to claim.
+- Wanted Boss: still Code 64 (giant gorilla,
+  unchanged since the 2113 sweep); Missile Vehicle
+  heroes deal 50% extra damage. Appears at server
+  time 00:00, Go countdown about 17:19 at read -
+  not out yet, attacking is grinding, not a claim.
+  Goals page: best single attack 852,929,736
+  against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B,
+  all Claim buttons grey, nothing claimable.
+  Discrimination rule for sweeps: the Wanted Boss
+  tab carries a small red dot, but the page itself
+  holds no claimable reward - the dot marks the
+  live event, not a pending claim. A tab dot alone
+  is not claim proof.
+- Community: Discord binding reward reads 500
+  Claimed, unchanged. Nothing to claim.
+- Tab bar dragged to its end: the four tabs above
+  are the whole hub (Arms Race, Desert Battlefield,
+  Wanted Boss, Community). No Zombie Invasion tab -
+  the event ended 2026-10-30, consistent with unit
+  zombie-invasion-zombie-2026-10-28-066.
+- No bouncing chest, no reward red dot on any swept
+  page other than the Wanted Boss tab dot explained
+  above. No diamonds, money, speedups or other
+  resources spent. Game left on the base screen.
+- Result statistics: tabs_swept 4, claimed_count 0,
+  target 1 full hub sweep performed, achieved 1,
+  verified yes.
+
+
+
+## What the 2026-11-03 0318 unit added - full hub sweep, 0 claimed, Desert Storm registered, Boss Code 64
+
+- Ticker-0304, unit events-2026-11-03-0257, about 03:18
+  local, status done. Evidence in
+  `_records_/2026-11-03/event-claims/0318-queue-run.md`.
+- Events hub swept tab by tab, with a sideways tab-bar
+  scroll to reach the last tab.
+- Arms Race (first tab): Base Building phase, contest
+  segment Lv.29-30, score 9,300, countdown 02:42:45. Tier
+  chests at 6,250, 12,500 and 30,000; the tier-1 chest
+  was already claimed in the earlier arms-race unit and
+  tiers 2 and 3 are locked by score. No phase action was
+  taken here: Arms Race work belongs to its own unit,
+  and no grinding was done. This read is a hub sweep
+  only and is not folded into the arms-race profile.
+- Desert Storm Battlefield: Registration ends in 1d
+  14:42:34, Battle Day 2026-11-6 03:00-03:30,
+  Participants 19 of 20 including this account: already
+  registered, no claim button, nothing changed.
+- Wanted Boss (Code 64): appears at server time 00:00,
+  Go button with a 13:42:24 countdown. Go would start
+  an attack, which is grinding, not a claim, so it was
+  not tapped; the 1-attack rewards are not earned.
+- Community: the link reward reads Claimed, no new
+  claim.
+- Final sweep: no bouncing chest and no claimable reward
+  red dot remained on the hub tabs checked. 0 rewards
+  claimed, no purchase tapped.
+
+## What the 2026-11-03 0808 unit added - full hub sweep, 0 claimed, Drone Boost phase, Desert Storm registered, Boss Code 64
+
+- Ticker-0804, unit events-2026-11-03-0657, about 08:08
+  local, status done. Evidence in
+  `_records_/2026-11-03/event-claims/0808-queue-run.md`.
+- Events hub swept tab by tab, with sideways tab-bar
+  scrolls to reach the last tab and back to the first.
+- Arms Race (first tab): Drone Boost phase, contest
+  segment Lv.29-30, score 9,300, rank 2110, countdown
+  01:53:47 falling to 01:52:21 on the final sweep. Tier
+  chests at 1,500, 10,000 and 30,000; tier 1 already
+  claimed in an earlier unit and tiers 2 and 3 are locked
+  by score. Cumulative chest at top left reads 0 of 2,
+  not claimable. No phase action was taken here - Arms
+  Race work belongs to its own unit, and no grinding was
+  done. This read is a hub sweep only and is not folded
+  into the arms-race profile. Note the phase and tier
+  thresholds differ from the 0318 hub read (Base
+  Building phase, tiers 6,250 / 12,500 / 30,000): tier
+  thresholds are per-phase, so do not carry them across
+  a phase rotation.
+- Desert Storm Battlefield: Registration ends in 1d
+  09:52:38, Battle Day 2026-11-6 03:00-03:30,
+  Participants 19 of 20 including this account - already
+  registered, no claim button, nothing changed. The
+  registration countdown is consistent with the 0318
+  read (1d 14:42:34 then, about 4h50m earlier).
+- Wanted Boss (Code 64): appears at server time 00:00,
+  Go button with a 08:53:34 countdown. Go would start
+  an attack, which is grinding, not a claim, so it was
+  not tapped; the 1-attack rewards are not earned. Its
+  Rewards panel was inspected read-only: ranking reward
+  tiers No.1 to No.4-10 only, no claim button.
+- Community: the 500 Diamonds row reads Claimed, no new
+  claim.
+- Discrimination rule, confirmed again: the red dot on
+  the Wanted Boss tab is the boss countdown indicator,
+  not a claim - it stays lit while the boss is not yet
+  out. A tab dot alone is not claim proof.
+- Final sweep back to Arms Race: no bouncing chest and
+  no claimable reward red dot remained on the hub tabs
+  checked. 0 rewards claimed, no purchase tapped.
+
+## What the 2026-11-03 1217 unit added - full hub sweep, 0 claimed, Hero Advancement phase, Boss Code 64 not yet out
+
+- Ticker-1204, unit events-2026-11-03-1057, about
+  12:12 to 12:17 local, status done. Evidence in
+  `_records_/2026-11-03/event-claims/1217-queue-run.md`.
+  Events hub opened from the base view. Four tabs
+  walked in order, waiting for each page to render
+  before reading it.
+- Arms Race - Hero Advancement phase: personal score
+  shown 41,500, phase countdown 01:45 at entry.
+  Cumulative chest top left reads 6/8, not full,
+  nothing to claim. Point chests at 2,000, 4,000 and
+  12,000: tapping the 2,000 chest opened only its reward
+  preview (Valued 2,360: Skill Medal 200, Arms Race
+  Badge 1, Coin Chest SR 4, Food Chest SR 4, Iron Chest
+  SR 4, 5m Speed-up 8), with no Claim button in the
+  popup. The popup was closed by tapping outside it. No
+  point chest was claimed in this unit; the earlier
+  arms-race unit of this phase already worked the tier-3
+  target, and no chest here presented a claim action.
+  Lesson: a point chest that opens a preview with no
+  Claim button is not a missed claim - close it and move
+  on. Scoring rows below (Hero Recruitment, Hero EXP,
+  diamond packs) are scoring paths, not claims, and were
+  not touched. This unit does no Arms Race grinding.
+  This read is a hub sweep only and is not folded into
+  the arms-race profile.
+- Desert Storm Battlefield: registration ends in 1d
+  05:44:47, Battle Day 2026-11-6 03:00 to 03:30,
+  Participants 19/20 including this account. Already
+  registered. No claim button, no red dot, no bouncing
+  chest. The registration countdown is consistent with
+  the 0808 read (1d 09:52:38 then, about 4h08m earlier).
+- Wanted Boss - Code 64: boss rotated from Code 87 to
+  Code 64 (rotation already recorded in the 2113 unit).
+  Appears at server time 00:00; Go countdown read
+  04:44:07 at entry, so the boss is not out yet. Missile
+  Vehicle heroes deal 50 percent extra damage. Rewards
+  panel checked on both tabs: Ranking Reward tiers No.1
+  to No.4-10 are payout tables with no Claim button;
+  Individual Reward tiers pay on 1, 2 and 3 attacks,
+  also with no Claim button. Nothing claimable before
+  the boss appears.
+- Caveat, recorded not resolved: the Wanted Boss tab
+  itself carries a small red dot in the tab bar, but its
+  page and both Rewards tabs show no claimable item. The
+  dot is consistent with a new-boss notice rather than a
+  pending claim; the next events unit re-checks it after
+  the boss appears. This matches the 2341 "live-event
+  marker" and 0808 "countdown indicator" readings: a tab
+  dot alone is not claim proof.
+- Community: Discord binding reward reads 500 diamonds,
+  Claimed. Nothing further to claim on this page.
+- Outcome: done. No earned reward was left unclaimed on
+  any tab walked; nothing was claimed because nothing
+  presented a claim action. No purchase button was
+  tapped; the Battle Pass paid buttons were never shown
+  in this sweep. Costs: about 5 minutes of unit time,
+  0 diamonds. Game left on the base view.
 
 ## Open questions
 

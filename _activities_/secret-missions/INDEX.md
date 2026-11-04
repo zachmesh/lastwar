@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T05:40:46Z
+modified: 2026-11-03T20:39:44Z
 level: L1
-version: 1.10.0
+version: 1.14.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -20,6 +20,10 @@ grounded_in:
   - source: ticker-0934 secret-missions execution record 2026-11-02 0952 queue run (done, checked only)
   - source: ticker-1336 secret-missions execution record 2026-11-02 1345 queue run (done, checked only)
   - source: ticker-2104 secret-missions execution record 2026-11-02 2127 queue run (partial, four claims in one tap, assists and dispatch pending)
+  - source: ticker-0004 secret-missions execution record 2026-11-03 0005 queue run (done, assists 5 of 5, UR Assist question stale)
+  - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry, assists 5 of 5)
+  - source: ticker-0834 secret-missions execution record 2026-11-03 0837 queue run (done, unsnapped exact-centre entry re-confirmed, assists at cap, nothing pending)
+  - source: ticker-1204 secret-missions execution record 2026-11-03 1223 queue run (partial, post never entered, base view panned between measurement and tap)
 ---
 
 
@@ -45,6 +49,36 @@ post screen carries two sibling tabs registered as their own types -
 - Measured 2026-11-01 - a first tap at norm (52,643) opened the post
   and the title was verified before acting, a third observed slot
   point for this entry.
+- Tap-snapping lesson, 2026-11-03 (0346 unit): snapped
+  taps in the left column mis-route. A snapped tap at
+  [54,604] (inside the pickup box) opened Intercity Trade
+  instead of the Secret Command Post, and a snapped tap
+  at the train centre [61,563] also opened Intercity
+  Trade. An unsnapped tap (snap_to_control false) at the
+  pickup exact centre [55,632] opened SECRET COMMAND
+  POST, title verified before any further tap. Lesson
+  carried forward: use unsnapped exact-centre taps for
+  the left-column vehicle icons; snapped taps in this
+  column land on the trade slot. This generalises the
+  0124 lesson (a snapped tap near 630 landed on the
+  pickup, snap off at 596 opened trade) - snapping is
+  unreliable in this column in both directions, so the
+  verified variant is unsnapped exact-centre, re-grounded
+  fresh each unit. The two snapped trade screens were
+  exited by their back arrows with no trucks action: no
+  truck was dispatched, plundered or settled, and no Mega
+  button was touched there.
+- Pan precondition, 2026-11-03 (1223 unit): a freshly
+  measured pickup centre is only valid in the framing it
+  was measured in. The base view panned between the fresh
+  crop measurement and the entry tap, so the 68,683
+  centre missed the post and the panned framing hid the
+  standard left column. Re-centre the base view first
+  and re-measure the column in the same screenshot the
+  tap is taken from, before tapping. This qualifies, not
+  replaces, the unsnapped exact-centre lesson above: the
+  tap variant is verified only in the standard framing.
+
 - The screen has three tabs - Secret Tasks, Hidden Treasures and
   Ghost Ops. Secret Tasks itself shows Your Tasks with a count badge
   and an Others' Tasks or Ally Tasks list below.
@@ -124,7 +158,12 @@ post screen carries two sibling tabs registered as their own types -
   now superseded for rows that do carry an Assist button, above;
   the world-map handshake route is now tested and works
   for UR rows (1417 unit, below); the list Assist button
-  stays unresponsive for UR rows.
+  stays unresponsive for UR rows. (2026-11-03 0005
+  correction: this last clause is SUPERSEDED - the 0426
+  and 0005 units assisted UR rows 5 of 5 from the list
+  Assist button, so the button works for UR rows; the
+  0150/0145 failures are row- or session-dependent, not
+  a UR-row rule.)
 - The Others' Tasks panel carries a Monica note - sharing a Secret
   Task from the World Map into the Alliance Channel marks it
   automatically; only a secret task that is currently plunderable or
@@ -718,6 +757,259 @@ secrets-2026-10-31-2257, status partial).
   share or claim.
 
 
+## What the 2026-11-03 0005 unit added - assists 5 of 5, UR Assist question stale, done
+
+- Unit secrets-2026-11-02-2257 by ticker-0004, session
+  about 00:05 local, status done. Evidence in
+  `_records_/2026-11-03/secret-missions/0005-queue-run.md`.
+- Device takeover, once, per the owner rule of
+  2026-10-27: at entry the game showed "Your account
+  is currently active on a different device!" -
+  Confirm was tapped once to take the session over
+  on the Mac. The app exited on Confirm, as that
+  rule states; LastWar was reopened and play
+  continued with state intact. One takeover only, so
+  this is not a contested pass. No "active on a
+  different device" dialog appeared again in this
+  unit.
+- Duel posture day 2, Base Expansion: Legendary secret
+  tasks score 75,000 each today. No new secret task
+  was available to dispatch (see below), so no
+  scoring dispatch was made in this unit.
+- Entry and state, read live: Secret Command Post
+  entered from the base left-column white pickup
+  icon, grounded at norm 53,653 in this base view.
+  Title verified SECRET COMMAND POST before any
+  further tap. At entry: Assist Allies 0/5, Plunder
+  Others 0/5, Your Tasks badge 0, Ally Tasks badge 5.
+- Your Tasks held only the four tasks claimed by the
+  previous secrets unit (ticker-2104, 2026-11-02
+  21:27): UR Disrupt electric grid, SSR Search for
+  Missing Refugees, SSR Provide Tech Support to
+  Refugees, SSR Train Refugees. No green Claim
+  button on any card; the three SSR cards carry gold
+  PERFECT stamps. No finished task was left
+  unclaimed.
+- Ally assists, 5 of 5, done live: Ally Tasks tab UR
+  rows carried blue Assist buttons. Assist 1:
+  [AP3x] Korean-named ally. ASSIST SUCCESSFUL panel
+  read live: Iron 324.9K, Food 324.9K, Mystery Supply
+  Box x6, 5m Construction Speed-up. Counter moved to
+  1/5. Assists 2 to 5: [AP3x]Buckeye16, four in a row.
+  Each tap produced the ASSIST SUCCESSFUL panel,
+  dismissed on a tap at the banner (500,330).
+  Counter read live at 2/5 after assist 2 and at 5/5
+  after assist 5, and the Ally Tasks badge cleared.
+  Reward rows for assists 2 to 5 were not
+  individually recorded - the panels were dismissed
+  after the success banner, and the counter
+  progression is the live proof of the five assists.
+  Only assist 1 rewards are itemised above, as the
+  only row read in full. Assist Allies closed at 5/5.
+  Rows still visible after the cap (Buckeye16, Raze
+  Cromwell) were not tapped.
+- Correction, in favour of the newest verified
+  records: the metadata open question about UR ally
+  rows showing no Assist button is STALE against
+  this and the 0426 live evidence. UR ally rows DO
+  carry blue Assist buttons and the list Assist
+  button works for them (0426: 5 of 5 at freshly
+  grounded [782,488]; 0005: 5 of 5 across two allies).
+  The 0150/0145 failures stand as row- or
+  session-dependent observations, not as a UR-row
+  rule. The "list Assist button stays unresponsive
+  for UR rows" sentence in the Ally assists section
+  above is superseded by this note and must not be
+  quoted as current.
+- Reward Recovery, checked, nothing new: Recover
+  panel opened from the Secret Command Post (icon at
+  norm 831,191). The 2026-10-24 19:00 record reads
+  CLAIMED; the 2026-10-16 record is collapsed as
+  before. No new claimable recovery record exists.
+- New dispatch, none possible: Mega Deploy was tapped
+  twice at its grounded point (622,941), with no
+  panel and no change either time. Mega Refresh was
+  tapped once at its grounded point (375,941), also
+  with no change. Both buttons are greyed out,
+  matching the 2026-11-02 09:52 and 13:45 units: with
+  no pending task to deploy, there is nothing to
+  deploy and nothing to refresh. The Mega Refresh
+  cost therefore stays unobserved - the button cannot
+  be cost-checked while greyed out - and no Mega
+  Refresh was used. Others' Tasks was not opened in
+  this unit; the previous unit found it empty, and
+  Plunder Others stayed 0/5 untouched per the limits.
+- Outcome: done. The regular is fully done for this
+  window: ally assists taken to the 5/5 cap, no
+  finished task left unclaimed, Reward Recovery
+  checked with nothing new, and no pending task
+  available to dispatch. Counters at close, read
+  live: Assist Allies 5/5, Plunder Others 0/5, Your
+  Tasks badge 0, Ally Tasks badge 0. No diamonds, no
+  money, no speedup, no paid button, no Others
+  plunder touched. Game left on the base screen.
+
+
+
+## What the 2026-11-03 0346 unit added - unsnapped exact-centre entry, assists at cap, done
+
+- Unit secrets-2026-11-03-0257 by ticker-0334, session
+  about 03:46 local, status done. Evidence in
+  `_records_/2026-11-03/secret-missions/0346-queue-run.md`.
+  Computer session cc-296 dropped mid-pass and was
+  restarted as cc-298 with no game state lost. No
+  "active on a different device" dialog appeared. No
+  diamonds, no money, no speedup, no paid button, no
+  Others plunder touched.
+- Entry, measured live: the base left column in this
+  view, fresh-grounded - green face at norm 53,483,
+  light-blue train-front icon at norm 55,563, white
+  pickup at norm 55,632, satellite dish with badge 11
+  at norm 62,723. A snapped tap at [54,604] (inside the
+  pickup box) opened Intercity Trade instead of the
+  Secret Command Post, and a snapped tap at the train
+  centre [61,563] also opened Intercity Trade. Both
+  screens were exited by their back arrows with no
+  trucks action, and the trade counters seen incidentally
+  on those screens (Today's Trade Count 4/5, four trucks
+  out) are NOT counted as trucks work in this unit; they
+  belong to the trucks regular, whose unit in this pass
+  closed partial on entry failure. An unsnapped tap
+  (snap_to_control false) at the pickup exact centre
+  [55,632] opened SECRET COMMAND POST, title verified
+  before any further tap. Lesson: use unsnapped
+  exact-centre taps for the left-column vehicle icons;
+  snapped taps in this column land on the trade slot.
+  This finding is also commented on GitHub Issue #218,
+  because the trucks unit in this same pass failed entry
+  on snapped taps and may succeed with an unsnapped
+  exact-centre tap on the trade icon.
+- State, read live: Secret Command Post header - Assist
+  Allies 5/5, Plunder Others 0/5. Your Tasks, four cards,
+  unchanged from the 2026-11-03 0005 unit: UR Disrupt
+  electric grid (no PERFECT stamp, no Claim button
+  visible), SSR Search for Missing Refugees PERFECT, SSR
+  Provide Tech Support to Refugees PERFECT, SSR Train
+  Refugees PERFECT. No finished task was left unclaimed.
+  Ally Tasks tab: no badge visible; assists already at
+  the 5/5 cap, so no assist was tapped. Mega Refresh and
+  Mega Deploy both greyed out, matching the 0005 unit:
+  with no pending task to deploy there is nothing to
+  deploy or refresh, and no Mega Refresh cost could be
+  checked.
+- Reward Recovery checked from the post: the 2026-10-24
+  19:00 record reads CLAIMED, the 2026-10-16 record is
+  collapsed as before, no new claimable record exists.
+  Panel closed with its X; nothing claimed.
+- Outcome: done. The regular is fully done for this
+  window: ally assists at the 5/5 cap, no finished task
+  left unclaimed, Reward Recovery checked with nothing
+  new, and no pending task available to dispatch.
+  Counters at close, read live: Assist Allies 5/5,
+  Plunder Others 0/5, Your Tasks badge 0. Claimed in this
+  unit: none (nothing was pending). Tracker: marked done
+  for secrets by this pass. Game left on the base screen.
+
+## What the 2026-11-03 0837 unit added - unsnapped entry re-confirmed, assists at cap, done
+
+- Unit secrets-2026-11-03-0657 by ticker-0834, session
+  about 08:37 local, status done. Evidence in
+  `_records_/2026-11-03/secret-missions/0837-queue-run.md`.
+  No "active on a different device" dialog appeared. No
+  diamonds, no money, no speedup, no paid button, no
+  Others plunder touched.
+- Entry, re-confirmed: the unsnapped exact-centre tap at
+  norm [55,632] opened SECRET COMMAND POST on the first
+  try, title verified before any further tap, matching
+  the 0346 unit lesson (snapped taps in this column land
+  on Intercity Trade instead). Second first-try
+  confirmation of the unsnapped route in one day.
+- State, read live, unchanged from the 0346 unit: Secret
+  Command Post header Assist Allies 5/5, Plunder Others
+  0/5. Your Tasks, four cards: UR Disrupt electric grid
+  (no PERFECT stamp, no Claim button visible), SSR Search
+  for Missing Refugees PERFECT, SSR Provide Tech Support
+  to Refugees PERFECT, SSR Train Refugees PERFECT. The
+  PERFECT stamps mark already-claimed tasks; no finished
+  task was left unclaimed. Mega Refresh and Mega Deploy
+  both greyed out, as in the 0346 unit: with no pending
+  task to deploy there is nothing to deploy or refresh,
+  and no Mega Refresh cost could be checked.
+- Ally Tasks tab: Dw1968 UR rows with blue Assist buttons
+  visible, but the counter stands at the 5/5 cap, so no
+  assist was tapped. Secret Task Report (Record icon):
+  Assist history for today, [AP3x]Buckeye16 rows at 11-3
+  00:09 and 00:10 and a further row at 00:08, confirming
+  the assists were used today to reach the cap. Read
+  only, nothing claimed.
+- Reward Recovery (Recover icon at norm [845,205]): the
+  2026-10-24 19:00 record reads CLAIMED, the 2026-10-16
+  record is collapsed as before, no new claimable record
+  exists. Panel closed with its X; nothing claimed.
+- Outcome: done. The regular is fully done for this
+  window: ally assists at the 5/5 cap, no finished task
+  left unclaimed, Reward Recovery checked with nothing
+  new, and no pending task available to dispatch.
+  Counters at close, read live: Assist Allies 5/5,
+  Plunder Others 0/5. Claimed in this unit: none
+  (nothing was pending). Tracker: marked done for
+  secrets by this pass. Game left on the base screen.
+
+
+## What the 2026-11-03 1223 unit added - entry failed, base view panned between measurement and tap, partial
+
+- Ticker-1204, unit secrets-2026-11-03-1057, about
+  12:18 to 12:23 local, status partial. Evidence in
+  `_records_/2026-11-03/secret-missions/1223-queue-run.md`.
+  The Secret Command Post was never entered, so no task
+  was dispatched, claimed or assisted, and no ally task
+  was touched. Tracker untouched, per the partial rule.
+- Session note: computer session cc-347 dropped between
+  the events unit and this unit and was restarted as
+  cc-350 with no state lost (the same session-drop
+  pattern as the 1104 pass).
+- Entry failure, with a method change recorded: base
+  view left column measured fresh from a crop: green
+  face centre about norm 68,578, white pickup (Secret
+  Command Post) centre about norm 68,683, radar dish
+  with badge 11 below, hammer below that. The trade
+  icon had rotated out of this set.
+- First tap at norm 60,590, taken from the previous
+  crop's misread mapping, opened the season temperature
+  panel instead (Location final temp 6.5 degrees,
+  Permafrost Area Lv.6, Alliance Furnace Lv.20,
+  High-Heat Furnace Lv.30 not turned on). The panel was
+  closed with its X, no furnace control touched, no
+  temperature setting changed. Lesson: never tap from a
+  previous crop's mapping - a stale mapping opens the
+  wrong panel.
+- Second tap at the freshly measured pickup centre
+  68,683 did not open the post; the base view was found
+  panned to a different framing (Gold Mine Lv.29 area,
+  train tracks at top), and the left icon column was no
+  longer in its standard position in that framing.
+- A third tap, aimed at a green arrow in the panned
+  view, opened the Gold Mine Lv.29 building panel
+  instead (Output/hr +93751, Max Production Time 11hr
+  52min, Survivors Charles, David, Karen, Michael as
+  Gold Miners). The panel was closed with its X. Quick
+  Dispatch was not tapped.
+- Blocker, named for the next unit: the base view panned
+  between the fresh measurement and the entry tap, so the
+  measured pickup centre no longer matched the screen,
+  and the panned framing hides the standard left icon
+  column. Next secrets unit: re-centre the base view
+  first (or find the post from a known anchor) and
+  re-measure the column in the same screenshot it taps
+  from, before tapping.
+- This qualifies, not replaces, the 0346 and 0837
+  unsnapped exact-centre lesson: the tap variant is
+  verified only in the standard framing. A measured
+  centre from a panned-away framing is not a valid entry
+  point.
+- Costs: about 5 minutes of unit time, 0 diamonds.
+  Game left on the base view with all panels closed.
+
 ## Open questions
 
 - Answered 2026-11-01 (1417 unit), NOT reproduced 2026-11-02
@@ -727,7 +1019,10 @@ secrets-2026-10-31-2257, status partial).
   no task card and its map-marker tap opened nothing, so
   the handshake route is session- or row-dependent until
   reproduced again; the list Assist button stays
-  unresponsive for UR rows and is not repeated. (2026-11-02 0426 update: first-row Assist succeeded 5 of 5 at freshly grounded [782,488]; the 0150 point 825 must not be reused on this tab. The 0145 UR-row failure at 782 stands as a separate row-dependent observation.)
+  unresponsive for UR rows and is not repeated. (2026-11-02 0426 update: first-row Assist succeeded 5 of 5 at freshly grounded [782,488]; the 0150 point 825 must not be reused on this tab. The 0145 UR-row failure at 782 stands as a separate row-dependent observation.) (2026-11-03 0005 update: the UR-row
+  no-Assist-button question itself is now STALE - UR rows
+  carried blue Assist buttons and assisted 5 of 5 in this
+  unit as in 0426; see the 0005 section above.)
 - The cost of Mega Refresh, and whether it can be used freely.
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.

@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-03T06:38:05Z
+modified: 2026-11-03T21:45:53Z
 level: L1
-version: 1.7.0
+version: 1.10.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,10 @@ grounded_in:
   - source: ticker-1004 hidden-treasures execution record 2026-11-02 1009 queue run (done, checked only)
   - source: ticker-1336 hidden-treasures execution record 2026-11-02 1352 queue run (done, checked only)
   - source: ticker-2134 hidden-treasures execution record 2026-11-02 2135 queue run
+  - source: ticker-0004 hidden-treasures execution record 2026-11-03 0014 queue run (done, checked only, M3 at zero)
+  - source: ticker-0334 hidden-treasures execution record 2026-11-03 0349 queue run (done, checked only, counts identical to 0014, M3 at zero)
+  - source: ticker-0834 hidden-treasures execution record 2026-11-03 0838 queue run (done, checked only, counts identical to 0349, M3 at zero)
+  - source: ticker-1234 hidden-treasures execution record 2026-11-03 1243 queue run (done, checked only, counts identical to 0838, M3 at zero, leftover Gold Mine panel entry)
 ---
 
 # Hidden treasures
@@ -347,3 +351,132 @@ as Hidden Treasure.
 - No fragment exchange was executed (exchanges need owner
   approval per the activity limits). Nothing spent, no paid button
   tapped.
+
+
+## What the 2026-11-03 0014 unit added - checked only, M3 at zero, no dig
+
+- Unit treasures-2026-11-02-2257 by ticker-0004, session
+  about 00:14 local, status done, checked only.
+  Evidence in
+  `_records_/2026-11-03/hidden-treasures/0014-queue-run.md`.
+- Entry: Secret Command Post entered from the base
+  left-column white pickup icon at norm 53,653 (same
+  slot as the secrets unit this pass). Hidden
+  Treasures tab tapped at norm 369,139; title
+  verified as Hidden Treasure. The Hidden Treasures
+  tab carried no red dig badge at entry, consistent
+  with the counts below.
+- Fragment counts, read live from the map: M1 x12, M2
+  x12, M3 x0, M4 x7, M5 x2, M6 x5, M7 x11. Chest
+  progress track reads 4/15 at the top right of the
+  map screen. These stocks are exactly the post-dig
+  stocks of the 2135 unit - no fragment income
+  between the 2135 dig and this read is recorded,
+  and none is attributed.
+- Outcome: M3 is at zero, so no complete set of seven
+  fragments is on hand and no dig is possible; both
+  Dig buttons are greyed out. No dig was attempted
+  and no fragment exchange was executed (exchanges
+  need owner approval per the metadata limits).
+  Target 1 dig if a full set were on hand;
+  achieved 0 digs, for the stated reason - M3 x0 is
+  the binding fragment. No diamonds, no money, no
+  exchange touched. Game left on the base screen.
+
+## What the 2026-11-03 0349 unit added - checked only, counts identical to 0014, M3 still binding
+
+- Unit treasures-2026-11-03-0257 by ticker-0334, session
+  about 03:49 local, status done, checked only. Evidence
+  in `_records_/2026-11-03/hidden-treasures/0349-queue-run.md`.
+  No diamonds, no money, no exchange touched.
+- Entry: Secret Command Post entered with the unsnapped
+  exact-centre pickup tap [55,632] learned in the
+  secrets unit of this pass (see secret-missions); title
+  verified as SECRET COMMAND POST before any further
+  tap. Hidden Treasures tab tapped at norm [369,139];
+  title verified as Hidden Treasure. The tab carried no
+  red dig badge at entry.
+- Fragment counts, read live from the map, unchanged
+  from the 2026-11-03 0014 unit in every figure: M1 x12,
+  M2 x12, M3 x0, M4 x7, M5 x2, M6 x5, M7 x11. Chest
+  progress track reads 4/15 at the top right of the map
+  screen, also unchanged from 0014. Skip Animation is
+  ticked. Both Dig buttons are greyed out.
+- Outcome: done, checked only. M3 is at zero, so no
+  complete set of seven fragments is on hand and no dig
+  is possible; no dig was attempted and no fragment
+  exchange was executed (exchanges need owner approval
+  per the metadata limits). Target: 1 dig if a full set
+  were on hand; achieved: 0 digs, for the stated reason
+  - M3 x0 is the binding fragment, now for the second
+  consecutive treasures read with zero fragment movement
+  between them (0014 to 0349). Tracker: marked done for
+  treasures by this pass. Game left on the base screen.
+
+## What the 2026-11-03 0838 unit added - checked only, counts identical to 0349, folded late by the 1332 run
+
+- Unit treasures-2026-11-03-0657 by ticker-0834, session
+  about 08:38 local, status done, checked only. Evidence
+  in `_records_/2026-11-03/hidden-treasures/0838-queue-run.md`.
+  No diamonds, no money, no exchange touched. This record
+  was folded by the 1332 organizer run, after the 0349
+  fold: the intervening hourly runs folded other
+  activities and left this treasures read unfolded, so it
+  is folded here together with the 1243 read to keep the
+  fragment chain continuous.
+- Entry: Secret Command Post opened on the first try
+  with the unsnapped exact-centre pickup tap at norm
+  [55,632]; Hidden Treasures tab tapped next.
+- Fragment counts, read live from the map, identical to
+  the 0349 unit in every figure: M1 x12, M2 x12, M3 x0,
+  M4 x7, M5 x2, M6 x5, M7 x11. Chest progress 4/15,
+  unchanged. Both Dig buttons greyed out.
+- Outcome: done, checked only. M3 is at zero, so no
+  complete set of seven fragments is on hand and no dig
+  is possible; no dig was attempted and no fragment
+  exchange was executed (exchanges need owner approval
+  per the metadata limits). Tracker: marked done for
+  treasures by this pass. Game left on the base screen.
+
+
+## What the 2026-11-03 1243 unit added - checked only, counts identical to 0838, M3 still binding, leftover panel entry
+
+- Unit treasures-2026-11-03-1057 by ticker-1234, session
+  about 12:43 local, status done, checked only. Evidence
+  in `_records_/2026-11-03/hidden-treasures/1243-queue-run.md`.
+  No diamonds, no money, no exchange touched.
+- Entry, with the 1204 entry lesson applied: a Gold Mine
+  Lv.29 building panel was open at entry (leftover from
+  the ticker-1204 secrets unit's entry failure, recorded
+  in secret-missions/1223-queue-run.md). It was closed
+  with its X; Quick Dispatch was not tapped, and no
+  survivor was dispatched. The base left column was
+  re-measured fresh from the same screenshot it was
+  tapped from (visual grounding on that screenshot):
+  green face centre norm 52,580, white pickup centre
+  norm 52,630, radar dish with badge 11 at 52,707. The
+  pickup tap at norm 52,630 opened SECRET COMMAND POST
+  on the first try, title verified. Hidden Treasures tab
+  tapped at norm 369,139; title verified as Hidden
+  Treasure. The tab carried no red dig badge at entry.
+- Fragment counts, read live from the map, identical to
+  the 2026-11-03 08:38 unit in every figure: M1 x12,
+  M2 x12, M3 x0, M4 x7, M5 x2, M6 x5, M7 x11. Chest
+  progress 4/15, unchanged. Skip Animation is ticked.
+  Both Dig buttons (Dig 1 time, Dig 2 time(s)) are
+  greyed out.
+- Outcome: done, checked only. The regular is fully
+  checked for this slot. Target: 1 dig if a full set
+  were on hand; achieved: 1 check, 0 digs, for the stated
+  reason - M3 x0 is the binding fragment, now for the
+  fourth consecutive treasures read with zero fragment
+  movement since the 2135 post-dig stocks (0014, 0349,
+  0838, 1243). No dig was attempted and no fragment
+  exchange was executed (exchanges need owner approval
+  per the metadata limits).
+- Exit note: the exit tap from the Hidden Treasures tab
+  switched tabs rather than leaving the post; no task,
+  Mega button or ally row was touched. Game left in the
+  Secret Command Post on the Secret Tasks tab - the post
+  is where the next secrets unit enters anyway, so the
+  position is carried, not a stray state.

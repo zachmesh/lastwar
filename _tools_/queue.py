@@ -33,6 +33,9 @@ Usage:
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
   queue.py [--root DIR] reap                      # expired leases to inbox
+             # reap, sync and plan warn on stdout (exit still 0)
+             # when the root holds no pool state directory at
+             # all, so a wrong root never reports a silent zero
   queue.py [--root DIR] stats [--format text|yaml|json]
              # stats names stalled priority-1 inbox units
              # (age over 4h) under stalled_priority1, for the
@@ -49,8 +52,10 @@ Usage:
              # active-window alert and its once-per-stall dedup
              # stay the summary job clause (issue #129).
   queue.py [--root DIR] sync [--due-json FILE]
-             # one ticker production pass: reap, then enqueue one
-             # unit per regular the tracker marks due (idempotent);
+             # one ticker production pass: reap, expire stale
+             # units, drop inbox copies already closed in done
+             # (issue #213), then enqueue one unit per regular
+             # the tracker marks due (idempotent);
              # without --due-json it calls _tools_/regulars.py todo
   queue.py [--root DIR] plan [--hours N]
              # stage the horizon's windows: segment anchors,
@@ -239,6 +244,24 @@ def list_units(root, state):
     return out
 
 
+def pool_root_warning(root):
+    """Warning when root holds no pool state directory at all.
+
+    A wrong root reads as an empty pool today: list_units returns
+    [] for a missing folder, so reap on a root that is not a pool
+    reports expired 0 with nothing to show it never saw the pool
+    (issue #199 follow-up: the 2143 run's wrong-root scratch run
+    did exactly that). A pool that exists but is empty still has
+    its state directories, so only the no-directory case warns.
+    Warning only, never a block, matching complete's convention.
+    """
+    if any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        return ""
+    return (f"warning: pool root {root} holds no inbox, claimed "
+            "or done directory - the counts below describe an "
+            "empty or wrong root, not the live pool")
+
+
 # Aging against starvation (IMP-20261031-09, loop review
 # 2026-10-31 open link 4): a no-expiry low-priority chained unit
 # used to sort behind every expiring unit forever, because expiry
@@ -371,6 +394,24 @@ def write_new_unit(root, fields, regular):
     write_unit(unit_path(root, "inbox", fields["unit"]), fields, body)
 
 
+def _fixed_slot_regulars():
+    """Ids of fixed-slots regulars from the roster beside this tool.
+
+    Returns an empty set when the roster is unreadable, so the
+    caller degrades to the not_before guard instead of failing
+    the producer pass.
+    """
+    try:
+        with open(os.path.join(os.path.dirname(
+            os.path.abspath(__file__)), "regulars.json"),
+            encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return set()
+    return {r.get("id") for r in regs
+            if r.get("cadence") == "fixed-slots" and r.get("id")}
+
+
 def _window_aged_priority1(root):
     """Attach a real window to aged unscheduled priority-1 inbox
     units (issue #128 fix 1). Called by both producers - sync and
@@ -386,9 +427,21 @@ def _window_aged_priority1(root):
     instead of aging silently. Idempotent: a unit with a
     planned_for is never touched again, and the (regular,
     planned_for) invariant is respected. Returns the units
-    windowed."""
+    windowed.
+    Two exemptions (issue #147): a fixed-slots regular is never
+    re-timed - plan owns its slot timing, and re-timing destroyed
+    the 2026-11-02 final pre-reset sweep (its 18:30 slot and 19:00
+    reset expiry were rewritten to now and now+4h by the 17:55
+    tick, 35 minutes before its slot); and a unit whose
+    not_before is still in the future is waiting for its slot,
+    not stalled, so it is never re-timed either. A fixed-slot
+    unit past its slot is still covered by expiry: it always
+    carries a reset expiry, so _expire_stale surfaces it as a
+    miss without any windowing.
+    """
     stamp = now_utc()
     planned_iso = iso(stamp)
+    fixed_slots = _fixed_slot_regulars()
     taken = {(f.get("regular"), f.get("planned_for"))
              for state in STATES for f in list_units(root, state)
              if f.get("planned_for")}
@@ -402,6 +455,11 @@ def _window_aged_priority1(root):
         except (TypeError, ValueError):
             continue
         if priority != 1:
+            continue
+        if f.get("regular") in fixed_slots:
+            continue
+        not_before = parse_iso(f.get("not_before", ""))
+        if not_before is not None and not_before > stamp:
             continue
         created = parse_iso(f.get("created_at", ""))
         if created is None:
@@ -428,9 +486,14 @@ def _window_aged_priority1(root):
 
 
 def cmd_sync(args):
-    # 1. reap expired claims and expire stale inbox units
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
+    # 1. reap expired claims, expire stale inbox units, and drop
+    # inbox copies of units already closed in done (issue #213)
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
+    stale_done_dropped = _drop_done_duplicates(args.root)
     # 2. load the due list
     if args.due_json:
         with open(args.due_json, encoding="utf-8") as fh:
@@ -468,6 +531,7 @@ def cmd_sync(args):
     #    windows the unit instead of letting it age further.
     aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"reaped": reaped, "expired": expired,
+                      "stale_done_dropped": stale_done_dropped,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "aged_p1_windowed": aged_p1_windowed},
@@ -723,9 +787,61 @@ def _expire_stale(root):
     return moved
 
 
+def _has_done_record(root, unit):
+    """True when done holds a result-bearing record for unit.
+
+    A bare done file with no result status is not a completed
+    execution - it may be a placeholder or a half-written move -
+    so it does not suppress the inbox copy. Any result status
+    (done, partial, failed, skipped-needs-owner, or expired)
+    does: the unit already closed, and the inbox copy is a
+    stale duplicate, not fresh work.
+    """
+    if not unit:
+        return False
+    path = unit_path(root, "done", unit)
+    if not os.path.exists(path):
+        return False
+    fields, _ = read_unit(path)
+    result = fields.get("result", {})
+    return isinstance(result, dict) and bool(result.get("status"))
+
+
+def _drop_done_duplicates(root):
+    """Drop inbox copies of units already closed in done (issue #213).
+
+    The two units in issue #213 both carry an empty expires_at,
+    so _expire_stale never sees them: expiry is gated on a window
+    that no-expiry chain and enqueue units do not have, and
+    cmd_next / cmd_claim then re-present and re-claim the stale
+    inbox copy - ticker-0134 re-executed both units after
+    ticker-1755 had already closed them on the delivered branch.
+    Dropping is result-preserving by construction: the done
+    record is never touched, only the duplicate inbox file is
+    removed, with a stderr warning naming the unit. Runs after
+    _expire_stale in sync and plan, so an expired duplicate still
+    takes the expiry path (and its existing warning) and only
+    the unexpired remainder is counted here.
+    """
+    dropped = []
+    for f in list_units(root, "inbox"):
+        unit = f.get("unit")
+        if unit and _has_done_record(root, unit):
+            print(f"warning: {unit} already has a done record - "
+                  f"dropping the stale inbox copy instead of "
+                  f"re-executing it", file=sys.stderr)
+            os.remove(unit_path(root, "inbox", unit))
+            dropped.append(unit)
+    return dropped
+
+
 def cmd_plan(args):
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
+    stale_done_dropped = _drop_done_duplicates(args.root)
     defs_path = args.regulars_json or os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "regulars.json")
     with open(defs_path, encoding="utf-8") as fh:
@@ -773,7 +889,9 @@ def cmd_plan(args):
     # so sync calling it too is harmless.
     aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"horizon_hours": args.hours, "reaped": reaped,
-                      "expired": expired, "planned": planned,
+                      "expired": expired,
+                      "stale_done_dropped": stale_done_dropped,
+                      "planned": planned,
                       "already_present": present,
                       "skipped_done_current": skipped_done,
                       "aged_p1_windowed": aged_p1_windowed},
@@ -854,7 +972,8 @@ def cmd_next(args):
     stamp = now_utc()
     candidates = sorted(
         (f for f in list_units(args.root, "inbox")
-         if _actionable(f, stamp)),
+         if _actionable(f, stamp)
+         and not _has_done_record(args.root, f.get("unit"))),
         key=lambda f: pick_key(f, stamp))
     for f in candidates:
         try:
@@ -872,6 +991,11 @@ def cmd_claim(args):
     state, path = find_unit(args.root, args.unit)
     if state != "inbox":
         print(f"cannot claim {args.unit}: state is {state}")
+        return 1
+    if _has_done_record(args.root, args.unit):
+        print(f"cannot claim {args.unit}: already has a done "
+              f"record - the inbox copy is stale, run sync to "
+              f"drop it instead of re-executing it")
         return 1
     fields, body = read_unit(path)
     if not _actionable(fields, now_utc()):
@@ -1104,6 +1228,9 @@ def cmd_token_release(args):
 
 
 def cmd_reap(args):
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
     moved = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
     print(f"reaped {moved} expired claim(s), "
