@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T23:40:05Z
+modified: 2026-11-04T00:41:07Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0204 radar-tasks execution record 2026-11-03 0212 queue run (partial by design, single-offer trap in at-entry form)
   - source: ticker-0634 radar-tasks execution record 2026-11-03 0636 queue run (partial by design, dish centre re-grounded, Claim All-only bar again)
   - source: ticker-1004 radar-tasks execution record 2026-11-03 1010 queue run (partial by design, third consecutive Claim All-only bar, stored 25 of 40, three skull pins inventoried)
+  - source: PR 237 merged 2026-11-03 16:38 local (duel.py timezone fix, Refs #235) settling the 1450 live-dialog contradiction
 ---
 
 
@@ -316,22 +317,41 @@ Handling by posture (binding):
   open questions.
 - Do not read the radar points counter as duel score - it
   moves 1 point per claim and says nothing about the duel.
-- Live-dialog contradiction, 2026-11-03 1450, UNSETTLED
-  (Issue #235, tooling): on duel day 3, Age of Science, radar
-  posture release per tools/duel.py, tapping Claim All opened
+- Live-dialog contradiction, 2026-11-03 1450, RESOLVED
+  2026-11-03 by PR 237 (Issue #235, tooling): the 1450 unit
+  ran on duel day 2, Base Expansion, radar posture stack -
+  not day 3 release. The tool's day-3 reading was a clock
+  bug, not a stale schedule: duel.py read a naive UTC
+  clock, which had already crossed the 19:00 boundary at
+  14:03 PT and rolled to day 3 eight hours early. The
+  corrected tool returns day 2 stack for the 1450 instant,
+  matching the live TIPS dialog verbatim, and the schedule
+  in tools/duel_schedule.json is NOT stale - that
+  hypothesis is retired. The unit's window stamp (duel day
+  2, radar stack) was right and the live tool reading was
+  wrong, reversing the 1532 lesson that the live posture
+  governs over the stamp: when tool and stamp disagree,
+  check the tool's clock basis and the VS panel before
+  trusting either. Tapping Claim All opened
   a TIPS dialog reading verbatim: "Completing Radar Tasks
   today will not grant Alliance Duel points, and you are about
   to claim 10 radar task rewards at once. Continue?" This
   contradicts the tool's gate text that radar claims score
   again today. The unit claimed anyway (resources certain,
   holding the stack risks task expiry, release standard
-  governs), but the posture rule above is NOT rewritten on
-  this evidence alone: either the VS rotation in
-  tools/duel_schedule.json is stale for this week, or the
-  dialog means something narrower. The next radar release
+  governs). That either/or is now settled by PR 237 (see
+  the head of this bullet): the schedule was NOT stale,
+  the tool's clock was wrong, and the dialog meant what
+  it said. The next radar release
   decision needs the settled reading, ideally from the VS
   panel itself. No duel score read was taken in the 1450
-  unit, so the delta test is still owed.
+  unit, so the delta test is still owed. Verification still
+  owed after the merge: the next radar unit that consults
+  duel.py must report the PT day (day 2 stack on Nov 3
+  daytime, day 3 release only from 19:00 PT), and no
+  further duel-day-versus-dialog contradiction for that
+  day. Issue #235 closure belongs to the daily retro,
+  not to this fold.
 
 ## Stack day completion standard
 
@@ -1467,3 +1487,44 @@ are still open, per the protocol.
   checked, untouched), then backed out untouched to
   base; headroom to the 40 cap is not a concern
   (25/40, below 39).
+- 1.22.0 (2026-11-03): PR 237 merge settles the 1450 live-dialog contradiction - duel.py naive-UTC clock bug (day 3 eight hours early), corrected tool returns day 2 stack matching the dialog verbatim, stale-schedule hypothesis retired, 1450 re-read as a stack-day unit misread as release (window stamp was right, tool reading wrong), retro verification (next radar unit reports the PT day) still owed, Issue #235 commented by this run and left open for the retro.
+
+
+## What the PR 237 merge settled - 1450 re-read as a stack-day unit
+
+- PR 237 (lastwar-tool-developer, Refs #235) merged
+  2026-11-03 16:38 local, during this organizer run,
+  after the run's first three folds were already
+  committed. It changes only _tools_/duel.py: the duel
+  day is now computed in the timezone the schedule
+  declares (America/Los_Angeles), with day boundaries
+  at 19:00 local wall times, instead of a naive
+  datetime.now().
+- Re-read of the 1450 unit: the unit ran on duel day 2
+  (Base Expansion, stack), not day 3 (Age of Science,
+  release). The 1532 fold's classification of 1450 as
+  a release-day unit is corrected here, not left
+  standing. The claims themselves are unaffected as
+  resources: 27 rewards claimed, radar points 139 to
+  166 (radar points, not duel points - consistent
+  with the dialog that no duel points were granted
+  that day). The claim-anyway rationale (resources
+  certain, holding the stack risks task expiry) still
+  stands; the "release standard governs" justification
+  is superseded, since the unit was a stack-day unit.
+  Its partial status stands on the same grounds as
+  before (6 pins left unattempted, Quick Execute 4
+  tasks left for the next unit).
+- Standing rule going forward: the next radar release
+  decision uses the corrected tool, and any future
+  tool-versus-stamp disagreement is settled against
+  the VS panel itself plus the tool's clock basis,
+  never by assuming the schedule is stale or the
+  stamp lags. The stored-versus-completable open
+  question (Claim All 8 after Quick Execute batches
+  of 3 and of 2, returning marches the leading
+  hypothesis) is untouched by this resolution.
+- Issue #235 commented by this run with this
+  resolution; the issue is NOT closed here - closure
+  belongs to the daily retro once the next radar unit
+  after merge reports the PT day.
