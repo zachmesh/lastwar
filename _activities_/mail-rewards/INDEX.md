@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T16:37:19Z
+modified: 2026-11-04T21:41:37Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-0204 mail-rewards execution record 2026-11-04 0212 queue run (done, Alliance claim verified by checkmarks, Regular notices already credited, notifications prompt declined, Issue 230)
   - source: ticker-0434 mail-rewards execution record 2026-11-04 0445 queue run (done, category rows grounded, Event train arrival reward claimed and verified gone)
   - source: ticker-0804 mail-rewards execution record 2026-11-04 0817 queue run (done, checked only, Claim All no-change in four categories, Event notice opened individually, no claimable mail)
+  - source: ticker-1327 mail-rewards execution record 2026-11-04 1333 queue run (failed, Mac screen-capture channel failure on every capture step, no game input dispatched, second consecutive ticker pass to fail this way after help 1235, Issue 282)
 ---
 
 
@@ -768,3 +769,13 @@ the next tick re-produces this regular as a fresh unit.
 - Delete All was never pressed in any category. The mail screens were exited with the back arrow to the base screen; nothing was deleted, nothing was sent, nothing else was claimed.
 - Why done: every dotted category was opened and its Claim All tried, and the one unread notice was opened individually to confirm it held no attachment. Nothing claimable was present in this round, so the check itself completes the regular: target 1 check, achieved 1, claimed 0 items.
 - No new issue filed; mail entry (Issue #230) was not tested in this unit - no entry point is recorded here, so no #230 comment is made. No diamonds or money spent, no mail deleted, no other activity's work done.
+
+## What the 2026-11-04 1333 unit added - screen-capture channel failure recurrence across activities, failed
+
+- Unit mail-2026-11-04-1030 by ticker-1327, about 13:27 to 13:34 local, status failed (access-failed). Evidence in `_records_/2026-11-04/mail-rewards/1333-queue-run.md`. The record frontmatter says unverified while its Outcome section says failed (access-failed); the body outcome is followed here, and the frontmatter wording is left as recorded, not smoothed over.
+- Capture sequence, all failed with the same error: open_app LastWar, computer.observe, computer.observe again, computer.control list_apps (confirmed LastWar running), computer.control activate, computer.observe with image view, computer.control describe, a fresh computer session with a second activate, computer.observe again, a screenshot action, and one more computer.observe after a short wait - every screen-capture step failed with "Failed to start stream due to audio/video capture failure". Device state at the time: Mac online, LastWar app running fullscreen, Google Chrome frontmost; the control channel itself answered throughout, so this is a capture-channel fault.
+- Classification, stated explicitly: this is the same screen-capture channel failure class recorded for the 1235 help unit in `_activities_/alliance-help/INDEX.md` 1.25.0, now recurring in a second activity. It is NOT a mail entry failure (Issue #230 is not tested here - no entry point was reached, so no #230 comment is made), NOT a foreground or tap failure, NOT a missing owner authorization, and NOT a different-device dialog (no such dialog appeared). It does not contradict the foreground notes in this profile - those concern taps that dispatch but do not reach a control, while here no screenshot existed to tap from.
+- No game input was dispatched and no tap was sent, so no in-game state changed. No mail tab was opened, no Claim All was pressed, and no reward count was read; nothing observed is claimed. Mails claimed: 0.
+- Recurrence, the point of this fold: this is the second consecutive ticker pass to fail this way (ticker-1224 help 1235 failed identically about one hour earlier). The 1232 organizer run recorded this failure as a watch item that becomes a filed gap only if it persists across passes; it has now persisted across passes and activities, so the escalation is filed as Issue #282 (device-channel diagnosis, not another entry-point or coordinate change). The 1235 follow-up rule and this record agree: if the capture failure persists, it escalates as a device-channel fault, not as a repeat of the same taps.
+- Retry rule satisfied: far more than 3 capture attempts were made in this pass (two sessions, repeated observe, describe and screenshot attempts) before the access failure was recorded.
+- Follow-up from the record itself: the tracker is untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit with this unit retried first. No diamonds or money spent, no mail deleted, no other activity work done.
