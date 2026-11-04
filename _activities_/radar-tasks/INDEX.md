@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T00:41:07Z
+modified: 2026-11-04T03:37:56Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-0634 radar-tasks execution record 2026-11-03 0636 queue run (partial by design, dish centre re-grounded, Claim All-only bar again)
   - source: ticker-1004 radar-tasks execution record 2026-11-03 1010 queue run (partial by design, third consecutive Claim All-only bar, stored 25 of 40, three skull pins inventoried)
   - source: PR 237 merged 2026-11-03 16:38 local (duel.py timezone fix, Refs #235) settling the 1450 live-dialog contradiction
+  - source: ticker-1904 radar-tasks execution record 2026-11-03 1913 queue run (partial, release day, 17 claims, no TIPS dialog on any Claim All, 4 pins carried, Issue #235 evidence)
 ---
 
 
@@ -114,6 +115,14 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
 - The radar screen shows the restore line ("N Radar Task(s)
   will be restored in HH:MM:SS"), the full restore time, the
   bottom action bar, and the task pins on the map itself.
+- 2026-11-03 1913 unit: a visual-grounding point at norm
+  (55,560) opened the Your Truck panel (Today's Trade Count
+  3/5), not the radar - nothing was tapped there, and its
+  back arrow at (56,939) returned to the base untouched. A
+  tap at norm (57,715), inside the proven 52-62, 704-727
+  cluster from the 0636, 1010 and 1450 units, opened the
+  radar on the first tap. Entry verified by its own reads:
+  Lv.13, radar points 166, stored 10/40, stamina 120.
 
 ## Mechanism
 
@@ -209,7 +218,13 @@ execution records):
   the taps landed on the map/label area above the button's
   true hitbox. A tap at norm (498,925) opened the button.
   Next units: tap the bottom-bar buttons at y 925, not at
-  their visual centre (~910).
+  their visual centre (~910). CORRECTION 2026-11-03 1913:
+  the y-925 lesson does NOT transfer to every window
+  geometry - in the 1913 window the bottom-bar buttons
+  responded at norm (500,952), confirmed by three Quick
+  Execute and three Claim All taps at that point. The
+  grounded point governs in each window; never carry a
+  y value across windows unverified.
 - With too little stamina, tapping Quick Execute opens the
   Regain Stamina panel instead of failing - use the free
   claim there and continue.
@@ -347,11 +362,20 @@ Handling by posture (binding):
   panel itself. No duel score read was taken in the 1450
   unit, so the delta test is still owed. Verification still
   owed after the merge: the next radar unit that consults
-  duel.py must report the PT day (day 2 stack on Nov 3
-  daytime, day 3 release only from 19:00 PT), and no
-  further duel-day-versus-dialog contradiction for that
-  day. Issue #235 closure belongs to the daily retro,
-  not to this fold.
+  duel.py must report the PT day. ANSWERED IN PART
+  2026-11-03 1913 (first radar unit after the PR 243
+  merge): the unit consulted duel.py at entry (day 3,
+  Age of Science, release) and NO TIPS dialog appeared
+  on any of its three post-rollover Claim All taps, so
+  tool, day and dialog agree after the fix - but no VS
+  panel read was taken, so no duel-points figure is
+  claimed and the delta test is still owed. The 19:00 PT
+  boundary in this bullet is superseded by PR 243: the
+  boundary is absolute 02:00 UTC, about 18:00 PST now
+  (19:00 PDT before the DST end), and day 3 release runs
+  from the about-18:00 rollover, not from 19:00 PT.
+  Issue #235 closure belongs to the daily retro, not
+  to this fold.
 
 ## Stack day completion standard
 
@@ -1489,6 +1513,19 @@ are still open, per the protocol.
   (25/40, below 39).
 - 1.22.0 (2026-11-03): PR 237 merge settles the 1450 live-dialog contradiction - duel.py naive-UTC clock bug (day 3 eight hours early), corrected tool returns day 2 stack matching the dialog verbatim, stale-schedule hypothesis retired, 1450 re-read as a stack-day unit misread as release (window stamp was right, tool reading wrong), retro verification (next radar unit reports the PT day) still owed, Issue #235 commented by this run and left open for the retro.
 
+- 1.23.0 (2026-11-03): 1913 release-day unit folded: entry
+  misfire (55,560) opens Your Truck, radar at (57,715) in
+  the proven cluster; bottom-bar hitbox corrected per-window
+  (500,952) in this geometry, y-925 does not transfer;
+  17 rewards claimed, points 166 to 183, stored 0 of 40,
+  stamina 21, full restore 11-4 15:31:43; NO TIPS dialog on
+  any of the three post-rollover Claim All taps, new Issue
+  #235 evidence, not a settlement, delta test still owed;
+  4 pins inventoried unattempted so partial, second
+  consecutive partial carrying the same pin blocker, R7
+  pins-first for the next unit; trade-counter reset
+  correction cross-referenced from the 1846 trucks unit.
+
 
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
@@ -1528,3 +1565,95 @@ are still open, per the protocol.
   resolution; the issue is NOT closed here - closure
   belongs to the daily retro once the next radar unit
   after merge reports the PT day.
+
+
+## What the 2026-11-03 1913 unit added - release day, 17 claims, no TIPS dialog, pins carried
+
+- Ticker-1904, unit radar-2026-11-03-1803, about 19:05 to
+  19:13 local, status partial. Evidence in
+  `_records_/2026-11-03/radar-tasks/1913-queue-run.md`.
+  Posture: release (live duel.py at entry: duel day 3, Age
+  of Science, radar posture release; the unit window text
+  still read "duel day 2 - radar stack", stamped at
+  production before the posture flipped, and the live
+  posture governs).
+- Entry: the game was left on the Others' Trucks panel by
+  the previous trucks unit (Plunder Count Today 2/4, not
+  this unit's work, nothing plundered); its back arrow at
+  norm (56,939) returned to the base on the first tap.
+  First radar attempt wrong: a visual-grounding point at
+  norm (55,560) opened the Your Truck panel (Today's Trade
+  Count 3/5), not the radar - nothing tapped there, backed
+  out untouched. Second attempt: a tap at norm (57,715),
+  inside the proven 52-62, 704-727 cluster from the 0636,
+  1010 and 1450 units, opened the radar on the first tap.
+  Entry verified by its own reads: Lv.13, radar points
+  166, stored 10/40, stamina 120, restore line "12 Radar
+  Task(s) will be restored in 02:22:02" at entry (later
+  frames 02:21:58 down to 02:20:34, and the full-restore line
+  "Fully restore at 11-4 15:31:43 local time" once stored
+  hit 0/40).
+- Bottom-bar geometry, this window: the buttons respond at
+  norm (500,952) (visual-grounding point for the Quick
+  Execute button, confirmed by three successful Quick
+  Execute taps and three successful Claim All taps at the
+  same point). The 1450 unit's y-925 lesson does not
+  transfer to this window geometry; the grounded point
+  governs.
+- What was done: Quick Execute 1: 4 tasks, stamina 120 to
+  80, stored stayed 10/40, bar flipped to Claim All ("8
+  task rewards can be claimed"). Claim All 1: 8 rewards
+  claimed, NO TIPS dialog appeared (contrast the 1450 unit,
+  where every Claim All opened the "will not grant
+  Alliance Duel points" TIPS dialog). Popup: chest-like
+  icon 25 (icon identity not resolved from the popup alone,
+  recorded as seen), radar item 80, EXP 12.0M, drone item
+  1.6K, blue triangle 450, food 4.0M, coin 1.7M, iron 1.3M.
+  Radar points 166 to 174, stored 10/40 to 2/40. Quick
+  Execute 2: 4 tasks, stamina 80 to 40, stored stayed 2/40.
+  Claim All 2: 7 rewards claimed, again no TIPS dialog.
+  Popup: radar item 70, EXP 10.0M, blue triangle 450, drone
+  item 800, iron 1.5M, food 2.8M, coin 1.6M. Points 174 to
+  181, stored 2/40 to 0/40. Quick Execute 3: 2 tasks,
+  stamina 41 to 21 (one stamina regenerated between the
+  reads), stored stayed 0/40. Claim All 3: 2 rewards
+  claimed, again no TIPS dialog. Popup: radar item 20, EXP
+  4.8M, iron 980.4K, food 980.4K, coin 565.2K. The bottom bar
+  then showed no offer at all: no Quick Execute, no Claim
+  All.
+- Totals: rewards claimed 17 (8 + 7 + 2); radar points 166
+  to 183 (+17, exactly the claim count); tasks executed 10
+  via Quick Execute (4 + 4 + 2), 100 stamina spent, 1
+  regenerated, 120 to 21. Popup resources summed: radar
+  items 170, EXP 26.8M, drone items 2.4K, blue triangles
+  900, iron 3.7804M, food 7.7804M, coin 3.8652M, plus the
+  unresolved chest-like icon 25 from Claim All 1.
+- Duel-points note, NOT a settlement: no TIPS dialog on
+  any of the three post-18:00-rollover Claim All taps is
+  new evidence for Issue #235 (duel.py said radar claims
+  score on day 3; the 1450 unit's pre-rollover TIPS dialog
+  said they do not). No VS panel read was taken and no
+  duel-points figure is claimed. The delta test (read duel
+  score, claim one batch, read again) is still owed, and
+  Issue #235 closure belongs to the daily retro.
+- Closing state, live reads: radar Lv.13, points 183,
+  stored 0/40, stamina 21, restore line "Fully restore at
+  11-4 15:31:43 local time", bottom bar with no offer.
+- Pin inventory at close (visible frame only, not a
+  whole-map census): a purple question-mark story pin top
+  left, a purple axe pin top right, a purple axe pin
+  centre, a blue axe pin lower centre. No red dot was
+  visible on any of them in this frame. The portrait
+  squares on the map are alliance member markers, not
+  radar pins. All four pins were left unattempted.
+- Per the release standard, pins left unattempted make
+  this unit partial, never done. The pins are the same
+  standing pins the 1450 unit left (its frame showed the
+  same axe pins plus skull pins since claimed through
+  Claim All), so this is the second consecutive partial
+  carrying the same pin blocker. Under rule R7 the pins
+  become the FIRST action of the next radar unit, starting
+  with the question-mark story pin whose flow is verified
+  in the activity metadata, before any Quick Execute
+  batch. Tracker untouched for partial, per the queue
+  rules.

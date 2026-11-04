@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T02:50:00Z
-version: 1.21.0
+modified: 2026-11-04T03:37:56Z
+version: 1.22.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-0704 alliance-duel execution record 2026-11-03 0718 queue run (done, ceremony none waiting, personal total snapshot 1,714,950)
   - source: ticker-1134 alliance-duel execution record 2026-11-03 1141 queue run (done, ceremony none waiting, personal total snapshot 1,714,950 unchanged, rank 162 to 169)
   - source: ticker-1804 alliance-duel execution record 2026-11-03 1809 queue run (done, duel day rolled about 18:00 local, closed Tues. day total 2,014,950 of 3,600,000 a MISS, Issue #242)
+  - source: ticker-1834 truck-plunder execution record 2026-11-03 1846 queue run (partial, trade counters 0 of 5 and 0 of 4 at 18:34 entry after 5 of 5 and 4 of 4 at 12:11, trade reset follows the about-18:00 rollover, Issue #242 follow-up)
 ---
 
 
@@ -105,8 +106,16 @@ Measured on Event 38, 2026-10-25, under the owner procedure.
   this supersedes the earlier reading that the countdown matched
   the 19:00 local daily reset, and the 19:00 references in the
   2026-11-01 history sections below are superseded in the same
-  sense. Note the duel day is not the trade day: the trade day
-  still resets at 19:00, the duel day about an hour earlier.
+  sense. CORRECTED 2026-11-03 1846 (Issue #242 follow-up): the
+  trade day does NOT still reset at 19:00 - the 1846 trucks
+  unit entered at 18:34 local reading Today's Trade Count
+  0/5 and Your Plunder Count Today 0/4, live on screen,
+  after the 1211 unit had closed them at 5/5 and 4/4 at
+  12:11, so the trade counters reset with the same
+  about-18:00 rollover (02:00 UTC absolute boundary) as
+  the duel day. The duel day and the trade day share the
+  reset boundary; the earlier "duel day about an hour
+  earlier than the trade day" framing is superseded.
 
 ## Scope and availability
 
