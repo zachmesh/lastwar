@@ -1874,3 +1874,5 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   enqueued 0, candidates 0, unexplained 0); 0 withdrawals.
   Pool by_state: inbox 68, claimed 1, done 828, upcoming 51.
   Full detail in queue-planning/1140-run.md.
+
+- 11:47 ticker-1134 pass: training partial and gifts partial, nothing claimed. Training: four grounded tent taps on the fullscreen base frame opened no barracks panel, one drag did not move the view, 0 barracks verified, 0 batches queued, no Drill Ground figure read live (tent blocker already Issue 150). Gifts: Alliance panel never opened after two background taps while Chrome was frontmost on the Mac, 0 gifts claimed, foreground precondition per queue rule R2; game not forced to foreground while the user works in Chrome. Full detail in troop-training/1147-queue-run.md and alliance-gifts/1147-queue-run.md.
