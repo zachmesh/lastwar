@@ -252,3 +252,5 @@ of 2026-10-28.
   re-verified, not force-merged. No owner-gated PR, no
   merge, no sync-back owed. Full detail in
   pr-integration/0115-run.md.
+- Integrator pass pr-integration-2026-11-04-0130.
+  pr-integration/0130-run.md.
