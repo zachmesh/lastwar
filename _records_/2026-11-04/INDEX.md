@@ -331,3 +331,9 @@ of 2026-10-28.
   the live pool tree, no duel-score unit staged.
   Full record:
   _records_/2026-11-04/queue-planning/0140-run.md.
+- Integrator pass pr-integration-2026-11-04-0145.
+  Merged PR 262 (pool-gap tool, Refs #251) and PR 261
+  (knowledge-organizer 0132) by squash; local main
+  fast-forwarded to 954c32fa. Records PRs 258, 256, 255
+  await the 03:00 batch; PR 187 conflict carried.
+  Full detail in pr-integration/0145-run.md.
