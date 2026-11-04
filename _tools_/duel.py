@@ -70,9 +70,9 @@ def main():
     if "--json" in sys.argv:
         print(json.dumps(info, indent=1, ensure_ascii=False))
         return 0
-    print(f"Alliance Duel - Day {info[duel_day]}: {info[theme]} "
-          f"(win points {info[win_points]}, ends {info[day_ends]}, "
-          f"{info[hours_left]}h left)")
+    print(f"Alliance Duel - Day {info['duel_day']}: {info['theme']} "
+          f"(win points {info['win_points']}, ends {info['day_ends']}, "
+          f"{info['hours_left']}h left)")
     print("Gate: " + info["gate"])
     if info["radar_posture"] == "stack":
         print("RADAR: stack day - complete tasks but do NOT claim; keep storage headroom under the cap.")
