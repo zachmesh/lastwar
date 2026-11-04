@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T19:45:00Z
+modified: 2026-11-04T01:38:00Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (observe-only, Help panel 1,240/1,000 over gate, four Bears Lair requests 30/30)
   - source: ticker-0704 alliance-help execution record 2026-11-03 0710 queue run (done, base-screen bubble, header 1,240/1,000 unchanged by Help All)
   - source: ticker-1104 alliance-help execution record 2026-11-03 1121 queue run (done, bubble press, header 1240 over 1000 unchanged, Help All no requests yet)
+  - source: ticker-1706 alliance-help execution record 2026-11-03 1716 queue run (done, Help All cleared one ally row, bubble first tap lost to foreground switch)
 ---
 
 
@@ -639,3 +640,65 @@ Measured in the 0135 help unit (ticker-0134, window mode
   proof - the same lesson as the 0308 unit (Help All
   toast is not proof either). No earlier claim
   superseded.
+
+
+## What the 2026-11-03 1716 unit added - done, one ally row cleared, bubble first tap lost to a foreground switch
+
+- Ticker-1706, unit help-2026-11-03-1430, about 17:08
+  to 17:16 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/1716-queue-run.md`.
+  No different-device dialog.
+- Base screen at entry: the game window 642x951 was
+  already the target but a Chrome about blank window had
+  covered its left part; a title-bar tap brought it to
+  the foreground. The first tap on the bubble tile
+  immediately left of the Alliance shield, grounded fresh
+  at window (825,688), did NOT press the helps: the next
+  screenshot still showed the tile and the Alliance red
+  dot, with only a transient "Achievements 8/16
+  Completed" tooltip. Cause not proven; the tap may have
+  been consumed by the window-focus transition. Lesson,
+  new for the bubble route: a bubble tap that leaves the
+  tile and the red dot in place has not taken effect -
+  verify on the next screenshot and go through the
+  Alliance panel instead of re-tapping blindly. This
+  qualifies the 0710 and 1121 bubble successes, where
+  one tap sufficed with no foreground switch in between.
+- Visual-estimate error, quantified this pass: two taps
+  about 80px below the grounded Alliance centre opened
+  Mail (a President Mail letter, read only, and then the
+  Mail category menu). Both were exited with the back
+  arrow only, with no delete, no claim and no purchase.
+  Lesson: trust grounded coordinates over visual
+  estimates on this screen - this pass's visual y
+  estimates ran about 80px low, while every grounded tap
+  landed correctly. This strengthens the 0710 note that
+  eyeballed y estimates run low on the Alliance panel.
+- Grounded window coordinates this pass: Alliance shield
+  centre (928,688), Help button (688,493), Help All
+  (500,779). Help All matches the 1121 grounded point
+  exactly; the shield centre sits near the 1121 (931,709)
+  point, session drift as usual, not a correction.
+- Help page header read live: Today's points gained from
+  Alliance Help 1,240/1,000, matching the 0710 and 1121
+  reads. Help All was tapped and the game answered
+  "Allies are very grateful for your assistance" and the
+  AMD Commander Lv.25 Iron Mine row disappeared from the
+  list - a verified ally help delivered, the first
+  row-clearance delivery since the 1121 no-requests
+  press. The remaining rows are this account's own Bears
+  Lair requests (Lv.30 Aircraft Center, Lv.27 Drill
+  Ground, Precision Targeting II research), each with a
+  green "Time reduced" badge; a player cannot help their
+  own requests, so nothing further was waiting.
+- Consistency note, not a contradiction: the header
+  stayed 1,240/1,000 on the single re-read after the
+  press even though a row verifiably cleared. Per the
+  2026-11-01 0135 reopen rule, a single re-read can lag
+  behind the true header, and this unit did not
+  close-and-reopen to re-read it, so no claim is made
+  that the counter stopped moving above the gate. Row
+  clearance is the delivery proof here; the header
+  re-read alone is not.
+- Exited with the Help panel X to the Alliance panel.
+  Nothing spent, no red line touched.
