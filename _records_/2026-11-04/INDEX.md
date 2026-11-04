@@ -2137,3 +2137,24 @@ Full detail in pr-integration/1430-run.md.
   documented by its executor pass, not taken over.
   No PR, no Slack DM, per the no-op rule.
   Full detail in tool-development/1432-run.md.
+## 14:36 to about 14:45 - Ticker pass
+
+- Shop Claims unit passes-2026-11-04-1057, failed,
+  ticker-1434: Mac screen capture failed repeatedly
+  (audio/video capture failure) on activate and observe
+  across two computer sessions (cc-462, cc-463),
+  although the Mac connection was healthy and LastWar was
+  running fullscreen with Chrome frontmost. No game input
+  was dispatched, so no shop claim was checked or made;
+  the tracker stays untouched and the next tick
+  re-produces the unit. Fifth consecutive ticker pass to
+  fail this way (ticker-1224, ticker-1327, ticker-1340,
+  ticker-1404);
+  the blocker is already filed as GitHub Issue #284
+  (tooling) and this pass commented on it rather than
+  filing a duplicate. Full detail in
+  shop-claims/1434-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
