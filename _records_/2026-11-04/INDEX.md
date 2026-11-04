@@ -1809,3 +1809,19 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   future design phase, not a bounded slice. No PR, no
   Slack DM, per the no-op rule. Full detail in
   tool-development/1132-run.md.
+
+## 11:30 to about 11:39 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1130.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window, but the 11:00
+  batch already merged in this window (PR 273 at
+  11:06), so this pass merges nothing. No new records
+  PR opened: records/2026-10-31 is contained in main
+  and every other live records branch already has an
+  open PR. PR 279 (2026-11-04, post-1100 batch, head
+  6faf1bd, MERGEABLE/CLEAN) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on
+  the action log at unchanged heads, so no comment
+  was repeated. Full detail in
+  pr-integration/1130-run.md.
