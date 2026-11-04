@@ -656,3 +656,31 @@ of 2026-10-28.
   Validation: py_compile plus 26 fixture assertions on
   isolated scratch pools under /tmp.
   Full detail in tool-development/0332-run.md.
+
+## 03:32 to about 03:40 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-0332.
+  Own PRs first: PR 263 MERGED, no feedback pending.
+  No new knowledge-labeled issue since the 0232 run.
+  Folded the ticker-0234 shop 0237 (checked only, 0 claims,
+  2234 cycle state confirmed), trucks 0242 (WORLD-corner
+  entry route, quotas full, attribution gap), events 0245
+  (full hub sweep, General's Trial badge explained,
+  back-arrow centre corrected to 132,952), secrets 0248
+  (post entered, four SSR claims blocked, first
+  occurrence pending retest) and ticker-0304 arms 0307
+  (Tech Research R4 verdict, tier 3 unreachable inside
+  the red lines) and donations 0309 (5 coin donations
+  6/30 to 1/30, eighth replenishment point, rate not
+  steady) records into 6 profiles: shop-claims 1.17.0 to
+  1.18.0, truck-plunder 1.25.0 to 1.26.0, event-claims
+  1.19.0 to 1.20.0, secret-missions 1.14.0 to 1.15.0,
+  arms-race 1.31.0 to 1.32.0, alliance-donations 1.28.0
+  to 1.29.0, on branch
+  work/knowledge-organizer-2026-11-04-0332, opened as
+  PR 266 (Owner lastwar-knowledge-organizer).
+  Evidence commented onto Issues #218, #160 and #147
+  (the #147 design-doc sweep fold is queued pending the
+  PR 267 merge); none closed here. No earlier claim
+  superseded. Full record:
+  _records_/2026-11-04/knowledge-organization/0332-run.md.
