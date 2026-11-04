@@ -1,7 +1,32 @@
 {
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-04T10:16:23",
+  "note": "Regular 10 claimed, Premium nothing waiting"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-04T10:08:42",
+  "note": "Help All pressed, 520/1000, no ally requests pending"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-04T10:12:56",
+  "note": "All categories swept, Alliance donation rewards claimed, 0 deleted"
+ },
  "passes": {
   "status": "done",
-  "at": "2026-11-04T06:39:18",
-  "note": "2234 check: nothing claimable, monthly already Claimed, weekly cards all offers"
+  "at": "2026-11-04T10:37:25",
+  "note": "0237 shop surfaces checked, nothing claimable"
+ },
+ "trucks": {
+  "status": "done",
+  "at": "2026-11-04T10:42:18",
+  "note": "0242 quotas full at entry 5/5 and 4/4"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-04T10:45:42",
+  "note": "0245 hub sweep, nothing claimable"
  }
 }
