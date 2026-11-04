@@ -52,3 +52,16 @@ of 2026-10-28.
   unit (harvest-2026-11-03-2203) was left in inbox: the token lease
   had under 10 minutes left when it would have been picked, so no
   second unit was started.
+
+## Correction to the ticker-0004 entry above
+
+- Correction, same pass: the arms-race session window in
+  arms-race/0019-queue-run.md is overstated. The unit's game work
+  ran about 00:04 to 00:11 PST (the record file was written at
+  about 00:11, not 00:19; the 0019 filename and 00:19 timestamps
+  came from an executor time estimate, not the clock). The
+  in-game readings themselves (phase, time left 01:52:03 at
+  entry, score 0, thresholds) were read live during that window
+  and are unaffected. The unit's structured result times in
+  _queue_/done/arms-race-2026-11-03-2203.md are the accurate
+  duration source.
