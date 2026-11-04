@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T07:36:34Z
+modified: 2026-11-04T10:32:00Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-1104 alliance-gifts execution record 2026-11-03 1113 queue run (done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked, Issue 183 evidence)
   - source: alliance gifts execution record 2026-11-03 1619 queue run (ticker-1604 unit, done, 86 gifts, progress anomaly, Escape app-kill exit lesson)
   - source: ticker-2204 alliance-gifts execution record 2026-11-03 2208 queue run (done, 235 Regular and 20 Premium, progress deltas as Issue #183 evidence, panel row geometry re-confirmed)
+  - source: ticker-0204 alliance-gifts execution record 2026-11-04 0216 queue run (done, 10 Regular exact plus 100, Premium tab point corrected to 694,269, Issue 183 evidence)
 ---
 
 
@@ -990,3 +991,53 @@ one file per execution.
   count, so the movement is recorded as observed and
   unexplained, in line with the 0308, 1113 and 1619
   units. No earlier claim superseded.
+
+## What the 2026-11-04 0216 unit added - Regular exact plus 100 for 10, Premium tab point corrected to (694,269), Issue #183 evidence
+
+- Unit gifts-2026-11-03-2230 by ticker-0204,
+  02:13 to 02:16 local, status done. No "active on
+  a different device" dialog appeared.
+- Entry: Alliance panel opened first tap at the
+  grounded Alliance button centre (931,709),
+  carried over from this pass's help unit.
+  Alliance Gifts opened at its grounded centre
+  (314,599).
+- Regular tab, read live: Gift Level 28, progress
+  188,294,190 of 206,300,000 before the claim,
+  Claim All badge 10. One tap at the fresh
+  grounded Claim All centre (502,934) claimed all
+  10; the summary dialog read "A total of 10
+  Regular Alliance Gifts were claimed this time"
+  (rewards shown: red gem x2, coins 600 x56, iron
+  1.0K x56, iron 10.0K x28). Progress after:
+  188,294,290 - plus 100, exactly 10 gifts at 10
+  points each, no excess in this unit. The list
+  then showed every visible entry as Claimed and
+  no Claim All button remained on the tab.
+- Premium tab correction: two taps at (631,242)
+  and one click_element on the OCR Premium label
+  produced no tab switch (rule R2 ends that
+  method). The pivot that worked was a title-bar
+  tap followed by a tap at the OCR label point
+  (694,269) - the earlier (631,242) point sits
+  left-above the Premium label and misses the tab.
+  Future units should tap Premium at (694,269),
+  not (631,242).
+- Premium tab, read live: every visible entry
+  shows Claimed (MR Abyss Apex Mega Express
+  Contract +1000, SSR Premium Training Pass +200,
+  R Coin Weekly Pass and Drone Parts Weekly Pass
+  +50 each, both Krazy Sully, plus further SSR
+  rows after scrolling) and no Claim All button
+  is present on the tab, so Premium had nothing
+  waiting in this unit.
+- Progress note, Issue #183 evidence commented
+  there by this run (not a closure claim): the
+  Regular window moved exactly by its own claims
+  in this unit, which bounds the anomaly to units
+  where the counter is not read cleanly around
+  the claim, consistent with the 1113 exact unit;
+  Premium moved 0 with 0 claims, adding no excess.
+- Exited with the gifts back arrow to the
+  Alliance panel, then the panel back arrow
+  (164,931) to the base screen.

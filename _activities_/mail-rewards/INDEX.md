@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T02:50:00Z
+modified: 2026-11-04T10:32:00Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-0704 mail-rewards execution record 2026-11-03 0715 queue run (done, six categories swept, all answered No rewards available)
   - source: ticker-1034 mail-rewards execution record 2026-11-03 1055 queue run (partial, mail entry mis-targeted to Alliance twice then no-change, Issue 230)
   - source: ticker-1734 mail-rewards execution record 2026-11-03 1740 queue run (done, R2 fresh grounding opens Mail first try, Alliance Exercise claim, red dot is unread not claimable)
+  - source: ticker-0204 mail-rewards execution record 2026-11-04 0212 queue run (done, Alliance claim verified by checkmarks, Regular notices already credited, notifications prompt declined, Issue 230)
 ---
 
 
@@ -692,3 +693,55 @@ the next tick re-produces this regular as a fresh unit.
   12.1M plus food 19.0M plus iron 19.0M plus 120 5m
   speedups plus card items, costs 0 stamina,
   verified yes, blocker none.
+
+## What the 2026-11-04 0212 unit added - Alliance claim verified by checkmarks, Regular notices already credited, notifications prompt declined
+
+- Unit mail-2026-11-03-2230 by ticker-0204,
+  02:08 to 02:12 local, status done. No "active on
+  a different device" dialog appeared.
+- Entry: Mail opened from the base right rail at
+  grounded centre (931,804) - another first-try
+  entry, evidence commented onto Issue #230 (the
+  measured-envelope failure): fresh grounding, not
+  the stale envelope point.
+- Category list as standing: Battle Report (red
+  dot), Alliance (gift icon), Event (gift icon),
+  Season, System, Regular (red dot), In-app
+  Purchases (red dot). Claim All pressed in every
+  category, one at a time. Delete All was never
+  pressed in any category, and 0 mail was deleted.
+- Alliance claim verified in detail, not assumed
+  from the missing toast: the top mail, Daily
+  Donation Rankings dated 2026-11-3 18:03:11
+  (No.17 on the alliance donation leaderboard),
+  shows both reward icons with green checkmarks
+  and no Claim button, i.e. claimed. A second
+  Claim All tap in Alliance showed no change,
+  consistent with nothing left to claim; under
+  rule R2 that method was dropped and the detail
+  check was used instead. Claimed count 1 for the
+  unit (the Alliance Daily Donation Rankings
+  rewards, verified by green checkmarks).
+- Other categories: Event train arrival notices
+  only ([AP3x] Abyss Apex, [AP3x] Nuna Knuckles
+  and others), Claim All left the list unchanged,
+  no claimable attachment. Battle Report Victory
+  reports only (Lv.150 Walker, Zombie Raiders and
+  Hordes), Claim All, no change. Season Ice
+  Breaking Reports only, Claim All, no change.
+  System Patch Notes, President Mail and a purge
+  request notice, Claim All, no change. Regular
+  resource notices (iron x1,800,000, 54m ago;
+  coins x432,000, 56m ago) plus Victory reports
+  (Vanguard Instructors, Doom Elite), Claim All
+  left the list unchanged, so the resource notices
+  read as already-credited notices, not claimable
+  items. In-app Purchases receipts only (Research
+  Speed-up Pack 2026-11-3, Fast Growth Pack
+  2026-11-2), Claim All, no change.
+- Exit: a notifications opt-in prompt appeared on
+  exit ("Enable notifications and never miss
+  important messages again"); Cancel was tapped,
+  Enable Now was not touched, and the prompt
+  closed. Lesson: decline the prompt, do not
+  enable it.
