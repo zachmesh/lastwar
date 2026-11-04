@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-04T09:36:11Z
-version: 1.23.0
+modified: 2026-11-04T12:37:48Z
+version: 1.24.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -25,6 +25,7 @@ grounded_in:
   - source: survivor-intake execution record 2026-11-03 1543 queue run (ticker-1534 unit, partial, gate-cluster grounding, no verified recruit)
   - source: ticker-2104 survivor-intake execution record 2026-11-03 2112 queue run (partial, gate line unverified, thirteenth distinct partial since the 1644 done)
   - source: ticker-0104 survivor-intake execution record 2026-11-04 0110 queue run (partial, contested, different-device dialog after two kick takeovers, server maintenance at entry)
+  - source: ticker-0404 survivor-intake execution record 2026-11-04 0416 queue run (partial, gate still not located, tent/parking-area re-read named)
 ---
 
 
@@ -1200,3 +1201,12 @@ Measured on 2026-10-25.
 - Entry carried the same server-maintenance state as the 0034 harvest unit: a TIPS dialog "The server is under maintenance. Please wait a moment, we'll be back with you shortly!" over the login screen with a "Login failed. Please retry or contact support." toast. Confirm on the maintenance dialog dismissed it to the loading screen, and the base was then reached behind the different-device dialog - so the maintenance had lifted by about 01:04, roughly half an hour after it blocked the 0034 pass outright. The maintenance dialog's Confirm is not the crash path: the 0034 record distinguishes it from the "Server disconnected" dialog, whose Confirm quits the app.
 - Nothing from this unit is a closing figure: the base was never reached interactively, the gate line was NOT READ and is not claimed empty, and the power figure glimpsed behind the dialog (150,013,787) is explicitly not used - the record marks the unit unverified, blocker category f. The previous unit's rejected points (505,590) and (545,740) were not re-tapped.
 - No earlier claim superseded; no new issue filed - the contested stop is the owner rule working as written, and the maintenance episode resolved within the pass.
+
+## What the 2026-11-04 0416 unit added - gate still not located, re-read named
+
+- Partial, unverified, ticker-0404, unit survivors-2026-11-04-0203 (game work about 04:12 to 04:16 local). Base entered cleanly with no different-device dialog (contrast the contested ticker-0104 unit). HUD read live: food 397.0M (consistent with the 0413 harvest +2.0M), iron 732.0M, coin 3.1M, second row 21.0M and 922.2K, total power 150,028,269.
+- The base was panned across the full width - left-edge iron-mine row, center-right HQ and tent area, far-right decoration and radar area, bottom snow edge with the Season 2 troop area - and no Zombies gate sign was seen in any of these views.
+- Visual grounding on the center-right view returned candidate points (front gate 511,728; survivor line 668,789; survivor figure 744,852), but on the restored view those points fall on the tent and parking area and no survivor figure or question-mark bubble could be verified there at this screenshot resolution, so none of them was tapped as a survivor: a parking area is not a survivor figure.
+- 0 survivors processed, no recruit card appeared, no Quick Dispatch ran. The gate line is NOT READ and is NOT claimed clear or empty: the gate was never located, so the line state is unverified, not empty. This continues the standing survivor blocker (Quick Dispatch never run); tracker untouched, so the next tick re-produces this regular.
+- Named re-read for the next survivors unit: start from the center-right view, check the tent and parking-area figures first, and pin the Zombies gate sign before any intake tap.
+- No earlier claim superseded; no new issue filed - the gate-location blocker is already the standing R2 item for this regular.

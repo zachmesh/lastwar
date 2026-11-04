@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T09:36:11Z
+modified: 2026-11-04T12:37:48Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-1034 resource-collection execution record 2026-11-03 1044 queue run (partial, central and right-bottom bubble-free, 0 collected, left and top unswept since 0642)
   - source: ticker-2034 resource-collection execution record 2026-11-03 2034 queue run (partial, one verified +1.6M second-row collection, factory-top grounding confusion filed as Issue #250)
   - source: ticker-0034 resource-collection execution record 2026-11-04 0034 queue run (failed, server maintenance blocked login, no base view reached)
+  - source: ticker-0404 resource-collection execution record 2026-11-04 0413 queue run (partial, farmland +2.0M verified, factory-row marker confusion, Issue #250 evidence)
 ---
 
 
@@ -973,3 +974,11 @@ regular stays due. Evidence in
 - Failed, 0 bubbles: the ticker-0034 harvest pass never reached a base view. At entry the game showed a "Server disconnected. Please restart the game." dialog whose Confirm quit the app (the known crash path for that dialog, state intact), then on relaunch a SYSTEM ANNOUNCEMENT "Update complete, please restart the game." (Version 1.0.366 (908), Asset Version 2167.1512...), then the login screen behind a TIPS dialog "The server is under maintenance. Please wait a moment, we'll be back with you shortly!" with a "Login failed. Please retry or contact support." footer. Two Confirm retries about 4 minutes apart (second at the OCR-grounded point (634,568)) left the dialog unchanged: login is impossible while maintenance is active. This is a game-server state, not a device-access failure and not the different-device dialog.
 - Do not conflate the two dialogs: the disconnected dialog's Confirm exits the app; the maintenance dialog's Confirm is safe to retry - the 0110 survivors pass later the same night shows it dismissing to the loading screen once maintenance lifted (by about 01:04), so the retry-next-tick handling already in the loop is the correct response, and re-attempting another unit inside the same blocked pass only repeats the wall.
 - The full edge-drag sweep of the Nov 1 rule was not started (left-side coin and stone buildings, drone-component bubbles, EXP and screw bubbles, armed-truck loot check all unreached); with the 2034 unit already partial, the sweep is now two units behind. No HUD figure was read, no diamonds or money touched, tracker untouched. No earlier claim superseded; no new issue filed - maintenance is transient external state, not a queue failure mode.
+
+## What the 2026-11-04 0413 unit added - farmland verified again, factory-row marker confusion repeated
+
+- Partial, ticker-0404, unit harvest-2026-11-04-0203 (game work about 04:06 to 04:13 local). Base reached via the world-map back arrow after two home-icon taps did not switch views. HUD at entry (live reads): food 395.0M, iron 732.0M, coin 3.1M, second row 21.0M and 922.2K, total power 150,028,269, diamonds 12.72K.
+- Verified again: one farmland bubble tap at (395,415) moved food 395.0M to 397.0M (+2.0M, HUD read live on the next screenshot), reaffirming that one farmland tap collects all farmland bubbles at once.
+- Marker confusion, Issue #250 evidence (already commented on #250 by the ticker pass, so no duplicate comment here): the gold circles and small icons above the iron-mine and factory row are building markers, not collectible bubbles, at this screenshot resolution. Taps at (148,405) on a left-side marker and (86,315) on the small icon floating above the leftmost blue building moved no HUD figure; taps at (833,391), (369,273), (389,363) and (467,405) selected Headquarters Lv.30, Gear Factory, Component Factory Lv.20 and Iron Mine Lv.27 and were closed without spending (Craft at 495.0K coin was NOT tapped). The floating-icon tap at (86,315) is the closest miss and the next unit's first retry candidate.
+- The full edge-drag sweep of the Nov 1 rule was NOT completed: the left-side coin and stone building bubbles, the drone-component bubbles, the EXP and screw bubbles and the armed-truck loot check were not reached or verified inside the unit cap, so the sweep falls further behind; the next harvest unit resumes from the sweep with the marker-confusion caution above as its first note. No truck top bubble was claimed (truck work belongs to the trucks unit). No diamonds, money, speedup or paid button was touched.
+- No earlier claim superseded.

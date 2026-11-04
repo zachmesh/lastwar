@@ -1,14 +1,15 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-01T07:58:31Z
-version: 0.14.1
+modified: 2026-11-04T12:37:48Z
+version: 0.15.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
   - source: owner request 2026-10-28 to design a task unit pool with short bounded executions
   - source: run records of 2026-10-27 and 2026-10-28 in _records_
   - source: miss audit of 2026-10-31 and the owner instruction of 2026-10-31 to reflect and fix
+  - source: PR #267 merged 2026-11-04 (Refs #147) - zero-sweep slots reset-anchored (reset_utc 02:00, offsets 90/30 minutes)
 ---
 
 # Task unit queue design
@@ -460,13 +461,12 @@ design - a unit that works a ledger line closes it by the ledger
 standard, and the round summary reports ledger lines with no
 producing unit as unscheduled, never as absent.
 
-**The zero sweep.** Twice before each 19:00 local reset, at about
-17:30 and about 18:30 local, a sweep unit walks the ledger item
+**The zero sweep.** Twice before each daily reset - the absolute instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer) - at 90 and 30 minutes before the reset instant (16:30 and 17:30 PST in winter, 17:30 and 18:30 PDT in summer), a sweep unit walks the ledger item
 by item. Each line is read live - at zero, not at zero, or
 unreadable. A line not at zero gets a priority 1 unit of its own
 type enqueued before the sweep closes, named in the sweep record;
 the final sweep repeats the walk so the fix-up units it spawned
-are themselves verified. Both sweeps expire at the reset.
+are themselves verified. Both sweeps expire at the reset instant itself.
 
 **Generation - the planner interface.** The planner (section 7)
 stages windows from four cadences - the 4 hour segment anchors,
@@ -478,9 +478,8 @@ stages one unit per slot through the same (regular,
 planned_for) invariant, with `not_before` at the slot start,
 `expires_at` at the next expiry clock time and the chain id
 `<prefix><local date>` with one sequence number per slot. The
-sweep pair is that regular (`zero-sweep`, slots 17:30 and 18:30,
-expiry 19:00, chain `pre-reset-sweep-<local date>`, priority 1,
-`est_minutes` 15, activity `daily-activities`); `sync` never
+sweep pair is that regular (`zero-sweep`, reset-anchored: `reset_utc` 02:00 with `slots_before_reset_minutes` [90, 30], expiry at the reset instant, chain `pre-reset-sweep-<local date>`, priority 1,
+`est_minutes` 15, activity `daily-activities`); for the reset-anchored form `not_before` is the reset instant minus the slot offset and `expires_at` is the reset instant itself (wall-clock `fixed_slots` behaviour is unchanged for any other regular that uses it); `sync` never
 stages it, because the tracker carries no per-slot done state
 and plan owns its production. Before this interface landed the
 pair was enqueued manually with `_tools_/queue.py enqueue`
@@ -488,6 +487,8 @@ pair was enqueued manually with `_tools_/queue.py enqueue`
 pre-reset-sweep-2026-11-01, units 001 and 002, was enqueued this
 way). A reset with no sweep pair staged is itself reported in
 the round summary.
+
+2026-11-04 correction (organizer 0432, Refs #147): the sweep geometry above replaces the wall-clock 17:30/18:30 slots expiring 19:00 local, which could not close a trade day after the 2026-11-02 DST end (the Nov 3 final slot staged at 18:30 local fell half an hour after the 18:00 PST reset). Other 19:00 mentions elsewhere in this design (VIP expiry, the scout anchor, quota checkpoints, the deadline list) are not rewritten in this pass and are flagged as follow-up on #147.
 
 ## 13. The perception layer (scout)
 
