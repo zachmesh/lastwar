@@ -1614,3 +1614,8 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   closed. Records PR 273 awaits the 11:00 batch, so no
   new records PR was opened.
   Full detail in knowledge-organization/0932-run.md.
+
+## 09:40 - Queue planning pass, no-op
+
+- Planner pass queue-planning-2026-11-04-0940, no-op: plan staged 0 units (already_present 63, skipped_done_current 8, reaped 0, expired 0), pre-reset sweep step skipped (not the 1700 hour), scout diff on the 2026-11-04 observation applied all zero, 0 withdrawals, pool inbox 56 claimed 1 done 822 upcoming 51.
+  Full detail in queue-planning/0940-run.md.
