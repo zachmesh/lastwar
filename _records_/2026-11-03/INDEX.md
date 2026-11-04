@@ -2993,3 +2993,17 @@ of 2026-10-28.
   dry and applied agree, all zero; 0 withdrawals. Pool:
   inbox 64, claimed 0, done 742, upcoming 51. Full detail
   in queue-planning/1640-run.md.
+
+## 16:45 to about 16:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-03-1645.
+  Non-batch pass per the checker (outside every batch
+  window, next batch 19:00): knowledge PR 240
+  (organizer 1632 radar 1450 re-read, Refs #235)
+  reviewed clean and merged with a squash commit
+  (4b9753bdf0), main synced back to the local repo;
+  records PR 236 (2026-11-02) awaits the 19:00 batch;
+  records PR 207 conflict re-verified at new head
+  fc348c7 (same two files) and re-commented;
+  records PR 187 conflict carried, head unchanged.
+  Full detail in pr-integration/1645-run.md.
