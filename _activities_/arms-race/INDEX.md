@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T22:38:00Z
+modified: 2026-11-04T04:40:00Z
 level: L1
-version: 1.29.0
+version: 1.30.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-0204 arms-race execution record 2026-11-03 0228 queue run (partial, Base Building tier-1 claimed, tiers 2 and 3 unreachable inside the red lines)
   - source: ticker-0604 arms-race execution record 2026-11-03 0609 queue run (partial, first unit of new Drone Boost phase, stamina 120 measured, Lv-1 Doom Elite 20 stamina for 2000 points, tier arithmetic, ranking-row chest taps retired)
   - source: ticker-1004 arms-race execution record 2026-11-03 1021 queue run (done, Hero Advancement tier 3 met on one Adam level-up, 41500 points, all point and cumulative chests claimed)
+  - source: ticker-1934 arms-race execution record 2026-11-03 1945 queue run (partial, Drone Boost tiers 1 and 2 claimed, tier 3 short, drone Upgrade tap method retired)
 ---
 
 
@@ -366,6 +367,14 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 - When the phase ranking reward lands and where it is claimed.
 
 - Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read. Answered in part 2026-11-03 0609: the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase, so the route is the live stamina scoring path for this phase; generality across phases stays open.
+- Whether the drone Upgrade button on the TACTICAL DRONE
+  screen is gated by the parts count (301/400 at the
+  1945 read) or by background-click delivery: two taps
+  at its measured centre in the 1945 unit produced no
+  change at all, so the tap method is retired per rule
+  R2 inside that unit; the next phase unit tests a
+  changed approach from the foreground path if it
+  retries.
 ## What is known from 2026-10-26
 
 - The Hero Advancement phase ran on the morning of 2026-10-26
@@ -1322,3 +1331,104 @@ slot. Evidence in
 - Red lines held: no diamonds or money spent, no
   speedup burned, no stage swap, no research or
   building started.
+
+## What the 2026-11-03 1945 unit added - Drone Boost, tiers 1 and 2 claimed, tier 3 short
+
+- Unit arms-race-2026-11-03-1803 by ticker-1934,
+  about 19:35 to 19:45 local, status partial. Evidence
+  in `_records_/2026-11-03/arms-race/1945-queue-run.md`.
+- Entry note, for the next pass that finds the game
+  closed: the game was not running at session start
+  (last live run ended 19:13) and was relaunched from
+  the App Store search result for "last war:survival",
+  where Last War:Survival shows an Open button; the
+  installed app name reads LastWar (bundle
+  com.lastwar.ios). Direct open_app name guesses
+  failed before that route worked.
+- Live phase read: Drone Boost, Contest Segment
+  Lv.29-30, first unit of this phase. Phase started
+  about 18:04, ends about 22:04. Time left 02:19:55 at
+  entry, 02:15:05 at the close of the sweep. Live
+  score 10,000, segment rank 9, combined rank 2110.
+  Point chest thresholds 1,500 / 10,000 / 30,000
+  (ruby tags 2,360 / 4,800 / 11,800), matching the
+  1015 and 0609 Drone Boost reads. Scoring rows read
+  live: Use 10 Drone Battle Data points +1; Use 1
+  Stamina +100; Buy Packs containing Diamonds +30 per
+  diamond (red line, never used).
+- Point chests claimed, claim-by-tap as on
+  2026-10-26: one tap on the tier 2 chest claimed
+  tiers 1 and 2 together. Contents read live from the
+  CONGRATULATIONS popup, combined: Skill Medal 600,
+  Arms Race Badge 3, Coin Chest (SR) 12, Food Chest
+  (SR) 12, Iron Chest (SR) 12, 5m Speed-up 28. Tier 3
+  (30,000) stays locked: score 10,000, gap 20,000,
+  equal to 200 stamina at +100 each, or 200,000 Drone
+  Battle Data points at +1 per 10.
+- Cumulative counter chest: read 0/2 at entry. After
+  the two point-chest claims it read 3/2 and was
+  claimable; one tap claimed it. Contents read live:
+  gold ticket item 1, pink puzzle items 2, red gem
+  tagged 50 x1. Identical to the 2026-10-26 cumulative
+  claim. After the claim it reads 3/8, purple,
+  partial, not claimable. Progress carries past the
+  claimed tier into the next tier (8), as recorded
+  2026-10-26. Kept as a per-page read, not merged
+  with other pages' cumulative reads.
+- Stamina, measured live in the REGAIN STAMINA panel:
+  27/120 at panel entry, regen 1 per 300 seconds,
+  fully replenished in 07:43:49. Free Claim: 75
+  Stamina, cooldown 4 hr, Remaining Today 2/2. The
+  Free Claim was taken in this unit (toast "you've
+  acquired 75 Stamina x1"), so stamina stood at about
+  102 after the claim plus regen ticks. The 100
+  Stamina Buy row (300 diamonds) was read only, not
+  tapped. Inventory stamina items read live, not
+  opened: 10 Stamina owned 638, 50 Stamina owned 633.
+  No item was opened because no scoring sink was
+  executed in this unit (see below); the items stay
+  for later units.
+- Drone screen, reached from the phase page "Use 10
+  Drone Battle Data points" row arrow: TACTICAL DRONE,
+  Lv.130, Critical Upgrade Stage 4/5, power 5,805,119,
+  Drone Battle Data 5.55M/42.00K, parts 301/400,
+  Upgrade button shown green. Drone Upgrade method
+  blocked (rule R2): two taps on the Upgrade button
+  at its measured centre produced no change at all
+  (power, data and parts counts identical on the
+  re-reads). Per R2 the method ends inside this unit;
+  no third tap was made, and no click_element
+  alternative exists on this canvas screen. Whether
+  the button is gated by the 301/400 parts count or
+  by background-click delivery is unverified and is
+  left for the next phase unit to test from the
+  foreground path if it retries; see Open questions.
+- Stamina sink not executed in this unit: the
+  remaining stamina-spend sinks (radar tasks, doom
+  work) belong to their own regulars under the
+  one-unit-one-type rule, and radar stored tasks read
+  0/40 at the last radar unit anyway. No radar or doom
+  work was done here.
+- Completion sweep: ranking-row chest tapped,
+  contents preview only, as expected while the phase
+  is live: Iron Chest (SR) 3, Food Chest (SR) 3, Coin
+  Chest (SR) 3 at segment rank 9, matching the 1412
+  rank-9 preview exactly. Per the standing rule this
+  reward is claimed after the phase ends, so the run
+  after the 22:04 phase roll must check for it. No
+  bouncing chest or reward red dot remained on the
+  Arms Race page at close, apart from the not-yet-full
+  cumulative counter at 3/8.
+- Events hub tabs seen at entry: Arms Race, Desert
+  Battlefield, General's Trial, and a further tab cut
+  off at the right edge. No Zombie Invasion tab,
+  consistent with the 2026-10-30 chain close, so no
+  zombie chain was seeded.
+- Handover: the 2203 slot unit is the last unit
+  inside this phase (R6 window); stamina spends by
+  radar and other regulars before 22:04 also score
+  here at +100 each, and the drone Upgrade tap method
+  needs a changed approach before it is retried.
+- Red lines held: no diamonds or money spent, no
+  speedup burned, no stage swap, no research or
+  building started, no Buy button tapped.

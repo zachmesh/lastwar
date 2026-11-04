@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T22:38:00Z
+modified: 2026-11-04T04:40:00Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -34,6 +34,7 @@ grounded_in:
   - source: ticker-1004 alliance-donations execution record 2026-11-03 1030 queue run (partial, 3 verified coin donations 4 to 1, sixth greyed-timer failure at 1/30 first via Rallied Defense, blocker not node-specific, Issue 174)
   - source: ticker-1304 alliance-donations execution record 2026-11-03 1322 queue run (partial, 7 verified coin donations 8 to 1, Strength Ranking re-read retired, regeneration 1 to 8, R3 1300 checkpoint answered, Issue 174)
   - source: ticker-1404 alliance-donations execution record 2026-11-03 1421 queue run (partial, Alliance entry pivot 899,716, Techs tile unresponsive first occurrence, count carried not confirmed, Issue 220)
+  - source: ticker-2004 alliance-donations execution record 2026-11-03 2014 queue run (partial, 20 coin donations 21 to 1, Techs tile root cause, burst grey-out not count-fixed, Issue 160)
 ---
 
 
@@ -151,7 +152,12 @@ activity. Not a separate type.
   7,100, coin cost 700 each), and the coin button then greyed
   with a 00:13:28 timer, the same end state the 0547 run hit
   after nine donations. Donate until the button greys, then
-  stop for that run.
+  stop for that run. Correction, 2026-11-03 2014: the
+  grey-out is NOT a fixed per-burst count - the 2014 unit
+  landed 20 coin donations with the button green
+  throughout and still green at 1/30, no timer shown, so
+  the stop-on-grey rule stands but no count expectation
+  (7 to 9) attaches to it; see the 2014 unit section.
 
 ## Hard closing rule - live read or unverified (2026-10-31 fix)
 
@@ -1006,7 +1012,11 @@ before 03:17 local). Evidence in
 ## Open questions
 
 - Donation Count replenishment mechanism - rate, cap, timer link,
-  and whether the count resets at the 19:00 reset or only refills
+  and whether the count resets at the trade-day reset or only
+  refills (answered in part 2026-11-03 2014: no reset jump,
+  see the sixth data point below; the 19:00 phrasing is
+  superseded by the 02:00 UTC boundary per the 1932
+  correction)
   (GitHub Issue #160; measurement owed: short-interval reads
   across one cooldown cycle). Second confirmation 2026-11-02
   0545: about 8 counts back over about 2 hours 40 minutes after
@@ -1022,7 +1032,7 @@ before 03:17 local). Evidence in
   consolidate, not self-closed. The re-read rule for a
   replenishing count (re-read after the timer; donate again if
   above zero; a live 0 read closes only that unit, not the day,
-  until the model says otherwise) is still unrecorded. Fourth data point 2026-11-03 0621: live 3/30 at entry after the 0521 1/30 close, about 2 back over about 54 minutes, rate still NOT measured. Fifth data point 2026-11-03 0920: live 9/30 at entry after the 0621 1/30 close, about 8 back over about 2 hours 52 minutes, so the allowance regenerates over time and is not a fixed daily 30; the 29/30 throttle hypothesis does not explain a regenerating allowance on its own, and the rate is still NOT measured.
+  until the model says otherwise) is still unrecorded. Fourth data point 2026-11-03 0621: live 3/30 at entry after the 0521 1/30 close, about 2 back over about 54 minutes, rate still NOT measured. Fifth data point 2026-11-03 0920: live 9/30 at entry after the 0621 1/30 close, about 8 back over about 2 hours 52 minutes, so the allowance regenerates over time and is not a fixed daily 30; the 29/30 throttle hypothesis does not explain a regenerating allowance on its own, and the rate is still NOT measured. Sixth data point 2026-11-03 2014: live 21/30 at entry after the 1322 1/30 close, about 20 back over about 6 hours 50 minutes, about 2.9 per hour, consistent with the roughly 1-per-20-minutes estimate, NOT a controlled rate measurement. The interval straddles the trade-day boundary (about 18:00 local) with no donations landed in between (the 1421 unit made none), and the count read 21/30, not 30/30, so no reset-to-full jump occurred at the boundary: the count only refills. The alliance-wide footer did reset (Tech Donation Today 9000, new trade day, against the 1322 8000), so the footer and the Donation Count follow different boundary rules.
 - Donation Count 30/30 read 2026-11-02 1810, ambiguous and
   NOT asserted as a replenishment measurement: the read
   conflicts with the sweep's last live count of 1 remaining
@@ -1947,3 +1957,107 @@ enqueued for after the cooldown (not before about
 - This fold is commented on Issue #220 by this run.
   Neither issue is closed here - closure belongs to
   the daily retro, with evidence.
+
+## What the 2026-11-03 2014 unit added - 20 coin donations, Techs tile root cause, burst grey-out not count-fixed
+
+- Unit donations-2026-11-03-1803 by ticker-2004,
+  about 20:06 to 20:14 local, status partial. Coin
+  button only, no diamonds, no money, no paid button
+  tapped. The diamond Donate button (2 diamonds) was
+  never tapped. Evidence in
+  `_records_/2026-11-03/alliance-donations/2014-queue-run.md`.
+- Entry: the game was on the Events screen at entry
+  (Drone Boost arms-race phase, left there by the
+  ticker-1934 unit). The Events back arrow missed at
+  (86,941) and landed on the first retry at its
+  measured centre (125,944), returning to the base
+  screen. Base screen power read 149,948,901. The
+  Alliance panel opened on the first tap at (899,716),
+  the 1421 pivot, re-confirmed ([AP3x] The Apex,
+  leader Abuss Apex, power 13,057,784,929, members
+  94/100). The (899,794) shield-centre tap that opened
+  Mail in the 1421 unit was not retried.
+- Blocker from 1421, root cause found and cleared:
+  the 1421 unit's Alliance Techs tile failure is
+  explained. Its tap point (720,638) sits above the
+  tile: on this unit's screenshot the Techs tile spans
+  about y 615 to 675 in window pixels, so normalized
+  y 638 (pixel 607) falls in the dead gap above the
+  tile. A single tap at the fresh tile centre
+  (720,678) opened the Alliance Techs tree at once.
+  This is consistent with the 1322 unit's successful
+  (688,680) tap, which also lands inside the tile.
+  The next donations unit should use (720,678) or
+  (688,680), never (720,638), subject to the standing
+  re-ground-first rule, since tile framings drift per
+  session. The blocker did not recur, so per the
+  record the 1421 second-occurrence rule does not
+  trigger a standing-blocker promotion; the root
+  cause is recorded here instead.
+- War tab tree at entry, unchanged: Troop Movement
+  5/10, Rallied HP 6/10, Rallied Attack 7/10, Rallied
+  Defense 7/10, next node below 1/10. Tech Donation
+  Today read 9000 on the tree footer, new trade day
+  (the 1322 unit's 8000 was the previous trade day's
+  figure). Rallied Attack node tap (501,499), as in
+  1322, opened its panel on the first tap.
+- State, read live: Rallied Attack panel at entry
+  7/10, Current +7 percent, Next Level +8 percent,
+  Tech EXP Required 14.0K/4.5M, Donation Reward
+  50/50, Donation Count 21/30, coin Donate 800 green
+  and active. The 21/30 entry count is regeneration
+  since the 1322 unit's 1/30 close, about 20 counts
+  in about 6 hours 50 minutes, consistent with the
+  roughly 3 counts per hour rate seen earlier in the
+  day; see the sixth data point in Open questions.
+- Donations made, per-tap evidence: coin Donate taps
+  at (660,770), 800 coin each, count verified by OCR
+  during the run and by image at the checkpoints.
+  Every tap landed; no tap no-changed in this unit.
+  Taps 1 to 3: 21/30 to 18/30 (Tech EXP 14.1K, then
+  14.2K, Honor 200.3K), the third tap showing the
+  "Hold down for easier continuous donations" tooltip
+  as in 1322. Taps 4 to 8: to 13/30 (Tech EXP 14.9K,
+  Honor 200.8K). Taps 9 to 11: to 10/30 (Tech EXP
+  15.1K). Taps 12 to 15: to 6/30 (Tech EXP 15.6K,
+  Honor 201.5K). Taps 16 to 20: to 1/30 (Tech EXP
+  15.9K, Honor 202.0K). Total landed in this unit: 20
+  coin donations, 16,000 coin spent. Donation Reward
+  still 50/50; no claim button was presented, so
+  nothing was claimed, consistent with the ranking
+  reward settling at the reset rather than by hand.
+  Measurement note: one OCR read mid-burst showed
+  5/30 where the image then read 6/30; the image read
+  governs, and the arithmetic 21 minus 15 equals 6
+  confirms it.
+- Burst behaviour, new evidence, correcting the
+  standing burst reading: the coin button stayed green
+  and active through all 20 donations and still reads
+  green at 1/30 in the closing image, with no timer
+  shown. This breaks the earlier burst pattern
+  (buttons greying after about 7 to 9 donations in
+  the 0547, 1004 and 1026 units): the grey-out is not
+  a fixed per-burst count. See the correction on the
+  2026-10-26 burst bullet above.
+- No test tap was made at 1/30: six prior units
+  proved the 1/30 tap greys the button with a timer
+  and does not land, and this unit's green button at
+  1/30 does not overturn that proof. The next unit
+  re-reads the count after regeneration instead of
+  testing 1/30.
+- Closing state, partial, day not done: at close the
+  Donation Count reads 1/30 live by image on the
+  Rallied Attack panel. The day is NOT done under
+  rule R1, which requires a live 0 read to close. No
+  arithmetic final count is claimed, and the tracker
+  is left untouched. The panel was left open on the
+  Rallied Attack panel at 1/30. Next: the
+  donations-2026-11-03-2203 unit already in inbox
+  re-reads the count after regeneration.
+- Red lines held: no diamonds spent, no paid button
+  tapped, no alliance diplomacy, no assembly, no
+  teleport.
+- This fold is commented on Issue #160 by this run
+  (sixth replenishment data point, no reset jump at
+  the boundary). Neither issue is closed here -
+  closure belongs to the daily retro, with evidence.
