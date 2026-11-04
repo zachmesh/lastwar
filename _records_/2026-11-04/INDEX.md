@@ -2191,3 +2191,25 @@ Full detail in pr-integration/1430-run.md.
   Full detail in queue-planning/1440-run.md.
 - Integrator pass pr-integration-2026-11-04-1445, done (non-batch): PR 285 merged (squash, branch deleted, local main synced to 40fd8dc50); four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
   Full detail in pr-integration/1445-run.md.
+
+## 15:04 to about 15:15 - Ticker pass
+
+- Alliance donations unit donations-2026-11-04-1403, failed,
+  ticker-1504: Mac screen capture failed repeatedly
+  (audio/video capture failure) on activate, screenshot,
+  observe and describe across two computer sessions
+  (cc-464, cc-465), although the Mac connection was healthy
+  and LastWar was running fullscreen with Chrome frontmost.
+  No game screen was read and no input was dispatched, so
+  no Donation Count was read and no coin donation was made;
+  the tracker stays untouched and the next tick
+  re-produces the unit. Sixth consecutive ticker pass to
+  fail this way (ticker-1224, ticker-1327, ticker-1340,
+  ticker-1404, ticker-1434); the blocker is already filed
+  as GitHub Issue #284 (tooling) and this pass commented
+  on it rather than filing a duplicate. Full detail in
+  alliance-donations/1504-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
