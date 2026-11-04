@@ -615,3 +615,25 @@ of 2026-10-28.
   (2026-11-01) still conflicting on the action-log
   and carried. Full detail in
   pr-integration/0315-run.md.
+
+## 03:30 to about 03:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0330.
+  Non-batch pass: the checker reported due for the
+  03:00 window, but the 03:00 batch had already
+  merged in this window (PR 258 at 03:10 PST), so
+  nothing was merged. Records PR 264 (2026-11-04)
+  awaits the 07:00 batch; its head advanced since
+  the 0315 pass only by the 0315 run record itself.
+  Records PR 265 (2026-11-02) was noticed
+  conflicting for the first time (single file, the
+  action-log, append-append) and commented, not
+  merged, not dropped; it must not merge at the
+  07:00 batch until reconciled. Records PR 256
+  (2026-11-03) carried, not merged: GitHub reports
+  it clean but the head would drop the 2300 merge
+  line for PR 245 and re-add re-serialized
+  duplicates, so it must not merge until reconciled
+  by entry identity. Records PR 187 (2026-11-01)
+  still conflicting on the action-log and carried.
+  Full detail in pr-integration/0330-run.md.
