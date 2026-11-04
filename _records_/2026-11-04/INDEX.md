@@ -724,3 +724,19 @@ of 2026-10-28.
   the live pool tree, no duel-score unit staged.
   Full record:
   _records_/2026-11-04/queue-planning/0340-run.md.
+
+## 03:34 - Ticker pass, radar tasks (release day)
+
+- Radar unit radar-2026-11-04-0203, partial, ticker-0334:
+  11 rewards claimed, points 194 to 205, stored 0/40, stamina
+  156 to 136 (Quick Execute 2 tasks, Claim All 6). Five
+  finished-task pins claimed first (green skull, purple axe,
+  grey skull, purple skull, blue axe). Blue skull pin
+  identified as Defeat Doom Elite 1 times, but its Rally
+  button did not launch on two clicks plus a long-press
+  (Issue #268, next unit must change method). Purple axe
+  bottom centre identified as Rare Farmland gathering pin,
+  left unstarted for the next unit. Esc pressed on the
+  Alliance panel crashed the app; relaunch restored the
+  session with no observed loss. Tracker untouched.
+  Full detail in radar-tasks/0334-queue-run.md.
