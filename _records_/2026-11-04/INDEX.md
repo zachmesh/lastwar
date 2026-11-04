@@ -80,3 +80,17 @@ of 2026-10-28.
   the conflict comment from the 2345 pass stands, not
   force-merged. No owner-gated PR. Full detail in
   pr-integration/0015-run.md.
+
+## 00:30 to about 00:33 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0030.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR was open. Records PRs
+  258 (2026-11-04, head 9a58e0de, MERGEABLE, 5 commits),
+  256 (2026-11-03, head a8ddb8eca, MERGEABLE, 11 commits)
+  and 255 (2026-11-02, head 248677fc0, MERGEABLE, 1 commit)
+  await the 03:00 batch. Records PR 187 (2026-11-01, head
+  2be5df8) still conflicted on _logs_/repo-actions/action-log.jsonl,
+  the conflict comment from the 2345 pass stands, not
+  force-merged. No owner-gated PR. Full detail in
+  pr-integration/0030-run.md.
