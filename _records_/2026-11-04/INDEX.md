@@ -1762,3 +1762,432 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   at the unit cap, right side and top edge unswept, EXP/screw/
   drone bubbles not located. Full detail in
   resource-collection/1101-queue-run.md.
+## 11:00 to about 11:14 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1100.
+  Batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window. Records PR
+  273 (2026-11-04, 44 commits) merged by merge
+  commit d2cef2e60, branch kept; merge line
+  committed to records/2026-11-04 for the next
+  batch. PR 187, 256 and 265 still conflicted on
+  the action log at unchanged heads, so no comment
+  was repeated. Full detail in
+  pr-integration/1100-run.md.
+
+## 11:15 to about 11:24 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1115.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window, but the 11:00
+  batch already merged in this window (PR 273 at
+  11:06), so this pass merges nothing. Records PR
+  279 (2026-11-04, post-1100 batch) opened, head
+  5053b0ae5, MERGEABLE/CLEAN, awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on
+  the action log at unchanged heads, so no comment
+  was repeated. Full detail in
+  pr-integration/1115-run.md.
+- Survivors unit survivors-2026-11-04-1003, partial, ticker-1104:
+  gate line verified live (3 question mark survivors in front of
+  the gate wall), 0 recruited, no card opened, Quick Dispatch not
+  run, tracker untouched; fullscreen crop-grounded figure taps
+  dispatched but opened no dialog, so the next unit must try the
+  bubble itself or a long-press with a fresh grounding first.
+  Full detail in survivor-intake/1122-queue-run.md.
+
+## 11:32 to about 11:38 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-1132.
+  No-op: no own-PR feedback (all own tooling PRs
+  merged, open PRs are records only, no comment on
+  them names this job) and no bounded, unimplemented
+  tooling item. Standing tool queue (c) fully present
+  on github main (retro_report p90 / attempts /
+  system_metrics, queue stats_missing, scout
+  round-summary section); trigger scheduling is a
+  future design phase, not a bounded slice. No PR, no
+  Slack DM, per the no-op rule. Full detail in
+  tool-development/1132-run.md.
+
+## 11:30 to about 11:39 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1130.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window, but the 11:00
+  batch already merged in this window (PR 273 at
+  11:06), so this pass merges nothing. No new records
+  PR opened: records/2026-10-31 is contained in main
+  and every other live records branch already has an
+  open PR. PR 279 (2026-11-04, post-1100 batch, head
+  6faf1bd, MERGEABLE/CLEAN) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on
+  the action log at unchanged heads, so no comment
+  was repeated. Full detail in
+  pr-integration/1130-run.md.
+
+## 11:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-1132.
+  Own PR 277 MERGED with no reviews or comments, so no
+  PR feedback was pending; no new knowledge-labeled issue
+  since the 1032 run (newest remains #247). Folded the
+  ticker-1034 and ticker-1104 records into three profiles
+  on branch work/knowledge-organizer-2026-11-04-1132,
+  opened as PR 280 (OPEN, Owner
+  lastwar-knowledge-organizer): alliance-donations
+  1.31.0 (1046, 10 coin donations 10/30 to 1/30, test
+  tap at 1/30 LANDED on Tech EXP 19.7K to 19.9K, so the
+  greyed 00:16:35 timer is the exhausted state, not a
+  failed tap - the 1/30-avoidance note in the 2014,
+  2340, 0309 and 0741 sections is superseded, with the
+  six earlier failures standing as history and the
+  mechanism difference unexplained; tenth
+  replenishment point, about 9 counts in about 2 hours
+  55 minutes, commented on Issue #160), resource-
+  collection 1.22.0 (1101, farmland +2.1M food and
+  left-side +1.4M coin verified by HUD deltas, 0755
+  points re-confirmed, right side and top edge unswept
+  so the full sweep stays incomplete), survivor-intake
+  1.26.0 (1122, gate line verified live with 3
+  question-mark survivors, fullscreen crop-grounded
+  figure tap dispatched but no card opened, so the
+  blocker is now taps-not-opening-cards; evidence
+  already commented on Issue #168 by the ticker pass).
+  1 contradiction superseded, 0 stale marked, 0 gaps
+  filed, no issue closed - closure belongs to the daily
+  retro. Records PR 279 awaits the 15:00 batch, so no
+  new records PR was opened. Full detail in
+  knowledge-organization/1132-run.md.
+## 11:39 to about 11:48 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-04-1139, no-op: no adopted open PR (PR 137 stays MERGED); four open PRs scanned and none owned by this job (PR 279 integrator post-1100 batch, PRs 265, 256 and 187 integrator records, the latter three still CONFLICTING on the action log from the 0415 re-check), PR 277 merged 10:47 PST and PR 273 merged 11:06 PST as the 11:00 batch since the 1039 pass, 43 open issues all class-labeled with no change since the 1039 pass, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
+  Full detail in pr-catchall/1139-run.md.
+## 11:40 to about 11:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-1140: plan staged
+  5 units for the 2257 slot (passes, secrets, treasures,
+  trucks, events) for the next 12 hours; already_present 66,
+  reaped 0, expired 0; pre-reset sweep skipped (not the
+  17:00 hour run); scout diff on the Nov 4 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained 0); 0 withdrawals.
+  Pool by_state: inbox 68, claimed 1, done 828, upcoming 51.
+  Full detail in queue-planning/1140-run.md.
+
+- 11:47 ticker-1134 pass: training partial and gifts partial, nothing claimed. Training: four grounded tent taps on the fullscreen base frame opened no barracks panel, one drag did not move the view, 0 barracks verified, 0 batches queued, no Drill Ground figure read live (tent blocker already Issue 150). Gifts: Alliance panel never opened after two background taps while Chrome was frontmost on the Mac, 0 gifts claimed, foreground precondition per queue rule R2; game not forced to foreground while the user works in Chrome. Full detail in troop-training/1147-queue-run.md and alliance-gifts/1147-queue-run.md.
+
+## 11:45 to about 11:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1145.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window, but the 11:00
+  batch already merged in this window (PR 273 at
+  11:06), so this pass merges no records PR. PR 280
+  (organizer 1132) reviewed clean and merged by squash
+  (merge commit 2ae2ac63f), main synced back to the
+  local repo. PR 279 (2026-11-04, post-1100 batch, head
+  fd3893db, MERGEABLE/CLEAN) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on the
+  action log at unchanged heads, so no comment was
+  repeated. No new records PR opened: records/2026-10-31
+  is contained in main. Full detail in
+  pr-integration/1145-run.md.
+
+## 12:00 to about 12:12 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1200.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported not due, next batch point 15:00
+  America/Los_Angeles. No knowledge or code PR open.
+  PR 279 (2026-11-04, post-1100 batch, head
+  864036c1, MERGEABLE/CLEAN) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on the
+  action log at unchanged heads, so no comment was
+  repeated. No new records PR opened: records/2026-10-31
+  is contained in main. Full detail in
+  pr-integration/1200-run.md.
+
+## 12:15 to about 12:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1215.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported not due, next batch point 15:00
+  America/Los_Angeles. No knowledge or code PR open.
+  PR 279 (2026-11-04, post-1100 batch, head
+  899a8f70, merge-tree clean) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on the
+  action log at unchanged heads, so no comment was
+  repeated. No new records PR opened: records/2026-10-31
+  is contained in main. Full detail in
+  pr-integration/1215-run.md.
+
+## 12:24 to about 12:27 - Ticker pass
+
+- Alliance Help unit help-2026-11-04-1030, failed, ticker-1224:
+  Mac screen capture failed repeatedly (audio/video capture
+  failure) on activate, observe, describe and screenshot attempts,
+  although the Mac connection was healthy and LastWar was running
+  fullscreen with Chrome frontmost. No game input was dispatched,
+  so Help All was not pressed and no help count was read; the
+  tracker stays untouched and the next tick re-produces the unit.
+  Full detail in alliance-help/1235-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
+
+## 12:30 to about 12:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1230.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported not due, next batch point 15:00
+  America/Los_Angeles. No knowledge or code PR open.
+  PR 279 (2026-11-04, post-1100 batch, head
+  4779dbfa, merge-tree clean) carried awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on the
+  action log at unchanged heads, so no comment was
+  repeated. No new records PR opened: records/2026-10-31
+  is contained in main. Full detail in
+  pr-integration/1230-run.md.
+
+## 12:32 to about 12:37 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-1232.
+  No-op: no own-PR feedback (all own tooling PRs
+  merged, open PRs are records only) and no bounded,
+  unimplemented tooling item. Standing tool queue (c)
+  fully present on github main (retro_report p90 /
+  attempts / system_metrics, queue stats_missing, scout
+  round-summary section); trigger scheduling is a
+  future design phase, not a bounded slice. No PR, no
+  Slack DM, per the no-op rule. Full detail in
+  tool-development/1232-run.md.
+
+## 12:39 to about 12:50 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-04-1239, no-op: no adopted open PR (PR 137 stays MERGED); four open PRs scanned and none owned by this job (PR 279 integrator post-1100 batch, MERGEABLE and CLEAN, PRs 265, 256 and 187 integrator records, the latter three still CONFLICTING on the action log from the 0415 re-check), no PR opened, merged or closed since the 1139 pass, 43 open issues all class-labeled with no change since the 1139 pass, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
+  Full detail in pr-catchall/1239-run.md.
+
+## 12:40 to about 12:52 - Queue planning pass
+
+- Planner pass 1240, done: plan staged 1 unit
+  (ghost-ops-2026-11-05-0000 for the Thursday slot);
+  scout diff on the Nov 4 observation applied with zero
+  changes; 0 withdrawals; pool inbox 67, claimed 0,
+  done 831, upcoming 52. Pre-reset sweep step skipped
+  (not the 17:00 hour run). Full detail in
+  queue-planning/1240-run.md.
+
+## 12:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-1232.
+  Own PR 280 MERGED with no reviews or comments, so no
+  PR feedback was pending; no new knowledge-labeled issue
+  since the 1132 run (newest remains #247). Folded the
+  ticker-1134 and ticker-1224 records into three profiles
+  on branch work/knowledge-organizer-2026-11-04-1232,
+  opened as PR 281 (OPEN, Owner
+  lastwar-knowledge-organizer): troop-training 1.22.0
+  (1147, fullscreen framing mismatch vs the 2026-11-03
+  success frame, four grounded tent taps opened no
+  panel, centre drag moved no view, session drop
+  reopened with no data lost, qualified against the
+  framing-bound rule, Issue #150 recurrence commented
+  there), alliance-gifts 1.24.0 (1147, foreground
+  precondition repeat - Alliance entry twice no panel,
+  re-grounded point also no-change so the failure is
+  the input channel not the point, window deliberately
+  not forced foreground while Chrome is the user's
+  active window, transient per the 2026-10-31
+  precedent), alliance-help 1.25.0 (1235, NEW failure
+  mode - screen-capture channel failure on every
+  capture step, device connected, no game input
+  dispatched, not authorization, not a different-device
+  dialog, retry-first then escalate-as-device-fault).
+  No contradiction superseded (2 qualifications
+  recorded); no issue filed or closed. Records PR 279
+  awaits the 15:00 batch, so no new records PR was
+  opened. Full detail in knowledge-organization/1232-run.md.
+
+## 12:45 to about 12:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1245, done (non-batch): knowledge PR 281 (organizer 1232 - 1147 training, 1147 gifts, 1235 help) reviewed clean and merged by squash, local main fast-forwarded to be8dd39b; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1245-run.md.
+
+## 13:00 to about 13:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1300, done (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1300-run.md.
+
+## 13:15 to about 13:25 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1315, done (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1315-run.md.
+
+## 13:30 to about 13:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1330, done (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1330-run.md.
+
+## 13:32 to about 13:44 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-1332.
+  No-op: no own-PR feedback (all own tooling PRs
+  merged, open PRs are records only) and no bounded,
+  unimplemented tooling item. Standing tool queue (c)
+  fully present on github main be8dd39b8 (retro_report
+  p90 / attempts / system_metrics, queue stats_missing,
+  scout round-summary path); trigger scheduling is a
+  future design phase, not a bounded slice. Records
+  branch fast-forwarded from 55a1feee9 to 9b57bac3f
+  before committing so no integrator run was
+  overwritten. No PR, no Slack DM, per the no-op rule.
+  Full detail in tool-development/1332-run.md.
+## 13:27 to about 13:34 - Ticker pass
+
+- Mail Rewards unit mail-2026-11-04-1030, failed, ticker-1327:
+  Mac screen capture failed repeatedly (audio/video capture
+  failure) across two computer sessions (activate, observe,
+  describe, screenshot attempts), although the Mac connection
+  was healthy and LastWar was running fullscreen with Chrome
+  frontmost. No game input was dispatched, so no mail tab was
+  opened, no Claim All was pressed and no reward count was
+  read; the tracker stays untouched and the next tick
+  re-produces the unit. Second consecutive ticker pass to fail
+  this way (ticker-1224 failed identically about one hour
+  earlier). Full detail in mail-rewards/1333-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
+
+## 13:39 to about 13:52 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-04-1339, no-op: no adopted open PR (PR 137 stays MERGED); four open PRs scanned and none owned by this job (PR 279 integrator post-1100 batch, merge state UNKNOWN after the integrator 1330 run append at pass start, PRs 265, 256 and 187 integrator records, the latter three still CONFLICTING on the action log from the 0415 re-check), no PR opened, merged or closed since the 1239 pass, 43 open issues all class-labeled with no change since the 1239 pass, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
+  Full detail in pr-catchall/1339-run.md.
+
+## 13:32 to about 13:55 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-04-1332, done: own PR 281 merged with no reviews or comments, no knowledge-labeled issue created or updated between the 1232 run and the mail 1333 landing, one new execution record folded (ticker-1327 mail-rewards 1333, Mac screen-capture channel failure recurring after help 1235), mail-rewards profile 1.18.0 to 1.19.0 on PR 283 (Owner lastwar-knowledge-organizer, verified OPEN), recurrence escalation filed as Issue 282; profiles updated 1, contradictions resolved 0, gaps filed 1. Meta records checked with no fold: pr-catchall 1239, queue-planning 1240, pr-integration 1245/1300/1315/1330, tool-development 1232/1332. Records landing during the push window (pr-catchall 1339) fall to the next run per convention. Full detail in knowledge-organization/1332-run.md.
+
+## 13:40 to about 13:49 - Queue planning pass
+
+- Planner pass 1340, partial (delivery pending): plan staged 0 units
+  (horizon already covered, already_present 72);
+  scout diff on the Nov 4 observation applied with zero
+  changes; 0 withdrawals; pool inbox 65, claimed 1,
+  done 832, upcoming 52. Pre-reset sweep step skipped
+  (not the 17:00 hour run). Full detail in
+  queue-planning/1340-run.md.
+
+## 13:40 to about 13:44 - Ticker pass
+
+- Alliance Duel unit star-ceremony-2026-11-04-1030, failed,
+  ticker-1340: Mac screen capture failed repeatedly
+  (audio/video capture failure) on observe, screenshot and
+  activate across two computer sessions, although the Mac
+  connection was healthy and LastWar was running fullscreen
+  with Chrome frontmost. No game input was dispatched, so no
+  ceremony check was made and no duel total was read; the
+  tracker stays untouched and the next tick re-produces the
+  unit. Third consecutive ticker pass to fail this way
+  (ticker-1224, ticker-1327, ticker-1340), so the repeated
+  blocker is filed as GitHub Issue #284 (tooling). Full
+  detail in alliance-duel/1344-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
+- Integrator pass pr-integration-2026-11-04-1345, done (non-batch): PR 283 merged (squash, branch deleted, local main synced to 35871b47); four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+ Full detail in pr-integration/1345-run.md.
+- Integrator pass pr-integration-2026-11-04-1400, done (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+ Full detail in pr-integration/1400-run.md.
+
+## 14:04 to about 14:10 - Ticker pass
+
+- Alliance train unit train-2026-11-04-1030, failed,
+  ticker-1404: Mac screen capture failed repeatedly
+  (audio/video capture failure) on observe, activate and
+  describe across two computer sessions (cc-460, cc-461),
+  although the control channel itself works (a Chrome window
+  observation succeeded in the same session) and LastWar was
+  running fullscreen with Chrome frontmost. No game input was
+  dispatched, so no train check was made; the tracker stays
+  untouched and the next tick re-produces the unit. Fourth
+  consecutive ticker pass to fail this way
+  (ticker-1224, ticker-1327, ticker-1340, ticker-1404), so
+  this pass commented on the existing GitHub Issue #284
+  (tooling) instead of filing a duplicate. Full detail in
+  alliance-train/1404-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
+- Integrator pass pr-integration-2026-11-04-1415, no-op (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+Full detail in pr-integration/1415-run.md.
+- Integrator pass pr-integration-2026-11-04-1430, no-op (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+Full detail in pr-integration/1430-run.md.
+
+## 14:32 to about 14:41 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-1432.
+  No-op: no own-PR feedback (all own tooling PRs
+  merged, open PRs are records only) and no bounded,
+  unimplemented tooling item. Standing tool queue (c)
+  fully present on github main 35871b47 (retro_report
+  1.4.0 p90 / attempts / system_metrics, queue
+  stats_missing, scout round-summary path); trigger
+  scheduling is a future design phase, not a bounded
+  slice. Newest issues 284/282 triaged as a Mac
+  screen-capture device-channel fault, not a tool
+  defect: no repo tool restores the stream, retry
+  rule already satisfied, failed units already carry
+  blocker_category for retro counting; item already
+  documented by its executor pass, not taken over.
+  No PR, no Slack DM, per the no-op rule.
+  Full detail in tool-development/1432-run.md.
+## 14:36 to about 14:45 - Ticker pass
+
+- Shop Claims unit passes-2026-11-04-1057, failed,
+  ticker-1434: Mac screen capture failed repeatedly
+  (audio/video capture failure) on activate and observe
+  across two computer sessions (cc-462, cc-463),
+  although the Mac connection was healthy and LastWar was
+  running fullscreen with Chrome frontmost. No game input
+  was dispatched, so no shop claim was checked or made;
+  the tracker stays untouched and the next tick
+  re-produces the unit. Fifth consecutive ticker pass to
+  fail this way (ticker-1224, ticker-1327, ticker-1340,
+  ticker-1404);
+  the blocker is already filed as GitHub Issue #284
+  (tooling) and this pass commented on it rather than
+  filing a duplicate. Full detail in
+  shop-claims/1434-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
+## 14:39 to about 14:49 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-04-1439, no-op: no adopted open PR (PR 137 stays MERGED); four open PRs scanned and none owned by this job (PR 279 integrator post-1100 batch, MERGEABLE and CLEAN awaiting the 15:00 batch, PRs 265, 256 and 187 integrator records, the latter three still CONFLICTING on the action log from the 0415 re-check), PR 283 organizer 1332 merged since the 1339 pass, 45 open issues all class-labeled with two new labeled issues since the 1339 pass (284 tooling, 282 knowledge), owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
+  Full detail in pr-catchall/1439-run.md.
+
+## 14:32 to about 14:47 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-04-1432, done: own PR 283 merged with no reviews or comments, no new knowledge-labeled issue since the 1332 run (newest remains #282; #284 is tooling, filed by the ticker-1340 pass), two new execution records folded (ticker-1340 alliance-duel 1344 and ticker-1404 alliance-train 1404, third and fourth consecutive ticker passes to fail on the Mac screen-capture blocker), alliance-duel profile 1.24.0 to 1.25.0 and alliance-train profile 1.25.0 to 1.26.0 on PR 285 (Owner lastwar-knowledge-organizer, verified OPEN), qualification commented on Issue #282 (the 1404 Chrome-window success narrows the fault to the Last War fullscreen window's capture stream, not a device-wide outage); profiles updated 2, contradictions resolved 0, gaps filed 0. Meta records checked with no fold: pr-catchall 1339, pr-integration 1345/1400/1415/1430, tool-development 1432. Records landing after the cutoff fall to the next run per convention. Full detail in knowledge-organization/1432-run.md.
+
+## 14:40 to about 14:52 - Queue planning pass
+
+- Planner pass 1440, done: plan staged 11 units
+  (mail, help, gifts, harvest, radar, survivors, train,
+  training, donations, arms-race, star-ceremony for the
+  0203 and 0230 slots of 2026-11-05); scout diff on the
+  Nov 4 observation applied with zero changes;
+  0 withdrawals; pool inbox 74, claimed 0,
+  done 835, upcoming 52. Pre-reset sweep step skipped
+  (not the 17:00 hour run). The pending 1340 planner
+  record was picked up by merge onto this delivery.
+  Full detail in queue-planning/1440-run.md.
+- Integrator pass pr-integration-2026-11-04-1445, done (non-batch): PR 285 merged (squash, branch deleted, local main synced to 40fd8dc50); four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1445-run.md.
