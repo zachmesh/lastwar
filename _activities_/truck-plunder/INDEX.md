@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T14:35:00Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -31,6 +31,7 @@ grounded_in:
   - source: ticker-1834 truck-plunder execution record 2026-11-03 1846 queue run (partial, new trade day 0 of 5 and 0 of 4 at 18:34 entry, 3 dispatches, 2 plunders, trade counters reset with the about-18:00 rollover, Issue #242 follow-up)
   - source: ticker-0234 truck-plunder execution record 2026-11-04 0242 queue run (done, quotas full at entry, WORLD-corner entry route)
   - source: ticker-0534 truck-plunder execution record 2026-11-04 0538 queue run (done, quotas full at entry, badged vehicle icon entry, WORLD-corner route qualified)
+  - source: ticker-0834 truck-plunder execution record 2026-11-04 0845 queue run (done, quotas full 5/5 and 4/4 at entry, trade-icon grounding mislabel opens Secret Command Post)
 ---
 
 # Truck plunder - Intercity Trade
@@ -1591,3 +1592,12 @@ settlement and dispatch execution record).
 - Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both counters are live screen reads in this unit, not tallies.
 - Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." Neither road truck carries a chest icon above it, so no returned truck awaits settlement. The Recover button carries no red dot on either the Your Truck or the Others' Trucks view, so no Reward Recovery record is waiting to be claimed.
 - No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Costs: about 5 minutes, no stamina or items spent.
+
+## What the 2026-11-04 0845 unit added - quotas full again at entry, trade-icon grounding mislabel opens Secret Command Post
+
+- Unit trucks-2026-11-04-0657 by ticker-0834, about 08:44 to 08:45 local, status done. Evidence in `_records_/2026-11-04/truck-plunder/0845-queue-run.md`. Computer session cc-439 dropped mid-pass and was restarted as cc-440 with no game state lost. No different-device dialog appeared.
+- Duel posture applied: tools/duel.py at entry reported duel day 3, theme Age of Science. Truck dispatches do not score today, so the non-UR day rule would have governed any dispatch (SR or above only) - but no dispatch was needed or made, and no Mega Mode dispatch was used. Note: the tool's day-end time (19:00 local) is the disproven tool time from Issue #242; the panel countdown is authoritative (see the 0839 duel section). The rule application is unaffected because no dispatch was made.
+- Entry, grounding mislabel repeated: a visual grounding put the trade icon at norm 53,625, but tapping it opened the Secret Command Post instead. Nothing inside it was tapped - no secret task was started - and the panel was left with a left-edge swipe back to the base. This matches the activity note that the column slot opens the Secret Command Post in one set, and the secrets entry note that the same slot opens the post. A tap at norm 55,578 - the centre the 0538 unit used - opened Intercity Trade directly on the Your Truck view. The badged vehicle icon opens trade, as in 0538.
+- Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both counters are live screen reads in this unit, not tallies. This is the second quotas-full trucks unit today (0538, 0845).
+- Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." Neither road truck carries a chest icon above it, so no returned truck awaits settlement. The Recover button carries no red dot on the Your Truck view, so no Reward Recovery record is waiting to be claimed.
+- No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Game left on the base view.

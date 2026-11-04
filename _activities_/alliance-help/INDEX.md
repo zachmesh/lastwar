@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T13:37:48Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-1706 alliance-help execution record 2026-11-03 1716 queue run (done, Help All cleared one ally row, bubble first tap lost to foreground switch)
   - source: ticker-0204 alliance-help execution record 2026-11-04 0208 queue run (done, Alliance centre 931,709 re-confirmed, 880,720 miss recorded, header 520/1000 on new trade day)
   - source: ticker-0434 alliance-help execution record 2026-11-04 0451 queue run (done, bubble tile 814,688 left of shield 932,695, one tap clears)
+  - source: ticker-0834 alliance-help execution record 2026-11-04 0837 queue run (done, Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies)
 ---
 
 
@@ -755,3 +756,11 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Unit help-2026-11-04-0230 by ticker-0434, 04:51 local, status done. The computer session dropped between units and was restarted (cc-415 to cc-418); no game state was lost. No "active on a different device" dialog appeared.
 - Base screen watch point checked: the help bubble tile was present at the lower right, grounded at norm (814,688), immediately left of the Alliance shield button grounded at norm (932,695) - against the 0208 Alliance centre (931,709), the shield centre drifts per session as usual.
 - One tap on the bubble tile centre pressed Help All: the game answered with the toast "Allies are very grateful for your assistance!" and the tile disappeared from the base screen, verified on the following screenshot (Alliance shield remains, help tile gone). No Help page was opened, no individual helps were needed, and no count of helped allies was displayed by the game - the toast and the vanished tile are the verification, not a number. Tracker marked done. Nothing spent.
+
+## What the 2026-11-04 0837 unit added - Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies
+
+- Unit help-2026-11-04-0630 by ticker-0834, about 08:35 to 08:37 local, status done. Evidence in `_records_/2026-11-04/alliance-help/0837-queue-run.md`. No diamonds, money, speedups or other spending. No different-device dialog appeared.
+- Entry, foreground lesson repeated: the game was already on the Alliance panel at entry (left by the previous unit). The Help tile carried a red dot. A first background tap on Help did not navigate (window covered by Chrome); a second tap at the measured Help tile centre opened the Help page, matching the standing foreground lesson for this activity.
+- Header, read live: Today's points gained from Alliance Help 620/1,000. Visible requests were all this account's own, each already 30/30 and therefore not helpable by this account: Lv.30 Aircraft Center building, Defense Training VIII research, Weapon Training VIII research, Lv.27 Drill Ground building - the same four own rows as the 0208 and 0451 units. A list drag did not reveal further rows.
+- Help All pressed once. Header unchanged after the press at 620/1,000, so no ally help was actually available to press in this unit; the red dot reflects the own requests awaiting other allies, not pressable ally requests. This repeats the 0208 lesson (Alliance red dot is not remaining help) on the Help page itself.
+- Help panel closed with the X, back to the Alliance panel. Nothing spent.

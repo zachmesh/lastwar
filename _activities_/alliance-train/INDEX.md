@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T14:35:00Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-1734 alliance-train execution record 2026-11-03 1742 queue run (partial, fifth check-only outcome today, banner absent, station not viewed)
   - source: ticker-0204 alliance-train execution record 2026-11-04 0217 queue run (partial, sixth check-only outcome in a row, banner absent, station not viewed)
   - source: ticker-0504 alliance-train execution record 2026-11-04 0509 queue run (partial, seventh check-only outcome in a row, grounding mislabel at 55,563 opened the truck screen)
+  - source: ticker-0834 alliance-train execution record 2026-11-04 0839 queue run (partial, check-only, no boarding banner, no train icon, station not viewed)
 ---
 
 # Alliance train
@@ -985,4 +986,12 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - One wrong tap, recovered without action: a visual grounding put a train icon at (55, 563), but tapping it opened the truck screen instead. Nothing inside it was tapped - no dispatch, no plunder, no Mega Mode - and it was closed with its back arrow back to the base view. Nothing read on the truck screen is this unit's data, and the trucks unit must re-read its own counters live. This repeats the standing lesson that visual grounding must not be trusted for the left-column icons, and is further evidence for Issue #205 (left-column mapping and the train icon appearing only while a train is preparing); the ticker already commented this unit onto #205.
 - No boarding action was taken, no Trade Contracts spent, no train summoned, no conductor role touched. The station itself was not viewed, so a preparing train is neither confirmed nor ruled out beyond the absent banner - the same honest caveat as the earlier units. No further ground taps were used to probe for the station, per the 0752 lesson that they open other players' profile cards on this map.
 - No new Issue was filed for this repetition: the blocker is a missing boarding window (trains run 1 regular plus 2 Mega Express per day with short windows), not a tap-method failure, so rule R2's method-escalation ladder does not apply; the repetition is named here and in the pass note for the retro instead.
+- Tracker untouched, per the rule for partial units; the next tick re-produces train and resumes the check. Game left on the base view.
+
+## What the 2026-11-04 0839 unit added - eighth check-only outcome in a row, station still not viewed
+
+- Unit train-2026-11-04-0630 by ticker-0834, about 08:39 local, status partial. Evidence in `_records_/2026-11-04/alliance-train/0839-queue-run.md`. No different-device dialog appeared.
+- Inspected the live base view. No "Boarding closes in" banner under the resource bar, and the left icon column (hammer 2/4, trucks, radar with a red dot, phone with a red dot) shows no train icon. This is the same state as the 0217 and 0509 train units today and the check-only units of 2026-11-03, the eighth such check-only outcome in a row.
+- No boarding action was taken, no Trade Contracts spent, no train summoned, no conductor role touched. The station itself was not viewed, so a preparing train is neither confirmed nor ruled out beyond the absent banner - the same honest caveat as the earlier units. Ground taps were not used to probe for the station, per the 0752 lesson that they open other players' profile cards on this map, and the 0509 lesson that the left-column icon at (55, 563) opens the truck screen, not the train.
+- No new Issue was filed for this repetition, for the same reason as the 0509 section: the blocker is a missing boarding window (trains run 1 regular plus 2 Mega Express per day with short windows), not a tap-method failure, so rule R2's method-escalation ladder does not apply; the repetition is named here and in the pass note for the retro instead.
 - Tracker untouched, per the rule for partial units; the next tick re-produces train and resumes the check. Game left on the base view.

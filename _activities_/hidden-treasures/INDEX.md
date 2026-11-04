@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-03T21:45:53Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-0334 hidden-treasures execution record 2026-11-03 0349 queue run (done, checked only, counts identical to 0014, M3 at zero)
   - source: ticker-0834 hidden-treasures execution record 2026-11-03 0838 queue run (done, checked only, counts identical to 0349, M3 at zero)
   - source: ticker-1234 hidden-treasures execution record 2026-11-03 1243 queue run (done, checked only, counts identical to 0838, M3 at zero, leftover Gold Mine panel entry)
+  - source: ticker-0834 hidden-treasures execution record 2026-11-04 0847 queue run (done, checked only, fragment counts identical to 0838/1243, M3 still binding)
 ---
 
 # Hidden treasures
@@ -480,3 +481,12 @@ as Hidden Treasure.
   Secret Command Post on the Secret Tasks tab - the post
   is where the next secrets unit enters anyway, so the
   position is carried, not a stray state.
+
+## What the 2026-11-04 0847 unit added - checked only, counts identical to 0838/1243, M3 still binding
+
+- Unit treasures-2026-11-04-0657 by ticker-0834, about 08:47 local, status done, checked only. Evidence in `_records_/2026-11-04/hidden-treasures/0847-queue-run.md`. Session cc-440. No diamonds, no money, no exchange touched. No different-device dialog appeared.
+- Entry from the Secret Command Post screen left by the secrets unit; the Hidden Treasures tab tap registered on the first tap (unlike the Claim buttons in the secrets unit of the same pass, which stayed unresponsive - tab taps and Claim buttons do not share this failure).
+- Fragment counts read live from the map, identical to the 2026-11-03 0838 and 1243 units in every figure: M1 x12, M2 x12, M3 x0, M4 x7, M5 x2, M6 x5, M7 x11. Chest progress 4/15, unchanged. Skip Animation is ticked.
+- M3 at zero caps complete sets at zero, so no dig is possible; the Dig buttons were not tapped. No fragment exchange was made (exchanges need owner approval).
+- The Secret Task tab's red dot is the secrets unit's unclaimed tasks, not this unit's work; nothing there was touched.
+- Back arrow tap did not navigate; a left-edge swipe drag returned to the base screen, as in the earlier units of this pass. Outcome: done, checked, no dig available.

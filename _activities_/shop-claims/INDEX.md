@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T14:35:00Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-2234 shop-claims execution record 2026-11-03 2234 queue run (done as checked only, 0 claims, Hot Deals sold out after the 1812 claim, monthly still Claimed)
   - source: ticker-0234 shop-claims execution record 2026-11-04 0237 queue run (done, checked only, nothing claimable)
   - source: ticker-0504 shop-claims execution record 2026-11-04 0511 queue run (done, checked only, 0 claims, monthly Days Left 17, tab taps need a re-read after each tap)
+  - source: ticker-0834 shop-claims execution record 2026-11-04 0841 queue run (done, checked only, 0 claims, monthly 17/17 Claimed as in 0511)
 ---
 
 
@@ -786,3 +787,11 @@ the free and already paid for parts, never the paid unlocks.
 - Tab-tap lesson, new: the first tab tap at norm 570,115 landed on the Monthly page rather than the Weekly page; a second tap at norm 600,118 reached the Weekly page. Tab taps in this bar need a re-read after each tap - do not assume the first tap landed on the intended tab.
 - 0 claims in this unit: every shop pass surface was checked live and nothing was claimable. No price button, Renew button, or paid bundle was tapped anywhere in the shop. Shop left with the back arrow on the first tap, returning to the base screen.
 - No earlier claim superseded: this unit confirms the 1812 cycle state on every surface rather than changing it. Costs: about 2 minutes, no stamina or items spent.
+
+## What the 2026-11-04 0841 unit added - checked only, 0 claims, monthly 17/17 Claimed unchanged since 0511
+
+- Unit passes-2026-11-04-0657 by ticker-0834, about 08:40 to 08:41 local, status done as checked only. Evidence in `_records_/2026-11-04/shop-claims/0841-queue-run.md`. No price button, Renew button, or paid bundle was tapped anywhere in the shop. No different-device dialog appeared.
+- Shop opened from the base cart icon onto the HOT DEALS tab. No free pack on display and no Free Supply auto-claim popup fired on this shop open. The page shows only the Last War Store banner carousel and the Go button, which leads out to the store and was not tapped.
+- Super Monthly Pass page, read live: Days Left 17, Rewards Left 17, and the Daily Pickup button reads Claimed - identical to the 0511 read, so no within-day decrement is claimed. The Monthly Pass Extension 24 dollars 99 button was not tapped.
+- Weekly Pass page, read live and scrolled with the drag from norm 500,850 to 500,250: the Free Supply chest reads Claimed. The Legendary row Take All 19 dollars 99 was not tapped. The S2 Drone Components, S1 Drone Parts and Coin Weekly Pass cards each show only Get Now 4 dollars 99, so all three are unowned offers, not owned passes with a pickup due; none was tapped.
+- 0 claims in this unit: every shop pass surface was checked live and nothing was claimable. This is the third checked-only shop unit today (0237, 0511, 0841), confirming the 1812 cycle state on every surface rather than changing it. Shop left with the back arrow on the first tap, returning to the base screen.
