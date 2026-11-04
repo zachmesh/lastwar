@@ -1065,3 +1065,8 @@ of 2026-10-28.
   found and none was swept into this pass's commit.
   Only this pass's own tier-1 files were committed,
   from a detached worktree at the live branch head.
+
+## 05:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0545.
+  Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. Knowledge PR 270 (organizer 0532: training, mail, gifts, help, duel) reviewed and merged (squash, merged 05:47 PST, main now 4a15c99f8); local main fast-forwarded to the merged commit. Records PR 264 awaits the 07:00 batch as clean (head cfe422e); PRs 256, 265 and 187 stay conflicted on the action log, heads unchanged since the 0415 notes, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0545-run.md.
