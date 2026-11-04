@@ -3214,3 +3214,19 @@ of 2026-10-28.
   all zero counts, 0 withdrawals. Pool inbox 71,
   claimed 1, done 747, upcoming 51. Full detail in
   queue-planning/1840-run.md.
+
+## 18:45 to about 18:50 - Integrator pass, 2 merges (non-batch for records)
+
+- Integrator pass pr-integration-2026-11-03-1845.
+  Non-batch pass per the checker (outside every batch
+  window, next batch 19:00): knowledge PR 244
+  (organizer 1832 fold) and code PR 243 (duel DST
+  boundary fix, Refs 242) both reviewed clean and
+  merged (squash); Issue 242 noted with both merge
+  links and left open for the retro. Records PR 236
+  (2026-11-02) clean and awaiting the 19:00 batch;
+  records PR 207 conflict re-verified at new head
+  f224f2bc (same two files) and re-commented; records
+  PR 187 conflict re-verified against the new main
+  (same single file), head unchanged, carried. Full
+  detail in pr-integration/1845-run.md.
