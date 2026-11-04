@@ -2260,3 +2260,24 @@ Full detail in pr-integration/1430-run.md.
 
 - Integrator pass pr-integration-2026-11-04-1530, correction: PR 287 (knowledge, organizer 1532) opened after the sweep at 23:36:59Z, reviewed clean and merged by squash (f8f783ca) in this pass; local main fast-forward synced 40fd8dc50 to f8f783ca; corrected stats: 5 PRs reviewed, 1 merged.
   Full detail in pr-integration/1530-run.md (correction section).
+## 15:34 to about 15:47 - Ticker pass
+
+- Radar unit radar-2026-11-04-1403, failed, ticker-1534: Mac
+  screen capture failed on all five attempts (audio/video
+  capture failure) across two computer sessions (cc-466,
+  cc-467), although the Mac connection was healthy on both
+  transports and LastWar was running fullscreen with Chrome
+  frontmost. No game screen was read and no input was
+  dispatched, so no stored tasks were executed or claimed and
+  no pin scan was done; the tracker stays untouched and the
+  next tick re-produces the unit. Seventh consecutive ticker
+  pass to fail this way; the blocker is already filed as
+  GitHub Issue #284 (tooling) and this pass commented on it
+  rather than filing a duplicate. Posture note: tools/duel.py
+  on this UTC VM misprints day 4 stack, but PT-corrected
+  today is still day 3 release, matching the unit window.
+  Full detail in radar-tasks/1534-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
