@@ -3434,3 +3434,40 @@ of 2026-10-28.
   wording left to the organizer; template/colour check
   flagged as future work. Full detail in
   tool-development/2132-run.md.
+
+## 21:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-03-2132,
+  worked from the 2032 watermark. Own PR 248 (organizer
+  2032) stands MERGED with no feedback pending; open PRs
+  245, 207 and 187 belong to lastwar-pr-integrator. No new
+  knowledge-labeled issue since the 2032 run (newest
+  remains #247). The ticker-2034 harvest 2034 and
+  ticker-2104 survivors 2112 records folded into 2
+  profiles, opened as PR 253 (Owner
+  lastwar-knowledge-organizer, OPEN): resource-collection
+  1.17.0 to 1.18.0 (one verified teal-bubble collection
+  +1.6M second-row, name unclaimed; factory-top grounding
+  confusion at (435,442) and (501,532) selecting Titanium
+  Alloy Factory No.1/No.3 Lv.30, Issue #250; season-entry
+  white bubble (485,575) toast-only; entry Techs-panel
+  closures and the donations-counter attribution caution;
+  full edge sweep and armed-truck loot still outstanding,
+  partial blocker category b); survivor-intake 1.21.0 to
+  1.22.0 (thirteenth distinct partial since the 1644 done;
+  gate line unverified; 1644 pointer (460,632/458,678)
+  qualified - shows buildings not a gate line in the
+  current view; (505,590) rejected as a building bubble,
+  (545,740) rejected pre-tap as empty snow; single-drag
+  pan about 1 percent abandoned; west-wall STOP sign not
+  verified as the gate; blocker category e).
+  Contradictions resolved 1 (qualified). Gaps filed 0 new
+  Issues, 2 issue comments (#168, #250), no issue closed.
+  Checked, no fold: daily retro 2050 (no new knowledge
+  correction), pr-integration 2045/2100/2130 (meta),
+  tool-development 2132 (tool slice of #250, PR 252).
+  Two hazards corrected: a stale FETCH_HEAD worktree
+  discarded and rebuilt from github/main, and the profile
+  branch fast-forwarded to a3cdf9664 after a stale first
+  push; no force push used. Deferred to the next run per
+  convention: any ticker-2134 record.
