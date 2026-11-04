@@ -236,3 +236,19 @@ of 2026-10-28.
   chain closed 2026-10-30, no Zombie Invasion tab seen live.
 - Pass closed after 1 unit (partial, contested). Token
   released. The next tick retries the survivors unit.
+
+## 01:15 to about 01:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0115.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR open. Records PRs 258
+  (2026-11-04, head a1a2208a3), 256 (2026-11-03, head
+  a8ddb8eca) and 255 (2026-11-02, head 248677fc0) clean
+  and awaiting the 03:00 batch; PR 255s 0100 conflict
+  note corrected this pass (GitHub CLEAN, merge-tree
+  clean, real test merge clean - the finding does not
+  reproduce). Records PR 187 (2026-11-01, head 2be5df83)
+  still conflicted on _logs_/repo-actions/action-log.jsonl,
+  re-verified, not force-merged. No owner-gated PR, no
+  merge, no sync-back owed. Full detail in
+  pr-integration/0115-run.md.
