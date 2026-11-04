@@ -1730,6 +1730,10 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   to the retro). No PR, no Slack DM, per the no-op
   rule. Full detail in tool-development/1032-run.md.
 
+## 10:40 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-1040, done: plan staged 11 units for the 2203 and 2230 slots (mail, help, gifts, harvest, radar, survivors, train, training, donations, arms-race, star-ceremony; already_present 56, skipped_done_current 4, reaped 0, expired 0), pre-reset sweep step skipped (not the 1700 hour), scout diff on the 2026-11-04 observation applied all zero, 0 withdrawals, pool inbox 65 claimed 1 done 825 upcoming 51.
+  Full detail in queue-planning/1040-run.md.
 ## 10:46 to about 10:53 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-04-1045.
