@@ -1641,3 +1641,16 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   unchanged heads, so no comment was repeated; no
   owner-gated PR arose. Full detail in
   pr-integration/1000-run.md.
+
+## 10:15 to about 10:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1015.
+  No-op pass per the checker (not due, next batch
+  11:00): no knowledge or code PR open; records PR
+  273 (records/2026-11-04, head a5978899, merge
+  state CLEAN, merge-tree clean against main
+  2b2d0b95) awaits the 11:00 batch; PRs 187,
+  256 and 265 still conflicted on the action log at
+  unchanged heads, so no comment was repeated; no
+  owner-gated PR arose. Full detail in
+  pr-integration/1015-run.md.
