@@ -3230,3 +3230,5 @@ of 2026-10-28.
   PR 187 conflict re-verified against the new main
   (same single file), head unchanged, carried. Full
   detail in pr-integration/1845-run.md.
+
+1900 batch pass (checker due, 19:00 window): records PR 236 (2026-11-02) merged with a merge commit (c9774b22), merge-time log line committed to the branch and fresh PR 245 opened for it, awaiting the 23:00 batch; records PR 207 conflict re-verified at new head 41241aaf (same two files) and re-commented; records PR 187 conflict carried, head unchanged. No knowledge or code PR open. Full detail in pr-integration/1900-run.md.
