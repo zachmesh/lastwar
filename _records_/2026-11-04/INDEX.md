@@ -1418,7 +1418,7 @@ of 2026-10-28.
 - Planner pass queue-planning-2026-11-04-0840, no-op: plan staged 0 units (already_present 66, skipped_done_current 5, reaped 0, expired 0), pre-reset sweep step skipped (not the 1700 hour), scout diff on the 2026-11-03 observation applied all zero, 0 withdrawals, pool inbox 62 claimed 1 done 813 upcoming 51.
   Full detail in queue-planning/0840-run.md.
 
-## 08:45 to about 08:57 - PR integration pass
+## 08:45 to about 08:51 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-04-0845.
   Non-batch pass per the checker (not due, next batch
