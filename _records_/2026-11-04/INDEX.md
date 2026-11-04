@@ -1522,3 +1522,19 @@ of 2026-10-28.
   unchanged heads, so no comment was repeated; no
   owner-gated PR arose. Full detail in
   pr-integration/0915-run.md.
+
+## Perception scout 0906
+
+Scout base group, post-reset pass scout-2026-11-03-1900 (ticker-0904, partial, by-design chain continuation): power 150,028,269, coin 15.2M; Events badge 1, chat badge 45, two left-column badges carried to the successor. Full record at perception-scout/0906-queue-run.md, observation appended to perception-scout/observation.md.
+
+## Daily missions 0914
+
+Unit daily-missions-2026-11-03-1900 (ticker-0904, partial): one tap claimed all three completed gather tasks (activity 180 to 210) and the 200-point chest claimed with a Congratulations receipt (gold bar x1, red gem x50, wrench x1, flower x1, crate x1, Crystal Ore 2.0K, 5m speed-up x4). Counter-evidence commented on Issues #171 and #208. 8 tasks remain incomplete for other regulars/later ticks. Full record at daily-missions/0914-queue-run.md.
+
+## Perception scout midday 0911
+
+Scout midday base group, unit scout-midday-2026-11-04-0700 (ticker-0904, partial, by-design chain continuation): power 150,028,269 unchanged, cart 3,071 to 3,121, chat badge 45 to 48, Events badge 1 persists. Full record at perception-scout/0911-queue-run.md, observation appended to perception-scout/observation.md.
+
+## Perception scout alliance remainder 0919
+
+Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, partial, by-design chain continuation): alliance power 13,077,801,685, no Wars dot; Kills own rank 92 (48,638), Donation own rank 32 (5,300); City List Rare Soil 5.88K/h and Coal 13.53K/h; mail dots on Battle Report and Event only. Full record at perception-scout/0919-queue-run.md, observation appended to perception-scout/observation.md.
