@@ -794,3 +794,8 @@ of 2026-10-28.
   were processed, no recruit card appeared, no Quick Dispatch
   ran. The gate line is NOT claimed clear. Tracker untouched.
   Full detail in survivor-intake/0416-queue-run.md.
+
+## 04:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0415.
+  Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. No knowledge or code PR open. Records PR 264 awaits the 07:00 batch; PRs 256, 265 and 187 stay conflicted on the action log, re-verified by test merge and re-check commented, awaiting branch-side resolution. No owner-gated PR. Full detail in pr-integration/0415-run.md.
