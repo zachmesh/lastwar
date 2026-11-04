@@ -2044,3 +2044,20 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   before committing so no integrator run was
   overwritten. No PR, no Slack DM, per the no-op rule.
   Full detail in tool-development/1332-run.md.
+## 13:27 to about 13:34 - Ticker pass
+
+- Mail Rewards unit mail-2026-11-04-1030, failed, ticker-1327:
+  Mac screen capture failed repeatedly (audio/video capture
+  failure) across two computer sessions (activate, observe,
+  describe, screenshot attempts), although the Mac connection
+  was healthy and LastWar was running fullscreen with Chrome
+  frontmost. No game input was dispatched, so no mail tab was
+  opened, no Claim All was pressed and no reward count was
+  read; the tracker stays untouched and the next tick
+  re-produces the unit. Second consecutive ticker pass to fail
+  this way (ticker-1224 failed identically about one hour
+  earlier). Full detail in mail-rewards/1333-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
