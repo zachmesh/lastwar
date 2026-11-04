@@ -2093,3 +2093,24 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
  Full detail in pr-integration/1345-run.md.
 - Integrator pass pr-integration-2026-11-04-1400, done (non-batch): no knowledge or code PR open at pass start or arrived mid-pass; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
  Full detail in pr-integration/1400-run.md.
+
+## 14:04 to about 14:10 - Ticker pass
+
+- Alliance train unit train-2026-11-04-1030, failed,
+  ticker-1404: Mac screen capture failed repeatedly
+  (audio/video capture failure) on observe, activate and
+  describe across two computer sessions (cc-460, cc-461),
+  although the control channel itself works (a Chrome window
+  observation succeeded in the same session) and LastWar was
+  running fullscreen with Chrome frontmost. No game input was
+  dispatched, so no train check was made; the tracker stays
+  untouched and the next tick re-produces the unit. Fourth
+  consecutive ticker pass to fail this way
+  (ticker-1224, ticker-1327, ticker-1340, ticker-1404), so
+  this pass commented on the existing GitHub Issue #284
+  (tooling) instead of filing a duplicate. Full detail in
+  alliance-train/1404-queue-run.md.
+- No zombie seeding: zombie chain zombie-2026-10-28 closed with
+  unit 066 on 2026-10-30 (event ended about the 19:00 reset
+  2026-10-30, no Zombie tab in the Events hub).
+- Pass closed after 1 unit (failed). Token released.
