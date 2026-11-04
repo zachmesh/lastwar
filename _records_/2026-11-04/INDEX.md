@@ -1251,3 +1251,13 @@ of 2026-10-28.
 
 - Catch-all pass pr-catchall-2026-11-04-0739, no-op: no adopted open PR (PR 137 stays MERGED); five open PRs scanned and none owned by this job (PR 274 organizer 0732, PR 273 integrator records post-0700 batch, PRs 265, 256 and 187 integrator records), 42 open issues all class-labeled with no change since the 0639 pass, owner-decision issues 132 and 154 both over 24 hours with statements current, no adoption, no fix, no hand-off, no escalation.
   Full detail in pr-catchall/0739-run.md.
+## 07:40 to about 07:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-0740. Staged 8
+  units for the 1857/1900 slots (already_present 63,
+  skipped_done_current 0, reaped 0, expired 0).
+- Pre-reset sweep skipped (not the 1700 hour run).
+  Scout diff on the Nov 3 observation dry and applied
+  agree, all zero counts, 0 withdrawals. Pool inbox 71,
+  claimed 1, done 804, upcoming 51. Full detail in
+  queue-planning/0740-run.md.
