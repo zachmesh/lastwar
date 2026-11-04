@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T05:40:00Z
+modified: 2026-11-04T09:36:11Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-0634 resource-collection execution record 2026-11-03 0642 queue run (partial, central, left and top bubble-free, right edge unswept)
   - source: ticker-1034 resource-collection execution record 2026-11-03 1044 queue run (partial, central and right-bottom bubble-free, 0 collected, left and top unswept since 0642)
   - source: ticker-2034 resource-collection execution record 2026-11-03 2034 queue run (partial, one verified +1.6M second-row collection, factory-top grounding confusion filed as Issue #250)
+  - source: ticker-0034 resource-collection execution record 2026-11-04 0034 queue run (failed, server maintenance blocked login, no base view reached)
 ---
 
 
@@ -737,6 +738,8 @@ regular stays due. Evidence in
 
 ## Changelog
 
+- 1.19.0 (2026-11-04): server maintenance blocking login (0034 unit failed, 0 bubbles, no base view reached), disconnected dialog distinguished from maintenance dialog (disconnected Confirm quits the app, maintenance Confirm safe to retry and login impossible only while maintenance is active), sweep now two units behind after the partial 2034 unit, folded from the 0034 harvest record with the 0110 survivors record as the clearing corroboration; no earlier claim superseded.
+
 - 1.18.0 (2026-11-03): one verified teal-bubble collection
   (+1.6M second-row resource, name unclaimed), factory-top
   grounding confusion at (435,442) and (501,532) selecting
@@ -964,3 +967,9 @@ regular stays due. Evidence in
   tapping) still outstanding, now with the factory-row
   caution from Issue #250 first. No earlier claim
   superseded.
+
+## What the 2026-11-04 0034 unit added - server maintenance blocks login, two dialogs distinguished
+
+- Failed, 0 bubbles: the ticker-0034 harvest pass never reached a base view. At entry the game showed a "Server disconnected. Please restart the game." dialog whose Confirm quit the app (the known crash path for that dialog, state intact), then on relaunch a SYSTEM ANNOUNCEMENT "Update complete, please restart the game." (Version 1.0.366 (908), Asset Version 2167.1512...), then the login screen behind a TIPS dialog "The server is under maintenance. Please wait a moment, we'll be back with you shortly!" with a "Login failed. Please retry or contact support." footer. Two Confirm retries about 4 minutes apart (second at the OCR-grounded point (634,568)) left the dialog unchanged: login is impossible while maintenance is active. This is a game-server state, not a device-access failure and not the different-device dialog.
+- Do not conflate the two dialogs: the disconnected dialog's Confirm exits the app; the maintenance dialog's Confirm is safe to retry - the 0110 survivors pass later the same night shows it dismissing to the loading screen once maintenance lifted (by about 01:04), so the retry-next-tick handling already in the loop is the correct response, and re-attempting another unit inside the same blocked pass only repeats the wall.
+- The full edge-drag sweep of the Nov 1 rule was not started (left-side coin and stone buildings, drone-component bubbles, EXP and screw bubbles, armed-truck loot check all unreached); with the 2034 unit already partial, the sweep is now two units behind. No HUD figure was read, no diamonds or money touched, tracker untouched. No earlier claim superseded; no new issue filed - maintenance is transient external state, not a queue failure mode.
