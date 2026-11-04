@@ -3516,3 +3516,383 @@ of 2026-10-28.
 - 2300 pass (batch per the checker, 23:00 window): merged records PR 245 (2026-11-02 post-1900 batch, merge commit ee65a6296) and records PR 207 (2026-11-03 post-0000 run, merge commit a195311dd, after a branch-side resolution of the action-log append-append conflict created by the PR 245 merge); records PR 187 conflict carried (single file action-log.jsonl, fresh comment this pass); opened fresh records PRs 255 (2026-11-02) and 256 (2026-11-03) awaiting the 03:00 batch. No knowledge or code PR open, no owner-gated PR. Full detail in pr-integration/2300-run.md.
 
 - 2315 pass (non-batch: checker due for the 23:00 window, but the 23:00 batch already merged in this window as PRs 245 at 23:02 and 207 at 23:07, so this pass merges nothing): no knowledge or code PR open; records PRs 255 (2026-11-02) and 256 (2026-11-03) clean, awaiting the 03:00 batch; records PR 187 conflict carried (single file action-log.jsonl, fresh re-check comment this pass). No owner-gated PR. Full detail in pr-integration/2315-run.md.
+created: 2026-11-03T02:28:00-08:00
+modified: 2026-11-03T02:28:00-08:00
+description: The 0204 queue ticker pass, radar stack check and Base Building arms race
+grounded_in:
+  - source: in-game screens observed on the owner Mac mini, 2026-11-03
+- Scout unit scout-midday-scout-mid-2026-11-02-001, partial,
+  ticker-0404 about 04:05 to 04:10: late remainder of the
+  2026-11-02 midday pass, executed despite the earlier note
+  above leaving it for expiry, because the queue still
+  surfaced it as next; events group fully walked (Community,
+  Wanted Boss Code 64, Desert Storm Battlefield registration
+  ends 1d 13:50:43 with Battle Day 2026-11-6, Arms Race Base
+  Building 0/2 chests, timer 01:50:13), observe-only, base
+  power 149,940,141; store and alliance groups carried to
+  the chain successor. Full detail in
+  perception-scout/0410-queue-run.md.
+- Scout unit scout-scout-2026-11-02-001, partial,
+  ticker-0404 about 04:11 to 04:12: post-reset pass events
+  group fully walked (Arms Race Base Building 0/2 chests,
+  timer 01:48:39; Desert Storm Battlefield registration
+  ends 1d 13:48:17, Battle Day 2026-11-6; Wanted Boss
+  Code 64, Go timer 12:48:02; Community 500 Claimed),
+  observe-only; the Wanted Boss dot explains the Events
+  badge 1 that appeared after the 00:17 head read; store
+  and alliance groups carried to the chain successor.
+  Full detail in perception-scout/0412-queue-run.md.
+- Scout unit scout-midday-scout-mid-2026-11-02-002, partial,
+  ticker-0504 about 05:05 to 05:08: store group of the stale
+  2026-11-02 midday pass walked observe-only - 7-tab Mall
+  strip verified at both ends, Gold Brick Mall packs
+  ($4.99/$9.99/$499.9/$999.9, Extra 5% Bonus) and sold-out
+  Hot Sale Packs opened, check-in FREE GIFT banner observed
+  only, MALL label resolved as a static title after two
+  no-change taps; no Glittering Market or Crystal Shop tab,
+  no store red dot; alliance group carried to successor 003.
+  Full detail in perception-scout/0508-queue-run.md.
+- Scout unit scout-scout-2026-11-02-002, partial, ticker-0504
+  about 05:09 to 05:10: store group of the 2026-11-02
+  post-reset pass walked observe-only - same 7-tab strip,
+  same Gold Brick Mall and sold-out Hot Sale Packs, state
+  identical to the midday walk minutes earlier; alliance
+  group carried to successor 003. Full detail in
+  perception-scout/0510-queue-run.md.
+- Donations unit donations-2026-11-03-1241, partial,
+  ticker-0504 about 05:11 to 05:21: re-read after the 0441
+  00:19:35 timer - Donation Count still 1/30 live, so 0441
+  tap 6 did not land; plain coin tap greyed 00:07:24
+  without landing (third such instance), 3-second hold
+  did nothing, count still 1/30 at close; day not done,
+  unverified, tracker untouched, re-read unit
+  donations-2026-11-03-1321 queued, Issue #174 commented.
+  Full detail in alliance-donations/0521-queue-run.md.
+## 06:04 to about 06:24 — Queue ticker pass, arms-race and donations units
+- Ticker pass ticker-0604. Sync reaped nothing and produced
+- Arms-race unit arms-race-2026-11-03-0603, partial, first
+  unit of the new Drone Boost phase: score 0, thresholds
+  1,500 / 10,000 / 30,000, time left 03:53:58, cumulative
+  chest 0/2, ranking row 9,300 is the lagging previous-phase
+  row. Stamina path measured live: a Lv.1 Doom Elite costs
+  20 stamina (rally panel: 25.17M vs 1.09M, Easy Win, stamina
+  balance 120), so tier 1 needs 1 attack, tier 2 needs 5,
+  tier 3 needs 15 and is unreachable on the 120 balance
+  alone. Ranking chest would not open after two taps (R2
+  retired); the game was left on the world map and the
+  next unit returned it to base via the red X at
+  norm 855,685. Nothing claimed, tracker untouched.
+- Donations unit donations-2026-11-03-0603, partial:
+  Rallied Attack panel read live (7/10, Tech EXP 11.4K/4.5M
+  at entry, Donation Count 3/30, coin Donate green at 800).
+  Following the 0521 prescription (fresh panel re-entry
+  plus 60s idle before a single tap), two coin donations
+  landed: 3/30 to 2/30, then 2/30 to 1/30, both verified
+  by screenshot. A third tap after a second 60s idle
+  greyed the button with a 00:02:28 timer and, after the
+  timer was waited out, the count still read 1/30 live:
+  the fourth greyed-timer tap that leaves the pre-tap
+  count standing. Day not done, tracker untouched,
+  Issue #174 commented with this evidence, standing
+  re-read unit donations-2026-11-03-1321 already in inbox
+  (no duplicate enqueued). Nothing else claimed or bought.
+- Push deferred, as in the 0404 and 0504 passes:
+  records/2026-11-03 PR 207 is integrator-owned and
+  conflicted; the integrator re-checks it on a later pass.
+- Ticker pass ticker-0634. Sync reaped nothing and produced nothing new (15 due regulars already queued). No zombie chain seeded: the Zombie Invasion event ended 2026-10-30, chain closed at unit 066, and no zombie unit sits in inbox or claimed.
+- Own PRs checked first: open records PRs 207 (2026-11-03), 216 (2026-11-02) and 187 (2026-11-01) name Owner lastwar-pr-integrator, not this job; PR 207's conflict comment is integrator-owned and left for its batch. No ticker-owned PR needed action.
+- Radar unit radar-2026-11-03-0603, partial, stack day (duel day 2): Lv.13, points 139, stored 13/40, stamina 120, restore 12 in 02:50:41; bottom bar presented Claim All (11 pending) only, no Quick Execute, so nothing was executed or claimed and no pin was tapped; 3 skull pins inventoried. Blocker named: the 2026-10-31 Claim All-only bar trap, repeated.
+- Harvest unit harvest-2026-11-03-0603, partial: central, left-edge neighbouring cluster and top edge swept bubble-free, 0 bubbles collected, HUD unchanged (food 230.7M, 565.3M, coins 5.9M, 19.0M, 505.1K); armed truck loot not separately verified, right edge unswept.
+- Survivors unit survivors-2026-11-03-0603, partial: gate line not found or verified in central and upper views; grounding points rejected as unreliable, nothing tapped, no intake, Quick Dispatch not run. Computer session dropped once between units and was restarted with no state lost.
+- Training unit training-2026-11-03-0603, partial: tent search across central, upper and right-side framings found no barracks tent, 0 batches queued, Drill Ground not read; known Issue 150 blocker, no duplicate issue filed.
+- Gifts unit gifts-2026-11-03-0630, done: Regular 250 and Premium 6 claimed, gift progress 185,745,450 to 185,748,340, Level 28; entry corrections recorded (Alliance button centre 936,698; Gifts button centre 314,599; Premium Claim All centre 744,932, distinct from Regular's 501,926). Tracker marked done for gifts only; untouched for the four partial units.
+- Push deferred, as in the 0404, 0504 and 0604 passes: records/2026-11-03 PR 207 is integrator-owned and conflicted; the integrator re-checks it on a later pass.
+## 07:04 to about 07:20 — Queue ticker pass, help, mail and star-ceremony units
+- Ticker pass ticker-0704. Sync reaped nothing and produced
+  the 19:00 reset on 2026-10-30, chain zombie-2026-10-28 closed
+  at unit 066, and no zombie unit sits in inbox or claimed.
+- Own PRs checked first: open records PRs 224 (2026-11-02),
+  207 (2026-11-03) and 187 (2026-11-01) all name Owner
+  lastwar-pr-integrator, not this job; PR 207's conflict
+  comment (action log and state file vs main) is
+  integrator-owned and left for its batch. No PR owned by
+  this job needed action.
+- Help unit help-2026-11-03-0630, done: base-screen help
+  bubble pressed at its grounded centre (825,696); the game
+  answered "Allies are very grateful for your assistance"
+  and the bubble cleared. Help page verified live: points
+  1,240/1,000, only this account's own Bears Lair rows with
+  "Time reduced" badges, no ally requests pending; a Help
+  All tap there left the header unchanged. Entry
+  corrections: Help button grounded centre (686,532), not
+  the eyeballed (657,455) above it. Tracker marked done.
+- Mail unit mail-2026-11-03-0630, done: all six claimable
+  categories swept with Claim All, each answering "No
+  rewards available" - Event (train notices), System
+  (update notice, President mails), Alliance
+  (announcements, donation rankings, Zombie War report),
+  Season (Ice Breaking reports), Regular (Victory battle
+  reports) and Battle Report (Victory in Attack vs
+  RebelNova, Lv.20 Zombie Raider, Lv.19 to Lv.16 Zombie
+  Horde). In-app Purchases not swept per metadata
+  (receipts only). Nothing claimed, nothing deleted.
+  Tracker marked done.
+- Star-ceremony unit star-ceremony-2026-11-03-0630, done:
+  no Star Ceremony trophy on the base screen, nothing to
+  play or claim (a grounding hit below the VS medallion
+  was rejected on sight as the Season II badge). Duel
+  panel read live: Base Expansion day, Apex 452,542,821
+  (43%) vs Kmf Oden-en 608,585,563 (57%). Ranking Daily
+  Rank, Tues. tab: Bears Lair rank 162 with 1,714,950
+  points, gap 1,885,050 to the 3,600,000 target. Entry
+  correction: duel panel back arrow grounded centre
+  (147,949). Tracker marked done. Computer session
+  dropped once between units and was restarted with no
+  state lost.
+- Pass stopped starting new units at the device token
+  lease end (07:20:51); the remaining queue stays for the
+  next tick.
+- Push deferred, as in the 0404, 0504, 0604 and 0634
+  passes: records/2026-11-03 PR 207 is integrator-owned
+  and conflicted; the integrator re-checks it on a later
+  pass.
+## 07:34 to about 07:53 — Queue ticker pass, train unit
+- Ticker pass ticker-0734. Sync reaped nothing and produced
+- Own PRs checked first: open records PRs 224 (2026-11-02),
+  207 (2026-11-03) and 187 (2026-11-01) all name Owner
+  lastwar-pr-integrator, not this job; PR 207's conflict
+  comment is integrator-owned and left for its batch. No PR
+  owned by this job needed action.
+- Train unit train-2026-11-03-0630, partial: no "Boarding
+  closes in" banner on any view; Accessibility tree carries
+  no icon labels for this game, so it cannot ground the
+  train entry; an Alliance-icon tap opened MY PROFILE
+  instead of the Alliance panel; ground taps opened other
+  players' profile cards (PrincessEsra, Amarky257), nothing
+  inside them tapped, card closed by a drag; final view
+  shows alliance territory with no station, train, plus
+  bubble or countdown. No boarding, no Trade Contracts
+  spent, no train summoned. Third consecutive train partial
+  with the same entry-point blocker (0035, 0315, this unit):
+  blocker written into the alliance-train activity metadata
+  (tier 2, left uncommitted for the pull request flow) and
+  commented on GitHub Issue 205, no duplicate issue filed.
+  Tracker untouched.
+- Pass stopped starting new units at the device token
+  lease end; the remaining queue stays for the next tick.
+- Push deferred, as in the 0404, 0504, 0604, 0634 and 0704
+  passes: records/2026-11-03 PR 207 is integrator-owned
+  and conflicted; the integrator re-checks it on a later
+  pass.
+- Correction to the train entry above: the R2 blocker was NOT
+  edited directly into the alliance-train activity metadata
+  from this pass, because the local working copy is stale
+  (version 1.5.0 against main 1.18.0). The blocker is
+  carried by the Issue 205 comment above for the organizer
+  fold, which is the live metadata channel.
+## 08:04 to about 08:08 — Queue ticker pass, events unit
+- Ticker pass ticker-0804. Sync reaped nothing and produced
+- Own PRs checked first: open records PRs 224 (2026-11-02),
+  207 (2026-11-03) and 187 (2026-11-01) all name Owner
+  lastwar-pr-integrator, not this job; PR 207's conflict
+  comment is integrator-owned and left for its batch. No PR
+  owned by this job needed action.
+- Events unit events-2026-11-03-0657, done: hub swept tab
+  by tab. Arms Race Drone Boost Lv.29-30 score 9,300 rank
+  2110, tier 1 already claimed, tiers 2 and 3 locked,
+  cumulative chest 0 of 2. Desert Storm Battlefield already
+  registered 19 of 20, Battle Day 2026-11-6. Wanted Boss
+  Code 64 not yet out (Go countdown 08:53:34), Go not tapped,
+  Rewards panel read-only with no claim button. Community
+  500 Diamonds reads Claimed. 0 rewards claimed, no purchase
+  tapped. Tracker marked done for events.
+- Passes unit passes-2026-11-03-0657, done: shop sweep, 0
+  new claims. Free Supply Claimed, Coin Weekly Pass Already
+  claimed today (Renew 4.99 not tapped), Legendary Take All
+  19.99 not tapped, S2 Drone Components pass unowned (Get
+  Now 4.99 not tapped), Monthly Pass Daily Pickup Claimed
+  with Days Left 18 and Rewards Left 18 (Extension 24.99
+  not tapped). Tracker marked done for passes.
+- Trucks unit trucks-2026-11-03-0657, partial: trade entry
+  SUCCEEDED by a new route - left-column icon at norm 53,555
+  opened Intercity Trade directly (the 53,657 truck icon opens
+  Secret Command Post, not trade; Issue 218 commented, not
+  closed). Live counters Trade 4 of 5, Plunder 4 of 4. One SR
+  truck settled (iron 2.5M, food 2.5M, coin 1.6M, Plunder
+  Failed). Freed slot rolled R, free refresh to SR, then 3
+  contract refreshes (contracts 165 to 162) to SR, R, SSR;
+  the SSR roll (3.0M, 3.0M, 1.9M, arrives 03:52:51) was left
+  held and NOT dispatched because this is a UR duel day.
+  Mega Dispatch lists no dispatchable truck. Tracker untouched.
+- Pass closed at 08:19 local, within the 25-minute pass budget
+  after 3 units. Push deferred, as in the 0404, 0504, 0604,
+  0634, 0704 and 0734 passes: records/2026-11-03 PR 207 is
+  integrator-owned and conflicted; the integrator re-checks
+  it on a later pass. Commits stay on the local staging
+  branch with tier-1 paths only.
+- Secrets unit secrets-2026-11-03-0657, done, ticker-0834
+  about 08:35 to 08:37: Secret Command Post checked -
+  Assist Allies 5/5 capped (Ally tab shows Dw1968 UR
+  Assist buttons but the cap is reached, so none tapped),
+  no finished task left unclaimed (three SSR cards
+  PERFECT, UR Disrupt electric grid with no Claim
+  button), Secret Task Report confirms today assists
+  (Buckeye16 rows 11-3 00:08 to 00:10), Reward Recovery
+  2026-10-24 record already CLAIMED, Mega buttons
+  greyed. Entry by the unsnapped exact-centre pickup
+  tap [55,632] on the first try. Full detail in
+  secret-missions/0837-queue-run.md.
+- Treasures unit treasures-2026-11-03-0657, done,
+  checked only, ticker-0834 about 08:38: fragment
+  counts M1 x12, M2 x12, M3 x0, M4 x7, M5 x2, M6 x5,
+  M7 x11, identical to the 03:49 unit; M3 x0 binds,
+  Dig buttons greyed, chest progress 4/15, no
+  exchange executed. Full detail in
+  hidden-treasures/0838-queue-run.md.
+- Scout unit scout-midday-2026-11-03-0700, partial,
+  ticker-0834 about 08:39: midday pass chain head,
+  base and Events groups walked observe-only (power
+  149,940,141; Arms Race Drone Boost 01:20:50 left,
+  tiers 1,500/10,000/30,000; Wanted Boss Code 64, Go
+  timer 08:20:35); remainder carried to successor
+  scout-midday-scout-mid-2026-11-03-001. Full detail
+  in perception-scout/0839-queue-run.md and the day
+  observation file.
+- Pass closed at 08:40 local, within the 25-minute
+  pass budget after 3 units. Push deferred, as in the
+  0404, 0504, 0604, 0634, 0704, 0734 and 0804 passes:
+  records/2026-11-03 PR 207 is integrator-owned and
+  conflicted; the integrator re-checks it on a later
+  pass. Commits stay on the local staging branch
+  with tier-1 paths only. Next pick left unexecuted:
+  scout-scout-2026-11-02-003, a stale unit of the
+  closed 2026-11-02 post-reset pass, left in inbox
+  for the planner or retro to expire.
+- Scout unit scout-scout-2026-11-02-003, partial,
+  ticker-0904 about 09:05 to 09:12: post-reset pass
+  alliance group walked observe-only (panel power
+  13,086,499,653, 94/100; Help 1,240/1,000 with four
+  30/30 requests; Wars both tabs empty; Gifts Regular
+  Claim All badge 238; Premium visible rows all
+  Claimed; Techs War levels unchanged, Donation
+  Today 6700); red dots seen 5, explained 3,
+  unexplained 2 (Wars dot on Issue #212, Premium tab
+  dot below-fold unverified); remainder carried to
+  successor scout-scout-2026-11-02-004. Full detail
+  in perception-scout/0910-queue-run.md and the
+  2026-11-02 observation file.
+- Donations unit donations-2026-11-03-1321, partial,
+  ticker-0904 about 09:11 to 09:21: the 0521 re-read
+  unit; 8 coin donations landed on Rallied Attack,
+  9/30 to 1/30 live, 6,400 coin spent; the 1/30 tap
+  failed for the 5th consecutive instance even with
+  fresh panel re-entry plus 60s idle (00:04:00 timer,
+  still 1/30 after expiry), and a 10s hold also did
+  nothing; count replenished 1 to 9 between 06:21
+  and 09:13, so it is a regenerating allowance; day
+  not done, tracker untouched, Issue #174 commented,
+  re-read unit donations-2026-11-03-1721 enqueued
+  (try Rallied Defense panel next). Full detail in
+  alliance-donations/0920-queue-run.md.
+- Pass closed about 09:23 local, within the
+  25-minute pass budget after 2 units. No zombie
+  seeding (event closed 2026-10-30, chain closed
+  unit 066, 0 pending). Own PRs checked, none owned
+  by this job (PRs 224, 207, 187 integrator-owned;
+  PR 207 still conflicted, integrator re-checks on
+  a later pass). Push deferred, as in the 0404
+  through 0834 passes: commits stay on the local
+  staging branch with tier-1 paths only.
+- Scout unit scout-midday-scout-mid-2026-10-31-005,
+  partial, ticker-0934 about 09:36 to 09:41: alliance
+  remainder of the stale 2026-10-31 midday chain, walked
+  observe-only (Techs Rallied Attack 7/10, Donation Count
+  1/30, panel power 13,085,838,780, base HUD unchanged,
+  no boarding banner, no train icon; station panel and
+  loot box still unlocated since 0446; treasure-map
+  Golden Mobile Squad ticker sighting). Full detail in
+  perception-scout/0940-queue-run.md and the day
+  observation file. Successor
+  scout-midday-scout-mid-2026-10-31-006 enqueued.
+- Donations unit donations-2026-11-03-1003, partial, ticker-1004 about 10:22 to 10:30: count regenerated 1/30 (0920 close) to 4/30 by 10:26; three Rallied Attack coin donations landed (4/30 to 1/30, Tech EXP 12.7K to 13.0K, 2,400 coin spent, reward still 50/50, nothing claimed). At 1/30 the prescribed new method was tried: Rallied Defense panel (7/10, EXP 500/4.5M), one coin tap - button greyed with a ~15-minute timer (00:14:37 at screenshot), donation did not land. Sixth consecutive 1/30 failure, first via a different node, so the blocker is not node-specific; commented on Issue #174. Day not done, tracker untouched, panel left open on Defense with timer running. Next method: Strength Ranking Donation tab re-read. Full detail in alliance-donations/1030-queue-run.md.
+- Arms Race unit arms-race-2026-11-03-1003, done, ticker-1004 about 10:13 to 10:21: Hero Advancement phase (Lv.29-30, to about 14:00), score 0 to 41,500 by one EXP-only level-up of Adam (Lv.124 to 125, power 1,748,826 to 1,757,586, bar 283.2M/83.0M); tier 3 (12,000) cleared; all three point chests claimed at once (badge 6, SR chests 32+32, badges 1.6K, coin chest 32, 5m speedups 68) and the cumulative chest claimed too (gold 1, purple 2, red gem 50 x1; counter 6/8 after). Hero List back arrow stalled on five background taps; window closed and app relaunched cleanly to base, no login or takeover dialog. Ranking-row chest preview-only, untapped. Full detail in arms-race/1021-queue-run.md.
+- Radar unit radar-2026-11-03-1003, partial, ticker-1004 about 10:04 to 10:11: stack day (duel day 2): Lv.13, points 139, stored 25/40 (up from 13/40, one 12-task restore landed), stamina 120, restore 12 in 05:21:27, full restore line 21:31:43; bottom bar presented Claim All (11 pending) only, no Quick Execute, so nothing was executed or claimed and no pin was tapped; 3 skull pins inventoried. Entry navigated past the Commendation Notice popup left open by ticker-0934 (View tapped to the Exercise panel, then backed out untouched to base; dish grounded fresh at norm 52,711). Blocker named: the 2026-10-31 Claim All-only bar trap, repeated for a third consecutive radar unit. Full detail in radar-tasks/1010-queue-run.md.
+- Scout unit scout-midday-scout-mid-2026-11-02-004,
+  partial, ticker-0934 about 09:42 to 09:49: alliance
+  remainder of the stale 2026-11-02 midday chain, walked
+  observe-only (Wars live Krazy Sully Lv.40 Doom Elite
+  rally seen departing within a minute, Individual Intel
+  empty; Strength Power top ItStartsWithaDream
+  270,322,299, own rank 31 Bears Lair 149,940,141;
+  Members online 15 with officer row noted; City Rare
+  Soil 5.88K/h, 6/6 captured; Events Alliance Exercise
+  Preparing 05:12:34, Offline Participation checked;
+  Commendation Notice Elite Exercise Lv.11-12 popup
+  left open, View untapped). Mail category lists, City
+  Coal tab and Ranking Kills/Donation tabs carried.
+  Full detail in perception-scout/0949-queue-run.md
+  and the day observation file. Successor
+  scout-midday-scout-mid-2026-11-02-005 enqueued.
+  Issue #212 commented with the rally evidence.
+- Pass closed about 09:50 local, within the 25-minute
+  pass budget after 2 units. No zombie seeding (event
+  closed 2026-10-30, chain closed unit 066, 0 pending).
+  Own PRs checked, none owned by this job (PRs 224,
+  207, 187 integrator-owned; PR 207 still conflicted,
+  integrator re-checks on a later pass). Push deferred,
+  as in the 0404 through 0904 passes: commits stay on
+  the local staging branch with tier-1 paths only.
+- Pass closed about 10:31 local, within the 25-minute pass budget after 3 units. No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 224, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later pass). Push deferred, as in the 0404 through 0934 passes: commits stay on the local staging branch with tier-1 paths only.
+- Harvest unit harvest-2026-11-03-1003, partial, ticker-1034 about 10:36 to 10:44: central and right/bottom base views swept, zero green resource bubbles found, nothing collected, armed truck loot bubble absent on visual check, HUD unchanged (food 240.3M, coins 12.1M). Game entered on the Alliance Tech panel left open by ticker-1004 (Rallied Defense 7/10, coin Donate greyed, timer 00:02:53); panel closed without donating, Alliance panel back arrow to base. Full detail in resource-collection/1044-queue-run.md.
+- Survivors unit survivors-2026-11-03-1003, partial, ticker-1034 about 10:45 to 10:50: gate line not verified in central or upper views, visual grounding timed out twice with no points, no survivor tapped, nothing recruited. Computer session cc-337 dropped between units, restarted as cc-339 with no state lost. Full detail in survivor-intake/1050-queue-run.md.
+- Training unit training-2026-11-03-1003, partial, ticker-1034 about 10:50 to 10:51: no barracks tent identified in upper or central views, no tent tapped, no batch queued, known Issue 150 blocker (Drill Ground Full neither confirmed nor cleared). Reverse centre drag did not pan, road drag did. Full detail in troop-training/1051-queue-run.md.
+- Mail unit mail-2026-11-03-1030, partial, ticker-1034 about 10:52 to 10:55: Mail panel never opened - two taps at the measured Mail position opened the Alliance panel instead, a third adjusted tap did nothing, so no category was swept and nothing was claimed or deleted. Game left on the base view. Full detail in mail-rewards/1055-queue-run.md.
+- Pass closed about 10:56 local, within the 25-minute pass budget after 4 units (3 partial sweeps plus the mail entry failure; no done units). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 224, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later pass). Push deferred, as in the 0404 through 1004 passes: commits stay on the local staging branch with tier-1 paths only.
+- Gifts unit gifts-2026-11-03-1030, done, ticker-1104 about 11:06 to 11:13: Regular Claim All 289 (badge matched, progress 186,529,660 to 186,532,550, rows Claimed) and Premium Claim All 2 (badge matched, progress to 186,532,610, rows Claimed); Gift Level 28 unchanged, total progress +2,950. Hide-your-name checkbox read unchecked on the Premium tab and left untouched, answering the 0650 unit's unverified toggle question for this unit. Exited via Gifts back arrow and panel back arrow to base. Full detail in alliance-gifts/1113-queue-run.md.
+- Help unit help-2026-11-03-1030, done, ticker-1104 about 11:15 to 11:18: base help bubble grounded (823,700) tapped once, game answered "Allies are very grateful for your assistance" and the bubble cleared; Help page verified live at 1,240/1,000 with only own Bears Lair rows (Time reduced badges) and Help All answering "No help requests yet". Computer session cc-342 dropped between units, restarted as cc-344 with no state lost. Full detail in alliance-help/1121-queue-run.md.
+- Train unit train-2026-11-03-1030, partial, ticker-1104 about 11:18 to 11:19: no "Boarding closes in" banner on the base view and no train icon in the left column, same blocker as the 0035, 0315 and 0752 units; no boarding action, station not viewed so a preparing train is neither confirmed nor ruled out beyond the absent banner. Tracker untouched. Full detail in alliance-train/1124-queue-run.md.
+- Pass closed about 11:22 local, within the 25-minute pass budget after 3 units (2 done, 1 partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PR 207 records/2026-11-03 integrator-owned and conflicted, PR 187 records/2026-11-01 integrator-owned; PR 224 merged at the 1100 batch). Push deferred, as in the 0404 through 1034 passes: commits stay on the local staging branch with tier-1 paths only. A worktree push was examined and rejected: the live records branch tip (pr-integration 1115) carries none of today's ticker records, so pushing this pass alone from it would fork the day record; PR 207 stays integrator-owned.
+- Pass closed about 11:56 local, within the 25-minute pass budget after 2 units (both done). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PR 207 records/2026-11-03 integrator-owned and conflicted, PR 187 records/2026-11-01 integrator-owned; PR 224 merged at the 1100 batch). Push deferred, as in the 0404 through 1104 passes: commits stay on the local staging branch with tier-1 paths only. Next unit trucks-2026-11-03-1057 left in inbox for the next tick: its window still reads duel day 2 UR trucks while the live posture is duel day 3 Age of Science, and its 8-minute estimate did not fit the remaining pass budget.
+- Trucks unit trucks-2026-11-03-1057, done, ticker-1204 about 12:06 to 12:11: trade screen entered on one tap at the badged vehicle-front icon (55,589); Plunder Count already 4/4, Trade Count 4/5 at entry. Live duel posture is day 3 Age of Science, so the unit window's stale "duel day 2 UR" text was not followed; under the non-UR rule the first slot rolled UR as rolled (iron 3.8M, food 3.8M, coin 2.4M, 03:18:02, Squad 1) and was dispatched with no refresh and no contract spent. Trade Count now 5/5, both quotas full. Recover showed no red dot. Full detail in truck-plunder/1211-queue-run.md.
+- Events unit events-2026-11-03-1057, done, ticker-1204 about 12:12 to 12:17: four tabs walked. Arms Race Hero Advancement: cumulative chest 6/8, 2,000 chest tap opened only a reward preview (no Claim button), no chest claimed. Desert Battlefield: registered 19/20, battle day 2026-11-6, nothing to claim. Wanted Boss rotated to Code 64 (Missile Vehicle +50 percent), Go countdown 04:44 at entry, both Rewards tabs are payout tables with no Claim button; the tab's red dot persists with no claimable item and is re-checked next unit. Community: 500 diamonds already Claimed. No purchase tapped. Full detail in event-claims/1217-queue-run.md.
+- Secrets unit secrets-2026-11-03-1057, partial, ticker-1204 about 12:18 to 12:23: post never entered. Fresh column measurement put the pickup at 68,683, but an earlier mis-mapped tap at 60,590 opened the temperature panel (closed untouched, no furnace control touched), and after the re-measure the base view had panned so the pickup tap missed and a further tap opened the Gold Mine Lv.29 panel (closed untouched, Quick Dispatch not tapped). Blocker for next unit: re-centre the base view and re-measure in the same screenshot before tapping. Tracker untouched. Full detail in secret-missions/1223-queue-run.md.
+- Pass closed about 12:23 local, within the 25-minute pass budget after 3 units (2 done, 1 partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PR 207 records/2026-11-03 integrator-owned and conflicted, PR 229 records/2026-11-02 integrator-owned, PR 187 records/2026-11-01 integrator-owned). Push deferred, as in the 0404 through 1134 passes: commits stay on the local staging branch with tier-1 paths only.
+- Scout unit scout-midday-scout-mid-2026-11-03-001, partial, ticker-1304 about 13:05 to 13:09: midday chain head, base group walked observe-only (power 149,948,901, HUD food 240.3M iron 575.0M coin 12.1M, Events badge 1, radar badge 11, 99+ badge, target badge 1, all explained, 0 unexplained); game opened on the Secret Command Post panel (Assist Allies 5/5, Plunder Others 0/3, same 4 Lv.5 tasks, 3 PERFECT badges), exited via grounded back arrow [158, 946] after three misses; events, store and alliance groups carried to successor scout-midday-scout-mid-2026-11-03-002. Full detail in perception-scout/1309-queue-run.md.
+- Scout unit scout-scout-2026-11-02-004, partial, ticker-1304 about 13:11 to 13:14: stale post-reset chain remainder walked observe-only; Alliance panel power 13,091,557,850, dots Help and Gifts only; Wars Rally Intel reads "No Alliance Rally currently", closing the 0949 dot-clearing re-read (commented on Issue #212, not closed); Techs Development tab first read in this chain (Auto Rally Max Level, Quick Construction 8/10, Great Helper Max Level, Donation Today 8000); Alliance Store read-only (Honor 199.2K, same SOLD state, refresh 5d 04:45:22). Remainder carried to successor scout-scout-2026-11-02-005. Full detail in perception-scout/1314-queue-run.md.
+- Donations unit donations-2026-11-03-1721, partial, ticker-1304 about 13:16 to 13:22: Strength Ranking Donation tab gives points only (own row 15 Bears Lair 8000), not the remaining count, retiring the 1004 carried method; Rallied Attack panel count read 8/30 live, 7 coin donations landed 8/30 to 1/30 (5,600 coin, Tech EXP 13.0K to 14.0K, Honor 200.0K), one no-change tap pivoted via fresh grounded button centre [660, 765]; no test tap at 1/30 (six prior failures, both nodes), day not done, tracker untouched. Full detail in alliance-donations/1322-queue-run.md.
+- Pass closed about 13:22 local, within the 25-minute pass budget after 3 units (all partial, none done). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 229, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later pass). Push deferred, as in the 0404 through 1234 passes: commits stay on the local staging branch with this pass's files only.
+- Scout unit scout-midday-scout-mid-2026-10-31-006, partial, ticker-1334 about 13:36 to 13:44: stale 10-31 midday chain remainder walked observe-only; Techs Rallied Attack 7/10 EXP 14.0K/4.5M Donation Today 9000, alliance power 13,091,657,850, panel dots Wars/Help/Gifts/Techs. LOOT box LOCATED: world-map left-edge gift icon (badge 3) at [311, 237] opens the LOOT panel with three Lv.60 Doom Elite Member rows (16.0K/16.0K/11.0K, 28.5K/28.5K/19.4K, 16.0K/16.0K/11.0K), Claim All observed only, never tapped. Station panel still carried: no train icon, no boarding banner, so no train preparing and the platform is a preparation-only surface. Full detail in perception-scout/1345-queue-run.md and the day observation file. Successor scout-midday-scout-mid-2026-10-31-007 enqueued for the station panel only.
+- Pass closed about 13:47 local, within the 25-minute pass budget after 1 unit (partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 229, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later batch). Push deferred, as in the 0404 through 1304 passes: commits stay on the local staging branch with this pass's files only. Next unit scout-midday-scout-mid-2026-11-02-005 left in inbox for the next tick (token lease to 21:50Z left under 10 minutes when it was picked).
+- Arms Race unit arms-race-2026-11-03-1403, done, ticker-1404 about 14:05 to 14:12: Base Building phase (Lv.29-30, 03:52:43 left at entry), score read live 50,800, segment rank 9, above the 30,000 top threshold, so no scoring work done; all three point chests claimed by tap (tier contents: Skill Medal 1600, Arms Race Badge 6, Coin/Food/Iron Chest SR 32 each, 5m Speed-up 68 in total). Completion sweep: cumulative counter chest 6/8 not yet claimable (one milestone preview: 50 Diamonds 1, Hero Recruitment Ticket 1, SSR Hero Universal Shard 2); ranking-row chest preview only (Iron/Food/Coin Chest SR 3 each), claims after the phase ends on the next run. Events hub showed no Zombie Invasion tab, so no zombie chain seeded. Full detail in arms-race/1412-queue-run.md.
+- Donations unit donations-2026-11-03-1403, partial, ticker-1404 about 14:13 to 14:21: base-column taps at the recorded Alliance centre (903,787) and fresh centre (899,794) both opened Mail; pivot tap at (899,716) opened the Alliance panel ([AP3x] The Apex, 94/100). Alliance Techs tile unresponsive to single taps, double-click and 1-second long-press at its fresh centre (720,638); no donation panel reached, no count read live, nothing donated, tracker untouched. Day still carries the 13:22 live read of 1/30 remaining, unconfirmed in this unit; the 17:00 checkpoint must re-read it live. Game left on the Alliance panel. Full detail in alliance-donations/1421-queue-run.md.
+- Pass closed about 14:22 local, within the 25-minute pass budget after 2 units (1 done, 1 partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 229, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later pass). Push deferred, as in the 0404 through 1334 passes: commits stay on the local staging branch with tier-1 paths only.
+- Radar unit radar-2026-11-03-1403, partial, ticker-1434 about 14:35 to 14:50: release posture per live duel.py (day 3) over the stale "day 2 stack" unit window. 27 rewards claimed (1 finished-task pin + Claim All 10 + 8 + 8), 5 tasks executed via Quick Execute, radar points 139 to 166, stored 25/40 to 0/40, stamina 120 to 70; popup totals coin 5.127M, EXP 45.9M, iron 10.1M, food 10.69M, drone items 10.4K, radar items 270, blue triangles 633. Bottom-bar buttons respond at norm y 925, not at visual centre ~910 (five no-op taps measured). Live TIPS dialog on Claim All states completing radar tasks today will NOT grant Alliance Duel points, contradicting duel.py - claimed anyway (resources certain, expiry risk on holding), contradiction filed as Issue #235, not closed. Pins left unattempted and a 4-task Quick Execute offer carried to the next unit, so partial, never done. Tracker untouched. Full detail in radar-tasks/1450-queue-run.md.
+- Pass closed about 14:50 local, within the 25-minute pass budget after 1 unit (partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 229, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later pass). Push deferred, as in the 0404 through 1404 passes: commits stay on the local staging branch with tier-1 paths only.
+- Harvest unit harvest-2026-11-03-1403, partial, ticker-1504 about 15:05 to 15:24: base bubbles tapped but no verified collection (HUD unchanged at displayed precision: food 251.1M, iron 592.7M, coin 17.4M, power 149,948,901); Gear Factory Lv.20 to 21 and Iron Mine Lv.27 panels opened by mistake and closed without Upgrade, Finish Now or Quick Dispatch; full edge-to-edge sweep not completed, tracker untouched, next unit must re-measure bubble centres fresh (R2 pivot). Full detail in resource-collection/1524-queue-run.md.
+- Pass closed about 15:24 local, within the 25-minute pass budget after 1 unit (partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later pass). Push deferred, as in the 0404 through 1434 passes: commits stay on the local staging branch with tier-1 paths only.
+- Survivors unit survivors-2026-11-03-1403, partial, ticker-1534 about 15:36 to 15:43: gate tap at freshly grounded figure point (103,665) changed the gate bubble region but no survivor card, dialog, name or Recruit button was read, so no recruit is verified; second grounding returned an off-gate point (235,615) and was rejected without a tap, per the 02:47 stale-tap misfire lesson; Quick Dispatch not run; tracker untouched. Full detail in survivor-intake/1543-queue-run.md.
+- Training unit training-2026-11-03-1403, partial, ticker-1534 about 15:44 to 15:52: tent blocker breakthrough (Issue 150) - fresh grounding found the tents, tap at (630,592) selected Barracks Lv.27, pistol re-grounded at (612,608), TRAIN UNITS showed Lv.9 at cap 726 for 4.1M food and 4.1M iron over 1d 10:19:35; Train tapped, Finish Now and the upgrade shortcut untouched, no Drill Ground block shown; queue verified by HUD food 251.1M to 247.0M and iron 592.7M to 588.5M. Other 3 barracks not reached, tracker untouched. Full detail in troop-training/1552-queue-run.md.
+- Pass closed about 15:52 local, within the 25-minute pass budget after 2 units (both partial, 1 training batch verified queued). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later pass). Push deferred, as in the 0404 through 1504 passes: commits stay on the local staging branch with tier-1 paths only.
+- Gifts unit gifts-2026-11-03-1430, done, ticker-1604 about 16:05 to 16:19: Regular Claim All 61 + 1 + 4 = 66 and Premium Claim All 20, both tabs cleared on the closing sweep (new gifts kept arriving during the unit and were claimed in-unit); Gift Level 28 unchanged, progress live reads 187,230,470 to 187,247,840. Progress deltas per step do not equal the per-gift labels (61 gave +610, 1 gave +110, 20 Premium gave +6,400, final 4 gave +10,250) - all figures are live reads, counts are summary-dialog counts, and the mismatch is left as an open question in the record, not filed as an Issue. Entry corrections: the (903,657) tap opens Alliance Wars, not the Alliance panel; correct Alliance centre is (934,705), Gifts centre (315,608). Exit lesson: the Alliance panel back arrow took two no-change taps, and a keyboard Escape pivot quit the game app (known app-kill, never use again); the app was relaunched to the base view with no login or takeover dialog, and all claims predate the exit attempt. Full detail in alliance-gifts/1619-queue-run.md.
+- Pass closed about 16:19 local, within the 25-minute pass budget after 1 unit (done). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 207, 236, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later batch). Push deferred, as in the 0404 through 1534 passes: commits stay on the local staging branch with this pass's files only.
+- Help unit help-2026-11-03-1430, done, ticker-1706 about 17:08 to 17:16: Help All pressed on the Alliance Help page (header 1,240/1,000); AMD Commander Lv.25 Iron Mine row cleared with the "Allies are very grateful for your assistance" toast; only own Bears Lair requests remain. First bubble tap at grounded (825,688) did not take (tile and red dot stayed, transient Achievements tooltip only); two mis-taps at ~80px too low opened Mail (letter read only, category menu) and were backed out of without delete or claim; all later taps used grounded coordinates (Alliance (928,688), Help (688,493), Help All (500,779)) and landed correctly. Full detail in alliance-help/1716-queue-run.md.
+- Mail unit mail-2026-11-03-1430, done, ticker-1734 about 17:35 to 17:40: entry fixed by fresh visual grounding after the 1055 misfires (Mail centre (929,783), Alliance back arrow (162,936), mail-list back arrow (63,952)); Alliance Exercise mail claimed via Claim All (popup: EXP 105.8M, coin 12.1M, food 19.0M, iron 19.0M, 120 5m speedups in five stacks, plus card items), HUD corroborated food 247.0M to 266.0M, iron 588.5M to 607.5M, coin 17.4M to 29.5M; Event train mails swept with no claimables, Battle Report, Season, System and Regular swept by a batched Claim All sequence with no popup (no per-category screenshot, noted as a limit in the record); Purchases skipped as receipts-only. Full detail in mail-rewards/1740-queue-run.md.
+- Train unit train-2026-11-03-1430, partial, ticker-1734 about 17:41 to 17:42: no boarding banner and no train icon on the base view, the fifth such check-only outcome today (after 0035, 0315, 0752, 1124); no boarding, no contracts spent, station not probed with ground taps, tracker untouched. Full detail in alliance-train/1742-queue-run.md.
+- Pass closed about 17:42 local, within the 25-minute pass budget after 2 units (1 done, 1 partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 236, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later batch). Push deferred, as in the 0404 through 1706 passes: commits stay on the local staging branch with this pass's files only.
+- Star-ceremony unit star-ceremony-2026-11-03-1430, done, ticker-1804 about 18:06 to 18:09: no Star Ceremony trophy icon beside the Alliance shield, so no ceremony played or claimed. Duel panel read live: theme Age of Science, timer 23:52:02, [AP3x] 48 percent (44,587,500) vs [Kmf] 52 percent (47,700,000). Daily Rank Wed. tab: Bears Lair Unlisted, 0 points, so the duel day had already rolled over at about 18:00 local. Tues. tab read to capture the closed day: rank 177, 2,014,950 points, against the 3,600,000 target, gap 1,585,050, about 56.0 percent: a day MISS, up 300,000 from the 11:41 read. Full detail in alliance-duel/1809-queue-run.md.
+- Passes unit passes-2026-11-03-1457, done, ticker-1804 about 18:09 to 18:12: Hot Deals free RESEARCH SPEED-UP PACK claimed (Coin Chest UR times 5, 1h Research Speed-up times 25); Free Supply auto-claim fired on shop open (supply chest times 1, ruby times 10). Weekly Pass page states on screen "Weekly Pass rewards reset at 18:00:00"; Legendary Take All 19 dollars 99 not tapped; S2 Drone Components, S1 Drone Parts and Coin Weekly Pass cards all show only Get Now 4 dollars 99, the Coin pass having lapsed at about 18:03 after reading Remaining 06:11:49 at 11:51, none tapped. Super Monthly Pass Daily Gift claimable again after reading Claimed at 11:51: claimed gold tickets times 2, red diamonds times 100, stamina 50 times 2, iron 200, 5m speedups times 60; button then Claimed; 24 dollars 99 extension not tapped. 3 claims total, no paid button tapped. Full detail in shop-claims/1812-queue-run.md.
+- Pass closed about 18:13 local, within the 25-minute pass budget after 2 units (both done). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 236, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later batch). Knowledge gap from this pass filed as Issue #242 (18:00 duel-day and Weekly Pass resets vs the 19:00 stated in metadata). Push deferred, as in the 0404 through 1734 passes: commits stay on the local staging branch with this pass's files only.
+- Trucks unit trucks-2026-11-03-1457, partial, ticker-1834 about 18:34 to 18:46: entry by the badge-carrying vehicle-front icon at (54,568) straight to Your Truck; live counters moved Trade 0/5 to 3/5 and Plunder 0/4 to 2/4 on the new trade day (rolled about 18:00 local, per the 1804 pass and Issue #242; the unit window text "duel day 2 - UR trucks" is stale, live posture is duel day 3 Age of Science so the non-UR SR-or-above rule governed, no Mega dispatch). Dispatches: SSR as rolled (3.0M/3.0M/1.9M, Squad 3, 03:52:51); N free-refreshed to R then 1 contract to UR (3.8M/3.8M/2.4M, Squad 2, 04:17:13, contracts 162 to 161); N free-refreshed to R then 1 contract to SR (2.5M/2.5M/1.6M, Squad 4, 04:09:57, contracts 161 to 160). Plunders: SSR [RoSt] Lv.26 guard 6.7M, shard stack 10, yield iron 531.5K, food 531.5K, coin 337.0K, no shard drop; SSR [FRVP]The X Mansion Lv.28 guard 9.8M, shard stack 3, yield iron 570.2K, food 570.2K, coin 363.0K, no shard drop. Tap lessons: gold road trucks resisted body taps twice (R2 pivot to another truck); Quick Plunder true centre is (600,885), the (460,867) tap lands in the button gap; the second target needed a second tap at (467,245). Open for the next trucks unit: the gold road truck with a chest icon never settled (body tap no-change, chest icon untried); dispatch shortfall 2 with all four slots out, plunder shortfall 2. Full detail in truck-plunder/1846-queue-run.md.
+- Pass closed about 18:47 local, within the 25-minute pass budget after 1 unit (partial). No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 236, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later batch). Push deferred, as in the 0404 through 1804 passes: commits stay on the local staging branch with tier-1 paths only.
+- Radar unit radar-2026-11-03-1803, partial, ticker-1904 about 19:05 to 19:13: release posture per live duel.py (day 3, Age of Science) over the stale "day 2 stack" unit window. 10 tasks executed via Quick Execute (4 + 4 + 2), 17 rewards claimed via Claim All (8 + 7 + 2), radar points 166 to 183, stored 10/40 to 0/40, stamina 120 to 21, bottom bar left with no offer. Popup totals: radar items 170, EXP 26.8M, drone items 2.4K, blue triangles 900, iron 3.7804M, food 7.7804M, coin 3.8652M, plus an unresolved chest-like icon 25 from Claim All 1. No TIPS dialog on any of the three post-18:00-rollover Claim All taps, unlike the 1450 unit: new evidence for Issue #235, not a settlement, and no duel-points figure is claimed (no VS panel read). Entry corrections: the (55,560) grounding point opens Your Truck, not the radar, and was backed out of untouched; the radar opens at (57,715) in the proven cluster; bottom-bar buttons in this window respond at (500,952). 4 standing pins left unattempted (purple question-mark story pin, purple axe pins top right and centre, blue axe pin lower centre, no red dots in the closing frame), so partial, never done; under rule R7 the pins are the first action of the next radar unit. Tracker untouched. Full detail in radar-tasks/1913-queue-run.md.
+- Pass closed about 19:13 local, within the 25-minute pass budget after 1 unit (partial). Next unit arms-race-2026-11-03-1803 left in inbox for the next tick (token lease to 19:20 local left under 10 minutes when it was picked). No zombie seeding (chain closed at unit 066, zombie-invasion inbox 0 per stats, and the 1404 pass today found no Zombie tab in Events hub). Own PRs checked, none owned by this job (PRs 245, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later batch). Push deferred, as in the 0404 through 1834 passes: commits stay on the local staging branch with this pass's files only.
+- Arms Race unit arms-race-2026-11-03-1803, partial, ticker-1934 about 19:35 to 19:45: Drone Boost phase (Lv.29-30, 02:19:55 left at entry), score 10,000 of 30,000, segment rank 9, combined 2110. One tap on the tier 2 chest claimed tiers 1 and 2 together (Skill Medal 600, Arms Race Badge 3, Coin/Food/Iron Chest SR 12 each, 5m Speed-up 28); cumulative chest read 0/2, then 3/2 after the claims, claimed for gold ticket 1, pink puzzle 2, red gem 50, now 3/8. Free Claim 75 Stamina taken (toast verified, Remaining Today was 2/2); inventory stamina items read 10 Stamina 638 and 50 Stamina 633, none opened. Tier 3 gap 20,000 not closed: drone Upgrade button took two no-change taps at its measured centre (power 5,805,119, data 5.55M/42.00K, parts 301/400 unchanged), method stopped per R2; stamina sinks belong to other regulars under one-unit-one-type and radar stored tasks read 0/40. Ranking chest preview only (Iron/Food/Coin SR 3 each at rank 9), claimable after the 22:04 phase roll. Game was not running at entry and was relaunched from the App Store "last war:survival" result (Open button; installed name LastWar, com.lastwar.ios). No Zombie Invasion tab in the Events hub, no zombie seeding. Tracker untouched. Full detail in arms-race/1945-queue-run.md.
+- Pass closed about 19:47 local, within the 25-minute pass budget after 1 unit (partial). Next unit donations-2026-11-03-1803 left in inbox for the next tick. No zombie seeding (event closed 2026-10-30, chain closed unit 066, 0 pending). Own PRs checked, none owned by this job (PRs 245, 207, 187 integrator-owned; PR 207 still conflicted, integrator re-checks on a later batch). Push deferred, as in the 0404 through 1904 passes: commits stay on the local staging branch with tier-1 paths only.
+- Donations unit donations-2026-11-03-1803, partial, ticker-2004 about 20:06 to 20:14: 20 coin donations to Rallied Attack (7/10, +7 percent to +8 percent), Donation Count read live 21/30 at entry to 1/30 at close, Tech EXP 14.0K to 15.9K/4.5M, Honor 200.0K to 202.0K, 16,000 coin spent, coin button only, diamond button never tapped, Donation Reward 50/50 with no claim button presented. Entry corrections: Events back arrow lands at its centre (125,944), not (86,941); Alliance panel opens first tap at (899,716); the 1421 Techs-tile failure is explained (its (720,638) sits above the tile, whose top edge is about pixel y 615) and cleared by a first-tap open at the fresh tile centre (720,678). Burst evidence updated: the coin button stayed green through all 20 donations and still reads green at 1/30 with no timer, against the earlier about 7 to 9 grey-out pattern; no test tap was made at 1/30 per the six-unit proof. Partial, never done: the live close reads 1/30, not 0, so the tracker is untouched. Panel left open on Rallied Attack at 1/30 for the next donations unit. Full detail in alliance-donations/2014-queue-run.md.
+- Pass closed about 20:14 local, within the 25-minute pass budget after 1 unit (partial). Token lease to 20:21 local left under 10 minutes when the next unit would be picked, so no second unit was started, as in the 1934 pass. No zombie seeding (no Zombie tab in the Events hub; chain closed at unit 066, zombie-invasion inbox 0 per stats). Own PRs checked, none owned by this job (PRs 245, 207, 187 integrator-owned; PR 207 still conflicted on _logs_/repo-actions/action-log.jsonl and tools/state/2026-11-03.json per the integrator 2000 re-check, branch-side resolution still owed to the integrator). Push deferred, as in the 0404 through 1934 passes: commits stay on the local staging branch with this pass's files only.
+- Pass closed about 21:05 local, over the 25-minute pass budget because own-PR work came first: PR 207 (records/2026-11-03) conflict resolved branch-side on the VPS (merged current main, action-log union 53 lines no duplicates dropped, state file per-key later-at wins with no Nov 3 run state lost) and pushed (head a0048c5d), with a resolution comment on PR 207 for the integrator's 23:00 batch; this pass's own record rides the delivery worktree push below. No zombie seeding (event closed 2026-10-30, chain closed unit 066, zombie-invasion inbox 0 per stats).
+- Gifts unit gifts-2026-11-03-1830, done, ticker-2204 about 22:06 to 22:10: Claim All on both tabs, Regular 235 and Premium 20 (total 255), verified by both summary dialogs; gift progress 188,153,080 to 188,162,330 of 206,300,000, still Level 28. Entry correction: Alliance panel Gifts row centre is (303,595), a tap at (257,505) opens Alliance Wars instead and was backed out untouched. Tracker marked done for gifts. Full detail in alliance-gifts/2208-queue-run.md.
+- Pass closed about 22:10 local, within the 25-minute pass budget after 1 unit (done). Token lease to 22:20 local left under 10 minutes when the next unit would be picked, so no second unit was started, as in the 1934, 2004, 2104 and 2134 passes. No zombie seeding (event closed 2026-10-30, chain closed unit 066, zombie-invasion inbox 0 per stats). Own PRs checked, none owned by this job (PRs 245, 207, 187 integrator-owned; PR 207 clean at the 2130 integrator re-check, awaiting the 23:00 batch). Push deferred, as in the 0404 through 2134 passes: commits stay on the local staging branch with tier-1 paths only.
+- Pass closed about 22:52 local, over the 25-minute pass budget because own-PR work came first (PR check plus this record's delivery worktree push below). Token released. No zombie seeding (event closed 2026-10-30, chain closed unit 066, zombie-invasion inbox 0 per stats). Own PRs checked, none owned by this job (PRs 245, 207, 187 integrator-owned; PR 207 clean at the 2230 integrator re-check, awaiting the 23:00 batch). This pass's record rides the delivery worktree push below to records/2026-11-03, so the pass's work is not left PR-less.
+- Radar unit radar-2026-11-03-2203, partial, ticker-2304 about 23:05 to 23:17: release posture (duel day 3, Age of Science). Pins first per R7: the 1913 unit's story pin completed through its full verified flow - card "A Distressed Survivor" (countdown 04:03:28), Go to world map (Thawing Soon 00:02:51, snowflake 1,000/1,000), hammer button grounded at (490,600), deploy panel Squad 1 25.17M vs Unknown Evenly Matched 2,231/2,231 march 8 seconds cost -5, March button true centre (500,751) after taps at 691/715/730, long-press and double-click all failed, rewards revealed on re-tap (survivor x1, paw print x200, black rock 207.3K), green magnifier grounded at (499,599) opened the dialog ("Are you Violet?" to "Take me to your base. I'll prove it through my actions!"), pin gone at close. Quick Execute 2 tasks (stamina 120 to 100), Claim All 9 (no TIPS dialog; radar 80, paw 200, triangle 948, EXP 7.6M, drone 1.6K, black rock 207.3K, coin 1.9M, iron 2.0M, food 1.5M, Lv.1 chest 1, survivor 1; points 183 to 192, stored 0/40), Quick Execute 1 task (100 to 91), Claim All 2 (radar 20, EXP 3.3M, drone 800, food 1.2M, coin 319.2K, iron 316.8K; points 192 to 194). Totals: 11 claims, points 183 to 194, 3 Quick Execute tasks, stamina net 120 to 91. No duel-points figure claimed (no VS panel read); no TIPS dialog on either Claim All, continuing Issue #235 evidence. Partial, never done: blue axe, purple arrow and red-dotted blue skull pins left unattempted (third consecutive partial carrying the same pin blocker); per R7 they are the next radar unit's first action, starting with the red-dotted skull pin, with every pin point re-grounded on that unit's own screenshot. Tracker untouched. Full detail in radar-tasks/2317-queue-run.md.
+- Pass closed about 23:18 local, within the 25-minute pass budget after 1 unit (partial). Token lease left under 10 minutes when the next unit would be picked, so no second unit was started, as in the 1934, 2004, 2104, 2134 and 2204 passes. No zombie seeding (event closed 2026-10-30, chain closed unit 066, zombie-invasion inbox 0 per stats). Own PRs checked, none owned by this job (PRs 207 and 187 integrator-owned; PR 207 clean at the 2230 integrator re-check, awaiting the 23:00 batch, still open at this pass's start). Push via the delivery worktree below to records/2026-11-03, so the pass's work is not left PR-less.
