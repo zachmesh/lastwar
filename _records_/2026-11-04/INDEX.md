@@ -938,3 +938,39 @@ of 2026-10-28.
 
 - Integrator pass pr-integration-2026-11-04-0515.
   Non-batch pass: the checker reports outside every batch window, next batch 07:00, so no records PR merges this pass. No knowledge or code PR open. Records PR 264 awaits the 07:00 batch as clean by merge-tree; PRs 256, 265 and 187 stay conflicted on the action log, re-verified by test merge with heads unchanged since the 0415 notes, so no comment was repeated. No owner-gated PR. Full detail in pr-integration/0515-run.md.
+
+## 05:05 to about 05:20 - Ticker pass
+
+- Train unit train-2026-11-04-0230, partial,
+  ticker-0504: no "Boarding closes in" banner and
+  no train icon in the left column, seventh
+  check-only train outcome in a row; one wrong tap
+  to the truck screen recovered with no action
+  inside; no boarding action, tracker untouched.
+  Full detail in alliance-train/0509-queue-run.md.
+- Passes unit passes-2026-11-04-0257, done,
+  ticker-0504: all shop pass surfaces checked live,
+  nothing claimable - Hot Deals no free pack, Free
+  Supply Claimed, Super Monthly Daily Pickup
+  Claimed (17 days and 17 rewards left), all three
+  weekly cards unowned Get Now 4 dollars 99 offers.
+  Full detail in shop-claims/0511-queue-run.md.
+- Events unit events-2026-11-04-0257, done,
+  ticker-0504: full hub sweep, nothing claimable -
+  Arms Race Tech Research score 0 with 00:45:24
+  left, Desert already registered, General's Trial
+  3/10 with all milestones uncomplete, Wanted Boss
+  goals none reached, Community Claimed; no Zombie
+  Invasion tab, chain stays closed. Grounding: base
+  Events button at norm (935,145); tab bar shifts
+  between openings and needed a drag to reveal
+  Wanted Boss and Community. Full detail in
+  event-claims/0519-queue-run.md.
+- Pass closed after 3 units (train partial, passes
+  done, events done). Token released.
+- Note: the local working tree holds a tier-2 change
+  (_activities_/alliance-donations/INDEX.md, modified)
+  and other jobs' uncommitted _queue_ and
+  tools/state/ entries; all were left exactly as
+  found and none was swept into this pass's commit.
+  Only this pass's own tier-1 files were committed.
