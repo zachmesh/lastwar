@@ -1538,3 +1538,16 @@ Scout midday base group, unit scout-midday-2026-11-04-0700 (ticker-0904, partial
 ## Perception scout alliance remainder 0919
 
 Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, partial, by-design chain continuation): alliance power 13,077,801,685, no Wars dot; Kills own rank 92 (48,638), Donation own rank 32 (5,300); City List Rare Soil 5.88K/h and Coal 13.53K/h; mail dots on Battle Report and Event only. Full record at perception-scout/0919-queue-run.md, observation appended to perception-scout/observation.md.
+
+## 09:30 to about 09:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0930.
+  No-op pass per the checker (not due, next batch
+  11:00): no knowledge or code PR open; records PR
+  273 (records/2026-11-04, head 28ec170c, merge
+  state CLEAN, merge-tree clean against main
+  0ed17ae0) awaits the 11:00 batch; PRs 187,
+  256 and 265 still conflicted on the action log at
+  unchanged heads, so no comment was repeated; no
+  owner-gated PR arose. Full detail in
+  pr-integration/0930-run.md.
