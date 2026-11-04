@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-03T21:52:04Z
+modified: 2026-11-04T04:47:00Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-0934 perception-scout execution records 2026-11-03 0940 and 0949 queue runs (partial, stale alliance remainder chains, Wars dot live cause seen departing, Elite Exercise Commendation Notice, Issue #212)
   - source: ticker-1304 perception-scout execution records 2026-11-03 1309 and 1314 queue runs (partial, base group and alliance remainder, Wars dot clearing answered, store and techs re-read, Issue #212)
   - source: ticker-1334 perception-scout execution record 2026-11-03 1345 queue run (partial, LOOT box located, station preparation-only surface, Wars dot present again, Issue #212 open)
+  - source: tool-development 2032 run (daily-reset UTC boundary fix, PR 249) and GitHub Issue #247 - scout post-reset anchor corrected to the 02:00 UTC boundary
 ---
 
 
@@ -75,7 +76,18 @@ queue design fixes the unit contract.
 Two passes per reset day, both regulars in _tools_/regulars.json -
 
 - `scout` - the post-reset full pass, daily-reset cadence
-  anchored at the 19:00 local reset.
+  anchored at the trade-day reset (02:00 UTC absolute
+  boundary, about 18:00 PST now, 19:00 PDT before the
+  DST end). Correction, 2026-11-03 2032: the standing
+  19:00 local anchor is superseded - the 1846 live
+  counters, the PR 243 duel-boundary fix and the PR 249
+  daily-reset tool fix (regulars.py gated daily-reset
+  regulars on a fixed 19:00 local wall time; now
+  reset_utc 02:00) settle the boundary, and the tool's
+  old fixed-19:00 gating is the cause of the stale
+  anchor. Filed as Issue #247; this correction is the
+  knowledge-page half of that issue, closure belongs
+  to the daily retro.
 - `scout-midday` - the midday full pass, daily-reset cadence
   anchored at 07:00 local, for state-dependent availability the
   morning cannot show.

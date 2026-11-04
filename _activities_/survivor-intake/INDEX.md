@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-04T00:36:47Z
-version: 1.21.0
+modified: 2026-11-04T05:40:00Z
+version: 1.22.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-0634 survivor-intake execution record 2026-11-03 0644 queue run (partial, gate line unverified, two grounding points rejected)
   - source: ticker-1034 survivor-intake execution record 2026-11-03 1050 queue run (partial, gate line not found, grounding timed out twice, no tap on unidentified markers)
   - source: survivor-intake execution record 2026-11-03 1543 queue run (ticker-1534 unit, partial, gate-cluster grounding, no verified recruit)
+  - source: ticker-2104 survivor-intake execution record 2026-11-03 2112 queue run (partial, gate line unverified, thirteenth distinct partial since the 1644 done)
 ---
 
 
@@ -937,8 +938,32 @@ Measured on 2026-10-25.
   Titanium Alloy Factory No.3, not a survivor; the 1948
   dragged-view figure points (485,680 / 490,690) select a
   squad vehicle. Ground the gate line fresh each unit.
+- Do-not-reuse points (2112): centre-view grounding point
+  (505,590) is a building bubble, not a survivor figure
+  (tap produced no change); (545,740) is empty snow and
+  wall, rejected pre-tap from an enlarged crop. The 1644
+  re-read pointer (bubble 460,632, figure 458,678) shows
+  buildings, not a gate line, in the 2112 current view -
+  the pointer is qualified, not erased, and the next unit
+  grounds fresh rather than navigating to it.
 
 ## Changelog
+
+- 1.22.0 (2026-11-03): thirteenth distinct partial since the
+  1644 done (2112 unit, gate line explicitly unverified,
+  close discipline held), 1644 re-read pointer (460,632 /
+  458,678) now showing buildings not a gate line in the
+  current view so qualified not erased, centre-view point
+  (505,590) rejected as a building bubble after a no-change
+  tap, (545,740) rejected pre-tap as empty snow via crop,
+  single-drag pan moving about 1 percent abandoned, slow
+  pans to the south tip and east mountains finding no gate
+  and no survivor line, west-wall STOP sign seen but not
+  verified as the Zombies gate, window 642 by 951
+  re-confirmed, and Issue #168 evidence commented by this
+  run, folded from the 2112 survivors record. (1.20.0
+  carries the 1050 section without a changelog line; the
+  numbering is preserved, not rewritten.)
 
 - 1.4.0 (2026-11-01): streak carried past the retro window
   (0016 partial), background-input control dependence, Escape
@@ -1100,3 +1125,68 @@ Measured on 2026-10-25.
   reject it and close unverified with this blocker
   named, rather than tapping it. No earlier claim
   superseded.
+
+## What the 2026-11-03 2112 unit added - thirteenth distinct partial, 1644 pointer now shows buildings, two more rejected points
+
+- Ticker-2104, unit survivors-2026-11-03-1803, about
+  21:05 to 21:12 local, status partial. Evidence in
+  `_records_/2026-11-03/survivor-intake/2112-queue-run.md`.
+- Session: LastWar already open on the Mac mini,
+  window 642 by 951, re-confirmed. No
+  different-device dialog, no login or verification
+  demanded. Base screen read live at entry: food
+  275.0M, iron 612.5M, coin 34.2M, power 149,948,901,
+  diamonds 2,841.
+- Gate line: NOT READ. The signed "Zombies" front
+  gate itself was not located in this unit, so no gate
+  line can be quoted verbatim and the gate is NOT
+  claimed empty. Close discipline held.
+- Grounding rejections, do not reuse: fresh visual
+  grounding on the centre base view first pointed at
+  a building output bubble near norm 505,590. One tap
+  there produced no change, and an enlarged crop
+  showed it was a building bubble, not a survivor
+  figure, so that point was rejected, not a survivor.
+  A second grounding round pointed at empty snow near
+  norm 545,740; an enlarged crop showed only wall and
+  snow, so that point was rejected before any tap.
+- Pan method: the single drag action moved the view
+  by only about 1 percent, so it was abandoned. A
+  slow drag up panned past the base into empty snow;
+  a partial drag back showed the base south tip and
+  its wall, with no question-mark bubbles and no
+  survivor line at the south tip. A slow drag
+  leftwards panned east past the base into mountains,
+  again with no gate and no survivor line. A reverse
+  drag moved the view back west before closing.
+- STOP sign, not a gate: the STOP sign on the west
+  wall was seen in the south panned crop, but it was
+  not verified as the Zombies gate and no survivor
+  figure stood by it, so it is not recorded as the
+  gate.
+- 1644 pointer qualified, not erased: the gate was
+  located once on 2026-11-01 at norm 460,632 (bubble)
+  and 458,678 (figure), bottom centre, but that point
+  in this unit's current view shows buildings, not a
+  gate line. The 1644 event stands as history; the
+  pointer no longer navigates the next unit, which
+  starts from a fresh full-perimeter read rather than
+  re-tapping the rejected points in this record.
+- No survivor was processed, no recruit card
+  appeared, no Quick Dispatch ran (nothing verified
+  to post). No diamonds or money spent, no paid
+  button tapped. Tracker untouched, per the rule for
+  partial units, so the next tick re-produces this
+  regular.
+- Why partial, not done: thirteenth distinct partial
+  since the 1644 done (0247 ninth, 0644 tenth, 1050
+  eleventh, 1543 twelfth, this unit thirteenth),
+  gate line explicitly unverified, close discipline
+  held. Blocker category e (repeated blocker).
+- Follow-up for the next survivors unit: start from a
+  fresh full-perimeter read, verify a survivor figure
+  before any tap, and do not re-tap (505,590),
+  (545,740) or the 1644 pointer as a location. If the
+  line still cannot be verified, close unverified
+  again with this blocker named. No earlier claim
+  superseded; the 1644 pointer is qualified as above.
