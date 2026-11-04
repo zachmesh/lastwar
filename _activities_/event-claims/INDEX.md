@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T11:50:00Z
+modified: 2026-11-04T14:35:00Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-0304 event-claims execution record 2026-11-03 0318 queue run (done, full hub sweep, 0 claimed, Desert Storm registered)
   - source: ticker-1204 event-claims execution record 2026-11-03 1217 queue run (done, full hub sweep, 0 claimed, Arms Race Hero Advancement 41,500, Boss Code 64 not yet out)
   - source: ticker-0234 event-claims execution record 2026-11-04 0245 queue run (done, full hub sweep, nothing claimable)
+  - source: ticker-0504 event-claims execution record 2026-11-04 0519 queue run (done, full hub sweep, 0 claims, Arms Race phase ends inside the next hour, no Zombie Invasion tab)
 ---
 
 
@@ -820,3 +821,17 @@ that drag is the sweep-completeness check, not wasted motion.
 - What the Wanted Boss Code 87 fight pays in practice when it is
   out at server 00:00. (2026-11-02 2113 update: the boss has rotated to Code 64, a giant gorilla, with Missile Vehicle heroes dealing 50% extra damage; best single attack read 852,929,736 against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B, all Claim buttons grey - the Code 87 payout question is moot until it rotates back.)
 - Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.) (2026-11-02 1250/1300 update: window close-and-relaunch is now a verified exit and recovery route - the 1250 unit restored hidden side rails by relaunch, and the 1300 passes unit exited the stalled hub by relaunch, both with state intact and no login or device dialog; the foreground-first exit itself is still unverified.) (2026-11-04 0245 update: back-arrow centre corrected - taps at norm 86,952 do nothing because that point hits the corner avatar icon; the corrected centre norm 132,952 returned to the base screen on the first tap, verified in both the Events hub exit and the Secret Command Post exit in the same pass. The foreground-first exit itself is still unverified.)
+
+## What the 2026-11-04 0519 unit added - full hub sweep, 0 claimed, Arms Race phase ends inside the next hour
+
+- Ticker-0504, unit events-2026-11-04-0257, about 05:12 to 05:19 local, status done. Evidence in `_records_/2026-11-04/event-claims/0519-queue-run.md`. Computer session cc-419 dropped mid-unit and was restarted as cc-420 with no game state lost.
+- Tabs seen in this sweep, in order: Arms Race, Desert Battlefield, General's Trial, Wanted Boss, Community. No Zombie Invasion tab is present in the hub, which re-confirms the zombie chain stays closed (no fresh chain seeded in this pass).
+- Grounding notes: the base Events button grounds at norm (935,145) - a tap at (885,150) hit the gold hexagon beside it and opened nothing; the tab bar shifts between openings, so each tab was re-read before tapping, and a drag of the tab bar from norm 800,131 to 400,131 was needed to reveal the Wanted Boss and Community tabs.
+- Arms Race page: current phase Tech Research, Contest Segment Lv.29-30, 00:45:24 left at entry. Score 0, cumulative chest 3/8 (not full, not claimable), point chests at 6,250 / 12,500 / 30,000 all unreached at score 0. No Arms Race grinding was done in this unit; that belongs to the arms-race unit type. Phase state is recorded here for that unit's next run - the phase ends inside the next hour.
+- Desert Storm Battlefield: Registration ends in 12:44:48, Battle Day 2026-11-6 03:00-03:30, Participants 19/20 (including You) - already registered, no Claim button, nothing to claim. The Select Time and Select Participants buttons were not tapped (alliance registration choices, not claims).
+- General's Trial: Solo Challenge page, 2d 12:44:11 left, "Defeat 3/10 instructors to obtain" rewards row, next instructor Lv.4 Vanguard, Suggested Power 10,928,500. The Rewards panel (opened with a fresh-grounded tap at norm 830,280 after a tap at 875,230 did nothing) reads "Get rewards for all completed challenges at the end of the event!" with milestones 3/10, 3/15, 3/20, 3/25 - none complete, no Claim button anywhere. The Challenge buttons are grinding and were not tapped.
+- Wanted Boss Code 39: Go button countdown 11:41:45 at entry (boss not out yet), aircraft heroes deal 50 percent extra damage. "Complete 1 attacks to get the following rewards" - no attack was made in this claim unit. Goals page inspected: best single attack 1,097,397,868 against tiers 1,500,000,000 / 2,000,000,000 / 2,500,000,000 / 3,000,000,000 / 4,000,000,000 - no tier reached, no Claim button.
+- Community: Discord binding reward reads Claimed.
+- 0 claims in this unit. No priced button, no paid unlock, no Challenge or Go button was tapped.
+- Leaving the hub: the back-arrow tap at norm 132,952 closed the Goals panel to the Wanted Boss page, and a second tap at the same point from the Community page returned to the base screen on the first tap. Back-arrow centre for the Events hub is re-confirmed at norm (132,952).
+- Countdown consistency check, no contradiction: the Desert registration (15:17:04 at 0245 to 12:44:48 here), General's Trial (2d 15:16:26 to 2d 12:44:11) and Wanted Boss (14:15:37 to 11:41:45) countdowns all stepped down by about the elapsed time between the units. Costs: about 7 minutes, 0 diamonds.
