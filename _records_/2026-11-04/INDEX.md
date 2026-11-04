@@ -470,3 +470,28 @@ of 2026-10-28.
   unchanged). The 0139 run record, orphaned in a detached
   worktree, was restored verbatim in this commit. Full
   detail in pr-catchall/0239-run.md.
+## 02:40 to about 02:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-0240.
+  Own PRs checked first (none owned, no comments owed);
+  owner-decision Issues #154 (still no owner answer, 0
+  comments) and #132 (duel-score-only answer stands,
+  building/research deferred) checked, no unit staged
+  or invented for either.
+  Plan staged 11 units for the 14:03 and 14:30 slots
+  (harvest, radar, survivors, training, donations,
+  arms-race at 14:03; mail, help, gifts, train,
+  star-ceremony at 14:30; already_present 57,
+  skipped_done_current 1, reaped 0, expired 0);
+  pre-reset sweep skipped (02:00 hour, not 17:00);
+  scout diff on the Nov 3 observation applied with
+  zero changes (observed 0, actionable 0, enqueued 0,
+  candidates 0, unexplained red dots 0); 0 withdrawals;
+  pool inbox 70, claimed 1, done 781.
+  Carried follow-ups: PR 260 narrative fallback merged
+  to main 00:47 PST but live tree still runs old
+  scout_diff, so the diff headline stays 0 until the
+  live tree syncs; duel-score regular still absent from
+  the live pool tree, no duel-score unit staged.
+  Full record:
+  _records_/2026-11-04/queue-planning/0240-run.md.
