@@ -1628,3 +1628,16 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
 
 - Planner pass queue-planning-2026-11-04-0940, no-op: plan staged 0 units (already_present 63, skipped_done_current 8, reaped 0, expired 0), pre-reset sweep step skipped (not the 1700 hour), scout diff on the 2026-11-04 observation applied all zero, 0 withdrawals, pool inbox 56 claimed 1 done 822 upcoming 51.
   Full detail in queue-planning/0940-run.md.
+
+## 10:00 to about 10:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1000.
+  No-op pass per the checker (not due, next batch
+  11:00): no knowledge or code PR open; records PR
+  273 (records/2026-11-04, head f87e7d5c, merge
+  state CLEAN, merge-tree clean against main
+  2b2d0b95) awaits the 11:00 batch; PRs 187,
+  256 and 265 still conflicted on the action log at
+  unchanged heads, so no comment was repeated; no
+  owner-gated PR arose. Full detail in
+  pr-integration/1000-run.md.
