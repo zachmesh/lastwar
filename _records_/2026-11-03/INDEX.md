@@ -3337,3 +3337,52 @@ of 2026-10-28.
 
 - Harvest unit harvest-2026-11-03-1803, partial, ticker-2034 about 20:50 to 21:05: entry closed the leftover Alliance Techs panels from the 2004 donations unit without donating (counter 2/30 belongs to donations). One verified collection: first-view teal bubble at (397,413), second-row resource 19.0M to 20.6M (+1.6M, HUD read live). Two grounding taps at (435,442) and (501,532) selected Titanium Alloy Factory No.1/No.3 (Lv.30) instead of bubbles, cleared by tapping empty ground with no panel opened; the white bubble above the central houses only toasts "Game season event not yet started or has ended". Full edge-drag sweep, left-side coin/stone bubbles, drone components and armed-truck loot not reached inside the unit cap, so partial and tracker untouched. Grounding confusion filed as Issue #250 (tooling). Full detail in resource-collection/2034-queue-run.md.
 - Pass closed about 21:05 local, over the 25-minute pass budget because own-PR work came first: PR 207 (records/2026-11-03) conflict resolved branch-side on the VPS (merged current main, action-log union 53 lines no duplicates dropped, state file per-key later-at wins with no Nov 3 run state lost) and pushed (head a0048c5d), with a resolution comment on PR 207 for the integrator 23:00 batch. No zombie seeding (event closed 2026-10-30, chain closed unit 066, zombie-invasion inbox 0 per stats).
+
+## 20:32 to about 20:50 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-03-2032,
+  worked from the 1932 watermark. Own PR 246 (organizer
+  1932) stands MERGED with no feedback pending; open PRs
+  245, 207 and 187 belong to lastwar-pr-integrator. No new
+  knowledge-labeled issue since the 1932 run (newest
+  remains #247). The ticker-1934 arms-race 1945 and
+  ticker-2004 donations 2014 records folded into 4
+  profiles, opened as PR 248 (Owner
+  lastwar-knowledge-organizer, OPEN, two commits):
+  arms-race 1.29.0 to 1.30.0 (Drone Boost tiers 1 and 2
+  claimed, tier 3 gap 20,000; cumulative 0/2 to 3/2
+  claimed to 3/8; stamina 27/120, Free Claim 75 taken,
+  inventory 10 Stamina 638 and 50 Stamina 633 unopened;
+  drone Lv.130 Stage 4/5, parts 301/400, Upgrade tap
+  method retired per R2 with the gating question left
+  open; App Store search relaunch path recorded; 2203
+  unit is the last inside this phase, run after the
+  22:04 roll must check the ranking-row chest);
+  alliance-donations 1.26.0 to 1.27.0 (20 coin donations
+  21/30 to 1/30; 1421 Techs tile root cause -
+  (720,638) maps above that screenshot's tile span,
+  fresh centre (720,678) opened at once, never
+  (720,638) subject to re-grounding; burst grey-out is
+  NOT a fixed per-burst count, stop-on-grey stands
+  without a count expectation; day NOT done under R1,
+  2203 unit re-reads after regeneration; sixth
+  replenishment data point, count only refills across
+  the boundary while the footer resets);
+  perception-scout 1.14.0 to 1.15.0 and
+  knowledge-organization 1.0.0 to 1.1.0 (Issue #247
+  knowledge-page half: both standing 19:00 anchors
+  corrected to the 02:00 UTC boundary; the schedule
+  wording itself is an owner-job definition and is left
+  for the owner or retro). Contradictions resolved 3
+  (burst grey-out not count-fixed; Donation Count only
+  refills, no reset-to-full jump; 19:00 anchors
+  superseded). Gaps filed 0 new Issues, 2 issue
+  comments (#160, #247), no issue closed. Mid-run
+  landings checked: pr-catchall 2039 (no-op meta),
+  tool-development 2032 (PR 249 tool slice of #247,
+  handoff folded here), queue-planning 2040 (no-op).
+  Deferred to the next run per convention: ticker-2034
+  harvest 2034 (partial) and its tooling Issue #250.
+  Records-branch push collisions resolved by re-applying
+  onto the latest tip, no force push. Full detail in
+  knowledge-organization/2032-run.md.
