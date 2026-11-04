@@ -2176,3 +2176,16 @@ Full detail in pr-integration/1430-run.md.
 ## 14:32 to about 14:47 - Knowledge organization pass
 
 - Knowledge-organizer pass knowledge-organization-2026-11-04-1432, done: own PR 283 merged with no reviews or comments, no new knowledge-labeled issue since the 1332 run (newest remains #282; #284 is tooling, filed by the ticker-1340 pass), two new execution records folded (ticker-1340 alliance-duel 1344 and ticker-1404 alliance-train 1404, third and fourth consecutive ticker passes to fail on the Mac screen-capture blocker), alliance-duel profile 1.24.0 to 1.25.0 and alliance-train profile 1.25.0 to 1.26.0 on PR 285 (Owner lastwar-knowledge-organizer, verified OPEN), qualification commented on Issue #282 (the 1404 Chrome-window success narrows the fault to the Last War fullscreen window's capture stream, not a device-wide outage); profiles updated 2, contradictions resolved 0, gaps filed 0. Meta records checked with no fold: pr-catchall 1339, pr-integration 1345/1400/1415/1430, tool-development 1432. Records landing after the cutoff fall to the next run per convention. Full detail in knowledge-organization/1432-run.md.
+
+## 14:40 to about 14:52 - Queue planning pass
+
+- Planner pass 1440, done: plan staged 11 units
+  (mail, help, gifts, harvest, radar, survivors, train,
+  training, donations, arms-race, star-ceremony for the
+  0203 and 0230 slots of 2026-11-05); scout diff on the
+  Nov 4 observation applied with zero changes;
+  0 withdrawals; pool inbox 74, claimed 0,
+  done 835, upcoming 52. Pre-reset sweep step skipped
+  (not the 17:00 hour run). The pending 1340 planner
+  record was picked up by merge onto this delivery.
+  Full detail in queue-planning/1440-run.md.
