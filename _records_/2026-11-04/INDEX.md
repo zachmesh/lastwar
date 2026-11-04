@@ -169,3 +169,14 @@ of 2026-10-28.
 - Pass closed after 1 unit (failed). Token released. The
   next tick retries login; the harvest sweep is two units
   behind.
+## 00:40 to about 00:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-0040: plan staged
+  0 units (already_present 69, reaped 0, expired 0) for the
+  next 12 hours; pre-reset sweep skipped (not the 17:00 hour
+  run); scout diff on the Nov 3 observation applied with zero
+  changes (observed 0, actionable 0, enqueued 0, candidates 0,
+  unexplained 0 on the live pre-fallback tool); 0 withdrawals.
+  Pool by_state: inbox 68, claimed 0, done 773. Delivered to
+  open records PR 258. Full record:
+  _records_/2026-11-04/queue-planning/0040-run.md.
