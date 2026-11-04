@@ -2009,3 +2009,8 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   recorded); no issue filed or closed. Records PR 279
   awaits the 15:00 batch, so no new records PR was
   opened. Full detail in knowledge-organization/1232-run.md.
+
+## 12:45 to about 12:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1245, done (non-batch): knowledge PR 281 (organizer 1232 - 1147 training, 1147 gifts, 1235 help) reviewed clean and merged by squash, local main fast-forwarded to be8dd39b; four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1245-run.md.
