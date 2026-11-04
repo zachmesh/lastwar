@@ -2189,3 +2189,5 @@ Full detail in pr-integration/1430-run.md.
   (not the 17:00 hour run). The pending 1340 planner
   record was picked up by merge onto this delivery.
   Full detail in queue-planning/1440-run.md.
+- Integrator pass pr-integration-2026-11-04-1445, done (non-batch): PR 285 merged (squash, branch deleted, local main synced to 40fd8dc50); four records PRs carried with a decision (279 clean awaiting the 15:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1445-run.md.
