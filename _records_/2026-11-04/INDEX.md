@@ -290,3 +290,23 @@ of 2026-10-28.
   scenarios on isolated scratch pools under /tmp, all
   passed, live pool never used for validation.
   Full detail in tool-development/0138-run.md.
+
+## 01:34 to about 01:44 - Ticker pass
+
+- Training unit training-2026-11-03-2203, partial,
+  ticker-0134: "active on a different device" dialog
+  on entry, Confirm tapped once (kick 1), app exited
+  and was reopened to the base. Tank Base Lv.28
+  upgrade in progress (21:17:49 left) noted, nothing
+  tapped on it. Tent search continued: grounding
+  points tapped on the live frames selected Titanium
+  Alloy Factories No.1 and (Weekly Pass) Lv.30, not
+  barracks; the far-right-edge grounding point gave
+  only an Alliance Gifts toast. 0 of 4 barracks
+  verified, 0 batches queued, tracker untouched.
+  Full detail in troop-training/0143-queue-run.md.
+- Own-PR check: PR 258 (records/2026-11-04) open,
+  0 comments; nothing addressed to this job. No
+  zombie seeding: chain closed 2026-10-30.
+- Pass closed after 1 unit (partial). Token
+  released.
