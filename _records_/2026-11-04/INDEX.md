@@ -771,3 +771,26 @@ of 2026-10-28.
   conflicted on the action log, awaiting branch-side
   resolution. No owner-gated PR. Full detail in
   pr-integration/0400-run.md.
+
+## 04:13 - Ticker pass, harvest (partial)
+
+- Harvest unit harvest-2026-11-04-0203, partial, ticker-0404:
+  farmland bubble tap at (395,415) moved food 395.0M to 397.0M
+  (+2.0M, verified live); the full edge-drag sweep was not
+  completed. Four further taps selected buildings instead of
+  bubbles (Headquarters, Gear Factory, Component Factory,
+  Iron Mine Lv.27) and one floating-icon tap moved no HUD
+  figure; the remaining bubbles were not distinguished from
+  building markers at this resolution (Issue #250). Tracker
+  untouched. Full detail in
+  resource-collection/0413-queue-run.md.
+
+## 04:16 - Ticker pass, survivor intake (partial, unverified)
+
+- Survivors unit survivors-2026-11-04-0203, partial,
+  ticker-0404: base panned left edge to far right and bottom
+  snow edge; no "Zombies" gate sign was seen and no survivor
+  figure or question-mark bubble was verified, so 0 survivors
+  were processed, no recruit card appeared, no Quick Dispatch
+  ran. The gate line is NOT claimed clear. Tracker untouched.
+  Full detail in survivor-intake/0416-queue-run.md.
