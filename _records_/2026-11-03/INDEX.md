@@ -3098,3 +3098,17 @@ of 2026-10-28.
   with all zero counts, 0 withdrawals. Pool inbox 63,
   claimed 2, done 743, upcoming 52. Full detail in
   queue-planning/1740-run.md.
+
+## 17:45 to about 17:58 - Integrator pass, PR 241 merged
+
+- Integrator pass pr-integration-2026-11-03-1745.
+  Non-batch pass per the checker (outside every batch
+  window, next batch 19:00): knowledge PR 241 (organizer
+  1732, 1716 help fold, alliance-help 1.20.0 to 1.21.0)
+  reviewed clean and merged by squash (commit 9964b23d70,
+  branch deleted); local main fast-forwarded to the
+  merge. Records PR 236 (2026-11-02) clean and awaiting
+  the 19:00 batch; records PR 207 conflict re-verified
+  at new head 8c670849 (same two files) and re-commented;
+  records PR 187 conflict carried, head unchanged.
+  Full detail in pr-integration/1745-run.md.
