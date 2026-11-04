@@ -507,3 +507,53 @@ of 2026-10-28.
   and 255 clean and awaiting the 03:00 batch; PR 187
   conflict carried unchanged (head 2be5df83d).
   Full detail in pr-integration/0245-run.md.
+## 02:37 - Ticker pass, shop claims
+
+- Passes unit passes-2026-11-03-2257, done, ticker-0234:
+  all shop pass surfaces checked live, nothing claimable.
+  Hot Deals showed no free pack and no Free Supply auto-claim
+  fired; Weekly Pass Free Supply reads Claimed, and the S2
+  Drone Components, S1 Drone Parts and Coin Weekly Pass cards
+  are unowned Get Now 4 dollars 99 offers; Super Monthly Pass
+  Days Left 18, Rewards Left 18, Daily Pickup Claimed. No
+  price, Renew, or paid bundle button was tapped. Full detail
+  in shop-claims/0237-queue-run.md.
+
+## 02:42 - Ticker pass, trucks
+
+- Trucks unit trucks-2026-11-03-2257, done, ticker-0234:
+  both quotas already full at live entry (Trade 5/5,
+  Plunder 4/4), so no dispatch or plunder was made. The
+  own SR truck on the road is outbound (arrives in
+  01:52), nothing to settle; Recover carries no red dot.
+  Entry note: the badgeless left-column vehicle icon did
+  not open trade, but a tap on the bottom-right WORLD
+  corner opened Intercity Trade directly - next trucks
+  units should try that route first. Full detail in
+  truck-plunder/0242-queue-run.md.
+
+## 02:45 - Ticker pass, event claims
+
+- Events unit events-2026-11-03-2257, done, ticker-0234:
+  full Events hub sweep, nothing claimable. Arms Race is
+  in Tech Research (score 0, cumulative chest 3/8);
+  Desert Storm Battlefield already registered for
+  2026-11-6; General's Trial rewards pay only at event
+  end (3/10); Wanted Boss Code 39 not out yet with no
+  Goals tier reached; Community binding already Claimed.
+  No Zombie Invasion tab in the hub, so the zombie chain
+  stays closed. Full detail in event-claims/0245-queue-run.md.
+
+## 02:48 - Ticker pass, secret missions
+
+- Secrets unit secrets-2026-11-03-2257, partial,
+  ticker-0234: Secret Command Post entered (pickup icon
+  grounded fresh at norm 53,650 on the same screenshot
+  it was tapped from, answering the 2026-11-03 entry
+  blocker). Four finished SSR tasks stand with Claim
+  buttons and Assist Allies is already 5/5, but the
+  Claim buttons did not respond to five background-input
+  variants across two rows, so nothing was claimed or
+  dispatched and the tracker is untouched. Next secrets
+  unit retries the Claim buttons first. Full detail in
+  secret-missions/0248-queue-run.md.
