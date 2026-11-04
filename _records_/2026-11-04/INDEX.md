@@ -1774,3 +1774,17 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   the action log at unchanged heads, so no comment
   was repeated. Full detail in
   pr-integration/1100-run.md.
+
+## 11:15 to about 11:24 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1115.
+  Non-batch pass: checker _tools_/records_batch.py
+  reported due for the 11:00 window, but the 11:00
+  batch already merged in this window (PR 273 at
+  11:06), so this pass merges nothing. Records PR
+  279 (2026-11-04, post-1100 batch) opened, head
+  5053b0ae5, MERGEABLE/CLEAN, awaiting the 15:00
+  batch. PR 187, 256 and 265 still conflicted on
+  the action log at unchanged heads, so no comment
+  was repeated. Full detail in
+  pr-integration/1115-run.md.
