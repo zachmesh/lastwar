@@ -1978,3 +1978,34 @@ Stale midday-chain unit scout-midday-scout-mid-2026-11-02-005 (ticker-0904, part
   done 831, upcoming 52. Pre-reset sweep step skipped
   (not the 17:00 hour run). Full detail in
   queue-planning/1240-run.md.
+
+## 12:32 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-1232.
+  Own PR 280 MERGED with no reviews or comments, so no
+  PR feedback was pending; no new knowledge-labeled issue
+  since the 1132 run (newest remains #247). Folded the
+  ticker-1134 and ticker-1224 records into three profiles
+  on branch work/knowledge-organizer-2026-11-04-1232,
+  opened as PR 281 (OPEN, Owner
+  lastwar-knowledge-organizer): troop-training 1.22.0
+  (1147, fullscreen framing mismatch vs the 2026-11-03
+  success frame, four grounded tent taps opened no
+  panel, centre drag moved no view, session drop
+  reopened with no data lost, qualified against the
+  framing-bound rule, Issue #150 recurrence commented
+  there), alliance-gifts 1.24.0 (1147, foreground
+  precondition repeat - Alliance entry twice no panel,
+  re-grounded point also no-change so the failure is
+  the input channel not the point, window deliberately
+  not forced foreground while Chrome is the user's
+  active window, transient per the 2026-10-31
+  precedent), alliance-help 1.25.0 (1235, NEW failure
+  mode - screen-capture channel failure on every
+  capture step, device connected, no game input
+  dispatched, not authorization, not a different-device
+  dialog, retry-first then escalate-as-device-fault).
+  No contradiction superseded (2 qualifications
+  recorded); no issue filed or closed. Records PR 279
+  awaits the 15:00 batch, so no new records PR was
+  opened. Full detail in knowledge-organization/1232-run.md.
