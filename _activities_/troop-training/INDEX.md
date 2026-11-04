@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-03T19:45:00Z
+modified: 2026-11-04T00:36:47Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-0234 troop-training execution record 2026-11-03 0252 queue run (partial, road drag pans, centre drag does not, no tent)
   - source: ticker-0634 troop-training execution record 2026-11-03 0647 queue run (partial, no tent in four framings, road drags pan)
   - source: ticker-1034 troop-training execution record 2026-11-03 1051 queue run (partial, three framings no tent, road drag pans where centre drag does not, Issue 150)
+  - source: ticker-1534 troop-training execution record 2026-11-03 1552 queue run (partial, Lv.27 T9 batch queued and HUD-verified, tent blocker breakthrough, Issue 150)
 ---
 
 # Troop training
@@ -48,7 +49,7 @@ troops and riding the train are different systems and are kept apart.
   selected a wrong building (0917 unit, below).
 - A row of round buttons appears under the selected tent: paw,
   pistol and green up arrow. The green up arrow is the upgrade
-  shortcut - do not tap it. The paw-to-Details and pistol-to-TRAIN-UNITS mapping is camera-position dependent, not dead: the 0811 suspension is LIFTED IN PART 2026-11-02 (1146 unit), which re-grounded the Lv.24 row fresh (paw about 670,584; pistol 794,605; green up arrow 930,584) and opened TRAIN UNITS with the pistol tap. The 0811 world-map result and the 0322 upgrade-panel result do not carry across camera views. The standing rule is fresh grounding of the whole row in every unit's own view, never inherited coordinates. The Lv.20 pistol route is separately RETIRED 2026-11-02 (1146 unit): two fresh pistol points (818,584 and 829,575) both only cleared the selection, so the next Lv.20 attempt tries a different entry route (a long-press variant on the selected tent, or the paw Details route with freshly grounded coordinates).
+  shortcut - do not tap it. The paw-to-Details and pistol-to-TRAIN-UNITS mapping is camera-position dependent, not dead: the 0811 suspension is LIFTED IN PART 2026-11-02 (1146 unit), which re-grounded the Lv.24 row fresh (paw about 670,584; pistol 794,605; green up arrow 930,584) and opened TRAIN UNITS with the pistol tap. The 0811 world-map result and the 0322 upgrade-panel result do not carry across camera views. The standing rule is fresh grounding of the whole row in every unit's own view, never inherited coordinates. The 1552 unit extends the lifted-in-part pistol route to Lv.27 in its view: tent grounded at norm (630,592), pistol re-grounded at norm (612,608) before tapping, TRAIN UNITS opened with Lv.9 preselected. The Lv.20 pistol route is separately RETIRED 2026-11-02 (1146 unit): two fresh pistol points (818,584 and 829,575) both only cleared the selection, so the next Lv.20 attempt tries a different entry route (a long-press variant on the selected tent, or the paw Details route with freshly grounded coordinates).
 - In TRAIN UNITS, the tier cards run left to right with the highest
   unlocked tier preselected, the count slider sits at the Training
   Count cap, and the blue Train button starts the batch. The yellow
@@ -91,7 +92,7 @@ Observed in game on this account, first execution 2026-10-25.
   720.01, load 2200, HP 4726.34, attack 38.03, defense 7.55.
 - Lv.27 barracks - T9, count 726, cost 4.1M food and 4.1M iron, time
   1 day 10 hours 19 minutes. T9 stats - power 1352, morale 600.01,
-  load 2000, HP 4121.49, attack 33.13, defense 6.6.
+  load 2000, HP 4121.49, attack 33.13, defense 6.67.
 - Lv.24 barracks - T8, count 666, cost 2.9M food and 2.9M iron, time
   1 day 4 hours 20 minutes. T8 stats - power 1063 in game (one web
   table says 800 - the in-game figure governs), morale 520.63 (2026-11-02 live read, superseding the 2026-10-25 figure 510.01), load 1800, HP 3527.4, attack 28.37, defense 5.72 (superseding 5.65).
@@ -817,6 +818,8 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.15.0 (2026-11-03): no barracks tent in four framings (central, upper, right-side) with no TRAIN UNITS panel, road drags panning again consistent with 0252 as a further Issue #150 data point commented by this run, 2026-10-25 "lower middle" tent description marked stale for the current layout (furnace and house cluster, not tents) without deleting history, Drill Ground Full carried unverified a fourteenth consecutive unit, 0 barracks verified and 0 batches queued, folded from the 0647 training unit.
 
 
+- 1.17.0 (2026-11-03): tent-blocker breakthrough (1552 unit, fresh grounding returning three tent points, Lv.27 tent tap at (630,592) selecting Barracks Lv.27 with its label and button row confirmed, pistol re-grounded at (612,608) opening TRAIN UNITS, Lv.9 batch of 726 queued and verified by the live food and iron drop, Drill Ground Full block not presenting at this barracks, other three barracks not reached so partial), T9 defense corrected 6.6 to 6.67 per the live panel read, and the breakthrough commented onto Issue #150 by this run, folded from the 1552 training record.
+
 ## What the 2026-11-03 1051 unit added - three framings, still no tent, road drag pans where centre drag does not
 
 - Ticker-1034, unit training-2026-11-03-1003, about
@@ -852,3 +855,51 @@ Observed in game on this account, first execution 2026-10-25.
   not match the current framings; read the Drill
   Ground screen live first if a panel opens. No
   earlier claim superseded.
+
+## What the 2026-11-03 1552 unit added - tent blocker broken, Lv.27 T9 batch queued and HUD-verified
+
+- Ticker-1534, unit training-2026-11-03-1403, about
+  15:43 to 15:52 local, status partial. Evidence in
+  `_records_/2026-11-03/troop-training/1552-queue-run.md`.
+- Breakthrough on the standing tent blocker (Issue
+  150): fresh visual grounding on the live central
+  base frame returned three barracks tent points, and
+  the tap at norm (630,592) selected Barracks Lv.27,
+  confirmed by its on-screen label and button row
+  (paw Details, orange pistol Train, green upgrade
+  arrow untouched). The Lv.27 tent point (630,592)
+  is a proven entry but must still be re-grounded,
+  never inherited blindly.
+- The pistol button was re-grounded at norm
+  (612,608) before tapping, so the green upgrade
+  shortcut was never at risk. TRAIN UNITS opened
+  with Lv.9 preselected, count slider at the cap
+  726, cost 4.1M food and 4.1M iron, time 1d
+  10:19:35 - matching the Lv.27 T9 archive (power
+  1352, HP 4121.49, attack 33.13, defense 6.67, Lv.10
+  locked). The profile's T9 defense figure is
+  corrected 6.6 to 6.67 on this live panel read.
+- Train tapped (blue button, norm (630,778)).
+  Finish Now was never tapped. The panel closed with
+  no error and no Drill Ground block shown, so the
+  2026-10-31 Drill Ground Full blocker did not
+  present at this barracks. This is counter-evidence
+  against the carried block, not a clearance claim:
+  the other barracks were not reached and no Drill
+  Ground panel was read live.
+- Queue verified live from the HUD, not assumed
+  from the panel close: food 251.1M to 247.0M (minus
+  4.1M) and iron 592.7M to 588.5M (minus about 4.1M
+  at displayed 0.1M precision). One T9 batch of 726
+  is now training in the Lv.27 barracks.
+- Why partial, not done: the other three barracks
+  were not reached in this unit, so the
+  keep-every-barracks-busy standard is unmet.
+  Tracker untouched for the unreached barracks.
+- Follow-up for the next training unit: the tent
+  grounding works - re-ground the tents on the live
+  frame and work the remaining three barracks the
+  same way (tent tap, pistol tap, Train tap, HUD
+  verification). Issue #150 is commented with this
+  breakthrough by this run, not closed here -
+  closure belongs to the daily retro.

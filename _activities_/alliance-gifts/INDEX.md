@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T19:45:00Z
+modified: 2026-11-04T00:36:47Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-0634 alliance-gifts execution record 2026-11-03 0650 queue run (done, 250 Regular and 6 Premium, per-tab Claim All points re-grounded)
   - source: ticker-0904 perception-scout execution record 2026-11-03 0910 queue run (partial, alliance group, observe-only, 238 Regular claimable, Gift Level 28 progress read, Issue #183 evidence)
   - source: ticker-1104 alliance-gifts execution record 2026-11-03 1113 queue run (done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked, Issue 183 evidence)
+  - source: alliance gifts execution record 2026-11-03 1619 queue run (ticker-1604 unit, done, 86 gifts, progress anomaly, Escape app-kill exit lesson)
 ---
 
 
@@ -788,6 +789,8 @@ one file per execution.
 - 1.17.0 (2026-11-03): observe-only scout read, Gift Level 28 progress 186,155,650 of 206,300,000 (up 407,310 from the 0650 close with no intervening gifts unit, not attributed to this account's claims, Issue #183), 238 Regular gifts claimable observed only and never claimed by the scout unit, Premium visible rows all Claimed with below-fold rows unverified so the Premium tab dot stays unexplained as in the 0650 residual dot, and the Alliance entry re-grounded at [903,699] against the withdrawn (903,787) Mail centre, folded from the 0910 scout read.
 
 
+- 1.19.0 (2026-11-03): dialog-confirmed 66 Regular and 20 Premium (86 total), Gift Level 28 progress 187,230,470 to 187,247,840 of 206,300,000 (plus 17,370), Wars mis-tap at (903,657) against the re-grounded Alliance centre (934,705) and Gifts centre (315,608), per-step progress deltas not equal to per-gift labels as further Issue #183 evidence commented by this run, and the Escape app-kill exit lesson as a new standing rule (panel back arrow fresh-grounded per panel, never a keyboard key), folded from the 1619 gifts unit.
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -839,3 +842,96 @@ one file per execution.
   unit only bounds it to units where the counter is
   read cleanly around the claim. No earlier claim
   superseded.
+
+## What the 2026-11-03 1619 unit added - done, 86 gifts, progress deltas unexplained, Escape quits the app
+
+- Ticker-1604, unit gifts-2026-11-03-1430, about
+  16:05 to 16:19 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-gifts/1619-queue-run.md`.
+- Entry, re-grounded fresh: the first Alliance tap at
+  norm (903,657) opened Alliance Wars, not the
+  Alliance panel - that point is the wrong button for
+  this activity, the same Wars mis-tap class as the
+  1718 and 0308 units. The correct Alliance button
+  was re-grounded fresh at norm (934,705), matching
+  the prior grounded centre (934,705), and opened
+  the Alliance panel ([AP3x] The Apex, 94/100).
+  Alliance Gifts button grounded fresh at norm
+  (315,608), matching the prior grounded centre
+  (315,608); the tap opened Alliance Gifts. Its red
+  dot was visible on entry.
+- Regular tab, read live: Gift Level 28, progress
+  187,230,470 of 206,300,000, Claim All badge 60.
+  Claim All at (500,935) claimed 61 Regular gifts by
+  its summary dialog (one arrived between the badge
+  read and the tap). Progress after the dialog read
+  live 187,231,080 (plus 610, exactly 61 x 10).
+- After dismissing the dialog with an empty-area tap,
+  one new Regular gift had arrived (Claim All badge
+  1). Claim All again claimed 1 Regular gift by its
+  summary dialog. Progress after read live
+  187,231,190 (plus 110 for that one gift - see the
+  progress note below).
+- Premium tab, read live: Claim All badge 20, with
+  visible rows (SSR) plus 200 x2 and (R) plus 50 x2
+  from Premium Training Pass and Advanced Training
+  Pass purchases. The Hide your name on Gifts
+  checkbox read unchecked on entry and was left
+  untouched. Claim All at (735,935) claimed 20
+  Premium gifts by its summary dialog, matching the
+  badge. After dismissing the dialog, rows read
+  Claimed, no Claim All button remained on the
+  Premium tab, and progress read live 187,237,590.
+- Completion sweep: back on the Regular tab, 3 more
+  Regular gifts had arrived during the Premium claim
+  (Claim All badge 3, three unclaimed rows visible).
+  Claim All claimed 4 Regular gifts by its summary
+  dialog (one more arrived between the badge read
+  and the tap). Final progress read live 187,247,840
+  of 206,300,000, rows read Claimed, and no Claim All
+  button remained on the Regular tab.
+- Closing figures: Gift Level 28 (unchanged);
+  progress 187,230,470 to 187,247,840 (plus 17,370);
+  Regular claimed 66; Premium claimed 20; total 86.
+  The unit closes done on the summary-dialog counts.
+- Progress note, Issue #183 evidence commented there
+  by this run (not a closure claim): the per-step
+  progress deltas do not equal the per-gift labels -
+  61 Regular gave plus 610 (exact), 1 Regular gave
+  plus 110, 20 Premium gave plus 6,400, and the final
+  4 Regular gave plus 10,250. Every progress figure
+  is a live screen read, verified by enlarged crops
+  of the progress bar, and every claimed count is a
+  summary-dialog count - so the progress bar movement
+  is recorded as observed and unexplained. One
+  hypothesis, not verified, is that the bar also
+  moves on other members' claims; it is left as an
+  open question in the record rather than filed as a
+  new Issue, because it is a single-unit anomaly and
+  no claimed count depends on it. Badge-versus-dialog
+  gaps (60 to 61, 3 to 4) are arrivals between the
+  badge read and the tap, not counter errors.
+- Exit lesson, new standing rule: the Gifts back
+  arrow at (62,948) returned to the Alliance panel,
+  where the Alliance Gifts button no longer carried
+  a red dot. The Alliance panel back arrow then took
+  two no-change taps, at (59,933) and at (62,948);
+  under rule R2 the tap method was ended there. A
+  keyboard Escape was then used as a pivot and it
+  QUIT the game app - Escape is a known app-kill for
+  this app and must NEVER be used again. The app was
+  relaunched, returned to the base view with no login
+  or takeover dialog, and the unit was closed from
+  there. All claims above were already completed
+  before the exit attempt, so no claim is in doubt.
+  The panel back arrow that worked at (164,931) in
+  the 1113 unit did not work at (59,933) or (62,948)
+  here, so the panel back arrow must be
+  fresh-grounded per panel, never inherited.
+- Follow-up for the next gifts unit: re-ground the
+  Alliance button and the Gifts button fresh (the
+  (903,657) Wars point is not the panel button); if
+  the Alliance panel back arrow does not respond
+  after fresh grounding, leave the panel open and
+  note it, rather than using any keyboard key. No
+  earlier claim superseded.

@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-03T19:45:00Z
-version: 1.20.0
+modified: 2026-11-04T00:36:47Z
+version: 1.21.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-0234 survivor-intake execution record 2026-11-03 0247 queue run (partial, bubble change not intake proof, re-ground before every tap)
   - source: ticker-0634 survivor-intake execution record 2026-11-03 0644 queue run (partial, gate line unverified, two grounding points rejected)
   - source: ticker-1034 survivor-intake execution record 2026-11-03 1050 queue run (partial, gate line not found, grounding timed out twice, no tap on unidentified markers)
+  - source: survivor-intake execution record 2026-11-03 1543 queue run (ticker-1534 unit, partial, gate-cluster grounding, no verified recruit)
 ---
 
 
@@ -999,6 +1000,8 @@ Measured on 2026-10-25.
 - 1.19.0 (2026-11-03): tenth distinct partial since the 1644 done (0644 unit, gate line explicitly unverified, close discipline held), upper-view grounding points (498,674) and (70,125) rejected as unreliable (map marker by the gold building, top bar) and neither tapped, session drop cc-316 to cc-318 transient with no state lost, Quick Dispatch not run with no verified intake, and Issue #168 evidence commented by this run, folded from the 0644 survivors record.
 
 
+- 1.21.0 (2026-11-03): twelfth distinct partial since the 1644 done (1543 unit, bottom-left gate cluster grounded in the central view at (103,665) and (135,655), tap changing only the gate region with no card so no verified recruit under rule R1, out-of-cluster re-ground point (235,615) rejected untapped, diamond counter 2,836 to 2,841 recorded unattributed with no popup), folded from the 1543 survivors record; Issue #168 evidence commented by this run.
+
 ## What the 2026-11-03 1050 unit added - gate line not found again, grounding timed out twice, no tap on unidentified markers
 
 - Ticker-1034, unit survivors-2026-11-03-1003, about
@@ -1045,4 +1048,55 @@ Measured on 2026-10-25.
   and verify a survivor figure before any tap; if
   the line still cannot be verified, close unverified
   again with this blocker named. No earlier claim
+  superseded.
+
+## What the 2026-11-03 1543 unit added - gate cluster grounded in the central view, no verified recruit, out-of-cluster point rejected
+
+- Ticker-1534, unit survivors-2026-11-03-1403, about
+  15:36 to 15:43 local, status partial. Evidence in
+  `_records_/2026-11-03/survivor-intake/1543-queue-run.md`.
+- Gate cluster confirmed in the central base view, no
+  pan needed: fresh visual grounding on the live frame
+  found two survivor points at the bottom-left gate
+  cluster, norm (103,665) and (135,655), in the region
+  of the question-mark bubbles at the left fence edge.
+  This supports the 1050 follow-up: start at the gate
+  with a fresh grounding, and do not pan to the upper
+  view first, where the 0644 unit found no verifiable
+  line.
+- Tap 1 at the first grounded point (103,665):
+  dispatched, with a measured visual change in the
+  gate region [46,600,156,725]. No survivor card,
+  dialog, name, role or Recruit button was read after
+  the tap, so no recruit is claimed as verified. Bubble
+  change alone is not an intake under rule R1, as in
+  the 0247 unit.
+- Re-grounding on the post-tap frame returned a single
+  point at norm (235,615), which does not sit on the
+  bottom-left gate cluster and was rejected as
+  unreliable. No second tap was made: the 0247 unit's
+  stale-figure tap misfired onto a squad marker, and
+  tapping an unidentified marker risks a dispatch. The
+  reject-out-of-cluster discipline from the 0644 unit
+  is re-affirmed here.
+- HUD note, unattributed: the top-right diamond
+  counter read 2,836 before the tap and 2,841 after
+  it. No reward popup was read, so this change is
+  recorded as observed only and is NOT attributed to
+  the tap. A counter delta without a popup is never a
+  verified gain.
+- Quick Dispatch did not run: nothing verified to
+  post. No building panel was opened, no purchase
+  tapped, no other activity's work done.
+- Why partial, not done: twelfth distinct partial
+  since the 1644 done (0247 ninth, 0644 tenth, 1050
+  eleventh, this unit twelfth), gate line explicitly
+  unverified, close discipline held. Tracker
+  untouched.
+- Follow-up for the next survivors unit: start at the
+  gate with a fresh grounding on the live frame and
+  verify a survivor figure before any tap; if the
+  grounding returns a point outside the gate cluster,
+  reject it and close unverified with this blocker
+  named, rather than tapping it. No earlier claim
   superseded.
