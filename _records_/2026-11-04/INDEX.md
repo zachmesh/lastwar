@@ -271,3 +271,22 @@ of 2026-10-28.
   No earlier claim superseded; no new issue filed.
   Full record:
   _records_/2026-11-04/knowledge-organization/0132-run.md.
+
+## 01:32 to about 01:38 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-0138.
+  Own PRs checked first (only records PRs open, none owned);
+  open tooling issue 251 taken for its missing measurement:
+  the jam itself (records PR 207 conflict) is not a tool
+  code defect, but the issue's verification method - the
+  next retro recomputing both pools at its snapshot - had
+  no reproducible tool. Built _tools_/pool_gap.py:
+  branch-vs-live done-in-window gap, per-date gaps,
+  inbox past-expiry and inbox-done overlap, verdict on
+  #251's closure rule (absolute gap under 10 and branch
+  inbox past-expiry 0). PR 262 opened (Owner:
+  lastwar-tool-developer, Refs #251); issue 251 commented,
+  not closed. Validation: py_compile clean, 6 fixture
+  scenarios on isolated scratch pools under /tmp, all
+  passed, live pool never used for validation.
+  Full detail in tool-development/0138-run.md.
