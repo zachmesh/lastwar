@@ -197,3 +197,22 @@ of 2026-10-28.
   pass stands, not force-merged. No owner-gated PR.
   Main synced back to the local clone by bundle.
   Full detail in pr-integration/0050-run.md.
+
+## 01:00 to about 01:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-0100.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR open. Records PRs 258
+  (2026-11-04, head 165a49af2) and 256 (2026-11-03, head
+  a8ddb8eca) await the 03:00 batch, both merge-tree
+  clean. Records PR 255 (2026-11-02, head 248677fc0)
+  newly found conflicting on
+  _logs_/repo-actions/action-log.jsonl (append-append
+  against current main 682dc663d) and commented, not
+  force-merged; it awaits the 03:00 batch once resolved.
+  Records PR 187 (2026-11-01, head 2be5df83) still
+  conflicted on the same file, re-verified against new
+  main, the conflict comment from the 2345 pass stands,
+  not force-merged. No owner-gated PR, no merge, no
+  sync-back owed. Full detail in
+  pr-integration/0100-run.md.
