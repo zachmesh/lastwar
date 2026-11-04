@@ -3291,3 +3291,18 @@ of 2026-10-28.
 ## 19:39 to about 19:50 - PR catch-all pass
 
 - No-op pass: 4 open PRs scanned (246, 245, 207, 187), all with matching named owners, none owned by this job; prior adoption PR 137 stays merged; PRs 244, 243 and 236 merged between passes. 40 open issues triaged, all class-labeled, one new (247) already labeled knowledge. Owner-decision issues over 24 hours: 132 (building/research deferred, statement current) and 154 (Season Photo decision, unchanged). Full detail in pr-catchall/1939-run.md.
+
+## 19:40 to about 19:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-03-1940. Staged 6
+  units by plan for the 2026-11-04 0657 and 0700 slots
+  (passes, secrets, treasures, trucks, events,
+  scout-midday; already_present 63, skipped_done_current
+  0, reaped 0, expired 0). Pre-reset sweep pair for
+  tonight's reset already in the done pool (chain
+  pre-reset-sweep-2026-11-03, produced by the 1740 run),
+  so this run enqueued none. Scout diff on the Nov 3
+  observation (last updated 13:45 local) applied with
+  all zero counts, 0 withdrawals. Pool inbox 70,
+  claimed 1, done 754, upcoming 49. Full detail in
+  queue-planning/1940-run.md.
