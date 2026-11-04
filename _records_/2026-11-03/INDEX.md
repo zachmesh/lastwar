@@ -3136,3 +3136,15 @@ of 2026-10-28.
   and re-commented; records PR 187 conflict carried,
   head unchanged. Full detail in
   pr-integration/1815-run.md.
+
+## 18:30 to about 18:33 - Integrator pass, no merges (non-batch)
+
+- Integrator pass pr-integration-2026-11-03-1830.
+  Non-batch pass per the checker (outside every batch
+  window, next batch 19:00): no knowledge or code PR
+  was open. Records PR 236 (2026-11-02) clean and
+  awaiting the 19:00 batch; records PR 207 conflict
+  re-verified at new head 0033d72487 (same two files)
+  and re-commented; records PR 187 conflict carried,
+  head unchanged. Full detail in
+  pr-integration/1830-run.md.
