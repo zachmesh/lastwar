@@ -31,8 +31,16 @@ outputs in an output directory:
      frontmatter counts (basis recorded as frontmatter-fallback,
      classified counts kept alongside), so a narrative-only
      observation never reads as zero unexplained when its own
-     frontmatter says otherwise; a structured observation is
-     never overridden;
+     frontmatter says otherwise; when the frontmatter carries
+     no unexplained counter either, the headline unexplained
+     figure falls back one more tier to the sum of the
+     narrative accounting sections stating a count (basis
+     recorded as narrative-fallback, with the caveat that
+     chained passes may re-state the same dot, so the sum is
+     a section total, not a distinct-dot count); a structured
+     observation is never overridden, and the narrative seen
+     total is never used as items observed, because seen
+     counts red-dot signals, not observed items;
   4. the promotion proposals - one entry per registered
      candidate with a completed exploration unit in the pool,
      naming the exploration evidence and the decision owed
@@ -331,7 +339,8 @@ ACCOUNTING_FRONTMATTER = {
     "unexplained": "unexplained_red_dots",
 }
 _ACCOUNTING_LINE = re.compile(
-    r"^-\s*(seen|explained|unexplained)\s+(\d+)\b",
+    r"^-\s*(seen|explained|unexplained)"
+    r"(?:\s+red\s+dots?)?\s*:?\s*(\d+)\b",
     re.IGNORECASE)
 
 
@@ -340,14 +349,20 @@ def parse_narrative_accounting(text):
     observation, in file order. A section starts at a heading
     naming red dot accounting and ends at the next heading;
     its Seen, Explained and Unexplained lines carry that
-    pass's own counts. A count a section does not state
-    reads as None, never as zero, and a carried-forward line
-    (for example "Carried unexplained from ...") is not a
-    count line, so carried dots are never double-counted.
-    Structured items are untouched: this reads the
-    narrative's own accounting only, so the coverage report
-    can reconcile it against the frontmatter day counters
-    instead of presenting either figure unexamined."""
+    pass's own counts, in either the bare form ("Seen 3:")
+    or the spelled-out form ("Unexplained red dots: 0.").
+    A count a section does not state reads as None, never
+    as zero - a line naming a dot without a number (for
+    example "Unexplained: the Alliance Wars dot") states
+    no count and invents none, so the same dot re-stated
+    by a later pass is never counted twice by inference -
+    and a carried-forward line (for example "Carried
+    unexplained from ...") is not a count line, so carried
+    dots are never double-counted. Structured items are
+    untouched: this reads the narrative's own accounting
+    only, so the coverage report can reconcile it against
+    the frontmatter day counters instead of presenting
+    either figure unexamined."""
     sections = []
     current = None
     for raw in text.splitlines():
@@ -1095,29 +1110,50 @@ def run(args):
     # item parsed, the classified counts are 0 by construction,
     # not a finding, and the evaluation metric reads the
     # headline - so a narrative-only day would report 0 items
-    # and 0 unexplained dots against its own frontmatter.
+    # and 0 unexplained dots against its own accounting.
     # The headline then reports the observation's own
-    # frontmatter counts; the classified counts are kept
-    # alongside so the basis stays auditable. A structured
-    # observation (at least one parsed item) is never
-    # overridden, and an observation with neither parsed items
-    # nor frontmatter counters stays honestly empty.
+    # frontmatter counts first; when the frontmatter carries
+    # no unexplained counter, the unexplained headline falls
+    # back one more tier to the narrative accounting section
+    # total (issue 149, 2026-11-03 shape: narrative sections
+    # with no frontmatter counters at all). The narrative
+    # seen total is never used as items observed: seen counts
+    # red-dot signals, not observed items, so the items
+    # headline stays the classified count on that tier. The
+    # classified counts are kept alongside so the basis stays
+    # auditable. A structured observation (at least one parsed
+    # item) is never overridden, and an observation with
+    # neither parsed items, frontmatter counters nor a stated
+    # narrative unexplained total stays honestly empty.
     classified_items = len(items)
     classified_unexplained = unexplained_count
     headline_items = classified_items
     headline_unexplained = classified_unexplained
-    fallback_used = False
+    frontmatter_used = False
+    narrative_used = False
     if classified_items == 0:
         if day_counters["items_observed"] is not None:
             headline_items = day_counters["items_observed"]
-            fallback_used = True
+            frontmatter_used = True
         if day_counters["unexplained_red_dots"] is not None:
             headline_unexplained = \
                 day_counters["unexplained_red_dots"]
-            fallback_used = True
-    coverage_basis = ("frontmatter-fallback" if fallback_used
-                      else "classified" if classified_items > 0
-                      else "empty")
+            frontmatter_used = True
+        elif narrative_accounting["totals"]["unexplained"] \
+                is not None:
+            headline_unexplained = \
+                narrative_accounting["totals"]["unexplained"]
+            narrative_used = True
+    if classified_items > 0:
+        coverage_basis = "classified"
+    elif frontmatter_used and narrative_used:
+        coverage_basis = "frontmatter+narrative-fallback"
+    elif frontmatter_used:
+        coverage_basis = "frontmatter-fallback"
+    elif narrative_used:
+        coverage_basis = "narrative-fallback"
+    else:
+        coverage_basis = "empty"
     coverage = {
         "date": date, "observation": args.observation,
         "items_observed": headline_items,
@@ -1151,6 +1187,46 @@ def run(args):
     }
     cov_path = os.path.join(
         out_dir, f"scout-coverage-{date}.md")
+    narrative_seen = narrative_accounting["totals"]["seen"]
+    narrative_unexplained = \
+        narrative_accounting["totals"]["unexplained"]
+    if coverage_basis == "frontmatter-fallback":
+        basis_note = (" (no structured observed_items parsed; "
+                      "the items and unexplained figures above "
+                      "are the observation frontmatter counts, "
+                      f"classified items {classified_items}, "
+                      "classified unexplained "
+                      f"{classified_unexplained})")
+    elif coverage_basis == "narrative-fallback":
+        basis_note = (" (no structured observed_items parsed "
+                      "and no frontmatter counters stated; "
+                      "the unexplained figure above is the sum "
+                      "of the narrative accounting sections "
+                      "stating a count, so chained passes may "
+                      "re-state the same dot and the sum is a "
+                      "section total, not a distinct-dot "
+                      "count; the items figure above is the "
+                      "classified count, not a day total - "
+                      "the narrative seen total is "
+                      f"{narrative_seen} red-dot signals, not "
+                      "observed items)")
+    elif coverage_basis == "frontmatter+narrative-fallback":
+        basis_note = (" (no structured observed_items parsed; "
+                      "the items figure above is the "
+                      "observation frontmatter count, the "
+                      "unexplained figure above is the sum of "
+                      "the narrative accounting sections "
+                      "stating a count, so chained passes may "
+                      "re-state the same dot and the sum is a "
+                      "section total, not a distinct-dot "
+                      "count)")
+    elif coverage_basis == "empty":
+        basis_note = (" (no structured items parsed and no "
+                      "frontmatter counters stated; the zeros "
+                      "above are an absence of signal, not a "
+                      "finding)")
+    else:
+        basis_note = " (classified structured items)"
     cov = ["---",
            f"title: Scout Coverage {date}",
            f"created: {iso(stamp)}",
@@ -1177,28 +1253,25 @@ def run(args):
            f"{coverage['candidates_registered']})",
            f"- unexplained red dots - "
            f"{coverage['unexplained_red_dots']}",
-           f"- coverage basis - {coverage_basis}"
-           + (" (no structured observed_items parsed; the "
-              "items and unexplained figures above are the "
-              "observation frontmatter counts, classified "
-              f"items {classified_items}, classified "
-              f"unexplained {classified_unexplained})"
-              if coverage_basis == "frontmatter-fallback"
-              else " (no structured items parsed and no "
-              "frontmatter counters stated; the zeros above "
-              "are an absence of signal, not a finding)"
-              if coverage_basis == "empty"
-              else " (classified structured items)"),
+           f"- coverage basis - {coverage_basis}{basis_note}",
            f"- promotion proposals - "
            f"{coverage['promotion_proposals']} (registered "
            f"candidates with a completed exploration unit, "
            f"decision owed)"]
     cov += ["", "## Observation day counters", ""]
     if all(v is None for v in day_counters.values()):
-        cov.append("The observation carries no day counters in "
-                   "its frontmatter - the classified counts "
-                   "above are the only signal, and no day "
-                   "total is claimed.")
+        if narrative_used:
+            cov.append("The observation carries no day counters "
+                       "in its frontmatter - the unexplained "
+                       "headline above is the narrative "
+                       "accounting section total in the next "
+                       "section, and the items figure is the "
+                       "classified count only.")
+        else:
+            cov.append("The observation carries no day counters "
+                       "in its frontmatter - the classified "
+                       "counts above are the only signal, and "
+                       "no day total is claimed.")
     else:
         for key in DAY_COUNTER_KEYS:
             value = day_counters[key]
@@ -1333,8 +1406,18 @@ def run(args):
           "---", "",
           f"## Perception coverage - {date}", ""]
     day_unexplained = day_counters["unexplained_red_dots"]
+    narrative_total_unexplained = \
+        narrative_accounting["totals"]["unexplained"]
     if coverage["items_observed"] == 0:
-        if day_unexplained is None and \
+        if narrative_used:
+            rs.append(
+                f"No structured items were parsed, but the "
+                f"narrative accounting sections total "
+                f"{narrative_total_unexplained} unexplained "
+                f"red dot(s) (sum of the sections stating a "
+                f"count; chained passes may re-state the same "
+                f"dot) - not zero.")
+        elif day_unexplained is None and \
                 day_counters["items_observed"] is None:
             rs.append("No items were observed in this pass, so "
                       "this section carries no coverage claim - "
@@ -1377,6 +1460,21 @@ def run(args):
                   "observed and unexplained figures above are "
                   "the observation frontmatter counts, not "
                   "classified items.")
+    elif coverage_basis == "narrative-fallback":
+        rs.append("- coverage basis - narrative fallback: "
+                  "no structured items were parsed and no "
+                  "frontmatter counters stated, so the "
+                  "unexplained figure above is the sum of the "
+                  "narrative accounting sections stating a "
+                  "count, not classified items; the observed "
+                  "figure is the classified count.")
+    elif coverage_basis == "frontmatter+narrative-fallback":
+        rs.append("- coverage basis - frontmatter+narrative "
+                  "fallback: no structured items were parsed; "
+                  "the observed figure above is the "
+                  "frontmatter count and the unexplained "
+                  "figure above is the sum of the narrative "
+                  "accounting sections stating a count.")
     elif coverage_basis == "empty":
         rs.append("- coverage basis - empty: no structured "
                   "items parsed and no frontmatter counters "
