@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T14:35:00Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-1204 secret-missions execution record 2026-11-03 1223 queue run (partial, post never entered, base view panned between measurement and tap)
   - source: ticker-0234 secret-missions execution record 2026-11-04 0248 queue run (partial, post entered, Claim buttons unresponsive)
   - source: ticker-0534 secret-missions execution record 2026-11-04 0545 queue run (partial, second consecutive Claim-blocker partial, four variants tried, foreground still untested, Issue #171 commented by the executor)
+  - source: ticker-0834 secret-missions execution record 2026-11-04 0847 queue run (partial, third consecutive Claim-blocker partial, same four finished tasks still unclaimed, badge still 9, R2 metadata write)
 ---
 
 
@@ -113,6 +114,7 @@ post screen carries two sibling tabs registered as their own types -
   2026-10-25, in the morning batch and again in the evening. Each
   claimed card is stamped PERFECT in gold, and the Your Tasks badge
   clears.
+- Blocker status, R2 metadata write 2026-11-04 0847 (third consecutive Claim-blocker partial: 0248, 0545, 0847): the Claim buttons have now failed in three consecutive units, so under queue rule R2 as corrected in the 0545 section this blocker is written into the activity metadata here, the entry route changes before any further unit of this type runs, and the streak is named in that day's round summary. Entry-route change owed: attempt a genuine foreground activation (Dock or app-icon activation) before any Claim tap - background taps failed in all three units, and a true foreground tap was never actually achieved (the 0545 title-bar click did not raise the window; click_foreground is unavailable for this game). A fourth identical partial is a process failure reported to the owner.
 - Morning batch claimed - UR Rescue Officer, UR Rescue Missing
   Agent, SSR Search for Missing Refugees, SSR Protect Refugee Camp.
   Rewards included Treasure Map Fragments number 7, 4 and 1, a full
@@ -1050,3 +1052,13 @@ secrets-2026-10-31-2257, status partial).
 - Rule R2 status, corrected: the design text requires a changed method on the second consecutive partial (satisfied here: window move, long-press, different row, title-bar raise) and only the third consecutive partial writes the blocker into the activity metadata, changes the entry route before any further unit of this type runs, and is named in that day's round summary. A fourth identical partial is a process failure reported to the owner. This corrects the 0248 section's wording, which had the metadata write falling due on the second partial.
 - Issue linkage: the executor commented on existing open issue #171 (Green Claim buttons unresponsive to background input across two screens) with this unit's evidence; related open issue #165 covers the same screen's Mega Deploy and Assist buttons. No new issue filed here. Next unit: try a genuine foreground route (for example Dock or app-icon activation) before concluding the buttons are dead.
 - Costs: about 6 minutes, no stamina or items spent.
+
+## What the 2026-11-04 0847 unit added - THIRD consecutive Claim-blocker partial, R2 metadata write, record claim corrected
+
+- Unit secrets-2026-11-04-0657 by ticker-0834, about 08:46 to 08:47 local, status partial. Session cc-440 (restarted after cc-439 dropped mid-pass). Evidence in `_records_/2026-11-04/secret-missions/0847-queue-run.md`. No diamonds, money, Trade Contracts or other spending; no Mega Refresh tapped. No different-device dialog appeared.
+- Entry, worked: Secret Command Post opened from the base left-column slot at norm 53,625 and its title verified before any further tap. No other activity's work was touched on the way in: during the earlier trucks unit the same slot opened this post and nothing inside it was tapped then.
+- Live state, read live: Assist Allies 5/5, Plunder Others counter reads 4/3 as displayed, Your Tasks badge 9. Four finished tasks visible, each with a green Claim button: UR Rescue Test Subject (Lv.5), UR Rescue Scientist (Lv.5), SSR Protect Refugee Camp (Lv.5), SSR Search for Missing Refugees (Lv.5) - the identical four as the 0545 read, still unclaimed. Per the standing rule, claiming one finished task would have collected all finished tasks at once - that collection did not happen.
+- Blocker, tap method (rule R2): two taps on the first row's Claim button at norm 787,452 showed no change, and a pivot tap on the second row's Claim button at norm 787,548 also showed no change. A screenshot after all three taps verifies the screen unchanged: all four Claim buttons still present, Your Tasks badge still 9, so no claim was collected. Navigation taps in the same session landed (tab switch in the treasures unit), so input reaches the game - only the Claim buttons do not respond, as in 0248 and 0545.
+- CORRECTION, recorded here, record file untouched (append-only): the 0847 record states this is the "first such secrets blocker in this pass" and that "previous secrets units today closed done". That is contradicted by this profile's own 0248 and 0545 sections, folded from those units' records: 0248 (four SSR claims blocked, 5 background taps) and 0545 (second consecutive Claim-blocker partial, four input variants) both closed partial on this same blocker. The 0847 unit is therefore the THIRD consecutive Claim-blocker partial, not the first. Under queue rule R2 as corrected in the 0545 section, the third consecutive partial writes the blocker into the activity metadata (see "How claiming works"), changes the entry route before any further unit of this type runs, and is named in that day's round summary; a fourth identical partial is a process failure reported to the owner.
+- Not reached in this unit: Mega Deploy of the remaining pending tasks (UR Only off, no Mega Refresh first since today is an Age of Science duel day, not a UR day) and the Reward Recovery check. Because Mega Deploy was not reached, this unit is NOT evidence for Issue #165 (Mega Deploy and Assist buttons) - it is evidence for Issue #171 (green Claim buttons unresponsive), commented there by this run together with the session-dependence note from the 0914 daily-missions unit (buttons responded in session cc-441). No new issue filed: #171 already covers this blocker.
+- Game left on the Secret Command Post screen for the next unit to resume from. Tracker untouched, per the rule for partial units; the next tick re-produces secrets and resumes the claim.
