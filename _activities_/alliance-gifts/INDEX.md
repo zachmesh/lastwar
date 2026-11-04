@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T13:37:48Z
+modified: 2026-11-04T16:37:19Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-2204 alliance-gifts execution record 2026-11-03 2208 queue run (done, 235 Regular and 20 Premium, progress deltas as Issue #183 evidence, panel row geometry re-confirmed)
   - source: ticker-0204 alliance-gifts execution record 2026-11-04 0216 queue run (done, 10 Regular exact plus 100, Premium tab point corrected to 694,269, Issue 183 evidence)
   - source: ticker-0434 alliance-gifts execution record 2026-11-04 0450 queue run (done, 20 Regular plus 6 Premium, progress exact plus 200 within the unit, cross-unit rise 118,040 unexplained, Issue 183 evidence)
+  - source: ticker-0804 alliance-gifts execution record 2026-11-04 0820 queue run (done, 34 Regular and 2 Premium, label-text Alliance entry, Premium Claim All sits right, fourth exact within-unit progress window, Issue #183)
 ---
 
 
@@ -1051,3 +1052,13 @@ one file per execution.
 - Premium tab: a first tap at norm (685,242) did not switch tabs; the grounded Premium point norm (688,255) did. The tab point drifts per session - the 0216 point (694,269) also worked, while (631,242) and (685,242) are recorded misses. The list showed Alliance Gift (SSR) x2, (UR) and (R) from ally purchases. A tap at norm (498,947) missed Claim All and hit the "Hide your name on Gifts" area - Premium Claim All sits RIGHT, unlike the centred Regular button; the tap at norm (763,947) claimed a total of 6 Premium Alliance Gifts, per the summary dialog.
 - Verification: after both claims the Alliance Gifts entry red dot was gone on the Alliance panel. The game was left on the base screen via the grounded back arrow norm (162,935); the eyeballed (55,947) point missed the hit area.
 - Issue #183, two-sided evidence commented there by this run (not a closure claim): within the unit the counter moved exactly by its own claims (+200), but the before-read (188,412,330) sits 118,040 above the 0216 after-read (188,294,290) with no intervening gifts unit in this record set, so the cross-unit rise is still unexplained and remains the open part of #183. Nothing spent; Premium gifts come from allies' purchases, not this account.
+
+## What the 2026-11-04 0820 unit added - 34 Regular and 2 Premium, label-text Alliance entry, Premium Claim All sits right, fourth exact progress window, done
+
+- Unit gifts-2026-11-04-0630 by ticker-0804, about 08:20 local, status done. Session cc-438. No 'active on a different device' dialog appeared; no takeover was needed. Evidence in `_records_/2026-11-04/alliance-gifts/0820-queue-run.md`.
+- Entry, changed method (queue rule R2): two background taps on the Alliance shield icon ((896,673) and (900,668)) produced no change, so the method was dropped and the Alliance label text area (900,700) was tapped instead, which opened the Alliance panel ([AP3x] The Apex, 94/100 members). Contrast the donations unit the same morning, whose shield tap (929,697) opened on the first try - entry points drift per session, so when shield-icon taps fail, the label-text area is the fallback to try. Alliance Gifts carried a red dot and was tapped at (312,568).
+- Regular tab: Claim All pressed once. The summary dialog read 'A total of 34 Regular Alliance Gifts were claimed this time'. Gift Level 28 progress moved 188,573,310 to 188,573,650 of 206,300,000 (plus 340, i.e. 34 gifts at 10 points each, exact). The dialog was dismissed by tapping it.
+- Premium tab: the first Claim All tap at (498,946) missed, because on this tab the Claim All button sits at the bottom right (the bottom left holds a 'Hide your name on Gifts' control). The corrected tap at (810,946) produced the summary 'A total of 2 Premium Alliance Gifts were claimed this time' (the tab's badge had read 2: one SSR at plus 200 and one R at plus 50; the lower SSR and UR rows were already Claimed). This re-confirms the 0450 lesson that Premium Claim All sits RIGHT, unlike the centred Regular button (the 0450 point was (763,947), session drift).
+- Exit note: the gifts screen was exited to the Alliance panel with its back arrow, but the Alliance panel's own back arrow then took two background taps with no change (the same no-reach class as the shield icon above), so that method was stopped under rule R2 and the game was left on the Alliance panel, open and idle. No Esc key was used. The next unit should navigate from the Alliance panel rather than assuming the base screen.
+- Why done: both tabs were claimed per the owner rule (Claim All on Regular and Premium every round): 34 Regular plus 2 Premium, 36 gifts in total, both counts read live from the summary dialogs.
+- Issue #183, two-sided evidence commented there by this run (not a closure claim): within the unit the counter moved exactly by its own claims (plus 340) - the fourth exact within-unit window (1113, 0216, 0450, this unit) - but the before-read (188,573,310) sits 160,780 above the 0450 after-read (188,412,530) with no intervening gifts unit in this record set, so the cross-unit rise is still unexplained and remains the open part of #183. Nothing bought; no Alliance Store Buy opened; Premium gifts come from allies' purchases, not this account.
