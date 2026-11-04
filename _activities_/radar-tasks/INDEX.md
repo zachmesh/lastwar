@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T15:40:00Z
+modified: 2026-11-04T18:37:28Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-2304 radar-tasks execution record 2026-11-03 2317 queue run (partial, release day, story pin completed, March centre 500,751, 11 claims, no TIPS dialog, Issue #235 evidence)
   - source: ticker-0334 radar-tasks execution record 2026-11-04 0334 queue run (partial, Doom Elite pin identified, rally blocked Issue #268, stamina 156 over the old 120 cap, Rare Farmland pin identified)
   - source: ticker-0706 radar-tasks execution record 2026-11-04 0720 queue run (partial, release day, Doom Legion base claimed, Rare Farmland gathering dispatched, blue skull pin opens no card)
+  - source: ticker-1004 radar-tasks execution record 2026-11-04 1005 queue run (partial, duel day 3 release, 13 claims, points 206 to 219, stored 0 of 40, stamina 131 to 81, Doom Elite pin march left for the next unit per rule R7)
 ---
 
 
@@ -1819,3 +1820,15 @@ are still open, per the protocol.
 - Closing reads: radar points 206, stored 0/40, stamina 131 (136 minus the 5-point legion march; gathering cost 0). The legion march cost DID move the stamina read exactly, which contrasts with the 2317 story-march anomaly (shown -5, read stayed 120): the anomaly is specific to that story flow, not a general stamina-read rule. Restore line at close: 12 tasks restored in about 02:13, fully restore at 11-5 03:31:43 local time. Bottom bar at close: none (no pending claims). No diamonds, rubies or money spent; no paid button tapped; no Buy in any stamina panel (no stamina panel was opened).
 - Duel scoring, still owed: the VS panel was not opened in this unit, so duel score before/after was not read. The Issue #235 delta test (read duel score, claim one batch, read again) is still owed, and no duel-points figure is claimed from this unit. No TIPS dialog is reported in this unit.
 - Tracker untouched for partial, per the queue rules; the next tick re-produces this regular. No earlier claim superseded except the restore-figure confirmation and the Doom Legion tag qualification above.
+
+## What the 2026-11-04 1005 unit added - release day, 13 claims, points 206 to 219, Doom Elite pin march left open per rule R7
+
+- Unit radar-2026-11-04-1003 by ticker-1004, about 10:05 to 10:20 local, status partial. Duel day 3, release posture. Evidence in `_records_/2026-11-04/radar-tasks/1005-queue-run.md`. No diamonds spent, no paid button tapped.
+- Entry, continuity exact: radar entered from the base left icon column, dish icon re-grounded fresh on the current screenshot at norm about 53,705 before the tap; the tap opened the radar on the first try. Entry reads match the 0720 close exactly except for stored tasks: Lv.13, radar points 206, stored 3 of 40 (was 0 of 40 at the 0720 close), stamina 131. Restore line at entry: "12 Radar Task(s) will be restored in 05:23:45". The stored 3 of 40 at entry is the restore's movement since 0720, not a new stack.
+- Work done, both batches verified: Quick Execute batch 1 - 4 tasks, 40 stamina, stamina 131 to 91. Claim All batch 1 - 10 task rewards claimed, radar points 206 to 216. Popup rewards read: radar discs 100, EXP 10.7M, drone parts 726, blue item 1.6K, iron 2.4M, food 2.3M, coin 2.0M, Lv.1 chests 2. Quick Execute batch 2 - 1 task, 10 stamina, stamina 91 to 81; the bar offered this batch only after the first Claim All cleared, repeating the one-offer-at-a-time behaviour. Claim All batch 2 - 3 task rewards claimed, radar points 216 to 219; the second popup contents were not read before dismissal, so only the count (3) and the points delta are recorded for this batch. Totals: 13 claims, points +13 (exactly 1 per claim, as in every prior unit), stored closed at 0 of 40, bottom bar offer gone, stamina 131 to 81 (50 spent, exactly the two Quick Execute batches).
+- Restore line, recorded as read with an unexplained step: at close it read "12 Radar Task(s) will be restored in 05:21:57", a drop of only 01:48 against about 15 minutes of unit elapsed time. No mechanism is claimed for the small step; the two restore reads are kept as read and the discrepancy is not smoothed over.
+- Pin scan, finished-task pins confirmed as a class: the pins standing at entry (purple skull, purple handshake, grey skull, purple arrow, alliance portraits) cleared during the two Claim All batches - they were finished-task pins paying through Claim All, not separate pin tasks. A radar clear is therefore still never proven by the bottom bar alone, and a pin inventory at entry that later clears through Claim All is a finished-task pin inventory, not leftover work.
+- Remaining pin, identified: blue skull pin, tapped and identified as "Defeat Doom Elite 1 times" ("Traces of Doom Elites found. Please send Heroes for investigation ASAP."), countdown 01:26:27 at tap, rewards food 920.4K, iron 920.4K, coin 588.0K, radar discs 300, one blue item. Go opened the world map card: Lv.1 Doom Elite, stamina cost 20, suggested power 1,096,500, despawn timer 23:59:53. The pin countdown (01:26:27) and the world-card despawn timer (23:59:53) are different timers and are not merged here.
+- Remaining work, rule R7: the march was NOT started - the unit 15 minute cap was reached with the card open on the target. No stamina was spent on the pin and no attack was launched. Per rule R7, the Doom Elite march is the first action of the next radar unit: the card is already open on the target, cost 20 stamina, suggested power 1,096,500, countdown about 01:26 at 10:19 local.
+- Qualification against the 0720 section, stated not smoothed over: the 1005 record does not record the remaining pin's map position, so this section does NOT assert it is the 0720 centre-right blue skull pin (which opened no card on three taps and a long-press). Cross-check, not an assertion: the 1005 pin reward set (food 920.4K, iron 920.4K, coin 588.0K, radar discs 300, one blue item) is identical to the 0334 Doom Elite pin reward set, and its countdown decay is roughly consistent (07:56:50 at about 03:34 falling to 01:26:27 at about 10:19, about 6:30 of drop over about 6:45 elapsed), so the 1005 pin may be that same 0334 pin still standing - but with no position recorded in the 1005 record this is not asserted. The 0720 no-card skull question therefore stays open, and the 1005 identification does not close Issue #268 either: #268 is the Doom Elite rally button inert after the card opened in the 0334 unit, and this unit never reached a rally or march button - the march was deferred by the time cap, not blocked by a button. No comment was posted on #268: no rally attempt was made, so there is no new evidence for it.
+- Tracker untouched for partial, per the queue rules; the next tick re-produces this regular.
