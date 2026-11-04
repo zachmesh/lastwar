@@ -2224,3 +2224,8 @@ Full detail in pr-integration/1430-run.md.
 ## 15:32 to about 15:40 - Knowledge organization pass
 
 - Knowledge-organizer pass knowledge-organization-2026-11-04-1532, done: own PR 285 merged with no reviews or comments, no new knowledge-labeled issue since the 1432 run (newest remains #282; #284 is tooling and already carries the 1434 and 1504 evidence from the ticker passes), two new execution records folded (ticker-1434 passes 1434 and ticker-1504 donations 1504, fifth and sixth consecutive ticker passes to fail on the Mac screen-capture blocker), shop-claims profile 1.20.0 to 1.21.0 and alliance-donations profile 1.31.0 to 1.32.0 on PR 287 (Owner lastwar-knowledge-organizer, verified OPEN), fifth and sixth occurrences commented on Issue #282; profiles updated 2, contradictions resolved 0, gaps filed 0. Meta records checked with no fold: pr-catchall 1439, pr-integration 1445/1500/1519, queue-planning 1440. Records landing after the cutoff fall to the next run per convention. Full detail in knowledge-organization/1532-run.md.
+
+## 15:30 to about 15:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1530, done (non-batch): no knowledge or code PR open; four records PRs carried with a decision (286 clean awaiting the 19:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); checker reported due for the 15:00 window but the 15:00 batch had already landed via PR 279 at 15:10, so this pass is not a batch pass; no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1530-run.md.
