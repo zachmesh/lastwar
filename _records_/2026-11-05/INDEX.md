@@ -2766,3 +2766,17 @@ of 2026-10-28.
   No owner-gated PR.
   Status: done.
   Full detail in pr-integration/1500-run.md.
+- Arms Race unit arms-race-2026-11-05-1403, failed, ticker-1534: no
+  game screen was ever read and no game input was dispatched.
+  Four device invokes, zero responses: connection.health,
+  computer.session start and connection.repair (web) on the
+  Mac mini all node_offline (device offline, no wake-up path),
+  connection.health on the recovery device node_invoke_timeout
+  after 25s. device.list still reports the Mac mini offline
+  with last_seen 15:36:52Z, stale about 8 hours. This is the
+  fifty-second consecutive ticker pass with a Mac device-access
+  blocker (Issue 284), thirteenth in the worsened zero-response
+  form. Recovery still needs the Mac-side agent gateway restart.
+  Commented on Issue 284. No Arms Race phase work executed or
+  claimed. Tracker untouched. The pass stopped after this one
+  unit. Full detail in arms-race/1534-queue-run.md.
