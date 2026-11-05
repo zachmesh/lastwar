@@ -1790,3 +1790,21 @@ of 2026-10-28.
   restart before re-probing. Issue 284 commented.
   Full detail in perception-scout/0941-queue-run.md.
 
+## 09:45 to about 09:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0952.
+  Non-batch pass: the checker reported not due, next
+  batch point 11:00 (about 73 minutes away). Merged
+  knowledge PR 320 (organizer 0932, donations
+  0834 recurrence and stale-unit learning, merge
+  538072b06a) and code PR 321 (mac_capture_probe
+  1.1.0, CHANNEL_STALL diagnosis, Refs #284, merge
+  18b8b6da29); probe smoke test re-run on the branch
+  file before merging. Five records PRs (317, 310,
+  301, 265, 256) await the 11:00 batch, all
+  MERGEABLE CLEAN after re-check (transient UNKNOWN
+  while GitHub recomputed after main advanced). No
+  owner-gated PR. No comment posted. Local main
+  fast-forwarded to 538072b06a by bundle sync-back.
+  Status: done.
+  Full detail in pr-integration/0952-run.md.
