@@ -397,3 +397,20 @@ of 2026-10-28.
   the game is a windowed 1920x1080 window on an inactive
   Space, not in native fullscreen. Full detail in
   alliance-gifts/0204-queue-run.md.
+
+## 02:15 to about 02:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0215.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR was open. Five
+  records PRs await the 03:00 batch: PR 304
+  (2026-11-05, head d8f1cc0a), PR 301 (2026-11-04,
+  head bf9fb87e), PR 187 (2026-11-01, head 1efa3040),
+  PR 265 (2026-11-02, head 52295794) and PR 256
+  (2026-11-03, head b35684d2). PR 304 head advanced
+  since the 0200 pass by the 0200 run-record commit
+  and re-verified clean by scratch-worktree test merge
+  against remote main 80fd2598; the other four heads
+  unchanged and already verified clean at 0200. No
+  comments posted, no conflicts, no owner-gated PR.
+  Full detail in pr-integration/0215-run.md.
