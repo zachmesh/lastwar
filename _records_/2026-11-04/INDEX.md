@@ -2996,3 +2996,26 @@ Full detail in pr-integration/1430-run.md.
 
 - Tool-developer pass tool-development-2026-11-04-2332, done: no own tooling PR open and no unaddressed integrator feedback; re-tested the live Nov 4 observation against the current main tool and found the #149 qualified-count gap the 2232 no-op pass had not exercised - "Unexplained within the base group alone 2:" read as not stated, coverage headline 0 where the observation states 4; _tools_/scout_diff.py now reads a bounded scope qualifier between the keyword and the count, with a scope-identifier guard, so the Nov 4 headline reads 4 (sections 1-2 unexplained 2 each, totals 8/4/4), distinct stays a floor at 0 with 2 unnamed sections; PR 303 opened (branch work/scout-qualified-counts-149, commit bad10fef6), issue 149 commented, issue not closed (closure belongs to the daily retro); validation on scratch pools only (py_compile clean, 20 fixture assertions, Nov 1/Nov 3 full-tool outputs byte-identical to the pre-change tool, Nov 4 differing only in the unexplained figures, re-run byte-identical).
   Full detail in tool-development/2332-run.md.
+
+## 22:40 to about 22:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-2240, partial:
+  plan staged 11 units into the live pool (mail, help,
+  gifts, train, star-ceremony 2026-11-05 1030;
+  harvest, radar, survivors, training, donations,
+  arms-race 2026-11-05 1003; already_present 59,
+  reaped 0, expired 0, horizon to about 10:40 local
+  2026-11-05); pre-reset sweep step skipped, not the
+  1700 hour, and tonight's pair for the 19:00 reset is
+  already done (produced by the 1740 run), 0 enqueued
+  by this run; scout diff on the Nov 4 observation
+  applied with all zero counts (tenth consume), 0
+  withdrawals; pool inbox 74, claimed 0, done 870,
+  upcoming 50. Delivery failed: the VPS merge was
+  blocked by another job's staged state in
+  ~/lastwar-push (retried once); the commit stays on
+  local branch planner-2240-1104-delivery for the next
+  pass or the integrator. No new Issue filed. No new PR opened:
+  PR 293 for records/2026-11-04 already open,
+  awaiting the 2300 batch.
+  Full detail in queue-planning/2240-run.md.
