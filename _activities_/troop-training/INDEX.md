@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T20:41:21Z
+modified: 2026-11-05T02:34:55Z
 level: L1
-version: 1.10.0
+version: 1.23.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,19 @@ grounded_in:
   - source: troop-training execution record 2026-11-02 0322 queue run (ticker-0308 unit, partial, pistol tap opened upgrade panel)
   - source: troop-training execution record 2026-11-02 0811 queue run (ticker-0804 unit, partial, action-row taps switched to the world map)
   - source: troop-training execution record 2026-11-02 1146 queue run (ticker-1134 unit, partial, Lv.24 batch queued, Lv.20 pistol route retired)
+  - source: troop-training execution record 2026-11-02 1723 queue run (ticker-1703 unit, partial, Lv.24 panel not opened from inherited points)
+  - source: troop-training execution record 2026-11-02 1949 queue run (ticker-1934 unit, partial, drag blocked by open radial)
+  - source: troop training execution record 2026-11-02 2255 queue run
+  - source: ticker-0234 troop-training execution record 2026-11-03 0252 queue run (partial, road drag pans, centre drag does not, no tent)
+  - source: ticker-0634 troop-training execution record 2026-11-03 0647 queue run (partial, no tent in four framings, road drags pan)
+  - source: ticker-1034 troop-training execution record 2026-11-03 1051 queue run (partial, three framings no tent, road drag pans where centre drag does not, Issue 150)
+  - source: ticker-1534 troop-training execution record 2026-11-03 1552 queue run (partial, Lv.27 T9 batch queued and HUD-verified, tent blocker breakthrough, Issue 150)
+  - source: ticker-2134 troop-training execution record 2026-11-03 2144 queue run (partial, production grid is factories not tents, 1552 point selects Factory No.3 in this framing, Issue 150)
+  - source: ticker-0134 troop-training execution record 2026-11-04 0143 queue run (partial, factories confirmed again, 1552 tent point not re-tried, Tank Base Lv.28 to 29 upgrade in progress, Issue 150)
+  - source: ticker-0434 troop-training execution record 2026-11-04 0440 queue run (partial, tent point 585,548 selects Barracks Lv.24, Drill Ground Full confirmed live again, Training Count +666, Issue 150)
+  - source: ticker-0804 troop-training execution record 2026-11-04 0814 queue run (partial, 0440 tent point selects Arena in this framing, Lv.20 verified via Details, framing instability measured, Drill Ground Full neither reconfirmed nor cleared, Issue #150 comment deferred)
+  - source: ticker-1134 troop-training execution record 2026-11-04 1147 queue run (partial, fullscreen framing mismatch, four grounded tent taps opened no panel, centre drag moved no view, session drop reopened, Issue 150)
+  - source: ticker-1734 troop-training execution record 2026-11-04 1734 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eleventh consecutive ticker pass to fail this way, Issue 284)
 ---
 
 # Troop training
@@ -42,7 +55,7 @@ troops and riding the train are different systems and are kept apart.
   selected a wrong building (0917 unit, below).
 - A row of round buttons appears under the selected tent: paw,
   pistol and green up arrow. The green up arrow is the upgrade
-  shortcut - do not tap it. The paw-to-Details and pistol-to-TRAIN-UNITS mapping is camera-position dependent, not dead: the 0811 suspension is LIFTED IN PART 2026-11-02 (1146 unit), which re-grounded the Lv.24 row fresh (paw about 670,584; pistol 794,605; green up arrow 930,584) and opened TRAIN UNITS with the pistol tap. The 0811 world-map result and the 0322 upgrade-panel result do not carry across camera views. The standing rule is fresh grounding of the whole row in every unit's own view, never inherited coordinates. The Lv.20 pistol route is separately RETIRED 2026-11-02 (1146 unit): two fresh pistol points (818,584 and 829,575) both only cleared the selection, so the next Lv.20 attempt tries a different entry route (a long-press variant on the selected tent, or the paw Details route with freshly grounded coordinates).
+  shortcut - do not tap it. The paw-to-Details and pistol-to-TRAIN-UNITS mapping is camera-position dependent, not dead: the 0811 suspension is LIFTED IN PART 2026-11-02 (1146 unit), which re-grounded the Lv.24 row fresh (paw about 670,584; pistol 794,605; green up arrow 930,584) and opened TRAIN UNITS with the pistol tap. The 0811 world-map result and the 0322 upgrade-panel result do not carry across camera views. The standing rule is fresh grounding of the whole row in every unit's own view, never inherited coordinates. The 1552 unit extends the lifted-in-part pistol route to Lv.27 in its view: tent grounded at norm (630,592), pistol re-grounded at norm (612,608) before tapping, TRAIN UNITS opened with Lv.9 preselected. QUALIFIED 2026-11-03 (2144 unit): that same tent point (630,592), re-tried after a rightward drag re-framing, selected Titanium Alloy Factory No.3 Lv.30 in the 2144 framing, not a barracks tent - so the point is framing-bound, not a portable tent coordinate. Re-grounding in the unit's own view is mandatory, and a factory selection must never be re-tapped as if it were a tent. The Lv.20 pistol route is separately RETIRED 2026-11-02 (1146 unit): two fresh pistol points (818,584 and 829,575) both only cleared the selection, so the next Lv.20 attempt tries a different entry route (a long-press variant on the selected tent, or the paw Details route with freshly grounded coordinates).
 - In TRAIN UNITS, the tier cards run left to right with the highest
   unlocked tier preselected, the count slider sits at the Training
   Count cap, and the blue Train button starts the batch. The yellow
@@ -85,7 +98,7 @@ Observed in game on this account, first execution 2026-10-25.
   720.01, load 2200, HP 4726.34, attack 38.03, defense 7.55.
 - Lv.27 barracks - T9, count 726, cost 4.1M food and 4.1M iron, time
   1 day 10 hours 19 minutes. T9 stats - power 1352, morale 600.01,
-  load 2000, HP 4121.49, attack 33.13, defense 6.6.
+  load 2000, HP 4121.49, attack 33.13, defense 6.67.
 - Lv.24 barracks - T8, count 666, cost 2.9M food and 2.9M iron, time
   1 day 4 hours 20 minutes. T8 stats - power 1063 in game (one web
   table says 800 - the in-game figure governs), morale 520.63 (2026-11-02 live read, superseding the 2026-10-25 figure 510.01), load 1800, HP 3527.4, attack 28.37, defense 5.72 (superseding 5.65).
@@ -531,6 +544,224 @@ Observed in game on this account, first execution 2026-10-25.
   duplicate comment is filed here.
 
 
+## What the 2026-11-02 1723 unit added
+
+- Unit training-2026-11-02-1403 by ticker-1703, session
+  about 17:19 to 17:23, inside the pass budget, status
+  partial. No batch was queued. The tracker is left
+  untouched, so the next tick re-produces the regular.
+  Evidence in
+  `_records_/2026-11-02/troop-training/1723-queue-run.md`.
+- Inherited 1146 points did not reproduce in this camera
+  view: the Lv.24 tent point from the 1146 unit, norm
+  806,581, was tapped and no selection label or action
+  row was visible on the next screenshot; the Lv.24
+  pistol point from the 1146 unit, norm 794,605, was
+  tapped and the control reported only a small visual
+  change in the tent area, with no TRAIN UNITS panel
+  opened and the base screen otherwise unchanged. This
+  is the standing fresh-grounding rule cutting both
+  ways: the 1146 pistol entry was verified only in the
+  1146 camera view, and its coordinates are not a
+  reusable shortcut in any later view. The next unit
+  re-grounds the tent and the whole action row fresh
+  before tapping either point, and does not re-tap the
+  1146 points on a guess.
+- No training state was verified: Lv.24 was queued at
+  11:34 today for T8 x666 with a 1 day 4 hour timer, so
+  it is expected to still be busy, but its panel was
+  not read live in this unit and that is not claimed
+  as a verified state. Lv.27 and Lv.30 were not
+  inspected. No Drill Ground figure was read live in
+  this unit.
+- Drill Ground Full carried forward unverified a tenth
+  consecutive unit without a live read (1146 was the
+  ninth): no barracks was reached, so the 39,460 of
+  39,460 figure remains a 2026-10-31 read, neither
+  confirmed nor cleared here, and the 1146 successful
+  queue remains the counter-evidence against a
+  universal block, not a Drill Ground read.
+- HUD measured 2026-11-02 in this unit: food 387.7M,
+  iron 577.5M, coins 54.0M - matching the 1520 harvest
+  unit's HUD snapshot the same day, a consistent
+  stock picture, not a unit result. Base screen
+  confirmed live at entry; game left safe on the base
+  screen. No diamonds or money spent, no Finish Now,
+  no upgrade shortcut. The recurrence is a further
+  data point for open Issue #150, commented there by
+  the executor, so no duplicate comment is filed here.
+
+## What the 2026-11-02 1949 unit added
+
+- Unit training-2026-11-02-1803 by ticker-1934, session
+  about 19:48 to 19:49, inside the pass budget, status
+  partial. No batch was queued. The tracker is left
+  untouched, so the next tick re-produces the regular.
+  Evidence in
+  `_records_/2026-11-02/troop-training/1949-queue-run.md`.
+- Entry state: the squad-vehicle selection radial left
+  open by the previous survivors unit was still showing
+  on the base view at entry - a cross-unit handover
+  confirmed on screen.
+- New failure mode: an upward drag (norm 500,600 to
+  500,300) to expose the lower-middle barracks tents
+  did not pan the view at all; the screenshot after
+  the drag was unchanged, so no barracks tent was
+  brought into view and no tent point was tapped in
+  this unit. The drag may have been intercepted by
+  the open selection radial. Next-unit rule: close or
+  deselect any open selection radial before attempting
+  a pan drag; a drag that leaves the screenshot
+  unchanged is a blocked drag, not a "no tents here"
+  result.
+- No training state was verified: 0 barracks checked,
+  no TRAIN UNITS panel opened, no Drill Ground figure
+  read live in this unit. Lv.24 queued at 11:34 today
+  for T8 x666 per the 1723 record is carried as
+  expectation only, not a live read here.
+- Drill Ground Full carried forward unverified an
+  eleventh consecutive unit without a live read (1146
+  was the ninth, 1723 the tenth): no barracks was
+  reached, so the 39,460 of 39,460 figure remains a
+  2026-10-31 read, neither confirmed nor cleared here,
+  and the 1146 successful queue remains the
+  counter-evidence against a universal block, not a
+  Drill Ground read.
+- HUD measured in this unit: food 227.1M, iron 561.8M,
+  coins 5.9M - matching the 1945 harvest snapshot in
+  the same pass, a consistent stock picture, not a
+  unit result. Base screen confirmed live at entry;
+  game left safe on the base screen with the squad
+  radial still open; no action was taken from it.
+- The recurrence is a further data point for open
+  Issue #150, commented there by the executor, so no
+  duplicate comment is filed here.
+
+
+## What the 2026-11-02 2255 unit added
+
+- Unit training-2026-11-02-2203 by ticker-2234,
+  session about 22:52 to 22:55, status partial: 0
+  barracks verified, 0 batches queued, tracker
+  untouched, so the next tick re-produces this
+  regular. Evidence in
+  `_records_/2026-11-02/troop-training/2255-queue-run.md`.
+- Base screen confirmed live at entry; HUD food
+  230.0M, second top-bar 564.7M, coins 5.9M,
+  second-row first resource 18.7M, matching the
+  2247 harvest close. An "Alliance Gifts received!"
+  toast was visible at entry; it belongs to the
+  gifts regular and was not acted on from this
+  training unit.
+- Dragged the base view upward (500,700 to 500,400)
+  to expose the lower-middle barracks tents, per the
+  1949 unit's attempt. Unlike 1949, the drag did move
+  the view this time: the central cluster shifted to
+  the top of the screen and the lower area showed
+  empty snow, with no barracks tent brought into
+  view. No tent point was therefore tapped, and no
+  TRAIN UNITS panel was opened. Dragged back
+  (500,400 to 500,700) to restore the starting view.
+  Game left safe on the base screen.
+- No Drill Ground figure was read live in this unit,
+  and no Drill Ground Full state is claimed. The
+  2026-10-31 Drill Ground blocker in the activity
+  metadata is therefore neither confirmed nor
+  cleared here, and is carried unverified a twelfth
+  consecutive unit. The Lv.24 batch queued at 11:34
+  today (T8 x666, 1 day 4 hours, per the 1146 and
+  1723 records) is not a live read in this unit and
+  is not claimed as a verified busy state.
+- Why partial, not done: no barracks queue was
+  verified and no idle barracks was requeued, so the
+  "keep every barracks busy" standard is unmet. The
+  matching open issue is #150; this unit's
+  drag-moved-but-no-tent result is a further data
+  point for that issue, not a new issue.
+
+
+## What the 2026-11-03 0252 unit added - road drags pan, centre drags sometimes do not, still no tent
+
+- Unit training-2026-11-03-0203 by ticker-0234, about
+  02:52 local, status partial. Evidence in
+  `_records_/2026-11-03/troop-training/0252-queue-run.md`.
+- Entered from the survivors unit's top-edge panned view
+  (gate and formation slots 1/2/3 in frame). A centre
+  vertical drag (500,650 to 500,300), intended to return
+  to the central view, moved nothing: the next screenshot
+  kept the identical top-edge framing. A second vertical
+  drag on the left road surface (200,600 to 200,300) did
+  move the view, restoring the central cluster framing
+  (furnace centre, houses, same as the harvest unit's
+  start view). Drag-pan responsiveness therefore varies
+  by start surface: road drags pan, centre drags over
+  buildings or fields sometimes do not. This is a
+  further data point for Issue #150, not a new issue,
+  and it is commented onto #150 by this run.
+- The restored central view shows no barracks tent: the
+  lower-middle area holds the furnace and the house
+  cluster, with snow below. No tent point was therefore
+  tapped, and no TRAIN UNITS panel was opened.
+- No Drill Ground figure was read live in this unit,
+  and no Drill Ground Full state is claimed. The
+  2026-10-31 Drill Ground blocker in the activity
+  metadata is therefore neither confirmed nor cleared
+  here, now a thirteenth consecutive unit without a live
+  Drill Ground read.
+- The pass budget (about 25 minutes from the 02:35
+  token) ended during this unit, so the search for the
+  tents stops here rather than consuming another unit's
+  budget.
+- Result stats: target 4, achieved 0, verified no,
+  blocker category c. Partial: 0 barracks verified, 0
+  batches queued, tracker untouched, so the next tick
+  re-produces this regular.
+
+## What the 2026-11-03 0647 unit added - four framings, no tent, road drags pan again
+
+- Ticker-0634, unit training-2026-11-03-0603, about
+  06:47 local, status partial. Evidence in
+  `_records_/2026-11-03/troop-training/0647-queue-run.md`.
+- Tent search, four framings, no tent tapped: from the
+  survivors unit's upper view, a left-road drag
+  (200,600 to 200,300) restored the central view; a road
+  drag down (200,300 to 200,650) returned to the upper
+  view; two more road drags up (200,600 to 200,300,
+  twice) returned to the central view; a horizontal drag
+  (300,500 to 700,500) reached the right-side view (own
+  blue-roofed buildings on the left, neighbouring bases
+  on the right). No barracks tent was identified in any
+  framing: the central lower-middle holds the furnace
+  and the house cluster, the upper view holds the
+  Capitol pyramid and pink buildings, and the right-side
+  view holds tower and house buildings - none presented
+  as a barracks tent, and no TRAIN UNITS panel was
+  opened.
+- Drag-surface distinction re-confirmed, consistent
+  with the 0252 unit: road drags pan while centre
+  drags over buildings sometimes do not. This is a
+  further data point for Issue #150, commented onto
+  #150 by this run.
+- The 2026-10-25 "lower middle" tent description does
+  not match the current framings: the central
+  lower-middle now reads as furnace and house cluster,
+  not tents. The description is marked stale for the
+  current layout as of 2026-11-03, not deleted from
+  history; the next unit re-grounds the four tent
+  positions on the current base layout before any tap.
+- No batch was queued, no barracks queue state was
+  verified, and no Drill Ground figure was read live in
+  this unit, so the 2026-10-31 Drill Ground Full blocker
+  is neither confirmed nor cleared here, now a
+  fourteenth consecutive unit without a live Drill
+  Ground read.
+- Result stats: target 4, achieved 0, verified no.
+  Partial: 0 barracks verified, 0 batches queued,
+  tracker untouched, so the next tick re-produces this
+  regular. Follow-up: re-ground the four tent positions
+  on the current base layout before any tap, and read
+  the Drill Ground screen live first if a panel opens.
+
 ## Open questions
 
 - The fourth barracks level, and whether raising it to Lv.27 or Lv.30
@@ -581,3 +812,248 @@ Observed in game on this account, first execution 2026-10-25.
 - 1.9.0 (2026-11-02): Lv.24 tent selected at 825,578 with the action row measured (paw 623,499, pistol 763,510, up arrow 903,494), both action-row taps switching to the world map so the pistol/paw mapping is suspended, not merely disputed, Drill Ground Full carried unverified an eighth consecutive unit, and the recurrence commented onto Issue #150, folded from the 0811 training unit; the How to enter pistol-to-TRAIN-UNITS claim is corrected to suspended, not silently kept.
 
 - 1.10.0 (2026-11-02): Lv.24 pistol entry re-established with a fresh-grounded row (tent 806,581; pistol 794,605) so the 0811 suspension is lifted in part for Lv.24, the Lv.20 pistol route retired after two fresh-point failures, the Train button grounded at 628,793 against a 70-pixel-low estimate, the Lv.24 T8 batch queued and verified by the live resource drop, and Drill Ground Full carried unverified a ninth consecutive unit with a successful queue as counter-evidence, folded from the 1146 training unit.
+
+- 1.11.0 (2026-11-02): inherited 1146 Lv.24 points (tent 806,581, pistol 794,605) failing to open any panel in this camera view, so the fresh-grounding rule is re-affirmed against reusing a verified entry, Lv.24 busy status carried as expectation only with no live panel read, Lv.27 and Lv.30 not inspected, Drill Ground Full carried unverified a tenth consecutive unit without a live read, and the HUD stock snapshot (food 387.7M, iron 577.5M, coins 54.0M) matching the 1520 harvest read, folded from the 1723 training record.
+
+- 1.12.0 (2026-11-02): upward drag (500,600 to 500,300) not panning at all with the screenshot unchanged, so the drag was likely intercepted by the squad-vehicle radial left open by the previous survivors unit, close-or-deselect-before-drag next-unit rule, 0 barracks checked with no TRAIN UNITS panel, Drill Ground Full carried unverified an eleventh consecutive unit, Lv.24 busy carried as expectation only, HUD matching the 1945 harvest snapshot, and the recurrence commented onto Issue #150 by the executor, folded from the 1949 training unit.
+
+- 1.13.0 (2026-11-02): upward drag (500,700 to 500,400) moved the view this time unlike 1949 but brought no barracks tent into view, only empty snow below the shifted central cluster, so 0 barracks checked with no TRAIN UNITS panel, Drill Ground Full carried unverified a twelfth consecutive unit, Lv.24 busy carried as expectation only with no live panel read, HUD matching the 2247 harvest close, and the recurrence commented onto Issue #150 by this run, folded from the 2255 training unit.
+
+- 1.14.0 (2026-11-03): centre vertical drag (500,650 to 500,300) moving nothing while the left-road drag (200,600 to 200,300) restored the central cluster, so drag-pan responsiveness varies by start surface, no barracks tent in the restored central view with no TRAIN UNITS panel, Drill Ground Full carried unverified a thirteenth consecutive unit, pass budget ending mid-unit, and the recurrence commented onto Issue #150 by this run, folded from the 0252 training unit.
+
+- 1.15.0 (2026-11-03): no barracks tent in four framings (central, upper, right-side) with no TRAIN UNITS panel, road drags panning again consistent with 0252 as a further Issue #150 data point commented by this run, 2026-10-25 "lower middle" tent description marked stale for the current layout (furnace and house cluster, not tents) without deleting history, Drill Ground Full carried unverified a fourteenth consecutive unit, 0 barracks verified and 0 batches queued, folded from the 0647 training unit.
+
+
+- 1.17.0 (2026-11-03): tent-blocker breakthrough (1552 unit, fresh grounding returning three tent points, Lv.27 tent tap at (630,592) selecting Barracks Lv.27 with its label and button row confirmed, pistol re-grounded at (612,608) opening TRAIN UNITS, Lv.9 batch of 726 queued and verified by the live food and iron drop, Drill Ground Full block not presenting at this barracks, other three barracks not reached so partial), T9 defense corrected 6.6 to 6.67 per the live panel read, and the breakthrough commented onto Issue #150 by this run, folded from the 1552 training record.
+
+- 1.18.0 (2026-11-03): production-grid buildings tapped building by building are Titanium Alloy Factories No.1, No.2 and No.3 (all Lv.30), each showing only an info button and small icons, never a TRAIN UNITS row; green military structures on the grid's right side are not selectable (three direct taps, no selection, no panel); the 1552 tent point (630,592) QUALIFIED as framing-bound after it selected Factory No.3 Lv.30 in the 2144 framing, so the How to enter proven-entry claim now carries the framing bound; a centre double-click produced no zoom change; Drill Ground Full neither confirmed nor cleared (no barracks reached, no Drill Ground figure read live); HUD stock snapshot (food 275.0M, iron 612.5M, coins 34.2M, power 149,948,901); the next-unit rule (different base area or pinch-zoom framing before tapping, never re-tap the factory row as tents) and the recurrence commented onto Issue #150, folded from the 2144 training unit.
+
+## What the 2026-11-03 1051 unit added - three framings, still no tent, road drag pans where centre drag does not
+
+- Ticker-1034, unit training-2026-11-03-1003, about
+  10:50 to 10:51 local, status partial. Evidence in
+  `_records_/2026-11-03/troop-training/1051-queue-run.md`.
+- Tent search, three framings, no tent tapped: from
+  the survivors unit upper view, a reverse centre
+  drag (500,700 to 500,300) produced no visible view
+  change; a road drag (200,600 to 200,300) restored
+  the central view. The central lower-middle holds
+  the furnace and the house cluster, the upper view
+  holds the Capitol pyramid and pink buildings -
+  neither framing presented a barracks tent, and no
+  TRAIN UNITS panel was opened. The drag contrast
+  matches the 0647 unit: road drags pan, centre
+  drags sometimes do not.
+- No batch was queued, no barracks queue state was
+  verified, and no Drill Ground figure was read live
+  in this unit, so the 2026-10-31 Drill Ground Full
+  blocker is neither confirmed nor cleared here.
+  No new Issue was filed: this is the known tent
+  and Drill Ground blocker already tracked as Issue
+  150; this unit adds only the framing data point
+  above.
+- Why partial, not done: 0 of 4 barracks verified and
+  0 batches queued, so the keep-every-barracks-busy
+  standard is unmet. Tracker untouched, per the rule
+  for partial units.
+- Follow-up for the next training unit: re-ground
+  the four tent positions on the current base layout
+  before any tap, rather than working from the
+  2026-10-25 lower-middle description, which does
+  not match the current framings; read the Drill
+  Ground screen live first if a panel opens. No
+  earlier claim superseded.
+
+## What the 2026-11-03 1552 unit added - tent blocker broken, Lv.27 T9 batch queued and HUD-verified
+
+- Ticker-1534, unit training-2026-11-03-1403, about
+  15:43 to 15:52 local, status partial. Evidence in
+  `_records_/2026-11-03/troop-training/1552-queue-run.md`.
+- Breakthrough on the standing tent blocker (Issue
+  150): fresh visual grounding on the live central
+  base frame returned three barracks tent points, and
+  the tap at norm (630,592) selected Barracks Lv.27,
+  confirmed by its on-screen label and button row
+  (paw Details, orange pistol Train, green upgrade
+  arrow untouched). The Lv.27 tent point (630,592)
+  is a proven entry but must still be re-grounded,
+  never inherited blindly.
+- The pistol button was re-grounded at norm
+  (612,608) before tapping, so the green upgrade
+  shortcut was never at risk. TRAIN UNITS opened
+  with Lv.9 preselected, count slider at the cap
+  726, cost 4.1M food and 4.1M iron, time 1d
+  10:19:35 - matching the Lv.27 T9 archive (power
+  1352, HP 4121.49, attack 33.13, defense 6.67, Lv.10
+  locked). The profile's T9 defense figure is
+  corrected 6.6 to 6.67 on this live panel read.
+- Train tapped (blue button, norm (630,778)).
+  Finish Now was never tapped. The panel closed with
+  no error and no Drill Ground block shown, so the
+  2026-10-31 Drill Ground Full blocker did not
+  present at this barracks. This is counter-evidence
+  against the carried block, not a clearance claim:
+  the other barracks were not reached and no Drill
+  Ground panel was read live.
+- Queue verified live from the HUD, not assumed
+  from the panel close: food 251.1M to 247.0M (minus
+  4.1M) and iron 592.7M to 588.5M (minus about 4.1M
+  at displayed 0.1M precision). One T9 batch of 726
+  is now training in the Lv.27 barracks.
+- Why partial, not done: the other three barracks
+  were not reached in this unit, so the
+  keep-every-barracks-busy standard is unmet.
+  Tracker untouched for the unreached barracks.
+- Follow-up for the next training unit: the tent
+  grounding works - re-ground the tents on the live
+  frame and work the remaining three barracks the
+  same way (tent tap, pistol tap, Train tap, HUD
+  verification). Issue #150 is commented with this
+  breakthrough by this run, not closed here -
+  closure belongs to the daily retro.
+
+## What the 2026-11-03 2144 unit added - production grid is factories, 1552 point does not transfer across framings
+
+- Ticker-2134, unit training-2026-11-03-1803, about
+  21:34 to 21:44 local, status partial. Evidence in
+  `_records_/2026-11-03/troop-training/2144-queue-run.md`.
+- Changed method versus the 0252, 0647 and 1051 units
+  (queue rule R2): instead of only re-framing, this
+  unit systematically tapped the production grid
+  building by building on the live frame, and
+  re-tried the proven 1552 point after re-framing.
+- Results on the live frame: the dark-roofed
+  buildings in the grid are Titanium Alloy
+  Factories, not barracks - taps selected Factory
+  No.1 Lv.30, No.2 Lv.30 and No.3 Lv.30 in turn,
+  each showing only its info button and small
+  icons, never a TRAIN UNITS button row. The
+  green military structures on the right side of
+  the grid are not selectable: direct taps on
+  three of them produced no selection and no
+  panel. The barracks tents are not in the
+  production grid reached here.
+- CONTRADICTION RESOLVED, in favour of the newest
+  verified record, by QUALIFICATION (not erasure):
+  the proven 1552 point norm (630,592), re-tried
+  after a rightward drag re-framing, selected
+  Factory No.3 Lv.30 in this framing, not a
+  barracks tent. The 1552 frame therefore used a
+  different zoom or a different base area than
+  the framing reached here; its point does not
+  transfer to this framing. The 1552 event stands
+  as history - a Lv.27 T9 batch was queued and
+  HUD-verified in that frame - but the point is
+  now framing-bound, and the How to enter section
+  carries that bound. A double-click at the grid
+  centre produced no zoom change.
+- Drag-pan notes, consistent with earlier units:
+  road and open-snow drags pan; centre drags
+  over buildings sometimes do not. Drags used:
+  down, up, rightward and leftward, all
+  dispatched.
+- HUD resources at start: food 275.0M, iron
+  612.5M, coins 34.2M, power 149,948,901 - read
+  from the base screen, unchanged by this unit.
+- No batch was queued, no barracks queue state
+  was verified, and no Drill Ground figure was
+  read live in this unit, so the 2026-10-31
+  Drill Ground Full blocker is neither confirmed
+  nor cleared here.
+- Why partial, not done: 0 of 4 barracks verified
+  and 0 batches queued, so the
+  keep-every-barracks-busy standard is unmet.
+  Tracker untouched, per the rule for partial
+  units; the next tick re-produces training and
+  resumes the search.
+- Follow-up for the next training unit, from the
+  record under rule R2: the barracks tents are
+  not in the production grid reached here. Try
+  a different base area or a pinch-zoom framing
+  before tapping, and do not re-tap the factory
+  row as if it were tents. No new issue filed:
+  this is the known tent blocker already tracked
+  as Issue #150; this run comments the recurrence
+  onto #150.
+
+## What the 2026-11-04 0143 unit added - factories confirmed again, 1552 tent point not re-tried, Tank Base upgrade in progress
+
+- Unit training-2026-11-03-2203 by ticker-0134,
+  about 01:43 local, status partial. The "active on
+  a different device" dialog appeared on entry;
+  Confirm was tapped once per the owner rule (kick
+  1 of this pass), the app exited as usual, and it
+  was reopened and reached the base screen.
+- Tank Base Lv.28 selected on the central frame
+  (607,468): its button row shows the green upgrade
+  arrow (never tapped) and a red-panda Details
+  button. The Details panel confirms an upgrade
+  Lv.28 to 29 in progress with 21:17:49 remaining,
+  cost line iron 922,228/1.7M, and a Finish Now
+  price of 2,032 diamonds - none of these were
+  tapped. Panel closed with X.
+- Tent search: fresh visual grounding on the live
+  central frame returned points that selected
+  Titanium Alloy Factories, not barracks - norm
+  (389,463) gave Factory No.1 Lv.30, norm (504,626)
+  gave Factory (Weekly Pass) Lv.30. This confirms
+  2144: the dark-roofed grid buildings are
+  factories. Grounding on the upper-base frame
+  converged on norm (938,240) at the far right
+  edge; the tap produced only an Alliance Gifts
+  toast, no selection.
+- Pans used: one upward drag reached empty snow
+  below the grid, one downward drag reached the
+  formation parking areas above, one upward drag
+  returned the view to the central frame. Game left
+  on the central base view.
+- Not re-tried: the 1552 tent point (630,592) was
+  not re-tried in this unit's framings. Follow-up
+  stands: re-ground the tents on the live frame
+  first, and do not re-tap the factory row as if it
+  were tents. Known blocker Issue #150; this run
+  comments the recurrence onto #150.
+- HUD resources at end, unchanged by this unit:
+  food 391.8M, iron 727.5M, coins 548.9K, power
+  150,028,269. No batch was queued, 0 of 4 barracks
+  verified, and no Drill Ground figure was read
+  live in this unit, so the 2026-10-31 Drill Ground
+  Full blocker is neither confirmed nor cleared
+  here.
+
+## What the 2026-11-04 0440 unit added - tent point resolved for Lv.24, Drill Ground Full confirmed live again, clearing method still open
+
+- Unit training-2026-11-04-0203 by ticker-0434, about 04:40 local, status partial. No "active on a different device" dialog appeared.
+- Tent search resolved on this framing: visual grounding on the live central frame returned a tent point at norm (585,548), and the tap selected Barracks Lv.24 with its button row (paw Details, pistol Train Units, green upgrade arrow never tapped). This point is distinct from the factory-row points that misled the 0143 unit and from the 1552 point (630,592). The next unit starts from (585,548). (2026-11-04 0814 correction: (585,548) selected Arena Lv.1 in the 0814 framing, not a barracks - the point is framing-bound like the 1552 point and must not be carried as a standing tent coordinate; re-ground the tent on the live frame in every unit.)
+- Train attempt: the pistol button, grounded on the live frame at norm (544,580), was tapped and the game answered with the toast "Drill Ground Full: Unable to add more units" - no Train Units panel opened. The 2026-10-31 Drill Ground Full blocker is therefore CONFIRMED live again at this barracks, by the Train tap itself, not assumed from an earlier unit. An earlier mis-aimed tap at norm (465,505) landed on the world map instead of the button row; it was undone with the home button and no world action was taken. Do not re-aim at (465,505).
+- Preparatory read, per the activity metadata: the Lv.24 barracks Details panel was opened (paw button, norm (468,580) by offset from the grounded pistol point). It reads Training Count +666, matching the T8 count in the activity metadata, with instructors Maria, Hannah, James and Christopher assigned, and no training timer shown in Details. The panel was closed with X; nothing was queued, dispatched or spent.
+- HUD resources at end, unchanged by this unit: food 397.0M, iron 732.0M, coins 3.1M, power 150,028,269 - consistent with the 0413 harvest and 0416 reads, not a contradiction. 0 of 4 barracks queued, 1 of 4 verified (Lv.24, blocked by Drill Ground Full); the other three barracks remain unverified this unit. Tracker untouched, per the rule for partial units.
+- Open question carried, not closed: the clearing method for a full Drill Ground is still unknown - no clearing method was found or claimed in this unit. The 0143 follow-up (re-ground the tents first) is satisfied for Lv.24 on this framing by the (585,548) point; the blocker that remains is the Drill Ground itself. Evidence commented onto Issue #150 by the ticker unit, fold noted here.
+
+## What the 2026-11-04 0814 unit added - 0440 tent point selects Arena in this framing, Lv.20 verified via Details, framing instability, Drill Ground Full neither reconfirmed nor cleared, partial
+
+- Unit training-2026-11-04-0603 by ticker-0804, about 08:14 local, status partial. Sessions cc-435 and cc-436 (the first session closed mid-unit and was restarted; no device contention). No 'active on a different device' dialog appeared on entry; no takeover was needed. Evidence in `_records_/2026-11-04/troop-training/0814-queue-run.md`.
+- Method changed versus the 0440 unit (queue rule R2): inherited points were NOT trusted. The 0440 tent point (585,548) was tried once and selected Arena Lv.1 in this framing, not a barracks, proving again that tent points do not transfer across camera framings (see the correction in the 0440 section). The grounded Drill Ground candidate (722,610) produced no panel. Every later tap was grounded fresh on the live frame of that moment.
+- Barracks verified, 1 of 4: after a drag-pan down (drag from (300,500) to (300,300) on the base screen, which moved the view down to the tent row), a fresh-grounded tent tap selected Barracks Lv.20 with its button row (paw, pistol, green upgrade arrow never tapped). Its middle button opened the Building Details panel, not a Train Units panel: Training Count +613, matching the T7 count in the activity metadata for the fourth barracks, instructors Alexis, Joe, Jolene and Anthony, no training timer shown in Details. This button mapping differs from the 0440 record (paw Details, pistol Train Units); in this frame the middle button behaved as Details. The panel was closed with its X; nothing was queued, dispatched or spent.
+- Framing instability, measured: closing the Details panel returned the camera to a different framing, so re-tapping the same tent point (660,893) opened the chat panel instead of the tent. The chat panel was closed at once with its back arrow; nothing was typed, sent, opened or acted on there, and no chat content is recorded here. A second drag-pan down restored the tent row, but two further fresh taps on tent candidates ((467,727) grounded, and (592,831) read off the live frame) selected nothing, and the unit's time was then spent.
+- HUD resources at end, unchanged by this unit: food 415.2M, iron 745.8M, coins 15.2M, power 150,028,269 - consistent with the 0755 harvest gains, not a contradiction. No batch was queued and no Train Units panel was reached, so the Drill Ground Full toast was neither reconfirmed nor cleared in this unit; the 0440 live confirmation still stands as the latest Drill Ground read. 0 of 4 barracks queued, 1 of 4 verified (Lv.20 Details only), so the 'keep every barracks busy' standard is unmet. Tracker untouched, per the rule for partial units; the next tick re-produces training and resumes from the findings below.
+- Follow-up for the next training unit, in order: (1) which button in the current framing actually opens Train Units, since the middle button opened Details here; (2) the Drill Ground clearing method, still unknown. This is the known tent / Drill Ground blocker already tracked as Issue #150; no new issue filed. The framing-instability comment onto #150 is DEFERRED by this run: the 0814 record names it as a comment only if the next unit confirms it again, so no #150 comment is made here.
+- Red lines: nothing spent at all; no Train button completed a queue, no Finish Now, no green upgrade shortcut, no building started, no squad dispatched, no other activity's work done, no chat message sent.
+
+## What the 2026-11-04 1147 unit added - fullscreen framing mismatch, four grounded tent taps no panel, centre drag no view move, Issue 150 repeat, partial
+
+- Unit training-2026-11-04-1003 by ticker-1134, about 11:47 local, status partial. Sessions cc-453 then cc-454 (the first session dropped mid-unit and was reopened; no data was lost - a control-channel recovery repeat of the 0917 and 0814 pattern, not a game-state event). No "active on a different device" dialog appeared. Chrome was the frontmost app on the Mac during this unit; background input to the Last War window still dispatched.
+- Tent search, no panel reached: four grounded taps on the live fullscreen base frame - norm (368,545), norm (435,465), norm (555,460) and norm (438,545) - each dispatched, but no building label and no button row (paw Details, pistol Train, green upgrade arrow) appeared in the following screenshots, so no TRAIN UNITS panel was ever reached. One drag (norm start (450,550) to (650,350)) did not move the base view; the framing stayed identical across screenshots. The centre-drag no-move is consistent with the 0252 and 0647 reads (road drags pan, centre drags do not), not a new drag rule.
+- Framing mismatch, qualified not contradicted: the fullscreen 1920x1080 framing does not match the 2026-11-03 success frame, where a grounded tap at norm (630,592) selected Barracks Lv.27. This does not contradict the standing rule - the 2144 section already qualified (630,592) as framing-bound (it selected Titanium Alloy Factory No.3 in the 2144 framing) - so the mismatch is the framing-bound rule playing out again in a fullscreen framing, not a portable coordinate failing.
+- Focus refusals, retried not recorded as access failures: one early click was refused for focus reasons ("user working in another window") and one click was refused for a stale observation; both were retried and the following taps dispatched. Neither refusal is an access failure.
+- Follow-up from the record itself: the next unit re-grounds on its own live frame rather than reusing any point from this unit, and tries the windowed (non-fullscreen) Last War window if the fullscreen frame keeps refusing to select a tent.
+- No barracks queue state was verified, no batch was queued, and no Drill Ground figure was read live in this unit, so the 0440 live Drill Ground Full confirmation still stands as the latest Drill Ground read - neither reconfirmed nor cleared here. This is the known tent blocker already tracked as Issue #150; no new issue was filed, and this run comments the fullscreen-framing recurrence onto #150.
+
+## What the 2026-11-04 1734 unit added - screen-capture failure, eleventh consecutive pass, nothing read
+
+- Unit training-2026-11-04-1403 by ticker-1734, about 17:34 to 17:46 local, status failed. Evidence in `_records_/2026-11-04/troop-training/1734-queue-run.md`. No barracks was opened, no batch was collected or requeued, and no training count was verified.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: session cc-473 open_app LastWar returned outcome_unknown, then computer.observe (compact) failed; session cc-474 observe (compact) failed, computer.control activate selected the LastWar window for background input but captured no observation, observe (compact) failed again, observe (image) failed, and a final observe (compact) failed after a healthy connection repair check, all with "Failed to start stream due to audio/video capture failure". The control channel itself was reachable (computer.control list_apps confirmed LastWar running and selected as target); the capture stream was not. The device connection health was healthy on both native and web transports, LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost. Screen-recording permission is granted on the device.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The pass stopped after this unit rather than failing further units identically, since every further unit needs the same capture channel.
+- Recurrence, not a new failure class: this is the eleventh consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534, ticker-1604 arms-race 1604, ticker-1634 harvest 1634, ticker-1704 survivors 1707, ticker-1734 training 1734), now across eleven activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 (comment 6647208826) instead of filing a duplicate, and this run comments the eleventh and twelfth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about training state. It must NOT be read as "no batch due" or as a queue state - the 0440 live Drill Ground Full confirmation still stands as the latest Drill Ground read, and the 1147 framing findings stand; this unit rests on no read at all. The Drill Ground clearing method remains unknown, carried forward from Issue #150, not closed.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.

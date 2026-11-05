@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-02T20:41:21Z
+modified: 2026-11-04T20:48:17Z
 level: L1
-version: 1.13.0
+version: 1.25.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,18 @@ grounded_in:
   - source: ticker-0034 alliance-help execution record 2026-11-02 0039 queue run
   - source: ticker-0834 alliance-help execution record 2026-11-02 0836 queue run (done, Help All pressed, header 400 of 1000 unchanged)
   - source: alliance-help execution record 2026-11-02 1220 queue run (ticker-1204 unit, done, toast fired with 0 counted helps)
+  - source: alliance-help execution record 2026-11-02 1741 queue run (ticker-1729 unit, partial, Healing Help request unhelped)
+  - source: ticker-2034 alliance-help execution record 2026-11-02 2038 queue run (done, base-screen bubble, Alliance red dot is not remaining help)
+  - source: alliance help execution record 2026-11-02 2311 queue run
+  - source: ticker-0304 alliance-help execution record 2026-11-03 0308 queue run (done, header 980 unchanged by Help All)
+  - source: ticker-0434 perception-scout execution record 2026-11-03 0446 queue run (observe-only, Help panel 1,240/1,000 over gate, four Bears Lair requests 30/30)
+  - source: ticker-0704 alliance-help execution record 2026-11-03 0710 queue run (done, base-screen bubble, header 1,240/1,000 unchanged by Help All)
+  - source: ticker-1104 alliance-help execution record 2026-11-03 1121 queue run (done, bubble press, header 1240 over 1000 unchanged, Help All no requests yet)
+  - source: ticker-1706 alliance-help execution record 2026-11-03 1716 queue run (done, Help All cleared one ally row, bubble first tap lost to foreground switch)
+  - source: ticker-0204 alliance-help execution record 2026-11-04 0208 queue run (done, Alliance centre 931,709 re-confirmed, 880,720 miss recorded, header 520/1000 on new trade day)
+  - source: ticker-0434 alliance-help execution record 2026-11-04 0451 queue run (done, bubble tile 814,688 left of shield 932,695, one tap clears)
+  - source: ticker-0834 alliance-help execution record 2026-11-04 0837 queue run (done, Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies)
+  - source: ticker-1224 alliance-help execution record 2026-11-04 1235 queue run (failed, Mac screen-capture channel failure, no game input dispatched, not authorization, not a different-device dialog)
 ---
 
 
@@ -379,6 +391,386 @@ Measured in the 0135 help unit (ticker-0134, window mode
   left open.
 
 
+## What the 2026-11-02 1741 unit added
+
+- Unit help-2026-11-02-1430 by ticker-1729, session about
+  17:33 to 17:41, status partial. Evidence in
+  `_records_/2026-11-02/alliance-help/1741-queue-run.md`.
+- Entry grounding correction: the first three taps on the
+  Help button missed because they were measured too high
+  (norm y 431 to 433); the visual grounding of the Alliance
+  screenshot put the Help button centre at norm 686,531,
+  and a tap there opened the Help page. That centre is
+  consistent with the measured Help box centre 687,500
+  recorded the same pass by the donations unit (inside the
+  Help box 508-866, 465-536), so the two readings settle
+  the panel grounding rather than conflicting.
+- Help page header read live: Today's points gained from
+  Alliance Help 440 of 1,000. Visible rows at entry: four
+  own (Bears Lair) requests, all already time-reduced -
+  Morale research, Precision Targeting II research, Lv.30
+  Aircraft Center building, Lv.28 Drill Ground building.
+  A player cannot help their own requests.
+- New failure mode, first of its kind: one ally request
+  below the own rows, papillon707, Need Healing Help, with
+  no time-reduced label and no individual Help button on
+  its row. Help All pressed twice at norm 498,731 produced
+  no observed change (no toast, header still 440 of 1,000),
+  and a tap on the papillon707 row itself at norm 498,631
+  (the rule R2 pivot) also changed nothing. Result: 0 helps
+  verified given; the Healing Help request remains unhelped
+  and its mechanism is unknown. This differs from the three
+  earlier help units of 2026-11-02 (0345, 0836, 1220), which
+  closed done with no ally request waiting.
+- Remaining work, carried: determine how a Healing Help
+  request is helped - whether Help All covers it at all, or
+  whether it needs a different surface such as the hospital -
+  then help it. Do not record Help All as clearing Healing
+  Help requests until a unit verifies it.
+
+
+## What the 2026-11-02 2038 unit added - done through the base-screen bubble
+
+- Unit help-2026-11-02-1830 by ticker-2034, session
+  about 20:34 to 20:38, status done. Waiting helps
+  present at entry were cleared through the
+  base-screen bubble, the standing easiest form of
+  this rule. Evidence in
+  `_records_/2026-11-02/alliance-help/2038-queue-run.md`.
+- Base screen showed the help bubble at the lower
+  right, the yellow tile with a hand holding a green
+  missile, immediately left of the Alliance shield
+  button, as described in the activity metadata.
+- Bubble centre tap (window coordinates about 821,
+  720): the first tap attempt sent no input because
+  the control observation was stale; a fresh
+  observation followed by the same tap succeeded,
+  so this was a tool retry, not a game blocker.
+- The game answered with the toast "Allies are very
+  grateful for your assistance", and a re-screenshot
+  confirmed the help bubble had disappeared.
+- Completion-criterion note: the Alliance button
+  still showed a red dot after the press; that dot
+  also covers other alliance notifications and was
+  not counted as remaining help requests, since the
+  bubble itself was gone and the toast confirmed the
+  Help All action. Bubble gone plus toast equals
+  done; an Alliance red dot alone is not remaining
+  help.
+- Help page header points tally was not read in this
+  unit; no helps count or points figure is claimed.
+  No items spent, no diamonds or money touched, no
+  red line approached.
+
+
+## What the 2026-11-02 2311 unit added - done, Help All toast but 0 countable helps
+
+- Unit help-2026-11-02-2230 by ticker-2304, session
+  about 23:11 to 23:12, status done. Evidence in
+  `_records_/2026-11-02/alliance-help/2311-queue-run.md`.
+- Navigation correction, from the Alliance Gifts
+  screen: the back arrow's first two taps (35,902)
+  and (40,902) produced no navigation. Per queue
+  rule R2 the method changed: a fresh screenshot
+  re-grounded the arrow glyph centre at (62,920),
+  and that tap returned to the Alliance panel. The
+  earlier taps had landed on the tile's top-left
+  edge, not on the glyph. Lesson: tap the glyph
+  centre, not the tile edge, for this back arrow.
+- Opened Help from the Alliance panel. Header read
+  live before the press: Today's points gained from
+  Alliance Help 760 of 1,000. Pressed Help All. The
+  game answered "Allies are very grateful for your
+  assistance".
+- Header re-read live after the press: still 760 of
+  1,000, unchanged. The visible rows were all this
+  account's own requests (Bears Lair: Morale
+  research, Lv.30 Aircraft Center building, Healing
+  Help, Lv.27 Drill Ground building), each showing
+  30 of 30 after the press. A player cannot help
+  their own requests, so the unchanged header means
+  this press delivered no newly countable ally help
+  in the list shown; no ally request row was visible
+  in the list shown.
+- Completion-criterion note: the grateful toast
+  alone is not delivery proof. Helps verifiably
+  delivered by this press: 0 by the header counter.
+  The header re-read is the count; a toast with an
+  unchanged header means the press found no ally
+  request to help. Closed the Help panel back to the
+  Alliance panel.
+
+
+## What the 2026-11-03 0308 unit added - done, header 980 unchanged by Help All, toast again not proof
+
+- Ticker-0304, unit help-2026-11-03-0230, about 03:08
+  local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/0308-queue-run.md`.
+- From the Alliance Gifts screen, backed out to the
+  Alliance panel and opened Help at the visually grounded
+  position.
+- Help page header read Today's points gained from
+  Alliance Help 980 of 1,000. The listed requests were
+  all this account's own (Bears Lair, 30 of 30):
+  Precision Targeting II research, Lv.30 Aircraft Center
+  building, Morale research, and Healing Help.
+- Pressed Help All. The game answered "Allies are very
+  grateful for your assistance". The header stayed 980
+  of 1,000 afterwards, and the own requests then showed
+  time reduced instead of 30 of 30. This re-confirms the
+  2311 resolution: the grateful toast alone is not
+  delivery proof, and the header re-read (980 before and
+  after) supersedes any toast-counted reading, since the
+  visible rows were all the account's own requests.
+- No individual help was tapped, no other screen was
+  changed.
+
+
+## What the 2026-11-03 0446 scout walk added - observe-only, Help panel over the gate
+
+- Ticker-0434 perception-scout unit, about 04:42 to 04:46
+  local, observe-only: the Help panel was opened on a
+  grounded tap at (687,497) and nothing was tapped there.
+  Evidence in
+  `_records_/2026-11-03/perception-scout/0446-queue-run.md`.
+- Help page header read Today's points gained from
+  Alliance Help 1,240/1,000, already over the 1,000 gate,
+  against 980/1,000 at the 0308 unit: the header moves
+  between units and the gate is passed for the day.
+- The listed requests were all this account's own (Bears
+  Lair, 30/30): building Lv.27 Drill Ground, building
+  Lv.30 Aircraft Center, Morale research, Precision
+  Targeting II research (fourth row partly cut off).
+  Help All button present, observed only, not tapped, so
+  no delivery claim is made from this walk. The Help dot
+  maps to the help regular (already queued) with nothing
+  new to claim here.
+
+## What the 2026-11-03 0710 unit added - done through the base-screen bubble, header 1,240 unchanged
+
+- Ticker-0704, unit help-2026-11-03-0630, about 07:05
+  to 07:10 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/0710-queue-run.md`.
+- Base screen at entry: power 149,940,141, stamina 120,
+  March Queues 0/4, coins 5.9M on the HUD. The help
+  bubble was present at the lower right, immediately
+  left of the Alliance shield: grounded box norm
+  778,654 to 873,738, centre 825,696. One tap at the
+  bubble centre pressed the waiting helps: the game
+  answered "Allies are very grateful for your
+  assistance" and the bubble cleared on the next
+  screenshot. Background input reached the game on the
+  first tap; no foreground recovery was needed. One
+  click without an observation id was rejected by the
+  control channel before any input was sent; the retry
+  carried a fresh observation id.
+- Verification on the Alliance Help page, read live:
+  header "Today's points gained from Alliance Help:
+  1,240/1,000", matching the 0446 scout read, already
+  over the 1,000 gate. All listed rows are this
+  account's own Bears Lair requests (Lv.27 Drill
+  Ground, Lv.30 Aircraft Center, Morale research,
+  Precision Targeting research), each carrying a green
+  "Time reduced" badge; no ally rows were pending. A
+  Help All tap on that page left the header unchanged
+  at 1,240/1,000, confirming no further ally help was
+  waiting. This re-confirms the 2311 and 0308
+  resolution: the grateful toast alone is not delivery
+  proof, and the header re-read supersedes any
+  toast-counted reading.
+- Entry correction for the next unit: a first tap at
+  norm 657,455 on the Alliance panel landed above the
+  Help button and changed nothing; the Help button's
+  grounded box is norm 507,490 to 865,574, centre
+  686,532, and that tap opened the Help page.
+  Eyeballed y estimates run low on this panel; use
+  grounded box centres, not estimates. The centre is
+  consistent with the 0446 scout's grounded 687,497.
+- Result statistics: target 1, achieved 1, verified
+  yes. Nothing claimed beyond the helps, nothing
+  bought, no diamonds or money spent. Costs: 251
+  seconds, no stamina or items spent. Note on the
+  record itself: the unit file's evidence path was
+  first written as 0717-queue-run.md at completion
+  time and corrected to 0710-queue-run.md, and the
+  costs stat was added to the unit file by hand after
+  completion, since the complete call did not carry it
+  - a record-hygiene note, not a play claim.
+
 ## Open questions
 
 - The daily help cap and what helpers and helped players each receive.
+- How a Healing Help request is helped (Help All, or a different surface such as the hospital) - first seen 2026-11-02 1741, papillon707 request unhelped after two Help All presses and a row tap.
+
+
+## What the 2026-11-03 1121 unit added - done through the base-screen bubble, header 1240 unchanged, Help All no requests yet
+
+- Ticker-1104, unit help-2026-11-03-1030, about
+  11:15 to 11:18 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/1121-queue-run.md`.
+- Entry: base screen at entry showed the help bubble
+  at the lower right, immediately left of the Alliance
+  shield, grounded fresh at norm (823,700) -
+  matching the 0710 unit grounded centre (825,696).
+  One tap at the bubble centre pressed the waiting
+  helps: the game answered Allies are very grateful
+  for your assistance (captured in the control
+  channel OCR) and the bubble was gone on the next
+  screenshot.
+- Verification on the Alliance Help page, read live:
+  header Todays points gained from Alliance Help
+  1,240 over 1,000, unchanged from the 0710 close.
+  All listed rows are this account own Bears Lair
+  requests (Lv.27 Drill Ground, Lv.30 Aircraft
+  Center, Precision Targeting II research), each
+  carrying a green Time reduced badge; no ally rows
+  were pending. A Help All tap on that page
+  (grounded (500,779)) answered No help requests yet,
+  confirming no further ally help was waiting.
+- Session: computer session cc-342 (carried from the
+  gifts unit, dropped between units) restarted as
+  cc-344 with no state lost. No different-device
+  dialog.
+- Entry notes carried forward: the Alliance button
+  grounded centre on the base view is (931,709); the
+  Help button grounded centre on the Alliance panel
+  is (686,532), as recorded by the 0710 unit. Exited
+  with the Help panel X to the Alliance panel, then
+  the panel back arrow (164,931) to the base screen.
+- Consistency note, not a contradiction: the header
+  is unchanged despite the bubble press, but the
+  header already reads above its 1,000 cap
+  (1,240 over 1,000), so a bubble press is not header
+  proof - the same lesson as the 0308 unit (Help All
+  toast is not proof either). No earlier claim
+  superseded.
+
+
+## What the 2026-11-03 1716 unit added - done, one ally row cleared, bubble first tap lost to a foreground switch
+
+- Ticker-1706, unit help-2026-11-03-1430, about 17:08
+  to 17:16 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-help/1716-queue-run.md`.
+  No different-device dialog.
+- Base screen at entry: the game window 642x951 was
+  already the target but a Chrome about blank window had
+  covered its left part; a title-bar tap brought it to
+  the foreground. The first tap on the bubble tile
+  immediately left of the Alliance shield, grounded fresh
+  at window (825,688), did NOT press the helps: the next
+  screenshot still showed the tile and the Alliance red
+  dot, with only a transient "Achievements 8/16
+  Completed" tooltip. Cause not proven; the tap may have
+  been consumed by the window-focus transition. Lesson,
+  new for the bubble route: a bubble tap that leaves the
+  tile and the red dot in place has not taken effect -
+  verify on the next screenshot and go through the
+  Alliance panel instead of re-tapping blindly. This
+  qualifies the 0710 and 1121 bubble successes, where
+  one tap sufficed with no foreground switch in between.
+- Visual-estimate error, quantified this pass: two taps
+  about 80px below the grounded Alliance centre opened
+  Mail (a President Mail letter, read only, and then the
+  Mail category menu). Both were exited with the back
+  arrow only, with no delete, no claim and no purchase.
+  Lesson: trust grounded coordinates over visual
+  estimates on this screen - this pass's visual y
+  estimates ran about 80px low, while every grounded tap
+  landed correctly. This strengthens the 0710 note that
+  eyeballed y estimates run low on the Alliance panel.
+- Grounded window coordinates this pass: Alliance shield
+  centre (928,688), Help button (688,493), Help All
+  (500,779). Help All matches the 1121 grounded point
+  exactly; the shield centre sits near the 1121 (931,709)
+  point, session drift as usual, not a correction.
+- Help page header read live: Today's points gained from
+  Alliance Help 1,240/1,000, matching the 0710 and 1121
+  reads. Help All was tapped and the game answered
+  "Allies are very grateful for your assistance" and the
+  AMD Commander Lv.25 Iron Mine row disappeared from the
+  list - a verified ally help delivered, the first
+  row-clearance delivery since the 1121 no-requests
+  press. The remaining rows are this account's own Bears
+  Lair requests (Lv.30 Aircraft Center, Lv.27 Drill
+  Ground, Precision Targeting II research), each with a
+  green "Time reduced" badge; a player cannot help their
+  own requests, so nothing further was waiting.
+- Consistency note, not a contradiction: the header
+  stayed 1,240/1,000 on the single re-read after the
+  press even though a row verifiably cleared. Per the
+  2026-11-01 0135 reopen rule, a single re-read can lag
+  behind the true header, and this unit did not
+  close-and-reopen to re-read it, so no claim is made
+  that the counter stopped moving above the gate. Row
+  clearance is the delivery proof here; the header
+  re-read alone is not.
+- Exited with the Help panel X to the Alliance panel.
+  Nothing spent, no red line touched.
+
+## What the 2026-11-04 0208 unit added - Alliance centre (931,709) re-confirmed, header 520/1000 on new trade day
+
+- Unit help-2026-11-03-2230 by ticker-0204,
+  02:04 to 02:08 local, status done. No "active on
+  a different device" dialog appeared; the base
+  screen carried a "Signed in as HidingAnt504"
+  toast, confirming the owner's account.
+- Entry: the help bubble was present at the lower
+  right, immediately left of the Alliance shield.
+  One tap at the bubble tile answered "Allies are
+  very grateful for your assistance" and the tile
+  was gone on the next screenshot.
+- Grounding correction inside this unit: the first
+  two Alliance-button taps at (880,720) produced no
+  panel change (rule R2 ends that method). The
+  (880,720) point lands left of the shield, on the
+  small round icon below it. Re-grounding from the
+  2026-11-03 1121 record gave the Alliance button
+  centre as (931,709); one tap there opened the
+  panel. Future units should use (931,709) for
+  Alliance, (686,532) for Help on the panel, and
+  (500,779) for Help All on the Help page. This is
+  consistent with the 1716 note that the shield
+  centre sits near the 1121 (931,709) point,
+  session drift as usual - not a new correction to
+  the shield centre itself, but (880,720) is now a
+  recorded miss, not a usable Alliance point.
+- Verification on the Alliance Help page, read
+  live: header "Today's points gained from
+  Alliance Help: 520/1,000". This is the first
+  sub-gate read after the 2026-11-03 1,240/1,000
+  reads, on the new trade day - not a
+  contradiction, the daily counter resets. All
+  listed rows are this account's own Bears Lair
+  requests (Defense Training VIII research, Lv.30
+  Aircraft Center building, Weapon Training VIII
+  research, Lv.27 Drill Ground building), each
+  carrying a green "Time reduced" badge; no ally
+  rows were pending. A Help All tap on that page
+  answered "No help requests yet", confirming no
+  further ally help was waiting.
+- Exited with the Help panel X to the Alliance
+  panel, then the panel back arrow (164,931) to
+  the base screen. Nothing spent.
+
+## What the 2026-11-04 0451 unit added - bubble tile (814,688) left of the shield, one tap clears
+
+- Unit help-2026-11-04-0230 by ticker-0434, 04:51 local, status done. The computer session dropped between units and was restarted (cc-415 to cc-418); no game state was lost. No "active on a different device" dialog appeared.
+- Base screen watch point checked: the help bubble tile was present at the lower right, grounded at norm (814,688), immediately left of the Alliance shield button grounded at norm (932,695) - against the 0208 Alliance centre (931,709), the shield centre drifts per session as usual.
+- One tap on the bubble tile centre pressed Help All: the game answered with the toast "Allies are very grateful for your assistance!" and the tile disappeared from the base screen, verified on the following screenshot (Alliance shield remains, help tile gone). No Help page was opened, no individual helps were needed, and no count of helped allies was displayed by the game - the toast and the vanished tile are the verification, not a number. Tracker marked done. Nothing spent.
+
+## What the 2026-11-04 0837 unit added - Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies
+
+- Unit help-2026-11-04-0630 by ticker-0834, about 08:35 to 08:37 local, status done. Evidence in `_records_/2026-11-04/alliance-help/0837-queue-run.md`. No diamonds, money, speedups or other spending. No different-device dialog appeared.
+- Entry, foreground lesson repeated: the game was already on the Alliance panel at entry (left by the previous unit). The Help tile carried a red dot. A first background tap on Help did not navigate (window covered by Chrome); a second tap at the measured Help tile centre opened the Help page, matching the standing foreground lesson for this activity.
+- Header, read live: Today's points gained from Alliance Help 620/1,000. Visible requests were all this account's own, each already 30/30 and therefore not helpable by this account: Lv.30 Aircraft Center building, Defense Training VIII research, Weapon Training VIII research, Lv.27 Drill Ground building - the same four own rows as the 0208 and 0451 units. A list drag did not reveal further rows.
+- Help All pressed once. Header unchanged after the press at 620/1,000, so no ally help was actually available to press in this unit; the red dot reflects the own requests awaiting other allies, not pressable ally requests. This repeats the 0208 lesson (Alliance red dot is not remaining help) on the Help page itself.
+- Help panel closed with the X, back to the Alliance panel. Nothing spent.
+
+## What the 2026-11-04 1235 unit added - NEW failure mode: screen-capture channel failure before any observation, failed
+
+- Unit help-2026-11-04-1030 by ticker-1224, about 12:24 to 12:27 local, status failed (access-failed). Evidence in `_records_/2026-11-04/alliance-help/1235-queue-run.md`. This is a NEW failure class for this activity, distinct from every foreground and tap failure recorded above: the unit never reached an observation at all.
+- Capture sequence, all failed with the same error: activate LastWar, computer.observe, open_app LastWar, computer.observe again, computer.control describe, and a screenshot action - every screen-capture step failed with "Failed to start stream due to audio/video capture failure". Device state at the time: Mac online, LastWar app running fullscreen, Google Chrome frontmost; connection health connected on both native and web transports.
+- Classification, stated explicitly: this is a screen-capture channel failure, NOT a missing owner authorization and NOT a different-device dialog (no such dialog appeared). It does not contradict the foreground notes above - those concern taps that dispatch but do not reach a control, while here no screenshot existed to tap from.
+- No game input was dispatched and no tap was sent, so no in-game state changed. Help All was NOT pressed and no help count was read; nothing observed is claimed.
+- Retry rule satisfied: at least 3 capture attempts were made in this pass (activate plus repeated observe, describe and screenshot attempts) before the access failure was recorded.
+- Follow-up from the record itself: the tracker is untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit with this unit retried first. If the capture failure persists across passes, it escalates as a device-channel fault, not as a repeat of the same taps.

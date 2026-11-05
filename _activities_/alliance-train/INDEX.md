@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-02T21:44:07Z
+modified: 2026-11-04T22:40:54Z
 level: L1
-version: 1.14.0
+version: 1.26.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,17 @@ grounded_in:
   - source: ticker-0704 alliance-train execution record 2026-11-02 0715 queue run (done, checked only)
   - source: ticker-0834 alliance-train execution record 2026-11-02 0844 queue run (done as checked only, third Secret Command Post wrong-tap instance, station empty)
   - source: ticker-1234 alliance-train execution record 2026-11-02 1246 queue run (done as checked only, station empty)
+  - source: ticker-2034 alliance-train execution record 2026-11-02 2045 queue run (done, station check corrected, already aboard carriage 2)
+  - source: alliance train execution record 2026-11-02 2320 queue run
+  - source: ticker-0034 alliance-train execution record 2026-11-03 0035 queue run (partial, left-column mapping measured, no station view)
+  - source: ticker-0304 alliance-train execution record 2026-11-03 0315 queue run (partial, 52,548 no-pan repeat, grounding mislabels Secret Command Post)
+  - source: ticker-1104 alliance-train execution record 2026-11-03 1124 queue run (partial, fourth same-blocker partial today, banner absent, station not viewed, Issue 205)
+  - source: ticker-1334 perception-scout execution record 2026-11-03 1345 queue run (partial, station preparation-only surface, LOOT box located on the world map)
+  - source: ticker-1734 alliance-train execution record 2026-11-03 1742 queue run (partial, fifth check-only outcome today, banner absent, station not viewed)
+  - source: ticker-0204 alliance-train execution record 2026-11-04 0217 queue run (partial, sixth check-only outcome in a row, banner absent, station not viewed)
+  - source: ticker-0504 alliance-train execution record 2026-11-04 0509 queue run (partial, seventh check-only outcome in a row, grounding mislabel at 55,563 opened the truck screen)
+  - source: ticker-0834 alliance-train execution record 2026-11-04 0839 queue run (partial, check-only, no boarding banner, no train icon, station not viewed)
+  - source: ticker-1404 alliance-train execution record 2026-11-04 1404 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fourth consecutive ticker pass to fail this way, Chrome-window observation succeeded in the same session so the fault is specific to the Last War fullscreen window, Issue 284)
 ---
 
 # Alliance train
@@ -49,6 +60,26 @@ literal train, so both readings of the request are in the system.
   as set- and state-dependent: always verify the screen that
   actually opened before tapping further, the same rule as
   truck-plunder.
+- Measured column map, 2026-11-03 0035: on that unit's base
+  screenshot (52,508) opened the temperature panel, (52,567)
+  opened the truck screen and (52,626) opened Secret Command
+  Post. None of them is the train entry; do not reuse any of
+  them as one. Detail in the 0035 section below.
+- Failed routes, 2026-11-03 0752: the Accessibility tree was
+  read first and carries no icon labels for this game (one
+  iOS content group only), so it cannot ground the train
+  entry - do not spend a unit on it again. A tap at
+  (903,750), the Alliance icon position on the opening
+  screenshot, opened MY PROFILE instead of the Alliance
+  panel, so right-side icon positions on a screenshot do
+  not map to taps the way the left-column positions were
+  assumed to; the Alliance route is not a working train
+  entry from this view. Ground taps on the
+  alliance-territory map are not safe probes: taps meant
+  for empty ground opened other players' profile cards
+  (PrincessEsra, Amarky257), closed only by a drag from
+  (500,500) to (700,700), which also panned the camera.
+  Detail in the 0752 section below.
 - Tap a carriage plus bubble at the station, or the train itself, to
   open the STATION PLATFORM screen - the train from top to bottom,
   its conductor, its Train Rating, the departure countdown, and four
@@ -505,6 +536,299 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Nothing boarded, no Trade Contracts spent, no train
   summoned, no conductor role taken.
 
+## What the 2026-11-02 2045 unit added - station check corrected, already aboard carriage 2
+
+- Unit train-2026-11-02-1830 by ticker-2034, session
+  about 20:38 to 20:45, status done. The account is
+  already aboard carriage 2, the standing-rule
+  carriage, so no boarding action was needed and
+  none was taken. Evidence in
+  `_records_/2026-11-02/alliance-train/2045-queue-run.md`.
+- Base screen inspected first: no "Boarding closes
+  in" banner under the resource bar.
+- Station-check correction, in favour of the newest
+  verified record: tapping the left-column train
+  icon at normalized (52, 548), the point measured
+  by earlier units, panned the camera to a base-edge
+  view (4th Squad area) that showed no train, no
+  plus bubble and no station countdown. That view
+  alone would have concluded no train. Dragging the
+  camera toward the station building then revealed a
+  yellow train at the base edge, with conductor
+  label KpyKat and a countdown near 01:22:57. A
+  preparing train was therefore present, and the pan
+  point alone is not a sufficient station check; the
+  next train unit must drag toward the station
+  building and look for the yellow train before
+  concluding none is preparing. This qualifies, not
+  erases, the 0348, 0844 and 1246 checked-only
+  empties, which used the pan view only - their
+  no-train readings carry that qualification.
+- Tapped the train. A train cinematic played ("Tap
+  the screen twice to skip"). Double-tapping to skip
+  opened MY PROFILE, consistent with the metadata
+  note that tapping the own avatar opens MY PROFILE.
+  Closing MY PROFILE with its X revealed the
+  STATION PLATFORM screen.
+- STATION PLATFORM, read live: departure countdown
+  01:21:39 falling to 01:20:07 by the end of the
+  unit, Train Rating 86,000, conductor KpyKat.
+  Carriage occupancy top to bottom: carriage 1 at
+  12/7 with a plus button, carriage 2 at 10/7
+  showing the own avatar (the starry landscape
+  profile photo, confirmed on zoom), carriage 3 at
+  16/7 with a plus button, carriage 4 at 23/7 with a
+  plus button.
+- No Trade Contracts spent, no train summoned, no
+  conductor role taken. The platform back arrow
+  returned the view to the base world at the station
+  area, train and station building visible,
+  countdown 01:20:07.
+- Note for the open question below: the platform
+  screen opened by the train tap is the station
+  verification surface; the station-verified
+  no-train read is still owed on a checked-only
+  (empty) unit, where no train exists to tap.
+
+
+## What the 2026-11-02 2320 unit added - entry drift, 2045 pan point no longer pans, filed as Issue #205
+
+- Unit train-2026-11-02-2230 by ticker-2304, session
+  about 23:20 to 23:24, status partial. No station
+  view was achieved, so no preparing train was
+  confirmed and none was ruled out beyond the absent
+  banner. No boarding action was taken, no Trade
+  Contracts spent, no train summoned, no conductor
+  role taken. Tracker untouched, so the next tick
+  re-produces this regular. Evidence in
+  `_records_/2026-11-02/alliance-train/2320-queue-run.md`.
+- Base screen inspected first: no "Boarding closes
+  in" banner under the resource bar.
+- First entry attempt, wrong icon: a tap at (35,675)
+  in the left column opened Secret Command Post
+  (Secret Mobile Squad), not the station. Nothing
+  inside it was tapped: no task, no Mega Deploy, no
+  refresh. Exited by the visually grounded back point
+  (158,945) back to the base.
+- Second entry attempt, stale point, in favour of
+  the newest verified record over the 2045 section:
+  the 2045 record's left-column train icon point
+  (52,548) produced no camera pan this time; the
+  base view was unchanged on screenshot. The 2045
+  pan point is therefore NOT a stable entry point -
+  it worked at 1246 and 2045 and failed at 2320, so
+  the next train unit must re-ground the icon from
+  its own base screenshot before tapping, and must
+  fall back to the 2045 station-drag route (drag
+  toward the station building and look for the
+  yellow train) rather than trusting the pan point.
+  This qualifies, not erases, the 2045 station-check
+  correction: the drag route stands, the pan point
+  does not.
+- Third entry attempt, mislabelled grounding:
+  visual grounding on the base screenshot labelled
+  the point (53,576) as the train icon, but tapping
+  it opened the truck screen ("Today's Trade Count:
+  4/5", "Your Truck" tab, a yellow truck labelled
+  [AP3x]KpyKat). Nothing on that screen was tapped:
+  no dispatch, no plunder, no tab change beyond the
+  view itself. Returned to the base with the back
+  tile point (82,930). Lesson: the truck screen is
+  not the station, and a grounding label calling a
+  left-column point the train icon must be verified
+  by the screen it opens before any action is taken
+  on that screen.
+- Incidental observation, explicitly NOT trucks-unit
+  data: the truck screen read "Today's Trade Count:
+  4/5" while passing through. It was read outside
+  the trucks unit, so the trucks unit must re-read
+  its own counter live in its own unit; this figure
+  must never be quoted as a trucks-unit closing
+  count.
+- Gap found, filed as GitHub Issue #205, class
+  knowledge, by the executor: re-ground the train
+  icon point from a current base screenshot, update
+  this entry section, record a station-drag route
+  that does not depend on the stale point, and note
+  the truck-icon confusion explicitly. This run
+  folds the drift evidence and the truck-confusion
+  warning into this section; the re-grounding itself
+  is still owed by a future train unit, and Issue
+  #205 stays open - closure belongs to the daily
+  retro, with evidence.
+
+## What the 2026-11-03 0035 unit added - column map measured, no station view
+
+- Unit train-2026-11-02-0847 by ticker-0034, session about
+  00:35 to 00:44, status partial. No station view was achieved,
+  so no preparing train was confirmed and none was ruled out
+  beyond the absent banner. No boarding action was taken, no
+  Trade Contracts spent, no train summoned, no conductor role
+  taken. Tracker untouched, so the next tick re-produces this
+  regular. Evidence in
+  `_records_/2026-11-03/alliance-train/0035-queue-run.md`.
+- Base screen inspected first: no "Boarding closes in" banner
+  under the resource bar.
+- Empirical left-column mapping, measured live in this unit,
+  the second grounding-label instance after the 2320 unit:
+  visual grounding labelled (52,567) as the train icon, but
+  tapping it opened the truck screen ("Your Truck" tab).
+  Nothing on that screen was tapped: no dispatch, no plunder,
+  no tab change. Returned to the base with the back point
+  (82,930). Two further probes: (52,626) opened Secret
+  Command Post (Secret Mobile Squad), exited with the blue
+  back arrow measured fresh at (160,945) - an earlier tap
+  at (55,930) missed that arrow and left the screen
+  unchanged - and (52,508) opened the temperature panel
+  (base temperature 6.5 degrees C, Permafrost Area,
+  Alliance Furnace, High-Heat Furnace lines), closed with
+  its X at (850,137). No furnace was turned on or off and
+  no temperature setting was changed. None of the three
+  points is the train entry, and none may be reused as one.
+- Hypothesis, unproven, carried for the next unit: the
+  train icon may only appear while a train is preparing.
+  That would explain both the 2320 no-pan at (52,548)
+  and this unit's neighbour hits, since no banner showed
+  and no train was confirmed in either unit. The 2045
+  pan at (52,548) worked while a train was preparing
+  (conductor KpyKat, countdown near 01:22:57).
+- Drag route, qualified: dragging the camera from
+  (600,600) to (300,300) reached empty snow southwest of
+  the base, with no train, no station building and no
+  plus bubble. Reversing the drag and a further diagonal
+  drag returned the view to the base centre, and a final
+  drag from (300,300) to (600,600) produced no view
+  change. The 2045 drag route therefore needs the station
+  building in view first; a drag from the base centre is
+  not a station check, and a base-centre-only view is not
+  a completed station check.
+- Warning restated: the 2026-11-02 0044 correction stands
+  here - a single pan view once missed a preparing train
+  that a later camera restore revealed - so this unit's
+  no-train read is banner-only, not station-verified.
+- Pass-through rule restated: nothing read on the truck
+  or Secret Command Post screens in this unit is that
+  activity's data; the trucks and secrets units must
+  re-read their own counters live in their own units.
+- Gap, already filed: the executor commented this mapping
+  on GitHub Issue #205, class knowledge. The re-grounding
+  itself is still owed by a future train unit, and Issue
+  #205 stays open - closure belongs to the daily retro,
+  with evidence. Next train unit method, from the record:
+  probe the remaining left-column icons one at a time
+  from a fresh screenshot, or wait for a "Boarding closes
+  in" banner, and do not reuse (52,508), (52,567) or
+  (52,626) as the train entry.
+
+
+## What the 2026-11-03 0315 unit added - (52,548) no-pan repeat, (53,637) Secret Command Post repeat
+
+- Ticker-0304, unit train-2026-11-03-0230, about 03:15
+  local, status partial. Tracker untouched: a partial
+  unit does not mark the tracker, so the next tick
+  re-produces this regular. Evidence in
+  `_records_/2026-11-03/alliance-train/0315-queue-run.md`.
+- Base screen inspected first: no "Boarding closes in"
+  banner under the resource bar.
+- Wrong tap, recovered without action: a fresh visual
+  grounding put the train icon at (53,637), but tapping
+  it opened the Secret Command Post (Secret Mobile
+  Squad). Nothing inside it was tapped: no task, no Mega
+  Deploy, no Mega Refresh. It was closed with its back
+  arrow at (157,946), back to the base. This repeats the
+  (53,630) mislabelling already recorded in the
+  2026-11-02 0348 unit; grounding must not be trusted
+  for this icon.
+- Measured tap: (52,548), the point taken from the
+  2026-11-02 0044 and 0348 records, was tapped on a fresh
+  base screenshot. The camera did not pan: the view
+  stayed on the base centre, with no station, no train,
+  no plus bubble and no station countdown in view. This
+  matches the 2026-11-03 0035 unit, which also got no pan
+  from the neighbouring points and closed partial. The
+  (52,548) pan successes at 1246 and 2045 now stand
+  against failures at 2320 and 0315 plus the 0035
+  neighbour misses, so the 2045 pan point is confirmed
+  not stable and the 0035 hypothesis gains another
+  no-banner instance: the train icon may only appear
+  while a train is preparing.
+- No station view was achieved in this unit, so no
+  preparing train was confirmed and none was ruled out
+  beyond the absent banner. No boarding action was
+  taken, no Trade Contracts spent, no train summoned, no
+  conductor role taken.
+- The Secret Command Post screen was only passed
+  through; nothing read on it is this unit's data, and
+  the secrets unit must re-read its own counters live.
+- Gap: already tracked as GitHub Issue #205 (class
+  knowledge). The executor commented this repeat onto
+  #205, and this run comments the fold (profile version
+  and the no-pan count) onto #205 as well; the issue
+  stays open, and the re-grounding of the train icon
+  point itself is still owed.
+
+## What the 2026-11-03 0752 unit added - third consecutive entry partial, new routes fail, partial
+
+- Ticker-0734, unit train-2026-11-03-0630, about 07:52
+  local, status partial. Tracker untouched: a partial
+  unit does not mark the tracker, so the next tick
+  re-produces this regular. Evidence in
+  `_records_/2026-11-03/alliance-train/0752-queue-run.md`.
+- Base screen inspected first: no "Boarding closes in"
+  banner under the resource bar, on the opening view and
+  on every later view in this unit.
+- Changed method, failed: under queue rule R2, after the
+  0035 and 0315 partials with the same blocker, the
+  Accessibility tree was read first instead of trusting
+  visual grounding. It carries no icon labels for this
+  game - one iOS content group only - so it cannot ground
+  the train entry point. This method is retired for this
+  activity; do not spend another unit on it.
+- New entry route, failed: a tap at (903,750), the
+  Alliance icon position on the opening screenshot,
+  opened MY PROFILE instead of the Alliance panel.
+  Nothing in the profile was tapped. This shows the
+  right-side icon positions on a screenshot do not map
+  to taps the way the left-column positions were
+  assumed to, and the Alliance route is not a working
+  train entry from this view. Do not reuse (903,750) as
+  an Alliance-panel entry.
+- Profile-card confusion, recovered without action: a tap
+  meant for empty ground opened another player's profile
+  card (PrincessEsra), and a second ground tap opened a
+  further player's card (Amarky257). Nothing inside
+  either card was tapped - no Like, no Set Off, no share,
+  no favourite. A short drag (500,500) to (700,700)
+  closed the card and panned the camera. The
+  alliance-territory map is dense with player bases, so
+  ground taps are not a safe way to close cards or to
+  probe for the station.
+- Final view after the drag: alliance territory, no
+  "Boarding closes in" banner, no station building, no
+  train, no plus bubble, no station countdown in view.
+  The left column on this view shows temperature, the
+  Secret Command Post badge (4), trucks, search (11),
+  the plus and radar - no train icon. This matches the
+  standing hypothesis that the train icon appears only
+  while a train is preparing, but the station itself was
+  not viewed, so a preparing train is neither confirmed
+  nor ruled out beyond the absent banner.
+- No boarding action was taken, no Trade Contracts spent,
+  no train summoned, no conductor role taken, no furnace
+  change, no assembly. The player profile cards were only
+  passed through; nothing read on them is this unit's
+  data, and nothing read on them is counted for any other
+  regular.
+- Rule R2 third partial: this is the third consecutive
+  train partial with the same entry-point blocker (0035,
+  0315, this unit). The blocker is recorded here in the
+  activity metadata, as the record directs.
+- Gap: already tracked as GitHub Issue #205 (class
+  knowledge). The executor commented this repeat onto
+  #205, and this run comments the fold onto #205 as
+  well; the issue stays open, and the re-grounding of
+  the train icon point itself is still owed.
+
 ## Open questions
 
 - What the 3 Trade Contract ticket improves over the free Like
@@ -520,5 +844,164 @@ Measured in the 0110 train unit (ticker-0104, window mode
   account card, distinct from base power - possibly the summed
   rider power the rating derives from, unverified.
 - Whether a member can board more than one train per day.
-- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit). (2026-11-02 1325 update: the trucks unit grounded the trade entry at (52,553), 5 pixels from this point, and the 1246 station pan at (52,548) worked again - the near-coincidence now has three instances, but the tap outcomes still differ by context, so the identity stays unresolved.)
-- Station-panel verification owed: the 0715 check never opened the station panel, so a station-verified no-train read is still owed on a checked-only unit; banner plus BASE view plus column scan is a strengthened banner-only check, not a station verification.
+- Whether the station icon (52,548) and the trucks trade-entry icon [52,552] are the same column slot - the 0348 station pan and the 0416 trade open differ, unresolved (2026-11-02 0348 unit). (2026-11-02 1325 update: the trucks unit grounded the trade entry at (52,553), 5 pixels from this point, and the 1246 station pan at (52,548) worked again - the near-coincidence now has three instances, but the tap outcomes still differ by context, so the identity stays unresolved.) (2026-11-02 2320 update: the (52,548) tap produced no pan at all, so entry instability now outranks the identity question - re-ground the icon fresh each unit and use the station-drag route; see Issue #205.) (2026-11-03 0035 update: the neighbours are now measured - (52,508) temperature, (52,567) trucks, (52,626) Secret Command Post - so the train entry is none of the three probed neighbours; the 0035 unit's hypothesis is that the train icon only appears while a train is preparing, which would explain both the 2320 no-pan and these neighbour hits. The re-grounding owed by Issue #205 is still owed. (2026-11-03 0315 update: (52,548) again produced no pan on a fresh base screenshot with no boarding banner, and fresh grounding at (53,637) again opened Secret Command Post, repeating the 0348 (53,630) mislabelling.) (2026-11-03 0752 update: third consecutive partial with the same blocker; the Accessibility tree carries no icon labels and cannot ground the entry, (903,750) opens MY PROFILE not the Alliance panel, and ground taps on the alliance-territory map open player profile cards instead of probing the station; the final left column shows temperature, Secret Command Post badge (4), trucks, search (11), plus and radar with no train icon, consistent with the icon-only-while-preparing hypothesis. The re-grounding owed by Issue #205 is still owed.)
+- Station-panel verification owed: the 0715 check never opened the station panel, so a station-verified no-train read is still owed on a checked-only unit; banner plus BASE view plus column scan is a strengthened banner-only check, not a station verification. (2026-11-03 0035 note: a drag from the base centre, (600,600) to (300,300), reached empty snow southwest of the base with no station building in view, so a base-centre drag is not a station check either - the 2045 drag route needs the station building in view first.)
+
+
+## What the 2026-11-03 1124 unit added - fourth same-blocker partial today, banner absent, station not viewed
+
+- Ticker-1104, unit train-2026-11-03-1030, about
+  11:18 to 11:19 local, status partial. Evidence in
+  `_records_/2026-11-03/alliance-train/1124-queue-run.md`.
+- Base screen inspected on entry: no Boarding closes
+  in banner under the resource bar, and the left icon
+  column (temperature, Secret Command Post badge 1,
+  trucks, search 11, plus, radar) shows no train icon.
+  This is the same blocker as the 0035, 0315 and 0752
+  units today - the fourth consecutive same-blocker
+  partial of the day.
+- No boarding action was taken, no Trade Contracts
+  spent, no train summoned, no conductor role
+  touched. The station itself was not viewed, so a
+  preparing train is neither confirmed nor ruled out
+  beyond the absent banner - the same honest caveat
+  as the 0752 unit, which already tried the changed
+  method (the Alliance route) and found it does not
+  open the station from this view. No ground taps
+  were used to probe for the station (the 0752 unit
+  showed ground taps open other players profile cards
+  on this map).
+- Tracker untouched, per the rule for partial units;
+  the next tick re-produces train and resumes the
+  check. The re-grounding owed by Issue 205 is still
+  owed. No earlier claim superseded.
+
+## What the 2026-11-03 1742 unit added - fifth check-only outcome today, banner absent, station not viewed
+
+- Ticker-1734, unit train-2026-11-03-1430, about
+  17:41 to 17:42 local, status partial. Evidence in
+  `_records_/2026-11-03/alliance-train/1742-queue-run.md`.
+- Left the Mail category list with its back arrow at
+  grounded (62,952) and inspected the live base view.
+  No "Boarding closes in" banner under the resource
+  bar, and the left icon column (temperature, Secret
+  Command Post badge 1, trucks, radar, hammer) shows
+  no train icon. This is the same state as the 0035,
+  0315, 0752 and 1124 train units today, the fifth
+  such check-only outcome of the day.
+- No boarding action was taken, no Trade Contracts
+  spent, no train summoned, no conductor role
+  touched. The station itself was not viewed, so a
+  preparing train is neither confirmed nor ruled out
+  beyond the absent banner - the same honest caveat
+  as the earlier units today. Ground taps were not
+  used to probe for the station, per the 0752 lesson
+  that they open other players' profile cards on this
+  map.
+- No new Issue was filed for this repetition: the
+  blocker is a missing boarding window (trains run
+  1 regular plus 2 Mega Express per day with short
+  windows), not a tap-method failure, so rule R2's
+  method-escalation ladder does not apply; the
+  repetition is named here and in the pass note for
+  the retro instead. Tracker untouched, per the rule
+  for partial units; the next tick re-produces train
+  and resumes the check. Game left on the base view.
+  No earlier claim superseded.
+
+## What the 2026-11-03 1345 scout unit added - station panel is a preparation-only surface, LOOT located (scout read, not a train execution)
+
+- Scout unit scout-midday-scout-mid-2026-10-31-006 by
+  ticker-1334, about 13:36 to 13:44 local, observe-only.
+  Evidence in
+  `_records_/2026-11-03/perception-scout/1345-queue-run.md`,
+  folded in full into perception-scout. This section
+  carries only the train-relevant findings; claiming
+  the LOOT rows belongs to the gifts regular, not to
+  this activity.
+- Station panel, preparation-only surface: the unit
+  closed the panels to a clean base view,
+  screenshot-read the left icon column, and checked
+  the two train-preparation signals before any pan -
+  no train icon in the left column, no "Boarding
+  closes in" banner under the resource bar. With
+  neither signal present, no train is preparing in
+  this window, so the STATION PLATFORM screen has no
+  live state to read. The platform screen itself
+  remains unlocated, and it is a preparation-only
+  surface, not a standing panel: it can only be read
+  when a train is preparing. Successor scout unit
+  scout-midday-scout-mid-2026-10-31-007 carries the
+  station panel only, to be re-checked when a train is
+  preparing; the successor should re-check the two
+  preparation signals first rather than re-panning the
+  base edge.
+- LOOT box, located on the world map (cross-ref, not a
+  train claim): on the world map centred on the own
+  base with March Queues 0/4, one east drag pan, then
+  a grounded tap on the left-edge gift icon at
+  [311,237] opened the panel titled LOOT, with three
+  Lv.60 Doom Elite Member rows unclaimed (Claim All
+  observed only, never tapped). The world-map gift
+  badge was 3 at entry, matching the three rows. The
+  gifts units queued for 14:30 should claim them, or a
+  diff should raise them if the gifts regular does not
+  cover LOOT.
+
+## What the 2026-11-04 0217 unit added - sixth check-only outcome in a row, station still not viewed
+
+- Unit train-2026-11-03-2230 by ticker-0204,
+  about 02:16 to 02:17 local, status partial. No
+  "active on a different device" dialog appeared.
+- Inspected the live base view. No "Boarding
+  closes in" banner under the resource bar, and
+  the left icon column (temperature, trucks, radar
+  with a red dot, hammer) shows no train icon.
+  This is the same state as the 0035, 0315, 0752,
+  1124 and 1742 train units of 2026-11-03, the
+  sixth such check-only outcome in a row.
+- No boarding action was taken, no Trade
+  Contracts spent, no train summoned, no
+  conductor role touched. The station itself was
+  not viewed, so a preparing train is neither
+  confirmed nor ruled out beyond the absent
+  banner - the same honest caveat as the earlier
+  units. Ground taps were not used to probe for
+  the station, per the 0752 lesson that they open
+  other players' profile cards on this map.
+- No new Issue was filed for this repetition: the
+  blocker is a missing boarding window (trains run
+  1 regular plus 2 Mega Express per day with short
+  windows), not a tap-method failure, so rule R2's
+  method-escalation ladder does not apply; the
+  repetition is named here and in the pass note
+  for the retro instead.
+- Tracker untouched, per the rule for partial
+  units; the next tick re-produces train and
+  resumes the check. Game left on the base view.
+
+## What the 2026-11-04 0509 unit added - seventh check-only outcome in a row, grounding mislabel opens truck screen
+
+- Unit train-2026-11-04-0230 by ticker-0504, about 05:05 to 05:09 local, status partial. No "active on a different device" dialog appeared. Evidence in `_records_/2026-11-04/alliance-train/0509-queue-run.md`.
+- Inspected the live base view. No "Boarding closes in" banner under the resource bar, and the left icon column shows no train icon. This is the same state as the 0217 train unit today and the six check-only units of 2026-11-03, the seventh such check-only outcome in a row.
+- One wrong tap, recovered without action: a visual grounding put a train icon at (55, 563), but tapping it opened the truck screen instead. Nothing inside it was tapped - no dispatch, no plunder, no Mega Mode - and it was closed with its back arrow back to the base view. Nothing read on the truck screen is this unit's data, and the trucks unit must re-read its own counters live. This repeats the standing lesson that visual grounding must not be trusted for the left-column icons, and is further evidence for Issue #205 (left-column mapping and the train icon appearing only while a train is preparing); the ticker already commented this unit onto #205.
+- No boarding action was taken, no Trade Contracts spent, no train summoned, no conductor role touched. The station itself was not viewed, so a preparing train is neither confirmed nor ruled out beyond the absent banner - the same honest caveat as the earlier units. No further ground taps were used to probe for the station, per the 0752 lesson that they open other players' profile cards on this map.
+- No new Issue was filed for this repetition: the blocker is a missing boarding window (trains run 1 regular plus 2 Mega Express per day with short windows), not a tap-method failure, so rule R2's method-escalation ladder does not apply; the repetition is named here and in the pass note for the retro instead.
+- Tracker untouched, per the rule for partial units; the next tick re-produces train and resumes the check. Game left on the base view.
+
+## What the 2026-11-04 0839 unit added - eighth check-only outcome in a row, station still not viewed
+
+- Unit train-2026-11-04-0630 by ticker-0834, about 08:39 local, status partial. Evidence in `_records_/2026-11-04/alliance-train/0839-queue-run.md`. No different-device dialog appeared.
+- Inspected the live base view. No "Boarding closes in" banner under the resource bar, and the left icon column (hammer 2/4, trucks, radar with a red dot, phone with a red dot) shows no train icon. This is the same state as the 0217 and 0509 train units today and the check-only units of 2026-11-03, the eighth such check-only outcome in a row.
+- No boarding action was taken, no Trade Contracts spent, no train summoned, no conductor role touched. The station itself was not viewed, so a preparing train is neither confirmed nor ruled out beyond the absent banner - the same honest caveat as the earlier units. Ground taps were not used to probe for the station, per the 0752 lesson that they open other players' profile cards on this map, and the 0509 lesson that the left-column icon at (55, 563) opens the truck screen, not the train.
+- No new Issue was filed for this repetition, for the same reason as the 0509 section: the blocker is a missing boarding window (trains run 1 regular plus 2 Mega Express per day with short windows), not a tap-method failure, so rule R2's method-escalation ladder does not apply; the repetition is named here and in the pass note for the retro instead.
+- Tracker untouched, per the rule for partial units; the next tick re-produces train and resumes the check. Game left on the base view.
+
+## What the 2026-11-04 1404 unit added - screen-capture failure, fourth consecutive pass, fault narrowed to the game window
+
+- Unit train-2026-11-04-1030 by ticker-1404, about 14:04 to 14:10 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed). Evidence in `_records_/2026-11-04/alliance-train/1404-queue-run.md`. No different-device dialog appeared.
+- No game screen was ever read and no game input was dispatched. computer.control activate selected the LastWar window for background input but reported it not on screen and captured no observation ("Failed to start stream due to audio/video capture failure"); computer.observe (compact) failed with the same error twice across two computer sessions (cc-460, then cc-461); computer.control describe on the LastWar window failed with the same error. computer.control open_app returned outcome_unknown; a re-list showed LastWar still running under the same pid (59735), so no restart or duplicate launch happened and the launch was not repeated.
+- Narrowing, the point of this fold: control observation of the Google Chrome window succeeded in the same session (the Gmail inbox tree was read), so the control channel itself works and the failure is specific to the Last War fullscreen window, not a whole-device outage. This qualifies the Issue #282 framing ("device-channel fault"): the fault is the capture stream for the game window, not a device-wide capture outage. The qualification is commented on #282 by this run; the tooling tracker is Issue #284, where the ticker pass already commented this unit's evidence, so no duplicate issue is filed here.
+- Recurrence: this is the fourth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404), now across four activities. Until the Mac screen-recording stream recovers for the game window, further ticker passes will fail their first unit the same way.
+- No blind taps were dispatched, under the check-first rule. No train boarding check was performed, no seat taken, no Trade Contracts spent, no train summoned. Unlike the eight check-only units above, this unit is NOT a check-only outcome: the station was not even attempted, because no observation existed to check from - so it gives zero evidence about whether a train is preparing, and it does not extend the check-only streak count (which stays at eight).
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the train unit. The inbox held 65 units at this pass. The unit file sits in `_queue_/done/` with result status failed - the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.

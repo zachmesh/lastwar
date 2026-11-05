@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-02T21:44:07Z
-version: 1.15.0
+modified: 2026-11-04T22:42:57Z
+version: 1.25.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -20,6 +20,15 @@ grounded_in:
   - source: queue-planning execution record 2026-11-01 2240 run
   - source: ticker-0334 star-ceremony execution record 2026-11-02 0348 queue run (done, no ceremony waiting)
   - source: ticker-1234 star-ceremony execution record 2026-11-02 1241 queue run (done, no ceremony waiting)
+  - source: alliance duel execution record 2026-11-02 2326 queue run
+  - source: ticker-0304 alliance-duel execution record 2026-11-03 0314 queue run (done, ceremony none waiting, personal total unread by design)
+  - source: ticker-0704 alliance-duel execution record 2026-11-03 0718 queue run (done, ceremony none waiting, personal total snapshot 1,714,950)
+  - source: ticker-1134 alliance-duel execution record 2026-11-03 1141 queue run (done, ceremony none waiting, personal total snapshot 1,714,950 unchanged, rank 162 to 169)
+  - source: ticker-1804 alliance-duel execution record 2026-11-03 1809 queue run (done, duel day rolled about 18:00 local, closed Tues. day total 2,014,950 of 3,600,000 a MISS, Issue #242)
+  - source: ticker-1834 truck-plunder execution record 2026-11-03 1846 queue run (partial, trade counters 0 of 5 and 0 of 4 at 18:34 entry after 5 of 5 and 4 of 4 at 12:11, trade reset follows the about-18:00 rollover, Issue #242 follow-up)
+  - source: ticker-0434 alliance-duel execution record 2026-11-04 0456 queue run (done, star-ceremony trophy watch, no ceremony waiting, right-rail read, grounding timeout caveat)
+  - source: ticker-0834 alliance-duel execution record 2026-11-04 0839 queue run (done, no ceremony waiting, personal duel total 4,772,100 against the 3,600,000 target, read live)
+  - source: ticker-1340 alliance-duel execution record 2026-11-04 1344 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, third consecutive ticker pass to fail this way, Issue 284; ceremony and duel total unmeasured)
 ---
 
 
@@ -93,7 +102,23 @@ Measured on Event 38, 2026-10-25, under the owner procedure.
   weekend — Event 38 was played and claimed on Sunday 2026-10-25,
   while League S38 showed as calculating promotions and demotions.
 - Infinite Roulette spins and points reset every Sunday at 24:00 as
-  displayed; the countdown matched the 19:00 local daily reset.
+  displayed. The duel day itself does NOT follow the 19:00 general
+  reset: measured 2026-11-03, the new duel day was already running
+  at 18:07 local with timer 23:52:02, so the duel day rolls over
+  about 18:00 local. CORRECTED 2026-11-03 1809 (Issue #242);
+  this supersedes the earlier reading that the countdown matched
+  the 19:00 local daily reset, and the 19:00 references in the
+  2026-11-01 history sections below are superseded in the same
+  sense. CORRECTED 2026-11-03 1846 (Issue #242 follow-up): the
+  trade day does NOT still reset at 19:00 - the 1846 trucks
+  unit entered at 18:34 local reading Today's Trade Count
+  0/5 and Your Plunder Count Today 0/4, live on screen,
+  after the 1211 unit had closed them at 5/5 and 4/4 at
+  12:11, so the trade counters reset with the same
+  about-18:00 rollover (02:00 UTC absolute boundary) as
+  the duel day. The duel day and the trade day share the
+  reset boundary; the earlier "duel day about an hour
+  earlier than the trade day" framing is superseded.
 
 ## Scope and availability
 
@@ -119,7 +144,12 @@ substitute for one.
 - The star-ceremony unit - the alliance-duel regular - reads the
   personal daily total live on the duel panel (the gold VS
   medallion) on its runs, and the read of the last run before the
-  19:00 reset is the day closing figure.
+  about-18:00 duel rollover is the day closing figure. After the
+  rollover the closed day total is still readable on the
+  previous-day tab of the Ranking panel (measured 2026-11-03
+  1809: the Tues. tab read 2,014,950 after the Wed. day had
+  already started), so a post-rollover read on that tab also
+  carries the closing figure.
 - Superseded in part by the owner decision of 2026-11-01 on
   Issue #132 - the daily total read moves to a dedicated
   duel-score regular (Issue #136), because in practice the read
@@ -142,21 +172,26 @@ decision (deferred, not ruled non-goals).
   read live, and the gap target minus achieved. Fragment scores
   never substitute, and the Duel Progress mail is a cross-check
   only.
-- The last unit executed before the 19:00 reset carries the
-  day closing figure, recorded in the day alliance-duel record.
+- The last unit executed before the about-18:00 duel rollover
+  carries the day closing figure, recorded in the day
+  alliance-duel record; a post-rollover read on the
+  previous-day Ranking tab carries it equally (2026-11-03
+  1809 precedent).
 - A tracking unit never grinds, spends or buys to chase the
   target - scoring actions stay with the themed-day regulars
   under the duel day gates in _tools_/duel_schedule.json.
 - If the total cannot be read, the unit closes that line as
-  unverified and a re-read is enqueued before the reset (rule
-  R1 of the task unit queue design), as already stated above.
+  unverified and a re-read is enqueued before the about-18:00
+  duel rollover (rule R1 of the task unit queue design), as
+  already stated above.
 - The closing figure is recorded in the day alliance-duel record
   and in the unit result stats as the total and its gap against
   3,600,000. The Duel Progress mail is a cross-check only, never
   the source.
 - If the total cannot be read, the unit closes that line as
-  unverified and a re-read is enqueued before the reset (rule R1
-  of the task unit queue design). A duel day with no total read
+  unverified and a re-read is enqueued before the about-18:00
+  duel rollover (rule R1 of the task unit queue design). A duel
+  day with no total read
   is reported in the round summary as **total unread** - never
   passed over in silence, and never estimated from fragments.
 - This read is part of the alliance-duel type, alongside the
@@ -540,6 +575,258 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   none is claimed. Issue #136 already tracks the
   duel-score staging gap; no duplicate issue filed.
 
+## What the 2026-11-02 retro added for duel tracking
+
+- The gap changed phase on Nov 2, from staging to
+  claiming. Ticker sync staged duel-score units for 4
+  cycles (0230, 0630, 1030, 1430, created 13:42Z):
+  all 4 went unexecuted. Three are reaped as expired
+  in `_queue_/done`; 1430 still sat in inbox past its
+  18:30 expiry at the retro snapshot (20:41 PST).
+  Zero duel-score units closed with a numeric
+  target/achieved pair, so issue #136's target metric
+  is still unmet and the issue stays open.
+- The duel read did not migrate in practice. After
+  the 0047 star-ceremony read (1,113,750 at Nov 2
+  00:47 PST), star units followed the handover and
+  stopped reading totals (1241 unit explicitly did
+  not read), while the duel-score units that were
+  supposed to carry the read expired unclaimed. No
+  duel total was read after 00:47 before the 19:00
+  reset, so the Nov 2 close total is unread, not
+  zero. The next duel-score unit to execute is the
+  first real test of the split; until one closes
+  with a pair, star-unit reads remain the only source
+  and must be marked as interim when cited.
+- Planner divergence, filed as issue #198: planner
+  passes 1440 and 1940 on Nov 2 still claim
+  regulars.json carries no duel-score regular and no
+  duel-score unit is in the pool, while the live
+  pool contains both. The planner reads a stale
+  main-tree pool copy; its duel statements are
+  stale-read errors, not evidence about the live pool.
+- Source: daily retro 2026-11-02 in
+  `_records_/retro/`, duel-score done units
+  `_queue_/done/duel-score-2026-11-02-*.md`, and
+  planner records `_records_/2026-11-02/
+  queue-planning/1440-run.md` and `1940-run.md`.
+
+## What the 2026-11-02 2326 unit added - ceremony none waiting, alliance totals snapshot, personal total unread
+
+- Unit star-ceremony-2026-11-02-2230 by ticker-2304,
+  session about 23:26 to 23:30, status partial.
+  Tracker untouched, so the next tick re-produces
+  this regular. Evidence in
+  `_records_/2026-11-02/alliance-duel/2326-queue-run.md`.
+- Ceremony check, done, nothing waiting: base screen
+  inspected, no trophy icon beside the Alliance icon
+  on the right side. Per the activity metadata the
+  icon is present only while a ceremony is waiting
+  and disappears once it has been played and
+  claimed. No ceremony was played in this unit
+  because none was waiting.
+- Duel panel read live from the VS icon: Duel
+  Progress, Today's Duel, theme Base Expansion,
+  countdown 18:33:56 at entry. Alliance totals read
+  live: The Apex 260,334,917 (46%) against [Kmf]
+  311,756,756 (54%). These are alliance totals only
+  and never substitute for the personal total.
+- Personal total read, unverified, pass budget
+  ended the hunt: the visible MVP list showed Abyss
+  Apex 18,306,600, [Kmf] 11,296,350 and [Kmf] Maison
+  JP 10,407,300. One upward drag scrolled the list
+  to further rows, but the account's own row (Bears
+  Lair) was not reached before the pass budget
+  ended. The personal daily total is therefore
+  UNREAD in this unit, and no total or gap against
+  3,600,000 is reported: a fragment or alliance
+  figure never substitutes for the personal total.
+- Follow-up, carried to the next unit: the next tick
+  re-produces this regular, and that unit should
+  resume the ranking scroll to the account's own
+  row. The owner decision of 2026-11-01 moved the
+  total read to the duel-score regular; this unit
+  followed the metadata in front of it, and the
+  duel-score unit, where present, is the other
+  reader of this same line. No duel-score figure is
+  claimed from this unit.
+
+
+## What the 2026-11-03 0314 unit added - ceremony none waiting, alliance totals snapshot, personal total unread by design
+
+- Ticker-0304, unit star-ceremony-2026-11-03-0230,
+  about 03:14 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-duel/0314-queue-run.md`.
+- Base screen right rail inspected: Events, Capitol, the
+  gold VS medallion, Season II, Alliance, Mail and
+  Inventory. No trophy icon sits beside the Alliance
+  icon, so no Star Ceremony is waiting to be played.
+  Nothing was played, claimed or emoted. The trophy
+  beside Alliance remains the ceremony-waiting signal.
+- Duel panel opened for a look only: today's theme Base
+  Expansion, countdown 14:47:56, alliance totals The Apex
+  337,971,369 (42 percent) against Kmf 460,462,861 (58
+  percent). These are alliance figures, not a personal
+  total, and they are recorded as a snapshot only.
+- Personal daily total NOT read in this unit, by design:
+  per the 2026-11-01 handover, the total read belongs to
+  the duel-score regular, not star-ceremony. No ranking
+  scroll was attempted, and no total or gap against
+  3,600,000 is reported here. This unit complies with
+  the handover; the division of labour stands.
+- Duel panel closed with its back arrow, leaving the game
+  on the base screen.
+
+## What the 2026-11-03 0718 unit added - ceremony none waiting, personal total snapshot 1,714,950
+
+- Ticker-0704, unit star-ceremony-2026-11-03-0630,
+  about 07:15 to 07:18 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-duel/0718-queue-run.md`.
+- Base screen ceremony check, read live: no Star
+  Ceremony trophy icon beside the Alliance shield, so
+  no ceremony was waiting to be played or claimed. A
+  visual grounding hit for a trophy below the VS
+  medallion was checked against the screenshot itself
+  and rejected - that icon is the Season II badge, not
+  a ceremony trophy. New look-alike distinction: the
+  Season II badge below the VS medallion is not a
+  ceremony signal; the trophy beside Alliance remains
+  the ceremony-waiting signal.
+- Duel panel, read live via the gold VS medallion:
+  Today's Duel, theme Base Expansion, timer 10:42:50 at
+  entry; [AP3x] The Apex 43 percent (452,542,821)
+  against [Kmf] Oden-en 57 percent (608,585,563). Top 3:
+  [AP3x] Abyss Apex 18,890,100, [AP3x] IgorSantos13
+  14,218,350, [Kmf] Maison JP 12,555,150. These are
+  alliance figures, recorded as a snapshot only, up
+  from the 0314 snapshot (42 percent 337,971,369
+  against 58 percent 460,462,861).
+- Personal daily total, read live on the Ranking
+  panel, Daily Rank tab, Tues. day tab: this account's
+  highlighted row reads rank 162, Bears Lair [AP3x] The
+  Apex, 1,714,950 points. That is 1,714,950 of the
+  3,600,000 target, gap 1,885,050, about 47.6 percent
+  of target. Handover note: per the 2026-11-01
+  handover the personal-total read belongs to the
+  duel-score regular, not star-ceremony, and the 0314
+  unit complied by not reading it. This unit's total
+  is therefore recorded here as a snapshot only, not
+  as the duel-score regular's measurement, and the
+  division of labour stands - the next duel-score unit
+  still owns the measured read.
+- Entry correction for the next unit: a first tap at
+  norm 210,962 on the duel panel missed its back arrow
+  and changed nothing; the arrow's grounded box is
+  norm 96,918 to 198,980, centre 147,949, and that tap
+  returned the game to the base screen.
+- Nothing claimed, nothing bought, no diamonds or money
+  spent. Costs: 167 seconds, no stamina or items
+  spent. The game was left on the base screen. Note on
+  the record itself: the unit file's evidence path was
+  first written as 0726-queue-run.md at completion
+  time and corrected to 0718-queue-run.md - a
+  record-hygiene note, not a play claim.
+
+## What the 2026-11-03 1141 unit added - ceremony none waiting, personal total unchanged, rank slipped
+
+- Ticker-1134, unit star-ceremony-2026-11-03-1030,
+  about 11:36 to 11:41 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-duel/1141-queue-run.md`.
+- Base screen ceremony check, read live: no Star
+  Ceremony trophy icon beside the Alliance shield on
+  the right rail (Events, Capitol, gold VS medallion,
+  Season II badge, Alliance shield all present, no
+  trophy), so no ceremony was waiting to be played
+  or claimed. Nothing played, claimed or emoted.
+- Duel panel, read live via the gold VS medallion
+  (grounded centre norm 930,277): Today's Duel, theme
+  Base Expansion, timer 06:21:36 at entry; [AP3x] The
+  Apex 44 percent (490,734,321) against [Kmf] 56
+  percent (626,777,393). Top 3: [AP3x] Abyss Apex
+  18,890,100, [AP3x] IgorSantos13 14,218,350,
+  [AP3x] bell-a-da 12,756,450. Alliance figures are a
+  snapshot only, up from the 0718 snapshot (43 percent
+  452,542,821 against 57 percent 608,585,563).
+- Personal daily total, read live on the Ranking
+  panel, Daily Rank tab, Tues. day tab: this account's
+  highlighted row reads rank 169, Bears Lair [AP3x] The
+  Apex, 1,714,950 points. That is 1,714,950 of the
+  3,600,000 target, gap 1,885,050, about 47.6 percent
+  of target. The total is unchanged since the 0718
+  read, while the rank slipped 162 to 169 and the
+  number 3 row changed, so this is a fresh live read,
+  not a stale screen. As in the 0718 section, this
+  total is recorded here as a snapshot only, not as
+  the duel-score regular's measurement, and the
+  division of labour stands - the next duel-score unit
+  still owns the measured read. The duel day still
+  has about 6 hours 19 minutes left on the panel
+  timer, so the gap is a mid-day position, not a day
+  miss.
+- Panel closed with the Ranking back arrow (grounded
+  norm 63,927) and the duel panel back arrow (grounded
+  centre norm 147,949, as recorded in the 0718 run),
+  leaving the game on the base screen.
+- Nothing claimed, nothing bought, no diamonds or money
+  spent. Costs: about 5 minutes, no stamina or items
+  spent. The resource bubbles visible on the base screen
+  were left for the harvest unit, one unit one task type.
+
+## What the 2026-11-03 1809 unit added - duel day rolled about 18:00, closed Tues. day a MISS at 2,014,950
+
+- Ticker-1804, unit star-ceremony-2026-11-03-1430,
+  about 18:06 to 18:09 local, status done. Evidence in
+  `_records_/2026-11-03/alliance-duel/1809-queue-run.md`.
+- Base screen ceremony check, read live: no Star
+  Ceremony trophy icon beside the Alliance shield on
+  the right rail (Events, Capitol, gold VS medallion,
+  Season II badge, Alliance shield all present, no
+  trophy), so no ceremony was waiting to be played or
+  claimed. Nothing played, claimed or emoted.
+- Duel panel, read live via the gold VS medallion
+  (grounded centre norm 930,277): Today's Duel, theme
+  Age of Science, timer 23:52:02 at entry; [AP3x] The
+  Apex 48 percent (44,587,500) against [Kmf] 52 percent
+  (47,700,000). Top 3: [AP3x] SRH042 5,867,850,
+  [AP3x] 1717Flower 5,571,500, [Kmf] けちゃん豆
+  5,345,750. These are alliance figures, a snapshot
+  only.
+- Rollover correction, measured: the Ranking panel,
+  Daily Rank tab, read live with the Wed. day tab
+  selected on entry and this account's highlighted row
+  reading Unlisted, Bears Lair [AP3x] The Apex,
+  0 points - the new duel day had already started. The
+  timer value puts the rollover at about 18:00 local,
+  an hour before the 19:00 general reset. This
+  corrects the cadence in this profile (which read
+  that the countdown matched the 19:00 local daily
+  reset) and resolves the open question on the duel
+  day end disagreement: the panel, not tools/duel.py,
+  is right about the rollover hour. Gap filed as
+  Issue #242 (labels knowledge); the ticker pass
+  edited no knowledge file, the correction rides this
+  fold.
+- Closed day total, read live on the Tues. day tab:
+  this account's highlighted row reads rank 177,
+  Bears Lair [AP3x] The Apex, 2,014,950 points. That
+  is the closed Tues. duel day total: 2,014,950 of
+  the 3,600,000 target, gap 1,585,050, about 56.0
+  percent of target. The day is a MISS against the
+  owner target, up 300,000 from the 11:41 read of
+  1,714,950, still short at close. As in the 0718 and
+  1141 sections, this total is recorded here as a
+  snapshot from the star-ceremony unit, not as the
+  duel-score regular's measurement, and the division
+  of labour stands. The new day personal total is
+  0 points so far (Unlisted on the Wed. tab).
+- Panel closed with the Ranking back arrow and the
+  duel panel back arrow, leaving the game on the base
+  screen. Nothing claimed, nothing bought, no diamonds
+  or money spent. Costs: about 3 minutes, no stamina
+  or items spent. The resource bubbles visible on the
+  base screen were left for the harvest unit, one unit
+  one task type.
+
 ## Open questions
 
 - The day themes and scoring once League S38 opens, and the current
@@ -548,3 +835,41 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - How long the ceremony trophy icon waits if unplayed, and whether
   a skipped award card can be revisited (Event 38 suggests not).
 - Who the MVP finale honours and how the winners list is ordered.
+
+- RESOLVED 2026-11-03 1809 (Issue #242): the duel day end
+  and theme disagreement is settled in favour of the panel.
+  The 1809 panel read shows the new duel day already running
+  at 18:07 local with timer 23:52:02 and theme Age of
+  Science - the theme tools/duel.py reported, but with
+  rollover about 18:00 local, not the tool's 19:00 end time.
+  The 0718 and 1141 timers (10:42:50 at 07:18, 06:21:36 at
+  11:36) pointed to the same about-18:00 rollover. The
+  tool's 19:00 end time is wrong and is not adopted; the
+  tool's theme was right for the new day, not for the
+  closing day (Base Expansion). The duel day tabs follow
+  the server day: on a Tuesday evening in PST the Wed. tab
+  is already selected, because the new duel day has begun.
+
+## What the 2026-11-04 0456 unit added - ceremony none waiting, right-rail read, grounding timeout stated
+
+- Unit star-ceremony-2026-11-04-0230 by ticker-0434, 04:56 local, status done. The regular check is the trophy watch; the watch was performed and no ceremony waits. No "active on a different device" dialog appeared.
+- Base screen read live: the right rail inspected top to bottom reads Events, Capitol, VS medallion, Season II, Alliance shield, Mail, Inventory. No trophy icon beside the Alliance icon, so no Star Ceremony is waiting to be played or claimed this unit. No ceremony screen was opened, no hearts sent, nothing claimed - there was nothing waiting to claim.
+- Caveat stated, not hidden: a visual-grounding call to double-check the trophy icon timed out (180 seconds) as the pass budget ended, so the absence rests on the live screenshot read above. A timed-out grounding call is not evidence for or against the trophy; this unit's done rests on the screenshot read alone. Tracker marked done. Nothing spent.
+
+## What the 2026-11-04 0839 unit added - no ceremony waiting, personal duel total 4,772,100 over the 3,600,000 target
+
+- Unit star-ceremony-2026-11-04-0630 by ticker-0834, about 08:38 to 08:39 local, status done. Evidence in `_records_/2026-11-04/alliance-duel/0839-queue-run.md`. No ceremony screen opened, no hearts sent, nothing claimed, no spending. No different-device dialog appeared.
+- Navigation pivot: from the Alliance panel left by the help unit, the bottom back arrow tap did not navigate; a left-edge swipe drag returned to the base screen (same pivot as the 00:04 arms-race unit).
+- Base screen right rail, read live top to bottom: Events (red dot 1), Capitol, VS medallion, Season II, Alliance shield (no red dot), Mail (red dot), Inventory. No trophy icon beside the Alliance icon, so no Star Ceremony is waiting to be played or claimed this unit.
+- Duel panel, read live (gold VS medallion): Today's Duel, Age of Science theme, countdown 09:21:27 at entry. Alliance totals: [AP3x] The Apex 549,654,034 (40 percent) vs [Kmf] 811,024,302 (60 percent). The countdown is consistent with the Issue #242 resolution (duel day rolls over about 18:00 local, not 19:00): 08:38 plus 09:21 lands about 17:59.
+- Personal daily total, read live on the Today's Theme tab: 4,772,100 points against the owner target of 3,600,000 - target exceeded by 1,172,100 with 09:21:00 of the duel day remaining at the read. The 2,600,000 and 3,600,000 threshold chests both show claimed checkmarks; the 7,200,000 chest is not yet reached. No chest claimed in this unit. As in the 0718, 1141 and 1809 sections, this total is recorded here as a snapshot from the star-ceremony unit, not as the duel-score regular's measurement, and the division of labour stands.
+- Returned to the base screen by left-edge swipe.
+
+## What the 2026-11-04 1344 unit added - screen-capture failure, third consecutive pass, nothing measured
+
+- Unit star-ceremony-2026-11-04-1030 by ticker-1340, about 13:40 to 13:44 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1333 mail section). Evidence in `_records_/2026-11-04/alliance-duel/1344-queue-run.md`. No different-device dialog appeared.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: computer.observe (image, then compact) and computer.control screenshot failed with "Failed to start stream due to audio/video capture failure"; computer.control activate selected the LastWar window for background input but captured no observation with the same error; a fresh computer session (cc-459, after ending cc-458) failed identically on activate and observe. computer.control open_app returned outcome_unknown; a re-list showed LastWar still running under the same pid (59735), so no restart or duplicate launch happened and the launch was not repeated.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. No ceremony was checked, no personal duel total was read, nothing claimed, nothing spent.
+- Recurrence, not a new failure class: this is the third consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344). The blocker is filed as Issue #284 (tooling, filed by this pass) alongside the knowledge Issue #282 filed by the 1332 organizer run. This section adds no new diagnosis; the narrowing of the fault to the game window comes from the later 1404 train unit (see alliance-train 1.26.0).
+- Reading warning: this failed unit gives zero evidence about the ceremony state or the duel total. It must NOT be read as "no ceremony waiting" - the 0456 and 0839 sections above rest on live reads; this one rests on no read at all.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the star-ceremony unit. The inbox held 66 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.

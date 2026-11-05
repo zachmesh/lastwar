@@ -69,7 +69,18 @@ What is counted, per section 14 -
     as before and no closing is double-counted.
     points is aggregated whenever present but is not a required
     key - it applies to scoring types only, and the pool carries
-    no authoritative list of which types those are.
+    no authoritative list of which types those are. One
+    exception (issue #197): a nonzero points value exactly
+    equal to the same unit's achieved is not summed - it is a
+    copied running total (a duel total read belongs in
+    achieved only), not score gained in the unit. Radar units
+    are exempt from that exception (issue #296): their
+    achieved is a claim count and their radar-screen points
+    rise one per claim, so equality there is the mechanism,
+    not a copy. Excluded
+    points are counted under points_dup_excluded, never
+    silently dropped, and queue.py complete warns at close
+    time so future closings do not carry the copy.
 
 Data sources are only inside the repository - the done pool at
 _queue_/done and, as a fallback, the day INDEX files in
@@ -117,7 +128,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.3.0"
+TOOL_VERSION = "1.4.0"
 
 
 def _load_queue():
@@ -428,6 +439,8 @@ def _empty_bucket():
         "resources_unparsed": [],
         "points_total": 0.0,
         "points_units": 0,
+        "points_dup_excluded": 0,
+        "points_dup_excluded_units": [],
         "costs": {},
         "blockers": {},
         "named_blockers": {},
@@ -474,7 +487,11 @@ def _feed(bucket, unit):
             bucket["resources_gained"].get(name, 0.0) + number
     bucket["resources_unparsed"].extend(unparsed)
     points = _num(stats.get("points"))
-    if points is not None:
+    dup = getattr(Q, "points_duplicates_achieved", None)
+    if points is not None and dup is not None and dup(stats, unit.get("regular")):
+        bucket["points_dup_excluded"] += 1
+        bucket["points_dup_excluded_units"].append(unit["unit"])
+    elif points is not None:
         bucket["points_total"] += points
         bucket["points_units"] += 1
     costs, _ = _itemise(stats.get("costs"))
@@ -545,6 +562,9 @@ def _summarise(bucket):
                              sorted(bucket["resources_gained"].items())},
         "points_total": _clean(bucket["points_total"]),
         "points_units": bucket["points_units"],
+        "points_dup_excluded": bucket["points_dup_excluded"],
+        "points_dup_excluded_units": bucket[
+            "points_dup_excluded_units"],
         "costs": {k: _clean(v) for k, v in
                   sorted(bucket["costs"].items())},
         "resources_per_minute": {k: _clean(v / minutes) for k, v in

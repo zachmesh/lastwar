@@ -23,13 +23,28 @@ outputs in an output directory:
      plus the observation frontmatter day counters (passes
      completed, items observed, red dots seen, explained and
      unexplained), reported separately from the classified
-     counts. When no structured item was parsed at all, the
-     headline items and unexplained figures fall back to those
+     counts, and the per-pass red-dot accounting sections of
+     a narrative observation, reconciled section total
+     against frontmatter counter. When no structured item
+     was parsed at all, the headline items and unexplained
+     figures fall back to those
      frontmatter counts (basis recorded as frontmatter-fallback,
      classified counts kept alongside), so a narrative-only
      observation never reads as zero unexplained when its own
-     frontmatter says otherwise; a structured observation is
-     never overridden;
+     frontmatter says otherwise; when the frontmatter carries
+     no unexplained counter either, the headline unexplained
+     figure falls back one more tier to the sum of the
+     narrative accounting sections stating a count (basis
+     recorded as narrative-fallback, with the caveat that
+     chained passes may re-state the same dot, so the sum is
+     a section total, not a distinct-dot count - the report
+     also carries the distinct named dots parsed from the
+     counted unexplained lines, with sections stating no
+     countable names counted separately, so the distinct
+     figure is a floor); a structured
+     observation is never overridden, and the narrative seen
+     total is never used as items observed, because seen
+     counts red-dot signals, not observed items;
   4. the promotion proposals - one entry per registered
      candidate with a completed exploration unit in the pool,
      naming the exploration evidence and the decision owed
@@ -315,6 +330,262 @@ def load_day_counters(path):
         return day_counters_from_fields(doc)
     fields, _ = Q.parse_frontmatter(text)
     return day_counters_from_fields(fields)
+
+
+# ---------------------------------------------------------------------
+# Narrative red-dot accounting - the per-pass accounting sections
+# ---------------------------------------------------------------------
+
+ACCOUNTING_KEYS = ("seen", "explained", "unexplained")
+ACCOUNTING_FRONTMATTER = {
+    "seen": "red_dots_seen",
+    "explained": "red_dots_explained",
+    "unexplained": "unexplained_red_dots",
+}
+# Words a scope qualifier may carry between the accounting
+# keyword and the count. A qualifier states where the count
+# applies ("within the base group alone"), never a dot or a
+# counter: a dot word (badge, dot, icon, toast, chest) or a
+# counter word would make the following number an identifier
+# ("the badge 2"), not a count, so such a word ends the
+# qualifier and the line reads as nameless instead of
+# inventing a count. At most six qualifier words: the
+# attested form carries five.
+_ACCOUNTING_QUALIFIER_WORD = (
+    r"(?!badge|badges|dot|dots|icon|icons|toast|toasts|"
+    r"counter|counters|chest|chests\b)[a-z]+")
+_ACCOUNTING_LINE = re.compile(
+    r"^-\s*(seen|explained|unexplained)"
+    r"(?:\s+red\s+dots?)?"
+    r"(?P<qualifier>(?:\s+" + _ACCOUNTING_QUALIFIER_WORD + r"){0,6}?)"
+    r"\s*:?\s*(?P<count>\d+)\b",
+    re.IGNORECASE)
+
+
+def parse_narrative_accounting(text):
+    """Per-pass red-dot accounting sections of a narrative
+    observation, in file order. A section starts at a heading
+    naming red dot accounting and ends at the next heading;
+    its Seen, Explained and Unexplained lines carry that
+    pass's own counts, in either the bare form ("Seen 3:")
+    or the spelled-out form ("Unexplained red dots: 0.").
+    A count may also carry a scope qualifier between the
+    keyword and the number ("Unexplained within the base
+    group alone 2:"), of at most six digit-free words that
+    name no dot and no counter; the qualifier is why the
+    2026-11-04 observation's two base-group lines read at
+    all. A qualifier followed by digits and then a colon
+    and another bare number ("in group 2: 3 dots") is not
+    a count: the digits were a scope identifier, so the
+    line reads as nameless. Names are still taken only
+    from the unqualified counted form, so a qualified
+    line states its count and names nothing - its section
+    counts as unnamed, and the distinct figure stays a
+    floor.
+    A count a section does not state reads as None, never
+    as zero - a line naming a dot without a number (for
+    example "Unexplained: the Alliance Wars dot") states
+    no count and invents none, so the same dot re-stated
+    by a later pass is never counted twice by inference -
+    and a carried-forward line (for example "Carried
+    unexplained from ...") is not a count line, so carried
+    dots are never double-counted. Structured items are
+    untouched: this reads the narrative's own accounting
+    only, so the coverage report can reconcile it against
+    the frontmatter day counters instead of presenting
+    either figure unexamined."""
+    sections = []
+    current = None
+    unexplained_text = None
+
+    def _finalize(section, bullet_text):
+        if section is None or "unexplained_names" in section:
+            return
+        section["unexplained_text_present"] = \
+            bullet_text is not None
+        section["unexplained_names"] = (
+            _counted_unexplained_names(bullet_text)
+            if bullet_text else [])
+
+    for raw in text.splitlines():
+        stripped = raw.strip()
+        if stripped.startswith("#"):
+            _finalize(current, unexplained_text)
+            unexplained_text = None
+            if "red dot accounting" in stripped.lower():
+                current = {key: None for key in ACCOUNTING_KEYS}
+                sections.append(current)
+            else:
+                current = None
+            continue
+        if current is None:
+            continue
+        if unexplained_text is not None:
+            if raw[:1].isspace() and stripped and \
+                    not stripped.startswith("-"):
+                unexplained_text += " " + stripped
+                continue
+            _finalize(current, unexplained_text)
+            unexplained_text = None
+        m = _ACCOUNTING_LINE.match(stripped)
+        if m:
+            qualifier = (m.group("qualifier") or "").strip()
+            rest = stripped[m.end():]
+            if qualifier and re.match(r"\s*:\s*\d", rest):
+                # The digits were a scope identifier, not the
+                # count ("Unexplained in group 2: 3 dots"):
+                # the real count follows the colon. Inventing
+                # the identifier as the count would be worse
+                # than stating none, so the line reads as
+                # nameless.
+                m = None
+        if m:
+            current[m.group(1).lower()] = int(m.group("count"))
+            if m.group(1).lower() == "unexplained":
+                unexplained_text = stripped
+        elif re.match(r"-\s*unexplained\b", stripped,
+                      re.IGNORECASE):
+            # A nameless unexplained line states no count and
+            # names nothing, but it is still a signal: the
+            # section counts as unnamed, never as absent.
+            unexplained_text = stripped
+    _finalize(current, unexplained_text)
+    return sections
+
+
+_DOT_NAME_EXCLUDE = re.compile(
+    r"(no owning|filed as|issue #|maps? to|plus counters?"
+    r"|\bcounter\b|unlocated|unwalked|carried)", re.IGNORECASE)
+
+
+def _normalize_dot_name(item):
+    """One dot name, spelling-normalised, never merged by sense.
+
+    Parentheticals and a trailing explanation clause are cut,
+    a leading "the" and a trailing dot/badge word are stripped,
+    and case and spacing are flattened - so "Alliance dot"
+    and "Alliance red dot" both read "alliance", while
+    "Alliance Wars dot" stays a different name. Near-duplicate
+    spellings the normaliser does not merge stay separate and
+    are shown in the name list, so a reader can merge by eye
+    instead of the tool inventing an identity.
+    """
+    item = re.sub(r"\([^)]*\)", "", item)
+    item = item.split(" - ")[0]
+    item = item.strip().strip(".").strip()
+    if item.lower().startswith("the "):
+        item = item[4:].strip()
+    lowered = item.lower()
+    for suffix in (" red dot", " dot", " badges", " badge"):
+        if lowered.endswith(suffix):
+            item = item[: -len(suffix)].strip()
+            break
+    return " ".join(item.lower().split())
+
+
+def _counted_unexplained_names(bullet_text):
+    """Names from one counted unexplained line, or [].
+
+    Only a line stating a count and a colon list names dots,
+    and only when the kept items equal the stated count:
+    a trailing explanation clause ("no owning regular"), a
+    filing note ("filed as Issue #212") or a counters tail
+    ("plus 2 counters ...") would otherwise invent a dot,
+    so a line whose items do not add up to its count names
+    nothing. A nameless line names nothing by the same rule
+    - its prose is not parsed for names - and a zero count
+    is a definite statement, not an unnamed section.
+    """
+    m = re.search(
+        r"unexplained(?:\s+red\s+dots?)?\s*:?\s*(\d+)",
+        bullet_text, re.IGNORECASE)
+    if not m:
+        return []
+    count = int(m.group(1))
+    if count == 0:
+        return []
+    rest = bullet_text[m.end():].lstrip(": ").strip()
+    rest = re.sub(r"\bplus\b[^,;]*counters?\b.*$", "", rest,
+                  flags=re.IGNORECASE)
+    kept = []
+    for raw_item in re.split(r"[,;]", rest):
+        item = _normalize_dot_name(raw_item)
+        if not item or _DOT_NAME_EXCLUDE.search(item):
+            continue
+        if len(item.split()) > 6:
+            continue
+        kept.append(item)
+    return kept if len(kept) == count else []
+
+
+def distinct_unexplained_dots(sections):
+    """Distinct named unexplained dots across sections.
+
+    Returns None when no section states an unexplained count
+    or carries an unexplained bullet at all - no signal, not
+    a zero. Otherwise the union of the counted lines' names,
+    so a dot re-stated by a chained pass counts once, plus
+    the sections that stated unexplained dots without
+    countable names: the distinct figure is a floor, and
+    the unnamed count says how far below a total it may sit.
+    """
+    signal = [s for s in sections
+              if s.get("unexplained") is not None
+              or s.get("unexplained_text_present")]
+    if not signal:
+        return None
+    names = set()
+    for section in signal:
+        names.update(section.get("unexplained_names", []))
+    unnamed = sum(
+        1 for s in signal
+        if not s.get("unexplained_names")
+        and s.get("unexplained") != 0)
+    return {"distinct": len(names), "names": sorted(names),
+            "unnamed_sections": unnamed,
+            "signal_sections": len(signal)}
+
+
+def narrative_accounting_summary(sections, day_counters):
+    """Totals and frontmatter reconciliation for parsed
+    accounting sections. A total is the sum over the sections
+    that state that count, or None when no section states
+    it; reconciliation per count is matches when the total
+    equals the frontmatter counter, differs by N when both
+    are stated and unequal, and not comparable otherwise."""
+    totals = {}
+    for key in ACCOUNTING_KEYS:
+        stated = [s[key] for s in sections if s[key] is not None]
+        totals[key] = sum(stated) if stated else None
+    reconciliation = {}
+    for key in ACCOUNTING_KEYS:
+        front = day_counters.get(ACCOUNTING_FRONTMATTER[key])
+        total = totals[key]
+        if front is None or total is None:
+            reconciliation[key] = "not comparable"
+        elif total == front:
+            reconciliation[key] = "matches"
+        else:
+            reconciliation[key] = f"differs by {total - front:+d}"
+    return {"sections": sections, "totals": totals,
+            "reconciliation": reconciliation}
+
+
+def load_narrative_accounting(path):
+    """Narrative accounting summary for one observation file.
+    JSON observations carry no markdown accounting sections,
+    so they read as an empty summary, never as an error."""
+    with open(path, encoding="utf-8") as fh:
+        text = fh.read()
+    try:
+        doc = json.loads(text)
+    except ValueError:
+        doc = None
+    if isinstance(doc, dict):
+        return narrative_accounting_summary([], {})
+    return narrative_accounting_summary(
+        parse_narrative_accounting(text),
+        load_day_counters(path))
 
 
 # ---------------------------------------------------------------------
@@ -672,6 +943,8 @@ def run(args):
                                            set(regulars))
     items, unmatched = load_observation(args.observation)
     day_counters = load_day_counters(args.observation)
+    narrative_accounting = load_narrative_accounting(
+        args.observation)
     units = pool_units(args.root)
     now_local = stamp.astimezone(LOCAL_TZ)
 
@@ -1001,29 +1274,52 @@ def run(args):
     # item parsed, the classified counts are 0 by construction,
     # not a finding, and the evaluation metric reads the
     # headline - so a narrative-only day would report 0 items
-    # and 0 unexplained dots against its own frontmatter.
+    # and 0 unexplained dots against its own accounting.
     # The headline then reports the observation's own
-    # frontmatter counts; the classified counts are kept
-    # alongside so the basis stays auditable. A structured
-    # observation (at least one parsed item) is never
-    # overridden, and an observation with neither parsed items
-    # nor frontmatter counters stays honestly empty.
+    # frontmatter counts first; when the frontmatter carries
+    # no unexplained counter, the unexplained headline falls
+    # back one more tier to the narrative accounting section
+    # total (issue 149, 2026-11-03 shape: narrative sections
+    # with no frontmatter counters at all). The narrative
+    # seen total is never used as items observed: seen counts
+    # red-dot signals, not observed items, so the items
+    # headline stays the classified count on that tier. The
+    # classified counts are kept alongside so the basis stays
+    # auditable. A structured observation (at least one parsed
+    # item) is never overridden, and an observation with
+    # neither parsed items, frontmatter counters nor a stated
+    # narrative unexplained total stays honestly empty.
     classified_items = len(items)
     classified_unexplained = unexplained_count
     headline_items = classified_items
     headline_unexplained = classified_unexplained
-    fallback_used = False
+    frontmatter_used = False
+    narrative_used = False
     if classified_items == 0:
         if day_counters["items_observed"] is not None:
             headline_items = day_counters["items_observed"]
-            fallback_used = True
+            frontmatter_used = True
         if day_counters["unexplained_red_dots"] is not None:
             headline_unexplained = \
                 day_counters["unexplained_red_dots"]
-            fallback_used = True
-    coverage_basis = ("frontmatter-fallback" if fallback_used
-                      else "classified" if classified_items > 0
-                      else "empty")
+            frontmatter_used = True
+        elif narrative_accounting["totals"]["unexplained"] \
+                is not None:
+            headline_unexplained = \
+                narrative_accounting["totals"]["unexplained"]
+            narrative_used = True
+    if classified_items > 0:
+        coverage_basis = "classified"
+    elif frontmatter_used and narrative_used:
+        coverage_basis = "frontmatter+narrative-fallback"
+    elif frontmatter_used:
+        coverage_basis = "frontmatter-fallback"
+    elif narrative_used:
+        coverage_basis = "narrative-fallback"
+    else:
+        coverage_basis = "empty"
+    distinct = distinct_unexplained_dots(
+        narrative_accounting["sections"])
     coverage = {
         "date": date, "observation": args.observation,
         "items_observed": headline_items,
@@ -1047,7 +1343,14 @@ def run(args):
                                       if c["registered"]]),
         "unexplained_red_dots": headline_unexplained,
         "unexplained_red_dots_classified": classified_unexplained,
+        "unexplained_distinct_dots": (
+            distinct["distinct"] if distinct else None),
+        "unexplained_distinct_names": (
+            distinct["names"] if distinct else []),
+        "unexplained_unnamed_sections": (
+            distinct["unnamed_sections"] if distinct else 0),
         "observation_day_counters": day_counters,
+        "narrative_accounting": narrative_accounting,
         "unmatched_labels": unmatched,
         "promotion_proposals": len(proposals),
         "outputs": {"enqueue_plan": plan_path,
@@ -1056,6 +1359,46 @@ def run(args):
     }
     cov_path = os.path.join(
         out_dir, f"scout-coverage-{date}.md")
+    narrative_seen = narrative_accounting["totals"]["seen"]
+    narrative_unexplained = \
+        narrative_accounting["totals"]["unexplained"]
+    if coverage_basis == "frontmatter-fallback":
+        basis_note = (" (no structured observed_items parsed; "
+                      "the items and unexplained figures above "
+                      "are the observation frontmatter counts, "
+                      f"classified items {classified_items}, "
+                      "classified unexplained "
+                      f"{classified_unexplained})")
+    elif coverage_basis == "narrative-fallback":
+        basis_note = (" (no structured observed_items parsed "
+                      "and no frontmatter counters stated; "
+                      "the unexplained figure above is the sum "
+                      "of the narrative accounting sections "
+                      "stating a count, so chained passes may "
+                      "re-state the same dot and the sum is a "
+                      "section total, not a distinct-dot "
+                      "count; the items figure above is the "
+                      "classified count, not a day total - "
+                      "the narrative seen total is "
+                      f"{narrative_seen} red-dot signals, not "
+                      "observed items)")
+    elif coverage_basis == "frontmatter+narrative-fallback":
+        basis_note = (" (no structured observed_items parsed; "
+                      "the items figure above is the "
+                      "observation frontmatter count, the "
+                      "unexplained figure above is the sum of "
+                      "the narrative accounting sections "
+                      "stating a count, so chained passes may "
+                      "re-state the same dot and the sum is a "
+                      "section total, not a distinct-dot "
+                      "count)")
+    elif coverage_basis == "empty":
+        basis_note = (" (no structured items parsed and no "
+                      "frontmatter counters stated; the zeros "
+                      "above are an absence of signal, not a "
+                      "finding)")
+    else:
+        basis_note = " (classified structured items)"
     cov = ["---",
            f"title: Scout Coverage {date}",
            f"created: {iso(stamp)}",
@@ -1082,28 +1425,40 @@ def run(args):
            f"{coverage['candidates_registered']})",
            f"- unexplained red dots - "
            f"{coverage['unexplained_red_dots']}",
-           f"- coverage basis - {coverage_basis}"
-           + (" (no structured observed_items parsed; the "
-              "items and unexplained figures above are the "
-              "observation frontmatter counts, classified "
-              f"items {classified_items}, classified "
-              f"unexplained {classified_unexplained})"
-              if coverage_basis == "frontmatter-fallback"
-              else " (no structured items parsed and no "
-              "frontmatter counters stated; the zeros above "
-              "are an absence of signal, not a finding)"
-              if coverage_basis == "empty"
-              else " (classified structured items)"),
+           (f"- distinct unexplained dots (named, across "
+            f"narrative sections; a floor when sections "
+            f"below state no countable names) - "
+            f"{coverage['unexplained_distinct_dots']}"
+            + (f": {", ".join(
+                coverage['unexplained_distinct_names'])}"
+               if coverage['unexplained_distinct_names']
+               else "")
+            + (f" ({coverage['unexplained_unnamed_sections']} "
+               f"section(s) without countable names)"
+              if coverage['unexplained_unnamed_sections']
+              else "")
+            if coverage['unexplained_distinct_dots'] is not None
+            else "- distinct unexplained dots - not stated "
+                 "(no narrative unexplained section)"),
+           f"- coverage basis - {coverage_basis}{basis_note}",
            f"- promotion proposals - "
            f"{coverage['promotion_proposals']} (registered "
            f"candidates with a completed exploration unit, "
            f"decision owed)"]
     cov += ["", "## Observation day counters", ""]
     if all(v is None for v in day_counters.values()):
-        cov.append("The observation carries no day counters in "
-                   "its frontmatter - the classified counts "
-                   "above are the only signal, and no day "
-                   "total is claimed.")
+        if narrative_used:
+            cov.append("The observation carries no day counters "
+                       "in its frontmatter - the unexplained "
+                       "headline above is the narrative "
+                       "accounting section total in the next "
+                       "section, and the items figure is the "
+                       "classified count only.")
+        else:
+            cov.append("The observation carries no day counters "
+                       "in its frontmatter - the classified "
+                       "counts above are the only signal, and "
+                       "no day total is claimed.")
     else:
         for key in DAY_COUNTER_KEYS:
             value = day_counters[key]
@@ -1132,6 +1487,43 @@ def run(args):
                     f"observed items: this run neither enqueues "
                     f"nor files them, and the classified count "
                     f"above is not the day total.")
+    cov += ["", "## Narrative red-dot accounting", ""]
+    if not narrative_accounting["sections"]:
+        cov.append("No red-dot accounting section was found in "
+                   "the observation narrative - the passes wrote "
+                   "no per-pass Seen, Explained and Unexplained "
+                   "counts to reconcile against the frontmatter.")
+    else:
+        for idx, section in enumerate(
+                narrative_accounting["sections"], 1):
+            parts = ", ".join(
+                f"{key} "
+                f"{section[key] if section[key] is not None else 'not stated'}"
+                for key in ACCOUNTING_KEYS)
+            cov.append(f"- pass section {idx} - {parts}")
+        totals = narrative_accounting["totals"]
+        cov.append("- totals over the sections stating each "
+                   "count - " + ", ".join(
+                       f"{key} "
+                       f"{totals[key] if totals[key] is not None else 'not stated'}"
+                       for key in ACCOUNTING_KEYS))
+        for key in ACCOUNTING_KEYS:
+            front = day_counters[ACCOUNTING_FRONTMATTER[key]]
+            recon = narrative_accounting["reconciliation"][key]
+            if recon == "matches":
+                cov.append(f"- frontmatter {key} reconciles - "
+                           f"the section total {totals[key]} "
+                           f"equals the frontmatter count.")
+            elif recon.startswith("differs"):
+                cov.append(f"- frontmatter {key} mismatch - "
+                           f"the section total {totals[key]} "
+                           f"{recon} against the frontmatter "
+                           f"count {front}; one of the two "
+                           f"accountings is stale.")
+            else:
+                cov.append(f"- frontmatter {key} not comparable "
+                           f"- the section total or the "
+                           f"frontmatter count is unstated.")
     cov += ["", "## Promotion proposals", ""]
     if not args.root:
         cov.append("Pool not read (no --root) - completed "
@@ -1201,8 +1593,18 @@ def run(args):
           "---", "",
           f"## Perception coverage - {date}", ""]
     day_unexplained = day_counters["unexplained_red_dots"]
+    narrative_total_unexplained = \
+        narrative_accounting["totals"]["unexplained"]
     if coverage["items_observed"] == 0:
-        if day_unexplained is None and \
+        if narrative_used:
+            rs.append(
+                f"No structured items were parsed, but the "
+                f"narrative accounting sections total "
+                f"{narrative_total_unexplained} unexplained "
+                f"red dot(s) (sum of the sections stating a "
+                f"count; chained passes may re-state the same "
+                f"dot) - not zero.")
+        elif day_unexplained is None and \
                 day_counters["items_observed"] is None:
             rs.append("No items were observed in this pass, so "
                       "this section carries no coverage claim - "
@@ -1245,6 +1647,21 @@ def run(args):
                   "observed and unexplained figures above are "
                   "the observation frontmatter counts, not "
                   "classified items.")
+    elif coverage_basis == "narrative-fallback":
+        rs.append("- coverage basis - narrative fallback: "
+                  "no structured items were parsed and no "
+                  "frontmatter counters stated, so the "
+                  "unexplained figure above is the sum of the "
+                  "narrative accounting sections stating a "
+                  "count, not classified items; the observed "
+                  "figure is the classified count.")
+    elif coverage_basis == "frontmatter+narrative-fallback":
+        rs.append("- coverage basis - frontmatter+narrative "
+                  "fallback: no structured items were parsed; "
+                  "the observed figure above is the "
+                  "frontmatter count and the unexplained "
+                  "figure above is the sum of the narrative "
+                  "accounting sections stating a count.")
     elif coverage_basis == "empty":
         rs.append("- coverage basis - empty: no structured "
                   "items parsed and no frontmatter counters "
@@ -1264,6 +1681,28 @@ def run(args):
                       f"{coverage['unexplained_red_dots']}: the "
                       f"difference is narrative-only dots not "
                       f"yet filed as observed items.")
+    if narrative_accounting["sections"]:
+        totals = narrative_accounting["totals"]
+        recon = narrative_accounting["reconciliation"]
+        rs.append("- narrative red-dot accounting - "
+                  f"{len(narrative_accounting['sections'])} "
+                  "pass section(s), totals " + ", ".join(
+                      f"{key} "
+                      f"{totals[key] if totals[key] is not None else 'not stated'}"
+                      for key in ACCOUNTING_KEYS) + "; "
+                  "frontmatter reconciliation - " + ", ".join(
+                      f"{key} {recon[key]}"
+                      for key in ACCOUNTING_KEYS) + ".")
+    if distinct is not None:
+        rs.append(
+            f"- distinct unexplained dots named in narrative "
+            f"sections - {distinct['distinct']}"
+            + (f" ({", ".join(distinct['names'])})"
+               if distinct["names"] else " (none named)")
+            + (f"; {distinct['unnamed_sections']} section(s) "
+               f"stated unexplained dots without countable "
+               f"names, so this is a floor, not a total."
+              if distinct["unnamed_sections"] else "."))
     rs.append(f"- unknown items - "
               f"{coverage['unknown_items']} filed as "
               f"candidates ({coverage['candidates_filed']} "
