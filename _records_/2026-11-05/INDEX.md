@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T15:29:00Z
+modified: 2026-11-05T17:05:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch; the 0715 integrator pass, non-batch, held all five records PRs for the 1100 batch
@@ -1650,3 +1650,17 @@ of 2026-10-28.
   posted.
   Status: done.
   Full detail in pr-integration/0845-run.md.
+
+## 09:00 to about 09:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0900.
+  Non-batch pass: the checker reported not due, next
+  batch point 11:00 (about 118 minutes away). No
+  knowledge or code PR was open. Five records PRs
+  (317, 310, 301, 265, 256) await the 11:00 batch,
+  all MERGEABLE CLEAN on re-check (four first
+  reported UNKNOWN while GitHub recomputed after the
+  ticker-0704 reconciliation merges). No owner-gated
+  PR. No comment posted. No merge attempted.
+  Status: no-op.
+  Full detail in pr-integration/0900-run.md.
