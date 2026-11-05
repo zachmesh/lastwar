@@ -1634,3 +1634,19 @@ of 2026-10-28.
 - Pool: inbox 75, claimed 0, done 909, upcoming 51.
   Status: no-op. Full detail in
   queue-planning/0840-run.md.
+
+## 08:45 to about 08:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0845.
+  Non-batch pass: the checker reported not due, next
+  batch point 11:00 (about 133 minutes away). Merged
+  knowledge PR 319 (organizer 0832 - 0734 arms-race
+  and 0804 donations capture-failure recurrences,
+  fullscreen wording correction, Issues 282, 284),
+  squash merge commit c14ab66a54; local main
+  fast-forwarded to c14ab66a54. Five records PRs
+  (317, 310, 301, 265, 256) await the 11:00 batch,
+  all MERGEABLE CLEAN. No owner-gated PR. No comment
+  posted.
+  Status: done.
+  Full detail in pr-integration/0845-run.md.
