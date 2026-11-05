@@ -1303,3 +1303,15 @@ of 2026-10-28.
   await the 11:00 batch. No knowledge or code PR open,
   no owner-gated PR. Status: done.
   Full detail in pr-integration/0715-run.md.
+
+## 07:30 to about 07:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0730.
+  No-op pass: the checker reported due for the 07:00
+  window, but the 07:00 batch had already merged records
+  PR 309 at 07:01:50, so per the batch rule this pass
+  merged nothing and posted no comments. All five open
+  records PRs (317, 310, 301, 265, 256) are MERGEABLE
+  CLEAN and await the 11:00 batch. No knowledge or code
+  PR open, no owner-gated PR. Status: no-op.
+  Full detail in pr-integration/0730-run.md.
