@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T17:05:00Z
+modified: 2026-11-05T17:28:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch; the 0715 integrator pass, non-batch, held all five records PRs for the 1100 batch
@@ -1676,3 +1676,25 @@ of 2026-10-28.
   PR. No comment posted. No merge attempted.
   Status: no-op.
   Full detail in pr-integration/0915-run.md.
+
+## 09:04 to about 09:22 - Ticker pass
+
+- Harvest unit harvest-2026-11-05-0603, failed,
+  ticker-0904: no game screen was ever read and no game input
+  was dispatched. Every device invoke to the Mac mini timed
+  out (8 attempts, zero responses): computer.session start
+  twice, list_apps, connection.health, connection.repair
+  (web) on the Mac mini, and connection.repair (native) plus
+  connection.health on the recovery device - all
+  node_invoke_timeout or "Connection recovery could not
+  complete." device.list still reports the Mac mini online
+  with last_seen 15:36:52Z, stale about 1 hour 40 minutes.
+  This is a worsened form of Issue 284: earlier passes got
+  responses and a capture error, this pass got no response at
+  all, so the gateway / transport itself is stalled, not just
+  the LastWar window stream. Commented on Issue 284. This is
+  the fortieth consecutive ticker pass with a Mac
+  device-access blocker (thirty-ninth was ticker-0834). No
+  bubble collected. Tracker untouched. The pass stopped after
+  this one unit. Full detail in
+  resource-collection/0904-queue-run.md.
