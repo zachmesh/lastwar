@@ -2955,3 +2955,21 @@ Full detail in pr-integration/1430-run.md.
   for records/2026-11-04 already open, awaiting the 0300
   batch.
   Full detail in knowledge-organization/2332-run.md.
+## 23:34 to about 23:47 — Queue ticker pass, radar blocked by screen capture failure
+
+- Ticker pass ticker-2334. Sync reaped 0, expired 0, produced
+  nothing new - all 21 due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30, and no zombie unit sits in
+  inbox or claimed.
+- Radar unit radar-2026-11-04-2203, failed: the Mac
+  screen capture stream failed on all 5 attempts across 2
+  computer sessions (cc-497, cc-498) with "Failed to start
+  stream due to audio/video capture failure", so no game
+  screen was ever read, no radar task was executed and
+  nothing was claimed. Same blocker as GitHub Issue #284,
+  which the ticker-2304 pass hit at 23:04 local and which
+  this pass commented on instead of filing a duplicate.
+  Stack-posture unit (duel day 4), so no claims were due
+  in any case. Tracker untouched.
+  Full detail in radar-tasks/2334-queue-run.md.
