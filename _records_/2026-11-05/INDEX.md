@@ -1729,3 +1729,23 @@ of 2026-10-28.
   132 (about eighty-nine hours) and 154 (about eighty-three hours)
   both over 24 hours with statements current. Full detail in
   pr-catchall/0939-run.md.
+
+## 09:41 to about 09:53 - Ticker pass
+
+- Pass ticker-0941: scout-midday unit
+  scout-midday-scout-mid-2026-10-31-005, failed. No game
+  screen was ever read and no game input was dispatched:
+  three device invokes, zero responses (computer.session
+  start node_invoke_timeout 120s x2, connection.health
+  node_invoke_timeout 25s). The Mac mini reports online
+  but last_seen 07:36 local, stale about 2 hours. This is
+  the forty-first consecutive ticker pass with a Mac
+  device-access blocker and the second in the worsened
+  zero-response (CHANNEL_STALL) form after ticker-0904.
+  The in-tree probe 1.0.0 answers UNKNOWN on this
+  evidence; the CHANNEL_STALL diagnosis is PR #321,
+  still open. The station panel and loot box remainder
+  stays unwalked; no successor enqueued, tracker
+  untouched. Recovery needs a Mac-side agent gateway
+  restart before re-probing. Issue 284 commented.
+  Full detail in perception-scout/0941-queue-run.md.
