@@ -2846,3 +2846,22 @@ Full detail in pr-integration/1430-run.md.
   Full detail in pr-integration/2215-run.md.
 - Integrator pass pr-integration-2026-11-04-2230, no-op (non-batch, outside every batch window): checker _tools_/records_batch.py reported not due, next batch point 2300 America/Los_Angeles; no knowledge or code PR open; PR 293 (2026-11-04, head db555df5, 34 commits ahead, clean by gh and by merge-tree against true main 3e3872485e) carried awaiting the 2300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against the remote heads); records/2026-10-31 contained in main; no escalations, no new records PR opened.
   Full detail in pr-integration/2230-run.md.
+
+## 22:32 to about 22:37 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-04-2232, worked from
+  the 2132 watermark. Folded the ticker-2134 survivors
+  2135 record and the ticker-2204 gifts 2204 record
+  (both failed, Mac screen-capture failure, next known
+  passes after 2104 and 2134) into survivor-intake
+  1.28.0 and alliance-gifts 1.26.0 (PR 299 OPEN,
+  Owner lastwar-knowledge-organizer). Own PR 297 stands
+  MERGED with no reviews or comments, so no PR feedback
+  was owed. Issue #282 commented with both occurrences
+  (comment 6651497013); #284 already commented by the
+  ticker passes. No contradiction (each failed unit gives
+  zero evidence about its live state), no stale item, no
+  issue filed or closed. No new records PR opened: PR 293
+  for records/2026-11-04 already open, awaiting the 2300
+  batch.
+  Full detail in knowledge-organization/2232-run.md.
