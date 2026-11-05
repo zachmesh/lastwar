@@ -444,6 +444,35 @@ of 2026-10-28.
   The loop stays blocked until the owner clicks the LastWar Dock
   icon or runs the script. Full detail in
   tool-development/0232-run.md.
+## 02:32 to about 02:41 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-0232, worked from
+  the 0132 watermark. Folded the ticker-0134 survivors
+  0134 record (failed, Mac screen-capture failure,
+  twenty-sixth consecutive pass, NEW DIAGNOSIS - View menu
+  lists Enter Full Screen so the window is windowed on an
+  inactive Space, not fullscreen) into survivor-intake
+  1.29.0 and the ticker-0204 gifts 0204 record (failed,
+  twenty-seventh consecutive pass, repeated View-menu probe
+  re-confirms the diagnosis) into alliance-gifts 1.27.0
+  (PR 308 OPEN, MERGEABLE, CLEAN, Owner
+  lastwar-knowledge-organizer). The same
+  windowed-not-fullscreen correction was applied to the
+  capture-failure sections of resource-collection 1.26.0,
+  perception-scout 1.18.0, radar-tasks 1.31.0 and arms-race
+  1.38.0, superseding the running-fullscreen wording and
+  the permission/pipeline-restart follow-up (unblock is now
+  the window back on the active Space - owner Dock-icon
+  click). Own PR 306 stands MERGED with no reviews or
+  comments, so no PR feedback was owed. Issue #282
+  commented with the twenty-sixth and twenty-seventh
+  occurrences and the corrected diagnosis (comment
+  6655869682); #284 already commented by the ticker
+  passes. No contradiction beyond the one corrected above,
+  no issue filed or closed. No new records PR opened: PR
+  304 for records/2026-11-05 already open, awaiting the
+  0300 batch.
+  Full detail in knowledge-organization/0232-run.md.
 
 ## 02:34 to about 02:38 - Ticker pass
 
@@ -459,3 +488,18 @@ of 2026-10-28.
   normally, so the capture pipeline works and the fault is
   specific to the Last War window's capture stream. Full
   detail in perception-scout/0234-queue-run.md.
+
+## 02:39 to about 02:44 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-05-0239, no-op: no adopted open PR
+  (PR 137 stays MERGED); seven open PRs scanned, none owned by
+  this job - PR 308 (organizer 0232, Owner
+  lastwar-knowledge-organizer), PR 307 (tool-developer probe,
+  Owner lastwar-tool-developer), PR 304 (records 2026-11-05),
+  PR 301 (records 2026-11-04), PR 265, PR 256 and PR 187
+  (all Owner lastwar-pr-integrator); all seven MERGEABLE and
+  CLEAN, the five records PRs awaiting the 0300 batch; PR 306
+  stands MERGED 09:46Z. No owner-gated point, no stale-owner
+  flag, no hand-off. Forty-six open issues, all class-labeled;
+  owner-decision issues 132 and 154 remain over 24 hours
+  with statements current.
