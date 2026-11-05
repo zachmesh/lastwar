@@ -1488,3 +1488,20 @@ of 2026-10-28.
   Sync: reaped 0, expired 0, due 21, produced nothing new,
   all 21 regulars already queued. Inbox 76, claimed 0,
   done 908.
+
+## 08:15 to about 08:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0815.
+  Non-batch pass: the checker reported not due, next
+  batch point 11:00 (about 163 minutes away). No
+  knowledge or code PR open (PR 318 was merged by the
+  0745 pass). Five records PRs (317, 310, 301, 265,
+  256) await the 11:00 batch, all MERGEABLE CLEAN by
+  merge-tree against true main 9c9b0c74. Correction:
+  the 0800 pass read its merge-tree base as stale
+  local branch github/main (96aef154); this pass
+  re-verified against true main by explicit SHA and
+  deleted the stale branch. No owner-gated PR. No
+  comment posted.
+  Status: no-op.
+  Full detail in pr-integration/0815-run.md.
