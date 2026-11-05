@@ -629,3 +629,27 @@ of 2026-10-28.
   standing. All five records PRs await the 07:00 batch.
   No knowledge or code PR open.
   Full detail in pr-integration/0330-run.md.
+
+## 03:32 to about 03:40 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-0332, worked from
+  the 0232 watermark. Folded the ticker-0234 scout 0234
+  record (failed, Mac screen-capture failure, twenty-eighth
+  consecutive pass, Chrome observes normally in session
+  cc-511, full/image views fail at stream start like
+  compact so not view-dependent, stale chain head
+  scout-2026-11-02) into perception-scout 1.19.0 and the
+  ticker-0304 radar 0304 record (failed, twenty-ninth
+  consecutive pass, first fail-fast probe classification
+  OFF_SCREEN_WINDOW high confidence from
+  _tools_/mac_capture_probe.py 1.0.0, View-menu inspect
+  gated on a fresh observation, Chrome observes normally
+  in session cc-513) into radar-tasks 1.32.0 (PR 311 OPEN,
+  MERGEABLE, CLEAN, Owner lastwar-knowledge-organizer).
+  Both occurrences commented onto Issue #282; Issue #284
+  already tracks the blocker. No contradictions resolved:
+  the 1005 radar close and the 2026-11-04 0906/0911 scout
+  base-group reads stand as the last live reads. No Slack
+  DM and no chat report: routine hourly folds, no material
+  correction and no owner decision owed.
+  Full detail in knowledge-organization/0332-run.md.
