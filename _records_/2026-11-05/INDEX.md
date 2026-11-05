@@ -206,3 +206,18 @@ of 2026-10-28.
   head 52295794) and PR 256 (2026-11-03, head
   b35684d2). No owner-gated PR. Full detail in
   pr-integration/0045-run.md.
+
+## 01:00 to about 01:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0100.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR open, nothing merged
+  or escalated. Five records PRs await the 03:00 batch,
+  all verified clean against current main 8a3db49c62
+  by the API: PR 304 (2026-11-05, head e9378471,
+  advanced since 0045), PR 301 (2026-11-04, head
+  bf9fb87e), PR 187 (2026-11-01, head 1efa3040),
+  PR 265 (2026-11-02, head 52295794) and PR 256
+  (2026-11-03, head b35684d2). No conflicts, no
+  owner-gated PR. Full detail in
+  pr-integration/0100-run.md.
