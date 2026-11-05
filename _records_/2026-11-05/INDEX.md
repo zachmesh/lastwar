@@ -705,3 +705,26 @@ of 2026-10-28.
   147 commented; Slack DM sent to the owner. Validation: 47
   fixture checks on isolated scratch pools, all passed. Full
   detail in tool-development/0341-run.md.
+
+## 03:40 to about 03:43 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 5 units -
+  passes-2026-11-05-1457, secrets-2026-11-05-1457,
+  treasures-2026-11-05-1457, trucks-2026-11-05-1457,
+  events-2026-11-05-1457 - already_present 65,
+  skipped_done_current 0, reaped 0, expired 0.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-05 is due from the 17:00
+  run today; last night's pair sits done 2 of 2.
+- Scout diff on the Nov 4 observation (fourteenth planner run to
+  consume it; no Nov 5 observation yet, 0234 and 0304 scout units
+  failed on the Mac capture failure, Issue 284): dry run and apply
+  agree, all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0. No
+  withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred). No new Issue
+  filed.
+- Pool: inbox 73, claimed 0, done 892, upcoming 49. Status:
+  done. Full detail in queue-planning/0340-run.md.
