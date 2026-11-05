@@ -1505,3 +1505,16 @@ of 2026-10-28.
   comment posted.
   Status: no-op.
   Full detail in pr-integration/0815-run.md.
+
+## 08:30 to about 08:33 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0830.
+  Non-batch pass: the checker reported not due, next
+  batch point 11:00 (about 148 minutes away). No
+  knowledge or code PR open (PR 318 was merged by the
+  0745 pass). Five records PRs (317, 310, 301, 265,
+  256) await the 11:00 batch, all MERGEABLE CLEAN by
+  merge-tree against true main 9c9b0c74. No owner-gated
+  PR. No comment posted.
+  Status: no-op.
+  Full detail in pr-integration/0830-run.md.
