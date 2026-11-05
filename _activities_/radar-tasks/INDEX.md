@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T10:38:30Z
+modified: 2026-11-05T11:35:38Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -1538,6 +1538,8 @@ are still open, per the protocol.
 
 - 1.31.0 (2026-11-05): Correction from the 0134 survivors and 0204 gifts records - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (View menu lists Enter Full Screen, read on-screen in session cc-505 and re-confirmed by a repeated probe in cc-508); the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; the "running fullscreen" wording in the 1534, 1904 and 2334 sections is superseded; the permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); background Space keys do not switch Spaces, set_window_frame is stale-observation-gated, Cmd+Tab is blocked, list_windows needs the exact app name "LastWar"; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.25.0 through 1.30.0 carry the 2317, 0720, 1005, 1534, 1904 and 2334 sections without changelog lines; the numbering is preserved, not rewritten.)
 
+- 1.32.0 (2026-11-05): 0304 radar unit folded - twenty-ninth consecutive capture failure, first fail-fast probe classification OFF_SCREEN_WINDOW (high confidence) from _tools_/mac_capture_probe.py 1.0.0 (PR 307); the View-menu inspect step could not run, gated on a fresh observation of the window; Chrome observes normally in the same session (Gmail inbox, full accessibility tree); the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; twenty-eighth and twenty-ninth occurrences commented onto Issue #282 by this run.
+
 
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
@@ -1877,3 +1879,13 @@ are still open, per the protocol.
 - Superseded in this profile: the "running fullscreen" wording in the 1534, 1904 and 2334 sections above.
 - Follow-up corrected: the standing "screen recording permission or capture pipeline restart" unblock is replaced - the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. Background-sent Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, Cmd+Tab is blocked by the tool, and list_windows needs the exact app name "LastWar" ("Last War" returns 0 windows). No control route available to the background channel moves the window across Spaces without a fresh observation of the window itself.
 - This correction does not change the radar state: the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read. The twenty-sixth and twenty-seventh occurrences are commented onto Issue #282 by this run; Issue #284 already tracks the blocker.
+
+## What the 2026-11-05 0304 unit added - screen-capture failure, twenty-ninth consecutive pass, nothing read
+
+- Unit radar-2026-11-05-0203 by ticker-0304, about 03:04 to 03:12 local, status failed. Evidence in `_records_/2026-11-05/radar-tasks/0304-queue-run.md`. This was a stack-day unit (duel day 4): on a working screen it would have run Quick Execute batches and recorded the pin inventory without claiming anything.
+- No radar screen was ever read and no task was executed or claimed. The Mac screen-capture stream failed on every attempt: session cc-512 `computer.control` activate selected the window for background input but captured no observation, `computer.observe` compact failed, `computer.observe` image failed, `computer.control` open_app returned outcome_unknown; fresh session cc-513 `computer.control` activate again reported `window_on_screen: false` and `brought_to_front: false`, `computer.observe` compact failed, `screen.snap` failed - four capture attempts across two computer sessions, all with "Failed to start stream due to audio/video capture failure". LastWar (bundle com.lastwar.ios, pid 59735) is running, window 1920x1080 at (0,0); Google Chrome is frontmost. `computer.control` list_windows with app LastWar confirms the window exists: 1 window, 1920x1080 at (0,0), window_id 160366, pid 59735. Device connection health at the same time: both native and web transports connected and healthy - this is not a connectivity problem.
+- First probe classification: this is the first pass to run the fail-fast probe landed by PR 307. `_tools_/mac_capture_probe.py` 1.0.0 classifies the evidence above OFF_SCREEN_WINDOW (high confidence), stop_pass yes. The View-menu inspect step could not run this pass: it is gated on a fresh observation of the LastWar window, which is exactly what the capture failure prevents - the classification stands on the activate evidence alone, as the probe tool allows (on_screen false plus brought_to_front false is high confidence).
+- Narrowing, first-hand this pass: control observation of a Chrome window in the same session (cc-513) succeeds with a full accessibility tree (Gmail inbox), so the capture channel works for on-screen windows and the fault is specific to the LastWar window stream, consistent with the windowed-on-inactive-Space diagnosis in the Correction 2026-11-05 section above.
+- Recurrence, not a new failure class: this is the twenty-ninth consecutive ticker pass to fail on this exact blocker (ticker-0234 at 02:34 was the twenty-eighth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-eighth and twenty-ninth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this unit: with no observation channel a second unit would fail identically, so the remaining inbox units were left queued.
