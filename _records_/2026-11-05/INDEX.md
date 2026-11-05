@@ -594,3 +594,17 @@ of 2026-10-28.
   with this blocker (Issue 284, open, tooling); commented
   on #284. Tracker untouched. The pass stopped after this
   one unit. Full detail in radar-tasks/0304-queue-run.md.
+- Arms race unit arms-race-2026-11-05-0203, failed, ticker-0334:
+  no Arms Race screen was ever read and no task was executed or
+  claimed. The Mac screen capture stream failed on all five
+  attempts across two computer sessions (cc-514, cc-515) with
+  "Failed to start stream due to audio/video capture failure".
+  A Chrome-window observation in the same session succeeded,
+  so the channel works for other apps and the failure is
+  specific to the Last War window. The fail-fast probe
+  (_tools_/mac_capture_probe.py 1.0.0): OFF_SCREEN_WINDOW,
+  high confidence, stop_pass yes. This is the thirtieth
+  consecutive ticker pass with this blocker (Issue 284, open,
+  tooling); commented on #284. Tracker untouched. The pass
+  stopped after this one unit. Full detail in
+  arms-race/0334-queue-run.md.
