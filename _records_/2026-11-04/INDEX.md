@@ -2930,3 +2930,6 @@ Full detail in pr-integration/1430-run.md.
   as GitHub Issue #284, which the ticker-1934, ticker-2034
   and ticker-2134 passes already hit today. Tracker untouched.
   Full detail in alliance-donations/2304-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-04-2315, done (non-batch pass inside the 2300 window, batch already merged at 2303): checker _tools_/records_batch.py reported due for the 2300 clock window at pass start and at the sweep, but PR 293 was already merged at 23:03:38 PT by the 2300 batch pass, so per the standing note this pass is not a batch pass; PR 301 (2026-11-04, head aa11cdb6, 2 commits ahead, clean by gh and by merge-tree against true main 5dd6d644a) carried awaiting the 0300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against true main 5dd6d644a); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main.
+  Full detail in pr-integration/2315-run.md.
