@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T08:25:00Z
+modified: 2026-11-05T08:18:05Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side
+description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch
 status: unverified
 ---
 
@@ -62,3 +62,22 @@ of 2026-10-28.
   consistent with the event close of 2026-10-30; zombie-invasion
   inbox 0 per stats. Sync: reaped 0, expired 0, due 21,
   produced nothing new, all 21 regulars already queued.
+
+## 00:15 to about 00:18 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0015.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR was open. Five records
+  PRs await the 03:00 batch: PR 304 (2026-11-05, head
+  a89e2a4c9, MERGEABLE, 3 commits), PR 301 (2026-11-04,
+  head bf9fb87e5, MERGEABLE, 11 commits), PR 187
+  (2026-11-01, head 1efa3040, MERGEABLE, 2 commits),
+  PR 265 (2026-11-02, head 52295794, MERGEABLE,
+  2 commits) and PR 256 (2026-11-03, head b35684d2,
+  MERGEABLE, 13 commits). The three stale conflicts
+  from the 0000 pass were resolved on the branch side by
+  the ticker-0004 pass (union of the action-log lines)
+  and verified clean this pass by merge-tree plus a
+  log-line audit (no main entry lost, no exact
+  duplicates). No owner-gated PR. Full detail in
+  pr-integration/0015-run.md.
