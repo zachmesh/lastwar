@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T06:34:14Z
+modified: 2026-11-05T10:38:30Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-1134 alliance-gifts execution record 2026-11-04 1147 queue run (partial, Alliance entry twice no panel, foreground precondition repeat, re-grounding did not rescue background input)
   - source: ticker-1804 alliance-gifts execution record 2026-11-04 1804 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twelfth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-2204 alliance-gifts execution record 2026-11-04 2204 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2134 known to fail identically, Issue 284)
+  - source: ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-seventh consecutive ticker pass to fail this way, View-menu probe re-confirms the windowed-on-inactive-Space diagnosis, Issue 284)
 ---
 
 
@@ -800,6 +801,8 @@ one file per execution.
 
 - 1.20.0 (2026-11-03): dialog-confirmed 235 Regular and 20 Premium (255 total), Gift Level 28 progress 188,153,080 to 188,162,330 of 206,300,000 (plus 9,250 in-unit), Regular plus 4,640 against 235 gifts at 10 points each and Premium plus 4,610 as further Issue #183 evidence commented by this run, panel tap (257,505) opening Alliance Wars again (same one-row-high class as the 1718, 0308, 0650 and 1619 units) with the panel back arrow working this unit and the Gifts centre re-grounded from OCR row positions at (303,595) against the standing Wars y 509 / Gifts y 595 / Store y 679 geometry, folded from the 2208 gifts unit.
 
+- 1.27.0 (2026-11-05): 0204 gifts unit folded (failed, twenty-seventh consecutive screen-capture failure, no game screen read, no input dispatched, tracker untouched, inbox 69); the View-menu probe first run by ticker-0134 was repeated in session cc-508 and re-confirms the windowed-on-inactive-Space diagnosis unchanged; CORRECTION - the 1804/2204 "running fullscreen" wording is superseded and the standing permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); same correction applied to survivor-intake, resource-collection, perception-scout, radar-tasks and arms-race in this run; evidence commented on Issue #284 by the ticker pass, twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.21.0 through 1.26.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -1092,4 +1095,16 @@ one file per execution.
 - Recurrence, not a new failure class: this is the next ticker pass after ticker-2134 known to fail on this exact blocker; the record does not assert an exact consecutive count beyond that. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
 - Follow-up, carried forward: the blocker needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 69 units at this pass, per the record.
+
+## What the 2026-11-05 0204 unit added - screen-capture failure, twenty-seventh consecutive pass, windowed diagnosis re-confirmed
+
+- Unit gifts-2026-11-04-2230 by ticker-0204, about 02:04 to 02:24 local, status failed. Evidence in `_records_/2026-11-05/alliance-gifts/0204-queue-run.md`. No gift was checked or claimed, no tab was read, and no red-dot state is claimed for either tab.
+- No game screen was ever read and no game input was dispatched. Every screen-capture attempt failed with the same device-channel error, "Failed to start stream due to audio/video capture failure": eight attempts across three computer sessions. Session cc-506: computer.control list_windows succeeded and listed the LastWar window, so the control channel itself was reachable; computer.control activate selected the window for background input but captured no observation, computer.observe (compact) failed three times, screen.snap failed, computer.control describe failed. Session cc-507 (fresh, after ending cc-506): computer.observe (compact) failed. Session cc-508 (fresh): the View-menu probe first run by ticker-0134 was repeated - computer.control menu View > Exit Full Screen on the LastWar window; the menu path still does not exist, the View menu still contains Landscape Orientation, Portrait Orientation, Zoom to Fit and Enter Full Screen. Connection health reported both transports healthy. The Mac mini was online, LastWar (com.lastwar.ios, pid 59735) running, window 1920x1080 at (0,0), Google Chrome frontmost. activate reports window_on_screen false.
+- Re-confirmation, not a new diagnosis: the repeated View-menu probe confirms ticker-0134's finding unchanged - the app is still a windowed 1920x1080 window on an inactive Space, not in native fullscreen, and the capture failure persists in that state. No further recovery was attempted inside the unit budget: Space switching and the set_window_frame gate were already tried and ruled out by ticker-0134, and Cmd+Tab is blocked by the tool.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The pass stopped after this unit rather than failing further units identically, since every further unit needs the same capture channel.
+- Recurrence, not a new failure class: this is the twenty-seventh consecutive ticker pass to fail on this exact blocker (ticker-0134 survivors at 01:34 was the twenty-sixth). The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-sixth and twenty-seventh occurrences onto #282.
+- CORRECTION - superseded claims: the "running fullscreen" wording in the 1804 and 2204 sections above is superseded by the 0134 on-screen read, re-confirmed by this unit's repeated probe - the window is windowed on an inactive Space. The standing follow-up is corrected with it: the blocker is NOT a screen-recording permission or capture-pipeline fault (the pipeline observes Chrome normally), and the unblock is getting the window back onto the active Space - the owner clicking the LastWar Dock icon once is the known reliable step. The same correction is applied to the capture-failure sections of survivor-intake, resource-collection, perception-scout, radar-tasks and arms-race in this run.
+- Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
+- Follow-up, carried forward: the blocker is now twenty-seven passes old and needs the window back on the active Space (owner Dock-icon click, the known reliable step); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 69 units at this pass, per the record.

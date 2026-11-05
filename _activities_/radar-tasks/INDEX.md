@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T03:34:11Z
+modified: 2026-11-05T10:38:30Z
 level: L1
-version: 1.29.0
+version: 1.31.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-1004 radar-tasks execution record 2026-11-04 1005 queue run (partial, duel day 3 release, 13 claims, points 206 to 219, stored 0 of 40, stamina 131 to 81, Doom Elite pin march left for the next unit per rule R7)
   - source: ticker-1534 radar-tasks execution record 2026-11-04 1534 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, seventh consecutive ticker pass to fail this way, Issue 284; PT-corrected duel posture day 3 release)
   - source: ticker-1904 radar-tasks execution record 2026-11-04 1904 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, fourteenth consecutive ticker pass to fail this way, blocker continuing past the 19-00 reset, Issue 284; live posture day 4 Train Heroes stack, not the stale unit-window day 3 release wording)
+  - source: ticker-2334 radar-tasks execution record 2026-11-04 2334 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-second consecutive ticker pass to fail this way, Issue 284; stack-posture unit, duel day 4)
 ---
 
 
@@ -1535,6 +1536,8 @@ are still open, per the protocol.
 
 - 1.24.0 (2026-11-03): 2317 release-day unit folded: story pin completed through the verified flow (revealed rewards survivor x1, paw print 200, black rock 207.3K, dialog to the treasure-map banner, pin gone at close); March true centre (500,751) in this window geometry, estimates above the active area all dead, matching the zombie-invasion March lesson (500,755); ground contextual buttons, never estimate them (hammer 490,600, magnifier 499,599, estimates dead); radar stamina read did NOT move with the story march (shown -5, read stayed 120) - unresolved discrepancy, dispatch proven by the pin-card reward reveal, not by stamina; 11 rewards claimed, points 183 to 194, stored 0 of 40, stamina 91, full restore 11-5 03:31:43; NO TIPS dialog on either Claim All tap, further Issue #235 evidence commented by this run, delta test still owed; third consecutive partial carrying the same pin blocker, R7 next-unit order is the red-dotted blue skull pin first, then the axe pins, every pin point re-grounded on the unit's own screenshot.
 
+- 1.31.0 (2026-11-05): Correction from the 0134 survivors and 0204 gifts records - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (View menu lists Enter Full Screen, read on-screen in session cc-505 and re-confirmed by a repeated probe in cc-508); the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; the "running fullscreen" wording in the 1534, 1904 and 2334 sections is superseded; the permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); background Space keys do not switch Spaces, set_window_frame is stale-observation-gated, Cmd+Tab is blocked, list_windows needs the exact app name "LastWar"; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.25.0 through 1.30.0 carry the 2317, 0720, 1005, 1534, 1904 and 2334 sections without changelog lines; the numbering is preserved, not rewritten.)
+
 
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
@@ -1856,3 +1859,21 @@ are still open, per the protocol.
 - Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as a stored-count or claim state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
 - Remaining work, carried forward and time-bounded: this unit's stack work (enter and verify the radar screen, run Quick Execute batches until no offer remains, record stored count, pending reward count, stamina, restore line and the pin inventory untapped) is still owed. The 1005 unit's Doom Elite pin expired about 11:46 local and is gone; the restore line at the 1005 close pointed to 12 tasks restoring about 15:42 local, so the next live unit should expect a fresh stored batch. Both expectations are superseded by the next live read.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit rather than claiming further units: every further unit would fail on the same capture error and burn attempts, so the inbox is left for the first pass after capture recovers.
+
+## What the 2026-11-04 2334 unit added - screen-capture failure, twenty-second consecutive pass, nothing read
+
+- Unit radar-2026-11-04-2203 by ticker-2334, about 23:34 to 23:47 local, status failed. Evidence in `_records_/2026-11-04/radar-tasks/2334-queue-run.md`. No diamonds spent, no paid button tapped.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: session cc-497, computer.control activate selected the LastWar window for background input but captured no observation, "Failed to start stream due to audio/video capture failure", and computer.observe failed twice with the same error; session cc-498, computer.control activate again selected the window with the same capture failure and computer.observe failed again with the same error. Five capture attempts in total, all with the identical error. The device connection health was healthy on both transports, LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The radar screen was never entered or verified, no stored task count, stamina figure, restore line or pin scan was read, and no Quick Execute, Claim All or pin march was run.
+- Stack posture, no leaked claims: this was a stack-posture unit (duel day 4, window "duel day 4 - radar stack"): on a stack day nothing is claimed in any case, so the loss is the unexecuted ordinary tasks and the missing closing reads, not leaked claims.
+- Recurrence, not a new failure class: this is the twenty-second consecutive ticker pass to fail on this exact blocker (the 16th through 21st were ticker-2034 donations, ticker-2104 harvest, ticker-2134 survivors, ticker-2204 gifts, ticker-2234 shop-claims and ticker-2304 donations; the 22nd is this radar unit), now across nine activities, and the inbox held 69 units at this pass. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-second and twenty-third occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
+- Remaining work, carried forward: the 1904 section's stack work is still owed (enter and verify the radar screen, run Quick Execute batches until no offer remains, record stored count, pending reward count, stamina, restore line and the pin inventory untapped). The 1005 unit's Doom Elite pin expired about 11:46 local and is gone; the restore line at the 1005 close pointed to 12 tasks restoring about 15:42 local, so the next live unit should expect a fresh stored batch. Both expectations are superseded by the next live read.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## Correction 2026-11-05 - the game window is windowed on an inactive Space, not in native fullscreen
+
+- Source: the 0134 survivors record (`_records_/2026-11-05/survivor-intake/0134-queue-run.md`, ticker-0134, twenty-sixth consecutive capture failure), re-confirmed by the 0204 gifts record (`_records_/2026-11-05/alliance-gifts/0204-queue-run.md`, ticker-0204, twenty-seventh). The View menu lists "Enter Full Screen" (read from the menu-action error listing in session cc-505, repeated probe in cc-508 with the menu unchanged), so the app is NOT in native fullscreen: it is a windowed 1920x1080 window on an inactive Space, and the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission (Chrome windows observe normally in the same sessions).
+- Superseded in this profile: the "running fullscreen" wording in the 1534, 1904 and 2334 sections above.
+- Follow-up corrected: the standing "screen recording permission or capture pipeline restart" unblock is replaced - the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. Background-sent Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, Cmd+Tab is blocked by the tool, and list_windows needs the exact app name "LastWar" ("Last War" returns 0 windows). No control route available to the background channel moves the window across Spaces without a fresh observation of the window itself.
+- This correction does not change the radar state: the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read. The twenty-sixth and twenty-seventh occurrences are commented onto Issue #282 by this run; Issue #284 already tracks the blocker.
