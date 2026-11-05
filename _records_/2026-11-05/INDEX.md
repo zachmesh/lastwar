@@ -1073,3 +1073,36 @@ of 2026-10-28.
   current. No adoption, fix, hand-off, escalation, label change
   or comment; no Slack DM and no chat report (quiet run).
   Status: no-op. Full detail in pr-catchall/0539-run.md.
+
+## 05:40 to about 05:44 - Queue planning pass
+
+- Own PRs first: open PRs at run start were PR 314 (docs
+  knowledge organizer 0532, 0 comments), PR 310 (records
+  2026-11-05, 0 comments), PR 309, PR 301, PR 265 and PR
+  256 (older records PRs; newest comments all integrator
+  verification notes from the 0515 pass, nothing addressed
+  to this job). No open PR is owned by this job, so no
+  reply or fix was owed. PR 312 (queue.py sweep subcommand,
+  Refs #147) merged 03:47 PST.
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  planned [], already_present 70, skipped_done_current 0,
+  reaped 0, expired 0.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-05 is due from the 17:00
+  run today; last night's pair sits done 2 of 2. The 17:00 run
+  must check whether the live tree has synced to main before
+  calling the new sweep subcommand (PR 312 merged, live tree
+  still predates it).
+- Scout diff on the Nov 4 observation (fifteenth planner run to
+  consume it; no Nov 5 observation yet, post-reset scout unit
+  scout-2026-11-04-1900 still in inbox, attempts 0, ticker
+  passes failing on the Mac capture failure, Issue 284): dry
+  run and apply agree, all zero - observed 0, actionable 0,
+  enqueued 0, already-queued 0, candidates 0, unexplained red
+  dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred). No new Issue
+  filed.
+- Pool: inbox 69, claimed 0, done 896, upcoming 49. Status:
+  no-op. Full detail in queue-planning/0540-run.md.
