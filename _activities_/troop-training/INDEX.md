@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T20:48:17Z
+modified: 2026-11-05T02:34:55Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-0434 troop-training execution record 2026-11-04 0440 queue run (partial, tent point 585,548 selects Barracks Lv.24, Drill Ground Full confirmed live again, Training Count +666, Issue 150)
   - source: ticker-0804 troop-training execution record 2026-11-04 0814 queue run (partial, 0440 tent point selects Arena in this framing, Lv.20 verified via Details, framing instability measured, Drill Ground Full neither reconfirmed nor cleared, Issue #150 comment deferred)
   - source: ticker-1134 troop-training execution record 2026-11-04 1147 queue run (partial, fullscreen framing mismatch, four grounded tent taps opened no panel, centre drag moved no view, session drop reopened, Issue 150)
+  - source: ticker-1734 troop-training execution record 2026-11-04 1734 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eleventh consecutive ticker pass to fail this way, Issue 284)
 ---
 
 # Troop training
@@ -1047,3 +1048,12 @@ Observed in game on this account, first execution 2026-10-25.
 - Focus refusals, retried not recorded as access failures: one early click was refused for focus reasons ("user working in another window") and one click was refused for a stale observation; both were retried and the following taps dispatched. Neither refusal is an access failure.
 - Follow-up from the record itself: the next unit re-grounds on its own live frame rather than reusing any point from this unit, and tries the windowed (non-fullscreen) Last War window if the fullscreen frame keeps refusing to select a tent.
 - No barracks queue state was verified, no batch was queued, and no Drill Ground figure was read live in this unit, so the 0440 live Drill Ground Full confirmation still stands as the latest Drill Ground read - neither reconfirmed nor cleared here. This is the known tent blocker already tracked as Issue #150; no new issue was filed, and this run comments the fullscreen-framing recurrence onto #150.
+
+## What the 2026-11-04 1734 unit added - screen-capture failure, eleventh consecutive pass, nothing read
+
+- Unit training-2026-11-04-1403 by ticker-1734, about 17:34 to 17:46 local, status failed. Evidence in `_records_/2026-11-04/troop-training/1734-queue-run.md`. No barracks was opened, no batch was collected or requeued, and no training count was verified.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: session cc-473 open_app LastWar returned outcome_unknown, then computer.observe (compact) failed; session cc-474 observe (compact) failed, computer.control activate selected the LastWar window for background input but captured no observation, observe (compact) failed again, observe (image) failed, and a final observe (compact) failed after a healthy connection repair check, all with "Failed to start stream due to audio/video capture failure". The control channel itself was reachable (computer.control list_apps confirmed LastWar running and selected as target); the capture stream was not. The device connection health was healthy on both native and web transports, LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost. Screen-recording permission is granted on the device.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The pass stopped after this unit rather than failing further units identically, since every further unit needs the same capture channel.
+- Recurrence, not a new failure class: this is the eleventh consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534, ticker-1604 arms-race 1604, ticker-1634 harvest 1634, ticker-1704 survivors 1707, ticker-1734 training 1734), now across eleven activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 (comment 6647208826) instead of filing a duplicate, and this run comments the eleventh and twelfth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about training state. It must NOT be read as "no batch due" or as a queue state - the 0440 live Drill Ground Full confirmation still stands as the latest Drill Ground read, and the 1147 framing findings stand; this unit rests on no read at all. The Drill Ground clearing method remains unknown, carried forward from Issue #150, not closed.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
