@@ -2455,3 +2455,8 @@ Full detail in pr-integration/1430-run.md.
 
 - Integrator pass pr-integration-2026-11-04-1800, no-op (non-batch): no knowledge or code PR open; records PR 286 (2026-11-04, head daa78ee3, 34 commits) clean, awaiting the 19:00 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments). Checker _tools_/records_batch.py reported not due (next batch 19:00). No merges, no comments, no escalations, no new records PR opened.
   Full detail in pr-integration/1800-run.md.
+
+## 18:04 to about 18:20 - ticker pass ticker-1804
+
+- Gifts unit gifts-2026-11-04-1430 failed on the Mac screen-capture blocker (twelfth consecutive ticker pass on GitHub Issue #284, commented this pass): every capture attempt failed with "Failed to start stream due to audio/video capture failure" across sessions cc-475 and cc-476 while connection.health stayed healthy; no screen read, no input dispatched, no gift claimed, tracker untouched.
+  Full detail in alliance-gifts/1804-queue-run.md.
