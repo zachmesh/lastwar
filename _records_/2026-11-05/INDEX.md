@@ -1860,3 +1860,39 @@ of 2026-10-28.
   Issue 284 (with a correction on PR #321). No mail claimed.
   Tracker untouched. The pass stopped after this one unit.
   Full detail in mail-rewards/1025-queue-run.md.
+
+## 10:32 to about 10:42 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-1032, worked from
+  the 0932 watermark. Folded the ticker-0904 harvest
+  record (failed, Mac device invoke channel stall, zero
+  responses to eight invokes across two devices and five
+  commands, fortieth consecutive pass, first recording of
+  the worsened zero-response form) into resource-collection
+  1.28.0, and the ticker-0941 scout record (failed, invoke
+  channel stall, zero responses to three invokes,
+  forty-first consecutive pass, confirms the stall form)
+  into perception-scout 1.20.0 (PR 322 OPEN, MERGEABLE,
+  CLEAN, Owner lastwar-knowledge-organizer). The 0904
+  record sits on its own published branch
+  (ticker-0904-rec-2026-11-05, commit 4545274268) and
+  lands on records/2026-11-05 with the 11:00 batch. The
+  Correction 2026-11-05 unblock (owner Dock-icon click)
+  is scoped to the window-stream fault only and does NOT
+  address a stalled invoke channel, for which the Mac-side
+  agent gateway likely needs a restart (unverified
+  inference); PR #321 (CHANNEL_STALL probe) merged since
+  the 0941 pass, so the next pass classifies in-tree.
+  Own PR 320 stands MERGED with no reviews or comments,
+  so no PR feedback was owed. Issue #282 commented with
+  the fortieth and forty-first occurrences (comment
+  6666181928); #284 already commented by the ticker
+  passes. No contradiction resolved, no stale item, no
+  issue filed or closed. The thirty-fifth occurrence
+  (ticker-0634) still has no record anywhere. The
+  ticker-1025 mail record (forty-second pass, Mac device
+  offline) landed after this run's cutoff and falls to
+  the 1132 run. No new records PR opened: PR 310 for
+  records/2026-11-05 already open, awaiting the 11:00
+  batch.
+  Full detail in knowledge-organization/1032-run.md.
