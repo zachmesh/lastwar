@@ -2429,6 +2429,24 @@ of 2026-10-28.
   Status: no-op.
   Full detail in pr-integration/1315-run.md.
 
+## 13:30 to about 13:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1330.
+  NON-batch no-op pass: the checker reported not due
+  (next batch 15:00). No knowledge or code PR open.
+  Five records PRs await the 15:00 batch: 324 (clean),
+  310 (clean, head c21e2c10, 115 commits beyond main),
+  301, 265, 256 (conflicted on the single action-log
+  file, conflict notes posted in the 1100 pass, heads
+  unchanged). No owner-gated PR.
+  Status: no-op.
+  Full detail in pr-integration/1330-run.md.
+
+## 13:32 to about 13:40 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-05-1332, no-op: no own tooling PR open and no unaddressed integrator feedback; all 18 open tooling issues triaged - every one implemented and awaiting retro closure, no-code-owed, or awaiting verification evidence; the newest #284 evidence (ticker-1304, Mac offline, 47th consecutive pass) classifies DEVICE_OFFLINE high-confidence under probe 1.2.0 with exit 13, so no new probe slice; frozen backlog tooling entries (IMP-20261101-08/-09) already implemented via #123/#126; standing tool queue (c) re-verified on github main b761ebaf (retro_report 1.5.0, close-out validation, scout_diff Phase 3 automation all landed). No PR, no issue comment, no Slack DM, per the no-op rule.
+  Full detail in tool-development/1332-run.md.
+
 ## 13:34 to about 13:45 - Ticker pass
 
 - Ticker-1334. Scout-midday unit
