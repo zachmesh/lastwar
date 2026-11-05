@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T02:34:55Z
+modified: 2026-11-05T06:34:14Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-0804 alliance-gifts execution record 2026-11-04 0820 queue run (done, 34 Regular and 2 Premium, label-text Alliance entry, Premium Claim All sits right, fourth exact within-unit progress window, Issue #183)
   - source: ticker-1134 alliance-gifts execution record 2026-11-04 1147 queue run (partial, Alliance entry twice no panel, foreground precondition repeat, re-grounding did not rescue background input)
   - source: ticker-1804 alliance-gifts execution record 2026-11-04 1804 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twelfth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-2204 alliance-gifts execution record 2026-11-04 2204 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2134 known to fail identically, Issue 284)
 ---
 
 
@@ -1082,3 +1083,13 @@ one file per execution.
 - Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
 - Follow-up, carried forward: the blocker is now twelve passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 71 units at this pass, per the record.
+
+## What the 2026-11-04 2204 unit added - screen-capture failure, next known pass after 2134, nothing read
+
+- Unit gifts-2026-11-04-1830 by ticker-2204, about 22:04 to 22:15 local, status failed. Evidence in `_records_/2026-11-04/alliance-gifts/2204-queue-run.md`. No gift was checked or claimed, no tab was read, and no red-dot state is claimed for either tab.
+- No game screen was ever read and no game input was dispatched. Every screen-capture attempt failed with the same device-channel error, "Failed to start stream due to audio/video capture failure": five attempts across two computer sessions. Session cc-490: computer.control list_windows succeeded and listed the LastWar window, so the control channel itself was reachable, but computer.control activate selected the window for background input with no observation, computer.observe (compact) failed, and computer.control describe failed; computer.control open_app returned outcome_unknown (launch result unverifiable, not repeated). Session cc-491 (fresh, after ending cc-490): activate again captured no observation with the same error, and a final computer.observe (compact) failed with the same error. Connection health reported both transports healthy. The Mac mini was online and the LastWar window was running fullscreen (pid 59735, 1920x1080), Google Chrome frontmost.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The pass stopped after this unit rather than failing further units identically, since every further unit needs the same capture channel.
+- Recurrence, not a new failure class: this is the next ticker pass after ticker-2134 known to fail on this exact blocker; the record does not assert an exact consecutive count beyond that. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
+- Follow-up, carried forward: the blocker needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 69 units at this pass, per the record.
