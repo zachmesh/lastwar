@@ -2587,3 +2587,19 @@ Full detail in pr-integration/1430-run.md.
   current, no shepherd comment posted. No adoption, fix,
   hand-off, escalation, chat report, or Slack DM.
   Full detail in pr-catchall/1939-run.md.
+
+## 19:40 to about 19:43 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-1940, done:
+  plan staged 6 units into the live pool for the
+  0657 and 0700 slots on 2026-11-05 (passes, secrets,
+  treasures, trucks, events, scout-midday; already_present
+  64, reaped 0, expired 0); pre-reset sweep pair for
+  tonight's 19:00 reset already done (produced by the
+  1740 run), 0 enqueued by this run; scout diff on the
+  Nov 4 observation applied with all zero counts, 0
+  withdrawals; pool inbox 73, claimed 0, done 860,
+  upcoming 50. No new Issue filed. No new PR opened:
+  PR 293 for records/2026-11-04 already open, awaiting
+  the 2300 batch.
+  Full detail in queue-planning/1940-run.md.
