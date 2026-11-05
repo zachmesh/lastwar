@@ -2204,3 +2204,15 @@ of 2026-10-28.
   file, conflict notes posted in the 1100 pass). No
   owner-gated PR. Status: done.
   Full detail in pr-integration/1145-run.md.
+
+## 12:00 to about 12:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1200.
+  NON-batch no-op pass: the checker reported not due
+  (next batch 15:00), no knowledge or code PR was open.
+  Five records PRs await the 15:00 batch: 324 (clean),
+  310 (clean, test-merged against main 15eb5ac5),
+  301, 265, 256 (conflicted on the single action-log
+  file, conflict notes posted in the 1100 pass, heads
+  unchanged). No owner-gated PR. Status: no-op.
+  Full detail in pr-integration/1200-run.md.
