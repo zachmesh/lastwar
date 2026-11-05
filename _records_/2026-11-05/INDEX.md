@@ -343,3 +343,21 @@ of 2026-10-28.
   filed.
 - Pool: inbox 70, claimed 0, done 879, upcoming 49. Status:
   no-op. Full detail in queue-planning/0140-run.md.
+
+## 01:45 to about 01:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0145.
+  Non-batch pass per the checker (not due, next batch
+  03:00): knowledge PR 306 reviewed clean and merged
+  (squash, commit 80fd2598, organizer 0132 harvest and
+  scout capture-failure recurrences, Issues 282 and
+  284). Five records PRs await the 03:00 batch: PR 304
+  (2026-11-05, head 882a8884, merge state still
+  computing), PR 301 (2026-11-04, head bf9fb87e),
+  PR 187 (2026-11-01, head 1efa3040), PR 265
+  (2026-11-02, head 52295794) and PR 256 (2026-11-03,
+  head b35684d2), all clean by the API except 304
+  still computing. No conflicts, no owner-gated PR.
+  Local main fast-forwarded to 80fd2598. Merge synced
+  to the owner Slack DM. Full detail in
+  pr-integration/0145-run.md.
