@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-05T03:34:11Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-0234 event-claims execution record 2026-11-04 0245 queue run (done, full hub sweep, nothing claimable)
   - source: ticker-0504 event-claims execution record 2026-11-04 0519 queue run (done, full hub sweep, 0 claims, Arms Race phase ends inside the next hour, no Zombie Invasion tab)
   - source: ticker-0834 event-claims execution record 2026-11-04 0843 queue run (done, full hub sweep, 0 claims, Arms Race now Base Building phase, no Zombie tab)
+  - source: ticker-1834 event-claims execution record 2026-11-04 1834 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirteenth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -848,3 +849,12 @@ that drag is the sweep-completeness check, not wasted motion.
 - Community: Discord binding reward reads Claimed.
 - Countdown consistency check, no contradiction: the Desert registration (12:44:48 at 0519 to 09:17:05 here), General's Trial (2d 12:44:11 to 2d 09:17:58) and Wanted Boss (11:41:45 to 08:16:51) countdowns all stepped down by about the elapsed 3 hours 24 minutes between the units.
 - Leaving the hub: the back-arrow tap at norm 132,952 closed the Goals panel to the Wanted Boss page, and a second tap at the same point from the Community page returned to the base screen on the first tap. Back-arrow centre for the Events hub is re-confirmed at norm (132,952). Game left on the base view.
+
+## What the 2026-11-04 1834 unit added - screen-capture failure, thirteenth consecutive pass, nothing read
+
+- Unit events-2026-11-04-1457 by ticker-1834, about 18:34 to 18:37 local, status failed. Evidence in `_records_/2026-11-04/event-claims/1834-queue-run.md`. No diamonds spent, no paid button tapped.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: computer.control activate (session cc-477) selected the LastWar window for background input but captured no observation with "Failed to start stream due to audio/video capture failure"; computer.observe (cc-477, compact view) failed with the same error twice and computer.observe (cc-477, image view) failed with the same error; computer.control open_app LastWar returned outcome_unknown (launch result unverifiable, not repeated); in a fresh session (cc-478, after ending cc-477) computer.observe (compact view) failed with the same error and computer.control describe for LastWar failed with the same error. Six capture attempts in total, all the same error, satisfying the at-least-3-retries rule before the unit was recorded as access-failed.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The Events hub could not be opened, no event page or red dot was read, and nothing was claimed or verified. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
+- Recurrence, not a new failure class: this is the thirteenth consecutive ticker pass to fail on this exact blocker, per GitHub Issue #284 (tooling), whose latest comment before this pass was ticker-1804 (gifts unit). This pass commented on #284 instead of filing a duplicate, and this run comments the thirteenth and fourteenth occurrences onto the knowledge Issue #282.
+- Reading warning: this failed unit gives zero evidence about the event claim state. It must NOT be read as "nothing claimable" - the 0843 close (full hub sweep, Arms Race now Base Building phase, 0 claims) rests on a live read and stands as the last live read; this unit rests on no read at all.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this unit: with no observation channel, a second unit would fail identically and burn the pass budget, so the remaining inbox units (66 at this pass) were left queued.

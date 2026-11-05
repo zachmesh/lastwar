@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T00:36:53Z
+modified: 2026-11-05T03:34:11Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -34,6 +34,7 @@ grounded_in:
   - source: ticker-0706 radar-tasks execution record 2026-11-04 0720 queue run (partial, release day, Doom Legion base claimed, Rare Farmland gathering dispatched, blue skull pin opens no card)
   - source: ticker-1004 radar-tasks execution record 2026-11-04 1005 queue run (partial, duel day 3 release, 13 claims, points 206 to 219, stored 0 of 40, stamina 131 to 81, Doom Elite pin march left for the next unit per rule R7)
   - source: ticker-1534 radar-tasks execution record 2026-11-04 1534 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, seventh consecutive ticker pass to fail this way, Issue 284; PT-corrected duel posture day 3 release)
+  - source: ticker-1904 radar-tasks execution record 2026-11-04 1904 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, fourteenth consecutive ticker pass to fail this way, blocker continuing past the 19-00 reset, Issue 284; live posture day 4 Train Heroes stack, not the stale unit-window day 3 release wording)
 ---
 
 
@@ -1844,3 +1845,14 @@ are still open, per the protocol.
 - Posture check, PT-corrected: the unit window reads duel day 3, radar release. A naive run of tools/duel.py on this UTC VM printed day 4, Train Heroes, stack - but the duel anchor (2026-10-25T19:00 local) is America/Los_Angeles time, and recomputed in PT today is still day 3, Age of Science, release posture, matching the unit window and the 1005 unit. The next radar unit must use the PT-corrected posture, not a raw duel.py print from this UTC VM.
 - Remaining work, carried forward and time-bounded: the 1005 unit left a Doom Elite pin march as the first action of the next radar unit per rule R7 (cost 20 stamina, suggested power 1,096,500); its countdown read 01:26:27 at 10:19 local, so it expired about 11:46 local and is almost certainly gone - the next unit must re-check the pin live rather than assume it. The restore line at the 1005 close pointed to 12 tasks restoring about 15:42 local, right inside this pass's window, so the next unit should expect a fresh stored batch. Both expectations are superseded by the next live read.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-04 1904 unit added - screen-capture failure, fourteenth consecutive pass, nothing read
+
+- Unit radar-2026-11-04-1803 by ticker-1904, about 19:04 to 19:15 local, status failed. Evidence in `_records_/2026-11-04/radar-tasks/1904-queue-run.md`. No diamonds spent, no paid button tapped.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: computer.session cc-479 started, list_apps confirmed LastWar as target, computer.observe (compact) failed with "Failed to start stream due to audio/video capture failure"; computer.control activate selected the LastWar window for background input but captured no observation, same error; computer.observe (compact) failed again with the same error while connection.health at the same time reported both transports connected and healthy; session cc-479 ended, fresh session cc-480 started, computer.control activate again selected the window with no observation, same error, and computer.observe (image view) in cc-480 failed with the same error. Three observation attempts across two sessions, two views, plus two activates, all the identical signature. LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080 and Google Chrome was frontmost.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The radar screen was never entered or verified, no stored task count, stamina figure, restore line or pin scan was read, and no Quick Execute, Claim All or pin march was run. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
+- Recurrence, not a new failure class: this is the fourteenth consecutive ticker pass to fail on this exact blocker (the 12:35, 13:33, 13:44, 14:34, 14:39, 15:04, 15:34, 16:34, 17:07, 17:34, 18:04, 18:34 and now 19:04 passes of 2026-11-04), and the first to continue past the 19:00 reset - the blocker is not reset-bound. The blocker is filed as Issue #284 (tooling, 11 comments); this pass commented on #284 instead of filing a duplicate, and this run comments the thirteenth and fourteenth occurrences onto the knowledge Issue #282.
+- Posture check: the unit window reads duel day 3, radar release, but that slot (18:03 local) predates the 19:00 reset. Live posture at this pass, recomputed with tools/duel.py under America/Los_Angeles time, is duel day 4, Train Heroes, radar STACK: complete ordinary tasks but do not claim, do not tap pins. The unit's work, when the screen returns, is the stack execution, not the stale release wording.
+- Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as a stored-count or claim state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
+- Remaining work, carried forward and time-bounded: this unit's stack work (enter and verify the radar screen, run Quick Execute batches until no offer remains, record stored count, pending reward count, stamina, restore line and the pin inventory untapped) is still owed. The 1005 unit's Doom Elite pin expired about 11:46 local and is gone; the restore line at the 1005 close pointed to 12 tasks restoring about 15:42 local, so the next live unit should expect a fresh stored batch. Both expectations are superseded by the next live read.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit rather than claiming further units: every further unit would fail on the same capture error and burn attempts, so the inbox is left for the first pass after capture recovers.
