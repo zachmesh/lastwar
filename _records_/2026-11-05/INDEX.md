@@ -81,3 +81,20 @@ of 2026-10-28.
   log-line audit (no main entry lost, no exact
   duplicates). No owner-gated PR. Full detail in
   pr-integration/0015-run.md.
+
+## 00:30 to about 00:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0030.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR was open. Five records
+  PRs await the 03:00 batch, all re-verified clean
+  against current main 6b6a46776c by merge-tree plus an
+  action-log line audit (no main line lost, no exact
+  duplicates): PR 304 (2026-11-05, head 44c65c27, API
+  state UNKNOWN recomputing, merge-tree clean), PR 301
+  (2026-11-04, head bf9fb87e5, CLEAN), PR 187
+  (2026-11-01, head 1efa3040, CLEAN), PR 265
+  (2026-11-02, head 52295794, CLEAN) and PR 256
+  (2026-11-03, head b35684d2, CLEAN). State unchanged
+  since the 0015 pass. No owner-gated PR. Full detail in
+  pr-integration/0030-run.md.
