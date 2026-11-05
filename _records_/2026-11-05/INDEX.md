@@ -547,3 +547,32 @@ of 2026-10-28.
   new main c06932d2bb. No conflicts, no owner-gated PR.
   Local main fast-forwarded to c06932d2bb by bundle.
   Full detail in pr-integration/0245-run.md.
+
+## 03:04 to about 03:12 - Ticker pass
+
+- Own PRs first: the live records PR for today, PR 304
+  (records/2026-11-05), was CONFLICTING after the 0300
+  batch pass merged PR 187 into main (merge commit
+  2071992b). This pass resolved it on the branch side
+  before game work: merged main 2071992b into
+  records/2026-11-05 as 6d65fd817, resolving
+  _logs_/repo-actions/action-log.jsonl as a union of both
+  sides' appends (854 entries: branch 853 plus main-only 1),
+  also splitting fused double-entry lines and dropping a
+  blank line that pre-existed in both versions; pushed via
+  the bundle route, verified with git ls-remote, and
+  commented the resolution on PR 304.
+- Radar unit radar-2026-11-05-0203, failed, ticker-0304:
+  no radar screen was ever read and no task was executed or
+  claimed. The Mac screen capture stream failed on all four
+  attempts across two computer sessions (cc-512, cc-513)
+  with "Failed to start stream due to audio/video capture
+  failure". A Chrome-window observation in the same session
+  succeeded, so the channel works for other apps and the
+  failure is specific to the Last War window. First pass to
+  run the fail-fast probe (_tools_/mac_capture_probe.py
+  1.0.0): OFF_SCREEN_WINDOW, high confidence, stop_pass
+  yes. This is the twenty-ninth consecutive ticker pass
+  with this blocker (Issue 284, open, tooling); commented
+  on #284. Tracker untouched. The pass stopped after this
+  one unit. Full detail in radar-tasks/0304-queue-run.md.
