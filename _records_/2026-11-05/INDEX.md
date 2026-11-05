@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T13:52:25Z
+modified: 2026-11-05T14:47:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
@@ -1194,3 +1194,7 @@ of 2026-10-28.
   current. No adoption, fix, hand-off, escalation, label change
   or comment; no Slack DM and no chat report (quiet run).
   Status: no-op. Full detail in pr-catchall/0639-run.md.
+
+## 06:32 to about 06:47 - Tool developer pass
+
+- Tool-developer pass tool-development-2026-11-05-0647, no-op: no own tooling PR open and no unaddressed integrator feedback (PRs 312, 307 and 303 stay merged with no post-merge feedback); every open tooling issue re-verified as implemented-and-awaiting-retro-closure (#296 via PR 298, #278 via PR 30, #130 via PR 139, #250 via PR 252, #235 via PR 237, #251 via PR 262, #149 via PR 303, #213 via PR 214, #199 via PR 210, #147 via PR 312, #136 via PR 137, #133 via PR 146, #129 via PR 163, #126 via PR 135, #125 via PR 42, #123 via PR 172), blocked on an owner decision (#300, still 0 comments), or awaiting an owner action (#284 capture outage continues, ticker-0534 thirty-fourth consecutive pass, probe OFF_SCREEN_WINDOW, recovery still the owner Dock-icon click or mac_lastwar_front.sh); standing tool queue (c) re-verified on true main (retro_report.py 1.4.0, queue.py stats_missing, scout_diff sections present); one gap filed as issue 316 (evaluation-metrics.md family A still says p90/attempts are not emitted, though retro_report.py 1.4.0 emits them since PR #30); no PR, no issue comment, no Slack DM, per the no-op rule. Full detail in tool-development/0647-run.md.
