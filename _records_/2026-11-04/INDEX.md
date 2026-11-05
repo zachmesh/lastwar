@@ -2534,3 +2534,23 @@ Full detail in pr-integration/1430-run.md.
   action-log file at unchanged heads, carried, no
   new comment. Full detail in
   pr-integration/1900-run.md.
+
+## 19:04 to about 19:15 - Queue ticker pass
+
+- Ticker pass ticker-1904. Sync reaped 0, expired 7
+  (trucks, treasures, secrets and passes 1457, donations
+  1847, both pre-reset zero-sweep units) and produced
+  nothing new - all due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended
+  at about the 19:00 reset on 2026-10-30, and no zombie
+  unit sits in inbox or claimed.
+- Radar unit radar-2026-11-04-1803, failed: the Mac screen
+  capture stream failed on every attempt (3 observations
+  across sessions cc-479 and cc-480, compact and image
+  views, plus 2 activates), same signature as the all-day
+  run, so no screen was read and no game input was
+  dispatched. Live posture at this pass is duel day 4,
+  Train Heroes, radar stack - the unit window's day-3
+  release wording predates the 19:00 reset. Tracker
+  untouched. Blocker filed as Issue #284, commented this
+  pass. Full detail in radar-tasks/1904-queue-run.md.
