@@ -80,7 +80,15 @@ What is counted, per section 14 -
     not a copy. Excluded
     points are counted under points_dup_excluded, never
     silently dropped, and queue.py complete warns at close
-    time so future closings do not carry the copy.
+    time so future closings do not carry the copy. A second
+    exception (issue #300): a nonzero points value with no
+    achieved key at all is not summed either - with nothing
+    to compare, the equality detector cannot see a screen
+    total written into points, and the known cases (radar
+    2924/2948/2989, arms-race 37500) are all screen totals.
+    Such points are counted under points_no_achieved_excluded,
+    never silently dropped, and queue.py complete warns at
+    close time so future closings carry an achieved read.
 
 Data sources are only inside the repository - the done pool at
 _queue_/done and, as a fallback, the day INDEX files in
@@ -128,7 +136,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.4.0"
+TOOL_VERSION = "1.5.0"
 
 
 def _load_queue():
@@ -441,6 +449,8 @@ def _empty_bucket():
         "points_units": 0,
         "points_dup_excluded": 0,
         "points_dup_excluded_units": [],
+        "points_no_achieved_excluded": 0,
+        "points_no_achieved_excluded_units": [],
         "costs": {},
         "blockers": {},
         "named_blockers": {},
@@ -488,9 +498,13 @@ def _feed(bucket, unit):
     bucket["resources_unparsed"].extend(unparsed)
     points = _num(stats.get("points"))
     dup = getattr(Q, "points_duplicates_achieved", None)
+    noach = getattr(Q, "points_without_achieved", None)
     if points is not None and dup is not None and dup(stats, unit.get("regular")):
         bucket["points_dup_excluded"] += 1
         bucket["points_dup_excluded_units"].append(unit["unit"])
+    elif points is not None and noach is not None and noach(stats):
+        bucket["points_no_achieved_excluded"] += 1
+        bucket["points_no_achieved_excluded_units"].append(unit["unit"])
     elif points is not None:
         bucket["points_total"] += points
         bucket["points_units"] += 1
@@ -565,6 +579,10 @@ def _summarise(bucket):
         "points_dup_excluded": bucket["points_dup_excluded"],
         "points_dup_excluded_units": bucket[
             "points_dup_excluded_units"],
+        "points_no_achieved_excluded": bucket[
+            "points_no_achieved_excluded"],
+        "points_no_achieved_excluded_units": bucket[
+            "points_no_achieved_excluded_units"],
         "costs": {k: _clean(v) for k, v in
                   sorted(bucket["costs"].items())},
         "resources_per_minute": {k: _clean(v / minutes) for k, v in
