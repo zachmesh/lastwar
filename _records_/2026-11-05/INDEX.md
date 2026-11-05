@@ -2185,3 +2185,22 @@ of 2026-10-28.
   passed on isolated scratch; live-pool copy finds exactly
   the 4 known screen totals (46,361 points). Status: done.
   Full detail in tool-development/1132-run.md.
+
+## 11:45 to about 12:00 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1145.
+  NON-batch pass: the checker reported due for the 11:00
+  window, but the 11:00 batch already landed in the 1100
+  pass (records PR 317 merged 11:02:31 PT, merge commit
+  1f8cc74f44), so no records PR was merged this pass.
+  Knowledge PR 325 merged (squash 48c83df8, organizer
+  1132, mail-rewards 1.21.0 and radar-tasks 1.34.0) and
+  code PR 326 merged (squash 15eb5ac5, points-no-achieved
+  flag, Refs 300, opened mid-pass). PR 310 verified clean
+  (test merge against main 48c83df8, tree 123965fb;
+  GitHub MERGEABLE/CLEAN) and commented; five records
+  PRs await the 15:00 batch: 324 (clean), 310 (clean),
+  301, 265, 256 (conflicted on the single action-log
+  file, conflict notes posted in the 1100 pass). No
+  owner-gated PR. Status: done.
+  Full detail in pr-integration/1145-run.md.
