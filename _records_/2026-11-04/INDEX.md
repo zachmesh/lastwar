@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-04
 created: 2026-11-04T08:08:00Z
-modified: 2026-11-04T08:08:00Z
+modified: 2026-11-05T07:25:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PRs 256 and 255 carried to the 03:00 batch, PR 187 conflict carried
@@ -2915,3 +2915,18 @@ Full detail in pr-integration/1430-run.md.
 
 - Integrator pass pr-integration-2026-11-04-2300, done (batch pass, 2300 window): checker _tools_/records_batch.py reported due for the 2300 window; records PR 293 merged by merge commit 5dd6d644a (40 commits from records/2026-11-04, branch kept); PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against true main 0a1771c2); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main; this run record and the merge-time action-log line committed to records/2026-11-04 after the merge, riding the next records PR.
   Full detail in pr-integration/2300-run.md.
+## 23:04 to about 23:18 — Queue ticker pass, donations blocked by screen capture failure
+
+- Ticker pass ticker-2304. Sync reaped 0, expired 4, produced
+  nothing new - all 21 due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30, and no zombie unit sits in
+  inbox or claimed.
+- Donations unit donations-2026-11-04-2203, failed: the Mac
+  screen capture stream failed on all 5 attempts across 3
+  computer sessions (cc-494, cc-495, cc-496) with "Failed to
+  start stream due to audio/video capture failure", so no game
+  screen was ever read and no donation was made. Same blocker
+  as GitHub Issue #284, which the ticker-1934, ticker-2034
+  and ticker-2134 passes already hit today. Tracker untouched.
+  Full detail in alliance-donations/2304-queue-run.md.
