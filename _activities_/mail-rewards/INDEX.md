@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T21:41:37Z
+modified: 2026-11-05T16:36:24Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-0434 mail-rewards execution record 2026-11-04 0445 queue run (done, category rows grounded, Event train arrival reward claimed and verified gone)
   - source: ticker-0804 mail-rewards execution record 2026-11-04 0817 queue run (done, checked only, Claim All no-change in four categories, Event notice opened individually, no claimable mail)
   - source: ticker-1327 mail-rewards execution record 2026-11-04 1333 queue run (failed, Mac screen-capture channel failure on every capture step, no game input dispatched, second consecutive ticker pass to fail this way after help 1235, Issue 282)
+  - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1333 section wording)
 ---
 
 
@@ -779,3 +780,9 @@ the next tick re-produces this regular as a fresh unit.
 - Recurrence, the point of this fold: this is the second consecutive ticker pass to fail this way (ticker-1224 help 1235 failed identically about one hour earlier). The 1232 organizer run recorded this failure as a watch item that becomes a filed gap only if it persists across passes; it has now persisted across passes and activities, so the escalation is filed as Issue #282 (device-channel diagnosis, not another entry-point or coordinate change). The 1235 follow-up rule and this record agree: if the capture failure persists, it escalates as a device-channel fault, not as a repeat of the same taps.
 - Retry rule satisfied: far more than 3 capture attempts were made in this pass (two sessions, repeated observe, describe and screenshot attempts) before the access failure was recorded.
 - Follow-up from the record itself: the tracker is untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit with this unit retried first. No diamonds or money spent, no mail deleted, no other activity work done.
+
+## Correction 2026-11-05 - the game window is windowed on an inactive Space, not in native fullscreen
+
+- Source: the 0134 survivors record (`_records_/2026-11-05/survivor-intake/0134-queue-run.md`, ticker-0134, twenty-sixth consecutive capture failure), re-confirmed by the 0204 gifts record (`_records_/2026-11-05/alliance-gifts/0204-queue-run.md`, ticker-0204, twenty-seventh) and by the 0734 arms-race and 0804 donations records on the same day (thirty-seventh and thirty-eighth occurrences, probe OFF_SCREEN_WINDOW, Chrome observing normally in the same sessions). The View menu lists "Enter Full Screen", so the app is NOT in native fullscreen: it is a windowed 1920x1080 window on an inactive Space, and the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission.
+- Superseded in this profile: the "LastWar app running fullscreen" wording in the 1333 section above. The rest of that section stands unchanged: the capture sequence, the classification (the same screen-capture channel failure class as the 1235 help unit, not a mail entry failure and not a different-device dialog), and the follow-up rule.
+- Follow-up corrected: the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. This correction changes no Mail state: no mail tab was opened in the 1333 unit and no reward count was read, and none is asserted here.
