@@ -2391,3 +2391,8 @@ Full detail in pr-integration/1430-run.md.
   duplicate filed. Full detail in survivor-intake/1707-queue-run.md.
 - Integrator pass pr-integration-2026-11-04-1715, done (non-batch): no knowledge or code PR open; records PR 286 (2026-11-04, head 322ae0eb, 26 commits) clean, awaiting the 19:00 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, with fresh re-check comments posted this pass. Checker _tools_/records_batch.py reported not due (next batch 19:00). No merges, no escalations, no new records PR opened.
   Full detail in pr-integration/1715-run.md.
+
+## 17:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1730, no-op (non-batch): no knowledge or code PR open; records PR 286 (2026-11-04, head 46f799eb, 27 commits) clean per merge-tree against main d75105, awaiting the 19:00 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads and main unchanged since the 1715 re-check comments). Checker _tools_/records_batch.py reported not due (next batch 19:00). No merges, no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1730-run.md.
