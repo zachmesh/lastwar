@@ -2577,3 +2577,18 @@ of 2026-10-28.
   to open (2026-10-31 contained in main).
   Status: no-op.
   Full detail in pr-integration/1405-run.md.
+
+## 14:04 to about 14:10 - Ticker pass (perception scout)
+
+- Ticker-1404: scout-midday unit
+  scout-midday-scout-mid-2026-11-02-006 (chain
+  scout-mid-2026-11-02 seq 6, scout-alliance remainder:
+  station panel, loot box re-check) FAILED on the Mac
+  mini offline with no wake-up path, Issue 284, forty-ninth
+  consecutive pass; device.list last_seen still
+  2026-11-05T15:36:52Z, four attempts zero responses
+  (connection.health, computer.session start, screen.snap,
+  recovery-device health timeout). No game screen read,
+  no input dispatched. Tracker untouched.
+  Status: failed. Full detail in
+  perception-scout/1404-queue-run.md.
