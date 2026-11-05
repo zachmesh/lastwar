@@ -2750,3 +2750,19 @@ of 2026-10-28.
   284. No radar task executed or claimed. Tracker untouched.
   The pass stopped after this one unit. Full detail in
   radar-tasks/1504-queue-run.md.
+
+## 15:00 to about 15:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1500.
+  BATCH pass: the checker reported due for the 15:00
+  window (57 minutes left). Records PR 310 merged by
+  merge commit 90969ccf9 (137 commits, 225 files).
+  Records PRs 324, 265, 256 and 301 conflicted on the
+  single action-log file, commented and carried; the
+  1445 pass "all clean" claim for 265, 256 and 301
+  was re-verified false by two methods. Fresh records
+  PR 330 opened for the post-merge line on
+  records/2026-11-05. No knowledge or code PR open.
+  No owner-gated PR.
+  Status: done.
+  Full detail in pr-integration/1500-run.md.
