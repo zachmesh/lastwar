@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-04T19:40:23Z
-version: 1.26.0
+modified: 2026-11-05T01:35:08Z
+version: 1.27.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-0404 survivor-intake execution record 2026-11-04 0416 queue run (partial, gate still not located, tent/parking-area re-read named)
   - source: ticker-0734 survivor-intake execution record 2026-11-04 0757 queue run (partial unverified, gate sign never pinned, grounding candidates untapped, center-view re-read named)
   - source: ticker-1104 survivor-intake execution record 2026-11-04 1122 queue run (partial, gate line verified live with 3 question-mark survivors, fullscreen method change, figure tap dispatched but no card opened)
+  - source: ticker-1704 survivor-intake execution record 2026-11-04 1707 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, tenth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -1232,3 +1233,12 @@ Measured on 2026-10-25.
 - Window state carried forward: the game window was left in native fullscreen. The next unit inherits fullscreen geometry. Taps dispatch in fullscreen, so no restore was attempted inside the unit cap.
 - Follow-up for the next survivors unit: the next unit must change method again before repeating this one - try the question-mark bubble itself in fullscreen, or a long-press on a grounded figure, and re-ground from a fresh screenshot immediately before tapping, since the figures may shift between screenshots.
 - No diamonds, money, price tags, paid buttons, speedups, research, buildings, assembly or teleport were touched. Nothing was claimed. No earlier claim superseded; no new issue filed - the gate-location blocker is already the standing R2 item for this regular, now in its taps-not-opening-cards form.
+
+## What the 2026-11-04 1707 unit added - screen-capture failure, tenth consecutive pass, nothing read
+
+- Unit survivors-2026-11-04-1403 by ticker-1704, about 17:04 to 17:07 local, status failed. Evidence in `_records_/2026-11-04/survivor-intake/1707-queue-run.md`. No survivor was recruited, no card was opened, Quick Dispatch did not run, and the tracker is untouched, so the next tick re-produces this regular as a fresh unit.
+- No game screen was ever read and no game input was dispatched. Every screen-capture attempt failed with the same device-channel error, "Failed to start stream due to audio/video capture failure": five attempts across two computer sessions (cc-471: activate, observe, activate again; cc-472: activate, observe in image mode). The Mac mini was online and the LastWar window was running fullscreen (pid 59735, 1920x1080, window "Last War").
+- No blind taps were made: without a single screenshot the gate line could not be grounded, so no game input was sent and no game state was changed. The pass stopped after this unit rather than failing further units identically, since every further unit needs the same capture channel.
+- Recurrence, not a new failure class: this is the tenth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534, ticker-1604 arms-race 1604, ticker-1634 harvest 1634, ticker-1704 survivors 1707), now across ten activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 (comment 6646759476) instead of filing a duplicate, and this run comments the ninth and tenth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the survivor line state. It must NOT be read as "no survivors waiting" - the 1122 close (gate line verified live with 3 question-mark survivors, taps-not-opening-cards blocker) rests on a live read and stands as the last live read; this unit rests on no read at all. The 1122 follow-up (try the question-mark bubble itself in fullscreen, or a long-press on a grounded figure, re-grounded from a fresh screenshot immediately before tapping) is carried forward, not closed.
+- Follow-up, carried forward: the blocker is now ten passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.

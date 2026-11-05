@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T19:40:23Z
+modified: 2026-11-05T01:35:08Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-0404 resource-collection execution record 2026-11-04 0413 queue run (partial, farmland +2.0M verified, factory-row marker confusion, Issue #250 evidence)
   - source: ticker-0734 resource-collection execution record 2026-11-04 0755 queue run (partial, farmland +2.6M verified, left-side +3.0M unattributed, Alliance back arrow corrected to (161,935), marker confusion repeats, Issue #250 already commented by the ticker pass)
   - source: ticker-1034 resource-collection execution record 2026-11-04 1101 queue run (partial, farmland +2.1M food and left-side +1.4M coin verified, entry corrections re-confirmed, sweep incomplete at unit cap)
+  - source: ticker-1634 resource-collection execution record 2026-11-04 1634 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, ninth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -1004,3 +1005,12 @@ regular stays due. Evidence in
 - Verified gains, by HUD deltas only: base HUD at entry (live screenshot reads) food 417.9M, iron 749.5M, coin 18.0M, second row 21.0M, 922.2K, diamonds 12.72K, total power 150,028,269. Farmland tap at (364,481): food 417.9M to 420.0M (+2.1M) on the next screenshot, and the farmland cluster's round value bubbles cleared. Per the standing farmland rule one tap collects all farmland bubbles; the +2.1M is the verified gain. Left-edge drag (300,500) to (600,500) shifted the camera to the left-side buildings. Left-side tap at (88,406): coin 18.0M to 19.4M (+1.4M) on the next screenshot, food and iron unchanged. The +1.4M HUD delta is verified; the bubble identity behind it is NOT separately verified, so no bubble count is claimed for it. This replicates the 0755 unit's left-side collection point. Total HUD-verified gain in this unit: food +2.1M, coin +1.4M.
 - Sweep coverage: farmland cluster collected, bubbles cleared. Left edge viewed after the drag; one tap collected. Remaining small icons above the left-side buildings were not distinguished from building markers and were not tapped (the 0755 marker-confusion caution, Issue #250). Right side and top edge NOT swept in this unit. Bottom Season 2 zone NOT swept as main-base harvest, per the 2026-11-01 rule (its bubbles are not main-base harvest).
 - Why partial, not done: the full edge-drag sweep of the 2026-11-01 rule was not completed to zero remaining - EXP, screw and drone-component bubbles were not located or verified, and the right side and top edge were not swept. The next harvest unit resumes from the sweep. No truck top bubble was claimed; truck work belongs to the trucks unit under one-unit-one-type. No new issue filed: Issue #250 already covers the bubble-grounding confusion, and this unit's left-side tap succeeded at the 0755 point rather than adding a new failure mode. No earlier claim superseded.
+
+## What the 2026-11-04 1634 unit added - screen-capture failure, ninth consecutive pass, nothing read
+
+- Unit harvest-2026-11-04-1403 by ticker-1634, about 16:34 to 16:48 local, status failed. Evidence in `_records_/2026-11-04/resource-collection/1634-queue-run.md`. No resource collected, no diamonds, money, speedup items or paid button touched.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: computer.control activate LastWar (cc-469) selected the window for background input but captured no observation, computer.observe (cc-469, compact) failed, and after a 30 second wait computer.observe (cc-470, image) and computer.control describe LastWar (cc-470) failed, all with "Failed to start stream due to audio/video capture failure". The control channel itself was reachable (computer.control list_windows in cc-469 listed the LastWar window); the capture stream was not. The device connection health was healthy on both native and web transports, LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The base, its resource bubbles and the HUD totals could not be read, and no bubble was tapped or verified. No harvest was collected.
+- Recurrence, not a new failure class: this is the ninth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534, ticker-1604 arms-race 1604, ticker-1634 harvest 1634), now across nine activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the ninth and tenth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 72 units at this pass, per the record.
