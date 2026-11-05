@@ -2415,3 +2415,16 @@ of 2026-10-28.
   845; the main working tree's inbox 75 figure comes from
   the stale work/ops-execution-records branch. Status:
   failed. Full detail in perception-scout/1304-queue-run.md.
+
+## 13:15 to about 13:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1315.
+  NON-batch no-op pass: the checker reported not due
+  (next batch 15:00). No knowledge or code PR open.
+  Five records PRs await the 15:00 batch: 324 (clean),
+  310 (clean, head f709fa96, advanced from f660caa3 by
+  the ticker-1304 merge), 301, 265, 256 (conflicted on
+  the single action-log file, conflict notes posted in
+  the 1100 pass, heads unchanged). No owner-gated PR.
+  Status: no-op.
+  Full detail in pr-integration/1315-run.md.
