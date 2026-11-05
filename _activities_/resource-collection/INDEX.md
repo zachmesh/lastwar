@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T05:34:24Z
+modified: 2026-11-05T09:35:30Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-1034 resource-collection execution record 2026-11-04 1101 queue run (partial, farmland +2.1M food and left-side +1.4M coin verified, entry corrections re-confirmed, sweep incomplete at unit cap)
   - source: ticker-1634 resource-collection execution record 2026-11-04 1634 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, ninth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-2104 resource-collection execution record 2026-11-04 2104 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2034 known to fail identically, Issue 284)
+  - source: ticker-0034 resource-collection execution record 2026-11-05 0034 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-fourth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -1024,3 +1025,14 @@ regular stays due. Evidence in
 - Recurrence, not a new failure class: this is the next ticker pass after ticker-2034 known to fail on this exact blocker; the record does not assert an exact consecutive count beyond that. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 72 units at this pass, per the record.
+
+## What the 2026-11-05 0034 unit added - screen-capture failure, twenty-fourth consecutive pass, nothing read
+
+- Unit harvest-2026-11-04-2203 by ticker-0034, about 00:34 to 00:41 local, status failed. Evidence in `_records_/2026-11-05/resource-collection/0034-queue-run.md`. No resource collected, no diamonds, money, speedup items or paid button touched.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: the executor subagent tried `computer.observe` (compact, image, full), `computer.control` screenshot and describe, and `screen.snap`, six or more attempts, all with "Failed to start stream due to audio/video capture failure"; the parent then tried once more in a fresh computer session (cc-502) with `computer.observe` view=image, same error. The capture pipeline itself works: a Chrome window observed and screenshotted normally in the same session, so the fault is specific to the LastWar window. LastWar (bundle com.lastwar.ios, pid 59735) is running, fullscreen 1920x1080 at (0,0) on an inactive Space; Google Chrome is frontmost. `activate` reports `window_on_screen: false`.
+- Space-switch attempts failed: Ctrl+Right / Ctrl+Left dispatched but the Space did not switch; Cmd+Tab is blocked by the tool; the Dock icon could not be located from a window-relative observation, so no blind click was attempted. The menu path View -> Exit Full Screen needs a fresh observation of the game window, which is exactly what fails.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The base, its resource bubbles and the HUD totals could not be read, and no bubble was tapped or verified. No harvest was collected.
+- Recurrence, not a new failure class: this is the twenty-fourth consecutive ticker pass to fail on this exact blocker (ticker-0004 at 00:04 was the twenty-third, per the recount in its correction file). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-fourth and twenty-fifth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed.
+- The unit's 15 minute budget was spent on control-channel recovery attempts; game time was zero. No other unit was attempted in this pass: every unit needs the same game screen, so all would fail identically.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
