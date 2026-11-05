@@ -2711,3 +2711,26 @@ Full detail in pr-integration/1430-run.md.
   Full detail in pr-integration/2045-run.md.
 - Integrator pass pr-integration-2026-11-04-2101, no-op (non-batch, outside every batch window): checker _tools_/records_batch.py reported not due, next batch point 2300 America/Los_Angeles; PR 293 (2026-11-04, head 1404be70, 22 commits ahead, clean by gh and by merge-tree against true main 2838df46) carried awaiting the 2300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main.
   Full detail in pr-integration/2101-run.md.
+
+## 21:04 to about 21:12 — Queue ticker pass, harvest failed
+
+- Ticker pass ticker-2104. Sync reaped 0, expired 0, produced
+  nothing new - 21 regulars already queued. No zombie chain
+  was seeded: the Zombie Invasion event ended at about the
+  19:00 reset on 2026-10-30, and the seeding rule forbids a
+  fresh chain until a Zombie Invasion tab is seen live again.
+- Harvest unit harvest-2026-11-04-1803, failed: the Mac
+  screen capture stream failed on all 4 capture attempts
+  across 2 sessions (cc-486, cc-487) with the same
+  audio/video capture error, so no screen was ever read and
+  no game input was dispatched. Same blocker as GitHub Issue
+  #284 (open, tooling), commented instead of filing a
+  duplicate. Tracker untouched; the next tick re-produces
+  the harvest unit. Full detail in
+  resource-collection/2104-queue-run.md.
+- Own PRs checked first: open records PRs 293 (2026-11-04),
+  265 (2026-11-02), 256 (2026-11-03) and 187 (2026-11-01)
+  all name Owner lastwar-pr-integrator, none names this job,
+  and none carries a question addressed to this job. No new
+  records PR opened: PR 293 for records/2026-11-04 already
+  open, awaiting the 2300 batch.
