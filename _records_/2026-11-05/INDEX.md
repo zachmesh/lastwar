@@ -1913,3 +1913,19 @@ of 2026-10-28.
   Owner-decision issues 132 (about ninety hours) and 154 (about
   eighty-four hours) both over 24 hours with statements current.
   Full detail in pr-catchall/1039-run.md.
+
+## 10:32 to about 10:47 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-05-1032.
+  One bounded tooling item from new evidence after the 0932
+  run: ticker-1025 failed with the Mac mini now reported
+  offline (four node_offline returns, one timeout, zero usable
+  responses), and probe 1.1.0 answered that evidence UNKNOWN.
+  PR 323 opened (branch work/device-offline-probe-284, commit
+  8ff9f0c56c): mac_capture_probe.py 1.1.0 -> 1.2.0 gains a
+  DEVICE_OFFLINE diagnosis (exit 13) with a new invoke_offline
+  evidence field. Issue 284 commented, owner Slack DM sent.
+  Validation: 14 fixture checks passed on isolated scratch;
+  unpatched 1.1.0 control returns UNKNOWN on the 1025
+  evidence. Status: done.
+  Full detail in tool-development/1032-run.md.
