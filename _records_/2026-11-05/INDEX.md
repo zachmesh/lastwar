@@ -792,3 +792,19 @@ of 2026-10-28.
   its 0315 comment standing. All five records PRs await
   the 07:00 batch. No owner-gated PR. Status: no-op.
   Full detail in pr-integration/0415-run.md.
+
+## 04:30 to about 04:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0430.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged. No
+  knowledge or code PR was open. PR 310 (2026-11-05,
+  head 6692ce7f49) re-verified clean against main
+  5251c60b95 after one new commit since the 0415 pass
+  (the 0415 run record itself); PRs 309, 265 and 256
+  still conflict on the single action-log file with
+  heads unchanged and 0300 comments standing; PR 301
+  still conflicts on three files with its 0315 comment
+  standing. All five records PRs await the 07:00 batch.
+  No owner-gated PR. Status: no-op.
+  Full detail in pr-integration/0430-run.md.
