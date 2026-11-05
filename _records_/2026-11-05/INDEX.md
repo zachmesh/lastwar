@@ -728,3 +728,22 @@ of 2026-10-28.
   filed.
 - Pool: inbox 73, claimed 0, done 892, upcoming 49. Status:
   done. Full detail in queue-planning/0340-run.md.
+
+## 03:45 to about 03:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0345.
+  Non-batch pass inside the 03:00 window: the checker
+  reported due but the 03:00 batch had already landed
+  (PR 187 at 03:02:36 PT, PR 304 at 03:08:41 PT), so
+  no records PR was merged. Two knowledge and code PRs
+  merged: PR 311 (organizer 0332, scout and radar
+  capture-failure recurrences) and PR 312 (queue.py
+  sweep subcommand for issue #147, verified in a
+  scratch worktree). PR 310 (2026-11-05, head
+  84821d45) is clean, verified by a scratch test
+  merge; PRs 309, 265 and 256 still conflict on the
+  single action-log file with heads unchanged and 0300
+  comments standing; PR 301 still conflicts on three
+  files with its 0315 comment standing. All five
+  records PRs await the 07:00 batch. No owner-gated PR.
+  Full detail in pr-integration/0345-run.md.
