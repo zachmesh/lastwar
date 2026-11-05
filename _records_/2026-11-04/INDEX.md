@@ -2505,3 +2505,18 @@ Full detail in pr-integration/1430-run.md.
   changes; 0 withdrawals; pool inbox 76, claimed 0,
   done 851, upcoming 52. Full detail in
   queue-planning/1840-run.md.
+
+## 18:45 to about 18:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1845.
+  Non-batch pass per the checker (not due, next batch
+  19:00): two knowledge/code PRs reviewed clean and
+  merged, PR 290 (organizer 1832, 1734 training and 1804
+  gifts capture-failure recurrence) and PR 291 (scout
+  distinct named unexplained dots, Refs #149). Records
+  PR 286 (2026-11-04, head 324eb6a6, test-merged clean
+  against new main) awaits the 19:00 batch. Records PRs
+  187, 256 and 265 still conflicted on the single
+  action-log file at unchanged heads, carried, no new
+  comment. Local main synced forward to 6383c11208.
+  Full detail in pr-integration/1845-run.md.
