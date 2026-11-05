@@ -188,3 +188,16 @@ of 2026-10-28.
   filed.
 - Pool: inbox 71, claimed 0, done 878, upcoming 49. Status:
   no-op. Full detail in queue-planning/0040-run.md.
+
+## 01:04 to about 01:07 - Ticker pass ticker-0104
+
+- Unit scout-midday-scout-mid-2026-11-02-001 completed as failed:
+  Mac screen capture failure (Issue 284), twenty-fifth
+  consecutive ticker pass blocked. Five capture attempts across
+  two computer sessions (cc-503, cc-504), all "Failed to start
+  stream due to audio/video capture failure". No game screen read,
+  no game input dispatched, tracker untouched. Full detail in
+  perception-scout/0104-queue-run.md.
+- Sync: reaped 0, expired 25, due 23, produced 19 units. Zombie
+  Invasion not seeded: the event ended 2026-10-30 about 19:00 and
+  the chain is closed (see _activities_/zombie-invasion/INDEX.md).
