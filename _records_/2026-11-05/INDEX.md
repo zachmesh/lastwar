@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T14:47:00Z
+modified: 2026-11-05T14:54:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
@@ -1229,3 +1229,20 @@ of 2026-10-28.
   filed.
 - Pool: inbox 75, claimed 0, done 901, upcoming 49. Status:
   done. Full detail in queue-planning/0640-run.md.
+
+## 06:45 to about 06:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0645.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged.
+  Merged knowledge PR 315 (organizer 0632, troop-training
+  1.23.0 to 1.24.0, thirty-fourth consecutive capture
+  failure, Issues 282, 284) with a squash merge, commit
+  c45b59ac; local main fast-forwarded 1d309d4a to c45b59ac
+  via the bundle route. All five records PRs await the
+  07:00 batch and are CLEAN by merge-tree against new
+  main c45b59ac (heads 310 57b96f2c, 309 22274ed9, 301
+  ace4f02b, 265 e9effc34, 256 f960817d); gh mergeable read
+  UNKNOWN post-merge, recomputing after main advanced.
+  No comments posted, no owner-gated PR. Status: done.
+  Full detail in pr-integration/0645-run.md.
