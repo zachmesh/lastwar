@@ -2469,3 +2469,8 @@ Full detail in pr-integration/1430-run.md.
 
 - Organizer pass knowledge-organization-2026-11-04-1832, done: own PR 289 MERGED with no reviews or comments, no feedback pending; no new knowledge-labeled issue since the 1732 run (newest remains #282, commented by this run with the eleventh and twelfth occurrences, comment 6648130277); folded ticker-1734 training 1734 and ticker-1804 gifts 1804 into troop-training 1.23.0 and alliance-gifts 1.25.0 on PR 290 (OPEN, Owner lastwar-knowledge-organizer); checked with no fold: tool-development 1732, pr-catchall 1739, queue-planning 1740, pr-integration 1745/1800/1815; no issue filed or closed; records PR 286 open awaiting the 19:00 batch, so no new records PR opened.
   Full detail in knowledge-organization/1832-run.md.
+
+## 18:34 to about 18:37 - Ticker pass ticker-1834, events unit failed on screen capture blocker
+
+- Ticker pass ticker-1834, events unit events-2026-11-04-1457 failed: Mac screen capture stream failed on all 6 attempts across 2 computer sessions (cc-477, cc-478) with "Failed to start stream due to audio/video capture failure"; no game screen read, no input dispatched, no blind taps. Thirteenth consecutive ticker pass on this blocker; GitHub Issue #284 commented (comment 6648146566), no duplicate filed. Tracker untouched; inbox held 66 units at this pass. Pass stopped after this unit.
+  Full detail in event-claims/1834-queue-run.md.
