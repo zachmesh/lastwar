@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T01:35:08Z
+modified: 2026-11-05T05:34:24Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0734 resource-collection execution record 2026-11-04 0755 queue run (partial, farmland +2.6M verified, left-side +3.0M unattributed, Alliance back arrow corrected to (161,935), marker confusion repeats, Issue #250 already commented by the ticker pass)
   - source: ticker-1034 resource-collection execution record 2026-11-04 1101 queue run (partial, farmland +2.1M food and left-side +1.4M coin verified, entry corrections re-confirmed, sweep incomplete at unit cap)
   - source: ticker-1634 resource-collection execution record 2026-11-04 1634 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, ninth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-2104 resource-collection execution record 2026-11-04 2104 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2034 known to fail identically, Issue 284)
 ---
 
 
@@ -1012,5 +1013,14 @@ regular stays due. Evidence in
 - No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: computer.control activate LastWar (cc-469) selected the window for background input but captured no observation, computer.observe (cc-469, compact) failed, and after a 30 second wait computer.observe (cc-470, image) and computer.control describe LastWar (cc-470) failed, all with "Failed to start stream due to audio/video capture failure". The control channel itself was reachable (computer.control list_windows in cc-469 listed the LastWar window); the capture stream was not. The device connection health was healthy on both native and web transports, LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost.
 - No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The base, its resource bubbles and the HUD totals could not be read, and no bubble was tapped or verified. No harvest was collected.
 - Recurrence, not a new failure class: this is the ninth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534, ticker-1604 arms-race 1604, ticker-1634 harvest 1634), now across nine activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the ninth and tenth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 72 units at this pass, per the record.
+
+## What the 2026-11-04 2104 unit added - screen-capture failure, next known pass after 2034, nothing read
+
+- Unit harvest-2026-11-04-1803 by ticker-2104, about 21:04 to 21:12 local, status failed. Evidence in `_records_/2026-11-04/resource-collection/2104-queue-run.md`. No resource collected, no diamonds, money, speedup items or paid button touched.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: session cc-486, computer.control list_windows succeeded and listed the LastWar window, so the control channel itself was reachable, but computer.observe (compact) failed with "Failed to start stream due to audio/video capture failure", computer.control activate selected the LastWar window for background input but captured no observation with the same error, and computer.observe (image view) failed with the same error; session cc-487, a fresh session after ending cc-486 and a connection-health check, computer.observe (compact) failed with the same error and computer.control describe for LastWar failed with the same error, so even the accessibility-tree route was unavailable. Total capture attempts: 4, meeting and exceeding the standing at-least-3-attempts retry rule. The device connection health was healthy on both native and web transports, LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The base, its resource bubbles and the HUD totals could not be read, and no bubble was tapped or verified. No harvest was collected.
+- Recurrence, not a new failure class: this is the next ticker pass after ticker-2034 known to fail on this exact blocker; the record does not assert an exact consecutive count beyond that. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 72 units at this pass, per the record.
