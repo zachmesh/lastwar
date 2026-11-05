@@ -689,3 +689,19 @@ of 2026-10-28.
   hand-off, escalation, label change or comment; no Slack DM
   and no chat report (quiet run). Status: no-op. Full detail
   in pr-catchall/0339-run.md.
+
+## 03:32 to about 03:41 - Tool developer pass
+
+- Tool-developer pass tool-development-2026-11-05-0341, done:
+  worked issue 147 (pre-reset zero sweep pair expiring at the
+  reset, fourth failure running): root cause verified - the
+  planner 1740 run hand-enqueued the Nov 4 pair at 17:30/18:30
+  expiring 19:00 local, and the live tree carries no zero-sweep
+  regular at all, so plan could not stage it either. Built
+  `queue.py sweep` in _tools_/queue.py (reads the
+  reset-anchored slots from the regular, expiry at the reset
+  instant, refuses loudly on a stale roster); PR 312 opened
+  (branch work/sweep-subcommand-147, commit 7e01813e49); issue
+  147 commented; Slack DM sent to the owner. Validation: 47
+  fixture checks on isolated scratch pools, all passed. Full
+  detail in tool-development/0341-run.md.
