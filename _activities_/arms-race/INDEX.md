@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-05T08:35:29Z
+modified: 2026-11-05T10:38:30Z
 level: L1
-version: 1.37.0
+version: 1.38.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -1595,3 +1595,10 @@ slot. Evidence in
 - Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 00:04 was not read and is not asserted here.
 - Follow-up, carried forward: the blocker is now twenty-three passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: every further unit would fail on the same capture error, per the ticker-1904 precedent.
+
+## Correction 2026-11-05 - the game window is windowed on an inactive Space, not in native fullscreen
+
+- Source: the 0134 survivors record (`_records_/2026-11-05/survivor-intake/0134-queue-run.md`, ticker-0134, twenty-sixth consecutive capture failure), re-confirmed by the 0204 gifts record (`_records_/2026-11-05/alliance-gifts/0204-queue-run.md`, ticker-0204, twenty-seventh). The View menu lists "Enter Full Screen" (read from the menu-action error listing in session cc-505, repeated probe in cc-508 with the menu unchanged), so the app is NOT in native fullscreen: it is a windowed 1920x1080 window on an inactive Space, and the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission (Chrome windows observe normally in the same sessions).
+- Superseded in this profile: the "running fullscreen" wording in the 1604, 1934 and 0004 sections above. The 0004 section's window-name mismatch note stands unchanged (list_windows with "Last War" returns 0 windows; the app is "LastWar", bundle com.lastwar.ios, pid 59735).
+- Follow-up corrected: the standing "screen recording permission or capture pipeline restart" unblock is replaced - the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. Background-sent Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, Cmd+Tab is blocked by the tool, and list_windows needs the exact app name "LastWar". No control route available to the background channel moves the window across Spaces without a fresh observation of the window itself.
+- This correction does not change the Arms Race state: the 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; no phase, score or chest state was read in the failed passes and none is asserted here. The twenty-sixth and twenty-seventh occurrences are commented onto Issue #282 by this run; Issue #284 already tracks the blocker.
