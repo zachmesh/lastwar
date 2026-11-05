@@ -2817,3 +2817,5 @@ Full detail in pr-integration/1430-run.md.
   3e3872485e by bundle sync-back. No escalation, no
   fresh records PR.
   Full detail in pr-integration/2145-run.md.
+- Integrator pass pr-integration-2026-11-04-2200, no-op (non-batch, outside every batch window): checker _tools_/records_batch.py reported not due, next batch point 2300 America/Los_Angeles; no knowledge or code PR open; PR 293 (2026-11-04, head c155ece1, 31 commits ahead, clean by gh and by merge-tree against true main 3e3872485e) carried awaiting the 2300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against the remote heads); records/2026-10-31 contained in main; no escalations, no new records PR opened.
+  Full detail in pr-integration/2200-run.md.
