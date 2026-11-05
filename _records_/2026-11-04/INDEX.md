@@ -2912,3 +2912,6 @@ Full detail in pr-integration/1430-run.md.
   names Owner lastwar-pr-integrator, not this job. No new
   records PR opened: PR 293 already open, awaiting the
   2300 batch.
+
+- Integrator pass pr-integration-2026-11-04-2300, done (batch pass, 2300 window): checker _tools_/records_batch.py reported due for the 2300 window; records PR 293 merged by merge commit 5dd6d644a (40 commits from records/2026-11-04, branch kept); PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against true main 0a1771c2); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main; this run record and the merge-time action-log line committed to records/2026-11-04 after the merge, riding the next records PR.
+  Full detail in pr-integration/2300-run.md.
