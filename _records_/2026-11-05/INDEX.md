@@ -1730,6 +1730,46 @@ of 2026-10-28.
   both over 24 hours with statements current. Full detail in
   pr-catchall/0939-run.md.
 
+
+## 09:40 to about 09:45 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-0940: no-op. Own PRs
+  first: the open PRs were PR 321 (tool-development
+  CHANNEL_STALL probe, Refs #284), PR 320 (organizer
+  0932), PR 317 (records 2026-11-01), PR 310 (records
+  2026-11-05), PR 301 (records 2026-11-04), PR 265
+  (records 2026-11-02) and PR 256 (records 2026-11-03);
+  the newest comments are integrator notes and ticker
+  reconciliation notes, none addressed to this job, and
+  no open PR is owned by this job, so no reply or fix was
+  owed.
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 72, skipped_done_current 0, reaped 0,
+  expired 0. The horizon to about 21:40 local is already
+  fully staged.
+- Pre-reset sweep: skipped, not the 17:00 hour run.
+  Tonight's pair for the 19:00 reset of 2026-11-05 is due
+  from the 17:00 run today; last night's pair sits done
+  2 of 2. The 17:00 run must check whether the live tree
+  has synced to main before calling the new sweep
+  subcommand (PR 312 merged, live tree still predates it).
+- Scout diff on the Nov 4 observation (nineteenth planner
+  run to consume it; no Nov 5 observation yet, post-reset
+  scout unit scout-2026-11-04-1900 still in inbox,
+  attempts 0, ticker passes failing on the Mac
+  device-access blocker, Issue 284, fortieth consecutive
+  pass at ticker-0904 in a worsened invoke-channel stall
+  form): dry run and apply agree, all zero - observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates
+  0, unexplained red dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred). No new Issue filed.
+- Pool: inbox 74, claimed 0, done 910, upcoming 51.
+  Status: no-op. Full detail in
+  queue-planning/0940-run.md.
+
 ## 09:41 to about 09:53 - Ticker pass
 
 - Pass ticker-0941: scout-midday unit
@@ -1749,3 +1789,4 @@ of 2026-10-28.
   untouched. Recovery needs a Mac-side agent gateway
   restart before re-probing. Issue 284 commented.
   Full detail in perception-scout/0941-queue-run.md.
+
