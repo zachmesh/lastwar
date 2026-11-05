@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T08:03:07Z
+modified: 2026-11-05T08:25:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch, 3 conflicts carried
+description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-second consecutive pass); three stale records PRs resolved on the branch side
 status: unverified
 ---
 
@@ -27,3 +27,35 @@ of 2026-10-28.
   merge-tree against current main, the 1715-pass conflict
   comments stand, not force-merged. No owner-gated PR.
   Full detail in pr-integration/0000-run.md.
+
+## 00:04 to about 00:22 - Ticker pass
+
+- Own PRs first: the three stale open records PRs from earlier
+  ticker passes were resolved on the branch side before game
+  work. PR 187 (records/2026-11-01), PR 265 (records/2026-11-02)
+  and PR 256 (records/2026-11-03) each conflicted only on
+  _logs_/repo-actions/action-log.jsonl (append-append). Each
+  branch was merged with current main on the VPS and the log
+  resolved by union of both sides' lines, deduplicated and
+  ordered by timestamp (187: 529 + 784 -> 786 lines, commit
+  1efa30406; 265: 659 + 784 -> 785 lines, commit 522957949;
+  256: 759 + 784 -> 833 lines, commit b35684d2c), pushed
+  without force, and commented on the PR. Local test merges
+  against current main are clean. PR 301 (records/2026-11-04)
+  has no comments.
+- Arms Race unit arms-race-2026-11-04-2203, failed,
+  ticker-0004: no game screen was ever read and no game input
+  was dispatched. The Mac screen capture stream failed on all
+  five attempts across two computer sessions (cc-499, cc-500)
+  with "Failed to start stream due to audio/video capture
+  failure". A Chrome-window observation in the same fresh
+  session succeeded, so the channel works for other apps and
+  the failure is specific to the Last War window. This is the
+  twenty-second consecutive ticker pass with this blocker
+  (Issue 284, open, tooling). No phase read, no score read,
+  no chest claimed. Tracker untouched. The pass stopped after
+  this one unit. Full detail in arms-race/0004-queue-run.md.
+- No zombie seeding: no Zombie Invasion tab in the Events hub,
+  consistent with the event close of 2026-10-30; zombie-invasion
+  inbox 0 per stats. Sync: reaped 0, expired 0, due 21,
+  produced nothing new, all 21 regulars already queued.
