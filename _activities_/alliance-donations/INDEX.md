@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T12:34:44Z
+modified: 2026-11-05T16:36:24Z
 level: L1
-version: 1.35.0
+version: 1.36.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -43,6 +43,7 @@ grounded_in:
   - source: ticker-2034 alliance-donations execution record 2026-11-04 2034 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 1934 known to fail identically, Issue 284)
   - source: ticker-2304 alliance-donations execution record 2026-11-04 2304 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2234 known to fail identically, Issue 284)
   - source: ticker-0404 alliance-donations execution record 2026-11-05 0404 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirty-first consecutive ticker pass to fail this way, Issue 284; probe classification OFF_SCREEN_WINDOW high confidence)
+  - source: ticker-0804 alliance-donations execution record 2026-11-05 0804 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirty-eighth consecutive ticker pass to fail this way, Issue 284; probe classification OFF_SCREEN_WINDOW high confidence; Chrome observation succeeded in the same session)
 ---
 
 
@@ -2252,3 +2253,13 @@ enqueued for after the cooldown (not before about
 - Recurrence, not a new failure class: this is the thirty-first consecutive ticker pass to fail on this exact blocker (ticker-0334 arms-race at 03:34 was the thirtieth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the thirtieth and thirty-first occurrences onto #282.
 - Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The pass stopped after this unit: with no observation channel a second unit would fail identically, so the remaining inbox units were left queued. Sync in this pass: reaped 0, expired 0, due 21, produced nothing new, 21 regulars already queued. No zombie seeding: the chain zombie-2026-10-28 closed with unit 066 on 2026-10-30 and the activity metadata forbids seeding a fresh chain until a Zombie Invasion tab is seen live again.
+
+## What the 2026-11-05 0804 unit added - screen-capture failure, thirty-eighth consecutive pass, nothing measured
+
+- Unit donations-2026-11-05-0603 by ticker-0804, about 08:04 to 08:20 local, status failed. Evidence in `_records_/2026-11-05/alliance-donations/0804-queue-run.md`. On a working screen this unit would have opened Alliance Techs and donated with the coin button until the daily count was used up or the button greyed on its cooldown, then closed on a live Donation Count read. No donation was made.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: session cc-535 `computer.control` activate selected the window for background input but captured no observation, `computer.observe` compact failed twice, `computer.control` focus was rejected as invalid params (needs an element), `computer.control` open_app LastWar returned outcome_unknown, a third `computer.observe` compact failed; fresh session cc-536 `computer.control` activate failed identically (`window_on_screen: false`, `brought_to_front: false`), `computer.observe` compact failed - four observe calls across two sessions, plus two activate calls reporting the same capture error, all "Failed to start stream due to audio/video capture failure". LastWar (com.lastwar.ios, pid 59735) window 160366, 1920x1080 at (0,0); Google Chrome frontmost. Device connection health reports both native and web transports connected - this is not a connectivity problem. No blind taps were dispatched, under the check-first rule.
+- Probe classification: `_tools_/mac_capture_probe.py` 1.0.0 classifies this evidence OFF_SCREEN_WINDOW (high confidence), stop_pass yes, exit 10. The View-menu inspect step could not run this pass: it is gated on a fresh observation of the LastWar window, which is exactly what the capture failure prevents - the classification stands on the activate evidence alone, as the probe tool allows (on_screen false plus brought_to_front false is high confidence).
+- Narrowing, first-hand in the same hour: the ticker-0734 arms-race pass in session cc-534 observes a Chrome window normally (full accessibility tree, 60 elements), and this pass's own session cc-536 does the same, so the capture channel works for on-screen windows and the fault is specific to the LastWar window stream, consistent with the windowed-on-inactive-Space diagnosis carried in the 0404 section above.
+- Recurrence, not a new failure class: this is the thirty-eighth consecutive ticker pass to fail on this exact blocker (ticker-0734 arms-race at 07:34 was the thirty-seventh). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the thirty-seventh and thirty-eighth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The pass stopped after this unit: with no observation channel a second unit would fail identically, so the remaining inbox units were left queued.
