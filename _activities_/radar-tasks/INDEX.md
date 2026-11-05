@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T18:37:28Z
+modified: 2026-11-05T00:36:53Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-0334 radar-tasks execution record 2026-11-04 0334 queue run (partial, Doom Elite pin identified, rally blocked Issue #268, stamina 156 over the old 120 cap, Rare Farmland pin identified)
   - source: ticker-0706 radar-tasks execution record 2026-11-04 0720 queue run (partial, release day, Doom Legion base claimed, Rare Farmland gathering dispatched, blue skull pin opens no card)
   - source: ticker-1004 radar-tasks execution record 2026-11-04 1005 queue run (partial, duel day 3 release, 13 claims, points 206 to 219, stored 0 of 40, stamina 131 to 81, Doom Elite pin march left for the next unit per rule R7)
+  - source: ticker-1534 radar-tasks execution record 2026-11-04 1534 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, seventh consecutive ticker pass to fail this way, Issue 284; PT-corrected duel posture day 3 release)
 ---
 
 
@@ -1832,3 +1833,14 @@ are still open, per the protocol.
 - Remaining work, rule R7: the march was NOT started - the unit 15 minute cap was reached with the card open on the target. No stamina was spent on the pin and no attack was launched. Per rule R7, the Doom Elite march is the first action of the next radar unit: the card is already open on the target, cost 20 stamina, suggested power 1,096,500, countdown about 01:26 at 10:19 local.
 - Qualification against the 0720 section, stated not smoothed over: the 1005 record does not record the remaining pin's map position, so this section does NOT assert it is the 0720 centre-right blue skull pin (which opened no card on three taps and a long-press). Cross-check, not an assertion: the 1005 pin reward set (food 920.4K, iron 920.4K, coin 588.0K, radar discs 300, one blue item) is identical to the 0334 Doom Elite pin reward set, and its countdown decay is roughly consistent (07:56:50 at about 03:34 falling to 01:26:27 at about 10:19, about 6:30 of drop over about 6:45 elapsed), so the 1005 pin may be that same 0334 pin still standing - but with no position recorded in the 1005 record this is not asserted. The 0720 no-card skull question therefore stays open, and the 1005 identification does not close Issue #268 either: #268 is the Doom Elite rally button inert after the card opened in the 0334 unit, and this unit never reached a rally or march button - the march was deferred by the time cap, not blocked by a button. No comment was posted on #268: no rally attempt was made, so there is no new evidence for it.
 - Tracker untouched for partial, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-04 1534 unit added - screen-capture failure, seventh consecutive pass, nothing read
+
+- Unit radar-2026-11-04-1403 by ticker-1534, about 15:34 to 15:47 local, status failed. Evidence in `_records_/2026-11-04/radar-tasks/1534-queue-run.md`. No diamonds spent, no paid button tapped.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: computer.observe (compact) failed twice in session cc-466 with "Failed to start stream due to audio/video capture failure"; in fresh session cc-467 computer.control activate selected the LastWar window for background input but captured no observation, computer.observe (compact) failed with the same error, computer.control screenshot failed with the same error, and a final computer.observe after the connection health check failed with the same error. The device connection health was healthy on both native and web transports, LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The radar screen was never entered or verified, no stored task count, stamina figure, restore line or pin scan was read, and no Quick Execute, Claim All or pin march was run.
+- Recurrence, not a new failure class: this is the seventh consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534), now across seven activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the seventh and eighth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
+- Posture check, PT-corrected: the unit window reads duel day 3, radar release. A naive run of tools/duel.py on this UTC VM printed day 4, Train Heroes, stack - but the duel anchor (2026-10-25T19:00 local) is America/Los_Angeles time, and recomputed in PT today is still day 3, Age of Science, release posture, matching the unit window and the 1005 unit. The next radar unit must use the PT-corrected posture, not a raw duel.py print from this UTC VM.
+- Remaining work, carried forward and time-bounded: the 1005 unit left a Doom Elite pin march as the first action of the next radar unit per rule R7 (cost 20 stamina, suggested power 1,096,500); its countdown read 01:26:27 at 10:19 local, so it expired about 11:46 local and is almost certainly gone - the next unit must re-check the pin live rather than assume it. The restore line at the 1005 close pointed to 12 tasks restoring about 15:42 local, right inside this pass's window, so the next unit should expect a fresh stored batch. Both expectations are superseded by the next live read.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.

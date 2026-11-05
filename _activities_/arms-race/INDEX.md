@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T18:37:28Z
+modified: 2026-11-05T00:36:53Z
 level: L1
-version: 1.34.0
+version: 1.35.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-0304 arms-race execution record 2026-11-04 0307 queue run (partial, Tech Research phase verdict, tier 3 unreachable inside the red lines)
   - source: ticker-0706 arms-race execution record 2026-11-04 0722 queue run (partial, first unit of the new Base Building phase, tier 3 unreachable inside the red lines)
   - source: ticker-1004 arms-race execution record 2026-11-04 1025 queue run (partial, first unit of the new Unit Progression phase, score 0, tier-3 gap 75,000, training path only, no scoring action, no chest claimed)
+  - source: ticker-1604 arms-race execution record 2026-11-04 1604 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eighth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -1564,3 +1565,12 @@ slot. Evidence in
 - Completion sweep: cumulative counter chest at the top left of the phase page 3 of 8, progress bar partial, not bouncing, not claimable - the same 3/8 read as the 0722 phase page and the 0843 event-claims sweep, kept as a per-page read. Ranking row chest present but, per standing knowledge, preview-only while the phase is live; no red dot and no bouncing animation observed on it. Events tab bar: no red dot observed on the Arms Race tab. No bouncing chest or reward red dot remains unopened on the Arms Race page.
 - Navigation note, cross-unit: the unit opened with the game on a world-map Doom Elite card left open by the previous radar unit. Taps to dismiss it selected alliance member base cards instead (HiveMinded, then Lost Boyz) - no Set Off or march button was tapped on either. A map drag returned the view to the world map, and the BASE button returned to the base interior; Events then opened normally. The Doom Elite pin march from the radar unit is still pending and is untouched by this unit. March Queues read 1 of 4 on the world map during this navigation; that march is not this unit's - no march was launched from either unit in this pass - and its owner is not established from this screen, so it is recorded as read, not attributed.
 - Tracker untouched for partial, per the queue rules; the next tick re-produces this regular, but the R4 verdict above stands for this phase unless the training-unit re-read changes the score.
+
+## What the 2026-11-04 1604 unit added - screen-capture failure, eighth consecutive pass, nothing read
+
+- Unit arms-race-2026-11-04-1403 by ticker-1604, about 16:04 to 16:20 local, status failed. Evidence in `_records_/2026-11-04/arms-race/1604-queue-run.md`. No diamonds spent, no scoring action executed, no chest claimed.
+- No game screen was ever read and no game input was dispatched. Computer session cc-468: open_app Last War failed to match, while list_apps showed the running app as LastWar (com.lastwar.ios, pid 59735, target window Last War). Computer.control activate on LastWar twice and computer.observe (compact and image) twice all failed with the same error: "Failed to start stream due to audio/video capture failure". The window was never brought to the front and no observation was ever captured, so no tap or other input was sent blind. LastWar was running fullscreen 1920x1080 and Google Chrome was frontmost, and the Mac mini was online.
+- Recurrence, not a new failure class: this is the eighth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534, ticker-1604 arms-race 1604), now across eight activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the seventh and eighth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 16:04 was not read and is not asserted here.
+- Follow-up, carried forward: the blocker is now eight passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
