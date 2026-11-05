@@ -2442,6 +2442,23 @@ of 2026-10-28.
   Status: no-op.
   Full detail in pr-integration/1330-run.md.
 
+## 13:45 to about 13:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1345.
+  NON-batch pass: the checker reported not due (next
+  batch 15:00). Knowledge PR 328 merged (squash
+  33dd7bb8, perception-scout 1.20.0 to 1.21.0, organizer
+  1332 fold of the 1234/1304 scout device-offline
+  failures, Issues #282/#284); local main synced to
+  33dd7bb8. Five records PRs await the 15:00 batch: 324
+  (clean, head 83d043f25b, 1 commit beyond main), 310
+  (clean, head 60a21d41, 122 commits beyond main), 301,
+  265, 256 (conflicted on the single action-log file,
+  conflict notes posted in the 1100 pass, heads
+  unchanged). No owner-gated PR.
+  Status: done.
+  Full detail in pr-integration/1345-run.md.
+
 ## 13:32 to about 13:40 - Tool-developer pass
 
 - Tool-developer pass tool-development-2026-11-05-1332, no-op: no own tooling PR open and no unaddressed integrator feedback; all 18 open tooling issues triaged - every one implemented and awaiting retro closure, no-code-owed, or awaiting verification evidence; the newest #284 evidence (ticker-1304, Mac offline, 47th consecutive pass) classifies DEVICE_OFFLINE high-confidence under probe 1.2.0 with exit 13, so no new probe slice; frozen backlog tooling entries (IMP-20261101-08/-09) already implemented via #123/#126; standing tool queue (c) re-verified on github main b761ebaf (retro_report 1.5.0, close-out validation, scout_diff Phase 3 automation all landed). No PR, no issue comment, no Slack DM, per the no-op rule.
