@@ -2464,3 +2464,8 @@ Full detail in pr-integration/1430-run.md.
   Full detail in pr-integration/1815-run.md.
 - Integrator pass pr-integration-2026-11-04-1830, no-op (non-batch): no knowledge or code PR open; records PR 286 (2026-11-04, head 10b0ab45, 37 commits) clean, awaiting the 19:00 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments). Checker _tools_/records_batch.py reported not due (next batch 19:00). No merges, no comments, no escalations, no new records PR opened.
   Full detail in pr-integration/1830-run.md.
+
+## 18:32 to about 18:36 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-04-1832, done: own PR 289 MERGED with no reviews or comments, no feedback pending; no new knowledge-labeled issue since the 1732 run (newest remains #282, commented by this run with the eleventh and twelfth occurrences, comment 6648130277); folded ticker-1734 training 1734 and ticker-1804 gifts 1804 into troop-training 1.23.0 and alliance-gifts 1.25.0 on PR 290 (OPEN, Owner lastwar-knowledge-organizer); checked with no fold: tool-development 1732, pr-catchall 1739, queue-planning 1740, pr-integration 1745/1800/1815; no issue filed or closed; records PR 286 open awaiting the 19:00 batch, so no new records PR opened.
+  Full detail in knowledge-organization/1832-run.md.
