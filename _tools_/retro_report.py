@@ -41,6 +41,18 @@ What is counted, per section 14 -
     remaining data gaps by name - regulars with no p90, with
     no attempts figure, and with no data at all - so the retro
     file can cite one object instead of re-deriving them;
+  - a records batch compliance section (issue #126,
+    IMP-20261101-09): when --batch-merges is supplied, the
+    trade day's records merges are classified against the
+    batch windows of _tools_/records_batch.py (03:00, 07:00,
+    11:00, 15:00, 19:00, 23:00 America/Los_Angeles, 60 minutes
+    from each point) and reported as a named section with the
+    violation count and PR numbers; a day with zero
+    violations is reported as an explicit clean line, not
+    omitted. Every violation the section finds is for the
+    retro to file as a backlog item per the governance loop.
+    Without --batch-merges the section states it was not
+    audited in this run;
   - the top repeated blockers, by blocker_category (the miss
     audit classes a to i) and by the named blocker when a unit
     records one in stats.blocker;
@@ -50,9 +62,25 @@ What is counted, per section 14 -
     are target, achieved, resources_gained, costs and verified,
     plus blocker_category whenever the unit fell short of its
     target or closed partial, failed or skipped-needs-owner.
+    A closing whose result carries stats_missing (written by
+    queue.py complete since this change) is counted from that
+    flag, unioned with the keys recomputed from its stats, so
+    legacy closings without the flag are still counted exactly
+    as before and no closing is double-counted.
     points is aggregated whenever present but is not a required
     key - it applies to scoring types only, and the pool carries
-    no authoritative list of which types those are.
+    no authoritative list of which types those are. One
+    exception (issue #197): a nonzero points value exactly
+    equal to the same unit's achieved is not summed - it is a
+    copied running total (a duel total read belongs in
+    achieved only), not score gained in the unit. Radar units
+    are exempt from that exception (issue #296): their
+    achieved is a claim count and their radar-screen points
+    rise one per claim, so equality there is the mechanism,
+    not a copy. Excluded
+    points are counted under points_dup_excluded, never
+    silently dropped, and queue.py complete warns at close
+    time so future closings do not carry the copy.
 
 Data sources are only inside the repository - the done pool at
 _queue_/done and, as a fallback, the day INDEX files in
@@ -72,6 +100,16 @@ started_at, planned_for, and finally the date in its file name.
 Usage:
   retro_report.py [--days 7] [--end YYYY-MM-DD] [--root DIR]
                   [--out-dir DIR] [--format text|json]
+                  [--batch-merges FILE]
+
+--batch-merges carries the trade day's records pull-request
+merges (PR number plus merged_at, as exported from gh) for the
+records batch compliance section below. This tool does not call
+gh: it classifies the supplied file with
+_tools_/records_batch.py, so the same file replays identically
+and a fixture file stands in for gh in validation. Without
+--batch-merges the compliance section reports itself as not
+audited, never as clean.
 
 --root is the repository root (default - the repository this
 tool lives in); the pool is read at <root>/_queue_ and outputs
@@ -90,7 +128,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.1.0"
+TOOL_VERSION = "1.4.0"
 
 
 def _load_queue():
@@ -104,6 +142,45 @@ def _load_queue():
 Q = _load_queue()
 parse_iso = Q.parse_iso
 LOCAL_TZ = Q.LOCAL_TZ
+
+
+def _load_records_batch():
+    """Load _tools_/records_batch.py, or None when it is absent.
+
+    The compliance section degrades to "not audited" when the
+    checker tool is absent, rather than failing a retro run
+    whose pool metrics are otherwise complete.
+    """
+    path = os.path.join(TOOLS_DIR, "records_batch.py")
+    if not os.path.exists(path):
+        return None
+    spec = importlib.util.spec_from_file_location(
+        "lastwar_records_batch", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+BATCH = _load_records_batch()
+
+
+def records_batch_compliance(merges_path):
+    """Classify a merges file, or report why it was not audited.
+
+    Returns the audit dict of records_batch.audit_merges when a
+    file was supplied and the checker tool is present, and a
+    not-audited dict otherwise. A malformed file raises
+    ValueError so run() fails loudly instead of emitting a
+    report that quietly claims a clean day.
+    """
+    if not merges_path:
+        return {"audited": False,
+                "reason": "no --batch-merges input supplied"}
+    if BATCH is None:
+        return {"audited": False,
+                "reason": "records_batch tool not present"}
+    merges = BATCH.load_merges_file(merges_path)
+    return BATCH.audit_merges(merges)
 
 REQUIRED_KEYS = ("target", "achieved", "resources_gained", "costs",
                  "verified")
@@ -362,6 +439,8 @@ def _empty_bucket():
         "resources_unparsed": [],
         "points_total": 0.0,
         "points_units": 0,
+        "points_dup_excluded": 0,
+        "points_dup_excluded_units": [],
         "costs": {},
         "blockers": {},
         "named_blockers": {},
@@ -408,19 +487,25 @@ def _feed(bucket, unit):
             bucket["resources_gained"].get(name, 0.0) + number
     bucket["resources_unparsed"].extend(unparsed)
     points = _num(stats.get("points"))
-    if points is not None:
+    dup = getattr(Q, "points_duplicates_achieved", None)
+    if points is not None and dup is not None and dup(stats, unit.get("regular")):
+        bucket["points_dup_excluded"] += 1
+        bucket["points_dup_excluded_units"].append(unit["unit"])
+    elif points is not None:
         bucket["points_total"] += points
         bucket["points_units"] += 1
     costs, _ = _itemise(stats.get("costs"))
     for name, number in costs.items():
         bucket["costs"][name] = bucket["costs"].get(name, 0.0) + number
     # Unverified accounting, per the section 14 definition.
-    missing = [key for key in REQUIRED_KEYS if key not in stats]
-    fell_short = (target is not None and achieved is not None
-                  and achieved < target)
-    if (fell_short or status in SHORT_STATUSES) and \
-            "blocker_category" not in stats:
-        missing.append("blocker_category")
+    # Recompute from the stats (the legacy path), then union
+    # with the close-out flag when the result carries one.
+    missing = Q.missing_stats_keys(status, stats)
+    flagged = result.get("stats_missing")
+    if isinstance(flagged, list):
+        for key in flagged:
+            if key not in missing:
+                missing.append(key)
     unverified = False
     if not _is_verified(stats.get("verified")):
         bucket["unverified_reasons"]["verified_not_yes"] += 1
@@ -477,6 +562,9 @@ def _summarise(bucket):
                              sorted(bucket["resources_gained"].items())},
         "points_total": _clean(bucket["points_total"]),
         "points_units": bucket["points_units"],
+        "points_dup_excluded": bucket["points_dup_excluded"],
+        "points_dup_excluded_units": bucket[
+            "points_dup_excluded_units"],
         "costs": {k: _clean(v) for k, v in
                   sorted(bucket["costs"].items())},
         "resources_per_minute": {k: _clean(v / minutes) for k, v in
@@ -634,6 +722,35 @@ def render_markdown(data):
         f"no attempts: "
         f"{', '.join(data['system_metrics']['data_gaps']['regulars_without_attempts']) or 'none'}",
         "",
+        "## Records batch compliance",
+        "",
+    ]
+    compliance = data.get("records_batch_compliance") or {}
+    if not compliance.get("audited"):
+        lines.append(f"- Not audited in this run - "
+                     f"{compliance.get('reason', 'no merges input')}")
+    elif compliance["clean"]:
+        lines.append(f"- Clean - 0 off-batch records merges out "
+                     f"of {compliance['merges_checked']} checked "
+                     f"(batch points "
+                     f"{', '.join(str(h) + ':00' for h in compliance['batch_hours'])} "
+                     f"America/Los_Angeles, "
+                     f"{compliance['window_minutes']} minutes "
+                     f"from each point)")
+    else:
+        numbers = ", ".join(f"#{n}" for n in
+                            compliance["violation_numbers"])
+        lines.append(f"- Violations "
+                     f"{compliance['violation_count']} out of "
+                     f"{compliance['merges_checked']} checked - "
+                     f"{numbers}")
+        for item in compliance["violations"]:
+            lines.append(f"- PR #{item['number']} merged "
+                         f"{item['merged_at']} "
+                         f"America/Los_Angeles - outside any "
+                         f"batch window")
+    lines += [
+        "",
         "## Per regular (rolling window)",
         "",
         "| Regular | Exec | Done | Partial | Skipped | Attainment | "
@@ -698,10 +815,17 @@ def run(args):
     ]
     window = {"start": start.isoformat(), "end": end.isoformat(),
               "days": args.days}
+    try:
+        compliance = records_batch_compliance(
+            getattr(args, "batch_merges", ""))
+    except ValueError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
     data = {
         "tool": "retro_report",
         "version": TOOL_VERSION,
         "window": window,
+        "records_batch_compliance": compliance,
         "system_metrics": build_system_metrics(
             regulars, totals, no_data, window),
         "derived_from": {
@@ -732,6 +856,12 @@ def run(args):
         "parse_errors": len(parse_errors),
         "totals": totals,
         "no_data_regulars": no_data,
+        "records_batch_compliance": {
+            "audited": compliance.get("audited", False),
+            "violation_count": compliance.get("violation_count"),
+            "merges_checked": compliance.get("merges_checked"),
+            "violation_numbers": compliance.get("violation_numbers"),
+        },
     }
     if args.format == "json":
         print(json.dumps(summary, indent=2, sort_keys=True,
@@ -741,6 +871,13 @@ def run(args):
               f"({args.days} days)")
         print(f"units in window {in_window}; parse errors "
               f"{len(parse_errors)}; unverified {totals['unverified']}")
+        if compliance.get("audited"):
+            print(f"records batch compliance: "
+                  f"{compliance['violation_count']} violations "
+                  f"out of {compliance['merges_checked']} checked")
+        else:
+            print(f"records batch compliance: not audited "
+                  f"({compliance.get('reason', 'no merges input')})")
         print(f"wrote {json_path}")
         print(f"wrote {md_path}")
     return 0
@@ -755,6 +892,10 @@ def main(argv=None):
     parser.add_argument("--out-dir", default="")
     parser.add_argument("--format", choices=["text", "json"],
                         default="text")
+    parser.add_argument("--batch-merges", default="",
+                        help="JSON file of records PR merges "
+                        "(number plus merged_at) for the "
+                        "records batch compliance section")
     args = parser.parse_args(argv)
     if args.days < 1:
         parser.error("--days must be at least 1")

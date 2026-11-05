@@ -1,13 +1,14 @@
 ---
 title: Push and PR Policy
 created: 2026-11-01T05:31:00Z
-modified: 2026-11-01T07:58:31Z
-version: 2.2.2
+modified: 2026-11-02T00:20:44Z
+version: 2.3.0
 status: draft
 description: PR-only main policy - main advances only by pull request merge, records ride date branches, every pull request carries a named owning scheduled job, and every executor run checks its own pull requests first and ends by opening one
 grounded_in:
   - source: owner decision 2026-10-31 - disallow direct commits to main and require a pull request for all pushes
   - source: owner decision 2026-10-31 - records PR merge cadence option A, the integrator merges every 15 minutes when new commits exist
+  - source: owner decision 2026-11-01 - records PR merge cadence superseded by four-hour batches, approved by the owner in chat
   - source: owner instruction 2026-10-31 23:00 PDT - every pull request must name an owning scheduled job, with a catch-all owner job when no class matches
   - source: owner instruction 2026-10-31 23:02 PDT - every executor checks its own previous pull requests before doing anything else, and opens a pull request at the end of every run that produces output
   - source: platform check 2026-10-31 - the GitHub account is on the Free plan and branch protection and rulesets returned 403 on this then-private repository
@@ -15,7 +16,7 @@ grounded_in:
 
 # Push and PR policy
 
-This is version 2.2.1 in draft. It states the owner's direction
+This is version 2.3.0 in draft. It states the owner's direction
 of 2026-10-31: main becomes PR-only and direct pushes to main
 are disallowed. It takes effect only when it lands on main
 through its own pull request and the standing jobs' push steps
@@ -64,27 +65,48 @@ the run record, and left for its own pull request. A writer
 never waits for its records to reach main; the branch is its
 record, and main catches up on the integrator's cadence.
 
-## Records pull requests - cadence A
+## Records pull requests - batch cadence
 
-Owner decision, 2026-10-31 at 22:49 PDT - cadence option A:
-the integrator merges every 15 minutes when new commits exist,
-so main stays near real-time. (Option B, one merge at each
-trade-day close, was considered the same evening and not
-chosen; it is not part of this policy.)
+Owner decision, 2026-11-01 - records PRs are merged in
+batches every 4 hours, superseding cadence A (the
+2026-10-31 at 22:49 PDT decision that the integrator merge
+every 15 minutes when new commits exist, so main stayed near
+real-time). Rationale, from the same day's running: on
+2026-11-01 the integrator merged more than 16 PRs, nearly
+all of them routine records merges carrying zero review
+value - the merge ceremony cost the loop passes and bought
+no scrutiny. Records are append-only trajectories; nothing
+in them is improved by being merged sooner.
 
-The integrator keeps exactly one open records PR per live date
-branch. When a records branch has no open PR, the integrator
-opens one (`gh pr create`, base main, head `records/<date>`;
-the body names the date and this policy - records PRs carry no
-per-PR improvement id, their ledger entry is this flow). On
-every integrator pass, if the open records PR has new commits,
-the integrator merges it with a merge commit
+A batch lands at the first integrator pass at or after each
+of 19:00, 23:00, 03:00, 07:00, 11:00 and 15:00
+America/Los_Angeles. The boundary set is chosen so a batch
+lands right after the 19:00 trade-day reset and the 20:39
+daily retro reads a complete trade day in main. Between
+batches, main trails the live records by at most 4 hours;
+writers and readers that need the live record read the date
+branch, exactly as the records flow section above already
+provides.
+
+The integrator keeps exactly one open records PR per live
+date branch. When a records branch has no open PR, the
+integrator opens one (`gh pr create`, base main, head
+`records/<date>`; the body names the date and this policy -
+records PRs carry no per-PR improvement id, their ledger
+entry is this flow). Opening is unchanged by the batch
+cadence - a records PR exists as soon as a branch carries
+commits; only the merge waits for a batch point. At a batch
+point, if the open records PR has new commits, the
+integrator merges it with a merge commit
 (`gh pr merge --merge`, never `--delete-branch`). The merge
 commit is what keeps the scheme working: the date branch
-survives the merge and keeps taking appends, and the next pass
-opens a fresh PR for whatever arrived after the merge. Main
-therefore trails the live records by at most one integrator
-cycle.
+survives the merge and keeps taking appends, and the
+integrator opens a fresh PR for whatever arrived after the
+merge.
+
+Knowledge and code PRs are unaffected by this section: they
+are still reviewed and merged promptly on every integrator
+pass, exactly as before.
 
 A records PR that conflicts with main is never force-merged
 and never silently dropped. The integrator comments the
@@ -256,10 +278,12 @@ The standing PR integrator job (every 15 minutes) owns the
 merge point of main. Its duties under this policy:
 
 1. **Records PRs.** Open when missing, merge by merge commit
-   on cadence A when new commits exist, comment and report on
-   conflict, never force-merge, never delete a records
-   branch. At each merge, add the log lines the change is
-   owed (previous section).
+   on the batch cadence (the first pass at or after 19:00,
+   23:00, 03:00, 07:00, 11:00 and 15:00 America/Los_Angeles)
+   when new commits exist, comment and report on conflict,
+   never force-merge, never delete a records branch. At each
+   merge, add the log lines the change is owed (previous
+   section).
 2. **Knowledge and code PRs.** Review against the PR body
    requirements and the repository's standing rules; merge
    clean PRs by squash; leave numbered criticism comments on
@@ -336,6 +360,23 @@ change in the changelog below.
 
 ## Changelog
 
+- 2.3.0, 2026-11-01 - records merge cadence, on the owner's
+  decision of 2026-11-01 given in chat. Records PRs no
+  longer merge on every integrator pass; they merge in
+  batches every 4 hours, at the first integrator pass at or
+  after 19:00, 23:00, 03:00, 07:00, 11:00 and 15:00
+  America/Los_Angeles, superseding cadence A of 2.0.0. The
+  boundary set puts a batch right after the 19:00 trade-day
+  reset so the 20:39 daily retro reads a complete trade day
+  in main. Rationale recorded the same day: the integrator
+  merged more than 16 PRs on 2026-11-01, nearly all routine
+  records merges with zero review value. Opening records
+  PRs is unchanged - a PR exists as soon as a branch carries
+  commits - and knowledge and code PRs still merge promptly
+  on every pass. This amendment changes the PR policy
+  itself and is therefore owner-gated; it lands on the
+  owner's recorded in-chat approval of 2026-11-01, the same
+  precedent as PR #3 and PR #4.
 - 2.2.1, 2026-11-01 - factual correction only, no rule
   change, on the owner's instruction of 2026-10-31 at 23:25
   PDT. The repository was transferred from its previous

@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-05T04:34:34Z
 level: L1
-version: 1.15.1
+version: 1.36.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,26 @@ grounded_in:
   - source: owner instruction on 2026-10-28 via Slack - stamina for Arms Race scoring may come from the Free Claim or from stamina resource items of 10 or 50
   - source: arms-race execution record 2026-10-31 2241 queue run
   - source: arms-race execution record 2026-10-31 2212 queue run
+  - source: arms-race execution record 2026-11-01 1135 queue run
+  - source: arms-race execution record 2026-11-01 1523 queue run
+  - source: arms-race execution record 2026-11-01 1934 queue run
+  - source: ticker-2304 arms-race execution record 2026-11-01 2327 queue run
+  - source: arms-race execution record 2026-11-02 0247 queue run (ticker-0235 unit, partial, Hero Advancement tier-3 met)
+  - source: arms-race execution record 2026-11-02 0608 queue run
+  - source: ticker-1004 arms-race execution record 2026-11-02 1015 queue run (partial, first unit of Drone Boost phase)
+  - source: ticker-1452 arms-race execution record 2026-11-02 1508 queue run (partial, first unit of Hero Advancement phase, 20.0M EXP shortfall)
+  - source: ticker-2204 arms-race execution record 2026-11-02 2209 queue run
+  - source: ticker-1404 arms-race execution record 2026-11-03 1412 queue run
+  - source: ticker-0204 arms-race execution record 2026-11-03 0228 queue run (partial, Base Building tier-1 claimed, tiers 2 and 3 unreachable inside the red lines)
+  - source: ticker-0604 arms-race execution record 2026-11-03 0609 queue run (partial, first unit of new Drone Boost phase, stamina 120 measured, Lv-1 Doom Elite 20 stamina for 2000 points, tier arithmetic, ranking-row chest taps retired)
+  - source: ticker-1004 arms-race execution record 2026-11-03 1021 queue run (done, Hero Advancement tier 3 met on one Adam level-up, 41500 points, all point and cumulative chests claimed)
+  - source: ticker-1934 arms-race execution record 2026-11-03 1945 queue run (partial, Drone Boost tiers 1 and 2 claimed, tier 3 short, drone Upgrade tap method retired)
+  - source: ticker-0004 arms-race execution record 2026-11-04 0019 queue run (partial, Hero Advancement score 0, hero detail blocked, swipe-back pivot)
+  - source: ticker-0304 arms-race execution record 2026-11-04 0307 queue run (partial, Tech Research phase verdict, tier 3 unreachable inside the red lines)
+  - source: ticker-0706 arms-race execution record 2026-11-04 0722 queue run (partial, first unit of the new Base Building phase, tier 3 unreachable inside the red lines)
+  - source: ticker-1004 arms-race execution record 2026-11-04 1025 queue run (partial, first unit of the new Unit Progression phase, score 0, tier-3 gap 75,000, training path only, no scoring action, no chest claimed)
+  - source: ticker-1604 arms-race execution record 2026-11-04 1604 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eighth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-1934 arms-race execution record 2026-11-04 1934 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, fifteenth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -176,13 +196,192 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   `_activities_/daily-activities` and `_tools_/regulars.json`); Arms
   Race stays on that list as one regular among the rest.
 
+## What the 2026-11-02 1015 unit added
+
+- Unit arms-race-2026-11-02-1003 by ticker-1004, session
+  about 10:10 to 10:15, status partial under queue rule
+  R4: this is the first unit inside the Drone Boost phase,
+  so it reads the phase, the score and every scoring path
+  and sets the just-enough plan; the scoring itself falls
+  to the next unit. Tracker untouched, so the next tick
+  re-produces this regular. Evidence in
+  `_records_/2026-11-02/arms-race/1015-queue-run.md`.
+- Live phase read: Drone Boost, Contest Segment Lv.29-30,
+  03:47:22 left at the first read (about 10:13), 03:46:00
+  at the sweep re-read. Phase window runs to about 14:00
+  local. Live score: 0, read from the star bar at the top
+  left of the phase page. The ranking row's 40,500 for
+  [AP3x]Bears Lair is the lagging previous-phase row (the
+  same figure the 2026-10-29 unit flagged as lag), not
+  this phase's score.
+- Point chest thresholds: 1,500 / 10,000 / 30,000 (ruby
+  tags 2,360 / 4,800 / 11,800) - matching the 2026-10-31
+  Drone Boost read. No chest is earned yet; no red dot
+  or bouncing chest on the page. Cumulative counter chest
+  at the top left: 6 of 8, purple, not full, not
+  claimable. Ranking row chest: contents preview only,
+  no Claim button, as in earlier runs; it falls to a
+  later run.
+- Scoring paths, read live: Use 10 Drone Battle Data
+  points +1 point; Use 1 Stamina +100 points; Buy Packs
+  containing Diamonds +30 per diamond - red line, never
+  used. Tier-3 gap: 30,000 points, equal to 300 stamina
+  at 100 points each, or 300,000 Drone Battle Data points
+  at 1 point per 10. First chest gap: 1,500 points, equal
+  to 15 stamina.
+- What was not done: no stamina or Drone Battle Data
+  balance was measured - neither figure shows on the base
+  screen top bar (food 388.3M, wood 578.2M, iron 51.6M,
+  stone 20.1M, gold 1.5M, 11.72K; diamonds 2,536). The next
+  unit measures both balances first (stamina via a deploy
+  or radar panel read, data via the drone interface)
+  before any spend, under the stamina refill rule (Free
+  Claim first, then 10/50 stamina items, just enough).
+  No scoring action was taken, no radar work was merged
+  into this unit, and no chest was claimed.
+- Navigation notes: the Events hub opened on Wanted Boss;
+  the Arms Race tab was reached by dragging the tab strip
+  right to reveal it, then a single tap. The Events back
+  arrow grounds at norm (160,947); single taps on it and
+  on tab points were unreliable in this session
+  (double-click worked for the Hidden Treasures tab and
+  for this back arrow).
+- Discrepancy handling: the 6/8 cumulative read on this
+  Drone Boost page matches the 0910 Tech Research page
+  read of 6/8, and both are kept as per-page reads; they
+  are NOT merged with the Hero Advancement page's 6/2
+  read, nor with the 2026-10-31 phase-final "cumulative
+  chest 1 of 2" read, until a unit reads both pages in
+  one pass.
+
+
+## What the 2026-11-03 0609 unit added
+
+- Unit arms-race-2026-11-03-0603 by ticker-0604, about
+  06:09 local, status partial, first unit inside the new
+  Drone Boost phase (rule R4): phase, score, thresholds
+  and every scoring path read live, completion sweep done
+  as far as the screens allowed, no scoring action
+  executed, no chest claimed, tracker untouched. The
+  next tick re-produces this regular and the scoring plan
+  below falls to the next unit. Evidence in
+  `_records_/2026-11-03/arms-race/0609-queue-run.md`.
+- Live phase read: Drone Boost, Contest Segment Lv.29-30,
+  time left 03:53:58 at the first read, 03:53:23 at the
+  sweep re-read. Phase window ends about 10:00 local.
+  Live score: 0, read from the star bar at the top left
+  of the phase page. The ranking row figure 9,300 for
+  [AP3x]Bears Lair is the lagging previous-phase row
+  (the same figure the 2026-11-03 0228 Base Building
+  unit recorded, and the same lag pattern the
+  2026-11-02 1015 and 1508 records flagged) and was NOT
+  used as this phase score.
+- Point chest thresholds: 1,500 / 10,000 / 30,000 (ruby
+  tags 2,360 / 4,800 / 11,800), identical to the 1015 and
+  2026-10-31 Drone Boost reads. No chest is earned at
+  score 0; no red dot or bouncing chest on the page.
+  Cumulative counter chest at the top left: 0 of 2, not
+  full, not claimable, no bounce. Kept as a per-page
+  read: it is NOT merged with the 1015 page read of 6
+  of 8, per the discrepancy handling in the 1015
+  section.
+- Scoring table, read live: Use 10 Drone Battle Data
+  points +1, Use 1 Stamina +100, Buy Packs containing
+  Diamonds +30 per diamond (red line, never used).
+  Tier gaps at score 0: tier 1 1,500 points, tier 2
+  10,000 points, tier 3 30,000 points.
+- Stamina path, measured live: tapping the stamina
+  scoring-row arrow opened the world-map Search panel
+  (tabs Zombies, Gather, Doom Elite), as the 2026-10-31
+  2241 unit recorded. Search found a Lv.1 Doom Elite:
+  Guaranteed Reward Drone Battle Data 910, EXP 3.0K,
+  iron 3.0K, food 3.0K, coin 1.0K; Suggested Power
+  1,096,500; Virus Resistance Required 10,250/200 (held
+  10,250 against a 200 requirement, so the requirement
+  is met). The attack button opened the rally panel,
+  read live: squad 5 heroes Lv.150, Unit Count
+  2,231/2,231, 25.17M power vs 1.09M, Easy Win, Rally
+  Time 1min checked. Stamina bar at the bottom of the
+  rally panel: cost -20, balance 120. So one Lv.1 Doom
+  Elite attack costs 20 stamina and scores 2,000 Arms
+  Race points. This answers the 1015 section's
+  measure-first item for stamina; the Drone Battle Data
+  balance was not measured in this unit.
+- Stamina arithmetic, from the measured 120 balance:
+  tier 1 needs 1 attack (20 stamina, 2,000 points),
+  tier 2 needs 5 attacks (100 stamina, 10,000 points),
+  tier 3 needs 15 attacks (300 stamina, 30,000 points)
+  and is therefore unreachable on the current 120
+  stamina balance alone, even before march time and the
+  Free Claim / stamina-item refills are counted. The
+  Drone Battle Data path needs 300,000 data points for
+  tier 3 at 1 point per 10.
+- Just-enough plan for the next unit: first re-read the
+  phase score live (radar and other regulars may already
+  have scored stamina in this phase), then measure the
+  stamina balance again in the rally panel before
+  committing anything. Tier 1 is one Lv.1 Doom Elite
+  attack (20 stamina). Tier 2 is five such attacks (100
+  stamina) if the balance plus Free Claim and 10/50
+  stamina items cover it. Do not chase tier 3 on stamina
+  alone: 300 stamina is not on hand, and spending
+  stamina items for an unreachable tier would waste
+  resources that score better in a later phase. No rally
+  was started in this unit: a rally is a world action
+  with a 1-minute rally window plus march and battle
+  time, and this first-phase unit is an assessment unit
+  under R4, not a scoring unit.
+- Completion sweep: no point chest earned at score 0, so
+  nothing was claimed and nothing earned was left
+  unclaimed. Cumulative chest 0/2, not claimable, not
+  tapped. Ranking-row chest: two taps at its measured
+  centre (norm 850,862, single then double-click)
+  produced no change on either attempt; per rule R2 that
+  tap method is retired inside this unit. The chest is
+  preview-only while the phase is live in the 2026-11-02
+  precedents, so this is recorded as a navigation miss,
+  not a reward left behind. Events hub re-scan not
+  completed: the phase page back arrow was not reached
+  because the stamina-row jump left the Events hub for
+  the world map, and the world-map panels below would
+  not close on empty-tile taps. The phase page itself
+  showed no bouncing chest or reward red dot.
+- Method notes (rule R2): Events tab bar, one drag to
+  the right revealed the Arms Race tab at norm 233,131,
+  and the next tap opened the phase page, reusing the
+  2026-11-02 0608 pivot. Rally panel closed by tapping
+  an empty map tile at norm 920,550; that tap selected
+  a neighbouring player base card instead of returning
+  to the base, so the game was left on the world map
+  with that player card open. The next unit must close
+  that card and return to the base before its own work;
+  the remedy is recorded by the next unit itself
+  (donations 0621): the world-map red X at norm 855,685
+  returns to base on the first tap. No attack, rally,
+  march or purchase was started anywhere in this unit.
+  No different-device dialog was seen, no login or
+  verification was demanded, and no password or Touch
+  ID step was used.
+- Red lines held: nothing spent, no Buy tapped, no
+  speedup burned, no building or research started, no
+  stage swapped, no other activity's rewards claimed.
+
 ## Open questions
 
 - The full phase rotation list and what each phase pays points for.
 - Whether the chest ruby tags also change by phase or segment.
 - When the phase ranking reward lands and where it is claimed.
 
-- Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read.
+- Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read. Answered in part 2026-11-03 0609: the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase, so the route is the live stamina scoring path for this phase; generality across phases stays open.
+- Whether the drone Upgrade button on the TACTICAL DRONE
+  screen is gated by the parts count (301/400 at the
+  1945 read) or by background-click delivery: two taps
+  at its measured centre in the 1945 unit produced no
+  change at all, so the tap method is retired per rule
+  R2 inside that unit; the next phase unit tests a
+  changed approach from the foreground path if it
+  retries.
+- Hero detail tap blocked, 2026-11-04 0019: the Hero List bottom-right Lv.124 card (hero unconfirmed) took two taps at its measured centre plus one long-press with no change, so no EXP was spent and tier 3 stayed unmet. The next unit in the phase retries with a changed method (a class tab filter, a different card, or a foreground tap path); if the detail still does not open, the blocker is written into the activity metadata per rule R2 and promoted to a standing blocker.
 ## What is known from 2026-10-26
 
 - The Hero Advancement phase ran on the morning of 2026-10-26
@@ -322,3 +521,1066 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   read happened with no queue arms-race unit between, so
   it is recorded as an unverified inter-unit change, not
   attributed to the queue.
+
+## What the 2026-11-01 1135 unit added
+
+- Unit Progression live again, read twice in the 1135 unit
+  (ticker-1114, session about 11:20 to 11:35): Contest
+  Segment Lv.29-30, score 6,000 at entry and again at
+  close, segment rank 2110, time left 02:36:20 at entry
+  and 02:32:38 at close, so the phase window ends about
+  14:06. Chest thresholds 15,000, 30,000 and 75,000, so
+  the tier-3 gap stands at 69,000 points. The 6,000
+  figure matches the 1055 events-unit read folded into
+  event-claims 1.6.0 - consistent, not a correction.
+- Scoring table read live in the same unit: Train a
+  Lv.10 unit plus 31, Use 1-min Training Speed-up plus
+  10, Buy Packs containing Diamonds plus 30 per diamond.
+  The speedup and pack paths are red lines and were not
+  used. The only legal path is training queues: 69,000
+  divided by 31 is about 2,226 Lv.10 units, roughly four
+  full barracks batches at the usual training counts, if
+  the queues are idle. That path runs through the
+  training regular's own unit, and any batch it queues
+  scores here when queued inside the phase window - but
+  the training regular's Drill Ground gate has not been
+  read live since 2026-10-31 (see troop-training 1.4.0),
+  so the training path is available in principle and
+  blocked in practice until that gate is re-read.
+- Training path not executed in this unit: the barracks
+  tents were not located in the base view. One candidate
+  tap in the lower-middle cluster selected Titanium Alloy
+  Factory No.4 Lv.30 instead and was deselected untouched
+  (no panel opened, nothing spent) - the same wrong-
+  building pattern the 1216 training unit met in its
+  factory pan. The training regular remains the route
+  that can queue the batches.
+- Completion sweep at close: no point chest earned (6,000
+  below the 15,000 first threshold), the cumulative
+  counter chest at top left reads 1 of 2 with a partial
+  bar and no bounce, and the ranking row chest is
+  preview-only with no claim. No bouncing chest or reward
+  red dot remains on the Arms Race page. Nothing was
+  claimed.
+- Session-drop recovery, same pattern as the 0917
+  training and 1017 survivors units: the computer-use
+  session dropped once mid-unit, a new session was
+  started, and the Arms Race page was still open with
+  state intact, so no game state was lost.
+
+## What the 2026-11-01 1523 unit added
+
+Tech Research phase live again, first unit inside the
+phase (ticker-1504, unit arms-race-2026-11-01-1403,
+status partial, tier-3 target unreached inside the red
+lines, tracker untouched so the next tick re-produces
+this regular). Evidence in
+`_records_/2026-11-01/arms-race/1523-queue-run.md`.
+
+- Phase read twice, at entry and at the sweep -
+  Tech Research, Contest Segment Lv.29-30, time left
+  02:45:25 at entry and 02:37:12 at the sweep, so the
+  phase window ends about 17:57 local. Score 0 both
+  reads. Chest thresholds 6,250, 12,500 and 30,000, so
+  the tier-3 gap stands at 30,000 points. No point chest
+  earned, nothing claimed.
+- Scoring table read live, matching the 2026-10-26
+  Tech Research read - Increase Tech Power by 1pt pays
+  plus 1, Use 1-min Research Speed-up pays plus 10, Buy
+  Packs containing Diamonds pays plus 30 per diamond.
+  The speedup and pack paths are red lines and were not
+  used.
+- Tech Power path judged by live read, not by
+  assumption - the research queue, opened from the base
+  screen queue icons (flask icon, 2/2), holds Lv.1
+  Precision Targeting II with Time Left 4d 16:36:32 and
+  Lv.9 Morale upgrade in progress with Time Left
+  1d 19:08:09, read twice across two computer sessions.
+  No research completes inside this phase window, so the
+  only legal path cannot score here. This is the same
+  shape as the 2026-10-26 Tech Research miss, with the
+  timers now measured instead of carried over. The
+  tier-3 shortfall is recorded here at the phase start,
+  not discovered in the phase last minutes.
+- Later-unit shortcut for this phase, from the unit
+  follow-up - the measured research timers settle this
+  phase, so later units of this phase need only re-read
+  the score and the completion sweep, not re-judge the
+  Tech Power path or re-open the research queue
+  identically.
+- Entry-point lessons, rule R2 - the Arms Race tab bar
+  position shifted between openings: the first two taps
+  at norm 92,128 and 111,128 did nothing, and the
+  OCR-grounded tab centre at norm 187,128 switched the
+  page. Tab positions must be re-grounded from OCR on
+  every opening, never inherited. The scoring-row arrow
+  method ended after two no-change taps: a tap on the
+  Increase Tech Power arrow at norm 849,550 and a tap
+  on the row text at norm 450,548 both produced no
+  change, so that method was abandoned inside this unit
+  and the research queue was reached instead through
+  the base queue icons, a different entry path. The
+  Events page back arrow was first mis-measured at norm
+  63,924 (that point hit a small round icon); the
+  grounded back square at norm 190,962 returned to the
+  base. The research panel was closed with its X at
+  norm 806,338.
+- Completion sweep at the close, on the Arms Race page -
+  no bouncing chest and no reward red dot. The
+  cumulative counter chest at top left reads 1 of 2
+  with a partial bar and no bounce. The ranking row
+  still shows the previous phase figure (#2110
+  [AP3x]Bears Lair, 6,000); per precedent that row is
+  not used as the phase score, and its chest is
+  preview-only with no claim and was not tapped.
+  Nothing was claimed.
+- Session-drop recovery - the computer-use session
+  dropped three times mid-unit
+  (observation_unavailable); sessions were started in
+  turn and the game state was intact at each recovery,
+  so no game state was lost. The unit ran about 17
+  minutes against the 15 minute cap because of the
+  three session recoveries; no scoring action was
+  started late to compensate. No different-device dialog
+  was seen, no login or verification was demanded, and
+  no password or Touch ID step was used.
+
+## What the 2026-11-01 1934 unit added
+
+Unit arms-race-2026-11-01-1803 by ticker-1934,
+session about 19:34 to 19:41, status
+skipped-needs-owner, tracker marked skipped for this
+slot. Evidence in
+`_records_/2026-11-01/arms-race/1934-queue-run.md`.
+
+- Phase read twice, at entry and at the sweep - Base
+  Building, Contest Segment Lv.29-30, time left
+  02:21:47 at entry, 02:20:00 at the sweep re-read and
+  02:19:55 at the sweep screenshot, so the phase window
+  ends about 21:57 local. Score 0 on every read. Chest
+  thresholds 6,250, 12,500 and 30,000, matching the
+  2026-10-25 Base Building read, so the tier-3 gap
+  stands at the full 30,000 points. No point chest
+  earned, nothing claimed.
+- Scoring table read live, matching the 2026-10-25
+  read - Increase Building Power by 1pt pays plus 1,
+  Use 1-min Construction Speed-up pays plus 10, Buy
+  Packs containing Diamonds pays plus 30 per diamond.
+  The speedup and pack paths are red lines and were
+  not used.
+- Building Power path judged by live read, not by
+  assumption - the Building Queue panel, opened from
+  the first scoring row arrow at norm 853,537, holds
+  Lv.29 Aircraft Center upgrade in progress with Time
+  Left 11d 02:46:59 and Lv.27 Drill Ground upgrade in
+  progress with Time Left 2d 19:45:47, and slots 3 and
+  4 Idle. No building completes inside this phase
+  window, so the only legal path cannot score here.
+  No Construct was tapped - starting a building is a
+  red line - and no Speed Up was tapped. This is the
+  same shape as the 2026-10-26 Tech Research miss and
+  the 1523 Tech Research re-read, with the timers now
+  measured instead of carried over.
+- Later-unit shortcut for this phase, from the unit
+  follow-up - the measured building timers settle this
+  phase, so later units of this phase need only re-read
+  the score and the completion sweep, not re-judge the
+  Building Power path or re-open the building queue
+  identically.
+- Completion sweep at the close, on the Arms Race
+  page - no bouncing chest and no reward red dot. The
+  cumulative counter chest at top left reads 0/2,
+  static, no bounce, and was not tapped. The ranking
+  row reads #2110 [AP3x]Bears Lair with score 0,
+  matching the phase score on this read; its chest is
+  preview-only per precedent and was not tapped.
+  Nothing was claimed. The game was left on the base
+  screen.
+- Entry-point lessons, rule R2 - the game opened on
+  the world map; the Home button at norm 886,945
+  returned to the base. The Events icon at norm
+  925,130 opened Events directly on the Arms Race
+  page. The Building Queue panel X at norm 804,209
+  closed it to the base, and re-entering Events
+  reopened directly on the Arms Race tab with no drag
+  needed. One stale-observation retry: a click without
+  an observation id was refused, and a second attempt
+  reported the target app exited or restarted;
+  re-selecting the same LastWar window (pid unchanged)
+  and clicking with a fresh observation id succeeded,
+  so no game state was lost.
+
+## What the 2026-11-01 2327 unit added
+
+- Unit arms-race-2026-11-01-2203 by ticker-2304, session
+  about 23:16 to 23:27, status partial. Live phase, read
+  at entry and again at the sweep: Unit Progression,
+  Contest Segment Lv.29-30, time left 02:40:31 at entry
+  and 02:38:22 at the sweep. Score 0 on both reads.
+- Chest thresholds 15,000, 30,000 and 75,000, same as the
+  1135 read. Tier-3 gap: the full 75,000 points. No point
+  chest earned (score 0 below the first threshold),
+  nothing claimed.
+- Scoring table, read live: Train a Lv.10 unit pays plus
+  31, Use 1-min Training Speed-up pays plus 10, Buy Packs
+  containing Diamonds pays plus 30 per diamond. The
+  speedup and pack paths are red lines and were not used.
+- Training path judged by live read, in part: the Train
+  a Lv.10 unit row arrow opened a TRAIN UNITS panel for
+  one barracks. That barracks trains up to Lv.8 only
+  (Lv.9 and Lv.10 shown locked), its slider stood at 666
+  units at Lv.8, and its Train button carried a batch
+  timer of 1d 04:20:26, so it is busy and cannot queue
+  Lv.10 units. No Train was tapped and no Finish Now was
+  tapped. The other three barracks were NOT checked
+  inside this unit's cap, so the training path is judged
+  blocked at one barracks, not settled for the account -
+  a one-barracks read must not be written up as an
+  account-wide block.
+- Next arms-race unit must check the other three
+  barracks for an idle Lv.30 barracks that can queue
+  Lv.10 units (2,420 units score 75,000 at plus 31 each,
+  before any batch-size cap, per this unit's follow-up),
+  before concluding the training path is blocked for
+  this phase. If such a barracks is idle, queue just
+  enough Lv.10 units to reach 75,000 and claim all three
+  chests in that unit.
+- Completion sweep at the close, on the Arms Race page:
+  no bouncing chest and no reward red dot. The cumulative
+  counter chest at top left reads 0/2, static, no bounce,
+  and was not tapped. The ranking row reads #2110
+  [AP3x]Bears Lair with score 0, matching the phase score
+  on this read; its chest is preview-only per precedent
+  and was not tapped. Nothing was claimed. The game was
+  left on the Arms Race page.
+- Entry-point lessons: the Events tab bar shifted between
+  openings again - the first two taps on the partially
+  visible Arms Race tab did nothing, backing out to base
+  and re-entering still landed on Wanted Boss, and a
+  rightward drag of the tab bar revealed the Arms Race
+  tab fully, after which a tap on its OCR-grounded
+  centre switched the page. On the sweep return the same
+  drag switched straight to the Arms Race page. Tab
+  positions must be re-grounded from OCR on every
+  opening, never inherited. One stale-observation retry:
+  a tab tap sent with an image observation id was
+  refused, and the same tap re-sent with the latest
+  receipt observation id succeeded, so no game state was
+  lost.
+- Cross-unit note, not an arms action: the radar unit of
+  this same pass launched a Doom Walker rally (March
+  Queues 1 of 4, marching at this unit's entry); its
+  result falls to the next radar unit, not to this
+  arms-race unit.
+- Zombie seeding: not done. The zombie-invasion activity
+  INDEX records chain close at unit 066: the event ended
+  at about the 19:00 reset on 2026-10-30, so no chain unit
+  was seeded, per the standing do-not-seed rule.
+- No diamonds or money spent, no speedup item burned, no
+  building or research started, no stage swapped, no
+  chest tapped that was not earned. Tracker untouched for
+  partial, per the queue rules.
+
+## What the 2026-11-02 0247 unit added
+
+- Unit arms-race-2026-11-02-0203 by ticker-0235, session about
+  02:37 to 02:46, status partial. Live phase: Hero Advancement,
+  Contest Segment Lv.29-30, time left 03:20:36 at first read,
+  chest thresholds 2,000 / 4,000 / 12,000. Scoring rows read
+  live: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP
+  at a time +1, Buy Packs containing Diamonds +30 per diamond
+  (red line, not used).
+- Entry pivot, rule R2: the Arms Race tab at the cut-off left
+  edge took two no-change taps; a drag of the tab bar to the
+  right revealed the full tab, and the next tap opened the
+  phase page. Same drag remedy as the 2327 unit - tab
+  positions must be re-grounded from OCR on every opening,
+  never inherited.
+- Scoring action, EXP only: hero Adam (UR Titan) Lv.123, EXP
+  bar 75,142,142 / 81,000,000, gap 5,857,858. The Upgrade
+  panel's Collect row tap produced no change, so Replenish
+  All was used instead; it collected the available resources
+  (Hero EXP 16.9M, iron 1.9M, coin 1.2M, food 1.9M) and the
+  bar rose to 99,961,664 / 81,000,000. One Upgrade tap
+  levelled Adam to Lv.124 (hero power 1,731,615 to
+  1,739,645, new bar 18.9M / 83.0M; the 18,961,664
+  carry-over matches the bar overflow arithmetic). No
+  diamonds, money, speedups or skill medals were spent; the
+  resource collection was incidental to the EXP replenish,
+  not a harvest unit.
+- Score read live after the level-up: 40,500 points, segment
+  rank 9, clearing the 12,000 top chest. The 40,500 equals
+  the 81,000,000 EXP bar divided by 2,000, consistent with
+  the 2026-10-26 measured rate of 1 point per 2,000 Hero
+  EXP - a second confirmation of that rate.
+- Claims: one tap on the 2,000 chest claimed all three
+  earned point chests at once (popup contents: star badge
+  6, SR chests 32 and 32, Arms Race Badges 1.6K, coin chest
+  32, 5m speedups 68). Re-read: all three point chests open
+  and claimed.
+- Completion sweep, unresolved item: the cumulative counter
+  chest at the top left read 0/2 before the claim and 6/2
+  after it. Two taps on it at its measured centre produced
+  no change (background-click limit noted by the control
+  channel), so it is NOT recorded as claimed. The next
+  arms-race unit must re-check it with a changed tap
+  method. The ranking-row chest was not tapped: while the
+  phase is live it opens a preview only per the
+  2026-10-26 knowledge, and its reward is claimed by the
+  next run after the phase ends. No bouncing chest or
+  reward red dot was visible elsewhere on the page.
+- Status partial only because of the 6/2 cumulative chest;
+  the phase target itself (12,000) was met and all three
+  point chests claimed. Tracker untouched for partial, per
+  the queue rules. Evidence in
+  `_records_/2026-11-02/arms-race/0247-queue-run.md`.
+
+## What the 2026-11-02 0608 unit added
+
+- Unit arms-race-2026-11-02-0603 by ticker-0604, session about
+  06:03 to 06:08, window duel day 1, status partial. The
+  previous phase is fully closed except the ranking reward,
+  whose claim location is still unknown; the new Tech
+  Research phase target stands as a red-line miss for this
+  phase. Tracker untouched for partial, per the queue rules.
+  Evidence in `_records_/2026-11-02/arms-race/0608-queue-run.md`.
+- Phase rollover inside this unit: the unit opened in the tail
+  of the Hero Advancement phase (previous unit 0247 had scored
+  40,500 and claimed all three point chests) and the phase
+  rolled to Tech Research at about 06:07 local, during
+  navigation to the Arms Race page.
+- Entry pivot, rule R2, reused from 0247: the Arms Race tab sat
+  at the cut-off left edge of the Events tab bar; one drag of
+  the tab bar to the right revealed the full tab and the next
+  tap opened the phase page. No repeat of the failed cut-off
+  tap.
+- Previous-phase close-out, claimed live: the cumulative
+  counter chest at the top left read 6/2 before the tap. One
+  tap at its centre claimed it (the 0247 no-change taps are
+  superseded - the changed method this unit is a fresh
+  measured centre tap after the tab-bar drag, and it worked on
+  the first tap). Popup contents read live: gold ticket 1,
+  pink puzzle-piece items 2, red gem tagged 50 x1. After the
+  claim the counter read 6/8 with the chest purple and the bar
+  about three quarters full, matching the 2026-10-26 pattern
+  of progress carrying into the next tier. The 0247
+  completion-sweep item is therefore closed: the cumulative
+  chest is claimed, and the 6/2 no-change taps stand as a
+  superseded tap method, not a blocked chest.
+- Ranking-row chest, not claimed: the ranking row still shows
+  the finished Hero Advancement result (#2110 [AP3x]Bears
+  Lair, 40,500). One tap on its chest opened only the
+  contents preview (Iron Chest (SR) 3, Food Chest (SR) 3,
+  Coin Chest (SR) 3), with no Claim button, even though the
+  phase has ended. Correction to the 0247 expectation: the
+  ranking reward is NOT claimed by the next run after the
+  phase ends - after the phase end it still opens a preview
+  only. Where the phase ranking reward is actually paid
+  remains an open question; nothing was tapped a second time
+  and no reward is recorded as claimed here. The open
+  question "when the phase ranking reward lands and where it
+  is claimed" stands, strengthened.
+- New phase read live (rule R4, first unit inside the phase):
+  Tech Research, Contest Segment Lv.29-30, time left
+  03:53:41 at first read, score 0, chest thresholds 6,250 /
+  12,500 / 30,000. Scoring rows read live: Increase Tech
+  Power by 1pt +1, Use 1-min Research Speed-up +10, Buy
+  Packs containing Diamonds +30 per diamond.
+- Research queue read live via the scoring row jump: Lv.1
+  Precision Targeting II upgrade in progress, Time Left 4d
+  01:51:02; Lv.9 Morale upgrade in progress, Time Left 1d
+  04:22:39. Neither completion lands before this phase ends
+  (about 10:01 local). The other two scoring paths are red
+  lines (speedups never burned, packs never bought). Tier-3
+  at 30,000 is therefore unreachable inside the red lines for
+  this phase, assessed early in the phase, not discovered in
+  its last minutes - the same shape as the 2026-10-26 Tech
+  Research miss. No diamonds, money, speedups, skill medals
+  or hero resources were spent in this unit.
+- Completion sweep: after the cumulative claim and the ranking
+  preview, the phase page showed no bouncing chest and no
+  reward red dot besides the locked point chests (0 points)
+  and the 6/8 cumulative chest. The Events screen Arms Race
+  card was entered from, not re-scanned after the sweep,
+  because the phase page itself carried no remaining
+  claimable item.
+- Result stats: target 30000, achieved 0, points 0,
+  resources_gained gold-ticket 1, puzzle-pieces 2,
+  red-gem-50 1 (previous-phase cumulative chest), verified
+  yes, blocker_category g (true red-line miss for the new
+  phase).
+
+## What the 2026-11-02 1508 unit added
+
+- Unit arms-race-2026-11-02-1403 by ticker-1452, session
+  about 14:55 to 15:08, status partial under queue rule
+  R4: this is the first unit inside the Hero Advancement
+  phase, so it reads the phase, the score and every
+  scoring path and sets the just-enough plan; the scoring
+  itself falls to the next unit because the chosen
+  level-up is short of hero EXP. Tracker untouched, so
+  the next tick re-produces this regular. Evidence in
+  `_records_/2026-11-02/arms-race/1508-queue-run.md`.
+- Live phase read: Hero Advancement, Contest Segment
+  Lv.29-30, 03:00:17 left at the first read (about
+  14:57). Phase window runs to about 17:57 local. Live
+  score: 0, read from the star bar at the top left of
+  the phase page. The ranking row's 40,500 for
+  [AP3x]Bears Lair is the lagging previous-phase row
+  (the same figure the 1015 record flagged as lag), not
+  this phase's score - consistent, not a new
+  discrepancy.
+- Point chest thresholds: 2,000 / 4,000 / 12,000 (ruby
+  tags 2,360 / 4,800 / 11,800). No chest is earned yet;
+  no red dot or bouncing chest on the page. Cumulative
+  counter chest at the top left: 6 of 8, purple, not
+  full, not claimable. Ranking row chest: not tapped
+  this unit; preview-only is expected while the phase
+  is live, and the sweep falls to the scoring unit.
+- Scoring paths, read live: 1 Hero Recruitment +400
+  points; Use at least 2,000 Hero EXP at a time +1
+  point per 2,000 EXP (verified rate, 2026-10-26
+  record: a 75.0M EXP one-level spend read back as
+  37,500 points); Buy Packs containing Diamonds +30
+  per diamond - red line, never used. Tier-3 gap:
+  12,000 points, equal to 24,000,000 Hero EXP used.
+- Just-enough plan: level UR Titan Adam Lv.124 to
+  Lv.125 exactly once and no further. Adam's level cost
+  reads 83.0M EXP, so one level spends 83.0M EXP and
+  scores about 41,500 points, clearing the 12,000
+  tier-3 threshold by design of the level cost; the
+  just-enough rule is satisfied by taking exactly one
+  level and no more, as in the 2026-10-26 Hero
+  Advancement close.
+- What blocked the scoring: Adam's EXP bar reads
+  63.0M / 83.0M with the current figure in red, a
+  20.0M EXP shortfall against the level cost. The
+  Upgrade button was tapped twice on the hero detail
+  screen (single tap, then a double-click on the
+  freshly grounded centre at norm 502,813) with no
+  change on either attempt; per queue rule R2 that tap
+  method is retired inside this unit, and the
+  shortfall, not the tap, is the blocker.
+- Next unit's first action: open experience boxes from
+  the inventory to top up at least 20.0M Hero EXP
+  (owner instruction, 2026-10-26, recorded in the
+  activity metadata), then level Adam once, re-read
+  the phase score live, claim all three earned point
+  chests, and run the completion sweep (cumulative
+  counter chest, ranking row chest, Events screen
+  re-scan) before closing. Result stats so far:
+  target 12000, achieved 0, partial, blocker EXP
+  shortfall.
+- Navigation notes: the Events icon at norm 925,130
+  opened Events directly on the Arms Race page, as in
+  the 0608 record. The Events back arrow at norm
+  160,947 worked on a double-click, as in the 1015
+  record. The game was found on the Drill Ground panel
+  the 1412 radar unit left open; its X at norm
+  869,139 closed it to the base on the first tap -
+  the radar panel-close handover written in the 1532
+  run is therefore completed, and the panel is no
+  longer left open.
+- No different-device dialog was seen, no login or
+  verification was demanded, and no password or Touch
+  ID step was used. Nothing spent, no paid button
+  tapped, no stage swap, no research or building
+  started.
+
+## What the 2026-11-02 1924 unit added - Unit Progression, 9,300 of 75,000, partial
+
+- Unit arms-race-2026-11-02-1803 by ticker-1904, status
+  partial, tracker untouched. Evidence in
+  `_records_/2026-11-02/arms-race/1924-queue-run.md`.
+- Time correction, recorded in the record itself and
+  applied here for sequencing: the file name and
+  frontmatter time 19:24 overstate the close - the unit
+  actually completed at 19:16 PST (token released 19:16),
+  and all game reads below are from the 19:14-19:16
+  window. Pass order this evening is therefore radar
+  1913, then arms 19:14-19:16, then the donations unit
+  that failed stranded on this page (1923).
+- Live phase and score, read twice: Unit Progression
+  (phase rotated from Hero Advancement, which ended
+  about 17:57), Contest Segment Lv.29-30, 02:45:21 left
+  at entry (phase ends about 22:05 PST). Score 9,300,
+  segment rank 2110, account [AP3x]Bears Lair. Chest
+  thresholds 15,000 / 30,000 / 75,000 - do NOT carry the
+  Hero Advancement thresholds (2,000 / 4,000 / 12,000)
+  into this phase. Tier-3 gap: 75,000 minus 9,300 equals
+  65,700 points.
+- Scoring table, read live: Train a Lv.10 unit +31, Use
+  1-min Training Speed-up +10, Buy Packs containing
+  Diamonds +30 per diamond. The speedup and pack paths
+  are red lines and were not used. The only legal path
+  is training queues: 65,700 divided by 31 is about
+  2,120 Lv.10 units - roughly four full barracks batches
+  at the usual training counts, if the queues are idle.
+  That work belongs to the training regular's own unit
+  (as the 2026-11-01 11:35 Unit Progression unit
+  concluded); it was not started from this arms-race
+  unit, and the pass budget (about 25 minutes from
+  token) did not leave room to queue batches inside this
+  unit in any case.
+- Completion sweep (phase page): no point chest earned
+  (score 9,300 is below the 15,000 first threshold), so
+  nothing was claimed and nothing earned was left
+  unclaimed. Cumulative counter chest at top left reads
+  0 of 2 with no bounce and no red dot - not claimable.
+  Ranking row chest is preview-only with no claim. No
+  bouncing chest or reward red dot remains on the Arms
+  Race page.
+- Navigation miss, not a reward left behind: the Events
+  hub re-scan was not completed - the back arrow
+  (single tap, then double-click at norm 90,947) did not
+  navigate off the Arms Race page in either attempt, so
+  the hub card was not re-scanned this unit. The next
+  arms-race unit should re-check the hub card on entry.
+  The same unresponsive back arrow then stranded the
+  following donations unit (1923, four failed taps) -
+  cross-unit handover: relaunch first if stranded on
+  this page.
+- Navigation notes: the Events icon at norm 905,145
+  opened Events directly on the Arms Race page, as in
+  the 0608 record. No different-device dialog was seen
+  in this unit (the pass's single takeover happened in
+  the radar unit), no login or verification was
+  demanded, and no password or Touch ID step was used.
+- Red lines held: no diamonds or money spent, no speedup
+  item burned, no stage swapped, no research or building
+  started, no chest tapped that was not earned.
+
+## What the 2026-11-02 2209 unit added - Tech Research, 0 of 30,000, partial
+
+- Unit arms-race-2026-11-02-2203 by ticker-2204, status partial,
+  tracker untouched. First unit inside the new Tech Research
+  phase. Evidence in
+  `_records_/2026-11-02/arms-race/2209-queue-run.md`.
+- Live phase and score, read twice: Tech Research, Contest
+  Segment Lv.29-30, time left 03:52:51 at entry and 03:50:31 at
+  the sweep; the phase window ends about 02:01 PST. Score 0, read
+  from the star bar at the top left of the phase page at entry
+  and again at the sweep. The ranking row figure 9,300 for
+  [AP3x]Bears Lair is the lagging previous-phase row (same
+  pattern as the 1508 record) and was NOT used as this phase
+  score - never carry the ranking row into the phase score.
+- Chest thresholds: 6,250 / 12,500 / 30,000 (ruby tags 2,360 /
+  4,800 / 11,800). Tier-3 gap: 30,000 points.
+- Scoring table, read live: Increase Tech Power by 1pt +1, Use
+  1-min Research Speed-up +10, Buy Packs containing Diamonds +30
+  per diamond. The speedup and pack paths are red lines and were
+  not used.
+- Tech Power path NOT closed this unit: whether a research
+  completion already under way lands inside this phase window
+  could not be read live (navigation blockers below), so no
+  unreachable verdict is claimed here. The next arms-race unit
+  must read the research queue first, from the base screen,
+  before judging tier-3.
+- Completion sweep (phase page): no point chest earned (score 0
+  is below the 6,250 first threshold), so nothing was claimed and
+  nothing earned was left unclaimed. Cumulative counter chest at
+  top left reads 0 of 2 with no bounce and no red dot - not
+  claimable. Ranking row chest tapped once: contents preview only
+  (Iron Chest (SR) 6, Food Chest (SR) 6, Coin Chest (SR) 6), no
+  Claim button. Nothing claimed from it. No bouncing chest or
+  reward red dot remains on the Arms Race page. The Events hub
+  card re-scan was not completed: the phase page back arrow did
+  not navigate (see below), so the hub was not re-scanned after
+  the sweep; the phase page itself shows no unclaimed reward.
+- Method notes, rule R2: Events tab bar - one drag to the right
+  revealed the Arms Race tab, and the next tap opened the phase
+  page, reusing the 0608 pivot. Scoring-row jump failed: two taps
+  on the Increase Tech Power row (arrow, then row centre)
+  produced no navigation; the method ended inside this unit per
+  R2. Back arrow failed: one tap at norm 90,947 did not leave the
+  Arms Race page, matching the 1924 record. Next-unit route
+  change: enter the research queue from the base screen queue
+  icons (flask icon) instead of the scoring-row jump, and do not
+  rely on the phase page back arrow.
+- Result stats: phase Tech Research, score 0, target 30000, gap
+  30000, chests_claimed 0, scoring_actions 0, verified no (score
+  and thresholds are same-unit live reads, but the in-window
+  completion judgment was not completed), blocker_category e
+  (repeated navigation blocker).
+- Red lines held: no diamonds or money spent, no speedup item
+  burned, no stage swapped, no research or building started, no
+  chest tapped that was not earned.
+
+## What the 2026-11-03 0228 unit added - Base Building, tier 1 claimed on indirect confirmation, tiers 2 and 3 unreachable inside the red lines
+
+- Ticker-0204, unit arms-race-2026-11-03-0203, about
+  02:28 local, partial, not a miss of effort. Phase:
+  Base Building, Contest Segment Lv.29-30. Time left
+  03:49:02 at first read, about 03:45:55 at the re-read
+  after the chest tap. Phase ends about 06:02 local.
+- Phase read live: score 9,300, segment rank 8,
+  warzone 2110 ([AP3x]Bears Lair). Chest thresholds
+  6,250 / 12,500 / 30,000. Scoring rows read live:
+  Increase Building Power by 1pt +1, Use 1-min
+  Construction Speed-up +10 (red line, not used), Buy
+  Packs containing Diamonds +30 per diamond (red line,
+  not used). Gap to tier 2: 3,200 points. Gap to
+  tier 3: 20,700 points.
+- Tier-1 claim, with an honest caveat: the tier-1
+  (6,250) chest was tapped once. The tap opened the
+  chest contents panel - Skill Medal 200, Arms Race
+  Badge 1, Coin Chest (SR) 4, Food Chest (SR) 4, Iron
+  Chest (SR) 4, 5m Speed-up 8, valued 2,360 rubies.
+  Per the 2026-10-26 precedent (one tap on an earned
+  chest claims it, the panel lists its contents), this
+  is recorded as the tier-1 chest claimed. Caveat,
+  carried, not smoothed over: the panel presented as
+  a contents list with no separate Claim button, and
+  the cumulative counter chest at the top left of the
+  page still read 0/2 after the tap, so the claim
+  confirmation is indirect, not a rewards toast. The
+  next arms-race unit must re-check the tier-1 chest
+  state before treating the claim as settled.
+- No other chest was tapped: tier 2 (12,500) and
+  tier 3 (30,000) were not earned at the 9,300 score.
+- Unreachable verdict, measured: building queue checked
+  from the base (hammer icon, grounded at norm
+  55,182): two upgrades in progress and two idle
+  slots. Lv.29 Aircraft Center upgrade, time left
+  9d 20:11:01; Lv.26 Drill Ground upgrade, time left
+  6d 16:49:11. No building completion lands inside
+  this phase, and no finished upgrade waited to be
+  collected. No new building or research was started
+  (red line), no speedup was burned (red line), no
+  pack was bought (red line). The remaining scoring
+  paths are exactly the banned ones, so tier 2 and
+  tier 3 are unreachable inside the red lines in this
+  unit. This is a measured unreachable verdict for
+  this phase window, not a standing claim about Base
+  Building phases generally.
+- Completion sweep: phase page re-read after the chest
+  tap - score still 9,300, no bouncing chest and no
+  reward red dot visible on the point track,
+  cumulative counter chest still 0/2 (not full, not
+  claimable on this read). The ranking row still shows
+  segment rank 8 at 9,300; per the 2026-10-26
+  knowledge its reward chest opens a preview only
+  while the phase is live and is claimed after the
+  phase ends, so it falls to the next arms-race unit
+  after 06:02.
+- Method notes: Events screen left via the back arrow
+  (grounded at norm 159,947) and the Building Queue
+  panel via the same back arrow; the base view was
+  the closing screen.
+- Result stats: phase Base Building, score_before
+  9300, score_after 9300, tier1_threshold 6250,
+  tier2_threshold 12500, tier3_threshold 30000,
+  tier1_claimed yes (indirect confirmation, see
+  caveat above), tier2_gap 3200, tier3_gap 20700,
+  rank_segment 8, device_takeovers 0, blocker no
+  building completion in phase window.
+- Red lines held: nothing spent, no Buy tapped, no
+  speedup burned, no building or research started, no
+  stage swapped, no other activity's rewards claimed.
+
+
+## What the 2026-11-03 1021 unit added - Hero Advancement tier 3 met on one level-up, all chests claimed
+
+- Ticker-1004, unit arms-race-2026-11-03-1003, about
+  10:21 local, status done. Hero Advancement phase
+  tier 3 met and every earned reward claimed in this
+  unit. Tracker marked done. Evidence in
+  `_records_/2026-11-03/arms-race/1021-queue-run.md`.
+- Live phase and score: Hero Advancement, Contest
+  Segment Lv.29-30, time left 03:47:10 at the first
+  read (phase window runs to about 14:00 local; this
+  is the first unit of the new phase after the Drone
+  Boost phase ended about 10:00). Live score at first
+  read: 0, read from the star bar at the top left of
+  the phase page. The ranking row figure 9,300 for
+  [AP3x]Bears Lair was the lagging previous-phase row
+  (the same lag pattern the 0609 unit flagged) and
+  was NOT used as this phase score.
+- Point chest thresholds: 2,000 / 4,000 / 12,000
+  (ruby tags 2,360 / 4,800 / 11,800). Cumulative
+  counter chest at the top left: 0/2, not full, not
+  claimable at first read.
+- Scoring table, read live: 1 Hero Recruitment +400,
+  Use at least 2,000 Hero EXP at a time +1 (per 2,000
+  EXP, per the 2026-11-02 0247 measured rate of 1
+  point per 2,000 Hero EXP), Buy Packs containing
+  Diamonds +30 per diamond (red line, never used).
+- Scoring action, EXP only: Hero Adam (UR Titan)
+  Lv.124, power 1,748,826, EXP bar 283.2M / 83.0M -
+  far over the requirement, so no replenish was
+  needed and no resource collection was triggered.
+  One Upgrade tap levelled Adam to Lv.125 (power
+  1,757,586, +8,760; new bar 200.2M / 85.0M; the
+  200.2M carry-over matches the 283.2M minus 83.0M
+  overflow arithmetic). Score read live after the
+  level-up: 41,500 points, which equals the
+  83,000,000 requirement divided by 2,000,
+  consistent with the 0247 measured rate. This
+  clears the 12,000 top chest by a wide margin. The
+  ranking row updated to 50,800 (9,300 lagging figure
+  plus 41,500), confirming the attribution.
+- Just-enough rule: exactly one level-up was done.
+  Adam's bar still exceeds its new 85.0M requirement,
+  but a second level-up was NOT taken - it would
+  overshoot this phase and waste scoring for a later
+  Hero Advancement phase.
+- Claims: one tap on the 2,000 point chest claimed
+  all three earned point chests at once (popup
+  contents: star badge 6, SR chests 32 and 32, Arms
+  Race Badges 1.6K, coin chest 32, 5m speedups 68 -
+  the same bundle the 0247 unit recorded). Re-read:
+  all three point chests open and emptied. Cumulative
+  counter chest: read 6/2 after the point claim. One
+  tap on it claimed it too (popup contents: gold card
+  1, purple fragment 2, red gem 50 x1) - unlike the
+  0247 unit, where cumulative taps produced no
+  change. Re-read after dismissal: the counter
+  advanced to 6/8, confirming the claim.
+- Ranking-row chest: not tapped. While the phase is
+  live it opens a preview only per the 2026-11-02
+  precedents, and the 0609 unit retired that tap
+  method after no-change attempts. Its reward, if
+  any, falls to a later run after the phase ends.
+- Method notes: entry pivot (rule R2, reused from
+  0609): one drag of the Events tab bar to the right
+  revealed the Arms Race tab at norm 233,131, and
+  the next tap opened the phase page. Navigation
+  stall, resolved by relaunch: after the level-up,
+  the Hero List back arrow took five no-change taps
+  (single, double, move-wait-click, and
+  post-activate) - background clicks did not reach
+  that control. The window was closed with its chrome
+  close button and the app relaunched; it landed
+  directly on the base with no login and no
+  device-takeover dialog, and the Events tap reopened
+  the Arms Race phase page (last-tab memory). The
+  Hero List back-arrow stall is a carried method note
+  for the next hero-panel unit; the same
+  background-click stall pattern appears on the
+  Attack panel X in the 1030 donations unit this
+  pass.
+- Entry note for the next unit: this unit left the
+  game on the Arms Race phase page, and the radar
+  unit before it navigated past the Commendation
+  Notice popup left open by ticker-0934 (View tapped
+  to the Exercise panel, then backed out untouched to
+  base; dish grounded fresh at norm 52,711).
+- Closing figures: phase Hero Advancement, Lv.29-30,
+  03:39:18 left at close. Score: 41,500 (target
+  12,000, achieved 41,500). Adam: Lv.124 to Lv.125,
+  power 1,748,826 to 1,757,586. Point chests: 3/3
+  claimed. Cumulative chest: claimed (6/8 after).
+  Ranking row: 50,800, chest preview-only, untapped.
+  Result stats: target 12000, achieved 41500, points
+  41500, verified yes.
+- Red lines held: no diamonds, money, speedups,
+  skill medals or hero shards spent; no recruitment,
+  no pack purchase, no other activity's work done
+  from this unit.
+
+## What the 2026-11-03 1412 unit added - Base Building, top threshold met, all three point chests claimed
+
+- Unit arms-race-2026-11-03-1403 by ticker-1404,
+  about 14:05 to 14:12 local, status done. Evidence
+  in `_records_/2026-11-03/arms-race/1412-queue-run.md`.
+- Live phase read: Base Building, Contest Segment
+  Lv.29-30, time left 03:52:43 at entry, 03:48:27 at
+  close. Score read live 50,800, segment rank 9,
+  combined rank 2110. Thresholds read live 6,250,
+  12,500 and 30,000, matching the Base Building
+  thresholds recorded on 2026-10-25 and in the 0228
+  unit. The 50,800 here is the live phase score, not
+  the ranking-row figure the 1021 unit reported.
+- Just-enough rule applied with no scoring work: the
+  score already stood above the top (third)
+  threshold, so no scoring action was taken and none
+  was needed.
+- Point chests claimed, claim-by-tap as on
+  2026-10-26: each chest tap opened a contents popup
+  with no separate Claim button. Contents read live:
+  - Tier 1 (6,250, valued 2,360): Skill Medal 200,
+    Arms Race Badge 1, Coin Chest (SR) 4, Food Chest
+    (SR) 4, Iron Chest (SR) 4, 5m Speed-up 8.
+  - Tier 2 (12,500, valued 4,800): Skill Medal 400,
+    Arms Race Badge 2, Coin Chest (SR) 8, Food Chest
+    (SR) 8, Iron Chest (SR) 8, 5m Speed-up 20.
+  - Tier 3 (30,000, valued 11,800): Skill Medal 1000,
+    Arms Race Badge 3, Coin Chest (SR) 20, Food Chest
+    (SR) 20, Iron Chest (SR) 20, 5m Speed-up 40.
+  - Totals claimed in this unit: Skill Medal 1600,
+    Arms Race Badge 6, Coin Chest (SR) 32, Food Chest
+    (SR) 32, Iron Chest (SR) 32, 5m Speed-up 68. The
+    bundle matches the 2026-10-26 Hero Advancement
+    claim bundle exactly, so the point-chest bundle is
+    phase-independent at these ruby tags.
+- Completion sweep: cumulative counter chest reads 6
+  of 8, progress bar partial, not full and not
+  claimable. Its track shows milestone chests labelled
+  2, 8 and 18. One milestone chest preview read live:
+  50 Diamonds 1, Hero Recruitment Ticket 1, SSR Hero
+  Universal Shard 2. Nothing was tapped to claim from
+  this track, since the counter had not reached its
+  tier. Kept as a per-page read, not merged with other
+  pages' cumulative reads.
+- Ranking-row chest: tapped, opened a contents preview
+  only, as expected while the phase is live: Iron
+  Chest (SR) 3, Food Chest (SR) 3, Coin Chest (SR) 3
+  at segment rank 9. This confirms the rank-8 preview
+  bundle from 2026-10-26 at rank 9. Per the standing
+  rule, this reward is claimed after the phase ends,
+  so the next run after the phase roll must check for
+  it.
+- No bouncing chest or reward red dot remained on the
+  Arms Race page at close, apart from the not-yet-full
+  cumulative counter. Events hub at entry showed no
+  Zombie Invasion tab, consistent with the 2026-10-30
+  chain close, so no zombie chain was seeded.
+- Red lines held: no diamonds or money spent, no
+  speedup burned, no stage swap, no research or
+  building started.
+
+## What the 2026-11-03 1945 unit added - Drone Boost, tiers 1 and 2 claimed, tier 3 short
+
+- Unit arms-race-2026-11-03-1803 by ticker-1934,
+  about 19:35 to 19:45 local, status partial. Evidence
+  in `_records_/2026-11-03/arms-race/1945-queue-run.md`.
+- Entry note, for the next pass that finds the game
+  closed: the game was not running at session start
+  (last live run ended 19:13) and was relaunched from
+  the App Store search result for "last war:survival",
+  where Last War:Survival shows an Open button; the
+  installed app name reads LastWar (bundle
+  com.lastwar.ios). Direct open_app name guesses
+  failed before that route worked.
+- Live phase read: Drone Boost, Contest Segment
+  Lv.29-30, first unit of this phase. Phase started
+  about 18:04, ends about 22:04. Time left 02:19:55 at
+  entry, 02:15:05 at the close of the sweep. Live
+  score 10,000, segment rank 9, combined rank 2110.
+  Point chest thresholds 1,500 / 10,000 / 30,000
+  (ruby tags 2,360 / 4,800 / 11,800), matching the
+  1015 and 0609 Drone Boost reads. Scoring rows read
+  live: Use 10 Drone Battle Data points +1; Use 1
+  Stamina +100; Buy Packs containing Diamonds +30 per
+  diamond (red line, never used).
+- Point chests claimed, claim-by-tap as on
+  2026-10-26: one tap on the tier 2 chest claimed
+  tiers 1 and 2 together. Contents read live from the
+  CONGRATULATIONS popup, combined: Skill Medal 600,
+  Arms Race Badge 3, Coin Chest (SR) 12, Food Chest
+  (SR) 12, Iron Chest (SR) 12, 5m Speed-up 28. Tier 3
+  (30,000) stays locked: score 10,000, gap 20,000,
+  equal to 200 stamina at +100 each, or 200,000 Drone
+  Battle Data points at +1 per 10.
+- Cumulative counter chest: read 0/2 at entry. After
+  the two point-chest claims it read 3/2 and was
+  claimable; one tap claimed it. Contents read live:
+  gold ticket item 1, pink puzzle items 2, red gem
+  tagged 50 x1. Identical to the 2026-10-26 cumulative
+  claim. After the claim it reads 3/8, purple,
+  partial, not claimable. Progress carries past the
+  claimed tier into the next tier (8), as recorded
+  2026-10-26. Kept as a per-page read, not merged
+  with other pages' cumulative reads.
+- Stamina, measured live in the REGAIN STAMINA panel:
+  27/120 at panel entry, regen 1 per 300 seconds,
+  fully replenished in 07:43:49. Free Claim: 75
+  Stamina, cooldown 4 hr, Remaining Today 2/2. The
+  Free Claim was taken in this unit (toast "you've
+  acquired 75 Stamina x1"), so stamina stood at about
+  102 after the claim plus regen ticks. The 100
+  Stamina Buy row (300 diamonds) was read only, not
+  tapped. Inventory stamina items read live, not
+  opened: 10 Stamina owned 638, 50 Stamina owned 633.
+  No item was opened because no scoring sink was
+  executed in this unit (see below); the items stay
+  for later units.
+- Drone screen, reached from the phase page "Use 10
+  Drone Battle Data points" row arrow: TACTICAL DRONE,
+  Lv.130, Critical Upgrade Stage 4/5, power 5,805,119,
+  Drone Battle Data 5.55M/42.00K, parts 301/400,
+  Upgrade button shown green. Drone Upgrade method
+  blocked (rule R2): two taps on the Upgrade button
+  at its measured centre produced no change at all
+  (power, data and parts counts identical on the
+  re-reads). Per R2 the method ends inside this unit;
+  no third tap was made, and no click_element
+  alternative exists on this canvas screen. Whether
+  the button is gated by the 301/400 parts count or
+  by background-click delivery is unverified and is
+  left for the next phase unit to test from the
+  foreground path if it retries; see Open questions.
+- Stamina sink not executed in this unit: the
+  remaining stamina-spend sinks (radar tasks, doom
+  work) belong to their own regulars under the
+  one-unit-one-type rule, and radar stored tasks read
+  0/40 at the last radar unit anyway. No radar or doom
+  work was done here.
+- Completion sweep: ranking-row chest tapped,
+  contents preview only, as expected while the phase
+  is live: Iron Chest (SR) 3, Food Chest (SR) 3, Coin
+  Chest (SR) 3 at segment rank 9, matching the 1412
+  rank-9 preview exactly. Per the standing rule this
+  reward is claimed after the phase ends, so the run
+  after the 22:04 phase roll must check for it. No
+  bouncing chest or reward red dot remained on the
+  Arms Race page at close, apart from the not-yet-full
+  cumulative counter at 3/8.
+- Events hub tabs seen at entry: Arms Race, Desert
+  Battlefield, General's Trial, and a further tab cut
+  off at the right edge. No Zombie Invasion tab,
+  consistent with the 2026-10-30 chain close, so no
+  zombie chain was seeded.
+- Handover: the 2203 slot unit is the last unit
+  inside this phase (R6 window); stamina spends by
+  radar and other regulars before 22:04 also score
+  here at +100 each, and the drone Upgrade tap method
+  needs a changed approach before it is retried.
+- Red lines held: no diamonds or money spent, no
+  speedup burned, no stage swap, no research or
+  building started, no Buy button tapped.
+
+## What the 2026-11-04 0019 unit added - Hero Advancement score 0, hero detail blocked, swipe-back pivot
+
+- Unit arms-race-2026-11-03-2203 by ticker-0004,
+  about 00:04 to 00:19 local, status partial. No
+  diamonds or money spent, no speedup burned, no
+  stage swap, no research or building started, no
+  recruitment made, no hero levelled, no chest
+  claimed. Evidence in
+  `_records_/2026-11-04/arms-race/0019-queue-run.md`.
+- Session start: the game was left on an Alliance
+  Techs detail panel (Rallied Attack 7/10, Tech EXP
+  16.6K/4.5M, Donation Count 3/30 - the
+  short-interval replenishment read folded into the
+  alliance-donations profile). The detail panel and
+  the tech list were closed without donating:
+  donations belong to their own unit under the
+  one-unit-one-type rule. The Alliance screen back
+  arrow needed two taps before it returned to the
+  base.
+- Live phase read: Hero Advancement, Contest
+  Segment Lv.29-30, time left 01:52:03 at entry,
+  phase ends about 02:04 local - the phase window
+  following the 1945 Drone Boost phase (ended about
+  22:04), consistent with the four-hour rotation.
+  Live score read: 0, from the star bar at the top
+  left of the phase page. Point chest thresholds:
+  2,000 / 4,000 / 12,000 (ruby tags 2,360 / 4,800 /
+  11,800), identical to the 1021 same-segment read.
+  Scoring rows read live: 1 Hero Recruitment +400;
+  Use at least 2,000 Hero EXP at a time +1; Buy
+  Packs containing Diamonds +30 per diamond (red
+  line, never used). Cumulative counter chest at
+  the top left: 3/8, partial, not claimable.
+  Ranking row read: segment rank 10, combined
+  #2110 [AP3x]Bears Lair, row figure 10,000. The
+  row figure is NOT used as the score: all three
+  point chests showed locked and one tap on the
+  tier 1 chest produced no change, consistent with
+  a live score of 0. The row figure's provenance is
+  still unexplained; the 1021 / 0609 lag pattern is
+  the standing hypothesis for such figures, not a
+  proven account of this read.
+- Navigation blockers and pivot (rule R2): the
+  Events screen back arrow took two background
+  taps with no change, and the Recruit screen back
+  arrow likewise took two taps plus a re-centred
+  tap with no change. Both methods ended inside
+  this unit per R2. Pivot that worked: a left-edge
+  swipe drag (from x 15 to x 500 at mid height)
+  returned from the Recruit screen to the base.
+  This swipe-back is the changed method for the
+  next unit when a back arrow does not respond.
+- Wrong-row tap, no action taken: one tap intended
+  for the Hero EXP scoring row arrow opened the
+  Recruit screen instead (Recruitment Timer 3d
+  17:50, Recruit x1 Free shown). Nothing was
+  recruited; the screen was left via the swipe
+  above.
+- Hero level-up not executed: from the base,
+  HEROES opened the Hero List. The bottom-right
+  card read Lv.124 (the level Adam reached in the
+  2026-11-02 Hero Advancement unit); the list shows
+  no names, so the card is not confirmed as Adam,
+  and Adam levelled to Lv.125 in the 1021 unit, so
+  this card is not assumed to be Adam. Two taps on
+  that card at its measured centre produced no
+  change, and one long-press variant also produced
+  no change. The hero detail was never opened, so
+  no EXP was spent and no level-up was executed.
+  This is the unit's closing blocker. Tier 3
+  (12,000) therefore stays unmet: gap 12,000, score
+  0, recorded as a missed target in this unit per
+  the standing rule.
+- Events hub tabs seen at entry: Arms Race, Desert
+  Battlefield, General's Trial, and a further tab
+  cut off at the right edge. No Zombie Invasion
+  tab, consistent with the event close of
+  2026-10-30.
+- Follow-up: the next arms-race unit in this phase
+  (ends about 02:04 local) should retry the hero
+  detail with a changed method - a class tab
+  filter, a different card, or a foreground tap
+  path - and then level one hero with EXP only, per
+  the 2026-11-02 precedent cited in the record. If
+  the hero detail still does not open, the blocker
+  must be written into the activity metadata per
+  rule R2; see the open question added by this
+  fold.
+- Red lines held: no diamonds, money, speedups,
+  skill medals or hero shards spent; no
+  recruitment, no pack purchase, no other
+  activity's work done from this unit.
+
+## What the 2026-11-04 0307 unit added - Tech Research phase verdict, tier 3 unreachable inside the red lines, partial
+
+- Unit arms-race-2026-11-04-0203 by ticker-0304, about 03:04 to 03:07 local, status partial. No diamonds or money spent, no speedup burned, no stage swapped, no research or building started, no chest claimed, no scoring action executed. Evidence in `_records_/2026-11-04/arms-race/0307-queue-run.md`.
+- Live phase reading (rule R4, first unit of the phase): Tech Research, Contest Segment Lv.29-30, time left 02:53:57 at entry, phase ends about 05:58 PST. Score read live: 0, from the star bar at the top left of the phase page. Chest thresholds read live: 6,250, 12,500 and 30,000, ruby tags 2,360, 4,800, 11,800. Tier-3 gap: 30,000. Scoring rows read live: Increase Tech Power by 1pt +1; Use 1-min Research Speed-up +10; Buy Packs containing Diamonds +30 per diamond. The speedup and pack paths are red lines and were not used.
+- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the lagging previous-phase row (same figure as the 0019 Hero Advancement record) and was NOT used as this phase score - the same lag pattern as the 0019 unit, re-confirmed, not a new contradiction.
+- Research queue read (the R4 judgment): entered from the base screen via the left-side flask queue icon - the Research Queue panel opened on the first tap, and this flask-icon route is the route for future queue reads, not the scoring-row jump. Lv.3 Weapon Training VIII, upgrade in progress, Time Left 1d 15:14:44 at the screenshot read. Lv.3 Defense Training VIII, upgrade in progress, Time Left 1d 11:12:03 at the screenshot read. Both completions land more than a day after this phase ends, so no research completion lands inside this phase window. The only in-scope scoring path (Tech Power from a completion) therefore cannot score in this phase, and the other two paths are red lines.
+- Judgment: tier 3 (30,000) is unreachable in this phase inside the red lines. This is the phase's R4 verdict; later units in this phase need only re-read the score and chests, not re-litigate the queue read, unless a research timer changes.
+- Completion sweep: no point chest earned - score 0 is below the 6,250 first threshold, so nothing was claimed. Nothing earned was left unclaimed. Cumulative counter chest at the top left reads 3/8, partial, not claimable, no bounce. Ranking row chest tapped once: no visible change, no preview and no claim. Nothing claimed from it. No bouncing chest or reward red dot remains on the Arms Race page.
+- Sweep caveat, recorded not smoothed over: the Events hub re-scan after the sweep was not completed - the swipe-back from the phase page went straight to the base screen, bypassing the hub. The phase page itself shows no unclaimed reward, but the hub was not re-checked in this unit.
+- Method notes (rule R2): Events tab bar - one drag to the right revealed the Arms Race tab, and the next tap opened the phase page (same pivot as prior units). Phase page back arrow failed again: one tap at norm 93,946 left the Arms Race page unchanged, matching the 2026-11-02 2209 record. Pivot that worked: a left-edge swipe drag (from x 15 to x 500 at mid height) returned from the phase page to the base screen, matching the 0019 swipe-back. This swipe-back stays the changed method when a back arrow does not respond.
+- Follow-up: status partial. Tracker left untouched; the next tick re-produces the regular, but the R4 verdict above stands for this phase. Result stats: target 30000, achieved 0, points 0, chests_claimed 0, scoring_actions 0, verified yes, blocker_category f (missing precondition, no research completion inside the phase window).
+
+## What the 2026-11-04 0722 unit added - Base Building phase verdict, tier 3 unreachable inside the red lines, partial
+
+- Unit arms-race-2026-11-04-0603 by ticker-0706, about 07:19 to 07:22 local, status partial, device session cc-427. No "active on a different device" dialog appeared. No diamonds or money spent, no speedup burned, no stage swapped, no research or building started, no chest claimed, no scoring action executed. Evidence in `_records_/2026-11-04/arms-race/0722-queue-run.md`.
+- Live phase reading (rule R4, first unit of the phase): Base Building, Contest Segment Lv.29-30, time left 02:39:03 at entry, phase ends about 10:05 PT. This is a new phase instance, not a continuation of the 2026-11-03 Base Building phase (0228 tier 1 claimed, 1412 top threshold met) - that phase's outcomes do not carry into this one. Score read live: 0, from the star bar at the top left of the phase page. Chest thresholds read live: 6,250, 12,500 and 30,000, ruby tags 2,360, 4,800, 11,800 - the same thresholds and tags as the 0307 Tech Research phase, so the threshold set does not vary by phase in this segment. Tier-3 gap: 30,000. Scoring rows read live: Increase Building Power by 1pt +1; Use 1-min Construction Speed-up +10; Buy Packs containing Diamonds +30 per diamond. The speedup and pack paths are red lines and were not used.
+- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the lagging previous-phase row (same figure as the 0307 Tech Research record and the 0019 Hero Advancement record) and was NOT used as this phase score - the lag pattern is now re-confirmed a third time, not a new contradiction.
+- Building queue read (the R4 judgment): entered from the base screen via the left-side hammer queue icon, grounded fresh at norm (55,179) on the base screenshot. One earlier tap at (55,182) taken from the post-Events screen landed on the world map instead and was corrected by returning via the BASE button and re-grounding - grounding must be taken from the current screen, never carried across screens. Lv.29 Aircraft Center upgrade in progress, Time Left 8d 05:03:48 at the screenshot read. Lv.26 Drill Ground upgrade in progress, Time Left 5d 01:41:58 at the screenshot read. Two further queue slots Idle. Starting a new building is a red line and was not done.
+- Judgment: both completions land days after this phase ends, so no building completion lands inside this phase window. The only in-scope scoring path (Building Power from a completion) therefore cannot score in this phase, and the other two paths are red lines. Tier 3 (30,000) is unreachable in this phase inside the red lines. This is the phase's R4 verdict; later units in this phase need only re-read the score and chests, not re-litigate the queue read, unless a building timer changes.
+- Completion sweep: no point chest earned - score 0 is below the 6,250 first threshold, so nothing was claimed. Nothing earned was left unclaimed. Cumulative counter chest at the top left reads 3/8, partial, not claimable, no bounce. No bouncing chest or reward red dot was visible on the Arms Race page at entry. Sweep caveats, recorded not smoothed over: the page was not re-scanned after the queue read (nothing changed on it in between, so the entry sweep stands), and the Events hub re-scan after the sweep was not completed - the same caveat as the 0307 unit.
+- Method notes (rule R2): the Events tab bar needed one drag to the right to reveal the Arms Race tab (dragging left reached the end of the bar without showing it), matching the 0307 record. The phase page back arrow behaviour is not re-tested in this unit; the 0019/0307 swipe-back (left-edge swipe drag) stays the changed method when a back arrow does not respond.
+- Follow-up: status partial. Tracker left untouched; the next tick re-produces the regular, but the R4 verdict above stands for this phase. Result stats: target 30000, achieved 0, points 0, chests_claimed 0, scoring_actions 0, verified yes, blocker_category f (missing precondition, no building completion inside the phase window).
+
+## What the 2026-11-04 1025 unit added - Unit Progression phase verdict, tier 3 reachable only through the training regular, partial
+
+- Unit arms-race-2026-11-04-1003 by ticker-1004, about 10:12 to 10:26 local, status partial. First unit inside the new phase, so this record carries the phase verdict per rule R4. Evidence in `_records_/2026-11-04/arms-race/1025-queue-run.md`. No diamonds spent, no speedup burned, no stage swapped, no research or building started, no scoring action executed, no chest earned, nothing claimed.
+- Live phase reading: Unit Progression, Contest Segment Lv.29-30. Time left at entry 03:44:34, phase ends about 14:10 local. This is a new phase instance, not a continuation of the 0722 Base Building phase (which ended about 10:05) - that phase's outcomes do not carry into this one. Score read live: 0, from the star bar at the top left of the phase page. Chest thresholds read live: 15,000, 30,000 and 75,000, ruby tags 2,360, 4,800, 11,800 - matching the 2026-10-25 Unit Progression read. Tier-3 gap: 75,000.
+- Scoring rows read live: Train a Lv.10 unit +31; Use 1-min Training Speed-up +10; Buy Packs containing Diamonds +30 per diamond. The speedup and pack paths are red lines and were not used.
+- Ranking row figure 10,000 for #2110 [AP3x]Bears Lair is the lagging previous-phase row (the same figure as the 0722 Base Building record) and was NOT used as this phase score - the lag pattern is re-confirmed again, not a new contradiction.
+- Judgment (rule R4): tier 3 is reachable in principle only through the training path - points score when a training batch is queued, and the training queues belong to the training regular, which has its own queued unit (training-2026-11-04-1003). Under one-unit-one-type, this arms-race unit does not queue troops itself; the next arms-race unit re-reads the score after the training unit runs and judges again from that read. At this run's cutoff no record for that training unit had landed, so the re-read is still pending, not assumed.
+- Completion sweep: cumulative counter chest at the top left of the phase page 3 of 8, progress bar partial, not bouncing, not claimable - the same 3/8 read as the 0722 phase page and the 0843 event-claims sweep, kept as a per-page read. Ranking row chest present but, per standing knowledge, preview-only while the phase is live; no red dot and no bouncing animation observed on it. Events tab bar: no red dot observed on the Arms Race tab. No bouncing chest or reward red dot remains unopened on the Arms Race page.
+- Navigation note, cross-unit: the unit opened with the game on a world-map Doom Elite card left open by the previous radar unit. Taps to dismiss it selected alliance member base cards instead (HiveMinded, then Lost Boyz) - no Set Off or march button was tapped on either. A map drag returned the view to the world map, and the BASE button returned to the base interior; Events then opened normally. The Doom Elite pin march from the radar unit is still pending and is untouched by this unit. March Queues read 1 of 4 on the world map during this navigation; that march is not this unit's - no march was launched from either unit in this pass - and its owner is not established from this screen, so it is recorded as read, not attributed.
+- Tracker untouched for partial, per the queue rules; the next tick re-produces this regular, but the R4 verdict above stands for this phase unless the training-unit re-read changes the score.
+
+## What the 2026-11-04 1604 unit added - screen-capture failure, eighth consecutive pass, nothing read
+
+- Unit arms-race-2026-11-04-1403 by ticker-1604, about 16:04 to 16:20 local, status failed. Evidence in `_records_/2026-11-04/arms-race/1604-queue-run.md`. No diamonds spent, no scoring action executed, no chest claimed.
+- No game screen was ever read and no game input was dispatched. Computer session cc-468: open_app Last War failed to match, while list_apps showed the running app as LastWar (com.lastwar.ios, pid 59735, target window Last War). Computer.control activate on LastWar twice and computer.observe (compact and image) twice all failed with the same error: "Failed to start stream due to audio/video capture failure". The window was never brought to the front and no observation was ever captured, so no tap or other input was sent blind. LastWar was running fullscreen 1920x1080 and Google Chrome was frontmost, and the Mac mini was online.
+- Recurrence, not a new failure class: this is the eighth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434, ticker-1504 donations 1504, ticker-1534 radar 1534, ticker-1604 arms-race 1604), now across eight activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the seventh and eighth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 16:04 was not read and is not asserted here.
+- Follow-up, carried forward: the blocker is now eight passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-04 1934 unit added - screen-capture failure, fifteenth consecutive pass, nothing read
+
+- Unit arms-race-2026-11-04-1803 by ticker-1934, about 19:34 to 19:37 local, status failed. Evidence in `_records_/2026-11-04/arms-race/1934-queue-run.md`. No diamonds spent, no scoring action executed, no chest claimed.
+- No game screen was ever read and no game input was dispatched. Computer session cc-481: activate selected the LastWar window for background input but captured no observation, with the error "Failed to start stream due to audio/video capture failure"; observe (compact view) failed with the same error twice and describe failed with the same error; after a connection repair (web transport reported healthy on both transports) observe failed with the same error again. A fresh session (cc-482, after ending cc-481): open_app LastWar returned outcome_unknown (launch result unverifiable, not repeated) and observe (compact view) failed with the same error. LastWar was running fullscreen 1920x1080 and Google Chrome was frontmost, and the Mac mini was online.
+- Recurrence, not a new failure class: this is the fifteenth consecutive ticker pass to fail on this exact blocker, per the record. The two preceding occurrences were folded by the 1932 organizer run (ticker-1834 events 1834, thirteenth; ticker-1904 radar 1904, fourteenth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; the ticker pass commented on #284, and this run comments the fifteenth occurrence onto #282. No duplicate issue is filed.
+- Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 19:34 was not read and is not asserted here.
+- Follow-up, carried forward: the blocker is now fifteen passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.

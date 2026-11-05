@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-01T07:26:52Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.8.1
+version: 1.28.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,24 @@ grounded_in:
   - source: evening dispatch and plunder executions on the new server day, 2026-10-25
   - source: owner standing rule on non-UR day dispatch - SR or above only, ticket refreshes authorized until reached, 2026-10-26
   - source: owner rule on daily truck quotas - dispatch 5 and plunder 4 every trade day, note it in the metadata and resolve misses, 2026-10-30
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1053 trucks unit)
+  - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1352 trucks unit)
+  - source: incidental trucks-view read in the alliance-train execution record 2026-11-01 1813 queue run (not a trucks unit)
+  - source: daily retro 2026-11-01, trucks 1457 expiry and counter tension (issues 147 and 148)
+  - source: ticker-2212 trucks execution record 2026-11-01 2231 queue run
+  - source: ticker-0104 truck-plunder execution record 2026-11-02 0114 queue run (partial, trade-screen entry blocker)
+  - source: ticker-0404 truck-plunder execution record 2026-11-02 0416 queue run (partial, trade entry corrected)
+  - source: ticker-0934 truck-plunder execution record 2026-11-02 0935 queue run (partial, dispatch quota filled, plunder shortfall 2 remains)
+  - source: ticker-1307 truck-plunder execution record 2026-11-02 1325 queue run (partial, leftmost shard stack x3 pays in full, plunder shortfall 1 remains)
+  - source: ticker-2104 truck-plunder execution record 2026-11-02 2120 queue run (partial, station-tap entry, counters 4/5 and 4/4, fifth dispatch shortfall)
+  - source: ticker-2334 truck-plunder execution record 2026-11-02 2347 queue run (partial, station-tap entry failed, counters not read)
+  - source: ticker-0334 truck-plunder execution record 2026-11-03 0344 queue run (partial, station-tap entry failed again, grounding mislabels Furnace and Wall)
+  - source: ticker-0334 secret-missions execution record 2026-11-03 0346 queue run (done, unsnapped exact-centre entry lesson; incidental live trade counters 4/5)
+  - source: ticker-1204 truck-plunder execution record 2026-11-03 1211 queue run (done, trade quota 5 of 5 and plunder quota 4 of 4 full, UR dispatched as rolled)
+  - source: ticker-1834 truck-plunder execution record 2026-11-03 1846 queue run (partial, new trade day 0 of 5 and 0 of 4 at 18:34 entry, 3 dispatches, 2 plunders, trade counters reset with the about-18:00 rollover, Issue #242 follow-up)
+  - source: ticker-0234 truck-plunder execution record 2026-11-04 0242 queue run (done, quotas full at entry, WORLD-corner entry route)
+  - source: ticker-0534 truck-plunder execution record 2026-11-04 0538 queue run (done, quotas full at entry, badged vehicle icon entry, WORLD-corner route qualified)
+  - source: ticker-0834 truck-plunder execution record 2026-11-04 0845 queue run (done, quotas full 5/5 and 4/4 at entry, trade-icon grounding mislabel opens Secret Command Post)
 ---
 
 # Truck plunder - Intercity Trade
@@ -65,6 +83,41 @@ train also runs on this screen as a trade vehicle.
   was confirmed by the screen it opened. Icon centres in the
   642 by 951 window sat near norm y 605 (trade), 657 (secret post)
   and 720 (radar) in that set.
+- Station-building entry, measured 2026-11-02 (2120 unit):
+  with the column set carrying no trade slot (green face /
+  pickup / dish / hammer), fresh visual grounding put the
+  station building at norm 352-630 x 105-285, and a tap at
+  its centre [491,195] opened Intercity Trade directly on
+  the Others' Trucks view, with no settlement pending.
+  Use this route before hunting the column set flip when
+  the column carries no trade slot.
+- Station-tap qualification, 2026-11-03 (0344 unit): the
+  [491,195] station tap is no-change for the second
+  consecutive trucks unit after 2347, so it must not be
+  re-tapped blindly. Fresh grounding in the same unit
+  mislabelled buildings as the station: [488,378]
+  selected High-temp Furnace Lv.30, [637,170] selected
+  Wall Lv.26 with the same unidentified two-button popup
+  (home icon, up arrow) seen at 2347, and [357,200] was
+  no-change. Do not re-tap [491,195], [488,378],
+  [637,170] or [357,200] blindly. Next variant, from the
+  same pass (see the 0344 section below): an unsnapped
+  exact-centre tap on the trade icon, not a snapped tap
+  on a grounded station point - snapped taps in the left
+  column mis-route, as the 0346 secrets unit proved.
+- Working entry route, 2026-11-03 (0821 unit): on the
+  current base framing, the left-column icon at norm
+  53,555 - the speech-bubble icon above the truck slot
+  in that set - opened Intercity Trade directly. This
+  route was not tried in the 0344 unit and resolves the
+  entry blocker tracked as Issue #218; the next unit
+  reopens the trade screen by this route first. The
+  truck icon at norm 53,657 opened Secret Command Post
+  (Secret Mobile Squad, Your Tasks, Mega Refresh and
+  Mega Deploy buttons - none tapped), not trade: do not
+  use it for trade entry. The old station points from
+  the 0344 unit were not re-tapped. Detail in the 0821
+  section below.
 - The screen opens on Others' Trucks. Bottom tabs switch between
   Others' Trucks and Your Truck. A refresh button at top right
   rerolls the plunder list, and History shows past trades and fights.
@@ -79,6 +132,24 @@ train also runs on this screen as a trade vehicle.
   2026-10-31 truck record notes background input reaching the
   game throughout, so foreground is a pivot variant, not a
   claim that background input never works.
+
+- 2026-11-03 1211 unit: the badged vehicle icon at norm
+  55,589 opened Intercity Trade on the first tap, on the
+  Others' Trucks view. This settles the stale-window
+  question left by the 2026-10-30 evening units: the icon
+  they found dead opens the trade screen when it carries
+  a badge. Find it by the badge and the vehicle-front
+  glyph, not by a fixed point - the column set rotates.
+- 2026-11-03 1846 unit: the same badged vehicle-front icon
+  at norm 54,568 opened Intercity Trade directly on the
+  Your Truck view on the first tap, confirming the 1211
+  route a second time at a nearby point in a different
+  column set (hammer 2/4, flasks 1/2, green face, badged
+  vehicle-front, white pickup badge 9, radar dish badge 4,
+  hammer, chest). Find it by badge and glyph, not by a
+  fixed point.
+
+- Working entry route, 2026-11-04 (0242 unit): when the left-column vehicle-front icon carries NO badge, it does not open trade - a tap at norm 54,568 only panned the base map and a tap at the grounded centre 55,578 did nothing, matching the 2026-10-30 evening no-badge pattern. The route that worked: a tap at norm 913,940, on the bottom-right WORLD corner of the base screen, opened Intercity Trade directly on the Others' Trucks view. Next trucks units try this WORLD-corner route first when the column icon carries no badge. The mechanism (why that corner opens trade) is unverified, only the observed result. Do not re-tap the station building at 592,189 blindly: it produced no change in this framing, a third framing failure for station taps after 2347 and 0344. Detail in the 0242 section below.
 
 ## How it is done - dispatching
 
@@ -185,6 +256,14 @@ train also runs on this screen as a trade vehicle.
   matters - a shard on the right side of the cargo row is much
   easier to win, while a shard in the leftmost or second from left
   slot is hard to plunder.
+- 2026-11-02 1325 qualification, in favour of the newest verified
+  record: a lone leftmost shard stack is NOT a no-go when the
+  guard is trivial and the quota is short - the 1325 Quick Plunder
+  against SSR #2092 [OOPz]hawk237 (Lv.25, guard 5.5M) won the full
+  leftmost purple 500 UR shard stack x3. Position still governs
+  probability, but it no longer disqualifies a trivial-guard target
+  when the day's plunder quota is unfilled; take it rather than
+  leaving the quota short.
 - If no suitable target is on the road, tap the refresh button at
   the top right of the Others' Trucks screen to reroll the list and
   check again, repeating until a suitable target appears.
@@ -213,7 +292,18 @@ train also runs on this screen as a trade vehicle.
 - Every trade day, fill both counters in full - dispatch trucks
   until Today's Trade Count reads 5 of 5, and plunder until Your
   Plunder Count Today reads 4 of 4. The trade day follows the
-  server day and resets at 19:00 local with the duel day. These
+  server day and resets at the same absolute boundary as the
+  duel day: 02:00 UTC, about 18:00 local in PST (19:00 local in
+  PDT before the 2026-11-02 daylight-saving end). CORRECTED
+  2026-11-03 1846 (Issue #242 follow-up): the 1846 unit entered
+  at 18:34 local reading Today's Trade Count 0/5 and Your
+  Plunder Count Today 0/4, live on screen, after the 1211 unit
+  had closed the same counters at 5/5 and 4/4 at 12:11 - the
+  reset had already happened by 18:34, so the standing 19:00
+  local wall-time reading cannot stand. The 19:00 references in
+  the dated sections below (including the 1211 section's
+  "ends at 19:00" framing) are superseded in the same sense
+  and stand as history only. These
   are quotas to fill, not caps to stay under.
 - Every trucks unit reads both counters on entering the trade
   screen and works the shortfall in this order - settle returned
@@ -273,6 +363,73 @@ train also runs on this screen as a trade vehicle.
   settlement first; if none, look for the trade
   entry on the World map or via the station area
   instead of re-tapping the train icon.
+  Correction 2026-11-01 (0124 unit, below): this hypothesis is
+  superseded - the trade slot entered with no returned truck
+  pending. Availability follows the icon set, not settlement
+  pending; the train-icon set above still carries no trade slot.
+
+- Entry and dispatch, 2026-11-01 0124 unit (ticker-0104,
+  window mode 642x951, no different-device dialog). Duel day
+  7, Off day settlement, so non-UR rules apply: dispatch SR
+  or above, plunder UR or SSR with guard below Squad 1 at
+  24.96M. Outcome partial: three trucks dispatched, quota
+  shortfall carried forward.
+- Trade entry, corrected in-unit: a fresh crop of the left
+  column shows the blue delivery-truck icon with red badge 4
+  above the white pickup (Secret Command Post, badge 9) and
+  the radar dish (badge 4). A tap at norm 55,630 snapped to
+  the pickup and opened SECRET COMMAND POST instead; no
+  secrets work was done there, and the screen was backed out
+  at once. The retry used the freshly measured truck centre
+  norm 55,596 with snap off, and the Intercity Trade screen
+  opened. Lesson carried forward: the truck centre sits near
+  norm y 596 in this icon set, and a snapped tap near 630
+  lands on the pickup. Re-ground the centre every unit - the
+  column shifts between sets and between days, and the
+  2026-10-30 centres (53,555; 52,620; 55,582) do not transfer.
+- Live counters on entry, current trade day (reset 19:00 on
+  2026-10-31): Today's Trade Count 0/5, Your Plunder Count
+  Today 1/4. Your Truck yard held four empty slots, no
+  returned truck to settle, so the order was dispatch first
+  (settle first, then dispatch, then plunder - with nothing
+  to settle, dispatch leads). The 1/4 plunder figure was
+  already on the counter at entry; its actor is unrecorded
+  in the unit and is not attributed here.
+- Dispatch 1: rolled UR as rolled, cargo iron 3.8M, food
+  3.8M, coin 2.4M, arrives in 04:04:31, Escort Squad 1. First
+  Let's Go tap at norm 335,925 missed low and closed the
+  panel without dispatching; the panel was reopened and
+  Let's Go tapped at its measured centre norm 340,875, and
+  the count moved to 1/5 with a gold truck on the road. No
+  refresh spent. Note the distinct centres: Let's Go at
+  340,875 is not the truck-panel dice centre (810,417).
+- Dispatch 2: rolled N, free refresh to R, then a 1 Trade
+  Contract refresh to UR (stock 156 to 155), cargo 3.8M,
+  3.8M, 2.4M, arrives in 04:29:12, Escort Squad 3. Let's Go
+  at norm 340,875 moved the count to 2/5.
+- Dispatch 3: rolled N, free refresh to SR (blue), cargo
+  iron 2.5M, food 2.5M, coin 1.6M, arrives in 04:21:54,
+  Escort Squad 2. Let's Go at norm 340,875 moved the count
+  to 3/5. No contract spent on this truck.
+- Close of unit, live counters: Trade Count 3/5, Plunder
+  Count 1/4 (plunder not attempted in this unit - the pass
+  budget closed first). One empty slot remains, plus the
+  fifth dispatch after a truck returns. Shortfall carried
+  forward: dispatch 2 more, plunder 3 more, before the
+  19:00 deadline. Tracker untouched; the next trucks unit
+  resumes the same shortfall.
+- Correction to the 2026-10-30 evening hypothesis above:
+  the trade slot does NOT surface only while a returned
+  truck awaits settlement. The 0124 unit entered with four
+  empty slots and nothing to settle, in a set carrying the
+  blue delivery-truck icon above the pickup. The 2026-10-30
+  evening observation stands only as a description of its
+  own set (green face / train / pickup / dish / hammer
+  carries no trade slot); it is not a general availability
+  rule. When the trade slot is absent from the visible set,
+  the set - not settlement pending - is what to investigate
+  first.
+
 
 ## Scope and availability
 
@@ -364,14 +521,1083 @@ settlement and dispatch execution record).
   only, guard below Squad 1 power, shards plentiful and right sided.
   Do not plunder alliance mates, and stop at the daily cap.
 
+
+## What the 2026-11-01 1053 unit added
+
+- Unit trucks-2026-11-01-0657 by ticker-1034, session
+  about 10:40 to 10:53, status partial. Duel day 7, Off
+  day settlement, so non-UR rules apply: dispatch SR or
+  above, plunder UR or SSR with guard below Squad 1 at
+  24.96M. No different-device dialog.
+- Entry, re-grounded fresh in-unit: the blue
+  delivery-truck icon in a speech bubble with red badge 3
+  sits above the white pickup and the radar dish; its
+  measured centre norm 52,571 opened Intercity Trade at
+  once with snap off. Foreground first: an observe call
+  had flipped the target to a frontmost Chrome window, and
+  a title-bar left-segment tap at norm 180,15
+  re-foregrounded the game before the trade tap. This is
+  the foreground pivot variant of the 2026-10-31 retro
+  note, not a new rule.
+- Live counters, current trade day (reset 19:00 on
+  2026-10-31, ends 19:00 today): Today's Trade Count 3/5,
+  read on the Your Truck tab, and Your Plunder Count
+  Today 1/4, read on the Others' Trucks tab. These match
+  the 0124 unit close exactly, so no counter moved between
+  the two units and no contradiction stands. Your Truck
+  road view showed the three trucks dispatched at 01:24
+  still on the road (two gold, one blue - the UR, UR and
+  SR dispatches of the 0124 unit) plus one empty dashed
+  slot with a plus sign. No returned truck was presented
+  for settlement; tapping a truck body opened no details
+  card, same as the 2048 unit.
+- Dispatch, blocked on the slot tap - audit class c, a
+  tap-method blocker, not a red-line miss: the empty-slot
+  plus sign was tapped at norm 714,414 and 714,418 (two
+  no-change taps), then at 714,460, then double-clicked
+  at 714,418 - every tap showed no change on the second
+  observation. No dispatch panel opened, so no roll, no
+  refresh and no Trade Contract was spent, and no truck
+  was dispatched in this unit. This refines the standing
+  "tap a free slot plus sign" step: those points, in the
+  current window, did not open the panel. The next trucks
+  unit must arrive with a changed method (a
+  foreground-first tap, or a re-measured slot point in
+  the current 763 by 1050 window) rather than repeating
+  these points. The window geometry itself is new against
+  the standing 642 by 951 window - coordinates here are
+  norm, so they transfer in proportion, but slot points
+  must still be re-measured fresh each unit.
+- Plunder was not attempted: the unit budget closed on
+  the dispatch block, so the plunder shortfall stands.
+  Outcome partial, counters unchanged at dispatch 3/5
+  and plunder 1/4. Shortfall carried forward: dispatch 2
+  more, plunder 3 more, before the 19:00 deadline.
+  Tracker untouched; the next trucks unit resumes the
+  same shortfall. Nothing paid, no diamonds spent, no
+  Mega Mode used, no alliance mate plundered. Game left
+  on the trade screen, Your Truck tab.
+
+## What the 2026-11-01 1352 unit added
+
+- Unit trucks-2026-11-01-1057 by ticker-1334, session
+  about 13:46 to 14:00, status partial. Duel day 7, Off
+  day settlement, so non-UR rules apply: dispatch SR or
+  above, plunder UR or SSR trucks carrying UR shards with
+  guard below Squad 1 at 24.96M. No different-device dialog.
+- Entry, re-grounded fresh in-unit: the blue
+  delivery-truck icon in a speech bubble with red badge 3
+  sits at norm 48,565 and opened Intercity Trade at once.
+  Slot points shift between units - the 1053 centre
+  52,571 and this 48,565 differ - so re-measure the entry
+  icon fresh each unit, never reuse a prior point.
+- Live counters at entry, current trade day ending 19:00
+  today: Today's Trade Count 3 of 5, Your Plunder Count
+  Today 1 of 4, matching the 1053 unit exactly, so no
+  counter moved between the two units.
+- Dispatch, 1053 blocker closed: the empty-slot plus sign
+  was re-measured fresh at norm 625,440 and opened the
+  truck panel at once. This closes the 1053 tap blocker -
+  the 1053 points near 714 failed in that window, but the
+  step itself works when the point is measured in the
+  current window. The standing rule stands: measure the
+  plus sign fresh each unit, never reuse old points.
+- Rolls in this unit: the panel first rolled R (iron
+  2.0M, food 2.0M, coin 1.2M, Squad 4 escort). A free
+  refresh downgraded it to N (iron 1.2M, food 1.2M, coin
+  810.0K). Two Trade Contract refreshes followed, R then
+  SR, spending 2 contracts (stock 155 to 153). The SR roll
+  (iron 2.5M, food 2.5M, coin 1.6M, arrives in 03:43:56,
+  Squad 4) was dispatched at once with Let's Go, not Mega
+  Mode. Trade Count read live after dispatch: 4 of 5.
+- Plunder, shortfall carried forward: Plunder Count read
+  live 1 of 4, unchanged. First list inspected: SSR
+  #2104 [GOMP]4FINGAZ, Lv.27, guard 15.5M, passed over
+  because its cargo shows no UR shard stacks; a second
+  card, #2091 [OlyM]Conan416, Lv.28, guard 79.6M, passed
+  over as far above Squad 1. The list was refreshed once.
+  On the new list the two purple SSR trucks at the top of
+  the road did not open their cards after two corrected
+  taps (norm 400,225 then 400,240), so no further target
+  could be inspected in this unit. This is a tap-method
+  blocker (audit class c): the next trucks unit must
+  arrive with a changed method for top-of-road trucks
+  (element tap, or a re-measured body centre after the
+  toast banner clears) rather than repeating these points.
+- Outcome partial, counters at close read live: dispatch
+  4 of 5, plunder 1 of 4. Shortfall carried forward:
+  dispatch 1 more and plunder 3 more before the 19:00
+  deadline. Tracker untouched; the next trucks unit
+  resumes the same shortfall. No plunder fought, no
+  alliance mate plundered, no Mega Mode used, no diamonds
+  spent. Game left on the trade screen, Others' Trucks tab.
+
+## Unresolved counter tension - 2026-11-01 1813 incidental read
+
+- The 1813 train unit opened the trucks view by a mis-tap
+  on the left column (see alliance-train 1.8.0) and read
+  Today's Trade Count 0/5 there. That read conflicts with
+  the trucks 1352 close the same trade day (dispatch 4 of
+  5, plunder 1 of 4), and no trucks unit ran between the
+  two reads, so no dispatch, plunder or reset explains a
+  move from 4 to 0 before the 19:00 reset.
+- Second read, same tension: the 1849 final zero sweep read
+  Today's Trade Count 0/5 again on the truck screen at
+  about 18:35, and recorded it as read, not reconciled,
+  against the same 13:52 4/5 read. Two post-1352 reads now
+  show 0/5, both from non-trucks-unit entries, and neither
+  explains a move from 4 to 0 before the 19:00 reset.
+- The 0/5 reads are recorded here as an unresolved tension,
+  NOT as a quota update: the trade-screen counters from
+  trucks units remain the source of truth for the quota,
+  and the standing shortfall stays dispatch 1 more and
+  plunder 3 more before the 19:00 deadline. The next trucks
+  unit must re-read both counters live on the trade screen
+  and explain the discrepancy in its record - whether the
+  mis-tap view showed a different counter, a different tab,
+  or a genuine reset - before any counter is overwritten.
+- Retro addendum, 2026-11-01 daily retro: the unit that
+  could have resolved the tension, trucks 1457, expired
+  unexecuted at 18:57 local (afternoon starvation, not
+  outage - the ticker executed other units through the
+  afternoon), and the sweep fix-ups expired at the
+  19:00 reset with it. The Nov 1 trade day therefore
+  closes with the tension unresolved: dispatch unknown
+  between 0 and 4 of 5, plunder 1 of 4 on the last
+  trucks-unit read. Next trucks unit instruction
+  restated: open on the trade screen first, read both
+  counters live, and name the reconciliation in its
+  record before dispatching or plundering anything.
+  Tracked in retro issue #148; the sweep fix-up
+  expiry in issue #147.
+
+
+
+## What the 2026-11-01 2231 unit added
+
+- Unit trucks-2026-11-01-1857 by ticker-2212, session
+  about 22:21 to 22:31, status partial. Tracker untouched,
+  as partial units do not mark the tracker. Game left on
+  the trade screen, Others' Trucks tab.
+- First trucks unit of the new trade day (began 19:00
+  local), and the counter-tension resolution: at entry,
+  Today's Trade Count 0 of 5, Your Plunder Count Today
+  0 of 4, read live on the trade screen by a trucks unit
+  - the read the retro addendum required. No returned
+  truck awaited settlement - the Your Truck yard held
+  four empty slots. The 0/5 entry counters are the new
+  trade day's reset counters, not a revision of the
+  ended day: the ended day's tension (1352 close 4/5
+  against the 1813 and 1849 incidental 0/5 reads)
+  closed unresolved at the 19:00 reset with trucks 1457
+  expired, and this unit's counters belong to the new
+  day. The old tension is therefore closed as
+  unresolvable for the ended day, not carried as a live
+  shortfall - the live shortfall is this unit's close
+  (see below). Tracked in retro issues #147 and #148;
+  no new issue filed here.
+- Entry re-grounded fresh: the base left column
+  re-grounded from an enlarged crop - the blue
+  delivery-truck icon in a speech bubble with red badge
+  4 sits at norm [55,584] (the 1352 point [48,565] has
+  shifted with the column) and opened Intercity Trade at
+  once. The white pickup below it (badge 8) is the Secret
+  Command Post vehicle, not the trade truck - a
+  look-alike note for the next entry.
+- Dispatch, one truck sent: the first empty-slot plus
+  sign measured fresh at norm [335,442] opened the truck
+  panel at once. The panel rolled SR as rolled - iron
+  2.5M, food 2.5M, coin 1.6M, arrives in 04:11:18, Squad 1
+  escort. The free refresh was deliberately not spent:
+  SR already meets the non-UR day bar. Let's Go raised
+  the expected TIPS dialog (low rarity, free refresh
+  remaining); Confirm departed as rolled, not Mega Mode.
+  No diamonds spent, no Trade Contract spent. Duel-day
+  rule in force: duel day 1, Radar Training (radar
+  release day), so non-UR rules apply - dispatch SR or
+  above, plunder UR or SSR trucks carrying UR shards
+  with guard below Squad 1.
+- Plunder, one fight won: changed method for opening
+  road trucks (R2, after the 1352 top-of-road failures)
+  - the purple SSR truck body centre at norm [545,326]
+  opened its card at once. Target: SSR #2091 [SS12]
+  goobiedog, Lv.27, guard 3.6M (screenshot read; the
+  compact OCR garble "73.6M" is wrong), cargo with two
+  UR shard 500 stacks x3 each on the right side. Guard
+  far below Squad 1 at 24.96M, so the shard rule is met.
+  Quick Plunder, Battle at 25.12M vs 3.66M, Mission
+  Completed. Loot, read live on the victory screen:
+  iron 557.5K, food 557.5K, coin 350.0K, UR badge 500 x6,
+  puzzle piece x1. No alliance mate plundered (the gold
+  [AP3x]Skinner Box train on the road was left alone).
+- Close counters read live: Trade Count 1 of 5, Plunder
+  Count 1 of 4. Shortfall carried forward: dispatch 4
+  more, plunder 3 more before the trade day ends 19:00
+  on 2026-11-02.
+
+## What the 2026-11-02 0114 unit added - entry blocker, partial
+
+- Unit trucks-2026-11-01-2257 by ticker-0104, session
+  about 01:09 to 01:13, status partial: the trade screen
+  could not be entered, so no counter was read live, no
+  truck was dispatched and no plunder was made. Tracker
+  untouched (partial units do not mark the tracker).
+  Blocker category e (repeated blocker, entry method).
+- Column set on this view, re-grounded fresh on the
+  current screenshot, top to bottom: green face, blue
+  bus/train-front icon, white pickup (red badge 8),
+  walkie-talkie (red badge 2), hammer, chest. No icon in
+  the column carries a speech-bubble delivery-truck
+  glyph with a badge in this view, unlike the 22:31
+  unit's [55,584] entry point. This is the column-set
+  flip already recorded for 2026-10-30 evening: the
+  current set carries no trade slot, and the flip
+  control that summons the trade set is still unknown.
+- Taps tried, all with no screen change, and NOT to be
+  repeated by the successor under queue rule R2:
+  [53,595] snapped; [53,555] snapped; [55,584] with snap
+  disabled (the 22:31 unit's successful method);
+  title-bar tap [180,15] followed by [55,584] snap
+  disabled (the 1053 unit's foregrounding variant).
+  Successor instruction from the unit record: try a
+  different entry route first - the World map trade
+  entry or the station area - and re-ground the column
+  from a fresh screenshot before any column tap. If the
+  column set has flipped, identify the flip control
+  before tapping a vehicle icon.
+- Quota carried from the 22:31 unit on 2026-11-01, NOT
+  re-read live here: Trade Count 1 of 5, Plunder Count
+  1 of 4 at that unit's close, trade day ending 19:00 on
+  2026-11-02. Shortfall still open: dispatch 4 more,
+  plunder 3 more before the day ends. Duel posture for
+  this day: Duel day 1, Radar Training (radar release
+  day), so non-UR rules apply - dispatch SR or above
+  only, plunder UR or SSR trucks carrying UR shards
+  with guard below Squad 1.
+  Evidence in `_records_/2026-11-02/truck-plunder/0114-queue-run.md`.
+
+## What the 2026-11-02 0416 unit added - trade entry corrected, quotas 3 of 5 and 2 of 4
+
+- Unit trucks-2026-11-02-0257 by ticker-0404, session
+  about 04:05 to 04:16, status partial: the trade-day
+  quotas are not yet full, so the tracker is untouched
+  (partial units do not mark the tracker).
+- ENTRY CORRECTION, in favour of the newest verified
+  record, superseding the 0114 section above: in this
+  column set the train-front icon IS the trade entry.
+  The column was re-grounded fresh on the live base
+  screenshot - green face [54,493], light-blue
+  train-front icon [52,552], white pickup [54,617] -
+  and the route that worked was a title-bar tap
+  [180,15] first, followed by a tap on the freshly
+  grounded train-front centre [52,552], which opened
+  Intercity Trade at once. Correction to the 0114
+  record and to the 2026-10-30 evening finding: the
+  0114 taps at [55,584] missed the centre by about 30
+  pixels vertically, and the snapped [53,555] tap
+  predates the foregrounding variant, so the 0114
+  failure was point plus foregrounding, not a missing
+  slot - the set the 0114 unit read as slot-less does
+  carry the trade entry. The World map route was tried
+  first and rejected: it showed alliance bases and no
+  trade entry, so the game was returned to base.
+  Successor instruction: re-ground the icon fresh every
+  unit, and use the title-bar foregrounding tap before
+  the icon tap if a background tap does nothing.
+- Proximity note, not a settled identity: this
+  train-front point [52,552] sits 4 pixels from the
+  alliance-train profile's station icon point (52,548).
+  Whether the two units tapped the same column slot
+  acting differently by context, or two neighbouring
+  icons, is unresolved - do not copy one profile's
+  point into the other unit's entry step without
+  verifying the screen that opens.
+- Counters, read live: at trade-screen entry Today's
+  Trade Count 1 of 5 and Your Plunder Count Today 1
+  of 4; after settling the returned truck and
+  dispatching twice, Trade Count 3 of 5; after the
+  plunder below, Plunder Count 2 of 4. Shortfall
+  carried forward: dispatch 2 more, plunder 2 more
+  before the trade day ends 19:00 on 2026-11-02.
+- Settlement, one returned truck: the 22:31 SR truck
+  returned, Squad 1 escort, iron 2.5M, food 2.5M, coin
+  1.6M, chests 20 plus 20 plus 20, red gem 50 x1, badge
+  500 x1, status line "The vehicle is safe and
+  secure" - not plundered en route. This matches the
+  22:31 dispatch, so the settlement is verified, not
+  assumed.
+- Dispatch, two trucks sent: slot one rolled N (iron
+  1.2M, food 1.2M, coin 810K, Squad 1), free refresh to
+  R, then one Trade Contract refresh to SSR (iron
+  3.0M, food 3.0M, coin 1.9M, arrives 04:21:54, Squad
+  1), dispatched at once. Slot two rolled SSR as
+  rolled (same cargo, arrives 03:58:30, Squad 3); the
+  free refresh was deliberately not spent, and no TIPS
+  dialog appeared on Let's Go. Slot three left open on
+  an N roll (iron 1.2M, food 1.2M, coin 810K, Squad 2)
+  after a free refresh to R and one Trade Contract
+  refresh back to N; the next trucks unit continues it
+  with contract refreshes until SR or above, per the
+  standing rule. Trade Contract stock 163 to 161, two
+  spent in this unit, no diamonds spent, no paid
+  button tapped.
+- Plunder, one fight won: first card checked and
+  rejected under the shard rule - SSR #2092 [NROM]
+  Masoncy, Lv.27, guard 11.9M, cargo gold bars, chests
+  and resources but no UR shard 500 stacks. Second
+  card, after one list refresh: SSR #2088, Lv.26,
+  guard 3.3M (screenshot read; the compact OCR
+  "73.3M" is wrong, the same garble pattern as the
+  2231 unit's "73.6M"), cargo with three UR shard 500
+  stacks x3 each, guard far below Squad 1 at 24.96M,
+  so the shard rule is met. Quick Plunder, Battle at
+  25.12M vs 3.38M, Mission Completed. Loot, read live
+  on the victory screen: iron 531.5K, food 531.5K,
+  coin 337.0K, UR badge 500 x9, Extra red gem x1. No
+  alliance mate plundered (the gold [AP3x] train on
+  the road was left alone). A stray tap meant for
+  empty road opened the red gem 100 tooltip ("100
+  Diamonds, Owned: 905") - harmless, no Use tapped,
+  no diamonds spent.
+  Evidence in `_records_/2026-11-02/truck-plunder/0416-queue-run.md`.
+
+
+## What the 2026-11-02 0935 unit added
+
+- Unit trucks-2026-11-02-0657 by ticker-0934, session about
+  09:35 to 09:48, status partial: the dispatch quota is
+  filled but the plunder quota is not, so the tracker is
+  untouched. Evidence in
+  `_records_/2026-11-02/truck-plunder/0935-queue-run.md`.
+- Entry: the game was found on the Events hub Code 87 page.
+  The hub back arrow only responded once its centre was
+  re-measured at norm (158,947); earlier taps near
+  (97,906) missed the button. Lesson repeated from the
+  dice button: tap measured centres, not edges. This
+  bears on the event-claims hub back-arrow open question
+  - point accuracy, not background clicks alone, may be
+  the cause there too.
+- Trade entry: the badged icon in the left column,
+  grounded at norm (51,571) with badge 2 at entry. A tap
+  at (54,546), near the top edge of the same icon, did
+  nothing; the centre tap opened Intercity Trade directly
+  on the Your Truck view. The game window had been moved
+  to x1270 so its left column cleared the covering Chrome
+  window; it was restored to 79,30 at unit close.
+- Counters, read live: at trade-screen entry Today's Trade
+  Count 3 of 5, Your Plunder Count Today 2 of 4 (the same
+  counters the 0416 unit closed with); at close Trade
+  Count 5 of 5, Plunder Count 2 of 4, and the screen
+  confirms "No more dispatches available." No returned
+  truck awaited settlement: the road showed two SSR
+  trucks out and two empty slots, and the screen carried
+  no settlement prompt.
+- Dispatches (2, quota filled): Slot 1 rolled N (iron
+  1.2M, food 1.2M, coin 810.0K); the free refresh rerolled
+  it to SR (iron 2.5M, food 2.5M, coin 1.6M); dispatched
+  at once, Squad 2 escort, Trade Count 3 of 5 to 4 of 5.
+  Slot 2 rolled SSR as rolled (iron 3.0M, food 3.0M, coin
+  1.9M); the free refresh was deliberately not spent;
+  dispatched at once, Squad 4 escort, Trade Count 4 of 5
+  to 5 of 5. Trade Contracts spent: 0. No diamonds spent,
+  no paid button tapped.
+- Plunder (0 this unit, shortfall 2 remains): one target
+  inspected and passed - SSR #2092 [SOVN]bassslayer,
+  Lv.26, guard 5.7M, arriving in about 1 hour. Its cargo
+  row showed chests, iron 1.5M, food 1.5M, coin 1.0M and
+  three crossed-out slots, with no UR shard stack visible,
+  so it fails the shard rule and was left alone. The
+  golden train on the road ([MYpp] train) was not
+  inspected: it stays a candidate for the next unit's
+  shard hunt (it is not an alliance train, but its cargo
+  was never read). Reason the shortfall stands: the
+  unit's 15 minutes were spent on entry and the two
+  dispatches; no battle was started rather than overrun
+  the unit cap. The next trucks unit works the plunder
+  shortfall first, hunting a UR or SSR truck with
+  visible, right-sided UR shard stacks. The trade day
+  ends at 19:00 local, so the shortfall is not a
+  last-hour miss.
+- Duel posture: Duel day 1, Radar Training (radar release
+  day), from tools/duel.py at unit start. Non-UR day
+  rules applied: dispatch SR or above only (free refresh
+  first, then Trade Contracts until reached), plunder UR
+  or SSR trucks carrying UR shards with guard below
+  Squad 1.
+
+## What the 2026-11-02 1325 unit added - leftmost shard stack pays in full
+
+- Unit trucks-2026-11-02-1057 by ticker-1307, session
+  about 13:07 to 13:25, status partial: one plunder done,
+  one plunder shortfall remains, so the tracker is
+  untouched (partial units do not mark the tracker).
+  The next trucks unit resumes the last plunder; the
+  trade day ends at 19:00 local. Evidence in
+  `_records_/2026-11-02/truck-plunder/1325-queue-run.md`.
+- Duel posture: Duel day 1, Radar Training (radar
+  release day), from tools/duel.py at unit start.
+  Non-UR day rules applied: dispatch SR or above only,
+  plunder UR or SSR trucks carrying UR shards with
+  guard below Squad 1.
+- Entry: the game was found on the Mall Monthly Pass
+  page (left over from the passes unit). The $24.99
+  Monthly Pass Extension and every other price tag were
+  left untouched. The back arrow at the screen corner
+  returned the game to the base; the first corner tap
+  only opened a small avatar badge, the second tap at
+  the arrow itself went back - the same corner-tap
+  hazard as the 0844 train unit's avatar circle and the
+  1226 mail unit's back-arrow centre. Background input
+  reached the game throughout.
+- Trade entry: the badged icon in the left column,
+  grounded at norm 52,553 (badge 2 at entry); the
+  centre tap opened Intercity Trade directly on the
+  Your Truck view. This matches the 0935 grounding
+  (51,571) within column shift, and sits 5 pixels from
+  the alliance-train station point (52,548) - the third
+  near-coincidence (0416: 52,552; 1325: 52,553) for the
+  open identity question, still unresolved: do not copy
+  one profile's point into the other unit's entry step
+  without verifying the screen that opens.
+- Counters, read live: at trade-screen entry Today's
+  Trade Count 5 of 5 ("No more dispatches available"),
+  Your Plunder Count Today 2 of 4 (the same counters
+  the 0935 unit closed with); at close Today's Trade
+  Count 5 of 5, Your Plunder Count Today 3 of 4, read
+  live on the Others' Trucks header after the battle.
+- Settlement and dispatch: no returned truck awaited
+  settlement - the Your Truck road showed four trucks
+  out (two SSR, one SR, one purple with a flame marker)
+  and no settlement prompt. No dispatch: Trade Count
+  already 5 of 5.
+- Plunder (1 this unit, shortfall 1 remains): inspected
+  and passed, first list: UR #2088 [OFAJ] Lv.27, guard
+  11.5M, arrives in 03:44. Cargo: gold chest x10 twice,
+  puzzle x1, iron 2.1M, food 2.1M, coin 1.3M, two slots
+  already crossed out. No purple 500 UR shard stack
+  visible, so it fails the shard rule and was left
+  alone. Inspected and passed, first list: SSR #2088
+  [4017] Lv.30, guard 24.8M, arrives in 03:33. Cargo:
+  blue chest x1, gold chest x10, gold bar x1 twice, red
+  gem x100 x1, puzzle x1, iron 3.0M, food 3.0M. No
+  purple 500 UR shard stack visible, and the guard sits
+  only just below Squad 1, so it was left alone. List
+  refreshed once (top-right refresh, free) and
+  inspected: SSR #2092 [OOPz]hawk237, Lv.25, guard
+  5.5M, arrives in 02:33. Cargo carries one purple 500
+  UR shard stack x3 in the leftmost slot, plus chest
+  x25, gold chest x10, iron 2.0M, food 2.0M. Guard far
+  below Squad 1 (25.12M in the battle prep screen),
+  not an alliance mate, own-warzone filter on.
+  Plundered by Quick Plunder.
+- Battle: Squad 1 25.12M vs guard 5.53M, easy win -
+  the battle-screen Squad 1 figure matches the 0416
+  battle read. Rewards read live on the Mission
+  Completed screen: iron 505.5K, food 505.5K, coin
+  324.0K, 5-minute speedups 2 plus 1 plus 2 plus 3 plus
+  2, puzzle x1, chest x25, and Extra purple 500 UR
+  shard x3 - the full leftmost shard stack dropped
+  despite the hard position.
+- SHARD-RULE QUALIFICATION, in favour of the newest
+  verified record, superseding any reading of the
+  position rule as a disqualifier: a leftmost single
+  stack is not a no-go when the guard is trivial and
+  the quota is short; it paid all 3. Position still
+  governs probability, but it no longer disqualifies a
+  trivial-guard target when the day's plunder quota is
+  unfilled - take it rather than leaving the quota
+  short. The standing rule text above is qualified
+  accordingly, not silently overwritten.
+- Card UI notes: the side arrows on the truck card did
+  not page to the next truck (one no-change tap, not
+  repeated); tapping another truck body on the road
+  switched the card instead. Tapping empty road did not
+  close the card.
+- Outcome: status partial, plunder shortfall 1 remains.
+  Red lines held: no diamonds, no Trade Contracts, no
+  paid button, no alliance mate plundered. The 6-hour
+  quota checkpoint (13:00) found the plunder quota
+  short, so the next trucks unit (1457 slot) is raised
+  to priority 1 under queue rule R3.
+- Zombie seeding: not enqueued. The Zombie Invasion
+  event ended 2026-10-30 and the Events hub carries no
+  Zombie page; the chain stands at 66 done units with
+  no pending unit, and no new chain was seeded on an
+  ended event.
+
+## What the 2026-11-02 1845 unit added - trade entry blocked in current column set, partial
+
+- Unit trucks-2026-11-02-1457 by ticker-1834, session
+  about 18:35 to 18:43, status partial, tracker untouched.
+  Evidence in
+  `_records_/2026-11-02/truck-plunder/1845-queue-run.md`.
+- Device dialog, two takeovers in this unit: Confirm was
+  tapped at its measured centre, norm 501,568, twice; the
+  app exited after each takeover as the owner rule
+  expects, was reopened, and the base stayed clean after
+  the second takeover, with no third dialog in this unit.
+  Grounding lesson, consistent with (not contradicting)
+  the 1810 measured-centre rule: OCR coordinates in this
+  control channel are already 0 to 1000 normalised, not
+  window pixels - do NOT rescale them. The earlier
+  mis-read in this unit rescaled them and sent two taps
+  to norm 780,597, near the dialog right edge, which did
+  nothing. Tap coordinates come from measured grounding
+  boxes or OCR element positions in tap space, never from
+  a rescaled or image-pixel conversion.
+- Left column re-grounded fresh from the current
+  screenshot: green face at norm 53,577, white pickup at
+  53,639, radar dish at 53,707, hammer below. No blue
+  train-front trade icon is present in this set, and no
+  left-column icon carries a trade badge.
+- Tap at norm 52,553 (the 0935 and 1325 grounding) opened
+  the season warming panel (Location final temp 6.5
+  degrees C, Permafrost Area, Alliance Furnace), not
+  trade. The panel was closed with its X, first at
+  896,152 missed, then at 915,150 closed it. The
+  0416 train-front premise at 52,552 does NOT transfer
+  to this set: 52,553 here opens the season panel.
+- World map route tried next, per the 0114 successor
+  instruction: WORLD opened the map centred on the own
+  base [AP3x]Bears Lair, showing alliance bases only and
+  no trade entry on that view. BASE returned to the base
+  screen.
+- White pickup at 53,639 opened the Secret Command Post
+  (Secret Mobile Squad, Your Tasks), as the metadata
+  predicts, not trade. Its back arrow returned to the
+  base. No Mega button was touched.
+- Successor direction, standing under queue rule R2: do
+  NOT re-tap the points above. The next trucks unit must
+  find the set-flip control or another trade entry route
+  before any column tap, and re-ground the column from a
+  fresh screenshot.
+- The 2026-10-30 hypothesis still fits: the trade slot
+  surfaces only while a returned truck awaits settlement,
+  and none awaited here (Trade Count already 5 of 5 at
+  the 1325 close).
+- Counters NOT read live in this unit: the trade screen
+  was never entered. The plunder shortfall of 1 (Plunder
+  Count 3 of 4, Trade Count 5 of 5) is carried from the
+  1325 record only, NOT re-read, and is not claimed as a
+  live figure.
+- Ended-day close: the trade day ended at 19:00 local,
+  under 20 minutes after this unit closed, so the
+  shortfall expired unfilled at the reset. The next
+  trucks unit is a new trade day and must read both
+  counters live on entry; no new-day counter is claimed
+  here.
+
+## What the 2026-11-02 2120 unit added - station-tap entry, counters 4 of 5 and 4 of 4, partial
+
+- Unit trucks-2026-11-02-1857 by ticker-2104, session
+  about 21:05 to 21:20, status partial, dispatch
+  shortfall 1 remains, tracker untouched for the
+  shortfall. Evidence in
+  `_records_/2026-11-02/truck-plunder/2120-queue-run.md`.
+- Entry breakthrough: no left-column point was
+  re-tapped, per the 1845 successor instruction.
+  Fresh visual grounding put the station building at
+  norm 352-630 x 105-285, and a tap at its centre
+  [491,195] opened Intercity Trade directly on the
+  Others' Trucks view. This is a new, working entry
+  route for the current column set (green face /
+  pickup / dish / hammer, no trade slot).
+- Supersession, in favour of the newest verified
+  record: this entry succeeded with no settlement
+  pending, so the 2026-10-30 hypothesis that the
+  trade slot surfaces only while a settlement pends
+  is superseded as an entry rule. The 1845 section's
+  "hypothesis still fits" line stands as that unit's
+  read only; it is not the standing rule. The
+  column-set flip question below stays open, but it
+  no longer blocks entry - the station tap answers
+  the 1845 successor direction.
+- Counters, read live at entry and unchanged at
+  close: Your Plunder Count Today 4/4, Today's Trade
+  Count 4/5. The counters are the source of truth.
+  Four trucks are out: two SR blue, two SSR purple,
+  the SSR pair carrying flame markers for looting en
+  route. No returned truck awaited settlement.
+- Mega Mode inspected, nothing spent: Mega Refresh
+  lists the four out trucks (No.1 SR 01:00:57 left,
+  No.2 SR 00:50:11, No.3 SSR 01:14:39, No.4 SSR
+  00:56:57) with a "Refresh all to Reindeer Sleigh
+  Ride" checkbox and Refresh Selected 0/165 -
+  nothing selected or refreshed, no contract spent.
+  Mega Dispatch reads "All current trade trucks have
+  been dispatched. Time for a coffee break!",
+  Today's Dispatches 4/5, with Select All / Dispatch
+  Selected greyed.
+- Fifth dispatch waits for the first return, about
+  00:50 away at read time (about 22:10 local). This
+  is a UR duel day (day 2, Base Expansion), so that
+  dispatch must be UR; whether the Mega Dispatch
+  bulk route or a single-slot roll produces the UR
+  truck is still unobserved, because no slot was
+  free to try it on. Next unit: settle first if the
+  returned truck needs it, then dispatch the freed
+  slot as UR.
+- Counters provenance, explicitly not inferred: how
+  the new trade day reached 4/5 and 4/4 before this
+  unit is not established in this record - no agent
+  trucks record sits between 1845 (previous day
+  close 5/5, 3/4) and this unit. The record notes it
+  may be owner evening play, when the 1834 pass was
+  contested twice. Do not attribute the gap to any
+  unit.
+- Reward Recovery checked: the 2026-10-31 19:00
+  record (3 unstarted transports) reads CLAIMED; no
+  new record waits. Nothing claimed in this unit.
+  No diamonds, no Trade Contracts, no paid button,
+  no alliance mate plundered.
+
+
+## What the 2026-11-02 2347 unit added - entry failed, station tap not stable, partial
+
+- Unit trucks-2026-11-02-2257 by ticker-2334, session
+  about 23:41 to 23:47, status partial, entry failed.
+  Evidence in
+  `_records_/2026-11-02/truck-plunder/2347-queue-run.md`.
+- Entry failure, in detail: the 2120 unit entered
+  Intercity Trade by tapping the station building
+  at norm [491,195]. This unit tried that exact tap
+  twice (once before and once after a title-bar
+  focus tap as the foreground pivot) - both
+  no-change. A visually grounded station box (norm
+  395-860 x 120-355) tapped at its centre [627,237]
+  selected a squad parking slot ("2nd Squad Lv.20")
+  and opened a two-button popup (vehicle icon, up
+  arrow) with no labels. Neither button was tapped -
+  the popup's meaning was not established and a
+  wrong tap could march a squad. The popup was
+  dismissed by tapping empty ground; the base view
+  returned unchanged. A further tap at [662,163]
+  (upper station structure) was also no-change.
+  That is two no-change entry taps, so the
+  background-input method was ended inside this
+  unit under queue rule R2; the title-bar focus
+  pivot did not change the outcome for the
+  [491,195] tap.
+- Correction, in favour of the newest verified
+  record: the 2120 station-tap entry is qualified,
+  not erased. The [491,195] tap worked at 2120 and
+  failed twice at 2347 on the same trade day, so it
+  is a framing-dependent entry point, not a stable
+  one. The next unit must re-ground the station
+  hotspot on the live base framing first, and must
+  not re-tap the [491,195] / [662,163] points
+  blindly. The squad-slot popup (vehicle icon, up
+  arrow) is unidentified until a labelled read
+  proves what it opens - do not tap its buttons.
+  Foreground variant not yet tried: moving the
+  covering Chrome window aside before tapping.
+- Counters were NOT read this unit - entry never
+  reached the trade screen, so no counter values
+  are asserted here. Last read counters (2120
+  unit): Trade 4/5, Plunder 4/4, with the first
+  return due about 22:10 local. A return and
+  settlement may therefore be pending, but that is
+  the 2120 read, not a fresh observation - do not
+  quote it as a 2347 reading.
+- Outcome: partial, dispatch shortfall carried
+  forward (not a miss: the trade day runs to 19:00
+  local 2026-11-03, and later trucks units keep
+  trying entry). No dispatch, no plunder, no
+  settlement performed. No diamonds, no Trade
+  Contracts, no paid button, no plunder.
+  Blocker category f (missing precondition - trade
+  screen entry not reached). Computer session
+  dropped mid-pass and restarted with no game
+  state lost; no "active on a different device"
+  dialog appeared. Game left on the base screen.
+
+
+
+## What the 2026-11-03 0344 unit added - entry failed again, grounding mislabels buildings, partial
+
+- Unit trucks-2026-11-03-0257 by ticker-0334, session
+  about 03:34 to 03:44, status partial, entry failed.
+  Evidence in
+  `_records_/2026-11-03/truck-plunder/0344-queue-run.md`.
+  GitHub Issue #218 filed in this unit (labels play,
+  knowledge) for this repeated failure mode.
+- Entry failure, in detail: the 2120 station tap at norm
+  [491,195] was tried first and was no-change, matching
+  the 2347 unit - the second consecutive trucks unit for
+  which the old station point does nothing. Fresh visual
+  grounding put a station box at norm 398-578 x 308-448;
+  tapping its centre [488,378] selected High-temp
+  Furnace Lv.30, not a station. After panning the base
+  (drag [500,400] to [500,650]), grounding put a station
+  box at norm 545-730 x 105-235; tapping its centre
+  [637,170] selected Wall Lv.26, with the same
+  unidentified two-button popup (home icon, up arrow)
+  seen in the 2347 unit. Neither button was tapped.
+  After a second pan (drag [600,400] to [300,400]),
+  grounding put a station box at norm 280-435 x 140-260;
+  tapping its centre [357,200] was no-change. The
+  furnace and wall popups were dismissed by tapping
+  empty ground; no furnace was turned on or off and no
+  upgrade was touched.
+- The left column in this unit was re-grounded fresh and
+  carries no trade slot in this set: hammer 2/4, flasks
+  2/2, green face 6.5 degrees C at norm 53,483,
+  light-blue train front with a red dot at norm 61,563,
+  white pickup at norm 61,643, satellite dish with
+  badge 11 at norm 62,723, hammer below. Per the
+  2026-10-30 evening units, the train-front icon neither
+  opens trade nor flips the set, so it was not tapped.
+- The foreground variant suggested by the 2347 unit
+  (moving the covering Chrome window aside) was not
+  attempted: this control channel sends input in the
+  background and never brings the game to the front, so
+  that variant is not available from here.
+- Counters were NOT read live in this unit: the trade
+  screen was never entered, so no live counter is
+  asserted here. Carried, not re-read, from the 2120
+  unit: Trade 4/5, Plunder 4/4, for the trade day ending
+  19:00 local 2026-11-03, so the 1-dispatch shortfall
+  remains unfilled. Corroboration, not trucks work: the
+  secrets unit of the same pass (0346) saw Trade 4/5
+  with four trucks out incidentally while exiting trade
+  screens opened by snapped taps - that read matches the
+  carried 4/5 but was not acted on as trucks work.
+- Duel posture: day 2, Base Expansion, UR truck
+  dispatches score (Handbook 100,000 each); trucks go UR
+  today, contracts permitting. The fifth dispatch, when
+  entry succeeds, must still be UR (Mega UR only per the
+  unit window). A returned truck may await settlement;
+  that is not established in this unit.
+- Outcome: partial, entry failed, dispatch shortfall
+  carried forward (not a miss: the trade day runs to
+  19:00 local 2026-11-03, and later trucks units keep
+  trying entry). No dispatch, no plunder, no settlement
+  performed. No diamonds, no Trade Contracts, no paid
+  button, no plunder, no dispatch. Tracker untouched
+  (partial units do not mark the tracker).
+  Blocker_category: e (repeated blocker - trade screen
+  entry method). Next trucks unit: do not re-tap
+  [491,195], [488,378], [637,170] or [357,200] blindly.
+  Until Issue #218 is answered, later units should spend
+  their budget on finding a verified Intercity Trade
+  entry route for the current base framing rather than
+  repeating these four points - first variant to try, by
+  analogy with the 0346 secrets entry: an unsnapped
+  exact-centre tap on the trade icon, since snapped taps
+  in the left column demonstrably land on the wrong slot.
+  Game left on the base screen, panned east from its
+  starting framing by the two drags in this unit.
+
+## What the 2026-11-03 0821 unit added - trade entry by the 53,555 route, one SR settled, SSR held for the UR chase, partial
+
+- Unit trucks-2026-11-03-0657 by ticker-0804, session
+  about 08:04 to 08:21, status partial, quota shortfall
+  carried forward (not a miss: the trade day runs to
+  19:00 local 2026-11-03, and later trucks units keep
+  trying). Evidence in
+  `_records_/2026-11-03/truck-plunder/0821-queue-run.md`.
+  No "active on a different device" dialog appeared. No
+  diamonds, no paid button, no plunder, no dispatch in
+  this unit.
+- Duel posture: day 2, Base Expansion, from tools/duel.py
+  at unit start. UR truck dispatches score (Handbook
+  100,000 each); trucks go UR today, contracts
+  permitting. Radar posture stack. Window on the unit:
+  duel day 2 - UR trucks, Mega UR only.
+- Entry, SUCCESS by a new route: the left-column icon at
+  norm 53,555 on the current base framing - the
+  speech-bubble icon above the truck slot in that set -
+  opened Intercity Trade directly. This route was not
+  tried in the 0344 unit and is the entry breakthrough
+  for the repeated entry blocker tracked as Issue #218.
+  The truck icon at norm 53,657 opened Secret Command
+  Post (Secret Mobile Squad, Your Tasks, Mega Refresh
+  and Mega Deploy buttons - none tapped), not trade. Do
+  not use it for trade entry. The old station points
+  from the 0344 unit (491,195 and 488,378 and 637,170
+  and 357,200) were not re-tapped. The entry blocker
+  itself is resolved by the 53,555 route; Issue #218
+  stays open, and closure belongs to the daily retro,
+  with evidence.
+- Counters read live on entry: Today's Trade Count 4 of
+  5; Your Plunder Count Today 4 of 4 (full). The
+  1-dispatch shortfall is the only open quota item, and
+  the trade day runs to 19:00 local 2026-11-03.
+- Settlement: Mega Mode from the road view first showed
+  Mega Refresh with four Arrived trucks (SR, SR, SSR,
+  SSR) and Mega Dispatch showing no dispatchable truck
+  ("All current trade trucks have been dispatched",
+  Today's Dispatches 4 of 5). The first road truck,
+  tapped at its trailer centre (352,450 - a tap at
+  352,415 on its chest icon did nothing), opened Truck
+  Details: SR, Intercity Trade Reward, cargo iron 2.5M,
+  food 2.5M, coin 1.6M, chests 20 x3 and a red diamond
+  item 1. Battle History: 2026-11-2 20:05:30,
+  [EoBH]jeffr46 Power 41.9M, Plunder Failed - delivered
+  in full. Opening the details settled the truck and
+  freed its slot. The other three arrived trucks were
+  not settled in this unit: the freed slot's dispatch
+  panel took the remaining unit time. Settlement tap
+  lesson: tap the trailer centre, not the chest icon.
+- Fifth dispatch, UR chase, SSR held, not dispatched:
+  the freed slot's dispatch panel first rolled R (iron
+  2.0M, food 2.0M, coin 1.2M, arrives 04:20:52, Escorts
+  Squad 1, free refresh available). Free refresh: R to
+  SR (iron 2.5M, food 2.5M, coin 1.6M, badge 500 x1,
+  arrives 04:33:00). Contract refresh 1: SR to SR (iron
+  2.5M, food 2.5M, coin 1.6M, badge 500 x1, arrives
+  04:01:35, contracts 165 to 164). Contract refresh 2:
+  SR to R (iron 2.0M, food 2.0M, coin 1.2M, arrives
+  03:53:19, contracts 164 to 163). Contract refresh 3:
+  R to SSR (iron 3.0M, food 3.0M, coin 1.9M, badge 500
+  x3, chest 25, arrives 03:52:51, contracts 163 to 162).
+  The SSR roll was verified still held after closing
+  and reopening the slot panel (arrives 03:52:51
+  unchanged), so it survives across units. Mega Mode
+  tapped from the dispatch panel only reopens the Mega
+  summary; Mega Dispatch still lists no dispatchable
+  truck. Mega Mode does not convert a roll to UR, as far
+  as this unit could observe.
+- The SSR was NOT dispatched: this is a UR duel day and
+  SSR is not UR. Spending more contracts chasing UR, or
+  dispatching the SSR and forfeiting the UR duel points,
+  is left to the next trucks unit - the quota deadline is
+  19:00 local, not this unit. No Trade Contract spending
+  beyond the 3 refreshes above; no diamonds spent
+  anywhere.
+- Outcome: partial, quota shortfall carried forward.
+  Settled in this unit: 1 truck (SR, above). Dispatched
+  in this unit: none. Plundered: none. Counters at close,
+  live: Trade 4 of 5, Plunder 4 of 4. Held roll at close:
+  SSR, arrives 03:52:51, in the freed slot; contracts
+  162 remaining. Tracker untouched (partial units do not
+  mark the tracker). Blocker_category: h (by-design
+  partial - quota work resumed across units) with e noted
+  for the entry history; the entry blocker itself is
+  resolved by the 53,555 route above.
+- Next trucks unit: reopen the trade screen by the
+  53,555 route, settle the remaining arrived trucks if
+  any are still unsettled, then either continue the UR
+  chase from the held SSR roll or dispatch the SSR
+  before the 19:00 deadline - do not re-tap the old
+  station points or the 53,657 Secret Post icon for
+  trade entry. Game left on the base screen.
+- Gap: already tracked as GitHub Issue #218 (labels
+  play, knowledge). The executor commented this route
+  and these counters onto #218, and this run comments
+  the fold onto #218 as well; the issue stays open,
+  and closure belongs to the daily retro, with evidence.
+
+## What the 2026-11-03 1211 unit added - quotas full, badged-icon entry, UR dispatched as rolled, done
+
+- Ticker-1204, unit trucks-2026-11-03-1057, about
+  12:06 to 12:11 local, status done. Evidence in
+  `_records_/2026-11-03/truck-plunder/1211-queue-run.md`.
+- Entry: base view left column, measured fresh: green
+  face, then the light-blue vehicle-front icon with red
+  badge 1 at norm about 55,589, then the white pickup,
+  then the radar dish with badge 11, then the hammer.
+  One tap at 55,589 opened Intercity Trade on the
+  Others' Trucks view. This settles the stale-window
+  question left by the 2026-10-30 evening units: the
+  icon they found dead opens the trade screen when it
+  carries a badge. The 0821 route (53,555) and this
+  badged-icon point are two verified entries; find the
+  icon by badge and glyph, not by a fixed point alone.
+- Live counters read on screen: Your Plunder Count
+  Today 4/4, already full at entry, nothing to plunder;
+  Today's Trade Count 4/5 at entry, 5/5 after this
+  unit's dispatch. Both counters are live screen reads
+  in this unit, not tallies.
+- Duel posture applied: tools/duel.py at entry reports
+  duel day 3, theme Age of Science, scoring actions
+  today research, valor badges, drone component chests
+  and radar claims, and truck dispatches do not score
+  today. The unit's window text still reads "duel day
+  2 - UR trucks, Mega UR only". That text is stale:
+  the live posture is day 3, so the non-UR day rule
+  governed this unit (dispatch SR or above only, free
+  refresh first, then Trade Contract refreshes until
+  reached). The stale window text is noted here for the
+  planner pass, not acted on. See also the
+  alliance-duel profile open question: the duel panel
+  itself reads theme Base Expansion with a timer
+  pointing to about 18:00 on 2026-11-03, which does not
+  match the tool's day-3 report - the tool output is
+  unresolved there, and this unit's dispatch needed no
+  resolution because the roll below already cleared the
+  SR bar.
+- Dispatch: Your Truck view showed four empty slots.
+  First slot tapped. Panel rolled UR as rolled: iron
+  3.8M, food 3.8M, coin 2.4M, journey 03:18:02, Squad 1
+  escort, free refresh still unused. UR already clears
+  the SR bar, so no refresh was spent and the truck was
+  dispatched as rolled with Let's Go. After dispatch:
+  Today's Trade Count reads 5/5, banner "No more
+  dispatches available", one gold truck on the road. No
+  Trade Contract spent, no diamond spent.
+- Other checks: Recover button on the trade screen
+  showed no red dot, so no Reward Recovery record was
+  waiting. Nothing claimed there. No plunder action:
+  Plunder Count already 4/4, and the standing shard
+  rule was not needed this unit.
+- Outcome: done. Trade quota 5/5 and plunder quota 4/4
+  both full for this trade day. Tracker marked done for
+  trucks. Costs: about 5 minutes of unit time, 0 Trade
+  Contracts, 0 diamonds.
+
+## What the 2026-11-03 1846 unit added - new trade day, 3 dispatches, 2 plunders, partial
+
+- Ticker-1834, unit trucks-2026-11-03-1457, about 18:34 to
+  18:46 local, status partial. Evidence in
+  `_records_/2026-11-03/truck-plunder/1846-queue-run.md`.
+  No diamonds spent, no paid button tapped, no Mega Mode
+  dispatch.
+- Entry: base view left column, measured fresh: hammer 2/4,
+  flasks 1/2, green face, light-blue vehicle-front icon with
+  a red dot, white pickup badge 9, radar dish badge 4,
+  hammer, chest. One tap at norm 54,568 on the vehicle-front
+  icon opened Intercity Trade directly on the Your Truck
+  view, matching the 1211 unit: the icon opens trade when
+  it carries a badge.
+- Live counters, the reset correction: at entry Today's
+  Trade Count 0/5, Your Plunder Count Today 0/4; at close
+  3/5 and 2/4. Both pairs are live screen reads, not
+  tallies. The 1211 unit had filled the counters to 5/5 and
+  4/4 at 12:11 local for its trade day, so the counters
+  reset between 12:11 and 18:34 - with the about-18:00
+  rollover (Issue #242), not at 19:00. The standing quota
+  rule above is corrected accordingly, and the counters
+  stay the source of truth: this unit worked the new trade
+  day's quotas from zero.
+- Duel posture applied: tools/duel.py at entry reported
+  duel day 3, theme Age of Science, day ends 2026-11-04
+  19:00 local - that end time is the pre-PR-243 tool reading
+  and is NOT adopted (PR 243, merged 2026-11-03 18:45 local,
+  moved the boundary to absolute 02:00 UTC). The unit's
+  window text still read "duel day 2 - UR trucks, Mega UR
+  only": stale, not followed. Live posture is duel day 3,
+  so the non-UR rule governed: dispatch SR or above only,
+  free refresh first, then Trade Contract refreshes until
+  reached, no Mega dispatch.
+- Dispatches, 3: SSR as rolled (iron 3.0M, food 3.0M, coin
+  1.9M, journey 03:52:51, Squad 3); N, free refresh to R,
+  one Trade Contract to UR (iron 3.8M, food 3.8M, coin
+  2.4M, journey 04:17:13, Squad 2, contracts 162 to 161);
+  N, free refresh to R, one Trade Contract to SR (iron
+  2.5M, food 2.5M, coin 1.6M, journey 04:09:57, Squad 4,
+  contracts 161 to 160). Total Trade Contracts spent: 2.
+- Plunders, 2: SSR truck of [RoSt], Lv.26, guard 6.7M,
+  gold UR-shard stack of 10 at the sixth of eight slots,
+  yield iron 531.5K, food 531.5K, coin 337.0K, plus three
+  item stacks, shard stack did not drop; SSR truck of
+  [FRVP]The X Mansion, Lv.28, guard 9.8M, gold UR-shard
+  stack of 3 at the second of eight slots (left side, the
+  harder position, but the SSR target on this list pass),
+  yield iron 570.2K, food 570.2K, coin 363.0K, plus three
+  item stacks, shard stack did not drop. Combined: iron
+  1,101.7K, food 1,101.7K, coin 700.0K, six item stacks,
+  no UR shards.
+- Tap lessons, binding for the next unit: the gold truck
+  standing on the Your Truck road at entry, with a chest
+  icon above it, was still there at close - a tap on its
+  body at norm 444,415 produced no change, its chest icon
+  was not tapped and the Mega Mode settlement path was not
+  tried. Next unit tries the chest icon first, since the
+  quota order says settle returned trucks first; whether
+  that gold truck is a returned truck awaiting settlement
+  or an outbound truck is unverified here. Gold trucks on
+  the Others' Trucks road resisted body taps twice at norm
+  615,342 and 618,350 with no change (rule R2 pivot: a
+  different truck was tried instead, and its card opened).
+  Quick Plunder's true centre is norm 600,885, measured
+  from an enlarged crop - the (460,867) tap lands in the
+  gap between Plunder! and Quick Plunder. The second
+  plunder target's card needed a second tap: the first at
+  norm 467,226 did nothing, the second at norm 467,245
+  opened it.
+- Remaining shortfall, carried to the next trucks unit:
+  dispatch 3/5, with all four road slots now occupied
+  (gold, purple SSR, UR, SR) - no further dispatch is
+  possible until a truck returns and is settled, so the
+  next unit settles first, then dispatches. Plunder 2/4,
+  two plunders remain, targets permitting. Recover button
+  not checked on its own panel in this unit (the road view
+  at close showed no red dot on Recover in the screenshots,
+  but no live read was taken there - unverified, not
+  claimed).
+
+## What the 2026-11-04 0242 unit added - WORLD-corner entry route, quotas full, done
+
+- Ticker-0234, unit trucks-2026-11-03-2257, about 02:38 to 02:42 local, status done, quotas already full at entry, no action needed. Evidence in `_records_/2026-11-04/truck-plunder/0242-queue-run.md`. No diamonds spent, no paid button tapped, no Mega Mode dispatch.
+- Duel posture applied: tools/duel.py at entry reports duel day 3, theme Age of Science, day ends 2026-11-04 19:00 local. Scoring actions today are research, valor badges, drone component chests and radar claims. Truck dispatches do not score today, so the non-UR day rule would have governed any dispatch (SR or above only) - but no dispatch was needed or made.
+- Entry, new route found, and a dead route confirmed: the left-column vehicle-front icon (grounded fresh at norm 54,577, no red badge visible on it in this view) did not open trade - a tap at norm 54,568 only panned the base map, and a tap at the grounded centre 55,578 produced no change. A tap at norm 55,531 opened the season warming panel instead (the green-face icon sits above the vehicle icon, grounded at norm 54,494), and the panel was closed with its X on the first tap. This matches the 2026-10-30 evening pattern: the vehicle icon tap does nothing when it carries no badge. Background input is not the cause here - the same session's shop taps all landed in the previous unit.
+- A tap on the station building (norm 592,189) produced no change, a third framing failure for station taps after 2347 and 0344. Do not re-tap station points blindly.
+- Entry that worked: a tap at norm 913,940, on the bottom-right WORLD corner of the base screen, opened Intercity Trade directly on the Others' Trucks view. Next trucks units try this route first when the left-column icon carries no badge. The mechanism (why that corner opens trade) is unverified, only the observed result.
+- Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both pairs are live screen reads, not tallies.
+- Attribution gap, recorded not smoothed over: the previous local trucks record (2026-11-03 1846 unit) closed at Trade 3/5, Plunder 2/4, so the quotas were filled between then and this entry by passes whose records are not in this working tree. This record does not attribute the fill to any specific pass.
+- Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." The right-hand truck's card was opened (a tap on the left truck's body produced no change, as in the 1846 unit): own SR truck, [AP3x] Bears Lair Lv.30, guard 25.1M, arrives in 01:52:13, cargo including badge stacks, iron 2.5M, food 2.5M, coin 1.6M. It is outbound, not returned, so nothing was settled. No chest icon stands above either road truck. The Recover button carries no red dot, and one tap on it produced no panel, so no Reward Recovery record is waiting to be claimed.
+- Outcome: done. Trade quota 5/5 and plunder quota 4/4 both full for this trade day. No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Costs: about 4 minutes of unit time.
 ## Open questions
 
 - What a Mega dispatch does differently, and what the fifth daily
   trade is. Mega Mode itself is a VIP 13 privilege, unlocked on this
   account. The owner dispatch rule for Alliance Duel UR days (Mega
-  Mode, UR trucks only) is recorded above but not yet executed.
+  Mode, UR trucks only) is recorded above but not yet executed. (2026-11-03 0821 update: Mega Mode tapped from the dispatch panel only reopens the Mega summary and Mega Dispatch still lists no dispatchable truck, and Mega Mode does not convert a held roll to UR as far as that unit could observe - the dispatch-difference question itself is still open.)
 - Whether the 2026-10-25 Alliance Duel day scored UR truck
   dispatches - the daily duel category was not verified that day,
   so the evening dispatches ran under normal day handling.
 - Whether the collapsed 2026-10-20 Reward Recovery record was
   already claimed - its toggle did not expand on 2026-10-25.
+- What flips the base left-column icon set to the set that carries the trade slot (2026-11-02 1845 update: the 1845 set - green face / pickup / radar dish / hammer - carries no train-front icon at all and no trade badge; 52,553 opens the season warming panel, not trade; the successor must find the set-flip control or another entry route first) (2026-11-02 2120 update: the station-building tap at [491,195] opens Intercity Trade directly for this column set, so entry no longer depends on finding the set flip; the flip itself stays unknown) - the 0114 unit's set (green face / bus-train-front / pickup / walkie-talkie / hammer / chest) carries no speech-bubble truck glyph, and the 22:31 entry point [55,584] does not transfer to it. (2026-11-02 0416 update: for this set the premise is corrected - the train-front icon at [52,552], reached after a title-bar foregrounding tap, is the trade entry; the flip question remains for sets where no train-front icon is present.)
+- Station-tap entry stability (2026-11-02 2347 update):
+  the [491,195] station tap that entered trade at
+  2120 failed twice at 2347, so entry is
+  framing-dependent and must be re-grounded on the
+  live base view each unit; the squad-slot popup
+  (vehicle icon, up arrow) reached from a station-box
+  centre tap is unidentified and its buttons must
+  not be tapped. This belongs to this profile's open
+  questions until a later unit re-grounds a working
+  entry point - no new Issue filed yet, because the
+  next trucks unit retries entry first with the
+  re-grounding and the Chrome-window-aside variant.
+  (2026-11-03 0344 update: the station tap failed a
+  second consecutive unit and grounded station points
+  mislabelled Furnace Lv.30 and Wall Lv.26, so the
+  re-grounding retry is exhausted as a variant on its
+  own; GitHub Issue #218 is now open for this failure
+  mode, and the next variant is the unsnapped
+  exact-centre tap proposed by the 0344 section above.
+  The Chrome-window-aside variant is not available from
+  the background control channel, per the 0344 record.)
+  (2026-11-03 0821 update: the entry blocker itself is
+  resolved - the left-column icon at norm 53,555, the
+  speech-bubble icon above the truck slot, opened
+  Intercity Trade directly, a route not tried in the
+  0344 unit, so the unsnapped-variant proposal was not
+  needed; the 53,657 truck icon opens Secret Command
+  Post, not trade. Issue #218 stays open pending retro
+  closure with evidence, but later units reopen trade
+  by the 53,555 route first and do not re-tap the old
+  station points.)
+  (2026-11-04 0242 update: the station tap at 592,189 again produced no change in a third framing, while the WORLD-corner tap at 913,940 opened trade directly when the column icon was badgeless - see the 0242 section below. The WORLD-corner route is now the first route to try for a badgeless column icon, ahead of any station re-tap. Issue #218 stays open pending retro closure with evidence.)
+  (2026-11-04 0538 update: the WORLD-corner claim is qualified - a tap at norm 913,940 in the 0538 unit opened the World map, not trade directly, so the 0242 note is not reproduced as written; it may have tapped through from the World view. The 0538 entry that worked was the badged vehicle icon at norm 55,578, the same centre the 0242 unit tapped badge-less with no effect. See the 0538 section below.)
+
+## What the 2026-11-04 0538 unit added - quotas full, badged-icon entry, WORLD-corner route qualified
+
+- Ticker-0534, unit trucks-2026-11-04-0257, about 05:34 to 05:39 local, status done, quotas already full at entry, no action needed. Evidence in `_records_/2026-11-04/truck-plunder/0538-queue-run.md`. No "active on a different device" dialog appeared.
+- Duel posture applied: tools/duel.py at entry reports duel day 3, theme Age of Science, day ends 2026-11-04 19:00 local. Scoring actions today are research, valor badges, drone component chests and radar claims. Truck dispatches do not score today, so the non-UR day rule would have governed any dispatch (SR or above only) - but no dispatch was needed or made, and no Mega Mode dispatch was used.
+- Entry, corrected and qualified: a tap at norm 913,940 on the bottom-right WORLD corner opened the World map, not trade directly (the 0242 unit's route note is not reproduced as written - it may have tapped through from the World view). Returned to base with the BASE corner tap at the same norm. Left column grounded fresh from an enlarged crop: hammer 2/4, flasks 2/2, green face 6.5C, light-blue vehicle-front icon with a red dot, white pickup with a red dot, satellite dish, hammer. The vehicle-front icon at norm 55,578 - the same centre the 0242 unit tapped while badge-less with no effect - opened Intercity Trade directly on the Your Truck view now that it carries a red dot. This confirms the 1211/1846 rule again: the badged vehicle icon opens trade. Correction recorded: the 0242 WORLD-corner point is a World-map opener, not a direct trade entry; the open-questions note for that route is qualified accordingly, and later units must not cite 913,940 as a direct trade entry.
+- Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both counters are live screen reads in this unit, not tallies.
+- Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." Neither road truck carries a chest icon above it, so no returned truck awaits settlement. The Recover button carries no red dot on either the Your Truck or the Others' Trucks view, so no Reward Recovery record is waiting to be claimed.
+- No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Costs: about 5 minutes, no stamina or items spent.
+
+## What the 2026-11-04 0845 unit added - quotas full again at entry, trade-icon grounding mislabel opens Secret Command Post
+
+- Unit trucks-2026-11-04-0657 by ticker-0834, about 08:44 to 08:45 local, status done. Evidence in `_records_/2026-11-04/truck-plunder/0845-queue-run.md`. Computer session cc-439 dropped mid-pass and was restarted as cc-440 with no game state lost. No different-device dialog appeared.
+- Duel posture applied: tools/duel.py at entry reported duel day 3, theme Age of Science. Truck dispatches do not score today, so the non-UR day rule would have governed any dispatch (SR or above only) - but no dispatch was needed or made, and no Mega Mode dispatch was used. Note: the tool's day-end time (19:00 local) is the disproven tool time from Issue #242; the panel countdown is authoritative (see the 0839 duel section). The rule application is unaffected because no dispatch was made.
+- Entry, grounding mislabel repeated: a visual grounding put the trade icon at norm 53,625, but tapping it opened the Secret Command Post instead. Nothing inside it was tapped - no secret task was started - and the panel was left with a left-edge swipe back to the base. This matches the activity note that the column slot opens the Secret Command Post in one set, and the secrets entry note that the same slot opens the post. A tap at norm 55,578 - the centre the 0538 unit used - opened Intercity Trade directly on the Your Truck view. The badged vehicle icon opens trade, as in 0538.
+- Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both counters are live screen reads in this unit, not tallies. This is the second quotas-full trucks unit today (0538, 0845).
+- Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." Neither road truck carries a chest icon above it, so no returned truck awaits settlement. The Recover button carries no red dot on the Your Truck view, so no Reward Recovery record is waiting to be claimed.
+- No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Game left on the base view.

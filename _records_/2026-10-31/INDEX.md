@@ -577,7 +577,7 @@ unrecoverable fields written unknown:
   lastwar-tool-developer, which matches its diff, so it is not
   this job's to adopt or fix; it has no reviews or comments
   yet and is minutes old, so no stale-owner flag applies.
-  Full detail in pr-catchall/2345-run.md.
+  Record file pr-catchall/2345-run.md was never committed; this summary is the only trace.
 
 ## 23:30 to about 23:45 - PR integration (merge)
 

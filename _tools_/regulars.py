@@ -19,15 +19,20 @@ fires at :03, segment 2 at :30, segment 3 at :57, each repeating
 every 4 hours. An every-run regular
 counts as done only for its own segment's current 4 hour cycle; at
 the segment's next cycle boundary it becomes due again, whether it
-was marked done or skipped. A daily-reset regular (VIP, reset 19:00
-local) counts as done only if it was marked after the most recent
-reset boundary; before the reset it stays done, after the reset it
-becomes due again automatically.
+was marked done or skipped. A daily-reset regular (VIP, reset at the absolute 02:00 UTC
+daily boundary, 18:00 PST / 19:00 PDT) counts as done only if it
+was marked after the most recent reset boundary; before the reset
+it stays done, after the reset it becomes due again automatically.
+A regular carrying reset_utc uses that absolute UTC boundary, so
+the local wall time of the reset shifts with daylight saving
+(issue #247, following the duel.py fix in issue #242); a regular
+without reset_utc keeps the old reset_local wall-time boundary.
 A weekly-thu regular is only due on Thursdays.
 Use --segment N with list/todo to see one segment's regulars.
 """
 import argparse, json, os, sys
-from datetime import datetime, date, time as dtime, timedelta
+from datetime import datetime, date, time as dtime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFS = os.path.join(ROOT, "regulars.json")
@@ -53,6 +58,50 @@ def save_state(day, state):
         json.dump(state, f, indent=1, ensure_ascii=False)
 
 SEGMENT_ANCHORS = {1: 6 * 60 + 3, 2: 6 * 60 + 30, 3: 6 * 60 + 57}
+LOCAL_TZ = ZoneInfo("America/Los_Angeles")
+
+
+def _as_local(dt):
+    """An aware datetime in America/Los_Angeles; a naive datetime
+    is read as schedule-local wall time (state stamps were written
+    on the Mac in local time), never as the host clock."""
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=LOCAL_TZ)
+    return dt.astimezone(LOCAL_TZ)
+
+
+def _parse_hhmm(text):
+    try:
+        hh, mm = (int(x) for x in str(text).split(":"))
+    except (ValueError, AttributeError):
+        return None
+    if not 0 <= hh <= 23 or not 0 <= mm <= 59:
+        return None
+    return hh, mm
+
+
+def daily_reset_boundary(reg, now):
+    """Most recent daily-reset boundary at or before now, as an
+    aware America/Los_Angeles datetime. With reset_utc the boundary
+    is the latest reset_utc instant in UTC (absolute, DST-proof);
+    without it, the latest reset_local wall time in
+    America/Los_Angeles."""
+    now_local = _as_local(now)
+    parsed_utc = _parse_hhmm(reg.get("reset_utc", ""))
+    if parsed_utc is not None:
+        hh, mm = parsed_utc
+        now_utc = now_local.astimezone(timezone.utc)
+        cand = now_utc.replace(hour=hh, minute=mm, second=0,
+                               microsecond=0)
+        if cand > now_utc:
+            cand -= timedelta(days=1)
+        return cand.astimezone(LOCAL_TZ)
+    reset_t = dtime.fromisoformat(reg.get("reset_local", "19:00"))
+    boundary = now_local.replace(hour=reset_t.hour, minute=reset_t.minute,
+                                 second=0, microsecond=0)
+    if now_local < boundary:
+        boundary -= timedelta(days=1)
+    return boundary
 
 def latest_cycle_start(now, anchor_min):
     """Most recent 4 hour cycle boundary for a segment whose fires
@@ -64,13 +113,14 @@ def latest_cycle_start(now, anchor_min):
 
 def status_of(reg, state, now):
     """Return (due: bool, label: str)."""
+    now = _as_local(now)
     cadence = reg["cadence"]
     if cadence == "weekly-thu" and now.weekday() != 3:  # Thursday = 3
         return False, "not today (Thu only)"
     entry = state.get(reg["id"])
     if not entry:
         return True, "pending"
-    done_at = datetime.fromisoformat(entry["at"])
+    done_at = _as_local(datetime.fromisoformat(entry["at"]))
     if cadence == "every-run":
         anchor = SEGMENT_ANCHORS[reg.get("segment", 1)]
         if done_at < latest_cycle_start(now, anchor):
@@ -81,16 +131,14 @@ def status_of(reg, state, now):
     if entry.get("status") == "skipped":
         return False, "skipped - " + entry.get("note", "")
     if cadence == "daily-reset":
-        reset_t = dtime.fromisoformat(reg.get("reset_local", "19:00"))
-        boundary = datetime.combine(now.date(), reset_t)
-        if now >= boundary and done_at < boundary:
+        if done_at < daily_reset_boundary(reg, now):
             return True, "due again (reset passed)"
     return False, "done " + done_at.strftime("%H:%M")
 
 def show(day, only_due, segment=None, as_json=False):
     regs = load_defs()
     state = load_state(day)
-    now = datetime.now()
+    now = datetime.now(LOCAL_TZ)
     rows = []
     items = []
     for reg in regs:
@@ -106,6 +154,7 @@ def show(day, only_due, segment=None, as_json=False):
             "segment": reg.get("segment", 1),
             "cadence": reg.get("cadence", ""),
             "reset_local": reg.get("reset_local", ""),
+            "reset_utc": reg.get("reset_utc", ""),
             "due": due, "label": label,
         })
     if as_json:
@@ -129,7 +178,7 @@ def main():
         p.add_argument("--note", default="")
         p.add_argument("--date", default=None)
     args = ap.parse_args()
-    day = date.fromisoformat(args.date) if getattr(args, "date", None) else date.today()
+    day = date.fromisoformat(args.date) if getattr(args, "date", None) else datetime.now(LOCAL_TZ).date()
     if args.cmd in ("list", "todo"):
         show(day, args.cmd == "todo", getattr(args, "segment", None),
              getattr(args, "json", False))
