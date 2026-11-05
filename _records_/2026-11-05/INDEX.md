@@ -886,3 +886,27 @@ of 2026-10-28.
   hand-off, escalation, label change or comment; no Slack DM
   and no chat report (quiet run). Status: no-op. Full detail
   in pr-catchall/0439-run.md.
+
+## 04:40 to about 04:44 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  planned [], already_present 70, skipped_done_current 0,
+  reaped 0, expired 0. Every (regular, time slot) pair in
+  the next 12 hours already has a unit in the pool.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-05 is due from the 17:00
+  run today; last night's pair sits done 2 of 2.
+- Scout diff on the Nov 4 observation (sixteenth planner run to
+  consume it; no Nov 5 observation yet, 0234 and 0304 scout units
+  failed on the Mac capture failure, Issue 284): dry run and apply
+  agree, all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0. No
+  withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred). No new Issue
+  filed. PR 312 (queue.py sweep subcommand) merged 11:47:26Z;
+  the live tree still lacks the subcommand, so the 17:00 run
+  should sync first or fall back to the manual procedure.
+- Pool: inbox 71, claimed 0, done 894, upcoming 49. Status:
+  no-op. Full detail in queue-planning/0440-run.md.
