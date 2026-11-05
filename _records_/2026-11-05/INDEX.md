@@ -2878,3 +2878,24 @@ of 2026-10-28.
 - Pool: inbox 76, claimed 0, done 940, upcoming 51.
   Status: done. Full detail in
   queue-planning/1540-run.md.
+
+## 15:32 to about 15:55 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-05-1532.
+  One bounded tooling item, the #303 follow-up filed as
+  issue #332: compound badge names in scout narrative
+  accounting ("left-column badges 2 and 1") were never
+  split, so the 2026-11-04 coverage distinct figure stayed
+  0 with both sections unnamed. PR 333 opened (branch
+  work/scout-compound-names-149, commit 905a3db04f):
+  qualified counted lines now name their dots under the
+  same qualifier rule and scope-identifier guard as the
+  count, compound items split into two names, and a
+  trailing "belonging to ..." clause is excluded. Issue
+  332 commented, cross-link on #125, owner Slack DM sent.
+  Validation: 17 fixture assertions passed on isolated
+  scratch; full-tool regression Nov 1 and Nov 3
+  byte-identical, Nov 4 differs only in the distinct-dot
+  lines (distinct 0 -> 2, unnamed 2 -> 0, headline total
+  stays 4); re-run byte-identical. Status: done.
+  Full detail in tool-development/1532-run.md.
