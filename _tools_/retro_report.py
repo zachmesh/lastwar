@@ -73,7 +73,11 @@ What is counted, per section 14 -
     exception (issue #197): a nonzero points value exactly
     equal to the same unit's achieved is not summed - it is a
     copied running total (a duel total read belongs in
-    achieved only), not score gained in the unit. Excluded
+    achieved only), not score gained in the unit. Radar units
+    are exempt from that exception (issue #296): their
+    achieved is a claim count and their radar-screen points
+    rise one per claim, so equality there is the mechanism,
+    not a copy. Excluded
     points are counted under points_dup_excluded, never
     silently dropped, and queue.py complete warns at close
     time so future closings do not carry the copy.
@@ -484,7 +488,7 @@ def _feed(bucket, unit):
     bucket["resources_unparsed"].extend(unparsed)
     points = _num(stats.get("points"))
     dup = getattr(Q, "points_duplicates_achieved", None)
-    if points is not None and dup is not None and dup(stats):
+    if points is not None and dup is not None and dup(stats, unit.get("regular")):
         bucket["points_dup_excluded"] += 1
         bucket["points_dup_excluded_units"].append(unit["unit"])
     elif points is not None:
