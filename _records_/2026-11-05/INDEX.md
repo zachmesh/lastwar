@@ -2052,3 +2052,34 @@ of 2026-10-28.
   commit, scope re-verified unchanged). No knowledge
   or code PR open. No owner-gated PR. Status: no-op.
   Full detail in pr-integration/1130-run.md.
+
+## 11:32 to about 11:42 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-1132, worked from
+  the 1032 watermark. Folded the ticker-1025 mail
+  record (failed, Mac device offline, forty-second
+  consecutive pass, third in the worsened zero-response
+  form, probe CHANNEL_STALL exit 12) into mail-rewards
+  1.21.0, and the ticker-1104 radar record (failed, Mac
+  mini offline, forty-third consecutive pass, fourth in
+  the zero-response form, stack-day duel day 4) into
+  radar-tasks 1.34.0 (PR 325 OPEN, MERGEABLE, CLEAN,
+  Owner lastwar-knowledge-organizer). The Correction
+  2026-11-05 unblock (owner Dock-icon click) is scoped
+  to the window-stream fault only and does NOT address
+  a stalled invoke channel or an offline device, for
+  which the Mac-side agent gateway restart is the
+  record inference (unverified), re-probing owed only
+  after last_seen refreshes. Own PR 322 stands MERGED
+  with no reviews or comments, so no PR feedback was
+  owed. Issue #282 commented with the forty-second and
+  forty-third occurrences (comment 6667473379); #284
+  already commented by the ticker passes. No
+  contradiction resolved, no stale item, no issue
+  filed or closed. The thirty-fifth occurrence
+  (ticker-0634) still has no record anywhere. The
+  pr-integration 1130 record landed after this run's
+  cutoff and falls to the 1232 run. No new records PR
+  opened: PR 310 for records/2026-11-05 already open,
+  awaiting the 15:00 batch.
+  Full detail in knowledge-organization/1132-run.md.
