@@ -2618,3 +2618,5 @@ Full detail in pr-integration/1430-run.md.
   _logs_/repo-actions/action-log.jsonl, append-append),
   no repeat comment. No owner-gated PR, no escalation.
   Full detail in pr-integration/1945-run.md.
+- Integrator pass pr-integration-2026-11-04-2000, no-op (non-batch, outside every batch window): checker _tools_/records_batch.py reported not due, next batch point 2300 America/Los_Angeles; PR 293 (2026-11-04, head f29171ee, 9 commits ahead, clean by gh and by merge-tree against true main a1b1f8f) carried awaiting the 2300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments); no knowledge or code PR open, no escalations, no new records PR opened; caution recorded that the VPS local branch named github/main is stale at 96aef154 and must not be read as main.
+  Full detail in pr-integration/2000-run.md.
