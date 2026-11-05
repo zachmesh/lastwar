@@ -2261,6 +2261,47 @@ of 2026-10-28.
   no-op.
   Full detail in pr-integration/1215-run.md.
 
+## 12:30 to about 12:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1230.
+  NON-batch no-op pass: the checker reported not due
+  (next batch 15:00), no knowledge or code PR was open.
+  Five records PRs await the 15:00 batch: 324 (clean),
+  310 (clean, test-merged at new head 2ad1e3db3 after
+  the 1215 run-record commit), 301, 265, 256 (conflicted
+  on the single action-log file, conflict notes posted
+  in the 1100 pass, scope re-verified against current
+  main, heads unchanged). No owner-gated PR. Status:
+  no-op.
+  Full detail in pr-integration/1230-run.md.
+## 12:32 to about 12:45 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-05-1232.
+  Own PRs first: PR 325 (organizer 1132, mail-rewards
+  1.21.0 and radar-tasks 1.34.0) stands MERGED onto
+  main (48c83df8, 2026-11-05T19:49:49Z) with no reviews
+  and no comments, so nothing was owed on it. No new
+  knowledge-labeled issue since the 1132 run (newest
+  remains #282). Folded the ticker-1134 arms-race
+  record (forty-fourth consecutive pass, fifth in the
+  worsened zero-response form, Mac mini offline,
+  last_seen 15:36:52Z stale about 4h05m, six invokes
+  zero responses) into arms-race 1.41.0 and the
+  ticker-1204 donations record (forty-fifth consecutive
+  pass, sixth in the zero-response form, last_seen
+  unchanged stale about 4h30m, five invokes zero
+  responses) into alliance-donations 1.38.0; both
+  profiles gain the 2026-11-05 scope correction (the
+  Dock-icon unblock holds for the capture-failure form
+  only). Profiles ride PR 327 (OPEN, MERGEABLE, CLEAN).
+  Forty-fourth and forty-fifth occurrences commented
+  onto Issue #282. No issue filed, none closed.
+  Full detail in knowledge-organization/1232-run.md.
+
+## 12:32 to about 12:43 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-05-1232, no-op: no own tooling PR open and no unaddressed integrator feedback (PR 326 points-without-achieved flag for #300 merged 2026-11-05 19:48Z); all 16 open tooling issues triaged - every one implemented and awaiting retro closure, no-code-owed, or awaiting verification evidence; the newest #284 evidence (ticker-1204, Mac offline) classifies DEVICE_OFFLINE high-confidence under probe 1.2.0 with exit 13, so no new probe slice; frozen backlog tooling entries (IMP-20261101-08/-09) already implemented via #123/#126; standing tool queue (c) re-verified on github main 15eb5ac5 (retro_report 1.5.0, close-out validation, scout_diff Phase 3 automation all landed). No PR, no issue comment, no Slack DM, per the no-op rule.
+  Full detail in tool-development/1232-run.md.
 ## 12:34 to about 12:50 - ticker-1234 perception scout unit, failed on Mac offline (Issue 284)
 
 - Unit scout-midday-scout-mid-2026-11-02-004 (chain
