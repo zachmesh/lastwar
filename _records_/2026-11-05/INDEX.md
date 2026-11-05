@@ -140,3 +140,22 @@ of 2026-10-28.
   owner-decision issues 132 and 154 remain over 24 hours
   with statements current. Full detail in
   pr-catchall/0039-run.md.
+## 00:40 to about 00:46 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 70, skipped_done_current 0, reaped 0,
+  expired 0. The next 12 hours were already fully staged by
+  earlier runs.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-05 is due from the
+  17:00 run today.
+- Scout diff on the Nov 4 observation (twelfth planner run to
+  consume it): dry run and apply agree, all zero - observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates 0,
+  unexplained red dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred). No new Issue
+  filed.
+- Pool: inbox 71, claimed 0, done 878, upcoming 49. Status:
+  no-op. Full detail in queue-planning/0040-run.md.
