@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T14:54:00Z
+modified: 2026-11-05T15:29:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
+description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch; the 0715 integrator pass, non-batch, held all five records PRs for the 1100 batch
 status: unverified
 ---
 
@@ -1287,3 +1287,19 @@ of 2026-10-28.
   No zombie seeding (event ended 2026-10-30). Pass stopped
   after this unit. Full detail in
   radar-tasks/0704-queue-run.md.
+
+## 07:15 to about 07:29 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0715.
+  Non-batch pass: the checker reported due for the 07:00
+  window, but the 07:00 batch had already merged records
+  PR 309 at 07:01:50, so per the batch rule this pass
+  merged nothing and posted no comments. Records PRs
+  301, 265 and 256 were reconciled on the branch side
+  mid-pass by the ticker-0704 pass (merge main 2cc9f29f
+  into each branch) and are now MERGEABLE CLEAN; PR 317
+  is clean; PR 310's reconciliation landed just after
+  the sweep, so all five are now MERGEABLE CLEAN and
+  await the 11:00 batch. No knowledge or code PR open,
+  no owner-gated PR. Status: done.
+  Full detail in pr-integration/0715-run.md.
