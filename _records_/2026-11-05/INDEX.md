@@ -1138,3 +1138,15 @@ of 2026-10-28.
   No comments posted, no owner-gated PR.
   Status: no-op.
   Full detail in pr-integration/0600-run.md.
+- Integrator pass pr-integration-2026-11-05-0615.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged.
+  No knowledge or code PR was open. All five records
+  PRs await the 07:00 batch and are CLEAN by
+  merge-tree against main 1d309d4a and by GitHub
+  (heads 310 358ab68a8, 309 22274ed9, 301 ace4f02b,
+  265 e9effc34, 256 f960817d); PR 310 read UNKNOWN
+  on first check, CLEAN on recheck - computation lag.
+  No comments posted, no owner-gated PR.
+  Status: no-op.
+  Full detail in pr-integration/0615-run.md.
