@@ -1454,3 +1454,37 @@ of 2026-10-28.
   No owner-gated PR. No comment posted.
   Status: no-op.
   Full detail in pr-integration/0800-run.md.
+## 08:04 to about 08:20 - Ticker pass
+
+- Own PRs first: open records PRs checked on the VPS - PR 310
+  (records/2026-11-05, ticker-0304) has no unanswered question
+  addressed to this job; the integrator's conflict note was
+  already reconciled branch-side by the ticker-0704 pass (main
+  2cc9f29f merged, action-log union, commit 5bacb79ca), and the
+  branch head on the remote is ac92eea48 (ticker-0704 records
+  commit). Nothing to address.
+- Donations unit donations-2026-11-05-0603, failed,
+  ticker-0804: no game screen was ever read and no game input
+  was dispatched. The Mac screen capture stream failed on all
+  four computer.observe attempts plus two activate calls
+  returning the same stream error, across two computer
+  sessions (cc-535, cc-536), with "Failed to start stream due
+  to audio/video capture failure"; one open_app returned
+  outcome_unknown. A Chrome-window observation in cc-536
+  succeeded with a full accessibility tree, so the channel
+  works for on-screen windows and the fault is specific to
+  the LastWar window stream. The fail-fast probe
+  (_tools_/mac_capture_probe.py 1.0.0, run from a /tmp copy
+  of main's version since this worktree carries no _tools_
+  folder) classifies OFF_SCREEN_WINDOW (high confidence),
+  stop_pass yes, exit 10. This is the thirty-eighth
+  consecutive ticker pass with this blocker (Issue 284,
+  open, tooling). No Donation Count read, no donation made.
+  Tracker untouched. The pass stopped after this one unit.
+  Full detail in alliance-donations/0804-queue-run.md.
+- No zombie seeding: the Zombie Invasion event ended
+  2026-10-30 about 19:00 and the chain is closed; no Zombie
+  Invasion tab is to be expected until it is seen live again.
+  Sync: reaped 0, expired 0, due 21, produced nothing new,
+  all 21 regulars already queued. Inbox 76, claimed 0,
+  done 908.
