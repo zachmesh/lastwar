@@ -1260,3 +1260,30 @@ of 2026-10-28.
   open, no owner-gated PR. Local main fast-forwarded
   c45b59ac to 2cc9f29f via the bundle route. Status: done.
   Full detail in pr-integration/0700-run.md.
+
+## 07:04 to about 07:24 - Ticker pass
+
+- Ticker-0704, radar unit radar-2026-11-05-0603, failed on
+  the Mac screen capture failure (Issue 284),
+  thirty-sixth consecutive ticker pass with this blocker.
+  Four capture attempts across four computer sessions
+  (cc-526, cc-527, cc-528, cc-529), all "Failed to start
+  stream due to audio/video capture failure" on activate,
+  observe (compact, image) and one open_app outcome_unknown;
+  list_windows confirms the LastWar window fresh in this
+  pass (1920x1080 at (0,0), window_id 160366, pid 59735).
+  The probe (_tools_/mac_capture_probe.py) classifies
+  OFF_SCREEN_WINDOW (high confidence), stop_pass yes; the
+  Chrome window observes normally in the same session, so
+  the fault is specific to the LastWar window stream.
+  Recovery stays the owner step on the Mac mini (click the
+  LastWar Dock icon once, or run _tools_/mac_lastwar_front.sh
+  in Terminal); the device exposes no shell command to this
+  agent. No game screen read, no game input dispatched,
+  tracker untouched. Own PRs first: reconciled PRs 310, 265,
+  256 and 301 branch-side against main 2cc9f29f (action-log
+  union each), pushed via the bundle route and commented.
+  Sync: reaped 0, expired 5, due 21, produced nothing new.
+  No zombie seeding (event ended 2026-10-30). Pass stopped
+  after this unit. Full detail in
+  radar-tasks/0704-queue-run.md.
