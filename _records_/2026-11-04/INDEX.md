@@ -2474,3 +2474,8 @@ Full detail in pr-integration/1430-run.md.
 
 - Ticker pass ticker-1834, events unit events-2026-11-04-1457 failed: Mac screen capture stream failed on all 6 attempts across 2 computer sessions (cc-477, cc-478) with "Failed to start stream due to audio/video capture failure"; no game screen read, no input dispatched, no blind taps. Thirteenth consecutive ticker pass on this blocker; GitHub Issue #284 commented (comment 6648146566), no duplicate filed. Tracker untouched; inbox held 66 units at this pass. Pass stopped after this unit.
   Full detail in event-claims/1834-queue-run.md.
+
+## 18:32 to about 18:38 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-1832, done: no own tooling PR open and no unaddressed integrator feedback; implemented the #149 distinct-dot follow-up PR 260 left open - _tools_/scout_diff.py now reports distinct named unexplained dots (count-gated, nameless lines naming nothing, sections without countable names counted separately, so the figure is a floor) in the coverage report, coverage JSON and round-summary section, headline unchanged; PR 291 opened (branch work/scout-distinct-dots-149, commit d8f4b1ff55), issue 149 commented, issue not closed (closure belongs to the daily retro); validation on scratch pools only (py_compile clean, 17 fixture assertions, full-tool dry run byte-identical on re-run, unpatched-main control lacks the figure).
+  Full detail in tool-development/1838-run.md.
