@@ -4,7 +4,7 @@ created: 2026-11-05T08:03:07Z
 modified: 2026-11-05T08:25:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-second consecutive pass); three stale records PRs resolved on the branch side
+description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side
 status: unverified
 ---
 
@@ -28,7 +28,7 @@ of 2026-10-28.
   comments stand, not force-merged. No owner-gated PR.
   Full detail in pr-integration/0000-run.md.
 
-## 00:04 to about 00:22 - Ticker pass
+## 00:04 to about 00:10 - Ticker pass
 
 - Own PRs first: the three stale open records PRs from earlier
   ticker passes were resolved on the branch side before game
@@ -51,9 +51,12 @@ of 2026-10-28.
   failure". A Chrome-window observation in the same fresh
   session succeeded, so the channel works for other apps and
   the failure is specific to the Last War window. This is the
-  twenty-second consecutive ticker pass with this blocker
+  twenty-third consecutive ticker pass with this blocker
   (Issue 284, open, tooling). No phase read, no score read,
-  no chest claimed. Tracker untouched. The pass stopped after
+  no chest claimed. Correction appended in
+  arms-race/0004-queue-run-correction.md: the count and the
+  session window in the run record were wrong (22nd and 00:22
+  as first written); the measured figures are 23rd and 00:10. Tracker untouched. The pass stopped after
   this one unit. Full detail in arms-race/0004-queue-run.md.
 - No zombie seeding: no Zombie Invasion tab in the Events hub,
   consistent with the event close of 2026-10-30; zombie-invasion
