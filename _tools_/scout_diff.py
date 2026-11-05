@@ -342,9 +342,23 @@ ACCOUNTING_FRONTMATTER = {
     "explained": "red_dots_explained",
     "unexplained": "unexplained_red_dots",
 }
+# Words a scope qualifier may carry between the accounting
+# keyword and the count. A qualifier states where the count
+# applies ("within the base group alone"), never a dot or a
+# counter: a dot word (badge, dot, icon, toast, chest) or a
+# counter word would make the following number an identifier
+# ("the badge 2"), not a count, so such a word ends the
+# qualifier and the line reads as nameless instead of
+# inventing a count. At most six qualifier words: the
+# attested form carries five.
+_ACCOUNTING_QUALIFIER_WORD = (
+    r"(?!badge|badges|dot|dots|icon|icons|toast|toasts|"
+    r"counter|counters|chest|chests\b)[a-z]+")
 _ACCOUNTING_LINE = re.compile(
     r"^-\s*(seen|explained|unexplained)"
-    r"(?:\s+red\s+dots?)?\s*:?\s*(\d+)\b",
+    r"(?:\s+red\s+dots?)?"
+    r"(?P<qualifier>(?:\s+" + _ACCOUNTING_QUALIFIER_WORD + r"){0,6}?)"
+    r"\s*:?\s*(?P<count>\d+)\b",
     re.IGNORECASE)
 
 
@@ -355,6 +369,19 @@ def parse_narrative_accounting(text):
     its Seen, Explained and Unexplained lines carry that
     pass's own counts, in either the bare form ("Seen 3:")
     or the spelled-out form ("Unexplained red dots: 0.").
+    A count may also carry a scope qualifier between the
+    keyword and the number ("Unexplained within the base
+    group alone 2:"), of at most six digit-free words that
+    name no dot and no counter; the qualifier is why the
+    2026-11-04 observation's two base-group lines read at
+    all. A qualifier followed by digits and then a colon
+    and another bare number ("in group 2: 3 dots") is not
+    a count: the digits were a scope identifier, so the
+    line reads as nameless. Names are still taken only
+    from the unqualified counted form, so a qualified
+    line states its count and names nothing - its section
+    counts as unnamed, and the distinct figure stays a
+    floor.
     A count a section does not state reads as None, never
     as zero - a line naming a dot without a number (for
     example "Unexplained: the Alliance Wars dot") states
@@ -402,7 +429,18 @@ def parse_narrative_accounting(text):
             unexplained_text = None
         m = _ACCOUNTING_LINE.match(stripped)
         if m:
-            current[m.group(1).lower()] = int(m.group(2))
+            qualifier = (m.group("qualifier") or "").strip()
+            rest = stripped[m.end():]
+            if qualifier and re.match(r"\s*:\s*\d", rest):
+                # The digits were a scope identifier, not the
+                # count ("Unexplained in group 2: 3 dots"):
+                # the real count follows the colon. Inventing
+                # the identifier as the count would be worse
+                # than stating none, so the line reads as
+                # nameless.
+                m = None
+        if m:
+            current[m.group(1).lower()] = int(m.group("count"))
             if m.group(1).lower() == "unexplained":
                 unexplained_text = stripped
         elif re.match(r"-\s*unexplained\b", stripped,
