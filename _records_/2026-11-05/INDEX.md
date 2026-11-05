@@ -1518,3 +1518,40 @@ of 2026-10-28.
   PR. No comment posted.
   Status: no-op.
   Full detail in pr-integration/0830-run.md.
+
+## 08:34 to about 08:40 - Ticker pass
+
+- Own PRs first: open records PRs checked on the VPS - PR 310
+  (records/2026-11-05, ticker-0304) has no unanswered question
+  addressed to this job; the integrator's conflict note was
+  already reconciled branch-side by the ticker-0704 pass (main
+  2cc9f29f merged, action-log union, commit 5bacb79ca). PR 317
+  (records/2026-11-01) belongs to lastwar-pr-integrator and
+  carries no comments. Nothing to address.
+- Donations unit donations-2026-11-03-1241, failed,
+  ticker-0834: no game screen was ever read and no game input
+  was dispatched. The Mac screen capture stream failed on all
+  three computer.observe attempts plus two activate calls
+  returning the same stream error, in computer session cc-537,
+  with "Failed to start stream due to audio/video capture
+  failure"; one open_app returned outcome_unknown. A
+  Chrome-window observation in the same session succeeded
+  with a full accessibility tree, so the channel works for
+  on-screen windows and the fault is specific to the LastWar
+  window stream. The fail-fast probe
+  (_tools_/mac_capture_probe.py 1.0.0) classifies
+  OFF_SCREEN_WINDOW (high confidence), stop_pass yes, exit 10.
+  This is the thirty-ninth consecutive ticker pass with this
+  blocker (Issue 284, open, tooling). No Donation Count read,
+  no donation made. Tracker untouched. The pass stopped after
+  this one unit. The unit itself was already superseded: its
+  11-03 re-read question was answered by the 0521 unit (live
+  1/30 read), and it lingered in the inbox only because it
+  carries no expires_at. Full detail in
+  alliance-donations/0834-queue-run.md.
+- No zombie seeding: the Zombie Invasion event ended
+  2026-10-30 about 19:00 and the chain is closed; no Zombie
+  Invasion tab is to be expected until it is seen live again.
+  Sync: reaped 0, expired 6, due 23, produced 7 new units
+  (passes, secrets, treasures, trucks, events, duel-score,
+  scout-midday). Inbox 28, claimed 0, done 825.
