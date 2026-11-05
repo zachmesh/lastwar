@@ -432,6 +432,19 @@ of 2026-10-28.
   comments posted, no conflicts, no owner-gated PR.
   Full detail in pr-integration/0230-run.md.
 
+## 02:32 to about 02:40 - Tool developer pass
+
+- Tool-developer pass tool-development-2026-11-05-0232, done:
+  worked issue 284 (Mac screen-capture outage, twenty-seventh
+  consecutive ticker pass): built _tools_/mac_capture_probe.py
+  1.0.0 (fail-fast probe classifier) and
+  _tools_/mac_lastwar_front.sh (owner one-command recovery);
+  PR 307 opened (branch work/mac-capture-probe-284, commit
+  db8bb0a5b4); issue 284 commented; Slack DM sent to the owner.
+  The loop stays blocked until the owner clicks the LastWar Dock
+  icon or runs the script. Full detail in
+  tool-development/0232-run.md.
+
 ## 02:34 to about 02:38 - Ticker pass
 
 - Ticker-0234, scout unit scout-scout-2026-11-02-001, failed
