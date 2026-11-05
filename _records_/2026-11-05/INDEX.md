@@ -985,3 +985,19 @@ of 2026-10-28.
   2026-10-30 (unit 066), chain closed, zombie-invasion inbox 0
   per stats. Sync: reaped 0, expired 0, due 21, produced
   nothing new, all 21 regulars already queued.
+
+- Integrator pass pr-integration-2026-11-05-0515.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged. No
+  knowledge or code PR open. All five records PRs
+  await the 07:00 batch and are now MERGEABLE/CLEAN:
+  the ticker-0504 pass resolved the four conflicts
+  standing at the 0500 pass branch-side (main merged
+  into records/2026-11-01, -11-02, -11-03, -11-04),
+  and this pass posted verification comments on PR
+  309, 301, 265 and 256. PR 310 head advanced
+  mid-pass to 2fcda913 (ticker-0504 survivors record)
+  and was re-verified clean by scratch merge-tree
+  against main 65e12ecf. No owner-gated PR. Status:
+  no-op.
+  Full detail in pr-integration/0515-run.md.
