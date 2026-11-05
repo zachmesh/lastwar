@@ -2991,3 +2991,8 @@ Full detail in pr-integration/1430-run.md.
   with statements current. No adoption, fix, hand-off,
   escalation, or stale-owner flag.
   Full detail in pr-catchall/2339-run.md.
+
+## 23:32 to about 23:41 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-2332, done: no own tooling PR open and no unaddressed integrator feedback; re-tested the live Nov 4 observation against the current main tool and found the #149 qualified-count gap the 2232 no-op pass had not exercised - "Unexplained within the base group alone 2:" read as not stated, coverage headline 0 where the observation states 4; _tools_/scout_diff.py now reads a bounded scope qualifier between the keyword and the count, with a scope-identifier guard, so the Nov 4 headline reads 4 (sections 1-2 unexplained 2 each, totals 8/4/4), distinct stays a floor at 0 with 2 unnamed sections; PR 303 opened (branch work/scout-qualified-counts-149, commit bad10fef6), issue 149 commented, issue not closed (closure belongs to the daily retro); validation on scratch pools only (py_compile clean, 20 fixture assertions, Nov 1/Nov 3 full-tool outputs byte-identical to the pre-change tool, Nov 4 differing only in the unexplained figures, re-run byte-identical).
+  Full detail in tool-development/2332-run.md.
