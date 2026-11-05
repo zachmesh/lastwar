@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T16:36:24Z
+modified: 2026-11-05T19:32:17Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0804 mail-rewards execution record 2026-11-04 0817 queue run (done, checked only, Claim All no-change in four categories, Event notice opened individually, no claimable mail)
   - source: ticker-1327 mail-rewards execution record 2026-11-04 1333 queue run (failed, Mac screen-capture channel failure on every capture step, no game input dispatched, second consecutive ticker pass to fail this way after help 1235, Issue 282)
   - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1333 section wording)
+  - source: ticker-1025 mail-rewards execution record 2026-11-05 1025 queue run (failed, Mac device offline, forty-second consecutive pass, zero-response form, Issue 284)
 ---
 
 
@@ -786,3 +787,12 @@ the next tick re-produces this regular as a fresh unit.
 - Source: the 0134 survivors record (`_records_/2026-11-05/survivor-intake/0134-queue-run.md`, ticker-0134, twenty-sixth consecutive capture failure), re-confirmed by the 0204 gifts record (`_records_/2026-11-05/alliance-gifts/0204-queue-run.md`, ticker-0204, twenty-seventh) and by the 0734 arms-race and 0804 donations records on the same day (thirty-seventh and thirty-eighth occurrences, probe OFF_SCREEN_WINDOW, Chrome observing normally in the same sessions). The View menu lists "Enter Full Screen", so the app is NOT in native fullscreen: it is a windowed 1920x1080 window on an inactive Space, and the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission.
 - Superseded in this profile: the "LastWar app running fullscreen" wording in the 1333 section above. The rest of that section stands unchanged: the capture sequence, the classification (the same screen-capture channel failure class as the 1235 help unit, not a mail entry failure and not a different-device dialog), and the follow-up rule.
 - Follow-up corrected: the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. This correction changes no Mail state: no mail tab was opened in the 1333 unit and no reward count was read, and none is asserted here.
+- Scope correction 2026-11-05 (from the 0904, 0941 and 1025 records): the Dock-icon unblock in the bullet above holds for the window-stream (capture-failure) form only. It does not address a stalled invoke channel or an offline device: for the zero-response form the record inference is a Mac-side agent gateway restart before re-probing (unverified), and re-probing is owed only after device.list last_seen refreshes.
+
+## What the 2026-11-05 1025 unit added - Mac device offline, forty-second consecutive pass, zero-response form
+
+- Unit mail-2026-11-05-0630 by ticker-1025, about 10:25 to 10:36 local, status failed (access-failed). Evidence in `_records_/2026-11-05/mail-rewards/1025-queue-run.md`. No game screen was ever read and no game input was dispatched: every device invoke to the Mac mini returned node_offline or timed out, so no mail category was opened and no attachment was claimed.
+- Attempts, five, zero responses: computer.session start on the Mac mini node_offline (device offline, no wake-up path) twice; connection.health on the Mac mini node_offline; connection.repair (web) on the Mac mini node_offline; connection.health on the recovery device node_invoke_timeout after 25s. device.list now reports the Mac mini offline (earlier passes saw it online-stale) with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 2 hours 55 minutes at pass time - the state has worsened from online-stale to offline.
+- Classification: the forty-second consecutive ticker pass with a Mac device-access blocker (Issue #284, open, tooling), and the third in the worsened zero-response form after ticker-0904 (fortieth) and ticker-0941 (forty-first). The fail-fast probe (_tools_/mac_capture_probe.py 1.1.0, PR #321, merged 2026-11-05 09:47 PST) classifies CHANNEL_STALL (high confidence), stop_pass yes, exit 12. This is NOT a mail entry failure (Issue #230 is not tested here - no entry point was reached, so no #230 comment is made) and NOT a capture-channel fault of the 1333 form: the control channel itself returned no response at all.
+- Scope correction: see the appended bullet in the Correction 2026-11-05 section above - the Dock-icon unblock holds for the window-stream form only, not for a stalled invoke channel. For the zero-response form the record inference is a Mac-side agent gateway restart before re-probing (unverified), and re-probing is owed only after device.list last_seen refreshes.
+- Follow-up: tracker untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit. Sync reaped 0, expired 2 (training/survivors 0603), produced nothing (all 21 due regulars already queued). No diamonds or money spent, no mail deleted, no other activity work done. Forty-second occurrence commented onto Issue #282 by this run.
