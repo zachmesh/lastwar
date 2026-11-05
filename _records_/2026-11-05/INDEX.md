@@ -594,6 +594,67 @@ of 2026-10-28.
   with this blocker (Issue 284, open, tooling); commented
   on #284. Tracker untouched. The pass stopped after this
   one unit. Full detail in radar-tasks/0304-queue-run.md.
+## 03:15 to about 03:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0315.
+  Non-batch pass inside the 03:00 window: the checker
+  reported due but the 03:00 batch had already landed
+  (PR 187 at 03:02:36 PT, PR 304 at 03:08:41 PT), so
+  no records PR was merged. PR 301 (2026-11-04, head
+  bf9fb87e) conflict scope grew to three files: the
+  action-log file plus _queue_/done/donations-2026-11-04-2203.md
+  and _queue_/done/radar-2026-11-04-2203.md (add/add, main
+  says expired with 0 attempts, the branch says claimed
+  and failed); updated comment posted on PR 301. PRs 309,
+  265 and 256 still conflict on the single action-log
+  file, heads unchanged, 0300 comments stand. PR 310
+  (2026-11-05) is clean. All five records PRs await the
+  07:00 batch. No knowledge or code PR open.
+  Full detail in pr-integration/0315-run.md.
+
+## 03:30 to about 03:34 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0330.
+  Non-batch pass inside the 03:00 window: the checker
+  reported due but the 03:00 batch had already landed
+  (PR 187 at 03:02:36 PT, PR 304 at 03:08:41 PT), so
+  no records PR was merged. No conflict state changed
+  since the 0315 pass and no new comment was owed:
+  PR 310 (2026-11-05, head 76c0ecdf) is clean, verified
+  by a scratch test merge; PRs 309, 265 and 256 still
+  conflict on the single action-log file with heads
+  unchanged and 0300 comments standing; PR 301 still
+  conflicts on three files with its 0315 comment
+  standing. All five records PRs await the 07:00 batch.
+  No knowledge or code PR open.
+  Full detail in pr-integration/0330-run.md.
+
+## 03:32 to about 03:40 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-0332, worked from
+  the 0232 watermark. Folded the ticker-0234 scout 0234
+  record (failed, Mac screen-capture failure, twenty-eighth
+  consecutive pass, Chrome observes normally in session
+  cc-511, full/image views fail at stream start like
+  compact so not view-dependent, stale chain head
+  scout-2026-11-02) into perception-scout 1.19.0 and the
+  ticker-0304 radar 0304 record (failed, twenty-ninth
+  consecutive pass, first fail-fast probe classification
+  OFF_SCREEN_WINDOW high confidence from
+  _tools_/mac_capture_probe.py 1.0.0, View-menu inspect
+  gated on a fresh observation, Chrome observes normally
+  in session cc-513) into radar-tasks 1.32.0 (PR 311 OPEN,
+  MERGEABLE, CLEAN, Owner lastwar-knowledge-organizer).
+  Both occurrences commented onto Issue #282; Issue #284
+  already tracks the blocker. No contradictions resolved:
+  the 1005 radar close and the 2026-11-04 0906/0911 scout
+  base-group reads stand as the last live reads. No Slack
+  DM and no chat report: routine hourly folds, no material
+  correction and no owner decision owed.
+  Full detail in knowledge-organization/0332-run.md.
+
+## 03:34 to about 03:38 - Ticker pass
+
 - Arms race unit arms-race-2026-11-05-0203, failed, ticker-0334:
   no Arms Race screen was ever read and no task was executed or
   claimed. The Mac screen capture stream failed on all five
