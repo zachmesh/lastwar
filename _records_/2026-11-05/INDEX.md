@@ -2386,3 +2386,20 @@ of 2026-10-28.
   notes posted in the 1100 pass, scope re-verified
   against new main). No owner-gated PR. Status: done.
   Full detail in pr-integration/1250-run.md.
+
+## 13:04 to about 13:15 - Ticker pass
+
+- Ticker-1304. Scout unit scout-scout-2026-11-03-001 (chain
+  scout-2026-11-03, seq 1) failed on the Mac device-access
+  blocker (Issue 284, 47th consecutive pass, 8th in the
+  worsened zero-response form): five device invokes, zero
+  responses - computer.session start twice, connection.health
+  and connection.repair (web) on the Mac mini all
+  node_offline with no wake-up path, connection.health on
+  the recovery device node_invoke_timeout after 25s.
+  device.list last_seen still 15:36:52Z, stale about 5h35m.
+  No game screen read, no input dispatched, tracker
+  untouched. Pool note: records-branch pool inbox 41 / done
+  845; the main working tree's inbox 75 figure comes from
+  the stale work/ops-execution-records branch. Status:
+  failed. Full detail in perception-scout/1304-queue-run.md.
