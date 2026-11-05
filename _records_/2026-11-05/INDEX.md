@@ -762,3 +762,18 @@ of 2026-10-28.
   records PRs await the 07:00 batch. No owner-gated PR.
   Status: no-op. Full detail in
   pr-integration/0400-run.md.
+
+## 04:04 to about 04:10 - Queue ticker pass (donations, failed)
+
+- Ticker pass ticker-0404. Sync: reaped 0, expired 0, due 21,
+  produced nothing new, 21 regulars already queued. No zombie
+  seeding: the zombie chain closed with unit 066 on 2026-10-30.
+- Unit donations-2026-11-05-0203 failed: the Mac screen-capture
+  channel failed on all 4 observe attempts across 2 computer
+  sessions (cc-516, cc-517) with "Failed to start stream due to
+  audio/video capture failure"; no game screen was ever read and
+  no game input was dispatched. Probe classifies OFF_SCREEN_WINDOW
+  (high confidence), stop_pass yes. This is the same blocker as
+  GitHub Issue #284, the thirty-first consecutive ticker pass to
+  fail identically; this pass commented on #284. Tracker untouched.
+  Full detail in alliance-donations/0404-queue-run.md.
