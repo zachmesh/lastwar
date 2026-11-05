@@ -2646,3 +2646,20 @@ Full detail in pr-integration/1430-run.md.
   for records/2026-11-04 already open, awaiting the 2300
   batch.
   Full detail in knowledge-organization/2032-run.md.
+
+## 20:34 to about 20:50 — Queue ticker pass, alliance donations failed
+
+- Ticker pass ticker-2034. Sync reaped 0, expired 0, produced
+  nothing new - 21 regulars already queued. No zombie chain
+  was seeded: the Zombie Invasion event ended at about the
+  19:00 reset on 2026-10-30, and the seeding rule forbids a
+  fresh chain until a Zombie Invasion tab is seen live again.
+- Donations unit donations-2026-11-04-1803, failed: the Mac
+  screen capture stream failed on all 5 capture attempts
+  across 3 sessions (cc-483, cc-484, cc-485) with the same
+  audio/video capture error, so no screen was ever read and
+  no game input was dispatched. Same blocker as GitHub Issue
+  #284 (open, tooling), commented instead of filing a
+  duplicate. Tracker untouched; the next tick re-produces
+  the donations unit. Full detail in
+  alliance-donations/2034-queue-run.md.
