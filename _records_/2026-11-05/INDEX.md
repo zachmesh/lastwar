@@ -2010,6 +2010,126 @@ of 2026-10-28.
   queued). No zombie seeding (event ended 2026-10-30).
   Full detail in radar-tasks/1104-queue-run.md.
 
+## 11:00 to about 11:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1100.
+  BATCH pass: the checker reported due for the 11:00
+  window (11:00-12:00). Records PR 317 merged by
+  merge commit 1f8cc74f44. Records PRs 265, 256, 301
+  and 310 conflicted on _logs_/repo-actions/
+  action-log.jsonl after the merge, commented and
+  carried to the 15:00 batch. Fresh records PR 324
+  opened for the post-merge line on records/2026-11-01.
+  No knowledge or code PR open. No owner-gated PR.
+  Status: done.
+  Full detail in pr-integration/1100-run.md.
+
+## 11:15 to about 11:25 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1115.
+  NON-batch pass: the checker reported due for the 11:00
+  window, but the 11:00 batch already landed in the 1100
+  pass (records PR 317 merged 11:02:31 PT, merge commit
+  1f8cc74f44), so no records PR was merged this pass.
+  Five records PRs await the 15:00 batch: 324 (clean),
+  310, 301, 265, 256 (conflicted on the single
+  action-log file, conflict notes posted in the 1100
+  pass, no head changed since). No knowledge or code
+  PR open. No owner-gated PR. Status: no-op.
+  Full detail in pr-integration/1115-run.md.
+
+## 11:30 to about 11:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1130.
+  NON-batch pass: the checker reported due for the 11:00
+  window, but the 11:00 batch already landed in the 1100
+  pass (records PR 317 merged 11:02:31 PT, merge commit
+  1f8cc74f44), so no records PR was merged this pass.
+  Five records PRs await the 15:00 batch: 324 (clean),
+  310, 301, 265, 256 (conflicted on the single
+  action-log file, conflict notes posted in the 1100
+  pass; PR 310 head moved only by the 1115 run-record
+  commit, scope re-verified unchanged). No knowledge
+  or code PR open. No owner-gated PR. Status: no-op.
+  Full detail in pr-integration/1130-run.md.
+
+## 11:32 to about 11:42 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-1132, worked from
+  the 1032 watermark. Folded the ticker-1025 mail
+  record (failed, Mac device offline, forty-second
+  consecutive pass, third in the worsened zero-response
+  form, probe CHANNEL_STALL exit 12) into mail-rewards
+  1.21.0, and the ticker-1104 radar record (failed, Mac
+  mini offline, forty-third consecutive pass, fourth in
+  the zero-response form, stack-day duel day 4) into
+  radar-tasks 1.34.0 (PR 325 OPEN, MERGEABLE, CLEAN,
+  Owner lastwar-knowledge-organizer). The Correction
+  2026-11-05 unblock (owner Dock-icon click) is scoped
+  to the window-stream fault only and does NOT address
+  a stalled invoke channel or an offline device, for
+  which the Mac-side agent gateway restart is the
+  record inference (unverified), re-probing owed only
+  after last_seen refreshes. Own PR 322 stands MERGED
+  with no reviews or comments, so no PR feedback was
+  owed. Issue #282 commented with the forty-second and
+  forty-third occurrences (comment 6667473379); #284
+  already commented by the ticker passes. No
+  contradiction resolved, no stale item, no issue
+  filed or closed. The thirty-fifth occurrence
+  (ticker-0634) still has no record anywhere. The
+  pr-integration 1130 record landed after this run's
+  cutoff and falls to the 1232 run. No new records PR
+  opened: PR 310 for records/2026-11-05 already open,
+  awaiting the 15:00 batch.
+  Full detail in knowledge-organization/1132-run.md.
+
+## 11:39 to about 11:43 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-05-1139: no adopted open PR; six open
+  PRs scanned and none owned by this job (PR 325 organizer 1132,
+  PR 324/310/301/265/256 integrator records, all naming a rightful
+  owner matching their diffs). No reviews on any open PR; no comment
+  addressed to this job. PR 322 merged 10:52 PST and PRs 324 and 325
+  opened since the 1039 pass. PR 310 read mergeable UNKNOWN at first
+  check after the ticker-1134 branch-side reconciliation (main
+  1f8cc74f44, commit ea0ab36031) and MERGEABLE/CLEAN on re-check, the
+  known transient recomputation pattern, so no action arises for this
+  job. PRs 301, 265 and 256 are CONFLICTING again after the 1100
+  batch merged PR 317, with the integrator active on them inside the
+  hour and all under the 48-hour stale-owner threshold. No
+  stale-owner flag. Issues: 47 open, all class-labeled, zero
+  unclassified; no change since the 1039 pass. Owner-decision issues
+  132 (about ninety-one hours) and 154 (about eighty-five hours) both
+  over 24 hours with statements current.
+  Full detail in pr-catchall/1139-run.md.
+
+## 11:34 to about 11:47 - Ticker pass
+
+- Arms-race unit arms-race-2026-11-05-1003, failed,
+  ticker-1134: no game screen was ever read and no game input
+  was dispatched. Six device invokes, zero responses:
+  computer.session start on the Mac mini three times
+  node_offline (device offline, no wake-up path),
+  connection.repair (web) on the Mac mini node_offline,
+  connection.repair (native) and connection.health on the
+  recovery device both node_invoke_timeout after 25s.
+  device.list reports the Mac mini offline with last_seen
+  15:36:52Z, stale about 4 hours 5 minutes, unchanged since
+  the ticker-1025 pass. This is the forty-fourth consecutive
+  ticker pass with a Mac device-access blocker (Issue 284),
+  fifth in the worsened zero-response form. Re-probing is
+  owed only after last_seen refreshes, so no probe was run
+  this pass. Commented on Issue 284. Own PRs first: PR 310
+  reconciled branch-side this pass (main 1f8cc74f44 merged,
+  commit ea0ab36031, action-log union, pushed and verified,
+  comment posted), awaiting the 15:00 batch. No Arms Race
+  phase work executed or claimed. Tracker untouched. The pass
+  stopped after this one unit. Sync reaped 0, expired 0,
+  produced nothing (all 21 due regulars already queued). No
+  zombie seeding (event ended 2026-10-30).
+  Full detail in arms-race/1134-queue-run.md.
+
 ## 11:40 to about 11:48 - Queue planning pass
 
 - Pass queue-planning-2026-11-05-1140: done. Own PRs
