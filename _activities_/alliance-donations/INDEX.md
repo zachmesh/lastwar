@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T05:34:24Z
+modified: 2026-11-05T07:34:38Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-1034 alliance-donations execution record 2026-11-04 1046 queue run (partial, 10 coin donations 10 of 30 to 1 of 30 plus a landing 1 of 30 test tap, tenth replenishment point, 1 of 30 avoidance superseded)
   - source: ticker-1504 alliance-donations execution record 2026-11-04 1504 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, sixth consecutive ticker pass to fail this way, describe route also failed, 30-second wait retry failed, Issue 284)
   - source: ticker-2034 alliance-donations execution record 2026-11-04 2034 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 1934 known to fail identically, Issue 284)
+  - source: ticker-2304 alliance-donations execution record 2026-11-04 2304 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2234 known to fail identically, Issue 284)
 ---
 
 
@@ -2230,3 +2231,12 @@ enqueued for after the cooldown (not before about
 - Recurrence, not a new failure class: this is the next ticker pass after ticker-1934 known to fail on this exact blocker; the record does not assert an exact consecutive position (no ticker-2004 record was found in the local tree). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282. It adds no new diagnosis beyond the game-window capture stream already narrowed in the 1404 section.
 - Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The inbox held 73 units at this pass.
+
+## What the 2026-11-04 2304 unit added - screen-capture failure, next known pass after 2234, nothing measured
+
+- Unit donations-2026-11-04-2203 by ticker-2304, about 23:04 to 23:18 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 2034 section). Evidence in `_records_/2026-11-04/alliance-donations/2304-queue-run.md`. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across three computer sessions: session cc-494, computer.control activate selected the LastWar window for background input but captured no observation with "Failed to start stream due to audio/video capture failure", computer.observe failed with the same error; session cc-495 (after ending cc-494), open_app LastWar returned outcome_unknown and was not repeated, computer.observe failed again with the same error; session cc-496 (after ending cc-495), computer.control activate again selected the window with the same capture failure, computer.observe failed a final time with the same error. Total capture attempts: 5. The device connection health was healthy on both native and web transports (native last response 0 seconds old, web 2 seconds old at check time), LastWar (pid 59735) was running fullscreen 1920x1080, and Google Chrome was frontmost.
+- No blind taps were dispatched, under the check-first rule. The Alliance menu, the Alliance Techs tree and the Rallied Attack panel were never opened, no Donation Count was read live, and no coin donation was made or verified.
+- Recurrence, not a new failure class: this is the next ticker pass after ticker-2234 known to fail on this exact blocker; the record notes ticker-1934 commented on #284 as the fifteenth consecutive capture-failure pass and the ticker-2034 and ticker-2134 passes failed identically later the same day. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282. It adds no new diagnosis beyond the game-window capture stream already narrowed in the 1404 section.
+- Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The inbox held 70 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
