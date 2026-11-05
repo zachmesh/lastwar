@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T11:12:00Z
+modified: 2026-11-05T13:17:11Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
@@ -945,3 +945,43 @@ of 2026-10-28.
   All five records PRs await the 07:00 batch. No
   owner-gated PR. Status: no-op.
   Full detail in pr-integration/0500-run.md.
+
+## 05:04 to about 05:22 - Ticker pass
+
+- Own PRs first: PR 310 (records/2026-11-05, this job's live
+  branch) is OPEN, MERGEABLE, CLEAN, 0 comments, 0 reviews -
+  nothing owed. The four stale open records PRs were all
+  CONFLICTING with integrator notes awaiting branch-side
+  reconciliation, and were reconciled from their remote heads
+  this pass: PR 309 (records/2026-11-01, commit 22274ed91,
+  action-log union 861 lines), PR 265 (records/2026-11-02,
+  commit e9effc346, 861 lines), PR 256 (records/2026-11-03,
+  commit f960817d1, 867 lines), PR 301 (records/2026-11-04,
+  commit ace4f02bf, action-log union 864 lines plus the two
+  add/add queue files kept at the branch's true failed
+  outcomes over main's stale expired re-creations). All four
+  pushed without force and ls-remote verified; each PR
+  commented. A first attempt at 301 from the local branch tip
+  instead of the remote head was caught and redone correctly.
+- Survivors unit survivors-2026-11-05-0203, failed,
+  ticker-0504: no game screen was ever read and no game input
+  was dispatched. One cheap probe per
+  `_tools_/mac_capture_probe.py` (session cc-521): LastWar
+  window 1920x1080 pid 59735 id 160366, activate reports
+  window_on_screen false and brought_to_front false, observe
+  fails with "Failed to start stream due to audio/video
+  capture failure", inspect_menu View is stale_observation,
+  while a Chrome window in the same session observes normally.
+  Classifier: OFF_SCREEN_WINDOW (high confidence), stop_pass
+  yes, exit 10. This is the thirty-third consecutive ticker
+  pass with this blocker (Issue 284, open, tooling). Recovery
+  still needs the one owner step: click the LastWar Dock icon
+  once on the Mac mini (or run
+  `_tools_/mac_lastwar_front.sh` in Terminal), then re-probe.
+  No survivor recruited, no Quick Dispatch run, no figure
+  read. Tracker untouched. The pass stopped after this one
+  unit. Full detail in survivor-intake/0512-queue-run.md.
+- No zombie seeding: the event ended about the 19:00 reset on
+  2026-10-30 (unit 066), chain closed, zombie-invasion inbox 0
+  per stats. Sync: reaped 0, expired 0, due 21, produced
+  nothing new, all 21 regulars already queued.
