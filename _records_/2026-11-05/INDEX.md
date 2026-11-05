@@ -928,3 +928,20 @@ of 2026-10-28.
   await the 07:00 batch. No owner-gated PR. Status:
   done.
   Full detail in pr-integration/0445-run.md.
+
+## 05:00 to about 05:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0500.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged. No
+  knowledge or code PR open. PR 310 (2026-11-05, head
+  7f57e721) re-verified clean against main 65e12ecf;
+  PRs 309, 265 and 256 still conflict on the single
+  action-log file and PR 301 on three files, scopes
+  re-verified unchanged against the new main, 0300 and
+  0315 notes standing. A first scratch test-merge read
+  all-clean against a stale local github/main branch
+  and was discarded and redone with full remote refs.
+  All five records PRs await the 07:00 batch. No
+  owner-gated PR. Status: no-op.
+  Full detail in pr-integration/0500-run.md.
