@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T11:35:38Z
+modified: 2026-11-05T15:32:17Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -1540,6 +1540,8 @@ are still open, per the protocol.
 
 - 1.32.0 (2026-11-05): 0304 radar unit folded - twenty-ninth consecutive capture failure, first fail-fast probe classification OFF_SCREEN_WINDOW (high confidence) from _tools_/mac_capture_probe.py 1.0.0 (PR 307); the View-menu inspect step could not run, gated on a fresh observation of the window; Chrome observes normally in the same session (Gmail inbox, full accessibility tree); the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; twenty-eighth and twenty-ninth occurrences commented onto Issue #282 by this run.
 
+- 1.33.0 (2026-11-05): 0704 radar unit folded - thirty-sixth consecutive capture failure, probe classification OFF_SCREEN_WINDOW (high confidence) from _tools_/mac_capture_probe.py 1.0.0 (PR 307); the probe's missing Chrome control-observation step was closed in the same pass (cc-529, full accessibility tree); five 0257-cycle units expired by sync; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; thirty-sixth occurrence commented onto Issue #282 by this run (the thirty-fifth, ticker-0634, has no record on the records branch at this run's cutoff).
+
 
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
@@ -1889,3 +1891,64 @@ are still open, per the protocol.
 - Recurrence, not a new failure class: this is the twenty-ninth consecutive ticker pass to fail on this exact blocker (ticker-0234 at 02:34 was the twenty-eighth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-eighth and twenty-ninth occurrences onto #282.
 - Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this unit: with no observation channel a second unit would fail identically, so the remaining inbox units were left queued.
+
+## What the 2026-11-05 0704 unit added - screen-capture failure, thirty-sixth consecutive pass, nothing read
+
+- Unit radar-2026-11-05-0603 by ticker-0704, about 07:19 to 07:23 local,
+  status failed. Evidence in
+  `_records_/2026-11-05/radar-tasks/0704-queue-run.md`. This was a
+  stack-day unit (duel day 4, radar posture stack per tools/duel.py):
+  on a working screen it would have run Quick Execute batches and
+  recorded the pin inventory without claiming anything.
+- No radar screen was ever read and no task was executed or claimed.
+  The Mac screen-capture stream failed on every attempt across four
+  computer sessions: session cc-526 `computer.control` activate
+  selected the window for background input but captured no
+  observation (`window_on_screen: false`, `brought_to_front: false`),
+  `computer.observe` compact failed; fresh session cc-527
+  `computer.control` open_app returned outcome_unknown and
+  `computer.observe` compact failed, while connection.health reported
+  both transports healthy; session cc-528 `computer.control`
+  frontmost_app returned Google Chrome frontmost with the LastWar
+  target present and `computer.observe` image failed; session cc-529
+  `computer.control` list_windows with app LastWar confirms the
+  window exists: 1 window, 1920x1080 at (0,0), window_id 160366,
+  pid 59735. Four capture attempts across four sessions, all with
+  "Failed to start stream due to audio/video capture failure", plus
+  one open_app outcome_unknown - this meets the standing
+  at-least-3-attempts retry rule.
+- Probe classification: `_tools_/mac_capture_probe.py` 1.0.0
+  classifies the evidence above OFF_SCREEN_WINDOW (high confidence),
+  stop_pass yes. The View-menu inspect step could not run this pass:
+  it is gated on a fresh observation of the LastWar window, which is
+  exactly what the capture failure prevents. The Chrome
+  control-observation step the probe lists as missing was closed in
+  session cc-529: a control observation of the Google Chrome window
+  in the same session succeeded with a full accessibility tree, so
+  the capture channel works for on-screen windows and the fault is
+  specific to the LastWar window stream, consistent with the
+  windowed-on-inactive-Space diagnosis in the Correction 2026-11-05
+  section above.
+- Recurrence, not a new failure class: this is the thirty-sixth
+  consecutive ticker pass to fail on this exact blocker. The blocker
+  is filed as Issue #284 (tooling) alongside the knowledge Issue
+  #282; this pass commented on #284 instead of filing a duplicate,
+  and this run comments the thirty-sixth occurrence onto #282.
+  Coverage note: the thirty-fifth occurrence (ticker-0634) has no
+  record on the records branch at this run's cutoff, so the count
+  from 34 to 36 is attested only by the 0704 record's own count.
+- Sync and expiry: the pass reaped 0, expired 5 (five 0257-cycle
+  units), due 21, produced nothing new, 21 regulars already queued.
+  No zombie seeding: no zombie-invasion unit in inbox or claimed;
+  the chain closed with unit 066 on 2026-10-30 and the activity
+  metadata forbids seeding a fresh chain until a Zombie Invasion tab
+  is seen live again.
+- Reading warning: this failed unit gives zero evidence about the
+  radar claim state. It must NOT be read as "nothing claimable" or
+  as a stored-count state - the 1005 close (Lv.13, points 219,
+  stored 0 of 40, stamina 81) rests on a live read and stands as the
+  last live read; this unit rests on no read at all.
+- Tracker untouched for failed, per the queue rules; the next tick
+  re-produces this regular. The pass stopped after this unit: with
+  no observation channel a second unit would fail identically, so
+  the remaining inbox units were left queued.
