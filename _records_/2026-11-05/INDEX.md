@@ -2606,3 +2606,14 @@ of 2026-10-28.
   to open (2026-10-31 contained in main).
   Status: no-op.
   Full detail in pr-integration/1415-run.md.
+- Integrator pass pr-integration-2026-11-05-1436.
+  Non-batch no-op pass (checker not due, next batch
+  15:00); no knowledge or code PR open; five records
+  PRs await the 15:00 batch: 324 (clean, head
+  83d043f2) and 310 (clean, head 5e5d63cb); 301, 265, 256
+  conflicted on the single action-log file, conflict
+  notes posted in the 1100 pass, heads unchanged, no
+  repeat comment. No owner-gated PR. No new records PR
+  to open (2026-10-31 contained in main).
+  Status: no-op.
+  Full detail in pr-integration/1436-run.md.
