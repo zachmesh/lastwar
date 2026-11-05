@@ -2809,3 +2809,41 @@ of 2026-10-28.
   statements current.
   Full detail in pr-catchall/1539-run.md.
 
+## 15:40 to about 15:47 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-1540: done. Own PRs
+  first: the open PRs were PR 331 (organizer 1532),
+  PR 330 (records 2026-11-05), PR 324 (records
+  2026-11-01), PR 301 (records 2026-11-04), PR 265
+  (records 2026-11-02) and PR 256 (records 2026-11-03);
+  the newest comment on PR 330 is the ticker-1504 note
+  (Issue 284, fifty-first consecutive pass), none
+  addressed to this job, so no reply or fix was owed.
+- Plan: `tools/queue.py plan --hours 12` staged 5 units -
+  passes, secrets, treasures, trucks and events for the
+  0257 slot of 2026-11-06 - with already_present 67,
+  skipped_done_current 0, reaped 0, expired 0. The horizon
+  to about 03:40 local is now fully staged.
+- Pre-reset sweep: skipped, not the 17:00 hour run.
+  Tonight's pair for the 19:00 reset of 2026-11-05 is due
+  from the 17:00 run today; last night's pair sits done
+  2 of 2. The 17:00 run must check whether the live tree
+  has synced to main before calling the new sweep
+  subcommand (PR 312 merged, live tree still predates it).
+- Scout diff on the Nov 4 observation (twenty-fifth planner
+  run to consume it; no Nov 5 observation yet, post-reset
+  scout unit scout-2026-11-04-1900 still in inbox,
+  attempts 0, ticker passes failing on the Mac
+  device-access blocker, Issue 284, fifty-second
+  consecutive pass at ticker-1534 in the device-offline
+  form): dry run and apply agree, all zero
+  - observed 0, actionable 0, enqueued 0, already-queued
+  0, candidates 0, unexplained red dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred). No new Issue filed.
+- Pool: inbox 76, claimed 0, done 940, upcoming 51.
+  Status: done. Full detail in
+  queue-planning/1540-run.md.
+
