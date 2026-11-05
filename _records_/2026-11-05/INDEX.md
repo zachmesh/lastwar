@@ -235,6 +235,62 @@ of 2026-10-28.
   Invasion not seeded: the event ended 2026-10-30 about 19:00 and
   the chain is closed (see _activities_/zombie-invasion/INDEX.md).
 
+## 01:15 to about 01:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0115.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR open, nothing merged
+  or escalated. Five records PRs await the 03:00 batch,
+  all verified clean against current main 8a3db49c62
+  by the API: PR 304 (2026-11-05, head 57ddc63e,
+  advanced since 0100), PR 301 (2026-11-04, head
+  bf9fb87e), PR 187 (2026-11-01, head 1efa3040),
+  PR 265 (2026-11-02, head 52295794) and PR 256
+  (2026-11-03, head b35684d2). No conflicts, no
+  owner-gated PR. Checker first run hit the ambiguous
+  github/main refname in ~/lastwar-push (stale local
+  branch); checkout corrected to remote main and
+  checker re-run with the identical verdict. Full
+  detail in pr-integration/0115-run.md.
+
+## 01:30 to about 01:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0130.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR open, nothing merged
+  or escalated. Five records PRs await the 03:00 batch,
+  all verified clean against current main 8a3db49c62
+  by the API: PR 304 (2026-11-05, head 08405127bc,
+  advanced since 0115 by the 0115 run-record commit),
+  PR 301 (2026-11-04, head bf9fb87e), PR 187
+  (2026-11-01, head 1efa3040), PR 265 (2026-11-02,
+  head 52295794) and PR 256 (2026-11-03, head
+  b35684d2). No conflicts, no owner-gated PR. Full
+  detail in pr-integration/0130-run.md.
+- Tool-developer pass tool-development-2026-11-05-0132, no-op: no own tooling PR open and no unaddressed integrator feedback (PR 303 scout qualified counts for #149 stays merged, no post-merge feedback); no new tooling issue since #300; #300 still has 0 comments so no owner decision on the points semantics and no implementation from it; #284 capture outage continues (ticker-0104, twenty-fifth consecutive pass, comments only); standing tool queue (c) re-verified on github main (retro_report p90/attempts/system_metrics, queue.py stats_missing validation, PR 298 ancestor of main); no PR, no issue comment, no Slack DM, per the no-op rule.
+  Full detail in tool-development/0132-run.md.
+
+## 01:32 to about 01:36 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-0132, worked from
+  the 0032 watermark. Folded the ticker-0034 harvest
+  0034 record (failed, Mac screen-capture failure,
+  twenty-fourth consecutive pass) into
+  resource-collection 1.25.0 and the ticker-0104
+  scout-midday 0104 record (failed, Mac screen-capture
+  failure, twenty-fifth consecutive pass) into
+  perception-scout 1.17.0 (PR 306 OPEN, MERGEABLE,
+  CLEAN, Owner lastwar-knowledge-organizer). Own PR 305
+  stands MERGED with no reviews or comments, so no PR
+  feedback was owed. Issue #282 commented with the
+  twenty-fourth and twenty-fifth occurrences (comment
+  6654612943); #284 already commented by the ticker
+  passes. No contradiction (the failed units give zero
+  evidence about live state), no stale item, no issue
+  filed or closed. No new records PR opened: PR 304
+  for records/2026-11-05 already open, awaiting the
+  0300 batch.
+  Full detail in knowledge-organization/0132-run.md.
 ## 01:34 to about 01:57 - Ticker pass ticker-0134
 
 - Unit survivors-2026-11-04-2203 completed as failed: Mac screen
