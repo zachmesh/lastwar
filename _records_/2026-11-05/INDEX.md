@@ -234,3 +234,21 @@ of 2026-10-28.
 - Sync: reaped 0, expired 25, due 23, produced 19 units. Zombie
   Invasion not seeded: the event ended 2026-10-30 about 19:00 and
   the chain is closed (see _activities_/zombie-invasion/INDEX.md).
+
+## 01:34 to about 01:57 - Ticker pass ticker-0134
+
+- Unit survivors-2026-11-04-2203 completed as failed: Mac screen
+  capture failure (Issue 284), twenty-sixth consecutive ticker
+  pass blocked. New diagnosis this pass: the View menu lists
+  "Enter Full Screen", so the game is a windowed 1920x1080
+  window on an inactive Space, not in native fullscreen;
+  background-sent Ctrl+Right, Ctrl+Left and Ctrl+Up (Mission
+  Control) all dispatched but did not switch Spaces, and
+  set_window_frame is gated by the stale-observation rule on the
+  unobservable window. No game screen read, no game input
+  dispatched, tracker untouched. Full detail in
+  survivor-intake/0134-queue-run.md.
+- Sync: reaped 0, expired 0, due 21, produced nothing new, all 21
+  regulars already queued. Zombie Invasion not seeded: the event
+  ended 2026-10-30 about 19:00 and the chain is closed (see
+  _activities_/zombie-invasion/INDEX.md).
