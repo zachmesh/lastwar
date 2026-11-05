@@ -839,3 +839,31 @@ of 2026-10-28.
   reads. No Slack DM and no chat report: routine hourly
   folds, no material correction and no owner decision owed.
   Full detail in knowledge-organization/0432-run.md.
+
+## 04:34 to about 04:44 - Ticker pass
+
+- Own PRs first: the live records PR for today, PR 310
+  (records/2026-11-05), carries no comments and no reviews;
+  nothing was owed before game work.
+- Harvest unit harvest-2026-11-05-0203, failed,
+  ticker-0434: no game screen was ever read and no game input
+  was dispatched. The Mac screen capture stream failed on all
+  five attempts across two computer sessions (cc-518, cc-519)
+  with "Failed to start stream due to audio/video capture
+  failure"; a Chrome-window observation in a fresh session
+  (cc-520) succeeded, so the channel works for other apps and
+  the failure is specific to the game window.
+  `_tools_/mac_capture_probe.py` classifies OFF_SCREEN_WINDOW
+  (high confidence), stop_pass yes, exit 10. This is the
+  thirty-second consecutive ticker pass with this blocker
+  (Issue 284, open, tooling). Recovery still needs the one
+  owner step: click the LastWar Dock icon once on the Mac
+  mini (or run `_tools_/mac_lastwar_front.sh` in Terminal),
+  then re-probe. No bubble collected, no resource total read,
+  Armed Truck state unknown. Tracker untouched. The pass
+  stopped after this one unit. Full detail in
+  resource-collection/0434-queue-run.md.
+- No zombie seeding: the event ended about the 19:00 reset on
+  2026-10-30 (unit 066), chain closed, zombie-invasion inbox 0
+  per stats. Sync: reaped 0, expired 0, due 21, produced
+  nothing new, all 21 regulars already queued.
