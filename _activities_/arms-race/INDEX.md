@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-05T04:34:34Z
+modified: 2026-11-05T08:35:29Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-1004 arms-race execution record 2026-11-04 1025 queue run (partial, first unit of the new Unit Progression phase, score 0, tier-3 gap 75,000, training path only, no scoring action, no chest claimed)
   - source: ticker-1604 arms-race execution record 2026-11-04 1604 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eighth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-1934 arms-race execution record 2026-11-04 1934 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, fifteenth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-0004 arms-race execution record 2026-11-05 0004 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-third consecutive ticker pass to fail this way, Issue 284; Chrome observation succeeded in the same session, so the fault is specific to the LastWar window; session window corrected to 00:04-00:10 by the append-only correction record)
 ---
 
 
@@ -1584,3 +1585,13 @@ slot. Evidence in
 - Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 19:34 was not read and is not asserted here.
 - Follow-up, carried forward: the blocker is now fifteen passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-05 0004 unit added - screen-capture failure, twenty-third consecutive pass, nothing read
+
+- Unit arms-race-2026-11-04-2203 by ticker-0004, about 00:04 to 00:10 local, status failed. Evidence in `_records_/2026-11-05/arms-race/0004-queue-run.md` and the append-only correction `_records_/2026-11-05/arms-race/0004-queue-run-correction.md`. No diamonds spent, no scoring action executed, no chest claimed.
+- No game screen was ever read and no game input was dispatched. Five capture attempts across two computer sessions, all with the identical error "Failed to start stream due to audio/video capture failure": session cc-499, computer.control activate selected the LastWar window for background input but captured no observation, and computer.observe (compact and image views) failed with the same error; session cc-500, computer.control activate on LastWar failed with the same error and computer.observe (compact view) failed with the same error. LastWar (com.lastwar.ios, pid 59735) was running fullscreen 1920x1080 and Google Chrome was frontmost, and the Mac mini was online.
+- New diagnostic, narrowing the fault: in session cc-500, computer.control activate on Google Chrome succeeded and returned a full observation (Gmail inbox), proving the capture channel works for other apps - the fault is specific to the LastWar window, not the whole capture channel. The window-name mismatch is also re-confirmed: computer.control list_windows with app "Last War" returned 0 windows, while list_apps showed the app as "LastWar", bundle com.lastwar.ios, pid 59735 (the same mismatch already recorded in the 1604 fold). No input was dispatched blind: the control contract requires fresh observation before input, and none was ever captured.
+- Recurrence, not a new failure class: this is the twenty-third consecutive ticker pass to fail on this exact blocker. The original record, the day INDEX and the #284 comment said twenty-second; the append-only correction record recounts from Issue #284 and corrects the count to twenty-third (the earlier count dropped one pass in the 2104-to-2134 step; ticker-2334 radar was the 22nd), and a correction comment was posted on #284. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-second and twenty-third occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 00:04 was not read and is not asserted here.
+- Follow-up, carried forward: the blocker is now twenty-three passes old and needs an owner-side or Mac-side fix (screen recording permission or capture pipeline restart on the Mac mini); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: every further unit would fail on the same capture error, per the ticker-1904 precedent.
