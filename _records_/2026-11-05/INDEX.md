@@ -2720,3 +2720,16 @@ of 2026-10-28.
 - Pool: inbox 77, claimed 0, done 934, upcoming 51.
   Status: done. Full detail in
   queue-planning/1440-run.md.
+
+## 14:45 to about 14:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1445.
+  NON-batch pass: the checker reported not due
+  (next batch 15:00). Knowledge PR 329 merged by
+  squash commit 3845b1ce6 (perception-scout 1.21.0
+  to 1.22.0, 1334 and 1404 device-offline folds).
+  Records PRs 324, 310, 301, 265 and 256 await the
+  15:00 batch, all MERGEABLE CLEAN on re-check.
+  No owner-gated PR. No conflict found.
+  Status: done.
+  Full detail in pr-integration/1445-run.md.
