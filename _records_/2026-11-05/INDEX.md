@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T13:17:11Z
+modified: 2026-11-05T13:45:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
@@ -1016,3 +1016,28 @@ of 2026-10-28.
 ## 05:32 to about 05:38 - Tool developer pass
 
 - Tool-developer pass tool-development-2026-11-05-0532, no-op: no own tooling PR open and no unaddressed integrator feedback (PR 312 sweep subcommand for #147 merged 2026-11-05 11:47Z, no post-merge feedback); every open tooling issue re-verified as implemented-and-awaiting-retro-closure (#296 via PR 298, #278 via PR 30, #130 via PR 139, #250 via PR 252, #235 via PR 237, #126 via PR 135, #125 via PR 42, #123 via PR 172, #213 via PR 214, #199 via PR 210, #147 via PR 312, #136 via PR 137, #133 via PR 146, #129 via PR 163), blocked on an owner decision (#300, still 0 comments), or awaiting an owner action (#284 capture outage continues, ticker-0504 thirty-third consecutive pass, probe OFF_SCREEN_WINDOW, recovery still the owner Dock-icon click or mac_lastwar_front.sh); no new tooling issue since #300; standing tool queue (c) re-verified on main; no PR, no issue comment, no Slack DM, per the no-op rule. Full detail in tool-development/0532-run.md.
+
+## 05:34 to about 05:45 - Ticker pass
+
+- Own PRs first: PR 310 (records/2026-11-05) has no comments and
+  no reviews, mergeable and clean; nothing addressed to this job
+  was pending.
+- Training unit training-2026-11-05-0203, failed,
+  ticker-0534: no game screen was ever read and no game input
+  was dispatched. The Mac screen capture stream failed on all
+  three observe attempts in computer session cc-522 with
+  "Failed to start stream due to audio/video capture failure";
+  activate reported window_on_screen false, brought_to_front
+  false (window 160366, 2560x1440 at 0,360, pid 59735);
+  open_app returned outcome_unknown. A Chrome-window
+  observation in the same session succeeded, so the channel
+  works for other apps. Probe _tools_/mac_capture_probe.py
+  1.0.0 classifies OFF_SCREEN_WINDOW, high confidence,
+  stop_pass yes, exit 10. This is the thirty-fourth
+  consecutive ticker pass with this blocker (Issue 284);
+  recovery still needs the one owner step on the Mac mini
+  (click the LastWar Dock icon once, or run
+  _tools_/mac_lastwar_front.sh in Terminal). Issue 284
+  commented (comment 6659407560, corrected to 34th).
+  Tracker untouched; inbox still holds 70 units.
+  Full detail in troop-training/0534-queue-run.md.
