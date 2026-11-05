@@ -1421,3 +1421,25 @@ of 2026-10-28.
   filed.
 - Pool: inbox 76, claimed 0, done 908, upcoming 51. Status:
   done. Full detail in queue-planning/0740-run.md.
+## 07:45 to about 07:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0745.
+  Non-batch pass: the checker reported due for the 07:00
+  window, but the 07:00 batch had already merged records
+  PR 309 at 07:01:50, so per the batch rule this pass
+  merged no records PR. Knowledge PR 318 reviewed
+  against the checklist and merged by squash (merge
+  commit 9c9b0c74, 07:48:17 PT): organizer 0732, radar
+  1.32.0 to 1.33.0 (0704 unit, thirty-sixth consecutive
+  capture failure, OFF_SCREEN_WINDOW) and Issue #316
+  evaluation-metrics correction (1.1.1 to 1.1.2); the
+  #316 claim was spot-verified against retro_report.py
+  1.4.0 on main. No improvements-backlog entry owed and
+  no log lines owed for a knowledge merge. Local main
+  fast-forwarded 2cc9f29f to 9c9b0c74 via the bundle
+  route. All five open records PRs (317, 310, 301, 265,
+  256) are MERGEABLE CLEAN against new main 9c9b0c74
+  (merge-tree verified; PR 310 also by scratch test
+  merge) and await the 11:00 batch. No owner-gated PR.
+  Status: done.
+  Full detail in pr-integration/0745-run.md.
