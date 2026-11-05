@@ -3019,3 +3019,22 @@ Full detail in pr-integration/1430-run.md.
   PR 293 for records/2026-11-04 already open,
   awaiting the 2300 batch.
   Full detail in queue-planning/2240-run.md.
+
+## 23:40 to about 23:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-2340, done:
+  plan staged 5 units into the live pool (passes,
+  secrets, treasures, trucks, events 2026-11-05 1057;
+  already_present 65, skipped_done_current 0, reaped 0,
+  expired 0, horizon to about 11:40 local 2026-11-05);
+  pre-reset sweep step skipped, not the 1700 hour, and
+  tonight's pair for the 19:00 reset is already done
+  (produced by the 1740 run), 0 enqueued by this run;
+  scout diff on the Nov 4 observation applied with all
+  zero counts (eleventh consume), 0 withdrawals; pool
+  inbox 73, claimed 0, done 876, upcoming 50. This run
+  also late-delivers the undelivered 2240 record (see
+  queue-planning/2240-run.md). No new Issue filed. No
+  new PR opened: PR 301 for records/2026-11-04 already
+  open, awaiting the 0300 batch.
+  Full detail in queue-planning/2340-run.md.
