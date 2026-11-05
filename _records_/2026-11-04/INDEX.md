@@ -2565,3 +2565,8 @@ Full detail in pr-integration/1430-run.md.
 
 - Organizer pass knowledge-organization-2026-11-04-1932, done: own PR 290 MERGED with no reviews or comments, no feedback pending; no new knowledge-labeled issue since the 1832 run (newest remains #282, commented by this run with the thirteenth and fourteenth occurrences, comment 6648965121); folded ticker-1834 events 1834 and ticker-1904 radar 1904 into event-claims 1.23.0 and radar-tasks 1.29.0 on PR 294 (OPEN, Owner lastwar-knowledge-organizer); first run after the 19:00 reset, so the fuller ended-trade-day sweep ran too - organizer chain 0032-1832 continuous, no record missed between hourly watermarks; checked with no fold: pr-catchall 1839, queue-planning 1840, pr-integration 1845/1900/1915/1930, tool-development 1838/1932; no issue filed or closed; records PR 293 open awaiting the 2300 batch, so no new records PR opened.
   Full detail in knowledge-organization/1932-run.md.
+
+## 19:34 to 19:37 - Ticker pass
+
+- Ticker pass ticker-1934, failed: arms-race unit arms-race-2026-11-04-1803 failed on the Mac screen capture failure (fifteenth consecutive pass with this blocker, Issue 284 commented); no game screen read, no input dispatched, tracker untouched, no spending.
+  Full detail in arms-race/1934-queue-run.md.
