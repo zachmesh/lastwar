@@ -2103,3 +2103,29 @@ of 2026-10-28.
   132 (about ninety-one hours) and 154 (about eighty-five hours) both
   over 24 hours with statements current.
   Full detail in pr-catchall/1139-run.md.
+
+## 11:34 to about 11:47 - Ticker pass
+
+- Arms-race unit arms-race-2026-11-05-1003, failed,
+  ticker-1134: no game screen was ever read and no game input
+  was dispatched. Six device invokes, zero responses:
+  computer.session start on the Mac mini three times
+  node_offline (device offline, no wake-up path),
+  connection.repair (web) on the Mac mini node_offline,
+  connection.repair (native) and connection.health on the
+  recovery device both node_invoke_timeout after 25s.
+  device.list reports the Mac mini offline with last_seen
+  15:36:52Z, stale about 4 hours 5 minutes, unchanged since
+  the ticker-1025 pass. This is the forty-fourth consecutive
+  ticker pass with a Mac device-access blocker (Issue 284),
+  fifth in the worsened zero-response form. Re-probing is
+  owed only after last_seen refreshes, so no probe was run
+  this pass. Commented on Issue 284. Own PRs first: PR 310
+  reconciled branch-side this pass (main 1f8cc74f44 merged,
+  commit ea0ab36031, action-log union, pushed and verified,
+  comment posted), awaiting the 15:00 batch. No Arms Race
+  phase work executed or claimed. Tracker untouched. The pass
+  stopped after this one unit. Sync reaped 0, expired 0,
+  produced nothing (all 21 due regulars already queued). No
+  zombie seeding (event ended 2026-10-30).
+  Full detail in arms-race/1134-queue-run.md.
