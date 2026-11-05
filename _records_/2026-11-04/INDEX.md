@@ -2494,3 +2494,14 @@ Full detail in pr-integration/1430-run.md.
   over 24 hours with statements current, no adoption, no
   fix, no hand-off, no escalation.
   Full detail in pr-catchall/1839-run.md.
+
+## 18:40 to about 18:48 - Queue planning pass
+
+- Planner pass 1840, done: plan staged 11 units
+  (0603/0630 cycle 2026-11-05; already_present 61);
+  pre-reset sweep pair for tonight's 19:00 reset already
+  present in inbox (produced by the 1740 run);
+  scout diff on the Nov 4 observation applied with zero
+  changes; 0 withdrawals; pool inbox 76, claimed 0,
+  done 851, upcoming 52. Full detail in
+  queue-planning/1840-run.md.
