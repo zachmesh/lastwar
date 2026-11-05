@@ -2639,3 +2639,16 @@ of 2026-10-28.
   forty-ninth occurrences commented onto Issue #282.
   No issue filed, none closed.
   Full detail in knowledge-organization/1432-run.md.
+
+## 14:34 to about 14:44 - Ticker pass (shop claims)
+
+- Ticker-1434: passes unit passes-2026-11-05-1057 FAILED on the Mac
+  mini offline with no wake-up path, Issue 284, fiftieth
+  consecutive pass; device.list last_seen still
+  2026-11-05T15:36:52Z, six attempts zero responses
+  (computer.session start twice, connection.health, web
+  repair on the Mac mini, native repair and health on the
+  recovery device both timed out). No game screen read,
+  no input dispatched. Tracker untouched.
+  Status: failed. Full detail in
+  shop-claims/1434-queue-run.md.
