@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-04T04:50:00Z
-version: 1.4.0
+modified: 2026-11-05T04:40:00Z
+version: 1.5.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -233,6 +233,16 @@ one mention in a summary.
   the 07:39 run); the 200 red diamonds stay
   unclaimed. No owner decision appeared.
 - status: open
+
+## 2026-11-04 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 4 days, event-bound. Unaddressed a fourth day: no Nov 4 events record mentions the Day 07 tile or a decoration choice, and the Nov 4 events hub reads contain no Halloween surface. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 4 days. Nov 4 survivors units (4 partial, 1 capture-failed) keep the close discipline, Quick Dispatch still never ran, with one live gate-line verification (3 waiting, 0 recruited, unit cap reached). Decision unchanged.
+- OD-20261101-01: age 3 days, unaddressed.
+- OD-20261101-02: age 3 days, unaddressed.
+- OD-20261101-03: age 3 days. The pr-catchall 1939 run keeps noting issue 154 as awaiting the Season Photo decision; the 200 red diamonds stay unclaimed.
+- No new owner-decision item from the Nov 4 window: no skipped-needs-owner outcome on Nov 4 in the live pool, and no owner-gated PR escalated by the integrator. All six items are open longer than 48 hours and are named in the Nov 4 retro chat report and Slack sync until decided.
 
 ## Decided
 

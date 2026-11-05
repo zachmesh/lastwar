@@ -2663,3 +2663,16 @@ Full detail in pr-integration/1430-run.md.
   duplicate. Tracker untouched; the next tick re-produces
   the donations unit. Full detail in
   alliance-donations/2034-queue-run.md.
+
+- Retro review run (daily retro 2026-11-04): fifth rolling
+  retro under section 14. Branch pool 642 vs live pool 750
+  (gap 108, issue 251 verification failed again); Nov 4 live
+  day 90 units, done 21, partial 34, failed 17, expired 18 -
+  a capture-channel outage day (issues 282, 284 commented).
+  Trucks day quota met verified a second day (5 of 5, 4 of
+  4); duel day exceeded target by a live morning read
+  (4,772,100 over 3,600,000) with no duel-score unit close
+  (issue 136 stays open); sweep pair expired a fourth day
+  (issue 147). One new issue filed (296, executor copied
+  points); no issue closed. Full detail in
+  retro-review/2043-run.md and _records_/retro/2026-11-04.md.
