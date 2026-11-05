@@ -59,11 +59,24 @@ Usage:
              # without --due-json it calls _tools_/regulars.py todo
   queue.py [--root DIR] plan [--hours N]
              # stage the horizon's windows: segment anchors,
-             # daily resets, Thursdays, and fixed local clock
-             # slots (cadence fixed-slots, slots in fixed_slots,
-             # expiry clock time in expires_local, chain prefix
-             # in chain_id_prefix); sync never stages fixed-slot
+             # daily resets, Thursdays, and fixed slots (cadence
+             # fixed-slots: wall slots in fixed_slots with expiry
+             # clock time in expires_local, or reset-anchored slots
+             # in slots_before_reset_minutes with the absolute
+             # reset_utc instant as expiry, chain prefix in
+             # chain_id_prefix); sync never stages fixed-slot
              # regulars, plan owns them
+  queue.py [--root DIR] sweep [--regular zero-sweep]
+             [--date YYYY-MM-DD] [--regulars-json FILE]
+             # produce the pre-reset sweep pair for one reset day
+             # from the fixed-slots regular - slots reset-anchored,
+             # expiry at the reset instant itself (issue #147);
+             # the planner's manual step calls this instead of
+             # hand-computing wall times, so the pair can never
+             # again carry the old 17:30/18:30/19:00 geometry;
+             # refuses when the regular is missing or not
+             # reset-anchored, so a stale tree fails loudly
+             # instead of staging a wall-clock pair
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -577,6 +590,61 @@ def _fixed_slots(item):
     return sorted(set(slots))
 
 
+def _reset_anchored_offsets(item):
+    """Minutes-before-reset slot offsets of a reset-anchored
+    fixed-slots regular, or [] when the regular carries no
+    reset_utc or no offsets - such a regular keeps the
+    wall-clock fixed_slots behaviour below."""
+    if _parse_hhmm(item.get("reset_utc", "")) is None:
+        return []
+    offsets = []
+    for raw in item.get("slots_before_reset_minutes", []) or []:
+        try:
+            off = int(raw)
+        except (TypeError, ValueError):
+            continue
+        if off >= 0:
+            offsets.append(off)
+    return sorted(set(offsets))
+
+
+def _reset_instant_for_local_date(item, local_date):
+    """The reset instant ending local_date, as a LOCAL_TZ datetime.
+
+    Reset instants are absolute (issue #247): reset_utc on the
+    UTC date after the local date, so 02:00 UTC is the previous
+    local evening - 18:00 PST in winter, 19:00 PDT in summer.
+    Computing from the UTC date, never from a wall-clock time,
+    keeps the slot geometry fixed across the daylight-saving
+    transition instead of drifting an hour with it."""
+    hh, mm = _parse_hhmm(item.get("reset_utc", ""))
+    utc_day = local_date + timedelta(days=1)
+    reset_utc = datetime(utc_day.year, utc_day.month, utc_day.day,
+                         hh, mm, tzinfo=timezone.utc)
+    return reset_utc.astimezone(LOCAL_TZ)
+
+
+def _reset_anchored_slots(item, local_date):
+    """Local datetimes of the reset-anchored slots for local_date,
+    earliest first."""
+    offsets = _reset_anchored_offsets(item)
+    if not offsets:
+        return []
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    return sorted(reset_local - timedelta(minutes=off)
+                  for off in offsets)
+
+
+def _next_reset_utc(after_utc, hhmm):
+    """Next reset_utc instant strictly after after_utc."""
+    hh, mm = hhmm
+    cand = after_utc.replace(hour=hh, minute=mm, second=0,
+                             microsecond=0)
+    if cand <= after_utc:
+        cand += timedelta(days=1)
+    return cand
+
+
 def _next_local_time(after_local, hhmm):
     """Next occurrence of a local HH:MM strictly after after_local."""
     hh, mm = hhmm
@@ -598,6 +666,15 @@ def cycle_start_local(item, when_local):
     the first slot of the day)."""
     cadence = item.get("cadence", "")
     if cadence == "fixed-slots":
+        anchored = _reset_anchored_slots(item, when_local.date())
+        if anchored:
+            past = [s for s in anchored if s <= when_local]
+            if past:
+                return past[-1]
+            prev = _reset_anchored_slots(
+                item, when_local.date() - timedelta(days=1))
+            if prev:
+                return prev[-1]
         slots = _fixed_slots(item)
         if slots:
             cur = when_local.hour * 60 + when_local.minute
@@ -654,6 +731,16 @@ def plan_windows(item, now_local, horizon_end):
     plus every window that starts inside the horizon."""
     cadence = item.get("cadence", "")
     if cadence == "fixed-slots":
+        if _reset_anchored_offsets(item):
+            out = []
+            start = cycle_start_local(item, now_local)
+            day = start.date()
+            while day <= horizon_end.date():
+                for cand in _reset_anchored_slots(item, day):
+                    if start <= cand <= horizon_end:
+                        out.append(cand)
+                day += timedelta(days=1)
+            return out
         slots = _fixed_slots(item)
         if not slots:
             return []
@@ -720,7 +807,12 @@ def _produce_for_window(root, item, planned_local, window=""):
                     f.get("planned_for") == planned_iso:
                 return None
     cadence = item.get("cadence", "")
-    if cadence == "fixed-slots" and item.get("expires_local"):
+    if cadence == "fixed-slots" and _reset_anchored_offsets(item):
+        # The slot's own reset instant is its expiry: a sweep
+        # unit never outlives the trade day it walks (issue #147).
+        expires_dt = _next_reset_utc(
+            planned_utc, _parse_hhmm(item.get("reset_utc")))
+    elif cadence == "fixed-slots" and item.get("expires_local"):
         exp = _parse_hhmm(item.get("expires_local"))
         if exp is not None:
             expires_dt = _next_local_time(
@@ -739,6 +831,14 @@ def _produce_for_window(root, item, planned_local, window=""):
         hhmm = (planned_local.hour, planned_local.minute)
         if cadence == "fixed-slots" and hhmm in slots:
             chain_seq = slots.index(hhmm) + 1
+        elif cadence == "fixed-slots" and _reset_anchored_offsets(item):
+            day_slots = _reset_anchored_slots(item,
+                                              planned_local.date())
+            minute = planned_local.replace(second=0, microsecond=0)
+            for idx, slot in enumerate(day_slots):
+                if slot.replace(second=0, microsecond=0) == minute:
+                    chain_seq = idx + 1
+                    break
     fields = {
         "unit": f"{regular}-{planned_local.strftime('%Y-%m-%d-%H%M')}",
         "regular": regular,
@@ -927,6 +1027,87 @@ def cmd_plan(args):
     return 0
 
 
+def cmd_sweep(args):
+    """Produce the pre-reset sweep pair for one reset day.
+
+    The planner's manual sweep-production step used to hand-compute
+    the pair (17:30/18:30 local, expiring 19:00 local) and copy the
+    previous day's task text, so the reset-anchored geometry PR #267
+    put in the regular never reached the pair - and the Nov 4 pair
+    expired unexecuted half an hour after the true 18:00 PST reset
+    (issue #147, fourth failure running). This command reads the
+    geometry from the roster instead: the reset-anchored slots of
+    the fixed-slots regular, expiring at the reset instant itself,
+    produced through _produce_for_window so the (regular,
+    planned_for) anti-duplication invariant holds against plan.
+
+    It refuses - exit 1, no unit staged - when the regular is
+    missing from the roster or carries no reset anchoring, so a
+    stale tree fails loudly instead of staging a wall-clock pair
+    with the old 19:00 expiry, and when the reset instant for the
+    date is already past, so a late call cannot stage dead units.
+    """
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"refused: cannot read roster {defs_path}: {exc}")
+        return 1
+    item = next((r for r in regs if r.get("id") == args.regular), None)
+    if item is None:
+        print(f"refused: regular {args.regular!r} not in roster "
+              f"{defs_path} - sync the tree to main before producing "
+              f"the sweep pair")
+        return 1
+    if item.get("cadence") != "fixed-slots" or \
+            not _reset_anchored_offsets(item):
+        print(f"refused: regular {args.regular!r} carries no "
+              f"reset-anchored slots (reset_utc + "
+              f"slots_before_reset_minutes) - a wall-clock pair "
+              f"would repeat the issue #147 defect")
+        return 1
+    if args.date:
+        try:
+            year, month, day = (int(x) for x in args.date.split("-"))
+            local_date = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --date {args.date!r} is not YYYY-MM-DD")
+            return 1
+    else:
+        local_date = datetime.now(LOCAL_TZ).date()
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    if reset_local <= datetime.now(LOCAL_TZ):
+        print(f"refused: reset instant "
+              f"{iso(reset_local.astimezone(timezone.utc))} for "
+              f"{local_date.isoformat()} is already past - pass "
+              f"--date for the next reset day")
+        return 1
+    slots = _reset_anchored_slots(item, local_date)
+    produced, already = [], 0
+    for idx, slot in enumerate(slots):
+        if len(slots) == 2:
+            label = "first pass" if idx == 0 else "final pass"
+        else:
+            label = f"pass {idx + 1}"
+        unit = _produce_for_window(
+            args.root, item, slot, f"pre-reset zero sweep, {label}")
+        if unit:
+            produced.append(unit)
+        else:
+            already += 1
+    print(json.dumps({
+        "regular": args.regular, "date": local_date.isoformat(),
+        "reset_at": iso(reset_local.astimezone(timezone.utc)),
+        "produced": produced, "already_present": already},
+        ensure_ascii=False))
+    return 0
+
+
 def cmd_enqueue(args):
     if args.est_minutes > UNIT_CAP_MINUTES:
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
@@ -1082,7 +1263,7 @@ def missing_stats_keys(status, stats):
     return missing
 
 
-def points_duplicates_achieved(stats):
+def points_duplicates_achieved(stats, regular=None):
     """True when stats.points copies stats.achieved (issue #197).
 
     points is score gained in this unit, not a running total
@@ -1095,8 +1276,22 @@ def points_duplicates_achieved(stats):
     is not a copy. This is a warning, never a block: a scoring
     unit that genuinely gained its whole achieved total in one
     unit still closes, flagged for the retro to read.
+
+    Radar is exempt (issue #296): a radar unit's achieved is a
+    claim count, and its radar-screen points rise exactly one
+    per claim, so points equal to achieved is the mechanism,
+    not a copy - radar-2026-11-04-0203 read 194 to 205 for 11
+    claims, radar-2026-11-04-1003 read 206 to 219 for 13
+    claims, and radar-2026-11-02-0203 read 101 to 103 for 2
+    claims, each with a before/after read in its execution
+    record. The exemption covers only this equality
+    heuristic; score-total regulars (arms-race,
+    star-ceremony) stay flagged, and a radar unit's points
+    still count under its own regular in the retro.
     """
     if not isinstance(stats, dict):
+        return False
+    if regular == "radar":
         return False
     points = _stat_number(stats.get("points"))
     achieved = _stat_number(stats.get("achieved"))
@@ -1122,7 +1317,7 @@ def cmd_complete(args):
             key, value = pair.split("=", 1)
             stats[key.strip()] = _scalar(value)
     missing = missing_stats_keys(args.status, stats)
-    points_dup = points_duplicates_achieved(stats)
+    points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -1399,7 +1594,7 @@ def gather_stats(root):
                 dup_stats = result.get("stats")
                 if points_duplicates_achieved(
                         dup_stats if isinstance(dup_stats, dict)
-                        else {}):
+                        else {}, regular):
                     report["stats_points_dup"] += 1
                     report["stats_points_dup_units"].append(
                         f.get("unit"))
@@ -1628,6 +1823,12 @@ def main(argv=None):
     p.add_argument("--regulars-json", default="")
     p.add_argument("--tracker-json", default="")
     p.set_defaults(fn=cmd_plan)
+
+    p = sub.add_parser("sweep")
+    p.add_argument("--regular", default="zero-sweep")
+    p.add_argument("--date", default="")
+    p.add_argument("--regulars-json", default="")
+    p.set_defaults(fn=cmd_sweep)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],

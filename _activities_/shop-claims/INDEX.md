@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T07:36:34Z
+modified: 2026-11-05T07:34:38Z
 level: L1
-version: 1.17.0
+version: 1.22.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,11 @@ grounded_in:
   - source: ticker-1134 shop-claims execution record 2026-11-03 1151 queue run (done, 0 new claims, cart entry re-grounded, S2 Drone/EXP/Iron cards all offers)
   - source: ticker-1804 shop-claims execution record 2026-11-03 1812 queue run (done, 3 claims, Weekly Pass reset 18:00:00 confirmed, Coin pass lapsed, monthly gift re-claimed, Issue #242)
   - source: ticker-2234 shop-claims execution record 2026-11-03 2234 queue run (done as checked only, 0 claims, Hot Deals sold out after the 1812 claim, monthly still Claimed)
+  - source: ticker-0234 shop-claims execution record 2026-11-04 0237 queue run (done, checked only, nothing claimable)
+  - source: ticker-0504 shop-claims execution record 2026-11-04 0511 queue run (done, checked only, 0 claims, monthly Days Left 17, tab taps need a re-read after each tap)
+  - source: ticker-0834 shop-claims execution record 2026-11-04 0841 queue run (done, checked only, 0 claims, monthly 17/17 Claimed as in 0511)
+  - source: ticker-1434 shop-claims execution record 2026-11-04 1434 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fifth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-2234 shop-claims execution record 2026-11-04 2234 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2204 known to fail identically, Issue 284)
 ---
 
 
@@ -764,3 +769,49 @@ the free and already paid for parts, never the paid unlocks.
 - No earlier claim superseded: this unit confirms the
   1812 cycle state on every surface rather than changing
   it.
+
+## What the 2026-11-04 0237 unit added - checked only, 0 claims, 2234 cycle state confirmed again
+
+- Ticker-0234, unit passes-2026-11-03-2257, about 02:34 to 02:37 local, status done as checked only. Evidence in `_records_/2026-11-04/shop-claims/0237-queue-run.md`.
+- Shop opened from the base cart icon (norm about 885,77 on this unit). The first click attempt was refused for a stale observation and was re-sent with the fresh observation id, no input dispatched twice.
+- Hot Deals: no free pack on display and no Free Supply auto-claim popup fired on this shop open. The page shows only the Last War Store banner carousel and the Go button, which leads out to the store and was not tapped.
+- Weekly Pass page, read live and scrolled with the drag from norm 500,850 to 500,250: the Free Supply chest reads Claimed. The Legendary row Take All 19 dollars 99 was not tapped. The S2 Drone Components, S1 Drone Parts and Coin Weekly Pass cards each show only Get Now 4 dollars 99, so all three are unowned offers, not owned passes with a pickup due; none was tapped. The Coin pass remains an offer, consistent with the 2026-11-03 2234 unit.
+- Super Monthly Pass page, read live: Days Left 18, Rewards Left 18, and the Daily Pickup button reads Claimed, as expected after the previous cycle's claim in this reset day. The Monthly Pass Extension 24 dollars 99 button was not tapped.
+- 0 claims in this unit: every shop pass surface was checked live and nothing was claimable. No price button, Renew button, or paid bundle was tapped anywhere in the shop. Shop left with the back arrow on the first tap, returning to the base screen.
+- No earlier claim superseded: this unit confirms the 2234 cycle state on every surface rather than changing it. Costs: about 4 minutes, no stamina or items spent.
+
+## What the 2026-11-04 0511 unit added - checked only, 0 claims, monthly count steps 18 to 17, tab taps need a re-read
+
+- Ticker-0504, unit passes-2026-11-04-0257, about 05:09 to 05:11 local, status done as checked only. Evidence in `_records_/2026-11-04/shop-claims/0511-queue-run.md`.
+- Shop opened from the base cart icon (norm about 885,77) onto the HOT DEALS tab. No free pack on display and no Free Supply auto-claim popup fired on this shop open. The page shows only the Last War Store banner carousel and the Go button, which leads out to the store and was not tapped.
+- Super Monthly Pass page, read live: Days Left 17, Rewards Left 17, and the Daily Pickup button reads Claimed, as expected after this reset day's claim. The Monthly Pass Extension 24 dollars 99 button was not tapped. The 18 to 17 step from the 0237 unit is the normal one-day decrement, not a discrepancy.
+- Weekly Pass page, read live and scrolled with the drag from norm 500,850 to 500,250: the Free Supply chest reads Claimed. The Legendary row Take All 19 dollars 99 was not tapped. The S2 Drone Components, S1 Drone Parts and Coin Weekly Pass cards each show only Get Now 4 dollars 99, so all three are unowned offers, not owned passes with a pickup due; none was tapped.
+- Tab-tap lesson, new: the first tab tap at norm 570,115 landed on the Monthly page rather than the Weekly page; a second tap at norm 600,118 reached the Weekly page. Tab taps in this bar need a re-read after each tap - do not assume the first tap landed on the intended tab.
+- 0 claims in this unit: every shop pass surface was checked live and nothing was claimable. No price button, Renew button, or paid bundle was tapped anywhere in the shop. Shop left with the back arrow on the first tap, returning to the base screen.
+- No earlier claim superseded: this unit confirms the 1812 cycle state on every surface rather than changing it. Costs: about 2 minutes, no stamina or items spent.
+
+## What the 2026-11-04 0841 unit added - checked only, 0 claims, monthly 17/17 Claimed unchanged since 0511
+
+- Unit passes-2026-11-04-0657 by ticker-0834, about 08:40 to 08:41 local, status done as checked only. Evidence in `_records_/2026-11-04/shop-claims/0841-queue-run.md`. No price button, Renew button, or paid bundle was tapped anywhere in the shop. No different-device dialog appeared.
+- Shop opened from the base cart icon onto the HOT DEALS tab. No free pack on display and no Free Supply auto-claim popup fired on this shop open. The page shows only the Last War Store banner carousel and the Go button, which leads out to the store and was not tapped.
+- Super Monthly Pass page, read live: Days Left 17, Rewards Left 17, and the Daily Pickup button reads Claimed - identical to the 0511 read, so no within-day decrement is claimed. The Monthly Pass Extension 24 dollars 99 button was not tapped.
+- Weekly Pass page, read live and scrolled with the drag from norm 500,850 to 500,250: the Free Supply chest reads Claimed. The Legendary row Take All 19 dollars 99 was not tapped. The S2 Drone Components, S1 Drone Parts and Coin Weekly Pass cards each show only Get Now 4 dollars 99, so all three are unowned offers, not owned passes with a pickup due; none was tapped.
+- 0 claims in this unit: every shop pass surface was checked live and nothing was claimable. This is the third checked-only shop unit today (0237, 0511, 0841), confirming the 1812 cycle state on every surface rather than changing it. Shop left with the back arrow on the first tap, returning to the base screen.
+
+## What the 2026-11-04 1434 unit added - screen-capture failure, fifth consecutive pass, nothing checked or claimed
+
+- Unit passes-2026-11-04-1057 by ticker-1434, about 14:36 to 14:45 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1344 and 1404 sections). Evidence in `_records_/2026-11-04/shop-claims/1434-queue-run.md`. No different-device dialog appeared.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: computer.control activate (session cc-462) selected the LastWar window for background input but captured no observation with "Failed to start stream due to audio/video capture failure"; computer.observe (compact) failed with the same error; a fresh computer session (cc-463, after ending cc-462) failed identically on activate and on observe (image view).
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The shop, the Weekly Pass page and the Season passes were never opened, no free pack or daily pickup was checked or claimed, and no claim was verified.
+- Recurrence, not a new failure class: this is the fifth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434), now across five activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the fifth and sixth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 0841 checked-only state above rests on a live read; this one rests on no read at all.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The inbox held 64 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
+
+## What the 2026-11-04 2234 unit added - screen-capture failure, next known pass after 2204, nothing checked or claimed
+
+- Unit passes-2026-11-04-1857 by ticker-2234, about 22:34 to 22:47 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1434 section). Evidence in `_records_/2026-11-04/shop-claims/2234-queue-run.md`. No different-device dialog was observed - no screen was ever captured, so none could have been seen.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: session cc-492, open_app LastWar returned outcome_unknown and was not repeated, computer.observe (compact) failed three times with "Failed to start stream due to audio/video capture failure", screen.snap failed with the same error, computer.control list_windows succeeded and listed the LastWar window (window_id 160366) so the control channel itself was reachable while the capture stream was not, connection.repair (web) reported both transports healthy and a further computer.observe still failed, computer.control describe failed with the same error, and after a 45-second wait computer.observe failed again; session cc-493 (fresh, after ending cc-492), computer.control activate selected the window for background input but captured no observation with the same error, computer.observe (compact) failed with the same error, and after a 120-second wait a final computer.observe failed with the same error. Total capture attempts: 9 (7 observe, 1 screen.snap, 1 describe). This meets and exceeds the standing at-least-3-attempts retry rule.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The shop, the Weekly Pass page and the Season passes were never opened, no free pack or daily pickup was checked or claimed, and no claim was verified.
+- Recurrence, not a new failure class: this is the next ticker pass after ticker-2204 known to fail on this exact blocker; the record does not assert an exact consecutive count beyond that. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282. The 2234 detail that list_windows succeeds while observe, screen.snap and describe all fail with the same error, and that 45-second and 120-second waits do not clear it, is further evidence against a transient-stream reading, but it adds no new diagnosis beyond the game-window capture stream already narrowed in the 1404 section.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 0841 checked-only state above rests on a live read; this one rests on no read at all.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The inbox held 64 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.

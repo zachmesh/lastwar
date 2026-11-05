@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T10:32:00Z
+modified: 2026-11-04T20:48:17Z
 level: L1
-version: 1.22.0
+version: 1.25.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,9 @@ grounded_in:
   - source: ticker-1104 alliance-help execution record 2026-11-03 1121 queue run (done, bubble press, header 1240 over 1000 unchanged, Help All no requests yet)
   - source: ticker-1706 alliance-help execution record 2026-11-03 1716 queue run (done, Help All cleared one ally row, bubble first tap lost to foreground switch)
   - source: ticker-0204 alliance-help execution record 2026-11-04 0208 queue run (done, Alliance centre 931,709 re-confirmed, 880,720 miss recorded, header 520/1000 on new trade day)
+  - source: ticker-0434 alliance-help execution record 2026-11-04 0451 queue run (done, bubble tile 814,688 left of shield 932,695, one tap clears)
+  - source: ticker-0834 alliance-help execution record 2026-11-04 0837 queue run (done, Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies)
+  - source: ticker-1224 alliance-help execution record 2026-11-04 1235 queue run (failed, Mac screen-capture channel failure, no game input dispatched, not authorization, not a different-device dialog)
 ---
 
 
@@ -748,3 +751,26 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Exited with the Help panel X to the Alliance
   panel, then the panel back arrow (164,931) to
   the base screen. Nothing spent.
+
+## What the 2026-11-04 0451 unit added - bubble tile (814,688) left of the shield, one tap clears
+
+- Unit help-2026-11-04-0230 by ticker-0434, 04:51 local, status done. The computer session dropped between units and was restarted (cc-415 to cc-418); no game state was lost. No "active on a different device" dialog appeared.
+- Base screen watch point checked: the help bubble tile was present at the lower right, grounded at norm (814,688), immediately left of the Alliance shield button grounded at norm (932,695) - against the 0208 Alliance centre (931,709), the shield centre drifts per session as usual.
+- One tap on the bubble tile centre pressed Help All: the game answered with the toast "Allies are very grateful for your assistance!" and the tile disappeared from the base screen, verified on the following screenshot (Alliance shield remains, help tile gone). No Help page was opened, no individual helps were needed, and no count of helped allies was displayed by the game - the toast and the vanished tile are the verification, not a number. Tracker marked done. Nothing spent.
+
+## What the 2026-11-04 0837 unit added - Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies
+
+- Unit help-2026-11-04-0630 by ticker-0834, about 08:35 to 08:37 local, status done. Evidence in `_records_/2026-11-04/alliance-help/0837-queue-run.md`. No diamonds, money, speedups or other spending. No different-device dialog appeared.
+- Entry, foreground lesson repeated: the game was already on the Alliance panel at entry (left by the previous unit). The Help tile carried a red dot. A first background tap on Help did not navigate (window covered by Chrome); a second tap at the measured Help tile centre opened the Help page, matching the standing foreground lesson for this activity.
+- Header, read live: Today's points gained from Alliance Help 620/1,000. Visible requests were all this account's own, each already 30/30 and therefore not helpable by this account: Lv.30 Aircraft Center building, Defense Training VIII research, Weapon Training VIII research, Lv.27 Drill Ground building - the same four own rows as the 0208 and 0451 units. A list drag did not reveal further rows.
+- Help All pressed once. Header unchanged after the press at 620/1,000, so no ally help was actually available to press in this unit; the red dot reflects the own requests awaiting other allies, not pressable ally requests. This repeats the 0208 lesson (Alliance red dot is not remaining help) on the Help page itself.
+- Help panel closed with the X, back to the Alliance panel. Nothing spent.
+
+## What the 2026-11-04 1235 unit added - NEW failure mode: screen-capture channel failure before any observation, failed
+
+- Unit help-2026-11-04-1030 by ticker-1224, about 12:24 to 12:27 local, status failed (access-failed). Evidence in `_records_/2026-11-04/alliance-help/1235-queue-run.md`. This is a NEW failure class for this activity, distinct from every foreground and tap failure recorded above: the unit never reached an observation at all.
+- Capture sequence, all failed with the same error: activate LastWar, computer.observe, open_app LastWar, computer.observe again, computer.control describe, and a screenshot action - every screen-capture step failed with "Failed to start stream due to audio/video capture failure". Device state at the time: Mac online, LastWar app running fullscreen, Google Chrome frontmost; connection health connected on both native and web transports.
+- Classification, stated explicitly: this is a screen-capture channel failure, NOT a missing owner authorization and NOT a different-device dialog (no such dialog appeared). It does not contradict the foreground notes above - those concern taps that dispatch but do not reach a control, while here no screenshot existed to tap from.
+- No game input was dispatched and no tap was sent, so no in-game state changed. Help All was NOT pressed and no help count was read; nothing observed is claimed.
+- Retry rule satisfied: at least 3 capture attempts were made in this pass (activate plus repeated observe, describe and screenshot attempts) before the access failure was recorded.
+- Follow-up from the record itself: the tracker is untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit with this unit retried first. If the capture failure persists across passes, it escalates as a device-channel fault, not as a repeat of the same taps.

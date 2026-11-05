@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T10:32:00Z
+modified: 2026-11-04T22:40:54Z
 level: L1
-version: 1.23.0
+version: 1.26.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,9 @@ grounded_in:
   - source: ticker-1334 perception-scout execution record 2026-11-03 1345 queue run (partial, station preparation-only surface, LOOT box located on the world map)
   - source: ticker-1734 alliance-train execution record 2026-11-03 1742 queue run (partial, fifth check-only outcome today, banner absent, station not viewed)
   - source: ticker-0204 alliance-train execution record 2026-11-04 0217 queue run (partial, sixth check-only outcome in a row, banner absent, station not viewed)
+  - source: ticker-0504 alliance-train execution record 2026-11-04 0509 queue run (partial, seventh check-only outcome in a row, grounding mislabel at 55,563 opened the truck screen)
+  - source: ticker-0834 alliance-train execution record 2026-11-04 0839 queue run (partial, check-only, no boarding banner, no train icon, station not viewed)
+  - source: ticker-1404 alliance-train execution record 2026-11-04 1404 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fourth consecutive ticker pass to fail this way, Chrome-window observation succeeded in the same session so the fault is specific to the Last War fullscreen window, Issue 284)
 ---
 
 # Alliance train
@@ -976,3 +979,29 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Tracker untouched, per the rule for partial
   units; the next tick re-produces train and
   resumes the check. Game left on the base view.
+
+## What the 2026-11-04 0509 unit added - seventh check-only outcome in a row, grounding mislabel opens truck screen
+
+- Unit train-2026-11-04-0230 by ticker-0504, about 05:05 to 05:09 local, status partial. No "active on a different device" dialog appeared. Evidence in `_records_/2026-11-04/alliance-train/0509-queue-run.md`.
+- Inspected the live base view. No "Boarding closes in" banner under the resource bar, and the left icon column shows no train icon. This is the same state as the 0217 train unit today and the six check-only units of 2026-11-03, the seventh such check-only outcome in a row.
+- One wrong tap, recovered without action: a visual grounding put a train icon at (55, 563), but tapping it opened the truck screen instead. Nothing inside it was tapped - no dispatch, no plunder, no Mega Mode - and it was closed with its back arrow back to the base view. Nothing read on the truck screen is this unit's data, and the trucks unit must re-read its own counters live. This repeats the standing lesson that visual grounding must not be trusted for the left-column icons, and is further evidence for Issue #205 (left-column mapping and the train icon appearing only while a train is preparing); the ticker already commented this unit onto #205.
+- No boarding action was taken, no Trade Contracts spent, no train summoned, no conductor role touched. The station itself was not viewed, so a preparing train is neither confirmed nor ruled out beyond the absent banner - the same honest caveat as the earlier units. No further ground taps were used to probe for the station, per the 0752 lesson that they open other players' profile cards on this map.
+- No new Issue was filed for this repetition: the blocker is a missing boarding window (trains run 1 regular plus 2 Mega Express per day with short windows), not a tap-method failure, so rule R2's method-escalation ladder does not apply; the repetition is named here and in the pass note for the retro instead.
+- Tracker untouched, per the rule for partial units; the next tick re-produces train and resumes the check. Game left on the base view.
+
+## What the 2026-11-04 0839 unit added - eighth check-only outcome in a row, station still not viewed
+
+- Unit train-2026-11-04-0630 by ticker-0834, about 08:39 local, status partial. Evidence in `_records_/2026-11-04/alliance-train/0839-queue-run.md`. No different-device dialog appeared.
+- Inspected the live base view. No "Boarding closes in" banner under the resource bar, and the left icon column (hammer 2/4, trucks, radar with a red dot, phone with a red dot) shows no train icon. This is the same state as the 0217 and 0509 train units today and the check-only units of 2026-11-03, the eighth such check-only outcome in a row.
+- No boarding action was taken, no Trade Contracts spent, no train summoned, no conductor role touched. The station itself was not viewed, so a preparing train is neither confirmed nor ruled out beyond the absent banner - the same honest caveat as the earlier units. Ground taps were not used to probe for the station, per the 0752 lesson that they open other players' profile cards on this map, and the 0509 lesson that the left-column icon at (55, 563) opens the truck screen, not the train.
+- No new Issue was filed for this repetition, for the same reason as the 0509 section: the blocker is a missing boarding window (trains run 1 regular plus 2 Mega Express per day with short windows), not a tap-method failure, so rule R2's method-escalation ladder does not apply; the repetition is named here and in the pass note for the retro instead.
+- Tracker untouched, per the rule for partial units; the next tick re-produces train and resumes the check. Game left on the base view.
+
+## What the 2026-11-04 1404 unit added - screen-capture failure, fourth consecutive pass, fault narrowed to the game window
+
+- Unit train-2026-11-04-1030 by ticker-1404, about 14:04 to 14:10 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed). Evidence in `_records_/2026-11-04/alliance-train/1404-queue-run.md`. No different-device dialog appeared.
+- No game screen was ever read and no game input was dispatched. computer.control activate selected the LastWar window for background input but reported it not on screen and captured no observation ("Failed to start stream due to audio/video capture failure"); computer.observe (compact) failed with the same error twice across two computer sessions (cc-460, then cc-461); computer.control describe on the LastWar window failed with the same error. computer.control open_app returned outcome_unknown; a re-list showed LastWar still running under the same pid (59735), so no restart or duplicate launch happened and the launch was not repeated.
+- Narrowing, the point of this fold: control observation of the Google Chrome window succeeded in the same session (the Gmail inbox tree was read), so the control channel itself works and the failure is specific to the Last War fullscreen window, not a whole-device outage. This qualifies the Issue #282 framing ("device-channel fault"): the fault is the capture stream for the game window, not a device-wide capture outage. The qualification is commented on #282 by this run; the tooling tracker is Issue #284, where the ticker pass already commented this unit's evidence, so no duplicate issue is filed here.
+- Recurrence: this is the fourth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404), now across four activities. Until the Mac screen-recording stream recovers for the game window, further ticker passes will fail their first unit the same way.
+- No blind taps were dispatched, under the check-first rule. No train boarding check was performed, no seat taken, no Trade Contracts spent, no train summoned. Unlike the eight check-only units above, this unit is NOT a check-only outcome: the station was not even attempted, because no observation existed to check from - so it gives zero evidence about whether a train is preparing, and it does not extend the check-only streak count (which stays at eight).
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the train unit. The inbox held 65 units at this pass. The unit file sits in `_queue_/done/` with result status failed - the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
