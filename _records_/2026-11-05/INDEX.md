@@ -234,3 +234,21 @@ of 2026-10-28.
 - Sync: reaped 0, expired 25, due 23, produced 19 units. Zombie
   Invasion not seeded: the event ended 2026-10-30 about 19:00 and
   the chain is closed (see _activities_/zombie-invasion/INDEX.md).
+
+## 01:15 to about 01:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0115.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR open, nothing merged
+  or escalated. Five records PRs await the 03:00 batch,
+  all verified clean against current main 8a3db49c62
+  by the API: PR 304 (2026-11-05, head 57ddc63e,
+  advanced since 0100), PR 301 (2026-11-04, head
+  bf9fb87e), PR 187 (2026-11-01, head 1efa3040),
+  PR 265 (2026-11-02, head 52295794) and PR 256
+  (2026-11-03, head b35684d2). No conflicts, no
+  owner-gated PR. Checker first run hit the ambiguous
+  github/main refname in ~/lastwar-push (stale local
+  branch); checkout corrected to remote main and
+  checker re-run with the identical verdict. Full
+  detail in pr-integration/0115-run.md.
