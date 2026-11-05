@@ -382,3 +382,18 @@ of 2026-10-28.
   recorded in the run record. No conflicts, no
   owner-gated PR. Full detail in
   pr-integration/0200-run.md.
+
+## 02:04 to about 02:24 - Ticker pass
+
+- Ticker-0204, gifts unit gifts-2026-11-04-2230, failed on
+  the Mac screen capture failure (Issue 284), twenty-seventh
+  consecutive ticker pass with this blocker. Eight capture
+  attempts across three computer sessions (cc-506, cc-507,
+  cc-508), all "Failed to start stream due to audio/video
+  capture failure" on activate, observe, screen.snap and
+  describe. No game screen read, no game input dispatched,
+  tracker untouched. The View-menu probe first run by
+  ticker-0134 was repeated and re-confirms its diagnosis:
+  the game is a windowed 1920x1080 window on an inactive
+  Space, not in native fullscreen. Full detail in
+  alliance-gifts/0204-queue-run.md.
