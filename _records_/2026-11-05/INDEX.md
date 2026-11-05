@@ -1843,3 +1843,20 @@ of 2026-10-28.
   MERGEABLE CLEAN on re-check. No owner-gated PR.
   No comment posted. No merge. Status: no-op.
   Full detail in pr-integration/1038-run.md.
+- Mail unit mail-2026-11-05-0630, failed, ticker-1025: no
+  game screen was ever read and no game input was dispatched.
+  Five device invokes, zero responses: computer.session start
+  twice, connection.health and connection.repair (web) on the
+  Mac mini all node_offline (device offline, no wake-up path),
+  connection.health on the recovery device node_invoke_timeout
+  after 25s. device.list now reports the Mac mini offline
+  (earlier passes saw online-stale) with last_seen 15:36:52Z,
+  stale about 2 hours 55 minutes. This is the forty-second
+  consecutive ticker pass with a Mac device-access blocker
+  (Issue 284), third in the worsened zero-response form.
+  Probe 1.1.0 (PR #321, merged 09:47) classifies
+  CHANNEL_STALL, high confidence, exit 12. Recovery still
+  needs the Mac-side agent gateway restart. Commented on
+  Issue 284 (with a correction on PR #321). No mail claimed.
+  Tracker untouched. The pass stopped after this one unit.
+  Full detail in mail-rewards/1025-queue-run.md.
