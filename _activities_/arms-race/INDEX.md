@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-05T10:38:30Z
+modified: 2026-11-05T12:34:44Z
 level: L1
-version: 1.38.0
+version: 1.39.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -40,6 +40,7 @@ grounded_in:
   - source: ticker-1604 arms-race execution record 2026-11-04 1604 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eighth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-1934 arms-race execution record 2026-11-04 1934 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, fifteenth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-0004 arms-race execution record 2026-11-05 0004 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-third consecutive ticker pass to fail this way, Issue 284; Chrome observation succeeded in the same session, so the fault is specific to the LastWar window; session window corrected to 00:04-00:10 by the append-only correction record)
+  - source: ticker-0334 arms-race execution record 2026-11-05 0334 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirtieth consecutive ticker pass to fail this way, Issue 284; probe classification OFF_SCREEN_WINDOW high confidence; Chrome observation succeeded in the same session)
 ---
 
 
@@ -1602,3 +1603,13 @@ slot. Evidence in
 - Superseded in this profile: the "running fullscreen" wording in the 1604, 1934 and 0004 sections above. The 0004 section's window-name mismatch note stands unchanged (list_windows with "Last War" returns 0 windows; the app is "LastWar", bundle com.lastwar.ios, pid 59735).
 - Follow-up corrected: the standing "screen recording permission or capture pipeline restart" unblock is replaced - the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. Background-sent Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, Cmd+Tab is blocked by the tool, and list_windows needs the exact app name "LastWar". No control route available to the background channel moves the window across Spaces without a fresh observation of the window itself.
 - This correction does not change the Arms Race state: the 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; no phase, score or chest state was read in the failed passes and none is asserted here. The twenty-sixth and twenty-seventh occurrences are commented onto Issue #282 by this run; Issue #284 already tracks the blocker.
+
+## What the 2026-11-05 0334 unit added - screen-capture failure, thirtieth consecutive pass, nothing read
+
+- Unit arms-race-2026-11-05-0203 by ticker-0334, about 03:34 to 03:38 local, status failed. Evidence in `_records_/2026-11-05/arms-race/0334-queue-run.md`. This was a duel day 4 unit: on a working screen it would have read the live phase and score, worked the tier-3 target just enough, claimed every earned reward, and finished with the completion sweep before leaving the Events and Arms Race screens. No diamonds spent, no scoring action executed, no chest claimed.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: session cc-514 `computer.control` activate selected the window for background input but captured no observation, `computer.observe` compact failed, `computer.observe` image failed; fresh session cc-515 `computer.control` activate again reported `window_on_screen: false` and `brought_to_front: false`, `computer.observe` compact failed - five capture attempts across two computer sessions, all with "Failed to start stream due to audio/video capture failure". LastWar (bundle com.lastwar.ios, pid 59735) is running, one window 1920x1080 at (0,0), window_id 160366; Google Chrome is frontmost. `computer.control` list_windows with app LastWar confirms the window exists. No blind taps were dispatched, under the check-first rule.
+- Narrowing, first-hand this pass: control observation of a Chrome window in the same session (cc-515) succeeds with a full accessibility tree (Gmail inbox, zhenchen@gmail.com), so the capture channel works for on-screen windows and the fault is specific to the LastWar window stream, consistent with the windowed-on-inactive-Space diagnosis in the Correction 2026-11-05 section above.
+- Probe classification: `_tools_/mac_capture_probe.py` 1.0.0 classifies this evidence OFF_SCREEN_WINDOW (high confidence), stop_pass yes. The View-menu inspect step could not run this pass: it is gated on a fresh observation of the LastWar window, which is exactly what the capture failure prevents - the classification stands on the activate evidence alone, as the probe tool allows (on_screen false plus brought_to_front false is high confidence).
+- Recurrence, not a new failure class: this is the thirtieth consecutive ticker pass to fail on this exact blocker (ticker-0304 radar at 03:04 was the twenty-ninth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the thirtieth and thirty-first occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 03:34 was not read and is not asserted here.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this unit: with no observation channel a second unit would fail identically, so the remaining inbox units were left queued.

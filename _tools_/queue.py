@@ -66,6 +66,17 @@ Usage:
              # reset_utc instant as expiry, chain prefix in
              # chain_id_prefix); sync never stages fixed-slot
              # regulars, plan owns them
+  queue.py [--root DIR] sweep [--regular zero-sweep]
+             [--date YYYY-MM-DD] [--regulars-json FILE]
+             # produce the pre-reset sweep pair for one reset day
+             # from the fixed-slots regular - slots reset-anchored,
+             # expiry at the reset instant itself (issue #147);
+             # the planner's manual step calls this instead of
+             # hand-computing wall times, so the pair can never
+             # again carry the old 17:30/18:30/19:00 geometry;
+             # refuses when the regular is missing or not
+             # reset-anchored, so a stale tree fails loudly
+             # instead of staging a wall-clock pair
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -1016,6 +1027,87 @@ def cmd_plan(args):
     return 0
 
 
+def cmd_sweep(args):
+    """Produce the pre-reset sweep pair for one reset day.
+
+    The planner's manual sweep-production step used to hand-compute
+    the pair (17:30/18:30 local, expiring 19:00 local) and copy the
+    previous day's task text, so the reset-anchored geometry PR #267
+    put in the regular never reached the pair - and the Nov 4 pair
+    expired unexecuted half an hour after the true 18:00 PST reset
+    (issue #147, fourth failure running). This command reads the
+    geometry from the roster instead: the reset-anchored slots of
+    the fixed-slots regular, expiring at the reset instant itself,
+    produced through _produce_for_window so the (regular,
+    planned_for) anti-duplication invariant holds against plan.
+
+    It refuses - exit 1, no unit staged - when the regular is
+    missing from the roster or carries no reset anchoring, so a
+    stale tree fails loudly instead of staging a wall-clock pair
+    with the old 19:00 expiry, and when the reset instant for the
+    date is already past, so a late call cannot stage dead units.
+    """
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"refused: cannot read roster {defs_path}: {exc}")
+        return 1
+    item = next((r for r in regs if r.get("id") == args.regular), None)
+    if item is None:
+        print(f"refused: regular {args.regular!r} not in roster "
+              f"{defs_path} - sync the tree to main before producing "
+              f"the sweep pair")
+        return 1
+    if item.get("cadence") != "fixed-slots" or \
+            not _reset_anchored_offsets(item):
+        print(f"refused: regular {args.regular!r} carries no "
+              f"reset-anchored slots (reset_utc + "
+              f"slots_before_reset_minutes) - a wall-clock pair "
+              f"would repeat the issue #147 defect")
+        return 1
+    if args.date:
+        try:
+            year, month, day = (int(x) for x in args.date.split("-"))
+            local_date = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --date {args.date!r} is not YYYY-MM-DD")
+            return 1
+    else:
+        local_date = datetime.now(LOCAL_TZ).date()
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    if reset_local <= datetime.now(LOCAL_TZ):
+        print(f"refused: reset instant "
+              f"{iso(reset_local.astimezone(timezone.utc))} for "
+              f"{local_date.isoformat()} is already past - pass "
+              f"--date for the next reset day")
+        return 1
+    slots = _reset_anchored_slots(item, local_date)
+    produced, already = [], 0
+    for idx, slot in enumerate(slots):
+        if len(slots) == 2:
+            label = "first pass" if idx == 0 else "final pass"
+        else:
+            label = f"pass {idx + 1}"
+        unit = _produce_for_window(
+            args.root, item, slot, f"pre-reset zero sweep, {label}")
+        if unit:
+            produced.append(unit)
+        else:
+            already += 1
+    print(json.dumps({
+        "regular": args.regular, "date": local_date.isoformat(),
+        "reset_at": iso(reset_local.astimezone(timezone.utc)),
+        "produced": produced, "already_present": already},
+        ensure_ascii=False))
+    return 0
+
+
 def cmd_enqueue(args):
     if args.est_minutes > UNIT_CAP_MINUTES:
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
@@ -1731,6 +1823,12 @@ def main(argv=None):
     p.add_argument("--regulars-json", default="")
     p.add_argument("--tracker-json", default="")
     p.set_defaults(fn=cmd_plan)
+
+    p = sub.add_parser("sweep")
+    p.add_argument("--regular", default="zero-sweep")
+    p.add_argument("--date", default="")
+    p.add_argument("--regulars-json", default="")
+    p.set_defaults(fn=cmd_sweep)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],
