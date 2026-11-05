@@ -2167,3 +2167,21 @@ of 2026-10-28.
 - Pool: inbox 76, claimed 1, done 923, upcoming 51.
   Status: done. Full detail in
   queue-planning/1140-run.md.
+
+## 11:32 to about 11:57 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-05-1132.
+  One bounded tooling item, issue #300: radar closings that
+  wrote the radar-screen total into stats.points with no
+  achieved key were never flagged. The decision the issue
+  awaited is answered by the repo spec itself (points is
+  score gained, a total read belongs in achieved only).
+  PR 326 opened (branch work/points-no-achieved-flag-300,
+  commit ec8c635c): queue.py gains points_without_achieved
+  (key presence, zero not flagged) with a close-time warning
+  and stats count; retro_report.py 1.5.0 excludes such points
+  from points_total under points_no_achieved_excluded. Issue
+  300 commented, owner Slack DM sent. Validation: 54 checks
+  passed on isolated scratch; live-pool copy finds exactly
+  the 4 known screen totals (46,361 points). Status: done.
+  Full detail in tool-development/1132-run.md.
