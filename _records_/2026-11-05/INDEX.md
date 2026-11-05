@@ -2592,3 +2592,17 @@ of 2026-10-28.
   no input dispatched. Tracker untouched.
   Status: failed. Full detail in
   perception-scout/1404-queue-run.md.
+
+## 14:15 to about 14:22 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1415.
+  NON-batch pass: the checker reported not due (next
+  batch 15:00). No knowledge or code PR open. Five
+  records PRs await the 15:00 batch: 324 (clean, head
+  83d043f2) and 310 (clean, head efc83148b); 301, 265, 256
+  conflicted on the single action-log file, conflict
+  notes posted in the 1100 pass, heads unchanged, no
+  repeat comment. No owner-gated PR. No new records PR
+  to open (2026-10-31 contained in main).
+  Status: no-op.
+  Full detail in pr-integration/1415-run.md.
