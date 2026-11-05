@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T10:38:30Z
+modified: 2026-11-05T13:35:09Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-1634 resource-collection execution record 2026-11-04 1634 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, ninth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-2104 resource-collection execution record 2026-11-04 2104 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2034 known to fail identically, Issue 284)
   - source: ticker-0034 resource-collection execution record 2026-11-05 0034 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-fourth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-0434 resource-collection execution record 2026-11-05 0434 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirty-second consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -744,6 +745,8 @@ regular stays due. Evidence in
 
 ## Changelog
 
+- 1.27.0 (2026-11-05): thirty-second consecutive capture failure (0434 harvest unit, 5 attempts across cc-518 and cc-519, probe OFF_SCREEN_WINDOW high confidence, Chrome observes normally in cc-520, View-menu probe step missing because describe is capture-blocked, recovery still the owner Dock-icon click or mac_lastwar_front.sh); the 1101 harvest close stands as the last live read, full edge-drag sweep still incomplete, Armed Truck state unknown; thirty-second occurrence commented onto Issue #282 by this run.
+
 - 1.26.0 (2026-11-05): Correction from the 0134 survivors and 0204 gifts records - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (View menu lists Enter Full Screen, read on-screen in session cc-505 and re-confirmed by a repeated probe in cc-508); the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; the "running fullscreen" wording in the 1634, 2104 and 0034 sections is superseded, and the 0034 "menu path View -> Exit Full Screen" with it; the permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); background Space keys do not switch Spaces, set_window_frame is stale-observation-gated, Cmd+Tab is blocked, list_windows needs the exact app name "LastWar"; the 1101 harvest close stands as the last live read; twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.23.0, 1.24.0 and 1.25.0 carry the 1634, 2104 and 0034 sections without changelog lines; the numbering is preserved, not rewritten.)
 
 - 1.22.0 (2026-11-04): farmland +2.1M food (417.9M to 420.0M) and left-side +1.4M coin (18.0M to 19.4M) verified by HUD deltas, farmland one-tap-clears-all and the 0755 left-side point (88,406) re-confirmed, Alliance back arrow (161,935) and panel X closures (848,213) and (848,150) re-confirmed, donations timer 00:11:45 corroborating the 1046 timer running, right side and top edge unswept and EXP, screw and drone-component bubbles unlocated so the full edge-drag sweep stays incomplete, marker confusion caution (Issue #250) carried with no new failure mode, folded from the 1101 harvest unit; no earlier claim superseded. (1.20.0 and 1.21.0 carry the 0413 and 0755 sections without changelog lines; the numbering is preserved, not rewritten.)
@@ -1045,3 +1048,14 @@ regular stays due. Evidence in
 - Superseded in this profile: the "running fullscreen" wording in the 1634, 2104 and 0034 sections above. The 0034 section's "menu path View -> Exit Full Screen" is superseded with it: the menu contains "Enter Full Screen", not "Exit Full Screen".
 - Follow-up corrected: the standing "screen recording permission or capture pipeline restart" unblock is replaced - the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. Background-sent Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, Cmd+Tab is blocked by the tool, and list_windows needs the exact app name "LastWar" ("Last War" returns 0 windows). No control route available to the background channel moves the window across Spaces without a fresh observation of the window itself.
 - This correction does not change the harvest state: the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) stands as the last live read. The twenty-sixth and twenty-seventh occurrences are commented onto Issue #282 by this run; Issue #284 already tracks the blocker.
+
+## What the 2026-11-05 0434 unit added - screen-capture failure, thirty-second consecutive pass, nothing read
+
+- Unit harvest-2026-11-05-0203 by ticker-0434, about 04:34 to 04:44 local, status failed. Evidence in `_records_/2026-11-05/resource-collection/0434-queue-run.md`. No resource collected, no diamonds, money, speedup items or paid button touched.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on all five attempts across two computer sessions (cc-518, cc-519): computer.control activate selected the LastWar window for background input but captured no observation, computer.observe (compact, then image) failed, and in a fresh session (cc-519) computer.observe (compact) and computer.control describe for LastWar failed, all with "Failed to start stream due to audio/video capture failure". The capture pipeline itself works: a Chrome window observed normally in a fresh session (cc-520, Gmail inbox, 60 elements), so the fault is specific to the LastWar window. LastWar (bundle com.lastwar.ios, pid 59735) is running, a 1920x1080 window at (0,0) on an inactive Space, window_id 160366; Google Chrome is frontmost (Gmail inbox). `activate` reports `window_on_screen: false` and `brought_to_front: false`.
+- Probe classification: `_tools_/mac_capture_probe.py` (tool version 1.0.0) classifies OFF_SCREEN_WINDOW (high confidence), stop_pass yes, exit code 10. One probe step is missing: the View-menu inspect (Enter/Exit Full Screen), because the describe route is itself capture-blocked.
+- Recovery still needs the one owner step: click the LastWar Dock icon once on the Mac mini (or run `_tools_/mac_lastwar_front.sh` in Terminal), then re-probe. No background control route moves the window - Space keys sent in the background do not switch Spaces, open_app returns outcome_unknown, and set_window_frame needs a fresh observation, which is exactly what the failure prevents. Never use Control-Command-F or Escape on this app (both crash it).
+- Recurrence, not a new failure class: this is the thirty-second consecutive ticker pass to fail on this exact blocker (ticker-0304 the twenty-ninth, ticker-0334 the thirtieth, ticker-0404 the thirty-first). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the thirty-second occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed. The Armed Truck state is unknown.
+- The pass stopped after this one unit - every unit needs the same game screen, and the probe says to stop. The inbox held 72 units at this pass. No other unit was attempted.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
