@@ -1971,3 +1971,19 @@ of 2026-10-28.
   Status: done. Full detail in
   queue-planning/1040-run.md.
 
+
+## 10:45 to about 10:58 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1045.
+  Non-batch pass: the checker reported not due, next
+  batch point 11:00 (about 13 minutes away). Two
+  knowledge/code PRs merged: #322 (organizer 1032
+  knowledge, resource-collection 1.28.0 and
+  perception-scout 1.20.0) as 2344e85198 and #323
+  (mac_capture_probe 1.2.0, DEVICE_OFFLINE) as
+  4d9f99e654. Five records PRs (317, 310, 301, 265,
+  256) await the 11:00 batch, all MERGEABLE CLEAN
+  on re-check; PR 310 re-verified by scratch test
+  merge (comment posted). No owner-gated PR. Status:
+  done.
+  Full detail in pr-integration/1045-run.md.
