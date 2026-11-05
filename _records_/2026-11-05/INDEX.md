@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T08:48:42Z
+modified: 2026-11-05T11:12:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
@@ -548,6 +548,24 @@ of 2026-10-28.
   Local main fast-forwarded to c06932d2bb by bundle.
   Full detail in pr-integration/0245-run.md.
 
+## 03:00 to about 03:12 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0300.
+  Batch pass in the 0300 window (checker due, 58
+  minutes left): merged records PR 187 (2026-11-01,
+  merge commit 2071992b, 2 commits) and records PR 304
+  (2026-11-05, merge commit efc6de73, 40 commits,
+  after a mid-pass branch-side reconciliation
+  6d65fd81), branches kept, merge-time action-log
+  lines added as 848850c967 and 2241a8e2d0, fresh
+  records PR 309 opened for the 187 merge line.
+  Records PRs 265 (2026-11-02), 256 (2026-11-03),
+  301 (2026-11-04) and 309 (2026-11-01) conflicted
+  on the single file _logs_/repo-actions/action-log.jsonl,
+  commented and carried to the 07:00 batch. No
+  knowledge or code PR open. Local main
+  fast-forwarded to efc6de73 by bundle.
+  Full detail in pr-integration/0300-run.md.
 ## 03:04 to about 03:12 - Ticker pass
 
 - Own PRs first: the live records PR for today, PR 304

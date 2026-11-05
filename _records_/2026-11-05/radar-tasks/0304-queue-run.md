@@ -97,9 +97,10 @@ and recorded the pin inventory without claiming anything.
   merge-base's 796 entries are all preserved. Pushed via
   the bundle route and verified with git ls-remote
   (remote records/2026-11-05 at 6d65fd817); commented the
-  resolution on PR 304. The merge state still read UNKNOWN
-  immediately after the push (GitHub recomputing); the
-  next batch pass re-checks it at 07:00.
+  resolution on PR 304. The 0300 batch pass then merged PR
+  304 into main (merge commit efc6de7387) and opened PR 309
+  for the 2026-11-01 merge line; the records/2026-11-05
+  branch continues and this pass's outputs ride on it.
 - Sync: reaped 0, expired 5 (events, passes, secrets,
   treasures, trucks 2026-11-04-2257), produced nothing new,
   21 regulars already queued.
