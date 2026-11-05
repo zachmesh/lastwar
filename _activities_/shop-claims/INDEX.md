@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T23:36:33Z
+modified: 2026-11-05T07:34:38Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -26,6 +26,7 @@ grounded_in:
   - source: ticker-0504 shop-claims execution record 2026-11-04 0511 queue run (done, checked only, 0 claims, monthly Days Left 17, tab taps need a re-read after each tap)
   - source: ticker-0834 shop-claims execution record 2026-11-04 0841 queue run (done, checked only, 0 claims, monthly 17/17 Claimed as in 0511)
   - source: ticker-1434 shop-claims execution record 2026-11-04 1434 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fifth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-2234 shop-claims execution record 2026-11-04 2234 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2204 known to fail identically, Issue 284)
 ---
 
 
@@ -803,5 +804,14 @@ the free and already paid for parts, never the paid unlocks.
 - No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: computer.control activate (session cc-462) selected the LastWar window for background input but captured no observation with "Failed to start stream due to audio/video capture failure"; computer.observe (compact) failed with the same error; a fresh computer session (cc-463, after ending cc-462) failed identically on activate and on observe (image view).
 - No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The shop, the Weekly Pass page and the Season passes were never opened, no free pack or daily pickup was checked or claimed, and no claim was verified.
 - Recurrence, not a new failure class: this is the fifth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404, ticker-1434 passes 1434), now across five activities. The blocker is filed as Issue #284 (tooling, filed by the ticker-1340 pass) alongside the knowledge Issue #282 filed by the 1332 organizer run; this pass commented on #284 instead of filing a duplicate, and this run comments the fifth and sixth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 0841 checked-only state above rests on a live read; this one rests on no read at all.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The inbox held 64 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
+
+## What the 2026-11-04 2234 unit added - screen-capture failure, next known pass after 2204, nothing checked or claimed
+
+- Unit passes-2026-11-04-1857 by ticker-2234, about 22:34 to 22:47 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1434 section). Evidence in `_records_/2026-11-04/shop-claims/2234-queue-run.md`. No different-device dialog was observed - no screen was ever captured, so none could have been seen.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt across two computer sessions: session cc-492, open_app LastWar returned outcome_unknown and was not repeated, computer.observe (compact) failed three times with "Failed to start stream due to audio/video capture failure", screen.snap failed with the same error, computer.control list_windows succeeded and listed the LastWar window (window_id 160366) so the control channel itself was reachable while the capture stream was not, connection.repair (web) reported both transports healthy and a further computer.observe still failed, computer.control describe failed with the same error, and after a 45-second wait computer.observe failed again; session cc-493 (fresh, after ending cc-492), computer.control activate selected the window for background input but captured no observation with the same error, computer.observe (compact) failed with the same error, and after a 120-second wait a final computer.observe failed with the same error. Total capture attempts: 9 (7 observe, 1 screen.snap, 1 describe). This meets and exceeds the standing at-least-3-attempts retry rule.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. The shop, the Weekly Pass page and the Season passes were never opened, no free pack or daily pickup was checked or claimed, and no claim was verified.
+- Recurrence, not a new failure class: this is the next ticker pass after ticker-2204 known to fail on this exact blocker; the record does not assert an exact consecutive count beyond that. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282. The 2234 detail that list_windows succeeds while observe, screen.snap and describe all fail with the same error, and that 45-second and 120-second waits do not clear it, is further evidence against a transient-stream reading, but it adds no new diagnosis beyond the game-window capture stream already narrowed in the 1404 section.
 - Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 0841 checked-only state above rests on a live read; this one rests on no read at all.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The inbox held 64 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
