@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-05T11:35:38Z
+modified: 2026-11-05T18:38:19Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: tool-development 2032 run (daily-reset UTC boundary fix, PR 249) and GitHub Issue #247 - scout post-reset anchor corrected to the 02:00 UTC boundary
   - source: ticker-0904 perception-scout execution records 2026-11-04 0906, 0911 and 0919 queue runs plus the 2026-11-04 observation file (base group x2, stale alliance remainder, Wars dot absent with no rally)
   - source: ticker-0104 perception-scout execution record 2026-11-05 0104 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-fifth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-0941 perception-scout execution record 2026-11-05 0941 queue run (failed, Mac device invoke channel stall, zero responses to any invoke, forty-first consecutive ticker pass with a Mac device-access blocker, confirms the worsened zero-response form first recorded by ticker-0904, Issue 284)
 ---
 
 
@@ -1707,4 +1708,16 @@ observe-only, nothing claimed). Evidence in
 - Stale chain head, queue behaviour: this unit belongs to chain scout-2026-11-02, three days stale - its observation would have landed in the 2026-11-02 day file, whose reset day ended 2026-11-03 19:00. The stale head was picked by the queue's earliest-expiry order; the capture failure, not the staleness, is what stopped the unit. A future live unit on this chain should expect the head to be stale and re-ground from the current day, not from the chain's reset day.
 - Recurrence, not a new failure class: this is the twenty-eighth consecutive ticker pass to fail on this exact blocker (ticker-0204 at 02:04 was the twenty-seventh). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-eighth and twenty-ninth occurrences onto #282.
 - Reading warning: this failed unit gives zero evidence about any scout surface. It must NOT be read as "nothing to do" or as a red-dot state - the 2026-11-04 0906 and 0911 base-group reads (account power 150,028,269, HUD food 415.2M, iron 745.8M, coin 15.2M) rest on live reads and stand as the last live reads; this unit rests on no read at all. The carried remainder (station panel and loot box re-check in chain scout-mid-2026-11-02) stays carried for a fresh re-check, not closed from memory.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-05 0941 unit added - invoke-channel stall, forty-first consecutive pass, nothing read
+
+- Unit scout-midday-scout-mid-2026-10-31-005 by ticker-0941, about 09:44 to 09:52 local, status failed. Evidence in `_records_/2026-11-05/perception-scout/0941-queue-run.md`. Observe-only throughout; nothing claimed, fought, dispatched, donated, boarded, dug, joined or bought.
+- No game screen was ever read and no game input was dispatched. Every device invoke timed out with zero responses - three attempts: `computer.session` start (node_invoke_timeout after 120000ms), `connection.health` (node_invoke_timeout after 25000ms), `computer.session` start again (node_invoke_timeout after 120000ms). Mac mini 1c817413-83e2-0545-cb90-36d5e096a6bd reported online by device.list, but last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 2 hours 5 minutes at pass time; the recovery device shows the same stale timestamp. This meets the standing at-least-3-attempts retry rule.
+- Worsened form, confirmed not new: this is the same zero-response invoke-channel stall the ticker-0904 harvest pass first recorded - the invoke channel itself is stalled, not just the LastWar window stream. The in-tree probe `_tools_/mac_capture_probe.py` 1.0.0 answers this evidence UNKNOWN (low confidence, exit 1): it has no invoke-timeout field and asks for the checklist (list_windows, View-menu inspect, one observe attempt), each step of which would burn another 120s timeout. The CHANNEL_STALL diagnosis that classifies exactly this evidence (invoke_timeouts with invoke_responses 0, high confidence, stop_pass yes) lived in PR #321, still open and unmerged at pass time, so this pass classifies by that design and stops rather than re-running the checklist. PR #321 has since MERGED (2026-11-05, pr-integration 0952 pass, commit 18b8b6da29), so the probe now classifies this evidence in-tree and the next pass will classify with it rather than by the design.
+- Stale-chain unit: chain scout-mid-2026-10-31, seq 5, staged 2026-11-03. Per the stale-scout precedent its observation would have been filed under 2026-11-05 as a read of the current game state, but no read exists to file. The alliance remainder this unit owns (station panel, loot box) is unwalked and no observation was produced.
+- Recovery, gateway level: recovery still needs the owner-side step, now at the gateway level - the Mac-side agent gateway likely needs a restart before re-probing (per the PR #321 design); the Dock-icon step addresses the window-stream fault, not a stalled invoke channel. That gateway-restart step is the record's inference, not a verified fix: no pass has yet run it and confirmed recovery. See the resource-collection 1.28.0 fold for the first recording of this form and the scoping of the Correction 2026-11-05 unblock.
+- No blind taps were dispatched: without a session or an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
+- Recurrence: this is the forty-first consecutive ticker pass with a Mac device-access blocker (fortieth was ticker-0904, which first recorded this zero-response form; thirty-seventh was ticker-0734 on the capture failure form). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the forty-first occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about any scout surface. It must NOT be read as "nothing to do" or as a red-dot state - the 2026-11-04 0906 and 0911 base-group reads (account power 150,028,269, HUD food 415.2M, iron 745.8M, coin 15.2M) rest on live reads and stand as the last live reads; this unit rests on no read at all. The carried remainder (station panel and loot box re-check in chain scout-mid-2026-11-02) stays carried for a fresh re-check, not closed from memory. No successor unit is enqueued from this unit - the chain's remainder is unchanged by a pass that read nothing, and a successor would hit the same stalled channel. No zombie check was possible (Events hub unwalked); no zombie chain is seeded, per the standing rule that the event ended 2026-10-30 and no live return sighting exists in this pass.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
