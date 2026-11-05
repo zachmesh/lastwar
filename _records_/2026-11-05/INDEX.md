@@ -1246,3 +1246,17 @@ of 2026-10-28.
   UNKNOWN post-merge, recomputing after main advanced.
   No comments posted, no owner-gated PR. Status: done.
   Full detail in pr-integration/0645-run.md.
+
+- Integrator pass pr-integration-2026-11-05-0700.
+  Batch pass: the checker reported due for the 07:00
+  window, so records PR 309 (records/2026-11-01, 2
+  commits) was merged by merge commit 2cc9f29f; the
+  0700 merge-time action-log line was committed as
+  3bfc8418d to records/2026-11-01 and a fresh records
+  PR 317 opened for it. Records PRs 265, 256, 301 and
+  310 conflicted on _logs_/repo-actions/action-log.jsonl
+  after the merge, were commented and are carried for
+  branch-side reconciliation. No knowledge or code PR
+  open, no owner-gated PR. Local main fast-forwarded
+  c45b59ac to 2cc9f29f via the bundle route. Status: done.
+  Full detail in pr-integration/0700-run.md.
