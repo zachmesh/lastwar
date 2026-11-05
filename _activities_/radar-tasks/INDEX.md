@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T15:32:17Z
+modified: 2026-11-05T19:32:17Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -1542,6 +1542,7 @@ are still open, per the protocol.
 
 - 1.33.0 (2026-11-05): 0704 radar unit folded - thirty-sixth consecutive capture failure, probe classification OFF_SCREEN_WINDOW (high confidence) from _tools_/mac_capture_probe.py 1.0.0 (PR 307); the probe's missing Chrome control-observation step was closed in the same pass (cc-529, full accessibility tree); five 0257-cycle units expired by sync; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; thirty-sixth occurrence commented onto Issue #282 by this run (the thirty-fifth, ticker-0634, has no record on the records branch at this run's cutoff).
 
+- 1.34.0 (2026-11-05): 1104 radar unit folded - forty-third consecutive pass with a Mac device-access blocker, fourth in the worsened zero-response form (Mac mini offline, last_seen 15:36:52Z stale about 3h30m, unchanged since the 1025 pass, four invokes zero responses, no probe run since last_seen unrefreshed); stack-day unit (duel day 4), loss is unexecuted ordinary tasks and missing closing reads, not leaked claims; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; forty-third occurrence commented onto Issue #282 by this run.
 
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
@@ -1952,3 +1953,13 @@ are still open, per the protocol.
   re-produces this regular. The pass stopped after this unit: with
   no observation channel a second unit would fail identically, so
   the remaining inbox units were left queued.
+
+## What the 2026-11-05 1104 unit added - Mac device offline, forty-third consecutive pass, zero-response form
+
+- Unit radar-2026-11-05-1003 by ticker-1104, about 11:04 to 11:15 local, status failed. Evidence in `_records_/2026-11-05/radar-tasks/1104-queue-run.md`. No radar screen was ever read and no task was executed or claimed. This was a stack-posture unit (duel day 4, window "duel day 4 - radar stack"): on a stack day nothing is claimed in any case, so the loss is the unexecuted ordinary tasks and the missing closing reads, not leaked claims.
+- Attempts, four, zero responses: connection.health on the Mac mini node_offline (device offline, no wake-up path) twice; connection.health and connection.repair (native) on the recovery device both node_invoke_timeout after 25s. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 3 hours 30 minutes at pass time, unchanged since the ticker-1025 pass. This meets the standing at-least-3-attempts retry rule.
+- Recurrence, not a new failure class: the forty-third consecutive ticker pass with a Mac device-access blocker, fourth in the worsened zero-response form after ticker-0904 (fortieth), ticker-0941 (forty-first) and ticker-1025 (forty-second). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the forty-third occurrence onto #282. No probe was run this pass: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Scope note: the Correction 2026-11-05 unblock (owner Dock-icon click, window back on the active Space) holds for the window-stream (capture-failure) form only; it does not address a stalled invoke channel or an offline device. For the zero-response form the record inference is a Mac-side agent gateway restart before re-probing - unverified.
+- Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
+- Sync and expiry: the pass reaped 0, expired 5 (events, passes, secrets, treasures, trucks 0657), due 21, produced nothing new, 21 regulars already queued; inbox held 73 units at this pass. No zombie seeding: the chain closed with unit 066 on 2026-10-30 and the activity metadata forbids seeding a fresh chain until a Zombie Invasion tab is seen live again.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this unit: with no observation channel a second unit would fail identically, so the remaining inbox units were left queued.
