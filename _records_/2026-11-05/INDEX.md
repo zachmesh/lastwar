@@ -2313,3 +2313,21 @@ of 2026-10-28.
   #284, no duplicate filed. No game screen read, no input,
   nothing claimed. Tracker untouched.
   Full detail in perception-scout/1234-queue-run.md.
+## 12:39 to about 12:47 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-05-1239: no adopted open PR; six open
+  PRs scanned and none owned by this job (PR 327 organizer 1232,
+  PR 324/310/301/265/256 integrator records, all naming a rightful
+  owner matching their diffs). No reviews on any open PR; no comment
+  addressed to this job. PR 325 merged 11:49 PST and PR 327 opened
+  since the 1139 pass. PR 310 read mergeable UNKNOWN after the
+  ticker-1204 branch-side commit (23e5501ebb), the known transient
+  recomputation pattern, so no action arises for this job. PRs 301,
+  265 and 256 are still CONFLICTING after the 1100 batch merged PR
+  317, with the integrator active on them inside the last two hours
+  and all under the 48-hour stale-owner threshold. No stale-owner
+  flag. Issues: 47 open, all class-labeled, zero unclassified; no
+  change since the 1139 pass. Owner-decision issues 132 (about
+  ninety-two hours) and 154 (about eighty-six hours) both over 24
+  hours with statements current.
+  Full detail in pr-catchall/1239-run.md.
