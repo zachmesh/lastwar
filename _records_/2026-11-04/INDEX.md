@@ -2302,3 +2302,15 @@ Full detail in pr-integration/1430-run.md.
 
 - Integrator pass pr-integration-2026-11-04-1600, done (non-batch): no knowledge or code PR open; four records PRs carried with a decision (286 clean awaiting the 19:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts noted since the 0415 pass); checker reported outside every batch window, next batch 19:00; no comments, no escalations, no new records PR opened.
   Full detail in pr-integration/1600-run.md.
+
+- Arms Race unit arms-race-2026-11-04-1403, failed, ticker-1604:
+  Mac screen capture failed on all four attempts
+  (audio/video capture failure) in computer session cc-468
+  (activate twice, observe compact and image). LastWar running
+  fullscreen, Chrome frontmost, Mac mini online. No game screen
+  was read and no input was dispatched, so no phase, score or
+  chest state was read and nothing was claimed; the tracker
+  stays untouched and the next tick re-produces the unit.
+  Eighth consecutive ticker pass to fail this way; GitHub
+  Issue #284 (tooling) commented, no duplicate filed. Full
+  detail in arms-race/1604-queue-run.md.
