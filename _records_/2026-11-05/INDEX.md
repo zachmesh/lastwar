@@ -2216,3 +2216,33 @@ of 2026-10-28.
   file, conflict notes posted in the 1100 pass, heads
   unchanged). No owner-gated PR. Status: no-op.
   Full detail in pr-integration/1200-run.md.
+
+## 12:04 to about 12:15 - Ticker pass
+
+- Own PRs first: open records PRs checked on the VPS - PR 310
+  (records/2026-11-05, ticker-0304) carries no unanswered question
+  addressed to this job; the integrator's 1145 non-batch
+  verification found it MERGEABLE/CLEAN against main 48c83df8
+  and it awaits the 15:00 batch. Nothing to address.
+- Donations unit donations-2026-11-05-1003, failed,
+  ticker-1204: no game screen was ever read and no game input
+  was dispatched. Five device invokes, zero responses:
+  computer.session start on the Mac mini twice, connection.health
+  and connection.repair (web) on the Mac mini all node_offline
+  (device offline, no wake-up path), connection.health on the
+  recovery device node_invoke_timeout after 25s. device.list
+  reports the Mac mini offline with last_seen 15:36:52Z, stale
+  about 4 hours 30 minutes, unchanged since the ticker-1025
+  pass. This is the forty-fifth consecutive ticker pass with
+  this blocker (Issue 284, open, tooling), sixth in the
+  worsened zero-response form. Re-probing is owed only after
+  last_seen refreshes. Commented on Issue 284. No Donation
+  Count read, no donation made. Tracker untouched. The pass
+  stopped after this one unit. Full detail in
+  alliance-donations/1204-queue-run.md.
+- No zombie seeding: the Zombie Invasion event ended
+  2026-10-30 about 19:00 and the chain is closed; no Zombie
+  Invasion tab is to be expected until it is seen live again.
+  Sync: reaped 0, expired 0, due 21, produced nothing new,
+  all 21 regulars already queued. Inbox 76, claimed 0,
+  done 924.
