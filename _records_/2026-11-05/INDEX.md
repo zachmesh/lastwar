@@ -1808,3 +1808,16 @@ of 2026-10-28.
   fast-forwarded to 538072b06a by bundle sync-back.
   Status: done.
   Full detail in pr-integration/0952-run.md.
+
+## 10:00 to about 10:03 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1003.
+  Non-batch pass: the checker reported not due, next
+  batch point 11:00 (about 58 minutes away). No
+  knowledge or code PR open. Five records PRs (317,
+  310, 301, 265, 256) await the 11:00 batch. PR 310
+  mergeability verified clean by a scratch-worktree
+  test merge against main 538072b06a (git merge-tree
+  exit 0); verification comment posted on the PR.
+  No owner-gated PR. No merge. Status: no-op.
+  Full detail in pr-integration/1003-run.md.
