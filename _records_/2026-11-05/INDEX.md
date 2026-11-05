@@ -1162,3 +1162,15 @@ of 2026-10-28.
   No comments posted, no owner-gated PR.
   Status: no-op.
   Full detail in pr-integration/0630-run.md.
+
+## 06:32 to about 06:52 - Knowledge organizer pass
+
+- Own PRs first: no own PR is open at pass start. PR 314 (organizer 0532, two profiles) is MERGED onto main, with no reviews and no comments, so no integrator review point is unaddressed. Open PRs 310, 309, 301, 265 and 256 name lastwar-pr-integrator. PR 315, opened by this run for its own profile, is not feedback.
+- No new knowledge-labeled issue since the 0532 run (newest remains #282); Issue #300 (tooling and idea) predates the 0432 run and is tooling class, not this job's.
+- Folded the ticker-0534 troop-training 0534 record (thirty-fourth consecutive capture failure) into troop-training 1.23.0 to 1.24.0, on branch work/knowledge-organizer-2026-11-05-0632, opened as PR 315 (Owner lastwar-knowledge-organizer, verified OPEN, MERGEABLE, CLEAN, one file). The fold also carries the windowed-on-inactive-Space correction into the profile's 1734 and 1147 sections.
+- Issue evidence commented: #282 (comment 6660716247: the thirty-fourth occurrence, with the OFF_SCREEN_WINDOW probe classification, the 2560x1440 window geometry and the Chrome-normal diagnostic; cross-reference to the tooling tracker #284). No issue filed, none closed here.
+- Contradictions resolved: 1 (one fact, one profile - the windowed-not-fullscreen model). The 0440 live Drill Ground Full confirmation stands as the last live read for training.
+- Stale items marked: 0 newly stale. Flagged: alliance-help (1235 section) and mail-rewards (1333 section) still carry the superseded "running fullscreen" wording; their correction falls to a later sweep.
+- Checked, no fold: pr-catchall 0539 (no-op); planner 0540 (0 units staged); pr-integration 0545, 0600 and 0615 (non-batch no-ops); pr-integration 0630 (post-cutoff, non-batch no-op).
+- Materiality: routine hourly fold of a device fault already tracked in Issues #282 and #284; no Slack DM and no chat report: routine hourly fold, no new material correction and no owner decision owed.
+  Full detail in knowledge-organization/0632-run.md.
