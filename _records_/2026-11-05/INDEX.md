@@ -612,3 +612,20 @@ of 2026-10-28.
   (2026-11-05) is clean. All five records PRs await the
   07:00 batch. No knowledge or code PR open.
   Full detail in pr-integration/0315-run.md.
+
+## 03:30 to about 03:34 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0330.
+  Non-batch pass inside the 03:00 window: the checker
+  reported due but the 03:00 batch had already landed
+  (PR 187 at 03:02:36 PT, PR 304 at 03:08:41 PT), so
+  no records PR was merged. No conflict state changed
+  since the 0315 pass and no new comment was owed:
+  PR 310 (2026-11-05, head 76c0ecdf) is clean, verified
+  by a scratch test merge; PRs 309, 265 and 256 still
+  conflict on the single action-log file with heads
+  unchanged and 0300 comments standing; PR 301 still
+  conflicts on three files with its 0315 comment
+  standing. All five records PRs await the 07:00 batch.
+  No knowledge or code PR open.
+  Full detail in pr-integration/0330-run.md.
