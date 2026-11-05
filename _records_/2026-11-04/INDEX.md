@@ -2378,3 +2378,14 @@ Full detail in pr-integration/1430-run.md.
 
 - Integrator pass pr-integration-2026-11-04-1700, no-op (non-batch): no knowledge or code PR open; records PR 286 (2026-11-04, head a4512775, 24 commits) clean, awaiting the 19:00 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped. Checker _tools_/records_batch.py reported not due (next batch 19:00). No comments, no escalations, no new records PR opened.
   Full detail in pr-integration/1700-run.md.
+
+## 17:04 to about 17:08 - Ticker pass
+
+- Survivors unit survivors-2026-11-04-1403, failed, ticker-1704:
+  Mac screen capture failed on all five attempts
+  (audio/video capture failure) across two computer sessions
+  (cc-471, cc-472), LastWar running fullscreen 1920x1080,
+  Google Chrome frontmost. No screen read, no input dispatched,
+  no survivor recruited, tracker untouched. Tenth consecutive
+  ticker pass to fail this way; GitHub Issue 284 commented, no
+  duplicate filed. Full detail in survivor-intake/1707-queue-run.md.
