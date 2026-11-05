@@ -1171,7 +1171,7 @@ def missing_stats_keys(status, stats):
     return missing
 
 
-def points_duplicates_achieved(stats):
+def points_duplicates_achieved(stats, regular=None):
     """True when stats.points copies stats.achieved (issue #197).
 
     points is score gained in this unit, not a running total
@@ -1184,8 +1184,22 @@ def points_duplicates_achieved(stats):
     is not a copy. This is a warning, never a block: a scoring
     unit that genuinely gained its whole achieved total in one
     unit still closes, flagged for the retro to read.
+
+    Radar is exempt (issue #296): a radar unit's achieved is a
+    claim count, and its radar-screen points rise exactly one
+    per claim, so points equal to achieved is the mechanism,
+    not a copy - radar-2026-11-04-0203 read 194 to 205 for 11
+    claims, radar-2026-11-04-1003 read 206 to 219 for 13
+    claims, and radar-2026-11-02-0203 read 101 to 103 for 2
+    claims, each with a before/after read in its execution
+    record. The exemption covers only this equality
+    heuristic; score-total regulars (arms-race,
+    star-ceremony) stay flagged, and a radar unit's points
+    still count under its own regular in the retro.
     """
     if not isinstance(stats, dict):
+        return False
+    if regular == "radar":
         return False
     points = _stat_number(stats.get("points"))
     achieved = _stat_number(stats.get("achieved"))
@@ -1211,7 +1225,7 @@ def cmd_complete(args):
             key, value = pair.split("=", 1)
             stats[key.strip()] = _scalar(value)
     missing = missing_stats_keys(args.status, stats)
-    points_dup = points_duplicates_achieved(stats)
+    points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -1488,7 +1502,7 @@ def gather_stats(root):
                 dup_stats = result.get("stats")
                 if points_duplicates_achieved(
                         dup_stats if isinstance(dup_stats, dict)
-                        else {}):
+                        else {}, regular):
                     report["stats_points_dup"] += 1
                     report["stats_points_dup_units"].append(
                         f.get("unit"))
