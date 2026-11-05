@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-05T10:38:30Z
+modified: 2026-11-05T11:35:38Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -1698,3 +1698,13 @@ observe-only, nothing claimed). Evidence in
 - Superseded in this profile: the 0104 section's "the fullscreen game window on its inactive Space is simply not capturable" wording - the window is windowed, not fullscreen.
 - Follow-up corrected: the standing "screen recording permission or capture pipeline restart" unblock is replaced - the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. Background-sent Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, Cmd+Tab is blocked by the tool, and list_windows needs the exact app name "LastWar" ("Last War" returns 0 windows). No control route available to the background channel moves the window across Spaces without a fresh observation of the window itself.
 - This correction does not change the scout state: the 2026-11-04 0906 and 0911 base-group reads (account power 150,028,269, HUD food 415.2M, iron 745.8M, coin 15.2M) stand as the last live reads. The twenty-sixth and twenty-seventh occurrences are commented onto Issue #282 by this run; Issue #284 already tracks the blocker.
+
+## What the 2026-11-05 0234 unit added - screen-capture failure, twenty-eighth consecutive pass, nothing read
+
+- Unit scout-scout-2026-11-02-001 by ticker-0234, about 02:34 to 02:38 local, status failed. Evidence in `_records_/2026-11-05/perception-scout/0234-queue-run.md`. Observe-only throughout; nothing claimed, walked, fought, dispatched, donated, boarded, dug, joined or bought.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: session cc-509 `computer.control` activate, `computer.observe` compact, `computer.observe` full, `screen.snap`; fresh session cc-510 `computer.control` activate, `computer.observe` image - six attempts across two computer sessions, all with "Failed to start stream due to audio/video capture failure". `activate` reports `window_on_screen: false` and `brought_to_front: false`. LastWar (bundle com.lastwar.ios, pid 59735) is running, one window 1920x1080 at (0,0), window_id 160366; Google Chrome is frontmost. Device connection health at the same time: both native and web transports connected and healthy (native lastResponseAgeSeconds 0, web 9) - this is not a connectivity problem.
+- Narrowing, first-hand this pass: session cc-511 observes the Chrome window normally - `computer.control` activate on Google Chrome returned a full accessibility tree and text. The capture pipeline itself works; the fault is specific to the Last War window's capture stream, consistent with the windowed-on-inactive-Space diagnosis in the Correction 2026-11-05 section above. The full and image views fail at stream start exactly like compact, so the failure is not view-dependent - re-verified here, not inherited from the 0034 pass.
+- Stale chain head, queue behaviour: this unit belongs to chain scout-2026-11-02, three days stale - its observation would have landed in the 2026-11-02 day file, whose reset day ended 2026-11-03 19:00. The stale head was picked by the queue's earliest-expiry order; the capture failure, not the staleness, is what stopped the unit. A future live unit on this chain should expect the head to be stale and re-ground from the current day, not from the chain's reset day.
+- Recurrence, not a new failure class: this is the twenty-eighth consecutive ticker pass to fail on this exact blocker (ticker-0204 at 02:04 was the twenty-seventh). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-eighth and twenty-ninth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about any scout surface. It must NOT be read as "nothing to do" or as a red-dot state - the 2026-11-04 0906 and 0911 base-group reads (account power 150,028,269, HUD food 415.2M, iron 745.8M, coin 15.2M) rest on live reads and stand as the last live reads; this unit rests on no read at all. The carried remainder (station panel and loot box re-check in chain scout-mid-2026-11-02) stays carried for a fresh re-check, not closed from memory.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
