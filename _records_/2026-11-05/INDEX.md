@@ -1001,3 +1001,14 @@ of 2026-10-28.
   against main 65e12ecf. No owner-gated PR. Status:
   no-op.
   Full detail in pr-integration/0515-run.md.
+
+- Integrator pass pr-integration-2026-11-05-0530.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged. No
+  knowledge or code PR open. All five records PRs
+  await the 07:00 batch and remain MERGEABLE/CLEAN,
+  unchanged since the 0515 pass verification (heads
+  310 bbb3701f, 309 22274ed9, 301 ace4f02b, 265
+  e9effc34, 256 f960817d). No comments posted, no
+  owner-gated PR. Status: no-op.
+  Full detail in pr-integration/0530-run.md.
