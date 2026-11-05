@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T08:35:29Z
+modified: 2026-11-05T10:38:30Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -1536,6 +1536,8 @@ are still open, per the protocol.
 
 - 1.24.0 (2026-11-03): 2317 release-day unit folded: story pin completed through the verified flow (revealed rewards survivor x1, paw print 200, black rock 207.3K, dialog to the treasure-map banner, pin gone at close); March true centre (500,751) in this window geometry, estimates above the active area all dead, matching the zombie-invasion March lesson (500,755); ground contextual buttons, never estimate them (hammer 490,600, magnifier 499,599, estimates dead); radar stamina read did NOT move with the story march (shown -5, read stayed 120) - unresolved discrepancy, dispatch proven by the pin-card reward reveal, not by stamina; 11 rewards claimed, points 183 to 194, stored 0 of 40, stamina 91, full restore 11-5 03:31:43; NO TIPS dialog on either Claim All tap, further Issue #235 evidence commented by this run, delta test still owed; third consecutive partial carrying the same pin blocker, R7 next-unit order is the red-dotted blue skull pin first, then the axe pins, every pin point re-grounded on the unit's own screenshot.
 
+- 1.31.0 (2026-11-05): Correction from the 0134 survivors and 0204 gifts records - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (View menu lists Enter Full Screen, read on-screen in session cc-505 and re-confirmed by a repeated probe in cc-508); the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; the "running fullscreen" wording in the 1534, 1904 and 2334 sections is superseded; the permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); background Space keys do not switch Spaces, set_window_frame is stale-observation-gated, Cmd+Tab is blocked, list_windows needs the exact app name "LastWar"; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.25.0 through 1.30.0 carry the 2317, 0720, 1005, 1534, 1904 and 2334 sections without changelog lines; the numbering is preserved, not rewritten.)
+
 
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
@@ -1868,3 +1870,10 @@ are still open, per the protocol.
 - Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all.
 - Remaining work, carried forward: the 1904 section's stack work is still owed (enter and verify the radar screen, run Quick Execute batches until no offer remains, record stored count, pending reward count, stamina, restore line and the pin inventory untapped). The 1005 unit's Doom Elite pin expired about 11:46 local and is gone; the restore line at the 1005 close pointed to 12 tasks restoring about 15:42 local, so the next live unit should expect a fresh stored batch. Both expectations are superseded by the next live read.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## Correction 2026-11-05 - the game window is windowed on an inactive Space, not in native fullscreen
+
+- Source: the 0134 survivors record (`_records_/2026-11-05/survivor-intake/0134-queue-run.md`, ticker-0134, twenty-sixth consecutive capture failure), re-confirmed by the 0204 gifts record (`_records_/2026-11-05/alliance-gifts/0204-queue-run.md`, ticker-0204, twenty-seventh). The View menu lists "Enter Full Screen" (read from the menu-action error listing in session cc-505, repeated probe in cc-508 with the menu unchanged), so the app is NOT in native fullscreen: it is a windowed 1920x1080 window on an inactive Space, and the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission (Chrome windows observe normally in the same sessions).
+- Superseded in this profile: the "running fullscreen" wording in the 1534, 1904 and 2334 sections above.
+- Follow-up corrected: the standing "screen recording permission or capture pipeline restart" unblock is replaced - the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. Background-sent Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, Cmd+Tab is blocked by the tool, and list_windows needs the exact app name "LastWar" ("Last War" returns 0 windows). No control route available to the background channel moves the window across Spaces without a fresh observation of the window itself.
+- This correction does not change the radar state: the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read. The twenty-sixth and twenty-seventh occurrences are commented onto Issue #282 by this run; Issue #284 already tracks the blocker.
