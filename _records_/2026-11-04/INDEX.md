@@ -2707,3 +2707,5 @@ Full detail in pr-integration/1430-run.md.
   (issue 147). One new issue filed (296, executor copied
   points); no issue closed. Full detail in
   retro-review/2043-run.md and _records_/retro/2026-11-04.md.
+- Integrator pass pr-integration-2026-11-04-2045, done (non-batch, outside every batch window): checker _tools_/records_batch.py reported not due, next batch point 2300 America/Los_Angeles; knowledge PR 295 merged by squash (merge commit 2838df46, arms-race INDEX 1.35.0 -> 1.36.0, 1934 capture-failure recurrence, Issues 282/284) with local main synced back to 2838df46; PR 293 (2026-11-04, head 5e10e4a, clean) carried awaiting the 2300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments); records/2026-10-31 contained in main, no new records PR opened; no escalations.
+  Full detail in pr-integration/2045-run.md.
