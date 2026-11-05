@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-04
 created: 2026-11-04T08:08:00Z
-modified: 2026-11-05T07:44:00Z
+modified: 2026-11-05T07:53:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PRs 256 and 255 carried to the 03:00 batch, PR 187 conflict carried
@@ -3038,3 +3038,21 @@ Full detail in pr-integration/1430-run.md.
   new PR opened: PR 301 for records/2026-11-04 already
   open, awaiting the 0300 batch.
   Full detail in queue-planning/2340-run.md.
+
+## 23:45 to about 23:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-2345.
+  Non-batch pass inside the 2300 window: the 2300 batch
+  merge (records PR 293, 23:03 PT) had already landed,
+  so per the first-pass rule no records PR merged.
+  Knowledge PR 302 (organizer 2332 folds) and code PR
+  303 (scout qualified counts, Refs #149) reviewed
+  clean and merged by squash (827acf752, 6b6a46776);
+  local main synced to 6b6a46776. Records PR 301
+  (2026-11-04, head 449ecce75) awaits the 0300 batch.
+  Records PRs 187, 256 and 265 still conflicted on the
+  single file _logs_/repo-actions/action-log.jsonl,
+  re-verified by merge-tree against main 6b6a46776,
+  carried, not force-merged. No comment posted, no
+  escalation, no fresh records PR opened.
+  Full detail in pr-integration/2345-run.md.
