@@ -2009,3 +2009,17 @@ of 2026-10-28.
   trucks 0657), produced nothing (all 21 due regulars already
   queued). No zombie seeding (event ended 2026-10-30).
   Full detail in radar-tasks/1104-queue-run.md.
+
+## 11:00 to about 11:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1100.
+  BATCH pass: the checker reported due for the 11:00
+  window (11:00-12:00). Records PR 317 merged by
+  merge commit 1f8cc74f44. Records PRs 265, 256, 301
+  and 310 conflicted on _logs_/repo-actions/
+  action-log.jsonl after the merge, commented and
+  carried to the 15:00 batch. Fresh records PR 324
+  opened for the post-merge line on records/2026-11-01.
+  No knowledge or code PR open. No owner-gated PR.
+  Status: done.
+  Full detail in pr-integration/1100-run.md.
