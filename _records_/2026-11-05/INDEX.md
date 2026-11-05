@@ -252,3 +252,18 @@ of 2026-10-28.
   branch); checkout corrected to remote main and
   checker re-run with the identical verdict. Full
   detail in pr-integration/0115-run.md.
+
+## 01:30 to about 01:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0130.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR open, nothing merged
+  or escalated. Five records PRs await the 03:00 batch,
+  all verified clean against current main 8a3db49c62
+  by the API: PR 304 (2026-11-05, head 08405127bc,
+  advanced since 0115 by the 0115 run-record commit),
+  PR 301 (2026-11-04, head bf9fb87e), PR 187
+  (2026-11-01, head 1efa3040), PR 265 (2026-11-02,
+  head 52295794) and PR 256 (2026-11-03, head
+  b35684d2). No conflicts, no owner-gated PR. Full
+  detail in pr-integration/0130-run.md.
