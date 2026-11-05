@@ -2798,3 +2798,22 @@ Full detail in pr-integration/1430-run.md.
 
 - Tool-developer pass tool-development-2026-11-04-2132, radar points-duplicates exemption for issue 296: the 2 new copied-points units on 2026-11-04 are radar units whose points-equal-achieved is structural (achieved is a claim count, radar-screen points rise one per claim, each with a before/after read: 194 to 205 for 11 claims, 206 to 219 for 13 claims), so the PR 203 detector false-positives them. PR 298 (branch work/radar-points-dup-exempt-296, commit 1933f0cb) exempts radar from points_duplicates_achieved in queue.py and retro_report.py; genuine score-total copies (arms-race 40500, star-ceremony 791250) stay flagged. Validation on isolated scratch pools only: queue stats patched dup 2 vs control 5, retro dup-excluded 2 with points_total 40515 vs control 5 and 40489, re-run byte-identical. Issue 296 commented; closure belongs to the retro. Old radar-screen totals written into points (2924/2948/2989, no achieved key) remain unflagged by design and are named on the PR as a separate semantics decision.
   Full detail in tool-development/2132-run.md.
+
+## 21:45 to about 21:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-2145.
+  Non-batch pass per the checker (not due, next batch
+  point 23:00 America/Los_Angeles). Merged PR 298
+  (fix tools, radar exempt from points-duplicates-
+  achieved, Refs #296) and PR 297 (organizer 2132,
+  2034 donations and 2104 harvest capture-failure
+  recurrences, Issues 282 and 284), both squash with
+  branch deleted; issue #296 commented with the PR
+  298 link. Records PR 293 (clean, head e82880b8)
+  awaits the 2300 batch. Records PRs 187, 256 and
+  265 carried on unchanged single-file action-log
+  conflicts, re-verified by merge-tree against true
+  main 3e3872485e. Local main fast-forwarded to
+  3e3872485e by bundle sync-back. No escalation, no
+  fresh records PR.
+  Full detail in pr-integration/2145-run.md.
