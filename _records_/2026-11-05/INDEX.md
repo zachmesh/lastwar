@@ -1319,6 +1319,38 @@ of 2026-10-28.
 ## 07:32 to about 07:39 - Tool development pass
 
 - Tool-developer pass tool-development-2026-11-05-0732, no-op: no own tooling PR open and no unaddressed integrator feedback (PRs 312, 307 and 303 stay merged with no post-merge feedback); every open tooling issue re-verified as implemented-and-awaiting-retro-closure (#296 via PR 298, #278 via PR 30, #130 via PR 139, #250 via PR 252, #235 via PR 237, #251 via PR 262, #149 via PR 303, #213 via PR 214, #199 via PR 210, #147 via PR 312, #136 via PR 137, #133 via PR 146, #129 via PR 163, #126 via PR 135, #125 via PR 42, #123 via PR 172), blocked on an owner decision (#300, still 0 comments), owned by another class (#316, _conventions_ doc correction, belongs to lastwar-knowledge-organizer), or awaiting an owner action (#284 capture outage continues, ticker-0704 thirty-sixth consecutive pass, probe OFF_SCREEN_WINDOW, recovery still the owner Dock-icon click or mac_lastwar_front.sh); standing tool queue (c) re-verified on true main 2cc9f29fe (retro_report.py 1.4.0, queue.py stats_missing, scout_diff sections present); frozen backlog class-tooling entries all implemented; no PR, no issue comment, no Slack DM, per the no-op rule. Full detail in tool-development/0732-run.md.
+## 07:34 to about 07:42 - Ticker pass
+
+- Own PRs first: open records PRs checked on the VPS - PR 310
+  (records/2026-11-05, ticker-0304) has no unanswered question
+  addressed to this job; the integrator's conflict note was
+  already reconciled branch-side by the ticker-0704 pass (main
+  2cc9f29f merged, action-log union, commit 5bacb79ca), and the
+  branch head on the remote is bdb75383d (pr-catchall 0739
+  run). Nothing to address.
+- Arms Race unit arms-race-2026-11-05-0603, failed,
+  ticker-0734: no game screen was ever read and no game input
+  was dispatched. The Mac screen capture stream failed on all
+  five attempts across five computer sessions (cc-530 to
+  cc-533 on LastWar, plus one unselected observe in cc-534)
+  with "Failed to start stream due to audio/video capture
+  failure". A Chrome-window observation in cc-534 succeeded
+  with a full accessibility tree, so the channel works for
+  on-screen windows and the fault is specific to the LastWar
+  window stream. The fail-fast probe
+  (_tools_/mac_capture_probe.py 1.0.0) classifies
+  OFF_SCREEN_WINDOW (high confidence), stop_pass yes, exit
+  10. This is the thirty-seventh consecutive ticker pass with
+  this blocker (Issue 284, open, tooling). No phase read, no
+  score read, no chest claimed. Tracker untouched. The pass
+  stopped after this one unit. Full detail in
+  arms-race/0734-queue-run.md.
+- No zombie seeding: the Zombie Invasion event ended
+  2026-10-30 about 19:00 and the chain is closed; no Zombie
+  Invasion tab is to be expected until it is seen live again.
+  Sync: reaped 0, expired 0, due 21, produced nothing new,
+  all 21 regulars already queued. Inbox 69, claimed 0,
+  done 907.
 
 ## 07:39 to about 07:42 - PR catch-all pass
 
