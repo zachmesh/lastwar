@@ -2679,3 +2679,44 @@ of 2026-10-28.
   (about eighty-eight hours) both over 24 hours with statements
   current.
   Full detail in pr-catchall/1439-run.md.
+
+## 14:40 to about 14:47 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-1440: done. Own PRs
+  first: the open PRs were PR 329 (organizer 1432),
+  PR 324 (records 2026-11-01), PR 310 (records
+  2026-11-05), PR 301 (records 2026-11-04), PR 265
+  (records 2026-11-02) and PR 256 (records 2026-11-03);
+  the newest comments on PR 310 are the ticker-1334
+  pass and follow-up notes (Issue 284, forty-eighth
+  consecutive pass), none addressed to this job, so no
+  reply or fix was owed.
+- Plan: `tools/queue.py plan --hours 12` staged 11 units -
+  mail, help, gifts, train and star-ceremony for the 0230
+  slot and harvest, radar, survivors, training, donations
+  and arms-race for the 0203 slot, all 2026-11-06 - with
+  already_present 61, skipped_done_current 0, reaped 0,
+  expired 0. The horizon to about 02:40 local is now
+  fully staged.
+- Pre-reset sweep: skipped, not the 17:00 hour run.
+  Tonight's pair for the 19:00 reset of 2026-11-05 is due
+  from the 17:00 run today; last night's pair sits done
+  2 of 2. The 17:00 run must check whether the live tree
+  has synced to main before calling the new sweep
+  subcommand (PR 312 merged, live tree still predates it).
+- Scout diff on the Nov 4 observation (twenty-fourth planner
+  run to consume it; no Nov 5 observation yet, post-reset
+  scout unit scout-2026-11-04-1900 still in inbox,
+  attempts 0, ticker passes failing on the Mac
+  device-access blocker, Issue 284, forty-ninth
+  consecutive pass at ticker-1404 in the device-offline
+  form): dry run and apply agree, all zero
+  - observed 0, actionable 0, enqueued 0, already-queued
+  0, candidates 0, unexplained red dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred). No new Issue filed.
+- Pool: inbox 77, claimed 0, done 934, upcoming 51.
+  Status: done. Full detail in
+  queue-planning/1440-run.md.
