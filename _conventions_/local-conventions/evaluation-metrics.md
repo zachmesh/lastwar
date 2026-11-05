@@ -1,6 +1,6 @@
 ---
 title: Evaluation Metrics
-version: 1.1.1
+version: 1.1.2
 status: active
 created: 2026-10-31
 description: How the play system measures itself - execution efficiency per task type, perception completeness and discovery generalisation, retro effectiveness, and the measured impact of the tool developer and the knowledge organiser
@@ -55,13 +55,19 @@ appendix `_records_/retro/<date>-data.json` - the per-regular
 `rolling` and `by_day` summaries under `regulars.<regular>`.
 
 - **Duration median and p90** - median and 90th percentile of
-  `duration_seconds` over the window's executions. Median is
-  computed today (`duration_median_seconds`); p90 is not yet
-  emitted and joins with the tool extension filed below.
-- **Attempts** - mean and maximum of `result.attempts`, and the
-  share of executions that needed more than one attempt. The
-  field exists in every result; the aggregation does not read
-  it yet - same tool extension.
+  `duration_seconds` over the window's executions. Both are
+  emitted today (`duration_median_seconds` and
+  `duration_p90_seconds`, nearest-rank) by
+  `_tools_/retro_report.py` 1.4.0 (PR #30, merged 2026-11-01).
+- **Attempts** - mean and maximum of attempts per execution, and
+  the share of executions that needed more than one attempt
+  (`attempts_mean`, `attempts_max`, share over 1), emitted today
+  by `_tools_/retro_report.py` 1.4.0 (PR #30, merged 2026-11-01).
+  Attempts are read from the unit's top-level `attempts` field,
+  which queue.py increments on claim; `result.attempts` is a
+  fallback only - the live pool carries attempts only at top
+  level, never under result. Units without a result contribute
+  no attempts figure, never an invented zero.
 - **Done rate** - done over executions, from `statuses`.
 - **Target attainment** - `attainment_summed` (summed achieved
   over summed target) and `attainment_mean_ratio`, over the
@@ -424,6 +430,13 @@ terms:
 > against hand-computed figures before it writes the live
 > series.
 
+Landed: PR #30 (merge fe87b043e, 2026-11-01) implemented this
+extension as `_tools_/retro_report.py` 1.4.0 - the top-level
+`system_metrics` object, the duration p90 and the attempts
+distribution in family A, and the remaining data gaps by name.
+The "not yet emitted" wording in family A above is superseded
+accordingly.
+
 The queue tool's stats validation (the standing tooling backlog
 item the loop review calls item b) stays a separate entry -
 several metrics above read fields that only its enforcement
@@ -432,6 +445,14 @@ than merging the two jobs into one unmeasurable lump.
 
 ## Changelog
 
+- 1.1.2, 2026-11-05 - family A corrected: duration p90 and the
+  attempts distribution are emitted today by
+  `_tools_/retro_report.py` 1.4.0 (PR #30), not "not yet emitted"
+  as the 1.0.0 text said; the tool-route extension is marked
+  landed (same PR). Attempts read from the unit's top-level
+  `attempts` field, `result.attempts` a fallback only (Issue
+  #316, filed by the tool-development 0647 run, assigned to
+  lastwar-knowledge-organizer by the tool-development 0732 run).
 - 1.1.0, 2026-11-01 - families D to G re-sourced onto the ops
   execution records of the
   [ops execution records](ops-execution-records.md) standard:
