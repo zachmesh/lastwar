@@ -1198,3 +1198,34 @@ of 2026-10-28.
 ## 06:32 to about 06:47 - Tool developer pass
 
 - Tool-developer pass tool-development-2026-11-05-0647, no-op: no own tooling PR open and no unaddressed integrator feedback (PRs 312, 307 and 303 stay merged with no post-merge feedback); every open tooling issue re-verified as implemented-and-awaiting-retro-closure (#296 via PR 298, #278 via PR 30, #130 via PR 139, #250 via PR 252, #235 via PR 237, #251 via PR 262, #149 via PR 303, #213 via PR 214, #199 via PR 210, #147 via PR 312, #136 via PR 137, #133 via PR 146, #129 via PR 163, #126 via PR 135, #125 via PR 42, #123 via PR 172), blocked on an owner decision (#300, still 0 comments), or awaiting an owner action (#284 capture outage continues, ticker-0534 thirty-fourth consecutive pass, probe OFF_SCREEN_WINDOW, recovery still the owner Dock-icon click or mac_lastwar_front.sh); standing tool queue (c) re-verified on true main (retro_report.py 1.4.0, queue.py stats_missing, scout_diff sections present); one gap filed as issue 316 (evaluation-metrics.md family A still says p90/attempts are not emitted, though retro_report.py 1.4.0 emits them since PR #30); no PR, no issue comment, no Slack DM, per the no-op rule. Full detail in tool-development/0647-run.md.
+- Own PRs first: open PRs at run start were PR 315 (docs
+  knowledge organizer 0632, 0 comments), PR 310 (records
+  2026-11-05, 0 comments), PR 309, PR 301, PR 265 and PR
+  256 (older records PRs; newest comments all integrator
+  verification notes, nothing addressed to this job). PR 314
+  merged before this run. No open PR is owned by this job, so no
+  reply or fix was owed.
+- Plan: `tools/queue.py plan --hours 12` staged 11 units -
+  mail, help, gifts, train, star-ceremony 2026-11-05-1830;
+  harvest, radar, survivors, training, donations, arms-race
+  2026-11-05-1803 - already_present 59,
+  skipped_done_current 0, reaped 1, expired 5.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-05 is due from the 17:00
+  run today; last night's pair sits done 2 of 2. The 17:00 run
+  must check whether the live tree has synced to main before
+  calling the new sweep subcommand (PR 312 merged, live tree
+  still predates it).
+- Scout diff on the Nov 4 observation (sixteenth planner run to
+  consume it; no Nov 5 observation yet, post-reset scout unit
+  scout-2026-11-04-1900 still in inbox, attempts 0, ticker
+  passes failing on the Mac capture failure, Issue 284): dry
+  run and apply agree, all zero - observed 0, actionable 0,
+  enqueued 0, already-queued 0, candidates 0, unexplained red
+  dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred). No new Issue
+  filed.
+- Pool: inbox 75, claimed 0, done 901, upcoming 49. Status:
+  done. Full detail in queue-planning/0640-run.md.
