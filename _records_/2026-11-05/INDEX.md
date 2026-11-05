@@ -528,3 +528,22 @@ of 2026-10-28.
   filed.
 - Pool: inbox 75, claimed 0, done 885, upcoming 49. Status:
   done. Full detail in queue-planning/0240-run.md.
+
+## 02:45 to about 02:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0245.
+  Non-batch pass per the checker (not due, next batch
+  0300): merged knowledge and code PR 307 (Mac
+  capture-failure probe classifier plus LastWar front
+  recovery script, Refs 284, squash c8e7c724dd) and
+  PR 308 (organizer 0232 windowed-not-fullscreen
+  correction, Issues 282 and 284, squash c06932d2bb);
+  commented the merges on Issue 284. Five records PRs
+  await the 0300 batch: PR 304 (2026-11-05, head
+  5c4abd2b), PR 301 (2026-11-04, head bf9fb87e),
+  PR 187 (2026-11-01, head 1efa3040), PR 265
+  (2026-11-02, head 52295794) and PR 256 (2026-11-03,
+  head b35684d2), all five test-merged clean against
+  new main c06932d2bb. No conflicts, no owner-gated PR.
+  Local main fast-forwarded to c06932d2bb by bundle.
+  Full detail in pr-integration/0245-run.md.
