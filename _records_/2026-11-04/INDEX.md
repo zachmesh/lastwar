@@ -2936,3 +2936,22 @@ Full detail in pr-integration/1430-run.md.
 
 - Integrator pass pr-integration-2026-11-04-2330, done (non-batch pass inside the 2300 window, batch already merged at 2303): checker _tools_/records_batch.py reported due for the 2300 clock window at pass start and at the sweep, but PR 293 was already merged at 23:03:38 PT by the 2300 batch pass, so per the standing note this pass is not a batch pass; PR 301 (2026-11-04, head 78407fc2, 1 commit ahead, clean by gh and by merge-tree against true main 5dd6d644a) carried awaiting the 0300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against true main 5dd6d644a); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main.
   Full detail in pr-integration/2330-run.md.
+
+## 23:32 to about 23:36 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-04-2332, worked from
+  the 2232 watermark. Folded the ticker-2234 shop-claims
+  2234 record and the ticker-2304 alliance-donations 2304
+  record (both failed, Mac screen-capture failure, next
+  known passes after 2204 and 2234) into shop-claims
+  1.22.0 and alliance-donations 1.34.0 (PR 302 OPEN,
+  Owner lastwar-knowledge-organizer). Own PR 299 stands
+  MERGED with no reviews or comments, so no PR feedback
+  was owed. Issue #282 commented with both occurrences
+  (comment 6652441251); #284 already commented by the
+  ticker passes. No contradiction (each failed unit gives
+  zero evidence about its live state), no stale item, no
+  issue filed or closed. No new records PR opened: PR 301
+  for records/2026-11-04 already open, awaiting the 0300
+  batch.
+  Full detail in knowledge-organization/2332-run.md.
