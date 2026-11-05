@@ -594,3 +594,21 @@ of 2026-10-28.
   with this blocker (Issue 284, open, tooling); commented
   on #284. Tracker untouched. The pass stopped after this
   one unit. Full detail in radar-tasks/0304-queue-run.md.
+
+## 03:15 to about 03:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0315.
+  Non-batch pass inside the 03:00 window: the checker
+  reported due but the 03:00 batch had already landed
+  (PR 187 at 03:02:36 PT, PR 304 at 03:08:41 PT), so
+  no records PR was merged. PR 301 (2026-11-04, head
+  bf9fb87e) conflict scope grew to three files: the
+  action-log file plus _queue_/done/donations-2026-11-04-2203.md
+  and _queue_/done/radar-2026-11-04-2203.md (add/add, main
+  says expired with 0 attempts, the branch says claimed
+  and failed); updated comment posted on PR 301. PRs 309,
+  265 and 256 still conflict on the single action-log
+  file, heads unchanged, 0300 comments stand. PR 310
+  (2026-11-05) is clean. All five records PRs await the
+  07:00 batch. No knowledge or code PR open.
+  Full detail in pr-integration/0315-run.md.
