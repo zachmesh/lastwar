@@ -431,3 +431,18 @@ of 2026-10-28.
   unchanged and already verified clean at 0200. No
   comments posted, no conflicts, no owner-gated PR.
   Full detail in pr-integration/0230-run.md.
+
+## 02:34 to about 02:38 - Ticker pass
+
+- Ticker-0234, scout unit scout-scout-2026-11-02-001, failed
+  on the Mac screen capture failure (Issue 284),
+  twenty-eighth consecutive ticker pass with this blocker.
+  Six capture attempts across two computer sessions (cc-509,
+  cc-510), all "Failed to start stream due to audio/video
+  capture failure" on activate, observe (compact, full,
+  image) and screen.snap. No game screen read, no game
+  input dispatched, tracker untouched. First-hand narrowing
+  in a third session (cc-511): the Chrome window observes
+  normally, so the capture pipeline works and the fault is
+  specific to the Last War window's capture stream. Full
+  detail in perception-scout/0234-queue-run.md.
