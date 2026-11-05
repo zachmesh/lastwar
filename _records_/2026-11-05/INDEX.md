@@ -1371,3 +1371,16 @@ of 2026-10-28.
   current. No adoption, fix, hand-off, escalation, label change
   or comment; no Slack DM and no chat report (quiet run).
   Status: no-op. Full detail in pr-catchall/0739-run.md.
+
+## 07:32 to about 07:43 - Knowledge organizer pass
+
+- Own PRs first: no own PR is open at pass start. PR 315 (organizer 0632, troop-training 1.24.0) is MERGED onto main, with no reviews and no comments, so no integrator review point is unaddressed. Open PRs 317, 310, 301, 265 and 256 name lastwar-pr-integrator. PR 318, opened by this run for its own profile, is not feedback.
+- No new knowledge-labeled issue since the 0632 run (newest remains #282); Issue #316 (tooling, evaluation-metrics.md family A stale since PR #30) is tooling class, not this job's.
+- Folded the ticker-0704 radar 0704 record (thirty-sixth consecutive capture failure) into radar-tasks 1.32.0 to 1.33.0, and fixed Issue #316 in evaluation-metrics 1.1.1 to 1.1.2 (family A: duration p90 and the attempts distribution are emitted today by _tools_/retro_report.py 1.4.0, PR #30), on branch work/knowledge-organizer-2026-11-05-0732, opened as PR 318 (Owner lastwar-knowledge-organizer, verified OPEN, MERGEABLE, CLEAN, two files, two commits). The radar fold records the probe classification OFF_SCREEN_WINDOW (high confidence), the Chrome control-observation step closed in the same pass (cc-529), and five 0257-cycle units expired by sync.
+- Issue evidence commented: #282 (comment 6662162182: the thirty-sixth occurrence, with the OFF_SCREEN_WINDOW probe classification, the four-session evidence and the Chrome-normal diagnostic; cross-reference to the tooling tracker #284) and #316 (comment 6662257547: fixed in PR 318, evaluation-metrics 1.1.2; closure belongs to the daily retro). No issue filed, none closed here.
+- Contradictions resolved: 1 (evaluation-metrics family A said duration p90 and the attempts aggregation were "not yet emitted"; _tools_/retro_report.py 1.4.0 emits both since PR #30). The 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read.
+- Stale items marked: 0 newly stale. Flagged (carried from the 0632 run): alliance-help (1235 section) and mail-rewards (1333 section) still carry the superseded "running fullscreen" wording; their correction falls to a later sweep.
+- Coverage gap, recorded not hidden: the thirty-fifth occurrence (ticker-0634) has no record on the records branch at this run's cutoff - the count from 34 to 36 is attested only by the 0704 record's own count.
+- Checked, no fold: pr-catchall 0639 (no-op); planner 0640 (11 units staged, scout diff zero changes); tool-development 0647 (no-op, gap tracked as issue 316); pr-integration 0645, 0700 and 0715; pr-integration 0730 (post-cutoff, non-batch no-op). Acted on past the cutoff: tool-development 0732 (assigns Issue #316 to this job; verified and fixed - see above).
+- Materiality: routine hourly fold of a device fault already tracked in Issues #282 and #284; no Slack DM and no chat report: routine hourly fold, no new material correction and no owner decision owed.
+  Full detail in knowledge-organization/0732-run.md.
