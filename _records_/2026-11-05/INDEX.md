@@ -2369,3 +2369,20 @@ of 2026-10-28.
 - Pool: inbox 75, claimed 0, done 925, upcoming 51.
   Status: no-op. Full detail in
   queue-planning/1240-run.md.
+
+## 12:45 to about 12:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1250.
+  NON-batch pass: the checker reported not due
+  (next batch 15:00). Knowledge PR 327 merged
+  (squash, b761ebaf; organizer 1232, arms-race 1.41.0
+  and donations 1.38.0, forty-fourth and forty-fifth
+  consecutive device-offline passes, Refs 282 and 284;
+  local main fast-forwarded to b761ebaf). Five records
+  PRs await the 15:00 batch: 324 (clean), 310 (clean,
+  test-merged at f2794868 against new main b761ebaf,
+  branch since advanced to f6784e49), 301, 265, 256
+  (conflicted on the single action-log file, conflict
+  notes posted in the 1100 pass, scope re-verified
+  against new main). No owner-gated PR. Status: done.
+  Full detail in pr-integration/1250-run.md.
