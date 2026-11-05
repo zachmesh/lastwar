@@ -910,3 +910,21 @@ of 2026-10-28.
   should sync first or fall back to the manual procedure.
 - Pool: inbox 71, claimed 0, done 894, upcoming 49. Status:
   no-op. Full detail in queue-planning/0440-run.md.
+
+## 04:45 to about 04:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0445.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged. PR
+  313 (organizer 0432, arms-race and donations
+  capture-failure recurrences) reviewed clean and
+  merged by squash at 04:47 PT; local main
+  fast-forwarded to 65e12ecf. PR 310 (2026-11-05,
+  head c700698f) re-verified clean against the new
+  main; PRs 309, 265 and 256 still conflict on the
+  single action-log file and PR 301 on three files,
+  scopes re-verified unchanged against the new main,
+  0300 and 0315 notes standing. All five records PRs
+  await the 07:00 batch. No owner-gated PR. Status:
+  done.
+  Full detail in pr-integration/0445-run.md.
