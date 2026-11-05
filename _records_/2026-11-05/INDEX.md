@@ -1987,3 +1987,25 @@ of 2026-10-28.
   merge (comment posted). No owner-gated PR. Status:
   done.
   Full detail in pr-integration/1045-run.md.
+
+## 11:04 to about 11:20 - Ticker pass
+
+- Radar unit radar-2026-11-05-1003, failed, ticker-1104: no
+  game screen was ever read and no game input was dispatched.
+  Four device invokes, zero responses: connection.health on
+  the Mac mini twice node_offline (device offline, no wake-up
+  path), connection.health and connection.repair (native) on
+  the recovery device both node_invoke_timeout after 25s.
+  device.list reports the Mac mini offline with last_seen
+  15:36:52Z, stale about 3 hours 30 minutes, unchanged since
+  the ticker-1025 pass. This is the forty-third consecutive
+  ticker pass with a Mac device-access blocker (Issue 284),
+  fourth in the worsened zero-response form. Re-probing is
+  owed only after last_seen refreshes, so no probe was run
+  this pass. Commented on Issue 284. No radar task executed
+  or claimed; stack-posture unit, so nothing leaked. Tracker
+  untouched. The pass stopped after this one unit. Sync
+  reaped 0, expired 5 (events, passes, secrets, treasures,
+  trucks 0657), produced nothing (all 21 due regulars already
+  queued). No zombie seeding (event ended 2026-10-30).
+  Full detail in radar-tasks/1104-queue-run.md.
