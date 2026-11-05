@@ -2664,6 +2664,37 @@ Full detail in pr-integration/1430-run.md.
   the donations unit. Full detail in
   alliance-donations/2034-queue-run.md.
 
+## 20:39 to about 20:48 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-04-2039, no-op: no
+  adopted open PR (PR 137 stays MERGED); five open PRs
+  scanned, none owned by this job - PR 295 (organizer 2032,
+  _activities_ arms-race, MERGEABLE and CLEAN) opened minutes
+  before pass start, PR 293 (records post-1931, awaiting the
+  2300 batch) and PRs 187, 256 and 265 carried on unchanged
+  single-file action-log conflicts with integrator action
+  from the 1715 pass, so no stale-owner flag arises; 45 open
+  issues, all class-labeled, same set as the 1939 pass;
+  owner-decision issues 132 and 154 both over 24 hours with
+  statements current, no shepherd comment posted. No adoption,
+  fix, hand-off, escalation, chat report, or Slack DM.
+  Full detail in pr-catchall/2039-run.md.
+
+## 20:40 to about 20:43 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-2040, no-op:
+  plan staged 0 units into the live pool (already_present
+  70, reaped 0, expired 0, horizon to about 08:40 local
+  2026-11-05 already covered by the 1940 run);
+  pre-reset sweep step skipped, not the 1700 hour, and
+  tonight's pair for the 19:00 reset is already done
+  (produced by the 1740 run), 0 enqueued by this run;
+  scout diff on the Nov 4 observation applied with all
+  zero counts, 0 withdrawals; pool inbox 72, claimed 0,
+  done 861, upcoming 50. No new Issue filed. No new PR
+  opened: PR 293 for records/2026-11-04 already open,
+  awaiting the 2300 batch.
+  Full detail in queue-planning/2040-run.md.
 - Retro review run (daily retro 2026-11-04): fifth rolling
   retro under section 14. Branch pool 642 vs live pool 750
   (gap 108, issue 251 verification failed again); Nov 4 live
