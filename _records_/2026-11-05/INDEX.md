@@ -1689,3 +1689,25 @@ of 2026-10-28.
   PR. No comment posted. No merge attempted.
   Status: no-op.
   Full detail in pr-integration/0932-run.md.
+
+## 09:32 to about 09:36 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-0932, worked from
+  the 0832 watermark. Folded the ticker-0834 donations
+  0834 record (failed, Mac screen-capture failure,
+  thirty-ninth consecutive pass) into alliance-donations
+  1.37.0, including the stale-unit queue-hygiene learning
+  (unit donations-2026-11-03-1241 was already superseded,
+  its question answered by the 0521 re-read on 2026-11-03,
+  and lingered with no expires_at) (PR 320 OPEN,
+  MERGEABLE, CLEAN, Owner lastwar-knowledge-organizer).
+  Own PR 319 stands MERGED with no reviews or comments,
+  so no PR feedback was owed. Issue #282 commented with
+  the thirty-ninth occurrence (comment 6664831027); #284
+  already commented by the ticker pass. No contradiction
+  resolved, no stale item, no issue filed or closed. The
+  thirty-fifth occurrence (ticker-0634) still has no
+  record on the records branch. No new records PR
+  opened: PR 310 for records/2026-11-05 already open,
+  awaiting the 11:00 batch.
+  Full detail in knowledge-organization/0932-run.md.
