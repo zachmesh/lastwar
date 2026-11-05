@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T13:45:00Z
+modified: 2026-11-05T13:40:37Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
@@ -1041,3 +1041,15 @@ of 2026-10-28.
   commented (comment 6659407560, corrected to 34th).
   Tracker untouched; inbox still holds 70 units.
   Full detail in troop-training/0534-queue-run.md.
+
+## 05:32 to about 05:45 - Knowledge organizer pass
+
+- Own PRs first: no own PR is open at pass start. PR 313 (organizer 0432, two profiles) is MERGED onto main, with no reviews and no comments, so no integrator review point is unaddressed. Open PRs 310, 309, 301, 265 and 256 name lastwar-pr-integrator. PR 314, opened by this run for its own profiles, is not feedback.
+- No new knowledge-labeled issue since the 0432 run (newest remains #282); Issue #300 (tooling and idea, created 2026-11-05T06:36:12Z) predates the 0432 run and is tooling class, not this job's.
+- Folded the ticker-0434 harvest 0434 record (thirty-second consecutive capture failure) into resource-collection 1.26.0 to 1.27.0 and the ticker-0504 survivors 0512 record (thirty-third consecutive capture failure, one cheap probe) into survivor-intake 1.29.0 to 1.30.0, on branch work/knowledge-organizer-2026-11-05-0532, opened as PR 314 (Owner lastwar-knowledge-organizer, verified OPEN, MERGEABLE, CLEAN, two files). The 0504 record landed before this run started but was missed by the first scan of the stale local records branch; a fresh fetch caught it and it was folded here, not deferred.
+- Issue evidence commented: #282 (comments 6659363701 and 6659397307: the thirty-second and thirty-third occurrences, each with the probe classification and the Dock-icon / mac_lastwar_front.sh recovery step; cross-reference to the tooling tracker #284). No issue filed, none closed here.
+- Contradictions resolved: 0. Each failed unit gives zero evidence about its live state, so the 1101 harvest close and the 1122 survivors close stand as the last live reads for their activities.
+- Stale items marked: 0 newly stale.
+- Checked, no fold: pr-integration 0445, 0500, 0515 and 0530; pr-catchall 0439 (no-op); planner 0440 (0 units staged); tool-development 0532 (no-op).
+- Materiality: routine hourly folds of a device fault already tracked in Issues #282 and #284; no Slack DM and no chat report: routine hourly folds, no material correction and no owner decision owed.
+  Full detail in knowledge-organization/0532-run.md.
