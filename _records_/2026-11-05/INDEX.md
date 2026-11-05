@@ -2733,3 +2733,20 @@ of 2026-10-28.
   No owner-gated PR. No conflict found.
   Status: done.
   Full detail in pr-integration/1445-run.md.
+- Radar unit radar-2026-11-05-1403, failed, ticker-1504: no
+  game screen was ever read and no game input was dispatched.
+  Four device invokes, zero responses: connection.health on
+  the Mac mini node_offline (device offline, no wake-up path)
+  twice, connection.health on the recovery device
+  node_invoke_timeout after 25s, connection.repair (native)
+  on the recovery device node_invoke_timeout after 25s (a
+  first repair call with target "web" was rejected
+  client-side as invalid params - my error, corrected to
+  native). device.list still reports the Mac mini offline
+  with last_seen 15:36:52Z, stale about 7 hours 30 minutes.
+  This is the fifty-first consecutive ticker pass with a Mac
+  device-access blocker (Issue 284). Recovery still needs
+  the Mac-side agent gateway restart. Commented on Issue
+  284. No radar task executed or claimed. Tracker untouched.
+  The pass stopped after this one unit. Full detail in
+  radar-tasks/1504-queue-run.md.
