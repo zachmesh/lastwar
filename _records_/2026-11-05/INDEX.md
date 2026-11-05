@@ -813,3 +813,29 @@ of 2026-10-28.
 
 - Tool-developer pass tool-development-2026-11-05-0432, no-op: no own tooling PR open and no unaddressed integrator feedback (PR 312 sweep subcommand for #147 merged 2026-11-05 11:47Z, no post-merge feedback); no new tooling issue since #300; #300 still 0 comments so no owner decision on the points semantics and no implementation from it; #284 capture outage continues (ticker-0404, thirty-first consecutive pass); standing tool queue (c) re-verified on github main (retro_report p90/attempts/system_metrics, queue.py stats_missing validation, scout_diff counting fixes); no PR, no issue comment, no Slack DM, per the no-op rule.
   Full detail in tool-development/0432-run.md.
+
+## 04:32 to about 04:40 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-0432, worked from
+  the 0332 watermark. Folded the ticker-0334 arms-race 0334
+  record (failed, Mac screen-capture failure, thirtieth
+  consecutive pass, probe classification OFF_SCREEN_WINDOW
+  high confidence from _tools_/mac_capture_probe.py 1.0.0,
+  Chrome observes normally in session cc-515) into
+  arms-race 1.39.0 and the ticker-0404 donations 0404
+  record (failed, thirty-first consecutive pass, probe
+  classification OFF_SCREEN_WINDOW high confidence,
+  recovery one owner step: Dock icon click or
+  _tools_/mac_lastwar_front.sh) into alliance-donations
+  1.35.0 (PR 313 OPEN, MERGEABLE, CLEAN, Owner
+  lastwar-knowledge-organizer). Both occurrences commented
+  onto Issue #282; Issue #284 already tracks the blocker.
+  Contradiction resolved: the donations profile's
+  "running fullscreen" wording in its 1504, 2034 and 2304
+  sections is superseded by the windowed-on-inactive-Space
+  diagnosis, recorded in the 0404 fold. No other
+  contradiction: the 1025 Unit Progression phase verdict
+  and the 1046 donations 1/30 close stand as the last live
+  reads. No Slack DM and no chat report: routine hourly
+  folds, no material correction and no owner decision owed.
+  Full detail in knowledge-organization/0432-run.md.
