@@ -2887,3 +2887,26 @@ Full detail in pr-integration/1430-run.md.
   24 hours with statements current. No adoption, fix,
   hand-off, escalation, or stale-owner flag.
   Full detail in pr-catchall/2239-run.md.
+
+## 22:34 to about 22:47 - Ticker pass ticker-2234
+
+- Ticker pass ticker-2234. Sync reaped 0, expired 4, produced
+  nothing new - 21 regulars already queued. No zombie chain
+  was seeded: the Zombie Invasion event ended at about the
+  19:00 reset on 2026-10-30, and the seeding rule forbids a
+  fresh chain until a Zombie Invasion tab is seen live again.
+- Passes unit passes-2026-11-04-1857, failed: the Mac
+  screen capture stream failed on all 9 capture attempts
+  across 2 sessions (cc-492, cc-493) with the same
+  audio/video capture error, so no screen was ever read and
+  no game input was dispatched. Same blocker as GitHub
+  Issue 284 (open, tooling), commented instead of filing a
+  duplicate. Tracker untouched; the next tick re-produces
+  the passes unit.
+  Full detail in shop-claims/2234-queue-run.md.
+- Own PRs checked first: open records PR 293 for
+  records/2026-11-04 is clean and mergeable per gh, carries
+  no comments and no question addressed to this job, and
+  names Owner lastwar-pr-integrator, not this job. No new
+  records PR opened: PR 293 already open, awaiting the
+  2300 batch.
