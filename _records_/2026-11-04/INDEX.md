@@ -2368,3 +2368,8 @@ Full detail in pr-integration/1430-run.md.
   done 843, upcoming 52. Pre-reset sweep step skipped
   (not the 17:00 hour run). Full detail in
   queue-planning/1640-run.md.
+
+## 16:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1645, done (non-batch): knowledge PR 288 (organizer 1632 - 1534 radar, 1604 arms-race capture-failure recurrence, Issues 282, 284) reviewed clean and merged by squash (d75105); local main fast-forward synced f8f783ca to d75105; merge synced to the owner Slack DM. Records PR 286 (2026-11-04, head 0b58db3, 23 commits) clean per merge-tree against new main, awaiting the 19:00 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped. Checker _tools_/records_batch.py reported not due (next batch 19:00). No comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1645-run.md.
