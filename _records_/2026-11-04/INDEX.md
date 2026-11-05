@@ -2603,3 +2603,18 @@ Full detail in pr-integration/1430-run.md.
   PR 293 for records/2026-11-04 already open, awaiting
   the 2300 batch.
   Full detail in queue-planning/1940-run.md.
+
+## 19:45 to about 19:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1945, done:
+  knowledge PR 294 merged (squash, branch deleted,
+  merge commit a1b1f8f758, local main fast-forwarded
+  to it); records PR 293 held for the 2300 batch -
+  non-batch pass despite a checker due verdict, because
+  the 1900 window already holds the 1902 batch merge
+  of PR 286 and the 1931 deviation merge of PR 292;
+  records PRs 187, 256 and 265 carried on unchanged
+  action-log conflicts (single file
+  _logs_/repo-actions/action-log.jsonl, append-append),
+  no repeat comment. No owner-gated PR, no escalation.
+  Full detail in pr-integration/1945-run.md.
