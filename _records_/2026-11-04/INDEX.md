@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-04
 created: 2026-11-04T08:08:00Z
-modified: 2026-11-05T07:25:00Z
+modified: 2026-11-05T07:44:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PRs 256 and 255 carried to the 03:00 batch, PR 187 conflict carried
@@ -2973,3 +2973,21 @@ Full detail in pr-integration/1430-run.md.
   Stack-posture unit (duel day 4), so no claims were due
   in any case. Tracker untouched.
   Full detail in radar-tasks/2334-queue-run.md.
+
+## 23:39 to about 23:44 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-04-2339, no-op: no adopted open PR
+  (PR 137 stays MERGED); five open PRs scanned, none owned by
+  this job - PR 302 (organizer 2332, knowledge diff, MERGEABLE
+  CLEAN, opened minutes before the pass), PR 301 (integrator
+  records, awaiting the 0300 batch), PRs 265, 256 and 187
+  (integrator records, still CONFLICTING on the action-log
+  file, last integrator re-check 1715 pass); PR 293 merged
+  23:03 PST (2300 batch) and PR 299 merged 22:47 PST since
+  the 2239 pass. Forty-seven open issues, all class-labeled,
+  zero unclassified, no change since the 2239 pass.
+  Owner-decision issues 132 (about seventy-nine hours old)
+  and 154 (about seventy-three hours old) both over 24 hours
+  with statements current. No adoption, fix, hand-off,
+  escalation, or stale-owner flag.
+  Full detail in pr-catchall/2339-run.md.
