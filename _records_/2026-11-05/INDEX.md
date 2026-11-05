@@ -2260,3 +2260,15 @@ of 2026-10-28.
   main, heads unchanged). No owner-gated PR. Status:
   no-op.
   Full detail in pr-integration/1215-run.md.
+
+## 12:34 to about 12:50 - ticker-1234 perception scout unit, failed on Mac offline (Issue 284)
+
+- Unit scout-midday-scout-mid-2026-11-02-004 (chain
+  scout-mid-2026-11-02, seq 4; alliance remainder window).
+  Failed: Mac mini offline, last_seen 2026-11-05T15:36:52Z,
+  four device attempts, zero responses (health node_offline
+  twice, recovery health and repair timeouts). Forty-sixth
+  consecutive pass with the Issue 284 blocker; commented on
+  #284, no duplicate filed. No game screen read, no input,
+  nothing claimed. Tracker untouched.
+  Full detail in perception-scout/1234-queue-run.md.
