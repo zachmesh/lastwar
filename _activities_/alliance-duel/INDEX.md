@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T03:37:56Z
-version: 1.22.0
+modified: 2026-11-04T22:42:57Z
+version: 1.25.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -26,6 +26,9 @@ grounded_in:
   - source: ticker-1134 alliance-duel execution record 2026-11-03 1141 queue run (done, ceremony none waiting, personal total snapshot 1,714,950 unchanged, rank 162 to 169)
   - source: ticker-1804 alliance-duel execution record 2026-11-03 1809 queue run (done, duel day rolled about 18:00 local, closed Tues. day total 2,014,950 of 3,600,000 a MISS, Issue #242)
   - source: ticker-1834 truck-plunder execution record 2026-11-03 1846 queue run (partial, trade counters 0 of 5 and 0 of 4 at 18:34 entry after 5 of 5 and 4 of 4 at 12:11, trade reset follows the about-18:00 rollover, Issue #242 follow-up)
+  - source: ticker-0434 alliance-duel execution record 2026-11-04 0456 queue run (done, star-ceremony trophy watch, no ceremony waiting, right-rail read, grounding timeout caveat)
+  - source: ticker-0834 alliance-duel execution record 2026-11-04 0839 queue run (done, no ceremony waiting, personal duel total 4,772,100 against the 3,600,000 target, read live)
+  - source: ticker-1340 alliance-duel execution record 2026-11-04 1344 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, third consecutive ticker pass to fail this way, Issue 284; ceremony and duel total unmeasured)
 ---
 
 
@@ -846,3 +849,27 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
   closing day (Base Expansion). The duel day tabs follow
   the server day: on a Tuesday evening in PST the Wed. tab
   is already selected, because the new duel day has begun.
+
+## What the 2026-11-04 0456 unit added - ceremony none waiting, right-rail read, grounding timeout stated
+
+- Unit star-ceremony-2026-11-04-0230 by ticker-0434, 04:56 local, status done. The regular check is the trophy watch; the watch was performed and no ceremony waits. No "active on a different device" dialog appeared.
+- Base screen read live: the right rail inspected top to bottom reads Events, Capitol, VS medallion, Season II, Alliance shield, Mail, Inventory. No trophy icon beside the Alliance icon, so no Star Ceremony is waiting to be played or claimed this unit. No ceremony screen was opened, no hearts sent, nothing claimed - there was nothing waiting to claim.
+- Caveat stated, not hidden: a visual-grounding call to double-check the trophy icon timed out (180 seconds) as the pass budget ended, so the absence rests on the live screenshot read above. A timed-out grounding call is not evidence for or against the trophy; this unit's done rests on the screenshot read alone. Tracker marked done. Nothing spent.
+
+## What the 2026-11-04 0839 unit added - no ceremony waiting, personal duel total 4,772,100 over the 3,600,000 target
+
+- Unit star-ceremony-2026-11-04-0630 by ticker-0834, about 08:38 to 08:39 local, status done. Evidence in `_records_/2026-11-04/alliance-duel/0839-queue-run.md`. No ceremony screen opened, no hearts sent, nothing claimed, no spending. No different-device dialog appeared.
+- Navigation pivot: from the Alliance panel left by the help unit, the bottom back arrow tap did not navigate; a left-edge swipe drag returned to the base screen (same pivot as the 00:04 arms-race unit).
+- Base screen right rail, read live top to bottom: Events (red dot 1), Capitol, VS medallion, Season II, Alliance shield (no red dot), Mail (red dot), Inventory. No trophy icon beside the Alliance icon, so no Star Ceremony is waiting to be played or claimed this unit.
+- Duel panel, read live (gold VS medallion): Today's Duel, Age of Science theme, countdown 09:21:27 at entry. Alliance totals: [AP3x] The Apex 549,654,034 (40 percent) vs [Kmf] 811,024,302 (60 percent). The countdown is consistent with the Issue #242 resolution (duel day rolls over about 18:00 local, not 19:00): 08:38 plus 09:21 lands about 17:59.
+- Personal daily total, read live on the Today's Theme tab: 4,772,100 points against the owner target of 3,600,000 - target exceeded by 1,172,100 with 09:21:00 of the duel day remaining at the read. The 2,600,000 and 3,600,000 threshold chests both show claimed checkmarks; the 7,200,000 chest is not yet reached. No chest claimed in this unit. As in the 0718, 1141 and 1809 sections, this total is recorded here as a snapshot from the star-ceremony unit, not as the duel-score regular's measurement, and the division of labour stands.
+- Returned to the base screen by left-edge swipe.
+
+## What the 2026-11-04 1344 unit added - screen-capture failure, third consecutive pass, nothing measured
+
+- Unit star-ceremony-2026-11-04-1030 by ticker-1340, about 13:40 to 13:44 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1333 mail section). Evidence in `_records_/2026-11-04/alliance-duel/1344-queue-run.md`. No different-device dialog appeared.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: computer.observe (image, then compact) and computer.control screenshot failed with "Failed to start stream due to audio/video capture failure"; computer.control activate selected the LastWar window for background input but captured no observation with the same error; a fresh computer session (cc-459, after ending cc-458) failed identically on activate and observe. computer.control open_app returned outcome_unknown; a re-list showed LastWar still running under the same pid (59735), so no restart or duplicate launch happened and the launch was not repeated.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. No ceremony was checked, no personal duel total was read, nothing claimed, nothing spent.
+- Recurrence, not a new failure class: this is the third consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344). The blocker is filed as Issue #284 (tooling, filed by this pass) alongside the knowledge Issue #282 filed by the 1332 organizer run. This section adds no new diagnosis; the narrowing of the fault to the game window comes from the later 1404 train unit (see alliance-train 1.26.0).
+- Reading warning: this failed unit gives zero evidence about the ceremony state or the duel total. It must NOT be read as "no ceremony waiting" - the 0456 and 0839 sections above rest on live reads; this one rests on no read at all.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the star-ceremony unit. The inbox held 66 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.

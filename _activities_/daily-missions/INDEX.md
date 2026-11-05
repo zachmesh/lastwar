@@ -1,9 +1,9 @@
 ---
 title: Daily Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-03T08:32:17Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: The Mission daily task list and activity chests, one activity folder for mission knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: ticker-1904 queue sync reap of expired units, 2026-11-01 (missions fix-up expired, attempts 0)
   - source: daily-missions execution record 2026-11-02 0444 queue run
   - source: ticker-0004 daily-missions execution record 2026-11-03 0017 queue run (partial, activity chest claim path unverified, Issue 208)
+  - source: ticker-0904 daily-missions execution record 2026-11-04 0914 queue run (partial, 3 gather tasks claimed on one tap, first verified 200-point activity-chest claim, Issues #171 and #208 commented by the ticker pass)
 ---
 
 
@@ -238,7 +239,17 @@ status done). Evidence in
   reached on the new reset day, chests 40/80/120/160 shown as
   open golden chests and 200 closed, but the 40 chest tap
   opened only a contents preview with no Claim button, so
-  no chest is asserted claimed - see Issue 208.)
+  no chest is asserted claimed - see Issue 208.) (2026-11-04 0914 update: the 200-point chest is now claimed and verified - gold bar x1, red gem x50, wrench x1, flower x1, crate x1, Crystal Ore 2.0K, 5m speed-up x4, with the standard "No double reward this time" receipt; the 40/80/120/160 chests showed open golden icons at entry and were not re-tapped, so their claim state is still not asserted. The 0914 evidence supports the already-claimed reading of the 0017 40-chest preview-only case; Issue #208 was commented with this evidence by the ticker pass.)
 - The one-tap-two-claims mechanism of the 1444 unit -
   unverified, not a rule to rely on until a later unit
-  watches the same behaviour.
+  watches the same behaviour. (2026-11-04 0914 update: second observation - one tap on the Gather Food Claim button removed all three completed gather rows at once, activity 180 to 210, tab badge 3 to 1. Still inference from two observations, not a verified mechanism; the claim-each-task-individually rule stands.)
+
+## What the 2026-11-04 0914 unit added - 3 gather tasks on one tap, first verified 200-point chest claim, partial
+
+- Unit daily-missions-2026-11-03-1900 by ticker-0904, about 09:06 to 09:10 local, status partial. Session cc-441. Evidence in `_records_/2026-11-04/daily-missions/0914-queue-run.md`. No diamonds, no money, no Go button tapped, no PvP task attempted, no paid-purchase row touched.
+- Entry and state, read live: Mission opened from the base bottom-left terminal icon, grounded fresh at norm 43,846 in this base view. Daily Tasks tab selected. Next Refresh 08:52:35 at entry (08:50:27 at close). Activity star 180 at entry. Daily Tasks tab badge 3 at entry.
+- Claims made in this unit, all verified live: one grounded single tap on the Gather Food Claim button (norm 780,410) removed all three completed gather rows from the list at once: Gather Food x10,000 (1800000/10000), Gather Iron x10,000 (1800000/10000) and Gather Coin x10,000 (432000/10000). Activity star rose 180 to 210 (+30, exactly 3 tasks x 10 points), and the tab badge fell 3 to 1. Whether the game batch-claims completed rows on one tap is inference from that single observation, not a separately verified mechanism; the observed facts are the three rows leaving the list and the +30 star delta. This is the second one-tap-multi-claim observation after the 1444 unit (one tap cleared two rows); the claim-each-task-individually rule stands until the mechanism is verified.
+- Counter-evidence to Issue #171, commented there by the ticker pass (no duplicate comment here): this contradicts the standing Issue #171 picture (green Claim buttons unresponsive, 2026-11-02) - the buttons responded in this session (cc-441). Together with the 0847 secrets unit (buttons dead in cc-440 the same morning), Claim responsiveness is session-dependent, not a global dead state. Closure of #171 belongs to the daily retro.
+- 200-point activity chest, first verified activity-chest claim in this line: with activity at 210, one grounded tap on the 200 chest (norm 819,249) produced a CONGRATULATIONS receipt popup ("No double reward this time. Good luck next time, Commander!") with rewards: gold bar x1, red gem x50, wrench x1, flower x1, crate x1, Crystal Ore 2.0K, 5m speed-up x4. Popup dismissed by tapping its banner. After dismissal the Daily Tasks tab badge was gone. Commented on Issue #208 by the ticker pass (no duplicate comment here), suggesting its 2026-11-03 40-chest preview-only case was an already-claimed chest. Closure of #208 also belongs to the daily retro.
+- Remaining tasks, read live, none actioned: Recruit Heroes 1 Time (0/1), Kill 5 zombie(s) on World Map (3/5), Attack a Commander 1 time (0/1, PvP, stays undone without the owner instruction), Train 100 units of any level (0/100), Upgrade a Building 1 time (0/1), Recruit Survivors 1 time in the Tavern (0/1), Make any paid purchase once (0/1, red-line row, observed only, never to be actioned), Perform Data Training on Drone 1 time (0/1). Go not tapped on any row.
+- Outcome: partial. The unit claimed everything claimable at entry, but the regular's task list is not fully done: 8 tasks remain incomplete and belong to other regulars or later ticks, so the tracker is untouched and the next tick re-checks the list. Game left on the base screen.

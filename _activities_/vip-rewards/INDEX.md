@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-03T06:38:05Z
+modified: 2026-11-04T17:40:01Z
 level: L1
-version: 1.8.0
+version: 1.9.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: ticker-1904 queue sync reap of expired units, 2026-11-01 (vip fix-up expired, attempts 0)
   - source: vip-rewards execution record 2026-11-02 0438 queue run
   - source: ticker-2134 vip-rewards execution record 2026-11-02 2138 queue run
+  - source: ticker-0834 vip-rewards execution record 2026-11-04 0849 queue run (partial, VIP screen entry itself blocked, badge taps unresponsive, freebie/chest state unread)
 ---
 
 
@@ -209,3 +210,13 @@ Measured on 2026-10-25.
   state alone proves they are claimed, not who claimed them.
 - Exit: VIP screen back arrow returned to MY PROFILE, and the
   profile X returned to base, both on the first tap.
+
+## What the 2026-11-04 0849 unit added - VIP screen entry itself blocked, badge taps unresponsive, freebie/chest state unread
+
+- Unit vip-2026-11-03-1900 (current reset day's VIP unit, expires 2026-11-05T03:00:00Z) by ticker-0834, about 08:48 to 08:49 local, status partial. Session cc-440. Evidence in `_records_/2026-11-04/vip-rewards/0849-queue-run.md`. Nothing was claimed, and no paid VIP offer, points plus button or cart shortcut was tapped. No different-device dialog appeared.
+- MY PROFILE opened from the base commander avatar. A "You're very popular!" popup from [AP3x]papillon707 (1,805 +1 likes) was dismissed with Awesome!, taking likes to 1,806 as displayed.
+- Profile read live: Lv.30 [AP3x]Bears Lair, VIP13 badge with no red dot visible on it. No red dot means the freebie state could not be confirmed from the badge alone, so the VIP screen itself had to be opened.
+- VIP screen entry blocked by tap method (rule R2): two taps on the VIP13 badge (norm 475,389 and the gold icon at 428,389) showed no change; a pivot closed the profile and re-entered it fresh, and a further badge tap at 475,389 again showed no change. A screenshot after the pivot verifies the profile still open with the VIP screen never reached.
+- Consequence: neither the Daily Freebie state nor the login chest state could be read live in this unit, and no VIP points read before/after exists to report. Diagnostic correction to the 2138 section: no dot plus no popup plus no points change means already claimed ONLY when the VIP screen was actually opened and read (as in 2138); here the screen was never reached, so the badge's no-dot must NOT be read as claimed.
+- This is a new variant of the standing repeat blocker, not a repeat of the 0438 freebie-button failure: the failure is at VIP screen entry, before any Claim button is reached. The entry-route change owed for secrets (genuine foreground activation) is the same candidate route for the next VIP unit. No new Issue filed: this blocker is already recorded in the activity metadata as a repeat blocker under rule R2.
+- Tracker untouched, per the rule for partial units; the next tick re-produces vip and resumes the claim, and a failed claim re-enters the pre-reset sweep instead of waiting a full day, per the activity note. Profile closed with the X, back to the base screen.

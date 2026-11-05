@@ -59,10 +59,12 @@ Usage:
              # without --due-json it calls _tools_/regulars.py todo
   queue.py [--root DIR] plan [--hours N]
              # stage the horizon's windows: segment anchors,
-             # daily resets, Thursdays, and fixed local clock
-             # slots (cadence fixed-slots, slots in fixed_slots,
-             # expiry clock time in expires_local, chain prefix
-             # in chain_id_prefix); sync never stages fixed-slot
+             # daily resets, Thursdays, and fixed slots (cadence
+             # fixed-slots: wall slots in fixed_slots with expiry
+             # clock time in expires_local, or reset-anchored slots
+             # in slots_before_reset_minutes with the absolute
+             # reset_utc instant as expiry, chain prefix in
+             # chain_id_prefix); sync never stages fixed-slot
              # regulars, plan owns them
 
 --root defaults to the repository _queue_ folder; tests point it at a
@@ -577,6 +579,61 @@ def _fixed_slots(item):
     return sorted(set(slots))
 
 
+def _reset_anchored_offsets(item):
+    """Minutes-before-reset slot offsets of a reset-anchored
+    fixed-slots regular, or [] when the regular carries no
+    reset_utc or no offsets - such a regular keeps the
+    wall-clock fixed_slots behaviour below."""
+    if _parse_hhmm(item.get("reset_utc", "")) is None:
+        return []
+    offsets = []
+    for raw in item.get("slots_before_reset_minutes", []) or []:
+        try:
+            off = int(raw)
+        except (TypeError, ValueError):
+            continue
+        if off >= 0:
+            offsets.append(off)
+    return sorted(set(offsets))
+
+
+def _reset_instant_for_local_date(item, local_date):
+    """The reset instant ending local_date, as a LOCAL_TZ datetime.
+
+    Reset instants are absolute (issue #247): reset_utc on the
+    UTC date after the local date, so 02:00 UTC is the previous
+    local evening - 18:00 PST in winter, 19:00 PDT in summer.
+    Computing from the UTC date, never from a wall-clock time,
+    keeps the slot geometry fixed across the daylight-saving
+    transition instead of drifting an hour with it."""
+    hh, mm = _parse_hhmm(item.get("reset_utc", ""))
+    utc_day = local_date + timedelta(days=1)
+    reset_utc = datetime(utc_day.year, utc_day.month, utc_day.day,
+                         hh, mm, tzinfo=timezone.utc)
+    return reset_utc.astimezone(LOCAL_TZ)
+
+
+def _reset_anchored_slots(item, local_date):
+    """Local datetimes of the reset-anchored slots for local_date,
+    earliest first."""
+    offsets = _reset_anchored_offsets(item)
+    if not offsets:
+        return []
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    return sorted(reset_local - timedelta(minutes=off)
+                  for off in offsets)
+
+
+def _next_reset_utc(after_utc, hhmm):
+    """Next reset_utc instant strictly after after_utc."""
+    hh, mm = hhmm
+    cand = after_utc.replace(hour=hh, minute=mm, second=0,
+                             microsecond=0)
+    if cand <= after_utc:
+        cand += timedelta(days=1)
+    return cand
+
+
 def _next_local_time(after_local, hhmm):
     """Next occurrence of a local HH:MM strictly after after_local."""
     hh, mm = hhmm
@@ -598,6 +655,15 @@ def cycle_start_local(item, when_local):
     the first slot of the day)."""
     cadence = item.get("cadence", "")
     if cadence == "fixed-slots":
+        anchored = _reset_anchored_slots(item, when_local.date())
+        if anchored:
+            past = [s for s in anchored if s <= when_local]
+            if past:
+                return past[-1]
+            prev = _reset_anchored_slots(
+                item, when_local.date() - timedelta(days=1))
+            if prev:
+                return prev[-1]
         slots = _fixed_slots(item)
         if slots:
             cur = when_local.hour * 60 + when_local.minute
@@ -654,6 +720,16 @@ def plan_windows(item, now_local, horizon_end):
     plus every window that starts inside the horizon."""
     cadence = item.get("cadence", "")
     if cadence == "fixed-slots":
+        if _reset_anchored_offsets(item):
+            out = []
+            start = cycle_start_local(item, now_local)
+            day = start.date()
+            while day <= horizon_end.date():
+                for cand in _reset_anchored_slots(item, day):
+                    if start <= cand <= horizon_end:
+                        out.append(cand)
+                day += timedelta(days=1)
+            return out
         slots = _fixed_slots(item)
         if not slots:
             return []
@@ -720,7 +796,12 @@ def _produce_for_window(root, item, planned_local, window=""):
                     f.get("planned_for") == planned_iso:
                 return None
     cadence = item.get("cadence", "")
-    if cadence == "fixed-slots" and item.get("expires_local"):
+    if cadence == "fixed-slots" and _reset_anchored_offsets(item):
+        # The slot's own reset instant is its expiry: a sweep
+        # unit never outlives the trade day it walks (issue #147).
+        expires_dt = _next_reset_utc(
+            planned_utc, _parse_hhmm(item.get("reset_utc")))
+    elif cadence == "fixed-slots" and item.get("expires_local"):
         exp = _parse_hhmm(item.get("expires_local"))
         if exp is not None:
             expires_dt = _next_local_time(
@@ -739,6 +820,14 @@ def _produce_for_window(root, item, planned_local, window=""):
         hhmm = (planned_local.hour, planned_local.minute)
         if cadence == "fixed-slots" and hhmm in slots:
             chain_seq = slots.index(hhmm) + 1
+        elif cadence == "fixed-slots" and _reset_anchored_offsets(item):
+            day_slots = _reset_anchored_slots(item,
+                                              planned_local.date())
+            minute = planned_local.replace(second=0, microsecond=0)
+            for idx, slot in enumerate(day_slots):
+                if slot.replace(second=0, microsecond=0) == minute:
+                    chain_seq = idx + 1
+                    break
     fields = {
         "unit": f"{regular}-{planned_local.strftime('%Y-%m-%d-%H%M')}",
         "regular": regular,
@@ -1082,7 +1171,7 @@ def missing_stats_keys(status, stats):
     return missing
 
 
-def points_duplicates_achieved(stats):
+def points_duplicates_achieved(stats, regular=None):
     """True when stats.points copies stats.achieved (issue #197).
 
     points is score gained in this unit, not a running total
@@ -1095,8 +1184,22 @@ def points_duplicates_achieved(stats):
     is not a copy. This is a warning, never a block: a scoring
     unit that genuinely gained its whole achieved total in one
     unit still closes, flagged for the retro to read.
+
+    Radar is exempt (issue #296): a radar unit's achieved is a
+    claim count, and its radar-screen points rise exactly one
+    per claim, so points equal to achieved is the mechanism,
+    not a copy - radar-2026-11-04-0203 read 194 to 205 for 11
+    claims, radar-2026-11-04-1003 read 206 to 219 for 13
+    claims, and radar-2026-11-02-0203 read 101 to 103 for 2
+    claims, each with a before/after read in its execution
+    record. The exemption covers only this equality
+    heuristic; score-total regulars (arms-race,
+    star-ceremony) stay flagged, and a radar unit's points
+    still count under its own regular in the retro.
     """
     if not isinstance(stats, dict):
+        return False
+    if regular == "radar":
         return False
     points = _stat_number(stats.get("points"))
     achieved = _stat_number(stats.get("achieved"))
@@ -1122,7 +1225,7 @@ def cmd_complete(args):
             key, value = pair.split("=", 1)
             stats[key.strip()] = _scalar(value)
     missing = missing_stats_keys(args.status, stats)
-    points_dup = points_duplicates_achieved(stats)
+    points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -1399,7 +1502,7 @@ def gather_stats(root):
                 dup_stats = result.get("stats")
                 if points_duplicates_achieved(
                         dup_stats if isinstance(dup_stats, dict)
-                        else {}):
+                        else {}, regular):
                     report["stats_points_dup"] += 1
                     report["stats_points_dup_units"].append(
                         f.get("unit"))

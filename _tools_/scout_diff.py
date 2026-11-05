@@ -37,7 +37,11 @@ outputs in an output directory:
      narrative accounting sections stating a count (basis
      recorded as narrative-fallback, with the caveat that
      chained passes may re-state the same dot, so the sum is
-     a section total, not a distinct-dot count); a structured
+     a section total, not a distinct-dot count - the report
+     also carries the distinct named dots parsed from the
+     counted unexplained lines, with sections stating no
+     countable names counted separately, so the distinct
+     figure is a floor); a structured
      observation is never overridden, and the narrative seen
      total is never used as items observed, because seen
      counts red-dot signals, not observed items;
@@ -338,9 +342,23 @@ ACCOUNTING_FRONTMATTER = {
     "explained": "red_dots_explained",
     "unexplained": "unexplained_red_dots",
 }
+# Words a scope qualifier may carry between the accounting
+# keyword and the count. A qualifier states where the count
+# applies ("within the base group alone"), never a dot or a
+# counter: a dot word (badge, dot, icon, toast, chest) or a
+# counter word would make the following number an identifier
+# ("the badge 2"), not a count, so such a word ends the
+# qualifier and the line reads as nameless instead of
+# inventing a count. At most six qualifier words: the
+# attested form carries five.
+_ACCOUNTING_QUALIFIER_WORD = (
+    r"(?!badge|badges|dot|dots|icon|icons|toast|toasts|"
+    r"counter|counters|chest|chests\b)[a-z]+")
 _ACCOUNTING_LINE = re.compile(
     r"^-\s*(seen|explained|unexplained)"
-    r"(?:\s+red\s+dots?)?\s*:?\s*(\d+)\b",
+    r"(?:\s+red\s+dots?)?"
+    r"(?P<qualifier>(?:\s+" + _ACCOUNTING_QUALIFIER_WORD + r"){0,6}?)"
+    r"\s*:?\s*(?P<count>\d+)\b",
     re.IGNORECASE)
 
 
@@ -351,6 +369,19 @@ def parse_narrative_accounting(text):
     its Seen, Explained and Unexplained lines carry that
     pass's own counts, in either the bare form ("Seen 3:")
     or the spelled-out form ("Unexplained red dots: 0.").
+    A count may also carry a scope qualifier between the
+    keyword and the number ("Unexplained within the base
+    group alone 2:"), of at most six digit-free words that
+    name no dot and no counter; the qualifier is why the
+    2026-11-04 observation's two base-group lines read at
+    all. A qualifier followed by digits and then a colon
+    and another bare number ("in group 2: 3 dots") is not
+    a count: the digits were a scope identifier, so the
+    line reads as nameless. Names are still taken only
+    from the unqualified counted form, so a qualified
+    line states its count and names nothing - its section
+    counts as unnamed, and the distinct figure stays a
+    floor.
     A count a section does not state reads as None, never
     as zero - a line naming a dot without a number (for
     example "Unexplained: the Alliance Wars dot") states
@@ -365,9 +396,22 @@ def parse_narrative_accounting(text):
     either figure unexamined."""
     sections = []
     current = None
+    unexplained_text = None
+
+    def _finalize(section, bullet_text):
+        if section is None or "unexplained_names" in section:
+            return
+        section["unexplained_text_present"] = \
+            bullet_text is not None
+        section["unexplained_names"] = (
+            _counted_unexplained_names(bullet_text)
+            if bullet_text else [])
+
     for raw in text.splitlines():
         stripped = raw.strip()
         if stripped.startswith("#"):
+            _finalize(current, unexplained_text)
+            unexplained_text = None
             if "red dot accounting" in stripped.lower():
                 current = {key: None for key in ACCOUNTING_KEYS}
                 sections.append(current)
@@ -376,10 +420,130 @@ def parse_narrative_accounting(text):
             continue
         if current is None:
             continue
+        if unexplained_text is not None:
+            if raw[:1].isspace() and stripped and \
+                    not stripped.startswith("-"):
+                unexplained_text += " " + stripped
+                continue
+            _finalize(current, unexplained_text)
+            unexplained_text = None
         m = _ACCOUNTING_LINE.match(stripped)
         if m:
-            current[m.group(1).lower()] = int(m.group(2))
+            qualifier = (m.group("qualifier") or "").strip()
+            rest = stripped[m.end():]
+            if qualifier and re.match(r"\s*:\s*\d", rest):
+                # The digits were a scope identifier, not the
+                # count ("Unexplained in group 2: 3 dots"):
+                # the real count follows the colon. Inventing
+                # the identifier as the count would be worse
+                # than stating none, so the line reads as
+                # nameless.
+                m = None
+        if m:
+            current[m.group(1).lower()] = int(m.group("count"))
+            if m.group(1).lower() == "unexplained":
+                unexplained_text = stripped
+        elif re.match(r"-\s*unexplained\b", stripped,
+                      re.IGNORECASE):
+            # A nameless unexplained line states no count and
+            # names nothing, but it is still a signal: the
+            # section counts as unnamed, never as absent.
+            unexplained_text = stripped
+    _finalize(current, unexplained_text)
     return sections
+
+
+_DOT_NAME_EXCLUDE = re.compile(
+    r"(no owning|filed as|issue #|maps? to|plus counters?"
+    r"|\bcounter\b|unlocated|unwalked|carried)", re.IGNORECASE)
+
+
+def _normalize_dot_name(item):
+    """One dot name, spelling-normalised, never merged by sense.
+
+    Parentheticals and a trailing explanation clause are cut,
+    a leading "the" and a trailing dot/badge word are stripped,
+    and case and spacing are flattened - so "Alliance dot"
+    and "Alliance red dot" both read "alliance", while
+    "Alliance Wars dot" stays a different name. Near-duplicate
+    spellings the normaliser does not merge stay separate and
+    are shown in the name list, so a reader can merge by eye
+    instead of the tool inventing an identity.
+    """
+    item = re.sub(r"\([^)]*\)", "", item)
+    item = item.split(" - ")[0]
+    item = item.strip().strip(".").strip()
+    if item.lower().startswith("the "):
+        item = item[4:].strip()
+    lowered = item.lower()
+    for suffix in (" red dot", " dot", " badges", " badge"):
+        if lowered.endswith(suffix):
+            item = item[: -len(suffix)].strip()
+            break
+    return " ".join(item.lower().split())
+
+
+def _counted_unexplained_names(bullet_text):
+    """Names from one counted unexplained line, or [].
+
+    Only a line stating a count and a colon list names dots,
+    and only when the kept items equal the stated count:
+    a trailing explanation clause ("no owning regular"), a
+    filing note ("filed as Issue #212") or a counters tail
+    ("plus 2 counters ...") would otherwise invent a dot,
+    so a line whose items do not add up to its count names
+    nothing. A nameless line names nothing by the same rule
+    - its prose is not parsed for names - and a zero count
+    is a definite statement, not an unnamed section.
+    """
+    m = re.search(
+        r"unexplained(?:\s+red\s+dots?)?\s*:?\s*(\d+)",
+        bullet_text, re.IGNORECASE)
+    if not m:
+        return []
+    count = int(m.group(1))
+    if count == 0:
+        return []
+    rest = bullet_text[m.end():].lstrip(": ").strip()
+    rest = re.sub(r"\bplus\b[^,;]*counters?\b.*$", "", rest,
+                  flags=re.IGNORECASE)
+    kept = []
+    for raw_item in re.split(r"[,;]", rest):
+        item = _normalize_dot_name(raw_item)
+        if not item or _DOT_NAME_EXCLUDE.search(item):
+            continue
+        if len(item.split()) > 6:
+            continue
+        kept.append(item)
+    return kept if len(kept) == count else []
+
+
+def distinct_unexplained_dots(sections):
+    """Distinct named unexplained dots across sections.
+
+    Returns None when no section states an unexplained count
+    or carries an unexplained bullet at all - no signal, not
+    a zero. Otherwise the union of the counted lines' names,
+    so a dot re-stated by a chained pass counts once, plus
+    the sections that stated unexplained dots without
+    countable names: the distinct figure is a floor, and
+    the unnamed count says how far below a total it may sit.
+    """
+    signal = [s for s in sections
+              if s.get("unexplained") is not None
+              or s.get("unexplained_text_present")]
+    if not signal:
+        return None
+    names = set()
+    for section in signal:
+        names.update(section.get("unexplained_names", []))
+    unnamed = sum(
+        1 for s in signal
+        if not s.get("unexplained_names")
+        and s.get("unexplained") != 0)
+    return {"distinct": len(names), "names": sorted(names),
+            "unnamed_sections": unnamed,
+            "signal_sections": len(signal)}
 
 
 def narrative_accounting_summary(sections, day_counters):
@@ -1154,6 +1318,8 @@ def run(args):
         coverage_basis = "narrative-fallback"
     else:
         coverage_basis = "empty"
+    distinct = distinct_unexplained_dots(
+        narrative_accounting["sections"])
     coverage = {
         "date": date, "observation": args.observation,
         "items_observed": headline_items,
@@ -1177,6 +1343,12 @@ def run(args):
                                       if c["registered"]]),
         "unexplained_red_dots": headline_unexplained,
         "unexplained_red_dots_classified": classified_unexplained,
+        "unexplained_distinct_dots": (
+            distinct["distinct"] if distinct else None),
+        "unexplained_distinct_names": (
+            distinct["names"] if distinct else []),
+        "unexplained_unnamed_sections": (
+            distinct["unnamed_sections"] if distinct else 0),
         "observation_day_counters": day_counters,
         "narrative_accounting": narrative_accounting,
         "unmatched_labels": unmatched,
@@ -1253,6 +1425,21 @@ def run(args):
            f"{coverage['candidates_registered']})",
            f"- unexplained red dots - "
            f"{coverage['unexplained_red_dots']}",
+           (f"- distinct unexplained dots (named, across "
+            f"narrative sections; a floor when sections "
+            f"below state no countable names) - "
+            f"{coverage['unexplained_distinct_dots']}"
+            + (f": {", ".join(
+                coverage['unexplained_distinct_names'])}"
+               if coverage['unexplained_distinct_names']
+               else "")
+            + (f" ({coverage['unexplained_unnamed_sections']} "
+               f"section(s) without countable names)"
+              if coverage['unexplained_unnamed_sections']
+              else "")
+            if coverage['unexplained_distinct_dots'] is not None
+            else "- distinct unexplained dots - not stated "
+                 "(no narrative unexplained section)"),
            f"- coverage basis - {coverage_basis}{basis_note}",
            f"- promotion proposals - "
            f"{coverage['promotion_proposals']} (registered "
@@ -1506,6 +1693,16 @@ def run(args):
                   "frontmatter reconciliation - " + ", ".join(
                       f"{key} {recon[key]}"
                       for key in ACCOUNTING_KEYS) + ".")
+    if distinct is not None:
+        rs.append(
+            f"- distinct unexplained dots named in narrative "
+            f"sections - {distinct['distinct']}"
+            + (f" ({", ".join(distinct['names'])})"
+               if distinct["names"] else " (none named)")
+            + (f"; {distinct['unnamed_sections']} section(s) "
+               f"stated unexplained dots without countable "
+               f"names, so this is a floor, not a total."
+              if distinct["unnamed_sections"] else "."))
     rs.append(f"- unknown items - "
               f"{coverage['unknown_items']} filed as "
               f"candidates ({coverage['candidates_filed']} "
