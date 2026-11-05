@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-05T09:35:30Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-1334 perception-scout execution record 2026-11-03 1345 queue run (partial, LOOT box located, station preparation-only surface, Wars dot present again, Issue #212 open)
   - source: tool-development 2032 run (daily-reset UTC boundary fix, PR 249) and GitHub Issue #247 - scout post-reset anchor corrected to the 02:00 UTC boundary
   - source: ticker-0904 perception-scout execution records 2026-11-04 0906, 0911 and 0919 queue runs plus the 2026-11-04 observation file (base group x2, stale alliance remainder, Wars dot absent with no rally)
+  - source: ticker-0104 perception-scout execution record 2026-11-05 0104 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-fifth consecutive ticker pass to fail this way, Issue 284)
 ---
 
 
@@ -1681,3 +1682,12 @@ observe-only, nothing claimed). Evidence in
 - Red dot accounting, alliance remainder: seen on surfaces walked - Alliance panel Help, Gifts and Techs dots; mail Battle Report and Event dots. Explained: all map to their owning regulars. Unexplained: 0 in the surfaces walked. Unknown items: none new in the surfaces walked.
 - Carried forward: successor unit enqueued in chain scout-mid-2026-11-02 for the remainder: station panel and loot box re-check only. Both stay carried for a fresh re-check, not closed from memory (station signals checked in this pass's base reads: no train icon, no boarding banner; the loot box was located 2026-11-03 at the world-map gift icon).
 - Resource bubbles visible on many left and centre buildings in the base reads, observed only, not collected - harvest belongs to the harvest unit, one unit one task type. Game left on the own base screen.
+
+## What the 2026-11-05 0104 unit added - screen-capture failure, twenty-fifth consecutive pass, nothing read
+
+- Unit scout-midday-scout-mid-2026-11-02-001 by ticker-0104, about 01:04 to 01:07 local, status failed. Evidence in `_records_/2026-11-05/perception-scout/0104-queue-run.md`. Observe-only throughout; nothing claimed, fought, dispatched, donated, boarded, dug, joined or bought.
+- No game screen was ever read and no game input was dispatched. The Mac screen-capture stream failed on every attempt: session cc-503 `computer.observe` compact, `computer.control` activate, `computer.observe` image; fresh session cc-504 `computer.control` activate, `computer.observe` compact - five attempts across two computer sessions, all with "Failed to start stream due to audio/video capture failure". `activate` reports `window_on_screen: false` and `brought_to_front: false`. LastWar (bundle com.lastwar.ios, pid 59735) is running, fullscreen 1920x1080 at (0,0) on an inactive Space; Google Chrome is frontmost. Device connection health at the same time: both native and web transports connected and healthy (native lastResponseAgeSeconds 0, web 7) - this is not a connectivity problem; the fullscreen game window on its inactive Space is simply not capturable.
+- Recurrence, not a new failure class: this is the twenty-fifth consecutive ticker pass to fail on this exact blocker (ticker-0034 at 00:34 was the twenty-fourth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the twenty-fourth and twenty-fifth occurrences onto #282.
+- Reading warning: this failed unit gives zero evidence about any scout surface. It must NOT be read as "nothing to do" or as a red-dot state - the 2026-11-04 0906 and 0911 base-group reads (account power 150,028,269, HUD food 415.2M, iron 745.8M, coin 15.2M) rest on live reads and stand as the last live reads; this unit rests on no read at all. The carried remainder (station panel and loot box re-check in chain scout-mid-2026-11-02) stays carried for a fresh re-check, not closed from memory.
+- The unit's 15 minute budget was spent on capture attempts; game time was zero. No other unit was attempted in this pass: every unit needs the same game screen, so all would fail identically.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
