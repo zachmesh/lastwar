@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T08:41:00Z
+modified: 2026-11-05T08:44:44Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch
+description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch
 status: unverified
 ---
 
@@ -123,6 +123,35 @@ of 2026-10-28.
   records/2026-11-05 already open, awaiting the 0300
   batch.
   Full detail in knowledge-organization/0032-run.md.
+
+## 00:34 to about 00:41 - Ticker pass
+
+- Own PRs first: open records PRs checked on the VPS - PR 304
+  (records/2026-11-05, ticker-0004) and PR 301
+  (records/2026-11-04) have no comments; nothing to address.
+- Harvest unit harvest-2026-11-04-2203, failed,
+  ticker-0034: no game screen was ever read and no game input
+  was dispatched. The Mac screen capture stream failed on every
+  attempt with "Failed to start stream due to audio/video
+  capture failure" - six or more attempts by the executor
+  subagent across observe (compact, image, full), control
+  screenshot and describe, and screen.snap, plus one more in a
+  fresh computer session (cc-502) by the parent. LastWar
+  (com.lastwar.ios, pid 59735) runs fullscreen 1920x1080 on an
+  inactive Space; Chrome is frontmost and observes fine, so the
+  failure is specific to the game window. This is the
+  twenty-fourth consecutive ticker pass with this blocker
+  (Issue 284, open, tooling). No bubble collected, no resource
+  total read, Armed Truck state unknown. Tracker untouched. The
+  pass stopped after this one unit - every unit needs the same
+  game screen. Full detail in
+  resource-collection/0034-queue-run.md.
+- No zombie seeding: the event ended about the 19:00 reset on
+  2026-10-30 (unit 066), chain closed, zombie-invasion inbox 0
+  per stats. Sync: reaped 0, expired 0, due 21, produced
+  nothing new, all 21 regulars already queued.
+
+- Delivery note: the first merge attempt in this shared push clone ran on main (another job had checked it out after the planner push) and fast-forwarded main to this pass commit; main was restored to 6b6a46776c from the reflog and the merge redone on records/2026-11-05. Verify the checked-out branch in the shared clone before merging.
 
 ## 00:39 to about 00:44 - PR catch-all pass
 
