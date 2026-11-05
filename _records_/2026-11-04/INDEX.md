@@ -2520,3 +2520,39 @@ Full detail in pr-integration/1430-run.md.
   action-log file at unchanged heads, carried, no new
   comment. Local main synced forward to 6383c11208.
   Full detail in pr-integration/1845-run.md.
+
+## 19:00 to about 19:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1900.
+  Batch pass per the checker (due, 1900 window):
+  records PR 286 (2026-11-04, 45 commits, head
+  1f408d2d) merged by merge commit 96aef154 inside
+  the window, branch kept; merge line committed to
+  records/2026-11-04 and fresh PR 292 (post-1900
+  batch) opened for the 2300 batch. Records PRs
+  187, 256 and 265 still conflicted on the single
+  action-log file at unchanged heads, carried, no
+  new comment. Full detail in
+  pr-integration/1900-run.md.
+
+## 19:04 to about 19:15 - Queue ticker pass
+
+- Ticker pass ticker-1904. Sync reaped 0, expired 7
+  (trucks, treasures, secrets and passes 1457, donations
+  1847, both pre-reset zero-sweep units) and produced
+  nothing new - all due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended
+  at about the 19:00 reset on 2026-10-30, and no zombie
+  unit sits in inbox or claimed.
+- Radar unit radar-2026-11-04-1803, failed: the Mac screen
+  capture stream failed on every attempt (3 observations
+  across sessions cc-479 and cc-480, compact and image
+  views, plus 2 activates), same signature as the all-day
+  run, so no screen was read and no game input was
+  dispatched. Live posture at this pass is duel day 4,
+  Train Heroes, radar stack - the unit window's day-3
+  release wording predates the 19:00 reset. Tracker
+  untouched. Blocker filed as Issue #284, commented this
+  pass. Full detail in radar-tasks/1904-queue-run.md.
+- Integrator pass pr-integration-2026-11-04-1915, no-op (non-batch, second pass in the 1900 window): checker _tools_/records_batch.py reported due for the 1900 window, but PR 286 had already been batch-merged at 1902 by the 1900 pass, so no records PR merged this pass; PR 292 (2026-11-04, head 879ca6ce, clean) carried awaiting the 2300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments); no knowledge or code PR open, no escalations, no new records PR opened.
+  Full detail in pr-integration/1915-run.md.
