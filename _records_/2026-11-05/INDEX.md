@@ -777,3 +777,18 @@ of 2026-10-28.
   GitHub Issue #284, the thirty-first consecutive ticker pass to
   fail identically; this pass commented on #284. Tracker untouched.
   Full detail in alliance-donations/0404-queue-run.md.
+
+## 04:15 to about 04:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0415.
+  Non-batch pass: the checker reported not due, next
+  batch point 07:00, so no records PR was merged. No
+  knowledge or code PR was open. PR 310 (2026-11-05,
+  head abe223f0) re-test-merged clean against main
+  5251c60b95 after one new commit since the 0400 pass;
+  PRs 309, 265 and 256 still conflict on the single
+  action-log file with heads unchanged and 0300 comments
+  standing; PR 301 still conflicts on three files with
+  its 0315 comment standing. All five records PRs await
+  the 07:00 batch. No owner-gated PR. Status: no-op.
+  Full detail in pr-integration/0415-run.md.
