@@ -187,3 +187,58 @@ remain the immutable source.
 - Batch compliance - 6 records merges audited, all
   inside batch windows, violations 0.
 - Detail - daily retro 2026-11-03 in this folder.
+
+## Entry 2026-11-04
+
+- Derived from - 642 done units, finished local
+  2026-10-29 to 2026-11-04, read from the
+  records/2026-11-04 branch tip 6b439ee608.
+  The branch pool lags the live pool by 108 units
+  (live window 750); the branch day figures below
+  understate Nov 3 (branch day 20 units, live day
+  110) and Nov 4 is read from the live pool.
+- Totals - done 267, partial 300, skipped-needs-owner
+  6, expired 34, failed 35. Executor time 3,577.6
+  minutes, median unit 291 seconds, p90 714
+  seconds. Attempts mean 0.9486, maximum 2.
+- Nov 4 alone, live pool - 90 finished: done 21,
+  partial 34, failed 17, expired 18. Unverified 58
+  of 90 (64 percent). The day is a capture-channel
+  outage day, not a play day: at least 16 failures
+  name the Mac screen-capture failure.
+- Worst types by done percent - duel-score 0 of 3
+  (no Nov 4 unit in this pool), zero-sweep 0 of 6,
+  crystal-shop 0 of 1, glittering-market 0 of 1,
+  training 0 of 35, survivors 1 of 36, harvest 4 of
+  36, radar 4 of 37, arms-race 5 of 38, trucks 5 of
+  38.
+- Best types - star-ceremony 28 of 32, treasures 28
+  of 34, help 27 of 34, gifts 27 of 34, train 25 of
+  34, passes 25 of 35.
+- Measurement state - numeric target over achieved
+  pairs 155 branch (210 live), summed attainment
+  0.7414 branch. Points_total 40,639 reconciled:
+  5 copied-points units excluded under PR 203, 2
+  of them new Nov 4 (issue #296 filed for the
+  executor-side source defect; issue #197 stays
+  closed on its mechanism target). Blocker_category
+  named in the tool vocabulary on most non-legacy
+  units; 212 branch units lack the key. Tool parse
+  errors 0.
+- Threshold breaches - expired and unexecuted (33
+  past-expiry in branch inbox, breach on the branch
+  pool, 0 parsed on the live pool); quota attainment
+  under 0.8 rolling (trucks 0.439, donations 0.241)
+  with trucks day quota met verified for a second
+  day; unverified day rate failing to fall (61
+  percent live Nov 3 revised, 64 percent live Nov 4)
+  with the 20 percent line by Nov 7 unmet on
+  trajectory. Unexplained red dots NOT PROVEN clean
+  (coverage 0 vs observation base-group 2 carried).
+  No breach on oldest open improvement, closed
+  improvement recurrence on the strict definition,
+  or daily standing job artifacts. Ledger coverage
+  is a data-gap (no sweep ran), not a pass or fail.
+- Batch compliance - 5 records merges audited, all
+  inside batch windows, violations 0.
+- Detail - daily retro 2026-11-04 in this folder.
