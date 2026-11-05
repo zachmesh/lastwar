@@ -2445,3 +2445,8 @@ Full detail in pr-integration/1430-run.md.
   changes; 0 withdrawals; pool inbox 71, claimed 0,
   done 845, upcoming 53. Full detail in
   queue-planning/1740-run.md.
+
+## 17:45 to about 17:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1745, done (non-batch): PR 289 merged (squash, branch deleted, local main synced to cc1ab99977); four records PRs carried with a decision (286 clean awaiting the 19:00 batch, 187/256/265 carried on unchanged single-file action-log conflicts); no comments, no escalations, no new records PR opened.
+  Full detail in pr-integration/1745-run.md.
