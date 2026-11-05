@@ -2520,3 +2520,17 @@ Full detail in pr-integration/1430-run.md.
   action-log file at unchanged heads, carried, no new
   comment. Local main synced forward to 6383c11208.
   Full detail in pr-integration/1845-run.md.
+
+## 19:00 to about 19:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-1900.
+  Batch pass per the checker (due, 1900 window):
+  records PR 286 (2026-11-04, 45 commits, head
+  1f408d2d) merged by merge commit 96aef154 inside
+  the window, branch kept; merge line committed to
+  records/2026-11-04 and fresh PR 292 (post-1900
+  batch) opened for the 2300 batch. Records PRs
+  187, 256 and 265 still conflicted on the single
+  action-log file at unchanged heads, carried, no
+  new comment. Full detail in
+  pr-integration/1900-run.md.
