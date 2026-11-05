@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T08:44:44Z
+modified: 2026-11-05T08:48:42Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch
+description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch
 status: unverified
 ---
 
@@ -188,3 +188,21 @@ of 2026-10-28.
   filed.
 - Pool: inbox 71, claimed 0, done 878, upcoming 49. Status:
   no-op. Full detail in queue-planning/0040-run.md.
+
+## 00:45 to about 00:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-0045.
+  Non-batch pass per the checker (not due, next batch
+  03:00): merged knowledge PR 305 (organizer 0032,
+  radar-tasks 1.30.0 and arms-race 1.37.0, capture-
+  failure recurrences, Issues 282, 284; merge commit
+  8a3db49c62), local main fast-forwarded to the merge.
+  Five records PRs await the 03:00 batch, all
+  re-verified clean against current main 8a3db49c62
+  by merge-tree (API state UNKNOWN recomputing after
+  the merge): PR 304 (2026-11-05, head 36c75691),
+  PR 301 (2026-11-04, head bf9fb87e), PR 187
+  (2026-11-01, head 1efa3040), PR 265 (2026-11-02,
+  head 52295794) and PR 256 (2026-11-03, head
+  b35684d2). No owner-gated PR. Full detail in
+  pr-integration/0045-run.md.
