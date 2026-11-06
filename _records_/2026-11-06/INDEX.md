@@ -3070,6 +3070,25 @@ of 2026-10-28.
   filed or closed. No Slack sync, no chat report: routine
   hourly fold of a tracked device fault. Full detail in
   knowledge-organization/1532-run.md.
+## 15:34 to about 15:44 - Ticker pass
+
+- Ticker pass ticker-1534. Donations unit donations-2026-11-06-1403
+  (planned 14:03, expires 2026-11-07 02:03 UTC) FAILED: Mac mini
+  offline, six device invokes, zero responses (node_offline, no
+  wake-up path; recovery device node_invoke_timeout after 25000ms).
+  Last_seen frozen at 2026-11-05T15:36:52Z, about 32 hours stale.
+  Eighty-first consecutive pass with this blocker, forty-second in
+  the zero-response form (Issue #284, commented, no duplicate
+  filed). No game screen read, no Donation Count read, no donation
+  made, no spending. Tracker untouched. Sync: reaped 0, expired 0,
+  due 20, produced 0. Pool: inbox 73, claimed 0, done 1042,
+  upcoming 48. No zombie seeding (chain closed 2026-10-30, event
+  ended). R3 two-hour quota checkpoint (about 17:00) and the 17:30
+  zero sweep at risk unless the gateway recovers. Delivered via a
+  temporary worktree onto records/2026-11-06; the local working
+  tree's other-job state left undisturbed. PR 369 (post-1500 batch)
+  already covers the branch, so no new PR was opened. Status:
+  failed. Full detail in alliance-donations/1544-queue-run.md.
 ## 15:39 to about 15:50 - PR catch-all pass
 
 - PR catch-all pass pr-catchall-2026-11-06-1539. No-op: no
