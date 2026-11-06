@@ -2193,3 +2193,21 @@ of 2026-10-28.
   opened. The action-log line for this run is owed at
   the next batch merge. Status: done. Full detail in
   pr-integration/1045-run.md.
+
+## 11:00 to about 11:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1100.
+  BATCH pass per the checker (due, merge-aware, window
+  11:00-12:00, first pass at or after the point, no
+  records merge yet in the window): records PR 359
+  (records/2026-11-06, 44 commits, 73 files) merged by
+  merge commit a469658df2; merge-line commit efdbdac986
+  added to records/2026-11-06; fresh records PR 365
+  opened for the post-1100-batch appends (awaits 15:00).
+  Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single-file action-log
+  append-append, commented at the batch with the fresh
+  cause (main advanced by the PR 359 merge), not
+  force-merged. Local main synced back by bundle route
+  (ef7b616751 to a469658df2). Status: done. Full detail
+  in pr-integration/1100-run.md.
