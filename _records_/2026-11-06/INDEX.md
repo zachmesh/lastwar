@@ -936,3 +936,27 @@ of 2026-10-28.
   not a defect in the fix. Issue 332 commented (6685032858).
   No branch, no PR, no Slack message. Full detail in
   tool-development/0432-run.md.
+
+## 04:40 to about 04:46 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 69, skipped_done_current 0, reaped 0,
+  expired 0. The next 12 hours of baseline units are already
+  staged.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-06 (chain
+  pre-reset-sweep-2026-11-06) is already in inbox, both units.
+- Scout diff on the Nov 4 observation (thirty-fifth planner run to
+  consume it; no Nov 5 or Nov 6 observation yet, the post-reset
+  scout unit scout-2026-11-05-1900 still in inbox unexecuted):
+  dry run and apply agree, all zero - observed 0, actionable 0,
+  enqueued 0, already-queued 0, candidates 0, unexplained red
+  dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 still has
+  3 comments, no owner pick yet, PR #337 merged, closure with
+  the retro. No new Issue filed. Live tools/regulars.json still
+  carries no duel-score or zero-sweep regular (re-verified).
+- Pool: inbox 74, claimed 0, done 995, upcoming 51. Status:
+  no-op. Full detail in queue-planning/0440-run.md.
