@@ -2759,3 +2759,22 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 78, claimed 0, done 1026, upcoming 53. Status:
   no-op. Full detail in queue-planning/1340-run.md.
+
+## 13:45 to about 13:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1345.
+  Non-batch pass per the checker (not due, next batch
+  15:00). Knowledge PR 367 merged (squash 6f85cf6a88):
+  organizer 1332, 1235 radar device offline fold into
+  radar-tasks 1.41.0, Owner lastwar-knowledge-organizer,
+  Refs #282 and #284, feedback-source record verified at
+  commit f195db411a; local main fast-forwarded 1aff8ce8ad
+  to 6f85cf6a88. Records PR 365 (head 7796e3ef33, 27
+  commits) clean, awaiting the 15:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still conflicted on the
+  single-file action-log append-append, re-verified by
+  merge-tree against new main 6f85cf6a88; re-check
+  comments posted on 301, 265 and 256, none repeated on
+  351 and 350 (heads unchanged). No records PR opened;
+  records/2026-10-31 fully contained in main. Status:
+  done. Full detail in pr-integration/1345-run.md.
