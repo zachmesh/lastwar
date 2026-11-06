@@ -4016,3 +4016,19 @@ of 2026-10-28.
   ended 2026-10-30). Pre-reset zero-sweep pair staged for the
   2026-11-06 19:00 reset (chain pre-reset-sweep-2026-11-06).
   Full detail in alliance-donations/2152-queue-run.md.
+
+## 22:00 to about 22:09 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-2200.
+  Non-batch pass: checker plain and merge-aware both not
+  due, next batch 23:00 PT (about 55 minutes away).
+  No knowledge or code PR was open. Five records PRs
+  only: PR 340 (records/2026-11-05, head e426cfbc,
+  34 commits) MERGEABLE CLEAN, awaiting the 23:00 batch;
+  PRs 324, 301, 265 and 256 carried on their conflicts,
+  re-verified by merge-tree against the same current main
+  db9c59bc0e (exactly one file each,
+  _logs_/repo-actions/action-log.jsonl), so no comment
+  repeated. No records PR opened, no escalation.
+  Status: no-op.
+  Full detail in pr-integration/2200-run.md.
