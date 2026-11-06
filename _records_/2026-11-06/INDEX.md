@@ -835,3 +835,35 @@ of 2026-10-28.
   no records PR opened. records/2026-10-31 is fully
   contained in main, no PR owed. Status: no-op. Full
   detail in pr-integration/0430-run.md.
+
+## 04:34 to about 04:39 - Ticker pass
+
+- Own PRs first: PR 347 (records/2026-11-06) is MERGEABLE
+  with a CLEAN merge state and carries no new comments since
+  the ticker-0342 pass reconciled its 03:00 batch conflict
+  on the branch side (merge 9a716619ce). The other open
+  records PRs (351, 301, 265, 256) carry no new comments.
+  Nothing addressed to this job. No PR action needed this
+  pass.
+- Donations unit donations-2026-11-06-0203, failed,
+  ticker-0434: no game screen was ever read and no game input
+  was dispatched. The Mac mini is offline with no wake-up
+  path - connection.health, connection.repair (web) and
+  computer.session start all node_offline (five invokes, zero
+  responses). device.list last_seen still frozen at
+  2026-11-05T15:36:52Z, about 21 hours stale. This is the
+  sixty-eighth recorded consecutive pass with this blocker
+  (Issue 284, open, tooling), twenty-ninth in the worsened
+  zero-response form; Issue 284 commented instead of filing
+  a duplicate. No donations screen read, no donation made,
+  nothing claimed. Tracker untouched. The pass stopped after
+  this one unit. Full detail in
+  alliance-donations/0434-queue-run.md.
+- Sync: reaped 0, expired 0, due 20, produced nothing new, all
+  20 regulars already queued. Pool after the pass: inbox 74,
+  claimed 0, done 995.
+- No zombie seeding: no Zombie Invasion tab in the Events hub,
+  consistent with the event close of 2026-10-30;
+  zombie-invasion inbox 0 per stats. The pre-reset zero-sweep
+  pair for the 2026-11-06 19:00 reset sits in the inbox, not
+  yet due.
