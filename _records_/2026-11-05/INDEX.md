@@ -3229,3 +3229,38 @@ of 2026-10-28.
   ninety minutes old.
   Full detail in pr-catchall/1739-run.md.
 
+
+## 17:40 to about 17:46 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-1740: no-op. Own PRs
+  first: 5 open PRs, none owned by this job and no comment
+  addressed to it (PR 334/324/301/265/256, all integrator
+  records); PR 336 merged 16:49 local and PR 337 (merge-aware
+  due gate, Refs #335) merged 16:52 local, both after the
+  1640 run.
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 72, skipped_done_current 0, reaped 0,
+  expired 0. The next 12 hours were already fully staged by
+  earlier runs.
+- Pre-reset sweep: production check ran, 17:00 hour run.
+  Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) already exists in
+  inbox, produced by the ticker sync at 16:09 local; 0
+  enqueued. The standing task text was verified in place
+  in both units (first pass 17:30 local, final pass 18:30
+  local), as appended by the 1640 run.
+- Scout diff on the Nov 4 observation (twenty-seventh
+  planner run to consume it): dry run and apply agree,
+  all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0.
+  No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 gained its implemented branch (PR 337
+  merged 16:52 local) but still has no owner answer and
+  stays open pending retro closure - an integrator-job
+  question that changes nothing in this plan. No new
+  Issue filed.
+- Pool: inbox 75, claimed 0, done 943, upcoming 52.
+  Status: no-op. Full detail in queue-planning/1740-run.md.
