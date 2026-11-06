@@ -3996,3 +3996,23 @@ of 2026-10-28.
   comment repeated. No records PR opened, no escalation.
   Status: done.
   Full detail in pr-integration/2145-run.md.
+
+## 21:52 to about 22:05 - ticker-2152 donations unit, failed on Mac offline
+
+- Donations unit donations-2026-11-05-1803, failed, ticker-2152: no
+  game screen was ever read and no game input was dispatched.
+  Five device invokes, zero responses, all node_offline with no
+  wake-up path: connection.health twice, computer.session start
+  twice, connection.repair (web) once. device.list still reports
+  the Mac mini offline with last_seen 15:36:52Z, stale about 14
+  hours 25 minutes, unchanged since the ticker-1025 pass. This is
+  the sixty-first recorded consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), twenty-second in the
+  worsened zero-response form; ticker-2104 left no record on the
+  branch, so the true count may be higher. Commented on Issue
+  284. No Donation Count read, no donation made, nothing claimed.
+  Tracker untouched. The pass stopped after this one unit. Sync
+  produced nothing new; Zombie Invasion chain stays closed (event
+  ended 2026-10-30). Pre-reset zero-sweep pair staged for the
+  2026-11-06 19:00 reset (chain pre-reset-sweep-2026-11-06).
+  Full detail in alliance-donations/2152-queue-run.md.
