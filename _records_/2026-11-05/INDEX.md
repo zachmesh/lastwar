@@ -3178,3 +3178,26 @@ of 2026-10-28.
   branch. No new records PR opened: PR 334 for
   records/2026-11-05 already open, awaiting the next
   batch. Full detail in knowledge-organization/1732-run.md.
+
+## 17:39 to about 17:47 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-05-1739: no adopted open PR; five open
+  PRs scanned and none owned by this job (PR 334/324/301/265/256
+  integrator records, all naming a rightful owner matching their
+  diffs). No reviews on any open PR; no comment addressed to this
+  job. PR 336 merged 16:49 PST by the integrator since the 1639
+  pass. PR 334 head advanced to 96507079 by the integrator 1715
+  run append; the other four records PR heads are unchanged.
+  Mergeable UNKNOWN at read time on all five open PRs (GitHub
+  still computing). PRs 324, 301, 265 and 256 still carry the
+  integrator 1500 batch carry notes posted inside the hour and
+  all under the 48-hour stale-owner threshold (324 about six and
+  a half hours, 301 about eighteen and a half, 265 about
+  thirty-eight and a half, 256 about forty-two and a half).
+  No stale-owner flag. Issues: 48 open, all class-labeled, no
+  new issue since the 1639 pass, so no triage action.
+  Owner-decision issues 132 (about ninety-seven hours) and 154
+  (about ninety-one hours) both over 24 hours with statements
+  current; issue 335 is a third owner-decision issue, about
+  ninety minutes old.
+  Full detail in pr-catchall/1739-run.md.
