@@ -4303,7 +4303,7 @@ of 2026-10-28.
   no chat report: routine hourly fold of a tracked
   device fault. Full detail in
   knowledge-organization/2332-run.md.
-## 23:39 to about 23:46 - PR catch-all pass
+## 23:39 to about 23:43 - PR catch-all pass
 
 - Pass pr-catchall-2026-11-05-2339: no adopted open PR; six open
   PRs scanned and none owned by this job (PR 346 knowledge
