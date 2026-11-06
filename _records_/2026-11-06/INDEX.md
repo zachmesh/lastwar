@@ -3108,3 +3108,27 @@ of 2026-10-28.
   still under 24 hours until 16:09 PST. No adoption, fix,
   hand-off, escalation, chat report or Slack sync. Status:
   no-op. Full detail in pr-catchall/1539-run.md.
+## 15:30 to about 15:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1530.
+  Non-batch pass per the checker (merge-aware: not due,
+  PR 365 already merged 15:04:56 PT in this window; next
+  batch 19:00). Knowledge PR 370 (organizer 1532, radar
+  1507 fold into radar-tasks 1.42.0, Owner
+  lastwar-knowledge-organizer, Refs #282 and #284)
+  reviewed clean and merged: two gh pr merge attempts
+  failed with GitHub-side errors (502, then a GraphQL
+  internal error), merge completed via the REST API,
+  squash commit 66c3100ab1, merged 15:46:06 PT;
+  work/radar-1507 branch deleted afterwards. Six records
+  PRs open, none merged: PR 369 (records/2026-11-06,
+  head 38ff3bd5) awaits the 19:00 batch, verified
+  MERGEABLE/CLEAN; PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against new main 66c3100ab1,
+  heads unchanged since the 1500 batch pass commented
+  them, so no repeat comment. Local main fast-forwarded
+  to 66c3100ab1 by bundle route. No escalations, no new
+  PR opened. Status: done. Full detail in
+  pr-integration/1530-run.md.
