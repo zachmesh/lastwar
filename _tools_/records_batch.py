@@ -33,6 +33,14 @@ Two commands, both standard library only:
           and the next batch point. Exit 0 when due, 1 when not
           due, 2 on a usage or input error. The integrator gates
           on the exit code instead of judging the clock itself.
+          With --merges FILE (the same JSON shape as `audit`
+          takes), due is merge-aware (issue #335): a records
+          merge already inside the current window, at or before
+          the checked moment, makes the answer not due, so only
+          the first pass at or after a batch point merges. A
+          merge after the checked moment never blocks it, so
+          --at replays still answer as of that moment. Without
+          --merges, due stays clock-only, as in 1.0.0.
   audit - the retro's audit input. Reads a JSON list of records
           merges (merge timestamps as recorded by gh) and lists
           the ones that fell outside any batch window. Exit 0 on
@@ -58,7 +66,7 @@ extract cannot masquerade as a clean day.
 
 Usage:
   records_batch.py due [--at ISO] [--format text|json]
-                       [--window-minutes N]
+                       [--window-minutes N] [--merges FILE]
   records_batch.py audit --merges FILE [--format text|json]
                          [--window-minutes N]
 """
@@ -72,7 +80,7 @@ from zoneinfo import ZoneInfo
 LOCAL_TZ = ZoneInfo("America/Los_Angeles")
 BATCH_HOURS = (3, 7, 11, 15, 19, 23)
 BATCH_WINDOW_MINUTES = 60
-TOOL_VERSION = "1.0.0"
+TOOL_VERSION = "1.1.0"
 
 
 def parse_time(text):
@@ -125,11 +133,42 @@ def next_batch_point(moment):
     raise AssertionError("unreachable: tomorrow always has points")
 
 
-def status_for(moment, window_minutes=BATCH_WINDOW_MINUTES):
-    """The due status of one moment, as a JSON-ready dict."""
+def first_merge_in_window(merges, window, moment):
+    """The earliest merge inside `window` at or before `moment`.
+
+    `merges` is a list of {"number", "merged_at"} with merged_at
+    an aware datetime (the shape load_merges_file returns).
+    Returns the merge dict, or None. A merge after the checked
+    moment never counts: at that moment no merge had happened
+    yet, so the pass asking was still the first. A merge in an
+    earlier window never counts either: each window gets its
+    own batch.
+    """
+    if not merges or window is None:
+        return None
+    start, _end = window
+    in_window = [entry for entry in merges
+                 if start <= entry["merged_at"] <= moment]
+    if not in_window:
+        return None
+    in_window.sort(key=lambda item: (item["merged_at"],
+                                     str(item["number"])))
+    return in_window[0]
+
+
+def status_for(moment, window_minutes=BATCH_WINDOW_MINUTES,
+               merges=None, merges_file=None):
+    """The due status of one moment, as a JSON-ready dict.
+
+    With `merges` supplied (the loaded --merges file), due is
+    merge-aware: a merge already inside the current window
+    makes the answer not due, and `already_merged` names it.
+    Without merges the status is clock-only, as in 1.0.0.
+    """
     local = moment.astimezone(LOCAL_TZ)
     window = window_for(local, window_minutes)
     following = next_batch_point(local)
+    already = first_merge_in_window(merges, window, local)
     status = {
         "tool": "records_batch",
         "version": TOOL_VERSION,
@@ -137,10 +176,13 @@ def status_for(moment, window_minutes=BATCH_WINDOW_MINUTES):
         "timezone": "America/Los_Angeles",
         "batch_hours": list(BATCH_HOURS),
         "window_minutes": window_minutes,
-        "due": window is not None,
+        "due": window is not None and already is None,
         "next_batch_point": following.isoformat(),
         "minutes_to_next_batch_point": int(
             (following - local).total_seconds() // 60),
+        "merges_file": merges_file,
+        "merges_checked": len(merges) if merges is not None else 0,
+        "already_merged": None,
     }
     if window is not None:
         status["window_start"] = window[0].isoformat()
@@ -151,6 +193,13 @@ def status_for(moment, window_minutes=BATCH_WINDOW_MINUTES):
         status["window_start"] = None
         status["window_end"] = None
         status["minutes_left_in_window"] = None
+    if already is not None:
+        status["already_merged"] = {
+            "number": already["number"],
+            "merged_at": already["merged_at"].isoformat(),
+            "window_start": window[0].isoformat(),
+            "window_end": window[1].isoformat(),
+        }
     return status
 
 
@@ -247,7 +296,13 @@ def _render_due(status, fmt):
         print(json.dumps(status, indent=2, sort_keys=True,
                          ensure_ascii=False))
         return
-    if status["due"]:
+    already = status.get("already_merged")
+    if already is not None:
+        print(f"due: no - PR #{already['number']} already merged "
+              f"{already['merged_at']} in this batch window "
+              f"({already['window_start']} to "
+              f"{already['window_end']} America/Los_Angeles)")
+    elif status["due"]:
         print(f"due: yes - batch window {status['window_start']} to "
               f"{status['window_end']} America/Los_Angeles "
               f"({status['minutes_left_in_window']} minutes left)")
@@ -290,6 +345,11 @@ def main(argv=None):
                      default="text")
     due.add_argument("--window-minutes", type=int,
                      default=BATCH_WINDOW_MINUTES)
+    due.add_argument("--merges", default="",
+                     help="JSON merges file (same shape as audit) - "
+                     "when given, due is merge-aware: a merge "
+                     "already inside the current window makes the "
+                     "answer not due (issue #335)")
     audit = sub.add_parser("audit", help="audit merges against windows")
     audit.add_argument("--merges", required=True,
                        help="JSON merges file (see module docstring)")
@@ -304,10 +364,14 @@ def main(argv=None):
         try:
             moment = parse_time(args.at) if args.at else \
                 datetime.now(LOCAL_TZ)
+            merges = load_merges_file(args.merges) \
+                if args.merges else None
         except ValueError as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2
-        status = status_for(moment, args.window_minutes)
+        status = status_for(moment, args.window_minutes,
+                            merges=merges,
+                            merges_file=args.merges or None)
         _render_due(status, args.format)
         return 0 if status["due"] else 1
     try:
