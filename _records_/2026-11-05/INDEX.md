@@ -3011,3 +3011,33 @@ of 2026-10-28.
   hours with statements current; issue 335 is a third owner-decision
   issue, about thirty minutes old.
   Full detail in pr-catchall/1639-run.md.
+
+## 16:40 to about 16:47 - Queue planning pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 72, skipped_done_current 0, reaped 0,
+  expired 0. The next 12 hours were already fully staged by
+  earlier runs.
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) already exists in
+  inbox, produced by the ticker sync at 16:09 local; the
+  ticker-produced units carried only the stub body, so
+  this run appended the standing task text for each pass
+  from the previous day's pair (dates adjusted to
+  2026-11-05), so the executor gets the full ledger-walk
+  instructions. The 17:00 run must not re-enqueue the pair.
+- Scout diff on the Nov 4 observation (twenty-sixth
+  planner run to consume it): dry run and apply agree,
+  all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0.
+  No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 (records-batch checker clock-only,
+  filed by pr-catchall 1639) is an integrator-job
+  question with no owner answer yet and changes nothing
+  in this plan. No new Issue filed.
+- Pool: inbox 76, claimed 0, done 942, upcoming 53.
+  Status: done. Full detail in queue-planning/1640-run.md.
