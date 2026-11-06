@@ -1171,3 +1171,26 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 72, claimed 0, done 997, upcoming 51. Status:
   no-op. Full detail in queue-planning/0540-run.md.
+
+## 05:45 to about 05:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0545.
+  Non-batch pass per the checker (plain due not due,
+  outside every batch window, next batch 07:00).
+  Knowledge PRs 355 (alliance-donations 1.40.0 to
+  1.41.0, ticker-0434 donations record) and 356
+  (resource-collection 1.29.0 to 1.30.0, ticker-0504
+  harvest record) reviewed clean and merged by squash
+  (f8c8036e, 9c6a4d36); local main fast-forwarded to
+  9c6a4d36 via bundle. Six records PRs await the
+  07:00 batch, all verified mergeable clean by
+  merge-tree against new main 9c6a4d36: PR 351 (1 commit
+  ahead), PR 350 (2), PR 347 (59, head c83fe675ddc2;
+  GitHub mergeable UNKNOWN, still computing after main
+  advanced), PR 301 (15), PR 265 (6), PR 256 (17).
+  The 0300 batch conflicts are resolved branch-side by
+  the ticker-0342 reconciliation. No comments, no
+  escalations, no records PR opened.
+  records/2026-10-31 is fully contained in main, no PR
+  owed. Status: done. Full detail in
+  pr-integration/0545-run.md.
