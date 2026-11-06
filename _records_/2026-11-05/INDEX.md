@@ -3752,3 +3752,32 @@ of 2026-10-28.
   with statements current; issue 335 is a third owner-decision
   issue, about four hours old. Full detail in
   pr-catchall/2039-run.md.
+
+## 20:40 to about 20:47 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-2040: no-op. Own PRs
+  first: 5 open PRs, none owned by this job and no comment
+  addressed to it (PR 340/324/301/265/256 integrator records).
+- Plan: `tools/queue.py plan --hours 12` staged 0 units;
+  already_present 70, skipped_done_current 0, reaped 0,
+  expired 0. The next 12 hours of baseline units are already
+  staged.
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) expired unexecuted,
+  second consecutive night, on the Mac device blocker.
+  0 enqueued.
+- Scout diff on the Nov 4 observation (thirtieth
+  planner run to consume it): dry run and apply agree,
+  all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0.
+  No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 still has no owner answer (2 comments,
+  both from zachmesh, none from the owner) and stays open
+  pending retro closure - an integrator-job question that
+  changes nothing in this plan. No new Issue filed.
+- Pool: inbox 76, claimed 0, done 959, upcoming 49.
+  Status: no-op. Full detail in queue-planning/2040-run.md.
