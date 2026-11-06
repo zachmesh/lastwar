@@ -1403,3 +1403,16 @@ of 2026-10-28.
   escalations. The log line for this run is owed at
   the 07:00 batch merge. Full detail in
   pr-integration/0645-run.md.
+- Integrator pass pr-integration-2026-11-06-0700.
+  Batch pass per the checker (due, plain and
+  merge-aware as of pass start, window 07:00-08:00).
+  Records PR 347 merged by merge commit 5e98db2f (72
+  commits, 133 files). Records PRs 351, 350, 301, 265
+  and 256 conflicted on
+  _logs_/repo-actions/action-log.jsonl after the merge,
+  commented, not force-merged; branch-side
+  reconciliation owed, merge at a later batch. Fresh
+  records PR #359 opened for records/2026-11-06
+  (post-0700 batch), carrying the merge line and this
+  run record. Local main fast-forwarded to 5e98db2f by
+  bundle. Full detail in pr-integration/0700-run.md.
