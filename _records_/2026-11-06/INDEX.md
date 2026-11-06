@@ -976,3 +976,18 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 74, claimed 0, done 995, upcoming 51. Status:
   no-op. Full detail in queue-planning/0440-run.md.
+
+## 05:00 to about 05:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0500.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00): no knowledge or code PR was open. Six records
+  PRs await the 07:00 batch, all verified mergeable clean
+  (merge-tree against main 60cf07d9cb; PR 347 head
+  26ea72c0be, 51 commits ahead, re-verified clean,
+  GitHub now reports MERGEABLE/CLEAN). No merges, no
+  comments, no escalations, no records PR opened.
+  records/2026-10-31 is fully contained in main, no PR
+  owed. Status: no-op. Full detail in
+  pr-integration/0500-run.md.
