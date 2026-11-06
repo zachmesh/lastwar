@@ -1567,6 +1567,38 @@ of 2026-10-28.
 - Pool: inbox 78, claimed 1, done 1009, upcoming 53. Status:
   done. Full detail in queue-planning/0740-run.md.
 
+## 07:41 to about 07:52 - Ticker pass
+
+- Ticker pass ticker-0741. Own PRs first: PR 359
+  (records/2026-11-06, post-0700 batch) has no comments and
+  Owner lastwar-pr-integrator; PRs 360 and 361 are knowledge
+  folds owned by the ko-0732 job, not this ticker. Nothing
+  addressed to this job. This pass's commit joins PR 359; no
+  new PR was opened.
+- Sync: reaped 0, expired 6, due 20, produced no new unit,
+  20 regulars already queued. Queue stats at 15:43Z: inbox
+  79, claimed 0, done 1009, upcoming 53. No zombie seeding:
+  the zombie chain closed with unit 066 on 2026-10-30 and
+  the event ended; no fresh chain until a Zombie Invasion
+  tab is seen live again.
+- Unit radar-2026-11-06-0603 failed: Mac mini offline,
+  last_seen 2026-11-05T15:36:52Z (about 24 hours 10 minutes
+  stale), five device invokes zero responses - computer
+  session start (x2) and connection.health on the Mac mini
+  all node_offline with no wake-up path, and connection
+  health plus connection.repair native on the recovery
+  device both node_invoke_timeout after 25 seconds. Same
+  blocker as GitHub Issue #284 (tooling, still open): the
+  seventy-fourth consecutive pass with a Mac device-access
+  blocker, thirty-fifth in the worsened zero-response form.
+  This pass commented on #284 instead of filing a
+  duplicate. No game screen read, no input dispatched,
+  tracker untouched. The slot was a duel day 5 radar
+  release (planned 06:03 local, expires 10:03 local), so
+  the release check for this slot is lost. The pass stopped
+  after this one unit; further units would fail identically.
+  Full detail in radar-tasks/0741-queue-run.md.
+
 ## 07:45 to about 07:51 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-06-0745.
