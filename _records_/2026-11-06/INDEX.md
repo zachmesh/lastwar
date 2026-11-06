@@ -664,7 +664,7 @@ of 2026-10-28.
   quiet routine fold. Full detail in
   knowledge-organization/0332-run.md.
 
-## 04:32 to about 04:40 - Knowledge organization pass
+## 04:32 to about 04:38 - Knowledge organization pass
 
 - Pass knowledge-organization-2026-11-06-0432, worked from
   the 0332 watermark. Folded the ticker-0342 radar record
