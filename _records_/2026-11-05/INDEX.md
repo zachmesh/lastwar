@@ -3692,3 +3692,17 @@ of 2026-10-28.
   opened, no escalation.
   Status: done.
   Full detail in pr-integration/2015-run.md.
+- Integrator pass pr-integration-2026-11-05-2030.
+  Non-batch pass: checker plain and merge-aware both not
+  due, next batch 23:00 PT (about 2 hours 27 minutes away). No
+  knowledge or code PR open. Five records PRs only: PR 340
+  (records/2026-11-05, head 2b398db8, advanced from
+  f84e40d0 since the 2015 pass by the 2015 run record
+  commit) clean, awaiting the 23:00 batch; PRs 324, 301,
+  265 and 256 carried on the 1500 pass conflict notes,
+  heads unchanged, no repeat comment. Merge-tree against
+  current main e0433644 re-verified PR 340 clean; the four
+  conflicts stand as verified by the 2000 pass against the
+  same main and heads. No records PR opened, no escalation.
+  Status: no-op.
+  Full detail in pr-integration/2030-run.md.
