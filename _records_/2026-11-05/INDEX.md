@@ -3062,3 +3062,29 @@ of 2026-10-28.
   pass stopped after this one unit. Sync produced nothing new;
   Zombie Invasion chain stays closed (event ended 2026-10-30).
   Full detail in resource-collection/1634-queue-run.md.
+
+## 16:32 to about 16:52 - Tool development pass
+
+- Pass tool-development-2026-11-05-1632: done, one bounded
+  tooling item. Own PRs checked first (no tooling PR open;
+  recent tooling PRs 333/326/323/321/312/307/303/298 all
+  MERGED, no review feedback); all 19 labelled tooling
+  issues triaged and found implemented or diagnosed
+  ops-side, awaiting retro closure. The one unimplemented
+  tool-substance item was fresh issue 335 (checker due
+  clock-only: the 1545 pass merged records PR 330 at 15:52
+  after PR 310 had already merged at 15:12 in the 15:00
+  window), labelled tooling this run. Implemented as
+  records_batch.py 1.1.0: due gains optional --merges FILE,
+  and a merge already inside the current window makes due
+  report not due and name the first merge; without --merges
+  due stays clock-only, audit untouched. PR 337 opened
+  (branch work/records-due-merge-aware-335, commit
+  357d900128, based on github main 6f9906fcf0). Validation
+  31/31 fixture assertions on isolated /tmp pools, exact
+  335 replay included, py_compile clean. Adoption note:
+  the tool alone changes no pass behaviour until the
+  integrator job body adopts due --merges. Issue 335 stays
+  open for the retro. Slack DM sent to the owner; goal
+  timeline entry recorded.
+  Full detail in tool-development/1632-run.md.
