@@ -3281,3 +3281,16 @@ of 2026-10-28.
   notes, no repeat comment. No new records PRs opened.
   Status: done.
   Full detail in pr-integration/1730-run.md.
+- Integrator pass pr-integration-2026-11-05-1745.
+  Checker not due for records (next batch 19:00);
+  merge-aware check with JSON merges file agrees
+  (first TSV attempt rejected, exit 2, rebuilt and
+  re-run). No knowledge or code PR open. Five records
+  PRs only: PR 334 (records/2026-11-05) verified clean
+  by merge-tree against main 0ca043d4 at its new head
+  122c9d4a1, awaiting the 19:00 batch; PRs 324, 301,
+  265 and 256 still conflict on the single action-log
+  file, re-verified, carried on the 1500 pass notes, no
+  repeat comment. No new records PRs opened. Status:
+  no-op.
+  Full detail in pr-integration/1745-run.md.
