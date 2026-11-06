@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-06
 created: 2026-11-06T08:06:27Z
-modified: 2026-11-06T08:50:36Z
+modified: 2026-11-06T09:06:00Z
 level: L0
 version: 1.0.0
-description: The 0000, 0015, 0030 and 0045 PR integration passes, all non-batch, six records PRs await the 0300 batch, all verified clean; knowledge PR 348 merged by the 0045 pass; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
+description: The 0000, 0015, 0030, 0045 and 0100 PR integration passes, all non-batch, six records PRs await the 0300 batch, all verified clean; knowledge PR 348 merged by the 0045 pass; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
 status: unverified
 ---
 
@@ -185,3 +185,23 @@ of 2026-10-28.
   line for this run is owed at the next batch merge.
   Status: done. Full detail in
   pr-integration/0045-run.md.
+
+## 01:00 to about 01:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0100.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, next batch 03:00): no knowledge or code
+  PR was open. Six records PRs await the 03:00 batch,
+  all verified mergeable clean by merge-tree against
+  main de565ac6e4: PR 347 (records/2026-11-06, head
+  1dad9570, 9 commits), PR 345 (records/2026-11-05,
+  head 1f27dfc0, 12 commits), PR 324 (records/2026-11-01,
+  head c41db9ea, 2 commits), PR 301 (records/2026-11-04,
+  head a5294bf0, 14 commits), PR 265 (records/2026-11-02,
+  head 11b2f383, 5 commits) and PR 256 (records/2026-11-03,
+  head 6b8df47f, 16 commits). The four carried
+  action-log conflicts are resolved on the branch side.
+  No merges, no comments, no escalations. The
+  action-log line for this run is owed at the next batch
+  merge. Status: no-op. Full detail in
+  pr-integration/0100-run.md.
