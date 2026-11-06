@@ -716,3 +716,43 @@ of 2026-10-28.
 - Merged knowledge PR 352 (organizer 0332, shop-claims 1.24.0) by squash, main 936f2f26be; local main fast-forwarded by bundle.
 - Six records PRs open: 351 and 347 verified mergeable clean by merge-tree against new main and awaiting the 07:00 batch; 350, 301, 265 and 256 conflict on the single action-log file, already commented at the 03:00 pass, awaiting branch-side reconciliation. No comments, no escalations, no records PR opened.
 - Status: done. Full detail in pr-integration/0345-run.md.
+## 03:42 to about 03:52 - Ticker pass
+
+- Own PRs first: PR 347 (records/2026-11-06) carried a new owner
+  comment from the 03:00 batch pass - a merge conflict with main
+  on _logs_/repo-actions/action-log.jsonl (append-append, main
+  advanced by the merges of records PRs 324 and 345).
+  Reconciled on the branch side this pass: merged main 3b054bcf
+  into records/2026-11-06 (commit 9a716619ce, pushed and
+  verified with git ls-remote) as the ordered union of both
+  sides' appends (937 base + 7 branch + 4 main = 948 lines, no
+  duplicates, no lines dropped), and replied on PR 347. PR 351
+  (records/2026-11-05 post-0300 batch) has no comments. The
+  four older open records PRs (350, 301, 265, 256) also carried
+  new 03:00-batch conflict comments on the same single file;
+  all four were reconciled this pass from their remote tips in
+  detached worktrees and pushed (records/2026-11-01 58a6b934ed,
+  records/2026-11-02 1a674db1f7, records/2026-11-03 d5be8c030c,
+  records/2026-11-04 757166291a), each replied on its PR. A
+  first stale-base attempt on records/2026-11-02 was abandoned
+  unpushed when the remote tip was found ahead.
+- Radar unit radar-2026-11-06-0203, failed, ticker-0342: no game
+  screen was ever read and no game input was dispatched. The Mac
+  mini is offline with no wake-up path - connection.health,
+  connection.repair (web) and computer.session start all
+  node_offline (five invokes, zero responses). device.list
+  last_seen still frozen at 2026-11-05T15:36:52Z, about 20 hours
+  stale. This is the sixty-sixth recorded consecutive pass with
+  this blocker (Issue 284, open, tooling), twenty-seventh in the
+  worsened zero-response form; Issue 284 commented instead of
+  filing a duplicate. No radar screen read, no tasks run, nothing
+  claimed. Tracker untouched. The pass stopped after this one
+  unit. Full detail in radar-tasks/0342-queue-run.md.
+- Sync: reaped 0, expired 0 (the four 2257-slot units had already
+  been expired by the 0340 planner run), due 20, produced nothing
+  new, all 20 regulars already queued. Pool after the pass:
+  inbox 76, claimed 0, done 993.
+- No zombie seeding: no Zombie Invasion tab in the Events hub,
+  consistent with the event close of 2026-10-30; zombie-invasion
+  inbox 0 per stats. The pre-reset zero-sweep pair for the
+  2026-11-06 19:00 reset sits in the inbox, not yet due.
