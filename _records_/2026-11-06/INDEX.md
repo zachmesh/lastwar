@@ -2797,3 +2797,16 @@ of 2026-10-28.
   (post-1100 batch) already covers the branch, so no new PR was
   opened. Status: failed. Full detail in
   arms-race/1349-queue-run.md.
+
+## 14:00 to about 14:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1400.
+  Non-batch pass per the checker (not due, next batch
+  15:00). No knowledge or code PR open. Records PR 365
+  (head 1ddc66c2, 30 commits) clean, awaiting the 15:00
+  batch. Records PRs 351, 350, 301, 265 and 256 still
+  conflicted on the single-file action-log append-append,
+  re-verified by merge-tree against unchanged main
+  6f85cf6a; heads unchanged since the 1345 pass, no
+  comment repeated. No PR opened, none merged. Status:
+  no-op. Full detail in pr-integration/1400-run.md.
