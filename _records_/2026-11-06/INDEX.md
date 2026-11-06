@@ -1387,3 +1387,19 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 77, claimed 0, done 1003, upcoming 51. Status:
   done. Full detail in queue-planning/0640-run.md.
+- Integrator pass pr-integration-2026-11-06-0645.
+  Non-batch pass per the checker (not due, outside
+  every batch window, next batch 07:00). Two knowledge
+  PRs merged: 357 (survivor-intake 1.32.0, squash
+  98ba564764) and 358 (alliance-gifts 1.28.0, squash
+  b231154462); local main synced back by bundle
+  fast-forward to b231154462. Six records PRs await
+  the 07:00 batch, all verified mergeable clean by
+  merge-tree against new main b231154462: PR 351
+  (records/2026-11-05), PR 350 (records/2026-11-01),
+  PR 347 (records/2026-11-06), PR 301
+  (records/2026-11-04), PR 265 (records/2026-11-02),
+  PR 256 (records/2026-11-03). No comments, no
+  escalations. The log line for this run is owed at
+  the 07:00 batch merge. Full detail in
+  pr-integration/0645-run.md.
