@@ -2133,6 +2133,43 @@ of 2026-10-28.
   hand-offs, escalations, flags, chat report or Slack sync.
   Full detail in pr-catchall/1039-run.md.
 
+## 10:40 to about 10:52 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 11 units -
+  already_present 60, skipped_done_current 0, reaped 0,
+  expired 8. The staged units cover the 2203 and 2230 slots
+  (mail, help, gifts, train, star-ceremony at 2230;
+  harvest, radar, survivors, training, donations, arms-race
+  at 2203).
+- Expired: 8 units whose windows passed unexecuted (0630
+  slot: gifts, help, mail, star-ceremony, train; 0603 slot:
+  survivors, training, harvest). Seven were carried into
+  this commit. The eighth, harvest-2026-11-06-0603, was
+  withheld: the branch already holds it in done with a
+  failed result from ticker-0704 (Mac mini offline, 73rd
+  consecutive pass), so the live pool's inbox copy was stale
+  and the plan's expired result would have overwritten the
+  true failed trajectory; the branch's failed version was
+  restored into the live pool instead.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-06 (chain
+  pre-reset-sweep-2026-11-06) is already in inbox, both units
+  (first pass not_before 17:30 local, final pass 18:30 local,
+  both expire 19:00 local).
+- Scout diff on the Nov 4 observation (forty-first planner run
+  to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-05-1900 still in inbox
+  unexecuted): dry run and apply agree, all zero - observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates 0,
+  unexplained red dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 still has
+  3 comments, no owner pick yet, PR #337 merged, closure with
+  the retro. No new Issue filed. Live tools/regulars.json still
+  carries no duel-score or zero-sweep regular (re-verified).
+- Pool: inbox 79, claimed 0, done 1020, upcoming 53. Status:
+  done. Full detail in queue-planning/1040-run.md.
 ## 10:45 to about 10:55 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-06-1045.
