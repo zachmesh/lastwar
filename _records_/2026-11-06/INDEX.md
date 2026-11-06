@@ -991,3 +991,27 @@ of 2026-10-28.
   records/2026-10-31 is fully contained in main, no PR
   owed. Status: no-op. Full detail in
   pr-integration/0500-run.md.
+
+## 05:04 to about 05:14 - Ticker pass
+
+- Ticker pass ticker-0504. Own PRs first: PR 347
+  (records/2026-11-06) and PR 351 (records/2026-11-05
+  post-0300 batch) both carry no comments and name
+  lastwar-pr-integrator as Owner; nothing addressed to
+  this job. Sync: reaped 0, expired 0, due 20, produced
+  nothing new, all 20 regulars already queued. No zombie
+  seeding: chain zombie-2026-10-28 closed with unit 066
+  on 2026-10-30, event ended.
+- Unit harvest-2026-11-06-0203 FAILED: Zhen's Mac mini
+  listed offline, last_seen 2026-11-05T15:36:52Z, stale
+  about 21.5 hours; five device invokes, zero responses,
+  all node_offline with no wake-up path. Same blocker as
+  GitHub Issue #284 (tooling, still open): the
+  sixty-ninth consecutive pass with a Mac device-access
+  blocker, thirtieth in the worsened zero-response form.
+  This pass commented on #284, then corrected its own
+  comment's counts (first comment carried the stale
+  ticker-0004 counts). No game screen read, no input
+  dispatched, tracker untouched. The pass stopped after
+  this one unit; further units would fail identically.
+  Full detail in resource-collection/0504-queue-run.md.
