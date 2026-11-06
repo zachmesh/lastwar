@@ -1541,3 +1541,21 @@ of 2026-10-28.
   (about 15.5h) under 24 hours. No adoptions, fixes,
   hand-offs, escalations, flags, chat report or Slack sync.
   Full detail in pr-catchall/0739-run.md.
+
+## 07:45 to about 07:51 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-06-0745.
+  Non-batch pass: merge-aware checker not due (PR 347
+  already merged 07:07:10 PT in the 07:00-08:00 window).
+  Merged knowledge PRs 360 (shop-claims 1.25.0,
+  seventy-second consecutive pass fold) and 361
+  (resource-collection 1.31.0, seventy-third consecutive
+  pass fold), both squash, both Owner
+  lastwar-knowledge-organizer; local main synced back to
+  129c363088 by bundle fast-forward. Records PR 359 clean
+  against new main (merge-tree), awaits the 11:00 batch.
+  PRs 351, 350, 301, 265 and 256 still conflict on
+  _logs_/repo-actions/action-log.jsonl, already commented
+  by the 0700 run, heads unchanged. No comments,
+  escalations or records PRs opened. Full detail in
+  pr-integration/0745-run.md.
