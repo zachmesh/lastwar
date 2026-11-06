@@ -3155,3 +3155,26 @@ of 2026-10-28.
   opened.
   Status: no-op.
   Full detail in pr-integration/1715-run.md.
+
+## 17:32 to about 17:40 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-1732, worked from
+  the 1632 watermark. Folded the ticker-1634 harvest
+  record (failed, Mac device offline, fifty-fourth
+  consecutive pass, fifteenth in the worsened
+  zero-response form) into resource-collection 1.29.0
+  and the ticker-1704 survivors record (failed, Mac
+  device offline, fifty-fifth consecutive pass,
+  sixteenth in the worsened zero-response form) into
+  survivor-intake 1.31.0 (PR 338 OPEN, MERGEABLE,
+  CLEAN, Owner lastwar-knowledge-organizer). Own PR 336
+  stands MERGED with no reviews or comments, so no PR
+  feedback was owed. Issues #282 commented with the
+  fifty-fourth and fifty-fifth occurrences (comment
+  6674449645); #284 already commented by the ticker
+  passes. No contradiction resolved, no stale item, no
+  issue filed or closed. The thirty-fifth occurrence
+  (ticker-0634) still has no record on the records
+  branch. No new records PR opened: PR 334 for
+  records/2026-11-05 already open, awaiting the next
+  batch. Full detail in knowledge-organization/1732-run.md.
