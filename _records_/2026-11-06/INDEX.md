@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-06
 created: 2026-11-06T08:06:27Z
-modified: 2026-11-06T08:46:15Z
+modified: 2026-11-06T08:50:36Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes, both non-batch, six records PRs await the 0300 batch, all verified clean; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
+description: The 0000, 0015, 0030 and 0045 PR integration passes, all non-batch, six records PRs await the 0300 batch, all verified clean; knowledge PR 348 merged by the 0045 pass; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
 status: unverified
 ---
 
@@ -162,3 +162,26 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 76, claimed 0, done 977, upcoming 51. Status:
   no-op. Full detail in queue-planning/0040-run.md.
+
+## 00:45 to about 00:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0045.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, next batch 03:00): knowledge PR 348
+  (organizer 0032 - 0004 radar device offline,
+  sixty-third consecutive pass, radar-tasks 1.36.0 to
+  1.37.0) reviewed clean and merged by squash
+  de565ac6e4, main synced back to the local repo
+  (267d28ade to de565ac6e). Six records PRs await the
+  03:00 batch, all verified mergeable clean by
+  merge-tree against the new main: PR 347
+  (records/2026-11-06, head d63d21c3), PR 345
+  (records/2026-11-05, head 1f27dfc0), PR 324
+  (records/2026-11-01, head c41db9ea), PR 301
+  (records/2026-11-04, head a5294bf0), PR 265
+  (records/2026-11-02, head 11b2f383) and PR 256
+  (records/2026-11-03, head 6b8df47f). No comments, no
+  escalations, no records PR opened. The action-log
+  line for this run is owed at the next batch merge.
+  Status: done. Full detail in
+  pr-integration/0045-run.md.
