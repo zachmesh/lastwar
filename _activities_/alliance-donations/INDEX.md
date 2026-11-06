@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-06T06:35:00Z
+modified: 2026-11-06T13:36:43Z
 level: L1
-version: 1.40.0
+version: 1.41.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -48,6 +48,7 @@ grounded_in:
   - source: ticker-1204 alliance-donations execution record 2026-11-05 1204 queue run (failed, Mac device offline, forty-fifth consecutive ticker pass to fail this way, sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 4h30m, unchanged since the 1025 pass; five invokes, zero responses)
   - source: ticker-1604 alliance-donations execution record 2026-11-05 1606 queue run (failed, Mac device offline, fifty-third consecutive ticker pass to fail this way, fourteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 8h30m, unchanged since the 1025 pass; six invokes, zero responses)
   - source: ticker-2152 alliance-donations execution record 2026-11-05 2152 queue run (failed, Mac device offline, sixty-first consecutive ticker pass to fail this way, twenty-second in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 14h25m, unchanged since the 1025 pass; five invokes, zero responses; no recovery-device attempts, recovery device offline with the same frozen last_seen)
+  - source: ticker-0434 alliance-donations execution record 2026-11-06 0434 queue run (failed, Mac device offline, sixty-eighth consecutive ticker pass to fail this way, twenty-ninth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 21h, unchanged since the 0342 and 0404 passes; five invokes, zero responses; no recovery-device attempts, recovery device offline with the same frozen last_seen)
 ---
 
 
@@ -2304,3 +2305,12 @@ enqueued for after the cooldown (not before about
 - Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it.
 - Pre-reset zero-sweep pair staged for the 2026-11-06 19:00 reset, chain pre-reset-sweep-2026-11-06: unit 001 not_before 2026-11-07T01:30:00Z, unit 002 not_before 2026-11-07T02:30:00Z, both priority 1, expiring at the reset 2026-11-07T03:00:00Z. Tonight's pair (for the 2026-11-05 reset, staged by the 1604 pass) expired unexecuted on the same Mac device blocker, second consecutive night. The sweep is queue planning, not a donations measurement: it changes no Donation Count claim.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The pass stopped after this unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 23, produced nothing new, all 23 regulars already queued; the inbox held 69 units at this pass.
+
+## What the 2026-11-06 0434 unit added - Mac device offline, sixty-eighth consecutive pass, zero-response form
+
+- Unit donations-2026-11-06-0203 by ticker-0434, about 04:34 to 04:39 local, status failed. Evidence in `_records_/2026-11-06/alliance-donations/0434-queue-run.md`. On a working screen this unit would have opened Alliance Techs and donated with the coin button until the daily count was used up or the button greyed on its cooldown, then closed on a live Donation Count read. No donation was made. The loss is the unexecuted donations check for this slot (planned 02:03 local 2026-11-06, expires 06:03 local 2026-11-06).
+- No game screen was ever read and no game input was dispatched. Five device invokes, zero responses, all node_offline (device offline, no wake-up path): connection.health (attempts 1 and 4), connection.repair (web) (attempt 2), computer.session start (attempts 3 and 5). device.list reports the Mac mini offline with last_seen 15:36:52Z, stale about 21 hours at the 04:36 re-check, unchanged since the ticker-0342 and ticker-0404 passes. No recovery-device attempts were made: the recovery device is offline with the same frozen last_seen 15:36:52Z, and the ticker-0234 pass attempted its recovery channel and timed out after 25 seconds, so nothing new would be learned by repeating it. No probe was run: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the sixty-eighth consecutive ticker pass with a Mac device-access blocker, twenty-ninth in the worsened zero-response form after ticker-0404 (sixty-seventh, twenty-eighth). No executed pass is recorded between 0404 and this one. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the sixty-eighth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it.
+- Pre-reset zero-sweep pair for the 2026-11-06 19:00 reset, chain pre-reset-sweep-2026-11-06: unit 001 not_before 2026-11-07T01:30:00Z, unit 002 not_before 2026-11-07T02:30:00Z, both priority 1, expiring at the reset 2026-11-07T03:00:00Z; not yet due, untouched by this pass. The sweep is queue planning, not a donations measurement: it changes no Donation Count claim.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 20, produced nothing new, all 20 regulars already queued; the inbox held 75 units at this pass (76 at the 0404 sync, one fewer after its failed unit moved to done).
