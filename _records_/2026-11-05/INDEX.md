@@ -3946,3 +3946,33 @@ of 2026-10-28.
   issue, about five and a half hours old, registered as
   OD-20261105-01 in the retro. Full detail in
   pr-catchall/2139-run.md.
+
+## 21:40 to about 21:46 - queue-planning-2026-11-05-2140, no-op
+
+- Pass queue-planning-2026-11-05-2140: no-op. Own PRs
+  first: 6 open PRs, none owned by this job and no comment
+  addressed to it (PR 340/343/324/301/265/256).
+- Plan: `tools/queue.py plan --hours 12` staged 0 units;
+  already_present 70, skipped_done_current 0, reaped 0,
+  expired 0. The next 12 hours of baseline units are already
+  staged.
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) expired unexecuted,
+  second consecutive night, on the Mac device blocker.
+  0 enqueued.
+- Scout diff on the Nov 4 observation (thirty-first
+  planner run to consume it): dry run and apply agree,
+  all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0.
+  No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 still has no owner answer (3 comments,
+  all from zachmesh; retro registered OD-20261105-01, PR
+  #337 merged) and stays open pending retro closure - an
+  integrator-job question that changes nothing in this
+  plan. No new Issue filed.
+- Pool: inbox 76, claimed 0, done 959, upcoming 49.
+  Status: no-op. Full detail in queue-planning/2140-run.md.
