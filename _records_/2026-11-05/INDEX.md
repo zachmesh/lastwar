@@ -3155,3 +3155,27 @@ of 2026-10-28.
   opened.
   Status: no-op.
   Full detail in pr-integration/1715-run.md.
+
+## 17:38 to about 17:42 - ticker-1734 pass
+
+- Ticker pass ticker-1734. Daily missions unit
+  daily-missions-2026-11-04-1800 failed: the Mac mini is
+  offline with no wake-up path (device.list last_seen
+  15:36:52Z, stale about 10 hours, unchanged since the
+  ticker-1025 pass). Seven device invokes, zero responses:
+  computer.session start on the Mac mini node_offline three
+  times, connection.health and connection.repair (web) on
+  the Mac mini node_offline, connection.repair (native) and
+  connection.health on the recovery device both
+  node_invoke_timeout after 25s. This is the fifty-sixth
+  consecutive ticker pass with a Mac device-access blocker
+  (Issue 284), seventeenth in the worsened zero-response
+  form. Recovery still needs the Mac back online first,
+  then the Mac-side agent gateway restart if invokes still
+  stall. Commented on Issue 284. No mission list read, no
+  task claimed, no activity chest claimed. Tracker
+  untouched. The pass stopped after this one unit. Sync
+  produced 5 new units (passes, secrets, treasures, trucks,
+  events for the 1457 slot). Zombie Invasion chain stays
+  closed (event ended 2026-10-30). Full detail in
+  daily-missions/1734-queue-run.md.
