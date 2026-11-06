@@ -3646,3 +3646,21 @@ of 2026-10-28.
   branch. No Slack sync, no chat report: routine hourly
   fold of a tracked device fault and a clean sweep.
   Full detail in knowledge-organization/1932-run.md.
+- Integrator pass pr-integration-2026-11-05-1945.
+  Non-batch pass: checker merge-aware not due, PR 334
+  already merged in the 1900 window at 19:05:25 PT
+  (plain due had said yes, clock-only) - third
+  consecutive in-window merge-aware not-due pass after
+  the 1923 and 1930 passes, same governing merge.
+  Knowledge PR 341 reviewed clean and squash-merged
+  (organizer 1932: 1834 scout into perception-scout
+  1.23.0, 1933 radar into radar-tasks 1.36.0; merge
+  commit e0433644, mergedAt 19:49:55 PT). Five records
+  PRs only otherwise: PR 340 (records/2026-11-05, head
+  97539ac7) clean, awaiting the 23:00 batch; PRs 324,
+  301, 265 and 256 carried on the 1500 pass conflict
+  notes, no repeat comment. Merge-tree against new main
+  e0433644 re-verified all four still conflict on exactly
+  the single action-log.jsonl file, scope unchanged.
+  No records PR opened, no escalation. Status: done.
+  Full detail in pr-integration/1945-run.md.
