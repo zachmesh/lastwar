@@ -3664,3 +3664,17 @@ of 2026-10-28.
   the single action-log.jsonl file, scope unchanged.
   No records PR opened, no escalation. Status: done.
   Full detail in pr-integration/1945-run.md.
+- Integrator pass pr-integration-2026-11-05-2000.
+  Non-batch pass: checker plain and merge-aware both not
+  due, next batch 23:00 PT (about 3 hours away). No
+  knowledge or code PR open. Five records PRs only: PR 340
+  (records/2026-11-05, head db08b81c, advanced from
+  97539ac7 since the 1945 pass) clean, awaiting the 23:00
+  batch; PRs 324, 301, 265 and 256 carried on the 1500
+  pass conflict notes, no repeat comment. Merge-tree
+  against current main e0433644 re-verified all four
+  still conflict on exactly the single action-log.jsonl
+  file, scope unchanged, so the GitHub flags are accurate
+  this pass. No records PR opened, no escalation.
+  Status: done.
+  Full detail in pr-integration/2000-run.md.
