@@ -2914,3 +2914,36 @@ of 2026-10-28.
   PST. No adoptions, fixes, hand-offs, escalations, flags,
   chat report or Slack sync. Full detail in
   pr-catchall/1448-run.md.
+
+## 14:40 to about 14:47 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 11 units -
+  already_present 60, skipped_done_current 0, reaped 0,
+  expired 9. The staged units are the 0203/0230 slots of
+  2026-11-07; the expired units are the 1003/1030 slots of
+  2026-11-06, window passed before execution.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-06 (chain
+  pre-reset-sweep-2026-11-06) is already in inbox, both units
+  (first pass not_before 17:30 local, final pass 18:30 local,
+  both expire 19:00 local).
+- Scout diff on the Nov 4 observation (forty-fifth planner run
+  to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-05-1900 still in inbox
+  unexecuted): fixed branch-tip tool applied - observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates 0,
+  unexplained red dots 4 (distinct named 2), promotion
+  proposals 0. The live tree's stale pre-#303 tool reads all
+  zero including unexplained 0 for comparison. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 still has
+  3 comments, no owner pick yet, PR #337 merged, closure with
+  the retro. No new Issue filed. Live tools/regulars.json still
+  carries no duel-score or zero-sweep regular (re-verified).
+  Branch duplicate noted: arms-race-2026-11-06-1003 sits in
+  both inbox and done on the branch (stale inbox copy, Issue
+  #213 pattern); left untouched, flagged for integrator/retro.
+- Pool: inbox 79, claimed 0, done 1036, upcoming 53. Status:
+  done. Full detail in queue-planning/1440-run.md.
+
