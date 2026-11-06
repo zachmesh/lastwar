@@ -1317,3 +1317,27 @@ of 2026-10-28.
   (records class, filed by the retro). No Slack sync, no
   chat report: quiet routine fold. Full detail in
   knowledge-organization/0632-run.md.
+## 06:34 to about 06:38 - Ticker pass
+
+- Ticker pass ticker-0634. Own PRs first: PR 347
+  (records/2026-11-06, the live records PR for today) carries
+  no unanswered question - its newest comment is the
+  ticker-0342 branch-side reconciliation of the 03:00 batch
+  conflict; the other open records PRs (351, 350, 301, 265,
+  256) carry no new comments. Nothing addressed to this job.
+- Sync: reaped 0, expired 15, due 22, produced one new unit
+  (duel-score-2026-11-06-0630), 20 regulars already queued.
+  No zombie seeding: the zombie chain closed with unit 066 on
+  2026-10-30 and the event ended; no fresh chain until a
+  Zombie Invasion tab is seen live again.
+- Unit passes-2026-11-06-0257 failed: Mac mini offline,
+  last_seen 2026-11-05T15:36:52Z, four device invokes all
+  node_offline with no wake-up path. Same blocker as GitHub
+  Issue #284 (tooling, still open): the seventy-second
+  consecutive pass with a Mac device-access blocker,
+  thirty-third in the worsened zero-response form.
+  This pass commented on #284 instead of filing a
+  duplicate. No game screen read, no input dispatched,
+  tracker untouched. The pass stopped after this one unit;
+  further units would fail identically. Full detail in
+  shop-claims/0634-queue-run.md.
