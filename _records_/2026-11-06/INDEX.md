@@ -1616,3 +1616,18 @@ of 2026-10-28.
   by the 0700 run, heads unchanged. No comments,
   escalations or records PRs opened. Full detail in
   pr-integration/0745-run.md.
+
+## 08:00 to about 08:04 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-06-0800.
+  Non-batch pass: checker _tools_/records_batch.py not
+  due (outside every batch window, next batch 11:00).
+  No merges, no comments, no records PRs opened, no
+  knowledge or code PR open. PR 359 (records/2026-11-06,
+  head c2f7d7b8) verified clean against main 129c363088
+  by merge-tree and GitHub MERGEABLE CLEAN, awaits the
+  11:00 batch. PRs 351, 350, 301, 265 and 256 still
+  conflict on _logs_/repo-actions/action-log.jsonl,
+  already commented by the 0700 run, heads unchanged.
+  Local main already at 129c363088, no sync-back owed.
+  Full detail in pr-integration/0800-run.md.
