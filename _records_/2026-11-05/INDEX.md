@@ -3580,3 +3580,38 @@ of 2026-10-28.
   both over 24 hours with statements current; issue 335 is a
   third owner-decision issue, about three and a half hours old.
   Full detail in pr-catchall/1939-run.md.
+
+## 19:40 to about 19:47 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-1940: done. Own PRs
+  first: 5 open PRs, none owned by this job and no comment
+  addressed to it (PR 340/324/301/265/256 integrator records).
+- Plan: `tools/queue.py plan --hours 12` staged 6 units -
+  passes, secrets, treasures, trucks and events for the 0657
+  slot and scout-midday for the 0700 slot, all of 2026-11-06;
+  already_present 64, skipped_done_current 0, reaped 0,
+  expired 10 (the 1457 slot of 2026-11-05, the post-reset
+  scout unit scout-2026-11-04-1900, daily-missions and vip
+  of 2026-11-04-1900, and tonight's pre-reset sweep pair,
+  window passed before execution). The 10 expired units
+  were already expired on the branch by the ticker-1933
+  sync, so only the 6 staged units ride this commit.
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) expired unexecuted,
+  second consecutive night, on the Mac device blocker;
+  standing task text was in place in both units. 0 enqueued.
+- Scout diff on the Nov 4 observation (twenty-ninth
+  planner run to consume it): dry run and apply agree,
+  all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0.
+  No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 still has no owner answer (2 comments,
+  both from zachmesh, none from the owner) and stays open
+  pending retro closure - an integrator-job question that
+  changes nothing in this plan. No new Issue filed.
+- Pool: inbox 76, claimed 0, done 959, upcoming 49.
+  Status: done. Full detail in queue-planning/1940-run.md.
