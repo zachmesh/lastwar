@@ -1473,3 +1473,17 @@ of 2026-10-28.
   form) - evidence only, recovery is device-side. No branch,
   no PR, no Slack message. Full detail in
   tool-development/0732-run.md.
+
+- Integrator pass pr-integration-2026-11-06-0730.
+  Non-batch pass per the merge-aware checker (not due,
+  PR #347 already merged 07:07:10 PT in the 07:00-08:00
+  window; next batch 11:00). No knowledge or code PR
+  open. Six records PRs open: PR 359 (records/2026-11-06,
+  clean, 5 commits, head f3bd6f7cdd81) awaits the 11:00
+  batch; PRs 351, 350, 301, 265 and 256 still conflict on
+  _logs_/repo-actions/action-log.jsonl, already commented
+  by the 0700 run, heads unchanged, no repeat comment.
+  Merge-tree re-verified against main 5e98db2f04. No
+  merges, no comments, no escalations. The log line for
+  this run is owed at the 11:00 batch merge. Full detail
+  in pr-integration/0730-run.md.
