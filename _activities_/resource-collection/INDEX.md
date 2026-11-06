@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-06T13:36:43Z
+modified: 2026-11-06T15:32:17Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-0904 resource-collection execution record 2026-11-05 0904 queue run (failed, Mac device invoke channel stall, zero responses to any invoke, fortieth consecutive ticker pass with a Mac device-access blocker, first recording of the worsened zero-response form, Issue 284)
   - source: ticker-1634 resource-collection execution record 2026-11-05 1634 queue run (failed, Mac device offline, fifty-fourth consecutive ticker pass with a Mac device-access blocker, fifteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 9h04m, unchanged since the 1025 pass; five invokes, zero responses)
   - source: ticker-0504 resource-collection execution record 2026-11-06 0504 queue run (failed, Mac device offline, sixty-ninth consecutive ticker pass with a Mac device-access blocker, thirtieth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 21h30m, unchanged since the 0004 pass; five invokes, zero responses)
+  - source: ticker-0704 resource-collection execution record 2026-11-06 0704 queue run (failed, Mac device offline, seventy-third consecutive ticker pass with a Mac device-access blocker, thirty-fourth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 23h36m, unchanged since the 0534 pass; four invokes, zero responses, no recovery-device attempts)
 ---
 
 
@@ -1093,3 +1094,11 @@ regular stays due. Evidence in
 - Recurrence, not a new failure class: this is the sixty-ninth consecutive ticker pass with a Mac device-access blocker, thirtieth in the worsened zero-response form after ticker-0434 (sixty-eighth, twenty-ninth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate (its first comment carried the stale ticker-0004 counts, 64th/25th, then posted a correction to 69th/30th), and this run comments the sixty-ninth occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed. The Armed Truck state is unknown.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 20, produced nothing new, all 20 regulars already queued; the inbox held 74 units at this pass close (74 at sync).
+
+## What the 2026-11-06 0704 unit added - Mac device offline, seventy-third consecutive pass, zero-response form
+
+- Unit harvest-2026-11-06-0603 by ticker-0704, about 07:04 to 07:14 local, status failed. Evidence in `_records_/2026-11-06/resource-collection/0704-queue-run.md`. No bubble count was read, no bubble was collected, and the Armed Truck state is unread. No resource collected, no diamonds, money, speedup items or paid button touched. The loss is the unexecuted harvest check for this slot (planned 06:03 local 2026-11-06, expires 10:03 local 2026-11-06).
+- No game screen was ever read and no game input was dispatched. Four device invokes, zero responses, all node_offline (device offline, no wake-up path): connection.health (attempts 1 and 4), connection.repair (web) (attempt 2), computer.session start (attempt 3). device.list reports the Mac mini offline with last_seen 15:36:52Z, stale about 23 hours 36 minutes at the 07:12 re-check, unchanged since the ticker-0534 pass and re-verified unchanged by the ticker-0604 and ticker-0634 passes. No recovery-device attempts were made: the recovery device is offline with the same frozen last_seen 15:36:52Z, and its attempts in the ticker-0234 pass timed out after 25 seconds each, so nothing new would be learned by repeating them. No probe was run: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the seventy-third consecutive ticker pass with a Mac device-access blocker, thirty-fourth in the worsened zero-response form after ticker-0634 (seventy-second, thirty-third). No executed pass is recorded between 0634 and this one. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the seventy-third occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the harvest state. It must NOT be read as "nothing collectible" or as a bubble state - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The full edge-drag sweep of the 2026-11-01 rule remains incomplete from the 1101 unit and is carried forward, not closed. The Armed Truck state is unknown.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 5, due 22, produced no new unit, 22 regulars already queued; the inbox held 54 units at this pass close (55 counting the claimed harvest unit, after 5 expired units were reaped).
