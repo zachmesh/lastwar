@@ -4205,3 +4205,28 @@ of 2026-10-28.
   heads unchanged, so no comment repeated. Local main
   synced back to dd95a0d8 via bundle. Status: done.
   Full detail in pr-integration/2300-run.md.
+
+## 23:10 to about 23:14 - ticker-2303 ghost-ops unit, failed on Mac offline
+
+- Ghost Ops unit ghost-ops-2026-11-05-0000, failed, ticker-2303: no
+  game screen was ever read and no game input was dispatched.
+  Five device invokes, zero responses, all node_offline with no
+  wake-up path: connection.health twice, computer.session start
+  twice, connection.repair (web) once. device.list still reports
+  the Mac mini offline with last_seen 15:36:52Z, stale about 15
+  hours 35 minutes, unchanged since the ticker-1025 pass. This is
+  the sixty-second recorded consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), twenty-third in the
+  worsened zero-response form; passes between 2152 and 2303 left
+  no record on the branch, so the true count may be higher.
+  Commented on Issue 284. No Ghost Ops tab read, no missions run,
+  no rewards claimed. Tracker untouched. The pass stopped after
+  this one unit. Sync reaped 0, expired 5 (1857 slots), produced
+  nothing new; Zombie Invasion chain stays closed (event ended
+  2026-10-30). Own PRs first: the four stale records PRs (324,
+  265, 256, 301) reconciled on the branch side against main
+  dd95a0d8 and commented; PR 340 merged, this pass rides open
+  PR 345. The 2026-11-06 pre-reset zero-sweep pair, staged by
+  ticker-2152 on the branch only, was copied verbatim into the
+  live pool inbox.
+  Full detail in ghost-ops/2303-queue-run.md.
