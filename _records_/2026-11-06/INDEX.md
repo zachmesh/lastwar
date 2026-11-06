@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-06
 created: 2026-11-06T08:06:27Z
-modified: 2026-11-06T10:48:43Z
+modified: 2026-11-06T11:47:00Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015, 0030, 0045 and 0100 PR integration passes, all non-batch, six records PRs await the 0300 batch, all verified clean; knowledge PR 348 merged by the 0045 pass; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
@@ -681,3 +681,30 @@ of 2026-10-28.
   hours with statements current, issue 335 (about twelve hours)
   under 24 hours. No Slack sync, no chat report: quiet run.
   Full detail in pr-catchall/0339-run.md.
+## 03:40 to about 03:47 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 5 units -
+  planned [passes-2026-11-06-1457, secrets-2026-11-06-1457,
+  treasures-2026-11-06-1457, trucks-2026-11-06-1457,
+  events-2026-11-06-1457], already_present 64,
+  skipped_done_current 0, reaped 0, expired 4
+  (events/secrets/treasures/trucks-2026-11-05-2257, window
+  passed before execution). The 1457 UTC slot entered the
+  12-hour horizon this run.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-06 (chain
+  pre-reset-sweep-2026-11-06) is already in inbox, both units.
+- Scout diff on the Nov 4 observation (thirty-fourth planner run to
+  consume it; no Nov 5 or Nov 6 observation yet, the post-reset
+  scout unit scout-2026-11-05-1900 still in inbox unexecuted):
+  dry run and apply agree, all zero - observed 0, actionable 0,
+  enqueued 0, already-queued 0, candidates 0, unexplained red
+  dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 still has
+  3 comments, no owner pick yet, PR #337 merged, closure with
+  the retro. No new Issue filed. Live tools/regulars.json still
+  carries no duel-score or zero-sweep regular (re-verified).
+- Pool: inbox 77, claimed 0, done 992, upcoming 51. Status:
+  done. Full detail in queue-planning/0340-run.md.
