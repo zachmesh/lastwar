@@ -3521,3 +3521,22 @@ of 2026-10-28.
   This pass supplies the in-window merge-aware not-due
   evidence issue #335 still owed. Status: no-op.
   Full detail in pr-integration/1923-run.md.
+
+## 19:30 to about 19:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1930.
+  Non-batch pass: checker merge-aware not due, PR 334
+  already merged in the 19:00 window at 19:05:25 PT
+  (plain due had said yes, clock-only) - second
+  consecutive in-window merge-aware not-due pass after
+  the 1923 pass, same governing merge. No knowledge
+  or code PR open. Five records PRs only: PR 340
+  (records/2026-11-05, head bc4a751b) clean, awaiting
+  the 23:00 batch; PRs 324, 301, 265 and 256 carried
+  on the 1500 pass conflict notes, no repeat comment.
+  Merge-tree against main 1caa8f81 (unchanged since
+  the 1923 pass) re-verified all four still conflict
+  on exactly the single action-log.jsonl file, scope
+  unchanged. No merges, no comments, no records PR
+  opened. Status: no-op.
+  Full detail in pr-integration/1930-run.md.
