@@ -771,3 +771,34 @@ of 2026-10-28.
   escalations, no records PR opened. records/2026-10-31
   is fully contained in main, no PR owed. Status: no-op.
   Full detail in pr-integration/0400-run.md.
+
+## 04:04 to about 04:10 - Ticker pass
+
+- Own PRs first: PR 347 (records/2026-11-06) carries no new
+  comments since the ticker-0342 pass reconciled its 03:00
+  batch conflict on the branch side (merge 9a716619ce) and
+  replied on the PR. The other open records PRs (351, 301,
+  265, 256) carry no new comments. Nothing addressed to this
+  job. No PR action needed this pass.
+- Arms Race unit arms-race-2026-11-06-0203, failed,
+  ticker-0404: no game screen was ever read and no game input
+  was dispatched. The Mac mini is offline with no wake-up
+  path - connection.health, connection.repair (web) and
+  computer.session start all node_offline (five invokes, zero
+  responses). device.list last_seen still frozen at
+  2026-11-05T15:36:52Z, about 20 hours 30 minutes stale. This
+  is the sixty-seventh recorded consecutive pass with this
+  blocker (Issue 284, open, tooling), twenty-eighth in the
+  worsened zero-response form; Issue 284 commented instead of
+  filing a duplicate. No arms-race screen read, no phase
+  worked, nothing claimed. Tracker untouched. The pass stopped
+  after this one unit. Full detail in
+  arms-race/0404-queue-run.md.
+- Sync: reaped 0, expired 0, due 20, produced nothing new, all
+  20 regulars already queued. Pool after the pass: inbox 75,
+  claimed 0, done 994.
+- No zombie seeding: no Zombie Invasion tab in the Events hub,
+  consistent with the event close of 2026-10-30;
+  zombie-invasion inbox 0 per stats. The pre-reset zero-sweep
+  pair for the 2026-11-06 19:00 reset sits in the inbox, not
+  yet due.
