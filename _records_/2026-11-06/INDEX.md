@@ -1658,6 +1658,21 @@ of 2026-10-28.
   by the 0700 run, heads unchanged. Local main already
   at 129c363088, no sync-back owed. Full detail in
   pr-integration/0830-run.md.
+- PR integration pass pr-integration-2026-11-06-0845.
+  Non-batch pass: checker _tools_/records_batch.py not
+  due (outside every batch window, next batch 11:00).
+  Merged knowledge PR 362 (radar-tasks 1.39.0, squash
+  42c6c5a125, main 129c363088 to 42c6c5a125) and
+  fast-forwarded local main to the same commit. Posted
+  re-check comments on records PRs 301, 265 and 256
+  (single-file action-log conflict, re-verified against
+  the advanced main). PR 359 (records/2026-11-06, head
+  be8e7dc3) verified clean against main 42c6c5a125 by
+  merge-tree, awaits the 11:00 batch. PRs 351 and 350
+  still conflict on _logs_/repo-actions/action-log.jsonl,
+  0700 comments still current, heads unchanged. No
+  records PR opened or merged, no escalations. Full
+  detail in pr-integration/0845-run.md.
 
 ## 08:32 to about 08:40 - Knowledge organization pass
 
