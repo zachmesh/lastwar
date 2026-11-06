@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T20:48:17Z
+modified: 2026-11-05T16:36:24Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-0434 alliance-help execution record 2026-11-04 0451 queue run (done, bubble tile 814,688 left of shield 932,695, one tap clears)
   - source: ticker-0834 alliance-help execution record 2026-11-04 0837 queue run (done, Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies)
   - source: ticker-1224 alliance-help execution record 2026-11-04 1235 queue run (failed, Mac screen-capture channel failure, no game input dispatched, not authorization, not a different-device dialog)
+  - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1235 section wording)
 ---
 
 
@@ -774,3 +775,9 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - No game input was dispatched and no tap was sent, so no in-game state changed. Help All was NOT pressed and no help count was read; nothing observed is claimed.
 - Retry rule satisfied: at least 3 capture attempts were made in this pass (activate plus repeated observe, describe and screenshot attempts) before the access failure was recorded.
 - Follow-up from the record itself: the tracker is untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit with this unit retried first. If the capture failure persists across passes, it escalates as a device-channel fault, not as a repeat of the same taps.
+
+## Correction 2026-11-05 - the game window is windowed on an inactive Space, not in native fullscreen
+
+- Source: the 0134 survivors record (`_records_/2026-11-05/survivor-intake/0134-queue-run.md`, ticker-0134, twenty-sixth consecutive capture failure), re-confirmed by the 0204 gifts record (`_records_/2026-11-05/alliance-gifts/0204-queue-run.md`, ticker-0204, twenty-seventh) and by the 0734 arms-race and 0804 donations records on the same day (thirty-seventh and thirty-eighth occurrences, probe OFF_SCREEN_WINDOW, Chrome observing normally in the same sessions). The View menu lists "Enter Full Screen", so the app is NOT in native fullscreen: it is a windowed 1920x1080 window on an inactive Space, and the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission.
+- Superseded in this profile: the "LastWar app running fullscreen" wording in the 1235 section above. The rest of that section stands unchanged: the capture sequence, the classification (a screen-capture channel failure, not authorization and not a different-device dialog), and the follow-up rule.
+- Follow-up corrected: the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. This correction changes no Help state: no help count was read in the 1235 unit and none is asserted here.

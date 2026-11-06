@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-05T13:37:07Z
-version: 1.30.0
+modified: 2026-11-06T01:36:35Z
+version: 1.31.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-2134 survivor-intake execution record 2026-11-04 2135 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2104 known to fail identically, Issue 284)
   - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-sixth consecutive ticker pass to fail this way, new diagnosis - windowed on an inactive Space, not fullscreen, Issue 284)
   - source: ticker-0504 survivor-intake execution record 2026-11-05 0512 queue run (failed, Mac screen-capture failure on the one cheap probe, no game screen read, no input dispatched, thirty-third consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-1704 survivor-intake execution record 2026-11-05 1704 queue run (failed, Mac device offline, fifty-fifth consecutive ticker pass with a Mac device-access blocker, sixteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 9h30m, unchanged since the 1025 pass; seven invokes, zero responses)
 ---
 
 
@@ -1279,4 +1280,14 @@ Measured on 2026-10-25.
 - Recurrence, not a new failure class: this is the thirty-third consecutive ticker pass to fail on this exact blocker (ticker-0434 the thirty-second). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the thirty-third occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the survivor line state. It must NOT be read as "no survivors waiting" - the 1122 close (gate line verified live with 3 question-mark survivors, taps-not-opening-cards blocker) rests on a live read and stands as the last live read; this unit rests on no read at all. The 1122 follow-up (try the question-mark bubble itself, or a long-press on a freshly grounded figure, re-grounded from a fresh screenshot immediately before tapping) is carried forward, not closed - it now waits on the window returning to the active Space first.
 - The pass stopped after this one unit - every unit needs the same game screen, and the probe says to stop. No other unit was attempted.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-05 1704 unit added - Mac device offline, fifty-fifth consecutive pass, zero-response form
+
+- Unit survivors-2026-11-05-1403 by ticker-1704, about 17:06 to 17:13 local, status failed. Evidence in `_records_/2026-11-05/survivor-intake/1704-queue-run.md`. No survivor count was read, no survivor was recruited, and no Quick Dispatch ran.
+- No game screen was ever read and no game input was dispatched. Seven device invokes, zero responses, across two devices and four distinct commands: computer.session start on the Mac mini three times node_offline (device offline, no wake-up path), connection.health on the Mac mini node_offline, connection.repair (target web) on the Mac mini node_offline, connection.repair (target native) on the recovery device node_invoke_timeout after 25 seconds, connection.health on the recovery device node_invoke_timeout after 25 seconds. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 9 hours 30 minutes at pass time, unchanged since the ticker-1025 pass; the recovery device also reports offline with the same stale last_seen. This meets the standing at-least-3-attempts retry rule.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
+- Recurrence, not a new failure class: this is the fifty-fifth consecutive ticker pass with a Mac device-access blocker, sixteenth in the worsened zero-response form after ticker-1634 (fifty-fourth, fifteenth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the fifty-fifth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the survivor line state. It must NOT be read as "no survivors waiting" - the 1122 close (gate line verified live with 3 question-mark survivors, taps-not-opening-cards blocker) rests on a live read and stands as the last live read; this unit rests on no read at all. The 1122 follow-up (try the question-mark bubble itself, or a long-press on a freshly grounded figure, re-grounded from a fresh screenshot immediately before tapping) is carried forward, not closed - it now waits on the window returning to the active Space first. The standing third-strike survivor blocker (22 of 22 partial in the queue era) is not advanced by this pass, since no screen was ever read.
+- The pass stopped after this one unit: a second unit would hit the same dead channel. Sync at pass start produced nothing new (21 due, all already queued). The Zombie Invasion chain stays closed: the event ended 2026-10-30 about 19:00 and no Zombie Invasion tab has been seen in the Events hub since, so no fresh chain was seeded. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-05) is staged in the inbox (units 001 and 002).
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.

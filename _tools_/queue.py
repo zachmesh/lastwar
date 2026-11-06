@@ -1299,6 +1299,36 @@ def points_duplicates_achieved(stats, regular=None):
             and points != 0 and points == achieved)
 
 
+def points_without_achieved(stats):
+    """True when stats.points is a nonzero gain with no achieved (issue #300).
+
+    points is score gained in this unit, not a running total
+    read (task-unit-queue-design.md per-unit measurement table:
+    points is "score gained, for scoring types"). A closing
+    that writes a screen total into points and no achieved key
+    at all therefore carries a wrong-semantics value the
+    equality detector cannot see - with no achieved there is
+    nothing to compare. The known cases are the three legacy
+    radar closings that wrote the radar-screen total into
+    points (2924/2948/2989, 2026-10-28/29) and one arms-race
+    closing (37500, 2026-10-29-0603), all with no achieved
+    key; the retro summed them as points gained. Presence is
+    by key, not by number: a closing whose achieved is a
+    descriptive string still carries its achieved read and is
+    not flagged (daily-missions 2026-10-31-1900, achieved
+    all-claimable-claimed, points 40 - the 110-to-150 activity
+    gain in its summary). Zero points is not flagged: a unit
+    that gained nothing is not a total copy, mirroring the
+    zero rule in points_duplicates_achieved. This is a
+    warning, never a block.
+    """
+    if not isinstance(stats, dict):
+        return False
+    points = _stat_number(stats.get("points"))
+    return (points is not None and points != 0
+            and "achieved" not in stats)
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
     if state != "claimed":
@@ -1318,6 +1348,7 @@ def cmd_complete(args):
             stats[key.strip()] = _scalar(value)
     missing = missing_stats_keys(args.status, stats)
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
+    points_noach = points_without_achieved(stats)
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -1331,8 +1362,10 @@ def cmd_complete(args):
         "follow_up": args.follow_up or "none",
         "stats": stats,
         "stats_missing": missing,
-        "stats_warnings": (["points duplicates achieved"]
-                           if points_dup else []),
+        "stats_warnings": ((["points duplicates achieved"]
+                            if points_dup else [])
+                           + (["points without achieved"]
+                              if points_noach else [])),
     }
     target = unit_path(args.root, "done", args.unit)
     os.makedirs(state_dir(args.root, "done"), exist_ok=True)
@@ -1349,6 +1382,11 @@ def cmd_complete(args):
               f"equal to stats.achieved - points is score gained "
               f"in this unit, not a running total read; a duel "
               f"total read belongs in achieved only")
+    if points_noach:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"and no stats.achieved - points is score gained "
+              f"in this unit, not a running total read; a screen "
+              f"total belongs in achieved only")
     return 0
 
 
@@ -1499,6 +1537,8 @@ def gather_stats(root):
               "result_status": {}, "chains": {}, "upcoming": 0,
               "stats_incomplete": 0, "stats_incomplete_units": [],
               "stats_points_dup": 0, "stats_points_dup_units": [],
+              "stats_points_no_achieved": 0,
+              "stats_points_no_achieved_units": [],
               "stall_expired": 0, "stall_expired_units": [],
               "newest_finished_at": None,
               "newest_finished_age_minutes": None,
@@ -1598,6 +1638,12 @@ def gather_stats(root):
                     report["stats_points_dup"] += 1
                     report["stats_points_dup_units"].append(
                         f.get("unit"))
+                if points_without_achieved(
+                        dup_stats if isinstance(dup_stats, dict)
+                        else {}):
+                    report["stats_points_no_achieved"] += 1
+                    report["stats_points_no_achieved_units"].append(
+                        f.get("unit"))
                 if status in ("failed", "skipped-needs-owner"):
                     entry["failed"] += 1
                 dur = result.get("duration_seconds")
@@ -1658,6 +1704,10 @@ def cmd_stats(args):
         print(f"  stats_points_dup: {report['stats_points_dup']}")
         print("  stats_points_dup_units: "
               f"[{', '.join(report['stats_points_dup_units'])}]")
+        print(f"  stats_points_no_achieved: "
+              f"{report['stats_points_no_achieved']}")
+        print("  stats_points_no_achieved_units: "
+              f"[{', '.join(report['stats_points_no_achieved_units'])}]")
         d = report["durations_seconds"]
         if d:
             print(f"  durations_seconds: count {d['count']}, "
@@ -1714,6 +1764,10 @@ def cmd_stats(args):
             print(f"  stats points duplicates achieved: "
                   f"{report['stats_points_dup']} "
                   f"({', '.join(report['stats_points_dup_units'])})")
+        if report["stats_points_no_achieved"]:
+            print(f"  stats points without achieved: "
+                  f"{report['stats_points_no_achieved']} "
+                  f"({', '.join(report['stats_points_no_achieved_units'])})")
         d = report["durations_seconds"]
         if d:
             print(f"  durations: n={d['count']} avg={d['avg']}s "
