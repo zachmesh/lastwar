@@ -2604,3 +2604,22 @@ of 2026-10-28.
   records PR opened. The action-log line for this run
   is owed at the next batch merge. Status: done. Full
   detail in pr-integration/1245-run.md.
+
+- Integrator pass pr-integration-2026-11-06-1300.
+  Non-batch pass per the checker (_tools_/records_batch.py
+  due: outside every batch window, next batch 15:00): no
+  knowledge or code PR open. Six records PRs: PR 365
+  (records/2026-11-06, head 688446f2, 21 commits beyond
+  main) verified mergeable clean by real test merge
+  against main 1aff8ce8ad and gh MERGEABLE/CLEAN,
+  awaiting the 15:00 batch; PR 351 (records/2026-11-05,
+  head 57c544d3), PR 350 (records/2026-11-01, head
+  58a6b934), PR 301 (records/2026-11-04, head 75716629),
+  PR 265 (records/2026-11-02, head 1a674db1) and PR 256
+  (records/2026-11-03, head d5be8c03) still CONFLICTING
+  on the single-file action-log append-append, heads
+  unchanged since the 1100 conflict comments, so no
+  comment repeated. No comments, no escalations, no
+  records PR opened. The action-log line for this run
+  is owed at the next batch merge. Status: done. Full
+  detail in pr-integration/1300-run.md.
