@@ -2376,3 +2376,28 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 79, claimed 0, done 1025, upcoming 53. Status:
   done. Full detail in queue-planning/1140-run.md.
+
+## 11:45 to about 11:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1145.
+  Non-batch pass per the merge-aware checker (PR 359
+  already merged at 11:07 in the 11:00 window; next batch
+  15:00): knowledge PR 366 (organizer 1132 -
+  radar-tasks 1.40.0, fold ticker-1104 radar failure,
+  seventy-seventh consecutive pass) reviewed clean and
+  merged by squash, main synced back to the local repo
+  (a469658df2 to 1aff8ce8ad). Six records PRs await the
+  15:00 batch: PR 365 (records/2026-11-06, head
+  ba316074) verified mergeable clean by merge-tree
+  against the new main; PR 351 (records/2026-11-05,
+  head 57c544d3), PR 350 (records/2026-11-01, head
+  58a6b934), PR 301 (records/2026-11-04, head
+  75716629), PR 265 (records/2026-11-02, head
+  1a674db1) and PR 256 (records/2026-11-03, head
+  d5be8c03) still CONFLICTING on the single-file
+  action-log append-append, heads unchanged since the
+  1100 conflict comments, so no comment repeated. No
+  comments, no escalations, no records PR opened. The
+  action-log line for this run is owed at the next batch
+  merge. Status: done. Full detail in
+  pr-integration/1145-run.md.
