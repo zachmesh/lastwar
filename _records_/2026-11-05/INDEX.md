@@ -3306,3 +3306,21 @@ of 2026-10-28.
   repeat comment. No new records PRs opened. Status:
   no-op.
   Full detail in pr-integration/1800-run.md.
+- Mail unit mail-2026-11-05-1430, failed, ticker-1804: no
+  game screen was ever read and no game input was dispatched.
+  Seven device invokes, zero responses: computer.session start on
+  the Mac mini node_offline (device offline, no wake-up path)
+  three times, connection.health and connection.repair (web) on
+  the Mac mini node_offline, connection.repair (native) and
+  connection.health on the recovery device both
+  node_invoke_timeout after 25s. device.list still reports the
+  Mac mini offline with last_seen 15:36:52Z, stale about 10 hours
+  30 minutes. This is the fifty-seventh consecutive ticker pass
+  with a Mac device-access blocker (Issue 284), eighteenth in the
+  worsened zero-response form. Recovery still needs the Mac back
+  online first, then the Mac-side agent gateway restart if invokes
+  still stall. Commented on Issue 284. No mail category read, no
+  attachment claimed, no report mail checked. Tracker untouched.
+  The pass stopped after this one unit. Sync produced nothing new;
+  Zombie Invasion chain stays closed (event ended 2026-10-30).
+  Full detail in mail-rewards/1804-queue-run.md.
