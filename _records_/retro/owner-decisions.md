@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-05T04:40:00Z
-version: 1.5.0
+modified: 2026-11-06T04:55:00Z
+version: 1.6.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -234,6 +234,47 @@ one mention in a summary.
   unclaimed. No owner decision appeared.
 - status: open
 
+### OD-20261105-01 - records batch checker due: merge-aware or window-membership only
+
+- opened: 2026-11-05
+- item: whether the records-batch checker `due` should
+  become merge-aware, or the integrator job body
+  should be amended so window membership alone
+  governs batch passes.
+- context: on 2026-11-05 the 1500 batch window saw
+  two merges - PR #310 at 15:12 and PR #330 at
+  15:52. The checker `due` is clock-only by design
+  (window [point, point+60min)), so it reported due
+  for the 1545 pass; the integrator job body step 2
+  NOTE says a pass inside a batch window where a
+  batch merge already happened is NOT a batch pass
+  (only the first pass at or after a batch point
+  merges), while the checker-gate paragraph says the
+  checker verdict is the mechanical definition. Two
+  consecutive passes resolved the same situation
+  differently. Filed as GitHub issue #335 (labels
+  tooling, records, owner-decision); the
+  pr-catchall triage classified the choice itself
+  as owner-gated. Impact of the instance: none on
+  data (PR #330 was verified clean, merged by
+  merge commit, 12 commits, branch kept).
+  Branch (a) is implemented as PR #337
+  (records_batch.py 1.1.0, due gains optional
+  --merges) and awaits integrator review; the tool
+  alone changes no pass behaviour until the
+  integrator job body adopts due --merges.
+- decision needed: either make due merge-aware
+  (consult the last records-merge time) so a second
+  pass in a window reports not due, or amend the
+  body so window membership alone governs and the
+  first-pass NOTE is removed.
+- age tracking: opened 2026-11-05, age 0 days at
+  filing; the retro recomputes and reports the age
+  every run. Interim rule until decided: integrator
+  passes apply the already-merged check on top of
+  the checker, as the 1530 pass did.
+- status: open
+
 ## 2026-11-04 retro notes (all items, ages recomputed)
 
 - OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
@@ -243,6 +284,17 @@ one mention in a summary.
 - OD-20261101-02: age 3 days, unaddressed.
 - OD-20261101-03: age 3 days. The pr-catchall 1939 run keeps noting issue 154 as awaiting the Season Photo decision; the 200 red diamonds stay unclaimed.
 - No new owner-decision item from the Nov 4 window: no skipped-needs-owner outcome on Nov 4 in the live pool, and no owner-gated PR escalated by the integrator. All six items are open longer than 48 hours and are named in the Nov 4 retro chat report and Slack sync until decided.
+
+## 2026-11-05 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 5 days. No new skipped-needs-owner on Nov 5 (no arms unit executed); the gap persists in partial form from Nov 4 (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 5 days, event-bound. Unaddressed a fifth day: no Nov 5 events record mentions the Day 07 tile or a decoration choice, and no Nov 5 events unit executed at all. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 5 days. Nov 5 survivors units (3 expired, 3 failed) keep the close discipline, Quick Dispatch still never ran; consecutive non-done run now 23. Decision unchanged.
+- OD-20261101-01: age 4 days, unaddressed.
+- OD-20261101-02: age 4 days, unaddressed.
+- OD-20261101-03: age 4 days. The pr-catchall runs keep noting issue #154 as awaiting the Season Photo decision; the 200 red diamonds stay unclaimed.
+- OD-20261105-01: age 0 days at filing (issue #335, records batch checker due). PR #337 implements branch (a); the owner choice between (a) and (b) is still owed.
+- No other new owner-decision item from the Nov 5 window: no skipped-needs-owner outcome on Nov 5 in either pool, and no owner-gated PR escalated by the integrator. All six older items are open longer than 48 hours and are named in the Nov 5 retro chat report and Slack sync until decided.
 
 ## Decided
 

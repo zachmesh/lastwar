@@ -242,3 +242,66 @@ remain the immutable source.
 - Batch compliance - 5 records merges audited, all
   inside batch windows, violations 0.
 - Detail - daily retro 2026-11-04 in this folder.
+
+## Entry 2026-11-05
+
+- Derived from - 661 done units, finished local
+  2026-10-30 to 2026-11-05, read from the
+  records/2026-11-05 branch tip 2258401c06.
+  The branch pool lags the live pool by 70 units
+  (live window 731); the branch day figures below
+  understate Nov 3 (branch day 20 units, live day
+  110) and overstate Nov 5 (branch day 128 units,
+  live day 83), and Nov 5 is read from both pools.
+- Totals - done 208, partial 246, skipped-needs-owner
+  5, expired 131, failed 71. Executor time 2,949.2
+  minutes, median unit 263.5 seconds, p90 660
+  seconds. Attempts mean 0.8018, maximum 1.
+- Nov 5 alone, branch pool - 128 finished: done 0,
+  partial 0, failed 35, expired 93. Unverified 128
+  of 128 (100 percent). The day is a zero-execution
+  day: the Mac screen-capture channel failed in the
+  morning and the Mac mini went offline from about
+  07:36 local; the 2041 pass at 20:43 is the
+  sixtieth consecutive failed pass. No game screen
+  read, no game input dispatched, no observation
+  file, no duel total, no phase read.
+- Worst types by done percent - duel-score 0 of 9
+  (9 expired, 0 pairs), zero-sweep 0 of 10,
+  crystal-shop 0 of 2, glittering-market 0 of 2,
+  training 0 of 36, survivors 1 of 37, harvest 2 of
+  36, radar 4 of 37, arms-race 2 of 37, trucks 3 of
+  39.
+- Best types - star-ceremony 22 of 33, treasures 23
+  of 37, help 23 of 34, gifts 23 of 35, train 20 of
+  35, passes 20 of 37.
+- Measurement state - numeric target over achieved
+  pairs 178 branch (224 live), summed attainment
+  0.7414 branch (achieved_sum frozen at 5,610,394 -
+  Nov 5 added zero achieved). Points_total 176
+  reconciled: 2 copied-points units excluded under
+  PR 203, 0 no-achieved-points units excluded under
+  PR 326 (issues #300 and #316 closed this run on
+  that evidence; issue #296 stays open, radar half
+  reclassified by PR 298). Blocker_category named
+  in the tool vocabulary on most non-legacy units;
+  154 branch units lack the key. Tool parse errors 0.
+- Threshold breaches - unexplained red dots NOT
+  PROVEN clean (no Nov 5 observation file at all);
+  expired and unexecuted in day counts (93 branch,
+  58 live on Nov 5) with the inbox half clear (0
+  past-expiry both pools); quota attainment under
+  0.8 rolling (trucks 0.439, donations 0.1492) with
+  no Nov 5 day outcome; unverified day rate 100
+  percent both pools, rolling 85.9 percent branch,
+  with the 20 percent line by Nov 7 unmet on
+  trajectory; daily standing job artifact missing
+  in part (ticker-0634 has no record anywhere,
+  filed as issue #342; Nov 5 observation file
+  missing). No breach on oldest open improvement
+  (#118, 3 days) or closed improvement recurrence
+  on the strict definition. Ledger coverage is
+  a data-gap (no sweep ran), not a pass or fail.
+- Batch compliance - 5 records merges audited, all
+  inside batch windows, violations 0.
+- Detail - daily retro 2026-11-05 in this folder.
