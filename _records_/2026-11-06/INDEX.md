@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-06
 created: 2026-11-06T08:06:27Z
-modified: 2026-11-06T09:49:33Z
+modified: 2026-11-06T10:47:00Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015, 0030, 0045 and 0100 PR integration passes, all non-batch, six records PRs await the 0300 batch, all verified clean; knowledge PR 348 merged by the 0045 pass; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
@@ -463,3 +463,36 @@ of 2026-10-28.
   no chat report: quiet no-op run.
   Status: no-op.
   Full detail in knowledge-organization/0232-run.md.
+
+## 02:34 to about 02:45 - Ticker pass
+
+- Own PRs first: PR 347 (records/2026-11-06) is MERGEABLE
+  CLEAN with no comments; PR 345 (records/2026-11-05
+  post-2300 batch) has no comments, and the four older open
+  records PRs (324, 301, 265, 256) carry no new comments
+  since the ticker-0104 pass. Nothing addressed to this job.
+  No PR action needed this pass.
+- Passes unit passes-2026-11-05-2257, failed,
+  ticker-0234: no game screen was ever read and no game input
+  was dispatched. The Mac mini is offline with no wake-up
+  path - connection.health, connection.repair (web) and
+  computer.session start all node_offline, and the recovery
+  device's native repair timed out after 25 seconds (this
+  pass did attempt the recovery channel, unlike ticker-0104;
+  it times out, matching the ticker-2041 timeouts). device.list
+  last_seen still frozen at 2026-11-05T15:36:52Z, about 19
+  hours stale. This is the sixty-fifth recorded consecutive
+  pass with this blocker (Issue 284, open, tooling),
+  twenty-sixth in the worsened zero-response form; Issue 284
+  commented instead of filing a duplicate. No shop screen
+  read, no free pack or pass gift claimed. Tracker untouched.
+  The pass stopped after this one unit. Full detail in
+  shop-claims/0234-queue-run.md.
+- Sync: reaped 0, expired 9 (the 22:03, 22:30 and 22:57
+  2026-11-05 slots), due 20, produced nothing new, all 20
+  regulars already queued. Pool after the pass: inbox 65,
+  claimed 0, done 988.
+- No zombie seeding: no Zombie Invasion tab in the Events hub,
+  consistent with the event close of 2026-10-30; zombie-invasion
+  inbox 0 per stats. The pre-reset zero-sweep pair for the
+  2026-11-06 19:00 reset sits in the inbox, not yet due.
