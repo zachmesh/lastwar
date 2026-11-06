@@ -4360,3 +4360,21 @@ of 2026-10-28.
   that changes nothing in this plan. No new Issue filed.
 - Pool: inbox 77, claimed 0, done 976, upcoming 51.
   Status: done. Full detail in queue-planning/2340-run.md.
+## 23:45 to about 23:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-2345.
+  Non-batch pass: checker plain due but merge-aware not
+  due, PR 340 already merged 23:03:52 in the 23:00
+  window; next batch 03:00 PT. No knowledge or code PR
+  open. Five records PRs only, all verified mergeable
+  clean by merge-tree against main 267d28ade and
+  awaiting the 03:00 batch: PR 345 (records/2026-11-05,
+  head advanced during the pass to d9d76565c by the
+  queue-planning 2340 run record, re-verified clean at
+  the new head) and PRs 324, 301, 265, 256, whose
+  single-file action-log conflicts were resolved
+  branch-side by the ticker-2303 reconciliation. No
+  merges, no comments, no escalations, no records PR
+  opened. No action-log line added, owed at the next
+  batch merge. Status: no-op.
+  Full detail in pr-integration/2345-run.md.
