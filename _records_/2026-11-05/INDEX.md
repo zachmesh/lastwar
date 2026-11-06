@@ -3540,3 +3540,16 @@ of 2026-10-28.
   unchanged. No merges, no comments, no records PR
   opened. Status: no-op.
   Full detail in pr-integration/1930-run.md.
+## 19:34 to about 19:40 - ticker-1933 radar unit, failed on Mac offline
+
+- Radar unit radar-2026-11-05-1803, failed, ticker-1933: no
+  game screen read and no game input dispatched. Mac mini
+  offline, last_seen 2026-11-05T15:36:52Z, no wake-up path;
+  recovery device timed out. Five device invokes, zero
+  responses. Fifty-ninth consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), twentieth in the
+  zero-response form. Live duel posture at entry was day 5
+  Total Mobilization, radar release, so the day 4 stack sits
+  unclaimed; the release window runs until 2026-11-06 18:00
+  local. Tracker untouched. Full detail in
+  radar-tasks/1933-queue-run.md.
