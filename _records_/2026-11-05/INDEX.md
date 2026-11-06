@@ -2937,3 +2937,17 @@ of 2026-10-28.
   after this one unit. Pre-reset zero-sweep pair staged for
   tonight's 19:00 reset (chain pre-reset-sweep-2026-11-05).
   Full detail in alliance-donations/1606-queue-run.md.
+
+## 16:15 to about 16:23 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1622.
+  Checker not due for records (next batch 19:00). No
+  knowledge or code PR open. Five records PRs only: PR
+  334 (records/2026-11-05) verified clean by scratch
+  test merge against main 6f9906fc, awaiting the 19:00
+  batch; PRs 324, 301, 265 and 256 still conflict on
+  the single action-log file, re-verified by scratch
+  test merge, carried on the 1500 pass notes, no repeat
+  comment. No merges, no comments, no new PRs.
+  Status: no-op.
+  Full detail in pr-integration/1622-run.md.
