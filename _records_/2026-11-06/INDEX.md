@@ -52,3 +52,12 @@ of 2026-10-28.
   branch-side change; the merge trees keep main's newer
   blob, so merging reverts nothing. Status: no-op.
   Full detail in pr-integration/0015-run.md.
+
+## 00:04 to about 00:30 - Ticker pass ticker-0004
+
+- Radar unit radar-2026-11-05-2203 FAILED: Mac mini offline with
+  no wake-up path, 5 device invokes all node_offline, no game
+  screen read, nothing claimed. Same blocker as Issue #284
+  (sixty-third recorded consecutive pass, twenty-fourth in the
+  worsened zero-response form); commented on #284. Tracker
+  untouched. Full detail in radar-tasks/0004-queue-run.md.
