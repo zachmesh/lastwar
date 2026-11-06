@@ -3558,3 +3558,25 @@ of 2026-10-28.
   unclaimed; the release window runs until 2026-11-06 18:00
   local. Tracker untouched. Full detail in
   radar-tasks/1933-queue-run.md.
+  radar-tasks/1933-queue-run.md.
+## 19:39 to about 19:47 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-05-1939: no adopted open PR; five open
+  PRs scanned and none owned by this job (PR 340/324/301/265/256
+  integrator records, all naming a rightful owner matching their
+  diffs). No reviews on any open PR; no comment addressed to this
+  job. PRs 339 and 334 merged at the 19:00 batch since the 1839
+  pass (339 at 18:47 PST, 334 at 19:05 PST); PR 340 opened 19:06
+  PST by the integrator post-1900 batch. The four older records
+  PR heads are unchanged. Mergeable UNKNOWN on fresh PR 340,
+  CONFLICTING on PRs 324, 301, 265 and 256. PRs 324, 301, 265
+  and 256 still carry the integrator 1500 batch carry notes and
+  all under the 48-hour stale-owner threshold (324 about eight
+  and a half hours, 301 about twenty and a half, 265 about forty
+  and a half, 256 about forty-four and a half). No stale-owner
+  flag. Issues: 49 open, all class-labeled, no new issue since
+  the 1839 pass, so no triage action. Owner-decision issues 132
+  (about ninety-nine hours) and 154 (about ninety-three hours)
+  both over 24 hours with statements current; issue 335 is a
+  third owner-decision issue, about three and a half hours old.
+  Full detail in pr-catchall/1939-run.md.
