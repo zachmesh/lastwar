@@ -2512,3 +2512,24 @@ of 2026-10-28.
   diff empty. No branch, no PR, no issue comment, no
   Slack message. Full detail in
   tool-development/1232-run.md.
+
+## 12:35 to about 12:45 - Ticker pass
+
+- Ticker pass ticker-1235. Radar unit radar-2026-11-06-1003
+  (duel day 5 radar release, planned 10:03, expires 14:03)
+  FAILED: Mac mini offline, five device invokes, zero
+  responses (node_offline, no wake-up path; recovery device
+  node_invoke_timeout after 25000ms). Last_seen frozen at
+  2026-11-05T15:36:52Z, about 29 hours stale.
+  Seventy-eighth consecutive pass with this blocker,
+  thirty-ninth in the zero-response form (Issue #284,
+  commented, no duplicate filed). No game screen read, no
+  input dispatched, no spending. Tracker untouched. Sync:
+  reaped 0, expired 0, due 20, produced 0. Pool: inbox 79,
+  claimed 0, done 1025, upcoming 53. No zombie seeding
+  (chain closed 2026-10-30, event ended). Delivered via a
+  temporary worktree onto records/2026-11-06; the local
+  working tree's other-job state left undisturbed. PR 365
+  (post-1100 batch) already covers the branch, so
+  no new PR was opened. Status: failed. Full detail in
+  radar-tasks/1235-queue-run.md.
