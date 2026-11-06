@@ -3132,3 +3132,34 @@ of 2026-10-28.
   to 66c3100ab1 by bundle route. No escalations, no new
   PR opened. Status: done. Full detail in
   pr-integration/1530-run.md.
+
+## 15:40 to about 15:58 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 5 units -
+  already_present 66, skipped_done_current 0, reaped 0,
+  expired 0. The staged units are the 0257 slot of
+  2026-11-07 (passes, secrets, treasures, trucks, events).
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-06 (chain
+  pre-reset-sweep-2026-11-06) is already in inbox, both units
+  (first pass not_before 17:30 local, final pass 18:30 local,
+  both expire 19:00 local).
+- Scout diff on the Nov 4 observation (forty-sixth planner run
+  to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-05-1900 still in inbox
+  unexecuted): fixed branch-tip tool applied - observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates 0,
+  unexplained red dots 4 (distinct named 2), promotion
+  proposals 0. The live tree's stale pre-#303 tool was not
+  re-run; grep confirms it is still pre-#303. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 still has
+  3 comments, no owner pick yet, PR #337 merged, closure with
+  the retro. No new Issue filed. Live tools/regulars.json still
+  carries no duel-score or zero-sweep regular (re-verified).
+  Branch duplicate re-verified: arms-race-2026-11-06-1003 sits in
+  both inbox and done on the branch (stale inbox copy, Issue
+  #213 pattern); left untouched, flagged for integrator/retro.
+- Pool: inbox 77, claimed 0, done 1043, upcoming 53. Status:
+  done. Full detail in queue-planning/1540-run.md.
