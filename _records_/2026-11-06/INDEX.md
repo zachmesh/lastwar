@@ -1824,3 +1824,20 @@ of 2026-10-28.
   by the 0845 pass against the same main and heads,
   no comment repeated. No escalations. Full detail in
   pr-integration/0900-run.md.
+
+## 09:15 to about 09:23 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-06-0915.
+  Non-batch pass: checker _tools_/records_batch.py not
+  due (outside every batch window, next batch 11:00).
+  No merges, no records PRs opened, no knowledge or
+  code PR open, no new comments posted. All six open
+  PRs re-verified: PR 359 (records/2026-11-06, head
+  e7ce01cb) clean against main 42c6c5a125 by GitHub
+  and merge-tree, awaits the 11:00 batch. PRs 351,
+  350, 301, 265 and 256 still conflict on the single
+  file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads and main unchanged since
+  the 0845 and 0900 re-check comments, so no comment
+  was repeated. No escalations. Full detail in
+  pr-integration/0915-run.md.
