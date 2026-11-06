@@ -1416,3 +1416,15 @@ of 2026-10-28.
   (post-0700 batch), carrying the merge line and this
   run record. Local main fast-forwarded to 5e98db2f by
   bundle. Full detail in pr-integration/0700-run.md.
+- Integrator pass pr-integration-2026-11-06-0715.
+  Non-batch pass per the merge-aware checker (not due,
+  PR #347 already merged 07:07:10 PT in the 07:00-08:00
+  window; next batch 11:00). No knowledge or code PR
+  open. Six records PRs open: PR 359 (records/2026-11-06,
+  clean, 2 commits) awaits the 11:00 batch; PRs 351, 350,
+  301, 265 and 256 still conflict on
+  _logs_/repo-actions/action-log.jsonl, already commented
+  by the 0700 run, heads unchanged, no repeat comment.
+  No merges, no comments, no escalations. The log line
+  for this run is owed at the 11:00 batch merge. Full
+  detail in pr-integration/0715-run.md.
