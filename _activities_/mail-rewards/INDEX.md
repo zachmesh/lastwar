@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T19:32:17Z
+modified: 2026-11-06T02:36:38Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-1327 mail-rewards execution record 2026-11-04 1333 queue run (failed, Mac screen-capture channel failure on every capture step, no game input dispatched, second consecutive ticker pass to fail this way after help 1235, Issue 282)
   - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1333 section wording)
   - source: ticker-1025 mail-rewards execution record 2026-11-05 1025 queue run (failed, Mac device offline, forty-second consecutive pass, zero-response form, Issue 284)
+  - source: ticker-1804 mail-rewards execution record 2026-11-05 1804 queue run (failed, Mac device offline, fifty-seventh consecutive ticker pass with a Mac device-access blocker, eighteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 10h30m, unchanged since the 1025 pass; seven invokes, zero responses)
 ---
 
 
@@ -796,3 +797,13 @@ the next tick re-produces this regular as a fresh unit.
 - Classification: the forty-second consecutive ticker pass with a Mac device-access blocker (Issue #284, open, tooling), and the third in the worsened zero-response form after ticker-0904 (fortieth) and ticker-0941 (forty-first). The fail-fast probe (_tools_/mac_capture_probe.py 1.1.0, PR #321, merged 2026-11-05 09:47 PST) classifies CHANNEL_STALL (high confidence), stop_pass yes, exit 12. This is NOT a mail entry failure (Issue #230 is not tested here - no entry point was reached, so no #230 comment is made) and NOT a capture-channel fault of the 1333 form: the control channel itself returned no response at all.
 - Scope correction: see the appended bullet in the Correction 2026-11-05 section above - the Dock-icon unblock holds for the window-stream form only, not for a stalled invoke channel. For the zero-response form the record inference is a Mac-side agent gateway restart before re-probing (unverified), and re-probing is owed only after device.list last_seen refreshes.
 - Follow-up: tracker untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit. Sync reaped 0, expired 2 (training/survivors 0603), produced nothing (all 21 due regulars already queued). No diamonds or money spent, no mail deleted, no other activity work done. Forty-second occurrence commented onto Issue #282 by this run.
+
+## What the 2026-11-05 1804 unit added - Mac device offline, fifty-seventh consecutive pass, zero-response form
+
+- Unit mail-2026-11-05-1430 by ticker-1804, about 18:05 to 18:08 local, status failed (access-failed). Evidence in `_records_/2026-11-05/mail-rewards/1804-queue-run.md`. No game screen was ever read and no game input was dispatched: every device invoke to the Mac mini returned node_offline or timed out, so no mail category was opened, no attachment was claimed, and no report mail was checked. This was a segment 2 unit (planned_for 2026-11-05T22:30:00Z, expires 2026-11-06T02:30:00Z).
+- Attempts, seven, zero responses: computer.session start on the Mac mini node_offline (device offline, no wake-up path) three times; connection.health on the Mac mini node_offline; connection.repair (web) on the Mac mini node_offline; connection.repair (native) on the recovery device node_invoke_timeout after 25s; connection.health on the recovery device node_invoke_timeout after 25s. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 10 hours 30 minutes at pass time, unchanged since the ticker-1025 pass; the recovery device also reports offline with the same stale last_seen. This meets the standing at-least-3-attempts retry rule.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
+- Classification: the fifty-seventh consecutive ticker pass with a Mac device-access blocker (Issue #284, open, tooling), and the eighteenth in the worsened zero-response form after ticker-1734 (fifty-sixth, seventeenth). This is NOT a mail entry failure (Issue #230 is not tested here - no entry point was reached, so no #230 comment is made) and NOT a capture-channel fault of the 1333 form: the control channel itself returned no response at all.
+- Scope correction: see the appended bullet in the Correction 2026-11-05 section above - the Dock-icon unblock holds for the window-stream form only, not for a stalled invoke channel. For the zero-response form the record inference is a Mac-side agent gateway restart before re-probing (unverified), and re-probing is owed only after device.list last_seen refreshes.
+- Reading warning: this failed unit gives zero evidence about the mail state. It must NOT be read as "no mail claimable" - the 0817 close (all dotted categories swept, Event red dots are notices) rests on live reads and stands as the last live read; this unit rests on no read at all.
+- Follow-up: tracker untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit. The pass stopped after this one unit: a second unit would hit the same dead channel. Sync at pass start produced nothing new (21 due, all already queued; 1 expired). The Zombie Invasion chain stays closed: the event ended 2026-10-30 about 19:00 and no Zombie Invasion tab has been seen in the Events hub since, so no fresh chain was seeded. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-05) is staged in the inbox (units 001 and 002). No diamonds or money spent, no mail deleted, no other activity work done. Fifty-seventh occurrence commented onto Issue #282 by this run.

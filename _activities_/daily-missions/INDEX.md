@@ -1,9 +1,9 @@
 ---
 title: Daily Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-06T02:36:38Z
 level: L1
-version: 1.5.0
+version: 1.6.0
 description: The Mission daily task list and activity chests, one activity folder for mission knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: daily-missions execution record 2026-11-02 0444 queue run
   - source: ticker-0004 daily-missions execution record 2026-11-03 0017 queue run (partial, activity chest claim path unverified, Issue 208)
   - source: ticker-0904 daily-missions execution record 2026-11-04 0914 queue run (partial, 3 gather tasks claimed on one tap, first verified 200-point activity-chest claim, Issues #171 and #208 commented by the ticker pass)
+  - source: ticker-1734 daily-missions execution record 2026-11-05 1734 queue run (failed, Mac device offline, fifty-sixth consecutive ticker pass with a Mac device-access blocker, seventeenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 10h, unchanged since the 1025 pass; seven invokes, zero responses)
 ---
 
 
@@ -253,3 +254,13 @@ status done). Evidence in
 - 200-point activity chest, first verified activity-chest claim in this line: with activity at 210, one grounded tap on the 200 chest (norm 819,249) produced a CONGRATULATIONS receipt popup ("No double reward this time. Good luck next time, Commander!") with rewards: gold bar x1, red gem x50, wrench x1, flower x1, crate x1, Crystal Ore 2.0K, 5m speed-up x4. Popup dismissed by tapping its banner. After dismissal the Daily Tasks tab badge was gone. Commented on Issue #208 by the ticker pass (no duplicate comment here), suggesting its 2026-11-03 40-chest preview-only case was an already-claimed chest. Closure of #208 also belongs to the daily retro.
 - Remaining tasks, read live, none actioned: Recruit Heroes 1 Time (0/1), Kill 5 zombie(s) on World Map (3/5), Attack a Commander 1 time (0/1, PvP, stays undone without the owner instruction), Train 100 units of any level (0/100), Upgrade a Building 1 time (0/1), Recruit Survivors 1 time in the Tavern (0/1), Make any paid purchase once (0/1, red-line row, observed only, never to be actioned), Perform Data Training on Drone 1 time (0/1). Go not tapped on any row.
 - Outcome: partial. The unit claimed everything claimable at entry, but the regular's task list is not fully done: 8 tasks remain incomplete and belong to other regulars or later ticks, so the tracker is untouched and the next tick re-checks the list. Game left on the base screen.
+
+## What the 2026-11-05 1734 unit added - Mac device offline, fifty-sixth consecutive pass, zero-response form
+
+- Unit daily-missions-2026-11-04-1800 by ticker-1734, about 17:38 to 17:42 local, status failed. Evidence in `_records_/2026-11-05/daily-missions/1734-queue-run.md`. No mission list was read, no completed task was claimed, and no activity chest was claimed. This was a stale unit from the 2026-11-04 18:00 slot (planned_for 2026-11-05T02:00:00Z, expires 2026-11-06T02:00:00Z).
+- No game screen was ever read and no game input was dispatched. Seven device invokes, zero responses, across two devices and four distinct commands: computer.session start on the Mac mini three times node_offline (device offline, no wake-up path), connection.health on the Mac mini node_offline, connection.repair (target web) on the Mac mini node_offline, connection.repair (target native) on the recovery device node_invoke_timeout after 25 seconds, connection.health on the recovery device node_invoke_timeout after 25 seconds. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 10 hours at pass time, unchanged since the ticker-1025 pass; the recovery device also reports offline with the same stale last_seen. This meets the standing at-least-3-attempts retry rule.
+- No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
+- Recurrence, not a new failure class: this is the fifty-sixth consecutive ticker pass with a Mac device-access blocker, seventeenth in the worsened zero-response form after ticker-1704 (fifty-fifth, sixteenth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the fifty-sixth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the daily-missions state. It must NOT be read as "no missions claimable" or as an activity-points state - the 0914 close (activity 210, 200-point chest claimed and verified, 8 tasks remaining incomplete) rests on live reads and stands as the last live read; this unit rests on no read at all. The claim-each-task-individually rule stands, and the one-tap-multi-claim observation remains inference from two observations, not a verified mechanism.
+- The pass stopped after this one unit: a second unit would hit the same dead channel. Sync at pass start produced 5 new units (passes, secrets, treasures, trucks, events for the 1457 slot); 18 due regulars were already queued. The Zombie Invasion chain stays closed: the event ended 2026-10-30 about 19:00 and no Zombie Invasion tab has been seen in the Events hub since, so no fresh chain was seeded. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-05) is staged in the inbox (units 001 and 002).
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
