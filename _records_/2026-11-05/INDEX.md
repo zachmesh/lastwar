@@ -3781,3 +3781,25 @@ of 2026-10-28.
   changes nothing in this plan. No new Issue filed.
 - Pool: inbox 76, claimed 0, done 959, upcoming 49.
   Status: no-op. Full detail in queue-planning/2040-run.md.
+## 20:41 to about 20:52 - ticker-2041 arms-race unit, failed on Mac offline
+
+- Arms Race unit arms-race-2026-11-05-1803, failed, ticker-2041: no
+  game screen was ever read and no game input was dispatched.
+  Seven device invokes, zero responses: computer.session start on
+  the Mac mini node_offline (device offline, no wake-up path)
+  three times, connection.health and connection.repair (web) on
+  the Mac mini node_offline, connection.repair (native) and
+  connection.health on the recovery device both
+  node_invoke_timeout after 25s. device.list still reports the
+  Mac mini offline with last_seen 15:36:52Z, stale about 13 hours.
+  This is the sixtieth consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), twenty-first in the
+  worsened zero-response form. Recovery still needs the Mac back
+  online first, then the Mac-side agent gateway restart if invokes
+  still stall. Commented on Issue 284. No Arms Race phase or score
+  read, no tier-3 target pursued, nothing claimed. The live duel
+  posture at entry was day 5 Total Mobilization, radar release,
+  so this unit's duel day 4 window is stale. Tracker untouched.
+  The pass stopped after this one unit. Sync produced nothing new;
+  Zombie Invasion chain stays closed (event ended 2026-10-30).
+  Full detail in arms-race/2041-queue-run.md.
