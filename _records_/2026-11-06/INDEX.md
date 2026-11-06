@@ -225,3 +225,12 @@ of 2026-10-28.
   action-log line for this run is owed at the next batch
   merge. Status: no-op. Full detail in
   pr-integration/0115-run.md.
+
+## 01:04 to about 01:35 - Ticker pass ticker-0104
+
+- Arms Race unit arms-race-2026-11-05-2203 FAILED: Mac mini offline with
+  no wake-up path, 5 device invokes all node_offline, no game
+  screen read, nothing claimed. Same blocker as Issue #284
+  (sixty-fourth recorded consecutive pass, twenty-fifth in the
+  worsened zero-response form); commented on #284. Tracker
+  untouched. Full detail in arms-race/0104-queue-run.md.
