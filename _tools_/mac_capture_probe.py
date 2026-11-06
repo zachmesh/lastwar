@@ -5,7 +5,7 @@ Classifies a capture failure from the device evidence a ticker pass
 already collects, so a blocked pass stops after one cheap probe
 instead of burning its whole unit budget re-proving the same
 failure. The diagnosis this encodes is the settled one from
-zachmesh/lastwar issue #284 (27 consecutive ticker passes,
+zachmesh/lastwar issue #284 (40 consecutive ticker passes,
 2026-11-04/05): the LastWar window sits windowed 1920x1080 on an
 inactive Space - list_windows reports window_on_screen false and
 the View menu still lists "Enter Full Screen", so the app is not
@@ -18,6 +18,19 @@ set_window_frame is gated on a fresh observation of the window,
 so no background control route unblocks this state: recovery is
 one owner step on the Mac mini - click the LastWar Dock icon once
 (or run _tools_/mac_lastwar_front.sh in Terminal) - then re-probe.
+
+Version 1.1.0 adds the second, worsened form of the same outage,
+first seen at ticker-0904 on 2026-11-05 (the 40th consecutive
+blocked pass): the device invoke channel itself stalls - every
+invoke times out (computer.session start, list_apps,
+connection.health, connection.repair, session end; eight
+attempts, zero responses) while device.list still reports the Mac
+online with a stale last_seen. That is a different fault from the
+off-screen window stream, and the Dock-icon step does not address
+it: the Mac-side agent gateway likely needs a restart. The probe
+must not answer such evidence with "run the checklist", because
+each checklist invoke costs another 120s timeout and cannot
+succeed while the channel is stalled.
 
 This tool touches no device and no game state. It only reads an
 evidence JSON file the worker assembles from its own device calls
@@ -37,15 +50,35 @@ Evidence schema (every field optional; missing means unknown):
     "activate": {"on_screen": false, "brought_to_front": false},
     "open_app": "outcome_unknown",
     "space_keys_dispatched": true,
-    "space_switched": false
+    "space_switched": false,
+    "invoke_timeouts": ["computer.session start", "computer.control list_apps",
+                        "connection.health", "connection.repair"],
+    "invoke_offline": ["computer.session start", "connection.health"],
+    "invoke_responses": 0,
+    "invoke_attempts": 8,
+    "device_list_online": true,
+    "device_last_seen_stale": true
   }
 Aliases accepted: top-level "window_on_screen" for
 window.on_screen, "view_menu_items" for "view_menu", "errors"
-for "capture_errors".
+for "capture_errors", "timeouts" for "invoke_timeouts".
+"invoke_timeouts" accepts a list of timed-out call names or a
+plain count; "invoke_offline" accepts the same shape for calls
+that returned node_offline (the device is offline) and is the
+only place those calls are recorded; "invoke_responses" is the
+count of invokes that returned a response (0 in a full stall),
+not counting node_offline returns.
 
 Diagnoses:
   OFF_SCREEN_WINDOW   the game window is off-screen (inactive Space)
   CAPTURE_STREAM_DOWN the screen-recording stream itself is down
+  CHANNEL_STALL       the device invoke channel stalls: invokes time
+                      out with zero responses, so no evidence at all
+                      could be collected
+  DEVICE_OFFLINE      the device is offline: invokes return
+                      node_offline and device.list reports it
+                      offline with no wake-up path, so no invoke
+                      can run until it is back
   HEALTHY             window on-screen, capture works
   UNKNOWN             evidence too thin to tell; probe steps are owed
 
@@ -55,14 +88,14 @@ Usage:
   mac_capture_probe.py --version
 
 Exit codes: 0 HEALTHY, 1 UNKNOWN, 10 OFF_SCREEN_WINDOW,
-11 CAPTURE_STREAM_DOWN.
+11 CAPTURE_STREAM_DOWN, 12 CHANNEL_STALL, 13 DEVICE_OFFLINE.
 """
 
 import argparse
 import json
 import sys
 
-TOOL_VERSION = "1.0.0"
+TOOL_VERSION = "1.2.0"
 
 CAPTURE_ERROR = "Failed to start stream due to audio/video capture failure"
 
@@ -70,15 +103,26 @@ EXIT_HEALTHY = 0
 EXIT_UNKNOWN = 1
 EXIT_OFF_SCREEN = 10
 EXIT_STREAM_DOWN = 11
+EXIT_STALL = 12
+EXIT_OFFLINE = 13
 
 DIAGNOSIS_EXIT = {
     "HEALTHY": EXIT_HEALTHY,
     "UNKNOWN": EXIT_UNKNOWN,
     "OFF_SCREEN_WINDOW": EXIT_OFF_SCREEN,
     "CAPTURE_STREAM_DOWN": EXIT_STREAM_DOWN,
+    "CHANNEL_STALL": EXIT_STALL,
+    "DEVICE_OFFLINE": EXIT_OFFLINE,
 }
 
 PROBE_CHECKLIST = [
+    '0. If device invokes time out with no response at all, or '
+    'return node_offline, do not repeat them: record each timed-out '
+    'call under invoke_timeouts with invoke_responses 0, record each '
+    'node_offline call under invoke_offline, and classify '
+    'CHANNEL_STALL or DEVICE_OFFLINE instead of running the steps '
+    'below (each one costs another timeout, and none can run while '
+    'the device is offline).',
     '1. computer.control list_windows with app "LastWar" (the name '
     '"Last War" returns 0 windows): record on_screen, size, position, '
     'window_id.',
@@ -114,6 +158,27 @@ RECOMMENDATIONS = {
         "connection.repair on the web gateway, then the Mac's Screen "
         "Recording permission for the control channel; re-probe."
     ),
+    "CHANNEL_STALL": (
+        "Stop the pass. Do NOT re-run the probe checklist: every invoke "
+        "times out while the channel is stalled, so each checklist step "
+        "costs another 120s timeout and returns nothing. The Dock-icon "
+        "step does not address this fault (it addresses the off-screen "
+        "window stream, not a stalled invoke channel). The Mac-side "
+        "agent gateway likely needs a restart; re-probe only after "
+        "device.list last_seen refreshes. Record the timed-out calls "
+        "under invoke_timeouts with invoke_responses 0."
+    ),
+    "DEVICE_OFFLINE": (
+        "Stop the pass. Do NOT re-run the probe checklist: the device "
+        "is offline and does not advertise a wake-up path, so no "
+        "invoke can run until it is back. The Dock-icon step and the "
+        "gateway restart both need the Mac reachable first. Recovery "
+        "is to bring the Mac mini back online (power, wake, network), "
+        "then restart the Mac-side agent gateway if invokes still "
+        "stall, and re-probe only after device.list reports the "
+        "device online with a fresh last_seen. Record the node_offline "
+        "calls under invoke_offline."
+    ),
     "HEALTHY": "Proceed: the window is on-screen and capture works.",
     "UNKNOWN": (
         "Probe incomplete - run the checklist "
@@ -127,6 +192,15 @@ def _get(evidence, *names, default=None):
         if name in evidence and evidence[name] is not None:
             return evidence[name]
     return default
+
+
+def _timeout_count(value):
+    """Count invokes from a list of call names or a count."""
+    if isinstance(value, list):
+        return len(value)
+    if isinstance(value, int) and not isinstance(value, bool):
+        return value
+    return 0
 
 
 def classify(evidence):
@@ -143,8 +217,41 @@ def classify(evidence):
     capture_errors = _get(evidence, "capture_errors", "errors", default=[])
     chrome_ok = _get(evidence, "chrome_observes_ok")
     activate = _get(evidence, "activate", default={}) or {}
+    timeouts = _get(evidence, "invoke_timeouts", "timeouts")
+    timeout_count = _timeout_count(timeouts)
+    offline = _get(evidence, "invoke_offline", "offline")
+    offline_count = _timeout_count(offline)
+    responses = _get(evidence, "invoke_responses")
+    device_online = _get(evidence, "device_list_online")
+    last_seen_stale = _get(evidence, "device_last_seen_stale")
     missing = []
     lines = []
+
+    if timeout_count:
+        if isinstance(timeouts, list) and timeouts:
+            lines.append(
+                "%d device invokes timed out with no response "
+                "(%s)" % (timeout_count, ", ".join(str(t) for t in timeouts)))
+        else:
+            lines.append(
+                "%d device invokes timed out" % timeout_count)
+    if offline_count:
+        if isinstance(offline, list) and offline:
+            lines.append(
+                "%d device invokes returned node_offline "
+                "(%s)" % (offline_count, ", ".join(str(t) for t in offline)))
+        else:
+            lines.append(
+                "%d device invokes returned node_offline" % offline_count)
+    if responses is not None:
+        lines.append("device invokes that returned a response: %d"
+                     % responses)
+    if device_online is True:
+        lines.append("device.list still reports the device online")
+    elif device_online is False:
+        lines.append("device.list reports the device offline")
+    if last_seen_stale is True:
+        lines.append("device.list last_seen is stale")
 
     if on_screen is False:
         lines.append("LastWar window_on_screen false")
@@ -190,7 +297,23 @@ def classify(evidence):
 
     diagnosis = "UNKNOWN"
     confidence = "low"
-    if on_screen is False and enter_fullscreen:
+    if offline_count > 0 and device_online is False:
+        diagnosis = "DEVICE_OFFLINE"
+        confidence = "high"
+    elif (offline_count > 0 and responses is None
+            and on_screen is None and not capture_errors
+            and chrome_ok is None):
+        diagnosis = "DEVICE_OFFLINE"
+        confidence = "medium"
+    elif timeout_count > 0 and responses == 0:
+        diagnosis = "CHANNEL_STALL"
+        confidence = "high"
+    elif (timeout_count > 0 and responses is None
+            and on_screen is None and not capture_errors
+            and chrome_ok is None):
+        diagnosis = "CHANNEL_STALL"
+        confidence = "medium"
+    elif on_screen is False and enter_fullscreen:
         diagnosis = "OFF_SCREEN_WINDOW"
         confidence = "high"
     elif on_screen is False and brought_to_front is False:
@@ -209,12 +332,20 @@ def classify(evidence):
         diagnosis = "CAPTURE_STREAM_DOWN"
         confidence = "medium"
 
+    if diagnosis in ("CHANNEL_STALL", "DEVICE_OFFLINE"):
+        # No probe steps are owed: the checklist assumes invokes
+        # return, and none can run while the channel is stalled
+        # or the device is offline.
+        missing = []
+
     return {
         "tool_version": TOOL_VERSION,
         "diagnosis": diagnosis,
         "confidence": confidence,
         "stop_pass": diagnosis in ("OFF_SCREEN_WINDOW",
-                                   "CAPTURE_STREAM_DOWN"),
+                                   "CAPTURE_STREAM_DOWN",
+                                   "CHANNEL_STALL",
+                                   "DEVICE_OFFLINE"),
         "evidence": lines,
         "missing_probe_steps": missing,
         "recommendation": RECOMMENDATIONS[diagnosis],
