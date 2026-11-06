@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T23:39:54Z
+modified: 2026-11-06T11:35:12Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-1434 shop-claims execution record 2026-11-04 1434 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fifth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-2234 shop-claims execution record 2026-11-04 2234 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2204 known to fail identically, Issue 284)
   - source: ticker-1434 shop-claims execution record 2026-11-05 1434 queue run (failed, Mac device offline, fiftieth consecutive ticker pass to fail this way, eleventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 7h07m, unchanged since the 1025 pass; six invokes, zero responses)
+  - source: ticker-0234 shop-claims execution record 2026-11-06 0234 queue run (failed, Mac device offline, sixty-fifth consecutive ticker pass to fail this way, twenty-sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 19h, unchanged since the 1025 pass; four invokes, zero responses, recovery-device native repair timed out after 25s)
 ---
 
 
@@ -826,3 +827,11 @@ the free and already paid for parts, never the paid unlocks.
 - Sync (authoritative, records-branch pool): reaped 0, expired 6 (duel-score, gifts, help, mail, star-ceremony, train 2026-11-05-1030), due 23, produced 6 units (mail, help, gifts, train, star-ceremony, duel-score 2026-11-05-1430); 17 due regulars already queued. Pool-authority note: the pass's first sync ran in the main working tree, which sits on the stale work/ops-execution-records branch (queue state from 2026-11-03) and holds another job's in-flight state - its expirations of 8 local copies were discarded; the branch-pool sync above is the one committed. The records branch is the authoritative pool for ticker passes.
 - No successor unit is enqueued from this unit - a successor would hit the same stalled channel. The pass stopped after this one unit.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
+
+## What the 2026-11-06 0234 unit added - Mac device offline, sixty-fifth consecutive pass, zero-response form
+
+- Unit passes-2026-11-05-2257 by ticker-0234, about 02:34 to 02:43 local, status failed. Evidence in `_records_/2026-11-06/shop-claims/0234-queue-run.md`. No different-device dialog was observed - no screen was ever captured, so none could have been seen. On a working screen it would have opened the shop, claimed the free pack and the pass daily gifts. The loss is the unexecuted passes check for this slot (planned 22:57 local 2026-11-05, expires 02:57 local 2026-11-06).
+- No game screen was ever read and no game input was dispatched. Four device invokes, zero responses: connection.health (attempt 1) node_offline with "device is offline and does not advertise a wake-up path", connection.repair (web) (attempt 2) node_offline, connection.repair (native) on the recovery device (attempt 3) node_invoke_timeout after 25 seconds, computer.session start (attempt 4) node_offline. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 19 hours at the 02:36 re-check, unchanged since the ticker-0104 pass. New against ticker-0104: this pass did attempt the recovery device, and its native repair timed out after 25 seconds, matching the ticker-2041 timeouts - the recovery channel is unresponsive too, not just untested. This meets the standing at-least-3-attempts retry rule.
+- Recurrence, not a new failure class: this is the sixty-fifth recorded consecutive ticker pass with a Mac device-access blocker, twenty-sixth in the worsened zero-response form after ticker-0104 (sixty-fourth, twenty-fifth). Passes between 0104 and 0234 left no record on the branch, so the true consecutive count may be higher; this pass counts recorded passes only. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the sixty-fifth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 2026-11-04 0841 checked-only state rests on a live read; this one rests on no read at all. The passes unit's daily gifts stay unclaimed for this slot.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 9, due 20, produced nothing new, all 20 regulars already queued. The inbox held 75 units before this pass's sync reaped the 9 expired ones.
