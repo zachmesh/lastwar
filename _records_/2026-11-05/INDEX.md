@@ -3122,3 +3122,21 @@ of 2026-10-28.
   opened.
   Status: no-op.
   Full detail in pr-integration/1706-run.md.
+- Survivors unit survivors-2026-11-05-1403, failed, ticker-1704: no
+  game screen was ever read and no game input was dispatched.
+  Seven device invokes, zero responses: computer.session start on
+  the Mac mini node_offline (device offline, no wake-up path)
+  three times, connection.health and connection.repair (web) on
+  the Mac mini node_offline, connection.repair (native) and
+  connection.health on the recovery device both
+  node_invoke_timeout after 25s. device.list still reports the
+  Mac mini offline with last_seen 15:36:52Z, stale about 9 hours
+  30 minutes. This is the fifty-fifth consecutive ticker pass
+  with a Mac device-access blocker (Issue 284), sixteenth in the
+  worsened zero-response form. Recovery still needs the Mac back
+  online first, then the Mac-side agent gateway restart if
+  invokes still stall. Commented on Issue 284. No survivor count
+  read, no survivor recruited, no Quick Dispatch. Tracker
+  untouched. The pass stopped after this one unit. Sync produced
+  nothing new; Zombie Invasion chain stays closed (event ended
+  2026-10-30). Full detail in survivor-intake/1704-queue-run.md.
