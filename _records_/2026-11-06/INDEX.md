@@ -1359,3 +1359,31 @@ of 2026-10-28.
   with statements current, issue 335 (about fourteen and a
   half hours) under 24 hours. No Slack sync, no chat report:
   quiet run. Full detail in pr-catchall/0639-run.md.
+
+## 06:40 to about 06:50 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 11 units -
+  already_present 58, skipped_done_current 0, reaped 0,
+  expired 4. The staged units are the 1803 UTC slot
+  (harvest, radar, survivors, training, donations,
+  arms-race) and the 1830 UTC slot (mail, help, gifts,
+  train, star-ceremony). The expired units are
+  help-2026-11-06-0230, mail-2026-11-06-0230,
+  star-ceremony-2026-11-06-0230 and train-2026-11-06-0230.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-06 (chain
+  pre-reset-sweep-2026-11-06) is already in inbox, both units.
+- Scout diff on the Nov 4 observation (thirty-seventh planner run to
+  consume it; no Nov 5 or Nov 6 observation yet, the post-reset
+  scout unit scout-2026-11-05-1900 still in inbox unexecuted):
+  dry run and apply agree, all zero - observed 0, actionable 0,
+  enqueued 0, already-queued 0, candidates 0, unexplained red
+  dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 still has
+  3 comments, no owner pick yet, PR #337 merged, closure with
+  the retro. No new Issue filed. Live tools/regulars.json still
+  carries no duel-score or zero-sweep regular (re-verified).
+- Pool: inbox 77, claimed 0, done 1003, upcoming 51. Status:
+  done. Full detail in queue-planning/0640-run.md.
