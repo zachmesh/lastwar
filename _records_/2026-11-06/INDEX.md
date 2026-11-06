@@ -372,3 +372,22 @@ of 2026-10-28.
   for this run and for the PR 349 merge are owed at the
   next batch merge. Status: done. Full detail in
   pr-integration/0145-run.md.
+
+## 02:00 to about 02:04 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0200.
+  Non-batch pass per the checker (plain due not due,
+  next batch 03:00): no knowledge or code PR was open.
+  Six records PRs await the 03:00 batch, all verified
+  mergeable clean by merge-tree against main 628401d75
+  (PR 349 merged since the 0130 pass): PR 347
+  (records/2026-11-06, head 15cd63fb, 18 commits), PR 345
+  (records/2026-11-05, head 1f27dfc0, 12 commits), PR 324
+  (records/2026-11-01, head c41db9ea, 2 commits), PR 301
+  (records/2026-11-04, head a5294bf0, 14 commits), PR 265
+  (records/2026-11-02, head 11b2f383, 5 commits) and PR 256
+  (records/2026-11-03, head 6b8df47f, 16 commits). No
+  merges, no comments, no escalations. The action-log
+  line for this run is owed at the next batch merge.
+  Status: no-op. Full detail in
+  pr-integration/0200-run.md.
