@@ -1658,3 +1658,35 @@ of 2026-10-28.
   by the 0700 run, heads unchanged. Local main already
   at 129c363088, no sync-back owed. Full detail in
   pr-integration/0830-run.md.
+
+## 08:32 to about 08:40 - Ticker pass
+
+- Ticker pass ticker-0832. Own PRs first: PR 359
+  (records/2026-11-06, post-0700 batch) has no comments and
+  no reviews, Owner lastwar-pr-integrator; older records PRs
+  351, 350, 301, 265 and 256 remain open under the integrator,
+  unchanged. Nothing addressed to this job. This pass's commit
+  joins PR 359; no new PR was opened.
+- Sync: reaped 0, expired 0, due 20, produced no new unit,
+  20 regulars already queued. Queue stats at 16:35Z: inbox
+  78, claimed 0, done 1010, upcoming 53. No zombie seeding:
+  the zombie chain closed with unit 066 on 2026-10-30 and
+  the event ended; no fresh chain until a Zombie Invasion
+  tab is seen live again.
+- Unit arms-race-2026-11-06-0603 failed: Mac mini offline,
+  last_seen 2026-11-05T15:36:52Z (about 25 hours stale),
+  four device invokes zero responses - connection.health,
+  connection.repair web and computer.session start on the
+  Mac mini all node_offline with no wake-up path, and
+  connection.health on the recovery device
+  node_invoke_timeout after 25 seconds. Same blocker as
+  GitHub Issue #284 (tooling, still open): the seventy-fifth
+  consecutive pass with a Mac device-access blocker,
+  thirty-sixth in the worsened zero-response form. This pass
+  commented on #284 instead of filing a duplicate. No game
+  screen read, no input dispatched, tracker untouched. The
+  slot was a duel day 5 arms-race check (planned 06:03
+  local, expires 10:03 local), so the phase check for this
+  slot is lost. The pass stopped after this one unit;
+  further units would fail identically. Full detail in
+  arms-race/0832-queue-run.md.
