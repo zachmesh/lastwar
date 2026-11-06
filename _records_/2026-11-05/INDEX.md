@@ -4189,3 +4189,19 @@ of 2026-10-28.
   heads unchanged, so no comment repeated. No records
   PR opened, no escalation. Status: done.
   Full detail in pr-integration/2245-run.md.
+- Integrator pass pr-integration-2026-11-05-2300.
+  BATCH pass: checker plain and merge-aware both due,
+  window 23:00-00:00 PT, first pass at or after the
+  point, no records merge yet in the window.
+  Records PR 340 merged by merge commit dd95a0d8
+  (42 commits, 80 files changed, 17304 insertions,
+  22 deletions); merge-line commit ad09e0b184 pushed
+  to records/2026-11-05. Fresh records PR 345 opened
+  for the post-2300-batch appends, MERGEABLE CLEAN,
+  awaiting the 03:00 batch. PRs 324, 301, 265 and 256
+  carried on their conflicts, re-verified by
+  merge-tree against the new main dd95a0d8 (exactly
+  one file each, _logs_/repo-actions/action-log.jsonl),
+  heads unchanged, so no comment repeated. Local main
+  synced back to dd95a0d8 via bundle. Status: done.
+  Full detail in pr-integration/2300-run.md.
