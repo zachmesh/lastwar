@@ -2246,3 +2246,18 @@ of 2026-10-28.
   since the 1100 batch comments, no repeat comment. No
   knowledge or code PR open. Status: no-op. Full detail
   in pr-integration/1115-run.md.
+
+## 11:30 to about 11:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1130.
+  NON-batch pass per the checker (merge-aware due: no -
+  PR 359 already merged 11:07 in the 11:00 window; next
+  batch point 15:00): no records merge this pass.
+  Records PR 365 (records/2026-11-06, post-1100 batch,
+  head 2421e457) clean by local merge-tree, awaits the
+  15:00 batch. Records PRs 351, 350, 301, 265 and 256
+  still CONFLICTING on the single-file action-log
+  append-append, heads unchanged since the 1100 batch
+  comments, no repeat comment. No knowledge or code PR
+  open. Status: no-op. Full detail in
+  pr-integration/1130-run.md.
