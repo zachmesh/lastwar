@@ -3502,3 +3502,22 @@ of 2026-10-28.
   working copy untouched. Slack DM sync sent.
   Status: done.
   Full detail in pr-integration/1900-run.md.
+
+## 19:15 to about 19:23 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1923.
+  Non-batch pass: checker merge-aware not due, PR 334
+  already merged in the 19:00 window at 19:05:25 PT
+  (plain due had said yes, clock-only). No knowledge
+  or code PR open. Five records PRs only: PR 340
+  (records/2026-11-05, head 3d0484f1) clean, awaiting
+  the 23:00 batch; PRs 324, 301, 265 and 256 carried
+  on the 1500 pass conflict notes, no repeat comment.
+  Merge-tree against new main 1caa8f81 re-verified all
+  four still conflict on exactly the single
+  action-log.jsonl file, scope unchanged; the 1851
+  "all five clean" claim does not hold after the 334
+  merge. No merges, no comments, no records PR opened.
+  This pass supplies the in-window merge-aware not-due
+  evidence issue #335 still owed. Status: no-op.
+  Full detail in pr-integration/1923-run.md.
