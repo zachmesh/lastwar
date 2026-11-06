@@ -1922,3 +1922,26 @@ of 2026-10-28.
   17.5h) under 24 hours. No adoptions, fixes, hand-offs,
   escalations, flags, chat report or Slack sync. Full detail
   in pr-catchall/0939-run.md.
+
+## 09:45 to about 09:56 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-06-0945.
+  Non-batch pass: checker _tools_/records_batch.py due
+  reported not due, next batch 11:00 (73 minutes away at
+  pass start). Merged knowledge PR 363 (organizer 0932
+  arms-race fold, 0832 device offline seventy-fifth
+  consecutive pass; Owner lastwar-knowledge-organizer,
+  single file _activities_/arms-race/INDEX.md 1.45.0 to
+  1.46.0, Refs #282, #284) by squash, commit 5904cfa35,
+  branch deleted; local main fast-forwarded 42c6c5a125 to
+  5904cfa35 via the bundle route. PR 359 clean at head
+  8ad7cf48 awaiting the 11:00 batch - merge-tree first
+  line `merged` and a real test merge (automatic merge
+  went well, zero unmerged files) confirm it; the 13
+  `changed in both` lines are informational auto-merges,
+  not conflicts. PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single-file action-log
+  append-append, heads unchanged since the 0845 and 0900
+  re-check comments, so no comment repeated. No records
+  PR opened or merged, no escalations. Full detail in
+  pr-integration/0945-run.md.
