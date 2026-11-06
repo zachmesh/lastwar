@@ -756,3 +756,18 @@ of 2026-10-28.
   consistent with the event close of 2026-10-30; zombie-invasion
   inbox 0 per stats. The pre-reset zero-sweep pair for the
   2026-11-06 19:00 reset sits in the inbox, not yet due.
+
+## 04:00 to about 04:04 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0400.
+  Non-batch pass per the checker (plain due not due,
+  outside every batch window, next batch 07:00): no
+  knowledge or code PR was open. Six records PRs await
+  the 07:00 batch, all verified mergeable clean
+  (merge-tree against main 936f2f26be; the four
+  single-file action-log conflicts from the 03:00 pass
+  were resolved by the ticker-0342 branch-side
+  reconciliations). No merges, no comments, no
+  escalations, no records PR opened. records/2026-10-31
+  is fully contained in main, no PR owed. Status: no-op.
+  Full detail in pr-integration/0400-run.md.
