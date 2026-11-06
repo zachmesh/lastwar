@@ -1971,3 +1971,35 @@ of 2026-10-28.
   re-check comments, so no comment repeated. No records
   PR opened or merged, no escalations. Full detail in
   pr-integration/0945-run.md.
+
+## 09:34 to about 10:05 - Ticker pass
+
+- Ticker pass ticker-0934. Own PRs first: PR 359
+  (records/2026-11-06, post-0700 batch) has no comments and
+  no reviews, Owner lastwar-pr-integrator; older records PRs
+  351, 350, 301, 265 and 256 remain open under the integrator,
+  unchanged. Nothing addressed to this job. This pass's commit
+  joins PR 359; no new PR was opened.
+- Sync: reaped 0, expired 0, due 20, produced no new unit,
+  20 regulars already queued. Queue stats at 17:53Z: inbox
+  77, claimed 0, done 1011, upcoming 53. No zombie seeding:
+  the zombie chain closed with unit 066 on 2026-10-30 and
+  the event ended; no fresh chain until a Zombie Invasion
+  tab is seen live again.
+- Unit donations-2026-11-06-0603 failed: Mac mini offline,
+  last_seen 2026-11-05T15:36:52Z (about 26 hours 20 minutes
+  stale), five device invokes zero responses -
+  computer.session start (x2), connection.health and
+  connection.repair web on the Mac mini all node_offline
+  with no wake-up path, and connection.health on the
+  recovery device node_invoke_timeout after 25 seconds.
+  Same blocker as GitHub Issue #284 (tooling, still open):
+  the seventy-sixth consecutive pass with a Mac
+  device-access blocker, thirty-seventh in the worsened
+  zero-response form. This pass commented on #284 instead
+  of filing a duplicate. No game screen read, no input
+  dispatched, tracker untouched. The slot was a donations
+  check (planned 06:03 local, expires 10:03 local), so the
+  donations check for this slot is lost. The pass stopped
+  after this one unit; further units would fail identically.
+  Full detail in alliance-donations/0934-queue-run.md.
