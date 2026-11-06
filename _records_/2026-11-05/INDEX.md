@@ -4032,3 +4032,20 @@ of 2026-10-28.
   repeated. No records PR opened, no escalation.
   Status: no-op.
   Full detail in pr-integration/2200-run.md.
+
+## 22:15 to about 22:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-2215.
+  Non-batch pass: checker plain and merge-aware both not
+  due, next batch 23:00 PT (about 43 minutes away).
+  No knowledge or code PR was open. Five records PRs
+  only: PR 340 (records/2026-11-05, head 9d44110223,
+  35 commits, the one new commit being the 2200 run
+  record) MERGEABLE CLEAN by merge-tree, awaiting the
+  23:00 batch; PRs 324, 301, 265 and 256 carried on
+  their conflicts, re-verified by merge-tree against the
+  same current main db9c59bc0e (exactly one file each,
+  _logs_/repo-actions/action-log.jsonl), so no comment
+  repeated. No records PR opened, no escalation.
+  Status: no-op.
+  Full detail in pr-integration/2215-run.md.
