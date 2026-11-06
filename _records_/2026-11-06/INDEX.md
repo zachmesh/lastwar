@@ -2232,3 +2232,17 @@ of 2026-10-28.
   post-1100-batch appends) already covers the branch, so
   no new PR was opened. Status: failed. Full detail in
   radar-tasks/1104-queue-run.md.
+
+## 11:15 to about 11:25 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1115.
+  NON-batch pass per the checker (merge-aware due: no -
+  PR 359 already merged 11:07 in the 11:00 window; next
+  batch point 15:00): no records merge this pass.
+  Records PR 365 (records/2026-11-06, post-1100 batch)
+  MERGEABLE, awaits the 15:00 batch. Records PRs 351,
+  350, 301, 265 and 256 still CONFLICTING on the
+  single-file action-log append-append, heads unchanged
+  since the 1100 batch comments, no repeat comment. No
+  knowledge or code PR open. Status: no-op. Full detail
+  in pr-integration/1115-run.md.
