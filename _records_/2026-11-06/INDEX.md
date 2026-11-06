@@ -1428,3 +1428,30 @@ of 2026-10-28.
   No merges, no comments, no escalations. The log line
   for this run is owed at the 11:00 batch merge. Full
   detail in pr-integration/0715-run.md.
+
+## 07:04 to about 07:14 - Ticker pass
+
+- Ticker pass ticker-0704. Own PRs first: PR 347
+  (records/2026-11-06) was MERGED at 07:07 local by the
+  07:00 batch pass, so it no longer appears in the open
+  list; the other open records PRs (351, 350, 301, 265,
+  256) carry no new comments. Nothing addressed to this
+  job. A new PR for this branch (post-0700 batch) was
+  opened by the 0700 integrator pass as PR 359;
+  this pass's commit joins it.
+- Sync: reaped 0, expired 5, due 22, produced no new unit,
+  22 regulars already queued. No zombie seeding: the zombie
+  chain closed with unit 066 on 2026-10-30 and the event
+  ended; no fresh chain until a Zombie Invasion tab is seen
+  live again.
+- Unit harvest-2026-11-06-0603 failed: Mac mini offline,
+  last_seen 2026-11-05T15:36:52Z, four device invokes all
+  node_offline with no wake-up path. Same blocker as GitHub
+  Issue #284 (tooling, still open): the seventy-third
+  consecutive pass with a Mac device-access blocker,
+  thirty-fourth in the worsened zero-response form.
+  This pass commented on #284 instead of filing a
+  duplicate. No game screen read, no input dispatched,
+  tracker untouched. The pass stopped after this one unit;
+  further units would fail identically. Full detail in
+  resource-collection/0704-queue-run.md.
