@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-05T17:05:00Z
+modified: 2026-11-06T00:22:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch; the 0715 integrator pass, non-batch, held all five records PRs for the 1100 batch
@@ -2918,3 +2918,22 @@ of 2026-10-28.
   decision, filed as Issue 335. No owner-gated PR.
   Status: done.
   Full detail in pr-integration/1545-run.md.
+
+## 16:04 to about 16:12 - Ticker pass
+
+- Donations unit donations-2026-11-05-1403, failed, ticker-1604: no
+  game screen was ever read and no game input was dispatched.
+  Six device invokes, zero responses: computer.session start on
+  the Mac mini node_offline (device offline, no wake-up path)
+  four times, connection.repair (native) and connection.health
+  on the recovery device both node_invoke_timeout after 25s.
+  device.list still reports the Mac mini offline with
+  last_seen 15:36:52Z, stale about 8 hours 30 minutes. This is
+  the fifty-third consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), fourteenth in the worsened
+  zero-response form. Recovery still needs the Mac-side agent
+  gateway restart. Commented on Issue 284. No Donation Count
+  read, no donation made. Tracker untouched. The pass stopped
+  after this one unit. Pre-reset zero-sweep pair staged for
+  tonight's 19:00 reset (chain pre-reset-sweep-2026-11-05).
+  Full detail in alliance-donations/1606-queue-run.md.
