@@ -820,3 +820,18 @@ of 2026-10-28.
   records/2026-10-31 is fully contained in main, no
   PR owed. Status: no-op. Full detail in
   pr-integration/0415-run.md.
+
+## 04:30 to about 04:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0430.
+  Non-batch pass per the checker (plain due not due,
+  outside every batch window, next batch 07:00): no
+  knowledge or code PR was open. Six records PRs await
+  the 07:00 batch, all verified mergeable clean
+  (merge-tree against main 936f2f26be; PR 347 head
+  advanced since the 0415 pass and re-verified clean,
+  though GitHub still reports its mergeable state as
+  UNKNOWN). No merges, no comments, no escalations,
+  no records PR opened. records/2026-10-31 is fully
+  contained in main, no PR owed. Status: no-op. Full
+  detail in pr-integration/0430-run.md.
