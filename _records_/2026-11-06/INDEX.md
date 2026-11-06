@@ -2845,6 +2845,28 @@ of 2026-10-28.
   comment, no Slack message. Full detail in
   tool-development/1432-run.md.
 
+## 14:30 to about 14:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1430.
+  Non-batch pass per the checker (not due, next batch
+  15:00). Knowledge PR 368 merged (squash 8c8b68b42c):
+  organizer 1432, 1349 arms-race device offline fold
+  into arms-race 1.47.0, Owner
+  lastwar-knowledge-organizer, Refs #282 and #284,
+  feedback-source record verified at commit 1ddc66c237;
+  local main fast-forwarded 6f85cf6a88 to 8c8b68b42c.
+  Records PR 365 (head c822274b at pass start, 33
+  commits; advanced during the pass to c34f8c9d, 36
+  commits) clean, awaiting the 15:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still conflicted on the
+  single-file action-log append-append, re-verified by
+  merge-tree against the new main 8c8b68b42c; heads
+  unchanged since the 1315 / 1345 comments, no comment
+  repeated. No PR opened. First push of this record was
+  rejected as non-fast-forward (branch advanced to
+  6faae784, then c34f8c9d); rebased and pushed. Status:
+  done. Full detail in pr-integration/1430-run.md.
+
 ## 14:32 to about 14:44 - Knowledge organization pass
 
 - Pass knowledge-organization-2026-11-06-1432, worked from
@@ -2892,4 +2914,3 @@ of 2026-10-28.
   PST. No adoptions, fixes, hand-offs, escalations, flags,
   chat report or Slack sync. Full detail in
   pr-catchall/1448-run.md.
-
