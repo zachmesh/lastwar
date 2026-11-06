@@ -1971,3 +1971,18 @@ of 2026-10-28.
   re-check comments, so no comment repeated. No records
   PR opened or merged, no escalations. Full detail in
   pr-integration/0945-run.md.
+
+## 10:00 to about 10:06 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-06-1000.
+  Non-batch pass: checker _tools_/records_batch.py due
+  reported not due, next batch 11:00 (58 minutes away at
+  pass start). No knowledge or code PR open. PR 359 clean
+  at head 64ac721ff awaiting the 11:00 batch - merge-tree
+  --write-tree exit 0 against main 5904cfa35 confirms it.
+  PRs 351, 350, 301, 265 and 256 still CONFLICTING on
+  the single-file action-log append-append, heads
+  unchanged since the 0845 and 0900 re-check comments,
+  so no comment repeated. No records PR opened or
+  merged, no escalations. Full detail in
+  pr-integration/1000-run.md.
