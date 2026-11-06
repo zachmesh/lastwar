@@ -2211,3 +2211,24 @@ of 2026-10-28.
   force-merged. Local main synced back by bundle route
   (ef7b616751 to a469658df2). Status: done. Full detail
   in pr-integration/1100-run.md.
+## 11:04 to about 11:23 - Ticker pass
+
+- Ticker pass ticker-1104. Radar unit radar-2026-11-06-1003
+  (duel day 5 radar release, planned 10:03, expires 14:03)
+  FAILED: Mac mini offline, five device invokes, zero
+  responses (node_offline, no wake-up path; recovery device
+  node_invoke_timeout after 25000ms). Last_seen frozen at
+  2026-11-05T15:36:52Z, about 27 hours 45 minutes stale.
+  Seventy-seventh consecutive pass with this blocker,
+  thirty-eighth in the zero-response form (Issue #284,
+  commented, no duplicate filed). No game screen read, no
+  input dispatched, no spending. Tracker untouched. Sync:
+  reaped 0, expired 6, due 22, produced 12. Pool: inbox 68,
+  claimed 1, done 956, upcoming 48. No zombie seeding
+  (chain closed 2026-10-30, event ended). Delivered via a
+  temporary worktree onto records/2026-11-06; the local
+  working tree's other-job state left undisturbed. PR 365
+  (opened by the pr-integration 1100 pass for the
+  post-1100-batch appends) already covers the branch, so
+  no new PR was opened. Status: failed. Full detail in
+  radar-tasks/1104-queue-run.md.
