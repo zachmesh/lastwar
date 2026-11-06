@@ -4138,3 +4138,38 @@ of 2026-10-28.
   statements current; issue 335 is a third owner-decision issue,
   about six and a half hours old, registered as OD-20261105-01
   in the retro. Full detail in pr-catchall/2239-run.md.
+## 22:40 to about 22:45 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-2240: done. Own PRs
+  first: 6 open PRs, none owned by this job and no comment
+  addressed to it (PR 344 organizer 2232, PR 340/324/301/
+  265/256 integrator records).
+- Plan: `tools/queue.py plan --hours 12` staged 11 units;
+  already_present 59, skipped_done_current 0, reaped 0,
+  expired 11. The 11 staged units cover the 2026-11-06
+  10:03 and 10:30 slots (mail, help, gifts, train,
+  star-ceremony at 10:30; harvest, radar, survivors,
+  training, donations, arms-race at 10:03), all verified
+  present in the live inbox.
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) expired unexecuted,
+  second consecutive night, on the Mac device blocker.
+  0 enqueued. The 2026-11-06 pair was staged by
+  ticker-2152 on the branch but is not yet visible in the
+  live tree's inbox.
+- Scout diff on the Nov 4 observation (thirty-first
+  planner run to consume it): dry run and apply agree,
+  all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0.
+  No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 still has no owner answer (3 comments,
+  all from zachmesh, none from the owner; registered as
+  OD-20261105-01 in the retro, PR #337 merged) and stays
+  open pending retro closure - an integrator-job question
+  that changes nothing in this plan. No new Issue filed.
+- Pool: inbox 76, claimed 0, done 970, upcoming 49.
+  Status: done. Full detail in queue-planning/2240-run.md.
