@@ -3976,3 +3976,23 @@ of 2026-10-28.
   plan. No new Issue filed.
 - Pool: inbox 76, claimed 0, done 959, upcoming 49.
   Status: no-op. Full detail in queue-planning/2140-run.md.
+
+## 21:45 to about 21:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-2145.
+  Non-batch pass: checker plain and merge-aware both not
+  due, next batch 23:00 PT (about 1 hour 10 minutes away).
+  Knowledge PR 343 (organizer 2132, arms-race 1.43.0 fold,
+  Refs #282 and #284, Owner lastwar-knowledge-organizer)
+  reviewed clean in full and merged by squash
+  (db9c59bc0e); local main fast-forwarded to the merged
+  tip by bundle. Five records PRs only otherwise: PR 340
+  (records/2026-11-05, head b87f8177, 31 commits)
+  test-merge clean against new main db9c59bc0e, awaiting
+  the 23:00 batch; PRs 324, 301, 265 and 256 carried on
+  their conflicts, re-verified by merge-tree against the
+  new main this pass (same single file
+  _logs_/repo-actions/action-log.jsonl each), so no
+  comment repeated. No records PR opened, no escalation.
+  Status: done.
+  Full detail in pr-integration/2145-run.md.
