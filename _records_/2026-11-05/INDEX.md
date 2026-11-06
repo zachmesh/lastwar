@@ -4189,3 +4189,192 @@ of 2026-10-28.
   heads unchanged, so no comment repeated. No records
   PR opened, no escalation. Status: done.
   Full detail in pr-integration/2245-run.md.
+- Integrator pass pr-integration-2026-11-05-2300.
+  BATCH pass: checker plain and merge-aware both due,
+  window 23:00-00:00 PT, first pass at or after the
+  point, no records merge yet in the window.
+  Records PR 340 merged by merge commit dd95a0d8
+  (42 commits, 80 files changed, 17304 insertions,
+  22 deletions); merge-line commit ad09e0b184 pushed
+  to records/2026-11-05. Fresh records PR 345 opened
+  for the post-2300-batch appends, MERGEABLE CLEAN,
+  awaiting the 03:00 batch. PRs 324, 301, 265 and 256
+  carried on their conflicts, re-verified by
+  merge-tree against the new main dd95a0d8 (exactly
+  one file each, _logs_/repo-actions/action-log.jsonl),
+  heads unchanged, so no comment repeated. Local main
+  synced back to dd95a0d8 via bundle. Status: done.
+  Full detail in pr-integration/2300-run.md.
+
+## 23:10 to about 23:14 - ticker-2303 ghost-ops unit, failed on Mac offline
+
+- Ghost Ops unit ghost-ops-2026-11-05-0000, failed, ticker-2303: no
+  game screen was ever read and no game input was dispatched.
+  Five device invokes, zero responses, all node_offline with no
+  wake-up path: connection.health twice, computer.session start
+  twice, connection.repair (web) once. device.list still reports
+  the Mac mini offline with last_seen 15:36:52Z, stale about 15
+  hours 35 minutes, unchanged since the ticker-1025 pass. This is
+  the sixty-second recorded consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), twenty-third in the
+  worsened zero-response form; passes between 2152 and 2303 left
+  no record on the branch, so the true count may be higher.
+  Commented on Issue 284. No Ghost Ops tab read, no missions run,
+  no rewards claimed. Tracker untouched. The pass stopped after
+  this one unit. Sync reaped 0, expired 5 (1857 slots), produced
+  nothing new; Zombie Invasion chain stays closed (event ended
+  2026-10-30). Own PRs first: the four stale records PRs (324,
+  265, 256, 301) reconciled on the branch side against main
+  dd95a0d8 and commented; PR 340 merged, this pass rides open
+  PR 345. The 2026-11-06 pre-reset zero-sweep pair, staged by
+  ticker-2152 on the branch only, was copied verbatim into the
+  live pool inbox.
+  Full detail in ghost-ops/2303-queue-run.md.
+- Integrator pass pr-integration-2026-11-05-2315.
+  Non-batch pass: checker plain due but merge-aware not
+  due, PR 340 already merged 23:03:53 in the 23:00
+  window; next batch 03:00 PT. No knowledge or code PR
+  open. Five records PRs only, all verified mergeable
+  clean by merge-tree against main dd95a0d8 and
+  awaiting the 03:00 batch: PR 345 (records/2026-11-05,
+  head 3849e7dd, 3 commits) and PRs 324, 301, 265, 256,
+  whose single-file action-log conflicts were resolved
+  branch-side by the ticker-2303 reconciliation. No
+  merges, no comments, no escalations, no records PR
+  opened. No action-log line added, owed at the next
+  batch merge. Status: done.
+  Full detail in pr-integration/2315-run.md.
+
+## 23:32 to about 23:39 - Tool development pass
+
+- Tool developer pass tool-development-2026-11-05-2332.
+  No-op: own PRs checked first, only records PRs 345, 324,
+  301, 265 and 256 open, none carrying tools/ files (PR 345
+  re-verified, no tools/ file, records-only; PR 340 merged
+  since the 2232 run); no tooling PR of mine open, PR 337
+  carries no comments; same 18 open tooling issues as the
+  2232 run, all already implemented on main or diagnosed as
+  needing no tool code; no new tooling issue filed since the
+  2232 run; main moved once (db9c59bc to dd95a0d8ac) by the
+  PR 340 records-batch merge only. Issue 284 stays open
+  pending the Mac coming back online (ticker-2303 failed,
+  62nd consecutive pass). No branch, no PR, no issue
+  comment, no Slack message.
+  Status: no-op.
+  Full detail in tool-development/2332-run.md.
+- Integrator pass pr-integration-2026-11-05-2330.
+  Non-batch pass: checker plain due but merge-aware not
+  due, PR 340 already merged 23:03:52 in the 23:00
+  window; next batch 03:00 PT. Five records PRs only at
+  pass start, all verified mergeable clean by merge-tree
+  against main dd95a0d8 and awaiting the 03:00 batch:
+  PR 345 (records/2026-11-05, head advanced during the
+  pass to 212c65c6 by the tool-development 2332 run
+  record, re-verified clean at the new head) and PRs
+  324, 301, 265, 256, whose single-file action-log
+  conflicts were resolved branch-side by the ticker-2303
+  reconciliation. Knowledge PR 346 (organizer 2332
+  ghost-ops fold) opened mid-pass, reviewed clean and
+  merged by squash (267d28ade); local main synced back
+  by bundle. No comments, no escalations, no records PR
+  opened. No action-log line added, owed at the next
+  batch merge. Status: done.
+  Full detail in pr-integration/2330-run.md.
+## 23:32 to about 23:39 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-05-2332, worked from
+  the 2232 watermark. Folded the ticker-2303 ghost-ops
+  record (failed, Mac device offline, sixty-second
+  consecutive pass, twenty-third in the worsened
+  zero-response form, last_seen 15:36:52Z stale about
+  15h35m, five invokes zero responses, no
+  recovery-device attempts, Ghost Ops Thursday check
+  unexecuted) into ghost-ops 1.1.0 (PR 346 OPEN, Owner
+  lastwar-knowledge-organizer, Refs #282 and #284) and
+  commented the sixty-second occurrence onto Issue #282
+  (comment 6679775934). Own PR 344 stands MERGED with
+  no reviews or comments, so no PR feedback was owed.
+  The daily retro 2026-11-05 files no execution-
+  knowledge correction addressed to this job. No
+  contradiction resolved, no stale item, no issue filed
+  or closed. Ticker-2004, ticker-2034, ticker-2104,
+  ticker-2134 and ticker-2204 still have no record on
+  the branch and fall to the next run; the thirty-fifth
+  occurrence (ticker-0634) is tracked as Issue #342
+  (records class, filed by the retro). No Slack sync,
+  no chat report: routine hourly fold of a tracked
+  device fault. Full detail in
+  knowledge-organization/2332-run.md.
+## 23:39 to about 23:43 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-05-2339: no adopted open PR; six open
+  PRs scanned and none owned by this job (PR 346 knowledge
+  organizer's ghost-ops fold, PR 345/324/301/265/256 integrator
+  records, all naming a rightful owner matching their diffs). No
+  reviews on any open PR; no comment addressed to this job. PRs
+  344 and 340 merged since the 2239 pass (22:46 and 23:03 PST);
+  PRs 346 and 345 opened (23:37 and 23:04 PST). The four older
+  records PRs flipped CONFLICTING to MERGEABLE through the
+  ticker-2303 branch-side reconciliation merging current main
+  dd95a0d8. PR 256 crossed the 48-hour mark at 23:09 PST tonight
+  but the named owner's side acted on it at 23:06 PST, three
+  minutes before the threshold, and at 20:48 PST, so no
+  stale-owner flag; PR 265 crosses at 03:19 PST on 2026-11-06
+  with owner-side action about half an hour old. PR 345 mergeable
+  reads UNKNOWN while GitHub recomputes. Issues: verified open
+  count 48, all class-labeled; no new issue. Owner-decision
+  issues 132 (about one hundred and three hours) and 154 (about
+  ninety-seven hours) both over 24 hours with statements current;
+  issue 335 is a third owner-decision issue, about seven hours
+  old, registered as OD-20261105-01 in the retro. Full detail in
+  pr-catchall/2339-run.md.
+## 23:40 to about 23:45 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-2340: done. Own PRs
+  first: 7 open PRs, none owned by this job and no comment
+  addressed to it (PR 346 organizer 2332, PR 345/324/301/
+  265/256 integrator records).
+- Plan: `tools/queue.py plan --hours 12` staged 5 units;
+  already_present 65, skipped_done_current 0, reaped 0,
+  expired 0. The 5 staged units cover the 2026-11-06
+  1057 slot (passes, secrets, treasures, trucks, events),
+  all verified present in the live inbox.
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) expired unexecuted,
+  second consecutive night, on the Mac device blocker.
+  0 enqueued. The 2026-11-06 pair (chain
+  pre-reset-sweep-2026-11-06) is present in the live
+  inbox, first pass not_before 17:30 local Nov 6.
+- Scout diff on the Nov 4 observation (latest planner run
+  to consume it): dry run and apply agree, all zero -
+  observed 0, actionable 0, enqueued 0, already-queued 0,
+  candidates 0, unexplained red dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 still has no owner answer (3 comments,
+  all from zachmesh, none from the owner; registered as
+  OD-20261105-01 in the retro, PR #337 merged) and stays
+  open pending retro closure - an integrator-job question
+  that changes nothing in this plan. No new Issue filed.
+- Pool: inbox 77, claimed 0, done 976, upcoming 51.
+  Status: done. Full detail in queue-planning/2340-run.md.
+## 23:45 to about 23:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-2345.
+  Non-batch pass: checker plain due but merge-aware not
+  due, PR 340 already merged 23:03:52 in the 23:00
+  window; next batch 03:00 PT. No knowledge or code PR
+  open. Five records PRs only, all verified mergeable
+  clean by merge-tree against main 267d28ade and
+  awaiting the 03:00 batch: PR 345 (records/2026-11-05,
+  head advanced during the pass to d9d76565c by the
+  queue-planning 2340 run record, re-verified clean at
+  the new head) and PRs 324, 301, 265, 256, whose
+  single-file action-log conflicts were resolved
+  branch-side by the ticker-2303 reconciliation. No
+  merges, no comments, no escalations, no records PR
+  opened. No action-log line added, owed at the next
+  batch merge. Status: no-op.
+  Full detail in pr-integration/2345-run.md.
