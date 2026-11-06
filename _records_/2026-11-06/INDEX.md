@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-06
 created: 2026-11-06T08:06:27Z
-modified: 2026-11-06T10:47:00Z
+modified: 2026-11-06T10:48:43Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015, 0030, 0045 and 0100 PR integration passes, all non-batch, six records PRs await the 0300 batch, all verified clean; knowledge PR 348 merged by the 0045 pass; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
@@ -547,3 +547,20 @@ of 2026-10-28.
 - Pool: inbox 76, claimed 0, done 988, upcoming 51. Status:
   done. Full detail in queue-planning/0240-run.md.
 
+## 02:45 to about 02:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0245.
+  Non-batch pass per the checker (plain due not due,
+  next batch 03:00): no knowledge or code PR was open.
+  Six records PRs await the 03:00 batch, all verified
+  mergeable clean by merge-tree against main 628401d75:
+  PR 347 (records/2026-11-06, head e2b7c158, 26 commits),
+  PR 345 (records/2026-11-05, head 1f27dfc0, 12 commits),
+  PR 324 (records/2026-11-01, head c41db9ea, 2 commits),
+  PR 301 (records/2026-11-04, head a5294bf0, 14 commits),
+  PR 265 (records/2026-11-02, head 11b2f383, 5 commits) and
+  PR 256 (records/2026-11-03, head 6b8df47f, 16 commits).
+  No merges, no comments, no escalations. The action-log
+  line for this run is owed at the next batch merge.
+  Status: no-op. Full detail in
+  pr-integration/0245-run.md.
