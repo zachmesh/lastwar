@@ -2947,3 +2947,18 @@ of 2026-10-28.
 - Pool: inbox 79, claimed 0, done 1036, upcoming 53. Status:
   done. Full detail in queue-planning/1440-run.md.
 
+## 14:45 to about 14:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1445.
+  Non-batch pass per the checker (not due, next batch
+  15:00). No knowledge or code PR open. Records PR 365
+  (head 6dcb0434 at pass start, 37 commits; advanced
+  during the pass to d5b3874e, 38 commits) clean,
+  awaiting the 15:00 batch. Records PRs 351, 350, 301,
+  265 and 256 still conflicted on the single-file
+  action-log append-append, re-verified by merge-tree
+  against main 8c8b68b42c; heads unchanged since the
+  1315 / 1345 comments, no comment repeated. No PR
+  opened, none merged. Status: no-op. Full detail in
+  pr-integration/1445-run.md.
+
