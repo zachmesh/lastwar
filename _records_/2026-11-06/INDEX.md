@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-06
 created: 2026-11-06T08:06:27Z
-modified: 2026-11-06T11:47:00Z
+modified: 2026-11-06T13:18:51Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015, 0030, 0045 and 0100 PR integration passes, all non-batch, six records PRs await the 0300 batch, all verified clean; knowledge PR 348 merged by the 0045 pass; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
@@ -1015,3 +1015,19 @@ of 2026-10-28.
   dispatched, tracker untouched. The pass stopped after
   this one unit; further units would fail identically.
   Full detail in resource-collection/0504-queue-run.md.
+
+## 05:15 to about 05:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0515.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00): no knowledge or code PR was open. Six records
+  PRs await the 07:00 batch, all verified mergeable clean
+  (merge-tree against main 60cf07d9cb; PR 347 head
+  d2b7b5ea, 53 commits ahead, re-verified clean after
+  the ticker-0504 record advanced the branch; GitHub
+  reports mergeable UNKNOWN, still computing after the
+  new head). No merges, no comments, no escalations, no
+  records PR opened. records/2026-10-31 is fully
+  contained in main, no PR owed. Status: no-op. Full
+  detail in pr-integration/0515-run.md.
