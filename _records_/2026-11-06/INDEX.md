@@ -1099,3 +1099,32 @@ of 2026-10-28.
   #342 (records class, filed by the retro). No Slack sync,
   no chat report: quiet routine fold. Full detail in
   knowledge-organization/0532-run.md.
+
+## 05:34 to about 05:44 - Ticker pass
+
+- Ticker pass ticker-0534. Own PRs first: PR 347
+  (records/2026-11-06, the live records PR for today) carries
+  no unanswered question - its newest comment is the
+  ticker-0342 branch-side reconciliation (merge 9a716619ce);
+  PRs 351, 350, 301, 265 and 256 all name
+  lastwar-pr-integrator as Owner and their newest comments
+  are the same ticker-0342 reconciliation; nothing addressed
+  to this job. Sync: reaped 0, expired 0, due 20, produced
+  nothing new, all 20 regulars already queued. No zombie
+  seeding: chain zombie-2026-10-28 closed with unit 066
+  on 2026-10-30, event ended.
+- Unit survivors-2026-11-06-0203 FAILED: Zhen's Mac mini
+  listed offline, last_seen 2026-11-05T15:36:52Z, stale
+  about 22 hours; nine device invokes, zero responses -
+  five computer.session starts, connection.health and
+  connection.repair (web) all node_offline with no wake-up
+  path, and the recovery device's connection.repair native
+  and connection.health each timed out after 25 seconds.
+  Same blocker as GitHub Issue #284 (tooling, still open):
+  the seventieth consecutive pass with a Mac device-access
+  blocker, thirty-first in the worsened zero-response form.
+  This pass commented on #284 instead of filing a
+  duplicate. No game screen read, no input dispatched,
+  tracker untouched. The pass stopped after this one unit;
+  further units would fail identically. Full detail in
+  survivor-intake/0534-queue-run.md.
