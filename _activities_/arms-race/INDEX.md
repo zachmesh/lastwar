@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-06T12:36:24Z
+modified: 2026-11-06T17:37:12Z
 level: L1
-version: 1.45.0
+version: 1.46.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -47,6 +47,7 @@ grounded_in:
   - source: ticker-2041 arms-race execution record 2026-11-05 2041 queue run (failed, Mac device offline, sixtieth consecutive ticker pass to fail this way, twenty-first in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 13h, unchanged since the 1025 pass; seven invokes, zero responses)
   - source: ticker-0104 arms-race execution record 2026-11-06 0104 queue run (failed, Mac device offline, sixty-fourth consecutive ticker pass to fail this way, twenty-fifth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 17h55m, unchanged since the 1025 pass; five invokes, zero responses)
   - source: ticker-0404 arms-race execution record 2026-11-06 0404 queue run (failed, Mac device offline, sixty-seventh consecutive ticker pass to fail this way, twenty-eighth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 20h30m, unchanged since the 0342 pass; five invokes, zero responses)
+  - source: ticker-0832 arms-race execution record 2026-11-06 0832 queue run (failed, Mac device offline, seventy-fifth consecutive ticker pass to fail this way, thirty-sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 25h, unchanged since the 0741 pass; four invokes, zero responses, recovery-device health check timed out after 25s; duel day 5 unit)
 ---
 
 
@@ -1671,3 +1672,11 @@ slot. Evidence in
 - Recurrence, not a new failure class: this is the sixty-seventh consecutive ticker pass with a Mac device-access blocker, twenty-eighth in the worsened zero-response form after ticker-0342 (sixty-sixth, twenty-seventh). No executed pass is recorded between 0342 and this one. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the sixty-seventh occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 04:04 was not read and is not asserted here.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 20, produced nothing new, all 20 regulars already queued. The inbox held 76 units at this pass close (76 at sync).
+
+## What the 2026-11-06 0832 unit added - Mac device offline, seventy-fifth consecutive pass, zero-response form
+
+- Unit arms-race-2026-11-06-0603 by ticker-0832, about 08:32 to 08:40 local, status failed. Evidence in `_records_/2026-11-06/arms-race/0832-queue-run.md`. This was a duel day 5 unit: on a working screen it would have read the live phase and score, worked the tier-3 target just enough, claimed every earned reward, and finished with the completion sweep before leaving the Events and Arms Race screens. No diamonds spent, no scoring action executed, no chest claimed. The loss is the unexecuted arms-race check for this slot (planned 06:03 local 2026-11-06, expires 10:03 local 2026-11-06).
+- No game screen was ever read and no game input was dispatched. Four device invokes, zero responses: connection.health (attempt 1) node_offline, connection.repair (web) (attempt 2) node_offline, computer.session start (attempt 3) node_offline, all on the Mac mini (device offline, no wake-up path); connection.health on the recovery device (attempt 4) node_invoke_timeout after 25000ms. device.list reports the Mac mini offline with last_seen 15:36:52Z, stale about 25 hours at the 08:38 re-check, unchanged since the ticker-0741 pass. New against the 0404 pass, which made no recovery-device attempts: this pass DID attempt the recovery device, and its health check timed out after 25 seconds - the recovery channel accepts the invoke and never answers within 25 seconds, matching the ticker-0741 radar signature. The recovery device's last_seen is frozen at the same 2026-11-05T15:36:52Z as the Mac mini. This meets the standing at-least-3-attempts retry rule. No probe was run: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the seventy-fifth consecutive ticker pass with a Mac device-access blocker, thirty-sixth in the worsened zero-response form after ticker-0741 (seventy-fourth, thirty-fifth). No executed pass is recorded between 0741 and this one: the latest executed failure in the pool is the 0741 radar unit (finished 15:52:39Z). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the seventy-fifth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 08:32 was not read and is not asserted here.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 20, produced nothing new, all 20 regulars already queued. Queue stats at 16:35Z: inbox 78, claimed 0, done 1010, upcoming 53. The pre-reset zero-sweep pair for the 2026-11-06 19:00 reset (chain pre-reset-sweep-2026-11-06) sits in the inbox (pending 2), not yet due and untouched by this pass.
