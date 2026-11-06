@@ -3820,3 +3820,20 @@ of 2026-10-28.
   scratch-worktree test merge) and re-commented this pass.
   No records PR opened, no escalation. Status: done.
   Full detail in pr-integration/2045-run.md.
+
+- Retro review run (daily retro 2026-11-05): sixth rolling
+  retro under section 14. Branch pool 661 vs live pool 731
+  (gap 70, pool_gap.py FAIL; branch inbox now 0
+  past-expiry, issue 251 verification failed again);
+  Nov 5 is a zero-execution day (branch 128 finished, done
+  0, partial 0, failed 35, expired 93; live 83, done 0) and
+  a perception blackout day (no observation file) - the Mac
+  mini went offline from about 07:36 local and the 2041 pass
+  is the sixtieth consecutive failed pass (issues 282, 284
+  commented). Duel-score staged 6 units, all expired (issue
+  136); sweep pair expired a fifth day, still 19:00-timed
+  despite PR 267 and PR 312 (issue 147). One new issue filed
+  (342, missing ticker-0634 record); two issues closed (300,
+  316). New owner decision registered (OD-20261105-01, issue
+  335). Full detail in retro-review/2100-run.md and
+  _records_/retro/2026-11-05.md.
