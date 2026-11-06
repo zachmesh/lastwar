@@ -1806,3 +1806,21 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 77, claimed 0, done 1011, upcoming 53. Status:
   no-op. Full detail in queue-planning/0840-run.md.
+
+## 09:00 to about 09:07 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-06-0900.
+  Non-batch pass: checker _tools_/records_batch.py not
+  due (outside every batch window, next batch 11:00).
+  No merges, no records PRs opened, no knowledge or
+  code PR open. Posted re-check comments on records
+  PRs 351 and 350 (single-file action-log conflict,
+  re-verified against current main 42c6c5a125; the
+  0845 pass had re-checked only 301, 265 and 256).
+  PR 359 (records/2026-11-06, head 8ccac105) verified
+  clean against main 42c6c5a125 by merge-tree, awaits
+  the 11:00 batch. PRs 301, 265 and 256 still conflict
+  on _logs_/repo-actions/action-log.jsonl, re-checked
+  by the 0845 pass against the same main and heads,
+  no comment repeated. No escalations. Full detail in
+  pr-integration/0900-run.md.
