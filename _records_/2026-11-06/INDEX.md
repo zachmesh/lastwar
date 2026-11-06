@@ -2132,3 +2132,27 @@ of 2026-10-28.
   issue 335 (about 18.5h) under 24 hours. No adoptions, fixes,
   hand-offs, escalations, flags, chat report or Slack sync.
   Full detail in pr-catchall/1039-run.md.
+
+## 10:45 to about 10:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1045.
+  Non-batch pass per the checker (not due, next batch
+  11:00): knowledge PR 364 (organizer 1032 -
+  alliance-donations 1.42.0, fold ticker-0934 donations
+  failure, seventy-sixth consecutive pass) reviewed
+  clean and merged by squash, main synced back to the
+  local repo (5904cfa35 to ef7b6167). Six records PRs
+  await the 11:00 batch: PR 359 (records/2026-11-06,
+  head fcc674b6) verified mergeable clean by merge-tree
+  against the new main; PR 351 (records/2026-11-05,
+  head 57c544d3), PR 350 (records/2026-11-01, head
+  58a6b934), PR 301 (records/2026-11-04, head
+  75716629), PR 265 (records/2026-11-02, head
+  1a674db1) and PR 256 (records/2026-11-03, head
+  d5be8c03) still CONFLICTING on the single-file
+  action-log append-append, heads unchanged since the
+  0845 and 0900 re-check comments, so no comment
+  repeated. No comments, no escalations, no records PR
+  opened. The action-log line for this run is owed at
+  the next batch merge. Status: done. Full detail in
+  pr-integration/1045-run.md.
