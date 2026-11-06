@@ -4328,3 +4328,35 @@ of 2026-10-28.
   issue 335 is a third owner-decision issue, about seven hours
   old, registered as OD-20261105-01 in the retro. Full detail in
   pr-catchall/2339-run.md.
+## 23:40 to about 23:45 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-2340: done. Own PRs
+  first: 7 open PRs, none owned by this job and no comment
+  addressed to it (PR 346 organizer 2332, PR 345/324/301/
+  265/256 integrator records).
+- Plan: `tools/queue.py plan --hours 12` staged 5 units;
+  already_present 65, skipped_done_current 0, reaped 0,
+  expired 0. The 5 staged units cover the 2026-11-06
+  1057 slot (passes, secrets, treasures, trucks, events),
+  all verified present in the live inbox.
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) expired unexecuted,
+  second consecutive night, on the Mac device blocker.
+  0 enqueued. The 2026-11-06 pair (chain
+  pre-reset-sweep-2026-11-06) is present in the live
+  inbox, first pass not_before 17:30 local Nov 6.
+- Scout diff on the Nov 4 observation (latest planner run
+  to consume it): dry run and apply agree, all zero -
+  observed 0, actionable 0, enqueued 0, already-queued 0,
+  candidates 0, unexplained red dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 still has no owner answer (3 comments,
+  all from zachmesh, none from the owner; registered as
+  OD-20261105-01 in the retro, PR #337 merged) and stays
+  open pending retro closure - an integrator-job question
+  that changes nothing in this plan. No new Issue filed.
+- Pool: inbox 77, claimed 0, done 976, upcoming 51.
+  Status: done. Full detail in queue-planning/2340-run.md.
