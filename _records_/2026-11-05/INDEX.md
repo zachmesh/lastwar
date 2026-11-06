@@ -3545,3 +3545,16 @@ of 2026-10-28.
 
 - Pass tool-development-2026-11-05-1932: no-op. Own PRs checked first (5 open PRs, all integrator-owned records branches; recent tooling PRs 337/333/326/318/298/237/214/210/172/163/156/146/139/137/135 all MERGED, no review feedback; PR 337 carries no comments); all 20 labelled tooling issues triaged and found implemented or diagnosed ops-side, awaiting retro closure; no new issue filed since 335. Frozen backlog open tooling entries implemented (IMP-20261101-08 PR 172, IMP-20261101-09 PR 135/337); standing queue (c)(1)-(3) implemented; no _tools_/ change on main since the 1832 run. Issue 284 (Mac screen-capture / device-access failure, fifty-eighth consecutive failed ticker pass, Mac mini offline) needs a Mac-side fix, no tool code owed. No branch, no PR, no comment, no Slack message - silent no-op per the job body.
   Full detail in tool-development/1932-run.md.
+## 19:34 to about 19:40 - ticker-1933 radar unit, failed on Mac offline
+
+- Radar unit radar-2026-11-05-1803, failed, ticker-1933: no
+  game screen read and no game input dispatched. Mac mini
+  offline, last_seen 2026-11-05T15:36:52Z, no wake-up path;
+  recovery device timed out. Five device invokes, zero
+  responses. Fifty-ninth consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), twentieth in the
+  zero-response form. Live duel posture at entry was day 5
+  Total Mobilization, radar release, so the day 4 stack sits
+  unclaimed; the release window runs until 2026-11-06 18:00
+  local. Tracker untouched. Full detail in
+  radar-tasks/1933-queue-run.md.
