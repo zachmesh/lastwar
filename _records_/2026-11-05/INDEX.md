@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-06T00:22:00Z
+modified: 2026-11-06T00:44:58Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch; the 0715 integrator pass, non-batch, held all five records PRs for the 1100 batch
@@ -3041,3 +3041,24 @@ of 2026-10-28.
   in this plan. No new Issue filed.
 - Pool: inbox 76, claimed 0, done 942, upcoming 53.
   Status: done. Full detail in queue-planning/1640-run.md.
+
+## 16:34 to about 16:41 - Ticker pass
+
+- Harvest unit harvest-2026-11-05-1403, failed, ticker-1634: no
+  game screen was ever read and no game input was dispatched.
+  Five device invokes, zero responses: connection.health,
+  computer.session start and screen.snap on the Mac mini all
+  node_offline (device offline, no wake-up path),
+  connection.health and connection.repair (native) on the
+  recovery device both node_invoke_timeout after 25s.
+  device.list still reports the Mac mini offline with
+  last_seen 15:36:52Z, stale about 9 hours 4 minutes. This is
+  the fifty-fourth consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), fifteenth in the worsened
+  zero-response form. Recovery still needs the Mac back online
+  first, then the Mac-side agent gateway restart if invokes
+  still stall. Commented on Issue 284. No bubble count read, no
+  bubble collected, no Armed Truck claim. Tracker untouched. The
+  pass stopped after this one unit. Sync produced nothing new;
+  Zombie Invasion chain stays closed (event ended 2026-10-30).
+  Full detail in resource-collection/1634-queue-run.md.
