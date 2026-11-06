@@ -4230,3 +4230,17 @@ of 2026-10-28.
   ticker-2152 on the branch only, was copied verbatim into the
   live pool inbox.
   Full detail in ghost-ops/2303-queue-run.md.
+- Integrator pass pr-integration-2026-11-05-2315.
+  Non-batch pass: checker plain due but merge-aware not
+  due, PR 340 already merged 23:03:53 in the 23:00
+  window; next batch 03:00 PT. No knowledge or code PR
+  open. Five records PRs only, all verified mergeable
+  clean by merge-tree against main dd95a0d8 and
+  awaiting the 03:00 batch: PR 345 (records/2026-11-05,
+  head 3849e7dd, 3 commits) and PRs 324, 301, 265, 256,
+  whose single-file action-log conflicts were resolved
+  branch-side by the ticker-2303 reconciliation. No
+  merges, no comments, no escalations, no records PR
+  opened. No action-log line added, owed at the next
+  batch merge. Status: done.
+  Full detail in pr-integration/2315-run.md.
