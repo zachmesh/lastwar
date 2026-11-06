@@ -3458,3 +3458,25 @@ of 2026-10-28.
   nothing in this plan. No new Issue filed.
 - Pool: inbox 80, claimed 0, done 949, upcoming 51.
   Status: done. Full detail in queue-planning/1840-run.md.
+
+## 18:45 to about 18:51 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1851.
+  Checker not due for records (next batch 19:00);
+  merge-aware check with JSON merges file agrees.
+  Knowledge PR 339 reviewed clean and squash-merged
+  (merge commit 8911598e84): organizer 1832 fold of the
+  ticker-1734 daily-missions and ticker-1804 mail
+  records, daily-missions 1.6.0 and mail-rewards 1.22.0,
+  Refs #282, #284. Local main fast-forwarded to
+  8911598e84 by bundle, working copy untouched. Five
+  records PRs only otherwise: PR 334 (records/2026-11-05,
+  head advanced to 25d647e24d during the pass) awaiting
+  the 19:00 batch; PRs 324, 301, 265 and 256 carried on
+  the 1500 pass conflict notes, no repeat comment. All
+  five records branches test-merge CLEAN against new main
+  8911598e84 by merge-tree, so the four GitHub
+  CONFLICTING flags look stale; the 19:00 batch pass
+  should re-verify by merge-tree. No new records PRs
+  opened. Status: done.
+  Full detail in pr-integration/1851-run.md.
