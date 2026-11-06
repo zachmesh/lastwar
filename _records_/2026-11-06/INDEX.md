@@ -708,3 +708,11 @@ of 2026-10-28.
   carries no duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 77, claimed 0, done 992, upcoming 51. Status:
   done. Full detail in queue-planning/0340-run.md.
+
+## 03:45 to about 03:49 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0345.
+  Non-batch pass: checker plain due for the 03:00 window but merge-aware not due (PRs 324 and 345 already merged 03:04:48 and 03:06:29 in the window).
+- Merged knowledge PR 352 (organizer 0332, shop-claims 1.24.0) by squash, main 936f2f26be; local main fast-forwarded by bundle.
+- Six records PRs open: 351 and 347 verified mergeable clean by merge-tree against new main and awaiting the 07:00 batch; 350, 301, 265 and 256 conflict on the single action-log file, already commented at the 03:00 pass, awaiting branch-side reconciliation. No comments, no escalations, no records PR opened.
+- Status: done. Full detail in pr-integration/0345-run.md.
