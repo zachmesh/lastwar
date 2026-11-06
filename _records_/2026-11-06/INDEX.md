@@ -2982,3 +2982,24 @@ of 2026-10-28.
   (post-1500 batch) already covers the branch, so no new PR was
   opened. Status: failed. Full detail in
   radar-tasks/1512-queue-run.md.
+## 15:00 to about 15:25 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1500.
+  BATCH pass per the checker (due, merge-aware, window
+  15:00-16:00, first pass at or after the point, no
+  records merge yet in the window): records PR 365
+  (records/2026-11-06, 39 commits, 72 files) merged by
+  merge commit 56ba1205a7; merge-line commit c91800ad7d
+  added to records/2026-11-06; fresh records PR 369
+  opened for the post-1500-batch appends (awaits 19:00).
+  Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single-file action-log
+  append-append, commented at the batch with the fresh
+  cause (main advanced by the PR 365 merge), not
+  force-merged. VPS disk-full incident (root 100%,
+  29M free) blocked worktree creation mid-pass;
+  unblocked by removing 185 stale /tmp entries and 76
+  consumed bundle files (all mtime >24h), disk back to
+  81% (1.9G free). Local main synced back by bundle
+  route (8c8b68b42c to 56ba1205a7). Status: done. Full
+  detail in pr-integration/1500-run.md.
