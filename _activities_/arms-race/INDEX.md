@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-06T00:38:00Z
+modified: 2026-11-06T05:38:00Z
 level: L1
-version: 1.42.0
+version: 1.43.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -44,6 +44,7 @@ grounded_in:
   - source: ticker-0734 arms-race execution record 2026-11-05 0734 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirty-seventh consecutive ticker pass to fail this way, Issue 284; probe classification OFF_SCREEN_WINDOW high confidence; Chrome observation succeeded in the same session; connection repair changed nothing)
   - source: ticker-1134 arms-race execution record 2026-11-05 1134 queue run (failed, Mac device offline, forty-fourth consecutive ticker pass to fail this way, fifth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 4h05m, unchanged since the 1025 pass; six invokes, zero responses)
   - source: ticker-1534 arms-race execution record 2026-11-05 1534 queue run (failed, Mac device offline, fifty-second consecutive ticker pass to fail this way, thirteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 8h, unchanged since the 1025 pass; four invokes, zero responses)
+  - source: ticker-2041 arms-race execution record 2026-11-05 2041 queue run (failed, Mac device offline, sixtieth consecutive ticker pass to fail this way, twenty-first in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 13h, unchanged since the 1025 pass; seven invokes, zero responses)
 ---
 
 
@@ -1643,3 +1644,12 @@ slot. Evidence in
 - Recurrence, not a new failure class: this is the fifty-second consecutive ticker pass with a Mac device-access blocker, thirteenth in the worsened zero-response form after ticker-1504 (fifty-first, twelfth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the fifty-second occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 15:34 was not read and is not asserted here.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 21, produced nothing new, all 21 regulars already queued. The inbox held 72 units at this pass.
+
+## What the 2026-11-05 2041 unit added - Mac device offline, sixtieth consecutive pass, zero-response form
+
+- Unit arms-race-2026-11-05-1803 by ticker-2041, about 20:43 to 20:50 local, status failed. Evidence in `_records_/2026-11-05/arms-race/2041-queue-run.md`. This was a duel day 4 unit: on a working screen it would have read the live phase and score, worked the tier-3 target just enough, claimed every earned reward, and finished with the completion sweep before leaving the Events and Arms Race screens. No diamonds spent, no scoring action executed, no chest claimed.
+- No game screen was ever read and no game input was dispatched. Seven device invokes, zero responses: computer.session start on the Mac mini three times node_offline (device offline, no wake-up path), connection.health on the Mac mini node_offline, connection.repair (web) on the Mac mini node_offline, connection.repair (native) and connection.health on the recovery device both node_invoke_timeout after 25s. device.list reports the Mac mini offline with last_seen 15:36:52Z, stale about 13 hours, unchanged since the ticker-1025 pass. No probe was run: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the sixtieth consecutive ticker pass with a Mac device-access blocker, twenty-first in the worsened zero-response form after ticker-1933 (fifty-ninth, twentieth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the sixtieth occurrence onto #282.
+- Live duel posture, carried: the entry posture has already rolled to duel day 5 Total Mobilization, radar release, ending 2026-11-06 18:00 local, so this unit's duel day 4 window is stale and the day 4 stack sits unclaimed with the release window running, per the 1932 radar fold, the only Nov 5 duel posture evidence in the repo.
+- Reading warning: this failed unit gives zero evidence about the Arms Race phase, score or chest state. No phase, score or chest state was read in this pass, and nothing is claimed about the live phase. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its phase, which ended about 14:10 local; the phase live at 20:43 was not read and is not asserted here.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 23, produced nothing new, all 23 regulars already queued. The inbox held 70 units at this pass.
