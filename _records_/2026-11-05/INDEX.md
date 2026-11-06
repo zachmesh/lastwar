@@ -3107,3 +3107,18 @@ of 2026-10-28.
   comment. No new PRs opened.
   Status: done.
   Full detail in pr-integration/1655-run.md.
+
+## 17:00 to about 17:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1706.
+  Checker not due for records (next batch 19:00).
+  No knowledge or code PR open. Five records PRs only:
+  PR 334 (records/2026-11-05) verified clean by scratch
+  test merge against main 12ce4d98fb at its new head
+  ffca940df7, awaiting the 19:00 batch; PRs 324, 301,
+  265 and 256 still conflict on the single action-log
+  file, re-verified, carried on the 1500 pass notes, no
+  repeat comment. No merges, no comments, no new PRs
+  opened.
+  Status: no-op.
+  Full detail in pr-integration/1706-run.md.
