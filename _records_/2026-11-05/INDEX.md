@@ -3140,3 +3140,18 @@ of 2026-10-28.
   untouched. The pass stopped after this one unit. Sync produced
   nothing new; Zombie Invasion chain stays closed (event ended
   2026-10-30). Full detail in survivor-intake/1704-queue-run.md.
+
+## 17:15 to about 17:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1715.
+  Checker not due for records (next batch 19:00).
+  No knowledge or code PR open. Five records PRs only:
+  PR 334 (records/2026-11-05) verified clean by
+  merge-tree against main 12ce4d98fb at its new head
+  72a3ead737, awaiting the 19:00 batch; PRs 324, 301,
+  265 and 256 still conflict on the single action-log
+  file, re-verified, carried on the 1500 pass notes, no
+  repeat comment. No merges, no comments, no new PRs
+  opened.
+  Status: no-op.
+  Full detail in pr-integration/1715-run.md.
