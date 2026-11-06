@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-06
 created: 2026-11-06T08:06:27Z
-modified: 2026-11-06T08:47:00Z
+modified: 2026-11-06T08:46:15Z
 level: L0
 version: 1.0.0
 description: The 0000 and 0015 PR integration passes, both non-batch, six records PRs await the 0300 batch, all verified clean; records/2026-11-06 branch created from main with the 0000 run record; records PR 347 for 2026-11-06 open
@@ -138,3 +138,27 @@ of 2026-10-28.
   current, issue 335 (about eight hours) under 24 hours.
   No Slack sync, no chat report: quiet run. Full detail in
   pr-catchall/0039-run.md.
+
+## 00:40 to about 00:46 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  planned [], already_present 69, skipped_done_current 0,
+  reaped 0, expired 0. Every (regular, time slot) pair in
+  the next 12 hours already has a unit in the pool.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-06 (chain
+  pre-reset-sweep-2026-11-06) is already in inbox, both units.
+- Scout diff on the Nov 4 observation (thirty-first planner run to
+  consume it; no Nov 5 or Nov 6 observation yet, the post-reset
+  scout unit scout-2026-11-05-1900 still in inbox unexecuted):
+  dry run and apply agree, all zero - observed 0, actionable 0,
+  enqueued 0, already-queued 0, candidates 0, unexplained red
+  dots 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 now has
+  3 comments, no owner pick yet, PR #337 merged, closure with
+  the retro. No new Issue filed. Live tools/regulars.json still
+  carries no duel-score or zero-sweep regular (re-verified).
+- Pool: inbox 76, claimed 0, done 977, upcoming 51. Status:
+  no-op. Full detail in queue-planning/0040-run.md.
