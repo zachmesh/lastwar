@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-05
 created: 2026-11-05T08:03:07Z
-modified: 2026-11-06T00:44:58Z
+modified: 2026-11-06T00:56:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PR 301 held for the 0300 batch; the 0004 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-third consecutive pass); three stale records PRs resolved on the branch side; the 0034 ticker pass, failed on the Mac screen capture failure (Issue 284, twenty-fourth consecutive pass); the 0015 integrator pass verified the three resolutions clean and held all five records PRs for the 0300 batch; the 0045 integrator pass merged knowledge PR 305 (organizer 0032) and held five records PRs for the 0300 batch; the 0715 integrator pass, non-batch, held all five records PRs for the 1100 batch
@@ -3088,3 +3088,22 @@ of 2026-10-28.
   open for the retro. Slack DM sent to the owner; goal
   timeline entry recorded.
   Full detail in tool-development/1632-run.md.
+
+## 16:45 to about 16:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1655.
+  Checker not due for records (next batch 19:00).
+  Merged knowledge PR 336 (organizer 1632, arms-race
+  1.42.0 and donations 1.39.0) and code PR 337
+  (merge-aware records batch due gate, Refs #335,
+  _tools_/records_batch.py 1.0.0 to 1.1.0, spot-checked
+  by the integrator); PR 337 opened mid-pass. Five
+  records PRs only besides those: PR 334
+  (records/2026-11-05) verified clean by scratch test
+  merge against new main 12ce4d98fb at its new head
+  8174744e, awaiting the 19:00 batch; PRs 324, 301, 265
+  and 256 still conflict on the single action-log file,
+  re-verified, carried on the 1500 pass notes, no repeat
+  comment. No new PRs opened.
+  Status: done.
+  Full detail in pr-integration/1655-run.md.
