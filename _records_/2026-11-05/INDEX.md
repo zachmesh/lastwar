@@ -4173,3 +4173,19 @@ of 2026-10-28.
   that changes nothing in this plan. No new Issue filed.
 - Pool: inbox 76, claimed 0, done 970, upcoming 49.
   Status: done. Full detail in queue-planning/2240-run.md.
+- Integrator pass pr-integration-2026-11-05-2245.
+  Non-batch pass: checker plain and merge-aware both not
+  due, next batch 23:00 PT (about 12 minutes away).
+  Knowledge PR 344 merged by squash f7fdd0917e
+  (organizer 2232, alliance-donations 1.39.0 to 1.40.0,
+  Refs #282/#284); main synced back to the local repo
+  (db9c59bc0e to f7fdd0917e). Five records PRs only:
+  PR 340 (records/2026-11-05, head c3c6832f92,
+  41 commits) MERGEABLE CLEAN by merge-tree against the
+  new main, awaiting the 23:00 batch; PRs 324, 301, 265
+  and 256 carried on their conflicts, re-verified by
+  merge-tree against the new main f7fdd0917e (exactly
+  one file each, _logs_/repo-actions/action-log.jsonl),
+  heads unchanged, so no comment repeated. No records
+  PR opened, no escalation. Status: done.
+  Full detail in pr-integration/2245-run.md.
