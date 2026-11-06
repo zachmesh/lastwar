@@ -1227,3 +1227,22 @@ of 2026-10-28.
   unit. Issue 284 commented. Own PRs checked (PR 347),
   no action needed. Full detail in
   alliance-gifts/0605-queue-run.md.
+
+## 06:15 to about 06:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0615.
+  Non-batch pass per the checker (not due, outside
+  every batch window, next batch 07:00). No knowledge
+  or code PR open. Six records PRs await the 07:00
+  batch, all verified mergeable clean by merge-tree
+  against main 9c6a4d36 and by GitHub mergeable state
+  at the sweep: PR 351 (1 commit ahead), PR 350 (2),
+  PR 347 (64, head advanced to 5f0989000f since the
+  0600 pass, re-verified clean at the new head),
+  PR 301 (15), PR 265 (6), PR 256 (17). The 0300 batch
+  conflicts are resolved branch-side by the
+  ticker-0342 reconciliation. No comments, no
+  escalations, no records PR opened.
+  records/2026-10-31 is fully contained in main, no PR
+  owed. Status: no-op. Full detail in
+  pr-integration/0615-run.md.
