@@ -581,3 +581,20 @@ of 2026-10-28.
   conflicted, commented; 351 clean). No knowledge or code
   PR was open. Status: done. Full detail in
   pr-integration/0300-run.md.
+
+## 03:15 to about 03:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0315.
+  Non-batch pass per the checker (plain due but merge-aware
+  not due, PR 324 already merged 03:04:48 in the 03:00
+  window): no knowledge or code PR was open. Six records
+  PRs await the 07:00 batch: PR 351 verified clean by
+  merge-tree against main 3b054bcf (records/2026-11-05,
+  post-0300 batch, head 57c544d3); PRs 350, 347, 301, 265
+  and 256 conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, scope unchanged
+  since the 0300 conflict comments. No merges, no comments,
+  no escalations, no records PR opened. The action-log line
+  for this run is owed at the next batch merge.
+  Status: no-op. Full detail in
+  pr-integration/0315-run.md.
