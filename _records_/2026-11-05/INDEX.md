@@ -3919,7 +3919,7 @@ of 2026-10-28.
   retro). No Slack sync, no chat report: routine hourly
   fold of a tracked device fault. Full detail in
   knowledge-organization/2132-run.md.
-## 21:39 to about 21:46 - PR catch-all pass
+## 21:39 to about 21:44 - PR catch-all pass
 
 - Pass pr-catchall-2026-11-05-2139: no adopted open PR; five open
   PRs scanned and none owned by this job (PR 340/324/301/265/256
