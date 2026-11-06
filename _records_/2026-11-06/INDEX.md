@@ -61,3 +61,19 @@ of 2026-10-28.
   (sixty-third recorded consecutive pass, twenty-fourth in the
   worsened zero-response form); commented on #284. Tracker
   untouched. Full detail in radar-tasks/0004-queue-run.md.
+
+## 00:30 to about 00:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0030.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR was open. Six records
+  PRs await the 03:00 batch, all verified mergeable clean
+  by merge-tree against main 267d28ade: PR 347
+  (records/2026-11-06, head a441a2aca, 3 commits), PR 345
+  (records/2026-11-05, head 1f27dfc0, 12 commits), PR 324
+  (records/2026-11-01, head c41db9ea, 2 commits), PR 301
+  (records/2026-11-04, head a5294bf0, 14 commits), PR 265
+  (records/2026-11-02, head 11b2f383, 5 commits) and PR 256
+  (records/2026-11-03, head 6b8df47f, 16 commits). No
+  merges, no comments, no escalations. Status: no-op.
+  Full detail in pr-integration/0030-run.md.
