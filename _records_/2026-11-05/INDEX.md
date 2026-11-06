@@ -3400,3 +3400,27 @@ of 2026-10-28.
   current; issue 335 is a third owner-decision issue, about
   two and a half hours old.
   Full detail in pr-catchall/1839-run.md.
+
+## 18:36 to about 18:50 - Ticker pass
+
+- Pass ticker-1834: scout unit scout-scout-2026-11-02-005
+  (chain scout-2026-11-02 seq 5), failed. Mac mini offline,
+  last_seen 2026-11-05T15:36:52Z stale about 11 hours,
+  unchanged since the ticker-1025 pass; five device invokes,
+  zero responses (connection.health, connection.repair,
+  computer.session, computer.control on the Mac mini all
+  node_offline with no wake-up path; connection.health on
+  the recovery device node_invoke_timeout after 25s). No
+  game screen read, no input dispatched, no surface walked.
+  Fifty-eighth consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), nineteenth in the
+  worsened zero-response form. Commented on Issue 284.
+  Tracker untouched. Sync produced 4 units (vip,
+  daily-missions, duel-score, scout 2026-11-05-1800). Zombie
+  chain stays closed (event ended 2026-10-30). No successor
+  enqueued. The pass's first worktree in /tmp was wiped
+  mid-run by the runtime; the pass was redone in full in a
+  workspace worktree. Delivered via a temporary worktree
+  onto records/2026-11-05; the main worktree's other-job
+  state was left undisturbed.
+  Full detail in perception-scout/1836-queue-run.md.
