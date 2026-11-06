@@ -564,3 +564,20 @@ of 2026-10-28.
   line for this run is owed at the next batch merge.
   Status: no-op. Full detail in
   pr-integration/0245-run.md.
+
+## 03:00 to about 03:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0300.
+  Batch pass per the checker (plain and merge-aware due,
+  window 03:00-04:00, first pass at or after the point,
+  no records merge yet in the window): merged records PR
+  324 (records/2026-11-01, 2 commits, merge 5dfd140c) and
+  records PR 345 (records/2026-11-05, 12 commits, merge
+  3b054bcf), both by merge commit, branches kept. Records
+  PRs 265, 256, 301 and 347 conflicted on the action-log
+  after the merges and were carried with conflict comments;
+  fresh records PRs 350 (2026-11-01) and 351 (2026-11-05)
+  opened for the post-0300-batch appends (350 born
+  conflicted, commented; 351 clean). No knowledge or code
+  PR was open. Status: done. Full detail in
+  pr-integration/0300-run.md.
