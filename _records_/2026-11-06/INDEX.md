@@ -1214,3 +1214,16 @@ of 2026-10-28.
   records/2026-10-31 is fully contained in main, no PR
   owed. Status: done. Full detail in
   pr-integration/0600-run.md.
+
+## 06:04 to about 06:12 - Ticker pass
+
+- Ticker pass ticker-0604. Gifts unit
+  gifts-2026-11-06-0230 failed: Zhen's Mac mini offline
+  with no wake-up path (Issue 284, seventy-first
+  consecutive pass, thirty-second in the worsened
+  zero-response form). Five device invokes, zero
+  responses; no screen read, no input dispatched.
+  Tracker untouched; the next tick re-produces the
+  unit. Issue 284 commented. Own PRs checked (PR 347),
+  no action needed. Full detail in
+  alliance-gifts/0605-queue-run.md.
