@@ -3837,3 +3837,19 @@ of 2026-10-28.
   316). New owner decision registered (OD-20261105-01, issue
   335). Full detail in retro-review/2100-run.md and
   _records_/retro/2026-11-05.md.
+## 21:00 to about 21:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-2100.
+  Non-batch pass: checker plain and merge-aware both not
+  due, next batch 23:00 PT (about 1 hour 56 minutes away).
+  No knowledge or code PR open. Five records PRs only:
+  PR 340 (records/2026-11-05, head 6b8f1190, the 2045
+  run's own record commit) clean, awaiting the 23:00
+  batch; PRs 324, 301, 265 and 256 carried on the 1500
+  pass conflict notes, heads and main unchanged since
+  the 2045 re-verification against current main
+  e0433644 (single file
+  _logs_/repo-actions/action-log.jsonl each), so no
+  comment repeated this pass. No records PR opened, no
+  escalation. Status: no-op.
+  Full detail in pr-integration/2100-run.md.
