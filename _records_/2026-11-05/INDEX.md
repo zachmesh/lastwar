@@ -3264,3 +3264,20 @@ of 2026-10-28.
   Issue filed.
 - Pool: inbox 75, claimed 0, done 943, upcoming 52.
   Status: no-op. Full detail in queue-planning/1740-run.md.
+
+## 17:30 to about 17:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1730.
+  Checker not due for records (next batch 19:00);
+  merge-aware check with merges file agrees. Knowledge
+  PR 338 (organizer 1732) opened mid-pass, reviewed
+  clean and merged by squash (merge commit 0ca043d4);
+  local main fast-forwarded to 0ca043d4. Five records
+  PRs only otherwise: PR 334 (records/2026-11-05)
+  verified clean by merge-tree against main 12ce4d98fb
+  at its new head 965070792a, awaiting the 19:00 batch;
+  PRs 324, 301, 265 and 256 still conflict on the single
+  action-log file, re-verified, carried on the 1500 pass
+  notes, no repeat comment. No new records PRs opened.
+  Status: done.
+  Full detail in pr-integration/1730-run.md.
