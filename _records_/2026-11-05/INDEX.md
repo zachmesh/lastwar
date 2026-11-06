@@ -3424,3 +3424,37 @@ of 2026-10-28.
   onto records/2026-11-05; the main worktree's other-job
   state was left undisturbed.
   Full detail in perception-scout/1836-queue-run.md.
+
+## 18:40 to about 18:46 - Queue planning pass
+
+- Pass queue-planning-2026-11-05-1840: done. Own PRs
+  first: 6 open PRs, none owned by this job and no comment
+  addressed to it (PR 339 organizer knowledge, PR
+  334/324/301/265/256 integrator records).
+- Plan: `tools/queue.py plan --hours 12` staged 11 units -
+  mail, help, gifts, train and star-ceremony for the 0630
+  slot and harvest, radar, survivors, training, donations
+  and arms-race for the 0603 slot, all of 2026-11-06;
+  already_present 61, skipped_done_current 0, reaped 0,
+  expired 4 (the 1430 slot of 2026-11-05: gifts, help,
+  star-ceremony, train, window passed before execution).
+- Pre-reset sweep: production skipped, not the 17:00 hour
+  run. Tonight's pair for the 19:00 reset of 2026-11-05
+  (chain pre-reset-sweep-2026-11-05) already exists in
+  inbox; 0 enqueued. The standing task text was verified
+  in place in both units (first pass 17:30 local, final
+  pass 18:30 local), as appended by the 1640 run.
+- Scout diff on the Nov 4 observation (twenty-eighth
+  planner run to consume it): dry run and apply agree,
+  all zero - observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 0.
+  No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no
+  owner answer (0 comments); #132's owner answer stands
+  (duel-score tracking only, building and research
+  deferred); #335 still has no owner answer (PR 337
+  merged 16:52 local) and stays open pending retro
+  closure - an integrator-job question that changes
+  nothing in this plan. No new Issue filed.
+- Pool: inbox 80, claimed 0, done 949, upcoming 51.
+  Status: done. Full detail in queue-planning/1840-run.md.
