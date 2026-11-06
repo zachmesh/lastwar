@@ -1,15 +1,15 @@
 ---
-unit: training-2026-11-05-1403
-regular: training
-activity: troop-training
-segment: 1
+unit: daily-missions-2026-11-05-1800
+regular: daily-missions
+activity: daily-missions
+segment: 3
 priority: 3
-created_at: 2026-11-05T22:07:00Z
-expires_at: 2026-11-06T02:03:00Z
-planned_for: 2026-11-05T22:03:00Z
+created_at: 2026-11-06T02:43:02Z
+expires_at: 2026-11-07T02:00:00Z
+planned_for: 2026-11-06T02:00:00Z
 not_before:
 window:
-est_minutes: 4
+est_minutes: 5
 chain_id:
 chain_seq:
 attempts: 0
@@ -19,6 +19,6 @@ claimed_at:
 lease_until:
 ---
 
-# training
+# daily-missions
 
 Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
