@@ -3480,3 +3480,25 @@ of 2026-10-28.
   should re-verify by merge-tree. No new records PRs
   opened. Status: done.
   Full detail in pr-integration/1851-run.md.
+
+## 19:00 to about 19:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-05-1900.
+  Batch pass at the 19:00 point (checker plain and
+  merge-aware due, window 19:00-20:00, first pass at
+  or after the point, no merge yet in the window).
+  Records PR 334 merged by merge commit 1caa8f81
+  (34 commits, 78 files): records/2026-11-05
+  post-1500-batch accumulation. Records PRs 324, 301,
+  265 and 256 re-verified conflicted on the single
+  action-log file against new main, carried on the
+  1500-pass comments, not force-merged. Correction:
+  the 1851 pass "all five clean" claim does not hold
+  (merge-tree with the correct --merge-base form shows
+  the four old PRs conflicted; the GitHub flags are
+  not stale). Fresh records PR 340 opened (post-1900
+  batch), verified clean, awaits the 23:00 batch.
+  Local main fast-forwarded to 1caa8f81 by bundle,
+  working copy untouched. Slack DM sync sent.
+  Status: done.
+  Full detail in pr-integration/1900-run.md.
