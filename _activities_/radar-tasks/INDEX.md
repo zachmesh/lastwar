@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-06T03:44:34Z
+modified: 2026-11-06T08:37:00Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-2334 radar-tasks execution record 2026-11-04 2334 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-second consecutive ticker pass to fail this way, Issue 284; stack-posture unit, duel day 4)
   - source: ticker-1504 radar-tasks execution record 2026-11-05 1504 queue run (failed, Mac device offline, fifty-first consecutive ticker pass to fail this way, twelfth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 7h30m, unchanged since the 1025 pass; four invokes, zero responses; stack-posture unit, duel day 4)
   - source: ticker-1933 radar-tasks execution record 2026-11-05 1933 queue run (failed, Mac device offline, fifty-ninth consecutive ticker pass to fail this way, twentieth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 12h, unchanged since the 1025 pass; five invokes, zero responses; stack-window unit, live posture release, duel day 5 Total Mobilization)
+  - source: ticker-0004 radar-tasks execution record 2026-11-06 0004 queue run (failed, Mac device offline, sixty-third consecutive ticker pass to fail this way, twenty-fourth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 16h50m, unchanged since the 1025 pass and identical to the 2303 reading; five invokes, zero responses; release-day unit, duel day 5)
 ---
 
 
@@ -1550,6 +1551,8 @@ are still open, per the protocol.
 
 - 1.36.0 (2026-11-05): 1933 radar unit folded - fifty-ninth consecutive pass with a Mac device-access blocker, twentieth in the worsened zero-response form (Mac mini offline, last_seen 15:36:52Z stale about 12h, unchanged since the 1025 pass, five invokes zero responses, no probe run since last_seen unrefreshed); stack-window unit whose live entry posture is release, not stack (tools/duel.py 19:35 reads duel day 5, Total Mobilization, radar_posture release, day ends 2026-11-06 18:00 local) - the day 4 stack sits unclaimed and the release window runs until 2026-11-06 18:00 local; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; fifty-ninth occurrence commented onto Issue #282 by this run.
 
+- 1.37.0 (2026-11-06): 0004 radar unit folded - sixty-third consecutive pass with a Mac device-access blocker, twenty-fourth in the worsened zero-response form (Mac mini offline, last_seen 15:36:52Z stale about 16h50m, unchanged since the 1025 pass and identical to the 2303 reading, five invokes zero responses, no probe run since last_seen unrefreshed, no recovery-device attempts); release-day check for the slot unexecuted (duel day 5) - the day 4 stack sits unclaimed and the release window runs until 2026-11-06 18:00 local; the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read; sixty-third occurrence commented onto Issue #282 by this run.
+
 ## What the PR 237 merge settled - 1450 re-read as a stack-day unit
 
 - PR 237 (lastwar-tool-developer, Refs #235) merged
@@ -1987,4 +1990,14 @@ are still open, per the protocol.
 - Recurrence, not a new failure class: this is the fifty-ninth consecutive ticker pass with a Mac device-access blocker, twentieth in the worsened zero-response form (fifty-eighth was ticker-1834, scout). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the fifty-ninth occurrence onto #282.
 - Scope note: the Correction 2026-11-05 unblock (owner Dock-icon click, window back on the active Space) holds for the window-stream (capture-failure) form only; it does not address a stalled invoke channel or an offline device. For the zero-response form the record inference is a Mac-side agent gateway restart before re-probing - unverified.
 - Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all. The day 4 stack sits unclaimed until a live pass claims it in the release window (until 2026-11-06 18:00 local).
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-06 0004 unit added - Mac device offline, sixty-third consecutive pass, zero-response form
+
+- Unit radar-2026-11-05-2203 by ticker-0004, session window about 00:17 to 00:30 local, status failed. Evidence in `_records_/2026-11-06/radar-tasks/0004-queue-run.md`. No radar screen was ever read and no task was executed or claimed. The loss is the unexecuted radar release-day check for this slot (duel day 5). On a working screen this unit would have entered the radar, run Quick Execute batches and claimed the stack built on day 4, then worked the map pins to a closing read each, per the release standard. None of that happened; the day 4 stack sits unclaimed and the release window still runs until 2026-11-06 18:00 local, so a later pass with a live Mac can still claim it.
+- Attempts, five, zero responses: connection.health on the Mac mini node_offline (device offline, no wake-up path) twice (attempts 1 and 5); computer.session start on the Mac mini node_offline twice (attempts 2 and 4); connection.repair (web) on the Mac mini node_offline (attempt 3). device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 16 hours 50 minutes at the 00:20 re-check, unchanged since the ticker-1025 pass and identical to the ticker-2303 reading. No recovery-device attempts were made: the recovery device is offline with the same frozen last_seen, and its attempts in the ticker-2041 pass timed out after 25 seconds each, so nothing new would be learned by repeating them. This meets the standing at-least-3-attempts retry rule. No blind taps were dispatched: without an observation, any tap could land on the wrong control, so the unit stops here under the check-first rule. No probe was run: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the sixty-third consecutive ticker pass with a Mac device-access blocker, twenty-fourth in the worsened zero-response form (sixty-second was ticker-2303, ghost-ops). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the sixty-third occurrence onto #282.
+- Scope note: the Correction 2026-11-05 unblock (owner Dock-icon click, window back on the active Space) holds for the window-stream (capture-failure) form only; it does not address a stalled invoke channel or an offline device. For the zero-response form the record inference is a Mac-side agent gateway restart before re-probing - unverified.
+- Reading warning: this failed unit gives zero evidence about the radar claim state. It must NOT be read as "nothing claimable" or as a stored-count state - the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) rests on a live read and stands as the last live read; this unit rests on no read at all. The day 4 stack sits unclaimed until a live pass claims it in the release window (until 2026-11-06 18:00 local).
+- Pass context: the inbox held 76 units at this pass close (77 at sync); the pre-reset zero-sweep pair for the 2026-11-06 19:00 reset (chain pre-reset-sweep-2026-11-06), restored to the live pool inbox by the ticker-2303 pass (not_before 01:30Z and 02:30Z), was not yet due and was untouched by this pass. The pass stopped after this one unit: with the device fully offline, further units would fail identically.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
