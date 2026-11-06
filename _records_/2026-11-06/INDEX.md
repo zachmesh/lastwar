@@ -616,6 +616,22 @@ of 2026-10-28.
   Status: no-op. Full detail in
   pr-integration/0330-run.md.
 
+## 04:45 to about 04:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-0445.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, next batch 07:00). Merged two clean
+  knowledge PRs: PR 353 (radar-tasks 1.38.0) and PR 354
+  (arms-race 1.45.0), both squash, main advanced to
+  60cf07d9cb and synced back to the local repo. Six
+  records PRs (351, 350, 347, 301, 265, 256) all verified
+  MERGEABLE/CLEAN after the ticker-0342 branch-side
+  reconciliation and await the 07:00 batch. No comments,
+  no escalations, no records PR opened. The action-log
+  line for this run is owed at the next batch merge.
+  Status: done. Full detail in
+  pr-integration/0445-run.md.
+
 ## 03:32 to about 03:38 - Tool development pass
 
 - Tool-developer pass tool-development-2026-11-06-0332.
