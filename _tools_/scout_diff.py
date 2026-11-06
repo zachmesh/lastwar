@@ -377,11 +377,12 @@ def parse_narrative_accounting(text):
     all. A qualifier followed by digits and then a colon
     and another bare number ("in group 2: 3 dots") is not
     a count: the digits were a scope identifier, so the
-    line reads as nameless. Names are still taken only
-    from the unqualified counted form, so a qualified
-    line states its count and names nothing - its section
-    counts as unnamed, and the distinct figure stays a
-    floor.
+    line reads as nameless. Names are taken from a counted
+    line under the same qualifier rule as its count (a
+    compound "X badges A and B" item splits into two
+    names), so a qualified line can name its dots too;
+    a line whose names still cannot be counted stays
+    unnamed, and the distinct figure stays a floor.
     A count a section does not state reads as None, never
     as zero - a line naming a dot without a number (for
     example "Unexplained: the Alliance Wars dot") states
@@ -455,7 +456,8 @@ def parse_narrative_accounting(text):
 
 _DOT_NAME_EXCLUDE = re.compile(
     r"(no owning|filed as|issue #|maps? to|plus counters?"
-    r"|\bcounter\b|unlocated|unwalked|carried)", re.IGNORECASE)
+    r"|\bcounter\b|unlocated|unwalked|carried|belonging to)",
+    re.IGNORECASE)
 
 
 def _normalize_dot_name(item):
@@ -483,32 +485,89 @@ def _normalize_dot_name(item):
     return " ".join(item.lower().split())
 
 
+# A compound dot item: one shared base naming two dots by
+# number ("left-column badges 2 and 1", attested 2026-11-04).
+# The base word is singularised so the two names differ only
+# in their number; a pair is the only attested form, so three
+# or more numbers name nothing rather than guessing.
+_COMPOUND_DOTS = re.compile(
+    r"^(?P<base>.+?)\s+(?P<word>badges?|dots?|icons?)\s+"
+    r"(?P<n1>\d+)\s+and\s+(?P<n2>\d+)$",
+    re.IGNORECASE)
+
+
+def _compound_dot_names(raw_item):
+    """Two names from one compound dot item, or None.
+
+    The item is the raw comma-piece before normalising, so the
+    shared base and both numbers are still visible; each half
+    is normalised on its own, so the usual exclusions and the
+    word cap still apply to each name.
+    """
+    m = _COMPOUND_DOTS.match(raw_item.strip().strip(".").strip())
+    if not m:
+        return None
+    word = m.group("word").lower()
+    if word.endswith("s"):
+        word = word[:-1]
+    names = []
+    for num in (m.group("n1"), m.group("n2")):
+        item = _normalize_dot_name(
+            "%s %s %s" % (m.group("base"), word, num))
+        if not item or _DOT_NAME_EXCLUDE.search(item):
+            return None
+        if len(item.split()) > 6:
+            return None
+        names.append(item)
+    return names
+
+
 def _counted_unexplained_names(bullet_text):
     """Names from one counted unexplained line, or [].
 
     Only a line stating a count and a colon list names dots,
     and only when the kept items equal the stated count:
-    a trailing explanation clause ("no owning regular"), a
-    filing note ("filed as Issue #212") or a counters tail
+    a trailing explanation clause ("no owning regular",
+    "belonging to groups the successor walks"), a filing
+    note ("filed as Issue #212") or a counters tail
     ("plus 2 counters ...") would otherwise invent a dot,
     so a line whose items do not add up to its count names
-    nothing. A nameless line names nothing by the same rule
-    - its prose is not parsed for names - and a zero count
-    is a definite statement, not an unnamed section.
+    nothing. The count accepts the same scope qualifier as
+    the accounting parser ("Unexplained within the base
+    group alone 2:"), with the same guard: when the digits
+    follow a qualifier and a colon plus another number
+    ("in group 2: 3 dots"), the digits were a scope
+    identifier, not the count, so the line names nothing.
+    A compound item ("left-column badges 2 and 1") splits
+    into two names, each counted. A nameless line names
+    nothing by the same rule - its prose is not parsed for
+    names - and a zero count is a definite statement, not
+    an unnamed section.
     """
     m = re.search(
-        r"unexplained(?:\s+red\s+dots?)?\s*:?\s*(\d+)",
+        r"unexplained(?:\s+red\s+dots?)?"
+        r"(?P<qualifier>(?:\s+" + _ACCOUNTING_QUALIFIER_WORD +
+        r"){0,6}?)\s*:?\s*(?P<count>\d+)\b",
         bullet_text, re.IGNORECASE)
     if not m:
         return []
-    count = int(m.group(1))
+    count = int(m.group("count"))
     if count == 0:
         return []
-    rest = bullet_text[m.end():].lstrip(": ").strip()
+    rest = bullet_text[m.end():]
+    qualifier = (m.group("qualifier") or "").strip()
+    if qualifier and re.match(r"\s*:\s*\d", rest):
+        # The digits were a scope identifier, not the count.
+        return []
+    rest = rest.lstrip(": ").strip()
     rest = re.sub(r"\bplus\b[^,;]*counters?\b.*$", "", rest,
                   flags=re.IGNORECASE)
     kept = []
     for raw_item in re.split(r"[,;]", rest):
+        compound = _compound_dot_names(raw_item)
+        if compound is not None:
+            kept.extend(compound)
+            continue
         item = _normalize_dot_name(raw_item)
         if not item or _DOT_NAME_EXCLUDE.search(item):
             continue

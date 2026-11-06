@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T07:34:38Z
+modified: 2026-11-05T23:39:54Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0834 shop-claims execution record 2026-11-04 0841 queue run (done, checked only, 0 claims, monthly 17/17 Claimed as in 0511)
   - source: ticker-1434 shop-claims execution record 2026-11-04 1434 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fifth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-2234 shop-claims execution record 2026-11-04 2234 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2204 known to fail identically, Issue 284)
+  - source: ticker-1434 shop-claims execution record 2026-11-05 1434 queue run (failed, Mac device offline, fiftieth consecutive ticker pass to fail this way, eleventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 7h07m, unchanged since the 1025 pass; six invokes, zero responses)
 ---
 
 
@@ -815,3 +816,13 @@ the free and already paid for parts, never the paid unlocks.
 - Recurrence, not a new failure class: this is the next ticker pass after ticker-2204 known to fail on this exact blocker; the record does not assert an exact consecutive count beyond that. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments this occurrence onto #282. The 2234 detail that list_windows succeeds while observe, screen.snap and describe all fail with the same error, and that 45-second and 120-second waits do not clear it, is further evidence against a transient-stream reading, but it adds no new diagnosis beyond the game-window capture stream already narrowed in the 1404 section.
 - Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 0841 checked-only state above rests on a live read; this one rests on no read at all.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The inbox held 64 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
+
+## What the 2026-11-05 1434 unit added - Mac device offline, fiftieth consecutive pass, zero-response form
+
+- Unit passes-2026-11-05-1057 by ticker-1434, about 14:34 to 14:44 local, status failed (the record frontmatter says unverified while its Outcome section says failed - the body outcome is followed, as in the 1434 and 2234 sections of 2026-11-04). Evidence in `_records_/2026-11-05/shop-claims/1434-queue-run.md`. No different-device dialog was observed - no screen was ever captured, so none could have been seen.
+- No game screen was ever read and no game input was dispatched. Six device invokes, zero responses: computer.session start on the Mac mini node_offline (attempt 1), connection.health on the Mac mini node_offline (attempt 2), connection.repair (web) on the Mac mini node_offline (attempt 3), connection.repair (native) on the recovery device node_invoke_timeout after 25s (attempt 4), connection.health on the recovery device node_invoke_timeout after 25s (attempt 5), computer.session start on the Mac mini again node_offline (attempt 6). device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 7 hours 7 minutes at pass time, unchanged since the ticker-1025 pass. This meets the standing at-least-3-attempts retry rule. No probe was run beyond these attempts: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the fiftieth consecutive ticker pass with a Mac device-access blocker, eleventh in the worsened zero-response form after ticker-1404 (forty-ninth, tenth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the fiftieth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 2026-11-04 0841 checked-only state rests on a live read; this one rests on no read at all. The passes unit's daily gifts stay unclaimed for this slot.
+- Sync (authoritative, records-branch pool): reaped 0, expired 6 (duel-score, gifts, help, mail, star-ceremony, train 2026-11-05-1030), due 23, produced 6 units (mail, help, gifts, train, star-ceremony, duel-score 2026-11-05-1430); 17 due regulars already queued. Pool-authority note: the pass's first sync ran in the main working tree, which sits on the stale work/ops-execution-records branch (queue state from 2026-11-03) and holds another job's in-flight state - its expirations of 8 local copies were discarded; the branch-pool sync above is the one committed. The records branch is the authoritative pool for ticker passes.
+- No successor unit is enqueued from this unit - a successor would hit the same stalled channel. The pass stopped after this one unit.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
