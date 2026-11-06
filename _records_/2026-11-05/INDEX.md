@@ -4265,16 +4265,18 @@ of 2026-10-28.
 - Integrator pass pr-integration-2026-11-05-2330.
   Non-batch pass: checker plain due but merge-aware not
   due, PR 340 already merged 23:03:52 in the 23:00
-  window; next batch 03:00 PT. No knowledge or code PR
-  open. Five records PRs only, all verified mergeable
-  clean by merge-tree against main dd95a0d8 and
-  awaiting the 03:00 batch: PR 345 (records/2026-11-05,
-  head advanced during the pass to 212c65c6 by the
-  tool-development 2332 run record, re-verified clean
-  at the new head) and PRs 324, 301, 265, 256, whose
-  single-file action-log conflicts were resolved
-  branch-side by the ticker-2303 reconciliation. No
-  merges, no comments, no escalations, no records PR
+  window; next batch 03:00 PT. Five records PRs only at
+  pass start, all verified mergeable clean by merge-tree
+  against main dd95a0d8 and awaiting the 03:00 batch:
+  PR 345 (records/2026-11-05, head advanced during the
+  pass to 212c65c6 by the tool-development 2332 run
+  record, re-verified clean at the new head) and PRs
+  324, 301, 265, 256, whose single-file action-log
+  conflicts were resolved branch-side by the ticker-2303
+  reconciliation. Knowledge PR 346 (organizer 2332
+  ghost-ops fold) opened mid-pass, reviewed clean and
+  merged by squash (267d28ade); local main synced back
+  by bundle. No comments, no escalations, no records PR
   opened. No action-log line added, owed at the next
   batch merge. Status: done.
   Full detail in pr-integration/2330-run.md.
