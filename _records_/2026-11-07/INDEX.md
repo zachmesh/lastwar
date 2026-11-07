@@ -716,3 +716,18 @@ of 2026-10-28.
   _logs_/repo-actions/action-log.jsonl, no repeat comments,
   carried to the 07:00 batch. Status: no-op. Full detail in
   pr-integration/0415-run.md.
+
+## 04:20 to about 04:24 - Ticker pass
+
+- Ticker pass ticker-0420. Donations unit
+  donations-2026-11-07-0203 failed: Mac mini offline, no
+  wake-up path, 6 device invokes zero responses,
+  last_seen 2026-11-05T15:36:52Z. 99th consecutive pass
+  with this blocker, 60th in the zero-response form. No
+  game screen read, no game input, no Donation Count taken,
+  no donation made. Issue 284 commented. Sync reaped 0,
+  expired 0, due 20, produced nothing new. Pre-reset
+  zero-sweep pair already staged. No zombie seeding: event
+  ended 2026-10-30. Tracker untouched. PR 382 mergeable and
+  clean, awaits the 07:00 batch. Status: failed. Full detail
+  in alliance-donations/0420-queue-run.md.
