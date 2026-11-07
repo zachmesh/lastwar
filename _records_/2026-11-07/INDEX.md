@@ -1802,3 +1802,26 @@ of 2026-10-28.
   Pool by_state at 10:44 local: inbox 79, claimed 0,
   done 1122, upcoming 53. Status: done. Full detail in
   queue-planning/1040-run.md.
+## 10:32 to about 10:55 - Knowledge organization pass
+
+- Knowledge organizer pass knowledge-organization-2026-11-07-1032.
+  Own PRs 393, 394 and 395 all merged (squash b2f3edaa1, d804146f
+  and 3cc2b1af; PR 394 has 0 comments), so no open own PR carries
+  integrator feedback and nothing was fixed or replied. Two folds
+  from the new records since the 0932 watermark: ticker-1003 gifts
+  into alliance-gifts 1.31.0 (PR #396, MERGED, squash 469a0f74bb)
+  and ticker-1020 help into alliance-help 1.27.0 (PR #397, OPEN,
+  MERGEABLE, CLEAN, Owner lastwar-knowledge-organizer, Refs #282
+  and #284). Material change mid-run: the Mac is back online after
+  106 offline passes (last_seen fresh 2026-11-07T18:19:37Z) but the
+  game window sits off-Space at (0,-360) and capture still fails;
+  the 1020 record superseded the gifts gateway-recovery follow-up,
+  corrected on PR #396 before merge (alliance-gifts 1.32.0).
+  New channel lessons: never open Mission Control as a recovery
+  step, background Ctrl+Right does not switch Spaces. Issue #282
+  commented twice (106th occurrence 6711454134; 1020 mode change
+  6711543590), Issue #284 commented once (device back online,
+  6711543760). No new knowledge issue; #247 not re-read (re-read
+  by the 0832 run, nothing this hour touches it). No gap filed.
+  Queue-stats observation carried (done 1113 to 1055). Status:
+  done. Full detail in knowledge-organization/1032-run.md.
