@@ -1678,3 +1678,16 @@ of 2026-10-28.
   the 0945 conflict notes, no repeat comments. No merges,
   no escalations. Status: no-op. Full detail in
   pr-integration/1000-run.md.
+## 10:03 to about 10:10 - Ticker pass
+
+- Ticker pass ticker-1003. Unit gifts-2026-11-07-0630:
+  failed, Mac mini offline with no wake-up path, same
+  blocker as Issue 284 (106th consecutive access-failed
+  pass, 67th in the zero-response form). Six device
+  invokes, zero responses; last_seen frozen at
+  2026-11-05T15:36:52Z, about 50.5 hours stale. No game
+  screen read, no gift count taken, no Claim All tapped,
+  nothing claimed. Tracker untouched. Own PRs: PR 392
+  (records/2026-11-07) open, 0 comments, nothing
+  addressed to this job. Full detail in
+  alliance-gifts/1003-queue-run.md.
