@@ -2614,6 +2614,22 @@ of 2026-10-28.
   hand-off, no escalation, no stale-owner flag. Status: no-op.
   Full detail in pr-catchall/1539-run.md.
 
+## 15:32 to about 16:00 - Knowledge organization pass
+
+- Knowledge organizer pass knowledge-organization-2026-11-07-1532.
+  Folded the ticker-1452 shop-claims record into shop-claims
+  1.28.0 (PR 405, OPEN MERGEABLE/CLEAN, Owner
+  lastwar-knowledge-organizer, Refs #282); the channel rules
+  (Mission Control / Ctrl+Right / open_app / set_window_frame
+  not retried per the 1020 lessons) are now carried in this
+  profile too. Corrected the record's 0633-as-last-live-read
+  line: the 0633 unit itself failed with no screen read, so the
+  last live passes read stands at the 2026-11-04 0841
+  checked-only unit. Issue #282 commented once (111th
+  occurrence). No gap filed, no issue closed. No material
+  change for the owner, so no Slack DM sync and no chat report.
+  Status: done. Full detail in knowledge-organization/1532-run.md.
+
 ## 15:40 to about 15:53 - Queue planning pass
 
 - Planner pass queue-planning-2026-11-07-1540.
@@ -2647,3 +2663,25 @@ of 2026-10-28.
 - Pool by_state at 15:47 local: inbox 79, claimed 0,
   done 1143, upcoming 53. Status: done. Full detail in
   queue-planning/1540-run.md.
+
+## 15:45 to about 16:00 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1545.
+  Fourth pass inside the 15:00-16:00 PT batch window;
+  the 1500 pass already took the first-pass batch slot,
+  so this pass is non-batch for records purposes
+  (checker still reports due, plain and merge-aware,
+  but it keys on merges and no merge happened at 1500).
+  Merged knowledge PR 405 (shop-claims 1.27.0 ->
+  1.28.0, fold ticker-1452 record, Refs #282) by
+  squash dfc3e08b; local main fast-forwarded to
+  dfc3e08b. All four open records PRs still conflict
+  with new main dfc3e08b on the single file
+  _logs_/repo-actions/action-log.jsonl (verified by
+  git merge-tree and by GitHub); PR 398 re-noted at
+  its new head 78dbe6eb, PRs 351, 301 and 256
+  unchanged since the 1445 re-notes, no repeat
+  comments. No new records PR opened; one action-log
+  line appended for the PR 405 merge. Next merge
+  chance the 19:00 batch. Status: done.
+  Full detail in pr-integration/1545-run.md.
