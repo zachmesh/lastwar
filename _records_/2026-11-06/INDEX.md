@@ -3288,3 +3288,4 @@ of 2026-10-28.
   this run: IMP-04 PR #139, IMP-09 PR #23, IMP-03 PR #30,
   all on main. No branch, no PR, no issue comment, no Slack
   message. Full detail in tool-development/1632-run.md.
+- Addendum to the 1632 pass (same run): ticker-1604 daily-missions record (commit 531c6fcb, eighty-second consecutive pass, Mac mini offline) landed during the run after the input cutoff and is explicitly owed to the next organizer run - it must not be treated as covered by the 1632 watermark. Full detail in knowledge-organization/1632-run.md.
