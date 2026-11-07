@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T14:49:00Z
+modified: 2026-11-07T21:48:47Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -2275,6 +2275,29 @@ of 2026-10-28.
   passes must judge mergeability by the merge-tree
   --write-tree --merge-base exit code. Status: done.
   Full detail in pr-integration/1330-run.md.
+
+## 13:37 to about 13:52 - Ticker pass (donations failed, Issue 282)
+
+- Ticker pass ticker-1334. Donations unit
+  donations-2026-11-07-1003 failed: Mac mini online but the
+  screen-capture stream failed on all 4 attempts (activate
+  evidence plus three observes), Last War window off-Space at
+  (0, -360), same blocker as Issue 282 - the one-hundred-tenth
+  recorded consecutive access-failed pass, fourth in the new
+  capture-failure form. No game screen read, no Donation Count
+  taken, no coin donation made, nothing claimed; the day's
+  donation quota is unmeasured from the first slot (the 0804
+  unit failed in the offline form). Tracker untouched; the next
+  tick re-produces the donations unit. Issue 282 commented, no
+  duplicate filed. Own PRs checked: PR 398 open, integrator
+  conflict note of 13:30 stale (head advanced, MERGEABLE/CLEAN
+  per the 1339 catch-all re-check), nothing addressed to this
+  job, no new PR opened. Sync: reaped 0, expired 0, due 20,
+  produced nothing, all 20 already queued; inbox 77. No zombie
+  seeding (event ended 2026-10-30, chain closed unit 066).
+  Zero-sweep pair for the 19:00 reset still pending in the
+  inbox. Status: failed. Full detail in
+  alliance-donations/1334-queue-run.md.
 ## 13:40 to about 13:47 - Queue planning pass
 
 - Planner pass queue-planning-2026-11-07-1340.
