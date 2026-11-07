@@ -3527,6 +3527,27 @@ of 2026-10-28.
 - Pool: inbox 77, claimed 0, done 1043, upcoming 52. Status:
   no-op. Full detail in queue-planning/1740-run.md.
 
+## 17:34 to about 17:56 - Ticker pass ticker-1734 (arms-race, failed on device offline)
+
+- Ticker pass ticker-1734. Unit arms-race-2026-11-06-1403
+  completed as failed: the Mac mini is offline with no wake-up
+  path, six device invokes and zero responses, so no game screen
+  was ever read and no game input was dispatched. The Arms Race
+  phase was never opened, no phase or score read, no chest
+  claimed. Same blocker as GitHub Issue #284 (label tooling,
+  still open): the eighty-fifth recorded consecutive pass with
+  a Mac device-access blocker, forty-sixth in the worsened
+  zero-response form. The pass commented on #284 instead of
+  filing a duplicate. Tracker untouched; the next tick
+  re-produces the arms-race unit. Pre-reset zero-sweep pair
+  still pending (2). No zombie seeding: the zombie chain closed
+  2026-10-30. Own PRs checked first: PR 369 (records/2026-11-06)
+  has no comments, is mergeable and CLEAN. Delivery via a
+  temporary worktree onto records/2026-11-06, the local working
+  tree holding another job's in-flight state on
+  work/ops-execution-records. Status: failed. Full detail in
+  arms-race/1734-queue-run.md.
+
 ## 17:45 to about 17:53 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-06-1745.
