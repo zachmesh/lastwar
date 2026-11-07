@@ -406,3 +406,16 @@ of 2026-10-28.
   advanced since the 0200 pass (f4430db7 to 54ae8ba6,
   ticker-0204 gifts record landed). Status: no-op. Full
   detail in pr-integration/0215-run.md.
+
+## 02:30 to about 02:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0230.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PRs open, nothing merged,
+  no comments posted. Seven records PRs await the 03:00
+  batch, all verified merge-clean against main 74db107bc
+  by merge-tree exit codes on freshly fetched remote
+  tips; gh reports MERGEABLE/CLEAN on all seven. PR 382
+  head advanced since the 0215 pass (54ae8ba6 to
+  b3c462ee, the 0215 run record commit). Status: no-op.
+  Full detail in pr-integration/0230-run.md.
