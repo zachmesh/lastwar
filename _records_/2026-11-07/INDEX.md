@@ -1161,6 +1161,20 @@ of 2026-10-28.
   comments. Status: no-op. Full detail in
   pr-integration/0645-run.md.
 
+## 07:00 to about 07:09 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0700.
+  BATCH pass per the checker (plain and merge-aware due,
+  window 07:00-08:00): merged records PRs 382 (78 commits,
+  123 files) and 265 (7 commits, 1 file); records PRs 256,
+  301 and 351 conflicted on
+  _logs_/repo-actions/action-log.jsonl after the merges,
+  commented, carried to the 11:00 batch pending branch-side
+  reconciliation. Fresh records PR 392 opened for
+  records/2026-11-07 (post-0700 batch). No knowledge or
+  code PR open. Status: done. Full detail in
+  pr-integration/0700-run.md.
+
 ## 07:04 to about 07:15 - Ticker pass
 
 - Ticker pass ticker-0704. Unit harvest-2026-11-07-0603:
@@ -1172,9 +1186,13 @@ of 2026-10-28.
   screen read, no bubble collected, no truck loot claimed.
   Sync produced duel-score-2026-11-07-0630; inbox 69.
   Own PRs: the four older records PRs (351, 301, 265, 256)
-  are MERGEABLE/CLEAN against main dc94999c, no
-  reconciliation owed; no open PR for records/2026-11-07,
-  a fresh one is opened by this pass. No zombie seeding
+  were MERGEABLE/CLEAN against main dc94999c at this
+  pass's check; the 07:00 batch then merged PR 265 and
+  re-conflicted 351, 301 and 256 on action-log.jsonl,
+  carried to the 11:00 batch pending branch-side
+  reconciliation by a later pass. PR 392, opened by the
+  integrator at the 07:00 batch, covers records/2026-11-07;
+  no new PR opened by this pass. No zombie seeding
   (chain closed 2026-10-30, event ended). Pass stopped
   after this one unit. Status: failed. Full detail in
   resource-collection/0704-queue-run.md.
