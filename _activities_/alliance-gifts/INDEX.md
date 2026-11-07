@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T10:38:30Z
+modified: 2026-11-07T02:39:51Z
 level: L1
-version: 1.27.0
+version: 1.29.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -34,6 +34,8 @@ grounded_in:
   - source: ticker-1804 alliance-gifts execution record 2026-11-04 1804 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twelfth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-2204 alliance-gifts execution record 2026-11-04 2204 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2134 known to fail identically, Issue 284)
   - source: ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, twenty-seventh consecutive ticker pass to fail this way, View-menu probe re-confirms the windowed-on-inactive-Space diagnosis, Issue 284)
+  - source: ticker-0604 alliance-gifts execution record 2026-11-06 0605 queue run (failed, Mac device offline, seventy-first consecutive ticker pass with a Mac device-access blocker, thirty-second in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 22h35m, unchanged since the 0534 pass; five invokes, zero responses, recovery-device attempts timed out after 25 seconds each)
+  - source: ticker-1827 alliance-gifts execution record 2026-11-06 1827 queue run (failed, Mac device offline, eighty-sixth consecutive ticker pass with a Mac device-access blocker, forty-seventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 34h56m, unchanged since the 0604 pass; five invokes, zero responses, recovery-device health check timed out after 25 seconds)
 ---
 
 
@@ -1108,3 +1110,21 @@ one file per execution.
 - Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
 - Follow-up, carried forward: the blocker is now twenty-seven passes old and needs the window back on the active Space (owner Dock-icon click, the known reliable step); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The inbox held 69 units at this pass, per the record.
+
+## What the 2026-11-06 0605 unit added - Mac device offline, seventy-first consecutive pass, zero-response form
+
+- Unit gifts-2026-11-06-0230 by ticker-0604, about 06:04 to 06:12 local, status failed. Evidence in `_records_/2026-11-06/alliance-gifts/0605-queue-run.md`. No gift was checked or claimed, no tab was read, and no red-dot state is claimed for either tab. The loss is the unexecuted alliance-gifts check for this slot.
+- No game screen was ever read and no game input was dispatched. Five device invokes, zero responses: computer.session start on the Mac mini three times node_offline with "device is offline and does not advertise a wake-up path" (attempts 1, 4, 5; the last after a 60 second wait), connection.health on the recovery device node_invoke_timeout after 25 seconds (attempt 2), connection.repair (target native) on the recovery device node_invoke_timeout after 25 seconds (attempt 3). device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local Nov 5), stale about 22 hours 35 minutes at the 06:10 re-check, unchanged since the ticker-0534 pass; the last_seen value is known-stale (it did not move while ticker passes played the game on 2026-11-05), so it is reported as the listed value only, not as the outage start. The recovery device also reports offline with the same frozen last_seen. This meets the standing at-least-3-attempts retry rule.
+- Recurrence, not a new failure class: this is the seventy-first consecutive ticker pass with a Mac device-access blocker, thirty-second in the worsened zero-response form after ticker-0534 (seventieth, thirty-first). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the seventy-first occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
+- Follow-up, carried forward: the blocker is now seventy-one passes old and needs the Mac gateway back (owner-side or Mac-side fix); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 1, due 20, produced nothing new, all 20 regulars already queued; the inbox held 71 units at this pass, per the record.
+
+## What the 2026-11-06 1827 unit added - Mac device offline, eighty-sixth consecutive pass, zero-response form
+
+- Unit gifts-2026-11-06-1430 by ticker-1827, about 18:27 to 18:33 local, status failed. Evidence in `_records_/2026-11-06/alliance-gifts/1827-queue-run.md`. No gift was checked or claimed, no tab was read, and no red-dot state is claimed for either tab. The loss is the unexecuted alliance-gifts check for this slot. The unit's expires_at (2026-11-07T02:30:00Z) passed during the pass; the unit was claimed at 02:28Z, before expiry.
+- No game screen was ever read and no game input was dispatched. Five device invokes, zero responses: computer.session start on the Mac mini three times node_offline with "device is offline and does not advertise a wake-up path", connection.health on the Mac mini node_offline, connection.health on the recovery device node_invoke_timeout after 25 seconds. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local Nov 5), stale about 34 hours 56 minutes at the 18:32 re-check, unchanged since the ticker-0604 pass; the last_seen value is known-stale (it did not move while ticker passes played the game on 2026-11-05), so it is reported as the listed value only, not as the outage start. The recovery device also reports offline with the same frozen last_seen. This meets the standing at-least-3-attempts retry rule.
+- Recurrence, not a new failure class: this is the eighty-sixth consecutive ticker pass with a Mac device-access blocker, forty-seventh in the worsened zero-response form after ticker-1734 (eighty-fifth, forty-sixth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the eighty-sixth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
+- Follow-up, carried forward: the blocker is now eighty-six passes old and needs the Mac gateway back (owner-side or Mac-side fix); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 3, due 20, produced nothing new, all 20 regulars already queued; the inbox held 73 units at this pass's close (73 at sync).
