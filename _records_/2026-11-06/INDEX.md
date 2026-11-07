@@ -3567,3 +3567,20 @@ of 2026-10-28.
   moved since the 1645 re-checks, so re-check comments were
   posted on all five. No escalations, no new PR opened.
   Status: done. Full detail in pr-integration/1745-run.md.
+
+## 18:00 to about 18:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1800.
+  Non-batch no-op pass per the checker (plain: not due,
+  outside every batch window; next batch 19:00). No
+  knowledge or code PR open. Records PR 369
+  (records/2026-11-06) mergeable, head advanced to
+  ce10f446 since the 1745 pass by new appends, awaits
+  the 19:00 batch. Records PRs 351, 350, 301, 265 and
+  256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against unchanged main
+  5db4695e; heads and main unchanged since the 1745
+  re-checks, so no repeat comment was posted on any of
+  the five. No escalations, no new PR opened, no merge.
+  Status: no-op. Full detail in pr-integration/1800-run.md.
