@@ -3178,3 +3178,16 @@ of 2026-10-28.
   1315 / 1345 comments, so no repeat comment. No
   escalations, no new PR opened. Status: no-op. Full
   detail in pr-integration/1545-run.md.
+## 16:04 to about 16:12 - Ticker pass ticker-1604
+
+- Unit daily-missions-2026-11-05-1800 (stale, 2026-11-05 18:00
+  slot) completed as failed: Mac mini offline, no wake-up path.
+  Seven device invokes, zero responses (session start x3,
+  health and repair on the Mac mini, repair and health on the
+  recovery device, both timeouts). No game screen read, no game
+  input, no mission claimed. Eighty-second consecutive pass
+  with this blocker, forty-third in the zero-response form;
+  commented on Issue #284 (still open, tooling). Sync produced
+  duel-score-2026-11-06-1430; zombie chain stays closed (event
+  ended 2026-10-30). Tracker untouched. Full detail in
+  daily-missions/1612-queue-run.md.
