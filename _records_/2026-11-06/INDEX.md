@@ -4117,3 +4117,32 @@ of 2026-10-28.
   yet and falls to the next run. Records PR 374 awaits
   the 23:00 batch, so no new records PR was opened.
   Full detail in knowledge-organization/2032-run.md.
+
+## 20:39 to about 21:20 - Retro review run (daily retro 2026-11-06)
+
+- Retro review run (daily retro 2026-11-06): seventh
+  rolling retro under section 14. Branch pool 657 vs
+  live pool 718 (gap 61, pool_gap.py FAIL; Nov 3
+  backfill deficit still 90; live tree stale for Nov 6
+  by 18); Nov 6 is a second consecutive zero-execution
+  day (branch 104 finished, done 0, partial 0, failed
+  26, expired 78; live 86, done 0) and a second
+  perception blackout day (no observation file) - the
+  Mac mini is still offline and the 2034 pass is the
+  ninetieth consecutive failed pass (issues 284, 213
+  commented). Two improvements were found prematurely
+  closed by non-retro actors and are reopened this run
+  (149, 251, with evidence comments); no new issue
+  filed, no issue closed, 15 issues commented. The
+  zero-sweep pair expired a sixth day, staged by the
+  ticker on the old 19:00 geometry instead of by the
+  sweep subcommand (issues 147, 247). Duel-score
+  staged 5 units, 4 expired, 1 still in inbox; the
+  day-5 release window closed with the day-4 radar
+  stack unclaimed (issue 136). The 0634 record is
+  still missing after about 40 hours (issue 342).
+  Six owner-decision items are open longer than 48
+  hours (OD-20261031-01/02/03, OD-20261101-01/02/03).
+  The retro rides open PR 374 for the 2300 batch.
+  Full detail in retro-review/2120-run.md and
+  _records_/retro/2026-11-06.md.
