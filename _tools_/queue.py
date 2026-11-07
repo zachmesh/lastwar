@@ -16,6 +16,12 @@ executors do the playing and call this tool around their work.
 Usage:
   queue.py [--root DIR] enqueue --regular vip [--priority 1]
              [--expires-at ISO] [--est-minutes 3] [--window TEXT]
+             # enqueue refuses a zero-sweep unit whose not_before /
+             # expires_at do not match the reset-anchored slots of
+             # the roster (issue #147): a hand-staged pair with the
+             # old 17:30/18:30/19:00 wall geometry used to pre-empt
+             # the sweep subcommand's correct pair - stage the pair
+             # with queue.py sweep instead.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] next [--budget-minutes 15]
   queue.py [--root DIR] claim --unit UNIT --executor NAME
@@ -76,8 +82,11 @@ Usage:
              # from the fixed-slots regular - slots reset-anchored,
              # expiry at the reset instant itself (issue #147);
              # the planner's manual step calls this instead of
-             # hand-computing wall times, so the pair can never
-             # again carry the old 17:30/18:30/19:00 geometry;
+             # hand-computing wall times, so a pair staged through
+             # this command can never again carry the old
+             # 17:30/18:30/19:00 geometry; enqueue refuses one too
+             # (see _sweep_enqueue_refusal), so the manual path
+             # cannot pre-empt it any more.
              # refuses when the regular is missing or not
              # reset-anchored, so a stale tree fails loudly
              # instead of staging a wall-clock pair
@@ -1112,10 +1121,90 @@ def cmd_sweep(args):
     return 0
 
 
+def _sweep_enqueue_refusal(args):
+    """Refusal message when a hand-enqueued zero-sweep unit does not
+    match the reset-anchored geometry, or None when it may proceed.
+
+    The sweep pair is produced by plan/sweep from the roster (design
+    section 12); the manual enqueue path predates that interface and
+    kept staging the pair on the old wall-clock geometry (17:30/18:30
+    local, expiring 19:00 local) from stale trees, which pre-empted
+    the subcommand's correct pair through the inbox (issue #147,
+    sixth failure running on 2026-11-06). A hand-enqueued zero-sweep
+    unit must therefore carry the roster's reset-anchored geometry:
+    expires_at at the reset instant ending its local date, not_before
+    at one of that day's reset-anchored slots, and - when a chain id
+    is given - the chain for that local date. Anything else is
+    refused loudly, naming the expected geometry and the sweep
+    command that stages it, so a stale tree fails instead of
+    staging a dead pair. Other regulars are unaffected.
+    """
+    if args.regular != "zero-sweep":
+        return None
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        return (f"refused: cannot read roster {defs_path}: {exc} - "
+                f"sync the tree to main before hand-enqueueing the "
+                f"sweep pair")
+    item = next((r for r in regs if r.get("id") == "zero-sweep"), None)
+    if item is None:
+        return ("refused: regular 'zero-sweep' not in roster "
+                f"{defs_path} - sync the tree to main before "
+                f"hand-enqueueing the sweep pair")
+    if not _reset_anchored_offsets(item):
+        return ("refused: regular 'zero-sweep' carries no "
+                "reset-anchored slots (reset_utc + "
+                "slots_before_reset_minutes) - a wall-clock pair "
+                "would repeat the issue #147 defect; stage the pair "
+                "with queue.py sweep from a current tree")
+    expires = parse_iso(args.expires_at)
+    not_before = parse_iso(args.not_before)
+    if expires is None or not_before is None:
+        return ("refused: a zero-sweep unit needs not_before at a "
+                "reset-anchored slot and expires_at at the reset "
+                "instant - stage the pair with queue.py sweep "
+                "--date YYYY-MM-DD instead")
+    local_date = expires.astimezone(LOCAL_TZ).date()
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    if expires != reset_local.astimezone(timezone.utc):
+        return (f"refused: zero-sweep expires_at "
+                f"{iso(expires)} is not the reset instant "
+                f"{iso(reset_local.astimezone(timezone.utc))} ending "
+                f"{local_date.isoformat()} - stage the pair with "
+                f"queue.py sweep --date {local_date.isoformat()} "
+                f"instead")
+    slots = _reset_anchored_slots(item, local_date)
+    if not_before not in [s.astimezone(timezone.utc) for s in slots]:
+        want = ", ".join(iso(s.astimezone(timezone.utc))
+                         for s in slots)
+        return (f"refused: zero-sweep not_before "
+                f"{iso(not_before)} is not a reset-anchored slot "
+                f"for {local_date.isoformat()} (want one of {want}) "
+                f"- stage the pair with queue.py sweep --date "
+                f"{local_date.isoformat()} instead")
+    prefix = item.get("chain_id_prefix", "")
+    if args.chain_id and prefix and \
+            args.chain_id != prefix + local_date.isoformat():
+        return (f"refused: zero-sweep chain {args.chain_id} does not "
+                f"match the reset day {local_date.isoformat()} "
+                f"(want {prefix}{local_date.isoformat()}) - stage "
+                f"the pair with queue.py sweep --date "
+                f"{local_date.isoformat()} instead")
+    return None
+
+
 def cmd_enqueue(args):
     if args.est_minutes > UNIT_CAP_MINUTES:
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
               f"{UNIT_CAP_MINUTES} minute unit cap - split the task")
+        return 1
+    refusal = _sweep_enqueue_refusal(args)
+    if refusal is not None:
+        print(refusal)
         return 1
     chain_seq = ""
     if args.chain_id:
@@ -1865,6 +1954,7 @@ def main(argv=None):
     p.add_argument("--chain-id", default="")
     p.add_argument("--max-attempts", type=int,
                    default=DEFAULT_MAX_ATTEMPTS)
+    p.add_argument("--regulars-json", default="")
     p.set_defaults(fn=cmd_enqueue)
 
     p = sub.add_parser("list")
