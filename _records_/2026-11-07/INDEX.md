@@ -1303,3 +1303,22 @@ of 2026-10-28.
   No zombie seeding (chain closed 2026-10-30, event
   ended). Pass stopped after this one unit. Status:
   failed. Full detail in radar-tasks/0734-queue-run.md.
+
+## 07:45 to about 07:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0745.
+  NON-batch pass per the checker (plain due yes, but
+  merge-aware due no - PR 382 already merged 07:03:44
+  in the 07:00 window; next batch 11:00): no records
+  PR merged. One knowledge PR reviewed: PR 393
+  (knowledge fold, ticker-0633 passes and ticker-0704
+  harvest) got one review comment for a fixable
+  provenance typo (shop-claims grounded_in cites
+  ticker-0634 for the 0633 pass) and stays open. Four
+  records PRs open: PR 392 (records/2026-11-07, head
+  4a8053f2, 11 commits) verified CLEAN and awaiting the
+  11:00 batch; PRs 256, 301 and 351 still conflict on
+  _logs_/repo-actions/action-log.jsonl, heads unchanged
+  since the 0700 conflict notes, no repeat comments.
+  Status: done. Full detail in
+  pr-integration/0745-run.md.
