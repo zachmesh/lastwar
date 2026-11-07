@@ -419,3 +419,26 @@ of 2026-10-28.
   head advanced since the 0215 pass (54ae8ba6 to
   b3c462ee, the 0215 run record commit). Status: no-op.
   Full detail in pr-integration/0230-run.md.
+
+## 02:32 to about 02:40 - Knowledge organization pass
+
+- Knowledge-organizer pass
+  knowledge-organization-2026-11-07-0232. Own PR 385
+  MERGED with no reviews or comments, so no
+  integrator feedback was pending. Two folds:
+  ticker-0127 radar record (ninety-fourth
+  consecutive pass, fifty-fifth in the worsened
+  zero-response form) into radar-tasks 1.45.0 and
+  ticker-0204 gifts record (ninety-fifth,
+  fifty-sixth) into alliance-gifts 1.30.0 - PR 386,
+  verified OPEN and MERGEABLE, mergeState CLEAN.
+  Both occurrences commented onto Issue #282. New
+  detail: the recovery-device repair with target
+  "web" is rejected as invalid_command_params - its
+  schema takes only "native". No new recovery route
+  was learned. The 1005 close stands as the last
+  live radar read; the 0820 done claim and 1147
+  partial stand as the last live gift reads. No new
+  issue filed or closed. Records PR 382 awaits the
+  03:00 batch, so no new records PR was opened.
+  Full detail in knowledge-organization/0232-run.md.
