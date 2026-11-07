@@ -1212,3 +1212,19 @@ of 2026-10-28.
   branch-side reconciliation. No knowledge or code PR
   open. Status: no-op. Full detail in
   pr-integration/0715-run.md.
+
+## 07:30 to about 07:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0730.
+  NON-batch pass per the checker (plain due yes, but
+  merge-aware due no - PR 382 already merged 07:03:45
+  in the 07:00 window; next batch 11:00): no records
+  PR merged. Four records PRs open: PR 392 (records/
+  2026-11-07, head 48b53281, 5 commits) verified CLEAN
+  and awaiting the 11:00 batch; PRs 256, 301 and 351
+  still conflict on _logs_/repo-actions/action-log.jsonl,
+  heads unchanged since the 0700 conflict notes, no
+  repeat comments, carried to the 11:00 batch pending
+  branch-side reconciliation. No knowledge or code PR
+  open. Status: no-op. Full detail in
+  pr-integration/0730-run.md.
