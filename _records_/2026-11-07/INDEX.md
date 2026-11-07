@@ -201,3 +201,16 @@ of 2026-10-28.
   record (a34c4128). Merge-time action-log line added
   on records/2026-11-07. Status: done. Full detail in
   pr-integration/0045-run.md.
+
+## 01:00 to about 01:12 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0100.
+  Non-batch pass per the checker (not due in plain and
+  merge-aware modes, next batch 03:00): no knowledge or
+  code PRs open, nothing merged, no comments posted.
+  Seven records PRs await the 03:00 batch, all verified
+  merge-clean against main 74db107bc by local
+  merge-tree; gh UNKNOWN on the five reconciled PRs is
+  async recomputation after main advanced, not a new
+  conflict. Status: no-op. Full detail in
+  pr-integration/0100-run.md.
