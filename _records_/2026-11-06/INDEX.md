@@ -4014,3 +4014,28 @@ of 2026-10-28.
   no repeat comment was posted. No comments, no
   escalations. Status: done. Full detail in
   pr-integration/2000-run.md.
+## 20:04 to about 20:12 - Ticker pass, survivors unit failed on Mac offline
+
+- Ticker-2004 pass. Unit survivors-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, six device
+  invokes zero responses, no game screen read, no input
+  dispatched, no survivor taken in, gate line unverified. Same
+  blocker as Issue #284: eighty-ninth consecutive pass,
+  fiftieth in the worsened zero-response form. Commented on
+  #284. Tracker untouched.
+- Live duel posture at 20:09: duel day 6, Enemy Buster, radar
+  posture stack.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+- Queue-state note: this pass first claimed
+  radar-2026-11-06-1803 in the stale local working tree
+  (branch work/ops-execution-records, last records commit
+  2026-11-03), where it still sat in inbox although it is
+  already done/failed on the live records branch
+  (ticker-1934, PR 374). The claim was reverted locally and
+  the pass continued in a temporary worktree of
+  github/records/2026-11-06 at 7018a228f6. Local-tree /
+  records-branch queue divergence is an open process item
+  (same class as the 2026-11-01 0041 record).
+  Status: failed. Full detail in
+  survivor-intake/2004-queue-run.md.
