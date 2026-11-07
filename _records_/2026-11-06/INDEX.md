@@ -3359,3 +3359,23 @@ of 2026-10-28.
   ticker-1634 moved vip-2026-11-05-1800 to done).
 - Pool: inbox 77, claimed 0, done 1043, upcoming 53. Status:
   no-op. Full detail in queue-planning/1640-run.md.
+
+## 16:45 to about 16:54 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1645.
+  Non-batch pass per the checker (plain: not due, outside
+  every batch window; next batch 19:00). Knowledge PR #371
+  (organizer 1632, donations 1534 device offline, eighty-first
+  consecutive pass) reviewed clean - Owner
+  lastwar-knowledge-organizer, single file INDEX 1.42.0 to
+  1.43.0, Refs #282/#284, feedback commit verified - and merged
+  by squash (a20fb55a). Local main fast-forwarded to a20fb55a
+  by the bundle route. Six records PRs open, none merged: PR 369
+  (records/2026-11-06, head 8db552fb3a after new appends)
+  awaits the 19:00 batch; PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against the new main head (incl.
+  merged #371), re-check comments posted. No escalations, no
+  new PR opened. Status: done. Full detail in
+  pr-integration/1645-run.md.
