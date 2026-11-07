@@ -4568,3 +4568,20 @@ of 2026-10-28.
   observation predates today's inbox units and the diff
   classified nothing as satisfied. Status: done. Full detail
   in queue-planning/2240-run.md.
+- Integrator pass pr-integration-2026-11-06-2300.
+  BATCH pass per the checker (due, 23:00-00:00 window,
+  plain and merge-aware, no records merge yet in the
+  window at pass start). Merged records PR 374
+  (records/2026-11-06, 44 commits, 88 files) by merge
+  commit bf7f3d8b at 23:02 PT; branch kept, local main
+  synced back to bf7f3d8b. Records PRs 351, 350, 301,
+  265 and 256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against new main bf7f3d8b;
+  heads unchanged since the 2045 pass. No re-check
+  comments posted this pass: the conflict scope is
+  unchanged since the 2130 re-check comments, per the
+  no-repeat rule and the 1900 batch precedent. No
+  knowledge or code PR open. No escalations, no new PR
+  opened (the next pass opens the post-2300-batch PR).
+  Status: done. Full detail in pr-integration/2308-run.md.
