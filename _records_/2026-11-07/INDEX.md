@@ -37,3 +37,22 @@ of 2026-10-28.
   commit, and a records PR for 2026-11-07 was opened by
   this pass. Status: no-op. Full detail in
   pr-integration/0000-run.md.
+
+## 00:11 to about 00:22 - Ticker-0011 radar unit, failed on Mac offline
+
+- Own PRs first: resolved the five conflicting records PRs
+  (351, 350, 301, 265, 256) on the branch side - merged main
+  into each branch, unioned the append-only action log, pushed;
+  all five re-checked MERGEABLE / CLEAN. PR 381 was already
+  clean. Next integrator batch 03:00.
+- Radar unit radar-2026-11-06-2203 (duel day 6 Enemy Buster,
+  radar posture stack, live posture agreed with the unit
+  stamp): failed, Mac mini offline with no wake-up path.
+  Four device invokes, zero responses; last_seen
+  2026-11-05T15:36:52Z, about 40h45m stale. Ninety-third
+  consecutive ticker pass with this blocker (Issue 284),
+  fifty-fourth in the zero-response form. No game screen
+  read, no game input; tracker untouched. Full detail in
+  radar-tasks/0011-queue-run.md.
+- Zombie Invasion not seeded: the event ended 2026-10-30;
+  no fresh chain until its tab is seen live again.
