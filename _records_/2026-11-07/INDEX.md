@@ -1508,3 +1508,21 @@ of 2026-10-28.
   Pool by_state at 08:42 local: inbox 77, claimed 0,
   done 1113, upcoming 53. Status: no-op. Full detail in
   queue-planning/0840-run.md.
+## 08:45 to about 08:54 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0845.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): no records PR merged. Knowledge PR 393 merged
+  (squash b2f3edaa17) after the author fixed the
+  ticker-0634 -> ticker-0633 label (commit f0b7bcf4),
+  and knowledge PR 394 merged (squash d804146f).
+  Four records PRs open: PR 392 (records/2026-11-07,
+  head 82beaab4c6) verified clean by local merge-tree
+  and awaiting the 11:00 batch (gh still UNKNOWN);
+  PRs 256, 301 and 351 still conflict on
+  _logs_/repo-actions/action-log.jsonl, re-verified
+  against the new main d804146f and re-noted on each
+  PR. Local main fast-forwarded 1d60a4bf to d804146f
+  via bundle route. Full detail in
+  pr-integration/0845-run.md.
