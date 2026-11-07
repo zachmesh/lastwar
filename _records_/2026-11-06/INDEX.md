@@ -3773,3 +3773,798 @@ of 2026-10-28.
   was posted on any of the five. No escalations, no
   new PR opened. Status: done. Full detail in
   pr-integration/1845-run.md.
+
+## 19:00 to about 19:12 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1900.
+  BATCH pass per the checker (due, plain and merge-aware,
+  window 19:00-20:00, no records merge yet in the
+  window): merged records PR 369 (records/2026-11-06,
+  head ad9cf642a, 43 commits, 82 files) by merge commit
+  591eafc39d81; the merge-time action-log line rides
+  commit 9e69ace36 on records/2026-11-06. No knowledge
+  or code PR was open. Records PRs 351, 350, 301, 265
+  and 256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against main 2af424eeab;
+  heads unchanged since the 1815 re-checks, so no repeat
+  comment was posted. Local main synced back to
+  591eafc39d81 via bundle pi-1900-main.bundle. Status:
+  done. Full detail in pr-integration/1900-run.md.
+
+## 19:04 to about 19:15 - Ticker pass, harvest unit failed on Mac offline
+
+- Ticker-1904 pass. Unit harvest-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, five device
+  invokes zero responses, no game screen read, no input
+  dispatched, no bubble collected. Same blocker as Issue #284:
+  eighty-seventh consecutive pass, forty-eighth in the worsened
+  zero-response form. Commented on #284. Tracker untouched.
+- Sync: reaped 0, expired 8, due 22, produced 4 (vip,
+  daily-missions, duel-score, scout 1800/1830 slots). Both
+  pre-reset zero-sweep units for 2026-11-06 expired
+  unexecuted, so the reset day closed with no ledger zero
+  sweep. No zombie seeding: chain closed 2026-10-30.
+  Status: failed. Full detail in
+  resource-collection/1904-queue-run.md.
+
+## 19:15 to about 19:28 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1915.
+  Non-batch pass per the checker (merge-aware: not
+  due, PR 369 already merged 19:05:42 in the
+  19:00-20:00 window; next batch 23:00): no knowledge
+  or code PR was open. Records PR 374
+  (records/2026-11-06, head 28a32ee81, 4 commits) is
+  open, verified mergeable clean by merge-tree
+  against main 591eafc39, and awaits the 23:00 batch.
+  Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against main 591eafc39;
+  heads unchanged since the 1815 re-checks, so no
+  repeat comment was posted. No merges, no comments,
+  no escalations. Status: done. Full detail in
+  pr-integration/1915-run.md.
+
+## 19:30 to about 19:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1930.
+  Non-batch pass per the checker (merge-aware: not
+  due, PR 369 already merged 19:05:42 in the
+  19:00-20:00 window; next batch 23:00): no knowledge
+  or code PR was open. Records PR 374
+  (records/2026-11-06, head f8065ec4, 5 commits) is
+  open, verified mergeable clean by merge-tree
+  against main 591eafc39, and awaits the 23:00 batch.
+  Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against main 591eafc39;
+  heads and main unchanged since the 1915
+  verification, so no repeat comment was posted. No
+  merges, no comments, no escalations. Status: done.
+  Full detail in pr-integration/1930-run.md.
+
+## 19:32 to about 19:40 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-06-1932, worked from
+  the 1832 watermark. One fold: ticker-1904 harvest record
+  (eighty-seventh consecutive pass, forty-eighth in the
+  worsened zero-response form, Mac mini offline, last_seen
+  15:36:52Z stale about 35h37m, five invokes zero
+  responses, recovery-device health check and repair both
+  timed out after 25s, same signature as 0741 through
+  1827; pre-reset zero-sweep pair both expired
+  unexecuted, no ledger line verified at zero for this
+  reset day) into resource-collection 1.32.0 (PR 375,
+  Owner lastwar-knowledge-organizer, Refs #282 and
+  #284, verified OPEN and MERGEABLE); the
+  eighty-seventh occurrence commented onto Issue 282.
+  Own PR 371 (organizer 1632, alliance-donations
+  1.43.0) stands MERGED with no reviews or comments,
+  so no PR feedback was owed; no new
+  knowledge-labeled issue since the 1832 run (newest
+  remains #282, updated by the 1832 run's own
+  comment). Ended-trade-day sweep (first run after
+  the 19:00 reset, window 18:00 2026-11-05 to 19:00
+  2026-11-06): 29 game records, 59th to 87th
+  consecutive pass, every one matched to the
+  organizer run that folded it, none missed; the
+  0342 radar duplicate commits (3f7aef464,
+  da7b15983) are identical re-merge content folded
+  once by the 0432 run. Meta since the watermark:
+  pr-integration 1845 (PR 373 merged), queue
+  planning 1840 (11 staged, 4 expired, Nov 4
+  observation diff zero, no withdrawals),
+  pr-catchall 1839 (no-op), pr-integration 1900
+  run and merge line (PR 369 merged at the 1900
+  batch), pr-integration 1915 and 1930 (non-batch,
+  PR 374 awaiting 2300 batch), none handing
+  anything to this job. Profiles updated: 1, no
+  contradiction, no stale item, no issue filed or
+  closed. No Slack sync, no chat report: routine
+  hourly fold of a tracked device fault plus a
+  clean sweep. Full detail in
+  knowledge-organization/1932-run.md.
+## 19:32 to about 19:42 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-06-1932.
+  No-op: own PRs checked first - only records PRs 374, 351,
+  350, 301, 265 and 256 open, no tooling PR of mine; records
+  PR 369 merged 19:05 in the 19:00 window since the 1832 run.
+  The same 18 open tooling issues as the 1832 run, all already
+  implemented on main (merged PRs) or diagnosed as needing no
+  tool code - 17 re-read individually this run, #136 checked by
+  latest comment; no new issue filed since 1832 (newest open
+  issue remains #342, records class). Issue 284 updated once
+  since 1832: ticker-1904 (87th consecutive Mac-offline pass,
+  48th in the zero-response form, last_seen still frozen at
+  2026-11-05T15:36:52Z) - evidence only, recovery is
+  device-side, probe half already landed (PR #307, #321, #323).
+  Main head moved since the 1832 run (5db4695eb to 591eafc39):
+  records PR #369 merge only; tools/ and _tools_/ diff empty.
+  Live-pool tree read-only check: still pre-standardisation
+  tools/ with no duel-score regular and no sweep subcommand -
+  the #198 sync gap persists, sync is a ticker/planner
+  handoff. No branch, no PR, no issue comment, no Slack
+  message. Full detail in tool-development/1932-run.md.
+## 19:39 to about 19:43 - PR catch-all pass
+
+- PR catch-all pass pr-catchall-2026-11-06-1939. No-op: no
+  adopted open PR (PR 137 stays merged); seven open PRs scanned
+  and none owned by this job. Two merged since the 1839 pass
+  (knowledge PR 373 at 18:47 PST and records PR 369 at 19:05
+  PST) and two opened (records PR 374 post-1900 batch, head
+  d488343a, mergeable UNKNOWN, awaits the 23:00 batch;
+  knowledge PR 375 harvest fold, head 2c74dc44,
+  MERGEABLE). Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append), with the
+  integrator 1815 re-check notes about eighty minutes old, so no
+  stale-owner flag; PRs 265 and 256 are past 48 hours open but
+  owner-side action is fresh. 48 open issues, all class-labeled,
+  none new or closed; owner-decision issues 132, 154 and 335
+  all over 24 hours with statements current. No adoption, fix,
+  hand-off, escalation, chat report or Slack sync. Status: no-op.
+  Full detail in pr-catchall/1939-run.md.
+
+## 19:34 to about 19:45 - Ticker pass, radar unit failed on Mac offline
+
+- Ticker-1934 pass. Unit radar-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, seven device
+  invokes zero responses, no game screen read, no input
+  dispatched, no radar task executed or claimed. Same blocker
+  as Issue #284: eighty-eighth consecutive pass, forty-ninth
+  in the worsened zero-response form. Commented on #284.
+  Tracker untouched.
+- Live duel posture at 19:38: duel day 6, Enemy Buster, radar
+  posture stack - the unit window stamp (day 5 release) is
+  stale after the about 18:00 rollover.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+  Status: failed. Full detail in
+  radar-tasks/1934-queue-run.md.
+
+## 19:45 to about 19:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1945.
+  Non-batch pass per the checker (merge-aware: not
+  due, PR 369 already merged 19:05:42 in the
+  19:00-20:00 window; next batch 23:00). Knowledge PR
+  375 (fold ticker-1904 harvest record into
+  resource-collection 1.32.0, Owner
+  lastwar-knowledge-organizer, Refs #282 and #284)
+  reviewed clean - single file, version 1.31.0 to
+  1.32.0, cited source record verified on the branch -
+  and merged by squash at 19:49:06 (merge commit
+  daf59d9d); local main fast-forwarded to daf59d9d.
+  Records PR 374 (records/2026-11-06, head 5df49dfa,
+  10 commits beyond main) is open, verified mergeable
+  clean, and awaits the 23:00 batch. Records PRs 351,
+  350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged since the 1815
+  re-check comments, so no repeat comment was posted.
+  No comments, no escalations. Status: done. Full
+  detail in pr-integration/1945-run.md.
+## 19:40 to about 19:48 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 6 units -
+  already_present 63, skipped_done_current 0, reaped 0,
+  expired 10. Staged: passes, secrets, treasures, trucks
+  and events 2026-11-07 0657, and scout-midday 2026-11-07
+  0700. Expired (window passed, moved inbox to done with
+  result status expired): daily-missions, vip and scout
+  2026-11-05-1900; events, passes, secrets, treasures and
+  trucks 2026-11-06-1457; and the pre-reset sweep pair
+  zero-sweep-pre-reset-sweep-2026-11-06-001 and -002.
+- Pre-reset sweep: production skipped (19:00 hour run, not
+  the 17:00 hour). Tonight's pair for the 19:00 reset of
+  2026-11-06 (chain pre-reset-sweep-2026-11-06) expired
+  unexecuted at the reset - the Mac has been offline all
+  day (Issue 284, ticker-1934 the 88th consecutive
+  Mac-offline pass). 0 enqueued.
+- Scout diff on the Nov 4 observation (fiftieth planner
+  run to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-06-1900 still in inbox
+  unexecuted): fixed branch-tip tool, dry run and apply
+  identical, all zero except unexplained red dots 4 (the
+  narrative's carried unknowns, same 4 as the 1740 and 1840
+  runs). No withdrawals - the Nov 4 observation predates
+  today's inbox units and the diff classified nothing as
+  satisfied. Status: done. Full detail in
+  queue-planning/1940-run.md.
+
+## 20:00 to about 20:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2000.
+  Non-batch pass per the checker (plain and
+  merge-aware: not due, outside every batch window;
+  next batch 23:00). The 19:00 batch already merged
+  PR 369 at 19:05:42. No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06, head 7018a228,
+  12 commits beyond main) is open, verified mergeable
+  clean, and awaits the 23:00 batch. Records PRs 351,
+  350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged since the 1815
+  re-check comments; conflict scope re-verified by
+  git merge-tree against current main daf59d9d16, so
+  no repeat comment was posted. No comments, no
+  escalations. Status: done. Full detail in
+  pr-integration/2000-run.md.
+## 20:04 to about 20:12 - Ticker pass, survivors unit failed on Mac offline
+
+- Ticker-2004 pass. Unit survivors-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, six device
+  invokes zero responses, no game screen read, no input
+  dispatched, no survivor taken in, gate line unverified. Same
+  blocker as Issue #284: eighty-ninth consecutive pass,
+  fiftieth in the worsened zero-response form. Commented on
+  #284. Tracker untouched.
+- Live duel posture at 20:09: duel day 6, Enemy Buster, radar
+  posture stack.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+- Queue-state note: this pass first claimed
+  radar-2026-11-06-1803 in the stale local working tree
+  (branch work/ops-execution-records, last records commit
+  2026-11-03), where it still sat in inbox although it is
+  already done/failed on the live records branch
+  (ticker-1934, PR 374). The claim was reverted locally and
+  the pass continued in a temporary worktree of
+  github/records/2026-11-06 at 7018a228f6. Local-tree /
+  records-branch queue divergence is an open process item
+  (same class as the 2026-11-01 0041 record).
+  Status: failed. Full detail in
+  survivor-intake/2004-queue-run.md.
+
+## 20:15 to about 20:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2015.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00). The 19:00
+  batch already merged PR 369 at 19:05:42. No
+  knowledge or code PR open. Records PR 374
+  (records/2026-11-06, head 08c4484d, 14 commits
+  beyond main) is open, verified mergeable clean, and
+  awaits the 23:00 batch. Records PRs 351, 350, 301,
+  265 and 256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged since the 1815 re-check comments;
+  conflict scope re-verified by git merge-tree against
+  current main daf59d9d16, so no repeat comment was
+  posted. No comments, no escalations. Status: done.
+  Full detail in pr-integration/2015-run.md.
+- Integrator pass pr-integration-2026-11-06-2030.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00). The 19:00
+  batch already merged PR 369 at 19:05:42. No
+  knowledge or code PR open. Records PR 374
+  (records/2026-11-06, head 5a950fa9, 15 commits
+  beyond main) is open, verified mergeable clean, and
+  awaits the 23:00 batch. Records PRs 351, 350, 301,
+  265 and 256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged since the 1815 re-check comments;
+  conflict scope re-verified by git merge-tree against
+  current main daf59d9d16, so no repeat comment was
+  posted. No comments, no escalations. Status: no-op.
+  Full detail in pr-integration/2030-run.md.
+
+## 20:32 to about 20:41 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-06-2032.
+  No-op: own PRs checked first - only records PRs 374, 351,
+  350, 301, 265 and 256 open, no tooling PR of mine; records
+  PR 375 merged 19:49 in the 19:00 window since the 1932 run.
+  The same 18 open tooling issues as the 1932 run, all already
+  implemented on main (merged PRs) or diagnosed as needing no
+  tool code; no new issue filed since 1932. Issue 284 updated
+  once since 1932: ticker-2004 (89th consecutive Mac-offline
+  pass, 50th in the zero-response form, last_seen still frozen
+  at 2026-11-05T15:36:52Z) - evidence only, recovery is
+  device-side, probe half already landed (PR #321, #323).
+  Main head moved since the 1932 run (591eafc39 to daf59d9d16):
+  PR #375 merge only, knowledge-only; tools/ diff empty. No
+  branch, no PR, no issue comment, no Slack message. Full
+  detail in tool-development/2032-run.md.
+
+## 20:32 to about 20:43 - Knowledge organization pass
+
+- Knowledge-organizer pass
+  knowledge-organization-2026-11-06-2032. Own PRs 373
+  and 375 both MERGED with no reviews or comments, so
+  no integrator feedback was pending. Two folds, one
+  PR: ticker-1934 radar record (eighty-eighth
+  consecutive pass, forty-ninth in the worsened
+  zero-response form) into radar-tasks 1.43.0, and
+  ticker-2004 survivors record (eighty-ninth, fiftieth)
+  into survivor-intake 1.33.0 - PR 376, verified OPEN
+  and MERGEABLE, mergeState CLEAN. Both occurrences
+  commented onto Issue #282 in one comment. New
+  knowledge: the duel rolled to day 6, Enemy Buster,
+  radar posture stack, at about 18:00 local
+  (tools/duel.py 19:38 read, day ends 2026-11-07 18:00
+  local); the 1934 unit stamp "duel day 5 - radar
+  release" is stale, and the day-5 release window
+  closed at 18:00 local with the day-4 stack never
+  claimed in it. The 2004 record's queue-state
+  divergence (stale local tree claim reverted) is
+  carried in the fold, not re-filed. No new issue
+  filed or closed. The 2026-11-06 retro has not landed
+  yet and falls to the next run. Records PR 374 awaits
+  the 23:00 batch, so no new records PR was opened.
+  Full detail in knowledge-organization/2032-run.md.
+
+## 20:39 to about 20:48 - PR catch-all pass
+
+- PR catch-all pass pr-catchall-2026-11-06-2039. No-op: no
+  adopted open PR (PR 137 stays merged); seven open PRs scanned
+  and none owned by this job. One merged since the 1939 pass
+  (knowledge PR 375 at 19:49 PST) and one opened (knowledge
+  PR 376 radar/survivors fold, head af55285f, MERGEABLE).
+  Records PR 374 head advanced to 2a0d2d1c, mergeable UNKNOWN,
+  awaits the 23:00 batch. Records PRs 351, 350, 301, 265 and 256
+  still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append), with the
+  integrator 1815 re-check notes about two hours and twenty
+  minutes old, so no stale-owner flag; PRs 265 and 256 are past
+  48 hours open but owner-side action is fresh. 48 open issues,
+  all class-labeled, none new or closed; owner-decision issues
+  132, 154 and 335 all over 24 hours with statements current.
+  No adoption, fix, hand-off, escalation, chat report or Slack
+  sync. Status: no-op.
+  Full detail in pr-catchall/2039-run.md.
+## 20:34 to about 20:45 - Ticker pass, arms-race unit failed on Mac offline
+
+- Ticker-2034 pass. Unit arms-race-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, six device
+  invokes zero responses, no game screen read, no input
+  dispatched, no phase or score read, no tier-3 push, no reward
+  claimed. Same blocker as Issue #284: ninetieth consecutive
+  pass, fifty-first in the worsened zero-response form.
+  Commented on #284. Tracker untouched.
+- Live duel posture at 20:39: duel day 6, Enemy Buster, radar
+  posture stack.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+- Queue-state note: this pass first claimed
+  radar-2026-11-06-1803 in the stale local working tree
+  (branch work/ops-execution-records, last records commit
+  2026-11-03), where it still sat in inbox although it is
+  already done/failed on the live records branch
+  (ticker-1934, PR 374). The claim was reverted locally and
+  the pass continued in a temporary worktree of
+  github/records/2026-11-06 at b91106db29. Local-tree /
+  records-branch queue divergence is an open process item
+  (same class as the 2026-11-01 0041 record).
+  Status: failed. Full detail in
+  arms-race/2034-queue-run.md.
+
+## 20:45 to about 20:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2045.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, 133 minutes
+  away at pass start). Merged knowledge PR 376
+  (organizer 2032: radar-tasks 1.43.0 and
+  survivor-intake 1.33.0, ticker-1934 radar and
+  ticker-2004 survivors device-offline folds, Refs
+  #282/#284) by squash, merge 1c754c54, branch
+  deleted; local main synced back to 1c754c54 via
+  bundle pi-2045-main.bundle. Records PR 374
+  (records/2026-11-06) mergeable at head b0cd0068,
+  awaits the 23:00 batch. Records PRs 351, 350,
+  301, 265 and 256 still CONFLICTING on the single
+  file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  new main 1c754c54; re-check comments posted on all
+  five this pass (1800/1815 practice; 1830/1845
+  posted none - divergence stays flagged for the
+  retro). No escalations, no new PR opened. Status:
+  done. Full detail in pr-integration/2045-run.md.
+
+## 21:00 to about 21:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2100.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, 118 minutes
+  away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head 70f87d61, awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads and main unchanged since the
+  2045 re-check comments, so no repeat comment was
+  posted. No merges, no comments, no escalations, no
+  new PR opened. Status: no-op. Full detail in
+  pr-integration/2100-run.md.
+## 20:40 to about 20:48 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 69, skipped_done_current 0, reaped 0,
+  expired 0. The 12-hour horizon to about 08:40 local
+  2026-11-07 was already fully covered by the pool.
+- Pre-reset sweep: production skipped (20:00 hour run, not
+  the 17:00 hour). Tonight's pair for the 19:00 reset of
+  2026-11-06 (chain pre-reset-sweep-2026-11-06) expired
+  unexecuted at the reset - the Mac has been offline all
+  day (Issue 284, ticker-2034 the 90th consecutive
+  Mac-offline pass). 0 enqueued.
+- Scout diff on the Nov 4 observation (fifty-first planner
+  run to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-06-1900 still in inbox
+  unexecuted): fixed branch-tip tool, dry run and apply
+  identical, all zero except unexplained red dots 4 (the
+  narrative's carried unknowns, same 4 as the 1740, 1840
+  and 1940 runs). No withdrawals - the Nov 4 observation
+  predates today's inbox units and the diff classified
+  nothing as satisfied. Status: no-op. Full detail in
+  queue-planning/2040-run.md.
+
+## 20:39 to about 21:20 - Retro review run (daily retro 2026-11-06)
+
+- Retro review run (daily retro 2026-11-06): seventh
+  rolling retro under section 14. Branch pool 657 vs
+  live pool 718 (gap 61, pool_gap.py FAIL; Nov 3
+  backfill deficit still 90; live tree stale for Nov 6
+  by 18); Nov 6 is a second consecutive zero-execution
+  day (branch 104 finished, done 0, partial 0, failed
+  26, expired 78; live 86, done 0) and a second
+  perception blackout day (no observation file) - the
+  Mac mini is still offline and the 2034 pass is the
+  ninetieth consecutive failed pass (issues 284, 213
+  commented). Two improvements were found prematurely
+  closed by non-retro actors and are reopened this run
+  (149, 251, with evidence comments); no new issue
+  filed, no issue closed, 15 issues commented. The
+  zero-sweep pair expired a sixth day, staged by the
+  ticker on the old 19:00 geometry instead of by the
+  sweep subcommand (issues 147, 247). Duel-score
+  staged 5 units, 4 expired, 1 still in inbox; the
+  day-5 release window closed with the day-4 radar
+  stack unclaimed (issue 136). The 0634 record is
+  still missing after about 40 hours (issue 342).
+  Six owner-decision items are open longer than 48
+  hours (OD-20261031-01/02/03, OD-20261101-01/02/03).
+  The retro rides open PR 374 for the 2300 batch.
+  Full detail in retro-review/2120-run.md and
+  _records_/retro/2026-11-06.md.
+
+## 21:15 to about 21:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2115.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 100
+  minutes away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head 0864b5d0, awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads and main unchanged since the
+  2045 re-check comments, so no repeat comment was
+  posted. No merges, no comments, no escalations, no
+  new PR opened. Status: no-op. Full detail in
+  pr-integration/2115-run.md.
+
+## 21:32 to about 21:37 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-06-2132.
+  No-op: own PRs checked first - only records PRs 374, 351,
+  350, 301, 265 and 256 open, no tooling PR of mine; no new
+  PR opened since the 2032 run. The same 18 open tooling
+  issues as the 2032 run; no new issue filed since 2032.
+  11 issues updated since 2032, all daily-retro 2026-11-06
+  recheck comments at about 05:09-05:10Z, each re-read this
+  run: #149 and #251 REOPENED by the retro (premature
+  closures undone - verifications never passed), but both
+  are verification failures of already-built tools, not
+  tool gaps; #147 sixth failure with a new pre-emption
+  diagnosis assessed benign (staged geometry matches the
+  reset-anchored roster, failure cause is the offline
+  device); the rest are evidence-only rechecks. Main head
+  moved since the 2032 run (daf59d9d16 to 1c754c546a): PR
+  #376 merge only, knowledge-only; tools/ diff empty. No
+  branch, no PR, no issue comment, no Slack message. Full
+  detail in tool-development/2132-run.md.
+## 21:30 to about 21:38 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2130.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 86
+  minutes away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head 8bc7aa7f, awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads and main unchanged since the
+  2045 pass; re-check comments posted on all five
+  this pass (see run record for the note on the
+  no-repeat reading used by the 2115 pass). No merges,
+  no escalations, no new PR opened. Addendum: knowledge
+  PR 377 (arms-race 1.49.0 fold) opened 21:39 during
+  the pass, reviewed clean and merged (squash commit
+  c102c709); local main fast-forwarded to c102c709.
+  Status: done (feedback-only plus one knowledge merge).
+  Full detail in pr-integration/2130-run.md.
+
+## 21:32 to about 21:41 - Knowledge organization pass
+
+- Knowledge-organizer pass
+  knowledge-organization-2026-11-06-2132. Own PR 376
+  MERGED with no reviews or comments, so no
+  integrator feedback was pending. One fold:
+  ticker-2034 arms-race record (ninetieth
+  consecutive pass, fifty-first in the worsened
+  zero-response form) into arms-race 1.49.0 - PR 377,
+  verified OPEN and MERGEABLE, mergeState CLEAN. The
+  occurrence commented onto Issue #282. New
+  knowledge: duel day 6 Enemy Buster stack confirmed
+  a third time at 20:39 local, but the record's
+  end-time figures (19:00 local, 14.3h left) are
+  mutually inconsistent and disagree with the radar
+  profile's 18:00 end, which stands; the on-screen
+  duel-score confirmation is still owed. The daily
+  retro 2026-11-06 landed and files no
+  execution-knowledge correction for this job; #247's
+  update is retro evidence on the production half. No
+  new issue filed or closed. Records PR 374 awaits
+  the 23:00 batch, so no new records PR was opened.
+  Full detail in knowledge-organization/2132-run.md.
+
+## 21:39 to about 21:43 - PR catch-all pass
+
+- PR catch-all pass pr-catchall-2026-11-06-2139. No-op: no
+  adopted open PR (PR 137 stays merged); seven open PRs scanned
+  and none owned by this job. One merged since the 2039 pass
+  (knowledge PR 376 at 20:48 PST) and one opened (knowledge
+  PR 377 arms-race fold, head f4d5c653, MERGEABLE).
+  Records PR 374 head advanced to 6eb6ed83, now MERGEABLE,
+  awaits the 23:00 batch. Records PRs 351, 350, 301, 265 and 256
+  still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append), with the
+  integrator 2130 re-check notes about four minutes old, so no
+  stale-owner flag; PRs 265 and 256 are past
+  48 hours open but owner-side action is fresh. 50 open issues,
+  all class-labeled, none new or closed; two reopened by the
+  2026-11-06 retro (149 and 251), both already labeled and
+  neither owner-decision. Owner-decision issues
+  132, 154 and 335 all over 24 hours with statements current.
+  No adoption, fix, hand-off, escalation, chat report or Slack
+  sync. Status: no-op.
+  Full detail in pr-catchall/2139-run.md.
+
+## 21:40 to about 21:46 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 69, skipped_done_current 0, reaped 0,
+  expired 0. The 12-hour horizon to about 09:40 local
+  2026-11-07 was already fully covered by the pool.
+- Pre-reset sweep: production skipped (21:00 hour run, not
+  the 17:00 hour). Tonight's pair for the 19:00 reset of
+  2026-11-06 (chain pre-reset-sweep-2026-11-06) expired
+  unexecuted at the reset - the Mac has been offline all
+  day (Issue 284, ticker-2034 the 90th consecutive
+  Mac-offline pass). 0 enqueued.
+- Scout diff on the Nov 4 observation (fifty-second planner
+  run to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-06-1900 still in inbox
+  unexecuted): fixed branch-tip tool, dry run and apply
+  identical, all zero except unexplained red dots 4 (the
+  narrative's carried unknowns, same 4 as the 1740, 1840,
+  1940 and 2040 runs). No withdrawals - the Nov 4
+  observation predates today's inbox units and the diff
+  classified nothing as satisfied. Status: no-op. Full detail
+  in queue-planning/2140-run.md.
+## 21:45 to about 21:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2145.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 73
+  minutes away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head 6deba56400 (advanced during the pass by the
+  planner 2140 commit), awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  new main c102c709 (knowledge PR 377 merged by the
+  2130 pass); heads unchanged since the 2130 pass.
+  No re-check comments posted this pass: the conflict
+  state is unchanged since the 2130 re-check comments
+  11 minutes earlier, settling the no-repeat rule
+  (see run record). No merges, no escalations, no new
+  PR opened. Status: no-op.
+  Full detail in pr-integration/2145-run.md.
+
+## 21:34 to about 21:54 - Ticker pass, donations unit failed on Mac offline
+
+- Ticker-2134 pass. Unit donations-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, six device
+  invokes zero responses, no game screen read, no input
+  dispatched, no Alliance Techs screen opened, no donation count
+  read, no coin donation made. Same blocker as Issue #284:
+  ninety-first consecutive pass, fifty-second in the worsened
+  zero-response form. Commented on #284. Tracker untouched.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+- Queue-state note: no divergence this pass - fresh detached
+  worktree of github/records/2026-11-06 at 6deba56400, tip
+  verified identical on the VPS and on github.
+  Status: failed. Full detail in
+  alliance-donations/2134-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-06-2200.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 58
+  minutes away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head ecdb57a8 (two commits past the 2145 head: the
+  2145 run record and the donations ticker-2134
+  failed record), awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  unchanged main c102c709; heads unchanged since the
+  2045 pass. No re-check comments posted this pass:
+  the conflict state is unchanged since the 2130
+  re-check comments, per the no-repeat rule settled
+  in the 2145 record. No merges, no escalations, no
+  new PR opened. Status: no-op.
+  Full detail in pr-integration/2200-run.md.
+
+- Integrator pass pr-integration-2026-11-06-2215.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 43
+  minutes away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head 42c16757 (one commit past the 2200 head: the
+  2200 run record itself), awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  unchanged main c102c709; heads unchanged since the
+  2045 pass. No re-check comments posted this pass:
+  the conflict state is unchanged since the 2130
+  re-check comments, per the no-repeat rule settled
+  in the 2145 record. No merges, no escalations, no
+  new PR opened. Status: no-op.
+  Full detail in pr-integration/2215-run.md.
+
+## 22:32 to about 22:38 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-06-2232.
+  No-op: own PRs checked first - only records PRs 374, 351,
+  350, 301, 265 and 256 open, no tooling PR of mine; no new
+  PR opened since the 2132 run. The same 18 open tooling
+  issues as the 2132 run; no new issue filed since 2132.
+  Only two issues updated since 2132: #284 (ticker-2134,
+  91st consecutive Mac-offline pass, 52nd zero-response,
+  same fault, same form, probe half already landed) and
+  #282 (knowledge class). Main head moved since the 2132
+  run (1c754c546a to c102c7094d): PR #377 merge only,
+  knowledge-only; tools/ diff empty. No branch, no PR, no
+  issue comment, no Slack message. Full detail in
+  tool-development/2232-run.md.
+
+## 22:32 to about 22:42 - Knowledge organization pass
+
+- Knowledge-organizer pass
+  knowledge-organization-2026-11-06-2232. Own PR 377
+  MERGED with no reviews or comments, so no
+  integrator feedback was pending. One fold:
+  ticker-2134 donations record (ninety-first
+  consecutive pass, fifty-second in the worsened
+  zero-response form) into alliance-donations 1.44.0
+  - PR 378, verified OPEN and MERGEABLE, mergeState
+  CLEAN. The occurrence commented onto Issue #282.
+  New knowledge: none about the game - same blocker
+  signature (recovery health check timed out after
+  25s); no queue-state divergence this pass, the
+  pass fetched the remote tip first, so the 2034
+  divergence class did not recur. Donation Count
+  unread, 30-of-30 daily target unverified for
+  2026-11-06. No new issue filed or closed. Records
+  PR 374 awaits the 23:00 batch, so no new records
+  PR was opened. Full detail in
+  knowledge-organization/2232-run.md.
+
+## 22:39 to about 22:42 - PR catch-all pass
+
+- PR-catch-all pass pr-catchall-2026-11-06-2239. No-op: own
+  PR 137 stays MERGED, no adopted open PR; seven open PRs
+  scanned, none owned by this job. PR 377 merged 21:41 PST
+  and PR 378 opened 22:35 PST (knowledge organizer 2232
+  donations fold into alliance-donations 1.44.0, Owner
+  lastwar-knowledge-organizer, MERGEABLE). PR 374 head
+  advanced to 4fb6633e, mergeable UNKNOWN, awaits the
+  23:00 batch. PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING with integrator 2130 re-check notes about
+  one hour old, so no stale-owner flag. Fifty open issues,
+  all class-labeled; owner-decision issues 132, 154 and
+  335 over 24 hours with statements current. No adoption,
+  fix, hand-off or escalation. Full detail in
+  pr-catchall/2239-run.md.
+- Integrator pass pr-integration-2026-11-06-2230.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 29
+  minutes away at pass start). Knowledge PR 378
+  (alliance-donations 1.44.0) arrived during the pass
+  and was merged by squash (merge c4d44dcb).
+  Records PR 374 (records/2026-11-06) mergeable at
+  head c669904d (one commit past the 2215 head: the
+  2215 run record itself), awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  unchanged main c102c709; heads unchanged since the
+  2045 pass. No re-check comments posted this pass:
+  the conflict state is unchanged since the 2130
+  re-check comments, per the no-repeat rule settled
+  in the 2145 record. No escalations, no new PR
+  opened. Status: done.
+  Full detail in pr-integration/2230-run.md.
+- Integrator pass pr-integration-2026-11-06-2245.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 13
+  minutes away at pass start). No knowledge or code
+  PR open at pass start or at the end-of-pass sweep.
+  Records PR 374 (records/2026-11-06) clean at head
+  c329f0a6, awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  current main c4d44dcb; heads unchanged since the
+  2045 pass. No re-check comments posted this pass:
+  the conflict state is unchanged since the 2130
+  re-check comments, per the no-repeat rule settled
+  in the 2145 record. No merges, no comments, no
+  escalations. Status: no-op.
+  Full detail in pr-integration/2251-run.md.
+
+## 22:40 to about 22:50 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 11 units -
+  already_present 58, skipped_done_current 0, reaped 0,
+  expired 11. The staged units cover the 10:03 and 10:30
+  local slots of 2026-11-07, newly inside the 12-hour
+  horizon (to about 10:40 local 2026-11-07); the expired
+  units are the 18:03 and 18:30 slots of 2026-11-06.
+- Pre-reset sweep: production skipped (22:00 hour run, not
+  the 17:00 hour). Tonight's pair for the 19:00 reset of
+  2026-11-06 (chain pre-reset-sweep-2026-11-06) expired
+  unexecuted at the reset - the Mac has been offline all
+  day (Issue 284, ticker-2134 the 91st consecutive
+  Mac-offline pass). 0 enqueued.
+- Scout diff on the Nov 4 observation (fifty-third planner
+  run to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-06-1900 still in inbox
+  unexecuted): fixed branch-tip tool, dry run and apply
+  identical, all zero except unexplained red dots 4 (the
+  narrative's carried unknowns, same 4 as the 1740, 1840,
+  1940, 2040 and 2140 runs). No withdrawals - the Nov 4
+  observation predates today's inbox units and the diff
+  classified nothing as satisfied. Status: done. Full detail
+  in queue-planning/2240-run.md.
