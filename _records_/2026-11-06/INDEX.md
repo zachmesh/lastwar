@@ -3928,3 +3928,20 @@ of 2026-10-28.
   all over 24 hours with statements current. No adoption, fix,
   hand-off, escalation, chat report or Slack sync. Status: no-op.
   Full detail in pr-catchall/1939-run.md.
+
+## 19:34 to about 19:45 - Ticker pass, radar unit failed on Mac offline
+
+- Ticker-1934 pass. Unit radar-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, seven device
+  invokes zero responses, no game screen read, no input
+  dispatched, no radar task executed or claimed. Same blocker
+  as Issue #284: eighty-eighth consecutive pass, forty-ninth
+  in the worsened zero-response form. Commented on #284.
+  Tracker untouched.
+- Live duel posture at 19:38: duel day 6, Enemy Buster, radar
+  posture stack - the unit window stamp (day 5 release) is
+  stale after the about 18:00 rollover.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+  Status: failed. Full detail in
+  radar-tasks/1934-queue-run.md.
