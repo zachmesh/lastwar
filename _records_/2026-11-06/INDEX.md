@@ -4162,3 +4162,26 @@ of 2026-10-28.
   (same class as the 2026-11-01 0041 record).
   Status: failed. Full detail in
   arms-race/2034-queue-run.md.
+
+## 20:45 to about 20:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2045.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, 133 minutes
+  away at pass start). Merged knowledge PR 376
+  (organizer 2032: radar-tasks 1.43.0 and
+  survivor-intake 1.33.0, ticker-1934 radar and
+  ticker-2004 survivors device-offline folds, Refs
+  #282/#284) by squash, merge 1c754c54, branch
+  deleted; local main synced back to 1c754c54 via
+  bundle pi-2045-main.bundle. Records PR 374
+  (records/2026-11-06) mergeable at head b0cd0068,
+  awaits the 23:00 batch. Records PRs 351, 350,
+  301, 265 and 256 still CONFLICTING on the single
+  file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  new main 1c754c54; re-check comments posted on all
+  five this pass (1800/1815 practice; 1830/1845
+  posted none - divergence stays flagged for the
+  retro). No escalations, no new PR opened. Status:
+  done. Full detail in pr-integration/2045-run.md.
