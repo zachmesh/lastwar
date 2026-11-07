@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T14:23:00Z
+modified: 2026-11-07T14:34:44Z
 level: L0
 version: 1.0.0
-description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch
+description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch
 status: unverified
 ---
 
@@ -1034,3 +1034,17 @@ of 2026-10-28.
   heads unchanged since the 0300 notes, no repeat
   comments. Status: no-op. Full detail in
   pr-integration/0615-run.md.
+
+## 06:30 to about 06:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0630.
+  Non-batch pass per the checker (plain and merge-aware
+  not due, next batch 07:00): no knowledge or code PR
+  open, no merges, no comments, no escalations. Five
+  records PRs await the 07:00 batch: PR 382 verified
+  CLEAN against main 391e324a (gh MERGEABLE and CLEAN,
+  merge-tree clean); PRs 351, 301, 265 and 256 still
+  conflict on _logs_/repo-actions/action-log.jsonl,
+  heads unchanged since the 0300 notes, no repeat
+  comments. Status: no-op. Full detail in
+  pr-integration/0630-run.md.
