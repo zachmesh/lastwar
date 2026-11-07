@@ -365,3 +365,17 @@ of 2026-10-28.
   by local merge-tree; gh reports MERGEABLE/CLEAN on all
   seven. Status: no-op. Full detail in
   pr-integration/0145-run.md.
+
+## 02:00 to about 02:04 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0200.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PRs open, nothing merged,
+  no comments posted. Seven records PRs await the 03:00
+  batch, all verified merge-clean against main 74db107bc
+  by local merge-tree on the remote tips; gh reports
+  MERGEABLE/CLEAN on all seven. A first merge-tree run
+  against stale local records refs showed false conflicts
+  for three branches; re-run on the ls-remote tips is
+  clean - see the run record. Status: no-op. Full detail
+  in pr-integration/0200-run.md.
