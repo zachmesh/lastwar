@@ -354,3 +354,14 @@ of 2026-10-28.
 - Pool by_state at 01:44 local: inbox 76, claimed 0,
   done 1079, upcoming 51. Status: no-op. Full detail in
   queue-planning/0140-run.md.
+
+## 01:45 to about 01:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0145.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PRs open, nothing merged,
+  no comments posted. Seven records PRs await the 03:00
+  batch, all verified merge-clean against main 74db107bc
+  by local merge-tree; gh reports MERGEABLE/CLEAN on all
+  seven. Status: no-op. Full detail in
+  pr-integration/0145-run.md.
