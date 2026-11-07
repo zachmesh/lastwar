@@ -952,3 +952,20 @@ of 2026-10-28.
   hours with statements current. No adoptions, fixes,
   hand-offs, escalations or stale-owner flags. Status: no-op.
   Full detail in pr-catchall/0539-run.md.
+
+## 05:32 to about 05:44 - Tool development pass
+
+- Tool developer pass tool-development-2026-11-07-0532.
+  Own PRs checked first (none open; PR #384 merged 00:48 PT,
+  PR #387 merged 02:47 PT, no integrator feedback pending),
+  then open tooling issues (21 open, newest #383, none new).
+  Took issue #198: the 0440 planner run still records its
+  live-pool tree regulars.json with no duel-score and no
+  zero-sweep regular while the pool holds their units.
+  Implemented the roster-staleness warning in _tools_/queue.py
+  (plan and sync warn on stdout and name the missing ids under
+  roster_stale_regulars; warning only, never a block) and
+  opened PR #391 (commit 7c976a1a2d); issue #198 commented
+  with progress and the PR. Fixture validation 19/19 on
+  isolated scratch pools, unpatched-main control clean.
+  Status: done. Full detail in tool-development/0532-run.md.
