@@ -2613,3 +2613,37 @@ of 2026-10-28.
   24 hours, statements current. No adoption, no fix, no
   hand-off, no escalation, no stale-owner flag. Status: no-op.
   Full detail in pr-catchall/1539-run.md.
+
+## 15:40 to about 15:53 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1540.
+- Plan staged 5 units, already_present 66, reaped 0,
+  expired 5. The 0257 slot (passes, secrets, treasures,
+  trucks, events) for 2026-11-08; the 5 expired are the
+  1057 slot of 2026-11-07, of which 4 landed as
+  inbox-to-done moves and passes-1057 stays the
+  ticker-1452 failed version already on the branch. The
+  next 12 hours are now staged through about 03:40 local.
+- Pre-reset sweep production skipped, not the 17:00 hour
+  run; tonight's pair (chain pre-reset-sweep-2026-11-07)
+  already in inbox, both units, staged by ticker-0127.
+  The pair's window, activity, segment and planned_for
+  fields are still empty where last night's carried named
+  windows and ledger-walk instructions, so the 17:00 run
+  should verify the pair before its window opens.
+- Scout diff on the Nov 4 observation (seventieth
+  consumption): dry run and apply agree, all zero except
+  the fixed tool's unexplained 4 (observed 0, actionable
+  0, enqueued 0, already-queued 0, candidates 0,
+  promotion proposals 0). No withdrawals: the diff
+  classified nothing as already satisfied and the Nov 4
+  observation is older than the current inbox units.
+- Recovery: the 1440 delivery never landed on the branch
+  (commit c3cb1141b6 found only on the local delivery
+  branch); this run recovered its 11 staged units, run
+  record, INDEX entry and action-log line. The 1440 run's
+  8 expired units were already on the branch in done
+  with the ticker's later timestamps, so those were kept.
+- Pool by_state at 15:47 local: inbox 79, claimed 0,
+  done 1143, upcoming 53. Status: done. Full detail in
+  queue-planning/1540-run.md.
