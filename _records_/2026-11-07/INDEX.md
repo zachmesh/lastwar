@@ -393,3 +393,16 @@ of 2026-10-28.
   ticker-0127. No zombie seeding: event ended 2026-10-30.
   Tracker untouched. Status: failed. Full detail in
   alliance-gifts/0204-queue-run.md.
+
+## 02:15 to about 02:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0215.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PRs open, nothing merged,
+  no comments posted. Seven records PRs await the 03:00
+  batch, all verified merge-clean against main 74db107bc
+  by local merge-tree on freshly fetched remote tips;
+  gh reports MERGEABLE/CLEAN on all seven. PR 382 head
+  advanced since the 0200 pass (f4430db7 to 54ae8ba6,
+  ticker-0204 gifts record landed). Status: no-op. Full
+  detail in pr-integration/0215-run.md.
