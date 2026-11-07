@@ -869,3 +869,16 @@ of 2026-10-28.
   _logs_/repo-actions/action-log.jsonl, no repeat
   comments, carried to the 07:00 batch. Status: no-op.
   Full detail in pr-integration/0500-run.md.
+
+## 05:15 to about 05:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0515.
+  Non-batch pass per the checker gate (plain and
+  merge-aware not due - outside every batch window,
+  next batch 07:00): no records merges, no knowledge
+  or code PR open. PR 382 verified CLEAN (merge-tree
+  exit 0, gh MERGEABLE/CLEAN), awaits the 07:00 batch.
+  PRs 351, 301, 265 and 256 still conflicted on
+  _logs_/repo-actions/action-log.jsonl, no repeat
+  comments, carried to the 07:00 batch. Status: no-op.
+  Full detail in pr-integration/0515-run.md.
