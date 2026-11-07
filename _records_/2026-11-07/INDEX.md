@@ -117,7 +117,7 @@ of 2026-10-28.
   Status: done. Full detail in
   tool-development/0042-run.md.
 
-## 00:32 to about 00:52 - Knowledge organization pass
+## 00:32 to about 00:45 - Knowledge organization pass
 
 - Knowledge-organizer pass
   knowledge-organization-2026-11-07-0032. Own PR 380
