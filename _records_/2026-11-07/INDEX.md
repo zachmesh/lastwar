@@ -2421,6 +2421,34 @@ of 2026-10-28.
   over 24 hours with statements current. Status: no-op.
   Full detail in pr-catchall/1439-run.md.
 
+## 14:40 to about 14:53 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1440.
+- Plan staged 11 units, already_present 60, reaped 0,
+  expired 8. The 0203 slot (harvest, radar, survivors,
+  training, donations, arms-race) and the 0230 slot
+  (mail, help, gifts, train, star-ceremony), all for
+  2026-11-08; the 8 expired are the 1003/1030 slots of
+  2026-11-07. The next 12 hours are now staged through
+  about 02:40 local.
+- Pre-reset sweep production skipped, not the 17:00 hour
+  run; tonight's pair (chain pre-reset-sweep-2026-11-07)
+  already in inbox, both units, staged by ticker-0127.
+  The pair's window, activity, segment and planned_for
+  fields are still empty where last night's carried named
+  windows and ledger-walk instructions, so the 17:00 run
+  should verify the pair before its window opens.
+- Scout diff on the Nov 4 observation (sixty-ninth
+  consumption): dry run and apply agree, all zero except
+  the fixed tool's unexplained 4 (observed 0, actionable
+  0, enqueued 0, already-queued 0, candidates 0,
+  promotion proposals 0). No withdrawals: the diff
+  classified nothing as already satisfied and the Nov 4
+  observation is older than the current inbox units.
+- Pool by_state at 14:46 local: inbox 79, claimed 0,
+  done 1138, upcoming 53. Status: done. Full detail in
+  queue-planning/1440-run.md.
+
 
 ## 14:32 to about 14:47 - Tool development pass
 
