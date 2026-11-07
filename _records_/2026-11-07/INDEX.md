@@ -1857,3 +1857,18 @@ of 2026-10-28.
   or code PR open. Local main fast-forwarded 23c05a2a
   to c317b423 via bundle route. Status: done. Full
   detail in pr-integration/1100-run.md.
+
+## 11:15 to about 11:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1115.
+  NON-BATCH pass inside the 11:00 window: the checker
+  said due on the plain clock-only call but not due
+  merge-aware, because records PR 392 already merged
+  at 11:05 in this window. No records PR merged.
+  Records PR 398 (records 2026-11-07, post-1100 batch,
+  head 97d67853) is MERGEABLE/CLEAN and awaits the
+  15:00 batch. PRs 351, 301 and 256 still CONFLICTING
+  on the action-log append (main unchanged at c317b423,
+  heads unchanged, feedback not repeated). No
+  knowledge or code PR open. Status: no-op. Full
+  detail in pr-integration/1115-run.md.
