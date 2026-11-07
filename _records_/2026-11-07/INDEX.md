@@ -327,3 +327,30 @@ of 2026-10-28.
   24 hours with statements current. No adoptions, fixes,
   hand-offs, escalations or stale-owner flags. Status:
   no-op. Full detail in pr-catchall/0139-run.md.
+
+## 01:40 to about 01:46 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 69, skipped_done_current 0, reaped 0,
+  expired 0.
+- Pre-reset sweep: skipped, not the 17:00 hour run.
+  Tonight's pair for the 19:00 reset of 2026-11-07 is
+  already in inbox, staged by ticker-0127 at 09:30:26Z
+  (chain pre-reset-sweep-2026-11-07, first pass not_before
+  17:30 local, final pass 18:30 local); the pair's window
+  fields are empty where last night's carried named
+  windows, so the 17:00 run should verify it.
+- Scout diff on the Nov 4 observation (no Nov 5 or Nov 6
+  observation yet; scout-2026-11-05-1900 expired
+  unexecuted, scout-2026-11-06-1900 still in inbox,
+  expires 19:00 local Nov 7): dry run and apply agree,
+  all zero except unexplained red dots 4 (fixed
+  branch-tip tool, fifty-sixth consumption) - observed 0,
+  actionable 0, enqueued 0, already-queued 0, raises 0,
+  candidates 0, promotion proposals 0.
+- Queue cleanup: 0 withdrawals. The diff classified
+  nothing as already satisfied and the Nov 4 observation
+  is older than the current inbox units.
+- Pool by_state at 01:44 local: inbox 76, claimed 0,
+  done 1079, upcoming 51. Status: no-op. Full detail in
+  queue-planning/0140-run.md.
