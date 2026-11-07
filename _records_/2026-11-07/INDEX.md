@@ -2545,3 +2545,23 @@ of 2026-10-28.
   helper across the two append paths; runbook edits belong to
   each jobs owner. No branch, no PR, no Slack message.
   Status: done. Full detail in tool-development/1532-run.md.
+
+## 15:30 to about 15:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1530.
+  Third pass inside the 15:00-16:00 PT batch window;
+  the 1500 pass already took the first-pass batch slot,
+  so this pass is non-batch for records purposes
+  (checker still reports due, plain and merge-aware,
+  but it keys on merges and no merge happened at 1500).
+  All four open records PRs still conflict with
+  main 6ad1341f on the single file
+  _logs_/repo-actions/action-log.jsonl (verified by
+  git merge-tree and by GitHub); PR 398 re-noted at
+  its new head 0b9693b8 (the 1515 run-record commit),
+  PRs 351, 301 and 256 unchanged since the 1445
+  re-notes, no repeat comments. No knowledge or code
+  PR open; no new records PR opened; no log lines
+  appended; no sync-back. Next merge chance the
+  19:00 batch. Status: done.
+  Full detail in pr-integration/1530-run.md.
