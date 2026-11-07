@@ -4399,3 +4399,19 @@ of 2026-10-28.
   PR opened. Status: no-op.
   Full detail in pr-integration/2145-run.md.
 
+## 21:34 to about 21:54 - Ticker pass, donations unit failed on Mac offline
+
+- Ticker-2134 pass. Unit donations-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, six device
+  invokes zero responses, no game screen read, no input
+  dispatched, no Alliance Techs screen opened, no donation count
+  read, no coin donation made. Same blocker as Issue #284:
+  ninety-first consecutive pass, fifty-second in the worsened
+  zero-response form. Commented on #284. Tracker untouched.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+- Queue-state note: no divergence this pass - fresh detached
+  worktree of github/records/2026-11-06 at 6deba56400, tip
+  verified identical on the VPS and on github.
+  Status: failed. Full detail in
+  alliance-donations/2134-queue-run.md.
