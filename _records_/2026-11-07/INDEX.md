@@ -897,3 +897,19 @@ of 2026-10-28.
   ended 2026-10-30. Tracker untouched. PR 382 mergeable and
   clean, awaits the 07:00 batch. Status: failed. Full detail
   in resource-collection/0526-queue-run.md.
+
+## 05:30 to about 05:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0530.
+  Non-batch pass per the checker gate (plain and
+  merge-aware not due - outside every batch window,
+  next batch 07:00): no records merges, no knowledge
+  or code PR open. PR 382 verified CLEAN (merge-tree
+  exit 0, clean tree e5994177, gh MERGEABLE/CLEAN),
+  awaits the 07:00 batch. PRs 351, 301, 265 and 256
+  still conflicted on _logs_/repo-actions/action-log.jsonl;
+  four re-check comments posted then withdrawn in the
+  same pass as redundant under the no-repeat rule (PR
+  heads unchanged since the 0300 notes), net live
+  comments 0; carried to the 07:00 batch. Status: no-op.
+  Full detail in pr-integration/0530-run.md.
