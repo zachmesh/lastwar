@@ -3163,3 +3163,18 @@ of 2026-10-28.
   #213 pattern); left untouched, flagged for integrator/retro.
 - Pool: inbox 77, claimed 0, done 1043, upcoming 53. Status:
   done. Full detail in queue-planning/1540-run.md.
+## 15:45 to about 16:01 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1545.
+  Non-batch pass per the checker (merge-aware: not due,
+  PR 365 already merged 15:04:56 PT in this window; next
+  batch 19:00). No knowledge or code PR open. Six records
+  PRs open, none merged: PR 369 (records/2026-11-06,
+  head 6f195c6915) awaits the 19:00 batch, verified clean
+  by merge-tree against main 66c3100ab1; PRs 351, 350,
+  301, 265 and 256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree, heads unchanged since the
+  1315 / 1345 comments, so no repeat comment. No
+  escalations, no new PR opened. Status: no-op. Full
+  detail in pr-integration/1545-run.md.
