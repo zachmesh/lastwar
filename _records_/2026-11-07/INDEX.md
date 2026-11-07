@@ -1381,3 +1381,22 @@ of 2026-10-28.
   PR 392 (records/2026-11-07) open with 0 comments,
   nothing addressed to this job. Full detail in
   alliance-donations/0804-queue-run.md.
+
+## 08:15 to about 08:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0815.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): no records PR merged. Knowledge PR 393
+  unchanged since the 0745 review (single commit
+  718af5ad, typo still present), but this pass posted a
+  repeat of the 0745 feedback by mistake - a no-repeat
+  rule miss, recorded honestly in the run record; the
+  comment content is correct and is left in place. Four
+  records PRs open: PR 392 (records/2026-11-07, head
+  82eab6e5e8) verified CLEAN at its advanced head and
+  awaiting the 11:00 batch; PRs 256, 301 and 351 still
+  conflict on _logs_/repo-actions/action-log.jsonl,
+  heads and main unchanged since the 0700 conflict
+  notes, no repeat comments. Status: done. Full detail
+  in pr-integration/0815-run.md.
