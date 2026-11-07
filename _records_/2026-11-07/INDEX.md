@@ -2171,3 +2171,18 @@ of 2026-10-28.
   sync-back skipped: local HEAD 37dea85e has diverged
   from remote main, no force applied. Status: done.
   Full detail in pr-integration/1245-run.md.
+
+## 13:00 to about 13:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1300.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged; no knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head ed10eef6,
+  verified clean by scratch-worktree test merge)
+  awaits the 15:00 batch. PRs 351, 301 and 256 still
+  CONFLICTING on the action-log append; re-tested
+  against the unchanged main 30f1c620, not re-noted
+  (no state change since the 1245 re-checks). No local
+  main sync-back owed. Status: done. Full detail in
+  pr-integration/1300-run.md.
