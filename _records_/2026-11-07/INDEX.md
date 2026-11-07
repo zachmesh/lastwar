@@ -2086,7 +2086,7 @@ of 2026-10-28.
   off-Space; unblock is the owner clicking the LastWar
   Dock icon once). Status: no-op. Full detail in
   tool-development/1232-run.md.
-## 12:32 to about 12:50 - Knowledge organization pass
+## 12:32 to about 12:47 - Knowledge organization pass
 
 - Knowledge organizer pass knowledge-organization-2026-11-07-1232.
   Own PR 399 merged (2026-11-07T19:49:26Z, 0 comments, 0
