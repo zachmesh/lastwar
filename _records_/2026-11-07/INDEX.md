@@ -1400,3 +1400,21 @@ of 2026-10-28.
   heads and main unchanged since the 0700 conflict
   notes, no repeat comments. Status: done. Full detail
   in pr-integration/0815-run.md.
+
+## 08:30 to about 08:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0830.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): no records PR merged. Knowledge PR 393
+  unchanged since the 0745 review (single commit
+  718af5ad, typo still present), no repeat feedback
+  posted this pass - the 0815 repeat-feedback miss is
+  not repeated. Four records PRs open: PR 392
+  (records/2026-11-07, head a759490c) verified CLEAN at
+  its advanced head and awaiting the 11:00 batch; PRs
+  256, 301 and 351 still conflict on
+  _logs_/repo-actions/action-log.jsonl, heads and main
+  unchanged since the 0700 conflict notes, no repeat
+  comments. Status: done. Full detail in
+  pr-integration/0830-run.md.
