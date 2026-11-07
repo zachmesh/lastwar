@@ -1772,3 +1772,33 @@ of 2026-10-28.
   escalations or stale-owner flags. Status: no-op. Full
   detail in pr-catchall/1039-run.md.
 
+## 10:40 to about 10:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1040.
+- Plan staged 11 units, already_present 60, reaped 0,
+  expired 8: the 2203 slot (harvest, radar, survivors,
+  training, donations, arms-race) and the 2230 slot (mail,
+  help, gifts, train, star-ceremony). The 8 expired units
+  are the 0603/0630 slots whose windows fully passed
+  (gifts, help, mail, star-ceremony, train at 0630;
+  harvest, survivors, training at 0603), moved to done
+  with status expired. The next 12 hours are now staged
+  through about 22:40 local.
+- Pre-reset sweep production skipped, not the 17:00 hour
+  run; tonight's pair (chain pre-reset-sweep-2026-11-07)
+  already in inbox, staged by ticker-0127, first pass
+  not_before 17:30 local, final pass 18:30 local. The
+  pair's window, activity, segment and planned_for fields
+  are still empty where last night's carried named windows
+  and ledger-walk instructions, so the 17:00 run should
+  verify the pair before its window opens.
+- Scout diff on the Nov 4 observation (sixty-fifth
+  consumption): dry run and apply agree, all zero except
+  the fixed tool's unexplained 4 (observed 0, actionable
+  0, enqueued 0, already-queued 0, candidates 0,
+  promotion proposals 0). No withdrawals: the diff
+  classified nothing as already satisfied and the Nov 4
+  observation is older than the current inbox units.
+  Pool by_state at 10:44 local: inbox 79, claimed 0,
+  done 1122, upcoming 53. Status: done. Full detail in
+  queue-planning/1040-run.md.
