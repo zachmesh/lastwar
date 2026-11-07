@@ -542,6 +542,21 @@ of 2026-10-28.
   fast-forwarded to 791e2740. Status: done. Full detail
   in pr-integration/0250-run.md.
 
+## 03:00 to about 11:09 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0300.
+  Batch pass per the checker (due, window 03:00-04:00):
+  merged records PR 350 (records/2026-11-01, merge
+  4b868fc5e9) and records PR 381 (records/2026-11-06,
+  merge 2d36115c). Records PRs 382, 351, 301, 265 and
+  256 conflicted on _logs_/repo-actions/action-log.jsonl
+  after the first merges (append collision); conflict
+  comments posted on all five, not force-merged, carried
+  to the 07:00 batch pending branch-side reconciliation.
+  No knowledge or code PR open. Local main fast-forwarded
+  to 2d36115c. Status: done. Full detail in
+  pr-integration/0300-run.md.
+
 ## 03:04 to about 03:13 - Ticker pass
 
 - Ticker pass ticker-0304. Radar unit radar-2026-11-07-0203
