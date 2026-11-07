@@ -1737,3 +1737,21 @@ of 2026-10-28.
   github remote (3cc2b1af) and verified healthy via
   API and merge-commit ancestry. Status: no-op. Full
   detail in tool-development/1032-run.md.
+## 10:20 to about 10:40 - Ticker pass
+
+- Ticker pass ticker-1020. Unit help-2026-11-07-0630:
+  failed, access-failed with a NEW failure mode: the Mac
+  mini is back online (last_seen 2026-11-07T18:19:37Z,
+  fresh; device answers, both transports healthy) but the
+  Last War window (1920x1080 at 0, -360) sits on an
+  inactive Space and every screen-capture attempt failed
+  with audio/video capture failure. No Help All pressed,
+  no count read, no game input dispatched, nothing
+  claimed. Mission Control was opened once by mistake and
+  wedged the channel (geometry_mismatch on every window);
+  a second launch closed it and observation recovered -
+  never open Mission Control as a recovery step. Background
+  Ctrl+Right does not switch Spaces (went to Finder
+  column view). The unblock is the owner clicking the
+  LastWar Dock icon once. Tracker untouched. Full detail
+  in alliance-help/1038-queue-run.md.
