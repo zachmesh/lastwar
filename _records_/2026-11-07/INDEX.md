@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T22:58:00Z
+modified: 2026-11-07T23:17:31Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -2486,3 +2486,26 @@ of 2026-10-28.
   reset to github/main. Local main fast-forwarded
   3d01881e3 to 6ad1341f via bundle route. Status: done.
   Full detail in pr-integration/1445-run.md.
+
+## 15:00 to about 15:18 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1500.
+  BATCH pass per the checker (due, plain and
+  merge-aware, window 15:00-16:00 PT, next batch
+  19:00) but zero records merges: all four open
+  records PRs conflict with main 6ad1341f on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (verified by git merge-tree and by GitHub).
+  PR 398 (records 2026-11-07) advanced to head
+  e167bc43 with a branch-side reconciliation commit
+  that resolved the INDEX and queue merges but not
+  the action-log conflict (main log 1039 lines,
+  branch log 1067 lines, 18 main lines absent from
+  branch, 46 branch lines absent from main);
+  updated conflict comment posted on PR 398. PRs
+  351, 301 and 256 unchanged since the 1445
+  re-notes, re-verified conflicted, no new comment.
+  No knowledge or code PR open; no new records PR
+  opened; no log lines appended; no sync-back.
+  Next merge chance the 19:00 batch. Status: done.
+  Full detail in pr-integration/1500-run.md.
