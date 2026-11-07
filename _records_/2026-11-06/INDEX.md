@@ -3407,3 +3407,19 @@ of 2026-10-28.
   70 at sync, zero-sweep pair for the 19:00 reset still
   pending. Status: failed. Full detail in
   perception-scout/1710-queue-run.md.
+
+## 17:15 to about 17:22 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1715.
+  Non-batch pass per the checker (plain: not due, outside
+  every batch window; next batch 19:00). No knowledge or
+  code PR open. Six records PRs open, none merged: PR 369
+  (records/2026-11-06, head 8e3b11f4 after new appends
+  since the 1700 pass) mergeable, awaits the 19:00 batch;
+  PRs 351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against the
+  unchanged main head a20fb55a; no repeat comments posted,
+  heads and main unchanged since the 1645 re-check
+  comments. No escalations, no new PR opened. Status:
+  no-op. Full detail in pr-integration/1715-run.md.
