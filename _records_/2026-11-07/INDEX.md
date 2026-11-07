@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T08:56:00Z
+modified: 2026-11-07T09:37:02Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch
@@ -227,6 +227,49 @@ of 2026-10-28.
   382 only (recomputing after its head moved with the
   0100 run-record commit). Status: no-op. Full detail in
   pr-integration/0115-run.md.
+
+## 01:27 to about 01:33 - Ticker pass
+
+- Own PRs first: open records PRs checked on the VPS - PR 382
+  (records/2026-11-07) is OPEN, MERGEABLE, CLEAN, 0 comments,
+  Owner lastwar-pr-integrator; nothing addressed to this job.
+  Older records PRs 381, 351, 350, 301, 265 and 256 remain
+  open under the integrator.
+- Radar unit radar-2026-11-06-2203, failed, ticker-0127: no
+  game screen was ever read and no game input was dispatched.
+  Six device invokes, zero responses: computer.session start
+  on the Mac mini node_offline (device offline, no wake-up
+  path) three times, connection.repair (native) and
+  connection.health on the recovery device both
+  node_invoke_timeout after 25s (a first repair call with
+  target "web" was rejected client-side as invalid params -
+  the recovery device's schema expects "native"). device.list
+  still reports the Mac mini offline with last_seen
+  2026-11-05T15:36:52Z, stale about 41 hours 57 minutes.
+  This is the ninety-fourth consecutive ticker pass with a Mac
+  device-access blocker (Issue 284), fifty-fifth in the
+  worsened zero-response form. Recovery still needs the Mac
+  back online first, then the Mac-side agent gateway restart
+  if invokes still stall. Commented on Issue 284. No radar
+  task executed or claimed. Tracker untouched. The pass
+  stopped after this one unit. Full detail in
+  radar-tasks/0132-queue-run.md.
+- Branch state note: this unit was executed against the main
+  working tree's stale queue mirror; the branch already
+  carries the same unit completed as failed by ticker-0011,
+  so the 0011 done file is kept and this record is the
+  evidence of the re-attempt.
+- No zombie seeding: the Zombie Invasion event ended
+  2026-10-30 about 19:00 and the chain is closed; no Zombie
+  Invasion tab is to be expected until it is seen live again.
+  Sync: reaped 0, expired 0, due 20, produced nothing new,
+  all 20 regulars already queued. Inbox 75, claimed 0,
+  done 1078, upcoming 49.
+- Pre-reset zero-sweep pair for tonight's 19:00 reset was not
+  staged, so this pass enqueued it per the queue design
+  section 12 (chain pre-reset-sweep-2026-11-07, priority 1):
+  unit 001 not_before 17:30 local, unit 002 not_before 18:30
+  local, both expiring at the reset.
 
 ## 01:32 to about 01:40 - Knowledge organization pass
 
