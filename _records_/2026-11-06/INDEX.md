@@ -3773,3 +3773,19 @@ of 2026-10-28.
   was posted on any of the five. No escalations, no
   new PR opened. Status: done. Full detail in
   pr-integration/1845-run.md.
+
+## 19:04 to about 19:15 - Ticker pass, harvest unit failed on Mac offline
+
+- Ticker-1904 pass. Unit harvest-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, five device
+  invokes zero responses, no game screen read, no input
+  dispatched, no bubble collected. Same blocker as Issue #284:
+  eighty-seventh consecutive pass, forty-eighth in the worsened
+  zero-response form. Commented on #284. Tracker untouched.
+- Sync: reaped 0, expired 8, due 22, produced 4 (vip,
+  daily-missions, duel-score, scout 1800/1830 slots). Both
+  pre-reset zero-sweep units for 2026-11-06 expired
+  unexecuted, so the reset day closed with no ledger zero
+  sweep. No zombie seeding: chain closed 2026-10-30.
+  Status: failed. Full detail in
+  resource-collection/1904-queue-run.md.
