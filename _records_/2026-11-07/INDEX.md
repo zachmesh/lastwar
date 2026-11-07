@@ -1667,3 +1667,14 @@ of 2026-10-28.
   main 3cc2b1af. Local main fast-forwarded d804146f to
   3cc2b1af via bundle route. Status: done. Full detail
   in pr-integration/0945-run.md.
+- Integrator pass pr-integration-2026-11-07-1000.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): no knowledge or code PR open; four records PRs
+  await the 11:00 batch: PR 392 (records 2026-11-07, head
+  e3462a68, verified clean by merge-tree, zero conflict
+  markers) and PRs 351, 301 and 256, all still CONFLICTING
+  on the action-log append, heads and main unchanged since
+  the 0945 conflict notes, no repeat comments. No merges,
+  no escalations. Status: no-op. Full detail in
+  pr-integration/1000-run.md.
