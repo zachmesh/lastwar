@@ -1009,3 +1009,14 @@ of 2026-10-28.
   conflict on _logs_/repo-actions/action-log.jsonl, heads
   unchanged since the 0300 notes, no repeat comments.
   Full detail in pr-integration/0545-run.md.
+
+- Integrator pass pr-integration-2026-11-07-0600.
+  Non-batch pass per the checker (plain and merge-aware
+  not due, next batch 07:00): no knowledge or code PR
+  open, no merges, no comments, no escalations. Five
+  records PRs await the 07:00 batch: PR 382 verified
+  CLEAN against main 391e324a (gh MERGEABLE/CLEAN and
+  real test merge); PRs 351, 301, 265 and 256 still
+  conflict on _logs_/repo-actions/action-log.jsonl, heads
+  unchanged since the 0300 notes, no repeat comments.
+  Full detail in pr-integration/0600-run.md.
