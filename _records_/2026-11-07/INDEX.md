@@ -1872,3 +1872,21 @@ of 2026-10-28.
   heads unchanged, feedback not repeated). No
   knowledge or code PR open. Status: no-op. Full
   detail in pr-integration/1115-run.md.
+## 11:19 to about 11:27 - Ticker pass
+
+- Ticker pass ticker-1104. Unit radar-2026-11-07-1003:
+  failed, access-failed with the NEW failure mode: the Mac
+  mini is back online (last_seen 2026-11-07T18:41:20Z,
+  fresh; both transports connected and healthy) but the
+  Last War window (1920x1080 at 0, -360) sits on an
+  inactive Space and every screen-capture attempt failed
+  with audio/video capture failure (activate evidence plus
+  three observes). No radar screen read, no task executed,
+  nothing claimed. open_app returned outcome_unknown and
+  the window did not move; set_window_frame refused with
+  observation_required. Mission Control not opened,
+  Ctrl+Right not tried, per the ticker-1020 lessons. The
+  unblock is the owner clicking the LastWar Dock icon once.
+  Tracker untouched. Own PRs: PR 398 (records/2026-11-07)
+  open, 0 comments, nothing addressed to this job. Full
+  detail in radar-tasks/1104-queue-run.md.
