@@ -2342,3 +2342,18 @@ of 2026-10-28.
   main 30f1c620, no fresh comment (unchanged since
   the 1315 re-notes). Status: done.
   Full detail in pr-integration/1415-run.md.
+
+## 14:30 to about 14:41 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1430.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. No knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head 07553d07,
+  verified clean by authoritative merge-tree exit 0)
+  awaits the 15:00 batch. PRs 351, 301 and 256 still
+  CONFLICTING on the action-log append; re-tested with
+  the authoritative merge-tree form against main
+  30f1c620 (exit 1 each), heads and main unchanged
+  since the 1315 pass, no fresh comment. Status: done.
+  Full detail in pr-integration/1430-run.md.
