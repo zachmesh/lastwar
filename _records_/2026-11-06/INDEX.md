@@ -3995,3 +3995,22 @@ of 2026-10-28.
   today's inbox units and the diff classified nothing as
   satisfied. Status: done. Full detail in
   queue-planning/1940-run.md.
+
+## 20:00 to about 20:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2000.
+  Non-batch pass per the checker (plain and
+  merge-aware: not due, outside every batch window;
+  next batch 23:00). The 19:00 batch already merged
+  PR 369 at 19:05:42. No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06, head 7018a228,
+  12 commits beyond main) is open, verified mergeable
+  clean, and awaits the 23:00 batch. Records PRs 351,
+  350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged since the 1815
+  re-check comments; conflict scope re-verified by
+  git merge-tree against current main daf59d9d16, so
+  no repeat comment was posted. No comments, no
+  escalations. Status: done. Full detail in
+  pr-integration/2000-run.md.
