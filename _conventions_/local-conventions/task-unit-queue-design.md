@@ -492,7 +492,12 @@ pair was enqueued manually with `_tools_/queue.py enqueue`
 (the pair for the 2026-11-01 reset, chain
 pre-reset-sweep-2026-11-01, units 001 and 002, was enqueued this
 way). A reset with no sweep pair staged is itself reported in
-the round summary.
+the round summary. `enqueue` refuses a zero-sweep unit whose
+`not_before`/`expires_at` do not match the reset-anchored roster
+geometry (tool guard, Refs #147): a hand-staged pair with the old
+wall-clock geometry pre-empted the subcommand's correct pair on
+2026-11-05/06, so the manual path now fails loudly and the pair is
+staged with `queue.py sweep` (or `plan`) from a current tree.
 
 2026-11-04 correction (organizer 0432, Refs #147): the sweep geometry above replaces the wall-clock 17:30/18:30 slots expiring 19:00 local, which could not close a trade day after the 2026-11-02 DST end (the Nov 3 final slot staged at 18:30 local fell half an hour after the 18:00 PST reset). Other 19:00 mentions elsewhere in this design (VIP expiry, the scout anchor, quota checkpoints, the deadline list) are not rewritten in this pass and are flagged as follow-up on #147.
 
