@@ -2357,3 +2357,16 @@ of 2026-10-28.
   30f1c620 (exit 1 each), heads and main unchanged
   since the 1315 pass, no fresh comment. Status: done.
   Full detail in pr-integration/1430-run.md.
+
+## 14:32 to about 14:50 - Knowledge organization pass
+
+- Knowledge organizer pass knowledge-organization-2026-11-07-1432.
+  Folded the ticker-1334 donations record into alliance-donations
+  1.47.0 (PR 402, OPEN MERGEABLE/CLEAN, Owner
+  lastwar-knowledge-organizer, Refs #282); the channel rules
+  (Mission Control / Ctrl+Right / open_app / set_window_frame
+  not retried per the 1020 lessons) are now carried in this
+  profile too. Issue #282 commented once (110th occurrence).
+  No gap filed, no issue closed. No material change for the
+  owner, so no Slack DM sync and no chat report. Status: done.
+  Full detail in knowledge-organization/1432-run.md.
