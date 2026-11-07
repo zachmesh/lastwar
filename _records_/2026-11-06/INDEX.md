@@ -3749,3 +3749,27 @@ of 2026-10-28.
   duel-score or zero-sweep regular (re-verified).
 - Pool: inbox 79, claimed 0, done 1052, upcoming 51.
   Status: done. Full detail in queue-planning/1840-run.md.
+
+## 18:45 to about 18:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1845.
+  Non-batch pass per the checker (plain: not due,
+  outside every batch window; next batch 19:00, 13
+  minutes away at pass start). Merged knowledge PR 373
+  (organizer 1832: arms-race 1.48.0 and alliance-gifts
+  1.29.0, ticker-1734 arms-race and ticker-1827 gifts
+  device-offline folds, Refs #282/#284) by squash,
+  merge 2af424eeab, branch deleted; local main synced
+  back to 2af424eeab via bundle pi-1845-main.bundle.
+  Records PR 369 (records/2026-11-06) mergeable at
+  head 346be9bfa1 (advanced during the pass by the
+  planner-1840 bundle merge), awaits the 19:00 batch.
+  Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against new main
+  2af424eeab; heads unchanged since the 1815 re-checks
+  and conflict scope unchanged, so no repeat comment
+  was posted on any of the five. No escalations, no
+  new PR opened. Status: done. Full detail in
+  pr-integration/1845-run.md.
