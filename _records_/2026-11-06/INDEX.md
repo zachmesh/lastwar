@@ -4585,3 +4585,16 @@ of 2026-10-28.
   knowledge or code PR open. No escalations, no new PR
   opened (the next pass opens the post-2300-batch PR).
   Status: done. Full detail in pr-integration/2308-run.md.
+
+## 22:57 to about 23:04 - Ticker pass
+
+- Unit harvest-2026-11-06-2203 (resource collection) failed:
+  Mac mini offline, no wake-up path, six device invokes with
+  zero responses - the ninety-second consecutive ticker pass
+  with this blocker (Issue 284), fifty-third in the worsened
+  zero-response form. No game screen was ever read, no bubble
+  collected; the tracker is untouched so the next tick
+  re-produces harvest. Sync: reaped 0, expired 6, due 22,
+  produced duel-score-2026-11-06-2230. No zombie seeding
+  (chain closed 2026-10-30). Status: failed. Full detail in
+  resource-collection/2257-queue-run.md.
