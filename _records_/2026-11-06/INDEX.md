@@ -4185,6 +4185,22 @@ of 2026-10-28.
   posted none - divergence stays flagged for the
   retro). No escalations, no new PR opened. Status:
   done. Full detail in pr-integration/2045-run.md.
+
+## 21:00 to about 21:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2100.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, 118 minutes
+  away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head 70f87d61, awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads and main unchanged since the
+  2045 re-check comments, so no repeat comment was
+  posted. No merges, no comments, no escalations, no
+  new PR opened. Status: no-op. Full detail in
+  pr-integration/2100-run.md.
 ## 20:40 to about 20:48 - Planner pass
 
 - Plan: `tools/queue.py plan --hours 12` staged 0 units -
