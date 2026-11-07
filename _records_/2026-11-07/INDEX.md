@@ -214,3 +214,16 @@ of 2026-10-28.
   async recomputation after main advanced, not a new
   conflict. Status: no-op. Full detail in
   pr-integration/0100-run.md.
+
+## 01:15 to about 01:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0115.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PRs open, nothing merged,
+  no comments posted. Seven records PRs await the 03:00
+  batch, all verified merge-clean against main 74db107bc
+  by local merge-tree; gh now reports MERGEABLE/CLEAN on
+  all five previously-reconciled PRs, and UNKNOWN on PR
+  382 only (recomputing after its head moved with the
+  0100 run-record commit). Status: no-op. Full detail in
+  pr-integration/0115-run.md.
