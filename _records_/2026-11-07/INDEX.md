@@ -98,3 +98,21 @@ of 2026-10-28.
   escalations. records/2026-10-31 fully contained in
   main, no PR needed. Status: no-op. Full detail in
   pr-integration/0030-run.md.
+
+## 00:32 to about 00:42 - Tool development pass
+
+- Tool developer pass tool-development-2026-11-07-0042.
+  Own PRs checked first (none open, all open PRs are
+  integrator-owned records PRs), then open tooling
+  issues: newest #383, filed 10 minutes before this run
+  by ticker-0011, device token invisible across
+  per-pass worktrees. Fixed on branch
+  work/shared-device-token-383 (commit 057e27eb2):
+  token now lives in the main checkout's
+  `_queue_/claimed/`, shared by every worktree, so the
+  section-6 overlap guard holds again. PR #384 opened
+  with the Owner line and Refs #383; progress commented
+  on the issue; validation was py_compile plus a
+  20-assertion scratch-worktree fixture test, all pass.
+  Status: done. Full detail in
+  tool-development/0042-run.md.
