@@ -2322,5 +2322,8 @@ of 2026-10-28.
   done 1129, upcoming 53. Ticker-1334 failed during the
   run (donations unit, Issue 282 capture blocker, 110th
   consecutive access-failed pass on the established
-  count). Status: no-op. Full detail in
+  count). Status: partial - planning no-op, delivery did
+  not land (push rejected three times as the branch
+  advanced; commits rest on the VPS local records
+  branch, fb48bea0, for the next merge). Full detail in
   queue-planning/1340-run.md.
