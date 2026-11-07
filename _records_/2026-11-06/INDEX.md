@@ -4137,3 +4137,28 @@ of 2026-10-28.
   No adoption, fix, hand-off, escalation, chat report or Slack
   sync. Status: no-op.
   Full detail in pr-catchall/2039-run.md.
+## 20:34 to about 20:45 - Ticker pass, arms-race unit failed on Mac offline
+
+- Ticker-2034 pass. Unit arms-race-2026-11-06-1803 completed as
+  failed: Mac mini offline with no wake-up path, six device
+  invokes zero responses, no game screen read, no input
+  dispatched, no phase or score read, no tier-3 push, no reward
+  claimed. Same blocker as Issue #284: ninetieth consecutive
+  pass, fifty-first in the worsened zero-response form.
+  Commented on #284. Tracker untouched.
+- Live duel posture at 20:39: duel day 6, Enemy Buster, radar
+  posture stack.
+- Sync: reaped 0, expired 0, due 22, produced 0 (all already
+  queued). No zombie seeding: chain closed 2026-10-30.
+- Queue-state note: this pass first claimed
+  radar-2026-11-06-1803 in the stale local working tree
+  (branch work/ops-execution-records, last records commit
+  2026-11-03), where it still sat in inbox although it is
+  already done/failed on the live records branch
+  (ticker-1934, PR 374). The claim was reverted locally and
+  the pass continued in a temporary worktree of
+  github/records/2026-11-06 at b91106db29. Local-tree /
+  records-branch queue divergence is an open process item
+  (same class as the 2026-11-01 0041 record).
+  Status: failed. Full detail in
+  arms-race/2034-queue-run.md.
