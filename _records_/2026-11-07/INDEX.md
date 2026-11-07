@@ -1922,3 +1922,30 @@ of 2026-10-28.
   owner clicking the LastWar Dock icon once). No tool code
   action on either. Status: no-op. Full detail in
   tool-development/1132-run.md.
+## 11:32 to about 11:45 - Knowledge organization pass
+
+- Knowledge organizer pass knowledge-organization-2026-11-07-1132.
+  Own PR 397 merged (2026-11-07T18:51:32Z, 0 comments), so no
+  open own PR carries integrator feedback and nothing was fixed
+  or replied. One fold from the new record since the 1032
+  watermark: ticker-1104 radar into radar-tasks 1.48.0 (PR #399,
+  OPEN, MERGEABLE, CLEAN, Owner lastwar-knowledge-organizer,
+  Refs #282). New lessons: open_app returns outcome_unknown and
+  produces no relaunch or move; set_window_frame is gated on an
+  observation that cannot be produced, so neither is a live route
+  while capture is down. Mission Control and Ctrl+Right
+  deliberately not retried per the 1020 lessons - the pass
+  applied them instead of re-learning them. The Dock-icon unblock
+  stands and still needs the owner at the Mac. Profile-side
+  correction: the 1.47.0 changelog line for the 0734 fold was
+  missing, noted in the 1.48.0 line per the file's 1.43.0
+  precedent; numbering preserved, not rewritten. Queue stats
+  reconcile with the planner-1040 read (done 1122 to 1127,
+  inbox 79 to 74, exactly the 5 expired 0657-slot units); the
+  earlier done 1113 to 1055 jump stays an open observation for
+  the retro. Issue #282 commented once (108th occurrence
+  6712104116). No new knowledge issue; #247 not re-read (re-read
+  by the 0832 run, nothing this hour touches it). No gap filed.
+  No material change for the owner, so no Slack DM sync and no
+  chat report. Status: done. Full detail in
+  knowledge-organization/1132-run.md.
