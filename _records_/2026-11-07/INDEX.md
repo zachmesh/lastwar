@@ -1755,3 +1755,20 @@ of 2026-10-28.
   column view). The unblock is the owner clicking the
   LastWar Dock icon once. Tracker untouched. Full detail
   in alliance-help/1038-queue-run.md.
+## 10:39 to about 10:45 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-07-1039. No adopted
+  open PR (PR 137 stays merged). Five open PRs scanned,
+  none owned by this job: PR 396 (knowledge organizer
+  1032 fold, alliance-gifts 1.31.0, MERGEABLE, CLEAN), PR 392
+  (records 2026-11-07, head advanced to a510bd7c,
+  mergeable UNKNOWN), and PRs 351, 301 and 256, all still
+  CONFLICTING with the integrator 0945 note against main
+  3cc2b1af9a2. PR 395 merged since the 0939 pass; main now
+  3cc2b1af9a2. Fifty-one open issues, all class-labeled,
+  zero unclassified; no new issue since the 0939 pass.
+  Owner-decision issues 132, 154 and 335 all over 24 hours
+  with statements current. No adoptions, fixes, hand-offs,
+  escalations or stale-owner flags. Status: no-op. Full
+  detail in pr-catchall/1039-run.md.
+
