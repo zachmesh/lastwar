@@ -442,3 +442,16 @@ of 2026-10-28.
   issue filed or closed. Records PR 382 awaits the
   03:00 batch, so no new records PR was opened.
   Full detail in knowledge-organization/0232-run.md.
+
+## 02:34 to about 02:47 - Ticker pass
+
+- Ticker pass ticker-0234. Passes unit passes-2026-11-06-2257
+  failed: Mac mini offline, no wake-up path, 5 device invokes
+  zero responses, last_seen 2026-11-05T15:36:52Z. 96th
+  consecutive pass with this blocker, 57th in the zero-response
+  form. No game screen read, no game input. Issue 284
+  commented. Sync expired 4 unexecuted 2230-slot units,
+  delivered here as expired. Pre-reset zero-sweep pair already
+  staged by ticker-0127. No zombie seeding: event ended
+  2026-10-30. Tracker untouched. Status: failed. Full detail in
+  shop-claims/0234-queue-run.md.
