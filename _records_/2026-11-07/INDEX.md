@@ -691,3 +691,16 @@ of 2026-10-28.
 
 - Integrator pass pr-integration-2026-11-07-0345.
   Non-batch pass per the checker merge-aware gate (not due - PR 350 already merged 03:02:53 PT in this window, next batch 07:00): no records merges. Knowledge PR 388 merged (squash, merge 9366c8c3): fold ticker-0234 passes + ticker-0304 radar records into shop-claims 1.26.0 and radar-tasks 1.46.0. PR 382 verified CLEAN at head 72d8be7c; PRs 351, 301, 265 and 256 still conflicted on _logs_/repo-actions/action-log.jsonl, no repeat comments, carried to the 07:00 batch. Local main fast-forwarded to 9366c8c3. Status: done. Full detail in pr-integration/0345-run.md.
+
+## 04:00 to about 04:12 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0400.
+  Non-batch pass per the checker gate (not due - outside
+  every batch window, next batch 07:00): no records merges,
+  no knowledge or code PR open. PR 382 verified CLEAN (gh
+  MERGEABLE/CLEAN; detached-worktree test merge clean); a
+  false conflict note from a misread merge-tree output was
+  posted and corrected on the PR. PRs 351, 301, 265 and 256
+  still conflicted on _logs_/repo-actions/action-log.jsonl,
+  no repeat comments, carried to the 07:00 batch. Status:
+  no-op. Full detail in pr-integration/0400-run.md.
