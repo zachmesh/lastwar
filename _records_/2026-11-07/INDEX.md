@@ -882,3 +882,18 @@ of 2026-10-28.
   _logs_/repo-actions/action-log.jsonl, no repeat
   comments, carried to the 07:00 batch. Status: no-op.
   Full detail in pr-integration/0515-run.md.
+
+## 05:26 to about 05:33 - Ticker pass
+
+- Ticker pass ticker-0526. Harvest unit
+  harvest-2026-11-07-0203 failed: Mac mini offline, no
+  wake-up path, 7 device invokes zero responses,
+  last_seen 2026-11-05T15:36:52Z. 100th consecutive pass
+  with this blocker, 61st in the zero-response form. No
+  game screen read, no game input, no bubble collected,
+  no truck loot claimed. Issue 284 commented. Sync reaped 0,
+  expired 0, due 20, produced nothing new. Pre-reset
+  zero-sweep pair already staged. No zombie seeding: event
+  ended 2026-10-30. Tracker untouched. PR 382 mergeable and
+  clean, awaits the 07:00 batch. Status: failed. Full detail
+  in resource-collection/0526-queue-run.md.
