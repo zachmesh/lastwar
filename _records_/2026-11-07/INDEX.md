@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T09:37:02Z
+modified: 2026-11-07T10:12:00Z
 level: L0
 version: 1.0.0
-description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled
+description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled
 status: unverified
 ---
 
@@ -379,3 +379,17 @@ of 2026-10-28.
   for three branches; re-run on the ls-remote tips is
   clean - see the run record. Status: no-op. Full detail
   in pr-integration/0200-run.md.
+
+## 02:04 to about 02:12 - Ticker pass
+
+- Ticker pass ticker-0204. Gifts unit gifts-2026-11-06-2230
+  failed: Mac mini offline, no wake-up path, 5 device invokes
+  zero responses, last_seen 2026-11-05T15:36:52Z. 95th
+  consecutive pass with this blocker, 56th in the zero-response
+  form. No game screen read, no game input. Issue 284
+  commented. Sync expired 5 unexecuted 2203-slot units; four
+  delivered here as expired, harvest kept as failed by
+  ticker-2257. Pre-reset zero-sweep pair already staged by
+  ticker-0127. No zombie seeding: event ended 2026-10-30.
+  Tracker untouched. Status: failed. Full detail in
+  alliance-gifts/0204-queue-run.md.
