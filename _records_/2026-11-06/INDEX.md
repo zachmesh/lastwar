@@ -4526,3 +4526,20 @@ of 2026-10-28.
   in the 2145 record. No escalations, no new PR
   opened. Status: done.
   Full detail in pr-integration/2230-run.md.
+- Integrator pass pr-integration-2026-11-06-2245.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 13
+  minutes away at pass start). No knowledge or code
+  PR open at pass start or at the end-of-pass sweep.
+  Records PR 374 (records/2026-11-06) clean at head
+  c329f0a6, awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  current main c4d44dcb; heads unchanged since the
+  2045 pass. No re-check comments posted this pass:
+  the conflict state is unchanged since the 2130
+  re-check comments, per the no-repeat rule settled
+  in the 2145 record. No merges, no comments, no
+  escalations. Status: no-op.
+  Full detail in pr-integration/2251-run.md.
