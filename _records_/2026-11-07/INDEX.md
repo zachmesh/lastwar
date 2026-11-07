@@ -1526,3 +1526,17 @@ of 2026-10-28.
   PR. Local main fast-forwarded 1d60a4bf to d804146f
   via bundle route. Full detail in
   pr-integration/0845-run.md.
+
+## 08:58 to about 09:01 - Ticker pass
+
+- Ticker pass ticker-0858. Unit arms-race-2026-11-07-0603:
+  failed, Mac mini offline with no wake-up path, same
+  blocker as Issue 284 (105th consecutive access-failed
+  pass, 66th in the zero-response form). Six device
+  invokes, zero responses; last_seen frozen at
+  2026-11-05T15:36:52Z, about 48 hours stale. No game
+  screen read, no Arms Race phase or score taken, no
+  action done, no chest claimed. Tracker untouched. Own
+  PRs: PR 392 (records/2026-11-07) open, MERGEABLE,
+  CLEAN, 0 comments, nothing addressed to this job.
+  Full detail in arms-race/0858-queue-run.md.
