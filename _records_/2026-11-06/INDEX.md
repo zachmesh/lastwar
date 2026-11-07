@@ -3396,3 +3396,14 @@ of 2026-10-28.
   unchanged since the 1645 re-check comments 15 minutes
   earlier. No escalations, no new PR opened. Status:
   no-op. Full detail in pr-integration/1700-run.md.
+
+## 17:04 to about 17:10 - Ticker pass
+
+- Ticker pass ticker-1704. Scout unit scout-2026-11-05-1800
+  failed: Mac mini offline, no wake-up path, seven device
+  invokes with zero responses (Issue 284, eighty-fourth
+  consecutive pass, forty-fifth in the worsened zero-response
+  form). No game screen read, no observation produced. Inbox
+  70 at sync, zero-sweep pair for the 19:00 reset still
+  pending. Status: failed. Full detail in
+  perception-scout/1710-queue-run.md.
