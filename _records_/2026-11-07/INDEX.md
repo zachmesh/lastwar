@@ -1540,3 +1540,16 @@ of 2026-10-28.
   PRs: PR 392 (records/2026-11-07) open, MERGEABLE,
   CLEAN, 0 comments, nothing addressed to this job.
   Full detail in arms-race/0858-queue-run.md.
+
+## 09:00 to about 09:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0900.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): no records PR merged, no knowledge or code PR
+  open. Four records PRs await the 11:00 batch: PR 392
+  (records/2026-11-07, head 095cc27368) clean by gh;
+  PRs 351, 301 and 256 still conflict on the action-log
+  append, heads and main unchanged since the 0845
+  conflict notes, no repeat comment. Full detail in
+  pr-integration/0900-run.md.
