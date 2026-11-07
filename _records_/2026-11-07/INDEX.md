@@ -2155,3 +2155,19 @@ of 2026-10-28.
 - Pool by_state at 12:43 local: inbox 77, claimed 0,
   done 1129, upcoming 53. Status: no-op. Full detail in
   queue-planning/1240-run.md.
+
+## 12:45 to about 12:54 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1245.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. Knowledge PR 400 merged by
+  squash (arms-race fold 1.52.0, Issue 282; commit
+  30f1c620). Records PR 398 (records 2026-11-07, head
+  4d28a477, verified MERGEABLE/CLEAN) awaits the
+  15:00 batch. PRs 351, 301 and 256 still CONFLICTING
+  on the action-log append; re-tested against the new
+  main 30f1c620 and re-noted this pass. Local main
+  sync-back skipped: local HEAD 37dea85e has diverged
+  from remote main, no force applied. Status: done.
+  Full detail in pr-integration/1245-run.md.
