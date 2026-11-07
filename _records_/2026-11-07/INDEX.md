@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T10:42:15Z
+modified: 2026-11-07T10:48:00Z
 level: L0
 version: 1.0.0
-description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled
+description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals
 status: unverified
 ---
 
@@ -496,3 +496,32 @@ of 2026-10-28.
   still a Mac-offline device fault (95th blocked pass).
   Status: done. Full detail in
   tool-development/0243-run.md.
+
+## 02:40 to about 02:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-0240.
+- Plan staged 11 units for the 1403/1430 slots (harvest,
+  radar, survivors, training, donations, arms-race at
+  1403; mail, help, gifts, train, star-ceremony at 1430),
+  already_present 58, reaped 0, expired 0. Next 12 hours
+  staged through about 14:40 local.
+- Pre-reset sweep production skipped, not the 17:00 hour
+  run; tonight's pair (chain pre-reset-sweep-2026-11-07)
+  already in inbox, staged by ticker-0127, first pass
+  not_before 17:30 local, final pass 18:30 local. The
+  pair's window fields are empty where last night's
+  carried named windows, so the 17:00 run should verify
+  it before its window opens.
+- Scout diff on the Nov 4 observation (no Nov 5 or Nov 6
+  observation yet; scout-2026-11-06-1900 still in inbox,
+  expires 19:00 local Nov 7): dry run and apply agree,
+  all zero except unexplained red dots 4 (fixed
+  branch-tip tool, fifty-seventh consumption) - observed
+  0, actionable 0, enqueued 0, already-queued 0, raises
+  0, candidates 0, promotion proposals 0.
+- Queue cleanup: 0 withdrawals. The diff classified
+  nothing as already satisfied and the Nov 4 observation
+  is older than the current inbox units.
+- Pool by_state at 02:42 local: inbox 76, claimed 0,
+  done 1090, upcoming 51. Status: done. Full detail in
+  queue-planning/0240-run.md.
