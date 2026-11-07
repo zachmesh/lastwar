@@ -3807,3 +3807,22 @@ of 2026-10-28.
   sweep. No zombie seeding: chain closed 2026-10-30.
   Status: failed. Full detail in
   resource-collection/1904-queue-run.md.
+
+## 19:15 to about 19:28 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1915.
+  Non-batch pass per the checker (merge-aware: not
+  due, PR 369 already merged 19:05:42 in the
+  19:00-20:00 window; next batch 23:00): no knowledge
+  or code PR was open. Records PR 374
+  (records/2026-11-06, head 28a32ee81, 4 commits) is
+  open, verified mergeable clean by merge-tree
+  against main 591eafc39, and awaits the 23:00 batch.
+  Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against main 591eafc39;
+  heads unchanged since the 1815 re-checks, so no
+  repeat comment was posted. No merges, no comments,
+  no escalations. Status: done. Full detail in
+  pr-integration/1915-run.md.
