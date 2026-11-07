@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-04
 created: 2026-11-04T08:08:00Z
-modified: 2026-11-04T08:08:00Z
+modified: 2026-11-05T07:53:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, records PRs 256 and 255 carried to the 03:00 batch, PR 187 conflict carried
@@ -2912,3 +2912,147 @@ Full detail in pr-integration/1430-run.md.
   names Owner lastwar-pr-integrator, not this job. No new
   records PR opened: PR 293 already open, awaiting the
   2300 batch.
+
+- Integrator pass pr-integration-2026-11-04-2300, done (batch pass, 2300 window): checker _tools_/records_batch.py reported due for the 2300 window; records PR 293 merged by merge commit 5dd6d644a (40 commits from records/2026-11-04, branch kept); PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against true main 0a1771c2); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main; this run record and the merge-time action-log line committed to records/2026-11-04 after the merge, riding the next records PR.
+  Full detail in pr-integration/2300-run.md.
+## 23:04 to about 23:18 — Queue ticker pass, donations blocked by screen capture failure
+
+- Ticker pass ticker-2304. Sync reaped 0, expired 4, produced
+  nothing new - all 21 due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30, and no zombie unit sits in
+  inbox or claimed.
+- Donations unit donations-2026-11-04-2203, failed: the Mac
+  screen capture stream failed on all 5 attempts across 3
+  computer sessions (cc-494, cc-495, cc-496) with "Failed to
+  start stream due to audio/video capture failure", so no game
+  screen was ever read and no donation was made. Same blocker
+  as GitHub Issue #284, which the ticker-1934, ticker-2034
+  and ticker-2134 passes already hit today. Tracker untouched.
+  Full detail in alliance-donations/2304-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-04-2315, done (non-batch pass inside the 2300 window, batch already merged at 2303): checker _tools_/records_batch.py reported due for the 2300 clock window at pass start and at the sweep, but PR 293 was already merged at 23:03:38 PT by the 2300 batch pass, so per the standing note this pass is not a batch pass; PR 301 (2026-11-04, head aa11cdb6, 2 commits ahead, clean by gh and by merge-tree against true main 5dd6d644a) carried awaiting the 0300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against true main 5dd6d644a); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main.
+  Full detail in pr-integration/2315-run.md.
+
+- Integrator pass pr-integration-2026-11-04-2330, done (non-batch pass inside the 2300 window, batch already merged at 2303): checker _tools_/records_batch.py reported due for the 2300 clock window at pass start and at the sweep, but PR 293 was already merged at 23:03:38 PT by the 2300 batch pass, so per the standing note this pass is not a batch pass; PR 301 (2026-11-04, head 78407fc2, 1 commit ahead, clean by gh and by merge-tree against true main 5dd6d644a) carried awaiting the 0300 batch; PRs 265, 256, 187 carried on unchanged single-file action-log conflicts, not force-merged, not dropped, no repeat comment owed (heads unchanged since the 1715 re-check comments, conflicts re-verified by merge-tree against true main 5dd6d644a); no knowledge or code PR open, no escalations, no new records PR opened; records/2026-10-31 contained in main.
+  Full detail in pr-integration/2330-run.md.
+
+## 23:32 to about 23:36 - Knowledge organization pass
+
+- Pass knowledge-organization-2026-11-04-2332, worked from
+  the 2232 watermark. Folded the ticker-2234 shop-claims
+  2234 record and the ticker-2304 alliance-donations 2304
+  record (both failed, Mac screen-capture failure, next
+  known passes after 2204 and 2234) into shop-claims
+  1.22.0 and alliance-donations 1.34.0 (PR 302 OPEN,
+  Owner lastwar-knowledge-organizer). Own PR 299 stands
+  MERGED with no reviews or comments, so no PR feedback
+  was owed. Issue #282 commented with both occurrences
+  (comment 6652441251); #284 already commented by the
+  ticker passes. No contradiction (each failed unit gives
+  zero evidence about its live state), no stale item, no
+  issue filed or closed. No new records PR opened: PR 301
+  for records/2026-11-04 already open, awaiting the 0300
+  batch.
+  Full detail in knowledge-organization/2332-run.md.
+## 23:34 to about 23:47 — Queue ticker pass, radar blocked by screen capture failure
+
+- Ticker pass ticker-2334. Sync reaped 0, expired 0, produced
+  nothing new - all 21 due regulars were already queued. No zombie
+  chain was seeded: the Zombie Invasion event ended at about
+  the 19:00 reset on 2026-10-30, and no zombie unit sits in
+  inbox or claimed.
+- Radar unit radar-2026-11-04-2203, failed: the Mac
+  screen capture stream failed on all 5 attempts across 2
+  computer sessions (cc-497, cc-498) with "Failed to start
+  stream due to audio/video capture failure", so no game
+  screen was ever read, no radar task was executed and
+  nothing was claimed. Same blocker as GitHub Issue #284,
+  which the ticker-2304 pass hit at 23:04 local and which
+  this pass commented on instead of filing a duplicate.
+  Stack-posture unit (duel day 4), so no claims were due
+  in any case. Tracker untouched.
+  Full detail in radar-tasks/2334-queue-run.md.
+
+## 23:39 to about 23:44 - PR catch-all pass
+
+- Pass pr-catchall-2026-11-04-2339, no-op: no adopted open PR
+  (PR 137 stays MERGED); five open PRs scanned, none owned by
+  this job - PR 302 (organizer 2332, knowledge diff, MERGEABLE
+  CLEAN, opened minutes before the pass), PR 301 (integrator
+  records, awaiting the 0300 batch), PRs 265, 256 and 187
+  (integrator records, still CONFLICTING on the action-log
+  file, last integrator re-check 1715 pass); PR 293 merged
+  23:03 PST (2300 batch) and PR 299 merged 22:47 PST since
+  the 2239 pass. Forty-seven open issues, all class-labeled,
+  zero unclassified, no change since the 2239 pass.
+  Owner-decision issues 132 (about seventy-nine hours old)
+  and 154 (about seventy-three hours old) both over 24 hours
+  with statements current. No adoption, fix, hand-off,
+  escalation, or stale-owner flag.
+  Full detail in pr-catchall/2339-run.md.
+
+## 23:32 to about 23:41 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-04-2332, done: no own tooling PR open and no unaddressed integrator feedback; re-tested the live Nov 4 observation against the current main tool and found the #149 qualified-count gap the 2232 no-op pass had not exercised - "Unexplained within the base group alone 2:" read as not stated, coverage headline 0 where the observation states 4; _tools_/scout_diff.py now reads a bounded scope qualifier between the keyword and the count, with a scope-identifier guard, so the Nov 4 headline reads 4 (sections 1-2 unexplained 2 each, totals 8/4/4), distinct stays a floor at 0 with 2 unnamed sections; PR 303 opened (branch work/scout-qualified-counts-149, commit bad10fef6), issue 149 commented, issue not closed (closure belongs to the daily retro); validation on scratch pools only (py_compile clean, 20 fixture assertions, Nov 1/Nov 3 full-tool outputs byte-identical to the pre-change tool, Nov 4 differing only in the unexplained figures, re-run byte-identical).
+  Full detail in tool-development/2332-run.md.
+
+## 22:40 to about 22:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-2240, partial:
+  plan staged 11 units into the live pool (mail, help,
+  gifts, train, star-ceremony 2026-11-05 1030;
+  harvest, radar, survivors, training, donations,
+  arms-race 2026-11-05 1003; already_present 59,
+  reaped 0, expired 0, horizon to about 10:40 local
+  2026-11-05); pre-reset sweep step skipped, not the
+  1700 hour, and tonight's pair for the 19:00 reset is
+  already done (produced by the 1740 run), 0 enqueued
+  by this run; scout diff on the Nov 4 observation
+  applied with all zero counts (tenth consume), 0
+  withdrawals; pool inbox 74, claimed 0, done 870,
+  upcoming 50. Delivery failed: the VPS merge was
+  blocked by another job's staged state in
+  ~/lastwar-push (retried once); the commit stays on
+  local branch planner-2240-1104-delivery for the next
+  pass or the integrator. No new Issue filed. No new PR opened:
+  PR 293 for records/2026-11-04 already open,
+  awaiting the 2300 batch.
+  Full detail in queue-planning/2240-run.md.
+
+## 23:40 to about 23:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-04-2340, done:
+  plan staged 5 units into the live pool (passes,
+  secrets, treasures, trucks, events 2026-11-05 1057;
+  already_present 65, skipped_done_current 0, reaped 0,
+  expired 0, horizon to about 11:40 local 2026-11-05);
+  pre-reset sweep step skipped, not the 1700 hour, and
+  tonight's pair for the 19:00 reset is already done
+  (produced by the 1740 run), 0 enqueued by this run;
+  scout diff on the Nov 4 observation applied with all
+  zero counts (eleventh consume), 0 withdrawals; pool
+  inbox 73, claimed 0, done 876, upcoming 50. This run
+  also late-delivers the undelivered 2240 record (see
+  queue-planning/2240-run.md). No new Issue filed. No
+  new PR opened: PR 301 for records/2026-11-04 already
+  open, awaiting the 0300 batch.
+  Full detail in queue-planning/2340-run.md.
+
+## 23:45 to about 23:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-04-2345.
+  Non-batch pass inside the 2300 window: the 2300 batch
+  merge (records PR 293, 23:03 PT) had already landed,
+  so per the first-pass rule no records PR merged.
+  Knowledge PR 302 (organizer 2332 folds) and code PR
+  303 (scout qualified counts, Refs #149) reviewed
+  clean and merged by squash (827acf752, 6b6a46776);
+  local main synced to 6b6a46776. Records PR 301
+  (2026-11-04, head 449ecce75) awaits the 0300 batch.
+  Records PRs 187, 256 and 265 still conflicted on the
+  single file _logs_/repo-actions/action-log.jsonl,
+  re-verified by merge-tree against main 6b6a46776,
+  carried, not force-merged. No comment posted, no
+  escalation, no fresh records PR opened.
+  Full detail in pr-integration/2345-run.md.
