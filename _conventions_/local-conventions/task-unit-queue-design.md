@@ -223,6 +223,12 @@ Overlap is expected and harmless - a pass still executing when the
 next tick fires holds the device token, and the new tick sees the
 token held and skips its execute step. Only one pass ever plays.
 
+The token file lives in the main checkout's `_queue_/claimed/`,
+shared by every worktree of the repository, so a pass running in a
+fresh detached worktree still sees a token held by a pass still
+running (issue #383) - a worktree-local token would be invisible to
+the next tick and the guard above would not hold.
+
 Latency is bounded and measurable - a fresh unit waits at most one
 tick interval plus the remainder of the unit currently running
 (itself capped at 15 minutes). Expiry-critical work is protected by
