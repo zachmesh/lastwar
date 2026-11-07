@@ -163,3 +163,27 @@ of 2026-10-28.
   current. No adoptions, fixes, hand-offs, escalations or
   stale-owner flags. Status: no-op. Full detail in
   pr-catchall/0039-run.md.
+## 00:40 to about 00:47 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 0 units -
+  already_present 69, skipped_done_current 0, reaped 0,
+  expired 0.
+- Pre-reset sweep: skipped, not the 17:00 hour run. Tonight's
+  pair for the 19:00 reset of 2026-11-07 is due from the 17:00
+  run today; last night's pair (pre-reset-sweep-2026-11-06)
+  sits done 2 of 2, both expired unexecuted on the device
+  blocker (Issue 284).
+- Scout diff on the Nov 4 observation (no Nov 5 or Nov 6
+  observation yet; scout-2026-11-05-1900 expired unexecuted,
+  scout-2026-11-06-1900 still in inbox, expires 19:00 local
+  Nov 7): dry run and apply agree, all zero except
+  unexplained red dots 4 (fixed branch-tip tool) -
+  observed 0, actionable 0, enqueued 0, already-queued 0,
+  candidates 0, promotion proposals 0. No withdrawals.
+- Owner-decision Issues re-verified: #154 still has no owner
+  answer (0 comments); #132's owner answer stands (duel-score
+  tracking only, building and research deferred); #335 still
+  has no owner answer, PR #337 merged 2026-11-06T00:52:51Z,
+  closure belongs to the retro. No new Issue filed.
+- Pool: inbox 75, claimed 0, done 1078, upcoming 49. Status:
+  no-op. Full detail in queue-planning/0040-run.md.
