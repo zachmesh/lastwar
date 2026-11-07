@@ -1992,3 +1992,18 @@ of 2026-10-28.
   Pool by_state at 11:46 local: inbox 78, claimed 0,
   done 1128, upcoming 53. Status: done. Full detail in
   queue-planning/1140-run.md.
+
+## 11:45 to about 11:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1145.
+  NON-batch pass per the checker (plain clock-only due,
+  merge-aware not due - PR 392 already merged 11:05 in
+  the 11:00 window): knowledge PR 399 (squash 3d01881e,
+  radar-tasks 1.48.0) merged. Four records PRs await
+  the 15:00 batch: PR 398 (records 2026-11-07, head
+  7f7eadc4, verified clean by merge-tree) and PRs 351,
+  301 and 256, all still CONFLICTING on the action-log
+  append and re-noted against the new main 3d01881e.
+  Local main fast-forwarded c317b423 to 3d01881e via
+  bundle route. Status: done. Full detail in
+  pr-integration/1145-run.md.
