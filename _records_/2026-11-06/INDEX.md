@@ -4688,3 +4688,28 @@ of 2026-10-28.
   154 and 335 over 24 hours with statements current. No
   adoption, fix, hand-off or escalation. Full detail in
   pr-catchall/2339-run.md.
+
+## 23:40 to about 23:46 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 5 units -
+  already_present 64, skipped_done_current 0, reaped 0,
+  expired 5. The staged units cover the 10:57 local slot
+  of 2026-11-07, newly inside the 12-hour horizon (to about
+  11:40 local 2026-11-07); the expired units are the 18:57
+  slot of 2026-11-06.
+- Pre-reset sweep: production skipped (23:00 hour run, not
+  the 17:00 hour). Tonight's pair for the 19:00 reset of
+  2026-11-06 (chain pre-reset-sweep-2026-11-06) expired
+  unexecuted at the reset - the Mac has been offline all
+  day (Issue 284, ticker-2257 the 92nd consecutive
+  Mac-offline pass). 0 enqueued.
+- Scout diff on the Nov 4 observation (fifty-fourth planner
+  run to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-06-1900 still in inbox
+  unexecuted): fixed branch-tip tool, dry run and apply
+  identical, all zero except unexplained red dots 4 (the
+  narrative's carried unknowns, same 4 as the 1740, 1840,
+  1940, 2040, 2140 and 2240 runs). No withdrawals - the Nov 4
+  observation predates today's inbox units and the diff
+  classified nothing as satisfied. Status: done. Full detail
+  in queue-planning/2340-run.md.
