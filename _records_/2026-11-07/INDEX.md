@@ -2313,3 +2313,18 @@ of 2026-10-28.
   fresh comment (unchanged since the 1315 re-notes).
   No comments posted this pass. Status: no-op.
   Full detail in pr-integration/1345-run.md.
+
+## 14:00 to about 14:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1400.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. No knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head 6d090f08,
+  verified clean by the authoritative merge-tree test)
+  awaits the 15:00 batch. PRs 351, 301 and 256
+  still CONFLICTING on the action-log append;
+  re-tested against the unchanged main 30f1c620, no
+  fresh comment (unchanged since the 1315 re-notes).
+  No comments posted this pass. Status: no-op.
+  Full detail in pr-integration/1400-run.md.
