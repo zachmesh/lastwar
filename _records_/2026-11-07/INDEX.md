@@ -2241,3 +2241,30 @@ of 2026-10-28.
   consecutive access-failed passes; unblock is the owner
   clicking the LastWar Dock icon once). Status: no-op.
   Full detail in tool-development/1332-run.md.
+
+## 13:40 to about 13:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1340.
+- Plan staged 0 units, already_present 71, reaped 0,
+  expired 0. The next 12 hours are already staged
+  through about 01:40 local.
+- Pre-reset sweep production skipped, not the 17:00 hour
+  run; tonight's pair (chain pre-reset-sweep-2026-11-07)
+  already in inbox, both units, staged by ticker-0127.
+  The pair's window, activity, segment and planned_for
+  fields are still empty where last night's carried named
+  windows and ledger-walk instructions, so the 17:00 run
+  should verify the pair before its window opens.
+- Scout diff on the Nov 4 observation (sixty-eighth
+  consumption): dry run and apply agree, all zero except
+  the fixed tool's unexplained 4 (observed 0, actionable
+  0, enqueued 0, already-queued 0, candidates 0,
+  promotion proposals 0). No withdrawals: the diff
+  classified nothing as already satisfied and the Nov 4
+  observation is older than the current inbox units.
+- Pool by_state at 13:43 local: inbox 76, claimed 1,
+  done 1129, upcoming 53. Ticker-1334 failed during the
+  run (donations unit, Issue 282 capture blocker, 110th
+  consecutive access-failed pass on the established
+  count). Status: no-op. Full detail in
+  queue-planning/1340-run.md.
