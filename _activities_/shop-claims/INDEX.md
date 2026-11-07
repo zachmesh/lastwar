@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-06T11:35:12Z
+modified: 2026-11-06T15:32:17Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-2234 shop-claims execution record 2026-11-04 2234 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, next ticker pass after 2204 known to fail identically, Issue 284)
   - source: ticker-1434 shop-claims execution record 2026-11-05 1434 queue run (failed, Mac device offline, fiftieth consecutive ticker pass to fail this way, eleventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 7h07m, unchanged since the 1025 pass; six invokes, zero responses)
   - source: ticker-0234 shop-claims execution record 2026-11-06 0234 queue run (failed, Mac device offline, sixty-fifth consecutive ticker pass to fail this way, twenty-sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 19h, unchanged since the 1025 pass; four invokes, zero responses, recovery-device native repair timed out after 25s)
+  - source: ticker-0634 shop-claims execution record 2026-11-06 0634 queue run (failed, Mac device offline, seventy-second consecutive ticker pass with a Mac device-access blocker, thirty-third in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 23h, unchanged since the 0534 pass; four invokes, zero responses, no recovery-device attempts)
 ---
 
 
@@ -835,3 +836,11 @@ the free and already paid for parts, never the paid unlocks.
 - Recurrence, not a new failure class: this is the sixty-fifth recorded consecutive ticker pass with a Mac device-access blocker, twenty-sixth in the worsened zero-response form after ticker-0104 (sixty-fourth, twenty-fifth). Passes between 0104 and 0234 left no record on the branch, so the true consecutive count may be higher; this pass counts recorded passes only. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the sixty-fifth occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 2026-11-04 0841 checked-only state rests on a live read; this one rests on no read at all. The passes unit's daily gifts stay unclaimed for this slot.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 9, due 20, produced nothing new, all 20 regulars already queued. The inbox held 75 units before this pass's sync reaped the 9 expired ones.
+
+## What the 2026-11-06 0634 unit added - Mac device offline, seventy-second consecutive pass, zero-response form
+
+- Unit passes-2026-11-06-0257 by ticker-0634, about 06:34 to 06:37 local, status failed. Evidence in `_records_/2026-11-06/shop-claims/0634-queue-run.md`. On a working screen it would have opened the shop, claimed the free pack and the pass daily gifts. The loss is the unexecuted passes check for this slot (planned 02:57 local 2026-11-06, expires 06:57 local 2026-11-06).
+- No game screen was ever read and no game input was dispatched. Four device invokes, zero responses, all node_offline with "device is offline and does not advertise a wake-up path": connection.health (attempts 1 and 4), connection.repair (web) (attempt 2), computer.session start (attempt 3). device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 23 hours at the 06:36 re-check, unchanged since the ticker-0534 pass and re-verified unchanged by the ticker-0604 pass. No recovery-device attempts were made: the recovery device is offline with the same frozen last_seen 15:36:52Z, and the ticker-0234 pass attempted its recovery channel and timed out after 25 seconds, so nothing new would be learned by repeating it. This meets the standing at-least-3-attempts retry rule.
+- Recurrence, not a new failure class: this is the seventy-second recorded consecutive ticker pass with a Mac device-access blocker, thirty-third in the worsened zero-response form after ticker-0604 (seventy-first, thirty-second). No executed pass is recorded between 0604 and this one. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the seventy-second occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 2026-11-04 0841 checked-only state rests on a live read; this one rests on no read at all. The passes unit's daily gifts stay unclaimed for this slot.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 15, due 22, produced one new unit (duel-score-2026-11-06-0630), 20 regulars already queued. The inbox held 50 units at this pass close (50 at sync, after 15 expired units were reaped and the duel-score unit was produced).

@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-07T01:32:17Z
 level: L1
-version: 1.9.0
+version: 1.10.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -14,6 +14,7 @@ grounded_in:
   - source: vip-rewards execution record 2026-11-02 0438 queue run
   - source: ticker-2134 vip-rewards execution record 2026-11-02 2138 queue run
   - source: ticker-0834 vip-rewards execution record 2026-11-04 0849 queue run (partial, VIP screen entry itself blocked, badge taps unresponsive, freebie/chest state unread)
+  - source: ticker-1634 vip-rewards execution record 2026-11-06 1640 queue run (failed, Mac device offline, eighty-third consecutive ticker pass with a Mac device-access blocker, forty-fourth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 33h, unchanged since the 1507, 1534 and 1604 passes; seven invokes, zero responses)
 ---
 
 
@@ -220,3 +221,12 @@ Measured on 2026-10-25.
 - Consequence: neither the Daily Freebie state nor the login chest state could be read live in this unit, and no VIP points read before/after exists to report. Diagnostic correction to the 2138 section: no dot plus no popup plus no points change means already claimed ONLY when the VIP screen was actually opened and read (as in 2138); here the screen was never reached, so the badge's no-dot must NOT be read as claimed.
 - This is a new variant of the standing repeat blocker, not a repeat of the 0438 freebie-button failure: the failure is at VIP screen entry, before any Claim button is reached. The entry-route change owed for secrets (genuine foreground activation) is the same candidate route for the next VIP unit. No new Issue filed: this blocker is already recorded in the activity metadata as a repeat blocker under rule R2.
 - Tracker untouched, per the rule for partial units; the next tick re-produces vip and resumes the claim, and a failed claim re-enters the pre-reset sweep instead of waiting a full day, per the activity note. Profile closed with the X, back to the base screen.
+
+## What the 2026-11-06 1634 unit added - Mac device offline, eighty-third consecutive pass, zero-response form
+
+- Unit vip-2026-11-05-1800 by ticker-1634, about 16:34 to 16:40 local, status failed. Evidence in `_records_/2026-11-06/vip-rewards/1640-queue-run.md`. No VIP screen was opened, no Daily Freebie was claimed, no login chest was claimed, and no VIP points were read. This was a stale unit from the 2026-11-05 18:00 slot (planned_for 2026-11-06T02:00:00Z, expires 2026-11-07T02:00:00Z).
+- No game screen was ever read and no game input was dispatched. Seven device invokes, zero responses: computer.session start on the Mac mini three times node_offline (device offline, no wake-up path), connection.health on the Mac mini node_offline, connection.repair (target web) on the Mac mini node_offline, connection.repair (target native) on the recovery device node_invoke_timeout after 25 seconds, connection.health on the recovery device node_invoke_timeout after 25 seconds. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 33 hours at pass time, unchanged since the ticker-1507, ticker-1534 and ticker-1604 passes; the recovery device also reports offline with the same stale last_seen. This meets the standing at-least-3-attempts retry rule.
+- Recurrence, not a new failure class: this is the eighty-third consecutive ticker pass with a Mac device-access blocker, forty-fourth in the worsened zero-response form after ticker-1604 (eighty-second, forty-third). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the eighty-third occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the VIP state. It must NOT be read as "freebie claimed" or "chest claimed" - the last live VIP state read is the 2026-11-02 2138 unit (both items already claimed for that reset day); the 2026-11-04 0849 unit could not even reach the VIP screen, so no VIP state has been read live since 2026-11-02; this unit rests on no read at all.
+- The pass stopped after this one unit: a second unit would hit the same dead channel. Sync at pass start reaped 0, expired 0, produced 0 new units; 22 regulars already queued. Queue stats at 00:37Z: inbox 71, claimed 0, done 976, upcoming 53. The Zombie Invasion chain stays closed: the event ended 2026-10-30 about 19:00 and no Zombie Invasion tab has been seen in the Events hub since, so no fresh chain was seeded. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-06) sits in the inbox (pending 2), not yet due.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
