@@ -671,3 +671,18 @@ of 2026-10-28.
 - Pool by_state at 03:42 local: inbox 76, claimed 0,
   done 1095, upcoming 51. Status: done. Full detail in
   queue-planning/0340-run.md.
+
+## 03:45 to about 03:50 - Ticker pass
+
+- Ticker pass ticker-0345. Arms-race unit
+  arms-race-2026-11-07-0203 failed: Mac mini offline, no
+  wake-up path, 6 device invokes zero responses,
+  last_seen 2026-11-05T15:36:52Z. 98th consecutive pass
+  with this blocker, 59th in the zero-response form. No
+  game screen read, no game input. Issue 284 commented.
+  Sync reaped 0, expired 0, due 20, produced nothing new.
+  Pre-reset zero-sweep pair already staged. No zombie
+  seeding: event ended 2026-10-30. Tracker untouched.
+  PR 382 mergeable and clean, awaits the 07:00 batch.
+  Status: failed. Full detail in
+  arms-race/0345-queue-run.md.
