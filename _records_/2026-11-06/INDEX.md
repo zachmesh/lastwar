@@ -3289,3 +3289,19 @@ of 2026-10-28.
   all on main. No branch, no PR, no issue comment, no Slack
   message. Full detail in tool-development/1632-run.md.
 - Addendum to the 1632 pass (same run): ticker-1604 daily-missions record (commit 531c6fcb, eighty-second consecutive pass, Mac mini offline) landed during the run after the input cutoff and is explicitly owed to the next organizer run - it must not be treated as covered by the 1632 watermark. Full detail in knowledge-organization/1632-run.md.
+## 16:34 to about 16:40 - Ticker pass (ticker-1634)
+
+- Ticker pass ticker-1634. Unit vip-2026-11-05-1800 completed as
+  failed: Mac mini offline with no wake-up path (Issue 284,
+  eighty-third consecutive pass, forty-fourth in the worsened
+  zero-response form). No game screen was ever read and no game
+  input was dispatched; no Daily Freebie, no login chest, no VIP
+  points read. Seven device invokes, zero responses (3x
+  computer.session start, connection.health, connection.repair
+  web on the Mac mini - all node_offline; connection.repair
+  native and connection.health on the recovery device - both
+  node_invoke_timeout after 25000ms). Mac mini last_seen frozen
+  at 2026-11-05T15:36:52Z, about 33 hours stale. Issue 284
+  commented, no duplicate filed. Tracker untouched; the next
+  tick re-produces vip. Full detail in
+  vip-rewards/1640-queue-run.md.
