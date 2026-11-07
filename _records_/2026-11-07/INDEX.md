@@ -2298,6 +2298,7 @@ of 2026-10-28.
   Zero-sweep pair for the 19:00 reset still pending in the
   inbox. Status: failed. Full detail in
   alliance-donations/1334-queue-run.md.
+
 ## 13:40 to about 13:47 - Queue planning pass
 
 - Planner pass queue-planning-2026-11-07-1340.
@@ -2327,3 +2328,77 @@ of 2026-10-28.
   advanced; commits rest on the VPS local records
   branch, fb48bea0, for the next merge). Full detail in
   queue-planning/1340-run.md.
+
+
+## 13:45 to about 13:54 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1345.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. No knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head d23797c9,
+  verified MERGEABLE/CLEAN at both heads seen this
+  pass) awaits the 15:00 batch. PRs 351, 301 and 256
+  still CONFLICTING on the action-log append;
+  re-tested against the unchanged main 30f1c620, no
+  fresh comment (unchanged since the 1315 re-notes).
+  No comments posted this pass. Status: no-op.
+  Full detail in pr-integration/1345-run.md.
+
+## 14:00 to about 14:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1400.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. No knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head 6d090f08,
+  verified clean by the authoritative merge-tree test)
+  awaits the 15:00 batch. PRs 351, 301 and 256
+  still CONFLICTING on the action-log append;
+  re-tested against the unchanged main 30f1c620, no
+  fresh comment (unchanged since the 1315 re-notes).
+  No comments posted this pass. Status: no-op.
+  Full detail in pr-integration/1400-run.md.
+
+## 14:15 to about 14:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1415.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. No knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head f69883df,
+  verified MERGEABLE/CLEAN) awaits the 15:00 batch.
+  PRs 351, 301 and 256 still CONFLICTING on the
+  action-log append; re-tested against the unchanged
+  main 30f1c620, no fresh comment (unchanged since
+  the 1315 re-notes). Status: done.
+  Full detail in pr-integration/1415-run.md.
+
+## 14:30 to about 14:41 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1430.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. No knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head 07553d07,
+  verified clean by authoritative merge-tree exit 0)
+  awaits the 15:00 batch. PRs 351, 301 and 256 still
+  CONFLICTING on the action-log append; re-tested with
+  the authoritative merge-tree form against main
+  30f1c620 (exit 1 each), heads and main unchanged
+  since the 1315 pass, no fresh comment. Status: done.
+  Full detail in pr-integration/1430-run.md.
+
+## 14:32 to about 14:50 - Knowledge organization pass
+
+- Knowledge organizer pass knowledge-organization-2026-11-07-1432.
+  Folded the ticker-1334 donations record into alliance-donations
+  1.47.0 (PR 402, OPEN MERGEABLE/CLEAN, Owner
+  lastwar-knowledge-organizer, Refs #282); the channel rules
+  (Mission Control / Ctrl+Right / open_app / set_window_frame
+  not retried per the 1020 lessons) are now carried in this
+  profile too. Issue #282 commented once (110th occurrence).
+  No gap filed, no issue closed. No material change for the
+  owner, so no Slack DM sync and no chat report. Status: done.
+  Full detail in knowledge-organization/1432-run.md.
+
