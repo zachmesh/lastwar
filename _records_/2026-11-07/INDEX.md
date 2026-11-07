@@ -1691,3 +1691,13 @@ of 2026-10-28.
   (records/2026-11-07) open, 0 comments, nothing
   addressed to this job. Full detail in
   alliance-gifts/1003-queue-run.md.
+## 10:15 to about 10:24 - PR integration pass
+
+- PR integrator pass (non-batch; checker plain and
+  merge-aware both not due, next batch 11:00). No
+  knowledge or code PR open. Four records PRs await the
+  11:00 batch: PR 392 clean at new head 60fb5ca65a, PRs
+  256, 301 and 351 still conflict on the action-log
+  append, no repeat comments. No merges, no
+  escalations. Status: no-op. Full detail in
+  pr-integration/1015-run.md.
