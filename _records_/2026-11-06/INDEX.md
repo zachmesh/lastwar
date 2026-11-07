@@ -4713,3 +4713,26 @@ of 2026-10-28.
   observation predates today's inbox units and the diff
   classified nothing as satisfied. Status: done. Full detail
   in queue-planning/2340-run.md.
+
+## 23:45 to about 00:01 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-2345.
+  Merged records PR 379 (merge commit 8cca7a39, 23:49 PT)
+  and knowledge PR 380 (squash f7e835d1, resource-collection
+  1.33.0, 23:50 PT). CADENCE MISS on the records merge:
+  plain checker said due but the merge-aware gate (PR 374
+  already merged 23:02 PT in this window) said not due
+  and was only consulted after the merge; PR 379 should
+  have awaited the 03:00 batch. Merge is valid data,
+  branch preserved. Records PRs 351, 350, 301, 265 and 256
+  still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append);
+  merge-tree re-checked against new main f7e835d1, scope
+  unchanged; no repeat comments, per the no-repeat rule.
+  Records PR 381 (post-2340 batch) opened by a concurrent
+  pass 23:51 PT, awaits the 03:00 batch. Local main synced
+  back to f7e835d1 via bundle pi-2345-main.bundle. Merge-line
+  commit 6994a4e711 plus line-join fix 8bd0864050 on the
+  branch. 15 pre-existing unparseable action-log lines
+  (Nov 1-4) found during validation, left for the retro.
+  Status: done. Full detail in pr-integration/2345-run.md.
