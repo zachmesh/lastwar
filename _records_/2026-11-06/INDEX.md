@@ -3526,3 +3526,23 @@ of 2026-10-28.
   device-blocker pass, Issue 284).
 - Pool: inbox 77, claimed 0, done 1043, upcoming 52. Status:
   no-op. Full detail in queue-planning/1740-run.md.
+
+## 17:45 to about 17:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1745.
+  Non-batch pass per the checker (plain: not due, outside
+  every batch window; next batch 19:00). Knowledge PR #372
+  (organizer 1732, daily-missions/vip/scout device-offline
+  fold) reviewed clean - Owner lastwar-knowledge-organizer,
+  three files, Refs #282/#284 verified open, cited records
+  verified present - and merged by squash at 01:47:21Z,
+  merge commit 5db4695e, branch deleted; local main
+  fast-forwarded to 5db4695e. Records PR 369
+  (records/2026-11-06) mergeable, head advanced to 6b30ef15
+  during the pass, awaits the 19:00 batch. Records PRs 351,
+  350, 301, 265 and 256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against new main 5db4695e; main
+  moved since the 1645 re-checks, so re-check comments were
+  posted on all five. No escalations, no new PR opened.
+  Status: done. Full detail in pr-integration/1745-run.md.
