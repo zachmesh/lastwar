@@ -16,6 +16,12 @@ executors do the playing and call this tool around their work.
 Usage:
   queue.py [--root DIR] enqueue --regular vip [--priority 1]
              [--expires-at ISO] [--est-minutes 3] [--window TEXT]
+             # enqueue refuses a zero-sweep unit whose not_before /
+             # expires_at do not match the reset-anchored slots of
+             # the roster (issue #147): a hand-staged pair with the
+             # old 17:30/18:30/19:00 wall geometry used to pre-empt
+             # the sweep subcommand's correct pair - stage the pair
+             # with queue.py sweep instead.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] next [--budget-minutes 15]
   queue.py [--root DIR] claim --unit UNIT --executor NAME
@@ -32,6 +38,10 @@ Usage:
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
+             # the token lives in the main checkout's _queue_/claimed/,
+             # shared by every worktree of the repo (issue #383), so a
+             # pass in a fresh worktree still sees a token held by a
+             # pass still running; a non-repo root keeps its own token.
   queue.py [--root DIR] reap                      # expired leases to inbox
              # reap, sync and plan warn on stdout (exit still 0)
              # when the root holds no pool state directory at
@@ -72,8 +82,11 @@ Usage:
              # from the fixed-slots regular - slots reset-anchored,
              # expiry at the reset instant itself (issue #147);
              # the planner's manual step calls this instead of
-             # hand-computing wall times, so the pair can never
-             # again carry the old 17:30/18:30/19:00 geometry;
+             # hand-computing wall times, so a pair staged through
+             # this command can never again carry the old
+             # 17:30/18:30/19:00 geometry; enqueue refuses one too
+             # (see _sweep_enqueue_refusal), so the manual path
+             # cannot pre-empt it any more.
              # refuses when the regular is missing or not
              # reset-anchored, so a stale tree fails loudly
              # instead of staging a wall-clock pair
@@ -1108,10 +1121,90 @@ def cmd_sweep(args):
     return 0
 
 
+def _sweep_enqueue_refusal(args):
+    """Refusal message when a hand-enqueued zero-sweep unit does not
+    match the reset-anchored geometry, or None when it may proceed.
+
+    The sweep pair is produced by plan/sweep from the roster (design
+    section 12); the manual enqueue path predates that interface and
+    kept staging the pair on the old wall-clock geometry (17:30/18:30
+    local, expiring 19:00 local) from stale trees, which pre-empted
+    the subcommand's correct pair through the inbox (issue #147,
+    sixth failure running on 2026-11-06). A hand-enqueued zero-sweep
+    unit must therefore carry the roster's reset-anchored geometry:
+    expires_at at the reset instant ending its local date, not_before
+    at one of that day's reset-anchored slots, and - when a chain id
+    is given - the chain for that local date. Anything else is
+    refused loudly, naming the expected geometry and the sweep
+    command that stages it, so a stale tree fails instead of
+    staging a dead pair. Other regulars are unaffected.
+    """
+    if args.regular != "zero-sweep":
+        return None
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        return (f"refused: cannot read roster {defs_path}: {exc} - "
+                f"sync the tree to main before hand-enqueueing the "
+                f"sweep pair")
+    item = next((r for r in regs if r.get("id") == "zero-sweep"), None)
+    if item is None:
+        return ("refused: regular 'zero-sweep' not in roster "
+                f"{defs_path} - sync the tree to main before "
+                f"hand-enqueueing the sweep pair")
+    if not _reset_anchored_offsets(item):
+        return ("refused: regular 'zero-sweep' carries no "
+                "reset-anchored slots (reset_utc + "
+                "slots_before_reset_minutes) - a wall-clock pair "
+                "would repeat the issue #147 defect; stage the pair "
+                "with queue.py sweep from a current tree")
+    expires = parse_iso(args.expires_at)
+    not_before = parse_iso(args.not_before)
+    if expires is None or not_before is None:
+        return ("refused: a zero-sweep unit needs not_before at a "
+                "reset-anchored slot and expires_at at the reset "
+                "instant - stage the pair with queue.py sweep "
+                "--date YYYY-MM-DD instead")
+    local_date = expires.astimezone(LOCAL_TZ).date()
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    if expires != reset_local.astimezone(timezone.utc):
+        return (f"refused: zero-sweep expires_at "
+                f"{iso(expires)} is not the reset instant "
+                f"{iso(reset_local.astimezone(timezone.utc))} ending "
+                f"{local_date.isoformat()} - stage the pair with "
+                f"queue.py sweep --date {local_date.isoformat()} "
+                f"instead")
+    slots = _reset_anchored_slots(item, local_date)
+    if not_before not in [s.astimezone(timezone.utc) for s in slots]:
+        want = ", ".join(iso(s.astimezone(timezone.utc))
+                         for s in slots)
+        return (f"refused: zero-sweep not_before "
+                f"{iso(not_before)} is not a reset-anchored slot "
+                f"for {local_date.isoformat()} (want one of {want}) "
+                f"- stage the pair with queue.py sweep --date "
+                f"{local_date.isoformat()} instead")
+    prefix = item.get("chain_id_prefix", "")
+    if args.chain_id and prefix and \
+            args.chain_id != prefix + local_date.isoformat():
+        return (f"refused: zero-sweep chain {args.chain_id} does not "
+                f"match the reset day {local_date.isoformat()} "
+                f"(want {prefix}{local_date.isoformat()}) - stage "
+                f"the pair with queue.py sweep --date "
+                f"{local_date.isoformat()} instead")
+    return None
+
+
 def cmd_enqueue(args):
     if args.est_minutes > UNIT_CAP_MINUTES:
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
               f"{UNIT_CAP_MINUTES} minute unit cap - split the task")
+        return 1
+    refusal = _sweep_enqueue_refusal(args)
+    if refusal is not None:
+        print(refusal)
         return 1
     chain_seq = ""
     if args.chain_id:
@@ -1442,13 +1535,50 @@ def cmd_release(args):
     return 0
 
 
+def _shared_token_home(root):
+    """Main-checkout _queue_ dir for a root that may be a worktree.
+
+    Each ticker pass runs in its own fresh detached worktree, so a token
+    file under the pass's own _queue_/claimed/ is invisible to the next
+    pass and the section-6 overlap guard fails (issue #383). The token
+    therefore lives in the main checkout's _queue_/claimed/, which every
+    worktree of the repo shares: ask git for the common git dir of the
+    root - for a linked worktree that is <main>/.git, whose parent is the
+    main checkout; for the main checkout itself it is <root>/.git. When
+    git is unavailable or the root is not a worktree (tests, scratch
+    dirs), return None and the caller falls back to the root itself.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "-C", root, "rev-parse", "--git-common-dir"],
+            capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if out.returncode != 0:
+        return None
+    common = out.stdout.strip()
+    if not common:
+        return None
+    if not os.path.isabs(common):
+        common = os.path.normpath(os.path.join(root, common))
+    if os.path.basename(os.path.normpath(common)) != ".git":
+        return None
+    main_queue = os.path.join(
+        os.path.dirname(os.path.normpath(common)), "_queue_")
+    if os.path.isdir(main_queue):
+        return main_queue
+    return None
+
+
 def token_path(root):
-    return os.path.join(state_dir(root, "claimed"), TOKEN_NAME)
+    shared = _shared_token_home(root)
+    home = shared if shared is not None else root
+    return os.path.join(state_dir(home, "claimed"), TOKEN_NAME)
 
 
 def cmd_token_acquire(args):
     path = token_path(args.root)
-    os.makedirs(state_dir(args.root, "claimed"), exist_ok=True)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     if os.path.exists(path):
         fields, _ = read_unit(path)
         lease = parse_iso(fields.get("lease_until", ""))
@@ -1824,6 +1954,7 @@ def main(argv=None):
     p.add_argument("--chain-id", default="")
     p.add_argument("--max-attempts", type=int,
                    default=DEFAULT_MAX_ATTEMPTS)
+    p.add_argument("--regulars-json", default="")
     p.set_defaults(fn=cmd_enqueue)
 
     p = sub.add_parser("list")
