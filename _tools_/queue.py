@@ -32,6 +32,10 @@ Usage:
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
+             # the token lives in the main checkout's _queue_/claimed/,
+             # shared by every worktree of the repo (issue #383), so a
+             # pass in a fresh worktree still sees a token held by a
+             # pass still running; a non-repo root keeps its own token.
   queue.py [--root DIR] reap                      # expired leases to inbox
              # reap, sync and plan warn on stdout (exit still 0)
              # when the root holds no pool state directory at
@@ -1442,13 +1446,50 @@ def cmd_release(args):
     return 0
 
 
+def _shared_token_home(root):
+    """Main-checkout _queue_ dir for a root that may be a worktree.
+
+    Each ticker pass runs in its own fresh detached worktree, so a token
+    file under the pass's own _queue_/claimed/ is invisible to the next
+    pass and the section-6 overlap guard fails (issue #383). The token
+    therefore lives in the main checkout's _queue_/claimed/, which every
+    worktree of the repo shares: ask git for the common git dir of the
+    root - for a linked worktree that is <main>/.git, whose parent is the
+    main checkout; for the main checkout itself it is <root>/.git. When
+    git is unavailable or the root is not a worktree (tests, scratch
+    dirs), return None and the caller falls back to the root itself.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "-C", root, "rev-parse", "--git-common-dir"],
+            capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if out.returncode != 0:
+        return None
+    common = out.stdout.strip()
+    if not common:
+        return None
+    if not os.path.isabs(common):
+        common = os.path.normpath(os.path.join(root, common))
+    if os.path.basename(os.path.normpath(common)) != ".git":
+        return None
+    main_queue = os.path.join(
+        os.path.dirname(os.path.normpath(common)), "_queue_")
+    if os.path.isdir(main_queue):
+        return main_queue
+    return None
+
+
 def token_path(root):
-    return os.path.join(state_dir(root, "claimed"), TOKEN_NAME)
+    shared = _shared_token_home(root)
+    home = shared if shared is not None else root
+    return os.path.join(state_dir(home, "claimed"), TOKEN_NAME)
 
 
 def cmd_token_acquire(args):
     path = token_path(args.root)
-    os.makedirs(state_dir(args.root, "claimed"), exist_ok=True)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     if os.path.exists(path):
         fields, _ = read_unit(path)
         lease = parse_iso(fields.get("lease_until", ""))
