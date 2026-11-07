@@ -837,3 +837,22 @@ of 2026-10-28.
 - Pool by_state at 04:43 local: inbox 74, claimed 0,
   done 1097, upcoming 51. Status: no-op. Full detail in
   queue-planning/0440-run.md.
+
+## 04:45 to about 04:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0445.
+  Non-batch pass per the checker gate (plain and
+  merge-aware not due - outside every batch window,
+  next batch 07:00): no records merges. Knowledge PR
+  389 MERGED (squash 29fd8e10, 04:47 PT): arms-race
+  1.50.0, alliance-donations 1.45.0, design 0.16.0,
+  perception 1.2.3, ledger 1.1.0 - the #147 19:00
+  follow-up, now anchored at absolute 02:00 UTC;
+  #147 commented with the PR link, issue stays open.
+  Local main fast-forwarded to 29fd8e10. PR 382
+  verified CLEAN (merge-tree exit 0), awaits the
+  07:00 batch. PRs 351, 301, 265 and 256 still
+  conflicted on _logs_/repo-actions/action-log.jsonl,
+  no repeat comments, carried to the 07:00 batch.
+  Status: done. Full detail in
+  pr-integration/0445-run.md.
