@@ -3826,3 +3826,22 @@ of 2026-10-28.
   repeat comment was posted. No merges, no comments,
   no escalations. Status: done. Full detail in
   pr-integration/1915-run.md.
+
+## 19:30 to about 19:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1930.
+  Non-batch pass per the checker (merge-aware: not
+  due, PR 369 already merged 19:05:42 in the
+  19:00-20:00 window; next batch 23:00): no knowledge
+  or code PR was open. Records PR 374
+  (records/2026-11-06, head f8065ec4, 5 commits) is
+  open, verified mergeable clean by merge-tree
+  against main 591eafc39, and awaits the 23:00 batch.
+  Records PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against main 591eafc39;
+  heads and main unchanged since the 1915
+  verification, so no repeat comment was posted. No
+  merges, no comments, no escalations. Status: done.
+  Full detail in pr-integration/1930-run.md.
