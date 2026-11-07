@@ -1655,3 +1655,15 @@ of 2026-10-28.
   Pool by_state at 09:44 local: inbox 76, claimed 0,
   done 1114, upcoming 53. Status: no-op. Full detail in
   queue-planning/0940-run.md.
+- Integrator pass pr-integration-2026-11-07-0945.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): knowledge PR 395 merged (squash 3cc2b1af,
+  arms-race 1.51.0). Four records PRs await the 11:00
+  batch: PR 392 (records 2026-11-07, head b16a6be85,
+  verified clean by merge-tree, zero conflict markers)
+  and PRs 351, 301 and 256, all still CONFLICTING on
+  the action-log append and re-noted against the new
+  main 3cc2b1af. Local main fast-forwarded d804146f to
+  3cc2b1af via bundle route. Status: done. Full detail
+  in pr-integration/0945-run.md.
