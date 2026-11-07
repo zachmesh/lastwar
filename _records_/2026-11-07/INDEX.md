@@ -2585,3 +2585,19 @@ of 2026-10-28.
   24 hours, statements current. No adoption, no fix, no
   hand-off, no escalation, no stale-owner flag. Status: no-op.
   Full detail in pr-catchall/1539-run.md.
+
+## 15:32 to about 16:00 - Knowledge organization pass
+
+- Knowledge organizer pass knowledge-organization-2026-11-07-1532.
+  Folded the ticker-1452 shop-claims record into shop-claims
+  1.28.0 (PR 405, OPEN MERGEABLE/CLEAN, Owner
+  lastwar-knowledge-organizer, Refs #282); the channel rules
+  (Mission Control / Ctrl+Right / open_app / set_window_frame
+  not retried per the 1020 lessons) are now carried in this
+  profile too. Corrected the record's 0633-as-last-live-read
+  line: the 0633 unit itself failed with no screen read, so the
+  last live passes read stands at the 2026-11-04 0841
+  checked-only unit. Issue #282 commented once (111th
+  occurrence). No gap filed, no issue closed. No material
+  change for the owner, so no Slack DM sync and no chat report.
+  Status: done. Full detail in knowledge-organization/1532-run.md.
