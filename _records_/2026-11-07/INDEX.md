@@ -1160,3 +1160,17 @@ of 2026-10-28.
   heads unchanged since the 0300 notes, no repeat
   comments. Status: no-op. Full detail in
   pr-integration/0645-run.md.
+
+## 07:00 to about 07:09 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0700.
+  BATCH pass per the checker (plain and merge-aware due,
+  window 07:00-08:00): merged records PRs 382 (78 commits,
+  123 files) and 265 (7 commits, 1 file); records PRs 256,
+  301 and 351 conflicted on
+  _logs_/repo-actions/action-log.jsonl after the merges,
+  commented, carried to the 11:00 batch pending branch-side
+  reconciliation. Fresh records PR 392 opened for
+  records/2026-11-07 (post-0700 batch). No knowledge or
+  code PR open. Status: done. Full detail in
+  pr-integration/0700-run.md.
