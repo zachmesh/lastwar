@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T08:14:00Z
+modified: 2026-11-07T08:22:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, six records PRs await the 0300 batch (PR 381 verified clean, five older records PRs still conflicted on action-log.jsonl, carried, no repeat comments); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR for 2026-11-07 opened by this pass
+description: The 0000 and 0015 PR integration passes, both non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation between the passes, resolution comments posted by the 0015 pass); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284)
 status: unverified
 ---
 
@@ -56,3 +56,25 @@ of 2026-10-28.
   radar-tasks/0011-queue-run.md.
 - Zombie Invasion not seeded: the event ended 2026-10-30;
   no fresh chain until its tab is seen live again.
+
+## 00:15 to about 00:22 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0015.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR was open. Seven
+  records PRs await the 03:00 batch, all verified CLEAN
+  against main f7e835d1 by merge-tree and gh: PR 382
+  (records/2026-11-07, head cc6e6e63, 1 commit) and PR
+  381 (records/2026-11-06, head bbd80de3, 4 commits);
+  PR 351 (head d5625902, 2 commits), PR 350 (head
+  f58e7e33, 3 commits), PR 301 (head 655fd4a3, 16
+  commits), PR 265 (head 88b7f6ab, 7 commits) and PR 256
+  (head 5a15c37e, 18 commits), whose heads changed since
+  the 0000 run: each took a branch-side reconciliation
+  merge of main that unioned the action-log.jsonl
+  appends, resolving the long-running single-file
+  conflict, and each received one resolution comment
+  from this pass. No merges, no escalations.
+  records/2026-10-31 fully contained in main, no PR
+  needed. Status: no-op. Full detail in
+  pr-integration/0015-run.md.
