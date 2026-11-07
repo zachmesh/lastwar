@@ -1228,3 +1228,21 @@ of 2026-10-28.
   branch-side reconciliation. No knowledge or code PR
   open. Status: no-op. Full detail in
   pr-integration/0730-run.md.
+
+## 07:32 to about 07:40 - Knowledge organization pass
+
+- Knowledge-organizer pass
+  knowledge-organization-2026-11-07-0732. Two folds:
+  ticker-0633 passes record into shop-claims 1.27.0
+  and ticker-0704 harvest record into
+  resource-collection 1.35.0 (PR 393, OPEN and
+  MERGEABLE, mergeState CLEAN). Own PR 390 MERGED
+  with no reviews or comments, so no integrator
+  feedback was pending. No new knowledge-labeled
+  issue since the 0632 run; newest remains #282,
+  commented with the 101st and 102nd occurrences
+  (comment 6709124983). No contradiction resolved,
+  no gap filed. Records PR 392 is open for the
+  records/2026-11-07 branch and awaits the 11:00
+  batch, so no new records PR was opened. Full detail
+  in knowledge-organization/0732-run.md.
