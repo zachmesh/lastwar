@@ -4568,3 +4568,123 @@ of 2026-10-28.
   observation predates today's inbox units and the diff
   classified nothing as satisfied. Status: done. Full detail
   in queue-planning/2240-run.md.
+- Integrator pass pr-integration-2026-11-06-2300.
+  BATCH pass per the checker (due, 23:00-00:00 window,
+  plain and merge-aware, no records merge yet in the
+  window at pass start). Merged records PR 374
+  (records/2026-11-06, 44 commits, 88 files) by merge
+  commit bf7f3d8b at 23:02 PT; branch kept, local main
+  synced back to bf7f3d8b. Records PRs 351, 350, 301,
+  265 and 256 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified by merge-tree against new main bf7f3d8b;
+  heads unchanged since the 2045 pass. No re-check
+  comments posted this pass: the conflict scope is
+  unchanged since the 2130 re-check comments, per the
+  no-repeat rule and the 1900 batch precedent. No
+  knowledge or code PR open. No escalations, no new PR
+  opened (the next pass opens the post-2300-batch PR).
+  Status: done. Full detail in pr-integration/2308-run.md.
+
+## 22:57 to about 23:04 - Ticker pass
+
+- Unit harvest-2026-11-06-2203 (resource collection) failed:
+  Mac mini offline, no wake-up path, six device invokes with
+  zero responses - the ninety-second consecutive ticker pass
+  with this blocker (Issue 284), fifty-third in the worsened
+  zero-response form. No game screen was ever read, no bubble
+  collected; the tracker is untouched so the next tick
+  re-produces harvest. Sync: reaped 0, expired 6, due 22,
+  produced duel-score-2026-11-06-2230. No zombie seeding
+  (chain closed 2026-10-30). Status: failed. Full detail in
+  resource-collection/2257-queue-run.md.
+- Integrator pass pr-integration-2026-11-06-2315.
+  NON-batch pass per the checker (merge-aware not due:
+  PR 374 already merged 23:02 PT in this 23:00-00:00
+  window). No records merges. PR 379
+  (records/2026-11-06, post-2300 batch, head f3c5d273,
+  3 commits, 13 files, MERGEABLE/CLEAN) awaits the
+  03:00 batch. Records PRs 351, 350, 301, 265 and 256
+  still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append);
+  heads unchanged since the 2045 pass and main unchanged
+  since bf7f3d8b, so the conflict scope is unchanged;
+  no repeat comments, per the no-repeat rule. No
+  knowledge or code PR open. No escalations, no new PR
+  opened, no sync-back needed. Status: no-op. Full
+  detail in pr-integration/2315-run.md.
+- Integrator pass pr-integration-2026-11-06-2330.
+  NON-batch pass per the checker (merge-aware not due:
+  PR 374 already merged 23:02 PT in this 23:00-00:00
+  window). No records merges. PR 379
+  (records/2026-11-06, post-2300 batch, head 6de89d24,
+  4 commits, 14 files, MERGEABLE/CLEAN) awaits the
+  03:00 batch. Records PRs 351, 350, 301, 265 and 256
+  still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append);
+  heads unchanged since the 2045 pass and main unchanged
+  since bf7f3d8b, so the conflict scope is unchanged
+  (merge-tree re-check of PR 351 in this pass confirms
+  exactly one conflicted file); no repeat comments, per
+  the no-repeat rule. No knowledge or code PR open. No
+  escalations, no new PR opened, no sync-back needed.
+  Status: no-op. Full detail in pr-integration/2330-run.md.
+
+## 23:32 to about 23:41 - Knowledge organization pass
+
+- Knowledge-organizer pass
+  knowledge-organization-2026-11-06-2332. Own PR 378
+  MERGED with no reviews or comments, so no
+  integrator feedback was pending. One fold:
+  ticker-2257 harvest record (ninety-second
+  consecutive pass, fifty-third in the worsened
+  zero-response form) into resource-collection 1.33.0
+  - PR 380, verified OPEN and MERGEABLE, mergeState
+  CLEAN. The occurrence commented onto Issue #282.
+  New knowledge: none about the game - same blocker
+  signature (recovery health check timed out after
+  25s); no queue-state divergence this pass, the
+  pass fetched the remote tip first, so the 2034
+  divergence class did not recur. The 22:04 tick
+  executed no unit and the ticker-2204 no-record gap
+  stays tracked. The 1101 close stands as the last
+  live read, Armed Truck state unknown since then.
+  No new issue filed or closed. Records PR 379
+  awaits the 03:00 batch, so no new records PR was
+  opened. Full detail in
+  knowledge-organization/2332-run.md.
+
+## 23:32 to about 23:38 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-06-2332.
+  No-op: own PRs checked first - only records PRs 379, 351,
+  350, 301, 265 and 256 open, no tooling PR of mine; PR 379
+  is the new post-2300 batch PR since the 2232 run. The same
+  20 open tooling issues re-checked, each with a merged
+  implementing PR or a no-code diagnosis; only #284 updated
+  since 2232 (ticker-2257, 92nd consecutive Mac-offline
+  pass, 53rd zero-response, same fault, same form, probe
+  half already landed). Main head moved since the 2232 run
+  (c102c7094d to bf7f3d8b): PR #374 records merge only;
+  tools/ diff empty, frozen backlog diff empty. No branch,
+  no PR, no issue comment, no Slack message. Full detail in
+  tool-development/2332-run.md.
+
+## 23:39 to about 23:44 - PR catch-all pass
+
+- PR-catch-all pass pr-catchall-2026-11-06-2339. No-op: own
+  PR 137 stays MERGED, no adopted open PR; seven open PRs
+  scanned, none owned by this job. PR 378 merged 22:40 PST
+  and PR 374 merged 23:02 PST in the 23:00 batch; PR 380
+  opened 23:36 PST (knowledge organizer 2332
+  resource-collection fold into resource-collection 1.33.0,
+  Owner lastwar-knowledge-organizer, MERGEABLE). PR 379 head
+  advanced to c576eada, mergeable UNKNOWN, awaits the
+  03:00 batch. PRs 351, 350, 301, 265 and 256 still
+  CONFLICTING with integrator 2130 re-check notes about
+  two hours old and a 2330 re-check about nine minutes
+  before this pass, so no stale-owner flag. Fifty open
+  issues, all class-labeled; owner-decision issues 132,
+  154 and 335 over 24 hours with statements current. No
+  adoption, fix, hand-off or escalation. Full detail in
+  pr-catchall/2339-run.md.
