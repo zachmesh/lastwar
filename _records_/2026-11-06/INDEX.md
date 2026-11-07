@@ -3945,3 +3945,26 @@ of 2026-10-28.
   queued). No zombie seeding: chain closed 2026-10-30.
   Status: failed. Full detail in
   radar-tasks/1934-queue-run.md.
+
+## 19:45 to about 19:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-06-1945.
+  Non-batch pass per the checker (merge-aware: not
+  due, PR 369 already merged 19:05:42 in the
+  19:00-20:00 window; next batch 23:00). Knowledge PR
+  375 (fold ticker-1904 harvest record into
+  resource-collection 1.32.0, Owner
+  lastwar-knowledge-organizer, Refs #282 and #284)
+  reviewed clean - single file, version 1.31.0 to
+  1.32.0, cited source record verified on the branch -
+  and merged by squash at 19:49:06 (merge commit
+  daf59d9d); local main fast-forwarded to daf59d9d.
+  Records PR 374 (records/2026-11-06, head 5df49dfa,
+  10 commits beyond main) is open, verified mergeable
+  clean, and awaits the 23:00 batch. Records PRs 351,
+  350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged since the 1815
+  re-check comments, so no repeat comment was posted.
+  No comments, no escalations. Status: done. Full
+  detail in pr-integration/1945-run.md.
