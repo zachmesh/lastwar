@@ -4598,3 +4598,18 @@ of 2026-10-28.
   produced duel-score-2026-11-06-2230. No zombie seeding
   (chain closed 2026-10-30). Status: failed. Full detail in
   resource-collection/2257-queue-run.md.
+- Integrator pass pr-integration-2026-11-06-2315.
+  NON-batch pass per the checker (merge-aware not due:
+  PR 374 already merged 23:02 PT in this 23:00-00:00
+  window). No records merges. PR 379
+  (records/2026-11-06, post-2300 batch, head f3c5d273,
+  3 commits, 13 files, MERGEABLE/CLEAN) awaits the
+  03:00 batch. Records PRs 351, 350, 301, 265 and 256
+  still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append);
+  heads unchanged since the 2045 pass and main unchanged
+  since bf7f3d8b, so the conflict scope is unchanged;
+  no repeat comments, per the no-repeat rule. No
+  knowledge or code PR open. No escalations, no new PR
+  opened, no sync-back needed. Status: no-op. Full
+  detail in pr-integration/2315-run.md.
