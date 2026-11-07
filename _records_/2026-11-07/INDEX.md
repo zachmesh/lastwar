@@ -2442,3 +2442,24 @@ of 2026-10-28.
   assertions in /tmp all passed, real-file copy validated
   (1056 objects before and after, identical multiset). Status:
   done. Full detail in tool-development/1446-run.md.
+
+## 14:45 to about 15:01 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1445.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  15:00): knowledge PR 402 (squash a9b8754a,
+  alliance-donations 1.46.0 to 1.47.0, Refs #282) and
+  code PR 403 (squash 6ad1341f, newline-safe JSONL log
+  append helper, Refs #401) merged; PR link commented
+  on issue #401. Records PR 398 (records 2026-11-07)
+  newly CONFLICTING on the action-log after the
+  branch-side 17-line repair (commit 74d66e527), and
+  records PRs 351, 301 and 256 still CONFLICTING on
+  the same file - all four re-noted against the new
+  main 6ad1341f. Two unpushed tool-development record
+  commits found on local main, preserved on branch
+  preserved/tool-development-1446-unpushed, local main
+  reset to github/main. Local main fast-forwarded
+  3d01881e3 to 6ad1341f via bundle route. Status: done.
+  Full detail in pr-integration/1445-run.md.
