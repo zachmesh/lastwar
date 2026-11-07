@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-07T18:38:30Z
+modified: 2026-11-07T18:46:00Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-1827 alliance-gifts execution record 2026-11-06 1827 queue run (failed, Mac device offline, eighty-sixth consecutive ticker pass with a Mac device-access blocker, forty-seventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 34h56m, unchanged since the 0604 pass; five invokes, zero responses, recovery-device health check timed out after 25 seconds)
   - source: ticker-0204 alliance-gifts execution record 2026-11-07 0204 queue run (failed, Mac device offline, ninety-fifth consecutive ticker pass to fail this way, fifty-sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 42h35m, unchanged since the ticker-0011 pass; five invokes, zero responses, recovery-device health check timed out after 25 seconds; sync expired five unexecuted 2203-slot units, four delivered as expired, harvest kept as failed by ticker-2257)
   - source: ticker-1003 alliance-gifts execution record 2026-11-07 1003 queue run (failed, Mac device offline, one-hundred-sixth consecutive ticker pass to fail this way, sixty-seventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 50.5h, unchanged since the ticker-0858 pass; six invokes, zero responses, recovery-device health check timed out after 25 seconds; sync expired two unexecuted 0603-slot units)
+  - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z; supersedes the gateway-recovery follow-up in the 1003 section below - the offline streak ends at 106, the blocker moves to the off-Space window)
 ---
 
 
@@ -1152,3 +1153,10 @@ one file per execution.
 - Reading warning: this failed unit gives zero evidence about gift state. It must NOT be read as "nothing claimable" - the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; this unit rests on no read at all. The Issue #183 progress-counter anomaly is untouched by this unit.
 - Follow-up, carried forward: the blocker is now one-hundred-six passes old and needs the Mac gateway back (owner-side or Mac-side fix); ticker passes cannot work around it without an observation channel. No new issue filed: Issue #284 already tracks it and was commented.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 2, due 22, produced nothing new, all 22 regulars already queued. Queue stats at 18:04:53Z: inbox 71, claimed 0, done 1055. The two expired units are the unexecuted 0603-slot survivors and training units, delivered as expired by this pass. Stalled priority-1 units wait on the same offline device: vip-2026-11-06-1900 (26.4h), vip-2026-11-06-1800 (14.9h), and the pre-reset zero-sweep pair (8.6h) for the 2026-11-07 19:00 reset (chain pre-reset-sweep-2026-11-07, pending 2, not yet due). No zombie seeding: the chain closed with unit 066 on 2026-10-30 and the seeding rule forbids a fresh chain until a Zombie Invasion tab is seen live again.
+
+## Correction 2026-11-07 - the Mac is back online; the gateway-recovery follow-up in the 1003 section is superseded
+
+- Source: the ticker-1020 help record (`_records_/2026-11-07/alliance-help/1038-queue-run.md`, ticker-1020, session about 10:23 to 10:39 local), which landed after the 1003 section above was written.
+- Superseded in this profile: the "Follow-up, carried forward" line in the 1003 section (the blocker "needs the Mac gateway back") and the expectation that the next ticker pass fails the same way "until the Mac gateway recovers". The Mac is back online: device.list at about 10:23 local showed it online with last_seen 2026-11-07T18:19:37Z, fresh, both transports healthy. The one-hundred-six-pass offline streak ends with the 1003 pass.
+- What stands: everything else in the 1003 section - the six-invokes-zero-responses measurement, the one-hundred-sixth / sixty-seventh counts, the sync numbers, and the last live reads (0820 done claim, 34 Regular plus 2 Premium; 1147 entry-failure partial). The blocker has moved, not cleared: the game window sits off-Space at (0, -360) and capture still fails (Issue 282 class). The unblock is now the owner clicking the LastWar Dock icon once.
+- No new issue filed: the mode change is commented onto Issues #282 and #284 by this run, and the 1020 record itself is folded into alliance-help 1.27.0 (separate PR).
