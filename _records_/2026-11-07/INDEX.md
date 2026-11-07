@@ -1890,3 +1890,18 @@ of 2026-10-28.
   Tracker untouched. Own PRs: PR 398 (records/2026-11-07)
   open, 0 comments, nothing addressed to this job. Full
   detail in radar-tasks/1104-queue-run.md.
+
+## 11:30 to about 11:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1130.
+  NON-BATCH pass inside the 11:00 window: the checker
+  said due on the plain clock-only call but not due
+  merge-aware, because records PR 392 already merged
+  at 11:05 in this window. No records PR merged.
+  Records PR 398 (records 2026-11-07, post-1100 batch,
+  head aee3e085) is MERGEABLE/CLEAN and awaits the
+  15:00 batch. PRs 351, 301 and 256 still CONFLICTING
+  on the action-log append (main unchanged at c317b423,
+  heads unchanged, feedback not repeated). No
+  knowledge or code PR open. Status: no-op. Full
+  detail in pr-integration/1130-run.md.
