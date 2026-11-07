@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-06T03:41:24Z
+modified: 2026-11-07T01:32:17Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -34,6 +34,7 @@ grounded_in:
   - source: ticker-1334 perception-scout execution record 2026-11-05 1334 queue run (failed, Mac device offline, forty-eighth consecutive ticker pass to fail this way, ninth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 6h05m, unchanged since the 1025 pass; four invokes, zero responses; records-branch pool inbox 39, done 846)
   - source: ticker-1404 perception-scout execution record 2026-11-05 1404 queue run (failed, Mac device offline, forty-ninth consecutive ticker pass to fail this way, tenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 6h33m, identical to the 1334 reading 30 minutes earlier; four invokes, zero responses; records-branch pool inbox 42, done 850)
   - source: ticker-1834 perception-scout execution record 2026-11-05 1836 queue run (failed, Mac device offline, fifty-eighth consecutive ticker pass to fail this way, nineteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 11h, unchanged since the 1025 pass, identical to the 1804 reading 30 minutes earlier; five invokes, zero responses; inbox 73, done 949 at sync time)
+  - source: ticker-1704 perception-scout execution record 2026-11-06 1710 queue run (failed, Mac device offline, eighty-fourth consecutive ticker pass to fail this way, forty-fifth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 33h33m, unchanged since the 1507, 1534, 1604 and 1634 passes; seven invokes, zero responses)
 ---
 
 
@@ -1773,5 +1774,15 @@ observe-only, nothing claimed). Evidence in
 - Reading warning: this failed unit gives zero evidence about any scout surface. It must NOT be read as "nothing to do" or as a red-dot state. The carried remainder stays carried for a fresh re-check, not closed from memory. No zombie check was possible (Events hub unwalked); no zombie chain is seeded, per the standing rule.
 - Sync: reaped 0, expired 4 in the first sync (train, star-ceremony, help and gifts 2026-11-05-1430) but a concurrent job expired those same four on the shared disk pool at 18:42:34, so the redo sync expired 0 and the expiry is not this pass's change; due 23, produced 4 units (vip, daily-missions, duel-score and scout 2026-11-05-1800); 18 due regulars already queued. The inbox held 73 units at this pass (pool as synced from the main worktree disk, done 949 at sync time); the records-branch pool on its own reads smaller, so the disk copy carries units the branch lacks, including this unit itself. The four produced units are absent from the branch, so no duplicate was staged.
 - Worktree loss, process lesson: the pass first ran in /tmp/lastwar-ticker-1834, which the runtime wiped mid-run (the whole /tmp was empty when the token-release step ran, about 18:44), taking the uncommitted sync output, claim, record and INDEX append with it. The GitHub comment on Issue 284 had already been posted and was not duplicated. The pass was redone in full in a workspace worktree (~/workspace/lastwar-worktrees/ticker-1834-1105): sync re-run (same 4 units produced), token re-acquired, unit re-claimed, device.list re-confirmed the same stale last_seen, record rewritten and unit completed there. Lesson for later passes: never put pass work in /tmp; worktrees live under ~/workspace/lastwar-worktrees/.
+- No successor unit is enqueued from this unit - the chain's remainder is unchanged by a pass that read nothing, and a successor would hit the same stalled channel.
+- Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-06 1704 unit added - Mac device offline, eighty-fourth consecutive pass, zero-response form
+
+- Unit scout-2026-11-05-1800 by ticker-1704, about 17:04 to 17:10 local, status failed. Evidence in `_records_/2026-11-06/perception-scout/1710-queue-run.md`. Observe-only throughout; nothing claimed, fought, dispatched, donated, boarded, dug, joined or bought. Zero surfaces walked, zero items observed, zero red dots seen or explained, no observation appended to the 2026-11-06 day observation file. This was a stale unit from the 2026-11-05 18:00 slot (planned_for 2026-11-06T02:00:00Z, expires 2026-11-07T02:00:00Z).
+- No game screen was ever read and no game input was dispatched. Seven device invokes, zero responses: computer.session start on the Mac mini three times node_offline (device offline, no wake-up path), connection.health on the Mac mini node_offline, connection.repair (target web) on the Mac mini node_offline, connection.repair (target native) on the recovery device node_invoke_timeout after 25 seconds, connection.health on the recovery device node_invoke_timeout after 25 seconds. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 33 hours 33 minutes at pass time, unchanged since the ticker-1507, ticker-1534, ticker-1604 and ticker-1634 passes; the recovery device also reports offline with the same stale last_seen. This meets the standing at-least-3-attempts retry rule. No probe was run: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the eighty-fourth consecutive ticker pass with a Mac device-access blocker, forty-fifth in the worsened zero-response form after ticker-1634 (eighty-third, forty-fourth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the eighty-fourth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about any scout surface. It must NOT be read as "nothing to do" or as a red-dot state - no observation file exists for the 2026-11-06 reset day and none was created; the last live scout observation remains the one recorded before the outage, and no scout unit has succeeded since the Mac went offline. This unit rests on no read at all. No zombie check was possible (Events hub unwalked); no zombie chain is seeded, per the standing rule that the event ended 2026-10-30 and no live return sighting exists.
+- Sync: reaped 0, expired 0, due 22, produced 0 new units; 22 regulars already queued. Queue stats at 01:07Z: inbox 70, claimed 0, done 977, upcoming 53. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-06) sits in the inbox (pending 2), not yet due.
 - No successor unit is enqueued from this unit - the chain's remainder is unchanged by a pass that read nothing, and a successor would hit the same stalled channel.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
