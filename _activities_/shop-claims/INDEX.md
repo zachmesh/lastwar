@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-06T15:32:17Z
+modified: 2026-11-07T11:35:23Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-1434 shop-claims execution record 2026-11-05 1434 queue run (failed, Mac device offline, fiftieth consecutive ticker pass to fail this way, eleventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 7h07m, unchanged since the 1025 pass; six invokes, zero responses)
   - source: ticker-0234 shop-claims execution record 2026-11-06 0234 queue run (failed, Mac device offline, sixty-fifth consecutive ticker pass to fail this way, twenty-sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 19h, unchanged since the 1025 pass; four invokes, zero responses, recovery-device native repair timed out after 25s)
   - source: ticker-0634 shop-claims execution record 2026-11-06 0634 queue run (failed, Mac device offline, seventy-second consecutive ticker pass with a Mac device-access blocker, thirty-third in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 23h, unchanged since the 0534 pass; four invokes, zero responses, no recovery-device attempts)
+  - source: ticker-0234 shop-claims execution record 2026-11-07 0234 queue run (failed, Mac device offline, ninety-sixth consecutive ticker pass to fail this way, fifty-seventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 43h, unchanged since the ticker-0204 pass; five invokes, zero responses, recovery-device health check timed out after 25s)
 ---
 
 
@@ -844,3 +845,11 @@ the free and already paid for parts, never the paid unlocks.
 - Recurrence, not a new failure class: this is the seventy-second recorded consecutive ticker pass with a Mac device-access blocker, thirty-third in the worsened zero-response form after ticker-0604 (seventy-first, thirty-second). No executed pass is recorded between 0604 and this one. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the seventy-second occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 2026-11-04 0841 checked-only state rests on a live read; this one rests on no read at all. The passes unit's daily gifts stay unclaimed for this slot.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 15, due 22, produced one new unit (duel-score-2026-11-06-0630), 20 regulars already queued. The inbox held 50 units at this pass close (50 at sync, after 15 expired units were reaped and the duel-score unit was produced).
+
+## What the 2026-11-07 0234 unit added - Mac device offline, ninety-sixth consecutive pass, zero-response form
+
+- Unit passes-2026-11-06-2257 by ticker-0234, about 02:34 to 02:47 local, status failed. Evidence in `_records_/2026-11-07/shop-claims/0234-queue-run.md`. No different-device dialog was observed - no screen was ever captured, so none could have been seen. On a working screen it would have opened the shop, claimed the free pack and the pass daily gifts. The loss is the unexecuted passes check for this slot (planned 22:57 local 2026-11-06, expires 02:57 local 2026-11-07).
+- No game screen was ever read and no game input was dispatched. Five device invokes, zero responses: connection.health on the Mac mini node_offline (attempt 1), connection.repair (web) on the Mac mini node_offline (attempt 2), computer.session start on the Mac mini node_offline (attempts 3 and 4, retry), connection.health on the recovery device node_invoke_timeout after 25 seconds (attempt 5). device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 43 hours at the 02:46 re-check, unchanged since the ticker-0204 pass 30 minutes earlier. The recovery device's last_seen is frozen at the same 2026-11-05T15:36:52Z as the Mac mini. This meets the standing at-least-3-attempts retry rule. No probe is recorded in this pass: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the ninety-sixth recorded consecutive ticker pass with a Mac device-access blocker, fifty-seventh in the worsened zero-response form after ticker-0204 (ninety-fifth, fifty-sixth). No executed pass is recorded between 0204 and this one. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the ninety-sixth occurrence onto #282.
+- Reading warning: this failed unit gives zero evidence about the shop or pass claim state. It must NOT be read as "nothing claimable" - the 2026-11-04 0841 checked-only state rests on a live read; this one rests on no read at all. The passes unit's daily gifts stay unclaimed for this slot.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the passes unit. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 4 (help, mail, star-ceremony, train, all 2026-11-06-2230 slot), due 20, produced nothing new, all 20 regulars already queued. Queue stats at 10:34Z: inbox 66, claimed 0, done 1089. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-07) sits in the inbox (pending 2), not yet due, untouched by this pass. No zombie seeding: the chain closed with unit 066 on 2026-10-30 and the seeding rule forbids a fresh chain until a Zombie Invasion tab is seen live again.
