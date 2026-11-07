@@ -541,3 +541,18 @@ of 2026-10-28.
   MERGEABLE/CLEAN on all seven. Local main
   fast-forwarded to 791e2740. Status: done. Full detail
   in pr-integration/0250-run.md.
+
+## 03:04 to about 03:13 - Ticker pass
+
+- Ticker pass ticker-0304. Radar unit radar-2026-11-07-0203
+  failed: Mac mini offline, no wake-up path, 5 device invokes
+  zero responses, last_seen 2026-11-05T15:36:52Z. 97th
+  consecutive pass with this blocker, 58th in the zero-response
+  form. No game screen read, no game input. Issue 284
+  commented. Sync expired 4 unexecuted 2257-slot units,
+  delivered here as expired. Pre-reset zero-sweep pair already
+  staged. No zombie seeding: event ended 2026-10-30. Tracker
+  untouched. PR 382 conflict resolved first by union-merge of
+  main into records/2026-11-07 (action-log.jsonl, 1016 lines).
+  Status: failed. Full detail in
+  radar-tasks/0304-queue-run.md.
