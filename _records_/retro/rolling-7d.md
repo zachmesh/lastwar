@@ -305,3 +305,51 @@ remain the immutable source.
 - Batch compliance - 5 records merges audited, all
   inside batch windows, violations 0.
 - Detail - daily retro 2026-11-05 in this folder.
+
+## Entry 2026-11-06
+
+- Derived from - 657 done units, finished local PDT
+  2026-10-31 to 2026-11-06, read from the
+  records/2026-11-06 branch tip 58ef10a9ef
+  (knowledge-organization 2032 run), tool
+  _tools_/retro_report.py 1.5.0, pool state sha256
+  b247529bfe522e7951e51dc1f7fc29505b4a5789baf71980bd78cdf71e1baea2.
+  Live working-tree pool holds 718 in the same
+  window (pool sha256
+  ba31ce09595506af5c46ec4fb61f45ede1f2c1747c788c613775876277d7ec70);
+  gap 61, pool_gap.py FAIL. Nov 3 backfill deficit
+  still 90; live tree stale for Nov 6 by 18.
+- Totals - done 147, partial 192, failed 100,
+  expired 214, skipped-needs-owner 4. Executor
+  time 137,345 seconds, median unit 254 seconds,
+  p90 614 seconds. Attempts mean 0.6743, max 1.
+- Worst types by done percent - training 0 of 36,
+  crystal-shop 0 of 2, glittering-market 0 of 2,
+  zero-sweep 0 of 12, duel-score 0 of 13, arms-race
+  1 of 37, survivors 1 of 38, harvest 2 of 37.
+- Best types - gifts 18 of 35, help 17 of 34,
+  treasures 17 of 37, star-ceremony 16 of 33,
+  passes 16 of 37, events 14 of 35, train 14 of
+  35, mail 14 of 34.
+- Measurement state - numeric target over achieved
+  pairs 206, summed attainment 0.7414, frozen
+  (achieved_sum 5,610,394 identical to yesterday);
+  units carrying blocker_category 558 of 657 (99
+  lack the key); unverified closings 564 (85.8
+  percent), flat against yesterday's 85.9 percent.
+  Points 176, identical to yesterday; the tool
+  excludes the same 2 copied-points units.
+- Threshold breaches - unexplained red dots not
+  proven clean (second blackout day, no
+  observation); expired/unexecuted in day counts
+  (78 branch, 67 live); quota attainment under
+  0.8 rolling (trucks 0.439, donations 0.1351);
+  unverified rate failing to fall (flat); closed
+  improvement recurrence BREACH (#149 and #251
+  prematurely closed by non-retro actors,
+  reopened this run; recurrence 2 of 5); daily
+  standing job artifact missing (ticker-0634
+  record, #342); ledger coverage unmeasurable
+  (no sweep). Oldest open improvement 4 days,
+  no breach.
+- Detail - daily retro 2026-11-06 in this folder.
