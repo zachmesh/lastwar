@@ -1367,3 +1367,17 @@ of 2026-10-28.
   Pool by_state at 07:43 local: inbox 78, claimed 0,
   done 1112, upcoming 53. Status: done. Full detail in
   queue-planning/0740-run.md.
+
+## 08:04 to about 08:08 - Ticker pass
+
+- Ticker pass ticker-0804. Unit donations-2026-11-07-0603:
+  failed, Mac mini offline with no wake-up path, same
+  blocker as Issue 284 (104th consecutive access-failed
+  pass, 65th in the zero-response form). Six device
+  invokes, zero responses; last_seen frozen at
+  2026-11-05T15:36:52Z, about 48 hours stale. No game
+  screen read, no Donation Count taken, no donation
+  made, nothing claimed. Tracker untouched. Own PRs:
+  PR 392 (records/2026-11-07) open with 0 comments,
+  nothing addressed to this job. Full detail in
+  alliance-donations/0804-queue-run.md.
