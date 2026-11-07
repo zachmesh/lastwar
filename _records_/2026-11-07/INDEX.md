@@ -1285,3 +1285,21 @@ of 2026-10-28.
   over 24 hours with statements current. No adoptions,
   fixes, hand-offs, escalations or stale-owner flags.
   Status: no-op. Full detail in pr-catchall/0739-run.md.
+## 07:34 to about 07:43 - Ticker pass
+
+- Ticker pass ticker-0734. Unit radar-2026-11-07-0603:
+  failed, Mac mini offline with no wake-up path, same
+  blocker as Issue 284 (103rd consecutive access-failed
+  pass, 64th in the zero-response form). Seven device
+  invokes, zero responses; last_seen frozen at
+  2026-11-05T15:36:52Z, about 48 hours stale. No game
+  screen read, no radar task executed, nothing claimed.
+  Sync expired 5 unexecuted units in the live pool; the
+  records branch already held those 5 as expired from
+  ticker-0704, so no duplicate copies were delivered.
+  Own PRs: PR 392 (records/2026-11-07) open with 0
+  comments, nothing addressed to this job; older records
+  PRs 351, 301 and 256 remain open under the integrator.
+  No zombie seeding (chain closed 2026-10-30, event
+  ended). Pass stopped after this one unit. Status:
+  failed. Full detail in radar-tasks/0734-queue-run.md.
