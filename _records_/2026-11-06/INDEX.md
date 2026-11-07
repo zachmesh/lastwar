@@ -3603,3 +3603,22 @@ of 2026-10-28.
   the daily retro to settle. No escalations, no new PR
   opened, no merge. Status: no-op. Full detail in
   pr-integration/1815-run.md.
+
+## 18:27 to about 18:33 - Ticker pass ticker-1827 (gifts, failed on device offline)
+
+- Ticker pass ticker-1827. Unit gifts-2026-11-06-1430
+  completed as failed: the Mac mini is offline with no wake-up
+  path, five device invokes and zero responses, so no game screen
+  was ever read and no game input was dispatched. No Regular or
+  Premium gift tab was opened, no Claim All was tapped, and no
+  gift count was verified. Same blocker as GitHub Issue #284
+  (label tooling, still open): the eighty-sixth recorded
+  consecutive pass with a Mac device-access blocker,
+  forty-seventh in the worsened zero-response form. The pass
+  commented on #284 instead of filing a duplicate. Tracker
+  untouched; the next tick re-produces the gifts unit. Sync
+  expired 3 units (training, survivors, harvest 2026-11-06-1403).
+  No zombie seeding: the zombie chain closed 2026-10-30. Own PRs
+  checked first: PR 369 (records/2026-11-06) carries no comments,
+  is mergeable and clean. Full detail in
+  alliance-gifts/1827-queue-run.md.
