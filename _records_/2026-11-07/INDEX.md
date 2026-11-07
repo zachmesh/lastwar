@@ -1323,6 +1323,24 @@ of 2026-10-28.
   Status: done. Full detail in
   pr-integration/0745-run.md.
 
+## 08:00 to about 08:04 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0800.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): no records PR merged. Knowledge PR 393
+  unchanged since the 0745 review (single commit
+  718af5ad, typo still present), so no repeat feedback
+  posted; it stays open for the author fix. Four
+  records PRs open: PR 392 (records/2026-11-07, head
+  3beed0e2, 13 commits) verified CLEAN at its advanced
+  head and awaiting the 11:00 batch; PRs 256, 301 and
+  351 still conflict on
+  _logs_/repo-actions/action-log.jsonl, heads and main
+  unchanged since the 0700 conflict notes, no repeat
+  comments. Status: done. Full detail in
+  pr-integration/0800-run.md.
+
 ## 07:40 to about 07:47 - Queue planning pass
 
 - Planner pass queue-planning-2026-11-07-0740.
