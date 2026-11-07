@@ -2258,3 +2258,20 @@ of 2026-10-28.
   with statements current. No adoptions, fixes, hand-offs,
   escalations or stale-owner flags. Status: no-op. Full
   detail in pr-catchall/1339-run.md.
+
+## 13:30 to about 13:46 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1330.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged. No knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head 1cbefd1c,
+  verified MERGEABLE/CLEAN) awaits the 15:00 batch.
+  PRs 351, 301 and 256 still CONFLICTING on the
+  action-log append; re-tested against the unchanged
+  main 30f1c620, no fresh comment (unchanged since
+  the 1315 re-notes). A false conflict call on PR 398
+  was posted and corrected in the same pass; later
+  passes must judge mergeability by the merge-tree
+  --write-tree --merge-base exit code. Status: done.
+  Full detail in pr-integration/1330-run.md.
