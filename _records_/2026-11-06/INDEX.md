@@ -4415,3 +4415,22 @@ of 2026-10-28.
   verified identical on the VPS and on github.
   Status: failed. Full detail in
   alliance-donations/2134-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-06-2200.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 58
+  minutes away at pass start). No knowledge or code PR open.
+  Records PR 374 (records/2026-11-06) mergeable at
+  head ecdb57a8 (two commits past the 2145 head: the
+  2145 run record and the donations ticker-2134
+  failed record), awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  unchanged main c102c709; heads unchanged since the
+  2045 pass. No re-check comments posted this pass:
+  the conflict state is unchanged since the 2130
+  re-check comments, per the no-repeat rule settled
+  in the 2145 record. No merges, no escalations, no
+  new PR opened. Status: no-op.
+  Full detail in pr-integration/2200-run.md.
