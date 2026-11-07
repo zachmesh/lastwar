@@ -3968,3 +3968,30 @@ of 2026-10-28.
   re-check comments, so no repeat comment was posted.
   No comments, no escalations. Status: done. Full
   detail in pr-integration/1945-run.md.
+## 19:40 to about 19:48 - Planner pass
+
+- Plan: `tools/queue.py plan --hours 12` staged 6 units -
+  already_present 63, skipped_done_current 0, reaped 0,
+  expired 10. Staged: passes, secrets, treasures, trucks
+  and events 2026-11-07 0657, and scout-midday 2026-11-07
+  0700. Expired (window passed, moved inbox to done with
+  result status expired): daily-missions, vip and scout
+  2026-11-05-1900; events, passes, secrets, treasures and
+  trucks 2026-11-06-1457; and the pre-reset sweep pair
+  zero-sweep-pre-reset-sweep-2026-11-06-001 and -002.
+- Pre-reset sweep: production skipped (19:00 hour run, not
+  the 17:00 hour). Tonight's pair for the 19:00 reset of
+  2026-11-06 (chain pre-reset-sweep-2026-11-06) expired
+  unexecuted at the reset - the Mac has been offline all
+  day (Issue 284, ticker-1934 the 88th consecutive
+  Mac-offline pass). 0 enqueued.
+- Scout diff on the Nov 4 observation (fiftieth planner
+  run to consume it; no Nov 5 or Nov 6 observation yet, the
+  post-reset scout unit scout-2026-11-06-1900 still in inbox
+  unexecuted): fixed branch-tip tool, dry run and apply
+  identical, all zero except unexplained red dots 4 (the
+  narrative's carried unknowns, same 4 as the 1740 and 1840
+  runs). No withdrawals - the Nov 4 observation predates
+  today's inbox units and the diff classified nothing as
+  satisfied. Status: done. Full detail in
+  queue-planning/1940-run.md.
