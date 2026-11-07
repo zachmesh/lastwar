@@ -2601,3 +2601,25 @@ of 2026-10-28.
   occurrence). No gap filed, no issue closed. No material
   change for the owner, so no Slack DM sync and no chat report.
   Status: done. Full detail in knowledge-organization/1532-run.md.
+
+## 15:45 to about 16:00 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1545.
+  Fourth pass inside the 15:00-16:00 PT batch window;
+  the 1500 pass already took the first-pass batch slot,
+  so this pass is non-batch for records purposes
+  (checker still reports due, plain and merge-aware,
+  but it keys on merges and no merge happened at 1500).
+  Merged knowledge PR 405 (shop-claims 1.27.0 ->
+  1.28.0, fold ticker-1452 record, Refs #282) by
+  squash dfc3e08b; local main fast-forwarded to
+  dfc3e08b. All four open records PRs still conflict
+  with new main dfc3e08b on the single file
+  _logs_/repo-actions/action-log.jsonl (verified by
+  git merge-tree and by GitHub); PR 398 re-noted at
+  its new head 78dbe6eb, PRs 351, 301 and 256
+  unchanged since the 1445 re-notes, no repeat
+  comments. No new records PR opened; one action-log
+  line appended for the PR 405 merge. Next merge
+  chance the 19:00 batch. Status: done.
+  Full detail in pr-integration/1545-run.md.
