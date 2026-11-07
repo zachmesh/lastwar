@@ -571,3 +571,8 @@ of 2026-10-28.
   main into records/2026-11-07 (action-log.jsonl, 1016 lines).
   Status: failed. Full detail in
   radar-tasks/0304-queue-run.md.
+
+## 03:15 to about 03:19 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0315.
+  Non-batch pass per the checker merge-aware gate (not due - PR 350 already merged 03:02:53 PT in this window, next batch 07:00): no merges. PR 382 conflict resolved by ticker union-merge (head 721d0a87), verified CLEAN, resolution comment posted; PRs 351, 301, 265 and 256 still conflicted on _logs_/repo-actions/action-log.jsonl, no repeat comments, carried to the 07:00 batch. No knowledge or code PR open. Status: no-op. Full detail in pr-integration/0315-run.md.
