@@ -4303,9 +4303,12 @@ of 2026-10-28.
   2045 pass; re-check comments posted on all five
   this pass (see run record for the note on the
   no-repeat reading used by the 2115 pass). No merges,
-  no escalations, no new PR opened. Status: done
-  (feedback-only). Full detail in
-  pr-integration/2130-run.md.
+  no escalations, no new PR opened. Addendum: knowledge
+  PR 377 (arms-race 1.49.0 fold) opened 21:39 during
+  the pass, reviewed clean and merged (squash commit
+  c102c709); local main fast-forwarded to c102c709.
+  Status: done (feedback-only plus one knowledge merge).
+  Full detail in pr-integration/2130-run.md.
 
 ## 21:32 to about 21:41 - Knowledge organization pass
 
