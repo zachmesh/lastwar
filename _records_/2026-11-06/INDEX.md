@@ -4507,3 +4507,22 @@ of 2026-10-28.
   335 over 24 hours with statements current. No adoption,
   fix, hand-off or escalation. Full detail in
   pr-catchall/2239-run.md.
+- Integrator pass pr-integration-2026-11-06-2230.
+  Non-batch pass per the checker (not due, outside
+  every batch window; next batch 23:00, about 29
+  minutes away at pass start). Knowledge PR 378
+  (alliance-donations 1.44.0) arrived during the pass
+  and was merged by squash (merge c4d44dcb).
+  Records PR 374 (records/2026-11-06) mergeable at
+  head c669904d (one commit past the 2215 head: the
+  2215 run record itself), awaits the 23:00 batch. Records PRs
+  351, 350, 301, 265 and 256 still CONFLICTING on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified by merge-tree against
+  unchanged main c102c709; heads unchanged since the
+  2045 pass. No re-check comments posted this pass:
+  the conflict state is unchanged since the 2130
+  re-check comments, per the no-repeat rule settled
+  in the 2145 record. No escalations, no new PR
+  opened. Status: done.
+  Full detail in pr-integration/2230-run.md.
