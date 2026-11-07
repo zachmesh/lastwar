@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T08:22:00Z
+modified: 2026-11-07T08:37:00Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes, both non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation between the passes, resolution comments posted by the 0015 pass); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284)
+description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284)
 status: unverified
 ---
 
@@ -78,3 +78,23 @@ of 2026-10-28.
   records/2026-10-31 fully contained in main, no PR
   needed. Status: no-op. Full detail in
   pr-integration/0015-run.md.
+
+## 00:30 to about 00:37 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0030.
+  Non-batch pass per the checker (not due, next batch
+  03:00): no knowledge or code PR was open. Seven
+  records PRs await the 03:00 batch, all verified CLEAN
+  against main f7e835d1: PR 382 (records/2026-11-07,
+  head dca1d673, 3 commits) re-verified by merge-tree;
+  PR 381 (head bbd80de3, 4 commits) and PR 351 (head
+  d5625902, 2 commits), PR 350 (head f58e7e33, 3
+  commits), PR 301 (head 655fd4a3, 16 commits), PR 265
+  (head 88b7f6ab, 7 commits), PR 256 (head 5a15c37e, 18
+  commits) unchanged since the 0015 pass, which verified
+  them clean, with PR 351 spot re-checked by merge-tree
+  this pass. No new comments on any shepherded PR, no
+  repeat comments per the no-repeat rule. No merges, no
+  escalations. records/2026-10-31 fully contained in
+  main, no PR needed. Status: no-op. Full detail in
+  pr-integration/0030-run.md.
