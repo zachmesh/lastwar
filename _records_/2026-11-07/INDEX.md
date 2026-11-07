@@ -2049,3 +2049,21 @@ of 2026-10-28.
   against the unchanged main 3d01881e (1145 conflict
   comments still newest). Status: no-op. Full detail in
   pr-integration/1230-run.md.
+
+## 12:30 to about 12:40 - Ticker pass
+
+- Ticker pass ticker-1204. Unit arms-race-2026-11-07-1003:
+  failed, access-failed with the capture-failure mode: the Mac
+  mini is online (last_seen 2026-11-07T18:41:20Z, stale about
+  1 hour 50 minutes; both transports connected and healthy)
+  but the Last War window (1920x1080 at 0, -360) sits on an
+  inactive Space and every screen-capture attempt failed
+  with audio/video capture failure (activate evidence plus
+  three observes). No Arms Race screen read, no task executed,
+  nothing claimed. set_window_frame refused with
+  observation_required; Mission Control, Ctrl+Right and
+  open_app not retried, per the ticker-1020 lessons. The
+  unblock is the owner clicking the LastWar Dock icon once.
+  Tracker untouched. Own PRs: PR 398 (records/2026-11-07)
+  open, 0 comments, nothing addressed to this job. Full
+  detail in arms-race/1204-queue-run.md.
