@@ -2186,3 +2186,20 @@ of 2026-10-28.
   (no state change since the 1245 re-checks). No local
   main sync-back owed. Status: done. Full detail in
   pr-integration/1300-run.md.
+
+## 13:15 to about 13:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1315.
+  NON-batch pass per the checker (plain and
+  merge-aware both not due, next batch point 15:00):
+  no records PR merged; no knowledge or code PR open.
+  Records PR 398 (records 2026-11-07, head d156531f,
+  verified clean by merge-tree probe and gh
+  MERGEABLE/CLEAN) awaits the 15:00 batch. PRs 351,
+  301 and 256 still CONFLICTING on the action-log
+  append; re-tested against the unchanged main
+  30f1c620 and re-noted this pass (fresh comments;
+  diverges from the 1300 no-re-note stance - see
+  1315-run.md Follow-up). No local main sync-back
+  owed. Status: done. Full detail in
+  pr-integration/1315-run.md.
