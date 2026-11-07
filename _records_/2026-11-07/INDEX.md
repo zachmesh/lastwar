@@ -2086,6 +2086,35 @@ of 2026-10-28.
   off-Space; unblock is the owner clicking the LastWar
   Dock icon once). Status: no-op. Full detail in
   tool-development/1232-run.md.
+## 12:32 to about 12:50 - Knowledge organization pass
+
+- Knowledge organizer pass knowledge-organization-2026-11-07-1232.
+  Own PR 399 merged (2026-11-07T19:49:26Z, 0 comments, 0
+  reviews), so no open own PR carries integrator feedback and
+  nothing was fixed or replied. One fold from the new record
+  since the 1132 watermark: ticker-1204 arms-race into
+  arms-race 1.52.0 (PR #400, OPEN, MERGEABLE, CLEAN, Owner
+  lastwar-knowledge-organizer, Refs #282). New lessons:
+  set_window_frame tried before any open_app is still refused
+  with observation_required, so ordering does not bypass the
+  gate; Mission Control, Ctrl+Right and open_app deliberately
+  not retried per the 1020 lessons - the pass applied them
+  instead of re-learning them, and the channel rules are now
+  carried in arms-race too. New open observation: device.list
+  last_seen 18:41:20Z did not advance between the 1104 and
+  1204 passes. The Dock-icon unblock stands and still needs
+  the owner at the Mac. The detail record landed mid-run
+  (9df64968c3) and the fold was verified against it and
+  amended (d01f63a9e) with the invoke count, sync counts and
+  queue stats (inbox 78, done 1128 at 20:29Z); no claim
+  changed. Issue #282 commented twice (109th occurrence
+  6712744549, verification follow-up 6712762738). No new
+  knowledge issue; #247 not re-read (re-read by the 0832
+  run, nothing this hour touches it). No gap filed. No
+  material change for the owner, so no Slack DM sync and no
+  chat report. Status: done. Full detail in
+  knowledge-organization/1232-run.md.
+
 ## 12:39 to about 12:45 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-07-1239. No adopted
