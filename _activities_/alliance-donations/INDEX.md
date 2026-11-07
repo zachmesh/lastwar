@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-07T06:35:23Z
+modified: 2026-11-07T12:32:17Z
 level: L1
-version: 1.44.0
+version: 1.45.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -52,6 +52,7 @@ grounded_in:
   - source: ticker-0934 alliance-donations execution record 2026-11-06 0934 queue run (failed, Mac device offline, seventy-sixth consecutive ticker pass to fail this way, thirty-seventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 26h20m, unchanged since the 0832 pass; five invokes, zero responses; recovery-device health check timed out after 25 seconds, matching the 0741 and 0832 signature)
   - source: ticker-1534 alliance-donations execution record 2026-11-06 1544 queue run (failed, Mac device offline, eighty-first consecutive ticker pass to fail this way, forty-second in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 32h, unchanged since the 1507 pass; six invokes, zero responses, recovery-device health check and repair both timed out after 25s, matching the 1235/1349/1507 signature; Donation Count unread, 30-of-30 daily target unverified for 2026-11-06)
   - source: ticker-2134 alliance-donations execution record 2026-11-06 2134 queue run (failed, Mac device offline, ninety-first consecutive ticker pass to fail this way, fifty-second in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 38h, unchanged since the ticker-1025 pass; six invokes, zero responses, recovery-device health check timed out after 25s; no queue-state divergence this pass)
+  - source: ticker-0420 alliance-donations execution record 2026-11-07 0420 queue run (failed, Mac device offline, ninety-ninth consecutive ticker pass to fail this way, sixtieth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 45h, unchanged since the ticker-0345 pass; six invokes, zero responses, recovery-device health check and repair both timed out after 25s; Donation Count unread, 30-of-30 daily target unverified for 2026-11-07)
 ---
 
 
@@ -157,7 +158,7 @@ activity. Not a separate type.
 - The daily reward is resolved (10:03 run) - the trophy beside
   Tech Donation Today opens Strength Ranking, Donation tab, and
   its Rewards button opens the Donation Ranking Reward panel.
-  The reward is a ranking settlement paid at the 19:00 reset
+  The reward is a ranking settlement paid at the trade-day reset (absolute 02:00 UTC, about 18:00 PST in winter, 19:00 PDT in summer)
   (daily tiers by rank; the 4 to 100 tier pays a 50-count badge
   item 4 and red gem 10), gated on at least 1000 contribution
   points. There is no Claim button in the flow - nothing is
@@ -205,7 +206,7 @@ hard, and they override any earlier closing habit in this file.
   (this regular is segment 1, produced from the 02:03 local slot
   onward) and burn the 30 down early, not in the evening units.
   The quota checkpoints of rule R3 apply - the remaining count is
-  read live six hours and two hours before the 19:00 reset, and a
+  read live six hours and two hours before the trade-day reset (absolute 02:00 UTC, about 18:00 PST in winter, 19:00 PDT in summer), and a
   shortfall raises the next donations unit to priority 1. A day
   may not discover an un-donated remainder at its end.
 
@@ -2346,3 +2347,13 @@ enqueued for after the cooldown (not before about
 - Queue-state note, carried from the record: no working-tree divergence this pass. The pass fetched the remote tip first and worked in a fresh detached worktree of github/records/2026-11-06 at 6deba56400 (planner-2140 tip), verified identical on the VPS and on github - the fetch-first discipline that the 2034 pass lacked, so the divergence class the 2034 record named did not recur here. Sync reaped 0, expired 0, due 22, produced 0 (all already queued). No zombie seeding: the Zombie Invasion chain closed 2026-10-30 when the event ended, and no Zombie Invasion tab is to be seeded until one is seen live in the Events hub again.
 - Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it. The day's Donation Count is unread, so the 30-of-30 daily target is unverified for 2026-11-06.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The pass stopped after this unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 22, produced nothing new, all 22 regulars already queued.
+
+## What the 2026-11-07 0420 unit added - Mac device offline, ninety-ninth consecutive pass, zero-response form
+
+- Unit donations-2026-11-07-0203 by ticker-0420, about 04:20 to 04:24 local, status failed. Evidence in `_records_/2026-11-07/alliance-donations/0420-queue-run.md`. On a working screen this unit would have opened Alliance Techs and donated with the coin button until the daily count was used up or the button greyed on its cooldown, then closed on a live Donation Count read. No donation was made. The loss is the unexecuted donations slot for this cycle (the daily 30 coin donations per reset day, coin button only). The day's donation state is unknown from this pass - the 30 of 30 daily coin-donation target was neither advanced nor verified.
+- No game screen was ever read and no game input was dispatched. Six device invokes, zero responses: computer.session start (attempt 1) on the Mac mini node_offline, connection.health (attempt 2) on the Mac mini node_offline, connection.repair (native) (attempt 3) on the recovery device node_invoke_timeout after 25000ms, connection.health (attempt 4) on the recovery device node_invoke_timeout after 25000ms, computer.session start (attempts 5 and 6, retry) on the Mac mini node_offline. A device.list re-check between attempts 5 and 6 confirmed the Mac mini still offline with last_seen unchanged. device.list reports the Mac mini offline with last_seen 2026-11-05T15:36:52Z (07:36 local), stale about 45 hours at the 04:22 re-check, unchanged since the ticker-0345 pass. The last_seen value is known-stale (it did not move while ticker passes played the game on 2026-11-05), so it is reported as the listed value only, not as the outage start. The recovery device's last_seen is frozen at the same 2026-11-05T15:36:52Z as the Mac mini. This meets the standing at-least-3-attempts retry rule. No probe was run: re-probing is owed only after device.list last_seen refreshes, and last_seen is unchanged, so the CHANNEL_STALL classification from the 1025 probe stands unre-tested.
+- Recurrence, not a new failure class: this is the ninety-ninth consecutive ticker pass with a Mac device-access blocker, sixtieth in the worsened zero-response form after ticker-0345 (ninety-eighth, fifty-ninth). No executed pass is recorded between 0345 and this one. The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the ninety-ninth occurrence onto #282.
+- Nothing new was learned about the recovery route: the recovery-device health check and repair both timed out after 25 seconds, the same signature as the 0345, 0304, 0234 and 0204 passes - the recovery channel still accepts the invoke and never answers within 25 seconds.
+- Reading warning: this failed unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and this unit neither confirms nor supersedes it. The day's Donation Count is unread, so the 30-of-30 daily target is unverified for 2026-11-07.
+- Tracker untouched, per the failed-unit rule; the next tick re-produces the donations unit. The pass stopped after this one unit: with the device fully offline, further units would fail identically. Sync reaped 0, expired 0, due 20, produced nothing new, all 20 regulars already queued. Queue stats at 12:20Z: inbox 75, claimed 0, done 1096. The pre-reset zero-sweep pair for the 2026-11-07 19:00 reset (chain pre-reset-sweep-2026-11-07) sits in the inbox (pending 2), not yet due, untouched by this pass. No zombie seeding: the chain closed with unit 066 on 2026-10-30 and the seeding rule forbids a fresh chain until a Zombie Invasion tab is seen live again.
+- Correction in this version (organizer 0432, Refs #147, #242): the two standing-rule 19:00 anchors in this profile - the ranking reward settlement and the rule R3 checkpoint anchor - now state the trade-day reset as the absolute 02:00 UTC instant (about 18:00 PST in winter, 19:00 PDT in summer). The dated unit-section 19:00 mentions stay as written: they record the geometry as staged on those dates, and the 1034 section already notes the phrasing is superseded by the 02:00 UTC boundary.
