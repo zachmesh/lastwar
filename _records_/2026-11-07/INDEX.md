@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T08:45:00Z
+modified: 2026-11-07T08:56:00Z
 level: L0
 version: 1.0.0
-description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled
+description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch
 status: unverified
 ---
 
@@ -187,3 +187,17 @@ of 2026-10-28.
   closure belongs to the retro. No new Issue filed.
 - Pool: inbox 75, claimed 0, done 1078, upcoming 49. Status:
   no-op. Full detail in queue-planning/0040-run.md.
+## 00:45 to about 00:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-0045.
+  Non-batch pass per the checker (not due, next batch
+  03:00): merged knowledge PR 385 (radar-tasks 1.44.0,
+  ticker-0011 fold, Refs #282, #284) and code PR 384
+  (shared device token, Refs #383) by squash; main now
+  74db107bc; local main synced back by bundle. Issue
+  #383 commented with the merge. Seven records PRs
+  await the 03:00 batch, all verified MERGEABLE/CLEAN;
+  PR 382 head moved during the pass by the planner-0040
+  record (a34c4128). Merge-time action-log line added
+  on records/2026-11-07. Status: done. Full detail in
+  pr-integration/0045-run.md.
