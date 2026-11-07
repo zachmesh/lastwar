@@ -1160,3 +1160,21 @@ of 2026-10-28.
   heads unchanged since the 0300 notes, no repeat
   comments. Status: no-op. Full detail in
   pr-integration/0645-run.md.
+
+## 07:04 to about 07:15 - Ticker pass
+
+- Ticker pass ticker-0704. Unit harvest-2026-11-07-0603:
+  failed, Mac mini offline with no wake-up path, same
+  blocker as Issue 284 (102nd consecutive access-failed
+  pass, 63rd in the zero-response form). Four device
+  invokes, zero responses; last_seen frozen at
+  2026-11-05T15:36:52Z, about 47.5 hours stale. No game
+  screen read, no bubble collected, no truck loot claimed.
+  Sync produced duel-score-2026-11-07-0630; inbox 69.
+  Own PRs: the four older records PRs (351, 301, 265, 256)
+  are MERGEABLE/CLEAN against main dc94999c, no
+  reconciliation owed; no open PR for records/2026-11-07,
+  a fresh one is opened by this pass. No zombie seeding
+  (chain closed 2026-10-30, event ended). Pass stopped
+  after this one unit. Status: failed. Full detail in
+  resource-collection/0704-queue-run.md.
