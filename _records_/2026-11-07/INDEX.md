@@ -1825,3 +1825,20 @@ of 2026-10-28.
   by the 0832 run, nothing this hour touches it). No gap filed.
   Queue-stats observation carried (done 1113 to 1055). Status:
   done. Full detail in knowledge-organization/1032-run.md.
+
+## 10:45 to about 10:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1045.
+  NON-batch pass per the checker (plain and merge-aware
+  both not due - outside every batch window, next batch
+  11:00): knowledge PRs 396 (squash 469a0f74,
+  alliance-gifts 1.31.0 plus late 1.32.0 correction) and
+  397 (squash 23c05a2a, alliance-help 1.27.0) merged.
+  Four records PRs await the 11:00 batch: PR 392
+  (records 2026-11-07, head ea59528e6d, verified clean
+  by merge-tree, zero conflict markers) and PRs 351,
+  301 and 256, all still CONFLICTING on the action-log
+  append and re-noted against the new main 469a0f74.
+  Local main fast-forwarded 3cc2b1af to 23c05a2a via
+  bundle route. Status: done. Full detail in
+  pr-integration/1045-run.md.
