@@ -2476,3 +2476,32 @@ of 2026-10-28.
   the 2245 escalation. Merges synced to the owner Slack DM
   (message_ts 1794164235.088659, 1794164900.810809). Full detail in
   pr-integration/1045-run.md.
+
+## 10:54 to about 11:09 — Queue ticker pass, shop claims (passes)
+
+- Passes unit passes-2026-11-08-0657 (partial): shop and pass
+  pages checked live. Monthly pass gift already claimed today
+  (ticker-0634, 06:35); no owned weekly pass claimable (S2 Drone
+  Components and S1 Drone Parts both $4.99 offers); no free Hot
+  Deals pack; no Free Supply payout seen on opening (already
+  claimed this reset day by ticker-2234). Season hub claim path
+  probed from the Calculating card (Week 8 screen) and Season
+  Contributions (Alliance Contribution Ranking; Bears Lair rank
+  69, 4,110,000 points): no Season Battle Pass free tiers and no
+  Season Weekly Pass Daily Freebie or Daily Pickup found; Goals
+  and Profession buttons unprobed, carry to the next passes unit.
+  Weekly Pass reset still reads 18:00:00 against the metadata
+  19:00. Legendary Take All $19.99 not touched. Full detail in
+  shop-claims/1054-queue-run.md.
+
+## 11:07 to about 11:15 — Queue ticker pass, secret missions (secrets)
+
+- Secrets unit secrets-2026-11-08-0657 (partial): four finished
+  tasks claimed at once with one Claim tap and verified with gold
+  PERFECT stamps - UR Rescue Test Subject, SSR Train Refugees,
+  SSR Provide Tech Support to Refugees, SSR Search for Missing
+  Refugees; Your Tasks badge 17 to 8. Duel Day 7 off day, no
+  Mega Refresh. Mega Deploy, Reward Recovery and ally assists
+  (0/5) not reached in the pass budget; Hidden Treasures tab
+  carries a red badge 1, left for its own unit. Full detail in
+  secret-missions/1114-queue-run.md.
