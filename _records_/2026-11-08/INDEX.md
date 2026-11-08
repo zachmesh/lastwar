@@ -2385,3 +2385,59 @@ of 2026-10-28.
   unclassified. Owner-decision issues 132, 154 and 335 all over
   24 hours with statements current. Status: no-op. Full detail
   in pr-catchall/1039-run.md.
+- Knowledge-organizer 1032 run. Own PR 454 MERGED
+  (2026-11-08T17:48:35Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-0934
+  scout 0937 and harvest 0958 into 3 profiles as commit
+  (18573b87de) on PR 455 (MERGED 2026-11-08T18:49:40Z,
+  first commit only): perception-scout 1.40.0
+  - Shop Campaign tab complete, 17 items, 1,260 stars, 7
+  SOLD; Shop Season tab complete, 11 items, 800 crystals,
+  Sandstorm Master SOLD; History tail complete, 15 rows
+  (6 victories + 9 defeats = 15); CORRECTION: Narrow
+  Victory timestamp is 02:23, not 02:33 as the 0734 unit
+  guessed, and the 0734 open item "History tail rows
+  unread" is now answered; the two March rows carry the
+  [Z76] tag, not [AP3x]; Donation Count 2/30 at entry;
+  Doomsday count finish carries to successor seq 007.
+  resource-collection 1.39.0 - food +8.2M, coin +5.4M,
+  iron +7.5M, all HUD-verified; one-tap farmland rule
+  holds (third confirmation); top-edge bubbles unreliable
+  - a 4-tap batch collected nothing and opened the Power
+  Details panel, so never batch-tap near the HUD power
+  figure; Power Details breakdown measured (Hero
+  65,282,351, Drone 5,807,288, Building 10,292,275);
+  sweep partial, armed truck loot unverified.
+  alliance-donations 1.66.0 - Donation Count 2/30 at the
+  0937 entry, up from 1/30 at the 0808 close with no
+  donation in between, so the move is replenishment; the
+  +1 landed between the 0920 post-timer re-read (still
+  1/30, about 09:20) and this entry read (about 09:37) -
+  within about 17 minutes, the first +1 bounded inside a
+  single short window with both endpoints read live; the
+  observation file's caveat is resolved in favour of
+  replenishment; the changed route stands (do NOT tap
+  from 1/30 on Quick Construction). The re-read owed to
+  the already-queued donations-2026-11-08-1621 has now
+  landed as the 1034 unit (commit a2cafb907, folded
+  into alliance-donations 1.67.0 below). Issues #160,
+  #423, #450 and #282 commented with the new evidence
+  (issuecomment-6725504774, 6725505042, 6725505179,
+  6725505315, plus 6725606994, 6725607126, 6725607277,
+  6725607468 for the 1034 fold, plus corrections
+  6725630463, 6725630666, 6725630838, 6725631013);
+  no new Issue filed.
+  alliance-donations 1.67.0 - ticker-1017 donations
+  unit (1034-queue-run.md, commit a2cafb907): entry
+  Donation Count 4/30 (replenished from 1/30), three
+  coin donations verified live 4 to 3 to 2 to 1, stopped
+  at the live-read 1/30 per the changed route - the
+  route is validated in practice; no timer after taps
+  from 2 or above; War-tab branch still untested;
+  weekly settlement countdown 07:32:28 at entry.
+  PR 455 MERGED at 2026-11-08T18:49:40Z with only its
+  first commit; the 1.67.0 fold is re-PR'd as PR 456
+  (cherry-pick d71a64e45b2 onto main 544c28bc36, OPEN
+  and MERGEABLE, mergeState CLEAN, at run close).
+  Status: done. Full
+  detail in knowledge-organization/1032-run.md.
