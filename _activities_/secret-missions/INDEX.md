@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-08T13:39:58Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0234 secret-missions execution record 2026-11-04 0248 queue run (partial, post entered, Claim buttons unresponsive)
   - source: ticker-0534 secret-missions execution record 2026-11-04 0545 queue run (partial, second consecutive Claim-blocker partial, four variants tried, foreground still untested, Issue #171 commented by the executor)
   - source: ticker-0834 secret-missions execution record 2026-11-04 0847 queue run (partial, third consecutive Claim-blocker partial, same four finished tasks still unclaimed, badge still 9, R2 metadata write)
+  - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, white truck badge 8 is the Secret Command Post entry, task rows read, record commit 111f7e954 on records/2026-11-08)
 ---
 
 
@@ -1062,3 +1063,42 @@ secrets-2026-10-31-2257, status partial).
 - CORRECTION, recorded here, record file untouched (append-only): the 0847 record states this is the "first such secrets blocker in this pass" and that "previous secrets units today closed done". That is contradicted by this profile's own 0248 and 0545 sections, folded from those units' records: 0248 (four SSR claims blocked, 5 background taps) and 0545 (second consecutive Claim-blocker partial, four input variants) both closed partial on this same blocker. The 0847 unit is therefore the THIRD consecutive Claim-blocker partial, not the first. Under queue rule R2 as corrected in the 0545 section, the third consecutive partial writes the blocker into the activity metadata (see "How claiming works"), changes the entry route before any further unit of this type runs, and is named in that day's round summary; a fourth identical partial is a process failure reported to the owner.
 - Not reached in this unit: Mega Deploy of the remaining pending tasks (UR Only off, no Mega Refresh first since today is an Age of Science duel day, not a UR day) and the Reward Recovery check. Because Mega Deploy was not reached, this unit is NOT evidence for Issue #165 (Mega Deploy and Assist buttons) - it is evidence for Issue #171 (green Claim buttons unresponsive), commented there by this run together with the session-dependence note from the 0914 daily-missions unit (buttons responded in session cc-441). No new issue filed: #171 already covers this blocker.
 - Game left on the Secret Command Post screen for the next unit to resume from. Tracker untouched, per the rule for partial units; the next tick re-produces secrets and resumes the claim.
+
+
+## What the 2026-11-08 0512 scout read added - white truck badge 8 is the Secret Command Post entry, at least 8 claimable task rows
+
+- Scout unit scout-midday-scout-mid-2026-11-03-006 by ticker-0504, about
+  05:05-05:12 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0512-queue-run.md` (commit
+  111f7e954 on records/2026-11-08). Observe-only; nothing claimed.
+  The secrets regular owns claims and its units are already queued.
+- The left-column white truck icon with badge 8 opens the Secret
+  Command Post, Secret Mobile Squad page - tap-verified at grounded
+  norm (50,641). The icon is the jeep from the panel header, and the
+  panel's jeep icon carries the same badge 8. This is NOT a truck
+  surface: the icon is the Secret Command Post entry. Correction: the
+  0845 trucks section's "trade-icon grounding mislabel opens Secret
+  Command Post" framing is superseded - the white truck icon
+  genuinely opens the Secret Command Post; there was no mislabel,
+  only the wrong expectation.
+- Secret Mobile Squad, read live about 05:13: "Dispatch heroes to
+  perform secret tasks to defeat enemies, maintain order and get
+  rich rewards." Assist Allies 0/5, Plunder Others 0/5. Tabs: Your
+  Tasks badge 17, Ally Tasks badge 5, Others' Tasks. Recover and
+  Record buttons, Difficulty stars, Normal mode.
+- Your Tasks rows, all with green Claim buttons - observed only, NOT
+  claimed: UR Rescue Test Subject Lv.5; SSR Train Refugees Lv.5; SSR
+  Provide Tech Support to Refugees Lv.5; SSR Search for Missing
+  Refugees Lv.5 (first screen), then after one drag SSR Search for
+  Missing Refugees Lv.5 x2, SR Retrieve Abandoned Gear Lv.5, SR
+  Retrieve Valuable Supplies Lv.5, with a ninth row (Retrieve Raw
+  Materials) cut off at the bottom. At least 8 claimable rows were
+  seen, matching the badge 8: the badge counts completed Secret
+  Mobile Squad tasks awaiting claim.
+- No claim was attempted in this unit, so the standing Claim-button
+  blocker (Issue #171, green Claim buttons unresponsive in the 0248,
+  0545 and 0847 units) is untested by this read. Tabs Hidden
+  Treasures and Ghost Ops not opened in this unit (the treasures and
+  ghost-ops regulars own them).
+- Game left safe: base screen. No claim, no dispatch. No Assemble,
+  no teleport.
