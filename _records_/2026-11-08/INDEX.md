@@ -717,3 +717,23 @@ of 2026-10-28.
   rotated to Tech Research (02:52:53 left, score 0); Winter
   sub-pages to successor seq 004. Full detail in
   perception-scout/0325-queue-run.md.
+
+## 03:15 to about 03:23 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0315.
+  NON-batch pass (checker merge-aware verdict not due:
+  PR 426 already merged 03:05:29 PT in this window;
+  clock-only due yes, first-pass rule governs). No
+  records merges. Records PR 439 clean at head 42ef0190,
+  awaiting the 07:00 batch. Records PR 430 conflict
+  persists at new head 447ebb411, 11 files (action-log
+  plus queue-pool state), updated comment posted,
+  carried for branch-side resolution. Knowledge PR 434
+  feedback carried (only the stale title remains, head
+  unchanged, no repeat comment). Tools PR 425
+  owner-gated, unchanged since the 2245 escalation, no
+  owner reply. Records PRs 351 and 301 still conflict on
+  the single action-log file, carried. No new records PR
+  opened (every branch with commits beyond main already
+  has one). Status: done. Full detail in
+  pr-integration/0315-run.md.
