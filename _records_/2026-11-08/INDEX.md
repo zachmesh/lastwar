@@ -3357,3 +3357,13 @@ of 2026-10-28.
   Owner-decision issues 132, 154 and 335 all over 24 hours with
   statements current. Status: no-op.
   Full detail in pr-catchall/1439-run.md.
+
+- Tool-developer pass tool-development-2026-11-08-1432.
+  Fixed issue #466 (sync re-produced a unit already closed on
+  the records branch): sync production now skips slots closed
+  on the branch or by a completion marker, reporting them
+  under skipped_closed. Implementing PR #467 opened (commit
+  1b0221bcc); own PR #425 still owner-gated, no action owed.
+  Status: done.
+  Full detail in tool-development/1432-run.md.
+
