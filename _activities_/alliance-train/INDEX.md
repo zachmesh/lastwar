@@ -3,7 +3,7 @@ title: Alliance Train
 created: 2026-10-25T20:12:00Z
 modified: 2026-11-08T06:32:17Z
 level: L1
-version: 1.29.0
+version: 1.30.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-1818 alliance-train execution record 2026-11-07 1826 queue run (check-only partial, ninth in a row, no banner, station not viewed)
   - source: ticker-2134 perception-scout execution records 2026-11-07 2140/2153 queue runs (partial, station panel re-checked, third no-train confirmation in one pass, check-signals-first entry route; record commit fe5a1e7fd3 on records/2026-11-07)
   - source: ticker-2304 perception-scout execution records 2026-11-07 2311/2317 queue runs (partial, station panel re-checked, fifth no-train confirmation in one pass, Train Conductor appointments in the Record Event tab; record commit 03dc69e0c on records/2026-11-07)
+  - source: ticker-0004 perception-scout execution record 2026-11-08 0022 queue run (partial, midday remainder, station panel re-checked, fourth no-train confirmation, no train preparing; record commit e6192726d1 on records/2026-11-08)
 ---
 
 # Alliance train
@@ -1033,3 +1034,9 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Preparation signals, both absent in both units: no train icon in the left icon column (avatar Lv.30, hammer 2/4, flask 2/2, green face 6.5C, white truck, radar, wrench) and no Boarding closes in banner under the resource bar. No train is preparing in this window, so the STATION PLATFORM screen has no live state to read. This is the fifth independent confirmation of this state inside the ticker-2304 pass (units 2140, 2145, 2153, 2311, 2317) and the 2317 unit closed partial without panning, per the check-signals-first entry route. March Queues 0/4 on the world map at 23:12.
 - Train Conductor appointments, read live in the Record Event tab (a new read source for the conductor role): Texan Apex appointed Roronoa zo as the Train Conductor, 2026-11-8 00:05:53; Nd45pd4 appointed LAMP 1 as the Train Conductor, 2026-11-7 00:05:12. The conductor is an officer-appointed role; no member action follows from the appointment alone.
 - Streak note: the 1826 train unit was the ninth check-only outcome in a row for train units. These two scout re-checks are not train-unit outcomes and do not extend that streak count - they are recorded here as scout confirmations, not train checks. Successor scout unit 007 is enqueued under chain scout-2026-11-02 for the remaining alliance surfaces. Game left on the own base screen.
+
+## What the 2026-11-08 0022 scout unit added - station panel re-checked, no train preparing, fourth consecutive confirmation
+
+- Scout unit scout-midday-scout-mid-2026-11-04-002 by ticker-0004, about 00:13 to 00:22 local, status partial (midday remainder). Evidence in `_records_/2026-11-08/perception-scout/0022-queue-run.md` (commit e6192726d1 on records/2026-11-08). Observe-only; no boarding action, no Trade Contracts spent, no train summoned.
+- Preparation signals, both absent: no train icon in the left icon column (avatar Lv.30, hammer 2/4, flask 2/2, green face 6.5C, white truck, radar, wrench) and no Boarding closes in banner under the resource bar. No train is preparing in this window, so the STATION PLATFORM screen has no live state to read. This is the fourth consecutive confirmation of this state in the record's frame (units 005, 006, 007 of chain scout-mid-2026-10-31, and this unit); the 2311/2317 section counts five confirmations inside the ticker-2304 pass under a different frame, so the two counts are not directly comparable. The check stopped at the signals per the R2-hardened entry route (alliance-train metadata 1.6.0): no pan of the base edge, no station platform visit.
+- Streak note: the 1826 train unit was the ninth check-only outcome in a row for train units. This scout re-check is not a train-unit outcome and does not extend that streak count - it is recorded here as a scout confirmation, not a train check. Successor scout unit seq 003 is enqueued under chain scout-mid-2026-11-04 for the remaining store tabs. Game left on the own base screen.

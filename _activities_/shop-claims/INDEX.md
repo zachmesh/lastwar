@@ -3,7 +3,7 @@ title: Shop Claims
 created: 2026-10-25T18:58:00Z
 modified: 2026-11-08T06:32:17Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-1452 shop-claims execution record 2026-11-07 1458 queue run (failed, Mac back online, window off-Space, capture failure, one-hundred-eleventh consecutive ticker pass to fail this way, fifth in the capture-failure form, Issue 282; window 160366 pid 59735 at (0,-360), 9 invokes zero game screens, 5 capture attempts failed identically, Mission Control / Ctrl+Right / open_app / set_window_frame not retried per the 1020 lessons; last_seen 22:39:40Z fresh, about 13 minutes before the pass; sync reaped 0 expired 9 due 22, produced duel-score-2026-11-07-1430, queue stats inbox 66 done 1077 at 22:54Z; last live passes read stands at the 2026-11-04 0841 checked-only unit (the record's 0633 line is a mislabel, corrected in the section); record commit 40b58874c0 on records/2026-11-07, verified against the Issue #282 comment 2026-11-07T22:59:38Z which agrees on every point)
   - source: ticker-1834 shop-claims execution record 2026-11-07 1853 queue run (done, 3 claims, first live shop read since 2026-11-04, Free Supply auto-claim and monthly gift re-confirmed)
   - source: ticker-2204 perception-scout execution record 2026-11-07 2209 queue run (partial, Mall strip walked in full, Weekly Pass reset 18:00:00 fourth live confirmation, Super Monthly Pass Days Left 14, check-in FREE GIFT claimable; record commit 0e4f2e52e2 on records/2026-11-07)
+  - source: ticker-0004 perception-scout execution record 2026-11-08 0022 queue run (partial, midday remainder, Weekly Deal page closed, Official Event tab dot, check-in FREE GIFT still carried; record commit e6192726d1 on records/2026-11-08)
 ---
 
 
@@ -897,3 +898,11 @@ the free and already paid for parts, never the paid unlocks.
 - Diamond tab: paid diamond packs only (10000, 5000, 2000, 1000, 500; "Double Diamonds"); nothing free or claimable visible. Gold Brick Mall tab: paid gold packs only (x1000 $4.99, x50000 $9.99, x100000 $999.99 shown in OCR; 5% Bonus banner); nothing free visible. Hot Sale Packs tab: "Packs sold out" - nothing available.
 - Not walked: Weekly Deal page (named in the strip, page not opened) and the VIP panel and daily missions panel - all carried to the successor in chain scout-mid-2026-11-03. Unknown item: small chest icon overlaid on the Weekly Pass and Super Monthly Pass tabs (possibly an owned-pass marker; meaning unread).
 - Red dots in the surfaces walked: Official Event tab dot and the check-in FREE GIFT claimable - both explained, mapping to this regular. No other claimable surface was seen in the Mall strip.
+
+## What the 2026-11-08 0022 scout read added - Weekly Deal page closed, Official Event dot, check-in gift still waiting
+
+- Scout unit scout-midday-scout-mid-2026-11-04-002 by ticker-0004, about 00:13 to 00:22 local, status partial (store group). Evidence in `_records_/2026-11-08/perception-scout/0022-queue-run.md` (commit e6192726d1 on records/2026-11-08) and the observation appended to `_records_/2026-11-04/perception-scout/observation.md`. Observe-only; nothing claimed or bought - the check-in gift below is this regular's work, still carried.
+- Official Event tab (red dot): "Visit the Last War Store for more rewards!" with +5% badge; banner p1 "Claim points and redeem great rewards", 1000 POINTS card; Go button not tapped. The check-in FREE GIFT banner (p2) was read by the 2209 unit about 22:05 on 2026-11-07 and is still carried for this regular (it was queued for the 22:57 passes window; no passes-unit record for that window has landed on the branch yet, so the claim is still unverified).
+- Weekly Deal tab (no dot), window 2026-11-2 00:00:00 to 2026-11-8 23:59:59 - three paid packs, all observed only: Valor Badge (Epic) $99.99, 1 purchase available; Base Upgrade (Epic) $19.99, 1 purchase available; UR Set (Elite) $49.99, 1 purchase available. This closes the "Weekly Deal tab page" item the 2209 unit carried. The window ends 2026-11-8 23:59:59, so the tab's contents lapse at the end of today.
+- Not re-walked in this unit: Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall and Hot Sale Packs tabs (last walked by the 2209 unit about 22:05 on 2026-11-07: Super Monthly Pass Daily Pickup already Claimed, 14 days left; four $4.99 weekly pass cards; Diamond and Gold Brick Mall paid packs only; Hot Sale Packs sold out). Carried to successor seq 003 of chain scout-mid-2026-11-04.
+- Red dots in the surfaces walked: Official Event tab dot maps to the check-in gift, explained, mapping to this regular. Unknown item: small chest icon overlaid on the Weekly Pass and Super Monthly Pass tabs (possibly an owned-pass marker; meaning unread) - carried from the 2209 section.
