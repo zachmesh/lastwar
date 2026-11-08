@@ -487,3 +487,34 @@ Stale post-reset pass of 2026-11-02 executed late in the current reset day, foll
 ### Unwalked, carried to successor seq 010 of chain scout-2026-11-02
 
 - The station panel only: train entry and preparation state. Seq 009 (already in inbox) owns the other named remainders: Settings, Record Member/Message/Event tabs, Gifts Premium tab, Assemble and Strength Ranking tiles.
+
+### Station-panel re-check, read live about 04:40 local (unit scout-midday-scout-mid-2026-10-31-009, ticker-0434)
+
+- Base screen: power 149,850,353 (unchanged from the 0022 read at 00:16 and the 0404 read at 04:16); food 478.8M, iron 802.1M, coin 6.9M; 25.0M, 922.2K; diamonds 13.22K; cart 4,217; stamina 120; Season II 7d 13:22:59; Wanted Boss badge 2, timer 00:04:00.
+- Both train-preparation signals absent: no separate train icon in the left column, no "Boarding closes in" banner under the resource bar. No train is preparing in this window; no pan, no station visit, per the unit window instruction.
+- Icon identity note: the blue vehicle icon in the left column is the Trucks entry per the 0404 tap-verified read at 04:19 today, but the 0022 unit read the same icon as radar. Neither reading makes it a train icon; the disagreement is recorded for the diff/retro step.
+- Red dots seen 11, explained 11, unexplained 0. Unknown items: furnace overdrive toast [22/60] (recurring), hammer dot trigger and ownerless routing, 99+ badge, Season II badge.
+- No successor from this stale chain; the re-check recurs with the current day's scout pass (scout-midday-2026-11-08-0700 already in inbox). Chain scout-mid-2026-10-31 spent.
+
+### Alliance remainder, read live about 04:39-04:46 local (unit scout-scout-2026-11-02-009, ticker-0434)
+
+- Alliance panel: [AP3x] The Apex, 5.0, Leader Abŷss Apex, Power 13,363,455,935, Members 96/100, Language English. Panel dots: Wars, Help, Gifts, Techs. Banner: Alliance Star (Event 40), Time Left about 13:10 to 13:04. Bottom row: Record, Applicants, Alliance Star, Settings. Second row (scrolled): Alliance Events, Alliance City, Season Contributions, Season Milestones, Alliance Furnace.
+- Settings: Alliance Permissions, Alliance List, Leave Alliance (red, never tapped).
+- Record - Alliance Logs, four tabs. War: [VR4L] tater chip #2110 attacked [AP3x] 도고 Dogo's Gold Mine #2110, defenses held, 2026-11-8 10:35:05; [AP3x] Missile Apex #2110 attacked [Que] foltzinator's base #2110, victory x5 at 08:50:59/55/52/51/43. Member: MegaLoki Apex application approved 2026-11-8 02:47:18; QueenSTX Apex left 02:07:08; rank changes for TheGoldenEclipse 1 to 3 and Commander Supa 1 to 3 (2026-11-7); Cinmor approved 2026-11-5; JAGX재그엑스 and JerryLogDog 1 to 2 (2026-11-4). Message: Assembly Point set twice by TTS Rage Apex 2026-11-7 02:48; Slogan updated x3 2026-10-30; Assembly Points set by Abŷss Apex (501,392) and cute small baby (471,430). Event: Marshal's Guard activation scheduled for server time 2026-11-9 21:00:00 difficulty 12; Train Conductors appointed (Roronoa zo 2026-11-8, LAMP 1 2026-11-7); Lv.8 Doomsday Stronghold search scheduled 2026-11-9 23:15:00. Marshal's Guard / Doomsday stay on Issue #427.
+- Gifts: Level 28, 193,203,470/206,300,000. Regular: Doom Walker Loot +10 rows (Krazy Sully x3, 벌꿀오소리Teemo), Claim All badge 130. Premium: (R) +50 Coin Weekly Pass, (MR) +1000 Mega Express Contract, (R) +50 Advanced Training Pass, (SSR) +200 Premium Training Pass, Claim All badge 12. Nothing claimed.
+- Assemble (inspect only): "You are close enough to Assembly Point X:488 Y:395." Teleport item 3/1; Teleport never tapped.
+- Strength Ranking: Power top 6 (ItStartsWithaDream 271,007,082; Abŷss Apex 266,260,167; StarFall 208,552,393; Nuna Knuckles 204,828,060; xChroniApex 201,091,043; papillon707 198,801,977), own #34 Bears Lair 149,850,353. Kills top 6 (벌꿀오소리Teemo 71,985,826; TTS Rage Apex 39,938,810; Missile Apex 30,319,816; Abŷss Apex 25,185,511; ItStartsWithaDream 21,394,076; 꿀밤Bamie 21,330,771), own #94 Bears Lair 48,638. Donation Daily top 5 (papillon707 9,600; Skinner Box 7,500; Sanction Apex 7,100; Krazy Sully 7,000; 벌꿀오소리Teemo 6,650), own #30 Bears Lair 3,450 today. Donation Weekly top 5 (DCna8ive 161,250; KaBoom420 151,500; Texan Apex 101,600; MrCallejon 89,250; papillon707 77,700), own #82 Bears Lair 26,000 this week.
+- Red dots seen 6, explained 5, unexplained 1 (Wars dot, Issue #212). Unknown items: top ticker full text unread.
+- No successor from this unit; chain continues with seq 010 (station panel) already in inbox.
+
+### Correction (appended 2026-11-08 about 04:47 local)
+
+- The 0440 record's "costs: about 8 min" for unit scout-midday-scout-mid-2026-10-31-009 is wrong: the tool-measured duration is 133 seconds (12:36:36Z to 12:38:49Z). The duration_seconds field in the done unit file is authoritative; only the free-text estimate is corrected, by append, per C1.
+
+### VIP re-check, read live about 04:52-04:54 local (unit scout-midday-scout-mid-2026-11-03-005, ticker-0434)
+
+- MY PROFILE: Lv.30 [AP3x]Bears Lair, 149.8M power, 48.6K kills, Lv.63, Lv.2, [AP3x]The Apex, VIP13 with a red dot, #2110. Likes 1,810. Gifts on display: flower 12, gift box 88, trophy 11. Moments: no posts. Bottom row: Record with a red dot, Account, Settings, Rankings, Follow.
+- VIP panel: VIP13, logged in 2 days in a row, progress 1,605,970/2,000,000 (unchanged from the 0204 read). Privileges as read before (Crafting 50%, Research 20%, Mega Mode of Trade Trucks 1, Food/Iron/Coin Output 25%, Construction 50%, March 15%, Max Units 5%).
+- VIP13 Daily Freebie STILL claimable at about 04:53 (puzzle 2, brown crate 13, grey crate 13, gold 13, green Claim button) - observed only, not claimed. The vip unit vip-2026-11-07-1900 sits stalled in inbox (priority 1, age about 21 hours); the claim belongs to that unit.
+- VIP Exclusive (Epic) $99.99, Availability 1, timer 18d 13:16:45. Cart icon top-right carries a red dot (cause unread, not tapped).
+- Red dots seen 3, explained 2, unexplained 1 (cart dot). Unknown items: cart dot cause. The 3-dots explanation stays with seq 006, already in inbox.
