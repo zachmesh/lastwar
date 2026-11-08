@@ -2703,3 +2703,31 @@ of 2026-10-28.
   current main 1c39fa82. No records PR opened. No
   records branch left PR-less. Status: done. Full detail
   in pr-integration/1145-run.md.
+
+## 11:59 to about 12:05 — Queue ticker pass, perception scout (Doomsday count finish)
+
+- Scout unit scout-scout-2026-11-03-007, done: the
+  Doomsday count finish is fully read live - Rewards
+  first-kill rows Lv.100-220 (13 rows) and cumulative
+  rows 20-100 (9 rows), all claimed; Damage Ranking top
+  6 (Nuna Knuckles 7.5G first; self Bears Lair Unlisted,
+  0 damage); Ranking Reward tiers No.1 x50 down to
+  No.51-200 x25. Chain scout-2026-11-03 complete, no
+  successor. Red dots 0 seen, 0 explained, 0
+  unexplained in this unit scope. Tracker untouched
+  (stale chain, not the current day's scout pass). Full
+  detail in perception-scout/1159-queue-run.md and the
+  2026-11-03 observation file.
+
+## 12:11 to about 12:21 — Queue ticker pass, resource collection (harvest)
+
+- Harvest unit harvest-2026-11-08-1003, partial: the
+  farmland food bubbles are collected (food 487.9M to
+  489.5M, +1.6M HUD-verified) and the field is clear.
+  Coin bubbles (about four, roughly 0.8M) remain, iron
+  bubbles unverified (a +1.3M iron HUD move during the
+  unit has no confirmed bubble cause and is not claimed
+  as collected), top-edge bubbles and armed truck loot
+  still unverified. The unit closed at the token expiry
+  (12:22:56). Tracker untouched. Full detail in
+  resource-collection/1211-queue-run.md.
