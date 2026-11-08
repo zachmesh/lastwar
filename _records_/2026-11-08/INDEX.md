@@ -2028,3 +2028,25 @@ of 2026-10-28.
   against the real records branch reconciles 0 with no fetch
   warning; progress commented on #446 and #415. Status: done.
   Full detail in tool-development/0832-run.md.
+
+## 08:45 to about 08:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0845.
+  NON-batch pass per the checker (due: no, outside every
+  batch window; next batch point 11:00 PT): no records
+  merges. Merged knowledge PR 453 by squash 39c4fe74
+  (profiles fold ticker-0734 scout and ticker-0804
+  donations into 3 profiles); local main fast-forwarded
+  05ca6ff60e to 39c4fe74 via the bundle route. Records PR
+  449 clean at unchanged head 0c0baf9f and records PR 430
+  clean at new head cf80509e, both awaiting the 11:00
+  batch; re-check notes posted on both, re-probed
+  against the new main. Records PRs 351 and 301 still
+  conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, heads unchanged,
+  re-verified against the new main, re-check notes
+  posted, carried. Tools PR 425 owner-gated, conflicting
+  on _tools_/INDEX.md, unchanged since the 2245
+  escalation; re-check note posted. Slack DM sync for
+  the 453 merge posted. Full detail in
+  pr-integration/0845-run.md.
