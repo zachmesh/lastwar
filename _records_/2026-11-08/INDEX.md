@@ -2561,6 +2561,30 @@ of 2026-10-28.
   Owner-decision issues 132, 154 and 335 all over 24 hours with
   statements current. Status: no-op. Full detail in
   pr-catchall/1139-run.md.
+
+## 12:39 to about 12:43 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-08-1239. No adopted open PR
+  (PR 137 stays merged). Six open PRs scanned, none owned by
+  this job: PR 462 (token-renew tooling, Owner
+  lastwar-tool-developer, clean at head 9e586aa4), PR 460
+  (records 2026-11-08 post-1100-batch appends, Owner
+  lastwar-pr-integrator, clean at head 20d302a3), PR 457
+  (records 2026-11-07 post-1100-batch appends, Owner
+  lastwar-pr-integrator, conflict resolved by ticker-1223,
+  clean at head 09302a7a), PR 425 (tooling log gate,
+  owner-gated on the policy-file amendment, awaiting the
+  owner decision, still conflicting against main 1c39fa82
+  per the integrator 1215 note), PR 351 (records 2026-11-05,
+  still conflicting on the action-log append, integrator
+  1200 re-check), PR 301 (records 2026-11-04, still
+  conflicting on the action-log append, integrator 1200
+  re-check). PR 459 merged since the 1139 pass (main
+  advanced to 1c39fa82). One new issue since the 1139 pass
+  (461, labeled tooling at creation); 72 open issues, zero
+  unclassified. Owner-decision issues 132, 154 and 335 all
+  over 24 hours with statements current. Status: no-op.
+  Full detail in pr-catchall/1239-run.md.
 ## 11:32 to about 11:50 — Knowledge organization run (hourly)
 
 - Knowledge-organizer 1132 run. Own PR 456 MERGED
@@ -2748,6 +2772,85 @@ of 2026-10-28.
   records PR opened. No records branch left PR-less.
   Status: done. Full detail in
   pr-integration/1200-run.md.
+
+## 12:22 to about 12:35 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1215.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges. Tools PR
+  425 owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision, still conflicting on
+  _tools_/INDEX.md, one updated conflict note against
+  new main 1c39fa82 (issuecomment-6726657034). Records
+  PR 460 clean at new head 0e1c216e, awaiting the 15:00
+  batch. Records PRs 457, 351 and 301 still conflict
+  with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads and main unchanged since the 1145 pass notes,
+  no new note per the no-repeat rule. No records PR
+  opened. No records branch left PR-less. Status: done.
+  Full detail in pr-integration/1215-run.md.
+
+## 12:31 to about 12:40 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1230.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges, no comments.
+  Tools PR 425 owner-gated, unchanged since the 2245
+  escalation, awaiting the owner decision, still conflicting
+  on _tools_/INDEX.md, no new note (head and main unchanged
+  since the 1215 note). Records PR 460 clean at head
+  dfaffd1ce, awaiting the 15:00 batch. Records PR 457
+  conflict resolved branch-side by the ticker-1223 pass
+  (merged main 1c39fa82 in as 09302a7a0, union action-log
+  resolution), now MERGEABLE/CLEAN, awaiting the 15:00
+  batch. Records PRs 351 and 301 still conflict with main
+  on the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads and main unchanged since the 1200
+  pass notes, no new note per the no-repeat rule. No
+  records PR opened. No records branch left PR-less.
+  Status: done. Full detail in
+  pr-integration/1230-run.md.
+
+## 12:32 to about 12:43 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1232 run. Own PR 459 MERGED
+  (2026-11-08T19:55:49Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-1131
+  scout 1144 and ticker-1134 scout 1159 + harvest 1211
+  into 2 profiles as one commit (50f1548fa5f) on new PR
+  463 (OPEN and MERGEABLE, mergeState CLEAN, at run close):
+  perception-scout 1.41.0 - ninth no-train confirmation,
+  Wars dot rally-link third positive case, not a settlement
+  of Issue #212 (unit commented it, comment 6726248931),
+  Wars page back arrow re-grounded to (56, 938), Doomsday
+  count finish read live (13 first-kill + 9 cumulative
+  rows all claimed, Damage Ranking top 6, Ranking Reward
+  tiers), chain scout-2026-11-03 complete; badge-22
+  partial-count reasoning corrected (full count is 22 rows,
+  composition still open); Bloody Valor and +2.4K lower
+  bound still open, carrier chain now closed.
+  resource-collection 1.40.0 - farmland food +1.6M
+  HUD-verified, top-edge single tap collects nothing, iron
+  +1.3M unattributed not claimed, coin bubbles about 0.8M
+  remain, token expired 12:22:56; do-not-double-tap caution,
+  OCR 30-unit offset method note. No Issue commented by
+  this run; no new Issue filed. Slack DM sync sent.
+  Status: done. Full detail in
+  knowledge-organization/1232-run.md.
+
+## 12:32 to about 12:43 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-08-1232.
+  Done: fixed the token re-acquire race (#461) with PR #462
+  (branch work/token-renew-near-expiry, commit 9e586aa48):
+  token-acquire now renews the lease when the holder
+  re-acquires within 60 seconds of expiry; validation 28/28
+  fixture assertions on two runs on isolated /tmp scratch
+  pools, old main code reproduces the defect. New tooling
+  issue #461 filed. Own PR 425 still owner-gated, no action
+  owed. Status: done.
+  Full detail in tool-development/1232-run.md.
 
 ## 12:23 to about 12:45 - Ticker pass ticker-1223
 
