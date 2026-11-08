@@ -13,7 +13,7 @@ standard library and locate their data relative to their script or repository.
 
 | Tool | Purpose | Data |
 |---|---|---|
-| [queue.py](queue.py) | Enqueue, claim and complete execution units; `next` prefers the unit that clears a recorded screen-blocking overlay (issue #436) | `../_queue_/` |
+| [queue.py](queue.py) | Enqueue, claim and complete execution units; `next` prefers the unit that clears a recorded screen-blocking overlay (issue #436); `complete` records a shared completion marker so a unit closed in a detached worktree is never re-picked (issue #438); `validate` checks pool integrity and `sync`/`next` refuse a corrupt pool (issue #441); `sync` drops inbox copies already done on today's delivered records branch (issue #446) | `../_queue_/` |
 | [regulars.py](regulars.py) | Track recurring activities | [regulars.json](regulars.json) and [state](state/INDEX.md) |
 | [duel.py](duel.py) | Calculate the active duel day and advice | [duel_schedule.json](duel_schedule.json) |
 | [resource_map.py](resource_map.py) | Record resource snapshots and check floors | [resources.json](resources.json) and [state](state/INDEX.md) |

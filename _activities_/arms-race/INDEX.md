@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T06:32:17Z
+modified: 2026-11-08T11:39:02Z
 level: L1
-version: 1.57.0
+version: 1.58.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -61,6 +61,7 @@ grounded_in:
   - source: ticker-2104 perception-scout execution record 2026-11-07 2121 queue run (partial, HUD food 478.8M iron 802.1M coin 6.9M power 149,850,353, corroborating the Nov 7 consensus; record commit 31467b04cb on records/2026-11-07)
   - source: ticker-2134 perception-scout execution record 2026-11-07 2150 queue run (partial, Drone Boost phase read live at 0, timer 00:14:48, tiers and scoring rows agree with the 1929 read; record commit fe5a1e7fd3 on records/2026-11-07)
   - source: ticker-0004 perception-scout execution record 2026-11-08 0011 queue run (partial, events group, Hero Advancement phase live, score 0, timer 01:49:42 left, tiers 2,000 / 4,000 / 12,000; record commit e6192726d1 on records/2026-11-08)
+  - source: ticker-0304 perception-scout execution record 2026-11-08 0325 queue run (partial, events remainder, Arms Race Tech Research phase read live, score 0, timer 02:52:53; record commit 447ebb411c on records/2026-11-08)
 ---
 
 
@@ -1791,3 +1792,13 @@ slot. Evidence in
 - Scoring paths, all read live: (1) 1 Hero Recruitment, +400. (2) Use at least 2,000 Hero EXP at a time, +1. (3) Buy Packs containing Diamonds (1 Diamond), +30 - red line, never used.
 - Nothing earned, nothing claimed, no chest is claimable at score 0. The phase is live with 1:49 left and score 0; the arms-race regular owns the push, not this scout unit. The staged 2203 unit belongs to this phase; no arms-race unit record for it has landed yet.
 - Reading note: this is the newest live phase read and supersedes the 2150 Drone Boost re-read for the current phase; the Drone Boost phase ended about 22:02 local. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its own phase, which ended about 14:10 local, and the 1633 Base Building verdict stands for its phase. Tracker untouched. No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-08 0325 scout read added - Tech Research phase live again, score 0, 02:52:53 left
+
+- Scout unit scout-scout-2026-11-03-003 by ticker-0304, about 03:06 to 03:25 local, status partial (events remainder). Evidence in `_records_/2026-11-08/perception-scout/0325-queue-run.md` (commit 447ebb411c on records/2026-11-08). The Arms Race page was read live, observe-only; nothing was spent, claimed or tapped on the page.
+- Live phase read: Tech Research, Contest Segment Lv.29-30, timer 02:52:53 left (phase ends about 06:10 local), score 0, cumulative counter chest 0/2, account rank #2110 [AP3x]Bears Lair.
+- Chest thresholds: 6,250 (2,360 red gems) / 12,500 (4,800 red gems) / 30,000 (11,800 red gems) - agreeing with the 2026-11-01 and 2026-10-26 Tech Research reads on every figure.
+- Scoring paths, all read live: (1) Increase Tech Power by 1pt, +1. (2) Use 1-min Research Speed-up, +10. (3) Buy Packs containing Diamonds (1 Diamond), +30 - red line, never used. All three agree with the earlier Tech Research reads.
+- Nothing earned, nothing claimed, no chest is claimable at score 0. The tier-3 gap stands at 30,000 points. The phase is a repeat of the 2026-11-01 shape (same tiers, same paths, same red lines); the arms-race regular owns the push, not this scout unit.
+- Reading note: this is the newest live phase read and supersedes the 0011 Hero Advancement read for the current phase. The Hero Advancement phase ended about 01:56 local with score 0 - the 0011 read (timer 01:49:42 at 00:06) is the last live read for that phase, and the staged 2203 unit still has no record, so the phase closed at score 0 with no push recorded. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its own phase, which ended about 14:10 local, and the 1633 Base Building verdict stands for its phase. Tracker untouched. No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
+

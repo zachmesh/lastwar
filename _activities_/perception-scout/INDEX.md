@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T06:32:17Z
+modified: 2026-11-08T14:42:04Z
 level: L1
-version: 1.29.0
+version: 1.37.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -41,6 +41,21 @@ grounded_in:
   - source: ticker-2304 perception-scout execution records 2026-11-07 2311/2317 queue runs (partial, alliance remainder, Star Ceremony playback, Furnace resolved, Marshal's Guard / Doomsday Stronghold discovered as Issue #427, station panel fifth no-train confirmation, LOOT row still unclaimed; record commit 03dc69e0c on records/2026-11-07)
   - source: ticker-0004 perception-scout execution record 2026-11-08 0011 queue run (partial, events group walked live, Hero Advancement phase score 0, Frontline badge 1, Winter Battlefield starting soon, Doomsday badge 22, Community 500D Claimed, Desert Storm / Level Swap / Wanted Boss ended, no Zombie Invasion tab; record commit e6192726d1 on records/2026-11-08)
   - source: ticker-0004 perception-scout execution record 2026-11-08 0022 queue run (partial, midday remainder, left-column badges read live, hammer dot is the construction-queue signal with no owning regular, station panel fourth no-train confirmation, store half walked, Weekly Deal page closed; record commit e6192726d1 on records/2026-11-08)
+  - source: ticker-0034 perception-scout execution record 2026-11-08 0048 queue run (partial, alliance group of the stale 2026-11-02 chain seq 006, War tree top tier unreached, live Doom Walker rally 1/5, Gifts Level 28 Claim All 82, Wars dot stays on Issue #212; record commit 4fd2b88a26 on records/2026-11-08)
+  - source: ticker-0104 perception-scout execution record 2026-11-08 0118 queue run (partial, alliance remainder station check, sixth no-train confirmation in the scout-mid-2026-10-31 chain, Events badge now x2, Wars dot gone; record commit 33bb20050a on records/2026-11-08)
+  - source: ticker-0104 perception-scout execution record 2026-11-08 0122 queue run (partial, alliance remainder, Alliance Star ceremony read live, Record button blocked first instance, Settings unwalked; record commit 33bb20050a on records/2026-11-08)
+  - source: ticker-0137 perception-scout execution record 2026-11-08 0150 queue run (partial, store-group remainder blocked by the Star Ceremony overlay, loop chest -> 10 -> 11 -> 12 -> 13 -> MVP -> chest established, slides 10-13 and MVP read live, store group unwalked; record commit b88ed12a2 on records/2026-11-08)
+  - source: ticker-0204 perception-scout execution record 2026-11-08 0213 queue run (done, alliance remainder walked in full, Alliance City / Contributions / Milestones / Furnace / Strength Ranking read live, 9 red dots explained; record commit 6560ff267 on records/2026-11-08)
+  - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, VIP panel / daily missions 22-task list / Weekly Deal page walked, President banner resolved, 13.22K figure resolved as diamonds, 3 red dots unexplained; record commit 6560ff267 on records/2026-11-08)
+  - source: ticker-0304 perception-scout execution record 2026-11-08 0325 queue run (partial, events remainder, Doomsday Rewards panel walked, Frontline Reward panel read in full, Arms Race rotated to Tech Research, TIPS E101 entry; record commit 447ebb411c on records/2026-11-08)
+  - source: ticker-0404 perception-scout execution record 2026-11-08 0407 queue run (done, store remainder, five Mall tabs walked live)
+  - source: ticker-0404 perception-scout execution record 2026-11-08 0415 queue run (partial, alliance remainder, Help Store City Wars walked live)
+  - source: ticker-0434 perception-scout execution record 2026-11-08 0440 queue run (partial, station re-check, both preparation signals absent, record commit caa661bab on records/2026-11-08)
+  - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Marshal's Guard and Doomsday dated entries, record commit caa661bab on records/2026-11-08)
+  - source: ticker-0434 perception-scout execution record 2026-11-08 0454 queue run (done, VIP re-check, Freebie still claimable, record commit caa661bab on records/2026-11-08)
+  - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, 3 red dots explained live, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution records 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Days Left 13) and 0542 queue run (done, three carried red dots explained live, 0022 white-truck mapping corrected) and alliance-donations execution record 2026-11-08 0546 queue run (partial, re-read after cooldown, last donation landed); record commit 707bcec0d8 on records/2026-11-08
+  - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
 ---
 
 
@@ -1900,3 +1915,702 @@ observe-only, nothing claimed). Evidence in
 - Red dot accounting: 0011 events group - seen 4, explained 4 (Frontline badge 1 and Challenge dot are one signal; Doomsday badge 22 and Rewards dot are one signal), unexplained 0. 0022 remainder - seen 11, explained 11 (left column hammer, radar and truck dots; base Events badge 1, Season II badge, skull timer badge, 99+ badge, Alliance dot, Mail dot, Inventory dot; Mall Official Event tab dot), unexplained 0.
 - Unknown items carried: Doomsday badge-22 composition (Rewards panel unopened); Frontline timer 17:42:00 meaning; Winter Battlefield sub-pages (Rewards, Rules, Shop, History, Achievement) unopened; Frontline Reward panel unopened; store remainder tabs (Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall, Hot Sale Packs); hammer dot's exact trigger and its ownerless routing; the full President banner text ("Important: President Haw..." still cut off); the furnace overdrive toast [22/60] (recurring, mechanism still unexplained); 99+ badge (recurring); Season II badge 1 (recurring).
 - Follow-up: successor seq 003 of chain scout-2026-11-03 enqueued for the remainder (Doomsday Rewards panel, Frontline Reward panel, Winter Battlefield sub-pages); successor seq 003 of chain scout-mid-2026-11-04 enqueued for the remainder (Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall and Hot Sale Packs tabs). Events-regular signals from this walk: Frontline Challenge attempt available (badge 1); Doomsday Rewards claimable (badge 22); Arms Race Hero Advancement phase live, score 0, 01:49:42 left. Tracker untouched (scout units do not mark regulars done). Game left on the own base screen.
+
+## What the 2026-11-08 0048 scout unit added - alliance group of the stale 2026-11-02 pass, War tree top tier unreached, live Doom Walker rally, Gifts Claim All 82
+
+- Unit scout-scout-2026-11-02-006 by ticker-0034, session cc-65 and cc-66 about 00:44 to 00:48 local, status partial. Evidence in `_records_/2026-11-08/perception-scout/0048-queue-run.md` (commit 4fd2b88a26 on records/2026-11-08) and the observations in the new day file `_records_/2026-11-08/perception-scout/observation.md` (created by this unit - the ticker-0004 pass's 0011 and 0022 units did not append sections there; their observations live in their queue-run records). Observe-only; nothing claimed, fought, dispatched, donated, dug or bought. The Gifts Claim and Claim All buttons, the Wars rally join slots and the Go buttons were observed only. Computer session cc-65 closed between the donations unit and this unit's first observe; cc-66 was started, LastWar re-selected, and no game state was lost. No device-access error, no different-device dialog, no login demanded.
+- Entry state: the game was left on the ALLIANCE TECHS tree by this pass's donations unit, so the scout walk started there.
+- Alliance Techs, Development tab: Auto Rally Max Level, Quick Construction 8/10 (recommended marker), Great Helper Max Level, one node below at 2/10. Footer Tech Donation Today 2050 at entry, 2350 at close (this pass's donations unit).
+- Alliance Techs, War tab, first view: Unit Load Capacity 2/10, Quick Training 1/10, Expert Trainer 2/10, a row of 5/10 nodes below (cut off). No Rallied or Garrison row visible, unlike the 2026-11-03 reads. Two downward drags (panel background, then a node) produced no scroll - method ended per rule R2, tree top tier unreached, carried not asserted. The tree content has changed since the 11-03 reads, or the first view differs.
+- Alliance panel: [AP3x] The Apex, 5.0 stars, Leader Abŷss Apex, Power 13,350,333,388, Members 96/100, English. Motto: "We are The Apex. An alliance of veteran players. All are welcomed - messages sent in multiple languages." Dots on Wars, Help, Gifts; none on Store, Techs or Members. Alliance Star (Event 40) 17:03:36 at 00:53, 17:02:02 at 00:58. Assemble and Strength Ranking below the fold, not read. Bottom row: back arrow, Record, Applicants, Alliance Star, Settings - none opened this unit.
+- Alliance Wars, Rally Intel tab: live rally by [AP3x]Killing It Softly, "Rallying... 00:00:24", Lv.120 Doom Walker 38km away, Count/Limit [1/5]. Not joined (observe-only; joining is an execution act, and the 24-second timer was nearly spent at read time). "Important: President Hawl..." banner truncated, unread in full. Individual Intel tab unwalked.
+- Alliance Gifts, Regular tab: Level 28, progress 193,012,970/206,300,000 (was 181,429,280 on 2026-11-02 and 183,423,470 on 2026-11-03). Four full rows read (+10 each, none claimed): three Doom Elite gifts (나라손, MUZIQUE Apex, 나라손) and one Doom Walker Loot (Nuna Knuckles), timers 23:50:44 to 23:55:03; a fifth row partially visible below the fold. Claim All badge 82 (was 201 on 2026-11-02, 48 on 2026-11-03). Premium tab dot seen, tab not opened. Folded into alliance-gifts 1.37.0.
+- Red dot accounting: seen 5 (panel Wars, Help, Gifts; Gifts Regular-tab and Premium-tab dots). Explained 4 (Help and Gifts dots map to their owning regulars, both already queued). Unexplained 1: the Wars dot, filed as Issue #212 (label play) - new evidence this unit (a live rally was running), but the dot was also present on rally-less days, so the issue stays open. The ticker pass commented the live-rally evidence on Issue #212 (2026-11-08T08:51:08Z); no further comment from this run.
+- Unknown items carried: furnace overdrive toast [22/60] (seen again on the base screen at this pass's entry; still unexplained, furnace observed only, never switched on or off, a red-line surface); War tree top tier (Rallied/Garrison rows) not reached; the "Important: President Hawl..." banner text, truncated; the 13.22K HUD figure identity (carried from the 0004 pass's entry read). unmatched_labels: none in the surfaces actually walked.
+- Unwalked, carried to the successor units of chain scout-2026-11-02 (007 and 008 both sit in the inbox at the 0034 commit; the unit record names 007, the day INDEX names 008): Help page, Alliance Store page (read-only), Alliance City page, Wars Individual Intel tab, station panel, Premium tab of Gifts, Assemble and Strength Ranking tiles. The 0004 pass's remainders (Doomsday Rewards panel, Frontline Reward panel, Winter Battlefield sub-pages, five store tabs) belong to their own chains' successors, not to this chain.
+- Game left safe: game left on the Alliance main panel. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
+
+## What the 2026-11-08 0118 and 0122 scout units added - station check sixth no-train confirmation, Alliance Star ceremony read, Record button blocked
+
+- Units scout-midday-scout-mid-2026-10-31-008 (ticker-0104, about 01:08 to 01:12 local, station check) and scout-scout-2026-11-02-007 (ticker-0104, about 01:12 to 01:17 local, alliance remainder), both status partial. Evidence in `_records_/2026-11-08/perception-scout/0118-queue-run.md` and `_records_/2026-11-08/perception-scout/0122-queue-run.md` (commit 33bb20050a on records/2026-11-08) and the appended sections of `_records_/2026-11-08/perception-scout/observation.md`. Observe-only throughout; nothing claimed, fought, dispatched, donated, dug or bought; no ceremony reaction sent. No train summoned, no conductor role taken, no different-device dialog, no login demand.
+- 0118 entry: the game was found on the Alliance main panel, left there by a previous unit. The panel back arrow at norm 139,935 returned to the base screen. Tooling note: the first click attempt failed with stale_observation (missing observation_id) and sent no input; the retry carried the observation id and dispatched at once.
+- 0118 station check (the unit's window): the two preparation signals were checked first - the left-column train icon is ABSENT, and the "Boarding closes in" banner is ABSENT. With neither signal present, the unit closed partial without panning, per the window instruction. This is the sixth no-train confirmation in this chain's station-panel checks (after 1345, the 2140/2153 third and the 2311/2317 fifth). The station panel is a preparation-only surface: it has no live state to read while no train is preparing. Folded into alliance-train 1.31.0. Successor seq 009 of chain scout-mid-2026-10-31 enqueued for the station panel re-check.
+- 0118 base screen, read live about 01:11 local: Level 30, power 149,850,353; HUD top row 478.8M food, 802.1M iron, 6.9M coin; second row 25.0M, 922.2K, 13.22K with a plus button; stamina 120; cart 4,217. Left column top to bottom: hammer 2/4 with a red dot, flask 2/2, weather face 6.5C, radio with a red dot, truck with a red dot, radar dish, hammer. No train-head icon in this column set. Right column: Events with an x2 badge (was badge 1 in the 0011/0022 reads), VS, Season II with a 7d 16:50:22 timer, Alliance with a red dot, Mail, Inventory with a red dot, WORLD. Bottom: HEROES, chat ticker, 99+ badge. Lines under the resource bar: the furnace overdrive toast and the Breaking News ticker. No "Boarding closes in" banner.
+- 0118 Alliance panel, read live about 01:09 local: [AP3x] The Apex, 5.0 stars, Leader Abyss Apex, Power 13,350,333,388, Members 96/100, Language English. Red dots on Help and Alliance Gifts only - the Wars dot the 0048 unit read at about 00:53 is GONE. The live rally the 0048 unit read (24-second timer at 00:54) had ended by this read, so the dot clearing after the rally ended is new evidence for Issue #212 (the dot also appeared on rally-less days, so the issue stays open). Commented on Issue #212 by this run. Alliance Star (Event 40) banner, Time Left 16:40:54 falling to 16:40:39 during the read, Enter button observed only, not tapped. Bottom row Record, Applicants, Alliance Star, Settings - none opened this unit.
+- 0118 red dot accounting: seen 8 (panel Help dot, panel Gifts dot, base Alliance dot, Events x2 badge, Inventory dot, 99+ badge, radio dot, truck dot). Explained 6 (Help dot maps to the help regular, Gifts dot to the gifts regular, Events x2 to the events regular, radio dot to the help regular, truck dot to the trucks regular, and the base Alliance dot is the roll-up of the panel dots; units for all of these are already queued). Unexplained 2: the Inventory dot and the 99+ badge. Both belong to other groups (store, base/chat) and are carried by the current day's scout pass, not by this unit. unmatched_labels: none in the surfaces actually walked.
+- 0118 unknown items carried: furnace overdrive toast ("High-temp Furnace total overdrive time (in sec)"), seen again on the base screen; still unexplained, furnace observed only, never switched on or off, a red-line surface. Alliance Power read 13,350,333,388, up from 13,016,623,359 on 2026-11-03; live member power movement is possible and read variance is possible, recorded as displayed, not asserted either way. Resource bubbles standing on many buildings, observed only, not collected; the harvest regular owns collection and its 1003 unit is already queued.
+- 0122 entry correction: the game was on the base screen (power 149,850,353, unchanged from the 0118 read minutes earlier). The Alliance icon tapped at norm 917,705, grounded fresh from the screenshot, opened the Alliance panel at once. This corrects the 0752 misfire: the icon centre is the entry point, not the label row at 903,750, which opened MY PROFILE. Alliance panel re-read live: [AP3x] The Apex, Power 13,350,333,388, Members 96/100, red dots on Help and Alliance Gifts, Alliance Star (Event 40) Time Left 16:36:27 falling to 16:35:08 during the unit.
+- 0122 Record, blocked, first instance of this blocker in this chain: three background taps on the Record bottom button produced no change: 240,935, then 242,920 (icon centre), then 242,960 (label). Each observation after the tap showed the Alliance panel unchanged except for the ticking Star timer. The tool's click guidance after the second tap: background clicks do not reach some controls; use click_element with the control's visible label. click_foreground requires an element_number, which the game's Accessibility tree does not provide (one iOS content group, OCR text only - established by the 0752 unit). Per rule R2 the method is exhausted for this control inside this unit. The Record Member/Message/Event tabs are unwalked and carried to the successor. Successor must try a changed method - click_element is unavailable without an element number, so the next attempt should try a long-press or a foreground route if one exists.
+- 0122 Alliance Star, read live: the Enter button on the gold banner, tapped at norm 771,836, opened the ceremony at once: "[AP3X] ALLIANCE STAR CEREMONY (EVENT 40)". Stage view with the hostess, the audience in blue helmets, a chest icon 0/1 at top right, numbered tabs 1 to 5 and a gift icon at bottom right, a back arrow bottom left and a play/pause button bottom right. A bottom-left tap advanced the playback to slide 1: "S2 Big Shot - Texan Apex - Assist allies in the first kill of Doom Elite in S2 20 time(s) this week", 49 hearts, 5 and 3 reactions; hostess speech "Let's leave our encouragement and blessings to the winners!"; a reaction bar (heart and faces) open below the stage. Observed only - no reaction was sent. A second bottom-left tap advanced to slide 2 ("Little Sun", "Nuna Knuckles" named). Tabs 1 to 6 are visible on the slide-1 frame. The bottom-left button advances slides; it does not exit the ceremony. The chest 0/1 is observed only - claiming belongs to the star-ceremony regular, whose unit is already queued. Folded into alliance-duel 1.29.0.
+- 0122 Settings, unwalked: never reached - the ceremony exit was not found inside this unit, and the token window closed before a further exit route could be tried. Ceremony exit route is unknown: the back control advances slides; whether the ceremony exits after slide 6 or by another control is untested. Carried to the successor.
+- 0122 red dot accounting: seen 4 (panel Help dot, panel Gifts dot, base Alliance dot, Events x2 badge). Explained 4 (Help dot maps to the help regular, Gifts dot to the gifts regular, the base Alliance dot is the roll-up of the panel dots, Events x2 to the events regular; units for all of these are already queued). Unexplained 0 in the surfaces actually walked. unmatched_labels: none in the surfaces actually walked.
+- 0122 unknown items carried: Record button unresponsiveness to background taps (blocker, first instance in this chain); ceremony exit route (untested); the 13.22K second-row HUD figure identity (carried from the 0004 pass's entry read).
+- Follow-up on the 0048 section's successor note: seq 007 has now run (this unit, 0122) and seq 009 is enqueued as the live successor (the unit record names 008; the day INDEX and the queue state name 009). Unwalked, carried to successor scout-scout-2026-11-02-009: Settings, Record Member/Message/Event tabs, plus the 0048 remainder (Help page, Alliance Store page read-only, Alliance City page, Wars Individual Intel tab, Gifts Premium tab, Assemble and Strength Ranking tiles). The station panel stays with the midday chain (successor 009, enqueued by the 0118 unit).
+- Game left safe: game left inside the Star Ceremony playback (slide 2). No purchase, no dispatch, no claim, no rally join, no reaction sent. No Assemble, no teleport.
+
+## What the 2026-11-08 0150 scout unit added - Star Ceremony loop established, slides 10-13 and MVP read live, store-group remainder carried
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0137, about 01:44 to 01:50 local, status partial (store-group remainder). Evidence in `_records_/2026-11-08/perception-scout/0150-queue-run.md` (commit b88ed12a2 on records/2026-11-08) and the appended section of `_records_/2026-11-08/perception-scout/observation.md`. Observe-only; nothing claimed, fought, dispatched, donated, signed up for, or bought. Computer sessions cc-69 and cc-70 (cc-69 ended and cc-70 started mid-unit after a clock check, no game state lost).
+- Entry: the game was found on the [AP3X] Alliance Star Ceremony (Event 40) bonus-rewards slide, left there by the 0122 unit: "Thank you all for ... to claim your rewards", a purple gem 4.0K, "Send emotes to the winner to receive rewards" tooltip with a blue Go button, and a chest counter 0/1 at top right. The bottom row reads 10, 11, 12, 13, MVP and a chest icon, the chest glowing. No base screen, HUD, or shop state was readable in this unit - the ceremony overlay covers the whole window.
+- Slides read live, each with 2-4 stages and one tap per stage: slide 10 Doom Elite Slayer, winner JerryLogDog - "Launch a Rally and eliminate Doom Elite 223 time(s) this week", 42 hearts, 7 / 1 / 3 on the other emote counts, runners SKRyZeRZ 181, xChroniApex 171; slide 11 Alliance Sponsor, winner DCna8ive - "Donated 178,000 point(s) this week", runners kaBoom420 166,850, Texan Apex 103,300; slide 12 Good Helper, winner 5tarFall - "Helped allies 2,807 time(s) this week", runners DCna8ive 2,738, VOUGoApex 2,543; slide 13 Shining Star, winner Abŷss Apex - "Desert storm points increased by 4,362,901 compared to last week", runners 2,113,189 and 1,937,365 (names garbled in OCR, unread); MVP slide, winner SKRyZeRZ - "Earned 9 Performance Point(s) this week", runners Rage Apex, Abŷss Apex; chest slide, the bonus-rewards slide again (4.0K gem, "Here are your bonus rewards", chest 0/1, Go tooltip still showing).
+- The loop - the ceremony cycles, it does not exit on its own controls: after the MVP slide the ceremony returned to the chest / bonus-rewards slide, and a back-arrow tap from the chest slide advanced to the "Next UP ... presenting the award for ..." transition and then to slide 10 again. Loop: chest -> 10 -> 11 -> 12 -> 13 -> MVP -> chest. Advancement measured in this unit: a centre tap at norm 500,500 advances one animation stage; the blue skip button at norm 806,938 advances one slide; the bottom-left back arrow at norm 170,914 advances slides (and loops from the chest slide back to slide 10). A skip tap at norm 800,914 (above the button) did nothing - the button's active point is low, near y 938. Tooling note: two taps on the skip point that report no change still changed the slide content, so the tool's no-change report is unreliable on this screen; judge by the image, not by the status line.
+- Exit: the only untested forward action is the Go button ("Send emotes to the winner to receive rewards", chest 0/1): it is the ceremony's claim path, so it was NOT tapped in this observe-only unit. Whether the ceremony exits after the emote is sent is the open exit question, and it belongs to the star-ceremony regular, not to a scout unit. The emote bar (heart plus five faces) appears at the bottom of the award slides while the ceremony runs.
+- Slide-count reconciliation, open: the 0122 unit read "6 slides" with opening slides "S2 Big Shot - Texan Apex" and "Little Sun / Nuna Knuckles", while this unit read the six bottom-row slides (10, 11, 12, 13, MVP, chest) plus the bonus slide - whether the S2 awards are opening slides before rank 10 or a separate presentation is unresolved. Recorded here as an open question, not asserted either way.
+- President banner, second sighting: a top banner crossed the screen during slide 13, "Important: President HawksMav appointe..." (truncated, full text unread - the same President banner the 0016 unit saw truncated on 2026-11-03). Full text still unread.
+- Red dot accounting: seen 1 (the chest 0/1 counter with its Go tooltip). Explained 1 (the chest maps to the star-ceremony regular - claim the 4.0K gem bonus - whose unit is already queued). Unexplained red dots: 0. Unknown items: (a) the ceremony exit route (Go/emote untested, star-ceremony regular's); (b) slide-count reconciliation (above); (c) the full President HawksMav banner text. Observed items: 14.
+- Not walked, and why: VIP panel, daily missions panel, Weekly Deal page - the ceremony overlay blocked the base screen for the whole unit; all three are carried, not forced, to the successor in chain scout-mid-2026-11-03 (seq 005). The Weekly Pass reset figure (18:00:00 vs the standing 19:00 note) from the 2209 unit is still an unanswered re-read item for the successor or the next scout-store unit. No train, boarding banner, zombie sighting or other base signal was readable in this unit - the overlay covers everything, so no such signal is asserted either way.
+- Queue-level note: while the ceremony is open, every unit that needs the base screen blocks on it, and only the star-ceremony unit can clear it. The picker gap (the picker keeps handing out base-screen units that all block identically) is filed as GitHub Issue #436 (tooling class, owned by lastwar-tool-developer).
+- Game left safe: game left inside the ceremony on the bonus-rewards slide. No purchase, no dispatch, no claim, no rally join, no reaction sent. No Assemble, no teleport.
+
+## What the 2026-11-08 0213 scout unit added - alliance remainder walked in full
+
+- Scout unit scout-scout-2026-11-02-007 by ticker-0204, 02:06 to 02:21 local, status done (alliance remainder walked in full). Evidence in `_records_/2026-11-08/perception-scout/0213-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; nothing claimed, fought, dispatched, donated, dug or bought. Tracker untouched on purpose: this unit closed the stale 2026-11-02 chain, not today's scout slot, which stays DUE.
+- Duplicate-execution note: this unit id was already completed earlier today by ticker-0104 (09:12-09:17Z, partial, evidence 0122-queue-run.md); the main-tree queue state still held it in inbox, so ticker-0204 re-executed it and walked the full window. The queue file keeps ticker-0104's result; this record file is the evidence of the second execution. The queue-state staleness behind the duplicate is filed as GitHub Issue #438 (tooling class, owned by lastwar-tool-developer).
+- Alliance City: Rare Soil 5.88K/h (6/6 cities, sum 5,880/h), Coal 13.53K/h (4/4 strongholds, sum 13,536/h). Claim All greyed, not tapped. Captures left 2/2, war declarations left 2/2. City Buff observed only.
+- Season Contributions, all four tabs: Mutual Assistance Season Total top 6 plus own #69 Bears Lair 4,110,000; Weekly and Daily both "No new data", own Unlisted. Siege Season Total top 6 plus own #84 52,500; Daily empty. Rare Soil War Season Total top 6 plus own Unlisted 0. Defeat Season Total top 6 plus own Unlisted 0. Bottom reward chest x0 on every tab. Not verified: the Contribution Ranking reward-column figures (x16, x10, x8 per rank band) and the bottom chest x0 are recorded as displayed; whether any reward is claimable at season end is not established by this read.
+- Season Milestones: all five achieved on 2026-9-14 (The Hunt Begins, Polar Science, Survival Assurance, Produce Titanium Alloys, Gather for Warmth). Nothing unachieved, nothing to claim.
+- Alliance Furnace: Lv.20 (Max Level), #2110 (469,433), Ranking No.27, Rare Soil stock 4.3M, +5.88K/h. Chamber: Coal 13,478,393 / 4,150,000, Burnable 6d 12:00:00, Donation Count 50/50, Donate Coal 1000 not tapped (red-line banned), Burning at 125 deg C, Coal Usage 1,440/min, Turn On on, Overdrive off. Upgrade: Rare Soil 2,000,000, Overdrive Coal Usage 5760/min, Coal Storage Limit 4,150,000, Activation Heat 12.5 deg C, Overdrive Heat 25 deg C, Max. Durability 300,000. Relocation Spot: build-a-spot text, coal 13,477,313 - 1,000, Construct not tapped (observe-only).
+- Strength Ranking: Power top 6 re-read (own #34 147,744,234, unchanged from 2026-11-07); Donation Daily top 5 plus own 2350; Donation Weekly top 5 plus own #84 24,900. Donate and Rewards observed only. The Donation Daily 2350 corroboration is folded into alliance-donations 1.58.0.
+- Red dot accounting: seen 9, explained 9, unexplained 0. Help and Alliance Gifts dots map to their owning regulars (queued); the four gold-highlighted buttons (Alliance City, Season Contributions, Season Milestones, Alliance Furnace) were walked with no claimable action found; the Star Ceremony entry screen (bonus 4.0K gem, emote 0/1, gift badge 14) and the Alliance Star banner map to the star-ceremony regular (unit queued).
+- Unknown items: floating circular portrait icon, seen on the City List tiles, the Milestone screen, the Furnace gauge and the Strength Ranking Weekly tab, at a different position each time; identity unknown. Furnace coal drain vs displayed burn: 13,478,393 to 13,477,313 over about four minutes (-1,080) against a displayed 1,440/min - mismatch recorded, no rate inferred. Scrolling banner fragments, partial reads only. Rare Soil War #6 name partly unread.
+- Game left safe: Strength Ranking Donation Weekly tab open. No diamond button tapped, no money spent, no donation, no construction, no Assemble, no teleport, no purchase.
+
+## What the 2026-11-08 0229 scout unit added - VIP, daily missions and Weekly Deal walked; President banner and 13.22K figure resolved
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0204, 02:17 to 02:32 local, status partial per rule R1 (3 red dots unexplained). Evidence in `_records_/2026-11-08/perception-scout/0229-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-03/perception-scout/observation.md`. Observe-only; nothing claimed, fought, dispatched, donated, dug or bought. Tracker untouched on purpose: this unit closed the stale 2026-11-03 chain, not today's scout-midday slot, which stays DUE.
+- Duplicate-execution note: this unit id was already completed earlier today by ticker-0137 (09:42-09:52Z, partial, blocked by the Star Ceremony overlay, evidence 0150-queue-run.md); the main-tree queue state still held it in inbox, so ticker-0204 re-executed it. The queue file keeps ticker-0137's result; this record file is the evidence of the second execution. Filed as GitHub Issue #438 (tooling class, owned by lastwar-tool-developer). The successor for the 3 unexplained red dots is seq 006, since ticker-0137's successor already holds seq 005.
+- Weekly Deal tab page walked in full (folded into shop-claims 1.32.0): period 2026-11-2 00:00:00 to 2026-11-8 23:59:59; seven paid packs, each "1 purchases available", nothing free. VIP panel walked (folded into vip-rewards 1.13.0): VIP13 progress 1,605,970/2,000,000, login streak 2 days, Daily Freebie GREEN/claimable NOT claimed (belongs to the vip regular, unit in the inbox, due). Daily missions panel walked (folded into daily-missions 1.8.0): full 22-task list, 4 completed unclaimed, chest thresholds 40/80/120/160/200 unreached, Next Refresh pointing to about 18:00 local.
+- Build-menu detour: the yellow terminal icon at [66, 790] opened the BUILD menu, not Missions - do not re-tap it for this panel. Season tab: High-heat Furnace + Titanium Alloy Factory No.1-4, all "Building limit reached." LIST OF BUILDINGS, Economy tab: 5x Material Workshop Lv.20 (4 with green up arrows), Component Factory Lv.20 (green up arrow), Crystal Factory Max Level, Food Warehouse Lv.24, Coin Vault Lv.24, Iron Warehouse Lv.25, Training Base Lv.25 x4, Smelter Lv.26 x2. Building Queue 2/4. Military tab not opened. The sheet has no back arrow; it dismisses by tapping the map above it. No building-queues fold: the snapshot is recorded here and no queue decision changed.
+- President banner, RESOLVED: read in full while the build sheet was up - "Important: President HawksMav appointed". This resolves the truncated banner carried since the 0016 unit (2026-11-03) and seen again in the 0150 unit. Correction: earlier sections carried it as "President Hawl..." truncated; the full text is "President HawksMav appointed".
+- 13.22K HUD figure, RESOLVED: the 0229 base-screen read labels diamonds 13.22K, matching the 0118 second-row 13.22K with a plus button (food 478.8M, iron 802.1M, coin 6.9M identical in both reads). The carried unknown is resolved: the 13.22K figure is the diamond count.
+- Reset-time mismatch, new evidence for Issue #242 (commented by this run): Mission Next Refresh 15:36:16 at entry falling to 15:32:08 at close, pointing to about 18:00 local today - a countdown-based pointer from the missions panel, a second surface corroborating the 18:00 reset. Still unverified as a formal arbitration; the standing 19:00 note is not changed here.
+- Red dot accounting: seen 5, explained 2 (VIP13 tile dot on MY PROFILE maps to the VIP Daily Freebie claimable; Daily Tasks tab badge 4 maps to the 4 completed tasks), unexplained 3 (VIP panel top-right cart icon dot; base left-column blue bus icon dot; base left-column white truck icon dot) - carried to successor seq 006 of chain scout-mid-2026-11-03.
+- Unknown items carried: floating circular portrait icon (same as the 0213 unit - VIP panel twice, base bottom-left once; identity still unknown); Build-menu bottom tabs ($, truck, ?) unexplored; Military tab of LIST OF BUILDINGS unopened; activity chest contents unread. The furnace overdrive toast [22/60] recurring on the base screen; 99+ chat badge recurring.
+- Channel note: the computer-use session dropped twice mid-unit ("target app exited", one permission_denied on screen.snap); both recovered on retry with a new session (cc-76) - channel glitches, not access failures. Token renewed once mid-unit. Not commented on Issue #282: the symptom is a session drop, not the capture-stream failure that issue tracks, and it recovered on retry.
+- Base screen at entry/exit: power 149,850,353; food 478.8M, iron 802.1M, coin 6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2; Season II 7d 15:39:30 falling to 7d 15:31.
+- Game left safe: game left on the base screen. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
+
+## What the 2026-11-08 0325 scout unit added - events remainder, Doomsday Rewards walked, Frontline Reward read in full, Arms Race rotated to Tech Research
+
+- Scout unit scout-scout-2026-11-03-003 by ticker-0304, about 03:06 to 03:25 local, status partial (events remainder of the stale 2026-11-03 post-reset pass, chain scout-2026-11-03 seq 003). Evidence in `_records_/2026-11-08/perception-scout/0325-queue-run.md` (commit 447ebb411c on records/2026-11-08). Observe-only; nothing claimed, fought, dispatched, donated or bought. No Claim or Claim All button tapped anywhere (Doomsday Rewards bottom Claim, Frontline Claim All both left untouched). Tracker untouched (scout units do not mark regulars done).
+- Entry: the game showed a TIPS (E101) network connection error dialog; one Reconnect tap reloaded the base with state intact. New entry failure mode, first instance: a network-error dialog at entry, recovered by a single Reconnect tap with no state lost. Not commented on Issue #282: the symptom is a network error, not the capture-stream failure that issue tracks, and it recovered at once.
+- Base screen at entry: power 149,850,353; food 478.8M, iron 802.1M, coin 6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2; Season II 7d 14:53:37; furnace overdrive toast [22/60] recurring; 99+ badge recurring.
+- The Doomsday, Rewards panel walked (partial count): page timer 14:52:35 (was 17:52:15 at 00:06); Warzone Guardian now [B3WB]Kalía Kalia, Total Damage 3.0G (was [CTR1]초리vv 2.8G); Alliance Threat (0) - was (1), the Lv.200 Doom Walker is gone, "Threat Neutralized"; Warzone Threat (46) - was (79). Rewards panel has 3 tabs: Rewards | Damage Ranking | Ranking Reward. Only the Rewards tab was walked; the other two tabs were not opened.
+- Rewards tab, first-kill section (all rows green Claim, all claimable): Lv.100-140 rows pay helmet x1 + crate x2 + crate x2; Lv.160 pays helmet x1 + crate x3 + crate x3; Lv.170-190 pay lightning-50 x1 + crate x3 + crate x3; Lv.200-210 pay lightning-50 x1 + crate x2 + crate x2; the Lv.220 row was seen at the list bottom with rewards unread. A Lv.150 row sits between the two pages seen and was never read - the exact first-kill row count is unfinished.
+- Rewards tab, cumulative-defeat section: rows (30/30), (40/40), (50/50), (60/60), (70/70) all green Claim. 30/50/70 pay gold bar x5 + 5m speedup x20 + red gem x20; 40/60 pay lightning-50 x1 + 5m speedup x20 + red gem x20. Rows below 30 and above 70 were not seen - the section full extent is unread.
+- Badge-22 composition, NOT resolved - correction: the 0011 section carried the composition as unread because the Rewards panel was unopened, implying opening it would resolve the 22. The panel is now opened and the composition is still unresolved: the Rewards tab alone already shows 10 plus first-kill rows plus 5 plus cumulative rows, all claimable, so 22 does not equal the claimable row count on this tab alone. The Damage Ranking and Ranking Reward tabs were not opened. Carried to successor seq 004, with the Lv.150 row, the Lv.220 row rewards, the cumulative rows below 30 / above 70, and both unopened tabs.
+- Frontline Breakthrough, Reward panel read in full: 3 rows, all 0 progress, all Claim buttons greyed, Claim All greyed - nothing claimable here. Play Frontline Breakthrough (0/3): gold bar x5, crate x3, crate x3, red gem x50. Play Frontline Breakthrough (0/2): gold bar x3, crate x12, crate x12, red gem x30. Play Frontline Breakthrough (0/1): gold bar x2, crate x6, crate x6, red gem x20. The tab badge 1 is the Challenge attempt (Challenge button red dot), not these rewards - confirms the 0011/0022 mapping.
+- Winter Battlefield sub-pages (Rewards, Rules, Shop, History, Achievement) not reached inside the unit cap; carried to successor seq 004.
+- Red dot accounting: seen 2 in this unit scope (Doomsday Rewards button dot; Frontline Challenge button dot - the Frontline tab badge 1 is the same signal). Explained 2 (Doomsday dot = Rewards panel claimable rows, events regular; Frontline dot = Challenge attempt, events regular). Unexplained 0.
+- Unknown items carried: Doomsday badge-22 composition; Doomsday Damage Ranking / Ranking Reward tabs; Winter Battlefield sub-pages; furnace overdrive toast [22/60]; 99+ badge.
+- Follow-up: successor seq 004 of chain scout-2026-11-03 enqueued for the remainder (Winter Battlefield sub-pages, plus finishing the Doomsday count). Events-regular signals from this walk: Doomsday Rewards claimable (many rows, first-kill Lv.100-220 plus and cumulative 30-70, all green Claim); Frontline Challenge attempt available; Arms Race phase rotated to Tech Research with 02:52:53 left, score 0 (folded into arms-race 1.58.0).
+- Game left safe: game left on the base screen. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
+
+
+## What the 2026-11-08 0407 and 0415 scout units added - store remainder walked in full, Weekly Pass 18:00 fifth confirmation, alliance remainder, back-arrow grounding rule
+
+- Scout unit scout-midday-scout-mid-2026-11-04-003 by ticker-0404, about 04:07 to 04:15 local, status done (store remainder of the stale 2026-11-04 midday pass, chain scout-mid-2026-11-04 seq 003). Evidence in `_records_/2026-11-08/perception-scout/0407-queue-run.md` (commit 614096a6 on records/2026-11-08) and the appended section of `_records_/2026-11-04/perception-scout/observation.md`. Observe-only throughout: nothing claimed, fought, dispatched, donated, dug or bought. No price tag tapped, no paid button touched. Game left on the base screen. Tracker untouched: this is a stale 2026-11-04 chain unit executed late; marking the scout-midday regular done would suppress the current reset day's own midday pass (staged head scout-midday-2026-11-08-0700 still in inbox). No successor unit enqueued: the chain is spent with this unit and the remaining groups of the current reset day belong to the current day's scout units already staged.
+- Pool repair before the unit, Issue #441 (tooling, filed by the ticker pass): `queue.py next` first returned donations-2026-11-08-0745 and `claim` failed with "state is None" - no such file exists in any pool state folder. Cause: `_queue_/inbox/donations-2026-11-08-1146.md` as committed on records/2026-11-08 still holds literal merge-conflict markers from the ticker-0334 branch-side resolution (merge e03673960e); the file carried two `unit:` lines (1146 HEAD side, 0745 github/main side) and the frontmatter parser keeps the last duplicate key, so `list_units` reported the unit as 0745 while `find_unit` looked for a 0745.md file that does not exist. The pass rewrote the file keeping only the HEAD (1146) side, per the merge message - 1146 is the live successor re-read unit (not_before 12:17Z); the 0745 side was superseded by the dedup to 0843. The proposed guard (a pre-commit / pre-push check rejecting unit files with conflict markers or duplicate top-level keys) is tooling, owned by lastwar-tool-developer; no comment from this job.
+- Entry state, read live: game found open on the Alliance Techs panel (Quick Construction detail), left there by the earlier donations unit: Quick Construction 8/10, Tech EXP 1.2M/6.0M, Current +20%, Next Level +22.5%, Donation Reward 50/50, Donation Count 1/30. HUD: food 478.8M, iron 802.1M, coin 6.9M, cart 4,217. Top banner truncated: "Important: President HawksMav appointed BambergSV as Secretary of Development...".
+- Alliance panel about 04:09: [AP3x] The Apex, 5.0 stars, Leader Abŷss Apex, Power 13,363,455,935, Members 96/100 (was 94/100 in the 2026-11-03 reads) - second confirmation of 96/100. Language English. Red dots on Alliance Wars, Help, Alliance Gifts and Alliance Techs; none on Members or Alliance Store. Alliance Star (Event 40) banner, Time Left 13:41:28, Enter not tapped.
+- Back-arrow grounding, session lesson: the Alliance panel back arrow does not answer centre taps. Five attempts at the visual centre norm (186, 893) - two single taps, one long-press, one snap-off exact tap, one double-click - produced no change; the overlapping circular portrait at the arrow's top-right corner swallows them. A tap at the arrow's lower-left norm (140, 905) returned to the base screen at once. Rule, now standing: when a centre tap fails twice, move to the lower-left corner instead of repeating the point.
+- Base screen about 04:11: account power 149,850,353 (was 149,940,141 at the 2026-11-03 00:17 read); HUD food 478.8M, iron 802.1M, coin 6.9M, second row 25.0M and 922.2K, 13.22K with a plus button, stamina 120, cart 4,217. Left column: avatar Lv.30, hammer 2/4, flask 2/2, green face, truck, radio, survivor portraits badge 2, backpack 8. Right column: Events x2 badge, VS, 7d 13:49:24 timer, Season II, Alliance, Mail red dot, Inventory red dot, WORLD. Wanted Boss timer 00:00:43 with badge 2. Resource bubbles standing on many buildings, observed only. Furnace toast again "[22/60]", still unexplained, observed only. NEW! badge, 99+ chat badge, HEROES. Chat ticker: "Breaking News: Intense battle..." and "Cheese chocolate: #2092 [AoMF]...".
+- The five Mall tabs, read live (folded into shop-claims 1.33.0): Mall entry, cart icon top-right, grounded this session at norm (917, 52). The strip scrolls horizontally; Hot Sale Packs sits right of Gold Brick Mall and needs one leftward drag on the strip to reach. Super Monthly Pass (about 04:12): Monthly Pass, Days Left 14, Squad 4 Lv.20, "Unlock an extra squad!". Daily Pickup row (items x1, x2, x2; 5m speedup x60; 200 currency). Get Now +2500 red gems plus four item icons x1 each. Rewards Left: 14, "Claimed" greyed - today's pickup already claimed, passes regular has nothing to do here today. Monthly Pass Extension $24.99, paid, never tapped. "Legendary" badge. Weekly Pass (about 04:12): "Weekly Pass rewards reset at 18:00:00" - FIFTH confirmation, closing the open re-read item the 0122 unit carried (0150 section). Commented on Issue #242 by this run. Free Supply box; "Legendary" banner; "Get all at a discount"; "Instant Gain on Purchase" (300 x5, 2.5K red gems, purple item x1); "Take All $19.99" with a 200 badge, paid, never tapped. $2 Drone Components Weekly Pass (Legendary), Validity 7 Day(s): Daily Pickup Lv.4 item x1, Total Lv.4 x7, Get Now (500, 100, green item x1), $4.99 with a 50 badge. $1 Drone Parts Weekly Pass (Epic), Validity 7 Day(s): Daily Pickup gear x15, Total gear x105, Get Now (red gem, 100, green item), $4.99 with a 50 badge. Rows below the fold not read. Diamond (about 04:13): "Initial Buy Reward - Enjoy Double Diamonds". Every tier x2: 10000 diamonds $99.99 (+1000), 5000 $49.99 (+500), 2000 $19.99 (+200), 1000 $9.99 (+100), 500 $4.99 (+50), 100 $0.99 (+10). All paid, observe only. Gold Brick Mall (about 04:13): "Gold Brick Mall - Extra 5% Bonus". Every pack "INITIAL BUY REWARD" with a "Free Gift" badge. Visible tiers: x500 gold bricks $4.99 (Free Gift x500), x1000 $9.99 (Free Gift x1000), x100000 $999.9 (Free Gift x5000), x50000 $499.9 (Free Gift x2500). Rows below the fold partly visible, not read. All paid, observe only. Hot Sale Packs (about 04:14): empty page, gift-box art, "Packs sold out". Nothing on sale.
+- Mall tab strip verified end to end: Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall, Hot Sale Packs - seven tabs, no Crystal Shop tab and no Glittering Market tab, consistent with the 0504 and 0514 reads. HOT DEALS tab carries a red dot, explained by the check-in banner: "Participate in the check-in event and claim great rewards!", FREE GIFT "Claim your gift today!", FREE TOMORROW (x5, x5, x5, "Randomly obtain one."). The claim belongs to the shop-claims regular; this unit claimed nothing.
+- Red dot accounting (0407): seen 12, explained 7, unexplained 5. Explained: HOT DEALS dot (shop-claims regular, check-in FREE GIFT claimable today); Help, Gifts and Techs dots (help, gifts, donations regulars, units queued); Events x2 and Mail dots (events, mail regulars, units queued); Wanted Boss badge 2 (Wanted Boss tab read as ended today by the 0004 pass). Unexplained 5, all outside this unit's store group and carried by the current day's scout pass: Alliance Wars dot (Issue #212, open), Season II badge 1 (standing unexplained), backpack 8 and Inventory dot (inventory surface not opened in this unit), 99+ chat badge (chat surface not walked). No red dot is unexplained inside the five store tabs walked: none of the five tabs carries a dot.
+- Scout unit scout-scout-2026-11-02-008 by ticker-0404, about 04:15 to 04:19 local, status partial (alliance remainder of the stale 2026-11-02 post-reset pass, chain scout-2026-11-02 seq 008). Evidence in `_records_/2026-11-08/perception-scout/0415-queue-run.md` (commit 614096a6 on records/2026-11-08) and the appended section of `_records_/2026-11-02/perception-scout/observation.md`. Observe-only throughout: nothing claimed, fought, dispatched, donated, dug or bought; no Buy button tapped in the Alliance Store. Game left on the base screen (Trucks panel closed). Tracker untouched: stale 2026-11-02 chain unit executed late; the current reset day's scout regulars are unaffected.
+- 0415, walked live: Help, Alliance Store (Alliance and Campaign tabs, read-only), Alliance City (both tabs), Alliance Wars (both tabs), plus the Trucks panel reached by an entry tap. The station panel was not reached; successor seq 010 (scout-scout-2026-11-02-010, station panel only) is enqueued.
+- 0415, Help panel about 04:16: "Today's points gained from Alliance Help: 0/1,000". Four Bears Lair requests all 30/30 (Missile Mastery II research; building Lv.27 Drill Ground; Defense Training VIII research; building Lv.30 Aircraft Center). Help All present, observed only, not tapped.
+- 0415, Alliance Store about 04:17, read-only. Alliance tab: Honor 301.3K (was 193.1K on 2026-11-03); UR Hero Universal Shard, Survivor Recruitment Ticket, Violet Shard, Drone Parts and Lv.1 Drone Component Chest all SOLD; Mason Shard 30/30 at 1,000 honor; Skill Chip Chest (SR); Drone Combat Boost EXP Card; 8-Hour Shield 7/7. Campaign tab (red dot): star balance 1,260; Campaign Chest (UR) and Lv.3 Drone Component Chest SOLD; UR Hero Universal Shard 10/10 at 200; Battle Data 100K 25/25 at 2,000; Universal Decor Component 30/30 at 200; Basic Chip Material 1/1 at 5,000; Skill Chip Chest (SSR); Universal Exclusive Weapon Shard; Upgrade Ore 1.0K. Footer: refresh Monday 00:00 server time, timer 13:43:38. No Buy tapped.
+- 0415, Alliance City about 04:18, both tabs identical to the 0446 read: Rare Soil 5.88K/h, Captured Cities 6/6 (Lv.6 X:499 Y:411 +1,000/h; Lv.5 X:336 Y:411, X:587 Y:336, X:411 Y:336 +900/h; Lv.4 X:499 Y:262, X:336 Y:262 +800/h); Coal 13.53K/h, Strongholds 4/4. Server Time 2026-11-8 10:17:10 read at about 04:18 local (12:18 UTC), so the server clock read about 2 hours behind UTC at that moment. Captures left 2/2, war declarations left 2/2. City Buff observed only.
+- 0415, Alliance Wars about 04:18: Rally Intel "No Alliance Rally currently."; Individual Intel "There are no ongoing Alliance Wars currently." Same as the 0446 read on both tabs; the Wars dot (Issue #212) is again not explained by a live action.
+- 0415, Trucks panel about 04:19, reached by tapping the left-column blue vehicle icon at norm (46, 562) - that icon opens Trucks, not the station (folded into truck-plunder 1.30.0): "Today's Trade Count: 0/5", "Filter out trucks from your Warzone" checked, four yellow trucks under Others' Trucks, Mega Mode button, both tabs badged 4, History and Recover buttons. Nothing dispatched or plundered; the trucks regular owns that work and its units are queued.
+- 0415, back-arrow grounding, repeated confirmation: the Alliance panel back arrow answers at its lower-left norm (140, 905) and the City List back arrow at norm (76, 907); a tap at (140, 905) on the City List missed (arrow sits further left there). Re-ground every back arrow fresh per screen.
+- 0415, new labels on the scrolled Alliance panel (unmatched, roster-out): Season Contributions, Season Milestones, Alliance Furnace. Recorded in the observation file; candidate filing belongs to the diff/retro step.
+- Red dot accounting (0415): seen 14, explained 8, unexplained 6. Explained: Help, Gifts and Techs dots (owning regulars, units queued); Events x2 and Mail dots (events, mail regulars, units queued); Wanted Boss timer badge (countdown, not a claim signal); the two Trucks tab badges (trucks regular, 4 trucks shown, Trade Count 0/5). Unexplained 6: Alliance Wars dot (Issue #212, open); Store Campaign tab dot (cause unverified - NEW unexplained dot this unit); Season II badge 1 (standing); backpack 8 and Inventory dot (inventory surface not opened); 99+ chat badge (chat surface not walked).
+- Unknown items 0 in the surfaces actually walked. unmatched_labels: Season Contributions, Season Milestones, Alliance Furnace.
+- Follow-up: successor scout-scout-2026-11-02-010 (station panel only) enqueued; Issue #212 stays open (Wars dot); the current day's scout pass owns the carried dots. Game left safe: game left on the base screen. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
+
+
+## What the 2026-11-08 0440, 0447, 0454 and 0512 scout units added - station re-checked, alliance remainder walked, VIP re-checked, 3 red dots explained live
+
+- Scout unit scout-midday-scout-mid-2026-10-31-009 by ticker-0434, about
+  04:36 to 04:44 local, status partial per the unit window instruction.
+  Evidence in `_records_/2026-11-08/perception-scout/0440-queue-run.md`
+  (commit caa661bab on records/2026-11-08). Observe-only throughout:
+  nothing claimed, fought, dispatched, donated, boarded or bought.
+  Base HUD read live about 04:40: level 30, power 149,850,353
+  (identical to the 0022 read at 00:16 and the 0404 read at 04:16);
+  food 478.8M, iron 802.1M, coin 6.9M; second row 25.0M, 922.2K;
+  diamonds 13.22K with a plus button; cart 4,217; stamina 120.
+  Season II timer 7d 13:22:59. Wanted Boss badge 2 with a 00:04:00
+  timer.
+- Station re-check (0440): both preparation signals absent, the same
+  result as the 0022, 2134 and 2304 reads - no separate train icon in
+  the left icon column, and no "Boarding closes in" banner under the
+  resource bar. No train is preparing in this window. This is the
+  seventh no-train confirmation in the scout-mid-2026-10-31 chain's
+  station-panel checks (seq 009). Per the unit window instruction
+  and the R2-hardened entry route (alliance-train metadata 1.6.0),
+  the check stopped at the signals: no pan of the base edge, no
+  station platform visit. No successor unit is enqueued from this
+  unit: the station re-check recurs with the current reset day's
+  scout pass, whose head scout-midday-2026-11-08-0700 is already in
+  inbox, and the remaining groups of the current reset day belong to
+  it. Chain scout-mid-2026-10-31 is spent with this unit.
+- Icon identity note (0440): the blue vehicle icon in the left column
+  is the Trucks entry - the 0404 unit verified by tap at 04:19 today
+  that it opens the Trucks panel (Trade Count 0/5), and the 0022
+  unit read the same icon as radar. The two readings disagree on
+  what the icon is; neither reading makes it a train icon, and the
+  train icon is state-dependent - it appears in the column only
+  while a train is preparing. The disagreement is SETTLED by the
+  0512 unit below in favour of Trucks - the 0022 "radar" read is
+  superseded.
+- Red dot accounting (0440): seen 11, explained 11, unexplained 0.
+  Left column hammer, blue vehicle icon, truck badge 8, radio badge
+  2 (4); right column Events x2, Season II badge, Wanted Boss badge
+  2, Alliance dot, Mail dot, Inventory dot (6); 99+ badge (1).
+  Unknown items 4: the furnace overdrive toast [22/60] (recurring,
+  mechanism still unexplained); the hammer dot's exact trigger and
+  its ownerless routing (no construction regular in the queue); the
+  99+ badge (recurring); the Season II badge (recurring).
+- Correction appended to the record (0447 section): the 0440 record
+  and its unit stats carry "costs: about 8 min" for unit
+  scout-midday-scout-mid-2026-10-31-009. That figure was a
+  subjective estimate and is wrong: the tool-measured duration of
+  that unit is 133 seconds (started 2026-11-08T12:36:36Z, finished
+  2026-11-08T12:38:49Z). The duration_seconds field in the done
+  unit file is authoritative and correct; only the free-text cost
+  estimate is corrected here, by append, per C1. No profile carries
+  the 8-minute figure: free-text cost estimates in records are not
+  measurements and must not be folded as durations.
+- Scout unit scout-scout-2026-11-02-009 by ticker-0434, about 04:39
+  to 04:47 local, status done - every item named in the unit window
+  was walked live (Settings, the Record Member/Message/Event tabs,
+  the Gifts Premium tab, the Assemble tile inspect-only, the
+  Strength Ranking tile including its Power, Kills and Donation
+  tabs). Evidence in
+  `_records_/2026-11-08/perception-scout/0447-queue-run.md` (commit
+  caa661bab on records/2026-11-08). Observe-only throughout: nothing
+  claimed, fought, dispatched, donated, boarded or bought; the
+  Teleport button was never tapped and Leave Alliance was never
+  tapped. One transient observe failure mid-unit ("target app exited
+  or restarted"); LastWar was still running at the same pid 98156
+  and re-observed cleanly with no state lost.
+- Alliance panel (0447), read live about 04:39: [AP3x] The Apex,
+  Overall Rating 5.0, Leader Abŷss Apex, Power 13,363,455,935,
+  Members 96/100 (was 94/100 in the 0136 and 0446 reads) - third
+  confirmation of 96/100. Language English. Motto: "We are The
+  Apex. An alliance of veteran players. All are welcomed - messages
+  sent in multiple languages." plus a Korean line, partly visible.
+  Panel red dots, four: Alliance Wars, Help, Alliance Gifts,
+  Alliance Techs. No dot on Members or Alliance Store. Banner:
+  Alliance Star (Event 40), Time Left 13:10:08 at entry, 13:04:01
+  at close. Bottom row: back arrow, Record, Applicants, Alliance
+  Star, Settings. Entry note, rule R2: click_element on the OCR
+  Alliance label did nothing; a coordinate click at (917,705) on
+  the freshly measured trophy icon opened the panel at once. Ground
+  the icon, not the label.
+- Record tabs (0447): War tab - [VR4L] tater chip #2110 (513,420)
+  attacked [AP3x] 도고 Dogo's Gold Mine #2110 (495,453), "yet our
+  defenses held firm!", 2026-11-8 10:35:05; [AP3x] Missile Apex
+  #2110 (474,431) attacked [Que] foltzinator's base #2110 (838,736)
+  and claimed a victory, five identical rows about 08:50. Member
+  tab - KAGE approved MegaLoki Apex's application to join the
+  Alliance, 2026-11-8 02:47:18; QueenSTX Apex left the Alliance,
+  2026-11-8 02:07:08; rank changes by Abŷss Apex and MesutCLK
+  Apex. Message tab - TTS Rage Apex set a new Alliance Assembly
+  Point for the original Warzone #2110 (488,395), 2026-11-7
+  02:48:43, and (196,273), 2026-11-7 02:48:33; Abŷss Apex updated
+  the Alliance Slogan three times, 2026-10-30; Abŷss Apex set a new
+  Alliance Assembly Point (501,392), 2026-10-29. Event tab -
+  KillerInstinct14 scheduled the activation of the Marshal's Guard
+  for server time 2026-11-9 21:00:00 at difficulty 12, 2026-11-8
+  02:34:30; Texan Apex appointed Roronoa zo as the Train Conductor,
+  2026-11-8 00:05:53; 벌꿀오소리Teemo started the Marshal's Guard
+  challenge, 2026-11-7 21:00:13; KillerInstinct14 updated the
+  search schedule - the system will search for a Lv.8 Doomsday
+  Stronghold at Server Time 2026-11-9 23:15:00, twice, 2026-11-6
+  01:08:25 and 01:08:19. No new issue filed: Marshal's Guard and
+  the Doomsday Stronghold were already discovered as Issue #427
+  (2304 record), and the two dated entries are commented onto #427
+  by this run.
+- Alliance Gifts (0447): Level 28, progress 193,203,470/206,300,000
+  (was 183,423,470 at the 0136 read) - folded into alliance-gifts
+  1.38.0. Regular tab: banner "Defeat the Doom Elite for a Regular
+  Alliance Gift", Go button not tapped; Doom Walker Loot +10 rows;
+  Claim All badge 130 (was 201 at the 1801 read, 48 at the 0136
+  read). Premium tab: banner "Buy packs with Alliance Gifts to
+  reward every member a gift.", Go button not tapped; Alliance Gift
+  (R) +50, 23:24:56, "Someone purchased Coin Weekly Pass.";
+  Alliance Gift (MR) +1000, 21:24:06, "Someone purchased Mega
+  Express Contract."; Alliance Gift (R) +50, 20:44:19, "miss
+  direction purchased Advanced Training Pass."; Alliance Gift (SSR)
+  +200, 20:43:43, "miss direction purchased Premium Training
+  Pass."; a fifth (R) row cut off below the fold. Claim All badge
+  12. "Hide your name on Gifts" checkbox unchecked, observed only.
+  Both tabs carry red dots; the gifts regular owns all claims.
+- Assemble tile (0447), inspected only, about 04:43: panel
+  "ALLIANCE ASSEMBLY POINT", Show Labels checked. "You are close
+  enough to Assembly Point X:488 Y:395. You can move a bit closer
+  if needed." Teleport item count 3/1. The Teleport button was NEVER
+  tapped - assembling is the owner's alone. Closed with the panel
+  X. No base move, no teleport used.
+- Strength Ranking (0447), read live about 04:43-04:46: Power tab
+  top 6 - 1 R4 ItStartsWithaDream 271,007,082; 2 R5 Abŷss Apex
+  266,260,167; 3 R4 StarFall 208,552,393; 4 R3 Nuna Knuckles
+  204,828,060; 5 R3 xChroniApex 201,091,043; 6 R3 papillon707
+  198,801,977. Own row (green, pinned): #34, R3 Bears Lair,
+  149,850,353 - matches the HUD power read this pass. Kills tab
+  top 6 - 1 R4 벌꿀오소리Teemo 71,985,826; 2 R4 TTS Rage Apex
+  39,938,810; 3 R3 Missile Apex 30,319,816; 4 R5 Abŷss Apex
+  25,185,511; 5 R4 ItStartsWithaDream 21,394,076; 6 R3 꿀밤Bamie
+  21,330,771. Own row: #94, R3 Bears Lair, 48,638 kills. Donation
+  tab, Daily sub-tab top 5 - 1 R3 papillon707 9,600; 2 R3 Skinner
+  Box 7,500; 3 R3 Sanction Apex 7,100; 4 R3 Krazy Sully 7,000; 5 R4
+  벌꿀오소리Teemo 6,650. Own row: #30, R3 Bears Lair, 3,450
+  donation points today - a live cross-check for the donations
+  regular (folded into alliance-donations 1.61.0). Weekly sub-tab
+  top 5 - 1 R3 DCna8ive 161,250; 2 R2 KaBoom420 151,500; 3 R4 Texan
+  Apex 101,600; 4 R3 MrCallejon 89,250; 5 R3 papillon707 77,700.
+  Own row: #82, R3 Bears Lair, 26,000 donation points this week
+  (was #84 with 24,900 at the 1801 read on 2026-11-02). The Donate
+  button and the Rewards button were not tapped; the donations
+  regular owns donations. Panel second row (scrolled into view):
+  Alliance Events, Alliance City, Season Contributions, Season
+  Milestones, Alliance Furnace - corroborating the 0404 unit's
+  new-labels read. No red dots on Assemble or Strength Ranking.
+- Back-arrow correction (0447 and 0454): the Alliance panel back
+  arrow sits at norm (183,938), NOT at (52,938) - the first tap at
+  (52,938) landed on empty bar and changed nothing; the re-grounded
+  tap at (183,938) returned to the base screen at once. The
+  (52,938) point belongs to the sub-pages (Settings, Logs, Gifts,
+  Strength Ranking), not to the Alliance panel itself. This refines
+  the 0407/0415 "lower-left corner" rule: no back-arrow point is
+  standing across screens - every unit re-grounds the arrow fresh
+  by visual measurement for the screen it is on, and the panel
+  itself answers at (183,938).
+- Red dot accounting (0447): seen 6, explained 5, unexplained 1.
+  Explained: Help maps to the help regular, Gifts and both tab dots
+  map to the gifts regular, Techs maps to the donations regular -
+  all with units queued or in inbox. Unexplained 1: the Alliance
+  Wars dot (Issue #212, open) - the Wars page itself (read by the
+  0446 unit) shows no rally and no ongoing war, so the dot is not
+  explained by a live Wars action. Unknown items 1: the top ticker
+  full text (scrolling, only partial lines read). The blue vehicle
+  icon identity disagreement is carried from unit 1 of this pass,
+  not re-counted here. Base-screen dots seen at entry were accounted
+  in unit 1's record (0440) and are not double-counted here.
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0434,
+  about 04:52-04:54 local, status done - the re-verification target
+  was met live (VIP Daily Freebie claim state and VIP progress
+  re-read). Evidence in
+  `_records_/2026-11-08/perception-scout/0454-queue-run.md` (commit
+  caa661bab on records/2026-11-08). Observe-only throughout:
+  nothing claimed, fought, dispatched, donated, boarded or bought;
+  the Freebie Claim button was observed only and NOT tapped (the
+  vip regular owns the claim). This staged unit carried no window
+  text; its work was set from the chain context.
+- MY PROFILE (0454), read live about 04:52: Lv.30 [AP3x]Bears Lair,
+  power 149.8M, 48.6K kills, Lv.63, Lv.2, [AP3x]The Apex, VIP13
+  with a red dot, #2110. Likes 1,810. Gift display: flower 12, gift
+  box 88, trophy 11, one empty slot. Moments: "No posts found."
+  Bottom row: Record with a red dot, Account, Settings, Rankings,
+  Follow.
+- VIP panel (0454), read live about 04:53: VIP13, "You've logged in
+  2 days in a row. Collect 80 VIP points tomorrow." Progress
+  1,605,970/2,000,000 - identical to the 0204 read at 02:17 local
+  today. VIP13 Daily Freebie: puzzle 2, brown crate 13, grey crate
+  13, gold 13 - Claim button GREEN and claimable, UNCHANGED from
+  the 0204 read at 02:17. Observed only, NOT claimed. Material
+  finding: the Freebie is still unclaimed at about 04:53 local,
+  roughly 11 hours into the reset day, while the vip unit
+  vip-2026-11-07-1900 sits stalled in inbox (priority 1, age about
+  21 hours at this pass's sync). The vip regular owns the claim and
+  its unit is already queued; no new unit is enqueued from this
+  scout unit. VIP Exclusive (Epic): Availability 1, $99.99 (paid,
+  untouched): red gem 10.0K, hero shard 120, blue crate 5, paw
+  item, +1000 badge. Timer 18d 13:16:45. Cart icon, top right,
+  carries a red dot - one of the 3 unexplained dots from the 0204
+  unit; not tapped (store/cart surface, observe-only); its cause
+  stays with seq 006, resolved by the 0512 unit below.
+- Red dot accounting (0454): seen 3, explained 2, unexplained 1.
+  Explained: the VIP13 dot is the Daily Freebie claimable signal
+  (vip regular, unit queued); the Record dot maps to the alliance
+  logs surface (read live in unit 2 of this pass). Unexplained 1:
+  the VIP panel cart icon dot (cause unread, not tapped) - now
+  explained by the 0512 unit below. Unknown items 1: the cart dot
+  cause. The base left-column bus and truck dots stay with seq 006,
+  not re-counted here.
+- Scout unit scout-midday-scout-mid-2026-11-03-006 by ticker-0504,
+  about 05:05-05:12 local, status done: all 3 dots explained live,
+  Freebie re-checked. Evidence in
+  `_records_/2026-11-08/perception-scout/0512-queue-run.md` (commit
+  111f7e954 on records/2026-11-08). Observe-only; nothing claimed,
+  fought, dispatched, donated, dug or bought. No successor from this
+  stale chain; the chain is spent with this unit. The current day's
+  scout pass (scout-midday-2026-11-08-0700) is already in inbox.
+  Tracker untouched on purpose: this unit closed the stale
+  2026-11-03 chain, not today's scout-midday slot, which stays DUE
+  in tools/regulars.py for 2026-11-08.
+- Dot 1, blue bus icon: the Trucks entry, EXPLAINED. Tap-verified
+  at grounded norm (49,575): the blue bus icon opens the Trucks
+  panel. This is the third tap-verified confirmation (0404 unit at
+  04:19 today, now 0512); it settles the 0440 "blue vehicle icon
+  identity disagreement" in favour of Trucks - the 0022 "radar"
+  read is superseded. Trucks panel, read live about 05:10: "Today's
+  Trade Count: 0/5", "Filter out trucks from your Warzone" checked,
+  four yellow trucks shown, "Mega Mode" button, "Others' Trucks" /
+  "Your Truck" tabs each with a badge 4, History and Recover
+  buttons. The plain red dot CLEARED after opening the panel: on
+  return to the base screen the bus icon carries no dot. The dot is
+  the unviewed-Trucks-panel signal; it maps to the trucks regular,
+  whose units are already queued. Nothing dispatched or plundered
+  here (observe-only). Folded into truck-plunder 1.31.0.
+- Dot 2, white truck icon badge 8: the Secret Command Post entry,
+  EXPLAINED. Tap-verified at grounded norm (50,641): the white
+  truck icon opens the Secret Command Post, Secret Mobile Squad
+  page - not a truck surface. The icon is the jeep from the panel
+  header, and the panel's jeep icon carries the same badge 8.
+  Secret Mobile Squad, read live about 05:13: "Dispatch heroes to
+  perform secret tasks to defeat enemies, maintain order and get
+  rich rewards." Assist Allies 0/5, Plunder Others 0/5. Tabs: Your
+  Tasks badge 17, Ally Tasks badge 5, Others' Tasks. Recover and
+  Record buttons, Difficulty stars, Normal mode. Your Tasks rows,
+  all with green Claim buttons - observed only, NOT claimed; claims
+  belong to the secrets regular, whose units are already queued: UR
+  Rescue Test Subject Lv.5; SSR Train Refugees Lv.5; SSR Provide
+  Tech Support to Refugees Lv.5; SSR Search for Missing Refugees
+  Lv.5 (first screen), then after one drag SSR Search for Missing
+  Refugees Lv.5 x2, SR Retrieve Abandoned Gear Lv.5, SR Retrieve
+  Valuable Supplies Lv.5, with a ninth row (Retrieve Raw Materials)
+  cut off at the bottom. At least 8 claimable rows were seen,
+  matching the badge 8: the badge counts completed Secret Mobile
+  Squad tasks awaiting claim. Tabs Hidden Treasures and Ghost Ops
+  not opened in this unit (the treasures and ghost-ops regulars own
+  them). Folded into secret-missions 1.18.0.
+- Dot 3, VIP panel top-right cart icon dot: the Store shortcut,
+  EXPLAINED. Tap-verified at norm (806,133): the cart icon on the
+  VIP panel opens the STORE. The store tab strip holds VIP,
+  Alliance, Honor, Campaign, Season, Cosmetics and a further tab
+  cut off ("Cou..."). Four tabs were read in full; Season,
+  Cosmetics and the cut-off tab were not opened - filed as Issue
+  #444 (label knowledge) by the ticker pass. VIP tab (red gems
+  4,217): Food Chest (SR) 100/100 at 40 gems, Iron Chest (SR)
+  100/100 at 40, Coin Chest (SR) 100/100 at 40, Universal Decor
+  Component 50/50 at 100, 50 Stamina 5/5 at 60, Superalloy 100/100
+  at 6, Advanced Teleporter 3/3, Drone Parts 50/50, Skill Medal
+  2000/2000. Refreshes at 00:00 every Monday (server time), timer
+  12:49:59. Alliance tab (301.3K): UR Hero Universal Shard SOLD,
+  Survivor Recruitment Ticket SOLD, Violet Shard SOLD, Mason Shard
+  30/30 at 1,000, Drone Parts SOLD, Lv.1 Drone Component Chest
+  SOLD, Skill Chip Chest (SR), Drone Combat Boost EXP Card, 8-Hour
+  Shield 7/7. Identical to the 0136 read of 2026-11-03. Honor tab
+  (101.1K): Gear Blueprint (UR) 50/50 at 10,000, Skill Chip Chest
+  (UR) 1/1 at 50,000, Decoration Chest 1/1 at 50,000, Universal
+  Decor Component 150/150 at 200, UR Hero Universal Shard 10/10 at
+  3,000, Drone Parts 100/100 at 800, Universal Exclusive Weapon
+  Shard 25/25, Resource Choice Chest (UR) 100/100, Dielectric
+  Ceramic 100/100. Refreshes at 00:00 on the 1st of every month
+  (server time), timer 22d 12:49:28. Campaign tab (stars 1,260):
+  Campaign Chest (UR) SOLD, Lv.3 Drone Component Chest SOLD, UR
+  Hero Universal Shard 10/10 at 200, Battle Data 100K 25/25 at
+  2,000, Universal Decor Component 30/30 at 200, Basic Chip Material
+  1/1 at 5,000, Skill Chip Chest (SSR), Universal Exclusive Weapon
+  Shard, Upgrade Ore 1.0K. No free or claimable item exists on any
+  tab read, and no tab carries a red dot. The cart dot is therefore
+  the store-entry indicator - the VIP Store is stocked for the week
+  - not a claim signal; no owning regular has work from it, and
+  nothing was bought (red line). The 0407 "Store Campaign tab dot"
+  is not reproduced: no dot was found on the Campaign tab in this
+  read - the 0407 dot stays a single sighting, not a standing
+  signal. The floating circular portrait icon appeared again, over
+  the Campaign tab - same unknown item as the 0204 unit, still
+  unexplained. Folded into shop-claims 1.34.0.
+- VIP Daily Freebie re-check (0512): VIP panel, read live about
+  05:11 - VIP13, "You've logged in 2 days in a row. Collect 80 VIP
+  points tomorrow." Progress 1,605,970/2,000,000 - unchanged from
+  the 02:17 and 04:53 reads. VIP13 Daily Freebie STILL claimable
+  (puzzle 2, brown crate 13, grey crate 13, gold 13, green Claim
+  button) - observed only, NOT claimed. The claim belongs to the
+  vip regular; vip-2026-11-07-1900 sits stalled in inbox (priority
+  1, about 22 hours old) while the Freebie waits. VIP Exclusive
+  (Epic) $99.99, Availability 1, timer 18d 12:55:44. Untouched.
+  Folded into vip-rewards 1.14.0.
+- Tap grounding note (0512): the first tap of this unit, at (85,538)
+  from image-pixel conversion of the screenshot, landed on the Gold
+  Mine building instead of the bus icon. The visual-grounding
+  points (49,575) bus and (50,641) truck landed exactly.
+  Re-confirms the standing rule: tap coordinates come from measured
+  grounding boxes or OCR element positions in tap space, never from
+  image-pixel conversion of a screenshot.
+- Banner (0512): "Important: President HawksMav appointed Loreli
+  Unleashed as Secretary of Sci..." - this resolves the partial
+  banner fragments from the 0440 unit. A second appointment fragment
+  appeared later on the Store screen: "Important: President
+  HawksMav appointed [Korean name] as Secr..." (name partly unread).
+- Standing unexplained items after this pass, carried by the current
+  day's scout pass: Season II badge 1, 99+ chat badge, furnace
+  overdrive toast [22/60], Alliance Wars dot (Issue #212), MY
+  PROFILE Record dot. The 0229 unit's 3 unexplained dots are now
+  all explained and closed.
+- Follow-up: successor seq 010 of chain scout-2026-11-02 (station
+  panel only) still has no record on the branch; the 0325 successor
+  seq 004 of chain scout-2026-11-03 still has no record on the
+  branch; both fall to the next run. The current day's scout pass
+  head scout-midday-2026-11-08-0700 is already in inbox.
+
+## What the 2026-11-08 0538, 0542 and 0608 units added - Mall strip remainder, three dots explained, Winter Battlefield sub-pages
+
+- Units scout-midday-scout-mid-2026-11-04-003 (0538) and
+  scout-midday-scout-mid-2026-11-03-005 (0542) by ticker-0534, about 05:36
+  to 05:50 local, both status done; unit scout-scout-2026-11-03-004 (0608)
+  by ticker-0604, about 06:08 to 06:23 local, status partial (15-minute
+  cap). Evidence in `_records_/2026-11-08/perception-scout/0538-queue-run.md`
+  and `0542-queue-run.md` (commit 707bcec0d8 on records/2026-11-08) and
+  `0608-queue-run.md` (commit 50389b4b4a on records/2026-11-08);
+  observations appended to `_records_/2026-11-03/perception-scout/observation.md`
+  and `_records_/2026-11-04/perception-scout/observation.md`. Observe-only;
+  nothing claimed, fought, dispatched, donated, boarded, matched or bought.
+  The 0538 and 0542 units are confirmatory re-reads: their unit files were
+  already completed by ticker-0404 (0407) and ticker-0504 (0512) and re-ran
+  from the stale main-checkout pool - tracked as GitHub Issue #446
+  (tooling), filed by the ticker pass; the reads below are live second
+  reads, not first observations.
+- 0538, Mall strip remainder (chain scout-mid-2026-11-04, now complete):
+  Super Monthly Pass, Days Left 13 (was 14 at the 0407 read about 04:07
+  local the same day - the 14-to-13 move inside 90 minutes is unexplained,
+  see the correction below; the record's "one day elapsed since the 2209
+  read" wording is not adopted); Squad 4 Lv.20; Daily Pickup row (100 x1,
+  50 x2, gold x2, 5m speedup 60, 200 x1); Get Now +2500 diamonds plus
+  items; Rewards Left: 13; Claim button "Claimed" (greyed - today's pickup
+  already claimed); Monthly Pass Extension $24.99, paid, observed only.
+  Weekly Pass tab: "Weekly Pass rewards reset at 18:00:00" - the SIXTH live
+  confirmation of the line (after 0114, 1812, 1853, 2209 and 0407); Free
+  Supply box contents unread (a tap would claim, so a scout does not open
+  it - routed to the passes / shop-claims regulars); Legendary "Instant Gain
+  on Purchase" (300 coin x5, red gem 2.5K x1, purple item x1), "Take All
+  $19.99", paid, observed only; four $4.99 weekly pass cards, all Validity
+  7 Day(s): $2 Drone Components (Legendary; Daily Pickup x1, Total x7, Get
+  Now 500 + 100 + 1), $1 Drone Parts (Epic; Daily Pickup x15, Total x105),
+  Iron (Elite; Daily Pickup x3, Total x21, Get Now 500 + 100 + 1), Coin
+  (Elite; Daily Pickup x3, Total x21). Diamond tab: "Initial Buy Reward -
+  Enjoy Double Diamonds"; six first-buy x2 packs, all paid: 10000 +1000
+  $99.99; 5000 +500 $49.99; 2000 +200 $19.99; 1000 +100 $9.99; 500 +50
+  $4.99; 100 +10 $0.99 (bottom-row prices read from the cut-off window
+  edge, partial; the page does not scroll). Gold Brick Mall tab: "Gold
+  Brick Mall - Extra 5% Bonus"; eight packs, all paid, each with an INITIAL
+  BUY REWARD badge and a Free Gift: x500 + Free Gift x500 $4.99; x1000 +
+  Free Gift x1000 $9.99; x2000 + Free Gift x100 $19.99; x2500 + Free Gift
+  x125 $24.99; x5000 + Free Gift x250 $49.99; x10000 + Free Gift x500
+  $99.99; x50000 + Free Gift x2500 $499.99; x100000 + Free Gift x5000
+  $999.99 (top two prices final digit cut at the row edge, recorded at
+  ladder values, partial; a second scroll confirmed the page bottom - the
+  ladder is complete at eight packs). This full ladder confirms the 0407
+  correction of the 2209 OCR prices and adds the four middle tiers the 0407
+  read did not reach. Hot Sale Packs tab: "Packs sold out", unchanged from
+  the 2209 read; the tab sits past the right edge of the strip and is
+  reached by dragging the strip left. Red dots: 0 seen in the five tabs
+  walked; the red circle at the Mall header's top-left corner is the macOS
+  window close button, not a game dot. President banner fragments: the
+  RedFox26 fragment now reads "...inted RedFox26 as Secretary of Defense!"
+  - combined with the earlier "Important: President HawksMav appointed
+  RedFox26 as ..." fragment, the banner reconstructs as "Important:
+  President HawksMav appointed RedFox26 as Secretary of Defense!"
+  (reconstructed from two fragments, not one single live read); a newer
+  banner has since rotated in: "Important: President HawksMav appointed
+  Thunder TLS as ..." (cut off, remainder unread). One transient
+  screen-capture failure (screen_failed, app identity changed), recovered
+  by an immediate re-observe with no state lost - the same transient class
+  as the 0447 unit, not the recurring channel failure of Issue #282.
+- 0542, three carried red dots explained (chain scout-mid-2026-11-03, now
+  complete - seq 005 ran after seq 006, out-of-order chain execution, an
+  observation for the retro): the three dots were first explained by the
+  0512 unit; this unit re-verified each by live navigation and adds the
+  screen states, the badge counts and the 0022 mapping correction. Dot 1,
+  blue truck/bus icon, 4th icon down the left column, opens the Trucks
+  screen: "Today's Trade Count: 0/5", "Filter out trucks from your Warzone"
+  checked, four own yellow trucks waiting on the road, "Mega Mode" button,
+  "Others' Trucks" / "Your Truck" tabs each badged 4, History button
+  top-right, Recover button bottom-left (itself carrying a red dot, routed
+  to the trucks regular). The dot is the trucks regular's dispatch/plunder
+  availability signal - 0 of 5 trades done today, 4 own trucks waiting to
+  dispatch and 4 others' trucks to plunder. Dot 2, white truck icon, 5th
+  icon down the left column, opens the SECRET COMMAND POST - Secret Mobile
+  Squad: "Dispatch heroes to perform secret tasks to defeat enemies,
+  maintain order and get rich rewards." Assist Allies 0/5, Plunder Others
+  0/5; Recover (red dot), Record, Difficulty 3 stars; tabs Your Tasks
+  (badge 17), Ally Tasks (badge 5), Others' Tasks. Visible rows, all with
+  green Claim buttons (read only): UR Rescue Test Subject Lv.4; SSR Train
+  Refugees Lv.5; SSR Provide Tech Support to Refugees Lv.5; SSR Search for
+  Missing Refugees Lv.5. Bottom: Mega Refresh, Mega Deploy, "Normal" mode.
+  The dot is the secrets regular's signal - completed Secret Mobile Squad
+  tasks waiting to be claimed (17 Your Tasks, 5 Ally Tasks). Dot 3, VIP
+  panel top-right cart icon: the cart opens the VIP STORE (tabs VIP /
+  Alliance / Honor; VIP tab: Food/Iron/Coin Chest (SR) 100/100 at 40
+  diamonds each, Universal Decor Component 50/50 at 100, 50 Stamina 5/5 at
+  60, Superalloy 100/100 at 6, Advanced Teleporter 3/3, Drone Parts 50/50,
+  Skill Medal 2000/2000 - prices of the bottom row cut off; "Refreshes at
+  00:00 every Monday (server time)", timer 12:18:20; all stocks full,
+  nothing bought this week). At this live read the cart icon carries NO red
+  dot. Explanation, with the inference flagged: the dot the 0204 unit saw
+  most plausibly marked unviewed weekly VIP Store stock and was cleared by
+  that unit's own VIP panel visit (the only intervening event); the Daily
+  Freebie is ruled out as the dot's cause because it is still claimable now
+  with no dot present. VIP13 panel (via MY PROFILE, VIP13 tile, which
+  itself carries a red dot): VIP13, "You've logged in 2 days in a row.
+  Collect 80 VIP points tomorrow.", 1,605,970/2,000,000 - unchanged from
+  the 0204 unit. Privileges: Crafting Speed 50.00% NEW, Research Speed
+  20.00% NEW, Mega Mode of Trade Trucks 1 NEW, Food/Iron/Coin Output
+  25.00% each, Construction Speed 50.00%, March Speed 15.00%, Max Units
+  5.00%. VIP13 Daily Freebie Claim button is GREEN/claimable (puzzle x2,
+  crates x13/x13, gold x13) - still unclaimed since the 0204 read, observed
+  only. VIP Exclusive (Epic), Availability 1, $99.99 paid pack, timer 18d
+  12:24:11. Unknown items: the gold chest icon below the VIP panel cart
+  icon (function unread, not tapped); the floating circular portrait icon
+  (seen again on the VIP panel and the Store screen, still unexplained);
+  the Trucks screen Recover red dot and the Secret Command Post Recover red
+  dot (both seen, neither in this unit's window - routed to the trucks /
+  secrets regulars); the VIP Store bottom row prices (cut off).
+- CORRECTION, the 0022 mapping: the 0022 unit (chain
+  scout-mid-2026-11-04) mapped the white truck icon's red dot to the
+  trucks regular. That mapping is superseded by this live navigation - the
+  white truck opens the Secret Command Post, while the blue truck/bus icon
+  opens Trucks. The 0022 record and the 2026-11-03 observation file carry
+  the corrected mapping (appended by the ticker pass); this profile now
+  carries it too. The 0512 section's "chain scout-mid-2026-11-03 is spent"
+  is completed by this hour: seq 005 (0542) has now run, so the chain is
+  complete with both seq 005 and 006 done.
+- 0608, Winter Battlefield sub-pages (chain scout-2026-11-03 seq 004,
+  partial - the 15-minute unit cap ran out after Rewards, Rules (all 4
+  tabs) and the Shop Honor tab; History, Achievement, the Shop
+  Campaign/Season tabs and the Doomsday count finish carry to successor seq
+  005): entry on the Alliance Tech screen (leftover from the 0546 donations
+  unit). Base screen: Total Power 149,850,353 (unchanged from the 0447/2209
+  reads); Food 478.8M, Iron 802.1M, Coin 6.9M; diamonds 4,217; cart 13.22K;
+  stamina 120; hammer 2/4, flask 2/2; Season II 7d 11:49:55; furnace
+  overdrive toast [22/60] recurring; 99+ chat badge recurring; alliance
+  appointment banners transient (President HawksMav; cookie as Secretary of
+  Defense). Winter Battlefield main page: 5v5 event, "Event is starting
+  soon", countdown 11:49:09 at entry falling to 11:41:57 at exit; matching
+  windows (Local Time) 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09
+  13:00-15:00; matchmaking for Base level 15 and above during the specified
+  times; Match button greyed (event not started). Right-side buttons: Rules,
+  Shop, History, Achievement. Left: Rewards chest icon. Info icon top right
+  unread. Rewards (both pages): event currency balance 0 (blue snowflake
+  icon); Cumulative Reward Points chest ladder, two pages: 45,000 (tag
+  4,100), 90,000 (4,100), 135,000 (5,150), 225,000 (5,250), 337,500
+  (6,200), 450,000 (6,500) - the tag above each chest carries a red
+  ticket-like icon whose meaning is unread, recorded as a number only, not
+  labelled content or cost. Ways to earn the currency: Complete a
+  battlefield +10.0K; Individual Total Points Ranking +17.5K-52.5K; Get
+  Commendations when the battle settles +21.0K-45.0K; Earn Achievements in
+  the battlefield +2.4K-3.5K. Achieving victory grants x1.5 for this battle.
+  Rules, Rules tab: story (global warming melted the glacier, uncovering a
+  hidden nuclear missile site; plan "Winter Storm" to seize the nuclear
+  silo). Event Overview: 1. Hold Missile Sites or Oil Wells to earn points;
+  first to 30,000 points wins. 2. If time runs out, the side with more
+  points wins. 3. The central Silo opens after some time; capture it for
+  lots of points. 4. Supply boxes airdrop periodically; send troops to
+  capture them for points. 5. On entry, the highest-level units the
+  Commander can train fill the independent Drill Ground; they do not appear
+  in the Base Drill Ground and do not leave the battlefield after the
+  battle. 6. In battles, units do not die; severely wounded units
+  automatically recover for free. Reward Rules: unlock chests by
+  accumulating Reward Points; Reward Points reset with each event. 1.
+  Complete a match for guaranteed Reward Points (requires Total Individual
+  Points of at least 250,000). 2. At settlement, Reward Points by total
+  individual points ranking (same 250,000 gate). 3. At settlement, Reward
+  Points by commendations earned (such as MVP): 3.1 at most one
+  highest-value commendation per match; 3.2 players not among the 5
+  displayed on the settlement screen still receive commendations normally;
+  3.3 past commendations viewable in [History]. 4. Achievements earned per
+  match only, progress does not carry over: 4.1 total achievements earned
+  historically viewable in [History]; 4.2 progress from a previous match
+  cannot be carried to the next match. Event Stages: 1. Event Start - begins
+  for the first time after the server's 7th week, match battles on Saturdays;
+  during off-season periods, opens each Monday. 2. Matching - Headquarters
+  level 15+, several matching times on battle day. 3. Entering - once 10
+  commanders confirm, all automatically enter. 4. Battle Stage -
+  Preparation: safe zone, own side blue, enemy red, safe zone cannot be
+  attacked. Battle: holding Oil Wells earns lots of Battlefield Points,
+  Missile Sites fewer; Missile Sites attack all enemy-held buildings,
+  killing stationed troops. Silo Opens: opens after some time, holding it
+  earns a lot of Battlefield Points. Supply Airdrop: resource packs drop
+  periodically, send troops to collect them for Battlefield Points. Rules,
+  Structures tab (4 entries): Airdrop Supplies - capture to earn 1,000
+  Battlefield Points. Nuclear Silo - opens sometime after the battle starts;
+  capturing grants a large amount of Battlefield Points, a key structure
+  for victory; gain 100 Battlefield Points per second while controlling it.
+  Oil Refinery I - opens when the battle begins; capturing gains a large
+  amount of Battlefield Points, the primary way to produce them; gain 30
+  Battlefield Points per second while controlling it. Missile Site -
+  automatically targets all enemy-held buildings, dealing damage to their
+  troops; gain 10 Battlefield Points per second while controlling it. Rules,
+  Reward Points tab, Ranking sub-tab (No.1-No.10): No.1 +52.5K, No.2
+  +45.5K, No.3 +42.0K, No.4 +38.5K, No.5 +35.0K, No.6 +31.5K, No.7 +28.0K,
+  No.8 +24.5K, No.9 +21.0K, No.10 +17.5K - all for Individual Total Points
+  Ranking at that rank (matches the Rewards page range +17.5K-52.5K). Rules,
+  Reward Points tab, Commendations sub-tab (8): War Hero - Total Points
+  over 1,200,000, +33.0K. Elite Defender - Capture Points over 375,000,
+  +30.0K. Elite Vanguard - Kill Points above 750,000, +30.0K. Elite
+  Tactician - Plunder Points over 250,000, +30.0K. Grand General - Total
+  Points over 600,000, +24.0K. Outpost Defender - Capture Points over
+  187,500, +21.0K. Frontline Hero - Kill Points above 375,000, +21.0K.
+  Swift Tactician - Plunder Points over 125,000, +21.0K. Rules, Reward
+  Points tab, Achievements sub-tab (10): +2.8K - Battlefield Will Medal
+  (win battles 25 times in the battlefield); Stand Ready Medal (any Troop
+  helps defend the same Building for 90s); Logistics Support Medal
+  (successfully collect 4 airdrops); Fire Suppression Medal (plunder 4000
+  building points). +3.5K - Thunder Assault Medal (use a total of 600%
+  March Speedup); Life Guardian Medal (heal a total of 16000 units); Bloody
+  Valor Medal (win battles 30 times in the battlefield); Unyielding Stand
+  Medal (any Troop helps defend the same Building for 120s); Airdrop Hunter
+  Medal (successfully collect 6 airdrops); War Harvest Medal (plunder 5000
+  building points). Rules, Other tab: Participation Conditions - Commanders
+  with bases level 15 and above can participate; multiple matching time
+  slots are available on the battle day. Special Rules: 1. In battle,
+  commanders can relocate their Base 1 time every minute. 2. On entry, the
+  highest-level units automatically fill the separate Drill Ground; they do
+  not show up in the base Drill Ground and do not leave the battlefield
+  after the fight. 3. Units do not die; severely wounded units are
+  automatically healed for free. 4. All boosts from tech, VIP, base skins,
+  titles, decorations and drones work in battle. 5. Rallies are disabled, no
+  continuous marching. 6. Each commander can garrison multiple troops in a
+  single building. Shop, STORE Honor tab (12 items, all full stock):
+  balance 101.1K (gold medal currency, not the blue Winter Battlefield
+  currency); refreshes at 00:00 on the 1st of every month (server time);
+  timer 22d 11:42:23 at read. Gear Blueprint (UR) 50/50 at 10,000; Skill
+  Chip Chest (UR) 1/1 at 50,000; Decoration Chest 1/1 at 50,000; Universal
+  Decor Component 150/150 at 200; UR Hero Universal Shard 10/10 at 3,000;
+  Drone Parts 100/100 at 800; Universal Exclusive Weapon Shard 25/25 at
+  2,500; Resource Choice Chest (UR) 100/100 at 4,000; Dielectric Ceramic
+  100/100 at 800; Hero Recruitment Ticket 100/100 at 2,000; 50 Stamina
+  50/50 at 1,000; Emote: Victory Fest 1/1 at 100,000. Campaign and Season
+  tabs unread; whether the Season tab is the Winter Battlefield currency
+  shop is unverified. Open discrepancies (flagged, not resolved): the
+  Commendations range on the Rewards page reads +21.0K-45.0K, but the
+  highest listed commendation is War Hero +33.0K; 30.0K x 1.5 victory =
+  45.0K fits the top only if the 30.0K tier is the max counted, while 33.0K
+  x 1.5 = 49.5K exceeds it. The Achievements range on the Rewards page
+  reads +2.4K-3.5K, but the lowest listed achievement is +2.8K; no 2.4K
+  achievement was seen in the list. The red ticket-like icon on the Rewards
+  chest tags (4,100 / 5,150 / 5,250 / 6,200 / 6,500) is unread. Red dot
+  accounting: 0 new seen in this unit's scope; the Winter Battlefield
+  sub-pages carry no red dots; the Events hub badge 1 sits on Frontline
+  Breakthrough (known: Challenge attempt, from the 0011/0325 reads). One
+  transient TCC screen_failed on a Rules tap and one observe failure
+  mid-unit, both recovered by a fresh observe; no game state lost - the same
+  transient class as the 0447 unit, not the recurring channel failure of
+  Issue #282.
+- Follow-up: successor seq 005 of chain scout-2026-11-03 enqueued (Winter
+  Battlefield History + Achievement, Shop Campaign/Season tabs, and the
+  Doomsday count finish: Lv.150 row, Lv.220 rewards, cumulative rows below
+  30 and above 70, Damage Ranking and Ranking Reward tabs). Successor seq
+  010 of chain scout-2026-11-02 (station panel only) still has no record on
+  the branch; it falls to the next run. The Monthly Pass Days Left 14-to-13
+  move inside 90 minutes (0407 to 0538) is carried as an open item: a
+  possible daily boundary between 04:07 and 05:36 local, or a misread on
+  one of the two reads - the next Mall re-read must record the value with
+  its time.
