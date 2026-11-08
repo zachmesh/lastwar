@@ -2541,3 +2541,64 @@ of 2026-10-28.
   adoption; frozen backlog and standing queue hold nothing
   unimplemented. Status: no-op.
   Full detail in tool-development/1132-run.md.
+
+## 11:32 to about 11:50 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1132 run. Own PR 456 MERGED
+  (2026-11-08T19:08:03Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-1049
+  passes 1054 and secrets 1114 into 3 profiles as one
+  commit (da17ac79603) on new PR 459 (OPEN and MERGEABLE,
+  mergeState CLEAN, at run close):
+  shop-claims 1.37.0 - Weekly Pass rewards reset reads
+  18:00:00, the EIGHTH live confirmation, against the
+  metadata's 19:00; Free Supply chest present, no claim
+  button, no payout toast, already claimed this reset day
+  by ticker-2234 22:34 on 2026-11-07; S2 Drone Components
+  and S1 Drone Parts both $4.99 Get Now, neither owned;
+  Season hub claim path probed one level deeper from the
+  Calculating card - Week 8 screen with Leaderboard,
+  Grouping, Rules, Goals, Profession and Rewards buttons
+  and a Season Contributions button; Season Contributions
+  opens the Alliance Contribution Ranking (Mutual
+  Assistance tab, Season Total Ranking; [AP3x] Bears Lair
+  rank 69 with 4,110,000 points; reward chest x0) - a
+  ranking screen, not a pass claim; no Season Battle Pass
+  free tiers and no Season Weekly Pass Daily Freebie or
+  Daily Pickup found; Rewards, Goals and Profession
+  buttons NOT opened - the next passes unit opens Goals
+  and Profession, and if no pass claim is found there
+  either, files a knowledge Issue and updates the
+  shop-claims metadata.
+  secret-missions 1.20.0 - one Claim tap collected all
+  four finished tasks at once, PERFECT stamps, Your Tasks
+  badge 17 to 8; CORRECTION: the 11-04 Claim-blocker
+  (three consecutive partials 0248/0545/0847, R2 metadata
+  write) is DISCHARGED in practice - the Claim tap worked
+  on the first try, no R2 pivot needed; the foreground
+  hypothesis stays untested and the entry-route change it
+  owed is moot for now; duel posture Day 7 off day,
+  settlement, so the duel-day Mega Refresh rule does not
+  apply; Mega Deploy, Reward Recovery and ally assists
+  NOT reached (pass budget ended first), Your Tasks badge
+  8 means pending tasks remain; token-lease race
+  (re-acquire 3 seconds before expiry reported still held
+  and did not renew, game input 19:09-19:14 ran with no
+  token held, no collision, re-acquired 19:14:44Z),
+  commented on Issue #383.
+  alliance-donations 1.68.0 - Donation Count 2/30 at the
+  1054 entry, up from 1/30 at the 1034 close about 10:34
+  with no donations unit in between, so the move is
+  replenishment; the +1 landed within about 20 minutes, a
+  second consecutive short-window +1, consistent with
+  about 1 per 20 to 23 minutes; the changed route stands
+  (do NOT tap from 1/30 on Quick Construction).
+  Issues #242, #160, #423, #450 and #383 commented with
+  the new evidence (issuecomment-6726192447, 6726194147,
+  6726194302, 6726194489, 6726194637); no new Issue filed.
+  PR 430 (records/2026-11-08) MERGED at
+  2026-11-08T19:28:17Z and PR 458 merged during this run,
+  so this record lands post-merge on the branch; the fresh
+  records PR for the post-1100-batch appends is owed by
+  lastwar-pr-integrator. Status: done. Full
+  detail in knowledge-organization/1132-run.md.
