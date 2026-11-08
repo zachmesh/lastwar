@@ -4458,3 +4458,20 @@ of 2026-10-28.
   inbox 75, claimed 0, done 1125 before this delivery.
   Status: done. Full detail in
   queue-planning/2240-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2245.
+  Non-batch pass: checker plain (tool 1.2.0 at pass
+  start) not due (outside every batch window), next
+  batch 23:00 PT. Knowledge PR 424 merged (squash,
+  89b6c495); tools PR 425 owner-gated (policy-file
+  amendment) and escalated with a comment, awaiting
+  the owner decision; records PR 398 clean at new
+  head 049bdaacaf (planner-2240 delivery merge),
+  re-verified and re-noted twice, awaiting the 23:00
+  batch; records PRs 351 and 301 still conflict on
+  the single action-log file at unchanged heads
+  against new main 89b6c495, re-verified, no new
+  note per the 2230 no-repeat guidance. No records
+  PR opened (all other records branches contained
+  in main). Status: done. Full detail in
+  pr-integration/2245-run.md.
