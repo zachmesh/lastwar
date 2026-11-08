@@ -2838,3 +2838,16 @@ of 2026-10-28.
   this run; no new Issue filed. Slack DM sync sent.
   Status: done. Full detail in
   knowledge-organization/1232-run.md.
+
+## 12:32 to about 12:43 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-08-1232.
+  Done: fixed the token re-acquire race (#461) with PR #462
+  (branch work/token-renew-near-expiry, commit 9e586aa48):
+  token-acquire now renews the lease when the holder
+  re-acquires within 60 seconds of expiry; validation 28/28
+  fixture assertions on two runs on isolated /tmp scratch
+  pools, old main code reproduces the defect. New tooling
+  issue #461 filed. Own PR 425 still owner-gated, no action
+  owed. Status: done.
+  Full detail in tool-development/1232-run.md.
