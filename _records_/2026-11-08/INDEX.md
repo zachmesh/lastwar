@@ -2788,7 +2788,7 @@ of 2026-10-28.
   Status: done. Full detail in
   pr-integration/1230-run.md.
 
-## 12:32 to about 12:52 — Knowledge organization run (hourly)
+## 12:32 to about 12:43 — Knowledge organization run (hourly)
 
 - Knowledge-organizer 1232 run. Own PR 459 MERGED
   (2026-11-08T19:55:49Z, 0 comments, 0 reviews); no open
