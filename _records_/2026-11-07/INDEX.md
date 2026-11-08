@@ -4667,3 +4667,21 @@ of 2026-10-28.
   at about 23:43 and the completion was re-applied from a
   replacement worktree under ~/workspace/lastwar-worktrees/.
   Full detail in alliance-donations/2341-queue-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2345.
+  Non-batch pass: checker merge-aware (tool 1.1.0 at pass
+  start) not due - PR #398 already merged 23:06:31 PT in
+  this 23:00 window, next batch 03:00 PT (a clock-only
+  run without --merges first said due; the merge-aware
+  verdict governs). Knowledge PR 428 merged (squash,
+  947b2760); tools PR 425 owner-gated, unchanged since
+  the 2245 escalation, awaiting the owner decision;
+  records PR 426 clean at heads 8253cde5 and 1a7ba70231,
+  re-verified and re-noted twice, awaiting the 03:00
+  batch; records PRs 351 and 301 still conflict on
+  the single action-log file at unchanged heads
+  against new main 947b2760, re-verified, no new
+  note per the 2230 no-repeat guidance. No records
+  PR opened (all other records branches contained
+  in main). Status: done. Full detail in
+  pr-integration/2345-run.md.
