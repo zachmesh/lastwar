@@ -2235,6 +2235,22 @@ of 2026-10-28.
   24 hours with statements current. Status: no-op. Full detail
   in pr-catchall/0939-run.md.
 
+## 09:40 to about 09:49 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0940. Plan staged 0
+  units (already_present 78, reaped 0, expired 0 - the 12h
+  horizon was already fully staged by the 0840 run).
+  Pre-reset sweep pair already complete via plan (1630 seq 1,
+  1730 seq 2, chain pre-reset-sweep-2026-11-08, both expiring
+  at the 18:00 reset). Scout diff on the Nov 8 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained red dots 14 on a
+  narrative-fallback basis - seven sections, unchanged from
+  0840; the new 7th section, the 08:43 station re-check,
+  reported unexplained 0). 0 withdrawals. Pool: inbox 80,
+  claimed 1, done 1247. Status: no-op. Full detail in
+  queue-planning/0940-run.md.
+
 - Integrator pass pr-integration-2026-11-08-0945.
   NON-batch pass per the checker (due: no, outside every
   batch window; next batch point 11:00 PT): knowledge PR
