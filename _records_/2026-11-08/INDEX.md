@@ -2145,3 +2145,55 @@ of 2026-10-28.
   _tools_/INDEX.md, unchanged since the 2245 escalation,
   carried with no new note. No Slack DM sync (silent
   run). Full detail in pr-integration/0930-run.md.
+
+## 09:32 to about 09:47 - Knowledge-organizer pass
+
+- Knowledge-organizer 0932 run. Own PR 453 MERGED
+  (2026-11-08T16:53:52Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-0834
+  donations 0841 / scout 0845 and ticker-0904 donations
+  0920 into 2 profiles as one commit (eaae172f71) on new
+  PR 454 (OPEN and MERGEABLE, mergeState CLEAN, at run
+  close): alliance-donations 1.65.0 - the eaten-tap series
+  now stands at five confirmations (0804 third tap proven
+  eaten by the 0841 entry read, 0841 tap proven eaten by
+  the 0920 entry read, 0920 tap proven not landed by its
+  own post-timer re-read); the blocker is the 1/30 state
+  itself - taps land at count 2 (1523 verified 2 to 1)
+  and fail at count 1 - so per queue rule R2 the route
+  changes: do NOT tap from 1/30 on Quick Construction
+  again; tap only if the count has replenished above 1,
+  or try the War-tab node (Rallied Attack / Rallied
+  Defense). CORRECTION: the 0808 section's "cooldown
+  timers grow inside a burst" is wrong - the 0920 timer
+  00:07:01 breaks the roughly-17-minute pattern (00:16:27
+  and 00:17:33); timer length varies, recorded not
+  explained; fourteenth (00:16:27) and fifteenth
+  (00:07:01) readings sit inside the corrected 04:19-19:35
+  range, unchanged; no new replenishment data point
+  (count stayed 1/30, no rise observed). A 2-second
+  long-press on the green Donate button dispatches
+  nothing - the 0808 tooltip's "Hold down for easier
+  Continuous donations" is not a dispatch method for this
+  button. Footer 4600 to 4700 (delta +100) for one
+  dispatched donation, against +200 for one verified
+  (0804) - footer moves independently, not a count proxy
+  (Issue #417). Session cc-101 closed itself during the
+  7.5-minute timer wait, reopened as cc-102 with the game
+  exactly where left - a session that idles through a wait
+  does not survive the wait. Re-read owed to the
+  already-queued donations-2026-11-08-1621, which applies
+  the changed route. perception-scout 1.39.0 - station
+  re-check, eighth no-train confirmation (third 2134,
+  fourth 0022, fifth 2304, sixth 0118, seventh 0440
+  re-check, eighth this unit); Wars dot flip - present at
+  about 07:34 (seq 009), absent at about 08:44, no rally
+  opened in this unit so whether one ran in between is
+  unverified, Issue #212 stays open; Alliance power
+  13,259,135,070 (was 13,416,181,168 at 0734), Members
+  95/100 (was 96/100); base power unchanged 149,850,353;
+  successor 011 enqueued. Issues #450, #160, #423, #417
+  and #212 commented with the new evidence
+  (issuecomment-6724828482, 6724828642, 6724828869,
+  6724829047, 6724829177); no new Issue filed. Status:
+  done. Full detail in knowledge-organization/0932-run.md.
