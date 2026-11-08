@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T18:50:11Z
+modified: 2026-11-08T19:39:51Z
 level: L1
-version: 1.67.0
+version: 1.68.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -80,6 +80,7 @@ grounded_in:
   - source: ticker-0904 alliance-donations execution record 2026-11-08 0920 queue run (partial, re-read after cooldown, 0841 tap proven eaten at entry, one coin tap proven not landed after its 00:07:01 timer cleared, long-press no-op, third consecutive partial on the 1/30 blocker, changed route per R2, Issue #450); record commit 387928fc7f on records/2026-11-08
   - source: ticker-0934 perception-scout execution record 2026-11-08 0937 queue run (Donation Count read live 2/30 at entry, up from 1/30 at the 0808 close with no landed donation in between, replenishment +1 within about 17 minutes, Quick Construction 8/10, settlement timer 08:21:00; record commit ac350b49c on records/2026-11-08)
   - source: ticker-1017 alliance-donations execution record 2026-11-08 1034 queue run (partial, re-read of the 1621 unit, three coin donations verified live 4/30 to 1/30, stopped at the live-read 1/30 per the changed route, no timer after taps from 2 or above, War-tab branch still untested, weekly settlement countdown 07:32:28; record commit a2cafb907 on records/2026-11-08)
+  - source: ticker-1049 shop-claims execution record 2026-11-08 1054 queue run (partial, Alliance Tech entry read Donation Count 2/30, replenishment +1 within about 20 minutes, no donation in between); record commit 355d3f11c on records/2026-11-08
 ---
 
 
@@ -3179,3 +3180,28 @@ enqueued for after the cooldown (not before about
   this run comments the fold.
 - Game left safe: base screen, no purchase, no diamond spent. Coins
   spent: 2,700 (3 x 900).
+
+## What the 2026-11-08 1054 entry read added - Donation Count 2/30, replenishment +1 within about 20 minutes, no donation in between
+
+- The 1054 passes unit (passes-2026-11-08-0657, ticker-1049) found the
+  game on the Alliance Tech screen at entry, about 10:54 local: Quick
+  Construction 8/10, Donation Count 2/30. Evidence in
+  `_records_/2026-11-08/shop-claims/1054-queue-run.md` (commit
+  355d3f11c on records/2026-11-08). The panel and the Alliance
+  overview were closed back to base without donating.
+- Replenishment, not a landing: the 1034 unit closed at a live-read
+  1/30 about 10:34, and no donations unit ran between 1034 and this
+  read, so the 1/30 to 2/30 move is replenishment. The +1 landed
+  between the 1034 close (still 1/30, about 10:34) and this entry
+  read (about 10:54) - within about 20 minutes.
+- This confirms the 0937 bound rather than tightening it: a second
+  consecutive +1 interval inside about 20 minutes with both endpoints
+  read live and no tap in between, consistent with about 1 per 20 to
+  23 minutes. It does not change the changed route: do NOT tap from
+  1/30 on Quick Construction - tap only if the count has replenished
+  above 1, or try the War-tab node.
+- Commented on Issues #160, #423 and #450 by this run.
+- Follow-up: the re-read owed to the newly enqueued
+  donations-2026-11-08-1832 (not-before 11:05 local) still has no
+  record on the branch - it reads the Donation Count live and applies
+  the changed route. It falls to the next run.
