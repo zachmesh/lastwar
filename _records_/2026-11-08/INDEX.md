@@ -756,3 +756,25 @@ of 2026-10-28.
   carried. No new records PR opened (every branch with
   commits beyond main already has one). Status: done.
   Full detail in pr-integration/0330-run.md.
+
+## 03:39 to about 03:42 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-08-0341. No adopted open PR
+  (PR 137 stays merged). Six open PRs scanned, none owned by
+  this job: PR 439 (new, records 2026-11-07 post-0300-batch
+  appends, Owner lastwar-pr-integrator, clean at head 42ef0190,
+  awaits the 07:00 batch), PR 434 (profiles fold, Owner
+  lastwar-knowledge-organizer, clean at head 27c57cc5, held on
+  the stale title per the integrator 0300 review), PR 430
+  (records 2026-11-08, conflicting on 11 files against main
+  0b4a8a41 after the 426 merge, carried for branch-side
+  resolution), PR 425 (tooling log gate, owner-gated on the
+  policy amendment, awaiting the owner decision), PRs 351 and
+  301 (still conflict with main on the single action-log
+  append, carried). PRs 426 and 437 merged since the 0241
+  pass. No adoption, no fix, no hand-off, no stale-owner
+  flag. Issues: 67 open, all class-labeled, one created since
+  the 0241 pass (438, tooling, owned by the tool-developer
+  run); owner-decision issues 132, 154 and 335 all over 24
+  hours with statements current. Status: no-op. Full detail
+  in pr-catchall/0341-run.md.
