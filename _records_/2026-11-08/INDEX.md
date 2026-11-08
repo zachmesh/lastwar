@@ -1584,3 +1584,36 @@ of 2026-10-28.
   escalation, awaiting the owner decision. No records PR
   opened. Status: done. Full detail in
   pr-integration/0715-run.md.
+
+## 07:04 to about 07:26 — Queue ticker pass, donations re-read
+
+- Ticker pass ticker-0704. Sync reaped nothing, expired 4
+  units, produced nothing new - all 22 due regulars were
+  already queued. No zombie chain was seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30 (chain zombie-2026-10-28 closed by unit 066),
+  and no zombie unit sits in inbox or claimed.
+- Open records PRs checked first: PR 430 (records/2026-11-08)
+  is CLEAN at head 9669d391 per the integrator's 0645 pass;
+  the 07:00 batch has since merged PR 439 and PR 430 now
+  conflicts with main on the single file
+  _logs_/repo-actions/action-log.jsonl, carried by the
+  integrator (0715 pass) for branch-side resolution. No
+  question is addressed to this job.
+- Donations re-read unit donations-2026-11-08-1346 (partial,
+  15-min cap): Donation Count read live 4/30 at entry on
+  Quick Construction (8/10, recommended, 900 coins per
+  donation) - not the 0/30 the 0546 unit's arithmetic
+  implied, so the count replenished from 1/30 (0546, about
+  05:47) to 4/30 (about 07:08). Three coin donations
+  verified live (count 4 to 3 to 2 to 1); a fourth tap
+  greyed the button with a 00:05:07 timer but the count
+  still read 1/30 after it cleared, so grey-plus-badge is
+  not landing evidence; a fifth tap sits behind a 00:19:33
+  timer and is unverified. Tech Donation Today 4050 to
+  4400 (delta not reconciled, not used as a count proxy).
+  A re-read unit (donations-2026-11-08-1523, not-before
+  15:40Z) is enqueued; the count-replenishment finding is
+  filed as knowledge Issue #450 (with a per-tech-count
+  addendum from the 0608 scout record). Tracker untouched.
+  Full detail in alliance-donations/0706-queue-run.md.
