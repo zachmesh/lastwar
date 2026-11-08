@@ -2929,6 +2929,27 @@ of 2026-10-28.
   Local main fast-forwarded 1c39fa82 to 6dad8dbf.
   Status: done. Full detail in
   pr-integration/1245-run.md.
+
+## 13:00 to about 13:10 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1300.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges, no new PRs.
+  Tools PR 425 owner-gated, unchanged since the 2245
+  escalation, awaiting the owner decision, still
+  conflicting on _tools_/INDEX.md, re-verified against
+  unchanged main 6dad8dbf, no repeat note. Records PR 460
+  clean at new head 2c97729d and records PR 457 clean at
+  head 09302a7a, both awaiting the 15:00 batch; 457
+  verified clean this pass and a verification comment
+  posted. Records PRs 351 and 301 still conflict with
+  main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-verified against unchanged main
+  6dad8dbf, no repeat notes, carried to the 15:00 batch.
+  No records PR opened. No records branch left PR-less.
+  Status: done. Full detail in
+  pr-integration/1300-run.md.
 ## 12:54 to about 12:57 — Queue ticker pass, radar tasks (stack)
 
 - Radar unit radar-2026-11-08-1003, done: duel day 7
