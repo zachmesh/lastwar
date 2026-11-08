@@ -1,9 +1,9 @@
 ---
 title: Perception-Driven Queue
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-01T07:58:31Z
+modified: 2026-11-07T12:32:17Z
 level: L2
-version: 1.2.2
+version: 1.2.3
 description: The scout layer - daily work is determined by what the game screen actually offers, perceived first and scheduled by observation triggers rather than fixed slots, with the regulars kept as a capability profile library and new tasks discovered, profiled and scheduled automatically
 status: phase-2-landed
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner refinement of 2026-10-31 - no fixed schedule; check and perceive where tasks are needed and schedule them automatically; discover potentially new tasks, learn about them, create their task profile and metadata, and start scheduling executions for them
   - source: miss audit of 2026-10-31 - whole classes of work had no execution channel because no static model named them
   - source: reflection of 2026-10-31 in this folder
+  - source: organizer 0432 run 2026-11-07 (Refs #147, #247) - the two standing 19:00 reset anchors rewritten to the absolute reset instant 02:00 UTC
 ---
 
 # Perception-driven queue - the scout layer
@@ -65,7 +66,7 @@ step further -
   and its expected duration. Section 5 fixes the profile fields.
   The clock keeps only two jobs - the perception heartbeat (the
   ticker cadence that keeps perception rolling) and the game
-  hard deadlines (the 19:00 reset, Arms Race phase windows, the
+  hard deadlines (the trade-day reset, absolute 02:00 UTC, Arms Race phase windows, the
   quota checkpoints of rule R3).
 - **New tasks are discovered, not waited for.** Anything the
   screen shows that no profile owns enters the discovery
@@ -465,7 +466,7 @@ whose last observation is stale, so a trigger rarely waits for
 the next anchored pass to be seen.
 
 - **Post-reset full pass** - the first pass of the reset day,
-  staged at the 19:00 local reset. It walks the whole checklist.
+  staged at the trade-day reset (absolute 02:00 UTC, about 18:00 PST in winter, 19:00 PDT in summer). It walks the whole checklist.
   This is the pass that builds the day - everything the reset
   made available is observed before the day routine settles into
   its windows.
