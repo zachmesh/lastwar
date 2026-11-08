@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T16:36:24Z
+modified: 2026-11-07T18:46:00Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-0834 alliance-help execution record 2026-11-04 0837 queue run (done, Help All pressed, header 620/1,000 unchanged, red dot is own requests awaiting allies)
   - source: ticker-1224 alliance-help execution record 2026-11-04 1235 queue run (failed, Mac screen-capture channel failure, no game input dispatched, not authorization, not a different-device dialog)
   - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1235 section wording)
+  - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (failed, Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z, Last War window 1920x1080 at (0,-360) on an inactive Space, capture failure; Mission Control recovery lesson and Ctrl+Right does not switch Spaces; Issue 282 class, not Issue 284)
 ---
 
 
@@ -781,3 +782,15 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Source: the 0134 survivors record (`_records_/2026-11-05/survivor-intake/0134-queue-run.md`, ticker-0134, twenty-sixth consecutive capture failure), re-confirmed by the 0204 gifts record (`_records_/2026-11-05/alliance-gifts/0204-queue-run.md`, ticker-0204, twenty-seventh) and by the 0734 arms-race and 0804 donations records on the same day (thirty-seventh and thirty-eighth occurrences, probe OFF_SCREEN_WINDOW, Chrome observing normally in the same sessions). The View menu lists "Enter Full Screen", so the app is NOT in native fullscreen: it is a windowed 1920x1080 window on an inactive Space, and the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission.
 - Superseded in this profile: the "LastWar app running fullscreen" wording in the 1235 section above. The rest of that section stands unchanged: the capture sequence, the classification (a screen-capture channel failure, not authorization and not a different-device dialog), and the follow-up rule.
 - Follow-up corrected: the unblock is getting the window back onto the active Space, and the owner clicking the LastWar Dock icon once is the known reliable step. This correction changes no Help state: no help count was read in the 1235 unit and none is asserted here.
+
+## What the 2026-11-07 1020 unit added - Mac back online, window off-Space, capture failure returns (Issue 282 class, not 284)
+
+- Unit help-2026-11-07-0630 by ticker-1020, about 10:23 to 10:39 local, status failed (access-failed, screen-capture channel failure). Evidence in `_records_/2026-11-07/alliance-help/1038-queue-run.md`. No Help All was pressed, no help count or points figure was read, and no game input was dispatched to Last War at all. Nothing was claimed, spent or changed in the game.
+- What changed since the 1003 failure: the Mac mini is back online. device.list at about 10:23 local showed Zhen's Mac mini online with last_seen 2026-11-07T18:19:37Z, fresh. The 1003 pass failed with the Mac offline (last_seen frozen at 2026-11-05T15:36:52Z, Issue 284, one-hundred-sixth consecutive access-failed pass). This pass is NOT that failure: the device answers, the computer-use channel works, and the blocker moved to the game window itself. Connection health on both native and web transports: connected and healthy. The one-hundred-six-pass offline streak ends with the 1003 pass.
+- The blocker: the Last War window (1920x1080, window_id 160366) sits at global (0, -360) and reports window_on_screen false. Every capture attempt failed with "Failed to start stream due to audio/video capture failure" - the off-screen window pixel stream, the same class as the 2026-11-04 1235 unit and the 2026-11-05 correction (windowed 1920x1080 window on an inactive Space). This is NOT a missing owner authorization and NOT a different-device dialog: no such dialog appeared at any point.
+- Recovery attempts, all in this pass: Activate LastWar, observe, open_app LastWar, describe - capture failure each time, window not on screen. set_window_frame to (0, 0, 1920, 1080) was refused: it needs a fresh observation, which the capture failure blocks. Activating Finder (window 168864, helper) worked once and produced a full observation - proving the channel itself is alive.
+- NEW LESSON - never open Mission Control as a recovery step: open_app Mission Control (first launch) opened the overview; every later activate and observe then failed with geometry_mismatch origin_delta 256+, agent_display false, and all key input gated on observation_required. A second open_app Mission Control closed the overview and the observation channel recovered - launching Mission Control twice toggles it. Do NOT open Mission Control unless the overview itself is the work; if it is open, a second launch closes it and restores observation. Mission Control overview itself cannot be observed or clicked through this channel: observe fails with no target window while it is open, and input stays gated on a fresh observation. Its thumbnails are not reachable from here.
+- NEW LESSON - background Ctrl+Right does NOT switch Spaces: the key went to the Finder column view (CUHelper textfield selected, no Space change). Background keyboard input reaches the selected window, not the system Space switcher. No Space-switch route through this channel worked.
+- The known reliable unblock stands (2026-11-05 correction): the owner clicking the LastWar Dock icon once brings the window to the active Space. That step needs the owner at the Mac; it was not available in this detached pass. No Dock icon was clicked blind: the icon position is unverified and a blind Dock click could activate the wrong app.
+- Side effects of this pass: none in the game. Outside the game: Mission Control was opened and closed twice (left closed, verified by a working Finder observation afterwards). One Finder column-view selection changed (CUHelper textfield selected by the Ctrl+Right test); no file was opened, renamed or moved. The Mac was left with the Finder helper window observable and Mission Control closed.
+- Follow-up: tracker untouched per the failed-unit rule; the regular remains due and the next tick re-produces it as a fresh unit. If the window is still off-Space at the next pass, the owner clicking the LastWar Dock icon once is the unblock. This is a different failure mode from Issue 284 (Mac offline): the device is online and the window is off-Space. The Mission Control and Ctrl+Right lessons above are channel rules for every activity, not only Help: they are commented onto Issue #282 with this occurrence so the other capture-failure sections can pick them up.
