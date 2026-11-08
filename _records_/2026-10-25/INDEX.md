@@ -1,0 +1,539 @@
+---
+title: Play Record 2026-10-25
+created: 2026-10-25T17:56:00Z
+modified: 2026-11-01T07:26:52Z
+level: L0
+version: 1.17.2
+description: Install on Mac mini, Game Center login, first base snapshot, first daily round, the task intake round, the second intake round, the recheck that found the Star Ceremony, the red dot sweep with task 9 survivor intake, the evening truck and train wrap up, the late evening red dot sweep with owner teach-ins, the late regulars run with the tracker tooling, the duel schedule read with the strategy system, the objective with its power baseline, the research brief folded into the playbook, and the late red dot follow up, and the owner-requested late round with its score and resources report
+status: unverified
+grounded_in:
+  - source: in-game screens observed on the owner Mac mini, 2026-10-25
+---
+
+# 2026-10-25
+
+All times America/Los_Angeles. Actor Muse, on the owner's instruction.
+
+## 10:34 to 10:45 — Install
+
+- The owner asked to install Last War on this Mac and to log in to the
+  account used on the iPhone.
+- The Mac mini App Store lists the iPad build, so no emulator was used.
+  The owner typed the Apple account password on the machine; the App Store
+  window had been behind iTerm2 and Chrome, so the owner did not see the
+  prompt at first.
+- Installed as `/Applications/LastWar.app`, version 1.0.366.
+
+## 10:46 to 10:52 — First launch and login
+
+- Age gate passed, then a game update of 891.85 MB downloaded.
+- The update screen confirmed Game Center sign-in.
+- Start, then Already Have an Account, then Game Center opened Manage
+  Characters with one character — owner account, the current warzone, level 30,
+  power 149,307,154. Confirmed with Yes. A further 67.19 MB update ran.
+
+## Base snapshot at login
+
+- Power 149,307,154. Level 30. Stamina shown as 152.
+- Resources as displayed — 260.9M, 255.3M, 24.4M gold, 9.9M, 444.4K and
+  8.22K badges. Diamonds 1,238. Icon to resource mapping is not yet
+  confirmed, so the figures are recorded as displayed.
+- Build queues 2 of 4, research 0 of 2. Five output bubbles of 466.9K
+  waiting. Season II winter map, base temperature shown as 5 degrees.
+- Badges waiting — Events 1, Season 4, truck 8, radar 5, mail unread.
+- No purchase and no in-game action beyond login was taken in this session.
+
+## 11:00 to 11:42 — First daily round
+
+The owner asked for one round of the daily checklist. Mid-session the game
+window was moved to the left side of the screen, as the owner requested.
+
+- Mail — Alliance and Event tabs claimed in full; System and Regular held no
+  claimable attachments. Alliance Help All pressed; Alliance Gifts claimed —
+  844 plus 2 Regular and 72 Premium.
+- Season II warming — assists on another commander completed 10 of 10, at 100
+  coal per assist.
+- Secret Command Post — all 8 own tasks dispatched; 5 ally assists used,
+  reaching the daily assist cap. Plunder not touched.
+- Research — HP Boost 11 and Attack Boost 11 had finished and were completed,
+  adding 30,000 power. Both research slots idle afterwards.
+- Radar — stored rewards claimed, then Quick Execute batches of 40, 30 and
+  20 stamina, each followed by Claim All. Stored tasks fell from 34 of 40 to
+  6 of 40. Stamina ended at 12; full restore shown as 2026-10-26 04:51 local.
+- Events — the Frontline Breakthrough milestone chest was claimed, and all
+  five Doomsday warzone first-kill rewards (Doom Walker Lv.100 to 140).
+- Missions — Daily Login, Radar Tasks, Help Allies, Recruit Heroes and Donate
+  tasks claimed; activity reached 100 points and the 40 and 80 point chests
+  were claimed. Five donations of 800 coin each went to Alliance Tech
+  Rallied Attack, taking it to 5 donations today.
+- Shop — Gear Master Pack free claim taken (Upgrade Ore Lucky Chest plus
+  1,500 Upgrade Ore); Monthly Pass daily gift claimed. Free recruits on both
+  banners gave a McGregor Shard and a Swift Shard.
+- Building queue — Lv.29 Aircraft Center upgrade has 19 days 18 hours left
+  and Lv.29 Drill Ground 8 days 12 hours; two build slots idle. No new build
+  or research was started.
+
+## Disclosure — likely accidental Gold Mine upgrade
+
+While closing a Gold Mine panel, a tap at the panel base appears to have
+pressed Upgrade. The panel had shown Lv.30, next-level power +14,800, cost
+6.0M food, 6.0M iron and 1.9M coin, build time 6 minutes 24 seconds; base
+power then rose by exactly 14,800, from 149,307,154 to 149,321,954. Power
+later reached 149,351,954 after the research completions. Three other mines
+checked afterwards read Lv.28 and Lv.29. Recorded as highly likely, not
+directly confirmed. No purchase was made at any point.
+
+## 12:20 to about 13:02 — Task intake round
+
+The owner named three tasks — a train task, a plunder and truck task,
+and alliance tech — and set two standing metadata rules in the same
+minutes — record how to enter each task, and record its cadence and
+its scope and availability. Each named task was checked against the
+system first, under the task intake workflow.
+
+- Session start — reopening the game on the Mac raised a prompt that
+  the account was active on a different device. Confirm moved the
+  active session to the Mac; the app relaunched once and returned to
+  the base. Start snapshot — power 149,351,954, stamina 22 to 23,
+  food 299.4M, iron 295.8M, coin 49.6M as displayed.
+- Troop training — NEW type, created then executed. All four barracks
+  queued at their highest tier — Lv.30 barracks 793 T10 at 5.5M food
+  and 5.5M iron over 1 day 17 hours; Lv.27 barracks 726 T9 at 4.1M
+  each over 1 day 10 hours; Lv.24 barracks 666 T8 at 2.9M each over
+  1 day 4 hours; a fourth barracks 613 T7 at 2.0M each over 23 hours.
+  Total 14.5M food and 14.5M iron. No Finish Now, no upgrade shortcut.
+- Alliance train — NEW type, created then executed. The literal train
+  behind the train task name. Read the Train Operation Guidelines in
+  full, then boarded carriage 1 of the alliance train in preparation —
+  conductor another commander, Train Rating 82,650, about 3 hours 20 minutes
+  to departure. Boarding used the free Like and Thank; no Trade
+  Contract was gifted (stock 127). Carriage 1 went from 2 of 7 to
+  3 of 7 riders.
+- Truck plunder — NEW type, created then executed. One Quick Plunder
+  against the N truck of another commander (the relevant warzone, Lv.28,
+  guard 7.6M) — won, yielding iron 273.4K, food 273.4K, coin 173.9K
+  and two chest stacks of 20. Then all four own trucks dispatched —
+  the first rolled N and the one free refresh of the day rerolled it
+  to SSR (iron 3.0M, food 3.0M, coin 1.9M); the other three rolled UR
+  (iron 3.8M, food 3.8M, coin 2.4M each). Journeys run about 4 to 5
+  hours. Trade Count ended 4 of 5, Plunder Count 1 of 4. No Trade
+  Contract or diamond was spent — later refreshes cost 1 contract
+  each and were left unused.
+- Alliance tech — EXISTING type (alliance-donations), checked only,
+  execution skipped under the intake workflow. War tab — Troop
+  Movement 5 of 10, Rallied HP 5 of 10, Rallied Attack 7 of 10,
+  Rallied Defense 6 of 10. Tech Donation Today stood at 300 points,
+  matching the morning five coin donations. No donation was made.
+- Metadata — the three new types were registered with entry, cadence
+  and scope sections, and the intake workflow now requires those
+  sections for every task type.
+
+Not done, by design — Attack a Commander (PvP), Doom Elite and zombie kills
+(stamina spent), a 10,000 food gathering march, Arms Race point grinding,
+and the Frontline Breakthrough challenge game.
+
+## 13:42 to 14:10 — Second intake round, tasks 4 to 6 and 8
+
+The owner numbered four more tasks — passes, VIP rewards, the weekly
+alliance duel, and a standing Arms Race check every four hours. The
+first attempt at 13:42 was contested by the owner iPhone session and
+stopped by design; the owner closed the phone app and later unlocked
+the Mac, and the round completed from 13:59.
+
+- Passes — EXISTING type (shop-claims), executed on the owner claim
+  instruction. At 13:42 the Drone Parts Weekly Pass Daily Pickup was
+  claimed (drone parts times 15) and the Free Supply auto claimed
+  (ruby times 10, iron times 4) before the contest stopped the
+  session. At 13:59 the Coin Weekly Pass Daily Pickup was claimed
+  (coin item times 3) and the Super Monthly Pass was verified —
+  daily gift already Claimed in the morning, 27 days and 27 rewards
+  left. The Legendary bundle button proved to be a 19 dollars 99
+  purchase under a Claim All label and was never tapped.
+- VIP rewards — NEW type, created then executed. The account is
+  VIP 13 (1,538,920 of 2,000,000 points after the claim, 48 day
+  streak). The VIP13 Daily Freebie was claimed — a puzzle piece item
+  times 2 and food, iron and coin crates times 13 each.
+- Alliance duel — NEW type, created then checked only. League S38
+  is Starting Soon, this alliance at Gold Tier 38 - 7; the Infinite
+  Roulette balance was 0 tokens, so nothing could be claimed.
+- Arms Race — NEW type, with a standing four hourly check set the
+  same afternoon. The live Unit Progression phase showed this
+  account at 75,047 points, rank 3 in its segment, scored by the
+  12:20 training queues. All three point chests (15,000, 30,000 and
+  75,000) were claimed.
+- Cross finding — the VIP screen lists Activate the Mega Mode of
+  Trade Trucks as a VIP 13 privilege, answering the truck-plunder
+  open question — Mega Mode is unlocked on this account, its
+  dispatch effect still unobserved.
+
+## 14:26 to 14:36 — Recheck and the Star Ceremony
+
+The owner asked for a recheck to make sure nothing was missed, then
+corrected the one real miss himself — task 6, "weekly alliance dual
+ceremony", is the Alliance Star Ceremony, the weekly reward claim
+behind the trophy icon on the base screen, not the VS duel screens
+checked at 13:59. He taught the procedure in session — keep
+forwarding, do not wait for the presenter, act on actionable icons
+(the emotes count), then keep forwarding — and asked for love to at
+least 3 winners.
+
+- Event 38 played end to end — 13 award steps plus the MVP finale.
+  Six love emotes sent (the owner minimum was 3), each verified by
+  the winner count rising. Two award cards were forwarded past
+  before they could be acted on, recorded in the execution file.
+- Rewards claimed — the three emote tiers, the finale member
+  rewards for 14 Alliance Stars (gift boxes, badges, diamonds
+  4.0K and 1 minute speedups), and a Participation Prize of ruby
+  times 500. The trophy icon is gone from the base screen.
+- The rest of the recheck held — repository clean and in sync at
+  32f9917, the Arms Race cron enabled with its first run at about
+  17:47, passes and VIP fully claimed, trucks and the train still
+  in their measured states. The floating text fragments seen on the
+  base were ambient tooltips and tickers, not claim prompts.
+
+## 14:37 to about 15:00 — Red dot sweep and task 9
+
+The owner asked for every red dot on the base to be checked -
+those usually mean something can be done - set the standing rule
+that the alliance help icon is always clicked, asked for the
+survivors at the front door to be collected as task 9, and
+repeated the standing instruction that every task type gets
+metadata. The computer use session dropped once mid sweep and
+was restarted; no action was repeated blindly.
+
+- Alliance help — the Alliance button dot was waiting helps.
+  Help All cleared the allies' requests; the page showed today's
+  help points at 400 of 1,000 and this account's own two requests
+  already full at 30 of 30.
+- Survivor intake — NEW type, metadata created first, then the
+  line at the front gate was worked to empty. Six recruits by
+  card (a Scientist, ELINA, DAVID the Hunter, HARRY, JAVIER and
+  DAVID the Attendant) plus dialog survivors who walked in. A
+  Friendly Visitor notification prompt was cancelled, not
+  enabled. Afterwards the Lv.27 Iron Mine listed Harry among its
+  Miners - posting looks automatic; Quick Dispatch not pressed.
+- Events — the badge was only the Frontline challenge attempt
+  marker; all three milestones already claimed. Not played.
+- Season passes — the Season badge of 4 held two claims. The
+  Season Battle Pass paid 500 pass points (16,300 to 16,800),
+  and the Season Weekly Pass Daily Freebie and Daily Pickup were
+  claimed (stamina item, a 10.0K rock item times 2, 5 minute
+  speedups times 60). The badge fell to 2.
+- Radar — the badge was restored stored tasks. Two Quick
+  Execute batches (4 tasks, 40 stamina) and 11 task rewards
+  claimed; stored tasks ended at 0 of 40, stamina at 11.
+- Resource bubbles — the production cluster was collected; base
+  totals ended at food 295.4M, iron 289.3M, coin 56.3M and
+  rubies 3,048. Three document icon bubbles over the
+  headquarters buildings open the Status Overview instead of
+  collecting - left alone, nature unconfirmed.
+
+## 17:47 — Arms Race standing check, access failed
+
+- The first scheduled four hourly Arms Race check ran under the
+  owner standing instruction of 2026-10-25. The device access check
+  returned a non-retryable result — this exact schedule lacks
+  owner-authorized device access — so the Mac mini session was never
+  opened and the game was never entered.
+- Phase, time left, points, rank and chests are unread in this run.
+  No task was completed, no chest was claimed, and nothing was spent.
+  The prior Arms Race record today was performed, so this is not a
+  third consecutive access failure and no chat escalation is made.
+  Detail in the 1747 arms-race check execution file.
+
+## 18:12 to about 19:10 — Evening wrap up, trucks and train
+
+A scheduled wrap up checked the two deliveries the midday round had
+left open. The game opened straight onto the base - no device contest
+and no re-login.
+
+- Trucks — all four trucks dispatched at 12:32 were still out at
+  about 19:05, cargo uncredited (base totals unchanged from the
+  15:00 sweep before any claim this session). Two UR trucks were
+  looted en route - Defense Failed records name another commander (the relevant warzone) and another commander (the relevant warzone);
+  their Dispatch ledgers are reduced to 2.8M iron, 2.8M food and
+  1.8M coin with items crossed out, while the SSR and one UR stand
+  intact. No claim control exists for own truck cargo.
+- Reward Recovery — the trade screen Recover panel held the
+  2026-10-24 record (5 unstarted transports the system completed
+  at partial value). Claimed free - iron 7.6M, food 7.6M, coin
+  4.8M plus crates, chests, badges and speedups; base totals after
+  the claim were food 303.0M, iron 296.9M, coin 61.2M, exactly the
+  recovery amounts. A collapsed 2026-10-20 record would not expand
+  and was left untouched.
+- Train — the arrival reward came as an Event mail (Train arrival
+  reward, about 17:57) and was claimed free - a Lv.3 chest, crates
+  100, a badge 2.5K, a gold chest stack of 20, a red gem item of
+  100 and about twenty 5 minute speedups. The mail Claim button was
+  gone on recheck. Delivery by mail is now the recorded mechanism
+  in the train metadata.
+- Not acted on, out of this instruction scope — four finished
+  secret missions waiting on Claim buttons, two new survivors at
+  the gate, and an Approaching minus 50 degree cold wave notice
+  about 10.5 hours out. All belong to the next daily round.
+
+## 19:37 to about 21:32 — Late evening red dot sweep and owner teach-ins
+
+The owner named a crystal task (still unidentified - the season Rare
+Soil line is the working hypothesis), then taught through the whole
+evening in chat while the sweep ran. Standing rules set or sharpened
+this session - click bubbles on their center; click the main screen
+help bubble at the lower right the moment it pops; page through
+every page to finish red dots and claim what shows; secret missions
+run Mega Deploy by default, Mega Refresh first on Alliance Duel UR
+days, and UR Only unselected so every squad deploys; truck dispatch
+on duel UR days is Mega Mode with UR trucks only, other days SR,
+SSR or UR as rolled; and the plunder goal - maximize the probability
+of UR shards, hunting only UR (gold) and SSR (purple) trucks whose
+guards sit below Squad 1, shards plentiful and right sided,
+refreshing the road list until a suitable target appears. All owner
+wording is in the input log; the rules themselves are in the
+activity metadata.
+
+- Secret missions — the four morning tasks were claimed (one Claim
+  collects all finished tasks; cards stamped PERFECT), a Reward
+  Recovery record of 8 system completed tasks was claimed, and nine
+  tasks went out by Mega Deploy in two batches under the new rules.
+  One ally assist landed (Loulou972); the UR ally assist path stays
+  an open question. At 20:37 the four 30 minute tasks finished and
+  were claimed together; five tasks remain out overnight.
+- Hidden Treasures (new type) — the tab badge 1 was exactly one
+  affordable dig. The dig was executed; M5 is the bottleneck
+  fragment. Exchange inspected only.
+- Ghost Ops (new type) — inspected only; no event running, next in
+  about 2 days 23 hours (Thursday). Guide read end to end.
+- Radar — fully cleared, including the special purple pin task A
+  Distressed Survivor (full flow in the radar metadata and the 2015
+  evening clear record). Radar score 2,811, stock 0 of 40.
+- Survivor intake — two more taken in at the gate (a Mechanic for
+  the Factory, Crafting Speed plus 4.80 percent, and one dialog
+  survivor); Quick Dispatch panels checked, no post changes needed.
+- Harvest — iron and coin bubbles tapped on their centers, one
+  farmland tap collected all farmland; bubbles regenerate fast.
+- Events and Season — every tab paged through. Arms Race had
+  rotated to Base Building with nothing free to score; Wanted Boss
+  Code 87 not yet out (best single attack 899,542,636 on Goals);
+  Community already claimed; Level Swap inspected only; Season
+  Battle Pass login claimed for plus 100 (16,900 total), the coal
+  donation daily left undone with a cold wave approaching;
+  Profession Engineer level 61 and its skills read, none used.
+- Halloween Check-In — Day 01 claimed.
+- Alliance — Help All cleared the new server day requests (daily
+  help points seen reset). Alliance Gifts claimed in full on both
+  tabs, Regular 453 plus 1 late arrival and Premium 34, per the
+  owner both pages direction. Alliance Events inspected (no train
+  entry there).
+- Trucks — the noon trucks were settled by opening their Truck
+  Details (two intact, two looted en route; settlement on open is
+  now the recorded mechanism), a fresh Reward Recovery record was
+  claimed, four new trucks were dispatched for the new server day
+  (SSR, R, N after a downgrade refresh, SR - each used its own per
+  truck free refresh), and four plunders were fought to the cap.
+  The fourth, picked by the new shard rule - a UR truck of
+  another commander, guard 16.5M, three shard stacks -
+  paid 9 UR shards against 1 to 2 from the earlier ordinary
+  targets. End of session HUD - food 334.7M, iron 327.0M, coin
+  77.3M, red diamonds 2,083, power 149,351,954.
+- One miss, owner corrected at about 20:53 — the VIP Daily Freebie
+  was claimable again after the 19:00 reset and the sweep never
+  opened the VIP screen; the owner claimed it himself. VIP rewards
+  are on the daily umbrella list from now on, and the reset rule is
+  recorded in the VIP metadata and the 2053 evening missed record.
+- Still open after this sweep — the alliance train entry point for
+  the evening boarding (rule ready, section 2 and 3 contracts; no
+  train control found in the Alliance panel or Events, and the left
+  column train icon opened Intercity Trade), the crystal task
+  identity, and the day Alliance Duel category, which decides
+  whether the duel day dispatch and Mega Refresh rules applied.
+
+## 21:18 to about 21:36 — The regulars instruction and the late run
+
+The owner widened the standing four-hourly task - it performs all
+the regulars now, and a list of the regulars is kept. He then
+ordered three of them on the spot - check and claim all mail, help
+others, harvest all bubbles - and added the working rule that
+activities are recorded as they are done, so what is still expected
+is always known; tooling for that was requested in the same breath.
+
+- Tooling built - `tools/regulars.json` (the canonical list, 18
+  regulars with cadences) and `tools/regulars.py` (list, todo,
+  done, skip; per date state in `tools/state/`; the VIP entry knows
+  its 19:00 reset). The four-hourly cron instruction was rewritten
+  to work from the tracker. The day state was seeded with the
+  verified outcomes of the earlier rounds.
+- The session had to be taken back from the phone (different-device
+  dialog, Confirm once, app restarted once). The owner had played
+  on the phone meanwhile - his own Lv.30 building and research
+  queues were running, resources lower, power 149,689,618.
+- Mail — Claim All pressed in Alliance, Season, System, Regular
+  and Battle Report; Purchases is receipts only. Contents were
+  reports and notices; a System patch mail dated 2026-10-21 names a
+  Crystal Shop tab in Store, Building - the first concrete lead on
+  the crystal task. The in-game Store was opened afterwards and
+  its Building section was not reached this run; the lead is
+  recorded in the mail metadata.
+- Help — no bubble on the base screen. In the Alliance HELP list
+  only this account's own four requests waited; Help All pressed,
+  nothing to give.
+- Gifts — 3 new Regular gifts claimed; Premium rows all already
+  Claimed.
+- Harvest — five grounded bubble points tapped on their centers;
+  one opened the High-Heat Furnace panel (furnace not turned on;
+  an auto-turn-on in blizzard line is shown - left untouched,
+  coal decisions stay with the owner). A closing screenshot showed
+  the base clear of bubbles.
+- Arms Race — Base Building phase, 0 points, no chests earned.
+  The Calendar red dot is the Stage Swap explanation; swapping is
+  a decision and was not touched.
+- Tracker end state — mail, help, gifts, harvest and arms-race
+  done for the run; train skipped with the reason that no train in
+  preparation was found tonight and the evening boarding entry is
+  still unresolved.
+
+## 21:35 to about 21:52 — Duel schedule read and the strategy system
+
+The owner directed a strategy layer - keep the weekly Alliance
+Duel schedule in the repository and arrange tasks by it (radar
+preserved one day to be harvested on Radar Training day, hero
+resources spent only on their day), keep a regularly updated map
+of all resources (coin named as stretched), research the strategy
+online, and build tools that enforce the playbook - everything in
+this repository.
+
+- Alliance Duel read in game — the week runs Day 1 Radar Training
+  (1 win point), Day 2 Base Expansion (2), Day 3 Age of Science
+  (2), Day 4 Train Heroes (2), Day 5 Total Mobilization (2),
+  Day 6 Enemy Buster (4), off day; boundary 19:00 local (02:00
+  UTC); this week the alliance vs the opposing alliance. The Radar Training
+  scoring table was read in full (radar task +30,000). The
+  afternoon web research in events-and-cycles already matched this
+  order (web names differ slightly). Full detail in the 2140
+  schedule read record and the updated events knowledge.
+- Built and recorded — `tools/duel_schedule.json` and
+  `tools/duel.py` (today's day, theme, gate, radar posture);
+  `tools/resources.json` and `tools/resource_map.py` (snapshot
+  history with low water flags) with the first snapshot from the
+  late run HUD - coin flagged CRITICAL at 565.1K, push plan in
+  the playbook; `_knowledge_/strategy-playbook` holds the rules;
+  AGENTS.md now carries the owner rule that everything lives in
+  this repository.
+- The Alliance Store red dot was also closed out on the way —
+  honor shop, balance 96,560, Monday refresh; an item Buy dialog
+  was opened by a stray tap and closed untouched.
+
+## 21:41 — The objective and its power baseline
+
+The owner stated the ultimate goal - increase Hero Power and
+Total Power, balance resource use, and support the alliance
+including the Alliance Duel and other alliance activities. It now
+heads the strategy playbook, and a baseline was read in game -
+Total Power **149,689,618**, warzone Individual Power **rank
+113**; alliance benchmarks 247,971,851 (ItStartsWithaDream),
+227,095,526 (another commander) and 205,162,283 (another commander), warzone top
+277,043,357; top heroes Lv.150 five-star UR, Squad 1 march power
+24.96M. The power figure is tracked in the resource map as the
+total_power growth metric. Detail in the 2150 power baseline
+record.
+
+## 21:56 — Research brief folded into the playbook
+
+The delegated web research landed (Handbook, Packsify, Kimikas,
+LDShop, Cpt Hedge cross-checked) and was folded into the strategy
+system in the same evening. One material correction to the first
+cut: radar claims score on the **odd duel days 1, 3 and 5 at
+claim time**, so the radar now runs stack days (complete, never
+claim, keep cap headroom) and release days - duel.py, the
+playbook, the duel schedule gates and the four-hourly cron text
+all carry the corrected rule. Also added - Day 2 UR trucks and
+Legendary secret tasks score, Day 3 valor badges and drone
+component chests, Day 5 waterfall promotions, the post-reset dead
+window, the Sunday power freeze caution, and coin reframed as a
+campaign against the 500M-plus T10 research wall (Gold Zombie
+event first in the push order). The black rock HUD resource is
+Season 2 coal.
+
+## 21:48 to about 22:15 — Red dot follow up on the owner's handover
+
+The owner handed the game over ("Game is for you to operate
+now"); the 21:47 scheduled run was stopped first so only one
+operator drives. Findings - Alliance Techs rechecked: donation
+points **3100** (owner topped up from his phone), daily rank 16,
+the 1000 point reward minimum met, rewards settle at the next
+day boundary (badge item 4 and red gems 10 in the 4 to 100 tier).
+Assemble: the base sits **1221 km from the Assembly Point
+X:999 Y:994** - the red dot is the too-far notice; teleporting
+stays the owner's decision. Mission Daily Tasks read in full
+(activity 160, Daily Login complete, no crystal row anywhere).
+Crystal hunt: Hot Deals storefront, Alliance Store, Daily and
+Season tasks all ruled out tonight; the Store Building section
+is still unlocated. Train: no preparation window, no entry -
+the watch continues with the regulars. Detail in the 2157
+techs recheck and the 2200 red dot follow up records.
+
+## 23:09 to about 23:41 — Owner-requested late round, score and resources report
+
+The owner asked for one more round of tasks with the total score
+and resources reported afterwards. Duel gate first - Day 1 Radar
+Training, posture release; the day tracker was already fully
+marked, so the round ran the regulars list manually. Done -
+harvest; mail checked (reports only, the Arms Race mail records
+No.6 on the day); help checked (no ally requests, own four already
+helped, 500 of 1,000 points); gifts 74 Regular and 2 Premium
+claimed; one UR secret task claimed - the report inside showed the
+waiting UR had been plundered twice for its fragment - and the
+second UR left running; radar claimed in full under release
+posture, a Doom Legion base destroyed and a Doom Walker rally
+killed on the second, stamina-verified launch; the two gate
+survivors with question bubbles worked through; the train boarding
+window finally caught - banner to profile to platform - with the
+account already aboard carriage 2; Arms Race Unit Progression at
+0 points with all queues running. Skipped - donations (coin at the
+critical low at round start, day total already 3,100) and trucks
+(still en route to about 01:35). Close - food 298.0M, iron
+289.6M, coin 12.9M recovered from the 565.1K low, stamina 73,
+radar 2,822, total power 149,689,618 unchanged.
+
+## Activity records for this date
+
+Records are organised by date first. This folder is the 2026-10-25
+record. Inside it, one subfolder per activity type, named as in
+`_activities_`, and inside each of those, one file per execution. A
+folder is present for every activity the round evaluated, and its
+execution file states the outcome, including not performed.
+
+| Activity | Status | Execution record |
+|---|---|---|
+| [Mail Rewards](mail-rewards/INDEX.md) | Performed | [1100 daily round](mail-rewards/1100-daily-round.md), [2120 late run](mail-rewards/2120-late-run.md), [2313 late round](mail-rewards/2313-late-round.md) |
+| [Alliance Help](alliance-help/INDEX.md) | Performed | [1100 daily round](alliance-help/1100-daily-round.md), [1440 red dot sweep](alliance-help/1440-red-dot-sweep.md), [2047 evening help](alliance-help/2047-evening-help.md), [2125 late run](alliance-help/2125-late-run.md), [2316 late round](alliance-help/2316-late-round.md) |
+| [Alliance Gifts](alliance-gifts/INDEX.md) | Performed | [1100 daily round](alliance-gifts/1100-daily-round.md), [2048 evening claims](alliance-gifts/2048-evening-claims.md), [2125 late run](alliance-gifts/2125-late-run.md), [2318 late round](alliance-gifts/2318-late-round.md) |
+| [Alliance Donations](alliance-donations/INDEX.md) | Performed, then checked only; rechecked late | [1100 daily round](alliance-donations/1100-daily-round.md), [1220 intake check](alliance-donations/1220-intake-check.md), [2157 techs recheck](alliance-donations/2157-techs-recheck.md) |
+| [Season Warming](season-warming/INDEX.md) | Performed | [1100 daily round](season-warming/1100-daily-round.md) |
+| [Secret Missions](secret-missions/INDEX.md) | Performed | [1100 daily round](secret-missions/1100-daily-round.md), [1944 evening mega](secret-missions/1944-evening-mega.md), [2320 late round](secret-missions/2320-late-round.md) |
+| [Hidden Treasures](hidden-treasures/INDEX.md) | Performed | [1959 first dig](hidden-treasures/1959-first-dig.md) |
+| [Ghost Ops](ghost-ops/INDEX.md) | Inspected only | [2005 inspection](ghost-ops/2005-inspection.md) |
+| [Radar Tasks](radar-tasks/INDEX.md) | Performed | [1100 daily round](radar-tasks/1100-daily-round.md), [1452 red dot sweep](radar-tasks/1452-red-dot-sweep.md), [2015 evening clear](radar-tasks/2015-evening-clear.md), [2325 late round](radar-tasks/2325-late-round.md) |
+| [Daily Missions](daily-missions/INDEX.md) | Performed in part | [1100 daily round](daily-missions/1100-daily-round.md) |
+| [Event Claims](event-claims/INDEX.md) | Performed, then checked only | [1100 daily round](event-claims/1100-daily-round.md), [1447 red dot sweep](event-claims/1447-red-dot-sweep.md), [2030 evening sweep](event-claims/2030-evening-sweep.md), [2200 red dot follow up](event-claims/2200-red-dot-followup.md), [2341 late round checks](event-claims/2341-late-round-checks.md) |
+| [Shop Claims](shop-claims/INDEX.md) | Performed | [1100 daily round](shop-claims/1100-daily-round.md), [1342 pass claims](shop-claims/1342-pass-claims.md), [1359 pass claims](shop-claims/1359-pass-claims.md), [1447 season passes](shop-claims/1447-season-passes.md) |
+| [Hero Recruitment](hero-recruitment/INDEX.md) | Performed | [1100 daily round](hero-recruitment/1100-daily-round.md) |
+| [Research Queue](research-queue/INDEX.md) | Performed | [1100 daily round](research-queue/1100-daily-round.md) |
+| [Building Queues](building-queues/INDEX.md) | Checked only | [1100 daily round](building-queues/1100-daily-round.md) |
+| [Resource Collection](resource-collection/INDEX.md) | Performed | [1100 daily round](resource-collection/1100-daily-round.md), [1455 bubble sweep](resource-collection/1455-bubble-sweep.md), [2025 evening harvest](resource-collection/2025-evening-harvest.md), [2127 late run](resource-collection/2127-late-run.md), [2309 late round](resource-collection/2309-late-round.md) |
+| [Troop Training](troop-training/INDEX.md) | Performed | [1220 task intake](troop-training/1220-task-intake.md) |
+| [Truck Plunder](truck-plunder/INDEX.md) | Performed | [1220 task intake](truck-plunder/1220-task-intake.md), [1812 arrival check](truck-plunder/1812-arrival-check.md), [2047 evening settlement](truck-plunder/2047-evening-settlement.md) |
+| [Alliance Train](alliance-train/INDEX.md) | Performed | [1220 task intake](alliance-train/1220-task-intake.md), [1812 reward claim](alliance-train/1812-reward-claim.md), [2333 boarding aboard](alliance-train/2333-boarding-aboard.md) |
+| [VIP Rewards](vip-rewards/INDEX.md) | Performed, then missed after reset | [1359 first claim](vip-rewards/1359-first-claim.md), [2053 evening missed](vip-rewards/2053-evening-missed.md) |
+| [Alliance Duel](alliance-duel/INDEX.md) | Checked only, then performed — Star Ceremony; schedule read late | [1359 intake check](alliance-duel/1359-intake-check.md), [1427 star ceremony](alliance-duel/1427-star-ceremony.md), [2140 schedule read](alliance-duel/2140-schedule-read.md) |
+| [Headquarters and Resources](headquarters-and-resources/INDEX.md) | Baseline read | [2150 power baseline](headquarters-and-resources/2150-power-baseline.md) |
+| [Arms Race](arms-race/INDEX.md) | Performed, then access-failed, then checked | [1402 phase check](arms-race/1402-phase-check.md), [1747 arms-race check](arms-race/1747-arms-race-check.md), [2129 late check](arms-race/2129-late-check.md), [2338 unit progression](arms-race/2338-unit-progression.md) |
+| [Survivor Intake](survivor-intake/INDEX.md) | Performed | [1441 first recruit](survivor-intake/1441-first-recruit.md), [2016 second intake](survivor-intake/2016-second-intake.md), [2336 gate survivors](survivor-intake/2336-gate-survivors.md) |
+
+## Reorganisation note, 2026-10-25
+
+This day record and its activity entries were first committed under
+`_records_/play-sessions/` and `_records_/activity-executions/` in
+commits 254a4a0 and 673d5d2. At the owner direction on 2026-10-25 the
+records were reorganised by date, then activity type, then one file per
+execution. The narrative above and every activity entry were moved
+without changing their facts - only paths, cross references and this
+index material are new. Git history keeps the earlier layout.

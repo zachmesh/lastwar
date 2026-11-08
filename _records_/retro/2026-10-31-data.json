@@ -1,0 +1,3453 @@
+{
+  "derived_from": {
+    "done_units_scanned": 428,
+    "in_window": 428,
+    "pool_state_sha256": "cd76cf1e0a485ea224b3fa1454acdb5392582df49e42b09aac2ea0cc936ef187",
+    "records_fallback_units": []
+  },
+  "no_data_regulars": [
+    "daily-missions",
+    "scout",
+    "scout-midday"
+  ],
+  "parse_errors": [],
+  "regulars": {
+    "arms-race": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 181,
+          "duration_total_seconds": 1011,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 2,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 1,
+            "skipped-needs-owner": 4
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 515,
+          "duration_total_seconds": 3264,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 3,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 689.3382,
+          "points_total": 37500,
+          "points_units": 1,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 3,
+            "partial": 2,
+            "skipped-needs-owner": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 355,
+          "duration_total_seconds": 2777,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 5,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1,
+            "partial": 4,
+            "skipped-needs-owner": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 383,
+          "duration_total_seconds": 2462,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 5,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1,
+            "partial": 2,
+            "skipped-needs-owner": 3
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 349,
+        "duration_total_seconds": 9514,
+        "executions": 23,
+        "missing_key_counts": {
+          "achieved": 23,
+          "blocker_category": 18,
+          "costs": 23,
+          "resources_gained": 23,
+          "target": 23,
+          "verified": 23
+        },
+        "named_blockers": {},
+        "points_per_minute": 236.4936,
+        "points_total": 37500,
+        "points_units": 3,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 5,
+          "partial": 9,
+          "skipped-needs-owner": 9
+        },
+        "target_sum": 0,
+        "unverified": 23,
+        "unverified_reasons": {
+          "missing_required_stats": 23,
+          "missing_result": 0,
+          "verified_not_yes": 23
+        }
+      }
+    },
+    "donations": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 361,
+          "duration_total_seconds": 1959,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 1,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 4,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 439.5,
+          "duration_total_seconds": 3027,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 5,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 421,
+          "duration_total_seconds": 3318,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 5,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 542,
+          "duration_total_seconds": 3194,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 3,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 421,
+        "duration_total_seconds": 11498,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 8,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 17,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 14,
+          "partial": 8
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "events": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 369,
+          "duration_total_seconds": 2234,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 268.5,
+          "duration_total_seconds": 1936,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 2,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 2
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 246.5,
+          "duration_total_seconds": 1566,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 429,
+          "duration_total_seconds": 2166,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 2,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 3,
+            "partial": 2
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 304,
+        "duration_total_seconds": 7902,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 5,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 17,
+          "partial": 5
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "ghost-ops": {
+      "by_day": {
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 174,
+          "duration_total_seconds": 174,
+          "executions": 1,
+          "missing_key_counts": {
+            "achieved": 1,
+            "costs": 1,
+            "resources_gained": 1,
+            "target": 1,
+            "verified": 1
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1
+          },
+          "target_sum": 0,
+          "unverified": 1,
+          "unverified_reasons": {
+            "missing_required_stats": 1,
+            "missing_result": 0,
+            "verified_not_yes": 1
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 174,
+        "duration_total_seconds": 174,
+        "executions": 1,
+        "missing_key_counts": {
+          "achieved": 1,
+          "costs": 1,
+          "resources_gained": 1,
+          "target": 1,
+          "verified": 1
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 1
+        },
+        "target_sum": 0,
+        "unverified": 1,
+        "unverified_reasons": {
+          "missing_required_stats": 1,
+          "missing_result": 0,
+          "verified_not_yes": 1
+        }
+      }
+    },
+    "gifts": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 329,
+          "duration_total_seconds": 1461,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 1,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 337.5,
+          "duration_total_seconds": 2302,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 2,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "failed": 1,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 365,
+          "duration_total_seconds": 2862,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 614,
+          "duration_total_seconds": 2706,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 1,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 334,
+        "duration_total_seconds": 9331,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 5,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 17,
+          "failed": 1,
+          "partial": 4
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "harvest": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 338,
+          "duration_total_seconds": 1367,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 531,
+          "duration_total_seconds": 3109,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 4,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 2,
+            "partial": 4
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 450.5,
+          "duration_total_seconds": 3117,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 293,
+          "duration_total_seconds": 1750,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 4,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1,
+            "partial": 4
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 365.5,
+        "duration_total_seconds": 9343,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 14,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 8,
+          "partial": 14
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "help": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 88,
+          "duration_total_seconds": 1660,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 109.5,
+          "duration_total_seconds": 614,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 2,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "failed": 1,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 236.5,
+          "duration_total_seconds": 2605,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 352,
+          "duration_total_seconds": 1628,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 1,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 124.5,
+        "duration_total_seconds": 6507,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 3,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 19,
+          "failed": 1,
+          "partial": 2
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "mail": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 233,
+          "duration_total_seconds": 1200,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 380.5,
+          "duration_total_seconds": 2719,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 262,
+          "duration_total_seconds": 2232,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 209,
+          "duration_total_seconds": 1403,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 1,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 245,
+        "duration_total_seconds": 7554,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 3,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 19,
+          "partial": 3
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "passes": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 177,
+          "duration_total_seconds": 865,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 1,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 204.5,
+          "duration_total_seconds": 1573,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 187.5,
+          "duration_total_seconds": 1071,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 2,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 2
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 204,
+          "duration_total_seconds": 1034,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 2,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 3,
+            "partial": 2
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 193.5,
+        "duration_total_seconds": 4543,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 6,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 16,
+          "partial": 6
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "radar": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 279,
+          "duration_total_seconds": 1143,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 308.2415,
+          "points_total": 5872,
+          "points_units": 2,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 560.5,
+          "duration_total_seconds": 3432,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 52.2552,
+          "points_total": 2989,
+          "points_units": 1,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 309,
+          "duration_total_seconds": 2435,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 4,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 2,
+            "partial": 4
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 304.5,
+          "duration_total_seconds": 1874,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 323,
+        "duration_total_seconds": 8884,
+        "executions": 23,
+        "missing_key_counts": {
+          "achieved": 23,
+          "blocker_category": 16,
+          "costs": 23,
+          "resources_gained": 23,
+          "target": 23,
+          "verified": 23
+        },
+        "named_blockers": {},
+        "points_per_minute": 59.8447,
+        "points_total": 8861,
+        "points_units": 3,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 7,
+          "partial": 16
+        },
+        "target_sum": 0,
+        "unverified": 23,
+        "unverified_reasons": {
+          "missing_required_stats": 23,
+          "missing_result": 0,
+          "verified_not_yes": 23
+        }
+      }
+    },
+    "secrets": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 423,
+          "duration_total_seconds": 1772,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 267.5,
+          "duration_total_seconds": 1586,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 239,
+          "duration_total_seconds": 1699,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 2,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 4,
+            "partial": 2
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 360,
+          "duration_total_seconds": 2042,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 4,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1,
+            "partial": 4
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 280.5,
+        "duration_total_seconds": 7099,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 6,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 16,
+          "partial": 6
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "star-ceremony": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 55,
+          "duration_total_seconds": 293,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 80.5,
+          "duration_total_seconds": 534,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 49.5,
+          "duration_total_seconds": 533,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 104,
+          "duration_total_seconds": 462,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 63.5,
+        "duration_total_seconds": 1822,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 22
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "survivors": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 260,
+          "duration_total_seconds": 1579,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 182,
+          "duration_total_seconds": 1246,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 570,
+          "duration_total_seconds": 3176,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 334,
+          "duration_total_seconds": 1781,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 320.5,
+        "duration_total_seconds": 7782,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 22,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "partial": 22
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "train": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 105,
+          "duration_total_seconds": 838,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 106.5,
+          "duration_total_seconds": 722,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 1,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 55.5,
+          "duration_total_seconds": 599,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 152,
+          "duration_total_seconds": 791,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 100.5,
+        "duration_total_seconds": 2950,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 1,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 21,
+          "partial": 1
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "training": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 259,
+          "duration_total_seconds": 1019,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 4,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1,
+            "failed": 1,
+            "partial": 3
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 145.5,
+          "duration_total_seconds": 1877,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "failed": 1,
+            "partial": 5
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 363,
+          "duration_total_seconds": 2224,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 505,
+          "duration_total_seconds": 2255,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 297,
+        "duration_total_seconds": 7375,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "blocker_category": 21,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 1,
+          "failed": 2,
+          "partial": 19
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "treasures": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 57,
+          "duration_total_seconds": 319,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 59,
+          "duration_total_seconds": 306,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 57.5,
+          "duration_total_seconds": 531,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 256,
+          "duration_total_seconds": 1344,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 6
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 71,
+        "duration_total_seconds": 2500,
+        "executions": 22,
+        "missing_key_counts": {
+          "achieved": 22,
+          "costs": 22,
+          "resources_gained": 22,
+          "target": 22,
+          "verified": 22
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 22
+        },
+        "target_sum": 0,
+        "unverified": 22,
+        "unverified_reasons": {
+          "missing_required_stats": 22,
+          "missing_result": 0,
+          "verified_not_yes": 22
+        }
+      }
+    },
+    "trucks": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 349,
+          "duration_total_seconds": 2128,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 2,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 3,
+            "partial": 2
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 640.5,
+          "duration_total_seconds": 4550,
+          "executions": 6,
+          "missing_key_counts": {
+            "achieved": 6,
+            "blocker_category": 4,
+            "costs": 6,
+            "resources_gained": 6,
+            "target": 6,
+            "verified": 6
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 2,
+            "partial": 4
+          },
+          "target_sum": 0,
+          "unverified": 6,
+          "unverified_reasons": {
+            "missing_required_stats": 6,
+            "missing_result": 0,
+            "verified_not_yes": 6
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 213,
+          "duration_total_seconds": 3968,
+          "executions": 9,
+          "missing_key_counts": {
+            "achieved": 9,
+            "blocker_category": 9,
+            "costs": 9,
+            "resources_gained": 9,
+            "target": 9,
+            "verified": 9
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 9
+          },
+          "target_sum": 0,
+          "unverified": 9,
+          "unverified_reasons": {
+            "missing_required_stats": 9,
+            "missing_result": 0,
+            "verified_not_yes": 9
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 855,
+          "duration_total_seconds": 3652,
+          "executions": 5,
+          "missing_key_counts": {
+            "achieved": 5,
+            "blocker_category": 5,
+            "costs": 5,
+            "resources_gained": 5,
+            "target": 5,
+            "verified": 5
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 5
+          },
+          "target_sum": 0,
+          "unverified": 5,
+          "unverified_reasons": {
+            "missing_required_stats": 5,
+            "missing_result": 0,
+            "verified_not_yes": 5
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 487,
+        "duration_total_seconds": 14298,
+        "executions": 25,
+        "missing_key_counts": {
+          "achieved": 25,
+          "blocker_category": 20,
+          "costs": 25,
+          "resources_gained": 25,
+          "target": 25,
+          "verified": 25
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 5,
+          "partial": 20
+        },
+        "target_sum": 0,
+        "unverified": 25,
+        "unverified_reasons": {
+          "missing_required_stats": 25,
+          "missing_result": 0,
+          "verified_not_yes": 25
+        }
+      }
+    },
+    "vip": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 357,
+          "duration_total_seconds": 357,
+          "executions": 1,
+          "missing_key_counts": {
+            "achieved": 1,
+            "blocker_category": 1,
+            "costs": 1,
+            "resources_gained": 1,
+            "target": 1,
+            "verified": 1
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 1,
+          "unverified_reasons": {
+            "missing_required_stats": 1,
+            "missing_result": 0,
+            "verified_not_yes": 1
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 328,
+          "duration_total_seconds": 328,
+          "executions": 1,
+          "missing_key_counts": {
+            "achieved": 1,
+            "blocker_category": 1,
+            "costs": 1,
+            "resources_gained": 1,
+            "target": 1,
+            "verified": 1
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 1,
+          "unverified_reasons": {
+            "missing_required_stats": 1,
+            "missing_result": 0,
+            "verified_not_yes": 1
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 380,
+          "duration_total_seconds": 380,
+          "executions": 1,
+          "missing_key_counts": {
+            "achieved": 1,
+            "costs": 1,
+            "resources_gained": 1,
+            "target": 1,
+            "verified": 1
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1
+          },
+          "target_sum": 0,
+          "unverified": 1,
+          "unverified_reasons": {
+            "missing_required_stats": 1,
+            "missing_result": 0,
+            "verified_not_yes": 1
+          }
+        },
+        "2026-10-31": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 499,
+          "duration_total_seconds": 499,
+          "executions": 1,
+          "missing_key_counts": {
+            "achieved": 1,
+            "blocker_category": 1,
+            "costs": 1,
+            "resources_gained": 1,
+            "target": 1,
+            "verified": 1
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "partial": 1
+          },
+          "target_sum": 0,
+          "unverified": 1,
+          "unverified_reasons": {
+            "missing_required_stats": 1,
+            "missing_result": 0,
+            "verified_not_yes": 1
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 368.5,
+        "duration_total_seconds": 1564,
+        "executions": 4,
+        "missing_key_counts": {
+          "achieved": 4,
+          "blocker_category": 3,
+          "costs": 4,
+          "resources_gained": 4,
+          "target": 4,
+          "verified": 4
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 1,
+          "partial": 3
+        },
+        "target_sum": 0,
+        "unverified": 4,
+        "unverified_reasons": {
+          "missing_required_stats": 4,
+          "missing_result": 0,
+          "verified_not_yes": 4
+        }
+      }
+    },
+    "zombie-invasion": {
+      "by_day": {
+        "2026-10-28": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 680.5,
+          "duration_total_seconds": 19031,
+          "executions": 30,
+          "missing_key_counts": {
+            "achieved": 30,
+            "blocker_category": 29,
+            "costs": 30,
+            "resources_gained": 30,
+            "target": 30,
+            "verified": 30
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 1,
+            "failed": 3,
+            "partial": 26
+          },
+          "target_sum": 0,
+          "unverified": 30,
+          "unverified_reasons": {
+            "missing_required_stats": 30,
+            "missing_result": 0,
+            "verified_not_yes": 30
+          }
+        },
+        "2026-10-29": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 444.5,
+          "duration_total_seconds": 11703,
+          "executions": 20,
+          "missing_key_counts": {
+            "achieved": 20,
+            "blocker_category": 18,
+            "costs": 20,
+            "resources_gained": 20,
+            "target": 20,
+            "verified": 20
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 2,
+            "partial": 18
+          },
+          "target_sum": 0,
+          "unverified": 20,
+          "unverified_reasons": {
+            "missing_required_stats": 20,
+            "missing_result": 0,
+            "verified_not_yes": 20
+          }
+        },
+        "2026-10-30": {
+          "achieved_sum": 0,
+          "attainment_mean_ratio": null,
+          "attainment_summed": null,
+          "attainment_units": 0,
+          "blockers": {},
+          "costs": {},
+          "duration_median_seconds": 649,
+          "duration_total_seconds": 10244,
+          "executions": 16,
+          "missing_key_counts": {
+            "achieved": 16,
+            "blocker_category": 11,
+            "costs": 16,
+            "resources_gained": 16,
+            "target": 16,
+            "verified": 16
+          },
+          "named_blockers": {},
+          "points_per_minute": 0,
+          "points_total": 0,
+          "points_units": 0,
+          "resources_gained": {},
+          "resources_per_minute": {},
+          "resources_unparsed_count": 0,
+          "statuses": {
+            "done": 5,
+            "partial": 11
+          },
+          "target_sum": 0,
+          "unverified": 16,
+          "unverified_reasons": {
+            "missing_required_stats": 16,
+            "missing_result": 0,
+            "verified_not_yes": 16
+          }
+        }
+      },
+      "rolling": {
+        "achieved_sum": 0,
+        "attainment_mean_ratio": null,
+        "attainment_summed": null,
+        "attainment_units": 0,
+        "blockers": {},
+        "costs": {},
+        "duration_median_seconds": 635.5,
+        "duration_total_seconds": 40978,
+        "executions": 66,
+        "missing_key_counts": {
+          "achieved": 66,
+          "blocker_category": 58,
+          "costs": 66,
+          "resources_gained": 66,
+          "target": 66,
+          "verified": 66
+        },
+        "named_blockers": {},
+        "points_per_minute": 0,
+        "points_total": 0,
+        "points_units": 0,
+        "resources_gained": {},
+        "resources_per_minute": {},
+        "resources_unparsed_count": 0,
+        "statuses": {
+          "done": 8,
+          "failed": 3,
+          "partial": 55
+        },
+        "target_sum": 0,
+        "unverified": 66,
+        "unverified_reasons": {
+          "missing_required_stats": 66,
+          "missing_result": 0,
+          "verified_not_yes": 66
+        }
+      }
+    }
+  },
+  "tool": "retro_report",
+  "totals": {
+    "achieved_sum": 0,
+    "attainment_mean_ratio": null,
+    "attainment_summed": null,
+    "attainment_units": 0,
+    "blockers": {},
+    "costs": {},
+    "duration_median_seconds": 303,
+    "duration_total_seconds": 161618,
+    "executions": 428,
+    "missing_key_counts": {
+      "achieved": 428,
+      "blocker_category": 209,
+      "costs": 428,
+      "resources_gained": 428,
+      "target": 423,
+      "verified": 428
+    },
+    "named_blockers": {},
+    "points_per_minute": 17.2113,
+    "points_total": 46361,
+    "points_units": 6,
+    "resources_gained": {},
+    "resources_per_minute": {},
+    "resources_unparsed_count": 0,
+    "statuses": {
+      "done": 219,
+      "failed": 7,
+      "partial": 193,
+      "skipped-needs-owner": 9
+    },
+    "target_sum": 0,
+    "unverified": 428,
+    "unverified_reasons": {
+      "missing_required_stats": 428,
+      "missing_result": 0,
+      "verified_not_yes": 428
+    }
+  },
+  "version": "1.0.0",
+  "window": {
+    "days": 7,
+    "end": "2026-10-31",
+    "start": "2026-10-25"
+  }
+}
