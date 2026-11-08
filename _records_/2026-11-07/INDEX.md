@@ -3955,3 +3955,23 @@ of 2026-10-28.
   by the ticker-2006 pass (Issue 213 duplicate), which
   claimed the rewards; this record holds the re-check.
   Full detail in mail-rewards/2052-queue-run.md.
+
+## 20:32 to about 21:00 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-07-2032.
+  Own PRs checked first: no tooling PR of mine open (3 open
+  PRs are integrator-owned records branches). Took the single
+  highest-priority open tooling item, issue #410: the live
+  checkout was still running the pre-rename tools/ code (21
+  regulars), so the guards merged on main never took effect
+  in the live loop. Hand-synced the live tree to main's
+  _tools_/ + tools symlink in the gap after the device token
+  was released (ticker-2034, about 20:53), carrying the
+  tracker state forward; pool untouched (1260 files).
+  Verified on scratch (15/15) and on live-pool snapshot
+  copies (sync sees duel-score, sweep stages the correct
+  16:30/17:30 pair). No repo change authored, so no PR -
+  main already held the fix through #414. Filed follow-up
+  issue #415 (nothing re-syncs the live checkout) and
+  commented on #410. Status: done. Full detail in
+  tool-development/2032-run.md.
