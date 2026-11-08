@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T02:42:42Z
+modified: 2026-11-08T14:42:04Z
 level: L1
-version: 1.11.0
+version: 1.15.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,11 @@ grounded_in:
   - source: ticker-1634 vip-rewards execution record 2026-11-06 1640 queue run (failed, Mac device offline, eighty-third consecutive ticker pass with a Mac device-access blocker, forty-fourth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 33h, unchanged since the 1507, 1534 and 1604 passes; seven invokes, zero responses)
   - source: ticker-1727 vip-rewards execution record 2026-11-07 1747 queue run (partial, Freebie countdown to about 18:02 not the 19:00 reset, login chest already collected, VIP13 points 1,603,930 of 2,000,000, streak 1 day; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-1734 vip-rewards execution record 2026-11-07 1812 queue run (partial, login chest claimed plus 60 points to 1,603,990, streak 2 days, Freebie unlocked about 18:02 but Claim button unresponsive to four input variants including a foreground click; record commit 840094b6ad on records/2026-11-07)
+  - source: ticker-1818 VIP execution record 2026-11-07 1830 queue run (partial, chest already claimed, freebie not retried, popularity popup on the avatar-tap route)
+  - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, VIP panel walked, VIP13 progress 1,605,970/2,000,000, Daily Freebie GREEN/claimable NOT claimed, Exclusive pack read; record commit 6560ff267 on records/2026-11-08)
+  - source: ticker-0434 perception-scout execution record 2026-11-08 0454 queue run (done, VIP re-check, Freebie still claimable, record commit caa661bab on records/2026-11-08)
+  - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Freebie re-check, cart dot is the Store shortcut, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, VIP panel re-read, Daily Freebie still claimable, cart dot absent, VIP Store full stock); record commit 707bcec0d8 on records/2026-11-08
 ---
 
 
@@ -255,3 +260,106 @@ Measured on 2026-10-25.
 - Supporting re-read: the 2138 unit on 2026-11-02 read a grey countdown of 20:20:15 at about 21:38, after the reset. Under a reset clock the countdown at 21:38 would read about 21h22m to the next 19:00 reset; observed 20:20:15 puts the unlock at about 17:58 the next day, which matches a 24-hour cycle from a claim at about 17:58 on 2026-11-02. The 2138 section's "the freebie for this reset day is already claimed" is re-read as: already claimed for the running 24-hour cycle, unlock about 17:58 the next day.
 - The reset-rule paragraph in Cadence is revised with it: a round that runs after 19:00 does NOT automatically find a fresh freebie. Whether it is claimable depends on when it was last claimed (unlock is last claim plus about 24 hours), so units must read the countdown or the button live rather than assume a refresh at the reset. The 2026-10-25 owner claim at about 20:53 is re-read as the about-18:59 unlock claimed late, not as a reset-driven refresh; the paragraph's "afternoon claim" can only be the previous day's claim, since the 14:00 countdown reading rules out a claim that afternoon. The standing rule that a round is not closed without opening the VIP screen stands - as a check, not as an assumption of a fresh freebie.
 - No other claim in this profile changes: the login chest, the streak and points reads, and the Freebie-button failure mode are all re-confirmed by the two units.
+
+## What the 2026-11-07 1830 unit added - avatar-tap route blocked by the popularity popup, VIP entry not located, freebie not retried
+
+- Unit vip-2026-11-06-1800 by ticker-1818, about 18:29 to 18:30 local, status partial. Evidence in `_records_/2026-11-07/vip-rewards/1830-queue-run.md` (commit f04c2b11d on records/2026-11-07). Computer session cc-30 dropped after the previous unit; session cc-33 was started, LastWar re-selected, and no game state was lost.
+- Login chest: already claimed by ticker-1734 (+60 VIP points, 1,603,930 to 1,603,990, streak 2 days, per vip-rewards/1812-queue-run.md). Nothing to claim in this unit.
+- Daily Freebie: NOT retried in this unit. The avatar tap opened MY PROFILE, but a "You're very popular!" popup covered it ([AP3x]Roronoa zo liked the profile, 1,806 likes +1); the popup was dismissed with the plain blue "Awesome!" button (no price tag, no spend), and the clean profile then showed likes 1,810, Moments "No posts found", and bottom tabs Record, Account, Settings, Rankings, Follow - no VIP entry on this screen. The VIP screen entry was not located before the token was released.
+- Entry-route correction: the "How to enter" route (avatar tap, then the gold VIP badge on the profile) can be obstructed by the popularity popup, and the profile's bottom tabs carry no VIP entry - the badge sits elsewhere on the profile and its position needs a fresh read on the next unit. Do not assume the badge is on the tabs row, and do not treat a popup-covered profile as the VIP screen. The freebie button's standing repeat blocker (ticker-1734: unresponsive across four input variants at norm about 739, 637) therefore stands, and this unit adds no new variant to it.
+- The token was released at 18:30 so the 18:34 tick can take it and run the 18:30 zero sweep (unit 002), which retries the freebie before the 19:00 reset per the ticker-1734 handoff. Whether that retry ran is unknown at this run's close; the freebie was still unclaimed at the reset, and the next claim window is the next cycle's units (the freebie unlocks about 18:02 daily on its own roughly 24-hour cycle, per the Correction above).
+- Figures read live: power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M. Profile likes 1,806 before the popup dismissal, 1,810 after (measured). No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+
+## What the 2026-11-08 0229 scout read added - VIP panel walked, Daily Freebie claimable
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0204, 02:17 to 02:32 local, status partial per rule R1 (3 red dots unexplained, one of them the VIP cart icon). Evidence in `_records_/2026-11-08/perception-scout/0229-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-03/perception-scout/observation.md`. Observe-only; nothing claimed. Entry: avatar -> MY PROFILE -> VIP13 tile.
+- Profile: Lv.30 [AP3x]Bears Lair, US flag, 149.8M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13, #2110, likes 1,810, showcase flower 12 / gift 88 / trophy 11, Moments "No posts found.", bottom bar Record (red dot), Account, Settings, Rankings, Follow.
+- VIP panel: VIP13, "You've logged in 2 days in a row. Collect 80 VIP points tomorrow.", progress 1,605,970/2,000,000. Privileges: NEW Crafting Speed 50.00%; NEW Research Speed 20.00%; NEW Activate the Mega Mode of Trade Trucks 1; Boost Food Output 25.00%; Boost Iron Output 25.00%; Boost Coin Output 25.00%; Construction Speed 50.00%; March Speed 15.00%; Max Units 5.00%; Unit Healing Speed 10.00%; Boost Hero HP 5.00%; Boost Hero Attack 5.00%; Boost Hero Defense 5.00%; "Forward Mode" Rush Attempts 2; "Shake your device to collect all resources! (Unlocks..." (row truncated at right edge).
+- VIP13 Daily Freebie: Claim button GREEN/claimable (puzzle 2, brown crate 13, grey crate 13, gold 13) - observed only, NOT claimed; the claim belongs to the vip regular (vip unit is in the inbox, due). Note: the freebie button's standing repeat blocker (ticker-1734: unresponsive across four input variants) is a claim-attempt blocker; this unit only observed the button rendering claimable and did not attempt a claim, so the blocker stands untested by this read.
+- VIP Exclusive (Epic), Availability 1: red gem 10.0K, hero shard 120, blue crate 5, paw item, $99.99, +1000 badge. Bottom timer 18d 15:45:39. Top-right cart icon (red dot, unexplained - carried to the scout successor) and chest icon.
+- The floating circular portrait icon appeared again over "Mega Mode of Trade Trucks" and over "Boost Hero Attack" (identity unknown).
+- Game left safe: game left on the base screen. No claim, no purchase. No Assemble, no teleport.
+
+
+## What the 2026-11-08 0454 and 0512 scout reads added - Daily Freebie still claimable at 04:53 and 05:11, cart dot is the Store shortcut
+
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0434, about
+  04:52-04:54 local, status done; and scout unit
+  scout-midday-scout-mid-2026-11-03-006 by ticker-0504, about 05:05-05:12
+  local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0454-queue-run.md` (commit
+  caa661bab on records/2026-11-08) and
+  `_records_/2026-11-08/perception-scout/0512-queue-run.md` (commit
+  111f7e954 on records/2026-11-08). Observe-only; nothing claimed.
+  Entry: avatar -> MY PROFILE -> VIP13 tile.
+- VIP13 Daily Freebie STILL claimable at 04:53 (0454) and at 05:11
+  (0512): puzzle 2, brown crate 13, grey crate 13, gold 13, green
+  Claim button - contents identical to the 0204 read at 02:17.
+  Observed only, NOT claimed; the claim belongs to the vip regular.
+  The Freebie is still unclaimed about 11 hours into the reset day
+  while vip unit vip-2026-11-07-1900 sits stalled in inbox (priority
+  1, about 21 hours old at the 0454 read, about 22 hours at the 0512
+  read). The vip regular owns the claim and its unit is already
+  queued; no new unit is enqueued from these scout reads. Note: the
+  Freebie contents are unchanged across the 02:17, 04:53 and 05:11
+  reads of this reset day - a same-day data point for the open
+  question on whether contents rotate; it does not answer rotation
+  across days.
+- VIP progress 1,605,970/2,000,000 - unchanged across the 02:17, 04:53
+  and 05:11 reads. "You've logged in 2 days in a row. Collect 80 VIP
+  points tomorrow." VIP Exclusive (Epic) $99.99, Availability 1,
+  timer 18d 13:16:45 at 04:53, 18d 12:55:44 at 05:11. Untouched.
+- Cart icon dot resolved: the VIP panel top-right cart icon dot - one
+  of the 3 unexplained dots from the 0204 unit - is the Store
+  shortcut, tap-verified at norm (806,133) by the 0512 unit (folded
+  into shop-claims 1.34.0). It is a store-entry indicator, not a VIP
+  claim signal. The 0229 section's cart-dot unknown is closed by
+  this read.
+- The floating circular portrait icon appeared again over the Campaign
+  tab in the 0512 read - same unknown item as the 0204 unit, still
+  unexplained.
+- Game left safe: base screen. No claim, no purchase. No Assemble, no
+  teleport.
+
+## What the 2026-11-08 0542 scout read added - VIP panel re-read, Freebie still claimable, cart dot absent, VIP Store full
+
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0534, about
+  05:40 to 05:50 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0542-queue-run.md` (commit
+  707bcec0d8 on records/2026-11-08) and the appended section of
+  `_records_/2026-11-03/perception-scout/observation.md`. Observe-only;
+  nothing claimed or bought - the Daily Freebie Claim button is
+  green/claimable and was left untouched (this regular's claim); the Secret
+  Mobile Squad Claim buttons were read only. This is a confirmatory re-read
+  - the same unit file already ran as the 0512 unit by ticker-0504 - tracked
+  as GitHub Issue #446 (tooling); the reads below are live second reads.
+- VIP panel (via MY PROFILE, VIP13 tile, which itself carries a red dot):
+  VIP13, "You've logged in 2 days in a row. Collect 80 VIP points
+  tomorrow.", 1,605,970/2,000,000 - unchanged from the 0204, 0454 and 0512
+  reads. Privileges: Crafting Speed 50.00% NEW, Research Speed 20.00% NEW,
+  Mega Mode of Trade Trucks 1 NEW, Food/Iron/Coin Output 25.00% each,
+  Construction Speed 50.00%, March Speed 15.00%, Max Units 5.00%. VIP13
+  Daily Freebie Claim button is GREEN/claimable (puzzle x2, crates x13/x13,
+  gold x13) - still unclaimed since the 0204 read, observed only; the claim
+  belongs to this regular. VIP Exclusive (Epic), Availability 1, $99.99 paid
+  pack, timer 18d 12:24:11 (was 18d 12:55:44 at the 0512 read, stepping down
+  consistently). Untouched.
+- The cart icon at the panel's top right opens the VIP STORE (tabs VIP /
+  Alliance / Honor; VIP tab: Food/Iron/Coin Chest (SR) 100/100 at 40
+  diamonds each, Universal Decor Component 50/50 at 100, 50 Stamina 5/5 at
+  60, Superalloy 100/100 at 6, Advanced Teleporter 3/3, Drone Parts 50/50,
+  Skill Medal 2000/2000 - prices of the bottom row cut off; "Refreshes at
+  00:00 every Monday (server time)", timer 12:18:20; all stocks full,
+  nothing bought this week). At this live read the cart icon carries NO red
+  dot. Explanation, with the inference flagged: the dot the 0204 unit saw
+  most plausibly marked unviewed weekly VIP Store stock and was cleared by
+  that unit's own VIP panel visit (the only intervening event); the Daily
+  Freebie is ruled out as the dot's cause because it is still claimable now
+  with no dot present. The 0512 section's "store-entry indicator" reading is
+  therefore the same signal seen from the other side: the dot marks unviewed
+  stock, not a claim.
+- Unknown items: the gold chest icon below the VIP panel cart icon (function
+  unread, not tapped); the floating circular portrait icon (seen again on
+  the VIP panel and the Store screen, still unexplained).
+- Game left safe: game left on the base screen. No claim, no purchase. No
+  Assemble, no teleport.

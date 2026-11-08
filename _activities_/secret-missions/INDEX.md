@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-08T19:39:51Z
 level: L1
-version: 1.17.0
+version: 1.20.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,9 @@ grounded_in:
   - source: ticker-0234 secret-missions execution record 2026-11-04 0248 queue run (partial, post entered, Claim buttons unresponsive)
   - source: ticker-0534 secret-missions execution record 2026-11-04 0545 queue run (partial, second consecutive Claim-blocker partial, four variants tried, foreground still untested, Issue #171 commented by the executor)
   - source: ticker-0834 secret-missions execution record 2026-11-04 0847 queue run (partial, third consecutive Claim-blocker partial, same four finished tasks still unclaimed, badge still 9, R2 metadata write)
+  - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, white truck badge 8 is the Secret Command Post entry, task rows read, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, white truck is the Secret Command Post entry, Your Tasks badge 17, Ally Tasks badge 5, 0022 mapping corrected); record commit 707bcec0d8 on records/2026-11-08
+  - source: ticker-1049 secret-missions execution record 2026-11-08 1114 queue run (partial, four finished tasks claimed at once with PERFECT stamps, Claim tap worked first try, Mega Deploy and Reward Recovery not reached); record commit 355d3f11c on records/2026-11-08
 ---
 
 
@@ -114,7 +117,7 @@ post screen carries two sibling tabs registered as their own types -
   2026-10-25, in the morning batch and again in the evening. Each
   claimed card is stamped PERFECT in gold, and the Your Tasks badge
   clears.
-- Blocker status, R2 metadata write 2026-11-04 0847 (third consecutive Claim-blocker partial: 0248, 0545, 0847): the Claim buttons have now failed in three consecutive units, so under queue rule R2 as corrected in the 0545 section this blocker is written into the activity metadata here, the entry route changes before any further unit of this type runs, and the streak is named in that day's round summary. Entry-route change owed: attempt a genuine foreground activation (Dock or app-icon activation) before any Claim tap - background taps failed in all three units, and a true foreground tap was never actually achieved (the 0545 title-bar click did not raise the window; click_foreground is unavailable for this game). A fourth identical partial is a process failure reported to the owner.
+- Blocker status, R2 metadata write 2026-11-04 0847 (third consecutive Claim-blocker partial: 0248, 0545, 0847): the Claim buttons have now failed in three consecutive units, so under queue rule R2 as corrected in the 0545 section this blocker is written into the activity metadata here, the entry route changes before any further unit of this type runs, and the streak is named in that day's round summary. Entry-route change owed: attempt a genuine foreground activation (Dock or app-icon activation) before any Claim tap - background taps failed in all three units, and a true foreground tap was never actually achieved (the 0545 title-bar click did not raise the window; click_foreground is unavailable for this game). A fourth identical partial is a process failure reported to the owner. (2026-11-08 1114 update: the blocker is discharged in practice - the Claim tap worked on the first try and collected all four finished tasks at once; see the 1114 section. No genuine foreground activation is recorded in that unit, so the foreground hypothesis stays untested and the session-dependence note stands - buttons responded here as they did in session cc-441 per the 0914 daily-missions unit. The entry-route change this blocker owed is moot for now; if Claim buttons fail again, the R2 sequence restarts from the first partial.)
 - Morning batch claimed - UR Rescue Officer, UR Rescue Missing
   Agent, SSR Search for Missing Refugees, SSR Protect Refugee Camp.
   Rewards included Treasure Map Fragments number 7, 4 and 1, a full
@@ -1062,3 +1065,150 @@ secrets-2026-10-31-2257, status partial).
 - CORRECTION, recorded here, record file untouched (append-only): the 0847 record states this is the "first such secrets blocker in this pass" and that "previous secrets units today closed done". That is contradicted by this profile's own 0248 and 0545 sections, folded from those units' records: 0248 (four SSR claims blocked, 5 background taps) and 0545 (second consecutive Claim-blocker partial, four input variants) both closed partial on this same blocker. The 0847 unit is therefore the THIRD consecutive Claim-blocker partial, not the first. Under queue rule R2 as corrected in the 0545 section, the third consecutive partial writes the blocker into the activity metadata (see "How claiming works"), changes the entry route before any further unit of this type runs, and is named in that day's round summary; a fourth identical partial is a process failure reported to the owner.
 - Not reached in this unit: Mega Deploy of the remaining pending tasks (UR Only off, no Mega Refresh first since today is an Age of Science duel day, not a UR day) and the Reward Recovery check. Because Mega Deploy was not reached, this unit is NOT evidence for Issue #165 (Mega Deploy and Assist buttons) - it is evidence for Issue #171 (green Claim buttons unresponsive), commented there by this run together with the session-dependence note from the 0914 daily-missions unit (buttons responded in session cc-441). No new issue filed: #171 already covers this blocker.
 - Game left on the Secret Command Post screen for the next unit to resume from. Tracker untouched, per the rule for partial units; the next tick re-produces secrets and resumes the claim.
+
+
+## What the 2026-11-08 0512 scout read added - white truck badge 8 is the Secret Command Post entry, at least 8 claimable task rows
+
+- Scout unit scout-midday-scout-mid-2026-11-03-006 by ticker-0504, about
+  05:05-05:12 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0512-queue-run.md` (commit
+  111f7e954 on records/2026-11-08). Observe-only; nothing claimed.
+  The secrets regular owns claims and its units are already queued.
+- The left-column white truck icon with badge 8 opens the Secret
+  Command Post, Secret Mobile Squad page - tap-verified at grounded
+  norm (50,641). The icon is the jeep from the panel header, and the
+  panel's jeep icon carries the same badge 8. This is NOT a truck
+  surface: the icon is the Secret Command Post entry. Correction: the
+  0845 trucks section's "trade-icon grounding mislabel opens Secret
+  Command Post" framing is superseded - the white truck icon
+  genuinely opens the Secret Command Post; there was no mislabel,
+  only the wrong expectation.
+- Secret Mobile Squad, read live about 05:13: "Dispatch heroes to
+  perform secret tasks to defeat enemies, maintain order and get
+  rich rewards." Assist Allies 0/5, Plunder Others 0/5. Tabs: Your
+  Tasks badge 17, Ally Tasks badge 5, Others' Tasks. Recover and
+  Record buttons, Difficulty stars, Normal mode.
+- Your Tasks rows, all with green Claim buttons - observed only, NOT
+  claimed: UR Rescue Test Subject Lv.5; SSR Train Refugees Lv.5; SSR
+  Provide Tech Support to Refugees Lv.5; SSR Search for Missing
+  Refugees Lv.5 (first screen), then after one drag SSR Search for
+  Missing Refugees Lv.5 x2, SR Retrieve Abandoned Gear Lv.5, SR
+  Retrieve Valuable Supplies Lv.5, with a ninth row (Retrieve Raw
+  Materials) cut off at the bottom. At least 8 claimable rows were
+  seen, matching the badge 8: the badge counts completed Secret
+  Mobile Squad tasks awaiting claim.
+- No claim was attempted in this unit, so the standing Claim-button
+  blocker (Issue #171, green Claim buttons unresponsive in the 0248,
+  0545 and 0847 units) is untested by this read. Tabs Hidden
+  Treasures and Ghost Ops not opened in this unit (the treasures and
+  ghost-ops regulars own them).
+- Game left safe: base screen. No claim, no dispatch. No Assemble,
+  no teleport.
+
+## What the 2026-11-08 0542 scout read added - white truck is the Secret Command Post entry, 17 Your Tasks and 5 Ally Tasks claimable
+
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0534, about
+  05:40 to 05:50 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0542-queue-run.md` (commit
+  707bcec0d8 on records/2026-11-08) and the appended section of
+  `_records_/2026-11-03/perception-scout/observation.md`. Observe-only;
+  nothing dispatched, assisted or claimed - the Claim buttons were read
+  only. This is a confirmatory re-read - the same unit file already ran as
+  the 0512 unit by ticker-0504 - tracked as GitHub Issue #446 (tooling);
+  the reads below are live second reads.
+- The white truck icon (5th icon down the left column) opens the SECRET
+  COMMAND POST - Secret Mobile Squad: "Dispatch heroes to perform secret
+  tasks to defeat enemies, maintain order and get rich rewards." Assist
+  Allies 0/5, Plunder Others 0/5; Recover (red dot), Record, Difficulty 3
+  stars; tabs Your Tasks (badge 17), Ally Tasks (badge 5), Others' Tasks.
+  Visible rows, all with green Claim buttons (read only): UR Rescue Test
+  Subject Lv.4; SSR Train Refugees Lv.5; SSR Provide Tech Support to
+  Refugees Lv.5; SSR Search for Missing Refugees Lv.5. Bottom: Mega Refresh,
+  Mega Deploy, "Normal" mode. The dot on the icon is this regular's signal -
+  completed Secret Mobile Squad tasks waiting to be claimed (17 Your Tasks,
+  5 Ally Tasks). The 0512 read of "at least 8 claimable task rows" is
+  extended: 17 + 5 badged rows are waiting.
+- CORRECTION: the 0022 unit mapped the white truck icon to the trucks
+  regular. That mapping is superseded by this live navigation - the white
+  truck opens the Secret Command Post; the blue truck/bus icon opens Trucks.
+  The 0022 record and the 2026-11-03 observation file carry the corrected
+  mapping (appended by the ticker pass).
+- Claim-blocker context, unchanged: the visible rows carry green Claim
+  buttons, but this unit did not tap any - the 0847 R2 metadata write (Claim
+  buttons failed in three consecutive units, 0248/0545/0847) is still open
+  and untested by this read; the 17 + 5 claimable rows are this regular's
+  work and the next secrets unit must attempt the claims from a genuine
+  foreground activation per the R2 entry-route change.
+- Chain scout-mid-2026-11-03 complete: the 3-dot carry was its last open
+  item. No successor enqueued.
+- Game left safe: game left on the base screen. Nothing claimed or
+  dispatched.
+
+## What the 2026-11-08 1114 unit added - four finished tasks claimed at once, PERFECT stamps, Claim tap worked first try, Mega Deploy not reached
+
+- Unit secrets-2026-11-08-0657 by ticker-1049, about 11:07 to 11:15
+  local, status partial - four finished tasks claimed and verified,
+  but Mega Deploy, Reward Recovery and ally assists were not reached
+  within the pass budget, so they carry to the next secrets unit.
+  Evidence in `_records_/2026-11-08/secret-missions/1114-queue-run.md`
+  (commit 355d3f11c on records/2026-11-08). Tracker untouched.
+- Duel posture read first (tools/duel.py --json): Day 7, off day -
+  settlement, no scoring actions - so the duel-day Mega Refresh rule
+  does not apply and normal Mega Deploy is the default.
+- Entry, worked: Secret Command Post opened from the base left-column
+  slot at norm 53,625 and its title verified before any further tap -
+  the same entry the 0847 unit used. Live state read: Assist Allies
+  0/5, Plunder Others 0/5, Your Tasks badge 17, Ally Tasks badge 5.
+  Four finished tasks visible, each with a green Claim button: UR
+  Rescue Test Subject (Lv.5), SSR Train Refugees (Lv.5), SSR Provide
+  Tech Support to Refugees (Lv.5), SSR Search for Missing Refugees
+  (Lv.5). UR Rescue Test Subject reads Lv.5 here against Lv.4 in the
+  0542 scout read - the finished-task list is a live read that
+  rotates as tasks complete (see the 0545 section), so no fixed roster
+  is assumed.
+- Claim: one tap on the first task's Claim button (norm 753,471)
+  opened the CONGRATULATIONS panel listing four helpers who helped
+  claim task rewards (three Mobile Squad Members and [AP3x]YOUGO
+  Apex, timestamps 11-7 18:00 and 11-7 20:43). The Like All button
+  (plain blue, no price tag) was tapped once and disappeared; the
+  panel was then dismissed with the back arrow. Verified on the post
+  screen afterwards: all four tasks now carry gold PERFECT stamps and
+  no Claim button remains; Your Tasks badge reads 8 (down from 17).
+  The claim collected all four finished tasks at once, as the activity
+  metadata states - the claim-all rule confirmed in practice again
+  (see also the 2026-11-02 2127 unit's four claims in one tap).
+- Blocker discharged: this unit's Claim tap worked on the first try -
+  unlike the 2026-11-04 unit, whose Claim buttons were unresponsive
+  to background taps; no R2 pivot was needed. See "How claiming
+  works" for the updated blocker status.
+- Rewards as displayed on the four task cards before claiming (item
+  identities for the two crate icons are unverified - the icons are
+  recorded as shown): UR Rescue Test Subject - orange crate x5, green
+  crate x57, 12.3M Hero EXP, puzzle piece x1, 2.4K blue triangle; SSR
+  Train Refugees - orange crate x1, green crate x57, 2.4M Hero EXP,
+  480, 150; SSR Provide Tech Support to Refugees - orange crate x1,
+  green crate x57, 2.4M Hero EXP, 290, Lv.1 chest x5; SSR Search for
+  Missing Refugees - orange crate x1, green crate x57, 2.4M Hero EXP,
+  puzzle piece x1, 370.
+- Not reached in this unit: Mega Deploy of the remaining pending tasks
+  (UR Only off, every task re-checked by hand) - the pass budget ended
+  first. Your Tasks badge 8 means pending tasks remain for the next
+  secrets unit. Reward Recovery (Recover button) was not checked.
+  Ally assists (0/5, Ally Tasks badge 5) were not used. Plunder
+  Others was not touched (PvP, needs owner instruction). The Hidden
+  Treasures tab carries a red badge 1, seen live on the post screen -
+  the sibling hidden-treasures regular's work, not this unit's, and
+  was not touched.
+- Session note, token-lease race (tooling, commented on Issue #383 by
+  this run): the token lease from the previous unit expired at
+  19:08:38Z during this unit and the re-acquire issued at 19:08:35Z
+  landed 3 seconds before expiry, so it reported the token still held
+  and did not renew; the game input between 19:09 and 19:14 therefore
+  ran with no token held. No other pass could have taken it - the
+  11:04 tick fired while the first lease was still live and skipped,
+  and the next tick is 11:34 - so no collision occurred. The token was
+  re-acquired at 19:14:44Z (held until 19:29:44Z) before the unit
+  closed. The claim still landed, so no game input is in doubt from
+  this race.
+- Game left safe: no diamonds, money or other spending; no Mega
+  Refresh tapped; no alliance diplomacy, no assembly, no teleport.

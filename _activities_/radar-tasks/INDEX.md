@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T01:32:17Z
+modified: 2026-11-08T03:44:20Z
 level: L1
-version: 1.50.0
+version: 1.51.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -53,6 +53,7 @@ grounded_in:
   - source: ticker-1608 radar-tasks execution record 2026-11-07 1616 queue run (failed, Mac device online, window off-Space, one-hundred-twelfth consecutive ticker pass to fail this way, sixth in the new capture-failure form, Issue 282; last_seen 2026-11-07T23:44:36Z about 32 minutes stale; four invokes, zero game screens, four capture attempts failed identically; stack-day unit, duel day 6)
   - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental radar reads during the navigation detour: BASE tap 920,975 opened the radar map, Lv.13, points 237 to 259, stored 19/40 to 0/40, stamina 100 to 35, 19 tasks completed between screenshots with no executor tap; record commit a85cfdafa8 on records/2026-11-07)
   - source: ticker-1655 harvest, survivors and training execution records 2026-11-07 1655 queue runs (capture channel working again on live game screens after the 1020-1608 capture-failure run, Issue 282; record commit 514e333e5b on records/2026-11-07)
+  - source: ticker-1904 radar execution record 2026-11-07 1912 queue run (done, stack empty, dish re-grounded for the windowed layout, capture channel recovered)
 ---
 
 
@@ -2169,3 +2170,14 @@ are still open, per the protocol.
 - Reading discipline for these figures: they are incidental live observations, not a radar-unit close. They are the newest observed radar state (points 259, stored 0/40, stamina 35), but the 1005 close (Lv.13, points 219, stored 0 of 40, stamina 81) stands as the last live read BY A RADAR UNIT, and the next radar unit re-reads the stored count, points and stamina from its own entry and confirms whether the 19 tasks were owner-executed. The detour also shows the BASE button at 920,975 can land on the radar map - a navigation hazard for units leaving the Arms Race page.
 - The blue droplet over the blue truck (norm 150,293) opens the world-map task view ("2 task rewards can be claimed", green Claim All button, no price tag) - radar-task work, not harvest; the harvest unit left the Claim All untouched (see resource-collection 1.36.0). The droplet is a locator, not a loot bubble.
 - Tracker untouched for the radar regular; the next tick re-produces the radar unit, which re-reads the state.
+
+## What the 2026-11-07 1912 unit added - stack empty, dish re-grounded for the windowed layout, capture channel recovered
+
+- Unit radar-2026-11-07-1803 by ticker-1904, about 19:07 to 19:12 local, status done. Evidence in `_records_/2026-11-07/radar-tasks/1912-queue-run.md` (commit 6baaa831b9 on records/2026-11-07). Live duel posture at 19:06 is duel day 7, off day settlement, radar_posture stack per tools/duel.py. First unit of the new trade day (post-19:00 reset) and the first successful live game read after the access-failed streak recorded through ticker-1608.
+- Radar screen entered and verified live: Lv.13, radar points 267, stored tasks 0 of 40, stamina 99 (top right), restore line "12 Radar Task(s) will be restored in 03:22:08". No bottom action bar is shown - no Quick Execute offer and no Claim All offer, consistent with zero stored and zero pending rewards.
+- Stack posture held throughout: nothing executed, nothing claimed, no pin tapped. The stack is empty - there were zero executable ordinary tasks, so the execute step is vacuously complete and no stamina was spent. The next radar restore lands in about 3 hours 22 minutes (12 tasks); the next radar unit will have work again then.
+- Pin inventory (stack rule, untapped): one pin standing on the radar map, southwest near the map edge at about norm 85,738 - a brown circular pin showing what looks like an animal face, no red dot visible, class unknown. No other pins are visible on the map. Left for the next release-day unit to identify under the release handling rule. This is a new unidentified pin type for the "Standing pin types" open question, alongside the orange arrow, purple axe, orange axe and portrait pins.
+- Entry correction, layout-dependent: the first tap at norm 50,690 (estimated from the fresh screenshot) missed the dish and opened a base visitor dialog, "POLAR GUEST - Amazing! This place feels just like home." / "Can I stay here forever?" - advanced twice with dialog taps only and the dialog closed by itself. No reward was offered or claimed; no radar-unrelated work was done. Re-grounded from a magnified crop of the left icon column: the satellite dish icon sits at pixel about 38,757 in the 763x1050 window, i.e. norm 52,721 - slightly left of the 2026-10-29 measured norm 62,727 recorded in this profile. The second tap at norm 52,721 opened the radar on the first try. CORRECTION: the 62,727 point is a fullscreen-layout point and does not transfer to the windowed layout - in the 763x1050 windowed layout the dish grounds at norm 52,721. Units must re-ground the dish from a magnified crop of the left column in the current layout (rule R2), never carry 62,727 across layouts. A missed dish tap can open a visitor dialog; advance it with dialog taps only and take nothing from it.
+- UI note, untouched: a gold icon with a NEW! badge at the top of the radar screen (about norm 295,60). Its function is unknown; it is not part of this unit's stack work. The next radar unit reads it before tapping anything.
+- Capture channel recovered: the device channel that failed the last twelve-plus passes (Issue 282, screen-capture failure, Last War window off-Space) is working again in this pass: the Last War window is on-screen at 763x1050, global (73,30), and screenshots and OCR read normally. Recovery noted in the record and commented on Issue #282 by this pass. The Dock-icon unblock is no longer the only route: the window returned to the active Space on its own (the Mac mini came back online about 10:20 PT after about 50h offline; the pid changed 59735 to 98156, so the app relaunched - the relaunch is inferred from the pid change, not observed). If the capture fails again, the recovery question is what moved the window back, not the login. The 1853 passes record is a second independent live read on the same recovered channel (window 372131, 788x1083, pid 98156); see shop-claims 1.29.0.
+- Returned to the base screen afterwards (power 149,850,353). No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
