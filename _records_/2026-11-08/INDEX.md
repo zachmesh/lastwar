@@ -1849,3 +1849,58 @@ of 2026-10-28.
   16:40Z) is enqueued; measurements added to Issue #450.
   Tracker untouched. Full detail in
   alliance-donations/0808-queue-run.md.
+
+## 08:32 to about 08:44 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0832 run. Own PR 451 MERGED
+  (2026-11-08T15:49:57Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-0734
+  scout 0734 and ticker-0804 donations 0808 into 3 profiles
+  as one commit (fea849f6a7) on new PR 453 (OPEN and
+  MERGEABLE, mergeState CLEAN, at run close):
+  alliance-donations 1.64.0 - CORRECTION: the burst cap is
+  reached after as few as ONE verified donation in a burst
+  (0808 second tap, 00:04:19 timer, count still 1/30 after
+  the timer) - the 0706 section's "after a few rapid
+  donations" is corrected in place; grey-button-plus-badge
+  is NOT landing evidence, second confirmation (Issue
+  #450). One coin donation verified live 2/30 to 1/30;
+  third tap behind a 00:17:33 timer, unverified, "Hold down
+  for easier Continuous donations" tooltip noted (holding
+  may donate continuously, not tried). Count replenished
+  1/30 (07:24) to 2/30 (08:11), twentieth data point,
+  about 1 per 47 minutes (Issue #160); cooldown range
+  corrected to 04:19-19:35 (twelfth reading 00:04:19 is
+  the new low, thirteenth 00:17:33 inside the range);
+  timers grow inside a burst and the timer is a burst
+  cooldown, not a refill timer. Footer 4400 to 4600
+  (delta +200) for one verified donation, not a count
+  proxy (Issue #417). Entry shield at (937,727), R2 route
+  holds; back arrow re-grounded (181,938). Re-read unit
+  donations-2026-11-08-1621 enqueued not-before
+  2026-11-08T16:40:00Z. perception-scout 1.38.0 -
+  CORRECTION: the Rules Achievements sub-tab (10 medals)
+  is NOT the full set - the live Achievements list carries
+  17 medals in tiered families (win 20/25, defend 60/90/120s,
+  heal 6000/10000/16000, plunder 3000/4000/5000, airdrops
+  2/4/6, speedup 200/400/600%); Bloody Valor (win 30)
+  appears only in the Rules list, Frontline (win 20) only
+  in the live list - open discrepancy, unresolved; the
+  +2.4K Achievements lower bound is still unexplained.
+  Winter Battlefield History read live (Highest Win Streak
+  4, Battle Count 15, Victory Count 6, 9 rows in full, tail
+  unread); Achievement Wall (Bears Lair Lv.30; Unyielding
+  Stand x3, Battlefield Medic x1, Stand Ready x5, Assault
+  x2, Rescue x3, Defense x9); Doomsday guardian rotated to
+  [AP3x]Nuna Knuckles 6.5G, Warzone Threat 43; Winter
+  Battlefield windows re-confirmed; Shop Campaign/Season
+  tabs, Doomsday count finish and History tail rows carry
+  to seq 006. event-claims 1.27.0 - Doomsday guardian
+  Nuna Knuckles 6.5G (was Kalia Kalia 3.0G at 0325, 5.2G
+  at 0656), Warzone Threat 43 (was 46 at 0325, 28 at
+  0656), "Threat Neutralized"; Winter Battlefield windows
+  re-confirmed. Issues #450, #160, #423 and #417 commented
+  with the new evidence (issuecomment-6724136365,
+  6724136616, 6724136800, 6724136970); no new Issue filed.
+  Status: done. Full detail in
+  knowledge-organization/0832-run.md.
