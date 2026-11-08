@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-06T02:36:38Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1333 section wording)
   - source: ticker-1025 mail-rewards execution record 2026-11-05 1025 queue run (failed, Mac device offline, forty-second consecutive pass, zero-response form, Issue 284)
   - source: ticker-1804 mail-rewards execution record 2026-11-05 1804 queue run (failed, Mac device offline, fifty-seventh consecutive ticker pass with a Mac device-access blocker, eighteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 10h30m, unchanged since the 1025 pass; seven invokes, zero responses)
+  - source: ticker-1727 mail-rewards execution record 2026-11-07 1740 queue run (done, all six claimable categories checked, nothing claimable; record commit 69997e12a1 on records/2026-11-07)
 ---
 
 
@@ -807,3 +808,12 @@ the next tick re-produces this regular as a fresh unit.
 - Scope correction: see the appended bullet in the Correction 2026-11-05 section above - the Dock-icon unblock holds for the window-stream form only, not for a stalled invoke channel. For the zero-response form the record inference is a Mac-side agent gateway restart before re-probing (unverified), and re-probing is owed only after device.list last_seen refreshes.
 - Reading warning: this failed unit gives zero evidence about the mail state. It must NOT be read as "no mail claimable" - the 0817 close (all dotted categories swept, Event red dots are notices) rests on live reads and stands as the last live read; this unit rests on no read at all.
 - Follow-up: tracker untouched per the failed-unit rule, the regular remains due, and the next tick re-produces it as a fresh unit. The pass stopped after this one unit: a second unit would hit the same dead channel. Sync at pass start produced nothing new (21 due, all already queued; 1 expired). The Zombie Invasion chain stays closed: the event ended 2026-10-30 about 19:00 and no Zombie Invasion tab has been seen in the Events hub since, so no fresh chain was seeded. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-05) is staged in the inbox (units 001 and 002). No diamonds or money spent, no mail deleted, no other activity work done. Fifty-seventh occurrence commented onto Issue #282 by this run.
+
+## What the 2026-11-07 1740 unit added - checked only, all six categories nothing claimable
+
+- Unit mail-2026-11-07-1430 by ticker-1727, about 17:32 to 17:40 local, status done. Evidence in `_records_/2026-11-07/mail-rewards/1740-queue-run.md`. Computer session cc-20, LastWar already running.
+- Claim All pressed in all six claimable categories; every one answered "No rewards available." - Battle Report, Alliance, Event, Season, System, Regular. Nothing was claimed, nothing was deleted (Delete All never pressed).
+- Mail contents read live: Event held the Missile Apex train mails (45m, 9h, 11h, 13h, 15h ago) and a Title Assignment mail - no attachments left to claim. Alliance held the Alliance Exercise mail (2h ago), two New Alliance Assembly Point notices (20h ago), two New Alliance Marker notices (1d ago) and a Zombie Siege Report - no attachments. Regular held Victory reports (Lv.57 Doom Elite, 38m to 8h ago). Battle Report held the RebelNova attack victory (50m ago) and the Lv.16 to Lv.20 Zombie Horde victories (1d ago). Season held Alliance Loot Rewards (2d ago) and Ice Breaking Reports (11d ago). System held President mails, Pack and Event Adjustment, Maintenance Completed and Patch Notes (1d to 3d ago).
+- In-app Purchases was not opened: receipts only, nothing to claim, per the activity metadata. Its red dot is unread receipts.
+- Figures read live: Power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M, stone 25.0M, 922.2K; diamonds 3,702.
+- No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.

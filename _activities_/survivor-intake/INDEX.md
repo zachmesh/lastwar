@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-07T04:38:34Z
-version: 1.33.0
+modified: 2026-11-08T02:42:42Z
+version: 1.35.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-1704 survivor-intake execution record 2026-11-05 1704 queue run (failed, Mac device offline, fifty-fifth consecutive ticker pass with a Mac device-access blocker, sixteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 9h30m, unchanged since the 1025 pass; seven invokes, zero responses)
   - source: ticker-0534 survivor-intake execution record 2026-11-06 0534 queue run (failed, Mac device offline, seventieth consecutive ticker pass with a Mac device-access blocker, thirty-first in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 22h, unchanged since the 0504 pass; nine invokes, zero responses, recovery-device attempts timed out after 25 seconds each)
   - source: ticker-2004 survivor-intake execution record 2026-11-06 2004 queue run (failed, Mac device offline, eighty-ninth consecutive ticker pass with a Mac device-access blocker, fiftieth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 36h40m, unchanged since the ticker-1025 pass; six invokes, zero responses, recovery-device health check timed out after 25 seconds)
+  - source: ticker-1655 survivor-intake execution record 2026-11-07 1655 queue run (partial and unverified, gate re-grounded with the yellow Zombies sign at norm 166,547, no waiting line verified, gate figures are squad troops, 2nd Squad Lv.20 selected by tap; blue-cap portrait circles untapped; white '?' bubble at norm 113,582 seen in the training unit's closing screenshots; record commit 514e333e5b on records/2026-11-07)
 ---
 
 
@@ -939,6 +940,7 @@ Measured on 2026-10-25.
 - Where the Factory building sits on the base, so the Mechanic
   post can be verified after intake.
 - How fast the line refills and whether it has a cap.
+- Refill-question refinement, 2026-11-07 1655 unit: an empty line has two candidate explanations, unmeasured - the owner may have taken survivors in during his own play on the Mac that afternoon (resource totals rose between the pass's own screenshots with no executor input: food 485.5M to 486.5M, iron 808.9M to 810.0M, coin 5.0M to 5.7M), or the line refills slowly. Recorded as an open question, not a conclusion.
 - Whether a recruit can be moved to a different building by hand,
   and what the second David means - names repeat across roles.
 - The three document icon bubbles over the headquarters area
@@ -961,6 +963,8 @@ Measured on 2026-10-25.
 ## Changelog
 
 - 1.30.0 (2026-11-05): 0504 survivors unit folded (failed, thirty-third consecutive screen-capture failure, one cheap probe per mac_capture_probe.py in cc-521, no game screen read, no input dispatched, tracker untouched); probe classification OFF_SCREEN_WINDOW high confidence, View-menu inspect the only missing probe step (stale_observation), Chrome observes normally in the same session, recovery still the owner Dock-icon click or mac_lastwar_front.sh; the 1122 close stands as the last live read, its follow-up still waits on the window returning to the active Space; thirty-third occurrence commented onto Issue #282 by this run.
+
+- 1.35.0 (2026-11-07): channel rules carried (propagation follow-up from the 1732 run): the 1020 Mission Control lesson - open_app Mission Control wedged the channel (geometry_mismatch, input gated on observation_required, second launch restores) and background Ctrl+Right does not switch Spaces; the background-Space-keys half was already in this profile from its own 0134 unit, the open_app wedging is the new part; the Dock-icon unblock stands. (1.31.0 through 1.34.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
 
 - 1.29.0 (2026-11-05): 0134 survivors unit folded (failed, twenty-sixth consecutive screen-capture failure, no game screen read, no input dispatched, tracker untouched); NEW DIAGNOSIS from the on-screen View-menu read - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (menu lists Enter Full Screen), so the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; background Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, list_windows needs the exact app name "LastWar"; CORRECTION - the 1707/2135 "running fullscreen" wording and the 1122 "left in native fullscreen" carry-forward are superseded, and the standing permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); same correction applied to resource-collection, perception-scout, radar-tasks, arms-race and alliance-gifts in this run; evidence commented on Issue #284 by the ticker pass, twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.27.0 and 1.28.0 carry the 1707 and 2135 sections without changelog lines; the numbering is preserved, not rewritten.)
 
@@ -1313,3 +1317,20 @@ Measured on 2026-10-25.
 - Recurrence, not a new failure class: this is the eighty-ninth consecutive ticker pass with a Mac device-access blocker, fiftieth in the worsened zero-response form after ticker-1934 (eighty-eighth, forty-ninth). The blocker is filed as Issue #284 (tooling) alongside the knowledge Issue #282; this pass commented on #284 instead of filing a duplicate, and this run comments the eighty-ninth occurrence onto #282.
 - Reading warning: this failed unit gives zero evidence about the survivor line state. It must NOT be read as "no survivors waiting" - the 1122 close (gate line verified live with 3 question-mark survivors, taps-not-opening-cards blocker) rests on a live read and stands as the last live read; this unit rests on no read at all. The 1122 follow-up (try the question-mark bubble itself, or a long-press on a freshly grounded figure, re-grounded from a fresh screenshot immediately before tapping) is carried forward, not closed - it now waits on the window returning to the active Space first.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this one unit: with the device fully offline, further units would fail identically.
+
+## What the 2026-11-07 1655 unit added - gate re-grounded with the Zombies sign, no waiting line verified, figures are squad troops, partial unverified
+
+- Unit survivors-2026-11-07-1403 by ticker-1655, about 17:05 to 17:08 local, status partial and unverified. Evidence in `_records_/2026-11-07/survivor-intake/1655-queue-run.md` (commit 514e333e5b on records/2026-11-07). Computer session cc-17, LastWar already running on the Mac mini.
+- Front gate located with fresh grounding: panning the base view right and down brought the walled entrance into view at the left-center of the screen, carrying the yellow "Zombies" sign (norm about 166,547). This is the gate the activity metadata names.
+- No waiting survivor line could be verified at the gate. The small figures standing and walking in front of the gate are squad troops, not survivors: one tap on the figure at norm 226,703 selected "2nd Squad, Lv.20" with its tank and move buttons, and no survivor card or dialog opened. No question-mark bubble stands anywhere near the gate in either panned view.
+- The blue-cap portrait circles over the tents (norm about 520,595 / 735,565 / 600,655 in the earlier view) carry no question-mark bubble and were not tapped; they read as posted survivors or tent markers, not a waiting line.
+- No survivor was recruited and no Quick Dispatch ran: with no verified waiting figure there was nothing to take in, and the activity's own R2 instruction is to close unverified with a named re-read unit rather than close on a presumed line state. The named re-read is the next survivors unit (tracker untouched, so the next tick re-produces this regular); it should re-ground the gate and check whether a line has formed since.
+- Open question, recorded not concluded: whether the line is empty because the owner took survivors in during his own play on the Mac this afternoon (resource totals rose between this pass's own screenshots - food 485.5M to 486.5M, iron 808.9M to 810.0M, coin 5.0M to 5.7M - with no input from this executor in between) or because the line refills slowly is unmeasured. (Added to the Open questions list: the refill question now has two candidate explanations.)
+- Handover from the training unit in the same pass: a white "?" speech bubble stands at the left edge near the front gate (norm about 113,582) in the closing screenshots of the training unit - a waiting survivor may have arrived after the survivors unit closed unverified minutes earlier. The next survivors unit checks that point first.
+- Figures read live: food 485.5M at entry, 486.5M at close; iron 808.9M to 810.0M; coin 5.0M to 5.7M; stone 25.0M; 922.2K; power 149,850,353. The rises happened between this executor's own screenshots with no game input from this executor in between, so they are not claimed as this unit's gains. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+- Reading warning: this partial unit gives zero evidence of a recruit - it must NOT be read as "no survivors waiting": the line state was unverified, not measured empty. The 1122 close (gate line verified live with 3 question-mark survivors) stands as the last live read of a verified line.
+- Tracker untouched, per the partial rule; the next tick re-produces the survivors unit.
+
+## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
+
+- Channel rules, now carried in this profile (propagation follow-up from the 1732 run, survivor-intake done - joining alliance-help, alliance-gifts, radar-tasks, arms-race, alliance-donations and shop-claims): Mission Control was not opened as a recovery step, per the 1020 lessons folded into alliance-help 1.27.0 - open_app Mission Control wedged the channel in that pass (first launch opened the overview; every later activate and observe then failed with geometry_mismatch origin_delta 256+, agent_display false, and all key input gated on observation_required; a second launch closed it and restored observation; the overview itself cannot be observed or clicked through this channel). Background Ctrl+Right was not tried: it does not switch Spaces through this channel (in the 1020 pass the key went to the Finder column view instead). The known reliable unblock stands: the owner clicking the LastWar Dock icon once. This profile already records the background-Space-keys half from its own 0134 unit (Ctrl+Right, Ctrl+Left and Ctrl+Up dispatched with no Space change); the new part carried here is the open_app Mission Control wedging (a launch, not a keypress).

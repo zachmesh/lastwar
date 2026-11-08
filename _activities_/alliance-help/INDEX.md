@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-07T18:46:00Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-1224 alliance-help execution record 2026-11-04 1235 queue run (failed, Mac screen-capture channel failure, no game input dispatched, not authorization, not a different-device dialog)
   - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1235 section wording)
   - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (failed, Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z, Last War window 1920x1080 at (0,-360) on an inactive Space, capture failure; Mission Control recovery lesson and Ctrl+Right does not switch Spaces; Issue 282 class, not Issue 284)
+  - source: ticker-1727 alliance-help execution record 2026-11-07 1736 queue run (done, Help All pressed from the base-screen bubble at norm 827,707, header 560/1,000, own requests only; record commit 69997e12a1 on records/2026-11-07)
 ---
 
 
@@ -794,3 +795,13 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - The known reliable unblock stands (2026-11-05 correction): the owner clicking the LastWar Dock icon once brings the window to the active Space. That step needs the owner at the Mac; it was not available in this detached pass. No Dock icon was clicked blind: the icon position is unverified and a blind Dock click could activate the wrong app.
 - Side effects of this pass: none in the game. Outside the game: Mission Control was opened and closed twice (left closed, verified by a working Finder observation afterwards). One Finder column-view selection changed (CUHelper textfield selected by the Ctrl+Right test); no file was opened, renamed or moved. The Mac was left with the Finder helper window observable and Mission Control closed.
 - Follow-up: tracker untouched per the failed-unit rule; the regular remains due and the next tick re-produces it as a fresh unit. If the window is still off-Space at the next pass, the owner clicking the LastWar Dock icon once is the unblock. This is a different failure mode from Issue 284 (Mac offline): the device is online and the window is off-Space. The Mission Control and Ctrl+Right lessons above are channel rules for every activity, not only Help: they are commented onto Issue #282 with this occurrence so the other capture-failure sections can pick them up.
+
+## What the 2026-11-07 1736 unit added - done through the base-screen bubble, header 560/1,000, own requests only
+
+- Unit help-2026-11-07-1430 by ticker-1727, about 17:29 to 17:36 local, status done. Evidence in `_records_/2026-11-07/alliance-help/1736-queue-run.md`. Computer session cc-20, LastWar already running; Chrome frontmost at entry, LastWar selected for background input and the taps landed (no foreground repair needed this unit).
+- Base screen showed the yellow help tile immediately left of the Alliance shield button at the lower right. One tap on its fresh-grounded centre (norm 827,707) pressed Help All: the game answered "Allies are very grateful for your assistance!" and the tile disappeared from the base screen. Against the 0451 grounding (814,688), the tile centre drifts per session as usual - re-ground per session, never reuse a stored point.
+- Verification on the Alliance Help page (Alliance, then Help): "Today's points gained from Alliance Help: 560/1,000" read live. The list held only this account's own requests, all showing reduced-time displays - Defense Training VIII research 10:02:00, Lv.27 Drill Ground 1d 03:17:41, Lv.30 Aircraft Center 3d 23:58:04, Missile Mastery II research 15:00:22 - so no ally request waited after the press. The panel Help All button was left untouched: nothing remained that it could press.
+- Alliance panel at entry read [AP3x] The Apex, Leader Abyss Apex, Power 13,327,864,949, Members 96/100.
+- Figures read live: Power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M, stone 25.0M, 922.2K; stamina 79; diamonds 3,702.
+- No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+- Follow-up: the 1742 gifts unit in this same pass found Help carrying a fresh red dot after this Help All - new requests arrived during the pass, so a later help unit re-checks; the red dot is not read as remaining help from this unit.

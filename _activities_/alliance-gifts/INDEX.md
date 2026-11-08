@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-07T18:46:00Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-0204 alliance-gifts execution record 2026-11-07 0204 queue run (failed, Mac device offline, ninety-fifth consecutive ticker pass to fail this way, fifty-sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 42h35m, unchanged since the ticker-0011 pass; five invokes, zero responses, recovery-device health check timed out after 25 seconds; sync expired five unexecuted 2203-slot units, four delivered as expired, harvest kept as failed by ticker-2257)
   - source: ticker-1003 alliance-gifts execution record 2026-11-07 1003 queue run (failed, Mac device offline, one-hundred-sixth consecutive ticker pass to fail this way, sixty-seventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 50.5h, unchanged since the ticker-0858 pass; six invokes, zero responses, recovery-device health check timed out after 25 seconds; sync expired two unexecuted 0603-slot units)
   - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z; supersedes the gateway-recovery follow-up in the 1003 section below - the offline streak ends at 106, the blocker moves to the off-Space window)
+  - source: ticker-1727 alliance-gifts execution record 2026-11-07 1742 queue run (done, 2 Premium claimed, Gift Level 28 progress 192,237,330 to 192,237,560, Regular none waiting; record commit 69997e12a1 on records/2026-11-07)
 ---
 
 
@@ -810,6 +811,8 @@ one file per execution.
 
 - 1.30.0 (2026-11-07): 0204 gifts unit folded - ninety-fifth consecutive pass with a Mac device-access blocker, fifty-sixth in the worsened zero-response form (Mac mini offline, last_seen 15:36:52Z stale about 42h35m, unchanged since the 0011 pass, five invokes zero responses, no probe recorded since last_seen unrefreshed, recovery-device health check timed out after 25s, matching the 0127/0011/2257 signature - no repair attempt this pass); sync expired five unexecuted 2203-slot units (arms-race, donations, harvest, survivors, training), four delivered here as expired, harvest kept as failed by ticker-2257; the pre-reset zero-sweep pair was already staged by ticker-0127, so this pass staged nothing further; the 0820 done claim (34 Regular plus 2 Premium) and the 1147 entry-failure partial stand as the last live reads; ninety-fifth occurrence commented onto Issue #282 by this run. (1.28.0 and 1.29.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
 
+- 1.33.0 (2026-11-07): dialog-confirmed 2 Premium (Regular 0, every visible row already Claimed, no Claim All button while nothing waits), Gift Level 28 progress 192,237,330 to 192,237,560 of 206,300,000 (plus 230 for 2 Premium, tiers not itemised, no clean decomposition into the known tier values so the attribution stays open as further Issue #183 evidence commented by this run), transient observation failure mid-unit ("target app exited or restarted" - the tap had landed, re-observe recovered with no state lost), Help fresh red dot after the pass's earlier Help All, folded from the 1742 gifts unit. (1.31.0 and 1.32.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -1160,3 +1163,14 @@ one file per execution.
 - Superseded in this profile: the "Follow-up, carried forward" line in the 1003 section (the blocker "needs the Mac gateway back") and the expectation that the next ticker pass fails the same way "until the Mac gateway recovers". The Mac is back online: device.list at about 10:23 local showed it online with last_seen 2026-11-07T18:19:37Z, fresh, both transports healthy. The one-hundred-six-pass offline streak ends with the 1003 pass.
 - What stands: everything else in the 1003 section - the six-invokes-zero-responses measurement, the one-hundred-sixth / sixty-seventh counts, the sync numbers, and the last live reads (0820 done claim, 34 Regular plus 2 Premium; 1147 entry-failure partial). The blocker has moved, not cleared: the game window sits off-Space at (0, -360) and capture still fails (Issue 282 class). The unblock is now the owner clicking the LastWar Dock icon once.
 - No new issue filed: the mode change is commented onto Issues #282 and #284 by this run, and the 1020 record itself is folded into alliance-help 1.27.0 (separate PR).
+
+## What the 2026-11-07 1742 unit added - done, 2 Premium claimed, progress plus 230, Regular none waiting
+
+- Unit gifts-2026-11-07-1430 by ticker-1727, about 17:38 to 17:42 local, status done. Evidence in `_records_/2026-11-07/alliance-gifts/1742-queue-run.md`. Computer session cc-20, LastWar already running. One transient observation failure mid-unit ("target app exited or restarted") - the tap had in fact landed and the Gifts screen was open; re-observing recovered with no state lost.
+- Premium tab: Claim All (badge 2) claimed 2 Premium Alliance Gifts - the CONGRATULATIONS dialog read "A total of 2 Premium Alliance Gifts were claimed this time". Gift Level 28 progress moved 192,237,330 to 192,237,560 of 206,300,000 (plus 230). The Premium red dot cleared.
+- Regular tab: Claim All pressed, no change - every visible row already Claimed (LAMP 1, AMD Commander, Niermeat, Obiwanslostbro and others, all Defeated Doom Elite), the progress figure did not move, and the tab shows no Claim All button while nothing waits. Regular claimed 0.
+- Progress note, Issue #183 evidence commented there by this run (not a closure claim): the plus 230 for 2 Premium gifts is not reconciled against the known tier values (R 50, SR 100, SSR 200, MR 1000) - the two gifts' tiers were not itemised in the record, and no clean decomposition of 230 into two known tier values fits (200+50=250, 100+100=200, 100+50=150), so the window is recorded as measured with the attribution open, consistent with the standing per-gift instability note.
+- Alliance panel at entry: Help had a fresh red dot (new requests arrived after this pass's earlier Help All) - noted for a later help unit, not this unit's work.
+- Figures read live: Gift Level 28, progress 192,237,330 before and 192,237,560 of 206,300,000 after (live reads). Power 149,850,353 at entry; alliance Power 13,330,677,470, Members 96/100.
+- No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+- Transient observation failure, new note: a mid-unit "target app exited or restarted" observation error does not by itself mean the tap failed - re-observe before retrying; here the tap had landed and the Gifts screen was open, and the re-observe recovered with no state lost.
