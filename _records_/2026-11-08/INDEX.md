@@ -3157,3 +3157,19 @@ of 2026-10-28.
   0/2, no bounce, nothing earned, nothing claimed. Tracker
   marked skipped for this slot. Session cc-126. Full
   detail in arms-race/1342-queue-run.md.
+
+## 13:45 to about 13:55 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1345.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): merged knowledge PR
+  464 (profiles fold, squash c9af7fe0) and synced local
+  main 6dad8dbf to c9af7fe0. Records PRs 460 and 457
+  clean against the new main, both awaiting the 15:00
+  batch, verification comments posted on both. Records
+  PRs 351 and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-verified, no
+  repeat notes. Tools PR 425 owner-gated, unchanged,
+  still conflicting on _tools_/INDEX.md. No records
+  branch left PR-less. Status: done.
+  Full detail in pr-integration/1345-run.md.
