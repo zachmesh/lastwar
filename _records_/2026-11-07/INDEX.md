@@ -4069,3 +4069,23 @@ of 2026-10-28.
   scratch (38/38 fixture assertions, exact #418 replay
   flags PR 379; old code reproduces 0 violations). Status:
   done. Full detail in tool-development/2132-run.md.
+
+## 21:45 to about 21:52 — PR-integrator pass
+
+- PR-integrator pass pr-integration-2026-11-07-2145.
+  Non-batch pass: checker plain (tool 1.1.0 at pass
+  start) and merge-aware (tool 1.2.0 after the #420
+  merge) both not due (outside every batch window),
+  next batch 23:00 PT. Merged knowledge PR #421
+  (five-profile fold, ticker-2034/2104 records, Issues
+  416/417/419) and code PR #420 (merge-aware batch
+  audit, Refs #418; 38/38 fixture assertions re-run
+  against the merged code) by squash; local main
+  fast-forwarded to 183054c8. Records PR 398 clean at
+  head 46919c47, awaiting the 23:00 batch; records PRs
+  351 and 301 still conflict on the single action-log
+  file at unchanged heads against the new main,
+  re-checked and noted. No records PR opened (all other
+  records branches contained in main). No owner-gated
+  PR. Status: done. Full detail in
+  pr-integration/2145-run.md.
