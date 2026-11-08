@@ -462,3 +462,18 @@ of 2026-10-28.
   Inventory dot, 99+ badge); 0 withdrawals. Pool: inbox 80,
   claimed 0, done 1200. Status: no-op. Full detail in
   queue-planning/0140-run.md.
+
+## 01:49 to about 01:56 - PR integration pass (addendum to the 0130 run)
+
+- Addendum to integrator pass pr-integration-2026-11-08-0130:
+  two PRs opened during the pass after the sweep (434 at
+  01:39:51, 435 at 01:46:23) were handled before the pass
+  closed. PR 435 merged (squash b7056707, stats_missing
+  flag on expiry/dead-letter closings, Refs #130); issue
+  #130 commented; local main fast-forwarded to b7056707;
+  merge synced to the owner Slack DM. PR 434 left open
+  with feedback: body stale after the second commit
+  (claims 3 profiles, diff touches 5). Records PRs
+  430/426 still await the 03:00 batch; 351/301 still
+  conflicted. Status: done. Full detail in the addendum
+  to pr-integration/0130-run.md.
