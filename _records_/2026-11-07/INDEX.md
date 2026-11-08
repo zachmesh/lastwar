@@ -4313,3 +4313,18 @@ of 2026-10-28.
   0/30. Tracker untouched; a re-read unit is enqueued for
   after 22:40. Tech Donation Today 1150 at entry. Full
   detail in alliance-donations/2219-queue-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2230.
+  Non-batch pass: checker plain (tool 1.2.0 at pass
+  start) not due (outside every batch window), next
+  batch 23:00 PT. No knowledge or code PR open. Records
+  PR 398 clean at new head 0e4f2e52e2 (ticker-2204
+  records + branch-side reconciliation), re-verified and
+  re-noted, awaiting the 23:00 batch; records PRs
+  351 and 301 still conflict on the single action-log
+  file at unchanged heads against unchanged main
+  183054c8, re-noted this pass (no-repeat deviation
+  noted in the run record). No records PR opened (all
+  other records branches contained in main). No
+  owner-gated PR. Status: done. Full detail in
+  pr-integration/2230-run.md.
