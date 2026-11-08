@@ -71,7 +71,7 @@ Usage:
              # units, drop inbox copies already closed in done
              # (issue #213), then enqueue one unit per regular
              # the tracker marks due (idempotent);
-             # without --due-json it calls _tools_/regulars.py todo
+             # without --due-json it calls the sibling regulars.py todo
   queue.py [--root DIR] plan [--hours N]
              # stage the horizon's windows: segment anchors,
              # daily resets, Thursdays, and fixed slots (cadence
@@ -574,7 +574,10 @@ def cmd_sync(args):
         print("warning: live pool holds units for regulars missing "
               f"from the loaded roster: {', '.join(stale_roster)} - "
               "the roster is stale relative to the pool (issue #198)")
-    # 2. load the due list
+    # 2. load the due list - the tracker call gets the local date
+    # explicitly (issue #407) so the subprocess can never resolve
+    # a different day than this pass.
+    now_local = datetime.now(LOCAL_TZ)
     if args.due_json:
         with open(args.due_json, encoding="utf-8") as fh:
             due_doc = json.load(fh)
@@ -582,7 +585,8 @@ def cmd_sync(args):
         tracker = os.path.join(os.path.dirname(
             os.path.abspath(__file__)), "regulars.py")
         out = subprocess.run(
-            [sys.executable, tracker, "todo", "--json"],
+            [sys.executable, tracker, "todo", "--json",
+             "--date", now_local.date().isoformat()],
             capture_output=True, text=True, check=True)
         due_doc = json.loads(out.stdout)
     due_items = [i for i in due_doc.get("items", []) if i.get("due")]
@@ -590,7 +594,6 @@ def cmd_sync(args):
     #    the (regular, window) invariant in _produce_for_window is
     #    what keeps sync and the planner from ever duplicating
     produced, already = [], []
-    now_local = datetime.now(LOCAL_TZ)
     for item in due_items:
         if item.get("cadence") == "fixed-slots":
             # Plan-produced only: the tracker carries no per-slot
@@ -1055,6 +1058,10 @@ def cmd_plan(args):
     # Tracker truth for the current window - a regular the tracker
     # already counts as done for this window gets no phantom unit;
     # future windows are always staged.
+    # The tracker call gets the local date explicitly (issue #407)
+    # so the subprocess can never resolve a different day than
+    # this pass.
+    now_local = datetime.now(LOCAL_TZ)
     if args.tracker_json:
         with open(args.tracker_json, encoding="utf-8") as fh:
             tracker_doc = json.load(fh)
@@ -1062,12 +1069,12 @@ def cmd_plan(args):
         tracker = os.path.join(os.path.dirname(
             os.path.abspath(__file__)), "regulars.py")
         out = subprocess.run(
-            [sys.executable, tracker, "list", "--json"],
+            [sys.executable, tracker, "list", "--json",
+             "--date", now_local.date().isoformat()],
             capture_output=True, text=True, check=True)
         tracker_doc = json.loads(out.stdout)
     due_now = {i["id"]: bool(i.get("due"))
                for i in tracker_doc.get("items", [])}
-    now_local = datetime.now(LOCAL_TZ)
     horizon_end = now_local + timedelta(hours=args.hours)
     planned, present, skipped_done = [], 0, 0
     for item in regs:
