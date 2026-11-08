@@ -1763,3 +1763,23 @@ of 2026-10-28.
   byte-identical). 0 withdrawals. Pool: inbox 81,
   claimed 0, done 1245. Status: done. Full detail in
   queue-planning/0740-run.md.
+
+## 07:45 to about 07:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0745.
+  NON-batch pass per the merge-aware checker (plain due
+  says yes for the 07:00-08:00 window, but PR 439 already
+  merged 07:05 in this window, so this is not a batch
+  pass; next batch point 11:00 PT): no records merges.
+  Merged knowledge PR 451 (profiles fold, 3 files) as
+  8499515022 and tools PR 452 (live-checkout drift check)
+  as 05ca6ff60e; local main fast-forwarded to 05ca6ff60e.
+  Records PR 449 clean at unchanged head 0c0baf9f and
+  records PR 430 clean at new head 02557f057d (planner
+  0740 delivery), both awaiting the 11:00 batch, re-check
+  notes posted. Records PRs 351 and 301 still conflict
+  on the single file _logs_/repo-actions/action-log.jsonl,
+  heads unchanged, re-verified, carried. Tools PR 425
+  owner-gated, unchanged since the 2245 escalation. Merges
+  synced to the Slack DM. Full detail in
+  pr-integration/0745-run.md.
