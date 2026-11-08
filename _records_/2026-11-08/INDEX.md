@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T08:23:23Z
+modified: 2026-11-08T09:17:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -255,3 +255,30 @@ of 2026-10-28.
   No records PR opened by this pass. Merges synced to
   the owner Slack DM (message_ts 1794128109.477329).
   Status: done. Full detail in pr-integration/0045-run.md.
+
+## 01:00 to about 01:17 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0100.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 03:00). Merged knowledge PR
+  433 (alliance-donations 1.55.0, corrects the /tmp
+  worktree-loss deleter to the agent runtime /tmp sweep,
+  Refs #429) as 8c5ebd83; main advanced 96411383 to
+  8c5ebd83 and local main was fast-forwarded to match by
+  direct fetch from the public GitHub remote, the VPS
+  bundle route having failed on a full root disk (100
+  percent, 12M available). Issue #429 commented with
+  the merge. Records PR 430 clean at new head a0135b91
+  and records PR 426 clean at unchanged head 16e187a2e8,
+  both re-verified against new main 8c5ebd83 and
+  re-noted, awaiting the 03:00 batch. Records PRs 351
+  and 301 still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-verified against new main
+  8c5ebd83 and re-noted, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, unchanged
+  since the 2245 escalation, awaiting the owner
+  decision. No records PR opened by this pass. Merges
+  synced to the owner Slack DM (message_ts
+  1794129263.196239). Status: done. Full detail in
+  pr-integration/0100-run.md.
