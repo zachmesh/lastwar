@@ -2441,3 +2441,20 @@ of 2026-10-28.
   and MERGEABLE, mergeState CLEAN, at run close).
   Status: done. Full
   detail in knowledge-organization/1032-run.md.
+## 10:40 to about 10:53 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-1040. Plan staged 12
+  units (22:03/22:30 slots newly inside the horizon) and
+  expired 11 morning units (0603/0630, attempts 0, windows
+  ended 10:03/10:30 local); stale drop
+  donations-2026-11-08-1621 (closed in the ticker-1017
+  worktree, branch copy left for the ticker to reconcile).
+  Pre-reset sweep pair already complete via plan (1630 seq 1,
+  1730 seq 2, chain pre-reset-sweep-2026-11-08, both expiring
+  at the 18:00 reset). Scout diff on the Nov 8 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained red dots 14 on a
+  narrative-fallback basis - observation file byte-identical
+  to the 0940 run). 0 withdrawals. Pool: inbox 80,
+  claimed 0, done 1259. Status: done. Full detail in
+  queue-planning/1040-run.md.
