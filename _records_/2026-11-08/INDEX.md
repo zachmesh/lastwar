@@ -2326,6 +2326,21 @@ of 2026-10-28.
   sync (silent run). Full detail in
   pr-integration/1015-run.md.
 
+- Integrator pass pr-integration-2026-11-08-1030.
+  NON-batch pass per the checker (due: no, outside every
+  batch window; next batch point 11:00 PT): no merges.
+  Records PR 430 clean at new head 8ba412b2, re-check
+  note posted, awaiting the 11:00 batch; records PR 449
+  clean at unchanged head 0c0baf9f, carried with no new
+  note, awaiting the 11:00 batch. Records PRs 351 and 301
+  still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, heads unchanged,
+  carried with no new note. Tools PR 425 owner-gated,
+  conflicting on _tools_/INDEX.md, re-verified against new
+  main 1bd94fa1, note posted, unchanged since the 2245
+  escalation. No Slack DM sync (silent run). Full detail in
+  pr-integration/1030-run.md.
+
 - Ticker pass ticker-1017, donations unit
   donations-2026-11-08-1621, partial. Three coin donations
   landed, each verified by a live count re-read, 4/30 to
