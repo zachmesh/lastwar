@@ -233,3 +233,25 @@ of 2026-10-28.
   station panel) carried to successor
   scout-scout-2026-11-02-008. Tracker untouched. Full
   detail in perception-scout/0048-queue-run.md.
+## 00:45 to about 00:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0045.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 03:00). Merged knowledge PR
+  431 (profiles fold into 6 profiles, Refs #423, #160,
+  #417) as 0e5999cb91 and tools PR 432 (pass_worktree.py,
+  Refs #429) as 9641138344, both squash; main advanced
+  947b2760 to 9641138344 and local main was fast-forwarded
+  to match. Issue #429 commented with the merge. Records
+  PR 430 clean at PR head d1e05c20 (branch since advanced
+  to ea83ea4a), awaiting the 03:00 batch. Records PR 426
+  clean at unchanged head 16e187a2e8, awaiting the 03:00
+  batch. Records PRs 351 and 301 still conflict with main
+  on the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-verified against
+  main 947b2760, carried with the 0000 re-check notes
+  still current. Tools PR 425 owner-gated, unchanged
+  since the 2245 escalation, awaiting the owner decision.
+  No records PR opened by this pass. Merges synced to
+  the owner Slack DM (message_ts 1794128109.477329).
+  Status: done. Full detail in pr-integration/0045-run.md.
