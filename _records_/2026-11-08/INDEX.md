@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T13:44:54Z
+modified: 2026-11-08T13:57:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -1251,3 +1251,26 @@ of 2026-10-28.
   withdrawals. Pool: inbox 79, claimed 1, done 1222.
   Status: done. Full detail in
   queue-planning/0540-run.md.
+
+## 05:45 to about 05:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0545.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 07:00). Knowledge PR 445
+  merged (squash, 64204bd55, 8 profile files). Records PR
+  439 clean at unchanged head 42ef0190 and records PR 430
+  clean at new head 4a872a13 (planner-0540 commit)
+  against new main 64204bd55, both awaiting the 07:00
+  batch; both re-noted (issuecomment-6722315804,
+  issuecomment-6722315975). Records PRs 351 and 301 still
+  conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-verified against main 64204bd55
+  and re-noted (issuecomment-6722316197,
+  issuecomment-6722316377). Tools PR 425 owner-gated,
+  unchanged since the 2245 escalation, awaiting the owner
+  decision. No records PR opened by this pass. Local main
+  synced f2eacffc20 to 64204bd55 via bundle. Merge 445
+  synced to the owner Slack DM after this record was
+  pushed. Status: done. Full detail in
+  pr-integration/0545-run.md.
