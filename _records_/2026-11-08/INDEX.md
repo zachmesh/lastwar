@@ -1727,3 +1727,22 @@ of 2026-10-28.
   check is expected to report DRIFTED on its first live run
   (seven _tools_ merges since the 2032 sync). Status: done.
   Full detail in tool-development/0732-run.md.
+
+- 0734 ticker-0734 scout Winter Battlefield History and
+  Achievement (chain scout-2026-11-03 seq 005, partial,
+  15-min cap): History read (streak 4, 15 battles, 6
+  victories, 9 rows in full); Achievement Wall counts
+  (Unyielding Stand x3, Battlefield Medic x1, Stand
+  Ready x5, Assault x2, Rescue x3, Defense x9); all 17
+  medals in the Achievements list read - the Rules
+  read's 10-item list is the top tier of each family
+  or a partial list. Doomsday main re-confirmed
+  (timer 10:21:10, Guardian now [AP3x]Nuna Knuckles
+  6.5G, Warzone Threat 43). Red dots 4 seen, 4
+  explained, 0 unexplained. Shop Campaign/Season tabs,
+  Doomsday count finish and History tail rows carry to
+  successor seq 006, enqueued. Tracker untouched;
+  observe-only, nothing claimed. Full detail in
+  perception-scout/0734-queue-run.md. Delivery note:
+  uncommitted observation sections from other passes
+  sit in the main checkout working tree, left untouched.
