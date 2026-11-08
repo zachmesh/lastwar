@@ -3173,3 +3173,24 @@ of 2026-10-28.
   still conflicting on _tools_/INDEX.md. No records
   branch left PR-less. Status: done.
   Full detail in pr-integration/1345-run.md.
+## 13:40 to about 13:57 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-1340. Plan staged 3
+  units (training, donations, arms-race 1003 slots) then
+  withdrew them as phantoms: ticker-1317 had already executed
+  the same 10:03 slots (partial, 13:28-13:39 local) and the
+  plan command re-staged them because staging consults
+  neither completion markers nor branch done records (Issue
+  #465 filed, tooling). A concurrent plan invocation at
+  about 13:51 re-staged the same three plus survivors-1003;
+  all withdrawn. Two pre-existing stale inbox copies
+  (radar, survivors 1003, executed by ticker-1249) were also
+  withdrawn before the 14:04 expiry race. Net staged 0.
+  Pre-reset sweep pair already complete via plan (1630 seq 1,
+  1730 seq 2, chain pre-reset-sweep-2026-11-08, both expiring
+  at the 18:00 reset). Scout diff on the Nov 8 observation
+  (564-line remote-tip copy) applied with zero changes
+  (observed 0, actionable 0, enqueued 0, candidates 0,
+  unexplained red dots 14 on a narrative-fallback basis).
+  Pool: inbox 73, claimed 1, done 1266. Status: done.
+  Full detail in queue-planning/1340-run.md.
