@@ -4566,3 +4566,17 @@ of 2026-10-28.
   tool-queue items are all implemented. Nothing to do, nothing
   in flight. Status: no-op. Full detail in
   tool-development/2332-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2330.
+  Non-batch pass: checker _tools_/records_batch.py 1.2.0
+  merge-aware due says no (PR 398 already merged 23:06:31
+  in the 23:00 window, first-pass rule bars a second
+  records merge); plain clock-only due said yes but does
+  not govern. Records PR 426 clean at head ce0b40638,
+  awaiting the 03:00 batch; tools PR 425 owner-gated
+  (policy-file amendment), carried unchanged, awaiting the
+  owner decision; records PRs 351 and 301 still conflict
+  on the single action-log file at unchanged heads against
+  new main 26aff240, re-verified, no new note. No merges,
+  no PRs opened. Status: done. Full detail in
+  pr-integration/2330-run.md.
