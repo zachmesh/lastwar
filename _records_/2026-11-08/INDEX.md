@@ -2505,3 +2505,26 @@ of 2026-10-28.
   (0/5) not reached in the pass budget; Hidden Treasures tab
   carries a red badge 1, left for its own unit. Full detail in
   secret-missions/1114-queue-run.md.
+
+## 11:15 to about 11:35 — PR integration pass, 11:00 batch (records)
+
+- Integrator pass pr-integration-2026-11-08-1115.
+  BATCH pass per the checker (due: yes, window 11:00-12:00
+  PT, first pass at or after the point): merged records
+  PRs 449 (merge commit 794cdd8fb, records 2026-11-07)
+  and 430 (merge commit 462c71b81, records 2026-11-08).
+  PR 430 went clean-conflict-clean inside the window:
+  the 449 merge re-conflicted it on the single file
+  _logs_/repo-actions/action-log.jsonl, the ticker
+  reconciled the branch mid-pass (merge 0841ca73b0a),
+  and it merged in the same batch. Records PRs 351 and
+  301 still conflict on the same single file, heads
+  unchanged, re-verified and re-noted. Tools PR 425
+  owner-gated and conflicting on _tools_/INDEX.md,
+  re-verified against new main 462c71b81, no new note,
+  unchanged since the 2245 escalation. Fresh records PR
+  457 opened for the post-1100-batch appends on
+  records/2026-11-07; a second fresh PR for
+  records/2026-11-08 follows this record. Merges synced
+  to the owner Slack DM. Full detail in
+  pr-integration/1115-run.md.
