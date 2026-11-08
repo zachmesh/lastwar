@@ -1030,3 +1030,22 @@ of 2026-10-28.
   the tool-development 0437 run implemented the
   pool-integrity guard during this run. Status: done.
   Full detail in knowledge-organization/0432-run.md.
+
+## 04:40 to about 04:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0440. Plan staged 1
+  unit (already_present 74, reaped 0, expired 0 - the
+  pre-reset sweep first pass zero-sweep-2026-11-08-1630,
+  16:30 local, chain pre-reset-sweep-2026-11-08 seq 1,
+  expires at the 18:00 reset); final pass (17:30 local)
+  outside the 12-hour horizon, due from a later run with
+  the 17:00 run's `queue.py sweep` as backstop (body
+  step-2 times stale against the roster geometry, PR
+  #267). Scout diff on the Nov 8 observation applied with
+  zero changes (observed 0, actionable 0, enqueued 0,
+  candidates 0, unexplained red dots 14 on a
+  narrative-fallback basis - six sections, seen 44,
+  explained 30; up from 3 at 0340, the ticker-0404 reads
+  appended since). 0 withdrawals. Pool: inbox 80, claimed
+  0, done 1221. Status: done. Full detail in
+  queue-planning/0440-run.md.
