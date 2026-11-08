@@ -2748,3 +2748,43 @@ of 2026-10-28.
   records PR opened. No records branch left PR-less.
   Status: done. Full detail in
   pr-integration/1200-run.md.
+
+## 12:23 to about 12:45 - Ticker pass ticker-1223
+
+- Own PRs first: PR 457 (records 2026-11-07) was conflicting
+  with main on the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), noted by the integrator at the 1130 and 1200
+  passes. Resolved by merging main 1c39fa82 into
+  records/2026-11-07 as 09302a7a0b6: union resolution, base lines
+  1-1097 kept, main's 80 appended lines kept, the branch's 1
+  appended line (1115 merge line for PR 449) kept at the tail;
+  1179 lines, no duplicates, every line parses as JSON. Pushed
+  via the bundle route and verified with git ls-remote; PR 457
+  now MERGEABLE, mergeState CLEAN. Noted on the PR.
+  PR 460 (records 2026-11-08) has no comments and is clean.
+- Ticker sync: reaped 0, expired 0, due 22, produced 0 (all
+  already queued). Zombie Invasion: no seeding - the event ended
+  2026-10-30 about 19:00, chain zombie-2026-10-28 closed at unit
+  066, and the activity metadata says do not seed until a Zombie
+  Invasion tab is seen live in the Events hub again.
+- alliance-donations 1238 unit (1238-queue-run.md): re-read after
+  the 1034 unit. Entry Donation Count 7/30 on Quick Construction
+  (replenished from 1/30), six coin donations verified live 7 to
+  1, stopped at the live-read 1/30 per the changed route. Then
+  the War-tab 1/30 test on Rallied Attack: panel read 2/30 (four
+  minutes after Quick Construction read 1/30 - per-node count
+  vs global count now an open question, see Issue 450), one tap
+  landed 2 to 1, the 1/30 tap greyed the button behind a 00:18:42
+  timer with a Tech EXP step 23.5K to 23.6K; the closing 0/30 is
+  unverified per the hard closing rule. Re-read unit
+  donations-2026-11-08-2038 enqueued (not-before 13:03 local),
+  instructed to read both panels after the timer. Coins spent
+  7,000 (6 x 900 + 2 x 800). Tracker untouched. Status: partial.
+
+- perception-scout 1243 unit (1243-queue-run.md): station
+  panel re-check, tenth no-train confirmation (both
+  preparation signals absent); Wars dot absent with Rally
+  Intel reading "No Alliance Rally currently" - fourth
+  same-day datapoint for the rally link, Issue #212 stays
+  open. Successor scout-scout-2026-11-02-013 enqueued.
+  Status: partial (chain continuation by design).
