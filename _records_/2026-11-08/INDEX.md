@@ -899,3 +899,17 @@ of 2026-10-28.
   rose from 1/30 (about 00:43) to 3/30 (about 04:00).
   Status: partial. Full detail in
   alliance-donations/0406-queue-run.md.
+
+## 04:00 to about 04:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0400.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 07:00): no merges. Records PR
+  430 clean at new head b8db8b20 after the ticker-0334
+  branch-side resolution, commented; records PR 439 clean
+  at unchanged head 42ef0190; records PRs 351 and 301
+  conflicts re-verified on the single action-log file,
+  carried; tools PR 425 owner-gated, unchanged since the
+  2245 escalation, awaiting the owner decision. No records
+  PR opened by this pass. Status: done. Full detail in
+  pr-integration/0400-run.md.
