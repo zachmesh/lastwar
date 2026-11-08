@@ -2067,3 +2067,50 @@ of 2026-10-28.
   _tools_/INDEX.md, unchanged since the 2245 escalation,
   carried with no new note. No Slack DM sync (silent
   run). Full detail in pr-integration/0900-run.md.
+
+## 09:04 to about 09:22 - Queue ticker pass
+
+- Ticker pass ticker-0904. Sync reaped 0 and expired 0;
+  22 regulars due, all already queued, nothing new
+  produced. No zombie chain was seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30 (chain zombie-2026-10-28 closed by unit
+  066) and the Events hub has shown no Zombie Invasion
+  tab since - no fresh chain until that tab is seen
+  live again. Own PRs checked first: records PR 430
+  is open and clean (integrator 0900 re-check), no
+  question addressed to this job, no conflict to
+  resolve. Token held by this pass only.
+- Donations re-read unit donations-2026-11-08-1318
+  (partial, unverified close): Donation Count read live
+  1/30 at entry on Quick Construction (8/10,
+  recommended, 900 coins per donation) - this proves
+  the 0841 unit's tap did NOT land. One coin tap
+  dispatched from 1/30; the button greyed with a
+  00:07:01 timer (much shorter than the 00:16:27 and
+  00:17:33 timers before), badge 303.0K to 303.1K.
+  The timer was waited out inside the unit and the
+  count re-read live afterwards: still 1/30, so this
+  tap did NOT land either - fifth eaten-tap
+  confirmation in the series. A 2-second long-press
+  on the green button (rule R2 changed method)
+  dispatched nothing: long-press is a no-op on this
+  button. Tech Donation Today 4700 at entry
+  (unchanged from the 0841 close, observed only).
+  This is the third consecutive donations unit
+  closing partial on this same 1/30 blocker (1523,
+  1146, this unit); per rule R2 the blocker is named
+  here, the measurements go to Issue 450, and the
+  changed route for the next unit is: do NOT tap from
+  1/30 on Quick Construction again - tap only if the
+  count has replenished above 1, or try the War-tab
+  node. The re-read for this tap is the already-queued
+  donations-2026-11-08-1621, which runs on a later
+  tick; no duplicate re-read enqueued. Tracker
+  untouched. Full detail in
+  alliance-donations/0920-queue-run.md.
+- No diamonds spent, no purchase tapped, no red line
+  crossed. The pass ended after this one unit: the
+  next unit (scout-scout-2026-11-03-006, est 10 min)
+  did not fit the remaining pass budget, and the token
+  was released.
