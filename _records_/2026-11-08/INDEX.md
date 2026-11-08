@@ -2528,3 +2528,30 @@ of 2026-10-28.
   records/2026-11-08 follows this record. Merges synced
   to the owner Slack DM. Full detail in
   pr-integration/1115-run.md.
+
+## 11:36 to about 11:44 — perception scout station re-check, Wars dot live cause (ticker-1131)
+
+- Scout unit scout-scout-2026-11-02-011, partial (by-design
+  chain continuation). Ninth no-train confirmation: both
+  train-preparation signals absent on the base screen at
+  about 11:38 (no train icon in the left column, no
+  "Boarding closes in" banner). Wars dot live cause found:
+  Alliance Wars Rally Intel held two live rallies at about
+  11:42 ([AP3x]SKRyZeRZ on a Lv.150 Doom Walker 350km away,
+  3/5, 00:00:18; [AP3x]Texan Apex on a Lv.60 Doom Elite
+  14km away, 2/5, 00:00:21); by about 11:44 both had launched
+  and Rally Intel reads "No Alliance Rally currently." First
+  positive evidence for Issue #212, commented on the issue;
+  closure belongs to the daily retro. Back-arrow grounding
+  correction: the Wars page arrow grounds at norm (56, 938),
+  not (183, 914). 4 red dots seen in-window, 4 explained, 0
+  unexplained. Successor scout-scout-2026-11-02-012 enqueued.
+  Full detail in perception-scout/1144-queue-run.md and the
+  appended observation file section.
+  Correction: "first positive evidence" overstates it - this
+  is the third same-day positive case for the rally link
+  after the 00:54 and 01:09/01:13 reads, and the dot was
+  also present on rally-less days (2026-11-03), so the rally
+  link is supported but not a full explanation. Whether the
+  panel dot cleared after the two rallies launched was not
+  re-checked in this unit.
