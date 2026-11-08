@@ -3626,3 +3626,31 @@ of 2026-10-28.
   here. Duel-score-1830 and the 19:40 donations re-read fall to the
   next run. Status: done.
   Full detail in knowledge-organization/1932-run.md.
+## 19:41 to about 19:49 — Queue ticker pass, harvest
+
+- Harvest unit harvest-2026-11-07-1803, partial: farmland
+  sweep collected food 476.8M to 478.7M (plus about 1.9M)
+  and coin 5.7M to 6.9M (plus about 1.2M); iron HUD moved
+  800.4M to 802.1M with attribution unverified (possibly
+  furnace overdrive production, no iron bubble tapped).
+  Method: estimated bubble centres failed twice; the
+  visual-grounding centre tap collected (rule R2 pivot).
+  Full-map zero-remaining acceptance not met - iron,
+  stone, EXP, screw and drone bubbles in other areas, the
+  Armed Truck loot and the Season 2 zone remain; the view
+  ends panned down at the Drill Ground. Tracker untouched.
+  Full detail in resource-collection/1941-queue-run.md.
+
+## 19:49 to about 19:52 — Queue ticker pass, survivors
+
+- Survivors unit survivors-2026-11-07-1803, partial: 4
+  survivors verified live at the gate with "?" bubbles
+  (grounded before tapping, per the R2 blocker note);
+  after two taps no "?" bubbles remain and the bubbles
+  show smiley faces - the line reads clear as observed,
+  but no Recruit card opened and no recruit name, role or
+  trait was read, so the intake is unverified. Quick
+  Dispatch was not run - the standing blocker persists
+  and is the first action of the next survivors unit
+  (rule R7). Tracker untouched. Full detail in
+  survivor-intake/2000-queue-run.md.
