@@ -4013,3 +4013,13 @@ of 2026-10-28.
   cadence miss named by the integrator's own record.
   Full detail in _records_/retro/2026-11-07.md and
   retro-review/2105-run.md. Status: done.
+- PR-integrator pass pr-integration-2026-11-07-2115.
+  Non-batch pass: checker plain and merge-aware both not
+  due (outside every batch window), next batch 23:00 PT.
+  No knowledge or code PR open. Records PR 398 clean at
+  new head e3e8d290, awaiting the 23:00 batch; records
+  PRs 351 and 301 still conflict on the single
+  action-log file at unchanged heads against unchanged
+  main, re-noted. No merges, no Slack DM.
+  Status: done. Full detail in
+  pr-integration/2115-run.md.
