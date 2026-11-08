@@ -3195,3 +3195,47 @@ of 2026-10-28.
   748a6d13, the 1745 run record) with one re-check
   comment posted. Status: no-op. Full detail in
   pr-integration/1800-run.md.
+
+## 17:57 to about 18:24 — Queue ticker pass, VIP and the 17:30 zero sweep
+
+- Ticker pass ticker-1734. Sync reaped nothing and produced
+  nothing new - all 17 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30, and no zombie unit sits
+  in inbox or claimed.
+- Own PRs checked first: PR 398 (records/2026-11-07) is
+  MERGEABLE/CLEAN at head 0048e45a against main cef70a43 per
+  the integrator's 1715 non-batch pass; it awaits the 19:00
+  batch merge. No question is addressed to this job. The
+  branch has since advanced (planner-1740 delivery); the
+  integrator re-checks mergeability at the 19:00 batch.
+- VIP unit vip-2026-11-06-1800, partial (17:57-18:12, about
+  15 min): the Daily Freebie was green and claimable from
+  about 18:02, but its Claim button stayed dead through four
+  input variants (two background clicks at a fresh measured
+  centre, a 1-second long-press, a click with the game window
+  frontmost) - the known repeat blocker. The login chest was
+  claimed for 60 VIP points (1,603,930 to 1,603,990, streak
+  2 days, next day 80); the chest stands open and its red dot
+  is gone. The 1727 read of "already collected" did not hold:
+  the chest carried a red dot and paid on the tap. The
+  freebie claim re-enters the pre-reset sweep. Tracker
+  untouched. Full detail in vip-rewards/1812-queue-run.md.
+- Zero sweep zero-sweep-2026-11-07-1730, partial (18:06-18:24,
+  about 15 min): the first 17:30 sweep to run since 2026-11-02
+  (the 11-03 to 11-06 pairs all expired). Walked all 23 ledger
+  lines: 1 at zero (VIP login chest), the rest not at zero or
+  unreadable - food/iron/coin/EXP bubbles standing on the
+  18:20 live base read, trucks and donations counts unread all
+  day with both R3 checkpoints passed unverified, no live
+  passes/events/radar/secrets/treasures read today after the
+  morning outage. Two new priority-1 fix-ups enqueued expiring
+  at the reset: crystal-shop-2026-11-08-0208 (not located, age
+  13 days) and glittering-market-2026-11-08-0208 (not located,
+  age 7 days); every other not-at-zero line already had an
+  eligible unit in inbox. The 18:30 final sweep re-walks the
+  list. Full detail in daily-activities/1824-queue-run.md.
+- Handoff to the next tick: the 18:30 final sweep (unit 002)
+  and the inbox fix-ups must run before the 19:00 reset; the
+  VIP freebie is still unclaimed and the trucks/donations
+  quotas are still unverified.
