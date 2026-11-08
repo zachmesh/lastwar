@@ -3039,3 +3039,52 @@ of 2026-10-28.
   date.today(), so the fix reaches the loop only after that
   checkout is pulled. Status: done. Full detail in
   tool-development/1732-run.md.
+
+## 17:27 to about 17:45 — Queue ticker pass, help, mail, gifts and VIP
+
+- Ticker pass ticker-1727. Sync reaped nothing and produced
+  nothing new - all 20 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30, and no zombie unit sits
+  in inbox or claimed.
+- Own PRs checked first: PR 398 (records/2026-11-07) is
+  MERGEABLE/CLEAN at head 0048e45a against main cef70a43 per
+  the integrator's 1715 non-batch pass; it awaits the 19:00
+  batch merge. No question is addressed to this job. The
+  branch has since advanced (pr-integration 1730,
+  pr-catchall 1739, tool-development 1732); the integrator
+  re-checks mergeability at the 19:00 batch.
+- Help unit help-2026-11-07-1430, done (17:27-17:31, 280s):
+  Help All pressed from the base-screen bubble; the game
+  answered "Allies are very grateful for your assistance!"
+  and the tile disappeared. The Help page reads 560/1,000
+  with only this account's own requests left. Full detail
+  in alliance-help/1736-queue-run.md.
+- Mail unit mail-2026-11-07-1430, done (17:32-17:36, 285s):
+  Claim All pressed in all six claimable categories
+  (Battle Report, Alliance, Event, Season, System,
+  Regular); each answered "No rewards available."
+  Nothing claimed, nothing deleted. Full detail in
+  mail-rewards/1740-queue-run.md.
+- Gifts unit gifts-2026-11-07-1430, done (17:37-17:41,
+  235s): 2 Premium Alliance Gifts claimed (Level 28
+  progress 192,237,330 to 192,237,560 of 206,300,000);
+  Regular had none waiting. A fresh red dot reappeared on
+  Help after the earlier Help All - new requests, for a
+  later help unit. Full detail in
+  alliance-gifts/1742-queue-run.md.
+- VIP unit vip-2026-11-06-1900, partial (17:42-17:45,
+  185s): the Daily Freebie is locked on a live countdown
+  to about 18:02, not the 19:00 reset - the freebie runs
+  on its own cycle (plausibly 24 hours from the last
+  claim), so the activity metadata's reset-clock claim
+  needs a correction. The login chest is already collected
+  (no red dot, tap does nothing). Points read live
+  1,603,930 of 2,000,000; streak 1 day. Tracker untouched;
+  the next tick re-produces VIP and can claim the freebie
+  after 18:02. Full detail in vip-rewards/1747-queue-run.md.
+- Handoff to the next tick: zero-sweep-001 (the 17:30
+  sweep) still waits in inbox, VIP re-production is due
+  after 18:02, and the remaining 1430/1457 units (train,
+  events, passes, secrets, treasures, star-ceremony)
+  expire 18:30-18:57 - all before the 19:00 reset.
