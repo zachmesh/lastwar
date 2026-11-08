@@ -3208,3 +3208,55 @@ of 2026-10-28.
   still conflicting on _tools_/INDEX.md. No records
   branch left PR-less. Status: done.
   Full detail in pr-integration/1400-run.md.
+
+## 13:52 to about 13:57 — Queue ticker pass, radar tasks (stack)
+
+- Ticker pass ticker-1352. Sync reaped 0, expired 0,
+  produced 5 units (radar, survivors, training, donations,
+  arms-race for the 1003 cycle); 3 stale done units dropped.
+  No zombie chain was seeded: the Zombie Invasion event ended
+  at about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066), and no zombie unit
+  sits in inbox or claimed.
+- Open records PRs checked first: PR 460 (records/2026-11-08)
+  is CLEAN per the integrator's 1345 verification against
+  main c9af7fe0; it awaits the 15:00 batch merge. No question
+  is addressed to this job.
+- Radar unit radar-2026-11-08-1003 (partial): radar screen
+  verified live (Lv.13, stored 16 of 40, radar points 267,
+  stamina 92, full restore 11-8 22:32:10 local). Stack posture
+  held - nothing claimed, no pin tapped. BLOCKER: the bottom
+  bar presents only Claim All with 10 rewards pending, no
+  Quick Execute offer, so the 16 stored tasks could not be
+  executed - the Claim All bar lockout from 2026-10-31,
+  carried into the next radar unit's opening read. Six pins
+  inventoried untapped (grey animal/skull, portrait, blue
+  skull, blue helmet, grey handshake, brown animal-face at
+  the southwest edge). Tracker untouched. Full detail in
+  radar-tasks/1355-queue-run.md. Duplicate-unit finding: this
+  unit id had already been executed by ticker-1249 (done,
+  1256 record) and its done file was already on the branch;
+  the local sync re-produced it because the local tree never
+  received the branch's done records - filed as Issue #466
+  (tooling). This pass left the branch head's done unit file
+  intact; the partial lives in the record file only.
+
+- Gifts unit gifts-2026-11-08-1030 (done): both tabs claimed
+  in full - 442 Regular (441 + 1 late arrival) and 31 Premium
+  gifts, Gift Level 28 progress 193,982,860/206,300,000, no
+  red dots remain. One Premium Claim All tap missed (button
+  sits right on that tab, norm 718,926); re-grounded and
+  claimed. Note: the level progress rose by more than this
+  unit's own claims twice (+160, +20) - possibly alliance-wide
+  progress, unverified, recorded as an open question. Tracker
+  marked done. Full detail in
+  alliance-gifts/1406-queue-run.md.
+
+- Help unit help-2026-11-08-1030 (done): Help All pressed,
+  toast "Allies are very grateful for your assistance!",
+  Help red dot cleared on the Alliance panel (verified
+  against the pre-press dot). Anomaly: the header counter
+  still read 0/1,000 before and after, so the number of
+  helps delivered is not claimed; the next help unit should
+  re-read the counter. Tracker marked done. Full detail in
+  alliance-help/1413-queue-run.md.
