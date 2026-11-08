@@ -3435,3 +3435,21 @@ of 2026-10-28.
   narrative-fallback basis). Pool: inbox 79, claimed 0,
   done 1273. Status: done.
   Full detail in queue-planning/1440-run.md.
+
+## 14:45 to about 14:55 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1445.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): two merges. Tools PR
+  467 (sync skips slots closed on the records branch,
+  Refs #466) merged squash 7d41411b; knowledge PR 468
+  (fold 1249/1317/1352 into 7 profiles) opened mid-pass
+  and merged squash c3039595. Records PR 460 clean at
+  new head cfa06a16, 457 clean, both awaiting the 15:00
+  batch, verification comments posted. Records PRs 351
+  and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-check notes
+  posted; tools PR 425 owner-gated, unchanged, still
+  conflicting on _tools_/INDEX.md. No records branch left
+  PR-less. Status: done.
+  Full detail in pr-integration/1445-run.md.
