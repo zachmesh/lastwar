@@ -23,7 +23,16 @@ Usage:
              # the sweep subcommand's correct pair - stage the pair
              # with queue.py sweep instead.
   queue.py [--root DIR] list [--state inbox|claimed|done]
+  queue.py [--root DIR] validate
+             # pool integrity (issue #441): exit 0 when every unit
+             # file is free of conflict markers, duplicate
+             # top-level frontmatter keys, a unit id that does not
+             # match its file name, and a missing unit id; exit 1
+             # listing each problem, for a pre-commit / pre-push
+             # hook and for the sync/next guard below.
   queue.py [--root DIR] next [--budget-minutes 15]
+             # next refuses (exit 1) on a corrupt pool instead of
+             # handing out a unit no file on disk matches.
              # next prefers the unit that clears a recorded
              # screen-blocking overlay (issue #436) over every
              # base-screen unit, and prints nothing while the
@@ -85,10 +94,12 @@ Usage:
              # active-window alert and its once-per-stall dedup
              # stay the summary job clause (issue #129).
   queue.py [--root DIR] sync [--due-json FILE]
-             # one ticker production pass: reap, expire stale
-             # units, drop inbox copies already closed in done
-             # (issue #213), then enqueue one unit per regular
-             # the tracker marks due (idempotent);
+             # one ticker production pass: refuse (exit 1) on a
+             # corrupt pool before reaping or staging anything
+             # (issue #441), then reap, expire stale units, drop
+             # inbox copies already closed in done (issue #213),
+             # then enqueue one unit per regular the tracker marks
+             # due (idempotent);
              # without --due-json it calls the sibling regulars.py todo
   queue.py [--root DIR] plan [--hours N]
              # stage the horizon's windows: segment anchors,
@@ -314,6 +325,94 @@ def pool_root_warning(root):
     return (f"warning: pool root {root} holds no inbox, claimed "
             "or done directory - the counts below describe an "
             "empty or wrong root, not the live pool")
+
+
+CONFLICT_MARKERS = ("<<<<<<<", "=======", ">>>>>>>", "|||||||")
+
+
+def _frontmatter_top_keys(text):
+    """Top-level keys of the frontmatter block, in order.
+
+    Only indent-0 `key:` lines count: nested keys under result /
+    stats live in their own mapping and cannot shadow the unit id,
+    so a repeated nested key is not a pool-integrity problem here.
+    Returns (keys, frontmatter_present).
+    """
+    m = re.match(r"---\n(.*?)\n---\n?(.*)", text, re.S)
+    if not m:
+        return [], False
+    keys = []
+    for line in m.group(1).splitlines():
+        if not line.strip() or line.startswith(" "):
+            continue
+        key, sep, _ = line.partition(":")
+        if sep:
+            keys.append(key.strip())
+    return keys, True
+
+
+def validate_pool(root):
+    """Pool-integrity problems in the unit files, as strings.
+
+    A bad merge resolution that lands on the records branch used to
+    stay silent until next handed out a phantom unit (issue #441):
+    the committed file carried two `unit:` lines and the parser kept
+    the last, so list_units reported a unit no file on disk matched
+    and claim always failed on it. The checks here are the ones that
+    failure mode needs: conflict markers anywhere in the file,
+    duplicate top-level frontmatter keys, a `unit:` id that does not
+    match the file name, and a missing `unit:` key. A clean pool
+    returns [].
+    """
+    problems = []
+    for state in STATES:
+        folder = state_dir(root, state)
+        if not os.path.isdir(folder):
+            continue
+        for name in sorted(os.listdir(folder)):
+            if not name.endswith(".md") or name == TOKEN_NAME:
+                continue
+            path = os.path.join(folder, name)
+            try:
+                with open(path, encoding="utf-8") as fh:
+                    text = fh.read()
+            except OSError as exc:
+                problems.append(f"{state}/{name}: unreadable: {exc}")
+                continue
+            rel = f"{state}/{name}"
+            for lineno, line in enumerate(text.splitlines(), 1):
+                if line.startswith(CONFLICT_MARKERS):
+                    problems.append(
+                        f"{rel}:{lineno}: unresolved conflict marker")
+            keys, has_fm = _frontmatter_top_keys(text)
+            if not has_fm:
+                problems.append(f"{rel}: no frontmatter block")
+                continue
+            seen = set()
+            for key in keys:
+                if key in seen:
+                    problems.append(
+                        f"{rel}: duplicate top-level key {key!r}")
+                seen.add(key)
+            fields, _ = parse_frontmatter(text)
+            unit = fields.get("unit")
+            if not unit:
+                problems.append(f"{rel}: missing unit id")
+            elif f"{unit}.md" != name:
+                problems.append(
+                    f"{rel}: unit id {unit!r} does not match file name")
+    return problems
+
+
+def cmd_validate(args):
+    problems = validate_pool(args.root)
+    for problem in problems:
+        print(problem)
+    if problems:
+        print(f"pool invalid: {len(problems)} problem(s) (issue #441)")
+        return 1
+    print("pool valid")
+    return 0
 
 
 def roster_stale_regulars(root, roster_ids):
@@ -614,6 +713,19 @@ def cmd_sync(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
+    # Pool integrity (issue #441): a bad merge resolution that leaves
+    # conflict markers or a duplicate unit id in a committed unit
+    # file used to stay silent until next handed out a phantom unit
+    # claim could never find. Refuse to reap or stage anything on a
+    # corrupt pool - repair the unit files and re-run.
+    problems = validate_pool(args.root)
+    if problems:
+        for problem in problems:
+            print(problem, file=sys.stderr)
+        print(f"sync refused: pool invalid, {len(problems)} "
+              f"problem(s) - repair the unit files and re-run "
+              f"(issue #441)", file=sys.stderr)
+        return 1
     # 1. reap expired claims, expire stale inbox units, and drop
     # inbox copies of units already closed in done (issue #213)
     reaped = _reap_claimed(args.root)
@@ -1582,6 +1694,19 @@ def _est_minutes(fields):
 
 
 def cmd_next(args):
+    # Pool integrity (issue #441): refuse to hand out a unit from a
+    # corrupt pool - a phantom id claim can never find - instead of
+    # printing it and letting the pass stall at claim time. Sync
+    # runs the same check first in the normal ticker flow; this
+    # covers a direct next call on a pool sync never saw.
+    problems = validate_pool(args.root)
+    if problems:
+        for problem in problems:
+            print(problem, file=sys.stderr)
+        print(f"next refused: pool invalid, {len(problems)} "
+              f"problem(s) - repair the unit files and re-run "
+              f"(issue #441)", file=sys.stderr)
+        return 1
     stamp = now_utc()
     candidates = sorted(
         (f for f in list_units(args.root, "inbox")
@@ -2625,6 +2750,9 @@ def main(argv=None):
     p = sub.add_parser("list")
     p.add_argument("--state", choices=STATES, default="")
     p.set_defaults(fn=cmd_list)
+
+    p = sub.add_parser("validate")
+    p.set_defaults(fn=cmd_validate)
 
     p = sub.add_parser("next")
     p.add_argument("--budget-minutes", type=int, default=UNIT_CAP_MINUTES)
