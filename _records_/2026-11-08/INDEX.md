@@ -1641,3 +1641,50 @@ of 2026-10-28.
   awaiting the owner decision. No records PR opened.
   Status: done. Full detail in
   pr-integration/0730-run.md.
+## 07:32 to about 07:44 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0732 run. Own PR 447 MERGED
+  (2026-11-08T14:47:33Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-0634
+  passes 0634 and events 0656 and ticker-0704 donations
+  0706 into 3 profiles as one commit (4a13f1a838) on new PR
+  451 (OPEN and MERGEABLE, mergeState CLEAN, at run close):
+  shop-claims 1.36.0 - Weekly Pass reset 18:00:00 confirmed
+  a seventh time (Issue #242); Free Supply payout unverified
+  (congrats fragment only); four $4.99 weekly pass cards all
+  unowned, S1 Drone Parts and Coin passes expired since
+  2026-10-25; monthly gift already claimed (13 Days Left,
+  Rewards Left 13); Hot Deals FREE GIFT card taps only swipe
+  the carousel (R2); Season hub re-confirms the 2026-11-01
+  layout (Calculating + Season Photo cards, no Battle/Weekly
+  Pass entries), claim-path follow-up owed; Events tab bar
+  re-read live, no Zombie Invasion tab (Issue #419).
+  event-claims 1.26.0 - Doomsday first-kill tiers Lv.100-140
+  all five claimed (green checks verified; panel totals not
+  claimed as an aggregate); tiers re-arm per event round,
+  re-claim is routine; Frontline Breakthrough Rewards rows
+  0/3, 0/2, 0/1 unclaimable, badge 1 a notice not a claim;
+  Winter Battlefield match windows 11/08 20:00-22:00, 11/09
+  03:00-05:00 and 13:00-15:00; hub sweep incomplete, carries
+  to the next events unit. alliance-donations 1.63.0 -
+  CORRECTION: a greyed coin button with a cooldown timer
+  plus a HUD badge move does NOT prove a donation landed
+  (0706 fourth tap, 00:05:07 timer, badge 302.3K to 302.4K,
+  count still 1/30 after the timer); the 0546 landing
+  method is disproved and corrected in place, the 0546
+  donation itself now rests only on the footer delta 4000
+  to 4050 (Issue #450). Three coin donations verified live
+  4/30 to 1/30; fifth tap behind a 00:19:33 timer,
+  unverified. Count replenished 1/30 to 4/30 in about 80
+  minutes, nineteenth data point (Issue #160); cooldown
+  range corrected to 05:07-19:35 (tenth reading 00:05:07,
+  eleventh 00:19:33). Footer 4050 to 4400 (delta +350)
+  does not reconcile with 50 per donation, not a count
+  proxy (Issue #417). Entry shield at (937,725), R2 route
+  holds. Re-read unit donations-2026-11-08-1523 enqueued
+  not-before 2026-11-08T15:40:00Z. Issues #450, #160,
+  #423, #417, #242 and #419 commented with the new
+  evidence (issuecomment-6723480829, 6723480981,
+  6723481148, 6723481351, 6723481468, 6723481600); no new
+  Issue filed. Status: done. Full detail in
+  knowledge-organization/0732-run.md.
