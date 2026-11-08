@@ -1,17 +1,17 @@
 ---
-unit: scout-midday-scout-mid-2026-11-04-002
+unit: scout-midday-scout-mid-2026-11-04-003
 regular: scout-midday
 activity: perception-scout
 segment:
 priority: 2
-created_at: 2026-11-08T05:47:45Z
+created_at: 2026-11-08T08:15:04Z
 expires_at:
 planned_for:
 not_before:
-window: scout remainder: Community tab, Desert Storm / Level Swap / Wanted Boss re-verification, then scout-store and scout-alliance groups, plus left-column badges and station-panel re-check
+window: scout-store remainder of the 2026-11-04 midday pass: Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall and Hot Sale Packs tabs
 est_minutes: 10
 chain_id: scout-mid-2026-11-04
-chain_seq: 2
+chain_seq: 3
 attempts: 0
 max_attempts: 3
 claimed_by:

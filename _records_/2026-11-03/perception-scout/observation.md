@@ -257,3 +257,14 @@ unit record at `perception-scout/0542-queue-run.md`.
 - Base screen at entry/exit: power 149,850,353; food 478.8M, iron 802.1M, coin 6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2; Season II 7d 19:53:29 falling to 7d 19:51; furnace overdrive toast [22/60] recurring; 99+ badge recurring.
 - Red dot accounting: 2 seen in the store group, 2 explained (Official Event dot and check-in gift both map to shop-claims), 0 unexplained. Unknown items: small chest icon on the Weekly Pass and Super Monthly Pass tabs (meaning unread); the 18:00:00 reset figure; furnace toast [22/60]; 99+ badge; Season II badge 1.
 - Carried unwalked: VIP panel, daily missions panel, and the Weekly Deal tab page - successor in chain scout-mid-2026-11-03.
+
+### Scout-events, 0011 unit (ticker-0004, stale 11-03 post-reset chain seq 2) - late catch-up read 2026-11-08 about 00:06-00:11 local
+
+- Events hub tab roster, read live: 5 tabs - Arms Race, Frontline Breakthrough (badge 1), Winter Battlefield, The Doomsday (badge 22), Community. Desert Storm Battlefield, Level Swap, Wanted Boss (seen 2026-10-30) are gone. No Zombie Invasion tab - event still ended since about the 2026-10-30 19:00 reset.
+- Arms Race: Hero Advancement phase, Contest Segment Lv.29-30, timer 01:49:42 left, score 0, rank #2110, chest 0/2; tiers 2,000/4,000/12,000 (chests 2,360/4,800/11,800 red gems); paths: 1 Hero Recruitment +400, 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds +30 (paid, red-lined).
+- Frontline Breakthrough: timer 17:42:00, Saving Soldiers 64%, reward row red gem x100 / gold bar x10 / blue crate x18 / gold coins x18 / blue crate x3 / gold coins x3; Challenge button red dot (the badge 1 - one attempt available, events regular); Reward panel unopened.
+- Winter Battlefield 5v5: starting soon, countdown 17:51:09, windows 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00, Base Lv.15+ matchmaking, Match greyed; Rewards/Rules/Shop/History/Achievement unopened.
+- The Doomsday: timer 17:52:15; Warzone Guardian [CTR1]초리vv Total Damage 2.8G; Alliance Threat (1) / Warzone Threat (79); Lv.200 Doom Walker (420,819) timer 02:52:34; Rewards button red dot (the badge 22 - composition unread, panel unopened).
+- Community: 200 Diamonds visit bonus; 500 Diamonds Discord-link reward already Claimed; Facebook/Discord/X/Reddit links; no red dot.
+- Red dot accounting: 4 seen, 4 explained, 0 unexplained in the events group. Unknown items: Doomsday badge-22 composition; Frontline timer 17:42:00 meaning (about 10 minutes shorter than the Doomsday/Winter countdowns); Winter sub-pages; Frontline Reward panel; furnace toast [22/60]; 99+ badge.
+- Carried unwalked: Doomsday Rewards panel, Frontline Reward panel, Winter Battlefield sub-pages - successor seq 003 of chain scout-2026-11-03.

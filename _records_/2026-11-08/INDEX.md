@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T08:05:00Z
+modified: 2026-11-08T08:23:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, no merges; records PR 426 clean at new head 16e187a2e8 awaiting the 0300 batch, records PRs 351 and 301 still conflict on the single action-log file at unchanged heads, re-verified and re-noted; tools PR 425 owner-gated, unchanged since the 2245 escalation, awaiting the owner decision; records/2026-11-08 branch created from main with the 0000 run record
+description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
 status: unverified
 ---
 
@@ -31,3 +31,48 @@ of 2026-10-28.
   created from main with this run record as its first
   commit. Status: done. Full detail in
   pr-integration/0000-run.md.
+
+## 00:04 to about 00:12 — Queue ticker pass, perception scout (events group)
+
+- Ticker pass ticker-0004. Sync reaped nothing and produced
+  nothing new - all 22 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066), and no zombie unit
+  sits in inbox or claimed.
+- Open records PRs checked first: PR 426 (records/2026-11-07)
+  is CLEAN at head 16e187a2e8 against main 947b2760 per the
+  integrator's 0000 pass; it awaits the 03:00 batch merge. No
+  question is addressed to this job. PRs 301 and 351 (older
+  records days) still open and belong to the integrator.
+- Scout unit scout-scout-2026-11-03-002, partial: the
+  scout-events group of the stale 2026-11-03 post-reset pass.
+  All five Events hub tabs walked live - Arms Race (Hero
+  Advancement phase, score 0, 01:49:42 left), Frontline
+  Breakthrough (Saving Soldiers 64%, Challenge red dot),
+  Winter Battlefield (starting soon, next window 11/08
+  20:00-22:00), The Doomsday (Rewards red dot, tab badge 22),
+  Community (500 Diamonds reward already Claimed). No Zombie
+  Invasion tab - the event is still absent. Red dots: 4 seen,
+  4 explained, 0 unexplained. Remainder (Doomsday Rewards
+  count, Frontline Reward panel, Winter sub-pages) carried to
+  successor seq 003 of chain scout-2026-11-03. Tracker
+  untouched. Full detail in perception-scout/0011-queue-run.md.
+
+## 00:13 to about 00:22 — Queue ticker pass, perception scout (midday remainder)
+
+- Scout unit scout-midday-scout-mid-2026-11-04-002, partial:
+  the remainder of the stale 2026-11-04 midday pass. Community
+  tab and the Desert Storm / Level Swap / Wanted Boss
+  re-verification are answered by the fresher live read of
+  this pass's first unit (all three tabs ended); left-column
+  badges read live (hammer, radar and truck dots, all mapped);
+  station-panel re-check: no train preparing, fourth
+  consecutive confirmation, check stopped at the two signals
+  per the hardened route; store group half walked (Official
+  Event and Weekly Deal tabs - the Weekly Deal page closes
+  the item the 2209 unit carried). Red dots: 11 seen, 11
+  explained, 0 unexplained. Remainder (five store tabs)
+  carried to successor seq 003 of chain
+  scout-mid-2026-11-04. Tracker untouched. Full detail in
+  perception-scout/0022-queue-run.md.

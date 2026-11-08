@@ -150,3 +150,12 @@ Full unit record at `perception-scout/0919-queue-run.md`.
 - No Zombie Invasion tab. Tabs seen: Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday, Community. Desert Storm Battlefield, Level Swap, Wanted Boss not re-verified in this scroll.
 - Red dot accounting: 6 seen, 5 explained, 0 unexplained. Unknown items: what The Doomsday badge 22 counts; the full President banner text; the furnace overdrive toast [22/60].
 - Carried unwalked: Community tab, Desert Storm / Level Swap / Wanted Boss re-verification, scout-store and scout-alliance groups, the two left-column badges, the station-panel re-check.
+
+### Scout remainder, 0022 unit (ticker-0004, stale 11-04 midday chain seq 2) - late catch-up read 2026-11-08 about 00:13-00:22 local
+
+- Community tab and tab re-verification answered by this pass's first unit (0011, 00:06-00:11 local): Community 500 Diamonds Discord-link reward already Claimed, no dot; Events hub roster 5 tabs (Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday, Community); Desert Storm Battlefield, Level Swap, Wanted Boss all ended.
+- Left-column badges (base screen, live): hammer 2/4 red dot (construction-queue signal, exact trigger unread, no owning regular in the queue), radar red dot (radar regular), white truck red dot (trucks regular); flask 2/2, green face 6.5C, wrench, yellow device icon with red dot.
+- Station-panel re-check: both preparation signals absent (no train icon in the left column, no "Boarding closes in" banner) - fourth consecutive confirmation, no train preparing; check stopped at the signals per the hardened route (alliance-train 1.6.0).
+- Store group (partial): Official Event tab (red dot - check-in gift, shop-claims); Weekly Deal tab 2026-11-2 to 2026-11-8 23:59:59, three paid packs observed only (Valor Badge $99.99, Base Upgrade $19.99, UR Set $49.99, each 1 purchase available) - closes the Weekly Deal page item carried from the 2209 unit.
+- Red dot accounting: 11 seen, 11 explained, 0 unexplained in the surfaces walked. Unknown items: hammer dot's exact trigger and ownerless routing; full President banner text ("Important: President Haw..." cut off); furnace toast [22/60]; 99+ badge; Season II badge 1.
+- Carried unwalked: Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall and Hot Sale Packs tabs - successor seq 003 of chain scout-mid-2026-11-04.
