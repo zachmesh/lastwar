@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-07T05:05:00Z
-version: 1.7.0
+modified: 2026-11-08T05:00:00Z
+version: 1.8.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -310,3 +310,14 @@ None yet.
 - OD-20261101-03: age 5 days. The pr-catchall runs keep noting issue #154 as awaiting the Season Photo decision; the 200 red diamonds stay unclaimed.
 - OD-20261105-01: age 1 day. The 1940 planner run re-verified the comment count (3, unchanged); PR #337 implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
 - No other new owner-decision item from the Nov 6 window: no skipped-needs-owner outcome on Nov 6 in either pool, and no owner-gated PR escalated by the integrator. All six older items are open longer than 48 hours and are named in the Nov 6 retro chat report and Slack sync until decided.
+
+## 2026-11-07 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 7 days. NEW skipped-needs-owner on Nov 7 (arms-race 1403, Base Building, tier-3 gap 30,000, no path inside red lines - record _records_/2026-11-07/arms-race/1633-queue-run.md); the Drone Boost phase read at 19:23 is a first-unit-in-phase read under R4, not a skip. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 7 days, event-bound. Unaddressed a seventh day: no Nov 7 events record mentions the Day 07 tile or a decoration choice, and no Nov 7 events unit executed at all. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 7 days. Nov 7 survivors units (4 expired, 2 partial) keep the close discipline, Quick Dispatch still never ran; consecutive non-done run now 36 - but the 1803 unit verified and cleared a 4-figure gate line (target 4 of 4, identities unread). Decision unchanged.
+- OD-20261101-01: age 6 days, unaddressed.
+- OD-20261101-02: age 6 days, unaddressed.
+- OD-20261101-03: age 6 days. The pr-catchall runs keep noting issue #154 as awaiting the Season Photo decision; the 200 red diamonds stay unclaimed.
+- OD-20261105-01: age 2 days. New evidence: the 2300 window Nov 6 saw two records merges (PR 374 at 23:02 and PR 379 at 23:49), the second named a cadence miss by the integrator's own 2345 run; the tool's window-membership audit reports 0 violations, so the audit cannot see a second-merge-in-window. PR #337 implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- No other new owner-decision item from the Nov 7 window: no new skipped-needs-owner type on Nov 7 (the arms skip is the same OD-20261031-01 pattern), and no owner-gated PR escalated by the integrator. All seven items are open longer than 48 hours and are named in the Nov 7 retro chat report and Slack sync until decided.

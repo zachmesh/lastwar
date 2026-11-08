@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-05T03:34:11Z
+modified: 2026-11-08T16:37:41Z
 level: L1
-version: 1.23.0
+version: 1.27.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,10 @@ grounded_in:
   - source: ticker-0504 event-claims execution record 2026-11-04 0519 queue run (done, full hub sweep, 0 claims, Arms Race phase ends inside the next hour, no Zombie Invasion tab)
   - source: ticker-0834 event-claims execution record 2026-11-04 0843 queue run (done, full hub sweep, 0 claims, Arms Race now Base Building phase, no Zombie tab)
   - source: ticker-1834 event-claims execution record 2026-11-04 1834 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirteenth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-0004 perception-scout execution record 2026-11-08 0011 queue run (partial, events group walked live, Frontline badge 1 is a Challenge attempt, Doomsday badge 22 is claimable Rewards, Winter Battlefield starting soon, Hero Advancement phase live; record commit e6192726d1 on records/2026-11-08)
+  - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
+  - source: ticker-0634 event-claims execution record 2026-11-08 0656 queue run (partial, Doomsday first-kill tiers Lv.100-140 claimed, Frontline rewards unclaimable); record commit 9669d391ea on records/2026-11-08
+  - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live; Doomsday guardian rotated to Nuna Knuckles 6.5G, Warzone Threat 43); record commit 8dcbdf92b9 on records/2026-11-08
 ---
 
 
@@ -858,3 +862,204 @@ that drag is the sweep-completeness check, not wasted motion.
 - Recurrence, not a new failure class: this is the thirteenth consecutive ticker pass to fail on this exact blocker, per GitHub Issue #284 (tooling), whose latest comment before this pass was ticker-1804 (gifts unit). This pass commented on #284 instead of filing a duplicate, and this run comments the thirteenth and fourteenth occurrences onto the knowledge Issue #282.
 - Reading warning: this failed unit gives zero evidence about the event claim state. It must NOT be read as "nothing claimable" - the 0843 close (full hub sweep, Arms Race now Base Building phase, 0 claims) rests on a live read and stands as the last live read; this unit rests on no read at all.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this unit: with no observation channel, a second unit would fail identically and burn the pass budget, so the remaining inbox units (66 at this pass) were left queued.
+
+## What the 2026-11-08 0011 scout read added - events group walked live, Frontline attempt and Doomsday Rewards waiting, Hero Advancement live
+
+- Scout unit scout-scout-2026-11-03-002 by ticker-0004, about 00:06 to 00:11 local, status partial (events group). Evidence in `_records_/2026-11-08/perception-scout/0011-queue-run.md` (commit e6192726d1 on records/2026-11-08). Observe-only; nothing was claimed, fought or tapped on any event page. The Reward panels and Winter Battlefield sub-pages were not opened; they are carried to successor seq 003 of chain scout-2026-11-03.
+- Tabs seen in this walk, in order: Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday, Community (tab bar dragged both ways; left end is Arms Race, right end is Community). Desert Storm Battlefield, Level Swap and Wanted Boss - present on 2026-10-30 (unit 066) - are gone. No Zombie Invasion tab is present in the hub, which re-confirms the zombie chain stays closed (no fresh chain seeded in this pass).
+- Arms Race page: current phase Hero Advancement, Contest Segment Lv.29-30, 01:49:42 left at entry. Score 0, cumulative chest 0/2 (not full, not claimable), point chests at 2,000 / 4,000 / 12,000 all unreached at score 0. No Arms Race grinding was done in this unit; that belongs to the arms-race unit type. Phase state is recorded here for that unit's next run - the phase is live with 1:49 left. Folded into arms-race 1.57.0.
+- Frontline Breakthrough: badge 1, timer 17:42:00, Saving Soldiers 64% (chest ladder on the left: gold, silver, bronze, small). Reward row at the bottom: red gem x100, gold bar x10, blue crate x18, gold coins x18, blue crate x3, gold coins x3. Reward button (gift icon) and Ranking button, top right. Challenge button at the bottom carries a red dot - this is the tab badge 1: one challenge attempt available, left for the events regular. The Reward panel was not opened; carried to the successor. Unknown: the 17:42:00 timer reads about 10 minutes shorter than the Doomsday and Winter countdowns read minutes apart (about 17:51-17:52), so it is a different timer - its meaning is unread.
+- Winter Battlefield 5v5: "Event is starting soon." Countdown 17:51:09 (17:51:32 on first sight, falling). Local Time. Windows: 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00. "Matchmaking is available for Base level 15 and above during the specified times." Match button greyed. Buttons: Rewards, Rules, Shop, History, Achievement - none opened; carried to the successor. No red dot on this page.
+- The Doomsday: badge 22, timer 17:52:15. "During the event, Doom Walkers will more easily attack commanders' bases..." Warzone Guardian: [CTR1]초리vv, Total Damage: 2.8G. Alliance Threat (1) / Warzone Threat (79) toggle. Alliance Threat shows one Lv.200 Doom Walker (420,819) with timer 02:52:34; two further slots greyed ("Zombies"). Ranking and Rewards buttons on the right; Rewards carries a red dot. The tab badge 22 maps to the Rewards signal (items waiting there), but the Rewards panel was not opened, so the composition of the 22 is unread - carried to the successor for the events regular to claim.
+- Community: Discord binding reward reads Claimed (the 500 Diamonds row); 200 Diamonds visit bonus; Facebook, Discord, X and Reddit links. No red dot, nothing claimable.
+- 0 claims in this unit. No priced button, no paid unlock, no Challenge or Go button was tapped. The Doomsday Rewards claim (badge 22) and the Frontline Challenge attempt (badge 1) are this regular's work, carried to the successor read and the next events unit.
+
+## What the 2026-11-08 0608 scout read added - Winter Battlefield Rewards, Rules and Shop Honor tab read live
+
+- Scout unit scout-scout-2026-11-03-004 by ticker-0604, about 06:08 to
+  06:23 local, status partial - the 15-minute unit cap ran out after Rewards,
+  Rules (all 4 tabs) and the Shop Honor tab; History, Achievement, the Shop
+  Campaign/Season tabs and the Doomsday count finish carry to successor seq
+  005. Evidence in `_records_/2026-11-08/perception-scout/0608-queue-run.md`
+  (commit 50389b4b4a on records/2026-11-08). Observe-only; nothing claimed,
+  fought, dispatched, donated, boarded or bought. The Match button was never
+  tapped (greyed - event not started).
+- Winter Battlefield main page: 5v5 event, "Event is starting soon",
+  countdown 11:49:09 at entry falling to 11:41:57 at exit. Matching windows
+  (Local Time): 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00.
+  Matchmaking for Base level 15 and above during the specified times. Match
+  button greyed. Right-side buttons: Rules, Shop, History, Achievement.
+  Left: Rewards chest icon. Info icon top right unread.
+- Rewards (both pages): event currency balance 0 (blue snowflake icon).
+  Cumulative Reward Points chest ladder, two pages: 45,000 (tag 4,100),
+  90,000 (4,100), 135,000 (5,150), 225,000 (5,250), 337,500 (6,200),
+  450,000 (6,500). The tag above each chest carries a red ticket-like icon
+  whose meaning is unread - recorded as a number only, not labelled content
+  or cost. Ways to earn the currency: Complete a battlefield +10.0K;
+  Individual Total Points Ranking +17.5K-52.5K; Get Commendations when the
+  battle settles +21.0K-45.0K; Earn Achievements in the battlefield
+  +2.4K-3.5K. Achieving victory grants x1.5 for this battle.
+- Rules, Rules tab: story - global warming melted the glacier, uncovering a
+  hidden nuclear missile site; plan "Winter Storm" to seize the nuclear
+  silo. Event Overview: 1. Hold Missile Sites or Oil Wells to earn points;
+  first to 30,000 points wins. 2. If time runs out, the side with more
+  points wins. 3. The central Silo opens after some time; capture it for
+  lots of points. 4. Supply boxes airdrop periodically; send troops to
+  capture them for points. 5. On entry, the highest-level units the
+  Commander can train fill the independent Drill Ground; they do not appear
+  in the Base Drill Ground and do not leave the battlefield after the
+  battle. 6. In battles, units do not die; severely wounded units
+  automatically recover for free. Reward Rules: unlock chests by
+  accumulating Reward Points; Reward Points reset with each event. 1.
+  Complete a match for guaranteed Reward Points (requires Total Individual
+  Points of at least 250,000). 2. At settlement, Reward Points by total
+  individual points ranking (same 250,000 gate). 3. At settlement, Reward
+  Points by commendations earned (such as MVP): 3.1 at most one
+  highest-value commendation per match; 3.2 players not among the 5
+  displayed on the settlement screen still receive commendations normally;
+  3.3 past commendations viewable in [History]. 4. Achievements earned per
+  match only, progress does not carry over: 4.1 total achievements earned
+  historically viewable in [History]; 4.2 progress from a previous match
+  cannot be carried to the next match. Event Stages: 1. Event Start - begins
+  for the first time after the server's 7th week, match battles on Saturdays;
+  during off-season periods, opens each Monday. 2. Matching - Headquarters
+  level 15+, several matching times on battle day. 3. Entering - once 10
+  commanders confirm, all automatically enter. 4. Battle Stage -
+  Preparation: safe zone, own side blue, enemy red, safe zone cannot be
+  attacked. Battle: holding Oil Wells earns lots of Battlefield Points,
+  Missile Sites fewer; Missile Sites attack all enemy-held buildings,
+  killing stationed troops. Silo Opens: opens after some time, holding it
+  earns a lot of Battlefield Points. Supply Airdrop: resource packs drop
+  periodically, send troops to collect them for Battlefield Points.
+- Rules, Structures tab (4 entries): Airdrop Supplies - capture to earn
+  1,000 Battlefield Points. Nuclear Silo - opens sometime after the battle
+  starts; capturing grants a large amount of Battlefield Points, a key
+  structure for victory; gain 100 Battlefield Points per second while
+  controlling it. Oil Refinery I - opens when the battle begins; capturing
+  gains a large amount of Battlefield Points, the primary way to produce
+  them; gain 30 Battlefield Points per second while controlling it. Missile
+  Site - automatically targets all enemy-held buildings, dealing damage to
+  their troops; gain 10 Battlefield Points per second while controlling it.
+- Rules, Reward Points tab: Ranking sub-tab (No.1-No.10) - No.1 +52.5K,
+  No.2 +45.5K, No.3 +42.0K, No.4 +38.5K, No.5 +35.0K, No.6 +31.5K, No.7
+  +28.0K, No.8 +24.5K, No.9 +21.0K, No.10 +17.5K, all for Individual Total
+  Points Ranking at that rank (matches the Rewards page range +17.5K-52.5K).
+  Commendations sub-tab (8): War Hero - Total Points over 1,200,000,
+  +33.0K. Elite Defender - Capture Points over 375,000, +30.0K. Elite
+  Vanguard - Kill Points above 750,000, +30.0K. Elite Tactician - Plunder
+  Points over 250,000, +30.0K. Grand General - Total Points over 600,000,
+  +24.0K. Outpost Defender - Capture Points over 187,500, +21.0K. Frontline
+  Hero - Kill Points above 375,000, +21.0K. Swift Tactician - Plunder Points
+  over 125,000, +21.0K. Achievements sub-tab (10): +2.8K - Battlefield Will
+  Medal (win battles 25 times in the battlefield); Stand Ready Medal (any
+  Troop helps defend the same Building for 90s); Logistics Support Medal
+  (successfully collect 4 airdrops); Fire Suppression Medal (plunder 4000
+  building points). +3.5K - Thunder Assault Medal (use a total of 600%
+  March Speedup); Life Guardian Medal (heal a total of 16000 units); Bloody
+  Valor Medal (win battles 30 times in the battlefield); Unyielding Stand
+  Medal (any Troop helps defend the same Building for 120s); Airdrop Hunter
+  Medal (successfully collect 6 airdrops); War Harvest Medal (plunder 5000
+  building points).
+- Rules, Other tab: Participation Conditions - Commanders with bases level
+  15 and above can participate; multiple matching time slots are available
+  on the battle day. Special Rules: 1. In battle, commanders can relocate
+  their Base 1 time every minute. 2. On entry, the highest-level units
+  automatically fill the separate Drill Ground; they do not show up in the
+  base Drill Ground and do not leave the battlefield after the fight. 3.
+  Units do not die; severely wounded units are automatically healed for
+  free. 4. All boosts from tech, VIP, base skins, titles, decorations and
+  drones work in battle. 5. Rallies are disabled, no continuous marching. 6.
+  Each commander can garrison multiple troops in a single building.
+- Shop, STORE Honor tab (12 items, all full stock): balance 101.1K (gold
+  medal currency, not the blue Winter Battlefield currency). Refreshes at
+  00:00 on the 1st of every month (server time). Timer 22d 11:42:23 at read.
+  Gear Blueprint (UR) 50/50 at 10,000; Skill Chip Chest (UR) 1/1 at 50,000;
+  Decoration Chest 1/1 at 50,000; Universal Decor Component 150/150 at 200;
+  UR Hero Universal Shard 10/10 at 3,000; Drone Parts 100/100 at 800;
+  Universal Exclusive Weapon Shard 25/25 at 2,500; Resource Choice Chest
+  (UR) 100/100 at 4,000; Dielectric Ceramic 100/100 at 800; Hero
+  Recruitment Ticket 100/100 at 2,000; 50 Stamina 50/50 at 1,000; Emote:
+  Victory Fest 1/1 at 100,000. Campaign and Season tabs unread; whether the
+  Season tab is the Winter Battlefield currency shop is unverified.
+- Open discrepancies (flagged, not resolved): the Commendations range on
+  the Rewards page reads +21.0K-45.0K, but the highest listed commendation
+  is War Hero +33.0K; 30.0K x 1.5 victory = 45.0K fits the top only if the
+  30.0K tier is the max counted, while 33.0K x 1.5 = 49.5K exceeds it. The
+  Achievements range on the Rewards page reads +2.4K-3.5K, but the lowest
+  listed achievement is +2.8K; no 2.4K achievement was seen in the list. The
+  red ticket-like icon on the Rewards chest tags (4,100 / 5,150 / 5,250 /
+  6,200 / 6,500) is unread.
+- 0 claims in this unit. The Winter Battlefield sub-pages carry no red dots;
+  the Events hub badge 1 sits on Frontline Breakthrough (known: Challenge
+  attempt, from the 0011/0325 reads). The Doomsday count finish (Lv.150 row,
+  Lv.220 rewards, cumulative rows below 30 and above 70, Damage Ranking and
+  Ranking Reward tabs) carries to successor seq 005 with the Winter
+  Battlefield History + Achievement and Shop Campaign/Season tabs.
+- Game left safe: game left on the base screen. Nothing bought. No Assemble,
+  no teleport.
+
+## What the 2026-11-08 0656 events unit added - Doomsday first-kill tiers Lv.100-140 claimed, Frontline rewards unclaimable
+
+- Unit events-2026-11-08-0257 by ticker-0634, about 06:54 to 07:02
+  local, status partial - the Doomsday first-kill claim landed and was
+  verified, but the Events hub sweep is incomplete (Arms Race tab,
+  Winter Battlefield Rewards and the scrolled tabs were not visited), so
+  the next tick re-produces the regular and finishes the sweep. Evidence
+  in `_records_/2026-11-08/event-claims/0656-queue-run.md` (commit
+  9669d391ea on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-92 on the owner Mac mini (same session as
+  the passes unit in this pass). No device-access error, no
+  different-device dialog, no login demanded.
+- Events hub at entry: Winter Battlefield tab (event starting soon,
+  11:18:17 countdown; match windows 11/08 20:00-22:00, 11/09 03:00-05:00
+  and 13:00-15:00). Tab badges: Frontline Breakthrough 1, The Doomsday
+  22. No Zombie Invasion tab in the bar.
+- Frontline Breakthrough: Saving Soldiers 100%, 11:08:02 left. Its
+  Rewards panel lists three Play Frontline Breakthrough rows at 0/3,
+  0/2 and 0/1 - all unclaimable (the mini-game was not played; grinding
+  is outside a claim round). Nothing claimed there; the tab badge 1 is a
+  notice, not a claim. The Challenge attempt the 0011 read attached to
+  the badge is mini-game play, outside a claim round - the badge marks
+  no claimable reward on this tab.
+- The Doomsday: 11:17:20 left, Warzone Guardian [AP3x]Nuna Knuckles
+  Total Damage 5.2G, Alliance Threat (0), Warzone Threat (28), Threat
+  Neutralized. Its Rewards panel showed all five Warzone first-kill
+  tiers with green Claim buttons - Lv.100, Lv.110, Lv.120, Lv.130,
+  Lv.140 Doom Walker, each paying a builder helmet x1, grey chest x2 and
+  brown crate x2. The bottom Claim button was tapped: CONGRATULATIONS
+  shown, and after dismissing it all five rows read green checks - all
+  five tiers claimed. The congratulations panel itemised gold card x20,
+  red diamonds x180, lightning item 50 x11, grey chest x30, brown crate
+  x30, 5m speedup x240 and builder helmets x3 visible; those panel
+  totals do not equal five times the per-row icons, so no aggregate total
+  is claimed here - the verified fact is the five green checks.
+- The tiers re-arm per event round: the same five tiers were claimed on
+  2026-10-25 and are claimable again in this round - a re-claim is
+  routine, not a gap, and no new Issue was filed. Not visited in this
+  unit: the Arms Race tab, the Winter Battlefield Rewards chest, and the
+  tabs past the scroll (Level Swap, Wanted Boss, Community). The next
+  events unit finishes the hub sweep - Arms Race tab (point chests plus
+  the cumulative counter chest), Winter Battlefield Rewards, and the
+  scrolled tabs - and confirms no red dot or bouncing chest remains.
+- Game left safe: base screen. Nothing bought. No Assemble, no teleport.
+
+## What the 2026-11-08 0734 scout unit added - Doomsday guardian rotated to an ally, Warzone Threat 43, Winter Battlefield windows re-confirmed
+
+- Scout unit scout-scout-2026-11-03-005 by ticker-0734, about 07:37 to
+  07:50 local, observe-only. Evidence in
+  `_records_/2026-11-08/perception-scout/0734-queue-run.md` (commit
+  8dcbdf92b9 on records/2026-11-08). The Doomsday count finish (Lv.150
+  row, Lv.220 rewards, cumulative rows, Damage Ranking and Ranking
+  Reward tabs) was NOT finished inside the unit cap and carries to
+  successor seq 006. Tracker untouched.
+- The Doomsday: 10:21:10 left. Warzone Guardian now [AP3x]Nuna Knuckles,
+  Total Damage 6.5G (was [B3WB]Kalia Kalia 3.0G at the 0325 read, 5.2G at
+  the 0656 read - the guardian rotated to an ally with higher damage).
+  Alliance Threat (0), Warzone Threat (43) (was 46 at 0325, 28 at 0656),
+  "Threat Neutralized". The guardian and the threat move between reads;
+  no claim is made from either number.
+- Winter Battlefield main page re-confirmed: 5v5, "Event is starting
+  soon", countdown 10:20:52; windows 11/08 20:00-22:00, 11/09 03:00-05:00
+  and 13:00-15:00 (same as the 0656 read); Match greyed; Base level 15+.
+- Game left safe: nothing claimed, fought, dispatched, donated, boarded
+  or bought in this unit.

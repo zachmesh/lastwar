@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T04:48:01Z
+modified: 2026-11-08T22:44:40Z
 level: L1
-version: 1.34.0
+version: 1.39.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,11 @@ grounded_in:
   - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z; supersedes the gateway-recovery follow-up in the 1003 section below - the offline streak ends at 106, the blocker moves to the off-Space window)
   - source: ticker-1727 alliance-gifts execution record 2026-11-07 1742 queue run (done, 2 Premium claimed, Gift Level 28 progress 192,237,330 to 192,237,560, Regular none waiting; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-2006 alliance-gifts execution record 2026-11-07 2033 queue run (done, 437 Regular and 7 Premium claimed, both tabs verified clear, Gift Level 28 progress 192,787,590 to 192,799,520, per-sweep deltas do not decompose into own claims alone, filed as Issue #183 evidence by the ticker pass; record commit e9bf320c92 on records/2026-11-07)
+  - source: ticker-2134 perception-scout execution record 2026-11-07 2153 queue run (partial, LOOT panel re-checked, unclaimed Lv.1 Doom Elite row, Lv.60 rows gone; record commit fe5a1e7fd3 on records/2026-11-07)
+  - source: ticker-2304 perception-scout execution record 2026-11-07 2311 queue run (partial, LOOT panel re-checked, Lv.1 Doom Elite row still unclaimed after 80+ minutes; record commit 03dc69e0c on records/2026-11-07)
+  - source: ticker-0034 perception-scout execution record 2026-11-08 0048 queue run (partial, Gifts Regular tab read live about 00:57 local, Level 28 progress 193,012,970/206,300,000, Claim All badge 82, four +10 rows none claimed, Premium tab dot seen not opened; record commit 4fd2b88a26 on records/2026-11-08)
+  - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Gifts Level 28 progress and Claim All badges, record commit caa661bab on records/2026-11-08)
+  - source: ticker-1352 alliance-gifts execution record 2026-11-08 1406 queue run (done, 442 Regular and 31 Premium claimed in full, Gift Level 28 progress 193,982,860, progress moves beyond own claims twice, Issue #183 evidence; record commit bf20e1a48 on records/2026-11-08)
 ---
 
 
@@ -1189,3 +1194,127 @@ one file per execution.
 - Final verification: both tabs show no red dot, all visible rows read Claimed, no Claim All button on either tab. Progress closed at 192,799,520 of 206,300,000.
 - Progress readings (Issue #183 evidence, filed there by the ticker pass): entry 192,787,590; after Regular sweep 1 192,791,960 (+4,370); after Premium sweep 192,792,620 (+660); after Regular sweep 2 192,799,520 (+6,900). Total +11,930 during the unit. Own claims were 437 Regular at +10 each (4,370 points) and 7 Premium (visible tiers N +10, SSR +200, R +50, SSR +200, R +50, two below the fold unseen). The sweep deltas do not decompose into own claimed gifts alone: sweep 1 moved +4,370 for 434 gifts (expected +4,340), and sweep 2 moved +6,900 for 3 gifts (expected +30). The bar is alliance-wide, so other members claiming during the unit move it too; the full delta must not be attributed to own claims.
 - Figures read live: Gift Level 28, progress 192,787,590 before and 192,799,520 of 206,300,000 after. Power 149,850,353. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+
+## What the 2026-11-07 2153 scout read added - LOOT panel turned over, one unclaimed Lv.1 Doom Elite row for this regular
+
+- Scout unit scout-midday-scout-mid-2026-11-02-006 by ticker-2134, session cc-54 about 21:48 to 21:53 local, status partial (alliance remainder). Evidence in `_records_/2026-11-07/perception-scout/2153-queue-run.md` (commit fe5a1e7fd3 on records/2026-11-07) and the observation appended to `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; Claim All was observed only and never tapped by the scout.
+- LOOT panel, read live about 21:51 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]Bears Lair; March Queues 3/4 (three squads out - not dispatched by this unit; owner or an earlier regular's marches, not resolved here).
+- Three rows: Row 1 Bears Lair, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 Bears Lair, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is UNCLAIMED - no "Claimed" label.
+- The three Lv.60 Doom Elite rows the 1345 unit read on 2026-11-03 are gone from the panel; the panel turns over as loot arrives and is claimed. The unclaimed Lv.1 Doom Elite row is unclaimed work for this regular (gifts per the 1345 follow-up), not scout work. The gift badge 3 maps to the three rows (two claimed, one unclaimed).
+- Follow-up for the next gifts unit: check the LOOT panel via the world-map gift icon and claim the unclaimed row if it is still present; the row's contents (gold chest x2, red gem 20) are small but the panel turns over, so a stale unclaimed row is a missed claim. No new Issue filed: the row is named here for the owning regular.
+
+## What the 2026-11-07 2311 scout read added - LOOT Lv.1 Doom Elite row still unclaimed after 80+ minutes
+
+- Scout unit scout-midday-scout-mid-2026-11-02-006 by ticker-2304, sessions cc-59 about 23:05 to 23:10 and cc-60 about 23:11 to 23:15 local, status partial (alliance remainder). Evidence in `_records_/2026-11-07/perception-scout/2311-queue-run.md` (commit 03dc69e0c on records/2026-11-07) and the observation appended to `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; Claim All was observed only and never tapped by the scout.
+- LOOT panel, read live about 23:13 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]Bears Lair; March Queues 0/4.
+- Three rows, the same three unit 2153 read at 21:51: Row 1 Bears Lair, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 Bears Lair, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is STILL UNCLAIMED - no "Claimed" label, now unclaimed for 80+ minutes. The gift badge 3 maps to the three rows (two claimed, one unclaimed), confirmed again.
+- Follow-up for the next gifts unit: check the LOOT panel via the world-map gift icon and claim the unclaimed Lv.1 Doom Elite row if it is still present; the row has now sat unclaimed across two scout passes (2153 and 2311) and the panel turns over, so a stale unclaimed row is a missed claim. No new Issue filed: the row is named here for the owning regular.
+
+## What the 2026-11-08 0048 scout read added - Gifts Regular tab, Level 28 progress 193,012,970, Claim All 82 waiting
+
+- Scout unit scout-scout-2026-11-02-006 by ticker-0034, about 00:44 to 00:48 local, status partial (alliance group). Evidence in `_records_/2026-11-08/perception-scout/0048-queue-run.md` (commit 4fd2b88a26 on records/2026-11-08) and the observations in `_records_/2026-11-08/perception-scout/observation.md`. Observe-only; Claim All was observed only and never tapped by the scout.
+- Alliance Gifts screen, Regular tab, read live about 00:57 local: Gift Level 28, progress 193,012,970 / 206,300,000 (was 181,429,280 on 2026-11-02 and 183,423,470 on 2026-11-03). Claimable rows, each +10, Claim buttons observed only, none claimed (the gifts regular owns claims): Alliance Gifts 23:55:03, 나라손 Defeated Doom Elite; Alliance Gifts 23:54:58, MUZIQUE Apex Defeated Doom Elite; Alliance Gifts 23:54:56, 나라손 Defeated Doom Elite; Doom Walker Loot 23:50:44, Nuna Knuckles Defeated Doom Walker; a fifth Alliance Gifts row partially visible below the fold. Claim All badge 82 (was 201 on 2026-11-02, 48 on 2026-11-03).
+- Progress note, Issue #183 evidence: progress rose from 192,799,520 (2033 close, 2026-11-07 20:37) to 193,012,970 with no own claims in between - only scout observation ran in between, so the bar keeps moving alliance-wide, consistent with the standing note that the full delta must not be attributed to own claims. Commented on Issue #183 by this run.
+- Premium tab: red dot seen, tab not opened this unit; its contents are unwalked and carried to the successor.
+- Follow-up for the next gifts unit: Claim All 82 is waiting on the Regular tab (four rows read, a fifth below the fold); re-check Regular after the Premium sweep per the 2033 lesson, since gifts arrive mid-unit. No new Issue filed: the waiting claims are named here for the owning regular.
+
+
+## What the 2026-11-08 0447 scout read added - Level 28 progress 193,203,470, Claim All 130 Regular and 12 Premium
+
+- Scout unit scout-scout-2026-11-02-009 by ticker-0434, about 04:39 to
+  04:47 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0447-queue-run.md` (commit
+  caa661bab on records/2026-11-08) and the appended section of
+  `_records_/2026-11-02/perception-scout/observation.md`. Observe-only;
+  Claim All and every Claim button observed only, none tapped. The
+  gifts regular owns claims.
+- Alliance Gifts screen, read live about 04:42-04:43: Gift Level 28,
+  progress 193,203,470/206,300,000 (was 183,423,470 at the 0136 read,
+  193,012,970 at the 0048 read). "Claim Alliance Gift, and increase
+  Gift Level. Higher the level, better the rewards, and unlock more
+  alliance features."
+- Progress note, Issue #183 evidence: progress rose from 183,423,470
+  (0136) to 193,203,470 with no own claims in between - only scout
+  observation ran in between, so the bar keeps moving alliance-wide,
+  consistent with the standing note that the full delta must not be
+  attributed to own claims. Commented on Issue #183 by this run.
+- Regular tab: banner "Defeat the Doom Elite for a Regular Alliance
+  Gift", Go button not tapped. Doom Walker Loot +10 rows (Krazy Sully
+  Defeated Doom Walker 23:57:19, 23:45:32, 23:45:04; 벌꿀오소리Teemo
+  Defeated Doom Walker 23:42:41). Claim All badge 130 (was 201 at the
+  1801 read, 48 at the 0136 read, 82 at the 0048 read).
+- Premium tab: banner "Buy packs with Alliance Gifts to reward every
+  member a gift.", Go button not tapped. Alliance Gift (R) +50,
+  23:24:56, "Someone purchased Coin Weekly Pass." Alliance Gift (MR)
+  +1000, 21:24:06, "Someone purchased Mega Express Contract."
+  Alliance Gift (R) +50, 20:44:19, "miss direction purchased Advanced
+  Training Pass." Alliance Gift (SSR) +200, 20:43:43, "miss direction
+  purchased Premium Training Pass." A fifth (R) row cut off below the
+  fold. Claim All badge 12. "Hide your name on Gifts" checkbox
+  unchecked, observed only.
+- Both tabs carry red dots; the gifts regular owns all claims.
+- Follow-up for the next gifts unit: Claim All 130 Regular and 12
+  Premium are waiting; re-check Regular after the Premium sweep per
+  the 2033 lesson, since gifts arrive mid-unit. No new Issue filed:
+  the waiting claims are named here for the owning regular.
+
+## What the 2026-11-08 1406 unit added - 442 Regular and 31 Premium claimed in full, progress moves beyond own claims again (Issue #183)
+
+- Unit gifts-2026-11-08-1030 by ticker-1352, about 13:59 to 14:06
+  local, status done - both tabs claimed in full, including gifts
+  that arrived mid-visit. Evidence in
+  `_records_/2026-11-08/alliance-gifts/1406-queue-run.md` (commit
+  bf20e1a48 on records/2026-11-08).
+- Alliance panel entered from the base (Alliance button, right
+  column, red dot present) and Alliance Gifts opened on the first tap
+  (red dot on the entry).
+- Regular tab, Gift Level 28, progress 193,968,120/206,300,000 at
+  entry. Claim All with badge 441 tapped: dialog "A total of 441
+  Regular Alliance Gifts were claimed this time" (rewards shown: coin
+  6.0K x840, red gem 5 x94, coin 600 x1.3K, iron 1.0K x1.1K, 5m
+  speedup x102, iron 10.0K x756, food 10.0K x672, food 1.0K x924).
+  Progress after: 193,972,530 (441 x 10, exact).
+- One new Regular gift arrived during the visit (badge 1) and was
+  claimed with a second Claim All. No dialog count was captured for
+  that sweep; progress after it read 193,972,690, i.e. +160 over the
+  post-first-claim read, 16 gift-equivalents against 1 badged gift -
+  unexplained by this unit's own claims (see the Issue #183 note
+  below).
+- Premium tab (red dot present): Claim All with badge 31. First tap
+  at the Regular tab's Claim All point missed (the Premium button
+  sits right, at norm 718,926, beside the "Hide your name on Gifts"
+  checkbox); re-grounded and tapped at norm 718,926: dialog "A total
+  of 31 Premium Alliance Gifts were claimed this time" (rewards
+  shown: 2.5K badge x4, gold bar x1, 500 badge x3, coin chest x4,
+  purple chest x16, food x20, iron x14, 50 badge x5, 5m speedup x2,
+  steel x80). Progress after: 193,982,840 (+10,150 over
+  193,972,690).
+- One more Regular gift arrived during the Premium claim (toast
+  "Doom Walker Loot received!", red dot on the Regular tab). Switched
+  back and claimed it with Claim All: dialog "A total of 1 Regular
+  Alliance Gifts were claimed this time" (iron 10.0K x28). Progress
+  after: 193,982,860 (+20 for 1 gift, again +10 over the expected
+  +10).
+- Closing read: both tabs show all rows "Claimed", no Claim All
+  button and no red dot on either tab. Returned to the base screen
+  (power 149,850,353). No diamonds, money, speedups or other
+  spending. No alliance diplomacy, no assembly, no teleport.
+- Counter anomaly, new evidence for Issue #183: the progress bar rose
+  by more than this unit's own claimed gifts twice (+160 around the
+  second Regular sweep, +20 around the third). The most likely cause
+  is that the level progress is alliance-wide and other members'
+  claims feed it while this unit works, but that is unverified - it
+  is recorded here as an open question for the activity metadata, not
+  as a count this unit claims. All claimed counts above are
+  dialog-verified; the progress figures are live reads. Commented on
+  Issue #183 by this run.
+- Premium Claim All point note: the 1406 session's grounded Premium
+  Claim All point is norm (718, 926), right of the "Hide your name
+  on Gifts" checkbox; the 0820 unit measured (763, 952). The point
+  drifts per session and framing - re-ground the Premium button
+  fresh per session, never carry either point across sessions; the
+  Regular tab's Claim All point misses on the Premium tab.
+- Result stats: Regular claimed 442 (441 + 1, dialog-verified),
+  Premium claimed 31 (dialog-verified), Gift Level 28, progress
+  193,982,860/206,300,000, both tabs fully claimed, no red dots
+  remain.

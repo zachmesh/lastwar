@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-08T05:32:17Z
+modified: 2026-11-08T22:44:40Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-1655 troop-training execution record 2026-11-07 1655 queue run (partial, Lv.27 T9 x726 and Lv.30 T10 x793 requeued at cap, 9.6M food plus 9.6M iron, two upper-right barracks unchecked, Drill Ground Full not seen; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-2006 troop-training execution record 2026-11-07 2026 queue run (partial, Lv.27 verified busy 1d 07:03:33 by panel read, Lv.30 busy by timer bubble only, two upper-right barracks unlocated, south and east pans ruled out; record commit e9bf320c92 on records/2026-11-07)
   - source: ticker-2034 troop-training execution record 2026-11-07 2050 queue run (partial, Lv.30 busy T10 x793 1d 13:41:04, Lv.24 idle but blocked by Drill Ground Full toast, Drill Ground Lv.25 read live Unit Count +7812 Officers Joe/Marcus/Karen/John Quick Dispatch present not tapped, tent-body taps missed twice, no_change_observed flag unreliable; record commit 7a4a104930 on records/2026-11-07)
+  - source: ticker-1317 troop-training execution record 2026-11-08 1350 queue run (partial, Lv.30 barracks re-verified busy, Lv.10 batch 793 with 20:47:28 left, tent tap (459,457) opens TRAIN UNITS directly, tent tap (564,510) misses, no batch queued; record commit d272dd711 on records/2026-11-08)
 ---
 
 # Troop training
@@ -1138,3 +1139,58 @@ Observed in game on this account, first execution 2026-10-25.
 - Tap method note (rule R2): direct coordinate taps on tent bodies missed twice (norm 393,600 and 511,557, both no panel). The visual-grounding point (435,518) selected the Lv.24 barracks, and the pistol button grounded at (425,581). The observation "no_change_observed" flag proved unreliable twice: the view had in fact changed after the tap. Next units should screenshot to verify after every tap instead of trusting that flag.
 - Figures read live on screen: food 478.8M, iron 802.1M, coin 6.9M, stone 25.0M, 922.2K, power 149,850,353, diamonds 4,217, energy 118 at entry rising to 119 during the unit. No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
 - Result statistics: target 4, achieved 0, resources_gained none, costs about 7 minutes play, verified yes, blocker_category e, device_takeovers 0.
+
+## What the 2026-11-08 1350 unit added - Lv.30 barracks re-verified busy, tent tap (459,457) opens TRAIN UNITS directly, no batch queued
+
+- Unit training-2026-11-08-1003 by ticker-1317, about 13:37 to 13:40
+  local, status partial - 1 of 4 barracks verified (Lv.30 busy), 0
+  batches queued, the other three barracks not reached inside the
+  unit cap. Evidence in
+  `_records_/2026-11-08/troop-training/1350-queue-run.md` (commit
+  d272dd711 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-126 on the owner Mac mini (session
+  cc-125 had dropped between units and was restarted). No
+  device-access error, no different-device dialog, no login demanded.
+  Nothing bought, no speedup used, no Finish Now tapped.
+- Session window: 13:37-13:40 local, about 3 minutes. Base HUD at
+  entry: food 489.5M, wood 811.9M, iron 25.0M, stone 922.2K, coin
+  12.3M, power 149,850,353, diamonds 4,397, gold 13.22K. Stamina 88
+  at the lightning icon.
+- Tent tap 1 at norm (564, 510), on the second white-blue chevron
+  tent in the middle of the base: no change, no selection label, no
+  action row. A miss, not a tent selection (rule R2: that point ends
+  here).
+- Tent tap 2 at norm (459, 457), on the first white-blue chevron
+  tent: opened TRAIN UNITS directly, with no action row seen in this
+  framing. Panel read live: Power 1647, Morale 750.0, Squad Load
+  Capacity 2200, Unit HP 4726.34, Unit Attack 38.45, Unit Defense
+  7.7, Lv.10 selected at 36.5K, a Lv.10 batch of 793 already training
+  with 20:47:28 left. This is the same Lv.30 barracks the arms-race
+  unit read at 21:01:06 left about 13:27 - busy, cannot queue more.
+  No Train was tapped and no Speed Up was tapped; the panel was
+  closed with its X, returning to the base.
+- Tap-method lesson: a single tap on a verified tent can open TRAIN
+  UNITS directly in this framing, while a neighbouring tent point
+  missed outright - re-ground fresh in the unit's own view; the
+  (564, 510) point is a miss, not a tent.
+- The other three barracks (Lv.27, Lv.24, fourth T7) were not
+  reached in this unit. The Drill Ground Full state was not re-read
+  live, and Quick Dispatch was not tapped (unverified effect, left
+  for an owner decision per the activity metadata).
+- Arms Race implication: no Lv.10 batch was queued in this unit, so
+  the Unit Progression phase score stays at 0. The priority-1
+  successor arms-race-2026-11-08-2127 follows in this pass to
+  re-read the score and close the phase verdict before the phase end
+  (see arms-race 1.59.0).
+- Observed, not acted on: a top banner reading "5000 Diamonds from
+  Alliance Star Thank You Gift. The rumor turns out to be true!" - a
+  system/chat banner, not a claim by this unit; any gift claim
+  belongs to the gifts regular, not this unit.
+- Result stats: target 4 barracks, achieved 0 batches queued (1
+  barracks state verified live), verified yes for the Lv.30 busy
+  read.
+- Follow-up: the next training unit resumes the barracks check from
+  the unchecked barracks (Lv.27, Lv.24, fourth T7 - three by live
+  read; the 1333 and 1350 follow-ups' "two remain" counts the
+  2026-11-01 Lv.8-only carry as checked). Re-ground fresh in its own
+  view.

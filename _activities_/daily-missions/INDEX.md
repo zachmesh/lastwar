@@ -1,9 +1,9 @@
 ---
 title: Daily Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-07T01:32:17Z
+modified: 2026-11-08T10:46:00Z
 level: L1
-version: 1.7.0
+version: 1.8.0
 description: The Mission daily task list and activity chests, one activity folder for mission knowledge
 status: unverified
 grounded_in:
@@ -16,6 +16,7 @@ grounded_in:
   - source: ticker-0904 daily-missions execution record 2026-11-04 0914 queue run (partial, 3 gather tasks claimed on one tap, first verified 200-point activity-chest claim, Issues #171 and #208 commented by the ticker pass)
   - source: ticker-1734 daily-missions execution record 2026-11-05 1734 queue run (failed, Mac device offline, fifty-sixth consecutive ticker pass with a Mac device-access blocker, seventeenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 10h, unchanged since the 1025 pass; seven invokes, zero responses)
   - source: ticker-1604 daily-missions execution record 2026-11-06 1612 queue run (failed, Mac device offline, eighty-second consecutive ticker pass with a Mac device-access blocker, forty-third in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 32h35m, unchanged since the 1507 and 1534 passes; seven invokes, zero responses)
+  - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, daily missions panel walked, full 22-task list read live, 4 completed unclaimed, Next Refresh pointing to about 18:00 local; record commit 6560ff267 on records/2026-11-08)
 ---
 
 
@@ -275,3 +276,15 @@ status done). Evidence in
 - Reading warning: this failed unit gives zero evidence about the daily-missions state. It must NOT be read as "no missions claimable" or as an activity-points state - the 0914 close of 2026-11-04 (activity 210, 200-point chest claimed and verified) rests on live reads and stands as the last live read; this unit rests on no read at all.
 - The pass stopped after this one unit: a second unit would hit the same dead channel. Sync at pass start reaped 0, expired 1, dropped 1 stale done (donations-2026-11-06-1403), produced 1 new unit (duel-score-2026-11-06-1430); 20 regulars already queued. Queue stats at 00:07Z: inbox 72, claimed 0, done 975, upcoming 53. The Zombie Invasion chain stays closed: the event ended 2026-10-30 about 19:00 and no Zombie Invasion tab has been seen in the Events hub since, so no fresh chain was seeded. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-06) sits in the inbox (pending 2), not yet due.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-08 0229 scout read added - full 22-task list read live
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0204, 02:17 to 02:32 local, status partial per rule R1 (3 red dots unexplained, none of them missions). Evidence in `_records_/2026-11-08/perception-scout/0229-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-03/perception-scout/observation.md`. Observe-only; nothing claimed.
+- Entry: base bottom-left terminal icon, grounded at norm 52,863 in this base view (per the 2026-11-03 record; the yellow icon at [66, 790] is the build menu, not Missions - do not re-tap it for this panel). Re-ground fresh each unit; the base map scrolls.
+- Daily Tasks tab (red badge 4 = the 4 completed tasks). Next Refresh 15:36:16 at entry, 15:32:08 at close (points to about 18:00 local - see the reset note below). Activity star 0 (points count only after claiming). Chest thresholds 40 / 80 / 120 / 160 / 200, all unreached; chest contents not read (no tap).
+- Completed (green rows, Claim buttons - observed only, NOT claimed; claims belong to the daily-missions regular): Daily Login (1/1) star 10 + red gem 10; Donate to Alliance Tech 5 times (5/5) star 10 + coin 6.0K; Greet Visitors 3 times (3/3) star 10 + iron 5.0K + food 5.0K; VIP Activated (1/1) star 40 + red gem 10.
+- Incomplete (Go buttons, NOT tapped): Defeat any Doom Elite 1 time(s) (0/1) star 10 + iron 5.0K + food 5.0K; Complete 1 Radar Task(s) (0/1) star 10 + iron 5.0K + food 5.0K; Help Allies 5 Times (0/5) star 10 + iron 5.0K + food 5.0K; Recruit Heroes 1 Time(s) (0/1) star 10 + red gem 10; Kill 5 zombie(s) on World Map (0/5) star 10 + iron 5.0K + food 5.0K; Attack a Commander 1 time(s) (0/1) star 10 + red gem 10; Gather Food x 10,000 at resource tile (0/10000) star 10 + iron 5.0K + food 5.0K; Gather Iron x 10,000 at resource tile (0/10000) star 10 + iron 5.0K + food 5.0K; Gather Coin x 10,000 at resource tile (0/10000) star 10 + iron 5.0K + food 5.0K; Train 100 units of any level (0/100) star 10 + iron 5.0K + food 5.0K; Upgrade a Building 1 time(s) (0/1) star 10 + iron 5.0K + food 5.0K; Research a tech 1 time(s) (0/1) star 10 + iron 5.0K + food 5.0K; Obtain 1 Gear at SSR and/or better rarity (0/1) star 10 + iron 5.0K + food 5.0K; Recruit Survivors 1 time(s) in the Tavern (0/1) star 20 + red gem 10; Make any paid purchase once (0/1) star 50 + red gem 50 (paid task - red line, never to be done); Dispatch Trade Trucks 3 time(s) (0/3) star 30 + coin 6.0K; Plunder others' Secret Task reward 1 time(s) (0/1) star 30 + red gem 10; Perform Data Training on Drone 1 time(s) (0/1) star 10 + iron 5.0K + food 5.0K.
+- Full list is 22 tasks (4 completed + 18 incomplete); a final drag produced no change, so the list ends at Perform Data Training on Drone. Max activity stars 340 (290 without the paid-purchase task), so all five chests are reachable without paying.
+- Season and Main Tasks tabs not opened.
+- Reset note: Mission Next Refresh pointing to about 18:00 local today is new evidence for Issue #242 (commented by this run) - a countdown-based pointer from the missions panel, a second surface corroborating the 18:00 reset. Still unverified as a formal arbitration; the standing 19:00 note is not changed here.
+- Game left safe: game left on the base screen. No claim, no purchase, no dispatch. No Assemble, no teleport.

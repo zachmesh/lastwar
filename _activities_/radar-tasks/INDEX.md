@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T03:44:20Z
+modified: 2026-11-08T22:44:40Z
 level: L1
-version: 1.51.0
+version: 1.52.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -54,6 +54,8 @@ grounded_in:
   - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental radar reads during the navigation detour: BASE tap 920,975 opened the radar map, Lv.13, points 237 to 259, stored 19/40 to 0/40, stamina 100 to 35, 19 tasks completed between screenshots with no executor tap; record commit a85cfdafa8 on records/2026-11-07)
   - source: ticker-1655 harvest, survivors and training execution records 2026-11-07 1655 queue runs (capture channel working again on live game screens after the 1020-1608 capture-failure run, Issue 282; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-1904 radar execution record 2026-11-07 1912 queue run (done, stack empty, dish re-grounded for the windowed layout, capture channel recovered)
+  - source: ticker-1249 radar execution record 2026-11-08 1256 queue run (done, stack-day Quick Execute 4 tasks, stamina 120 to 80, radar points 267 unchanged, bar flipped to Claim All only with 10 rewards pending, pins inventoried untapped; record commit 6d4ec6287 on records/2026-11-08)
+  - source: ticker-1352 radar execution record 2026-11-08 1355 queue run (partial, Claim All bar lockout, 16 stored tasks unexecuted, 10 rewards pending, 6 pins inventoried, duplicate-unit Issue #466; record commit bf20e1a48 on records/2026-11-08)
 ---
 
 
@@ -2181,3 +2183,113 @@ are still open, per the protocol.
 - UI note, untouched: a gold icon with a NEW! badge at the top of the radar screen (about norm 295,60). Its function is unknown; it is not part of this unit's stack work. The next radar unit reads it before tapping anything.
 - Capture channel recovered: the device channel that failed the last twelve-plus passes (Issue 282, screen-capture failure, Last War window off-Space) is working again in this pass: the Last War window is on-screen at 763x1050, global (73,30), and screenshots and OCR read normally. Recovery noted in the record and commented on Issue #282 by this pass. The Dock-icon unblock is no longer the only route: the window returned to the active Space on its own (the Mac mini came back online about 10:20 PT after about 50h offline; the pid changed 59735 to 98156, so the app relaunched - the relaunch is inferred from the pid change, not observed). If the capture fails again, the recovery question is what moved the window back, not the login. The 1853 passes record is a second independent live read on the same recovered channel (window 372131, 788x1083, pid 98156); see shop-claims 1.29.0.
 - Returned to the base screen afterwards (power 149,850,353). No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-08 1256 and 1355 units added - stack-day Quick Execute 4 tasks, Claim All bar lockout carried, 16 stored, 10 pending, pins re-inventoried
+
+- Unit radar-2026-11-08-1003 by ticker-1249, about 12:54 to 12:56
+  local, status done - the stack-day completion standard is met:
+  radar entered and verified, every executable ordinary task
+  executed, closing reads recorded, pin inventory recorded untapped.
+  Evidence in `_records_/2026-11-08/radar-tasks/1256-queue-run.md`
+  (commit 6d4ec6287 on records/2026-11-08). Tracker marked done.
+- Session: computer session cc-122 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  Nothing bought, no speedup used. One earlier click attempt failed
+  without dispatch (stale observation, missing observation_id) and
+  was retried with the fresh observation id; no input was sent by
+  the failed attempt.
+- Live duel posture from _tools_/duel.py at entry: duel day 7, Off
+  day - settlement, radar posture stack (day ends 2026-11-08 18:00
+  local). The unit window stamp (duel day 7 - radar stack) agrees
+  with the live tool; no contradiction to resolve. This is a further
+  live confirmation of the 18:00 reset (Issue #242); commented on
+  Issue #242 by this run.
+- Entry: base screen full HUD at entry (food 489.5M, iron 811.9M,
+  coin 12.3M, stone 25.0M, gold 922.2K, power 149,850,353, diamonds
+  13.22K, stamina 120, cart 4,397, Season II 7d 05:05:28). The dish
+  icon was grounded fresh by visual grounding at norm (48, 710),
+  inside the proven 52-62, 704-727 cluster, and opened the radar on
+  the first tap.
+- Entry verified on the radar screen itself: Lv.13, radar points
+  267, stored 16/40, stamina 120, restore line "12 Radar Task(s)
+  will be restored in 03:36:42". Bottom bar at entry offered Quick
+  Execute: "You can complete 4 tasks, requires 40 Stamina." No Claim
+  All was offered at entry.
+- Quick Execute: one tap at the grounded button centre norm (491,
+  945). Stamina 120 to 80, exactly 4 tasks at 10 stamina each. Radar
+  points stayed 267, confirming nothing was claimed.
+- Closing reads (live, same unit): Radar Lv.13, radar points 267,
+  stored 16/40, stamina 80, restore line "12 Radar Task(s) will be
+  restored in 03:36:12". Stored 16/40 plus the 12-task restore
+  landing in about 3.6 hours reaches 28/40, below the 40 cap, so no
+  cap pressure before the next unit.
+- Named blocker carried forward: after the batch the bar flipped to
+  Claim All only, "10 task rewards can be claimed", with no further
+  Quick Execute offer. 6 of the 10 were already pending at entry
+  (the entry bar showed Quick Execute despite them, the known
+  single-offer behaviour). Claim All was NOT tapped, per the
+  stack-day red line. The next radar unit inherits this blocker and
+  the pending count of 10, per the stack-day completion standard's
+  named-blocker rule.
+- Pin inventory (untapped, per the stack handling rule): grey skull
+  pin with red dot, top centre; blue skull pin with red dot, right;
+  blue helmet pin, lower centre-left; grey skull pin with red dot,
+  lower centre; portrait pins (alliance members, not tasks):
+  [AP3x]Texan Apex, [AP3x]TheGoldenEclipse, [AP3x]papillon707,
+  [AP3x]Cinmor. No purple question-mark story pin visible in this
+  view. No pin was tapped, so no claim leaked onto this non-scoring
+  day.
+- Duel delta test still owed (VS panel not opened in this unit).
+- Unit radar-2026-11-08-1003 by ticker-1352, about 13:53 to 13:57
+  local, status partial. Evidence in
+  `_records_/2026-11-08/radar-tasks/1355-queue-run.md` (commit
+  bf20e1a48 on records/2026-11-08). Same unit id as the 1256 unit:
+  the delivery-time check found this unit id had already been
+  executed by ticker-1249 (done, record 1256) and its done unit file
+  was already on the live records/2026-11-08 branch. The local sync
+  re-produced it because the local tree never received the branch's
+  done records. This pass left the branch head's done unit file
+  intact; this partial lives in this record file and the day INDEX
+  only. Filed as Issue #466 (tooling), related to #465.
+- Entry via the satellite dish icon at norm 50,740 (fresh screenshot
+  ground); the dish opened the radar on the first tap.
+- Radar screen entered and verified live: Lv.13, radar points 267,
+  stored tasks 16 of 40, stamina 92 (top right), restore line
+  "Fully restore at 11-8 22:32:10 local time".
+- Stack posture held throughout: nothing executed, nothing claimed,
+  no pin tapped.
+- BLOCKER (named, carried from the 2026-10-31 trap): the bottom bar
+  presents ONLY "10 task rewards can be claimed" with a Claim All
+  button - no Quick Execute offer. The 16 stored ordinary tasks
+  therefore could not be executed in this unit. Claiming on a stack
+  day is forbidden (claims leak onto a non-scoring day), so the bar
+  was left untouched. This is the same Claim All bar lockout measured
+  in four units on 2026-10-31; the block is carried into the next
+  radar unit's opening read, so the stack is planned around it
+  instead of rediscovered hourly. Pending reward count at close: 10.
+- No cap pressure: stored 16 of 40, full restore at 22:32 local
+  (about 8 hours 38 minutes away); even a 12-task restore lands at
+  28 of 40, below the cap.
+- Pin inventory (stack rule, untapped): six pins standing on the
+  radar map - grey animal/skull pin, about norm 573,314, red dot;
+  portrait pin (man's face), about norm 718,314, red dot; blue skull
+  pin, about norm 718,395, red dot; blue helmet pin, about norm
+  415,646, no red dot seen; grey handshake pin, about norm 501,646,
+  red dot; brown animal-face pin at the southwest map edge, about
+  norm 79,762, no red dot (same pin inventoried in the 2026-11-07
+  1912 unit at norm 85,738 - the position drifts per view). All left
+  for the next release-day unit to identify under the release
+  handling rule.
+- Restore-line note: the 1256 "12 Radar Task(s) will be restored in
+  03:36:42" countdown and the 1355 "Fully restore at 11-8 22:32:10"
+  clock line are different counters (task-restore countdown vs
+  full-restore time), both recorded as read, not reconciled into one
+  figure.
+- Returned to the base screen afterwards (power 149,850,353). No
+  diamonds, money, speedups or other spending. No alliance
+  diplomacy, no assembly, no teleport.
+- Follow-up: the next radar unit opens with this blocker already
+  known: if the bar still offers only Claim All, the stack stays
+  locked until the release day (Day 1, 2026-11-09) claims the pending
+  rewards and frees the offer. The pending count of 10 is carried,
+  not trusted - the next unit re-reads the bar live.
