@@ -2672,3 +2672,17 @@ of 2026-10-28.
   for records/2026-11-08 follows this record. Merge
   synced to the owner Slack DM with the violation
   stated. Full detail in pr-integration/1130-run.md.
+## 11:40 to about 11:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-1140. Plan staged 5
+  units (2257 slots newly inside the horizon) and expired 3
+  morning units (0657, attempts 0, window ended 10:57 local).
+  Pre-reset sweep pair already complete via plan (1630 seq 1,
+  1730 seq 2, chain pre-reset-sweep-2026-11-08, both expiring
+  at the 18:00 reset). Scout diff on the Nov 8 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained red dots 14 on a
+  narrative-fallback basis - observation file byte-identical
+  to the 1040 run). 0 withdrawals. Pool: inbox 80,
+  claimed 0, done 1264. Status: done. Full detail in
+  queue-planning/1140-run.md.
