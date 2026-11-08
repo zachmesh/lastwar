@@ -2838,3 +2838,17 @@ of 2026-10-28.
 - Pool by_state at 16:45 local: inbox 84, claimed 0,
   done 1083. Status: done. Full detail in
   queue-planning/1640-run.md.
+
+- Integrator pass pr-integration-2026-11-07-1645.
+  Non-batch pass for records purposes (checker reports
+  not due, next batch point 19:00 PT; the 15:00 batch
+  slot was already spent by the 1500 pass). Knowledge
+  PR 406 merged (squash cef70a43, radar-tasks 1.48.0
+  -> 1.49.0, Refs #282); branch deleted; local main
+  fast-forwarded dfc3e08b to cef70a43. All four open
+  records PRs verified clean against the new main
+  (398 f5df1d3e6, 351 f9e1fff83d, 301 602566d9,
+  256 d44b93ba) and awaiting the 19:00 batch, the first
+  real merge chance for all four. No new records PR
+  opened. Status: done.
+  Full detail in pr-integration/1645-run.md.
