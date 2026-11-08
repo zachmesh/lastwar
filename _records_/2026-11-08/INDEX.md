@@ -1049,3 +1049,21 @@ of 2026-10-28.
   appended since). 0 withdrawals. Pool: inbox 80, claimed
   0, done 1221. Status: done. Full detail in
   queue-planning/0440-run.md.
+
+## 04:45 to about 04:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0445.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 07:00): no records PR merged.
+  Knowledge PR 443 (4 profiles, Refs #160, #423, #417,
+  #242) and tools PR 442 (pool-integrity validate guard,
+  Refs #441) reviewed in full and squash-merged (2801b653
+  and f2eacffc); local main fast-forwarded to f2eacffc20.
+  Records PR 430 clean at new head 0c383982, commented;
+  records PR 439 clean at unchanged head 42ef0190, both
+  awaiting the 07:00 batch; records PRs 351 and 301
+  conflicts re-verified on the single action-log file,
+  carried; tools PR 425 owner-gated, unchanged since the
+  2245 escalation, awaiting the owner decision. No records
+  PR opened by this pass. Status: done. Full detail in
+  pr-integration/0445-run.md.
