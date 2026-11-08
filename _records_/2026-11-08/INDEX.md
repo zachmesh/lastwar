@@ -921,3 +921,16 @@ of 2026-10-28.
 ## 04:15 to about 04:19 - Ticker-0404 scout-alliance remainder
 
 - Ticker-0404, unit scout-scout-2026-11-02-008 (chain scout-2026-11-02, seq 8), status partial, observe-only. Walked live: Help (points 0/1,000, four Bears Lair requests all 30/30), Alliance Store read-only (Honor 301.3K; Campaign tab red dot, star balance 1,260, UR shard 10/10 at 200), Alliance City both tabs (Rare Soil 5.88K/h 6/6, Coal 13.53K/h 4/4, identical to the 0446 read), Alliance Wars both tabs (no rally, no ongoing war; Wars dot Issue #212 still unexplained). The left-column vehicle icon opens the Trucks panel, not the station (Trade Count 0/5, four trucks shown, nothing dispatched); station panel not reached, successor seq 010 enqueued for it. New labels on the scrolled Alliance panel: Season Contributions, Season Milestones, Alliance Furnace (unmatched, candidate filing to the diff/retro step). Red dots seen 14, explained 8, unexplained 6. Full detail in perception-scout/0415-queue-run.md and the appended observation sections.
+## 04:15 to about 04:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0415.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 07:00): no merges. Records PR
+  430 clean at new head b50dc4bad9 (the 0400 run-record
+  commit), commented; records PR 439 clean at unchanged
+  head 42ef0190; records PRs 351 and 301 conflicts
+  re-verified on the single action-log file, carried;
+  tools PR 425 owner-gated, unchanged since the 2245
+  escalation, awaiting the owner decision. No records
+  PR opened by this pass. Status: done. Full detail in
+  pr-integration/0415-run.md.
