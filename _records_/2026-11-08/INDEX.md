@@ -1465,3 +1465,45 @@ of 2026-10-28.
   0540, observation file byte-identical). 0 withdrawals.
   Pool: inbox 80, claimed 1, done 1238. Status: done.
   Full detail in queue-planning/0640-run.md.
+
+## 06:32 to about 06:56 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0632 run. Own PR 445 MERGED
+  (2026-11-08T13:49:59Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-0534
+  scout 0538/0542 and donations 0546 and ticker-0604 scout
+  0608 into 7 profiles as one commit (d1e0a4c8b4) on new PR
+  447 (OPEN at run close): the three carried red dots are
+  explained with live screen states - blue truck/bus icon
+  is Trucks (0/5 trades, 4 own + 4 others waiting), white
+  truck icon is the Secret Command Post (17 Your Tasks +
+  5 Ally Tasks claimable), VIP cart dot absent now (Freebie
+  ruled out as its cause); the 0022 white-truck-to-trucks
+  mapping is superseded. Donations 0546: count 1/30 before
+  the donation, so the 0519 fifth tap did NOT land; one
+  900-coin donation landed, 00:11:00 cooldown (ninth
+  reading, inside 08:17-19:07), badge 301.9K to 302.0K;
+  footer 4000 (4050 at the 0608 entry). The 0608
+  incidental read gives the eighteenth replenishment data
+  point (0 to 1 over about 21 minutes). Winter
+  Battlefield: Rewards, Rules (all 4 tabs) and Shop Honor
+  read live - 30,000 points to win, Silo 100/s, Oil
+  Refinery 30/s, Missile Site 10/s, Honor shop 12 items at
+  101.1K; commendation range 21K-45K vs max listed 33K and
+  achievement range 2.4K-3.5K vs min listed 2.8K flagged
+  open. Weekly Pass 18:00 reset confirmed a sixth time.
+  Mall Gold Brick ladder (eight packs) confirms the 0407
+  correction of the 2209 OCR prices. Monthly Pass Days
+  Left 13 against 14 at the 0407 read the same day - the
+  14-to-13 move inside 90 minutes is unexplained, carried
+  as an open item. Profiles: perception-scout 1.37.0,
+  alliance-donations 1.62.0, shop-claims 1.35.0,
+  truck-plunder 1.32.0, secret-missions 1.19.0,
+  vip-rewards 1.15.0, event-claims 1.25.0. Corrections:
+  the 0022 white-truck mapping superseded; the 0538 "one
+  day elapsed" wording not adopted; the 0512 "chain spent"
+  completed by the 0542 unit. Issues #160, #423, #417 and
+  #242 commented with the new evidence; #444 still
+  unopened, #446 filed by the ticker pass for the
+  duplicate execution; no new Issue filed. Status: done.
+  Full detail in knowledge-organization/0632-run.md.
