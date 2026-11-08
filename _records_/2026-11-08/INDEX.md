@@ -2295,3 +2295,18 @@ of 2026-10-28.
   zero-remaining acceptance NOT met; the next harvest
   unit resumes the sweep. Tracker untouched. Full detail
   in resource-collection/0958-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-08-1000.
+  NON-batch pass per the checker (due: no, outside every
+  batch window; next batch point 11:00 PT): no merges.
+  Records PR 430 clean at new head 749e38e2, re-check
+  note posted, awaiting the 11:00 batch; records PR 449
+  clean at unchanged head 0c0baf9f, re-check note posted,
+  awaiting the 11:00 batch. Records PRs 351 and 301
+  still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, heads unchanged,
+  re-check notes posted, carried. Tools PR 425
+  owner-gated, conflicting on _tools_/INDEX.md,
+  unchanged since the 2245 escalation, carried with no
+  new note. No Slack DM sync (silent run). Full detail in
+  pr-integration/1000-run.md.
