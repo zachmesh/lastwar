@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-08T04:48:01Z
+modified: 2026-11-08T05:32:17Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-0534 troop-training execution record 2026-11-05 0534 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirty-fourth consecutive pass, probe classification OFF_SCREEN_WINDOW, Chrome observes normally in the same session, Issue 284)
   - source: ticker-1655 troop-training execution record 2026-11-07 1655 queue run (partial, Lv.27 T9 x726 and Lv.30 T10 x793 requeued at cap, 9.6M food plus 9.6M iron, two upper-right barracks unchecked, Drill Ground Full not seen; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-2006 troop-training execution record 2026-11-07 2026 queue run (partial, Lv.27 verified busy 1d 07:03:33 by panel read, Lv.30 busy by timer bubble only, two upper-right barracks unlocated, south and east pans ruled out; record commit e9bf320c92 on records/2026-11-07)
+  - source: ticker-2034 troop-training execution record 2026-11-07 2050 queue run (partial, Lv.30 busy T10 x793 1d 13:41:04, Lv.24 idle but blocked by Drill Ground Full toast, Drill Ground Lv.25 read live Unit Count +7812 Officers Joe/Marcus/Karen/John Quick Dispatch present not tapped, tent-body taps missed twice, no_change_observed flag unreliable; record commit 7a4a104930 on records/2026-11-07)
 ---
 
 # Troop training
@@ -136,6 +137,19 @@ Observed in game on this account, first execution 2026-10-25.
   allowed preparatory action instead of closing as a bare
   blocked read. This is a third-strike blocker under queue
   rule R2.
+- Update 2026-11-07 2050: the Drill Ground screen was read live,
+  as this section required - Drill Ground Lv.25, Building Details
+  panel reads Unit Count +7812, Survivors Officers Joe, Marcus,
+  Karen and John, and a single action button Quick Dispatch at the
+  panel bottom. Quick Dispatch was NOT tapped: its effect is
+  unverified and it may march troops out, so it is left for an
+  owner decision or a learn-first exploration unit, not pressed
+  blind inside a training unit. No 39,460 of 39,460 figure appears
+  on this screen; that figure comes from earlier units and was not
+  re-read live here, so its provenance is the 2026-10-31-era reads.
+  The clearing method for a full Drill Ground is still unknown from
+  a live read; Quick Dispatch is the only candidate control seen,
+  untested.
 
 ## What the 2026-11-01 0045 unit added
 
@@ -837,6 +851,8 @@ Observed in game on this account, first execution 2026-10-25.
 
 - 1.26.0 (2026-11-07): 2026 training unit folded (partial, Lv.27 verified busy by a live panel read - TRAIN UNITS, Lv.9 selected, count 726, "Training in progress 1d 07:03:33", consistent with the 1655 requeue; Lv.30 busy by its clock timer bubble only, not panel-read; two upper-right barracks unlocated, south and east pans ruled out as the direction to them, north and west pans and the zoomed-out whole-base view remain untried; upward drag moves the view south re-confirmed; no Drill Ground read live so the Drill Ground Full blocker is neither confirmed nor cleared; white "?" bubble at about norm 505,790 in the eastern framing handed to the next survivors unit; footer side read for donations - Tech Donation Today 1150 at about 20:22, up from 750 with no own donation in between).
 
+- 1.27.0 (2026-11-07): 2050 training unit folded (partial, Lv.30 busy by panel read - T10 count 793, "Training in progress 1d 13:41:04", consistent with the 1655 requeue; Lv.24 idle but blocked by the Drill Ground Full toast on the pistol tap, no panel stayed open, no batch started; Drill Ground Lv.25 read live as the standing blocker required - Unit Count +7812, Officers Joe, Marcus, Karen and John, single action Quick Dispatch at the panel bottom, not tapped, effect unverified, left for an owner decision or a learn-first exploration; CORRECTION - no 39,460 of 39,460 figure appears on the live Drill Ground screen, that figure's provenance is the 2026-10-31-era reads and it was not re-read live here; tent-body direct taps missed twice (norm 393,600 and 511,557), visual-grounding point (435,518) selected Lv.24 and the pistol grounded at (425,581), and the no_change_observed flag proved unreliable twice so the next units screenshot to verify after every tap instead of trusting that flag; Lv.27 not re-verified live in this unit).
+
 ## What the 2026-11-03 1051 unit added - three framings, still no tent, road drag pans where centre drag does not
 
 - Ticker-1034, unit training-2026-11-03-1003, about
@@ -1110,3 +1126,15 @@ Observed in game on this account, first execution 2026-10-25.
 - Handover observation for the next survivors unit: a white "?" speech bubble stands at about norm (505,790) in the eastern framing - not acted on from this training unit.
 - Figures read live: food 478.7M, iron 802.1M, coin 6.9M, power 149,850,353 at entry and close. No diamonds, money, speedups or paid buttons were used. No Finish Now, no upgrade shortcut. Game left on the base screen in the eastern framing.
 - Tracker untouched (partial close); the next tick re-produces the training regular.
+
+## What the 2026-11-07 2050 unit added - Lv.30 busy by panel read, Lv.24 idle but blocked by Drill Ground Full, Drill Ground screen read live, partial
+
+- Unit training-2026-11-07-1803 by ticker-2034, about 20:43 to 20:50 local, status partial. Evidence in `_records_/2026-11-07/troop-training/2050-queue-run.md` (commit 7a4a104930 on records/2026-11-07). Computer session cc-47, LastWar already running on the Mac mini.
+- Lv.30 barracks: TRAIN UNITS panel read Power 1647, Morale 750.0, Squad Load 2200, Unit HP 4726.34, Attack 38.45, Defense 7.7; Lv.10 selected, count 793, "Training in progress 1d 13:41:04" at about 20:47. This is the batch requeued by the 1655 unit at about 17:08 today (1d 17:14:37 at start), so the remaining time is consistent. Busy; Speed Up was never tapped.
+- Lv.24 barracks: selected (label "Barracks Lv.24" with the paw, pistol and green up-arrow button row). Tapping the pistol TRAIN UNITS button produced the toast "Drill Ground Full: Unable to add more units" (read live by OCR); no TRAIN UNITS panel stayed open and no batch was started. This barracks is idle and blocked, not busy.
+- Drill Ground screen read live, as the standing blocker requires: tapping the troop formation selected "Drill Ground Lv.25"; its Building Details panel (paw button) reads Unit Count +7812, Survivors Officers Joe, Marcus, Karen and John, and a single action button "Quick Dispatch" at the panel bottom. No 39,460 of 39,460 figure appears on this screen; that figure comes from earlier units and was not re-read live here. Quick Dispatch was NOT tapped: its effect is unverified and it may march troops out, so it is left for an owner decision or a learn-first exploration unit, not pressed blind inside a training unit.
+- No barracks was requeued in this unit: one confirmed busy, one idle but blocked by the full Drill Ground, two not checked. The Lv.27 barracks was requeued by the 1655 unit at about 17:08 today and should still be busy, but that was not re-verified live in this unit. Tracker untouched, per the partial rule; the next tick re-produces the training regular.
+- The clearing method for a full Drill Ground is still unknown from a live read. The only candidate control seen is Quick Dispatch on the Drill Ground Details panel, untested.
+- Tap method note (rule R2): direct coordinate taps on tent bodies missed twice (norm 393,600 and 511,557, both no panel). The visual-grounding point (435,518) selected the Lv.24 barracks, and the pistol button grounded at (425,581). The observation "no_change_observed" flag proved unreliable twice: the view had in fact changed after the tap. Next units should screenshot to verify after every tap instead of trusting that flag.
+- Figures read live on screen: food 478.8M, iron 802.1M, coin 6.9M, stone 25.0M, 922.2K, power 149,850,353, diamonds 4,217, energy 118 at entry rising to 119 during the unit. No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
+- Result statistics: target 4, achieved 0, resources_gained none, costs about 7 minutes play, verified yes, blocker_category e, device_takeovers 0.

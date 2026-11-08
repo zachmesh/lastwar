@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T03:44:20Z
+modified: 2026-11-08T05:32:17Z
 level: L1
-version: 1.54.0
+version: 1.55.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -56,6 +56,9 @@ grounded_in:
   - source: ticker-1204 arms-race execution record 2026-11-07 1204 queue run (failed, Mac back online, window off-Space, capture failure, one-hundred-ninth consecutive ticker pass to fail this way, third in the capture-failure form, Issue 282; window 160366 pid 59735 at (0,-360), 9 invokes zero game screens, 4 capture attempts failed identically, set_window_frame refused observation_required before any open_app, Mission Control / Ctrl+Right / open_app not retried per the 1020 lessons; last_seen 18:41:20Z stale about 1h50m, unchanged since the 1104 pass; sync reaped 0 expired 0 due 20, queue stats inbox 78 done 1128 at 20:29Z; duel day 6 unit; record commit 9df64968c3 on records/2026-11-07, verified against the Issue #282 comment 2026-11-07T20:34:01Z which agrees on every point)
   - source: ticker-1633 arms-race execution record 2026-11-07 1633 queue run (Base Building phase 0/30000, tier-3 unreachable inside the red lines, skipped-needs-owner per R4; scoring paths re-confirmed live +1/+10/+30; Aircraft Center Lv.29 4d19h and Drill Ground Lv.26 1d16h, no completion in the phase window; completion sweep clean, cumulative chest 0/2; Events hub without a Zombie Invasion tab; Issue #407 filed for the regulars.py UTC-date state bug; record commit a85cfdafa8 on records/2026-11-07)
   - source: ticker-1904 arms-race execution record 2026-11-07 1929 queue run (partial, Drone Boost phase read live at 0, tier-3 plan worked out, spending left to the next unit)
+  - source: daily retro 2026-11-07 (Issue #416 filed, class records, for the 1633 HUD read discrepancy; target metric same-day HUD reads agree across units, 0 unexplained disagreements; record commit e3e8d290d0 on records/2026-11-07)
+  - source: ticker-2034 troop-training execution record 2026-11-07 2050 queue run (partial, HUD food 478.8M iron 802.1M coin 6.9M power 149,850,353, corroborating the Nov 7 consensus against the 1633 outlier read; record commit 7a4a104930 on records/2026-11-07)
+  - source: ticker-2104 perception-scout execution record 2026-11-07 2121 queue run (partial, HUD food 478.8M iron 802.1M coin 6.9M power 149,850,353, corroborating the Nov 7 consensus; record commit 31467b04cb on records/2026-11-07)
 ---
 
 
@@ -399,6 +402,8 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   changed approach from the foreground path if it
   retries.
 - Hero detail tap blocked, 2026-11-04 0019: the Hero List bottom-right Lv.124 card (hero unconfirmed) took two taps at its measured centre plus one long-press with no change, so no EXP was spent and tier 3 stayed unmet. The next unit in the phase retries with a changed method (a class tab filter, a different card, or a foreground tap path); if the detail still does not open, the blocker is written into the activity metadata per rule R2 and promoted to a standing blocker.
+- Measurement question, 2026-11-07 retro (Issue #416, class records): the 1633 unit's base-screen figures (food 440.8M, iron 768.9M, coin 33.0M, power 147,749,175) disagree with every other Nov 7 live read; the 2050, 2052 and 2121 reads this hour re-confirm the consensus. The discrepancy is explained by a named cause (stale screenshot, owner play, OCR misread) and recorded, or the read corrected. Target metric: same-day HUD reads agree across units (0 unexplained disagreements).
+
 ## What is known from 2026-10-26
 
 - The Hero Advancement phase ran on the morning of 2026-10-26
@@ -1749,6 +1754,7 @@ slot. Evidence in
 - Building queue read live: Lv.29 Aircraft Center upgrade in progress, Time Left 4d 19:47:25; Lv.26 Drill Ground upgrade in progress, Time Left 1d 16:25:35; two slots Idle. No building completion lands inside the phase window (ends about 18:00 local). The only remaining scoring paths are the banned ones (burning Construction Speed-ups, buying diamond packs), both inside the red lines, so the 30,000 top chest threshold is unreachable in this phase. No chest earned, nothing claimed. Tracker marked skipped for arms-race with this reason; the already-staged 1803 unit for the next phase is unaffected.
 - Completion sweep, per the owner correction of 2026-10-26: the Arms Race page was re-read before leaving the Events screen. Cumulative counter chest reads 0/2, not claimable and not bouncing. No bouncing chest and no red dot on the Arms Race tab or page. The ranking-row chest opens a contents preview only while the phase is live. Arms Race is complete for this phase with nothing outstanding.
 - Live reads in this unit: base screen food 440.8M, iron 768.9M, coins 33.0M, 25.0M, 922.2K, diamonds 3,436, power 147,749,175, stamina 120, level 30. Events hub tab bar shows Arms Race, Desert Battlefield, Winter Battlefield - no Zombie Invasion tab, consistent with the event having ended at about the 19:00 reset on 2026-10-30; no fresh zombie chain was seeded. Duel VS timer 01:22:54 at entry; Season II, 8d 01:22:55.
+- Reading flag, 2026-11-07 retro (Issue #416, class records): these base-screen figures disagree with every other Nov 7 live read (food 476.8-486.5M, iron 800.4-810.0M, coin 5.0-5.7M, power 149,850,353). The 2050 training, 2052 mail and 2121 scout reads this hour all re-confirm the consensus figures (food 478.8M, iron 802.1M, coin 6.9M, power 149,850,353), so the 1633 read stands as the lone outlier. Possible causes per the retro: stale screenshot, owner play, OCR misread. Target metric: same-day HUD reads agree across units (0 unexplained disagreements). The 1633 phase verdict itself (Base Building score 0, tier-3 unreachable inside the red lines) is unaffected - only the HUD figures are flagged.
 - Tooling gap filed by this pass as Issue #407 (tooling class, belongs to lastwar-tool-developer, not this job): tools/regulars.py uses date.today() in the container UTC timezone, so this unit's first skip landed in tools/state/2026-11-08.json and was moved to 2026-11-07 by hand with --date; the bogus 2026-11-08 file was deleted.
 - Reading warning: this is the newest live phase read and supersedes the 1204 section's "phase live at 12:30 was not read" - the phase live at 16:37-16:46 was read twice and is Base Building at 0. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its own phase, which ended about 14:10 local.
 - Tracker marked skipped-needs-owner per R4; the next tick re-produces the regular for the next phase slot.
