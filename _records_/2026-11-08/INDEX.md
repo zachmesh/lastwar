@@ -778,3 +778,21 @@ of 2026-10-28.
   run); owner-decision issues 132, 154 and 335 all over 24
   hours with statements current. Status: no-op. Full detail
   in pr-catchall/0341-run.md.
+
+## 03:32 to about 03:45 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-08-0345.
+  Own PR 425 checked first: owner-gated on the policy
+  amendment, no action owed; PR 437 for #436 already merged.
+  Implemented the highest-priority open tooling issue with
+  work left in this job's class, #438: _tools_/queue.py now
+  records a shared completion marker in the main checkout's
+  _queue_/completed/ on every closing, and next, claim, sync,
+  plan and expiry treat a marker like a local done record, so
+  a unit completed in a detached worktree is never re-picked
+  by the next pass. PR #440 opened, commit d80a11bc6e,
+  validated on isolated fixture pools under /tmp (py_compile
+  plus 21 assertions, 21/21 on two runs); queue.py stats
+  identical old vs new on a copy of the live done pool.
+  Issue #438 commented; closure belongs to the daily retro.
+  Status: done. Full detail in tool-development/0345-run.md.
