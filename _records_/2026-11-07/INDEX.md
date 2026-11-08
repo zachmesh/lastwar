@@ -3676,3 +3676,19 @@ of 2026-10-28.
   Status: done. Full detail in
   queue-planning/1940-run.md.
 
+## 19:45 to about 19:56 - PR integration pass
+
+- PR-integrator pass pr-integration-2026-11-07-1945.
+  Non-batch pass: inside the 19:00-20:00 PT batch window,
+  but the window's batch was already consumed by the
+  1900 pass's merge of records PR 256 (19:04:06 PT);
+  merge-aware checker confirms not due (exit 1), next
+  batch 23:00 PT. Knowledge PR 413 merged (squash
+  815a413c, 7 profiles folded, Refs #242 #282). Records
+  PR 398 clean at head 5bc2c96d8 against new main
+  815a413c, awaiting the 23:00 batch. Records PRs 301
+  and 351 still conflict on the single action-log file,
+  unchanged since the 1900 conflict notes, awaiting
+  branch-side reconciliation. Local main fast-forwarded
+  751b004a to 815a413c. Status: done. Full detail in
+  pr-integration/1945-run.md.
