@@ -2648,3 +2648,27 @@ of 2026-10-28.
   link is supported but not a full explanation. Whether the
   panel dot cleared after the two rallies launched was not
   re-checked in this unit.
+## 11:30 to about 11:48 — PR integration pass, 11:00 batch window (VIOLATION)
+
+- Integrator pass pr-integration-2026-11-08-1130.
+  COMPLIANCE VIOLATION: records PR 458 merged at
+  11:38:37 PT (merge commit b828b2c0) as a second batch
+  event in the 11:00 window - records PRs 449 and 430
+  were already merged by the 1115 pass at 11:20:52 and
+  11:28:17 PT, so this pass was not a batch pass under
+  the first-pass rule (issue #418). Cause: plain
+  clock-only `due` treated as settling the question;
+  the window-already-merged check was skipped;
+  `due --merges` not adopted in the job body yet (issue
+  #335). Content impact none - 458 carried only records
+  (1115 run record and 430 merge line), merge clean,
+  merge stands. Records PRs 457, 351 and 301 still
+  conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, heads unchanged,
+  re-verified and noted (457 first note). Tools PR 425
+  owner-gated and conflicting on _tools_/INDEX.md,
+  re-verified against new main b828b2c0, no new note,
+  unchanged since the 2245 escalation. Fresh records PR
+  for records/2026-11-08 follows this record. Merge
+  synced to the owner Slack DM with the violation
+  stated. Full detail in pr-integration/1130-run.md.
