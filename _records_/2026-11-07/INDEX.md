@@ -3721,3 +3721,64 @@ of 2026-10-28.
   branch-side reconciliation. Local main fast-forwarded
   751b004a to 815a413c. Status: done. Full detail in
   pr-integration/1945-run.md.
+
+## 20:11 to about 20:18 — Queue ticker pass, donations re-read
+
+- Donations re-read unit donations-2026-11-08-0323, partial
+  and unverified: Quick Construction panel read live 2/30
+  at entry; one coin donation landed (2/30 to 1/30, 900
+  coin); the second tap at 1/30 was provably eaten (count
+  still 1/30 live after its 00:02:23 timer); the third tap
+  greyed the button with a 00:18:46 timer, effect
+  unconfirmed, timer beyond the unit cap. Computer session
+  cc-41 dropped during the cooldown wait, cc-42 restarted
+  with no state lost. Tracker untouched. A named re-read
+  unit is enqueued for after the cooldown (not-before 20:38
+  local). Full detail in
+  alliance-donations/2018-queue-run.md.
+
+## 20:19 to about 20:26 — Queue ticker pass, troop training
+
+- Training unit training-2026-11-07-1803, partial: Lv.27
+  verified busy by a live TRAIN UNITS panel read
+  (Lv.9 x726, "Training in progress 1d 07:03:33"); Lv.30
+  busy by its timer bubble; the other two barracks were
+  not located (south pan: formation lots and snowfield;
+  east pan: Capitol and gold buildings). Side read: the
+  donations footer moved 750 to 1150 with no donation in
+  between - recorded as observed only. Tracker untouched.
+  Full detail in troop-training/2026-queue-run.md.
+
+## 20:28 to about 20:36 — Queue ticker pass, mail rewards
+
+- Mail unit mail-2026-11-07-1830, done: Alliance Daily
+  Donation Rankings (2h ago) claimed - red gem x10,
+  badge (50) x4; Event claimed three mails (Weekly
+  Alliance Duel Defeat, Daily Participation Rewards,
+  Unclaimed "Daily Task" Reward, all 2h ago) - grey
+  chest x10, food crate x10, coin chest x10, blue
+  badge x800, silver chest x10, red gem x500, food
+  crate x30, grey chest x30, coin chest x30, EXP
+  chest x30, bread 5.0K, iron 5.0K. Category list
+  re-read after both claims: no gift icon remained on
+  Alliance or Event. Battle Report, Season, System and
+  Regular showed neither gift icon nor red dot and were
+  checked by the list read only (Claim All not pressed
+  inside them this unit); In-app Purchases not opened
+  (receipts only). Nothing deleted. Full detail in
+  mail-rewards/2028-queue-run.md.
+
+## 20:33 to about 20:37 — Queue ticker pass, alliance gifts
+
+- Gifts unit gifts-2026-11-07-1830, done: Regular
+  Claim All 434 (dialog-confirmed), Premium Claim All
+  7 (dialog-confirmed), then a second Regular sweep
+  for 3 gifts that arrived during the unit - 437
+  Regular and 7 Premium total. Both tabs verified
+  clear (rows Claimed, no Claim All button, no red
+  dot). Gift Level 28 progress 192,787,590 at entry
+  to 192,799,520 at close; per-sweep deltas (+4,370 /
+  +660 / +6,900) do not decompose into my claims
+  alone - the bar is alliance-wide, filed as Issue
+  #183 evidence. Full detail in
+  alliance-gifts/2033-queue-run.md.
