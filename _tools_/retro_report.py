@@ -46,7 +46,9 @@ What is counted, per section 14 -
     trade day's records merges are classified against the
     batch windows of _tools_/records_batch.py (03:00, 07:00,
     11:00, 15:00, 19:00, 23:00 America/Los_Angeles, 60 minutes
-    from each point) and reported as a named section with the
+    from each point) - and a second merge inside one window is
+    a violation under the first-pass rule (issue #418) - and
+    reported as a named section with the
     violation count and PR numbers; a day with zero
     violations is reported as an explicit clean line, not
     omitted. Every violation the section finds is for the
@@ -136,7 +138,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.5.0"
+TOOL_VERSION = "1.5.1"
 
 
 def _load_queue():
@@ -748,7 +750,7 @@ def render_markdown(data):
         lines.append(f"- Not audited in this run - "
                      f"{compliance.get('reason', 'no merges input')}")
     elif compliance["clean"]:
-        lines.append(f"- Clean - 0 off-batch records merges out "
+        lines.append(f"- Clean - 0 records batch violations out "
                      f"of {compliance['merges_checked']} checked "
                      f"(batch points "
                      f"{', '.join(str(h) + ':00' for h in compliance['batch_hours'])} "
@@ -765,8 +767,8 @@ def render_markdown(data):
         for item in compliance["violations"]:
             lines.append(f"- PR #{item['number']} merged "
                          f"{item['merged_at']} "
-                         f"America/Los_Angeles - outside any "
-                         f"batch window")
+                         f"America/Los_Angeles - "
+                         f"{item.get('reason', 'outside any batch window')}")
     lines += [
         "",
         "## Per regular (rolling window)",
