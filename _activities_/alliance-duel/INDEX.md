@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T01:32:17Z
-version: 1.26.0
+modified: 2026-11-08T03:44:20Z
+version: 1.27.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-0834 alliance-duel execution record 2026-11-04 0839 queue run (done, no ceremony waiting, personal duel total 4,772,100 against the 3,600,000 target, read live)
   - source: ticker-1340 alliance-duel execution record 2026-11-04 1344 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, third consecutive ticker pass to fail this way, Issue 284; ceremony and duel total unmeasured)
   - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental Alliance Duel page read during the navigation detour: Today's Theme Enemy Buster, 01:14:51 left, alliance score 225,000, chest thresholds 40,000 / 150,000 / 540,000; record commit a85cfdafa8 on records/2026-11-07)
+  - source: ticker-1818 alliance-duel execution record 2026-11-07 1828 queue run (partial, league calculating, personal total unread, roulette 0 tokens)
 ---
 
 
@@ -879,4 +880,14 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 
 - Incidental read during the ticker-1633 donations unit's navigation detour (evidence in `_records_/2026-11-07/alliance-donations/1633-queue-run.md`, commit a85cfdafa8): after a back-arrow tap from the radar screen opened the Alliance menu (Leader Abyss Apex, Power 13,330,672,918, Members 96/100), the following screenshot showed the Alliance Duel page with no further input from the executor: Today's Theme Enemy Buster, 01:14:51 left, alliance score 225,000, chest thresholds 40,000 / 150,000 / 540,000, top actions Dispatch UR Trade Truck 1 time +300,000 and Perform 1 UR Secret Task +225,000. The owner may be navigating the Mac himself; the executor stopped contesting the screen and closed the unit.
 - Reading discipline: this is an ALLIANCE score read, not a personal total. The personal duel total was last read live by the 0839 unit (4,772,100 against the 3,600,000 target, 2026-11-04) and is still unread since; the next duel-score unit re-reads the personal total from the VS panel. The theme (Enemy Buster) and the timer agree with the duel day 6 stack posture the planner staged for.
+- Tracker untouched for the duel-score regular; the next tick re-produces the duel-score unit.
+
+## What the 2026-11-07 1828 unit added - league in final-results calculating state, personal total unread, roulette 0 tokens
+
+- Unit star-ceremony-2026-11-07-1430 by ticker-1818, about 18:21 to 18:28 local, status partial. Evidence in `_records_/2026-11-07/alliance-duel/1828-queue-run.md` (commit f04c2b11d on records/2026-11-07). Computer session cc-30, LastWar already running on the Mac mini.
+- Ceremony check: two live base reads show no gold trophy icon beside the Alliance icon - the right column carries Events (red badge 1), the VS medallion reading "Calculating.", the map pin (7d 23:36:02), Season II, a red target/skull icon with countdown 00:00:29 and badge 2, Alliance (red dot), Mail and Inventory. A magnified crop of the Alliance area confirms no trophy. No ceremony is waiting, so nothing was played and nothing claimed.
+- Duel total read: the VS medallion opened the Alliance Duel screen on Infinite Roulette (0 tokens, 0/10 progress, spins reset Sunday 24:00, countdown 23:35:02) - no spin, tokens are 0 and spinning without tokens would mean buying. The Duel League tab reads Alliance Duel League S38, Gold Tier 38-7, 7d 01:34:44 left, [AP3x] The Apex ranked 3rd (Week 1 Win, Week 2 Win, Week 3 lost, Week 4 pending), with the banner "Final results are in progress, please wait..." across the ranking. No personal daily total is shown on this screen. The Record tab shows alliance match history only ([NOOB]Noobs, [Vybe]Good Vybrations, [OMGz]Omega Squad, [CHIA]Chill Alliance and more) - no personal total there either.
+- The personal daily total against the 3,600,000 target is therefore UNREAD in this unit: the league is in its final-results calculating state and the panel shows no personal total on either tab. No figure is estimated from fragments. This is a league-calculating failure mode (blocker f), not a read failure - while the league calculates, the panel offers no personal total to read. The re-read vehicle is the duel-score unit duel-score-2026-11-07-1830 already in the inbox (due 18:30), so no new unit was enqueued. Whether that unit ran is unknown at this run's close; it falls to the next run.
+- Spin tokens: 0 held, 0/10 progress. The open question "How spin tokens are earned inside the duel week" stays open - this unit observed the zero state and the Sunday 24:00 spin reset, not an earn path.
+- Figures read live: power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
 - Tracker untouched for the duel-score regular; the next tick re-produces the duel-score unit.
