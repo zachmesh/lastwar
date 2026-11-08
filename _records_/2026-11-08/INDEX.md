@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T09:27:00Z
+modified: 2026-11-08T10:39:42Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -528,3 +528,46 @@ of 2026-10-28.
 ## 02:30 to about 02:36 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-08-0230. Non-batch pass (checker _tools_/records_batch.py due: not due, next batch 03:00 PT). No merges. Records PR 430 clean at new head afa9a4af, re-verified against live main b7056707, one follow-up comment posted, awaits the 03:00 batch; records PR 426 clean at unchanged head, re-verified, awaits the batch; records PRs 351 and 301 still conflict on the single action-log file, carried. Knowledge PR 434 unchanged since the 0130 feedback, awaiting author body fix; tools PR 425 owner-gated, unchanged since the 2245 escalation, no owner reply. VPS local main ref refreshed to b7056707 this pass; VPS worktree staged revert of the 0130 addendum still present, left untouched. Status: done. Full detail in pr-integration/0230-run.md.
+## 02:06 to 02:21 — Queue ticker pass, perception scout (alliance remainder)
+
+- Scout unit scout-scout-2026-11-02-007, done: the stale
+  2026-11-02 chain remainder walked in full. Alliance City
+  (Rare Soil 5.88K/h 6/6, Coal 13.53K/h 4/4, all entries
+  listed); Season Contributions all four tabs (Mutual
+  Assistance Season Total own #69 4,110,000, Daily/Weekly
+  empty; Siege Season Total own #84 52,500; Rare Soil War
+  and Defeat Season Total own Unlisted 0); Season
+  Milestones all five achieved 2026-9-14; Alliance Furnace
+  Lv.20 max (Coal 13,478,393/4,150,000, Burnable 6d
+  12:00:00, Donation 50/50, Overdrive off; Relocation
+  Spot Construct observed only); Strength Ranking Power
+  top 6 re-read and Donation Weekly own #84 24,900. Red
+  dots: 9 seen, 9 explained, 0 unexplained. Unknowns:
+  floating circular portrait icon, furnace coal-drain vs
+  displayed-burn mismatch, banner fragments, Rare Soil War
+  #6 name partly unread. No successor needed; the
+  scout-2026-11-02 chain is now complete. Tracker
+  untouched. Full detail in perception-scout/0213-queue-run.md.
+
+## 02:17 to 02:32 — Queue ticker pass, perception scout (midday remainder)
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004,
+  partial per rule R1: the stale 2026-11-03 midday chain
+  window walked in full — Weekly Deal page (7 paid packs,
+  period 2026-11-2 to 2026-11-8, nothing free, nothing
+  bought); VIP panel (VIP13, 1,605,970/2,000,000, Daily
+  Freebie claimable, observed only, not claimed); daily
+  missions panel (full 22-task list read: 4 completed
+  unclaimed — Daily Login, Donate to Alliance Tech 5x,
+  Greet Visitors 3x, VIP Activated; 18 incomplete
+  including the paid-purchase task, never to be done;
+  chests 40/80/120/160/200 all unreached; Next Refresh
+  points to about 18:00 local). Build-menu detour walked
+  (Season tab, LIST OF BUILDINGS Economy). Red dots: 5
+  seen, 2 explained, 3 unexplained (VIP panel cart icon;
+  base bus and truck icons) — successor enqueued in chain
+  scout-mid-2026-11-03. Unknowns: floating circular
+  portrait icon; reset-time mismatch (two independent
+  18:00 reads vs the standing 19:00 note, unverified).
+  Tracker untouched. Full detail in
+  perception-scout/0229-queue-run.md.

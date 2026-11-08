@@ -472,3 +472,191 @@ not the execution end.
 - LOOT box re-check: world map centred on own base, March Queues 3/4 (three squads out, actor unresolved). Gift badge 3; LOOT panel holds two Claimed Bears Lair rows (bread 720.0K; red gem 85) and one UNCLAIMED Lv.1 Doom Elite row (gold chest x2, red gem 20, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0) - unclaimed work for the owning regular (gifts); Claim All observed only, never tapped. The three Lv.60 Doom Elite rows from 2026-11-03 are gone; the panel turns over.
 - Red dot accounting: 8 seen, 8 explained, 0 unexplained. Unknown items: furnace overdrive toast [22/60]; the 03:48 building timer identity; the owner of the three marches.
 - Carried unwalked: Alliance Star, Settings, Record Member/Message/Event tabs.
+
+### Scout-alliance remainder, 0204 unit (ticker-0204) - 2026-11-08 about 02:06 to 02:20 local
+
+Observe-only; nothing claimed, fought, dispatched, donated,
+dug or bought. Window walked in full: Alliance City, Season
+Contributions (all four tabs), Season Milestones, Furnace
+Upgrade and Relocation Spot tabs, Strength Ranking Weekly
+subtab. Full unit record at `_records_/2026-11-08/perception-scout/0213-queue-run.md`.
+
+### Entry screen - Star Ceremony (Event 40), read live
+
+- The game opened on the Alliance Star Ceremony screen:
+  "[AP3x] ALLIANCE STAR CEREMONY (EVENT 40)", "Send emotes
+  to the winner to receive rewards", Go button, bonus
+  rewards 4.0K red gem, "Here are your bonus rewards",
+  emote progress 0/1, gift icon badge 14. Observed only;
+  nothing tapped. Star-ceremony regular's domain; a
+  star-ceremony unit is queued.
+- Alliance Star banner on the panel: Time Left 15:42:41 at
+  02:07, 15:36:09 at 02:14. Enter button observed only.
+
+### Alliance panel, read live
+
+- [AP3x] The Apex, Overall Rating 5.0, Leader Abyss Apex,
+  Power 13,350,333,388, Members 96/100, Language English.
+- Buttons: Alliance Wars, Help (red dot), Alliance Gifts
+  (red dot), Members, Alliance Store, Alliance Techs,
+  Assemble, Strength Ranking, Alliance Events, Alliance
+  City, Season Contributions, Season Milestones, Alliance
+  Furnace. The last four were gold-highlighted (new
+  content); all four walked this unit.
+- Bottom bar: back, Record, Applicants, Alliance Star,
+  Settings.
+- Scrolling banner fragments, partial reads only: "Lucky
+  Star! [FATC]Butth... Obtained from Alliance Star Than..."
+  and "or turns out to be true!".
+
+### Alliance City (CITY LIST), read live
+
+- Tabs: Produces Rare Soil (selected first), Produces Coal.
+- Rare Soil: Production Rate 5.88K/h, Captured Cities 6/6.
+  Lv.6 X:499 Y:411 +1,000/h; Lv.5 X:336 Y:411 +900/h;
+  Lv.5 X:587 Y:336 +900/h; Lv.5 X:411 Y:336 +900/h;
+  Lv.4 X:499 Y:262 +800/h; Lv.4 X:336 Y:262 +800/h;
+  Lv.6 X:587 Y:411 +150/h; Lv.6 X:411 Y:411 +150/h;
+  Lv.5 X:662 Y:336 +140/h; Lv.5 X:336 Y:336 +140/h.
+  Sum 5,880/h, matching the 5.88K/h header.
+- Coal: Production Rate 13.53K/h, Digging Strongholds
+  captured 4/4. Lv.6 X:587 Y:411 +3,456/h; Lv.6 X:411
+  Y:411 +3,456/h; Lv.5 X:662 Y:336 +3,312/h; Lv.5 X:336
+  Y:336 +3,312/h. Sum 13,536/h against the 13.53K/h
+  header. Claim All button greyed; not tapped.
+- Server Time 2026-11-8 08:07:52 at entry, 08:08:24 after
+  the scroll. Digging Stronghold captures left today 2/2;
+  War declarations left today 2/2. City Buff button
+  observed only, not tapped.
+- The four coal strongholds also appear in the Rare Soil
+  list at +150/+150/+140/+140 per hour: the two lists
+  overlap on the same four sites.
+
+### Season Contributions (ALLIANCE CONTRIBUTION RANKING), read live
+
+- Tabs: Mutual Assistance, Siege, Rare Soil War, Defeat.
+  Sub-tabs per tab: Daily Ranking, Weekly Ranking, Season
+  Total Ranking. Bottom: reward chest x0, Loot and Record
+  buttons, info button; all observed only.
+- Mutual Assistance, Season Total: #1 [AP3x] Nuna Knuckles
+  85,149,100; #2 [AP3x] ANGEL777 Apex 72,859,500; #3 [AP3x]
+  Ripper Apex 38,164,640; #4 [AP3x] Raze Cromwell
+  35,377,640; #5 [AP3x] 꿀밤Bamie 32,306,360; #6 [AP3x]
+  KouKat 29,757,500; own #69 [AP3x] Bears Lair 4,110,000,
+  reward chest x1. Bottom chest x0.
+- Mutual Assistance, Weekly: "No new data on the current
+  leaderboard.", own row Unlisted.
+- Mutual Assistance, Daily: "No new data on the current
+  leaderboard.", own row Unlisted.
+- Siege, Daily: "No new data on the current leaderboard.",
+  own row Unlisted.
+- Siege, Season Total: #1 [AP3x] Abyss Apex 1,606,450;
+  #2 [AP3x] xChroni Apex 1,402,300; #3 Commander 3edb72110
+  1,345,270 (no [AP3x] tag); #4 [AP3x] Missile Apex
+  1,216,790; #5 [AP3x] ANGEL777 Apex 1,194,940; #6 [AP3x]
+  MegaLoki Apex 1,178,730; own #84 [AP3x] Bears Lair
+  52,500, reward chest x8. Reward column x16 for the top
+  rows. Bottom chest x0.
+- Rare Soil War, Season Total: #1 [AP3x] 벌꿀오소리Teemo
+  5,106,552; #2 [AP3x] Missile Apex 2,618,712; #3 [AP3x]
+  TTS Rage Apex 2,056,076; #4 [AP3x] 꿀밤Bamie 1,656,432;
+  #5 [AP3x] Abyss Apex 989,700; #6 [AP3x] 두...Dogo
+  895,066 (name partly unread); own Unlisted, [AP3x] Bears
+  Lair 0, reward chest x0. Reward column x10 for the top
+  rows. Bottom chest x0.
+- Defeat, Season Total: #1 [AP3x] 벌꿀오소리Teemo
+  298,994,880; #2 [AP3x] Missile Apex 95,488,371; #3 [AP3x]
+  Abyss Apex 94,547,214; #4 [AP3x] TTS Rage Apex
+  79,273,749; #5 [AP3x] 꿀밤Bamie 64,616,874; #6 [AP3x]
+  ItStartsWithaDream 38,218,743; own Unlisted, [AP3x] Bears
+  Lair 0, reward chest x0. Reward column x8 for the top
+  rows. Bottom chest x0.
+
+### Season Milestones (MILESTONE), read live
+
+- All five milestones achieved on 2026-9-14, each with a
+  green check: The Hunt Begins (defeated 100 Doom Elites);
+  Polar Science (1000 season donations in total); Survival
+  Assurance (built 20 High-heat Furnaces in total); Produce
+  Titanium Alloys (built 20 Titanium Alloy Factory No.1 in
+  total); Gather for Warmth (built and upgraded Alliance
+  Furnace to Lv.1).
+- No unachieved milestone visible; the list ends at Gather
+  for Warmth. Rewards shown checked (green ticks) on every
+  row; nothing to claim from this screen.
+
+### Alliance Furnace, read live
+
+- Lv.20 Alliance Furnace, #2110 (469,433), Ranking No.27.
+  Rare Soil stock 4.3M top-left, +5.88K/h top-right
+  (matches the City List rate).
+- Furnace Chamber tab: Coal 13,478,393 / 4,150,000,
+  Burnable 6d 12:00:00. Donation Count 50/50; Donate Coal
+  1000 button observed only, never tapped (donating coal
+  is red-line banned). Power gauge 125 deg C, 0 to 25.0 deg C
+  scale, state Burning. Coal Usage 1,440/min. Console:
+  Turn On toggle on, Overdrive toggle off.
+- Upgrade tab: Lv.20 (Max Level), bar 4,323,515 with a 2.0M
+  label. Rare Soil 2,000,000; Coal Burn Usage 1440/min;
+  Overdrive Coal Usage 5760/min; Coal Storage Limit
+  4,150,000; Activation Heat 12.5 deg C; Overdrive Heat
+  25 deg C; Max. Durability 300,000.
+- Relocation Spot tab: "To move the Alliance Furnace, build
+  a Furnace Relocation Spot at the target site." Coal bar
+  13,477,313 - 1,000; Construct button observed only, never
+  tapped (alliance move, observe-only for a scout).
+- Coal drain note, unverified: coal read 13,478,393 in the
+  Chamber tab and 13,477,313 in the Relocation tab about
+  four minutes later, a fall of 1,080, against the
+  displayed burn of 1,440/min. No rate is inferred; the
+  two readings disagree with the displayed rate and the
+  mismatch is recorded, not resolved.
+
+### Strength Ranking, read live
+
+- Power tab re-read: #1 ItStartsWithaDream 271,007,082;
+  #2 R5 Abyss Apex 266,260,167; #3 StarFall 208,552,393;
+  #4 R3 Nuna Knuckles 204,829,707; #5 R3 xChroniApex
+  200,974,370; #6 R4 KillerInstinct14 197,573,798; own
+  #34 R3 Bears Lair 147,744,234 (unchanged from the
+  2026-11-07 read; the top rows moved both ways since).
+  Kills tab not re-read this unit (read 2026-11-07).
+- Donation, Daily: #1 Skinner Box 6850; #2 KaBoom420 6000;
+  #3 MUZIQUE Apex 6000; #4 R4 TTS Rage Apex 5500; #5 R3
+  OatmealDragon 5350; own row 2350 (rank unread in OCR;
+  green own row, below the top 5).
+- Donation, Weekly: #1 R3 DCna8ive 161,250; #2 R2 KaBoom420
+  151,500; #3 R4 Texan Apex 98,900; #4 R3 MrCallejon
+  89,250; #5 R3 specialist Donut 75,350; own #84 R3 Bears
+  Lair 24,900. Donate and Rewards buttons observed only,
+  not tapped.
+
+### Red dot accounting for this section
+
+- Seen 9 signals: Help and Alliance Gifts red dots on the
+  panel; the four gold-highlighted buttons (Alliance City,
+  Season Contributions, Season Milestones, Alliance
+  Furnace); the Star Ceremony entry screen (bonus 4.0K gem,
+  emote 0/1, gift badge 14); the Alliance Star banner.
+- Explained 9: Help and Gifts map to their owning regulars
+  (queued); the four gold buttons were walked this unit
+  and hold no claimable action (Contribution own reward
+  chest x0 on every tab; Furnace Donate Coal is red-line
+  banned; Relocation Construct is observe-only; Strength
+  Ranking Donate/Rewards observed only); the ceremony
+  screen and banner belong to the star-ceremony regular
+  (unit queued).
+- Unexplained 0. Unknown items: the floating circular
+  portrait icon (seen on the City List tiles, the Milestone
+  screen, the Furnace gauge and the Strength Ranking
+  Weekly tab, at a different position each time; identity
+  unknown); the furnace coal-drain vs displayed-burn
+  mismatch above; the two scrolling-banner fragments;
+  the partly unread Rare Soil War #6 name.
+- Carried unwalked: none from this unit's window. The
+  Strength Ranking Kills tab was last read 2026-11-07 and
+  was not in this window.
+- unmatched_labels: none new. Alliance City, Season
+  Contributions, Season Milestones, Furnace Upgrade and
+  Relocation Spot were already on the roster from the
+  2026-11-07 sections.
