@@ -2702,6 +2702,25 @@ of 2026-10-28.
   merge chance the 19:00 batch. Status: done.
   Full detail in pr-integration/1600-run.md.
 
+## 16:15 to about 16:26 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1615.
+  Non-batch pass for records purposes (checker reports
+  not due, next batch point 19:00 PT; the 15:00 batch
+  slot was already spent by the 1500 pass). No
+  knowledge or code PR open; no merges. All four open
+  records PRs are now CLEAN against main dfc3e08b
+  (verified by git merge-tree and by GitHub) after the
+  ticker-1608 branch-side reconciliations merged main
+  into every records branch and resolved the action-log
+  union; all four re-noted at their new heads
+  (398 d230406be2, 351 f9e1fff83d, 301 602566d9,
+  256 d44b93ba). No new records PR opened; no
+  action-log line owed. Next merge chance the 19:00
+  batch, which should now be able to merge all four.
+  Status: done.
+  Full detail in pr-integration/1615-run.md.
+
 ## 16:16 to about 16:21 - Ticker pass
 
 - Ticker pass ticker-1608. Radar unit radar-2026-11-07-1403
