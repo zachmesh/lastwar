@@ -3362,3 +3362,21 @@ of 2026-10-28.
   occurrence). Ticker-1818 records landed during this run and fall
   to the next run; ticker-1704 still has no record. Status: done.
   Full detail in knowledge-organization/1832-run.md.
+## 18:41 to about 18:53 - Ticker-1834 passes unit
+
+- Passes unit passes-2026-11-07-1457, status done. First live
+  shop read since the 0841 checked-only unit of 2026-11-04:
+  Mac mini online, game window on-screen (372131), no
+  different-device dialog. 3 claims against the new 18:00
+  cycle: Hot Deals Gear Master Pack free claim (Upgrade Ore
+  Lucky Chest x1, Upgrade Ore 1500), Free Supply auto-claim
+  (supply chest x1, ruby x10), Monthly Daily Gift (gold
+  tickets 2, red diamonds 100, stamina 50 x2, iron 200, 5m
+  speedups x60; Days Left 14, Rewards Left 14). Weekly Pass:
+  no owned pass claimable - S2 Drone, S1 Drone Parts and Coin
+  cards are all $4.99 offers; Legendary Take All $19.99 not
+  tapped. Full detail in shop-claims/1853-queue-run.md.
+- Pass stopped after one unit: the device token lease ran to
+  02:55:34Z. The pre-reset-sweep chain units 001/002 were
+  never claimed and expire at the 19:00 reset; the sweep work
+  itself ran as the 1730 unit (ticker-1734, partial).
