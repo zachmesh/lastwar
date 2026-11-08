@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T16:37:41Z
+modified: 2026-11-08T17:39:52Z
 level: L1
-version: 1.38.0
+version: 1.39.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -57,6 +57,7 @@ grounded_in:
   - source: ticker-0534 perception-scout execution records 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Days Left 13) and 0542 queue run (done, three carried red dots explained live, 0022 white-truck mapping corrected) and alliance-donations execution record 2026-11-08 0546 queue run (partial, re-read after cooldown, last donation landed); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
   - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live, 17 medals, Rules list corrected, Doomsday guardian rotated); record commit 8dcbdf92b9 on records/2026-11-08
+  - source: ticker-0834 perception-scout execution record 2026-11-08 0845 queue run (partial, station re-check, eighth no-train confirmation, Wars dot gone since 07:34, Issue #212); record commit cf80509ea on records/2026-11-08
 ---
 
 
@@ -2713,3 +2714,71 @@ observe-only, nothing claimed). Evidence in
   branch; uncommitted observation sections from other scout passes in the
   main checkout's working tree were left exactly as they were, for the PR
   flow and the retro loop-health check.
+
+## What the 2026-11-08 0845 unit added - station re-check, eighth no-train confirmation, Wars dot gone since 07:34
+
+- Unit scout-scout-2026-11-02-010 by ticker-0834, about 08:43 to 08:45
+  local, status partial with blocker category h (by-design chain
+  continuation) - the station panel is a preparation-only surface and
+  stays unlocated until a train prepares, so the check itself is
+  conclusive for this window but the remainder is carried to the
+  successor. Evidence in
+  `_records_/2026-11-08/perception-scout/0845-queue-run.md` (commit
+  cf80509ea on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-08/perception-scout/observation.md` (section
+  "Station panel re-check, read live about 08:43-08:45 local").
+  Observe-only throughout; nothing claimed, fought, dispatched,
+  donated, boarded, dug or bought. Successor
+  scout-scout-2026-11-02-011 enqueued with the same window.
+- Session: computer session cc-100 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  Session ended cleanly at the unit close.
+- Entry route: the game was found on the ALLIANCE TECHS tree screen
+  (left there by the donations unit of this pass). Its outer X was
+  tapped at the grounded centre (818,152) and the Alliance menu opened
+  behind it. The menu was closed with its back arrow at (187,920) to
+  reach a clean base view for the train signals.
+- Alliance menu, about 08:44 local: [AP3x] The Apex, Overall Rating
+  5.0, Leader Abyss Apex, Power 13,259,135,070 (was 13,416,181,168 at
+  the 0734 entry read, 13,363,455,935 at the 0440 read), Members 95/100
+  (was 96/100), Language English. Red dots on Help and Alliance Gifts
+  only. NO dot on Alliance Wars - the dot was present and unexplained
+  in the seq 009 read at about 07:34 (Issue #212) and is gone now. No
+  dot on Members, Alliance Store or Alliance Techs. Assemble and
+  Strength Ranking cut off below the fold. Alliance Star (Event 40),
+  Time Left 09:05:32. Bottom row: Record, Applicants, Alliance Star,
+  Settings. No Station button on this panel, as established.
+- Base view, about 08:45 local: power 149,850,353; food 478.8M, iron
+  802.1M, coin 6.9M; second row 25.0M, 922.2K; diamonds 4,397 (cart);
+  stamina 120; Season II 7d 09:15:12. Left icon column: avatar Lv.30,
+  hammer 2/4 (red dot), flask 2/2, green face 6.5C, radio badge 4,
+  white truck (red dot), radar badge 2, wrench. NO train icon in this
+  frame. NO "Boarding closes in" banner under the resource bar - the
+  banner area shows the High-temp Furnace overdrive line and a Breaking
+  News line instead. Right column: Events badge 1, VS, Season II,
+  Alliance, Mail (red dot), Inventory (red dot), WORLD; 99+ badge.
+- Reading: neither train-preparation signal is present, so no train is
+  preparing in this window and the STATION PLATFORM screen has no live
+  state to read. Eighth no-train confirmation in this chain (third
+  2134, fourth 0022, fifth 2304, sixth 0118, seventh 0440 re-check,
+  eighth this unit). The platform stays a preparation-only surface,
+  carried not closed; the successor re-checks the two preparation
+  signals first rather than re-panning.
+- Wars dot flip: present at about 07:34 (seq 009, unexplained, Issue
+  #212), absent at about 08:44. No rally was opened in this unit
+  (scout observes only), so whether a rally ran in between is
+  unverified. Issue #212 stays open - the dot's semantics are still
+  unexplained - but there is no unexplained dot in this unit's window.
+  Commented on Issue #212 by this run.
+- Red dots seen in this unit's window: Help, Alliance Gifts (explained
+  - owning regulars help and gifts, units queued); Wars absent.
+  Explained 2, unexplained 0 for this unit's window. Other dots noted
+  in passing, outside this unit's scope and previously explained to
+  their owning regulars: hammer, radio 4, white truck, radar 2,
+  Events 1, Mail, Inventory, 99+.
+- Follow-up: successor scout-scout-2026-11-02-011 enqueued, same window
+  (station panel only, train entry and preparation state; Wars dot
+  Issue #212). The station remainder stays carried for the next
+  scout-alliance unit, which re-checks the two preparation signals
+  first.
+- Game left on the clean base view.
