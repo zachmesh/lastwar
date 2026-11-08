@@ -3334,6 +3334,57 @@ of 2026-10-28.
   points - context only, never the daily total. Tracker
   untouched. Full detail in alliance-duel/1439-queue-run.md.
 
+## 14:32 to about 14:52 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1432 run. Own PR 464 MERGED
+  (0 comments, 0 reviews); no open profile PR, no
+  unaddressed feedback. Folded ticker-1249 survivor 1307
+  and radar 1256, ticker-1317 arms-race 1333, donations
+  1342, training 1350 and arms-race 1342, and ticker-1352
+  radar 1355, gifts 1406 and help 1413 into 7 profiles as
+  one commit (a3e153db) on new PR #468 (OPEN and MERGEABLE,
+  mergeState CLEAN, at run close):
+  alliance-donations 1.70.0 - one coin donation verified
+  live 2/30 to 1/30 on Quick Construction; replenishment
+  +1-2 over about 53 minutes (about 1 per 20 minutes,
+  two-endpoint estimate only); War-tab branch started but
+  Rallied node not reached, per-node question open;
+  radar-tasks 1.52.0 - 1256 done (Quick Execute 4 tasks,
+  stamina 120 to 80, points 267 unchanged, bar flipped to
+  Claim All only with 10 rewards pending; duel day 7 ends
+  18:00 local per the live tool, Issue #242 evidence) and
+  1355 partial (Claim All bar lockout, 16 stored tasks
+  unexecuted, 6 pins inventoried; duplicate-unit Issue
+  #466, tooling); arms-race 1.59.0 - Unit Progression
+  phase verdict score 0, tier-3 unreachable, phase ends
+  about 14:00 (supersedes the 1333 "about 14:03"
+  estimate; the 1333 timer pair is internally
+  inconsistent); Lv.30 barracks busy with a Lv.10 batch of
+  793; by live read three barracks remain unchecked, not
+  two; Frontline Breakthrough badge belongs to the
+  Doomsday event page; troop-training 1.28.0 - Lv.30 busy
+  re-verified (20:47:28 left), tent tap (459,457) opens
+  TRAIN UNITS directly, tent tap (564,510) misses, no
+  batch queued; survivor-intake 1.37.0 - five named
+  recruits (JAVIER Lawyer, JAVIER Builder, ELINA, CHLOE,
+  MICHAEL), 6th card JAVIER Barn Keeper open; Recruit-tap
+  control-channel "no change" advisory disproved for the
+  Recruit control; Quick Dispatch deferred per R7;
+  JAVIER/James recruitment after the 1333 (500,800) taps
+  unverified; alliance-gifts 1.39.0 - 442 Regular and 31
+  Premium claimed in full, Gift Level 28 progress
+  193,982,860, progress moves beyond own claims twice
+  (Issue #183 evidence), Premium Claim All grounded at
+  (718,926) this session; alliance-help 1.29.0 - Help All
+  pressed, red dot cleared, points counter stayed 0/1,000
+  before and after (open question, added to the profile's
+  Open questions list, not a new Issue). Issues commented
+  by this run: #450 (fold, comment 6728243495), #160 and #423
+  (replenishment fold note, comments 6728243679 and 6728243880), #183
+  (fold, comment 6728245350), #242 (18:00 confirmation, comment
+  6728245533). No new Issue filed. Slack DM sync sent. Status:
+  done. Full detail in knowledge-organization/1432-run.md.
+
 ## 14:39 to about 14:45 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-08-1439. No adopted open PR
