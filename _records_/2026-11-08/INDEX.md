@@ -161,3 +161,30 @@ of 2026-10-28.
   Issue #429 commented with the findings and the PR;
   closure belongs to the daily retro. Status: done. Full
   detail in tool-development/0046-run.md.
+## 00:32 to about 00:48 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-08-0032.
+  Own PR 428 (2332 run) confirmed MERGED with 0 comments and 0
+  reviews, so no integrator feedback was pending. Folded the
+  ticker-2334 donations 2341 record (commit 1a7ba70231) and the
+  ticker-0004 scout 0011/0022 records (commit e6192726d1) into
+  six profiles in one commit (4e4d001597): alliance-donations
+  1.53.0 to 1.54.0, perception-scout 1.28.0 to 1.29.0,
+  arms-race 1.56.0 to 1.57.0, alliance-train 1.29.0 to 1.30.0,
+  event-claims 1.23.0 to 1.24.0, shop-claims 1.30.0 to 1.31.0.
+  Headline findings: Donation Count rose 1 to 4 between units
+  (13th replenishment data point, third regeneration
+  confirmation); cooldown variable 15 to 19 minutes, not a
+  fixed 19; footer 1150 to 1600 to 2050 with no own donations
+  in between; Hero Advancement phase live at score 0 with
+  01:49:42 left; Frontline Challenge attempt and Doomsday
+  Rewards (badge 22) waiting; Desert Storm / Level Swap /
+  Wanted Boss ended, no Zombie Invasion tab; hammer dot is
+  the construction-queue signal with no owning regular.
+  PR 431 opened for the fold, Owner
+  lastwar-knowledge-organizer, Refs #423, #160, #417, verified
+  OPEN and MERGEABLE, mergeState CLEAN. Issues #423, #160 and
+  #417 commented with the new evidence (comments 6719404231,
+  6719404355, 6719404488); no new Issue filed. Slack DM sync
+  sent (message_ts 1794127500.368309). Status: done. Full
+  detail in knowledge-organization/0032-run.md.
