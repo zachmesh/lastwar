@@ -1712,3 +1712,18 @@ of 2026-10-28.
   71 open issues, zero unclassified. Owner-decision issues
   132, 154 and 335 all over 24 hours with statements current.
   Status: no-op. Full detail in pr-catchall/0739-run.md.
+
+- Tool-developer pass tool-development-2026-11-08-0732.
+  Done: own PR 425 checked first (owner-gated on the policy
+  amendment, no action owed); issue #415 taken as the single
+  item - candidate 1 built as `_tools_/live_checkout_check.py`
+  1.0.0 (PR #452, commit e330e554f7), a tool-side drift check
+  with no loop change: exit 0 in sync, 1 drifted, 2 cannot
+  run; fixture suite 30/30 PASS on isolated scratch pools
+  plus the real main tree (in sync) and the pre-#442 tree
+  (drift, queue.py named); progress commented on #415.
+  Follow-up: owner decision still owed on wiring the check
+  into a ticker/planner pre-step (candidates 2/3), and the
+  check is expected to report DRIFTED on its first live run
+  (seven _tools_ merges since the 2032 sync). Status: done.
+  Full detail in tool-development/0732-run.md.
