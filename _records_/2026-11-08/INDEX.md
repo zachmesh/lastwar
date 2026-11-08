@@ -1448,3 +1448,20 @@ of 2026-10-28.
   issues 132, 154 and 335 all over 24 hours with statements
   current. Status: no-op. Full detail in
   pr-catchall/0639-run.md.
+## 06:40 to about 06:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0640. Plan staged 15
+  units (already_present 64, reaped 0, expired 0 - the
+  18:00-18:30 local slots: mail, help, gifts, train,
+  star-ceremony and duel-score at 1830; harvest, radar,
+  survivors, training, donations and arms-race at 1803;
+  vip, daily-missions and scout at 1800). Pre-reset sweep
+  pair already complete via plan (1630 seq 1 staged by the
+  0440 run, 1730 seq 2 staged by the 0540 run). Scout diff
+  on the Nov 8 observation applied with zero changes
+  (observed 0, actionable 0, enqueued 0, candidates 0,
+  unexplained red dots 14 on a narrative-fallback basis -
+  six sections, seen 44, explained 30; unchanged from
+  0540, observation file byte-identical). 0 withdrawals.
+  Pool: inbox 80, claimed 1, done 1238. Status: done.
+  Full detail in queue-planning/0640-run.md.
