@@ -4052,3 +4052,20 @@ of 2026-10-28.
   main, carried without a repeat note. No merges, no
   Slack DM. Status: done. Full detail in
   pr-integration/2130-run.md.
+
+## 21:32 to about 21:44 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-07-2132.
+  Own PRs checked first: no tooling PR of mine open (3 open
+  PRs are integrator-owned records branches). Took the single
+  highest-priority open tooling item, issue #418: the retro
+  batch audit checked window membership only, so the PR 379
+  second merge in the 2300 window passed as clean. Made the
+  audit merge-aware (records_batch.py 1.1.0 -> 1.2.0,
+  retro_report.py 1.5.0 -> 1.5.1): earliest merge per window
+  is compliant, later merges are violations with a reason.
+  Opened PR #420 (branch work/batch-audit-first-pass-418,
+  commit 74b27a9395) and commented on #418. Validated on
+  scratch (38/38 fixture assertions, exact #418 replay
+  flags PR 379; old code reproduces 0 violations). Status:
+  done. Full detail in tool-development/2132-run.md.
