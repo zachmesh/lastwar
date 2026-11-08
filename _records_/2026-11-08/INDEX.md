@@ -512,3 +512,7 @@ of 2026-10-28.
   base-screen units while the overlay is open instead of
   preferring the clearing unit). Full detail in
   alliance-donations/0154-queue-run.md.
+
+## 01:45 to about 02:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0145. Non-batch pass (checker _tools_/records_batch.py due: not due, next batch 03:00 PT). No merges. Records PR 430 clean at new head b88ed12a (ticker-0137 delivery landed mid-pass), re-verified against main b7056707, two follow-up comments posted, awaits the 03:00 batch; records PR 426 clean at unchanged head, re-verified, awaits the batch; records PRs 351 and 301 still conflict on the single action-log file, carried. Knowledge PR 434 unchanged since the 0130 feedback, awaiting author body fix; tools PR 425 owner-gated, unchanged since the 2245 escalation, no owner reply. VPS worktree holds a staged but uncommitted revert of the 0130 addendum, left untouched. Status: done. Full detail in pr-integration/0145-run.md.
