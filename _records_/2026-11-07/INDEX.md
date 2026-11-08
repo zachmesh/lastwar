@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-08T01:25:00Z
+modified: 2026-11-08T05:08:00Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -3984,3 +3984,32 @@ of 2026-10-28.
   action-log file, re-noted. No merges, no Slack DM.
   Status: done. Full detail in
   pr-integration/2100-run.md.
+## 20:39 to about 21:05 - Daily retro pass
+
+- Retro pass retro-review-2026-11-07-2105. Eighth daily
+  rolling retro, window 2026-11-01 to 2026-11-07.
+  Branch pool 688 units (done 114, partial 162, failed
+  122, expired 288, skipped 2, unverified 582); live
+  pool 746 units (done 143, partial 209, failed 98,
+  expired 294, skipped 2, unverified 606). Pool gap 58,
+  pool_gap.py FAIL (Nov 3 backfill 88; branch leads
+  Nov 5-7). Nov 7: first execution day after the
+  76-hour outage - 112 consecutive failed ticker passes
+  ended at ticker-1633 (16:35) after the owner clicked
+  the Dock icon; 5 done of 101 on the branch.
+  Threshold breaches: 7 named (red dots unproven clean,
+  expired day counts, quota attainment under 0.8,
+  unverified over 20 percent after the first full
+  post-specification week, closed-improvement recurrence
+  3 of 6, standing-job artifact missing partial, ledger
+  coverage 13 of 23). Issues filed: #416 (arms-race HUD
+  discrepancy), #417 (donation-points drop), #418
+  (records-batch cadence miss, PR 379). Issue #128
+  reopened (premature closure missed by three retros).
+  21 carried issues commented. 0 closed. Owner-decisions
+  register 1.7.0 to 1.8.0, 7 items open, all over 48
+  hours. Batch audit: 6 merges, tool verdict 0
+  violations under window membership, plus the PR 379
+  cadence miss named by the integrator's own record.
+  Full detail in _records_/retro/2026-11-07.md and
+  retro-review/2105-run.md. Status: done.
