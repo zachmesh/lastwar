@@ -3118,3 +3118,24 @@ of 2026-10-28.
   next run. Status: done. Full detail in
   knowledge-organization/1732-run.md.
 
+
+## 17:45 to about 17:57 - PR integration pass
+
+- PR-integrator pass pr-integration-2026-11-07-1745.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, next batch 19:00 PT). Merged knowledge
+  PR 408 (tools regulars.py LA-date fix, Issue 407,
+  squash c5c0d3bc) and knowledge PR 409 (seven-profile
+  fold of ticker-1633 and ticker-1655 records, Issue 282,
+  squash 8694f52b); new main 8694f52b. PR 408 verified
+  on its head files (no naive datetime.now or
+  date.today left, --date passed at both queue.py call
+  sites); PR link commented on Issue 407. All four open
+  records PRs (398, 351, 301, 256) verified clean
+  against new main and awaiting the 19:00 batch; PR 398
+  head advanced twice mid-pass (86345daf to f6b69362 to
+  a206928185) with two re-check comments posted. Local
+  main sync-back skipped: ~/workspace/lastwar main
+  (37dea85e05) diverged from remote main and cannot be
+  fast-forwarded, no force per the job rules. Status:
+  done. Full detail in pr-integration/1745-run.md.
