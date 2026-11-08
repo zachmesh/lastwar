@@ -305,3 +305,59 @@ of 2026-10-28.
   pr-integration/0115-run.md for a later pass.
   Status: done. Full detail in
   pr-integration/0115-run.md.
+## 01:04 to about 01:18 - Queue ticker pass, perception scout (alliance remainder station check)
+
+- Ticker pass ticker-0104. Sync reaped nothing and produced
+  nothing new - all 22 due regulars were already queued.
+  No zombie chain was seeded: the Zombie Invasion event
+  ended at about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed at unit 066) and the activity
+  metadata forbids seeding until a Zombie Invasion tab is
+  seen live in the Events hub again.
+- Worked in a detached worktree
+  lastwar-worktrees/ticker-0104-1108 from records/2026-11-08
+  head a0135b914a: the main checkout sits on
+  work/ops-execution-records holding another job's in-flight
+  tier-2 state, so it was left untouched.
+- Unit scout-midday-scout-mid-2026-10-31-008, partial,
+  observe-only: station panel check. Game found on the
+  Alliance panel ([AP3x] The Apex, Power 13,350,333,388,
+  Members 96/100, Alliance Star Event 40 16:40:54 left,
+  dots on Help and Gifts); back to the base screen
+  (power 149,850,353, stamina 120, cart 4,217). Both
+  preparation signals absent - no left-column train icon,
+  no "Boarding closes in" banner - so the unit closed
+  partial without panning, per its window instruction:
+  sixth no-train confirmation in this chain. Red dots 8
+  seen, 6 explained, 2 unexplained (Inventory dot, 99+
+  badge, both other groups' surfaces). Successor
+  scout-midday-scout-mid-2026-10-31-009 enqueued for the
+  station panel re-check. Tracker untouched. Full detail
+  in perception-scout/0118-queue-run.md and the appended
+  observation section.
+- Unit scout-scout-2026-11-02-007, partial, observe-only:
+  alliance remainder (Alliance Star, Settings, Record).
+  Alliance icon re-grounded fresh at norm 917,705 and
+  opened the panel at once (correcting the 0752
+  903,750 MY PROFILE misfire). Record bottom button
+  unresponsive to three background taps (240,935 /
+  242,920 / 242,960); click_foreground needs an
+  element_number the game's Accessibility tree does not
+  provide - first instance of this blocker in this
+  chain, method exhausted in-unit, Record
+  Member/Message/Event tabs unwalked. Alliance Star
+  Enter opened the ceremony: Event 40, 6 slides, slide 1
+  "S2 Big Shot - Texan Apex - Assist allies in the
+  first kill of Doom Elite in S2 20 time(s) this week"
+  (49 hearts), slide 2 "Little Sun" / "Nuna Knuckles";
+  chest 0/1 observed only, no reaction sent; the
+  bottom-left button advances slides and does not exit
+  the ceremony. Settings unwalked (ceremony exit not
+  found in-unit). Red dots 4 seen, 4 explained, 0
+  unexplained. Successor scout-scout-2026-11-02-009
+  enqueued with the non-overlapping remainder (Settings,
+  Record tabs, Gifts Premium tab, Assemble, Strength
+  Ranking); seq 008 already owns Help, Store, City,
+  Wars Intel and the station panel. Tracker untouched.
+  Full detail in perception-scout/0122-queue-run.md and
+  the appended observation section.
