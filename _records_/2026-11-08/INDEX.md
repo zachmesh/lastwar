@@ -525,6 +525,43 @@ of 2026-10-28.
 
 - Integrator pass pr-integration-2026-11-08-0220. Non-batch pass (checker _tools_/records_batch.py due: not due, next batch 03:00 PT). No merges. Records PR 430 clean at new head 2b715469, re-verified against live main b7056707, one follow-up comment posted, awaits the 03:00 batch; records PR 426 clean at unchanged head, re-verified, awaits the batch; records PRs 351 and 301 still conflict on the single action-log file, carried. Knowledge PR 434 unchanged since the 0130 feedback, awaiting author body fix; tools PR 425 owner-gated, unchanged since the 2245 escalation, no owner reply. VPS worktree staged revert of the 0130 addendum still present, left untouched. Status: done. Full detail in pr-integration/0220-run.md.
 
+## 02:32 to about 02:55 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0232 run. Own PR 434 carried
+  integrator feedback (body stale after the second
+  commit): body corrected, reply posted, no branch
+  change needed. Folded ticker-0137 scout 0150 and
+  donations 0154 into 3 profiles as a third commit on
+  PR 434 (b21633968), then ticker-0204 scout 0213 and
+  0229 into 5 profiles as a fourth commit (27c57cc53;
+  PR 434 OPEN and MERGEABLE, mergeState CLEAN at run
+  close): perception-scout 1.31.0 to 1.33.0,
+  alliance-duel 1.29.0 to 1.30.0, alliance-donations
+  1.56.0 to 1.58.0, daily-missions 1.7.0 to 1.8.0,
+  vip-rewards 1.12.0 to 1.13.0, shop-claims 1.31.0 to
+  1.32.0. Star Ceremony loop established (chest ->
+  10 -> 11 -> 12 -> 13 -> MVP -> chest), slides 10-13
+  and MVP winners read live, Go/emote claim is the
+  only untested forward action; slide-count
+  reconciliation open. Donations 0154 blocked by the
+  same overlay: 0 donations, count unread. Alliance
+  remainder walked in full; VIP panel, daily missions
+  22-task list and Weekly Deal page walked. Two
+  carried unknowns resolved: President banner in full
+  ("Important: President HawksMav appointed") and the
+  13.22K figure as the diamond count. Weekly Deal
+  corrected from three packs to seven. Donation Daily
+  2350 corroborates the footer. Mission Next Refresh
+  points to about 18:00 local, new evidence for Issue
+  #242 (commented). Duplicate executions filed as
+  Issue #438 (tooling). Records push raced the branch
+  and was rebased onto the live tip, no force push.
+  Bundle lesson: a raw-SHA range is refused as empty,
+  use a named ref as the positive side. VPS disk 709M
+  free. Slack DM sync sent. No game operated, no
+  queue code or cron definition edited. Status: done.
+  Full detail in knowledge-organization/0232-run.md.
+
 ## 02:30 to about 02:36 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-08-0230. Non-batch pass (checker _tools_/records_batch.py due: not due, next batch 03:00 PT). No merges. Records PR 430 clean at new head afa9a4af, re-verified against live main b7056707, one follow-up comment posted, awaits the 03:00 batch; records PR 426 clean at unchanged head, re-verified, awaits the batch; records PRs 351 and 301 still conflict on the single action-log file, carried. Knowledge PR 434 unchanged since the 0130 feedback, awaiting author body fix; tools PR 425 owner-gated, unchanged since the 2245 escalation, no owner reply. VPS local main ref refreshed to b7056707 this pass; VPS worktree staged revert of the 0130 addendum still present, left untouched. Status: done. Full detail in pr-integration/0230-run.md.
