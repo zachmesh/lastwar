@@ -465,3 +465,10 @@ Correction (same pass, from unit timestamps): the unit ran
 21:07:06 to 21:16:08 local (542 seconds); the 21:21 end in
 the section header above is the device-token lease expiry,
 not the execution end.
+
+### Scout-alliance remainder, 2153 unit (ticker-2134, stale 11-02 chain) - re-check 2026-11-07 about 21:48 to 21:53 local
+
+- Station panel: no train icon in the left column, no "Boarding closes in" banner, so no train preparing; third independent confirmation of this state inside this pass. Building countdown 03:48 (direction unverified).
+- LOOT box re-check: world map centred on own base, March Queues 3/4 (three squads out, actor unresolved). Gift badge 3; LOOT panel holds two Claimed Bears Lair rows (bread 720.0K; red gem 85) and one UNCLAIMED Lv.1 Doom Elite row (gold chest x2, red gem 20, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0) - unclaimed work for the owning regular (gifts); Claim All observed only, never tapped. The three Lv.60 Doom Elite rows from 2026-11-03 are gone; the panel turns over.
+- Red dot accounting: 8 seen, 8 explained, 0 unexplained. Unknown items: furnace overdrive toast [22/60]; the 03:48 building timer identity; the owner of the three marches.
+- Carried unwalked: Alliance Star, Settings, Record Member/Message/Event tabs.

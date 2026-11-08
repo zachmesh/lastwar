@@ -139,3 +139,14 @@ Full unit record at `perception-scout/0919-queue-run.md`.
 - Carried unwalked: station panel and loot box
   re-check only.
 - unmatched_labels: none in the surfaces actually walked.
+
+### Scout-events, 2150 unit (ticker-2134, stale 11-04 midday chain) - late catch-up read 2026-11-07 about 21:44 to 21:50 local
+
+- Drone Boost (star-icon tab): Contest Segment Lv.29-30, 0/2 chests, score 0, timer 00:14:48; tiers 1,500 / 10,000 / 30,000 at 2,360 / 4,800 / 11,800; scoring rows Drone Battle Data +1, Stamina +100, diamond packs +30 (observed only). Own rank 7, #2110 [AP3x]Bears Lair, score 0.
+- Frontline Breakthrough (tab badge 1): timer 20:04:23, phase Saving Soldiers, 42%; reward row red gem 100, gold card 10, crates 18, coins 18, 3, 3; Challenge button red dot (observed only).
+- Winter Battlefield (5v5): "Event is starting soon", countdown 20:14:01; windows 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00, Base Lv.15+; Match greyed.
+- The Doomsday (tab badge 22): timer 20:12:58; Warzone Guardian [CTR1]초리vv, Total Damage 1.8G; Alliance Threat (0), Warzone Threat (0), "Threat Neutralized"; Rewards dot. Known label (event-claims metadata), not new.
+- Scrolling banner: "Important: President HawksMav appointe..." (cut off), still unread in full.
+- No Zombie Invasion tab. Tabs seen: Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday, Community. Desert Storm Battlefield, Level Swap, Wanted Boss not re-verified in this scroll.
+- Red dot accounting: 6 seen, 5 explained, 0 unexplained. Unknown items: what The Doomsday badge 22 counts; the full President banner text; the furnace overdrive toast [22/60].
+- Carried unwalked: Community tab, Desert Storm / Level Swap / Wanted Boss re-verification, scout-store and scout-alliance groups, the two left-column badges, the station-panel re-check.

@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-08T05:08:00Z
+modified: 2026-11-08T06:00:00Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -4154,3 +4154,62 @@ of 2026-10-28.
   records branches contained in main). No owner-gated
   PR. Status: done. Full detail in
   pr-integration/2145-run.md.
+## 21:36 to about 21:40 — Queue ticker pass, perception scout
+
+- Scout unit scout-midday-scout-mid-2026-10-31-007, partial:
+  station panel remainder re-checked live — no train icon in
+  the left column and no Boarding closes in banner, so no train
+  is preparing and the platform has no live state to read. Third
+  consecutive partial on this blocker, so rule R2 applied: the
+  preparation-only finding and the check-signals-first entry
+  route are written into the alliance-train metadata (1.6.0,
+  tier-2 edit left uncommitted for the knowledge PR flow).
+  Alliance panel power 13,360,041,845, Members 96/100; base
+  power 149,850,353, stamina 120. 9 red dots seen, all
+  explained, 0 unexplained; furnace overdrive toast [22/60]
+  still unexplained. Successor enqueued. Tracker untouched.
+  Full detail in perception-scout/2140-queue-run.md; observation
+  in _records_/2026-11-03/perception-scout/observation.md.
+## 21:43 to about 21:45 — Queue ticker pass, perception scout
+
+- Scout unit scout-scout-2026-11-03-001, partial: base group of
+  the stale 2026-11-03 post-reset pass walked observe-only (late
+  catch-up read). Base power 149,850,353, stamina 120; no train
+  icon in the left column; building timer 03:42 (direction
+  unverified); skull timer 7d 20:17:26. Resource bubbles observed
+  only, none collected. 7 red dots seen, all explained, 0
+  unexplained; furnace toast [22/60] still unexplained.
+  Successor enqueued for the events group. Tracker untouched.
+  Full detail in perception-scout/2145-queue-run.md; observation
+  in _records_/2026-11-03/perception-scout/observation.md.
+## 21:44 to about 21:50 — Queue ticker pass, perception scout
+
+- Scout unit scout-midday-scout-mid-2026-11-04-001, partial:
+  events group of the stale 2026-11-04 midday pass walked
+  observe-only — Drone Boost (Segment Lv.29-30, score 0, own
+  rank 7), Frontline Breakthrough (Saving Soldiers 42%,
+  timer 20:04:23, Challenge dot), Winter Battlefield 5v5
+  (starting soon, windows 11/08 20:00-22:00, 11/09 03:00-05:00
+  and 13:00-15:00), The Doomsday (badge 22, Threat 0/0,
+  Warzone Guardian [CTR1] Total Damage 1.8G). No Zombie
+  Invasion tab. 6 red dots seen, 5 explained, 0 unexplained;
+  what the Doomsday 22 counts is unverified. Community tab,
+  store and alliance groups carried to the successor.
+  Tracker untouched. Full detail in
+  perception-scout/2150-queue-run.md; observation in
+  _records_/2026-11-04/perception-scout/observation.md.
+## 21:48 to about 21:53 — Queue ticker pass, perception scout
+
+- Scout unit scout-midday-scout-mid-2026-11-02-006, partial:
+  alliance remainder re-check — station panel again has no
+  train preparing (no train icon, no banner; third confirmation
+  this pass), and the LOOT box holds two Claimed Bears Lair
+  rows plus one UNCLAIMED Lv.1 Doom Elite row (gold chest x2,
+  red gem 20, iron 3.0K, food 3.0K, coin 1.0K), left unclaimed
+  for the owning regular; Claim All observed only. March
+  Queues 3/4 with three squads out (actor unresolved). 8 red
+  dots seen, all explained, 0 unexplained. Alliance Star,
+  Settings and Record Member/Message/Event tabs carried to
+  the successor. Tracker untouched. Full detail in
+  perception-scout/2153-queue-run.md; observation in
+  _records_/2026-11-02/perception-scout/observation.md.
