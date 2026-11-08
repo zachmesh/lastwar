@@ -3975,3 +3975,12 @@ of 2026-10-28.
   issue #415 (nothing re-syncs the live checkout) and
   commented on #410. Status: done. Full detail in
   tool-development/2032-run.md.
+- PR-integrator pass pr-integration-2026-11-07-2100.
+  Non-batch pass: checker plain and merge-aware both not
+  due (outside every batch window), next batch 23:00 PT.
+  No knowledge or code PR open. Records PR 398 clean at
+  new head b47d1ae2, awaiting the 23:00 batch; records
+  PRs 351 and 301 still conflict on the single
+  action-log file, re-noted. No merges, no Slack DM.
+  Status: done. Full detail in
+  pr-integration/2100-run.md.
