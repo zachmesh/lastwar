@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-08T14:42:04Z
 level: L1
-version: 1.34.0
+version: 1.35.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, Weekly Deal page walked in full, seven paid packs, nothing free; record commit 6560ff267 on records/2026-11-08)
   - source: ticker-0404 perception-scout execution record 2026-11-08 0407 queue run (done, store remainder, five Mall tabs walked live)
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Store tab strip read in part, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution record 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Weekly Pass 18:00 reset sixth confirmation); record commit 707bcec0d8 on records/2026-11-08
 ---
 
 
@@ -731,6 +732,7 @@ the free and already paid for parts, never the paid unlocks.
 - Whether the free Hot Deals pack rotates its contents by day.
 - What the dark rock item in the Season Weekly Pass pickup is -
   coal or titanium alloy; the tile only showed 10.0K.
+- Monthly Pass Days Left boundary: the 0538 read of 13 at 05:36 local follows the 0407 read of 14 at 04:07 local the same day - the decrement falls between 04:07 and 05:36, so the daily boundary for the Monthly Pass is unread; the next Mall re-read must record Days Left with its time.
 
 
 ## What the 2026-11-03 2234 unit added - checked only, 0 claims, 1812 cycle state confirmed
@@ -986,3 +988,72 @@ the free and already paid for parts, never the paid unlocks.
   unexplained.
 - Game left safe: base screen. Nothing bought. No Assemble, no
   teleport.
+
+## What the 2026-11-08 0538 scout read added - Mall strip remainder re-read live, Weekly Pass 18:00 reset confirmed a sixth time
+
+- Scout unit scout-midday-scout-mid-2026-11-04-003 by ticker-0534, about
+  05:36 to 05:39 local, status done (store remainder of the stale 2026-11-04
+  midday pass). Evidence in `_records_/2026-11-08/perception-scout/0538-queue-run.md`
+  (commit 707bcec0d8 on records/2026-11-08) and the appended section of
+  `_records_/2026-11-04/perception-scout/observation.md`. Observe-only;
+  nothing claimed or bought. This is a confirmatory re-read - the same unit
+  file already ran as the 0407 unit by ticker-0404 - tracked as GitHub Issue
+  #446 (tooling); the reads below are live second reads.
+- Super Monthly Pass tab: Monthly Pass, Days Left 13; Squad 4 Lv.20,
+  "Unlock an extra squad!"; Daily Pickup row (100 x1, 50 x2, gold x2, 5m
+  speedup 60, 200 x1); Get Now +2500 diamonds plus items; Rewards Left: 13;
+  the Claim button reads "Claimed" (greyed) - today's Daily Pickup already
+  claimed. Monthly Pass Extension $24.99, paid, observed only. Days Left 13
+  against 14 at the 0407 read about 04:07 local the same day: the 14-to-13
+  move inside 90 minutes is unexplained - a possible daily boundary between
+  04:07 and 05:36 local, or a misread on one of the two reads. The current
+  value is 13 (measured 05:36); the boundary question is carried as an open
+  item and the record's "one day elapsed since the 2209 read" wording is not
+  adopted. The next Mall re-read must record the value with its time.
+- Weekly Pass tab: the page line reads "Weekly Pass rewards reset at
+  18:00:00" - the SIXTH live confirmation of the line (after 0114, 1812,
+  1853, 2209 and 0407). Commented on Issue #242 by this run. Free Supply box
+  at the top left, contents unread (a tap would claim, so a scout does not
+  open it - routed to the passes / shop-claims regulars). Legendary card,
+  "Instant Gain on Purchase" (300 coin x5, red gem 2.5K x1, purple item x1),
+  "Take All $19.99", paid, observed only; "Get all at a discount". Four
+  $4.99 weekly pass cards, all Validity 7 Day(s), all observed only: $2
+  Drone Components Weekly Pass (Legendary; Daily Pickup x1, Total x7, Get
+  Now 500 + 100 + 1); $1 Drone Parts Weekly Pass (Epic; Daily Pickup x15,
+  Total x105); Iron Weekly Pass (Elite; Daily Pickup x3, Total x21, Get Now
+  500 + 100 + 1); Coin Weekly Pass (Elite; Daily Pickup x3, Total x21, Get
+  Now 500 + 100 + 1). This confirms live the 2209 unit's "four $4.99 weekly
+  pass cards".
+- Diamond tab: banner "Initial Buy Reward - Enjoy Double Diamonds"; six
+  first-buy x2 packs, all paid, observed only: 10000 diamonds +1000 bonus
+  $99.99; 5000 +500 $49.99; 2000 +200 $19.99; 1000 +100 $9.99; 500 +50
+  $4.99; 100 +10 $0.99. The bottom row prices are read from the window's
+  cut-off bottom edge and flagged partial; the page does not scroll.
+  Confirms the 0407 tier list in full.
+- Gold Brick Mall tab: banner "Gold Brick Mall - Extra 5% Bonus"; eight
+  packs, all paid, each carrying an INITIAL BUY REWARD badge and a Free
+  Gift, observed only: x500 + Free Gift x500 $4.99; x1000 + Free Gift x1000
+  $9.99; x2000 + Free Gift x100 $19.99; x2500 + Free Gift x125 $24.99;
+  x5000 + Free Gift x250 $49.99; x10000 + Free Gift x500 $99.99; x50000 +
+  Free Gift x2500 $499.99; x100000 + Free Gift x5000 $999.99. The top two
+  prices read "$499.9" / "$999.9" with the final digit cut off at the row
+  edge and are recorded at the ladder values, flagged partial. A second
+  scroll confirmed the page bottom - the ladder is complete at eight packs.
+  This full ladder confirms the 0407 correction of the 2209 OCR prices
+  (x1000 $9.99 not $4.99; x50000 $499.99 not $9.99) and adds the four middle
+  tiers the 0407 read did not reach.
+- Hot Sale Packs tab: "Packs sold out" with a gift-box graphic, no packs
+  listed - unchanged from the 2209 unit read. The tab sits past the right
+  edge of the tab strip and is reached by dragging the strip left.
+- Red dots in the surfaces walked: 0 seen. The Official Event tab dot
+  belongs to unit 002's surfaces; the red circle at the Mall header's
+  top-left corner is the macOS window close button, not a game dot. The
+  check-in FREE GIFT (Official Event tab) was not re-read in this unit and
+  is still carried for this regular (last confirmed claimable by the 0407
+  read; no passes-unit claim record has landed on the branch yet, so the
+  claim is still unverified).
+- Chain scout-mid-2026-11-04 complete: events, Community, tab
+  re-verification, left-column badges, station re-check and the full store
+  group are all walked. No successor enqueued.
+- Game left safe: game left on the base screen. Nothing bought. No Assemble,
+  no teleport.
