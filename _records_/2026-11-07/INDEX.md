@@ -4648,3 +4648,22 @@ of 2026-10-28.
   inbox 80, claimed 0, done 1132 before this delivery.
   Status: done. Full detail in
   queue-planning/2340-run.md.
+
+## 23:37 to 23:41 — Queue ticker pass, alliance donations (re-read)
+
+- Donations unit donations-2026-11-08-0419, partial and
+  unverified: Quick Construction 8/10 (recommended) read live
+  at 4/30 on entry; three coin donations landed on live reads
+  (4->3->2->1, 900 coin each, 2,700 coin); the final tap from
+  1/30 greyed the button behind a 00:15:41 timer with the
+  count label hidden, so the count was never read live at
+  0/30 and the final tap is unconfirmed. Count-rise data
+  point: 1/30 at 22:19 to 4/30 at 23:37 (about 1 per 26
+  minutes, two-endpoint estimate only); cooldown variable
+  at 00:15:41 against 00:19:07 before - further evidence for
+  Issue #423 / Issue #160. Tracker untouched. A named re-read
+  unit is enqueued for after the cooldown (not-before 23:59
+  local). Worktree loss mid-pass: the /tmp worktree vanished
+  at about 23:43 and the completion was re-applied from a
+  replacement worktree under ~/workspace/lastwar-worktrees/.
+  Full detail in alliance-donations/2341-queue-run.md.
