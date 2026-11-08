@@ -2998,3 +2998,21 @@ of 2026-10-28.
   waiting survivor may have arrived after the survivors
   unit closed. Tracker untouched. Full detail in
   troop-training/1655-queue-run.md.
+
+## 17:39 to about 17:42 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-07-1739. No adopted
+  open PR (PR 137 stays merged). Four open PRs scanned,
+  none owned by this job: PR 406 (knowledge, radar-tasks
+  1.49.0) merged since the 1639 pass, main now cef70a43;
+  PRs 398, 351, 301 and 256 all MERGEABLE and CLEAN
+  against main cef70a43, re-checked by the integrator 1715
+  and 1730 passes; PR 398 head advanced to fb05266a,
+  mergeable CLEAN at the 01:41Z re-read. All four records
+  PRs await the 19:00 batch. Fifty-four open issues, all
+  class-labeled; one new since the 1639 pass (issue 407,
+  tooling, regulars.py UTC date bug, correctly labeled).
+  Owner-decision issues 132, 154 and 335 all over 24 hours,
+  statements current. No adoption, no fix, no hand-off, no
+  escalation, no stale-owner flag. Status: no-op.
+  Full detail in pr-catchall/1739-run.md.
