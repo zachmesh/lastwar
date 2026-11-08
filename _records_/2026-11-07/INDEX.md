@@ -4268,3 +4268,18 @@ of 2026-10-28.
   branches contained in main). No owner-gated PR.
   Status: done. Full detail in
   pr-integration/2200-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2215.
+  Non-batch pass: checker plain (tool 1.2.0 at pass
+  start) not due (outside every batch window), next
+  batch 23:00 PT. No knowledge or code PR open. Records
+  PR 398 clean at new head d3cceedc (2200 run record
+  only, no new executor appends), re-verified and
+  re-noted, awaiting the 23:00 batch; records PRs
+  351 and 301 still conflict on the single action-log
+  file at unchanged heads against unchanged main
+  183054c8, no new note (unchanged since the 2145
+  note). No records PR opened (all other records
+  branches contained in main). No owner-gated PR.
+  Status: done. Full detail in
+  pr-integration/2215-run.md.
