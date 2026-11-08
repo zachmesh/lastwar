@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-04T12:37:48Z
-version: 0.15.0
+modified: 2026-11-07T12:32:17Z
+version: 0.16.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -10,6 +10,7 @@ grounded_in:
   - source: run records of 2026-10-27 and 2026-10-28 in _records_
   - source: miss audit of 2026-10-31 and the owner instruction of 2026-10-31 to reflect and fix
   - source: PR #267 merged 2026-11-04 (Refs #147) - zero-sweep slots reset-anchored (reset_utc 02:00, offsets 90/30 minutes)
+  - source: organizer 0432 run 2026-11-07 (Refs #147) - the four 19:00 mentions flagged as follow-up in 0.15.0 rewritten to the absolute reset instant 02:00 UTC (VIP expiry, scout anchor, quota checkpoints, deadline list)
 ---
 
 # Task unit queue design
@@ -140,7 +141,7 @@ colon-free except timestamps, as elsewhere in this repository.
 
 Priority classes from the current regulars.
 
-- **1 expiry-critical** - vip (expires at the 19:00 reset), passes when
+- **1 expiry-critical** - vip (expires at the trade-day reset, absolute 02:00 UTC), passes when
   a free pack carries its own countdown, events on a check-in day
   boundary.
 - **2 windowed** - arms-race (points only count inside the live phase),
@@ -222,6 +223,12 @@ runs four steps.
 Overlap is expected and harmless - a pass still executing when the
 next tick fires holds the device token, and the new tick sees the
 token held and skips its execute step. Only one pass ever plays.
+
+The token file lives in the main checkout's `_queue_/claimed/`,
+shared by every worktree of the repository, so a pass running in a
+fresh detached worktree still sees a token held by a pass still
+running (issue #383) - a worktree-local token would be invisible to
+the next tick and the guard above would not hold.
 
 Latency is bounded and measurable - a fresh unit waits at most one
 tick interval plus the remainder of the unit currently running
@@ -413,7 +420,7 @@ one to the audit cause it answers.
   plunder 4 per trade day) and donations (30 coin donations per
   reset day), and any type that later gains a per-cycle quota -
   carry two checkpoints per cycle, six hours and two hours
-  before the cycle end (the 19:00 local reset for reset-day
+  before the cycle end (the trade-day reset, absolute 02:00 UTC, for reset-day
   quotas, the trade-day end for trucks). Each checkpoint reads
   the counter live. A shortfall at a checkpoint raises the next
   unit of that type to priority 1 and is named in the round
@@ -486,9 +493,15 @@ pair was enqueued manually with `_tools_/queue.py enqueue`
 (the pair for the 2026-11-01 reset, chain
 pre-reset-sweep-2026-11-01, units 001 and 002, was enqueued this
 way). A reset with no sweep pair staged is itself reported in
-the round summary.
+the round summary. `enqueue` refuses a zero-sweep unit whose
+`not_before`/`expires_at` do not match the reset-anchored roster
+geometry (tool guard, Refs #147): a hand-staged pair with the old
+wall-clock geometry pre-empted the subcommand's correct pair on
+2026-11-05/06, so the manual path now fails loudly and the pair is
+staged with `queue.py sweep` (or `plan`) from a current tree.
 
 2026-11-04 correction (organizer 0432, Refs #147): the sweep geometry above replaces the wall-clock 17:30/18:30 slots expiring 19:00 local, which could not close a trade day after the 2026-11-02 DST end (the Nov 3 final slot staged at 18:30 local fell half an hour after the 18:00 PST reset). Other 19:00 mentions elsewhere in this design (VIP expiry, the scout anchor, quota checkpoints, the deadline list) are not rewritten in this pass and are flagged as follow-up on #147.
+2026-11-07 follow-up (organizer 0432, Refs #147): the four flagged mentions are rewritten in version 0.16.0 - VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3) - all now anchor at the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer). The two dated 19:00 mentions that stay are history, not rules: the 2026-10-27 lapse (section 1) and the 2026-10-28 migration validation (section 9), both from the PDT era when the reset was 19:00 local.
 
 ## 13. The perception layer (scout)
 
@@ -503,8 +516,8 @@ is [perception-driven queue](perception-driven-queue.md). This
 section fixes the queue-level contract.
 
 - **Scout unit type.** The regular is `scout` (the post-reset
-  full pass, daily-reset cadence anchored at the 19:00 local
-  reset) and `scout-midday` (the midday pass, daily-reset cadence
+  full pass, daily-reset cadence anchored at the trade-day reset
+  (absolute 02:00 UTC, about 18:00 PST in winter, 19:00 PDT in summer)) and `scout-midday` (the midday pass, daily-reset cadence
   anchored at 07:00 local, the middle of the reset day). Both
   name the activity `perception-scout`. Scout units are windowed
   work - priority 2; the production priority table carries
@@ -570,8 +583,8 @@ section fixes the queue-level contract.
   value over expected duration, gated by dependencies and
   cooldowns) mapped onto the priority classes of section 4. The
   clock keeps two jobs only - the ticker cadence as the
-  perception heartbeat, and the game hard deadlines (the 19:00
-  reset, Arms Race phase windows, the rule R3 quota
+  perception heartbeat, and the game hard deadlines (the trade-day reset,
+  absolute 02:00 UTC, Arms Race phase windows, the rule R3 quota
   checkpoints). The planner of section 7 evolves accordingly -
   from staging one unit per (regular, time slot) to consuming
   observations plus profile trigger conditions and producing
@@ -782,6 +795,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.16.0, 2026-11-07 - the four 19:00 mentions flagged as follow-up on #147 in 0.15.0 are rewritten to the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer): VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3). The dated 19:00 mentions in sections 1 and 9 stay: both describe the PDT era, when the reset was 19:00 local.
 - 0.14.0, 2026-11-01 - section 14 gains a cross-reference to
   the ops execution records standard: the loop's own
   activities are executions and record themselves in the
