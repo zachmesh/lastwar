@@ -2900,3 +2900,16 @@ of 2026-10-28.
   real merge chance for all four. No new records PR
   opened. Status: done.
   Full detail in pr-integration/1645-run.md.
+
+- Integrator pass pr-integration-2026-11-07-1700.
+  Non-batch pass for records purposes (checker plain
+  and merge-aware both not due, outside every batch
+  window, next batch point 19:00 PT; the 15:00 batch
+  slot was already spent by the 1500 pass). No
+  knowledge or code PR open. All four open records
+  PRs verified clean against main cef70a43 (398
+  1430328c, 351 f9e1fff83d, 301 602566d9, 256
+  d44b93ba) and awaiting the 19:00 batch, the first
+  real merge chance for all four. No merges, no
+  comments, no new PR opened. Status: done.
+  Full detail in pr-integration/1700-run.md.
