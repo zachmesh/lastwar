@@ -2685,3 +2685,19 @@ of 2026-10-28.
   line appended for the PR 405 merge. Next merge
   chance the 19:00 batch. Status: done.
   Full detail in pr-integration/1545-run.md.
+
+## 16:00 to about 16:05 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-07-1600.
+  Non-batch pass for records purposes (checker reports
+  not due, next batch point 19:00 PT; the 15:00 batch
+  slot was already spent by the 1500 pass). No
+  knowledge or code PR open; no merges. All four open
+  records PRs still conflict with main dfc3e08b on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (verified by git merge-tree); PR 398 re-noted at its
+  new head aaf3bf18, PRs 351, 301 and 256 unchanged
+  since the 1445 re-notes, no repeat comments. No new
+  records PR opened; no action-log line owed. Next
+  merge chance the 19:00 batch. Status: done.
+  Full detail in pr-integration/1600-run.md.
