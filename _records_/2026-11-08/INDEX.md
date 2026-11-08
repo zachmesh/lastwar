@@ -3289,3 +3289,47 @@ of 2026-10-28.
   unchanged since the 1415 notes. No records branch left
   PR-less. Status: done.
   Full detail in pr-integration/1430-run.md.
+
+- Mail unit mail-2026-11-08-1030 (done): claimed the Event
+  "Ammo Bonanza" reward (x4, item name unread in the popup);
+  all 8 categories checked - Alliance, Season, System,
+  Regular, Battle Report, Favorite and In-app Purchases held
+  no claimable attachments (reports, notifications, receipts
+  and one starred battle report only). New finding: the mail
+  overview has an eighth category, Favorite, not named in the
+  activity metadata. Mail red dot cleared on the base screen.
+  Coin panel unchanged at 149,850,353. Tracker marked done.
+  Full detail in mail-rewards/1423-queue-run.md.
+
+- Train unit train-2026-11-08-1030 (partial): no train in
+  preparation - neither the left-column train icon nor the
+  "Boarding closes in" banner was present on the base screen,
+  so the unit closed without panning to the station, per the
+  activity metadata. Earlier Missile Apex train mails in Event
+  are departure/arrival notices, not a preparing train.
+  Tracker untouched. Full detail in
+  alliance-train/1427-queue-run.md.
+
+- Star ceremony unit star-ceremony-2026-11-08-1030 (partial):
+  ceremony EVENT 40 played to step 10 of 13; hearts sent on
+  steps 3 (Alliance Champion, TTS Rage Apex), 6 (Devil
+  Trainer, JerryLogDog), 7 (Great Destroyer, TTS Rage Apex)
+  and 8 (Grind King, SKRyZeRZ); chest counter reached 2/1.
+  Entry learning: the trophy icon needed a 1-second
+  long-press - two single taps did nothing. Unit cap hit at
+  step 10 (Doom Elite Slayer intro), so steps 11-13, the MVP
+  finale and the rewards are unclaimed; the trophy icon is
+  still on the base screen and the successor unit must
+  re-enter and continue. Duel total vs 3,600,000 unread in
+  this unit (VS panel never opened); the duel-score unit in
+  the inbox carries the read. Tracker untouched. Full detail
+  in alliance-duel/1441-queue-run.md.
+
+- Duel-score unit duel-score-2026-11-08-1030 (partial): personal
+  daily total vs 3,600,000 UNREAD - no daily total is displayed
+  anywhere on the duel panel on this settlement day (day 7, no
+  scoring actions). Roulette 0 tokens, 0/10; League S38 Gold
+  Tier 38-7, AP3x rank 4 (W1 Win, W2 Win, W3 Lose, W4 pending).
+  Weekly Rank own row: Bears Lair rank 178, 10,493,243 weekly
+  points - context only, never the daily total. Tracker
+  untouched. Full detail in alliance-duel/1439-queue-run.md.
