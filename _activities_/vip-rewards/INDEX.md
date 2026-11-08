@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-08T14:42:04Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, VIP panel walked, VIP13 progress 1,605,970/2,000,000, Daily Freebie GREEN/claimable NOT claimed, Exclusive pack read; record commit 6560ff267 on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0454 queue run (done, VIP re-check, Freebie still claimable, record commit caa661bab on records/2026-11-08)
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Freebie re-check, cart dot is the Store shortcut, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, VIP panel re-read, Daily Freebie still claimable, cart dot absent, VIP Store full stock); record commit 707bcec0d8 on records/2026-11-08
 ---
 
 
@@ -319,3 +320,46 @@ Measured on 2026-10-25.
   unexplained.
 - Game left safe: base screen. No claim, no purchase. No Assemble, no
   teleport.
+
+## What the 2026-11-08 0542 scout read added - VIP panel re-read, Freebie still claimable, cart dot absent, VIP Store full
+
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0534, about
+  05:40 to 05:50 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0542-queue-run.md` (commit
+  707bcec0d8 on records/2026-11-08) and the appended section of
+  `_records_/2026-11-03/perception-scout/observation.md`. Observe-only;
+  nothing claimed or bought - the Daily Freebie Claim button is
+  green/claimable and was left untouched (this regular's claim); the Secret
+  Mobile Squad Claim buttons were read only. This is a confirmatory re-read
+  - the same unit file already ran as the 0512 unit by ticker-0504 - tracked
+  as GitHub Issue #446 (tooling); the reads below are live second reads.
+- VIP panel (via MY PROFILE, VIP13 tile, which itself carries a red dot):
+  VIP13, "You've logged in 2 days in a row. Collect 80 VIP points
+  tomorrow.", 1,605,970/2,000,000 - unchanged from the 0204, 0454 and 0512
+  reads. Privileges: Crafting Speed 50.00% NEW, Research Speed 20.00% NEW,
+  Mega Mode of Trade Trucks 1 NEW, Food/Iron/Coin Output 25.00% each,
+  Construction Speed 50.00%, March Speed 15.00%, Max Units 5.00%. VIP13
+  Daily Freebie Claim button is GREEN/claimable (puzzle x2, crates x13/x13,
+  gold x13) - still unclaimed since the 0204 read, observed only; the claim
+  belongs to this regular. VIP Exclusive (Epic), Availability 1, $99.99 paid
+  pack, timer 18d 12:24:11 (was 18d 12:55:44 at the 0512 read, stepping down
+  consistently). Untouched.
+- The cart icon at the panel's top right opens the VIP STORE (tabs VIP /
+  Alliance / Honor; VIP tab: Food/Iron/Coin Chest (SR) 100/100 at 40
+  diamonds each, Universal Decor Component 50/50 at 100, 50 Stamina 5/5 at
+  60, Superalloy 100/100 at 6, Advanced Teleporter 3/3, Drone Parts 50/50,
+  Skill Medal 2000/2000 - prices of the bottom row cut off; "Refreshes at
+  00:00 every Monday (server time)", timer 12:18:20; all stocks full,
+  nothing bought this week). At this live read the cart icon carries NO red
+  dot. Explanation, with the inference flagged: the dot the 0204 unit saw
+  most plausibly marked unviewed weekly VIP Store stock and was cleared by
+  that unit's own VIP panel visit (the only intervening event); the Daily
+  Freebie is ruled out as the dot's cause because it is still claimable now
+  with no dot present. The 0512 section's "store-entry indicator" reading is
+  therefore the same signal seen from the other side: the dot marks unviewed
+  stock, not a claim.
+- Unknown items: the gold chest icon below the VIP panel cart icon (function
+  unread, not tapped); the floating circular portrait icon (seen again on
+  the VIP panel and the Store screen, still unexplained).
+- Game left safe: game left on the base screen. No claim, no purchase. No
+  Assemble, no teleport.

@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-08T14:42:04Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ grounded_in:
   - source: pre-reset zero sweep execution record 2026-11-07 1824 queue run (first pass, trucks line 18 unverified, both R3 checkpoints passed with the counts unread; record commit 840094b6ad on records/2026-11-07)
   - source: ticker-0404 perception-scout execution record 2026-11-08 0415 queue run (partial, alliance remainder, Trucks panel reached by entry tap)
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, bus icon tap-verified Trucks, dot clears on open, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, blue truck/bus icon is Trucks, 0/5 trades, 4 own + 4 others waiting, 0022 white-truck mapping corrected); record commit 707bcec0d8 on records/2026-11-08
 ---
 
 # Truck plunder - Intercity Trade
@@ -1649,3 +1650,40 @@ settlement and dispatch execution record).
   quotas are unverified for 2026-11-08.
 - Game left safe: base screen. Nothing dispatched or plundered. No
   Assemble, no teleport.
+
+## What the 2026-11-08 0542 scout read added - blue truck/bus icon is Trucks, screen state read live, white-truck mapping corrected
+
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0534, about
+  05:40 to 05:50 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0542-queue-run.md` (commit
+  707bcec0d8 on records/2026-11-08) and the appended section of
+  `_records_/2026-11-03/perception-scout/observation.md`. Observe-only;
+  nothing dispatched, plundered or claimed. This is a confirmatory re-read
+  - the same unit file already ran as the 0512 unit by ticker-0504 - tracked
+  as GitHub Issue #446 (tooling); the reads below are live second reads.
+- The blue truck/bus icon (4th icon down the left column) opens the Trucks
+  screen: "Today's Trade Count: 0/5", "Filter out trucks from your Warzone"
+  checked, four own yellow trucks waiting on the road, "Mega Mode" button,
+  "Others' Trucks" / "Your Truck" tabs each badged 4, History button
+  top-right, Recover button bottom-left (itself carrying a red dot, routed
+  to this regular - the Recover dot is not in this unit's window). The dot
+  on the icon is this regular's dispatch/plunder availability signal - 0 of
+  5 trades done today, 4 own trucks waiting to dispatch and 4 others'
+  trucks to plunder. This is the fourth tap-verified confirmation of the
+  blue-icon Trucks identity (0404, 0415, 0512, 0542) and the third
+  consecutive 0/5 Trade Count read (0415, 0512, 0542) - the day's dispatch
+  quota is still untouched at 05:40 local.
+- CORRECTION: the 0022 unit mapped the white truck icon to the trucks
+  regular. That mapping is superseded by this live navigation - the white
+  truck (5th icon down the left column) opens the Secret Command Post, not
+  Trucks; the blue truck/bus icon opens Trucks. The 0845 section's
+  "trade-icon grounding mislabel opens Secret Command Post" framing was
+  already corrected by the 0532 run (the white truck genuinely opens the
+  Secret Command Post; there was no mislabel, only the wrong expectation)
+  and this unit confirms it live. The 0022 record and the 2026-11-03
+  observation file carry the corrected mapping (appended by the ticker
+  pass).
+- Chain scout-mid-2026-11-03 complete: the 3-dot carry was its last open
+  item. No successor enqueued.
+- Game left safe: game left on the base screen. Nothing dispatched or
+  plundered.

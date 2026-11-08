@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-08T14:42:04Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -54,6 +54,8 @@ grounded_in:
   - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Marshal's Guard and Doomsday dated entries, record commit caa661bab on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0454 queue run (done, VIP re-check, Freebie still claimable, record commit caa661bab on records/2026-11-08)
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, 3 red dots explained live, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution records 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Days Left 13) and 0542 queue run (done, three carried red dots explained live, 0022 white-truck mapping corrected) and alliance-donations execution record 2026-11-08 0546 queue run (partial, re-read after cooldown, last donation landed); record commit 707bcec0d8 on records/2026-11-08
+  - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
 ---
 
 
@@ -2358,3 +2360,257 @@ observe-only, nothing claimed). Evidence in
   seq 004 of chain scout-2026-11-03 still has no record on the
   branch; both fall to the next run. The current day's scout pass
   head scout-midday-2026-11-08-0700 is already in inbox.
+
+## What the 2026-11-08 0538, 0542 and 0608 units added - Mall strip remainder, three dots explained, Winter Battlefield sub-pages
+
+- Units scout-midday-scout-mid-2026-11-04-003 (0538) and
+  scout-midday-scout-mid-2026-11-03-005 (0542) by ticker-0534, about 05:36
+  to 05:50 local, both status done; unit scout-scout-2026-11-03-004 (0608)
+  by ticker-0604, about 06:08 to 06:23 local, status partial (15-minute
+  cap). Evidence in `_records_/2026-11-08/perception-scout/0538-queue-run.md`
+  and `0542-queue-run.md` (commit 707bcec0d8 on records/2026-11-08) and
+  `0608-queue-run.md` (commit 50389b4b4a on records/2026-11-08);
+  observations appended to `_records_/2026-11-03/perception-scout/observation.md`
+  and `_records_/2026-11-04/perception-scout/observation.md`. Observe-only;
+  nothing claimed, fought, dispatched, donated, boarded, matched or bought.
+  The 0538 and 0542 units are confirmatory re-reads: their unit files were
+  already completed by ticker-0404 (0407) and ticker-0504 (0512) and re-ran
+  from the stale main-checkout pool - tracked as GitHub Issue #446
+  (tooling), filed by the ticker pass; the reads below are live second
+  reads, not first observations.
+- 0538, Mall strip remainder (chain scout-mid-2026-11-04, now complete):
+  Super Monthly Pass, Days Left 13 (was 14 at the 0407 read about 04:07
+  local the same day - the 14-to-13 move inside 90 minutes is unexplained,
+  see the correction below; the record's "one day elapsed since the 2209
+  read" wording is not adopted); Squad 4 Lv.20; Daily Pickup row (100 x1,
+  50 x2, gold x2, 5m speedup 60, 200 x1); Get Now +2500 diamonds plus
+  items; Rewards Left: 13; Claim button "Claimed" (greyed - today's pickup
+  already claimed); Monthly Pass Extension $24.99, paid, observed only.
+  Weekly Pass tab: "Weekly Pass rewards reset at 18:00:00" - the SIXTH live
+  confirmation of the line (after 0114, 1812, 1853, 2209 and 0407); Free
+  Supply box contents unread (a tap would claim, so a scout does not open
+  it - routed to the passes / shop-claims regulars); Legendary "Instant Gain
+  on Purchase" (300 coin x5, red gem 2.5K x1, purple item x1), "Take All
+  $19.99", paid, observed only; four $4.99 weekly pass cards, all Validity
+  7 Day(s): $2 Drone Components (Legendary; Daily Pickup x1, Total x7, Get
+  Now 500 + 100 + 1), $1 Drone Parts (Epic; Daily Pickup x15, Total x105),
+  Iron (Elite; Daily Pickup x3, Total x21, Get Now 500 + 100 + 1), Coin
+  (Elite; Daily Pickup x3, Total x21). Diamond tab: "Initial Buy Reward -
+  Enjoy Double Diamonds"; six first-buy x2 packs, all paid: 10000 +1000
+  $99.99; 5000 +500 $49.99; 2000 +200 $19.99; 1000 +100 $9.99; 500 +50
+  $4.99; 100 +10 $0.99 (bottom-row prices read from the cut-off window
+  edge, partial; the page does not scroll). Gold Brick Mall tab: "Gold
+  Brick Mall - Extra 5% Bonus"; eight packs, all paid, each with an INITIAL
+  BUY REWARD badge and a Free Gift: x500 + Free Gift x500 $4.99; x1000 +
+  Free Gift x1000 $9.99; x2000 + Free Gift x100 $19.99; x2500 + Free Gift
+  x125 $24.99; x5000 + Free Gift x250 $49.99; x10000 + Free Gift x500
+  $99.99; x50000 + Free Gift x2500 $499.99; x100000 + Free Gift x5000
+  $999.99 (top two prices final digit cut at the row edge, recorded at
+  ladder values, partial; a second scroll confirmed the page bottom - the
+  ladder is complete at eight packs). This full ladder confirms the 0407
+  correction of the 2209 OCR prices and adds the four middle tiers the 0407
+  read did not reach. Hot Sale Packs tab: "Packs sold out", unchanged from
+  the 2209 read; the tab sits past the right edge of the strip and is
+  reached by dragging the strip left. Red dots: 0 seen in the five tabs
+  walked; the red circle at the Mall header's top-left corner is the macOS
+  window close button, not a game dot. President banner fragments: the
+  RedFox26 fragment now reads "...inted RedFox26 as Secretary of Defense!"
+  - combined with the earlier "Important: President HawksMav appointed
+  RedFox26 as ..." fragment, the banner reconstructs as "Important:
+  President HawksMav appointed RedFox26 as Secretary of Defense!"
+  (reconstructed from two fragments, not one single live read); a newer
+  banner has since rotated in: "Important: President HawksMav appointed
+  Thunder TLS as ..." (cut off, remainder unread). One transient
+  screen-capture failure (screen_failed, app identity changed), recovered
+  by an immediate re-observe with no state lost - the same transient class
+  as the 0447 unit, not the recurring channel failure of Issue #282.
+- 0542, three carried red dots explained (chain scout-mid-2026-11-03, now
+  complete - seq 005 ran after seq 006, out-of-order chain execution, an
+  observation for the retro): the three dots were first explained by the
+  0512 unit; this unit re-verified each by live navigation and adds the
+  screen states, the badge counts and the 0022 mapping correction. Dot 1,
+  blue truck/bus icon, 4th icon down the left column, opens the Trucks
+  screen: "Today's Trade Count: 0/5", "Filter out trucks from your Warzone"
+  checked, four own yellow trucks waiting on the road, "Mega Mode" button,
+  "Others' Trucks" / "Your Truck" tabs each badged 4, History button
+  top-right, Recover button bottom-left (itself carrying a red dot, routed
+  to the trucks regular). The dot is the trucks regular's dispatch/plunder
+  availability signal - 0 of 5 trades done today, 4 own trucks waiting to
+  dispatch and 4 others' trucks to plunder. Dot 2, white truck icon, 5th
+  icon down the left column, opens the SECRET COMMAND POST - Secret Mobile
+  Squad: "Dispatch heroes to perform secret tasks to defeat enemies,
+  maintain order and get rich rewards." Assist Allies 0/5, Plunder Others
+  0/5; Recover (red dot), Record, Difficulty 3 stars; tabs Your Tasks
+  (badge 17), Ally Tasks (badge 5), Others' Tasks. Visible rows, all with
+  green Claim buttons (read only): UR Rescue Test Subject Lv.4; SSR Train
+  Refugees Lv.5; SSR Provide Tech Support to Refugees Lv.5; SSR Search for
+  Missing Refugees Lv.5. Bottom: Mega Refresh, Mega Deploy, "Normal" mode.
+  The dot is the secrets regular's signal - completed Secret Mobile Squad
+  tasks waiting to be claimed (17 Your Tasks, 5 Ally Tasks). Dot 3, VIP
+  panel top-right cart icon: the cart opens the VIP STORE (tabs VIP /
+  Alliance / Honor; VIP tab: Food/Iron/Coin Chest (SR) 100/100 at 40
+  diamonds each, Universal Decor Component 50/50 at 100, 50 Stamina 5/5 at
+  60, Superalloy 100/100 at 6, Advanced Teleporter 3/3, Drone Parts 50/50,
+  Skill Medal 2000/2000 - prices of the bottom row cut off; "Refreshes at
+  00:00 every Monday (server time)", timer 12:18:20; all stocks full,
+  nothing bought this week). At this live read the cart icon carries NO red
+  dot. Explanation, with the inference flagged: the dot the 0204 unit saw
+  most plausibly marked unviewed weekly VIP Store stock and was cleared by
+  that unit's own VIP panel visit (the only intervening event); the Daily
+  Freebie is ruled out as the dot's cause because it is still claimable now
+  with no dot present. VIP13 panel (via MY PROFILE, VIP13 tile, which
+  itself carries a red dot): VIP13, "You've logged in 2 days in a row.
+  Collect 80 VIP points tomorrow.", 1,605,970/2,000,000 - unchanged from
+  the 0204 unit. Privileges: Crafting Speed 50.00% NEW, Research Speed
+  20.00% NEW, Mega Mode of Trade Trucks 1 NEW, Food/Iron/Coin Output
+  25.00% each, Construction Speed 50.00%, March Speed 15.00%, Max Units
+  5.00%. VIP13 Daily Freebie Claim button is GREEN/claimable (puzzle x2,
+  crates x13/x13, gold x13) - still unclaimed since the 0204 read, observed
+  only. VIP Exclusive (Epic), Availability 1, $99.99 paid pack, timer 18d
+  12:24:11. Unknown items: the gold chest icon below the VIP panel cart
+  icon (function unread, not tapped); the floating circular portrait icon
+  (seen again on the VIP panel and the Store screen, still unexplained);
+  the Trucks screen Recover red dot and the Secret Command Post Recover red
+  dot (both seen, neither in this unit's window - routed to the trucks /
+  secrets regulars); the VIP Store bottom row prices (cut off).
+- CORRECTION, the 0022 mapping: the 0022 unit (chain
+  scout-mid-2026-11-04) mapped the white truck icon's red dot to the
+  trucks regular. That mapping is superseded by this live navigation - the
+  white truck opens the Secret Command Post, while the blue truck/bus icon
+  opens Trucks. The 0022 record and the 2026-11-03 observation file carry
+  the corrected mapping (appended by the ticker pass); this profile now
+  carries it too. The 0512 section's "chain scout-mid-2026-11-03 is spent"
+  is completed by this hour: seq 005 (0542) has now run, so the chain is
+  complete with both seq 005 and 006 done.
+- 0608, Winter Battlefield sub-pages (chain scout-2026-11-03 seq 004,
+  partial - the 15-minute unit cap ran out after Rewards, Rules (all 4
+  tabs) and the Shop Honor tab; History, Achievement, the Shop
+  Campaign/Season tabs and the Doomsday count finish carry to successor seq
+  005): entry on the Alliance Tech screen (leftover from the 0546 donations
+  unit). Base screen: Total Power 149,850,353 (unchanged from the 0447/2209
+  reads); Food 478.8M, Iron 802.1M, Coin 6.9M; diamonds 4,217; cart 13.22K;
+  stamina 120; hammer 2/4, flask 2/2; Season II 7d 11:49:55; furnace
+  overdrive toast [22/60] recurring; 99+ chat badge recurring; alliance
+  appointment banners transient (President HawksMav; cookie as Secretary of
+  Defense). Winter Battlefield main page: 5v5 event, "Event is starting
+  soon", countdown 11:49:09 at entry falling to 11:41:57 at exit; matching
+  windows (Local Time) 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09
+  13:00-15:00; matchmaking for Base level 15 and above during the specified
+  times; Match button greyed (event not started). Right-side buttons: Rules,
+  Shop, History, Achievement. Left: Rewards chest icon. Info icon top right
+  unread. Rewards (both pages): event currency balance 0 (blue snowflake
+  icon); Cumulative Reward Points chest ladder, two pages: 45,000 (tag
+  4,100), 90,000 (4,100), 135,000 (5,150), 225,000 (5,250), 337,500
+  (6,200), 450,000 (6,500) - the tag above each chest carries a red
+  ticket-like icon whose meaning is unread, recorded as a number only, not
+  labelled content or cost. Ways to earn the currency: Complete a
+  battlefield +10.0K; Individual Total Points Ranking +17.5K-52.5K; Get
+  Commendations when the battle settles +21.0K-45.0K; Earn Achievements in
+  the battlefield +2.4K-3.5K. Achieving victory grants x1.5 for this battle.
+  Rules, Rules tab: story (global warming melted the glacier, uncovering a
+  hidden nuclear missile site; plan "Winter Storm" to seize the nuclear
+  silo). Event Overview: 1. Hold Missile Sites or Oil Wells to earn points;
+  first to 30,000 points wins. 2. If time runs out, the side with more
+  points wins. 3. The central Silo opens after some time; capture it for
+  lots of points. 4. Supply boxes airdrop periodically; send troops to
+  capture them for points. 5. On entry, the highest-level units the
+  Commander can train fill the independent Drill Ground; they do not appear
+  in the Base Drill Ground and do not leave the battlefield after the
+  battle. 6. In battles, units do not die; severely wounded units
+  automatically recover for free. Reward Rules: unlock chests by
+  accumulating Reward Points; Reward Points reset with each event. 1.
+  Complete a match for guaranteed Reward Points (requires Total Individual
+  Points of at least 250,000). 2. At settlement, Reward Points by total
+  individual points ranking (same 250,000 gate). 3. At settlement, Reward
+  Points by commendations earned (such as MVP): 3.1 at most one
+  highest-value commendation per match; 3.2 players not among the 5
+  displayed on the settlement screen still receive commendations normally;
+  3.3 past commendations viewable in [History]. 4. Achievements earned per
+  match only, progress does not carry over: 4.1 total achievements earned
+  historically viewable in [History]; 4.2 progress from a previous match
+  cannot be carried to the next match. Event Stages: 1. Event Start - begins
+  for the first time after the server's 7th week, match battles on Saturdays;
+  during off-season periods, opens each Monday. 2. Matching - Headquarters
+  level 15+, several matching times on battle day. 3. Entering - once 10
+  commanders confirm, all automatically enter. 4. Battle Stage -
+  Preparation: safe zone, own side blue, enemy red, safe zone cannot be
+  attacked. Battle: holding Oil Wells earns lots of Battlefield Points,
+  Missile Sites fewer; Missile Sites attack all enemy-held buildings,
+  killing stationed troops. Silo Opens: opens after some time, holding it
+  earns a lot of Battlefield Points. Supply Airdrop: resource packs drop
+  periodically, send troops to collect them for Battlefield Points. Rules,
+  Structures tab (4 entries): Airdrop Supplies - capture to earn 1,000
+  Battlefield Points. Nuclear Silo - opens sometime after the battle starts;
+  capturing grants a large amount of Battlefield Points, a key structure
+  for victory; gain 100 Battlefield Points per second while controlling it.
+  Oil Refinery I - opens when the battle begins; capturing gains a large
+  amount of Battlefield Points, the primary way to produce them; gain 30
+  Battlefield Points per second while controlling it. Missile Site -
+  automatically targets all enemy-held buildings, dealing damage to their
+  troops; gain 10 Battlefield Points per second while controlling it. Rules,
+  Reward Points tab, Ranking sub-tab (No.1-No.10): No.1 +52.5K, No.2
+  +45.5K, No.3 +42.0K, No.4 +38.5K, No.5 +35.0K, No.6 +31.5K, No.7 +28.0K,
+  No.8 +24.5K, No.9 +21.0K, No.10 +17.5K - all for Individual Total Points
+  Ranking at that rank (matches the Rewards page range +17.5K-52.5K). Rules,
+  Reward Points tab, Commendations sub-tab (8): War Hero - Total Points
+  over 1,200,000, +33.0K. Elite Defender - Capture Points over 375,000,
+  +30.0K. Elite Vanguard - Kill Points above 750,000, +30.0K. Elite
+  Tactician - Plunder Points over 250,000, +30.0K. Grand General - Total
+  Points over 600,000, +24.0K. Outpost Defender - Capture Points over
+  187,500, +21.0K. Frontline Hero - Kill Points above 375,000, +21.0K.
+  Swift Tactician - Plunder Points over 125,000, +21.0K. Rules, Reward
+  Points tab, Achievements sub-tab (10): +2.8K - Battlefield Will Medal
+  (win battles 25 times in the battlefield); Stand Ready Medal (any Troop
+  helps defend the same Building for 90s); Logistics Support Medal
+  (successfully collect 4 airdrops); Fire Suppression Medal (plunder 4000
+  building points). +3.5K - Thunder Assault Medal (use a total of 600%
+  March Speedup); Life Guardian Medal (heal a total of 16000 units); Bloody
+  Valor Medal (win battles 30 times in the battlefield); Unyielding Stand
+  Medal (any Troop helps defend the same Building for 120s); Airdrop Hunter
+  Medal (successfully collect 6 airdrops); War Harvest Medal (plunder 5000
+  building points). Rules, Other tab: Participation Conditions - Commanders
+  with bases level 15 and above can participate; multiple matching time
+  slots are available on the battle day. Special Rules: 1. In battle,
+  commanders can relocate their Base 1 time every minute. 2. On entry, the
+  highest-level units automatically fill the separate Drill Ground; they do
+  not show up in the base Drill Ground and do not leave the battlefield
+  after the fight. 3. Units do not die; severely wounded units are
+  automatically healed for free. 4. All boosts from tech, VIP, base skins,
+  titles, decorations and drones work in battle. 5. Rallies are disabled, no
+  continuous marching. 6. Each commander can garrison multiple troops in a
+  single building. Shop, STORE Honor tab (12 items, all full stock):
+  balance 101.1K (gold medal currency, not the blue Winter Battlefield
+  currency); refreshes at 00:00 on the 1st of every month (server time);
+  timer 22d 11:42:23 at read. Gear Blueprint (UR) 50/50 at 10,000; Skill
+  Chip Chest (UR) 1/1 at 50,000; Decoration Chest 1/1 at 50,000; Universal
+  Decor Component 150/150 at 200; UR Hero Universal Shard 10/10 at 3,000;
+  Drone Parts 100/100 at 800; Universal Exclusive Weapon Shard 25/25 at
+  2,500; Resource Choice Chest (UR) 100/100 at 4,000; Dielectric Ceramic
+  100/100 at 800; Hero Recruitment Ticket 100/100 at 2,000; 50 Stamina
+  50/50 at 1,000; Emote: Victory Fest 1/1 at 100,000. Campaign and Season
+  tabs unread; whether the Season tab is the Winter Battlefield currency
+  shop is unverified. Open discrepancies (flagged, not resolved): the
+  Commendations range on the Rewards page reads +21.0K-45.0K, but the
+  highest listed commendation is War Hero +33.0K; 30.0K x 1.5 victory =
+  45.0K fits the top only if the 30.0K tier is the max counted, while 33.0K
+  x 1.5 = 49.5K exceeds it. The Achievements range on the Rewards page
+  reads +2.4K-3.5K, but the lowest listed achievement is +2.8K; no 2.4K
+  achievement was seen in the list. The red ticket-like icon on the Rewards
+  chest tags (4,100 / 5,150 / 5,250 / 6,200 / 6,500) is unread. Red dot
+  accounting: 0 new seen in this unit's scope; the Winter Battlefield
+  sub-pages carry no red dots; the Events hub badge 1 sits on Frontline
+  Breakthrough (known: Challenge attempt, from the 0011/0325 reads). One
+  transient TCC screen_failed on a Rules tap and one observe failure
+  mid-unit, both recovered by a fresh observe; no game state lost - the same
+  transient class as the 0447 unit, not the recurring channel failure of
+  Issue #282.
+- Follow-up: successor seq 005 of chain scout-2026-11-03 enqueued (Winter
+  Battlefield History + Achievement, Shop Campaign/Season tabs, and the
+  Doomsday count finish: Lv.150 row, Lv.220 rewards, cumulative rows below
+  30 and above 70, Damage Ranking and Ranking Reward tabs). Successor seq
+  010 of chain scout-2026-11-02 (station panel only) still has no record on
+  the branch; it falls to the next run. The Monthly Pass Days Left 14-to-13
+  move inside 90 minutes (0407 to 0538) is carried as an open item: a
+  possible daily boundary between 04:07 and 05:36 local, or a misread on
+  one of the two reads - the next Mall re-read must record the value with
+  its time.

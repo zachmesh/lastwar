@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-08T14:42:04Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -28,6 +28,7 @@ grounded_in:
   - source: ticker-0534 secret-missions execution record 2026-11-04 0545 queue run (partial, second consecutive Claim-blocker partial, four variants tried, foreground still untested, Issue #171 commented by the executor)
   - source: ticker-0834 secret-missions execution record 2026-11-04 0847 queue run (partial, third consecutive Claim-blocker partial, same four finished tasks still unclaimed, badge still 9, R2 metadata write)
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, white truck badge 8 is the Secret Command Post entry, task rows read, record commit 111f7e954 on records/2026-11-08)
+  - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, white truck is the Secret Command Post entry, Your Tasks badge 17, Ally Tasks badge 5, 0022 mapping corrected); record commit 707bcec0d8 on records/2026-11-08
 ---
 
 
@@ -1102,3 +1103,42 @@ secrets-2026-10-31-2257, status partial).
   ghost-ops regulars own them).
 - Game left safe: base screen. No claim, no dispatch. No Assemble,
   no teleport.
+
+## What the 2026-11-08 0542 scout read added - white truck is the Secret Command Post entry, 17 Your Tasks and 5 Ally Tasks claimable
+
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0534, about
+  05:40 to 05:50 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0542-queue-run.md` (commit
+  707bcec0d8 on records/2026-11-08) and the appended section of
+  `_records_/2026-11-03/perception-scout/observation.md`. Observe-only;
+  nothing dispatched, assisted or claimed - the Claim buttons were read
+  only. This is a confirmatory re-read - the same unit file already ran as
+  the 0512 unit by ticker-0504 - tracked as GitHub Issue #446 (tooling);
+  the reads below are live second reads.
+- The white truck icon (5th icon down the left column) opens the SECRET
+  COMMAND POST - Secret Mobile Squad: "Dispatch heroes to perform secret
+  tasks to defeat enemies, maintain order and get rich rewards." Assist
+  Allies 0/5, Plunder Others 0/5; Recover (red dot), Record, Difficulty 3
+  stars; tabs Your Tasks (badge 17), Ally Tasks (badge 5), Others' Tasks.
+  Visible rows, all with green Claim buttons (read only): UR Rescue Test
+  Subject Lv.4; SSR Train Refugees Lv.5; SSR Provide Tech Support to
+  Refugees Lv.5; SSR Search for Missing Refugees Lv.5. Bottom: Mega Refresh,
+  Mega Deploy, "Normal" mode. The dot on the icon is this regular's signal -
+  completed Secret Mobile Squad tasks waiting to be claimed (17 Your Tasks,
+  5 Ally Tasks). The 0512 read of "at least 8 claimable task rows" is
+  extended: 17 + 5 badged rows are waiting.
+- CORRECTION: the 0022 unit mapped the white truck icon to the trucks
+  regular. That mapping is superseded by this live navigation - the white
+  truck opens the Secret Command Post; the blue truck/bus icon opens Trucks.
+  The 0022 record and the 2026-11-03 observation file carry the corrected
+  mapping (appended by the ticker pass).
+- Claim-blocker context, unchanged: the visible rows carry green Claim
+  buttons, but this unit did not tap any - the 0847 R2 metadata write (Claim
+  buttons failed in three consecutive units, 0248/0545/0847) is still open
+  and untested by this read; the 17 + 5 claimable rows are this regular's
+  work and the next secrets unit must attempt the claims from a genuine
+  foreground activation per the R2 entry-route change.
+- Chain scout-mid-2026-11-03 complete: the 3-dot carry was its last open
+  item. No successor enqueued.
+- Game left safe: game left on the base screen. Nothing claimed or
+  dispatched.
