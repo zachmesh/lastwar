@@ -334,3 +334,134 @@ dispatched, donated, dug or bought. Full unit record at
   groups belong to
   scout-midday-scout-mid-2026-11-02-001 already in
   inbox; the scout-mid-2026-10-31 chain is spent.
+
+## Pass scout-2026-11-02, unit ticker-2104, group scout-alliance remainder (partial)
+
+Stale post-reset chain unit, executed 2026-11-07 about 21:07 to
+21:21 local. Observe-only; nothing claimed, fought, dispatched,
+donated, joined or bought. Full unit record at
+`_records_/2026-11-07/perception-scout/2121-queue-run.md` (the
+execution-date folder; this section stays in the pass day file).
+
+### Base screen re-read live 2026-11-07 about 21:07 local
+
+- Account power 149,850,353; HUD resources 478.8M, 802.1M, 6.9M,
+  25.0M, 922.2K; diamonds 13.22K; cart 4,217; stamina 120.
+- Events badge 1, Season II badge 1 (7d 20:51:43), Alliance dot,
+  skull timer 00:00:20 with badge 2, Inventory dot, 99+ badge.
+- Furnace toast again: "h-temp Furnace total overdrive time
+  (in sec) [22/60]", still unexplained, recurring sighting.
+- Resource bubbles visible on buildings, observed only.
+
+### Alliance panel, read live
+
+- [AP3x] The Apex, 5.0 stars, Leader Abyss Apex, Power
+  13,355,288,388 at entry rising to 13,360,041,845 during the
+  unit, Members 96/100 (was 94/100 on 2026-11-03), Language
+  English.
+- Red dots: Alliance Wars, Help, Alliance Gifts. No dot on
+  Members, Alliance Store, Alliance Techs, Assemble, Strength
+  Ranking, Alliance Events, Alliance City, Season
+  Contributions, Season Milestones.
+- Lower panel (scrolled): Assemble, Strength Ranking,
+  Alliance Events, Alliance City (gold), Season Contributions
+  (gold), Season Milestones (gold), one more gold row below
+  the fold, unread.
+- Banner: Alliance Star (Event 40), Time Left 20:41:09
+  falling to 20:36:40 during the unit.
+
+### Members, read live
+
+- 18 online. Leader R5 Abyss Apex, Online. Roles: Warlord
+  ItStartsWithaDream, Recruiter KAGE, Muse StarFall, Butler
+  KillerInstinct14.
+- R4 "The elected" 2/10 (collapsed). R3 "Armed Guards" 10/59
+  (expanded): Captain Landmine 131.3M Lv.30 Online; Dw1968
+  110.2M Lv.30 Online; Commander Supa 93.5M Lv.30 Online;
+  Raze Cromwell 145.4M Lv.30 Online. Manage buttons not
+  tapped.
+
+### Strength Ranking, read live, all three tabs
+
+- Power: #1 R4 ItStartsWithaDream 271,007,082; #2 R5 Abyss
+  Apex 266,630,621; #3 R4 StarFall 207,190,321; #4 R3 Nuna
+  Knuckles 206,479,264; #5 R3 xChroniApex 201,010,910; #6 R4
+  KillerInstinct14 197,573,798; own #34 R3 Bears Lair
+  147,744,234 (HUD power 149,850,353 read minutes earlier;
+  the discrepancy is noted, unverified).
+- Kills: #1 R4 Teemo 71,985,826; #2 R4 TTS Rage Apex
+  39,938,810; #3 R3 Missile Apex 30,312,818; #4 R5 Abyss
+  Apex 25,185,511; #5 R4 ItStartsWithaDream 21,394,076;
+  #6 R3 Bamie 21,330,771; own #94 R3 Bears Lair 48,638.
+- Donation (Daily subtab): #1 R2 KaBoom420 6000; #2 R3
+  Skinner Box 5300; #3 R3 MrCallejon 5100; #4 R3 ANGEL777
+  Apex 4350; #5 R1 MUZIQUE Apex 3850; own #46 R3 Bears Lair
+  1150. Donate and Rewards buttons observed only, not
+  tapped. Weekly subtab not opened.
+
+### Alliance Events, read live - NEW label Zombie Siege
+
+- Single tab seen: Zombie Siege. Mode "Alliance Exercise":
+  Battle Stage lasts 30 minutes; highest total Alliance
+  damage earns rewards for all members; the top-damage
+  Commander has a chance to multiply all members' rewards
+  by 10x; Offline Participation auto-joins allies' rallies
+  when offline (open slots 20 seconds before departure).
+- Preparing: 41:48:23; Your Time Zone: 2026-11-9 15:00:00.
+  Offline Participation checkbox already checked
+  (enabled); not toggled.
+- Rewards and Build buttons observed only, not tapped.
+  View button not tapped.
+- New labels for the roster: Zombie Siege, Alliance
+  Exercise, Offline Participation. No Zombie Invasion tab
+  anywhere in the alliance panel; no fresh zombie chain
+  seeded.
+
+### Record (Alliance Logs), War tab read live
+
+- Tabs: War (selected), Member, Message, Event.
+- War log: six identical entries, one alliance member
+  (478,423) attacked Jujuliano1's base #2110 (820,169) and
+  claimed victory, server times 2026-11-8 02:36:01 to
+  02:36:20 (seconds apart - repeated hits on one base in
+  one wave, or log duplication; unverified). Next entry:
+  another member (480,447) attacked Valerunomu's base
+  #2110 (401,120), victory.
+- Member, Message and Event tabs not opened; carried.
+
+### Applicants - permission-gated
+
+- Two taps on the Applicants bottom-bar button produced no
+  page change; the second surfaced the toast "Permission
+  needed to execute this action." R3 Bears Lair cannot open
+  Applicants (officer-only surface). Recorded as resolved
+  by permission, not unwalked.
+
+### Red dot accounting for this section
+
+- Seen 8 signals: Alliance Wars, Help, Alliance Gifts dots
+  on the panel; base Events 1, Season II 1, skull-timer 2,
+  Inventory dot, 99+ badge.
+- Explained 3: the three panel dots map to their owning
+  regulars (wars - no ongoing rally per unit 1314; help
+  and gifts regulars queued).
+- Unexplained 5: the five base badges, carried to their
+  owning groups.
+- Unknown items: furnace overdrive toast [22/60]; the gold
+  row label below Season Milestones (below fold); the
+  "Important: President..." scrolling banner text; a
+  Tactical Master Supply Box toast seen mid-unit; the
+  HUD-vs-ranking power discrepancy (149,850,353 vs
+  147,744,234).
+- Carried unwalked: Alliance Star bottom tab, Settings,
+  Record Member/Message/Event tabs, station panel, loot
+  box pin - to the chain successor.
+- unmatched_labels: Zombie Siege, Alliance Exercise,
+  Offline Participation, Alliance City, Season
+  Contributions, Season Milestones (new alliance-panel
+  labels, recorded here for the diff).
+
+Correction (same pass, from unit timestamps): the unit ran
+21:07:06 to 21:16:08 local (542 seconds); the 21:21 end in
+the section header above is the device-token lease expiry,
+not the execution end.

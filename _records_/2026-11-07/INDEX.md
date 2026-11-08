@@ -4023,3 +4023,19 @@ of 2026-10-28.
   main, re-noted. No merges, no Slack DM.
   Status: done. Full detail in
   pr-integration/2115-run.md.
+
+## 21:07 to about 21:16 — Queue ticker pass, perception scout
+
+- Scout unit scout-scout-2026-11-02-005, partial: alliance
+  remainder walked observe-only — Members (18 online, 96/100),
+  Strength Ranking all three tabs (Power own #34, Kills own
+  #94, Donation Daily own #46 with 1150), Alliance Events with
+  the NEW label Zombie Siege / Alliance Exercise (Preparing
+  41:48:23, battle 2026-11-9 15:00 local, Offline
+  Participation already enabled), Record War tab, Applicants
+  permission-gated for R3. Issue #419 filed for the Zombie
+  Siege exploration. Alliance Star, Settings, Record
+  Member/Message/Event tabs, station panel and loot box pin
+  carried to the chain successor. Tracker untouched. Full
+  detail in perception-scout/2121-queue-run.md; observation in
+  _records_/2026-11-02/perception-scout/observation.md.
