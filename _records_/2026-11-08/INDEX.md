@@ -3274,3 +3274,18 @@ of 2026-10-28.
   conflicting on _tools_/INDEX.md, re-check note posted.
   No records branch left PR-less. Status: done.
   Full detail in pr-integration/1415-run.md.
+## 14:30 to about 14:35 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1430.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges. Records PR
+  460 clean at new head 577131a0f (only new commit since
+  1415 is the 1415 run record itself), verification
+  comment posted; records PR 457 clean, both awaiting
+  the 15:00 batch. Records PRs 351 and 301 still conflict
+  on the single file _logs_/repo-actions/action-log.jsonl,
+  tools PR 425 owner-gated, unchanged, still conflicting
+  on _tools_/INDEX.md; no repeat notes, heads and main
+  unchanged since the 1415 notes. No records branch left
+  PR-less. Status: done.
+  Full detail in pr-integration/1430-run.md.
