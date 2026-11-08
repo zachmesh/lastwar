@@ -2,7 +2,7 @@
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
 modified: 2026-11-08T03:44:20Z
-version: 1.27.0
+version: 1.28.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -31,6 +31,7 @@ grounded_in:
   - source: ticker-1340 alliance-duel execution record 2026-11-04 1344 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, third consecutive ticker pass to fail this way, Issue 284; ceremony and duel total unmeasured)
   - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental Alliance Duel page read during the navigation detour: Today's Theme Enemy Buster, 01:14:51 left, alliance score 225,000, chest thresholds 40,000 / 150,000 / 540,000; record commit a85cfdafa8 on records/2026-11-07)
   - source: ticker-1818 alliance-duel execution record 2026-11-07 1828 queue run (partial, league calculating, personal total unread, roulette 0 tokens)
+  - source: ticker-2304 perception-scout execution record 2026-11-07 2311 queue run (partial, Star Ceremony Event 40 playback read live, bonus rewards purple gem 4.0K and gold chest badge 14 claimable; record commit 03dc69e0c on records/2026-11-07)
 ---
 
 
@@ -891,3 +892,10 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Spin tokens: 0 held, 0/10 progress. The open question "How spin tokens are earned inside the duel week" stays open - this unit observed the zero state and the Sunday 24:00 spin reset, not an earn path.
 - Figures read live: power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
 - Tracker untouched for the duel-score regular; the next tick re-produces the duel-score unit.
+
+## What the 2026-11-07 2311 scout read added - Star Ceremony playback read live, bonus rewards claimable (Event 40)
+
+- Scout unit scout-midday-scout-mid-2026-11-02-006 by ticker-2304, sessions cc-59 about 23:05 to 23:10 and cc-60 about 23:11 to 23:15 local, status partial (alliance remainder). Evidence in `_records_/2026-11-07/perception-scout/2311-queue-run.md` (commit 03dc69e0c on records/2026-11-07) and the observation appended to `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; nothing claimed and Go never tapped by the scout.
+- Ceremony playback: Alliance Star (Event 40) Enter opened the [AP3X] ALLIANCE STAR CEREMONY (EVENT 40) playback - stage 1 of 6, "S2 Big Shot", "Next up, we're presenting the award for-!". A tap on the bottom-right chest icon advanced the ceremony to its end screen: the chest icon is an ADVANCE control, not a loot panel - do not read it as a claim button. End screen: "Thank you all for ... to claim your rewards", "Here are your bonus rewards" - a purple gem 4.0K and a gold chest with badge 14; tooltip "Send emotes to the winner to receive rewards" with a Go button; stage strip 10, 11, 12, 13, MVP, final icon highlighted; gift box 0/1 top right. Banner Time Left fell 18:43:27 to 18:39:41 across the unit. Exited by the back arrow.
+- The bonus rewards are claimable work for the star-ceremony regular: the next star-ceremony unit checks the ceremony end screen for the purple gem 4.0K and gold chest (badge 14) and claims them, and checks whether the Go button (send emotes to the winner) is part of the claim path. The S2 Big Shot winner identity was never read (the ceremony advanced past it) and the 0/1 gift box top-right is unread - both are open reads for the next ceremony unit, not blockers.
+- No personal duel total was read in this unit and no ceremony was played; the duel-score regular's unread total (unit duel-score-2026-11-07-1830 still has no record) is unaffected. No new Issue filed: the ceremony surface is now read and named here for the owning regular.
