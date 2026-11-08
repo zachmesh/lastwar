@@ -1234,3 +1234,20 @@ of 2026-10-28.
   duplicate); #444 filed by the ticker pass; no new
   Issue filed. Status: done. Full detail in
   knowledge-organization/0532-run.md.
+
+## 05:40 to about 05:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0540. Plan staged 1
+  unit (already_present 75, reaped 0, expired 0 - the
+  pre-reset sweep final pass zero-sweep-2026-11-08-1730,
+  17:30 local, chain pre-reset-sweep-2026-11-08 seq 2,
+  expires at the 18:00 reset); the pair is now complete
+  (first pass 1630 staged by the 0440 run). Scout diff on
+  the Nov 8 observation applied with zero changes
+  (observed 0, actionable 0, enqueued 0, candidates 0,
+  unexplained red dots 14 on a narrative-fallback basis -
+  six sections, seen 44, explained 30; unchanged from
+  0440, the 0504 read explains all 3 of its dots). 0
+  withdrawals. Pool: inbox 79, claimed 1, done 1222.
+  Status: done. Full detail in
+  queue-planning/0540-run.md.
