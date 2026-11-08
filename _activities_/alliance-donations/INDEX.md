@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T17:39:52Z
+modified: 2026-11-08T18:38:59Z
 level: L1
-version: 1.65.0
+version: 1.66.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -78,6 +78,7 @@ grounded_in:
   - source: ticker-0804 alliance-donations execution record 2026-11-08 0808 queue run (partial, re-read after cooldown, 1 coin donation verified, burst cap after one verified donation, grey-button evidence disproved a second time, count replenished 1 to 2, Issue #450); record commit 97437267c4 on records/2026-11-08
   - source: ticker-0834 alliance-donations execution record 2026-11-08 0841 queue run (partial, re-read after cooldown, 0804 third tap proven eaten, one coin tap dispatched unverified behind a 00:16:27 timer, footer +100, count stuck at 1/30, Issue #450); record commit cf80509ea on records/2026-11-08
   - source: ticker-0904 alliance-donations execution record 2026-11-08 0920 queue run (partial, re-read after cooldown, 0841 tap proven eaten at entry, one coin tap proven not landed after its 00:07:01 timer cleared, long-press no-op, third consecutive partial on the 1/30 blocker, changed route per R2, Issue #450); record commit 387928fc7f on records/2026-11-08
+  - source: ticker-0934 perception-scout execution record 2026-11-08 0937 queue run (Donation Count read live 2/30 at entry, up from 1/30 at the 0808 close with no landed donation in between, replenishment +1 within about 17 minutes, Quick Construction 8/10, settlement timer 08:21:00; record commit ac350b49c on records/2026-11-08)
 ---
 
 
@@ -3056,3 +3057,39 @@ enqueued for after the cooldown (not before about
   30-of-30 daily target for 2026-11-08 remains unverified.
 - Game left safe: base screen, no purchase, no diamond spent. Coins
   spent: 900 dispatched, unverified; the long-press spent nothing.
+
+## What the 2026-11-08 0937 scout entry read added - Donation Count 2/30, replenishment +1 within about 17 minutes, no donation in between
+
+- The 0937 scout unit (scout-scout-2026-11-03-006, ticker-0934) read
+  the Donation Count live at entry, about 09:37 local: 2/30, up from
+  1/30 at the 0808 close. Evidence in
+  `_records_/2026-11-08/perception-scout/0937-queue-run.md` (commit
+  ac350b49c on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-03/perception-scout/observation.md`. Quick
+  Construction 8/10, settlement timer 08:21:00. No donation was
+  dispatched in this unit (scout, observe-only).
+- Replenishment, not a landing: the 0841 tap is proven not landed by
+  the 0920 entry read (still 1/30) and the 0920 tap is proven not
+  landed by its own post-timer re-read (still 1/30) - the fifth
+  eaten-tap confirmation. No donation landed between the 0920 close
+  and this read, so the 1/30 to 2/30 move is replenishment. The +1
+  landed between the 0920 post-timer re-read (still 1/30, about
+  09:20) and this entry read (about 09:37) - within about 17 minutes.
+- This tightens the replenishment model: earlier reads showed 1/30 to
+  4/30 at 1346 and 1/30 to 2/30 at 1523 across longer windows; this
+  is the first +1 bounded inside a single about-17-minute window with
+  both endpoints read live and no tap in between. It does not change
+  the changed route: do NOT tap from 1/30 on Quick Construction -
+  tap only if the count has replenished above 1, or try the War-tab
+  node.
+- Caveat, answered: the observation file's own note ("the count
+  replenished about 1 per 47 minutes, or the unverified third tap
+  landed") is resolved in favour of replenishment - the 0804 third
+  tap was proven not landed by the 0841 entry read, and the 0841 and
+  0920 taps are proven not landed as above, so no unverified tap can
+  account for the rise.
+- Commented on Issues #160, #423 and #450 by this run.
+- Follow-up: the re-read owed to the already-queued
+  donations-2026-11-08-1621 still has no record on the branch - it
+  reads the Donation Count live and applies the changed route above.
+  It falls to the next run.
