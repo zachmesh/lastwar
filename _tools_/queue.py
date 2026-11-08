@@ -107,7 +107,11 @@ Usage:
              # record on the branch, never in this pool, so
              # without this step the next tick hands it out
              # again; a branch that cannot be read warns and the
-             # tick continues on local state only - then enqueue
+             # tick continues on local state only - production
+             # then skips a slot already closed on the branch or
+             # by a live completion marker (issue #466), so the
+             # drop above cannot be undone by minting the same
+             # unit id again in the same tick - then enqueue
              # one unit per regular the tracker marks due
              # (idempotent);
              # without --due-json it calls the sibling regulars.py todo
@@ -797,8 +801,20 @@ def cmd_sync(args):
     due_items = [i for i in due_doc.get("items", []) if i.get("due")]
     # 3. produce the unit for each due regular's current window -
     #    the (regular, window) invariant in _produce_for_window is
-    #    what keeps sync and the planner from ever duplicating
-    produced, already = [], []
+    #    what keeps sync and the planner from ever duplicating.
+    #    A slot already closed on the delivered branch or by a
+    #    live completion marker is not produced at all (issue
+    #    #466): the branch drop above removes the stale inbox
+    #    copy, but without this the same tick mints a fresh unit
+    #    with the same deterministic id and re-executes the slot
+    #    - ticker-1352 did exactly that to radar-2026-11-08-1003.
+    #    Markers are read after the step-1 reap, so only live
+    #    markers count.
+    closed = {unit: "done on %s" % branch for unit in branch_done}
+    for unit in completion_marker_units(args.root):
+        closed.setdefault(unit, "completion marker in another "
+                                "worktree")
+    produced, already, skipped_closed = [], [], []
     for item in due_items:
         if item.get("cadence") == "fixed-slots":
             # Plan-produced only: the tracker carries no per-slot
@@ -809,9 +825,13 @@ def cmd_sync(args):
         planned_local = cycle_start_local(item, now_local)
         unit = _produce_for_window(
             args.root, item, planned_local,
-            duel_window_text(item["id"], planned_local))
+            duel_window_text(item["id"], planned_local),
+            closed_ids=closed)
         if unit:
             produced.append(unit)
+        elif _unit_id_for_window(item, planned_local) in closed:
+            skipped_closed.append(
+                _unit_id_for_window(item, planned_local))
         else:
             already.append(item["id"])
     # 4. window aged unscheduled priority-1 units (issue #128) -
@@ -826,6 +846,7 @@ def cmd_sync(args):
                       "completion_markers_reaped": markers_reaped,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
+                      "skipped_closed": skipped_closed,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
@@ -1108,10 +1129,30 @@ def _sweep_slot_geometry(item, planned_local):
             "expires_at": iso(expires_dt)}
 
 
-def _produce_for_window(root, item, planned_local, window=""):
+def _unit_id_for_window(item, planned_local):
+    """Deterministic unit id for one (regular, window) pair.
+
+    The id is the regular plus the window's local start - the
+    same formula _produce_for_window writes into the unit file -
+    so a caller can name the unit a production would mint
+    without minting it (sync reports which closed slots it
+    skipped, issue #466).
+    """
+    return "%s-%s" % (item["id"],
+                      planned_local.strftime("%Y-%m-%d-%H%M"))
+
+
+def _produce_for_window(root, item, planned_local, window="",
+                        closed_ids=None):
     """Enqueue the unit for one (regular, window) pair, or return
     None when that pair already exists in any state - the pool's
-    anti-duplication invariant, shared by sync and plan."""
+    anti-duplication invariant, shared by sync and plan. A pair
+    whose unit id is in closed_ids (unit -> where it closed) is
+    also not produced: the slot already closed on the delivered
+    records branch or in another worktree, and minting a fresh
+    unit with the same deterministic id would re-execute it
+    (issue #466). Callers that pass no closed set keep the old
+    behaviour; plan wires its own set under #465."""
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -1156,6 +1197,19 @@ def _produce_for_window(root, item, planned_local, window=""):
                               f"stale pair and re-run plan or sweep "
                               f"(issue #410)")
                 return None
+    # Closed-slot guard (issue #466): the live-pool scan above
+    # cannot see a closing that lives only on the delivered
+    # records branch or in another worktree's marker, so a
+    # caller that knows the closed set passes it in and the
+    # slot is not minted again. Checked after the live scan so
+    # the stale-geometry warning above still fires first.
+    unit_id = _unit_id_for_window(item, planned_local)
+    if closed_ids and unit_id in closed_ids:
+        print(f"warning: {unit_id} already closed "
+              f"({closed_ids[unit_id]}) - not producing a fresh "
+              f"unit for the same slot (issue #466)",
+              file=sys.stderr)
+        return None
     cadence = item.get("cadence", "")
     if cadence == "fixed-slots" and _reset_anchored_offsets(item):
         # The slot's own reset instant is its expiry: a sweep
@@ -1190,7 +1244,7 @@ def _produce_for_window(root, item, planned_local, window=""):
                     chain_seq = idx + 1
                     break
     fields = {
-        "unit": f"{regular}-{planned_local.strftime('%Y-%m-%d-%H%M')}",
+        "unit": unit_id,
         "regular": regular,
         "activity": item.get("activity", ""),
         "segment": item.get("segment", ""),
@@ -2436,6 +2490,37 @@ def has_completion_marker(root, unit):
         return False
     return (fields.get("unit") == unit
             and bool(fields.get("status")))
+
+
+def completion_marker_units(root):
+    """Unit ids holding a live, valid completion marker.
+
+    Mirrors has_completion_marker's validity rule (the marker
+    names its own unit and carries a closing status); a file
+    that does not parse, names a different unit, or carries no
+    status suppresses nothing. Used by sync production (issue
+    #466): a unit closed in another worktree whose done record
+    has not landed anywhere this tree can see must still block
+    a fresh unit for its slot.
+    """
+    home = completion_home(root)
+    folder = os.path.join(home, COMPLETED_DIRNAME)
+    if not os.path.isdir(folder):
+        return set()
+    units = set()
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".md"):
+            continue
+        unit = name[:-len(".md")]
+        if not unit:
+            continue
+        try:
+            fields, _ = read_unit(os.path.join(folder, name))
+        except (OSError, ValueError, UnicodeDecodeError):
+            continue
+        if fields.get("unit") == unit and bool(fields.get("status")):
+            units.add(unit)
+    return units
 
 
 def record_completion(root, unit, status, executor):
