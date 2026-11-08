@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T06:32:17Z
+modified: 2026-11-08T09:32:17Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -43,6 +43,7 @@ grounded_in:
   - source: ticker-2006 alliance-gifts execution record 2026-11-07 2033 queue run (done, 437 Regular and 7 Premium claimed, both tabs verified clear, Gift Level 28 progress 192,787,590 to 192,799,520, per-sweep deltas do not decompose into own claims alone, filed as Issue #183 evidence by the ticker pass; record commit e9bf320c92 on records/2026-11-07)
   - source: ticker-2134 perception-scout execution record 2026-11-07 2153 queue run (partial, LOOT panel re-checked, unclaimed Lv.1 Doom Elite row, Lv.60 rows gone; record commit fe5a1e7fd3 on records/2026-11-07)
   - source: ticker-2304 perception-scout execution record 2026-11-07 2311 queue run (partial, LOOT panel re-checked, Lv.1 Doom Elite row still unclaimed after 80+ minutes; record commit 03dc69e0c on records/2026-11-07)
+  - source: ticker-0034 perception-scout execution record 2026-11-08 0048 queue run (partial, Gifts Regular tab read live about 00:57 local, Level 28 progress 193,012,970/206,300,000, Claim All badge 82, four +10 rows none claimed, Premium tab dot seen not opened; record commit 4fd2b88a26 on records/2026-11-08)
 ---
 
 
@@ -1206,3 +1207,11 @@ one file per execution.
 - LOOT panel, read live about 23:13 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]Bears Lair; March Queues 0/4.
 - Three rows, the same three unit 2153 read at 21:51: Row 1 Bears Lair, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 Bears Lair, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is STILL UNCLAIMED - no "Claimed" label, now unclaimed for 80+ minutes. The gift badge 3 maps to the three rows (two claimed, one unclaimed), confirmed again.
 - Follow-up for the next gifts unit: check the LOOT panel via the world-map gift icon and claim the unclaimed Lv.1 Doom Elite row if it is still present; the row has now sat unclaimed across two scout passes (2153 and 2311) and the panel turns over, so a stale unclaimed row is a missed claim. No new Issue filed: the row is named here for the owning regular.
+
+## What the 2026-11-08 0048 scout read added - Gifts Regular tab, Level 28 progress 193,012,970, Claim All 82 waiting
+
+- Scout unit scout-scout-2026-11-02-006 by ticker-0034, about 00:44 to 00:48 local, status partial (alliance group). Evidence in `_records_/2026-11-08/perception-scout/0048-queue-run.md` (commit 4fd2b88a26 on records/2026-11-08) and the observations in `_records_/2026-11-08/perception-scout/observation.md`. Observe-only; Claim All was observed only and never tapped by the scout.
+- Alliance Gifts screen, Regular tab, read live about 00:57 local: Gift Level 28, progress 193,012,970 / 206,300,000 (was 181,429,280 on 2026-11-02 and 183,423,470 on 2026-11-03). Claimable rows, each +10, Claim buttons observed only, none claimed (the gifts regular owns claims): Alliance Gifts 23:55:03, 나라손 Defeated Doom Elite; Alliance Gifts 23:54:58, MUZIQUE Apex Defeated Doom Elite; Alliance Gifts 23:54:56, 나라손 Defeated Doom Elite; Doom Walker Loot 23:50:44, Nuna Knuckles Defeated Doom Walker; a fifth Alliance Gifts row partially visible below the fold. Claim All badge 82 (was 201 on 2026-11-02, 48 on 2026-11-03).
+- Progress note, Issue #183 evidence: progress rose from 192,799,520 (2033 close, 2026-11-07 20:37) to 193,012,970 with no own claims in between - only scout observation ran in between, so the bar keeps moving alliance-wide, consistent with the standing note that the full delta must not be attributed to own claims. Commented on Issue #183 by this run.
+- Premium tab: red dot seen, tab not opened this unit; its contents are unwalked and carried to the successor.
+- Follow-up for the next gifts unit: Claim All 82 is waiting on the Regular tab (four rows read, a fifth below the fold); re-check Regular after the Premium sweep per the 2033 lesson, since gifts arrive mid-unit. No new Issue filed: the waiting claims are named here for the owning regular.

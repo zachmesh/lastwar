@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T06:32:17Z
+modified: 2026-11-08T10:46:00Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,7 @@ grounded_in:
   - source: ticker-1834 shop-claims execution record 2026-11-07 1853 queue run (done, 3 claims, first live shop read since 2026-11-04, Free Supply auto-claim and monthly gift re-confirmed)
   - source: ticker-2204 perception-scout execution record 2026-11-07 2209 queue run (partial, Mall strip walked in full, Weekly Pass reset 18:00:00 fourth live confirmation, Super Monthly Pass Days Left 14, check-in FREE GIFT claimable; record commit 0e4f2e52e2 on records/2026-11-07)
   - source: ticker-0004 perception-scout execution record 2026-11-08 0022 queue run (partial, midday remainder, Weekly Deal page closed, Official Event tab dot, check-in FREE GIFT still carried; record commit e6192726d1 on records/2026-11-08)
+  - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, Weekly Deal page walked in full, seven paid packs, nothing free; record commit 6560ff267 on records/2026-11-08)
 ---
 
 
@@ -906,3 +907,10 @@ the free and already paid for parts, never the paid unlocks.
 - Weekly Deal tab (no dot), window 2026-11-2 00:00:00 to 2026-11-8 23:59:59 - three paid packs, all observed only: Valor Badge (Epic) $99.99, 1 purchase available; Base Upgrade (Epic) $19.99, 1 purchase available; UR Set (Elite) $49.99, 1 purchase available. This closes the "Weekly Deal tab page" item the 2209 unit carried. The window ends 2026-11-8 23:59:59, so the tab's contents lapse at the end of today.
 - Not re-walked in this unit: Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall and Hot Sale Packs tabs (last walked by the 2209 unit about 22:05 on 2026-11-07: Super Monthly Pass Daily Pickup already Claimed, 14 days left; four $4.99 weekly pass cards; Diamond and Gold Brick Mall paid packs only; Hot Sale Packs sold out). Carried to successor seq 003 of chain scout-mid-2026-11-04.
 - Red dots in the surfaces walked: Official Event tab dot maps to the check-in gift, explained, mapping to this regular. Unknown item: small chest icon overlaid on the Weekly Pass and Super Monthly Pass tabs (possibly an owned-pass marker; meaning unread) - carried from the 2209 section.
+
+## What the 2026-11-08 0229 scout read added - Weekly Deal page walked in full, seven packs
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0204, 02:17 to 02:32 local, status partial per rule R1. Evidence in `_records_/2026-11-08/perception-scout/0229-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-03/perception-scout/observation.md`. Observe-only; nothing bought.
+- Correction and extension of the 0022 section: the 0022 unit read only three packs; the full page has SEVEN paid packs, each "1 purchases available", nothing free: Valor Badge (Epic) $99.99; Base Upgrade (Epic) $19.99; UR Set (Elite) $49.99; Drone Component (Elite) $49.99; Drone Parts (Elite) $49.99; Weekly Drone Skill Chip (Elite) $49.99; Stars (Advanced) $99.99. Each pack carries a +200/+500/+1000 badge and red gems 2.0K-10.0K plus speedups, crates and badges. List ends at Stars; a further drag produced no change.
+- Window 2026-11-2 00:00:00 to 2026-11-8 23:59:59 - the tab's contents lapse at the end of today.
+- Game left safe: game left on the base screen. Nothing bought. No Assemble, no teleport.

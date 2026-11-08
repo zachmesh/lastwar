@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T03:44:20Z
+modified: 2026-11-08T10:46:00Z
 level: L1
-version: 1.12.0
+version: 1.13.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: ticker-1727 vip-rewards execution record 2026-11-07 1747 queue run (partial, Freebie countdown to about 18:02 not the 19:00 reset, login chest already collected, VIP13 points 1,603,930 of 2,000,000, streak 1 day; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-1734 vip-rewards execution record 2026-11-07 1812 queue run (partial, login chest claimed plus 60 points to 1,603,990, streak 2 days, Freebie unlocked about 18:02 but Claim button unresponsive to four input variants including a foreground click; record commit 840094b6ad on records/2026-11-07)
   - source: ticker-1818 VIP execution record 2026-11-07 1830 queue run (partial, chest already claimed, freebie not retried, popularity popup on the avatar-tap route)
+  - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, VIP panel walked, VIP13 progress 1,605,970/2,000,000, Daily Freebie GREEN/claimable NOT claimed, Exclusive pack read; record commit 6560ff267 on records/2026-11-08)
 ---
 
 
@@ -265,3 +266,13 @@ Measured on 2026-10-25.
 - Entry-route correction: the "How to enter" route (avatar tap, then the gold VIP badge on the profile) can be obstructed by the popularity popup, and the profile's bottom tabs carry no VIP entry - the badge sits elsewhere on the profile and its position needs a fresh read on the next unit. Do not assume the badge is on the tabs row, and do not treat a popup-covered profile as the VIP screen. The freebie button's standing repeat blocker (ticker-1734: unresponsive across four input variants at norm about 739, 637) therefore stands, and this unit adds no new variant to it.
 - The token was released at 18:30 so the 18:34 tick can take it and run the 18:30 zero sweep (unit 002), which retries the freebie before the 19:00 reset per the ticker-1734 handoff. Whether that retry ran is unknown at this run's close; the freebie was still unclaimed at the reset, and the next claim window is the next cycle's units (the freebie unlocks about 18:02 daily on its own roughly 24-hour cycle, per the Correction above).
 - Figures read live: power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M. Profile likes 1,806 before the popup dismissal, 1,810 after (measured). No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+
+## What the 2026-11-08 0229 scout read added - VIP panel walked, Daily Freebie claimable
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0204, 02:17 to 02:32 local, status partial per rule R1 (3 red dots unexplained, one of them the VIP cart icon). Evidence in `_records_/2026-11-08/perception-scout/0229-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-03/perception-scout/observation.md`. Observe-only; nothing claimed. Entry: avatar -> MY PROFILE -> VIP13 tile.
+- Profile: Lv.30 [AP3x]Bears Lair, US flag, 149.8M, 48.6K, Lv.63, Lv.2, [AP3x]The Apex, VIP13, #2110, likes 1,810, showcase flower 12 / gift 88 / trophy 11, Moments "No posts found.", bottom bar Record (red dot), Account, Settings, Rankings, Follow.
+- VIP panel: VIP13, "You've logged in 2 days in a row. Collect 80 VIP points tomorrow.", progress 1,605,970/2,000,000. Privileges: NEW Crafting Speed 50.00%; NEW Research Speed 20.00%; NEW Activate the Mega Mode of Trade Trucks 1; Boost Food Output 25.00%; Boost Iron Output 25.00%; Boost Coin Output 25.00%; Construction Speed 50.00%; March Speed 15.00%; Max Units 5.00%; Unit Healing Speed 10.00%; Boost Hero HP 5.00%; Boost Hero Attack 5.00%; Boost Hero Defense 5.00%; "Forward Mode" Rush Attempts 2; "Shake your device to collect all resources! (Unlocks..." (row truncated at right edge).
+- VIP13 Daily Freebie: Claim button GREEN/claimable (puzzle 2, brown crate 13, grey crate 13, gold 13) - observed only, NOT claimed; the claim belongs to the vip regular (vip unit is in the inbox, due). Note: the freebie button's standing repeat blocker (ticker-1734: unresponsive across four input variants) is a claim-attempt blocker; this unit only observed the button rendering claimable and did not attempt a claim, so the blocker stands untested by this read.
+- VIP Exclusive (Epic), Availability 1: red gem 10.0K, hero shard 120, blue crate 5, paw item, $99.99, +1000 badge. Bottom timer 18d 15:45:39. Top-right cart icon (red dot, unexplained - carried to the scout successor) and chest icon.
+- The floating circular portrait icon appeared again over "Mega Mode of Trade Trucks" and over "Boost Hero Attack" (identity unknown).
+- Game left safe: game left on the base screen. No claim, no purchase. No Assemble, no teleport.
