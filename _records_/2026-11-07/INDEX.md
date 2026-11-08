@@ -3839,3 +3839,43 @@ of 2026-10-28.
   24 hours, statements current. No adoption, no fix, no
   hand-off, no escalation, no stale-owner flag. Status: no-op.
   Full detail in pr-catchall/2039-run.md.
+
+## 20:40 to about 20:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-2040.
+- Plan run twice: the body command with the live tree
+  stale tools staged 0 (already_present 69,
+  skipped_done_current 0, reaped 0, expired 0); re-run
+  with the branch-tip tools (newer queue.py, md5 f71d26e7)
+  against the live _queue_ root staged 0 more
+  (already_present 68, skipped_done_current 6, reaped 0,
+  expired 0, stale_done_dropped []). The next 12 hours
+  were already staged in the live pool through about 08:40
+  local 2026-11-08.
+- Pre-reset sweep production: this run is not the
+  17:00-hour run, so nothing was enqueued; tonight's pair
+  (chain pre-reset-sweep-2026-11-07) both EXPIRED
+  unexecuted (expires_at 2026-11-08T03:00:00Z, both in
+  done). The sweep partially ran through the standalone
+  zero-sweep-2026-11-07-1730 unit (ticker-1734, partial,
+  23 lines walked, 2 fix-ups enqueued); the final pass
+  never ran, so the Nov 7 pre-reset sweep closes as first
+  pass partial only, final pass missed.
+- Scout diff on the Nov 4 observation (seventy-fifth
+  consumption): dry run and apply agree with the fixed
+  tool, all zero except unexplained 4 (observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates
+  0, promotion proposals 0). No withdrawals: the diff
+  classified nothing and the Nov 4 observation is older
+  than the current inbox units. No new observation for
+  Nov 5, 6 or 7; scout-2026-11-07-1800 and -1900 still in
+  inbox unexecuted.
+- 1940 delivery verified landed on the branch (commit
+  f5df1d3e61 ancestor of tip 555882be53); no recovery
+  needed. Branch / live divergence noted, not carried:
+  6 old scout exploration units in the live inbox never
+  reached the branch, 54 live done files are not on the
+  branch, and zero-sweep-1630 sits in the branch done
+  pool but is absent from the live pool entirely.
+- Status: no-op. Full detail in
+  queue-planning/2040-run.md.
