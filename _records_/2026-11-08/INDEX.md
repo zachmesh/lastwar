@@ -477,3 +477,38 @@ of 2026-10-28.
   430/426 still await the 03:00 batch; 351/301 still
   conflicted. Status: done. Full detail in the addendum
   to pr-integration/0130-run.md.
+
+- Unit scout-midday-scout-mid-2026-11-03-004, partial, observe-only:
+  store-group remainder (VIP, daily missions, Weekly Deal) never
+  reached - the Alliance Star Ceremony overlay held the screen
+  for the whole unit. Ceremony read live: bonus slide 4.0K gem
+  with chest 0/1 and Go tooltip; slide 10 Doom Elite Slayer
+  (JerryLogDog, 223 kills); 11 Alliance Sponsor (DCna8ive,
+  178,000 points); 12 Good Helper (5tarFall, 2,807 helps); 13
+  Shining Star (Abŷss Apex, +4,362,901 Desert storm points);
+  MVP (SKRyZeRZ, 9 Performance Points). Loop established: after
+  the MVP slide the ceremony returns to the chest slide, and a
+  back-arrow tap there goes to slide 10 again - the ceremony
+  cycles and does not exit on its own controls. Advancement
+  measured: centre tap 500,500 per stage, skip 806,938 per
+  slide, back arrow 170,914 per slide. The Go/emote action is
+  the only untested forward step and is the ceremony's claim
+  path, so it was not tapped in this observe-only unit; the
+  exit belongs to the star-ceremony regular, whose unit is
+  already queued. Red dots 1 seen, 1 explained, 0 unexplained.
+  Successor scout-midday-scout-mid-2026-11-03-005 enqueued
+  with the store remainder (VIP, daily missions, Weekly Deal).
+  Tracker untouched. Full detail in
+  perception-scout/0150-queue-run.md and the appended
+  observation section.
+- Unit donations-2026-11-08-0618, partial, no donations: the Star
+  Ceremony overlay was still open on the chest/bonus slide (live
+  read 01:54), so the base screen, Alliance entry and Donation
+  Count were unreachable; 0 donations landed, count unread, no
+  coin or diamond spent, tracker untouched. First
+  ceremony-blocked partial for the donations regular. The
+  star-ceremony unit in the inbox is the unblocker. Picker gap
+  filed as GitHub Issue #436 (the picker keeps handing out
+  base-screen units while the overlay is open instead of
+  preferring the clearing unit). Full detail in
+  alliance-donations/0154-queue-run.md.

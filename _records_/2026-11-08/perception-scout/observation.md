@@ -1,7 +1,7 @@
 ---
 title: Observation 2026-11-08
 created: 2026-11-08T08:53:00Z
-modified: 2026-11-08T09:18:00Z
+modified: 2026-11-08T09:50:00Z
 level: L0
 version: 1.0.0
 description: Day observation file for the reset day started 2026-11-07 19:00 local, appended to by every scout unit of the day
@@ -328,3 +328,66 @@ perception-scout/0122-queue-run.md.
   tiles. The station panel stays with the midday chain
   (successor 009, enqueued by the 0118 unit).
 ---
+
+## Pass scout-midday-scout-mid-2026-11-03-004 executed, unit ticker-0137, group scout-store remainder (partial)
+
+Stale midday chain of 2026-11-03 executed late in the current
+reset day, following the ticker-0434 and ticker-0534 precedent:
+observations are filed here as reads of the current game state,
+not of the old midday window. Session about 01:44 to 01:50 local,
+computer sessions cc-69 and cc-70. Observe-only throughout. Full
+unit record at `perception-scout/0150-queue-run.md`.
+
+### Star Ceremony overlay, read live about 01:44 to 01:50 local
+
+- The game was found on the [AP3X] Alliance Star Ceremony
+  (Event 40) bonus-rewards slide: purple gem 4.0K, "Here are
+  your bonus rewards", "Send emotes to the winner to receive
+  rewards" tooltip with a blue Go button, chest counter 0/1.
+  Bottom row 10, 11, 12, 13, MVP, chest.
+- Slides read live: 10 Doom Elite Slayer (JerryLogDog, 223 Doom
+  Elites, runners SKRyZeRZ 181, xChroniApex 171); 11 Alliance
+  Sponsor (DCna8ive, 178,000 donation points, runners kaBoom420
+  166,850, Texan Apex 103,300); 12 Good Helper (5tarFall, 2,807
+  helps, runners DCna8ive 2,738, VOUGoApex 2,543); 13 Shining
+  Star (Abŷss Apex, Desert storm points +4,362,901, runners
+  2,113,189 and 1,937,365); MVP (SKRyZeRZ, 9 Performance
+  Points, runners Rage Apex, Abŷss Apex).
+- The ceremony LOOPS: after the MVP slide it returned to the
+  chest slide, and a back-arrow tap from the chest slide went
+  to the "Next UP" transition and then to slide 10 again.
+  Advancement measured: centre tap norm 500,500 advances one
+  stage; skip button norm 806,938 advances one slide;
+  back arrow norm 170,914 advances slides. The Go button is
+  the only untested forward action and is the ceremony's claim
+  path, so it was not tapped in this observe-only unit.
+- President banner seen truncated during slide 13:
+  "Important: President HawksMav appointe..." (full text
+  unread).
+- Emote bar (heart plus five faces) appears at the bottom of
+  the award slides.
+
+### Red dot accounting, this unit's walked surfaces
+
+- Seen 1: the chest 0/1 counter with its Go tooltip.
+- Explained 1: the chest maps to the star-ceremony regular,
+  whose unit is already queued.
+- Unexplained 0 in the surfaces actually walked.
+- unmatched_labels: none in the surfaces actually walked.
+
+### Unknown items, carried
+
+- Ceremony exit route (Go/emote untested, star-ceremony
+  regular's job).
+- Slide-count reconciliation: the 0122 unit read "6 slides"
+  with opening slides "S2 Big Shot - Texan Apex" and "Little
+  Sun / Nuna Knuckles"; this unit read the six bottom-row
+  slides plus the bonus slide.
+- The full President HawksMav banner text.
+
+### Unwalked, carried to successor seq 005 of chain scout-mid-2026-11-03
+
+- VIP panel, daily missions panel, Weekly Deal page (the
+  store-group remainder). The Weekly Pass reset figure
+  (18:00:00 vs the standing 19:00 note) is still an
+  unanswered re-read item.
