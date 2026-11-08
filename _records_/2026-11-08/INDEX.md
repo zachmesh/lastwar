@@ -1103,3 +1103,26 @@ of 2026-10-28.
 ## 05:14 to about 05:19 - Ticker-0504 donations re-read
 
 - Ticker-0504, unit donations-2026-11-08-1056, status partial with an unverified close under the hard closing rule. Quick Construction 8/10 (Development tab, recommended marker) re-read live: Donation Count 4/30 at entry, 3 coin donations landed live 4/30 to 1/30 (2,700 coin); tap 4 was eaten by a seconds-long grey-out (count re-read 1/30 unchanged); tap 5 unconfirmed behind a 00:19:35 cooldown timer. Footer 3450 to 4000 (+550, mechanism unexplained, observed only). Replenishment data point (1/30 to 4/30 over about 1h10m, fourth confirmation) and cooldown data filed on Issue #160. Re-read unit donations-2026-11-08-1318 enqueued for 05:39 local. Tracker untouched. Full detail in alliance-donations/0519-queue-run.md.
+
+## 05:15 to about 05:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0515.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 07:00). No merges. Records PR
+  439 clean at unchanged head 42ef0190 and records PR 430
+  clean at new head 9bf41c2d (0500 run-record commit)
+  against live main f2eacffc20, both awaiting the 07:00
+  batch; 430 re-noted (issuecomment-6721979628). Records
+  PRs 351 and 301 still conflict with main on the single
+  file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-verified against
+  main f2eacffc20, carried without fresh notes (main and
+  heads unchanged since the 0500 notes). Tools PR 425
+  owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision. No records PR opened by
+  this pass. This record was committed by plumbing
+  (temp index) against the branch tip so the ticker
+  working state in the records worktree was left
+  untouched. No Slack DM sync, no chat report: silent
+  non-batch run. Status: done. Full detail in
+  pr-integration/0515-run.md.
