@@ -188,3 +188,48 @@ of 2026-10-28.
   6719404355, 6719404488); no new Issue filed. Slack DM sync
   sent (message_ts 1794127500.368309). Status: done. Full
   detail in knowledge-organization/0032-run.md.
+
+## 00:36 to about 00:44 — Queue ticker pass, alliance donations
+
+- Ticker pass ticker-0034. Sync reaped nothing and produced
+  nothing new - all 22 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066), and no zombie unit
+  sits in inbox or claimed.
+- Donations unit donations-2026-11-08-0419, partial: re-read
+  after the 2018 cooldown. Quick Construction 8/10
+  (recommended marker), Donation Count read live 3/30 at
+  entry; 2 coin donations landed on live reads (3->1, 900
+  coin each); the final tap greyed the button behind a
+  00:16:01 timer, so the count was never read at 0/30 and
+  the unit closes unverified per the hard closing rule.
+  Footer 2050 to 2350 (observed only). A re-read unit
+  (donations-2026-11-08-0843) is enqueued for after the
+  cooldown, not before 00:59 local. Tracker untouched.
+  Full detail in alliance-donations/0043-queue-run.md.
+
+## 00:44 to about 00:49 — Queue ticker pass, perception scout (alliance group)
+
+- Ticker pass ticker-0034, continued. Scout unit
+  scout-scout-2026-11-02-006, partial: the alliance group
+  of the stale 2026-11-02 post-reset pass. Techs both tabs
+  read (Development: Quick Construction 8/10 recommended;
+  War first view: Unit Load Capacity 2/10, Quick Training
+  1/10, Expert Trainer 2/10; tree top tier unreached, two
+  drag-scrolls produced no movement). Alliance panel:
+  [AP3x] The Apex, dots on Wars, Help and Gifts, none on
+  Store, Techs or Members. Wars Rally Intel: a live rally
+  by [AP3x]Killing It Softly on a Lv.120 Doom Walker,
+  38km away, 1/5 joined, 00:00:24 left - observed only,
+  not joined; the Wars dot stays open on Issue #212 (the
+  dot also appeared on rally-less days). Gifts: Level 28,
+  193,012,970/206,300,000, Claim All badge 82, four +10
+  rows read, none claimed. Red dots: 5 seen, 4 explained,
+  1 unexplained (Wars dot, Issue #212). Observations filed
+  in the new day file perception-scout/observation.md (the
+  0004 pass's 0011/0022 units did not append there).
+  Remainder (Help, Store, City, Individual Intel tab,
+  station panel) carried to successor
+  scout-scout-2026-11-02-008. Tracker untouched. Full
+  detail in perception-scout/0048-queue-run.md.
