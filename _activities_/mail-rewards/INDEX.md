@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T02:42:42Z
+modified: 2026-11-08T04:48:01Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-1025 mail-rewards execution record 2026-11-05 1025 queue run (failed, Mac device offline, forty-second consecutive pass, zero-response form, Issue 284)
   - source: ticker-1804 mail-rewards execution record 2026-11-05 1804 queue run (failed, Mac device offline, fifty-seventh consecutive ticker pass with a Mac device-access blocker, eighteenth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 10h30m, unchanged since the 1025 pass; seven invokes, zero responses)
   - source: ticker-1727 mail-rewards execution record 2026-11-07 1740 queue run (done, all six claimable categories checked, nothing claimable; record commit 69997e12a1 on records/2026-11-07)
+  - source: ticker-2006 mail-rewards execution record 2026-11-07 2028 queue run (done, Alliance Daily Donation Rankings and 3 Event mails claimed, other categories clear by list read, verified clean after claims; record commit e9bf320c92 on records/2026-11-07)
 ---
 
 
@@ -817,3 +818,14 @@ the next tick re-produces this regular as a fresh unit.
 - In-app Purchases was not opened: receipts only, nothing to claim, per the activity metadata. Its red dot is unread receipts.
 - Figures read live: Power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M, stone 25.0M, 922.2K; diamonds 3,702.
 - No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+
+## What the 2026-11-07 2028 unit added - done, Alliance and Event rewards claimed, other categories clear
+
+- Unit mail-2026-11-07-1830 by ticker-2006, about 20:28 to 20:36 local, status done. Evidence in `_records_/2026-11-07/mail-rewards/2028-queue-run.md` (commit e9bf320c92 on records/2026-11-07). Computer session cc-45, LastWar already running on the base screen (eastern framing).
+- Category list read live at entry: Alliance and Event carried gift icons; Battle Report, Season, System and Regular carried neither a gift icon nor a red dot; In-app Purchases carried a red dot only (receipts, not opened, per the activity metadata).
+- Alliance: Claim All pressed. The claimable mail was Daily Donation Rankings (2h ago). CONGRATULATIONS popup: red gem x10, badge (50) x4. The other Alliance mails carried no attachments: [Alliance Exercise] Alliance R... (4h ago), two New Alliance Assembly Point notices (23h ago), two New Alliance Marker notices (1d ago).
+- Event: Claim All pressed. Three mails claimed: Weekly Alliance Duel Defeat (2h ago), Daily Participation Rewards (2h ago), Unclaimed "Daily Task" Reward (2h ago). CONGRATULATIONS popup showed twelve items: grey chest x10, food crate x10, coin chest x10, blue badge x800; silver chest x10, red gem x500, food crate x30, grey chest x30; coin chest x30, EXP chest x30, bread 5.0K, iron 5.0K. The other Event mails carried no attachments: Event Task EXP Reissue (2h ago, red dot only), Title Assignment (3h ago), [AP3x] Missile Apex's train has... (12h ago).
+- Verification: after both claims the category list was re-read live - no gift icon remained on Alliance or Event.
+- Nothing was deleted (Delete All never pressed).
+- Limit, stated plainly: Battle Report, Season, System and Regular were checked by the category-list read only (no gift icon, no red dot on entry); Claim All was not pressed inside those four categories this unit. The two gift-carrying categories were swept and verified clean.
+- Figures read live: power 149,850,353; food 478.7M, iron 802.1M. The record's coin figure (802.1M) repeats the iron figure and is not used here; coin 6.9M stands from the bracketing 2026 training and 2000 survivors reads. No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.

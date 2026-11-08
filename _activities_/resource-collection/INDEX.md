@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T02:42:42Z
+modified: 2026-11-08T04:39:41Z
 level: L1
-version: 1.37.0
+version: 1.38.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-0526 resource-collection execution record 2026-11-07 0526 queue run (failed, Mac device offline, one-hundredth consecutive ticker pass to fail this way, sixty-first in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 46h, unchanged since the ticker-0420 pass; seven invokes, zero responses, recovery-device health check and repair both timed out after 25s; no queue-state divergence this pass)
   - source: ticker-0704 resource-collection execution record 2026-11-07 0704 queue run (failed, Mac device offline, one-hundred-second consecutive ticker pass with a Mac device-access blocker, sixty-third in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 47.5h, unchanged since the ticker-0633 pass; four invokes, zero responses, recovery-device health check timed out after 25s; sync expired 6, produced duel-score-2026-11-07-0630; inbox 69, done 1049 at 15:06Z; pre-reset zero-sweep pair pending 2)
   - source: ticker-1655 resource-collection execution record 2026-11-07 1655 queue run (partial, farmland bubbles 40.9K/38.8K/37.7K/37.1K/32.0K cleared in one tap, about 186.5K food; purple crystal and beige square are static decorations, blue droplet over the truck opens the world-map task view; Armed Truck loot and full-map sweep unfinished; unit 466 seconds inside the 15-minute cap; record commit 514e333e5b on records/2026-11-07)
+  - source: ticker-1940 resource-collection execution record 2026-11-07 1941 queue run (partial, farmland +1.9M food and +1.2M coin verified by HUD deltas, iron +1.7M observed unattributed, estimated bubble centres failed twice so ground-then-tap is now the rule, gold truck icon tap at norm 681,814 panned to the Drill Ground instead of opening a loot panel, Armed Truck loot and full-map sweep unfinished; unit 476 seconds inside the 15-minute cap; record commit c47e491fd on records/2026-11-07)
 ---
 
 
@@ -60,11 +61,13 @@ Executions are recorded in
   can fall through to the building underneath and open its panel
   instead of collecting. Ground the bubble center visually before
   tapping, and verify the resource total moved afterwards.
+- Estimated bubble centres are not reliable at this window size - measured 2026-11-07 (1941 unit): two estimated-centre taps failed to collect (one no HUD move, one no change at all); the pivot to grounding the bubble centre with the visual grounding tool on the live screenshot before tapping collected. Ground first, then tap - never tap an estimated centre.
 - Food is special - tapping any one farmland bubble collects all
   farmland bubbles at once (observed the same evening, food rose
   about 0.4M in one tap and every farmland bubble cleared). Iron
   and coin bubbles collect one by one.
 - Check the Armed Truck and claim it when it shows fully loaded.
+- The gold truck icon is not a verified loot-panel entry - measured 2026-11-07 (1941 unit): tapping the gold truck icon at norm 681,814 panned the map down to the Drill Ground area instead of opening a loot panel. The loot panel entry remains unlocated and the Armed Truck loot state stays unverified.
 
 ## Standing instruction from the owner
 
@@ -758,6 +761,8 @@ regular stays due. Evidence in
 
 - 1.37.0 (2026-11-07): channel rules carried (propagation follow-up from the 1732 run): the 1020 Mission Control lesson - open_app Mission Control wedged the channel (geometry_mismatch, input gated on observation_required, second launch restores) and background Ctrl+Right does not switch Spaces; the background-Space-keys half was already in this profile from its own 0034 unit, the open_app wedging is the new part; the Dock-icon unblock stands. (1.29.0 through 1.36.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
 
+- 1.38.0 (2026-11-07): 1941 harvest unit folded (partial, farmland +1.9M food and +1.2M coin verified by HUD deltas, iron +1.7M observed unattributed - possibly furnace overdrive production, recorded as an observed HUD change only, not a collection claim; estimated bubble centres failed twice so ground-then-tap is now the standing rule; gold truck icon tap at norm 681,814 panned to the Drill Ground instead of opening a loot panel, so the icon is not a verified loot entry and the Armed Truck loot stays unverified; blue top-of-base bubbles and gold star over the cannon untapped, Season 2 zone unchecked, full-map zero-remaining acceptance not met, next unit resumes from the panned-down Drill Ground view; HUD food 476.8M to 478.7M, iron 800.4M to 802.1M, coin 5.7M to 6.9M, stone 25.0M, 922.2K, power 149,850,353, stamina 105 to 106).
+
 - 1.27.0 (2026-11-05): thirty-second consecutive capture failure (0434 harvest unit, 5 attempts across cc-518 and cc-519, probe OFF_SCREEN_WINDOW high confidence, Chrome observes normally in cc-520, View-menu probe step missing because describe is capture-blocked, recovery still the owner Dock-icon click or mac_lastwar_front.sh); the 1101 harvest close stands as the last live read, full edge-drag sweep still incomplete, Armed Truck state unknown; thirty-second occurrence commented onto Issue #282 by this run.
 
 - 1.26.0 (2026-11-05): Correction from the 0134 survivors and 0204 gifts records - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (View menu lists Enter Full Screen, read on-screen in session cc-505 and re-confirmed by a repeated probe in cc-508); the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; the "running fullscreen" wording in the 1634, 2104 and 0034 sections is superseded, and the 0034 "menu path View -> Exit Full Screen" with it; the permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); background Space keys do not switch Spaces, set_window_frame is stale-observation-gated, Cmd+Tab is blocked, list_windows needs the exact app name "LastWar"; the 1101 harvest close stands as the last live read; twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.23.0, 1.24.0 and 1.25.0 carry the 1634, 2104 and 0034 sections without changelog lines; the numbering is preserved, not rewritten.)
@@ -1156,6 +1161,20 @@ regular stays due. Evidence in
 - Figures read live: food 484.6M at entry, 485.3M before the farmland tap, 485.5M after; iron 808.9M before and after, coin 5.0M, stone 25.0M, 922.2K; power 149,850,353; stamina 72 at entry, 73 at close (regeneration). No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
 - Lesson, standing: image-observe round trips are still the bulk of the unit time (each screenshot plus read about a minute) - verify with the compact observe where the HUD figure is enough, and keep image screenshots for bubble grounding only.
 - Reading warning: this partial unit is not a full-map close - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) stands as the last live read of the wider sweep, and the full edge-drag sweep of the 2026-11-01 rule remains incomplete, carried forward not closed. The Armed Truck state is unknown.
+- Tracker untouched, per the partial rule; the next tick re-produces the harvest regular.
+
+## What the 2026-11-07 1941 unit added - farmland +1.9M food, +1.2M coin, estimated centres fail so ground first, truck icon pans instead of opening loot, sweep unfinished, partial
+
+- Unit harvest-2026-11-07-1803 by ticker-1940, about 19:41 to 19:49 local, status partial. Evidence in `_records_/2026-11-07/resource-collection/1941-queue-run.md` (commit c47e491fd on records/2026-11-07). Computer session cc-39, LastWar already running on the Events screen (Drone Boost contest, Arms Race phase, not this unit's work); back arrow returned to base. Unit duration 476 seconds inside the 15-minute cap; the session window was corrected against the queue tool stamps.
+- Food collected, verified by HUD: 476.8M at entry, 478.7M at close, plus about 1.9M. Three taps on the left farmland cluster: the first tap (norm 155,286, estimated from the screenshot) cleared the upper bubble row with no HUD move; the second tap (norm 301,357, estimated) produced no change and the bubble stayed; the third tap (norm 344,383, centre from visual grounding on the live screenshot) cleared the middle cluster and food moved 476.8M to 478.7M. A fourth tap (norm 98,357) on the leftmost bubble cleared the remaining visible farmland bubbles - the wheat fields show no bubbles in the closing views.
+- Coin collected, verified by HUD: 5.7M at entry, 6.9M at close, plus about 1.2M, collected during the same farmland sweep (the gold bubbles in the cluster include coin; the labels at this resolution do not separate food from coin, so the split is by HUD movement, not by label).
+- Iron, observed not claimed: HUD 800.4M at entry, 802.1M after the first tap, plus about 1.7M, attribution unverified - no iron bubble was deliberately tapped, so this may be furnace overdrive production (the "High-temp Furnace total overdrive time [in sec] [22/60]" toast ran through the unit) rather than a collection. Recorded as an observed HUD change only.
+- Method lesson, standing (rule R2): two estimated-centre taps failed to collect. The pivot was to ground the bubble centre with the visual grounding tool on the live screenshot before tapping; the grounded tap collected. Estimated bubble centres are not reliable at this window size - ground first, then tap.
+- Armed Truck loot, still unverified: the gold truck icon tapped at norm 681,814 near the end panned the map down to the Drill Ground area instead of opening a loot panel. The truck icon is not a verified loot-panel entry; the loot panel entry remains unlocated.
+- Sweep state, why partial: iron, stone, EXP, screw and drone-component bubbles in other map areas were not individually swept; the blue bubbles at the top of the base and the gold star bubble over the cannon were not tapped; the bottom Season 2 zone was not checked, and the map was not dragged to every edge, so the 2026-11-01 full-map zero-remaining acceptance is not met. The next harvest unit resumes from the panned-down Drill Ground view.
+- Left untouched, other task types' work: the blue droplet over the blue truck (radar-task locator, per the 1655 record) and the "?" survivor markers.
+- Figures read live: food 476.8M at entry, 478.7M at close; iron 800.4M at entry, 802.1M at close; coin 5.7M at entry, 6.9M at close; stone 25.0M before and after, 922.2K before and after. Power 149,850,353. Stamina 105 at entry, 106 at close (regeneration). No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
+- Reading warning: this partial unit is not a full-map close - the 1101 close stands as the last live read of the wider sweep, and the full edge-drag sweep of the 2026-11-01 rule remains incomplete, carried forward not closed. The Armed Truck state is unknown.
 - Tracker untouched, per the partial rule; the next tick re-produces the harvest regular.
 
 ## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)

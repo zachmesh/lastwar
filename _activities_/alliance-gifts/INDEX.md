@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T02:42:42Z
+modified: 2026-11-08T04:48:01Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -40,6 +40,7 @@ grounded_in:
   - source: ticker-1003 alliance-gifts execution record 2026-11-07 1003 queue run (failed, Mac device offline, one-hundred-sixth consecutive ticker pass to fail this way, sixty-seventh in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 50.5h, unchanged since the ticker-0858 pass; six invokes, zero responses, recovery-device health check timed out after 25 seconds; sync expired two unexecuted 0603-slot units)
   - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z; supersedes the gateway-recovery follow-up in the 1003 section below - the offline streak ends at 106, the blocker moves to the off-Space window)
   - source: ticker-1727 alliance-gifts execution record 2026-11-07 1742 queue run (done, 2 Premium claimed, Gift Level 28 progress 192,237,330 to 192,237,560, Regular none waiting; record commit 69997e12a1 on records/2026-11-07)
+  - source: ticker-2006 alliance-gifts execution record 2026-11-07 2033 queue run (done, 437 Regular and 7 Premium claimed, both tabs verified clear, Gift Level 28 progress 192,787,590 to 192,799,520, per-sweep deltas do not decompose into own claims alone, filed as Issue #183 evidence by the ticker pass; record commit e9bf320c92 on records/2026-11-07)
 ---
 
 
@@ -813,6 +814,8 @@ one file per execution.
 
 - 1.33.0 (2026-11-07): dialog-confirmed 2 Premium (Regular 0, every visible row already Claimed, no Claim All button while nothing waits), Gift Level 28 progress 192,237,330 to 192,237,560 of 206,300,000 (plus 230 for 2 Premium, tiers not itemised, no clean decomposition into the known tier values so the attribution stays open as further Issue #183 evidence commented by this run), transient observation failure mid-unit ("target app exited or restarted" - the tap had landed, re-observe recovered with no state lost), Help fresh red dot after the pass's earlier Help All, folded from the 1742 gifts unit. (1.31.0 and 1.32.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
 
+- 1.34.0 (2026-11-07): 2033 gifts unit folded (done, dialog-confirmed 437 Regular and 7 Premium across two Regular sweeps and one Premium sweep, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 192,787,590 to 192,799,520 of 206,300,000, total +11,930 - sweep deltas do not decompose into own claims alone (sweep 1 +4,370 for 434 gifts vs +4,340 expected, sweep 2 +6,900 for 3 gifts vs +30 expected), the bar is alliance-wide so the full delta must not be attributed to own claims, filed as Issue #183 evidence by the ticker pass; 3 new gifts arrived mid-unit so re-check Regular after Premium; alliance 95/100 members, power 13,249,423,507; "Hide your name on Gifts" checkbox left unchecked and untouched).
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -1174,3 +1177,15 @@ one file per execution.
 - Figures read live: Gift Level 28, progress 192,237,330 before and 192,237,560 of 206,300,000 after (live reads). Power 149,850,353 at entry; alliance Power 13,330,677,470, Members 96/100.
 - No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
 - Transient observation failure, new note: a mid-unit "target app exited or restarted" observation error does not by itself mean the tap failed - re-observe before retrying; here the tap had landed and the Gifts screen was open, and the re-observe recovered with no state lost.
+
+## What the 2026-11-07 2033 unit added - done, 437 Regular and 7 Premium claimed, both tabs verified clear, progress deltas do not decompose
+
+- Unit gifts-2026-11-07-1830 by ticker-2006, about 20:33 to 20:37 local, status done. Evidence in `_records_/2026-11-07/alliance-gifts/2033-queue-run.md` (commit e9bf320c92 on records/2026-11-07). Computer session cc-46, LastWar already running on the base screen (eastern framing).
+- Alliance panel opened from the base right column on the first tap (Alliance shield grounded live at 936,708). Panel read [AP3x] The Apex, leader Abŷss Apex, power 13,249,423,507, members 95/100 - members down one and power down about 78M against the 1742 read (96/100, 13,327,864,949) earlier this evening, recorded as measured with no mechanism claimed. Alliance Gifts carried a red dot, as did Alliance Wars and Help.
+- Alliance Gifts screen, Gift Level 28, progress 192,787,590 of 206,300,000 at entry.
+- Regular tab, first sweep: Claim All badge 434, dialog confirmed "A total of 434 Regular Alliance Gifts were claimed this time". Rows then read Claimed and the Claim All button was gone. Progress read 192,791,960 after the sweep.
+- Premium tab: Claim All badge 7, dialog confirmed "A total of 7 Premium Alliance Gifts were claimed this time". Rows read Claimed and the Claim All button was gone. Progress read 192,792,620 after the sweep. The "Hide your name on Gifts" checkbox was left unchecked and untouched.
+- Second Regular sweep: a red dot had returned on the Regular tab - 3 new gifts arrived during the Premium sweep (KillerInstinct14 x2, TheGoldenEclipse x1, all Doom Elite defeats). Claim All badge 3, dialog confirmed "A total of 3 Regular Alliance Gifts were claimed this time". LESSON: gifts arrive mid-unit - re-check Regular after the Premium sweep, do not close on the first pass.
+- Final verification: both tabs show no red dot, all visible rows read Claimed, no Claim All button on either tab. Progress closed at 192,799,520 of 206,300,000.
+- Progress readings (Issue #183 evidence, filed there by the ticker pass): entry 192,787,590; after Regular sweep 1 192,791,960 (+4,370); after Premium sweep 192,792,620 (+660); after Regular sweep 2 192,799,520 (+6,900). Total +11,930 during the unit. Own claims were 437 Regular at +10 each (4,370 points) and 7 Premium (visible tiers N +10, SSR +200, R +50, SSR +200, R +50, two below the fold unseen). The sweep deltas do not decompose into own claimed gifts alone: sweep 1 moved +4,370 for 434 gifts (expected +4,340), and sweep 2 moved +6,900 for 3 gifts (expected +30). The bar is alliance-wide, so other members claiming during the unit move it too; the full delta must not be attributed to own claims.
+- Figures read live: Gift Level 28, progress 192,787,590 before and 192,799,520 of 206,300,000 after. Power 149,850,353. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
