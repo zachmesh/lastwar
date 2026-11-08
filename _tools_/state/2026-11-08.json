@@ -3,5 +3,10 @@
   "status": "done",
   "at": "2026-11-08T12:57:06-08:00",
   "note": "Stack day: 4 tasks executed, nothing claimed, 10 rewards pending behind Claim All-only bar"
+ },
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-11-08T13:42:50-08:00",
+  "note": "Unit Progression tier-3 unreachable, score 0, training path blocked, phase ends about 14:00"
  }
 }

@@ -2985,3 +2985,62 @@ of 2026-10-28.
   Quick Dispatch not run - per rule R7 it is the first
   action of the next survivors unit. Tracker untouched.
   Full detail in survivor-intake/1307-queue-run.md.
+## 13:19 to about 13:29 — Queue ticker pass, arms race (partial)
+
+- Arms Race unit arms-race-2026-11-08-1003, partial (rule
+  R4, first unit inside the phase): Unit Progression read
+  live twice, score 0, timer 00:36:18 to 00:34:17, phase
+  ends about 14:03; chests 15,000 / 30,000 / 75,000, none
+  earned; cumulative chest 0/2, no bounce. Training path
+  assessed: a Lv.10-capable barracks holds a Lv.10 batch
+  of 793 with 21:01:06 left, busy; two barracks remain
+  unchecked. Tier-3 gap 75,000 points (about 2,420 Lv.10
+  units). Survivor modal at entry cycled JAVIER Barn
+  Keeper (left open by the 1307 survivors unit) and JAMES
+  Nurse; recruitment by the two taps is unverified and the
+  survivors unit must verify at the door. Priority 1
+  successor arms-race-2026-11-08-2127 enqueued per rule
+  R6 (not_before 21:38Z, expires 22:03Z). Tracker
+  untouched. Session cc-124, no device error, no dialog,
+  no login. Full detail in arms-race/1333-queue-run.md.
+
+## 13:30 to about 13:37 — Queue ticker pass, alliance donations (partial)
+
+- Donations unit donations-2026-11-08-1003, partial: 1
+  coin donation verified live, count 2/30 to 1/30 on
+  Quick Construction (8/10, recommended, 900 coin, Tech
+  EXP 1.5M/6.0M); stopped at the live-read 1/30 per the
+  changed route. Footer 6150 to 6250 (+100, observed
+  only). War tab opened, tree read to Sword Intuition /
+  Rapid Siege / Quick Garrison, Rallied node not reached;
+  War-branch test continues in the next donations unit.
+  Tracker untouched. Session cc-125 (cc-124 dropped
+  between units), no device error, no dialog, no login.
+  Full detail in alliance-donations/1342-queue-run.md.
+
+## 13:37 to about 13:40 — Queue ticker pass, troop training (partial)
+
+- Training unit training-2026-11-08-1003, partial: 1 of 4
+  barracks verified, 0 batches queued. A tent tap at
+  (564, 510) missed; a tap at (459, 457) opened TRAIN
+  UNITS directly for the Lv.30 barracks - Lv.10 batch of
+  793 training, 20:47:28 left, busy, re-confirming the
+  arms-race read. Other three barracks unreached. No
+  Lv.10 batch queued, so the Unit Progression score stays
+  0; the arms-race successor follows to close the phase
+  verdict. Tracker untouched. Session cc-126 (cc-125
+  dropped between units). Full detail in
+  troop-training/1350-queue-run.md.
+
+## 13:40 to about 13:42 — Queue ticker pass, arms race successor (skipped-needs-owner)
+
+- Arms Race successor arms-race-2026-11-08-2127 (priority
+  1, per rule R6): Unit Progression re-read live, score 0,
+  timer 00:18:49, phase ends about 14:00 (the 1333
+  "about 14:03" estimate superseded). Tier-3 gap 75,000;
+  no idle Lv.30 barracks, no Lv.10 batch queued in the
+  pass, speedup and pack paths are red lines, so the
+  phase verdict is tier-3 unreachable. Cumulative chest
+  0/2, no bounce, nothing earned, nothing claimed. Tracker
+  marked skipped for this slot. Session cc-126. Full
+  detail in arms-race/1342-queue-run.md.
