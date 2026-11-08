@@ -3520,3 +3520,12 @@ of 2026-10-28.
   Diamonds already Claimed. Token lease renewed mid-pass
   (expired 15:01:09Z, re-acquired 15:01:44Z to 15:16:48Z).
   Full detail in event-claims/1506-queue-run.md.
+
+- Donations unit donations-2026-11-08-2038 (partial): 6 coin
+  donations verified live on Quick Construction, count 7/30 to
+  1/30 (5,400 coin); stopped at 1/30 per the standing changed
+  route. Footer Tech Donation Today 6250 to 6900 (+650, +50
+  unexplained against +100/donation). Rallied Attack re-read
+  (Issue #450) not reached before the unit cap; next donations
+  unit reads it live first. Full detail in
+  alliance-donations/1537-queue-run.md.
