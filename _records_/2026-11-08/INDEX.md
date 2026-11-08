@@ -1746,3 +1746,20 @@ of 2026-10-28.
   perception-scout/0734-queue-run.md. Delivery note:
   uncommitted observation sections from other passes
   sit in the main checkout working tree, left untouched.
+
+## 07:40 to about 07:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0740. Plan staged 5
+  units (already_present 73, reaped 0, expired 0 - the
+  1857 local slots: passes, secrets, treasures, trucks
+  and events). Pre-reset sweep pair already complete via
+  plan (1630 seq 1, 1730 seq 2, chain
+  pre-reset-sweep-2026-11-08, both expiring at the 18:00
+  reset). Scout diff on the Nov 8 observation applied
+  with zero changes (observed 0, actionable 0, enqueued
+  0, candidates 0, unexplained red dots 14 on a
+  narrative-fallback basis - six sections, seen 44,
+  explained 30; unchanged from 0640, observation file
+  byte-identical). 0 withdrawals. Pool: inbox 81,
+  claimed 0, done 1245. Status: done. Full detail in
+  queue-planning/0740-run.md.
