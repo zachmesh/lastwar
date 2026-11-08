@@ -656,3 +656,17 @@ of 2026-10-28.
   the live 1140-unit done pool. Issue #436 commented; closure
   belongs to the daily retro. Status: done. Full detail in
   tool-development/0232-run.md.
+
+## 02:40 to about 02:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0240. Plan staged 12
+  units (already_present 62, reaped 0, expired 6 - the
+  2026-11-07 2230 slot); pre-reset sweep production skipped
+  (not the 17:00 hour run, tonight's pair due from the 17:00
+  run; last night's pair expired unexecuted 2 of 2); scout
+  diff on the Nov 8 observation applied with zero changes
+  (observed 0, actionable 0, enqueued 0, candidates 0,
+  unexplained red dots 3 on a narrative-fallback basis -
+  Wars dot on Issue #212, Inventory dot, 99+ badge); 0
+  withdrawals. Pool: inbox 78, claimed 1, done 1214.
+  Status: done. Full detail in queue-planning/0240-run.md.
