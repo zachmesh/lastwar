@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-07T01:32:17Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.10.0
+version: 1.11.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -15,6 +15,8 @@ grounded_in:
   - source: ticker-2134 vip-rewards execution record 2026-11-02 2138 queue run
   - source: ticker-0834 vip-rewards execution record 2026-11-04 0849 queue run (partial, VIP screen entry itself blocked, badge taps unresponsive, freebie/chest state unread)
   - source: ticker-1634 vip-rewards execution record 2026-11-06 1640 queue run (failed, Mac device offline, eighty-third consecutive ticker pass with a Mac device-access blocker, forty-fourth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 33h, unchanged since the 1507, 1534 and 1604 passes; seven invokes, zero responses)
+  - source: ticker-1727 vip-rewards execution record 2026-11-07 1747 queue run (partial, Freebie countdown to about 18:02 not the 19:00 reset, login chest already collected, VIP13 points 1,603,930 of 2,000,000, streak 1 day; record commit 69997e12a1 on records/2026-11-07)
+  - source: ticker-1734 vip-rewards execution record 2026-11-07 1812 queue run (partial, login chest claimed plus 60 points to 1,603,990, streak 2 days, Freebie unlocked about 18:02 but Claim button unresponsive to four input variants including a foreground click; record commit 840094b6ad on records/2026-11-07)
 ---
 
 
@@ -230,3 +232,26 @@ Measured on 2026-10-25.
 - Reading warning: this failed unit gives zero evidence about the VIP state. It must NOT be read as "freebie claimed" or "chest claimed" - the last live VIP state read is the 2026-11-02 2138 unit (both items already claimed for that reset day); the 2026-11-04 0849 unit could not even reach the VIP screen, so no VIP state has been read live since 2026-11-02; this unit rests on no read at all.
 - The pass stopped after this one unit: a second unit would hit the same dead channel. Sync at pass start reaped 0, expired 0, produced 0 new units; 22 regulars already queued. Queue stats at 00:37Z: inbox 71, claimed 0, done 976, upcoming 53. The Zombie Invasion chain stays closed: the event ended 2026-10-30 about 19:00 and no Zombie Invasion tab has been seen in the Events hub since, so no fresh chain was seeded. The pre-reset zero-sweep pair for tonight's 19:00 reset (chain pre-reset-sweep-2026-11-06) sits in the inbox (pending 2), not yet due.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-07 1747 and 1812 units added - Freebie unlocks about 18:02 on its own 24-hour cycle, chest claimed for 60 points, Freebie button dead to four variants
+
+- Unit vip-2026-11-06-1900 by ticker-1727, about 17:43 to 17:47 local, status partial. Evidence in `_records_/2026-11-07/vip-rewards/1747-queue-run.md`. Computer session cc-20, LastWar already running. One stale-observation error on a back tap (input not sent); a fresh observe showed the app unchanged and the retry landed.
+- VIP screen: VIP13, points 1,603,930 of 2,000,000 toward VIP 14 (live read). Login streak reads 1 day in a row, "Collect 60 VIP points tomorrow".
+- Daily Freebie NOT claimable in this unit: its button is a live countdown reading 00:16:52, then 00:16:40, then 00:15:48 across the unit's reads - it unlocks at about 18:02, not at the 19:00 reset. The rewards shown are the usual VIP13 set (puzzle piece x2, crates x13, x13, coin x13).
+- Login chest (top right): no red dot; one tap produced no change, so today's login points are already collected. Nothing further was claimed.
+- Unit vip-2026-11-06-1800 by ticker-1734, about 17:57 to 18:12 local, status partial. Evidence in `_records_/2026-11-07/vip-rewards/1812-queue-run.md`. Computer session cc-28, LastWar already running on the base screen. One stale-observation error on the first avatar tap (input not sent); a fresh observe and the retry landed.
+- Login chest: red dot present. One tap opened a CONGRATULATIONS popup - "Today's VIP Points 60, Consecutive Login Days 2, Next Day's VIP Points 80". Points after: 1,603,990 of 2,000,000 (plus 60, live read). The chest stands open afterwards and its red dot is gone. The streak display moved from 1 day / 60 tomorrow (the 1747 pre-claim read) to 2 days / 80 tomorrow with no new login in between: the day-2 chest claim itself pays 60 and advances the streak to 2. No contradiction; the 1747 read was the pre-claim state.
+- Daily Freebie: green Claim button by about 18:02, rewards puzzle piece x2, crates x13, x13, coin x13. The button did NOT respond to four input variants, each with a fresh observation and a fresh measured centre (norm about 739,637): two background clicks, one 1-second long-press, and one click after the game window came to the foreground. Points and button unchanged after every attempt. This is the known repeat blocker the activity metadata already names (2026-10-31 took neither after 5 variants). New against the 0438 unit: the foreground-window variant was tried here, and the chest tap on the same screen in the same session DID land, so input reaches the screen and only the Freebie button is dead.
+- The VIP Exclusive offer ($99.99), the points + button and the cart shortcut were not tapped in either unit.
+- An "Alliance Gifts received!" toast crossed the screen during the 1812 unit; it is a background event, not this unit's work, and nothing was claimed for it here.
+- Contents note: the freebie contents match the VIP 13 scale already in this profile (puzzle x2, crates x13 each); the open question whether contents rotate stays open, with two more same-contents observations.
+- No diamonds, money, speedups or paid buttons were used in either unit. No login or verification was demanded, and no different-device dialog appeared.
+- Follow-up: the failed Freebie claim re-enters the pre-reset sweep per the metadata: the 18:30 zero sweep (unit 002) retries the claim before the 19:00 reset.
+
+## Correction 2026-11-07 - the Daily Freebie runs on its own roughly 24-hour cycle, not on the 19:00 reset clock
+
+- Source: the 1747 and 1812 records above, plus a re-read of the 2138 unit in this profile.
+- Superseded in this profile: the Cadence claim "After the claim its button becomes a countdown to the 19:00 daily reset (about 4 hours 59 minutes at 14:00 on 2026-10-25)". The countdown runs about 24 hours from the last claim: the 1747 unit read a live countdown unlocking at about 18:02 on 2026-11-07, 58 minutes before the reset, and the 1812 unit found the Freebie green and claimable from about 18:02. The last claim was about 18:02 on 2026-11-06. The 2026-10-25 observation (countdown 4h59m at 14:00, unlock about 18:59) is consistent with the same cycle - last claim about 18:59 the previous day - and was misread as a reset clock.
+- Supporting re-read: the 2138 unit on 2026-11-02 read a grey countdown of 20:20:15 at about 21:38, after the reset. Under a reset clock the countdown at 21:38 would read about 21h22m to the next 19:00 reset; observed 20:20:15 puts the unlock at about 17:58 the next day, which matches a 24-hour cycle from a claim at about 17:58 on 2026-11-02. The 2138 section's "the freebie for this reset day is already claimed" is re-read as: already claimed for the running 24-hour cycle, unlock about 17:58 the next day.
+- The reset-rule paragraph in Cadence is revised with it: a round that runs after 19:00 does NOT automatically find a fresh freebie. Whether it is claimable depends on when it was last claimed (unlock is last claim plus about 24 hours), so units must read the countdown or the button live rather than assume a refresh at the reset. The 2026-10-25 owner claim at about 20:53 is re-read as the about-18:59 unlock claimed late, not as a reset-driven refresh; the paragraph's "afternoon claim" can only be the previous day's claim, since the 14:00 countdown reading rules out a claim that afternoon. The standing rule that a round is not closed without opening the VIP screen stands - as a check, not as an assumption of a fresh freebie.
+- No other claim in this profile changes: the login chest, the streak and points reads, and the Freebie-button failure mode are all re-confirmed by the two units.

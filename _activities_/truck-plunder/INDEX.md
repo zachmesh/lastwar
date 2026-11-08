@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-0234 truck-plunder execution record 2026-11-04 0242 queue run (done, quotas full at entry, WORLD-corner entry route)
   - source: ticker-0534 truck-plunder execution record 2026-11-04 0538 queue run (done, quotas full at entry, badged vehicle icon entry, WORLD-corner route qualified)
   - source: ticker-0834 truck-plunder execution record 2026-11-04 0845 queue run (done, quotas full 5/5 and 4/4 at entry, trade-icon grounding mislabel opens Secret Command Post)
+  - source: pre-reset zero sweep execution record 2026-11-07 1824 queue run (first pass, trucks line 18 unverified, both R3 checkpoints passed with the counts unread; record commit 840094b6ad on records/2026-11-07)
 ---
 
 # Truck plunder - Intercity Trade
@@ -1601,3 +1602,10 @@ settlement and dispatch execution record).
 - Live counters read on screen: at entry Today's Trade Count 5/5, Your Plunder Count Today 4/4. Both quotas are full, so no dispatch and no plunder was made in this unit. At close: unchanged, 5/5 and 4/4. Both counters are live screen reads in this unit, not tallies. This is the second quotas-full trucks unit today (0538, 0845).
 - Settlement check: Your Truck road shows two trucks out and two free slots, with the banner "No more dispatches available." Neither road truck carries a chest icon above it, so no returned truck awaits settlement. The Recover button carries no red dot on the Your Truck view, so no Reward Recovery record is waiting to be claimed.
 - No Trade Contract spent, no diamond or money spent, no alliance mate plundered, no Mega Mode used. Game left on the base view.
+
+## What the 2026-11-07 1824 sweep added - truck counts still unread at 18:24, both R3 checkpoints passed unverified
+
+- Unit zero-sweep-2026-11-07-1730 by ticker-1734, about 18:06 to 18:24 local, status partial. Evidence in `_records_/2026-11-07/daily-activities/1824-queue-run.md`. No truck was dispatched or plundered and no truck count was read in this unit: the sweep is verification-only and does not execute task types.
+- Trucks line 18, not at zero and unverified: no live truck count today - the 0257, 0657 and 1057 units all expired unexecuted. Rule R3 checkpoint note: both the six-hour and the two-hour checkpoints passed with the counts still unverified. Fix-up trucks-2026-11-07-1857 sits in inbox.
+- Reading warning: this sweep gives zero evidence about the truck counts. It must NOT be read as a quota state - the 0845 section's 5/5 dispatch and 4/4 plunder close stands as the last live read (2026-11-04), and the 5-of-5 / 4-of-4 daily quotas are unverified for 2026-11-07.
+- Follow-up: the 1857 fix-up unit reads the counts in its own slot; the 18:30 final sweep re-walks the line.
