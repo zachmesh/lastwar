@@ -1026,7 +1026,10 @@ def _reap_claimed(root):
 def _expire_stale(root):
     """Inbox units whose window has fully passed move to done with
     status expired - the next window's unit supersedes them, and the
-    statistics keep the miss visible instead of losing it. A done
+    statistics keep the miss visible instead of losing it. The
+    expiry result carries the same stats_missing flag complete
+    writes (issue #130), so the retro reads the miss from the
+    flag instead of recomputing it. A done
     file already carrying an execution result for the same unit is
     never overwritten: the stale inbox copy is dropped and the
     executed record kept. A records-branch snapshot can hold both
@@ -1053,7 +1056,13 @@ def _expire_stale(root):
                 "executor": "",
                 "summary": "window passed before execution",
                 "claimed": [], "claimed_count": 0, "evidence": "",
-                "follow_up": "none", "stats": {}}
+                "follow_up": "none", "stats": {},
+                # Same close-out flag as complete (issue #130):
+                # an expired unit never executed, so all five
+                # required keys are missing; the retro counts it
+                # from this flag instead of recomputing.
+                "stats_missing": missing_stats_keys("expired", {}),
+                "stats_warnings": []}
             os.makedirs(state_dir(root, "done"), exist_ok=True)
             write_unit(path, fields, body)
             os.rename(path, unit_path(root, "done", f["unit"]))
@@ -1696,6 +1705,8 @@ def cmd_complete(args):
 
 
 def _dead_letter(root, path, fields, body):
+    """Attempts-exhausted closing, stamped with the same
+    stats_missing flag complete writes (issue #130)."""
     fields["result"] = {
         "status": "failed",
         "started_at": fields.get("claimed_at", ""),
@@ -1706,6 +1717,11 @@ def _dead_letter(root, path, fields, body):
         "claimed": [], "claimed_count": 0,
         "evidence": "", "follow_up": "inspect and re-enqueue manually",
         "stats": {},
+        # Same close-out flag as complete (issue #130): a dead
+        # letter never produced stats, so all five required keys
+        # plus blocker_category (failed status) are missing.
+        "stats_missing": missing_stats_keys("failed", {}),
+        "stats_warnings": [],
     }
     for key in ("claimed_by", "claimed_at", "lease_until"):
         fields[key] = ""
