@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T19:39:51Z
+modified: 2026-11-08T23:44:00Z
 level: L1
-version: 1.37.0
+version: 1.38.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -42,6 +42,7 @@ grounded_in:
   - source: ticker-0534 perception-scout execution record 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Weekly Pass 18:00 reset sixth confirmation); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0634 shop-claims execution record 2026-11-08 0634 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset seventh confirmation, Season hub layout differs); record commit 9669d391ea on records/2026-11-08
   - source: ticker-1049 shop-claims execution record 2026-11-08 1054 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset eighth confirmation, Season hub claim path probed through the Calculating card and Season Contributions with no pass claim found, Donation Count 2/30 at entry); record commit 355d3f11c on records/2026-11-08
+  - source: ticker-1434 shop-claims execution record 2026-11-08 1455 queue run (partial, shop and season pages checked live, Weekly Pass 18:00 reset ninth confirmation, Season hub Goals and Profession opened with no pass claim found, Season pass path unreachable in the Week 8 hub, Issue #469 filed); record commit dfd3c87f9 on records/2026-11-08
 ---
 
 
@@ -156,6 +157,21 @@ claimable - every daily pickup for today was already claimed.
 Two more passes pay daily claims from the Season Two hub (base
 screen Season icon). They belong to this folder's family - claim
 the free and already paid for parts, never the paid unlocks.
+
+- STALE 2026-11-08 (Issue #469): the 2026-10-25 Season Battle Pass /
+  Season Weekly Pass claim path below is NOT reachable in the current
+  Season II: Polar World Week 8 hub. The hub shows only a Calculating
+  card and a Season Photo card; the Calculating card opens a Week 8
+  screen whose Goals (High-heat Furnace Level milestone track, LV. 30,
+  tiers 1-6 all Claimed) and Profession (Profession Hall, Engineer
+  Lv.63, 227,105/1,500,000 EXP, cap 70) buttons were opened live on
+  2026-11-08 with no pass claim found, and the Season Contributions
+  ranking is not a pass claim either. Do not send units looking for
+  the 2026-10-25 tiles - they are gone from this hub. The Rewards and
+  Rules buttons on the Week 8 screen were not opened in that unit, so
+  whether any pass claim lives behind them is still unchecked; the
+  next passes unit opens them before the path is written off entirely.
+  The 2026-10-25 description below is kept as history only.
 
 - Season Battle Pass - a points track. Claim and Claim All take
   the unlocked free tiers; the Advanced columns are padlocked
@@ -1182,5 +1198,60 @@ the free and already paid for parts, never the paid unlocks.
 - Donation Count 2/30 at entry - see the alliance-donations 1.68.0
   section for the replenishment read. Commented on Issues #160, #423
   and #450 by this run.
+- Game left safe: base screen. Nothing bought. No Assemble, no
+  teleport.
+
+## What the 2026-11-08 1455 passes unit added - shop surfaces checked live, Weekly Pass 18:00 reset confirmed a ninth time, Season pass path unreachable in the Week 8 hub, Issue #469 filed
+
+- Unit passes-2026-11-08-1057 by ticker-1434, about 14:46 to 14:54
+  local, status partial - the shop surfaces were checked live, but no
+  pass daily pickup was owned or claimable and the Season hub Goals
+  and Profession buttons were opened with no pass claim found, so the
+  season sub-part is closed as unreachable in this hub (Issue #469)
+  rather than carried again. Evidence in
+  `_records_/2026-11-08/shop-claims/1455-queue-run.md` (commit
+  dfd3c87f9 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-132 on the owner Mac mini, LastWar
+  already running. No device-access error, no different-device
+  dialog, no login demanded. Total Power read live on base at entry
+  and at close: 149,850,353.
+- Weekly Pass page: rewards reset reads 18:00:00 - the NINTH live
+  confirmation of the line (after 0114, 1812, 1853, 2209, 0407, 0538,
+  0634 and 1054). The Cadence section already carries the corrected
+  18:00 figure (2026-11-03 1812, Issue #242); this unit re-confirms
+  it and is commented on Issue #242 by this run. The Free Supply
+  chest is present with no claim button and no payout toast on
+  opening - already claimed this reset day, so no Free Supply payout
+  is claimed as a closing figure. The Legendary Take All $19.99 row
+  was not tapped. All four weekly pass cards were read in full - S2
+  Drone Components (Legendary), S1 Drone Parts (Epic), Iron (Elite,
+  Daily Pickup iron x3, Total x21) and Coin (Elite, Daily Pickup coin
+  items x3) - every one shows a $4.99 Get Now button, so none is
+  owned and no Daily Pickup is claimable on this page.
+- Super Monthly Pass page: not re-opened this unit - ticker-0634
+  read it live at 06:35 today (13 Days Left, Daily Pickup already
+  Claimed, Rewards Left 13) and no new claim could exist before the
+  19:00 reset.
+- Hot Deals: no free pack showing; the left carousel card reads FREE
+  TOMORROW (x5 items, randomly obtain one). The Go button was not
+  tapped (external store, outside this unit's in-game scope).
+- Season hub claim path (follow-up from ticker-1049, closed here):
+  Season II: Polar World hub shows only a Calculating card (02:11:26
+  at entry) and a Season Photo card (03:11:25), plus a Leaderboard
+  button. The Calculating card opens the Week 8 screen (progress 1-8,
+  Week 8 marked, Calculating 02:11:14) with Leaderboard, Grouping,
+  Rules, Goals, Profession, Rewards and Season Contributions buttons.
+  Goals opens the High-heat Furnace Level milestone track (LV. 30),
+  Individual tab, tiers 1-6 all already Claimed - no pass claim.
+  Profession opens the Profession Hall (Current Profession Engineer
+  Lv.63, 227,105/1,500,000 EXP, cap 70) - no pass claim. The Rewards
+  and Rules buttons were not opened in this unit. Conclusion: the
+  2026-10-25 Season Battle Pass / Season Weekly Pass claim path is
+  NOT reachable in the current Week 8 hub. Knowledge Issue #469 filed
+  (label knowledge) with the live evidence, and the Season passes
+  standing section above is marked STALE as of this unit. Follow-up
+  for the next passes unit: open the Week 8 Rewards and Rules
+  buttons; if no pass claim lives behind them either, the path is
+  written off entirely and the metadata says so.
 - Game left safe: base screen. Nothing bought. No Assemble, no
   teleport.
