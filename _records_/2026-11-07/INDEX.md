@@ -3380,3 +3380,21 @@ of 2026-10-28.
   02:55:34Z. The pre-reset-sweep chain units 001/002 were
   never claimed and expire at the 19:00 reset; the sweep work
   itself ran as the 1730 unit (ticker-1734, partial).
+## 18:32 to about 18:50 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-07-1832.
+  Own PRs checked first: no tooling PR of mine open (4 open
+  PRs are integrator-owned records branches); PR #408 is
+  MERGED. Newest open tooling issue #410 (stale sweep-pair
+  geometry) worked this run: the reset-anchored geometry was
+  already correct on main, but the pair-production path could
+  not tell a stale unit from a correct one - the dedupe
+  silently counted the stale 17:30 first pass as the final
+  pass. Fix on branch work/sweep-stale-pair-guard-410, commit
+  6521acb2: cmd_sweep refuses on a stale-geometry chain unit,
+  _produce_for_window warns on the same collision (the plan
+  path). PR #412 opened, issue #410 commented, Slack DM
+  synced. Fixture suite 22/22 on scratch pools, twice.
+  Live-tree sync and planner body text flagged for their
+  owners, not fixed here. Full detail in
+  tool-development/1832-run.md.
