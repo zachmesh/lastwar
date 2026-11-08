@@ -4251,3 +4251,20 @@ of 2026-10-28.
   the successor. Tracker untouched. Full detail in
   perception-scout/2153-queue-run.md; observation in
   _records_/2026-11-02/perception-scout/observation.md.
+
+## 22:00 to about 22:06 - PR-integrator pass
+
+- PR-integrator pass pr-integration-2026-11-07-2200.
+  Non-batch pass: checker plain (tool 1.2.0 at pass
+  start) not due (outside every batch window), next
+  batch 23:00 PT. No knowledge or code PR open. Records
+  PR 398 clean at new head 24ec5c81 (planner-2140 and
+  ticker-2134 appends since the 2145 note), re-verified
+  and re-noted, awaiting the 23:00 batch; records PRs
+  351 and 301 still conflict on the single action-log
+  file at unchanged heads against unchanged main
+  183054c8, no new note (unchanged since the 2145
+  note). No records PR opened (all other records
+  branches contained in main). No owner-gated PR.
+  Status: done. Full detail in
+  pr-integration/2200-run.md.
