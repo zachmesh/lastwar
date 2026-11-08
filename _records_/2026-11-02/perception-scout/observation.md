@@ -472,3 +472,69 @@ not the execution end.
 - LOOT box re-check: world map centred on own base, March Queues 3/4 (three squads out, actor unresolved). Gift badge 3; LOOT panel holds two Claimed Bears Lair rows (bread 720.0K; red gem 85) and one UNCLAIMED Lv.1 Doom Elite row (gold chest x2, red gem 20, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0) - unclaimed work for the owning regular (gifts); Claim All observed only, never tapped. The three Lv.60 Doom Elite rows from 2026-11-03 are gone; the panel turns over.
 - Red dot accounting: 8 seen, 8 explained, 0 unexplained. Unknown items: furnace overdrive toast [22/60]; the 03:48 building timer identity; the owner of the three marches.
 - Carried unwalked: Alliance Star, Settings, Record Member/Message/Event tabs.
+### Scout-alliance remainder, 2311 unit (ticker-2304) - 2026-11-07 about 23:05 to 23:15 local
+
+- Alliance Star (Event 40): ceremony playback, stage 1 of 6,
+  "S2 Big Shot", bonus rewards purple gem 4.0K plus gold chest
+  badge 14, gift box 0/1, "Send emotes to the winner to receive
+  rewards" tooltip with Go button - all observed only, nothing
+  claimed, Go never tapped. Time Left 18:43:27 falling to
+  18:39:41. S2 Big Shot winner identity unread.
+- Settings: Alliance Permissions matrix all 10 rows (R5 only
+  except Edit Announcement, Set Assembly Point, Send Mails to
+  Members R5+R4; R3 holds no permission); Alliance List 5 rows
+  ([UCKF] OFF, [CHIA] Chill Alliance, [B3WB]
+  BattleEagerWarBeasts with Power >= 180000000 and Base level
+  >= 30 and no Apply, own [AP3x] The Apex, [CTR1] CTRL ALT
+  DEFEAT); Alliance Power ranking 1 [B3WB] 13,535,571,199, 2
+  [AP3x] The Apex 13,327,641,210, 3 [CTR1] 12,347,720,182, 4
+  [TSSU] 9,965,732,129, 5 [UCKF] 9,758,693,953, 6 [CHIA]
+  9,352,299,173, 7 [aP3x] LEG3NDS 8,931,936,736. Leaderboard
+  delay note explains the panel-vs-ranking power gap.
+- Record tabs all read: War (Jujuliano1 attacks 02:36:01 to
+  02:36:20); Member (MegaLoki Apex joined 2026-11-8 02:47:18,
+  QueenSTX Apex left 2026-11-8 02:07:08, rank changes 1 to 3
+  for TheGoldenEclipse and Commander Supa); Message (Assembly
+  Point sets by TTS Rage Apex, Abyss Apex, cute small baby;
+  Slogan updated three times 2026-10-30); Event (Marshal's
+  Guard activation scheduled 2026-11-9 21:00 difficulty 12;
+  Train Conductors Roronoa zo and LAMP 1; Lv.8 Doomsday
+  Stronghold search 2026-11-9 23:15:00).
+- Alliance Furnace resolved (gold row below the fold): Lv.20,
+  #2110 (469,433), Ranking No.27, fuel 4.3M, progress
+  13,739,681/4,150,000, Burnable 6d 15:01:27, Donation Count
+  50/50, Coal Usage 1,440/min, Burning at 125C, Turn On ON,
+  Overdrive OFF. Upgrade and Relocation Spot tabs unopened.
+- Station panel re-check: no train icon, no boarding banner,
+  no train preparing (fourth confirmation this pass). March
+  Queues 0/4.
+- LOOT box re-check: badge 3, same three rows as 21:51, Lv.1
+  Doom Elite row still UNCLAIMED (80+ minutes); Claim All
+  observed only, never tapped.
+- Red dot accounting: 10 seen, 5 explained, 5 unexplained
+  (base Events 1, Season II 1, skull-timer 2, Inventory dot,
+  99+). Unknown items: furnace overdrive toast [22/60];
+  ceremony 0/1 gift box; S2 Big Shot winner identity.
+- Carried unwalked: Alliance City, Season Contributions,
+  Season Milestones, Furnace Upgrade/Relocation Spot tabs,
+  Strength Ranking Weekly subtab - to the chain successor.
+- unmatched_labels: Alliance Furnace, Alliance Permissions,
+  Alliance List, Alliance Power, Marshal's Guard, Doomsday
+  Stronghold, Train Conductor, Alliance Assembly Point,
+  Alliance City, Season Contributions, Season Milestones.
+
+### Station panel re-check, 2317 unit (ticker-2304) - 2026-11-07 about 23:16 to 23:17 local
+
+- Base screen live: power 149,850,353; resources 478.8M,
+  802.1M, 6.9M, 25.0M, 922.2K; diamonds 13.22K; cart 4,217;
+  stamina 120.
+- Preparation signals, both absent again: no train icon in
+  the left column, no Boarding closes in banner. No train
+  preparing - fifth independent confirmation inside this pass.
+- Furnace toast read in full: "High-temp Furnace total
+  overdrive time (in sec) [22/60]" - mechanism still
+  unexplained (Overdrive OFF in the Furnace panel).
+- Red dot accounting: 5 seen, 0 explained, 5 unexplained
+  (base badges, carried to owning groups). Unknown items:
+  furnace toast only. No successor enqueued per the unit
+  window.

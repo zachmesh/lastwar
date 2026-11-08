@@ -4475,3 +4475,213 @@ of 2026-10-28.
   PR opened (all other records branches contained
   in main). Status: done. Full detail in
   pr-integration/2245-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2300.
+  Batch pass: checker _tools_/records_batch.py 1.2.0
+  plain and merge-aware due (window 23:00-00:00 PT,
+  first pass at or after the point, no records merge
+  yet in the window). Records PR 398 merged by merge
+  commit 26aff240 (163 commits, 285 files); tools PR
+  425 owner-gated (policy-file amendment), carried
+  unchanged, awaiting the owner decision; records PRs
+  351 and 301 still conflict on the single action-log
+  file at unchanged heads against new main 26aff240,
+  re-verified, no new note per the no-repeat guidance.
+  Fresh records PR 426 opened for the post-2300-batch
+  appends, MERGEABLE/CLEAN, awaiting the 03:00 batch.
+  Local main fast-forwarded to 26aff240. Status: done.
+  Full detail in pr-integration/2300-run.md.
+## 23:05 to 23:15 — Queue ticker pass, perception scout (alliance remainder)
+
+- Scout unit scout-scout-2026-11-02-006, partial: Alliance Star
+  ceremony walked observe-only (S2 Big Shot, bonus gem 4.0K +
+  chest badge 14, nothing claimed, Go never tapped); Settings
+  read in full (Permissions matrix 10 rows - R3 holds none;
+  Alliance List 5 rows; Alliance Power ranking - AP3x #2 at
+  13,327,641,210 behind B3WB); Record Member/Message/Event tabs
+  all read (MegaLoki Apex joined, QueenSTX Apex left, Marshal's
+  Guard activation 2026-11-9 21:00 difficulty 12, Lv.8 Doomsday
+  Stronghold search 2026-11-9 23:15 - no owning regular, Issue
+  427); Alliance Furnace resolved as the gold row below the
+  fold (Lv.20, Burning, Turn On ON, Overdrive OFF, Donation
+  50/50, coal never donated); station re-check (no train
+  preparing, fourth confirmation) and LOOT re-check (badge 3,
+  Lv.1 Doom Elite row still unclaimed 80+ minutes, Claim All
+  never tapped - gifts regular's work). Successor enqueued for
+  Alliance City, Season Contributions, Season Milestones,
+  Furnace Upgrade/Relocation Spot tabs, Strength Ranking Weekly
+  subtab. Tracker untouched. Full detail in
+  perception-scout/2311-queue-run.md.
+
+## 23:16 to 23:17 — Queue ticker pass, perception scout (station re-check)
+
+- Scout unit scout-midday-scout-mid-2026-10-31-008, partial:
+  station panel re-check, both train-preparation signals absent
+  again (no left-column train icon, no boarding banner) - fifth
+  confirmation this pass, no train preparing, closed without
+  panning per the unit window and no successor enqueued. Furnace
+  toast read in full for the first time ("High-temp Furnace total
+  overdrive time (in sec) [22/60]", mechanism still unexplained).
+  Tracker untouched. Full detail in perception-scout/2317-queue-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2315.
+  Non-batch pass: checker _tools_/records_batch.py 1.2.0
+  merge-aware due says no (PR 398 already merged 23:06:31
+  in the 23:00 window, first-pass rule bars a second
+  records merge); plain clock-only due said yes but does
+  not govern. Records PR 426 clean at head 03dc69e0,
+  awaiting the 03:00 batch; tools PR 425 owner-gated
+  (policy-file amendment), carried unchanged, awaiting the
+  owner decision; records PRs 351 and 301 still conflict
+  on the single action-log file at unchanged heads against
+  new main 26aff240, re-verified, no new note. No merges,
+  no PRs opened. Status: done. Full detail in
+  pr-integration/2315-run.md.
+
+## 23:32 to about 23:37 - Tool development pass (no-op)
+
+- Tool-developer pass tool-development-2026-11-07-2332. Own
+  PRs checked first: PR #425 carries the integrator 2245
+  review - tool change clean, not merged because its
+  push-and-pr-policy.md amendment is owner-gated, awaiting
+  the owner decision (merge as-is or split tool-only); no
+  action needed from the author. Open tooling issues
+  spot-checked (404, 126, 123, 332, 296, 130, 213, 129, 250,
+  235, 418): every one implemented and awaiting retro closure,
+  or needing an owner decision, live-game evidence, or another
+  jobs owner. Frozen backlog is history only and the standing
+
+## 23:32 to about 23:37 - Tool development pass (no-op)
+
+- Tool-developer pass tool-development-2026-11-07-2332. Own
+  PRs checked first: PR #425 carries the integrator 2245
+  review - tool change clean, not merged because its
+  push-and-pr-policy.md amendment is owner-gated, awaiting
+  the owner decision (merge as-is or split tool-only); no
+  action needed from the author. Open tooling issues
+  spot-checked (404, 126, 123, 332, 296, 130, 213, 129, 250,
+  235, 418): every one implemented and awaiting retro closure,
+  or needing an owner decision, live-game evidence, or another
+  job's owner. Frozen backlog is history only and the standing
+  tool-queue items are all implemented. Nothing to do, nothing
+  in flight. Status: no-op. Full detail in
+  tool-development/2332-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2330.
+  Non-batch pass: checker _tools_/records_batch.py 1.2.0
+  merge-aware due says no (PR 398 already merged 23:06:31
+  in the 23:00 window, first-pass rule bars a second
+  records merge); plain clock-only due said yes but does
+  not govern. Records PR 426 clean at head ce0b40638,
+  awaiting the 03:00 batch; tools PR 425 owner-gated
+  (policy-file amendment), carried unchanged, awaiting the
+  owner decision; records PRs 351 and 301 still conflict
+  on the single action-log file at unchanged heads against
+  new main 26aff240, re-verified, no new note. No merges,
+  no PRs opened. Status: done. Full detail in
+  pr-integration/2330-run.md.
+
+## 23:32 to about 23:44 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-07-2332.
+  Own PR 424 (2232 run) confirmed MERGED with 0 comments and 0
+  reviews, so no integrator feedback was pending. Folded the
+  ticker-2304 scout 2311/2317 records (commit 03dc69e0c) into
+  four profiles in one commit (8846a91d8c): perception-scout
+  1.27.0 to 1.28.0, alliance-duel 1.27.0 to 1.28.0,
+  alliance-train 1.28.0 to 1.29.0, alliance-gifts 1.35.0 to
+  1.36.0. Headline findings: Alliance Furnace resolved (Lv.20,
+  red lines never donate coal, never toggle); Star Ceremony
+  bonus rewards (purple gem 4.0K, gold chest, badge 14)
+  claimable by the star-ceremony regular; Marshal's Guard
+  2026-11-09 21:00 and Lv.8 Doomsday Stronghold search
+  2026-11-09 23:15 have no owning regular (Issue #427);
+  leaderboard lag resolves the panel-vs-ranking alliance power
+  discrepancy. PR 428 opened for the fold, Owner
+  lastwar-knowledge-organizer, Refs #427, verified OPEN and
+  MERGEABLE, mergeState CLEAN. Issue #427 commented with the
+  fold (comment 6718837587); no new Issue filed. Status: done.
+  Full detail in knowledge-organization/2332-run.md.
+
+## 23:39 to about 23:44 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-07-2339. No adopted
+  open PR (PR 137 stays merged). Five open PRs scanned,
+  none owned by this job: PRs 424 and 398 merged since the
+  2239 pass, main now 26aff240; PR 428 (knowledge fold)
+  opened one minute before this pass, names Owner
+  lastwar-knowledge-organizer matching its four-profile diff,
+  MERGEABLE and CLEAN; PR 426 (records post-2300 batch)
+  opened, names Owner lastwar-pr-integrator, MERGEABLE and
+  CLEAN, awaits the 03:00 batch; PR 425 (tooling, log gate)
+  held unmerged as owner-gated by the integrator review -
+  its policy-file amendment needs the owner to approve the
+  mandatory log-gate rule (merge as-is) or direct a split;
+  PRs 351 and 301 still CONFLICTING on the single action-log
+  append, integrator re-checked both at 2230 and carries the
+  branch-side reconciliation. Sixty-four open issues, all
+  class-labeled; one created (427) since the 2239 pass, none
+  closed. Owner-decision issues 132, 154 and 335 all over 24
+  hours, statements current. No adoption, no fix, no
+  hand-off, no stale-owner flag. Status: no-op.
+  Full detail in pr-catchall/2339-run.md.
+
+## 23:40 to about 23:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-2340.
+- Plan run once with the live tree tools, now current
+  (tools/queue.py md5 f71d26e7, identical to
+  _tools_/queue.py): staged 5 units for the 2026-11-08
+  1057 slot (passes, secrets, treasures, trucks,
+  events), already_present 65, skipped_done_current 4,
+  reaped 0, expired 0, stale_done_dropped []. The next
+  12 hours are staged in the live pool through about
+  10:57 local 2026-11-08. All 5 units carried on this
+  delivery.
+- Pre-reset sweep production skipped (23:00 hour run);
+  tonight's pair verified expired unexecuted in done.
+- Scout diff on the Nov 3 observation (third
+  consumption, second with the 22:10 store append): dry
+  run and apply identical, all zero except the fixed
+  tool's unexplained 4; 0 withdrawals. Pool by_state at
+  stats: live inbox 80, claimed 0, done 1198; branch
+  inbox 80, claimed 0, done 1132 before this delivery.
+  Status: done. Full detail in
+  queue-planning/2340-run.md.
+
+## 23:37 to 23:41 — Queue ticker pass, alliance donations (re-read)
+
+- Donations unit donations-2026-11-08-0419, partial and
+  unverified: Quick Construction 8/10 (recommended) read live
+  at 4/30 on entry; three coin donations landed on live reads
+  (4->3->2->1, 900 coin each, 2,700 coin); the final tap from
+  1/30 greyed the button behind a 00:15:41 timer with the
+  count label hidden, so the count was never read live at
+  0/30 and the final tap is unconfirmed. Count-rise data
+  point: 1/30 at 22:19 to 4/30 at 23:37 (about 1 per 26
+  minutes, two-endpoint estimate only); cooldown variable
+  at 00:15:41 against 00:19:07 before - further evidence for
+  Issue #423 / Issue #160. Tracker untouched. A named re-read
+  unit is enqueued for after the cooldown (not-before 23:59
+  local). Worktree loss mid-pass: the /tmp worktree vanished
+  at about 23:43 and the completion was re-applied from a
+  replacement worktree under ~/workspace/lastwar-worktrees/.
+  Full detail in alliance-donations/2341-queue-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2345.
+  Non-batch pass: checker merge-aware (tool 1.1.0 at pass
+  start) not due - PR #398 already merged 23:06:31 PT in
+  this 23:00 window, next batch 03:00 PT (a clock-only
+  run without --merges first said due; the merge-aware
+  verdict governs). Knowledge PR 428 merged (squash,
+  947b2760); tools PR 425 owner-gated, unchanged since
+  the 2245 escalation, awaiting the owner decision;
+  records PR 426 clean at heads 8253cde5 and 1a7ba70231,
+  re-verified and re-noted twice, awaiting the 03:00
+  batch; records PRs 351 and 301 still conflict on
+  the single action-log file at unchanged heads
+  against new main 947b2760, re-verified, no new
+  note per the 2230 no-repeat guidance. No records
+  PR opened (all other records branches contained
+  in main). Status: done. Full detail in
+  pr-integration/2345-run.md.
