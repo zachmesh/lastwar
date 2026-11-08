@@ -3,7 +3,7 @@ title: Event Claims
 created: 2026-10-25T18:58:00Z
 modified: 2026-11-05T03:34:11Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0504 event-claims execution record 2026-11-04 0519 queue run (done, full hub sweep, 0 claims, Arms Race phase ends inside the next hour, no Zombie Invasion tab)
   - source: ticker-0834 event-claims execution record 2026-11-04 0843 queue run (done, full hub sweep, 0 claims, Arms Race now Base Building phase, no Zombie tab)
   - source: ticker-1834 event-claims execution record 2026-11-04 1834 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirteenth consecutive ticker pass to fail this way, Issue 284)
+  - source: ticker-0004 perception-scout execution record 2026-11-08 0011 queue run (partial, events group walked live, Frontline badge 1 is a Challenge attempt, Doomsday badge 22 is claimable Rewards, Winter Battlefield starting soon, Hero Advancement phase live; record commit e6192726d1 on records/2026-11-08)
 ---
 
 
@@ -858,3 +859,14 @@ that drag is the sweep-completeness check, not wasted motion.
 - Recurrence, not a new failure class: this is the thirteenth consecutive ticker pass to fail on this exact blocker, per GitHub Issue #284 (tooling), whose latest comment before this pass was ticker-1804 (gifts unit). This pass commented on #284 instead of filing a duplicate, and this run comments the thirteenth and fourteenth occurrences onto the knowledge Issue #282.
 - Reading warning: this failed unit gives zero evidence about the event claim state. It must NOT be read as "nothing claimable" - the 0843 close (full hub sweep, Arms Race now Base Building phase, 0 claims) rests on a live read and stands as the last live read; this unit rests on no read at all.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular. The pass stopped after this unit: with no observation channel, a second unit would fail identically and burn the pass budget, so the remaining inbox units (66 at this pass) were left queued.
+
+## What the 2026-11-08 0011 scout read added - events group walked live, Frontline attempt and Doomsday Rewards waiting, Hero Advancement live
+
+- Scout unit scout-scout-2026-11-03-002 by ticker-0004, about 00:06 to 00:11 local, status partial (events group). Evidence in `_records_/2026-11-08/perception-scout/0011-queue-run.md` (commit e6192726d1 on records/2026-11-08). Observe-only; nothing was claimed, fought or tapped on any event page. The Reward panels and Winter Battlefield sub-pages were not opened; they are carried to successor seq 003 of chain scout-2026-11-03.
+- Tabs seen in this walk, in order: Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday, Community (tab bar dragged both ways; left end is Arms Race, right end is Community). Desert Storm Battlefield, Level Swap and Wanted Boss - present on 2026-10-30 (unit 066) - are gone. No Zombie Invasion tab is present in the hub, which re-confirms the zombie chain stays closed (no fresh chain seeded in this pass).
+- Arms Race page: current phase Hero Advancement, Contest Segment Lv.29-30, 01:49:42 left at entry. Score 0, cumulative chest 0/2 (not full, not claimable), point chests at 2,000 / 4,000 / 12,000 all unreached at score 0. No Arms Race grinding was done in this unit; that belongs to the arms-race unit type. Phase state is recorded here for that unit's next run - the phase is live with 1:49 left. Folded into arms-race 1.57.0.
+- Frontline Breakthrough: badge 1, timer 17:42:00, Saving Soldiers 64% (chest ladder on the left: gold, silver, bronze, small). Reward row at the bottom: red gem x100, gold bar x10, blue crate x18, gold coins x18, blue crate x3, gold coins x3. Reward button (gift icon) and Ranking button, top right. Challenge button at the bottom carries a red dot - this is the tab badge 1: one challenge attempt available, left for the events regular. The Reward panel was not opened; carried to the successor. Unknown: the 17:42:00 timer reads about 10 minutes shorter than the Doomsday and Winter countdowns read minutes apart (about 17:51-17:52), so it is a different timer - its meaning is unread.
+- Winter Battlefield 5v5: "Event is starting soon." Countdown 17:51:09 (17:51:32 on first sight, falling). Local Time. Windows: 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00. "Matchmaking is available for Base level 15 and above during the specified times." Match button greyed. Buttons: Rewards, Rules, Shop, History, Achievement - none opened; carried to the successor. No red dot on this page.
+- The Doomsday: badge 22, timer 17:52:15. "During the event, Doom Walkers will more easily attack commanders' bases..." Warzone Guardian: [CTR1]초리vv, Total Damage: 2.8G. Alliance Threat (1) / Warzone Threat (79) toggle. Alliance Threat shows one Lv.200 Doom Walker (420,819) with timer 02:52:34; two further slots greyed ("Zombies"). Ranking and Rewards buttons on the right; Rewards carries a red dot. The tab badge 22 maps to the Rewards signal (items waiting there), but the Rewards panel was not opened, so the composition of the 22 is unread - carried to the successor for the events regular to claim.
+- Community: Discord binding reward reads Claimed (the 500 Diamonds row); 200 Diamonds visit bonus; Facebook, Discord, X and Reddit links. No red dot, nothing claimable.
+- 0 claims in this unit. No priced button, no paid unlock, no Challenge or Go button was tapped. The Doomsday Rewards claim (badge 22) and the Frontline Challenge attempt (badge 1) are this regular's work, carried to the successor read and the next events unit.

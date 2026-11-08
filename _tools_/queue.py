@@ -24,6 +24,12 @@ Usage:
              # with queue.py sweep instead.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] next [--budget-minutes 15]
+             # next prefers the unit that clears a recorded
+             # screen-blocking overlay (issue #436) over every
+             # base-screen unit, and prints nothing while the
+             # clearing unit is staged but not yet actionable,
+             # instead of handing out work that would block on
+             # the same overlay.
   queue.py [--root DIR] claim --unit UNIT --executor NAME
              [--lease-minutes 20]
   queue.py [--root DIR] complete --unit UNIT --status done
@@ -35,6 +41,11 @@ Usage:
              # required result.stats key, so an incomplete closing
              # is flagged in the result itself at the moment it is
              # made instead of surfacing only in the retro.
+             # a short closing that names its overlay with
+             # --stat blocker_overlay=<slug> records the
+             # pool-level blocker (the slug maps to its clearing
+             # regular in OVERLAY_CLEARING_REGULAR); a done
+             # closing by the clearing regular lifts it.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
@@ -366,6 +377,21 @@ EVIDENCE_STALE_MINUTES = 180  # issue #129: the round-summary
 # 3 hours old; the tool reports the age, the summary job owns
 # the active window and the once-per-stall alert.
 AGED_P1_WINDOW_HOURS = 4
+# Screen-blocking overlay (issue #436): when a unit closes partial
+# with a screen-blocking overlay as the blocker, the pool records
+# the overlay and the picker prefers the unit that clears it - the
+# Star Ceremony overlay (Event 40) loops on its own controls and
+# holds the screen, so without this the picker keeps handing out
+# base-screen units that all block identically. OVERLAY_CLEARING_REGULAR
+# maps the overlay slug (stats.blocker_overlay) to the regular that
+# clears it; an overlay with no row records nothing and complete
+# warns, so a new overlay needs a row here, not a silent default.
+# BLOCKER_STALE_HOURS bounds the pause: sync drops a blocker whose
+# clearing regular has no unit in inbox or claimed for longer than
+# this, so a vanished clearing unit cannot pause the pool forever.
+OVERLAY_CLEARING_REGULAR = {"star-ceremony": "star-ceremony"}
+BLOCKER_STALE_HOURS = 4
+BLOCKER_DIRNAME = "blockers"
 
 
 def pick_key(fields, now=None):
@@ -569,6 +595,10 @@ def cmd_sync(args):
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
     stale_done_dropped = _drop_done_duplicates(args.root)
+    # Screen-blocking overlay (issue #436): drop blockers whose
+    # clearing unit is gone, so a vanished clearing unit cannot
+    # leave a stale blocker file in the live pool directory.
+    blockers_reaped = reap_stale_blockers(args.root)
     # Roster staleness (issue #198): sync stages from the tracker,
     # which reads the roster next to this tool, so a stale tree
     # stages nothing for a regular the live pool still holds
@@ -620,6 +650,7 @@ def cmd_sync(args):
     aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"reaped": reaped, "expired": expired,
                       "stale_done_dropped": stale_done_dropped,
+                      "blockers_reaped": blockers_reaped,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "roster_stale_regulars": stale_roster,
@@ -1026,7 +1057,10 @@ def _reap_claimed(root):
 def _expire_stale(root):
     """Inbox units whose window has fully passed move to done with
     status expired - the next window's unit supersedes them, and the
-    statistics keep the miss visible instead of losing it. A done
+    statistics keep the miss visible instead of losing it. The
+    expiry result carries the same stats_missing flag complete
+    writes (issue #130), so the retro reads the miss from the
+    flag instead of recomputing it. A done
     file already carrying an execution result for the same unit is
     never overwritten: the stale inbox copy is dropped and the
     executed record kept. A records-branch snapshot can hold both
@@ -1053,7 +1087,13 @@ def _expire_stale(root):
                 "executor": "",
                 "summary": "window passed before execution",
                 "claimed": [], "claimed_count": 0, "evidence": "",
-                "follow_up": "none", "stats": {}}
+                "follow_up": "none", "stats": {},
+                # Same close-out flag as complete (issue #130):
+                # an expired unit never executed, so all five
+                # required keys are missing; the retro counts it
+                # from this flag instead of recomputing.
+                "stats_missing": missing_stats_keys("expired", {}),
+                "stats_warnings": []}
             os.makedirs(state_dir(root, "done"), exist_ok=True)
             write_unit(path, fields, body)
             os.rename(path, unit_path(root, "done", f["unit"]))
@@ -1482,6 +1522,13 @@ def _actionable(fields, stamp):
     return not (not_before and not_before > stamp)
 
 
+def _est_minutes(fields):
+    try:
+        return int(fields.get("est_minutes", DEFAULT_EST_MINUTES))
+    except (TypeError, ValueError):
+        return DEFAULT_EST_MINUTES
+
+
 def cmd_next(args):
     stamp = now_utc()
     candidates = sorted(
@@ -1489,12 +1536,38 @@ def cmd_next(args):
          if _actionable(f, stamp)
          and not _has_done_record(args.root, f.get("unit"))),
         key=lambda f: pick_key(f, stamp))
+    # Screen-blocking overlay (issue #436): a recorded overlay
+    # prefers the unit that clears it over every base-screen unit,
+    # and pauses base-screen production while the clearing unit is
+    # staged but not yet actionable - the next pass re-picks then.
+    # Newest blocker first: the most recently recorded overlay is
+    # the one on top of the screen.
+    for blocker in read_blockers(args.root):
+        clearing = [f for f in list_units(args.root, "inbox")
+                    if f.get("regular") ==
+                    blocker["clearing_regular"]
+                    and not _has_done_record(args.root,
+                                             f.get("unit"))]
+        if not clearing:
+            # No unit can clear this overlay: nothing to wait for,
+            # so this blocker does not steer the pick; a unit that
+            # blocks on the overlay again re-records it.
+            continue
+        fit = [f for f in sorted(
+            (f for f in clearing if _actionable(f, stamp)),
+            key=lambda f: pick_key(f, stamp))
+            if _est_minutes(f) <= args.budget_minutes]
+        if fit:
+            print(fit[0].get("unit", ""))
+            return 0
+        # A clearing unit is staged but cannot run yet (not_before
+        # in the future, or over this pass's remaining budget):
+        # hand out nothing rather than a base-screen unit that
+        # would block identically on the same overlay.
+        print("")
+        return 0
     for f in candidates:
-        try:
-            est = int(f.get("est_minutes", DEFAULT_EST_MINUTES))
-        except (TypeError, ValueError):
-            est = DEFAULT_EST_MINUTES
-        if est <= args.budget_minutes:
+        if _est_minutes(f) <= args.budget_minutes:
             print(f.get("unit", ""))
             return 0
     print("")
@@ -1672,6 +1745,36 @@ def cmd_complete(args):
                            + (["points without achieved"]
                               if points_noach else [])),
     }
+    # Screen-blocking overlay (issue #436): a short closing that
+    # names its overlay records the pool-level blocker, so the
+    # picker prefers the clearing unit next; a done closing by
+    # the clearing regular lifts the blocker it clears. A short
+    # closing by the clearing regular that names the same overlay
+    # refreshes the blocker - the overlay is still open.
+    blocker_note = ""
+    overlay = stats.get("blocker_overlay")
+    if isinstance(overlay, str) and overlay.strip():
+        overlay = _blocker_slug(overlay)
+        if args.status in SHORT_CLOSING_STATUSES:
+            clearing = record_blocker(args.root, overlay,
+                                      args.unit)
+            if clearing:
+                blocker_note = (f"blocker recorded: overlay "
+                                f"{overlay} - next picks prefer "
+                                f"{clearing} units until one "
+                                f"closes done")
+            else:
+                blocker_note = (f"warning: {args.unit} names "
+                                f"unknown overlay {overlay} - no "
+                                f"clearing regular mapped, no "
+                                f"blocker recorded")
+    if args.status == "done":
+        for blocker in read_blockers(args.root):
+            if blocker["clearing_regular"] == fields.get("regular"):
+                if clear_blocker(args.root, blocker["overlay"]):
+                    blocker_note = (f"blocker cleared: overlay "
+                                    f"{blocker['overlay']} cleared "
+                                    f"by {args.unit}")
     target = unit_path(args.root, "done", args.unit)
     os.makedirs(state_dir(args.root, "done"), exist_ok=True)
     write_unit(path, fields, body)
@@ -1692,10 +1795,14 @@ def cmd_complete(args):
               f"and no stats.achieved - points is score gained "
               f"in this unit, not a running total read; a screen "
               f"total belongs in achieved only")
+    if blocker_note:
+        print(blocker_note)
     return 0
 
 
 def _dead_letter(root, path, fields, body):
+    """Attempts-exhausted closing, stamped with the same
+    stats_missing flag complete writes (issue #130)."""
     fields["result"] = {
         "status": "failed",
         "started_at": fields.get("claimed_at", ""),
@@ -1706,6 +1813,11 @@ def _dead_letter(root, path, fields, body):
         "claimed": [], "claimed_count": 0,
         "evidence": "", "follow_up": "inspect and re-enqueue manually",
         "stats": {},
+        # Same close-out flag as complete (issue #130): a dead
+        # letter never produced stats, so all five required keys
+        # plus blocker_category (failed status) are missing.
+        "stats_missing": missing_stats_keys("failed", {}),
+        "stats_warnings": [],
     }
     for key in ("claimed_by", "claimed_at", "lease_until"):
         fields[key] = ""
@@ -1786,6 +1898,130 @@ def token_path(root):
     shared = _shared_token_home(root)
     home = shared if shared is not None else root
     return os.path.join(state_dir(home, "claimed"), TOKEN_NAME)
+
+
+# ---------------------------------------------------------------------
+# Screen-blocking overlay blockers (issue #436)
+# ---------------------------------------------------------------------
+
+def blocker_home(root):
+    """Shared pool home for blocker files, like the device token.
+
+    Blockers are live pool state, not records: they must be visible
+    to the next pass, so they live in the main checkout's _queue_
+    (issue #383) exactly like the token, never in a pass worktree's
+    own _queue_, and _queue_/.gitignore excludes the directory so
+    they are never committed.
+    """
+    shared = _shared_token_home(root)
+    return shared if shared is not None else root
+
+
+def blocker_path(root, overlay):
+    return os.path.join(blocker_home(root), BLOCKER_DIRNAME,
+                        overlay + ".md")
+
+
+def _blocker_slug(text):
+    return re.sub(r"[^a-z0-9_-]+", "-", (text or "").strip().lower()
+                  ).strip("-")
+
+
+def read_blockers(root):
+    """Active overlay blockers, newest recorded first.
+
+    Each file is the small frontmatter the completion path wrote; a
+    file that does not parse or names no clearing regular is
+    skipped, so a half-written record can never pause the pool.
+    The most recently recorded overlay is the one on top of the
+    screen, so newest-first is also the clearing order.
+    """
+    home = blocker_home(root)
+    folder = os.path.join(home, BLOCKER_DIRNAME)
+    out = []
+    if not os.path.isdir(folder):
+        return out
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".md"):
+            continue
+        fields, _ = read_unit(os.path.join(folder, name))
+        overlay = fields.get("overlay", "")
+        clearing = fields.get("clearing_regular", "")
+        if not overlay or not clearing:
+            continue
+        recorded = parse_iso(fields.get("recorded_at", ""))
+        out.append({"overlay": overlay,
+                    "clearing_regular": clearing,
+                    "recorded_at": recorded,
+                    "recorded_by": fields.get("recorded_by", ""),
+                    "path": os.path.join(folder, name)})
+    out.sort(key=lambda b: b["recorded_at"] or datetime.min.replace(
+        tzinfo=timezone.utc), reverse=True)
+    return out
+
+
+def record_blocker(root, overlay, recorded_by):
+    """Record (or refresh) the pool-level blocker for an overlay.
+
+    Returns the clearing regular, or "" when the overlay has no
+    row in OVERLAY_CLEARING_REGULAR (the caller warns; a blocker
+    with no known clearing unit cannot be acted on).
+    """
+    clearing = OVERLAY_CLEARING_REGULAR.get(overlay, "")
+    if not clearing:
+        return ""
+    home = blocker_home(root)
+    folder = os.path.join(home, BLOCKER_DIRNAME)
+    os.makedirs(folder, exist_ok=True)
+    lines = ["---",
+             f"overlay: {overlay}",
+             f"clearing_regular: {clearing}",
+             f"recorded_at: {iso(now_utc())}",
+             f"recorded_by: {recorded_by or ''}",
+             "---", ""]
+    with open(os.path.join(folder, overlay + ".md"),
+              "w", encoding="utf-8") as fh:
+        fh.write("\n".join(lines))
+    return clearing
+
+
+def clear_blocker(root, overlay):
+    """Remove the blocker for an overlay. True when one existed."""
+    path = blocker_path(root, overlay)
+    if os.path.exists(path):
+        os.remove(path)
+        return True
+    return False
+
+
+def reap_stale_blockers(root):
+    """Drop blockers whose clearing unit is gone (sync hygiene).
+
+    A blocker is stale when its clearing regular has no unit in
+    inbox or claimed and it was recorded over BLOCKER_STALE_HOURS
+    ago; the picker already ignores a blocker with no clearing
+    unit, so reaping changes no pick - it only keeps the live
+    directory from holding a blocker no pass can ever clear.
+    Returns the list of overlay slugs dropped.
+    """
+    stamp = now_utc()
+    live = set()
+    for state in ("inbox", "claimed"):
+        for f in list_units(root, state):
+            if f.get("regular"):
+                live.add(f["regular"])
+    dropped = []
+    for blocker in read_blockers(root):
+        recorded = blocker["recorded_at"]
+        if blocker["clearing_regular"] in live:
+            continue
+        if recorded is not None and \
+                (stamp - recorded).total_seconds() <= \
+                BLOCKER_STALE_HOURS * 3600:
+            continue
+        if clear_blocker(root, blocker["overlay"]):
+            dropped.append(blocker["overlay"])
+    return dropped
 
 
 def cmd_token_acquire(args):
