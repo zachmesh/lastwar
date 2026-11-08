@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T14:35:33Z
+modified: 2026-11-08T15:05:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -1402,6 +1402,27 @@ of 2026-10-28.
   untouched. No Slack DM sync, no chat report: silent
   non-batch run. Status: done. Full detail in
   pr-integration/0630-run.md.
+
+## 06:34 to about 07:02 — Queue ticker pass
+
+- Ticker pass ticker-0634. Sync expired 6 stale 0230
+  units (duel-score, gifts, help, mail, star-ceremony,
+  train) and produced nothing new - all 22 due regulars
+  were already queued. No zombie chain was seeded: the
+  Zombie Invasion event ended at about the 19:00 reset
+  on 2026-10-30, and the Events hub tab bar shows no
+  Zombie Invasion tab. Two units executed, both
+  partial: passes (shop checked live - monthly pass
+  gift already claimed, no free Hot Deals pack, no
+  owned weekly pass; Free Supply auto-claim unverified;
+  Season hub layout differs from the metadata, claim
+  path not navigated) and events (Doomsday first-kill
+  tiers Lv.100-140 claimed, all five green-checked;
+  Frontline Breakthrough rewards at 0 progress,
+  unclaimable; hub sweep incomplete). Tracker untouched
+  for both partials. No new Issue filed. Full detail in
+  shop-claims/0634-queue-run.md and
+  event-claims/0656-queue-run.md.
 
 ## 06:39 to about 06:45 - PR catch-all pass
 
