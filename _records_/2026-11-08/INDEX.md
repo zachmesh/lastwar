@@ -380,3 +380,24 @@ of 2026-10-28.
   tool-developer run; owner-decision issues 132, 154 and 335
   all over 24 hours with statements current. Status: no-op.
   Full detail in pr-catchall/0139-run.md.
+
+## 01:30 to about 01:44 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0130.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 03:00): no merges. Tools PR
+  425 owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision. Records PR 430 clean at
+  new head 33bb2005 (ticker-0104 perception-scout
+  delivery), re-verified and re-noted, awaiting the
+  03:00 batch. Records PR 426 clean at unchanged head
+  16e187a2e8 against unchanged main 8c5ebd83,
+  re-verified, awaiting the 03:00 batch. Records PRs 351
+  and 301 still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-verified against unchanged main
+  8c5ebd83, carried to the 03:00 batch. No records PR
+  opened. VPS root disk still effectively full (df -h
+  Avail 0); this run own action-log line included in
+  the commit. Status: done. Full detail in
+  pr-integration/0130-run.md.
