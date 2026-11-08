@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T14:42:04Z
+modified: 2026-11-08T16:37:41Z
 level: L1
-version: 1.37.0
+version: 1.38.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -56,6 +56,7 @@ grounded_in:
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, 3 red dots explained live, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution records 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Days Left 13) and 0542 queue run (done, three carried red dots explained live, 0022 white-truck mapping corrected) and alliance-donations execution record 2026-11-08 0546 queue run (partial, re-read after cooldown, last donation landed); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
+  - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live, 17 medals, Rules list corrected, Doomsday guardian rotated); record commit 8dcbdf92b9 on records/2026-11-08
 ---
 
 
@@ -2614,3 +2615,101 @@ observe-only, nothing claimed). Evidence in
   possible daily boundary between 04:07 and 05:36 local, or a misread on
   one of the two reads - the next Mall re-read must record the value with
   its time.
+
+## What the 2026-11-08 0734 unit added - Winter Battlefield History and Achievement read live, 17 medals, Rules list is not the full set, Doomsday guardian rotated
+
+- Unit scout-scout-2026-11-03-005 by ticker-0734, chain scout-2026-11-03
+  seq 5, about 07:37 to 07:50 local, status partial - the 15-minute unit
+  cap ran out after History and Achievement; the Shop Campaign/Season
+  tabs, the Doomsday count finish and the History tail rows carry to
+  successor seq 006. Evidence in
+  `_records_/2026-11-08/perception-scout/0734-queue-run.md` (commit
+  8dcbdf92b9 on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-03/perception-scout/observation.md` (section
+  "Scout-events remainder, 0734 unit"). Observe-only. Nothing claimed,
+  fought, dispatched, donated, boarded or bought. The Match button was
+  never tapped (greyed - event not started).
+- Session: computer session cc-96 on the owner Mac mini. LastWar already
+  open on the Alliance Techs panel at entry (leftover from the ticker-0704
+  donations unit). One observe failure mid-unit (observation_unavailable)
+  and one transient privacy_unverified refusal, both recovered by
+  re-activating LastWar and re-observing; no game state lost. No
+  device-access error, no different-device dialog, no login demanded.
+- Entry screens (context, not this unit's work): Alliance Techs at entry
+  shows Quick Construction 8/10, Tech Donation Today 4400 - agreeing with
+  the 0706 donations close. Alliance panel underneath: [AP3x] The Apex,
+  5.0, Leader Abyss Apex, Power 13,416,181,168, Members 96/100, English.
+  Red dots on Alliance Wars, Help and Alliance Gifts (owning regulars'
+  availability signals). Alliance Star (Event 40), Time Left 10:11:46.
+  Base screen: Total Power 149,850,353; Food 478.8M, Iron 802.1M, Coin
+  6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2;
+  Season II 7d 10:31:28; furnace overdrive toast [22/60] recurring; 99+
+  chat badge recurring.
+- Winter Battlefield main page (re-confirmed): 5v5 event, "Event is
+  starting soon", countdown 10:20:52 at entry. Matching windows (Local
+  Time): 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00.
+  Matchmaking for Base level 15 and above during the specified times;
+  Match greyed.
+- History: Highest Win Streak 4, Battle Count 15, Victory Count 6. Rows
+  read in full (9): Defeat 2026-10-3 03:06, 23,688 vs 30,122, Lv.30;
+  Champion Leader 2026-6-6 19:41, 30,102 vs 22,828, Lv.27, MVP; Defeat
+  2026-6-6 19:33, 20,266 vs 30,504, Lv.27; Defeat 2026-6-6 19:18, 20,022
+  vs 30,148, Lv.27; Victory 2026-6-6 19:10, 30,100 vs 20,600, Lv.27;
+  Defeat 2026-5-2 19:53, 9,540 vs 30,040, Lv.25; Crushing Victory
+  2026-3-21 02:44, 30,072 vs 17,128, Lv.22; plus two rows whose outcome
+  labels or scores were above the fold (29,458 vs 30,752, Lv.27; one
+  Lv.27 row with medals). Tail below the fold unread: Narrow Victory
+  2026-3-21 02:33 and older rows - carries to seq 006.
+- Achievement Wall: [AP3x] Bears Lair Lv.30; Unyielding Stand Medal x3,
+  Battlefield Medic Medal x1, Stand Ready Medal x5, Assault Medal x2,
+  Rescue Medal x3, Defense Medal x9.
+- Achievements list, all 17 medals read: War Harvest (Plunder 5000
+  building points), Life Guardian (Heal 16000 units), Airdrop Hunter
+  (collect 6 airdrops), Thunder Assault (Use 600% March Speedup),
+  Unyielding Stand (defend same Building 120s), Fire Suppression
+  (Plunder 4000 building points), Battlefield Medic (Heal 10000 units),
+  Logistics Support (collect 4 airdrops), Tactical Maneuver (Use 400%
+  March Speedup), Battlefield Will (Win 25 battles), Stand Ready (defend
+  same Building 90s), Assault (Plunder 3000 building points), Rescue
+  (Heal 6000 units), Supply (collect 2 airdrops), Quick March (Use 200%
+  March Speedup), Frontline (Win 20 battles), Defense (defend same
+  Building 60s). Tiered families: win 20/25, defend 60/90/120s, heal
+  6000/10000/16000, plunder 3000/4000/5000, airdrops 2/4/6, speedup
+  200/400/600%. No per-medal reward values, progress numbers or claim
+  buttons are shown on this list.
+- CORRECTION to the 0608 section's Rules Achievements sub-tab (10 medals,
+  +2.8K/+3.5K): the Rules list is NOT the full achievement set - the live
+  Achievements list carries 17 medals. The Rules list is a partial list:
+  it omits the bottom tier of each family (Frontline win 20, Defense
+  60s, Rescue heal 6000, Assault plunder 3000, Supply 2 airdrops, Quick
+  March 200%) and it names Bloody Valor (win battles 30 times, +3.5K),
+  which does NOT appear in the live 17-medal list. The two lists disagree
+  on the win family (Rules: 25 and 30; live: 20 and 25). Recorded as an
+  open discrepancy, not resolved: whether Bloody Valor is a higher tier
+  not yet visible, a renamed medal, or a Rules-page error is unverified.
+  The 0608 open discrepancy stands: the Rewards-page Achievements range
+  reads +2.4K-3.5K, but the lowest listed achievement anywhere is +2.8K -
+  no 2.4K achievement was seen in either list.
+- Doomsday main page (re-confirmed, not the count finish): timer
+  10:21:10. Warzone Guardian now [AP3x]Nuna Knuckles, Total Damage 6.5G
+  (was [B3WB]Kalia Kalia 3.0G at the 0325 read - the guardian rotated to
+  an ally with higher damage; 5.2G at the 0656 read). Alliance Threat
+  (0), Warzone Threat (43) (was 46 at 0325, 28 at 0656), "Threat
+  Neutralized". Folded into event-claims 1.27.0.
+- Red dots: 4 seen, 4 explained, 0 unexplained in this unit's scope
+  (Frontline Breakthrough tab badge 1 = Challenge attempt per the 0325
+  read; Alliance Wars / Help / Alliance Gifts dots seen incidentally on
+  the alliance surface = owning regulars' availability signals).
+- Unknown items carried: History tail rows; chest tag icon;
+  Campaign/Season tabs; commendation range +45.0K vs listed max +33.0K;
+  achievement range +2.4K vs listed min +2.8K; Doomsday badge-22
+  composition; furnace toast [22/60]; 99+ chat badge.
+- Follow-up: successor seq 006 of chain scout-2026-11-03 enqueued for the
+  remainder (Shop Campaign/Season tabs, Doomsday count finish, History
+  tail rows).
+- Delivery note (repo state, not this unit's work): this pass appended
+  only its own 0734 section to
+  `_records_/2026-11-03/perception-scout/observation.md` on the records
+  branch; uncommitted observation sections from other scout passes in the
+  main checkout's working tree were left exactly as they were, for the PR
+  flow and the retro loop-health check.
