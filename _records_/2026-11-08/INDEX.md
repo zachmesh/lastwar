@@ -1617,3 +1617,27 @@ of 2026-10-28.
   filed as knowledge Issue #450 (with a per-tech-count
   addendum from the 0608 scout record). Tracker untouched.
   Full detail in alliance-donations/0706-queue-run.md.
+
+## 07:30 to about 07:45 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0730.
+  NON-batch pass per the merge-aware checker (plain due
+  says yes for the 07:00-08:00 window, but PR 439 already
+  merged 07:05 in this window, so this is not a batch
+  pass; next batch point 11:00 PT): no merges. Records
+  PR 449 clean at unchanged head 0c0baf9f, awaiting the
+  11:00 batch, no new comment. Records PR 430
+  conflicted with main on the single file
+  _logs_/repo-actions/action-log.jsonl at head 60a1fa83
+  (ticker-0704 delivery + 0715 run-record commit since
+  the 0715 note), re-noted (issuecomment-6723416677);
+  the branch-side reconciliation merge 8226ce20 landed
+  mid-pass and resolved it, re-verified CLEAN at that
+  head (follow-up issuecomment-6723461770), awaiting
+  the 11:00 batch. Records PRs 351 and 301 still
+  conflict with main on the same single file, heads
+  unchanged, re-verified and carried. Tools PR 425
+  owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision. No records PR opened.
+  Status: done. Full detail in
+  pr-integration/0730-run.md.
