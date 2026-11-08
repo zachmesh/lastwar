@@ -3614,3 +3614,65 @@ of 2026-10-28.
 - Integrator pass pr-integration-2026-11-08-1545.
   NON-batch pass (merge-aware checker: not due, PR #457 already merged 15:04:37 in this 15:00 window; next batch 19:00 PT). Knowledge PR 471 merged (squash 0cfbcca3, 5 activity profiles). Records PRs 460 (clean at 2ba75e61, commented) and 470 (clean at 6a6607c5f) await the 19:00 batch. Tools PR 425 still owner-gated, no owner decision. Records PRs 351 and 301 conflicts carried (single file action-log.jsonl). End-of-pass sweep: 5 open PRs, all decided, no unprocessed PRs.
   Full detail in pr-integration/1545-run.md.
+
+## 15:32 to about 15:48 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1532 run. Own PR 468 MERGED
+  (0 comments, 0 reviews); no open profile PR, no
+  unaddressed feedback. Folded ticker-1434 passes 1455,
+  secrets 1456, treasures 1459 and events 1506, ticker-1522
+  donations 1537 and ticker-1534 scout 1545 into 6 profiles:
+  five as one commit (907e73b4a) on new PR #471 (merged
+  23:51:21Z, merge commit 0cfbcca36, first commit only) and
+  the scout fold as commit b6326f995 on new PR #472 (OPEN and
+  MERGEABLE, mergeState CLEAN, at run close):
+  shop-claims 1.38.0 - the 2026-10-25 Season Battle Pass /
+  Season Weekly Pass claim path marked STALE in the Week 8
+  hub (Goals and Profession opened live, no pass claim;
+  Issue #469 filed by the ticker-1434 pass); Weekly Pass
+  18:00 reset confirmed a ninth time (Issue #242);
+  Profession Hall Engineer Lv.63, 227,105/1,500,000 EXP,
+  cap 70, measured; secret-missions 1.21.0 - Mega Deploy
+  of all 8 pending tasks verified running (UR Only OFF,
+  every checkbox already green-checked); Reward Recovery
+  2026-11-6 claimed in full; ally assists 0/5 carried;
+  duel day 7 is an off day, so no Mega Refresh;
+  hidden-treasures 1.12.0 - CORRECTION, the
+  badge-equals-digs rule is disproved (tab badge 1 while
+  fragment stock M3/M5 at 3 allowed 3 digs); the dig count
+  is capped by the scarcest fragment stock, not the badge;
+  one dig executed, chest progress 6/15 to 7/15, 2 digs
+  remain by stock; event-claims 1.28.0 - full 5-tab hub
+  sweep, no reward claimable anywhere; Arms Race Tech
+  Research stage score 0, rank #2110; Frontline badge 1
+  is the unplayed-Challenge marker; Winter Battlefield
+  windows re-confirmed; Doomsday guardian 7.6G, Warzone
+  Threat 23, first-kill tiers already claimed;
+  alliance-donations 1.71.0 - 6 coin donations verified
+  live 7/30 to 1/30 on Quick Construction (5,400 coin),
+  stopped at 1/30 per the changed route; replenishment +6
+  over about 110 minutes, about 1 per 18 minutes (Issues
+  #160, #423); footer Tech Donation Today +650 vs +600
+  expected, extra +50 unexplained (Issue #417); Rallied
+  Attack re-read still pending (Issue #450);
+  perception-scout 1.43.0 - station re-check, eleventh
+  no-train confirmation; Wars dot absent with empty Rally
+  Intel, fifth same-day datapoint for the rally link, NOT a
+  settlement (Issue #212); furnace overdrive toast read in
+  full as [22/60]. Issues
+  commented by this run: #469 (fold, comment 6728859537),
+  #242 (ninth 18:00 confirmation, comment 6728859704),
+  #160 and #423 (replenishment fold note, comments
+  6728859884 and 6728860046), #450 (RA re-read still
+  pending, comment 6728860227), #417 (footer +50 anomaly,
+  comment 6728860368), #212 (scout fold, comment
+  6728940202, plus correction comment 6728954655 after PR
+  #471 merged without the scout commit). Delivery incident, recovered: the
+  first push of the PR branch pushed a stale local tip
+  8971f29ce (a 2026-11-01 branch of the same time-of-day
+  name lingering in the VPS clone); the wrong remote
+  branch was deleted before any PR referenced it and the
+  correct commit re-pushed via a distinct local ref - no
+  force push used. No new Issue filed. Slack DM sync
+  sent (message_ts 1794181810.264849). Status: done. Full
+  detail in knowledge-organization/1532-run.md.
