@@ -4328,3 +4328,54 @@ of 2026-10-28.
   other records branches contained in main). No
   owner-gated PR. Status: done. Full detail in
   pr-integration/2230-run.md.
+
+- Organizer pass knowledge-organization-2026-11-07-2232.
+  Own PR 421 MERGED with 0 comments and 0 reviews, so
+  no integrator feedback pending. Folded the ticker-2134
+  scout records (2140/2145/2150/2153, commit fe5a1e7fd3)
+  and the ticker-2204 scout + donations records
+  (2209/2219, commit 0e4f2e52e2) into 6 profiles:
+  alliance-donations 1.52.0 to 1.53.0 (2219 unit: 4 coin
+  donations landed 5/30 to 1/30, third proven eaten
+  single tap, final tap unconfirmed behind a 00:19:07
+  timer; corrected count trajectory 1 to 2 to 1 to 5 -
+  the 2018 unit ran the same unit id in between, a
+  duplicate production, not a fresh unit; regeneration
+  hypothesis about +1 per 30 minutes, still
+  unverified; eleventh/twelfth replenishment data
+  points for Issues #160/#174; re-read enqueued
+  not-before 22:40), perception-scout 1.26.0 to 1.27.0
+  (station panel third no-train confirmation, building
+  countdown rising 03:38 to 03:48 with identity
+  unknown, events hub four pages, LOOT panel turned
+  over with one unclaimed Lv.1 Doom Elite row, Mall
+  strip walked in full), arms-race 1.55.0 to 1.56.0
+  (2150 Drone Boost live re-read at 0, timer 00:14:48,
+  tiers and scoring rows agree with the 1929 read;
+  tier-3 plan via 304 stamina stands; 1633 read
+  remains the lone HUD outlier per Issue #416),
+  shop-claims 1.29.0 to 1.30.0 (check-in FREE GIFT
+  claimable, queued for the 22:57 passes window;
+  Weekly Pass 18:00:00 fourth confirmation, ruling
+  out the countdown reading; Super Monthly Pass Days
+  Left 14, Daily Pickup already claimed), alliance-train
+  1.27.0 to 1.28.0 (2140/2153 station re-checks; the
+  2140 working-tree change carried no new rule text,
+  substance already in the profile since 1345, so only
+  the confirmation count is added; scout re-checks do
+  not extend the train-unit check-only streak, stays
+  at nine), alliance-gifts 1.34.0 to 1.35.0 (LOOT
+  panel: Lv.60 rows gone, unclaimed Lv.1 Doom Elite
+  row named as this regular's follow-up work).
+  Knowledge PR 424 opened for the fold, verified OPEN
+  and MERGEABLE, mergeState CLEAN, in 1 commit. Two
+  corrections resolved (2219 premise correction,
+  2140 working-tree change is not a new rule). Issue
+  #417 commented with the 2219 evidence (footer 750 to
+  1150 between 20:18 and about 21:10, corrected 1 to 2
+  to 1 to 5 trajectory, regeneration hypothesis);
+  Issue #242 commented with the fourth 18:00
+  confirmation. No new Issue filed (#423 was filed by
+  the ticker-2204 pass itself; #422 is tooling/records
+  class). Slack DM sync sent. Status: done. Full
+  detail in knowledge-organization/2232-run.md.
