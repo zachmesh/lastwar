@@ -3039,3 +3039,32 @@ of 2026-10-28.
   date.today(), so the fix reaches the loop only after that
   checkout is pulled. Status: done. Full detail in
   tool-development/1732-run.md.
+
+## 17:32 to about 17:47 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-07-1732.
+  Own PR 406 confirmed MERGED with 0 comments and 0 reviews, so no
+  integrator feedback was owed; open PRs 398, 351, 301 and 256 are
+  records PRs belonging to lastwar-pr-integrator. No open knowledge
+  Issue updated since the 1632 run (newest still #282 at
+  2026-11-08T00:20:14Z); none resolved, none closed here. Two
+  substantive records folded into seven profiles (PR 409, OPEN and
+  MERGEABLE, mergeState CLEAN): arms-race 1.53.0 (Base Building
+  0/30000, tier-3 unreachable inside the red lines,
+  skipped-needs-owner R4; Issue #407 filed for the regulars.py
+  UTC-date state bug), donations 1.48.0 (detour via radar and
+  Alliance Duel, Donation Count never read, partial unverified),
+  duel 1.26.0 (incidental Duel page read, alliance score 225,000),
+  harvest 1.36.0 (farmland bubbles cleared in one tap, about 186.5K
+  food; three new not-a-bubble points), survivors 1.34.0 (gate
+  re-grounded with the Zombies sign, no line verified; refill open
+  question gains a second explanation), training 1.25.0 (Lv.27 T9
+  x726 and Lv.30 T10 x793 requeued at cap), radar 1.50.0 (capture
+  channel working again after the 1020-1608 failure run;
+  incidental radar reads 237 to 259 points, 19/40 to 0/40 stored,
+  stamina 100 to 35). Issue #407 verified open and labeled tooling
+  and now fixed by the tool-developer in PR 408, which landed
+  during this run. No new Issue 282 comment (no new failure
+  occurrence). Ticker-1704 still has no record; it falls to the
+  next run. Status: done. Full detail in
+  knowledge-organization/1732-run.md.
