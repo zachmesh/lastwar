@@ -46,6 +46,13 @@ Usage:
              # pool-level blocker (the slug maps to its clearing
              # regular in OVERLAY_CLEARING_REGULAR); a done
              # closing by the clearing regular lifts it.
+             # every closing also records a completion marker in
+             # the main checkout's _queue_/completed/ (issue
+             # #438), so a unit closed in a detached worktree is
+             # never re-picked by the next pass: next, claim,
+             # sync and plan all treat a marker like a local
+             # done record, and sync reaps markers once the done
+             # record lands in the local pool or after 7 days.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
   queue.py [--root DIR] token-release --executor NAME
@@ -392,6 +399,23 @@ AGED_P1_WINDOW_HOURS = 4
 OVERLAY_CLEARING_REGULAR = {"star-ceremony": "star-ceremony"}
 BLOCKER_STALE_HOURS = 4
 BLOCKER_DIRNAME = "blockers"
+# Completed-unit markers (issue #438): a unit closed in a detached
+# worktree leaves its done record in that worktree, so the main
+# tree's inbox still holds it and the next pass re-executes it -
+# the two scout units in #438, then a third donations unit. A
+# closing therefore also records a small marker in the main
+# checkout's _queue_/completed/ (live-only state, like the device
+# token and the blockers), and next / claim / sync / plan treat a
+# marker exactly like a local done record. COMPLETED_STALE_HOURS
+# bounds the live directory: sync reaps a marker once the done
+# record lands in the local pool (the delivery caught up) or after
+# this long - the records-to-main batch merges run at least daily,
+# so 7 days is several batch cycles; a marker older than that with
+# no local done record means the delivery never carried the
+# closing, and the suppression lapsing makes that gap visible
+# instead of hiding it behind a stale file.
+COMPLETED_DIRNAME = "completed"
+COMPLETED_STALE_HOURS = 168
 
 
 def pick_key(fields, now=None):
@@ -599,6 +623,11 @@ def cmd_sync(args):
     # clearing unit is gone, so a vanished clearing unit cannot
     # leave a stale blocker file in the live pool directory.
     blockers_reaped = reap_stale_blockers(args.root)
+    # Completed-unit markers (issue #438): drop markers the local
+    # pool no longer needs - the done record landed, or the marker
+    # outlived the delivery lag - so the live directory stays
+    # bounded; a live marker still suppresses its unit below.
+    markers_reaped = reap_stale_completion_markers(args.root)
     # Roster staleness (issue #198): sync stages from the tracker,
     # which reads the roster next to this tool, so a stale tree
     # stages nothing for a regular the live pool still holds
@@ -651,6 +680,7 @@ def cmd_sync(args):
     print(json.dumps({"reaped": reaped, "expired": expired,
                       "stale_done_dropped": stale_done_dropped,
                       "blockers_reaped": blockers_reaped,
+                      "completion_markers_reaped": markers_reaped,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "roster_stale_regulars": stale_roster,
@@ -1065,17 +1095,29 @@ def _expire_stale(root):
     never overwritten: the stale inbox copy is dropped and the
     executed record kept. A records-branch snapshot can hold both
     copies at once, and expiry used to clobber the executed result
-    with an expiry (queue-planning 1457 follow-up)."""
+    with an expiry (queue-planning 1457 follow-up). A completion
+    marker for the same unit counts as a done record here (issue
+    #438): the unit closed in another worktree, so expiry must not
+    overwrite that result either."""
     moved = 0
     stamp = now_utc()
     for f in list_units(root, "inbox"):
         expires = parse_iso(f.get("expires_at", ""))
         if expires and expires <= stamp and f.get("unit"):
             done_path = unit_path(root, "done", f["unit"])
-            if os.path.exists(done_path):
-                print(f"warning: {f['unit']} already has a done "
-                      f"record - dropping the stale inbox copy "
-                      f"instead of overwriting it with an expiry",
+            if os.path.exists(done_path) or has_completion_marker(
+                    root, f["unit"]):
+                # A completion marker means the unit already closed
+                # in another worktree (issue #438): writing an
+                # expiry here would clobber that executed result
+                # with a miss, the same bug class the done-exists
+                # branch guards for a local record.
+                reason = ("already has a done record" if
+                          os.path.exists(done_path) else
+                          "already closed in another worktree")
+                print(f"warning: {f['unit']} {reason} - dropping "
+                      f"the stale inbox copy instead of "
+                      f"overwriting it with an expiry",
                       file=sys.stderr)
                 os.remove(unit_path(root, "inbox", f["unit"]))
                 continue
@@ -1135,17 +1177,27 @@ def _drop_done_duplicates(root):
     removed, with a stderr warning naming the unit. Runs after
     _expire_stale in sync and plan, so an expired duplicate still
     takes the expiry path (and its existing warning) and only
-    the unexpired remainder is counted here.
+    the unexpired remainder is counted here. A completion marker
+    counts the same as a done record (issue #438): the unit closed
+    in a detached worktree whose done file this tree never saw, so
+    the inbox copy is dropped on the marker alone.
     """
     dropped = []
     for f in list_units(root, "inbox"):
         unit = f.get("unit")
-        if unit and _has_done_record(root, unit):
-            print(f"warning: {unit} already has a done record - "
-                  f"dropping the stale inbox copy instead of "
-                  f"re-executing it", file=sys.stderr)
-            os.remove(unit_path(root, "inbox", unit))
-            dropped.append(unit)
+        if not unit:
+            continue
+        if _has_done_record(root, unit):
+            reason = "already has a done record"
+        elif has_completion_marker(root, unit):
+            reason = "already closed in another worktree"
+        else:
+            continue
+        print(f"warning: {unit} {reason} - dropping the stale "
+              f"inbox copy instead of re-executing it",
+              file=sys.stderr)
+        os.remove(unit_path(root, "inbox", unit))
+        dropped.append(unit)
     return dropped
 
 
@@ -1534,7 +1586,8 @@ def cmd_next(args):
     candidates = sorted(
         (f for f in list_units(args.root, "inbox")
          if _actionable(f, stamp)
-         and not _has_done_record(args.root, f.get("unit"))),
+         and not _has_done_record(args.root, f.get("unit"))
+         and not has_completion_marker(args.root, f.get("unit"))),
         key=lambda f: pick_key(f, stamp))
     # Screen-blocking overlay (issue #436): a recorded overlay
     # prefers the unit that clears it over every base-screen unit,
@@ -1547,7 +1600,9 @@ def cmd_next(args):
                     if f.get("regular") ==
                     blocker["clearing_regular"]
                     and not _has_done_record(args.root,
-                                             f.get("unit"))]
+                                             f.get("unit"))
+                    and not has_completion_marker(
+                        args.root, f.get("unit"))]
         if not clearing:
             # No unit can clear this overlay: nothing to wait for,
             # so this blocker does not steer the pick; a unit that
@@ -1583,6 +1638,11 @@ def cmd_claim(args):
         print(f"cannot claim {args.unit}: already has a done "
               f"record - the inbox copy is stale, run sync to "
               f"drop it instead of re-executing it")
+        return 1
+    if has_completion_marker(args.root, args.unit):
+        print(f"cannot claim {args.unit}: already closed in "
+              f"another worktree - the inbox copy is stale, run "
+              f"sync to drop it instead of re-executing it")
         return 1
     fields, body = read_unit(path)
     if not _actionable(fields, now_utc()):
@@ -1797,12 +1857,32 @@ def cmd_complete(args):
               f"total belongs in achieved only")
     if blocker_note:
         print(blocker_note)
+    # Completed-unit marker (issue #438): the done record above
+    # lives in this worktree only, so record the closing in the
+    # shared main-checkout pool too - otherwise the main tree's
+    # inbox still holds the unit and the next pass re-executes
+    # it. Best effort: a marker that cannot be written never fails
+    # the closing itself, it only warns.
+    if record_completion(args.root, args.unit, args.status,
+                         fields.get("claimed_by", "")):
+        print(f"completion recorded: {args.unit} closed "
+              f"{args.status} - shared marker suppresses re-picks")
+    else:
+        print(f"warning: {args.unit} completion marker not "
+              f"recorded - the next pass may re-pick this unit",
+              file=sys.stderr)
     return 0
 
 
 def _dead_letter(root, path, fields, body):
     """Attempts-exhausted closing, stamped with the same
     stats_missing flag complete writes (issue #130)."""
+    # A dead letter is a closing too (issue #438): record the
+    # marker so no worktree re-picks the exhausted unit. The
+    # executor and unit are read before the claim fields are
+    # cleared below.
+    executor = fields.get("claimed_by", "")
+    unit = fields.get("unit", "")
     fields["result"] = {
         "status": "failed",
         "started_at": fields.get("claimed_at", ""),
@@ -1825,6 +1905,7 @@ def _dead_letter(root, path, fields, body):
     target = unit_path(root, "done", fields.get("unit", ""))
     write_unit(path, fields, body)
     os.rename(path, target)
+    record_completion(root, unit, "failed", executor)
 
 
 def _release(args, unit):
@@ -2021,6 +2102,142 @@ def reap_stale_blockers(root):
             continue
         if clear_blocker(root, blocker["overlay"]):
             dropped.append(blocker["overlay"])
+    return dropped
+
+
+# ---------------------------------------------------------------------
+# Completed-unit markers (issue #438)
+# ---------------------------------------------------------------------
+
+def completion_home(root):
+    """Shared pool home for completion markers, like the token.
+
+    Markers are live pool state, not records: they must be visible
+    to the next pass, so they live in the main checkout's _queue_
+    (issue #383) exactly like the token and the blockers, never in
+    a pass worktree's own _queue_, and _queue_/.gitignore excludes
+    the directory so they are never committed.
+    """
+    shared = _shared_token_home(root)
+    return shared if shared is not None else root
+
+
+def completion_marker_path(root, unit):
+    return os.path.join(completion_home(root), COMPLETED_DIRNAME,
+                        unit + ".md")
+
+
+def has_completion_marker(root, unit):
+    """True when the shared pool holds a completion marker for unit.
+
+    A marker is a small frontmatter file the completion path wrote
+    in another worktree; it suppresses the inbox copy exactly like
+    a local done record. A file that does not parse, names a
+    different unit, or carries no closing status suppresses
+    nothing, so a half-written record can never hide fresh work.
+    """
+    if not unit:
+        return False
+    path = completion_marker_path(root, unit)
+    if not os.path.exists(path):
+        return False
+    try:
+        fields, _ = read_unit(path)
+    except (OSError, ValueError, UnicodeDecodeError):
+        return False
+    return (fields.get("unit") == unit
+            and bool(fields.get("status")))
+
+
+def record_completion(root, unit, status, executor):
+    """Record the closing of unit in the shared pool. Best effort.
+
+    Returns True when the marker was written, False when the shared
+    home cannot be written (a non-repo scratch root, a read-only
+    checkout): the caller warns but never fails the closing itself
+    over a marker. The marker is deliberately small - unit, status,
+    finished_at, executor - because the full result lives in the
+    done record; the marker only has to answer "did this unit
+    already close somewhere".
+    """
+    if not unit or not status:
+        return False
+    try:
+        home = completion_home(root)
+        folder = os.path.join(home, COMPLETED_DIRNAME)
+        os.makedirs(folder, exist_ok=True)
+        lines = ["---",
+                 f"unit: {unit}",
+                 f"status: {status}",
+                 f"finished_at: {iso(now_utc())}",
+                 f"executor: {executor or ''}",
+                 "---", ""]
+        with open(os.path.join(folder, unit + ".md"),
+                  "w", encoding="utf-8") as fh:
+            fh.write("\n".join(lines))
+    except OSError:
+        return False
+    return True
+
+
+def clear_completion_marker(root, unit):
+    """Remove the marker for unit. True when one existed."""
+    path = completion_marker_path(root, unit)
+    if os.path.exists(path):
+        os.remove(path)
+        return True
+    return False
+
+
+def reap_stale_completion_markers(root):
+    """Drop markers the local pool no longer needs (sync hygiene).
+
+    A marker is stale when the unit's done record has landed in
+    this pool - the delivery caught up, so the local record now
+    suppresses the inbox copy on its own - or when the marker is
+    older than COMPLETED_STALE_HOURS: the delivery never carried
+    the closing, and the suppression lapsing makes that gap
+    visible instead of hiding it behind a stale file. A file that
+    does not parse to a unit and status suppresses nothing, so it
+    is dropped too. Returns the list of unit ids dropped.
+    """
+    home = completion_home(root)
+    folder = os.path.join(home, COMPLETED_DIRNAME)
+    if not os.path.isdir(folder):
+        return []
+    stamp = now_utc()
+    dropped = []
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".md"):
+            continue
+        unit = name[:-len(".md")]
+        path = os.path.join(folder, name)
+        try:
+            fields, _ = read_unit(path)
+        except (OSError, ValueError, UnicodeDecodeError):
+            fields = {}
+        finished = parse_iso(fields.get("finished_at", ""))
+        valid = (fields.get("unit") == unit
+                 and bool(fields.get("status")))
+        keep = False
+        if valid:
+            if _has_done_record(root, unit):
+                keep = False
+            elif finished is not None and \
+                    (stamp - finished).total_seconds() > \
+                    COMPLETED_STALE_HOURS * 3600:
+                keep = False
+            else:
+                keep = True
+        if keep:
+            continue
+        # An invalid marker file falls through here too: it
+        # suppresses nothing, so dropping it changes no pick.
+        try:
+            os.remove(path)
+        except OSError:
+            continue
+        dropped.append(unit)
     return dropped
 
 
