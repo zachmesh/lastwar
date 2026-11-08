@@ -3,5 +3,10 @@
   "status": "skipped",
   "at": "2026-11-08T00:41:54",
   "note": "Base Building 0/30000: Aircraft Center 4d19h and Drill Ground 1d16h left, no completion in phase; speedup and diamond-pack paths red-lined"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-08T02:46:31",
+  "note": "3 claims: Gear Master Pack free, Free Supply auto-claim, Monthly Daily Gift; Weekly Pass no owned pickup"
  }
 }

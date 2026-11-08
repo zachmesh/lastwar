@@ -3335,6 +3335,33 @@ of 2026-10-28.
   adoption, no fix, no hand-off, no escalation, no
   stale-owner flag. Status: no-op.
   Full detail in pr-catchall/1839-run.md.
+## 18:32 to about 18:48 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-07-1832.
+  Own PR 409 confirmed MERGED with 0 comments and 0 reviews, so no
+  integrator feedback was owed; open PRs 398, 351, 301 and 256 are
+  records PRs belonging to lastwar-pr-integrator. No open knowledge
+  Issue updated since the 1732 run (newest still #282 at
+  2026-11-08T00:20:14Z); none resolved, none closed here. Six
+  substantive records folded into ten profiles (PR 411, OPEN and
+  MERGEABLE, mergeState CLEAN): vip-rewards 1.11.0 (CORRECTION -
+  the Daily Freebie runs on its own roughly 24-hour cycle from the
+  last claim, not on the 19:00 reset clock; chest plus 60 to
+  1,603,990, streak 2 days; Freebie button dead to four variants
+  including a new foreground click), help 1.28.0 (Help All from the
+  base-screen bubble at 827,707, header 560/1,000), mail 1.23.0
+  (all six categories nothing claimable), gifts 1.33.0 (2 Premium,
+  progress plus 230, tiers not itemised, Issue #183 evidence
+  commented), daily-activities 1.18.0 (first 17:30 sweep since
+  2026-11-02, 23 lines, 1 at zero, crystal and glittering-market
+  fix-ups enqueued), donations 1.49.0 and trucks 1.29.0 (counts
+  unread all day, both R3 checkpoints passed unverified), and the
+  1020 Mission Control / Ctrl+Right lessons propagated to
+  survivor-intake 1.35.0, resource-collection 1.37.0 and
+  perception-scout 1.25.0. No new Issue 282 comment (no new failure
+  occurrence). Ticker-1818 records landed during this run and fall
+  to the next run; ticker-1704 still has no record. Status: done.
+  Full detail in knowledge-organization/1832-run.md.
 
 ## 18:40 to about 18:50 - Queue planning pass
 
@@ -3379,3 +3406,39 @@ of 2026-10-28.
   done 1161; branch inbox 70, claimed 0, done 1099.
   Status: done. Full detail in
   queue-planning/1840-run.md.
+## 18:41 to about 18:53 - Ticker-1834 passes unit
+
+- Passes unit passes-2026-11-07-1457, status done. First live
+  shop read since the 0841 checked-only unit of 2026-11-04:
+  Mac mini online, game window on-screen (372131), no
+  different-device dialog. 3 claims against the new 18:00
+  cycle: Hot Deals Gear Master Pack free claim (Upgrade Ore
+  Lucky Chest x1, Upgrade Ore 1500), Free Supply auto-claim
+  (supply chest x1, ruby x10), Monthly Daily Gift (gold
+  tickets 2, red diamonds 100, stamina 50 x2, iron 200, 5m
+  speedups x60; Days Left 14, Rewards Left 14). Weekly Pass:
+  no owned pass claimable - S2 Drone, S1 Drone Parts and Coin
+  cards are all $4.99 offers; Legendary Take All $19.99 not
+  tapped. Full detail in shop-claims/1853-queue-run.md.
+- Pass stopped after one unit: the device token lease ran to
+  02:55:34Z. The pre-reset-sweep chain units 001/002 were
+  never claimed and expire at the 19:00 reset; the sweep work
+  itself ran as the 1730 unit (ticker-1734, partial).
+## 18:32 to about 18:50 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-07-1832.
+  Own PRs checked first: no tooling PR of mine open (4 open
+  PRs are integrator-owned records branches); PR #408 is
+  MERGED. Newest open tooling issue #410 (stale sweep-pair
+  geometry) worked this run: the reset-anchored geometry was
+  already correct on main, but the pair-production path could
+  not tell a stale unit from a correct one - the dedupe
+  silently counted the stale 17:30 first pass as the final
+  pass. Fix on branch work/sweep-stale-pair-guard-410, commit
+  6521acb2: cmd_sweep refuses on a stale-geometry chain unit,
+  _produce_for_window warns on the same collision (the plan
+  path). PR #412 opened, issue #410 commented, Slack DM
+  synced. Fixture suite 22/22 on scratch pools, twice.
+  Live-tree sync and planner body text flagged for their
+  owners, not fixed here. Full detail in
+  tool-development/1832-run.md.
