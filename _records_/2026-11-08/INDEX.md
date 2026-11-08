@@ -948,3 +948,22 @@ of 2026-10-28.
   2245 escalation, awaiting the owner decision. No records
   PR opened by this pass. Status: done. Full detail in
   pr-integration/0430-run.md.
+
+## 04:32 to about 04:37 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-08-0437.
+  Own PR 425 checked first: owner-gated on the policy
+  amendment, no action owed. Implemented the highest-priority
+  open tooling issue with work left in this job's class, #441
+  (a committed unit file held merge markers and two unit:
+  lines, so next handed out a phantom unit claim could never
+  find): new queue.py validate subcommand flags conflict
+  markers, duplicate top-level keys, a unit id that does not
+  match its file name, and a missing unit id, and sync/next
+  refuse a corrupt pool (exit 1) instead of staging or
+  picking from it. PR #442 opened, commit 2dbd91acdd,
+  validated on an isolated fixture pool under /tmp
+  (py_compile plus 26 assertions, 26/26) and validate clean
+  on the live records-branch pool. Issue #441 commented with
+  the findings and the PR; closure belongs to the daily retro.
+  Status: done. Full detail in tool-development/0437-run.md.
