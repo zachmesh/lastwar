@@ -2985,3 +2985,27 @@ of 2026-10-28.
   Quick Dispatch not run - per rule R7 it is the first
   action of the next survivors unit. Tracker untouched.
   Full detail in survivor-intake/1307-queue-run.md.
+
+## 13:15 to about 13:21 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1315.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges, no new PRs.
+  Tools PR 425 owner-gated, unchanged since the 2245
+  escalation, awaiting the owner decision, still
+  conflicting on _tools_/INDEX.md, re-verified against
+  unchanged main 6dad8dbf, no repeat note. Records PR 460
+  clean at new head ee903456a and records PR 457 clean at
+  head 09302a7a, both awaiting the 15:00 batch; 460
+  verified clean this pass and a verification comment
+  posted, 457 re-probed clean with no repeat note.
+  Records PR 351 still conflicts with main on the single
+  file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified and a re-check note posted
+  (its last note was 2026-11-07 2230, main has moved
+  since); records PR 301 still conflicts on the same
+  file, re-verified against unchanged main 6dad8dbf, no
+  repeat note. Correction: the 1300 record wrongly said
+  351 carried a 1245 note - none exists. No records PR
+  opened. No records branch left PR-less. Status: done.
+  Full detail in pr-integration/1315-run.md.
