@@ -3520,7 +3520,6 @@ of 2026-10-28.
   Diamonds already Claimed. Token lease renewed mid-pass
   (expired 15:01:09Z, re-acquired 15:01:44Z to 15:16:48Z).
   Full detail in event-claims/1506-queue-run.md.
-
 - Donations unit donations-2026-11-08-2038 (partial): 6 coin
   donations verified live on Quick Construction, count 7/30 to
   1/30 (5,400 coin); stopped at 1/30 per the standing changed
@@ -3529,3 +3528,15 @@ of 2026-10-28.
   (Issue #450) not reached before the unit cap; next donations
   unit reads it live first. Full detail in
   alliance-donations/1537-queue-run.md.
+## 15:15 to about 15:24 — PR integration pass
+- Integrator pass pr-integration-2026-11-08-1515.
+  NON-batch pass per the merge-aware checker (PR 457
+  already merged 15:04 in this 15:00 window; next batch
+  19:00 PT): no merges. Records PR 460 reconciled clean
+  mid-pass by the ticker's branch-side merge of main
+  (58fbde4cb), verified clean against main 8dd26c54d,
+  awaiting the 19:00 batch with PR 470 (clean at
+  6a6607c5f). Records PRs 351 and 301 still conflict on
+  the single file _logs_/repo-actions/action-log.jsonl,
+  re-check notes posted; tools PR 425 owner-gated,
+  Full detail in pr-integration/1515-run.md.
