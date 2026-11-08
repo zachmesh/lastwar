@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-08T06:32:17Z
+modified: 2026-11-08T09:32:17Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-2134 perception-scout execution records 2026-11-07 2140/2153 queue runs (partial, station panel re-checked, third no-train confirmation in one pass, check-signals-first entry route; record commit fe5a1e7fd3 on records/2026-11-07)
   - source: ticker-2304 perception-scout execution records 2026-11-07 2311/2317 queue runs (partial, station panel re-checked, fifth no-train confirmation in one pass, Train Conductor appointments in the Record Event tab; record commit 03dc69e0c on records/2026-11-07)
   - source: ticker-0004 perception-scout execution record 2026-11-08 0022 queue run (partial, midday remainder, station panel re-checked, fourth no-train confirmation, no train preparing; record commit e6192726d1 on records/2026-11-08)
+  - source: ticker-0104 perception-scout execution record 2026-11-08 0118 queue run (partial, alliance remainder station check, sixth no-train confirmation in the scout-mid-2026-10-31 chain, no train preparing; record commit 33bb20050a on records/2026-11-08)
 ---
 
 # Alliance train
@@ -1040,3 +1041,10 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Scout unit scout-midday-scout-mid-2026-11-04-002 by ticker-0004, about 00:13 to 00:22 local, status partial (midday remainder). Evidence in `_records_/2026-11-08/perception-scout/0022-queue-run.md` (commit e6192726d1 on records/2026-11-08). Observe-only; no boarding action, no Trade Contracts spent, no train summoned.
 - Preparation signals, both absent: no train icon in the left icon column (avatar Lv.30, hammer 2/4, flask 2/2, green face 6.5C, white truck, radar, wrench) and no Boarding closes in banner under the resource bar. No train is preparing in this window, so the STATION PLATFORM screen has no live state to read. This is the fourth consecutive confirmation of this state in the record's frame (units 005, 006, 007 of chain scout-mid-2026-10-31, and this unit); the 2311/2317 section counts five confirmations inside the ticker-2304 pass under a different frame, so the two counts are not directly comparable. The check stopped at the signals per the R2-hardened entry route (alliance-train metadata 1.6.0): no pan of the base edge, no station platform visit.
 - Streak note: the 1826 train unit was the ninth check-only outcome in a row for train units. This scout re-check is not a train-unit outcome and does not extend that streak count - it is recorded here as a scout confirmation, not a train check. Successor scout unit seq 003 is enqueued under chain scout-mid-2026-11-04 for the remaining store tabs. Game left on the own base screen.
+
+## What the 2026-11-08 0118 scout unit added - station panel re-checked, no train preparing, sixth confirmation in the scout-mid-2026-10-31 chain
+
+- Scout unit scout-midday-scout-mid-2026-10-31-008 by ticker-0104, about 01:08 to 01:12 local, status partial (alliance remainder station check). Evidence in `_records_/2026-11-08/perception-scout/0118-queue-run.md` (commit 33bb20050a on records/2026-11-08) and the appended section of `_records_/2026-11-08/perception-scout/observation.md`. Observe-only; nothing claimed, fought, dispatched, donated, dug or bought.
+- Preparation signals, both absent: no train icon in the left icon column (hammer 2/4 with a red dot, flask 2/2, weather face 6.5C, radio with a red dot, truck with a red dot, radar dish, hammer) and no "Boarding closes in" banner under the resource bar. No train is preparing in this window. The unit closed partial without panning, per its window instruction.
+- Count note: this is the sixth no-train confirmation in this chain's station-panel checks (after 1345, the 2140/2153 third and the 2311/2317 fifth). The 0022 re-check's "fourth consecutive confirmation" counts a different chain (scout-mid-2026-11-04: units 005, 006, 007 of scout-mid-2026-10-31 plus itself), so the two counts are not directly comparable - no reconciliation is claimed. The station panel is a preparation-only surface: it has no live state to read while no train is preparing.
+- Streak note: the 1826 train unit was the ninth check-only outcome in a row for train units. This scout re-check is not a train-unit outcome and does not extend that streak count - it is recorded here as a scout confirmation, not a train check. Successor scout unit seq 009 is enqueued under chain scout-mid-2026-10-31 for the station panel re-check. Game left on the base screen.
