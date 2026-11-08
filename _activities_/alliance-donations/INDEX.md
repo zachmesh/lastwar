@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T21:39:04Z
+modified: 2026-11-08T22:44:40Z
 level: L1
-version: 1.69.0
+version: 1.70.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -82,6 +82,7 @@ grounded_in:
   - source: ticker-1017 alliance-donations execution record 2026-11-08 1034 queue run (partial, re-read of the 1621 unit, three coin donations verified live 4/30 to 1/30, stopped at the live-read 1/30 per the changed route, no timer after taps from 2 or above, War-tab branch still untested, weekly settlement countdown 07:32:28; record commit a2cafb907 on records/2026-11-08)
   - source: ticker-1049 shop-claims execution record 2026-11-08 1054 queue run (partial, Alliance Tech entry read Donation Count 2/30, replenishment +1 within about 20 minutes, no donation in between); record commit 355d3f11c on records/2026-11-08
   - source: ticker-1223 alliance-donations execution record 2026-11-08 1238 queue run (partial, War-tab 1/30 test on Rallied Attack, six coin donations verified live 7/30 to 1/30 on Quick Construction, per-node count question open, closing 0/30 unverified); record commit 1ab3d2ca on records/2026-11-08
+  - source: ticker-1317 alliance-donations execution record 2026-11-08 1342 queue run (partial, 1 coin donation verified live 2/30 to 1/30 on Quick Construction, replenishment +1-2 over about 53 minutes, War-tab branch started but Rallied node not reached); record commit d272dd711 on records/2026-11-08
 ---
 
 
@@ -3322,3 +3323,75 @@ enqueued for after the cooldown (not before about
   live after the 00:18:42 timer clears, and reads the Quick
   Construction count in the same unit for the per-node test. No
   duplicate re-read unit is enqueued. It falls to the next run.
+
+## What the 2026-11-08 1342 unit added - one verified donation 2/30 to 1/30, replenishment +1-2 over about 53 minutes, War-tab branch started but Rallied node not reached
+
+- Unit donations-2026-11-08-1003 by ticker-1317, about 13:30 to 13:37
+  local, status partial - 1 coin donation verified live, count 2/30
+  to 1/30, stopped at the live-read 1/30 per the changed route (no
+  tap from 1/30 on Quick Construction). Evidence in
+  `_records_/2026-11-08/alliance-donations/1342-queue-run.md`
+  (commit d272dd711 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-125 on the owner Mac mini (session
+  cc-124 had dropped between units and was restarted). No
+  device-access error, no different-device dialog, no login demanded.
+  Nothing bought, no diamond button tapped, no speedup used.
+- Session window: 13:30-13:37 local, about 6 minutes. Base HUD at
+  entry: food 489.5M, wood 811.9M, iron 25.0M, stone 922.2K, coin
+  12.3M, power 149,850,353, diamonds 4,397, gold 13.22K. Stamina 87
+  at the lightning icon.
+- Entry, re-grounded fresh from the full-base screenshot: Alliance
+  shield at norm (920, 721) opened the alliance menu ([AP3x] The
+  Apex, 95/100 members, Power 13,299,306,666, Leader Abyss Apex) at
+  once; Alliance Techs tile at norm (662, 681) opened ALLIANCE TECHS
+  at once.
+- Development tab: Auto Rally Max Level, Quick Construction 8/10
+  carrying the red thumbs-up recommended marker, Great Helper Max
+  Level, one 2/10 node below. Footer Tech Donation Today 6150 at
+  entry.
+- Quick Construction panel, read live: 8/10, Increased Building
+  Speed for Allies, Donation Reward +20%, Tech EXP Required
+  1.5M/6.0M, Current +20%, Next Level +22.5%, Donation Reward 50 EXP
+  + 50 badge, Donation Count 2/30 at entry. Coin Donate button 900
+  coin, diamond Donate 2 (never tapped). Weekly settlement countdown
+  "This week's donations will be settled soon: 04:26:06".
+- One coin donation: single tap on the green coin Donate button at
+  its grounded centre norm (649, 762). Count re-read live 2/30 to
+  1/30 - the donation landed. Footer moved 6150 to 6250 (+100 for
+  this donation, observed only, not a closing figure). Tech EXP bar
+  still reads 1.5M/6.0M (rounded to 0.1M, the +50 does not move it).
+  The coin button stayed green after the tap, no grey-out timer
+  appeared.
+- Stopped at the live-read 1/30 per the standing changed route
+  (2026-11-08 0920 correction): no tap from 1/30 on Quick
+  Construction.
+- Replenishment, new datapoint for Issues #160 and #423: the count
+  entered at 2/30, up from the 1/30 the 1238 unit left at about
+  12:38 (its final tap went behind a 00:18:42 timer, unverified) -
+  replenishment of 1-2 over about 53 minutes, consistent with the
+  roughly 1-per-20-minutes two-endpoint estimate, not a measured
+  rate. Commented on Issues #160 and #423 by this run.
+- War-tab branch, started but not reached: per the changed route the
+  War-tab node is the next branch to test at 1/30. The War tab was
+  opened: tree reads Unit Load Capacity 2/10 at top, Quick Training
+  1/10 and Expert Trainer 2/10 below, then a row of Sword Intuition,
+  Rapid Siege and Quick Garrison after one scroll. No Rallied node
+  and no recommended marker were reached in this unit's remaining
+  budget, and no War-node tap was made. The branch was already
+  tested today by the 1238 unit (Rallied Attack 2/30 to 1/30 landed,
+  final tap behind a 00:18:42 timer, closing 0/30 unverified), so
+  this unit's stop at 1/30 loses nothing. The per-node count
+  question (Issue #450) stays open - this unit read only one node's
+  count, so no two-node comparison exists yet.
+- The ALLIANCE TECHS panel was closed to the Alliance menu and back
+  to the base. The game was left on the base screen.
+- The daily 30/30 target is not met - the count stands at a
+  live-read 1/30 with replenishment pending, and no 0/30 read is
+  claimed.
+- Commented on Issue #450 by this run with the fold.
+- Game left safe: base screen, no purchase, no diamond spent. Coins
+  spent: 900 (1 x 900).
+- Follow-up: the next donations unit (donations-2026-11-08-1403, in
+  inbox) re-reads the count live: if replenished above 1/30 it
+  donates on the recommended node; if still 1/30 it continues the
+  War-tab branch test. It falls to the next run.

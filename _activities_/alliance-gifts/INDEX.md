@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-08T22:44:40Z
 level: L1
-version: 1.38.0
+version: 1.39.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-2304 perception-scout execution record 2026-11-07 2311 queue run (partial, LOOT panel re-checked, Lv.1 Doom Elite row still unclaimed after 80+ minutes; record commit 03dc69e0c on records/2026-11-07)
   - source: ticker-0034 perception-scout execution record 2026-11-08 0048 queue run (partial, Gifts Regular tab read live about 00:57 local, Level 28 progress 193,012,970/206,300,000, Claim All badge 82, four +10 rows none claimed, Premium tab dot seen not opened; record commit 4fd2b88a26 on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Gifts Level 28 progress and Claim All badges, record commit caa661bab on records/2026-11-08)
+  - source: ticker-1352 alliance-gifts execution record 2026-11-08 1406 queue run (done, 442 Regular and 31 Premium claimed in full, Gift Level 28 progress 193,982,860, progress moves beyond own claims twice, Issue #183 evidence; record commit bf20e1a48 on records/2026-11-08)
 ---
 
 
@@ -1256,3 +1257,64 @@ one file per execution.
   Premium are waiting; re-check Regular after the Premium sweep per
   the 2033 lesson, since gifts arrive mid-unit. No new Issue filed:
   the waiting claims are named here for the owning regular.
+
+## What the 2026-11-08 1406 unit added - 442 Regular and 31 Premium claimed in full, progress moves beyond own claims again (Issue #183)
+
+- Unit gifts-2026-11-08-1030 by ticker-1352, about 13:59 to 14:06
+  local, status done - both tabs claimed in full, including gifts
+  that arrived mid-visit. Evidence in
+  `_records_/2026-11-08/alliance-gifts/1406-queue-run.md` (commit
+  bf20e1a48 on records/2026-11-08).
+- Alliance panel entered from the base (Alliance button, right
+  column, red dot present) and Alliance Gifts opened on the first tap
+  (red dot on the entry).
+- Regular tab, Gift Level 28, progress 193,968,120/206,300,000 at
+  entry. Claim All with badge 441 tapped: dialog "A total of 441
+  Regular Alliance Gifts were claimed this time" (rewards shown: coin
+  6.0K x840, red gem 5 x94, coin 600 x1.3K, iron 1.0K x1.1K, 5m
+  speedup x102, iron 10.0K x756, food 10.0K x672, food 1.0K x924).
+  Progress after: 193,972,530 (441 x 10, exact).
+- One new Regular gift arrived during the visit (badge 1) and was
+  claimed with a second Claim All. No dialog count was captured for
+  that sweep; progress after it read 193,972,690, i.e. +160 over the
+  post-first-claim read, 16 gift-equivalents against 1 badged gift -
+  unexplained by this unit's own claims (see the Issue #183 note
+  below).
+- Premium tab (red dot present): Claim All with badge 31. First tap
+  at the Regular tab's Claim All point missed (the Premium button
+  sits right, at norm 718,926, beside the "Hide your name on Gifts"
+  checkbox); re-grounded and tapped at norm 718,926: dialog "A total
+  of 31 Premium Alliance Gifts were claimed this time" (rewards
+  shown: 2.5K badge x4, gold bar x1, 500 badge x3, coin chest x4,
+  purple chest x16, food x20, iron x14, 50 badge x5, 5m speedup x2,
+  steel x80). Progress after: 193,982,840 (+10,150 over
+  193,972,690).
+- One more Regular gift arrived during the Premium claim (toast
+  "Doom Walker Loot received!", red dot on the Regular tab). Switched
+  back and claimed it with Claim All: dialog "A total of 1 Regular
+  Alliance Gifts were claimed this time" (iron 10.0K x28). Progress
+  after: 193,982,860 (+20 for 1 gift, again +10 over the expected
+  +10).
+- Closing read: both tabs show all rows "Claimed", no Claim All
+  button and no red dot on either tab. Returned to the base screen
+  (power 149,850,353). No diamonds, money, speedups or other
+  spending. No alliance diplomacy, no assembly, no teleport.
+- Counter anomaly, new evidence for Issue #183: the progress bar rose
+  by more than this unit's own claimed gifts twice (+160 around the
+  second Regular sweep, +20 around the third). The most likely cause
+  is that the level progress is alliance-wide and other members'
+  claims feed it while this unit works, but that is unverified - it
+  is recorded here as an open question for the activity metadata, not
+  as a count this unit claims. All claimed counts above are
+  dialog-verified; the progress figures are live reads. Commented on
+  Issue #183 by this run.
+- Premium Claim All point note: the 1406 session's grounded Premium
+  Claim All point is norm (718, 926), right of the "Hide your name
+  on Gifts" checkbox; the 0820 unit measured (763, 952). The point
+  drifts per session and framing - re-ground the Premium button
+  fresh per session, never carry either point across sessions; the
+  Regular tab's Claim All point misses on the Premium tab.
+- Result stats: Regular claimed 442 (441 + 1, dialog-verified),
+  Premium claimed 31 (dialog-verified), Gift Level 28, progress
+  193,982,860/206,300,000, both tabs fully claimed, no red dots
+  remain.
