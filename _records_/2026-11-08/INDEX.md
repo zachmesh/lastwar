@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T10:39:42Z
+modified: 2026-11-08T10:55:36Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -671,3 +671,35 @@ of 2026-10-28.
   Wars dot on Issue #212, Inventory dot, 99+ badge); 0
   withdrawals. Pool: inbox 78, claimed 1, done 1214.
   Status: done. Full detail in queue-planning/0240-run.md.
+
+## 02:44 to about 02:55 - Queue ticker pass, alliance donations
+
+- Ticker pass ticker-0244. Sync reaped nothing and produced
+  nothing new - all 22 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066); no fresh chain until
+  a Zombie Invasion tab is seen live in the Events hub again.
+- One unit executed: donations-2026-11-08-0618, partial and
+  unverified. Five coin donations to Quick Construction
+  landed on live reads (Donation Count 6/30 -> 1/30, 900
+  coin each, 4,500 spent); the sixth tap is unconfirmed
+  behind a 00:08:17 cooldown timer and the count was never
+  read live at 0/30. A named re-read unit is enqueued for
+  after the cooldown (not before 03:03 local). Entry route
+  re-grounded fresh (Alliance shield centre 937, 708), no
+  Drill Ground pan. Footer 2350 -> 2950 and badge counter
+  300.4K -> 301.0K recorded as observed only.
+- Pool divergence found in this pass: the branch already
+  holds unit 0618 in done (ticker-0137, 01:53 PT, 0
+  donations, Star Ceremony block) while the main-tree pool
+  still carried it in inbox, so this pass re-executed an
+  already-closed unit. The branch delivery carries this
+  record file, the day INDEX entry, the action log line and
+  the re-read inbox unit, but no second 0618 done file;
+  ticker-0137's unit result stands. Count-rise data point
+  for Issue #160 (1/30 at about 00:43 -> 6/30 at 02:44,
+  about 1 per 20-24 minutes) commented on #160.
+  Pool-divergence issue filed (tooling class).
+  Status: partial. Full detail in
+  alliance-donations/0244-queue-run.md.
