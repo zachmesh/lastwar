@@ -1096,3 +1096,10 @@ of 2026-10-28.
   this pass. No Slack DM sync, no chat report: silent
   non-batch run. Status: done. Full detail in
   pr-integration/0500-run.md.
+## 05:05 to about 05:12 - Ticker-0504 scout 3 red dots explained
+
+- Ticker-0504, unit scout-midday-scout-mid-2026-11-03-006 (chain scout-mid-2026-11-03, seq 6), status done, observe-only. All 3 unexplained red dots from the 0204 unit explained live: blue bus icon is the Trucks entry (dot cleared on open; Trade Count 0/5, tabs each badge 4; settles the 0440 identity disagreement in favour of Trucks); white truck badge 8 is the Secret Command Post entry (Secret Mobile Squad, at least 8 claimable task rows; owned by the secrets regular); VIP cart dot is the Store shortcut (VIP, Alliance, Honor and Campaign tabs read in full, no free item, no dot inside; the dot is a store-entry indicator, not a claim signal). VIP13 Daily Freebie STILL claimable at about 05:11, observed only; vip-2026-11-07-1900 stalled in inbox (priority 1, about 22 hours old). Store tab remainder (Season, Cosmetics, cut-off tab) filed as Issue #444 (label knowledge). No successor; stale chain spent. Tracker untouched. Full detail in perception-scout/0512-queue-run.md and the appended observation section.
+
+## 05:14 to about 05:19 - Ticker-0504 donations re-read
+
+- Ticker-0504, unit donations-2026-11-08-1056, status partial with an unverified close under the hard closing rule. Quick Construction 8/10 (Development tab, recommended marker) re-read live: Donation Count 4/30 at entry, 3 coin donations landed live 4/30 to 1/30 (2,700 coin); tap 4 was eaten by a seconds-long grey-out (count re-read 1/30 unchanged); tap 5 unconfirmed behind a 00:19:35 cooldown timer. Footer 3450 to 4000 (+550, mechanism unexplained, observed only). Replenishment data point (1/30 to 4/30 over about 1h10m, fourth confirmation) and cooldown data filed on Issue #160. Re-read unit donations-2026-11-08-1318 enqueued for 05:39 local. Tracker untouched. Full detail in alliance-donations/0519-queue-run.md.
