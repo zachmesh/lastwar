@@ -3540,3 +3540,18 @@ of 2026-10-28.
   the single file _logs_/repo-actions/action-log.jsonl,
   re-check notes posted; tools PR 425 owner-gated,
   Full detail in pr-integration/1515-run.md.
+
+## 15:32 to about 15:40 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-08-1532.
+  Own PR 425 conflict resolved: merged main 8dd26c54d into
+  work/log-append-delivery-gate (merge commit cd8540d32,
+  pushed); _tools_/INDEX.md conflict resolved keeping the
+  branch's fuller log_append.py row and main's
+  live_checkout_check.py row; gate re-validated on isolated
+  /tmp fixtures (clean exit 0, #422-shape tail repaired exit
+  0 and idempotent, unrepairable exit 1, missing file exit
+  2); py_compile clean. PR 425 now MERGEABLE/CLEAN per gh;
+  owner-gated policy question still open, no owner decision.
+  Comment posted on the PR. Status: done.
+  Full detail in tool-development/1532-run.md.
