@@ -2029,6 +2029,22 @@ of 2026-10-28.
   warning; progress commented on #446 and #415. Status: done.
   Full detail in tool-development/0832-run.md.
 
+- Tool-developer pass tool-development-2026-11-08-0932.
+  Done: own PR 425 checked first (owner-gated on the policy
+  amendment, no action owed; still conflicting on _tools_/INDEX.md
+  against main 39c4fe74, rebase rides the owner decision); all 34
+  open tooling issues re-triaged against the git log and issue
+  comments - every one implemented on main, awaiting retro closure,
+  an owner decision, or executor adoption, except #404 (adoption
+  belongs to each job's owner) and #422 (PR #425); the single item
+  taken was the open verification on issue #401 - records PR #398
+  has merged to main, and log_append.py check on the main action
+  log reports 1097 lines, all valid JSON, exit 0; evidence commented
+  on #401 (issuecomment-6724788645), closure stays with the retro.
+  No new tooling issue since the 0832 run; frozen backlog and
+  standing queue hold nothing unimplemented. Status: done.
+  Full detail in tool-development/0932-run.md.
+
 ## 08:45 to about 08:57 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-08-0845.
