@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T02:42:42Z
+modified: 2026-11-08T22:44:40Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -31,6 +31,7 @@ grounded_in:
   - source: ticker-0134 survivor-intake execution record 2026-11-05 0134 queue run and ticker-0204 alliance-gifts execution record 2026-11-05 0204 queue run (windowed 1920x1080 on an inactive Space, not native fullscreen - corrects the 1235 section wording)
   - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (failed, Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z, Last War window 1920x1080 at (0,-360) on an inactive Space, capture failure; Mission Control recovery lesson and Ctrl+Right does not switch Spaces; Issue 282 class, not Issue 284)
   - source: ticker-1727 alliance-help execution record 2026-11-07 1736 queue run (done, Help All pressed from the base-screen bubble at norm 827,707, header 560/1,000, own requests only; record commit 69997e12a1 on records/2026-11-07)
+  - source: ticker-1352 alliance-help execution record 2026-11-08 1413 queue run (done, Help All pressed, Help red dot cleared, points counter stayed 0/1,000 before and after, helps count not claimed; record commit bf20e1a48 on records/2026-11-08)
 ---
 
 
@@ -604,6 +605,7 @@ Measured in the 0135 help unit (ticker-0134, window mode
 
 - The daily help cap and what helpers and helped players each receive.
 - How a Healing Help request is helped (Help All, or a different surface such as the hospital) - first seen 2026-11-02 1741, papillon707 request unhelped after two Help All presses and a row tap.
+- What the "Today's points gained from Alliance Help" header counter counts: the 2026-11-08 1413 unit pressed Help All successfully (toast fired, Help red dot cleared) yet the counter read 0/1,000 both before and after the press. Either it updates with a lag, or it counts something narrower than the helps Help All delivers. The next help unit re-reads the counter at entry to see whether it has moved.
 
 
 ## What the 2026-11-03 1121 unit added - done through the base-screen bubble, header 1240 unchanged, Help All no requests yet
@@ -805,3 +807,49 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Figures read live: Power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M, stone 25.0M, 922.2K; stamina 79; diamonds 3,702.
 - No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
 - Follow-up: the 1742 gifts unit in this same pass found Help carrying a fresh red dot after this Help All - new requests arrived during the pass, so a later help unit re-checks; the red dot is not read as remaining help from this unit.
+
+## What the 2026-11-08 1413 unit added - Help All pressed, red dot cleared, points counter stayed 0/1,000 (open question)
+
+- Unit help-2026-11-08-1030 by ticker-1352, about 14:08 to 14:13
+  local, status done. Evidence in
+  `_records_/2026-11-08/alliance-help/1413-queue-run.md` (commit
+  bf20e1a48 on records/2026-11-08).
+- No help bubble was visible on the base screen at entry, but the
+  Alliance button carried a red dot, so the Help page was opened via
+  Alliance, Help (red dot on the Help entry).
+- HELP popup read live: "Today's points gained from Alliance Help:
+  0/1,000". The visible rows were only this account's own four
+  requests (Bears Lair - Missile Mastery II research, Lv.27 Drill
+  Ground, Defense Training VIII research, Lv.30 Aircraft Center),
+  each already showing "Time reduced" (helped by allies). The list
+  does not scroll - no further rows exist below.
+- Help All pressed: the game answered "Allies are very grateful for
+  your assistance!". The Help entry's red dot is GONE on the
+  Alliance panel afterwards (verified live against the pre-press
+  panel, where Help carried a dot) - the waiting requests were
+  cleared.
+- ANOMALY - points counter still 0/1,000 (open question, added to
+  the Open questions list): the header counter read 0/1,000 both
+  before and after the Help All press, even though the toast fired
+  and the red dot cleared. Either the counter updates with a lag, or
+  it counts something narrower than the pressed helps. The number of
+  helps actually delivered is therefore NOT claimed here - only the
+  dot-clear and the toast are the verified evidence. The next help
+  unit should re-read the counter at entry to see whether it has
+  moved. Recorded in the profile's open questions, not filed as a new
+  Issue (the gap belongs to this profile). Context: the counter has
+  read 1,240 over 1,000 (2026-11-03 1121 unit) and 560/1,000
+  (2026-11-07 1736 unit) after Help All presses, so a 0/1,000 read
+  that does not move after a successful Help All is new.
+- Note: the Alliance Gifts entry shows a fresh red dot again (a "Doom
+  Walker Loot received!" toast arrived during this unit) - new gifts
+  keep arriving; that is the next gifts unit's work, not this unit's.
+- Closing reads: Help All pressed, toast confirmed, Help red dot
+  cleared, points counter 0/1,000 (unexplained, see anomaly).
+  Returned to the base screen (power 149,850,353). No diamonds,
+  money, speedups or other spending. No alliance diplomacy, no
+  assembly, no teleport.
+- Result stats: target 1, achieved 1, resources_gained none, costs
+  5m_wall_no_stamina, verified yes, blocker_category none,
+  helps_pressed unverified_count, help_points 0,
+  help_red_dot_cleared true.

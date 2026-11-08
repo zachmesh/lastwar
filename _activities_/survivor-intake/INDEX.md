@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-08T04:39:41Z
-version: 1.36.0
+modified: 2026-11-08T22:44:40Z
+version: 1.37.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-2004 survivor-intake execution record 2026-11-06 2004 queue run (failed, Mac device offline, eighty-ninth consecutive ticker pass with a Mac device-access blocker, fiftieth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 36h40m, unchanged since the ticker-1025 pass; six invokes, zero responses, recovery-device health check timed out after 25 seconds)
   - source: ticker-1655 survivor-intake execution record 2026-11-07 1655 queue run (partial and unverified, gate re-grounded with the yellow Zombies sign at norm 166,547, no waiting line verified, gate figures are squad troops, 2nd Squad Lv.20 selected by tap; blue-cap portrait circles untapped; white '?' bubble at norm 113,582 seen in the training unit's closing screenshots; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-1940 survivor-intake execution record 2026-11-07 2000 queue run (partial, gate line verified live with 4 question-mark survivors grounded at norm 111,642 / 76,661 / 43,677 / 9,692, taps turned '?' bubbles into yellow smiley faces with no New Survivor Incoming card opened and no recruit identity read, line clear as observed, Quick Dispatch not run so the R2 third-strike blocker persists; unit 162 seconds inside the 15-minute cap; record commit c47e491fd on records/2026-11-07)
+  - source: ticker-1249 survivor-intake execution record 2026-11-08 1307 queue run (partial, 5 named recruits taken in, 6th card JAVIER Barn Keeper open unrecruited, Recruit-tap control-channel no-change advisory disproved, Quick Dispatch deferred per R7; record commit 6d4ec6287 on records/2026-11-08)
 ---
 
 
@@ -1354,3 +1355,75 @@ Measured on 2026-10-25.
 ## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
 
 - Channel rules, now carried in this profile (propagation follow-up from the 1732 run, survivor-intake done - joining alliance-help, alliance-gifts, radar-tasks, arms-race, alliance-donations and shop-claims): Mission Control was not opened as a recovery step, per the 1020 lessons folded into alliance-help 1.27.0 - open_app Mission Control wedged the channel in that pass (first launch opened the overview; every later activate and observe then failed with geometry_mismatch origin_delta 256+, agent_display false, and all key input gated on observation_required; a second launch closed it and restored observation; the overview itself cannot be observed or clicked through this channel). Background Ctrl+Right was not tried: it does not switch Spaces through this channel (in the 1020 pass the key went to the Finder column view instead). The known reliable unblock stands: the owner clicking the LastWar Dock icon once. This profile already records the background-Space-keys half from its own 0134 unit (Ctrl+Right, Ctrl+Left and Ctrl+Up dispatched with no Space change); the new part carried here is the open_app Mission Control wedging (a launch, not a keypress).
+
+## What the 2026-11-08 1307 unit added - five named recruits taken in, 6th card open, Recruit-tap control-channel advisory disproved
+
+- Unit survivors-2026-11-08-1003 by ticker-1249, about 12:58 to
+  13:07 local, status partial - 5 named survivors recruited with
+  their cards read live; a 6th card stands open and unrecruited and
+  the gate line remainder is unverified at close, so the work resumes
+  in the next survivors unit. Evidence in
+  `_records_/2026-11-08/survivor-intake/1307-queue-run.md` (commit
+  6d4ec6287 on records/2026-11-08). Tracker untouched.
+- Session: computer sessions cc-122 then cc-123 on the owner Mac
+  mini (session cc-122 dropped mid-unit, "target app process
+  identity unavailable"; session cc-123 was started, LastWar
+  re-selected, and the game recovered with no state lost - the JAVIER
+  Builder card was still open exactly as left). No device-access
+  error, no different-device dialog, no login demanded. Nothing
+  bought, no speedup used.
+- Session window: 12:58-13:07 local, about 9 minutes, closed at the
+  device token expiry.
+- Gate line verified live: visual grounding on the opening base
+  screenshot returned 4 survivor figures with question-mark bubbles
+  in a line at the left edge gate, at norm (186, 715), (152, 733),
+  (114, 743) and (12, 795). The (12, 795) point sits at the extreme
+  left edge and was not tapped.
+- Tap 1 on the first grounded figure (186, 715) opened a New
+  Survivor Incoming card - the figure-is-the-reliable-target rule
+  confirmed again.
+- Recruits taken in, each card read live before Recruit was tapped:
+  1. JAVIER, Lawyer, Alliance Support Hub, Help Received +1.
+  2. JAVIER, Builder, Builder's Hut, Free Construction Speed-up Time
+  5min.
+  3. ELINA, Instructor, Barracks, Unit Training Cap +2.40%.
+  4. CHLOE, Iron Storage Keeper, Iron Warehouse, Increase Iron
+  Protection +5.00%.
+  5. MICHAEL, Hospital, Unit Healing Speed +4.00% (name from OCR
+  read "AIICHAEI"; the card itself was not image-read, so the
+  spelling is unverified).
+- 6th card open at close, unrecruited: JAVIER, Barn Keeper, Food
+  Warehouse, Increase Food Protection +5.00% (image-read). The next
+  survivors unit recruits him first, then re-checks the gate line.
+- CONTROL-CHANNEL LESSON (new, stands): after the ELINA, CHLOE and
+  MICHAEL Recruit taps the control channel reported "no change" and
+  advised against repeating the click, but each tap in fact advanced
+  the card to the next survivor - the card change is the
+  verification, and the channel's no-change guidance is WRONG for
+  this Recruit control. Do not let it stop a Recruit tap whose card
+  visibly advanced. This joins the 2050 training unit's
+  "no_change_observed flag unreliable" lesson: screenshot to verify
+  after every tap instead of trusting that flag.
+- Quick Dispatch did NOT run: five newcomers with building posts
+  were taken in, and the standing Quick Dispatch instruction applies.
+  Per queue rule R7 it is the first action of the next survivors
+  unit - open a survivor-post building panel (Alliance Support Hub,
+  Builder's Hut, Barracks, Iron Warehouse, Hospital or Food
+  Warehouse) and run Quick Dispatch so the newcomers are posted.
+  This unit's token expiry, not a game blocker, is why it did not
+  run here.
+- No resources gained beyond the five posts; no dialog-type survivor
+  in this unit.
+- 1333 cross-read (arms-race unit, same day): the JAVIER Barn Keeper
+  card was still open at about 13:19; two taps at norm (500, 800),
+  below the Recruit button, cycled the cards to JAMES, Nurse,
+  Hospital, Unit Healing Speed +10.00%, and closed the modal with a
+  toast "A new resident has joined us". Whether Javier or James was
+  recruited by those taps is NOT established - the tap point sits
+  below the Recruit button. The next survivors unit verifies at the
+  front door whether Javier and James are waiting or already
+  recruited. No survivor was claimed by the arms-race unit.
+- Follow-up: the next survivors unit recruits JAVIER Barn Keeper
+  first (if still waiting), verifies Javier and James at the front
+  door, re-checks the gate line, and runs Quick Dispatch first per
+  R7. It falls to the next run.
