@@ -2891,3 +2891,19 @@ of 2026-10-28.
   same-day datapoint for the rally link, Issue #212 stays
   open. Successor scout-scout-2026-11-02-013 enqueued.
   Status: partial (chain continuation by design).
+
+## 12:40 to about 12:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-1240. Plan staged 0
+  units (12h horizon already covered through about 00:40
+  local 2026-11-09) and expired 0. Pre-reset sweep pair
+  already complete via plan (1630 seq 1, 1730 seq 2, chain
+  pre-reset-sweep-2026-11-08, both expiring at the 18:00
+  reset). Scout diff on the Nov 8 observation applied with
+  zero changes (observed 0, actionable 0, enqueued 0,
+  candidates 0, unexplained red dots 14 on a
+  narrative-fallback basis - the new 8th pass section, the
+  11:38-11:44 station-panel re-check plus the 11:47
+  correction note, adds 0 unexplained). 0 withdrawals.
+  Pool: inbox 78, claimed 0, done 1266. Status: no-op.
+  Full detail in queue-planning/1240-run.md.
