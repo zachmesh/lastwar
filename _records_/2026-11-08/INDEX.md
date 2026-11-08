@@ -448,3 +448,17 @@ of 2026-10-28.
   byte-identical old vs new on the same pool. Issue #130
   commented; closure belongs to the daily retro. Status: done.
   Full detail in tool-development/0132-run.md.
+
+## 01:40 to about 01:51 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0140. Plan staged 0
+  units (already_present 74, reaped 0, expired 0); pre-reset
+  sweep production skipped (not the 17:00 hour run, tonight's
+  pair due from the 17:00 run; last night's pair expired
+  unexecuted 2 of 2); scout diff on the Nov 8 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained red dots 3 on a
+  narrative-fallback basis - Wars dot on Issue #212,
+  Inventory dot, 99+ badge); 0 withdrawals. Pool: inbox 80,
+  claimed 0, done 1200. Status: no-op. Full detail in
+  queue-planning/0140-run.md.
