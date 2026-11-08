@@ -4416,3 +4416,27 @@ of 2026-10-28.
   statements current. No adoption, no fix, no hand-off, no
   escalation, no stale-owner flag. Status: no-op.
   Full detail in pr-catchall/2239-run.md.
+
+## 22:40 to about 22:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-2240.
+- Plan run once with the live tree tools, now current
+  (tools/queue.py md5 f71d26e7, identical to
+  _tools_/queue.py): staged 12 units for the 2026-11-08
+  1003 / 1030 slots (mail, help, gifts, train,
+  star-ceremony, duel-score at 1030; harvest, radar,
+  survivors, training, donations, arms-race at 1003),
+  already_present 58, skipped_done_current 4, reaped 0,
+  expired 0, stale_done_dropped []. The next 12 hours
+  are staged in the live pool through about 10:30 local
+  2026-11-08. All 12 units carried on this delivery.
+- Pre-reset sweep production skipped (22:00 hour run);
+  tonight's pair verified expired unexecuted in done.
+- Scout diff on the Nov 3 observation (second
+  consumption, first with the 22:10 store append): dry
+  run and apply identical, all zero except the fixed
+  tool's unexplained 4; 0 withdrawals. Pool by_state at
+  stats: live inbox 81, claimed 0, done 1192; branch
+  inbox 75, claimed 0, done 1125 before this delivery.
+  Status: done. Full detail in
+  queue-planning/2240-run.md.
