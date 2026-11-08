@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T08:23:00Z
+modified: 2026-11-08T08:23:23Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -76,3 +76,21 @@ of 2026-10-28.
   carried to successor seq 003 of chain
   scout-mid-2026-11-04. Tracker untouched. Full detail in
   perception-scout/0022-queue-run.md.
+
+## 00:15 to about 00:25 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0015.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 03:00): no merges. Records PR
+  430 opened during the pass by the ticker-0004 delivery,
+  clean at head e6192726d1, awaiting the 03:00 batch.
+  Records PR 426 clean at unchanged head 16e187a2e8,
+  awaiting the 03:00 batch. Records PRs 351 and 301
+  still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-verified against current main
+  947b2760, carried with the 0000 re-check notes still
+  current. Tools PR 425 owner-gated, unchanged since the
+  2245 escalation, awaiting the owner decision. No
+  records PR opened by this pass. Status: done. Full
+  detail in pr-integration/0015-run.md.
