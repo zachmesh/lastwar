@@ -3456,3 +3456,18 @@ of 2026-10-28.
   301, 256) verified clean against new main and
   awaiting the 19:00 batch. Status: done. Full detail
   in pr-integration/1845-run.md.
+
+## 19:00 to about 19:11 - PR integration pass
+
+- PR-integrator pass pr-integration-2026-11-07-1900.
+  BATCH pass per the checker (due: yes, window 19:00-20:00
+  PT, first pass at/after 19:00). Records PR 256 merged
+  (merge commit 751b004a, records/2026-11-03, 19 commits);
+  the other three records PRs (301, 351, 398) were clean
+  against pre-merge main but conflicted on the single
+  action-log file once 256 landed, and were re-noted
+  against main 751b004a for branch-side reconciliation;
+  merge-aware checker confirms the window batch is
+  consumed (256 merged 19:04:06 PT). Local main
+  fast-forwarded c33f528e to 751b004a. Status: done.
+  Full detail in pr-integration/1900-run.md.
