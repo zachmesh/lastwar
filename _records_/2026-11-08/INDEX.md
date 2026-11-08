@@ -1566,3 +1566,21 @@ of 2026-10-28.
   decision. Merges synced to the owner Slack DM after
   this record was pushed. Status: done. Full detail in
   pr-integration/0700-run.md.
+
+- Integrator pass pr-integration-2026-11-08-0715.
+  NON-batch pass per the merge-aware checker (plain due
+  says yes for the 07:00-08:00 window, but PR 439 already
+  merged 07:05 in this window, so this is not a batch
+  pass; next batch point 11:00 PT): no merges. Records
+  PR 449 clean at head 0c0baf9f, re-noted
+  (issuecomment-6723248975), awaiting the 11:00 batch.
+  Records PR 430 still conflicts with main on the
+  single file _logs_/repo-actions/action-log.jsonl at
+  new head d1e0a1d6, re-noted
+  (issuecomment-6723249159), carried. Records PRs 351
+  and 301 still conflict with main on the same single
+  file, heads unchanged, re-verified and carried. Tools
+  PR 425 owner-gated, unchanged since the 2245
+  escalation, awaiting the owner decision. No records PR
+  opened. Status: done. Full detail in
+  pr-integration/0715-run.md.
