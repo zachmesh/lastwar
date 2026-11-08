@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T10:46:00Z
+modified: 2026-11-08T12:39:56Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-2204 perception-scout execution record 2026-11-07 2209 queue run (partial, Mall strip walked in full, Weekly Pass reset 18:00:00 fourth live confirmation, Super Monthly Pass Days Left 14, check-in FREE GIFT claimable; record commit 0e4f2e52e2 on records/2026-11-07)
   - source: ticker-0004 perception-scout execution record 2026-11-08 0022 queue run (partial, midday remainder, Weekly Deal page closed, Official Event tab dot, check-in FREE GIFT still carried; record commit e6192726d1 on records/2026-11-08)
   - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, Weekly Deal page walked in full, seven paid packs, nothing free; record commit 6560ff267 on records/2026-11-08)
+  - source: ticker-0404 perception-scout execution record 2026-11-08 0407 queue run (done, store remainder, five Mall tabs walked live)
 ---
 
 
@@ -913,4 +914,18 @@ the free and already paid for parts, never the paid unlocks.
 - Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0204, 02:17 to 02:32 local, status partial per rule R1. Evidence in `_records_/2026-11-08/perception-scout/0229-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-03/perception-scout/observation.md`. Observe-only; nothing bought.
 - Correction and extension of the 0022 section: the 0022 unit read only three packs; the full page has SEVEN paid packs, each "1 purchases available", nothing free: Valor Badge (Epic) $99.99; Base Upgrade (Epic) $19.99; UR Set (Elite) $49.99; Drone Component (Elite) $49.99; Drone Parts (Elite) $49.99; Weekly Drone Skill Chip (Elite) $49.99; Stars (Advanced) $99.99. Each pack carries a +200/+500/+1000 badge and red gems 2.0K-10.0K plus speedups, crates and badges. List ends at Stars; a further drag produced no change.
 - Window 2026-11-2 00:00:00 to 2026-11-8 23:59:59 - the tab's contents lapse at the end of today.
+- Game left safe: game left on the base screen. Nothing bought. No Assemble, no teleport.
+
+
+## What the 2026-11-08 0407 scout read added - Mall strip re-walked in full, Weekly Pass 18:00 reset confirmed a fifth time, Diamond and Gold Brick tiers re-read
+
+- Scout unit scout-midday-scout-mid-2026-11-04-003 by ticker-0404, about 04:07 to 04:15 local, status done (store remainder of the stale 2026-11-04 midday pass). Evidence in `_records_/2026-11-08/perception-scout/0407-queue-run.md` (commit 614096a6 on records/2026-11-08) and the appended section of `_records_/2026-11-04/perception-scout/observation.md`. Observe-only; nothing claimed or bought. The chain scout-mid-2026-11-04 is spent with this unit.
+- Weekly Pass tab: the page line reads "Weekly Pass rewards reset at 18:00:00" - the FIFTH live confirmation of the line (after 0114, 1812, 1853 and 2209), closing the open re-read item the 0122 unit carried (0150 scout section). Commented on Issue #242 by this run. Free Supply box present. "Legendary" banner; "Get all at a discount"; "Instant Gain on Purchase" (300 x5, 2.5K red gems, purple item x1); "Take All $19.99" with a 200 badge, paid, never tapped.
+- $2 Drone Components Weekly Pass (Legendary), Validity 7 Day(s): Daily Pickup Lv.4 item x1, Total Lv.4 x7, Get Now (500, 100, green item x1), $4.99 with a 50 badge. $1 Drone Parts Weekly Pass (Epic), Validity 7 Day(s): Daily Pickup gear x15, Total gear x105, Get Now (red gem, 100, green item), $4.99 with a 50 badge. Both are unowned offers, none tapped. Rows below the fold not read.
+- Super Monthly Pass tab: Monthly Pass, Days Left 14, Squad 4 Lv.20, "Unlock an extra squad!". Daily Pickup row (items x1, x2, x2; 5m speedup x60; 200 currency). Get Now +2500 red gems plus four item icons x1 each. Rewards Left: 14, "Claimed" greyed - today's pickup already claimed, passes regular has nothing to do here today. Monthly Pass Extension $24.99, paid, never tapped. "Legendary" badge. Days Left 14, unchanged from the 2209 read.
+- Diamond tab: "Initial Buy Reward - Enjoy Double Diamonds". Every tier x2, with the bonus amounts read live this time: 10000 diamonds $99.99 (+1000), 5000 $49.99 (+500), 2000 $19.99 (+200), 1000 $9.99 (+100), 500 $4.99 (+50), 100 $0.99 (+10). All paid, observe only.
+- Gold Brick Mall tab: "Gold Brick Mall - Extra 5% Bonus". Every pack "INITIAL BUY REWARD" with a "Free Gift" badge. Visible tiers: x500 gold bricks $4.99 (Free Gift x500), x1000 $9.99 (Free Gift x1000), x100000 $999.9 (Free Gift x5000), x50000 $499.9 (Free Gift x2500). Correction: these tiers supersede the 2209 OCR read (x1000 $4.99, x50000 $9.99, x100000 $999.99) - the 0407 read is a fresh live read, the 2209 figures were OCR. Rows below the fold partly visible, not read. All paid, observe only.
+- Hot Sale Packs tab: empty page, gift-box art, "Packs sold out". Nothing on sale.
+- Mall entry and navigation: cart icon top-right, grounded this session at norm (917, 52) (2209 read 902, 52 - framing drift, re-ground per session). The strip scrolls horizontally; Hot Sale Packs sits right of Gold Brick Mall and needs one leftward drag on the strip to reach. Strip verified end to end: Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall, Hot Sale Packs - seven tabs, no Crystal Shop tab and no Glittering Market tab, consistent with the 0504 and 0514 reads.
+- HOT DEALS tab carries a red dot, explained by the check-in banner: "Participate in the check-in event and claim great rewards!", FREE GIFT "Claim your gift today!", FREE TOMORROW (x5, x5, x5, "Randomly obtain one."). The FREE GIFT is still claimable today and still this regular's work (queued for the 22:57 passes window; no claim record has landed on the branch yet, so the claim is still unverified).
 - Game left safe: game left on the base screen. Nothing bought. No Assemble, no teleport.
