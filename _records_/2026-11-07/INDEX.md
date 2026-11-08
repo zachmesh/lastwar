@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-08T00:49:12Z
+modified: 2026-11-08T01:25:00Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -2913,3 +2913,58 @@ of 2026-10-28.
   real merge chance for all four. No merges, no
   comments, no new PR opened. Status: done.
   Full detail in pr-integration/1700-run.md.
+## 16:56 to about 17:04 — Queue ticker pass, harvest
+
+- Ticker pass ticker-1655. Sync reaped nothing and produced
+  nothing new - all 20 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30, and no zombie unit sits
+  in inbox or claimed.
+- Own PRs checked first: PR 398 (records/2026-11-07) is
+  MERGEABLE/CLEAN at head d230406b against main dfc3e08b
+  after the ticker-1608 branch-side reconciliation; the
+  integrator's 1615 pass confirms it awaits the 19:00 batch
+  merge. No question is addressed to this job.
+- Harvest unit harvest-2026-11-07-1403, partial: five
+  farmland bubbles collected in one tap (labels 40.9K,
+  38.8K, 37.7K, 37.1K, 32.0K, about 186.5K food; HUD food
+  485.3M to 485.5M). The purple crystal icon and the beige
+  square right of the troop field are static decorations, not
+  bubbles; the blue droplet over the truck jumps to the world
+  map task view and is not a loot bubble. Armed Truck loot,
+  iron/coin/stone/EXP/screws/drone-component bubbles and the
+  Season 2 zone were not swept, so the full-map acceptance is
+  not met. The unit ran about 8 minutes (466 seconds per the
+  tool stamps), inside the cap. Tracker untouched.
+  Full detail in resource-collection/1655-queue-run.md.
+
+## 17:05 to about 17:08 — Queue ticker pass, survivor intake
+
+- Survivors unit survivors-2026-11-07-1403, partial and
+  unverified: the front gate was located with fresh grounding
+  (yellow "Zombies" sign, norm about 166,547), but no waiting
+  survivor line could be verified - the figures in front of
+  the gate are squad troops (one tap selected "2nd Squad,
+  Lv.20"), and no question-mark bubble stands near the gate.
+  No recruit was taken in and no Quick Dispatch ran. The
+  named re-read is the next survivors unit; the tracker stays
+  untouched. Resource totals rose between this executor's own
+  screenshots with no input from this executor (food 485.5M
+  to 486.5M, iron 808.9M to 810.0M, coin 5.0M to 5.7M),
+  suggesting the owner played on the Mac between units.
+  Full detail in survivor-intake/1655-queue-run.md.
+
+## 17:08 to about 17:12 — Queue ticker pass, troop training
+
+- Training unit training-2026-11-07-1403, partial: two of
+  four barracks requeued - Lv.27 barracks, T9 x726
+  (1d 10:19:35, 4.1M food plus 4.1M iron) and Lv.30
+  barracks, T10 x793 (1d 17:14:37, 5.5M plus 5.5M); both
+  verified on the HUD (food 486.5M to 476.8M, iron 810.0M
+  to 800.4M) and both now carry a timer bubble. The other
+  two barracks were not checked; the Drill Ground Full
+  blocker was not encountered. A white "?" bubble stands
+  near the front gate in the closing screenshots - a
+  waiting survivor may have arrived after the survivors
+  unit closed. Tracker untouched. Full detail in
+  troop-training/1655-queue-run.md.
