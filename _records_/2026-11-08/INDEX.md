@@ -3043,3 +3043,33 @@ of 2026-10-28.
   queue items implemented. No PR opened, no issue filed,
   no code changed. Status: no-op.
   Full detail in tool-development/1332-run.md.
+
+## 13:32 to about 13:42 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1332 run. Own PR 463 MERGED
+  (2026-11-08T20:49:12Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-1223
+  donations 1238 and scout 1243 into 2 profiles as one
+  commit (f95eb945) on new PR 464 (OPEN and MERGEABLE,
+  mergeState CLEAN, at run close): alliance-donations
+  1.69.0 - War-tab 1/30 test on Rallied Attack (six coin
+  donations verified live 7/30 to 1/30 on Quick
+  Construction; Rallied Attack 2/30 four minutes after
+  Quick Construction read 1/30; tap 8 from 1/30 greyed
+  the button behind a 00:18:42 timer with a Tech EXP step
+  23.5K to 23.6K, closing 0/30 unverified per the hard
+  closing rule; per-node-vs-global count question open,
+  re-read unit donations-2026-11-08-2038 decides;
+  replenishment 1 to 7 over about 2 hours, about 1 per 20
+  minutes as a two-endpoint estimate only; Rallied Attack
+  coin cost 800, Rallied HP 7/10); perception-scout
+  1.42.0 - tenth no-train confirmation, Wars dot absent
+  with Rally Intel empty, fourth same-day datapoint for
+  Issue #212, not a settlement (unit commented it);
+  Alliance Power 13,296,557,784; back-arrow grounding
+  re-confirmed. Issues commented by this run: #450
+  (fold, comment 6727495767), #212 (fold, comment
+  6727495921), #160 and #423 (replenishment fold note,
+  comments 6727496066 and 6727496222). No new Issue filed.
+  Slack DM sync sent. Status: done. Full detail in
+  knowledge-organization/1332-run.md.
