@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T15:38:02Z
+modified: 2026-11-08T19:39:51Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Store tab strip read in part, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution record 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Weekly Pass 18:00 reset sixth confirmation); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0634 shop-claims execution record 2026-11-08 0634 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset seventh confirmation, Season hub layout differs); record commit 9669d391ea on records/2026-11-08
+  - source: ticker-1049 shop-claims execution record 2026-11-08 1054 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset eighth confirmation, Season hub claim path probed through the Calculating card and Season Contributions with no pass claim found, Donation Count 2/30 at entry); record commit 355d3f11c on records/2026-11-08
 ---
 
 
@@ -1113,3 +1114,73 @@ the free and already paid for parts, never the paid unlocks.
   and Daily Pickup are still reachable; if the path is gone, file a
   knowledge Issue and update the shop-claims metadata.
 - Game left safe: base screen. Nothing bought. No Assemble, no teleport.
+
+## What the 2026-11-08 1054 passes unit added - shop surfaces checked live, Weekly Pass 18:00 reset confirmed an eighth time, Season hub claim path probed deeper, no pass claim found
+
+- Unit passes-2026-11-08-0657 by ticker-1049, about 10:54 to 11:09
+  local, status partial - the shop surfaces were checked live, but no
+  pass daily pickup was owned or claimable and the Season hub claim
+  path was probed without finding a pass claim, so the season
+  sub-part carries to the next passes unit. Evidence in
+  `_records_/2026-11-08/shop-claims/1054-queue-run.md` (commit
+  355d3f11c on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-103 on the owner Mac mini. At entry
+  the game sat on the Alliance Tech screen (Quick Construction 8/10,
+  Donation Count 2/30) left over from an earlier session; the panel
+  and the Alliance overview were closed back to base without
+  donating. Total Power read live on base: 149,850,353. Resources at
+  entry: food 487.0M, iron 809.6M, coins 12.3M, red diamonds 4,397.
+  No device-access error, no different-device dialog, no login
+  demanded.
+- Weekly Pass page: rewards reset reads 18:00:00 - the EIGHTH live
+  confirmation of the line (after 0114, 1812, 1853, 2209, 0407, 0538
+  and 0634). The activity metadata says 19:00 - the discrepancy is
+  noted, not resolved; the next passes unit re-reads it and corrects
+  the metadata if it holds. Commented on Issue #242 by this run. The
+  Free Supply chest is present with no claim button and no payout
+  toast appeared on opening this page - no Free Supply payout is
+  claimed as a closing figure. The chest was already claimed this
+  reset day by ticker-2234 at 22:34 on 2026-11-07 (5,000 red
+  diamonds), which is the likely reason no payout showed (inference,
+  not a live read). The Legendary Take All $19.99 row was not tapped.
+  Two weekly pass cards were read in full - S2 Drone Components
+  (Legendary) and S1 Drone Parts (Epic) - both show a $4.99 Get Now
+  button, so neither is owned and no Daily Pickup is claimable; the
+  Iron and Coin cards are below the fold and were not re-read this
+  unit.
+- Super Monthly Pass page: not re-opened this unit - ticker-0634 read
+  it live at 06:35 today (13 Days Left, Daily Pickup already Claimed,
+  Rewards Left 13) and no new claim could exist before the 19:00
+  reset.
+- Hot Deals: no free pack is showing. Both carousel pages are promos
+  for the external Last War Store (check-in event with a FREE GIFT
+  card, and a 1000 POINTS claim-points card). The FREE GIFT check-in
+  card was not re-tapped (ticker-0634 stopped that method per R2
+  after two carousel swipes); the Go button was not tapped (external
+  store, outside this unit's in-game scope). No free pack claimed
+  here.
+- Season hub claim path (follow-up from ticker-0634, navigated one
+  level deeper): Season II: Polar World hub shows only a Calculating
+  card (05:56:08 at entry) and a Season Photo card (06:56:07), plus a
+  Leaderboard button. The Calculating card opens a Week 8 screen
+  (progress line 1-8, Week 8 marked, Calculating 05:55:23) with
+  Leaderboard, Grouping, Rules, Goals, Profession and Rewards buttons
+  and a Season Contributions button. Season Contributions opens the
+  Alliance Contribution Ranking (Mutual Assistance tab, Season Total
+  Ranking; [AP3x] Bears Lair rank 69 with 4,110,000 points; reward
+  chest x0) - a ranking screen, not a pass claim. No Season Battle
+  Pass free tiers and no Season Weekly Pass Daily Freebie or Daily
+  Pickup were found on the hub, the Calculating screen or the
+  Contributions ranking. The Rewards button (alliance ranking
+  rewards, leader-only Assign Rewards per ticker-2234) and the Goals
+  and Profession buttons were not opened in this unit. The 2026-10-25
+  Season Battle Pass / Season Weekly Pass claim path is therefore
+  still unconfirmed as reachable in the current Week 8 hub.
+  Follow-up for the next passes unit: open Goals and Profession; if
+  no pass claim is found there either, file a knowledge Issue and
+  update the shop-claims metadata.
+- Donation Count 2/30 at entry - see the alliance-donations 1.68.0
+  section for the replenishment read. Commented on Issues #160, #423
+  and #450 by this run.
+- Game left safe: base screen. Nothing bought. No Assemble, no
+  teleport.

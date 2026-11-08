@@ -64,6 +64,9 @@ Usage:
              # record lands in the local pool or after 7 days.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
+             # a re-acquire by the same executor within 60 seconds of
+             # expiry renews the lease (issue #461); any other holder
+             # is refused while the lease is live.
   queue.py [--root DIR] token-release --executor NAME
              # the token lives in the main checkout's _queue_/claimed/,
              # shared by every worktree of the repo (issue #383), so a
@@ -104,7 +107,11 @@ Usage:
              # record on the branch, never in this pool, so
              # without this step the next tick hands it out
              # again; a branch that cannot be read warns and the
-             # tick continues on local state only - then enqueue
+             # tick continues on local state only - production
+             # then skips a slot already closed on the branch or
+             # by a live completion marker (issue #466), so the
+             # drop above cannot be undone by minting the same
+             # unit id again in the same tick - then enqueue
              # one unit per regular the tracker marks due
              # (idempotent);
              # without --due-json it calls the sibling regulars.py todo
@@ -155,6 +162,11 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
+TOKEN_RENEW_WINDOW_SECONDS = 60  # issue #461: a same-holder
+# re-acquire landing this close to expiry renews the lease instead of
+# reporting held - the 2026-11-08 ticker-1049 secrets unit re-acquired
+# 3 seconds before expiry, was refused, and its game input then ran
+# with no token held until the next acquire 6 minutes later.
 DEFAULT_LEASE_MINUTES = 20
 DEFAULT_EST_MINUTES = 5
 DEFAULT_MAX_ATTEMPTS = 3
@@ -789,8 +801,20 @@ def cmd_sync(args):
     due_items = [i for i in due_doc.get("items", []) if i.get("due")]
     # 3. produce the unit for each due regular's current window -
     #    the (regular, window) invariant in _produce_for_window is
-    #    what keeps sync and the planner from ever duplicating
-    produced, already = [], []
+    #    what keeps sync and the planner from ever duplicating.
+    #    A slot already closed on the delivered branch or by a
+    #    live completion marker is not produced at all (issue
+    #    #466): the branch drop above removes the stale inbox
+    #    copy, but without this the same tick mints a fresh unit
+    #    with the same deterministic id and re-executes the slot
+    #    - ticker-1352 did exactly that to radar-2026-11-08-1003.
+    #    Markers are read after the step-1 reap, so only live
+    #    markers count.
+    closed = {unit: "done on %s" % branch for unit in branch_done}
+    for unit in completion_marker_units(args.root):
+        closed.setdefault(unit, "completion marker in another "
+                                "worktree")
+    produced, already, skipped_closed = [], [], []
     for item in due_items:
         if item.get("cadence") == "fixed-slots":
             # Plan-produced only: the tracker carries no per-slot
@@ -801,9 +825,13 @@ def cmd_sync(args):
         planned_local = cycle_start_local(item, now_local)
         unit = _produce_for_window(
             args.root, item, planned_local,
-            duel_window_text(item["id"], planned_local))
+            duel_window_text(item["id"], planned_local),
+            closed_ids=closed)
         if unit:
             produced.append(unit)
+        elif _unit_id_for_window(item, planned_local) in closed:
+            skipped_closed.append(
+                _unit_id_for_window(item, planned_local))
         else:
             already.append(item["id"])
     # 4. window aged unscheduled priority-1 units (issue #128) -
@@ -818,6 +846,7 @@ def cmd_sync(args):
                       "completion_markers_reaped": markers_reaped,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
+                      "skipped_closed": skipped_closed,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
@@ -1100,10 +1129,30 @@ def _sweep_slot_geometry(item, planned_local):
             "expires_at": iso(expires_dt)}
 
 
-def _produce_for_window(root, item, planned_local, window=""):
+def _unit_id_for_window(item, planned_local):
+    """Deterministic unit id for one (regular, window) pair.
+
+    The id is the regular plus the window's local start - the
+    same formula _produce_for_window writes into the unit file -
+    so a caller can name the unit a production would mint
+    without minting it (sync reports which closed slots it
+    skipped, issue #466).
+    """
+    return "%s-%s" % (item["id"],
+                      planned_local.strftime("%Y-%m-%d-%H%M"))
+
+
+def _produce_for_window(root, item, planned_local, window="",
+                        closed_ids=None):
     """Enqueue the unit for one (regular, window) pair, or return
     None when that pair already exists in any state - the pool's
-    anti-duplication invariant, shared by sync and plan."""
+    anti-duplication invariant, shared by sync and plan. A pair
+    whose unit id is in closed_ids (unit -> where it closed) is
+    also not produced: the slot already closed on the delivered
+    records branch or in another worktree, and minting a fresh
+    unit with the same deterministic id would re-execute it
+    (issue #466). Callers that pass no closed set keep the old
+    behaviour; plan wires its own set under #465."""
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -1148,6 +1197,19 @@ def _produce_for_window(root, item, planned_local, window=""):
                               f"stale pair and re-run plan or sweep "
                               f"(issue #410)")
                 return None
+    # Closed-slot guard (issue #466): the live-pool scan above
+    # cannot see a closing that lives only on the delivered
+    # records branch or in another worktree's marker, so a
+    # caller that knows the closed set passes it in and the
+    # slot is not minted again. Checked after the live scan so
+    # the stale-geometry warning above still fires first.
+    unit_id = _unit_id_for_window(item, planned_local)
+    if closed_ids and unit_id in closed_ids:
+        print(f"warning: {unit_id} already closed "
+              f"({closed_ids[unit_id]}) - not producing a fresh "
+              f"unit for the same slot (issue #466)",
+              file=sys.stderr)
+        return None
     cadence = item.get("cadence", "")
     if cadence == "fixed-slots" and _reset_anchored_offsets(item):
         # The slot's own reset instant is its expiry: a sweep
@@ -1182,7 +1244,7 @@ def _produce_for_window(root, item, planned_local, window=""):
                     chain_seq = idx + 1
                     break
     fields = {
-        "unit": f"{regular}-{planned_local.strftime('%Y-%m-%d-%H%M')}",
+        "unit": unit_id,
         "regular": regular,
         "activity": item.get("activity", ""),
         "segment": item.get("segment", ""),
@@ -2430,6 +2492,37 @@ def has_completion_marker(root, unit):
             and bool(fields.get("status")))
 
 
+def completion_marker_units(root):
+    """Unit ids holding a live, valid completion marker.
+
+    Mirrors has_completion_marker's validity rule (the marker
+    names its own unit and carries a closing status); a file
+    that does not parse, names a different unit, or carries no
+    status suppresses nothing. Used by sync production (issue
+    #466): a unit closed in another worktree whose done record
+    has not landed anywhere this tree can see must still block
+    a fresh unit for its slot.
+    """
+    home = completion_home(root)
+    folder = os.path.join(home, COMPLETED_DIRNAME)
+    if not os.path.isdir(folder):
+        return set()
+    units = set()
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".md"):
+            continue
+        unit = name[:-len(".md")]
+        if not unit:
+            continue
+        try:
+            fields, _ = read_unit(os.path.join(folder, name))
+        except (OSError, ValueError, UnicodeDecodeError):
+            continue
+        if fields.get("unit") == unit and bool(fields.get("status")):
+            units.add(unit)
+    return units
+
+
 def record_completion(root, unit, status, executor):
     """Record the closing of unit in the shared pool. Best effort.
 
@@ -2522,20 +2615,8 @@ def reap_stale_completion_markers(root):
     return dropped
 
 
-def cmd_token_acquire(args):
-    path = token_path(args.root)
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    if os.path.exists(path):
-        fields, _ = read_unit(path)
-        lease = parse_iso(fields.get("lease_until", ""))
-        if lease and lease > now_utc():
-            print(f"token held by {fields.get('claimed_by', '?')} "
-                  f"until {fields.get('lease_until')}")
-            return 1
-    fields = {"claimed_by": args.executor,
-              "claimed_at": iso(now_utc()),
-              "lease_until": iso(now_utc() + timedelta(
-                  minutes=UNIT_CAP_MINUTES))}
+def _write_token_file(path, fields):
+    """Write the token file atomically (temp file + rename)."""
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as fh:
         fh.write("---\n"
@@ -2544,6 +2625,42 @@ def cmd_token_acquire(args):
                  f"lease_until: {fields['lease_until']}\n"
                  "---\n\n# Device token\n")
     os.rename(tmp, path)
+
+
+def cmd_token_acquire(args):
+    path = token_path(args.root)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if os.path.exists(path):
+        fields, _ = read_unit(path)
+        lease = parse_iso(fields.get("lease_until", ""))
+        if lease and lease > now_utc():
+            remaining = (lease - now_utc()).total_seconds()
+            # Issue #461: a re-acquire by the holder itself that lands
+            # just before expiry renews the lease instead of reporting
+            # held - the old code refused it, so the holder's game
+            # input ran with no token until the next acquire. A
+            # different executor is still refused, and a holder with
+            # ample lease left is still refused, so the
+            # mutual-exclusion guarantee is unchanged.
+            if (fields.get("claimed_by") == args.executor
+                    and remaining <= TOKEN_RENEW_WINDOW_SECONDS):
+                fields = {"claimed_by": args.executor,
+                          "claimed_at": fields.get("claimed_at", "")
+                          or iso(now_utc()),
+                          "lease_until": iso(now_utc() + timedelta(
+                              minutes=UNIT_CAP_MINUTES))}
+                _write_token_file(path, fields)
+                print(f"token renewed by {args.executor} "
+                      f"until {fields['lease_until']}")
+                return 0
+            print(f"token held by {fields.get('claimed_by', '?')} "
+                  f"until {fields.get('lease_until')}")
+            return 1
+    fields = {"claimed_by": args.executor,
+              "claimed_at": iso(now_utc()),
+              "lease_until": iso(now_utc() + timedelta(
+                  minutes=UNIT_CAP_MINUTES))}
+    _write_token_file(path, fields)
     print(f"token acquired by {args.executor} "
           f"until {fields['lease_until']}")
     return 0

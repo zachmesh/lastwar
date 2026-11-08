@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T18:38:59Z
+modified: 2026-11-08T20:39:36Z
 level: L1
-version: 1.39.0
+version: 1.40.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-1655 resource-collection execution record 2026-11-07 1655 queue run (partial, farmland bubbles 40.9K/38.8K/37.7K/37.1K/32.0K cleared in one tap, about 186.5K food; purple crystal and beige square are static decorations, blue droplet over the truck opens the world-map task view; Armed Truck loot and full-map sweep unfinished; unit 466 seconds inside the 15-minute cap; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-1940 resource-collection execution record 2026-11-07 1941 queue run (partial, farmland +1.9M food and +1.2M coin verified by HUD deltas, iron +1.7M observed unattributed, estimated bubble centres failed twice so ground-then-tap is now the rule, gold truck icon tap at norm 681,814 panned to the Drill Ground instead of opening a loot panel, Armed Truck loot and full-map sweep unfinished; unit 476 seconds inside the 15-minute cap; record commit c47e491fd on records/2026-11-07)
   - source: ticker-0934 resource-collection execution record 2026-11-08 0958 queue run (partial, food +8.2M coin +5.4M iron +7.5M verified by HUD deltas, one-tap farmland rule holds, grounded centres work, top-edge bubbles unreliable and batch opened Power Details, Power Details breakdown measured, sweep unfinished; record commit ac350b49c on records/2026-11-08)
+  - source: ticker-1134 resource-collection execution record 2026-11-08 1211 queue run (partial, farmland food +1.6M HUD-verified, top-edge single tap collects nothing, iron +1.3M unattributed not claimed, coin bubbles about 0.8M remain, token expired 12:22:56); record commit ce3dcc4bf on records/2026-11-08
 ---
 
 
@@ -1244,6 +1245,64 @@ regular stays due. Evidence in
   carried forward not closed. The Armed Truck state is unknown.
 - Tracker untouched, per the partial rule; the next tick re-produces
   the harvest regular.
+
+## What the 2026-11-08 1211 unit added - farmland food +1.6M verified, top-edge single tap collects nothing, iron +1.3M unattributed, coin sweep cut off by token expiry, partial
+
+- Unit harvest-2026-11-08-1003 by ticker-1134, about 12:11 to 12:21
+  local, status partial - the farmland food bubbles are collected
+  and the field is clear; the coin bubbles, the iron bubbles, the
+  top-edge bubbles and the armed truck loot are NOT verified
+  collected and carry to the next harvest unit. Evidence in
+  `_records_/2026-11-08/resource-collection/1211-queue-run.md`
+  (commit ce3dcc4bf on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-118 on the owner Mac mini. The game
+  was on the Events hub Ranking Reward panel at entry (leftover from
+  the ticker-1134 scout unit); the panel was closed and the base
+  screen reached with the back arrow. No device-access error, no
+  different-device dialog, no login demanded. Nothing bought, no
+  speedup used. The pass token expired at 12:22:56, so the unit
+  closed before the coin sweep.
+- Base HUD at entry (12:11): food 487.9M, iron 810.6M, coin 12.3M,
+  stone 25.0M, gold 922.2K, power 149,850,353, diamonds 13.22K,
+  stamina 120, cart 4,397, Season II 7d 05:51:17.
+- Food collected, HUD-verified: a double-tap on a wheat-field bubble
+  cleared the farmland bubbles and food moved 487.9M to 489.5M
+  (+1.6M). The second tap of the double-tap landed on the farmland
+  building after the bubble vanished and raised a "Production in
+  progress. Please wait..." toast - no panel opened, no state
+  changed. Do NOT double-tap: one grounded tap suffices (one-tap
+  farmland rule, fourth confirmation: 1655, 1941, 0958, this unit).
+- Top-edge bubbles, still unreliable: a single tap on a bubble at the
+  top edge of the wheat field cleared no food bubble and food did not
+  move (further confirmation of top-edge unreliability after the 0958
+  4-tap batch, which also collected nothing).
+- Iron, observed not claimed: iron moved 810.6M to 811.9M (+1.3M)
+  with no bubble tap confirmed as its cause - NOT claimed as a
+  collection. The likely cause is furnace overdrive production (the
+  "High-temp Furnace total overdrive time [22/60]" toast was
+  showing), but that is inference, not a verified read. Same class
+  as the 1941 unit's +1.7M unattributed iron move.
+- Not done (carries to the next harvest unit): coin bubbles, about
+  four visible, uncollected (about 200-230K each, roughly 0.8M
+  total; coin HUD still 12.3M); iron bubbles, no iron bubble tapped
+  and verified; top-edge bubbles, the small bubbles cut off at the
+  very top edge of the base view remain unverified (same open item as
+  the 0934 harvest unit); armed truck loot, the blue truck at the
+  bottom of the base was not tapped and its loot state is unverified
+  (same open item as the 0934 harvest unit).
+- Method note (R2): the compact OCR coordinates run about 30 units
+  off the image-derived positions, so bubble centres must be
+  re-grounded from the image in each unit. Ground first, then tap.
+- Figures read live: entry food 487.9M, iron 810.6M, coin 12.3M;
+  close food 489.5M, iron 811.9M, coin 12.3M; the rest unchanged.
+- Reading warning: this partial unit is not a full-map close - the
+  1101 close stands as the last live read of the wider sweep, and the
+  full edge-drag sweep of the 2026-11-01 rule remains incomplete,
+  carried forward not closed. The Armed Truck state is unknown.
+- Tracker untouched, per the partial rule; the next tick re-produces
+  the harvest regular. The next harvest unit resumes with the coin
+  bubbles first, then the iron bubbles, the top-edge bubbles and the
+  armed truck loot (R7 - the starved subtasks lead).
 
 ## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
 
