@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-08T02:42:42Z
-version: 1.35.0
+modified: 2026-11-08T04:39:41Z
+version: 1.36.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -36,6 +36,7 @@ grounded_in:
   - source: ticker-0534 survivor-intake execution record 2026-11-06 0534 queue run (failed, Mac device offline, seventieth consecutive ticker pass with a Mac device-access blocker, thirty-first in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 22h, unchanged since the 0504 pass; nine invokes, zero responses, recovery-device attempts timed out after 25 seconds each)
   - source: ticker-2004 survivor-intake execution record 2026-11-06 2004 queue run (failed, Mac device offline, eighty-ninth consecutive ticker pass with a Mac device-access blocker, fiftieth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 36h40m, unchanged since the ticker-1025 pass; six invokes, zero responses, recovery-device health check timed out after 25 seconds)
   - source: ticker-1655 survivor-intake execution record 2026-11-07 1655 queue run (partial and unverified, gate re-grounded with the yellow Zombies sign at norm 166,547, no waiting line verified, gate figures are squad troops, 2nd Squad Lv.20 selected by tap; blue-cap portrait circles untapped; white '?' bubble at norm 113,582 seen in the training unit's closing screenshots; record commit 514e333e5b on records/2026-11-07)
+  - source: ticker-1940 survivor-intake execution record 2026-11-07 2000 queue run (partial, gate line verified live with 4 question-mark survivors grounded at norm 111,642 / 76,661 / 43,677 / 9,692, taps turned '?' bubbles into yellow smiley faces with no New Survivor Incoming card opened and no recruit identity read, line clear as observed, Quick Dispatch not run so the R2 third-strike blocker persists; unit 162 seconds inside the 15-minute cap; record commit c47e491fd on records/2026-11-07)
 ---
 
 
@@ -80,6 +81,7 @@ Measured on 2026-10-25.
 - A processed survivor's bubble turns into a smiley face and they
   walk to their post. The line is clear when no question mark
   bubbles remain at the gate.
+- Figure taps can process a survivor without opening a card - measured 2026-11-07 (2000 unit): four question-mark survivors grounded at the gate, a tap on the first figure turned the "?" bubbles into yellow smiley faces and the figures walked in, with no New Survivor Incoming card opening and no name, role or trait read for any survivor. A smiley change is processed state, not a recruit identity; do not claim a recruit was taken in from the smiley alone.
 
 ## Cadence
 
@@ -147,6 +149,7 @@ Measured on 2026-10-25.
   before any tap, and closes unverified with a named re-read
   unit if the line cannot be verified, instead of closing on a
   presumed line state.
+- Follow-up carried from the 2000 unit (2026-11-07): with a line verified and processed, Quick Dispatch is the first action of the next survivors unit (rule R7) - open a building panel and run it, so the newcomers are posted. The third-strike blocker persists until a unit runs it.
 
 ## What the 2026-11-01 early unit added
 
@@ -941,6 +944,7 @@ Measured on 2026-10-25.
   post can be verified after intake.
 - How fast the line refills and whether it has a cap.
 - Refill-question refinement, 2026-11-07 1655 unit: an empty line has two candidate explanations, unmeasured - the owner may have taken survivors in during his own play on the Mac that afternoon (resource totals rose between the pass's own screenshots with no executor input: food 485.5M to 486.5M, iron 808.9M to 810.0M, coin 5.0M to 5.7M), or the line refills slowly. Recorded as an open question, not a conclusion.
+- Refill data point, 2026-11-07 2000 unit: a 4-survivor line stood at the gate about 2.5 hours after the 1655 unit could not verify a waiting line - consistent with refilling, but the 1655 read was unverified, so this does not measure the refill rate. Recorded as a data point, not a conclusion.
 - Whether a recruit can be moved to a different building by hand,
   and what the second David means - names repeat across roles.
 - The three document icon bubbles over the headquarters area
@@ -965,6 +969,8 @@ Measured on 2026-10-25.
 - 1.30.0 (2026-11-05): 0504 survivors unit folded (failed, thirty-third consecutive screen-capture failure, one cheap probe per mac_capture_probe.py in cc-521, no game screen read, no input dispatched, tracker untouched); probe classification OFF_SCREEN_WINDOW high confidence, View-menu inspect the only missing probe step (stale_observation), Chrome observes normally in the same session, recovery still the owner Dock-icon click or mac_lastwar_front.sh; the 1122 close stands as the last live read, its follow-up still waits on the window returning to the active Space; thirty-third occurrence commented onto Issue #282 by this run.
 
 - 1.35.0 (2026-11-07): channel rules carried (propagation follow-up from the 1732 run): the 1020 Mission Control lesson - open_app Mission Control wedged the channel (geometry_mismatch, input gated on observation_required, second launch restores) and background Ctrl+Right does not switch Spaces; the background-Space-keys half was already in this profile from its own 0134 unit, the open_app wedging is the new part; the Dock-icon unblock stands. (1.31.0 through 1.34.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
+
+- 1.36.0 (2026-11-07): 2000 survivors unit folded (partial, gate line verified live with 4 question-mark survivors grounded at norm 111,642 / 76,661 / 43,677 / 9,692 by the WARNING Zombies sign, figure taps turned the "?" bubbles into yellow smiley faces with no New Survivor Incoming card opened and no recruit identity read for any survivor, line clear as observed, Quick Dispatch NOT run so the R2 third-strike blocker persists and Quick Dispatch is the first action of the next survivors unit per rule R7; a smiley change is processed state, not a recruit identity; HUD food 478.7M, iron 802.1M, coin 6.9M, power 149,850,353, stamina 107 at close).
 
 - 1.29.0 (2026-11-05): 0134 survivors unit folded (failed, twenty-sixth consecutive screen-capture failure, no game screen read, no input dispatched, tracker untouched); NEW DIAGNOSIS from the on-screen View-menu read - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (menu lists Enter Full Screen), so the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; background Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, list_windows needs the exact app name "LastWar"; CORRECTION - the 1707/2135 "running fullscreen" wording and the 1122 "left in native fullscreen" carry-forward are superseded, and the standing permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); same correction applied to resource-collection, perception-scout, radar-tasks, arms-race and alliance-gifts in this run; evidence commented on Issue #284 by the ticker pass, twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.27.0 and 1.28.0 carry the 1707 and 2135 sections without changelog lines; the numbering is preserved, not rewritten.)
 
@@ -1330,6 +1336,17 @@ Measured on 2026-10-25.
 - Figures read live: food 485.5M at entry, 486.5M at close; iron 808.9M to 810.0M; coin 5.0M to 5.7M; stone 25.0M; 922.2K; power 149,850,353. The rises happened between this executor's own screenshots with no game input from this executor in between, so they are not claimed as this unit's gains. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
 - Reading warning: this partial unit gives zero evidence of a recruit - it must NOT be read as "no survivors waiting": the line state was unverified, not measured empty. The 1122 close (gate line verified live with 3 question-mark survivors) stands as the last live read of a verified line.
 - Tracker untouched, per the partial rule; the next tick re-produces the survivors unit.
+
+## What the 2026-11-07 2000 unit added - gate line verified with 4 survivors, taps turn "?" to smiley with no card, Quick Dispatch still not run, partial
+
+- Unit survivors-2026-11-07-1803 by ticker-1940, about 19:49 to 19:52 local, status partial. Evidence in `_records_/2026-11-07/survivor-intake/2000-queue-run.md` (commit c47e491fd on records/2026-11-07). Computer session cc-40 (cc-39 had closed during the harvest unit); LastWar already running, view panned down at the Drill Ground from the harvest unit. Unit duration 162 seconds inside the 15-minute cap; the session window was corrected against the queue tool stamps.
+- Gate line verified live before any tap, per the standing R2 blocker note: visual grounding on the live screenshot found 4 survivor figures with white "?" bubbles at the front gate, norm (111,642), (76,661), (43,677) and (9,692), in a line by the WARNING Zombies sign.
+- Tap on the first figure at norm (111,642): the "?" bubbles at the gate turned into yellow smiley faces in the next screenshot - the processed state the activity metadata describes (a processed survivor's bubble turns into a smiley face and they walk to their post). No New Survivor Incoming card opened and no name, role or trait was read for any survivor, so no recruit identity is claimed.
+- Second tap on the figure at norm (76,661): only a small local animation change, no card, no dialog. Closing screenshot shows no "?" bubbles remaining at the gate and smiley bubbles in their place, with figures walking in. The line reads clear as observed.
+- Quick Dispatch was NOT run: no building panel was opened in this unit, so the standing R2 third-strike blocker (Quick Dispatch never run in the queue era) persists. Follow-up: Quick Dispatch is the first action of the next survivors unit, per rule R7.
+- Figures read live: 4 survivors grounded at the gate before tapping; 0 "?" bubbles remaining at close; smiley bubbles visible. Food 478.7M, iron 802.1M, coin 6.9M, power 149,850,353, stamina 107 at close. No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared. One alliance toast crossed the screen ("President HawksMav appointed dtagle as Secretary", then "Centurion426 as Secretary of Development") - alliance notices, not this unit's work.
+- Reading warning: the smiley change is processed state, not a recruit identity - this unit gives no evidence of a named recruit. The 2000 close is the newest live read of a verified gate line (4 survivors), and it re-confirms the 1122 taps-not-opening-cards blocker: two figure taps opened no card. The 2000 follow-up (Quick Dispatch first in the next unit) is carried forward, not closed.
+- Tracker untouched, per the partial rule; the next tick re-produces the survivors regular.
 
 ## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
 
