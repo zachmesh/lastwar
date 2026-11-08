@@ -2907,3 +2907,25 @@ of 2026-10-28.
   correction note, adds 0 unexplained). 0 withdrawals.
   Pool: inbox 78, claimed 0, done 1266. Status: no-op.
   Full detail in queue-planning/1240-run.md.
+
+## 12:46 to about 12:56 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1245.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): merged tools PR 462
+  (squash 81958972, token-lease renewal, Refs #461) and
+  knowledge PR 463 (squash 6dad8dbf, scout 1144 and 1159
+  plus harvest 1211 profiles, Refs #212). Tools PR 425
+  owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision, still conflicting on
+  _tools_/INDEX.md, updated note posted against new main
+  6dad8dbf. Records PR 460 clean at head 5d328a1c and
+  records PR 457 clean at head 09302a7a, both awaiting
+  the 15:00 batch. Records PRs 351 and 301 still conflict
+  with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-check notes posted against new main 6dad8dbf. No
+  records PR opened. No records branch left PR-less.
+  Local main fast-forwarded 1c39fa82 to 6dad8dbf.
+  Status: done. Full detail in
+  pr-integration/1245-run.md.
