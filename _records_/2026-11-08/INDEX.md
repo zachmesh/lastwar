@@ -1368,3 +1368,17 @@ of 2026-10-28.
   untouched. No Slack DM sync, no chat report: silent
   non-batch run. Status: done. Full detail in
   pr-integration/0615-run.md.
+
+- 0608 ticker-0604 scout Winter Battlefield sub-pages
+  (chain scout-2026-11-03 seq 004, partial, 15-min cap):
+  Rewards ladder 45K-450K (tags 4,100-6,500) and earn
+  rows read; Rules all 4 tabs read (overview 30,000 to
+  win, 4 structures, ranking No.1-No.10 +52.5K-+17.5K,
+  8 commendations, 10 achievements, Other special
+  rules); Shop Honor tab 12 items all full stock,
+  balance 101.1K. Two range discrepancies flagged
+  (commendations +45.0K vs max listed +33.0K;
+  achievements +2.4K vs min listed +2.8K). History,
+  Achievement, Campaign/Season tabs and the Doomsday
+  count finish carry to successor seq 005. Full detail
+  in perception-scout/0608-queue-run.md.
