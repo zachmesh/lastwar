@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T13:36:13Z
+modified: 2026-11-08T13:44:54Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -1187,3 +1187,50 @@ of 2026-10-28.
   remainder); owner-decision issues 132, 154 and 335 all over
   24 hours with statements current. Status: no-op. Full detail
   in pr-catchall/0539-run.md.
+
+## 05:32 to about 05:55 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0532 run. Own PR 443 MERGED
+  (2026-11-08T12:47:24Z by the pr-integration 0445 run);
+  no open profile PR, no unaddressed feedback. Folded
+  ticker-0434 scout 0440/0447/0454 and ticker-0504 scout
+  0512 and donations 0519 into 8 profiles as one commit
+  (d78b43904a) on new PR 445 (OPEN at run close): the 3
+  unexplained red dots from the 0204 unit are all
+  explained live - blue bus icon is the Trucks entry
+  (third tap-verified confirmation, dot clears on open),
+  white truck badge 8 is the Secret Command Post entry
+  (badge counts completed tasks awaiting claim), VIP cart
+  dot is the Store shortcut (no free item, no tab dot);
+  the 0022 "radar" read is superseded. Donations 0519:
+  3 coin donations landed 4/30 to 1/30 (2,700 coin), tap
+  4 eaten by a seconds-long grey-out, tap 5 unconfirmed
+  behind a 00:19:35 cooldown (eighth reading, inside
+  08:17-19:07); count rose 1/30 to 4/30 between units
+  (seventeenth replenishment data point, fourth
+  confirmation of the between-units rise); footer 3450
+  to 4000 (+550 for 3 donations, mechanism unexplained).
+  Station re-check: both preparation signals absent,
+  seventh no-train confirmation in the
+  scout-mid-2026-10-31 chain. Alliance panel back arrow
+  at (183,938), not (52,938). Marshal's Guard activation
+  2026-11-9 21:00 (difficulty 12) and the Lv.8 Doomsday
+  Stronghold search 2026-11-9 23:15 server time, dated
+  from the Record Event tab. VIP Daily Freebie still
+  claimable at 04:53 and 05:11; progress unchanged
+  1,605,970/2,000,000. Gifts Level 28 progress
+  193,203,470; Claim All 130 Regular and 12 Premium.
+  Profiles: perception-scout 1.36.0, alliance-donations
+  1.61.0, shop-claims 1.34.0, truck-plunder 1.31.0,
+  secret-missions 1.18.0, vip-rewards 1.14.0,
+  alliance-gifts 1.38.0, alliance-train 1.32.0.
+  Corrections: the 0440 "about 8 min" cost estimate
+  superseded by the tool-measured 133 seconds; the 0519
+  "15 to 19 minute range" wording superseded by the
+  corrected 08:17-19:07 range; the 0022 "radar" read and
+  the 0845 "mislabel" framing superseded. Issues #423,
+  #417, #183 and #427 commented with the new evidence;
+  #160 already commented by the ticker pass (no
+  duplicate); #444 filed by the ticker pass; no new
+  Issue filed. Status: done. Full detail in
+  knowledge-organization/0532-run.md.
