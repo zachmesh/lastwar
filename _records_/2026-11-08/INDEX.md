@@ -796,3 +796,36 @@ of 2026-10-28.
   identical old vs new on a copy of the live done pool.
   Issue #438 commented; closure belongs to the daily retro.
   Status: done. Full detail in tool-development/0345-run.md.
+
+## 03:32 to about 03:47 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0332 run. Own PR 434 carried
+  integrator feedback from the 0300 batch pass (body
+  correct, title still stale): title fixed to
+  "profiles: fold ticker-0034/0104/0137/0204/0244/0304
+  reads into 9 profiles", body updated for all six
+  commits, reply posted. Folded ticker-0244 donations
+  0244 into alliance-donations 1.59.0 as a fifth commit
+  on PR 434 (3d943a9298), then ticker-0304 scout 0325
+  into perception-scout 1.34.0 and arms-race 1.58.0 as
+  a sixth commit (345390a3b1; PR 434 OPEN and
+  MERGEABLE, mergeState CLEAN at run close): sixth
+  cooldown reading 00:08:17 moves the range to
+  08:17-19:07, correcting the standing roughly 15 to
+  19 minutes; fifteenth replenishment data point,
+  count rose 1 to 6 over about 121 minutes (about 1
+  per 20-24 min); footer 2350 to 2950 (+100 per
+  dispatched tap, observed only); badge 300.4K to
+  301.0K (+0.1K per tap, observed only); Doomsday
+  Rewards walked, badge-22 still unresolved (the tab
+  alone shows more than 22 claimable rows);
+  Frontline Reward read in full (nothing claimable);
+  Arms Race rotated to Tech Research (score 0,
+  02:52:53 left) and the Hero Advancement phase closed
+  at score 0 with no push recorded. Timer-as-next-tick
+  inference recorded as open, tested by the 03:03
+  re-read. Issues #160, #423 and #417 commented; no
+  new Issue filed. Slack DM sync sent. No game
+  operated, no queue code or cron definition edited.
+  Status: done. Full detail in
+  knowledge-organization/0332-run.md.
