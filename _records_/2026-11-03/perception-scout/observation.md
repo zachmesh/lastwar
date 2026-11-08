@@ -229,3 +229,19 @@ unit record at `perception-scout/0542-queue-run.md`.
   Ranking, station panel, mail, world map; carried to
   successor unit scout-midday-scout-mid-2026-11-02-004.
 - unmatched_labels: none in the surfaces actually walked.
+
+### Scout-alliance remainder, 2140 unit (ticker-2134, stale 10-31 midday chain)
+
+- Alliance panel: [AP3x] The Apex, 5.0 stars, Leader Abŷss Apex, Power 13,360,041,845, Members 96/100; dots Help, Alliance Gifts; Alliance Star (Event 40) Time Left 20:11:46.
+- Base screen: power 149,850,353; resources 478.8M, 802.1M, 6.9M, 25.0M, 922.2K; diamonds 13.22K; cart 4,217; stamina 120.
+- Station panel: no train icon in the left column, no "Boarding closes in" banner, so no train preparing; third consecutive partial on this blocker, so rule R2 applied - the preparation-only finding and the check-signals-first entry route are now written into _activities_/alliance-train/INDEX.md (1.6.0). The platform stays carried, re-checked only when a train prepares.
+- Red dot accounting: 9 seen, 9 explained, 0 unexplained in the surfaces walked. Carried unwalked: station panel only. Unknown items: furnace overdrive toast [22/60], recurring.
+
+### Scout-base, 2145 unit (ticker-2134, stale 11-03 post-reset chain head) - late catch-up read 2026-11-07 about 21:44 local
+
+- Base screen and HUD: power 149,850,353; resources 478.8M, 802.1M, 6.9M, 25.0M, 922.2K; diamonds 13.22K; cart 4,217; stamina 120.
+- Left column: avatar Lv.30, hammer 2/4, flask 2/2, green face (6.5C), white truck, radar, wrench; no train icon.
+- Building countdown 03:42 (was 03:38 at 21:39 in the previous unit); count direction unverified. Skull timer 7d 20:17:26, badge 1, 00:00:29 below.
+- Resource bubbles observed only (220.6K at the left edge, small bubbles over the tent row), none collected - left for the harvest regular.
+- Red dot accounting: 7 seen, 7 explained, 0 unexplained. Unknown items: furnace overdrive toast [22/60], recurring; the 03:42 building timer identity.
+- Carried unwalked: scout-events, scout-store and scout-alliance groups of this pass.
