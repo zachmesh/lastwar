@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-07T23:31:00Z
+modified: 2026-11-08T00:21:00Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -2701,3 +2701,27 @@ of 2026-10-28.
   records PR opened; no action-log line owed. Next
   merge chance the 19:00 batch. Status: done.
   Full detail in pr-integration/1600-run.md.
+
+## 16:16 to about 16:21 - Ticker pass
+
+- Ticker pass ticker-1608. Radar unit radar-2026-11-07-1403
+  failed: Mac mini online, Last War window off-Space
+  (window_id 160366, pid 59735, 1920x1080 at 0,-360,
+  window_on_screen false), screen-capture stream failed on
+  all 4 attempts ("Failed to start stream due to audio/video
+  capture failure", activate evidence + 3 observes, session
+  cc-9); both Mac transports healthy. 112th consecutive
+  access-failed pass, 6th in the new capture-failing form
+  after the 106-pass offline streak (Issue 282, commented).
+  No game screen read, no game input, no claim made.
+  Recovery routes deliberately not retried per the 1020
+  lessons. The known unblock is the owner clicking the
+  LastWar Dock icon. Own PRs first: all four open records
+  PRs (398, 351, 301, 256) reconciled with main dfc3e08b
+  this pass (commits d230406be2, f9e1fff83d, 602566d905,
+  d44b93bac2), pushed, verified, commented; no questions
+  addressed to this job. Sync reaped 0, expired 0, due 20,
+  produced nothing; inbox 79. No zombie seeding: event
+  ended 2026-10-30. Pre-reset zero-sweep pair already
+  staged. Tracker untouched. Status: failed. Full detail in
+  radar-tasks/1616-queue-run.md.
