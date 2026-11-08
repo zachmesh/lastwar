@@ -3918,3 +3918,17 @@ of 2026-10-28.
   clean at head ac68801e, awaiting the 23:00 batch.
   Status: done. Full detail in
   knowledge-organization/2032-run.md.
+
+## 20:45 to about 20:58 - PR integration pass
+
+- PR-integrator pass pr-integration-2026-11-07-2045.
+  Non-batch pass: checker plain and merge-aware both not
+  due (outside every batch window), next batch 23:00 PT.
+  Merged knowledge PR 414 (6 profiles, Refs #282) after
+  the author updated the branch mid-pass; the first
+  merge attempt was refused (head out of date). Records
+  PR 398 clean at heads ac68801e and ed0f0f1e, awaiting
+  the 23:00 batch; records PRs 351 and 301 still
+  conflict on the single action-log file, re-noted.
+  Slack DM sync sent. Status: done. Full detail in
+  pr-integration/2045-run.md.
