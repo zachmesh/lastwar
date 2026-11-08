@@ -2928,6 +2928,21 @@ of 2026-10-28.
   twice mid-pass (0048e45a, then 514e333e). No merges,
   no new PR opened. Status: done.
   Full detail in pr-integration/1715-run.md.
+
+- Integrator pass pr-integration-2026-11-07-1730.
+  Non-batch pass for records purposes (checker plain
+  and merge-aware both not due, outside every batch
+  window, next batch point 19:00 PT; the 15:00 batch
+  slot was already spent by the 1500 pass). No
+  knowledge or code PR open. All four open records
+  PRs verified clean against main cef70a43 (398
+  86345daf, 351 f9e1fff83d, 301 602566d9, 256
+  d44b93ba) and awaiting the 19:00 batch, the first
+  real merge chance for all four. One re-check
+  comment posted on PR 398 as its head advanced
+  mid-pass (514e333e -> 86345daf, the 1715 run record
+  commit). No merges, no new PR opened. Status: done.
+  Full detail in pr-integration/1730-run.md.
 ## 16:56 to about 17:04 — Queue ticker pass, harvest
 
 - Ticker pass ticker-1655. Sync reaped nothing and produced
