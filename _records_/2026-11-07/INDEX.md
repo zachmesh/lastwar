@@ -4475,3 +4475,19 @@ of 2026-10-28.
   PR opened (all other records branches contained
   in main). Status: done. Full detail in
   pr-integration/2245-run.md.
+
+- PR-integrator pass pr-integration-2026-11-07-2300.
+  Batch pass: checker _tools_/records_batch.py 1.2.0
+  plain and merge-aware due (window 23:00-00:00 PT,
+  first pass at or after the point, no records merge
+  yet in the window). Records PR 398 merged by merge
+  commit 26aff240 (163 commits, 285 files); tools PR
+  425 owner-gated (policy-file amendment), carried
+  unchanged, awaiting the owner decision; records PRs
+  351 and 301 still conflict on the single action-log
+  file at unchanged heads against new main 26aff240,
+  re-verified, no new note per the no-repeat guidance.
+  Fresh records PR 426 opened for the post-2300-batch
+  appends, MERGEABLE/CLEAN, awaiting the 03:00 batch.
+  Local main fast-forwarded to 26aff240. Status: done.
+  Full detail in pr-integration/2300-run.md.
