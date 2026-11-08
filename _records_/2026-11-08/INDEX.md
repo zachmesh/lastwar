@@ -1126,3 +1126,26 @@ of 2026-10-28.
   untouched. No Slack DM sync, no chat report: silent
   non-batch run. Status: done. Full detail in
   pr-integration/0515-run.md.
+
+## 05:30 to about 05:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0530.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 07:00). No merges. Records PR
+  439 clean at unchanged head 42ef0190 and records PR 430
+  clean at new head 79452cbdd (0515 run-record commit)
+  against live main f2eacffc20, both awaiting the 07:00
+  batch; 430 re-noted (issuecomment-6722132494). Records
+  PRs 351 and 301 still conflict with main on the single
+  file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-verified against
+  main f2eacffc20, carried without fresh notes (main and
+  heads unchanged since the 0500 notes). Tools PR 425
+  owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision. No records PR opened by
+  this pass. This record was committed by plumbing
+  (temp index) against the branch tip so the ticker
+  working state in the records worktree was left
+  untouched. No Slack DM sync, no chat report: silent
+  non-batch run. Status: done. Full detail in
+  pr-integration/0530-run.md.
