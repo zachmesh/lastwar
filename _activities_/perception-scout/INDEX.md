@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T18:38:59Z
+modified: 2026-11-08T20:39:36Z
 level: L1
-version: 1.40.0
+version: 1.41.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -59,6 +59,8 @@ grounded_in:
   - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live, 17 medals, Rules list corrected, Doomsday guardian rotated); record commit 8dcbdf92b9 on records/2026-11-08
   - source: ticker-0834 perception-scout execution record 2026-11-08 0845 queue run (partial, station re-check, eighth no-train confirmation, Wars dot gone since 07:34, Issue #212); record commit cf80509ea on records/2026-11-08
   - source: ticker-0934 perception-scout execution record 2026-11-08 0937 queue run (partial, Shop Campaign tab complete 17 items 7 SOLD, Shop Season tab complete 11 items Sandstorm Master SOLD, Winter Battlefield History tail complete 15 rows with 02:23 correction and [Z76] March rows, Donation Count 2/30 replenishment, Doomsday count finish carried to seq 007); record commit ac350b49c on records/2026-11-08
+  - source: ticker-1131 perception-scout execution record 2026-11-08 1144 queue run (partial, station re-check, ninth no-train confirmation, Wars dot rally-link third positive case not a settlement, Wars page back arrow re-grounded to (56, 938)); record commit 3110bb6a6 on records/2026-11-08
+  - source: ticker-1134 perception-scout execution record 2026-11-08 1159 queue run (done, Doomsday count finish read live, Rewards 13 first-kill + 9 cumulative rows all claimed, Damage Ranking top 6, Ranking Reward tiers, chain scout-2026-11-03 complete); record commit ce3dcc4bf on records/2026-11-08
 ---
 
 
@@ -2867,3 +2869,142 @@ observe-only, nothing claimed). Evidence in
   toast [22/60]; 99+ chat badge; Campaign store SOLD pattern (who
   bought the 7 sold items, and when); Season Sandstorm Master
   (Permanent) SOLD; [Z76] tag on the two March History rows.
+
+## What the 2026-11-08 1144 unit added - station re-check, ninth no-train confirmation, Wars dot rally-link third positive case, Wars back arrow re-grounded
+
+- Unit scout-scout-2026-11-02-011 by ticker-1131, about 11:38 to 11:44
+  local, status partial - the station panel is a preparation-only
+  surface and stays unlocated until a train prepares, so the check
+  itself is conclusive for this window but the remainder carries to
+  the successor. Evidence in
+  `_records_/2026-11-08/perception-scout/1144-queue-run.md` (commit
+  3110bb6a6 on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-08/perception-scout/observation.md`.
+  Observe-only throughout; nothing claimed, fought, dispatched,
+  donated, boarded, dug or bought. Successor
+  scout-scout-2026-11-02-012 enqueued with the same window.
+- Session: computer session cc-115 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  Session ended cleanly at the unit close. Entry: the game was found
+  on the Secret Command Post screen (leftover from an earlier unit);
+  one tap on the back arrow at measured norm (183, 914) returned to
+  the base screen at once.
+- Base screen, read live about 11:38 local: power 149,850,353
+  (unchanged from the 00:16, 04:16, 04:40 and 08:45 reads); food
+  487.9M, iron 810.6M, coin 12.3M; second row 25.0M, 922.2K;
+  diamonds 13.22K; cart 4,397; stamina 120; Season II 7d 06:21:37;
+  Wanted Boss badge 2, timer 00:00:50. Resource bubbles standing on
+  many buildings, observed only, not collected.
+- Train-preparation signals, both absent: no train icon in the left
+  column, no "Boarding closes in" banner under the resource bar (the
+  banner area shows the High-temp Furnace overdrive line and a
+  Breaking News line instead). Ninth no-train confirmation in this
+  chain (third 2134, fourth 0022, fifth 2304, sixth 0118, seventh
+  0440 re-check, eighth 0845, ninth this unit). No train is preparing
+  in this window; the STATION PLATFORM screen has no live state to
+  read.
+- Alliance panel, read live about 11:41 local: [AP3x] The Apex, 5.0,
+  Leader Abŷss Apex, Power 13,269,391,645, Members 95/100, Language
+  English. Panel dots: Alliance Wars, Help, Alliance Gifts, Alliance
+  Techs. No dot on Alliance Store or Members. Alliance Star (Event
+  40), Time Left 06:10:52.
+- Wars dot, third same-day positive case for the rally link, NOT a
+  settlement (Issue #212): Alliance Wars opened observe-only; the
+  Rally Intel tab held TWO live rallies at about 11:42 -
+  [AP3x]SKRyZeRZ rallying 00:00:18, Lv.150 Doom Walker, 350km away,
+  Count/Limit (3/5); [AP3x]Texan Apex rallying 00:00:21, Lv.60 Doom
+  Elite, 14km away, Count/Limit (2/5). By about 11:44 the timers
+  expired and Rally Intel reads "No Alliance Rally currently." The
+  dot was present 11:41 with two rallies rallying, absent 08:44 with
+  none seen, absent 04:18 and 04:46 with "No Alliance Rally
+  currently." The record's own correction stands: this does not
+  settle Issue #212 - on 2026-11-03 the dot was present while both
+  Wars tabs read empty, so a rally does not explain the dot by
+  itself, and whether the panel dot cleared after these two rallies
+  launched was not re-checked in this unit. Commented on Issue #212
+  by this unit with the corrected framing (comment 6726248931).
+- CORRECTION, back-arrow grounding per screen: three taps at norm
+  (183, 914) on the Alliance Wars page produced no navigation - that
+  point lands right of the arrow on this page. The Wars page back
+  arrow grounds at norm (56, 938), measured on the live screenshot
+  (arrow spans about x 12-75, y 960-1010 in the 763x1050 capture);
+  one tap there returned to the Alliance panel at once, and one tap
+  at (183, 914) on the Alliance panel returned to the base screen.
+  No back-arrow point stands across screens; re-ground fresh per
+  screen. (183, 914) remains the measured back arrow on the Secret
+  Command Post screen and the Alliance panel, not on the Wars page.
+- Red dot accounting: 4 seen, 4 explained, 0 unexplained in this
+  unit's scope (Wars explained live by the two rallying rallies;
+  Help, Gifts and Techs map to the help, gifts and donations
+  regulars, units queued). Standing carried unknowns seen again:
+  furnace overdrive toast, 99+ chat badge.
+- Follow-up: successor seq 012 enqueued in chain scout-2026-11-02
+  with the same window (station panel only, train entry and
+  preparation state; Wars dot Issue #212).
+
+## What the 2026-11-08 1159 unit added - Doomsday count finish read live, chain scout-2026-11-03 complete
+
+- Unit scout-scout-2026-11-03-007 by ticker-1134, chain
+  scout-2026-11-03 seq 7, about 11:59 to 12:05 local, status done -
+  the Doomsday count finish is fully read (Rewards first-kill rows
+  Lv.100-220, cumulative rows 20-100, Damage Ranking, Ranking Reward
+  tiers). Chain scout-2026-11-03 is complete; no successor enqueued.
+  This was the last carried unwalked item of the stale 2026-11-03
+  post-reset scout pass. Evidence in
+  `_records_/2026-11-08/perception-scout/1159-queue-run.md` (commit
+  ce3dcc4bf on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-03/perception-scout/observation.md`. Observe-only.
+  Nothing claimed, fought, dispatched, donated, dug or bought.
+- Session: computer session cc-117 on the owner Mac mini. LastWar
+  already open on the base screen at entry (power 149,850,353). No
+  device-access error, no different-device dialog, no login demanded.
+  One stale-observation error on the Damage Ranking tap (evidence
+  unavailable) - the tap had in fact landed and the tab was open on
+  re-observe; no game state lost. Method: re-observe before retrying
+  a tap after a stale-observation error; the tap may already have
+  landed. Session window about 6 minutes.
+- Doomsday main: timer 05:59:13 at entry; Warzone Guardian [AP3x]Nuna
+  Knuckles; Alliance Threat (0), Warzone Threat (17), down from 43 at
+  the 0734 read; "Threat Neutralized".
+- Rewards tab, first-kill rows, all 13 claimed (green check):
+  Lv.100-150 hero portrait x1, grey chest x2, orange chest x2; Lv.160
+  hero portrait x1, grey chest x3, orange chest x3; Lv.170-190 50
+  stamina x1, grey chest x3, orange chest x3; Lv.200-220 50 stamina
+  x1, grey chest x2, orange chest x2.
+- Rewards tab, cumulative server-defeat rows, all 9 claimed: 20, 40,
+  60, 80, 100 carry 50 stamina x1 as first item (30, 50, 70, 90 carry
+  a gold bar x5); 5m speedup x20 up to 70, x40 from 80; red crystal
+  x20 throughout. No cumulative 10 row - the section starts at 20
+  directly after Lv.220, and cumulative 100 is the last row (list end
+  verified by a no-move drag).
+- Damage Ranking: 1 [AP3x]Nuna Knuckles 7.5G, 2 [B3WB]칼리아 Kalia
+  4.5G, 3 [AP3x]Awesome v2 4.3G, 4 [W77]귀여운 내 친구 4.2G, 5
+  [AP3x]KaBoom420 3.7G, 6 [CTR1]초리vv 3.7G; self [[AP3x] ]Bears Lair
+  Unlisted, Total Damage 0.
+- Ranking Reward tiers: No.1 x50, No.2 x45, No.3 to 5 x40, No.6 to 10
+  x35, No.11 to 50 x30, No.51 to 200 x25 (grey chest, orange chest,
+  gold each).
+- Item names are appearance-based; no tooltip was opened (scout is
+  read-only).
+- Method note: the first drag on the Ranking Reward tab did not move
+  the list; a longer drag from lower in the panel scrolled it.
+- CORRECTION to the 0325 section's partial-count reasoning: the
+  Rewards tab holds 13 first-kill rows + 9 cumulative rows = 22 rows
+  in total, all claimed. The 0325 section reasoned from a partial read
+  (10+ first-kill, 5+ cumulative seen) that 22 does not equal the
+  claimable row count on this tab; the full read supersedes that
+  arithmetic. The badge-22 composition itself stays OPEN: every row
+  is already claimed, so a badge counting claimable rows would read
+  0, and whether the badge counts total rows or something else is
+  unverified. Carried as an open question, not a resolution.
+- NOT answered by this unit: the Bloody Valor discrepancy (win 30 in
+  Rules only, absent from the live 17-medal list) and the +2.4K
+  Achievements lower bound (no 2.4K achievement in either list) -
+  both stay open, and their carrier chain (scout-2026-11-03) is now
+  complete with no successor, so they need a fresh scout carrier.
+- Unknown items carried: Doomsday badge-22 composition (see
+  correction above); furnace toast [22/60]; 99+ chat badge; chest tag
+  icon (Winter Rewards); commendation range +45.0K vs listed max
+  +33.0K; Campaign store SOLD pattern; Season Sandstorm Master
+  (Permanent) SOLD; [Z76] tag on the two March History rows.
+- Follow-up: none. Chain scout-2026-11-03 complete.
