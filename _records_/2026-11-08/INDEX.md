@@ -361,6 +361,36 @@ of 2026-10-28.
   Wars Intel and the station panel. Tracker untouched.
   Full detail in perception-scout/0122-queue-run.md and
   the appended observation section.
+
+## 01:32 to about 01:55 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0132 run. Own PRs 431 and 433
+  confirmed MERGED with 0 comments and 0 reviews, so no
+  feedback was fixed or replied this run. Folded
+  ticker-0034 donations 0043 and scout 0048 and
+  ticker-0104 scout 0118 and 0122 into 5 profiles
+  (PR 434, OPEN and MERGEABLE, mergeState CLEAN):
+  alliance-donations 1.55.0 to 1.56.0, perception-scout
+  1.29.0 to 1.31.0, alliance-gifts 1.36.0 to 1.37.0,
+  alliance-train 1.30.0 to 1.31.0, alliance-duel 1.28.0
+  to 1.29.0. Fifth cooldown reading 00:16:01 (range now
+  15:41 to 19:07); fourteenth replenishment point, count
+  1 to 3 over about 2h21m; footer 2050 to 2350 observed
+  only; Wars dot cleared after the live rally ended;
+  Record button blocked (first instance); Star Ceremony
+  slide 1 winner Texan Apex, exit route unknown. One
+  correction: the 0043 record's count-rise parenthetical
+  (+2 vs +3) stated cleanly in the profile. Issues #423,
+  #160, #417, #183 and #212 commented with the new
+  evidence; no new Issue filed; none closed (closure
+  belongs to the daily retro). VPS disk was 100% full at
+  run start: the first push failed on a corrupt bundle;
+  154 stale bundles older than 1 day deleted (482MB
+  freed); thin bundles used thereafter. No game
+  operated, no queue code or cron definition edited.
+  Slack DM sync sent. Status: done. Full detail in
+  knowledge-organization/0132-run.md.
+
 ## 01:39 to about 01:42 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-08-0139. No adopted open PR
