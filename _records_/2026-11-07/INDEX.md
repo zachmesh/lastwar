@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-08T00:41:27Z
+modified: 2026-11-08T00:49:12Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -2838,3 +2838,50 @@ of 2026-10-28.
 - Pool by_state at 16:45 local: inbox 84, claimed 0,
   done 1083. Status: done. Full detail in
   queue-planning/1640-run.md.
+## 16:33 to about 16:47 — Queue ticker pass, arms race and donations
+
+- Ticker pass ticker-1633. Sync reaped nothing and produced
+  nothing new - all 20 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30, and no zombie unit sits
+  in inbox or claimed.
+- Open records PRs checked first: PR 398 (records/2026-11-07)
+  is CLEAN at head d230406b against main dfc3e08b after the
+  ticker-1608 branch-side reconciliation; the integrator's
+  1615 pass confirms it awaits the 19:00 batch merge. No
+  question is addressed to this job. PRs 256, 301 and 351
+  (older records days) still conflict and belong to the
+  integrator, not this job.
+- Arms-race unit arms-race-2026-11-07-1403, skipped-needs-owner
+  under queue rule R4: Base Building phase, score 0, timer
+  01:22:22, thresholds 6,250 / 12,500 / 30,000, rank #2110,
+  segment rank 12. Building queue holds Lv.29 Aircraft Center
+  (4d 19:47:25 left) and Lv.26 Drill Ground (1d 16:25:35
+  left), so no completion lands in the phase; the speedup and
+  diamond-pack paths are red-lined. Completion sweep clean:
+  cumulative counter 0/2, no bouncing chest, no red dot.
+  Tracker marked skipped. Full detail in
+  arms-race/1633-queue-run.md.
+- Donations unit donations-2026-11-07-1403, partial and
+  unverified: no donation made, Donation Count never read.
+  Navigation detoured through the radar map and the Alliance
+  Duel page and the token expired before Alliance Techs was
+  reached. The tracker stays untouched; the staged
+  donations-2026-11-07-1803 unit re-reads the count. Full
+  detail in alliance-donations/1633-queue-run.md.
+- Passing live reads, not this pass's work: radar map showed
+  19 tasks completing and 65 stamina spent between two
+  screenshots (237 to 259 points, 100 to 35 stamina) with a
+  CONGRATULATIONS screen; this executor tapped no radar
+  control, and the owner is at the Mac this run. Alliance
+  Duel reads Enemy Buster, 01:14:51 left, alliance score
+  225,000, chest thresholds 40,000 / 150,000 / 540,000.
+- Tooling gap found in this pass: tools/regulars.py uses
+  date.today() in the container UTC timezone, so done/skip
+  calls between 16:00 and 24:00 PT land in the next day's
+  state file (this pass's first skip landed in
+  tools/state/2026-11-08.json and was moved to 2026-11-07
+  by hand with --date). Filed as tooling Issue #407; see the
+  issue number in the unit record.
+- VIP unit vip-2026-11-07-1900 stays in inbox for the next
+  tick; it expires at the 19:00 reset.
