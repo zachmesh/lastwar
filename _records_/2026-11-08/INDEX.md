@@ -3595,3 +3595,18 @@ of 2026-10-28.
   Nothing claimed, fought or dispatched; no red line
   crossed. Full detail in
   perception-scout/1545-queue-run.md.
+## 15:40 to about 15:47 — Queue planning pass
+- Planner pass queue-planning-2026-11-08-1540. Plan staged
+  5 fresh Nov 9 0257 slots (passes, secrets, treasures,
+  trucks, events), already_present 71, skipped_done_current
+  2, expired 1 (trucks-2026-11-08-1057); the 5 verified not
+  phantoms (future slots, no done records). Pre-reset sweep
+  pair already complete via plan (1630 seq 1 + 1730 seq 2,
+  chain pre-reset-sweep-2026-11-08, expiring at the 18:00
+  reset). Scout diff on the Nov 8 observation (564 lines,
+  byte-identical to the 1340/1440 copy) applied with zero
+  changes (observed 0, actionable 0, enqueued 0,
+  already-queued 0, candidates 0, unexplained red dots 14
+  unchanged). No withdrawals. Pool: inbox 79, claimed 0,
+  done 1278. Status: done. Full detail in
+  queue-planning/1540-run.md.
