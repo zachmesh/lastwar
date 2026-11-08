@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T14:42:04Z
+modified: 2026-11-08T18:38:59Z
 level: L1
-version: 1.37.0
+version: 1.40.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -56,6 +56,9 @@ grounded_in:
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, 3 red dots explained live, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution records 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Days Left 13) and 0542 queue run (done, three carried red dots explained live, 0022 white-truck mapping corrected) and alliance-donations execution record 2026-11-08 0546 queue run (partial, re-read after cooldown, last donation landed); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
+  - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live, 17 medals, Rules list corrected, Doomsday guardian rotated); record commit 8dcbdf92b9 on records/2026-11-08
+  - source: ticker-0834 perception-scout execution record 2026-11-08 0845 queue run (partial, station re-check, eighth no-train confirmation, Wars dot gone since 07:34, Issue #212); record commit cf80509ea on records/2026-11-08
+  - source: ticker-0934 perception-scout execution record 2026-11-08 0937 queue run (partial, Shop Campaign tab complete 17 items 7 SOLD, Shop Season tab complete 11 items Sandstorm Master SOLD, Winter Battlefield History tail complete 15 rows with 02:23 correction and [Z76] March rows, Donation Count 2/30 replenishment, Doomsday count finish carried to seq 007); record commit ac350b49c on records/2026-11-08
 ---
 
 
@@ -2614,3 +2617,253 @@ observe-only, nothing claimed). Evidence in
   possible daily boundary between 04:07 and 05:36 local, or a misread on
   one of the two reads - the next Mall re-read must record the value with
   its time.
+
+## What the 2026-11-08 0734 unit added - Winter Battlefield History and Achievement read live, 17 medals, Rules list is not the full set, Doomsday guardian rotated
+
+- Unit scout-scout-2026-11-03-005 by ticker-0734, chain scout-2026-11-03
+  seq 5, about 07:37 to 07:50 local, status partial - the 15-minute unit
+  cap ran out after History and Achievement; the Shop Campaign/Season
+  tabs, the Doomsday count finish and the History tail rows carry to
+  successor seq 006. Evidence in
+  `_records_/2026-11-08/perception-scout/0734-queue-run.md` (commit
+  8dcbdf92b9 on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-03/perception-scout/observation.md` (section
+  "Scout-events remainder, 0734 unit"). Observe-only. Nothing claimed,
+  fought, dispatched, donated, boarded or bought. The Match button was
+  never tapped (greyed - event not started).
+- Session: computer session cc-96 on the owner Mac mini. LastWar already
+  open on the Alliance Techs panel at entry (leftover from the ticker-0704
+  donations unit). One observe failure mid-unit (observation_unavailable)
+  and one transient privacy_unverified refusal, both recovered by
+  re-activating LastWar and re-observing; no game state lost. No
+  device-access error, no different-device dialog, no login demanded.
+- Entry screens (context, not this unit's work): Alliance Techs at entry
+  shows Quick Construction 8/10, Tech Donation Today 4400 - agreeing with
+  the 0706 donations close. Alliance panel underneath: [AP3x] The Apex,
+  5.0, Leader Abyss Apex, Power 13,416,181,168, Members 96/100, English.
+  Red dots on Alliance Wars, Help and Alliance Gifts (owning regulars'
+  availability signals). Alliance Star (Event 40), Time Left 10:11:46.
+  Base screen: Total Power 149,850,353; Food 478.8M, Iron 802.1M, Coin
+  6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2;
+  Season II 7d 10:31:28; furnace overdrive toast [22/60] recurring; 99+
+  chat badge recurring.
+- Winter Battlefield main page (re-confirmed): 5v5 event, "Event is
+  starting soon", countdown 10:20:52 at entry. Matching windows (Local
+  Time): 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00.
+  Matchmaking for Base level 15 and above during the specified times;
+  Match greyed.
+- History: Highest Win Streak 4, Battle Count 15, Victory Count 6. Rows
+  read in full (9): Defeat 2026-10-3 03:06, 23,688 vs 30,122, Lv.30;
+  Champion Leader 2026-6-6 19:41, 30,102 vs 22,828, Lv.27, MVP; Defeat
+  2026-6-6 19:33, 20,266 vs 30,504, Lv.27; Defeat 2026-6-6 19:18, 20,022
+  vs 30,148, Lv.27; Victory 2026-6-6 19:10, 30,100 vs 20,600, Lv.27;
+  Defeat 2026-5-2 19:53, 9,540 vs 30,040, Lv.25; Crushing Victory
+  2026-3-21 02:44, 30,072 vs 17,128, Lv.22; plus two rows whose outcome
+  labels or scores were above the fold (29,458 vs 30,752, Lv.27; one
+  Lv.27 row with medals). Tail below the fold unread: Narrow Victory
+  2026-3-21 02:33 and older rows - carries to seq 006.
+- Achievement Wall: [AP3x] Bears Lair Lv.30; Unyielding Stand Medal x3,
+  Battlefield Medic Medal x1, Stand Ready Medal x5, Assault Medal x2,
+  Rescue Medal x3, Defense Medal x9.
+- Achievements list, all 17 medals read: War Harvest (Plunder 5000
+  building points), Life Guardian (Heal 16000 units), Airdrop Hunter
+  (collect 6 airdrops), Thunder Assault (Use 600% March Speedup),
+  Unyielding Stand (defend same Building 120s), Fire Suppression
+  (Plunder 4000 building points), Battlefield Medic (Heal 10000 units),
+  Logistics Support (collect 4 airdrops), Tactical Maneuver (Use 400%
+  March Speedup), Battlefield Will (Win 25 battles), Stand Ready (defend
+  same Building 90s), Assault (Plunder 3000 building points), Rescue
+  (Heal 6000 units), Supply (collect 2 airdrops), Quick March (Use 200%
+  March Speedup), Frontline (Win 20 battles), Defense (defend same
+  Building 60s). Tiered families: win 20/25, defend 60/90/120s, heal
+  6000/10000/16000, plunder 3000/4000/5000, airdrops 2/4/6, speedup
+  200/400/600%. No per-medal reward values, progress numbers or claim
+  buttons are shown on this list.
+- CORRECTION to the 0608 section's Rules Achievements sub-tab (10 medals,
+  +2.8K/+3.5K): the Rules list is NOT the full achievement set - the live
+  Achievements list carries 17 medals. The Rules list is a partial list:
+  it omits the bottom tier of each family (Frontline win 20, Defense
+  60s, Rescue heal 6000, Assault plunder 3000, Supply 2 airdrops, Quick
+  March 200%) and it names Bloody Valor (win battles 30 times, +3.5K),
+  which does NOT appear in the live 17-medal list. The two lists disagree
+  on the win family (Rules: 25 and 30; live: 20 and 25). Recorded as an
+  open discrepancy, not resolved: whether Bloody Valor is a higher tier
+  not yet visible, a renamed medal, or a Rules-page error is unverified.
+  The 0608 open discrepancy stands: the Rewards-page Achievements range
+  reads +2.4K-3.5K, but the lowest listed achievement anywhere is +2.8K -
+  no 2.4K achievement was seen in either list.
+- Doomsday main page (re-confirmed, not the count finish): timer
+  10:21:10. Warzone Guardian now [AP3x]Nuna Knuckles, Total Damage 6.5G
+  (was [B3WB]Kalia Kalia 3.0G at the 0325 read - the guardian rotated to
+  an ally with higher damage; 5.2G at the 0656 read). Alliance Threat
+  (0), Warzone Threat (43) (was 46 at 0325, 28 at 0656), "Threat
+  Neutralized". Folded into event-claims 1.27.0.
+- Red dots: 4 seen, 4 explained, 0 unexplained in this unit's scope
+  (Frontline Breakthrough tab badge 1 = Challenge attempt per the 0325
+  read; Alliance Wars / Help / Alliance Gifts dots seen incidentally on
+  the alliance surface = owning regulars' availability signals).
+- Unknown items carried: History tail rows; chest tag icon;
+  Campaign/Season tabs; commendation range +45.0K vs listed max +33.0K;
+  achievement range +2.4K vs listed min +2.8K; Doomsday badge-22
+  composition; furnace toast [22/60]; 99+ chat badge.
+- Follow-up: successor seq 006 of chain scout-2026-11-03 enqueued for the
+  remainder (Shop Campaign/Season tabs, Doomsday count finish, History
+  tail rows).
+- Delivery note (repo state, not this unit's work): this pass appended
+  only its own 0734 section to
+  `_records_/2026-11-03/perception-scout/observation.md` on the records
+  branch; uncommitted observation sections from other scout passes in the
+  main checkout's working tree were left exactly as they were, for the PR
+  flow and the retro loop-health check.
+
+## What the 2026-11-08 0845 unit added - station re-check, eighth no-train confirmation, Wars dot gone since 07:34
+
+- Unit scout-scout-2026-11-02-010 by ticker-0834, about 08:43 to 08:45
+  local, status partial with blocker category h (by-design chain
+  continuation) - the station panel is a preparation-only surface and
+  stays unlocated until a train prepares, so the check itself is
+  conclusive for this window but the remainder is carried to the
+  successor. Evidence in
+  `_records_/2026-11-08/perception-scout/0845-queue-run.md` (commit
+  cf80509ea on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-08/perception-scout/observation.md` (section
+  "Station panel re-check, read live about 08:43-08:45 local").
+  Observe-only throughout; nothing claimed, fought, dispatched,
+  donated, boarded, dug or bought. Successor
+  scout-scout-2026-11-02-011 enqueued with the same window.
+- Session: computer session cc-100 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  Session ended cleanly at the unit close.
+- Entry route: the game was found on the ALLIANCE TECHS tree screen
+  (left there by the donations unit of this pass). Its outer X was
+  tapped at the grounded centre (818,152) and the Alliance menu opened
+  behind it. The menu was closed with its back arrow at (187,920) to
+  reach a clean base view for the train signals.
+- Alliance menu, about 08:44 local: [AP3x] The Apex, Overall Rating
+  5.0, Leader Abyss Apex, Power 13,259,135,070 (was 13,416,181,168 at
+  the 0734 entry read, 13,363,455,935 at the 0440 read), Members 95/100
+  (was 96/100), Language English. Red dots on Help and Alliance Gifts
+  only. NO dot on Alliance Wars - the dot was present and unexplained
+  in the seq 009 read at about 07:34 (Issue #212) and is gone now. No
+  dot on Members, Alliance Store or Alliance Techs. Assemble and
+  Strength Ranking cut off below the fold. Alliance Star (Event 40),
+  Time Left 09:05:32. Bottom row: Record, Applicants, Alliance Star,
+  Settings. No Station button on this panel, as established.
+- Base view, about 08:45 local: power 149,850,353; food 478.8M, iron
+  802.1M, coin 6.9M; second row 25.0M, 922.2K; diamonds 4,397 (cart);
+  stamina 120; Season II 7d 09:15:12. Left icon column: avatar Lv.30,
+  hammer 2/4 (red dot), flask 2/2, green face 6.5C, radio badge 4,
+  white truck (red dot), radar badge 2, wrench. NO train icon in this
+  frame. NO "Boarding closes in" banner under the resource bar - the
+  banner area shows the High-temp Furnace overdrive line and a Breaking
+  News line instead. Right column: Events badge 1, VS, Season II,
+  Alliance, Mail (red dot), Inventory (red dot), WORLD; 99+ badge.
+- Reading: neither train-preparation signal is present, so no train is
+  preparing in this window and the STATION PLATFORM screen has no live
+  state to read. Eighth no-train confirmation in this chain (third
+  2134, fourth 0022, fifth 2304, sixth 0118, seventh 0440 re-check,
+  eighth this unit). The platform stays a preparation-only surface,
+  carried not closed; the successor re-checks the two preparation
+  signals first rather than re-panning.
+- Wars dot flip: present at about 07:34 (seq 009, unexplained, Issue
+  #212), absent at about 08:44. No rally was opened in this unit
+  (scout observes only), so whether a rally ran in between is
+  unverified. Issue #212 stays open - the dot's semantics are still
+  unexplained - but there is no unexplained dot in this unit's window.
+  Commented on Issue #212 by this run.
+- Red dots seen in this unit's window: Help, Alliance Gifts (explained
+  - owning regulars help and gifts, units queued); Wars absent.
+  Explained 2, unexplained 0 for this unit's window. Other dots noted
+  in passing, outside this unit's scope and previously explained to
+  their owning regulars: hammer, radio 4, white truck, radar 2,
+  Events 1, Mail, Inventory, 99+.
+- Follow-up: successor scout-scout-2026-11-02-011 enqueued, same window
+  (station panel only, train entry and preparation state; Wars dot
+  Issue #212). The station remainder stays carried for the next
+  scout-alliance unit, which re-checks the two preparation signals
+  first.
+- Game left on the clean base view.
+
+## What the 2026-11-08 0937 unit added - Shop Campaign and Season tabs read in full, Winter Battlefield History tail complete, 02:23 correction, [Z76] March rows
+
+- Unit scout-scout-2026-11-03-006 by ticker-0934, about 09:37 to 09:44
+  local, status partial - the Shop Campaign/Season tabs and the Winter
+  Battlefield History tail are now fully read; the Doomsday count
+  finish carries to successor seq 007. Evidence in
+  `_records_/2026-11-08/perception-scout/0937-queue-run.md` (commit
+  ac350b49c on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-03/perception-scout/observation.md` (section
+  "Scout-events remainder, 0937 unit"). Observe-only throughout;
+  nothing claimed, fought, dispatched, donated, dug or bought. One
+  observe failure mid-unit (screen capture failed, privacy changed)
+  recovered by re-observing; no game state lost.
+- Session: computer session cc-103 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  Session window 09:37-09:44 local, about 7 minutes.
+- Entry: game on the Alliance Techs panel (leftover from the
+  ticker-0804 donations unit); Quick Construction 8/10, Donation Count
+  read live 2/30 (up from 1/30 at the 0808 close), settlement timer
+  08:21:00. Base screen: power 149,850,353; food 478.8M, iron 802.1M,
+  coin 6.9M; diamonds 4,397; badge 13.22K; stamina 120; Season II
+  7d 08:20:47. Top toast: "3 diamonds from Alliance Star Thank You
+  Gift".
+- Winter Battlefield main re-confirmed: countdown 08:20:26 falling to
+  08:15:26; windows 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09
+  13:00-15:00; Match greyed.
+- Shop Honor tab re-confirmed: balance 101.1K, same 12 items at full
+  stock as the 0608 read; refreshes 00:00 1st of month server time;
+  timer 22d 08:20:04.
+- Shop Campaign tab, complete, 17 items, balance 1,260 campaign stars,
+  refreshes Mondays 00:00 server time (timer 08:19:51): 7 items SOLD
+  (Campaign Chest UR, Lv.3 Drone Component Chest, Skill Chip Chest
+  SSR, Universal Exclusive Weapon Shard, Upgrade Ore 1.0K, Drone
+  Parts, Hero Recruitment Ticket); Resource Choice Chest SSR 33/200
+  @500 (partially bought, 167 of 200 gone); Battle Data 100K @2,000
+  and Basic Chip Material @5,000 priced above the 1,260 balance (red).
+  Full list in the observation file. NOTE: whether the owner bought
+  the 7 sold items is not established from this screen - carried as
+  an open question, not a claim.
+- Shop Season tab, complete, 11 items, balance 800 season crystals, no
+  refresh line visible on this tab: Dominance Sanctuary (Permanent)
+  @1,000 and Doomsday Castle (Permanent) @1,500 priced above the 800
+  balance (red); Sandstorm Master (Permanent) SOLD; everything else
+  at full stock. Full list in the observation file.
+- History tail, complete: all 15 rows now read (6 victories + 9
+  defeats = 15, matching Battle Count 15). Rows newly read in full:
+  Narrow Defeat 2026-6-6 19:26, 29,458 vs 30,752, Lv.27; Narrow
+  Defeat 2026-6-6 19:02, 29,072 vs 30,658, Lv.27, 3 medals; Narrow
+  Victory 2026-3-21 02:23, 30,002 vs 26,778, Lv.22, 2 medals; Victory
+  2026-3-21 02:16, 30,112 vs 21,048, Lv.22, 1 medal; Victory
+  2026-3-21 02:09, 30,342 vs 22,468, Lv.22, 2 medals; Defeat
+  2026-3-21 02:01, 24,880 vs 30,090, Lv.22, 1 medal; Defeat
+  2026-3-14 03:10, 17,736 vs 30,124, [Z76]Bears Lair Lv.22; Defeat
+  2026-3-7 03:41, 22,402 vs 31,698, [Z76]Bears Lair Lv.21.
+- CORRECTION to the 0734 section: the Narrow Victory row timestamp is
+  02:23, not 02:33 as the 0734 unit guessed from the above-the-fold
+  rows. The 0734 open item "History tail rows unread" is now
+  answered - the tail is complete.
+- The two March rows carry the [Z76] tag, not [AP3x] - the account was
+  in a different alliance in March 2026. Recorded as observed, not
+  explained.
+- Donation Count 2/30 at entry: the 0841 and 0920 taps are both proven
+  not landed and no donation landed in between, so the 1/30 to 2/30
+  move is replenishment. The +1 landed between the 0920 post-timer
+  re-read (still 1/30, about 09:20) and this entry read (about
+  09:37) - within about 17 minutes. Commented on Issues #160, #423
+  and #450 by this run. Cross-ref: alliance-donations 1.66.0.
+- Red dot accounting: 4 seen, 4 explained, 0 unexplained in this
+  unit scope (Events hub Frontline Breakthrough tab badge 1 =
+  Challenge attempt per the 0325 read; Alliance Help, Alliance Gifts
+  and Alliance Techs dots seen incidentally on the alliance surface =
+  owning regulars' availability signals, not this unit's events
+  group).
+- Follow-up: successor seq 007 enqueued in chain scout-2026-11-03 -
+  Doomsday count finish (Lv.150 row, Lv.220 rewards, cumulative rows
+  below 30 and above 70, Damage Ranking, Ranking Reward tabs). After
+  it, the stale 2026-11-03 post-reset scout chain is complete.
+- Unknown items carried: chest tag icon (Winter Rewards);
+  commendation range +45.0K vs listed max +33.0K; achievement range
+  +2.4K vs listed min +2.8K; Doomsday badge-22 composition; furnace
+  toast [22/60]; 99+ chat badge; Campaign store SOLD pattern (who
+  bought the 7 sold items, and when); Season Sandstorm Master
+  (Permanent) SOLD; [Z76] tag on the two March History rows.

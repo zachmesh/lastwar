@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T14:42:04Z
+modified: 2026-11-08T15:38:02Z
 level: L1
-version: 1.35.0
+version: 1.36.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -40,6 +40,7 @@ grounded_in:
   - source: ticker-0404 perception-scout execution record 2026-11-08 0407 queue run (done, store remainder, five Mall tabs walked live)
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Store tab strip read in part, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution record 2026-11-08 0538 queue run (done, Mall strip five tabs re-read live, Weekly Pass 18:00 reset sixth confirmation); record commit 707bcec0d8 on records/2026-11-08
+  - source: ticker-0634 shop-claims execution record 2026-11-08 0634 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset seventh confirmation, Season hub layout differs); record commit 9669d391ea on records/2026-11-08
 ---
 
 
@@ -1057,3 +1058,58 @@ the free and already paid for parts, never the paid unlocks.
   group are all walked. No successor enqueued.
 - Game left safe: game left on the base screen. Nothing bought. No Assemble,
   no teleport.
+
+## What the 2026-11-08 0634 passes unit added - shop surfaces checked live, Weekly Pass 18:00 reset confirmed a seventh time, Season hub layout differs again
+
+- Unit passes-2026-11-08-0257 by ticker-0634, about 06:35 to 06:52
+  local, status partial - the shop surfaces were checked live and the
+  monthly pass gift was already claimed, but the Season hub claim path
+  was not navigated within the unit cap, so the season sub-part carries
+  to the next passes unit. Evidence in
+  `_records_/2026-11-08/shop-claims/0634-queue-run.md` (commit
+  9669d391ea on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-92 on the owner Mac mini, LastWar window
+  already open on the Events screen (Winter Battlefield tab) at entry.
+  No device-access error, no different-device dialog, no login demanded.
+  No Zombie Invasion tab is visible in the Events tab bar (tabs read
+  Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday) -
+  consistent with the event having ended 2026-10-30; the tab bar was
+  re-read live, commented on Issue #419 by this run.
+- Hot Deals: no free pack is showing. Both carousel pages are promos for
+  the external Last War Store (check-in event with a FREE GIFT card, and
+  a 1000 POINTS claim-points card). Two taps on the FREE GIFT card only
+  swiped the carousel between pages, so that method was stopped per R2.
+  The Go button was not tapped - it leads to the external store, outside
+  this unit's in-game scope. No free pack claimed here.
+- Weekly Pass page: rewards reset reads 18:00:00 - the SEVENTH live
+  confirmation of the line (after 0114, 1812, 1853, 2209, 0407 and
+  0538). The activity metadata says 19:00 - the discrepancy is noted,
+  not resolved; the next passes unit re-reads it and corrects the
+  metadata if it holds. Commented on Issue #242 by this run. The Free
+  Supply chest is present with no claim button; the metadata says it
+  auto-claims on page open, and a "congrats!" fragment appeared in the
+  first shop-open OCR, but no reward text was seen live, so no Free
+  Supply payout is claimed as a closing figure - unverified. The
+  Legendary Take All $19.99 row was not tapped. Four weekly pass cards
+  were read in full - S2 Drone Components (Legendary), S1 Drone Parts
+  (Epic), Iron, Coin (Elite) - every one shows a $4.99 Get Now button,
+  so none is owned and no Daily Pickup is claimable on this page. The S1
+  Drone Parts and Coin passes the metadata records as owned on
+  2026-10-25 have expired since.
+- Super Monthly Pass page: Monthly Pass, 13 Days Left, Squad 4 Lv.20,
+  Daily Pickup button reads Claimed, Rewards Left 13 - today's gift is
+  already claimed. The $24.99 Monthly Pass Extension button was not
+  tapped.
+- Season hub: the Season II Polar World hub opened from the base screen.
+  Its layout differs from the activity metadata - the hub shows a
+  Calculating card (10:21:10) and a Season Photo card (11:21:09), with
+  no Battle Pass or Weekly Pass entries visible on this screen. Not
+  navigated further within the unit cap. This matches the 2026-11-01 hub
+  read (Calculating card plus Season Photo card, Battle Pass and Weekly
+  Pass tiles gone) - a re-confirmation, not a new disappearance.
+  Follow-up for the next passes unit: navigate the Season hub claim path
+  from the Calculating card (or re-check the hub) and confirm whether the
+  Season Battle Pass free tiers and the Season Weekly Pass Daily Freebie
+  and Daily Pickup are still reachable; if the path is gone, file a
+  knowledge Issue and update the shop-claims metadata.
+- Game left safe: base screen. Nothing bought. No Assemble, no teleport.

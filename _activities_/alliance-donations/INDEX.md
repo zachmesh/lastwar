@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T14:42:04Z
+modified: 2026-11-08T18:50:11Z
 level: L1
-version: 1.62.0
+version: 1.67.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -74,6 +74,12 @@ grounded_in:
   - source: ticker-0504 alliance-donations execution record 2026-11-08 0519 queue run (partial, 3 coin donations landed, fourth tap eaten, fifth tap unconfirmed, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 alliance-donations execution record 2026-11-08 0546 queue run (partial, re-read after cooldown, last donation landed, 00:11:00 timer); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, incidental Alliance Tech entry read: Donation Count 1/30, footer 4050); record commit 50389b4b4a on records/2026-11-08
+  - source: ticker-0704 alliance-donations execution record 2026-11-08 0706 queue run (partial, re-read after cooldown, 3 coin donations verified, grey-button evidence disproved, count replenished 1 to 4, Issue #450); record commit 60a1fa835f on records/2026-11-08
+  - source: ticker-0804 alliance-donations execution record 2026-11-08 0808 queue run (partial, re-read after cooldown, 1 coin donation verified, burst cap after one verified donation, grey-button evidence disproved a second time, count replenished 1 to 2, Issue #450); record commit 97437267c4 on records/2026-11-08
+  - source: ticker-0834 alliance-donations execution record 2026-11-08 0841 queue run (partial, re-read after cooldown, 0804 third tap proven eaten, one coin tap dispatched unverified behind a 00:16:27 timer, footer +100, count stuck at 1/30, Issue #450); record commit cf80509ea on records/2026-11-08
+  - source: ticker-0904 alliance-donations execution record 2026-11-08 0920 queue run (partial, re-read after cooldown, 0841 tap proven eaten at entry, one coin tap proven not landed after its 00:07:01 timer cleared, long-press no-op, third consecutive partial on the 1/30 blocker, changed route per R2, Issue #450); record commit 387928fc7f on records/2026-11-08
+  - source: ticker-0934 perception-scout execution record 2026-11-08 0937 queue run (Donation Count read live 2/30 at entry, up from 1/30 at the 0808 close with no landed donation in between, replenishment +1 within about 17 minutes, Quick Construction 8/10, settlement timer 08:21:00; record commit ac350b49c on records/2026-11-08)
+  - source: ticker-1017 alliance-donations execution record 2026-11-08 1034 queue run (partial, re-read of the 1621 unit, three coin donations verified live 4/30 to 1/30, stopped at the live-read 1/30 per the changed route, no timer after taps from 2 or above, War-tab branch still untested, weekly settlement countdown 07:32:28; record commit a2cafb907 on records/2026-11-08)
 ---
 
 
@@ -198,6 +204,26 @@ activity. Not a separate type.
   throughout and still green at 1/30, no timer shown, so
   the stop-on-grey rule stands but no count expectation
   (7 to 9) attaches to it; see the 2014 unit section.
+  Correction, 2026-11-08 0920: the 1/30 state is the blocker, not
+  the burst count - taps from a live-read 1/30 on Quick
+  Construction have now failed to land five times in a row (0704
+  fourth tap, 0804 second tap, 0804 third tap, 0841 tap, 0920
+  tap), while taps land fine at count 2 (1523 verified a 2 to 1
+  landing before its 1/30 taps failed). Per queue rule R2, the
+  third consecutive partial on this same blocker changes the entry
+  route before any further unit of this type runs. CHANGED ROUTE,
+  standing: do NOT tap from 1/30 on Quick Construction again. If
+  the count reads 1/30, first check whether it has replenished
+  above 1, or try the War-tab node (Rallied Attack / Rallied
+  Defense) as the changed entry route. A 2-second long-press on
+  the green Donate button dispatches nothing (0920 unit) - the
+  "Hold down for easier Continuous donations" tooltip is not a
+  dispatch method for this button. Replenishment caveat: because
+  the count replenishes, "count unchanged after the timer" cannot
+  strictly distinguish eaten from landed-plus-replenished inside
+  one window; the proof is pattern-level across three consecutive
+  units, not per-tap. See the 0841 and 0920 unit sections and
+  Issue #450.
 
 ## Hard closing rule - live read or unverified (2026-10-31 fix)
 
@@ -1082,7 +1108,7 @@ before 03:17 local). Evidence in
   the sixth cooldown reading 00:08:17 supersedes the standing 'roughly
   15 to 19 minutes' range - the range is now 08:17 to 19:07. Evidence
   commented on Issue #160 by the ticker pass (rise) and by this run
-  (sixth cooldown reading), and on Issue #423 by this run. Sixteenth data point 2026-11-08 0406: live 3/30 at entry after the 0034 1/30 close at about 00:43, about 2 back over about 3 hours 17 minutes (about 1 per 98 minutes as a two-endpoint estimate only; on the 0244 intermediate 1/30 close at about 02:44 the rise is about 2 over about 1 hour 16 minutes) - the third confirmation of the between-units rise, and far slower than the roughly 1-per-20-minutes estimate on either anchor. The seventh cooldown reading 00:10:25 sits inside the corrected 08:17 to 19:07 range, which is unchanged. The rate is still NOT measured. Evidence commented on Issue #160 and Issue #423 by this run. Seventeenth data point 2026-11-08 0519: live 4/30 at entry after the 0406 1/30 close at about 04:06, about 3 back over about 1 hour 10 minutes (about 1 per 23 minutes as a two-endpoint estimate only) - the fourth confirmation of the between-units rise; whether the 0406 third tap landed cannot be told from this rise alone. The eighth cooldown reading 00:19:35 sits inside the corrected 08:17 to 19:07 range, which is unchanged. The rate is still NOT measured. Evidence commented on Issue #423 by this run; the ticker pass commented the rise, cooldown and footer data on Issue #160. Eighteenth data point 2026-11-08 0546/0608: the 0546 unit landed one verified coin donation at about 05:47 local from a live-read 1/30 (the 0519 fifth tap confirmed not landed by that same read); the 0608 scout unit's incidental entry read at about 06:08 local shows Donation Count 1/30 on Quick Construction, about 0 back to 1 over about 21 minutes as a two-endpoint estimate only - the fastest short-interval rise observed, consistent with the roughly 1-per-20-minutes estimate, NOT a measured rate. The 0608 record's alternative - the count is per-tech, not the day total - is flagged as an open alternative, not adopted; the 1346 re-read tests it. The ninth cooldown reading 00:11:00 sits inside the corrected 08:17 to 19:07 range, which is unchanged. The rate is still NOT measured. Evidence commented on Issue #160 by this run; the 0519 fifth-tap resolution and the strengthened seventeenth-point anchor commented on Issue #423 by this run.
+  (sixth cooldown reading), and on Issue #423 by this run. Sixteenth data point 2026-11-08 0406: live 3/30 at entry after the 0034 1/30 close at about 00:43, about 2 back over about 3 hours 17 minutes (about 1 per 98 minutes as a two-endpoint estimate only; on the 0244 intermediate 1/30 close at about 02:44 the rise is about 2 over about 1 hour 16 minutes) - the third confirmation of the between-units rise, and far slower than the roughly 1-per-20-minutes estimate on either anchor. The seventh cooldown reading 00:10:25 sits inside the corrected 08:17 to 19:07 range, which is unchanged. The rate is still NOT measured. Evidence commented on Issue #160 and Issue #423 by this run. Seventeenth data point 2026-11-08 0519: live 4/30 at entry after the 0406 1/30 close at about 04:06, about 3 back over about 1 hour 10 minutes (about 1 per 23 minutes as a two-endpoint estimate only) - the fourth confirmation of the between-units rise; whether the 0406 third tap landed cannot be told from this rise alone. The eighth cooldown reading 00:19:35 sits inside the corrected 08:17 to 19:07 range, which is unchanged. The rate is still NOT measured. Evidence commented on Issue #423 by this run; the ticker pass commented the rise, cooldown and footer data on Issue #160. Eighteenth data point 2026-11-08 0546/0608: the 0546 unit landed one verified coin donation at about 05:47 local from a live-read 1/30 (the 0519 fifth tap confirmed not landed by that same read); the 0608 scout unit's incidental entry read at about 06:08 local shows Donation Count 1/30 on Quick Construction, about 0 back to 1 over about 21 minutes as a two-endpoint estimate only - the fastest short-interval rise observed, consistent with the roughly 1-per-20-minutes estimate, NOT a measured rate. The 0608 record's alternative - the count is per-tech, not the day total - is flagged as an open alternative, not adopted; the 1346 re-read tests it. The ninth cooldown reading 00:11:00 sits inside the corrected 08:17 to 19:07 range, which is unchanged. The rate is still NOT measured. Evidence commented on Issue #160 by this run; the 0519 fifth-tap resolution and the strengthened seventeenth-point anchor commented on Issue #423 by this run. Nineteenth data point 2026-11-08 0706: live 4/30 at entry after the 0546 1/30 close at about 05:47, about 3 back over about 80 minutes (about 1 per 27 minutes as a two-endpoint estimate only) - the fifth confirmation of the between-units rise; the 0546 landing itself is now supported only by the footer delta 4000 to 4050 between the units, not by the grey-button-plus-badge evidence, which the 0706 fourth tap disproves as landing evidence (see the 0706 unit section and Issue #450). The tenth cooldown reading 00:05:07 supersedes the standing 08:17 to 19:07 range at the low end - the range is now 05:07 to 19:35 (00:19:35 from the 0519 unit remains the high); the eleventh reading 00:19:33 sits inside the corrected range. The rate is still NOT measured. Evidence commented on Issue #160, Issue #423 and Issue #417 by this run. Twentieth data point 2026-11-08 0808: live 2/30 at entry after the 0704 1/30 close at about 07:24, about 1 back over about 47 minutes (about 1 per 47 minutes as a two-endpoint estimate only) - the sixth confirmation of the between-units rise, in line with the 0546-to-0704 rate of about 1 per 27 minutes. The twelfth cooldown reading 00:04:19 supersedes the standing 05:07 to 19:35 range at the low end - the range is now 04:19 to 19:35 (00:19:35 from the 0519 unit remains the high); the thirteenth reading 00:17:33 sits inside the corrected range. The burst cap bit after a single verified donation in this unit, so the burst pattern is not 'after a few rapid donations' - it can bite after as few as one. The rate is still NOT measured. Evidence commented on Issue #160, Issue #423 and Issue #417 by this run. No new replenishment data point this hour: the count stayed 1/30 across both the 0841 and 0920 units, with no rise observed. The fourteenth cooldown reading 00:16:27 (0841) and the fifteenth 00:07:01 (0920) both sit inside the corrected 04:19 to 19:35 range, which is unchanged; the 00:07:01 breaks the roughly-17-minute pattern of the two previous taps from 1/30, so timer length varies and is recorded, not explained. The eaten-tap series now stands at five confirmations, and the 1/30 stickiness across three consecutive units is the blocker - see the burst section and the 0841 and 0920 unit sections. The rate is still NOT measured. Evidence commented on Issue #450, Issue #160, Issue #423 and Issue #417 by this run.
 - Donation Count 30/30 read 2026-11-02 1810, ambiguous and
   NOT asserted as a replenishment measurement: the read
   conflicts with the sweep's last live count of 1 remaining
@@ -2691,7 +2717,12 @@ enqueued for after the cooldown (not before about
   cooldown timer where the count label had been, and the HUD badge count
   moved 301.9K to 302.0K. The Donation Count label is now hidden behind the
   timer, so the post-donation 0/30 read is NOT available in this unit - no
-  arithmetic final is claimed as the closing count. Cooldown, ninth reading
+  arithmetic final is claimed as the closing count. (Correction 2026-11-08
+  0706, Issue #450: the 0706 unit shows this same evidence signature - a
+  greyed button with a cooldown timer plus a HUD badge move - on a tap that
+  did NOT land, so this landing is no longer verified on this evidence
+  alone; the footer delta 4000 to 4050 between the units still supports
+  the donation having landed. See the 0706 unit section.) Cooldown, ninth reading
   for Issue #160: 00:11:00, against 00:19:01 (1924), 00:18:46 (2018),
   00:19:07 (2219), 00:15:41 (2341), 00:16:01 (0043), 00:08:17 (0244),
   00:10:25 (0406) and 00:19:35 (0519). The reading sits inside the
@@ -2725,3 +2756,426 @@ enqueued for after the cooldown (not before about
   cannot be closed as done (rule R1 / hard closing rule). The 30-of-30
   daily target for 2026-11-07 remains unverified.
 - Game left safe: base screen, no purchase, no diamond spent.
+
+## What the 2026-11-08 0706 unit added - re-read of the 1056 unit, three donations verified live, grey-button evidence disproved, count replenished again
+
+- Unit donations-2026-11-08-1346 by ticker-0704, about 07:06 to 07:22
+  local, status partial and unverified. Evidence in
+  `_records_/2026-11-08/alliance-donations/0706-queue-run.md` (commit
+  60a1fa835f on records/2026-11-08). This is the re-read the 0546 unit
+  enqueued (not-before 2026-11-08T14:02:00Z). Tracker untouched.
+- Sessions cc-94 and cc-95 on the owner Mac mini. Session cc-94 dropped
+  mid-unit during the cooldown wait (observe returned
+  observation_unavailable); cc-95 was started and LastWar re-selected
+  with no game state lost. No device-access error, no different-device
+  dialog, no login demanded.
+- Entry route: the Alliance shield icon was tapped at its fresh measured
+  centre on the live screenshot (937,725 normalized) - the menu opened
+  first try, no Drill Ground detour. The R2-changed route holds.
+- Alliance menu: [AP3x] The Apex, Overall Rating 5.0, Leader Abyss Apex,
+  Power 13,393,268,780, Members 96/100, Language English. Tiles:
+  Alliance Wars, Help (red dot), Alliance Gifts (red dot), Members,
+  Alliance Store, Alliance Techs (red dot). Alliance Star (Event 40),
+  Time Left 10:41:09.
+- ALLIANCE TECHS, Development tab: Auto Rally Max Level, Quick
+  Construction 8/10 (recommended marker), Great Helper Max Level, one
+  node below at 2/10 (partially visible). Footer at entry: Tech Donation
+  Today 4050.
+- Quick Construction panel (recommended node): "Increased Building Speed
+  for Allies", Donation Reward +20%, Tech EXP Required 1.3M/6.0M,
+  Current +20%, Next Level +22.5%, Donation Reward EXP 50 + badge 50.
+- Donation Count read live at entry: 4/30 (remaining). This is NOT the
+  0/30 the 0546 unit's arithmetic implied: the 0546 unit read 1/30,
+  donated once, and left the count hidden behind its timer. The count
+  ROSE from 1/30 (0546, about 05:47) to 4/30 (this unit, about 07:08) -
+  the nineteenth replenishment data point for Issue #160 (see Open
+  questions). The per-tech alternative the 0608 record raised is still
+  untested by a cross-tech comparison - both reads are on Quick
+  Construction - so it stays open.
+- Three coin donations made and verified live, green Donate button, 900
+  coins each: count 4/30 to 3/30 to 2/30 to 1/30, each step read live on
+  its own screenshot. The diamond Donate button (2 diamonds) was not
+  used. HUD badge count moved 302.0K to 302.3K across the three verified
+  donations.
+- Fourth tap: the coin button greyed immediately with a 00:05:07
+  cooldown timer and the badge moved to 302.4K, but after the timer
+  expired the count read 1/30 again - the tap did NOT land. Button-grey
+  plus badge move is NOT landing evidence. This disproves the
+  landing-verification method the 0546 unit used (see the correction in
+  the 0546 unit section above) - the 0546 donation itself is now
+  supported only by the footer delta 4000 to 4050 between the units.
+  Filed as GitHub Issue #450 (knowledge) by the ticker-0704 pass;
+  commented by this run with the fold.
+- Fifth tap (at 1/30, button green and active): the coin button greyed
+  again with a 00:19:33 timer and the badge moved to 302.6K. The count
+  is hidden behind this timer, which outruns the unit's remaining budget,
+  so whether this tap landed is UNVERIFIED. No arithmetic final is
+  claimed as the closing count.
+- Alternative-surface re-read: Tech Donation Today footer read live at
+  close: 4400 (entry 4050, delta +350). The delta does not reconcile
+  with 50 points per coin donation over this unit's five taps, so the
+  footer is NOT used as a count proxy - it is recorded only as an
+  observed figure. The badge HUD (302.0K to 302.6K) is likewise recorded,
+  not used as landing evidence. Commented on Issue #417 by this run.
+- The burst pattern from 2026-10-26 repeats: after a few rapid donations
+  the button greys with a timer (5:07, then 19:33 here) while the count
+  is still above zero. Timer lengths vary and are not yet modelled.
+  Cooldown readings: the tenth 00:05:07 supersedes the standing 08:17 to
+  19:07 range at the low end (range now 05:07 to 19:35; 00:19:35 from the
+  0519 unit remains the high); the eleventh 00:19:33 sits inside the
+  corrected range. Commented on Issue #160 by this run.
+- Follow-up: re-read unit donations-2026-11-08-1523 enqueued, not-before
+  2026-11-08T15:40:00Z (after the 00:19:33 cooldown): it reads the
+  Donation Count live and, if it still shows 1 remaining, donates once
+  more; if 0, the day is done and the tracker is marked.
+- The Donation Count was never read live at 0/30 in this unit, so the day
+  cannot be closed as done (rule R1 / hard closing rule). The 30-of-30
+  daily target for 2026-11-08 remains unverified.
+- Game left safe: base screen, no purchase, no diamond spent.
+
+## What the 2026-11-08 0808 unit added - re-read of the 1346 unit, one donation verified live, burst cap after one verified donation, grey-button evidence disproved a second time, count replenished again
+
+- Unit donations-2026-11-08-1523 by ticker-0804, about 08:08 to 08:24
+  local, status partial and unverified. Evidence in
+  `_records_/2026-11-08/alliance-donations/0808-queue-run.md` (commit
+  97437267c4 on records/2026-11-08). This is the re-read the 0706 unit
+  enqueued (not-before 2026-11-08T15:40:00Z). Tracker untouched.
+- Sessions cc-97 and cc-98 on the owner Mac mini. Session cc-97 dropped
+  during the cooldown wait (observe returned observation_unavailable);
+  cc-98 was started and LastWar re-selected with no game state lost. No
+  device-access error, no different-device dialog, no login demanded. A
+  computer-session drop, the same class as cc-94/cc-95 in the 0706 unit,
+  not the recurring screen-capture channel failure of Issue #282.
+- Entry route: the Alliance shield icon was tapped at its fresh measured
+  centre on the live screenshot (937,727 normalized) - the menu opened
+  first try, no Drill Ground detour. The R2-changed route holds. The game
+  was found on the EVENTS screen (Winter Battlefield); the back arrow was
+  re-grounded (first tap at y 893 landed above the button and did
+  nothing; second tap at the measured centre 181,938 returned to base).
+- Alliance menu: [AP3x] The Apex, Overall Rating 5.0, Leader Abyss Apex,
+  Power 13,259,135,070 (was 13,393,268,780 at 0706), Members 95/100 (was
+  96/100), Language English. Tiles: Alliance Wars, Help (red dot),
+  Alliance Gifts (red dot), Members, Alliance Store, Alliance Techs.
+  Alliance Star (Event 40), Time Left 09:39:44.
+- ALLIANCE TECHS, Development tab: Auto Rally Max Level, Quick
+  Construction 8/10 (recommended marker), Great Helper Max Level, one
+  node below at 2/10 (partially visible). Footer at entry: Tech Donation
+  Today 4400 (agrees with the 0706 close figure). "This week's donations
+  will be settled soon: 09:47:54" at entry.
+- Quick Construction panel (recommended node): "Increased Building Speed
+  for Allies", Donation Reward +20%, Tech EXP Required 1.4M/6.0M (was
+  1.3M/6.0M at 0706), Current +20%, Next Level +22.5%, Donation Reward
+  EXP 50 + badge 50.
+- Donation Count read live at entry: 2/30 (remaining). This is NOT the
+  0/30 the 0704 unit's arithmetic implied: the 0704 unit left the count
+  at 1/30 (about 07:24) and this unit read 2/30 (about 08:11) - the
+  twentieth replenishment data point for Issue #160 (see Open
+  questions), about 1 back over about 47 minutes (about 1 per 47
+  minutes as a two-endpoint estimate only), in line with the 0546 to
+  0704 rate of about 1 per 27 minutes. A 0/30 read is therefore not a
+  stable day-done state; more donations become available later in the
+  day.
+- First tap (green Donate 900): VERIFIED landed - the count read 1/30
+  live on the next screenshot, and the HUD badge moved 302.6K to 302.7K.
+  Button stayed green and live.
+- Second tap (green Donate 900): the coin button greyed immediately with
+  a 00:04:19 cooldown timer and the badge moved to 302.8K, but after the
+  timer expired (about 4.5 minutes waited inside the unit) the count
+  read 1/30 again - the tap did NOT land, by the same count-unchanged
+  signature as the 0704 unit's fourth tap. The badge move alone is not
+  landing evidence. This is the second confirmation that a greyed button
+  with a cooldown timer plus a HUD badge move does NOT prove a donation
+  landed (Issue #450).
+- CORRECTION to the burst-pattern claim in the 0706 unit section ("after
+  a few rapid donations the button greys with a timer"): the burst cap
+  is reached after as few as ONE verified donation in a burst - this
+  unit's second tap greyed without landing after a single verified
+  donation, while the count stayed above zero. The "few" is corrected to
+  "as few as one".
+- Third tap (at 1/30, button green and active): the coin button greyed
+  again with a 00:17:33 timer and the badge moved to 302.9K, and a "Hold
+  down for easier Continuous donations" tooltip appeared - holding the
+  button may donate continuously. NOT tried in this unit; the next unit
+  may try a hold if the button is live and the count is above zero. The
+  count is hidden behind this timer, which outruns the unit's remaining
+  budget, so whether this tap landed is UNVERIFIED. No arithmetic final
+  is claimed as the closing count.
+- Cooldown timers grow inside a burst: 00:04:19 after this unit's second
+  tap, 00:17:33 after the third (0704 saw 00:05:07 then 00:19:33). The
+  timer is a burst cooldown, not a refill timer: after the 00:04:19
+  timer cleared the count was unchanged (1/30), so no refill arrived
+  with the timer. Cooldown readings: the twelfth 00:04:19 supersedes
+  the standing 05:07 to 19:35 range at the low end (range now 04:19 to
+  19:35; 00:19:35 from the 0519 unit remains the high); the thirteenth
+  00:17:33 sits inside the corrected range. Commented on Issue #160 by
+  this run.
+- Alternative-surface re-read: Tech Donation Today footer read live at
+  close: 4600 (entry 4400, delta +200). The delta does not reconcile
+  with 50 points per coin donation over this unit's one verified
+  donation (the 0704 unit saw +350 for three verified donations), so the
+  footer is NOT used as a count proxy - it is recorded only as an
+  observed figure. The footer moves independently of verified donations.
+  Commented on Issue #417 by this run.
+- Follow-up: re-read unit enqueued, not-before 2026-11-08T16:40:00Z
+  (after the 00:17:33 cooldown): it reads the Donation Count live and,
+  if it still shows 1 remaining, donates once more; if 0, the day is
+  done and the tracker is marked. The 1146 and 1318 re-read units still
+  have no record on the branch.
+- The Donation Count was never read live at 0/30 in this unit, so the day
+  cannot be closed as done (rule R1 / hard closing rule). The 30-of-30
+  daily target for 2026-11-08 remains unverified.
+- Game left safe: base screen, no purchase, no diamond spent. Coins
+  spent: 900 verified (one donation); the third tap's 900 is unverified.
+
+## What the 2026-11-08 0841 unit added - re-read of the 1523 unit, 0804 third tap proven eaten, one tap dispatched unverified behind a 00:16:27 timer, footer +100
+
+- Unit donations-2026-11-08-1146 by ticker-0834, about 08:38 to 08:41
+  local, status partial and unverified. Evidence in
+  `_records_/2026-11-08/alliance-donations/0841-queue-run.md` (commit
+  cf80509ea on records/2026-11-08). This is the re-read the 0808 unit
+  enqueued (not-before 2026-11-08T16:40:00Z) - a stale re-read enqueued
+  at 03:46 local whose window described an older count state; executed
+  as a live re-read of the current count, which is what the queue
+  needed, and its result supersedes its window text. Tracker untouched.
+- Session: computer session cc-99 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  Session ended cleanly at the unit close.
+- Entry route: the game was found already on the ALLIANCE TECHS screen
+  (left there by the 0804 pass), Development tab, Quick Construction
+  8/10 carrying the recommended marker. The node was tapped at its
+  grounded centre (283,518) and the donation panel opened first try.
+  Base resources at entry: food 478.8M, iron 802.1M, coin 6.9M, badge
+  302.9K, diamonds 4,397.
+- Donation Count read live at entry: 1/30. This proves the 0804 unit's
+  third tap did NOT land - its 00:17:33 timer had cleared and the count
+  still showed 1 remaining. The green coin Donate 900 button was live,
+  not greyed. Third eaten-tap confirmation in the series (0704 fourth
+  tap, 0804 second tap, 0804 third tap confirmed here).
+- One tap (green Donate 900, grounded centre 647,779, single tap): the
+  coin button greyed with a 00:16:27 cooldown timer and the badge moved
+  302.9K to 303.0K, but the count label is hidden behind the timer, so
+  whether this tap landed is UNVERIFIED. The grey-plus-badge signature
+  is confirmed NOT to be landing evidence for a third unit in a row
+  (0704, 0804, this unit).
+- Footer re-read live at close (panel closed back to the tree screen):
+  Tech Donation Today 4700 (entry 4600, delta +100). The delta does not
+  reconcile with 50 points per coin donation over this unit's one
+  dispatched donation, so the footer is NOT used as a count proxy - it
+  is recorded only as an observed figure. The 0804 unit saw +200 for
+  one verified donation; this unit saw +100 for one dispatched
+  donation. The footer moves independently of verified donations.
+  Commented on Issue #417 by this run.
+- Cooldown timers inside a burst stay long: 00:16:27 after this unit's
+  single tap from 1/30 (0804 saw 00:17:33 after its third tap). A tap
+  from 1/30 therefore always costs a re-read unit after a roughly
+  17 minute timer. The fourteenth cooldown reading 00:16:27 sits inside
+  the corrected 04:19 to 19:35 range, which is unchanged. Commented on
+  Issue #160 by this run.
+- Follow-up: re-read designated for this tap is the already-queued
+  donations-2026-11-08-1621 (not-before 2026-11-08T16:40:00Z), after
+  this timer clears at about 08:57 local. No duplicate re-read unit
+  was enqueued from this unit.
+- Game left safe: base screen, no purchase, no diamond spent. Coins
+  spent: 900 dispatched, unverified.
+
+## What the 2026-11-08 0920 unit added - re-read of the 1146 unit, 0841 tap proven eaten at entry, own tap proven not landed after its timer, long-press is a no-op, third consecutive partial on the 1/30 blocker, changed route
+
+- Unit donations-2026-11-08-1318 by ticker-0904, about 09:06 to 09:20
+  local, status partial and unverified. Evidence in
+  `_records_/2026-11-08/alliance-donations/0920-queue-run.md` (commit
+  387928fc7f on records/2026-11-08). This is the re-read the 0841 unit
+  designated (not-before passed). Tracker untouched.
+- Sessions cc-101 then cc-102 on the owner Mac mini: cc-101 closed
+  itself during the 7.5 minute timer wait (observe returned
+  observation_unavailable, no session open); cc-102 was reopened
+  without issue and the game was exactly where it was left. No
+  device-access error, no different-device dialog, no login demanded.
+  A session that idles through a wait does not survive the wait -
+  future units that wait out a timer should expect to reopen the
+  session. A computer-session drop, the same class as cc-97/cc-98 in
+  the 0808 unit, not the recurring screen-capture channel failure of
+  Issue #282.
+- Entry route: game found on the base screen. Alliance button tapped at
+  the fresh grounded centre (934,720), Alliance Techs tile at
+  (674,681), Development tab, Quick Construction 8/10 carrying the
+  recommended marker, node tapped at its grounded centre (284,529).
+  All three points measured fresh on this unit's screenshots, none
+  carried. Base resources at entry: food 478.8M, iron 802.1M, coin
+  6.9M, badge 303.0K, diamonds 4,397.
+- Donation Count read live at entry: 1/30. This proves the 0841 unit's
+  tap did NOT land - its 00:16:27 timer had cleared and the count
+  still showed 1 remaining. The green coin Donate 900 button was live,
+  not greyed. Fourth eaten-tap confirmation in the series. Tech
+  Donation Today read 4700 at entry, unchanged from the 0841 close.
+- One tap (green Donate 900, grounded centre 648,782, single tap): the
+  coin button greyed with a 00:07:01 cooldown timer and the badge moved
+  303.0K to 303.1K, but the count label is hidden behind the timer.
+  The timer was waited out inside the unit (7.5 minutes); after it
+  cleared, Donation Count read live again: still 1/30, button green
+  again. This tap did NOT land. Fifth eaten-tap confirmation in the
+  series (0704 fourth tap, 0804 second tap, 0804 third tap confirmed
+  by 0841, 0841 tap confirmed by this unit's entry read, this unit's
+  tap confirmed by this unit's post-timer re-read).
+- CORRECTION to the 0808 section's "Cooldown timers grow inside a
+  burst": the 00:07:01 timer after this tap from 1/30 breaks the
+  roughly-17-minute pattern of the two previous taps from 1/30
+  (00:16:27 and 00:17:33). Timer length varies; it is recorded, not
+  explained. The fifteenth cooldown reading 00:07:01 sits inside the
+  corrected 04:19 to 19:35 range, which is unchanged.
+- Changed-method variant per queue rule R2 (second consecutive partial
+  with this blocker must arrive with a changed method): a 2-second
+  long-press on the green Donate button at the same grounded centre
+  (648,782). Result: no change - no grey-out, no timer, no badge move,
+  count still 1/30. Long-press is a no-op on this button, not a landing
+  variant. This answers the 0808 section's open "holding the button may
+  donate continuously" - the tooltip's "Hold down for easier
+  Continuous donations" does not dispatch a donation from this button.
+- The 1/30 stickiness is the third consecutive donations unit closing
+  partial on this same blocker (1523, 1146, this unit - 1523 also
+  verified a 2 to 1 landing before its 1/30 taps failed, so taps land
+  fine at count 2 and fail at count 1). Per queue rule R2 the third
+  consecutive partial writes the blocker into the activity metadata,
+  changes the entry route before any further unit of that type runs,
+  and is named in the day round summary. CHANGED ROUTE, standing: do
+  NOT tap from 1/30 on Quick Construction again. If the count reads
+  1/30, first check whether it has replenished above 1 (the count
+  replenishes over time - 1/30 to 4/30 seen at 1346, 1/30 to 2/30 at
+  1523), or try the War-tab node (Rallied Attack / Rallied Defense) as
+  the changed entry route. See also the burst section above.
+- Replenishment caveat on the "proven eaten" claim: because the count
+  replenishes, "count unchanged after the timer" cannot strictly
+  distinguish eaten from landed-plus-replenished inside one window.
+  The repeated 1/30 stickiness across three consecutive units still
+  stands as the blocker, but the proof is pattern-level, not per-tap.
+  Commented on Issue #450 by this run.
+- Follow-up: re-read owed to the already-queued
+  donations-2026-11-08-1621: it reads the Donation Count live and
+  applies the changed route above - tap only if the count has
+  replenished above 1, or try the War-tab node. No new re-read unit
+  was enqueued from this unit.
+- The Donation Count was never read live at 0/30 in this unit, so the
+  day cannot be closed as done (rule R1 / hard closing rule). The
+  30-of-30 daily target for 2026-11-08 remains unverified.
+- Game left safe: base screen, no purchase, no diamond spent. Coins
+  spent: 900 dispatched, unverified; the long-press spent nothing.
+
+## What the 2026-11-08 0937 scout entry read added - Donation Count 2/30, replenishment +1 within about 17 minutes, no donation in between
+
+- The 0937 scout unit (scout-scout-2026-11-03-006, ticker-0934) read
+  the Donation Count live at entry, about 09:37 local: 2/30, up from
+  1/30 at the 0808 close. Evidence in
+  `_records_/2026-11-08/perception-scout/0937-queue-run.md` (commit
+  ac350b49c on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-03/perception-scout/observation.md`. Quick
+  Construction 8/10, settlement timer 08:21:00. No donation was
+  dispatched in this unit (scout, observe-only).
+- Replenishment, not a landing: the 0841 tap is proven not landed by
+  the 0920 entry read (still 1/30) and the 0920 tap is proven not
+  landed by its own post-timer re-read (still 1/30) - the fifth
+  eaten-tap confirmation. No donation landed between the 0920 close
+  and this read, so the 1/30 to 2/30 move is replenishment. The +1
+  landed between the 0920 post-timer re-read (still 1/30, about
+  09:20) and this entry read (about 09:37) - within about 17 minutes.
+- This tightens the replenishment model: earlier reads showed 1/30 to
+  4/30 at 1346 and 1/30 to 2/30 at 1523 across longer windows; this
+  is the first +1 bounded inside a single about-17-minute window with
+  both endpoints read live and no tap in between. It does not change
+  the changed route: do NOT tap from 1/30 on Quick Construction -
+  tap only if the count has replenished above 1, or try the War-tab
+  node.
+- Caveat, answered: the observation file's own note ("the count
+  replenished about 1 per 47 minutes, or the unverified third tap
+  landed") is resolved in favour of replenishment - the 0804 third
+  tap was proven not landed by the 0841 entry read, and the 0841 and
+  0920 taps are proven not landed as above, so no unverified tap can
+  account for the rise.
+- Commented on Issues #160, #423 and #450 by this run.
+- Follow-up: the re-read owed to the already-queued
+  donations-2026-11-08-1621 still has no record on the branch - it
+  reads the Donation Count live and applies the changed route above.
+  It falls to the next run.
+
+## What the 2026-11-08 1034 unit added - three coin donations verified live 4/30 to 1/30, stopped at the 1/30 floor per the changed route, War-tab branch still untested
+
+- Unit donations-2026-11-08-1621 by ticker-1017, about 10:24 to 10:34
+  local, status partial - three coin donations landed, each verified
+  by a live count re-read, 4/30 to 1/30 on Quick Construction. The
+  unit stops at the live-read 1/30 and does NOT tap from 1/30 on
+  Quick Construction, per the changed route from the 0920 unit.
+  Evidence in `_records_/2026-11-08/alliance-donations/1034-queue-run.md`
+  (commit a2cafb907 on records/2026-11-08). This record landed during
+  the organizer 1032 run and is folded here in the same run, per the
+  0932 precedent. Tracker untouched; the re-read is the newly
+  enqueued donations-2026-11-08-1832 (not-before 11:05 local).
+- Session: computer session cc-108 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  One transient screen-capture failure (screen_failed, "App identity
+  or privacy changed during capture") on the first observe after tap
+  1; the immediate retry succeeded. A single transient, not the
+  persistent Issue 284 form. Commented on Issue #282 by this run.
+- Entry route: game found on the base screen. Alliance button tapped
+  at the fresh grounded centre (937,722), Alliance Techs tile at
+  (674,678), Development tab, Quick Construction 8/10 carrying the
+  recommended marker, node tapped at its grounded centre (285,523).
+  All three points measured fresh on this unit's screenshots, none
+  carried. Base resources at entry: food 487.0M, iron 809.6M, coin
+  12.3M, badge 303.1K, diamonds 4,397, stamina 120.
+- Donation Count read live at entry: 4/30. This is replenishment,
+  not a fresh day - the 0920 unit closed at a live-read 1/30 about
+  09:20, so the count rose 1 to 4 over about 69 minutes, about 1
+  per 23 minutes as a two-endpoint estimate only, NOT a measured
+  rate. Together with the 0937 entry read (2/30 at about 09:37),
+  the rise is 1 to 2 by 09:37 and 2 to 4 by 10:24 - consistent with
+  about 1 per 20 to 23 minutes. The green coin Donate 900 button
+  was live, not greyed. Tech Donation Today read 4800 at entry, up
+  100 from the 0920 entry read of 4700, observed only (no landing
+  is claimed from the footer - it moves independently, Issue #417).
+- Tap 1 (green Donate 900, grounded centre 648,761, single tap):
+  count re-read live 3/30, badge 303.1K to 303.2K, button still
+  green, no timer. Landed. Tap 2 (same point, single tap): count
+  re-read live 2/30, badge 303.2K to 303.3K, button still green, no
+  timer. Landed. Tap 3 (same point, single tap): count re-read
+  live 1/30, badge 303.3K to 303.4K, button still green, no timer.
+  Landed. Three coin donations landed in this unit, 2,700 coin
+  spent (900 each). The "Hold down for easier continuous donations"
+  tooltip appeared after tap 3; hold-to-donate was NOT used
+  (untested as a closing method).
+- No timer after taps from 2 or above: taps that land from counts
+  4, 3 and 2 leave the button green with no cooldown timer. This
+  contrasts with the eaten taps from 1/30, which grey the button
+  behind a 00:07:01 to 00:19:35 timer. Recorded, not explained.
+- The changed route is validated in practice: the unit donated down
+  to the live-read 1/30 and stopped, dispatching no tap from 1/30.
+  Taps land fine at counts 4, 3 and 2 on Quick Construction and
+  fail only at count 1 - the fourth confirmation of the 1/30
+  stickiness in this chain (0920 third consecutive partial, this
+  unit the fourth unit in the sequence to meet it, though this unit
+  donated down to it rather than failing on it). The blocker is
+  unchanged: the final donation of the day does not land from Quick
+  Construction by single tap.
+- The War-tab branch of the changed route (try Rallied Attack /
+  Rallied Defense for the 1/30 tap) is still untested - this unit's
+  token lease ended before it could be attempted. It stays open for
+  the re-read unit or a later unit with budget.
+- Weekly settlement countdown, read live twice: "This week's
+  donations will be settled soon: 07:32:28" at entry, 07:30:11 at
+  close. It counts down to about 18:04 local, near the trade-day
+  reset. Observed only; whether the weekly settlement resets the
+  Donation Count is unmeasured.
+- Follow-up: re-read owed to the newly enqueued
+  donations-2026-11-08-1832 (not-before 11:05 local, window
+  carries this unit's state): it reads the Donation Count live and
+  applies the changed route - tap only if the count has replenished
+  above 1, or try the War-tab node for the 1/30 tap. The
+  already-queued donations-2026-11-08-1003 slot unit may run first;
+  it carries no window context, so its executor reads this record
+  and Issue 450.
+- The Donation Count was never read live at 0/30 in this unit, so
+  the day cannot be closed as done (rule R1 / hard closing rule).
+  The 30-of-30 daily target for 2026-11-08 remains unverified, with
+  1 remaining at the 1/30 blocker.
+- Commented on Issues #160, #423, #450 and #282 by this run. The
+  unit itself added its measurements to Issue #450 before this run;
+  this run comments the fold.
+- Game left safe: base screen, no purchase, no diamond spent. Coins
+  spent: 2,700 (3 x 900).

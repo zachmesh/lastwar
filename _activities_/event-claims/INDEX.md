@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T14:42:04Z
+modified: 2026-11-08T16:37:41Z
 level: L1
-version: 1.25.0
+version: 1.27.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,8 @@ grounded_in:
   - source: ticker-1834 event-claims execution record 2026-11-04 1834 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirteenth consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-0004 perception-scout execution record 2026-11-08 0011 queue run (partial, events group walked live, Frontline badge 1 is a Challenge attempt, Doomsday badge 22 is claimable Rewards, Winter Battlefield starting soon, Hero Advancement phase live; record commit e6192726d1 on records/2026-11-08)
   - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
+  - source: ticker-0634 event-claims execution record 2026-11-08 0656 queue run (partial, Doomsday first-kill tiers Lv.100-140 claimed, Frontline rewards unclaimable); record commit 9669d391ea on records/2026-11-08
+  - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live; Doomsday guardian rotated to Nuna Knuckles 6.5G, Warzone Threat 43); record commit 8dcbdf92b9 on records/2026-11-08
 ---
 
 
@@ -995,3 +997,69 @@ that drag is the sweep-completeness check, not wasted motion.
   Battlefield History + Achievement and Shop Campaign/Season tabs.
 - Game left safe: game left on the base screen. Nothing bought. No Assemble,
   no teleport.
+
+## What the 2026-11-08 0656 events unit added - Doomsday first-kill tiers Lv.100-140 claimed, Frontline rewards unclaimable
+
+- Unit events-2026-11-08-0257 by ticker-0634, about 06:54 to 07:02
+  local, status partial - the Doomsday first-kill claim landed and was
+  verified, but the Events hub sweep is incomplete (Arms Race tab,
+  Winter Battlefield Rewards and the scrolled tabs were not visited), so
+  the next tick re-produces the regular and finishes the sweep. Evidence
+  in `_records_/2026-11-08/event-claims/0656-queue-run.md` (commit
+  9669d391ea on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-92 on the owner Mac mini (same session as
+  the passes unit in this pass). No device-access error, no
+  different-device dialog, no login demanded.
+- Events hub at entry: Winter Battlefield tab (event starting soon,
+  11:18:17 countdown; match windows 11/08 20:00-22:00, 11/09 03:00-05:00
+  and 13:00-15:00). Tab badges: Frontline Breakthrough 1, The Doomsday
+  22. No Zombie Invasion tab in the bar.
+- Frontline Breakthrough: Saving Soldiers 100%, 11:08:02 left. Its
+  Rewards panel lists three Play Frontline Breakthrough rows at 0/3,
+  0/2 and 0/1 - all unclaimable (the mini-game was not played; grinding
+  is outside a claim round). Nothing claimed there; the tab badge 1 is a
+  notice, not a claim. The Challenge attempt the 0011 read attached to
+  the badge is mini-game play, outside a claim round - the badge marks
+  no claimable reward on this tab.
+- The Doomsday: 11:17:20 left, Warzone Guardian [AP3x]Nuna Knuckles
+  Total Damage 5.2G, Alliance Threat (0), Warzone Threat (28), Threat
+  Neutralized. Its Rewards panel showed all five Warzone first-kill
+  tiers with green Claim buttons - Lv.100, Lv.110, Lv.120, Lv.130,
+  Lv.140 Doom Walker, each paying a builder helmet x1, grey chest x2 and
+  brown crate x2. The bottom Claim button was tapped: CONGRATULATIONS
+  shown, and after dismissing it all five rows read green checks - all
+  five tiers claimed. The congratulations panel itemised gold card x20,
+  red diamonds x180, lightning item 50 x11, grey chest x30, brown crate
+  x30, 5m speedup x240 and builder helmets x3 visible; those panel
+  totals do not equal five times the per-row icons, so no aggregate total
+  is claimed here - the verified fact is the five green checks.
+- The tiers re-arm per event round: the same five tiers were claimed on
+  2026-10-25 and are claimable again in this round - a re-claim is
+  routine, not a gap, and no new Issue was filed. Not visited in this
+  unit: the Arms Race tab, the Winter Battlefield Rewards chest, and the
+  tabs past the scroll (Level Swap, Wanted Boss, Community). The next
+  events unit finishes the hub sweep - Arms Race tab (point chests plus
+  the cumulative counter chest), Winter Battlefield Rewards, and the
+  scrolled tabs - and confirms no red dot or bouncing chest remains.
+- Game left safe: base screen. Nothing bought. No Assemble, no teleport.
+
+## What the 2026-11-08 0734 scout unit added - Doomsday guardian rotated to an ally, Warzone Threat 43, Winter Battlefield windows re-confirmed
+
+- Scout unit scout-scout-2026-11-03-005 by ticker-0734, about 07:37 to
+  07:50 local, observe-only. Evidence in
+  `_records_/2026-11-08/perception-scout/0734-queue-run.md` (commit
+  8dcbdf92b9 on records/2026-11-08). The Doomsday count finish (Lv.150
+  row, Lv.220 rewards, cumulative rows, Damage Ranking and Ranking
+  Reward tabs) was NOT finished inside the unit cap and carries to
+  successor seq 006. Tracker untouched.
+- The Doomsday: 10:21:10 left. Warzone Guardian now [AP3x]Nuna Knuckles,
+  Total Damage 6.5G (was [B3WB]Kalia Kalia 3.0G at the 0325 read, 5.2G at
+  the 0656 read - the guardian rotated to an ally with higher damage).
+  Alliance Threat (0), Warzone Threat (43) (was 46 at 0325, 28 at 0656),
+  "Threat Neutralized". The guardian and the threat move between reads;
+  no claim is made from either number.
+- Winter Battlefield main page re-confirmed: 5v5, "Event is starting
+  soon", countdown 10:20:52; windows 11/08 20:00-22:00, 11/09 03:00-05:00
+  and 13:00-15:00 (same as the 0656 read); Match greyed; Base level 15+.
+- Game left safe: nothing claimed, fought, dispatched, donated, boarded
+  or bought in this unit.
