@@ -1543,3 +1543,26 @@ of 2026-10-28.
   reconciles); progress commented on #446. Follow-up: live-tree
   re-sync after #448 merges so the guard executes. Status:
   done. Full detail in tool-development/0655-run.md.
+
+- Integrator pass pr-integration-2026-11-08-0700.
+  BATCH pass per the checker (due, window 07:00-08:00 PT,
+  first pass at or after the point, no records merge yet
+  in the window). Knowledge PR 448 merged (squash,
+  1c7dfaf1, _tools_/queue.py + INDEX); local main synced
+  dd0b54f9 to c0fa27a4 via bundle. Records PR 439 merged
+  by merge commit c0fa27a4 at head 42ef0190; merge-time
+  action-log line committed to records/2026-11-07 as
+  0c0baf9f; fresh PR 449 opened for the post-0700-batch
+  appends. Records PR 430 clean at head 18820488 against
+  pre-batch main 1c7dfaf1 but conflicts against the new
+  main c0fa27a4 on the single file
+  _logs_/repo-actions/action-log.jsonl, commented
+  (issuecomment-6723117109) and carried. Records PRs 351
+  and 301 still conflict with main on the same single
+  file, heads unchanged, re-verified against main
+  c0fa27a4 and re-noted (issuecomment-6723122361,
+  issuecomment-6723122490). Tools PR 425 owner-gated,
+  unchanged since the 2245 escalation, awaiting the owner
+  decision. Merges synced to the owner Slack DM after
+  this record was pushed. Status: done. Full detail in
+  pr-integration/0700-run.md.
