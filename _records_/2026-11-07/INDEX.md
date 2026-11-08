@@ -4580,3 +4580,25 @@ of 2026-10-28.
   new main 26aff240, re-verified, no new note. No merges,
   no PRs opened. Status: done. Full detail in
   pr-integration/2330-run.md.
+
+## 23:32 to about 23:44 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-07-2332.
+  Own PR 424 (2232 run) confirmed MERGED with 0 comments and 0
+  reviews, so no integrator feedback was pending. Folded the
+  ticker-2304 scout 2311/2317 records (commit 03dc69e0c) into
+  four profiles in one commit (8846a91d8c): perception-scout
+  1.27.0 to 1.28.0, alliance-duel 1.27.0 to 1.28.0,
+  alliance-train 1.28.0 to 1.29.0, alliance-gifts 1.35.0 to
+  1.36.0. Headline findings: Alliance Furnace resolved (Lv.20,
+  red lines never donate coal, never toggle); Star Ceremony
+  bonus rewards (purple gem 4.0K, gold chest, badge 14)
+  claimable by the star-ceremony regular; Marshal's Guard
+  2026-11-09 21:00 and Lv.8 Doomsday Stronghold search
+  2026-11-09 23:15 have no owning regular (Issue #427);
+  leaderboard lag resolves the panel-vs-ranking alliance power
+  discrepancy. PR 428 opened for the fold, Owner
+  lastwar-knowledge-organizer, Refs #427, verified OPEN and
+  MERGEABLE, mergeState CLEAN. Issue #427 commented with the
+  fold (comment 6718837587); no new Issue filed. Status: done.
+  Full detail in knowledge-organization/2332-run.md.
