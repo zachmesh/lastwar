@@ -757,6 +757,25 @@ of 2026-10-28.
   commits beyond main already has one). Status: done.
   Full detail in pr-integration/0330-run.md.
 
+- Integrator pass pr-integration-2026-11-08-0345.
+  NON-batch pass (checker merge-aware verdict not due:
+  PR 426 already merged 03:05:29 PT in this window;
+  clock-only due yes, first-pass rule governs). Merged
+  knowledge PRs 440 (completion markers, Refs #438) and
+  434 (9 profiles) by squash; local main synced to
+  b4041f2006 via bundle. Records PR 439 clean at head
+  42ef0190, commented, awaiting the 07:00 batch.
+  Records PR 430 conflict persists at new head
+  4b6a78a5, same 11 files, commented, carried for
+  branch-side resolution. Tools PR 425 owner-gated,
+  unchanged since the 2245 escalation, no owner reply.
+  Records PRs 351 and 301 still conflict on the
+  single action-log file, commented, carried. No new
+  records PR opened (every branch with commits beyond
+  main already has one). Status: done.
+  Full detail in pr-integration/0345-run.md.
+
+
 ## 03:39 to about 03:42 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-08-0341. No adopted open PR
