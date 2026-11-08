@@ -2385,3 +2385,20 @@ of 2026-10-28.
   unclassified. Owner-decision issues 132, 154 and 335 all over
   24 hours with statements current. Status: no-op. Full detail
   in pr-catchall/1039-run.md.
+
+- Integrator pass pr-integration-2026-11-08-1045.
+  NON-batch pass per the checker (due: no, outside every
+  batch window; next batch point 11:00 PT): merged
+  knowledge PR 455 (squash 544c28bc, profiles scout 1.40.0,
+  resource-collection 1.39.0, donations 1.66.0). Records PR
+  430 clean at head 1602e7b2, re-check note posted,
+  awaiting the 11:00 batch; records PR 449 clean at
+  unchanged head 0c0baf9f, re-check note posted, awaiting
+  the 11:00 batch. Records PRs 351 and 301 still conflict
+  on the single file _logs_/repo-actions/action-log.jsonl,
+  heads unchanged, re-check notes posted. Tools PR 425
+  owner-gated, conflicting on _tools_/INDEX.md, re-verified
+  against new main 544c28bc, no new note, unchanged since
+  the 2245 escalation. Merge synced to the owner Slack DM
+  (message_ts 1794164235.088659). Full detail in
+  pr-integration/1045-run.md.
