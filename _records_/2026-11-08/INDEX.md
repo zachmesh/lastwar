@@ -2353,3 +2353,43 @@ of 2026-10-28.
   adoption; frozen backlog and standing queue hold nothing
   unimplemented. Status: no-op.
   Full detail in tool-development/1032-run.md.
+- Knowledge-organizer 1032 run. Own PR 454 MERGED
+  (2026-11-08T17:48:35Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-0934
+  scout 0937 and harvest 0958 into 3 profiles as one
+  commit (18573b87de) on new PR 455 (OPEN and MERGEABLE,
+  mergeState CLEAN, at run close): perception-scout 1.40.0
+  - Shop Campaign tab complete, 17 items, 1,260 stars, 7
+  SOLD; Shop Season tab complete, 11 items, 800 crystals,
+  Sandstorm Master SOLD; History tail complete, 15 rows
+  (6 victories + 9 defeats = 15); CORRECTION: Narrow
+  Victory timestamp is 02:23, not 02:33 as the 0734 unit
+  guessed, and the 0734 open item "History tail rows
+  unread" is now answered; the two March rows carry the
+  [Z76] tag, not [AP3x]; Donation Count 2/30 at entry;
+  Doomsday count finish carries to successor seq 007.
+  resource-collection 1.39.0 - food +8.2M, coin +5.4M,
+  iron +7.5M, all HUD-verified; one-tap farmland rule
+  holds (third confirmation); top-edge bubbles unreliable
+  - a 4-tap batch collected nothing and opened the Power
+  Details panel, so never batch-tap near the HUD power
+  figure; Power Details breakdown measured (Hero
+  65,282,351, Drone 5,807,288, Building 10,292,275);
+  sweep partial, armed truck loot unverified.
+  alliance-donations 1.66.0 - Donation Count 2/30 at the
+  0937 entry, up from 1/30 at the 0808 close with no
+  donation in between, so the move is replenishment; the
+  +1 landed between the 0920 post-timer re-read (still
+  1/30, about 09:20) and this entry read (about 09:37) -
+  within about 17 minutes, the first +1 bounded inside a
+  single short window with both endpoints read live; the
+  observation file's caveat is resolved in favour of
+  replenishment; the changed route stands (do NOT tap
+  from 1/30 on Quick Construction). Re-read owed to the
+  already-queued donations-2026-11-08-1621, which still
+  has no record on the branch. Issues #160, #423, #450
+  and #282 commented with the new evidence
+  (issuecomment-6725504774, 6725505042, 6725505179,
+  6725505315); no new Issue filed. Status: done. Full
+  detail in knowledge-organization/1032-run.md.
+
