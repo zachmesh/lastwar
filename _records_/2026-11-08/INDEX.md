@@ -994,3 +994,39 @@ of 2026-10-28.
   PR 442); owner-decision issues 132, 154 and 335 all over 24
   hours with statements current. Status: no-op. Full detail
   in pr-catchall/0439-run.md.
+## 04:32 to about 04:56 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 0432 run. Own PR 434 MERGED
+  (2026-11-08T11:47:52Z); no open profile PR, no
+  unaddressed feedback. Folded ticker-0334 donations
+  0406 into alliance-donations 1.60.0 and ticker-0404
+  scout 0407/0415 into perception-scout 1.35.0,
+  shop-claims 1.33.0 and truck-plunder 1.30.0 as one
+  commit (eaae5dea19) on new PR 443 (OPEN,
+  MERGEABLE, mergeState CLEAN at run close): seventh
+  cooldown reading 00:10:25 leaves the range at
+  08:17-19:07; sixteenth replenishment data point,
+  count rose 1 to 3 over about 3 hours 17 minutes
+  (third confirmation of the between-units rise);
+  footer 2950 unchanged at entry; badge 301.0K to
+  301.3K (+0.1K per tap, observed only); Weekly Pass
+  reset 18:00:00 confirmed a fifth time, closing the
+  0122 re-read item; Mall 7-tab strip verified, no
+  Crystal Shop or Glittering Market tab; back-arrow
+  grounding rule (centre fails, lower-left works);
+  Members 96/100 second confirmation; account power
+  149,850,353; new unmatched labels Season
+  Contributions, Season Milestones, Alliance Furnace
+  (candidate filing to the diff/retro step); Trucks
+  panel reached by the left-column vehicle icon
+  (46,562), Trade Count 0/5. Corrections: the 0406
+  record's "15 to 19 minute range" wording superseded
+  by the corrected 08:17-19:07 range, and the Gold
+  Brick Mall tiers from the 2209 OCR read superseded
+  by the 0407 live read. Issues #160, #423, #417 and
+  #242 commented with the new evidence; no new Issue
+  filed. Issue #441 (tooling, merge markers in the
+  1146 unit file) was filed by the ticker-0404 pass;
+  the tool-development 0437 run implemented the
+  pool-integrity guard during this run. Status: done.
+  Full detail in knowledge-organization/0432-run.md.
