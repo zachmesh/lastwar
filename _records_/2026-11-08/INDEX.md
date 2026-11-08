@@ -362,7 +362,7 @@ of 2026-10-28.
   Full detail in perception-scout/0122-queue-run.md and
   the appended observation section.
 
-## 01:32 to about 01:55 — Knowledge organization run (hourly)
+## 01:32 to about 01:48 — Knowledge organization run (hourly)
 
 - Knowledge-organizer 0132 run. Own PRs 431 and 433
   confirmed MERGED with 0 comments and 0 reviews, so no
