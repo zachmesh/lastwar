@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-07
 created: 2026-11-07T08:14:00Z
-modified: 2026-11-08T05:08:00Z
+modified: 2026-11-08T05:56:00Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, all non-batch, seven records PRs await the 0300 batch, all verified clean (the five older records PRs resolved their action-log.jsonl conflict by branch-side reconciliation, resolution comments posted by the 0015 pass, no new comments since); no knowledge or code PR open; records/2026-11-07 branch created from main with the 0000 run record; records PR 382 for 2026-11-07 open; ticker-0011 radar unit failed, Mac mini offline (Issue 284); ticker-0204 gifts unit failed, Mac mini offline (Issue 284, 95th consecutive pass); 0039 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0045 integrator pass merged knowledge PR 385 and code PR 384, seven records PRs await the 0300 batch; 0139 pr-catchall pass no-op, seven open PRs scanned, none owned, 51 open issues all class-labeled; 0243 tool-development pass done, PR 387 for issue 147 enqueue guard; 0239 pr-catchall pass no-op, eight open PRs scanned, none owned, 51 open issues all class-labeled; 0240 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0250 integrator pass merged code PR 387 (enqueue zero-sweep guard, Refs 147) and knowledge PR 386 (radar-tasks 1.45.0, alliance-gifts 1.30.0), seven records PRs await the 0300 batch; 0332 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0540 queue-planning pass, 0 units staged, diff zero changes, unexplained 4, no withdrawals; 0545 integrator pass merged code PR 391 and knowledge PR 390, five records PRs await the 0700 batch; 0600 integrator pass no-op, five records PRs await the 0700 batch; 0615 integrator pass no-op, five records PRs await the 0700 batch; 0630 integrator pass no-op, five records PRs await the 0700 batch; 0632 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0639 pr-catchall pass no-op, five open PRs scanned, none owned, 51 open issues all class-labeled; ticker-0633 passes unit failed, Mac mini offline (Issue 284, 101st consecutive pass); 0640 queue-planning pass, 11 units staged, diff zero changes, unexplained 4, no withdrawals; 0645 integrator pass no-op, five records PRs await the 0700 batch; 0732 tool-development pass no-op, all open tooling items implemented or needing no tool code; 0740 queue-planning pass, 8 units staged, diff zero changes, unexplained 4, no withdrawals; 0832 tool-development pass no-op, all open tooling items implemented or needing no tool code
@@ -4134,6 +4134,44 @@ of 2026-10-28.
   #417 commented with the new 2121 evidence; no new
   Issue filed. Slack DM sync sent. Status: done. Full
   detail in knowledge-organization/2132-run.md.
+
+## 21:40 to about 21:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-2140.
+- Plan run once with the live tree tools, now current
+  (tools/queue.py md5 f71d26e7, identical to
+  _tools_/queue.py; the ticker sync closed the gap the
+  2040 run flagged): staged 0 (already_present 69,
+  skipped_done_current 5, reaped 0, expired 0,
+  stale_done_dropped []). The next 12 hours were already
+  staged in the live pool through about 08:40 local
+  2026-11-08. No second plan run with branch-tip tools
+  was needed.
+- Pre-reset sweep production: this run is not the
+  17:00-hour run, so nothing was enqueued; tonight's pair
+  (chain pre-reset-sweep-2026-11-07) both EXPIRED
+  unexecuted (expires_at 2026-11-08T03:00:00Z, both in
+  done). The sweep partially ran through the standalone
+  zero-sweep-2026-11-07-1730 unit (ticker-1734, partial);
+  the final pass never ran, so the Nov 7 pre-reset sweep
+  closes as first pass partial only, final pass missed.
+- Scout diff on the Nov 3 observation (first consumption
+  with its Nov 7 appends from the ticker-2134 2140/2145
+  reads): dry run and apply agree with the fixed tool,
+  all zero except unexplained 4 (observed 0, actionable
+  0, enqueued 0, already-queued 0, candidates 0,
+  promotion proposals 0). Successor units for the carried
+  items are already in the live inbox (scout-midday
+  -008, scout-scout -002). No withdrawals: the diff
+  classified nothing and nothing in the new narrative
+  sections shows a precondition gone. No new observation
+  file for Nov 5, 6 or 7; scout-2026-11-07-1800 and -1900
+  still in inbox unexecuted.
+- 2040 delivery verified landed (commit ac68801e99 is an
+  ancestor of the branch tip f3007e3a90). Pool by_state:
+  live inbox 74, claimed 1, done 1183; branch inbox 69,
+  claimed 0, done 1123. Status: no-op. Full detail in
+  queue-planning/2140-run.md.
 
 ## 21:45 to about 21:52 — PR-integrator pass
 
