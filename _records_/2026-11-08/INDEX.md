@@ -718,7 +718,7 @@ of 2026-10-28.
   sub-pages to successor seq 004. Full detail in
   perception-scout/0325-queue-run.md.
 
-## 03:15 to about 03:23 - PR integration pass
+## 03:15 to about 03:20 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-08-0315.
   NON-batch pass (checker merge-aware verdict not due:
