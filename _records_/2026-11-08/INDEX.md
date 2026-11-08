@@ -1800,3 +1800,21 @@ of 2026-10-28.
   425 owner-gated, unchanged since the 2245 escalation.
   No Slack sync (quiet non-batch run). Full detail in
   pr-integration/0800-run.md.
+
+- Integrator pass pr-integration-2026-11-08-0815.
+  NON-batch pass per the checker (due: no, outside every
+  batch window; next batch point 11:00 PT): no records
+  merges, no knowledge/code merges. Records PR 449 clean
+  at unchanged head 0c0baf9f and records PR 430 clean at
+  new head ef63ac3f (the 0800 run-record commit), both
+  awaiting the 11:00 batch; re-check note posted on 430
+  plus a correction (the head move is the 0800 run-record
+  commit, not ticker deliveries). Records PRs 351 and 301
+  still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, heads unchanged,
+  re-verified, no new comment (unchanged since the 0800
+  notes), carried. Tools PR 425 owner-gated, unchanged
+  head 8c2eb205, now newly conflicting on the single file
+  _tools_/INDEX.md, conflict noted on the PR. No Slack
+  sync (quiet non-batch run). Full detail in
+  pr-integration/0815-run.md.
