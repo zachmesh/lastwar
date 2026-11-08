@@ -2851,3 +2851,39 @@ of 2026-10-28.
   issue #461 filed. Own PR 425 still owner-gated, no action
   owed. Status: done.
   Full detail in tool-development/1232-run.md.
+
+## 12:54 to about 12:57 — Queue ticker pass, radar tasks (stack)
+
+- Radar unit radar-2026-11-08-1003, done: duel day 7
+  off-day settlement, radar posture stack per live
+  _tools_/duel.py. Dish grounded fresh at norm (48, 710),
+  radar verified Lv.13, points 267, stored 16/40,
+  stamina 120. Quick Execute ran 4 tasks, stamina 120
+  to 80, radar points stayed 267, nothing claimed. Bar
+  flipped to Claim All only, 10 task rewards pending
+  (not tapped, stack red line); the blocker and pending
+  count carry to the next radar unit. Pin inventory
+  recorded untapped: grey skull (red dot) top centre,
+  blue skull (red dot) right, blue helmet lower
+  centre-left, grey skull (red dot) lower centre, plus
+  four alliance portrait pins. Tracker marked done.
+  Full detail in radar-tasks/1256-queue-run.md.
+
+## 12:58 to about 13:07 — Queue ticker pass, survivor intake (partial)
+
+- Survivor unit survivors-2026-11-08-1003, partial: gate
+  line verified live with 4 grounded figures at the left
+  edge gate; 5 named survivors recruited, each card read
+  live - JAVIER Lawyer (Alliance Support Hub, Help
+  Received +1), JAVIER Builder (Builder's Hut, Free
+  Construction Speed-up Time 5min), ELINA Instructor
+  (Barracks, Unit Training Cap +2.40%), CHLOE Iron
+  Storage Keeper (Iron Warehouse, Increase Iron
+  Protection +5.00%), MICHAEL Hospital (Unit Healing
+  Speed +4.00%, name OCR-read only). A 6th card stands
+  open unrecruited: JAVIER Barn Keeper (Food Warehouse,
+  Increase Food Protection +5.00%). Session cc-122
+  dropped mid-unit, cc-123 recovered with no state lost.
+  Quick Dispatch not run - per rule R7 it is the first
+  action of the next survivors unit. Tracker untouched.
+  Full detail in survivor-intake/1307-queue-run.md.
