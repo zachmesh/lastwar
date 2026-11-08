@@ -4491,3 +4491,35 @@ of 2026-10-28.
   appends, MERGEABLE/CLEAN, awaiting the 03:00 batch.
   Local main fast-forwarded to 26aff240. Status: done.
   Full detail in pr-integration/2300-run.md.
+## 23:05 to 23:15 — Queue ticker pass, perception scout (alliance remainder)
+
+- Scout unit scout-scout-2026-11-02-006, partial: Alliance Star
+  ceremony walked observe-only (S2 Big Shot, bonus gem 4.0K +
+  chest badge 14, nothing claimed, Go never tapped); Settings
+  read in full (Permissions matrix 10 rows - R3 holds none;
+  Alliance List 5 rows; Alliance Power ranking - AP3x #2 at
+  13,327,641,210 behind B3WB); Record Member/Message/Event tabs
+  all read (MegaLoki Apex joined, QueenSTX Apex left, Marshal's
+  Guard activation 2026-11-9 21:00 difficulty 12, Lv.8 Doomsday
+  Stronghold search 2026-11-9 23:15 - no owning regular, Issue
+  427); Alliance Furnace resolved as the gold row below the
+  fold (Lv.20, Burning, Turn On ON, Overdrive OFF, Donation
+  50/50, coal never donated); station re-check (no train
+  preparing, fourth confirmation) and LOOT re-check (badge 3,
+  Lv.1 Doom Elite row still unclaimed 80+ minutes, Claim All
+  never tapped - gifts regular's work). Successor enqueued for
+  Alliance City, Season Contributions, Season Milestones,
+  Furnace Upgrade/Relocation Spot tabs, Strength Ranking Weekly
+  subtab. Tracker untouched. Full detail in
+  perception-scout/2311-queue-run.md.
+
+## 23:16 to 23:17 — Queue ticker pass, perception scout (station re-check)
+
+- Scout unit scout-midday-scout-mid-2026-10-31-008, partial:
+  station panel re-check, both train-preparation signals absent
+  again (no left-column train icon, no boarding banner) - fifth
+  confirmation this pass, no train preparing, closed without
+  panning per the unit window and no successor enqueued. Furnace
+  toast read in full for the first time ("High-temp Furnace total
+  overdrive time (in sec) [22/60]", mechanism still unexplained).
+  Tracker untouched. Full detail in perception-scout/2317-queue-run.md.
