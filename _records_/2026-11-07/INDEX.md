@@ -2744,3 +2744,15 @@ of 2026-10-28.
   ended 2026-10-30. Pre-reset zero-sweep pair already
   staged. Tracker untouched. Status: failed. Full detail in
   radar-tasks/1616-queue-run.md.
+- Integrator pass pr-integration-2026-11-07-1630.
+  Non-batch pass for records purposes (checker reports
+  not due, next batch point 19:00 PT, 148 minutes away).
+  No knowledge or code PR open; no merges, no comments
+  posted - the 1615 re-check comments stand, heads
+  unchanged since. All four open records PRs still CLEAN
+  against main dfc3e08b (398 at 35ac932273, advanced only
+  by the 1615 run-record commit; 351 f9e1fff83d,
+  301 602566d9, 256 d44b93ba). No new records PR opened;
+  no action-log line owed. Next merge chance the 19:00
+  batch. Status: no-op.
+  Full detail in pr-integration/1630-run.md.
