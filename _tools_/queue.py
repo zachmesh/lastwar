@@ -98,8 +98,15 @@ Usage:
              # corrupt pool before reaping or staging anything
              # (issue #441), then reap, expire stale units, drop
              # inbox copies already closed in done (issue #213),
-             # then enqueue one unit per regular the tracker marks
-             # due (idempotent);
+             # then drop inbox copies already done on today's
+             # delivered records branch (issue #446) - a unit
+             # completed in a detached worktree lands its done
+             # record on the branch, never in this pool, so
+             # without this step the next tick hands it out
+             # again; a branch that cannot be read warns and the
+             # tick continues on local state only - then enqueue
+             # one unit per regular the tracker marks due
+             # (idempotent);
              # without --due-json it calls the sibling regulars.py todo
   queue.py [--root DIR] plan [--hours N]
              # stage the horizon's windows: segment anchors,
@@ -731,6 +738,20 @@ def cmd_sync(args):
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
     stale_done_dropped = _drop_done_duplicates(args.root)
+    # Branch reconciliation (issue #446): drop inbox copies of
+    # units already closed on today's delivered records branch.
+    # A unit completed in a detached worktree lands its done
+    # record on the branch, never in this pool, so the local drop
+    # above cannot see it - without this step the next tick hands
+    # the same unit out again. A branch that cannot be read warns
+    # and the tick continues on local state only.
+    branch = "records/%s" % datetime.now(LOCAL_TZ).date().isoformat()
+    branch_done, branch_warning = records_branch_done_units(
+        args.root, branch)
+    if branch_warning:
+        print(f"warning: {branch_warning} (issue #446)", file=sys.stderr)
+    branch_done_dropped = drop_branch_done_duplicates(
+        args.root, branch_done, branch)
     # Screen-blocking overlay (issue #436): drop blockers whose
     # clearing unit is gone, so a vanished clearing unit cannot
     # leave a stale blocker file in the live pool directory.
@@ -791,6 +812,8 @@ def cmd_sync(args):
     aged_p1_windowed = _window_aged_priority1(args.root)
     print(json.dumps({"reaped": reaped, "expired": expired,
                       "stale_done_dropped": stale_done_dropped,
+                      "branch_done_reconciled": branch_done_dropped,
+                      "branch_done_reconcile_warning": branch_warning,
                       "blockers_reaped": blockers_reaped,
                       "completion_markers_reaped": markers_reaped,
                       "due": len(due_items), "produced": produced,
@@ -1307,6 +1330,139 @@ def _drop_done_duplicates(root):
             continue
         print(f"warning: {unit} {reason} - dropping the stale "
               f"inbox copy instead of re-executing it",
+              file=sys.stderr)
+        os.remove(unit_path(root, "inbox", unit))
+        dropped.append(unit)
+    return dropped
+
+
+# ---------------------------------------------------------------------
+# Records-branch reconciliation (issue #446)
+# ---------------------------------------------------------------------
+
+BRANCH_RECONCILE_REF = "refs/remotes/queue-reconcile"
+
+
+def _git_remote(root):
+    """First usable remote for branch reconciliation, or None.
+
+    Prefer origin, then github (this repository's push remote),
+    then any remote at all. A root with no remote cannot
+    reconcile, and the caller warns instead of failing the sync.
+    """
+    try:
+        out = subprocess.run(["git", "-C", root, "remote"],
+                             capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if out.returncode != 0:
+        return None
+    remotes = [line.strip() for line in out.stdout.splitlines()
+               if line.strip()]
+    for preferred in ("origin", "github"):
+        if preferred in remotes:
+            return preferred
+    return remotes[0] if remotes else None
+
+
+def records_branch_done_units(root, branch):
+    """Unit ids already closed on the delivered records branch.
+
+    Fetches branch into a private remote-tracking ref (never a
+    checked-out branch, never the working tree) and lists its
+    _queue_/done/ unit ids. Returns (done_ids, warning): warning
+    is None on success, else a short reason the branch could not
+    be read - no remote, fetch failed, branch not yet pushed
+    today - so the caller warns and the tick continues on local
+    state only. A reconcile that cannot read the branch never
+    blocks the tick. The tree is listed whole and filtered in
+    Python: a git pathspec would be read relative to the caller's
+    working directory, and this tool's root is the _queue_
+    subdir, not the repo top, so `_queue_/done/` as a pathspec
+    would silently match nothing - and ls-tree names are
+    cwd-relative too, so the listing needs --full-name for the
+    repo-root-relative filter below to hold.
+    """
+    remote = _git_remote(root)
+    if remote is None:
+        return set(), "no git remote, branch reconcile skipped"
+    ref = "%s/%s" % (BRANCH_RECONCILE_REF, branch.replace("/", "-"))
+    # The leading + force-updates the private ref: the records
+    # branch is rebased by the integration runs, so its tip moves
+    # non-linearly and a plain fetch would reject the update as a
+    # non-fast-forward on the second sync of the day.
+    try:
+        fetch = subprocess.run(
+            ["git", "-C", root, "fetch", "--depth", "1", remote,
+             "+%s:%s" % (branch, ref)],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return set(), ("fetch of %s failed, branch reconcile "
+                       "skipped" % branch)
+    if fetch.returncode != 0:
+        detail = [line for line in (fetch.stderr or "").splitlines()
+                  if line.strip()]
+        reason = ""
+        for line in detail:
+            if "fatal" in line or "error" in line:
+                reason = line.strip()
+                break
+        if not reason and detail:
+            # git's first stderr line is the "From <url>" header,
+            # not the error - take the last line instead.
+            reason = detail[-1].strip()
+        if not reason:
+            reason = "fetch failed"
+        return set(), ("fetch of %s failed (%s), branch reconcile "
+                       "skipped" % (branch, reason[:120]))
+    try:
+        listing = subprocess.run(
+            ["git", "-C", root, "ls-tree", "-r", "--full-name",
+             "--name-only", ref],
+            capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return set(), ("ls-tree of %s failed, branch reconcile "
+                       "skipped" % branch)
+    if listing.returncode != 0:
+        return set(), ("ls-tree of %s failed, branch reconcile "
+                       "skipped" % branch)
+    done = set()
+    for line in listing.stdout.splitlines():
+        name = line.strip()
+        if not name.startswith("_queue_/done/"):
+            continue
+        if not name.endswith(".md"):
+            continue
+        unit = os.path.basename(name)[:-len(".md")]
+        if unit:
+            done.add(unit)
+    return done, None
+
+
+def drop_branch_done_duplicates(root, done_ids, branch):
+    """Drop inbox copies already closed on the records branch.
+
+    Mirrors _drop_done_duplicates (issue #213) with the
+    delivered branch as the authority instead of the local done
+    directory: a unit completed in a detached worktree lands its
+    done record on the records branch, and until something
+    reconciles the branch back into this pool the inbox copy is
+    handed out again (issue #446: ticker-0534 re-ran three units
+    already done on records/2026-11-08). Dropping is
+    result-preserving by construction: the done record lives on
+    the branch and is never touched, only the stale inbox file is
+    removed, with a stderr warning naming the unit. Runs in sync
+    after the local drop, so a unit closed both locally and on
+    the branch is counted once, under the local drop.
+    """
+    dropped = []
+    for unit in sorted(done_ids):
+        if not unit:
+            continue
+        if not os.path.exists(unit_path(root, "inbox", unit)):
+            continue
+        print(f"warning: {unit} already done on {branch} - dropping "
+              f"the stale inbox copy instead of re-executing it",
               file=sys.stderr)
         os.remove(unit_path(root, "inbox", unit))
         dropped.append(unit)
