@@ -2267,3 +2267,31 @@ of 2026-10-28.
   2245 escalation, carried with no new note. Merge
   synced to the owner Slack DM. Full detail in
   pr-integration/0945-run.md.
+## 09:37 to about 09:44 — Queue ticker pass, perception scout (events group, seq 6)
+
+- Scout unit scout-scout-2026-11-03-006 (partial, 8-min cap
+  discipline): Winter Battlefield Shop Campaign tab (17 items,
+  balance 1,260, 7 SOLD incl. all top-row premium chests) and
+  Season tab (11 items, balance 800, Sandstorm Master SOLD)
+  read in full; Winter Battlefield History tail read in full
+  (all 15 rows now known, 6 victories + 9 defeats; CORRECTION:
+  Narrow Victory 2026-3-21 reads 02:23, not 02:33 as guessed
+  in the 0734 read; the two March rows carry the [Z76] tag).
+  Doomsday count finish carries to successor seq 007. Red
+  dots 4 seen, 4 explained, 0 unexplained. Full detail in
+  perception-scout/0937-queue-run.md and the 2026-11-03
+  observation file.
+
+## 09:47 to about 10:02 — Queue ticker pass, resource collection (harvest)
+
+- Harvest unit harvest-2026-11-08-0603 (partial, 14-min
+  cap): food +8.2M (one tap collected all farmland,
+  478.8M to 487.0M), coin +5.4M (6.9M to 12.3M), iron
+  +7.5M (802.1M to 809.6M), all HUD-verified. Top-edge
+  bubbles and the armed truck loot are unverified; a
+  batch tap near the HUD power figure opened Power
+  Details instead (Hero Power 65,282,351 read for the
+  record only; Power Up NOT tapped). Full-map
+  zero-remaining acceptance NOT met; the next harvest
+  unit resumes the sweep. Tracker untouched. Full detail
+  in resource-collection/0958-queue-run.md.
