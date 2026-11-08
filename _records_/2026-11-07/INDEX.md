@@ -4398,6 +4398,24 @@ of 2026-10-28.
   (44/44 fixture assertions, exact #422 tail and the real
   main action-log copy). Status: done. Full detail in
   tool-development/2241-run.md.
+
+## 22:34 to 23:01 — Queue ticker pass, shop claims (passes)
+
+- Passes unit passes-2026-11-07-1857, partial: Weekly Pass Free
+  Supply auto-claimed on page open, paying 5,000 red diamonds
+  from the Mystery Supply Box (toast read in full). Super
+  Monthly Pass Daily Pickup already "Claimed" today (Days Left
+  14, Rewards Left 14). All four weekly pass cards (S2 Drone
+  Components, S1 Drone Parts, Iron, Coin) are $4.99 purchase
+  offers - no owned weekly pass with a claimable Daily Pickup.
+  Season II hub (Week 8, "Calculating.") holds no claimable
+  season pass; its Rewards page is leader-only ranking
+  assignment, untouched. Check-in FREE GIFT still unclaimed:
+  two taps on the shop Go button swiped the carousel instead
+  of opening the check-in; left for the next passes unit
+  (2257). Legendary Take All $19.99 untouched. Total Power
+  read live 149,850,353. Tracker untouched. Full detail in
+  shop-claims/2234-queue-run.md.
 ## 22:39 to about 22:43 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-07-2239. No adopted
