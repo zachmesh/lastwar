@@ -3734,3 +3734,18 @@ of 2026-10-28.
   awaiting branch-side reconciliation. No new records PR
   opened. Status: no-op. Full detail in
   pr-integration/2011-run.md.
+
+## 20:15 to about 20:23 - PR integration pass
+
+- PR-integrator pass pr-integration-2026-11-07-2015.
+  Non-batch pass: checker plain and merge-aware both not
+  due (outside every batch window), next batch 23:00 PT.
+  No knowledge or code PR open. Records PR 398 clean at
+  head b8cf68e0, awaiting the 23:00 batch. Records PRs
+  301 and 351 still conflict on the single action-log
+  file, unchanged since the 1900/1930 conflict notes,
+  re-verified against unchanged main 815a413c,
+  awaiting branch-side reconciliation. No new records PR
+  opened; records/2026-11-06 is fully contained in main.
+  Status: no-op. Full detail in
+  pr-integration/2015-run.md.
