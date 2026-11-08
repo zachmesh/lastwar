@@ -3016,3 +3016,26 @@ of 2026-10-28.
   statements current. No adoption, no fix, no hand-off, no
   escalation, no stale-owner flag. Status: no-op.
   Full detail in pr-catchall/1739-run.md.
+
+## 17:32 to about 17:45 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-07-1732.
+  Own PRs checked first: no tooling PR of mine open (4 open
+  PRs are integrator-owned records branches); PR #403 is
+  MERGED. Newest open tooling issue #407 (regulars.py UTC
+  stamp bug, filed by the ticker-1633 pass) worked this run:
+  day selection was already fixed by #249, the live defect
+  was the naive-host-time done/skip stamp plus queue.py
+  sync/plan calling regulars.py with no --date. Fix on
+  branch work/regulars-local-date-407, commit 35199d3c:
+  aware America/Los_Angeles stamps, explicit --date from
+  sync/plan. PR #408 opened, issue #407 commented, Slack
+  DM sync posted. Validation: 19/19 fixture checks on an
+  isolated scratch pool under TZ=UTC, before/after stamp
+  comparison (HEAD stamps naive 2026-11-08T01:42:54, fixed
+  stamps aware 2026-11-07T17:42:21-08:00), sync/plan smoke
+  tests idempotent. Deployment note: the live checkout
+  ~/workspace/lastwar still runs pre-#249 regulars.py with
+  date.today(), so the fix reaches the loop only after that
+  checkout is pulled. Status: done. Full detail in
+  tool-development/1732-run.md.
