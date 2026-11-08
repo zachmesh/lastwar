@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T09:32:17Z
-version: 1.29.0
+modified: 2026-11-08T10:32:17Z
+version: 1.30.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-1818 alliance-duel execution record 2026-11-07 1828 queue run (partial, league calculating, personal total unread, roulette 0 tokens)
   - source: ticker-2304 perception-scout execution record 2026-11-07 2311 queue run (partial, Star Ceremony Event 40 playback read live, bonus rewards purple gem 4.0K and gold chest badge 14 claimable; record commit 03dc69e0c on records/2026-11-07)
   - source: ticker-0104 perception-scout execution record 2026-11-08 0122 queue run (partial, Alliance Star ceremony read live, slide 1 S2 Big Shot Texan Apex, chest 0/1, ceremony exit route unknown; record commit 33bb20050a on records/2026-11-08)
+  - source: ticker-0137 perception-scout execution record 2026-11-08 0150 queue run (partial, Star Ceremony loop established chest -> 10 -> 11 -> 12 -> 13 -> MVP -> chest, slides 10-13 and MVP winners read live, Go/emote claim is the only untested forward action; record commit b88ed12a2 on records/2026-11-08)
 ---
 
 
@@ -909,3 +910,13 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Slide 2: "Little Sun", "Nuna Knuckles" named. Tabs 1 to 6 are visible on the slide-1 frame. The bottom-left button advances slides; it does not exit the ceremony.
 - The chest 0/1 is observed only - claiming belongs to the star-ceremony regular, whose unit is already queued. The bonus rewards the 2311 read found (purple gem 4.0K and gold chest, badge 14) are still the claimable work; this unit did not reach the end screen.
 - Ceremony exit route, unknown: the back control advances slides; whether the ceremony exits after slide 6 or by another control is untested. The game was left inside the Star Ceremony playback (slide 2). No new Issue filed: the exit route is carried to the successor scout unit (scout-scout-2026-11-02-009).
+
+## What the 2026-11-08 0150 scout read added - ceremony loop established, slides 10-13 and MVP winners read live
+
+- Scout unit scout-midday-scout-mid-2026-11-03-004 by ticker-0137, about 01:44 to 01:50 local, status partial (store-group remainder, ceremony overlay). Evidence in `_records_/2026-11-08/perception-scout/0150-queue-run.md` (commit b88ed12a2 on records/2026-11-08). Observe-only; no ceremony reaction sent.
+- The loop - the ceremony cycles, it does not exit on its own controls: chest -> 10 -> 11 -> 12 -> 13 -> MVP -> chest. After the MVP slide the ceremony returned to the chest / bonus-rewards slide, and a back-arrow tap from the chest slide advanced through the "Next UP ..." transition to slide 10 again. This refines the 0122 open question ("whether the ceremony exits after slide 6 or by another control is untested"): the back control advances slides and loops from the chest slide back to slide 10; the only untested forward action is the Go/emote claim.
+- Winners read live: slide 10 Doom Elite Slayer JerryLogDog 223 (runners SKRyZeRZ 181, xChroniApex 171); slide 11 Alliance Sponsor DCna8ive 178,000 (runners kaBoom420 166,850, Texan Apex 103,300); slide 12 Good Helper 5tarFall 2,807 (runners DCna8ive 2,738, VOUGoApex 2,543); slide 13 Shining Star Abŷss Apex +4,362,901 (runners 2,113,189 and 1,937,365, names garbled in OCR, unread); MVP SKRyZeRZ 9 Performance Points (runners Rage Apex, Abŷss Apex). Bonus slide unchanged: purple gem 4.0K, chest 0/1, Go tooltip still showing.
+- Exit route, narrowed not closed: the Go button ("Send emotes to the winner to receive rewards") is the ceremony's claim path and belongs to the star-ceremony regular, whose unit is already queued (star-ceremony-2026-11-08-0230, -0630). Whether the ceremony exits after the emote is sent is still untested. No new Issue filed: the exit route is owned by the star-ceremony regular's queued unit.
+- Slide-count reconciliation, open: the 0122 unit read "6 slides" with opening slides S2 Big Shot / Little Sun, this unit read the six bottom-row slides (10, 11, 12, 13, MVP, chest) plus the bonus slide - whether the S2 awards are opening slides before rank 10 or a separate presentation is unresolved. Recorded here as an open question, not asserted either way.
+- Advancement mechanics, measured (for the star-ceremony regular's unit): centre tap at norm 500,500 advances one animation stage; blue skip button at norm 806,938 advances one slide; bottom-left back arrow at norm 170,914 advances slides. A skip tap at norm 800,914 does nothing - the button's active point is low, near y 938. Two taps on the skip point that report no change still changed the slide content, so the tool's no-change report is unreliable on this screen; judge by the image, not the status line.
+- The bonus rewards the 2311 read found (purple gem 4.0K and gold chest, badge 14) are still the claimable work; this unit did not reach a claim and sent no reaction. The game was left inside the Star Ceremony playback (bonus-rewards slide).

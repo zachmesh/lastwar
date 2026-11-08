@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T09:32:17Z
+modified: 2026-11-08T10:32:17Z
 level: L1
-version: 1.56.0
+version: 1.57.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -66,6 +66,7 @@ grounded_in:
   - source: ticker-0004 perception-scout execution record 2026-11-08 0011 queue run (partial, events group, Tech Donation Today footer 2050 at entry; record commit e6192726d1 on records/2026-11-08)
   - source: tool-development execution record 2026-11-08 0046 queue run (Issue #429 implemented, tools/pass_worktree.py, deleter of the /tmp worktrees identified as the agent runtime /tmp sweep on this VM, VPS origin-tmp-cleanup exonerated; record commit 9445bf19db on records/2026-11-08)
   - source: ticker-0034 alliance-donations execution record 2026-11-08 0043 queue run (partial, re-read after the 2018 cooldown, 2 coin donations landed 3/30 to 1/30, final tap unconfirmed behind a 00:16:01 timer, count rose 1 to 3 between units, footer 2050 to 2350 observed only, fourteenth replenishment data point, fifth cooldown reading; record commit 4fd2b88a26 on records/2026-11-08)
+  - source: ticker-0137 alliance-donations execution record 2026-11-08 0154 queue run (partial, blocked by the Star Ceremony overlay, 0 donations, Donation Count unread, tracker untouched, picker gap filed as Issue #436; record commit b88ed12a2 on records/2026-11-08)
 ---
 
 
@@ -2484,3 +2485,13 @@ enqueued for after the cooldown (not before about
 - Game left safe: ALLIANCE TECHS tree open on the Development tab, Quick Construction panel closed. No diamond button tapped, no money spent, no other task type touched. No Assemble, no teleport, no purchase.
 - Tracker untouched (unverified close). A named re-read unit is enqueued by this pass for after the cooldown (not-before 23:59 local): it opens the panel, reads the count live, donates the last one if it reads 1/30, and closes the day only on a live 0/30 read. The 0618 unit from the 2219 unit remains in the inbox alongside it; whichever runs first does the re-read, and the other then reads the post-timer state. The 30-of-30 daily target for 2026-11-07 remains unverified.
 - Game left on the Quick Construction donation panel with the coin button greyed on the timer. No reward button was tapped anywhere in this unit.
+
+## What the 2026-11-08 0154 donations unit added - blocked by the Star Ceremony overlay, no count read
+
+- Unit donations-2026-11-08-0618 by ticker-0137, about 01:53 to 01:54 local, status partial. Evidence in `_records_/2026-11-08/alliance-donations/0154-queue-run.md` (commit b88ed12a2 on records/2026-11-08). No donation made, no Donation Count read, no coin or diamond spent. The tracker is untouched.
+- Entry: the game was found on the [AP3X] Alliance Star Ceremony (Event 40) bonus-rewards slide (purple gem 4.0K, "Here are your bonus rewards", "Send emotes to the winner to receive rewards" tooltip with a blue Go button, chest counter 0/1) - the same overlay the 0150 scout unit of this pass walked in full and found looping (chest -> 10 -> 11 -> 12 -> 13 -> MVP -> chest). The ceremony overlay covers the whole window, so the base screen - and with it the Alliance entry, the Alliance Techs panel and the Donation Count - is unreachable in this unit. Nothing was tapped on the ceremony: the Go button is the ceremony's claim path and belongs to the star-ceremony regular, whose unit is already queued.
+- No Donation Count figure is claimed anywhere in this record: the count was never read live in this unit, so the day's 30-of-30 target is unverified for this unit and no arithmetic final is asserted. This unit does not move the 1 -> 3 count-rise reading (Issue #423) or the fifth cooldown reading 00:16:01 (Issue #160) either way - neither was re-read.
+- No re-read unit is enqueued from this unit: the blocker is the ceremony overlay, not a donation cooldown, and the tracker still shows donations due, so the next tick re-produces the regular once the overlay clears. The star-ceremony unit in the inbox (star-ceremony-2026-11-08-0230, -0630) is the unblocker; until it runs, every base-screen unit blocks on the same overlay.
+- Queue note: the picker takes the earliest-expiring unit first, so while the ceremony is open it keeps handing out base-screen units that all block identically. Whether the picker should prefer the unit that clears a screen-blocking overlay is a tooling question, filed as GitHub Issue #436 from this pass (tooling class, owned by lastwar-tool-developer).
+- Result statistics: target 30 (daily coin donations), achieved 0, resources_gained none, verified no, blocker_category f (missing precondition: base screen unreachable behind the Star Ceremony overlay; exit is the Go/emote claim owned by the star-ceremony regular).
+- Game left safe: game left on the ceremony bonus-rewards slide. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
