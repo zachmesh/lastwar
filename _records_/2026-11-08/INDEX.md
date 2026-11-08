@@ -1274,3 +1274,56 @@ of 2026-10-28.
   synced to the owner Slack DM after this record was
   pushed. Status: done. Full detail in
   pr-integration/0545-run.md.
+## 05:36 to 05:39 — Queue ticker pass, perception scout (store remainder)
+
+- Scout unit scout-midday-scout-mid-2026-11-04-003,
+  done: the stale 2026-11-04 midday chain's last five Mall
+  tabs walked live, observe-only - Super Monthly Pass
+  (13 days left, Daily Pickup Claimed, Rewards Left 13),
+  Weekly Pass (reset 18:00:00, four $4.99 cards),
+  Diamond (six x2 first-buy packs $0.99-$99.99), Gold
+  Brick Mall (Extra 5% Bonus, eight packs $4.99-$999.99),
+  Hot Sale Packs (sold out). Red dots: 0 seen, 0
+  unexplained. The chain is now complete, no successor.
+  NOTE: this unit was already done on the branch by
+  ticker-0404 (evidence 0407); this pass re-executed it
+  from a stale main-checkout pool - see issue #446. The
+  later execution's result replaces the earlier one in
+  this commit per the merge precedent. Full detail in
+  perception-scout/0538-queue-run.md.
+
+- 0542 ticker-0534 scout-midday red-dot explanation
+  (chain scout-mid-2026-11-03 seq 005, done): the three
+  dots carried from the 0204 unit are all explained live -
+  blue bus icon = Trucks (0/5 trades, 4 waiting), white
+  truck icon = Secret Command Post (17 Your Tasks + 5
+  Ally Tasks claimable, secrets regular), VIP cart icon =
+  VIP Store entry with no dot now (weekly-stock signal,
+  cleared by the 0204 panel visit; Freebie still
+  claimable, ruled out as the cause). Corrects the 0022
+  unit's white-truck-to-trucks mapping. The chain is now
+  complete, no successor; the seq 006 successor the 0454
+  record staged for the cart dot is answered by this
+  record. NOTE: this unit was already done on the branch
+  by ticker-0434 (evidence 0454, cart dot left
+  unexplained); this pass re-executed it from a stale
+  main-checkout pool - see issue #446. The later, more
+  complete result replaces the earlier one in this
+  commit. Full detail in perception-scout/0542-queue-run.md.
+
+- 0546 ticker-0534 donations re-read (partial): Donation
+  Count read live 1/30 on Quick Construction (the prior
+  unit's final tap had not landed); one 900-coin donation
+  made and verified landed (button greyed, 00:11:00
+  timer); the post-donation 0/30 read is hidden by the
+  timer, so the unit closes unverified per the hard
+  closing rule and a re-read unit (donations-2026-11-08-
+  1346, not-before 14:02Z) is enqueued - it twins the
+  branch inbox unit donations-2026-11-08-1318, which
+  fires first. Tracker untouched. NOTE: this unit was
+  already partial on the branch by ticker-0504 (evidence
+  0519, 3 donations landed 4/30 to 1/30); this pass
+  re-executed it from a stale main-checkout pool - see
+  issue #446. The later result replaces the earlier one
+  in this commit. Full detail in
+  alliance-donations/0546-queue-run.md.

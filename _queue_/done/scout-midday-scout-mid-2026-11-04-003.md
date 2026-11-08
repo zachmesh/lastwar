@@ -14,32 +14,32 @@ chain_id: scout-mid-2026-11-04
 chain_seq: 3
 attempts: 1
 max_attempts: 3
-claimed_by: ticker-0404
-claimed_at: 2026-11-08T12:07:08Z
-lease_until: 2026-11-08T12:27:08Z
+claimed_by: ticker-0534
+claimed_at: 2026-11-08T13:35:20Z
+lease_until: 2026-11-08T13:55:20Z
 result:
   status: done
-  started_at: 2026-11-08T12:07:08Z
-  finished_at: 2026-11-08T12:14:25Z
-  duration_seconds: 437
-  executor: ticker-0404
-  summary: Scout-store remainder done: 5 Mall tabs walked live, observe-only; Weekly Pass reset 18:00:00 confirmed (5th); Hot Sale Packs sold out; chain spent
-  claimed: []
-  claimed_count: 0
-  evidence: _records_/2026-11-08/perception-scout/0407-queue-run.md
+  started_at: 2026-11-08T13:35:20Z
+  finished_at: 2026-11-08T13:39:36Z
+  duration_seconds: 256
+  executor: ticker-0534
+  summary: Scout-store group walked observe-only: all 5 remaining Mall tabs read live (Super Monthly Pass 13 days left, Daily Pickup Claimed; Weekly Pass 4x $4.99 cards; Diamond 6 x2 packs; Gold Brick Mall 8-pack ladder; Hot Sale Packs sold out); 0 red dots; stale 2026-11-04 midday chain now complete
+  claimed: [none]
+  claimed_count: 1
+  evidence: _records_/2026-11-08/perception-scout/0538-queue-run.md
   follow_up: none
   stats:
-    target: 5
-    achieved: 5
-    resources_gained: none
+    surfaces_walked: scout-store
+    items_observed: 15
+    red_dots_seen: 0
+    red_dots_explained: 0
+    unexplained_red_dots: 0
+    unknown_items: 4
+    target: walk 5 remaining store tabs
+    achieved: 5 tabs walked live
+    resources_gained: none (observe-only)
+    costs: duration about 240s
     verified: yes
-    surfaces_walked: 5
-    items_observed: 12
-    red_dots_seen: 12
-    red_dots_explained: 7
-    unexplained_red_dots: 5
-    unknown_items: 0
-    costs: about 7 min, no items
   stats_missing: []
   stats_warnings: []
 ---

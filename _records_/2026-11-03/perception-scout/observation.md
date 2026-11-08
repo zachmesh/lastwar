@@ -288,3 +288,13 @@ unit record at `perception-scout/0542-queue-run.md`.
 - Frontline Reward panel, complete: 3 rows all 0 progress, all Claim greyed - Play (0/3) gold x5/crate x3/crate x3/red gem x50; (0/2) gold x3/crate x12/crate x12/red gem x30; (0/1) gold x2/crate x6/crate x6/red gem x20. Tab badge 1 is the Challenge attempt, not these rewards.
 - Red dot accounting: 2 seen, 2 explained, 0 unexplained in this unit scope. Unknown items: Doomsday badge-22 composition; Damage Ranking / Ranking Reward tabs; Winter sub-pages; furnace toast [22/60]; 99+ badge.
 - Carried unwalked: Winter Battlefield sub-pages (Rewards, Rules, Shop, History, Achievement) and the Doomsday count finish - successor seq 004 of chain scout-2026-11-03.
+
+### Scout-midday red dots, 0542 unit (ticker-0534, stale 11-03 midday chain seq 5) - live read 2026-11-08 about 05:40-05:50 local
+
+- Blue truck/bus icon (left column): opens Trucks - Today's Trade Count 0/5, 4 own trucks waiting, tabs badged 4/4. Dot = trucks regular dispatch/plunder availability.
+- White truck icon (left column): opens SECRET COMMAND POST, Secret Mobile Squad - Assist Allies 0/5, Plunder Others 0/5, Your Tasks badge 17, Ally Tasks badge 5, green Claim buttons on all visible rows (UR Rescue Test Subject, SSR Train Refugees, SSR Provide Tech Support, SSR Search for Missing Refugees). Dot = secrets regular claimable-tasks signal. CORRECTION: the 0022 unit mapped the white truck to the trucks regular - wrong; the blue icon opens Trucks, the white icon opens the Secret Command Post.
+- VIP panel cart icon: opens the VIP STORE (VIP/Alliance/Honor tabs; SR chests 100/100 at 40 diamonds, 50 Stamina 5/5 at 60, Superalloy 100/100 at 6; refreshes Monday 00:00 server time; all stocks full). NO red dot on the cart at this read - the 0204 dot most plausibly marked unviewed weekly store stock, cleared by that unit's own panel visit; the Daily Freebie (still green/claimable) is ruled out as the dot's cause.
+- VIP panel re-check: VIP13, 1,605,970/2,000,000, 2 days logged in, Daily Freebie still claimable (observed only), VIP Exclusive $99.99, timer 18d 12:24:11.
+- Red dot accounting: 3 seen, 3 explained, 0 unexplained. Unknown items: gold chest icon below the VIP cart; floating circular portrait icon (seen again); Trucks/Secret Command Post Recover dots; VIP Store bottom-row prices.
+- Carried unwalked: none - the stale 2026-11-03 midday chain is now complete; the seq 006 successor staged by the 0454 record for the cart dot is answered by this record.
+- NOTE: duplicate execution - ticker-0434 already completed this unit (0454 record, cart dot left unexplained); this re-execution from a stale pool closes that open item, see issue #446.
