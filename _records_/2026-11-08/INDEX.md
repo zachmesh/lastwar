@@ -129,3 +129,16 @@ of 2026-10-28.
   issues 132, 154 and 335 all over 24 hours with statements
   current. Status: no-op. Full detail in
   pr-catchall/0039-run.md.
+
+## 00:40 to about 00:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0040. Plan staged 0
+  units (already_present 74, reaped 0, expired 0); pre-reset
+  sweep production skipped (not the 17:00 hour run, tonight's
+  pair due from the 17:00 run; last night's pair expired
+  unexecuted 2 of 2); scout diff on the Nov 4 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained red dots 4 on a
+  narrative-fallback basis); 0 withdrawals. Pool: inbox 80,
+  claimed 0, done 1200. Status: no-op. Full detail in
+  queue-planning/0040-run.md.
