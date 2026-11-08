@@ -228,7 +228,11 @@ The token file lives in the main checkout's `_queue_/claimed/`,
 shared by every worktree of the repository, so a pass running in a
 fresh detached worktree still sees a token held by a pass still
 running (issue #383) - a worktree-local token would be invisible to
-the next tick and the guard above would not hold.
+the next tick and the guard above would not hold. A re-acquire by the
+same executor within 60 seconds of expiry renews the lease instead of
+reporting held (issue #461) - the 2026-11-08 ticker-1049 secrets unit
+re-acquired 3 seconds before expiry, was refused, and its game input
+ran with no token held until the next acquire.
 
 Latency is bounded and measurable - a fresh unit waits at most one
 tick interval plus the remainder of the unit currently running
