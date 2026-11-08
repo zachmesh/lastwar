@@ -3304,7 +3304,7 @@ of 2026-10-28.
   reset; the duel-score 1830 unit re-reads the duel total;
   the trucks/donations quotas are still unverified.
 
-## 18:30 to about 18:44 - PR integration pass
+## 18:30 to about 18:39 - PR integration pass
 
 - PR-integrator pass pr-integration-2026-11-07-1830.
   Non-batch pass per the checker (plain and merge-aware
