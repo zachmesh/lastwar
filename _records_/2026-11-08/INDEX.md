@@ -703,3 +703,7 @@ of 2026-10-28.
   Pool-divergence issue filed (tooling class).
   Status: partial. Full detail in
   alliance-donations/0244-queue-run.md.
+
+## 03:00 to about 03:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0300. BATCH pass (checker _tools_/records_batch.py due: yes, window 03:00-04:00 PT). Merged records PR 426 (merge commit 0b4a8a41, 14 commits, 46 files); merge-time action-log line committed to records/2026-11-07 (42ef0190); fresh PR 439 opened for the post-0300-batch appends. Records PR 430 clean against pre-batch main but conflicts against the new main on 11 files (action-log plus queue-pool state), commented, carried for branch-side resolution. Knowledge PR 434 body now correct, only the stale title remains, feedback posted. Tools PR 425 owner-gated, unchanged since the 2245 escalation, no owner reply. Records PRs 351 and 301 still conflict on the single action-log file, carried. VPS worktree staged revert of the 0130 addendum still present, left untouched; all git work via scratch worktrees and named-ref bundles. Slack DM sync sent. Status: done. Full detail in pr-integration/0300-run.md.
