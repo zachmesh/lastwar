@@ -3918,3 +3918,30 @@ of 2026-10-28.
   clean at head ac68801e, awaiting the 23:00 batch.
   Status: done. Full detail in
   knowledge-organization/2032-run.md.
+
+## 20:43 to about 20:50 — Queue ticker pass, troop training
+
+- Training unit training-2026-11-07-1803, partial: Lv.30
+  barracks busy (T10 batch of 793, 1d 13:41:04 remaining);
+  Lv.24 barracks idle but its TRAIN UNITS entry returns the
+  toast "Drill Ground Full: Unable to add more units"; the
+  Drill Ground Lv.25 Details panel was read live (Unit Count
+  +7812; Officers Joe, Marcus, Karen, John; Quick Dispatch
+  button present and NOT tapped, effect unverified). No
+  barracks requeued; two barracks unchecked. Tracker
+  untouched. Note: this unit id was already completed by
+  the ticker-2006 pass (Issue 213 duplicate); this record
+  holds the second live execution, and the branch unit file
+  keeps the 2006 result. Full detail in
+  troop-training/2050-queue-run.md.
+
+## 20:48 to about 20:52 — Queue ticker pass, mail rewards
+
+- Mail unit mail-2026-11-07-1830, done: Alliance and Event
+  both opened and Claim All tapped, each answering "No
+  rewards available"; the only overview red dot stood on
+  In-app Purchases (receipts only). Nothing claimed,
+  nothing deleted. Note: this unit id was already completed
+  by the ticker-2006 pass (Issue 213 duplicate), which
+  claimed the rewards; this record holds the re-check.
+  Full detail in mail-rewards/2052-queue-run.md.
