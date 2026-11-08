@@ -1849,3 +1849,22 @@ of 2026-10-28.
   16:40Z) is enqueued; measurements added to Issue #450.
   Tracker untouched. Full detail in
   alliance-donations/0808-queue-run.md.
+
+## 08:30 to about 08:34 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0830.
+  NON-batch pass per the checker (due: no, outside every
+  batch window; next batch point 11:00 PT): no records
+  merges, no knowledge/code merges. Records PR 449 clean
+  at unchanged head 0c0baf9f and records PR 430 clean at
+  new head 97437267 (the ticker-0804 delivery), both
+  awaiting the 11:00 batch; re-check note posted on 430
+  only (449 unchanged since the 0815 check). Records PRs
+  351 and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, heads unchanged,
+  verdicts stand (not re-probed, main unchanged since
+  the 0800 verification), no new comment, carried.
+  Tools PR 425 owner-gated, unchanged head 8c2eb205,
+  still conflicting on _tools_/INDEX.md, no new comment.
+  No Slack sync (quiet non-batch run). Full detail in
+  pr-integration/0830-run.md.
