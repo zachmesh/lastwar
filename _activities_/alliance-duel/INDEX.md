@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-04T22:42:57Z
-version: 1.25.0
+modified: 2026-11-08T01:32:17Z
+version: 1.26.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-0434 alliance-duel execution record 2026-11-04 0456 queue run (done, star-ceremony trophy watch, no ceremony waiting, right-rail read, grounding timeout caveat)
   - source: ticker-0834 alliance-duel execution record 2026-11-04 0839 queue run (done, no ceremony waiting, personal duel total 4,772,100 against the 3,600,000 target, read live)
   - source: ticker-1340 alliance-duel execution record 2026-11-04 1344 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, third consecutive ticker pass to fail this way, Issue 284; ceremony and duel total unmeasured)
+  - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental Alliance Duel page read during the navigation detour: Today's Theme Enemy Buster, 01:14:51 left, alliance score 225,000, chest thresholds 40,000 / 150,000 / 540,000; record commit a85cfdafa8 on records/2026-11-07)
 ---
 
 
@@ -873,3 +874,9 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Recurrence, not a new failure class: this is the third consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344). The blocker is filed as Issue #284 (tooling, filed by this pass) alongside the knowledge Issue #282 filed by the 1332 organizer run. This section adds no new diagnosis; the narrowing of the fault to the game window comes from the later 1404 train unit (see alliance-train 1.26.0).
 - Reading warning: this failed unit gives zero evidence about the ceremony state or the duel total. It must NOT be read as "no ceremony waiting" - the 0456 and 0839 sections above rest on live reads; this one rests on no read at all.
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the star-ceremony unit. The inbox held 66 units at this pass. The unit file sits in `_queue_/done/` with result status failed - that is the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
+
+## What the 2026-11-07 1633 unit added - Alliance Duel page read incidentally during the donations detour, alliance score only
+
+- Incidental read during the ticker-1633 donations unit's navigation detour (evidence in `_records_/2026-11-07/alliance-donations/1633-queue-run.md`, commit a85cfdafa8): after a back-arrow tap from the radar screen opened the Alliance menu (Leader Abyss Apex, Power 13,330,672,918, Members 96/100), the following screenshot showed the Alliance Duel page with no further input from the executor: Today's Theme Enemy Buster, 01:14:51 left, alliance score 225,000, chest thresholds 40,000 / 150,000 / 540,000, top actions Dispatch UR Trade Truck 1 time +300,000 and Perform 1 UR Secret Task +225,000. The owner may be navigating the Mac himself; the executor stopped contesting the screen and closed the unit.
+- Reading discipline: this is an ALLIANCE score read, not a personal total. The personal duel total was last read live by the 0839 unit (4,772,100 against the 3,600,000 target, 2026-11-04) and is still unread since; the next duel-score unit re-reads the personal total from the VS panel. The theme (Enemy Buster) and the timer agree with the duel day 6 stack posture the planner staged for.
+- Tracker untouched for the duel-score regular; the next tick re-produces the duel-score unit.

@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-05T14:32:17Z
+modified: 2026-11-08T01:32:17Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-1134 troop-training execution record 2026-11-04 1147 queue run (partial, fullscreen framing mismatch, four grounded tent taps opened no panel, centre drag moved no view, session drop reopened, Issue 150)
   - source: ticker-1734 troop-training execution record 2026-11-04 1734 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, eleventh consecutive ticker pass to fail this way, Issue 284)
   - source: ticker-0534 troop-training execution record 2026-11-05 0534 queue run (failed, Mac screen-capture failure on every attempt, no game screen read, no input dispatched, thirty-fourth consecutive pass, probe classification OFF_SCREEN_WINDOW, Chrome observes normally in the same session, Issue 284)
+  - source: ticker-1655 troop-training execution record 2026-11-07 1655 queue run (partial, Lv.27 T9 x726 and Lv.30 T10 x793 requeued at cap, 9.6M food plus 9.6M iron, two upper-right barracks unchecked, Drill Ground Full not seen; record commit 514e333e5b on records/2026-11-07)
 ---
 
 # Troop training
@@ -831,6 +832,8 @@ Observed in game on this account, first execution 2026-10-25.
 
 - 1.24.0 (2026-11-05): 0534 training unit folded (failed, thirty-fourth consecutive screen-capture failure, no game screen read, no input dispatched, probe OFF_SCREEN_WINDOW, Chrome observes normally in the same session, inbox 70, tracker untouched); CORRECTION - the 1734 "running fullscreen 1920x1080" wording and the 1147 "fullscreen framing" wording are superseded, the window is windowed on an inactive Space (0134 View-menu read, re-confirmed by 0204, agreed by the 0534 probe), and the unblock is getting the window back onto the active Space (owner Dock-icon click); the thirty-fourth occurrence commented onto Issue #282 by this run. (1.19.0 through 1.23.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
 
+- 1.25.0 (2026-11-07): 1655 training unit folded (partial, Lv.27 T9 x726 at cap and Lv.30 T10 x793 at cap requeued and HUD-verified, 9.6M food plus 9.6M iron spent, two upper-right barracks unchecked so the keep-every-barracks-busy aim is not fully met, Drill Ground Full not seen but not closed with no live Drill Ground read, Lv.30 tap-the-body-not-the-circle entry lesson, white '?' bubble at (113,582) handed to the next survivors unit), folded from the 1655 training record.
+
 ## What the 2026-11-03 1051 unit added - three framings, still no tent, road drag pans where centre drag does not
 
 - Ticker-1034, unit training-2026-11-03-1003, about
@@ -1078,3 +1081,14 @@ Observed in game on this account, first execution 2026-10-25.
 - Reading warning: this failed unit gives zero evidence about training state. It must NOT be read as "no batch due" or as a queue state - the 0440 live Drill Ground Full confirmation still stands as the latest Drill Ground read, and the 1147 framing findings stand; this unit rests on no read at all. The Drill Ground clearing method remains unknown, carried forward from Issue #150, not closed.
 - The pass stopped after this one unit - every further unit needs the same game screen, and the probe says to stop. The inbox held 70 units at this pass. No other unit was attempted. No different-device dialog was observed (no screen was ever captured) and no device takeover was needed.
 - Tracker untouched for failed, per the queue rules; the next tick re-produces this regular.
+
+## What the 2026-11-07 1655 unit added - Lv.27 T9 and Lv.30 T10 requeued, two barracks unchecked, Drill Ground Full not seen, partial
+
+- Unit training-2026-11-07-1403 by ticker-1655, about 17:08 to 17:12 local, status partial. Evidence in `_records_/2026-11-07/troop-training/1655-queue-run.md` (commit 514e333e5b on records/2026-11-07). Computer session cc-19, LastWar already running on the Mac mini.
+- Lv.27 barracks (center tent, timer bubble now above it): TRAIN UNITS panel read Power 1352, Morale 625.0, Squad Load 2000, Unit HP 4121.49, Attack 33.5, Defense 6.74; Lv.9 selected, count 726 at cap, cost 4.1M food plus 4.1M iron, time 1d 10:19:35. Train tapped; panel closed and the HUD moved food 486.5M to 482.3M and iron 810.0M to 805.9M. Batch started. (726 at cap matches the 1552 batch - the cap is stable.)
+- Lv.30 barracks (tent below-right of the first; its portrait circle overlaps the tent body - tap the body, not the circle): TRAIN UNITS panel read Power 1647, Morale 750.0, Squad Load 2200, Unit HP 4726.34, Attack 38.45, Defense 7.7; Lv.10 selected, count 793 at cap, cost 5.5M food plus 5.5M iron, time 1d 17:14:37. Train tapped; panel closed and the HUD moved food 482.3M to 476.8M and iron 805.9M to 800.4M. Batch started.
+- Total spent in this unit: 9.6M food and 9.6M iron for 726 T9 plus 793 T10 troops. Both requeued barracks now carry a clock timer bubble. Finish Now was never tapped.
+- The other two barracks (upper-right tents) were not checked in this unit, so the "keep every barracks busy" aim is not fully met. The next training unit starts with those two. Tracker untouched, per the partial rule; the next tick re-produces the training regular.
+- The Drill Ground Full blocker from the 2026-10-31 retro was not seen: both Train taps succeeded and no capacity message appeared. No Drill Ground screen was read live in this unit, so the blocker is not closed, only not encountered - it is carried forward, not cleared.
+- Handover observation for the next survivors unit: a white "?" speech bubble stands at the left edge near the front gate (norm about 113,582) in the closing screenshots of this unit - a waiting survivor may have arrived after the survivors unit closed unverified minutes earlier.
+- Figures read live: food 486.5M at entry, 482.3M after the first batch, 476.8M at close; iron 810.0M, 805.9M, 800.4M; coin 5.7M; stone 25.0M; 922.2K; power 149,850,353. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
