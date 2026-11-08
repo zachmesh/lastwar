@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T01:32:17Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -756,6 +756,8 @@ regular stays due. Evidence in
 
 - 1.28.0 (2026-11-05): fortieth consecutive Mac device-access blocker (0904 harvest unit, invoke-channel stall, zero responses to eight invokes across two devices and five commands - a new worsened form, distinct from Issue 284's capture-failure-with-responses signature); the Correction 2026-11-05 unblock (owner Dock-icon click) is scoped to the window-stream fault only and does NOT address a stalled invoke channel, for which the Mac-side agent gateway likely needs a restart (unverified); the 1101 harvest close stands as the last live read, full edge-drag sweep still incomplete, Armed Truck state unknown; fortieth occurrence commented onto Issue #282 by this run.
 
+- 1.37.0 (2026-11-07): channel rules carried (propagation follow-up from the 1732 run): the 1020 Mission Control lesson - open_app Mission Control wedged the channel (geometry_mismatch, input gated on observation_required, second launch restores) and background Ctrl+Right does not switch Spaces; the background-Space-keys half was already in this profile from its own 0034 unit, the open_app wedging is the new part; the Dock-icon unblock stands. (1.29.0 through 1.36.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
+
 - 1.27.0 (2026-11-05): thirty-second consecutive capture failure (0434 harvest unit, 5 attempts across cc-518 and cc-519, probe OFF_SCREEN_WINDOW high confidence, Chrome observes normally in cc-520, View-menu probe step missing because describe is capture-blocked, recovery still the owner Dock-icon click or mac_lastwar_front.sh); the 1101 harvest close stands as the last live read, full edge-drag sweep still incomplete, Armed Truck state unknown; thirty-second occurrence commented onto Issue #282 by this run.
 
 - 1.26.0 (2026-11-05): Correction from the 0134 survivors and 0204 gifts records - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (View menu lists Enter Full Screen, read on-screen in session cc-505 and re-confirmed by a repeated probe in cc-508); the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; the "running fullscreen" wording in the 1634, 2104 and 0034 sections is superseded, and the 0034 "menu path View -> Exit Full Screen" with it; the permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); background Space keys do not switch Spaces, set_window_frame is stale-observation-gated, Cmd+Tab is blocked, list_windows needs the exact app name "LastWar"; the 1101 harvest close stands as the last live read; twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.23.0, 1.24.0 and 1.25.0 carry the 1634, 2104 and 0034 sections without changelog lines; the numbering is preserved, not rewritten.)
@@ -1155,3 +1157,7 @@ regular stays due. Evidence in
 - Lesson, standing: image-observe round trips are still the bulk of the unit time (each screenshot plus read about a minute) - verify with the compact observe where the HUD figure is enough, and keep image screenshots for bubble grounding only.
 - Reading warning: this partial unit is not a full-map close - the 1101 close (farmland +2.1M food, left-side +1.4M coin verified, sweep incomplete) stands as the last live read of the wider sweep, and the full edge-drag sweep of the 2026-11-01 rule remains incomplete, carried forward not closed. The Armed Truck state is unknown.
 - Tracker untouched, per the partial rule; the next tick re-produces the harvest regular.
+
+## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
+
+- Channel rules, now carried in this profile (propagation follow-up from the 1732 run, resource-collection done - joining alliance-help, alliance-gifts, radar-tasks, arms-race, alliance-donations and shop-claims): Mission Control was not opened as a recovery step, per the 1020 lessons folded into alliance-help 1.27.0 - open_app Mission Control wedged the channel in that pass (first launch opened the overview; every later activate and observe then failed with geometry_mismatch origin_delta 256+, agent_display false, and all key input gated on observation_required; a second launch closed it and restored observation; the overview itself cannot be observed or clicked through this channel). Background Ctrl+Right was not tried: it does not switch Spaces through this channel (in the 1020 pass the key went to the Finder column view instead). The known reliable unblock stands: the owner clicking the LastWar Dock icon once. This profile already records the background-Space-keys half from its own 0034 unit (Ctrl+Right / Ctrl+Left dispatched but the Space did not switch); the new part carried here is the open_app Mission Control wedging (a launch, not a keypress).

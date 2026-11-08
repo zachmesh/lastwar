@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T01:32:17Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.48.0
+version: 1.49.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -56,6 +56,7 @@ grounded_in:
   - source: ticker-0804 alliance-donations execution record 2026-11-07 0804 queue run (failed, Mac device offline, one-hundred-fourth consecutive ticker pass to fail this way, sixty-fifth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 48h, unchanged since the ticker-0734 pass; six invokes, zero responses, recovery-device health check timed out after 25s; Donation Count unread, 30-of-30 daily target unverified for 2026-11-07)
   - source: ticker-1334 alliance-donations execution record 2026-11-07 1334 queue run (failed, Mac back online, window off-Space, capture failure, one-hundred-tenth consecutive ticker pass to fail this way, fourth in the capture-failure form, Issue 282; window 160366 pid 59735 at (0,-360), 7 invokes zero game screens, 4 capture attempts failed identically, Mission Control / Ctrl+Right / open_app / set_window_frame not retried per the 1020 lessons; last_seen 21:33:33Z fresh, about 4 minutes before the pass; sync reaped 0 expired 0 due 20, queue stats inbox 77 done 1129 at 21:38Z; no donations unit today has read the Donation Count live; record commit ad4d339522 on records/2026-11-07, verified against the Issue #282 comment 2026-11-07T21:49:32Z which agrees on every point)
   - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (partial and unverified, navigation detour via radar and Alliance Duel consumed the budget, Donation Count never read, no donation made; BASE tap 920,975 opened the radar map, home-icon tap 918,941 no return, back arrow opened the Alliance menu and the Duel page; R2 changed route still untested; re-read by the staged 1803 unit; record commit a85cfdafa8 on records/2026-11-07)
+  - source: pre-reset zero sweep execution record 2026-11-07 1824 queue run (first pass, donations line 17 unverified, both R3 checkpoints passed with the count unread; record commit 840094b6ad on records/2026-11-07)
 ---
 
 
@@ -2388,3 +2389,10 @@ enqueued for after the cooldown (not before about
 - Entry-route note: the Alliance shield tap route from the base screen was never reached in this unit, so the R2 changed route (fresh measured centre, never a grounding-tool point) is still untested in this window. The base screen itself was not re-entered after the detour.
 - Reading warning: this partial unit gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and no donations unit today has read the count live: the 0804 unit failed in the offline form (Issue 284) and the 1334 unit failed in the capture-failure form (Issue 282). The 30-of-30 daily target is unverified for 2026-11-07.
 - Tracker untouched, per the partial rule; the next tick re-produces the donations unit (the staged 1803 unit is the re-read).
+
+## What the 2026-11-07 1824 sweep added - Donation Count still unread at 18:24, both R3 checkpoints passed unverified
+
+- Unit zero-sweep-2026-11-07-1730 by ticker-1734, about 18:06 to 18:24 local, status partial. Evidence in `_records_/2026-11-07/daily-activities/1824-queue-run.md`. No donation was made and the Donation Count was not read in this unit: the sweep is verification-only and does not execute task types.
+- Donations line 17, not at zero and unverified: no Donation Count read live today - the 0203 and 0603 units failed in the offline form (Issue 284), the 1003 unit failed in the capture-failure form (Issue 282), the 1403 unit spent its budget on a navigation detour and never reached the Alliance Techs screen. Rule R3 checkpoint note: both the six-hour and the two-hour checkpoints passed with the count still unverified. Fix-up donations-2026-11-07-1803 sits in inbox.
+- Reading warning: this sweep gives zero evidence about the Donation Count. It must NOT be read as a count state - the 1046 section's 1/30 close with the greyed regen timer stands as the last live read, and the 30-of-30 daily target is unverified for 2026-11-07.
+- Follow-up: the 1803 fix-up unit re-reads the Donation Count in its own slot; the 18:30 final sweep re-walks the line.

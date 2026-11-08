@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-02T03:47:03Z
+modified: 2026-11-08T02:42:42Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: owner refinement on 2026-10-26 - 26 minutes apart
   - source: owner refinement on 2026-10-26 - 27 minutes apart, the final spacing
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (first zero sweep)
+  - source: pre-reset zero sweep execution record 2026-11-07 1824 queue run (first pass, partial, first 17:30 sweep to run since 2026-11-02; record commit 840094b6ad on records/2026-11-07)
 ---
 
 # Routine activities
@@ -290,3 +291,12 @@ claims cited below were read in this pass's passes unit
   the standing truck counter tension (truck-plunder
   1.12.0) or the secrets denominator note (secret-missions
   1.4.0); both still await their next live unit reads.
+
+## Pre-reset zero sweep - first pass, 2026-11-07 1824 (partial)
+
+- Unit zero-sweep-2026-11-07-1730 by ticker-1734, session window about 18:06 to 18:24 local. Computer session cc-29 (cc-28, opened for the VIP unit of this same pass, had closed during the gap between units; cc-29 reopened for this unit). Status partial, following the 2026-11-01 and 2026-11-02 first-sweep precedent: not all 23 ledger lines were live-read inside this unit. Lines rest either on a live read in this unit, on the day's last live read named below, or as unreadable, and every not-at-zero line names its fix-up unit. The final sweep at 18:30 re-walks the list. No other task type was worked inside this unit.
+- Day context: the Mac mini was offline about 50 hours until about 10:20 today (Issue 284), and the screen-capture channel then failed on every unit through 14:03 (Issue 282, window off-Space). The first successful game reads today were the 16:56 pass (harvest, survivors, training) and the 17:27 pass (help, gifts, VIP, mail). Several ledger lines therefore have no live read at all today.
+- Live reads in this unit: base screen at about 18:20 showed food, iron, coin and EXP bubbles standing across the farmland and building clusters (lines 1-4 not at zero as a group; the per-resource split was not read, so the split is not claimed per line). HUD read food 476.8M, iron 800.4M, coin 5.7M, power 149,850,353. A white "?" bubble stands near the front gate. Events carries a red badge 1; Mail, Alliance and the truck icon carry red dots; VS reads "Calculating". Stamina 86, hammers 2 of 4, flasks 2 of 2.
+- Count: 23 lines walked - 1 at zero (VIP login chest, claimed live in this pass's VIP unit for plus 60 points), the rest not at zero or unreadable. The sweep itself enqueued two fix-ups: crystal-shop-2026-11-08-0208 (line 22, Crystal not located, age 13 days from 2026-10-25) and glittering-market-2026-11-08-0208 (line 23, Glittering Market not located, age 7 days from 2026-10-31), both priority 1, expiring at the 19:00 reset. All other not-at-zero lines already had an eligible unit in inbox, so no duplicate was enqueued; those units are named per line in the sweep record.
+- Gaps the sweep surfaces: donations line 17 and trucks line 18 both still unverified with no live count read today (donations: 0203 and 0603 Mac offline, 1003 capture failed, 1403 navigation detour, count never read; trucks: 0257, 0657 and 1057 all expired unexecuted) - and both rule R3 checkpoints (six-hour and two-hour) passed with the counts still unverified; duel line 21 unverified with no duel total read today and duel-score at 0 done units ever; passes, events, radar, secrets and treasures lines unreadable today after the morning outage.
+- Note for the next ticks: the 17:30 sweep pair of 2026-11-03 through 2026-11-06 all expired unexecuted, and this is the first 17:30 sweep to run since 2026-11-02 - the fix-ups above and the inbox units named per line must be picked up by the 18:34 tick or the 18:30 final sweep, or they meet the same fate at the reset.
