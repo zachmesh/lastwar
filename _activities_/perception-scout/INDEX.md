@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T20:39:36Z
+modified: 2026-11-08T21:39:04Z
 level: L1
-version: 1.41.0
+version: 1.42.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -61,6 +61,7 @@ grounded_in:
   - source: ticker-0934 perception-scout execution record 2026-11-08 0937 queue run (partial, Shop Campaign tab complete 17 items 7 SOLD, Shop Season tab complete 11 items Sandstorm Master SOLD, Winter Battlefield History tail complete 15 rows with 02:23 correction and [Z76] March rows, Donation Count 2/30 replenishment, Doomsday count finish carried to seq 007); record commit ac350b49c on records/2026-11-08
   - source: ticker-1131 perception-scout execution record 2026-11-08 1144 queue run (partial, station re-check, ninth no-train confirmation, Wars dot rally-link third positive case not a settlement, Wars page back arrow re-grounded to (56, 938)); record commit 3110bb6a6 on records/2026-11-08
   - source: ticker-1134 perception-scout execution record 2026-11-08 1159 queue run (done, Doomsday count finish read live, Rewards 13 first-kill + 9 cumulative rows all claimed, Damage Ranking top 6, Ranking Reward tiers, chain scout-2026-11-03 complete); record commit ce3dcc4bf on records/2026-11-08
+  - source: ticker-1223 perception-scout execution record 2026-11-08 1243 queue run (partial, station re-check, tenth no-train confirmation, Wars dot absent with empty Rally Intel, fourth same-day datapoint for Issue #212); record commit 1ab3d2ca on records/2026-11-08
 ---
 
 
@@ -3008,3 +3009,69 @@ observe-only, nothing claimed). Evidence in
   +33.0K; Campaign store SOLD pattern; Season Sandstorm Master
   (Permanent) SOLD; [Z76] tag on the two March History rows.
 - Follow-up: none. Chain scout-2026-11-03 complete.
+
+## What the 2026-11-08 1243 unit added - station re-check, tenth no-train confirmation, Wars dot absent with empty Rally Intel, fourth #212 datapoint
+
+- Unit scout-scout-2026-11-02-012 by ticker-1223, chain
+  scout-2026-11-02 seq 12, about 12:40 to 12:43 local, status
+  partial - the station window was fully walked observe-only and
+  the Wars dot was read live, but the chain continues by design
+  (the station remainder stays carried; the successor re-checks the
+  two preparation signals first). Evidence in
+  `_records_/2026-11-08/perception-scout/1243-queue-run.md` (commit
+  1ab3d2ca on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-08/perception-scout/observation.md`.
+  Observe-only throughout; nothing claimed, fought, dispatched,
+  donated, boarded, dug or bought. Successor
+  scout-scout-2026-11-02-013 enqueued with the same window.
+- Session: computer session cc-121 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  No screen-capture failure.
+- Base screen, read live about 12:42 local: power 149,850,353
+  (unchanged from the 00:16, 04:16, 04:40, 08:45 and 11:38 reads);
+  food 489.5M, iron 811.9M, coin 12.3M; second row 25.0M, 922.2K;
+  diamonds 4,397; stamina 120; Season II 7d 05:17:38; Wanted Boss
+  badge 1, timer 00:00:52. Resource bubbles standing on many
+  buildings, observed only, not collected; the harvest regular owns
+  collection.
+- Train-preparation signals, both absent: no train icon in the left
+  column (avatar Lv.30, hammer 2/4 with red dot, flask 2/2, green
+  face 6.5C, radio badge 4, white truck with red dot, radar badge 2,
+  wrench); no "Boarding closes in" banner under the resource bar -
+  the banner area shows the presidential appointment line at top
+  and the High-temp Furnace overdrive line plus a Breaking News line
+  at the bottom. Tenth no-train confirmation in this chain (third
+  2134, fourth 0022, fifth 2304, sixth 0118, seventh 0440 re-check,
+  eighth 0845, ninth 1131, tenth this unit). No train is preparing
+  in this window; the STATION PLATFORM screen has no live state to
+  read.
+- Alliance panel, read live about 12:41 local: [AP3x] The Apex, 5.0,
+  Leader Abŷss Apex, Power 13,296,557,784 (up from 13,269,391,645
+  at 1144), Members 95/100, Language English. Panel dots: Help and
+  Alliance Gifts only. NO dot on Alliance Wars, Members, Alliance
+  Store or Alliance Techs. Alliance Star (Event 40), Time Left
+  05:08:32.
+- Wars dot absent, rally list empty - fourth same-day datapoint for
+  the rally link, NOT a settlement (Issue #212): Alliance Wars
+  opened observe-only; the Rally Intel tab reads "No Alliance Rally
+  currently." The dot was present 11:41 with two rallies rallying,
+  the list empty 11:44 after the timers expired, the dot absent
+  08:44 with none seen, and the dot absent now with the list empty.
+  This does not settle Issue #212 - on 2026-11-03 the dot was
+  present while both Wars tabs read empty, so a rally does not
+  explain the dot by itself. Commented on Issue #212 by this unit
+  and by this run with the fold.
+- Back-arrow grounding re-confirmed: the Wars page back arrow
+  grounds at norm (56, 938) and the Alliance panel back arrow at
+  (183, 914); both returned at once. No back-arrow point stands
+  across screens; re-ground fresh per screen.
+- Red dot accounting: Help, Alliance Gifts explained; Wars absent.
+  Explained 2, unexplained 0 in this unit's window. Standing
+  carried unknowns seen again: furnace overdrive toast, 99+ chat
+  badge.
+- Follow-up: successor seq 013 enqueued in chain scout-2026-11-02
+  with the same window (station panel only, train entry and
+  preparation state; Wars dot Issue #212). The Bloody Valor
+  discrepancy and the +2.4K Achievements lower bound still have no
+  carrier - their chain (scout-2026-11-03) is complete, so they need
+  a fresh scout unit.
