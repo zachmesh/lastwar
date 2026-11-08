@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T10:32:17Z
+modified: 2026-11-08T10:46:00Z
 level: L1
-version: 1.57.0
+version: 1.58.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -67,6 +67,7 @@ grounded_in:
   - source: tool-development execution record 2026-11-08 0046 queue run (Issue #429 implemented, tools/pass_worktree.py, deleter of the /tmp worktrees identified as the agent runtime /tmp sweep on this VM, VPS origin-tmp-cleanup exonerated; record commit 9445bf19db on records/2026-11-08)
   - source: ticker-0034 alliance-donations execution record 2026-11-08 0043 queue run (partial, re-read after the 2018 cooldown, 2 coin donations landed 3/30 to 1/30, final tap unconfirmed behind a 00:16:01 timer, count rose 1 to 3 between units, footer 2050 to 2350 observed only, fourteenth replenishment data point, fifth cooldown reading; record commit 4fd2b88a26 on records/2026-11-08)
   - source: ticker-0137 alliance-donations execution record 2026-11-08 0154 queue run (partial, blocked by the Star Ceremony overlay, 0 donations, Donation Count unread, tracker untouched, picker gap filed as Issue #436; record commit b88ed12a2 on records/2026-11-08)
+  - source: ticker-0204 perception-scout execution record 2026-11-08 0213 queue run (done, Strength Ranking Donation Daily own 2350 matches the 0043 footer 2350, Donation Weekly own #84 24,900, furnace Donation Count 50/50 is a different counter; record commit 6560ff267 on records/2026-11-08)
 ---
 
 
@@ -2495,3 +2496,11 @@ enqueued for after the cooldown (not before about
 - Queue note: the picker takes the earliest-expiring unit first, so while the ceremony is open it keeps handing out base-screen units that all block identically. Whether the picker should prefer the unit that clears a screen-blocking overlay is a tooling question, filed as GitHub Issue #436 from this pass (tooling class, owned by lastwar-tool-developer).
 - Result statistics: target 30 (daily coin donations), achieved 0, resources_gained none, verified no, blocker_category f (missing precondition: base screen unreachable behind the Star Ceremony overlay; exit is the Go/emote claim owned by the star-ceremony regular).
 - Game left safe: game left on the ceremony bonus-rewards slide. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
+
+## What the 2026-11-08 0213 scout read added - Donation Daily 2350 corroborates the footer; weekly total 24,900
+
+- Scout unit scout-scout-2026-11-02-007 by ticker-0204, 02:06 to 02:21 local, status done (alliance remainder walked in full). Evidence in `_records_/2026-11-08/perception-scout/0213-queue-run.md` (commit 6560ff267 on records/2026-11-08) and the appended section of `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; no donation made.
+- Corroboration: Strength Ranking Donation Daily own 2350 matches the 0043 footer 2350 exactly (same day, same value, second surface). The footer figure is corroborated as the daily donation count. Donation Weekly own #84 24,900 is a new measured weekly total.
+- Furnace Donation Count 50/50 is a DIFFERENT counter (furnace coal donations, Chamber panel) - it must not be conflated with the Alliance Techs Donation Count (30-cap). The furnace Donate Coal 1000 button is red-line banned, never tapped.
+- No new tech-donation count, cooldown or footer reading in the 0204 pass; Issues #423, #160 and #417 are not moved by this read.
+- Game left safe: Strength Ranking Donation Weekly tab open. No donation, no construction, no Assemble, no teleport, no purchase.
