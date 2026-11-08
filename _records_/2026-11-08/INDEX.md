@@ -2748,3 +2748,21 @@ of 2026-10-28.
   records PR opened. No records branch left PR-less.
   Status: done. Full detail in
   pr-integration/1200-run.md.
+
+## 12:22 to about 12:35 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1215.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges. Tools PR
+  425 owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision, still conflicting on
+  _tools_/INDEX.md, one updated conflict note against
+  new main 1c39fa82 (issuecomment-6726657034). Records
+  PR 460 clean at new head 0e1c216e, awaiting the 15:00
+  batch. Records PRs 457, 351 and 301 still conflict
+  with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads and main unchanged since the 1145 pass notes,
+  no new note per the no-repeat rule. No records PR
+  opened. No records branch left PR-less. Status: done.
+  Full detail in pr-integration/1215-run.md.
