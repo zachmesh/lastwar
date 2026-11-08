@@ -94,3 +94,20 @@ of 2026-10-28.
   2245 escalation, awaiting the owner decision. No
   records PR opened by this pass. Status: done. Full
   detail in pr-integration/0015-run.md.
+
+## 00:30 to about 00:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0030.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 03:00): no merges. Records PR
+  430 clean at new head c15cebd769 (the 0015 run record),
+  awaiting the 03:00 batch. Records PR 426 clean at
+  unchanged head 16e187a2e8, awaiting the 03:00 batch.
+  Records PRs 351 and 301 still conflict with main on
+  the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-verified against
+  current main 947b2760, carried with the 0000 re-check
+  notes still current. Tools PR 425 owner-gated,
+  unchanged since the 2245 escalation, awaiting the
+  owner decision. No records PR opened by this pass.
+  Status: done. Full detail in pr-integration/0030-run.md.
