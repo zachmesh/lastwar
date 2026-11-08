@@ -2766,3 +2766,37 @@ of 2026-10-28.
   closed. No material change for the owner, so no Slack DM sync and
   no chat report.
   Status: done. Full detail in knowledge-organization/1632-run.md.
+
+## 16:40 to about 16:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1640.
+- Plan staged 8 units, already_present 69, reaped 0,
+  expired 0. The 1800 slot (vip, daily-missions, scout),
+  duel-score 1830, 2230 and 2026-11-08 0230, and
+  zero-sweep 1630 and 1730. The next 12 hours are now
+  staged through about 04:40 local 2026-11-08.
+- Pre-reset sweep production skipped, not the 17:00 hour
+  run; tonight's pair (chain pre-reset-sweep-2026-11-07)
+  already in inbox, both units, staged by ticker-0127.
+  The pair's window, activity, segment and planned_for
+  fields are still empty where last night's carried named
+  windows and ledger-walk instructions, so the 17:00 run
+  should verify the pair before its window opens.
+- Scout diff on the Nov 4 observation (seventy-first
+  consumption): dry run and apply agree, all zero except
+  the fixed tool's unexplained 4 (observed 0, actionable
+  0, enqueued 0, already-queued 0, candidates 0,
+  promotion proposals 0). No withdrawals: the diff
+  classified nothing as already satisfied and the Nov 4
+  observation is older than the current inbox units.
+- 1540 delivery verified landed on the branch (commits
+  3f8d2b2d91 and 23664a1e41 ancestors of tip 082ebb271f);
+  no recovery needed. Branch-tip tools/regulars.json now
+  lists duel-score and zero-sweep, so the live-tree sync
+  gap from the 1540 run is closed. Ticker recovered in
+  the live tree: ticker-1633 arms-race (16:35-16:48
+  local) reports screen capture working after the Issue
+  282 failure.
+- Pool by_state at 16:45 local: inbox 84, claimed 0,
+  done 1083. Status: done. Full detail in
+  queue-planning/1640-run.md.
