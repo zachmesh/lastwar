@@ -4283,3 +4283,33 @@ of 2026-10-28.
   branches contained in main). No owner-gated PR.
   Status: done. Full detail in
   pr-integration/2215-run.md.
+## 22:05 to 22:09 — Queue ticker pass, perception scout
+
+- Scout unit scout-midday-scout-mid-2026-11-03-003, partial:
+  store group Mall strip walked in full, observe-only — all 7
+  tabs (Official Event, Weekly Deal, Super Monthly Pass,
+  Weekly Pass, Diamond, Gold Brick Mall, Hot Sale Packs);
+  check-in FREE GIFT claimable today, left for the
+  shop-claims regular; Weekly Pass shows "rewards reset at
+  18:00:00" (verbatim, does not match the standing 19:00
+  note — flagged for re-read); Legendary Take All $19.99
+  present and untouched; Super Monthly Pass Days Left 14,
+  Daily Pickup already Claimed; Diamond and Gold Brick Mall
+  paid-only; Hot Sale Packs sold out. 2 red dots seen, both
+  explained, 0 unexplained. VIP panel, daily missions panel
+  and the Weekly Deal page carried to the successor in chain
+  scout-mid-2026-11-03. Tracker untouched. Full detail in
+  perception-scout/2209-queue-run.md; observation in
+  _records_/2026-11-03/perception-scout/observation.md.
+## 22:11 to 22:19 — Queue ticker pass, alliance donations
+- Donations unit donations-2026-11-08-0323, partial and
+  unverified: re-read after the 1924 unit's cooldown — count
+  read live 5/30 at entry (up from 1/30 at 19:24 via 2/30 at 20:11 in the 2006 re-execution of this same unit — the count rises between units; see the correction note in the record; filed as Issue 423); 4 coin
+  donations landed on live reads (5->1, 900 coin each,
+  3,600 spent); the tap at 1/30 was eaten behind a 00:01:27
+  timer (waited out, count still 1/30), and the next tap
+  greyed the button with a 00:19:07 timer, so the final
+  donation is unconfirmed and the count was never read at
+  0/30. Tracker untouched; a re-read unit is enqueued for
+  after 22:40. Tech Donation Today 1150 at entry. Full
+  detail in alliance-donations/2219-queue-run.md.

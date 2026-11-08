@@ -245,3 +245,15 @@ unit record at `perception-scout/0542-queue-run.md`.
 - Resource bubbles observed only (220.6K at the left edge, small bubbles over the tent row), none collected - left for the harvest regular.
 - Red dot accounting: 7 seen, 7 explained, 0 unexplained. Unknown items: furnace overdrive toast [22/60], recurring; the 03:42 building timer identity.
 - Carried unwalked: scout-events, scout-store and scout-alliance groups of this pass.
+
+### Scout-store, 2209 unit (ticker-2204, stale 11-03 midday chain seq 3) - Mall strip walked 2026-11-07 about 22:05-22:09 local
+
+- Mall strip, all 7 tabs read: Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall, Hot Sale Packs.
+- Official Event page: "Visit the Last War Store for more rewards!" with +5% badge; red dot on the tab maps to the check-in banner.
+- Check-in banner p1: FREE GIFT "Claim your gift today!" (claimable now, left for the shop-claims regular); FREE TOMORROW x5/x5/x5 "Randomly obtain one". Banner p2: "Claim points and redeem great rewards", 1000 POINTS card.
+- Weekly Pass page: "Weekly Pass rewards reset at 18:00:00" (verbatim; clock time vs countdown unverified - does not match the standing 19:00-reset note, needs a re-read). Free Supply chest present, no claim badge visible. Legendary Take All $19.99 present (red line, untouched). Drone Components Weekly Pass $4.99 (Legendary, 7 Days, Daily Pickup 1x, Total 7x); Drone Parts Weekly Pass $4.99 (Epic, 7 Days, Daily Pickup 15x, Total 105x).
+- Super Monthly Pass page: Days Left 14; Squad 4 Lv.20 "Unlock an extra squad!"; Daily Pickup button reads "Claimed" (today already claimed); Rewards Left: 14; Monthly Pass Extension $24.99 (paid, untouched).
+- Diamond tab: paid packs only (Double Diamonds; 10000/5000/2000/1000/500). Gold Brick Mall: paid gold packs only (5% Bonus). Hot Sale Packs: "Packs sold out".
+- Base screen at entry/exit: power 149,850,353; food 478.8M, iron 802.1M, coin 6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2; Season II 7d 19:53:29 falling to 7d 19:51; furnace overdrive toast [22/60] recurring; 99+ badge recurring.
+- Red dot accounting: 2 seen in the store group, 2 explained (Official Event dot and check-in gift both map to shop-claims), 0 unexplained. Unknown items: small chest icon on the Weekly Pass and Super Monthly Pass tabs (meaning unread); the 18:00:00 reset figure; furnace toast [22/60]; 99+ badge; Season II badge 1.
+- Carried unwalked: VIP panel, daily missions panel, and the Weekly Deal tab page - successor in chain scout-mid-2026-11-03.
