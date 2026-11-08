@@ -17,6 +17,18 @@ max_attempts: 3
 claimed_by:
 claimed_at:
 lease_until:
+result:
+  status: expired
+  started_at: 
+  finished_at: 2026-11-08T03:06:08Z
+  duration_seconds: 
+  executor: 
+  summary: window passed before execution
+  claimed: []
+  claimed_count: 0
+  evidence: 
+  follow_up: none
+  stats:
 ---
 
 # daily-missions

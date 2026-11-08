@@ -3486,3 +3486,58 @@ of 2026-10-28.
   reconciliation. No knowledge or code PR open. Local main
   already at 751b004a. Status: no-op. Full detail in
   pr-integration/1915-run.md.
+
+## 19:07 to about 19:12 — Queue ticker pass, radar tasks
+
+- Radar unit radar-2026-11-07-1803, done, stack posture (duel
+  day 7 off day, stack): radar screen verified live - Lv.13,
+  points 267, stored 0 of 40, stamina 99, restore 12 tasks in
+  03:22:08. Stack empty, so nothing executed and nothing
+  claimed; no bottom bar offered. One pin inventoried untapped
+  (brown circular pin, southwest map edge, no red dot, class
+  unknown) for the next release-day unit. Entry note: first tap
+  at norm 50,690 opened a Polar Guest visitor dialog (advanced
+  twice, closed, no claim); re-grounded dish icon at norm
+  52,721 (profile's 62,727 is stale in x). Capture channel
+  recovered after the Issue 282 streak - window on-screen at
+  763x1050, screenshots read normally. Tracker marked done.
+  Full detail in radar-tasks/1912-queue-run.md.
+
+## 19:12 to about 19:24 — Queue ticker pass, alliance donations
+
+- Donations unit donations-2026-11-07-1803, partial and
+  unverified: Alliance entry fixed by fresh grounding
+  (shield centre norm 928,717 in the windowed layout;
+  profile's 903,787 is stale) - menu opened first try,
+  no Drill Ground pan. Quick Construction 8/10
+  (recommended), count 7/30 at entry. Six coin donations
+  landed on live reads (7->6->3->1, 5,400 coin); one tap
+  in a batch was eaten by the button greying with a
+  00:00:50 timer (waited out, count re-read 1/30). Final
+  tap unconfirmed behind a 00:19:01 timer - count never
+  read live at 0/30, so the day is not closed and the
+  tracker is untouched. Cross-check failed to reconcile:
+  Tech Donation Today dropped 2700 to 750 during the unit
+  (ranking Daily confirms 750, rank 29) - recorded as an
+  open question, no count inferred from it. A named
+  re-read unit is enqueued for after the cooldown
+  (not-before 19:40 local). Full detail in
+  alliance-donations/1924-queue-run.md.
+
+## 19:23 to about 19:29 — Queue ticker pass, arms race
+
+- Arms-race unit arms-race-2026-11-07-1803, partial: first
+  unit inside the new phase (rule R4). Phase read live -
+  Drone Boost, Lv.29-30, score 0, 02:35:14 left (ends
+  about 22:02), thresholds 1,500 / 10,000 / 30,000.
+  Paths: Drone Battle Data +1 per 10, Stamina +100 each
+  (recommended row), diamond packs +30 (red line).
+  Tier 3 needs 300 stamina; plan: 99 on hand + 75 Free
+  Claim + 2x50 and 3x10 stamina items = 304 stamina,
+  30,400 points, per the owner rule of 2026-10-28. No
+  points scored in this unit - the pass budget ran out
+  before the spend could start; the spending unit must
+  confirm +100 per stamina on its first action and find
+  the useful sinks (radar is 0/40, zombies over). No
+  chest claimable, no red dot on the tab. Tracker
+  untouched. Full detail in arms-race/1929-queue-run.md.
