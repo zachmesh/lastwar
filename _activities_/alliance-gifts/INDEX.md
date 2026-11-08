@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T04:48:01Z
+modified: 2026-11-08T06:32:17Z
 level: L1
-version: 1.34.0
+version: 1.35.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z; supersedes the gateway-recovery follow-up in the 1003 section below - the offline streak ends at 106, the blocker moves to the off-Space window)
   - source: ticker-1727 alliance-gifts execution record 2026-11-07 1742 queue run (done, 2 Premium claimed, Gift Level 28 progress 192,237,330 to 192,237,560, Regular none waiting; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-2006 alliance-gifts execution record 2026-11-07 2033 queue run (done, 437 Regular and 7 Premium claimed, both tabs verified clear, Gift Level 28 progress 192,787,590 to 192,799,520, per-sweep deltas do not decompose into own claims alone, filed as Issue #183 evidence by the ticker pass; record commit e9bf320c92 on records/2026-11-07)
+  - source: ticker-2134 perception-scout execution record 2026-11-07 2153 queue run (partial, LOOT panel re-checked, unclaimed Lv.1 Doom Elite row, Lv.60 rows gone; record commit fe5a1e7fd3 on records/2026-11-07)
 ---
 
 
@@ -1189,3 +1190,11 @@ one file per execution.
 - Final verification: both tabs show no red dot, all visible rows read Claimed, no Claim All button on either tab. Progress closed at 192,799,520 of 206,300,000.
 - Progress readings (Issue #183 evidence, filed there by the ticker pass): entry 192,787,590; after Regular sweep 1 192,791,960 (+4,370); after Premium sweep 192,792,620 (+660); after Regular sweep 2 192,799,520 (+6,900). Total +11,930 during the unit. Own claims were 437 Regular at +10 each (4,370 points) and 7 Premium (visible tiers N +10, SSR +200, R +50, SSR +200, R +50, two below the fold unseen). The sweep deltas do not decompose into own claimed gifts alone: sweep 1 moved +4,370 for 434 gifts (expected +4,340), and sweep 2 moved +6,900 for 3 gifts (expected +30). The bar is alliance-wide, so other members claiming during the unit move it too; the full delta must not be attributed to own claims.
 - Figures read live: Gift Level 28, progress 192,787,590 before and 192,799,520 of 206,300,000 after. Power 149,850,353. No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.
+
+## What the 2026-11-07 2153 scout read added - LOOT panel turned over, one unclaimed Lv.1 Doom Elite row for this regular
+
+- Scout unit scout-midday-scout-mid-2026-11-02-006 by ticker-2134, session cc-54 about 21:48 to 21:53 local, status partial (alliance remainder). Evidence in `_records_/2026-11-07/perception-scout/2153-queue-run.md` (commit fe5a1e7fd3 on records/2026-11-07) and the observation appended to `_records_/2026-11-02/perception-scout/observation.md`. Observe-only; Claim All was observed only and never tapped by the scout.
+- LOOT panel, read live about 21:51 local via the world-map gift icon (badge 3, tapped at the freshly grounded point on the map view; the panel opened at once). World map centred on the own base [AP3x]Bears Lair; March Queues 3/4 (three squads out - not dispatched by this unit; owner or an earlier regular's marches, not resolved here).
+- Three rows: Row 1 Bears Lair, lightning 0, "Claimed" - picture item, bread 720.0K. Row 2 Bears Lair, lightning 0, "Claimed" - picture item, red gem 85. Row 3 Lv.1 Doom Elite, lightning -20, "Leader" tag - gold chest x2, red gem 20 x1, iron 3.0K, food 3.0K, coin 1.0K, EXP 3.0 (last value cut off at the panel edge). Row 3 is UNCLAIMED - no "Claimed" label.
+- The three Lv.60 Doom Elite rows the 1345 unit read on 2026-11-03 are gone from the panel; the panel turns over as loot arrives and is claimed. The unclaimed Lv.1 Doom Elite row is unclaimed work for this regular (gifts per the 1345 follow-up), not scout work. The gift badge 3 maps to the three rows (two claimed, one unclaimed).
+- Follow-up for the next gifts unit: check the LOOT panel via the world-map gift icon and claim the unclaimed row if it is still present; the row's contents (gold chest x2, red gem 20) are small but the panel turns over, so a stale unclaimed row is a missed claim. No new Issue filed: the row is named here for the owning regular.
