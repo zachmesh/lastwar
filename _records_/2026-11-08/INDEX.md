@@ -2985,6 +2985,119 @@ of 2026-10-28.
   Quick Dispatch not run - per rule R7 it is the first
   action of the next survivors unit. Tracker untouched.
   Full detail in survivor-intake/1307-queue-run.md.
+
+## 13:15 to about 13:21 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1315.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges, no new PRs.
+  Tools PR 425 owner-gated, unchanged since the 2245
+  escalation, awaiting the owner decision, still
+  conflicting on _tools_/INDEX.md, re-verified against
+  unchanged main 6dad8dbf, no repeat note. Records PR 460
+  clean at new head ee903456a and records PR 457 clean at
+  head 09302a7a, both awaiting the 15:00 batch; 460
+  verified clean this pass and a verification comment
+  posted, 457 re-probed clean with no repeat note.
+  Records PR 351 still conflicts with main on the single
+  file _logs_/repo-actions/action-log.jsonl
+  (append-append), re-verified and a re-check note posted
+  (its last note was 2026-11-07 2230, main has moved
+  since); records PR 301 still conflicts on the same
+  file, re-verified against unchanged main 6dad8dbf, no
+  repeat note. Correction: the 1300 record wrongly said
+  351 carried a 1245 note - none exists. No records PR
+  opened. No records branch left PR-less. Status: done.
+  Full detail in pr-integration/1315-run.md.
+
+## 13:30 to about 13:35 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1330.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges, no new PRs.
+  Tools PR 425 owner-gated, unchanged since the 2245
+  escalation, awaiting the owner decision, still
+  conflicting on _tools_/INDEX.md, re-verified against
+  unchanged main 6dad8dbf, no repeat note. Records PR 460
+  clean at new head 36eab01f and records PR 457 clean at
+  head 09302a7a, both awaiting the 15:00 batch; 460
+  verified clean this pass and a verification comment
+  posted (issuecomment-6727425509), 457 re-probed clean
+  with no repeat note. Records PRs 351 and 301 still
+  conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  re-verified against unchanged main 6dad8dbf, no repeat
+  notes. No records PR opened. No records branch left
+  PR-less. Status: done.
+  Full detail in pr-integration/1330-run.md.
+
+## 13:32 to about 13:38 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-08-1332.
+  No-op: own PR 425 still owner-gated (policy amendment),
+  no action owed, still conflicting on _tools_/INDEX.md
+  against main 6dad8dbf; all 35 open tooling issues
+  triaged, each already implemented on main (or
+  owner-gated, owned elsewhere, or owing no code change);
+  frozen backlog tooling entries implemented; standing
+  queue items implemented. No PR opened, no issue filed,
+  no code changed. Status: no-op.
+  Full detail in tool-development/1332-run.md.
+
+## 13:32 to about 13:42 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1332 run. Own PR 463 MERGED
+  (2026-11-08T20:49:12Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-1223
+  donations 1238 and scout 1243 into 2 profiles as one
+  commit (f95eb945) on new PR 464 (OPEN and MERGEABLE,
+  mergeState CLEAN, at run close): alliance-donations
+  1.69.0 - War-tab 1/30 test on Rallied Attack (six coin
+  donations verified live 7/30 to 1/30 on Quick
+  Construction; Rallied Attack 2/30 four minutes after
+  Quick Construction read 1/30; tap 8 from 1/30 greyed
+  the button behind a 00:18:42 timer with a Tech EXP step
+  23.5K to 23.6K, closing 0/30 unverified per the hard
+  closing rule; per-node-vs-global count question open,
+  re-read unit donations-2026-11-08-2038 decides;
+  replenishment 1 to 7 over about 2 hours, about 1 per 20
+  minutes as a two-endpoint estimate only; Rallied Attack
+  coin cost 800, Rallied HP 7/10); perception-scout
+  1.42.0 - tenth no-train confirmation, Wars dot absent
+  with Rally Intel empty, fourth same-day datapoint for
+  Issue #212, not a settlement (unit commented it);
+  Alliance Power 13,296,557,784; back-arrow grounding
+  re-confirmed. Issues commented by this run: #450
+  (fold, comment 6727495767), #212 (fold, comment
+  6727495921), #160 and #423 (replenishment fold note,
+  comments 6727496066 and 6727496222). No new Issue filed.
+  Slack DM sync sent. Status: done. Full detail in
+  knowledge-organization/1332-run.md.
+
+## 13:39 to about 13:42 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-08-1339. No adopted open PR
+  (PR 137 stays merged). Six open PRs scanned, none owned by
+  this job: PR 464 (profiles fold, Owner
+  lastwar-knowledge-organizer, clean at head f95eb945), PR 460
+  (records 2026-11-08 post-1100-batch appends, Owner
+  lastwar-pr-integrator, clean at head 99ea4fc6, integrator
+  1330 verification), PR 457 (records 2026-11-07
+  post-1100-batch appends, Owner lastwar-pr-integrator, clean
+  at head 09302a7a, integrator 1300 verification), PR 425
+  (tooling log gate, owner-gated on the policy-file amendment,
+  awaiting the owner decision, still conflicting against main
+  6dad8dbf per the integrator 1245 note), PR 351 (records
+  2026-11-05, still conflicting on the action-log append,
+  integrator 1315 re-check), PR 301 (records 2026-11-04,
+  still conflicting on the action-log append, integrator 1245
+  re-check). PRs 462 and 463 merged since the 1239 pass
+  (main advanced to 6dad8dbf). No new issue since the 1239
+  pass; 72 open issues, zero unclassified. Owner-decision
+  issues 132, 154 and 335 all over 24 hours with statements
+  current. Status: no-op.
+  Full detail in pr-catchall/1339-run.md.
+
 ## 13:19 to about 13:29 — Queue ticker pass, arms race (partial)
 
 - Arms Race unit arms-race-2026-11-08-1003, partial (rule
