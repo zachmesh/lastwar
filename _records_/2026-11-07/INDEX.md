@@ -3239,3 +3239,17 @@ of 2026-10-28.
   and the inbox fix-ups must run before the 19:00 reset; the
   VIP freebie is still unclaimed and the trucks/donations
   quotas are still unverified.
+
+## 18:15 to about 18:21 - PR integration pass
+
+- PR-integrator pass pr-integration-2026-11-07-1815.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, next batch 19:00 PT). No knowledge or
+  code PR open. All four open records PRs (398, 351,
+  301, 256) verified clean against current main
+  8694f52b and awaiting the 19:00 batch; PR 398 head
+  advanced since the 1800 pass (748a6d13 to 840094b6,
+  the 1800 run record, planner-1740 staging and the VIP
+  ticker-1734 record) with one re-check comment posted.
+  Status: no-op. Full detail in
+  pr-integration/1815-run.md.
