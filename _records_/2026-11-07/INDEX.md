@@ -3253,3 +3253,53 @@ of 2026-10-28.
   ticker-1734 record) with one re-check comment posted.
   Status: no-op. Full detail in
   pr-integration/1815-run.md.
+
+## 18:18 to about 18:30 — Queue ticker pass, train / star ceremony / VIP
+
+- Train unit train-2026-11-07-1430, partial and unverified:
+  no "Boarding closes in" banner under the resource bar and
+  no train icon in the left icon column - the same state as
+  the check-only train units of 2026-11-03 and 2026-11-04.
+  No boarding action, no Trade Contracts spent, no train
+  summoned. The station was not viewed, so a preparing train
+  is neither confirmed nor ruled out beyond the absent
+  banner. Tracker untouched. Full detail in
+  alliance-train/1826-queue-run.md.
+- Star ceremony unit star-ceremony-2026-11-07-1430, partial
+  and unverified: no gold trophy icon beside the Alliance
+  icon on two live base reads, so no ceremony is waiting
+  and nothing was played or claimed. The personal duel
+  total against the 3,600,000 target is UNREAD - Alliance
+  Duel League S38 shows "Final results are in progress,
+  please wait..." (Gold Tier 38-7, [AP3x] The Apex ranked
+  3rd, Week 1 Win, Week 2 Win, Week 3 lost) and neither
+  the Duel League tab nor the Record tab shows a personal
+  daily total; Infinite Roulette holds 0 tokens and was
+  not spun. The re-read vehicle is the duel-score unit
+  duel-score-2026-11-07-1830 already in the inbox (due
+  18:30). Tracker untouched. Full detail in
+  alliance-duel/1828-queue-run.md.
+- VIP unit vip-2026-11-07-1800, partial and unverified:
+  the login chest was already claimed by ticker-1734 (+60
+  points, 1,603,930 to 1,603,990, streak 2 days). The Daily
+  Freebie was not retried in this unit: the avatar tap
+  opened MY PROFILE under a "You're very popular!" popup,
+  dismissed with the plain "Awesome!" button, and the clean
+  profile shows no VIP entry; the token was then released
+  at 18:30 so the 18:34 tick can run the 18:30 zero sweep.
+  The freebie button's repeat blocker (ticker-1734: four
+  input variants, no response) stands. Tracker untouched.
+  Full detail in vip-rewards/1830-queue-run.md.
+- Sync at the pass start expired two stale 2026-11-06
+  units (daily-missions-2026-11-06-1800 and
+  scout-2026-11-06-1800); no new units were produced, all
+  17 due regulars already queued. No zombie seeding: the
+  Zombie Invasion chain closed with unit 066 on 2026-10-30
+  (event ended, no Zombie tab in the Events hub).
+- Computer session cc-30 dropped after the star-ceremony
+  unit; session cc-33 recovered it with no state lost. No
+  different-device dialog appeared; no device takeover.
+- Handoff to the next tick: the 18:30 final zero sweep
+  (unit 002) retries the VIP freebie before the 19:00
+  reset; the duel-score 1830 unit re-reads the duel total;
+  the trucks/donations quotas are still unverified.

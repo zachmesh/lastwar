@@ -4,7 +4,7 @@ regular: daily-missions
 activity: daily-missions
 segment: 3
 priority: 3
-created_at: 2026-11-07T03:08:33Z
+created_at: 2026-11-08T01:52:59Z
 expires_at: 2026-11-08T02:00:00Z
 planned_for: 2026-11-07T02:00:00Z
 not_before:
@@ -17,6 +17,18 @@ max_attempts: 3
 claimed_by:
 claimed_at:
 lease_until:
+result:
+  status: expired
+  started_at: 
+  finished_at: 2026-11-08T02:18:18Z
+  duration_seconds: 
+  executor: 
+  summary: window passed before execution
+  claimed: []
+  claimed_count: 0
+  evidence: 
+  follow_up: none
+  stats:
 ---
 
 # daily-missions
