@@ -46,6 +46,11 @@ Usage:
              # reap, sync and plan warn on stdout (exit still 0)
              # when the root holds no pool state directory at
              # all, so a wrong root never reports a silent zero
+             # plan and sync also warn (exit still 0, and name the
+             # ids under roster_stale_regulars) when the live pool
+             # holds inbox or claimed units for regulars the loaded
+             # roster does not name, so a stale roster reads as
+             # stale instead of as "no such regular" (issue #198)
   queue.py [--root DIR] stats [--format text|yaml|json]
              # stats names stalled priority-1 inbox units
              # (age over 4h) under stalled_priority1, for the
@@ -288,6 +293,45 @@ def pool_root_warning(root):
             "empty or wrong root, not the live pool")
 
 
+def roster_stale_regulars(root, roster_ids):
+    """Regular ids of live pool units missing from the loaded roster.
+
+    Issue #198: the planner's live-pool tree loads a stale
+    regulars.json (no duel-score, no zero-sweep) while the pool
+    still holds their units, so plan stages nothing for them and
+    the planner's record asserts "no such regular" as a roster
+    fact instead of a stale read. Only live states count - inbox
+    and claimed: done is history and may legitimately hold
+    retired regulars, and a unit with no regular field is
+    ignored. Returns the sorted ids, empty when the roster
+    covers every live unit.
+    """
+    roster = set(roster_ids or [])
+    stale = set()
+    for state in ("inbox", "claimed"):
+        for fields in list_units(root, state):
+            regular = fields.get("regular") or ""
+            if regular and regular not in roster:
+                stale.add(regular)
+    return sorted(stale)
+
+
+def read_roster_stale(root):
+    """Stale regular ids against the roster next to this tool.
+
+    Returns [] when the roster cannot be read, so a caller that
+    does not otherwise need the roster (sync) never fails on it.
+    """
+    defs_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            roster_ids = [r.get("id") for r in json.load(fh)["regulars"]]
+    except (OSError, ValueError, KeyError, TypeError):
+        return []
+    return roster_stale_regulars(root, roster_ids)
+
+
 # Aging against starvation (IMP-20261031-09, loop review
 # 2026-10-31 open link 4): a no-expiry low-priority chained unit
 # used to sort behind every expiring unit forever, because expiry
@@ -520,6 +564,16 @@ def cmd_sync(args):
     reaped = _reap_claimed(args.root)
     expired = _expire_stale(args.root)
     stale_done_dropped = _drop_done_duplicates(args.root)
+    # Roster staleness (issue #198): sync stages from the tracker,
+    # which reads the roster next to this tool, so a stale tree
+    # stages nothing for a regular the live pool still holds
+    # units for. Warn only, never a block, matching
+    # pool_root_warning.
+    stale_roster = read_roster_stale(args.root)
+    if stale_roster:
+        print("warning: live pool holds units for regulars missing "
+              f"from the loaded roster: {', '.join(stale_roster)} - "
+              "the roster is stale relative to the pool (issue #198)")
     # 2. load the due list
     if args.due_json:
         with open(args.due_json, encoding="utf-8") as fh:
@@ -560,6 +614,7 @@ def cmd_sync(args):
                       "stale_done_dropped": stale_done_dropped,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
+                      "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
     return 0
@@ -987,6 +1042,16 @@ def cmd_plan(args):
         os.path.dirname(os.path.abspath(__file__)), "regulars.json")
     with open(defs_path, encoding="utf-8") as fh:
         regs = json.load(fh)["regulars"]
+    # Roster staleness (issue #198): the live pool may hold units
+    # for regulars this roster does not name - a stale tree stages
+    # nothing for them while the ticker's live pool keeps their
+    # units. Warn only, never a block, matching pool_root_warning.
+    stale_roster = roster_stale_regulars(
+        args.root, [r.get("id") for r in regs])
+    if stale_roster:
+        print("warning: live pool holds units for regulars missing "
+              f"from the loaded roster: {', '.join(stale_roster)} - "
+              "the roster is stale relative to the pool (issue #198)")
     # Tracker truth for the current window - a regular the tracker
     # already counts as done for this window gets no phantom unit;
     # future windows are always staged.
@@ -1035,6 +1100,7 @@ def cmd_plan(args):
                       "planned": planned,
                       "already_present": present,
                       "skipped_done_current": skipped_done,
+                      "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
     return 0
