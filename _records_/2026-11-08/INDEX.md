@@ -3260,3 +3260,17 @@ of 2026-10-28.
   helps delivered is not claimed; the next help unit should
   re-read the counter. Tracker marked done. Full detail in
   alliance-help/1413-queue-run.md.
+## 14:15 to about 14:23 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1415.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges. Records PR
+  460 clean at new head bf20e1a48, verification comment
+  posted; records PR 457 clean, both awaiting the 15:00
+  batch. Records PRs 351 and 301 still conflict on the
+  single file _logs_/repo-actions/action-log.jsonl,
+  re-verified against new main c9af7fe06, re-check notes
+  posted. Tools PR 425 owner-gated, unchanged, still
+  conflicting on _tools_/INDEX.md, re-check note posted.
+  No records branch left PR-less. Status: done.
+  Full detail in pr-integration/1415-run.md.
