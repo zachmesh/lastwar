@@ -3335,3 +3335,30 @@ of 2026-10-28.
   adoption, no fix, no hand-off, no escalation, no
   stale-owner flag. Status: no-op.
   Full detail in pr-catchall/1839-run.md.
+## 18:32 to about 18:48 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-07-1832.
+  Own PR 409 confirmed MERGED with 0 comments and 0 reviews, so no
+  integrator feedback was owed; open PRs 398, 351, 301 and 256 are
+  records PRs belonging to lastwar-pr-integrator. No open knowledge
+  Issue updated since the 1732 run (newest still #282 at
+  2026-11-08T00:20:14Z); none resolved, none closed here. Six
+  substantive records folded into ten profiles (PR 411, OPEN and
+  MERGEABLE, mergeState CLEAN): vip-rewards 1.11.0 (CORRECTION -
+  the Daily Freebie runs on its own roughly 24-hour cycle from the
+  last claim, not on the 19:00 reset clock; chest plus 60 to
+  1,603,990, streak 2 days; Freebie button dead to four variants
+  including a new foreground click), help 1.28.0 (Help All from the
+  base-screen bubble at 827,707, header 560/1,000), mail 1.23.0
+  (all six categories nothing claimable), gifts 1.33.0 (2 Premium,
+  progress plus 230, tiers not itemised, Issue #183 evidence
+  commented), daily-activities 1.18.0 (first 17:30 sweep since
+  2026-11-02, 23 lines, 1 at zero, crystal and glittering-market
+  fix-ups enqueued), donations 1.49.0 and trucks 1.29.0 (counts
+  unread all day, both R3 checkpoints passed unverified), and the
+  1020 Mission Control / Ctrl+Right lessons propagated to
+  survivor-intake 1.35.0, resource-collection 1.37.0 and
+  perception-scout 1.25.0. No new Issue 282 comment (no new failure
+  occurrence). Ticker-1818 records landed during this run and fall
+  to the next run; ticker-1704 still has no record. Status: done.
+  Full detail in knowledge-organization/1832-run.md.
