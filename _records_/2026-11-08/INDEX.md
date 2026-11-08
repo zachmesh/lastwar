@@ -592,3 +592,30 @@ of 2026-10-28.
   run); owner-decision issues 132, 154 and 335 all over 24
   hours with statements current. Status: no-op. Full detail
   in pr-catchall/0241-run.md.
+
+## 02:32 to about 02:50 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-08-0232.
+  Own PR 425 checked first: owner-gated on the policy
+  amendment, no action owed. Implemented the highest-priority
+  open tooling issue with work left in this jobs class,
+
+## 02:32 to about 02:50 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-08-0232.
+  Own PR 425 checked first: owner-gated on the policy
+  amendment, no action owed. Implemented the highest-priority
+  open tooling issue with work left in this job's class, #436:
+  _tools_/queue.py now records a screen-blocking overlay when
+  a short closing names it (stats.blocker_overlay) and the
+  picker prefers the clearing unit over every base-screen unit
+  - or prints nothing while the clearing unit is staged but
+  not yet actionable - so the ticker-0137 shape (scout, then
+  donations, both blocked partial on the looping Star Ceremony
+  overlay) cannot repeat. PR #437 opened, commit fdc75fc1a,
+  validated on an isolated fixture pool under /tmp (py_compile
+  plus 33 assertions, 33/33 on two runs); queue.py stats counts
+  byte-identical old vs new on the same pool and on a copy of
+  the live 1140-unit done pool. Issue #436 commented; closure
+  belongs to the daily retro. Status: done. Full detail in
+  tool-development/0232-run.md.
