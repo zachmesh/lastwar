@@ -1,8 +1,8 @@
 ---
 title: Rolling 7 day metrics
 created: 2026-11-01T05:30:00Z
-modified: 2026-11-04T04:50:00Z
-version: 1.3.0
+modified: 2026-11-08T05:08:00Z
+version: 1.4.0
 description: Standing cross-day series beside the daily retro files, regenerated from unit results
 status: complete
 grounded_in:
@@ -353,3 +353,54 @@ remain the immutable source.
   (no sweep). Oldest open improvement 4 days,
   no breach.
 - Detail - daily retro 2026-11-06 in this folder.
+
+## Entry 2026-11-07
+
+- Derived from - 688 done units, finished local PST
+  2026-11-01 to 2026-11-07, read from the
+  records/2026-11-07 branch tip b8cf68e000
+  (pr-integration 2011 run), tool
+  _tools_/retro_report.py 1.5.0, pool state sha256
+  a971973417c4dad91468c1692844878aec3a9b24fcc06903c5eac6a5090dbf08.
+  Live working-tree pool holds 746 in the same
+  window (pool sha256
+  a58ae379a9979ff41f40eeaaf8fd055844ebcd1f0330243823966bd3d13fe6b1);
+  gap 58, pool_gap.py FAIL. Nov 3 backfill deficit
+  still 88; branch leads the live tree Nov 5-7 by
+  36, 17 and 2.
+- Totals - done 114, partial 162, failed 122,
+  expired 288, skipped-needs-owner 2. Executor
+  time 115,637 seconds, median unit 232.5 seconds,
+  p90 592 seconds. Attempts mean 0.5814, max 1.
+- Worst types by done percent - arms-race 0 of 37,
+  crystal-shop 0 of 3, glittering-market 0 of 3,
+  zero-sweep 0 of 16, duel-score 0 of 17, training
+  0 of 37, survivors 1 of 39, harvest 1 of 37.
+- Best types - gifts 15 of 36, help 14 of 35,
+  passes 14 of 38, events 11 of 36, mail 11 of 35,
+  treasures 11 of 37, star-ceremony 11 of 34,
+  train 9 of 36.
+- Measurement state - numeric target over achieved
+  pairs 247, summed attainment 0.7377
+  (achieved_sum 5,604,421, target_sum 7,597,211);
+  units carrying blocker_category 637 of 688 (51
+  lack the key); unverified closings 582 (84.6
+  percent), down 1.2 points on yesterday's 85.8
+  percent. Points 187, up 11 on yesterday; the
+  tool excludes the same 2 copied-points units.
+- Threshold breaches - unexplained red dots not
+  proven clean (third blackout day, no
+  observation); expired/unexecuted in day counts
+  (62 branch, 64 live); quota attainment under
+  0.8 rolling (trucks 0.439, donations 0.1184);
+  unverified rate over 20 percent at the end of
+  the first full post-specification week (84.6
+  percent); closed improvement recurrence BREACH
+  (#128, #149 and #251; recurrence 3 of 6,
+  corrected from the Nov 6 retro's 2 of 5, which
+  missed #128); daily standing job artifact
+  missing (ticker-0634 record, #342; Nov 7 scout
+  observation); ledger coverage 13 of 23 (sweep
+  first pass partial, final pass missed).
+  Oldest open improvement 5 days, no breach.
+- Detail - daily retro 2026-11-07 in this folder.
