@@ -1945,3 +1945,18 @@ of 2026-10-28.
   unclassified. Owner-decision issues 132, 154 and 335 all over
   24 hours with statements current. Status: no-op. Full detail
   in pr-catchall/0839-run.md.
+## 08:40 to about 08:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-0840. Plan staged 0
+  units (already_present 78, reaped 0, expired 0 - the 12h
+  horizon was already fully staged by the 0740 run).
+  Pre-reset sweep pair already complete via plan (1630 seq 1,
+  1730 seq 2, chain pre-reset-sweep-2026-11-08, both expiring
+  at the 18:00 reset). Scout diff on the Nov 8 observation
+  applied with zero changes (observed 0, actionable 0,
+  enqueued 0, candidates 0, unexplained red dots 14 on a
+  narrative-fallback basis - six sections, seen 44,
+  explained 30; unchanged from 0740, observation file
+  byte-identical). 0 withdrawals. Pool: inbox 81,
+  claimed 0, done 1246. Status: no-op. Full detail in
+  queue-planning/0840-run.md.
