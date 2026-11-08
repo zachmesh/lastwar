@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T10:46:00Z
+modified: 2026-11-08T11:39:02Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -47,6 +47,7 @@ grounded_in:
   - source: ticker-0137 perception-scout execution record 2026-11-08 0150 queue run (partial, store-group remainder blocked by the Star Ceremony overlay, loop chest -> 10 -> 11 -> 12 -> 13 -> MVP -> chest established, slides 10-13 and MVP read live, store group unwalked; record commit b88ed12a2 on records/2026-11-08)
   - source: ticker-0204 perception-scout execution record 2026-11-08 0213 queue run (done, alliance remainder walked in full, Alliance City / Contributions / Milestones / Furnace / Strength Ranking read live, 9 red dots explained; record commit 6560ff267 on records/2026-11-08)
   - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, VIP panel / daily missions 22-task list / Weekly Deal page walked, President banner resolved, 13.22K figure resolved as diamonds, 3 red dots unexplained; record commit 6560ff267 on records/2026-11-08)
+  - source: ticker-0304 perception-scout execution record 2026-11-08 0325 queue run (partial, events remainder, Doomsday Rewards panel walked, Frontline Reward panel read in full, Arms Race rotated to Tech Research, TIPS E101 entry; record commit 447ebb411c on records/2026-11-08)
 ---
 
 
@@ -1979,4 +1980,20 @@ observe-only, nothing claimed). Evidence in
 - Unknown items carried: floating circular portrait icon (same as the 0213 unit - VIP panel twice, base bottom-left once; identity still unknown); Build-menu bottom tabs ($, truck, ?) unexplored; Military tab of LIST OF BUILDINGS unopened; activity chest contents unread. The furnace overdrive toast [22/60] recurring on the base screen; 99+ chat badge recurring.
 - Channel note: the computer-use session dropped twice mid-unit ("target app exited", one permission_denied on screen.snap); both recovered on retry with a new session (cc-76) - channel glitches, not access failures. Token renewed once mid-unit. Not commented on Issue #282: the symptom is a session drop, not the capture-stream failure that issue tracks, and it recovered on retry.
 - Base screen at entry/exit: power 149,850,353; food 478.8M, iron 802.1M, coin 6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2; Season II 7d 15:39:30 falling to 7d 15:31.
+- Game left safe: game left on the base screen. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
+
+## What the 2026-11-08 0325 scout unit added - events remainder, Doomsday Rewards walked, Frontline Reward read in full, Arms Race rotated to Tech Research
+
+- Scout unit scout-scout-2026-11-03-003 by ticker-0304, about 03:06 to 03:25 local, status partial (events remainder of the stale 2026-11-03 post-reset pass, chain scout-2026-11-03 seq 003). Evidence in `_records_/2026-11-08/perception-scout/0325-queue-run.md` (commit 447ebb411c on records/2026-11-08). Observe-only; nothing claimed, fought, dispatched, donated or bought. No Claim or Claim All button tapped anywhere (Doomsday Rewards bottom Claim, Frontline Claim All both left untouched). Tracker untouched (scout units do not mark regulars done).
+- Entry: the game showed a TIPS (E101) network connection error dialog; one Reconnect tap reloaded the base with state intact. New entry failure mode, first instance: a network-error dialog at entry, recovered by a single Reconnect tap with no state lost. Not commented on Issue #282: the symptom is a network error, not the capture-stream failure that issue tracks, and it recovered at once.
+- Base screen at entry: power 149,850,353; food 478.8M, iron 802.1M, coin 6.9M; diamonds 13.22K; cart 4,217; stamina 120; hammer 2/4, flask 2/2; Season II 7d 14:53:37; furnace overdrive toast [22/60] recurring; 99+ badge recurring.
+- The Doomsday, Rewards panel walked (partial count): page timer 14:52:35 (was 17:52:15 at 00:06); Warzone Guardian now [B3WB]Kalía Kalia, Total Damage 3.0G (was [CTR1]초리vv 2.8G); Alliance Threat (0) - was (1), the Lv.200 Doom Walker is gone, "Threat Neutralized"; Warzone Threat (46) - was (79). Rewards panel has 3 tabs: Rewards | Damage Ranking | Ranking Reward. Only the Rewards tab was walked; the other two tabs were not opened.
+- Rewards tab, first-kill section (all rows green Claim, all claimable): Lv.100-140 rows pay helmet x1 + crate x2 + crate x2; Lv.160 pays helmet x1 + crate x3 + crate x3; Lv.170-190 pay lightning-50 x1 + crate x3 + crate x3; Lv.200-210 pay lightning-50 x1 + crate x2 + crate x2; the Lv.220 row was seen at the list bottom with rewards unread. A Lv.150 row sits between the two pages seen and was never read - the exact first-kill row count is unfinished.
+- Rewards tab, cumulative-defeat section: rows (30/30), (40/40), (50/50), (60/60), (70/70) all green Claim. 30/50/70 pay gold bar x5 + 5m speedup x20 + red gem x20; 40/60 pay lightning-50 x1 + 5m speedup x20 + red gem x20. Rows below 30 and above 70 were not seen - the section full extent is unread.
+- Badge-22 composition, NOT resolved - correction: the 0011 section carried the composition as unread because the Rewards panel was unopened, implying opening it would resolve the 22. The panel is now opened and the composition is still unresolved: the Rewards tab alone already shows 10 plus first-kill rows plus 5 plus cumulative rows, all claimable, so 22 does not equal the claimable row count on this tab alone. The Damage Ranking and Ranking Reward tabs were not opened. Carried to successor seq 004, with the Lv.150 row, the Lv.220 row rewards, the cumulative rows below 30 / above 70, and both unopened tabs.
+- Frontline Breakthrough, Reward panel read in full: 3 rows, all 0 progress, all Claim buttons greyed, Claim All greyed - nothing claimable here. Play Frontline Breakthrough (0/3): gold bar x5, crate x3, crate x3, red gem x50. Play Frontline Breakthrough (0/2): gold bar x3, crate x12, crate x12, red gem x30. Play Frontline Breakthrough (0/1): gold bar x2, crate x6, crate x6, red gem x20. The tab badge 1 is the Challenge attempt (Challenge button red dot), not these rewards - confirms the 0011/0022 mapping.
+- Winter Battlefield sub-pages (Rewards, Rules, Shop, History, Achievement) not reached inside the unit cap; carried to successor seq 004.
+- Red dot accounting: seen 2 in this unit scope (Doomsday Rewards button dot; Frontline Challenge button dot - the Frontline tab badge 1 is the same signal). Explained 2 (Doomsday dot = Rewards panel claimable rows, events regular; Frontline dot = Challenge attempt, events regular). Unexplained 0.
+- Unknown items carried: Doomsday badge-22 composition; Doomsday Damage Ranking / Ranking Reward tabs; Winter Battlefield sub-pages; furnace overdrive toast [22/60]; 99+ badge.
+- Follow-up: successor seq 004 of chain scout-2026-11-03 enqueued for the remainder (Winter Battlefield sub-pages, plus finishing the Doomsday count). Events-regular signals from this walk: Doomsday Rewards claimable (many rows, first-kill Lv.100-220 plus and cumulative 30-70, all green Claim); Frontline Challenge attempt available; Arms Race phase rotated to Tech Research with 02:52:53 left, score 0 (folded into arms-race 1.58.0).
 - Game left safe: game left on the base screen. No purchase, no dispatch, no claim, no rally join. No Assemble, no teleport.
