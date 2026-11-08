@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-04T22:40:54Z
+modified: 2026-11-08T03:44:20Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-0504 alliance-train execution record 2026-11-04 0509 queue run (partial, seventh check-only outcome in a row, grounding mislabel at 55,563 opened the truck screen)
   - source: ticker-0834 alliance-train execution record 2026-11-04 0839 queue run (partial, check-only, no boarding banner, no train icon, station not viewed)
   - source: ticker-1404 alliance-train execution record 2026-11-04 1404 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fourth consecutive ticker pass to fail this way, Chrome-window observation succeeded in the same session so the fault is specific to the Last War fullscreen window, Issue 284)
+  - source: ticker-1818 alliance-train execution record 2026-11-07 1826 queue run (check-only partial, ninth in a row, no banner, station not viewed)
 ---
 
 # Alliance train
@@ -1005,3 +1006,13 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Recurrence: this is the fourth consecutive ticker pass to fail on this exact blocker (ticker-1224 help 1235, ticker-1327 mail 1333, ticker-1340 star-ceremony 1344, ticker-1404 train 1404), now across four activities. Until the Mac screen-recording stream recovers for the game window, further ticker passes will fail their first unit the same way.
 - No blind taps were dispatched, under the check-first rule. No train boarding check was performed, no seat taken, no Trade Contracts spent, no train summoned. Unlike the eight check-only units above, this unit is NOT a check-only outcome: the station was not even attempted, because no observation existed to check from - so it gives zero evidence about whether a train is preparing, and it does not extend the check-only streak count (which stays at eight).
 - Tracker untouched, per the failed-unit rule; the next tick re-produces the train unit. The inbox held 65 units at this pass. The unit file sits in `_queue_/done/` with result status failed - the unit file's lifecycle state after execution, not a tracker marking; the regular remains due.
+
+## What the 2026-11-07 1826 unit added - ninth check-only outcome in a row, banner absent, station not viewed
+
+- Unit train-2026-11-07-1430 by ticker-1818, about 18:21 to 18:26 local, status partial (check-only). Evidence in `_records_/2026-11-07/alliance-train/1826-queue-run.md` (commit f04c2b11d on records/2026-11-07). Computer session cc-30, LastWar already running on the Mac mini, base screen live.
+- No "Boarding closes in" banner under the resource bar, and the left icon column (hammer 2/4, flask 2/2, blue truck icon, survivor "?" bubble, truck with a red dot, satellite, wrench) shows no train icon. This is the same state as the check-only train units of 2026-11-03 and 2026-11-04.
+- No boarding action was taken, no Trade Contracts spent, no train summoned, no conductor role touched. The station itself was not viewed, so a preparing train is neither confirmed nor ruled out beyond the absent banner - the same honest caveat as the earlier units.
+- Ground taps were not used to probe for the station, per the 2026-11-04 lesson that they open other players' profile cards on this map, and the 0509 lesson that the left-column icon at (55, 563) opens the truck screen, not the train.
+- Recurrence: this is the ninth check-only outcome in a row (the 1404 failure does not extend the streak, per its section). No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
+- Figures read live: power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M. No diamonds, money, speedups or paid buttons were used.
+- Tracker untouched; the next tick re-produces the train unit.

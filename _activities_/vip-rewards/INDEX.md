@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T02:42:42Z
+modified: 2026-11-08T03:44:20Z
 level: L1
-version: 1.11.0
+version: 1.12.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: ticker-1634 vip-rewards execution record 2026-11-06 1640 queue run (failed, Mac device offline, eighty-third consecutive ticker pass with a Mac device-access blocker, forty-fourth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 33h, unchanged since the 1507, 1534 and 1604 passes; seven invokes, zero responses)
   - source: ticker-1727 vip-rewards execution record 2026-11-07 1747 queue run (partial, Freebie countdown to about 18:02 not the 19:00 reset, login chest already collected, VIP13 points 1,603,930 of 2,000,000, streak 1 day; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-1734 vip-rewards execution record 2026-11-07 1812 queue run (partial, login chest claimed plus 60 points to 1,603,990, streak 2 days, Freebie unlocked about 18:02 but Claim button unresponsive to four input variants including a foreground click; record commit 840094b6ad on records/2026-11-07)
+  - source: ticker-1818 VIP execution record 2026-11-07 1830 queue run (partial, chest already claimed, freebie not retried, popularity popup on the avatar-tap route)
 ---
 
 
@@ -255,3 +256,12 @@ Measured on 2026-10-25.
 - Supporting re-read: the 2138 unit on 2026-11-02 read a grey countdown of 20:20:15 at about 21:38, after the reset. Under a reset clock the countdown at 21:38 would read about 21h22m to the next 19:00 reset; observed 20:20:15 puts the unlock at about 17:58 the next day, which matches a 24-hour cycle from a claim at about 17:58 on 2026-11-02. The 2138 section's "the freebie for this reset day is already claimed" is re-read as: already claimed for the running 24-hour cycle, unlock about 17:58 the next day.
 - The reset-rule paragraph in Cadence is revised with it: a round that runs after 19:00 does NOT automatically find a fresh freebie. Whether it is claimable depends on when it was last claimed (unlock is last claim plus about 24 hours), so units must read the countdown or the button live rather than assume a refresh at the reset. The 2026-10-25 owner claim at about 20:53 is re-read as the about-18:59 unlock claimed late, not as a reset-driven refresh; the paragraph's "afternoon claim" can only be the previous day's claim, since the 14:00 countdown reading rules out a claim that afternoon. The standing rule that a round is not closed without opening the VIP screen stands - as a check, not as an assumption of a fresh freebie.
 - No other claim in this profile changes: the login chest, the streak and points reads, and the Freebie-button failure mode are all re-confirmed by the two units.
+
+## What the 2026-11-07 1830 unit added - avatar-tap route blocked by the popularity popup, VIP entry not located, freebie not retried
+
+- Unit vip-2026-11-06-1800 by ticker-1818, about 18:29 to 18:30 local, status partial. Evidence in `_records_/2026-11-07/vip-rewards/1830-queue-run.md` (commit f04c2b11d on records/2026-11-07). Computer session cc-30 dropped after the previous unit; session cc-33 was started, LastWar re-selected, and no game state was lost.
+- Login chest: already claimed by ticker-1734 (+60 VIP points, 1,603,930 to 1,603,990, streak 2 days, per vip-rewards/1812-queue-run.md). Nothing to claim in this unit.
+- Daily Freebie: NOT retried in this unit. The avatar tap opened MY PROFILE, but a "You're very popular!" popup covered it ([AP3x]Roronoa zo liked the profile, 1,806 likes +1); the popup was dismissed with the plain blue "Awesome!" button (no price tag, no spend), and the clean profile then showed likes 1,810, Moments "No posts found", and bottom tabs Record, Account, Settings, Rankings, Follow - no VIP entry on this screen. The VIP screen entry was not located before the token was released.
+- Entry-route correction: the "How to enter" route (avatar tap, then the gold VIP badge on the profile) can be obstructed by the popularity popup, and the profile's bottom tabs carry no VIP entry - the badge sits elsewhere on the profile and its position needs a fresh read on the next unit. Do not assume the badge is on the tabs row, and do not treat a popup-covered profile as the VIP screen. The freebie button's standing repeat blocker (ticker-1734: unresponsive across four input variants at norm about 739, 637) therefore stands, and this unit adds no new variant to it.
+- The token was released at 18:30 so the 18:34 tick can take it and run the 18:30 zero sweep (unit 002), which retries the freebie before the 19:00 reset per the ticker-1734 handoff. Whether that retry ran is unknown at this run's close; the freebie was still unclaimed at the reset, and the next claim window is the next cycle's units (the freebie unlocks about 18:02 daily on its own roughly 24-hour cycle, per the Correction above).
+- Figures read live: power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M. Profile likes 1,806 before the popup dismissal, 1,810 after (measured). No diamonds, money, speedups or paid buttons were used. No login or verification was demanded, and no different-device dialog appeared.

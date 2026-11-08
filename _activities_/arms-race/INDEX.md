@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T01:32:17Z
+modified: 2026-11-08T03:44:20Z
 level: L1
-version: 1.53.0
+version: 1.54.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -55,6 +55,7 @@ grounded_in:
   - source: ticker-0858 arms-race execution record 2026-11-07 0858 queue run (failed, Mac device offline, one-hundred-fifth consecutive ticker pass to fail this way, sixty-sixth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 48h, unchanged since the ticker-0804 pass; six invokes, zero responses, recovery-device health check timed out after 25s; duel day 6 unit)
   - source: ticker-1204 arms-race execution record 2026-11-07 1204 queue run (failed, Mac back online, window off-Space, capture failure, one-hundred-ninth consecutive ticker pass to fail this way, third in the capture-failure form, Issue 282; window 160366 pid 59735 at (0,-360), 9 invokes zero game screens, 4 capture attempts failed identically, set_window_frame refused observation_required before any open_app, Mission Control / Ctrl+Right / open_app not retried per the 1020 lessons; last_seen 18:41:20Z stale about 1h50m, unchanged since the 1104 pass; sync reaped 0 expired 0 due 20, queue stats inbox 78 done 1128 at 20:29Z; duel day 6 unit; record commit 9df64968c3 on records/2026-11-07, verified against the Issue #282 comment 2026-11-07T20:34:01Z which agrees on every point)
   - source: ticker-1633 arms-race execution record 2026-11-07 1633 queue run (Base Building phase 0/30000, tier-3 unreachable inside the red lines, skipped-needs-owner per R4; scoring paths re-confirmed live +1/+10/+30; Aircraft Center Lv.29 4d19h and Drill Ground Lv.26 1d16h, no completion in the phase window; completion sweep clean, cumulative chest 0/2; Events hub without a Zombie Invasion tab; Issue #407 filed for the regulars.py UTC-date state bug; record commit a85cfdafa8 on records/2026-11-07)
+  - source: ticker-1904 arms-race execution record 2026-11-07 1929 queue run (partial, Drone Boost phase read live at 0, tier-3 plan worked out, spending left to the next unit)
 ---
 
 
@@ -1751,3 +1752,16 @@ slot. Evidence in
 - Tooling gap filed by this pass as Issue #407 (tooling class, belongs to lastwar-tool-developer, not this job): tools/regulars.py uses date.today() in the container UTC timezone, so this unit's first skip landed in tools/state/2026-11-08.json and was moved to 2026-11-07 by hand with --date; the bogus 2026-11-08 file was deleted.
 - Reading warning: this is the newest live phase read and supersedes the 1204 section's "phase live at 12:30 was not read" - the phase live at 16:37-16:46 was read twice and is Base Building at 0. The 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its own phase, which ended about 14:10 local.
 - Tracker marked skipped-needs-owner per R4; the next tick re-produces the regular for the next phase slot.
+
+## What the 2026-11-07 1929 unit added - Drone Boost phase read live at 0, tier-3 plan worked out, spending left to the next unit
+
+- Unit arms-race-2026-11-07-1803 by ticker-1904, about 19:23 to 19:29 local, status partial. Evidence in `_records_/2026-11-07/arms-race/1929-queue-run.md` (commit 6baaa831b9 on records/2026-11-07). First unit inside this phase (rule R4). First arms-race unit of the new trade day.
+- Events hub opened from the base screen; tab bar shows Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday - no Zombie Invasion tab, consistent with the event having ended at about the 19:00 reset on 2026-10-30. No fresh zombie chain was seeded.
+- Arms Race phase read live: Drone Boost, Contest Segment Lv.29-30, score 0, timer 02:35:14 left (phase ends about 22:02 local), cumulative counter chest 0/2, account rank #2110 [AP3x]Bears Lair, segment rank 5.
+- Chest thresholds: 1,500 (2,360 rubies) / 10,000 (4,800 rubies) / 30,000 (11,800 rubies).
+- Scoring paths, all read live: (1) Use 10 Drone Battle Data points, +1 per 10. (2) Use 1 Stamina, +100 per stamina (thumbs-up marker on this row). (3) Buy Packs containing Diamonds (1 Diamond), +30 - red line, never used.
+- Nothing earned, nothing claimed, no chest is claimable at score 0. No red dot on the Arms Race tab. The completion sweep is not owed yet - this unit does not mark the phase complete.
+- Just-enough plan for tier 3 (30,000): tier 3 needs 300 stamina at +100 each. The Drone Data path would need 300,000 data points and is not the route; diamond packs are a red line. On hand: stamina 99 (HUD), Free Claim 75 if available (Regain Stamina panel, cooldown 4h, twice a day), stamina items 10/50 held in the inventory in the hundreds (radar-tasks 1.50.0 line, measured counts in the Regain panel). 99 + 75 = 174; gap 126 -> 2 x 50-item + 3 x 10-item = 130, for 304 stamina total, 30,400 points - just over tier 3. The owner rule of 2026-10-28 (Slack) authorises exactly this: close a Drone Boost shortfall with the Free Claim and stamina items before recording a miss (the 2026-10-27 run missed at 11,500 of 30,000 for want of it).
+- Open question carried: which stamina sinks count as "Use 1 Stamina" and are useful right now - radar stored is 0/40 (nothing to execute), the event is over for zombies, so the spend must come from world-map marches (Doom Walker rally 20, gathering, legion bases) or whatever the phase page's ">>" arrow on the stamina row opens. The candidate route from Open questions stands: the 2026-11-03 0609 answer (the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase). The spending unit must confirm the score moves +100 per stamina spent on its first action, and stop at 30,000.
+- Phase ends about 22:02; the staged 2203 unit belongs to the next phase. The tracker still shows arms-race due, so the next tick's sync re-produces this phase's unit and the spend continues there. The pass budget (token taken 19:06) ran out before the spend could start.
+- Reading note: this is the newest live phase read and supersedes the 1633 Base Building read for the current phase; the 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its own phase, which ended about 14:10 local. Tracker untouched. No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
