@@ -737,3 +737,22 @@ of 2026-10-28.
   opened (every branch with commits beyond main already
   has one). Status: done. Full detail in
   pr-integration/0315-run.md.
+
+## 03:30 to about 03:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0330.
+  NON-batch pass (checker merge-aware verdict not due:
+  PR 426 already merged 03:05:30 PT in this window;
+  clock-only due yes, first-pass rule governs). No
+  records merges. Records PR 439 clean at head 42ef0190,
+  awaiting the 07:00 batch. Records PR 430 conflict
+  persists at new head 94014697, same 11 files as the
+  0315 note, no new comment, carried for branch-side
+  resolution. Knowledge PR 434 still held on the stale
+  title, head unchanged, merge-tree clean, no repeat
+  comment. Tools PR 425 owner-gated, unchanged since
+  the 2245 escalation, no owner reply. Records PRs 351
+  and 301 still conflict on the single action-log file,
+  carried. No new records PR opened (every branch with
+  commits beyond main already has one). Status: done.
+  Full detail in pr-integration/0330-run.md.
