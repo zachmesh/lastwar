@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T12:39:56Z
+modified: 2026-11-08T13:39:58Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-0004 perception-scout execution record 2026-11-08 0022 queue run (partial, midday remainder, Weekly Deal page closed, Official Event tab dot, check-in FREE GIFT still carried; record commit e6192726d1 on records/2026-11-08)
   - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, Weekly Deal page walked in full, seven paid packs, nothing free; record commit 6560ff267 on records/2026-11-08)
   - source: ticker-0404 perception-scout execution record 2026-11-08 0407 queue run (done, store remainder, five Mall tabs walked live)
+  - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Store tab strip read in part, Issue 444 filed, record commit 111f7e954 on records/2026-11-08)
 ---
 
 
@@ -929,3 +930,59 @@ the free and already paid for parts, never the paid unlocks.
 - Mall entry and navigation: cart icon top-right, grounded this session at norm (917, 52) (2209 read 902, 52 - framing drift, re-ground per session). The strip scrolls horizontally; Hot Sale Packs sits right of Gold Brick Mall and needs one leftward drag on the strip to reach. Strip verified end to end: Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall, Hot Sale Packs - seven tabs, no Crystal Shop tab and no Glittering Market tab, consistent with the 0504 and 0514 reads.
 - HOT DEALS tab carries a red dot, explained by the check-in banner: "Participate in the check-in event and claim great rewards!", FREE GIFT "Claim your gift today!", FREE TOMORROW (x5, x5, x5, "Randomly obtain one."). The FREE GIFT is still claimable today and still this regular's work (queued for the 22:57 passes window; no claim record has landed on the branch yet, so the claim is still unverified).
 - Game left safe: game left on the base screen. Nothing bought. No Assemble, no teleport.
+
+
+## What the 2026-11-08 0512 scout read added - Store tab strip read in part, VIP, Alliance, Honor and Campaign tiers, Season, Cosmetics and cut-off tabs unopened
+
+- Scout unit scout-midday-scout-mid-2026-11-03-006 by ticker-0504, about
+  05:05-05:12 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0512-queue-run.md` (commit
+  111f7e954 on records/2026-11-08) and the appended section of
+  `_records_/2026-11-08/perception-scout/observation.md`. Observe-only;
+  nothing claimed or bought. The chain scout-mid-2026-11-03 is spent
+  with this unit.
+- Entry: the VIP panel cart icon at norm (806,133) opens the STORE -
+  this is the Store entry, distinct from the Mall entry (base cart
+  icon). The Store tab strip holds VIP, Alliance, Honor, Campaign,
+  Season, Cosmetics and a further tab cut off at the right edge
+  ("Cou..."). Four tabs were read in full; Season, Cosmetics and the
+  cut-off tab were never opened - filed as Issue #444 (label
+  knowledge) by the ticker pass. The Mall strip (0407 read: Official
+  Event, Weekly Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold
+  Brick Mall, Hot Sale Packs) is a different strip; the two must not
+  be conflated.
+- VIP tab (red gems 4,217): Food Chest (SR) 100/100 at 40 gems, Iron
+  Chest (SR) 100/100 at 40, Coin Chest (SR) 100/100 at 40, Universal
+  Decor Component 50/50 at 100, 50 Stamina 5/5 at 60, Superalloy
+  100/100 at 6, Advanced Teleporter 3/3, Drone Parts 50/50, Skill
+  Medal 2000/2000. Refreshes at 00:00 every Monday (server time),
+  timer 12:49:59.
+- Alliance tab (301.3K): identical to the 0136 read of 2026-11-03. UR
+  Hero Universal Shard SOLD, Survivor Recruitment Ticket SOLD,
+  Violet Shard SOLD, Mason Shard 30/30 at 1,000, Drone Parts SOLD,
+  Lv.1 Drone Component Chest SOLD, Skill Chip Chest (SR), Drone
+  Combat Boost EXP Card, 8-Hour Shield 7/7.
+- Honor tab (101.1K): Gear Blueprint (UR) 50/50 at 10,000, Skill Chip
+  Chest (UR) 1/1 at 50,000, Decoration Chest 1/1 at 50,000,
+  Universal Decor Component 150/150 at 200, UR Hero Universal Shard
+  10/10 at 3,000, Drone Parts 100/100 at 800, Universal Exclusive
+  Weapon Shard 25/25, Resource Choice Chest (UR) 100/100,
+  Dielectric Ceramic 100/100. Refreshes at 00:00 on the 1st of every
+  month (server time), timer 22d 12:49:28.
+- Campaign tab (stars 1,260): Campaign Chest (UR) SOLD, Lv.3 Drone
+  Component Chest SOLD, UR Hero Universal Shard 10/10 at 200, Battle
+  Data 100K 25/25 at 2,000, Universal Decor Component 30/30 at 200,
+  Basic Chip Material 1/1 at 5,000, Skill Chip Chest (SSR),
+  Universal Exclusive Weapon Shard, Upgrade Ore 1.0K.
+- No free or claimable item exists on any tab read, and no tab
+  carries a red dot. The VIP cart dot is therefore the store-entry
+  indicator - the VIP Store is stocked for the week - not a claim
+  signal; no owning regular has work from it, and nothing was bought
+  (red line). The 0407 "Store Campaign tab dot" is NOT reproduced:
+  no dot was found on the Campaign tab in this read - the 0407 dot
+  stays a single sighting, not a standing signal.
+- The floating circular portrait icon appeared again, over the
+  Campaign tab - same unknown item as the 0204 unit, still
+  unexplained.
+- Game left safe: base screen. Nothing bought. No Assemble, no
+  teleport.

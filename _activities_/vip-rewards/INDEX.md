@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T10:46:00Z
+modified: 2026-11-08T13:39:58Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -19,6 +19,8 @@ grounded_in:
   - source: ticker-1734 vip-rewards execution record 2026-11-07 1812 queue run (partial, login chest claimed plus 60 points to 1,603,990, streak 2 days, Freebie unlocked about 18:02 but Claim button unresponsive to four input variants including a foreground click; record commit 840094b6ad on records/2026-11-07)
   - source: ticker-1818 VIP execution record 2026-11-07 1830 queue run (partial, chest already claimed, freebie not retried, popularity popup on the avatar-tap route)
   - source: ticker-0204 perception-scout execution record 2026-11-08 0229 queue run (partial per R1, VIP panel walked, VIP13 progress 1,605,970/2,000,000, Daily Freebie GREEN/claimable NOT claimed, Exclusive pack read; record commit 6560ff267 on records/2026-11-08)
+  - source: ticker-0434 perception-scout execution record 2026-11-08 0454 queue run (done, VIP re-check, Freebie still claimable, record commit caa661bab on records/2026-11-08)
+  - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Freebie re-check, cart dot is the Store shortcut, record commit 111f7e954 on records/2026-11-08)
 ---
 
 
@@ -276,3 +278,44 @@ Measured on 2026-10-25.
 - VIP Exclusive (Epic), Availability 1: red gem 10.0K, hero shard 120, blue crate 5, paw item, $99.99, +1000 badge. Bottom timer 18d 15:45:39. Top-right cart icon (red dot, unexplained - carried to the scout successor) and chest icon.
 - The floating circular portrait icon appeared again over "Mega Mode of Trade Trucks" and over "Boost Hero Attack" (identity unknown).
 - Game left safe: game left on the base screen. No claim, no purchase. No Assemble, no teleport.
+
+
+## What the 2026-11-08 0454 and 0512 scout reads added - Daily Freebie still claimable at 04:53 and 05:11, cart dot is the Store shortcut
+
+- Scout unit scout-midday-scout-mid-2026-11-03-005 by ticker-0434, about
+  04:52-04:54 local, status done; and scout unit
+  scout-midday-scout-mid-2026-11-03-006 by ticker-0504, about 05:05-05:12
+  local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/0454-queue-run.md` (commit
+  caa661bab on records/2026-11-08) and
+  `_records_/2026-11-08/perception-scout/0512-queue-run.md` (commit
+  111f7e954 on records/2026-11-08). Observe-only; nothing claimed.
+  Entry: avatar -> MY PROFILE -> VIP13 tile.
+- VIP13 Daily Freebie STILL claimable at 04:53 (0454) and at 05:11
+  (0512): puzzle 2, brown crate 13, grey crate 13, gold 13, green
+  Claim button - contents identical to the 0204 read at 02:17.
+  Observed only, NOT claimed; the claim belongs to the vip regular.
+  The Freebie is still unclaimed about 11 hours into the reset day
+  while vip unit vip-2026-11-07-1900 sits stalled in inbox (priority
+  1, about 21 hours old at the 0454 read, about 22 hours at the 0512
+  read). The vip regular owns the claim and its unit is already
+  queued; no new unit is enqueued from these scout reads. Note: the
+  Freebie contents are unchanged across the 02:17, 04:53 and 05:11
+  reads of this reset day - a same-day data point for the open
+  question on whether contents rotate; it does not answer rotation
+  across days.
+- VIP progress 1,605,970/2,000,000 - unchanged across the 02:17, 04:53
+  and 05:11 reads. "You've logged in 2 days in a row. Collect 80 VIP
+  points tomorrow." VIP Exclusive (Epic) $99.99, Availability 1,
+  timer 18d 13:16:45 at 04:53, 18d 12:55:44 at 05:11. Untouched.
+- Cart icon dot resolved: the VIP panel top-right cart icon dot - one
+  of the 3 unexplained dots from the 0204 unit - is the Store
+  shortcut, tap-verified at norm (806,133) by the 0512 unit (folded
+  into shop-claims 1.34.0). It is a store-entry indicator, not a VIP
+  claim signal. The 0229 section's cart-dot unknown is closed by
+  this read.
+- The floating circular portrait icon appeared again over the Campaign
+  tab in the 0512 read - same unknown item as the 0204 unit, still
+  unexplained.
+- Game left safe: base screen. No claim, no purchase. No Assemble, no
+  teleport.
