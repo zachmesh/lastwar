@@ -142,3 +142,22 @@ of 2026-10-28.
   narrative-fallback basis); 0 withdrawals. Pool: inbox 80,
   claimed 0, done 1200. Status: no-op. Full detail in
   queue-planning/0040-run.md.
+
+## 00:32 to about 00:46 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-08-0046.
+  Own PR 425 checked first: owner-gated on the policy
+  amendment, no action owed. Implemented the highest-priority
+  open tooling issue, #429 (three ticker worktrees under /tmp
+  vanished mid-pass on 2026-11-07): new tool
+  _tools_/pass_worktree.py creates pass worktrees under
+  ~/workspace/lastwar-worktrees/ and refuses any /tmp target,
+  with list and a gated prune (dry-run by default). The
+  deleter is the agent runtime's /tmp sweep on this VM;
+  the VPS origin-tmp-cleanup service is exonerated by its
+  7-day rule and its deletion log. PR #432 opened, commit
+  b41385febb, validated on an isolated fixture repo under
+  /tmp (py_compile plus 37 assertions, 37/37 on two runs).
+  Issue #429 commented with the findings and the PR;
+  closure belongs to the daily retro. Status: done. Full
+  detail in tool-development/0046-run.md.
