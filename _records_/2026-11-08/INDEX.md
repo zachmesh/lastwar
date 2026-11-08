@@ -1078,3 +1078,21 @@ of 2026-10-28.
 ## 04:47 to about 04:54 - Ticker-0434 scout VIP re-check
 
 - Ticker-0434, unit scout-midday-scout-mid-2026-11-03-005 (chain scout-mid-2026-11-03, seq 5), status done, observe-only. MY PROFILE (VIP13 with red dot, #2110, 48.6K kills, likes 1,810) and VIP panel re-read live: progress 1,605,970/2,000,000 unchanged from the 02:17 read; VIP13 Daily Freebie STILL claimable at about 04:53 (puzzle 2, crates 13/13, gold 13) - observed only, not claimed. Material: the vip unit vip-2026-11-07-1900 sits stalled in inbox (priority 1, about 21 hours old) while the Freebie waits; the claim belongs to that queued unit. VIP Exclusive $99.99 untouched; cart icon dot unexplained. Red dots seen 3, explained 2, unexplained 1. No successor; chain continues with seq 006. Tracker untouched. Full detail in perception-scout/0454-queue-run.md and the appended observation section.
+
+## 05:00 to about 05:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-0500.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 07:00). No merges. Records PR
+  439 clean at unchanged head 42ef0190 and records PR 430
+  clean at new head caa661ba against live main f2eacffc20,
+  both awaiting the 07:00 batch. Records PRs 351 and 301
+  still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-verified against main f2eacffc20,
+  carried with fresh 0500 re-check notes. Tools PR 425
+  owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision. No records PR opened by
+  this pass. No Slack DM sync, no chat report: silent
+  non-batch run. Status: done. Full detail in
+  pr-integration/0500-run.md.
