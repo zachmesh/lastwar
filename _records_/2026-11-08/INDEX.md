@@ -3194,3 +3194,17 @@ of 2026-10-28.
   unexplained red dots 14 on a narrative-fallback basis).
   Pool: inbox 73, claimed 1, done 1266. Status: done.
   Full detail in queue-planning/1340-run.md.
+## 14:00 to about 14:08 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1400.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges. Records PR
+  460 clean at new head 15a2e95c (planner-1340 record,
+  Issue #465 filed), verification comment posted; records
+  PR 457 clean, both awaiting the 15:00 batch. Records
+  PRs 351 and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-verified, no
+  repeat notes. Tools PR 425 owner-gated, unchanged,
+  still conflicting on _tools_/INDEX.md. No records
+  branch left PR-less. Status: done.
+  Full detail in pr-integration/1400-run.md.
