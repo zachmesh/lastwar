@@ -4602,3 +4602,26 @@ of 2026-10-28.
   MERGEABLE, mergeState CLEAN. Issue #427 commented with the
   fold (comment 6718837587); no new Issue filed. Status: done.
   Full detail in knowledge-organization/2332-run.md.
+
+## 23:40 to about 23:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-2340.
+- Plan run once with the live tree tools, now current
+  (tools/queue.py md5 f71d26e7, identical to
+  _tools_/queue.py): staged 5 units for the 2026-11-08
+  1057 slot (passes, secrets, treasures, trucks,
+  events), already_present 65, skipped_done_current 4,
+  reaped 0, expired 0, stale_done_dropped []. The next
+  12 hours are staged in the live pool through about
+  10:57 local 2026-11-08. All 5 units carried on this
+  delivery.
+- Pre-reset sweep production skipped (23:00 hour run);
+  tonight's pair verified expired unexecuted in done.
+- Scout diff on the Nov 3 observation (third
+  consumption, second with the 22:10 store append): dry
+  run and apply identical, all zero except the fixed
+  tool's unexplained 4; 0 withdrawals. Pool by_state at
+  stats: live inbox 80, claimed 0, done 1198; branch
+  inbox 80, claimed 0, done 1132 before this delivery.
+  Status: done. Full detail in
+  queue-planning/2340-run.md.
