@@ -1960,3 +1960,54 @@ of 2026-10-28.
   byte-identical). 0 withdrawals. Pool: inbox 81,
   claimed 0, done 1246. Status: no-op. Full detail in
   queue-planning/0840-run.md.
+
+## 08:34 to about 08:52 - Queue ticker pass
+
+- Ticker pass ticker-0834. Sync reaped 0 and expired 6
+  stale 02:03 units (arms-race, donations, harvest, radar,
+  survivors, training); 22 regulars due, all already
+  queued, nothing new produced. No zombie chain was
+  seeded: the Zombie Invasion event ended at about the
+  19:00 reset on 2026-10-30 (chain zombie-2026-10-28
+  closed by unit 066) and the Events hub has shown no
+  Zombie Invasion tab since - no fresh chain until that
+  tab is seen live again. Own PRs checked first: records
+  PR 430 is open and clean at head 97437267 (integrator
+  0830 re-check), no question addressed to this job, no
+  conflict to resolve. Token held by this pass only.
+- Donations re-read unit donations-2026-11-08-1146
+  (partial, unverified close): Donation Count read live
+  1/30 at entry on Quick Construction (8/10,
+  recommended, 900 coins per donation) - this proves the
+  0804 unit's third tap did NOT land. One coin tap
+  dispatched from 1/30; the button greyed with a
+  00:16:27 timer hiding the count, badge 302.9K to
+  303.0K, landing unverified (grey-plus-badge is not
+  landing evidence, third consecutive confirmation).
+  Tech Donation Today 4600 to 4700 (observed only, not
+  a count proxy). The re-read for this tap is the
+  already-queued donations-2026-11-08-1621
+  (not-before 16:40Z), which the 09:04 tick picks up
+  after the timer clears at about 08:57; no duplicate
+  re-read enqueued. Tracker untouched. Full detail in
+  alliance-donations/0841-queue-run.md.
+- Perception scout unit scout-scout-2026-11-02-010
+  (partial, blocker h, by-design continuation): station
+  panel re-check, observe-only. Alliance menu read live
+  (Help and Gifts dots; NO Wars dot - it was present and
+  unexplained at about 07:34 in seq 009, Issue #212, and
+  is gone now; Alliance Star Event 40, 09:05:32 left).
+  Base view read live (power 149,850,353; no train icon
+  in the left column, no "Boarding closes in" banner):
+  eighth no-train confirmation in this chain, so the
+  STATION PLATFORM has no live state to read and stays
+  a preparation-only surface, carried not closed.
+  Successor scout-scout-2026-11-02-011 enqueued.
+  Observation appended to
+  perception-scout/observation.md. Full detail in
+  perception-scout/0845-queue-run.md.
+- No diamonds spent, no purchase tapped, no red line
+  crossed. The next due donations unit
+  (donations-2026-11-08-1318) was left for the 09:04
+  tick: its count read is timer-blocked until about
+  08:57, when the 1621 re-read runs.
