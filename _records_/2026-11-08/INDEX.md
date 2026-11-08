@@ -2310,3 +2310,14 @@ of 2026-10-28.
   unchanged since the 2245 escalation, carried with no
   new note. No Slack DM sync (silent run). Full detail in
   pr-integration/1000-run.md.
+
+- Ticker pass ticker-1017, donations unit
+  donations-2026-11-08-1621, partial. Three coin donations
+  landed, each verified by a live count re-read, 4/30 to
+  1/30 on Quick Construction (count replenished 1 to 4
+  since the 0920 close); stopped at the live-read 1/30
+  per the changed route, no tap from 1/30. Tracker
+  untouched. Re-read enqueued as
+  donations-2026-11-08-1832 (not-before 11:05 local).
+  Measurements added to Issue 450. Full detail in
+  alliance-donations/1034-queue-run.md.
