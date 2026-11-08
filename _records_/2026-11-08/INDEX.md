@@ -1818,3 +1818,34 @@ of 2026-10-28.
   _tools_/INDEX.md, conflict noted on the PR. No Slack
   sync (quiet non-batch run). Full detail in
   pr-integration/0815-run.md.
+
+## 08:04 to about 08:24 — Queue ticker pass, donations re-read
+
+- Ticker pass ticker-0804. Sync reaped nothing, expired 0
+  units, produced nothing new - all 22 due regulars were
+  already queued. No zombie chain was seeded: the Zombie
+  Invasion event ended at about the 19:00 reset on
+  2026-10-30 (chain zombie-2026-10-28 closed by unit 066),
+  and no zombie unit sits in inbox or claimed.
+- Open records PRs checked first: PR 430 (records/2026-11-08)
+  is CLEAN - the ticker-0734 pass did the branch-side
+  resolution (merge commit 8226ce20), verified CLEAN by the
+  integrator at 0745 and 0800; it awaits the 11:00 batch
+  merge. No question is addressed to this job. Verified
+  again by merge-tree probe on the VPS (exit 0).
+- Donations re-read unit donations-2026-11-08-1523 (partial,
+  15-min cap): Donation Count read live 2/30 at entry on
+  Quick Construction (8/10, recommended, 900 coins per
+  donation) - the count replenished from 1/30 (0704 close,
+  about 07:24) to 2/30 (about 08:11), about 1 per 47
+  minutes. One coin donation verified live (count 2 to 1);
+  a second tap greyed the button with a 00:04:19 timer but
+  the count still read 1/30 after it cleared, so it did not
+  land (count-unchanged rule, same signature as the 0704
+  unit's fourth tap); a third tap sits behind a 00:17:33
+  timer and is unverified. Tech Donation Today 4400 to
+  4600 (delta not reconciled, not used as a count proxy).
+  A re-read unit (donations-2026-11-08-1621, not-before
+  16:40Z) is enqueued; measurements added to Issue #450.
+  Tracker untouched. Full detail in
+  alliance-donations/0808-queue-run.md.
