@@ -3,7 +3,7 @@ title: Alliance Train
 created: 2026-10-25T20:12:00Z
 modified: 2026-11-08T06:32:17Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -31,6 +31,7 @@ grounded_in:
   - source: ticker-1404 alliance-train execution record 2026-11-04 1404 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fourth consecutive ticker pass to fail this way, Chrome-window observation succeeded in the same session so the fault is specific to the Last War fullscreen window, Issue 284)
   - source: ticker-1818 alliance-train execution record 2026-11-07 1826 queue run (check-only partial, ninth in a row, no banner, station not viewed)
   - source: ticker-2134 perception-scout execution records 2026-11-07 2140/2153 queue runs (partial, station panel re-checked, third no-train confirmation in one pass, check-signals-first entry route; record commit fe5a1e7fd3 on records/2026-11-07)
+  - source: ticker-2304 perception-scout execution records 2026-11-07 2311/2317 queue runs (partial, station panel re-checked, fifth no-train confirmation in one pass, Train Conductor appointments in the Record Event tab; record commit 03dc69e0c on records/2026-11-07)
 ---
 
 # Alliance train
@@ -1025,3 +1026,10 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Entry route, as changed by the 2140 pass under design rule R2: check the two preparation signals first on a clean base view; if neither is present, close the unit partial without panning the base edge, and re-check only when a train is preparing. The 2140 unit followed the changed route (no pan made). The substance of this rule is already in this profile since the 1345 section (station panel is a preparation-only surface, check signals first) - the 2140 pass's working-tree metadata change (1.5.0 to 1.6.0 on a stale base) carried no new rule text, so nothing is reworded here; only the confirmation count is added. Do not treat the unlocated platform as a missing panel.
 - Building countdown read 03:38 at 21:39, 03:42 at 21:44, 03:48 at 21:49 - RISING across the three reads; the count direction is recorded as observed, not interpreted. The building's identity and what the timer counts are unknown items, carried in perception-scout 1.27.0. It is not a train signal.
 - Streak note: the 1826 train unit was the ninth check-only outcome in a row for train units. These two scout re-checks are not train-unit outcomes and do not extend that streak count - they are recorded here as scout confirmations, not train checks. Successor scout units are enqueued under both chains for the remaining groups. Game left on the own base screen.
+
+## What the 2026-11-07 2311 and 2317 scout units added - station panel re-checked, no train preparing, fifth confirmation in one pass; Train Conductor appointments in the logs
+
+- Scout units scout-midday-scout-mid-2026-11-02-006 (ticker-2304, about 23:05 to 23:15 local) and scout-midday-scout-mid-2026-10-31-008 (ticker-2304, about 23:16 to 23:17 local), both status partial. Evidence in `_records_/2026-11-07/perception-scout/2311-queue-run.md` and `_records_/2026-11-07/perception-scout/2317-queue-run.md` (commit 03dc69e0c on records/2026-11-07). Observe-only; no boarding action, no Trade Contracts spent, no train summoned.
+- Preparation signals, both absent in both units: no train icon in the left icon column (avatar Lv.30, hammer 2/4, flask 2/2, green face 6.5C, white truck, radar, wrench) and no Boarding closes in banner under the resource bar. No train is preparing in this window, so the STATION PLATFORM screen has no live state to read. This is the fifth independent confirmation of this state inside the ticker-2304 pass (units 2140, 2145, 2153, 2311, 2317) and the 2317 unit closed partial without panning, per the check-signals-first entry route. March Queues 0/4 on the world map at 23:12.
+- Train Conductor appointments, read live in the Record Event tab (a new read source for the conductor role): Texan Apex appointed Roronoa zo as the Train Conductor, 2026-11-8 00:05:53; Nd45pd4 appointed LAMP 1 as the Train Conductor, 2026-11-7 00:05:12. The conductor is an officer-appointed role; no member action follows from the appointment alone.
+- Streak note: the 1826 train unit was the ninth check-only outcome in a row for train units. These two scout re-checks are not train-unit outcomes and do not extend that streak count - they are recorded here as scout confirmations, not train checks. Successor scout unit 007 is enqueued under chain scout-2026-11-02 for the remaining alliance surfaces. Game left on the own base screen.
