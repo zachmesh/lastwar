@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T16:37:41Z
+modified: 2026-11-08T23:44:00Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -31,6 +31,7 @@ grounded_in:
   - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
   - source: ticker-0634 event-claims execution record 2026-11-08 0656 queue run (partial, Doomsday first-kill tiers Lv.100-140 claimed, Frontline rewards unclaimable); record commit 9669d391ea on records/2026-11-08
   - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live; Doomsday guardian rotated to Nuna Knuckles 6.5G, Warzone Threat 43); record commit 8dcbdf92b9 on records/2026-11-08
+  - source: ticker-1434 event-claims execution record 2026-11-08 1506 queue run (done, full Events hub sweep of all 5 tabs, no reward claimable anywhere, Doomsday guardian 7.6G, Warzone Threat 23); record commit dfd3c87f9 on records/2026-11-08
 ---
 
 
@@ -1063,3 +1064,59 @@ that drag is the sweep-completeness check, not wasted motion.
   and 13:00-15:00 (same as the 0656 read); Match greyed; Base level 15+.
 - Game left safe: nothing claimed, fought, dispatched, donated, boarded
   or bought in this unit.
+
+## What the 2026-11-08 1506 events unit added - full hub sweep of all 5 tabs, no reward claimable anywhere
+
+- Unit events-2026-11-08-1057 by ticker-1434, about 15:00 to 15:06
+  local, status done - full sweep of the Events hub, all 5 tabs
+  opened and read live, no reward claimable anywhere. Evidence in
+  `_records_/2026-11-08/event-claims/1506-queue-run.md` (commit
+  dfd3c87f9 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-135 on the owner Mac mini, LastWar
+  already running. Note: the token lease from the previous unit
+  expired at 15:01:09Z and was re-acquired at 15:01:44Z (fresh lease
+  to 15:16:48Z) before this unit's game work began; no other pass
+  could have taken it in between (the 15:04 tick fired while the new
+  lease was live). No device-access error, no different-device
+  dialog, no login demanded. Total Power read live on base at entry
+  and at close: 149,850,353.
+- Tab set today: Arms Race, Frontline Breakthrough (badge 1), Winter
+  Battlefield, The Doomsday, Community. No Zombie Invasion tab
+  (event ended 2026-10-30, chain closed) and no Desert Storm
+  Battlefield tab in the current rotation.
+- Arms Race (Tech Research stage, Contest Segment Lv.29-30): score 0,
+  rank #2110 [AP3x]Bears Lair, stage countdown 02:57:24. Point chests
+  at 6,250 / 12,500 / 30,000 all unreached. The 0/2 chest counter at
+  the top is unread (meaning not established this unit). No grinding
+  done (research speed-ups and diamond packs are costs, not claims).
+- Frontline Breakthrough (badge 1): Saving Soldiers 100%, countdown
+  02:47:01. Rewards panel read in full: three Play Frontline
+  Breakthrough rows at 0/3, 0/2 and 0/1, all Claim buttons greyed -
+  nothing claimable without playing the Challenge mini-game, which is
+  grinding and not part of a claim round. The tab badge 1 marks
+  unplayed Challenge attempts (the Challenge button carries a red
+  dot), not a claimable reward - re-confirmed, matching the 0011
+  scout read. Challenge was not played.
+- Winter Battlefield (5v5): Event is starting soon, countdown
+  02:56:09; windows 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09
+  13:00-15:00 (same as the 0656 and 0734 reads); Match greyed.
+  Rewards panel read: currency 0, chests at 45,000 / 90,000 /
+  135,000 points, objectives all battle-dependent (complete a
+  battlefield +10.0K, individual points +17.5K-52.5K, commendations
+  +21.0K-45.0K, achievements +2.4K-3.5K). Nothing claimable.
+- The Doomsday: countdown 02:55:15, Warzone Guardian [AP3x]Nuna
+  Knuckles Total Damage 7.6G (was 6.5G at the 0734 read - the
+  guardian's damage rose, not rotated), Alliance Threat (0), Warzone
+  Threat (23) (was 43 at 0734), Threat Neutralized. Rewards panel
+  read: all five Warzone's first Kill tiers (Lv.100 to Lv.140 Doom
+  Walker) show green checks - already claimed. Ranking Reward tab
+  read: rank reward table only (No.1 50/50/50, No.2 45s, No.3-5 40s,
+  No.6-10 below), no Claim button - pays at settlement.
+- Community: 500 Diamonds row reads Claimed (Discord binding reward,
+  as recorded in the metadata). Nothing new.
+- Final sweep: no bouncing chest and no reward red dot remained on
+  the Events screen after the tab checks, except the Frontline
+  Breakthrough badge 1, which is the unplayed-Challenge marker
+  recorded above.
+- Game left safe: base screen. No diamonds, money or other spending;
+  no Challenge mini-game played, no Arms Race grinding.
