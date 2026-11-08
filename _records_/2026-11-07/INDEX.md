@@ -3593,3 +3593,52 @@ of 2026-10-28.
   fix, no hand-off, no escalation, no stale-owner flag.
   Status: no-op.
   Full detail in pr-catchall/1939-run.md.
+
+## 19:40 to about 19:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1940.
+- Plan run twice: the body command with the live tree
+  stale tools (20 regulars due) staged 6 (already_present
+  63, skipped_done_current 0, reaped 0, expired 0 - the
+  2026-11-08 0657 slots passes, secrets, treasures,
+  trucks, events, and scout-midday 0700); re-run with the
+  branch-tip tools (newer queue.py, md5 f71d26e7) against
+  the live _queue_ root staged 0 more
+  (already_present 68, skipped_done_current 6, reaped 0,
+  expired 0, stale_done_dropped []). The next 12 hours
+  are now staged in the live pool through about 07:40
+  local 2026-11-08.
+- Pre-reset sweep production: this run is not the
+  17:00-hour run, so nothing was enqueued; tonight's pair
+  (chain pre-reset-sweep-2026-11-07) both EXPIRED
+  unexecuted at 03:06:08Z. The sweep partially ran through
+  the standalone zero-sweep-2026-11-07-1730 unit
+  (ticker-1734, partial, 23 lines walked, 2 fix-ups
+  enqueued); the final pass never ran, so the Nov 7
+  pre-reset sweep closes as first pass partial only,
+  final pass missed. Geometry conflict #410 is fixed on
+  the tool side (PR 412 merged), but this pair still
+  carried the old geometry.
+- Scout diff on the Nov 4 observation (seventy-fourth
+  consumption): dry run and apply agree with the fixed
+  tool, all zero except unexplained 4 (observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates
+  0, promotion proposals 0). No withdrawals: the diff
+  classified nothing and the Nov 4 observation is older
+  than the current inbox units. No new observation for
+  Nov 5, 6 or 7; scout-2026-11-07-1800 and -1900 still in
+  inbox unexecuted.
+- 1840 delivery verified landed on the branch (commit
+  4ee26a6d71 ancestor of tip de741a3582); no recovery
+  needed. Branch / live divergence noted, not carried:
+  6 old scout exploration units in the live inbox never
+  reached the branch, about 90 live done files (mostly
+  Nov 3) are not on the branch, and zero-sweep-1630 sits
+  in the branch done pool but is absent from the live pool
+  entirely. Nov 7 duel-score close confirmed missed (the
+  1430 read expired unexecuted); the 1830 / 2230 / 0230 /
+  0630 reads belong to the Nov 8 trade day.
+- Pool by_state at 19:47 local: live inbox 78, claimed 1,
+  done 1175; branch inbox 73, claimed 0, done 1117.
+  Status: done. Full detail in
+  queue-planning/1940-run.md.
