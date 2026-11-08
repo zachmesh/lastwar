@@ -94,7 +94,12 @@ Usage:
              # cannot pre-empt it any more.
              # refuses when the regular is missing or not
              # reset-anchored, so a stale tree fails loudly
-             # instead of staging a wall-clock pair
+             # instead of staging a wall-clock pair; refuses also
+             # when the pool already holds a stale-geometry unit
+             # of the day's chain (issue #410), so the stale pair
+             # is withdrawn first instead of silently compounded,
+             # and plan warns on the same collision through
+             # _produce_for_window
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -865,6 +870,40 @@ def duel_window_text(regular, planned_local):
     return ""
 
 
+def _sweep_slot_geometry(item, planned_local):
+    """Expected geometry of one reset-anchored slot, or None.
+
+    For a reset-anchored fixed-slots regular (issue #410): the
+    chain sequence of the slot, the chain id of its reset day, and
+    the reset instant the unit must expire at. Callers use it to
+    tell a correct pair unit from a stale-geometry one sitting on
+    the same slot - the (regular, planned_for) dedupe alone cannot,
+    so without this check a stale first pass at 17:30 is silently
+    counted as the correct final pass and the pair comes out
+    half-correct, with two chain_seq 1 units and no final pass.
+    """
+    if item.get("cadence") != "fixed-slots" or \
+            not _reset_anchored_offsets(item):
+        return None
+    day_slots = _reset_anchored_slots(item, planned_local.date())
+    minute = planned_local.replace(second=0, microsecond=0)
+    seq = None
+    for idx, slot in enumerate(day_slots):
+        if slot.replace(second=0, microsecond=0) == minute:
+            seq = idx + 1
+            break
+    if seq is None:
+        return None
+    prefix = item.get("chain_id_prefix", "")
+    chain_id = prefix + planned_local.strftime("%Y-%m-%d") \
+        if prefix else ""
+    planned_utc = planned_local.astimezone(timezone.utc)
+    expires_dt = _next_reset_utc(
+        planned_utc, _parse_hhmm(item.get("reset_utc")))
+    return {"seq": seq, "chain_id": chain_id,
+            "expires_at": iso(expires_dt)}
+
+
 def _produce_for_window(root, item, planned_local, window=""):
     """Enqueue the unit for one (regular, window) pair, or return
     None when that pair already exists in any state - the pool's
@@ -872,10 +911,46 @@ def _produce_for_window(root, item, planned_local, window=""):
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
+    expected = _sweep_slot_geometry(item, planned_local)
     for state in STATES:
         for f in list_units(root, state):
             if f.get("regular") == regular and \
                     f.get("planned_for") == planned_iso:
+                if expected is not None:
+                    # Issue #410: a stale-geometry unit on this slot
+                    # (the old 17:30/18:30/19:00 pair) is not the
+                    # correct pair - warn loudly instead of silently
+                    # counting it as already present, so the run log
+                    # names the stale pair instead of staging a
+                    # half-correct chain around it. The unit itself
+                    # is left alone: withdrawing it is the
+                    # planner's call, and sweep refuses outright
+                    # when a stale chain unit is present.
+                    problems = []
+                    if f.get("expires_at") != expected["expires_at"]:
+                        problems.append(
+                            f"expires_at {f.get('expires_at')} is not "
+                            f"the reset instant {expected['expires_at']}")
+                    if expected["chain_id"] and f.get("chain_id") != \
+                            expected["chain_id"]:
+                        problems.append(
+                            f"chain_id {f.get('chain_id')!r} is not "
+                            f"{expected['chain_id']!r}")
+                    try:
+                        seq = int(f.get("chain_seq", 0))
+                    except (TypeError, ValueError):
+                        seq = None
+                    if seq != expected["seq"]:
+                        problems.append(
+                            f"chain_seq {f.get('chain_seq')!r} is not "
+                            f"{expected['seq']} for this slot")
+                    if problems:
+                        print(f"warning: pool holds a stale-geometry "
+                              f"{regular} unit {f.get('unit')} on the "
+                              f"{planned_iso} slot: "
+                              f"{'; '.join(problems)} - withdraw the "
+                              f"stale pair and re-run plan or sweep "
+                              f"(issue #410)")
                 return None
     cadence = item.get("cadence", "")
     if cadence == "fixed-slots" and _reset_anchored_offsets(item):
@@ -1132,6 +1207,13 @@ def cmd_sweep(args):
     stale tree fails loudly instead of staging a wall-clock pair
     with the old 19:00 expiry, and when the reset instant for the
     date is already past, so a late call cannot stage dead units.
+    It also refuses when the pool already holds a stale-geometry
+    unit of the day's chain (issue #410): the (regular,
+    planned_for) dedupe would otherwise count the stale first
+    pass at 17:30 as the correct final pass and stage a second
+    chain_seq 1 at 16:30, leaving a corrupted chain with no final
+    pass and a post-reset 18:30 unit. A correct pair already in
+    the pool passes, so an idempotent re-run still succeeds.
     """
     warning = pool_root_warning(args.root)
     if warning:
@@ -1174,6 +1256,63 @@ def cmd_sweep(args):
               f"--date for the next reset day")
         return 1
     slots = _reset_anchored_slots(item, local_date)
+    # Issue #410: refuse when the pool already holds a stale-geometry
+    # unit of this reset day's chain - the old 17:30/18:30/19:00 pair
+    # a stale tree staged. The (regular, planned_for) dedupe below
+    # would otherwise count the stale first pass at 17:30 as the
+    # correct final pass and stage a second chain_seq 1 at 16:30,
+    # leaving a corrupted chain with no final pass and a post-reset
+    # 18:30 unit. A correct pair already in the pool passes this
+    # check, so an idempotent re-run still exits 0.
+    reset_iso = iso(reset_local.astimezone(timezone.utc))
+    slot_iso = {iso(s.astimezone(timezone.utc)): idx + 1
+                for idx, s in enumerate(slots)}
+    chain_id = item.get("chain_id_prefix", "") + \
+        local_date.isoformat() if item.get("chain_id_prefix") else ""
+    stale = []
+    for state in STATES:
+        for f in list_units(args.root, state):
+            if f.get("regular") != args.regular:
+                continue
+            planned = parse_iso(f.get("planned_for", ""))
+            on_chain = bool(chain_id) and \
+                f.get("chain_id") == chain_id
+            on_slot = planned is not None and \
+                iso(planned) in slot_iso
+            if not on_chain and not on_slot:
+                continue
+            problems = []
+            if planned is None:
+                problems.append("unparseable planned_for "
+                                f"{f.get('planned_for')!r}")
+            elif iso(planned) not in slot_iso:
+                problems.append(
+                    f"planned_for {f.get('planned_for')} is not a "
+                    f"reset-anchored slot for {local_date.isoformat()}")
+            if f.get("expires_at") != reset_iso:
+                problems.append(
+                    f"expires_at {f.get('expires_at')} is not the "
+                    f"reset instant {reset_iso}")
+            if on_chain:
+                try:
+                    seq = int(f.get("chain_seq", 0))
+                except (TypeError, ValueError):
+                    seq = None
+                want = slot_iso.get(iso(planned)) \
+                    if planned is not None else None
+                if want is not None and seq != want:
+                    problems.append(
+                        f"chain_seq {f.get('chain_seq')!r} is not "
+                        f"{want} for its slot")
+            if problems:
+                stale.append((f.get("unit"), "; ".join(problems)))
+    if stale:
+        print(f"refused: pool holds stale-geometry {args.regular} "
+              f"units for {local_date.isoformat()}: " +
+              "; ".join(f"{u} ({p})" for u, p in stale) +
+              " - withdraw the stale pair and re-run sweep "
+              "(issue #410)")
+        return 1
     produced, already = [], 0
     for idx, slot in enumerate(slots):
         if len(slots) == 2:
