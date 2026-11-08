@@ -3555,3 +3555,23 @@ of 2026-10-28.
   owner-gated policy question still open, no owner decision.
   Comment posted on the PR. Status: done.
   Full detail in tool-development/1532-run.md.
+
+## 15:41 to about 15:45 - Perception scout station and Wars dot
+
+- Scout unit scout-scout-2026-11-02-013 (ticker-1534),
+  partial by design (chain continues). Station panel
+  re-check, observe-only: eleventh no-train confirmation
+  in chain scout-2026-11-02 - both preparation signals
+  absent (no train icon, no "Boarding closes in"
+  banner). Base power 149,850,353 unchanged; stamina
+  113; Season II 7d 02:18:08; furnace toast read in
+  full as [22/60], still unexplained. Alliance panel:
+  Power 13,299,306,666, Members 95/100; dots on Help,
+  Gifts, Techs only; Wars dot absent with Rally Intel
+  "No Alliance Rally currently." - fifth same-day
+  datapoint for Issue #212 (rally link), which stays
+  open; commented on the issue. Successor
+  scout-scout-2026-11-02-014 enqueued, same window.
+  Nothing claimed, fought or dispatched; no red line
+  crossed. Full detail in
+  perception-scout/1545-queue-run.md.
