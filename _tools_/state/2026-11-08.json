@@ -23,5 +23,20 @@
   "status": "done",
   "at": "2026-11-08T14:24:10-08:00",
   "note": "Claimed Event Ammo Bonanza reward x4; all 8 categories checked"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-08T15:06:28-08:00",
+  "note": "Full hub sweep, no reward claimable"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-08T14:56:44-08:00",
+  "note": "Mega Deployed 8 tasks, Reward Recovery 2026-11-6 claimed"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-08T14:59:35-08:00",
+  "note": "One dig executed, chest progress 7/15, 2 digs remain by stock"
  }
 }

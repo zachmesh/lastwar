@@ -3471,3 +3471,52 @@ of 2026-10-28.
   unchanged, still conflicting on _tools_/INDEX.md. No
   records branch left PR-less. Status: done.
   Full detail in pr-integration/1500-run.md.
+- Passes unit passes-2026-11-08-1057 (partial): shop and
+  season pages checked live; no pass claimable. Weekly Pass
+  all four cards read (S2 Drone Components, S1 Drone Parts,
+  Iron, Coin) - every card Get Now $4.99, none owned; Free
+  Supply already claimed this reset day. Monthly gift already
+  claimed today (ticker-0634, 06:35). Hot Deals free pack
+  shows FREE TOMORROW. Season hub Week 8: Goals is the
+  High-heat Furnace milestone track (tiers 1-6 all Claimed)
+  and Profession is the Profession Hall (Engineer Lv.63) -
+  no pass claim in either, closing ticker-1049's follow-up.
+  The 2026-10-25 Season pass claim path is not reachable in
+  the current hub; knowledge Issue #469 filed. Tracker
+  untouched. Full detail in shop-claims/1455-queue-run.md.
+
+- Secrets unit secrets-2026-11-08-1057 (done): all 8 pending
+  tasks Mega Deployed with UR Only off (UR Rescue Missing
+  Agent 2h, 2x SSR Search for Missing Refugees 1h, SSR Protect
+  Refugee Camp 1h, 4x Retrieve 30min) and verified running
+  with countdowns; Your Tasks badge cleared. Reward Recovery
+  record 2026-11-6 18:00 claimed (fragments 3+3+1+1, Mystery
+  Supply Box x224, puzzle x2, chest x315, medal 1.2K, triangle
+  1.0K, iron 406 + 1.3M, Hero EXP 13.8M, Lv.1 chest x10, food
+  1.3M). No finished task to claim at entry. Ally assists 0/5
+  carry to the next secrets unit. Full detail in
+  secret-missions/1456-queue-run.md.
+
+- Treasures unit treasures-2026-11-08-1057 (done): one dig
+  executed with Skip Animation on. Rewards: grey crates x24,
+  orange food(?) x12, coin piles x12, medal 900, blue triangle
+  400, silver ingots x100 (icon identities unverified, no
+  chest tier displayed). Fragments M1-M7 each down exactly 1
+  (M1 x15, M2 x14, M3 x2, M4 x6, M5 x2, M6 x6, M7 x12); chest
+  progress 6/15 to 7/15; 2 digs remain by stock. Note: the tab
+  badge still reads 1 although stock allows 2 more digs - the
+  badge does not match the stock count. A batched back-tap
+  briefly opened Chat; nothing there was read or recorded.
+  Full detail in hidden-treasures/1459-queue-run.md.
+
+- Events unit events-2026-11-08-1057 (done): full Events hub
+  sweep, all 5 tabs read live, no reward claimable anywhere.
+  Arms Race Tech Research 0 points (chests 6,250/12,500/30,000
+  unreached); Frontline Breakthrough Rewards rows 0/3, 0/2,
+  0/1 (tab badge 1 marks unplayed Challenge attempts, not a
+  claim); Winter Battlefield not started (02:56 to go, 0
+  points); The Doomsday first-kill tiers Lv.100-140 all already
+  claimed, ranking rewards pay at settlement; Community 500
+  Diamonds already Claimed. Token lease renewed mid-pass
+  (expired 15:01:09Z, re-acquired 15:01:44Z to 15:16:48Z).
+  Full detail in event-claims/1506-queue-run.md.
