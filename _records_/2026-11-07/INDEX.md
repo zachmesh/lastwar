@@ -3626,6 +3626,56 @@ of 2026-10-28.
   here. Duel-score-1830 and the 19:40 donations re-read fall to the
   next run. Status: done.
   Full detail in knowledge-organization/1932-run.md.
+
+## 19:40 to about 19:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1940.
+- Plan run twice: the body command with the live tree
+  stale tools (20 regulars due) staged 6 (already_present
+  63, skipped_done_current 0, reaped 0, expired 0 - the
+  2026-11-08 0657 slots passes, secrets, treasures,
+  trucks, events, and scout-midday 0700); re-run with the
+  branch-tip tools (newer queue.py, md5 f71d26e7) against
+  the live _queue_ root staged 0 more
+  (already_present 68, skipped_done_current 6, reaped 0,
+  expired 0, stale_done_dropped []). The next 12 hours
+  are now staged in the live pool through about 07:40
+  local 2026-11-08.
+- Pre-reset sweep production: this run is not the
+  17:00-hour run, so nothing was enqueued; tonight's pair
+  (chain pre-reset-sweep-2026-11-07) both EXPIRED
+  unexecuted at 03:06:08Z. The sweep partially ran through
+  the standalone zero-sweep-2026-11-07-1730 unit
+  (ticker-1734, partial, 23 lines walked, 2 fix-ups
+  enqueued); the final pass never ran, so the Nov 7
+  pre-reset sweep closes as first pass partial only,
+  final pass missed. Geometry conflict #410 is fixed on
+  the tool side (PR 412 merged), but this pair still
+  carried the old geometry.
+- Scout diff on the Nov 4 observation (seventy-fourth
+  consumption): dry run and apply agree with the fixed
+  tool, all zero except unexplained 4 (observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates
+  0, promotion proposals 0). No withdrawals: the diff
+  classified nothing and the Nov 4 observation is older
+  than the current inbox units. No new observation for
+  Nov 5, 6 or 7; scout-2026-11-07-1800 and -1900 still in
+  inbox unexecuted.
+- 1840 delivery verified landed on the branch (commit
+  4ee26a6d71 ancestor of tip de741a3582); no recovery
+  needed. Branch / live divergence noted, not carried:
+  6 old scout exploration units in the live inbox never
+  reached the branch, about 90 live done files (mostly
+  Nov 3) are not on the branch, and zero-sweep-1630 sits
+  in the branch done pool but is absent from the live pool
+  entirely. Nov 7 duel-score close confirmed missed (the
+  1430 read expired unexecuted); the 1830 / 2230 / 0230 /
+  0630 reads belong to the Nov 8 trade day.
+- Pool by_state at 19:47 local: live inbox 78, claimed 1,
+  done 1175; branch inbox 73, claimed 0, done 1117.
+  Status: done. Full detail in
+  queue-planning/1940-run.md.
+
 ## 19:41 to about 19:49 — Queue ticker pass, harvest
 
 - Harvest unit harvest-2026-11-07-1803, partial: farmland
@@ -3654,3 +3704,20 @@ of 2026-10-28.
   and is the first action of the next survivors unit
   (rule R7). Tracker untouched. Full detail in
   survivor-intake/2000-queue-run.md.
+
+## 19:45 to about 19:56 - PR integration pass
+
+- PR-integrator pass pr-integration-2026-11-07-1945.
+  Non-batch pass: inside the 19:00-20:00 PT batch window,
+  but the window's batch was already consumed by the
+  1900 pass's merge of records PR 256 (19:04:06 PT);
+  merge-aware checker confirms not due (exit 1), next
+  batch 23:00 PT. Knowledge PR 413 merged (squash
+  815a413c, 7 profiles folded, Refs #242 #282). Records
+  PR 398 clean at head 5bc2c96d8 against new main
+  815a413c, awaiting the 23:00 batch. Records PRs 301
+  and 351 still conflict on the single action-log file,
+  unchanged since the 1900 conflict notes, awaiting
+  branch-side reconciliation. Local main fast-forwarded
+  751b004a to 815a413c. Status: done. Full detail in
+  pr-integration/1945-run.md.
