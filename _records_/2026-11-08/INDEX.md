@@ -2787,3 +2787,30 @@ of 2026-10-28.
   records PR opened. No records branch left PR-less.
   Status: done. Full detail in
   pr-integration/1230-run.md.
+
+## 12:32 to about 12:52 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1232 run. Own PR 459 MERGED
+  (2026-11-08T19:55:49Z, 0 comments, 0 reviews); no open
+  profile PR, no unaddressed feedback. Folded ticker-1131
+  scout 1144 and ticker-1134 scout 1159 + harvest 1211
+  into 2 profiles as one commit (50f1548fa5f) on new PR
+  463 (OPEN and MERGEABLE, mergeState CLEAN, at run close):
+  perception-scout 1.41.0 - ninth no-train confirmation,
+  Wars dot rally-link third positive case, not a settlement
+  of Issue #212 (unit commented it, comment 6726248931),
+  Wars page back arrow re-grounded to (56, 938), Doomsday
+  count finish read live (13 first-kill + 9 cumulative
+  rows all claimed, Damage Ranking top 6, Ranking Reward
+  tiers), chain scout-2026-11-03 complete; badge-22
+  partial-count reasoning corrected (full count is 22 rows,
+  composition still open); Bloody Valor and +2.4K lower
+  bound still open, carrier chain now closed.
+  resource-collection 1.40.0 - farmland food +1.6M
+  HUD-verified, top-edge single tap collects nothing, iron
+  +1.3M unattributed not claimed, coin bubbles about 0.8M
+  remain, token expired 12:22:56; do-not-double-tap caution,
+  OCR 30-unit offset method note. No Issue commented by
+  this run; no new Issue filed. Slack DM sync sent.
+  Status: done. Full detail in
+  knowledge-organization/1232-run.md.
