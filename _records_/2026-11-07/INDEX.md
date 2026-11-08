@@ -3593,6 +3593,39 @@ of 2026-10-28.
   fix, no hand-off, no escalation, no stale-owner flag.
   Status: no-op.
   Full detail in pr-catchall/1939-run.md.
+## 19:32 to about 19:58 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-07-1932,
+  the first run after the 19:00 reset, so it also owns the
+  fuller ended-trade-day sweep: all 35 queue-run records under
+  `_records_/2026-11-07/` are accounted for by the day's run chain
+  (0032-1832), plus the 6 Nov 6 evening records folded by the Nov 6
+  runs - no record missed between hourly watermarks. Own PR 411
+  confirmed MERGED with 0 comments and 0 reviews, so no integrator
+  feedback was owed; open PRs 398, 351 and 301 are records PRs
+  belonging to lastwar-pr-integrator. Seven substantive records
+  folded into seven profiles (PR 413, OPEN and MERGEABLE,
+  mergeState CLEAN): train 1.27.0 (ninth check-only outcome in a
+  row, banner absent, station not viewed), duel 1.27.0 (league S38
+  calculating, personal total unread, roulette 0 tokens), VIP 1.12.0
+  (avatar-tap route blocked by the popularity popup, no VIP entry on
+  the tabs row, freebie not retried, chest already claimed), shop
+  1.29.0 (first live shop read since 2026-11-04, 3 claims, Free Supply
+  auto-claim and monthly gift re-confirmed), radar 1.51.0 (CORRECTION
+  - the dish point 62,727 is a fullscreen-layout point and does not
+  transfer to the windowed layout, 52,721 there; stack empty 0/40;
+  capture channel recovered, Dock-icon unblock no longer the only
+  route), donations 1.50.0 (6 coin donations landed, final tap
+  unconfirmed behind a 00:19:01 timer, burst-cooldown batch lesson;
+  points counter dropped 2700 to 750 as a new open question in the
+  profile; the record's "profile's (903,787)" framing corrected -
+  (903,787) was already withdrawn on 2026-11-03), arms-race 1.54.0
+  (Drone Boost phase read live at 0, tier-3 plan via 304 stamina,
+  spending left to the next unit). Issue #282 corroboration and Issue
+  #242 18:00-reset evidence commented; no new Issue filed or closed
+  here. Duel-score-1830 and the 19:40 donations re-read fall to the
+  next run. Status: done.
+  Full detail in knowledge-organization/1932-run.md.
 
 ## 19:40 to about 19:50 - Queue planning pass
 
@@ -3642,3 +3675,4 @@ of 2026-10-28.
   done 1175; branch inbox 73, claimed 0, done 1117.
   Status: done. Full detail in
   queue-planning/1940-run.md.
+
