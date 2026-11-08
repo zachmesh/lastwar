@@ -2686,3 +2686,20 @@ of 2026-10-28.
   to the 1040 run). 0 withdrawals. Pool: inbox 80,
   claimed 0, done 1264. Status: done. Full detail in
   queue-planning/1140-run.md.
+
+## 11:45 to about 12:10 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-1145.
+  Non-batch pass per the checker (not due, outside every
+  batch window, next batch 15:00): no merges. Tools PR
+  425 owner-gated, unchanged since the 2245 escalation,
+  awaiting the owner decision, still conflicting on
+  _tools_/INDEX.md, no new note per the no-repeat rule.
+  Records PR 460 clean at head cbc2cc96, awaiting the
+  15:00 batch. Records PRs 457, 351 and 301 still
+  conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-verified and re-noted against
+  current main 1c39fa82. No records PR opened. No
+  records branch left PR-less. Status: done. Full detail
+  in pr-integration/1145-run.md.
