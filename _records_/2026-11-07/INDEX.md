@@ -3335,3 +3335,47 @@ of 2026-10-28.
   adoption, no fix, no hand-off, no escalation, no
   stale-owner flag. Status: no-op.
   Full detail in pr-catchall/1839-run.md.
+
+## 18:40 to about 18:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1840.
+- Plan run twice: the body command with the live tree
+  stale tools (21 regulars) staged 11 (already_present 60,
+  skipped_done_current 0, reaped 0, expired 1 - the
+  duel-score 1430 read, expired 02:30Z); re-run with the
+  branch-tip fixed tools (23 regulars) against the live
+  _queue_ root staged 1 more, duel-score-2026-11-08-0630
+  (already_present 71, skipped_done_current 1, reaped 0,
+  expired 0). A first fixed-tools attempt passed the repo
+  root as --root and staged 72 units into a stray repo-root
+  inbox/; all 72 were removed immediately, no live-pool
+  effect. The next 12 hours are now staged in the live
+  pool through about 06:46 local 2026-11-08.
+- Pre-reset sweep production: this run is not the
+  17:00-hour run, so nothing was enqueued; tonight's pair
+  (chain pre-reset-sweep-2026-11-07) is present in inbox
+  in the live pool and on the branch, with the 1740-run
+  fields. Geometry conflict stands (Issue #410): the
+  18:30 final pass runs after the true 18:00 reset and
+  the 17:30 first pass is the de-facto final pass, still
+  unexecuted at 18:46.
+- Scout diff on the Nov 4 observation (seventy-third
+  consumption): dry run and apply agree with the fixed
+  tool, all zero except unexplained 4 (observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates
+  0, promotion proposals 0). No withdrawals: the diff
+  classified nothing and the Nov 4 observation is older
+  than the current inbox units.
+- 1740 delivery verified landed on the branch (commit
+  3b2efa4032 ancestor of tip 89aa8efd8c); no recovery
+  needed. Branch / live divergence noted, not carried:
+  6 old scout exploration units in the live inbox never
+  reached the branch, about 90 live done files (mostly
+  Nov 3) are not on the branch, and zero-sweep-1630 sits
+  in the branch inbox only with unknown fate. Nov 7
+  duel-score close confirmed missed: the 1430 read
+  expired unexecuted.
+- Pool by_state at 18:49 local: live inbox 86, claimed 0,
+  done 1161; branch inbox 70, claimed 0, done 1099.
+  Status: done. Full detail in
+  queue-planning/1840-run.md.
