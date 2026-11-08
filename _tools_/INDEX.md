@@ -19,7 +19,7 @@ standard library and locate their data relative to their script or repository.
 | [resource_map.py](resource_map.py) | Record resource snapshots and check floors | [resources.json](resources.json) and [state](state/INDEX.md) |
 | [scout_diff.py](scout_diff.py) | Compare observations with activities and plan work | `../_activities_/` and `../_queue_/` |
 | [retro_report.py](retro_report.py) | Aggregate queue results into review metrics | `../_queue_/` and `../_records_/retro/` |
-| [log_append.py](log_append.py) | Newline-safe append, check and repair for JSONL logs | `_logs_/repo-actions/action-log.jsonl` |
+| [log_append.py](log_append.py) | Newline-safe append, check, repair and pre-delivery gate for JSONL logs | `_logs_/repo-actions/action-log.jsonl` |
 
 For example, run `python3 _tools_/regulars.py todo --json` or
 `python3 _tools_/queue.py next --budget-minutes 15`.
