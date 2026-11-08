@@ -843,3 +843,40 @@ of 2026-10-28.
   Wars dot on Issue #212, Inventory dot, 99+ badge); 0
   withdrawals. Pool: inbox 79, claimed 0, done 1221.
   Status: done. Full detail in queue-planning/0340-run.md.
+## 03:34 to about 04:10 - ticker pass (ticker-0334)
+
+- PR #430 conflict resolved branch-side first (owner rule:
+  own PRs first). The records/2026-11-08 branch conflicted
+  against main 0b4a8a41 (PR 426 merged at the 03:00 batch)
+  on 11 files. Merged main into the branch (merge commit
+  f5442a885b after an amend): done add/add results kept
+  from the branch (later, evidence-backed executions
+  ticker-0034/ticker-0104), the donations re-read duplicate
+  dropped to the fresher 0843 unit, the scout successors
+  kept, the 2026-11-02 observation file unioned (728
+  lines), the action log unioned and timestamp-sorted (1119
+  lines), six stale 2026-11-07 2230 inbox copies removed
+  (expired by planner-0240). One self-caught error: the
+  first merge commit staged the 0843 file with unresolved
+  conflict markers still inside it; caught by the queue
+  tool returning unit 0745 for file 0843.md, fixed by
+  restoring the branch version and amending before any
+  push. Merge-tree probe clean after the fix. Root cause
+  for the retro: both date branches staged and executed
+  the same pool units while 426 was unmerged - the same
+  duplicate-execution pattern as the 0244 pool-divergence
+  issue. Full detail in alliance-donations/0406-queue-run.md.
+
+- 0406 ticker-0334 donations re-read (unit
+  donations-2026-11-08-0843, partial, unverified): Quick
+  Construction 8/10 is the current recommended node
+  (Development tab); Tech Donation Today 2950 at entry.
+  Donation Count read live 3/30, then 2/30, then 1/30 -
+  two coin donations landed (900 coin each). The third tap
+  greyed the button behind a 00:10:25 timer with the count
+  label hidden, so 0/30 was not read live; re-read unit
+  donations-2026-11-08-1146 enqueued for about 04:17
+  local. Replenishment data point for Issue #160: count
+  rose from 1/30 (about 00:43) to 3/30 (about 04:00).
+  Status: partial. Full detail in
+  alliance-donations/0406-queue-run.md.
