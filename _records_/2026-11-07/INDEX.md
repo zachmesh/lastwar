@@ -3879,3 +3879,42 @@ of 2026-10-28.
   pool but is absent from the live pool entirely.
 - Status: no-op. Full detail in
   queue-planning/2040-run.md.
+
+## 20:32 to about 20:50 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-07-2032.
+  Own PR 413 MERGED with 0 comments and 0 reviews, so
+  no integrator feedback pending. Folded the ticker-1940
+  harvest and survivors records (commit c47e491fd) and
+  the ticker-2006 donations, training, mail and gifts
+  records (commit e9bf320c92, landed during this run)
+  into 6 profiles: resource-collection 1.37.0 to 1.38.0
+  (farmland +1.9M food, +1.2M coin verified; estimated
+  bubble centres failed twice so ground-first-then-tap
+  is now the standing rule; gold truck icon tap panned
+  to the Drill Ground instead of opening a loot panel),
+  survivor-intake 1.35.0 to 1.36.0 (gate line verified
+  live with 4 survivors, taps turned "?" to smiley with
+  no card opened and no identity read, line clear as
+  observed; Quick Dispatch NOT run, R2 third-strike
+  blocker persists), alliance-donations 1.50.0 to 1.51.0
+  (1 coin landed 2/30 to 1/30, second tap proven eaten
+  so verify the count after every tap, third unconfirmed
+  behind a 00:18:46 timer; footer 750 to 1150 with no
+  own donation in between, so it is not the unit's own
+  points counter), alliance-gifts 1.33.0 to 1.34.0 (437
+  Regular and 7 Premium claimed, both tabs verified
+  clear; sweep deltas do not decompose, alliance-wide
+  bar), mail-rewards 1.23.0 to 1.24.0 (Alliance and
+  Event claimed, verified clean), troop-training 1.25.0
+  to 1.26.0 (Lv.27 verified busy 1d 07:03:33 by panel
+  read, two barracks unlocated, south and east pans
+  ruled out). Knowledge PR 414 opened for the fold,
+  verified OPEN and MERGEABLE, mergeState CLEAN, in 2
+  commits. One contradiction resolved (donations footer
+  framing). No new Issue filed or commented (no new
+  capture-failure occurrence; the #183 evidence was
+  filed by the ticker pass itself). Records PR 398
+  clean at head ac68801e, awaiting the 23:00 batch.
+  Status: done. Full detail in
+  knowledge-organization/2032-run.md.
