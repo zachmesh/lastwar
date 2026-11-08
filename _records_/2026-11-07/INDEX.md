@@ -3118,3 +3118,48 @@ of 2026-10-28.
   next run. Status: done. Full detail in
   knowledge-organization/1732-run.md.
 
+## 17:40 to about 18:08 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-07-1740.
+- Plan run twice: the body command with the live tree
+  stale tools (21 regulars) staged 0 (already_present 68,
+  skipped_done_current 3, reaped 0, expired 0); re-run
+  with the branch-tip fixed tools (23 regulars) against
+  the live pool staged 11 units (already_present 64,
+  skipped_done_current 1, reaped 0, expired 0): vip,
+  daily-missions, scout 1800 for Nov 6 and Nov 7,
+  duel-score 1430, 1830, 2230 and 2026-11-08 0230, and
+  zero-sweep 1730. The next 12 hours are now staged in
+  the live pool through about 05:40 local 2026-11-08.
+- Pre-reset sweep production: this run is the 17:00-hour
+  run; tonight's pair (chain pre-reset-sweep-2026-11-07)
+  already in inbox, staged by ticker-0127. This run
+  verified the pair: activity daily-activities, segment 3,
+  named windows, and the ledger-walk task text copied
+  from the Nov 5 pair with dates adjusted. Geometry
+  conflict recorded: the pair uses the pre-#267
+  17:30/18:30/19:00 wall-clock geometry while the roster
+  anchors the reset at absolute 02:00 UTC (18:00 PST);
+  the 18:30 final pass runs after the reset and the 16:30
+  first pass had no live-pool unit. New Issue #410 filed
+  (tooling, idea).
+- Scout diff on the Nov 4 observation (seventy-second
+  consumption): dry run and apply agree with the fixed
+  tool, all zero except unexplained 4 (observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates
+  0, promotion proposals 0). No withdrawals: the diff
+  classified nothing and the Nov 4 observation is older
+  than the current inbox units.
+- 1640 delivery verified landed on the branch (commits
+  4db0673603 and f5df1d3e61 ancestors of tip 748a6d1328);
+  no recovery needed. Live-tree sync gap reframed: the
+  branch-tip _tools_/ lists 23 regulars but the live
+  tree tools/ still lists 21, so the ticker sync does
+  not know duel-score or zero-sweep. Nov 7 duel-score
+  close likely missed: the 1430 read reached the live
+  pool only at 17:53 and the reset passed at 18:00.
+- Pool by_state at 18:00 local: live inbox 79, claimed 1,
+  done 1153; branch inbox 75, claimed 0, done 1092.
+  Status: done. Full detail in
+  queue-planning/1740-run.md.
+
