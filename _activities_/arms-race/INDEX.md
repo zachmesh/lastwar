@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T05:32:17Z
+modified: 2026-11-08T06:32:17Z
 level: L1
-version: 1.55.0
+version: 1.56.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -59,6 +59,7 @@ grounded_in:
   - source: daily retro 2026-11-07 (Issue #416 filed, class records, for the 1633 HUD read discrepancy; target metric same-day HUD reads agree across units, 0 unexplained disagreements; record commit e3e8d290d0 on records/2026-11-07)
   - source: ticker-2034 troop-training execution record 2026-11-07 2050 queue run (partial, HUD food 478.8M iron 802.1M coin 6.9M power 149,850,353, corroborating the Nov 7 consensus against the 1633 outlier read; record commit 7a4a104930 on records/2026-11-07)
   - source: ticker-2104 perception-scout execution record 2026-11-07 2121 queue run (partial, HUD food 478.8M iron 802.1M coin 6.9M power 149,850,353, corroborating the Nov 7 consensus; record commit 31467b04cb on records/2026-11-07)
+  - source: ticker-2134 perception-scout execution record 2026-11-07 2150 queue run (partial, Drone Boost phase read live at 0, timer 00:14:48, tiers and scoring rows agree with the 1929 read; record commit fe5a1e7fd3 on records/2026-11-07)
 ---
 
 
@@ -1771,3 +1772,12 @@ slot. Evidence in
 - Open question carried: which stamina sinks count as "Use 1 Stamina" and are useful right now - radar stored is 0/40 (nothing to execute), the event is over for zombies, so the spend must come from world-map marches (Doom Walker rally 20, gathering, legion bases) or whatever the phase page's ">>" arrow on the stamina row opens. The candidate route from Open questions stands: the 2026-11-03 0609 answer (the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase). The spending unit must confirm the score moves +100 per stamina spent on its first action, and stop at 30,000.
 - Phase ends about 22:02; the staged 2203 unit belongs to the next phase. The tracker still shows arms-race due, so the next tick's sync re-produces this phase's unit and the spend continues there. The pass budget (token taken 19:06) ran out before the spend could start.
 - Reading note: this is the newest live phase read and supersedes the 1633 Base Building read for the current phase; the 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its own phase, which ended about 14:10 local. Tracker untouched. No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-07 2150 scout read added - Drone Boost phase re-read live at 0, timer 00:14:48, tier-3 plan stands
+
+- Scout unit scout-midday-scout-mid-2026-11-04-001 by ticker-2134, about 21:44 to 21:50 local, status partial (events group). Evidence in `_records_/2026-11-07/perception-scout/2150-queue-run.md` (commit fe5a1e7fd3 on records/2026-11-07). The Drone Boost page was read live, observe-only; nothing was spent, claimed or tapped on the page.
+- Live phase read: Drone Boost, Contest Segment Lv.29-30, score 0, timer 00:14:48 left (phase ends about 22:02 local, consistent with the 1929 read's 02:35:14 at 19:23), cumulative counter chest 0/2, account rank #2110 [AP3x]Bears Lair, own rank 7 (the 1929 read gave segment rank 5 - the two rank figures are recorded as read, not reconciled).
+- Chest thresholds: 1,500 (2,360 rubies) / 10,000 (4,800 rubies) / 30,000 (11,800 rubies) - agreeing with the 1929 read on every figure.
+- Scoring paths, all read live: (1) Use 10 Drone Battle Data points, +1 per 10. (2) Use 1 Stamina, +100 per stamina. (3) Buy Packs containing Diamonds (1 Diamond), +30 - red line, never used. All three agree with the 1929 read.
+- Nothing earned, nothing claimed, no chest is claimable at score 0. The 1929 tier-3 plan (304 stamina: 99 on hand + 75 Free Claim + 2 x 50-item + 3 x 10-item = 30,400 points) stands unchanged; the spending unit is still owed and must confirm the score moves +100 per stamina spent on its first action, and stop at 30,000. Phase ends about 22:02; the staged 2203 unit belongs to the next phase.
+- Reading note: this is the newest live phase read and supersedes the 1929 read for the current phase; the 1025 Unit Progression phase verdict (score 0, tier-3 gap 75,000, training path only) stands for its own phase, which ended about 14:10 local, and the 1633 Base Building verdict stands for its phase. The scout reads in this pass (2140, 2145, 2153, 2209) all re-confirm the Nov 7 consensus HUD figures (food 478.8M, iron 802.1M, coin 6.9M, power 149,850,353), so the 1633 read remains the lone outlier per Issue #416. Tracker untouched. No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.

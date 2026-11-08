@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-08T03:44:20Z
+modified: 2026-11-08T06:32:17Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,7 @@ grounded_in:
   - source: ticker-0834 alliance-train execution record 2026-11-04 0839 queue run (partial, check-only, no boarding banner, no train icon, station not viewed)
   - source: ticker-1404 alliance-train execution record 2026-11-04 1404 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, fourth consecutive ticker pass to fail this way, Chrome-window observation succeeded in the same session so the fault is specific to the Last War fullscreen window, Issue 284)
   - source: ticker-1818 alliance-train execution record 2026-11-07 1826 queue run (check-only partial, ninth in a row, no banner, station not viewed)
+  - source: ticker-2134 perception-scout execution records 2026-11-07 2140/2153 queue runs (partial, station panel re-checked, third no-train confirmation in one pass, check-signals-first entry route; record commit fe5a1e7fd3 on records/2026-11-07)
 ---
 
 # Alliance train
@@ -1016,3 +1017,11 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Recurrence: this is the ninth check-only outcome in a row (the 1404 failure does not extend the streak, per its section). No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
 - Figures read live: power 149,850,353; food 476.8M, iron 800.4M, coin 5.7M. No diamonds, money, speedups or paid buttons were used.
 - Tracker untouched; the next tick re-produces the train unit.
+
+## What the 2026-11-07 2140 and 2153 scout units added - station panel re-checked, no train preparing, third confirmation in one pass
+
+- Scout units scout-midday-scout-mid-2026-10-31-007 (ticker-2134, session cc-51, about 21:37 to 21:40 local) and scout-midday-scout-mid-2026-11-02-006 (ticker-2134, session cc-54, about 21:48 to 21:53 local), both status partial. Evidence in `_records_/2026-11-07/perception-scout/2140-queue-run.md` and `_records_/2026-11-07/perception-scout/2153-queue-run.md` (commit fe5a1e7fd3 on records/2026-11-07). Observe-only; no boarding action, no Trade Contracts spent, no train summoned.
+- Preparation signals, both absent in both units: no train icon in the left icon column (avatar Lv.30, hammer 2/4, flask 2/2, green face 6.5C, white truck, radar, wrench) and no Boarding closes in banner under the resource bar. No train is preparing in this window, so the STATION PLATFORM screen has no live state to read. This is the third independent confirmation of this state inside the ticker-2134 pass (the 2145 base-group unit also read no signals), and the third consecutive partial of the scout-mid-2026-10-31 chain on the same blocker (units 005, 006, 007).
+- Entry route, as changed by the 2140 pass under design rule R2: check the two preparation signals first on a clean base view; if neither is present, close the unit partial without panning the base edge, and re-check only when a train is preparing. The 2140 unit followed the changed route (no pan made). The substance of this rule is already in this profile since the 1345 section (station panel is a preparation-only surface, check signals first) - the 2140 pass's working-tree metadata change (1.5.0 to 1.6.0 on a stale base) carried no new rule text, so nothing is reworded here; only the confirmation count is added. Do not treat the unlocated platform as a missing panel.
+- Building countdown read 03:38 at 21:39, 03:42 at 21:44, 03:48 at 21:49 - RISING across the three reads; the count direction is recorded as observed, not interpreted. The building's identity and what the timer counts are unknown items, carried in perception-scout 1.27.0. It is not a train signal.
+- Streak note: the 1826 train unit was the ninth check-only outcome in a row for train units. These two scout re-checks are not train-unit outcomes and do not extend that streak count - they are recorded here as scout confirmations, not train checks. Successor scout units are enqueued under both chains for the remaining groups. Game left on the own base screen.
