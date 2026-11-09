@@ -268,3 +268,15 @@ of 2026-10-28.
   only opened on a later tap at (652, 793) - re-ground fresh
   next time. Tracker untouched. Full detail in
   mail-rewards/0138-queue-run.md.
+
+## 01:30 to 01:37 — PR integration pass
+
+- Integrator pr-integration-2026-11-09-0130 (NON-batch).
+  Checker due no (next batch 03:00 PT); no merges, no comments,
+  no PRs opened; records PRs 493 and 491 clean against main
+  e786ef8918, awaiting the 03:00 batch; records PRs 478, 351,
+  301 still conflicted on the single action-log file, re-probed,
+  scope unchanged; tools PR 425 owner-gated, clean, unchanged
+  (OD-20261108-01 open). No Slack sync by this run (no merges,
+  no new escalation; silent in chat).
+  Full detail in pr-integration/0130-run.md.
