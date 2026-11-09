@@ -1924,3 +1924,14 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   proposals 3. No withdrawals. Pool inbox 82, claimed 0,
   done 1337. Status: done. Full detail in
   queue-planning/0940-run.md.
+- Integrator pass pr-integration-2026-11-09-1000
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. No
+  knowledge/code PRs merged. Records PR 493 re-probed CLEAN
+  at head 6384ec24 against new main 9aa9b5aa, re-check
+  comment posted, awaits the 11:00 batch. Records PRs 351
+  and 301 still CONFLICTING on the same single file at
+  unchanged heads, carried, re-check comments posted. Tools
+  PR 425 owner-gated, re-verified CLEAN against new main
+  9aa9b5aa, OD-20261108-01 still open, no new escalation.
+  Status: done. Full detail in pr-integration/1000-run.md.
