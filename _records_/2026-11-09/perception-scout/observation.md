@@ -493,3 +493,62 @@ scout-scout-discovery-2026-11-09-012). Full unit record at
 - Seen 1 (Survey Center tab badge), explained 1 (the open
   Season 11 survey). Unexplained 0. Unknown items 0 - Survey
   Center is now learned.
+
+## Exploration the-age-of-oil, unit ticker-1134, about 11:36-11:46 local
+
+Read-only exploration of The Age of Oil candidate (unit
+scout-scout-discovery-2026-11-09-014). Full unit record at
+`the-age-of-oil/1146-queue-run.md`. Candidate tracked in Issue
+#477, commented with these findings - including a correction
+to that issue: the Base Expansion II icon is an info button,
+not a chest, and it responds.
+
+### The Age of Oil page, read live about 11:38-11:46 local
+
+- Stage track 1-2-3-4 across the top, stage 1 highlighted,
+  circular play button at the right end (not tapped).
+- Three warzone-wide task cards, each with a 6d 06:20 timer
+  at first read (event ends about 2026-11-15 17:56 PT,
+  derived): "Unlock Tech: The Age of Oil" - 500 Tech
+  Research, 2607/500, gold full bar; "Unlock Stage: Base
+  Expansion II" - 500 Building Upgrades, 11186/500, gold
+  full bar; "Hero Mobilization" - 10000 Hero Recruitments,
+  9465/10000, green bar still filling, gold chest icon at
+  the bar's right end and a greyed hexagon below (both
+  unmeasured).
+- Research Ranking read live: owner [AP3x] Bears Lair
+  Unlisted at 0; leader [AP3x] Teemo 31, then 29/25/22/21/
+  16/16. Ranking rewards measured in full, top 20 only:
+  No.1 25K badge x1 + gold x20 + 5m x20 + red gem x100;
+  No.2 500 x4 + gold x15 + 5m x15 + red x80; No.3-5 500 x3
+  + gold x12 + 5m x12 + red x60; No.6-10 500 x2 + gold x10
+  + 5m x10 + red x50; No.11-20 500 x1 + gold x8 + 5m x8 +
+  red x40.
+- Base Expansion II circular icon: one tap opened "Stage:
+  Base Expansion II - A new stage is unlocked, your base is
+  ready to expand further." with a Go button (not tapped).
+  It is a stage-info button, not a claimable chest.
+
+### Other units in this pass (no fresh sessions)
+
+- Total Power 149,217,331 (unit 015, done): verified live
+  twice in the unit 014 session, unchanged, matching the
+  observation value; known HUD figure, not a candidate.
+  472,287 below the 2026-10-25 baseline; Issue #482
+  commented with the fresh reads.
+- Zombie Invasion tab absent (unit 016, done): tab bar read
+  end to end in the unit 014 session - no Zombie Invasion
+  tab; event still ended, no chain seeded.
+- Decoration Gallery (unit 017, partial): entry not
+  re-located - the [44,284] point opened the MEGA EXPRESS
+  CONTRACT $99.99 offer popup instead (closed untouched).
+  Overview values already measured by unit 002; tabs
+  beyond Overview unmeasured; successor must re-ground
+  the entry fresh (R2).
+
+### Red dot accounting (this pass)
+
+- Seen 1 (red "!" badge at the right edge of the Events hub
+  tab bar, in every Age of Oil screenshot), explained 0.
+  Unexplained 1 - the badge was not attributed to a tab.
+  Unknown items 1 - the Hero Mobilization gold chest.

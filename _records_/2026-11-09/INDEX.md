@@ -2092,3 +2092,53 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   issue 517 no deadline stated. VPS disk 89 percent,
   1.1G free. Status: no-op. Full detail in
   pr-catchall/1139-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-014,
+  done: The Age of Oil explored read-only. Warzone-wide
+  collective counters toward stage unlocks - 500 Tech Research
+  (2607/500, done), 500 Building Upgrades (11186/500, done),
+  10000 Hero Recruitments (9465/10000, in progress) - event
+  ends about 2026-11-15 17:56 PT. Research Ranking read: the
+  owner is Unlisted at 0, leader [AP3x] Teemo at 31; ranking
+  rewards measured in full (top 20). The Base Expansion II
+  circular icon is NOT a chest and NOT unresponsive - one tap
+  opened a stage-info popup ("A new stage is unlocked, your
+  base is ready to expand further.") with a Go button, which
+  was not tapped; this corrects Issue #477. The Hero
+  Mobilization gold chest, the stage-track play button, and a
+  red "!" badge at the tab bar's right edge stay unmeasured.
+  Full detail in the-age-of-oil/1146-queue-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-015,
+  done: Total Power 149,217,331 is a known HUD figure, not a
+  candidate task - no entry, mechanism, cost, reward, cycle
+  or scoring to learn. Verified live twice in this pass's
+  unit 014 session (11:36 and 11:46 PT, unchanged, matching
+  the observation value), so no fresh game session was
+  opened. It sits 472,287 below the 2026-10-25 baseline of
+  149,689,618, which does not match Issue #482's 641,100
+  step-down figure - the step-down accounting stays open and
+  the fresh reads are commented on #482. Full detail in
+  total-power-149217331/1149-queue-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-016,
+  done: Zombie Invasion tab still absent from the Events hub
+  - verified live end to end in this pass's unit 014 session
+  (about 11:38 PT: The Age of Oil, Arms Race, Winter
+  Battlefield, Desert Battlefield, Wanted Boss, Survey
+  Center, Community), so no fresh game session was opened.
+  The event is still ended and no chain is seeded, per the
+  standing rule. No new issue - the chain close is already
+  recorded in the zombie-invasion metadata. Full detail in
+  zombie-invasion-tab-absent/1152-queue-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-017,
+  partial: Decoration Gallery entry not re-located - the
+  [44,284] point that opened it once (unit 002) now opened
+  the MEGA EXPRESS CONTRACT offer popup ($99.99, availability
+  0/2 today) instead; closed untouched, nothing bought. The
+  Overview values are already measured by unit 002 and match
+  the observation file, so no figures were lost; tabs beyond
+  Overview stay unmeasured and the successor must re-ground
+  the entry fresh (R2). Full detail in
+  decoration-gallery-overview-ur/1158-queue-run.md.
