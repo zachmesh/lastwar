@@ -1108,3 +1108,37 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Tools PR 425 owner-gated, clean, OD-20261108-01 still
   open, no owner answer, no new comment. Status: done.
   Full detail in pr-integration/0515-run.md.
+
+## 05:35 to about 05:39 — Queue ticker pass, Arms Race
+
+- Arms Race unit arms-race-2026-11-09-1248, done: pre-phase-end
+  verification of the Hero Advancement phase. Score re-read live
+  at 82,500, timer 00:21:49, thresholds 2,000 / 4,000 / 12,000 -
+  unchanged from the 0306 unit's close, so no EXP was spent and
+  no further level-up was made. All three point chests show
+  claimed; cumulative counter chest 6/8, not full, not claimable;
+  ranking-row chest preview-only while live, so the ranking
+  reward falls to the first run after the 06:03 PT phase roll.
+  Events hub re-scanned: Arms Race tab carries no red dot; the
+  base Events badge 1 matches the Wanted Boss red dot, left for
+  the events regular. No Zombie Invasion tab - no fresh zombie
+  chain seeded. Base HUD (image read): food 540.1M, iron 864.9M,
+  coin 42.9M, power 149,217,331. Full detail in
+  arms-race/0535-queue-run.md.
+
+## 05:41 to about 05:50 — Queue ticker pass, Trucks
+
+- Trucks unit trucks-2026-11-09-0257, partial: the trade screen
+  could not be entered, so no counter was re-read live, no truck
+  was dispatched and no plunder was fought. Two entry methods
+  failed under R2: a title-bar tap plus a tap on the freshly
+  grounded train-front icon centre (55,594) only panned the
+  base map to the station, and the WORLD-corner tap (913,940)
+  opened the world map instead of trade - the 0242 route did
+  not reproduce. The icon carries no red badge in this set,
+  matching the 0242 no-badge pattern. Shortfall carried
+  forward from the 0250 live close: dispatch 4/5, plunder 1/4;
+  the next trucks unit must arrive with a changed entry
+  method and re-read both counters live first. Duel day 1,
+  Radar Training - non-UR rules applied, no Mega Mode used.
+  Full detail in truck-plunder/0541-queue-run.md.
