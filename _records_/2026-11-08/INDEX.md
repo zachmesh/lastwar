@@ -3717,3 +3717,29 @@ of 2026-10-28.
   0; corrections: 0; gaps filed: 0. No Slack DM sync -
   quiet run. Status: done. Full detail in
   knowledge-organization/1632-run.md.
+## 16:09 to about 16:15 — Perception scout station and Wars dot
+- Scout unit scout-scout-2026-11-02-014, executor ticker-1604.
+  Station panel re-check, twelfth no-train confirmation in chain
+  scout-2026-11-02: no train icon, no "Boarding closes in"
+  banner. Wars dot absent on the Alliance panel; Rally Intel
+  reads "No Alliance Rally currently" - sixth same-day datapoint
+  for the rally link, and the return-pass dot re-check confirms
+  Wars still undotted after opening Wars. Issue #212 stays
+  open; commented on the issue. Successor
+  scout-scout-2026-11-02-015 enqueued, same window.
+  Nothing claimed, fought or dispatched; no red line
+  crossed. Full detail in
+  perception-scout/1615-queue-run.md.
+## 16:23 to about 16:28 — Daily missions claim
+- Daily-missions unit daily-missions-2026-11-07-1800 (stale
+  Nov 7 18:00 slot), executor ticker-1604. One tap on the
+  Daily Login Claim cleared all four completed rows at once
+  (third one-tap-multi-claim observation): activity 0 to 70,
+  tab badge 4 to 1. 40-point chest claimed with a
+  CONGRATULATIONS receipt, double rewards: gear x4, Iron
+  Chest (SR) x4, Food Chest (SR) x4, Coin Chest (SR) x12,
+  Crystal Ore 600, 5m speedup x2. Closing: activity 70,
+  badge gone, 80 chest 10 points short. Remaining tasks
+  incomplete, none actioned; tracker untouched. Issues #171
+  and #208 commented. Full detail in
+  daily-missions/1628-queue-run.md.
