@@ -4415,3 +4415,45 @@ of 2026-10-28.
   23rd consecutive partial for this regular; failure mode
   filed as an Issue. Quick Dispatch did not run. Full detail
   in survivor-intake/2052-queue-run.md.
+
+## 20:39 to about 21:17 - Daily retro pass
+
+- Retro pass retro-review-2026-11-08-2114. Ninth daily
+  rolling retro, window 2026-11-02 to 2026-11-08.
+  Branch pool 731 units (done 101, partial 178, failed
+  110, expired 340, skipped 2, unverified 590); live
+  pool 767 units (done 126, partial 209, failed 86,
+  expired 345, skipped 1, unverified 607). Pool gap 36,
+  pool_gap.py FAIL (Nov 3 backfill 88 is the whole gap;
+  branch leads Nov 5, 6 and 8). Nov 8: first full
+  execution day since Nov 4 - 137 finished on the
+  branch, 16 done, 52 partial, 0 failed, 68 expired.
+  Top leak: the sweep pair ran both passes for the
+  first time since Nov 2, but every fix-up unit carries
+  not_before at or after the 18:00 reset, so the 12
+  not-at-zero ledger lines expired unclaimed; ledger
+  coverage 18 of 23. Window attainment 1.1907 is not
+  a movement: it is one misattributed figure
+  (star-ceremony-2026-11-04-0630 carries a duel screen
+  total 4,772,100 in achieved). Power step-down
+  641,100 unexplained (149,850,353 to 149,209,253 at
+  17:12). Threshold breaches: 6 named (red dots 14,
+  expired day counts, quota attainment under 0.8,
+  unverified 80.7 percent over the 20 percent line,
+  ticker-0634 record missing about 88 hours, ledger
+  coverage 18 of 23). Issues filed: #482 (power
+  step-down), #483 (star-ceremony achieved), #484
+  (radar dish grounding (50,740)). Issues closed with
+  live evidence: #165, #401, #407, #410, #465, #247.
+  31 carried issues commented, plus correction
+  comments on #160 and #174 (the War-tab test ran in
+  the 1832 unit at 12:30-12:38 pre-reset, 6 verified
+  donations on Quick Construction, not 7, and not
+  post-reset). Owner-decisions register 1.8.0 to
+  1.9.0, 2 new items (OD-20261108-01 PR 425 log-gate
+  policy, OD-20261108-02 #415 live-checkout re-sync
+  mechanism), 9 items open, 7 over 48 hours. Batch
+  audit: 8 merges, 2 violations (#430, #458 in the
+  1100 window; the 1130 pass named #458 a violation
+  itself). Full detail in _records_/retro/2026-11-08.md
+  and retro-review/2114-run.md. Status: done.
