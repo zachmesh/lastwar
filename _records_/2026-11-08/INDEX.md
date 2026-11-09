@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-09T04:52:00Z
+modified: 2026-11-09T05:52:49Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -4532,3 +4532,34 @@ of 2026-10-28.
   re-probed, scope unchanged, no new comment. No merge,
   so no sync-back. Full detail in
   pr-integration/2130-run.md.
+
+- Arms Race unit arms-race-2026-11-08-1803 (skipped-needs-owner,
+  rule R4): Base Building phase, 0 points of the 30,000 top chest
+  with about 00:35 left; nearest building completion (Lv.26 Drill
+  Ground) lands 01:41:12 out, Aircraft Center 3d 05:03 out, so no
+  Building Power gain lands in the phase, and the speedup and
+  diamond-pack paths are red-lined. Nothing claimable: point
+  chests locked, counter chest 0/2 locked, ranking chest
+  preview-only. First executed arms-race unit of the day - the
+  0203, 0603 and 1403 units all expired unexecuted, so the R4
+  judgment lands 3.5 hours into the phase, not early. Full detail
+  in arms-race/2137-queue-run.md.
+
+- Mail unit mail-2026-11-08-1830 (done): Claim All in Alliance
+  (Daily Donation Rankings, Weekly Donation Ranking, 3x 3v3 Brawl
+  Major's Gift) and in Event ("Weekly Pass" Unclaimed Reward,
+  Unclaimed VIP Daily Level Reward, Unclaimed Event Reward,
+  Alliance Star Scratch Card Reward, Season Resource Conversion)
+  - 10 mails claimed, gift icons verified gone in both lists and
+  on the category rows. Delete All never pressed. Full detail in
+  mail-rewards/2132-queue-run.md.
+
+- Gifts unit gifts-2026-11-08-1830 (done): Regular Claim All 448,
+  Premium Claim All 33, then 3 more Regular that arrived
+  mid-unit - 484 gifts total. Gift Level 28 progress
+  195,006,290 to 195,025,360; the progress deltas do not
+  reconcile with the displayed +10/+500/+200 point values, which
+  stays an open question. R2: the first Premium Claim All tap
+  missed (button sits further right than on Regular), re-grounded
+  and claimed on the second tap. Full detail in
+  alliance-gifts/2138-queue-run.md.
