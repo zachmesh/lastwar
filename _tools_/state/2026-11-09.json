@@ -53,5 +53,15 @@
   "status": "done",
   "at": "2026-11-09T04:21:03-08:00",
   "note": "All red-dot categories walked; No rewards available in Event and Regular; Purchases receipts only; 0 claimed"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-09T07:17:23-08:00",
+  "note": "Checked live 07:06-07:18: Wanted Boss not out (server 00:00), nothing claimable"
+ },
+ "scout": {
+  "status": "done",
+  "at": "2026-11-09T07:23:59-08:00",
+  "note": "99-badge-at-chat explored: unread Alliance count, candidate rejected as a task"
  }
 }

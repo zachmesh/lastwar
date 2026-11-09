@@ -1458,3 +1458,26 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   still open, no owner answer. No merges, no comments, no
   PRs opened. Status: done. Full detail in
   pr-integration/0715-run.md.
+
+## 07:06 to 07:18 — Queue ticker pass, Events (done, checked only)
+
+- Events unit events-2026-11-09-1450, done: both scout signals
+  checked live, nothing claimable. Wanted Boss Code 87 not out
+  yet (Go countdown 09:44:17 at close, appears server 00:00);
+  Rewards Individual tiers all greyed, Goals best single attack
+  899,542,636 vs 1.0B+ tiers all unreached; Arms Race Tech
+  Research score 0, cumulative chest 6/8. The Wanted Boss red dot
+  persists after the visit - it is an event marker, not a claim.
+  Full detail in event-claims/0706-queue-run.md.
+
+## 07:18 to 07:29 — Queue ticker pass, scout discovery (done)
+
+- Scout unit scout-scout-discovery-2026-11-09-001, done: the 99+
+  badge at the chat icon is the unread Alliance chat count -
+  verified live, it cleared on opening the Alliance tab. No
+  reward, cost, deadline or scoring: candidate REJECTED as a
+  task (informational counter only). Side note: Alliance
+  Announcement says season skills reset - season ended, skills
+  inactive, points refunded; leader banner asking members to
+  enable notifications left untouched (owner decision). Full
+  detail in 99-badge-at-chat/0718-queue-run.md.
