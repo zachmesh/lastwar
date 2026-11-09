@@ -4381,3 +4381,17 @@ of 2026-10-28.
   the new evidence; #212 already commented by the scout unit.
   Own PR 479 MERGED with 0 comments and 0 reviews. Full detail
   in knowledge-organization/2032-run.md.
+## 20:40 to about 20:47 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-2040. Plan staged
+  0 net fresh units (next 12h already covered;
+  already_present 68, skipped_done_current 2, reaped 0,
+  expired 0, no phantom re-stage, 4 branch-closed slots
+  skipped: harvest/radar/donations 1803, zero-sweep 1730).
+  Pre-reset sweep pair already complete by execution
+  (both passes executed partial; 1630 done file absent from
+  the live pool, present on the branch tip); step 2 skipped,
+  this run is in the 20:00 hour. Scout diff applied with
+  zero changes (unexplained 14, unchanged). No withdrawals.
+  Pool inbox 70, claimed 1, done 1302. Full detail in
+  queue-planning/2040-run.md.
