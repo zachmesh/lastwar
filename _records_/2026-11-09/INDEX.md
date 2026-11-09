@@ -1835,3 +1835,16 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   question marks opened Chat (no message sent). Live reads at entry:
   coin 46.2M, power 149,217,331, stamina 92. Tracker untouched.
   Full detail in survivor-intake/0926-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-09-0915
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. No merges,
+  no PRs opened. Records PR 493 re-probed CLEAN at head
+  630285d7, re-check comment posted, awaits the 11:00 batch
+  (branch head has since moved to 3c788a4a, ticker-0904;
+  batch pass must re-probe). Records PRs 351 and 301 still
+  CONFLICTING on the same single file at unchanged heads,
+  carried, no new comment. Tools PR 425 owner-gated,
+  unchanged head, OD-20261108-01 still open, no new
+  comment. Status: done. Full detail in
+  pr-integration/0915-run.md.
