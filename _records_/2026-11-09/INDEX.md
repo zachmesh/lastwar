@@ -980,6 +980,32 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   not landed yet. Status: done. Full detail in
   knowledge-organization/0432-run.md.
 
+## 04:39 to about 04:52 — PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-09-0439. No-op: six open PRs
+  scanned, none owned by this job. PR 491 merged at the 0300 batch
+  (merge commit 95fbdbfd); knowledge PR 501 squash-merged in the
+  0400 pass, main 837d880b81. New PR 503 (knowledge fold) verified
+  clean against main 837d880b81 by VPS merge-tree. PR 493 verified
+  clean at new head 006e17043e, awaits the 0700 batch. PR 478
+  branch-side reconciled by ticker-0434 and verified clean at new
+  head 278abe7474. PRs 351 and 301 still conflict with main on the
+  single file _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, integrator 0400 re-checks noted. Tools PR 425
+  owner-gated, clean, unchanged, awaiting the owner decision
+  (OD-20261108-01 open and undecided). Eighty open issues, zero
+  unclassified, one created (502, knowledge) since the 0339 pass.
+  Owner-decision issues 132, 154 and 335 all over 24 hours,
+  statements current. Full detail in pr-catchall/0439-run.md.
+## 04:39 to about 04:41 — Queue ticker pass, Star Ceremony
+
+- Star-ceremony unit star-ceremony-2026-11-09-0230, done (checked only):
+  no trophy icon beside the Alliance button on the base screen right
+  rail (Events red 2, VS countdown 13:20:41, Season II NEW, Alliance,
+  Mail red dot, Inventory), so no ceremony is waiting. Nothing played,
+  claimed or spent. Base total power read live 149,217,331. Full detail
+  in alliance-duel/0441-queue-run.md.
+
 ## 04:40 to about 04:47 — Queue planning pass
 
 - Planner pass queue-planning-2026-11-09-0440. Plan staged
@@ -1002,20 +1028,29 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   inbox 62, claimed 0, done 1327. Status: done. Full
   detail in queue-planning/0440-run.md.
 
-## 04:39 to about 04:52 — PR catch-all pass
+## 04:40 to about 04:47 — Queue ticker pass, Shop claims (passes)
 
-- Catch-all pass pr-catchall-2026-11-09-0439. No-op: six open PRs
-  scanned, none owned by this job. PR 491 merged at the 0300 batch
-  (merge commit 95fbdbfd); knowledge PR 501 squash-merged in the
-  0400 pass, main 837d880b81. New PR 503 (knowledge fold) verified
-  clean against main 837d880b81 by VPS merge-tree. PR 493 verified
-  clean at new head 006e17043e, awaits the 0700 batch. PR 478
-  branch-side reconciled by ticker-0434 and verified clean at new
-  head 278abe7474. PRs 351 and 301 still conflict with main on the
-  single file _logs_/repo-actions/action-log.jsonl (append-append),
-  heads unchanged, integrator 0400 re-checks noted. Tools PR 425
-  owner-gated, clean, unchanged, awaiting the owner decision
-  (OD-20261108-01 open and undecided). Eighty open issues, zero
-  unclassified, one created (502, knowledge) since the 0339 pass.
-  Owner-decision issues 132, 154 and 335 all over 24 hours,
-  statements current. Full detail in pr-catchall/0439-run.md.
+- Passes unit passes-2026-11-09-0257, done: all three reset-day shop
+  claims verified already claimed, nothing new. Hot Deals shows no free
+  pack; Weekly Pass fired no Free Supply auto-claim and both weekly
+  passes remain unowned $4.99 offers (Take All $19.99 untouched);
+  Super Monthly Pass Daily Gift reads Claimed, Days Left 12 / Rewards
+  Left 12 (was 13 at the 0218 read, same reset day). No spending. Full
+  detail in shop-claims/0447-queue-run.md.
+
+## 04:44 to about 04:50 — Queue ticker pass, Event claims (partial)
+
+- Events unit events-2026-11-09-0257, partial: hub sweep finished across
+  all 7 tabs (Age of Oil, Arms Race, Winter Battlefield, Desert
+  Battlefield, Wanted Boss, Survey Center, Community) with nothing
+  claimable anywhere; Age of Oil milestones 1 and 2 verified claimed.
+  Arms Race Hero Advancement reads 82,500 points, all three point
+  chests claimed, phase timer 01:17:53 (ends about 06:03); a priority 1
+  arms-race unit (arms-race-2026-11-09-1248, expires at phase end) was
+  enqueued for the completion sweep, since no unit is staged for this
+  phase. Wanted Boss rotated to Code 87, not out until server 00:00.
+  Level Swap tab is gone from the hub. The check-in gift entry is
+  blocked (card tap and long-press page the carousel, Go does nothing)
+  and carries to the next events unit with the failed methods named.
+  Full detail in event-claims/0450-queue-run.md.
+
