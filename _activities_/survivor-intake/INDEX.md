@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-08T04:39:41Z
-version: 1.36.0
+modified: 2026-11-09T08:32:17Z
+version: 1.40.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -37,6 +37,10 @@ grounded_in:
   - source: ticker-2004 survivor-intake execution record 2026-11-06 2004 queue run (failed, Mac device offline, eighty-ninth consecutive ticker pass with a Mac device-access blocker, fiftieth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 36h40m, unchanged since the ticker-1025 pass; six invokes, zero responses, recovery-device health check timed out after 25 seconds)
   - source: ticker-1655 survivor-intake execution record 2026-11-07 1655 queue run (partial and unverified, gate re-grounded with the yellow Zombies sign at norm 166,547, no waiting line verified, gate figures are squad troops, 2nd Squad Lv.20 selected by tap; blue-cap portrait circles untapped; white '?' bubble at norm 113,582 seen in the training unit's closing screenshots; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-1940 survivor-intake execution record 2026-11-07 2000 queue run (partial, gate line verified live with 4 question-mark survivors grounded at norm 111,642 / 76,661 / 43,677 / 9,692, taps turned '?' bubbles into yellow smiley faces with no New Survivor Incoming card opened and no recruit identity read, line clear as observed, Quick Dispatch not run so the R2 third-strike blocker persists; unit 162 seconds inside the 15-minute cap; record commit c47e491fd on records/2026-11-07)
+  - source: ticker-1249 survivor-intake execution record 2026-11-08 1307 queue run (partial, 5 named recruits taken in, 6th card JAVIER Barn Keeper open unrecruited, Recruit-tap control-channel no-change advisory disproved, Quick Dispatch deferred per R7; record commit 6d4ec6287 on records/2026-11-08)
+  - source: ticker-2004 survivor-intake execution record 2026-11-08 2052 queue run (partial, gate verified, taps open no dialog, Achievements toast ambiguous, 23rd consecutive partial on the metadata count; record commit fc00889b0 on records/2026-11-08)
+  - source: ticker-2201 survivor-intake execution record 2026-11-08 2227 queue run (partial, gate line unverified, lone figure tap opened an Area No.168 dialog, no recruit, 0 recruits; record commit 8960535c on records/2026-11-08)
+  - source: ticker-0019 survivor-intake execution record 2026-11-09 0024 queue run (partial, gate line unverified on fresh grounding, no question-mark or exclamation bubbles in two pans and two enlarged crops, 0 recruits, bubble-less tap method exhausted; record commit f99faa9744 on records/2026-11-09)
 ---
 
 
@@ -972,6 +976,12 @@ Measured on 2026-10-25.
 
 - 1.36.0 (2026-11-07): 2000 survivors unit folded (partial, gate line verified live with 4 question-mark survivors grounded at norm 111,642 / 76,661 / 43,677 / 9,692 by the WARNING Zombies sign, figure taps turned the "?" bubbles into yellow smiley faces with no New Survivor Incoming card opened and no recruit identity read for any survivor, line clear as observed, Quick Dispatch NOT run so the R2 third-strike blocker persists and Quick Dispatch is the first action of the next survivors unit per rule R7; a smiley change is processed state, not a recruit identity; HUD food 478.7M, iron 802.1M, coin 6.9M, power 149,850,353, stamina 107 at close).
 
+- 1.38.0 (2026-11-08): 2052 survivors unit folded (partial, gate line verified live with one figure carrying both "?" and "!" bubbles, figure tap (130,697) no change, "?" bubble tap (45,691) cleared the "?" and raised an ambiguous "Achievements 8/16 Completed" toast with no card or dialog, third tap (136,696) no dialog with the camera panned down-left, figure still at the gate with the "!" bubble, 23rd consecutive partial on the metadata count, not recounted; Quick Dispatch not run; the 1307 contrast stands - freshly grounded figure taps do open cards, so the failure is tap method, blocker category c; re-ground from scratch next unit). (1.37.0 carries the 1307 section without a changelog line; the numbering is preserved, not rewritten.)
+
+- 1.40.0 (2026-11-09): 0024 survivors unit folded (partial, gate line unverified on fresh grounding, no question-mark or exclamation bubbles in two pans and two enlarged crops of the gate area, 0 recruits, Quick Dispatch not run; figures seen carry no bubbles - red-hat figure on the road, large blonde zombie woman with a smaller blonde figure beside her (the 2227 Area No.168 figure), grey dog-like animal, circular pet badge with a brown animal; no figure tapped, the bubble-less-figure tap method is exhausted after the 2227 area dialog and ends per R2; the record's "22 of 22 plus the 2227 unit and this one" framing is the Oct 28-31 window figure, not a recount, the count question stays open on Issue #168; re-ground from the gate next unit).
+
+- 1.39.0 (2026-11-08): 2227 survivors unit folded (partial, gate line unverified, lone figure with no bubble tapped into an "Area No.168" area-info dialog, not a recruit card, 0 recruits, Quick Dispatch not run; the record's "22 of 22" matches the Oct 28-31 metadata window figure and is not a recount, the standing 23rd-consecutive-partial count at 2052 is also not recounted, the count question stays open on Issue #168; re-ground from the gate next unit).
+
 - 1.29.0 (2026-11-05): 0134 survivors unit folded (failed, twenty-sixth consecutive screen-capture failure, no game screen read, no input dispatched, tracker untouched); NEW DIAGNOSIS from the on-screen View-menu read - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (menu lists Enter Full Screen), so the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; background Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, list_windows needs the exact app name "LastWar"; CORRECTION - the 1707/2135 "running fullscreen" wording and the 1122 "left in native fullscreen" carry-forward are superseded, and the standing permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); same correction applied to resource-collection, perception-scout, radar-tasks, arms-race and alliance-gifts in this run; evidence commented on Issue #284 by the ticker pass, twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.27.0 and 1.28.0 carry the 1707 and 2135 sections without changelog lines; the numbering is preserved, not rewritten.)
 
 - 1.26.0 (2026-11-04): gate line verified live (three question-mark bubbles above three survivor figures on the road in front of the gate wall, fullscreen screenshot and 4x crop), moving the blocker from line-not-found to taps-not-opening-cards; method change per rule R2 (windowed background taps and WORLD calibration both no-change, so native fullscreen via the green zoom button plus crop-grounded figure taps, which dispatched a visual change but opened no card); focus guard blocking one tap while Chrome was frontmost; session dropped twice mid-unit (cc-449, cc-450) with recovery and no state lost; window left in native fullscreen for the next unit; next unit must try the question-mark bubble itself in fullscreen or a long-press on a freshly grounded figure, re-grounding from a fresh screenshot immediately before tapping; 0 recruited by live read, Quick Dispatch not run, tracker untouched; folded from the 1122 survivors record, evidence already commented on Issue #168 by the ticker pass so no duplicate comment here; no earlier claim superseded. (1.24.0 and 1.25.0 carry the 0416 and 0757 sections without changelog lines; the numbering is preserved, not rewritten.)
@@ -1354,3 +1364,153 @@ Measured on 2026-10-25.
 ## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
 
 - Channel rules, now carried in this profile (propagation follow-up from the 1732 run, survivor-intake done - joining alliance-help, alliance-gifts, radar-tasks, arms-race, alliance-donations and shop-claims): Mission Control was not opened as a recovery step, per the 1020 lessons folded into alliance-help 1.27.0 - open_app Mission Control wedged the channel in that pass (first launch opened the overview; every later activate and observe then failed with geometry_mismatch origin_delta 256+, agent_display false, and all key input gated on observation_required; a second launch closed it and restored observation; the overview itself cannot be observed or clicked through this channel). Background Ctrl+Right was not tried: it does not switch Spaces through this channel (in the 1020 pass the key went to the Finder column view instead). The known reliable unblock stands: the owner clicking the LastWar Dock icon once. This profile already records the background-Space-keys half from its own 0134 unit (Ctrl+Right, Ctrl+Left and Ctrl+Up dispatched with no Space change); the new part carried here is the open_app Mission Control wedging (a launch, not a keypress).
+
+## What the 2026-11-08 1307 unit added - five named recruits taken in, 6th card open, Recruit-tap control-channel advisory disproved
+
+- Unit survivors-2026-11-08-1003 by ticker-1249, about 12:58 to
+  13:07 local, status partial - 5 named survivors recruited with
+  their cards read live; a 6th card stands open and unrecruited and
+  the gate line remainder is unverified at close, so the work resumes
+  in the next survivors unit. Evidence in
+  `_records_/2026-11-08/survivor-intake/1307-queue-run.md` (commit
+  6d4ec6287 on records/2026-11-08). Tracker untouched.
+- Session: computer sessions cc-122 then cc-123 on the owner Mac
+  mini (session cc-122 dropped mid-unit, "target app process
+  identity unavailable"; session cc-123 was started, LastWar
+  re-selected, and the game recovered with no state lost - the JAVIER
+  Builder card was still open exactly as left). No device-access
+  error, no different-device dialog, no login demanded. Nothing
+  bought, no speedup used.
+- Session window: 12:58-13:07 local, about 9 minutes, closed at the
+  device token expiry.
+- Gate line verified live: visual grounding on the opening base
+  screenshot returned 4 survivor figures with question-mark bubbles
+  in a line at the left edge gate, at norm (186, 715), (152, 733),
+  (114, 743) and (12, 795). The (12, 795) point sits at the extreme
+  left edge and was not tapped.
+- Tap 1 on the first grounded figure (186, 715) opened a New
+  Survivor Incoming card - the figure-is-the-reliable-target rule
+  confirmed again.
+- Recruits taken in, each card read live before Recruit was tapped:
+  1. JAVIER, Lawyer, Alliance Support Hub, Help Received +1.
+  2. JAVIER, Builder, Builder's Hut, Free Construction Speed-up Time
+  5min.
+  3. ELINA, Instructor, Barracks, Unit Training Cap +2.40%.
+  4. CHLOE, Iron Storage Keeper, Iron Warehouse, Increase Iron
+  Protection +5.00%.
+  5. MICHAEL, Hospital, Unit Healing Speed +4.00% (name from OCR
+  read "AIICHAEI"; the card itself was not image-read, so the
+  spelling is unverified).
+- 6th card open at close, unrecruited: JAVIER, Barn Keeper, Food
+  Warehouse, Increase Food Protection +5.00% (image-read). The next
+  survivors unit recruits him first, then re-checks the gate line.
+- CONTROL-CHANNEL LESSON (new, stands): after the ELINA, CHLOE and
+  MICHAEL Recruit taps the control channel reported "no change" and
+  advised against repeating the click, but each tap in fact advanced
+  the card to the next survivor - the card change is the
+  verification, and the channel's no-change guidance is WRONG for
+  this Recruit control. Do not let it stop a Recruit tap whose card
+  visibly advanced. This joins the 2050 training unit's
+  "no_change_observed flag unreliable" lesson: screenshot to verify
+  after every tap instead of trusting that flag.
+- Quick Dispatch did NOT run: five newcomers with building posts
+  were taken in, and the standing Quick Dispatch instruction applies.
+  Per queue rule R7 it is the first action of the next survivors
+  unit - open a survivor-post building panel (Alliance Support Hub,
+  Builder's Hut, Barracks, Iron Warehouse, Hospital or Food
+  Warehouse) and run Quick Dispatch so the newcomers are posted.
+  This unit's token expiry, not a game blocker, is why it did not
+  run here.
+- No resources gained beyond the five posts; no dialog-type survivor
+  in this unit.
+- 1333 cross-read (arms-race unit, same day): the JAVIER Barn Keeper
+  card was still open at about 13:19; two taps at norm (500, 800),
+  below the Recruit button, cycled the cards to JAMES, Nurse,
+  Hospital, Unit Healing Speed +10.00%, and closed the modal with a
+  toast "A new resident has joined us". Whether Javier or James was
+  recruited by those taps is NOT established - the tap point sits
+  below the Recruit button. The next survivors unit verifies at the
+  front door whether Javier and James are waiting or already
+  recruited. No survivor was claimed by the arms-race unit.
+- Follow-up: the next survivors unit recruits JAVIER Barn Keeper
+  first (if still waiting), verifies Javier and James at the front
+  door, re-checks the gate line, and runs Quick Dispatch first per
+  R7. It falls to the next run.
+
+## What the 2026-11-08 2052 unit added - gate verified, taps open no dialog, 23rd consecutive partial on the metadata count, Achievements toast ambiguous
+
+- Unit survivors-2026-11-08-1803 by ticker-2004, about 20:42 to 20:52
+  local, status partial (unverified close). Evidence in
+  `_records_/2026-11-08/survivor-intake/2052-queue-run.md`
+  (commit fc00889b0 on records/2026-11-08). Tracker untouched.
+- Gate located and verified live: the walled "Zombies"-signed front
+  gate on the left side of the current base framing, with one
+  survivor figure standing in front of it. The figure carried a "?"
+  bubble (recruit indicator) and a "!" bubble (visitor indicator)
+  at first sight. Two smiley-bubble figures elsewhere on the base
+  are already processed survivors.
+- Tap 1, survivor figure at fresh grounded (130,697): no change, no
+  card or dialog opened.
+- Tap 2, variant switch per rule R2: the "?" bubble at fresh
+  measured (45,691). After this tap the "?" bubble was gone in the
+  next screenshot and an "Achievements 8/16 Completed" toast
+  appeared. No survivor card or dialog was ever observed, and the
+  figure was still standing at the gate afterwards, so no intake is
+  claimed from this tap - the toast is recorded as ambiguous, not as
+  evidence.
+- Tap 3, figure again at re-grounded (136,696) after the "?" cleared:
+  no dialog opened. The camera panned down-left after this tap (Wall
+  Lv.26 label now visible by the gate); the figure is still at the
+  gate with the "!" bubble, still unprocessed as far as any live
+  read shows.
+- No survivor was confirmed taken in. No Recruit button was ever
+  seen. Quick Dispatch did not run (no intake to post).
+- Count note, stated plainly: the record calls this the 23rd
+  consecutive partial for this regular in the queue era, on the
+  activity metadata's count (22 of 22, 2026-10-28 to 2026-10-31,
+  plus the 0016 unit) - the count is NOT recounted here, and it
+  counts partial-status units, not zero-progress units: the 1307
+  unit recruited 5 named survivors while still closing partial
+  (6th card open), so the streak does not mean no survivor is ever
+  taken in. No exact distinct-unit count is asserted here.
+- Contrast with the 1307 unit, carried: tap 1 on a freshly grounded
+  figure (186,715) opened a New Survivor Incoming card - the method
+  works when the figure is grounded fresh. The 2052 taps' failure is
+  blocker category c (tap method): the points may have been stale
+  against the moved framing, or this figure (carrying both "?" and
+  "!") may not be a plain recruit. The gate re-read for the next
+  unit must re-ground from scratch: the camera framing moved during
+  this unit.
+- A named re-read unit is enqueued for the next tick (survivors
+  gate-line re-read after unit survivors-2026-11-08-1803).
+- Commented on Issue #168 by this run with the fold (the unit
+  commented the evidence there itself).
+- Game left safe: base screen, no purchase, no diamond spent. The
+  "!" visitor bubble was not tapped into any notification prompt.
+- Follow-up: the next survivors unit re-grounds the gate line from
+  scratch, recruits JAVIER Barn Keeper first if his card is still
+  open (1307 follow-up), and runs Quick Dispatch first per R7 if
+  any intake lands. It falls to the next run.
+
+## What the 2026-11-08 2227 unit added - gate line unverified, Area No.168 dialog is not a recruit
+
+- Unit survivors-2026-11-09-0446 by ticker-2201, about 22:18 to 22:24 local, status partial (unverified close). Evidence in `_records_/2026-11-08/survivor-intake/2227-queue-run.md` (commit 8960535c on records/2026-11-08). This unit is the gate-line re-read after unit survivors-2026-11-08-1803, whose taps opened no dialog.
+- Panned the base view twice to the right edge to reach the front gate (road out through the perimeter wall, top right). No line of survivors with question-mark bubbles was visible at the gate. One lone figure stood on the road just inside the wall, with no bubble above them.
+- Tapped that figure (grounded from a cropped enlargement of the gate area): a dialog opened showing a blonde zombie woman, "Area No.168", text "True dread struck me upon seeing the eyes of the zombies." No Recruit button, no other button. A tap on the dialog itself did not dismiss it; a tap on empty base ground closed it.
+- The dialog is an area-info dialog, not a survivor recruit card and not a dialog-survivor line. No survivor was recruited, no supplies handed over, and Quick Dispatch did not run (no intake happened).
+- The gate line state is therefore still unverified: the lone figure carries no question-mark bubble, and the only tap response was an area dialog. Per the activity metadata the line needs a named re-read rather than a presumed close. No re-read unit is enqueued here - the next ticker sync re-produces the regular, and the line should be re-grounded from the gate, not from this figure.
+- Count note, stated plainly: the record's "22 of 22 survivor units partial in the queue era" matches the Oct 28-31 metadata window figure (22 of 22) and is NOT a recount of the units since - the profile's standing count is the 23rd consecutive partial at the 2052 unit, also not recounted. The two figures use different windows and neither is re-derived here; the count question stays open on Issue #168. The 1307 contrast stands - freshly grounded figure taps do open cards, so the failure is tap method, blocker category c; re-ground from scratch next unit.
+- Correction, from the record itself: the unit ran 22:18 to 22:24 local, about 6 minutes, not 22:19 to 22:27. The closing findings (no question-mark bubbles, Area No.168 dialog, 0 recruits) are unaffected.
+- Commented on Issue #168 by this run with the fold (the unit commented the evidence there itself).
+- Result stats: target 1, achieved 0, resources_gained none, costs 6m_wall_no_stamina, verified no, blocker_category c, recruits 0, gate_line_verified false, device_takeovers 0.
+
+## What the 2026-11-09 0024 unit added - gate line unverified on fresh grounding, no bubbles in two pans and two crops, 0 recruits, bubble-less tap method exhausted
+
+- Unit survivors-2026-11-08-2203 by ticker-0019, about 00:20 to 00:24 local, status partial (unverified close). Evidence in `_records_/2026-11-09/survivor-intake/0024-queue-run.md` (commit f99faa9744 on records/2026-11-09). This unit is the gate-line re-read after the 2227 unit.
+- Panned the base view twice to the right edge to reach the front gate (road out through the perimeter wall, top right). The view is now at the map's right edge, fog beyond the wall. Fresh grounding from two enlarged crops of the gate area: the road through the wall, the figures standing on it, and the ground inside the wall. No question-mark bubble above any figure, and no exclamation bubble either.
+- Figures seen at the gate: a red-hat figure standing on the road just inside the wall; a large blonde zombie woman with a smaller blonde figure beside her (the figure whose tap opened the "Area No.168" dialog in the 2227 unit); a grey dog-like animal; a circular pet badge with a brown animal. None of these verifies as a survivor recruit - no bubble, no recruit card pattern.
+- No figure was tapped. The bubble-less-figure tap method already ran in the 2227 unit and returned an area dialog, not a recruit; re-tapping a bubble-less figure would repeat that exhausted method, so per queue rule R2 the method ends here.
+- No survivor was recruited, no supplies handed over, and Quick Dispatch did not run (no intake happened). The gate line is therefore still unverified: no survivor queue is present at the gate at this read. No separate re-read unit is enqueued - the tracker is untouched, so the next ticker sync re-produces the regular and the line is re-grounded from the gate then.
+- Count note, stated plainly: the record's "22 of 22 survivor units partial in the queue era, plus the 2227 unit and this one" framing matches the Oct 28-31 metadata window figure and is NOT a recount of the units since - the profile's standing count is the 23rd consecutive partial at the 2052 unit, also not recounted. The figures use different windows and none is re-derived here; the count question stays open on Issue #168. The 1307 contrast stands - freshly grounded figure taps do open cards, so the failure is tap method, blocker category c; re-ground from scratch next unit.
+- Commented on Issue #168 by this run with the fold.
+- Result stats: target 1, achieved 0, resources_gained none, costs 5m_wall_no_stamina, verified no, blocker_category e, recruits 0, gate_line_verified false, device_takeovers 0.

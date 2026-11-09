@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.32.0
+version: 1.34.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,8 @@ grounded_in:
   - source: ticker-0104 perception-scout execution record 2026-11-08 0118 queue run (partial, alliance remainder station check, sixth no-train confirmation in the scout-mid-2026-10-31 chain, no train preparing; record commit 33bb20050a on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0440 queue run (partial, station re-check, both preparation signals absent, record commit caa661bab on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Train Conductor appointments, record commit caa661bab on records/2026-11-08)
+  - source: ticker-2201 alliance-train execution record 2026-11-08 2211 queue run (partial, checked only, both preparation signals absent, no train preparing; record commit 8960535c on records/2026-11-08)
+  - source: ticker-0204 alliance-train execution record 2026-11-09 0215 queue run (partial, checked only, both preparation signals absent, banner-only check, 37 seconds; record commit facef628c on records/2026-11-09)
 ---
 
 # Alliance train
@@ -1084,3 +1086,18 @@ Measured in the 0110 train unit (ticker-0104, window mode
   scout-midday-2026-11-08-0700 is already in inbox. Chain
   scout-mid-2026-10-31 is spent with this unit.
 - Game left on the base screen.
+
+## What the 2026-11-08 2211 unit added - checked only, no train preparing, banner-only signals check
+
+- Unit train-2026-11-08-1830 by ticker-2201, about 22:09 to 22:11 local, status partial (checked only). Evidence in `_records_/2026-11-08/alliance-train/2211-queue-run.md` (commit 8960535c on records/2026-11-08).
+- Returned to a clean base view and checked the two preparation signals from the activity metadata: no train icon in the left icon column (chat, truck, radar, hammer only) and no "Boarding closes in" banner under the resource bar.
+- No train is in preparation. Per the activity metadata the unit closes partial without panning to the station, and the train is re-checked only when a train is preparing. No boarding, no conductor action, no spending.
+- Note: this is a banner-only signals check, not a station-panel verification - the unit did not pan to the station. It does not advance the scout-chain station-panel no-train count (seventh confirmation at the 0440 scout unit). The next train unit re-checks the two signals first.
+- Result stats: target 1, achieved 0, resources_gained none, costs 2m_wall_no_stamina, verified yes, blocker_category h, train_preparing false, device_takeovers 0.
+
+## What the 2026-11-09 0215 unit added - checked only, no train preparing, banner-only signals check
+
+- Unit train-2026-11-08-2230 by ticker-0204, 02:12:29 to 02:13:06 local (37 seconds; the 0215 file heading is the estimate at writing time), status partial (checked only). Evidence in `_records_/2026-11-09/alliance-train/0215-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-209, same session as the gifts unit of this pass. The game was on the base screen; no different-device dialog appeared.
+- Preparation signals, both absent: base screen read live, total power 149,209,253. No train icon in the left icon column (chat with red dot, truck, radar, hammer only). No "Boarding closes in" banner under the resource bar. No train is in preparation.
+- What was not done: no station panel was opened and no carriage state was read; this is a banner-only signals check, not a station-panel verification, as in the 2211 unit. It does not advance the scout-chain station-panel no-train count. A further same-day no-train signal, not counted in the chain. No boarding, no conductor action, no spending.
+- Result stats: target 1, achieved 0, resources_gained none, costs 37 seconds, no items spent, verified yes, blocker_category h, train_preparing false, device_takeovers 0.

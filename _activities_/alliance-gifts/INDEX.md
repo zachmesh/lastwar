@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.38.0
+version: 1.41.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,9 @@ grounded_in:
   - source: ticker-2304 perception-scout execution record 2026-11-07 2311 queue run (partial, LOOT panel re-checked, Lv.1 Doom Elite row still unclaimed after 80+ minutes; record commit 03dc69e0c on records/2026-11-07)
   - source: ticker-0034 perception-scout execution record 2026-11-08 0048 queue run (partial, Gifts Regular tab read live about 00:57 local, Level 28 progress 193,012,970/206,300,000, Claim All badge 82, four +10 rows none claimed, Premium tab dot seen not opened; record commit 4fd2b88a26 on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Gifts Level 28 progress and Claim All badges, record commit caa661bab on records/2026-11-08)
+  - source: ticker-1352 alliance-gifts execution record 2026-11-08 1406 queue run (done, 442 Regular and 31 Premium claimed in full, Gift Level 28 progress 193,982,860, progress moves beyond own claims twice, Issue #183 evidence; record commit bf20e1a48 on records/2026-11-08)
+  - source: ticker-2119 alliance-gifts execution record 2026-11-08 2138 queue run (done, 448 Regular plus 33 Premium plus 3 Regular claimed, Gift Level 28 progress 195,025,360, progress deltas do not decompose into own claims, Issue #183 evidence; record commit fe08a0907 on records/2026-11-08)
+  - source: ticker-0204 alliance-gifts execution record 2026-11-09 0211 queue run (done, Claim All both tabs, 102 Regular and 10 Premium dialog-confirmed, Gift Level 28 progress 195,376,010 to 195,412,790, Premium window +35,760 against 2,300 visible row points, Issue #183 evidence; record commit facef628c on records/2026-11-09)
 ---
 
 
@@ -820,6 +823,10 @@ one file per execution.
 
 - 1.34.0 (2026-11-07): 2033 gifts unit folded (done, dialog-confirmed 437 Regular and 7 Premium across two Regular sweeps and one Premium sweep, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 192,787,590 to 192,799,520 of 206,300,000, total +11,930 - sweep deltas do not decompose into own claims alone (sweep 1 +4,370 for 434 gifts vs +4,340 expected, sweep 2 +6,900 for 3 gifts vs +30 expected), the bar is alliance-wide so the full delta must not be attributed to own claims, filed as Issue #183 evidence by the ticker pass; 3 new gifts arrived mid-unit so re-check Regular after Premium; alliance 95/100 members, power 13,249,423,507; "Hide your name on Gifts" checkbox left unchecked and untouched).
 
+- 1.41.0 (2026-11-09): 0211 gifts unit folded (done, dialog-confirmed 102 Regular plus 10 Premium, 112 total, both tabs verified clear; Gift Level 28 progress 195,376,010 to 195,412,790 of 206,300,000; Regular window exact (+1,020 for 102 gifts), Premium window +35,760 against 2,300 visible row points, new Issue #183 evidence already commented by the ticker job; Premium Claim All re-grounded fresh at (744,936); observation capture failed once during the Premium claim, Issue #282 family, commented by this run; Hide-your-name unchecked before and after; alliance 96/100 members, power 13,532,886,654).
+
+- 1.40.0 (2026-11-08): 2138 gifts unit folded (done, dialog-confirmed 448 Regular plus 33 Premium plus 3 Regular re-check, 484 total, both tabs verified clear; Gift Level 28 progress 195,006,290 to 195,025,360 of 206,300,000, three more non-reconciling deltas as Issue #183 evidence commented by this run - +4,750 for 448 Regular against 4,480 expected, +12,940 for 33 Premium against no clean UR/SSR split, +1,380 for 3 Regular against 30 expected; Premium Claim All re-grounded fresh at (740,945) after the first tap landed on the "Hide your name" label; alliance 96/100 members, power 13,479,890,272).
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -1256,3 +1263,89 @@ one file per execution.
   Premium are waiting; re-check Regular after the Premium sweep per
   the 2033 lesson, since gifts arrive mid-unit. No new Issue filed:
   the waiting claims are named here for the owning regular.
+
+## What the 2026-11-08 1406 unit added - 442 Regular and 31 Premium claimed in full, progress moves beyond own claims again (Issue #183)
+
+- Unit gifts-2026-11-08-1030 by ticker-1352, about 13:59 to 14:06
+  local, status done - both tabs claimed in full, including gifts
+  that arrived mid-visit. Evidence in
+  `_records_/2026-11-08/alliance-gifts/1406-queue-run.md` (commit
+  bf20e1a48 on records/2026-11-08).
+- Alliance panel entered from the base (Alliance button, right
+  column, red dot present) and Alliance Gifts opened on the first tap
+  (red dot on the entry).
+- Regular tab, Gift Level 28, progress 193,968,120/206,300,000 at
+  entry. Claim All with badge 441 tapped: dialog "A total of 441
+  Regular Alliance Gifts were claimed this time" (rewards shown: coin
+  6.0K x840, red gem 5 x94, coin 600 x1.3K, iron 1.0K x1.1K, 5m
+  speedup x102, iron 10.0K x756, food 10.0K x672, food 1.0K x924).
+  Progress after: 193,972,530 (441 x 10, exact).
+- One new Regular gift arrived during the visit (badge 1) and was
+  claimed with a second Claim All. No dialog count was captured for
+  that sweep; progress after it read 193,972,690, i.e. +160 over the
+  post-first-claim read, 16 gift-equivalents against 1 badged gift -
+  unexplained by this unit's own claims (see the Issue #183 note
+  below).
+- Premium tab (red dot present): Claim All with badge 31. First tap
+  at the Regular tab's Claim All point missed (the Premium button
+  sits right, at norm 718,926, beside the "Hide your name on Gifts"
+  checkbox); re-grounded and tapped at norm 718,926: dialog "A total
+  of 31 Premium Alliance Gifts were claimed this time" (rewards
+  shown: 2.5K badge x4, gold bar x1, 500 badge x3, coin chest x4,
+  purple chest x16, food x20, iron x14, 50 badge x5, 5m speedup x2,
+  steel x80). Progress after: 193,982,840 (+10,150 over
+  193,972,690).
+- One more Regular gift arrived during the Premium claim (toast
+  "Doom Walker Loot received!", red dot on the Regular tab). Switched
+  back and claimed it with Claim All: dialog "A total of 1 Regular
+  Alliance Gifts were claimed this time" (iron 10.0K x28). Progress
+  after: 193,982,860 (+20 for 1 gift, again +10 over the expected
+  +10).
+- Closing read: both tabs show all rows "Claimed", no Claim All
+  button and no red dot on either tab. Returned to the base screen
+  (power 149,850,353). No diamonds, money, speedups or other
+  spending. No alliance diplomacy, no assembly, no teleport.
+- Counter anomaly, new evidence for Issue #183: the progress bar rose
+  by more than this unit's own claimed gifts twice (+160 around the
+  second Regular sweep, +20 around the third). The most likely cause
+  is that the level progress is alliance-wide and other members'
+  claims feed it while this unit works, but that is unverified - it
+  is recorded here as an open question for the activity metadata, not
+  as a count this unit claims. All claimed counts above are
+  dialog-verified; the progress figures are live reads. Commented on
+  Issue #183 by this run.
+- Premium Claim All point note: the 1406 session's grounded Premium
+  Claim All point is norm (718, 926), right of the "Hide your name
+  on Gifts" checkbox; the 0820 unit measured (763, 952). The point
+  drifts per session and framing - re-ground the Premium button
+  fresh per session, never carry either point across sessions; the
+  Regular tab's Claim All point misses on the Premium tab.
+- Result stats: Regular claimed 442 (441 + 1, dialog-verified),
+  Premium claimed 31 (dialog-verified), Gift Level 28, progress
+  193,982,860/206,300,000, both tabs fully claimed, no red dots
+  remain.
+
+## What the 2026-11-08 2138 unit added - 484 gifts claimed, progress non-reconciliation three more datapoints (Issue #183)
+
+- Unit gifts-2026-11-08-1830 by ticker-2119, about 21:33 to 21:38 local, status done. Evidence in `_records_/2026-11-08/alliance-gifts/2138-queue-run.md` (commit fe08a0907 on records/2026-11-08). Both tabs claimed, plus a re-check claim for gifts that arrived mid-unit.
+- Alliance panel read live: [AP3x] The Apex, Members 96/100, Power 13,479,890,272, Leader Abyss Apex. Alliance Gifts carried a red dot; Help also carries a red dot (that is the help unit's work, not this unit's).
+- Regular - Claim All, first pass: badge 448. Summary: "A total of 448 Regular Alliance Gifts were claimed this time". Popup items as read from the zoomed screenshot (icon, count at bottom-right; a top-left number reads as the item denomination where present, that reading is the unit's inference): gold chest 31, 5m speedup 48, gold coin 600 x1.5K, steel 1.0K x1.8K, food 1.0K x1.9K, gold coin 6.0K x280, steel 10.0K x280, red gem 5 x60, food 10.0K x168. The list behind the popup showed Violet's Gifts (Janet^A defeating CL-7 Victim, +10 each). Gift Level 28 progress at entry 195,006,290 / 206,300,000; after this claim 195,011,040 (+4,750). Note: 448 gifts at the displayed +10 each is 4,480, which does not reconcile with the +4,750 progress delta; the mix of gift values in the 448 is not visible from the top of the list, so the gap is recorded, not explained.
+- Premium - Claim All: badge 33. Summary: "A total of 33 Premium Alliance Gifts were claimed this time". List before the claim: Alliance Gift (UR) +500 x3 (Drone Parts, Weekly Drone Skill Chip, Drone Parts) and Alliance Gift (SSR) +200 (Super Monthly Pass) at the top, more below. Popup items as read from the zoomed screenshot: gold card 1, coin chest 30, iron crate 33, food crate 36, purple chest 14, red gem 5 x1, red gem 20 x1, red gem 50 x1, steel blocks 140. Progress after this claim: 195,023,980 (+12,940). The 33 gifts at the displayed +500/+200 values do not reconcile to 12,940 under any clean UR/SSR split either; the level-progress arithmetic stays an open question (see the Issue #183 note below).
+- R2 note: the first Premium Claim All tap landed on the "Hide your name on Gifts" label, not the button - the Premium tab lays Claim All further right than the Regular tab, and the point inherited from Regular was stale. Re-grounded fresh (centre 740,945) and the second tap claimed. One no-change tap, method switched inside the unit. This confirms the 1406/0820 drift rule: re-ground the Premium button fresh per session, never carry a point across sessions or tabs.
+- Regular - re-check claim: after the Premium claim the Regular tab again carried a red dot - 3 new gifts had arrived mid-unit (a "Violet's Gift received!" toast was seen). List: Violet's Gift, Raze Cromwell Defeated CL-7 Victim (1d 00:00:00); Alliance Gifts, SAPPER1DOG Defeated Doom Elite (23:59:19); Violet's Gift, SAPPER1DOG Defeated CL-7 Victim (23:59:15). Claim All badge 3. Summary: "A total of 3 Regular Alliance Gifts were claimed this time". Popup items: food 1.0K x28, steel 1.0K x28. Progress after this claim: 195,025,360 (+1,380), again not reconciling with 3 gifts at +10 each. The Gift Level progress clearly does not equal the sum of the displayed +point values; what raises the gift level stays open - the standing open question in the activity metadata.
+- Close: final progress 195,025,360 / 206,300,000, Level 28. Total claimed this unit: 448 + 33 + 3 = 484 gifts. Both tabs show no red dot at close and every visible gift row reads Claimed. The Alliance panel's Gifts entry dot was not re-read on the way out; the tab-level clearance is the verification.
+- Counter anomaly, new evidence for Issue #183: three more non-reconciling progress deltas in one unit (+4,750 for 448 Regular against 4,480 expected; +12,940 for 33 Premium against no clean UR/SSR split; +1,380 for 3 Regular against 30 expected). The most likely cause remains that the level progress is alliance-wide and other members' claims feed it while this unit works, but that is unverified - it is recorded here as an open question for the activity metadata, not as a count this unit claims. All claimed counts above are dialog-verified; the progress figures are live reads. Commented on Issue #183 by this run.
+- Red lines held: no diamonds or money spent, no other unit's work touched (Help's red dot left alone). The "Go" buttons on the gift tabs (which navigate to Doom Elite / pack screens) were never tapped.
+- Result stats: target 484, achieved 484, resources_gained 448 Regular plus 33 Premium plus 3 Regular gifts, popup items as listed above, costs 5 minutes, no items spent, verified yes.
+
+## What the 2026-11-09 0211 unit added - 102 Regular and 10 Premium claimed, progress non-reconciliation again (Issue #183), capture failed once (Issue #282)
+
+- Unit gifts-2026-11-08-2230 by ticker-0204, about 02:08 to 02:11 local, status done. Evidence in `_records_/2026-11-09/alliance-gifts/0211-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-209. Claim All on BOTH tabs as the owner directed.
+- Entry, measured fresh: base screen total power 149,209,253. Alliance button tapped at norm 934,713 and the Alliance panel opened at once ([AP3x] The Apex, 96/100 members, power 13,532,886,654). Alliance Gifts button at norm 304,595 carried a red dot and opened the gifts screen at once. Gift Level 28 throughout.
+- Regular tab: progress read live at entry 195,376,010 of 206,300,000. Claim All badge 102. Claim All at norm 498,940; the summary dialog read live "A total of 102 Regular Alliance Gifts were claimed this time". Badge and dialog agree. Progress after the claim, read live: 195,377,030 (plus 1,020, exactly 102 times 10 points). Dialog reward icons read live: 7 gold chests, 1.0K x308, 1.0K x364, 5 x14, 600 x364, 5m x11, 6.0K x84, 10.0K x112. Re-check: every visible row reads Claimed, no Claim All button remains on the Regular tab, no new gift arrived during the sweep.
+- Premium tab: tab tapped at norm 694,269 and opened at once. Claim All badge 10. Visible rows before the claim: Alliance Gift (MR) +1000, Someone purchased Mega Express Contract, 23:59:16; Alliance Gift (MR) +1000, Abyss Apex purchased Mega Express Contract, 23:59:08; Alliance Gift (SSR) +200, Someone purchased Diamond, 23:46:05; Alliance Gift (SR) +100, Abyss Apex purchased Drone Combat Boost EXP Pack, 22:52:52; further rows below the fold, not read. "Hide your name on Gifts" checkbox read live before the claim: unchecked; left untouched, re-read unchecked after the claim. Premium Claim All grounded fresh at norm 744,936 (the Regular-tab point was not reused). The observation capture failed once ("Screen capture failed: App identity or privacy changed during capture"), so the result was confirmed by a fresh observe, not by the tap receipt: the summary dialog read live "A total of 10 Premium Alliance Gifts were claimed this time". Badge and dialog agree. Progress after the claim, read live: 195,412,790 of 206,300,000 (plus 35,760 in the Premium window). Dialog reward icons read live: 2.5K x4, paw x2, coins x4, chest x18, 120 steel.
+- Counter note, Issue #183 evidence: the visible Premium rows sum to 2,300 points (2 x 1000 plus 200 plus 100), yet the progress counter moved plus 35,760 in the same window. Both readings are recorded as observed and no cause is asserted; the counter is not attributable to this unit's own claims alone. The below-fold rows were not read, so a high-value below-fold row is not excluded as a contributor, but the 2,300 visible sum against a 35,760 move is the measured gap. The ticker job already commented Issue #183 with this evidence; no re-comment from this run.
+- Capture failure, Issue #282 family: the Premium-claim capture failure above is a further device-channel datapoint (the capture channel, not a tap failure). Commented onto Issue #282 by this run.
+- Completion sweep: Premium tab re-read, every visible row Claimed, no Claim All button, no red dot. Regular tab re-entered and re-read, every visible row Claimed, no Claim All button, no red dot. Back to the Alliance panel: the Alliance Gifts entry carries no red dot. Help and Alliance Wars still carry red dots; those belong to their own regulars, not this unit. Back arrow returned the game to the base screen.
+- Totals: Regular 102 plus Premium 10, 112 gifts claimed, all dialog-confirmed. Gift Level 28 progress 195,376,010 to 195,412,790 of 206,300,000 (plus 36,780 in-unit as read live at each step). No diamonds or money spent, no purchase made, no shop opened, no setting changed. The Alliance Store was not opened.
+- Result stats: target 112, achieved 112, resources_gained 102 Regular plus 10 Premium gifts, costs about 4 minutes of unit time, no items spent, verified yes.

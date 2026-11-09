@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T03:44:20Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.51.0
+version: 1.56.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -54,6 +54,11 @@ grounded_in:
   - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental radar reads during the navigation detour: BASE tap 920,975 opened the radar map, Lv.13, points 237 to 259, stored 19/40 to 0/40, stamina 100 to 35, 19 tasks completed between screenshots with no executor tap; record commit a85cfdafa8 on records/2026-11-07)
   - source: ticker-1655 harvest, survivors and training execution records 2026-11-07 1655 queue runs (capture channel working again on live game screens after the 1020-1608 capture-failure run, Issue 282; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-1904 radar execution record 2026-11-07 1912 queue run (done, stack empty, dish re-grounded for the windowed layout, capture channel recovered)
+  - source: ticker-1249 radar execution record 2026-11-08 1256 queue run (done, stack-day Quick Execute 4 tasks, stamina 120 to 80, radar points 267 unchanged, bar flipped to Claim All only with 10 rewards pending, pins inventoried untapped; record commit 6d4ec6287 on records/2026-11-08)
+  - source: ticker-1352 radar execution record 2026-11-08 1355 queue run (partial, Claim All bar lockout, 16 stored tasks unexecuted, 10 rewards pending, 6 pins inventoried, duplicate-unit Issue #466; record commit bf20e1a48 on records/2026-11-08)
+  - source: 2026-11-08 daily retro, execution-knowledge action A-2026-11-08-01 (Issue #484): prefer the (50,740) dish point as the first tap; (54,583) and (54,780) failed 2026-11-08; record commit 90c3fa64e on records/2026-11-08
+  - source: ticker-2334 radar-tasks execution record 2026-11-08 2335 queue run (partial, release day 1, 16 tasks executed, 44 rewards claimed, stored 39/40 to 0/40, points 267 to 311, dish re-grounded to norm 37,736 in the 642x951 window, 6 pins left untapped; record commit 86b26f5ce0 on records/2026-11-08)
+  - source: ticker-0140 radar-tasks execution record 2026-11-09 0159 queue run (done, stack empty 0 of 40, points 311, restore 12 tasks in 03:41:39, 6 pins inventoried untapped, dish grounded (54,707) first tap, NEW! badge re-seen; record commit 3d5dc8314 on records/2026-11-09)
 ---
 
 
@@ -119,6 +124,24 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   mislabelled the truck icon as the dish. Ground the dish
   below the truck icon and verify the radar screen (level,
   stored count, stamina) before any work.
+- PREFERRED FIRST TAP, retro action A-2026-11-08-01 (2026-11-08
+  daily retro, Issue #484): norm (50,740), which opened the radar
+  on the first tap at 13:53 on 2026-11-08 (1355 unit). The (54,583)
+  and (54,780) points failed at 20:15 the same day (2028 unit) -
+  (54,583) opened Intercity Trade, (54,780) opened BUILD - and are
+  not dish points; never reuse them. If the preferred point fails,
+  re-ground the dish from a fresh base screenshot.
+- 2026-11-08 2335: first tap at norm (59,687), estimated from the
+  fresh screenshot, missed the dish and only showed a transient
+  "Achievements 8/16 Completed" tooltip. Re-grounded from a
+  magnified crop of the left icon column: the satellite dish icon
+  with the red "10" badge sits at pixel about 24,700 in the
+  642x951 window, i.e. norm (37,736), and the second tap opened
+  the radar on the first try. The profile coordinate (62,727,
+  measured 2026-10-29 in a 763x1050 window) is stale in this
+  window geometry. The (50,740) retro preference was not tested
+  in this unit; the dish drifts per session, so re-ground fresh
+  from a magnified crop in every unit.
 - Entry precondition, binding from the 1026 and 1439
   units: when the camera is panned onto the Drill Ground
   cluster, restore the full base view first - if a
@@ -149,6 +172,25 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   radar on the first tap. Entry verified by its own reads:
   Lv.13, radar points 166, stored 10/40, stamina 120.
 
+- 2026-11-08 2028: two fresh groundings in one unit both missed
+  the dish - norm (54,583) opened Intercity Trade (Today's Trade
+  Count 0/5, four trucks standing, Mega Mode) and norm (54,780)
+  opened the BUILD menu (Economy tab). The grounding tool
+  mislabelled the truck slot as the dish at 20:17 and the
+  crop-measured point landed on the Build/hammer icon at 20:24.
+  Neither point is a dish point. The next point to try is norm
+  (50,740), which opened the radar on the first tap at 13:53
+  the same day (1355 unit).
+- 2026-11-08 2028: the Age of Oil research tree back arrow does
+  not respond to background clicks at all - two taps on the
+  arrow at (109,894) and the re-grounded centre (131,898)
+  produced no change, and the control channel returned explicit
+  guidance that background clicks do not reach some controls and
+  to use click_element with the control's visible label, or the
+  keyboard, instead. Return and Esc are never used on this app.
+  Back out of the tree with click_element on the arrow if the
+  catalog names it, or relaunch the app (state is server-side;
+  prior units relaunched after crashes with no loss).
 ## Mechanism
 
 - Radar level - Lv.13 since the level-up in the 2026-10-30
@@ -204,7 +246,8 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
 - Paid option - Buy 100 stamina for 300 rubies. NEVER use
   it (red line).
 - Stamina items (10 and 50) exist in inventory in the
-  hundreds (measured counts in the Regain panel). Use only
+  hundreds (measured counts in the Regain panel; 2026-11-08 2335:
+  10-stamina x641, 50-stamina x665). Use only
   under the standing stamina rules for scoring pushes -
   Free Claim first, then items, never rubies.
 
@@ -1036,7 +1079,13 @@ are still open, per the protocol.
 - Standing pin types - identify the orange arrow, purple
   axe, orange axe and portrait pins (class, cost, reward)
   on the next release day, by tapping them under the
-  release handling rule.
+  release handling rule. (2026-11-08 2335 update: the standing
+  inventory now also includes blue arrow pins (one with a red
+  dot), purple arrow pins and orange skull pins, none yet
+  identified - the blue arrow, purple arrow and orange skull
+  classes join the orange arrow, purple axe, orange axe and
+  portrait pins awaiting identification under the release
+  handling rule.)
 - Doom Legion pin card ambiguity - 0636: the portrait pin
   card named a Doom Legion base, but the world-map card
   carried the own-alliance tag [AP3x]The Apex and closing
@@ -1069,6 +1118,14 @@ are still open, per the protocol.
   count after a Quick Execute batch exceeds the batch size.
   Marches returning from earlier batches are the leading
   hypothesis, recorded in the unit, not verified.)
+- Dish badge meaning: the dish badge read "10" at entry on
+  2026-11-08 2335 while stored was 39 of 40 and only 1 task was
+  Quick Executable - the badge number does not equal the stored
+  count. What it counts is not established. (Added 2026-11-08 2335.)
+- Gold NEW! icon on the radar screen: a gold icon with a NEW!
+  badge sits at the top of the radar screen (about norm 295,60),
+  seen 2026-11-08 2335, function unknown, never tapped.
+  (Added 2026-11-08 2335.)
 
 ## What the 2026-11-02 1508 unit closed for radar
 
@@ -1430,6 +1487,14 @@ are still open, per the protocol.
   superseded in place by this close inventory, not erased.
 
 ## Changelog
+
+- 1.56.0, 2026-11-09 - 0159 unit folded (done): stack empty, 0 stored of 40, no Quick Execute work and no Claim All bar, points 311, restore 12 tasks in 03:41:39, stamina 62, green gauge 100%, Lv.13; the 1355 stack (16 stored, Claim All lockout, 10 pending) has since emptied, how it emptied not determined and recorded as observed, not asserted; 6 pins inventoried untapped (2 blue arrow, 2 orange skull, 1 purple arrow, 1 portrait); dish grounded fresh at (54,707) and opened on the first tap - the retro-preferred (50,740) point and this grounded point agree within the same slot, the slot rotates so every unit still re-grounds fresh, (50,740) itself still untested as a direct tap; NEW! badge on the yellow icon at the top of the radar screen re-seen, function still unknown; orange skull pins may be the same skull signal as the timed base-edge badge (Issue #498), hypothesis only, next radar unit checks whether tapping an orange skull pin matches that timer.
+
+- 1.55.0, 2026-11-09 - 2335 release-day unit folded: 16 tasks executed in 6 batches, 44 rewards claimed in 7 Claim All taps, points 267 to 311 (+44, one per claim), stored 39 of 40 to 0 of 40, free stamina claim once (75, Remaining Today 2 of 2 to 1 of 2), stamina items 10-stamina x641 and 50-stamina x665 read live; dish re-grounded fresh to norm (37,736) in the 642x951 window after (59,687) missed - the (62,727) 2026-10-29 point is stale in this geometry and the (50,740) retro preference was not tested this unit, so the dish still drifts per session and is re-grounded fresh every unit; dish badge "10" does not equal the stored count (39 of 40), meaning unknown; gold NEW! icon at the top of the radar screen (about 295,60) function unknown; 6 pins left untapped (2 blue arrow, 2 orange skull, 1 portrait, 1 purple arrow) so partial, token expired 23:50:29; HUD cross-check consistent (food +11.9M, iron +14.3M, coin +9.4M); duel delta test still owed (44 claims would be about 1.32M at 30,000 each, inference only); brown animal-face pin not seen, may be off-screen.
+
+- 1.54.0, 2026-11-08 - retro action A-2026-11-08-01 applied (Issue #484): the dish entry rule now prefers norm (50,740) as the first tap (opened the radar on the first tap at 13:53 on 2026-11-08, 1355 unit); the (54,583) and (54,780) points failed at 20:15 the same day (2028 unit, opened Intercity Trade and BUILD) and are never to be reused; if the preferred point fails, re-ground from a fresh base screenshot. No new radar unit ran this hour; no other change.
+
+- 1.53.0, 2026-11-08 - 2028 release-day unit folded: duel week rolled about 18:00 to day 1 Radar Training RELEASE (day ends 2026-11-09 18:00), unit window stamp day 7 stale, live posture governs; radar screen never entered - dish groundings (54,583) opened Intercity Trade and (54,780) opened BUILD, grounding tool mislabelled the dish slot twice, next point to try is (50,740) from the 1355 unit; recovery tap opened the Age of Oil research tree (all nodes 0/10, queue timers 20:13:57:39 and 08:47:50, read only) whose back arrow does not respond to background clicks - control channel guidance is click_element with the visible label or the keyboard, Return/Esc never used, relaunch is a verified exit; game left on the research tree; 10 pending rewards plus 16 stored tasks still waiting, claims score +30,000 each as displayed; carried figures from 1355 unverified; duel delta test still owed.
 
 - 1.21.0, 2026-11-03 - 1450 release-day unit folded: dish
   62,727 first-tap entry confirmed again; green skull pin
@@ -2181,3 +2246,235 @@ are still open, per the protocol.
 - UI note, untouched: a gold icon with a NEW! badge at the top of the radar screen (about norm 295,60). Its function is unknown; it is not part of this unit's stack work. The next radar unit reads it before tapping anything.
 - Capture channel recovered: the device channel that failed the last twelve-plus passes (Issue 282, screen-capture failure, Last War window off-Space) is working again in this pass: the Last War window is on-screen at 763x1050, global (73,30), and screenshots and OCR read normally. Recovery noted in the record and commented on Issue #282 by this pass. The Dock-icon unblock is no longer the only route: the window returned to the active Space on its own (the Mac mini came back online about 10:20 PT after about 50h offline; the pid changed 59735 to 98156, so the app relaunched - the relaunch is inferred from the pid change, not observed). If the capture fails again, the recovery question is what moved the window back, not the login. The 1853 passes record is a second independent live read on the same recovered channel (window 372131, 788x1083, pid 98156); see shop-claims 1.29.0.
 - Returned to the base screen afterwards (power 149,850,353). No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-08 1256 and 1355 units added - stack-day Quick Execute 4 tasks, Claim All bar lockout carried, 16 stored, 10 pending, pins re-inventoried
+
+- Unit radar-2026-11-08-1003 by ticker-1249, about 12:54 to 12:56
+  local, status done - the stack-day completion standard is met:
+  radar entered and verified, every executable ordinary task
+  executed, closing reads recorded, pin inventory recorded untapped.
+  Evidence in `_records_/2026-11-08/radar-tasks/1256-queue-run.md`
+  (commit 6d4ec6287 on records/2026-11-08). Tracker marked done.
+- Session: computer session cc-122 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login demanded.
+  Nothing bought, no speedup used. One earlier click attempt failed
+  without dispatch (stale observation, missing observation_id) and
+  was retried with the fresh observation id; no input was sent by
+  the failed attempt.
+- Live duel posture from _tools_/duel.py at entry: duel day 7, Off
+  day - settlement, radar posture stack (day ends 2026-11-08 18:00
+  local). The unit window stamp (duel day 7 - radar stack) agrees
+  with the live tool; no contradiction to resolve. This is a further
+  live confirmation of the 18:00 reset (Issue #242); commented on
+  Issue #242 by this run.
+- Entry: base screen full HUD at entry (food 489.5M, iron 811.9M,
+  coin 12.3M, stone 25.0M, gold 922.2K, power 149,850,353, diamonds
+  13.22K, stamina 120, cart 4,397, Season II 7d 05:05:28). The dish
+  icon was grounded fresh by visual grounding at norm (48, 710),
+  inside the proven 52-62, 704-727 cluster, and opened the radar on
+  the first tap.
+- Entry verified on the radar screen itself: Lv.13, radar points
+  267, stored 16/40, stamina 120, restore line "12 Radar Task(s)
+  will be restored in 03:36:42". Bottom bar at entry offered Quick
+  Execute: "You can complete 4 tasks, requires 40 Stamina." No Claim
+  All was offered at entry.
+- Quick Execute: one tap at the grounded button centre norm (491,
+  945). Stamina 120 to 80, exactly 4 tasks at 10 stamina each. Radar
+  points stayed 267, confirming nothing was claimed.
+- Closing reads (live, same unit): Radar Lv.13, radar points 267,
+  stored 16/40, stamina 80, restore line "12 Radar Task(s) will be
+  restored in 03:36:12". Stored 16/40 plus the 12-task restore
+  landing in about 3.6 hours reaches 28/40, below the 40 cap, so no
+  cap pressure before the next unit.
+- Named blocker carried forward: after the batch the bar flipped to
+  Claim All only, "10 task rewards can be claimed", with no further
+  Quick Execute offer. 6 of the 10 were already pending at entry
+  (the entry bar showed Quick Execute despite them, the known
+  single-offer behaviour). Claim All was NOT tapped, per the
+  stack-day red line. The next radar unit inherits this blocker and
+  the pending count of 10, per the stack-day completion standard's
+  named-blocker rule.
+- Pin inventory (untapped, per the stack handling rule): grey skull
+  pin with red dot, top centre; blue skull pin with red dot, right;
+  blue helmet pin, lower centre-left; grey skull pin with red dot,
+  lower centre; portrait pins (alliance members, not tasks):
+  [AP3x]Texan Apex, [AP3x]TheGoldenEclipse, [AP3x]papillon707,
+  [AP3x]Cinmor. No purple question-mark story pin visible in this
+  view. No pin was tapped, so no claim leaked onto this non-scoring
+  day.
+- Duel delta test still owed (VS panel not opened in this unit).
+- Unit radar-2026-11-08-1003 by ticker-1352, about 13:53 to 13:57
+  local, status partial. Evidence in
+  `_records_/2026-11-08/radar-tasks/1355-queue-run.md` (commit
+  bf20e1a48 on records/2026-11-08). Same unit id as the 1256 unit:
+  the delivery-time check found this unit id had already been
+  executed by ticker-1249 (done, record 1256) and its done unit file
+  was already on the live records/2026-11-08 branch. The local sync
+  re-produced it because the local tree never received the branch's
+  done records. This pass left the branch head's done unit file
+  intact; this partial lives in this record file and the day INDEX
+  only. Filed as Issue #466 (tooling), related to #465.
+- Entry via the satellite dish icon at norm 50,740 (fresh screenshot
+  ground); the dish opened the radar on the first tap.
+- Radar screen entered and verified live: Lv.13, radar points 267,
+  stored tasks 16 of 40, stamina 92 (top right), restore line
+  "Fully restore at 11-8 22:32:10 local time".
+- Stack posture held throughout: nothing executed, nothing claimed,
+  no pin tapped.
+- BLOCKER (named, carried from the 2026-10-31 trap): the bottom bar
+  presents ONLY "10 task rewards can be claimed" with a Claim All
+  button - no Quick Execute offer. The 16 stored ordinary tasks
+  therefore could not be executed in this unit. Claiming on a stack
+  day is forbidden (claims leak onto a non-scoring day), so the bar
+  was left untouched. This is the same Claim All bar lockout measured
+  in four units on 2026-10-31; the block is carried into the next
+  radar unit's opening read, so the stack is planned around it
+  instead of rediscovered hourly. Pending reward count at close: 10.
+- No cap pressure: stored 16 of 40, full restore at 22:32 local
+  (about 8 hours 38 minutes away); even a 12-task restore lands at
+  28 of 40, below the cap.
+- Pin inventory (stack rule, untapped): six pins standing on the
+  radar map - grey animal/skull pin, about norm 573,314, red dot;
+  portrait pin (man's face), about norm 718,314, red dot; blue skull
+  pin, about norm 718,395, red dot; blue helmet pin, about norm
+  415,646, no red dot seen; grey handshake pin, about norm 501,646,
+  red dot; brown animal-face pin at the southwest map edge, about
+  norm 79,762, no red dot (same pin inventoried in the 2026-11-07
+  1912 unit at norm 85,738 - the position drifts per view). All left
+  for the next release-day unit to identify under the release
+  handling rule.
+- Restore-line note: the 1256 "12 Radar Task(s) will be restored in
+  03:36:42" countdown and the 1355 "Fully restore at 11-8 22:32:10"
+  clock line are different counters (task-restore countdown vs
+  full-restore time), both recorded as read, not reconciled into one
+  figure.
+- Returned to the base screen afterwards (power 149,850,353). No
+  diamonds, money, speedups or other spending. No alliance
+  diplomacy, no assembly, no teleport.
+- Follow-up: the next radar unit opens with this blocker already
+  known: if the bar still offers only Claim All, the stack stays
+  locked until the release day (Day 1, 2026-11-09) claims the pending
+  rewards and frees the offer. The pending count of 10 is carried,
+  not trusted - the next unit re-reads the bar live.
+
+## What the 2026-11-08 2028 unit added - duel rolled to day 1 Radar Training RELEASE, radar screen never entered, dish grounding failed twice, game left on the Age of Oil research tree
+
+- Unit radar-2026-11-08-1803 by ticker-2002, about 20:15-20:24
+  local, status partial. Evidence in
+  `_records_/2026-11-08/radar-tasks/2028-queue-run.md` (commit
+  eee08287 on records/2026-11-08). Nothing executed, nothing
+  claimed, no map pin tapped. The radar screen was never entered.
+- Posture: live duel posture from tools/duel.py at entry: duel
+  day 1, Radar Training, radar_posture RELEASE, day ends
+  2026-11-09 18:00 local. The unit window stamp (day 7 stack)
+  is stale - the duel week rolled at about 18:00 local today.
+  The live posture governs, so this unit ran as a RELEASE unit:
+  claim everything claimable, pins included. The roughly 5
+  minute dead window after the roll is long past (entry 20:15).
+  The delta test (VS panel duel score before and after) is still
+  owed - no VS read was taken in this unit.
+- Opening state carried from the 1355 unit (13:53 local): Lv.13,
+  radar points 267, stored 16 of 40, stamina 92, full restore
+  11-8 22:32:10 local, 10 rewards pending behind a Claim All only
+  bar, 6 pins inventoried untapped. No live radar read was
+  obtained in this unit, so every figure here is carried, not
+  re-measured.
+- Entry failure, first attempt: the satellite dish icon was
+  grounded at norm (54,583) from a visual-grounding call on the
+  20:17 base screenshot. The tap opened the Intercity Trade
+  (trucks) panel instead - "Today's Trade Count: 0/5", four
+  trucks standing, Mega Mode button. Backed out untouched with
+  the back arrow at (55,931), which returned to the base at once.
+  The grounding tool mislabelled the truck slot as the dish -
+  the same mislabel the profile records for the 0636 unit.
+  Incidental read only: trade count 0/5 today (the trucks
+  regular owns it; nothing dispatched or plundered from this
+  unit).
+- Entry failure, second attempt (R2 pivot - re-grounded fresh
+  from an enlarged crop of the left column, switched to a
+  crop-measured point): the tap at norm (54,780) opened the
+  BUILD menu (Economy tab: Oil Well, Drone Parts Workshop,
+  Farmland, Iron Mine, Food Warehouse). The crop measurement put
+  the dish lower than the control that actually sits there - the
+  build/hammer icon. Nothing built, nothing tapped in the menu.
+- Recovery failure: the tap at (113,888) on the Build screen's
+  bottom-left list icon opened THE AGE OF OIL research tree
+  instead of closing the menu (all nodes 0/10, queue timers
+  20:13:57:39 and 08:47:50 - read only, no research started,
+  nothing spent). Two taps on the tree's back arrow at (109,894)
+  and at the re-grounded centre (131,898) produced no change;
+  the control channel returned explicit guidance that background
+  clicks do not reach some controls and to use click_element with
+  the control's visible label, or the keyboard, instead. Return
+  and Esc are never used on this app. Per R2 the tap method ended
+  there.
+- Game left on THE AGE OF OIL research tree at the unit's close.
+  No state changed, nothing spent, no research started, no claim
+  made - the 10 pending rewards and the 16 stored tasks are still
+  waiting for the next radar unit, and no claim leaked onto a
+  non-scoring day (today IS the scoring day; the rewards are
+  simply still unclaimed).
+- Closing reads: no live radar reads in this unit: stored,
+  pending rewards, radar points, stamina and restore line are all
+  unverified carries from the 1355 unit (16 of 40, 10 pending,
+  267 points, stamina 92, full restore 22:32:10 local). The next
+  radar unit must re-read them live on the radar screen itself.
+- Base HUD read live about 20:17 local: power 149,209,253, food
+  499.1M, iron 821.2M, coin 15.9M, diamonds 13.22K, cart 4,467,
+  stamina 120, VS timer 21:43:24, Season II 6d 21:43:23. Wanted
+  Boss badge 1, timer 00:00:53 at 20:07; badge 2, timer 00:00:49
+  at 20:19.
+- Outcome: partial. Release-day radar work not started: the
+  screen was never entered, so the Claim All bar, the stored
+  tasks and the pins all stand unworked. The next radar unit
+  opens with (a) the release-day claim still pending (10 rewards
+  plus 16 stored tasks, duel day 1, claims score +30,000 each as
+  displayed), (b) the dish entry still ungrounded - the (50,740)
+  point that opened the radar first try at 13:53 today is the
+  next point to try, NOT the (54,583) or (54,780) points used
+  here, and (c) the game sitting on THE AGE OF OIL research tree
+  with its back arrow unresponsive to background clicks - back
+  out with click_element on the arrow if the catalog names it, or
+  relaunch the app (state is server-side; prior units relaunched
+  after crashes with no loss), then re-ground the dish from a
+  fresh full-HUD base screenshot. Tracker untouched for partial,
+  per the queue rules.
+- Method finding for the next unit: the visual-grounding tool
+  mislabelled the dish slot twice in one unit (truck slot as
+  dish at 20:17; the crop-measured dish point landing on Build
+  at 20:24), and the research-tree back arrow does not respond to
+  background clicks at all. Both are method findings, not game
+  state; the radar profile already documents the grounding
+  mislabel (0636, 1913, 0226 units) and the back-arrow guidance
+  is new in this unit. No diamonds, money, speedups or other
+  spending. No alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-08 2335 unit added - release day 1, 16 tasks executed, 44 claims, stored 0 of 40, dish re-grounded to (37,736), 6 pins left untapped
+
+- Unit radar-2026-11-08-2203 by ticker-2334, about 23:35 to 23:50 local, status partial - the ordinary-task release cycle is fully done (stored 0 of 40, pending 0, bar gone, 44 claims, 16 executions) but the release completion standard also requires every map pin closed, and 6 pins stand untapped. Evidence in `_records_/2026-11-08/radar-tasks/2335-queue-run.md` (commit 86b26f5ce0 on records/2026-11-08). Tracker untouched, so radar stays due.
+- Entry: first tap at norm 59,687 (estimated from the fresh screenshot) missed the dish and only showed a transient "Achievements 8/16 Completed" tooltip; the radar did not open. Re-grounded from a magnified crop of the left icon column: the satellite dish icon with the red "10" badge sits at pixel about 24,700 in the 642x951 window, i.e. norm 37,736. The second tap at norm 37,736 opened the radar on the first try. The profile coordinate (norm 62,727, measured 2026-10-29 in a 763x1050 window) is stale in this window geometry. The (50,740) retro preference (Issue #484) was NOT tested in this unit - it stands as the first try, and the dish drifts per session, so re-ground fresh from a magnified crop of the left icon column in every unit.
+- Entry state, read live: Lv.13, radar points 267, stored tasks 39 of 40, stamina 120 (top right), restore line "12 Radar Task(s) will be restored in 05:59:54". Bottom bar at entry offered Quick Execute for 1 task (10 stamina).
+- Release cycle, alternating Quick Execute and Claim All until the bar disappeared: executed 16 tasks in 6 batches (1, 5, 3, 2, 3, 2) for 160 stamina; claimed 44 task rewards in 7 Claim All taps (11, 9, 8, 5, 5, 5, 1). Radar points 267 to 311 (+44, one per claim, as measured). Stored 39 of 40 to 0 of 40; pending rewards 0; no bottom action bar at close.
+- Free stamina claim taken once in the Regain Stamina panel (Remaining Today read 2 of 2 at entry, 75 stamina claimed; stamina 11 to 86 at that point). The 100 stamina for 300 rubies Buy button was never touched. Stamina items were not used (inventory counts read in the panel: 10-stamina x641, 50-stamina x665). Stamina at close 36.
+- Claimed rewards, summed from the seven CONGRATULATIONS popups: orange chest x50, radar coil x370, EXP 58.4M, blue triangle 2,496, blue card 8.0K, 5m speedup x8, 1m speedup x50, iron 14.0M, food about 11.7M, coin about 9.2M, Lv.1 chest x1.
+- HUD cross-check on return to base: power 149,209,253 unchanged; food 501.9M to 513.8M (+11.9M), iron 824.0M to 838.3M (+14.3M), coin 15.8M to 25.2M (+9.4M) - consistent with the radar claim totals above plus march yields shown during Quick Execute (floating 660,000 / 1,000,000 / 2,300,000 lines).
+- Pin inventory (release rule, untapped): at close, 6 pins standing, none tapped - 2 blue arrow pins (one with a red dot), 2 orange skull pins (no red dots visible), 1 portrait pin (a man's portrait in a blue frame, no red dot visible), 1 purple arrow pin (red dot not clearly visible). The brown circular animal-face pin inventoried on 2026-11-07 (norm about 85,738) was not seen in this unit's map views; the map panned away from the southwest edge and it may be off-screen rather than gone. The pins were not worked because the unit's 15 minutes were spent on the ordinary-task release cycle and the device token expired at 23:50:29. They fall to the next radar unit under the release handling rule.
+- Dish badge note: the dish badge read "10" at entry while stored was 39 of 40 and only 1 task was Quick Executable - the badge number does not equal the stored count. What it counts is not established; added as an open question.
+- One UI element noted but not touched: the gold icon with a NEW! badge at the top of the radar screen (about norm 295,60). Its function is still unknown; added as an open question. It is not part of this unit's work.
+- Duel note: the duel-score delta test is still owed - this unit did not visit the VS panel. If the in-game displayed value of 30,000 per task held, 44 claims would be about 1.32M duel points - stated here as an inference only, not a measurement. The duel-score unit in the inbox (duel-score-2026-11-08-2230) reads the VS panel separately.
+- Restore-line note: the closing toast read "Fully restore at 11-9 23:39:11 local time", meaning unverified; it is a different counter from the entry "12 Radar Task(s) will be restored in 05:59:54" countdown, recorded as read, not reconciled.
+- Result stats: target 1, achieved 0, resources_gained coin about 9.2M plus iron 14.0M food about 11.7M EXP 58.4M, costs 160 stamina plus 1 free claim, verified yes, blocker_category time (unit cap reached with pins unworked), stored_tasks 0, tasks_executed 16, tasks_claimed 44, pins_inventoried 6, pins_worked 0, stamina 36, radar_points 311, restore_in_minutes 360, free_stamina_claims 1, device_takeovers 0.
+- Commented on Issue #484 by this run with the fold.
+- Game left safe: base screen, no purchase, no diamond spent. No alliance diplomacy, no assembly, no teleport.
+- Follow-up: the next radar unit works the 6 standing pins under the release handling rule and re-grounds the dish fresh per session (newest verified first-try point (37,736) in the 642x951 window; the (50,740) preference untested this unit). It falls to the next run.
+
+## What the 2026-11-09 0159 unit added - stack empty 0 of 40 done, dish grounded (54,707) first tap, 6 pins inventoried untapped, NEW! badge re-seen
+
+- Unit radar-2026-11-08-2203 by ticker-0140, about 01:56 to 01:59 local, status done. Evidence in `_records_/2026-11-09/radar-tasks/0159-queue-run.md` (commit 3d5dc8314 on records/2026-11-09). Computer session cc-207.
+- Radar screen, entry verified by its own reads: Lv.13, radar points 311, stored 0/40, stamina 62, the green gauge at 100%. Restore line: "12 Radar Task(s) will be restored in 03:41:39." Stack EMPTY: 0 stored tasks, so Quick Execute has nothing to execute. No Claim All bar is shown, so no rewards are pending. The stack-day completion standard from the 1256 unit is met (closing reads recorded, pin inventory recorded untapped) and the tracker is marked done.
+- The 1355 unit on 2026-11-08 reported 16 stored tasks unexecuted with a Claim All bar lockout and 10 rewards pending; the stack has since emptied (executed, claimed or expired - not determined in this unit, recorded as observed, not asserted). No lockout state remains on this screen.
+- Pin inventory, untapped per the stack handling rule: 2 blue arrow pins (ordinary tasks, left and centre); 2 orange skull pins (top-right); 1 purple arrow pin (lower centre); 1 portrait pin (hero face, left-centre). No pin was tapped, so no claim or task was started. Hypothesis, NOT verified: the orange skull pins may be the same skull signal that appears as a timed badge on the base right edge (seen badge 1, 4 and 2 with about 00:00:24-00:00:28 timers in this pass) - the next radar unit should check whether tapping an orange skull pin matches that timer. The skull signal itself is filed as knowledge Issue #498 by this run.
+- NEW! badge on a yellow icon at the top of the radar screen (next to the 311 points) - observed only, not opened. This re-confirms the gold NEW! icon the 2335 unit saw (about 295,60); its function is still unknown.
+- Entry: the dish grounded fresh on the live screenshot at (54,707) and opened the radar on the first tap - the retro-preferred point (50,740) from Issue #484 and this grounded point agree within the same slot. The radio-looking icon at that position IS the dish slot in this rotation; the slot rotates, so every unit still re-grounds fresh. Commented on Issue #484 by this run: (54,707) is a new verified first-tap point in this rotation, (50,740) itself still untested as a direct tap.
+- No diamonds or money spent. Nothing claimed, fought, dispatched, donated, dug or bought. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 0, achieved 0, resources_gained none, costs about 4 minutes of unit time, no items spent, verified yes, blocker_category none.
