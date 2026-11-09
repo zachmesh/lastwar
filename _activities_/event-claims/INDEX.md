@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T13:32:17Z
+modified: 2026-11-09T15:32:17Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-1851 event-claims execution record 2026-11-08 1914 queue run (partial, new event The Age of Oil discovered, milestone 1 claimed, milestone 2 chest unresponsive blocker class c, Arms Race Base Building 0 points, Desert Storm Battle Day 2026-11-13; record commit cff344153 on records/2026-11-08)
   - source: ticker-0204 event-claims execution record 2026-11-09 0224 queue run (partial, Age of Oil milestone 2 chest claimed after the 1914 blocker, coin chest x3, red diamond x50, Oil 3.0K x6, 5-minute speedup x2, Arms Race Hero Advancement 0 points; record commit facef628c on records/2026-11-09)
   - source: ticker-0434 event-claims execution record 2026-11-09 0450 queue run (partial, hub swept all 7 tabs with Level Swap gone, Age of Oil milestones verified claimed, Wanted Boss rotated back to Code 87, check-in gift entry blocked a second consecutive unit; record commit b6ed78edd0 on records/2026-11-09)
+  - source: ticker-0704 event-claims execution record 2026-11-09 0706 queue run (done, both scout signals checked live, nothing claimable - Wanted Boss Code 87 not out yet, Go 09:44:17 at close, appears server 00:00, Rewards Individual tiers and Goals all unreached, Arms Race Tech Research score 0, cumulative 6/8; record commit 5ef03f4b on records/2026-11-09)
 ---
 
 
@@ -829,7 +830,7 @@ that drag is the sweep-completeness check, not wasted motion.
 - Whether the Battle Pass Donate Coal daily should be done on cold
   wave days, and the coal cost per donation.
 - What the Wanted Boss Code 87 fight pays in practice when it is
-  out at server 00:00. (2026-11-02 2113 update: the boss has rotated to Code 64, a giant gorilla, with Missile Vehicle heroes dealing 50% extra damage; best single attack read 852,929,736 against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B, all Claim buttons grey - the Code 87 payout question is moot until it rotates back.) (2026-11-09 0450 update: the boss HAS rotated back to Code 87, from Code 64 - the "moot until it rotates back" wording is superseded. Code 87 appears at server time 00:00, Go countdown 12:15:04 at about 04:47 local, so not out yet at that read. Ranking tiers No.1-No.10 pay at settlement; Individual Reward tiers (attack 1/2/3 times) all unearned, greyed. The payout question is live again: the next boss-out read must record what Code 87 pays.)
+  out at server 00:00. (2026-11-02 2113 update: the boss has rotated to Code 64, a giant gorilla, with Missile Vehicle heroes dealing 50% extra damage; best single attack read 852,929,736 against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B, all Claim buttons grey - the Code 87 payout question is moot until it rotates back.) (2026-11-09 0450 update: the boss HAS rotated back to Code 87, from Code 64 - the "moot until it rotates back" wording is superseded. Code 87 appears at server time 00:00, Go countdown 12:15:04 at about 04:47 local, so not out yet at that read. Ranking tiers No.1-No.10 pay at settlement; Individual Reward tiers (attack 1/2/3 times) all unearned, greyed. The payout question is live again: the next boss-out read must record what Code 87 pays.) (2026-11-09 0706 update: boss still not out - Go countdown 09:44:17 at close, appears server 00:00. Individual Reward tiers read live: 1 attack pays chests x6/x6/x6, 5-min speedup x5, red diamond x10; 2 attacks x8/x8/x8, x5, x20; 3 attacks x10/x10/x10, 10-min speedup x10, x20. Goals best single attack 899,542,636 against tiers 1.0B / 1.5B / 2.0B / 2.5B / 3.0B, all unreached, all Claim buttons greyed. The Wanted Boss tab red dot persists after the visit, so it is an event marker, not a claim indicator. The payout question stays live: the next events unit re-checks after the boss is out.)
 - Hub back arrow unresponsive to background clicks (0910 unit) - foreground-first exit still to be verified by a later unit. (2026-11-02 0935 update: the trucks unit's hub back arrow responded once its centre was re-measured at norm 158,947 after taps near 97,906 missed - point accuracy, not background clicks alone, may be the cause; the foreground-first exit is still to be verified by an events unit.) (2026-11-02 1250/1300 update: window close-and-relaunch is now a verified exit and recovery route - the 1250 unit restored hidden side rails by relaunch, and the 1300 passes unit exited the stalled hub by relaunch, both with state intact and no login or device dialog; the foreground-first exit itself is still unverified.) (2026-11-04 0245 update: back-arrow centre corrected - taps at norm 86,952 do nothing because that point hits the corner avatar icon; the corrected centre norm 132,952 returned to the base screen on the first tap, verified in both the Events hub exit and the Secret Command Post exit in the same pass. The foreground-first exit itself is still unverified.)
 
 ## What the 2026-11-04 0519 unit added - full hub sweep, 0 claimed, Arms Race phase ends inside the next hour
@@ -1248,3 +1249,15 @@ that drag is the sweep-completeness check, not wasted motion.
 - NOT performed (carried): the check-in gift (Hot Deals check-in banner, "FREE GIFT - Claim your gift today!" card) was not claimed: three entry methods failed in this unit. A tap on the card paged the carousel to the points card instead of opening the event; the Go button on the check-in page produced no change; a 1-second long-press on the card paged the carousel again. The card behaves as a carousel banner, not a tappable entry. Blocker class c (tap method), SECOND consecutive unit carrying this item (0224 unit first). The next events unit must pivot to a different entry route (e.g. the Events hub Calendar button, or a base-screen check-in icon) before spending taps on the banner again.
 - No diamonds or money spent. No speedups burned. No paid button tapped. No login or verification was demanded, and no different-device dialog appeared. Tracker untouched (partial). The game was left on the base screen.
 - Result stats: target 3, achieved 2, resources_gained none, costs about 6 minutes, no items spent, verified yes, blocker_category c (check-in gift carried).
+
+## What the 2026-11-09 0706 unit added - both scout signals checked live, nothing claimable, Wanted Boss Code 87 still not out
+
+- Unit events-2026-11-09-1450 by ticker-0704, about 07:06 to 07:18 local, status done, checked only. Evidence in `_records_/2026-11-09/event-claims/0706-queue-run.md` (commit 5ef03f4b on records/2026-11-09). Window: claimable now - scout 2026-11-09, base/hud Events icon badge 1; scout 2026-11-09, events/wanted-boss Wanted Boss tab red dot.
+- Base screen at entry: Events icon carried a red badge 1, coin 44.2M. Events hub opened on Arms Race (Tech Research phase, Contest Segment Lv.29-30, 02:51:08 left at first read). Score 0, point chests 6,250 / 12,500 / 30,000 unreached, cumulative chest 6/8 (not full). Nothing claimable on this page; the phase itself belongs to the arms-race unit, not this one - cross-read folded into arms-race 1.67.0.
+- Tab bar scrolled right: Wanted Boss tab carries a red dot (still present after visiting the tab - it is a persistent event marker, not a claim indicator). Survey Center and Community show no red dots; Community is the last tab, the bar does not scroll further. Survey Center was NOT opened, so knowledge Issue #506 (contents unknown) gets no new evidence from this unit.
+- Wanted Boss (Code 87): boss appears at server time 00:00, Go button countdown 09:49:33 at first read (09:44:17 at close) - the boss is NOT out yet, so no attack is possible now.
+- Rewards panel: Ranking Reward is a plain table (No.1 to No.4-10), no claim buttons. Individual Reward tiers (1 / 2 / 3 attacks) all greyed - 1 attack pays chests x6/x6/x6, 5-min speedup x5, red diamond x10; 2 attacks x8/x8/x8, x5, x20; 3 attacks x10/x10/x10, 10-min speedup x10, x20. Nothing earned, nothing to claim.
+- Goals panel: best single attack 899,542,636 against tiers 1.0B, 1.5B, 2.0B, 2.5B, 3.0B - all unreached, all Claim buttons greyed. Nothing claimable.
+- Method note: the Rewards panel X at (833, 156) did not close the panel on two taps (R2: method ended); the back arrow at (159, 952) closed it both times. Re-ground the panel X fresh next time instead of re-tapping the stale point.
+- Result: checked only, nothing claimed - both scout signals are explained and neither hides a claimable reward. The next events unit re-checks after the boss is out (server 00:00, about 9h44m after this unit).
+- Result stats: target claimable event rewards behind the two scout signals, achieved 0 claimed (0 claimable found), resources_gained none, verified yes (same-unit live reads), blocker_category none.

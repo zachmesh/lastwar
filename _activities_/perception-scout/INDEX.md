@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-09T14:32:17Z
+modified: 2026-11-09T15:32:17Z
 level: L1
-version: 1.48.0
+version: 1.49.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -68,6 +68,8 @@ grounded_in:
   - source: ticker-1822 perception-scout execution record 2026-11-08 1839 queue run (done, station re-check fourteenth no-train confirmation, Wars dot present with a rally waiting then cleared on return, fullscreen tap failure filed as tooling Issue #475; record commit 41fd5d472 on records/2026-11-08)
   - source: ticker-0140 perception-scout execution record 2026-11-09 0150 queue run (partial, station panel and Wars dot, leader Jerry Apex re-confirmed live, members 96/100, Wars dot absent seventh datapoint, sixteenth no-train, skull timer new unexplained signal filed as Issue #498, fullscreen tap failure re-confirmed; record commit 3d5dc8314 on records/2026-11-09)
   - source: ticker-0604 perception-scout execution record 2026-11-09 0606 queue run (partial, first perception of reset day 2026-11-09, two new Events tabs Age of Oil and Survey Center, Level Swap gone, 99+ chat badge unexplained, skull badge gone after expiry; record commit ab0c42f5e3 on records/2026-11-09)
+  - source: ticker-0704 scout-discovery execution record 2026-11-09 0718 queue run (done, 99+ chat badge resolved - unread Alliance chat count, clears on opening the Alliance tab, candidate REJECTED as a task; season skills reset announcement noted; record commit 5ef03f4b on records/2026-11-09)
+  - source: ticker-0704 event-claims execution record 2026-11-09 0706 queue run (done, Events tab-bar cross-read - Wanted Boss red dot persists, Survey Center and Community no dots, Community last tab; record commit 5ef03f4b on records/2026-11-09)
 ---
 
 
@@ -1699,7 +1701,7 @@ observe-only, nothing claimed). Evidence in
   re-seen and not cleared) and the unknown items
   (furnace overdrive toast now reading [22/60], second
   HUD row labels, 780 km home icon meaning) - carried
-  to the successor scout unit, not closed on silence.
+  to the successor scout unit, not closed on silence. (2026-11-09 0718 update: the 99+ badge is RESOLVED - it counts unread Alliance chat messages and clears on opening the Alliance tab, verified live by the scout-discovery unit; no reward, cost, deadline or scoring, candidate REJECTED as a task, no execution unit is produced from it. The remaining unexplained items in this bullet - Season II badge 1, Inventory dot, building badge 5, NEW! chest badge 3, furnace toast, second HUD row labels, 780 km home icon - stay carried.)
 - Whether stale staged scout units execute or expire - see the
   filing question in the 2026-11-01 section; a queue-rule
   decision, not a scout-unit decision. (2026-11-03 0910 update: a stale 11-02 post-reset scout unit DID execute when the queue `next` pick returned it and still yielded live reads, so execution of stale units is observed, not merely hypothesised; whether the planner or retro expires the chain is still open.)
@@ -3589,3 +3591,14 @@ observe-only, nothing claimed). Evidence in
 - Scout diff: tools/scout_diff.py dry run over the observation file - 29 observed, 8 actionable, 12 to enqueue, 3 already queued, 9 candidates, 0 unexplained red dots. The plan was NOT applied: its three execution enqueues (events, help, mail) duplicate units already staged for the 10:30 and 10:57 PT slots - the diff wrote the local slot time as UTC. Filed as tooling Issue #505 by the ticker unit (owned by lastwar-tool-developer, not duplicated here). The diff also drafted exploration candidates for info-only reads (Total Power total, building queue counts, the absent Zombie tab note) - misclassified, not filed. Only the two genuine unmatched labels above stand as candidates.
 - Not walked in this pass: Store by section, VIP page, passes pages, daily missions panel, alliance panel and station, duel page, radar panel, world map pins and loot box, Inventory contents, and the Age of Oil, Survey Center, Wanted Boss and Community event pages. The staged scout-midday-2026-11-09-0700 unit (07:00 local) covers them; no duplicate successor was enqueued.
 - Result stats: no result stats were recorded in the unit record beyond the red-dot accounting above; costs about 12 minutes of unit time (06:06 to 06:18), no items spent, verified yes.
+
+## What the 2026-11-09 0718 scout-discovery unit added - 99+ chat badge RESOLVED as the unread Alliance chat count, candidate rejected as a task
+
+- Unit scout-scout-discovery-2026-11-09-001 by ticker-0704, about 07:18 to 07:29 local, status done. Evidence in `_records_/2026-11-09/99-badge-at-chat/0718-queue-run.md` (commit 5ef03f4b on records/2026-11-09). Read-only exploration of the candidate the scout diff classified after the 06:05 scout pass closed (99+ badge at chat icon, base/hud).
+- Entry point (measured): base screen left edge, speech-bubble chat icon (red badge 3 at entry); the bottom chat ticker also carries the count. Tapping the ticker text itself does nothing; the chat icon opens the Chat panel. Tapping a player avatar inside the chat list opens that player's profile - read-only, closed untouched (no player details recorded).
+- Mechanism (measured): the 99+ badge sits on the Alliance tab of the Chat panel and counts unread Alliance channel messages. Opening the Alliance tab clears it - verified live: badge present on entry to Chat, gone after the Alliance tab opened. World sub-tabs carry their own small red dots (Season, English, Duel); the World list showed a "470 new message(s)" banner. Private tab carries a red badge 2 (not opened in this unit).
+- Rewards, cost, cycle, scoring (all measured): none - reading chat pays nothing, costs nothing (no diamonds, items or stamina), has no expiry (the count grows with unread messages and clears on read), and scores nothing.
+- Verdict: candidate REJECTED as a task - the 99+ badge is an informational unread-message counter for Alliance chat, not a playable task. No execution unit should be produced from it; the owner reads alliance chat himself when he wants to. No _activities_ entry is created for a rejected candidate; the resolution lives in this fold and in the open-questions update above. The provisional filing stays in `_records_/2026-11-09/perception-scout/scout-diff-output/scout-candidates-2026-11-09.md`.
+- Side observation (game state, not chat content): opening the Alliance tab showed an Alliance Announcement - season skills reset, the season has ended, all season skills are now inactive, spent points fully refunded. Noted here as a state fact; no action taken. A leader banner asks members to enable notifications for crucial Alliance news (Open / X) - not tapped, a settings change is the owner's decision, not this unit's.
+- Cross-read from the 0706 events unit in the same ticker pass: the Events tab bar scrolled right shows the Wanted Boss red dot persisting after the visit, Survey Center and Community with no red dots, Community the last tab (the bar does not scroll further). Survey Center was NOT opened, so Issue #506 gets no new evidence from this pass; Age of Oil was not opened either, so Issue #477 gets none.
+- Result stats: target explain the 99+ badge mechanism from live reads, achieved 1 mechanism explained and verified (badge clears on opening Alliance tab), resources_gained none, costs 11 minutes, no items spent, verified yes (same-unit live reads), blocker_category none.

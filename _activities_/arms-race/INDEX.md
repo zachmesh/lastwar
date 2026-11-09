@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T14:32:17Z
+modified: 2026-11-09T15:32:17Z
 level: L1
-version: 1.66.0
+version: 1.67.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -72,6 +72,7 @@ grounded_in:
   - source: ticker-0434 event-claims execution record 2026-11-09 0450 queue run (partial, Arms Race page cross-read only, Hero Advancement phase 82,500 re-read, timer 01:17:53, phase ends about 06:03, priority-1 arms-race unit enqueued by the events unit for the phase-end completion sweep; record commit b6ed78edd0 on records/2026-11-09)
   - source: ticker-0534 arms-race execution record 2026-11-09 0535 queue run (done, Hero Advancement phase re-read live before phase end, 82,500 stands, all earned chests already claimed, completion sweep clean, ranking-row chest falls to the first run after the phase ends; record commit a9b838c5ed on records/2026-11-09)
   - source: ticker-0604 perception-scout execution record 2026-11-09 0606 queue run (partial, Arms Race page cross-read only, Tech Research phase live with score 0, tiers 6,250 / 12,500 / 30,000, Hero Advancement ended; record commit ab0c42f5e3 on records/2026-11-09)
+  - source: ticker-0704 event-claims execution record 2026-11-09 0706 queue run (done, Arms Race page cross-read only, Tech Research score 0, timer 02:51:08 at first read, cumulative 6/8, ranking-row chest for the finished Hero Advancement phase still unchecked; record commit 5ef03f4b on records/2026-11-09)
 ---
 
 
@@ -2074,3 +2075,11 @@ slot. Evidence in
 - Phase rollover: the Hero Advancement phase ended between the 0535 unit's 00:21:49 timer at about 05:38 (end about 06:00) and this read - the new phase was live by about 06:06. The 0535 follow-up (ranking-row chest for the finished Hero Advancement phase) was NOT checked by this scout pass - the scout read the new phase page only, observe-only. It stays owed to the next arms-race unit.
 - Reading note: this 0606 cross-read supersedes the 0535 section's "newest live phase read" wording as the newest live Arms Race read; the 0535 section stands as the record of the Hero Advancement completion sweep.
 - Result stats: target not applicable (cross-read only), achieved 0, points 0, resources_gained none, costs about 1 minute of the scout pass, no items spent, verified yes, blocker_category none.
+
+## What the 2026-11-09 0706 events check added - cross-read only: Tech Research score 0 again, ranking chest still unchecked
+
+- Cross-read from unit events-2026-11-09-1450 by ticker-0704, about 07:06 to 07:18 local, status done (checked only). Evidence in `_records_/2026-11-09/event-claims/0706-queue-run.md` (commit 5ef03f4b on records/2026-11-09). The events unit opened the hub on the Arms Race page and read it only; no Arms Race grinding was done here.
+- Tech Research phase, Contest Segment Lv.29-30: score 0 again, point chests 6,250 / 12,500 / 30,000 unreached, cumulative chest 6/8 (not full, not claimable), timer 02:51:08 left at first read - consistent with the 0606 read of 03:47:52 about an hour earlier, putting the phase end at about 09:57. Nothing claimable on this page.
+- The ranking-row chest for the finished Hero Advancement phase was NOT checked by this unit either - it read the live Tech Research page only, observe-only. It stays owed to the next arms-race unit, now two reads in a row (0606, 0706) that did not check it.
+- Reading note: this 0706 cross-read supersedes the 0606 section's "newest live phase read" wording as the newest live Arms Race read; the 0606 section stands as the record of the phase rollover.
+- Result stats: target not applicable (cross-read only), achieved 0, points 0, resources_gained none, costs about 1 minute of the events pass, no items spent, verified yes, blocker_category none.
