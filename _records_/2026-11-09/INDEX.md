@@ -113,3 +113,17 @@ of 2026-10-28.
   zero unclassified, none created or closed since the 2339 pass.
   Owner-decision issues 132, 154 and 335 over 24 hours, statements
   current. Status: no-op. Full detail in pr-catchall/0046-run.md.
+## 00:40 to about 00:46 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0040. Plan staged
+  0 net fresh units (already_present 71,
+  skipped_done_current 0, reaped 0, expired 0, no phantom
+  re-stage, 3 branch-closed slots skipped: survivors 2203,
+  training 2203, zero-sweep 1730). Pre-reset sweep pair
+  already complete by execution (both passes executed
+  partial; 1630 done file absent from the live pool,
+  present on the branch tip); step 2 skipped, this run is
+  in the 00:00 hour. Scout diff applied with zero changes
+  (unexplained 14, unchanged). No withdrawals. Pool inbox
+  69, claimed 0, done 1321. Status: no-op. Full detail in
+  queue-planning/0040-run.md.
