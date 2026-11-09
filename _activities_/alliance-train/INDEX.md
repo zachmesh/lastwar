@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-09T10:32:17Z
+modified: 2026-11-09T12:32:17Z
 level: L1
-version: 1.34.0
+version: 1.35.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Train Conductor appointments, record commit caa661bab on records/2026-11-08)
   - source: ticker-2201 alliance-train execution record 2026-11-08 2211 queue run (partial, checked only, both preparation signals absent, no train preparing; record commit 8960535c on records/2026-11-08)
   - source: ticker-0204 alliance-train execution record 2026-11-09 0215 queue run (partial, checked only, both preparation signals absent, banner-only check, 37 seconds; record commit facef628c on records/2026-11-09)
+  - source: ticker-0404 alliance-train execution record 2026-11-09 0421 queue run (partial, checked only, no train in preparation, both preparation signals absent; record commit 9fdcc4c9ee on records/2026-11-09)
 ---
 
 # Alliance train
@@ -1101,3 +1102,11 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Preparation signals, both absent: base screen read live, total power 149,209,253. No train icon in the left icon column (chat with red dot, truck, radar, hammer only). No "Boarding closes in" banner under the resource bar. No train is in preparation.
 - What was not done: no station panel was opened and no carriage state was read; this is a banner-only signals check, not a station-panel verification, as in the 2211 unit. It does not advance the scout-chain station-panel no-train count. A further same-day no-train signal, not counted in the chain. No boarding, no conductor action, no spending.
 - Result stats: target 1, achieved 0, resources_gained none, costs 37 seconds, no items spent, verified yes, blocker_category h, train_preparing false, device_takeovers 0.
+
+## What the 2026-11-09 0421 unit added - checked only, no train preparing, banner-only signals check
+
+- Unit train-2026-11-09-0230 by ticker-0404, about 04:21 local, status partial (checked only). Evidence in `_records_/2026-11-09/alliance-train/0421-queue-run.md` (commit 9fdcc4c9ee on records/2026-11-09). Computer session cc-221 on the owner Mac mini.
+- Base screen read live: total power 149,217,331, food 540.1M, iron 864.9M, coin 42.9M, diamonds 13.22K. No different-device dialog appeared.
+- Preparation signals, both absent: no "Boarding closes in" banner under the resource bar (the top strip carries an alliance announcement fragment, not a boarding banner); no train icon in the left icon column (bus, truck, radar with red dot 1, hammer only).
+- No train is in preparation. Per the activity metadata the unit closes partial (checked only) without panning to the station, and the train is re-checked only when a train is preparing. This continues the no-train check-only chain (see the fold sections from 1826 onward); no chain count is asserted here.
+- Result stats: target 1, achieved 0, resources_gained none, costs 1m_wall_no_stamina, verified no, blocker_category h, train_preparing false, device_takeovers 0.

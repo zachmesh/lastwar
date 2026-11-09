@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T10:32:17Z
-version: 1.32.0
+modified: 2026-11-09T12:32:17Z
+version: 1.33.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-2201 alliance-duel execution record 2026-11-08 2220 queue run (done, personal duel total 0 on the new Radar Training day, read twice, alliance 261,068,886 vs 380,634,584; record commit 8960535c on records/2026-11-08)
   - source: ticker-0204 alliance-duel execution record 2026-11-09 0223 queue run (done, personal duel total 1,380,000 read twice, rank 153, gap 2,220,000, Radar Training day; record commit facef628c on records/2026-11-09)
   - source: ticker-0204 alliance-duel execution record 2026-11-09 0217 queue run (done, star ceremony checked only, no trophy icon; record commit facef628c on records/2026-11-09)
+  - source: ticker-0404 alliance-duel execution record 2026-11-09 0423 queue run (done, personal duel total 2,005,000 read twice, rank 144, gap 1,595,000, Radar Training day; record commit 9fdcc4c9ee on records/2026-11-09)
 ---
 
 
@@ -953,3 +954,16 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Star-ceremony unit star-ceremony-2026-11-08-2230 by ticker-0204, about 02:16 to 02:17 local, status done (checked only; no ceremony waiting). Evidence in `_records_/2026-11-09/alliance-duel/0217-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-211 (cc-209 had closed, fresh session started, LastWar window re-selected). Base screen read live: total power 149,209,253. Looked for the Star Ceremony trophy icon on the right side of the base screen, beside the Alliance button: the right column shows Events (red dot 3), VS, Alliance, Mail and Inventory only - no trophy icon is present, so no ceremony is waiting. Nothing was tapped in the game beyond the window re-selection. The game was left on the base screen.
 - Commented on Issue #136 by this run with the fold (duel-score regular executed on the Radar Training day, total 1,380,000 read twice, rank 153, gap 2,220,000; a mid-day snapshot, not the closing figure).
 - Result stats: duel-score target 3600000, achieved 1380000, points 1380000, gap 2220000, rank 153, theme Radar Training, ceremony_waiting false, costs 130 seconds, verified yes, blocker_category none, device_takeovers 0. Star-ceremony target 1, achieved 0, ceremonies_claimed 0, hearts_sent 0, steps_reached 0, costs about 2 minutes, verified yes, blocker_category f.
+
+## What the 2026-11-09 0423 unit added - duel day total 2,005,000 read twice, rank 144, gap 1,595,000; Ranking back arrow centre (64,944)
+
+- Duel-score unit duel-score-2026-11-09-0230 by ticker-0404, about 04:22 to 04:23 local, status done (read-only tracking unit; no grinding, no spending). Evidence in `_records_/2026-11-09/alliance-duel/0423-queue-run.md` (commit 9fdcc4c9ee on records/2026-11-09). Computer session cc-222 on the owner Mac mini.
+- Entry: gold VS medallion tapped at norm 916,210 from the base screen. The Alliance Duel panel opened on the "Today's Theme" tab.
+- Theme read live: Radar Training, countdown 13:37:36 at the panel read. Chest thresholds 40,000 / 150,000 / 540,000, all three progress bars full with checkmarks.
+- Personal daily total read live on the theme panel: 2,005,000 (gold medal figure under the theme title).
+- Cross-check on the Ranking tab (Daily Rank, Mon.): Bears Lair [AP3x] The Apex, rank 144, 2,005,000, highlighted as the own row. The panel figure and the ranking figure agree exactly. Top of the board: kaka wu [TFox] Fox 65,184,546; 안 Mihye [TFox] Fox 57,805,038; PrabuSiliwang [TFox] Fox 42,485,688.
+- Exit: Ranking back arrow centre measured at norm 64,944 on this screen (the 0223 record's 145,947 point produced no change here, and a second tap at that point was not repeated per rule R2); the duel panel back arrow at norm 145,947 returned the game to the base screen. Back-arrow positions are panel-specific; ground the centre fresh. This REFINES the 0223 fold, which recorded 145,947 as the duel-panel back arrow - that still stands; 145,947 is not the Ranking-tab back arrow, (64,944) is.
+- Closing reads: personal duel total 2,005,000 of the 3,600,000 owner target, gap 1,595,000, rank 144. Movement since the 02:15 read (1,380,000, rank 153): plus 625,000, rank up 9. This is a mid-day snapshot: the Radar Training duel day began at the 19:00 reset on 2026-11-08 and rolls over about 18:00 local today, so this is not the day closing figure. No grinding, no spending, no buying to chase the target.
+- Stats correction (appended 04:24, same pass, in the record): the queue tool warned on completion that points must not duplicate achieved - points is score gained inside the unit, and this is a read-only unit, so points is 0 and the 2,005,000 total lives in achieved only. The done unit file was corrected to points 0. blocker_category h was added to the unit stats: the achieved-below-target gap is by design (mid-day read on a read-only tracking unit, day not over), not a miss.
+- Commented on Issue #136 by this run with the fold (duel-score regular executed on the Radar Training day, total 2,005,000 read twice, rank 144, gap 1,595,000; a mid-day snapshot, not the closing figure).
+- Result stats: target 3600000, achieved 2005000, points 0, gap 1595000, rank 144, theme Radar Training, costs 2m_wall_no_stamina, verified yes, blocker_category h, device_takeovers 0.
