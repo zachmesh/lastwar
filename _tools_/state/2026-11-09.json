@@ -1,8 +1,8 @@
 {
  "help": {
   "status": "done",
-  "at": "2026-11-09T01:00:46-08:00",
-  "note": "Help All pressed, 1 ally request cleared"
+  "at": "2026-11-09T04:18:50-08:00",
+  "note": "Help All pressed once; one ally request cleared (Bamie, Oil Output I)"
  },
  "radar": {
   "status": "done",
@@ -11,13 +11,13 @@
  },
  "gifts": {
   "status": "done",
-  "at": "2026-11-09T02:12:22-08:00",
-  "note": "102 Regular + 10 Premium claimed, both tabs verified clear"
+  "at": "2026-11-09T04:16:56-08:00",
+  "note": "37 Regular and 2 Premium gifts claimed, both dialogs confirmed; progress 195,637,370 to 195,638,460"
  },
  "duel-score": {
   "status": "done",
-  "at": "2026-11-09T02:15:37-08:00",
-  "note": "Personal total 1380000, gap 2220000, rank 153"
+  "at": "2026-11-09T04:23:31-08:00",
+  "note": "Personal total 2,005,000 of 3,600,000, gap 1,595,000, rank 144"
  },
  "star-ceremony": {
   "status": "done",
@@ -43,5 +43,15 @@
   "status": "done",
   "at": "2026-11-09T03:10:38-08:00",
   "note": "Hero Advancement 82,500 vs 12,000 target, McGregor 145 to 146, all chests claimed"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-11-09T04:09:38-08:00",
+  "note": "One gate visitor processed (Friendly Visitor dialog, Cancel); gate line verified clear, 0 recruits"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-09T04:21:03-08:00",
+  "note": "All red-dot categories walked; No rewards available in Event and Regular; Purchases receipts only; 0 claimed"
  }
 }

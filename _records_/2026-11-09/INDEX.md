@@ -838,3 +838,86 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Tools PR 425 owner-gated, clean, OD-20261108-01 still
   open, no owner answer, no new comment. Status: done.
   Full detail in pr-integration/0415-run.md.
+## 04:06 to about 04:09 — Survivor intake queue run (ticker-0404)
+
+- Survivors unit survivors-2026-11-09-0203, status done.
+  One gate figure processed: a Friendly Visitor dialog
+  (resources not collected in time, enable notifications)
+  closed with Cancel, nothing enabled. No recruit card,
+  no named recruit, no building post, so no Quick
+  Dispatch gap. Closing re-ground found no question-mark
+  bubble remaining at the gate; the one remaining bubble
+  above the Gear Factory resolved to a building selection,
+  not a survivor. Full detail in
+  survivor-intake/0409-queue-run.md.
+
+## 04:10 to about 04:13 — Troop training queue run (ticker-0404)
+
+- Training unit training-2026-11-09-0203, status partial.
+  No barracks tent verified: none grounded in the windowed
+  frame, a west road drag moved nothing, and the
+  zoom-out-first variant (native fullscreen, still untried
+  until now) grounded one tent candidate at norm 445,665
+  whose tap produced no change. Fullscreen exited cleanly
+  via View / Exit Full Screen (menu action); the game is
+  back in the 642 by 951 window. 0 barracks verified, 0
+  batches queued; Drill Ground not re-read. Full detail in
+  troop-training/0413-queue-run.md.
+
+## 04:14 to about 04:17 — Alliance gifts queue run (ticker-0404)
+
+- Gifts unit gifts-2026-11-09-0230, status done. Regular
+  Claim All 37 (dialog-confirmed) and Premium Claim All 2
+  (dialog-confirmed), 39 gifts in total. Gift Level 28
+  progress 195,637,370 to 195,638,460 of 206,300,000
+  (plus 1,090 in-unit; the Regular window moved plus 390
+  against plus 370 from the 37 claims, the extra 20
+  recorded as observed with no cause asserted; the Premium
+  window moved exactly plus 700). Completion sweep clean:
+  both tabs all Claimed, no Claim All buttons, no red dot
+  on the Alliance Gifts entry. Full detail in
+  alliance-gifts/0417-queue-run.md.
+
+## 04:18 to about 04:19 — Alliance help queue run (ticker-0404)
+
+- Help unit help-2026-11-09-0230, status done. Help All
+  pressed once; the one waiting ally request (꿀밤Bamie,
+  Oil Output I research) was cleared, toast "Allies are
+  very grateful for your assistance!" read live. The three
+  own requests (Missile Mastery II, Defense Training VIII,
+  Lv.30 Aircraft Center) now show reduced-time displays.
+  Header still 520/1,000 at the closing read, so no points
+  increase is claimed. Full detail in
+  alliance-help/0419-queue-run.md.
+
+## 04:19 to about 04:21 — Mail rewards queue run (ticker-0404)
+
+- Mail unit mail-2026-11-09-0230, status done. All three
+  red-dot categories walked: Event Claim All returned "No
+  rewards available" (train and Mega Express notification
+  mails), Regular Claim All returned "No rewards available"
+  (battle reports), In-app Purchases holds receipts only
+  (Drone Great Value Pack 2026-11-08, Gear Master Pack
+  2026-11-07) and was not claim-pressed. 0 claimed, 0
+  deleted. Full detail in mail-rewards/0421-queue-run.md.
+
+## 04:21 — Alliance train queue run (ticker-0404)
+
+- Train unit train-2026-11-09-0230, status partial
+  (checked only). Both preparation signals absent: no
+  "Boarding closes in" banner and no train icon in the
+  left column. No train in preparation; no boarding
+  action taken. Full detail in
+  alliance-train/0421-queue-run.md.
+
+## 04:22 to about 04:23 — Duel score queue run (ticker-0404)
+
+- Duel-score unit duel-score-2026-11-09-0230, status done.
+  Personal daily total read live on the Radar Training
+  duel panel: 2,005,000 of the 3,600,000 target, gap
+  1,595,000, rank 144 on the Daily Rank Mon. tab
+  (cross-checked: panel and ranking figures agree). Up
+  625,000 and 9 ranks since the 02:15 read (1,380,000,
+  rank 153). Mid-day snapshot; the day rolls over about
+  18:00 local. Full detail in
+  alliance-duel/0423-queue-run.md.
