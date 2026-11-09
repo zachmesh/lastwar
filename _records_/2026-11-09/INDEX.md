@@ -1689,3 +1689,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   pr-integration/0830-run.md.
 >>>>>>> 59de55447943018b619a1bca44d8c08edd0bb186
 
+
+## 08:32 to 08:45 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-0832. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #513 taken as the single item - regulars.json gains research and building-queues regulars (every-run, segment 1); PR #515 opened (commit a7b8b11d, MERGEABLE); 38 fixture assertions 38/38 on isolated /tmp scratch pools, negative control reproduces the no-owner gap on main; progress commented on #513 and synced to the owner Slack DM. Full detail in tool-development/0832-run.md.
