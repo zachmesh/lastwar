@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T12:32:17Z
-version: 1.33.0
+modified: 2026-11-09T13:32:17Z
+version: 1.34.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -40,6 +40,7 @@ grounded_in:
   - source: ticker-0204 alliance-duel execution record 2026-11-09 0223 queue run (done, personal duel total 1,380,000 read twice, rank 153, gap 2,220,000, Radar Training day; record commit facef628c on records/2026-11-09)
   - source: ticker-0204 alliance-duel execution record 2026-11-09 0217 queue run (done, star ceremony checked only, no trophy icon; record commit facef628c on records/2026-11-09)
   - source: ticker-0404 alliance-duel execution record 2026-11-09 0423 queue run (done, personal duel total 2,005,000 read twice, rank 144, gap 1,595,000, Radar Training day; record commit 9fdcc4c9ee on records/2026-11-09)
+  - source: ticker-0434 alliance-duel execution record 2026-11-09 0441 queue run (done, star ceremony checked only, no trophy icon, right rail read, VS countdown 13:20:41 consistent with the about-18:00 rollover; record commit b6ed78edd0 on records/2026-11-09)
 ---
 
 
@@ -967,3 +968,13 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Stats correction (appended 04:24, same pass, in the record): the queue tool warned on completion that points must not duplicate achieved - points is score gained inside the unit, and this is a read-only unit, so points is 0 and the 2,005,000 total lives in achieved only. The done unit file was corrected to points 0. blocker_category h was added to the unit stats: the achieved-below-target gap is by design (mid-day read on a read-only tracking unit, day not over), not a miss.
 - Commented on Issue #136 by this run with the fold (duel-score regular executed on the Radar Training day, total 2,005,000 read twice, rank 144, gap 1,595,000; a mid-day snapshot, not the closing figure).
 - Result stats: target 3600000, achieved 2005000, points 0, gap 1595000, rank 144, theme Radar Training, costs 2m_wall_no_stamina, verified yes, blocker_category h, device_takeovers 0.
+
+## What the 2026-11-09 0441 unit added - star ceremony checked only, no trophy; VS countdown 13:20:41 confirms the about-18:00 rollover
+
+- Star-ceremony unit star-ceremony-2026-11-09-0230 by ticker-0434, about 04:39 to 04:41 local, status done (checked only; no ceremony waiting). Evidence in `_records_/2026-11-09/alliance-duel/0441-queue-run.md` (commit b6ed78edd0 on records/2026-11-09). Computer session cc-223 on the owner Mac mini. No different-device dialog appeared.
+- Base screen read live: total power 149,217,331; food 540.1M, iron 864.9M, coins 42.9M on the top bar. Power is up from 149,209,253 at the 0217 read (about 02:16) - the account gained about 8,000 power between the two reads, cause not observed and not asserted.
+- Looked for the Star Ceremony trophy icon on the right side of the base screen, beside the Alliance button. The right rail reads Events (red 2), VS medallion (countdown 13:20:41), Season II (NEW), Alliance, Mail (red dot), Inventory - no trophy icon is present, so no ceremony is waiting.
+- The VS countdown 13:20:41 at 04:39 local ends about 18:00 local, consistent with the duel day rolling over about 18:00 local (Issue #242 resolution): 04:39 plus 13:20:41 is 17:59:41. This is the third live timer this reset day pointing at the same rollover (14:52:31 at the 0306 cross-read, 13:37:36 at the 0423 panel read).
+- Nothing was tapped in the game beyond the window selection. No ceremony played, no rewards claimed, no spending. Resource bubbles visible on the base screen were left for the harvest unit, one unit one task type.
+- Commented on Issue #242 by this run with the fold (VS countdown 13:20:41 at 04:39 local ends about 18:00, third live timer this reset day pointing at the same rollover).
+- Result stats: target 1, achieved 0, ceremonies_claimed 0, hearts_sent 0, steps_reached 0, costs about 2 minutes, verified yes, blocker_category f.

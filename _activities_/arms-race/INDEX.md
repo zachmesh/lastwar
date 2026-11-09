@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T11:32:17Z
+modified: 2026-11-09T13:32:17Z
 level: L1
-version: 1.64.0
+version: 1.65.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -69,6 +69,7 @@ grounded_in:
   - source: ticker-0113 arms-race execution record 2026-11-09 0129 queue run (partial, Unit Progression phase read live again, 0 points, timer 00:44:05, third consecutive tent-grounding failure, Drill Ground Lv.30 re-confirmed, fill not executed, phase ends about 02:00; record commit c0ebf0c4f0 on records/2026-11-09)
   - source: ticker-0204 event-claims execution record 2026-11-09 0224 queue run (partial, Arms Race page cross-read only, Hero Advancement phase 0 points, timer 03:37:48, chests 2,000/4,000/12,000 unreached; record commit facef628c on records/2026-11-09)
   - source: ticker-0304 arms-race execution record 2026-11-09 0306 queue run (done, Hero Advancement phase met live, McGregor Lv.145 to 146 for 82,500 points, all three point chests and the cumulative counter chest claimed, Unit Progression formal miss verdict 0 of 75,000; record commit e6f80f1e2 on records/2026-11-09)
+  - source: ticker-0434 event-claims execution record 2026-11-09 0450 queue run (partial, Arms Race page cross-read only, Hero Advancement phase 82,500 re-read, timer 01:17:53, phase ends about 06:03, priority-1 arms-race unit enqueued by the events unit for the phase-end completion sweep; record commit b6ed78edd0 on records/2026-11-09)
 ---
 
 
@@ -2040,3 +2041,12 @@ slot. Evidence in
 - No diamonds or money spent. No speedup item used. No building or research started. No stage swap. No other unit's work touched. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 12000, achieved 82500, points 82500, resources_gained Skill Medal 1.6K, Arms Race Badge x6, SR chest x32, coin chest x32, 5m speedup x68, gold ticket x1, pink puzzle piece x2, red gem 50 x1, costs 165.0M Hero EXP (McGregor Lv.145 to 146), about 16 minutes of unit time, verified yes, blocker_category none.
 - Follow-up: the Hero Advancement phase ends about 06:00-06:02 local; the next arms-race unit after the phase ends records the next phase and its verdict. The cumulative counter at 6/8 carries into the next tier.
+
+## What the 2026-11-09 0450 events unit added - cross-read only: Hero Advancement 82,500 re-read, phase ends about 06:03, priority-1 completion-sweep unit enqueued by the events unit
+
+- Cross-read only - no arms-race unit ran this hour. The 0450 events unit opened the Events hub on the Arms Race page about 04:44 to 04:50 local. Evidence in `_records_/2026-11-09/event-claims/0450-queue-run.md` (commit b6ed78edd0 on records/2026-11-09).
+- Hero Advancement phase, Contest Segment Lv.29-30, score 82,500 read live, warzone rank #2110, phase timer 01:17:53. Point chests 2,000 / 4,000 / 12,000 are all open (claimed) and the progress bar is fully green; the purple segment chest reads 6/8, not yet claimable. Score unchanged from the 0306 met read - no further scoring was done or needed in this window.
+- Phase-end refinement: the 01:17:53 timer at about 04:45 puts the phase end at about 06:03 local, refining the 0306 section's about 06:00-06:02 estimate by a few minutes. The 0306 follow-up ("the next arms-race unit after the phase ends records the next phase and its verdict") still stands; the 0450 read does not change it.
+- CROSS-ACTIVITY ENQUEUE, new precedent for this profile: no arms-race unit is staged for this phase (the inbox unit is 14:03 local, next phase), so the events unit enqueued a priority 1 arms-race unit arms-race-2026-11-09-1248 in this pass, expiring at the phase end, for the completion sweep before the window closes. A claim-round unit may enqueue a scoring unit for a closing phase when none is staged - the sweep then belongs to the arms-race unit, not to the claim round.
+- Reading note: this 0450 cross-read supersedes the 0306 section's "newest live phase read" wording as the newest live Arms Race phase read; the 0306 section stands as the record of the phase-met execution.
+- Result stats: target not applicable (cross-read only), achieved 82500, points 0, resources_gained none, costs about 1 minute of the events unit, no items spent, verified yes, blocker_category none.
