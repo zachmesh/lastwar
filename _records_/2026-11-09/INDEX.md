@@ -1550,3 +1550,27 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   still open, no owner answer. No merges, no PRs opened.
   Status: done. Full detail in
   pr-integration/0730-run.md.
+
+## 07:44 to 07:53 — Queue ticker pass, scout discovery (done)
+
+- Scout unit scout-scout-discovery-2026-11-09-002, done: building
+  queue 1 of 4 and research 1 of 2 read live - Lv.29 Aircraft
+  Center upgrade 2d 18:40:11 left, slots 2-4 Idle; Defense Training
+  VIII completed (Complete NOT pressed - scout observes only),
+  Lv.1 Missile Mastery II in progress 2d 02:29:17. Flask icon
+  centre grounded at (59,249) after three left-edge mis-taps (one
+  opened the Decoration Gallery: UR 18/39, SSR 7/19, SR 4/4,
+  Decor Power 6,160,413 - appended to the day observation file).
+  No owning regular exists for research-queue or building-queues,
+  so the finished research sits uncompleted: Issue #513 filed.
+  Full detail in building-queue-1-of/0744-queue-run.md.
+
+## 07:55 to 07:57 — Queue ticker pass, scout discovery (done)
+
+- Scout unit scout-scout-discovery-2026-11-09-003, done: the
+  Inventory icon red dot is the new-items badge on the Special tab
+  (1509) plus per-item red dots - Amethyst Crystal x4,882,
+  grey-blue crystal x248,600, chests x240 / x1,169 / x42 and more.
+  No reward, cost, deadline or scoring: candidate REJECTED as a
+  task (informational counter only). Nothing used or opened. Full
+  detail in inventory-icon-red-dot/0755-queue-run.md.

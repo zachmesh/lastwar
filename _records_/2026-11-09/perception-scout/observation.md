@@ -369,6 +369,14 @@ observed_items:
     suggested_unit: mail
     redline_check: clear - reading only
 
+  - surface: base
+    label: Decoration Gallery (Overview) - UR 18/39, SSR 7/19, SR 4/4, Total Decor Combat Power 6,160,413
+    state: info-only
+    deadline: ""
+    est_value_or_score: bonuses Hero Attack +5494, Hero Defense +810, Hero HP +172515, March Size +2, Damage to Monsters +1.62%, Construction Speed +15.00%, Secret Mobile Squad Dispatch +3
+    suggested_unit: new
+    redline_check: clear - reading only, opened by a mis-tap during building-queue-1-of exploration (unit 002), closed untouched
+
 unmatched_labels:
   - The Age of Oil
   - Survey Center
