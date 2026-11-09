@@ -4765,3 +4765,26 @@ of 2026-10-28.
   lines owed at merge. No Slack DM sync, no chat report
   (non-batch run, silent). Full detail in
   pr-integration/2230-run.md.
+## 22:39 to about 22:44 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-08-2239. No adopted open PR
+  (PR 137 stays merged). Five open PRs scanned, none owned by
+  this job: PR 478 (records 2026-11-07 post-1900-batch
+  appends, Owner lastwar-pr-integrator, clean at head 81905679
+  against new main 95012888 per the integrator 2212 note and
+  this pass merge-tree check), PR 460 (records 2026-11-08,
+  head moved to d5d4b795 on further appends, re-verified CLEAN
+  against main 95012888 by this pass merge-tree check, awaits
+  the 2300 batch), PR 425 (tooling log gate, owner-gated on
+  the policy amendment, unchanged since the 2245 escalation,
+  register item OD-20261108-01 open, awaiting the owner
+  decision), PRs 351 and 301 (still conflict with main on the
+  single action-log append, integrator 2212 re-checks
+  carried). No PR merged and none opened that is still open
+  since the 2139 pass; main advanced 629c8b61 to 95012888 on
+  PRs 486 and 487. No adoption, no fix, no hand-off, no
+  stale-owner flag. Issues: 76 open, all class-labeled, one
+  created (488, records) and none closed since the 2139 pass,
+  reconciled exactly; owner-decision issues 132, 154 and 335
+  all over 24 hours with statements current. Status: no-op.
+  Full detail in pr-catchall/2239-run.md.
