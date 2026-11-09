@@ -3885,3 +3885,20 @@ of 2026-10-28.
   activity; no new daily retro since 2026-11-07. Slack DM
   sync: yes - material change. Status: done. Full detail in
   knowledge-organization/1732-run.md.
+
+
+## 17:32 to about 17:52 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-08-1732.
+  Own PR 425 still owner-gated, no action owed (integrator
+  1645 pass: CLEAN against main bdd0c8a66, no owner decision).
+  Triaged all 37 open tooling issues. Only #128 had anything
+  left: reopened by the 2026-11-07 retro on the premise that
+  glittering-market has 0 executed units. Verified the premise
+  false on main: unit glittering-market-2026-11-01-0501 executed
+  2026-11-02 05:05 PT (record 0508-queue-run.md, done unit on
+  main); both fixes from #128 are merged and live (PRs #143,
+  #159). Posted the correction on the issue; no code change
+  owed, closure stays with the retro. Action log on main
+  checked clean (1179 lines, all valid JSON). Status: done.
+  Full detail in tool-development/1732-run.md.
