@@ -351,4 +351,43 @@ of 2026-10-28.
   re-verified (OD-20261108-01 open). No Slack sync by this run
   (merge reported in the run result for resolution delivery).
   Full detail in pr-integration/0145-run.md.
+## 01:50 perception-scout (ticker-0140, partial)
 
+Station panel and Wars dot check, stale scout-2026-11-02 chain
+seq 017. No train preparing: no "Boarding closes in" banner and
+no train icon - the blue bus icon opens the Trucks screen
+(Today's Trade Count 0/5, observed only). Sixteenth same-day
+no-train confirmation. Wars dot ABSENT (Issue #212, seventh
+same-day datapoint). Alliance panel live: Leader Jerry Apex
+(leadership change confirmed), Power 13,532,886,654, Members
+96/100; dots on Help and Alliance Gifts only. New unexplained
+signal: skull icon badge 1 with a 00:00:24 countdown appeared
+on the base right edge about 01:57, meaning unverified, carried
+to the current day's scout pass. Fullscreen tap failure
+re-confirmed (Issue #475): Alliance icon tap did nothing in
+fullscreen, opened at once at (931,705) after exiting to the
+642x951 window. Tracker untouched. Full detail in
+perception-scout/0150-queue-run.md.
+
+## 02:02 resource-collection (ticker-0140, partial)
+
+Harvest, unit harvest-2026-11-08-2203. 0 collected: no resource
+bubble visible in the south snow view or the north tents/domes
+view; the resource quarter was not reached in either pan. The
+white truck icon opens the Secret Command Post, not the Armed
+Truck, so the Armed Truck loot state stays unverified. Skull
+timer signal reappeared (badge 4, 00:00:23) - meaning still
+unverified, carried to the scout pass. Tracker untouched. Full
+detail in resource-collection/0202-queue-run.md.
+(Time corrected: the harvest run closed 01:55 PT; the 02:02
+heading above was the estimate at writing time.)
+
+## 01:59 radar-tasks (ticker-0140, done)
+
+Radar, unit radar-2026-11-08-2203 (duel day 1 release). Stack
+empty: Lv.13, points 311, stored 0/40, stamina 62, 12 tasks
+restore in 03:41:39. No Quick Execute work, no Claim All bar;
+the 1355 lockout state is gone. 6 map pins inventoried untapped
+(2 blue, 2 orange skull, 1 purple, 1 portrait). Dish grounded
+fresh at (54,707), first-tap entry. Tracker marked done. Full
+detail in radar-tasks/0159-queue-run.md.

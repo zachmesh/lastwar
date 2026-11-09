@@ -3,5 +3,10 @@
   "status": "done",
   "at": "2026-11-09T01:00:46-08:00",
   "note": "Help All pressed, 1 ally request cleared"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-09T01:58:54-08:00",
+  "note": "Stack empty 0/40, points 311, 6 pins inventoried untapped"
  }
 }
