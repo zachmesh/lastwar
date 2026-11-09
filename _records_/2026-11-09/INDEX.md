@@ -395,3 +395,15 @@ detail in radar-tasks/0159-queue-run.md.
 ## 01:32 to about 02:05 — Tool development pass
 
 - Tool-developer pass tool-development-2026-11-09-0132. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #147 taken as the single item - queue.py now stages one pre-reset fix-up unit per ledger regular at the pair-midpoint slot (17:00 local), priority 1, expiring at the reset, via plan (early path) and sweep (17:50 ensure); PR #497 opened (commit 5d2b52c0); 190 fixture assertions 190/190 on two runs on isolated /tmp scratch pools; progress commented on #147. Full detail in tool-development/0132-run.md.
+## 02:00 to 02:13 — PR integration pass
+
+- Integrator pr-integration-2026-11-09-0200 (NON-batch).
+  Checker due no (next batch 03:00 PT); merged tools PR 497
+  (squash) with sync-back of main 25ec07de to d72dc6f40;
+  records PRs 493 and 491 clean against new main d72dc6f40,
+  awaiting the 03:00 batch; records PRs 478, 351, 301 still
+  conflicted on the single action-log file, re-check comments
+  posted after main moved; tools PR 425 owner-gated, clean,
+  re-verified (OD-20261108-01 open). No Slack sync by this run
+  (merge reported in the run result for resolution delivery).
+  Full detail in pr-integration/0200-run.md.
