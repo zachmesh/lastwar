@@ -1249,3 +1249,39 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   owner-gated, clean, OD-20261108-01 still open, no
   owner answer, no new comment. Status: done. Full
   detail in pr-integration/0600-run.md.
+
+## 06:06 to about 06:20 — Queue ticker pass, perception scout (partial)
+
+- Ticker pass ticker-0604. Sync reaped nothing and produced
+  nothing new - 10 due regulars already queued, 9 slots
+  skipped as already closed on the branch, 1 stale inbox copy
+  dropped. No zombie chain was seeded: the Zombie Invasion
+  event ended at about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066), and the Events hub
+  tab bar, scrolled end to end, still shows no Zombie
+  Invasion tab.
+- Open records PRs checked first: PR 493 (records/2026-11-09)
+  is OPEN, CLEAN and mergeable, awaiting the 07:00 batch; its
+  newest comments are integrator notes only, no question
+  addressed to this job.
+- Scout unit scout-midday-2026-11-08-0700, partial: its slot
+  was the 2026-11-08 midday pass, already past, so the pass ran
+  against the live game and opened the first perception of
+  reset day 2026-11-09. Base, HUD, Events hub and Mail walked:
+  30 items observed, 6 red dots seen and 5 explained, 1
+  unexplained (the 99+ chat badge, carried to the 07:00 unit).
+  Arms Race Tech Research phase, Contest Segment Lv.29-30,
+  score 0, chest 6/8, 03:47:52 left, tiers 6250 / 12500 /
+  30000. The 6d countdown at the right edge is the Season II
+  timer (the 0140 pass read it at 6d 16:16:29). Events hub has
+  seven tabs - The Age of Oil and Survey Center are new against
+  the 2026-10-30 roster and enter discovery as candidates;
+  Level Swap is gone. Mail has seven categories; one unread
+  Event mail (alliance train notice, 4m ago) with Claim All
+  present. Store, VIP, passes, daily missions, alliance, duel,
+  radar and world map not walked - the staged
+  scout-midday-2026-11-09-0700 unit (07:00) covers them. Scout
+  diff dry run: its 3 execution enqueues duplicate
+  already-staged 10:30/10:57 PT units (diff wrote local times
+  as UTC), so the plan was not applied; filed as Issue #505.
+  Full detail in perception-scout/0606-queue-run.md.
