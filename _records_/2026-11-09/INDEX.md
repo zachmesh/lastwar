@@ -1818,3 +1818,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Tools PR 425 owner-gated, unchanged head, OD-20261108-01
   still open, no new comment. Status: done. Full detail in
   pr-integration/0900-run.md.
+
+## 09:05 to 09:26 — Queue ticker pass, survivors (partial)
+
+- Survivors unit survivors-2026-11-09-0603, partial: gate line verified
+  live for the first time after the 2026-10-31 retro note - two
+  survivors with question-mark bubbles at the Zombies gate (camera
+  must be panned down; the gate sits at the bottom edge behind the
+  chat bar). Right-hand figure tapped; both bubbles cleared and a
+  smiley-face bubble now sits at the gate, confirming one intake
+  (name and role unread, so recorded unverified). Second survivor
+  unverified at the unit cap; Quick Dispatch did not run and is the
+  first action of the next survivors unit. Tap-method cost inside
+  the unit: a grounding point opened Mail (Season Closed letter,
+  2026-11-08 17:00:05, nothing claimed) and a tap on chat-bar
+  question marks opened Chat (no message sent). Live reads at entry:
+  coin 46.2M, power 149,217,331, stamina 92. Tracker untouched.
+  Full detail in survivor-intake/0926-queue-run.md.
