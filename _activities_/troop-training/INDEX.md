@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-09T09:32:17Z
+modified: 2026-11-09T12:32:17Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-0019 troop-training execution record 2026-11-09 0039 queue run (partial, Drill Ground Lv.30 read live, Unit Count +10080, officers Samantha/William/Chloe/Catherine, Quick Dispatch not tapped, fenced structure resolves to Aircraft Center Lv.29, no barracks verified; record commit f99faa9744 on records/2026-11-09)
   - source: ticker-0034 arms-race execution record 2026-11-09 0058 queue run (partial, Unit Progression phase read live 0 points, Events entry (672,132), orange medal is Wall of Honor, back arrow centre (355,944), fill not executed, barracks state carried forward; record commit 77db994162 on records/2026-11-09)
   - source: ticker-0113 arms-race execution record 2026-11-09 0129 queue run (partial, Unit Progression phase read live again 0 points, third consecutive tent-grounding failure, red troop formation resolves to Drill Ground Lv.30, entry route must change, phase ends about 02:00; record commit c0ebf0c4f0 on records/2026-11-09)
+  - source: ticker-0404 troop-training execution record 2026-11-09 0413 queue run (partial, fullscreen zoom-out variant tried, no barracks tent verified, View-menu fullscreen exit measured; record commit 9fdcc4c9ee on records/2026-11-09)
 ---
 
 # Troop training
@@ -875,6 +876,8 @@ Observed in game on this account, first execution 2026-10-25.
 
 - 1.31.0 (2026-11-09): 0129 arms-race unit folded as the R2 metadata write (third consecutive tent-grounding failure - 0039, 0058, 0129 - red troop formation resolves to Drill Ground Lv.30 again, both failed routes retired, entry route must change before any further training or fill unit runs; Drill Ground Lv.30 re-confirmed live; phase ends about 02:00 before the Lv.27 batch ends about 03:27, so a located idle barracks may still be Drill Ground Full blocked; carried state Lv.30 busy until about 10:22, Lv.27 busy until about 03:27, Lv.24 idle but blocked, fourth barracks unknown).
 
+- 1.32.0 (2026-11-09): 0413 training unit folded (partial, fullscreen zoom-out variant tried for the first time - green zoom button to native fullscreen, 1280x720 capture, wider base view, one tent candidate at (445,665) produced no change, R2 ends; fullscreen exit MEASURED via the View menu - inspect_menu lists "Exit Full Screen" enabled and the menu action returns to the 642x951 window with no crash, pointer-to-top-edge does not drop the menu bar, never Ctrl-Cmd-F or Escape; west road drag blocked with no view change; retired routes not re-tapped; Drill Ground 39,460 of 39,460 stays a 2026-10-31 read; barracks verified 0, batches queued 0).
+
 - 1.30.0 (2026-11-09): 0039 training unit folded (partial, Drill Ground Lv.30 read live with Unit Count +10080 and officers Samantha, William, Chloe and Catherine - the roster rotated since Joe, Marcus, Karen and John on 2026-11-07, level risen since the 2050 Lv.25 read, not reconciled; Quick Dispatch the only button, not tapped, owner decision; the yellow-green fenced structure with soldiers, a tank and a 3d 01:53 countdown resolves to Aircraft Center Lv.29 on two taps, not a barracks, so the four tents were not located and that grounding method ends per R2; no barracks verified live, no requeue - carried state Lv.30 busy until about 10:22, Lv.27 busy until about 03:27, Lv.24 idle but Drill Ground Full blocked, fourth barracks unknown; no 39,460 of 39,460 figure re-read live; same session cc-192 held for both units of the pass with no drop).
 
 - 1.29.0 (2026-11-08): 2119 training unit folded (partial, Lv.27 busy by live panel read with a Lv.9 batch of 726 and 06:26:20 left, Lv.20 Drill Ground Full toast live re-confirmed for the first time since 2026-10-31, paw Details route works for Lv.20 with Training Count +613 and instructors Alexis, Joe, Jolene and Anthony, Quick Dispatch not tapped, owner decision; CORRECTIONS - T9 stats corrected to Morale 625.0 / Attack 33.5 / Defense 6.74 per the live panel read, the Lv.20 long-press variant RETIRED after it entered building-move mode, the 1146 Lv.20 pistol retirement qualified as framing-bound since the 2119 pistol tap reached the train attempt; session cc-167 dropped mid-unit with cc-168 recovery and no state lost; HUD power 149,209,253 corroborates Issue #482; Lv.30 and Lv.24 not reached). (1.28.0 carries the 1350 section without a changelog line; the numbering is preserved, not rewritten.)
@@ -1326,3 +1329,16 @@ Observed in game on this account, first execution 2026-10-25.
 - Carried-forward barracks state (not re-verified live): Lv.30 busy (batch ends about 10:22 today), Lv.27 busy (ends about 03:27 today), Lv.24 idle but blocked by the Drill Ground Full toast, fourth barracks unknown. The phase ends about 02:00 local, before either busy batch ends, so even a located idle barracks may still be blocked by Drill Ground Full - the successor must judge that live.
 - No successor was manually enqueued by the 0129 unit: the tracker still shows arms-race due (partial leaves it untouched), so the next tick re-produces it; the arms-race-2026-11-09-1003 unit already sits in the inbox for the next phase window.
 - Follow-up: the next training unit must ground the four tents from a changed route (never re-tap the yellow-green fenced structure or the red troop formation), and re-checks Lv.27 (busy until about 03:27), Lv.30 (busy until about 10:22) and Lv.24 (idle but Drill Ground Full blocked) live. It falls to the next run.
+
+## What the 2026-11-09 0413 unit added - fullscreen zoom-out variant tried, no barracks tent verified, View-menu fullscreen exit measured
+
+- Unit training-2026-11-09-0203 by ticker-0404, about 04:10 to 04:13 local, status partial. Evidence in `_records_/2026-11-09/troop-training/0413-queue-run.md` (commit 9fdcc4c9ee on records/2026-11-09). Computer session cc-217 on the owner Mac mini.
+- Entry snapshot, read live on the opening base screen: food 540.1M, iron 864.9M, coin 42.9M, diamonds 13.22K, total power 149,217,331, window 642 by 951. LastWar already frontmost; no different-device dialog, no login or verification demanded.
+- Fresh grounding for a barracks tent on the opening windowed frame returned no tent. The tents are not in this framing.
+- Changed method one, per queue rule R2: a west road drag (norm 500,700 to 150,700) along the bottom road produced no view change. A blocked drag, not a "no tents here" result; the method ends here.
+- Changed method two, per queue rule R2 and the zoom-out-first variant named by the 1216 and 1651 units and still untried until now: native fullscreen via the green zoom button. The fullscreen frame (1280 by 720 capture) shows a wider base view. Fresh grounding found one tent candidate at norm 445,665; the tap on the fresh frame produced no change - no building label, no action row, no panel. The point did not resolve to a tappable tent, so per rule R2 the method ends after the one no-change tap and the point was not tapped again. The zoom-out-first variant is now TRIED and did not locate a tent in this framing; it is not a standing solution, and the next unit still re-grounds on its own live frame.
+- FULLSCREEN EXIT, MEASURED: the menu bar did not drop from a pointer move to the top edge (the control channel delivers the pointer to the window only, not the system cursor), but computer.control inspect_menu with path ["View"] lists "Exit Full Screen" enabled, and the menu action with path ["View", "Exit Full Screen"] returned the game to the 642 by 951 window with no crash and no login demanded. This is the working exit route for this control channel; never use Ctrl-Cmd-F or Escape. NOTE: this is a deliberate-entry measurement (green zoom button in, View menu out) and does not contradict the 2026-11-05 correction that the 0134/0204 sessions were windowed on an inactive Space, not in native fullscreen - those sessions never entered fullscreen.
+- No barracks panel opened, no batch state verified, no batch queued. The retired routes were not re-tapped: the yellow-green fenced structure (Aircraft Center Lv.29) and the red troop formation (Drill Ground Lv.30). The Drill Ground screen was therefore not re-read in this unit, and the 39,460 of 39,460 figure stays a 2026-10-31 read, neither confirmed nor cleared here.
+- "Violet's Gift received!" toast seen in the fullscreen frame; it belongs to the gifts regular and was not acted on from this training unit. No diamonds or money spent, no Finish Now, no upgrade shortcut, no speedup burned.
+- Closing reads: barracks verified 0, batches queued 0. Training state unverified; the game was left on the base screen in its normal windowed framing.
+- Result stats: target 4, achieved 0, resources_gained none, costs 10m_wall_no_stamina, verified no, blocker_category c, barracks_verified 0, batches_queued 0, device_takeovers 0.
