@@ -940,3 +940,38 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 ## 04:32 to about 04:38 — Tool development pass
 
 - Tool-developer pass tool-development-2026-11-09-0432. No-op: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 0400 note re-verified CLEAN against main 837d880b81, and the 0430 pass confirms no new comment; main unmoved since); no new tooling issue filed since the 0132 triage (newest issue #502 is knowledge class; no tooling issue filed after the 0332 run finished 11:36:30Z). Full detail in tool-development/0432-run.md.
+
+## 04:39 to about 04:41 — Queue ticker pass, Star Ceremony
+
+- Star-ceremony unit star-ceremony-2026-11-09-0230, done (checked only):
+  no trophy icon beside the Alliance button on the base screen right
+  rail (Events red 2, VS countdown 13:20:41, Season II NEW, Alliance,
+  Mail red dot, Inventory), so no ceremony is waiting. Nothing played,
+  claimed or spent. Base total power read live 149,217,331. Full detail
+  in alliance-duel/0441-queue-run.md.
+
+## 04:40 to about 04:47 — Queue ticker pass, Shop claims (passes)
+
+- Passes unit passes-2026-11-09-0257, done: all three reset-day shop
+  claims verified already claimed, nothing new. Hot Deals shows no free
+  pack; Weekly Pass fired no Free Supply auto-claim and both weekly
+  passes remain unowned $4.99 offers (Take All $19.99 untouched);
+  Super Monthly Pass Daily Gift reads Claimed, Days Left 12 / Rewards
+  Left 12 (was 13 at the 0218 read, same reset day). No spending. Full
+  detail in shop-claims/0447-queue-run.md.
+
+## 04:44 to about 04:50 — Queue ticker pass, Event claims (partial)
+
+- Events unit events-2026-11-09-0257, partial: hub sweep finished across
+  all 7 tabs (Age of Oil, Arms Race, Winter Battlefield, Desert
+  Battlefield, Wanted Boss, Survey Center, Community) with nothing
+  claimable anywhere; Age of Oil milestones 1 and 2 verified claimed.
+  Arms Race Hero Advancement reads 82,500 points, all three point
+  chests claimed, phase timer 01:17:53 (ends about 06:03); a priority 1
+  arms-race unit (arms-race-2026-11-09-1248, expires at phase end) was
+  enqueued for the completion sweep, since no unit is staged for this
+  phase. Wanted Boss rotated to Code 87, not out until server 00:00.
+  Level Swap tab is gone from the hub. The check-in gift entry is
+  blocked (card tap and long-press page the carousel, Go does nothing)
+  and carries to the next events unit with the failed methods named.
+  Full detail in event-claims/0450-queue-run.md.
