@@ -1069,3 +1069,28 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Tools PR 425 owner-gated, clean, OD-20261108-01 still
   open, no owner answer, no new comment. Status: done.
   Full detail in pr-integration/0500-run.md.
+
+
+## 05:06 to 05:25 — Queue ticker pass, Secrets (done) and Treasures (done)
+
+- Secrets unit secrets-2026-11-09-0257, done: Secret Command
+  Post opened from the car icon at norm (55,636); Your Tasks
+  holds only 4 cards, all already stamped PERFECT by the
+  ticker-2235 claim at 22:49 on 2026-11-08, so nothing to
+  claim. Assist Allies 5/5 read live (daily cap reached),
+  Plunder Others 0/5 untouched. Reward Recovery 2026-11-6
+  record reads CLAIMED; Mega Deploy tapped once, no panel
+  (nothing pending). No new tasks have appeared since the
+  22:49 claim; the refresh cycle stays an open question.
+  Full detail in secret-missions/0517-queue-run.md.
+- Treasures unit treasures-2026-11-09-0257, done: tab badge
+  read 1; fragment stock M1 x15, M2 x12, M3 x1, M4 x5, M5 x3,
+  M6 x5, M7 x11 with M3 binding. One dig executed with Skip
+  Animation on: chest x24, coin x36, 1m speedup x50, 1m
+  speedup x25, silver ingot x200 (chest tier not displayed).
+  Stock verified after the dig at M1 x14, M2 x11, M3 x0,
+  M4 x4, M5 x2, M6 x4, M7 x10; chest progress 9/15 to 10/15;
+  Dig buttons greyed, badge cleared. Full detail in
+  hidden-treasures/0525-queue-run.md.
+- No diamonds or money spent. No different-device dialog, no
+  login demanded. Device session cc-224; token released.
