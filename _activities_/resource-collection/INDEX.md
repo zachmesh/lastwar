@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T20:39:36Z
+modified: 2026-11-09T02:40:00Z
 level: L1
-version: 1.40.0
+version: 1.41.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -42,6 +42,7 @@ grounded_in:
   - source: ticker-1940 resource-collection execution record 2026-11-07 1941 queue run (partial, farmland +1.9M food and +1.2M coin verified by HUD deltas, iron +1.7M observed unattributed, estimated bubble centres failed twice so ground-then-tap is now the rule, gold truck icon tap at norm 681,814 panned to the Drill Ground instead of opening a loot panel, Armed Truck loot and full-map sweep unfinished; unit 476 seconds inside the 15-minute cap; record commit c47e491fd on records/2026-11-07)
   - source: ticker-0934 resource-collection execution record 2026-11-08 0958 queue run (partial, food +8.2M coin +5.4M iron +7.5M verified by HUD deltas, one-tap farmland rule holds, grounded centres work, top-edge bubbles unreliable and batch opened Power Details, Power Details breakdown measured, sweep unfinished; record commit ac350b49c on records/2026-11-08)
   - source: ticker-1134 resource-collection execution record 2026-11-08 1211 queue run (partial, farmland food +1.6M HUD-verified, top-edge single tap collects nothing, iron +1.3M unattributed not claimed, coin bubbles about 0.8M remain, token expired 12:22:56); record commit ce3dcc4bf on records/2026-11-08
+  - source: ticker-1724 resource-collection execution record 2026-11-08 1759 queue run (partial, iron +3.6M and coin +3.6M HUD-verified in two taps, food bubbles still standing, bubble-type identification unreliable per R2, identical +3.6M unexplained, reset arrived mid-sweep; record commit 5f3a904f4 on records/2026-11-08)
 ---
 
 
@@ -67,7 +68,25 @@ Executions are recorded in
 - Food is special - tapping any one farmland bubble collects all
   farmland bubbles at once (observed the same evening, food rose
   about 0.4M in one tap and every farmland bubble cleared). Iron
-  and coin bubbles collect one by one.
+  and coin bubbles collect one by one. (2026-11-08 1759 update:
+  the one-by-one line is now suspect - two taps aimed at supposed
+  food bubbles collected iron +3.6M then coin +3.6M, the identical
+  figure on both taps recorded as observed, not explained; one
+  candidate mechanism, NOT verified, is a tap clearing all
+  standing bubbles of one resource type at once, the food
+  all-at-once behaviour extended to iron and coin. The next
+  harvest unit should test it with one tap and a HUD re-read, not
+  assume one-by-one. The one-by-one claim is not deleted, it is
+  marked suspect until that test.)
+- Verify the bubble's identity before tapping (rule R2, added
+  2026-11-08 1759): bubble-type identification from the
+  downscaled base screenshot is unreliable - both 1759 taps were
+  aimed at food bubbles and collected a different resource (iron,
+  then coin). Read the bubble's value label and icon at full
+  resolution, or confirm the resource total that moves after the
+  first tap before tapping a second bubble of the same supposed
+  type. A tap point that looks like a wheat bubble can sit on an
+  iron or coin bubble.
 - Check the Armed Truck and claim it when it shows fully loaded.
 - The gold truck icon is not a verified loot-panel entry - measured 2026-11-07 (1941 unit): tapping the gold truck icon at norm 681,814 panned the map down to the Drill Ground area instead of opening a loot panel. The loot panel entry remains unlocated and the Armed Truck loot state stays unverified.
 
@@ -759,6 +778,8 @@ regular stays due. Evidence in
 
 ## Changelog
 
+- 1.41.0 (2026-11-08): 1759 harvest unit folded (partial, pre-reset sweep cut short by the 18:00 reset arriving mid-sweep; iron +3.6M and coin +3.6M HUD-verified in two taps, food bubbles still standing; both taps aimed at supposed food bubbles collected a different resource, so bubble-type identification from the downscaled screenshot is unreliable and rule R2 now requires verifying the bubble's identity before tapping; the identical +3.6M on both taps is recorded unexplained with an all-at-once per-type mechanism as unverified inference, and the 2026-10-25 one-by-one line for iron and coin is marked suspect, not deleted; armed-truck toast fragment still unread; remainder to the 1803 unit).
+
 - 1.28.0 (2026-11-05): fortieth consecutive Mac device-access blocker (0904 harvest unit, invoke-channel stall, zero responses to eight invokes across two devices and five commands - a new worsened form, distinct from Issue 284's capture-failure-with-responses signature); the Correction 2026-11-05 unblock (owner Dock-icon click) is scoped to the window-stream fault only and does NOT address a stalled invoke channel, for which the Mac-side agent gateway likely needs a restart (unverified); the 1101 harvest close stands as the last live read, full edge-drag sweep still incomplete, Armed Truck state unknown; fortieth occurrence commented onto Issue #282 by this run.
 
 - 1.37.0 (2026-11-07): channel rules carried (propagation follow-up from the 1732 run): the 1020 Mission Control lesson - open_app Mission Control wedged the channel (geometry_mismatch, input gated on observation_required, second launch restores) and background Ctrl+Right does not switch Spaces; the background-Space-keys half was already in this profile from its own 0034 unit, the open_app wedging is the new part; the Dock-icon unblock stands. (1.29.0 through 1.36.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
@@ -1303,6 +1324,77 @@ regular stays due. Evidence in
   the harvest regular. The next harvest unit resumes with the coin
   bubbles first, then the iron bubbles, the top-edge bubbles and the
   armed truck loot (R7 - the starved subtasks lead).
+
+## What the 2026-11-08 1759 unit added - iron +3.6M and coin +3.6M, bubble-type identification unreliable, reset mid-sweep, partial
+
+- Unit harvest-2026-11-08-1403 by ticker-1724, about 17:56 to
+  18:00 local, status partial - two bubble taps collected verified
+  gains (iron +3.6M, coin +3.6M), but the food bubbles are still
+  standing and the 18:00 reset arrived mid-sweep, so the sweep is
+  unfinished. Evidence in
+  `_records_/2026-11-08/resource-collection/1759-queue-run.md`
+  (commit 5f3a904f4 on records/2026-11-08). The tracker is
+  untouched and the harvest-2026-11-08-1803 unit, queued with
+  not_before 18:03, picks up the remainder in the new reset day.
+  This unit is the overdue 1403-slot harvest unit; it was picked by
+  the loop after the sweep and missions units because it expires
+  18:03 and its bubbles were the last collectible value before the
+  reset.
+- Session: computer session cc-146 on the owner Mac mini. Sessions
+  cc-143 and cc-144 closed between units of this pass without an
+  error; each unit re-opened its session, no device-access error,
+  no different-device dialog, no login demanded. No control call
+  failed in this unit. LastWar was already running and selected,
+  verified by list_apps and observe before any input.
+- Entry, read live about 17:56 local: base screen, power
+  149,209,253 (unchanged all day since 17:12); food 490.8M, iron
+  813.3M, coin 12.3M; diamonds 13.22K; cart 4,417; stamina 120;
+  Season II 7d 00:03:54. Bubbles standing over the central building
+  cluster - food, iron and coin, values in the hundreds of K.
+- Tap 1, about 17:58 local: one tap grounded fresh at norm 249,355
+  on a bubble centre in the central cluster. After: iron 813.3M to
+  816.9M (+3.6M, HUD-verified), food unchanged 490.8M, coin
+  unchanged 12.3M.
+- Tap 2, about 17:59 local: one tap grounded fresh at norm 179,468
+  on a bubble centre over the farmland. After: coin 12.3M to 15.9M
+  (+3.6M, HUD-verified), food unchanged 490.8M, iron unchanged
+  816.9M.
+- Closing state, read live about 17:59-18:00 local: food 490.8M,
+  iron 816.9M, coin 15.9M; power 149,209,253. Wheat (food) bubbles
+  are still standing over the farmland in the closing screenshot.
+  Season II 7d 00:01:22 at the last read, reset about 18:00.
+- What was NOT verified - read this before the next harvest unit:
+  both taps were aimed at food bubbles and both collected a
+  different resource (iron, then coin). The bubble-type
+  identification from the downscaled base screenshot is unreliable:
+  a tap point that looks like a wheat bubble can sit on an iron or
+  coin bubble. Per rule R2 the method must change before the next
+  unit of this type taps again: verify the bubble's identity before
+  tapping - read its value label and icon at full resolution, or
+  confirm the resource total that moves after the first tap before
+  tapping a second bubble of the same supposed type. Measurements
+  on Issue #250 (already commented there by the ticker pass, no
+  duplicate comment here).
+- The identical +3.6M on both taps is recorded as observed, not
+  explained. One candidate mechanism, NOT verified: a tap clears
+  all standing bubbles of one resource type at once (the food
+  all-at-once behaviour is already recorded; iron and coin may
+  share it). The activity metadata still says iron and coin collect
+  one by one (2026-10-25); that line is now marked suspect above
+  and the next harvest unit should test it with one tap and a HUD
+  re-read, not assume it.
+- Armed Truck: the bottom-left toast fragment ("...ies ... loaded,")
+  was visible again in this unit's screenshots, still cut off at
+  the screen edge and not transcribed, so the fully-loaded notice
+  is still unverified and the truck loot unclaimed. The 1803 unit
+  should read the notice in full before deciding.
+- Titanium bubbles, EXP bubbles: no separate read taken in this
+  unit; they carry to the 1803 unit with the food bubbles.
+- The 1803 unit should also re-ground every bubble centre fresh in
+  its own screenshots; no point from this unit carries over.
+- No diamonds spent, no money spent, no Go button tapped, no
+  research or building started, no player attacked, no assemble or
+  teleport. Game left on the base screen.
 
 ## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
 

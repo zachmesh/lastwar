@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-09T01:40:00Z
+modified: 2026-11-09T02:40:00Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -20,6 +20,7 @@ grounded_in:
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (first zero sweep)
   - source: pre-reset zero sweep execution record 2026-11-07 1824 queue run (first pass, partial, first 17:30 sweep to run since 2026-11-02; record commit 840094b6ad on records/2026-11-07)
   - source: pre-reset zero sweep execution record 2026-11-08 1712 queue run (first pass, partial, 11 lines not at zero, 4 at zero, 5 unreadable, duel unmeasured, crystal and glittering not located, server disconnect with clean relaunch, power step-down 641,100 unexplained; record commit 9978e09a8 on records/2026-11-08)
+  - source: pre-reset zero sweep execution record 2026-11-08 1740 queue run (second pass, partial, no line moved to zero since 1712, 3 at zero, 1 stack posture, 12 not at zero, 5 unreadable, crystal and glittering not located, power 149,209,253 holds, fifteenth same-day no-train confirmation, scheduling shortfall confirmed a second time; record commit 5f3a904f4 on records/2026-11-08)
 ---
 
 # Routine activities
@@ -404,3 +405,66 @@ claims cited below were read in this pass's passes unit
   today; the duel line 21 still unmeasured. None is filed as a
   new Issue here - the fix-ups are in flight and the second
   sweep re-walks the list; the retro judges any recurrence.
+
+## Pre-reset zero sweep - second pass, 2026-11-08 1740 (partial)
+
+- Unit zero-sweep-2026-11-08-1730 by ticker-1724, session cc-143,
+  window about 17:39 to 17:40 local. Status partial,
+  verification-only: no bubble was collected, no truck dispatched
+  or plundered, no donation made, no chest claimed, no secret task
+  tapped, no pass button tapped inside this unit. Evidence in
+  `_records_/2026-11-08/daily-activities/1740-queue-run.md` (commit
+  5f3a904f4 on records/2026-11-08). It re-walks the 23 ledger lines
+  after the 1712 first pass.
+- Live reads in this unit: base screen about 17:40 local, power
+  reads 149,209,253 as displayed, unchanged from the 17:12 read -
+  the 641,100 step down from 149,850,353 at 16:58 holds, cause
+  still unexplained, not asserted as a loss. Food 490.8M, iron
+  813.3M, coin 12.3M; second row 25.0M, 922.2K; diamonds 13.22K;
+  cart 4,417; stamina 120. Season II 7d 00:22:45. Wanted Boss
+  badge 1, timer 00:00:51. Harvest bubbles still standing over
+  the central building cluster at 17:40 - food, iron and coin
+  bubbles with values in the hundreds of K. Resource totals
+  unchanged from 17:12. Badges about 17:40: Events icon red x2,
+  Mail icon red dot, Inventory icon red dot, Alliance icon red
+  dot, radio badge 4, white truck red dot 1, survivor portrait
+  badge 10, megaphone badge 4, hammer 2/4, flask 2/2. No train
+  icon in the left column; no "Boarding closes in" banner under
+  the resource bar - the banner area shows the "Upgrade Builder's
+  Hut to Lv.26 [0/1]" quest line and a Breaking News line instead.
+  Fifteenth same-day no-train confirmation (fourteenth in the 1712
+  first pass). A toast is partly visible at the bottom-left edge,
+  cut off by the screen edge ("...ies ... loaded,") - not
+  transcribed, not asserted as the armed-truck fully-loaded
+  notice. Line 6 stays unreadable on this unit's evidence.
+- Count: 23 lines walked - no line moved to zero since 1712, no
+  fix-up unit executed in between. At zero: 3 lines (10, 11 per
+  the 1455 passes unit read; 19 live, train per live read,
+  fifteenth same-day confirmation). Stack posture, not a miss: 1
+  line (20, radar per the 1355 record). Not at zero: 12 lines
+  (1, 2, 3, 4, 12, 13, 14, 15, 16, 17, 18, 21). Unreadable: 5
+  lines (5, 6, 7, 8, 9). Named status, not located: 2 lines (22,
+  23, crystal age 14 days, glittering age 8 days). The 12
+  not-at-zero lines will expire unclaimed at 18:00 unless a
+  currently claimable unit (the overdue 1403-slot units) is run
+  in the remaining minutes.
+- Fix-up units enqueued by this sweep: none. Every not-at-zero
+  line already had a fix-up unit in inbox at sweep time, so
+  enqueuing more would have duplicated units. The standing risk
+  is unchanged from the first pass and is now confirmed a second
+  time: all of those fix-ups carry not_before at or after the
+  18:00 reset, so they cannot run before it. The overdue
+  1403-slot units (harvest, donations, arms-race, radar;
+  not_before 14:03, expires 18:03) are the only units that can
+  still run inside the old reset day. That is the scheduling
+  shortfall the first sweep flagged, confirmed a second time.
+- Gaps the sweep surfaces: the VIP lines 12-13 were never
+  attempted this trade day (no vip-rewards record exists today
+  at all, vip-2026-11-07-1900 stalled in inbox, priority 1,
+  about 23 hours old; the 0512 observation read the Freebie
+  still claimable at about 05:11); the donations line 17 and
+  trucks line 18 both still unverified with no live count read
+  today; the duel line 21 still unmeasured. None is filed as a
+  new Issue here - the fix-ups are in flight and the next tick
+  re-walks the list in the new reset day; the retro judges any
+  recurrence.
