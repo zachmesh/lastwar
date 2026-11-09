@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T22:44:40Z
+modified: 2026-11-09T01:40:00Z
 level: L1
-version: 1.59.0
+version: 1.60.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -63,6 +63,7 @@ grounded_in:
   - source: ticker-0004 perception-scout execution record 2026-11-08 0011 queue run (partial, events group, Hero Advancement phase live, score 0, timer 01:49:42 left, tiers 2,000 / 4,000 / 12,000; record commit e6192726d1 on records/2026-11-08)
   - source: ticker-0304 perception-scout execution record 2026-11-08 0325 queue run (partial, events remainder, Arms Race Tech Research phase read live, score 0, timer 02:52:53; record commit 447ebb411c on records/2026-11-08)
   - source: ticker-1317 arms-race execution records 2026-11-08 1333 queue run (partial, Unit Progression phase verdict, score 0, tier-3 unreachable, phase ends about 14:00) and 1342 queue run (skipped-needs-owner, phase re-read, timer 00:18:49, target 75000 achieved 0); record commit d272dd711 on records/2026-11-08
+  - source: ticker-1646 perception-scout execution record 2026-11-08 1704 queue run (partial, Events hub strip verified at both ends, Arms Race Tech Research phase read live, score 0, timer 01:03:01; record commit 9978e09a8 on records/2026-11-08)
 ---
 
 
@@ -1935,3 +1936,51 @@ slot. Evidence in
 - Follow-up: the next arms-race unit (arms-race-2026-11-08-1403, in
   inbox) serves the next phase; its first unit reads that phase
   fresh under rule R4.
+
+## What the 2026-11-08 1704 scout read added - Tech Research phase live again, new instance, score 0, 01:03:01 left
+
+- Scout unit scout-2026-11-07-1800 by ticker-1646, about 16:58 to
+  17:04 local, status partial (Events hub strip verified at both
+  ends, Arms Race phase read live; Frontline Breakthrough, Winter
+  Battlefield and The Doomsday pages not opened inside this unit).
+  Evidence in `_records_/2026-11-08/perception-scout/1704-queue-run.md`
+  (commit 9978e09a8 on records/2026-11-08) and the observation
+  appended to `_records_/2026-11-08/perception-scout/observation.md`.
+  The Arms Race page was read live, observe-only; nothing was
+  spent, claimed or tapped on the page. Folded into the
+  perception-scout profile by this run (1.43.0 to 1.44.0).
+- Live phase read: Tech Research, Contest Segment Lv.29-30, timer
+  01:03:01 remaining at about 17:03 local (phase ends about 18:06
+  local), personal score 0, rank #2110 [AP3x]Bears Lair (tied with
+  #2110 [FATC]·루피 above it). Chest counter 0/2. This is a NEW
+  Tech Research phase instance, not a continuation of the 0325
+  instance (which ended about 06:10 local with score 0) - the
+  Unit Progression phase read at 1333/1342 (ended about 14:00
+  local) sits between them.
+- Chest thresholds: 6,250 / 12,500 / 30,000, agreeing with the
+  0325, 2026-11-01 and 2026-10-26 Tech Research reads on every
+  figure. RESOLUTION of a record wording: the 1704 record lists
+  the displayed figures 2,360 / 4,800 / 11,800 above the chests
+  as "progress figures (meaning not verified)". The standing
+  profile reading, established by the 1333 Unit Progression read
+  and carried through every phase read, is that these are ruby
+  tags (2,360 / 4,800 / 11,800 red gems), not personal progress -
+  and the 1704 figures agree with that reading exactly. The
+  "progress figures" wording is superseded, not carried; no
+  personal progress is asserted at score 0.
+- Scoring paths, all read live: (1) Increase Tech Power by 1pt,
+  +1. (2) Use 1-min Research Speed-up, +10. (3) Buy Packs
+  containing Diamonds (1 Diamond), +30 - red line, never used.
+  All three agree with the earlier Tech Research reads.
+- Nothing earned, nothing claimed, no chest is claimable at score
+  0. The tier-3 gap stands at 30,000 points. The phase is a repeat
+  of the 0325 shape (same tiers, same paths, same red lines); the
+  arms-race regular owns the push, not this scout unit.
+- Reading note: this is the newest live phase read and supersedes
+  the 1333/1342 Unit Progression read for the current phase. The
+  Unit Progression phase ended about 14:00 local with score 0.
+  The 0325 Tech Research phase ended about 06:10 local with
+  score 0.
+- Follow-up: the arms-race regular's 1803 unit is already queued
+  and the phase ends about 18:06 local, inside that unit's
+  window; its first unit reads this phase fresh under rule R4.
