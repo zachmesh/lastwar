@@ -1687,5 +1687,41 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   main, OD-20261108-01 still open, no owner answer. No
   merges, no PRs opened. Status: done. Full detail in
   pr-integration/0830-run.md.
->>>>>>> 59de55447943018b619a1bca44d8c08edd0bb186
+
+## 08:48 to 08:53 — Queue ticker pass, scout discovery (done)
+
+- Scout unit scout-scout-discovery-2026-11-09-009, done: the
+  Builders Hut banner quest "Upgrade Builder's Hut to Lv.26
+  (0/1)" is measured read-only - tapping the banner pans to
+  the Lv.25 hut; upgrade panel Lv.25 to 26, Power 90,800 to
+  108,300, Free Construction Speed-up Time 00:20:00 to
+  00:22:00, Hero EXP 22.0M; cost Lv.26 Headquarters (met),
+  Iron 170.0M, Food 56.9M; Original Time 15d 08:05:18,
+  Upgrade button 7d 07:16:49; Finish Now 18,188 diamonds.
+  Nothing started: Upgrade NOT tapped, Finish Now NOT tapped
+  (owner-only building start, red line). Issue #517 filed
+  (owner-decision) - start the 15-day upgrade now, or leave
+  it queued? Full detail in
+  upgrade-builders-hut-to/0848-queue-run.md.
+
+- INDEX repair in this pass: the file's tail carried a lone
+  dangling merge marker (">>>>>>> 59de554479...") left by the
+  ticker-0804 reconcile merge (de43ed8499); the single stray
+  line was removed, no content changed. Noted on Issue #441.
+
+## 08:52 to 09:00 — Queue ticker pass, radar release (partial)
+
+- Radar unit radar-2026-11-09-0603, partial: release day, duel
+  day 1 Radar Training. Dish grounded fresh at (51,726),
+  radar first tap. Entry Lv.13, points 311, stored 2/40,
+  stamina 120. Quick Execute 3 tasks (stamina 120 to 90),
+  then Claim All 11 rewards - radar item x110, EXP 15.9M,
+  iron 5.0M, food 2.3M, coin 2.0M; points 311 to 322,
+  stored 0/40. The 12-task restore expected around 05:36 did
+  not land as a batch (stored 2/40 at entry). Bar then
+  offered 1 more task at stored 0/40, unexplained, left for
+  the next unit. Pins unattempted in the token window; the
+  0335 Iron Mine gathering claim stays first for the next
+  radar unit per R7. Duel delta test still owed. Full detail
+  in radar-tasks/0852-queue-run.md.
 

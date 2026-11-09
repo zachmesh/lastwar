@@ -427,3 +427,22 @@ survey-center/0825, the-age-of-oil/0829.
 
 unmatched_labels:
   - none (The Age of Oil and Survey Center both explored this pass)
+
+## 2026-11-09 0848 - ticker-0842, scout discovery unit 009 (Builders Hut quest)
+
+Unit scout-scout-discovery-2026-11-09-009, session cc-245,
+LastWar window 489932, 08:48-08:53 local, observe-only throughout.
+The Builders Hut banner quest from the 0606 pass is now explored;
+its mechanism, cost, time and rewards are measured in
+upgrade-builders-hut-to/0848-queue-run.md. Full unit record there.
+
+  - surface: base
+    label: Upgrade Builders Hut to Lv.26 0 of 1 banner quest
+    state: doable
+    deadline: ""
+    est_value_or_score: tap banner pans camera to Builders Hut Lv.25; upgrade panel Lv.25 to 26, Power 90,800 to 108,300, Free Construction Speed-up Time 00:20:00 to 00:22:00, Hero EXP 22.0M; cost Lv.26 Headquarters (met), Iron 170.0M, Food 56.9M; Original Time 15d 08:05:18, Upgrade button 7d 07:16:49; Finish Now 18,188 diamonds
+    suggested_unit: owner-decision
+    redline_check: blocked - never start buildings on own initiative; Upgrade NOT tapped, Finish Now NOT tapped; Issue #517 filed for the owner decision
+
+unmatched_labels:
+  - none (Builders Hut quest explored this pass; the 0606 unmatched list is now fully resolved)
