@@ -1426,3 +1426,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   deleted and re-applied against the real pool). No
   withdrawals. Pool inbox 83, claimed 0, done 1331.
   Status: done. Full detail in queue-planning/0640-run.md.
+
+## 07:00 to about 07:25 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0700
+  (BATCH). Checker due yes - batch window 07:00-08:00
+  PT, first pass at or after 07:00 since the 03:00
+  batch merge. Merged records PR 478 (records/2026-11-07,
+  merge commit 0d387062b2). Records PR 493 went
+  CONFLICTING after the 478 merge (single file
+  _logs_/repo-actions/action-log.jsonl, append-append);
+  conflict note posted, not merged. Records PRs 351, 301
+  still conflicted on the same single file at unchanged
+  heads; re-check notes posted. Tools PR 425 owner-gated,
+  clean against the new main, OD-20261108-01 still open,
+  no owner answer; re-verification posted. Status: done.
+  Full detail in pr-integration/0700-run.md.
