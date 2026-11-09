@@ -1595,6 +1595,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   task (informational counter only). Nothing used or opened. Full
   detail in inventory-icon-red-dot/0755-queue-run.md.
 
+## 08:00 to about 08:13 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0800
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Records
+  PR 493 head moved to ee6fb939 (ticker-0736 append)
+  during the pass; re-probed CLEAN, re-check comment
+  posted. Records PRs 351 and 301 still CONFLICTING on
+  the same single file at unchanged heads, carried
+  awaiting branch-side reconciliation. Tools PR 425
+  owner-gated, re-probed CLEAN against the new main,
+  OD-20261108-01 still open, no owner answer. No merges,
+  no PRs opened. Status: done. Full detail in
+  pr-integration/0800-run.md.
 ## 08:12 to 08:23 — Queue ticker pass, scout discovery (done)
 
 - Scout unit scout-scout-discovery-2026-11-09-004, done: the
@@ -1615,7 +1629,21 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   owner-decision Issue filed for whether Bears Lair should
   apply before the 11/12 deadline. Full detail in
   season-ii-countdown-6d/0812-queue-run.md.
+## 08:15 to about 08:23 — PR integration pass
 
+- Integrator pass pr-integration-2026-11-09-0815
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Records
+  PR 493 head moved to 33c930954 (0800 run record) since
+  the 0800 re-check; re-probed CLEAN, re-check comment
+  posted. Records PRs 351 and 301 still CONFLICTING on
+  the same single file at unchanged heads, carried
+  awaiting branch-side reconciliation. Tools PR 425
+  owner-gated, re-probed CLEAN against the unchanged
+  main, OD-20261108-01 still open, no owner answer. No
+  merges, no PRs opened. Status: done. Full detail in
+  pr-integration/0815-run.md.
+>>>>>>> ca233ed8ba2d7bd11939d1866405748de9afff79
 ## 08:24 to 08:28 — Queue ticker pass, scout discovery (done)
 
 - Scout unit scout-scout-discovery-2026-11-09-005, done: the
@@ -1632,7 +1660,6 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   feedback is the owner's own action, not queue work. No survey
   submitted, nothing spent. Full detail in
   survey-center/0825-queue-run.md.
-
 ## 08:29 to 08:32 — Queue ticker pass, scout discovery (done)
 
 - Scout unit scout-scout-discovery-2026-11-09-007, done: The
@@ -1646,3 +1673,4 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   and left as the open question for a later unit. No regular
   proposed: the goals advance passively as the warzone plays.
   Full detail in the-age-of-oil/0829-queue-run.md.
+
