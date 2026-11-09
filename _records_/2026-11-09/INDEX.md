@@ -2206,3 +2206,15 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   issue 517 no deadline stated. VPS disk 91 percent,
   946M free. Status: no-op. Full detail in
   pr-catchall/1239-run.md.
+
+- Queue-planning pass queue-planning-2026-11-09-1240 (no-op).
+  Plan staged 0 units (already_present 75, skipped_done_current
+  2, reaped 0, expired 0, skipped_closed
+  zero-sweep-2026-11-08-1730); sweep production skipped (not
+  the 17:00 run), pair already complete (1630/1730 in live
+  inbox). Scout diff on the Nov 9 observation (31 items, md5
+  d5a825b5) applied with 0 enqueued, 17 already-queued;
+  promotion proposals 11 (3 new: decoration-gallery-overview-ur,
+  upgrade-builders-hut-to, zombie-invasion-tab-absent). No
+  withdrawals. Pool inbox 76, claimed 1, done 1359. Status:
+  no-op. Full detail in queue-planning/1240-run.md.
