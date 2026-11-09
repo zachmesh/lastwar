@@ -1377,3 +1377,22 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   with #415/#466). Own PR #425 still owner-gated (OD-20261108-01
   open), no action owed. Status: done. Full detail in
   tool-development/0632-run.md.
+
+## 06:36 to 06:53 — Queue ticker pass, Harvest (partial)
+
+- Harvest unit harvest-2026-11-09-0603, partial: food +2.0M
+  (540.1M to 542.1M), iron +1.9M (864.9M to 866.8M), coin
+  +1.3M (42.9M to 44.2M) - one tap cleared all bubbles of each
+  type, contradicting the activity metadata line that iron and
+  coin collect one by one (metadata update left for the
+  knowledge flow, tier-2). Four blue-triangle 596 bubbles over
+  the furnace buildings also cleared on one tap with no HUD
+  total moving; resource unidentified, filed as Issue #508
+  (knowledge). Not done: EXP bubble of about 490K at the far
+  left edge (partly off-screen) and the Armed Truck loot check -
+  the gold circle above the blue truck opened the world/radar
+  map instead (6 radar task rewards claimable, left for the
+  radar unit), and the truck itself was not tapped; both are
+  first actions of the next harvest unit (R7). Tracker
+  untouched. Full detail in
+  resource-collection/0636-queue-run.md.
