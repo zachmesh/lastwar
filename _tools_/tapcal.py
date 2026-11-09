@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tap calibration and scoring - the measurement half of issue #123.
+"""Tap calibration, scoring and the tap-verify loop decision - the measurement half of issue #123 plus the loop-decision half (verification clause 2).
 
 Issue #123 (IMP-20261101-08, owner direction of 2026-11-01) asked
 for screenshot-grounded tap calibration and verification tooling:
@@ -10,14 +10,15 @@ The 2026-11-01 urgent harvest that prompted it needed five owner
 corrections inside one unit, and no first-try tap rate was measured
 anywhere yet.
 
-This tool is deliberately only the measurement half, in the same
-way earlier tool-developer PRs shipped a measurement half first
-(stall_expired triage, PR 146; stall-evidence stats, PR 163).
-It does NOT tap, drive a device, or capture screenshots: that is
-game operation, which this job does not do. It consumes the
-executor's tap log and anchor observations - both plain JSON the
-executor can write from the grounding coordinates it already
-records - and returns measured numbers the retro can read:
+This tool is the measurement half plus the tap-verify loop
+decision, in the same way earlier tool-developer PRs shipped a
+measurement half first (stall_expired triage, PR 146;
+stall-evidence stats, PR 163). It does NOT tap, drive a device,
+or capture screenshots: that is game operation, which this job
+does not do. It consumes the executor's tap log and anchor
+observations - both plain JSON the executor can write from the
+grounding coordinates it already records - and returns measured
+numbers the retro can read:
 
   score      - first-try success rate, owner-correction count,
                miss vectors and the median miss, overall and
@@ -35,6 +36,15 @@ records - and returns measured numbers the retro can read:
                anchor store: activity, anchor name, normalized
                coordinates, landmark and screenshot reference,
                which executors ground against before tapping.
+  verify       - one step of the tap-verify loop for a single
+               target: given the attempts so far (aim, where the
+               tap landed, whether the state changed, where
+               grounding found the element afterwards), decide
+               verified / retry with a compensated next aim /
+               exhausted / unverified. The loop itself still runs
+               with the executor; this subcommand is the decision
+               the loop feeds on, so a miss is measured and the
+               retry aim is computed, never eye-estimated again.
 
 Window geometry (issue #475, 2026-11-08): five taps on the
 Alliance button in fullscreen (1920x1080) never opened the
@@ -108,6 +118,44 @@ Usage:
   tapcal.py anchor-add --store FILE --activity A --name N
                        --x X --y Y [--landmark L] [--screenshot S]
   tapcal.py anchor-list --store FILE [--format text|json]
+  tapcal.py verify --case FILE [--format text|json]
+
+A verification case for `verify` is a JSON object:
+
+  activity          string, e.g. "resource-collection"
+  target            {"x": int, "y": int}, the grounded target
+  geometry          optional string, the window geometry of this
+                    target's attempts; one case covers one
+                    geometry only, so a fullscreen-only shift is
+                    never averaged into a windowed loop (issue
+                    #475)
+  compensation      optional {"dx": .., "dy": ..} session offset
+                    from `calibrate`
+  max_retries       optional int >= 0, default 2; the loop allows
+                    1 + max_retries attempts in total
+  attempts          list, in order, of:
+    attempt         int, consecutive from 1
+    aim             {"x": int, "y": int}, where the executor aimed
+    tapped          {"x": int, "y": int} or null, where the tap
+                    actually landed (null when no tap was placed)
+    changed         bool, whether the game state changed
+    observed        {"x": int, "y": int} or null, where grounding
+                    found the element after the tap (null when
+                    it was not re-grounded)
+
+A verified attempt ends the loop, so no attempt may follow one.
+The verdict is verified when any attempt changed the state;
+not-started when no attempt exists yet (the next aim is the
+target under the session compensation, when one is given);
+exhausted when 1 + max_retries attempts all missed; unverified
+when the last attempt carries no measurement at all (no tap
+placed and no re-grounding) and no retry aim can be computed;
+otherwise retry, with the next aim shifted by the measured
+landing error: aim + (observed - tapped) when both ends were
+measured, aim + (target - tapped) when the element was never
+re-grounded, and the re-grounded element under the session
+compensation when no tap was placed. A next aim is rounded to
+integers and clamped to 0..1000, with clamped axes named.
 
 The compensation file for `compensate` is the JSON object
 `calibrate` writes with --out (or an equivalent {"dx":..,
@@ -121,7 +169,7 @@ import json
 import statistics
 import sys
 
-TOOL_VERSION = "1.1.0"
+TOOL_VERSION = "1.2.0"
 COORD_MIN = 0
 COORD_MAX = 1000
 
@@ -538,6 +586,264 @@ def fmt_anchors(anchors):
     return "\n".join(lines) + "\n"
 
 
+def fmt_num(value):
+    """Render a coordinate or offset without a trailing .0."""
+    return str(int(value)) if float(value).is_integer() else str(value)
+
+
+def shift_aim(aim, dx, dy):
+    """Aim shifted by (dx, dy), rounded to integers, clamped to 0..1000.
+
+    Returns (point, clamped_axes).
+    """
+    shifted = {
+        "x": int(round(aim["x"] + dx)),
+        "y": int(round(aim["y"] + dy)),
+    }
+    clamped_axes = []
+    for axis in ("x", "y"):
+        if shifted[axis] < COORD_MIN:
+            shifted[axis] = COORD_MIN
+            clamped_axes.append(axis)
+        elif shifted[axis] > COORD_MAX:
+            shifted[axis] = COORD_MAX
+            clamped_axes.append(axis)
+    return shifted, clamped_axes
+
+
+def parse_verify_attempt(entry, index):
+    where = f"verify attempt {index}"
+    if not isinstance(entry, dict):
+        raise InputError(f"{where}: expected an object")
+    attempt = entry.get("attempt")
+    if isinstance(attempt, bool) or not isinstance(attempt, int) or attempt < 1:
+        raise InputError(f"{where}: attempt must be an integer >= 1")
+    if "aim" not in entry:
+        raise InputError(f"{where}: missing required field 'aim'")
+    aim = check_point(entry["aim"], f"{where} aim")
+    tapped = entry.get("tapped")
+    if tapped is not None:
+        tapped = check_point(tapped, f"{where} tapped")
+    if entry.get("changed") is None:
+        raise InputError(f"{where}: missing required field 'changed'")
+    changed = check_bool(entry.get("changed"), f"{where} changed")
+    observed = entry.get("observed")
+    if observed is not None:
+        observed = check_point(observed, f"{where} observed")
+    return {
+        "attempt": attempt,
+        "aim": aim,
+        "tapped": tapped,
+        "changed": changed,
+        "observed": observed,
+    }
+
+
+def parse_verify_case(data, path):
+    if not isinstance(data, dict):
+        raise InputError(f"{path}: expected a verification case object")
+    activity = data.get("activity")
+    if not isinstance(activity, str) or not activity:
+        raise InputError(f"{path}: activity must be a non-empty string")
+    if "target" not in data:
+        raise InputError(f"{path}: missing required field 'target'")
+    target = check_point(data["target"], f"{path} target")
+    geometry = check_geometry(data.get("geometry"), f"{path} geometry")
+    compensation = data.get("compensation")
+    if compensation is not None:
+        compensation = parse_comp(compensation, f"{path} compensation")
+    max_retries = data.get("max_retries", 2)
+    if (
+        isinstance(max_retries, bool)
+        or not isinstance(max_retries, int)
+        or max_retries < 0
+    ):
+        raise InputError(f"{path}: max_retries must be an integer >= 0")
+    attempts_data = data.get("attempts", [])
+    if not isinstance(attempts_data, list):
+        raise InputError(f"{path}: attempts must be a list")
+    attempts = [
+        parse_verify_attempt(entry, i) for i, entry in enumerate(attempts_data)
+    ]
+    for position, attempt in enumerate(attempts):
+        if attempt["attempt"] != position + 1:
+            raise InputError(
+                f"verify attempt {position}: attempt must be "
+                f"{position + 1}, got {attempt['attempt']} "
+                "(attempts are consecutive from 1)"
+            )
+    for position, attempt in enumerate(attempts[:-1]):
+        if attempt["changed"]:
+            raise InputError(
+                f"verify attempt {position}: changed is true before the "
+                "last attempt - a verified tap ends the loop, later "
+                "attempts must not exist"
+            )
+    return {
+        "activity": activity,
+        "target": target,
+        "geometry": geometry,
+        "compensation": compensation,
+        "max_retries": max_retries,
+        "attempts": attempts,
+    }
+
+
+def next_aim_for(last, target, compensation):
+    """Compensated next aim from the last attempt, or (None, None, []).
+
+    `last` is None before the first tap: aim at the target under the
+    session compensation. Otherwise the measured landing error is
+    what the retry corrects, so a session offset is never applied
+    twice: both ends measured -> aim + (observed - tapped); only
+    the element re-grounded -> that element under the session
+    compensation; only the tap landed -> aim + (target - tapped).
+    With neither end measured there is nothing to correct from.
+    """
+    if last is None:
+        if compensation is not None:
+            result = compensate_point(compensation, target["x"], target["y"])
+            return result["compensated"], "compensated-target", result["clamped_axes"]
+        return dict(target), "target", []
+    tapped = last["tapped"]
+    observed = last["observed"]
+    if tapped is not None and observed is not None:
+        point, clamped = shift_aim(
+            last["aim"],
+            observed["x"] - tapped["x"],
+            observed["y"] - tapped["y"],
+        )
+        return point, "measured", clamped
+    if observed is not None:
+        if compensation is not None:
+            result = compensate_point(
+                compensation, observed["x"], observed["y"]
+            )
+            return result["compensated"], "grounded-target", result["clamped_axes"]
+        return dict(observed), "grounded-target", []
+    if tapped is not None:
+        point, clamped = shift_aim(
+            last["aim"],
+            target["x"] - tapped["x"],
+            target["y"] - tapped["y"],
+        )
+        return point, "target-miss", clamped
+    return None, None, []
+
+
+def verify_case(case):
+    target = case["target"]
+    compensation = case["compensation"]
+    attempts = case["attempts"]
+    max_retries = case["max_retries"]
+    attempt_results = []
+    for attempt in attempts:
+        if attempt["changed"]:
+            verdict = "verified"
+        elif attempt["tapped"] is not None:
+            verdict = "miss"
+        elif attempt["observed"] is not None:
+            verdict = "re-grounded"
+        else:
+            verdict = "unverified"
+        miss = None
+        if attempt["tapped"] is not None:
+            # Same convention as score: where the tap landed
+            # relative to the expected target.
+            miss = {
+                "dx": attempt["tapped"]["x"] - target["x"],
+                "dy": attempt["tapped"]["y"] - target["y"],
+            }
+        ground = None
+        if attempt["observed"] is not None:
+            # Where grounding found the element relative to the
+            # expected target: the grounding error, distinct from
+            # the landing error above.
+            ground = {
+                "dx": attempt["observed"]["x"] - target["x"],
+                "dy": attempt["observed"]["y"] - target["y"],
+            }
+        attempt_results.append(
+            {
+                "attempt": attempt["attempt"],
+                "verdict": verdict,
+                "aim": attempt["aim"],
+                "tapped": attempt["tapped"],
+                "observed": attempt["observed"],
+                "changed": attempt["changed"],
+                "miss_dx": miss["dx"] if miss else None,
+                "miss_dy": miss["dy"] if miss else None,
+                "ground_dx": ground["dx"] if ground else None,
+                "ground_dy": ground["dy"] if ground else None,
+            }
+        )
+    if any(result["verdict"] == "verified" for result in attempt_results):
+        verdict = "verified"
+        next_aim, basis, clamped = None, None, []
+    elif not attempts:
+        verdict = "not-started"
+        next_aim, basis, clamped = next_aim_for(None, target, compensation)
+    elif len(attempts) >= 1 + max_retries:
+        verdict = "exhausted"
+        next_aim, basis, clamped = None, None, []
+    elif attempt_results[-1]["verdict"] == "unverified":
+        verdict = "unverified"
+        next_aim, basis, clamped = None, None, []
+    else:
+        verdict = "retry"
+        next_aim, basis, clamped = next_aim_for(
+            attempts[-1], target, compensation
+        )
+    return {
+        "tool": "tapcal",
+        "version": TOOL_VERSION,
+        "activity": case["activity"],
+        "target": target,
+        "geometry": case["geometry"],
+        "verdict": verdict,
+        "attempts_used": len(attempts),
+        "retries_remaining": max(0, 1 + max_retries - len(attempts)),
+        "attempts": attempt_results,
+        "next_aim": next_aim,
+        "next_aim_basis": basis,
+        "clamped": bool(clamped),
+        "clamped_axes": clamped,
+    }
+
+
+def fmt_verify(result):
+    lines = [
+        f"verdict: {result['verdict']}",
+        f"attempts used: {result['attempts_used']} "
+        f"(retries remaining: {result['retries_remaining']})",
+    ]
+    for attempt in result["attempts"]:
+        detail = attempt["verdict"]
+        notes = []
+        if attempt["miss_dx"] is not None:
+            notes.append(
+                f"miss {fmt_num(attempt['miss_dx'])},"
+                f"{fmt_num(attempt['miss_dy'])}"
+            )
+        if attempt["ground_dx"] is not None:
+            notes.append(
+                f"ground {fmt_num(attempt['ground_dx'])},"
+                f"{fmt_num(attempt['ground_dy'])}"
+            )
+        if notes:
+            detail += " (" + "; ".join(notes) + ")"
+        lines.append(f"attempt {attempt['attempt']}: {detail}")
+    if result["next_aim"] is not None:
+        aim = result["next_aim"]
+        lines.append(
+            f"next aim: {aim['x']},{aim['y']} "
+            f"(basis: {result['next_aim_basis']})"
+        )
+        if result["clamped"]:
+            lines.append(f"clamped axes: {', '.join(result['clamped_axes'])}")
+    return "\n".join(lines) + "\n"
+
+
 def build_parser():
     parser = argparse.ArgumentParser(prog="tapcal.py")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -574,6 +880,11 @@ def build_parser():
     lst = sub.add_parser("anchor-list", help="list anchors in a store")
     lst.add_argument("--store", required=True)
     lst.add_argument("--format", choices=("text", "json"), default="text")
+
+    verify = sub.add_parser("verify", help="tap-verify loop decision for one target")
+    verify.add_argument("--case", required=True)
+    verify.add_argument("--format", choices=("text", "json"), default="text")
+
     return parser
 
 
@@ -666,6 +977,16 @@ def main(argv=None):
                 print(json.dumps({"anchors": anchors}, indent=2))
             else:
                 print(fmt_anchors(anchors), end="")
+            return 0
+
+        if args.command == "verify":
+            data = load_json(args.case)
+            case = parse_verify_case(data, args.case)
+            result = verify_case(case)
+            if args.format == "json":
+                print(json.dumps(result, indent=2, sort_keys=True))
+            else:
+                print(fmt_verify(result), end="")
             return 0
 
         return 2
