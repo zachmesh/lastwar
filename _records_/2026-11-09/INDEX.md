@@ -681,3 +681,24 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   owner-gated, clean, OD-20261108-01 still open, no
   owner answer, no new comment. Status: done. Full
   detail in pr-integration/0315-run.md.
+
+## 03:32 to about 03:47 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-09-0332.
+  Own PR 499 MERGED with 0 comments and 0 reviews, so no open
+  own PR carries integrator feedback. Two substantive records
+  folded into two profiles as one commit on PR 501 (OPEN and
+  MERGEABLE, mergeState CLEAN): ticker-0304 arms-race 0306
+  (done, Hero Advancement phase met live, McGregor Lv.145 to
+  146 for 82,500 points confirming +1 per 2,000 EXP, all
+  three point chests and the cumulative counter chest claimed,
+  now 6/8, Unit Progression formal miss verdict 0 of 75,000
+  recorded) into arms-race 1.64.0; ticker-0304 donations
+  0324 (partial, one coin donation verified live 9/30 to
+  8/30 on Rallied Attack, replenishment 29th data point,
+  hard closing rule marked under re-examination per Issue
+  #500, rule itself unchanged) into alliance-donations
+  1.74.0. Issues #500, #160, #174 and #423 commented with
+  the fold. The 2026-11-09 daily retro has not landed yet.
+  Status: done. Full detail in
+  knowledge-organization/0332-run.md.
