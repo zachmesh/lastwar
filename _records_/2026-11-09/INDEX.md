@@ -623,3 +623,28 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   left by the KO 0232 reconcile reset to the remote tip
   after blob verification (nothing unpushed). Status:
   done. Full detail in pr-integration/0245-run.md.
+
+## 03:06 to about 03:22 — Arms Race queue run (ticker-0304)
+
+- Arms Race Hero Advancement phase, read live: 0 points at entry,
+  top chest 12,000, timer 02:52:09. McGregor (UR) Lv.145 to Lv.146
+  on 165.0M Hero EXP, score 82,500, segment rank 7. One tap claimed
+  all three point chests (Skill Medal 1.6K, Arms Race Badge x6, SR
+  chest x32, coin chest x32, 5m speedup x68); cumulative counter
+  chest claimed at 6/2 (gold ticket x1, puzzle piece x2, red gem
+  50 x1), now 6/8. Ranking chest preview only (Iron/Food/Coin
+  Chest (SR) x3 each) - claimable after the phase ends, next run.
+  Events hub has no Zombie Invasion tab, confirming the event end.
+  Status: done. Full detail in arms-race/0306-queue-run.md.
+
+## 03:24 to about 03:31 — Alliance donations queue run (ticker-0304)
+
+- Rallied Attack panel read live: Donation Count 9/30 at entry, one
+  coin donation (800 coin) made, count re-read live 8/30. Tech
+  Donation Today footer 2200. Open question: the previous unit left
+  the count at 1/30 the same reset day, so the count appears to
+  refill over time rather than being a strict daily 30 - the hard
+  closing rule may need re-examination; recorded for the knowledge
+  flow, no closing claim made. Status: partial (pass budget ended
+  one donation into the burst). Full detail in
+  alliance-donations/0324-queue-run.md.
