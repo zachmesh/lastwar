@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T09:32:17Z
+modified: 2026-11-09T12:32:17Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -34,6 +34,7 @@ grounded_in:
   - source: ticker-2034 mail-rewards execution record 2026-11-07 2052 queue run (done, Alliance and Event Claim All answered "No rewards available", nothing claimed, envelope grounded at norm 936,790, "Unclaimed -Daily Task- Reward" is notification-only; record commit 7a4a104930 on records/2026-11-07)
   - source: ticker-2119 mail-rewards execution record 2026-11-08 2132 queue run (done, Alliance and Event mail claimed in full, 10 mails, Claim All both categories; record commit fe08a0907 on records/2026-11-08)
   - source: ticker-0113 mail-rewards execution record 2026-11-09 0138 queue run (partial, Alliance and Event Claim All both "No rewards available", System/Regular/Battle Report not walked, leader row Jerry Apex read live on the Alliance page, Mail button flaky entry (652,793), VIP daily freebie flag; record commit c0ebf0c4f0 on records/2026-11-09)
+  - source: ticker-0404 mail-rewards execution record 2026-11-09 0421 queue run (done, all three red-dot categories walked, no claimable attachments, envelope opened at once with no Alliance-first workaround; record commit 9fdcc4c9ee on records/2026-11-09)
 ---
 
 
@@ -865,3 +866,14 @@ the next tick re-produces this regular as a fresh unit.
 - What was not done: System, Regular and Battle Report categories were not walked in this unit (unit cap reached at the Event Claim All). Per queue rule R7 they are the first action of the next mail unit. In-app Purchases was not opened (receipts only, nothing to claim, per the activity metadata).
 - Figures read live: power 149,209,253; food 513.8M, iron 838.3M, coin 25.2M, diamonds 6,027. No diamonds or money spent. Delete All never pressed. No mail deleted. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 5, achieved 2, resources_gained none, costs about 15 minutes of unit time, no items spent, verified yes, blocker_category c.
+
+## What the 2026-11-09 0421 unit added - all three red-dot categories walked, no claimable attachments, envelope opened at once (no Alliance-first workaround)
+
+- Unit mail-2026-11-09-0230 by ticker-0404, about 04:19 to 04:21 local, status done. Evidence in `_records_/2026-11-09/mail-rewards/0421-queue-run.md` (commit 9fdcc4c9ee on records/2026-11-09). Computer session cc-220 on the owner Mac mini.
+- Entry: Mail envelope button grounded fresh at norm 931,790 on the base screen and tapped once; the Mail home opened at once (no Alliance-first workaround needed this unit, unlike the 0138 unit - the workaround is a fallback, not the entry route).
+- Mail home red dots: Event, Regular, In-app Purchases. Battle Report, Alliance, System and Favorite carried no red dot.
+- Event list: [AP3x] Missile Apex's train has... (22m ago, unread); [AP3x] Abyss Apex's Mega Exp... (2h ago, unread); [AP3x] Missile Apex's train has... (2h ago, unread); [AP3x] DCna8ive's train has a... (4h ago); [AP3x] Missile Apex's Mega Ex... (6h ago); [AP3x] DCna8ive's train has d... (6h ago). A new train mail arrived at the top during the visit (12m ago at the Claim All read). Claim All tapped at norm 746,948: toast "No rewards available." Nothing claimed. These are notification mails, not claimable attachments.
+- Regular list: battle reports - Victory vs Lv.57 Doom Elite and similar, 1d ago and older. Claim All tapped at norm 746,948: toast "No rewards available." Nothing claimed.
+- In-app Purchases list: receipts only, as the profile states - 2026-11-08 10:53:07, Pack purchased: Drone Great Value Pack; 2026-11-07 18:42:14, Pack purchased: Gear Master Pack. Claim All was not pressed here: the list holds receipts only, nothing to claim.
+- Delete All was not pressed in any category. Nothing was deleted. Back arrow returned the game to the base screen. The game was left on the base screen. No diamonds or money spent.
+- Result stats: target 3, achieved 3, resources_gained none, costs 2m_wall_no_stamina, verified yes, categories_walked 3, claimed 0, device_takeovers 0. 0 claimed is the complete result, not a miss.

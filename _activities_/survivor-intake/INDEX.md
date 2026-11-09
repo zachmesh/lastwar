@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-09T08:32:17Z
-version: 1.40.0
+modified: 2026-11-09T12:32:17Z
+version: 1.41.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-2004 survivor-intake execution record 2026-11-08 2052 queue run (partial, gate verified, taps open no dialog, Achievements toast ambiguous, 23rd consecutive partial on the metadata count; record commit fc00889b0 on records/2026-11-08)
   - source: ticker-2201 survivor-intake execution record 2026-11-08 2227 queue run (partial, gate line unverified, lone figure tap opened an Area No.168 dialog, no recruit, 0 recruits; record commit 8960535c on records/2026-11-08)
   - source: ticker-0019 survivor-intake execution record 2026-11-09 0024 queue run (partial, gate line unverified on fresh grounding, no question-mark or exclamation bubbles in two pans and two enlarged crops, 0 recruits, bubble-less tap method exhausted; record commit f99faa9744 on records/2026-11-09)
+  - source: ticker-0404 survivor-intake execution record 2026-11-09 0409 queue run (done, one gate visitor processed, Friendly Visitor notifications dialog, Cancel, gate line clear, Gear Factory Lv.20 building bubble; record commit 9fdcc4c9ee on records/2026-11-09)
 ---
 
 
@@ -980,6 +981,8 @@ Measured on 2026-10-25.
 
 - 1.40.0 (2026-11-09): 0024 survivors unit folded (partial, gate line unverified on fresh grounding, no question-mark or exclamation bubbles in two pans and two enlarged crops of the gate area, 0 recruits, Quick Dispatch not run; figures seen carry no bubbles - red-hat figure on the road, large blonde zombie woman with a smaller blonde figure beside her (the 2227 Area No.168 figure), grey dog-like animal, circular pet badge with a brown animal; no figure tapped, the bubble-less-figure tap method is exhausted after the 2227 area dialog and ends per R2; the record's "22 of 22 plus the 2227 unit and this one" framing is the Oct 28-31 window figure, not a recount, the count question stays open on Issue #168; re-ground from the gate next unit).
 
+- 1.41.0 (2026-11-09): 0409 survivors unit folded (done, one gate visitor processed - Friendly Visitor notifications dialog with exact text, Cancel at (334,762), nothing enabled; bubble read as a question mark but the dialog proves a visitor, the mark may have been an exclamation misread small; gate line verified clear on the closing read; Gear Factory Lv.20 building bubble at (768,275)/(790,335) is a building bubble not a survivor, R2 ends after the one no-change tap, empty-road deselect at (480,700); no recruit, no card, no Quick Dispatch gap under the 1644 refinement; truck dialog left untouched as truck work; visitors 1, recruits 0).
+
 - 1.39.0 (2026-11-08): 2227 survivors unit folded (partial, gate line unverified, lone figure with no bubble tapped into an "Area No.168" area-info dialog, not a recruit card, 0 recruits, Quick Dispatch not run; the record's "22 of 22" matches the Oct 28-31 metadata window figure and is not a recount, the standing 23rd-consecutive-partial count at 2052 is also not recounted, the count question stays open on Issue #168; re-ground from the gate next unit).
 
 - 1.29.0 (2026-11-05): 0134 survivors unit folded (failed, twenty-sixth consecutive screen-capture failure, no game screen read, no input dispatched, tracker untouched); NEW DIAGNOSIS from the on-screen View-menu read - the game window is windowed 1920x1080 on an inactive Space, not in native fullscreen (menu lists Enter Full Screen), so the capture failure is the pixel stream of an off-screen window, not a broken screen-recording permission; background Space keys do not switch Spaces, set_window_frame is gated by the stale-observation rule, list_windows needs the exact app name "LastWar"; CORRECTION - the 1707/2135 "running fullscreen" wording and the 1122 "left in native fullscreen" carry-forward are superseded, and the standing permission/pipeline-restart follow-up is replaced by the window-back-on-active-Space unblock (owner Dock-icon click); same correction applied to resource-collection, perception-scout, radar-tasks, arms-race and alliance-gifts in this run; evidence commented on Issue #284 by the ticker pass, twenty-sixth and twenty-seventh occurrences commented onto Issue #282 by this run. (1.27.0 and 1.28.0 carry the 1707 and 2135 sections without changelog lines; the numbering is preserved, not rewritten.)
@@ -1514,3 +1517,14 @@ Measured on 2026-10-25.
 - Count note, stated plainly: the record's "22 of 22 survivor units partial in the queue era, plus the 2227 unit and this one" framing matches the Oct 28-31 metadata window figure and is NOT a recount of the units since - the profile's standing count is the 23rd consecutive partial at the 2052 unit, also not recounted. The figures use different windows and none is re-derived here; the count question stays open on Issue #168. The 1307 contrast stands - freshly grounded figure taps do open cards, so the failure is tap method, blocker category c; re-ground from scratch next unit.
 - Commented on Issue #168 by this run with the fold.
 - Result stats: target 1, achieved 0, resources_gained none, costs 5m_wall_no_stamina, verified no, blocker_category e, recruits 0, gate_line_verified false, device_takeovers 0.
+
+## What the 2026-11-09 0409 unit added - one gate visitor processed, Friendly Visitor dialog, gate line clear, Gear Factory building bubble
+
+- Unit survivors-2026-11-09-0203 by ticker-0404, about 04:06 to 04:09 local, status done. Evidence in `_records_/2026-11-09/survivor-intake/0409-queue-run.md` (commit 9fdcc4c9ee on records/2026-11-09). Computer session cc-216 on the owner Mac mini.
+- Entry snapshot, read live on the opening base screen: food 540.1M, iron 864.9M, coin 42.9M, diamonds 13.22K, total power 149,217,331, window 642 by 951. LastWar already frontmost; no different-device dialog, no login or verification demanded.
+- Fresh grounding on the opening frame located a white bubble at norm 540,652 and a small figure below it at norm 535,691, at the front gate by the yellow ZOMBIES sign. The first click attempt failed before dispatch (stale_observation, no input sent); the figure was re-grounded on the fresh frame at norm 534,692 and tapped there.
+- The tap opened a Friendly Visitor dialog, not a recruit card: "Commander, we've noticed that your resources haven't been collected in time, Please enable notifications to reduce possible losses." Cancel was tapped at norm 334,762; nothing was enabled and the dialog closed back to the base screen. The bubble was read as a question mark at this size, but the dialog proves a visitor; the mark may have been an exclamation mark misread small, matching the profile's visitor pattern. This re-confirms the standing visitor-dialog line with exact text and a measured Cancel point.
+- Closing re-ground of the gate area found no question-mark bubble remaining at the gate. One remaining white bubble at norm 768,275 sits above the Gear Factory in the upper-right built area; its figure point at norm 790,335 was tapped once and selected Gear Factory Lv.20 (building radial, paw and hammer buttons, green up-arrow), opening no card or dialog. That bubble is a building bubble, not a survivor. Per rule R2 the method at that point ends after the one no-change tap; it was not tapped again. An empty-road tap at norm 480,700 deselected the building cleanly, with no panel opened and no action taken from the radial.
+- No survivor was recruited and no recruit card opened; the one figure processed was a dialog visitor with no building post, so no Quick Dispatch gap arises from this unit under the 1644 refinement (Quick Dispatch follows an intake with posts, not a dialog visitor). The truck dialog on screen ("The truck is full, waiting for your command", later "Supplies are fully loaded, please claim them") is truck work, not this unit's type, and was left untouched.
+- Closing reads: gate line clear as observed in this view - no question-mark bubbles at the gate on the closing screenshot, and the one figure seen there this unit was processed. Visitors processed 1, recruits 0.
+- Result stats: target 1, achieved 1, resources_gained none, costs 4m_wall_no_stamina, verified yes, recruits 0, gate_line_verified true, device_takeovers 0, visitors_processed 1.

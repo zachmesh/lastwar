@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T10:32:17Z
+modified: 2026-11-09T13:32:17Z
 level: L1
-version: 1.41.0
+version: 1.42.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -46,6 +46,7 @@ grounded_in:
   - source: ticker-1851 shop-claims execution record 2026-11-08 1858 queue run (done, new reset day's Hot Deals pack, Weekly Pass Free Supply auto-claim and Super Monthly Pass daily gift claimed, Weekly Pass 18:00 reset eleventh confirmation, weekly passes lapsed unowned; record commit cff344153 on records/2026-11-08)
   - source: ticker-2235 shop-claims execution record 2026-11-08 2243 queue run (done, reset-day claims verified already claimed, check-in FREE GIFT left for the events-2257 unit; record commit 0c9686b4f on records/2026-11-08)
   - source: ticker-0204 shop-claims execution record 2026-11-09 0218 queue run (done, reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed Days Left 13; record commit facef628c on records/2026-11-09)
+  - source: ticker-0434 shop-claims execution record 2026-11-09 0447 queue run (done, reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed, Days Left ticked 13 to 12 inside the same reset day; record commit b6ed78edd0 on records/2026-11-09)
 ---
 
 
@@ -753,7 +754,7 @@ the free and already paid for parts, never the paid unlocks.
 - Whether the free Hot Deals pack rotates its contents by day.
 - What the dark rock item in the Season Weekly Pass pickup is -
   coal or titanium alloy; the tile only showed 10.0K.
-- Monthly Pass Days Left boundary: the 0538 read of 13 at 05:36 local follows the 0407 read of 14 at 04:07 local the same day - the decrement falls between 04:07 and 05:36, so the daily boundary for the Monthly Pass is unread; the next Mall re-read must record Days Left with its time.
+- Monthly Pass Days Left boundary: the 0538 read of 13 at 05:36 local follows the 0407 read of 14 at 04:07 local the same day - the decrement falls between 04:07 and 05:36, so the daily boundary for the Monthly Pass is unread; the next Mall re-read must record Days Left with its time. (2026-11-09 0447 update: Days Left read 13 at 02:18 and 12 at 04:47 inside the SAME reset day, so the counter ticked between 02:18 and 04:47 local with no reset between - the decrement is a time-of-day tick, not a reset-day tick. Combined with the 2026-11-08 window (04:07 to 05:36), the boundary narrows to between 04:07 and 04:47 local IF it is a fixed time of day; that fixed-time reading is an inference from two days, not a verified exact time. No cause is asserted for the tick.)
 
 
 ## What the 2026-11-03 2234 unit added - checked only, 0 claims, 1812 cycle state confirmed
@@ -1345,3 +1346,13 @@ the free and already paid for parts, never the paid unlocks.
 - Super Monthly Pass page: Monthly Pass, Squad 4 Lv.20, Days Left 13, Rewards Left 13. The Daily Gift button reads "Claimed" (greyed), matching the 18:52 claim (gold ticket x2, red diamond 100, stamina 50 x2, iron 200, 5-minute speedup x60). The $24.99 Monthly Pass Extension was not tapped.
 - No season pass claim was hunted in the Season hub, per the 2026-11-08 ticker-1434 finding (Issue #469): the Week 8 hub path is stale. No diamonds or money spent. No price button tapped. No login or verification was demanded, and no different-device dialog appeared. The game was left on the base screen.
 - Result stats: target 3, achieved 3, resources_gained none, costs about 2 minutes, no items spent, verified yes, device_takeovers 0, follow_up events-check-in-still-carried.
+
+## What the 2026-11-09 0447 unit added - reset-day claims verified already claimed, monthly Days Left ticked 13 to 12 inside the same reset day
+
+- Unit passes-2026-11-09-0257 by ticker-0434, about 04:40 to 04:47 local, status done. Evidence in `_records_/2026-11-09/shop-claims/0447-queue-run.md` (commit b6ed78edd0 on records/2026-11-09). Computer session cc-223 on the owner Mac mini. Nothing new claimed in this unit: all three of this reset day's shop claims were already done by ticker-1851 at 18:52 on 2026-11-08 (record shop-claims/1858-queue-run.md) and were verified live as done here, as in the 0218 unit.
+- Hot Deals (Official Event tab): no free pack showing. The page shows the "Visit the Last War Store for more rewards!" promo and the check-in carousel only; the Drone Great Value Pack claimed at 18:52 is gone, consistent with "Packs sold out". The "Go" button to the external store was not tapped.
+- Weekly Pass page: "Weekly Pass rewards reset at 18:00:00" read live. Opening the page fired no Free Supply auto-claim (already claimed at 18:52: chest x1, ruby x10). The S2 Drone Components Weekly Pass (Legendary) and the S1 Drone Parts Weekly Pass (Epic) both still show a Get Now $4.99 price button, i.e. unowned offers, not claims; neither was tapped. The Legendary bundle row's Take All $19.99 button was not tapped.
+- Super Monthly Pass page: Monthly Pass, Squad 4 Lv.20, Days Left 12, Rewards Left 12. The Daily Gift button reads "Claimed" (greyed), matching the 18:52 claim (gold ticket x2, red diamond 100, stamina 50 x2, iron 200, 5-minute speedup x60). The $24.99 Monthly Pass Extension was not tapped.
+- MEASURED, same reset day: Days Left read 13 at the 0218 unit and 12 here, both inside the same reset day - the counter ticked between 02:18 and 04:47 local with no reset between. No cause is asserted; the two live reads are recorded as observed. Combined with the 2026-11-08 window (14 at 04:07, 13 at 05:36), the boundary narrows to between 04:07 and 04:47 local if it is a fixed time of day - an inference, not a verified exact time. See the updated Open questions entry.
+- No season pass claim was hunted in the Season hub, per the 2026-11-08 ticker-1434 finding (Issue #469): the Week 8 hub path is stale. No diamonds or money spent. No price button tapped. No login or verification was demanded, and no different-device dialog appeared. The game was left on the base screen.
+- Result stats: target 3, achieved 3, resources_gained none, costs about 7 minutes, no items spent, verified yes, device_takeovers 0, follow_up none.

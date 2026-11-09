@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-09T07:32:17Z
+modified: 2026-11-09T13:32:17Z
 level: L1
-version: 1.13.0
+version: 1.14.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -24,6 +24,7 @@ grounded_in:
   - source: ticker-0834 hidden-treasures execution record 2026-11-04 0847 queue run (done, checked only, fragment counts identical to 0838/1243, M3 still binding)
   - source: ticker-1434 hidden-treasures execution record 2026-11-08 1459 queue run (done, one dig executed, fragments M1-M7 each down 1, chest progress 6/15 to 7/15, tab badge 1 while stock allowed 3 digs - badge-equals-digs rule disproved); record commit dfd3c87f9 on records/2026-11-08
   - source: ticker-2235 hidden-treasures execution record 2026-11-08 2255 queue run (done, one dig executed, fragments M1-M7 each down 1, chest progress 7/15 to 8/15, 2 digs remain capped by M3, tab badge 1 re-confirmed not the dig count; record commit 0c9686b4f on records/2026-11-08)
+  - source: ticker-0504 hidden-treasures execution record 2026-11-09 0525 queue run (done, 1 dig executed, fragments M1-M7 each down 1, chest progress 9/15 to 10/15, M3 binding at x1, tab badge 1 with exactly 1 dig possible; record commit be01e91134 on records/2026-11-09)
 ---
 
 # Hidden treasures
@@ -304,7 +305,7 @@ as Hidden Treasure.
   2026-11-08 while the fragment stock allowed 3 digs, so it is not
   the dig count; its meaning is unconfirmed. (Added 2026-11-08 1459;
   re-confirmed 2026-11-08 2255: badge 1 both before and after the
-  dig while stock allowed 3 digs before and 2 after.)
+  dig while stock allowed 3 digs before and 2 after.) (2026-11-09 0525 update: badge 1 again, this time with the stock allowing exactly 1 dig (M3 binding at x1) - badge 1 when 1 dig is possible is consistent with the disproved rule's coincidence, not evidence for it; the 1459/2255 disproofs stand and the badge's meaning stays open.)
 - Whether the 1 of 15 track read on 2026-11-01 is a reset of the
   10 of 15 track, a new track, or a different counter - the change
   is recorded, the mechanism is not. The 1420 dig advanced it
@@ -562,3 +563,15 @@ as Hidden Treasure.
 - No fragment exchange was opened or executed (needs owner approval).
 - Red lines held: no diamonds or money spent. No speedups burned. No paid button tapped. No fragment exchange. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 1, achieved 1, resources_gained (chest-stack x24, coin-sacks x12, gold-coins x24, medal 600, blue-triangle 400, silver-ingots 100), costs 2min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 0525 unit added - 1 dig, chest 10/15, M3 binding at zero, badge 1 with exactly 1 dig possible
+
+- Unit treasures-2026-11-09-0257 by ticker-0504, about 05:20 to 05:25 local, status done. Evidence in `_records_/2026-11-09/hidden-treasures/0525-queue-run.md` (commit be01e91134 on records/2026-11-09). Computer session cc-224, same session as the secrets unit of this pass.
+- Hidden Treasures tab opened from the Secret Command Post; the tab badge read 1, exactly the number of digs possible this time.
+- Fragment stock before the dig, read live: M1 x15, M2 x12, M3 x1, M4 x5, M5 x3, M6 x5, M7 x11. M3 was the binding fragment, so exactly 1 dig was possible. Skip Animation was already ticked. Tapped Dig 1 time.
+- CONGRATULATIONS panel paid 5 visible stacks: chest x24, coin x36, 1m speedup x50, 1m speedup x25, silver ingot x200. The chest tier won was not displayed, and the two speedup stacks carry different icons (types not fully identified); recorded as displayed.
+- Verified live after the dig: fragment stock M1 x14, M2 x11, M3 x0, M4 x4, M5 x2, M6 x4, M7 x10 - each down by exactly 1, one full set consumed. Chest progress track 9/15 to 10/15. Both Dig buttons now greyed and the tab badge cleared - no complete set left (M3 at 0 is the binding fragment).
+- No further dig is possible until M3 (and the other kinds) are restocked by secret mission claims. The next treasures unit re-checks. The one-dig-per-unit standing pattern was followed; the stock stays for the next unit.
+- Badge note: badge 1 with exactly 1 dig possible is consistent with the disproved badge-equals-digs rule's coincidence (badge 1 when 1 possible), not evidence for it - the 1459 and 2255 disproofs stand. See the updated Open questions entry.
+- No diamonds or money spent. No fragment exchange executed (needs owner approval). No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1 (1 dig from badge 1), resources_gained chest x24, coin x36, 1m speedup x50, 1m speedup x25, silver ingot x200, costs 5min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
