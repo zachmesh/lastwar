@@ -4788,3 +4788,21 @@ of 2026-10-28.
   reconciled exactly; owner-decision issues 132, 154 and 335
   all over 24 hours with statements current. Status: no-op.
   Full detail in pr-catchall/2239-run.md.
+
+## 22:40 to about 22:50 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-2240. Plan staged
+  12 net fresh units for the Nov 9 morning slots
+  (mail/help/gifts/train/star-ceremony/duel-score 1030,
+  harvest/radar/survivors/training/donations/arms-race
+  1003; already_present 59, skipped_done_current 2,
+  reaped 0, expired 0, no phantom re-stage, 1
+  branch-closed slot skipped: zero-sweep 1730).
+  Pre-reset sweep pair already complete by execution
+  (both passes executed partial; 1630 done file absent
+  from the live pool, present on the branch tip);
+  step 2 skipped, this run is in the 22:00 hour. Scout
+  diff applied with zero changes (unexplained 14,
+  unchanged). No withdrawals. Pool inbox 72, claimed 1,
+  done 1312. Full detail in
+  queue-planning/2240-run.md.
