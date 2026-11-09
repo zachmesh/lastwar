@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T23:44:00Z
+modified: 2026-11-09T03:32:17Z
 level: L1
-version: 1.38.0
+version: 1.39.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -43,6 +43,7 @@ grounded_in:
   - source: ticker-0634 shop-claims execution record 2026-11-08 0634 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset seventh confirmation, Season hub layout differs); record commit 9669d391ea on records/2026-11-08
   - source: ticker-1049 shop-claims execution record 2026-11-08 1054 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset eighth confirmation, Season hub claim path probed through the Calculating card and Season Contributions with no pass claim found, Donation Count 2/30 at entry); record commit 355d3f11c on records/2026-11-08
   - source: ticker-1434 shop-claims execution record 2026-11-08 1455 queue run (partial, shop and season pages checked live, Weekly Pass 18:00 reset ninth confirmation, Season hub Goals and Profession opened with no pass claim found, Season pass path unreachable in the Week 8 hub, Issue #469 filed); record commit dfd3c87f9 on records/2026-11-08
+  - source: ticker-1851 shop-claims execution record 2026-11-08 1858 queue run (done, new reset day's Hot Deals pack, Weekly Pass Free Supply auto-claim and Super Monthly Pass daily gift claimed, Weekly Pass 18:00 reset eleventh confirmation, weekly passes lapsed unowned; record commit cff344153 on records/2026-11-08)
 ---
 
 
@@ -1253,5 +1254,71 @@ the free and already paid for parts, never the paid unlocks.
   for the next passes unit: open the Week 8 Rewards and Rules
   buttons; if no pass claim lives behind them either, the path is
   written off entirely and the metadata says so.
+- Game left safe: base screen. Nothing bought. No Assemble, no
+  teleport.
+
+## What the 2026-11-08 1858 passes unit added - new reset day's three claims, Weekly Pass 18:00 reset confirmed an eleventh time, weekly passes lapsed unowned
+
+- Unit passes-2026-11-08-1457 by ticker-1851, about 18:52 to 18:58
+  local, status done - the new reset day's three claims, all taken
+  after the 18:00 reset. Session cc-149 on the owner Mac mini.
+  Evidence in `_records_/2026-11-08/shop-claims/1858-queue-run.md`
+  (commit cff344153 on records/2026-11-08). Tracker untouched.
+- Hot Deals free pack claimed in the new reset day - Drone Great
+  Value Pack: Drone Parts x20, Battle Data 10K x4 (shown as 40.0K on
+  the congratulations screen), Skill Chip Chest (SR) x2. The pack
+  then read "Packs sold out".
+- Weekly Pass page Free Supply auto-claim fired on opening the page
+  - "Violet's Gift received!", "Free rewards have been automatically
+  claimed": chest x1 and ruby x10.
+- Super Monthly Pass Daily Gift claimed (green Claim Reward button):
+  gold ticket x2, red diamond 100 x1, stamina 50 x2, iron 200,
+  5-minute speedup x60. The button then greyed out. Pass reads Days
+  Left 13, Rewards Left 13.
+- Weekly Deal tab checked: paid packs only (Valor Badge $99.99, Base
+  Upgrade $19.99, UR Set $49.99), nothing claimed. Its period reads
+  2026-11-9 00:00:00 to 2026-11-15 23:59:59.
+- Weekly Pass page: no owned pass remains. The S2 Drone Components
+  Weekly Pass (Legendary) and the S1 Drone Parts Weekly Pass (Epic)
+  both show a Get Now $4.99 price button, i.e. unowned offers, not
+  claims; neither was tapped. The Coin Weekly Pass seen 2026-10-25
+  is no longer listed. The Legendary "Instant Gain on Purchase" row
+  reads Take All $19.99 and was not tapped, per the standing red
+  line. The Weekly Pass list did not move under a scroll or a drag;
+  the three rows above are the full list as observed.
+- RESET RESOLVED: the Weekly Pass page reads "Weekly Pass rewards
+  reset at 18:00:00" - the ELEVENTH live confirmation, and this unit
+  confirms it behaviourally a second way: its claims are the new
+  reset day's claims, taken after the 18:00 reset. The 19:00 figure
+  in older records is the PDT-era time (DST ended 2026-11-01; the
+  reset is 02:00 UTC). The Cadence section already carries 18:00
+  since the 2026-11-03 1812 correction; the open question in Issue
+  #242 is now settled by the page text itself plus the mid-sweep
+  reset arrival in the 1753/1759 records - commented on Issue #242
+  by this run. The remaining Issue #247 leftover is only the
+  body/schedule text that still states 19:00.
+- The Season Battle Pass / Season Weekly Pass claim was not hunted
+  in the Season hub, per the 2026-11-08 ticker-1434 finding (Issue
+  #469): the Week 8 hub path is stale. The Week 8 Rewards and Rules
+  buttons remain unopened; the next passes unit opens them before
+  the path is written off entirely.
+- The unit ran late (its 14:57 slot, expiry 18:57) - finished 18:58,
+  just after expiry. Duration 378 seconds per the unit's structured
+  result.
+- Open question: the two weekly passes owned 2026-10-25 (S1 Drone
+  Parts, Coin) have expired with no replacement bought; whether the
+  owner wants a new weekly pass is an owner decision, not an
+  executor call.
+- Red lines: no diamonds or money spent. No price button tapped. The
+  $19.99 Legendary Take All and the $24.99 Monthly Pass Extension
+  were left untouched.
+- Correction note (same pass, 18:59): the first draft of the record
+  was written with estimated times (19:05 finish, about 13 minutes)
+  and the file was first named 1905-queue-run.md. The live clock
+  showed 18:58 at close and the unit's structured result records
+  02:51:53Z to 02:58:11Z, 378 seconds. The file was renamed to
+  1858-queue-run.md and the times corrected. Nothing about the claims
+  changed. Record-keeping lesson carried: use the live clock and the
+  structured result, not estimates.
 - Game left safe: base screen. Nothing bought. No Assemble, no
   teleport.
