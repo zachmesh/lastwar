@@ -1442,3 +1442,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   clean against the new main, OD-20261108-01 still open,
   no owner answer; re-verification posted. Status: done.
   Full detail in pr-integration/0700-run.md.
+
+## 07:15 to about 07:27 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0715
+  (NON-batch). Merge-aware checker due no - records PR
+  478 already merged in the 07:00-08:00 PT window at the
+  0700 pass, so no records merge this pass. All four open
+  PRs unchanged since the 0700 pass: records PRs 493, 351,
+  301 still CONFLICTING on the single file
+  _logs_/repo-actions/action-log.jsonl, carried awaiting
+  branch-side reconciliation, next batch 11:00; tools PR
+  425 owner-gated, clean verification from the 0700 pass
+  still stands against the unchanged main, OD-20261108-01
+  still open, no owner answer. No merges, no comments, no
+  PRs opened. Status: done. Full detail in
+  pr-integration/0715-run.md.
