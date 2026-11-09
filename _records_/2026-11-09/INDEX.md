@@ -495,3 +495,15 @@ tabs were not swept and carry to the next events unit. Tracker
 untouched. Full detail in event-claims/0224-queue-run.md.
 --- INDEX ---
 - Tool-developer pass tool-development-2026-11-09-0232. No-op: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 0200 note re-verified CLEAN against main d72dc6f40); no new issue filed since the 0132 triage (newest #490, records class, 07:18Z) and that triage still holds - every open tooling issue carries an implementing PR, belongs to another owner, or needs an owner decision; #147 implemented by the 0132 run, PR #497 merged at 0200. Full detail in tool-development/0232-run.md.
+
+## 02:30 to 02:37 — PR integration pass
+
+- Integrator pr-integration-2026-11-09-0230 (NON-batch).
+  Checker due no (next batch 03:00 PT); no merges, no comments
+  (main unmoved at d72dc6f40 since the 0200 pass; PR 493 head
+  moved facef628c to 3524bb9d, re-probed clean at the new tip);
+  records PRs 493 and 491 clean against main, awaiting the
+  03:00 batch; records PRs 478, 351, 301 still conflicted on
+  the single action-log file; tools PR 425 owner-gated, clean,
+  re-verified (OD-20261108-01 open).
+  Full detail in pr-integration/0230-run.md.
