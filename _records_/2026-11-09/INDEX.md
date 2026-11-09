@@ -1594,3 +1594,17 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   No reward, cost, deadline or scoring: candidate REJECTED as a
   task (informational counter only). Nothing used or opened. Full
   detail in inventory-icon-red-dot/0755-queue-run.md.
+## 08:00 to about 08:13 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0800
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Records
+  PR 493 head moved to ee6fb939 (ticker-0736 append)
+  during the pass; re-probed CLEAN, re-check comment
+  posted. Records PRs 351 and 301 still CONFLICTING on
+  the same single file at unchanged heads, carried
+  awaiting branch-side reconciliation. Tools PR 425
+  owner-gated, re-probed CLEAN against the new main,
+  OD-20261108-01 still open, no owner answer. No merges,
+  no PRs opened. Status: done. Full detail in
+  pr-integration/0800-run.md.
