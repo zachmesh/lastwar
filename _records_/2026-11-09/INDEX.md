@@ -418,3 +418,78 @@ detail in radar-tasks/0159-queue-run.md.
   conflicted on the single action-log file; tools PR 425
   owner-gated, clean, re-verified (OD-20261108-01 open).
   Full detail in pr-integration/0215-run.md.
+
+## 02:11 alliance-gifts (ticker-0204, done)
+
+Gifts, unit gifts-2026-11-08-2230. Claim All on both tabs, dialog-confirmed:
+102 Regular and 10 Premium, 112 total. Gift Level 28 progress 195,376,010
+to 195,412,790 of 206,300,000 as read live at each step. Regular window
+exact (plus 1,020 for 102 gifts); Premium window moved plus 35,760 against
+2,300 visible row points, new Issue #183 evidence. Both tabs verified
+badge-clear at close and the Alliance Gifts panel dot cleared; the
+Hide-your-name checkbox read unchecked before and after the Premium claim.
+No diamonds or money spent. Tracker marked done. Full detail in
+alliance-gifts/0211-queue-run.md.
+
+## 02:15 alliance-train (ticker-0204, partial)
+
+(Time corrected: the train run closed 02:13 PT; the 02:15 heading above was the estimate at writing time.)
+
+Train, unit train-2026-11-08-2230. Checked only: both preparation signals
+absent on the live base screen (no train icon in the left column, no
+"Boarding closes in" banner), so no train is in preparation. No station
+panel opened, no boarding, no spending. Tracker untouched. Full detail in
+alliance-train/0215-queue-run.md.
+
+## 02:23 alliance-duel (ticker-0204, done)
+
+(Time corrected: the duel-score run closed 02:15 PT; the 02:23 heading above was the estimate at writing time.)
+
+Duel score, unit duel-score-2026-11-08-2230. Read-only: personal daily
+total 1,380,000 on the Radar Training day, confirmed by two independent
+live reads (Today's Theme counter and the Ranking Daily Rank pinned own
+row, rank 153); gap 2,220,000 against the 3,600,000 target. Mid-day
+snapshot, not the day closing figure (rollover about 18:00). No ceremony
+waiting. No grinding, no spending. Tracker marked done. Full detail in
+alliance-duel/0223-queue-run.md.
+
+## 02:17 alliance-duel (ticker-0204, done)
+
+Star ceremony, unit star-ceremony-2026-11-08-2230. Checked only: no
+trophy icon beside the Alliance button on the live base screen, so no
+ceremony is waiting. Nothing tapped in the game, no spending. Tracker
+marked done. Full detail in alliance-duel/0217-queue-run.md.
+
+## 02:18 shop-claims (ticker-0204, done)
+
+Passes, unit passes-2026-11-08-2257. Nothing new claimed: all three of
+this reset day's shop claims (Hot Deals free pack, Weekly Pass Free
+Supply, Super Monthly Pass Daily Gift) were already done at 18:52 on
+2026-11-08 and were verified live as done here - Free Supply fired no
+auto-claim on page open, the monthly Daily Gift button reads Claimed,
+Days Left 13. The $19.99 Legendary Take All, the $4.99 weekly pass
+offers and the $24.99 Monthly Pass Extension were left untouched. No
+diamonds or money spent. Tracker marked done. Full detail in
+shop-claims/0218-queue-run.md.
+
+## 02:21 secret-missions (ticker-0204, done)
+
+Secrets, unit secrets-2026-11-08-2257. Checked only: the same 8 resolved
+cards as the 22:53 unit (7 PERFECT, 1 plundered with the [1] report
+badge), no finished-unclaimed task and no pending task to deploy; Assist
+Allies 5/5 at the daily cap; Reward Recovery 2026-11-6 18:00 reads
+CLAIMED. No Mega Deploy opened. No diamonds or money spent. Tracker
+marked done. Full detail in secret-missions/0221-queue-run.md.
+
+## 02:24 event-claims (ticker-0204, partial)
+
+Events, unit events-2026-11-08-2257. Age of Oil milestone 2 claimed
+("Unlock Stage: Base Expansion II", 9000/500): coin chest x3, red
+diamond x50, Oil 3.0K x6, 5-minute speedup x2. The chest ignored five
+taps in the 19:08 unit; this unit opened it on one direct tap after a
+round-trip through the Construction Ranking panel - the blocker is
+discharged, new evidence for Issue #477. Arms Race Hero Advancement
+phase read 0 points, nothing claimable. Check-in gift and the Winter
+Battlefield, Level Swap, Wanted Boss, Community and Desert Battlefield
+tabs were not swept and carry to the next events unit. Tracker
+untouched. Full detail in event-claims/0224-queue-run.md.
