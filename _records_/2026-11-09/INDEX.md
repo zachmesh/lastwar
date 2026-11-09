@@ -1876,3 +1876,16 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   over 24 hours with statements current; issue 514 deadline
   2026-11-12 18:00 UTC. Status: no-op. Full detail in
   pr-catchall/0939-run.md.- Tool-developer pass tool-development-2026-11-09-0932. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #466 planner-side recurrence taken as the single item - scout_diff.py now consults today's delivered records branch before enqueueing (branch done ids + live completion markers for execution slots, branch done windows for today's exploration slugs); PR #519 opened (commit bf3f316d8, MERGEABLE); 22 fixture assertions 22/22 on isolated /tmp scratch pools, negative control reproduces the re-enqueue on main; progress commented on #466 and synced to the owner Slack DM. Full detail in tool-development/0954-run.md.
+- Arms Race unit arms-race-2026-11-09-0603, partial: the phase page
+  was never opened - the Events entry was not located in either
+  layout tried (windowed 642x951 portrait, then fullscreen
+  letterboxed portrait). The standing (672,132)/(683,150)
+  groundings land on map scenery in both layouts, so they do not
+  apply here; no blind tap was made on unidentified icons. No live
+  phase, score, timer or threshold read this unit, and the 75,000
+  Unit Progression target is not carried forward (phase rotated
+  about 06:05 PT, current phase unknown). Live base reads: food
+  544.5M, iron 871.8M, coin 46.2M, diamonds 6,077. Window returned
+  to windowed 642x951 before the pass ended (View, Exit Full
+  Screen). Tracker untouched. Full detail
+  in arms-race/0949-queue-run.md.
