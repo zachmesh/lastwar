@@ -1533,3 +1533,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 ## 07:32 to 07:45 — Tool development pass
 
 - Tool-developer pass tool-development-2026-11-09-0732. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #510 taken as the single item - queue.py gains resolve_pool_root() and enqueue refuses a root with no pool state directory, scout_diff.py resolves --root the same way and --apply refuses a wrong root, so the planner body literal keeps working (option (b)); PR #512 opened (commit 3715e09ad, MERGEABLE); 28 fixture assertions 28/28 on isolated /tmp scratch pools, negative control reproduces the stray-inbox bug on main; progress commented on #510. Full detail in tool-development/0732-run.md.
+## 07:30 to about 07:41 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0730
+  (NON-batch). Merge-aware checker due no - records PR
+  478 already merged in the 07:00-08:00 PT window at the
+  0700 pass, so no records merge this pass. Records PR
+  493 head moved to 5ef03f4b (ticker-0704 append) during
+  the pass; re-probed still CONFLICTING on the single
+  file _logs_/repo-actions/action-log.jsonl, re-check
+  comment posted. Records PRs 351 and 301 still
+  CONFLICTING on the same single file at unchanged
+  heads, carried awaiting branch-side reconciliation,
+  next batch 11:00. Tools PR 425 owner-gated, re-probed
+  CLEAN against the unchanged main, OD-20261108-01
+  still open, no owner answer. No merges, no PRs opened.
+  Status: done. Full detail in
+  pr-integration/0730-run.md.
