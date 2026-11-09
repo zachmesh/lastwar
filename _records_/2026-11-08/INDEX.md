@@ -4432,3 +4432,17 @@ of 2026-10-28.
   23rd consecutive partial for this regular; failure mode
   filed as an Issue. Quick Dispatch did not run. Full detail
   in survivor-intake/2052-queue-run.md.
+
+- Training unit training-2026-11-08-1803 (partial, ticker-2058):
+  Lv.27 verified busy live (TRAIN UNITS: T9 Lv.9 x726,
+  06:26:20 left; Power 1352, Morale 625.0, Load 2000, HP
+  4121.49, Attack 33.5, Defense 6.74). Lv.20: paw Details
+  route works (Training Count +613, Instructors Alexis/Joe/
+  Jolene/Anthony, Quick Dispatch not tapped); pistol tap
+  produced the live toast "Drill Ground Full: Unable to add
+  more units" - first live re-confirmation of that blocker
+  since 2026-10-31. Lv.20 long-press entered building-move
+  mode, cancelled at once with the red X, no building moved
+  - long-press route retired. One grounding point selected
+  Hospital Lv.20 by mistake, left untouched. 0 batches
+  queued. Full detail in troop-training/2119-queue-run.md.
