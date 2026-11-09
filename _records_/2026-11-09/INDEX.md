@@ -1848,3 +1848,14 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   unchanged head, OD-20261108-01 still open, no new
   comment. Status: done. Full detail in
   pr-integration/0915-run.md.
+
+- Integrator pass pr-integration-2026-11-09-0930
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. No merges,
+  no PRs opened. Records PR 493 re-probed CLEAN at head
+  2c36fe51, re-check comment posted, awaits the 11:00 batch.
+  Records PRs 351 and 301 still CONFLICTING on the same
+  single file at unchanged heads, carried, re-check comments
+  posted. Tools PR 425 owner-gated, unchanged head,
+  OD-20261108-01 still open, no new comment. Status: done.
+  Full detail in pr-integration/0930-run.md.
