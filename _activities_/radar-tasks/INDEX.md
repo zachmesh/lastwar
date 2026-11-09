@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T12:32:17Z
+modified: 2026-11-09T15:32:17Z
 level: L1
-version: 1.57.0
+version: 1.58.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -60,6 +60,7 @@ grounded_in:
   - source: ticker-2334 radar-tasks execution record 2026-11-08 2335 queue run (partial, release day 1, 16 tasks executed, 44 rewards claimed, stored 39/40 to 0/40, points 267 to 311, dish re-grounded to norm 37,736 in the 642x951 window, 6 pins left untapped; record commit 86b26f5ce0 on records/2026-11-08)
   - source: ticker-0140 radar-tasks execution record 2026-11-09 0159 queue run (done, stack empty 0 of 40, points 311, restore 12 tasks in 03:41:39, 6 pins inventoried untapped, dish grounded (54,707) first tap, NEW! badge re-seen; record commit 3d5dc8314 on records/2026-11-09)
   - source: ticker-0334 radar-tasks execution record 2026-11-09 0335 queue run (partial, release day, dish re-grounded (51,718) first try after (55,689) missed, Rare Iron Mine gathering dispatched 720K 00:06:57, 5 pins inventoried unattempted, points 311, restore 12 tasks in 02:01:04; record commit 063a5bde7f on records/2026-11-09)
+  - source: ticker-0634 resource-collection execution record 2026-11-09 0636 queue run (partial, gold circle with blue gem above the blue truck opens the world/radar map with 6 task rewards claimable - a radar entry point, not the truck loot; record commit 04b12d13 on records/2026-11-09)
 ---
 
 
@@ -144,6 +145,7 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   in this unit; the dish drifts per session, so re-ground fresh
   from a magnified crop in every unit.
 - 2026-11-09 0335: first tap at norm (55,689), estimated from the magnified crop, missed (top edge of the dish circle). Re-grounded centre norm (51,718) opened the radar on the first try. The (50,740) retro preference was not tested in this unit either; the dish drifts per session, so re-ground fresh from a magnified crop in every unit. Commented on Issue #484 by this run.
+- 2026-11-09 0636: another entry point, found by a harvest unit, not the dish - the gold circle with a blue gem above the blue truck vehicle on the base opens the world/radar map, which showed "6 task rewards can be claimed" with a Claim All button at 06:49. It is a radar shortcut, not the Armed Truck loot; the rewards were left untouched for the radar unit. A radar unit arriving through this shortcut still verifies the radar screen (level, points, stored count, stamina) before any work, same as the dish entry.
 - Entry precondition, binding from the 1026 and 1439
   units: when the camera is panned onto the Drill Ground
   cluster, restore the full base view first - if a
@@ -1489,6 +1491,8 @@ are still open, per the protocol.
   superseded in place by this close inventory, not erased.
 
 ## Changelog
+
+- 1.58.0, 2026-11-09 - cross-unit entry note from the 0636 harvest unit (partial): the gold circle with a blue gem above the blue truck vehicle opens the world/radar map with 6 task rewards claimable at 06:49 - a verified radar entry point, not the truck loot; the rewards were left untouched for the radar unit; entry verification still applies. Sourced to the harvest record 04b12d13, folded here, not as a radar unit.
 
 - 1.57.0, 2026-11-09 - 0335 unit folded (partial, release day): dish re-grounded fresh, (55,689) missed the top edge of the dish circle, (51,718) opened on the first try - newest verified first-try point, (50,740) preference still untested as a direct tap, commented on Issue #484; blue axe pin dispatched a Rare Iron Mine gathering (Lv.15 mine, 720K, 00:06:57, finish 03:45, March Queues 1/4, 0 stamina, reward iron 105.6K + radar item 10 lands on the next unit); pin inventory 5 unattempted (blue axe centre, 2 orange skulls top right, purple axe centre, portrait left middle) with the record listing the blue axe both worked and unattempted - persistence after dispatch unresolved, next unit verifies; points 311, stored 0/40, stamina 82 to 83, restore 12 tasks in 02:01:04, Fully restore at 11-9 23:39:11; duel delta test still owed.
 
