@@ -100,6 +100,38 @@ of 2026-10-28.
   open and undecided). Status: done. Full detail in
   pr-integration/0030-run.md.
 
+## 00:39 to about 00:46 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-09-0046. No-op: six open PRs
+  scanned, none owned by this job. New PR 493 (records/2026-11-09)
+  and PR 491 clean against main aefdc615, awaiting the 03:00 batch.
+  PRs 478, 351 and 301 still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append), heads
+  unchanged, integrator 2345 re-checks noted. Tools PR 425
+  owner-gated, clean, unchanged, awaiting the owner decision
+  (OD-20261108-01 open and undecided). Seventy-seven open issues,
+  zero unclassified, none created or closed since the 2339 pass.
+  Owner-decision issues 132, 154 and 335 over 24 hours, statements
+  current. Status: no-op. Full detail in pr-catchall/0046-run.md.
+## 00:40 to about 00:46 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0040. Plan staged
+  0 net fresh units (already_present 71,
+  skipped_done_current 0, reaped 0, expired 0, no phantom
+  re-stage, 3 branch-closed slots skipped: survivors 2203,
+  training 2203, zero-sweep 1730). Pre-reset sweep pair
+  already complete by execution (both passes executed
+  partial; 1630 done file absent from the live pool,
+  present on the branch tip); step 2 skipped, this run is
+  in the 00:00 hour. Scout diff applied with zero changes
+  (unexplained 14, unchanged). No withdrawals. Pool inbox
+  69, claimed 0, done 1321. Status: no-op. Full detail in
+  queue-planning/0040-run.md.
+
+## 00:32 to about 00:53 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-0032. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #123 taken as the single item - tapcal.py 1.2.0 gains a verify subcommand deciding one tap-verify loop step (verified / retry with compensated next aim / exhausted / unverified / not-started), PR #494 opened (commit 2d56c0f24e); 72 fixture assertions 72/72 on two runs on isolated /tmp scratch pools; progress commented on #123. Mid-run a concurrent job checked out main in the shared clone and the tool commit first landed on local main; recovered without force push (update-ref to the work branch, fast-forward push verified by ls-remote, local main reset). Full detail in tool-development/0032-run.md.
+
 ## 00:32 to about 00:55 — Knowledge organization pass
 
 - Organizer pass knowledge-organization-2026-11-09-0032.
