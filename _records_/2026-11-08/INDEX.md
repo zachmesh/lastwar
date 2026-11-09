@@ -4889,3 +4889,15 @@ of 2026-10-28.
   remain by stock for the next unit. Tab badge read 1 throughout
   and does not count digs by stock. Full detail in
   hidden-treasures/2255-queue-run.md.
+
+- Harvest unit harvest-2026-11-08-2203 (partial): no bubble
+  collected - two taps hit non-bubble targets (Area No.168
+  zombie NPC dialogue at norm 701,468; Recon Plane Lv.24
+  panel at norm 565,636) and three pans never revealed the
+  bubble cluster, so the sweep is unfinished; HUD unchanged
+  (food 501.9M, iron 824.0M, coin 15.8M). The 1935 coin and
+  iron bubbles left standing were not re-found. Issue #490
+  filed this unit: food/iron HUD totals rose (+2.8M each)
+  since the 19:50 close with no harvest record between, the
+  second occurrence of the pattern. Full detail in
+  resource-collection/2310-queue-run.md.
