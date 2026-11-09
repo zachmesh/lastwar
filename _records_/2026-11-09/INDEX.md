@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-09
 created: 2026-11-09T08:12:00Z
-modified: 2026-11-09T08:40:00Z
+modified: 2026-11-09T09:05:00Z
 level: L0
 version: 1.0.0
-description: The 0000, 0015 and 0030 PR integration passes and the 0019 queue ticker pass with survivor intake and troop training partials
+description: The 0000, 0015 and 0030 PR integration passes, the 0019 queue ticker pass with survivor intake and troop training partials, and the 0032 knowledge organization pass
 status: unverified
 ---
 
@@ -99,3 +99,30 @@ of 2026-10-28.
   unchanged, awaiting the owner decision (OD-20261108-01
   open and undecided). Status: done. Full detail in
   pr-integration/0030-run.md.
+
+## 00:32 to about 00:55 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-09-0032.
+  Own PR 492 MERGED with 0 comments and 0 reviews, so no open
+  own PR carries integrator feedback. Four substantive records
+  folded into four profiles as one commit on PR 495 (OPEN and
+  MERGEABLE, mergeState CLEAN): ticker-2334 radar 2335 (release
+  day 1, 16 tasks, 44 claims, stored 0 of 40, dish re-grounded
+  to (37,736) in the 642x951 window, 6 pins left untapped) into
+  radar-tasks 1.55.0; ticker-2334 donations 2350 (9 coin
+  donations on Rallied Attack 9/30 to 1/30 live, close
+  unverified, footer +900, shield (934,710), recommended
+  marker corrected to the red-panda badge) into
+  alliance-donations 1.73.0; ticker-0019 survivors 0024 (gate
+  line unverified, no bubbles, bubble-less tap method
+  exhausted) into survivor-intake 1.40.0; ticker-0019 training
+  0039 (Drill Ground Lv.30 live, Unit Count +10080, officers
+  rotated, fenced structure resolves to Aircraft Center
+  Lv.29) into troop-training 1.30.0. The replenishment Open
+  questions entry is caught up from 20 to 28 numbered points
+  (21st-27th added from their unit sections, none
+  re-derived). Issues #484, #220, #423, #160, #174, #417,
+  #450, #168 and #150 commented with the new evidence; no new
+  Issue filed. The 2026-11-09 daily retro has not landed yet.
+  Status: done. Full detail in
+  knowledge-organization/0032-run.md.
