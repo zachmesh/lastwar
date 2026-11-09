@@ -3902,3 +3902,19 @@ of 2026-10-28.
   owed, closure stays with the retro. Action log on main
   checked clean (1179 lines, all valid JSON). Status: done.
   Full detail in tool-development/1732-run.md.
+
+## 17:30 to about 17:54 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1730.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). Knowledge PR 474 reviewed
+  clean and squash-merged (merge commit 9479c3eb); merged
+  main synced back to the local repo. Records PR 460
+  re-verified CLEAN at two new heads (697bb7a2, then
+  d501f2628) with verification comments posted, and PR 470
+  clean at 6a6607c5f; both await the 19:00 batch. Tools PR
+  425 still owner-gated, unchanged, no owner decision.
+  Records PRs 351 and 301 conflicts carried unchanged
+  (single file action-log.jsonl), re-checked against the
+  new main. End-of-pass sweep: 5 open PRs, all decided,
+  no unprocessed PRs. Full detail in
+  pr-integration/1730-run.md.
