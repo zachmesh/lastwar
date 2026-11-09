@@ -31,18 +31,18 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-08T19:07:44-08:00",
-  "note": "Claimed 8 finished tasks, Mega Deployed 8 pending, ally assists 5/5"
+  "at": "2026-11-08T22:53:47-08:00",
+  "note": "7 finished tasks claimed; assists 5/5 at cap; no pending to deploy; 1 task plundered 10% by [BZGR]FredoSauce"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-11-08T14:59:35-08:00",
-  "note": "One dig executed, chest progress 7/15, 2 digs remain by stock"
+  "at": "2026-11-08T22:55:52-08:00",
+  "note": "1 dig executed; stocks M1-M7 each -1, progress 8/15, 2 digs remain"
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-08T18:58:15-08:00",
-  "note": "Hot Deals free pack, Free Supply auto-claim, Monthly Pass daily gift claimed for new reset day; no owned weekly pass"
+  "at": "2026-11-08T22:44:17-08:00",
+  "note": "All 3 reset-day shop claims verified live as already claimed (ticker-1851 18:52); no owned weekly pass; no free Hot Deals pack"
  },
  "duel-score": {
   "status": "done",

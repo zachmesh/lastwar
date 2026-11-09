@@ -4860,3 +4860,32 @@ of 2026-10-28.
   95012888d to 469ee656b; Slack DM sync sent for the merge
   (message_ts 1794207522.117609). Run record stats
   corrected. Full detail in pr-integration/2245-run.md.
+- Passes unit passes-2026-11-08-1857 (done): all three of the
+  reset day's shop claims verified live as already claimed by
+  ticker-1851 at 18:52 (Hot Deals Drone Great Value Pack, Weekly
+  Pass Free Supply, Super Monthly Pass Daily Gift, button reads
+  Claimed, Days Left 13). No owned weekly pass claimable; the
+  S2 and S1 cards are $4.99 offers, untouched, as is the $19.99
+  Legendary Take All. Check-in banner FREE GIFT on the Hot Deals
+  page left for the events unit (events-2026-11-08-2257). Full
+  detail in shop-claims/2243-queue-run.md.
+
+- Secrets unit secrets-2026-11-08-1857 (done): 7 finished tasks
+  claimed with one Claim tap (all PERFECT; displayed rewards in
+  secret-missions/2253-queue-run.md, received total not itemized
+  by the game). Assists 5/5 at cap; recovery record already
+  claimed; no pending tasks to deploy (Mega Deploy unresponsive
+  twice, nothing pending). Plunder finding: SR Retrieve Valuable
+  Supplies was plundered at 10% by [BZGR]FredoSauce at 19:40
+  (chest x1, iron/food 97.5K, Hero EXP 123.9K); whether the
+  remaining 90% reached the account is unverified. Full detail
+  in secret-missions/2253-queue-run.md.
+
+- Treasures unit treasures-2026-11-08-1857 (done): one dig
+  executed (Skip Animation on): chest stack x24, coin sacks
+  x12, gold coins x24, medal 600, blue triangle 400, silver
+  ingots 100; chest tier not displayed. Stocks M1-M7 each down
+  exactly 1 (M3 x3 to x2, the cap); chest progress 8/15; 2 digs
+  remain by stock for the next unit. Tab badge read 1 throughout
+  and does not count digs by stock. Full detail in
+  hidden-treasures/2255-queue-run.md.
