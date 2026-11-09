@@ -2235,3 +2235,22 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   re-verified CLEAN against new main c8236dbd7,
   OD-20261108-01 still open, no new escalation. Status:
   done. Full detail in pr-integration/1245-run.md.
+
+- Radar unit radar-2026-11-09-1003, partial: release day
+  (duel day 1, Radar Training) ordinary-task cycle fully
+  done 12:43-12:53 PT - 6 tasks executed, 14 claimed, stored
+  3/40 to 0/40, radar points 322 to 336, stamina 120 to 61;
+  rewards coin about 3.0M, food 5.4M, iron 3.6M, EXP 20.5M,
+  radar discs 140, chips 4.0K, Lv.1 chest x2. At least 6 map
+  pins stand unworked (grey/green/purple/orange skull pins,
+  blue teardrop, portrait, brown animal-face) and fall to the
+  next radar unit per R7; the duel delta test is still owed.
+  Full detail in radar-tasks/1253-queue-run.md.
+
+- Survivors unit survivors-2026-11-09-1003, partial:
+  gate inspected from the right-edge pan 12:55-13:01 PT -
+  no survivor figures and no question-mark bubbles at the
+  front gate, on the road out, or in the monument plaza;
+  0 recruits, Quick Dispatch not run (no intake). The
+  standing gate-line blocker continues. Full detail in
+  survivor-intake/1301-queue-run.md.
