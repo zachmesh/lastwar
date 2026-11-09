@@ -3953,3 +3953,16 @@ of 2026-10-28.
 - Daily missions unit daily-missions-2026-11-07-1800 (partial): full daily task list re-checked live top to bottom, nothing newly completed since the 1628 unit; activity stays 70, the 80-point chest stays 10 points short into the 18:00 reset. All 18 remaining rows read (0/...) with blue Go buttons, none tapped; claimed rows (Daily Login, Donate 5/5) sit at the bottom with green checkmarks, correcting the 1628 "removed from the list" reading. Next Refresh counted down to the 18:00 reset. Tracker untouched. Full detail in daily-missions/1753-queue-run.md.
 
 - Harvest unit harvest-2026-11-08-1403 (partial): pre-reset bubble sweep cut short by the 18:00 reset. Iron +3.6M (813.3M to 816.9M) and coin +3.6M (12.3M to 15.9M) HUD-verified in two taps; food bubbles still standing, food total unchanged at 490.8M. Both taps were aimed at food bubbles and collected another resource, so bubble-type identification from the downscaled screenshot is unreliable and the next harvest unit must verify identity before tapping (rule R2); the identical +3.6M on both taps is recorded unexplained, with a per-type all-at-once mechanism as unverified inference. Armed-truck toast fragment still unread. Remainder to harvest-2026-11-08-1803. Tracker untouched. Full detail in resource-collection/1759-queue-run.md.
+
+## 18:00 to about 18:20 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1800.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). No PR merged. Records PR
+  460 re-verified CLEAN at its new head 802b0472b with a
+  verification comment posted, and PR 470 clean at
+  6a6607c5f; both await the 19:00 batch. Tools PR 425
+  still owner-gated, unchanged, no owner decision.
+  Records PRs 351 and 301 conflicts carried unchanged
+  (single file action-log.jsonl). End-of-pass sweep: 5
+  open PRs, all decided, no unprocessed PRs. Full detail
+  in pr-integration/1800-run.md.
