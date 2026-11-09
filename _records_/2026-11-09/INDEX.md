@@ -1889,3 +1889,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   to windowed 642x951 before the pass ended (View, Exit Full
   Screen). Tracker untouched. Full detail
   in arms-race/0949-queue-run.md.
+
+## 09:40 to about 09:53 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0940. Plan staged
+  0 units (already_present 72, skipped_done_current 2,
+  reaped 0, expired 0, 4 branch-closed slots skipped,
+  0 stale inbox copies dropped) - the next 12 hours
+  already staged through about 21:46 local. Pre-reset
+  sweep production skipped (not the 17:00 run); pair
+  already complete (seq 1 at 16:30, seq 2 at 17:30).
+  Scout diff on the Nov 9 observation (31 items, md5
+  c6fd3182) applied with 2 enqueued (decoration-gallery
+  and builders-hut re-enqueues - fresh Issue #466
+  instance, commented) and 15 already-queued; promotion
+  proposals 3. No withdrawals. Pool inbox 82, claimed 0,
+  done 1337. Status: done. Full detail in
+  queue-planning/0940-run.md.
