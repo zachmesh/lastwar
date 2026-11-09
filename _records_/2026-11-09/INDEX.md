@@ -1412,3 +1412,17 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   PR 425 owner-gated, clean, OD-20261108-01 still open,
   no owner answer. Status: done. Full detail in
   pr-integration/0645-run.md.
+- Planner pass queue-planning-2026-11-09-0640. Plan staged
+  15 units (already_present 57, skipped_done_current 2,
+  reaped 0, expired 0, 5 branch-closed slots skipped) - the
+  18:00/18:03/18:30 slots through about 18:43 local.
+  Pre-reset sweep production skipped (not the 17:00 run);
+  pair already complete (seq 1 at 16:30, seq 2 at 17:30).
+  Scout diff on the new 0606 observation applied with 11
+  enqueued (events-1450 + 10 scout-discovery exploration
+  units) and 5 already-queued; tooling Issue #510 filed for
+  the scout_diff --root mismatch (body-literal root orphaned
+  the first apply's 16 units into a stray repo inbox,
+  deleted and re-applied against the real pool). No
+  withdrawals. Pool inbox 83, claimed 0, done 1331.
+  Status: done. Full detail in queue-planning/0640-run.md.
