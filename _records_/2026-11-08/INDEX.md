@@ -3690,3 +3690,17 @@ of 2026-10-28.
   End-of-pass sweep: 5 open PRs, all decided, no
   unprocessed PRs. Full detail in
   pr-integration/1600-run.md.
+## 16:15 to about 16:27 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1615.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). No PR merged. Records PR
+  460 re-verified CLEAN at new head d7c0f2dd2 (only the
+  1600 run record since the last verification; comment
+  posted) and PR 470 clean at 6a6607c5f; both await the
+  19:00 batch. Tools PR 425 still owner-gated, unchanged
+  since the 1600 verification, no owner decision.
+  Records PRs 351 and 301 conflicts carried unchanged
+  (single file action-log.jsonl), no repeat notes.
+  End-of-pass sweep: 5 open PRs, all decided, no
+  unprocessed PRs. Full detail in
+  pr-integration/1615-run.md.
