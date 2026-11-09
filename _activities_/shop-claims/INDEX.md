@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T03:32:17Z
+modified: 2026-11-09T07:32:17Z
 level: L1
-version: 1.39.0
+version: 1.40.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -44,6 +44,7 @@ grounded_in:
   - source: ticker-1049 shop-claims execution record 2026-11-08 1054 queue run (partial, shop surfaces checked live, Weekly Pass 18:00 reset eighth confirmation, Season hub claim path probed through the Calculating card and Season Contributions with no pass claim found, Donation Count 2/30 at entry); record commit 355d3f11c on records/2026-11-08
   - source: ticker-1434 shop-claims execution record 2026-11-08 1455 queue run (partial, shop and season pages checked live, Weekly Pass 18:00 reset ninth confirmation, Season hub Goals and Profession opened with no pass claim found, Season pass path unreachable in the Week 8 hub, Issue #469 filed); record commit dfd3c87f9 on records/2026-11-08
   - source: ticker-1851 shop-claims execution record 2026-11-08 1858 queue run (done, new reset day's Hot Deals pack, Weekly Pass Free Supply auto-claim and Super Monthly Pass daily gift claimed, Weekly Pass 18:00 reset eleventh confirmation, weekly passes lapsed unowned; record commit cff344153 on records/2026-11-08)
+  - source: ticker-2235 shop-claims execution record 2026-11-08 2243 queue run (done, reset-day claims verified already claimed, check-in FREE GIFT left for the events-2257 unit; record commit 0c9686b4f on records/2026-11-08)
 ---
 
 
@@ -1322,3 +1323,15 @@ the free and already paid for parts, never the paid unlocks.
   structured result, not estimates.
 - Game left safe: base screen. Nothing bought. No Assemble, no
   teleport.
+
+## What the 2026-11-08 2243 unit added - reset-day claims verified already claimed, check-in gift left for events
+
+- Unit passes-2026-11-08-1857 by ticker-2235, about 22:36 to 22:44 local, status done. Evidence in `_records_/2026-11-08/shop-claims/2243-queue-run.md` (commit 0c9686b4f on records/2026-11-08). Nothing new claimed in this unit: all three of this reset day's shop claims were already done by ticker-1851 at 18:52 (record shop-claims/1858-queue-run.md) and were verified live as done here.
+- Hot Deals (Official Event tab): no free pack showing. The page shows the "Visit the Last War Store" promo and the check-in banner only; the Drone Great Value Pack claimed at 18:52 is gone, consistent with "Packs sold out".
+- Weekly Pass page: opening the page fired no Free Supply auto-claim (already claimed at 18:52: chest x1, ruby x10). The S2 Drone Components Weekly Pass (Legendary) and the S1 Drone Parts Weekly Pass (Epic) both still show a Get Now $4.99 price button, i.e. unowned offers, not claims; neither was tapped. The list did not move under a scroll or a drag; the two cards are the full list as observed.
+- Super Monthly Pass page: the Daily Gift button reads "Claimed" (greyed), Days Left 13, Rewards Left 13, matching the 18:52 claim (gold ticket x2, red diamond 100, stamina 50 x2, iron 200, 5-minute speedup x60). The $24.99 Monthly Pass Extension was not tapped.
+- Energy Loot Quest (Hot Deals sub-tab, reached by a mis-tap on the HOT DEALS header): badge balance 0, all tier Claim buttons greyed; the track pays only for buying packs, so nothing free is claimable there. Left untouched.
+- NOT claimed here: the check-in banner on the Hot Deals page ("Participate in the check-in event and claim great rewards!", FREE GIFT "Claim your gift today!", blue Go button) - a check-in event belongs to the events regular (event-claims), not to shop-claims. It is left for the events unit events-2026-11-08-2257 already in the inbox (due 22:57 PT); the Go button on the Hot Deals page is the entry point. The banner's second carousel dot did not switch pages when tapped.
+- No season pass claim was hunted in the Season hub, per the 2026-11-08 ticker-1434 finding (Issue #469): the Week 8 hub path is stale.
+- Red lines held: no diamonds or money spent. No price button tapped. The $19.99 Legendary Take All, the $4.99 weekly pass offers and the $24.99 Monthly Pass Extension were left untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3, resources_gained none, costs 8min-no-items-spent, verified yes, device_takeovers 0, follow_up events-2026-11-08-2257-check-in.
