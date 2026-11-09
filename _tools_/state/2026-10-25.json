@@ -1,0 +1,87 @@
+{
+ "vip": {
+  "status": "done",
+  "at": "2026-10-25T21:21:45",
+  "note": "claimed by owner himself at 20:53 after the reset; the sweep had missed it"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-10-25T21:21:45",
+  "note": "weekly/monthly pickups and free supply claimed in the day rounds"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-10-25T21:21:45",
+  "note": "claimed finished, 9 Mega deployed, 4 short ones claimed on completion; 5 still running overnight"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-10-25T21:21:45",
+  "note": "1 dig done; M5 exhausted"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-10-25T21:21:45",
+  "note": "fully cleared incl. special pin; score 2811"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-10-25T21:21:45",
+  "note": "two intakes done; gate clear at last check"
+ },
+ "trucks": {
+  "status": "done",
+  "at": "2026-10-25T21:21:46",
+  "note": "4 settled, recovery claimed, 4 dispatched, plunder 4/4 (9 shards on the UR)"
+ },
+ "training": {
+  "status": "done",
+  "at": "2026-10-25T21:21:46",
+  "note": "all four barracks queued in the midday round"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-10-25T21:21:46",
+  "note": "5 gold-coin donations in the morning round, 300 pts"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-10-25T21:21:46",
+  "note": "Battle Pass login to 16900, Halloween Day 01, earned milestones claimed"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-10-25T21:21:46",
+  "note": "completed 14:27-14:36, 6 hearts, rewards claimed"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-10-25T21:23:59",
+  "note": "all categories Claim All pressed (Alliance, Season, System, Regular, Battle Report); Purchases are receipts only"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-10-25T21:26:21",
+  "note": "Help All pressed; only own requests pending, no ally requests waiting"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-10-25T21:26:21",
+  "note": "Regular 3 new claimed; Premium all rows already Claimed"
+ },
+ "harvest": {
+  "status": "done",
+  "at": "2026-10-25T21:28:04",
+  "note": "all visible bubbles tapped on centers; base clear afterwards"
+ },
+ "train": {
+  "status": "skipped",
+  "at": "2026-10-25T21:28:05",
+  "note": "no train in preparation found tonight; evening boarding entry still unresolved"
+ },
+ "arms-race": {
+  "status": "done",
+  "at": "2026-10-25T21:29:01",
+  "note": "Base Building phase, 0 pts, no chests earned; Calendar red dot is the Stage Swap info panel"
+ }
+}

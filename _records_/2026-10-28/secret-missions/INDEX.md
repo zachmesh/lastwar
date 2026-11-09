@@ -1,0 +1,57 @@
+---
+title: Secret Missions on 2026-10-28
+created: 2026-10-28T10:20:00Z
+modified: 2026-10-28T14:37:00Z
+version: 1.0.0
+description: Index of Secret Missions executions on 2026-10-28
+grounded_in:
+  - source: human-authored
+---
+
+# Secret Missions — 2026-10-28
+
+Activity subfolder inside the 2026-10-28 record. Knowledge about this
+activity lives in [`_activities_/secret-missions`](../../../_activities_/secret-missions/INDEX.md).
+Each execution on this date is one file in this folder, added one at a
+time and never edited once committed (C1).
+
+**Status — Done.** See the execution files for the detail.
+
+## Executions
+
+- [0257-segment-3-run.md](0257-segment-3-run.md) — the segment 3 run
+  that started at 02:57 local; checked in full - the list held only
+  the four cards settled in the 2257 run, no Claim or Go button,
+  Mega Deploy opened no panel, assists already at the 5 of 5 daily
+  cap, and Reward Recovery's latest record (2026-10-24) already
+  CLAIMED. Nothing was dispatched or claimed.
+
+- [0734-queue-run.md](0734-queue-run.md) — queue unit
+  secrets-2026-10-28-0657, executor ticker-0734; checked in full -
+  the same four settled PERFECT cards, no Claim or Go button,
+  assists at the 5 of 5 daily cap, Reward Recovery's latest record
+  (2026-10-24) already CLAIMED. Nothing was dispatched or claimed.
+
+- [1242-queue-run.md](1242-queue-run.md) — queue unit
+  secrets-2026-10-28-1057, executor ticker-1234; checked in full -
+  the same four settled cards (UR Rescue Officer with its plundered
+  marker, the other three stamped PERFECT), no Claim or Go button,
+  assists at the 5 of 5 daily cap, Reward Recovery's latest record
+  (2026-10-24) already CLAIMED. Nothing was dispatched or claimed.
+  Entry note: the white pickup icon now sits at norm (54,650); a
+  tap at (50,605) opened own-truck dispatch instead.
+
+- [1614-queue-run.md](1614-queue-run.md) — queue unit
+  secrets-2026-10-28-1457, executor ticker-1604; checked in full -
+  the same four settled cards, no Claim or Go button,
+  assists at the 5 of 5 daily cap, Reward Recovery's latest record
+  (2026-10-24 19:00) already CLAIMED. Nothing was dispatched or claimed.
+- [1930-queue-run.md](1930-queue-run.md) — queue ticker unit
+  secrets-2026-10-28-1857, executor ticker-1917; fresh task
+  batch Mega Deployed (UR Rescue Test Subject 4h, UR Rescue
+  Missing Agent 2h, SSR Train Refugees 1h, SSR Search for
+  Missing Refugees 1h, Provide Tech Support to Refugees),
+  dispatch verified by countdowns; ally list swept, all rows
+  UR with countdowns only and no Assist button, counter stays
+  0 of 5; Reward Recovery latest record (2026-10-24) already
+  CLAIMED.

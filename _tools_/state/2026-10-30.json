@@ -1,0 +1,67 @@
+{
+ "gifts": {
+  "status": "done",
+  "at": "2026-10-30T19:23:34",
+  "note": "Regular 170 and Premium 12 claimed"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-10-30T23:08:02",
+  "note": "Help bubble tapped, allies grateful toast, bubble cleared"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-10-30T23:14:52",
+  "note": "Checked only: no ceremony waiting"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-10-30T23:14:02",
+  "note": "Checked only: no train in preparation"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-10-30T17:39:52",
+  "note": "7 PERFECT cards, nothing to claim or deploy, assists 5 of 5"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-10-30T20:36:45",
+  "note": "Hidden Treasures checked, M3 x0 blocks dig"
+ },
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-10-30T14:26:41",
+  "note": "Base Building score 0, all scoring paths red-lined, no in-window building completion"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-10-30T18:48:34",
+  "note": "12 coin donations to Rallied HP, 7200 coin, count 0/30"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-10-30T23:13:12",
+  "note": "All categories swept, Event claimed, others no rewards"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-10-30T17:13:17",
+  "note": "Shop claims check - all pickups already claimed today"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-10-30T23:38:51",
+  "note": "Events sweep 2338: nothing claimable; Wanted Boss Code 39 not out"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-10-30T22:20:20",
+  "note": "Stack posture: stored 0/40, 12 restoring in 00:31:54, stamina 67, nothing claimed"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-10-30T20:43:12",
+  "note": "Daily Freebie + login 200 points claimed, now 1,575,460"
+ }
+}

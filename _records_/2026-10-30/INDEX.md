@@ -1,0 +1,1241 @@
+---
+title: Play Record 2026-10-30
+created: 2026-10-30T07:07:00Z
+modified: 2026-11-01T07:26:52Z
+level: L0
+version: 1.0.2
+description: The 0004 queue ticker pass, Hidden Treasures dig and Zombie Invasion chain unit 051
+status: unverified
+grounded_in:
+  - source: in-game screens observed on the owner Mac mini, 2026-10-30
+---
+
+# 2026-10-30
+
+All times America/Los_Angeles. Actor Muse, under the owner standing
+instruction of 2026-10-25 to run the regulars and the queue design
+of 2026-10-28.
+
+## 00:04 to about 00:10 — Queue ticker pass, Hidden Treasures dig
+
+- Ticker pass ticker-0004. Sync reaped nothing and produced
+  nothing new - all 17 due regulars were already queued by the
+  planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-051 was already in inbox, so
+  no chain seeding was needed.
+- Hidden Treasures unit treasures-2026-10-29-2257, done: the
+  tab badge was 1, fragments M1 x14, M2 x13, M3 x1, M4 x9,
+  M5 x2, M6 x5, M7 x14, chest progress 15/15. One dig taken;
+  reward rows x1, x3, x10, 1.8K, 450, 450 (names not fully
+  read). After the dig fragments are M1 x13, M2 x12, M3 x0,
+  M4 x8, M5 x1, M6 x4, M7 x13, chest progress reset to 0/15,
+  both Dig buttons greyed, badge cleared. Full detail in
+  hidden-treasures/0007-queue-run.md.
+
+## 00:09 to about 00:18 — Queue ticker pass, Zombie Invasion unit 051
+
+- Zombie-invasion unit zombie-invasion-zombie-2026-10-28-051,
+  partial: two Lv.10 kills dispatched in parallel
+  (squads_parallel 2 - X:897 Y:995 and X:889 Y:977, stamina
+  71 to 51 proving both marches), both LOOT rows claimed
+  in-unit for 536,000 coins (HUD 122.0M to 122.5M); the
+  gift badge read 2 while both squads were still Returning,
+  so rows materialize on victory before homecoming. Session
+  cc-417 dropped mid-unit, cc-418 resumed with no state
+  lost. The Store was not visited (unit cap), so no derived
+  medal total is reported and the SSR row re-check stays
+  open. Full detail in zombie-invasion/0018-queue-run.md.
+  Successor unit 052 starts now (cleared false).
+
+## 00:34 to about 00:44 — Queue ticker pass, Zombie Invasion unit 052
+
+- Zombie-invasion unit zombie-invasion-zombie-2026-10-28-052,
+  done: four Lv.10 kills dispatched in parallel at the
+  march-queue cap (squads_parallel 4 - X:887 Y:926,
+  X:877 Y:910, X:874 Y:915, X:892 Y:880, stamina 56 to
+  16 proving all four marches), all four LOOT rows
+  claimed in-unit for 1,072,000 coins (HUD 122.5M to
+  123.6M). Store redemption breakthrough: medal balance
+  read live at 3370, the 160-medal Coin Chest (SSR) row
+  found again at Limit 98 (tooltip Owned 4, yield
+  812.16K), a plain single click on Redeem opened the
+  BUY ITEMS dialog and a plain single click on Buy
+  succeeded where unit 047's Buy step had failed -
+  balance 3370 to 3210, Limit 98 to 97, CONGRATULATIONS
+  verified. No diamonds or money spent. Owned chest
+  location still unknown, so no chest opened. A fresh
+  wave arrived during the unit, so cleared is false.
+  Full detail in zombie-invasion/0044-queue-run.md.
+  Successor unit 053 starts now (cleared false).
+
+## 01:04 to about 01:17 — Queue ticker pass, Zombie Invasion unit 053
+
+- Zombie-invasion unit zombie-invasion-zombie-2026-10-28-053,
+  done: two Lv.10 kills at squads_parallel 1 (X:979 Y:956,
+  X:982 Y:965, stamina 22 to 4), both LOOT rows claimed
+  in-unit for 536,000 coins at the standard 268.0K row
+  value (second row not screenshot-read, see record;
+  HUD 123.6M to about 124.1M). A 1.5 second batched
+  second dispatch failed silently (stamina unchanged),
+  and the gift-box point twice opened an ally base
+  profile because the map was centred on that base;
+  a map drag cleared it and 319,247 opened LOOT.
+  Computer session cc-421 dropped mid-unit, cc-422
+  recovered with no state lost. Store not visited,
+  no medal balance live-measured, no chest opened.
+  No diamonds or money spent. Nearby zombies not
+  cleared, so cleared is false. Full detail in
+  zombie-invasion/0104-queue-run.md. Successor unit
+  054 starts now (cleared false).
+
+## 01:34 to about 01:47 — Queue ticker pass, Zombie Invasion unit 054
+
+- Zombie-invasion unit zombie-invasion-zombie-2026-10-28-054,
+  done: four Lv.10 kills dispatched in parallel at the
+  march-queue cap (squads_parallel 4 - X:913 Y:944,
+  X:894 Y:953, X:894 Y:934, X:862 Y:942, stamina 59 to
+  19 proving all four marches), all four LOOT rows
+  claimed in-unit for 1,072,000 coins (HUD 124.1M to
+  125.2M). Stamina was 8 at entry, so one 50 Stamina
+  item was opened first (Inventory Special: 50-stamina
+  x611, 10-stamina x624 live; 50 x610 derived after).
+  A slow single-step dispatch hit the stale-target
+  failure; batched dispatches with a 2 second pause
+  after Search succeeded four times. Computer session
+  cc-423 dropped during a wait, cc-424 recovered with
+  no state lost. Store: medal balance read live at
+  3270, 1 SSR Coin Chest redeemed for 160 medals
+  (balance 3270 to 3110, Limit 97 to 96, CONGRATULATIONS
+  verified; the first Buy tap at 500,640 missed and
+  the grounded Buy centre 499,689 succeeded). No
+  diamonds or money spent. Owned chest location still
+  unknown, so no chest opened. A fresh wave arrived
+  during the unit, so cleared is false. Full detail in
+  zombie-invasion/0134-queue-run.md. Successor unit
+  055 starts now (cleared false).
+
+## 02:04 to about 02:10 — Queue ticker pass, Arms Race unit
+
+- Arms-race unit arms-race-2026-10-30-0203, partial:
+  live phase Drone Boost, Contest Segment Lv.29-30,
+  score 12,000 against thresholds 1,500 / 10,000 /
+  30,000. One tap opened both the 1,500 and 10,000
+  point chests (popup read Badge 3, SR chest 12, Skill
+  Medals 600, Food 12, Coin 12, 5-minute speedups 28;
+  the 10,000 chest contents were not separately read).
+  Cumulative chest moved 6 of 8 to 9 of 8 and was
+  claimed (gold ticket-like items 3, red gem tagged
+  100 x1, pink puzzle pieces 5), then read 9 of 18.
+  Ranking chest produced no claim while the phase is
+  live. Tier-3 gap is 18,000 points (180 stamina at
+  100 each); no radar work was merged and no stamina
+  item was opened in this unit, so the tracker is
+  untouched and the next tick re-produces this
+  regular. Full detail in arms-race/0210-queue-run.md.
+
+## 02:10 to about 02:14 — Queue ticker pass, Alliance donations unit
+
+- Donations unit donations-2026-10-30-0203, done:
+  three coin donations (600 coin each) to Rallied HP
+  on the War tab, Donation Count 12 of 30 to 9 of 30
+  (remaining count), Tech EXP 196.7K to 197.0K.
+  Tech Donation Today rose 850 to 1,150 (100 points
+  per donation), crossing the 1000 point daily
+  reward threshold; the reward itself settles at
+  the 19:00 reset with no hand claim, per the
+  2026-10-26 finding. No diamonds spent. Full detail
+  in alliance-donations/0214-queue-run.md.
+
+## 02:15 to about 02:20 — Queue ticker pass, Radar unit
+
+- Radar unit radar-2026-10-30-0203, partial (duel
+  Day 5, Total Mobilization, release posture):
+  Lv.12, points 2,989 to 2,997, stored tasks 4 of 40
+  to 0 of 40. Free 75 stamina claimed first
+  (stamina 26 to 102, Remaining Today 1 of 2 left),
+  then Quick Execute 5 tasks (stamina 102 to 52).
+  Two Claim All batches paid 6 then 2 rewards
+  (first: chest 24, tokens 60, Hero EXP 10.6M,
+  drone data 800, iron 2.4M, food 1.7M, coin 1.1M;
+  second: chest 1, tokens 10, 5m speedups 6,
+  1m speedups 65, Hero EXP 1.5M, drone data 800,
+  iron 1.2M, food 468.0K, coin 121.9K). Ordinary
+  tasks are done and the bottom bar is gone, but
+  five special map pins were left unattempted, so
+  the tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  radar-tasks/0220-queue-run.md.
+
+## 02:20 to about 02:26 — Queue ticker pass, Harvest unit
+
+- Harvest unit harvest-2026-10-30-0203, partial:
+  iron 454.5M to 461.4M (plus 6.9M on the first
+  tap) and coin 126.5M to 131.7M (plus 5.2M across
+  a seven-tap batch), food unchanged at 269.3M
+  on HUD rounding. A fall-through tap opened an
+  Iron Mine Lv.27 panel, closed without Quick
+  Dispatch. The pass budget ended the unit before
+  a final bubble scan and the Armed Truck check,
+  so the tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  resource-collection/0226-queue-run.md.
+
+## 02:35 to about 02:43 — Queue ticker pass, Survivor intake unit
+
+- Survivor intake unit survivors-2026-10-30-0203,
+  partial: one dialog survivor taken in at the gate
+  (POLAR GUEST, "Amazing! This place feels just
+  like home." / "Can I stay here forever."), bubble
+  turned to a green smiley on the next base view.
+  A tap that opened the Armed Truck rewards panel
+  was closed untouched (that claim belongs to the
+  harvest unit). Quick Dispatch was not run, so the
+  tracker is untouched and the next tick
+  re-produces this regular. Full detail in
+  survivor-intake/0243-queue-run.md.
+
+## 02:44 to about 02:48 — Queue ticker pass, Troop training unit
+
+- Troop training unit training-2026-10-30-0203,
+  partial: base panned north-west and back, and the
+  two beige tents on the right side tapped at four
+  points, but none opened a barracks or TRAIN UNITS
+  panel, so no queue timer was read and no batch
+  was started. The tracker is untouched and the
+  next tick re-produces this regular. Full detail
+  in troop-training/0248-queue-run.md.
+
+## 02:48 to about 02:53 — Queue ticker pass, Alliance gifts unit
+
+- Alliance gifts unit gifts-2026-10-30-0230,
+  done: Regular Claim All claimed 134 gifts
+  (progress 173,006,100 to 173,007,440), Premium
+  Claim All claimed 2 gifts (SR plus 100, MR plus
+  1000; progress to 173,008,540, Gift Level 28).
+  The game was left on the Alliance panel after
+  its back arrow stopped taking background taps;
+  the Gifts entry still showed a red dot at the
+  close, so the next tick re-checks it. Full
+  detail in alliance-gifts/0252-queue-run.md.
+
+## 03:05 to about 03:10 — Queue ticker pass, Alliance help unit
+
+- Alliance help unit help-2026-10-30-0230, done: Help All
+  pressed once from the Alliance panel; ally requests
+  (another commander Lv.28 Air Force Base, Missile Apex Lv.23 2nd
+  Tech Center) cleared, only the two own 30 of 30 requests
+  remained. Today's help points still read 480 of 1,000
+  immediately after the press, recorded as observed. Full
+  detail in alliance-help/0310-queue-run.md.
+
+## 03:11 to about 03:14 — Queue ticker pass, Mail unit
+
+- Mail unit mail-2026-10-30-0230, done: Event Claim All
+  claimed a Zombie Invasion Intel Reward batch (540 medal
+  item, EXP 4.5M, 3.1K item, 10 stamina item, coin 1.8M,
+  food 1.4M, iron 1.4M as displayed). Alliance, Season,
+  System, Regular and Battle Report Claim All produced no
+  rewards; Battle Report held two scout reports (another commander and another commander) with no action taken. No mail
+  deleted. Full detail in mail-rewards/0314-queue-run.md.
+
+## 03:15 — Queue ticker pass, Star Ceremony check
+
+- Star Ceremony unit star-ceremony-2026-10-30-0230, done
+  (checked only): no trophy icon on the right side of the
+  base screen beside Alliance, no ceremony waiting to play
+  or claim. Full detail in alliance-duel/0315-queue-run.md.
+
+## 03:15 to about 03:16 — Queue ticker pass, Train check
+
+- Train unit train-2026-10-30-0230, done (checked only):
+  no "Boarding closes in" banner under the resource bar,
+  so no train is in preparation. Nothing boarded, no Trade
+  Contracts spent. Full detail in alliance-train/0316-queue-run.md.
+
+## 03:16 to about 03:19 — Queue ticker pass, Events sweep unit
+
+- Events unit events-2026-10-30-0257, done: full hub sweep,
+  nothing claimed. Arms Race Unit Progression at 51,500
+  points, 03:43:59 left, thresholds 15,000 / 30,000 /
+  75,000 (first two reached, left for the arms-race unit);
+  Winter Battlefield starting soon; Desert Storm waiting
+  00:38:33; Zombie Invasion live with no tab Claim button;
+  Level Swap inspected only; Community already Claimed;
+  Wanted Boss now Code 64, not out yet (Go 14:43:09).
+  Halloween Days 01 to 06 claimed, Day 07 only opened its
+  Decoration Choice Chest VI (UR) detail with no Claim
+  button, recorded as not yet claimable. Session cc-437
+  dropped mid-unit, cc-438 resumed, no state lost. Full
+  detail in event-claims/0319-queue-run.md.
+
+## 03:20 to about 03:21 — Queue ticker pass, Shop claims check
+
+- Passes unit passes-2026-10-30-0257, done (checked only):
+  Hot Deals showed only the Last War Store promo, no free
+  pack; Weekly Pass Free Supply reads Claimed, Coin Weekly
+  Pass Already claimed today (4d 15:39:25 left); Super
+  Monthly Pass Daily Pickup reads Claimed, 23 days left.
+  Legendary Take All $19.99, Renew $4.99, Get Now $4.99
+  and Extension $24.99 all left untouched. Nothing new
+  claimed, nothing spent. Full detail in
+  shop-claims/0321-queue-run.md.
+
+## 03:34 to about 03:41 — Queue ticker pass, Trucks unit
+
+- Trucks unit trucks-2026-10-30-0257, partial: trade screen
+  never entered. Duel day 5 Total Mobilization is not a UR
+  truck day, so the non-UR rule would have applied, but it
+  was never reached. One tap at 53,713 opened a map screen
+  with a radar task timer, not trade, and was left untouched
+  on return home. An enlarged left-column crop then showed
+  no blue truck-front Intercity Trade icon in the current
+  set (hammer 2/4, flask 0/2, green face, blue bus/train
+  with red badge, white pickup, satellite, hammer,
+  walkie-talkie), matching the 2026-10-29 23:48 entry
+  failure. Settled 0, dispatched 0, plundered 0, nothing
+  spent. Tracker untouched, so the next tick re-produces
+  this regular. Full detail in
+  truck-plunder/0340-queue-run.md.
+
+## 03:41 to about 03:45 — Queue ticker pass, Secrets unit
+
+- Secrets unit secrets-2026-10-30-0257, done (checked
+  only): Secret Command Post entered at 53,643. Four
+  Your Tasks cards all PERFECT (UR Rescue Missing Agent,
+  SSR Train Refugees, SSR Protect Refugee Camp, SSR
+  Search for Missing Refugees), already claimed in the
+  2026-10-29 23:51 unit, so nothing further to claim.
+  Mega Deploy opened no panel (nothing pending);
+  Reward Recovery showed the 2026-10-24 record already
+  CLAIMED. Assists already 5 of 5, plunder untouched.
+  Correction found in this unit: a tap at 52,605 opened
+  Intercity Trade (Trade Count 1 of 5), backed out
+  untouched - so the preceding trucks unit's "no trade
+  icon" claim is corrected; the next trucks unit should
+  try 53,605 first. Full detail in
+  secret-missions/0345-queue-run.md.
+
+## 03:41 to about 03:48 — Queue ticker pass, Hidden Treasures unit
+
+- Treasures unit treasures-2026-10-30-0257, done
+  (checked only): fragments M1 x13, M2 x12, M3 x0,
+  M4 x8, M5 x1, M6 x4, M7 x13, so M3 blocks any dig;
+  both Dig buttons greyed, chest progress 0/15 after
+  today's 00:04 dig. No exchange attempted. Full detail
+  in hidden-treasures/0348-queue-run.md.
+
+## 03:41 to about 03:50 — Queue ticker pass, Zombie Invasion unit 055
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-055,
+  done: two Lv.10 kills, sequential (squads_parallel 1
+  - 6-second round trips, first squad home before the
+  second dispatch; a batched parallel attempt landed
+  on a Lv.95 Zombie Boss card and was closed
+  untouched, no boss march sent). Kills X:985 Y:951
+  and X:982 Y:951, both LOOT rows claimed in-unit for
+  536,000 coins (HUD 133.6M to 134.1M). Store
+  redemption: medals read live at 3670, one SSR Coin
+  Chest redeemed for 160 (3670 to 3510, Limit 96 to
+  95, CONGRATULATIONS verified; first Redeem tap
+  only closed the tooltip). Owned chests still not
+  located in inventory, so none opened. Cleared is
+  false, successor unit 056 starts now. Full detail
+  in zombie-invasion/0350-queue-run.md.
+
+## Pass clock note - ticker-0334
+
+- VM clock at this pass: token taken 10:34 UTC, treasures
+  unit completed 10:40 UTC, zombie unit completed
+  10:48 UTC, token released 10:49 UTC. The
+  "about" windows in the four unit sections above run a
+  few minutes ahead of that clock; the VM clock times
+  here are the calibration, and the game-state facts in
+  the unit records stand as written.
+
+## 04:04 to about 04:19 — Queue ticker pass, Zombie Invasion unit 056
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-056,
+  partial (15 minute cap reached during Store
+  redemption; tracker untouched): two Lv.10 kills,
+  sequential (squads_parallel 1 - round trips of
+  seconds, first squad home before the second
+  dispatch). LOOT rows X:964 Y:952 and X:998 Y:958
+  claimed in-unit for 536,000 coins (HUD 134.1M to
+  134.6M). Windowed-mode bottom-bar clicks failed
+  until the game was put into native fullscreen, in
+  which all controls responded. Store redemption NOT
+  done: medals read live at 3530, SSR Coin Chest row
+  (160, Limit 95) identified, five Redeem attempts
+  produced no dialog, medals and Limit unchanged;
+  a Ranking panel opened by one mis-aimed tap was
+  closed untouched. Cleared is false, successor
+  starts now. Full detail in
+  zombie-invasion/0419-queue-run.md.
+
+## 04:34 to about 04:45 — Queue ticker pass, Zombie Invasion unit 057
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-057,
+  partial (Store step unexecuted, tracker untouched):
+  two Lv.10 kills, sequential (squads_parallel 1 -
+  short round trips, first squad home before the
+  second dispatch). LOOT rows X:960 Y:950 and X:910
+  Y:965 claimed in-unit for 536,000 coins (HUD
+  134.6M to 135.2M). Entry medals read live at 3530;
+  medals after the kills not re-measured live, so no
+  derived balance is reported. Store button grounded
+  at 618,222 twice produced no change to background
+  clicks, so the SSR redemption is deferred again; a
+  Ranking panel opened by one mis-aimed tap was
+  closed untouched. Search point corrected: taps at
+  358,941 hit the back arrow, real Search is at
+  441,940. Cleared is false, successor unit 058
+  starts now. Full detail in
+  zombie-invasion/0445-queue-run.md.
+
+## 05:04 to about 05:17 — Queue ticker pass, Zombie Invasion unit 058
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-058,
+  partial (Store step unexecuted, tracker untouched):
+  three Lv.10 kills, sequential (squads_parallel 1 -
+  short round trips, each squad home before the next
+  dispatch; stamina refill before the third march
+  widened the gap). LOOT rows X:992 Y:943, X:993
+  Y:937 and X:995 Y:932 claimed in-unit for 804,000
+  coins (HUD 135.2M to 136.0M). Stamina 5/120 at the
+  third dispatch, one 50 Stamina item used (Owned
+  610 to 609), stamina 46 at close. Store button
+  unresponsive to a single tap and a long-press at
+  609,221, so the SSR redemption is deferred again;
+  no medal balance re-measured live, so no derived
+  balance is reported. Gift-box point on this map
+  view was 428,240 (earlier points did not
+  transfer). Cleared is false, successor unit 059
+  starts now. Full detail in
+  zombie-invasion/0514-queue-run.md.
+
+## 05:34 to about 05:40 — Queue ticker pass, trucks unit (partial, entry failed)
+
+- Trucks unit trucks-2026-10-30-1230, partial (trade screen
+  never entered, tracker untouched): fullscreen clicks reached
+  nothing until View then Exit Full Screen restored windowed
+  clicks; the left column in this set holds green face, train,
+  white pickup, radar, magnifier and walkie-talkie, with no
+  blue truck-front trade icon, so no dispatch, settlement or
+  plunder was done. A tap at 53,536 opened the temperature
+  panel and was closed untouched, furnace unchanged. The
+  day's counters stay dispatch 1 of 5 and plunder 0 of 4 for
+  the trade day that began 2026-10-29 19:00 local. Full detail
+  in truck-plunder/0540-queue-run.md.
+
+## 05:40 to about 05:50 — Queue ticker pass, Zombie Invasion unit 059
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-059,
+  partial (chain continues, tracker untouched): three
+  Lv.10 kills (X:994 Y:954, X:984 Y:949, X:994 Y:974),
+  all LOOT rows claimed in-unit for 804,000 coins
+  (HUD 136.0M to 136.8M), squads_parallel 1 (round
+  trips of seconds, not the march cap of 4). Store
+  redemption breakthrough in windowed mode: Store
+  opened at 823,178 after three fullscreen units
+  failed on it; one Coin Chest (SSR) redeemed for
+  160 medals (balance 3600 to 3440, Limit 95 to 94,
+  CONGRATULATIONS verified; Owned 7 before, post
+  count not re-read). No chest opened, inventory
+  location still unknown. Cleared is false, successor
+  unit 060 starts now. Full detail in
+  zombie-invasion/0550-queue-run.md.
+
+## 06:05 to about 06:11 — Queue ticker pass, Alliance Donations unit
+
+- Donations unit donations-2026-10-30-0603, done:
+  21 coin donations of 600 coin each (12,600 coin in
+  total) to Rallied HP, Donation Count verified 21 of
+  30 down to exhausted, coin button greyed with a
+  00:09:10 cooldown timer. Tech EXP 323.0K to 329.4K
+  of 2.0M (alliance-shared pool, not attributed to
+  this unit alone); Tech Donation Today 1150 to 3200
+  as read, a plus 2050 that sits 50 short of 21 times
+  100 and is left unverified. No diamonds, money or
+  speedup items spent. Full detail in
+  alliance-donations/0611-queue-run.md.
+
+## 06:11 to about 06:23 — Queue ticker pass, Radar Tasks unit
+
+- Radar unit radar-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  duel Day 5 release posture; dish entry corrected
+  to 62,727 after a 53,674 tap opened Secret
+  Command Post untouched. Quick Execute 1 task
+  (stamina 29 to 19) and 3 tasks after the second
+  free 75 stamina claim (stamina 20 to 95 to 65);
+  two Claim All batches totalling 9 rewards
+  (tokens 70, Hero EXP 8.2M, ore 591, coin about
+  1.6M, food 2.4M, iron 1.1M, drone data 800).
+  Radar levelled up to Lv.13 (points 2,997 to 2
+  then to 6, displayed pins 10 to 11, rewards 15
+  percent to 20 percent). Ordinary tasks done,
+  stored 0 of 40; six map pins left unattempted.
+  Full detail in radar-tasks/0623-queue-run.md.
+
+## 06:23 to about 06:27 — Queue ticker pass, Arms Race unit
+
+- Arms-race unit arms-race-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  live phase Unit Progression (Lv.29-30, 00:35:28
+  left), phase score 0, no point chest earned,
+  cumulative chest 9 of 18 not full, ranking row
+  51,500 (ranking-row figure, not the live score).
+  Tier-3 gap is the full 75,000; the training
+  scoring path belongs to the separate training
+  unit and was not merged in. Completion sweep
+  not finished; game left on the Arms Race page.
+  Full detail in arms-race/0625-queue-run.md.
+
+## 06:34 to about 06:44 — Queue ticker pass, harvest unit
+
+- Harvest unit harvest-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  base entry food 276.9M, iron 468.5M, coin 138.7M;
+  two bubble batches collected iron plus 2.7M and
+  coin plus 1.9M, then food plus 7.9M (farmland
+  all-at-once); end totals food 284.8M, iron
+  471.2M, coin 140.6M. An Iron Mine Lv.27 panel
+  and a Gold Mine Lv.29 panel opened by
+  fall-through taps and were closed with their X
+  untouched — no upgrade, no Finish Now. Remaining
+  base icons were ambiguous (survivor and UI icons
+  among them) and were left untouched; the Armed
+  Truck was not checked.
+  Full detail in resource-collection/0644-queue-run.md.
+
+## 06:45 to about 06:54 — Queue ticker pass, survivors unit
+
+- Survivors unit survivors-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick):
+  a drag pan revealed the bottom-left gate line
+  (three question-mark figures); a tap at 273,473
+  raised only the truck driver's speech bubble and
+  claimed nothing; a tap at 295,455 changed the
+  gate area and the question-mark bubbles were
+  replaced by a green smiley, but no recruit card
+  or dialog was captured, so no survivor is counted
+  as verified processed. One remaining
+  question-mark-like icon sits on the truck and was
+  left untouched (truck claims belong to harvest).
+  Quick Dispatch was not run.
+  Full detail in survivor-intake/0654-queue-run.md.
+
+## 07:05 to about 07:24 — Queue ticker pass, training, gifts, help, mail units
+
+- Ticker pass ticker-0704. Sync reaped nothing and
+  produced nothing new - all 7 due regulars were
+  already queued by the planner, and the Zombie
+  Invasion chain unit was already in inbox, so no
+  chain seeding was needed.
+- Training unit training-2026-10-30-0603, partial
+  (tracker untouched, re-produced next tick): base
+  entry food 284.8M, iron 471.2M, coin 140.6M,
+  total power 146,850,228. A tap at 833,562 (the
+  2026-10-28 2249 Lv.24 location) opened no barracks
+  panel in this camera position, a tap at 470,345
+  selected Gold Mine Lv.28, and taps at 120,170
+  and 190,240 selected Training Base Lv.25, whose
+  button row shows only the green upgrade arrow
+  (not touched). No individual barracks tent with
+  a TRAIN UNITS panel was located, no queue timer
+  was read, no batch was started. Session cc-457
+  dropped mid-unit, cc-458 resumed with no state
+  lost.
+  Full detail in troop-training/0714-queue-run.md.
+- Gifts unit gifts-2026-10-30-0630, done: Alliance
+  button grounded at norm 932,720 on this base
+  view; Alliance Gifts opened directly at 350,600.
+  Regular Claim All claimed 167 gifts, progress
+  173,408,060 to 173,409,730; Premium Claim All
+  claimed 4 gifts (one MR plus 1000, three SSR
+  plus 200 each), progress after 173,411,340 as
+  read, both badges cleared.
+  Full detail in alliance-gifts/0717-queue-run.md.
+- Help unit help-2026-10-30-0630, done: Help All
+  at norm 500,820 answered "Allies are very
+  grateful for your assistance"; ally requests
+  from DCna8ive (Lv.24 Barracks) and another commander Apex
+  (Lv.28 Air Force Base) cleared, leaving only
+  the own owner account rows. Header still read
+  600 of 1,000 in the closing screenshot.
+  Full detail in alliance-help/0719-queue-run.md.
+- Mail unit mail-2026-10-30-0630, done: Event
+  Claim All paid out (visible rewards included
+  two resource crates x20 each, hero EXP 3.1K,
+  EXP 4.5M, a 10-count item x4, a 5m speedup item
+  x210, coin 1.8M, food 1.4M, iron 1.4M, top dialog
+  row partly obscured). Claim All in Alliance,
+  Season, System, Regular and Battle Report
+  produced no dialog and no change - reports
+  only. In-app Purchases not opened (receipts
+  only). Delete All never tapped.
+  Full detail in mail-rewards/0724-queue-run.md.
+- Pass ended at about 07:24 with the next unit
+  (train-2026-10-30-0630) unstarted, inside the
+  pass budget, for the next tick.
+- Train unit train-2026-10-30-0630, done as checked
+  only (ticker-0734, about 07:37): base screen showed
+  no "Boarding closes in" banner, so no train is in
+  preparation; nothing boarded, no Trade Contracts
+  spent.
+  Full detail in alliance-train/0737-queue-run.md.
+- Star Ceremony unit star-ceremony-2026-10-30-0630,
+  done as checked only (ticker-0734, about 07:40):
+  no trophy icon beside the Alliance icon on the
+  base screen, so no ceremony is waiting.
+  Full detail in alliance-duel/0740-queue-run.md.
+- Events unit events-2026-10-30-0657, done
+  (ticker-0734, about 07:43): full Events hub sweep,
+  nothing claimable. Arms Race rotated to Hero
+  Advancement, live score 0, thresholds 2,000 /
+  4,000 / 12,000, cumulative chest 9 of 18; Zombie
+  Rewards informational only, next wave in about
+  2 minutes; Wanted Boss Code 64 not out, best
+  852,929,736 below the 1.0B tier; Community already
+  Claimed; Desert event over; Winter starting soon.
+  Full detail in event-claims/0743-queue-run.md.
+- Passes unit passes-2026-10-30-0657, done
+  (ticker-0734, about 07:46): all shop pickups
+  already claimed today - Weekly Free Supply
+  Claimed, Coin Weekly Already claimed today
+  (4d 11:15:46 left), Monthly Daily Pickup Claimed
+  (22 days left); Legendary Take All $19.99, Renew
+  $4.99 and extension $24.99 all untouched.
+  Full detail in shop-claims/0746-queue-run.md.
+- Trucks unit trucks-2026-10-30-0657, partial
+  (ticker-0734, about 07:48): Intercity Trade screen
+  never entered - the blue truck-front icon with red
+  badge 1 (norm 52,620) took three taps with no screen
+  change, and the game tree offers no element number
+  for it; tracker untouched so the next tick
+  re-produces the regular. Duel Day 5 Total
+  Mobilization is not a UR day. Nothing dispatched,
+  nothing plundered, nothing spent.
+  Full detail in truck-plunder/0750-queue-run.md.
+
+## 08:04 to about 08:11 — Queue ticker pass, Secrets and Treasures
+
+- Ticker pass ticker-0804. Sync reaped nothing and
+  produced nothing new - all 7 due regulars were already
+  queued by the planner, and the Zombie Invasion chain
+  unit zombie-invasion-zombie-2026-10-28-060 was already
+  in inbox, so no chain seeding was needed.
+- Secrets unit secrets-2026-10-30-0657, done
+  (ticker-0804, about 08:08): Secret Command Post
+  entered from the base left column slot at 53,643.
+  Your Tasks 7 cards all PERFECT (UR Rescue Missing
+  Agent, SSR Train Refugees, SSR Protect Refugee Camp,
+  SSR Search for Missing Refugees, SR Retrieve Agent
+  Profile, SR Retrieve Abandoned Gear, SR Retrieve Raw
+  Materials), no Claim button, no pending task on scroll
+  to the bottom; Mega Deploy opened no panel; Reward
+  Recovery showed the 2026-10-24 record already CLAIMED
+  and the 2026-10-16 record unexpandable. Assist Allies
+  5 of 5 capped, Plunder Others 0 of 5 untouched. The
+  post screen back arrow did not respond to background
+  clicks, so the game was left on the post screen.
+  Full detail in secret-missions/0808-queue-run.md.
+- Treasures unit treasures-2026-10-30-0657, done
+  (ticker-0804, about 08:11): Hidden Treasures tab tapped
+  from the post screen left by the secrets unit. Map
+  stock M1 x13, M2 x12, M3 x0, M4 x8, M5 x1, M6 x4,
+  M7 x13, chest progress 0/15, both Dig buttons greyed;
+  M3 at 0 blocks any dig, matching the 00:04 post-dig
+  state exactly. No fragment exchange attempted.
+  Full detail in hidden-treasures/0811-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-060,
+  partial (ticker-0834, about 08:34 to 08:45): two
+  Lv.10 kills in parallel (X:998 Y:913 and X:990
+  Y:909, squads_parallel 2, stamina 93 to 73), both
+  LOOT rows claimed in-unit for 536,000 coins, coin
+  HUD 142.5M to 143.0M. Store header read live at
+  4010 medals; the 160-medal Coin Chest (SSR) row
+  at Limit 94 was verified by tooltip (812.16K
+  coins), but Redeem stayed unresponsive on a single
+  tap, a 1 second long-press and a double-click, so
+  no medals were spent and no chest was redeemed.
+  Full detail in zombie-invasion/0845-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-061,
+  partial (ticker-0834, about 08:45 to 08:49): two
+  Lv.10 kills sequential (X:989 Y:951 and X:991
+  Y:959, squads_parallel 1 for short round trips,
+  stamina 73 to 54), both LOOT rows claimed in-unit
+  for 536,000 coins, coin HUD 143.0M to 143.6M.
+  The Store step was not attempted; the SSR
+  redemption stays open for the successor.
+  Full detail in zombie-invasion/0849-queue-run.md.
+- The next due unit, zombie-invasion chain 062, was
+  left in inbox for the next tick: the pass budget
+  did not leave room for a third unit in this pass.
+- Zombie unit zombie-invasion-zombie-2026-10-28-062,
+  partial (ticker-0904, about 09:05 to 09:17): two
+  Lv.10 kills sequential (X:979 Y:961 and X:977
+  Y:955, squads_parallel 1 for short round trips,
+  stamina 58 to 40), both LOOT rows claimed in-unit
+  for 536,000 coins, coin HUD 143.6M to 144.1M.
+  Store breakthrough: the Store button is at
+  818,195 on this layout (the 609 to 625 points
+  units 057 and 058 tried are not the button);
+  Store header read live at 4050 medals, one SSR
+  Coin Chest redeemed (4050 to 3890, Limit 94 to
+  93, CONGRATULATIONS verified). No chest opened;
+  the owned chests' inventory location is still
+  unknown. Cleared is false; successor unit 063
+  enqueued to start now.
+  Full detail in zombie-invasion/0917-queue-run.md.
+- Zombie unit zombie-invasion-zombie-2026-10-28-063,
+  partial (ticker-0934, about 09:35 to 09:49): two
+  Lv.10 kills in parallel (X:994 Y:905 Squad 1 and
+  X:987 Y:896 Squad 2, squads_parallel 2, stamina
+  44 to 25), but the in-unit LOOT claim failed:
+  three gift-box taps each opened an ally base
+  profile instead, and a map drag opened a Lv.75
+  Zombie Boss card that was closed untouched
+  (no attack, no rally). The two LOOT rows
+  (badge 2, 536,000 coins expected) remain
+  unclaimed at close and are at risk; coin HUD
+  unchanged at 144.1M. The Store step was not
+  attempted. Cleared is false; successor unit 064
+  enqueued to start now, LOOT claim first.
+  Full detail in zombie-invasion/0949-queue-run.md.
+
+## 10:04 to about 10:26 — Queue ticker pass, Arms Race and Donations
+
+- Ticker pass ticker-1004. Sync reaped nothing and
+  produced nothing new - all 8 due regulars were
+  already queued by the planner, and the Zombie
+  Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already
+  in inbox, so no chain seeding was needed. The
+  device token was held by this pass throughout and
+  released at its end.
+- Arms-race unit arms-race-2026-10-30-1003, done:
+  Hero Advancement phase (thresholds 2,000 / 4,000 /
+  12,000), UR hero Morrison leveled exactly once
+  with EXP only, Lv.122 to Lv.123 (power 1,704,057
+  to 1,710,907), live score 0 to 39,500, and all
+  three point chests claimed in one tap (Skill
+  Medals 1.6K, 68 of the 5-minute speedups, chests).
+  Cumulative counter chest 15 of 18, not full;
+  ranking-row chest unresponsive while the phase
+  is live and falls to the next run after the
+  about 11:00 phase roll. Hero-list card taps must
+  be grounded on the current screenshot - the
+  Lv.122 card sits at 767,730.
+  Full detail in arms-race/1018-queue-run.md.
+- Donations unit donations-2026-10-30-1003, done:
+  13 coin donations to Rallied Attack at 800 coin
+  each (10,400 coin), Donation Count 13 of 30 to
+  0 of 30, coin button greyed on a 00:14:06
+  cooldown timer; Tech Donation Today 3,200 to
+  4,450. Diamond button untouched.
+  Full detail in alliance-donations/1025-queue-run.md.
+- Radar unit radar-2026-10-30-1003, performed in part:
+  the one claimable task reward claimed (radar tokens 10,
+  Hero EXP 2.6M, drone data 800, food 1.3M, coin 182.4K),
+  points 6 to 7, ordinary tasks already clear (stored
+  0 of 40, no Quick Execute offer); the orange pickaxe
+  and purple skull map pins were left unattempted per
+  the pin-tap caution, so the tracker is untouched.
+  Full detail in radar-tasks/1040-queue-run.md.
+- Harvest unit harvest-2026-10-30-1003, performed in part:
+  iron bubbles and coin bubbles collected and verified
+  (iron 474.3M to 476.6M, coin 144.3M to 145.9M); two
+  farmland taps fell through to warehouse selection
+  (Food Warehouse Lv.24, Iron Warehouse Lv.25), both
+  closed untouched, so the food bubbles stay uncollected
+  and the Armed Truck unchecked; tracker untouched.
+  Full detail in resource-collection/1048-queue-run.md.
+- Survivors unit survivors-2026-10-30-1003, performed in part:
+  gate line found by panning, but the one tap selected
+  the full Armed Truck by the gate instead of a survivor
+  and was left untouched (truck loot belongs to harvest),
+  so no recruit was captured and Quick Dispatch was not
+  run; tracker untouched.
+  Full detail in survivor-intake/1058-queue-run.md.
+
+## 11:05 to about 11:19 — Queue ticker pass, Troop Training unit
+
+- Training unit training-2026-10-30-1003, partial: no
+  barracks tent with a TRAIN UNITS panel was located in
+  the current camera position (taps at 520,600 and
+  180,220), so no barracks queue timer was read and no
+  batch was started. Third training unit today to end
+  this way; the tent row location still needs pinning
+  down. Full detail in troop-training/1119-queue-run.md.
+
+## 11:36 to about 11:53 — Queue ticker pass, Alliance Gifts unit
+
+- Gifts unit gifts-2026-10-30-1030, done: Regular Claim
+  All claimed 117 gifts, then Premium Claim All claimed
+  5 gifts, then a recheck found 2 fresh Regular gifts
+  (both another commander Zombie Boss kills) and claimed
+  those too — 119 Regular and 5 Premium in total, both
+  tabs' rows Claimed and both Claim All badges clear.
+  Gift Level 28 progress 173,638,880 at the open to
+  173,644,620 at the end, as read on screen; the
+  progress deltas do not equal the row point values and
+  are left as an open question in the record. A first
+  tap at 912,675 missed Alliance and selected the 3rd
+  Squad; empty-ground deselection restored the UI and
+  the grounded Alliance tap at 932,720 opened the panel.
+  Full detail in alliance-gifts/1153-queue-run.md.
+
+## 12:05 to about 12:23 — Queue ticker pass, Alliance Help and Mail units
+
+- Help unit help-2026-10-30-1030, done: Help All pressed once
+  at 500,778, papillon707 ally requests (Infirmary Expansion I
+  research and Healing Help) cleared, own owner account Lv.28 Drill
+  Ground and Lv.30 Aircraft Center rows (both 30 of 30) remain;
+  header 700 of 1,000 before and after, as observed.
+  Full detail in alliance-help/1212-queue-run.md.
+- Mail unit mail-2026-10-30-1030, done: all six claimable
+  categories checked (Event, Alliance, Season, System, Regular,
+  Battle Report), no rewards available in any of them — Event,
+  Season and System answered "No rewards available", the rest
+  produced no dialog and no change; In-app Purchases not opened
+  per metadata, Delete All never tapped. Computer session
+  cc-492 dropped its observation channel after the System Claim
+  All; cc-496 resumed and confirmed the back tap had landed.
+  Full detail in mail-rewards/1223-queue-run.md.
+
+## 12:34 to about 12:53 — Queue ticker pass, Train, Star Ceremony, Events and Passes
+
+- Ticker pass ticker-1234. Sync reaped nothing and
+  produced nothing new - all due regulars were
+  already queued by the planner, and the Zombie
+  Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already
+  in inbox, so no chain seeding was needed. The
+  device token was held by this pass throughout and
+  released at its end. The pass stopped at about
+  25 minutes; remaining due units stay queued for
+  the next tick.
+- Train unit train-2026-10-30-1030, done as checked
+  only: no "Boarding closes in" banner, no train in
+  preparation. Nothing boarded, no Trade Contracts
+  spent.
+  Full detail in alliance-train/1238-queue-run.md.
+- Star Ceremony unit star-ceremony-2026-10-30-1030,
+  done as checked only: no trophy icon beside the
+  Alliance icon, no ceremony waiting. A base-screen
+  bubble reading "Supplies are fully loaded, please
+  claim them" was noted in passing for a
+  harvest/truck unit, not acted on here.
+  Full detail in alliance-duel/1241-queue-run.md.
+- Events unit events-2026-10-30-1057, done: full
+  Events hub sweep, nothing claimable. Arms Race
+  is now Base Building (live score 0, thresholds
+  6,250 / 12,500 / 30,000, cumulative 15 of 18);
+  Zombie Invasion live with next wave in 00:58:21;
+  Winter Battlefield starting soon; Wanted Boss
+  Code 64 Go countdown 05:14:26 with best single
+  attack 852,929,736 below the 1.0B first tier, so
+  all Goals Claim buttons greyed; Community Discord
+  binding already Claimed. No bouncing chest or
+  unclaimed red dot remains beyond the Wanted Boss
+  tab indicator.
+  Full detail in event-claims/1248-queue-run.md.
+- Passes unit passes-2026-10-30-1057, done: all
+  shop pickups already claimed today - Weekly Free
+  Supply Claimed, Coin Weekly Already claimed
+  today (4d 6:08:06 left), Super Monthly Daily
+  Pickup Claimed (22 days left); Legendary Take
+  All $19.99, Renew $4.99 and extension $24.99 all
+  untouched.
+  Full detail in shop-claims/1253-queue-run.md.
+
+## 13:04 to about 13:27 — Queue ticker pass, Trucks
+
+- Ticker pass ticker-1304. Sync reaped nothing and
+  produced nothing new - all 8 due regulars were already
+  queued by the planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already in inbox, so
+  no chain seeding was needed.
+- Trucks unit trucks-2026-10-30-1057, partial
+  (ticker-1304, about 13:27): Intercity Trade entered at
+  last - blue truck-front icon with red badge 1 grounded
+  at norm 53,555 on this base view (the 0750 unit's 52,620
+  did nothing; the column shifts). Duel Day 5 Total
+  Mobilization is not a UR day, so SR or above only.
+  Trade Count 1/5 to 3/5: one N truck free-refreshed to
+  SR (iron 2.5M, food 2.5M, coin 1.6M, Squad 1) and one
+  N truck free-refreshed to SSR (iron 3.0M, food 3.0M,
+  coin 1.9M, Squad 3); dice centre grounded at 810,417.
+  No Trade Contract spent, no Mega Mode used. Plunder
+  Count Today read 0/4 at close, untouched; shortfall
+  dispatch 2 and plunder 4 carries to the next trucks
+  unit before the 19:00 reset.
+  Full detail in truck-plunder/1305-queue-run.md.
+
+## 13:36 to about 13:43 — Queue ticker pass, Secrets
+
+- Ticker pass ticker-1334. Sync reaped nothing and
+  produced nothing new - all 8 due regulars were already
+  queued by the planner, and the Zombie Invasion chain unit
+  zombie-invasion-zombie-2026-10-28-064 was already in inbox, so
+  no chain seeding was needed.
+- Secrets unit secrets-2026-10-30-1057, done: Secret
+  Command Post entered from the base left column white
+  pickup slot at 53,643. Your Tasks 7 cards all PERFECT
+  (UR Rescue Missing Agent, SSR Train Refugees, SSR
+  Protect Refugee Camp, SSR Search for Missing Refugees,
+  SR Retrieve Agent Profile, SR Retrieve Abandoned Gear,
+  SR Retrieve Raw Materials), no Claim button, no pending
+  task on scroll to the bottom; Mega Deploy opened no
+  panel; Reward Recovery showed the 2026-10-24 record
+  already CLAIMED and the 2026-10-16 record unexpandable.
+  Assist Allies 5 of 5 capped, Plunder Others 0 of 5
+  untouched. Full detail in secret-missions/1344-queue-run.md.
+
+## 13:44 to about 13:45 — Queue ticker pass, Hidden Treasures
+
+- Treasures unit treasures-2026-10-30-1057, done
+  (checked only, same pass ticker-1334): Hidden
+  Treasures tab tapped from the post screen left by
+  the secrets unit. Fragment stock M1 x13, M2 x12,
+  M3 x0, M4 x8, M5 x1, M6 x4, M7 x13, chest progress
+  0/15, both Dig buttons greyed; M3 at 0 blocks any
+  dig, matching the 08:11 state exactly. No fragment
+  exchange attempted.
+  Full detail in hidden-treasures/1347-queue-run.md.
+
+## 13:46 to about 13:56 — Queue ticker pass, Zombie Invasion unit 064
+
+- Zombie unit zombie-invasion-zombie-2026-10-28-064,
+  partial (ticker-1334, Store step not attempted in
+  the pass budget, tracker untouched): rescue first -
+  the unit 063 LOOT rows survived the 4-hour gap and
+  were claimed for 536,000 coins (X:987 Y:896 and
+  X:994 Y:905, each 268.0K, badge 2 to clear, HUD coin
+  145.9M to 146.5M). Then two new Lv.10 kills,
+  sequential (squads_parallel 1 - short round trips,
+  Squad 1 home before the second dispatch, so the
+  deploy panel auto-selected Squad 1 again), both
+  LOOT rows claimed in-unit for 536,000 coins
+  (X:996 Y:950 and X:995 Y:947, HUD coin to 147.0M).
+  Unit coins_collected 1,072,000 in total (536,000
+  rescue plus 536,000 new). Stamina 75 to 56, no
+  stamina item opened, no medal balance live-measured
+  (row evidence plus 40 medals). Cleared is false;
+  successor unit 065 enqueued to start now.
+  Full detail in zombie-invasion/1352-queue-run.md.
+- Pass ended at about 13:56 with the next unit
+  (zombie-invasion-zombie-2026-10-28-065) unstarted,
+  inside the pass budget, for the next tick.
+
+## 14:06 to about 14:19 — Queue ticker pass, Radar unit
+
+- Radar unit radar-2026-10-30-1403, performed in part
+  (ticker-1405, duel Day 5 release posture): two Quick
+  Execute batches and two Claim All payouts, points 7
+  to 18, stamina 59 to 21, stored tasks 3 of 40 to 0 of
+  40, bottom bar gone at the end. First claim: radar
+  tokens 80, Hero EXP 9.9M, drone data 3.2K, blue
+  triangle items 498, iron 1.3M, coin 1.5M, food 3.3M,
+  Lv.1 chest 1. Second claim: radar tokens 30, Hero
+  EXP 4.9M, drone data 800, iron 1.4M, food 696.0K,
+  coin 522.0K. Repeat-offer lesson: the bar re-offered
+  Quick Execute after the first claim, and the second
+  batch was real; keep running Quick Execute while
+  the bar keeps offering it. The blue pickaxe and
+  orange pickaxe map pins were left unattempted per
+  the pin-tap caution, so the tracker is untouched.
+  Full detail in radar-tasks/1418-queue-run.md.
+
+- Arms Race unit arms-race-2026-10-30-1403,
+  skipped-needs-owner (ticker-1405): Base Building
+  phase, score 0 against 6,250 / 12,500 / 30,000,
+  about 37 minutes left in the phase. All three
+  scoring paths sit inside red lines (start buildings,
+  burn construction speedups, buy diamond packs), and
+  the Building Queue showed no in-window completion
+  (Lv.29 Aircraft Center 13d 19h left, Lv.27 Drill
+  Ground 5d 12h left; Idle Construct buttons not
+  tapped). Cumulative chest 15 of 18 tapped with no
+  payout; ranking reward falls to the post-phase run.
+  Tracker skipped for this slot.
+  Full detail in arms-race/1427-queue-run.md.
+- Pass ended at about 14:28 with the next unit
+  unstarted, inside the pass budget, for the next tick.
+
+- Alliance donations unit donations-2026-10-30-1403, done
+  (ticker-1434): Rallied HP 5/10, coin Donate 600 each.
+  Donation Count verified 13/30 to 7/30 (6 donations, 3,600
+  coin); a final batch ended with the coin button greyed on a
+  00:09:47 cooldown, the standing stop condition, exact
+  final-batch count not separately verified. Tech Donation
+  Today 4,450 to 5,450; reward settles at the 19:00 reset with
+  no Claim button. Computer session cc-527 dropped mid-unit,
+  cc-531 recovered with no state lost.
+  Full detail in alliance-donations/1435-queue-run.md.
+
+## 1522 queue run - resource collection (partial)
+
+Harvest unit harvest-2026-10-30-1403 by ticker-1504: iron, coin
+and food bubbles collected, HUD verified food 294.3M to 300.2M,
+iron 480.5M to 483.4M, coin 149.1M to 151.2M. Armed Truck
+unchecked; tracker untouched, next tick re-produces the regular.
+Full detail in resource-collection/1522-queue-run.md.
+
+## 1544 queue run - survivor intake (partial)
+
+Survivors unit survivors-2026-10-30-1403 by ticker-1534: gate
+line found panned to the lower left (Wall Lv.26), one
+question-mark figure tapped at 28,700 with its bubble
+cleared on the next screenshot, no recruit card or dialog
+name captured, second tap at 135,700 with no change, Quick
+Dispatch not run. Tracker untouched, next tick re-produces
+the regular. Full detail in survivor-intake/1544-queue-run.md.
+
+## 1613 queue run - troop training (partial)
+
+Training unit training-2026-10-30-1403 by ticker-1604: base screen
+in window mode, HUD food 300.2M, iron 483.4M, coin 151.2M, total
+power 146,857,078. A map drag and a scroll did not move or zoom
+the view; a tap on a beige tent at norm 840,700 opened no panel
+(those tents read as survivor shelters, not barracks). No TRAIN
+UNITS panel located, no batch started — the fourth training unit
+today to end this way. Tracker untouched, next tick re-produces
+the regular.
+Full detail in troop-training/1613-queue-run.md.
+
+## 1620 queue run - alliance gifts (done)
+
+Gifts unit gifts-2026-10-30-1430 by ticker-1604: Regular Claim All
+claimed 110 gifts (Gift Lv28 progress 173,879,000 to 173,880,100),
+Premium Claim All claimed 4 gifts. Entry notes: Alliance shield
+grounds at norm 915,695 after a title-bar tap, Alliance Gifts
+button at norm 312,615, Premium Claim All at norm 748,920;
+Alliance Wars opened twice by mis-taps and left untouched.
+Tracker marked done.
+Full detail in alliance-gifts/1620-queue-run.md.
+
+## 1647 queue run - alliance help (done)
+
+Help unit help-2026-10-30-1430 by ticker-1634: game slipped into
+fullscreen on a title-bar tap that snapped to the zoom button;
+a Ctrl+Right space switch bound the View menu and Exit Full
+Screen restored windowed mode. Help All at norm 498,799 cleared
+ally rows Lost Boyz Lv.20 3rd Squad and Kkkayyyyy Lv.25 Missile
+Center, leaving only the own 30 of 30 rows; header points stayed
+at 820 of 1,000 in the closing screenshot, so no points delta is
+reported. Tracker marked done.
+Full detail in alliance-help/1647-queue-run.md.
+
+## 1651 queue run - mail rewards (partial)
+
+Mail unit mail-2026-10-30-1430 by ticker-1634: entry was the
+Alliance page left over from the help unit; back-arrow taps at
+norm 53,953, 86,952, 93,952, 70,945 and a double-click at 93,952
+all dispatched with no change, so no mail category was opened
+or claimed. No Delete All touched. Tracker untouched, the
+regular re-produces next tick.
+Full detail in mail-rewards/1651-queue-run.md.
+
+## 1708 queue run - star ceremony (done, checked only)
+
+Star-ceremony unit star-ceremony-2026-10-30-1430 by ticker-1704: base screen in windowed mode showed Halloween Check-in, Events (badge 1), Faction Duel, VS (01:51:29), Season II (badge 3), Alliance, Mail, Inventory and WORLD, with no trophy icon beside Alliance, so no Star Ceremony is waiting. Entry note: back-arrow centre at norm 140,936 worked after the 1651 mail unit's edge taps failed. No ceremony opened, no rewards claimed. Tracker marked done.
+Full detail in alliance-duel/1708-queue-run.md.
+
+## 1710 queue run - alliance train (done, checked only)
+
+Train unit train-2026-10-30-1430 by ticker-1704: base screen showed no "Boarding closes in" banner under the resource bar, so no train is in preparation. No station panel opened, nothing boarded, no Trade Contracts spent. Tracker marked done.
+Full detail in alliance-train/1710-queue-run.md.
+
+## 1712 queue run - shop claims (done)
+
+Passes unit passes-2026-10-30-1457 by ticker-1704: Hot Deals showed no free pack, only the store promo carousel (Go not tapped); Weekly Pass Free Supply Claimed, Coin Weekly Pass Already claimed today (Remaining 4d 1:48:15), Legendary Take All $19.99 and Renew $4.99 untouched; Super Monthly Pass Daily Pickup Claimed, Days Left 22, Rewards Left 22, Extension $24.99 untouched. Nothing new to claim. Tracker marked done.
+Full detail in shop-claims/1712-queue-run.md.
+
+## 1718 queue run - event claims (done)
+
+Events unit events-2026-10-30-1457 by ticker-1704: Arms Race has rotated to Unit Progression (live score 0, thresholds 15,000 / 30,000 / 75,000, cumulative 15 of 18, about 01:45 left); Zombie Invasion live with 01:44:50 remaining and next wave in 00:26:24; Wanted Boss Code 64 not out yet (Go countdown 00:44:08), Goals best 852,929,736 below the 1.0B first tier so all tier claims greyed. No bouncing chest or unclaimed red dot beyond the Wanted Boss tab indicator. Nothing claimed, nothing spent. Entry note: Events back-arrow centre is about norm 159,948. Tracker marked done.
+Full detail in event-claims/1718-queue-run.md.
+
+## 1728 queue run - trucks (partial)
+
+Trucks unit trucks-2026-10-30-1457 by ticker-1704, duel day 5 Total Mobilization (non-UR rule, regular dispatch): settled one returned SR truck (iron 2.5M, food 2.5M, coin 1.6M, vehicle safe); dispatch 4 rolled N, free refresh to R, 1 Trade Contract ticket refresh to UR (3.8M/3.8M/2.4M) and dispatched; dispatch 5 rolled R, free refresh to UR (3.8M/3.8M/2.4M) and dispatched. Trade Count 3/5 to 5/5 - dispatch quota met. Others' Trucks read Your Plunder Count Today 0/4; no plunder fought before the pass budget ended. Plunder 0/4 carries to the next trucks unit before the 19:00 reset. Entry note: Intercity Trade icon at norm 53,555, not the 52,611 white pickup. Tracker untouched.
+Full detail in truck-plunder/1728-queue-run.md.
+
+## 1736 queue run - secrets (done, checked only)
+
+Secrets unit secrets-2026-10-30-1457 by ticker-1734: Secret Command Post showed the same 7 PERFECT cards as the 13:44 unit (UR Rescue Missing Agent, SSR Train Refugees, SSR Protect Refugee Camp, SSR Search for Missing Refugees, SR Retrieve Agent Profile, SR Retrieve Abandoned Gear, SR Retrieve Raw Materials), no Claim button, no pending task; Mega Deploy opened no panel; Assist Allies 5 of 5, Plunder Others 0 of 5 untouched; Reward Recovery showed only the already-CLAIMED 2026-10-24 record. Nothing claimed or deployed. Tracker marked done.
+Full detail in secret-missions/1736-queue-run.md.
+
+## 1744 queue run - hidden treasures (done, checked only)
+
+Treasures unit treasures-2026-10-30-1457 by ticker-1734: fragment stock M1 x13, M2 x12, M3 x0, M4 x8, M5 x1, M6 x4, M7 x13, chest progress 0/15, both Dig buttons greyed, no tab badge - identical to the 13:47 unit, M3 at 0 blocking any dig. No exchange attempted. Tracker marked done.
+Full detail in hidden-treasures/1744-queue-run.md.
+
+## 1755 queue run - zombie invasion (partial)
+
+Zombie unit zombie-invasion-zombie-2026-10-28-065 by ticker-1734: two new Lv.10 kills (X:990 Y:952 and X:990 Y:946), each 268.0K coin, both LOOT rows claimed in-unit for 536,000 coins; squads_parallel 1 (short round trips); stamina 53 to 43 across the second march; event timer about 01:06 left at close, cleared false. Store SSR redemption not attempted inside the unit cap and stays open for successor unit 066. No tracker change for a partial unit.
+Full detail in zombie-invasion/1755-queue-run.md.
+
+## 1817 queue run - arms race (partial)
+
+Arms-race unit arms-race-2026-10-30-1803 by ticker-1804: Unit Progression live, score 0, thresholds 15,000 / 30,000 / 75,000, phase ends about 19:03; tier-3 gap 75,000, training scoring path left to the separate training unit under one-unit-one-type; cumulative chest 15 of 18, detail opened with no Claim button, ranking-row chest tapped with no claim; no bouncing chest or red dot remained. Tracker untouched. Entry note: a stale computer session (cc-558) stopped delivering clicks to Events; ending it and starting cc-561 restored input at once.
+Full detail in arms-race/1817-queue-run.md.
+
+## 1850 queue run - alliance donations (done)
+
+Donations unit donations-2026-10-30-1803 by ticker-1834: Rallied HP 5/10 (recommended marker), Current +5% / Next +6%, 12 coin donations of 600 coin each (7,200 coin total), Donation Count 12/30 to 0/30 with the coin button greyed on a 00:10:54 cooldown; Tech Donation Today 6,550 at close; no diamonds spent. Entry note: the Events back arrow grounds at norm 154,915, not the 85-102 x-range tried first. Tracker marked done.
+Full detail in alliance-donations/1850-queue-run.md.
+
+## 1856 queue run - radar tasks (done)
+
+Radar unit radar-2026-10-30-1803 by ticker-1834, duel day 5 release window: Quick Execute 3 tasks for 30 stamina (55 to 25); two Claim All batches, points 18 to 29, stored 2/40 to 0/40; first batch tokens 90, Hero EXP 10.6M, coin 2.1M; second batch tokens 20, Hero EXP 1.5M, coin 374.4K; bottom bar gone at close. Map pins left unattempted per the pin-tap caution. One mid-unit session drop recovered with no state lost. Tracker marked done.
+Full detail in radar-tasks/1856-queue-run.md.
+
+## 1904 queue run - resource collection (partial)
+
+Harvest unit harvest-2026-10-30-1803 by ticker-1904: different-device dialog at activation, Confirm clicked once (kick 1), app exited and relaunched cleanly; central Titanium Alloy Factory cluster bubbles tapped (413,452 and 288,478), no standing bubbles left there after deselect, but HUD totals unchanged at 0.1M precision (food 306.8M, iron 493.7M, coin 157.4M) so no verified gain is claimed; Armed Truck unchecked. Tracker untouched.
+Full detail in resource-collection/1904-queue-run.md.
+
+## 1912 queue run - survivor intake (partial)
+
+Survivors unit survivors-2026-10-30-1803 by ticker-1904: session cc-566 dropped, cc-567 resumed with no state lost; map drag did not reveal the gate area, and a probe tap at 420,300 (a visual-grounding candidate) produced no change and opened no card. No recruit claimed, Quick Dispatch not run. Tracker untouched. Next unit should pan to the gate the way the 15:44 unit did rather than trust a fresh grounding point on the central-cluster view.
+Full detail in survivor-intake/1912-queue-run.md.
+
+## 1918 queue run - troop training (partial)
+
+Training unit training-2026-10-30-1803 by ticker-1904: no new blind barracks search, following four failed location units today (0248, 0714, 1119, 1613); the tent row location remains unresolved and should be pinned from a known-good camera position or building list before further attempts. No batch started. Tracker untouched.
+Full detail in troop-training/1918-queue-run.md.
+
+## 1919 queue run - alliance gifts (done)
+
+Gifts unit gifts-2026-10-30-1830 by ticker-1904: first Alliance-panel tap at 327,499 landed on Alliance Wars (left untouched, closed); Gifts opened at 330,595. Regular Claim All claimed 170 gifts (progress 174,225,760 to 174,230,430), Premium Claim All claimed 12 gifts (progress to 174,239,060, Level 28). Game left on the Alliance panel after two bottom-left back taps produced no change. Tracker marked done.
+Full detail in alliance-gifts/1919-queue-run.md.
+
+## 1934 queue run - alliance help (done)
+
+Help unit help-2026-10-30-1830 by ticker-1934: HELP panel showed Today's points 0/1,000 and only the account's own two requests, both already 30/30 (Lv.28 Drill Ground, Lv.30 Aircraft Center); Help All pressed at 500,690 with no change, confirming no ally request was waiting. Tracker marked done.
+Full detail in alliance-help/1934-queue-run.md.
+
+## 1937 queue run - mail rewards (done)
+
+Mail unit mail-2026-10-30-1830 by ticker-1934: Alliance Claim All and Event Claim All both produced CONGRATULATIONS (Alliance: 12.1M coin, 19.0M food, 19.0M iron plus speedups; Event: Duel/Participation/Arms Race/Weekly Pass/Glittering Market/VIP rewards); Regular, Season, System and Battle Report checked with Claim All producing no change (reports/notices only). Mail label tap at 935,785 is the reliable entry on this view after icon taps failed; back arrow needed the re-grounded 162,935 point. Tracker marked done.
+Full detail in mail-rewards/1937-queue-run.md.
+
+## 1948 queue run - alliance train (done, checked only)
+
+Train unit train-2026-10-30-1830 by ticker-1934: base screen showed no "Boarding closes in" banner under the resource bar, so no train is in preparation; nothing boarded, no Trade Contracts spent. Tracker marked done.
+Full detail in alliance-train/1948-queue-run.md.
+
+## 1949 queue run - star ceremony (done, checked only)
+
+Star-ceremony unit star-ceremony-2026-10-30-1830 by ticker-1934: base screen right column showed no trophy icon beside Alliance, so no Star Ceremony is waiting; session cc-569 dropped mid-unit, cc-572 resumed with no state lost. Tracker marked done.
+Full detail in alliance-duel/1949-queue-run.md.
+
+## 1949 queue run - shop claims (partial)
+
+Passes unit passes-2026-10-30-1857 by ticker-1934: post-reset Hot Deals Military Training Pack claimed free (5m x200, Iron/Food/Coin Chest (UR) x1 each, then "Packs sold out"); Legendary Claim All ($19.99 purchase) and Drone Get Now $4.99 deliberately untouched; Coin Weekly Pass Claim tapped twice, then the different-device dialog appeared and Confirm was clicked (kick 1, app exited and relaunched cleanly) - whether the Coin pickup registered before the dialog is unverified and must be re-read next unit, along with the Super Monthly Pass pickup. Tracker untouched.
+Full detail in shop-claims/1949-queue-run.md.
+
+## 1953 queue run - event claims (partial)
+
+Events unit events-2026-10-30-1857 by ticker-1934: Arms Race Unit Progression at 0 points (chests 15,000/30,000/75,000, cumulative 0/2, nothing claimable, no grinding under this unit); Desert Storm Battlefield reads "The event is over!" with nothing to claim. Winter Battlefield and further tabs unscanned when the pass budget was reached. Tracker untouched.
+Full detail in event-claims/1953-queue-run.md.
+
+## 2017 queue run - trucks (partial)
+
+Trucks unit trucks-2026-10-30-1857 by ticker-2004: new trade day after the 19:00 reset, Trade Count 0/5 at entry; settled 1 returned SSR truck (delivered iron 2.2M, food 2.2M, coin 1.4M after a LadyDeja314 plunder), dispatched 2 in regular mode (UR 3.8M/3.8M/2.4M and SSR 3.0M/3.0M/1.9M) using 4 standing-authorized Trade Contract refreshes, Trade Count 2/5; plunder not started and its count not re-read this unit. Tracker untouched.
+Full detail in truck-plunder/2017-queue-run.md.
+
+## 2027 queue run - secrets (partial)
+
+Secrets unit secrets-2026-10-30-1857 by ticker-2004: new-day task list of 8 pending tasks Mega-deployed with UR Only off (UR Disrupt electric grid 2:00 plus 7 shorter tasks), verified running by countdowns; ally assists 0/5 uncompleted after 3 unresponsive Assist-button taps (next unit must try a different input route); Reward Recovery unchecked. Tracker untouched.
+Full detail in secret-missions/2027-queue-run.md.
+
+## 2036 queue run - hidden treasures (done, checked only)
+
+Treasures unit treasures-2026-10-30-1857 by ticker-2034: fragment stock M1 x13, M2 x12, M3 x0, M4 x8, M5 x1, M6 x4, M7 x13, chest 0/15; M3 at 0 blocks any dig, both Dig buttons greyed. Tracker marked done.
+Full detail in hidden-treasures/2036-queue-run.md.
+
+## 2042 queue run - VIP rewards (done)
+
+VIP unit vip-2026-10-30-1900 by ticker-2034: Daily Freebie claimed (puzzle x2, food/iron/coin crates x13 each) and login chest claimed (+200 VIP points, 1,575,260 to 1,575,460 of 2,000,000, 54-day streak). Tracker marked done.
+Full detail in vip-rewards/2042-queue-run.md.
+
+## 2048 queue run - zombie invasion (done, chain closed)
+
+Zombie unit zombie-invasion-zombie-2026-10-28-066 by ticker-2034: the Zombie Invasion event has ended - the Events hub tab bar (Arms Race through Community, six tabs) has no Zombie Invasion tab, and the timers from units 064 (05:08 left at 13:46) and 065 (01:16 left at 17:42) both point to an end at about the 19:00 reset. No kills, no loot, no Store step; NO successor enqueued, chain zombie-2026-10-28 closed. Activity metadata updated to 1.22.0.
+Full detail in zombie-invasion/2048-queue-run.md.
+
+## 2210 queue run - arms race (partial)
+
+Arms-race unit arms-race-2026-10-30-2203 by ticker-2204: Unit Progression live, score 0, thresholds 15,000 / 30,000 / 75,000, phase ends about 23:00; tier-3 gap 75,000, training scoring path left to the separate training unit under one-unit-one-type; cumulative chest 0 of 2, detail opened (tiers 0, 2, 8, 18) with no Claim button, ranking-row chest tapped with no claim; no bouncing chest or red dot remained. Tracker untouched. Entry note: the Events tab strip's left tab was cut off and two taps on it did not switch pages; one rightward drag (200,135 to 450,135) revealed the full Arms Race tab.
+Full detail in arms-race/2210-queue-run.md.
+
+## 2218 queue run - alliance donations (partial)
+
+Donations unit donations-2026-10-30-2203 by ticker-2204: target Rallied HP 5/10 (recommended marker, same as the 1850 unit), Donation Count 10/30 at entry, Tech Donation Today 0 at entry; the green coin Donate button (600 coin) stayed unresponsive across nine taps in three input routes (single taps at several points on the button, a 1-second long-press, a double-click), surviving a title-bar fronting tap, a full computer session restart (cc-580 to cc-582) and a panel close/reopen — count still 10/30, no coin spent, diamond button never touched. Tracker untouched; the next unit must try a different input route for this button.
+Full detail in alliance-donations/2218-queue-run.md.
+
+## 2224 queue run - radar tasks (done, checked only)
+
+Radar unit radar-2026-10-30-2203 by ticker-2204 on duel Day 6 stack posture: Lv.13, stored tasks 0/40, 12 tasks restoring in 00:31:54, stamina 67; no Quick Execute bar and no Claim All offered, so no task was completed and nothing was claimed; the single orange map pin was left untapped under the 2026-10-29 pin-tap caution (a tap could pay a finished task at once against the stack posture). Tracker marked done.
+Full detail in radar-tasks/2224-queue-run.md.
+
+## 2226 queue run - resource collection (partial)
+
+Harvest unit harvest-2026-10-30-2203 by ticker-2204: 5 bubbles seen at entry, first tap at norm 398,413 cleared 4 with iron 18.7M to 19.1M; the second tap at norm 435,428 selected the High-heat Furnace Lv.30 instead of a bubble (grounding had misread a building button), selection cleared by tapping empty ground with nothing upgraded; Armed Truck not checked and no further bubble verified before the pass budget ran out. Tracker untouched.
+Full detail in resource-collection/2226-queue-run.md.
+
+## 2234 queue run - survivor intake (partial)
+
+Survivors unit survivors-2026-10-30-2203 by ticker-2234: gate line found at the top-right edge after panning back down-left from the central cluster; one question-mark tap cleared a bubble without a captured card or dialog, and one dialog survivor (POLAR GUEST, three lines, ending with an offer of coal for brewing) was taken in and walked in. No recruit card captured, Quick Dispatch not run. Tracker untouched. Zombie seeding skipped: zombie chain closed, event ended 2026-10-30 ~19:00, no Zombie tab in Events hub. Full detail in survivor-intake/2234-queue-run.md.
+
+## 2245 queue run - troop training (partial)
+
+Training unit training-2026-10-30-2203 by ticker-2234: no new blind barracks search, following five failed location units today (0248, 0714, 1119, 1613, 1918); no queue read, no batch started. Tracker untouched. Next attempt should pin the tent row from a known-good camera position or building list first. Full detail in troop-training/2245-queue-run.md.
+
+## 2246 queue run - alliance gifts (partial)
+
+Gifts unit gifts-2026-10-30-2230 by ticker-2234: Alliance panel never opened - repeated Alliance button taps produced no change in the background window; an accidental fullscreen from a title-bar tap at 100,17 (too close to the zoom button) was recovered via View then Exit Full Screen back to 642x951 window mode. No gifts claimed. Tracker untouched. Full detail in alliance-gifts/2246-queue-run.md.
+
+## 2308 queue run - alliance help (done)
+
+Help unit help-2026-10-30-2230 by ticker-2304: help bubble present at lower right (yellow tile, hand holding green missile, norm 825,690); one tap answered "Allies are very grateful for your assistance", bubble gone and Alliance red dot cleared on the follow-up screenshot. Tracker marked done.
+Full detail in alliance-help/2308-queue-run.md.
+
+## 2313 queue run - mail rewards (done)
+
+Mail unit mail-2026-10-30-2230 by ticker-2304: all claimable categories swept - Event Claim All claimed (second tap confirmed "No rewards available"), Alliance, Season (Ice Breaking Reports only), System, Regular and Battle Report all answered "No rewards available"; Purchases not opened (receipts only per metadata). Delete All never pressed. Tracker marked done.
+Full detail in mail-rewards/2313-queue-run.md.
+
+## 2317 queue run - alliance train (done, checked only)
+
+Train unit train-2026-10-30-2230 by ticker-2304: no "Boarding closes in" banner under the resource bar on the base screen, so no train in preparation at this check (matching the 0316, 0737, 1238, 1710 and 1948 runs today). Nothing boarded, no Trade Contracts spent. Tracker marked done.
+Full detail in alliance-train/2317-queue-run.md.
+
+## 2320 queue run - star ceremony (done, checked only)
+
+Star-ceremony unit star-ceremony-2026-10-30-2230 by ticker-2304 (session cc-588 dropped mid-unit, cc-590 resumed, no state lost): right-side icon column showed Halloween Check-in (1), Events (1), Faction Duel, VS, Season II (3), Alliance, Mail, Inventory, WORLD - no trophy icon beside Alliance, so no Star Ceremony waiting (matching the 0315, 0740, 1241, 1708 and 1949 checks today). Tracker marked done.
+Full detail in alliance-duel/2320-queue-run.md.
+
+## 2323 queue run - shop claims (partial)
+
+Passes unit passes-2026-10-30-2257 by ticker-2304 (session cc-588 dropped, cc-590 resumed): Hot Deals showed only the Store promo, no new free pack (post-reset pack already claimed by the 1949 unit); Weekly Pass Coin Daily Pickup still green Claim with red dot, answering 1949's open question (its second tap did not register) - this unit tried single taps, double-click and a 1-second long-press at 810,625 and the button still reads Claim, so the next unit must try title-bar fronting or click_foreground first; Legendary Claim All ($19.99 bundle) and S2 Drone Get Now $4.99 were NOT tapped. Super Monthly Pass Daily Gift claimed in one tap (gold ticket x2, red diamond 100, stamina 50 x2, iron 200, 5m speedup x60; button now Claimed). Tracker untouched.
+Full detail in shop-claims/2323-queue-run.md.
+
+## 2338 queue run - event claims (done)
+
+Events unit events-2026-10-30-2257 by ticker-2334: full Events tab sweep, nothing claimed. Arms Race Tech Research at 0 (thresholds 6,250 / 12,500 / 30,000, cumulative chest 0/2, no grinding under this unit); Wanted Boss Code 39 not yet out (Go timer 18:23, reward needs an attack, no attack made); Community binding still Claimed; Desert Storm Battlefield reads "The event is over!"; Winter Battlefield matchmaking in about 04:22, no personal claim; Level Swap no red dot, inspect-only. Zombie Invasion not seeded - chain closed, event ended about the 19:00 reset. Tracker marked done.
+Full detail in event-claims/2338-queue-run.md.
+
+## 2342 queue run - trucks (partial)
+
+Trucks unit trucks-2026-10-30-2257 by ticker-2334: entry failed again (third evening failure). Left column re-grounded from an enlarged crop: green face / train front with red badge / white pickup with red badge / radar / hammer - no trade slot. Train tap at measured centre after a separate title-bar tap changed nothing; WORLD tapped twice, no map opened. Trade and Plunder counts not re-read (last: Trade 2 of 5, plunder presumed 0 of 4). Nothing spent. Tracker untouched.
+Full detail in truck-plunder/2342-queue-run.md.
+
+## 2344 queue run - secret missions (partial)
+
+Secrets unit secrets-2026-10-30-2257 by ticker-2334: Secret Command Post never opened. Pickup tap at norm 70,685 (grounded from the trucks-unit crop) did not open the post; instead the base view switched to a zoomed interior view with no left icon column and no bottom bar. Scroll, drag pan and an app relaunch all failed to restore the default exterior view. Nothing claimed or dispatched, no assists used. Tracker untouched; next secrets unit must first solve the base camera reset.
+Full detail in secret-missions/2344-queue-run.md.
