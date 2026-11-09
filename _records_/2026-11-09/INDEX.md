@@ -2308,3 +2308,18 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   2026-11-12 18:00 UTC, issue 517 no deadline stated.
   VPS disk 94 percent, 654M free. Status: no-op. Full
   detail in pr-catchall/1339-run.md.
+
+- Queue-planning pass queue-planning-2026-11-09-1340 (no-op).
+  Plan staged 0 units (already_present 72, skipped_done_current
+  2, reaped 0, expired 0, skipped_closed
+  radar/survivors/training-2026-11-09-1003,
+  zero-sweep-2026-11-08-1730); sweep production skipped (not
+  the 17:00 run), pair already complete (1630/1730 in live
+  inbox). Scout diff on the Nov 9 branch-tip observation (31
+  items, md5 59bbeb9d) applied with 0 enqueued, 17
+  already-queued; promotion proposals 11 (same set as 1240).
+  Tooling Issue #527 filed (scout_diff "none (...)"
+  unmatched-label mis-parse; /tmp copy normalized to bare
+  inline "unmatched_labels: none" for this run). No
+  withdrawals. Pool inbox 73, claimed 1, done 1362. Status:
+  no-op. Full detail in queue-planning/1340-run.md.
