@@ -3935,3 +3935,16 @@ of 2026-10-28.
   partial). Scout diff applied with zero changes
   (unexplained 14, unchanged). Pool inbox 75, claimed 1,
   done 1279. Full detail in queue-planning/1740-run.md.
+
+## 17:45 to about 18:10 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1745.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). No PR merged. Records PR
+  460 re-verified CLEAN at its new head 0d18eab85 with a
+  verification comment posted, and PR 470 clean at
+  6a6607c5f; both await the 19:00 batch. Tools PR 425
+  still owner-gated, unchanged, no owner decision.
+  Records PRs 351 and 301 conflicts carried unchanged
+  (single file action-log.jsonl). End-of-pass sweep: 5
+  open PRs, all decided, no unprocessed PRs. Full detail
+  in pr-integration/1745-run.md.
