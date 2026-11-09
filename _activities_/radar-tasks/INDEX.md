@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T18:32:17Z
+modified: 2026-11-09T21:32:17Z
 level: L1
-version: 1.60.0
+version: 1.61.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -62,6 +62,7 @@ grounded_in:
   - source: ticker-0334 radar-tasks execution record 2026-11-09 0335 queue run (partial, release day, dish re-grounded (51,718) first try after (55,689) missed, Rare Iron Mine gathering dispatched 720K 00:06:57, 5 pins inventoried unattempted, points 311, restore 12 tasks in 02:01:04; record commit 063a5bde7f on records/2026-11-09)
   - source: ticker-0634 resource-collection execution record 2026-11-09 0636 queue run (partial, gold circle with blue gem above the blue truck opens the world/radar map with 6 task rewards claimable - a radar entry point, not the truck loot; record commit 04b12d13 on records/2026-11-09)
   - source: ticker-0842 radar-tasks execution record 2026-11-09 0852 queue run (partial, release day, 3 tasks executed, 11 claims, points 311 to 322, stored 2/40 to 0/40, dish grounded (51,726) first tap, 12-task restore did NOT land as a batch, Iron Mine gathering pin claim first next unit; record commit ec55aa585 on records/2026-11-09)
+  - source: ticker-1234 radar-tasks execution record 2026-11-09 1253 queue run (partial, release day, 6 tasks executed, 14 claims, points 322 to 336, stored 3/40 to 0/40, dish grounded (62,727) first tap, 6 pins inventoried unworked; record commit da81e137e on records/2026-11-09)
 ---
 
 
@@ -141,12 +142,13 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   with the red "10" badge sits at pixel about 24,700 in the
   642x951 window, i.e. norm (37,736), and the second tap opened
   the radar on the first try. The profile coordinate (62,727,
-  measured 2026-10-29 in a 763x1050 window) is stale in this
-  window geometry. The (50,740) retro preference was not tested
+  measured 2026-10-29 in a 763x1050 window) was judged stale in this
+  window geometry by the 2335 unit. (CORRECTED 2026-11-09 1253: the (62,727) point opened the radar on the first tap again in the current window, so it is not stale after all; the dish still drifts per session.) The (50,740) retro preference was not tested
   in this unit; the dish drifts per session, so re-ground fresh
   from a magnified crop in every unit.
 - 2026-11-09 0335: first tap at norm (55,689), estimated from the magnified crop, missed (top edge of the dish circle). Re-grounded centre norm (51,718) opened the radar on the first try. The (50,740) retro preference was not tested in this unit either; the dish drifts per session, so re-ground fresh from a magnified crop in every unit. Commented on Issue #484 by this run.
 - 2026-11-09 0852: dish grounded fresh from the current base screenshot at norm (51,726) (red badge 6 on the dish) and opened the radar on the first tap - the (50,740) retro preference was not needed this unit. The camera was still panned on the Drill Ground cluster from the previous unit; the dish is a HUD icon and the tap landed cleanly without a view restore. A merely panned camera does not block the dish tap; the restore-first rule still binds when a building panel is open (see the entry precondition).
+- 2026-11-09 1253: dish grounded fresh at norm (62,727) (red badge 1) and opened the radar on the first tap - the 2026-10-29 measured point works again in this window, so (62,727) is not stale after all; the dish still drifts per session, so every unit still re-grounds fresh. Commented on Issue #484 by this run: (62,727) is the newest verified first-tap point, joining (51,718) and (51,726); the (50,740) retro preference remains untested as a direct tap.
 - 2026-11-09 0636: another entry point, found by a harvest unit, not the dish - the gold circle with a blue gem above the blue truck vehicle on the base opens the world/radar map, which showed "6 task rewards can be claimed" with a Claim All button at 06:49. It is a radar shortcut, not the Armed Truck loot; the rewards were left untouched for the radar unit. A radar unit arriving through this shortcut still verifies the radar screen (level, points, stored count, stamina) before any work, same as the dish entry.
 - Entry precondition, binding from the 1026 and 1439
   units: when the camera is panned onto the Drill Ground
@@ -231,7 +233,7 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   type-specific distributions.
 - Radar points counter - claiming a task adds 1 radar point
   (measured many times, e.g. 39 claims moved 2,950 to 2,989
-  on 2026-10-29). After the Lv.13 level-up the counter
+  on 2026-10-29). (2026-11-09 1253 re-confirmation: 14 claims moved 322 to 336, one per claim.) After the Lv.13 level-up the counter
   displayed small numbers again (29 on 2026-10-31 morning
   against 2,989 the day before) - an apparent per-level
   progress reset, observed once, mechanism unverified. The
@@ -1075,7 +1077,7 @@ are still open, per the protocol.
 - Duel delta test - on the next release day, read the duel
   score, claim exactly one batch, read again; settle whether
   a radar claim pays 10,000, 30,000 or another figure on
-  this account, and what the bonus source is. (2026-11-09 0852: still owed - the VS panel was not opened in this unit.)
+  this account, and what the bonus source is. (2026-11-09 0852: still owed - the VS panel was not opened in this unit.) (2026-11-09 1253: still owed - the VS panel was not opened; 14 claims on a scoring day would be about 420,000 at 30,000 each, inference only, not a measurement.)
 - Bottom bar offer selection - the bar presents one offer
   at a time; why did the 2026-10-31 10:40 unit get Quick
   Execute despite 7 pending rewards, when the 06:12, 14:15,
@@ -1091,7 +1093,7 @@ are still open, per the protocol.
   identified - the blue arrow, purple arrow and orange skull
   classes join the orange arrow, purple axe, orange axe and
   portrait pins awaiting identification under the release
-  handling rule.) (2026-11-09 0852 update: pin inventory at close - portrait pin top left, blue skull pin top left, blue skull pin top centre, green skull pin right middle, two grey skull pins bottom, gold/pink pin cluster left centre (the 0335 Rare Iron Mine gathering pin, claim NOT checked this unit); per rule R7 the Iron Mine gathering claim is the first action of the next radar unit, then the skull pins and the portrait pin, each to a closing read.)
+  handling rule.) (2026-11-09 0852 update: pin inventory at close - portrait pin top left, blue skull pin top left, blue skull pin top centre, green skull pin right middle, two grey skull pins bottom, gold/pink pin cluster left centre (the 0335 Rare Iron Mine gathering pin, claim NOT checked this unit); per rule R7 the Iron Mine gathering claim is the first action of the next radar unit, then the skull pins and the portrait pin, each to a closing read.) (2026-11-09 1253 update: pin inventory at close - 3 grey skull pins with red dots, 1 green skull, 1 purple skull, 1 blue teardrop, 1 brown animal-face pin, 1 orange skull, 1 portrait pin, at least 6 distinct pins unworked; per the record the same standing set deferred from the 2026-11-08 2335 unit; the 0335 Rare Iron Mine gathering claim is still unchecked after two units (0852, 1253), so the next unit checks whether that pin still stands and claims it if it does, then works the pins per R7.)
 - Doom Legion pin card ambiguity - 0636: the portrait pin
   card named a Doom Legion base, but the world-map card
   carried the own-alliance tag [AP3x]The Apex and closing
@@ -1106,7 +1108,7 @@ are still open, per the protocol.
   (2026-11-02 2242 update: the 1913 close predicted 12
   tasks by about 21:32, but the 2242 entry read only 1
   stored at 22:34, so the restore line as written does
-  not predict the stored count; semantics unverified.) (2026-11-09 0852 update: the 12-task restore the 0335 unit expected around 05:36 PT did NOT land as a batch - stored read 2/40 at 08:52, not 12/40; a second datapoint that the restore line as written does not predict the stored count.)
+  not predict the stored count; semantics unverified.) (2026-11-09 0852 update: the 12-task restore the 0335 unit expected around 05:36 PT did NOT land as a batch - stored read 2/40 at 08:52, not 12/40; a second datapoint that the restore line as written does not predict the stored count.) (2026-11-09 1253 update: the restore line's full-restore time disagreed within the unit - entry read 'Fully restore at 11-10 11:39:11 local time', close read '11-10 17:39:11 local time', six hours apart; the close read is the live one. Do not quote a restore time from an entry read without a closing re-read.)
 - Where a survivor gained from a special radar task reports
   to - base gate queue or straight onto the roster.
 - How often special pins appear, and whether the skull and
@@ -1123,7 +1125,7 @@ are still open, per the protocol.
   2 tasks it again offered Claim All 8 rewards; the pending
   count after a Quick Execute batch exceeds the batch size.
   Marches returning from earlier batches are the leading
-  hypothesis, recorded in the unit, not verified.) (2026-11-09 0852 update: after Claim All emptied stored to 0/40, the bar offered Quick Execute again for 1 task at 10 stamina - a restore landing mid-unit or a stale count, left for the next radar unit, not chased.)
+  hypothesis, recorded in the unit, not verified.) (2026-11-09 0852 update: after Claim All emptied stored to 0/40, the bar offered Quick Execute again for 1 task at 10 stamina - a restore landing mid-unit or a stale count, left for the next radar unit, not chased.) (2026-11-09 1253 update: the bar offered Quick Execute 5 tasks for 50 stamina while stored read 3/40, then 1 task for 10 stamina while stored read 0/40; the second Claim All paid 3 rewards for 1 executed task. Consistent reading: pending rewards hide behind the bar's single offer - after the execute the bar flips to Claim All and shows executed plus hidden pending together (1 executed plus 2 hidden equals 3). The bar's Quick Execute count itself exceeding stored (5 versus 3, 1 versus 0) is still unexplained - possibly tasks restore in a trickle the stored counter does not show, or the bar counts a different pool. Left open for the next unit.)
 - Dish badge meaning: the dish badge read "10" at entry on
   2026-11-08 2335 while stored was 39 of 40 and only 1 task was
   Quick Executable - the badge number does not equal the stored
@@ -1131,7 +1133,8 @@ are still open, per the protocol.
 - Gold NEW! icon on the radar screen: a gold icon with a NEW!
   badge sits at the top of the radar screen (about norm 295,60),
   seen 2026-11-08 2335, function unknown, never tapped.
-  (Added 2026-11-08 2335.)
+  (Added 2026-11-08 2335.) (2026-11-09 1253: re-seen, still untouched, function still unknown.)
+- Blue-triangle item identity - radar Claim All rewards repeatedly include a blue-triangle item (366 on 2026-11-09 0852, 726 on 2026-11-09 1253, 450 and 540 on earlier units), unidentified, likely drone parts, unverified. Whether it is the same item as the blue-triangle 596 bubbles over furnace buildings (Issue #508) is unverified - the 1253 unit gives #508 no direct evidence beyond the shared shape, and the item is recorded here as a candidate link only.
 
 ## What the 2026-11-02 1508 unit closed for radar
 
@@ -1493,6 +1496,8 @@ are still open, per the protocol.
   superseded in place by this close inventory, not erased.
 
 ## Changelog
+
+- 1.61.0, 2026-11-09 - 1253 unit folded (partial, release day): dish grounded fresh (62,727) first tap, red badge 1 - the 2026-10-29 point works again, commented on Issue #484, and the 2335 'stale in this window geometry' judgement is corrected; ordinary cycle fully done (Quick Execute 5 plus 1 tasks, Claim All 11 plus 3 rewards, points 322 to 336, stored 3/40 to 0/40, stamina 120 to 61, restore 12 tasks in 04:48:41 at close); bar-vs-stored refined - the bar offered 5 tasks against stored 3 and 1 task against stored 0, and the second Claim All paid 3 rewards for 1 executed task, so pending rewards hide behind the bar's single offer and surface with the executed batch, while the Quick Execute count exceeding stored stays unexplained; restore full-time disagreed within the unit (entry 11-10 11:39:11, close 11-10 17:39:11, close read is live); points 322 at entry against 311 at last night's close with no unit between, unverified, possibly the owner's own play; 6 pins inventoried unworked (grey skulls, green skull, purple skull, blue teardrop, brown animal-face, orange skull, portrait), same standing set deferred from the 2026-11-08 2335 unit per the record, R7 next unit starts with the pins; gold NEW! icon re-seen, still untouched; blue-triangle item 726 in the rewards, unidentified, likely drone parts, unverified, candidate link to Issue #508 only; duel delta test still owed (14 claims would be about 420,000 at 30,000 each, inference only).
 
 - 1.60.0, 2026-11-09 - Frontmatter repair flagged by the integrator on PR #518 (post-merge note, 0945 pass): the 2026-11-07 1633 grounded_in line carried a colon inside an unquoted value ('...navigation detour: BASE tap 920,975...') and failed a strict YAML parse on main; reworded to a dash so the frontmatter parses. No new radar unit ran this hour; no other change.
 
@@ -2516,3 +2521,22 @@ are still open, per the protocol.
 - Pin inventory at close (radar screen, unchanged by this unit): portrait pin top left, blue skull pin top left, blue skull pin top centre, green skull pin right middle, two grey skull pins bottom, gold/pink pin cluster left centre (the 0335 Rare Iron Mine gathering pin - its claim was NOT checked in this unit). Per rule R7 the Iron Mine gathering claim is the first action of the next radar unit, then the skull pins and the portrait pin, each to a closing read.
 - Duel delta test still owed: the VS panel was not opened in this unit.
 - Token note: the device token expired 09:00:48 PT; the session was ended about 09:00, inside the window; no game input ran after expiry. No diamonds or money spent, no Buy tapped, no other activity worked from this unit.
+
+## What the 2026-11-09 1253 unit added - release day, 6 tasks executed, 14 claims, points 322 to 336, dish grounded (62,727) first tap, 6 pins unworked
+
+- Unit radar-2026-11-09-1003 by ticker-1234, about 12:43 to 12:53 local, status partial - the ordinary-task release cycle is fully done (stored 0 of 40, 14 claims) but at least 6 map pins stand unworked, so the release completion standard is not met. Evidence in `_records_/2026-11-09/radar-tasks/1253-queue-run.md` (commit da81e137e on records/2026-11-09). Tracker untouched for partial, per the queue rules.
+- Entry (measured): dish grounded fresh at norm (62,727) (red badge 1) and opened the radar on the first tap at 12:44 PT - the 2026-10-29 measured point works again in this window, so it is not stale after all; the dish still drifts per session, so every unit still re-grounds fresh. Commented on Issue #484 by this run: (62,727) is the newest verified first-tap point, joining (51,718) and (51,726); the (50,740) retro preference remains untested as a direct tap.
+- Entry state, read live: Lv.13, radar points 322, stored 3/40, stamina 120, restore line "12 Radar Task(s) will be restored in 04:54:34", "Fully restore at 11-10 11:39:11 local time" (later reads show 17:39:11 - see the restore-line note below). No radar unit had run today before this one; last night's 23:35 unit closed stored 0/40, points 311, stamina 36.
+- Quick Execute 1 (12:51 PT): bar offered "You can complete 5 tasks, requires 50 Stamina" while stored read 3/40. Stamina 120 to 70 proves 5 tasks executed. Bar flipped to "11 task rewards can be claimed". Claim All 1 (12:52 PT): 11 rewards claimed, radar points 322 to 333 (+11, one per claim). CONGRATULATIONS rewards: radar discs 110, blue-triangle item 726 (unidentified item, likely drone parts - unverified), EXP 14.5M, chips 2.4K, coin 2.5M, iron 1.9M, food 4.3M, Lv.1 chest x2.
+- Quick Execute 2 (12:55 PT): bar offered "You can complete 1 tasks, requires 10 Stamina" while stored read 0/40. Stamina 70 to 61 (60 spent on the two batches, +1 regen in about 5 minutes). Bar flipped to "3 task rewards can be claimed". Claim All 2 (12:56 PT): 3 rewards claimed, radar points 333 to 336 (+3). CONGRATULATIONS rewards: radar discs 30, EXP 6.0M, chips 1.6K, iron 1.7M, food 1.1M, coin 531.6K.
+- After the second claim the bottom bar is gone entirely - no Quick Execute offer, no Claim All offer. Ordinary-task cycle fully done: stored 0/40, pending 0.
+- Totals in this unit: tasks executed 6 (5 + 1), tasks claimed 14 (11 + 3), radar points 322 to 336 (+14, one per claim). Rewards: radar discs 140, EXP 20.5M, chips 4.0K, coin about 3.0M, iron 3.6M, food 5.4M, blue-triangle item 726, Lv.1 chest x2. Stamina 120 to 61 (60 spent, 1 regenerated). No free stamina claim needed or taken. No diamonds or money spent.
+- Bar-vs-stored evidence (open question refined): the bar's completable count exceeded the stored count twice (5 vs 3, then 1 vs 0), and the second Claim All paid 3 rewards for 1 executed task. The consistent reading: pending rewards can hide behind the bar's single offer - when the bar shows Quick Execute, claimable rewards already pending are not shown; after the execute the bar flips to Claim All and shows executed + hidden pending together (1 executed + 2 hidden = 3). The bar's Quick Execute count itself exceeding stored (5 vs 3, 1 vs 0) is still unexplained - possibly tasks restore in a trickle the stored counter does not show, or the bar counts a different pool. Left open for the next unit.
+- Restore-line disagreement (new datapoint): the full-restore time read "11-10 11:39:11 local time" at entry and "11-10 17:39:11 local time" at close, six hours apart in the same unit; the close read is the live one. Do not quote a restore time from an entry read without a closing re-read. Recorded in the open questions.
+- Radar points 322 at entry against 311 at last night's 23:35 close (+11) with no radar unit in between and 6 rewards still pending at entry. What moved the counter is unverified - possibly the owner's own play this morning; not asserted.
+- Pin inventory (release rule, unworked): the map panned between reads, so the same pins reappeared in different screen positions; the inventory merges the unit's three clean map views. First view (12:44): 3 grey skull pins with red dots, 1 green skull pin with a red dot, 1 purple skull pin with a red dot, 1 blue teardrop pin (no dot visible), 1 brown animal-face pin at the southwest edge. Second view (12:54): 1 orange skull pin with a red dot, 1 grey skull pin with a red dot, 1 portrait pin ([AP3x] name label). Closing view (12:53): no pins in frame - the map had panned to an empty sector; the sweep animation was running. At least 6 distinct pins stand. None was tapped: the ordinary cycle took the unit to its close first, and the device token lease ran to 12:57:48, leaving too little time for a pin flow plus closing reads. Per the record, the pins are the same standing set deferred from the 2026-11-08 23:35 unit (6 pins then, also unworked). Per rule R7 the next radar unit starts with the pins, not the ordinary cycle - and the 0335 Rare Iron Mine gathering claim is still unchecked after two units (0852, 1253), so the next unit checks whether that pin still stands and claims it if it does, then works the pins.
+- Gold NEW! icon: the gold icon with a NEW! badge at the top of the radar screen (about norm 295,60) is still untouched and its function still unknown (also noted 2026-11-08).
+- Duel delta test still owed: this unit did not visit the VS panel, so no before/after duel score was read. If the displayed +30,000 per task held, 14 claims would be about 420,000 duel points - stated as an inference only, not a measurement.
+- An "Important: Pr..." toast appeared top-right at close (cut off, unread) - not radar-related, left alone.
+- Closing reads: stored 0 of 40, pending rewards 0, bottom bar gone, radar points 336, stamina 61, restore line at close 12 tasks in 04:48:41, "Fully restore at 11-10 17:39:11 local time" (disagrees with the 11:39:11 read at entry - the close read is the live one), tasks executed 6, tasks claimed 14, pins inventoried 6, pins worked 0, free stamina claims taken 0.
+- Result stats: target 1, achieved 0, resources_gained coin about 3.0M plus food 5.4M iron 3.6M EXP 20.5M radar-discs 140 chips 4.0K blue-triangle 726 Lv.1-chest x2, costs 60 stamina plus about 10 minutes, verified yes, blocker_category time (unit cap reached with pins unworked), stored_tasks 0, tasks_executed 6, tasks_claimed 14, pins_inventoried 6, pins_worked 0, stamina 61, radar_points 336, restore_in_minutes 289, free_stamina_claims 0, device_takeovers 0.

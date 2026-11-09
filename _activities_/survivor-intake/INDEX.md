@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-09T17:32:17Z
-version: 1.42.0
+modified: 2026-11-09T21:32:17Z
+version: 1.43.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -43,6 +43,7 @@ grounded_in:
   - source: ticker-0019 survivor-intake execution record 2026-11-09 0024 queue run (partial, gate line unverified on fresh grounding, no question-mark or exclamation bubbles in two pans and two enlarged crops, 0 recruits, bubble-less tap method exhausted; record commit f99faa9744 on records/2026-11-09)
   - source: ticker-0404 survivor-intake execution record 2026-11-09 0409 queue run (done, one gate visitor processed, Friendly Visitor notifications dialog, Cancel, gate line clear, Gear Factory Lv.20 building bubble; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-0904 survivor-intake execution record 2026-11-09 0926 queue run (partial, gate line of 2 verified live, one intake confirmed by smiley bubble, second survivor unverified, Quick Dispatch not run, gate panning and chat-bar look-alike lessons; record commit 3c788a4a3 on records/2026-11-09)
+  - source: ticker-1234 survivor-intake execution record 2026-11-09 1301 queue run (partial, gate inspected from the right-edge pan, no survivor line found, 0 recruits; record commit da81e137e on records/2026-11-09)
 ---
 
 
@@ -158,6 +159,7 @@ Measured on 2026-10-25.
   unit if the line cannot be verified, instead of closing on a
   presumed line state.
 - Follow-up carried from the 2000 unit (2026-11-07): with a line verified and processed, Quick Dispatch is the first action of the next survivors unit (rule R7) - open a building panel and run it, so the newcomers are posted. The third-strike blocker persists until a unit runs it.
+- Update 2026-11-09 1301: the gate re-check the 0926 unit ordered found no line - panned to the right edge, inspected the gate area on a cropped enlargement, no survivor figures and no question-mark bubbles at the gate, on the road out, or in the plaza. The second survivor of the 0926 line is therefore not waiting at the gate at this read; whether it walked to its post or the line state changed another way is unverified. 0 recruits, Quick Dispatch did not run (no intake happened in this unit). The gate-line state remains unverified in the activity's sense - an empty gate is recorded as seen, not presumed to mean the line is clear and done - so the unit closes partial and the tracker is left untouched. This matches the 2026-11-08 22:18 unit, which also found no line at the gate.
 
 ## What the 2026-11-01 early unit added
 
@@ -971,7 +973,7 @@ Measured on 2026-10-25.
   buildings, not a gate line, in the 2112 current view -
   the pointer is qualified, not erased, and the next unit
   grounds fresh rather than navigating to it.
-- Quick Dispatch after intake (2026-11-09 0926): Quick Dispatch did NOT run in the 0926 unit - the starved subtask from the 2026-10-31 retro note - and is the first action of the next survivors unit per rule R7, in the Iron Mine panel or whichever building panel the newcomer belongs to. The second survivor of the 0926 line is unverified at unit close; the next unit re-checks the gate first, then runs Quick Dispatch, then intakes.
+- Quick Dispatch after intake (2026-11-09 0926): Quick Dispatch did NOT run in the 0926 unit - the starved subtask from the 2026-10-31 retro note - and is the first action of the next survivors unit per rule R7, in the Iron Mine panel or whichever building panel the newcomer belongs to. The second survivor of the 0926 line is unverified at unit close; the next unit re-checks the gate first, then runs Quick Dispatch, then intakes. (2026-11-09 1301 update: gate re-checked first per this order - no line, 0 recruits; Quick Dispatch did not run, no intake happened in this unit; the 0926 newcomer's dispatch is still owed.)
 
 ## Changelog
 
@@ -988,6 +990,8 @@ Measured on 2026-10-25.
 - 1.41.0 (2026-11-09): 0409 survivors unit folded (done, one gate visitor processed - Friendly Visitor notifications dialog with exact text, Cancel at (334,762), nothing enabled; bubble read as a question mark but the dialog proves a visitor, the mark may have been an exclamation misread small; gate line verified clear on the closing read; Gear Factory Lv.20 building bubble at (768,275)/(790,335) is a building bubble not a survivor, R2 ends after the one no-change tap, empty-road deselect at (480,700); no recruit, no card, no Quick Dispatch gap under the 1644 refinement; truck dialog left untouched as truck work; visitors 1, recruits 0).
 
 - 1.42.0 (2026-11-09): 0926 survivors unit folded (partial, gate line of 2 verified live after panning the camera down to the bottom-edge gate, right-hand figure tap at about (568,948) cleared both '?' bubbles and raised one yellow smiley-face bubble - one intake confirmed by the smiley, no Recruit card, name or role read so the intake is unverified in detail, second survivor unverified at unit close; Quick Dispatch NOT run, first action of the next unit per rule R7; tap-method blocker category c - grounding point landed on Mail and opened the Season Closed letter (Season II ended 2026-11-08 17:00:05, season buildings removed, skill points returned), chat-bar '?' bubbles opened Chat, blue-helmeted figure near World no change, '?' bubble tap alone no change; entry HUD food 544.5M, iron 871.8M, coin 46.2M, diamonds 13.22K, power 149,217,331, stamina 92/93, VIP Lv.30; unit cap ran out mid-work).
+
+- 1.43.0 (2026-11-09): 1301 survivors unit folded (partial, gate re-checked first per the 0926 R7 order - panned to the right edge, gate area inspected on a cropped enlargement, no survivor figures and no question-mark bubbles at the gate, on the road out, or in the plaza, 0 recruits; the second survivor of the 0926 line is therefore not waiting at the gate at this read, whether it walked to its post or the line state changed another way is unverified; Quick Dispatch did not run, no intake happened in this unit, the 0926 newcomer's dispatch is still owed; the only bubbles in the inspected views are document-icon bubbles over buildings (a truck icon, a pink goods icon) which open Status Overview, not recruits; matches the 2026-11-08 22:18 unit, which also found no line; gate-line state remains unverified in the activity's sense, unit closes partial, tracker untouched).
 
 - 1.39.0 (2026-11-08): 2227 survivors unit folded (partial, gate line unverified, lone figure with no bubble tapped into an "Area No.168" area-info dialog, not a recruit card, 0 recruits, Quick Dispatch not run; the record's "22 of 22" matches the Oct 28-31 metadata window figure and is not a recount, the standing 23rd-consecutive-partial count at 2052 is also not recounted, the count question stays open on Issue #168; re-ground from the gate next unit).
 
@@ -1547,3 +1551,14 @@ Measured on 2026-10-25.
 - Season Closed letter (mail work, not this unit's): the letter corroborates the Season II end already resolved by the 0812 scout unit - Season II ended 2026-11-08 17:00:05, season buildings removed, skill points returned.
 - No diamonds or money spent, no price tag or paid button tapped, no Delete All, no Claim All in mail, no assembly or teleport.
 - Result: partial - gate line verified, one intake confirmed by smiley bubble, second survivor unverified, Quick Dispatch not run; unit cap ran out mid-work.
+
+## What the 2026-11-09 1301 unit added - gate inspected from the right-edge pan, no survivor line found
+
+- Unit survivors-2026-11-09-1003 by ticker-1234, about 12:55 to 13:01 local, status partial. Evidence in `_records_/2026-11-09/survivor-intake/1301-queue-run.md` (commit da81e137e on records/2026-11-09). Tracker untouched for partial, per the queue rules.
+- Returned to the base screen from the radar (Home button, 12:55 PT). Base HUD: food 553.9M, iron 879.2M, coin 51.9M, power 149,217,331, stamina 62.
+- Panned the base view to the right edge (one leftward drag) to reach the front gate - the walled entrance at the top right, with the yellow gate sign and the monument plaza (dog, tank, plane and cannon statues) in front of it, and the road out through the perimeter wall beyond.
+- Inspected the gate area on a cropped enlargement: no survivor figures, no question-mark bubbles anywhere at the gate, on the road out, or in the plaza. The only bubbles in the inspected views are the document-icon bubbles over buildings (a truck icon, a pink goods icon) which open Status Overview, not recruits.
+- No survivor was tapped - there was no figure with a question-mark bubble to tap - so no recruit card, no dialog survivor, no supplies, and Quick Dispatch did not run (no intake happened).
+- Closing reads: gate line - no question-mark bubbles seen at the gate or on the road out. Recruits: 0. This matches the immediately preceding survivors unit (ticker-2201, 2026-11-08 22:18-22:24 PT), which also found no line at the gate and whose only tap opened an "Area No.168" dialog. The gate-line state remains unverified in the activity's sense - an empty gate is recorded as seen, not presumed to mean the line is clear and done - so the unit closes partial and the tracker is left untouched.
+- Follow-up carried: the second survivor of the 0926 line is not waiting at the gate at this read; the next survivors unit re-checks the gate first, and Quick Dispatch for the 0926 newcomer is still owed - it runs when a newcomer with a known building post is verified.
+- Result stats: not stated in the record; recruits 0, gate_line_verified false.
