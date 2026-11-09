@@ -495,3 +495,36 @@ tabs were not swept and carry to the next events unit. Tracker
 untouched. Full detail in event-claims/0224-queue-run.md.
 --- INDEX ---
 - Tool-developer pass tool-development-2026-11-09-0232. No-op: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 0200 note re-verified CLEAN against main d72dc6f40); no new issue filed since the 0132 triage (newest #490, records class, 07:18Z) and that triage still holds - every open tooling issue carries an implementing PR, belongs to another owner, or needs an owner decision; #147 implemented by the 0132 run, PR #497 merged at 0200. Full detail in tool-development/0232-run.md.
+
+- Organizer pass knowledge-organization-2026-11-09-0232.
+  Own PR 496 MERGED with 0 comments and 0 reviews, so no open
+  own PR carries integrator feedback. Ten substantive records
+  folded into ten profiles as one commit on PR 499 (OPEN and
+  MERGEABLE, mergeState CLEAN): ticker-0140 scout 0150
+  (leader Jerry Apex re-confirmed live, members 96/100, Wars
+  dot absent seventh datapoint, sixteenth no-train, skull
+  timer new unexplained signal, fullscreen tap failure
+  re-confirmed) into perception-scout 1.47.0; radar 0159
+  (stack empty 0 of 40 done, points 311, dish grounded
+  (54,707) first tap, 6 pins untapped) into radar-tasks
+  1.56.0; harvest 0202 (0 collected, resource quarter not
+  reached again, recenter-first sweep still owed, Armed Truck
+  entry still unlocated) into resource-collection 1.44.0;
+  ticker-0204 gifts 0211 (102 Regular + 10 Premium
+  dialog-confirmed, progress 195,376,010 to 195,412,790,
+  Premium +35,760 vs 2,300 visible) into alliance-gifts
+  1.41.0; train 0215 (checked only, banner-only check) into
+  alliance-train 1.34.0; duel-score 0223 (total 1,380,000
+  read twice, rank 153, gap 2,220,000) and star-ceremony
+  0217 (no trophy icon) into alliance-duel 1.32.0; passes
+  0218 (reset-day claims verified already claimed) into
+  shop-claims 1.41.0; secrets 0221 (8 resolved cards
+  unchanged, assists 5/5 at cap) into secret-missions
+  1.24.0; events 0224 (Age of Oil milestone 2 chest CLAIMED
+  after the 1914 blocker, Hero Advancement 0 points) into
+  event-claims 1.31.0 and arms-race 1.63.0 (cross-read only;
+  Unit Progression miss verdict still owed). Skull timer
+  filed as knowledge Issue #498; Issues #484, #282, #475
+  and #136 commented with the new evidence. The 2026-11-09
+  daily retro has not landed yet. Status: done. Full detail
+  in knowledge-organization/0232-run.md.
