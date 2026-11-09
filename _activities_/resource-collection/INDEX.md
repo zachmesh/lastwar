@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T02:40:00Z
+modified: 2026-11-09T04:32:17Z
 level: L1
-version: 1.41.0
+version: 1.42.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -69,15 +69,20 @@ Executions are recorded in
   farmland bubbles at once (observed the same evening, food rose
   about 0.4M in one tap and every farmland bubble cleared). Iron
   and coin bubbles collect one by one. (2026-11-08 1759 update:
-  the one-by-one line is now suspect - two taps aimed at supposed
-  food bubbles collected iron +3.6M then coin +3.6M, the identical
-  figure on both taps recorded as observed, not explained; one
-  candidate mechanism, NOT verified, is a tap clearing all
-  standing bubbles of one resource type at once, the food
-  all-at-once behaviour extended to iron and coin. The next
-  harvest unit should test it with one tap and a HUD re-read, not
-  assume one-by-one. The one-by-one claim is not deleted, it is
-  marked suspect until that test.)
+  the one-by-one line was marked suspect - two taps aimed at
+  supposed food bubbles collected iron +3.6M then coin +3.6M, the
+  identical figure on both taps recorded as observed, not
+  explained; one candidate mechanism, NOT verified, was a tap
+  clearing all standing bubbles of one resource type at once.
+  2026-11-08 1935 update: the test is now run for iron - one tap
+  grounded fresh on a blue iron bubble centre collected exactly
+  one iron bubble (+1.2M HUD-verified, food and coin unchanged),
+  so iron one-by-one is RE-CONFIRMED and the 1759 identical
+  +3.6M is explained in part as two different bubbles holding
+  similar amounts, not a shared clear. Coin is still untested:
+  the 1935 coin tap missed its bubble and hit the Iron Mine
+  building underneath, so the coin one-by-one line stays suspect
+  until a coin tap lands and is HUD-verified.)
 - Verify the bubble's identity before tapping (rule R2, added
   2026-11-08 1759): bubble-type identification from the
   downscaled base screenshot is unreliable - both 1759 taps were
@@ -86,7 +91,13 @@ Executions are recorded in
   resolution, or confirm the resource total that moves after the
   first tap before tapping a second bubble of the same supposed
   type. A tap point that looks like a wheat bubble can sit on an
-  iron or coin bubble.
+  iron or coin bubble. (2026-11-08 1935 update: for coin bubbles, zoom the base view in
+  before tapping, or tap only a bubble whose yellow coin icon and
+  value label are both readable in the screenshot. The 1935 coin
+  centre candidates around norm 132,436 and 234,452 are NOT
+  verified - the 234,452 tap hit the Iron Mine building underneath
+  - so do not reuse them blindly; re-ground fresh in the next
+  unit.)
 - Check the Armed Truck and claim it when it shows fully loaded.
 - The gold truck icon is not a verified loot-panel entry - measured 2026-11-07 (1941 unit): tapping the gold truck icon at norm 681,814 panned the map down to the Drill Ground area instead of opening a loot panel. The loot panel entry remains unlocated and the Armed Truck loot state stays unverified.
 
@@ -778,6 +789,8 @@ regular stays due. Evidence in
 
 ## Changelog
 
+- 1.42.0 (2026-11-08): 1935 harvest unit folded (partial, food +5.1M one-tap all-at-once and iron +1.2M one-tap one-bubble HUD-verified; iron one-by-one RE-CONFIRMED so the 1759 suspect marking on iron is lifted and its identical +3.6M is explained in part as two different bubbles holding similar amounts; coin tap missed its bubble and hit the Iron Mine building, so coin one-by-one stays suspect and rule R2 now requires zooming in or a readable coin icon plus value label before tapping, with the 1935 coin centre candidates marked unverified; wrong tap at 490,352 opened a UR Trade Truck panel, closed untouched; pre-unit HUD rise food +3.2M iron +3.1M since 18:00 unexplained with no intervening harvest record; armed-truck toast fragment still unread; coin bubbles and at least one iron bubble still standing, remainder to the next unit).
+
 - 1.41.0 (2026-11-08): 1759 harvest unit folded (partial, pre-reset sweep cut short by the 18:00 reset arriving mid-sweep; iron +3.6M and coin +3.6M HUD-verified in two taps, food bubbles still standing; both taps aimed at supposed food bubbles collected a different resource, so bubble-type identification from the downscaled screenshot is unreliable and rule R2 now requires verifying the bubble's identity before tapping; the identical +3.6M on both taps is recorded unexplained with an all-at-once per-type mechanism as unverified inference, and the 2026-10-25 one-by-one line for iron and coin is marked suspect, not deleted; armed-truck toast fragment still unread; remainder to the 1803 unit).
 
 - 1.28.0 (2026-11-05): fortieth consecutive Mac device-access blocker (0904 harvest unit, invoke-channel stall, zero responses to eight invokes across two devices and five commands - a new worsened form, distinct from Issue 284's capture-failure-with-responses signature); the Correction 2026-11-05 unblock (owner Dock-icon click) is scoped to the window-stream fault only and does NOT address a stalled invoke channel, for which the Mac-side agent gateway likely needs a restart (unverified); the 1101 harvest close stands as the last live read, full edge-drag sweep still incomplete, Armed Truck state unknown; fortieth occurrence commented onto Issue #282 by this run.
@@ -1399,3 +1412,76 @@ regular stays due. Evidence in
 ## Channel rules, carried 2026-11-07 - Mission Control and background Ctrl+Right lessons (propagation from the 1020 help unit)
 
 - Channel rules, now carried in this profile (propagation follow-up from the 1732 run, resource-collection done - joining alliance-help, alliance-gifts, radar-tasks, arms-race, alliance-donations and shop-claims): Mission Control was not opened as a recovery step, per the 1020 lessons folded into alliance-help 1.27.0 - open_app Mission Control wedged the channel in that pass (first launch opened the overview; every later activate and observe then failed with geometry_mismatch origin_delta 256+, agent_display false, and all key input gated on observation_required; a second launch closed it and restored observation; the overview itself cannot be observed or clicked through this channel). Background Ctrl+Right was not tried: it does not switch Spaces through this channel (in the 1020 pass the key went to the Finder column view instead). The known reliable unblock stands: the owner clicking the LastWar Dock icon once. This profile already records the background-Space-keys half from its own 0034 unit (Ctrl+Right / Ctrl+Left dispatched but the Space did not switch); the new part carried here is the open_app Mission Control wedging (a launch, not a keypress).
+
+## What the 2026-11-08 1935 unit added - food all-at-once re-confirmed, iron one-by-one re-confirmed, coin tap missed, remainder carries
+
+- Unit harvest-2026-11-08-1803 by ticker-1935, about 19:35-19:51
+  local, status partial. Evidence in
+  `_records_/2026-11-08/resource-collection/1935-queue-run.md`
+  (commit 5534be1e on records/2026-11-08). Two bubble taps
+  collected verified gains (food +5.1M, iron +1.2M), but coin
+  bubbles are still standing and the token window ran out, so the
+  sweep is unfinished. The tracker is untouched; the next harvest
+  unit picks up the remainder.
+- Entry, read live about 19:37 local: base screen, power
+  149,209,253; food 494.0M, iron 820.0M, coin 15.9M; diamonds
+  13.22K; cart 4,467; stamina 120. Note: food is +3.2M and iron
+  +3.1M against the 1759 unit closing read (food 490.8M, iron
+  816.9M at about 18:00), with coin unchanged at 15.9M. No
+  harvest record exists between 1759 and this unit, so the rise
+  is unexplained - possibly collected by another session or at
+  the reset. Recorded as observed, not explained; if a later unit
+  finds the same pattern, file it as an Issue rather than leaving
+  it in prose.
+- Wrong tap, about 19:38 local: a tap at norm 490,352 on what
+  looked like an orange resource bubble opened a UR Trade Truck
+  panel instead ([BI0d]Whodat34, Times plundered 0/2, Next
+  Station 04:58:41, Your Plunder Count Today 0/4). Closed at
+  once with the panel X. No plunder, no dispatch - truck work
+  belongs to the trucks unit. A bubble-shaped orange target at
+  the map edge can be a truck, not a bubble; ground the target
+  before tapping.
+- Tap 1, about 19:44 local: one tap grounded fresh at norm
+  335,489 on a green wheat bubble centre in the base interior
+  (BASE view, after the map had drifted to a neighbour and was
+  recentered). After: food 494.0M to 499.1M (+5.1M, HUD-verified),
+  iron unchanged 820.0M, coin unchanged 15.9M. The green wheat
+  bubbles cleared from the cluster in the same screenshot. This
+  confirms the food all-at-once behaviour: one tap clears the
+  standing food bubbles.
+- Tap 2, about 19:47 local: one tap grounded fresh at norm
+  156,352 on a blue iron bubble centre. After: iron 820.0M to
+  821.2M (+1.2M, HUD-verified), food unchanged 499.1M, coin
+  unchanged 15.9M. One tap, one iron bubble - iron still collects
+  one by one, as the activity metadata says. This also resolves
+  the 1759 open question in part: the identical +3.6M on its two
+  taps was two different bubbles holding similar amounts, not a
+  shared clear.
+- Tap 3 (miss), about 19:49 local: a tap at norm 234,452 aimed
+  at a yellow coin bubble landed on the Iron Mine building
+  underneath and opened its action panel (Iron Mine Lv.27, paw
+  and upgrade buttons). Dismissed by tapping empty ground; no
+  button was touched, nothing spent, nothing started. HUD
+  unchanged (food 499.1M, iron 821.2M, coin 15.9M). The coin
+  bubbles were still standing at close. Per rule R2 the method
+  must change: zoom the base view in before tapping coin
+  bubbles, or tap only a bubble whose yellow coin icon and value
+  label are both readable in the screenshot. The coin centre
+  coordinates above are NOT verified - re-ground fresh in the
+  next unit; do not reuse them blindly. Measurements on Issue
+  #250 (commented there by this run).
+- Armed Truck: the bottom-left toast fragment was visible again
+  in this unit's screenshots, still cut off at the screen edge
+  and not transcribed, so the fully-loaded notice is still
+  unverified and the truck loot unclaimed. It carries to the next
+  harvest unit - read the notice in full before deciding.
+- Closing state, read live about 19:50 local: food 499.1M, iron
+  821.2M, coin 15.9M; power 149,209,253; diamonds 13.22K. Game
+  left on the base screen. One transient observe error ("target
+  app exited or restarted") self-resolved on re-list - the app
+  never left the frontmost list (pid 1908 throughout).
+- No diamonds spent, no money spent, no Go button tapped, no
+  research or building started, no player attacked, no assemble
+  or teleport. The Iron Mine panel's upgrade button was visible
+  and was not touched. The UR truck panel was closed without
+  plundering.
