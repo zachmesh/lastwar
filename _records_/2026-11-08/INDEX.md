@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-09T07:21:00Z
+modified: 2026-11-09T08:05:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -5039,3 +5039,9 @@ of 2026-10-28.
   removed); delivery via 5.6M sparse worktree. No Slack
   sync (silent non-batch run). Full detail in
   pr-integration/2345-run.md.
+
+- Radar unit radar-2026-11-08-2203 (partial): release day 1, ordinary-task cycle fully cleared (stored 39 of 40 to 0 of 40, 16 tasks executed for 160 stamina, 44 rewards claimed, radar points 267 to 311); free stamina claim taken once (2 of 2 remaining at entry). Rewards: chest x50, coil x370, EXP 58.4M, blue triangle 2,496, blue card 8.0K, speedups 5m x8 / 1m x50, iron 14.0M, food ~11.7M, coin ~9.2M, Lv.1 chest x1. Partial because 6 map pins stand unworked (2 blue arrow, 2 orange skull, 1 portrait, 1 purple arrow) - they fall to the next radar unit. Entry note: dish icon re-grounded to norm 37,736 (profile coordinate stale in the 642x951 window). Full detail in radar-tasks/2335-queue-run.md.
+
+- Donations unit donations-2026-11-08-2203 (done): 9 coin donations to Rallied Attack 7/10 (800 coin each, 7,200 total); Donation Count read live 9/30, 4/30, 1/30, then the final donation landed and the button greyed with a 00:18:26 timer hiding the count label; closed on the sanctioned footer re-read (Tech Donation Today 1300 to 2200, +900 = 9 x 100 points per donation, a live measurement superseding the profile's 50/60 figures). Tech EXP 23.6K to 24.5K/4.5M. Daily 30 of 30 complete. Full detail in alliance-donations/2350-queue-run.md.
+
+- Correction to the donations entry above (same pass, before delivery): the donations unit is PARTIAL, not done. It first closed as done on the Tech Donation Today footer (1300 to 2200), but the footer must never be used as a donations closing count (ticker-2004 knowledge-gap Issue; open Issues #417, #423, #450) - the close was reverted in this pass, the tracker mark removed, and the unit file corrected to partial. Count last read live 1/30 with one further donation landed after; the 00:18:26 timer hid the count. Fresh replenishment evidence: the count stood 8/30 at the ticker-2004 exit (20:44) and 9/30 at this unit's entry (23:50) with no donations between - commented on Issue #423. Full detail in alliance-donations/2350-queue-run.md.
