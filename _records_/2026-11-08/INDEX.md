@@ -4937,3 +4937,19 @@ of 2026-10-28.
   PRs except #404 adoption, owned by other jobs. No code
   change, no PR, no issue, no comment. Status: done.
   Full detail in tool-development/2332-run.md.
+
+## 23:38 to about 23:46 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-2330.
+  NON-batch pass for records (merge-aware checker: due no,
+  PR 460 already merged 23:12 PT in the 23:00 window by the
+  2300 pass). No records merges. Records PR 491 clean against
+  main 13d867120, awaiting the 03:00 batch. Records PRs 478,
+  351 and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-probed, carried.
+  Tools PR 425 still owner-gated, clean, unchanged, no owner
+  decision (register item OD-20261108-01 open and undecided).
+  VPS root disk still 100% full; delivery via 5.5M sparse
+  worktree. Local main verified at 13d867120, no sync-back.
+  No Slack sync (silent non-batch run). Full detail in
+  pr-integration/2330-run.md.
