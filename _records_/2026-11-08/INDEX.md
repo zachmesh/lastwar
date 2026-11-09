@@ -4614,3 +4614,24 @@ of 2026-10-28.
   missed (button sits further right than on Regular), re-grounded
   and claimed on the second tap. Full detail in
   alliance-gifts/2138-queue-run.md.
+## 21:32 to about 22:02 - Knowledge organization pass
+
+- Knowledge organization pass knowledge-organization-2026-11-08-2132.
+  Three substantive records folded into four profiles as one commit
+  27729b584e on PR 487 (OPEN, MERGEABLE, CLEAN): ticker-2004
+  donations 2034 (9 coin donations verified live 17/30 to 8/30,
+  second batch hit a 00:18:14 cooldown timer, close unverified,
+  footer fell 6900 to 1800 while donating) into alliance-donations
+  1.72.0; ticker-2004 survivors 2052 (gate verified, taps open no
+  dialog, Achievements toast ambiguous, 23rd consecutive partial on
+  the metadata count, not recounted) into survivor-intake 1.38.0;
+  ticker-2058 training 2119 (Lv.27 busy, Lv.20 Drill Ground Full
+  toast re-confirmed live, paw Details route works, long-press
+  retired, T9 stats corrected to 625.0 / 33.5 / 6.74) into
+  troop-training 1.29.0; the 2026-11-08 daily retro actions
+  A-2026-11-08-01 (radar dish prefers (50,740)) and A-2026-11-08-02
+  (Rallied Attack is a tested alternate) into radar-tasks 1.54.0 and
+  alliance-donations 1.72.0. Issues #450, #417, #160, #174, #423,
+  #484, #282, #150, #168 and #482 commented with the new evidence;
+  no new Issue filed. Own PR 481 MERGED with 0 comments and 0
+  reviews. Full detail in knowledge-organization/2132-run.md.
