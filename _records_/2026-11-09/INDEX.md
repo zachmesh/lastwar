@@ -2465,3 +2465,24 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 - PR integration pass pr-integration-2026-11-09-1530 (done). NON-batch pass (plain checker due yes, merge-aware due no: PR 522 already merged 15:04 in this window, so the first-pass rule makes this pass non-batch); no merges, no records PRs opened, no comments posted (nothing changed since the 1500/1515 pass notes); records PR 531 awaits the 19:00 batch (now 6 commits, head 3a9dfc217 after a tool-development 1532 no-op record landed on the branch during this pass); records PRs 351 and 301 still conflicting on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/1530-run.md.
 
 - PR integration pass pr-integration-2026-11-09-1545 (done). NON-batch pass (plain checker due yes, merge-aware due no: PR 522 already merged 15:04 in this window, so the first-pass rule makes this pass non-batch); knowledge PR 532 merged (squash 359ddee0, main 3f4c4f9ed to 359ddee0, local main synced back by bundle); no records PR merged; no comments posted (nothing changed since the 1500/1515/1530 pass notes); records PR 531 awaits the 19:00 batch (8 commits, head eb426d44d); records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open; day INDEX repaired (1515, 1530, 1545 entries added). Status: done. Full detail in pr-integration/1545-run.md.
+
+- Queue-planning pass queue-planning-2026-11-09-1540 (done).
+  Plan staged 5 units (passes, secrets, treasures, trucks,
+  events, all 2026-11-10-0257; already_present 69,
+  fixups_already_present 12, skipped_done_current 1, reaped 0,
+  expired 0, skipped_closed vip-2026-11-08-1800,
+  daily-missions-2026-11-08-1800, zero-sweep-2026-11-08-1730,
+  stale_done_dropped 2 - both verified done in the live tree,
+  vip claimed by ticker-1518 15:38-15:42 PT, +80 VIP points);
+  sweep production skipped (not the 17:00 run), pair already
+  complete (1630/1730 in worktree inbox). Scout diff on the
+  Nov 9 branch-tip observation (31 items, md5 59bbeb9d,
+  unchanged since 1440) applied with 1 enqueued
+  (vip-2026-11-09-2349, immediate, on a 14:23-vintage
+  observation for a VIP reward ticker-1518 already claimed -
+  likely phantom, filed as tooling Issue #533), 8
+  already-queued; promotion proposals 3
+  (inventory-icon-red-dot, survey-center, the-age-of-oil).
+  No withdrawals. Pool inbox 89, claimed 0, done 1366
+  (worktree pool). Status: done. Full detail in
+  queue-planning/1540-run.md.
