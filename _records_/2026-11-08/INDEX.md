@@ -3867,3 +3867,21 @@ of 2026-10-28.
   Owner-decision issues 132, 154 and 335 all over 24 hours,
   statements current.
   Full detail in pr-catchall/1739-run.md.
+## 17:32 to about 17:47 — Knowledge organization run (hourly)
+
+- Knowledge-organizer 1732 run. Fold of ticker-1604/1646
+  records into 4 profiles in one commit (a33f9374, PR 474):
+  perception-scout 1.43.0 to 1.44.0 (twelfth and thirteenth
+  no-train confirmations, sixth #212 datapoint, Events hub
+  strip rotated to 5 tabs, no Zombie tab); daily-missions
+  1.8.0 to 1.9.0 (third one-tap-multi-claim, first verified
+  40-point chest claim, double-rewards receipt); arms-race
+  1.59.0 to 1.60.0 (new Tech Research instance, ends about
+  18:06; 2,360/4,800/11,800 resolved as ruby tags, not
+  progress); daily-activities 1.18.0 to 1.19.0 (zero sweep
+  1712 first pass, 11 not at zero, server disconnect with
+  clean relaunch, power step-down 641,100 unexplained).
+  Issues #212 and #242 commented. No new knowledge-issue
+  activity; no new daily retro since 2026-11-07. Slack DM
+  sync: yes - material change. Status: done. Full detail in
+  knowledge-organization/1732-run.md.
