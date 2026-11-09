@@ -1,13 +1,15 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-09T17:32:17Z
+modified: 2026-11-09T19:32:17Z
 level: L1
-version: 1.51.0
+version: 1.52.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
   - source: owner direction of 2026-10-31 - perceive the game first, see what is available, place it into the queue dynamically
+  - source: ticker-1104 scout discovery unit 012 execution record 2026-11-09 1117 queue run (done, Survey Center explored read-only - one live Season 11 Polar World Experience Survey, Instructions read in full, Proceed opens a SurveyMonkey link in the owner's Chrome, tab left open, nothing answered; record commit 46d7110f on records/2026-11-09)
+  - source: ticker-1038 scout discovery unit 011 execution record 2026-11-09 1044 queue run (done, Transfer Surge confirmed live in all 3 tabs, candidate rejected as a task, duplicate of unit 004 exploration; record commit d630be83 on records/2026-11-09)
   - source: perception-driven queue design in the local conventions
   - source: task unit queue design section 13
   - source: perception-scout execution record 2026-11-01 0215 PST, first day observation
@@ -3645,3 +3647,39 @@ observe-only, nothing claimed). Evidence in
 - The 0606 unmatched list is now fully resolved: the Builders Hut quest was its last open item. unmatched_labels: none.
 - Corroboration from the 0926 survivors unit (mail read, not a scout read): the Season Closed system letter (2026-11-08 17:00:05) states Season II ended, season buildings removed, skill points returned - consistent with the 0812 Transfer Surge resolution.
 - Result stats: target explain-builders-hut-lv26-quest-mechanism-cost-time-rewards, achieved 1, resources_gained none, costs about 5 minutes, no items spent, no diamonds spent, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 1104 scout-discovery units added - Survey Center learned read-only, survey-center-tab duplicate filing, Transfer Surge re-exploration duplicate
+
+- Unit scout-scout-discovery-2026-11-09-012 by ticker-1104, about
+  11:09 to 11:17 local, status done. Evidence in
+  `_records_/2026-11-09/survey-center/1117-queue-run.md` (commit
+  46d7110f on records/2026-11-09). The Survey Center candidate is now
+  learned read-only and has its own profile: survey-center 1.0.0 (6 of
+  7 fields, reward unmeasured, owner-gated). The day observation file
+  gained the Survey Center exploration section; unmatched_labels stays
+  none.
+- Unit 013 in the same pass (record
+  `_records_/2026-11-09/survey-center-tab/1120-queue-run.md`) is a
+  duplicate of unit 012: the scout diff filed the same Events hub tab
+  twice, once as the unmatched label "Survey Center" and once as the
+  events-surface tab "Survey Center tab". One entity, two units - a
+  diff filing quirk to watch when a new tab appears both as a label
+  and as a surface tab.
+- Unit scout-scout-discovery-2026-11-09-011 by ticker-1038, about
+  10:44 to 10:54 local, status done. Evidence in
+  `_records_/2026-11-09/season-ii-countdown-6d/1044-queue-run.md`
+  (commit d630be83 on records/2026-11-09). Transfer Surge confirmed
+  live in all 3 tabs, candidate rejected as a task; the mechanism has
+  its own rejected-candidate profile: season-ii-countdown-6d 1.0.0.
+  This unit re-explored the candidate after unit 004 (ticker-0804)
+  had already closed it - the pool staged a duplicate after closure,
+  a stale-pool re-production tracked in Issue #466. The deadline
+  discrepancy (issue #514 says the application phase ends 2026-11-12
+  18:00 UTC, the live countdown implies about 2026-11-13 02:00 UTC)
+  is flagged in the #514 comment for the retro to confirm.
+- Result stats: 1117 target learn-survey-center-profile-fields,
+  achieved 6 of 7, costs about 8 minutes; 1120 duplicate of 012, no
+  game session, costs about 3 minutes; 1044 target
+  explain-season-ii-countdown-mechanism, achieved 1, costs about 11
+  minutes; resources_gained none for all, no items spent, verified yes
+  (same-unit live reads), blocker_category none.
