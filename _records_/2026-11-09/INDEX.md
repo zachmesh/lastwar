@@ -2159,3 +2159,30 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   closed. No withdrawals. Pool inbox 79, claimed 1,
   done 1356. Status: done. Full detail in
   queue-planning/1140-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-018,
+  done: Upgrade Builders Hut to Lv.26 banner quest profiled
+  live - the banner is a go-to link to the hut (Lv.25, 0 of
+  1), cost Iron 170.0M + Food 56.9M + Lv.26 Headquarters
+  (all met, affordable now), original time 15d 08:05:18,
+  Power 90,800 to 108,300, free speed-up time 00:20:00 to
+  00:22:00, no reward shown and no deadline; the upgrade
+  was NOT started (owner-only). The upgrade panel's X did
+  not respond to background clicks (same class as the
+  zombie Store button), so the panel was left open and the
+  successor must re-ground its entry fresh (R2). Full detail
+  in upgrade-builders-hut-to/1204-queue-run.md.
+
+- Harvest unit harvest-2026-11-09-1003, done: all visible
+  resource bubbles collected 12:20-12:33 PT, HUD verified -
+  food 544.5M to 548.4M (plus 3.9M, one farmland tap collected
+  all food), iron 871.8M to 875.4M (plus 3.6M, 5 bubbles),
+  coin 46.2M to 48.8M (plus 2.6M, 4 bubbles); no bubble
+  remains visible on the base. Two building panels opened by
+  batch taps (iron mine Lv.27, gold mine Lv.30 - both read
+  only, nothing assigned or dispatched) and were left by the
+  left-edge swipe back gesture, which also closes panels
+  whose X ignores background clicks. Armed Truck loot not
+  checked - the unit hit its 15 minute cap; follow-up for the
+  next harvest unit. Full detail in
+  resource-collection/1220-queue-run.md.
