@@ -4937,3 +4937,32 @@ of 2026-10-28.
   PRs except #404 adoption, owned by other jobs. No code
   change, no PR, no issue, no comment. Status: done.
   Full detail in tool-development/2332-run.md.
+
+## 23:32 to about 23:45 — Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-08-2332. Own PR 489
+  MERGED 2026-11-09T06:56:48Z with 0 comments and 0
+  reviews, so no feedback pending. Folded ticker-2235
+  passes 2243, secrets 2253 and treasures 2255 plus
+  ticker-2308 harvest 2310 into 4 profiles as one
+  commit 955e6dbbc6: shop-claims 1.40.0, secret-missions
+  1.23.0, hidden-treasures 1.13.0, resource-collection
+  1.43.0. New mechanic: a running secret task's rewards
+  can be plundered at 10% by another player
+  ([BZGR]FredoSauce 19:40), remaining 90% unverified,
+  now an open question. Harvest HUD rise second
+  occurrence (food +2.8M, iron +2.8M, no intervening
+  harvest) is Issue #490; harvest method changes to
+  recenter-first, two new verified non-bubbles
+  (701,468 NPC marker, 565,636 Recon Plane indicator).
+  Treasures dig 1, chest 8/15, 2 digs remain capped by
+  M3; tab badge 1 re-confirmed not the dig count.
+  PR 492 opened for the fold, verified OPEN and
+  MERGEABLE, mergeState CLEAN. No Issue commented this
+  run; the 1935 grounded_in citation missing from the
+  1.42.0 fold was added with record commit 5534be1e5.
+  The 2026-11-09 daily retro has not landed yet. Slack
+  DM sync sent (message_ts 1794210070.428999). Status:
+  done. Full detail in
+  knowledge-organization/2332-run.md.
