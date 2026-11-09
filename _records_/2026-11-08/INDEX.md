@@ -4502,3 +4502,18 @@ of 2026-10-28.
   1100 window; the 1130 pass named #458 a violation
   itself). Full detail in _records_/retro/2026-11-08.md
   and retro-review/2114-run.md. Status: done.
+
+- Integrator pass pr-integration-2026-11-08-2115.
+  NON-batch pass for records (checker: not due, outside
+  every batch window, next batch 23:00 PT). No knowledge
+  or code PR merged. Records PR 460 head moved to
+  76f358ef, re-verified CLEAN, re-check commented,
+  awaits the 23:00 batch. Records PR 478 CLEAN,
+  unchanged, awaits the 23:00 batch. Tools PR 425 still
+  owner-gated, clean, no owner decision (open
+  owner-decision issues checked: none covers it), no new
+  comment. Records PRs 351 and 301 still conflict on the
+  single file _logs_/repo-actions/action-log.jsonl,
+  re-probed, scope unchanged, no new comment. No merge,
+  so no sync-back. Full detail in
+  pr-integration/2115-run.md.
