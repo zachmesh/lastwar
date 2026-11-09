@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T17:32:17Z
+modified: 2026-11-09T18:32:17Z
 level: L1
-version: 1.59.0
+version: 1.60.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -51,7 +51,7 @@ grounded_in:
   - source: ticker-0734 radar-tasks execution record 2026-11-07 0734 queue run (failed, Mac device offline, one-hundred-third consecutive ticker pass to fail this way, sixty-fourth in the worsened zero-response form, Issue 284; last_seen 15:36:52Z stale about 48h, unchanged since the ticker-0704 pass; seven invokes, zero responses, recovery-device health check and repair both timed out after 25s; stack-day unit, duel day 6)
   - source: ticker-1104 radar-tasks execution record 2026-11-07 1104 queue run (failed, Mac device online, window off-Space, one-hundred-eighth consecutive ticker pass to fail this way, second in the new capture-failure form, Issue 282; last_seen 2026-11-07T18:41:20Z fresh; eleven invokes, zero game screens, four capture attempts failed identically, open_app outcome_unknown with no relaunch or move, set_window_frame refused observation_required; stack-day unit, duel day 6)
   - source: ticker-1608 radar-tasks execution record 2026-11-07 1616 queue run (failed, Mac device online, window off-Space, one-hundred-twelfth consecutive ticker pass to fail this way, sixth in the new capture-failure form, Issue 282; last_seen 2026-11-07T23:44:36Z about 32 minutes stale; four invokes, zero game screens, four capture attempts failed identically; stack-day unit, duel day 6)
-  - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental radar reads during the navigation detour: BASE tap 920,975 opened the radar map, Lv.13, points 237 to 259, stored 19/40 to 0/40, stamina 100 to 35, 19 tasks completed between screenshots with no executor tap; record commit a85cfdafa8 on records/2026-11-07)
+  - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental radar reads during the navigation detour - BASE tap 920,975 opened the radar map, Lv.13, points 237 to 259, stored 19/40 to 0/40, stamina 100 to 35, 19 tasks completed between screenshots with no executor tap; record commit a85cfdafa8 on records/2026-11-07)
   - source: ticker-1655 harvest, survivors and training execution records 2026-11-07 1655 queue runs (capture channel working again on live game screens after the 1020-1608 capture-failure run, Issue 282; record commit 514e333e5b on records/2026-11-07)
   - source: ticker-1904 radar execution record 2026-11-07 1912 queue run (done, stack empty, dish re-grounded for the windowed layout, capture channel recovered)
   - source: ticker-1249 radar execution record 2026-11-08 1256 queue run (done, stack-day Quick Execute 4 tasks, stamina 120 to 80, radar points 267 unchanged, bar flipped to Claim All only with 10 rewards pending, pins inventoried untapped; record commit 6d4ec6287 on records/2026-11-08)
@@ -1493,6 +1493,8 @@ are still open, per the protocol.
   superseded in place by this close inventory, not erased.
 
 ## Changelog
+
+- 1.60.0, 2026-11-09 - Frontmatter repair flagged by the integrator on PR #518 (post-merge note, 0945 pass): the 2026-11-07 1633 grounded_in line carried a colon inside an unquoted value ('...navigation detour: BASE tap 920,975...') and failed a strict YAML parse on main; reworded to a dash so the frontmatter parses. No new radar unit ran this hour; no other change.
 
 - 1.59.0, 2026-11-09 - 0852 unit folded (partial, release day): dish grounded fresh (51,726) first tap with the camera still panned on the Drill Ground cluster - a merely panned camera does not block the dish tap, restore-first still binds for an open building panel; entry Lv.13, points 311, stored 2/40, stamina 120, restore 12 tasks in 02:46:23, Fully restore at 11-10 05:39:11; the 12-task restore expected around 05:36 did NOT land as a batch (stored 2/40 at 08:52, second datapoint against the batch hypothesis); Quick Execute 3 tasks / 30 stamina, Claim All 11 rewards (radar item x110, EXP 15.9M, blue item 4.0K, blue triangle 366, iron 5.0M, food 2.3M, coin 2.0M), points 311 to 322, stored 0/40; bar then offered Quick Execute again for 1 task at 10 stamina with stored 0/40, unexplained, left for the next unit; 7 pins inventoried unattempted (portrait, 2 blue skull, green skull, 2 grey skull, gold/pink Iron Mine cluster - its claim NOT checked), R7 puts the Iron Mine gathering claim first next unit; duel delta test still owed.
 
