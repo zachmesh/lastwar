@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T03:32:17Z
+modified: 2026-11-09T04:32:17Z
 level: L1
-version: 1.29.0
+version: 1.30.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -1191,3 +1191,32 @@ that drag is the sweep-completeness check, not wasted motion.
   reload after the intro cutscene lost no state.
 - Game left safe: base screen. No Challenge mini-game played, no
   Arms Race grinding.
+
+## What the 2026-11-08 1935 and 2028 units added - Age of Oil research tree read, Desert Storm enlistment re-confirmed
+
+- Harvest 1935 unit, about 19:37 local: the game opened on the
+  Events screen (Desert Storm Battlefield enlistment
+  confirmation, Squad [A], Battle Day 2026-11-13 03:00-03:30,
+  Participants 20/20, Enlisted stamp; tabs The Age of Oil with
+  red dot 1, Arms Race, Winter Battlefield). Two back-arrow taps
+  returned to the base view. No event action was taken - this
+  unit is harvest only. Evidence in
+  `_records_/2026-11-08/resource-collection/1935-queue-run.md`
+  (commit 5534be1e on records/2026-11-08). The Age of Oil tab
+  still carries its red dot; the milestone 2 chest question
+  (Issue #477) is unchanged by this read.
+- Radar 2028 unit, about 20:24 local: a recovery tap opened THE
+  AGE OF OIL research tree instead of closing the BUILD menu
+  (all nodes 0/10, queue timers 20:13:57:39 and 08:47:50 - read
+  only, no research started, nothing spent). Two taps on the
+  tree's back arrow at (109,894) and at the re-grounded centre
+  (131,898) produced no change; the control channel returned
+  explicit guidance that background clicks do not reach some
+  controls and to use click_element with the control's visible
+  label, or the keyboard, instead. Return and Esc are never used
+  on this app. Evidence in
+  `_records_/2026-11-08/radar-tasks/2028-queue-run.md` (commit
+  eee08287 on records/2026-11-08). The game was left on the
+  research tree; the next unit to touch it backs out with
+  click_element or relaunches the app. Commented onto Issue #477
+  by this run.
