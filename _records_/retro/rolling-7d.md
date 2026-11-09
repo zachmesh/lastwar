@@ -404,3 +404,59 @@ remain the immutable source.
   first pass partial, final pass missed).
   Oldest open improvement 5 days, no breach.
 - Detail - daily retro 2026-11-07 in this folder.
+
+## Entry 2026-11-08
+
+- Derived from - 731 done units, finished local PST
+  2026-11-02 to 2026-11-08, read from the
+  records/2026-11-08 branch tip 78e34bfa23
+  (merge reconcile ticker-2004-1108-delivery),
+  tool _tools_/retro_report.py 1.5.1, pool state
+  sha256
+  5b325b733c823666b7235a872a1c11a081726dc5a6822e4bacc483bd41f36b71.
+  Live working-tree pool holds 767 in the same
+  window (pool sha256
+  f86da8eadd65c78e422e3aab1dc9e00cc138fa10197430af0c7f95db1cddd45e);
+  gap 36, pool_gap.py FAIL. Nov 3 backfill deficit
+  still 88; branch leads the live tree Nov 5, 6
+  and 8 by 36, 17 and 32.
+- Totals - done 101, partial 178, failed 110,
+  expired 340, skipped-needs-owner 2. Executor
+  time 115,384 seconds, median unit 237 seconds,
+  p90 586 seconds. Attempts mean 0.5349, max 1.
+- Worst types by done percent - ghost-ops 0 of 1,
+  crystal-shop 0 of 2, glittering-market 0 of 3,
+  daily-missions 0 of 12, zero-sweep 0 of 16,
+  duel-score 0 of 23, arms-race 0 of 37, harvest
+  0 of 37, training 0 of 37, survivors 0 of 38.
+- Best types - mail 12 of 35, gifts 12 of 36,
+  passes 12 of 38, help 11 of 35, treasures 10
+  of 38, events 9 of 36, star-ceremony 7 of 34,
+  secrets 7 of 37.
+- Measurement state - numeric target over achieved
+  pairs 266, summed attainment 1.1907
+  (achieved_sum 4,813,220, target_sum 4,042,308);
+  the summed figure is NOT comparable: it is
+  dominated by one misattributed figure
+  (star-ceremony-2026-11-04-0630 carries a duel
+  screen total 4,772,100 in achieved); without
+  it the window attainment is about 0.093.
+  Units carrying blocker_category 696 of 731 (35
+  lack the key); unverified closings 590 (80.7
+  percent), down 3.9 points on yesterday's 84.6
+  percent. Points 404, up 217 on yesterday; the
+  tool excludes the same 1 copied-points unit.
+- Threshold breaches - unexplained red dots 14
+  (planner diff, unchanged across the 1340-1940
+  runs); expired/unexecuted in day counts (68
+  branch, 64 live); quota attainment under 0.8
+  rolling (trucks 0.5556, donations 0.1372);
+  unverified rate over 20 percent (80.7 percent,
+  down 3.9 points week over week); daily standing
+  job artifact missing (ticker-0634 record, #342,
+  about 88 hours); ledger coverage 18 of 23
+  (sweep pair ran both passes, fix-ups staged
+  past the reset). Oldest open improvement 6
+  days (#118), no breach. Recurrence of closed
+  improvements' root causes 0 of 3, no breach.
+- Detail - daily retro 2026-11-08 in this folder.

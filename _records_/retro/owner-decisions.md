@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-08T05:00:00Z
-version: 1.8.0
+modified: 2026-11-09T05:09:00Z
+version: 1.9.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -275,6 +275,54 @@ one mention in a summary.
   the checker, as the 1530 pass did.
 - status: open
 
+### OD-20261108-01 - PR 425 log-gate policy amendment
+
+- opened: 2026-11-08
+- item: whether the log-append-delivery-gate
+  policy amendment (PR #425) should be approved
+  as a mandatory gate, merged as-is once rebased,
+  or split into a tool change and a separate
+  policy change.
+- context: PR #425 amends the log-gate policy
+  (tooling, records). The integrator escalated it
+  to the owner on 2026-11-07 22:45 local as
+  owner-gated, and re-verified it on Nov 8 with
+  no owner decision since. The retro's own
+  action-log line in this delivery rides the
+  records branch under the current (pre-amendment)
+  policy.
+- decision needed: approve the mandatory log
+  gate, merge PR #425 as-is once rebased, or
+  split it into a tool change and a separate
+  policy change.
+- age tracking: opened 2026-11-08, age 0 days at
+  filing; the retro recomputes and reports the age
+  every run.
+- status: open
+
+### OD-20261108-02 - live-checkout re-sync mechanism for _tools_ drift
+
+- opened: 2026-11-08
+- item: whether the live-checkout re-sync
+  mechanism (#415) should be wired as a drift
+  check into the ticker/planner pre-step, or kept
+  as the documented manual procedure.
+- context: the tool-developer 1832 run on Nov 8
+  surfaced the drift (live tools/queue.py older
+  than main's) and did the manual re-sync to
+  main 9479c3eb at about 18:42 (19 files match,
+  IN SYNC). The next _tools_ merge will go stale
+  the same way until the mechanism is decided.
+  Filed as GitHub issue #415 (labels tooling,
+  owner-decision).
+- decision needed: wire the drift check into the
+  ticker/planner pre-step, or keep the documented
+  manual procedure.
+- age tracking: opened 2026-11-08, age 0 days at
+  filing; the retro recomputes and reports the age
+  every run.
+- status: open
+
 ## 2026-11-04 retro notes (all items, ages recomputed)
 
 - OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
@@ -321,3 +369,16 @@ None yet.
 - OD-20261101-03: age 6 days. The pr-catchall runs keep noting issue #154 as awaiting the Season Photo decision; the 200 red diamonds stay unclaimed.
 - OD-20261105-01: age 2 days. New evidence: the 2300 window Nov 6 saw two records merges (PR 374 at 23:02 and PR 379 at 23:49), the second named a cadence miss by the integrator's own 2345 run; the tool's window-membership audit reports 0 violations, so the audit cannot see a second-merge-in-window. PR #337 implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
 - No other new owner-decision item from the Nov 7 window: no new skipped-needs-owner type on Nov 7 (the arms skip is the same OD-20261031-01 pattern), and no owner-gated PR escalated by the integrator. All seven items are open longer than 48 hours and are named in the Nov 7 retro chat report and Slack sync until decided.
+
+## 2026-11-08 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 8 days. NEW skipped-needs-owner on Nov 8 (arms-race 2127, Unit Progression, tier-3 gap 75,000, no idle barracks, phase ends about 14:00 - record _records_/2026-11-08/arms-race/1342-queue-run.md); the 1003 unit read the phase first under R4 and enqueued the successor per R6. The Tech Research phase read by the scout at 17:03 (score 0, timer 01:03:01, ends about 18:06) was never worked: its 1803 unit sat in inbox and its window passed. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 8 days, event-bound. Unaddressed an eighth day: no Nov 8 events record mentions the Day 07 tile or a decoration choice, and the Nov 8 events hub reads contain no Halloween surface. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 8 days. Nov 8 survivors units (4 expired, 2 partial) recruited 5 named survivors with identities read live (JAVIER Lawyer, JAVIER Builder, ELINA Instructor, CHLOE Keeper, MICHAEL Hospital), gate line verified live; the 6th card (JAVIER Barn Keeper) stayed open unrecruited, and Quick Dispatch still never ran; consecutive non-done run now 41. Decision unchanged.
+- OD-20261101-01: age 7 days, unaddressed.
+- OD-20261101-02: age 7 days, unaddressed.
+- OD-20261101-03: age 7 days. The pr-catchall runs keep noting issue #154 as awaiting the Season Photo decision; the 200 red diamonds stay unclaimed.
+- OD-20261105-01: age 3 days. New evidence: the 1100 window Nov 8 had 3 merges (PR 449 at 11:20, PR 430 at 11:28, PR 458 at 11:38); PR 458 was named a cadence miss by the integrator's own 1130 run; the tool now flags both violations (records_batch 1.2.0, PR #420 merged Nov 7 21:48). PR #337 implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 0 days at filing (PR #425 log-gate policy amendment, owner-gated, escalated 2026-11-07 2245, still undecided Nov 8).
+- OD-20261108-02: age 0 days at filing (#415 live-checkout re-sync mechanism, surfaced by the tool-developer 1832 run; manual re-sync done Nov 8 18:42).
+- Two new owner-decision items from the Nov 8 window (OD-20261108-01, OD-20261108-02). All nine items are open; the seven carried items are open longer than 48 hours and are named in the Nov 8 retro chat report and Slack sync until decided.

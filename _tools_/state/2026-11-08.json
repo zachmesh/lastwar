@@ -1,0 +1,57 @@
+{
+ "radar": {
+  "status": "done",
+  "at": "2026-11-08T12:57:06-08:00",
+  "note": "Stack day: 4 tasks executed, nothing claimed, 10 rewards pending behind Claim All-only bar"
+ },
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-11-08T21:26:52-08:00",
+  "note": "Base Building phase unwinnable inside red lines, 0 of 30000, no building completion in phase"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-08T21:39:15-08:00",
+  "note": "Claimed 484 alliance gifts, Regular 451, Premium 33"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-08T22:09:11-08:00",
+  "note": "Help All twice, points 100 to 360 (plus 260)"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-08T21:33:28-08:00",
+  "note": "Claimed 10 mails, Alliance 5 plus Event 5"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-08T15:06:28-08:00",
+  "note": "Full hub sweep, no reward claimable"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-08T22:53:47-08:00",
+  "note": "7 finished tasks claimed; assists 5/5 at cap; no pending to deploy; 1 task plundered 10% by [BZGR]FredoSauce"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-08T22:55:52-08:00",
+  "note": "1 dig executed; stocks M1-M7 each -1, progress 8/15, 2 digs remain"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-08T22:44:17-08:00",
+  "note": "All 3 reset-day shop claims verified live as already claimed (ticker-1851 18:52); no owned weekly pass; no free Hot Deals pack"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-08T22:14:08-08:00",
+  "note": "Personal total 0 on new duel day (Radar Training), gap 3,600,000"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-08T22:18:00-08:00",
+  "note": "No ceremony waiting; EVENT 40 ending unrecorded, Issue #488"
+ }
+}
