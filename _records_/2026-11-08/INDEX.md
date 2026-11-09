@@ -3795,3 +3795,19 @@ of 2026-10-28.
   unexplained red dots 14 unchanged). No withdrawals. Pool:
   inbox 78, claimed 0, done 1278. Status: done. Full detail
   in queue-planning/1640-run.md.
+## 16:45 to about 17:12 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1645.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). Tools PR 473 (plan
+  branch-closed slots, Refs #465), opened mid-pass,
+  reviewed clean and squash-merged (bdd0c8a6, branch
+  deleted); merged main synced back to the local repo.
+  Records PR 460 re-verified CLEAN at the post-push tip
+  950c3147e and again against the new main, and PR 470
+  clean at 6a6607c5f; both await the 19:00 batch. Tools
+  PR 425 still owner-gated, unchanged, no owner
+  decision. Records PRs 351 and 301 conflicts carried
+  unchanged (single file action-log.jsonl), re-checked
+  against the new main. End-of-pass sweep: 5 open PRs,
+  all decided, no unprocessed PRs. Full detail in
+  pr-integration/1645-run.md.
