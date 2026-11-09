@@ -4852,3 +4852,11 @@ of 2026-10-28.
   retro. Issues #183, #168, #136 and #282 commented with the new
   evidence; no new Issue filed. Own PR 487 MERGED with 0 comments
   and 0 reviews. Full detail in knowledge-organization/2232-run.md.
+
+- Integrator addendum pr-integration-2026-11-08-2245 (PR 489).
+  PR 489 (knowledge-organizer 7-profile fold) opened
+  mid-pass at 22:52 PT, after the pass-start list; reviewed
+  in full and merged squash 469ee656b; local main synced
+  95012888d to 469ee656b; Slack DM sync sent for the merge
+  (message_ts 1794207522.117609). Run record stats
+  corrected. Full detail in pr-integration/2245-run.md.
