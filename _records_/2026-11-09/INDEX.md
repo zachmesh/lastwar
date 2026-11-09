@@ -606,3 +606,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   timer, hammer 1/4). No withdrawals. Pool inbox 69,
   claimed 1, done 1326. Status: done. Full detail in
   queue-planning/0240-run.md.
+
+## 02:45 to about 02:58 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0245
+  (NON-batch). Checker due no (next batch 03:00 PT);
+  knowledge PR 499 MERGED with squash (10 profiles,
+  main d72dc6f40 to 38e9cc3e, local main fast-forwarded);
+  records PRs 493 and 491 clean, awaiting the 03:00
+  batch (493 head moved to c0899925 during the pass,
+  re-probed clean); records PRs 478, 351, 301 still
+  conflicted on the single action-log file, re-check
+  comments posted; tools PR 425 owner-gated, clean
+  against the new main, OD-20261108-01 still open,
+  re-verification comment posted. VPS worktree conflict
+  left by the KO 0232 reconcile reset to the remote tip
+  after blob verification (nothing unpushed). Status:
+  done. Full detail in pr-integration/0245-run.md.
