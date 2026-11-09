@@ -3769,3 +3769,12 @@ of 2026-10-28.
   End-of-pass sweep: 5 open PRs, all decided, no
   unprocessed PRs. Full detail in
   pr-integration/1630-run.md.
+## 16:32 to about 17:00 - Tool development pass
+- Tool-developer pass tool-development-2026-11-08-1632. Own PR #425
+  owner-gated, no action owed. Fixed issue #465 (both defects):
+  plan now stages no branch-closed slot and sync/plan expiry drops
+  (never expires) a branch-closed inbox copy; implementing PR #473
+  opened (commit 49ce4575). Validation: py_compile plus 26 fixture
+  assertions 26/26 on two runs on isolated /tmp scratch pools and
+  git fixture repos only. Issue #465 commented. Full detail in
+  tool-development/1632-run.md.
