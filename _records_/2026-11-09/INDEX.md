@@ -407,3 +407,14 @@ detail in radar-tasks/0159-queue-run.md.
   re-verified (OD-20261108-01 open). No Slack sync by this run
   (merge reported in the run result for resolution delivery).
   Full detail in pr-integration/0200-run.md.
+
+## 02:15 to 02:22 — PR integration pass
+
+- Integrator pr-integration-2026-11-09-0215 (NON-batch).
+  Checker due no (next batch 03:00 PT); no merges, no comments
+  (main unmoved at d72dc6f40 since the 0200 pass, all heads
+  unchanged); records PRs 493 and 491 clean against main,
+  awaiting the 03:00 batch; records PRs 478, 351, 301 still
+  conflicted on the single action-log file; tools PR 425
+  owner-gated, clean, re-verified (OD-20261108-01 open).
+  Full detail in pr-integration/0215-run.md.
