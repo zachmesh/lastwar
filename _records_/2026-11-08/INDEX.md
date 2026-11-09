@@ -4821,3 +4821,34 @@ of 2026-10-28.
   merge, so no log lines owed at merge. Silent run: no
   Slack DM sync, no chat report. Full detail in
   pr-integration/2245-run.md.
+## 22:32 to about 23:00 - Knowledge organization pass
+
+- Knowledge organization pass knowledge-organization-2026-11-08-2232.
+  Eight substantive records folded into seven profiles as one commit
+  06dfc41b22 on PR 489 (OPEN, MERGEABLE, CLEAN): ticker-2119
+  arms-race 2137 (Base Building phase verdict, score 0, tier-3
+  unreachable inside the red lines, first executed unit of the phase
+  and of the day, R4 judgment 3.5h into the phase) into arms-race
+  1.61.0; ticker-2119 mail 2132 (Alliance 5 + Event 5 mails claimed
+  in full, 10 total, "Unclaimed" in a title does not mean
+  notification-only) into mail-rewards 1.26.0; ticker-2119 gifts
+  2138 (448 Regular + 33 Premium + 3 Regular re-check, 484 total,
+  Gift Level 28 progress 195,025,360, three more non-reconciling
+  deltas) into alliance-gifts 1.40.0; ticker-2201 help 2214 (Help
+  All twice, points 100/1,000 to 360/1,000, header counter lag
+  resolved, list does scroll) into alliance-help 1.30.0; ticker-2201
+  duel 2218 (Star Ceremony EVENT 40 ending unrecorded, Issue #488)
+  and 2220 (personal duel total 0 on the new Radar Training day,
+  read twice, alliance 261,068,886 vs 380,634,584, gap 3,600,000)
+  into alliance-duel 1.31.0; ticker-2201 train 2211 (checked only,
+  both preparation signals absent) into alliance-train 1.33.0;
+  ticker-2201 survivors 2227 (gate line unverified, Area No.168
+  dialog is not a recruit, 0 recruits) into survivor-intake 1.39.0.
+  CORRECTIONS: the Help list DOES scroll (superseding the 1413
+  claim) and the Help header counter does not update inside one
+  open session (resolving the 1413 0/1,000 anomaly). The 1441
+  star-ceremony record was never folded by any earlier run; its
+  state is carried here via the 2218 citation and flagged for the
+  retro. Issues #183, #168, #136 and #282 commented with the new
+  evidence; no new Issue filed. Own PR 487 MERGED with 0 comments
+  and 0 reviews. Full detail in knowledge-organization/2232-run.md.
