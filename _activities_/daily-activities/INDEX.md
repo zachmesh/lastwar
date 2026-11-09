@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-08T02:42:42Z
+modified: 2026-11-09T01:40:00Z
 level: L1
-version: 1.18.0
+version: 1.19.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -19,6 +19,7 @@ grounded_in:
   - source: owner refinement on 2026-10-26 - 27 minutes apart, the final spacing
   - source: pre-reset zero sweep execution record 2026-11-01 1757 queue run (first zero sweep)
   - source: pre-reset zero sweep execution record 2026-11-07 1824 queue run (first pass, partial, first 17:30 sweep to run since 2026-11-02; record commit 840094b6ad on records/2026-11-07)
+  - source: pre-reset zero sweep execution record 2026-11-08 1712 queue run (first pass, partial, 11 lines not at zero, 4 at zero, 5 unreadable, duel unmeasured, crystal and glittering not located, server disconnect with clean relaunch, power step-down 641,100 unexplained; record commit 9978e09a8 on records/2026-11-08)
 ---
 
 # Routine activities
@@ -300,3 +301,106 @@ claims cited below were read in this pass's passes unit
 - Count: 23 lines walked - 1 at zero (VIP login chest, claimed live in this pass's VIP unit for plus 60 points), the rest not at zero or unreadable. The sweep itself enqueued two fix-ups: crystal-shop-2026-11-08-0208 (line 22, Crystal not located, age 13 days from 2026-10-25) and glittering-market-2026-11-08-0208 (line 23, Glittering Market not located, age 7 days from 2026-10-31), both priority 1, expiring at the 19:00 reset. All other not-at-zero lines already had an eligible unit in inbox, so no duplicate was enqueued; those units are named per line in the sweep record.
 - Gaps the sweep surfaces: donations line 17 and trucks line 18 both still unverified with no live count read today (donations: 0203 and 0603 Mac offline, 1003 capture failed, 1403 navigation detour, count never read; trucks: 0257, 0657 and 1057 all expired unexecuted) - and both rule R3 checkpoints (six-hour and two-hour) passed with the counts still unverified; duel line 21 unverified with no duel total read today and duel-score at 0 done units ever; passes, events, radar, secrets and treasures lines unreadable today after the morning outage.
 - Note for the next ticks: the 17:30 sweep pair of 2026-11-03 through 2026-11-06 all expired unexecuted, and this is the first 17:30 sweep to run since 2026-11-02 - the fix-ups above and the inbox units named per line must be picked up by the 18:34 tick or the 18:30 final sweep, or they meet the same fate at the reset.
+
+## Pre-reset zero sweep - first pass, 2026-11-08 1712 (partial)
+
+- Unit zero-sweep-2026-11-08-1630 by ticker-1646, session cc-142,
+  window mode 642x951 after a relaunch. Status partial,
+  verification-only: no bubble was collected, no truck dispatched
+  or plundered, no donation made, no chest claimed, no secret task
+  tapped, no pass button tapped inside this unit. Evidence in
+  `_records_/2026-11-08/daily-activities/1712-queue-run.md` (commit
+  9978e09a8 on records/2026-11-08). Line statuses below cite the
+  live base read of this unit plus the same-day execution records
+  named per line.
+- Live reads in this unit: base screen about 17:12 local, after a
+  server disconnect and relaunch (see below): power reads
+  149,209,253 as displayed, against 149,850,353 at the 16:58 and
+  16:12 reads - a 641,100 step down with no fight, dispatch or
+  claim in between in this pass. Recorded as displayed, cause
+  unexplained, not asserted as a loss; the next unit that reads
+  power should confirm whether the figure holds. Food 490.8M,
+  iron 813.3M, coin 12.3M; second row 25.0M, 922.2K; diamonds
+  13.22K; cart 4,417; stamina 120. Season II 7d 00:50:41. Wanted
+  Boss badge 1, timer 00:00:57 (was 00:00:32 at 16:58 - a new
+  cycle, recorded as displayed). Harvest bubbles still standing
+  over the central building cluster at 17:12 - gold, food and
+  iron bubbles with values in the hundreds of K. Resource totals
+  unchanged from 16:58. Badges about 17:12: Events icon red x2,
+  Mail icon red dot, Inventory icon red dot, Alliance icon red
+  dot, radio badge 4, white truck red dot 1, survivor portrait
+  badge 10, megaphone badge 4. No train icon in the left column;
+  no "Boarding closes in" banner under the resource bar - the
+  banner area shows the "Upgrade Builder's Hut to Lv.26 [0/1]"
+  quest line and a Breaking News line instead. Fourteenth
+  same-day no-train confirmation (thirteenth in this pass's scout
+  unit).
+- Server disconnect, recovery observed live: at about 17:06 the
+  game showed "Server disconnected. Please restart the game."
+  with a Confirm button. The Confirm tap closed the app (target
+  app exited); the app was relaunched with open_app and returned
+  to the base screen with state intact - no login demanded, no
+  different-device dialog. Same class as the earlier Esc/Return
+  crashes: state is server-side. The server-disconnect Confirm
+  tap and the app relaunch were recovery only. No diamonds or
+  money spent, no paid button tapped, no research or building
+  started, no player attacked, no assemble or teleport.
+- Count: 23 lines walked - 11 not at zero, 4 at zero, 5
+  unreadable, duel unmeasured, crystal and glittering not
+  located. Lines not at zero: food, iron, coin and EXP bubbles
+  (standing 17:12, fix-up harvest-2026-11-08-1803 already in
+  inbox); VIP Daily Freebie (no vip-rewards record exists today
+  at all, vip-2026-11-07-1900 stalled in inbox, priority 1,
+  about 22 hours old; the 0512 observation read the Freebie
+  still claimable at about 05:11; fix-up vip-2026-11-08-1800
+  already in inbox); VIP login chest (never attempted today,
+  same fix-up); daily activity chests (1628 record, activity 70,
+  80-point chest 10 points short, tab badge 1 remaining; fix-up
+  daily-missions-2026-11-08-1800 already in inbox); mail, six
+  categories (Mail badge red dot at 17:12; last mail unit 1423;
+  fix-up mail-2026-11-08-1830 already in inbox); alliance gifts
+  (the 1406 unit claimed both tabs in full, but the 1615 scout
+  read the Alliance Gifts panel dot again at 16:14, so new gifts
+  have arrived since; fix-up gifts-2026-11-08-1830 already in
+  inbox); alliance donations (no closing count exists today;
+  0937 scout read Donation Count 2/30, and the count replenishes
+  during the day; donations-2026-11-08-1803 already in inbox);
+  trucks dispatch 5 of 5 and plunder 4 of 4 (no live
+  trade-counter read exists today; the 0415 "Plunder Others 0/5"
+  note is not a trade-counter close; trucks-2026-11-08-1857
+  already in inbox). Lines at zero: shop Daily Pickup and Free
+  Supply, and pass daily pickups (both per the 1455 passes unit
+  read); alliance train per service (no train in preparation,
+  fourteenth same-day confirmation; train-2026-11-08-1830 still
+  in inbox for the evening check); radar by duel posture (stack
+  posture per the 1355 record, stack locked until the release
+  day; a stack posture is not a miss; radar-2026-11-08-1803
+  already in inbox). Lines unreadable: titanium bubbles (no
+  full-base pan in this unit), armed truck (no fully-loaded
+  notice or timer read), drone components (no drone-component
+  zero read taken; fix-up passes-2026-11-08-1857 already in
+  inbox), upgrade ore and screws (no reward popup transcribed;
+  no dedicated fix-up type). Duel line 21 unverified (1441
+  record: total unmeasured, verified no for that line; fix-ups
+  duel-score-2026-11-08-1830 and star-ceremony-2026-11-08-1830
+  already in inbox). Crystal line 22 not located, age 14 days
+  from 2026-10-25; Glittering Market line 23 not located, age 8
+  days from 2026-10-31 (rule R5 owner-named items, no standing
+  unit in inbox, no duplicate enqueued by this sweep).
+- Fix-up units enqueued by this sweep: none. Every not-at-zero
+  line already had a fix-up unit in inbox at sweep time, so
+  enqueuing more would have duplicated units. The risk this
+  sweep surfaces is the same as the 2026-11-01 final sweep:
+  those fix-up units were still unrun at about 17:10, about 50
+  minutes before the 18:00 reset, so several lines are likely to
+  expire unclaimed at the reset. That is a scheduling shortfall,
+  not a sweep finding to fix by duplication. The second sweep,
+  zero-sweep-2026-11-08-1730, is still in inbox and repeats this
+  walk before the reset.
+- Gaps the sweep surfaces: the VIP lines 12-13 were never
+  attempted this trade day (no vip-rewards record today, the
+  1900 unit stalled about 22 hours); the donations line 17 and
+  trucks line 18 both still unverified with no live count read
+  today; the duel line 21 still unmeasured. None is filed as a
+  new Issue here - the fix-ups are in flight and the second
+  sweep re-walks the list; the retro judges any recurrence.
