@@ -2142,3 +2142,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Overview stay unmeasured and the successor must re-ground
   the entry fresh (R2). Full detail in
   decoration-gallery-overview-ur/1158-queue-run.md.
+- Planner pass queue-planning-2026-11-09-1140. Plan staged
+  5 units (already_present 71, skipped_done_current 1,
+  reaped 0, expired 0, 1 branch-closed slot skipped,
+  0 stale inbox copies dropped) - the next 12 hours
+  staged through about 23:40 local. Pre-reset
+  sweep production skipped (not the 17:00 run); pair
+  already complete (seq 1 at 16:30, seq 2 at 17:30).
+  Scout diff on the Nov 9 observation (31 items, md5
+  d5a825b5, survey section appended after the 1040 run)
+  applied with 0 enqueued and 17 already-queued;
+  promotion proposals 8. The body-literal apply orphaned
+  17 units into a stray repo-root inbox (Issue #510, sixth
+  reproduction); the files were moved aside, nothing
+  entered the live pool, duplicate Issue #524 filed and
+  closed. No withdrawals. Pool inbox 79, claimed 1,
+  done 1356. Status: done. Full detail in
+  queue-planning/1140-run.md.
