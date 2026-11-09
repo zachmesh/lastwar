@@ -21,7 +21,7 @@ standard library and locate their data relative to their script or repository.
 | [retro_report.py](retro_report.py) | Aggregate queue results into review metrics | `../_queue_/` and `../_records_/retro/` |
 | [log_append.py](log_append.py) | Newline-safe append, check and repair for JSONL logs | `_logs_/repo-actions/action-log.jsonl` |
 | [live_checkout_check.py](live_checkout_check.py) | Check the live checkout's tools against main's `_tools_/` code tree and report drift loudly (issue #415); exit 0 in sync, 1 drifted, 2 cannot run | `~/workspace/lastwar` (live checkout) |
-| [branch_guard.py](branch_guard.py) | Verify a records-branch tip is a fast-forward over the previous tip before a reconcile merge or push (issue #485); exit 0 fast-forward, 1 not, 2 cannot verify (a missing parent object is unverifiable, never "unrelated") | `refs/remotes/branch-guard/` |
+| [branch_guard.py](branch_guard.py) | Verify a records-branch tip is a fast-forward over the previous tip before a reconcile merge or push (issue #485); sweep the merged tree for unresolved conflict-marker lines before the push (issue #441) | `refs/remotes/branch-guard/` |
 | [tapcal.py](tapcal.py) | Score tap logs (first-try rate, miss vectors), calibrate a session offset from anchor observations, compensate aim points, keep per-activity visual anchors, and decide one step of the tap-verify loop for a single target (issue #123); tap and anchor records may name the window geometry so a fullscreen-only shift is never averaged away (issue #475) | executor tap logs and anchor stores |
 
 For example, run `python3 _tools_/regulars.py todo --json` or
