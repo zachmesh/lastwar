@@ -4922,4 +4922,5 @@ of 2026-10-28.
   filed this unit: food/iron HUD totals rose (+2.8M each)
   since the 19:50 close with no harvest record between, the
   second occurrence of the pattern. Full detail in
-  resource-collection/2310-queue-run.md.
+  resource-collection/2310-queue-run.md.- Integrator pass pr-integration-2026-11-08-2315.
+  pr-integration/2315-run.md.
