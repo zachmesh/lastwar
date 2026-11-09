@@ -2039,3 +2039,22 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   owner-gated, re-verified CLEAN, OD-20261108-01 still
   open, no new escalation. Status: done. Full detail in
   pr-integration/1030-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-012,
+  done: Survey Center explored read-only. One live survey,
+  "Season 11: Polar World Experience Survey"; Proceed opens a
+  SurveyMonkey link in the owner's Chrome (tab left open, nothing
+  answered - the survey asks the owner's own opinion). Instructions
+  read in full: one submission per survey, resume via "Continue",
+  timed surveys vanish at countdown end, untimed vanish 3 hours
+  after completion, unclaimed rewards are mailed. Reward contents
+  unmeasured - revealed only by completing the survey, so the
+  candidate stays exploring and Issue #506 carries the findings.
+  Full detail in survey-center/1117-queue-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-013,
+  done: duplicate of unit 012 - the "Survey Center tab"
+  candidate is the same Events hub tab unit 012 already opened
+  and learned, so no game session was opened for this unit. The
+  duplicate is recorded in Issue #506. Full detail in
+  survey-center-tab/1120-queue-run.md.

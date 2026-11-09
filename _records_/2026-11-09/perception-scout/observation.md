@@ -446,3 +446,50 @@ upgrade-builders-hut-to/0848-queue-run.md. Full unit record there.
 
 unmatched_labels:
   - none (Builders Hut quest explored this pass; the 0606 unmatched list is now fully resolved)
+
+## Exploration survey-center, unit ticker-1104, about 11:09-11:17 local
+
+Read-only exploration of the Survey Center candidate (unit
+scout-scout-discovery-2026-11-09-012). Full unit record at
+`survey-center/1117-queue-run.md`. Candidate tracked in Issue
+#506, commented with these findings.
+
+### Events hub tab bar, read live about 11:10 local
+
+- Seven tabs, scrolled end to end: The Age of Oil, Arms Race,
+  Winter Battlefield, Desert Battlefield, Wanted Boss (red dot),
+  Survey Center (red dot badge 1), Community. No Zombie
+  Invasion tab - event still ended.
+
+### Survey Center page, read live about 11:11 local
+
+- Title "Survey Center", subtitle "We'd love to hear from you!".
+- One survey card, red dot: "Season 11: Polar World /
+  Experience Survey", Proceed button. No countdown on the card.
+- Instructions (i button, read in full): surveys appear in
+  Special Ops when available; Proceed opens the survey through
+  a provided link, then return to claim rewards; exiting midway
+  is fine, resume with "Continue"; each survey submittable once,
+  a revisit shows completed; timed surveys disappear at their
+  countdown end; surveys without a countdown disappear 3 hours
+  after completion; an unclaimed reward is sent via mail before
+  the survey disappears.
+- Proceed opens an external SurveyMonkey link in the owner's
+  Chrome (Zhen profile): surveymonkey.com/r/LW260921S2, with
+  openid, sid 2110, vip 13, lang en. First page: "Dear
+  Commanders, Season II: Polar World has ended. How was your
+  experience?" Q1 (required) rates the Season gameplay 1-5 plus
+  a limited-participation option; Q2 is a 0-10 recommend score.
+  Nothing answered or submitted - answering is the owner's own
+  opinion. The Chrome tab was left open for the owner.
+- Reward contents are UNMEASURED: no reward is named on the
+  card, in the Instructions, or on the survey first page; it is
+  revealed only by completing the survey. Cost is free, no
+  scoring - a feedback survey paying a completion reward.
+- Base screen on return: coin 46.2M, power 149,217,331.
+
+### Red dot accounting (this unit)
+
+- Seen 1 (Survey Center tab badge), explained 1 (the open
+  Season 11 survey). Unexplained 0. Unknown items 0 - Survey
+  Center is now learned.
