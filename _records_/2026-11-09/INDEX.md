@@ -1109,7 +1109,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   open, no owner answer, no new comment. Status: done.
   Full detail in pr-integration/0515-run.md.
 
-## 05:30 to about 05:36 — PR integration pass
+## 05:30 to about 05:33 — PR integration pass
 
 - Integrator pass pr-integration-2026-11-09-0530
   (NON-BATCH). Checker due no - outside every batch
