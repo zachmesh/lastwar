@@ -31,12 +31,17 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-08T14:56:44-08:00",
-  "note": "Mega Deployed 8 tasks, Reward Recovery 2026-11-6 claimed"
+  "at": "2026-11-08T19:07:44-08:00",
+  "note": "Claimed 8 finished tasks, Mega Deployed 8 pending, ally assists 5/5"
  },
  "treasures": {
   "status": "done",
   "at": "2026-11-08T14:59:35-08:00",
   "note": "One dig executed, chest progress 7/15, 2 digs remain by stock"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-08T18:58:15-08:00",
+  "note": "Hot Deals free pack, Free Supply auto-claim, Monthly Pass daily gift claimed for new reset day; no owned weekly pass"
  }
 }

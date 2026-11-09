@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-08T14:55:53Z
+modified: 2026-11-09T03:23:53Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -4115,3 +4115,47 @@ of 2026-10-28.
   Fresh records PR 478 opened for the post-1900 appends
   on records/2026-11-07.
   Full detail in pr-integration/1900-run.md.
+- Passes unit passes-2026-11-08-1457 (done): shop claims for the new
+  reset day, run late (14:57 slot, expiry 18:57, finished 18:58).
+  Hot Deals free pack claimed - Drone Great Value Pack (Drone Parts
+  x20, Battle Data 10K x4, Skill Chip Chest (SR) x2); Weekly Pass
+  Free Supply auto-claimed (Violet's Gift: chest x1, ruby x10);
+  Super Monthly Pass Daily Gift claimed (gold ticket x2, red diamond
+  100, stamina 50 x2, iron 200, 5m speedup x60; Days Left 13,
+  Rewards Left 13). Weekly Pass: no owned pass remains - S2 Drone
+  Components and S1 Drone Parts both show Get Now $4.99 (unowned
+  offers, not tapped); Legendary Take All $19.99 and Monthly Pass
+  Extension $24.99 untouched. Weekly Deal is paid-only. Reset-time
+  note: the Weekly Pass page reads "reset at 18:00:00" - the daily
+  reset is 18:00 local since DST ended 2026-11-01 (02:00 UTC); the
+  19:00 figure in older records is PDT-era. Full detail in
+  shop-claims/1858-queue-run.md.
+
+- Secret missions unit secrets-2026-11-08-1457 (done): claimed the
+  8 finished tasks deployed at 15:00 (all PERFECT; claim panel
+  showed 4 ally helpers, liked via Like All), Mega Deployed 8
+  pending tasks (UR Only off, all checked; 2x SSR Search 1h, Train
+  Refugees 1h, SSR Protect 1h, 4x 30-min retrieves; verified running
+  with countdowns, badge gone), ally assists 5/5 (all [AP3x]namolla
+  SSR; Mystery Supply Box x15, Hero EXP 1,238.5K, Skill Medal x174,
+  Refined Iron Module x29, Iron 195.0K, Food 195.0K, Upgrade Ore
+  x48, Resource Chest x15). Reward Recovery 2026-11-6 already
+  CLAIMED, no new record. Duel day 1 Radar Training - secret tasks
+  do not score today, so no Mega Refresh. The 8-task claim paid no
+  itemized reward list (panel showed helpers only); the four visible
+  cards' displayed rewards are recorded, not a received total.
+  Duration 454s. Full detail in secret-missions/1907-queue-run.md.
+
+- Events unit events-2026-11-08-1457 (partial): NEW EVENT "The Age
+  of Oil" found in the Events hub (intro cutscene, app reloaded to
+  the hub on its own; 4-stage track, 6d 22:48 left, Achievements
+  8/16). Unlock Tech chest claimed (coin chest x3, red diamond 50,
+  Oil 3.0K x6, 5m speedup x2); Base Expansion II chest (5090/500)
+  NOT claimed - 5 attempts, 4 methods, all no-change (Issue #477
+  filed).
+  Arms Race Base Building 0 points, nothing claimable; Desert Storm
+  enlisted for Squad [A], Battle Day 2026-11-13 03:00-03:30, nothing
+  to claim. Winter Battlefield, Level Swap, Wanted Boss, Community
+  unswept this unit. Power 149,209,253 at 18:52 to 149,109,253 at
+  19:08, 100,000 step-down unexplained. Full detail in
+  event-claims/1914-queue-run.md.
