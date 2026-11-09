@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-09T12:32:17Z
-version: 1.41.0
+modified: 2026-11-09T17:32:17Z
+version: 1.42.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -42,6 +42,7 @@ grounded_in:
   - source: ticker-2201 survivor-intake execution record 2026-11-08 2227 queue run (partial, gate line unverified, lone figure tap opened an Area No.168 dialog, no recruit, 0 recruits; record commit 8960535c on records/2026-11-08)
   - source: ticker-0019 survivor-intake execution record 2026-11-09 0024 queue run (partial, gate line unverified on fresh grounding, no question-mark or exclamation bubbles in two pans and two enlarged crops, 0 recruits, bubble-less tap method exhausted; record commit f99faa9744 on records/2026-11-09)
   - source: ticker-0404 survivor-intake execution record 2026-11-09 0409 queue run (done, one gate visitor processed, Friendly Visitor notifications dialog, Cancel, gate line clear, Gear Factory Lv.20 building bubble; record commit 9fdcc4c9ee on records/2026-11-09)
+  - source: ticker-0904 survivor-intake execution record 2026-11-09 0926 queue run (partial, gate line of 2 verified live, one intake confirmed by smiley bubble, second survivor unverified, Quick Dispatch not run, gate panning and chat-bar look-alike lessons; record commit 3c788a4a3 on records/2026-11-09)
 ---
 
 
@@ -65,12 +66,14 @@ Measured on 2026-10-25.
 - Tap a survivor figure to open their card or dialog. Tapping the
   bubble alone can miss; the figure is the reliable target, and
   visual grounding found them reliably when taps drifted.
+- The gate sits at the very bottom edge of the base view behind the chat bar; the camera must be panned down before the line is visible - a tap on empty ground near the gate pans the camera (2026-11-09 0926 unit: two taps moved the camera and brought a 2-survivor line into view).
 - Look-alikes measured 2026-11-01 (0913 unit): a centre-right
   circular icon is a pet icon, not a question-mark bubble -
   grounding had misread it as one - and the left-edge green
   0 degree button is a temperature control, not a smiley
   bubble. An icon read alone never verifies a survivor; the
   figure is the target.
+- Look-alikes measured 2026-11-09 (0926 unit): two white question-mark bubbles at the bottom of the base screen belong to the chat bar, not to survivors - tapping them opened Chat, no message sent. A visual-grounding point for a survivor figure can land on the Mail button instead and open mail (the Season Closed system letter, 2026-11-08 17:00:05, Season II ended, season buildings removed, skill points returned - mail work, not survivors). A blue-helmeted figure near the World button is not a survivor (tap, no change). A tap on a question-mark bubble alone produces no change, matching the standing note that the figure is the reliable target.
 - A bubble with an exclamation mark is a visitor, not a recruit -
   one opened a Friendly Visitor dialog asking to enable
   notifications. Cancel left it untouched; nothing was enabled.
@@ -86,7 +89,7 @@ Measured on 2026-10-25.
 - A processed survivor's bubble turns into a smiley face and they
   walk to their post. The line is clear when no question mark
   bubbles remain at the gate.
-- Figure taps can process a survivor without opening a card - measured 2026-11-07 (2000 unit): four question-mark survivors grounded at the gate, a tap on the first figure turned the "?" bubbles into yellow smiley faces and the figures walked in, with no New Survivor Incoming card opening and no name, role or trait read for any survivor. A smiley change is processed state, not a recruit identity; do not claim a recruit was taken in from the smiley alone.
+- Figure taps can process a survivor without opening a card - measured 2026-11-07 (2000 unit): four question-mark survivors grounded at the gate, a tap on the first figure turned the "?" bubbles into yellow smiley faces and the figures walked in, with no New Survivor Incoming card opening and no name, role or trait read for any survivor. A smiley change is processed state, not a recruit identity; do not claim a recruit was taken in from the smiley alone. (2026-11-09 0926 re-confirmation: a tap on the right-hand figure of a 2-survivor line cleared both '?' bubbles and raised one yellow smiley-face bubble at the gate - one intake confirmed by the smiley, but no Recruit card, name or role was read, so the intake is recorded unverified in detail; the second survivor's state was unverified at unit close - only one smiley bubble visible - so the next unit re-checks the gate first.)
 
 ## Cadence
 
@@ -968,6 +971,7 @@ Measured on 2026-10-25.
   buildings, not a gate line, in the 2112 current view -
   the pointer is qualified, not erased, and the next unit
   grounds fresh rather than navigating to it.
+- Quick Dispatch after intake (2026-11-09 0926): Quick Dispatch did NOT run in the 0926 unit - the starved subtask from the 2026-10-31 retro note - and is the first action of the next survivors unit per rule R7, in the Iron Mine panel or whichever building panel the newcomer belongs to. The second survivor of the 0926 line is unverified at unit close; the next unit re-checks the gate first, then runs Quick Dispatch, then intakes.
 
 ## Changelog
 
@@ -982,6 +986,8 @@ Measured on 2026-10-25.
 - 1.40.0 (2026-11-09): 0024 survivors unit folded (partial, gate line unverified on fresh grounding, no question-mark or exclamation bubbles in two pans and two enlarged crops of the gate area, 0 recruits, Quick Dispatch not run; figures seen carry no bubbles - red-hat figure on the road, large blonde zombie woman with a smaller blonde figure beside her (the 2227 Area No.168 figure), grey dog-like animal, circular pet badge with a brown animal; no figure tapped, the bubble-less-figure tap method is exhausted after the 2227 area dialog and ends per R2; the record's "22 of 22 plus the 2227 unit and this one" framing is the Oct 28-31 window figure, not a recount, the count question stays open on Issue #168; re-ground from the gate next unit).
 
 - 1.41.0 (2026-11-09): 0409 survivors unit folded (done, one gate visitor processed - Friendly Visitor notifications dialog with exact text, Cancel at (334,762), nothing enabled; bubble read as a question mark but the dialog proves a visitor, the mark may have been an exclamation misread small; gate line verified clear on the closing read; Gear Factory Lv.20 building bubble at (768,275)/(790,335) is a building bubble not a survivor, R2 ends after the one no-change tap, empty-road deselect at (480,700); no recruit, no card, no Quick Dispatch gap under the 1644 refinement; truck dialog left untouched as truck work; visitors 1, recruits 0).
+
+- 1.42.0 (2026-11-09): 0926 survivors unit folded (partial, gate line of 2 verified live after panning the camera down to the bottom-edge gate, right-hand figure tap at about (568,948) cleared both '?' bubbles and raised one yellow smiley-face bubble - one intake confirmed by the smiley, no Recruit card, name or role read so the intake is unverified in detail, second survivor unverified at unit close; Quick Dispatch NOT run, first action of the next unit per rule R7; tap-method blocker category c - grounding point landed on Mail and opened the Season Closed letter (Season II ended 2026-11-08 17:00:05, season buildings removed, skill points returned), chat-bar '?' bubbles opened Chat, blue-helmeted figure near World no change, '?' bubble tap alone no change; entry HUD food 544.5M, iron 871.8M, coin 46.2M, diamonds 13.22K, power 149,217,331, stamina 92/93, VIP Lv.30; unit cap ran out mid-work).
 
 - 1.39.0 (2026-11-08): 2227 survivors unit folded (partial, gate line unverified, lone figure with no bubble tapped into an "Area No.168" area-info dialog, not a recruit card, 0 recruits, Quick Dispatch not run; the record's "22 of 22" matches the Oct 28-31 metadata window figure and is not a recount, the standing 23rd-consecutive-partial count at 2052 is also not recounted, the count question stays open on Issue #168; re-ground from the gate next unit).
 
@@ -1528,3 +1534,16 @@ Measured on 2026-10-25.
 - No survivor was recruited and no recruit card opened; the one figure processed was a dialog visitor with no building post, so no Quick Dispatch gap arises from this unit under the 1644 refinement (Quick Dispatch follows an intake with posts, not a dialog visitor). The truck dialog on screen ("The truck is full, waiting for your command", later "Supplies are fully loaded, please claim them") is truck work, not this unit's type, and was left untouched.
 - Closing reads: gate line clear as observed in this view - no question-mark bubbles at the gate on the closing screenshot, and the one figure seen there this unit was processed. Visitors processed 1, recruits 0.
 - Result stats: target 1, achieved 1, resources_gained none, costs 4m_wall_no_stamina, verified yes, recruits 0, gate_line_verified true, device_takeovers 0, visitors_processed 1.
+
+## What the 2026-11-09 0926 unit added - gate line of 2 verified, one intake by smiley bubble, Quick Dispatch still not run, partial
+
+- Unit survivors-2026-11-09-0603 by ticker-0904, about 09:05 to 09:26 local, status partial - the 15 minute unit cap ran out mid-work. Evidence in `_records_/2026-11-09/survivor-intake/0926-queue-run.md` (commit 3c788a4a3 on records/2026-11-09). Tracker untouched for partial, per the queue rules.
+- Entry snapshot, read live: food 544.5M, iron 871.8M, coin 46.2M, diamonds 13.22K, power 149,217,331, stamina 92/93, VIP Lv.30. The game opened on the world map Quick Execute screen; returned to base with the home button. Total Power re-read 149,217,331 matches the 0744 read exactly and sits 100,000 above the 08:12-08:32 reads of 149,117,331 - the fluctuation is recorded as read, cause unestablished.
+- Gate located fresh: the walled entrance at the bottom edge of the base view, signed Zombies, with a yellow megaphone bubble above it. Panning the base view down (two taps that moved the camera) brought the gate line into view. The gate sits at the very bottom edge of the base view behind the chat bar; the camera must be panned down before the line is visible, and a tap on empty ground near the gate pans the camera.
+- Line verified live: TWO survivors standing at the gate, each with a white question-mark bubble, figures visible in a zoomed crop. Tapped the right-hand survivor figure (grounded from the crop, about normalized 568,948). The view panned and both question-mark bubbles cleared; a yellow smiley-face bubble now sits at the gate with a survivor figure below it - the processed-survivor sign from the activity metadata. One intake is therefore confirmed by the smiley bubble, but no Recruit card, name or role was read on screen, so the intake is recorded unverified in detail.
+- Second survivor: state unverified at unit close - only one smiley bubble is visible and the second figure could not be re-verified before the unit cap. It may have walked to its post already or may still be waiting; the next survivors unit re-checks the gate first.
+- Quick Dispatch did NOT run - the starved subtask from the 2026-10-31 retro note. It is the first action of the next survivors unit (rule R7), in the Iron Mine panel or whichever building panel the newcomer belongs to.
+- Wrong turns inside the unit (tap-method cost, blocker category c): a visual-grounding point for a survivor figure landed on the Mail button instead and opened the Season Closed system letter (2026-11-08 17:00:05, Season II ended, season buildings removed, skill points returned) - nothing was claimed, the Claim button belongs to the mail unit, backed out through the mail list; a tap on two white question-mark bubbles at the bottom of the base screen opened Chat instead - those marks belong to the chat bar, not to survivors, no message was sent, backed out with the back arrow; a tap on a blue-helmeted figure near the World button produced no change; a tap on a question-mark bubble alone produced no change, matching the activity note that the figure is the reliable target. These three mis-taps plus the panning consumed most of the unit budget before the line was verified.
+- Season Closed letter (mail work, not this unit's): the letter corroborates the Season II end already resolved by the 0812 scout unit - Season II ended 2026-11-08 17:00:05, season buildings removed, skill points returned.
+- No diamonds or money spent, no price tag or paid button tapped, no Delete All, no Claim All in mail, no assembly or teleport.
+- Result: partial - gate line verified, one intake confirmed by smiley bubble, second survivor unverified, Quick Dispatch not run; unit cap ran out mid-work.
