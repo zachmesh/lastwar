@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T07:32:17Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.23.0
+version: 1.24.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-1434 secret-missions execution record 2026-11-08 1456 queue run (done, Mega Deploy of all 8 pending tasks verified running, Reward Recovery 2026-11-6 claimed, ally assists 0/5 carried); record commit dfd3c87f9 on records/2026-11-08
   - source: ticker-1851 secret-missions execution record 2026-11-08 1907 queue run (done, 8 finished tasks claimed, 8 pending Mega Deployed, ally assists 5/5, new duel week Radar Training day 1, Ally Tasks badge counts remaining assists; record commit cff344153 on records/2026-11-08)
   - source: ticker-2235 secret-missions execution record 2026-11-08 2253 queue run (done, 7 finished tasks claimed, one task's rewards plundered at 10% by [BZGR]FredoSauce, remaining 90% unverified; record commit 0c9686b4f on records/2026-11-08)
+  - source: ticker-0204 secret-missions execution record 2026-11-09 0221 queue run (done, 8 resolved cards same as 2253, assists 5/5 at cap, recovery claimed, post icon now at (55,657); record commit facef628c on records/2026-11-09)
 ---
 
 
@@ -1391,3 +1392,14 @@ secrets-2026-10-31-2257, status partial).
 - Entry note: the circular left-column icon at norm (55,573) opened the Trucks screen (the rotating shortcut set), not the post. The post opened from the car icon at norm (55,636). Verify the SECRET COMMAND POST title before tapping further, as the metadata warns.
 - Red lines held: no diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 3, achieved 3 (claim 7 finished, assists 5/5 verified at cap, no pending to deploy), resources_gained (displayed rewards above, received total not itemized), costs 9min-no-items-spent, verified yes, device_takeovers 0, follow_up plunder-10pct-mechanic.
+
+## What the 2026-11-09 0221 unit added - 8 resolved cards unchanged, assists 5/5 at cap, recovery claimed, post icon rotated to (55,657)
+
+- Unit secrets-2026-11-08-2257 by ticker-0204, about 02:19 to 02:21 local, status done (checked only; nothing to claim, nothing pending to deploy). Evidence in `_records_/2026-11-09/secret-missions/0221-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-211. No different-device dialog appeared.
+- Entry: the left-column vehicle icon at norm 55,657 opened SECRET COMMAND POST at once; the title was verified before any further tap. The column set has rotated since the 2253 unit: the post icon now sits at 657, not 636. (The 2253 fold's entry note - the circular icon at (55,573) opens Trucks, the post opened from the car icon at (55,636) - is superseded for this rotation; the rotating shortcut set means the post point must be re-grounded fresh each unit, title verified before tapping further.)
+- Your Tasks, read live in full (scrolled once): the same 8 resolved cards as the 2253 unit - 7 stamped PERFECT in gold (SSR Search for Missing Refugees x2, SSR Train Refugees, SSR Protect Refugee Camp, SR Retrieve Raw Materials, SR Retrieve Agent Profile, SR Retrieve Abandoned Gear) and SR Retrieve Valuable Supplies carrying the orange [1] plunder-report badge with no PERFECT stamp and no Claim button. No finished-unclaimed task, no pending task, no Claim button anywhere in the list.
+- Assist Allies: 5/5 (daily cap, reached in this reset day by ticker-1851 at 19:07 on 2026-11-08). Plunder Others: 0/5, untouched. Reward Recovery panel read live: the 2026-11-6 18:00 record reads CLAIMED (fragments x3, x3, x1, x1, Mystery Supply Box x224, puzzle x2, chest x315, medal 1.2K, blue triangle 1.0K, Hero EXP 13.8M). The 2026-10-24 19:00 record sits collapsed below it, presumed settled. Nothing to claim there.
+- No Mega Deploy: nothing pending to deploy, and the panel was not opened. Today is a Radar Training duel day, so the UR-secret-tasks Mega Refresh rule does not apply in any case. The Hidden Treasures tab badge (1) belongs to the treasures regular, not this unit; it was left alone.
+- Exit note: the post back arrow sits at norm 148,947 (button centre); a tap at norm 62,948 landed on the button's left edge and produced no change, and the corrected tap at 148,947 returned the game to the base screen. Same one-row lesson as the duel panel this pass: ground the back-arrow centre fresh per panel.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared. The game was left on the base screen.
+- Result stats: target 3, achieved 3 (claim 0 finished - none pending, assists 5/5 verified at cap, no pending to deploy), resources_gained none, costs about 3 minutes, no items spent, verified yes, device_takeovers 0, follow_up none.

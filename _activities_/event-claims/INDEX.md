@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T04:32:17Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live; Doomsday guardian rotated to Nuna Knuckles 6.5G, Warzone Threat 43); record commit 8dcbdf92b9 on records/2026-11-08
   - source: ticker-1434 event-claims execution record 2026-11-08 1506 queue run (done, full Events hub sweep of all 5 tabs, no reward claimable anywhere, Doomsday guardian 7.6G, Warzone Threat 23); record commit dfd3c87f9 on records/2026-11-08
   - source: ticker-1851 event-claims execution record 2026-11-08 1914 queue run (partial, new event The Age of Oil discovered, milestone 1 claimed, milestone 2 chest unresponsive blocker class c, Arms Race Base Building 0 points, Desert Storm Battle Day 2026-11-13; record commit cff344153 on records/2026-11-08)
+  - source: ticker-0204 event-claims execution record 2026-11-09 0224 queue run (partial, Age of Oil milestone 2 chest claimed after the 1914 blocker, coin chest x3, red diamond x50, Oil 3.0K x6, 5-minute speedup x2, Arms Race Hero Advancement 0 points; record commit facef628c on records/2026-11-09)
 ---
 
 
@@ -1220,3 +1221,14 @@ that drag is the sweep-completeness check, not wasted motion.
   research tree; the next unit to touch it backs out with
   click_element or relaunches the app. Commented onto Issue #477
   by this run.
+
+## What the 2026-11-09 0224 unit added - Age of Oil milestone 2 chest CLAIMED after the 1914 blocker, Arms Race Hero Advancement 0 points, check-in and hub tabs carried
+
+- Unit events-2026-11-08-2257 by ticker-0204, about 02:21 to 02:24 local, status partial. Evidence in `_records_/2026-11-09/event-claims/0224-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-211. No different-device dialog appeared.
+- Age of Oil milestone 2 CLAIMED - the 1914 blocker is discharged. Milestone 1 "Unlock Tech: The Age of Oil", 1631/500 Tech Research, already claimed at 19:08 on 2026-11-08. Milestone 2 "Unlock Stage: Base Expansion II", 9000/500 Building Upgrades, gold chest still showing, stage badge still 1.
+- Milestone 2 chest, different entry route per the 1914 unit (the chest ignored five taps across four methods there): the ranking icon on the milestone 2 card was tapped first and opened the CONSTRUCTION RANKING panel (warzone-wide building-upgrade counts; own row [AP3x] Bears Lair Unlisted 0; top [B3WB] WoW 42) - no claim route there, and the Ranking Reward button was not tapped. Back on the Age of Oil page, a tap on the card body produced no change (the card opens no detail page). A single tap on the gold chest itself then opened the CONGRATULATIONS dialog at once. The chest blocker is discharged: the chest responds to a direct tap now, and the round-trip through the ranking panel (a fresh page state) is the recorded difference from the 1914 attempts. The 1914 section's "milestone 2 chest unresponsive" wording is superseded by this claim, not carried as a live blocker.
+- Milestone 2 rewards read live in the dialog: coin chest x3, red diamond x50, Oil 3.0K x6, 5-minute speedup x2 - the same payout as milestone 1. Verification: after dismissing the dialog, the gold chest is gone from the Base Expansion II card and the Age of Oil tab badge is cleared. The stage track still shows stage 1 active. Issue #477: the milestone-2 chest question is now answered (chest claimed, method recorded); the ticker job already commented #477 with this evidence, and the issue stays open for the retro to close - no re-comment from this run.
+- Arms Race read in the same unit (cross-read for the arms-race profile): Events hub opened on the Arms Race page (Hero Advancement phase, Contest Segment Lv.29-30, score 0, point chests 2,000 / 4,000 / 12,000 all unreached, cumulative 0/2, phase timer 03:37:48, warzone rank 10 #2110 [AP3x]Bears Lair 0 points). Nothing claimable there; Arms Race scoring is the arms-race unit's job, not this claim round.
+- Not performed (carried): the check-in gift (Hot Deals check-in banner, "FREE TOMORROW" card) was not claimed in this unit; it belongs to the events regular and carries to the next events unit. Hub tabs NOT swept this unit - Winter Battlefield, Level Swap, Wanted Boss, Community, Desert Battlefield (red ! badge). The 15:06 sweep on 2026-11-08 found nothing claimable on Winter Battlefield, Level Swap, Wanted Boss and Community; this unit did not re-verify them. They carry to the next events unit.
+- No diamonds or money spent. No speedups burned. No paid button tapped. The game was left on the base screen.
+- Result stats: target 3, achieved 1, resources_gained coin chest x3, red diamond x50, Oil 3.0K x6, 5-minute speedup x2, costs about 4 minutes of unit time, no items spent, verified yes, blocker_category c (carried items only).
