@@ -785,6 +785,27 @@ def classify(item, regulars, roster, reg_by_activity):
                         "reason": "profiled in the roster with no "
                                   "producing regular"}
         else:
+            # Issue #505: an unknown slug is a discovery candidate
+            # only when the item is something to do - a claimable or
+            # doable task with no owning regular. A read-only item
+            # (info-only, in-progress, locked) or a red-line-blocked
+            # item is day evidence, not an unknown task: filing it
+            # as a candidate mints exploration units for Total Power
+            # totals, building-queue counts and absence notes, and
+            # duplicates genuine discoveries under a second slug
+            # (survey-center-tab beside survey-center).
+            if state not in ACTIONABLE_STATES:
+                reason = {"in-progress": "already under way",
+                          "locked": "locked or not yet open - " +
+                                    str(item.get("redline_check", "")),
+                          "info-only": "read for the record, day "
+                                       "evidence"}[state]
+                return {"class": "not-actionable", "owner": "",
+                        "reason": reason}
+            if redline_blocked(item):
+                return {"class": "not-actionable", "owner": "",
+                        "reason": "red line - " +
+                                  str(item.get("redline_check", ""))}
             return {"class": "candidate", "slug": slug,
                     "known_candidate": False}
     if redline_blocked(item):
