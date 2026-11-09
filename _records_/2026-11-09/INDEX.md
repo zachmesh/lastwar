@@ -808,3 +808,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Tools PR 425 owner-gated, clean, OD-20261108-01 still
   open, no owner answer, no new comment. Status: done.
   Full detail in pr-integration/0345-run.md.
+
+## 04:00 to about 04:06 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0400
+  (NON-BATCH). Checker due no - outside every batch
+  window; next batch 07:00. Records PR 493 re-probed
+  CLEAN at new head 59af3ba13 against main 837d880b81,
+  awaits 07:00 batch, note posted. Records PRs 478,
+  351, 301 still conflicted on the single action-log
+  file at unchanged heads, re-check comments posted.
+  Tools PR 425 owner-gated, clean, OD-20261108-01 still
+  open, no owner answer, re-verification comment posted.
+  Note: the five comments say PR 501 "merged this
+  pass" - it merged 03:47 PT in the 0345 window; the
+  timing is corrected in the run record. Status: done.
+  Full detail in pr-integration/0400-run.md.
