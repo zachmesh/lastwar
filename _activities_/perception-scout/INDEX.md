@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-09T19:32:17Z
+modified: 2026-11-09T20:32:17Z
 level: L1
-version: 1.52.0
+version: 1.54.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -80,6 +80,11 @@ grounded_in:
   - source: ticker-0804 scout-discovery units 008 and 010 done verdicts (Total Power 149,117,331 re-read, live HUD total not a task; full 7-tab Events strip with no Zombie tab; read from this pass screens, no separate queue-run records; commit b58fc31b6 on records/2026-11-09)
   - source: ticker-0842 scout-discovery execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest explored and measured read-only, owner-decision Issue #517, 0606 unmatched list now fully resolved; record commit ec55aa585 on records/2026-11-09)
   - source: ticker-0904 survivor-intake execution record 2026-11-09 0926 queue run (partial, Season Closed system letter read in mail - Season II ended 2026-11-08 17:00:05, season buildings removed, skill points returned - corroborates the 0812 Transfer Surge resolution; record commit 3c788a4a3 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1146 queue run (done, Age of Oil explored read-only - warzone counters tech 2607/500, building 11186/500, heroes 9465/10000, Research Ranking read in full with top-20 reward tiers, Base Expansion II icon corrected to a stage-info button; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1149 queue run (done, Total Power 149,217,331 read live twice, known HUD figure, candidate rejected as a task, 472,287 below the 2026-10-25 baseline; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1152 queue run (done, Zombie Invasion tab still absent, event still ended, no chain seeded; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1158 queue run (partial, Decoration Gallery entry not re-located - the 44,284 point opened the MEGA EXPRESS CONTRACT 99.99 dollar offer popup instead, Overview values already measured by unit 002; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1204 scout-discovery execution record 2026-11-09 1204 queue run (done, Builders Hut Lv.26 banner quest profiled live - cost Iron 170.0M plus Food 56.9M plus Lv.26 HQ, all met, original time 15d 08:05:18, no reward shown, no deadline, upgrade panel X unresponsive to background clicks; record commit 6f18bc3be on records/2026-11-09)
 ---
 
 
@@ -3683,3 +3688,84 @@ observe-only, nothing claimed). Evidence in
   explain-season-ii-countdown-mechanism, achieved 1, costs about 11
   minutes; resources_gained none for all, no items spent, verified yes
   (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 1134 scout-discovery units added - Age of Oil learned with ranking rewards, Total Power re-read, Zombie tab still absent, Decoration Gallery entry unreliable
+
+- Unit scout-scout-discovery-2026-11-09-014 by ticker-1134, about
+  11:36 to 11:46 local, status done. Evidence in
+  `_records_/2026-11-09/the-age-of-oil/1146-queue-run.md` (commit
+  d2df49670 on records/2026-11-09). The Age of Oil candidate is now
+  learned read-only and has its own profile: the-age-of-oil 1.0.0 (6 of
+  7 fields, Hero Mobilization chest unmeasured). Research Ranking
+  reward tiers measured in full, top 20 only; event ends about
+  2026-11-15 17:56 PT. The Base Expansion II icon is corrected - a
+  stage-info button with a Go popup, not a chest and not unresponsive
+  - which resolves the "chest unresponsive" half of Issue #477. The
+  day observation file gained the Age of Oil exploration section.
+- Unit scout-scout-discovery-2026-11-09-015 by ticker-1134, about
+  11:49 local, status done. Evidence in
+  `_records_/2026-11-09/total-power-149217331/1149-queue-run.md`
+  (commit d2df49670 on records/2026-11-09). Total Power 149,217,331
+  read live twice in the unit 014 session, unchanged, matching the
+  observation value - a known HUD figure, candidate rejected as a
+  task, tracked in Issue #482. 472,287 below the 2026-10-25 baseline
+  of 149,689,618; that delta does not match #482's 641,100 step-down
+  figure for 2026-11-08, so the step-down accounting stays open. No
+  game session was opened for this unit.
+- Unit scout-scout-discovery-2026-11-09-016 by ticker-1134, about
+  11:52 local, status done. Evidence in
+  `_records_/2026-11-09/zombie-invasion-tab-absent/1152-queue-run.md`
+  (commit d2df49670 on records/2026-11-09). Zombie Invasion tab still
+  absent from the Events hub tab bar, read end to end in the unit 014
+  session - the event is still ended, no chain seeded, per the
+  zombie-invasion no-seed rule. No game session was opened for this
+  unit.
+- Unit scout-scout-discovery-2026-11-09-017 by ticker-1134, about
+  11:58 local, status partial. Evidence in
+  `_records_/2026-11-09/decoration-gallery-overview-ur/1158-queue-run.md`
+  (commit d2df49670 on records/2026-11-09). The Decoration Gallery
+  entry was not re-located - the [44,284] point opened the MEGA
+  EXPRESS CONTRACT $99.99 offer popup instead (closed untouched).
+  Overview values are already measured by unit 002 and match the day
+  observation file exactly; the gallery now has its own profile:
+  decoration-gallery-overview-ur 1.0.0. Tabs beyond Overview stay
+  unmeasured; the successor must re-ground the entry fresh (R2).
+- Result stats: 1146 target learn-the-age-of-oil-profile-fields,
+  achieved 6 of 7, costs about 10 minutes; 1149 target
+  learn-total-power-profile-fields, achieved 1, costs about 3 minutes,
+  no game session; 1152 target learn-zombie-invasion-tab-absent,
+  achieved 1, costs about 3 minutes, no game session; 1158 target
+  learn-decoration-gallery-profile-fields, achieved 0, partial,
+  blocker_category c, costs about 3 minutes; resources_gained none for
+  all, no items spent, verified yes (same-unit live reads).
+- Red dot accounting (this pass): seen 1 (red "!" badge at the right
+  edge of the Events hub tab bar, in every Age of Oil screenshot),
+  explained 0. Unexplained 1 - the badge was not attributed to a tab.
+  Unknown items 1 - the Hero Mobilization gold chest.
+
+## What the 2026-11-09 1204 scout-discovery unit added - Builders Hut Lv.26 quest measured, upgrade panel X unresponsive
+
+- Unit scout-scout-discovery-2026-11-09-018 by ticker-1204, about
+  12:04 to 12:13 local, status done. Evidence in
+  `_records_/2026-11-09/upgrade-builders-hut-to/1204-queue-run.md`
+  (commit 6f18bc3be on records/2026-11-09). The Builders Hut Lv.26
+  banner quest is now measured on every field except the reward
+  (unshown) and the Upgrade-button time gap (unexplained), and has
+  its own profile: upgrade-builders-hut-to 1.0.0 (owner-only,
+  learn-only, waits on Issue #517). Cost Iron 170.0M + Food 56.9M +
+  Lv.26 HQ, all met; original time 15d 08:05:18, Upgrade button
+  7d 07:16:49; Finish Now 18,188 diamonds, read only. No reward
+  shown, no deadline.
+- Close blocker: the upgrade panel's X did not respond to background
+  clicks (two single taps, one double-click, one 1-second hold at
+  the grounded X point (820, 238), plus a tap on the dimmed map
+  outside the panel, all no-change) - the same background-click
+  resistant class as the zombie Store button. The panel was left open
+  at the unit's close; the left-edge swipe-back gesture verified by
+  the 1220 harvest unit is the working close for this panel class.
+- Result stats: target learn-builders-hut-quest-profile-fields,
+  achieved 1, resources_gained none, costs about 9 minutes of unit
+  time, no items spent, verified yes, blocker_category none, points
+  0, surfaces_walked base-screen-banner-quest-builders-hut-detail-
+  upgrade-panel, items_observed 1, red_dots_seen 0,
+  red_dots_explained 0, unexplained_red_dots 0, unknown_items 0.
