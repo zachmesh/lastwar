@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T06:32:17Z
+modified: 2026-11-09T09:32:17Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-1727 alliance-help execution record 2026-11-07 1736 queue run (done, Help All pressed from the base-screen bubble at norm 827,707, header 560/1,000, own requests only; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-1352 alliance-help execution record 2026-11-08 1413 queue run (done, Help All pressed, Help red dot cleared, points counter stayed 0/1,000 before and after, helps count not claimed; record commit bf20e1a48 on records/2026-11-08)
   - source: ticker-2201 alliance-help execution record 2026-11-08 2214 queue run (done, Help All pressed twice, points 100/1,000 to 360/1,000, header counter lag resolved, list scrolls; record commit 8960535c on records/2026-11-08)
+  - source: ticker-0034 alliance-help execution record 2026-11-09 0100 queue run (done, Help All pressed once, one ally request cleared, header 360/1,000 unchanged in-session, own rows 30/30, base-screen bubble tile (609,713) no-change, Help (523,507), Help All (488,778), session cc-197 dropped, cc-200 recovery; record commit 77db994162 on records/2026-11-09)
 ---
 
 
@@ -870,3 +871,13 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - CORRECTION (2) - the counter lag is resolved: the 1413 open question (header counter 0/1,000 before and after a successful Help All) is answered. The points header does NOT update inside one open Help session: after each Help All press it still showed the pre-press value until the page was closed and reopened. This explains the 1413 0/1,000 anomaly - that unit read the counter only in-session. Closing figures for help units must be read after a page reopen. The Open questions entry is updated to record the resolution.
 - Correction, from the record itself: the unit ran 22:03 to 22:09 local, about 6 minutes (duration_seconds 334), not 22:04 to 22:14. The closing figures (points 100 to 360) are unaffected.
 - Result stats: target 1, achieved 1, resources_gained 260 Alliance Help points, costs 6m_wall_no_stamina, verified yes, blocker_category none, points_before 100, points_after 360, points_gained 260, helps_pressed unverified_count, help_red_dot_cleared true, device_takeovers 0.
+
+## What the 2026-11-09 0100 unit added - Help All cleared one ally request, header 360/1,000 unchanged in-session, bubble tile not the entry
+
+- Unit help-2026-11-08-2230 by ticker-0034, about 00:57 to 01:00 local, status done. Evidence in `_records_/2026-11-09/alliance-help/0100-queue-run.md` (commit 77db994162 on records/2026-11-09).
+- Help page read live at entry: "Today's points gained from Alliance Help: 360/1,000". Four rows - three own (Bears Lair: Missile Mastery II research, Defense Training VIII research, building Lv.30 Aircraft Center) and one ally (building Lv.21 Crystal Factory).
+- Help All pressed once: toast "Allies are very grateful for your assistance!"; the ally row is gone; the three own rows read 30/30. The header still read 360/1,000 at the closing read, so no points increase is claimed - the single cleared ally request is the verified outcome. This is consistent with the 2214 resolution (the header does not update inside one open Help session; closing figures must be read after a page reopen) - the 0100 unit read the header only in-session, so 360/1,000 is not a closing figure.
+- Entry correction: the base-screen help bubble tile (tan tile immediately left of the Alliance shield button, grounded centre (609, 713) in fullscreen) was tapped once with no change - it is not the working Help All entry on this screen; the Alliance panel route is the verified one. Help button in the Alliance menu carries a red dot while requests wait, grounded at (523, 507); Help All button grounded at (488, 778). (The 0451 bubble tile at (814, 688) cleared with one tap in its framing; the (609, 713) point in this fullscreen framing did not - the bubble tile point is framing-bound and must be re-grounded fresh, not reused across framings.)
+- Session note: computer session cc-197 dropped mid-unit (observation unavailable); session cc-200 was started, LastWar re-selected, and no game state was lost. Commented onto Issue #282 by this run (device-channel family, distinct from the capture-failure form).
+- No diamonds or money spent. No other unit's work touched. Assemble was not opened.
+- Result stats: target 1, achieved 1, resources_gained none, costs about 4 minutes of unit time, no items spent, verified yes, points 0 (no increase claimed - in-session read only), helps_pressed 1 verified row cleared, device_takeovers 0.
