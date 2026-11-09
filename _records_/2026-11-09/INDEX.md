@@ -2325,3 +2325,21 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   inline "unmatched_labels: none" for this run). No
   withdrawals. Pool inbox 73, claimed 1, done 1362. Status:
   no-op. Full detail in queue-planning/1340-run.md.
+
+- Arms Race unit arms-race-2026-11-09-1003, partial: Drone Boost
+  phase 13:45-14:00 PT - score 6,000 to 8,000 of 30,000, 1,500 chest
+  claimed (badge x1, medals x200, 5m speedup x8, resource chests);
+  one CL-7 Victim rally kill (20 stamina, +2,000 points; points
+  credit on the kill, not on the spend). Phase had 9 minutes left
+  at pickup, so the 10,000 and 30,000 chests were unreachable;
+  cumulative chest 7/8, ranking chest preview-only until the phase
+  rolls. Full detail in arms-race/1345-queue-run.md.
+
+- Donations unit donations-2026-11-09-1003, partial: 11 coin
+  donations to Quick Gathering 14:03-14:13 PT (300 coin each),
+  Donation Count read live 30/30 to 19/30; R2 entry-route fix
+  worked (BASE framing, fresh Alliance centre 935,726, menu
+  opened first tap). Button still green at close; 19 remain for
+  the next unit. Open question: Tech Donation Today read 2,250
+  against a full 30/30 count. Full detail in
+  alliance-donations/1413-queue-run.md.

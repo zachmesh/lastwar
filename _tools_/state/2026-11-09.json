@@ -21,7 +21,12 @@
  },
  "scout": {
   "status": "done",
-  "at": "2026-11-09T11:51:17-08:00",
-  "note": "Zombie Invasion tab-absent discovery unit 016 done; scout pass itself done 10:52, re-stamped by this discovery unit"
+  "at": "2026-11-09T12:17:35-08:00",
+  "note": "Builders Hut Lv.26 banner quest discovery unit 018 done; scout pass itself done 10:52, re-stamped by this discovery unit"
+ },
+ "harvest": {
+  "status": "done",
+  "at": "2026-11-09T12:30:36-08:00",
+  "note": "Bubbles collected 12:20-12:33 PT, food +3.9M iron +3.6M coin +2.6M; Armed Truck unchecked, follow-up next harvest unit"
  }
 }
