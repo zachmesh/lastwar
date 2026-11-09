@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T10:32:17Z
+modified: 2026-11-09T11:32:17Z
 level: L1
-version: 1.63.0
+version: 1.64.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -68,6 +68,7 @@ grounded_in:
   - source: ticker-0034 arms-race execution record 2026-11-09 0058 queue run (partial, Unit Progression phase read live, 0 points, scoring table Lv.10 unit +31 / 1-min speedup +10 / diamond pack +30 per diamond, Events entry (672,132), orange medal is Wall of Honor not Events, back arrow centre (355,944), fill not executed; record commit 77db994162 on records/2026-11-09)
   - source: ticker-0113 arms-race execution record 2026-11-09 0129 queue run (partial, Unit Progression phase read live again, 0 points, timer 00:44:05, third consecutive tent-grounding failure, Drill Ground Lv.30 re-confirmed, fill not executed, phase ends about 02:00; record commit c0ebf0c4f0 on records/2026-11-09)
   - source: ticker-0204 event-claims execution record 2026-11-09 0224 queue run (partial, Arms Race page cross-read only, Hero Advancement phase 0 points, timer 03:37:48, chests 2,000/4,000/12,000 unreached; record commit facef628c on records/2026-11-09)
+  - source: ticker-0304 arms-race execution record 2026-11-09 0306 queue run (done, Hero Advancement phase met live, McGregor Lv.145 to 146 for 82,500 points, all three point chests and the cumulative counter chest claimed, Unit Progression formal miss verdict 0 of 75,000; record commit e6f80f1e2 on records/2026-11-09)
 ---
 
 
@@ -2024,3 +2025,18 @@ slot. Evidence in
 - Reading: the Unit Progression phase ended about 02:00 and Hero Advancement is now the live phase with 0 points at 02:21 - the phase transition is observed, not inferred. The 0058/0129 section's "newest live phase read" wording now refers to the Unit Progression phase only; this 02:21 Hero Advancement 0-point read supersedes it as the newest live Arms Race phase read.
 - The formal miss verdict for Unit Progression (0 of 75,000) is still owed to the first arms-race unit after the phase ends; the arms-race-2026-11-09-0203 unit is in the inbox for the next phase window and has not run yet, so no verdict is recorded here. No fill was attempted in this cross-read and no barracks state was re-verified.
 - Result stats: target not applicable (cross-read only), achieved 0, points 0, resources_gained none, costs about 1 minute of the events unit, no items spent, verified yes, blocker_category none.
+
+## What the 2026-11-09 0306 unit added - Hero Advancement phase met live, McGregor 145 to 146 for 82,500 points, all point and cumulative chests claimed; Unit Progression formal miss verdict 0 of 75,000
+
+- Unit arms-race-2026-11-09-0203 by ticker-0304, about 03:06 to 03:22 local, status done. Evidence in `_records_/2026-11-09/arms-race/0306-queue-run.md` (commit e6f80f1e2 on records/2026-11-09). The unit moved to `_queue_/done/` by the ticker.
+- Phase read at entry, about 03:10 local: Hero Advancement, Contest Segment Lv.29-30, points 0, timer 02:52:09, chest thresholds 2,000 / 4,000 / 12,000 (top chest 12,000), cumulative counter chest 0/2, rank #2110 [AP3x]Bears Lair, segment rank 11, 0 points. The timer agrees with the 0224 cross-read (03:37:48 at 02:21) on the same phase instance ending about 06:00-06:02 local.
+- Scoring paths as displayed, re-confirmed live: 1 Hero Recruitment pays +400; Use at least 2,000 Hero EXP at a time pays +1; Buy Packs containing Diamonds (1 Diamond) pays +30 (red line, never used).
+- The phase was MET by the authorized EXP path: McGregor (UR, Ironclad General) Lv.145 to Lv.146, 165.0M Hero EXP spent (EXP bar 1.3G/165.0M to 1.1G/170.0M), Attack 41.8K to 42.0K, March Size 410 to 412. Exactly one level, then stopped. Score re-read live on the phase page: 82,500 points (165,000,000 / 2,000 = 82,500, confirming the +1 per 2,000 EXP rate), segment rank 7, timer 02:50:54. The top chest threshold 12,000 was cleared by one level, as on 2026-10-26.
+- Chests: one tap on the 12,000 chest claimed all three point chests at once (CONGRATULATIONS): Skill Medal 1.6K, Arms Race Badge x6, SR chest x32, coin chest x32, 5m speedup x68, plus one more chest row whose count was hidden behind the banner and is not recorded as read. Completion sweep: the cumulative counter chest moved 0/2 to 6/2 and stood full; one tap claimed it (CONGRATULATIONS): gold ticket x1, pink puzzle piece x2, red gem 50 x1. The counter now reads 6/8, progress carrying into the next tier.
+- Ranking-row chest tapped: contents preview only, Iron Chest (SR) x3, Food Chest (SR) x3, Coin Chest (SR) x3, no Claim button while the phase is live - the ranking reward is for the next run after the phase ends, per the standing rule. No bouncing chest or reward red dot remains on the phase page.
+- FORMAL MISS VERDICT, discharging the 0224 section's owed item: the 2026-11-09 Unit Progression instance (chests 15,000 / 30,000 / 75,000) ended about 02:00 local at 0 of 75,000 - MISS. Evidence chain: the 0058 read 0 (timer 01:09:14 at about 00:50), the 0129 read 0 (timer 00:44:05 at about 01:14-01:29), no fill executed in either unit, no unit ran in the final window, the 0224 cross-read observed the transition to Hero Advancement at 0, and this unit confirms Hero Advancement live with a fresh timer. The 0224 section's "formal miss verdict still owed" is discharged here; the 0224 section stands as the record of the 0-point cross-read.
+- Reading note: this 0306 read (82,500, phase met) supersedes the 0224 section's "newest live phase read" wording; the 0224 section's wording now refers to the 0-point cross-read only.
+- Cross-reads: Events hub tab bar The Age of Oil, Arms Race, Winter Battlefield, Desert Battlefield - no Zombie Invasion tab, confirming the event ended 2026-10-30 (chain closed by unit 066); no fresh zombie chain seeded. The Trucks screen was seen on entry with Plunder Count 1/4 and left untouched - a cross-read for the trucks profile's next fold, not a trucks claim. Figures read live: food 534.7M, iron 859.3M, coin 38.6M, power 149,209,253, diamonds 6,077; Events badge 2; VS timer 14:52:31 (duel day 1).
+- No diamonds or money spent. No speedup item used. No building or research started. No stage swap. No other unit's work touched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 12000, achieved 82500, points 82500, resources_gained Skill Medal 1.6K, Arms Race Badge x6, SR chest x32, coin chest x32, 5m speedup x68, gold ticket x1, pink puzzle piece x2, red gem 50 x1, costs 165.0M Hero EXP (McGregor Lv.145 to 146), about 16 minutes of unit time, verified yes, blocker_category none.
+- Follow-up: the Hero Advancement phase ends about 06:00-06:02 local; the next arms-race unit after the phase ends records the next phase and its verdict. The cumulative counter at 6/8 carries into the next tier.
