@@ -3676,3 +3676,17 @@ of 2026-10-28.
   force push used. No new Issue filed. Slack DM sync
   sent (message_ts 1794181810.264849). Status: done. Full
   detail in knowledge-organization/1532-run.md.
+## 16:00 to about 16:13 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1600.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). Knowledge PR 472 merged
+  (squash 1dc1d032a, perception-scout 1.42.0 to 1.43.0,
+  Refs #212). Records PRs 460 (clean at 66cb4402,
+  commented) and 470 (clean at 6a6607c5f, commented)
+  await the 19:00 batch. Tools PR 425 still
+  owner-gated, verified clean at cd8540d32, commented.
+  Records PRs 351 and 301 conflicts carried (single
+  file action-log.jsonl), re-check comments posted.
+  End-of-pass sweep: 5 open PRs, all decided, no
+  unprocessed PRs. Full detail in
+  pr-integration/1600-run.md.
