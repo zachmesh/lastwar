@@ -1989,6 +1989,23 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 
 - Knowledge organization pass knowledge-organization-2026-11-09-1032 (done). Own PR 518 merged as squash 1a178dc2 with one integrator note (radar-tasks frontmatter YAML defect), fixed in new PR 520 (OPEN, MERGEABLE, CLEAN): arms-race 1.68.0 (Events groundings (672,132)/(683,150) corrected as landscape-fullscreen-only, phase page not reached in the 0949 unit, current phase unknown), alliance-help 1.33.0 (Alliance button ignores background clicks in fullscreen, duplicate window 508052, Help All still pending), mail-rewards 1.29.0 (train mails carry no attachments, windowed Mail entry (932,791) first try), radar-tasks 1.60.0 (frontmatter colon repaired). Reply posted on PR 518; mail-entry evidence commented on Issue #230. No new knowledge issues; retro not landed. Status: done. Full detail in knowledge-organization/1032-run.md.
 
+- Tool-developer pass tool-development-2026-11-09-1032. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #441 second instance taken as the single item - branch_guard.py 1.1.0 gains a sweep subcommand (reconcile gate: check before the merge, sweep after the merge before the push; the lone >>>>>>> in INDEX.md now fails the delivery, exit 1 naming path:lineno); PR #521 opened (commit 937b661f8); 19 fixture assertions 19/19 on isolated /tmp scratch repos on two runs, read-only sweep of live main 4343 files 0 markers; progress commented on #441 and synced to the owner Slack DM. Full detail in tool-development/1053-run.md.
+
+- Planner pass queue-planning-2026-11-09-1040. Plan staged
+  12 units (already_present 63, skipped_done_current 2,
+  reaped 0, expired 0, 1 branch-closed slot skipped,
+  0 stale inbox copies dropped) - the next 12 hours
+  staged through about 22:46 local. Pre-reset
+  sweep production skipped (not the 17:00 run); pair
+  already complete (seq 1 at 16:30, seq 2 at 17:30).
+  Scout diff on the Nov 9 observation (31 items, md5
+  c6fd3182) applied with 0 enqueued and 17 already-queued
+  (first clean diff pass since 0640; #466 recurrence
+  deferred, commented); promotion proposals 3. No
+  withdrawals. Pool inbox 85, claimed 1,
+  done 1345. Status: done. Full detail in
+  queue-planning/1040-run.md.
+
 - Scout discovery unit scout-scout-discovery-2026-11-09-011, done:
   Season II HUD countdown (6d 07:13:29) opens TRANSFER SURGE, the
   cross-warzone transfer window - confirmed live in all three tabs.
