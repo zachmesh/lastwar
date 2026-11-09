@@ -1935,3 +1935,27 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   PR 425 owner-gated, re-verified CLEAN against new main
   9aa9b5aa, OD-20261108-01 still open, no new escalation.
   Status: done. Full detail in pr-integration/1000-run.md.
+
+- Help unit help-2026-11-09-0630, partial: Help All never reached.
+  The Alliance shield carries a red dot (requests waiting) but the
+  button ignored six taps in four input variants (click,
+  left_mouse_down/up hold, left_press, move+click) at the freshly
+  grounded centre (650, 712) across two LastWar windows (489932
+  titled "Last War", 508052 untitled, both 1920x1080 at 0,0); the
+  tool advised background clicks do not reach some controls. The
+  green menu arrow did respond to a background tap. Same blocker
+  class as the 0949 arms-race unit (entry groundings do not apply
+  in the fullscreen letterboxed layout). Next help unit: exit
+  fullscreen to the native 642x951 window first and retry there;
+  do not repeat the fullscreen background-click sequence. No
+  points figure read; tracker untouched. Full detail in
+  alliance-help/1019-queue-run.md.
+
+- Mail unit mail-2026-11-09-0630, partial: Event (six train mails,
+  red dots cleared) and Alliance (leadership notice, Daily/Weekly
+  Donation Rankings, Major's Gift, 3v3 Brawl) both answered "No
+  rewards available." to Claim All - nothing claimed, nothing
+  deleted. Battle Report, System and Regular not opened this
+  cycle; the next mail unit resumes with those. Windowed-mode
+  taps work - the Mail button opened at once at (932, 791).
+  Tracker untouched. Full detail in mail-rewards/1031-queue-run.md.
