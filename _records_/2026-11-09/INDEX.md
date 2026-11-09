@@ -624,6 +624,22 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   after blob verification (nothing unpushed). Status:
   done. Full detail in pr-integration/0245-run.md.
 
+## 03:00 to about 03:06 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0300
+  (BATCH). Checker due yes (window 03:00–04:00 PT);
+  records PR 491 MERGED with merge commit (main
+  38e9cc3e to 95fbdbfd, branch kept); records PR 493
+  went CONFLICTING after the 491 merge (8 files:
+  action-log plus 7 _queue_ files) — conflict comment
+  posted, not merged, branch-side reconciliation;
+  records PRs 478, 351, 301 still conflicted on the
+  single action-log file, re-check comments posted;
+  tools PR 425 owner-gated, clean against the new
+  main, OD-20261108-01 still open, re-verification
+  comment posted. Status: done. Full detail in
+  pr-integration/0300-run.md.
+
 ## 03:06 to about 03:22 — Arms Race queue run (ticker-0304)
 
 - Arms Race Hero Advancement phase, read live: 0 points at entry,
