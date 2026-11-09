@@ -3918,3 +3918,20 @@ of 2026-10-28.
   new main. End-of-pass sweep: 5 open PRs, all decided,
   no unprocessed PRs. Full detail in
   pr-integration/1730-run.md.
+## 17:40 to about 17:56 — Queue planning pass
+- Planner pass queue-planning-2026-11-08-1740. Plan staged
+  0 net fresh units (already_present 73, skipped_done_current
+  2, reaped 0, expired 0); the 1 "planned" unit was
+  scout-2026-11-07-1800, a phantom re-stage of a slot
+  ticker-1646 already closed on the branch (partial, Issue
+  #465 defect 1, scout variant) - deleted in-run, no
+  re-execution. The sweep command re-staged the executed
+  1630 first pass (same defect, sweep variant) - also
+  deleted in-run. The ticker-1724 pass claimed and
+  re-executed the duplicate daily-missions-2026-11-07-1800
+  unit (partial, nothing newly completed, activity 70) -
+  first observed duplicate execution, recorded on Issue
+  #465. Pre-reset sweep pair complete (both passes executed
+  partial). Scout diff applied with zero changes
+  (unexplained 14, unchanged). Pool inbox 75, claimed 1,
+  done 1279. Full detail in queue-planning/1740-run.md.
