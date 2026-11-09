@@ -5026,3 +5026,16 @@ of 2026-10-28.
   (unexplained 14, unchanged). No withdrawals. Pool
   inbox 72, claimed 1, done 1317. Full detail in
   queue-planning/2340-run.md.
+
+- Integrator pr-integration-2026-11-08-2345 (NON-batch).
+  Merge-aware checker due no (PR 460 already merged 23:12 PT
+  in the 23:00 window); no records merges. Records PR 491
+  clean against main aefdc615cf (13 commits), awaiting the
+  03:00 batch; records PRs 478, 351, 301 still conflicted on
+  the single action-log file, re-probed and re-noted; tools
+  PR 425 owner-gated, clean, unchanged (OD-20261108-01
+  open). Four re-verification comments posted. VPS disk
+  freed from 38M to 296M (stale integrator bundles
+  removed); delivery via 5.6M sparse worktree. No Slack
+  sync (silent non-batch run). Full detail in
+  pr-integration/2345-run.md.
