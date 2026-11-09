@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-09T03:59:03Z
+modified: 2026-11-09T04:52:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -4357,3 +4357,27 @@ of 2026-10-28.
   none created or closed since the 1939 pass. Owner-decision issues
   132, 154 and 335 all over 24 hours, statements current.
   Full detail in pr-catchall/2039-run.md.
+
+## 20:32 to about 20:52 - Knowledge organization pass
+
+- Knowledge organization pass knowledge-organization-2026-11-08-2032.
+  Three substantive records folded into four profiles as one commit
+  d6781932 on PR 481 (OPEN, MERGEABLE, CLEAN): ticker-1935 harvest
+  1935 (food +5.1M one-tap all-at-once, iron +1.2M one-tap
+  one-bubble, iron one-by-one re-confirmed, coin tap missed and hit
+  the Iron Mine building, rule R2 now requires zooming in or a
+  readable coin icon plus value label; remainder to the next unit)
+  into resource-collection 1.42.0; ticker-2002 scout 2012
+  (fifteenth no-train, Wars dot absent with three rallies then
+  present on a fresh rally - eighth #212 datapoint, sharpest yet
+  for rally creation) into perception-scout 1.46.0; ticker-2002
+  radar 2028 (duel rolled to day 1 Radar Training RELEASE, radar
+  screen never entered, dish groundings (54,583) and (54,780)
+  both missed, game left on the Age of Oil research tree whose
+  back arrow ignores background clicks; 10 pending rewards plus
+  16 stored tasks still waiting) into radar-tasks 1.53.0 and the
+  research-tree read plus Desert Storm enlistment re-confirmation
+  into event-claims 1.30.0. Issues #250 and #477 commented with
+  the new evidence; #212 already commented by the scout unit.
+  Own PR 479 MERGED with 0 comments and 0 reviews. Full detail
+  in knowledge-organization/2032-run.md.
