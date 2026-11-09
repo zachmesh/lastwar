@@ -3754,3 +3754,18 @@ of 2026-10-28.
   Owner-decision issues 132, 154 and 335 all over 24 hours,
   statements current.
   Full detail in pr-catchall/1639-run.md.
+## 16:30 to about 16:47 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1630.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). No PR merged. Records PR
+  460 re-verified CLEAN at three heads during the pass
+  (74626689a, then 8696cc953 after the KO 1632 landing,
+  then d8b700b90 after the ticker-1604 delivery; two
+  verification comments posted) and PR 470 clean at
+  6a6607c5f; both await the 19:00 batch. Tools PR 425
+  still owner-gated, unchanged, no owner decision.
+  Records PRs 351 and 301 conflicts carried unchanged
+  (single file action-log.jsonl), no repeat notes.
+  End-of-pass sweep: 5 open PRs, all decided, no
+  unprocessed PRs. Full detail in
+  pr-integration/1630-run.md.
