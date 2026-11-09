@@ -4229,3 +4229,13 @@ of 2026-10-28.
   the work branch and resetting local main, remote main
   untouched, no force push. Status: done. Full detail in
   tool-development/1932-run.md.
+- Harvest unit harvest-2026-11-08-1803 (partial): food +5.1M
+  and iron +1.2M HUD-verified in two taps; food clears
+  all-at-once, iron one by one. Coin bubbles still standing -
+  the coin tap missed into the Iron Mine Lv.27 panel
+  (dismissed, nothing spent). A wrong early tap opened a UR
+  Trade Truck panel ([BI0d]Whodat34, plunder 0/4 today),
+  closed without plundering. Entry HUD food 494.0M / iron
+  820.0M / coin 15.9M, closing 499.1M / 821.2M / 15.9M;
+  power 149,209,253. Full detail in
+  resource-collection/1935-queue-run.md.
