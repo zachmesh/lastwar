@@ -4532,6 +4532,7 @@ of 2026-10-28.
   re-probed, scope unchanged, no new comment. No merge,
   so no sync-back. Full detail in
   pr-integration/2130-run.md.
+
 ## 21:39 to about 21:48 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-08-2139. No adopted open PR
@@ -4566,3 +4567,19 @@ of 2026-10-28.
   missing (PR #486, commit 278497232); fixture suite 8/8 on two
   runs in /tmp; findings and PR commented on #485. Status: done.
   Full detail in tool-development/2132-run.md.
+
+## 21:40 to about 21:45 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-2140. Plan staged
+  0 net fresh units (next 12h already covered;
+  already_present 63, skipped_done_current 5, reaped 0,
+  expired 0, no phantom re-stage, 6 branch-closed slots
+  skipped: harvest/radar/survivors/training/donations
+  1803, zero-sweep 1730). Pre-reset sweep pair already
+  complete by execution (both passes executed partial;
+  1630 done file absent from the live pool, present on
+  the branch tip); step 2 skipped, this run is in the
+  21:00 hour. Scout diff applied with zero changes
+  (unexplained 14, unchanged). No withdrawals. Pool
+  inbox 67, claimed 0, done 1306. Full detail in
+  queue-planning/2140-run.md.
