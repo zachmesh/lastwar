@@ -4214,3 +4214,18 @@ of 2026-10-28.
   #477 and #282 commented. Own PRs 476 and 456 MERGED with
   0 comments and 0 reviews. Full detail in
   knowledge-organization/1932-run.md.
+
+## 19:32 to about 19:48 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-08-1932.
+  Done: own PR 425 checked first (owner-gated on the policy
+  amendment, no action owed); issue #475 taken as the single
+  item - tapcal.py 1.1.0 now splits first-try rate and median
+  miss by window geometry, and calibrate refuses to mix
+  geometries (PR #480, commit 58e7739cb); fixture suite 44/44
+  on two runs in /tmp; progress commented on #475. Mid-run
+  the commit first landed on local main after another worker
+  moved the shared clone's branch; recovered by re-pointing
+  the work branch and resetting local main, remote main
+  untouched, no force push. Status: done. Full detail in
+  tool-development/1932-run.md.
