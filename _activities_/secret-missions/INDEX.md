@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T19:39:51Z
+modified: 2026-11-09T03:32:17Z
 level: L1
-version: 1.20.0
+version: 1.22.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,8 @@ grounded_in:
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, white truck badge 8 is the Secret Command Post entry, task rows read, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, white truck is the Secret Command Post entry, Your Tasks badge 17, Ally Tasks badge 5, 0022 mapping corrected); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-1049 secret-missions execution record 2026-11-08 1114 queue run (partial, four finished tasks claimed at once with PERFECT stamps, Claim tap worked first try, Mega Deploy and Reward Recovery not reached); record commit 355d3f11c on records/2026-11-08
+  - source: ticker-1434 secret-missions execution record 2026-11-08 1456 queue run (done, Mega Deploy of all 8 pending tasks verified running, Reward Recovery 2026-11-6 claimed, ally assists 0/5 carried); record commit dfd3c87f9 on records/2026-11-08
+  - source: ticker-1851 secret-missions execution record 2026-11-08 1907 queue run (done, 8 finished tasks claimed, 8 pending Mega Deployed, ally assists 5/5, new duel week Radar Training day 1, Ally Tasks badge counts remaining assists; record commit cff344153 on records/2026-11-08)
 ---
 
 
@@ -177,6 +179,11 @@ post screen carries two sibling tabs registered as their own types -
   showing a visible countdown can be marked. Empty state text - No
   marked Secret Tasks. Please find one and share it to the Alliance
   Chat.
+- MEASURED 2026-11-08 1907: the Ally Tasks badge counts REMAINING
+  assists, not the number of rows - it read 5 at 0/5, 2 at 3/5, and
+  was gone at 5/5, while four rows stayed visible and the list
+  refilled as assists were used (a Dogo row appeared after the
+  fourth assist). Read the badge as remaining assists.
 
 ## Task catalogue - observed tasks
 
@@ -1212,3 +1219,153 @@ secrets-2026-10-31-2257, status partial).
   this race.
 - Game left safe: no diamonds, money or other spending; no Mega
   Refresh tapped; no alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-08 1456 secrets unit added - Mega Deploy of all 8 pending tasks verified running, Reward Recovery 2026-11-6 claimed, ally assists carried
+
+- Unit secrets-2026-11-08-1057 by ticker-1434, about 14:53 to 15:02
+  local, status done - all 8 pending secret tasks Mega Deployed and
+  the 2026-11-6 Reward Recovery record claimed in full. Ally assists
+  (0/5) were not reached before the token lease expired. Evidence in
+  `_records_/2026-11-08/secret-missions/1456-queue-run.md` (commit
+  dfd3c87f9 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-133 on the owner Mac mini, LastWar
+  already running. No device-access error, no different-device
+  dialog, no login demanded. Total Power read live on base at entry
+  and at close: 149,850,353.
+- Duel posture: day 7, off day - settlement (per the 1439 duel-score
+  unit this pass and tools/duel.py) - no scoring actions today, so
+  the duel-day Mega Refresh rule does not apply and normal Mega
+  Deploy is the default. No Mega Refresh tapped.
+- Secret Command Post opened from the base left-column slot at norm
+  53,625 and its title verified before any further tap. Live state at
+  entry: Assist Allies 0/5, Plunder Others 0/5, Your Tasks badge 8,
+  Ally Tasks badge 5, Others' Tasks badge 1, Hidden Treasures badge 1
+  (sibling regular, not touched). No finished task was showing - all
+  four tasks ticker-1049 claimed at 11:14 are done, and the 8 pending
+  tasks showed blue Go buttons, so there was nothing to claim in this
+  unit.
+- Mega Deploy: the MEGA DEPLOY REMINDER panel listed 8 tasks, every
+  checkbox already green-checked and UR Only OFF (empty box) - no
+  re-checking needed and no UR Only toggle touched. The 8 tasks: UR
+  Rescue Missing Agent (02:00:00, 3 heroes), SSR Search for Missing
+  Refugees (01:00:00, 2 heroes) x2, SSR Protect Refugee Camp
+  (01:00:00, 2 heroes), Retrieve Agent Profile (00:30:00, 2 heroes),
+  Retrieve Abandoned Gear (00:30:00, 2 heroes), Retrieve Raw Materials
+  (00:30:00, 2 heroes), Retrieve Valuable Supplies (00:30:00, 2
+  heroes). Perform Now tapped once; the panel closed and the screen
+  jumped to the world map (unexplained - no tap was made on the map).
+  Verified by reopening the post: Your Tasks badge is GONE and all
+  four visible tasks carry running countdowns (UR Rescue Missing Agent
+  02:00:03, both SSR Search for Missing Refugees 01:00:06, SSR Protect
+  Refugee Camp 01:00:13), and the Mega Refresh / Mega Deploy buttons
+  are greyed out. All 8 tasks are deployed. Note for the next unit:
+  when every checkbox arrives already green-checked with UR Only OFF,
+  no hand re-checking is needed - the standing re-check rule covers
+  the case where unchecking UR Only resets the boxes, which did not
+  happen here.
+- Reward Recovery: the Recover button carried a red dot. The REWARD
+  RECOVERY panel held a claimable record 2026-11-6 18:00 - "OVER THE
+  PAST 1 DAYS, YOU HAD 8 UNSTARTED SECRET TASKS. WE'VE SINCE
+  COMPLETED THEM FOR YOU AND RECOVERED SOME OF THE REWARDS." Claim
+  tapped; CONGRATULATIONS panel verified. Rewards claimed: Treasure
+  Map Fragments 3 + 3 + 1 + 1, Mystery Supply Box x224, puzzle piece
+  x2, chest x315, Skill Medal 1.2K, blue triangle 1.0K, iron 406 +
+  1.3M, Hero EXP 13.8M, Lv.1 chest x10, food 1.3M. (Item identities
+  for the crate/chest icons are as shown on screen; the 2026-10-24
+  19:00 record below it was already CLAIMED per the activity metadata
+  and was not touched.)
+- Not performed: ally assists (0/5, Ally Tasks badge 5) were not
+  used - the token lease expired at 15:01 during this unit and the
+  pass budget ended before the Ally Tasks tab could be worked. They
+  carry to the next secrets unit.
+- Game left safe: base screen. No diamonds, money or other spending;
+  no Mega Refresh tapped; no alliance diplomacy, no assembly, no
+  teleport. Plunder Others was not touched (PvP, needs owner
+  instruction).
+
+## What the 2026-11-08 1907 secrets unit added - 8 finished claimed, 8 pending Mega Deployed, ally assists 5/5, new duel week Radar Training day 1
+
+- Unit secrets-2026-11-08-1457 by ticker-1851, about 18:59 to 19:07
+  local, status done - 8 finished tasks claimed, 8 pending tasks
+  Mega Deployed, ally assists 5/5. Session cc-149 on the owner Mac
+  mini. Evidence in
+  `_records_/2026-11-08/secret-missions/1907-queue-run.md` (commit
+  cff344153 on records/2026-11-08). Tracker untouched.
+- Duel posture (tools/duel.py): new duel week, day 1, theme Radar
+  Training, day ends 2026-11-09 18:00 PT. Secret tasks are not in
+  today's scoring list (radar tasks, stamina, drone parts, world map
+  gathering, chip chests), so the duel-day Mega Refresh rule does not
+  apply; normal Mega Deploy is the default. No Mega Refresh tapped.
+- Secret Command Post opened from the base left-column slot at norm
+  53,625, title verified. Live state at entry: Assist Allies 0/5,
+  Plunder Others 0/5, Your Tasks badge 16, Ally Tasks badge 5.
+- Claimed the 8 finished tasks deployed by ticker-1434 at about
+  15:00 (UR Rescue Missing Agent 2h, 2x SSR Search for Missing
+  Refugees 1h, SSR Protect Refugee Camp 1h, 4x 30-minute retrieves).
+  One Claim tap collected all finished tasks at once; the four
+  visible cards now carry gold PERFECT stamps. The congratulations
+  panel listed four ally helpers (JAGX twice at 16:03, Aldiina at
+  17:33, one more above the fold) and was dismissed with Like All
+  (all four rows show blue thumbs-up).
+- The claim of the 8 finished tasks paid no itemized reward list:
+  the congratulations panel showed ally helpers, not rewards. The
+  four visible cards displayed these rewards before claiming - UR
+  Rescue Missing Agent (fragment x2, chest x27, Hero EXP 4.1M, blue
+  triangle 800, chest 300), SSR Search for Missing Refugees x2
+  (fragment x1, chest x27, Hero EXP 2.4M, puzzle piece x1, medal
+  870), SSR Protect Refugee Camp (fragment x1, chest x27, Hero EXP
+  2.4M, iron 1.9M, food 1.9M) - but those are the cards' displayed
+  rewards, not a confirmed received total, and the four 30-minute
+  retrieve cards below the fold were not read before the claim. No
+  received total is asserted for the claim.
+- Reward Recovery checked: the 2026-11-6 18:00 record reads CLAIMED
+  (claimed by ticker-1434); the 2026-10-24 record is settled. No new
+  recovery record exists; nothing claimed here.
+- Mega Deploy: the MEGA DEPLOY REMINDER panel listed 8 pending
+  tasks, every checkbox already green-checked and UR Only OFF. The
+  8 tasks: SSR Search for Missing Refugees 01:00:00 x2, Train
+  Refugees 01:00:00, SSR Protect Refugee Camp 01:00:00, Retrieve
+  Agent Profile 00:30:00, Retrieve Abandoned Gear 00:30:00,
+  Retrieve Raw Materials 00:30:00, Retrieve Valuable Supplies
+  00:30:00 - all 2 heroes each, no UR task in this batch. Perform
+  Now tapped once; the panel closed and the screen jumped to the
+  world map (same behaviour as ticker-1434). Verified by reopening
+  the post: Your Tasks badge is GONE, the four visible tasks carry
+  running countdowns (01:00:11, 01:00:19, 01:00:21, 01:00:33), and
+  Mega Refresh / Mega Deploy are greyed out. All 8 tasks deployed.
+- Ally assists 5/5, all SSR rows from [AP3x]namolla, each paid on
+  the spot:
+  1. Mystery Supply Box x3, Refined Iron Module x29, Hero EXP 247.7K
+  2. Iron 195.0K, Mystery Supply Box x3, Food 195.0K, Hero EXP
+     247.7K (banner: Alliance Gift (SSR) received!)
+  3. Mystery Supply Box x3, Hero EXP 247.7K, Skill Medal x87
+  4. Mystery Supply Box x3, Hero EXP 247.7K, Skill Medal x87
+  5. Mystery Supply Box x3, Upgrade Ore x48, Resource Chest x15,
+     Hero EXP 247.7K
+  Assist totals (summed from the five live popups): Mystery Supply
+  Box x15, Hero EXP 1,238.5K, Skill Medal x174, Refined Iron Module
+  x29, Iron 195.0K, Food 195.0K, Upgrade Ore x48, Resource Chest
+  x15. Counter verified 5/5 at close; the Ally Tasks badge is gone.
+  The list refills as assists are used (a Dogo row appeared after
+  the fourth assist), so further rows exist but the daily cap is
+  reached.
+- BADGE RULE (new, measured 2026-11-08): the Ally Tasks badge counts
+  remaining assists (5 at 0/5, 2 at 3/5, gone at 5/5), not the number
+  of rows: four rows stay visible while the list refills. See the
+  Ally assists standing section.
+- Power: base read 149,209,253 at 18:52; a world-map OCR read after
+  Perform Now suggested 149,109,253. The digit is uncertain from the
+  downscaled screenshot, so no drop is asserted. The 641,100
+  step-down from 16:58 noted in the 18:30 zero sweep stays
+  unexplained.
+- Plunder Others 0/5 untouched (PvP, needs owner instruction).
+- Correction note (same pass, 19:08): the first draft of the record
+  was written with estimated times (19:15 finish, 15 minutes) and
+  the file was first named 1915-queue-run.md. The live clock showed
+  19:07 at close and the unit's structured result records 02:59:33Z
+  to 03:07:07Z, 454 seconds. The file was renamed to
+  1907-queue-run.md and the times corrected. Nothing about the play
+  changed.
+- Game left safe: base screen. No diamonds, money, speedups or paid
+  buttons used. No login or verification demanded, no
+  different-device dialog appeared.

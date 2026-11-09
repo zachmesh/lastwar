@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T16:37:41Z
+modified: 2026-11-09T03:32:17Z
 level: L1
-version: 1.27.0
+version: 1.29.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -31,6 +31,8 @@ grounded_in:
   - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, Winter Battlefield Rewards, Rules and Shop Honor tab read live); record commit 50389b4b4a on records/2026-11-08
   - source: ticker-0634 event-claims execution record 2026-11-08 0656 queue run (partial, Doomsday first-kill tiers Lv.100-140 claimed, Frontline rewards unclaimable); record commit 9669d391ea on records/2026-11-08
   - source: ticker-0734 perception-scout execution record 2026-11-08 0734 queue run (partial, Winter Battlefield History and Achievement read live; Doomsday guardian rotated to Nuna Knuckles 6.5G, Warzone Threat 43); record commit 8dcbdf92b9 on records/2026-11-08
+  - source: ticker-1434 event-claims execution record 2026-11-08 1506 queue run (done, full Events hub sweep of all 5 tabs, no reward claimable anywhere, Doomsday guardian 7.6G, Warzone Threat 23); record commit dfd3c87f9 on records/2026-11-08
+  - source: ticker-1851 event-claims execution record 2026-11-08 1914 queue run (partial, new event The Age of Oil discovered, milestone 1 claimed, milestone 2 chest unresponsive blocker class c, Arms Race Base Building 0 points, Desert Storm Battle Day 2026-11-13; record commit cff344153 on records/2026-11-08)
 ---
 
 
@@ -1063,3 +1065,129 @@ that drag is the sweep-completeness check, not wasted motion.
   and 13:00-15:00 (same as the 0656 read); Match greyed; Base level 15+.
 - Game left safe: nothing claimed, fought, dispatched, donated, boarded
   or bought in this unit.
+
+## What the 2026-11-08 1506 events unit added - full hub sweep of all 5 tabs, no reward claimable anywhere
+
+- Unit events-2026-11-08-1057 by ticker-1434, about 15:00 to 15:06
+  local, status done - full sweep of the Events hub, all 5 tabs
+  opened and read live, no reward claimable anywhere. Evidence in
+  `_records_/2026-11-08/event-claims/1506-queue-run.md` (commit
+  dfd3c87f9 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-135 on the owner Mac mini, LastWar
+  already running. Note: the token lease from the previous unit
+  expired at 15:01:09Z and was re-acquired at 15:01:44Z (fresh lease
+  to 15:16:48Z) before this unit's game work began; no other pass
+  could have taken it in between (the 15:04 tick fired while the new
+  lease was live). No device-access error, no different-device
+  dialog, no login demanded. Total Power read live on base at entry
+  and at close: 149,850,353.
+- Tab set today: Arms Race, Frontline Breakthrough (badge 1), Winter
+  Battlefield, The Doomsday, Community. No Zombie Invasion tab
+  (event ended 2026-10-30, chain closed) and no Desert Storm
+  Battlefield tab in the current rotation.
+- Arms Race (Tech Research stage, Contest Segment Lv.29-30): score 0,
+  rank #2110 [AP3x]Bears Lair, stage countdown 02:57:24. Point chests
+  at 6,250 / 12,500 / 30,000 all unreached. The 0/2 chest counter at
+  the top is unread (meaning not established this unit). No grinding
+  done (research speed-ups and diamond packs are costs, not claims).
+- Frontline Breakthrough (badge 1): Saving Soldiers 100%, countdown
+  02:47:01. Rewards panel read in full: three Play Frontline
+  Breakthrough rows at 0/3, 0/2 and 0/1, all Claim buttons greyed -
+  nothing claimable without playing the Challenge mini-game, which is
+  grinding and not part of a claim round. The tab badge 1 marks
+  unplayed Challenge attempts (the Challenge button carries a red
+  dot), not a claimable reward - re-confirmed, matching the 0011
+  scout read. Challenge was not played.
+- Winter Battlefield (5v5): Event is starting soon, countdown
+  02:56:09; windows 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09
+  13:00-15:00 (same as the 0656 and 0734 reads); Match greyed.
+  Rewards panel read: currency 0, chests at 45,000 / 90,000 /
+  135,000 points, objectives all battle-dependent (complete a
+  battlefield +10.0K, individual points +17.5K-52.5K, commendations
+  +21.0K-45.0K, achievements +2.4K-3.5K). Nothing claimable.
+- The Doomsday: countdown 02:55:15, Warzone Guardian [AP3x]Nuna
+  Knuckles Total Damage 7.6G (was 6.5G at the 0734 read - the
+  guardian's damage rose, not rotated), Alliance Threat (0), Warzone
+  Threat (23) (was 43 at 0734), Threat Neutralized. Rewards panel
+  read: all five Warzone's first Kill tiers (Lv.100 to Lv.140 Doom
+  Walker) show green checks - already claimed. Ranking Reward tab
+  read: rank reward table only (No.1 50/50/50, No.2 45s, No.3-5 40s,
+  No.6-10 below), no Claim button - pays at settlement.
+- Community: 500 Diamonds row reads Claimed (Discord binding reward,
+  as recorded in the metadata). Nothing new.
+- Final sweep: no bouncing chest and no reward red dot remained on
+  the Events screen after the tab checks, except the Frontline
+  Breakthrough badge 1, which is the unplayed-Challenge marker
+  recorded above.
+- Game left safe: base screen. No diamonds, money or other spending;
+  no Challenge mini-game played, no Arms Race grinding.
+
+## What the 2026-11-08 1914 events unit added - new event The Age of Oil discovered, milestone 1 claimed, milestone 2 chest unresponsive, Arms Race Base Building 0 points
+
+- Unit events-2026-11-08-1457 by ticker-1851, about 19:08 to 19:14
+  local, status partial - a new event discovered and one of its two
+  stage-1 milestones claimed; the second chest did not respond to
+  five attempts. Session cc-149 on the owner Mac mini. Evidence in
+  `_records_/2026-11-08/event-claims/1914-queue-run.md` (commit
+  cff344153 on records/2026-11-08). Tracker untouched.
+- NEW EVENT DISCOVERED - "The Age of Oil" (first tab of the Events
+  hub, new this reset day). Opening the Events hub played a
+  full-screen intro cutscene (worker, gold coins), then the app
+  reloaded to the hub on its own (LAST WAR logo screen). The event
+  page shows a 4-stage track (stage 1 active), 6d 22:48 left, and an
+  "Achievements 8/16 Completed" toast. A Farhad / Gump story dialog
+  (4 lines advanced) blocked the page until dismissed. Knowledge
+  Issue #477 filed (label knowledge) for the new event and the chest
+  below; no activity metadata exists for it yet - an exploration unit
+  and a new _activities_ profile are owed per the perception-driven
+  queue design. Commented on Issue #477 by this run with the fold.
+- Age of Oil milestone 1 claimed - "Unlock Tech: The Age of Oil",
+  Complete a total of 500 Tech Research in this Warzone, 850/500:
+  CONGRATULATIONS paid coin chest x3, red diamond x50, Oil 3.0K x6,
+  5-minute speedup x2. The tab badge fell from 2 to 1 and the stage
+  1 badge from 2 to 1.
+- Age of Oil milestone 2 NOT claimed - "Unlock Stage: Base Expansion
+  II", Complete a total of 500 Building Upgrades in this Warzone,
+  5090/500, gold chest still showing, stage badge still 1. Five
+  attempts, four methods, all no-change: single tap on the chest
+  centre x2, 1-second long-press, tap on the stage-1 hexagon node,
+  double-click on the chest. The sibling chest on Unlock Tech opened
+  on a single tap, so the method works; this chest does not respond.
+  Blocker class c (tap method) turning into a repeated blocker -
+  next events unit must try a different entry route (the achievements
+  panel, the card detail page, or a fresh hub open) before tapping
+  this chest again.
+- Arms Race checked - Base Building phase, Contest Segment Lv.29-30,
+  score 0, point chests 6,250 / 12,500 / 30,000 all unreached,
+  cumulative chest 0/2, phase timer 02:45:50, warzone rank 9
+  (#2110 [AP3x]Bears Lair, 0 points). Nothing claimable. Scoring
+  paths are building power +1, 1-min construction speedup +10
+  (burning items, not done) and diamond packs +30 (paid, not done).
+  Arms Race grinding is the arms-race unit's job, not this claim
+  round.
+- Desert Storm Battlefield checked - registered in Squad [A],
+  "Enlisted" stamp, Battle Day 2026-11-13 03:00-03:30, Participants
+  20/20. Nothing to claim; the tab's "New" badge was the
+  registration confirmation. TAB-SET NOTE: the Desert Storm tab is
+  present in the new reset day's hub - the 1506 sweep (old reset day)
+  listed no Desert Storm tab in the current rotation, so the tab set
+  changed at the 18:00 reset, or the 1506 sweep missed it; the next
+  full sweep re-verifies the tab list.
+- Tabs NOT swept this unit - Winter Battlefield, Level Swap, Wanted
+  Boss, Community. The 15:06 sweep found nothing claimable on any of
+  them; this unit did not re-verify them. They carry to the next
+  events unit.
+- Power step-down, open observation for the retro: base read
+  149,209,253 at 18:52; base read 149,109,253 at about 19:08 - a
+  100,000 step-down inside this pass, unexplained; no battle, loss
+  or spend was observed in this pass. The 641,100 step-down from
+  16:58 noted in the 18:30 zero sweep is likewise unexplained. Worth
+  a retro look, not an in-unit chase. (The secrets unit's world-map
+  OCR read of the same figure is uncertain from the downscaled
+  screenshot, so no drop is asserted from that read; this unit's two
+  base reads are both base-screen reads.)
+- No diamonds, money, speedups or paid buttons used. No login or
+  verification demanded, no different-device dialog appeared. The app
+  reload after the intro cutscene lost no state.
+- Game left safe: base screen. No Challenge mini-game played, no
+  Arms Race grinding.

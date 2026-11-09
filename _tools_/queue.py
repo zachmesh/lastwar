@@ -745,23 +745,26 @@ def cmd_sync(args):
               f"problem(s) - repair the unit files and re-run "
               f"(issue #441)", file=sys.stderr)
         return 1
-    # 1. reap expired claims, expire stale inbox units, and drop
-    # inbox copies of units already closed in done (issue #213)
-    reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root)
-    stale_done_dropped = _drop_done_duplicates(args.root)
-    # Branch reconciliation (issue #446): drop inbox copies of
-    # units already closed on today's delivered records branch.
-    # A unit completed in a detached worktree lands its done
-    # record on the branch, never in this pool, so the local drop
-    # above cannot see it - without this step the next tick hands
-    # the same unit out again. A branch that cannot be read warns
-    # and the tick continues on local state only.
+    # Branch reconciliation (issue #446) is fetched FIRST, before
+    # expiry (issue #465): a unit whose true done record lives
+    # only on the delivered records branch must not take a bogus
+    # local expiry - _expire_stale drops its stale inbox copy
+    # instead. A branch that cannot be read warns and the tick
+    # continues on local state only.
     branch = "records/%s" % datetime.now(LOCAL_TZ).date().isoformat()
     branch_done, branch_warning = records_branch_done_units(
         args.root, branch)
     if branch_warning:
         print(f"warning: {branch_warning} (issue #446)", file=sys.stderr)
+    # 1. reap expired claims, expire stale inbox units, and drop
+    # inbox copies of units already closed in done (issue #213).
+    # A unit completed in a detached worktree lands its done
+    # record on the branch, never in this pool, so the local drop
+    # below cannot see it - without the branch drop the next tick
+    # hands the same unit out again.
+    reaped = _reap_claimed(args.root)
+    expired = _expire_stale(args.root, branch_done, branch)
+    stale_done_dropped = _drop_done_duplicates(args.root)
     branch_done_dropped = drop_branch_done_duplicates(
         args.root, branch_done, branch)
     # Screen-blocking overlay (issue #436): drop blockers whose
@@ -1152,7 +1155,8 @@ def _produce_for_window(root, item, planned_local, window="",
     records branch or in another worktree, and minting a fresh
     unit with the same deterministic id would re-execute it
     (issue #466). Callers that pass no closed set keep the old
-    behaviour; plan wires its own set under #465."""
+    behaviour; plan passes its own set (issue #465) and sweep
+    keeps the old behaviour."""
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -1281,7 +1285,7 @@ def _reap_claimed(root):
     return moved
 
 
-def _expire_stale(root):
+def _expire_stale(root, branch_done=None, branch=None):
     """Inbox units whose window has fully passed move to done with
     status expired - the next window's unit supersedes them, and the
     statistics keep the miss visible instead of losing it. The
@@ -1295,12 +1299,30 @@ def _expire_stale(root):
     with an expiry (queue-planning 1457 follow-up). A completion
     marker for the same unit counts as a done record here (issue
     #438): the unit closed in another worktree, so expiry must not
-    overwrite that result either."""
+    overwrite that result either. A unit id in branch_done counts
+    the same (issue #465): the unit closed on the delivered
+    records branch, so expiry must not overwrite that result with
+    a bogus miss either - the stale inbox copy is dropped
+    instead. Callers that pass no branch set keep the old
+    behaviour; sync and plan fetch the branch first and pass it."""
     moved = 0
     stamp = now_utc()
     for f in list_units(root, "inbox"):
         expires = parse_iso(f.get("expires_at", ""))
         if expires and expires <= stamp and f.get("unit"):
+            if branch_done and f["unit"] in branch_done:
+                # The unit already closed on the delivered records
+                # branch (issue #465): writing an expiry here
+                # would clobber that executed result with a miss,
+                # the same bug class the done-exists branch guards
+                # for a local record.
+                print(f"warning: {f['unit']} already done on "
+                      f"{branch or 'the records branch'} - dropping "
+                      f"the stale inbox copy instead of "
+                      f"overwriting it with an expiry",
+                      file=sys.stderr)
+                os.remove(unit_path(root, "inbox", f["unit"]))
+                continue
             done_path = unit_path(root, "done", f["unit"])
             if os.path.exists(done_path) or has_completion_marker(
                     root, f["unit"]):
@@ -1535,9 +1557,22 @@ def cmd_plan(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
+    # Branch reconciliation (issues #446, #465): fetch today's
+    # delivered records branch first, so expiry drops (never
+    # expires) inbox copies already closed on the branch and
+    # staging below skips their slots. A branch that cannot be
+    # read warns and the run continues on local state only.
+    branch = "records/%s" % datetime.now(LOCAL_TZ).date().isoformat()
+    branch_done, branch_warning = records_branch_done_units(
+        args.root, branch)
+    if branch_warning:
+        print(f"warning: {branch_warning} (issue #446)",
+              file=sys.stderr)
     reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root)
+    expired = _expire_stale(args.root, branch_done, branch)
     stale_done_dropped = _drop_done_duplicates(args.root)
+    branch_done_dropped = drop_branch_done_duplicates(
+        args.root, branch_done, branch)
     defs_path = args.regulars_json or os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "regulars.json")
     with open(defs_path, encoding="utf-8") as fh:
@@ -1573,7 +1608,19 @@ def cmd_plan(args):
     due_now = {i["id"]: bool(i.get("due"))
                for i in tracker_doc.get("items", [])}
     horizon_end = now_local + timedelta(hours=args.hours)
-    planned, present, skipped_done = [], 0, 0
+    # Closed slots (issue #465): a slot already closed on the
+    # delivered branch or by a live completion marker is not
+    # staged at all - the tracker has no per-slot done state for
+    # fixed-slots regulars, so without this the planner re-stages
+    # a slot another worktree already executed, exactly what the
+    # 1340 run did to training/donations/arms-race-2026-11-08-1003.
+    # Markers are read after the step-1 reap, so only live
+    # markers count.
+    closed = {unit: "done on %s" % branch for unit in branch_done}
+    for unit in completion_marker_units(args.root):
+        closed.setdefault(unit, "completion marker in another "
+                                "worktree")
+    planned, present, skipped_done, skipped_closed = [], 0, 0, []
     for item in regs:
         current = cycle_start_local(item, now_local)
         for w in plan_windows(item, now_local, horizon_end):
@@ -1586,9 +1633,12 @@ def cmd_plan(args):
                 skipped_done += 1
                 continue
             unit = _produce_for_window(
-                args.root, item, w, duel_window_text(item["id"], w))
+                args.root, item, w, duel_window_text(item["id"], w),
+                closed_ids=closed)
             if unit:
                 planned.append(unit)
+            elif _unit_id_for_window(item, w) in closed:
+                skipped_closed.append(_unit_id_for_window(item, w))
             else:
                 present += 1
     # Window aged unscheduled priority-1 units (issue #128) - plan
@@ -1601,9 +1651,12 @@ def cmd_plan(args):
     print(json.dumps({"horizon_hours": args.hours, "reaped": reaped,
                       "expired": expired,
                       "stale_done_dropped": stale_done_dropped,
+                      "branch_done_reconciled": branch_done_dropped,
+                      "branch_done_reconcile_warning": branch_warning,
                       "planned": planned,
                       "already_present": present,
                       "skipped_done_current": skipped_done,
+                      "skipped_closed": skipped_closed,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
