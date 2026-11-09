@@ -2058,3 +2058,16 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   and learned, so no game session was opened for this unit. The
   duplicate is recorded in Issue #506. Full detail in
   survey-center-tab/1120-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-09-1100
+  (BATCH). Checker due yes (plain and merge-aware) -
+  batch window 11:00-12:00. Records PR 493 merged
+  (merge commit 0649bce8, 153 commits, branch kept).
+  Records PRs 351 and 301 still CONFLICTING on the same
+  single file at unchanged heads, carried, follow-up
+  comments posted. Tools PR 425 owner-gated, re-verified
+  CLEAN against the new main, OD-20261108-01 still open,
+  no new escalation. Merge-time action-log line committed
+  with a repair of concatenated line 1351. Status: done.
+  Full detail in
+  pr-integration/1100-run.md.
