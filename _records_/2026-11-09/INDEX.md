@@ -280,3 +280,29 @@ of 2026-10-28.
   (OD-20261108-01 open). No Slack sync by this run (no merges,
   no new escalation; silent in chat).
   Full detail in pr-integration/0130-run.md.
+
+## 01:32 to about 01:46 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-09-0132.
+  Own PR 495 MERGED with 0 comments and 0 reviews, so no open
+  own PR carries integrator feedback. Four substantive records
+  folded into four profiles as one commit on PR 496 (OPEN and
+  MERGEABLE, mergeState CLEAN): ticker-0034 arms-race 0058
+  (Unit Progression read live at 0, scoring Lv.10 unit +31,
+  Events entry (672,132), fill not executed) and help 0100
+  (Help All cleared one ally request, header 360/1,000
+  unchanged in-session, bubble tile (609,713) not the entry)
+  into arms-race 1.62.0 and alliance-help 1.31.0; ticker-0113
+  arms-race 0129 (Unit Progression read live again at 0,
+  third consecutive tent-grounding failure, phase ends about
+  02:00) and mail 0138 (Alliance and Event Claim All no
+  rewards, leader row Jerry Apex live, Mail button flaky)
+  into arms-race 1.62.0, mail-rewards 1.27.0 and
+  troop-training 1.31.0 (R2 metadata write: both failed tent
+  routes retired, entry route must change). The Unit
+  Progression phase effectively closes at 0 with the formal
+  miss verdict owed to the first unit after the phase ends.
+  Issues #150, #230 and #282 commented with the new
+  evidence; no new Issue filed. The 2026-11-09 daily retro
+  has not landed yet. Status: done. Full detail in
+  knowledge-organization/0132-run.md.
