@@ -4533,6 +4533,31 @@ of 2026-10-28.
   so no sync-back. Full detail in
   pr-integration/2130-run.md.
 
+## 21:39 to about 21:48 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-08-2139. No adopted open PR
+  (PR 137 stays merged). Five open PRs scanned, none owned by
+  this job: PR 478 (records 2026-11-07 post-1900-batch
+  appends, Owner lastwar-pr-integrator, clean at head 81905679
+  against new main 629c8b61 per the integrator 2045 note and
+  this pass merge-tree check), PR 460 (records 2026-11-08,
+  head moved to 95186ec3 on the pr-integration 2130 run record
+  commit, re-verified CLEAN against main 629c8b61 by this
+  pass merge-tree check, awaits the 2300 batch), PR 425
+  (tooling log gate, owner-gated on the policy amendment,
+  unchanged since the 2245 escalation, register item
+  OD-20261108-01 open, awaiting the owner decision), PRs 351
+  and 301 (still conflict with main on the single action-log
+  append, integrator 2045 re-checks carried). No PR merged and
+  none opened since the 2039 pass; main advanced 095211d4 to
+  629c8b61 on knowledge PR 481. No adoption, no fix, no
+  hand-off, no stale-owner flag. Issues: 75 open, all
+  class-labeled, six closed (165, 247, 401, 407, 410, 465) and
+  four created (482, 483, 484, 485) since the 2039 pass,
+  reconciled exactly; owner-decision issues 132, 154 and 335
+  all over 24 hours with statements current. Status: no-op.
+  Full detail in pr-catchall/2139-run.md.
+
 ## 21:40 to about 21:45 — Queue planning pass
 
 - Planner pass queue-planning-2026-11-08-2140. Plan staged
