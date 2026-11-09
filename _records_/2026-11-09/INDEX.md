@@ -1860,25 +1860,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   OD-20261108-01 still open, no new comment. Status: done.
   Full detail in pr-integration/0930-run.md.
 
-- Knowledge organization pass knowledge-organization-2026-11-09-0932
-  (done). Own PR 516 MERGED with 0 comments and 0 reviews, no
-  feedback to fix. Three substantive records folded into four
-  profiles on PR 518 (OPEN, MERGEABLE, CLEAN): building-queues
-  1.1.0 to 1.2.0 (0848 Builders Hut Lv.26 quest measured
-  read-only - Lv.25 to 26, Iron 170.0M, Food 56.9M, Original
-  Time 15d 08:05:18, Upgrade button 7d 07:16:49, Finish Now
-  18,188 diamonds, owner-decision Issue #517); radar-tasks
-  1.58.0 to 1.59.0 (0852 release - dish (51,726) first tap with
-  the camera still panned, 3 executed, 11 claimed, points 311
-  to 322, 12-task restore did NOT land as a batch, Iron Mine
-  pin claim first next unit); survivor-intake 1.41.0 to 1.42.0
-  (0926 gate line of 2, one intake by smiley bubble, Quick
-  Dispatch still not run); perception-scout 1.50.0 to 1.51.0
-  (0848 Builders Hut explored, 0606 unmatched list fully
-  resolved). Two corrections: radar entry precondition refined
-  (panned camera does not block the dish tap) and the 0335
-  restore-batch expectation superseded. No new Issues filed,
-  none commented. Defense Training VIII completion verification
-  still owed (first planner pass that can stage the new
-  regulars is 12:40 PT). Full detail in
   knowledge-organization/0932-run.md.
+- PR catch-all pass pr-catchall-2026-11-09-0939 (no-op).
+  Five open PRs scanned, none owned by this job. PRs 515 and 516
+  squash-merged at 1649Z; new PR 518 (knowledge fold, 0932)
+  opened during the pass and verified CLEAN at head d0bae0ac
+  against main 235fd869. PR 493 CLEAN at moved head 6fc93453,
+  awaits the 11:00 batch. PR 425 CLEAN but owner-gated,
+  OD-20261108-01 still open, no owner decision. PRs 351 and 301
+  still CONFLICTING on the single action-log append, fresh
+  integrator 0930 re-checks. No adoption, fix, hand-off or
+  stale-owner flag. Issues: 87 open, zero unclassified; new
+  owner-decision issue 517 (Builders Hut Lv.26 upgrade, no
+  deadline stated); owner-decision issues 132, 154 and 335
+  over 24 hours with statements current; issue 514 deadline
+  2026-11-12 18:00 UTC. Status: no-op. Full detail in
+  pr-catchall/0939-run.md.
