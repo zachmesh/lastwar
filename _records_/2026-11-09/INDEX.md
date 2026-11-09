@@ -2413,3 +2413,5 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Boss, Community). No check-in tab exists in the hub, so the
   shop FREE GIFT has no Events-hub route. Full detail in
   event-claims/1500-queue-run.md.
+
+- PR integration pass pr-integration-2026-11-09-1500 (done). BATCH pass (checker plain due yes, window 1500-1600 PT; merge-aware after the merge confirms PR 522 already merged in this window). Merged records PR 522 (post-1100 batch, 49 commits, merge commit 3f4c4f9edc). PR 425 CLEAN but owner-gated, OD-20261108-01 still open, no owner decision. PRs 351 and 301 still CONFLICTING on the single action-log append. Merge-time action-log line committed as 3a2d49632; fresh records PR 531 opened for the post-1500 batch, awaits the 19:00 batch. Status: done. Full detail in pr-integration/1500-run.md.
