@@ -4672,3 +4672,44 @@ of 2026-10-28.
   PR opened, no sync-back owed. No Slack DM sync, no
   chat report (non-batch run, silent). Full detail in
   pr-integration/2200-run.md.
+
+- Help unit help-2026-11-08-1830 (done): Help All pressed twice;
+  Alliance Help points 100/1,000 to 360/1,000 (plus 260). The
+  first press cleared the visible allies; a fifth row below the
+  fold (Abyss Apex, Lv.28 Oil Well) needed the second press.
+  Learning: the points header does not update inside one open
+  Help session - closing figures must be read after a page
+  reopen (explains the 1413 record's 0/1,000 anomaly); the
+  list does scroll, correcting the 1413 claim that it does
+  not. Full detail in alliance-help/2214-queue-run.md.
+
+- Train unit train-2026-11-08-1830 (partial): no train in
+  preparation - no train icon in the left column, no
+  "Boarding closes in" banner; checked only, no boarding.
+  Full detail in alliance-train/2211-queue-run.md.
+
+- Duel-score unit duel-score-2026-11-08-1830 (done): personal
+  duel total read live twice, both 0. This 18:30-slot unit
+  executed after the 19:00 reset, so it reads the new duel
+  day (Radar Training, 19:47 left), not the closing figure
+  of the day that ended at 19:00; gap 3,600,000 vs the
+  3,600,000 owner target. Alliance trails [TFox] Fox
+  261,068,886 to 380,634,584. No Star Ceremony waiting.
+  Full detail in alliance-duel/2220-queue-run.md.
+
+- Star-ceremony unit star-ceremony-2026-11-08-1830 (done):
+  no trophy icon on the base screen, no ceremony waiting.
+  Gap: EVENT 40 was left at step 10/13 at 14:32 with the
+  trophy present, and no record shows steps 11-13, the
+  finale or the Participation Prize being claimed, yet the
+  trophy is gone - filed as Issue #488 (class records).
+  Full detail in alliance-duel/2218-queue-run.md.
+
+- Survivors unit survivors-2026-11-09-0446 (partial): gate
+  line unverified. No question-mark bubbles at the gate;
+  one lone figure with no bubble, whose tap opened an
+  "Area No.168" dialog (a zombie woman's line, not a
+  recruit card). No intake, Quick Dispatch not run; the
+  standing survivor blocker continues (24th consecutive
+  partial; commented on Issue #168). Full detail in
+  survivor-intake/2227-queue-run.md.
