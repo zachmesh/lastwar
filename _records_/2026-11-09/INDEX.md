@@ -979,3 +979,25 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   commented with the fold. The 2026-11-09 daily retro has
   not landed yet. Status: done. Full detail in
   knowledge-organization/0432-run.md.
+
+## 04:40 to about 04:47 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0440. Plan staged
+  1 net fresh unit (already_present 60,
+  skipped_done_current 0, reaped 0, expired 0,
+  stale_done_dropped [passes-2026-11-09-0257,
+  star-ceremony-2026-11-09-0230],
+  branch_done_reconciled [duel-score-2026-11-09-0230,
+  gifts-2026-11-09-0230, harvest-2026-11-09-0203,
+  help-2026-11-09-0230, mail-2026-11-09-0230,
+  survivors-2026-11-09-0203, train-2026-11-09-0230,
+  training-2026-11-09-0203], no phantom re-stage, 14
+  branch-closed slots skipped) - the zero-sweep 1630 unit,
+  chain seq 1 of tonight's pre-reset sweep pair. Pre-reset
+  sweep production skipped (not the 17:00 run); final pass
+  due from a later plan run or the 17:00 run; last night's
+  pair executed 2 of 2 (both partial). Scout diff applied
+  with zero changes (unexplained 4: Inventory dot, 99+
+  badge, skull timer, hammer 1/4). No withdrawals. Pool
+  inbox 62, claimed 0, done 1327. Status: done. Full
+  detail in queue-planning/0440-run.md.
