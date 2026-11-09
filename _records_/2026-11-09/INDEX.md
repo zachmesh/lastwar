@@ -1959,3 +1959,16 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   cycle; the next mail unit resumes with those. Windowed-mode
   taps work - the Mail button opened at once at (932, 791).
   Tracker untouched. Full detail in mail-rewards/1031-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-09-1015
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. No
+  knowledge/code PRs merged. Records PR 493 re-probed CLEAN
+  at head 37a3dbac against unchanged main 9aa9b5aa, re-check
+  comment posted, awaits the 11:00 batch. Records PRs 351
+  and 301 still CONFLICTING on the same single file at
+  unchanged heads, carried, re-check comments posted. Tools
+  PR 425 owner-gated, re-verified CLEAN against unchanged
+  main 9aa9b5aa, OD-20261108-01 still open, no new
+  escalation. Status: done. Full detail in
+  pr-integration/1015-run.md.
