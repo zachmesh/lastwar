@@ -4182,6 +4182,23 @@ of 2026-10-28.
   _logs_/repo-actions/action-log.jsonl, re-probed, no
   repeat comments.
   Full detail in pr-integration/2030-run.md.
+- Integrator pass pr-integration-2026-11-08-2045.
+  NON-batch pass for records (checker: not due, outside
+  every batch window, next batch 23:00 PT). Knowledge PR
+  481 squash-merged (4 profile INDEX.md files, versions
+  1.30.0/1.46.0/1.53.0/1.42.0); main 095211d4 to
+  629c8b61. Records PR 460 head moved to cd396b38,
+  re-verified CLEAN, re-check commented, awaits the
+  23:00 batch. Records PR 478 CLEAN, re-verified,
+  awaits the 23:00 batch. Tools PR 425 still
+  owner-gated, clean, no owner decision (open
+  owner-decision issues checked: none covers it),
+  re-verification commented. Records PRs 351 and 301
+  still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-checks posted.
+  Sync-back of merged main deferred: local checkout on
+  work/ops-execution-records with a dirty tree, no force.
+  Full detail in pr-integration/2045-run.md.
 - Passes unit passes-2026-11-08-1457 (done): shop claims for the new
   reset day, run late (14:57 slot, expiry 18:57, finished 18:58).
   Hot Deals free pack claimed - Drone Great Value Pack (Drone Parts
