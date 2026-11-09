@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-09T04:32:17Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.46.0
+version: 1.47.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -66,6 +66,7 @@ grounded_in:
   - source: ticker-1604 perception-scout execution record 2026-11-08 1615 queue run (partial, station panel re-check, twelfth no-train confirmation, Wars dot absent with empty Rally Intel, sixth same-day datapoint for Issue 212, return-pass dot re-check; record commit d8b700b90 on records/2026-11-08)
   - source: ticker-1646 perception-scout execution record 2026-11-08 1704 queue run (partial, Events hub strip verified at both ends, Arms Race Tech Research read live, Frontline dot unexplained; record commit 9978e09a8 on records/2026-11-08)
   - source: ticker-1822 perception-scout execution record 2026-11-08 1839 queue run (done, station re-check fourteenth no-train confirmation, Wars dot present with a rally waiting then cleared on return, fullscreen tap failure filed as tooling Issue #475; record commit 41fd5d472 on records/2026-11-08)
+  - source: ticker-0140 perception-scout execution record 2026-11-09 0150 queue run (partial, station panel and Wars dot, leader Jerry Apex re-confirmed live, members 96/100, Wars dot absent seventh datapoint, sixteenth no-train, skull timer new unexplained signal filed as Issue #498, fullscreen tap failure re-confirmed; record commit 3d5dc8314 on records/2026-11-09)
 ---
 
 
@@ -3560,3 +3561,16 @@ observe-only, nothing claimed). Evidence in
   observation_id, no input lost. No session drop, no
   device-access error, no different-device dialog, no login
   demanded. LastWar was already running in its 642x951 window.
+
+## What the 2026-11-09 0150 unit added - leader Jerry Apex re-confirmed, Wars dot absent seventh datapoint, sixteenth no-train, skull timer new unexplained signal (Issue #498), fullscreen tap failure re-confirmed
+
+- Unit scout-scout-2026-11-02-017 by ticker-0140, about 01:41 to 01:50 local, status partial. Evidence in `_records_/2026-11-09/perception-scout/0150-queue-run.md` (commit 3d5dc8314 on records/2026-11-09) and the appended section of `_records_/2026-11-09/perception-scout/observation.md`. Observe-only throughout; nothing claimed, fought, dispatched, donated, dug or bought. No successor unit is enqueued from this stale-chain unit under the (regular, planned_for) anti-duplication invariant.
+- Alliance panel read live about 01:54: [AP3x] The Apex, Overall Rating 5.0, Leader Jerry Apex, Power 13,532,886,654, Members 96/100, Language English. Leader change confirmed live a second time (the 0113 mail unit read it first) - was Abuss Apex / Texan Apex in earlier records. Members 96/100 (was 95/100 at the 18:40 read on 2026-11-08). Panel dots: Help, Alliance Gifts only; NO dot on Alliance Wars, Members, Alliance Store, Alliance Techs, Assemble, Strength Ranking, Alliance Events or Alliance City.
+- Wars dot, Issue #212: ABSENT on Alliance Wars. Seventh same-day datapoint (absent 12:43, 15:45 and 16:15; present with a rally waiting at 18:39, cleared on return). No rally waiting per the dot signal. The Rally Intel tab itself was not opened this unit; the tab read belongs to the alliance group remainder of the current day's scout pass.
+- Station / train: sixteenth same-day no-train confirmation, fourteenth in chain scout-2026-11-02. Both preparation signals absent: no "Boarding closes in" banner under the resource bar, no train icon in the left column. The blue bus icon at (55,573) opens the TRUCKS screen, not the station - re-confirming the 2026-10-28 / 2026-11-01 entry-icon correction (the 1813 unit hit the same). Mail corroboration: DCna8ive's train arrived 1h ago and departed 3h ago, so the last train already ran.
+- Trucks screen, opened by the bus-icon tap (observed only): "Today's Trade Count: 0/5"; "Filter out trucks from your Warzone" checked; a truncated "Important: President HawksMav appointe..." banner; History button top-right; four yellow trucks shown with blue cargo icons; "Mega Mode" button; tabs "Others' Trucks" (badge 4) and "Your Truck" (badge 4, selected); Recover button (red dot) bottom-left. Nothing dispatched, nothing claimed: the trucks regular owns this surface and trucks-2026-11-08-2257 is already in the inbox.
+- NEW unexplained signal, about 01:57: a skull icon with a red badge 1 and a 00:00:24 countdown appeared at the right edge mid-screen on the base view. Meaning unverified - not opened (observe-only), carried to the current day's scout pass. Not the first sighting: the 2026-11-07 1828 star-ceremony read saw a red target/skull icon with countdown 00:00:29 and badge 2, and the 0202 harvest and 0159 radar units of this same pass saw it again (badges 4 and 1/4/2, timers about 00:00:23-00:00:28). Filed as knowledge Issue #498 by this run (badge count and timer do not behave like a single countdown; the radar orange skull pins may be the same signal, hypothesis only).
+- Fullscreen tap failure re-confirmed, Issue #475 (tooling): in fullscreen 1920x1080 a tap at (838,700) on the Alliance icon did nothing, while the mail back arrow at (323,951) worked in the same geometry - the failure is button/area-specific, not total. After View menu, Exit Full Screen, the Alliance button opened at once at (931,705) in the 642x951 window. Never use Ctrl+Cmd+F or Esc on this app (crash risk). Commented onto Issue #475 by this run.
+- Red dot accounting: 10 badge signals seen, 6 explained (Events 3 to events / arms-race; Alliance dot as the Help + Gifts roll-up; Help dot to the help regular; Gifts dot to the gifts regular; bus-icon dot to the trucks regular, unit queued; Mail dot to the mail regular, System / Regular / Battle Report still unwalked per the 0113 record), 4 unexplained (Inventory dot, 99+ badge, skull badge 1 with the 00:00:24 timer, hammer 1/4 counter). Unknown items 2: furnace overdrive toast (not re-read this unit); skull timer meaning (Issue #498).
+- Figures read live: power 149,209,253 (unchanged from the 0113 read); food 513.8M, iron 838.3M, coin 25.2M, diamonds 6,027; 13.22K with a plus button; stamina 60 rising to 61. VS timer 16:16:29, Season II 6d 16:16:29. Task: "Upgrade Builder's Hut to Lv.26 [0/1]". No diamonds or money spent. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 2, achieved 2, resources_gained none, costs about 9 minutes of unit time, no items spent, verified yes, blocker_category c.

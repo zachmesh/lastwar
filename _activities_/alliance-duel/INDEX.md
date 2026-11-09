@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T06:32:17Z
-version: 1.31.0
+modified: 2026-11-09T10:32:17Z
+version: 1.32.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -37,6 +37,8 @@ grounded_in:
   - source: ticker-1416 alliance-duel execution record 2026-11-08 1441 queue run (partial, Star Ceremony EVENT 40 played to step 10 of 13, hearts on steps 3, 6, 7 and 8, finale not reached in the unit cap; record commit 5d70a0117 on records/2026-11-08) - never folded into this profile by any earlier run; its state is carried forward here via the 2218 record's citation
   - source: ticker-2201 alliance-duel execution record 2026-11-08 2218 queue run (done, checked only, no trophy icon, EVENT 40 ending unrecorded, filed Issue #488; record commit 8960535c on records/2026-11-08)
   - source: ticker-2201 alliance-duel execution record 2026-11-08 2220 queue run (done, personal duel total 0 on the new Radar Training day, read twice, alliance 261,068,886 vs 380,634,584; record commit 8960535c on records/2026-11-08)
+  - source: ticker-0204 alliance-duel execution record 2026-11-09 0223 queue run (done, personal duel total 1,380,000 read twice, rank 153, gap 2,220,000, Radar Training day; record commit facef628c on records/2026-11-09)
+  - source: ticker-0204 alliance-duel execution record 2026-11-09 0217 queue run (done, star ceremony checked only, no trophy icon; record commit facef628c on records/2026-11-09)
 ---
 
 
@@ -939,3 +941,15 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - The 2220 unit's closing trophy check (none present beside the Alliance button) corroborates the 2218 read: no ceremony waiting.
 - Commented on Issue #136 by this run with the fold (duel-score regular executed on the new week's day 1, total 0 read twice; the ended day's closing total is still unknown).
 - Result stats: duel-score target 3600000, achieved 0, points 0, gap 3600000, alliance_score 261068886, opponent_score 380634584, theme Radar Training, ceremony_waiting false, costs 4m_wall_no_stamina, verified yes, blocker_category none, device_takeovers 0. Star-ceremony target 1, achieved 0, ceremonies_claimed 0, hearts_sent 0, steps_reached 0, costs 3m_wall_no_stamina, verified yes, blocker_category f.
+
+## What the 2026-11-09 0223 and 0217 units added - duel day total 1,380,000 read twice, rank 153, gap 2,220,000; no ceremony waiting
+
+- Duel-score unit duel-score-2026-11-08-2230 by ticker-0204, 02:13:27 to 02:15:37 local (130 seconds; the 0223 file heading is the estimate at writing time), status done (read-only tracking unit; no grinding, no spending). Evidence in `_records_/2026-11-09/alliance-duel/0223-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-209, same session as the gifts and train units of this pass. No different-device dialog appeared.
+- Opened the gold VS medallion on the base screen. Alliance Duel panel: Today's Theme tab, Radar Training, countdown 15:46:12 at entry. Personal points counter at the top of the Today's Theme tab, read live: 1,380,000. Cross-check, Ranking, Daily Rank, Mon. tab selected: the pinned own row reads rank 153, Bears Lair [AP3x] The Apex, 1,380,000 points. Two independent live reads agree: today's personal duel total is 1,380,000.
+- Top of the daily ranking read live: kaka wu [TFox] Fox 64,644,546; PrabuSiliwang [TFox] Fox 42,485,688; Mihye [TFox] Fox 41,237,029; Texas Boy [AP3x] The Apex 32,838,375; yang godain ditabok [TFox] Fox 32,827,423.
+- Theme scoring actions read live (same values as the 2220 read): Use 1 Stamina +375, Complete 1 Radar Task +30,000, Use at least 660 Hero EXP Points at a time +2.5, Use 1 Drone Battle Data point +7.5, Use 1 Drone Part +6,250, Buy Packs containing Diamonds +30.0 per Diamond, Gather 100 Food +50.0. Chest thresholds: 40,000 / 150,000 / 540,000 points.
+- Reading of the 1,380,000: this is the Radar Training duel day that began at the 19:00 reset on 2026-11-08. The 22:12 unit on 2026-11-08 read 0 on this same day, so 1,380,000 was earned between about 22:12 and 02:15; which actions produced it was not observed in this unit and is not asserted. Gap against the 3,600,000 owner target: 2,220,000. The day does not roll over until about 18:00 local, so this is a mid-day snapshot, not the day closing figure. No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read.
+- Exit note: the duel panel back arrow sits at norm 145,947 (button centre); a tap at norm 62,948 landed on the button's left edge and produced no change, and the corrected tap at 145,947 returned the game to the base screen. Back-arrow positions are panel-specific; ground the centre fresh.
+- Star-ceremony unit star-ceremony-2026-11-08-2230 by ticker-0204, about 02:16 to 02:17 local, status done (checked only; no ceremony waiting). Evidence in `_records_/2026-11-09/alliance-duel/0217-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-211 (cc-209 had closed, fresh session started, LastWar window re-selected). Base screen read live: total power 149,209,253. Looked for the Star Ceremony trophy icon on the right side of the base screen, beside the Alliance button: the right column shows Events (red dot 3), VS, Alliance, Mail and Inventory only - no trophy icon is present, so no ceremony is waiting. Nothing was tapped in the game beyond the window re-selection. The game was left on the base screen.
+- Commented on Issue #136 by this run with the fold (duel-score regular executed on the Radar Training day, total 1,380,000 read twice, rank 153, gap 2,220,000; a mid-day snapshot, not the closing figure).
+- Result stats: duel-score target 3600000, achieved 1380000, points 1380000, gap 2220000, rank 153, theme Radar Training, ceremony_waiting false, costs 130 seconds, verified yes, blocker_category none, device_takeovers 0. Star-ceremony target 1, achieved 0, ceremonies_claimed 0, hearts_sent 0, steps_reached 0, costs about 2 minutes, verified yes, blocker_category f.
