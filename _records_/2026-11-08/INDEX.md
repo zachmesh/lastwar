@@ -3842,3 +3842,17 @@ of 2026-10-28.
   power reads 149,209,253, down 641,100 from 16:58,
   cause unexplained. Full detail in
   daily-activities/1712-queue-run.md.
+## 17:15 to about 17:27 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1715.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). No PR merged. Records PR
+  460 re-verified CLEAN at the new head 9978e09a8 (four
+  commits since the 1645 verification; one verification
+  comment posted) and PR 470 clean at 6a6607c5f; both
+  await the 19:00 batch. Tools PR 425 still owner-gated,
+  unchanged, no owner decision. Records PRs 351 and 301
+  conflicts carried unchanged (single file
+  action-log.jsonl), re-checked against the same main.
+  End-of-pass sweep: 5 open PRs, all decided, no
+  unprocessed PRs. Full detail in
+  pr-integration/1715-run.md.
