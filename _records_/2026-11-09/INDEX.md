@@ -2386,3 +2386,30 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 - Tool-developer pass tool-development-2026-11-09-1432. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #527 taken as the single item - scout_diff.py now skips prose empty-list markers (`- none (...)` block lines, `none (...)` scalars, `none  # ...` trailing comments) in unmatched_labels across all three parse paths, so no bogus none-* exploration candidates are filed; PR #529 opened (commit 216b98404); 14 fixture assertions 14/14 on isolated /tmp scratch pools, negative control reproduces the bug on main, dry-run A/B on the real 2026-11-09 observation gives exactly the 2-unit / 2-candidate delta from the issue; progress commented on #527 and completion synced to the owner Slack DM. Full detail in tool-development/1432-run.md.
 
 - PR integration pass pr-integration-2026-11-09-1445 (done). NON-batch pass (checker plain and merge-aware both not due; next batch 15:00 PT). Merged knowledge/code PRs 529 (tools: skip prose empty-list markers in unmatched_labels, Refs #527, squash e6d4148f) and 530 (activities fold ticker-1345 arms-race + donations, Refs #417, #500, squash b6df9149); local main fast-forwarded to b6df9149. Records PR 522 CLEAN at new head 0160e5cf5 (44 commits beyond main), awaits the 15:00 batch. PR 425 CLEAN but owner-gated, OD-20261108-01 still open, no owner decision. PRs 351 and 301 still CONFLICTING on the single action-log append. No records PR opened. Status: done. Full detail in pr-integration/1445-run.md.
+
+- Passes unit passes-2026-11-09-1057, partial: shop checked 14:38-14:49
+  PT - monthly pass Daily Pickup already "Claimed" today (Days Left
+  12); no weekly pass owned (S1 Drone Parts and S2 Drone Components
+  both $4.99 Get Now offers, not tapped); Hot Deals shows no free
+  pack, only a check-in card whose FREE GIFT stays unclaimed because
+  the Go button ignored three background taps (R2: method ended,
+  next passes unit to try the Events-hub route); Free Supply
+  auto-claim unverified, no toast seen. Nothing claimed in-unit.
+  Full detail in shop-claims/1449-queue-run.md.
+
+- Secrets unit secrets-2026-11-09-1057, done: Secret Command Post
+  checked 14:51-14:56 PT - same 4 cards as 05:17, all PERFECT, no
+  Claim button; Assist Allies 5/5 at cap; Plunder Others 0/5
+  untouched; no pending tasks to deploy. First tap hit the train
+  icon (Intercity Trade) and was closed at once. Full detail in
+  secret-missions/1456-queue-run.md.
+
+- Events unit events-2026-11-09-1057, partial: hub sweep 14:55-15:00
+  PT - Arms Race Hero Advancement just started (score 0, chests
+  2,000/4,000/12,000 locked, cumulative 7/8 not claimable); Desert
+  Storm Battlefield is registration only (battle 2026-11-13,
+  20/20 participants), no claim despite the red badge. Five tabs
+  unswept (Age of Oil, Winter Battlefield, Level Swap, Wanted
+  Boss, Community). No check-in tab exists in the hub, so the
+  shop FREE GIFT has no Events-hub route. Full detail in
+  event-claims/1500-queue-run.md.
