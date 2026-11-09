@@ -740,3 +740,21 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   335 over 24 hours, statements current. VPS root disk 367M free
   (97 percent), down from 421M. Status: no-op. Full detail in
   pr-catchall/0339-run.md.
+
+## 03:40 to about 03:47 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0340. Plan staged
+  5 net fresh units (already_present 65,
+  skipped_done_current 0, reaped 0, expired 0,
+  stale_done_dropped [radar-2026-11-09-0203],
+  branch_done_reconciled [arms-race-2026-11-09-0203,
+  donations-2026-11-09-0203], no phantom re-stage, 4
+  branch-closed slots skipped: radar 0203, donations 0203,
+  arms-race 0203, zero-sweep 1730) for the 1457 slot
+  (passes, secrets, treasures, trucks, events). Pre-reset
+  sweep pair not yet produced (due from the 17:00 run);
+  last night's pair executed 2 of 2 (both partial). Scout
+  diff applied with zero changes (unexplained 4: Inventory
+  dot, 99+ badge, skull timer, hammer 1/4). No withdrawals.
+  Pool inbox 71, claimed 0, done 1327. Status: done. Full
+  detail in queue-planning/0340-run.md.
