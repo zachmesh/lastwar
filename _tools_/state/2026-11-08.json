@@ -16,8 +16,8 @@
  },
  "help": {
   "status": "done",
-  "at": "2026-11-08T14:05:30-08:00",
-  "note": "Help All pressed, Help red dot cleared"
+  "at": "2026-11-08T22:09:11-08:00",
+  "note": "Help All twice, points 100 to 360 (plus 260)"
  },
  "mail": {
   "status": "done",
@@ -43,5 +43,15 @@
   "status": "done",
   "at": "2026-11-08T18:58:15-08:00",
   "note": "Hot Deals free pack, Free Supply auto-claim, Monthly Pass daily gift claimed for new reset day; no owned weekly pass"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-08T22:14:08-08:00",
+  "note": "Personal total 0 on new duel day (Radar Training), gap 3,600,000"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-08T22:18:00-08:00",
+  "note": "No ceremony waiting; EVENT 40 ending unrecorded, Issue #488"
  }
 }
