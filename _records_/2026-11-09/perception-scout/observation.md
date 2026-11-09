@@ -393,3 +393,37 @@ unmatched_labels:
   2026-10-30 roster and enter discovery as candidates.
 - Zombie Invasion is still absent from the Events hub - the
   event ended 2026-10-30 and no fresh chain is seeded.
+
+## Pass ticker-0804 - scout discovery explorations, units 004-007
+
+Session cc-242 (unit 004), cc-243 (unit 005), cc-244 (unit 007),
+LastWar window 489932, 08:12-08:32 local, observe-only throughout.
+The two unmatched labels from the 0606 pass are now explored;
+both resolve below, so the unmatched list stands empty after
+this pass. Full unit records: season-ii-countdown-6d/0812,
+survey-center/0825, the-age-of-oil/0829.
+
+  - surface: base
+    label: Season II countdown 6d 09:38:20 at right edge (map icon, blue and red pins)
+    state: info-only
+    deadline: "2026-11-12 18:00:00 UTC (Transfer Surge Application Day end)"
+    est_value_or_score: the icon opens TRANSFER SURGE, the cross-warzone transfer event; Application Day 11/8 18:00-11/12 18:00 UTC, Transfer Day to 11/13, Display Stage to 11/15; 32-warzone group incl. #2110; Apply buttons NOT tapped
+    suggested_unit: owner-decision
+    redline_check: clear - reading only; applying is an owner-only move, filed as Issue #514
+  - surface: events
+    label: Survey Center tab
+    state: info-only
+    deadline: ""
+    est_value_or_score: feedback-survey hub; one live entry Season II Polar World Experience Survey, no countdown; instructions read in full (external link, claim in-center or by mail, once per survey); Proceed opened the survey in Chrome after a delay, nothing submitted
+    suggested_unit: none
+    redline_check: clear - reading only; answering feedback is the owner's own action, candidate rejected as a routine task
+  - surface: events
+    label: The Age of Oil tab
+    state: info-only
+    deadline: "6d 09:28:43 at first read (Season II countdown)"
+    est_value_or_score: Season II warzone collective progression; Tech Research 2383/500, Building Upgrades 10721/500 (both exceeded), Hero Recruitments 8833/10000; reward icons below the completed cards not tapped, claim state unread
+    suggested_unit: none
+    redline_check: clear - reading only; goals advance passively, no recurring action, no regular proposed
+
+unmatched_labels:
+  - none (The Age of Oil and Survey Center both explored this pass)

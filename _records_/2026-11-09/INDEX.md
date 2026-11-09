@@ -1594,3 +1594,55 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   No reward, cost, deadline or scoring: candidate REJECTED as a
   task (informational counter only). Nothing used or opened. Full
   detail in inventory-icon-red-dot/0755-queue-run.md.
+
+## 08:12 to 08:23 — Queue ticker pass, scout discovery (done)
+
+- Scout unit scout-scout-discovery-2026-11-09-004, done: the
+  Season II countdown at the base right edge is the Transfer
+  Surge warzone-transfer entry (map icon with blue and red
+  pins, 6d 09:38:20 at last read). Application Day 1/4 runs
+  11/8 18:00:00 ~ 11/12 18:00:00 UTC, then Transfer Day to
+  11/13 and Display Stage to 11/15; 32-warzone group including
+  #2110, listings carry an Apply button that was NOT tapped.
+  Full carry-over rules read in the Transfer Guide (rankings,
+  Apex/Storm arenas, 3v3 Brawl, Alliance Duel, Radar Tasks,
+  Secret Mobile Squad, Ghost Ops, Intercity Trade, Alliance
+  Exercise, General's Trial, Doom Walker, Wanted Boss, Desert
+  Storm, Zombie Siege, Individual Arms Race, Zombie Invasion,
+  Honorable Campaign, Armed Truck, Bullseye Loot, Bounty
+  Hunter, Glittering Market, Total Mobilization, Weekly Deal).
+  Applying is an owner-only move, so no regular is proposed:
+  owner-decision Issue filed for whether Bears Lair should
+  apply before the 11/12 deadline. Full detail in
+  season-ii-countdown-6d/0812-queue-run.md.
+
+## 08:24 to 08:28 — Queue ticker pass, scout discovery (done)
+
+- Scout unit scout-scout-discovery-2026-11-09-005, done: the
+  Survey Center is the feedback-survey hub in the Events hub,
+  one live entry (Season II: Polar World Experience Survey, no
+  countdown shown). Instructions read in full: surveys are
+  filled through an external link, rewards claimed back in the
+  Center (or mailed if unclaimed); each survey submits once;
+  untimed surveys disappear 3 hours after completion. The
+  Proceed button did not respond to background input (two
+  coordinate taps, one click_element, one click_foreground
+  attempt), so the survey link never opened and its reward is
+  unmeasured. Candidate REJECTED as a routine task: answering
+  feedback is the owner's own action, not queue work. No survey
+  submitted, nothing spent. Full detail in
+  survey-center/0825-queue-run.md.
+
+## 08:29 to 08:32 — Queue ticker pass, scout discovery (done)
+
+- Scout unit scout-scout-discovery-2026-11-09-007, done: The
+  Age of Oil is Season II's warzone collective-progression page
+  (leftmost Events tab). Three goals on the 6d countdown:
+  Unlock Tech 2383/500 Tech Research, Unlock Stage Base
+  Expansion II 10721/500 Building Upgrades (both already
+  exceeded), Hero Mobilization 8833/10000 Hero Recruitments.
+  Reward icons below the completed cards were not tapped
+  (read-only exploration), so their claim state is unmeasured
+  and left as the open question for a later unit. No regular
+  proposed: the goals advance passively as the warzone plays.
+  Full detail in the-age-of-oil/0829-queue-run.md.
