@@ -5010,3 +5010,19 @@ of 2026-10-28.
   sparse worktree. Status: no-op. Full detail in
   pr-catchall/2339-run.md.
 
+## 23:40 to about 23:45 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-2340. Plan staged
+  5 net fresh units for the Nov 9 1057 slots
+  (passes/secrets/treasures/trucks/events;
+  already_present 67, skipped_done_current 0,
+  reaped 0, expired 0, no phantom re-stage, 2
+  branch-closed slots skipped: harvest 2203,
+  zero-sweep 1730). Pre-reset sweep pair already
+  complete by execution (both passes executed partial;
+  1630 done file absent from the live pool, present
+  on the branch tip); step 2 skipped, this run is in
+  the 23:00 hour. Scout diff applied with zero changes
+  (unexplained 14, unchanged). No withdrawals. Pool
+  inbox 72, claimed 1, done 1317. Full detail in
+  queue-planning/2340-run.md.
