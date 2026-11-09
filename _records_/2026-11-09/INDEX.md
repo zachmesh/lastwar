@@ -2254,3 +2254,16 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   0 recruits, Quick Dispatch not run (no intake). The
   standing gate-line blocker continues. Full detail in
   survivor-intake/1301-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-09-1300
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 15:00. No
+  knowledge or code PR merged; no new records PR opened.
+  Records PR 522 re-probed CLEAN at head da81e137e,
+  comment posted, awaits the 15:00 batch. Records PRs
+  351 and 301 still CONFLICTING on the same single file
+  at unchanged heads, carried, follow-up comments
+  posted. Tools PR 425 owner-gated, re-verified CLEAN
+  against new main c056fcf2, OD-20261108-01 still open,
+  no new escalation. Status: done. Full detail in
+  pr-integration/1300-run.md.
