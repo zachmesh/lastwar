@@ -789,3 +789,22 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   dot, 99+ badge, skull timer, hammer 1/4). No withdrawals.
   Pool inbox 71, claimed 0, done 1327. Status: done. Full
   detail in queue-planning/0340-run.md.
+
+## 03:45 to about 03:53 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0345
+  (NON-BATCH). Checker clock-only due yes, but
+  merge-aware due no - PR 491 already merged 03:02:52
+  PT in the 03:00-04:00 window, so no records merges
+  this pass; next batch 07:00. Knowledge PR 501 MERGED
+  (squash commit 837d880b81, arms-race 0306 + donations
+  0324 fold into 2 profiles; donations hard closing rule
+  NOT changed, Issue #500 re-examination deferred to the
+  retro). Records PR 493 re-probed CLEAN at head
+  0f2c1aa7cf (ticker-0334 reconciliation) against the new
+  main, awaits 07:00 batch, no new comment. Records PRs
+  478, 351, 301 still conflicted on the single
+  action-log file at unchanged heads, no new comments.
+  Tools PR 425 owner-gated, clean, OD-20261108-01 still
+  open, no owner answer, no new comment. Status: done.
+  Full detail in pr-integration/0345-run.md.
