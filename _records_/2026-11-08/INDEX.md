@@ -3989,3 +3989,31 @@ of 2026-10-28.
   1759 harvest collections. Observe-only; nothing
   claimed. Full detail in
   perception-scout/1839-queue-run.md.
+## 18:15 to about 18:35 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1815.
+  NON-batch pass (checker: not due, outside every batch
+  window; next batch 19:00 PT). No PR merged. Records PR
+  460 re-verified CLEAN at its new head 7bd2fd5e4 with a
+  verification comment posted, and PR 470 clean at
+  6a6607c5f; both await the 19:00 batch. Tools PR 425
+  still owner-gated, unchanged, no owner decision.
+  Records PRs 351 and 301 conflicts carried unchanged
+  (single file action-log.jsonl). End-of-pass sweep: 5
+  open PRs, all decided, no unprocessed PRs. Full detail
+  in pr-integration/1815-run.md.
+
+## 18:30 to about 18:45 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1830.
+  460 re-verified CLEAN at its new head de1c0dc5b with a
+  in pr-integration/1830-run.md.
+## 18:39 to about 18:41 - PR catch-all pass
+- PR catch-all pass pr-catchall-2026-11-08-1839. No-op: no adopted
+  open PR; five open PRs scanned, none owned by this job. Knowledge
+  PR 474 merged since the 1739 pass; main now 9479c3eb. PRs 460 and
+  470 clean, await the 1900 batch. PR 425 MERGEABLE/CLEAN, still
+  owner-gated on the policy amendment. PRs 351 and 301 still
+  conflicting on the action-log append, integrator carries the
+  branch-side reconciliation. 75 open issues, zero unclassified.
+  Owner-decision issues 132, 154 and 335 all over 24 hours,
+  statements current.
+  Full detail in pr-catchall/1839-run.md.
