@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T22:32:17Z
+modified: 2026-11-09T23:32:17Z
 level: L1
-version: 1.75.0
+version: 1.75.1
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -88,6 +88,7 @@ grounded_in:
   - source: ticker-2334 alliance-donations execution record 2026-11-08 2350 queue run (partial, 9 coin donations verified live 9/30 to 1/30 on Rallied Attack, final donation landed after the last live read, 00:18:26 timer hid the count, close unverified, footer rose 1300 to 2200, shield re-grounded (934,710), recommended marker corrected to the red-panda badge; record commit 86b26f5ce0 on records/2026-11-08)
   - source: ticker-0304 alliance-donations execution record 2026-11-09 0324 queue run (partial, one coin donation verified live 9/30 to 8/30 on Rallied Attack, replenishment 29th data point, hard closing rule under re-examination per Issue #500; record commit e6f80f1e2 on records/2026-11-09)
   - source: ticker-1345 alliance-donations execution record 2026-11-09 1413 queue run (partial, 11 coin donations verified live 30/30 to 19/30 on Quick Gathering, count confirmed a remaining daily allowance, footer 2,250 question open; record commit 63eccdb92 on records/2026-11-09)
+  - source: ticker-1434 shop-claims execution record 2026-11-09 1449 queue run (partial, Donation Count 20/30 passing read at about 14:38, thirty-first replenishment data point; record commit 4860808ff on records/2026-11-09)
 ---
 
 
@@ -3650,3 +3651,7 @@ enqueued for after the cooldown (not before about
 - Cross-read: the new Arms Race phase (Hero Advancement, thresholds 2,000/4,000/12,000, timer 03:56 at 14:03) was seen on the way through Events but left for the next arms-race unit.
 - No diamonds or money spent. No other activity touched.
 - Result stats: target 30, achieved 11, points 550, resources_gained Tech EXP 550, contribution 550 points, costs 3,300 coin, about 10 minutes of unit time, verified yes, blocker_category h.
+
+## Replenishment thirty-first data point - 2026-11-09 1449 passing read
+
+- Replenishment, thirty-first data point for Issues #160, #174, #423 and #500: the count stood at a live-read 19/30 at the 1413 close (about 14:13) and 20/30 at the passes unit's passing read on the Alliance Tech panel (about 14:38) - +1 over about 25 minutes, consistent with the about-1-per-29-minutes two-endpoint estimate from the thirtieth point, NOT a measured rate, and no reset fell between the reads. A single short interval constrains the rate only loosely. Evidence in `_records_/2026-11-09/shop-claims/1449-queue-run.md` (commit 4860808ff on records/2026-11-09). Commented on Issue #500 by this run.
