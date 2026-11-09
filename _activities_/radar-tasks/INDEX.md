@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T04:32:17Z
+modified: 2026-11-09T05:32:17Z
 level: L1
-version: 1.53.0
+version: 1.54.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -56,6 +56,7 @@ grounded_in:
   - source: ticker-1904 radar execution record 2026-11-07 1912 queue run (done, stack empty, dish re-grounded for the windowed layout, capture channel recovered)
   - source: ticker-1249 radar execution record 2026-11-08 1256 queue run (done, stack-day Quick Execute 4 tasks, stamina 120 to 80, radar points 267 unchanged, bar flipped to Claim All only with 10 rewards pending, pins inventoried untapped; record commit 6d4ec6287 on records/2026-11-08)
   - source: ticker-1352 radar execution record 2026-11-08 1355 queue run (partial, Claim All bar lockout, 16 stored tasks unexecuted, 10 rewards pending, 6 pins inventoried, duplicate-unit Issue #466; record commit bf20e1a48 on records/2026-11-08)
+  - source: 2026-11-08 daily retro, execution-knowledge action A-2026-11-08-01 (Issue #484): prefer the (50,740) dish point as the first tap; (54,583) and (54,780) failed 2026-11-08; record commit 90c3fa64e on records/2026-11-08
 ---
 
 
@@ -121,6 +122,13 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   mislabelled the truck icon as the dish. Ground the dish
   below the truck icon and verify the radar screen (level,
   stored count, stamina) before any work.
+- PREFERRED FIRST TAP, retro action A-2026-11-08-01 (2026-11-08
+  daily retro, Issue #484): norm (50,740), which opened the radar
+  on the first tap at 13:53 on 2026-11-08 (1355 unit). The (54,583)
+  and (54,780) points failed at 20:15 the same day (2028 unit) -
+  (54,583) opened Intercity Trade, (54,780) opened BUILD - and are
+  not dish points; never reuse them. If the preferred point fails,
+  re-ground the dish from a fresh base screenshot.
 - Entry precondition, binding from the 1026 and 1439
   units: when the camera is panned onto the Drill Ground
   cluster, restore the full base view first - if a
@@ -1451,6 +1459,8 @@ are still open, per the protocol.
   superseded in place by this close inventory, not erased.
 
 ## Changelog
+
+- 1.54.0, 2026-11-08 - retro action A-2026-11-08-01 applied (Issue #484): the dish entry rule now prefers norm (50,740) as the first tap (opened the radar on the first tap at 13:53 on 2026-11-08, 1355 unit); the (54,583) and (54,780) points failed at 20:15 the same day (2028 unit, opened Intercity Trade and BUILD) and are never to be reused; if the preferred point fails, re-ground from a fresh base screenshot. No new radar unit ran this hour; no other change.
 
 - 1.53.0, 2026-11-08 - 2028 release-day unit folded: duel week rolled about 18:00 to day 1 Radar Training RELEASE (day ends 2026-11-09 18:00), unit window stamp day 7 stale, live posture governs; radar screen never entered - dish groundings (54,583) opened Intercity Trade and (54,780) opened BUILD, grounding tool mislabelled the dish slot twice, next point to try is (50,740) from the 1355 unit; recovery tap opened the Age of Oil research tree (all nodes 0/10, queue timers 20:13:57:39 and 08:47:50, read only) whose back arrow does not respond to background clicks - control channel guidance is click_element with the visible label or the keyboard, Return/Esc never used, relaunch is a verified exit; game left on the research tree; 10 pending rewards plus 16 stored tasks still waiting, claims score +30,000 each as displayed; carried figures from 1355 unverified; duel delta test still owed.
 

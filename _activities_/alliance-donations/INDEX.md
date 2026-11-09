@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T23:44:00Z
+modified: 2026-11-09T05:32:17Z
 level: L1
-version: 1.71.0
+version: 1.72.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -84,6 +84,7 @@ grounded_in:
   - source: ticker-1223 alliance-donations execution record 2026-11-08 1238 queue run (partial, War-tab 1/30 test on Rallied Attack, six coin donations verified live 7/30 to 1/30 on Quick Construction, per-node count question open, closing 0/30 unverified); record commit 1ab3d2ca on records/2026-11-08
   - source: ticker-1317 alliance-donations execution record 2026-11-08 1342 queue run (partial, 1 coin donation verified live 2/30 to 1/30 on Quick Construction, replenishment +1-2 over about 53 minutes, War-tab branch started but Rallied node not reached); record commit d272dd711 on records/2026-11-08
   - source: ticker-1522 alliance-donations execution record 2026-11-08 1537 queue run (partial, 6 coin donations verified live 7/30 to 1/30 on Quick Construction, replenishment +6 over about 110 minutes, footer +650 vs +600 expected, Rallied Attack re-read not reached); record commit 8e88fb217 on records/2026-11-08
+  - source: ticker-2004 alliance-donations execution record 2026-11-08 2034 queue run (partial, 9 coin donations verified live 17/30 to 8/30 on Quick Construction, second batch hit a 00:18:14 cooldown timer, close unverified, footer fell 6900 to 1800 while donating; record commit fc00889b0 on records/2026-11-08)
 ---
 
 
@@ -228,6 +229,20 @@ activity. Not a separate type.
   one window; the proof is pattern-level across three consecutive
   units, not per-tap. See the 0841 and 0920 unit sections and
   Issue #450.
+  Update, retro action A-2026-11-08-02 (2026-11-08 daily retro,
+  Issue #450): the Rallied Attack path is now a TESTED alternate,
+  not an untried fallback. The 1238 unit (unit
+  donations-2026-11-08-1832, 12:30-12:38 local) landed a coin
+  donation on Rallied Attack 2/30 to 1/30 (800 coin, Tech EXP
+  23.3K to 23.5K), and its tap from the live-read 1/30 greyed
+  behind a 00:18:42 cooldown timer with the landing unverified, so
+  a War-tab 1/30 tap is still not proven to land. The per-node
+  count question is open (Rallied Attack read 2/30 about four
+  minutes after Quick Construction read 1/30 live). The next unit
+  reads the Rallied Attack Donation Count live first. The 1537 and
+  2034 units did NOT reach the Rallied Attack re-read (1537: unit
+  cap; 2034: Quick Construction donations, then cooldown), so this
+  instruction carries forward.
 
 ## Hard closing rule - live read or unverified (2026-10-31 fix)
 
@@ -3488,3 +3503,84 @@ enqueued for after the cooldown (not before about
   eaten. The next donations unit must read the RA Donation Count
   live first, and if QC has replenished above 1/30, donate on QC
   down to 1/30 again. It falls to the next run.
+
+## What the 2026-11-08 2034 unit added - nine verified donations 17/30 to 8/30, cooldown timer, close unverified, footer fell 6900 to 1800
+
+- Unit donations-2026-11-08-1803 by ticker-2004, about 20:34 to 20:41
+  local, status partial - 9 coin donations verified live on Quick
+  Construction, count 17/30 to 8/30; a second batch of 8 taps hit
+  the cooldown timer with the count hidden, so the close is
+  unverified under the hard closing rule. Evidence in
+  `_records_/2026-11-08/alliance-donations/2034-queue-run.md`
+  (commit fc00889b0 on records/2026-11-08). Tracker untouched.
+- Entry: the game was left on the Season "THE AGE OF OIL" tech tree
+  by a previous session. The UNLOCK OIL WELL panel was closed
+  untouched (no Research, no Finish Now) and the back arrow
+  returned to the base. No research started, no speedup used.
+- Alliance entry route (rule R2 third-unit fix, 2026-11-02): the
+  Alliance shield icon was re-grounded fresh at (930,708) and tapped
+  once; the Alliance menu opened first try - the 2026-11-02 entry
+  blocker (three units panning to the Drill Ground cluster) did NOT
+  recur on this route. Members 96/100, [AP3x] The Apex.
+- Alliance Techs, Development tab: Auto Rally Max Level, Quick
+  Construction 8/10 with the recommended thumbs-up marker, Great
+  Helper Max Level, one 2/10 node below. Tech Donation Today footer
+  read 6900 at entry.
+- Donation panel (Quick Construction): Donation Count read live
+  17/30 at entry. Coin Donate 900 (green) used; diamond Donate (2,
+  yellow) never touched. Donation Reward per donation: 50 tech EXP
+  + 50 badge, panel-stated.
+- Donations made, all live-read: 1 tap, count 17/30 to 16/30; batch
+  of 8 taps, count 16/30 to 8/30 (all 8 landed). Second batch of 8
+  taps: the coin button greyed mid-batch and the count label was
+  replaced by a cooldown timer, 00:18:14 at first sight, 00:18:02
+  on the closing screenshot. How many of the second batch's 8 taps
+  landed before the cooldown bit is unknown - no arithmetic closing
+  figure is claimed.
+- Re-read attempt (hard closing rule): closed and reopened the panel
+  path; the Tech Donation Today footer now reads 1800, down from
+  6900 at entry. A footer that falls while donations are made cannot
+  be a closing count for donations made, and its semantics are not
+  understood. The top-bar badge moved 316.9K to 318.8K (+1900),
+  which also does not reconcile with 50 badge per donation. Neither
+  figure is used as a closing count.
+- Confirmed donations this unit: 9 (live count 17 to 8). Coin spent
+  on confirmed donations: 9 x 900 = 8,100. Remaining Donation Count:
+  unreadable (hidden by the timer).
+- Replenishment, new datapoint for Issues #160, #174 and #423: Quick
+  Construction read 1/30 at the 1537 close (about 15:39) and 17/30
+  at this unit's entry (about 20:34), +16 over about 4 hours 55
+  minutes, about 1 per 18 minutes as a two-endpoint estimate only,
+  NOT a measured rate - consistent with the roughly 1-per-20-minutes
+  estimates from the 0937, 1034, 1054, 1238, 1342 and 1537 reads.
+  No donations unit ran between the 1537 close and this entry.
+- Footer contradiction resolved in favour of the newest verified
+  record: the footer FELL 6900 to 1800 while 9 coin donations were
+  confirmed live, so no "footer rises with donations" reading
+  survives - the footer is disqualified as a count-closing figure
+  (Issue #417) and moves independently of this unit's donations;
+  the badge top-bar delta (+1900 against 450 expected at 50 per
+  donation) is likewise unreconciled and observed only. The unit
+  commented the evidence onto Issue #417; this run comments the
+  fold.
+- Close: UNVERIFIED under the hard closing rule (rule R1): no live
+  Donation Count read at close, so no closing count is stated. A
+  named re-read unit is enqueued for after the cooldown (timer
+  00:18:02 at about 20:44 PT, cooldown ends about 21:02 PT):
+  donations re-read, not-before 2026-11-09T05:05:00Z. The next
+  scheduled donations unit (22:03 slot) is also in the pool and
+  will re-read the count.
+- The Rallied Attack re-read is STILL not reached (this unit donated
+  on Quick Construction, then hit the cooldown) - the retro action
+  A-2026-11-08-02 instruction carries forward: the next unit reads
+  the Rallied Attack Donation Count live first. See the changed-route
+  update above and Issue #450.
+- Commented on Issues #450, #417, #160, #174 and #423 by this run
+  with the fold.
+- Game left safe: base screen, no purchase, no diamond spent. Coins
+  spent on confirmed donations: 8,100 (9 x 900).
+- Follow-up: the re-read owed is the newly enqueued donations
+  re-read (not-before 2026-11-09T05:05:00Z) and the 22:03 slot unit:
+  they read the Donation Count live after the cooldown and apply the
+  changed route - tap only if the count has replenished above 1, or
+  try the War-tab node for the 1/30 tap. It falls to the next run.
