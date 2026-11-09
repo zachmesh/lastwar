@@ -1396,3 +1396,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   first actions of the next harvest unit (R7). Tracker
   untouched. Full detail in
   resource-collection/0636-queue-run.md.
+
+## 06:45 to about 07:00 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0645
+  (NON-BATCH). Checker due no - outside every batch
+  window; next batch 07:00. Merged knowledge PR 507
+  (arms-race/trucks/scout fold, Refs #506/#498/#242) and
+  tools PR 509 (scout_diff classifier, Refs #505).
+  Records PR 493 re-probed CLEAN at new head a39d10efc3,
+  awaits 07:00 batch, notes posted. Records PR 478
+  re-probed CLEAN at reconciled head 278abe7474, awaits
+  07:00 batch. Records PRs 351, 301 still conflicted on
+  the single action-log file at unchanged heads. Tools
+  PR 425 owner-gated, clean, OD-20261108-01 still open,
+  no owner answer. Status: done. Full detail in
+  pr-integration/0645-run.md.
