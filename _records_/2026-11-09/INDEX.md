@@ -1875,4 +1875,4 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   deadline stated); owner-decision issues 132, 154 and 335
   over 24 hours with statements current; issue 514 deadline
   2026-11-12 18:00 UTC. Status: no-op. Full detail in
-  pr-catchall/0939-run.md.
+  pr-catchall/0939-run.md.- Tool-developer pass tool-development-2026-11-09-0932. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #466 planner-side recurrence taken as the single item - scout_diff.py now consults today's delivered records branch before enqueueing (branch done ids + live completion markers for execution slots, branch done windows for today's exploration slugs); PR #519 opened (commit bf3f316d8, MERGEABLE); 22 fixture assertions 22/22 on isolated /tmp scratch pools, negative control reproduces the re-enqueue on main; progress commented on #466 and synced to the owner Slack DM. Full detail in tool-development/0954-run.md.
