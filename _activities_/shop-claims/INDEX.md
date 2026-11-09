@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T13:32:17Z
+modified: 2026-11-09T23:32:17Z
 level: L1
-version: 1.42.0
+version: 1.43.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -47,6 +47,7 @@ grounded_in:
   - source: ticker-2235 shop-claims execution record 2026-11-08 2243 queue run (done, reset-day claims verified already claimed, check-in FREE GIFT left for the events-2257 unit; record commit 0c9686b4f on records/2026-11-08)
   - source: ticker-0204 shop-claims execution record 2026-11-09 0218 queue run (done, reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed Days Left 13; record commit facef628c on records/2026-11-09)
   - source: ticker-0434 shop-claims execution record 2026-11-09 0447 queue run (done, reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed, Days Left ticked 13 to 12 inside the same reset day; record commit b6ed78edd0 on records/2026-11-09)
+  - source: ticker-1434 shop-claims execution record 2026-11-09 1449 queue run (partial, check-in FREE GIFT Go button unresponsive on three taps, no owned weekly pass, monthly gift already claimed, Donation Count 20/30 passing read; record commit 4860808ff on records/2026-11-09)
 ---
 
 
@@ -1356,3 +1357,15 @@ the free and already paid for parts, never the paid unlocks.
 - MEASURED, same reset day: Days Left read 13 at the 0218 unit and 12 here, both inside the same reset day - the counter ticked between 02:18 and 04:47 local with no reset between. No cause is asserted; the two live reads are recorded as observed. Combined with the 2026-11-08 window (14 at 04:07, 13 at 05:36), the boundary narrows to between 04:07 and 04:47 local if it is a fixed time of day - an inference, not a verified exact time. See the updated Open questions entry.
 - No season pass claim was hunted in the Season hub, per the 2026-11-08 ticker-1434 finding (Issue #469): the Week 8 hub path is stale. No diamonds or money spent. No price button tapped. No login or verification was demanded, and no different-device dialog appeared. The game was left on the base screen.
 - Result stats: target 3, achieved 3, resources_gained none, costs about 7 minutes, no items spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 1449 unit added - checked only, 0 claims, check-in Go button unresponsive, no owned weekly pass, monthly gift already claimed
+
+- Unit passes-2026-11-09-1057 by ticker-1434, about 14:38 to 14:49 local, status partial - every shop/pass surface in scope was checked; one free item (check-in FREE GIFT) remains unclaimed behind an unresponsive button; nothing else claimable today. Evidence in `_records_/2026-11-09/shop-claims/1449-queue-run.md` (commit 4860808ff on records/2026-11-09). Computer session cc-295 dropped once mid-unit and was restarted as cc-297 with no game state lost.
+- Hot Deals (Official Event tab): no free pack showing today. The carousel has two pages: page 1 is the Last War Store promo (ID points 1000); page 2 is a check-in event card with FREE GIFT ("Claim your gift today!") and FREE TOMORROW ("Randomly obtain one", x5 x5 x5). The FREE TOMORROW pack is not claimable until tomorrow.
+- Check-in FREE GIFT: three taps on the Go button produced no change (two at 500,937, one at the freshly measured centre 500,955; the control layer reported background clicks not reaching the control). Per rule R2 the Go-button method is ended inside this unit. The 1449 record's own follow-up (try the Events-hub route) is SUPERSEDED within the hour by the 1500 events unit: no check-in tab exists in the Events hub, so the hub route is a dead end. The gift's only known entry is the shop Go button, which ignores background clicks; the remaining idea is a foreground-click attempt on that button (or a different input route), for the next passes unit (passes-2026-11-09-1457 in the inbox).
+- Weekly Pass page: "Weekly Pass rewards reset at 18:00:00" read live. Free Supply chest: the page opened and no claim toast was observed - auto-claim unverified (it may have paid silently or already been claimed). No owned weekly pass: the S2 Drone Components Weekly Pass (Legendary, Daily Pickup x2, Total x7) and the S1 Drone Parts Weekly Pass (Epic, Daily Pickup x15, Total x105) both show a $4.99 Get Now offer, i.e. not owned - nothing to claim, nothing tapped. The Legendary Take All $19.99 row was not tapped.
+- Super Monthly Pass page: Monthly Pass, Squad 4 Lv.20, Days Left 12, Rewards Left 12. The Daily Pickup button reads "Claimed" - today's monthly gift was already claimed before this unit (no passes unit ran earlier today, so most likely by the owner).
+- Note for the activity metadata: the S1 Drone Parts and Coin Weekly Passes owned on 2026-10-25 have expired (S1 3 days left then, Coin 9 days left then); the page now offers S2 Drone Components and S1 Drone Parts as $4.99 purchases. No owned weekly pass remains, so the Daily Pickup step has nothing to claim until a pass is bought (owner decision, never bought by the agent).
+- Passing read for the donations profile: the Alliance Tech panel the game was left on read Donation Count 20/30 at about 14:38 PT - folded into alliance-donations 1.75.1 as the thirty-first replenishment data point.
+- No diamonds or money spent. No price tag tapped. No speedup items used. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: 0 claimed in this unit (monthly gift already claimed today, weekly passes not owned, Hot Deals free pack not showing, check-in FREE GIFT blocked on an unresponsive Go button), costs about 11 minutes, no items spent, verified yes, device_takeovers 0, follow_up passes-2026-11-09-1457-check-in-foreground.

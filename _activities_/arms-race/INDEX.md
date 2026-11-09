@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T22:32:17Z
+modified: 2026-11-09T23:32:17Z
 level: L1
-version: 1.69.0
+version: 1.70.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -75,6 +75,7 @@ grounded_in:
   - source: ticker-0704 event-claims execution record 2026-11-09 0706 queue run (done, Arms Race page cross-read only, Tech Research score 0, timer 02:51:08 at first read, cumulative 6/8, ranking-row chest for the finished Hero Advancement phase still unchecked; record commit 5ef03f4b on records/2026-11-09)
   - source: ticker-0945 arms-race execution record 2026-11-09 0949 queue run (partial, Events entry not located in the windowed portrait or letterboxed portrait layouts, (672,132)/(683,150) landscape groundings do not apply, phase page not reached, current phase unknown; record commit eef6edad9 on records/2026-11-09)
   - source: ticker-1345 arms-race execution record 2026-11-09 1345 queue run (partial, Drone Boost phase missed on a late pickup, score 8,000 of 30,000, 1,500 chest claimed, stamina-kill credit on the kill, cumulative chest 7/8; record commit 63eccdb92 on records/2026-11-09)
+  - source: ticker-1434 event-claims execution record 2026-11-09 1500 queue run (partial, Hero Advancement cross-read only, phase just started timer 03:04:14 score 0 cumulative 7/8; record commit 4860808ff on records/2026-11-09)
 ---
 
 
@@ -2110,3 +2111,10 @@ slot. Evidence in
 - Cross-read from the 1413 donations unit (same pass): the new phase after Drone Boost is Hero Advancement, thresholds 2,000 / 4,000 / 12,000, timer 03:56 at 14:03. The next arms-race unit works that phase.
 - Zombie Invasion tab still absent from the Events hub (Arms Race, Winter Battlefield, Desert Battlefield visible); the event ended 2026-10-30, chain stays closed, no fresh chain seeded. Folded into zombie-invasion 1.22.3.
 - Result stats: target 30,000, achieved 8,000, points 2,000 gained in the unit (score 6,000 to 8,000), resources_gained badge x1, medals x200, 5m speedup x8, resource chests x4 each of two kinds, costs 20 stamina, about 15 minutes of unit time, verified yes, blocker_category a.
+
+## What the 2026-11-09 1500 events unit added - cross-read only: Hero Advancement phase just started, timer 03:04:14, score 0, cumulative 7/8
+
+- Cross-read from the events unit events-2026-11-09-1057 by ticker-1434, about 14:55 to 15:00 local. Evidence in `_records_/2026-11-09/event-claims/1500-queue-run.md` (commit 4860808ff on records/2026-11-09). No Arms Race grinding was done in this unit; that belongs to the arms-race unit type.
+- Phase: Hero Advancement, Contest Segment Lv.29-30, just started, timer 03:04:14 left at first read. Score 0, point chests at 2,000 / 4,000 / 12,000 all locked, cumulative chest 7/8 (not full, not claimable). Ranking #2110 [AP3x]Bears Lair, 90,500 shown. Countdown consistency check, no contradiction: the 1345 cross-read saw timer 03:56 at 14:03, and this read of 03:04:14 at about 14:55 steps down by the elapsed time between the reads.
+- The phase is the arms-race unit's job: arms-race-2026-11-09-1403 is in the inbox. The next arms-race unit works this phase and claims the Drone Boost ranking chest after the phase rolls, if claimable.
+- Result stats: cross-read only, no points gained in this unit, verified yes (same-unit live reads).
