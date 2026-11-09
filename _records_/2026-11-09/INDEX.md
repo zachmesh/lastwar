@@ -1171,3 +1171,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   a knowledge-organizer fold note (PR 503). Owner-decision issues
   132, 154 and 335 all over 24 hours, statements current. Full
   detail in pr-catchall/0539-run.md.
+
+## 05:40 to about 05:46 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0540. Plan staged
+  1 net fresh unit (already_present 58,
+  skipped_done_current 2, reaped 0, expired 0, no phantom
+  re-stage, 15 branch-closed slots skipped) - the zero-sweep
+  1730 unit, chain seq 2 of tonight's pre-reset sweep pair,
+  pair now complete. Pre-reset sweep production skipped
+  (not the 17:00 run); pre-reset fix-up units NOT staged -
+  live queue.py still pre-#497, carried to the 17:00 run.
+  Last night's pair executed 2 of 2 (both partial). Scout
+  diff applied with zero changes (unexplained 4: Inventory
+  dot, 99+ badge, skull timer, hammer 1/4). No withdrawals.
+  Pool inbox 60, claimed 0, done 1329. Status: done. Full
+  detail in queue-planning/0540-run.md.
