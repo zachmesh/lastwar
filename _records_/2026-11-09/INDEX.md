@@ -1362,3 +1362,18 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   statements current. VPS root disk 222M free (98 percent), up
   from 171M. Status: no-op. Full detail in
   pr-catchall/0639-run.md.
+
+## 06:32 to about 06:52 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-0632. Done:
+  fixed issue #505's candidate classifier (PR #509, commit
+  b251bc8b15) - scout_diff no longer files exploration candidates
+  for read-only items (candidates_filed on the 2026-11-09
+  observation dry run 10 -> 3); re-diagnosed the issue's
+  planned_for half as a stale-pool read, not a timezone bug (the
+  emitted 10:57Z/10:30Z values are the correct UTC instants of
+  the current cycles; the 06:04 diff missed the ticker-0434 done
+  units because the pool had not yet seen them - root cause stays
+  with #415/#466). Own PR #425 still owner-gated (OD-20261108-01
+  open), no action owed. Status: done. Full detail in
+  tool-development/0632-run.md.
