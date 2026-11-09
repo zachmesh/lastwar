@@ -1608,3 +1608,17 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   OD-20261108-01 still open, no owner answer. No merges,
   no PRs opened. Status: done. Full detail in
   pr-integration/0800-run.md.
+## 08:15 to about 08:23 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0815
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Records
+  PR 493 head moved to 33c930954 (0800 run record) since
+  the 0800 re-check; re-probed CLEAN, re-check comment
+  posted. Records PRs 351 and 301 still CONFLICTING on
+  the same single file at unchanged heads, carried
+  awaiting branch-side reconciliation. Tools PR 425
+  owner-gated, re-probed CLEAN against the unchanged
+  main, OD-20261108-01 still open, no owner answer. No
+  merges, no PRs opened. Status: done. Full detail in
+  pr-integration/0815-run.md.
