@@ -936,3 +936,42 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   OD-20261108-01 still open, no owner answer, no new
   comment. Status: done. Full detail in
   pr-integration/0430-run.md.
+
+## 04:32 to about 04:40 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-09-0432.
+  Own PR 501 MERGED with 0 comments and 0 reviews, so no open
+  own PR carries integrator feedback. Nine substantive records
+  folded into nine profiles as one commit on PR 503 (OPEN and
+  MERGEABLE, mergeState CLEAN): ticker-0334 radar 0335
+  (partial, release day, dish re-grounded (51,718) first try
+  after (55,689) missed, Rare Iron Mine gathering dispatched
+  720K 00:06:57, 5 pins inventoried unattempted) into
+  radar-tasks 1.57.0; ticker-0334 harvest 0340 (partial, one
+  tap per type cleared all visible bubbles of that type -
+  iron +4.9M, coin +4.3M, food +5.4M, EXP 4 bubbles -
+  contradicting the 1935 iron one-by-one re-confirmation,
+  so iron and coin one-by-one are marked suspect again per
+  Issue #502; recenter-first sweep executed for the first
+  time, discharging the 0202 owed item) into
+  resource-collection 1.45.0; ticker-0404 survivors 0409
+  (done, one gate visitor processed, Friendly Visitor dialog,
+  gate line clear) into survivor-intake 1.41.0; ticker-0404
+  training 0413 (partial, fullscreen zoom-out variant tried,
+  View-menu exit measured) into troop-training 1.32.0;
+  ticker-0404 gifts 0417 (done, 37 Regular + 2 Premium
+  dialog-confirmed, progress +1,090, Regular window +20
+  unexplained as Issue #183 evidence) into alliance-gifts
+  1.42.0; ticker-0404 help 0419 (done, one ally request
+  cleared, header 520/1,000 unchanged) into alliance-help
+  1.32.0; ticker-0404 mail 0421 (done, three red-dot
+  categories walked, 0 claimed, envelope opened at once)
+  into mail-rewards 1.28.0; ticker-0404 train 0421
+  (partial, checked only, no train preparing) into
+  alliance-train 1.35.0; ticker-0404 duel 0423 (done,
+  personal total 2,005,000 read twice, rank 144, gap
+  1,595,000, Ranking back arrow centre (64,944)) into
+  alliance-duel 1.33.0. Issues #502, #484, #136 and #183
+  commented with the fold. The 2026-11-09 daily retro has
+  not landed yet. Status: done. Full detail in
+  knowledge-organization/0432-run.md.
