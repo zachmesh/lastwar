@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T12:32:17Z
+modified: 2026-11-09T18:32:17Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-2119 mail-rewards execution record 2026-11-08 2132 queue run (done, Alliance and Event mail claimed in full, 10 mails, Claim All both categories; record commit fe08a0907 on records/2026-11-08)
   - source: ticker-0113 mail-rewards execution record 2026-11-09 0138 queue run (partial, Alliance and Event Claim All both "No rewards available", System/Regular/Battle Report not walked, leader row Jerry Apex read live on the Alliance page, Mail button flaky entry (652,793), VIP daily freebie flag; record commit c0ebf0c4f0 on records/2026-11-09)
   - source: ticker-0404 mail-rewards execution record 2026-11-09 0421 queue run (done, all three red-dot categories walked, no claimable attachments, envelope opened at once with no Alliance-first workaround; record commit 9fdcc4c9ee on records/2026-11-09)
+  - source: ticker-1004 mail-rewards execution record 2026-11-09 1031 queue run (partial, Event and Alliance Claim All both "No rewards available", six train mails carry no attachments, Battle Report/System/Regular not walked, Mail entry (932,791) windowed first try; record commit 09e4f0863 on records/2026-11-09)
 ---
 
 
@@ -50,6 +51,7 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
 ## How to enter
 
 - Base screen, Mail button on the right rail (envelope icon).
+- Entry, windowed (2026-11-09 1031): the Mail button tap at the freshly grounded centre (932,791) in windowed 642x951 opened Mail at once - windowed background clicks reach the game, unlike the fullscreen Alliance taps in the sibling 1019 help unit. The point still drifts per session, so re-ground fresh each unit (Issue #230).
 - The category rail, top to bottom, reads - Battle Report, Alliance,
   Event, Season, System, Regular, In-app Purchases (corrected
   2026-11-01 by the 1730 unit; the earlier list omitted Event and
@@ -877,3 +879,13 @@ the next tick re-produces this regular as a fresh unit.
 - In-app Purchases list: receipts only, as the profile states - 2026-11-08 10:53:07, Pack purchased: Drone Great Value Pack; 2026-11-07 18:42:14, Pack purchased: Gear Master Pack. Claim All was not pressed here: the list holds receipts only, nothing to claim.
 - Delete All was not pressed in any category. Nothing was deleted. Back arrow returned the game to the base screen. The game was left on the base screen. No diamonds or money spent.
 - Result stats: target 3, achieved 3, resources_gained none, costs 2m_wall_no_stamina, verified yes, categories_walked 3, claimed 0, device_takeovers 0. 0 claimed is the complete result, not a miss.
+
+## What the 2026-11-09 1031 unit added - Event and Alliance Claim All no rewards, train mails carry no attachments, partial
+
+- Unit mail-2026-11-09-0630 by ticker-1004, about 10:23 to 10:31 local, status partial. Evidence in `_records_/2026-11-09/mail-rewards/1031-queue-run.md` (commit 09e4f0863 on records/2026-11-09).
+- Entry: Mail opened from the base screen in windowed 642x951 mode - the Mail button tap at the freshly grounded centre (932,791) worked at once. Windowed background clicks reach the game, unlike the fullscreen Alliance taps in the sibling 1019 help unit. Entry point still drifts per session; re-ground fresh each unit (Issue #230).
+- Event category (red dot on entry): six train mails - Abyss Apex 2h and 4h ago (unread, red dots), Missile Apex 6h ago, Abyss Apex Mega Express 8h ago, Missile Apex 8h ago, DCna8ive 10h ago. Claim All answered "No rewards available." The two red dots cleared and the envelopes show opened afterwards - the train mails carry no claimable attachments.
+- Alliance category: leadership notice (11h ago), Daily Donation Rankings, Weekly Donation Ranking (16h ago), Major's Gift, 3v3 Brawl. Claim All answered "No rewards available." again - no claimable attachments in Alliance either.
+- What was not done: Battle Report, System and Regular were not opened this cycle. On 2026-10-25 they held reports only, but no live read was taken today, so the unit closes partial and the next mail unit resumes with those three categories (queue rule R7).
+- No mail deleted; Delete All never touched. No diamonds or money spent. No other unit's work touched.
+- Result stats: target 1, achieved 0, resources_gained none, costs about 8 minutes of unit time, no items spent, verified yes, blocker_category h, points 0.

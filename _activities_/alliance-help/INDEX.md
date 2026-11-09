@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T12:32:17Z
+modified: 2026-11-09T18:32:17Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -35,6 +35,7 @@ grounded_in:
   - source: ticker-2201 alliance-help execution record 2026-11-08 2214 queue run (done, Help All pressed twice, points 100/1,000 to 360/1,000, header counter lag resolved, list scrolls; record commit 8960535c on records/2026-11-08)
   - source: ticker-0034 alliance-help execution record 2026-11-09 0100 queue run (done, Help All pressed once, one ally request cleared, header 360/1,000 unchanged in-session, own rows 30/30, base-screen bubble tile (609,713) no-change, Help (523,507), Help All (488,778), session cc-197 dropped, cc-200 recovery; record commit 77db994162 on records/2026-11-09)
   - source: ticker-0404 alliance-help execution record 2026-11-09 0419 queue run (done, Help All cleared one ally request, header 520/1,000 unchanged at close; record commit 9fdcc4c9ee on records/2026-11-09)
+  - source: ticker-1004 alliance-help execution record 2026-11-09 1019 queue run (partial, Alliance button unresponsive to background clicks in fullscreen, six taps in four variants, duplicate LastWar window 508052, Help All not reached, red dot waiting; record commit 09e4f0863 on records/2026-11-09)
 ---
 
 
@@ -59,6 +60,7 @@ counts helps, and any caps. Executions are recorded in
   bring the game window to the foreground and re-observe before
   tapping again. The same-day later units recovered, so this
   blocker is transient, not a dead entry route.
+- Fullscreen Alliance-button failure, 2026-11-09 1019: in fullscreen 1920x1080 the Alliance shield button did not respond to six background taps in four variants (coordinate clicks, hold, second window), while the green menu arrow at (484,975) did respond to background input - background clicks reach some controls and not others in fullscreen. Two LastWar windows exist (489932 titled "Last War", 508052 empty title); the duplicate window may be part of the blocker. Changed method for the next unit: exit fullscreen to the native 642x951 window and retry the Alliance tap there, or find a click_element route if an Alliance label element appears in the observation. Do NOT repeat the fullscreen background-click sequence.
 
 ## Standing instruction from the owner
 
@@ -893,3 +895,15 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Closing read: the ally row is gone; the three own rows now read reduced-time displays - Missile Mastery II "Time reduced: 18:00:22", Defense Training VIII "Time reduced: 10:02:00", Lv.30 Aircraft Center "Time reduced: 3d 23:58:04". The header still read 520/1,000 at the closing read, so no points increase is claimed - the single cleared ally request is the verified outcome. This matches the standing pattern across the 0836, 0308, 0710, 0837 and 0100 units (header unchanged in-session); the 2214 unit is the exception where the header moved 100 to 360.
 - Help dialog closed with its X; back arrow returned the game to the base screen. The game was left on the base screen. No diamonds or money spent, no other unit's work touched, Assemble not opened.
 - Result stats: target 1, achieved 1, resources_gained none, points 0, costs 2m_wall_no_stamina, verified yes, helps_cleared 1, device_takeovers 0.
+
+## What the 2026-11-09 1019 unit added - Alliance button unresponsive to background clicks in fullscreen, Help All not reached, partial
+
+- Unit help-2026-11-09-0630 by ticker-1004, about 10:06 to 10:19 local, status partial. Evidence in `_records_/2026-11-09/alliance-help/1019-queue-run.md` (commit 09e4f0863 on records/2026-11-09).
+- Base screen at entry (fullscreen 1920x1080, window 642x951 zoomed via the green zoom button): power 149,217,331, coin 46.2M, food 544.5M, iron 871.8M. The bottom bar was clipped in the windowed view, so the pass went fullscreen for a full view.
+- Green up-arrow menu button tapped once at (484,975): the side menu expanded (HEROES / WORLD labels, Alliance, Mail, Inventory buttons visible on the right). Background input reaches the game for this control.
+- Alliance shield button carries a RED DOT (seen live in a cropped screenshot, top-right of the tile) - help requests are waiting. The Help page was never reached, so the points header was never read and no points figure is claimed.
+- Alliance button tapped six times in four input variants, all at the freshly grounded centre (visual grounding bbox x 626-673, y 678-747; centre about (650,712); cursor seen on the shield in the cropped screenshot): (1) click at (715,701) on window 489932 - no change; (2) click at (650,712) on window 489932 - no change; (3) left_mouse_down / 1s hold / left_mouse_up at (641,694) on window 489932 - no change; (4) click at (650,712) on window 508052 - small press animation only (5% changed area), panel never opened; (5) left_press at (650,700) on window 508052, 3s wait - no change; (6) move + click at (654,700) on window 508052, 3s wait - no change.
+- Two LastWar windows exist, both 1920x1080 at (0,0): window 489932 titled "Last War" and window 508052 with an empty title. The duplicate window is a new finding and may be part of the blocker.
+- Blocker, queue rule R2: same-method taps ended after the second no-change tap; the variants above were the pivot attempts inside this unit. The Alliance button does not respond to background coordinate clicks in this fullscreen session, while the green menu arrow does. Changed method for the next unit: exit fullscreen to the native 642x951 window (menu View to Exit Full Screen) and retry the Alliance tap there, or find a click_element route if an Alliance label element appears in the observation. Do NOT repeat the fullscreen background-click sequence.
+- The red dot means the objective is still pending, not absent: the next help unit must still press Help All.
+- Result stats: target 1, achieved 0, resources_gained none, costs about 13 minutes of unit time, no items spent, verified no, blocker_category c, points 0.
