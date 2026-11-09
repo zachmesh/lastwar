@@ -158,8 +158,11 @@ Usage:
              # so a pair with no fix-ups cannot silently repeat
              # the eighth-failure pattern
 
---root defaults to the repository _queue_ folder; tests point it at a
-scratch directory.
+--root defaults to the repository _queue_ folder; it also accepts
+a repository root, resolved to its _queue_ folder, or a pool
+directory directly (issue #510). enqueue refuses a root holding
+no pool state directory, so a wrong root never mints units into
+a fresh empty directory; tests point it at a scratch directory.
 
 Frontmatter dialect: the small YAML subset this tool writes - plain
 scalars, [a, b] flow lists, and mappings nested by 2 space indents
@@ -358,6 +361,30 @@ def pool_root_warning(root):
     return (f"warning: pool root {root} holds no inbox, claimed "
             "or done directory - the counts below describe an "
             "empty or wrong root, not the live pool")
+
+
+def resolve_pool_root(root):
+    """Return the pool directory for a repository root or a pool dir.
+
+    --root names a pool, but the planner body passes the repository
+    root (issue #510): the first --apply then wrote units into a
+    stray <repo>/inbox/ the ticker never reads. A root holding a
+    _queue_ subdirectory and no pool state directory of its own is
+    a repository root, so resolve it to <root>/_queue_; a root that
+    already holds pool state directories is a pool and passes
+    through unchanged, matching pool_gap.py's resolve_pool. Any
+    other root passes through unchanged for the caller to judge:
+    read commands warn through pool_root_warning, write commands
+    refuse (see cmd_enqueue).
+    """
+    if not root:
+        return root
+    if any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        return root
+    queue_dir = os.path.join(root, "_queue_")
+    if os.path.isdir(queue_dir):
+        return queue_dir
+    return root
 
 
 CONFLICT_MARKERS = ("<<<<<<<", "=======", ">>>>>>>", "|||||||")
@@ -2054,6 +2081,18 @@ def _sweep_enqueue_refusal(args):
 
 
 def cmd_enqueue(args):
+    # Wrong-root gate (issue #510): a root holding no pool state
+    # directory is not a pool, so refuse instead of minting an
+    # inbox under it - a wrong root used to silently create a stray
+    # <root>/inbox/ and report "queued" into a pool nobody reads.
+    # Read commands keep the warn-only pool_root_warning convention
+    # (issue #199); only this write path refuses, before anything
+    # is created or written.
+    if not any(os.path.isdir(state_dir(args.root, s)) for s in STATES):
+        print(f"refused: pool root {args.root} holds no inbox, "
+              "claimed or done directory - the pool was not found, "
+              "nothing queued (issue #510)")
+        return 1
     if args.est_minutes > UNIT_CAP_MINUTES:
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
               f"{UNIT_CAP_MINUTES} minute unit cap - split the task")
@@ -3309,7 +3348,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_stats)
 
     args = parser.parse_args(argv)
-    args.root = os.path.abspath(args.root)
+    args.root = resolve_pool_root(os.path.abspath(args.root))
     return args.fn(args)
 
 

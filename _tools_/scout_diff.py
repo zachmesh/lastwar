@@ -68,7 +68,11 @@ changes nothing in any pool. With --apply it feeds the plan's
 enqueue entries to _tools_/queue.py enqueue, one call per unit, so
 every unit it creates passes the same validation as a manual
 enqueue - and --apply refuses to run unless the pool root is
-given explicitly with --root.
+given explicitly with --root. --root accepts a pool directory or
+a repository root, resolved to its _queue_ folder (issue #510);
+--apply refuses a root holding no pool state directory, so a
+wrong root fails loudly instead of writing units into a fresh
+empty directory nobody reads.
 
 Idempotency: produced units dedupe on (regular, planned_for)
 exactly as sync and plan do, and dynamic units carry their
@@ -94,7 +98,8 @@ Usage:
                 [--now ISO] [--apply] [--format text|json]
 
 Pool reads (the dedupe checks and the learned estimates) happen
-only when --root names a pool; without it the diff runs against
+only when --root names a pool or a repository root resolved to
+its _queue_ folder; without it the diff runs against
 an empty pool view. The observation, regulars, activities roster
 and ledger default to the repository this tool lives in
 (override with --repo).
@@ -1876,6 +1881,13 @@ def main(argv=None):
                      "explicitly")
     if args.root:
         args.root = os.path.abspath(args.root)
+        args.root = Q.resolve_pool_root(args.root)
+    if args.apply and not any(
+            os.path.isdir(Q.state_dir(args.root, s))
+            for s in Q.STATES):
+        parser.error(f"--apply root {args.root} holds no inbox, "
+                     "claimed or done directory - the pool was "
+                     "not found, nothing applied (issue #510)")
     return run(args)
 
 
