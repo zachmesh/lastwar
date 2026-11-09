@@ -1988,3 +1988,22 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Status: no-op. Full detail in pr-catchall/1039-run.md.
 
 - Knowledge organization pass knowledge-organization-2026-11-09-1032 (done). Own PR 518 merged as squash 1a178dc2 with one integrator note (radar-tasks frontmatter YAML defect), fixed in new PR 520 (OPEN, MERGEABLE, CLEAN): arms-race 1.68.0 (Events groundings (672,132)/(683,150) corrected as landscape-fullscreen-only, phase page not reached in the 0949 unit, current phase unknown), alliance-help 1.33.0 (Alliance button ignores background clicks in fullscreen, duplicate window 508052, Help All still pending), mail-rewards 1.29.0 (train mails carry no attachments, windowed Mail entry (932,791) first try), radar-tasks 1.60.0 (frontmatter colon repaired). Reply posted on PR 518; mail-entry evidence commented on Issue #230. No new knowledge issues; retro not landed. Status: done. Full detail in knowledge-organization/1032-run.md.
+
+- Scout discovery unit scout-scout-discovery-2026-11-09-011, done:
+  Season II HUD countdown (6d 07:13:29) opens TRANSFER SURGE, the
+  cross-warzone transfer window - confirmed live in all three tabs.
+  Home: Application Day 1/4, 11.09-11.13, 3d 07:12:52 left at read,
+  12 semi-open destinations #2085-#2096. Details: 32-warzone group
+  #2085-#2116; #2085 and #2086 cards read live. #2110 Settings:
+  President [CTR1]HawksMav, fill 30/60, 29/40, 2/5, 1/1; incoming
+  applicants #2097 ColonelP816 / [Crck] Cracken 110,856,819 and
+  #2103 Airi Lufthansa / [RnR2] Unity Sector II 81,142,911. Our
+  status Follower, 0/50. No Apply, Accept, Reject or Transfer
+  Settings tapped - owner/president-only. Candidate rejected as a
+  queue task (no reward, cost, scoring or recurring action). This
+  was a duplicate exploration: unit 004 (ticker-0804) had already
+  closed the same candidate and filed Issue #514; this unit added a
+  comment to #514 with the new reads and flagged that the live
+  countdown implies the application phase ends about 2026-11-13
+  02:00 UTC, 8 hours later than #514 states. Full detail in
+  season-ii-countdown-6d/1044-queue-run.md.
