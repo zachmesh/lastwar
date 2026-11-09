@@ -2267,3 +2267,16 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   against new main c056fcf2, OD-20261108-01 still open,
   no new escalation. Status: done. Full detail in
   pr-integration/1300-run.md.
+
+- Integrator pass pr-integration-2026-11-09-1315
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 15:00. No
+  knowledge or code PR merged; no new records PR opened.
+  Records PR 522 re-probed CLEAN at head 7902a9a3,
+  comment posted, awaits the 15:00 batch. Records PRs
+  351 and 301 still CONFLICTING on the same single file
+  at unchanged heads, carried, follow-up comments
+  posted. Tools PR 425 owner-gated, re-verified CLEAN
+  against unchanged main c056fcf2, OD-20261108-01 still
+  open, no new escalation. Status: done. Full detail in
+  pr-integration/1315-run.md.
