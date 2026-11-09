@@ -4254,3 +4254,16 @@ of 2026-10-28.
   820.0M / coin 15.9M, closing 499.1M / 821.2M / 15.9M;
   power 149,209,253. Full detail in
   resource-collection/1935-queue-run.md.
+
+## 19:40 to about 19:51 — Queue planning pass
+- Planner pass queue-planning-2026-11-08-1940. Plan staged
+  6 net fresh units (0657/0700 slots; already_present 65,
+  skipped_done_current 2, reaped 0, expired 0, no phantom
+  re-stage, branch-closed 1730 slot skipped) into the live
+  pool. Pre-reset sweep pair already complete by execution
+  (both passes executed partial; 1630 done file absent from
+  the live pool, present on the branch tip); step 2 skipped,
+  this run is in the 19:00 hour. Scout diff applied with
+  zero changes (unexplained 14, unchanged). No withdrawals.
+  Pool inbox 72, claimed 1, done 1300. Full detail in
+  queue-planning/1940-run.md.
