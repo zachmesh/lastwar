@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T11:32:17Z
+modified: 2026-11-09T22:32:17Z
 level: L1
-version: 1.74.0
+version: 1.75.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -73,7 +73,7 @@ grounded_in:
   - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Strength Ranking Donation Daily own 3450, record commit caa661bab on records/2026-11-08)
   - source: ticker-0504 alliance-donations execution record 2026-11-08 0519 queue run (partial, 3 coin donations landed, fourth tap eaten, fifth tap unconfirmed, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 alliance-donations execution record 2026-11-08 0546 queue run (partial, re-read after cooldown, last donation landed, 00:11:00 timer); record commit 707bcec0d8 on records/2026-11-08
-  - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, incidental Alliance Tech entry read: Donation Count 1/30, footer 4050); record commit 50389b4b4a on records/2026-11-08
+  - source: ticker-0604 perception-scout execution record 2026-11-08 0608 queue run (partial, incidental Alliance Tech entry read - Donation Count 1/30, footer 4050); record commit 50389b4b4a on records/2026-11-08
   - source: ticker-0704 alliance-donations execution record 2026-11-08 0706 queue run (partial, re-read after cooldown, 3 coin donations verified, grey-button evidence disproved, count replenished 1 to 4, Issue #450); record commit 60a1fa835f on records/2026-11-08
   - source: ticker-0804 alliance-donations execution record 2026-11-08 0808 queue run (partial, re-read after cooldown, 1 coin donation verified, burst cap after one verified donation, grey-button evidence disproved a second time, count replenished 1 to 2, Issue #450); record commit 97437267c4 on records/2026-11-08
   - source: ticker-0834 alliance-donations execution record 2026-11-08 0841 queue run (partial, re-read after cooldown, 0804 third tap proven eaten, one coin tap dispatched unverified behind a 00:16:27 timer, footer +100, count stuck at 1/30, Issue #450); record commit cf80509ea on records/2026-11-08
@@ -87,6 +87,7 @@ grounded_in:
   - source: ticker-2004 alliance-donations execution record 2026-11-08 2034 queue run (partial, 9 coin donations verified live 17/30 to 8/30 on Quick Construction, second batch hit a 00:18:14 cooldown timer, close unverified, footer fell 6900 to 1800 while donating; record commit fc00889b0 on records/2026-11-08)
   - source: ticker-2334 alliance-donations execution record 2026-11-08 2350 queue run (partial, 9 coin donations verified live 9/30 to 1/30 on Rallied Attack, final donation landed after the last live read, 00:18:26 timer hid the count, close unverified, footer rose 1300 to 2200, shield re-grounded (934,710), recommended marker corrected to the red-panda badge; record commit 86b26f5ce0 on records/2026-11-08)
   - source: ticker-0304 alliance-donations execution record 2026-11-09 0324 queue run (partial, one coin donation verified live 9/30 to 8/30 on Rallied Attack, replenishment 29th data point, hard closing rule under re-examination per Issue #500; record commit e6f80f1e2 on records/2026-11-09)
+  - source: ticker-1345 alliance-donations execution record 2026-11-09 1413 queue run (partial, 11 coin donations verified live 30/30 to 19/30 on Quick Gathering, count confirmed a remaining daily allowance, footer 2,250 question open; record commit 63eccdb92 on records/2026-11-09)
 ---
 
 
@@ -3635,3 +3636,17 @@ enqueued for after the cooldown (not before about
 - Result stats: target 30, achieved 1, points 50, resources_gained Tech EXP 50, contribution 50 points, costs 800 coin, about 7 minutes of unit time, verified yes, blocker_category h.
 - Commented on Issues #160, #174, #423 and #500 by this run with the fold.
 - Follow-up: the successor donations unit runs the burst-to-greyed test and re-reads the count and the footer live after the cooldown; the daily retro rules on Issue #500. The 0441 re-read unit remains in the inbox for its own opening read.
+
+## What the 2026-11-09 1413 unit added - 11 coin donations 30/30 to 19/30, count confirmed a remaining daily allowance, footer 2,250 question open
+
+- Unit donations-2026-11-09-1003 by ticker-1345, about 14:03 to 14:13 local, status partial (pass budget, 19 of 30 coin donations remain). Evidence in `_records_/2026-11-09/alliance-donations/1413-queue-run.md` (commit 63eccdb92 on records/2026-11-09). Tracker untouched; the next donations unit resumes from 19 remaining.
+- Entry: R2 entry-route fix applied and worked a second time - BASE button from the world map restored base framing, then the Alliance shield tapped at its fresh measured centre on this screenshot (935,726); the menu opened at once, no camera pan to the Drill Ground cluster. The 2026-11-02 blocker (three failed units) stays beaten. Alliance menu: [AP3x] The Apex, 96/100 members. Alliance Techs tile carries a red dot.
+- Target node: Quick Gathering (Faster Resource Gathering for Allies), 2/10, Tech EXP 36.5K/600.0K at entry, Current +8%, Next Level +12%. Donation Reward per coin donation: 50 EXP, 50 contribution. Coin button cost 300 coin. Diamond button (2 diamonds, Unlimited Attempts) never touched.
+- 11 coin donations made in this unit, in one single tap plus two batches of 5 (1 second pauses between taps; every tap registered). Coin 51.9M to 51.8M (3,300 spent). The coin button was still green at close; no burst cooldown hit yet. The unit closed on the pass time budget, not on the button greying - batches of 5 with 1-second pauses did not trigger the burst grey-out seen in earlier units.
+- Donation Count, same-unit stepwise confirmation that it is the remaining daily allowance: 30/30 at entry, 29/30 after 1 donation, 24/30 after 6, 19/30 at close. No replenishment inside the unit.
+- Replenishment, thirtieth data point for Issues #160, #174, #423 and #500: the count stood at a live-read 8/30 at the 0324 close (about 03:31) and 30/30 at this unit's entry (about 14:03) - +22 over about 10 hours 32 minutes, about 1 per 29 minutes as a two-endpoint estimate only, NOT a measured rate, and no reset fell between the reads. The count is capped at 30, so the refill may have completed earlier than the entry read.
+- Tech EXP bar at close 37.5K/600.0K. The bar is shared (alliance-wide), so its movement is not attributed solely to this unit's 11 donations.
+- Open question, Tech Donation Today footer: the footer read 2,250 at entry while the Donation Count read a full 30/30 remaining. At 50 points per donation, 2,250 implies 45 donations, over the 30 cap, so the footer cannot be this reset day's own donations starting from 0. The footer stood at 2,200 at the 0324 unit's entry (03:24) and 2,200 at the 2350 close the night before, then rose exactly +50 by this unit's entry - matching the single 0324 donation - so the footer increments 50 per own donation but does not reset to 0 with the daily count. Either it counts a different window than the reset day or it includes other contribution sources. The next unit re-reads the footer after donating and compares it against the count movement. Commented on Issue #417 (counter semantics) by this run; Issue #500's "footer as the better day total" hypothesis is constrained by this read, not confirmed by it.
+- Cross-read: the new Arms Race phase (Hero Advancement, thresholds 2,000/4,000/12,000, timer 03:56 at 14:03) was seen on the way through Events but left for the next arms-race unit.
+- No diamonds or money spent. No other activity touched.
+- Result stats: target 30, achieved 11, points 550, resources_gained Tech EXP 550, contribution 550 points, costs 3,300 coin, about 10 minutes of unit time, verified yes, blocker_category h.
