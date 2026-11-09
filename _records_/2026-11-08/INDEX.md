@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-09T03:23:53Z
+modified: 2026-11-09T03:59:03Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -4128,6 +4128,21 @@ of 2026-10-28.
   and 301 still conflict on the same single file,
   unchanged, no repeat comments.
   Full detail in pr-integration/1915-run.md.
+- Integrator pass pr-integration-2026-11-08-1930.
+  NON-batch pass for records (checker: clock-only due,
+  window 19:00-20:00 PT, but merge-aware not due, PR 470
+  already merged 19:04:49 PT in this window, so only the
+  first pass merges). No records merged. Merged
+  knowledge PR 479 (squash 10099518b) and tools PR 480
+  (squash 095211d4a), both clean; main synced back to the
+  local repo. Records PR 460 conflicted at moved head
+  2c0c2dd1, re-noted, then reconciled branch-side to
+  CLEAN (fe24f709) and re-noted, carried to the 23:00
+  batch. Records PR 478 CLEAN, awaits the 23:00 batch.
+  Tools PR 425 still owner-gated, clean, no owner
+  decision. Records PRs 351 and 301 still conflict on
+  the same single file, unchanged, no repeat comments.
+  Full detail in pr-integration/1930-run.md.
 - Passes unit passes-2026-11-08-1457 (done): shop claims for the new
   reset day, run late (14:57 slot, expiry 18:57, finished 18:58).
   Hot Deals free pack claimed - Drone Great Value Pack (Drone Parts
