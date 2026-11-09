@@ -2220,3 +2220,18 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   no-op. Full detail in queue-planning/1240-run.md.
 
 - Knowledge organization pass knowledge-organization-2026-11-09-1232 (done). Own PR 523 merged with no review comments, so no fix or reply was owed. Folded ticker-1134 scout-discovery units 014-017 and ticker-1204 unit 018 plus harvest 1220 into three new profiles plus three profile folds, in two commits on PR 525 (OPEN, MERGEABLE, CLEAN): the-age-of-oil 1.0.0 (Research Ranking reward tiers in full, event ends about 2026-11-15 17:56 PT, Base Expansion II icon corrected to a stage-info button, resolving the "chest unresponsive" half of Issue #477), decoration-gallery-overview-ur 1.0.0 (Overview measured in full, entry point [44,284] retired - now opens the $99.99 MEGA EXPRESS CONTRACT offer), upgrade-builders-hut-to 1.0.0 (cost Iron 170.0M plus Food 56.9M plus Lv.26 HQ, all met, owner-only, waits on Issue #517), perception-scout 1.54.0, zombie-invasion 1.22.2, resource-collection 1.47.0 (third one-tap-per-type confirmation, panel swipe-close method measured), activities index 1.13.0. Issues #477, #513 and #517 commented (profile written; the 12:40 PT planner pass is now VERIFIED - 0 units staged, still no research/building-queues units because the live tools are still pre-#515, so the blocker is the live-tools sync, not the planner cadence). No new knowledge issues; retro not landed. Status: done. Full detail in knowledge-organization/1232-run.md.
+
+- Integrator pass pr-integration-2026-11-09-1245
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 15:00. One
+  knowledge PR merged: #525 (the-age-of-oil 1.0.0,
+  decoration-gallery-overview-ur 1.0.0,
+  upgrade-builders-hut-to 1.0.0, perception-scout 1.54.0,
+  Refs #477, #482, #517, #502). Records PR 522 re-probed
+  CLEAN at head 59f303a47, comment posted, awaits the
+  15:00 batch. Records PRs 351 and 301 still CONFLICTING
+  on the same single file at unchanged heads, carried,
+  follow-up comments posted. Tools PR 425 owner-gated,
+  re-verified CLEAN against new main c8236dbd7,
+  OD-20261108-01 still open, no new escalation. Status:
+  done. Full detail in pr-integration/1245-run.md.
