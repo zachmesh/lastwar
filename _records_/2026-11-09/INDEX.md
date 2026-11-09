@@ -2024,3 +2024,18 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   countdown implies the application phase ends about 2026-11-13
   02:00 UTC, 8 hours later than #514 states. Full detail in
   season-ii-countdown-6d/1044-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-09-1030
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Two
+  knowledge/tools PRs merged: #520 (4 profiles folded,
+  arms-race 1.68.0, alliance-help 1.33.0, mail-rewards
+  1.29.0, radar-tasks 1.60.0 frontmatter repair) and #521
+  (branch_guard sweep 1.1.0, Refs #441). Records PR 493
+  re-probed CLEAN at moved heads, re-check and follow-up
+  comments posted, awaits the 11:00 batch. Records PRs 351
+  and 301 still CONFLICTING on the same single file at
+  unchanged heads, carried, comments posted. Tools PR 425
+  owner-gated, re-verified CLEAN, OD-20261108-01 still
+  open, no new escalation. Status: done. Full detail in
+  pr-integration/1030-run.md.
