@@ -1643,7 +1643,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   main, OD-20261108-01 still open, no owner answer. No
   merges, no PRs opened. Status: done. Full detail in
   pr-integration/0815-run.md.
->>>>>>> ca233ed8ba2d7bd11939d1866405748de9afff79
+
 ## 08:24 to 08:28 — Queue ticker pass, scout discovery (done)
 
 - Scout unit scout-scout-discovery-2026-11-09-005, done: the
@@ -1673,4 +1673,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   and left as the open question for a later unit. No regular
   proposed: the goals advance passively as the warzone plays.
   Full detail in the-age-of-oil/0829-queue-run.md.
+## 08:30 to about 08:36 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0830
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Records
+  PR 493 head moved to ca233ed8 (0815 run record) since
+  the 0815 re-check; re-probed CLEAN, re-check comment
+  posted. Records PRs 351 and 301 still CONFLICTING on
+  the same single file at unchanged heads, carried
+  awaiting branch-side reconciliation. Tools PR 425
+  owner-gated, re-probed CLEAN against the unchanged
+  main, OD-20261108-01 still open, no owner answer. No
+  merges, no PRs opened. Status: done. Full detail in
+  pr-integration/0830-run.md.
+>>>>>>> 59de55447943018b619a1bca44d8c08edd0bb186
 
