@@ -158,3 +158,15 @@ of 2026-10-28.
   Issue filed. The 2026-11-09 daily retro has not landed yet.
   Status: done. Full detail in
   knowledge-organization/0032-run.md.
+
+- Integrator pr-integration-2026-11-09-0045 (NON-batch).
+  Checker due no (next batch 03:00 PT); merged tools PR 494
+  (tapcal verify subcommand, Refs #123) and knowledge PR 495
+  (4-profile fold) by squash, main aefdc615cf to e786ef8918,
+  local main synced; records PRs 493 and 491 clean against new
+  main, awaiting the 03:00 batch; records PRs 478, 351, 301
+  still conflicted on the single action-log file, re-probed,
+  scope unchanged, no new comments; tools PR 425 owner-gated,
+  clean, unchanged (OD-20261108-01 open). No Slack sync by this
+  run (merge report carried in the run result for resolution
+  delivery). Full detail in pr-integration/0045-run.md.
