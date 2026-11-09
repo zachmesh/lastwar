@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-08T13:39:58Z
+modified: 2026-11-09T06:32:17Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,7 @@ grounded_in:
   - source: ticker-0104 perception-scout execution record 2026-11-08 0118 queue run (partial, alliance remainder station check, sixth no-train confirmation in the scout-mid-2026-10-31 chain, no train preparing; record commit 33bb20050a on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0440 queue run (partial, station re-check, both preparation signals absent, record commit caa661bab on records/2026-11-08)
   - source: ticker-0434 perception-scout execution record 2026-11-08 0447 queue run (done, alliance remainder, Train Conductor appointments, record commit caa661bab on records/2026-11-08)
+  - source: ticker-2201 alliance-train execution record 2026-11-08 2211 queue run (partial, checked only, both preparation signals absent, no train preparing; record commit 8960535c on records/2026-11-08)
 ---
 
 # Alliance train
@@ -1084,3 +1085,11 @@ Measured in the 0110 train unit (ticker-0104, window mode
   scout-midday-2026-11-08-0700 is already in inbox. Chain
   scout-mid-2026-10-31 is spent with this unit.
 - Game left on the base screen.
+
+## What the 2026-11-08 2211 unit added - checked only, no train preparing, banner-only signals check
+
+- Unit train-2026-11-08-1830 by ticker-2201, about 22:09 to 22:11 local, status partial (checked only). Evidence in `_records_/2026-11-08/alliance-train/2211-queue-run.md` (commit 8960535c on records/2026-11-08).
+- Returned to a clean base view and checked the two preparation signals from the activity metadata: no train icon in the left icon column (chat, truck, radar, hammer only) and no "Boarding closes in" banner under the resource bar.
+- No train is in preparation. Per the activity metadata the unit closes partial without panning to the station, and the train is re-checked only when a train is preparing. No boarding, no conductor action, no spending.
+- Note: this is a banner-only signals check, not a station-panel verification - the unit did not pan to the station. It does not advance the scout-chain station-panel no-train count (seventh confirmation at the 0440 scout unit). The next train unit re-checks the two signals first.
+- Result stats: target 1, achieved 0, resources_gained none, costs 2m_wall_no_stamina, verified yes, blocker_category h, train_preparing false, device_takeovers 0.

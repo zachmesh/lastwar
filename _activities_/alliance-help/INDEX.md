@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T22:44:40Z
+modified: 2026-11-09T06:32:17Z
 level: L1
-version: 1.29.0
+version: 1.30.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-1020 alliance-help execution record 2026-11-07 1038 queue run (failed, Mac mini back online, last_seen fresh 2026-11-07T18:19:37Z, Last War window 1920x1080 at (0,-360) on an inactive Space, capture failure; Mission Control recovery lesson and Ctrl+Right does not switch Spaces; Issue 282 class, not Issue 284)
   - source: ticker-1727 alliance-help execution record 2026-11-07 1736 queue run (done, Help All pressed from the base-screen bubble at norm 827,707, header 560/1,000, own requests only; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-1352 alliance-help execution record 2026-11-08 1413 queue run (done, Help All pressed, Help red dot cleared, points counter stayed 0/1,000 before and after, helps count not claimed; record commit bf20e1a48 on records/2026-11-08)
+  - source: ticker-2201 alliance-help execution record 2026-11-08 2214 queue run (done, Help All pressed twice, points 100/1,000 to 360/1,000, header counter lag resolved, list scrolls; record commit 8960535c on records/2026-11-08)
 ---
 
 
@@ -605,7 +606,7 @@ Measured in the 0135 help unit (ticker-0134, window mode
 
 - The daily help cap and what helpers and helped players each receive.
 - How a Healing Help request is helped (Help All, or a different surface such as the hospital) - first seen 2026-11-02 1741, papillon707 request unhelped after two Help All presses and a row tap.
-- What the "Today's points gained from Alliance Help" header counter counts: the 2026-11-08 1413 unit pressed Help All successfully (toast fired, Help red dot cleared) yet the counter read 0/1,000 both before and after the press. Either it updates with a lag, or it counts something narrower than the helps Help All delivers. The next help unit re-reads the counter at entry to see whether it has moved.
+- What the "Today's points gained from Alliance Help" header counter counts: ANSWERED 2026-11-08 2214 - it counts the helps Help All delivers, but it does NOT update inside one open Help session: after each Help All press the header still showed the pre-press value until the page was closed and reopened (100/1,000 in-session after the first press, 340/1,000 after reopen; 340/1,000 in-session after the second, 360/1,000 after reopen). The 1413 unit's 0/1,000 read before and after was a stale in-session read, not a narrower count. Closing figures for help units must be read after a page reopen. (The 1413 section is left standing as the record of what was observed then.)
 
 
 ## What the 2026-11-03 1121 unit added - done through the base-screen bubble, header 1240 unchanged, Help All no requests yet
@@ -853,3 +854,19 @@ Measured in the 0135 help unit (ticker-0134, window mode
   5m_wall_no_stamina, verified yes, blocker_category none,
   helps_pressed unverified_count, help_points 0,
   help_red_dot_cleared true.
+
+## What the 2026-11-08 2214 unit added - Help All twice, points 100 to 360, counter lag resolved, list scrolls
+
+- Unit help-2026-11-08-1830 by ticker-2201, about 22:03 to 22:09 local, status done. Evidence in `_records_/2026-11-08/alliance-help/2214-queue-run.md` (commit 8960535c on records/2026-11-08).
+- Base screen at entry: no help bubble visible, but the Alliance button carried a red dot, so the Help page was opened via Alliance, Help (red dot on the Help entry).
+- HELP popup read live at entry: "Today's points gained from Alliance Help: 100/1,000". The four visible rows were only this account's own requests (Bears Lair - Missile Mastery II research, Lv.27 Drill Ground, Defense Training VIII research, Lv.30 Aircraft Center), each already at 30/30.
+- Help All pressed: the game answered "Allies are very grateful for your assistance!". The header still read 100/1,000 in the same open session.
+- Help page closed and reopened: header now read live 340/1,000, a gain of 240 points from the first Help All.
+- Scrolling the list down revealed a fifth row below the fold: Abyss Apex, "Need help with building Lv.28 Oil Well", shown white with no "Time reduced" label - still pending after the first press.
+- Help All pressed a second time: the toast fired again. The header still read 340/1,000 in-session, and the Abyss Apex row was gone from the list on the next scroll check.
+- Help page closed and reopened a second time: header now read live 360/1,000, a further gain of 20 points.
+- Closing state verified live: points 360/1,000, only the four own 30/30 rows remain in the list, no pending ally request visible. No diamonds, money, speedups or other spending. No alliance diplomacy, no assembly, no teleport.
+- CORRECTION (1) - the list DOES scroll: the 1413 section's "The list does not scroll - no further rows exist below" is superseded. Scrolling the list down in this unit surfaced a fifth row below the fold (Abyss Apex, Lv.28 Oil Well, still pending after the first Help All press). A unit that reads only the visible rows can miss a pending ally request. The 1413 section is left standing as the record of what was observed then.
+- CORRECTION (2) - the counter lag is resolved: the 1413 open question (header counter 0/1,000 before and after a successful Help All) is answered. The points header does NOT update inside one open Help session: after each Help All press it still showed the pre-press value until the page was closed and reopened. This explains the 1413 0/1,000 anomaly - that unit read the counter only in-session. Closing figures for help units must be read after a page reopen. The Open questions entry is updated to record the resolution.
+- Correction, from the record itself: the unit ran 22:03 to 22:09 local, about 6 minutes (duration_seconds 334), not 22:04 to 22:14. The closing figures (points 100 to 360) are unaffected.
+- Result stats: target 1, achieved 1, resources_gained 260 Alliance Help points, costs 6m_wall_no_stamina, verified yes, blocker_category none, points_before 100, points_after 360, points_gained 260, helps_pressed unverified_count, help_red_dot_cleared true, device_takeovers 0.
