@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T10:32:17Z
+modified: 2026-11-09T13:32:17Z
 level: L1
-version: 1.24.0
+version: 1.25.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -34,6 +34,7 @@ grounded_in:
   - source: ticker-1851 secret-missions execution record 2026-11-08 1907 queue run (done, 8 finished tasks claimed, 8 pending Mega Deployed, ally assists 5/5, new duel week Radar Training day 1, Ally Tasks badge counts remaining assists; record commit cff344153 on records/2026-11-08)
   - source: ticker-2235 secret-missions execution record 2026-11-08 2253 queue run (done, 7 finished tasks claimed, one task's rewards plundered at 10% by [BZGR]FredoSauce, remaining 90% unverified; record commit 0c9686b4f on records/2026-11-08)
   - source: ticker-0204 secret-missions execution record 2026-11-09 0221 queue run (done, 8 resolved cards same as 2253, assists 5/5 at cap, recovery claimed, post icon now at (55,657); record commit facef628c on records/2026-11-09)
+  - source: ticker-0504 secret-missions execution record 2026-11-09 0517 queue run (done, 4 cards all PERFECT, assists 5/5 at cap, recovery claimed, no new own tasks since the 22:49 claim on 2026-11-08, Mega Deploy no-change; record commit be01e91134 on records/2026-11-09)
 ---
 
 
@@ -1053,7 +1054,7 @@ secrets-2026-10-31-2257, status partial).
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
-  new own tasks after the dispatched ones return.
+  new own tasks after the dispatched ones return. (2026-11-09 0517 update: no new own tasks have appeared since the 22:49 claim on 2026-11-08 - the list holds only the same 4 PERFECT cards, and the other three claimed cards plus the plundered card have dropped off between the 02:21 and 05:17 reads. The refresh cycle for new own tasks after a batch is claimed stays an open question; the next secrets unit re-checks.)
 - Whether the remaining 90% of a plundered task's rewards reaches the
   account: the 2026-11-08 2253 unit found SR Retrieve Valuable
   Supplies plundered at 10% by [BZGR]FredoSauce at 19:40 (chest x1,
@@ -1403,3 +1404,15 @@ secrets-2026-10-31-2257, status partial).
 - Exit note: the post back arrow sits at norm 148,947 (button centre); a tap at norm 62,948 landed on the button's left edge and produced no change, and the corrected tap at 148,947 returned the game to the base screen. Same one-row lesson as the duel panel this pass: ground the back-arrow centre fresh per panel.
 - No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared. The game was left on the base screen.
 - Result stats: target 3, achieved 3 (claim 0 finished - none pending, assists 5/5 verified at cap, no pending to deploy), resources_gained none, costs about 3 minutes, no items spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 0517 unit added - 4 cards all PERFECT, assists 5/5 at cap, no new own tasks since the 22:49 claim, Mega Deploy no-change
+
+- Unit secrets-2026-11-09-0257 by ticker-0504, about 05:06 to 05:17 local, status done. Evidence in `_records_/2026-11-09/secret-missions/0517-queue-run.md` (commit be01e91134 on records/2026-11-09). Computer session cc-224 on the owner Mac mini. No different-device dialog appeared.
+- Entry: Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified before tapping further. The train icon at norm (55,573) opens the Trucks screen, as the ticker-2235 run found. Entry point re-grounded again this unit: the post icon sat at (55,657) at the 0221 read and at (55,636) here - the rotating shortcut set keeps moving, so the post point must be re-grounded fresh each unit, title verified before tapping further. The 0221 section's (55,657) point is superseded for this rotation.
+- Your Tasks holds exactly 4 cards, all stamped PERFECT in gold, no Claim button on any of them: SSR Search for Missing Refugees x2, SSR Train Refugees, SSR Protect Refugee Camp. These are the same four cards ticker-2235 claimed at 22:49 on 2026-11-08; the other three claimed cards and the plundered card from that batch have dropped off the list between the 0221 read (8 cards) and this read (4 cards). Nothing to claim this cycle. A scroll of the list produced no change, so the list holds only these four cards.
+- Assist Allies 5/5, read live - the daily cap is reached, no assists left to do. Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Reward Recovery panel: the 2026-11-6 18:00 record reads CLAIMED (8 unstarted tasks, same as ticker-2235 found); the 2026-10-24 19:00 record sits collapsed below it. Nothing new to claim.
+- Mega Deploy tapped once at its measured centre and opened no panel (no-change), consistent with nothing pending to deploy; not retried, per R2 and the ticker-2235 two-tap evidence for the same list state.
+- NOT done: no new secret tasks have appeared since the 22:49 claim on 2026-11-08; the refresh cycle for new own tasks after a batch is claimed stays an open question for the profile (see the updated Open questions entry). The next secrets unit re-checks.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (claim state verified, assists 5/5 verified at cap, deploy state verified with no pending), resources_gained none, costs 11min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
