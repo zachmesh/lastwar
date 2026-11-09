@@ -2326,6 +2326,26 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   withdrawals. Pool inbox 73, claimed 1, done 1362. Status:
   no-op. Full detail in queue-planning/1340-run.md.
 
+- Queue-planning pass queue-planning-2026-11-09-1440 (done).
+  Plan staged 17 units plus 12 pre-reset fix-ups (Issue #147,
+  all 2026-11-09-1700, genuinely missing from the pool;
+  already_present 59, skipped_done_current 1, reaped 0,
+  expired 6, skipped_closed zero-sweep-2026-11-08-1730,
+  stale_done_dropped 7 scout discovery units 010, 012-017);
+  sweep production skipped (not the 17:00 run), pair already
+  complete (1630/1730 in worktree inbox). Scout diff on the
+  Nov 9 branch-tip observation (31 items, md5 59bbeb9d)
+  applied with 0 enqueued, 9 already-queued; promotion
+  proposals 3 (inventory-icon-red-dot, survey-center,
+  the-age-of-oil). Worktree tools are newer than live
+  (queue.py dbbbb29e vs live 8c92e8b9) and give 9/3 where
+  the stale live scout_diff gives 17/11 on the same
+  observation - same 6 execution entries, the 8 extra all
+  re-exploration of already-explored candidates. No
+  withdrawals. Pool inbox 90, claimed 0, done 1361
+  (worktree pool). Status: done. Full detail in
+  queue-planning/1440-run.md.
+
 - Arms Race unit arms-race-2026-11-09-1003, partial: Drone Boost
   phase 13:45-14:00 PT - score 6,000 to 8,000 of 30,000, 1,500 chest
   claimed (badge x1, medals x200, 5m speedup x8, resource chests);
