@@ -698,6 +698,30 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   still open, no owner answer, no new comment. Status:
   done. Full detail in pr-integration/0330-run.md.
 
+## 03:32 to about 03:37 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-0332. No-op: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 0300 note re-verified CLEAN against main 95fbdbfd, and the 0330 pass confirms no new comment); no new tooling issue filed since the 0132 triage (newest issues #500 and #498 are knowledge class; the 10:41Z updates to #475 and #136 are knowledge-organizer folds into PR #499, evidence only, no new tooling slice); the verification unit for #475 stays a play-side item and the first numeric pair for #136 (1,380,000) is recorded, closure belongs to the retro. Full detail in tool-development/0332-run.md.
+## 03:32 to about 03:47 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-09-0332.
+  Own PR 499 MERGED with 0 comments and 0 reviews, so no open
+  own PR carries integrator feedback. Two substantive records
+  folded into two profiles as one commit on PR 501 (OPEN and
+  MERGEABLE, mergeState CLEAN): ticker-0304 arms-race 0306
+  (done, Hero Advancement phase met live, McGregor Lv.145 to
+  146 for 82,500 points confirming +1 per 2,000 EXP, all
+  three point chests and the cumulative counter chest claimed,
+  now 6/8, Unit Progression formal miss verdict 0 of 75,000
+  recorded) into arms-race 1.64.0; ticker-0304 donations
+  0324 (partial, one coin donation verified live 9/30 to
+  8/30 on Rallied Attack, replenishment 29th data point,
+  hard closing rule marked under re-examination per Issue
+  #500, rule itself unchanged) into alliance-donations
+  1.74.0. Issues #500, #160, #174 and #423 commented with
+  the fold. The 2026-11-09 daily retro has not landed yet.
+  Status: done. Full detail in
+  knowledge-organization/0332-run.md.
+
 ## 03:35 to about 03:49 — radar tasks queue run (ticker-0334)
 
 - Radar unit radar-2026-11-09-0203, status partial. Duel day 1 Radar
@@ -715,6 +739,25 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   not "03:35 to about 03:49" as first written; see the appended correction in
   radar-tasks/0335-queue-run.md.
 
+## 03:39 to about 03:45 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-09-0339. No-op: six open PRs
+  scanned, none owned by this job. PR 491 merged at the 0300 batch
+  (merge commit 95fbdbfd), moving main d72dc6f4 to 95fbdbfd. New PR
+  501 (knowledge fold) verified clean against main 95fbdbfd by VPS
+  merge-tree. PR 493 branch-side reconciled and verified clean at
+  new head ddfd0201, awaits the 0700 batch. PRs 478, 351 and 301
+  still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append), heads
+  unchanged, integrator 0300 re-checks noted. Tools PR 425
+  owner-gated, clean, unchanged, awaiting the owner decision
+  (OD-20261108-01 open and undecided). Seventy-nine open issues,
+  zero unclassified, one created since the 0239 pass (issue 500,
+  knowledge, already labeled). Owner-decision issues 132, 154 and
+  335 over 24 hours, statements current. VPS root disk 367M free
+  (97 percent), down from 421M. Status: no-op. Full detail in
+  pr-catchall/0339-run.md.
+
 ## 03:40 to about 03:52 — resource collection queue run (ticker-0334)
 
 - Harvest unit harvest-2026-11-09-0203, status partial. Recentered first,
@@ -729,3 +772,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   resource-collection/0340-queue-run.md.
 
 - Issue #502 (knowledge) filed for the one-tap-per-type contradiction above.
+## 03:40 to about 03:47 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0340. Plan staged
+  5 net fresh units (already_present 65,
+  skipped_done_current 0, reaped 0, expired 0,
+  stale_done_dropped [radar-2026-11-09-0203],
+  branch_done_reconciled [arms-race-2026-11-09-0203,
+  donations-2026-11-09-0203], no phantom re-stage, 4
+  branch-closed slots skipped: radar 0203, donations 0203,
+  arms-race 0203, zero-sweep 1730) for the 1457 slot
+  (passes, secrets, treasures, trucks, events). Pre-reset
+  sweep pair not yet produced (due from the 17:00 run);
+  last night's pair executed 2 of 2 (both partial). Scout
+  diff applied with zero changes (unexplained 4: Inventory
+  dot, 99+ badge, skull timer, hammer 1/4). No withdrawals.
+  Pool inbox 71, claimed 0, done 1327. Status: done. Full
+  detail in queue-planning/0340-run.md.
