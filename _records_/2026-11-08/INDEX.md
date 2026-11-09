@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-09T05:57:50Z
+modified: 2026-11-09T08:05:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -4889,3 +4889,159 @@ of 2026-10-28.
   remain by stock for the next unit. Tab badge read 1 throughout
   and does not count digs by stock. Full detail in
   hidden-treasures/2255-queue-run.md.
+
+## 23:00 to about 23:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-2300.
+  BATCH pass for records (checker: due, window 23:00-00:00 PT,
+  first pass at or after the point, no records merge yet in
+  the window). Records PR 460 MERGED by merge commit
+  13d867120 (165 commits of 2026-11-08 records). Records PR
+  478 was CLEAN against pre-batch main 469ee656 but
+  conflicted on the single file _logs_/repo-actions/action-log.jsonl
+  after the 460 merge, commented, carried to the 03:00 batch.
+  Records PRs 351 and 301 still conflict on the same single
+  file, re-probed against new main 13d867120, commented,
+  carried. Tools PR 425 still owner-gated, clean against new
+  main 13d867120, no owner decision (register item
+  OD-20261108-01 open and undecided, no covering issue),
+  re-verified and re-noted. Merge-time action-log line for
+  the 460 merge committed to records/2026-11-08 as 729d36b01;
+  fresh PR 491 opened for the post-2300-batch appends on
+  records/2026-11-08. Local main synced 469ee656b to
+  13d8671208. Slack DM sync sent (message_ts
+  1794208721.711709). Full detail in
+  pr-integration/2300-run.md.
+- Harvest unit harvest-2026-11-08-2203 (partial): no bubble
+  collected - two taps hit non-bubble targets (Area No.168
+  zombie NPC dialogue at norm 701,468; Recon Plane Lv.24
+  panel at norm 565,636) and three pans never revealed the
+  bubble cluster, so the sweep is unfinished; HUD unchanged
+  (food 501.9M, iron 824.0M, coin 15.8M). The 1935 coin and
+  iron bubbles left standing were not re-found. Issue #490
+  filed this unit: food/iron HUD totals rose (+2.8M each)
+  since the 19:50 close with no harvest record between, the
+  second occurrence of the pattern. Full detail in
+  resource-collection/2310-queue-run.md.- Integrator pass pr-integration-2026-11-08-2315.
+  pr-integration/2315-run.md.
+
+## 23:32 to about 23:40 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-08-2332.
+  No-op: own PR 425 checked first (owner-gated on the policy
+  amendment, no action owed, no comment since the integrator
+  2300 note); re-verified CLEAN against new main c8935c15
+  (merge-tree exit 0, head cd8540d32 unchanged). No tooling
+  issue created since the 2232 run, so the 2232 triage
+  stands - all open tooling issues implemented by merged
+  PRs except #404 adoption, owned by other jobs. No code
+  change, no PR, no issue, no comment. Status: done.
+  Full detail in tool-development/2332-run.md.
+
+## 23:32 to about 23:45 — Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-08-2332. Own PR 489
+  MERGED 2026-11-09T06:56:48Z with 0 comments and 0
+  reviews, so no feedback pending. Folded ticker-2235
+  passes 2243, secrets 2253 and treasures 2255 plus
+  ticker-2308 harvest 2310 into 4 profiles as one
+  commit 955e6dbbc6: shop-claims 1.40.0, secret-missions
+  1.23.0, hidden-treasures 1.13.0, resource-collection
+  1.43.0. New mechanic: a running secret task's rewards
+  can be plundered at 10% by another player
+  ([BZGR]FredoSauce 19:40), remaining 90% unverified,
+  now an open question. Harvest HUD rise second
+  occurrence (food +2.8M, iron +2.8M, no intervening
+  harvest) is Issue #490; harvest method changes to
+  recenter-first, two new verified non-bubbles
+  (701,468 NPC marker, 565,636 Recon Plane indicator).
+  Treasures dig 1, chest 8/15, 2 digs remain capped by
+  M3; tab badge 1 re-confirmed not the dig count.
+  PR 492 opened for the fold, verified OPEN and
+  MERGEABLE, mergeState CLEAN. No Issue commented this
+  run; the 1935 grounded_in citation missing from the
+  1.42.0 fold was added with record commit 5534be1e5.
+  The 2026-11-09 daily retro has not landed yet. Slack
+  DM sync sent (message_ts 1794210070.428999). Status:
+  done. Full detail in
+  knowledge-organization/2332-run.md.
+## 23:38 to about 23:46 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-2330.
+  NON-batch pass for records (merge-aware checker: due no,
+  PR 460 already merged 23:12 PT in the 23:00 window by the
+  2300 pass). No records merges. Records PR 491 clean against
+  main 13d867120, awaiting the 03:00 batch. Records PRs 478,
+  351 and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-probed, carried.
+  Tools PR 425 still owner-gated, clean, unchanged, no owner
+  decision (register item OD-20261108-01 open and undecided).
+  VPS root disk still 100% full; delivery via 5.5M sparse
+  worktree. Local main verified at 13d867120, no sync-back.
+  No Slack sync (silent non-batch run). Full detail in
+  pr-integration/2330-run.md.
+
+- Integrator addendum pr-integration-2026-11-08-2330 (PR 492).
+  PR 492 (knowledge-organizer 4-profile fold) opened
+  mid-pass at 23:40 PT, after the pass-start list; reviewed
+  in full and merged squash aefdc615; local main synced
+  13d867120 to aefdc615 (direct GitHub fetch; bundle route
+  failed on VPS disk pressure); Slack DM sync sent for the
+  merge (message_ts 1794210300.087509). Run record stats
+  corrected. Full detail in pr-integration/2330-run.md.
+## 23:39 to about 23:47 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-08-2339. No adopted open PR
+  (PR 137 stays merged). Five open PRs scanned, none owned by
+  this job: PR 491 (records 2026-11-08 post-2300 batch, clean
+  against main aefdc615 at head f2f7bbcb54, awaits the 03:00
+  batch), PR 478 (records 2026-11-07, flipped CLEAN to
+  CONFLICTING on the 460 merge, single action-log append),
+  PR 425 (tooling log gate, owner-gated on the policy
+  amendment, awaiting the owner decision), PRs 351 and 301
+  (still conflict with main on the single action-log append,
+  carried). PR 460 merged at the 2300 batch; main advanced
+  to aefdc615 on PR 492. No adoption, no fix, no hand-off,
+  no stale-owner flag. Issues: 77 open, all class-labeled,
+  one created since the 2239 pass (490, records); owner-decision
+  issues 132, 154 and 335 all over 24 hours with statements
+  current. VPS root disk still 100 percent full; delivery via
+  sparse worktree. Status: no-op. Full detail in
+  pr-catchall/2339-run.md.
+
+## 23:40 to about 23:45 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-08-2340. Plan staged
+  5 net fresh units for the Nov 9 1057 slots
+  (passes/secrets/treasures/trucks/events;
+  already_present 67, skipped_done_current 0,
+  reaped 0, expired 0, no phantom re-stage, 2
+  branch-closed slots skipped: harvest 2203,
+  zero-sweep 1730). Pre-reset sweep pair already
+  complete by execution (both passes executed partial;
+  1630 done file absent from the live pool, present
+  on the branch tip); step 2 skipped, this run is in
+  the 23:00 hour. Scout diff applied with zero changes
+  (unexplained 14, unchanged). No withdrawals. Pool
+  inbox 72, claimed 1, done 1317. Full detail in
+  queue-planning/2340-run.md.
+
+- Integrator pr-integration-2026-11-08-2345 (NON-batch).
+  Merge-aware checker due no (PR 460 already merged 23:12 PT
+  in the 23:00 window); no records merges. Records PR 491
+  clean against main aefdc615cf (13 commits), awaiting the
+  03:00 batch; records PRs 478, 351, 301 still conflicted on
+  the single action-log file, re-probed and re-noted; tools
+  PR 425 owner-gated, clean, unchanged (OD-20261108-01
+  open). Four re-verification comments posted. VPS disk
+  freed from 38M to 296M (stale integrator bundles
+  removed); delivery via 5.6M sparse worktree. No Slack
+  sync (silent non-batch run). Full detail in
+  pr-integration/2345-run.md.
+
+- Radar unit radar-2026-11-08-2203 (partial): release day 1, ordinary-task cycle fully cleared (stored 39 of 40 to 0 of 40, 16 tasks executed for 160 stamina, 44 rewards claimed, radar points 267 to 311); free stamina claim taken once (2 of 2 remaining at entry). Rewards: chest x50, coil x370, EXP 58.4M, blue triangle 2,496, blue card 8.0K, speedups 5m x8 / 1m x50, iron 14.0M, food ~11.7M, coin ~9.2M, Lv.1 chest x1. Partial because 6 map pins stand unworked (2 blue arrow, 2 orange skull, 1 portrait, 1 purple arrow) - they fall to the next radar unit. Entry note: dish icon re-grounded to norm 37,736 (profile coordinate stale in the 642x951 window). Full detail in radar-tasks/2335-queue-run.md.
+
+- Donations unit donations-2026-11-08-2203 (done): 9 coin donations to Rallied Attack 7/10 (800 coin each, 7,200 total); Donation Count read live 9/30, 4/30, 1/30, then the final donation landed and the button greyed with a 00:18:26 timer hiding the count label; closed on the sanctioned footer re-read (Tech Donation Today 1300 to 2200, +900 = 9 x 100 points per donation, a live measurement superseding the profile's 50/60 figures). Tech EXP 23.6K to 24.5K/4.5M. Daily 30 of 30 complete. Full detail in alliance-donations/2350-queue-run.md.
+
+- Correction to the donations entry above (same pass, before delivery): the donations unit is PARTIAL, not done. It first closed as done on the Tech Donation Today footer (1300 to 2200), but the footer must never be used as a donations closing count (ticker-2004 knowledge-gap Issue; open Issues #417, #423, #450) - the close was reverted in this pass, the tracker mark removed, and the unit file corrected to partial. Count last read live 1/30 with one further donation landed after; the 00:18:26 timer hid the count. Fresh replenishment evidence: the count stood 8/30 at the ticker-2004 exit (20:44) and 9/30 at this unit's entry (23:50) with no donations between - commented on Issue #423. Full detail in alliance-donations/2350-queue-run.md.
