@@ -4185,3 +4185,32 @@ of 2026-10-28.
   Owner-decision issues 132, 154 and 335 all over 24 hours,
   statements current.
   Full detail in pr-catchall/1939-run.md.
+
+## 19:32 to about 19:47 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-08-1932. Fold of the
+  ticker-1822 scout 1839 and ticker-1851 passes 1858,
+  secrets 1907, events 1914 records into 4 profiles, one
+  commit f081c9cb17 on PR 479 (OPEN and MERGEABLE, CLEAN at
+  record time): perception-scout 1.44.0 to 1.45.0 (station
+  re-check, fourteenth no-train confirmation, Wars dot
+  present with a rally waiting then cleared on return,
+  fullscreen tap failure filed as tooling Issue #475,
+  back-arrow grounding re-confirmed); shop-claims 1.38.0 to
+  1.39.0 (new reset day's three claims, Weekly Pass 18:00
+  reset eleventh confirmation, reset question settled,
+  weekly passes lapsed unowned); secret-missions 1.21.0 to
+  1.22.0 (new duel week Radar Training day 1, 8 finished
+  claimed, 8 pending Mega Deployed, ally assists 5/5, Ally
+  Tasks badge counts remaining assists - measured rule);
+  event-claims 1.28.0 to 1.29.0 (new event The Age of Oil
+  discovered, Issue #477, milestone 1 claimed, milestone 2
+  chest unresponsive, Arms Race Base Building 0 points rank
+  9, Desert Storm Battle Day 2026-11-13). 3 corrections
+  (reset 19:00 to 18:00 settled, Desert Storm tab reset-day
+  change, Ally Tasks badge rule), 3 contradictions resolved,
+  0 stale marked, 0 new Issues filed; Issues #242, #247,
+  #477 and #282 commented. Own PRs 476 and 456 MERGED with
+  0 comments and 0 reviews. Full detail in
+  knowledge-organization/1932-run.md.
