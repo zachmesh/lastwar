@@ -323,3 +323,19 @@ of 2026-10-28.
   335 over 24 hours, statements current. VPS root disk 556M free
   (95 percent), recovery holding. Status: no-op. Full detail in
   pr-catchall/0139-run.md.
+
+## 01:40 to about 01:47 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0140. Plan staged
+  0 net fresh units (already_present 68,
+  skipped_done_current 1, reaped 0, expired 0, no phantom
+  re-stage, 5 branch-closed slots skipped: mail 2230,
+  survivors 2203, training 2203, arms-race 2203,
+  zero-sweep 1730). Pre-reset sweep pair already complete
+  by execution (both passes executed partial; 1630 done
+  file absent from the live pool, present on the branch
+  tip); step 2 skipped, this run is in the 01:00 hour.
+  Scout diff applied with zero changes (unexplained 14,
+  unchanged). No withdrawals. Pool inbox 66, claimed 0,
+  done 1325. Status: no-op. Full detail in
+  queue-planning/0140-run.md.
