@@ -188,6 +188,33 @@ def _parse_items_block(lines, start):
     return items, i
 
 
+def _strip_inline_comment(text):
+    """Drop a trailing ``# ...`` YAML comment (issue #527).
+
+    A comment starts at a ``#`` preceded by whitespace; a ``#``
+    glued to a word is part of the value.
+    """
+    return re.split(r"\s+#", text, maxsplit=1)[0].strip()
+
+
+def _is_empty_list_marker(text):
+    """True when a label line is the prose form of an empty list.
+
+    Day observations write an empty unmatched list as a bare
+    ``unmatched_labels: none`` or as a block line ``- none (...)``
+    with a parenthetical explanation (issue #527). Either form means
+    no label, so it must not reach the candidate classifier as a
+    slug like ``none-builders-hut-quest``. ``empty`` is the same
+    marker. A real label such as ``nonexistent-thing`` does not
+    match: the marker word must end the text or be followed by a
+    space or an opening parenthesis.
+    """
+    lowered = _strip_inline_comment(text).lower()
+    if lowered in ("none", "empty"):
+        return True
+    return bool(re.match(r"^(none|empty)[\s(]", lowered))
+
+
 def _parse_labels_block(lines, start):
     """Parse one unmatched_labels value - an inline flow list, a
     plain scalar, or a block list of scalars."""
@@ -197,7 +224,9 @@ def _parse_labels_block(lines, start):
         line = lines[i]
         m = re.match(r"^\s*- (.+)$", line)
         if m and not line.lstrip().startswith("- surface"):
-            labels.append(m.group(1).strip())
+            text = m.group(1).strip()
+            if not _is_empty_list_marker(text):
+                labels.append(text)
             i += 1
             continue
         break
@@ -224,18 +253,18 @@ def parse_observation_text(text):
                 inner = rest.strip("[]").strip()
                 if inner:
                     labels.extend(x.strip() for x in
-                                  inner.split(",") if x.strip())
+                                  inner.split(",") if x.strip() and
+                                  not _is_empty_list_marker(x))
                 i += 1
                 continue
-            if rest and rest.lower() not in ("none", "empty"):
-                labels.append(rest)
+            if rest:
+                rest = _strip_inline_comment(rest)
+                if not _is_empty_list_marker(rest):
+                    labels.append(rest)
                 i += 1
                 continue
-            if not rest:
-                found, i = _parse_labels_block(lines, i + 1)
-                labels.extend(found)
-                continue
-            i += 1
+            found, i = _parse_labels_block(lines, i + 1)
+            labels.extend(found)
             continue
         i += 1
     seen = set()
@@ -261,7 +290,8 @@ def parse_observation_json(doc):
                                  if isinstance(v, dict))
                 elif key == "unmatched_labels" and \
                         isinstance(value, list):
-                    labels.extend(str(v) for v in value)
+                    labels.extend(str(v) for v in value
+                                  if not _is_empty_list_marker(str(v)))
                 else:
                     walk(value)
         elif isinstance(node, list):
