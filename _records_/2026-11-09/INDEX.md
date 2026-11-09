@@ -2433,3 +2433,27 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   18:00 UTC, issue 517 no deadline stated. VPS disk
   recovered to 80 percent, 2.0G free. Status: no-op. Full
   detail in pr-catchall/1539-run.md.
+
+- Daily Missions unit daily-missions-2026-11-08-1800, done:
+  15:19-15:38 PT - one Claim tap claimed all four completed rows
+  (Daily Login, Defeat any Doom Elite, Radar Task, Donate to
+  Alliance Tech 5 times) plus Help Allies 5/5, and the 40/80/120
+  activity chests all claimed (40 chest: gear x10, red gem x40,
+  wrench x1, blue crate x20, food crate x20, gold x12, crystal
+  2.8K, 5m speedup x8, double rewards x2; 80 chest: 5m
+  construction speedup x2, Iron/Food Chest SR x4 each,
+  Construction Part x1, Drone Parts x2, Crystal Ore 1.0K; 120
+  chest: same speedup x2, Iron/Food Chest SR x6 each, Diamond
+  x20, Drone Parts x2, Crystal Ore 1.2K). Activity star 140 at
+  close; 160/200 chests unreached. The one-tap-multi-claim
+  mechanism is now verified for rows and chests. Open question:
+  five claimed rows account for 50 of the 140 star points.
+  Full detail in daily-missions/1519-queue-run.md.
+
+- VIP unit vip-2026-11-08-1800, done: 15:39-15:43 PT - Daily
+  Freebie claimed (puzzle piece x2, food/iron/coin crates x13
+  each) and login chest claimed (+80 VIP points, 1,613,660 to
+  1,613,740, 3-day streak, 100 tomorrow). Both in one pass for
+  the first time since 2026-10-30; the freebie button's standing
+  unresponsive blocker did not recur. Profile VIP13 red dot
+  cleared. Full detail in vip-rewards/1540-queue-run.md.
