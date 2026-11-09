@@ -3811,3 +3811,34 @@ of 2026-10-28.
   against the new main. End-of-pass sweep: 5 open PRs,
   all decided, no unprocessed PRs. Full detail in
   pr-integration/1645-run.md.
+## 16:58 to about 17:04 — Perception scout Events hub and Arms Race
+- Scout unit scout-2026-11-07-1800 (staged head for the
+  Nov 7 18:00 post-reset pass), executor ticker-1646.
+  Events hub strip verified at both ends: Arms Race,
+  Frontline Breakthrough (badge 1), Winter Battlefield,
+  The Doomsday, Community - five tabs, no Zombie Invasion
+  tab, so no zombie chain is seeded. Arms Race read live:
+  Tech Research phase, Lv.29-30, timer 01:03:01, personal
+  score 0, rank #2110, chest thresholds 6,250 / 12,500 /
+  30,000. Base Events badge x2 has one count unexplained
+  (no second tab dot seen). Thirteenth same-day no-train
+  confirmation. Observe-only; nothing claimed. Full detail
+  in perception-scout/1704-queue-run.md.
+## 17:06 to about 17:12 — Pre-reset zero sweep, first pass
+- Zero-sweep unit zero-sweep-2026-11-08-1630, executor
+  ticker-1646. Verification-only walk of all 23 ledger
+  lines: 11 not at zero (food/iron/coin/EXP bubbles,
+  VIP Freebie and login chest, daily-missions 80-point
+  chest 10 short, mail dot, gifts dot again since 14:06,
+  donations unverified, trucks unverified), 4 at zero
+  (shop/Free Supply and pass pickups per the 1455 passes
+  read, train none preparing, radar stack), 5 unreadable
+  (titanium, Armed Truck, drone components, ore, screws),
+  duel total unmeasured, crystal/glittering still not
+  located (R5, 14 and 8 days). No fix-up unit enqueued -
+  every open line already has one in inbox; risk is they
+  are still unrun ~50 minutes before the 18:00 reset.
+  Game server-disconnected mid-unit, relaunched cleanly;
+  power reads 149,209,253, down 641,100 from 16:58,
+  cause unexplained. Full detail in
+  daily-activities/1712-queue-run.md.
