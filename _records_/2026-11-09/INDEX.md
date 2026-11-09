@@ -2280,3 +2280,13 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   against unchanged main c056fcf2, OD-20261108-01 still
   open, no new escalation. Status: done. Full detail in
   pr-integration/1315-run.md.
+- Training unit training-2026-11-09-1003, partial:
+  Barracks Lv.27 idle and blocked - pistol tap read live
+  "Drill Ground Full: Unable to add more units", no TRAIN
+  UNITS panel, no requeue. Tents grounded by a fresh route:
+  the upper-base blue-roofed row is Material Workshops,
+  the barracks are the beige tents with portrait circles at
+  the lower-right edge; Lv.27 pistol grounds at (787,931).
+  Lv.30, Lv.24 and the fourth barracks not checked; Drill
+  Ground screen not re-read (0039 read it this morning).
+  Full detail in troop-training/1330-queue-run.md.
