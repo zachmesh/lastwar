@@ -1550,6 +1550,26 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   still open, no owner answer. No merges, no PRs opened.
   Status: done. Full detail in
   pr-integration/0730-run.md.
+- Post-record (08:0x): PRs 512 and 511 merged (squash) into main
+  698e7a94; main synced back to the local repo; merges synced to
+  the Slack DM. PR 493 verified CLEAN against the new main,
+  merges at the 11:00 batch if still clean. See the addendum in
+  pr-integration/0730-run.md.
+- Planner pass queue-planning-2026-11-09-0740. Plan staged
+  5 units (already_present 69, skipped_done_current 2,
+  reaped 0, expired 0, 2 branch-closed slots skipped) - the
+  18:57 slots through about 19:43 local. Pre-reset sweep
+  production skipped (not the 17:00 run); pair already
+  complete (seq 1 at 16:30, seq 2 at 17:30). Scout diff on
+  the 0606 observation re-applied with 0 enqueued and 16
+  already-queued (the 0640 apply already did the work);
+  Issue #510 defect reproduced again (body-literal apply
+  orphaned 16 units into a stray repo inbox, deleted and
+  re-applied against the real pool) and commented; promotion
+  proposal 1 (99-badge-at-chat exploration done, candidate
+  rejected as a task). No withdrawals. Pool inbox 85,
+  claimed 1, done 1333. Status: done. Full detail in
+  queue-planning/0740-run.md.
 
 ## 07:44 to 07:53 — Queue ticker pass, scout discovery (done)
 
