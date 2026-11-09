@@ -446,3 +446,109 @@ upgrade-builders-hut-to/0848-queue-run.md. Full unit record there.
 
 unmatched_labels:
   - none (Builders Hut quest explored this pass; the 0606 unmatched list is now fully resolved)
+
+## Exploration survey-center, unit ticker-1104, about 11:09-11:17 local
+
+Read-only exploration of the Survey Center candidate (unit
+scout-scout-discovery-2026-11-09-012). Full unit record at
+`survey-center/1117-queue-run.md`. Candidate tracked in Issue
+#506, commented with these findings.
+
+### Events hub tab bar, read live about 11:10 local
+
+- Seven tabs, scrolled end to end: The Age of Oil, Arms Race,
+  Winter Battlefield, Desert Battlefield, Wanted Boss (red dot),
+  Survey Center (red dot badge 1), Community. No Zombie
+  Invasion tab - event still ended.
+
+### Survey Center page, read live about 11:11 local
+
+- Title "Survey Center", subtitle "We'd love to hear from you!".
+- One survey card, red dot: "Season 11: Polar World /
+  Experience Survey", Proceed button. No countdown on the card.
+- Instructions (i button, read in full): surveys appear in
+  Special Ops when available; Proceed opens the survey through
+  a provided link, then return to claim rewards; exiting midway
+  is fine, resume with "Continue"; each survey submittable once,
+  a revisit shows completed; timed surveys disappear at their
+  countdown end; surveys without a countdown disappear 3 hours
+  after completion; an unclaimed reward is sent via mail before
+  the survey disappears.
+- Proceed opens an external SurveyMonkey link in the owner's
+  Chrome (Zhen profile): surveymonkey.com/r/LW260921S2, with
+  openid, sid 2110, vip 13, lang en. First page: "Dear
+  Commanders, Season II: Polar World has ended. How was your
+  experience?" Q1 (required) rates the Season gameplay 1-5 plus
+  a limited-participation option; Q2 is a 0-10 recommend score.
+  Nothing answered or submitted - answering is the owner's own
+  opinion. The Chrome tab was left open for the owner.
+- Reward contents are UNMEASURED: no reward is named on the
+  card, in the Instructions, or on the survey first page; it is
+  revealed only by completing the survey. Cost is free, no
+  scoring - a feedback survey paying a completion reward.
+- Base screen on return: coin 46.2M, power 149,217,331.
+
+### Red dot accounting (this unit)
+
+- Seen 1 (Survey Center tab badge), explained 1 (the open
+  Season 11 survey). Unexplained 0. Unknown items 0 - Survey
+  Center is now learned.
+
+## Exploration the-age-of-oil, unit ticker-1134, about 11:36-11:46 local
+
+Read-only exploration of The Age of Oil candidate (unit
+scout-scout-discovery-2026-11-09-014). Full unit record at
+`the-age-of-oil/1146-queue-run.md`. Candidate tracked in Issue
+#477, commented with these findings - including a correction
+to that issue: the Base Expansion II icon is an info button,
+not a chest, and it responds.
+
+### The Age of Oil page, read live about 11:38-11:46 local
+
+- Stage track 1-2-3-4 across the top, stage 1 highlighted,
+  circular play button at the right end (not tapped).
+- Three warzone-wide task cards, each with a 6d 06:20 timer
+  at first read (event ends about 2026-11-15 17:56 PT,
+  derived): "Unlock Tech: The Age of Oil" - 500 Tech
+  Research, 2607/500, gold full bar; "Unlock Stage: Base
+  Expansion II" - 500 Building Upgrades, 11186/500, gold
+  full bar; "Hero Mobilization" - 10000 Hero Recruitments,
+  9465/10000, green bar still filling, gold chest icon at
+  the bar's right end and a greyed hexagon below (both
+  unmeasured).
+- Research Ranking read live: owner [AP3x] Bears Lair
+  Unlisted at 0; leader [AP3x] Teemo 31, then 29/25/22/21/
+  16/16. Ranking rewards measured in full, top 20 only:
+  No.1 25K badge x1 + gold x20 + 5m x20 + red gem x100;
+  No.2 500 x4 + gold x15 + 5m x15 + red x80; No.3-5 500 x3
+  + gold x12 + 5m x12 + red x60; No.6-10 500 x2 + gold x10
+  + 5m x10 + red x50; No.11-20 500 x1 + gold x8 + 5m x8 +
+  red x40.
+- Base Expansion II circular icon: one tap opened "Stage:
+  Base Expansion II - A new stage is unlocked, your base is
+  ready to expand further." with a Go button (not tapped).
+  It is a stage-info button, not a claimable chest.
+
+### Other units in this pass (no fresh sessions)
+
+- Total Power 149,217,331 (unit 015, done): verified live
+  twice in the unit 014 session, unchanged, matching the
+  observation value; known HUD figure, not a candidate.
+  472,287 below the 2026-10-25 baseline; Issue #482
+  commented with the fresh reads.
+- Zombie Invasion tab absent (unit 016, done): tab bar read
+  end to end in the unit 014 session - no Zombie Invasion
+  tab; event still ended, no chain seeded.
+- Decoration Gallery (unit 017, partial): entry not
+  re-located - the [44,284] point opened the MEGA EXPRESS
+  CONTRACT $99.99 offer popup instead (closed untouched).
+  Overview values already measured by unit 002; tabs
+  beyond Overview unmeasured; successor must re-ground
+  the entry fresh (R2).
+
+### Red dot accounting (this pass)
+
+- Seen 1 (red "!" badge at the right edge of the Events hub
+  tab bar, in every Age of Oil screenshot), explained 0.
+  Unexplained 1 - the badge was not attributed to a tab.
+  Unknown items 1 - the Hero Mobilization gold chest.
