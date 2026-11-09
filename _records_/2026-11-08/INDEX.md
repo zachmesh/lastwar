@@ -4101,3 +4101,17 @@ of 2026-10-28.
   still conflict on the single file
   _logs_/repo-actions/action-log.jsonl, re-checks posted.
   Full detail in pr-integration/1845-run.md.
+
+## 19:00 to about 19:21 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1900.
+  BATCH pass (checker: due, window 19:00-20:00 PT).
+  Records PR 470 merged (merge commit 81730064); main
+  synced back to the local repo. Records PR 460 went
+  clean-conflict inside the window after the 470 merge,
+  commented, carried to the 23:00 batch. Tools PR 425
+  still owner-gated, clean, no owner decision. Records
+  PRs 351 and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-checks posted.
+  Fresh records PR 478 opened for the post-1900 appends
+  on records/2026-11-07.
+  Full detail in pr-integration/1900-run.md.
