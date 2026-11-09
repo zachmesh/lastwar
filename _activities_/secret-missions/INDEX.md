@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T03:32:17Z
+modified: 2026-11-09T07:32:17Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-1049 secret-missions execution record 2026-11-08 1114 queue run (partial, four finished tasks claimed at once with PERFECT stamps, Claim tap worked first try, Mega Deploy and Reward Recovery not reached); record commit 355d3f11c on records/2026-11-08
   - source: ticker-1434 secret-missions execution record 2026-11-08 1456 queue run (done, Mega Deploy of all 8 pending tasks verified running, Reward Recovery 2026-11-6 claimed, ally assists 0/5 carried); record commit dfd3c87f9 on records/2026-11-08
   - source: ticker-1851 secret-missions execution record 2026-11-08 1907 queue run (done, 8 finished tasks claimed, 8 pending Mega Deployed, ally assists 5/5, new duel week Radar Training day 1, Ally Tasks badge counts remaining assists; record commit cff344153 on records/2026-11-08)
+  - source: ticker-2235 secret-missions execution record 2026-11-08 2253 queue run (done, 7 finished tasks claimed, one task's rewards plundered at 10% by [BZGR]FredoSauce, remaining 90% unverified; record commit 0c9686b4f on records/2026-11-08)
 ---
 
 
@@ -1052,6 +1053,13 @@ secrets-2026-10-31-2257, status partial).
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
   new own tasks after the dispatched ones return.
+- Whether the remaining 90% of a plundered task's rewards reaches the
+  account: the 2026-11-08 2253 unit found SR Retrieve Valuable
+  Supplies plundered at 10% by [BZGR]FredoSauce at 19:40 (chest x1,
+  iron 97.5K, food 97.5K, Hero EXP 123.9K of a displayed chest x25,
+  Hero EXP 1.2M, iron 975.0K, food 975.0K); the claim-all at 22:49
+  did not stamp the card and no received total was shown, so the
+  other 90% is unverified. (Added 2026-11-08 2253.)
 
 ## What the 2026-11-04 0545 unit added - second consecutive Claim-blocker partial, foreground still untested
 
@@ -1369,3 +1377,17 @@ secrets-2026-10-31-2257, status partial).
 - Game left safe: base screen. No diamonds, money, speedups or paid
   buttons used. No login or verification demanded, no
   different-device dialog appeared.
+
+## What the 2026-11-08 2253 unit added - 7 finished tasks claimed, one task's rewards plundered at 10%
+
+- Unit secrets-2026-11-08-1857 by ticker-2235, about 22:44 to 22:53 local, status done. Evidence in `_records_/2026-11-08/secret-missions/2253-queue-run.md` (commit 0c9686b4f on records/2026-11-08).
+- Claimed 7 finished tasks with one Claim tap (claiming one collects all finished tasks at once, as before). All seven cards now carry gold PERFECT stamps and the Your Tasks badge is gone. The congratulations panel showed ally helpers, not an itemized reward list, so the rewards below are the cards' displayed rewards, not a confirmed received total: (1) SSR Search for Missing Refugees - fragment x1, chest x27, Hero EXP 2.4M, puzzle piece x1, medal 870; (2) SSR Search for Missing Refugees - same as (1); (3) SSR Train Refugees - fragment x1, chest x27, Hero EXP 2.4M, blue triangle 480, chest 150; (4) SSR Protect Refugee Camp - fragment x1, chest x27, Hero EXP 2.4M, iron 1.9M, food 1.9M; (5) SR Retrieve Raw Materials - fragment x1, chest x25, Hero EXP 1.2M, chest 150; (6) SR Retrieve Agent Profile - fragment x1, chest x25, Hero EXP 1.2M, medal 440; (7) SR Retrieve Abandoned Gear - fragment x1, chest x25, Hero EXP 1.2M, blue triangle 240.
+- Helpers on the congratulations panel: [AP3x]AshenRise 11-8 21:00, [AP3x]Buckeye16 11-8 20:17, [AP3x]MetalMick 11-8 20:07, plus one further row whose name was not read. Liked them with Like All.
+- Assist Allies 5/5 (daily cap reached in this reset day by ticker-1851 at 19:07); no assists left to do. Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Reward Recovery panel: the 2026-11-6 18:00 record reads CLAIMED (8 unstarted tasks recovered: fragments x3, x3, x1, x1, Mystery Supply Box x224, puzzle x2, chest x315, medal 1.2K, blue triangle 1.0K, Hero EXP 13.8M). The 2026-10-24 19:00 record sits collapsed below it, presumed settled. Nothing to claim there.
+- No pending tasks to deploy: the Your Tasks list holds only the 8 resolved cards (7 PERFECT plus the plundered card below). Mega Deploy was tapped twice at its measured centre and opened no panel on either tap (R2: method ended after two no-change taps) - consistent with nothing pending to deploy.
+- PLUNDER FINDING, new mechanic for this profile: the eighth card of the 19:07 batch, SR Retrieve Valuable Supplies, carries no PERFECT stamp and no Claim button. Its orange badge opens a SECRET TASK REPORT: [BZGR]FredoSauce plundered its rewards at 11-8 19:40 - chest x1, iron 97.5K, food 97.5K, Hero EXP 123.9K - exactly 10% of the card's displayed rewards (chest x25, Hero EXP 1.2M, iron 975.0K, food 975.0K). The card's "[1]" marker counts the one plunder report. A running task's rewards can be plundered at 10% by another player, and the plundered card then shows only its report badge instead of a claim.
+- Whether the remaining 90% of the plundered task's rewards reached the account is UNVERIFIED: the claim-all at 22:49 did not stamp this card, and no received total for it was shown. Recorded as an open question below, not as a received claim.
+- Entry note: the circular left-column icon at norm (55,573) opened the Trucks screen (the rotating shortcut set), not the post. The post opened from the car icon at norm (55,636). Verify the SECRET COMMAND POST title before tapping further, as the metadata warns.
+- Red lines held: no diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (claim 7 finished, assists 5/5 verified at cap, no pending to deploy), resources_gained (displayed rewards above, received total not itemized), costs 9min-no-items-spent, verified yes, device_takeovers 0, follow_up plunder-10pct-mechanic.

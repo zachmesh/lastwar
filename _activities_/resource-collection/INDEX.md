@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T04:32:17Z
+modified: 2026-11-09T07:32:17Z
 level: L1
-version: 1.42.0
+version: 1.43.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -43,6 +43,8 @@ grounded_in:
   - source: ticker-0934 resource-collection execution record 2026-11-08 0958 queue run (partial, food +8.2M coin +5.4M iron +7.5M verified by HUD deltas, one-tap farmland rule holds, grounded centres work, top-edge bubbles unreliable and batch opened Power Details, Power Details breakdown measured, sweep unfinished; record commit ac350b49c on records/2026-11-08)
   - source: ticker-1134 resource-collection execution record 2026-11-08 1211 queue run (partial, farmland food +1.6M HUD-verified, top-edge single tap collects nothing, iron +1.3M unattributed not claimed, coin bubbles about 0.8M remain, token expired 12:22:56); record commit ce3dcc4bf on records/2026-11-08
   - source: ticker-1724 resource-collection execution record 2026-11-08 1759 queue run (partial, iron +3.6M and coin +3.6M HUD-verified in two taps, food bubbles still standing, bubble-type identification unreliable per R2, identical +3.6M unexplained, reset arrived mid-sweep; record commit 5f3a904f4 on records/2026-11-08)
+  - source: ticker-1935 resource-collection execution record 2026-11-08 1935 queue run (partial, food +5.1M one-tap all-at-once and iron +1.2M one-tap one-bubble HUD-verified, coin tap missed its bubble, pre-unit HUD rise food +3.2M iron +3.1M unexplained; record commit 5534be1e5 on records/2026-11-08; section and changelog folded in 1.42.0, this grounded_in line added by the 2332 run)
+  - source: ticker-2308 resource-collection execution record 2026-11-08 2310 queue run (partial, 0 bubbles collected, two verified non-bubbles, HUD rise second occurrence, Issue #490 filed; record commit aac215e08 on records/2026-11-08)
 ---
 
 
@@ -97,7 +99,13 @@ Executions are recorded in
   centre candidates around norm 132,436 and 234,452 are NOT
   verified - the 234,452 tap hit the Iron Mine building underneath
   - so do not reuse them blindly; re-ground fresh in the next
-  unit.)
+  unit. (2026-11-08 2310 update: recenter the base view FIRST
+  before sweeping - the 1935 unit recentered only after the map
+  drifted, and the 2310 unit panned blind three times and never
+  found the bubble cluster. Two new verified non-bubbles, do not
+  reuse: norm 701,468 (gold diamond) is the zombie NPC marker, it
+  opens the Area No.168 dialogue; norm 565,636 (orange sack) is
+  the Recon Plane Lv.24 building indicator, not a bubble.)
 - Check the Armed Truck and claim it when it shows fully loaded.
 - The gold truck icon is not a verified loot-panel entry - measured 2026-11-07 (1941 unit): tapping the gold truck icon at norm 681,814 panned the map down to the Drill Ground area instead of opening a loot panel. The loot panel entry remains unlocated and the Armed Truck loot state stays unverified.
 
@@ -786,8 +794,17 @@ regular stays due. Evidence in
   the 1534 pass (the 164,116 top-left-corner candidate is
   unverified); the next harvest pass must locate it on screen
   rather than assuming the candidate.
+- Why HUD food and iron totals rise between harvest units with no
+  harvest record between: the 1935 unit flagged food +3.2M and
+  iron +3.1M for 18:00-19:50, and the 2310 unit measured food
+  +2.8M, iron +2.8M, coin -0.1M for 19:50-23:12 with no
+  intervening harvest record. Tracked as GitHub Issue #490
+  (labels records). Until resolved, HUD deltas across units are
+  not clean harvest measurements. (Added 2026-11-08 2310.)
 
 ## Changelog
+
+- 1.43.0 (2026-11-08): 2310 harvest unit folded (partial, 0 bubbles collected, three blind pans never found the bubble cluster; two new verified non-bubbles - norm 701,468 gold diamond is the zombie NPC marker opening the Area No.168 dialogue, norm 565,636 orange sack is the Recon Plane Lv.24 indicator; method change under R2 - recenter the base view FIRST, then sweep systematically, tap only a bubble whose icon and value label are both readable; HUD rise second occurrence food +2.8M iron +2.8M coin -0.1M vs the 1935 close with no intervening harvest record, now GitHub Issue #490 and an open question; coin bubbles (132,436) and (234,452) plus one iron bubble still standing and not re-found; armed-truck loot still unverified, remainder to the next unit).
 
 - 1.42.0 (2026-11-08): 1935 harvest unit folded (partial, food +5.1M one-tap all-at-once and iron +1.2M one-tap one-bubble HUD-verified; iron one-by-one RE-CONFIRMED so the 1759 suspect marking on iron is lifted and its identical +3.6M is explained in part as two different bubbles holding similar amounts; coin tap missed its bubble and hit the Iron Mine building, so coin one-by-one stays suspect and rule R2 now requires zooming in or a readable coin icon plus value label before tapping, with the 1935 coin centre candidates marked unverified; wrong tap at 490,352 opened a UR Trade Truck panel, closed untouched; pre-unit HUD rise food +3.2M iron +3.1M since 18:00 unexplained with no intervening harvest record; armed-truck toast fragment still unread; coin bubbles and at least one iron bubble still standing, remainder to the next unit).
 
@@ -1485,3 +1502,17 @@ regular stays due. Evidence in
   or teleport. The Iron Mine panel's upgrade button was visible
   and was not touched. The UR truck panel was closed without
   plundering.
+
+## What the 2026-11-08 2310 unit added - partial, 0 bubbles, two verified non-bubbles, HUD rise second occurrence (Issue #490)
+
+- Unit harvest-2026-11-08-2203 by ticker-2308, about 23:10 to 23:26 local, status partial - no resource bubble was collected in this unit. Evidence in `_records_/2026-11-08/resource-collection/2310-queue-run.md` (commit aac215e08 on records/2026-11-08). The tracker is untouched; the next harvest unit picks up the remainder.
+- Entry, read live about 23:12 local: base screen, power 149,209,253; food 501.9M, iron 824.0M, coin 15.8M; gold 13.22K; diamonds 6,027; stamina 120. Against the 1935 unit closing read (food 499.1M, iron 821.2M, coin 15.9M at about 19:50) with no harvest record between: food +2.8M, iron +2.8M, coin -0.1M. Same unexplained pattern the 1935 record flagged for 18:00-19:50 (food +3.2M, iron +3.1M), so per its instruction this is now GitHub Issue #490 (labels records), not prose only. Harvest gains measured as HUD deltas across units are not clean until it is resolved.
+- The game opened on the Secret Command Post screen (Hidden Treasure event, map pieces M1 x16, M2 x13, M3 x2, M4 x6, M5 x4, M6 x6, M7 x12, chest 8/15) - the 2255 treasures unit's closing state. One back-arrow tap returned to the base view. No event action was taken - this unit is harvest only.
+- Wrong tap 1, about 23:13 local: a tap at norm 701,468 on what looked like a gold diamond resource bubble opened the Area No.168 zombie NPC dialogue ("True dread struck me upon seeing the eyes of the zombies"). The gold diamond is the NPC marker, not a bubble. Dismissed by tapping empty ground; no button was touched. Note: this is the same Area No.168 dialogue the 2227 survivors unit opened from the lone figure at the gate - the NPC marker and the dialogue are the same object.
+- Wrong tap 2, about 23:17 local: a tap at norm 565,636 on an orange sack icon above the purple crystal building selected the Recon Plane Lv.24 building and showed its green upgrade arrow. The orange sack is that building's indicator, not a bubble. Dismissed by tapping empty ground; the upgrade arrow was not touched, nothing started.
+- Pans, all live: pan 1 (drag norm 500,400 to 500,700) moved the view to the foggy top edge of the base; no bubbles visible, only cloud cover. Pan 2 (drag back 500,650 to 500,350) returned to the original base view; no green wheat, blue iron or yellow coin bubble readable in it. Pan 3 (drag 200,500 to 450,500) revealed the left side of the base (clock tower, blue crystal, flower monument, golden statue, pink car, two glass domes); still no resource bubble readable. Two small circular portrait icons (about norm 285,505 and 110,595) are NPC markers, not bubbles.
+- METHOD CHANGE under rule R2: recenter the base view FIRST (the 1935 unit recentered after the map drifted; this unit only panned blind), then sweep systematically, and tap only a bubble whose icon and value label are both readable in the screenshot. Do not reuse the norm 701,468 or 565,636 coordinates - both are verified non-bubbles. The bubble cluster itself was not re-found: the coin bubbles the 1935 unit left standing (left cluster, about norm 132,436 and 234,452) and the further iron bubble were not re-found in any view this unit panned to.
+- Armed Truck: the fully-loaded notice is still unverified and the truck loot unclaimed; it carries to the next harvest unit.
+- Closing state, read live about 23:26 local: food 501.9M, iron 824.0M, coin 15.8M; power 149,209,253; diamonds 6,027. HUD unchanged across the unit - nothing was collected, nothing spent. Game left on the base screen.
+- Red lines held: no diamonds spent, no money spent, no upgrade or research started, no player attacked, no assemble or teleport. The Recon Plane upgrade arrow was visible and was not touched. The Secret Command Post screen was left without digging.
+- Result stats: target not stated, achieved 0 bubbles, resources_gained none, costs about 16 minutes, verified no, blocker_category c, follow_up recenter-first sweep.
