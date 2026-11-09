@@ -1094,3 +1094,17 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   hidden-treasures/0525-queue-run.md.
 - No diamonds or money spent. No different-device dialog, no
   login demanded. Device session cc-224; token released.
+## 05:15 to about 05:19 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0515
+  (NON-BATCH). Checker due no - outside every batch
+  window; next batch 07:00. Records PR 493 re-probed
+  CLEAN at new head 687f7961 against unchanged main
+  c8b5cb80, awaits 07:00 batch, note posted.
+  Records PR 478 re-probed CLEAN at reconciled head
+  278abe7474, awaits 07:00 batch, no new comment.
+  Records PRs 351, 301 still conflicted on the single
+  action-log file at unchanged heads, no new comments.
+  Tools PR 425 owner-gated, clean, OD-20261108-01 still
+  open, no owner answer, no new comment. Status: done.
+  Full detail in pr-integration/0515-run.md.
