@@ -211,3 +211,14 @@ of 2026-10-28.
   points increase is claimed. Computer session cc-197
   dropped mid-unit; cc-200 recovered with no state lost.
   Full detail in alliance-help/0100-queue-run.md.
+
+- Integrator pr-integration-2026-11-09-0100 (NON-batch).
+  Checker due no (next batch 03:00 PT); no merges; records PRs
+  493 and 491 clean against main e786ef8918, awaiting the
+  03:00 batch; records PRs 478, 351, 301 still conflicted on
+  the single action-log file, re-probed, scope unchanged;
+  re-verification notes posted on 425, 301, 351, 478 against
+  new main e786ef8918; tools PR 425 owner-gated, clean,
+  unchanged (OD-20261108-01 open). No Slack sync by this
+  run (no merges, no new escalation; silent in chat).
+  Full detail in pr-integration/0100-run.md.
