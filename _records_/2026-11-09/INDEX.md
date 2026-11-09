@@ -1529,3 +1529,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   filed. Records PR 493 shows DIRTY at run close (integrator's
   merge(main) reconcile landed mid-run); not this job's to fix.
   Full detail in knowledge-organization/0732-run.md.
+
+## 07:32 to 07:45 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-0732. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #510 taken as the single item - queue.py gains resolve_pool_root() and enqueue refuses a root with no pool state directory, scout_diff.py resolves --root the same way and --apply refuses a wrong root, so the planner body literal keeps working (option (b)); PR #512 opened (commit 3715e09ad, MERGEABLE); 28 fixture assertions 28/28 on isolated /tmp scratch pools, negative control reproduces the stray-inbox bug on main; progress commented on #510. Full detail in tool-development/0732-run.md.
