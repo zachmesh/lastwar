@@ -1502,3 +1502,30 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   statements current. VPS root disk 407M free (96 percent), up
   from 222M. Status: no-op. Full detail in
   pr-catchall/0739-run.md.
+
+## 07:32 to 07:47 — Knowledge organization 0732 run (done, 5 profiles folded, PR 511)
+
+- Organizer run knowledge-organization-2026-11-09-0732, done:
+  own PR 507 MERGED at 14:49:20Z with 0 comments and 0 reviews,
+  no feedback unaddressed. Three substantive records in two
+  commits folded into five profiles on PR 511 (OPEN, MERGEABLE,
+  CLEAN at run close): ticker-0634 harvest 0636 (one tap per type
+  clears all bubbles a second time, Issue #508 filed for the
+  blue-triangle 596 bubbles) and ticker-0704 events 0706 (Wanted
+  Boss Code 87 still not out, Go 09:44:17, server 00:00, nothing
+  claimable) + scout-discovery 0718 (99+ chat badge resolved as
+  the unread Alliance chat count, candidate REJECTED as a task).
+  resource-collection 1.45.0 to 1.46.0: one-tap-per-type is now
+  the standing rule (0340 + 0636 against the single 1935
+  outlier), Issue #502 stays open pending the retro; radar-tasks
+  1.57.0 to 1.58.0: gold circle with blue gem above the blue
+  truck is a radar shortcut (6 task rewards claimable), not the
+  truck loot; event-claims 1.32.0 to 1.33.0: Code 87 tiers read
+  live, all unreached, tab red dot is an event marker; arms-race
+  1.66.0 to 1.67.0: Tech Research score 0 again, phase end about
+  09:57, ranking-row chest still unchecked; perception-scout
+  1.48.0 to 1.49.0: 99+ badge resolved, season skills reset noted.
+  Issues #502 and #508 commented with the fold; no new issue
+  filed. Records PR 493 shows DIRTY at run close (integrator's
+  merge(main) reconcile landed mid-run); not this job's to fix.
+  Full detail in knowledge-organization/0732-run.md.
