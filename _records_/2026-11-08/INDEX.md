@@ -4744,3 +4744,24 @@ of 2026-10-28.
   enforcement half is PR #425 awaiting the owner decision.
   Tracking comment posted on #404. No code change, no PR.
   Status: done. Full detail in tool-development/2232-run.md.
+
+## 22:30 to about 22:42 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-2230.
+  NON-batch pass for records (checker: not due, outside
+  every batch window, next batch 23:00 PT). No knowledge
+  or code PR open except owner-gated PR 425; no merges.
+  Records PR 460 head moved twice during the pass
+  (d5d4b7956 reconcile merge, then 459f9da62
+  tool-development 2232 run), re-verified CLEAN at both
+  heads, re-check commented twice, awaits the 23:00
+  batch. Records PR 478 CLEAN, unchanged, awaits the
+  23:00 batch. Tools PR 425 still owner-gated, clean, no
+  owner decision (register item OD-20261108-01 open and
+  undecided, no covering issue), no new comment. Records
+  PRs 351 and 301 still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-probed, scope
+  unchanged, no new comment. No records merge, so no log
+  lines owed at merge. No Slack DM sync, no chat report
+  (non-batch run, silent). Full detail in
+  pr-integration/2230-run.md.
