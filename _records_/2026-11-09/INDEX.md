@@ -664,3 +664,20 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   flow, no closing claim made. Status: partial (pass budget ended
   one donation into the burst). Full detail in
   alliance-donations/0324-queue-run.md.
+
+## 03:15 to about 03:20 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0315
+  (NON-BATCH). Checker clock-only due yes, but
+  merge-aware due no - PR 491 already merged 03:02:52
+  PT in the 03:00-04:00 window, so no records merges
+  this pass; next batch 07:00. Records PR 493
+  re-probed CLEAN at new head 222730ab (ticker-0304
+  reconciliation 77b1f5953c cleared the 0300 8-file
+  conflict) - resolution comment posted, awaits 07:00
+  batch. Records PRs 478, 351, 301 still conflicted on
+  the single action-log file at unchanged heads, no new
+  comments (main unmoved since 0300). Tools PR 425
+  owner-gated, clean, OD-20261108-01 still open, no
+  owner answer, no new comment. Status: done. Full
+  detail in pr-integration/0315-run.md.
