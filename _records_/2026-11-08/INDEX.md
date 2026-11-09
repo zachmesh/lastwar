@@ -4048,3 +4048,18 @@ of 2026-10-28.
   done, ticker-pass to organizer-fold chain verified, no
   missed substantive record. Full detail in
   knowledge-organization/1832-run.md.
+## 18:40 to about 18:48 — Queue planning pass
+- Planner pass queue-planning-2026-11-08-1840. Plan staged
+  12 net fresh units (0603/0630 slots; already_present 59,
+  skipped_done_current 2, reaped 0, expired 11, no phantom
+  re-stage) into the live pool. A worktree plan check
+  (fixed tools) staged 29 and dropped the stale
+  scout-scout-2026-11-02-015 copy without re-staging it;
+  discarded - the branch-tip pool is stale against the
+  live pool and the live plan is authoritative. Pre-reset
+  sweep pair already complete by execution (both passes
+  executed partial); step 2 skipped, this run is in the
+  18:00 hour. Scout diff applied with zero changes
+  (unexplained 14, unchanged). No withdrawals. Pool inbox
+  75, claimed 0, done 1292. Full detail in
+  queue-planning/1840-run.md.
