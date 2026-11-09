@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-09
 created: 2026-11-09T08:12:00Z
-modified: 2026-11-09T09:05:00Z
+modified: 2026-11-09T09:02:56Z
 level: L0
 version: 1.0.0
 description: The 0000, 0015 and 0030 PR integration passes, the 0019 queue ticker pass with survivor intake and troop training partials, and the 0032 knowledge organization pass
