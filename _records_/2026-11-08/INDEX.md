@@ -4981,3 +4981,12 @@ of 2026-10-28.
   worktree. Local main verified at 13d867120, no sync-back.
   No Slack sync (silent non-batch run). Full detail in
   pr-integration/2330-run.md.
+
+- Integrator addendum pr-integration-2026-11-08-2330 (PR 492).
+  PR 492 (knowledge-organizer 4-profile fold) opened
+  mid-pass at 23:40 PT, after the pass-start list; reviewed
+  in full and merged squash aefdc615; local main synced
+  13d867120 to aefdc615 (direct GitHub fetch; bundle route
+  failed on VPS disk pressure); Slack DM sync sent for the
+  merge (message_ts 1794210300.087509). Run record stats
+  corrected. Full detail in pr-integration/2330-run.md.
