@@ -3966,3 +3966,26 @@ of 2026-10-28.
   (single file action-log.jsonl). End-of-pass sweep: 5
   open PRs, all decided, no unprocessed PRs. Full detail
   in pr-integration/1800-run.md.
+
+## 18:33 to about 18:39 — Perception scout station and Wars dot
+- Scout unit scout-scout-2026-11-02-015, executor
+  ticker-1822. Station panel re-check and Wars dot read,
+  both done. No train preparing (fourteenth same-day
+  no-train confirmation, thirteenth in this chain): no
+  train icon, no "Boarding closes in" banner. Wars dot
+  PRESENT on the Alliance panel (first time today since
+  11:41) with one rally waiting on Rally Intel
+  ([AP3x]Kkkayyyyy, 2/5, Lv.30 CL-7 Victim 46km away,
+  39 seconds left); Individual Intel empty. Return-pass
+  re-check: Wars dot cleared after the rally timer
+  expired. Seventh same-day datapoint for Issue #212;
+  it does not settle #212 (2026-11-03 anomaly stands).
+  Method finding: five taps on the Alliance button in
+  fullscreen 1920x1080 never opened the panel; the same
+  button in the 642x951 windowed geometry opened at
+  once - do not enter fullscreen for tap work until
+  resolved, filed as a tooling Issue. Power 149,209,253
+  holds from 17:06; coin 15.9M and iron 816.9M match the
+  1759 harvest collections. Observe-only; nothing
+  claimed. Full detail in
+  perception-scout/1839-queue-run.md.
