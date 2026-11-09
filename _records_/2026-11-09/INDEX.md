@@ -1755,3 +1755,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   No withdrawals. Pool inbox 85, claimed 0, done 1335.
   Status: done. Full detail in
   queue-planning/0840-run.md.
+## 08:45 to about 08:57 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0845
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Merged
+  PR 515 (tools: research/building-queues regulars,
+  Refs #513) and PR 516 (knowledge: 3 profiles folded,
+  Refs #506, #477, #513, #514); local main fast-forwarded
+  to 235fd869. Records PR 493 re-probed CLEAN at head
+  a5bd5046, re-check comment posted, awaits the 11:00
+  batch. Records PRs 351 and 301 still CONFLICTING on
+  the same single file at unchanged heads, re-check
+  comments posted. Tools PR 425 owner-gated, re-verified
+  CLEAN against the new main, OD-20261108-01 still open.
+  PR link commented on issue #513. Status: done. Full
+  detail in pr-integration/0845-run.md.
