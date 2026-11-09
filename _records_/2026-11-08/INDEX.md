@@ -4089,3 +4089,15 @@ of 2026-10-28.
   untouched. Progress commented on #465; summary synced to
   the owner's Slack DM. Status: done. Full detail in
   tool-development/1832-run.md.
+## 18:45 to about 18:56 - PR integration pass
+- Integrator pass pr-integration-2026-11-08-1845.
+  NON-batch pass (checker: not due, next batch 19:00 PT).
+  Knowledge PR 476 merged (squash a3ce6307, 3 profiles
+  folded); main synced back to the local repo. Records
+  PRs 460 and 470 re-verified CLEAN against new main
+  a3ce6307 with verification comments posted; both await
+  the 19:00 batch. Tools PR 425 still owner-gated,
+  unchanged, no owner decision. Records PRs 351 and 301
+  still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-checks posted.
+  Full detail in pr-integration/1845-run.md.
