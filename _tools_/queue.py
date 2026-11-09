@@ -123,12 +123,22 @@ Usage:
              # in slots_before_reset_minutes with the absolute
              # reset_utc instant as expiry, chain prefix in
              # chain_id_prefix); sync never stages fixed-slot
-             # regulars, plan owns them
+             # regulars, plan owns them. A reset-anchored regular
+             # carrying fixup_regulars also stages one pre-reset
+             # fix-up unit per ledger regular for each reset day
+             # its windows cover (issue #147) - plan is the early
+             # path, sweep the just-in-time one.
   queue.py [--root DIR] sweep [--regular zero-sweep]
              [--date YYYY-MM-DD] [--regulars-json FILE]
              # produce the pre-reset sweep pair for one reset day
              # from the fixed-slots regular - slots reset-anchored,
              # expiry at the reset instant itself (issue #147);
+             # before the pair it stages one fix-up unit per
+             # ledger fix-up regular at the pair-midpoint slot,
+             # priority 1, expiring at the reset, so the sweep's
+             # fix-ups are claimable before the reset instead of
+             # sitting in the inbox with not_before at or after
+             # it (issue #147, eighth failure running);
              # the planner's manual step calls this instead of
              # hand-computing wall times, so a pair staged through
              # this command can never again carry the old
@@ -142,7 +152,11 @@ Usage:
              # of the day's chain (issue #410), so the stale pair
              # is withdrawn first instead of silently compounded,
              # and plan warns on the same collision through
-             # _produce_for_window
+             # _produce_for_window; refuses also when the roster
+             # entry carries no fixup_regulars list, an empty
+             # list, or an unknown fix-up regular (issue #147),
+             # so a pair with no fix-ups cannot silently repeat
+             # the eighth-failure pattern
 
 --root defaults to the repository _queue_ folder; tests point it at a
 scratch directory.
@@ -1146,7 +1160,7 @@ def _unit_id_for_window(item, planned_local):
 
 
 def _produce_for_window(root, item, planned_local, window="",
-                        closed_ids=None):
+                        closed_ids=None, expires_dt=None, priority=None):
     """Enqueue the unit for one (regular, window) pair, or return
     None when that pair already exists in any state - the pool's
     anti-duplication invariant, shared by sync and plan. A pair
@@ -1156,7 +1170,12 @@ def _produce_for_window(root, item, planned_local, window="",
     unit with the same deterministic id would re-execute it
     (issue #466). Callers that pass no closed set keep the old
     behaviour; plan passes its own set (issue #465) and sweep
-    keeps the old behaviour."""
+    keeps the old behaviour. expires_dt overrides the
+    cadence-derived expiry and priority overrides the
+    SYNC_PRIORITY default - both are used by the pre-reset
+    sweep fix-ups (issue #147), which expire at the reset they
+    serve and run at priority 1 regardless of their regular's
+    usual cadence and priority."""
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -1215,22 +1234,23 @@ def _produce_for_window(root, item, planned_local, window="",
               file=sys.stderr)
         return None
     cadence = item.get("cadence", "")
-    if cadence == "fixed-slots" and _reset_anchored_offsets(item):
-        # The slot's own reset instant is its expiry: a sweep
-        # unit never outlives the trade day it walks (issue #147).
-        expires_dt = _next_reset_utc(
-            planned_utc, _parse_hhmm(item.get("reset_utc")))
-    elif cadence == "fixed-slots" and item.get("expires_local"):
-        exp = _parse_hhmm(item.get("expires_local"))
-        if exp is not None:
-            expires_dt = _next_local_time(
-                planned_local, exp).astimezone(timezone.utc)
+    if expires_dt is None:
+        if cadence == "fixed-slots" and _reset_anchored_offsets(item):
+            # The slot's own reset instant is its expiry: a sweep
+            # unit never outlives the trade day it walks (issue #147).
+            expires_dt = _next_reset_utc(
+                planned_utc, _parse_hhmm(item.get("reset_utc")))
+        elif cadence == "fixed-slots" and item.get("expires_local"):
+            exp = _parse_hhmm(item.get("expires_local"))
+            if exp is not None:
+                expires_dt = _next_local_time(
+                    planned_local, exp).astimezone(timezone.utc)
+            else:
+                expires_dt = planned_utc + timedelta(hours=4)
+        elif cadence in ("daily-reset", "weekly-thu"):
+            expires_dt = planned_utc + timedelta(days=1)
         else:
             expires_dt = planned_utc + timedelta(hours=4)
-    elif cadence in ("daily-reset", "weekly-thu"):
-        expires_dt = planned_utc + timedelta(days=1)
-    else:
-        expires_dt = planned_utc + timedelta(hours=4)
     chain_id, chain_seq = "", ""
     prefix = item.get("chain_id_prefix", "")
     if prefix:
@@ -1252,7 +1272,8 @@ def _produce_for_window(root, item, planned_local, window="",
         "regular": regular,
         "activity": item.get("activity", ""),
         "segment": item.get("segment", ""),
-        "priority": SYNC_PRIORITY.get(regular, 3),
+        "priority": priority if priority is not None else \
+            SYNC_PRIORITY.get(regular, 3),
         "created_at": iso(now_utc()),
         "expires_at": iso(expires_dt),
         "planned_for": planned_iso,
@@ -1621,9 +1642,38 @@ def cmd_plan(args):
         closed.setdefault(unit, "completion marker in another "
                                 "worktree")
     planned, present, skipped_done, skipped_closed = [], 0, 0, []
+    fixups_planned, fixups_present = [], 0
     for item in regs:
         current = cycle_start_local(item, now_local)
-        for w in plan_windows(item, now_local, horizon_end):
+        windows = plan_windows(item, now_local, horizon_end)
+        # Pre-reset fix-ups (issue #147): a reset-anchored regular
+        # carrying fixup_regulars stages one fix-up unit per
+        # ledger regular for each reset day its windows cover,
+        # before its own windows are produced - so the fix-ups
+        # exist from the morning (the planner calls sweep only at
+        # about 17:50, ten minutes before the reset, which is too
+        # late for more than one fix-up to run) and their
+        # created_at precedes the final pass. A roster entry with
+        # no fixup_regulars list stages nothing here; a present
+        # but invalid list warns and continues - plan never blocks
+        # the whole staging run, while sweep refuses outright.
+        if item.get("cadence") == "fixed-slots" and \
+                _reset_anchored_offsets(item) and \
+                item.get("fixup_regulars") is not None:
+            for day in sorted({w.date() for w in windows}):
+                fix = _stage_sweep_fixups(
+                    args.root, regs, item, day, closed_ids=closed)
+                if fix["error"]:
+                    print(f"warning: sweep fix-ups for "
+                          f"{item.get('id')} "
+                          f"{day.isoformat()} not staged: "
+                          f"{fix['error']} (issue #147)",
+                          file=sys.stderr)
+                else:
+                    fixups_planned.extend(fix["produced"])
+                    fixups_present += fix["already_present"]
+                    skipped_closed.extend(fix["skipped_closed"])
+        for w in windows:
             # The tracker has no per-slot done state, so the
             # current-window skip must not drop a fixed-slot unit;
             # the (regular, planned_for) dedupe in _produce already
@@ -1655,12 +1705,96 @@ def cmd_plan(args):
                       "branch_done_reconcile_warning": branch_warning,
                       "planned": planned,
                       "already_present": present,
+                      "fixups_planned": fixups_planned,
+                      "fixups_already_present": fixups_present,
                       "skipped_done_current": skipped_done,
                       "skipped_closed": skipped_closed,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
     return 0
+
+
+def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
+    """Stage one pre-reset fix-up unit per ledger regular (issue #147).
+
+    The sweep pair walks the ledger and its fix-ups are the units
+    that close the not-at-zero lines - but on 2026-11-08 every
+    fix-up in the inbox carried not_before at or after the 18:00
+    reset (the planner stages the every-run fix-up regulars on a
+    4-hour grid whose evening window is 18:03, and the daily-reset
+    ones at 18:00 itself), so none could run before the reset and
+    the trade day closed with 12 lines not at zero, the eighth
+    consecutive failure. The fix-up slot is the midpoint of the
+    pair's slots (reset - 60 minutes for the [90, 30] pair, 17:00
+    local): after the first pass so the ticker is free to pick
+    them, before the reset so they can still close the day, and
+    off the planner's 4-hour grid so no ordinary window collides
+    with it. Each fix-up runs at priority 1 (the design's fix-up
+    priority, section 12) and expires at the reset it serves, so
+    an unclaimed fix-up never outlives its trade day. Fix-ups are
+    staged before the pair in the same production call, so
+    pick_key orders them ahead of the final pass at equal expiry
+    (the reset) and priority (1): their created_at stamp is never
+    later than the pair's, and on a same-second tie the stable
+    sort keeps the alphabetical pool order, in which every
+    fix-up regular's name sorts before zero-sweep.
+
+    Returns {"produced": [...], "already_present": n,
+    "skipped_closed": [...], "error": str-or-None}. error is set
+    (and nothing is staged) when the roster entry carries no
+    fixup_regulars list, the list is empty, or it names a regular
+    the roster does not hold. A reset day whose reset instant is
+    already past stages nothing and reports no error - plan asks
+    for every reset day its horizon covers, including one whose
+    pair slot already passed.
+    """
+    fixups = item.get("fixup_regulars")
+    if fixups is None:
+        return {"produced": [], "already_present": 0,
+                "skipped_closed": [],
+                "error": f"regular {item.get('id')!r} carries no "
+                         f"fixup_regulars list - sync the tree to "
+                         f"main before producing the sweep pair"}
+    if not isinstance(fixups, list) or not fixups:
+        return {"produced": [], "already_present": 0,
+                "skipped_closed": [],
+                "error": f"regular {item.get('id')!r} carries an "
+                         f"empty fixup_regulars list - a sweep pair "
+                         f"with no fix-ups repeats the issue #147 "
+                         f"defect"}
+    by_id = {r.get("id"): r for r in regs}
+    for fid in fixups:
+        if fid not in by_id:
+            return {"produced": [], "already_present": 0,
+                    "skipped_closed": [],
+                    "error": f"fixup regular {fid!r} is not in the "
+                             f"roster - fix fixup_regulars on "
+                             f"regular {item.get('id')!r} before "
+                             f"producing the sweep pair"}
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    if reset_local <= datetime.now(LOCAL_TZ):
+        return {"produced": [], "already_present": 0,
+                "skipped_closed": [], "error": None}
+    offsets = _reset_anchored_offsets(item)
+    midpoint = (offsets[0] + offsets[-1]) // 2
+    slot = reset_local - timedelta(minutes=midpoint)
+    reset_utc = reset_local.astimezone(timezone.utc)
+    produced, already, skipped = [], 0, []
+    for fid in fixups:
+        unit_id = _unit_id_for_window(by_id[fid], slot)
+        unit = _produce_for_window(
+            root, by_id[fid], slot,
+            f"pre-reset fix-up for {local_date.isoformat()} sweep",
+            closed_ids=closed_ids, expires_dt=reset_utc, priority=1)
+        if unit:
+            produced.append(unit)
+        elif closed_ids and unit_id in closed_ids:
+            skipped.append(unit_id)
+        else:
+            already += 1
+    return {"produced": produced, "already_present": already,
+            "skipped_closed": skipped, "error": None}
 
 
 def cmd_sweep(args):
@@ -1682,6 +1816,15 @@ def cmd_sweep(args):
     stale tree fails loudly instead of staging a wall-clock pair
     with the old 19:00 expiry, and when the reset instant for the
     date is already past, so a late call cannot stage dead units.
+    It also stages the day's fix-ups before the pair
+    (_stage_sweep_fixups, issue #147, eighth failure running):
+    one priority-1 unit per ledger fix-up regular at the
+    pair-midpoint slot, expiring at the reset, so the sweep's
+    fix-ups are claimable in the pre-reset window instead of
+    sitting in the inbox with not_before at or after the reset.
+    A roster entry with no fixup_regulars list, an empty list,
+    or an unknown fix-up regular is refused the same way - a
+    pair with no fix-ups would silently repeat the #147 defect.
     It also refuses when the pool already holds a stale-geometry
     unit of the day's chain (issue #410): the (regular,
     planned_for) dedupe would otherwise count the stale first
@@ -1788,6 +1931,29 @@ def cmd_sweep(args):
               " - withdraw the stale pair and re-run sweep "
               "(issue #410)")
         return 1
+    # Pre-reset fix-ups (issue #147): staged before the pair so
+    # their created_at precedes the final pass and pick_key orders
+    # them ahead of it. The closed set is the same branch-done +
+    # completion-marker set plan consults (issues #465, #466), so
+    # a fix-up already closed on the delivered branch is not
+    # re-staged as a phantom the way the 1630 pair unit was on
+    # 2026-11-08. A branch that cannot be read warns and the run
+    # continues on local state only, as in plan.
+    branch = "records/%s" % local_date.isoformat()
+    branch_done, branch_warning = records_branch_done_units(
+        args.root, branch)
+    if branch_warning:
+        print(f"warning: {branch_warning} (issues #446, #466)",
+              file=sys.stderr)
+    closed = {unit: "done on %s" % branch for unit in branch_done}
+    for unit in completion_marker_units(args.root):
+        closed.setdefault(unit, "completion marker in another "
+                                "worktree")
+    fix = _stage_sweep_fixups(args.root, regs, item, local_date,
+                              closed_ids=closed)
+    if fix["error"]:
+        print(f"refused: {fix['error']} (issue #147)")
+        return 1
     produced, already = [], 0
     for idx, slot in enumerate(slots):
         if len(slots) == 2:
@@ -1803,7 +1969,10 @@ def cmd_sweep(args):
     print(json.dumps({
         "regular": args.regular, "date": local_date.isoformat(),
         "reset_at": iso(reset_local.astimezone(timezone.utc)),
-        "produced": produced, "already_present": already},
+        "produced": produced, "already_present": already,
+        "fixups_produced": fix["produced"],
+        "fixups_already_present": fix["already_present"],
+        "fixups_skipped_closed": fix["skipped_closed"]},
         ensure_ascii=False))
     return 0
 
