@@ -4635,3 +4635,22 @@ of 2026-10-28.
   #484, #282, #150, #168 and #482 commented with the new evidence;
   no new Issue filed. Own PR 481 MERGED with 0 comments and 0
   reviews. Full detail in knowledge-organization/2132-run.md.
+
+- Integrator pass pr-integration-2026-11-08-2145.
+  NON-batch pass for records (checker: not due, outside
+  every batch window, next batch 23:00 PT). Merged two
+  knowledge/code PRs opened mid-pass: PR 486 (tools
+  branch-tip ancestry guard, Refs #485, squash 25d7dbf1)
+  and PR 487 (4 profiles folded, squash 95012888); local
+  main synced to 95012888. Records PR 460 head moved to
+  a3203df9b, re-verified CLEAN, re-check commented,
+  awaits the 23:00 batch. Records PR 478 CLEAN,
+  unchanged, awaits the 23:00 batch. Tools PR 425 still
+  owner-gated, clean, no owner decision (register item
+  OD-20261108-01 open and undecided, no covering issue),
+  no new comment. Records PRs 351 and 301 still conflict
+  on the single file _logs_/repo-actions/action-log.jsonl,
+  re-probed, scope unchanged, no new comment. No records
+  merge, so no log lines owed at merge. Slack DM sync
+  sent for the two merges (message_ts 1794204234.371619).
+  Full detail in pr-integration/2145-run.md.
