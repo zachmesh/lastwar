@@ -127,3 +127,7 @@ of 2026-10-28.
   (unexplained 14, unchanged). No withdrawals. Pool inbox
   69, claimed 0, done 1321. Status: no-op. Full detail in
   queue-planning/0040-run.md.
+
+## 00:32 to about 00:53 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-0032. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #123 taken as the single item - tapcal.py 1.2.0 gains a verify subcommand deciding one tap-verify loop step (verified / retry with compensated next aim / exhausted / unverified / not-started), PR #494 opened (commit 2d56c0f24e); 72 fixture assertions 72/72 on two runs on isolated /tmp scratch pools; progress commented on #123. Mid-run a concurrent job checked out main in the shared clone and the tool commit first landed on local main; recovered without force push (update-ref to the work branch, fast-forward push verified by ls-remote, local main reset). Full detail in tool-development/0032-run.md.
