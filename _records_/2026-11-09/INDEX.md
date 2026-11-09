@@ -1860,6 +1860,24 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   OD-20261108-01 still open, no new comment. Status: done.
   Full detail in pr-integration/0930-run.md.
 
+- Integrator pass pr-integration-2026-11-09-0945
+  (NON-batch). Checker due no (plain and merge-aware) -
+  outside every batch window, next batch 11:00. Two
+  knowledge/code PRs merged: #518 (knowledge fold, 4
+  profiles, squash 1a178dc2) and #519 (scout_diff branch
+  check, squash 9aa9b5aa, opened mid-pass, decided this
+  pass). Records PR 493 re-probed CLEAN at head 48ce4058
+  against new main 1a178dc2, re-check comment posted,
+  awaits the 11:00 batch (head moved on to eef6edad after
+  the comment). Records PRs 351 and 301 still CONFLICTING
+  on the same single file at unchanged heads, carried,
+  re-check comments posted. Tools PR 425 owner-gated,
+  re-verified CLEAN against new main 1a178dc2, OD-20261108-01
+  still open, no new escalation. Pre-existing radar-tasks
+  frontmatter colon flagged on #518 for the next fold.
+  Local main synced to 9aa9b5aa. Status: done. Full detail
+  in pr-integration/0945-run.md.
+
   knowledge-organization/0932-run.md.
 - PR catch-all pass pr-catchall-2026-11-09-0939 (no-op).
   Five open PRs scanned, none owned by this job. PRs 515 and 516
