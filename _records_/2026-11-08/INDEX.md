@@ -3778,3 +3778,20 @@ of 2026-10-28.
   assertions 26/26 on two runs on isolated /tmp scratch pools and
   git fixture repos only. Issue #465 commented. Full detail in
   tool-development/1632-run.md.
+## 16:40 to about 17:01 — Queue planning pass
+- Planner pass queue-planning-2026-11-08-1640. Plan staged
+  0 net fresh units (already_present 74, skipped_done_current
+  2, reaped 0, expired 0); the 1 "planned" unit was
+  daily-missions-2026-11-07-1800, a phantom re-stage of a slot
+  ticker-1604 already closed on the branch (partial, Issue
+  #465 defect 1, daily-reset variant) - deleted in-run, no
+  re-execution. Pre-reset sweep pair already complete via
+  plan (1630 seq 1 + 1730 seq 2, chain
+  pre-reset-sweep-2026-11-08, expiring at the 18:00 reset).
+  Scout diff on the Nov 8 observation (587 lines, 23 lines
+  newer than the 1540 copy: ticker-1534 seq 013 and
+  ticker-1604 seq 014) applied with zero changes (observed 0,
+  actionable 0, enqueued 0, already-queued 0, candidates 0,
+  unexplained red dots 14 unchanged). No withdrawals. Pool:
+  inbox 78, claimed 0, done 1278. Status: done. Full detail
+  in queue-planning/1640-run.md.
