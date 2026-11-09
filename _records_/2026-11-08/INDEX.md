@@ -4788,3 +4788,18 @@ of 2026-10-28.
   reconciled exactly; owner-decision issues 132, 154 and 335
   all over 24 hours with statements current. Status: no-op.
   Full detail in pr-catchall/2239-run.md.
+
+- Integrator pass pr-integration-2026-11-08-2245.
+  NON-batch pass for records (checker: not due, outside
+  every batch window, next batch 23:00 PT). No merges.
+  Records PR 460 head moved to 3826e8a29, re-verified
+  CLEAN, re-check commented; records PR 478 CLEAN,
+  unchanged, awaits the 23:00 batch. Tools PR 425 still
+  owner-gated, clean, no owner decision (register item
+  OD-20261108-01 open and undecided, no covering issue),
+  no new comment. Records PRs 351 and 301 still conflict
+  on the single file _logs_/repo-actions/action-log.jsonl,
+  re-probed, scope unchanged, no new comment. No records
+  merge, so no log lines owed at merge. Silent run: no
+  Slack DM sync, no chat report. Full detail in
+  pr-integration/2245-run.md.
