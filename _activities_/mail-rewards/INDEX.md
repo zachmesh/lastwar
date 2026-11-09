@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T05:32:17Z
+modified: 2026-11-09T06:32:17Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,7 @@ grounded_in:
   - source: ticker-1727 mail-rewards execution record 2026-11-07 1740 queue run (done, all six claimable categories checked, nothing claimable; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-2006 mail-rewards execution record 2026-11-07 2028 queue run (done, Alliance Daily Donation Rankings and 3 Event mails claimed, other categories clear by list read, verified clean after claims; record commit e9bf320c92 on records/2026-11-07)
   - source: ticker-2034 mail-rewards execution record 2026-11-07 2052 queue run (done, Alliance and Event Claim All answered "No rewards available", nothing claimed, envelope grounded at norm 936,790, "Unclaimed -Daily Task- Reward" is notification-only; record commit 7a4a104930 on records/2026-11-07)
+  - source: ticker-2119 mail-rewards execution record 2026-11-08 2132 queue run (done, Alliance and Event mail claimed in full, 10 mails, Claim All both categories; record commit fe08a0907 on records/2026-11-08)
 ---
 
 
@@ -840,3 +841,13 @@ the next tick re-produces this regular as a fresh unit.
 - Battle Report, Season, System and Regular were not opened: no red dots stood on them, and the metadata records them as reports-only. Delete All was never pressed anywhere.
 - Figures read live on screen: power 149,850,353 at entry and at close; food 478.8M, iron 802.1M, coin 6.9M. No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
 - Result statistics: target 2, achieved 2, resources_gained none, costs about 4 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-08 2132 unit added - Alliance and Event mail claimed in full, 10 mails
+
+- Unit mail-2026-11-08-1830 by ticker-2119, about 21:28 to 21:32 local, status done. Evidence in `_records_/2026-11-08/mail-rewards/2132-queue-run.md` (commit fe08a0907 on records/2026-11-08). All claimable mail claimed.
+- Alliance - Claim All: five mails, all 3h ago, all with gift icons before the claim - Daily Donation Rankings; Weekly Donation Ranking; 3v3 Brawl, Major's Gift (three times). CONGRATULATIONS popup items as read from the zoomed screenshot (icon, count at bottom-right; a top-left number reads as the item denomination where present, that reading is the unit's inference): blue medal 750, iron crate 30, gold chest 240, food crate 30, gold badge 500 x2, coin chest 30, EXP crate 30, red gem 50, gold badge 50 x4. Verified after dismissing the popup: the gift icons are gone from all five mails (envelopes show opened), and the Claim All button lost its red dot. The New Alliance Marker mail below them never carried a gift icon.
+- Event - Claim All: five mails with gift icons before the claim - "Weekly Pass" Unclaimed Reward (2h ago); Unclaimed VIP Daily Level Reward; Unclaimed Event Reward (3h ago); Alliance Star Scratch Card Reward (3h ago); Season Resource Conversion (4h ago). CONGRATULATIONS popup items as read from the zoomed screenshot (same two-number reading): gold puzzle piece 2, green gift box 2, gold badge 500 x1, red gem 1.5K, gold badge 50 x1, EXP book 1.0K x3, coin chest 13, food crate 13, iron crate 13, grey steel blocks 4, EXP book 100 x2.6K, red gem 10 x2. Verified after dismissing the popup: the gift icons are gone from all five mails, and the Claim All button lost its red dot. The [AP3x] Missile Apex's train mail (13h ago) never carried a gift icon. The scrolling alliance-appointment banner at the top of the Event list is informational only.
+- Not opened: Battle Report, System, Regular - no gift icon on their category rows, so nothing claimable by the gift-icon indicator; not opened this unit. In-app Purchases keeps its red dot, but it holds receipts only, nothing to claim. Category-level re-check after both claims: no category row shows a gift icon.
+- Note, against the 2052 unit's "Unclaimed" finding: the 2052 "Unclaimed -Daily Task- Reward" mail was notification-only (no attachment claimable through Claim All), but this unit's "Unclaimed" mails (Weekly Pass Unclaimed Reward, Unclaimed VIP Daily Level Reward, Unclaimed Event Reward) DID carry claimable attachments, verified by the popup items and the cleared gift icons. "Unclaimed" in a mail title does not by itself mean notification-only - the gift icon on the row is the indicator.
+- Red lines held: Delete All never pressed, no diamonds or money spent, no mail deleted, no other unit's work touched.
+- Result stats: target 10, achieved 10, resources_gained alliance 5 mails plus event 5 mails, popup items as listed above, costs 5 minutes, no items spent, verified yes.

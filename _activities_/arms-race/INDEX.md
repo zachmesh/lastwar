@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T01:40:00Z
+modified: 2026-11-09T06:32:17Z
 level: L1
-version: 1.60.0
+version: 1.61.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -64,6 +64,7 @@ grounded_in:
   - source: ticker-0304 perception-scout execution record 2026-11-08 0325 queue run (partial, events remainder, Arms Race Tech Research phase read live, score 0, timer 02:52:53; record commit 447ebb411c on records/2026-11-08)
   - source: ticker-1317 arms-race execution records 2026-11-08 1333 queue run (partial, Unit Progression phase verdict, score 0, tier-3 unreachable, phase ends about 14:00) and 1342 queue run (skipped-needs-owner, phase re-read, timer 00:18:49, target 75000 achieved 0); record commit d272dd711 on records/2026-11-08
   - source: ticker-1646 perception-scout execution record 2026-11-08 1704 queue run (partial, Events hub strip verified at both ends, Arms Race Tech Research phase read live, score 0, timer 01:03:01; record commit 9978e09a8 on records/2026-11-08)
+  - source: ticker-2119 arms-race execution record 2026-11-08 2137 queue run (skipped-needs-owner, Base Building phase verdict, score 0, tier-3 unreachable inside the red lines, first executed unit of the phase; record commit fe08a0907 on records/2026-11-08)
 ---
 
 
@@ -1984,3 +1985,17 @@ slot. Evidence in
 - Follow-up: the arms-race regular's 1803 unit is already queued
   and the phase ends about 18:06 local, inside that unit's
   window; its first unit reads this phase fresh under rule R4.
+
+## What the 2026-11-08 2137 unit added - Base Building phase verdict, score 0, tier-3 unreachable, R4 skipped-needs-owner
+
+- Unit arms-race-2026-11-08-1803 by ticker-2119, about 21:19 to 21:27 local, status skipped-needs-owner under queue rule R4. Evidence in `_records_/2026-11-08/arms-race/2137-queue-run.md` (commit fe08a0907 on records/2026-11-08). This is the first executed arms-race unit of this phase and of the whole day: the 0203, 0603 and 1403 units all expired unexecuted (window passed before execution). The phase started about 18:05 local and ends about 22:05 local.
+- Live phase reading (rule R4, first unit of the phase): Base Building, Contest Segment Lv.29-30, points 0, timer 00:38:33 at the first read and 00:34:15 at the closing read, chest thresholds 6,250 / 12,500 / 30,000 (top chest 30,000), cumulative counter chest 0/2, rank #2110 [AP3x]Bears Lair, segment rank 9, 0 points. No chest earned, none claimed.
+- Scoring paths as displayed: Increase Building Power by 1pt pays +1; Use 1-min Construction Speed-up pays +10; Buy Packs containing Diamonds pays +30 per diamond.
+- Building queue read (the R4 judgment): the Building Queue holds the Lv.29 Aircraft Center upgrade (Time Left 3d 05:03:01) and the Lv.26 Drill Ground upgrade (Time Left 01:41:12); two slots Idle. The nearest completion lands 01:41:12 out, against about 00:35 of phase left, so no Building Power gain lands inside this phase. Starting a new building is banned, and the Speed Up buttons on the queue are banned (never burn speedup items). The Construction Speed-up path is banned outright, and the diamond-packs path is banned outright (never spend diamonds or money).
+- Judgment: tier 3 (30,000) is unreachable in this phase inside the red lines. This is the phase's R4 verdict; later units in this phase need only re-read the score and chests, not re-litigate the queue read, unless a building timer changes.
+- Completion sweep: all three point chests locked at 0 points; the cumulative counter chest stands at 0/2, locked, not bouncing; the ranking-row chest opens only a contents preview (UR Hero Universal Shard 1, Decoration Chest 1, Iron Chest (SR) 24, Food Chest (SR) 24, Coin Chest (SR) 24 for rank #2110), no Claim button while the phase is live, so the ranking reward is for the next run after the phase ends, per the standing rule.
+- R4 note - the judgment came late in the phase: this unit is the first executed arms-race unit of the phase, but the phase started about 18:05, so the R4 early-phase judgment lands about 3.5 hours into the phase, not early. The repeated expiry of arms-race units (0203, 0603, 1403 unexecuted) is a gap for the retro: the phase was never judged until its last 35 minutes. The next unit (2203, already in the pool) judges the following phase from its start.
+- Side read (not this unit's work, recorded, not acted on): a mis-tap on the lightning icon opened the Stamina panel, closed untouched, no purchase - stamina 120/120 full; 75 Stamina Free Claim available, Remaining Today 2/2; 10 Stamina Owned 641; 50 Stamina Owned 665. No stamina item used - this phase has no stamina scoring path. The stamina panel's Buy 300 diamonds button was never tapped.
+- Correction, from the record itself: the unit ran 21:19-21:27 local, about 7 minutes (duration_seconds 419), not 21:19-21:37 and not 18 minutes. The file name 2137 and the frontmatter created 05:37:00Z carry the same mis-stated time and are kept unchanged so the evidence links in the unit result and the day INDEX stay valid; the corrected figures here are the true ones. The in-game timer reads are unaffected.
+- Red lines held: no diamonds or money spent, no speedup item used, no building or research started, no stage swap, no other unit's work touched.
+- Result stats: target 30000, achieved 0, points 0, resources_gained none, costs 7 minutes of unit time, no items spent, verified yes, blocker_category g.
