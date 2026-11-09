@@ -496,6 +496,36 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 --- INDEX ---
 - Tool-developer pass tool-development-2026-11-09-0232. No-op: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 0200 note re-verified CLEAN against main d72dc6f40); no new issue filed since the 0132 triage (newest #490, records class, 07:18Z) and that triage still holds - every open tooling issue carries an implementing PR, belongs to another owner, or needs an owner decision; #147 implemented by the 0132 run, PR #497 merged at 0200. Full detail in tool-development/0232-run.md.
 
+## 02:30 to 02:37 — PR integration pass
+
+- Integrator pr-integration-2026-11-09-0230 (NON-batch).
+  Checker due no (next batch 03:00 PT); no merges, no comments
+  (main unmoved at d72dc6f40 since the 0200 pass; PR 493 head
+  moved facef628c to 3524bb9d, re-probed clean at the new tip);
+  records PRs 493 and 491 clean against main, awaiting the
+  03:00 batch; records PRs 478, 351, 301 still conflicted on
+  the single action-log file; tools PR 425 owner-gated, clean,
+  re-verified (OD-20261108-01 open).
+  Full detail in pr-integration/0230-run.md.
+
+## 02:39 to about 02:50 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-09-0239. No-op: six open PRs
+  scanned, none owned by this job. Main moved e786ef89 to d72dc6f4
+  on knowledge PR 496 and tools PR 497 merging (pr-integration
+  0200 run). PR 493 head moved to 6f38d0d1 and verified clean
+  against main d72dc6f4 by VPS merge-tree (gh still UNKNOWN);
+  PR 491 clean at unchanged head 86b26f5c; both await the 03:00
+  batch. PRs 478, 351 and 301 still conflict with main on the
+  single file _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, integrator 0200 re-checks noted. Tools PR 425
+  owner-gated, clean, unchanged, awaiting the owner decision
+  (OD-20261108-01 open and undecided). Seventy-eight open issues,
+  zero unclassified, one created since the 0139 pass (issue 498,
+  knowledge, already labeled). Owner-decision issues 132, 154 and
+  335 over 24 hours, statements current. VPS root disk 421M free
+  (96 percent), down from 556M. Status: no-op. Full detail in
+  pr-catchall/0239-run.md.
 - Organizer pass knowledge-organization-2026-11-09-0232.
   Own PR 496 MERGED with 0 comments and 0 reviews, so no open
   own PR carries integrator feedback. Ten substantive records
