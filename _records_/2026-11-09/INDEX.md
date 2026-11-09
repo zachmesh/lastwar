@@ -232,3 +232,39 @@ of 2026-10-28.
   (OD-20261108-01 open). No Slack sync by this run (no merges,
   no new escalation; silent in chat).
   Full detail in pr-integration/0115-run.md.
+## 01:14 to 01:29 — Queue ticker pass, Arms Race (partial)
+
+- Arms Race unit arms-race-2026-11-09-0855, partial: Unit
+  Progression phase read live at 01:16 PT, 0 points, timer
+  00:44:05, top chest 75,000, counter chest 0/2, rank #2110.
+  Completion sweep: nothing earned, nothing to claim. The
+  training fill was not executed - the barracks tents were not
+  located from a fresh route (panned view, tapped the red troop
+  formation in the lower middle, resolved to Drill Ground Lv.30
+  again). Third consecutive tent-grounding failure (0039, 0058,
+  this unit) - R2 third strike: the blocker and the failed
+  routes must be written into the troop-training metadata and
+  the entry route changed before any further unit of this type
+  runs; the metadata write is pending for the knowledge flow
+  (tier-2, not swept into this pass). Tracker untouched; the
+  next tick re-produces the regular, phase ends about 02:00 PT.
+  Full detail in arms-race/0129-queue-run.md.
+
+## 01:20 to 01:38 — Queue ticker pass, Mail (partial)
+
+- Mail unit mail-2026-11-08-2230, partial: Alliance and Event
+  categories walked, Claim All pressed in both, both returned
+  "No rewards available." - nothing claimed. Alliance list
+  holds a Leadership Transfer Notice (2h ago): Jerry Apex has
+  become the new Alliance leader (previously Texan Apex per
+  the repo); the notice was not opened in full. Event list
+  holds "Weekly Pass Unclaimed Rewards" (6h ago) and "Unclaimed
+  VIP Daily Level Rewards" (7h ago) - both read as
+  notifications, not claimable attachments; the VIP unit should
+  check the VIP screen for the daily freebie. System, Regular
+  and Battle Report not walked in this unit (cap reached) - R7:
+  first action of the next mail unit. The Mail button did not
+  respond to five background taps at two grounded points and
+  only opened on a later tap at (652, 793) - re-ground fresh
+  next time. Tracker untouched. Full detail in
+  mail-rewards/0138-queue-run.md.
