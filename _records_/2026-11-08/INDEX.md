@@ -4267,3 +4267,40 @@ of 2026-10-28.
   zero changes (unexplained 14, unchanged). No withdrawals.
   Pool inbox 72, claimed 1, done 1300. Full detail in
   queue-planning/1940-run.md.
+
+## 20:06 to about 20:15 — Perception scout station and Wars dot
+- Scout unit scout-scout-2026-11-02-016, executor
+  ticker-2002. Station panel re-check and Wars dot read,
+  both done. No train preparing (fifteenth same-day
+  no-train confirmation, fourteenth in this chain): no
+  train icon, no "Boarding closes in" banner. Wars dot
+  ABSENT on the Alliance panel at 20:09 although Rally
+  Intel already held three live rallies (all
+  [AP3x]EmberSteel vs Lv.30 CL-7 Victim, 1/5 each: two
+  rallying, one waiting); Individual Intel empty.
+  Return-pass re-check at 20:12: Wars dot PRESENT. A
+  second Rally Intel read at 20:14 shows a NEW rally by
+  [AP3x]TheGoldenEclipse at the top of the list, created
+  between the reads - the dot fires on rally creation,
+  not on rally presence. Eighth same-day datapoint for
+  Issue #212, commented there; it does not settle #212
+  (2026-11-03 anomaly stands). Power 149,209,253 holds
+  from 17:06; cart 4,467; Members 96/100. Observe-only;
+  nothing claimed, no rally joined. Full detail in
+  perception-scout/2012-queue-run.md.
+
+## 20:15 to about 20:24 — Radar tasks release day, entry failed
+- Radar unit radar-2026-11-08-1803, executor ticker-2002.
+  Live posture day 1 Radar Training RELEASE (duel.py); the
+  unit window stamp "day 7 stack" is stale, the week rolled
+  at about 18:00. Radar screen never entered: the dish
+  grounding failed twice - (54,583) opened Intercity Trade
+  (trade count 0/5, untouched) and a crop-measured (54,780)
+  opened the Build menu; the close attempt opened THE AGE
+  OF OIL research tree, whose back arrow ignores background
+  clicks. Game left on that tree, nothing spent, nothing
+  started. The 10 pending rewards and 16 stored tasks are
+  still unclaimed for the next radar unit; the (50,740)
+  point that worked at 13:53 is the next point to try.
+  Partial; tracker untouched. Full detail in
+  radar-tasks/2028-queue-run.md.
