@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-09T16:32:17Z
+modified: 2026-11-09T17:32:17Z
 level: L1
-version: 1.50.0
+version: 1.51.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -76,6 +76,8 @@ grounded_in:
   - source: ticker-0804 scout-discovery execution record 2026-11-09 0825 queue run (done, Survey Center feedback-survey hub, one live Season II survey, reward unmeasured, candidate REJECTED as a routine task; record commit b58fc31b6 on records/2026-11-09)
   - source: ticker-0804 scout-discovery execution record 2026-11-09 0829 queue run (done, Age of Oil is the Season II warzone collective-progression page, Tech 2383/500 and Building 10721/500 exceeded, Hero 8833/10000, reward claim state unmeasured; record commit b58fc31b6 on records/2026-11-09)
   - source: ticker-0804 scout-discovery units 008 and 010 done verdicts (Total Power 149,117,331 re-read, live HUD total not a task; full 7-tab Events strip with no Zombie tab; read from this pass screens, no separate queue-run records; commit b58fc31b6 on records/2026-11-09)
+  - source: ticker-0842 scout-discovery execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest explored and measured read-only, owner-decision Issue #517, 0606 unmatched list now fully resolved; record commit ec55aa585 on records/2026-11-09)
+  - source: ticker-0904 survivor-intake execution record 2026-11-09 0926 queue run (partial, Season Closed system letter read in mail - Season II ended 2026-11-08 17:00:05, season buildings removed, skill points returned - corroborates the 0812 Transfer Surge resolution; record commit 3c788a4a3 on records/2026-11-09)
 ---
 
 
@@ -1699,7 +1701,7 @@ observe-only, nothing claimed). Evidence in
 
 - Season II badge 1, seen in the 0436 and 0514 units of
   2026-11-02 and still unexplained, carried with the other
-  unexplained dots above. (2026-11-09 0812 update: RESOLVED - the Season II right-edge element is the Transfer Surge entry, a map icon with blue and red pins carrying a 6d countdown, verified live by the scout-discovery unit; the '1' reading from 2026-11-02 was never re-seen as a count and is treated as the same countdown signal, not a separate dot. Applying to transfer is an owner-only move, filed as owner-decision Issue #514.)
+  unexplained dots above. (2026-11-09 0812 update: RESOLVED - the Season II right-edge element is the Transfer Surge entry, a map icon with blue and red pins carrying a 6d countdown, verified live by the scout-discovery unit; the '1' reading from 2026-11-02 was never re-seen as a count and is treated as the same countdown signal, not a separate dot. Applying to transfer is an owner-only move, filed as owner-decision Issue #514.) (2026-11-09 0926 corroboration: the Season Closed system letter read in mail, dated 2026-11-08 17:00:05, states Season II ended, season buildings removed, skill points returned - consistent with the Transfer Surge resolution above; the letter is mail work, not a scout read.)
 
 - The unexplained red dots as restated by the 1437 unit
   (Alliance dot seen again, Inventory dot, 99+ badge,
@@ -3635,3 +3637,11 @@ observe-only, nothing claimed). Evidence in
 - Full Events strip verified, Zombie tab absent (010): the full Events tab strip seen across this pass (Age of Oil, Arms Race, Winter Battlefield, Desert Battlefield, Wanted Boss, Survey Center, Community) carries no Zombie tab; the event ended 2026-10-30, no chain seeded; info-only note, candidate rejected as a task. This is the standing zombie rule re-confirmed on a full-strip read.
 - Total Power re-read (008): Total Power is a live HUD total, not a task - read 149,117,331 on this pass base screens (08:12, 08:29, 08:32); no reward, cost, deadline or scoring; candidate rejected as a task, same misclassification the 0606 scout already flagged. The figure is 100,000 below the 07:45 read of 149,217,331 (0744 unit, also 06:37); the cause is unestablished from these screens, recorded as read, not interpreted.
 - Result stats: 0812 target explain-season-ii-countdown-mechanism, achieved 1, costs about 11 minutes; 0825 target explain-survey-center-mechanism, achieved 1, costs about 4 minutes; 0829 target explain-the-age-of-oil-mechanism, achieved 1, costs about 3 minutes; 006 duplicate of 005, no game time; 008 and 010 read from this pass screens, no game time; resources_gained none for all, no items spent, verified yes (same-unit live reads for 004/005/007), blocker_category none.
+
+## What the 2026-11-09 0848 scout-discovery unit added - Builders Hut Lv.26 banner quest explored, 0606 unmatched list fully resolved
+
+- Unit scout-scout-discovery-2026-11-09-009 by ticker-0842, session cc-245, about 08:48 to 08:53 local, status done. Evidence in `_records_/2026-11-09/upgrade-builders-hut-to/0848-queue-run.md` (commit ec55aa585 on records/2026-11-09) and the day observation file. Observe-only throughout.
+- The Builders Hut banner quest from the 0606 pass is now explored: banner quest "Upgrade Builder's Hut to Lv.26 (0/1)" at the bottom left of the base screen above the HEROES button; tap pans the camera to the Builder's Hut (Lv.25) and selects it; green up-arrow opens the upgrade panel. Measured on the panel: Lv.25 to 26, Power 90,800 to 108,300, Free Construction Speed-up Time 00:20:00 to 00:22:00, Hero EXP 22.0M; cost Lv.26 Headquarters (met), Iron 170.0M, Food 56.9M; Original Time 15d 08:05:18, Upgrade button 7d 07:16:49; Finish Now 18,188 diamonds. No deadline or countdown seen; whether the banner quest pays a separate reward on completion is untested. Starting a building is owner-only - Upgrade NOT tapped, Finish Now NOT tapped; owner-decision Issue #517 filed. Building queue 1/4 at the time (Lv.29 Aircraft Center in progress). Full values folded in building-queues 1.2.0.
+- The 0606 unmatched list is now fully resolved: the Builders Hut quest was its last open item. unmatched_labels: none.
+- Corroboration from the 0926 survivors unit (mail read, not a scout read): the Season Closed system letter (2026-11-08 17:00:05) states Season II ended, season buildings removed, skill points returned - consistent with the 0812 Transfer Surge resolution.
+- Result stats: target explain-builders-hut-lv26-quest-mechanism-cost-time-rewards, achieved 1, resources_gained none, costs about 5 minutes, no items spent, no diamonds spent, verified yes (same-unit live reads), blocker_category none.
