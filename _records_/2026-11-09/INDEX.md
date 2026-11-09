@@ -339,3 +339,16 @@ of 2026-10-28.
   unchanged). No withdrawals. Pool inbox 66, claimed 0,
   done 1325. Status: no-op. Full detail in
   queue-planning/0140-run.md.
+## 01:45 to 01:52 — PR integration pass
+
+- Integrator pr-integration-2026-11-09-0145 (NON-batch).
+  Checker due no (next batch 03:00 PT); merged knowledge PR
+  496 (squash) with sync-back of main e786ef8918 to 25ec07de;
+  records PRs 493 and 491 clean against new main 25ec07de,
+  awaiting the 03:00 batch; records PRs 478, 351, 301 still
+  conflicted on the single action-log file, re-check comments
+  posted after main moved; tools PR 425 owner-gated, clean,
+  re-verified (OD-20261108-01 open). No Slack sync by this run
+  (merge reported in the run result for resolution delivery).
+  Full detail in pr-integration/0145-run.md.
+
