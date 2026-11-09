@@ -4005,3 +4005,34 @@ of 2026-10-28.
   Owner-decision issues 132, 154 and 335 all over 24 hours,
   statements current.
   Full detail in pr-catchall/1839-run.md.
+
+## 18:32 to about 18:52 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-08-1832. Fold of the
+  ticker-1724 records into 3 profiles, one commit on PR
+  476 (open at record time, 0 comments, 0 reviews):
+  daily-activities 1.19.0 to 1.20.0 (zero sweep second
+  pass 1740, no line moved to zero since 1712, 3 at zero,
+  1 stack posture, 12 not at zero, 5 unreadable, power
+  149,209,253 holds, fifteenth same-day no-train
+  confirmation, fix-up scheduling shortfall confirmed a
+  second time); daily-missions 1.9.0 to 1.10.0
+  (1753 full-list re-check, nothing newly completed,
+  activity 70, 80 chest 10 short into the reset, claimed
+  rows sink with green checks correcting the 1628
+  removed-from-list reading, Next Refresh 00:11:55 to
+  00:08:22 pointing at the 18:00 reset, first observed
+  duplicate execution of the same unit id); resource-
+  collection 1.40.0 to 1.41.0 (1759 harvest, iron +3.6M
+  and coin +3.6M HUD-verified, food bubbles still
+  standing, bubble-type identification unreliable per R2,
+  identical +3.6M unexplained, one-by-one line for iron
+  and coin marked suspect, reset arrived mid-sweep).
+  1 correction (1628 removed-from-list wording
+  superseded), 1 contradiction resolved, 0 stale marked,
+  0 new Issues filed; Issues #242 and #208 commented.
+  First run after the 18:00 reset: ended-trade-day sweep
+  done, ticker-pass to organizer-fold chain verified, no
+  missed substantive record. Full detail in
+  knowledge-organization/1832-run.md.
