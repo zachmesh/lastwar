@@ -3,7 +3,7 @@ title: Perception Scout
 created: 2026-11-01T05:10:00Z
 modified: 2026-11-09T20:32:17Z
 level: L1
-version: 1.53.0
+version: 1.54.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -84,6 +84,7 @@ grounded_in:
   - source: ticker-1134 scout-discovery execution record 2026-11-09 1149 queue run (done, Total Power 149,217,331 read live twice, known HUD figure, candidate rejected as a task, 472,287 below the 2026-10-25 baseline; record commit d2df49670 on records/2026-11-09)
   - source: ticker-1134 scout-discovery execution record 2026-11-09 1152 queue run (done, Zombie Invasion tab still absent, event still ended, no chain seeded; record commit d2df49670 on records/2026-11-09)
   - source: ticker-1134 scout-discovery execution record 2026-11-09 1158 queue run (partial, Decoration Gallery entry not re-located - the 44,284 point opened the MEGA EXPRESS CONTRACT 99.99 dollar offer popup instead, Overview values already measured by unit 002; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1204 scout-discovery execution record 2026-11-09 1204 queue run (done, Builders Hut Lv.26 banner quest profiled live - cost Iron 170.0M plus Food 56.9M plus Lv.26 HQ, all met, original time 15d 08:05:18, no reward shown, no deadline, upgrade panel X unresponsive to background clicks; record commit 6f18bc3be on records/2026-11-09)
 ---
 
 
@@ -3741,3 +3742,30 @@ observe-only, nothing claimed). Evidence in
   edge of the Events hub tab bar, in every Age of Oil screenshot),
   explained 0. Unexplained 1 - the badge was not attributed to a tab.
   Unknown items 1 - the Hero Mobilization gold chest.
+
+## What the 2026-11-09 1204 scout-discovery unit added - Builders Hut Lv.26 quest measured, upgrade panel X unresponsive
+
+- Unit scout-scout-discovery-2026-11-09-018 by ticker-1204, about
+  12:04 to 12:13 local, status done. Evidence in
+  `_records_/2026-11-09/upgrade-builders-hut-to/1204-queue-run.md`
+  (commit 6f18bc3be on records/2026-11-09). The Builders Hut Lv.26
+  banner quest is now measured on every field except the reward
+  (unshown) and the Upgrade-button time gap (unexplained), and has
+  its own profile: upgrade-builders-hut-to 1.0.0 (owner-only,
+  learn-only, waits on Issue #517). Cost Iron 170.0M + Food 56.9M +
+  Lv.26 HQ, all met; original time 15d 08:05:18, Upgrade button
+  7d 07:16:49; Finish Now 18,188 diamonds, read only. No reward
+  shown, no deadline.
+- Close blocker: the upgrade panel's X did not respond to background
+  clicks (two single taps, one double-click, one 1-second hold at
+  the grounded X point (820, 238), plus a tap on the dimmed map
+  outside the panel, all no-change) - the same background-click
+  resistant class as the zombie Store button. The panel was left open
+  at the unit's close; the left-edge swipe-back gesture verified by
+  the 1220 harvest unit is the working close for this panel class.
+- Result stats: target learn-builders-hut-quest-profile-fields,
+  achieved 1, resources_gained none, costs about 9 minutes of unit
+  time, no items spent, verified yes, blocker_category none, points
+  0, surfaces_walked base-screen-banner-quest-builders-hut-detail-
+  upgrade-panel, items_observed 1, red_dots_seen 0,
+  red_dots_explained 0, unexplained_red_dots 0, unknown_items 0.
