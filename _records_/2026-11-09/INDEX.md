@@ -697,3 +697,35 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   0300). Tools PR 425 owner-gated, clean, OD-20261108-01
   still open, no owner answer, no new comment. Status:
   done. Full detail in pr-integration/0330-run.md.
+
+## 03:35 to about 03:49 — radar tasks queue run (ticker-0334)
+
+- Radar unit radar-2026-11-09-0203, status partial. Duel day 1 Radar
+  Training, radar posture release. Entry verified: Lv.13, radar points 311,
+  stored 0/40, stamina 82, restore 12 tasks in 02:01:04, no bottom bar.
+  Dish re-grounded to norm (51,718) after a first tap at (55,689) missed the
+  dish centre. Rare Iron Mine gathering dispatched: Lv.15 mine, Squad 1,
+  720.0K iron, 6:57 gather, March Queues 1/4, Go X:467 Y:432. The 720K iron
+  and the pin reward (iron 105.6K, radar item 10) fall to the next radar
+  unit. Five pins unattempted (centre blue axe, two orange skulls, purple
+  axe, portrait). Points 311 unchanged, stamina 83 at close. Full detail in
+  radar-tasks/0335-queue-run.md.
+
+- Correction: the radar unit above ran 03:35:38-03:39:33 PT (235 seconds),
+  not "03:35 to about 03:49" as first written; see the appended correction in
+  radar-tasks/0335-queue-run.md.
+
+## 03:40 to about 03:52 — resource collection queue run (ticker-0334)
+
+- Harvest unit harvest-2026-11-09-0203, status partial. Recentered first,
+  then one long drag west reached the resource quarter. One tap per type
+  cleared the whole type: iron plus 4.9M (859.3M to 864.2M), coin plus 4.3M
+  (38.6M to 42.9M), food plus 5.4M (534.7M to 540.1M), EXP four 1.8M bubbles
+  cleared. One tap clearing all bubbles of a type contradicts the 1935
+  iron one-by-one re-confirmation; HUD deltas also exceed the visible-bubble
+  sums, suggesting base-wide per-type collection - candidate mechanism,
+  unverified. Knowledge Issue filed from this unit. Other pans and the Armed
+  Truck loot state unchecked. Full detail in
+  resource-collection/0340-queue-run.md.
+
+- Issue #502 (knowledge) filed for the one-tap-per-type contradiction above.
