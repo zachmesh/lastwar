@@ -77,9 +77,13 @@ empty directory nobody reads.
 Idempotency: produced units dedupe on (regular, planned_for)
 exactly as sync and plan do, and dynamic units carry their
 source observation item (date, surface, label) in their window
-text, which the tool checks before enqueueing. A second run over
-the same observation reports every entry as already queued and
-applies zero new units.
+text, which the tool checks before enqueueing. The dedupe also
+consults today's delivered records branch (issue #466): a unit
+already closed on the branch whose inbox copy the plan already
+dropped is reported already-queued instead of re-enqueued, and
+an exploration already closed on the branch today is not staged
+again. A second run over the same observation reports every
+entry as already queued and applies zero new units.
 
 Priority: the formula of section 5 of the perception design -
 deadline pressure times value over expected duration - mapped
@@ -936,6 +940,53 @@ def exploration_done_units(units, slug):
     return sorted(done, key=lambda f: str(f.get("_file", "")))
 
 
+def branch_exploration_slugs(root, branch, date):
+    """Candidate slugs whose exploration already closed on the
+    delivered records branch on this date (issue #466).
+
+    The branch done set from queue.py names unit ids only, and an
+    exploration unit id carries no slug - so the slug comes from
+    the done unit's window text, which the diff itself wrote as
+    "scout <date> - exploration - <slug> - ...". One git grep over
+    the private ref the branch fetch already populated (queue.py
+    records_branch_done_units) lists the window lines; only this
+    date's slugs count, so a candidate explored on an earlier day
+    still gets its next exploration unit. Returns (slugs, warning):
+    warning is None on success, else a short reason - the caller
+    warns and the run continues on local state only, as with the
+    branch done set itself.
+    """
+    ref = "%s/%s" % (Q.BRANCH_RECONCILE_REF,
+                     branch.replace("/", "-"))
+    # The pathspec is relative to the pool dir this tool runs in -
+    # the pool IS the _queue_ folder, so "done/" is _queue_/done/.
+    # git grep has no ":/" top magic (it fails with "Unimplemented
+    # pathspec magic"), so the repo-root-relative form cannot be
+    # used here; scoping to done/ matters because the branch also
+    # carries _records_ files that quote exploration windows of
+    # units that were only planned, never closed.
+    try:
+        out = subprocess.run(
+            ["git", "-C", root, "grep", "-h", "-F", "-e",
+             "exploration - ", ref, "--", "done/"],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return set(), ("branch exploration grep failed, "
+                       "branch check skipped")
+    if out.returncode not in (0, 1):
+        return set(), ("branch exploration grep failed, "
+                       "branch check skipped")
+    slugs = set()
+    needle = re.compile(
+        r"scout (\d{4}-\d{2}-\d{2}) - exploration - "
+        r"([a-z0-9-]+) -")
+    for line in (out.stdout or "").splitlines():
+        match = needle.search(line)
+        if match and match.group(1) == date:
+            slugs.add(match.group(2))
+    return slugs, None
+
+
 def _result_text(result, key):
     if not isinstance(result, dict):
         return ""
@@ -1032,6 +1083,33 @@ def run(args):
         args.observation)
     units = pool_units(args.root)
     now_local = stamp.astimezone(LOCAL_TZ)
+
+    # Branch-closed consultation (issue #466): a unit closed on
+    # today's delivered records branch whose inbox copy the plan
+    # already dropped looks unqueued to this diff, so without this
+    # the diff re-enqueues it - the planner 0840 run did exactly
+    # that to six exploration units closed on the branch. The
+    # closed set mirrors queue.py sync/plan: branch done ids plus
+    # live completion markers. A branch that cannot be read warns
+    # and the run continues on local state only.
+    branch = ""
+    branch_warning = None
+    closed = set()
+    branch_explored = set()
+    branch_closed = []
+    if args.root:
+        branch = "records/%s" % now_local.date().isoformat()
+        branch_done, branch_warning = Q.records_branch_done_units(
+            args.root, branch)
+        if branch_warning is None:
+            branch_explored, branch_warning = \
+                branch_exploration_slugs(args.root, branch, date)
+        if branch_warning:
+            print(f"warning: {branch_warning} (issue #466)",
+                  file=sys.stderr)
+        closed = set(branch_done)
+        for unit in Q.completion_marker_units(args.root):
+            closed.add(unit)
 
     actionable = {}          # (regular, planned_iso) -> entry
     candidates = {}          # slug -> candidate record
@@ -1144,6 +1222,18 @@ def run(args):
                 have = 3
             action = "raise" if entry["priority"] < have \
                 else "already-queued"
+        elif closed:
+            slot_unit = Q._unit_id_for_window(
+                regulars[entry["regular"]],
+                parse_iso(entry["planned_for"]).astimezone(
+                    LOCAL_TZ))
+            if slot_unit in closed:
+                # The slot already closed on the delivered branch
+                # (or by a live completion marker) - the live pool
+                # holds no trace of it, but minting a fresh unit
+                # would re-execute the slot (issue #466).
+                action = "already-queued"
+                branch_closed.append(slot_unit)
         trigger = "claimable now"
         if entry["priority"] == 1:
             trigger = "deadline approaching, expiry band"
@@ -1171,9 +1261,17 @@ def run(args):
         label = rec["label"] or slug
         marker = f"scout {date} - exploration - {slug} - {label}"
         existing = find_existing(units, "scout", "", marker)
+        action = "already-queued" if existing else "enqueue"
+        if not existing and slug in branch_explored:
+            # This candidate's exploration already closed on the
+            # delivered branch today - the live pool holds no trace
+            # of it, but staging a fresh exploration would repeat
+            # the 0840 run's re-enqueue of the same six units
+            # (issue #466).
+            action = "already-queued"
+            branch_closed.append(slug)
         plan.append({
-            "action": "already-queued" if existing else "enqueue",
-            "kind": "exploration", "regular": "scout",
+            "action": action, "kind": "exploration", "regular": "scout",
             "activity": slug,
             "segment": regulars.get("scout", {}).get("segment",
                                                      ""),
@@ -1415,6 +1513,9 @@ def run(args):
         "queued_entries": len(plan),
         "to_enqueue": len(to_enqueue),
         "already_queued": len(already),
+        "already_queued_branch_done": len(branch_closed),
+        "branch_closed": sorted(branch_closed),
+        "branch_done_reconcile_warning": branch_warning,
         "raises": len(raises),
         "applied": len(applied),
         "already_satisfied": counts["info_satisfied"],
@@ -1484,6 +1585,20 @@ def run(args):
                       "finding)")
     else:
         basis_note = " (classified structured items)"
+    if branch_warning:
+        branch_line = (f"- branch done check unavailable - "
+                       f"{branch_warning}; the diff ran on local "
+                       f"state only")
+    elif branch:
+        branch_line = (
+            f"- already closed on the delivered branch "
+            f"{branch} - {len(branch_closed)} "
+            f"entr{'y' if len(branch_closed) == 1 else 'ies'} "
+            f"not re-enqueued")
+    else:
+        branch_line = ("- branch done check - not run: the pool "
+                       "was not read (no --root), so a unit closed "
+                       "on the branch could not be checked")
     cov = ["---",
            f"title: Scout Coverage {date}",
            f"created: {iso(stamp)}",
@@ -1500,6 +1615,7 @@ def run(args):
            f"{coverage['already_queued']}, priority raises "
            f"{coverage['raises']}, applied this run "
            f"{coverage['applied']})",
+           branch_line,
            f"- already satisfied, read as day evidence - "
            f"{coverage['already_satisfied']}",
            f"- known, not actionable - "
@@ -1723,7 +1839,10 @@ def run(args):
               f"{coverage['to_enqueue']}, already queued "
               f"{coverage['already_queued']}, priority raises "
               f"{coverage['raises']}, applied this run "
-              f"{coverage['applied']}); already satisfied "
+              f"{coverage['applied']}"
+              + (f", branch-closed {len(branch_closed)}"
+                 if branch_closed else "")
+              + f"); already satisfied "
               f"{coverage['already_satisfied']}, known not "
               f"actionable {coverage['not_actionable']}.")
     if coverage_basis == "frontmatter-fallback":
@@ -1852,6 +1971,9 @@ def run(args):
               f"promotion proposals "
               f"{coverage['promotion_proposals']}")
         print(f"outputs in {out_dir}")
+        if branch_closed:
+            print(f"branch-closed, not re-enqueued - "
+                  f"{', '.join(sorted(branch_closed))}")
         if applied:
             print(f"applied {len(applied)} - "
                   f"{', '.join(applied)}")
