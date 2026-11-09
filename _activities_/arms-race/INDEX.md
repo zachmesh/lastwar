@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T18:32:17Z
+modified: 2026-11-09T22:32:17Z
 level: L1
-version: 1.68.0
+version: 1.69.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -74,6 +74,7 @@ grounded_in:
   - source: ticker-0604 perception-scout execution record 2026-11-09 0606 queue run (partial, Arms Race page cross-read only, Tech Research phase live with score 0, tiers 6,250 / 12,500 / 30,000, Hero Advancement ended; record commit ab0c42f5e3 on records/2026-11-09)
   - source: ticker-0704 event-claims execution record 2026-11-09 0706 queue run (done, Arms Race page cross-read only, Tech Research score 0, timer 02:51:08 at first read, cumulative 6/8, ranking-row chest for the finished Hero Advancement phase still unchecked; record commit 5ef03f4b on records/2026-11-09)
   - source: ticker-0945 arms-race execution record 2026-11-09 0949 queue run (partial, Events entry not located in the windowed portrait or letterboxed portrait layouts, (672,132)/(683,150) landscape groundings do not apply, phase page not reached, current phase unknown; record commit eef6edad9 on records/2026-11-09)
+  - source: ticker-1345 arms-race execution record 2026-11-09 1345 queue run (partial, Drone Boost phase missed on a late pickup, score 8,000 of 30,000, 1,500 chest claimed, stamina-kill credit on the kill, cumulative chest 7/8; record commit 63eccdb92 on records/2026-11-09)
 ---
 
 
@@ -408,7 +409,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 - Whether the chest ruby tags also change by phase or segment.
 - When the phase ranking reward lands and where it is claimed.
 
-- Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read. Answered in part 2026-11-03 0609: the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase, so the route is the live stamina scoring path for this phase; generality across phases stays open.
+- Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read. Answered in part 2026-11-03 0609: the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase, so the route is the live stamina scoring path for this phase; re-confirmed 2026-11-09 1345, when the stamina-row arrow opened the radar Search panel again and a CL-7 Victim rally kill cost 20 stamina for 2,000 points, so the route is confirmed for Drone Boost a second time; generality across phases stays open.
 - Whether the drone Upgrade button on the TACTICAL DRONE
   screen is gated by the parts count (301/400 at the
   1945 read) or by background-click delivery: two taps
@@ -2096,3 +2097,16 @@ slot. Evidence in
 - The app window was returned to windowed 642x951 before the pass ended (View menu, Exit Full Screen, verified by a 642x951 screenshot). The next unit works from the windowed layout and must still ground the Events entry fresh - the (672,132) / (683,150) groundings do not apply to it either.
 - Figures read live: food 544.5M, iron 871.8M, coin 46.2M, diamonds 6,077, energy 13.22K (windowed read about 09:40, same figures in the fullscreen read about 09:44). Many harvest bubbles visible over buildings (harvest is another unit's work, not touched). The announcement banner ("Important: President HawksMav appointed Cheese chocolate...") covers the top of the screen in the windowed layout and is not visible in the fullscreen letterboxed layout.
 - Result stats: target unknown (phase page not read), achieved unknown, points unknown, resources_gained none, costs about 11 minutes of unit time, no items spent, verified no, blocker_category c.
+
+## What the 2026-11-09 1345 unit added - Drone Boost phase missed on a late pickup, score 8,000 of 30,000, stamina-kill credit on the kill
+
+- Unit arms-race-2026-11-09-1003 by ticker-1345, about 13:45 to 14:00 local, status partial. Target missed. Evidence in `_records_/2026-11-09/arms-race/1345-queue-run.md` (commit 63eccdb92 on records/2026-11-09).
+- Phase: Drone Boost, Contest Segment Lv.29-30, 10:00 to 14:00 local. Score at unit start 6,000, thresholds 1,500 / 10,000 / 30,000, phase timer 00:09:02 at first read. Scoring paths re-read live: Use 10 Drone Battle Data points +1; Use 1 Stamina +100; Buy Packs containing Diamonds (1 Diamond) +30, banned, untouched.
+- The 1,500-point chest claimed (already earned at 6,000): CONGRATULATIONS popup. Rewards read: Arms Race Badge x1, medals x200, 5m speedup x8, plus resource chests x4 each of two kinds (names unread in the popup).
+- Stamina path, measured end to end: the "Use 1 Stamina" row's >> arrow opens the radar Search panel (Zombies / Gather / Doom Elite tabs). One Search found a CL-7 Victim, Lv.1, Suggested Power 9,000, stamina cost 20, despawn 00:59:47. Deploy panel Squad 1, 25.19M vs 9.00K, Easy Win, Unit Count 2,231/2,231, Rally Time 1min selected, Rally tapped at the button's lower edge. Stamina charged on Rally: 74 to 54. Rally 1:00, march to a 14 km target, battle, squad home (March Queues 0/4). Score still read 6,000 while the rally was running, 8,000 after the kill: points credit on the kill, not on the stamina spend. One kill is +2,000, 20 stamina x 100.
+- Miss verdict: score at close 8,000 of 30,000, chests claimed 1 of 3 (1,500). The 10,000 chest needed 2,000 more points, one more 20-stamina kill; the 30,000 chest needed 24,000 points, twelve kills. No second attack: at the kill the phase timer read 00:00:07, and a second rally-plus-march cycle takes about 2.5 minutes, past the phase end, so no further stamina was spent. Miss cause: the unit was produced for the 10:03 slot but only picked up at 13:47, with 9 minutes of the phase left; twelve 20-stamina rally kills could not fit in that window. Blocker category a (window closure), with late pickup as the contributing cause. The next tick re-produces arms-race for the new phase; the tracker is left untouched.
+- Cumulative chest 6/8 at start, 7/8 at close, not yet claimable. Ranking row: #2110 [AP3x]Bears Lair, rank 8, cumulative event points 88,500 at start, 90,500 at close. Ranking-row chest preview only while the phase is live, per standing knowledge; claimable by the next unit after the phase rolls.
+- Stamina at close 55 (regen during the unit). No diamonds or money spent. No speedup items used. No stamina items opened: the on-hand 74 stamina covered the one kill attempted, and further refills could not have landed another kill inside the phase.
+- Cross-read from the 1413 donations unit (same pass): the new phase after Drone Boost is Hero Advancement, thresholds 2,000 / 4,000 / 12,000, timer 03:56 at 14:03. The next arms-race unit works that phase.
+- Zombie Invasion tab still absent from the Events hub (Arms Race, Winter Battlefield, Desert Battlefield visible); the event ended 2026-10-30, chain stays closed, no fresh chain seeded. Folded into zombie-invasion 1.22.3.
+- Result stats: target 30,000, achieved 8,000, points 2,000 gained in the unit (score 6,000 to 8,000), resources_gained badge x1, medals x200, 5m speedup x8, resource chests x4 each of two kinds, costs 20 stamina, about 15 minutes of unit time, verified yes, blocker_category a.

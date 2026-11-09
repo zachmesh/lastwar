@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-11-09T20:32:17Z
+modified: 2026-11-09T22:32:17Z
 level: L1
-version: 1.22.2
+version: 1.22.3
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -17,6 +17,7 @@ grounded_in:
   - source: owner instruction in main chat on 2026-10-28 - play proceeds in rounds so other tasks get their time, and rounds keep cycling while the event is available
   - source: owner decision in main chat on 2026-10-28 - execute maximize coin, redeem medals for Coin Chests in the event Store and open the 2 owned Coin Chest (SR) in inventory
   - source: ticker-1134 scout-discovery execution record 2026-11-09 1152 queue run (done, Zombie Invasion tab still absent from the Events hub tab bar, event still ended, no chain seeded; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1345 arms-race execution record 2026-11-09 1345 queue run (partial, Zombie Invasion tab still absent from the Events hub, Arms Race, Winter Battlefield and Desert Battlefield visible, event still ended, no chain seeded; record commit 63eccdb92 on records/2026-11-09)
 ---
 
 # Zombie invasion
@@ -685,7 +686,7 @@ execution.
   seen live in the Events hub again. Re-confirmed
   2026-11-09 11:38 PT by scout-discovery unit 016
   (ticker-1134) - the tab bar still carries no Zombie
-  Invasion tab, no chain seeded.
+  Invasion tab, no chain seeded. Re-confirmed 2026-11-09 about 13:47 PT by the ticker-1345 arms-race unit - the tab bar showed Arms Race, Winter Battlefield and Desert Battlefield, still no Zombie Invasion tab, no chain seeded.
 
 ## Open questions
 
