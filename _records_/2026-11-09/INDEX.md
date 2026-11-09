@@ -921,3 +921,18 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   rank 153). Mid-day snapshot; the day rolls over about
   18:00 local. Full detail in
   alliance-duel/0423-queue-run.md.
+
+## 04:30 to about 04:34 — PR integration pass
+
+- Integrator pass pr-integration-2026-11-09-0430
+  (NON-BATCH). Checker due no - outside every batch
+  window; next batch 07:00. Records PR 493 re-probed
+  CLEAN at new head 9fdcc4c9ee against unchanged main
+  837d880b81, awaits 07:00 batch, note posted.
+  Records PRs 478, 351, 301 still conflicted on the
+  single action-log file at unchanged heads, no new
+  comments (unchanged since the 0400 re-checks, main
+  unmoved). Tools PR 425 owner-gated, clean,
+  OD-20261108-01 still open, no owner answer, no new
+  comment. Status: done. Full detail in
+  pr-integration/0430-run.md.
