@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-08
 created: 2026-11-08T08:05:00Z
-modified: 2026-11-09T05:57:50Z
+modified: 2026-11-09T07:21:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass, non-batch, no merges; the 0004 queue ticker pass, perception scout events group and midday remainder, both partial with successors enqueued
@@ -4890,6 +4890,28 @@ of 2026-10-28.
   and does not count digs by stock. Full detail in
   hidden-treasures/2255-queue-run.md.
 
+## 23:00 to about 23:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-08-2300.
+  BATCH pass for records (checker: due, window 23:00-00:00 PT,
+  first pass at or after the point, no records merge yet in
+  the window). Records PR 460 MERGED by merge commit
+  13d867120 (165 commits of 2026-11-08 records). Records PR
+  478 was CLEAN against pre-batch main 469ee656 but
+  conflicted on the single file _logs_/repo-actions/action-log.jsonl
+  after the 460 merge, commented, carried to the 03:00 batch.
+  Records PRs 351 and 301 still conflict on the same single
+  file, re-probed against new main 13d867120, commented,
+  carried. Tools PR 425 still owner-gated, clean against new
+  main 13d867120, no owner decision (register item
+  OD-20261108-01 open and undecided, no covering issue),
+  re-verified and re-noted. Merge-time action-log line for
+  the 460 merge committed to records/2026-11-08 as 729d36b01;
+  fresh PR 491 opened for the post-2300-batch appends on
+  records/2026-11-08. Local main synced 469ee656b to
+  13d8671208. Slack DM sync sent (message_ts
+  1794208721.711709). Full detail in
+  pr-integration/2300-run.md.
 - Harvest unit harvest-2026-11-08-2203 (partial): no bubble
   collected - two taps hit non-bubble targets (Area No.168
   zombie NPC dialogue at norm 701,468; Recon Plane Lv.24
