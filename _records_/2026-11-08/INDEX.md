@@ -4556,3 +4556,13 @@ of 2026-10-28.
   reconciled exactly; owner-decision issues 132, 154 and 335
   all over 24 hours with statements current. Status: no-op.
   Full detail in pr-catchall/2139-run.md.
+- Tool-developer pass tool-development-2026-11-08-2132.
+  Done: own PR 425 checked first (owner-gated on the policy
+  amendment, no action owed); issue #485 taken as the single
+  item - verified the reported "root commit" 76f358efda is not a
+  root at all (two parents, merge-base 78e34bfa23, clean
+  fast-forward), and built branch_guard.py 1.0.0, which refuses
+  to call histories unrelated when a tip parent object is
+  missing (PR #486, commit 278497232); fixture suite 8/8 on two
+  runs in /tmp; findings and PR commented on #485. Status: done.
+  Full detail in tool-development/2132-run.md.
