@@ -391,3 +391,7 @@ the 1355 lockout state is gone. 6 map pins inventoried untapped
 (2 blue, 2 orange skull, 1 purple, 1 portrait). Dish grounded
 fresh at (54,707), first-tap entry. Tracker marked done. Full
 detail in radar-tasks/0159-queue-run.md.
+
+## 01:32 to about 02:05 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-0132. Done: own PR 425 checked first (owner-gated on the policy amendment, no action owed); issue #147 taken as the single item - queue.py now stages one pre-reset fix-up unit per ledger regular at the pair-midpoint slot (17:00 local), priority 1, expiring at the reset, via plan (early path) and sweep (17:50 ensure); PR #497 opened (commit 5d2b52c0); 190 fixture assertions 190/190 on two runs on isolated /tmp scratch pools; progress commented on #147. Full detail in tool-development/0132-run.md.
