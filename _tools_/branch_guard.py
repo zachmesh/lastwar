@@ -25,7 +25,7 @@ repo does not hold the tip's parents". This tool makes the
 distinction explicit, so a reconcile never again concludes
 "unrelated" from an unverified local view.
 
-One command, standard library only:
+Two commands, standard library only:
 
   check - fetch a branch tip from a remote into a private ref
           (``refs/remotes/branch-guard/<branch>``; no local branch
@@ -43,24 +43,47 @@ One command, standard library only:
           ``--no-fetch`` skips the fetch and checks the tip already
           held under the private ref (offline re-checks and tests).
 
-Run every records-branch reconcile through this check before the
-merge and before the push: a non-zero exit stops the delivery, and
-a --allow-unrelated-histories merge is only ever considered after
-this tool reports the tip a genuine root commit (zero parents) with
-exit 1.
+  sweep - scan every tracked file in the working tree for lines
+          shaped like an unresolved merge-conflict marker
+          (``<<<<<<<`` / ``=======`` / ``>>>>>>>`` / ``|||||||``
+          with at most a single-token label - or the diff3 label
+          ``merged common ancestors`` - the shapes git itself
+          writes). Exit 0 when the tree is clean, 1 when marker
+          lines are found (each printed as path:lineno), 2 when
+          the tree cannot be verified (not a git repository, the
+          file list cannot be read, or a tracked file cannot be
+          read). Binary files (a NUL byte in the first 8 KiB) are
+          skipped, not read as text. Prose that merely mentions a
+          marker - the 2026-11-06 record line "<<<<<<< grep must
+          not be used for this check." - carries words after the
+          token and does not match.
+
+Run every records-branch reconcile through this tool twice: check
+before the merge, and sweep after the merge and before the push.
+A non-zero exit stops the delivery. A --allow-unrelated-histories
+merge is only ever considered after check reports the tip a genuine
+root commit (zero parents) with exit 1. Sweep is the guard issue
+#441's second instance needed: the 2026-11-09 reconcile merge
+de43ed8499 committed a lone ``>>>>>>>`` line at the tail of
+_records_/2026-11-09/INDEX.md, which the unit-file-only queue.py
+validate could not see; a sweep after the merge fails the delivery
+before such a marker can be pushed.
 
 Usage:
   branch_guard.py check --repo PATH --branch BRANCH --previous SHA
                         [--remote REMOTE] [--no-fetch]
                         [--format text|json]
+  branch_guard.py sweep --repo PATH [--format text|json]
 """
 
 import argparse
 import json
+import os
+import re
 import subprocess
 import sys
 
-TOOL_VERSION = "1.0.0"
+TOOL_VERSION = "1.1.0"
 
 PRIVATE_REF_PREFIX = "refs/remotes/branch-guard/"
 
@@ -251,12 +274,120 @@ def cmd_check(args):
     return 2
 
 
+# Lines shaped like the conflict markers git writes. A real marker
+# is a seven-character opener/closer with at most one label token
+# (``<<<<<<< HEAD``, ``>>>>>>> <sha>``), the bare seven-character
+# separator ``=======``, or the diff3 ancestor marker with its
+# three-word label (``||||||| merged common ancestors``). Prose that
+# merely mentions a marker - the 2026-11-06 record line "<<<<<<< grep
+# must not be used for this check." - carries words after the token
+# and must not match.
+_MARKER_RE = re.compile(
+    r"^(<<<<<<<|>>>>>>>)([ \t][^ \t\r\n]+)?[ \t]*$"
+    r"|^\|\|\|\|\|\|\|([ \t](merged common ancestors"
+    r"|[^ \t\r\n]+))?[ \t]*$"
+    r"|^=======[ \t]*$")
+
+
+def _is_binary(head):
+    return b"\x00" in head
+
+
+def sweep_tree(repo):
+    """Marker lines in the tracked working tree.
+
+    Returns (markers, files_swept, error): markers is a list of
+    "path:lineno" strings for lines shaped like unresolved conflict
+    markers; files_swept counts the text files read; error is a
+    message when the tree cannot be verified, else None. Binary
+    files are skipped, not read as text. A tracked file that cannot
+    be read makes the tree unverifiable rather than silently clean:
+    the gate must fail closed, the way check treats a missing parent
+    object (issue #485).
+    """
+    proc = _run_git(["ls-files", "-z", "--cached"], cwd=repo)
+    if proc is None or proc.returncode != 0:
+        return [], 0, (f"git ls-files failed in {repo!r}: "
+                       "not a git repository or unreadable")
+    markers = []
+    files_swept = 0
+    for rel in proc.stdout.split("\x00"):
+        if not rel:
+            continue
+        path = os.path.join(repo, rel)
+        if os.path.isdir(path):
+            # A tracked directory entry: a submodule gitlink, or a
+            # symlink to a directory (tools -> _tools_, mode 120000).
+            # It holds no text of its own; its target is tracked
+            # separately and swept under its own path.
+            continue
+        try:
+            with open(path, "rb") as fh:
+                head = fh.read(8192)
+                if _is_binary(head):
+                    continue
+                fh.seek(0)
+                files_swept += 1
+                for lineno, raw in enumerate(fh, 1):
+                    line = raw.decode("utf-8", errors="replace")
+                    line = line.rstrip("\r\n")
+                    if _MARKER_RE.match(line):
+                        markers.append(f"{rel}:{lineno}")
+        except OSError as exc:
+            return [], files_swept, \
+                f"tracked file {rel!r} cannot be read: {exc}"
+    return markers, files_swept, None
+
+
+def cmd_sweep(args):
+    markers, files_swept, error = sweep_tree(args.repo)
+    if error is not None:
+        result = {
+            "version": TOOL_VERSION,
+            "status": "unverifiable",
+            "files_swept": files_swept,
+            "markers": [],
+            "text": [
+                f"{args.repo}: CANNOT VERIFY - {error}",
+                "Do not push until the tree can be swept: a marker "
+                "left by a bad merge resolution must never land on "
+                "the records branch (issue #441).",
+            ],
+        }
+        _render(result, args.format)
+        return 2
+    if markers:
+        result = {
+            "version": TOOL_VERSION,
+            "status": "markers-found",
+            "files_swept": files_swept,
+            "markers": markers,
+            "text": ([f"tree has {len(markers)} unresolved conflict "
+                      f"marker line(s) in {files_swept} file(s):"]
+                     + [f"  {m}" for m in markers]
+                     + ["Stop: resolve the markers and re-run sweep "
+                        "before pushing (issue #441)."]),
+        }
+        _render(result, args.format)
+        return 1
+    result = {
+        "version": TOOL_VERSION,
+        "status": "clean",
+        "files_swept": files_swept,
+        "markers": [],
+        "text": [f"tree clean: {files_swept} tracked file(s) swept, "
+                 "no conflict markers"],
+    }
+    _render(result, args.format)
+    return 0
+
 def build_parser():
     parser = argparse.ArgumentParser(
         prog="branch_guard.py",
-        description="Verify a records-branch tip is a fast-forward "
-                    "over the previous tip before a reconcile merge "
-                    "or push (issue #485).")
+        description="Guard a records-branch reconcile: verify the "
+                    "tip is a fast-forward over the previous tip "
+                    "(check, issue #485) and the merged tree carries "
+                    "no conflict markers (sweep, issue #441).")
     parser.add_argument("--version", action="version",
                         version=f"%(prog)s {TOOL_VERSION}")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -281,6 +412,17 @@ def build_parser():
     p_check.add_argument("--format", choices=["text", "json"],
                          default="text")
     p_check.set_defaults(func=cmd_check)
+
+    p_sweep = sub.add_parser(
+        "sweep",
+        help="scan the tracked working tree for unresolved "
+             "conflict-marker lines (exit 0 clean, 1 markers found, "
+             "2 cannot verify)")
+    p_sweep.add_argument("--repo", required=True,
+                         help="repository path (worktree or clone)")
+    p_sweep.add_argument("--format", choices=["text", "json"],
+                         default="text")
+    p_sweep.set_defaults(func=cmd_sweep)
     return parser
 
 
