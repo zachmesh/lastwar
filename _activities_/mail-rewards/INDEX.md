@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T06:32:17Z
+modified: 2026-11-09T09:32:17Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -33,6 +33,7 @@ grounded_in:
   - source: ticker-2006 mail-rewards execution record 2026-11-07 2028 queue run (done, Alliance Daily Donation Rankings and 3 Event mails claimed, other categories clear by list read, verified clean after claims; record commit e9bf320c92 on records/2026-11-07)
   - source: ticker-2034 mail-rewards execution record 2026-11-07 2052 queue run (done, Alliance and Event Claim All answered "No rewards available", nothing claimed, envelope grounded at norm 936,790, "Unclaimed -Daily Task- Reward" is notification-only; record commit 7a4a104930 on records/2026-11-07)
   - source: ticker-2119 mail-rewards execution record 2026-11-08 2132 queue run (done, Alliance and Event mail claimed in full, 10 mails, Claim All both categories; record commit fe08a0907 on records/2026-11-08)
+  - source: ticker-0113 mail-rewards execution record 2026-11-09 0138 queue run (partial, Alliance and Event Claim All both "No rewards available", System/Regular/Battle Report not walked, leader row Jerry Apex read live on the Alliance page, Mail button flaky entry (652,793), VIP daily freebie flag; record commit c0ebf0c4f0 on records/2026-11-09)
 ---
 
 
@@ -851,3 +852,16 @@ the next tick re-produces this regular as a fresh unit.
 - Note, against the 2052 unit's "Unclaimed" finding: the 2052 "Unclaimed -Daily Task- Reward" mail was notification-only (no attachment claimable through Claim All), but this unit's "Unclaimed" mails (Weekly Pass Unclaimed Reward, Unclaimed VIP Daily Level Reward, Unclaimed Event Reward) DID carry claimable attachments, verified by the popup items and the cleared gift icons. "Unclaimed" in a mail title does not by itself mean notification-only - the gift icon on the row is the indicator.
 - Red lines held: Delete All never pressed, no diamonds or money spent, no mail deleted, no other unit's work touched.
 - Result stats: target 10, achieved 10, resources_gained alliance 5 mails plus event 5 mails, popup items as listed above, costs 5 minutes, no items spent, verified yes.
+
+## What the 2026-11-09 0138 unit added - Alliance and Event Claim All no rewards, System/Regular/Battle Report unwalked, leader row Jerry Apex, Mail button flaky
+
+- Unit mail-2026-11-08-2230 by ticker-0113, about 01:20 to 01:38 local, status partial. Evidence in `_records_/2026-11-09/mail-rewards/0138-queue-run.md` (commit c0ebf0c4f0 on records/2026-11-09).
+- Mail home read live at entry: red dots on Alliance, Event and In-app Purchases. Note under the list - mails older than 30 days are deleted automatically.
+- Alliance list read live: Leadership Transfer Notice (red, 2h ago) - "Jerry Apex has become the new Alliance..." (full text not opened); Daily Donation Rankings (7h ago); Weekly Donation Ranking (7h ago); 3v3 Brawl Major's Gift x3 (7h ago). Claim All pressed - toast "No rewards available.", nothing claimed.
+- Event list read live: "[AP3x] DCna8ive's train has arrived" (train arrival); "[AP3x] Missile Apex's Mega Ex..." (3h ago); "[AP3x] DCna8ive's train has departed" (3h ago); "Weekly Pass Unclaimed Rewards" (6h ago); "Unclaimed VIP Daily Level Rewards" (7h ago). Claim All pressed - toast "No rewards available.", nothing claimed. The two "Unclaimed" mails read as notifications, not claimable attachments - consistent with the 2132 gift-icon rule (neither carried a gift icon here; "Unclaimed" in a title does not by itself mean notification-only, the gift icon on the row is the indicator).
+- Leadership change, read live: the Alliance page was opened once as a navigation check and its leader row reads Jerry Apex (previously Texan Apex per the repo), [AP3x] The Apex, 96/100 members. The Leadership Transfer Notice itself was not opened in full, so the transfer mechanics are not asserted - only the live leader row and the preview line. The next alliance-facing unit should confirm the leader row again live.
+- Mail entry, flaky (Issue #230 evidence): the Mail button itself did not respond to five background taps at two grounded points ((707, 792) twice, (650, 791) single and double, manual mouse press) and only opened on a later tap at (652, 793) after the Alliance page had been visited. The entry point is flaky and the next mail unit should re-ground it fresh rather than reuse a stale point. Commented onto Issue #230 by this run.
+- VIP flag, for the vip regular (not this unit's work): the "Unclaimed VIP Daily Level Rewards" mail (7h ago) suggests the VIP daily freebie may still be unclaimed - the vip unit in the inbox should check the VIP screen, not the mail.
+- What was not done: System, Regular and Battle Report categories were not walked in this unit (unit cap reached at the Event Claim All). Per queue rule R7 they are the first action of the next mail unit. In-app Purchases was not opened (receipts only, nothing to claim, per the activity metadata).
+- Figures read live: power 149,209,253; food 513.8M, iron 838.3M, coin 25.2M, diamonds 6,027. No diamonds or money spent. Delete All never pressed. No mail deleted. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 5, achieved 2, resources_gained none, costs about 15 minutes of unit time, no items spent, verified yes, blocker_category c.
