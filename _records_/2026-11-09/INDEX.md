@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-09
 created: 2026-11-09T08:12:00Z
-modified: 2026-11-09T08:39:09Z
+modified: 2026-11-09T08:40:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass, non-batch, no merges; tools PR 425 owner-gated, clean, awaiting the owner decision; records PR 491 clean, awaiting the 03:00 batch; records PRs 478, 351 and 301 still conflict on the single action-log file
+description: The 0000, 0015 and 0030 PR integration passes and the 0019 queue ticker pass with survivor intake and troop training partials
 status: unverified
 ---
 
@@ -48,6 +48,42 @@ of 2026-10-28.
   the owner decision (OD-20261108-01 open and undecided).
   Status: done. Full detail in
   pr-integration/0015-run.md.
+
+## 00:19 to about 00:40 — Queue ticker pass, survivor intake and troop training
+
+- Ticker pass ticker-0019. Sync reaped nothing and produced
+  nothing new - all 22 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066), and no zombie unit
+  sits in inbox or claimed.
+- Open records PRs checked first: PR 493 (records/2026-11-09)
+  carries no comments and names Owner lastwar-pr-integrator;
+  no question is addressed to this job.
+- Survivors unit survivors-2026-11-08-2203, partial: two pans
+  to the right edge and two enlarged crops of the gate area
+  show no question-mark bubble above any figure at the gate
+  - a red-hat figure, the blonde zombie woman (Area No.168),
+  a smaller blonde figure and a grey dog-like animal, none
+  verifying as a survivor recruit. No figure was tapped: the
+  bubble-less-figure tap already returned an area dialog in
+  the 2227 unit, so that method is exhausted under queue rule
+  R2. Recruits 0, gate line unverified, tracker untouched.
+  Full detail in survivor-intake/0024-queue-run.md.
+- Training unit training-2026-11-08-2203, partial: Drill
+  Ground read live again - now Lv.30 (2050 read Lv.25 on
+  2026-11-07), Building Details Unit Count +10080, Officers
+  Samantha, William, Chloe and Catherine, single action
+  Quick Dispatch, no capacity denominator on the panel.
+  Quick Dispatch was not tapped (effect unverified, may
+  march troops out - owner decision or learn-first
+  exploration, as 2050 decided). No barracks state was
+  verified live: two taps on the yellow-green fenced
+  structure with the 3d countdown both resolved to the
+  Aircraft Center Lv.29 selection, so the four tents were
+  not located and that grounding method ends under queue
+  rule R2. No requeue; tracker untouched. Full detail in
+  troop-training/0039-queue-run.md.
 
 ## 00:30 to about 00:38 - PR integration pass
 
