@@ -36,6 +36,22 @@ records - and returns measured numbers the retro can read:
                coordinates, landmark and screenshot reference,
                which executors ground against before tapping.
 
+Window geometry (issue #475, 2026-11-08): five taps on the
+Alliance button in fullscreen (1920x1080) never opened the
+panel, while the same button in the 642x951 window opened at
+once - the taps land somewhere other than the requested point
+in fullscreen, or the app ignores them there. Until the
+verification unit measures it, do NOT enter fullscreen for
+tap work; stay in the 642x951 windowed geometry. This tool
+carries that measurement: every tap attempt and every anchor
+observation may name its window geometry, `score` breaks the
+first-try rate and the median miss down by geometry, and
+`calibrate` refuses to mix geometries - a single offset across
+windowed and fullscreen observations would hide exactly the
+fullscreen-only shift #475 is about. The two geometries seen
+so far are "windowed-642x951" and "fullscreen-1920x1080";
+any other non-empty string is accepted and grouped as-is.
+
 Coordinates are the normalized 0..1000 convention already used
 in execution records (norm x,y, x right, y down). Every value
 is validated: a coordinate outside 0..1000, a missing required
@@ -55,6 +71,12 @@ Each tap attempt carries:
   owner_correction  bool, default false, whether the owner had
                     to correct this tap
   session           optional string, for grouping only
+  geometry          optional string, the window geometry the tap
+                    was placed in, e.g. "windowed-642x951" or
+                    "fullscreen-1920x1080"; absent means the log
+                    predates geometry recording and the tap is
+                    grouped under "unspecified" in the
+                    by-geometry breakdown
 
 First-try success is attempt == 1 and changed == true. The
 first-try rate is null, not zero, when a log carries no
@@ -69,6 +91,11 @@ object with an "observations" list, of:
   expected  {"x": int, "y": int}, where the anchor should be
   observed  {"x": int, "y": int}, where grounding found it
   activity  optional string
+  geometry  optional string, the window geometry the observation
+            was made in (see the tap log above); calibrating
+            observations that span more than one geometry without
+            --geometry is an error, so a fullscreen-only shift is
+            never averaged away into a windowed offset
 
 Calibrating from zero observations is an error: no observations
 means no offset, not a zero offset.
@@ -76,7 +103,7 @@ means no offset, not a zero offset.
 Usage:
   tapcal.py score --log FILE [--format text|json]
   tapcal.py calibrate --observations FILE [--format text|json]
-                      [--out FILE]
+                      [--out FILE] [--geometry G]
   tapcal.py compensate --comp FILE --x N --y N [--format text|json]
   tapcal.py anchor-add --store FILE --activity A --name N
                        --x X --y Y [--landmark L] [--screenshot S]
@@ -94,9 +121,16 @@ import json
 import statistics
 import sys
 
-TOOL_VERSION = "1.0.0"
+TOOL_VERSION = "1.1.0"
 COORD_MIN = 0
 COORD_MAX = 1000
+
+# Window geometries seen in execution records (issue #475).
+# Taps and observations carry one of these labels, or any other
+# non-empty string; a missing geometry groups under UNSPECIFIED.
+GEOMETRY_UNSPECIFIED = "unspecified"
+GEOMETRY_WINDOWED = "windowed-642x951"
+GEOMETRY_FULLSCREEN = "fullscreen-1920x1080"
 
 
 class InputError(Exception):
@@ -145,6 +179,14 @@ def check_bool(value, where, default=False):
     return value
 
 
+def check_geometry(value, where):
+    if value is None:
+        return None
+    if not isinstance(value, str) or not value:
+        raise InputError(f"{where}: expected a non-empty string, got {value!r}")
+    return value
+
+
 def parse_tap(entry, index):
     where = f"tap entry {index}"
     if not isinstance(entry, dict):
@@ -167,6 +209,7 @@ def parse_tap(entry, index):
     owner_correction = check_bool(
         entry.get("owner_correction"), f"{where} owner_correction"
     )
+    geometry = check_geometry(entry.get("geometry"), f"{where} geometry")
     return {
         "activity": activity,
         "target": target,
@@ -174,6 +217,7 @@ def parse_tap(entry, index):
         "changed": changed,
         "attempt": attempt,
         "owner_correction": owner_correction,
+        "geometry": geometry,
     }
 
 
@@ -183,8 +227,36 @@ def rate(successes, total):
     return successes / total
 
 
+def new_bucket():
+    return {
+        "taps": 0,
+        "first_try_taps": 0,
+        "first_try_successes": 0,
+        "owner_corrections": 0,
+        "first_try_misses_with_vector": 0,
+        "miss_dx": [],
+        "miss_dy": [],
+    }
+
+
+def finalize_bucket(bucket):
+    bucket["first_try_rate"] = rate(
+        bucket["first_try_successes"], bucket["first_try_taps"]
+    )
+    bucket["median_miss_dx"] = (
+        statistics.median(bucket["miss_dx"]) if bucket["miss_dx"] else None
+    )
+    bucket["median_miss_dy"] = (
+        statistics.median(bucket["miss_dy"]) if bucket["miss_dy"] else None
+    )
+    del bucket["miss_dx"]
+    del bucket["miss_dy"]
+    return bucket
+
+
 def score_taps(taps):
     per_activity = {}
+    by_geometry = {}
     first_try = 0
     first_try_success = 0
     retries = 0
@@ -192,34 +264,40 @@ def score_taps(taps):
     miss_dx = []
     miss_dy = []
     for tap in taps:
-        bucket = per_activity.setdefault(
-            tap["activity"],
-            {
-                "taps": 0,
-                "first_try_taps": 0,
-                "first_try_successes": 0,
-                "owner_corrections": 0,
-            },
-        )
-        bucket["taps"] += 1
+        activity_bucket = per_activity.setdefault(tap["activity"], new_bucket())
+        geometry_key = tap["geometry"] or GEOMETRY_UNSPECIFIED
+        geometry_bucket = by_geometry.setdefault(geometry_key, new_bucket())
+        for bucket in (activity_bucket, geometry_bucket):
+            bucket["taps"] += 1
+            if tap["owner_correction"]:
+                bucket["owner_corrections"] += 1
+            if tap["attempt"] == 1:
+                bucket["first_try_taps"] += 1
+                if tap["changed"]:
+                    bucket["first_try_successes"] += 1
+                elif tap["tapped"] is not None:
+                    bucket["first_try_misses_with_vector"] += 1
+                    bucket["miss_dx"].append(
+                        tap["tapped"]["x"] - tap["target"]["x"]
+                    )
+                    bucket["miss_dy"].append(
+                        tap["tapped"]["y"] - tap["target"]["y"]
+                    )
         if tap["owner_correction"]:
             owner_corrections += 1
-            bucket["owner_corrections"] += 1
         if tap["attempt"] == 1:
             first_try += 1
-            bucket["first_try_taps"] += 1
             if tap["changed"]:
                 first_try_success += 1
-                bucket["first_try_successes"] += 1
             elif tap["tapped"] is not None:
                 miss_dx.append(tap["tapped"]["x"] - tap["target"]["x"])
                 miss_dy.append(tap["tapped"]["y"] - tap["target"]["y"])
         else:
             retries += 1
     for bucket in per_activity.values():
-        bucket["first_try_rate"] = rate(
-            bucket["first_try_successes"], bucket["first_try_taps"]
-        )
+        finalize_bucket(bucket)
+    for bucket in by_geometry.values():
+        finalize_bucket(bucket)
     return {
         "tool": "tapcal",
         "version": TOOL_VERSION,
@@ -233,6 +311,7 @@ def score_taps(taps):
         "median_miss_dx": statistics.median(miss_dx) if miss_dx else None,
         "median_miss_dy": statistics.median(miss_dy) if miss_dy else None,
         "per_activity": dict(sorted(per_activity.items())),
+        "by_geometry": dict(sorted(by_geometry.items())),
     }
 
 
@@ -247,16 +326,37 @@ def parse_observation(entry, index):
         raise InputError(f"{where}: missing 'expected' or 'observed'")
     expected = check_point(entry["expected"], f"{where} expected")
     observed = check_point(entry["observed"], f"{where} observed")
+    geometry = check_geometry(entry.get("geometry"), f"{where} geometry")
     return {
         "anchor": anchor,
         "dx": observed["x"] - expected["x"],
         "dy": observed["y"] - expected["y"],
+        "geometry": geometry,
     }
 
 
-def calibrate_observations(observations):
+def calibrate_observations(observations, geometry=None):
     if not observations:
         raise InputError("calibrate: no observations, cannot compute an offset")
+    if geometry is not None:
+        matched = [item for item in observations if item["geometry"] == geometry]
+        if not matched:
+            raise InputError(
+                f"calibrate: no observations for geometry {geometry!r}"
+            )
+        observations = matched
+    else:
+        seen = sorted(
+            {item["geometry"] for item in observations if item["geometry"]}
+        )
+        if len(seen) > 1:
+            raise InputError(
+                "calibrate: observations span more than one geometry "
+                f"({', '.join(seen)}); pass --geometry to calibrate one "
+                "geometry at a time, so a fullscreen-only shift is never "
+                "averaged away into a windowed offset (issue #475)"
+            )
+        geometry = seen[0] if seen else None
     dxs = [item["dx"] for item in observations]
     dys = [item["dy"] for item in observations]
     median_dx = statistics.median(dxs)
@@ -270,6 +370,7 @@ def calibrate_observations(observations):
         "anchors": sorted({item["anchor"] for item in observations}),
         "spread_dx": max(abs(value - median_dx) for value in dxs),
         "spread_dy": max(abs(value - median_dy) for value in dys),
+        "geometry": geometry,
     }
 
 
@@ -373,18 +474,40 @@ def fmt_score(result):
             f"{bucket['first_try_taps']} ({rate_text}), "
             f"owner corrections {bucket['owner_corrections']}"
         )
+    if result["by_geometry"]:
+        lines.append("by geometry:")
+        for geometry, bucket in result["by_geometry"].items():
+            rate_text = (
+                f"{bucket['first_try_rate']:.3f}"
+                if bucket["first_try_rate"] is not None
+                else "none"
+            )
+            miss_text = (
+                f"{bucket['median_miss_dx']},{bucket['median_miss_dy']}"
+                if bucket["median_miss_dx"] is not None
+                else "none"
+            )
+            lines.append(
+                f"  {geometry}: first-try {bucket['first_try_successes']}/"
+                f"{bucket['first_try_taps']} ({rate_text}), "
+                f"owner corrections {bucket['owner_corrections']}, "
+                f"median miss {miss_text}"
+            )
     return "\n".join(lines) + "\n"
 
 
 def fmt_calibrate(result):
-    return (
-        f"offset dx: {result['dx']}\n"
-        f"offset dy: {result['dy']}\n"
-        f"observations: {result['n']}\n"
-        f"anchors: {', '.join(result['anchors'])}\n"
-        f"spread dx: {result['spread_dx']}\n"
-        f"spread dy: {result['spread_dy']}\n"
-    )
+    lines = [
+        f"offset dx: {result['dx']}",
+        f"offset dy: {result['dy']}",
+        f"observations: {result['n']}",
+        f"anchors: {', '.join(result['anchors'])}",
+        f"spread dx: {result['spread_dx']}",
+        f"spread dy: {result['spread_dy']}",
+    ]
+    if result["geometry"] is not None:
+        lines.append(f"geometry: {result['geometry']}")
+    return "\n".join(lines) + "\n"
 
 
 def fmt_compensate(result):
@@ -427,6 +550,11 @@ def build_parser():
     calib.add_argument("--observations", required=True)
     calib.add_argument("--format", choices=("text", "json"), default="text")
     calib.add_argument("--out", default=None)
+    calib.add_argument(
+        "--geometry",
+        default=None,
+        help="calibrate only observations in this window geometry",
+    )
 
     comp = sub.add_parser("compensate", help="aim point under a compensation")
     comp.add_argument("--comp", required=True)
@@ -469,7 +597,7 @@ def main(argv=None):
             observations = [
                 parse_observation(entry, i) for i, entry in enumerate(entries)
             ]
-            result = calibrate_observations(observations)
+            result = calibrate_observations(observations, args.geometry)
             if args.out:
                 try:
                     with open(args.out, "w", encoding="utf-8") as handle:
