@@ -1986,3 +1986,5 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   statements current; issue 514 deadline 2026-11-12 18:00 UTC,
   issue 517 no deadline stated. VPS disk 90 percent, 1.1G free.
   Status: no-op. Full detail in pr-catchall/1039-run.md.
+
+- Knowledge organization pass knowledge-organization-2026-11-09-1032 (done). Own PR 518 merged as squash 1a178dc2 with one integrator note (radar-tasks frontmatter YAML defect), fixed in new PR 520 (OPEN, MERGEABLE, CLEAN): arms-race 1.68.0 (Events groundings (672,132)/(683,150) corrected as landscape-fullscreen-only, phase page not reached in the 0949 unit, current phase unknown), alliance-help 1.33.0 (Alliance button ignores background clicks in fullscreen, duplicate window 508052, Help All still pending), mail-rewards 1.29.0 (train mails carry no attachments, windowed Mail entry (932,791) first try), radar-tasks 1.60.0 (frontmatter colon repaired). Reply posted on PR 518; mail-entry evidence commented on Issue #230. No new knowledge issues; retro not landed. Status: done. Full detail in knowledge-organization/1032-run.md.
