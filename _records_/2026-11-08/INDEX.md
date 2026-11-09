@@ -4143,6 +4143,19 @@ of 2026-10-28.
   decision. Records PRs 351 and 301 still conflict on
   the same single file, unchanged, no repeat comments.
   Full detail in pr-integration/1930-run.md.
+- Integrator pass pr-integration-2026-11-08-2011.
+  NON-batch pass for records (checker: not due, outside
+  every batch window, next batch 23:00 PT). No merges.
+  Records PR 478 (post-1900 batch) re-verified CLEAN,
+  first integrator note posted, awaits the 23:00 batch.
+  Records PR 460 head moved to d845dbdd5a, re-verified
+  CLEAN, awaits the 23:00 batch. Tools PR 425 still
+  owner-gated, clean, no owner decision (open
+  owner-decision issues checked: none covers it),
+  re-verification commented. Records PRs 351 and 301
+  still conflict on the single file
+  _logs_/repo-actions/action-log.jsonl, re-checks posted.
+  Full detail in pr-integration/2011-run.md.
 - Passes unit passes-2026-11-08-1457 (done): shop claims for the new
   reset day, run late (14:57 slot, expiry 18:57, finished 18:58).
   Hot Deals free pack claimed - Drone Great Value Pack (Drone Parts
