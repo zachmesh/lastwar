@@ -4357,3 +4357,23 @@ of 2026-10-28.
   none created or closed since the 1939 pass. Owner-decision issues
   132, 154 and 335 all over 24 hours, statements current.
   Full detail in pr-catchall/2039-run.md.
+
+- Donations unit donations-2026-11-08-1803 (partial, unverified):
+  Quick Construction 8/10, 9 coin donations confirmed live
+  (Donation Count 17/30 to 8/30, 900 coin each), then the coin
+  button greyed with a 00:18 cooldown timer hiding the count.
+  Tech Donation Today footer fell 6900 to 1800 while donating -
+  semantics unknown, never a closing count. Tracker untouched;
+  re-read unit enqueued for after the cooldown (not-before
+  2026-11-09T05:05:00Z). Full detail in
+  alliance-donations/2034-queue-run.md.
+
+- Survivors unit survivors-2026-11-08-1803 (partial, unverified):
+  gate found and verified live, one figure with "?" and "!"
+  bubbles; three taps (figure, "?" bubble, figure) opened no
+  survivor card or dialog. The "?" bubble cleared after the
+  second tap with an "Achievements 8/16 Completed" toast, but
+  the figure stayed at the gate, so no intake is claimed.
+  23rd consecutive partial for this regular; failure mode
+  filed as an Issue. Quick Dispatch did not run. Full detail
+  in survivor-intake/2052-queue-run.md.
