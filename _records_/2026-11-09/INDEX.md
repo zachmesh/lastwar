@@ -158,3 +158,43 @@ of 2026-10-28.
   Issue filed. The 2026-11-09 daily retro has not landed yet.
   Status: done. Full detail in
   knowledge-organization/0032-run.md.
+## 00:47 to about 00:59 — Queue ticker pass, Arms Race Unit Progression
+
+- Ticker pass ticker-0034. Sync reaped nothing and produced
+  nothing new - all 22 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066), and no zombie unit
+  sits in inbox or claimed.
+- Open records PRs checked first: PR 493 (records/2026-11-09)
+  carries no comments, is mergeable and names Owner
+  lastwar-pr-integrator; no question is addressed to this job.
+- Arms Race unit arms-race-2026-11-08-2203, partial: Unit
+  Progression phase read live, 0 points, timer about 01:07
+  left, top chest 75,000 (Train a Lv.10 unit +31). The fill
+  (about 2,420 Lv.10 units) was not executed inside the unit
+  cap - entry cost a Wall of Honor mis-tap and three back
+  arrow attempts (grounded centre (355, 944) works; the
+  (334, 949) edge point does not). Barracks state not
+  re-verified live; carried forward from the 0039 training
+  unit of this pass, Lv.30 busy to about 10:22 today, Lv.27
+  busy to about 03:27 today, Lv.24 Drill-Ground-Full
+  blocked. Priority 1 successor arms-race-2026-11-09-0855
+  enqueued, expiring at phase end. No chest earned, none
+  claimed; tracker untouched. Full detail in
+  arms-race/0058-queue-run.md.
+
+## 00:57 to about 01:00 — Queue ticker pass, Alliance Help
+
+- Arms Race successor arms-race-2026-11-09-0855 (priority 1,
+  expires at phase end) was already enqueued by the 0058 unit
+  of this pass; the next tick owns its execution.
+- Help unit help-2026-11-08-2230, done: Help All pressed in
+  the Alliance Help page, clearing the one waiting ally
+  request (벨라다, Lv.21 Crystal Factory); the toast "Allies
+  are very grateful for your assistance!" confirmed it and
+  the row is gone. Own three requests already 30/30. Daily
+  help points header read 360/1,000 before and after, so no
+  points increase is claimed. Computer session cc-197
+  dropped mid-unit; cc-200 recovered with no state lost.
+  Full detail in alliance-help/0100-queue-run.md.
