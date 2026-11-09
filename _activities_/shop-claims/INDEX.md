@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T07:32:17Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.40.0
+version: 1.41.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-1434 shop-claims execution record 2026-11-08 1455 queue run (partial, shop and season pages checked live, Weekly Pass 18:00 reset ninth confirmation, Season hub Goals and Profession opened with no pass claim found, Season pass path unreachable in the Week 8 hub, Issue #469 filed); record commit dfd3c87f9 on records/2026-11-08
   - source: ticker-1851 shop-claims execution record 2026-11-08 1858 queue run (done, new reset day's Hot Deals pack, Weekly Pass Free Supply auto-claim and Super Monthly Pass daily gift claimed, Weekly Pass 18:00 reset eleventh confirmation, weekly passes lapsed unowned; record commit cff344153 on records/2026-11-08)
   - source: ticker-2235 shop-claims execution record 2026-11-08 2243 queue run (done, reset-day claims verified already claimed, check-in FREE GIFT left for the events-2257 unit; record commit 0c9686b4f on records/2026-11-08)
+  - source: ticker-0204 shop-claims execution record 2026-11-09 0218 queue run (done, reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed Days Left 13; record commit facef628c on records/2026-11-09)
 ---
 
 
@@ -1335,3 +1336,12 @@ the free and already paid for parts, never the paid unlocks.
 - No season pass claim was hunted in the Season hub, per the 2026-11-08 ticker-1434 finding (Issue #469): the Week 8 hub path is stale.
 - Red lines held: no diamonds or money spent. No price button tapped. The $19.99 Legendary Take All, the $4.99 weekly pass offers and the $24.99 Monthly Pass Extension were left untouched. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 3, achieved 3, resources_gained none, costs 8min-no-items-spent, verified yes, device_takeovers 0, follow_up events-2026-11-08-2257-check-in.
+
+## What the 2026-11-09 0218 unit added - reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed, check-in still carried
+
+- Unit passes-2026-11-08-2257 by ticker-0204, about 02:17 to 02:18 local, status done. Evidence in `_records_/2026-11-09/shop-claims/0218-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-211. Nothing new claimed in this unit: all three of this reset day's shop claims were already done by ticker-1851 at 18:52 on 2026-11-08 and were verified live as done here.
+- Hot Deals (Official Event tab): no free pack showing. The page shows the "Visit the Last War Store for more rewards!" promo and the check-in carousel only; the Drone Great Value Pack claimed at 18:52 is gone, consistent with "Packs sold out". NOT claimed here: the check-in banner ("FREE TOMORROW" card and the "Claim points and redeem great rewards" card) - a check-in event belongs to the events regular (event-claims), not to shop-claims. The 0224 events unit did not claim it either, so it carries to the next events unit.
+- Weekly Pass page: "Weekly Pass rewards reset at 18:00:00" read live. Opening the page fired no Free Supply auto-claim (already claimed at 18:52: chest x1, ruby x10). The S2 Drone Components Weekly Pass (Legendary) and the S1 Drone Parts Weekly Pass (Epic) both still show a Get Now $4.99 price button, i.e. unowned offers, not claims; neither was tapped. The Legendary bundle row's Take All $19.99 button was not tapped.
+- Super Monthly Pass page: Monthly Pass, Squad 4 Lv.20, Days Left 13, Rewards Left 13. The Daily Gift button reads "Claimed" (greyed), matching the 18:52 claim (gold ticket x2, red diamond 100, stamina 50 x2, iron 200, 5-minute speedup x60). The $24.99 Monthly Pass Extension was not tapped.
+- No season pass claim was hunted in the Season hub, per the 2026-11-08 ticker-1434 finding (Issue #469): the Week 8 hub path is stale. No diamonds or money spent. No price button tapped. No login or verification was demanded, and no different-device dialog appeared. The game was left on the base screen.
+- Result stats: target 3, achieved 3, resources_gained none, costs about 2 minutes, no items spent, verified yes, device_takeovers 0, follow_up events-check-in-still-carried.

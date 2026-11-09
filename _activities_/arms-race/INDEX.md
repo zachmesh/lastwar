@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T09:32:17Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.62.0
+version: 1.63.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -67,6 +67,7 @@ grounded_in:
   - source: ticker-2119 arms-race execution record 2026-11-08 2137 queue run (skipped-needs-owner, Base Building phase verdict, score 0, tier-3 unreachable inside the red lines, first executed unit of the phase; record commit fe08a0907 on records/2026-11-08)
   - source: ticker-0034 arms-race execution record 2026-11-09 0058 queue run (partial, Unit Progression phase read live, 0 points, scoring table Lv.10 unit +31 / 1-min speedup +10 / diamond pack +30 per diamond, Events entry (672,132), orange medal is Wall of Honor not Events, back arrow centre (355,944), fill not executed; record commit 77db994162 on records/2026-11-09)
   - source: ticker-0113 arms-race execution record 2026-11-09 0129 queue run (partial, Unit Progression phase read live again, 0 points, timer 00:44:05, third consecutive tent-grounding failure, Drill Ground Lv.30 re-confirmed, fill not executed, phase ends about 02:00; record commit c0ebf0c4f0 on records/2026-11-09)
+  - source: ticker-0204 event-claims execution record 2026-11-09 0224 queue run (partial, Arms Race page cross-read only, Hero Advancement phase 0 points, timer 03:37:48, chests 2,000/4,000/12,000 unreached; record commit facef628c on records/2026-11-09)
 ---
 
 
@@ -2015,3 +2016,11 @@ slot. Evidence in
 - Reading note: these two reads supersede the 1704 Tech Research read as the newest live phase read; the 1704 section's "newest live phase read" wording is superseded, not carried. The 2137 Base Building verdict (score 0, tier-3 unreachable, skipped-needs-owner) stands as the record of that phase.
 - Figures read live: food 513.8M, iron 838.3M, coin 25.2M, power 149,209,253, diamonds 6,027, in both units. No diamonds or money spent, no speedup item used, no building or research started, no stage swap, no other unit's work touched. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: 0058 - target 75000, achieved 0, points 0, resources_gained none, costs about 12 minutes of unit time, no items spent, verified yes, blocker_category c. 0129 - target 75000, achieved 0, points 0, resources_gained none, costs about 15 minutes of unit time, no items spent, verified yes, blocker_category e.
+
+## What the 2026-11-09 0224 events unit added - cross-read only: Hero Advancement phase live at 0, Unit Progression phase ended, formal miss verdict still owed
+
+- Cross-read only - no arms-race unit ran this hour. The 0224 events unit opened the Events hub on the Arms Race page about 02:21 local. Evidence in `_records_/2026-11-09/event-claims/0224-queue-run.md` (commit facef628c on records/2026-11-09).
+- Hero Advancement phase, Contest Segment Lv.29-30, score 0, point chests 2,000 / 4,000 / 12,000 all unreached, cumulative 0/2, phase timer 03:37:48, warzone rank 10 #2110 [AP3x]Bears Lair 0 points. Nothing claimable; scoring is the arms-race unit's job, not the claim round.
+- Reading: the Unit Progression phase ended about 02:00 and Hero Advancement is now the live phase with 0 points at 02:21 - the phase transition is observed, not inferred. The 0058/0129 section's "newest live phase read" wording now refers to the Unit Progression phase only; this 02:21 Hero Advancement 0-point read supersedes it as the newest live Arms Race phase read.
+- The formal miss verdict for Unit Progression (0 of 75,000) is still owed to the first arms-race unit after the phase ends; the arms-race-2026-11-09-0203 unit is in the inbox for the next phase window and has not run yet, so no verdict is recorded here. No fill was attempted in this cross-read and no barracks state was re-verified.
+- Result stats: target not applicable (cross-read only), achieved 0, points 0, resources_gained none, costs about 1 minute of the events unit, no items spent, verified yes, blocker_category none.

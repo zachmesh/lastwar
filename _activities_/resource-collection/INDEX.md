@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T07:32:17Z
+modified: 2026-11-09T10:32:17Z
 level: L1
-version: 1.43.0
+version: 1.44.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-1724 resource-collection execution record 2026-11-08 1759 queue run (partial, iron +3.6M and coin +3.6M HUD-verified in two taps, food bubbles still standing, bubble-type identification unreliable per R2, identical +3.6M unexplained, reset arrived mid-sweep; record commit 5f3a904f4 on records/2026-11-08)
   - source: ticker-1935 resource-collection execution record 2026-11-08 1935 queue run (partial, food +5.1M one-tap all-at-once and iron +1.2M one-tap one-bubble HUD-verified, coin tap missed its bubble, pre-unit HUD rise food +3.2M iron +3.1M unexplained; record commit 5534be1e5 on records/2026-11-08; section and changelog folded in 1.42.0, this grounded_in line added by the 2332 run)
   - source: ticker-2308 resource-collection execution record 2026-11-08 2310 queue run (partial, 0 bubbles collected, two verified non-bubbles, HUD rise second occurrence, Issue #490 filed; record commit aac215e08 on records/2026-11-08)
+  - source: ticker-0140 resource-collection execution record 2026-11-09 0202 queue run (partial, 0 collected, no resource bubbles in two base views, resource quarter not reached, Armed Truck entry unlocated, white truck (55,652) opens Secret Command Post; record commit 3d5dc8314 on records/2026-11-09)
 ---
 
 
@@ -804,6 +805,8 @@ regular stays due. Evidence in
 
 ## Changelog
 
+- 1.44.0 (2026-11-09): 0202 harvest unit folded (partial, 0 bubbles collected, no resource bubble with a value label in either of two base views, the resource quarter never reached - same wall as the 2310 unit; the recenter-first sweep ordered by the 2310 follow-up was NOT executed in this unit either, it swept troop areas again, so the method change is still owed; no HUD rise this unit, the Issue #490 phenomenon did not recur; white truck (55,652) opens the Secret Command Post, Armed Truck loot-panel entry still unlocated and its loot state unverified; skull timer re-seen with badge 4 and a 00:00:23 countdown rising to about 00:00:40, Issue #498).
+
 - 1.43.0 (2026-11-08): 2310 harvest unit folded (partial, 0 bubbles collected, three blind pans never found the bubble cluster; two new verified non-bubbles - norm 701,468 gold diamond is the zombie NPC marker opening the Area No.168 dialogue, norm 565,636 orange sack is the Recon Plane Lv.24 indicator; method change under R2 - recenter the base view FIRST, then sweep systematically, tap only a bubble whose icon and value label are both readable; HUD rise second occurrence food +2.8M iron +2.8M coin -0.1M vs the 1935 close with no intervening harvest record, now GitHub Issue #490 and an open question; coin bubbles (132,436) and (234,452) plus one iron bubble still standing and not re-found; armed-truck loot still unverified, remainder to the next unit).
 
 - 1.42.0 (2026-11-08): 1935 harvest unit folded (partial, food +5.1M one-tap all-at-once and iron +1.2M one-tap one-bubble HUD-verified; iron one-by-one RE-CONFIRMED so the 1759 suspect marking on iron is lifted and its identical +3.6M is explained in part as two different bubbles holding similar amounts; coin tap missed its bubble and hit the Iron Mine building, so coin one-by-one stays suspect and rule R2 now requires zooming in or a readable coin icon plus value label before tapping, with the 1935 coin centre candidates marked unverified; wrong tap at 490,352 opened a UR Trade Truck panel, closed untouched; pre-unit HUD rise food +3.2M iron +3.1M since 18:00 unexplained with no intervening harvest record; armed-truck toast fragment still unread; coin bubbles and at least one iron bubble still standing, remainder to the next unit).
@@ -1516,3 +1519,14 @@ regular stays due. Evidence in
 - Closing state, read live about 23:26 local: food 501.9M, iron 824.0M, coin 15.8M; power 149,209,253; diamonds 6,027. HUD unchanged across the unit - nothing was collected, nothing spent. Game left on the base screen.
 - Red lines held: no diamonds spent, no money spent, no upgrade or research started, no player attacked, no assemble or teleport. The Recon Plane upgrade arrow was visible and was not touched. The Secret Command Post screen was left without digging.
 - Result stats: target not stated, achieved 0 bubbles, resources_gained none, costs about 16 minutes, verified no, blocker_category c, follow_up recenter-first sweep.
+
+## What the 2026-11-09 0202 unit added - partial, 0 bubbles, resource quarter not reached again, Armed Truck entry still unlocated, skull timer re-seen (Issue #498)
+
+- Unit harvest-2026-11-08-2203 by ticker-0140, about 01:52 to 01:55 local, status partial. Evidence in `_records_/2026-11-09/resource-collection/0202-queue-run.md` (commit 3d5dc8314 on records/2026-11-09). Computer session cc-207. Observe and collect only.
+- Base HUD at entry (01:53) and at close (02:02), unchanged: food 513.8M, iron 838.3M, coin 25.2M, diamonds 6,027, power 149,209,253; stamina 61 rising to 62. No HUD rise this unit - the Issue #490 rise (second occurrence at 2310) did not recur.
+- View 1, south snow area (entry view): barracks and tanks at the top, empty snow below with a cannon. No resource bubbles visible over any building. View 2, north area (after one drag down from (320,300) to (320,600)): tents with survivor smiley markers, blue dome buildings, purple crystal, gift-box decoration, barracks. Building status markers seen (tent smileys, a blue helmet, a red face, a green icon over the orange building) - none is a resource bubble. No gold, wheat or iron bubble with a value label anywhere in either view.
+- The resource buildings (farms, iron, stone, gold) sit in a part of the base neither view reached. The 2310 unit on 2026-11-08 hit the same wall (three blind pans, cluster never found). Correction to the 2310 follow-up: the recenter-first sweep was NOT executed in this unit either - it swept the troop areas again. The standing rule (bubbles full equals production stalled) makes this a carry, not a close: the next harvest unit must pan the view to the resource quarter first instead of sweeping the troop areas again.
+- Left-column map re-confirmed in the 642x951 window: the blue bus icon at (55,573) opens the Trucks screen (already read by the 0150 scout unit this pass: Today's Trade Count 0/5); the white truck icon at (55,652) opens the Secret Command Post, not the Armed Truck - matching the 2026-11-03 measured column map ((52,626) Secret Command Post), the point rotated with the column set. The Armed Truck loot-panel entry stays unlocated, as the activity metadata records; its loot state stays unverified.
+- Carried observation, skull timer: the skull icon at the right edge mid-screen reappeared during this unit with a red badge 4 and a 00:00:23 countdown (the 0150 scout unit saw badge 1 with 00:00:24 about 01:57, then the icon vanished). At close it read about 00:00:40. The badge count and the timer do not behave like a single countdown; meaning still unverified, not opened. Filed as knowledge Issue #498 by this run - do not tap it blind.
+- No bubble collected (0). No view reached the resource quarter. Armed Truck not checked (entry unlocated). Tracker untouched: the regular stays due and the next tick re-produces it. No diamonds or money spent.
+- Result stats: target unknown (bubble count not established in the views swept), achieved 0, resources_gained none, costs about 9 minutes of unit time, no items spent, verified yes, blocker_category c.
