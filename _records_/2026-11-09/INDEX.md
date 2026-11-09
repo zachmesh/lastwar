@@ -508,6 +508,39 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   re-verified (OD-20261108-01 open).
   Full detail in pr-integration/0230-run.md.
 
+## 02:34 to about 02:50 — Queue ticker pass, hidden treasures and trucks
+
+- Ticker pass ticker-0234. Sync reaped nothing and produced
+  nothing new - all 22 due regulars were already queued. No
+  zombie chain was seeded: the Zombie Invasion event ended at
+  about the 19:00 reset on 2026-10-30 (chain
+  zombie-2026-10-28 closed by unit 066), and no zombie unit
+  sits in inbox or claimed.
+- Open records PRs checked first: PR 493 (records/2026-11-09)
+  carries no comments and names Owner lastwar-pr-integrator;
+  no question is addressed to this job.
+- Treasures unit treasures-2026-11-08-2257, done: one dig
+  executed, fragments M1-M7 each down exactly 1 (M1 x15,
+  M2 x12, M3 x1, M4 x5, M5 x3, M6 x5, M7 x11), chest
+  progress 8/15 to 9/15. Rewards as shown: grey crates x12,
+  coin piles x24, medal 600, 1m speedup x25, 1m speedup x25,
+  blue triangle 400, silver ingots x100. Tab badge still
+  reads 1 although stock allows 1 more dig (M3 x1 caps it).
+  Full detail in hidden-treasures/0237-queue-run.md.
+- Trucks unit trucks-2026-11-08-2257, partial: entered
+  Intercity Trade first try (badged train-front icon at
+  norm 55,578). Settled 4 returned UR trucks from
+  2026-11-07 (iron 12.2M, food 12.2M, coin 7.8M; three had
+  been plundered en route). Dispatched 4 (SR, UR, SR, UR;
+  5 Trade Contracts spent, 163 to 158) under the non-UR
+  day rule - duel day 1 is Radar Training. Plundered 1
+  ([BROT]TPMO1 UR, 951.8K/951.8K/607.5K plus Extra badge
+  x3; one badge x3 Reclaimed by the owner). Claimed the
+  2026-11-8 Reward Recovery record (5 unstarted transports
+  from 2026-11-08). Live counters at close: Trade Count
+  4/5, Plunder Count 1/4; tracker untouched. Full detail
+  in truck-plunder/0250-queue-run.md.
+
 ## 02:39 to about 02:50 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-09-0239. No-op: six open PRs
