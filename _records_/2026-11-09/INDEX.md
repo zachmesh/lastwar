@@ -941,6 +941,62 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 
 - Tool-developer pass tool-development-2026-11-09-0432. No-op: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 0400 note re-verified CLEAN against main 837d880b81, and the 0430 pass confirms no new comment; main unmoved since); no new tooling issue filed since the 0132 triage (newest issue #502 is knowledge class; no tooling issue filed after the 0332 run finished 11:36:30Z). Full detail in tool-development/0432-run.md.
 
+## 04:32 to about 04:40 — Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-09-0432.
+  Own PR 501 MERGED with 0 comments and 0 reviews, so no open
+  own PR carries integrator feedback. Nine substantive records
+  folded into nine profiles as one commit on PR 503 (OPEN and
+  MERGEABLE, mergeState CLEAN): ticker-0334 radar 0335
+  (partial, release day, dish re-grounded (51,718) first try
+  after (55,689) missed, Rare Iron Mine gathering dispatched
+  720K 00:06:57, 5 pins inventoried unattempted) into
+  radar-tasks 1.57.0; ticker-0334 harvest 0340 (partial, one
+  tap per type cleared all visible bubbles of that type -
+  iron +4.9M, coin +4.3M, food +5.4M, EXP 4 bubbles -
+  contradicting the 1935 iron one-by-one re-confirmation,
+  so iron and coin one-by-one are marked suspect again per
+  Issue #502; recenter-first sweep executed for the first
+  time, discharging the 0202 owed item) into
+  resource-collection 1.45.0; ticker-0404 survivors 0409
+  (done, one gate visitor processed, Friendly Visitor dialog,
+  gate line clear) into survivor-intake 1.41.0; ticker-0404
+  training 0413 (partial, fullscreen zoom-out variant tried,
+  View-menu exit measured) into troop-training 1.32.0;
+  ticker-0404 gifts 0417 (done, 37 Regular + 2 Premium
+  dialog-confirmed, progress +1,090, Regular window +20
+  unexplained as Issue #183 evidence) into alliance-gifts
+  1.42.0; ticker-0404 help 0419 (done, one ally request
+  cleared, header 520/1,000 unchanged) into alliance-help
+  1.32.0; ticker-0404 mail 0421 (done, three red-dot
+  categories walked, 0 claimed, envelope opened at once)
+  into mail-rewards 1.28.0; ticker-0404 train 0421
+  (partial, checked only, no train preparing) into
+  alliance-train 1.35.0; ticker-0404 duel 0423 (done,
+  personal total 2,005,000 read twice, rank 144, gap
+  1,595,000, Ranking back arrow centre (64,944)) into
+  alliance-duel 1.33.0. Issues #502, #484, #136 and #183
+  commented with the fold. The 2026-11-09 daily retro has
+  not landed yet. Status: done. Full detail in
+  knowledge-organization/0432-run.md.
+
+## 04:39 to about 04:52 — PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-09-0439. No-op: six open PRs
+  scanned, none owned by this job. PR 491 merged at the 0300 batch
+  (merge commit 95fbdbfd); knowledge PR 501 squash-merged in the
+  0400 pass, main 837d880b81. New PR 503 (knowledge fold) verified
+  clean against main 837d880b81 by VPS merge-tree. PR 493 verified
+  clean at new head 006e17043e, awaits the 0700 batch. PR 478
+  branch-side reconciled by ticker-0434 and verified clean at new
+  head 278abe7474. PRs 351 and 301 still conflict with main on the
+  single file _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, integrator 0400 re-checks noted. Tools PR 425
+  owner-gated, clean, unchanged, awaiting the owner decision
+  (OD-20261108-01 open and undecided). Eighty open issues, zero
+  unclassified, one created (502, knowledge) since the 0339 pass.
+  Owner-decision issues 132, 154 and 335 all over 24 hours,
+  statements current. Full detail in pr-catchall/0439-run.md.
 ## 04:39 to about 04:41 — Queue ticker pass, Star Ceremony
 
 - Star-ceremony unit star-ceremony-2026-11-09-0230, done (checked only):
@@ -949,6 +1005,28 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Mail red dot, Inventory), so no ceremony is waiting. Nothing played,
   claimed or spent. Base total power read live 149,217,331. Full detail
   in alliance-duel/0441-queue-run.md.
+
+## 04:40 to about 04:47 — Queue planning pass
+
+- Planner pass queue-planning-2026-11-09-0440. Plan staged
+  1 net fresh unit (already_present 60,
+  skipped_done_current 0, reaped 0, expired 0,
+  stale_done_dropped [passes-2026-11-09-0257,
+  star-ceremony-2026-11-09-0230],
+  branch_done_reconciled [duel-score-2026-11-09-0230,
+  gifts-2026-11-09-0230, harvest-2026-11-09-0203,
+  help-2026-11-09-0230, mail-2026-11-09-0230,
+  survivors-2026-11-09-0203, train-2026-11-09-0230,
+  training-2026-11-09-0203], no phantom re-stage, 14
+  branch-closed slots skipped) - the zero-sweep 1630 unit,
+  chain seq 1 of tonight's pre-reset sweep pair. Pre-reset
+  sweep production skipped (not the 17:00 run); final pass
+  due from a later plan run or the 17:00 run; last night's
+  pair executed 2 of 2 (both partial). Scout diff applied
+  with zero changes (unexplained 4: Inventory dot, 99+
+  badge, skull timer, hammer 1/4). No withdrawals. Pool
+  inbox 62, claimed 0, done 1327. Status: done. Full
+  detail in queue-planning/0440-run.md.
 
 ## 04:40 to about 04:47 — Queue ticker pass, Shop claims (passes)
 
@@ -975,3 +1053,4 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   blocked (card tap and long-press page the carousel, Go does nothing)
   and carries to the next events unit with the failed methods named.
   Full detail in event-claims/0450-queue-run.md.
+
