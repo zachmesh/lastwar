@@ -223,3 +223,7 @@ of 2026-10-28.
   current; 514 and 517 still under 24 hours. VPS root disk
   recovered to 79 percent, 2.1G free. Status: no-op. Full detail
   in pr-catchall/0144-run.md.
+
+## 01:32 to about 01:43 - Knowledge organization pass
+
+- Knowledge organization pass knowledge-organization-2026-11-10-0132 (done). Own PR 560 merged with no review comments; no new knowledge issue since #558; retro actions A-01 to A-04 already applied. Folded the ticker-0104 pass (commit e5272617a) into 3 profiles on PR 561 (OPEN, MERGEABLE, 1 commit, verified): building-queues 1.4.0 (Aircraft Center 2d 01:14:21 left, banner quest now "Build: Oil Well (0/1)" instead of Builders Hut Lv.26, Issue #517 stays open), research-queue 1.3.0 (slot 1 in progress 1d 09:04:53, slot 2 Idle, flask tap opens the research tree not a queue panel - queue state reads from the bottom bar), alliance-donations 1.80.0 (2 coin donations verified 3/30 to 1/30, Rallied Attack also 1/30 live, tree scrolls with an upward drag, paired 1/30 reads support a shared count - Issues #160, #450). Issues #160, #450, #517 and #558 commented. No game operated, no queue code or cron definition edited. Full detail in knowledge-organization/0132-run.md.
