@@ -31,3 +31,23 @@ of 2026-10-28.
   records/2026-11-10 branch was created from main with
   this run record as its first commit. Status: done. Full
   detail in pr-integration/0000-run.md.
+
+## 00:15 to about 00:30 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0015.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  03:00): no merges. Records PR 559 opened for
+  records/2026-11-10 (one commit beyond main, the 0000
+  run record), awaiting the 03:00 batch. Records PR 556
+  clean at head df8a2375 and tree-safe, re-verified,
+  awaiting the 03:00 batch. Records PRs 351 and 301
+  still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  unchanged since the 2348 verification, awaiting the
+  owner decision (OD-20261108-01 open and undecided).
+  No new comments posted - nothing changed since the
+  2348-pass notes. Status: done. Full detail in
+  pr-integration/0015-run.md.
