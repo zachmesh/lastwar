@@ -2330,6 +2330,47 @@ modified: 2026-11-10T14:21:00Z
   unverified (its 1d 17:14:37 is the batch duration, not a
   remaining timer); two barracks unchecked. Full detail in
   troop-training/1229-queue-run.md.
+## 12:32 to about 12:52 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-1232.
+  Folded ticker-1134 records and Issue #585 into 4 profiles
+  (PR #586, OPEN and MERGEABLE + CLEAN, 1 commit, base main
+  4884c1fb5): radar-tasks 1.68.0 to 1.69.0 (stack day, done -
+  Quick Execute offered with 11 rewards already pending, 1
+  task executed, stamina 120 to 110, points stayed 348, then
+  the bar flipped back to Claim All-only; the offer flips both
+  ways, the selecting rule stays open; dish badge still 9 while
+  pending rose to 11, so the badge does NOT track the pending
+  count - the 0727 match reading is superseded; dish
+  re-grounded fresh at norm 54,718; stored 23/40, restore 12
+  tasks in about 5h54m; 4 skull pins inventoried untapped, the
+  0727 set of 6 has rotated; NEW! badge ninth sighting, still
+  untapped; 11 pending stay stacked for the duel day 3 release
+  unit), alliance-donations 1.86.0 to 1.87.0 (2 coin donations
+  verified 3/30 to 1/30, stopped at the 1/30 floor; compact-OCR
+  misread again - 3/30 as "3130", 2/30 as "2130"; replenishment
+  thirty-eighth data point for Issue #160, +2 over about 16
+  minutes), arms-race 1.78.0 to 1.79.0 (first unit of the Hero
+  Advancement phase, judged under R4; timer 02:05:45 left, phase
+  ends about 14:02, score 0, tier 3 = 12,000; just-enough plan
+  one hero level-up, EXP only, on the cheapest confirmed hero -
+  Morrison Lv.124 candidate, EXP bar "1.4G/83.0M" unresolved;
+  no scoring action taken, the push falls to the next unit),
+  resource-collection 1.54.0 to 1.55.0 (PANEL COLLECT ROUTE
+  FOUND via Issue #585 - iron panel +2,466,821 exact, food
+  panel +88,117; map bubbles carry small face values while the
+  panel pool held millions; bubble-tap hazards - fall-through
+  to the building panel, roaming red-panda pet intercept; coin
+  panel not opened, next unit opens it first; Armed Truck check
+  deferred a fifth consecutive unit, new candidate at about
+  389,260). Contradiction resolved: radar dish badge vs pending
+  count. Issue comments posted on #160, #585, #498 and #566. No
+  new issue filed. PR #584 merged with 0 comments; new
+  knowledge issue #585 since the 1132 run, folded here. The
+  ticker-1204 survivors 1224 and training 1229 records landed
+  mid-run and belong to the next run. Status: done. Full detail
+  in knowledge-organization/1232-run.md.
+
 
 ## 12:39 to about 12:50 - PR catch-all pass
 
