@@ -48,5 +48,10 @@
   "status": "done",
   "at": "2026-11-09T18:43:26-08:00",
   "note": "Regular 1699 + Premium 95 claimed in full"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-09T19:37:25-08:00",
+  "note": "Stack empty post-roll: points 348, stored 0/40, restore about 23:39, pins inventoried none standing"
  }
 }
