@@ -2670,3 +2670,13 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   to hold all ten top-level entries before push. VPS disk slid to
   81 percent, 1.9G free. Status: no-op. Full detail in
   pr-catchall/1839-run.md.
+
+## 18:29 to 18:38 - Ticker pass ticker-1822, mail unit done
+
+- Mail unit mail-2026-11-09-1430 done: Alliance, Event and System Claim All claimed 9 reward mails in full (Coin 12.1M, Bread 19.0M, Iron 19.0M, red gems x50, speedups 5m x106 and 1m x450, plus Event chests and crystals); Battle Report (6 Victory vs Lv.15-20 Zombie Horde) and Regular held reports only. Leadership Transfer Notice: Abyss Apex has become the new Alliance leader. No mail deleted. Full detail in mail-rewards/1838-queue-run.md.
+
+- Gifts unit gifts-2026-11-09-1430 done: Regular Claim All 1699, Premium Claim All 95, both in full; Gift Level 28 progress 198,577,380 to 198,624,140 of 206,300,000. Alliance leader confirmed as Abyss Apex. Full detail in alliance-gifts/1842-queue-run.md.
+
+- Help unit help-2026-11-09-1430 done: base-screen help bubble pressed, then Help All on the Help page cleared PrincessEsra10xoxo (Lv.21 Crystal Factory) and AMD Commander (Lv.29 Oil Well); only the account's own two 30/30 requests remain. Points header read 140/1,000 unchanged after both presses (open question). Full detail in alliance-help/1846-queue-run.md.
+
+- Passes unit passes-2026-11-09-1457 partial: Hot Deals free Fast Growth Pack claimed, Free Supply auto-claim taken, Super Monthly Pass Daily Pickup claimed (gold bars x2, red gem 100, stamina 50 x2, iron x200, 5m speedup x60); Weekly Pass list not fully scrolled, next passes unit resumes with the scroll. Legendary $19.99 Take All and $24.99 extension untouched. Full detail in shop-claims/1850-queue-run.md.

@@ -1,8 +1,8 @@
 {
  "help": {
   "status": "done",
-  "at": "2026-11-09T01:00:46-08:00",
-  "note": "Help All pressed, 1 ally request cleared"
+  "at": "2026-11-09T18:46:55-08:00",
+  "note": "Help All cleared 2 ally requests"
  },
  "treasures": {
   "status": "done",
@@ -11,8 +11,8 @@
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-09T05:10:58-08:00",
-  "note": "Nothing to claim, assists 5/5 at cap, no pending to deploy"
+  "at": "2026-11-09T14:54:05-08:00",
+  "note": "Post checked 14:56 PT: 4 cards PERFECT, assists 5/5 at cap, nothing to claim or deploy"
  },
  "events": {
   "status": "done",
@@ -28,5 +28,25 @@
   "status": "done",
   "at": "2026-11-09T12:30:36-08:00",
   "note": "Bubbles collected 12:20-12:33 PT, food +3.9M iron +3.6M coin +2.6M; Armed Truck unchecked, follow-up next harvest unit"
+ },
+ "daily-missions": {
+  "status": "done",
+  "at": "2026-11-09T15:37:57-08:00",
+  "note": "Claimed 5 completed rows and activity chests 40/80/120; activity 140"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-09T15:42:52-08:00",
+  "note": "Daily Freebie and login chest claimed; VIP points 1,613,660 to 1,613,740"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-09T18:39:22-08:00",
+  "note": "9 reward mails claimed in full (Alliance 5, Event 3, System Season Closed)"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-09T18:43:26-08:00",
+  "note": "Regular 1699 + Premium 95 claimed in full"
  }
 }
