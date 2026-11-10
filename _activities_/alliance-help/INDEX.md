@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T10:40:33Z
+modified: 2026-11-10T12:32:17Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-1004 alliance-help execution record 2026-11-09 1019 queue run (partial, Alliance button unresponsive to background clicks in fullscreen, six taps in four variants, duplicate LastWar window 508052, Help All not reached, red dot waiting; record commit 09e4f0863 on records/2026-11-09)
   - source: ticker-1822 alliance-help execution record 2026-11-09 1846 queue run (done, bubble plus Help All cleared 2 ally requests, header 140 of 1000 unchanged; record commit 6761c35d1 on records/2026-11-09)
   - source: ticker-0134 alliance-help execution record 2026-11-10 0140 queue run (done, bubble tile no-change, Help All via panel, header 420 to 720 after close/reopen; record commit e3d186a38 on records/2026-11-10)
+  - source: ticker-0334 alliance-help execution record 2026-11-10 0350 queue run (done, Help All for two Farmland helps, header 720 to 1,040 after close/reopen, counter above the 1,000 target; record commit b7e79a62 on records/2026-11-10)
 ---
 
 
@@ -610,7 +611,7 @@ Measured in the 0135 help unit (ticker-0134, window mode
 
 ## Open questions
 
-- The daily help cap and what helpers and helped players each receive.
+- The daily help cap and what helpers and helped players each receive. (2026-11-10 0350 update: the counter read 1,040/1,000 after the close/reopen re-read, so 1,000 is a display target, not a hard cap; per-help points vary - 150 in the 0140 unit, 160 in the 0350 unit - possibly by helped task type, unverified.)
 - How a Healing Help request is helped (Help All, or a different surface such as the hospital) - first seen 2026-11-02 1741, papillon707 request unhelped after two Help All presses and a row tap.
 - What the "Today's points gained from Alliance Help" header counter counts: ANSWERED 2026-11-08 2214 - it counts the helps Help All delivers, but it does NOT update inside one open Help session: after each Help All press the header still showed the pre-press value until the page was closed and reopened (100/1,000 in-session after the first press, 340/1,000 after reopen; 340/1,000 in-session after the second, 360/1,000 after reopen). The 1413 unit's 0/1,000 read before and after was a stale in-session read, not a narrower count. Closing figures for help units must be read after a page reopen. (The 1413 section is left standing as the record of what was observed then.)
 
@@ -939,3 +940,14 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Help All pressed. The two ally rows disappeared from the list; only the two own 30/30 rows remained. The points counter still read 420/1,000 in the same dialog instance - the seventh in-session-unchanged datapoint (see the updated pattern note in the 0419 section; the counter-lag resolution stands).
 - Dialog closed and reopened: points now read 720/1,000 (+300 for the two helps, the first measured per-help rate of 150 points per help), list still only the two own 30/30 rows. No ally requests waiting.
 - Outcome: Help All pressed once, 2 ally helps delivered (Roronoa zo Oil Well, Dogo Oil Output I). Today's help points 420 to 720 of 1,000, read live after a close/reopen re-read. Returned to the base screen. No diamonds or money spent. No other unit's work touched.
+- CORRECTION 2026-11-10 0350: the '150 points per help' rate measured here is not fixed - the 0350 unit's two Farmland helps gave +320 (160 each), so the per-help rate varies, possibly by helped task type. The 1,000 figure is a display target, not a hard cap (the 0350 unit read 1,040/1,000).
+
+## What the 2026-11-10 0350 unit added - Help All for two Farmland helps, header 720 to 1,040, counter above the 1,000 target
+
+- Unit help-2026-11-10-0230 by ticker-0334, 03:50 to 03:53 local, status done. Evidence in `_records_/2026-11-10/alliance-help/0350-queue-run.md` (commit b7e79a62 on records/2026-11-10). Computer session cc-393 on the owner Mac mini. Background input reached the Alliance button on the first tap; no foreground repair was needed.
+- Alliance panel: Help button carried a red dot (requests waiting). Note: the Alliance Gifts button still showed a red dot too, minutes after the gifts unit of this pass claimed both tabs empty - new gifts are already arriving (allies are active this morning); that red dot belongs to the next gifts unit, not this one.
+- Help dialog at entry: Today's points gained from Alliance Help 720/1,000 (unchanged since the 0140 unit). Rows: Bears Lair (own) Missile Mastery II research 30/30, Bears Lair (own) Lv.30 Aircraft Center 30/30, 1717Flower Lv.25 Farmland, 1717Flower Lv.25 Farmland (second row cut off at the fold, same ally and building).
+- Help All pressed. The two ally rows disappeared from the list; only the two own 30/30 rows remained. The points counter still read 720/1,000 in the same dialog instance (the counter-lag resolution stands - closing figures must be read after a page reopen).
+- Dialog closed and reopened: points now read 1,040/1,000 (+320 for the two helps), list still only the two own rows. No ally requests waiting. The counter reads above the 1,000 display target, so the 1,000 figure is a target, not a hard cap. Points per help are not a fixed 150: the 0140 unit's two helps gave +300, this unit's two Farmland helps gave +320 (160 each) - the rate varies, possibly by helped task type, unverified.
+- The reopened dialog shows the own rows differently: "Time reduced: 13:00:22" on the Missile Mastery II row and "Time reduced: 3d 23:58:04" on the Aircraft Center row, in place of the 30/30 bars. Recorded as displayed; whether that is total time reduced by allies or time remaining was not established in this unit.
+- Outcome: Help All pressed once, 2 ally helps delivered (1717Flower Lv.25 Farmland x2). Today's help points 720 to 1,040 of 1,000, read live after a close/reopen re-read. Returned to the base screen. No diamonds or money spent. No other unit's work touched.

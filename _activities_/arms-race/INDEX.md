@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T10:40:33Z
+modified: 2026-11-10T12:32:17Z
 level: L1
-version: 1.74.0
+version: 1.75.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -80,6 +80,7 @@ grounded_in:
   - source: ticker-1910 arms-race execution record 2026-11-09 1928 queue run (partial, Unit Progression phase read live at 0, timer 02:42:34, tier-3 gap 75,000 via training queues only, no chest earned; record commit e05c662bd on records/2026-11-09)
   - source: ticker-0004 arms-race execution record 2026-11-10 0006 queue run (unverified, Tech Research phase judged at phase start, score 0/30,000, R4 skipped-needs-owner; record commit 9cfcddabc on records/2026-11-10)
   - source: ticker-0204 event-claims execution record 2026-11-10 0221 queue run (partial, Arms Race Base Building phase cross-read, timer 03:40:14, score 0, cumulative 0/2; record commit 069a94c7a on records/2026-11-10)
+  - source: ticker-0334 arms-race execution record 2026-11-10 0342 queue run (skipped-needs-owner, Base Building phase judged at phase start, score 0 of 30,000, R4; record commit b7e79a62 on records/2026-11-10)
 ---
 
 
@@ -2161,3 +2162,19 @@ slot. Evidence in
 - Cross-read inside the events unit events-2026-11-09-2257 by ticker-0204, about 02:19 to 02:21 local (the events unit closed partial). Evidence in `_records_/2026-11-10/event-claims/0221-queue-run.md` (commit 069a94c7a on records/2026-11-10). This is a read-only cross-read, not an arms-race scoring unit; the phase itself is the arms-race unit's job (arms-race-2026-11-10-0203 in inbox).
 - Arms Race page, Base Building phase: timer 03:40:14 left, score 0, point chests at 6,250 / 12,500 / 30,000 all locked. Cumulative chest at top left reads 0/2 (not full, not claimable). The phase rotated since the 15:00 check, when it read 7/8 in Hero Advancement - the 0006 Tech Research phase judged at 00:06 has already ended and a new phase is running.
 - Nothing claimable on this page; no Arms Race grinding was done in the cross-read unit. The phase scoring belongs to the arms-race unit for this slot.
+
+## What the 2026-11-10 0342 unit added - Base Building phase judged at phase start, score 0 of 30,000, R4 skipped-needs-owner
+
+- Unit arms-race-2026-11-10-0203 by ticker-0334, about 03:42 to 03:46 local, status skipped-needs-owner. First unit inside this phase, so judged under R4 at the phase start. Evidence in `_records_/2026-11-10/arms-race/0342-queue-run.md` (commit b7e79a62 on records/2026-11-10). Computer session cc-391 on the owner Mac mini.
+- Phase: Base Building, 02:16:46 left at first read (02:15:57 at the close read); the phase runs to about 06:00. The Tech Research phase judged by the 0006 unit at 00:06 has ended and rolled to Base Building. Score 0 points. Chest thresholds 6,250 / 12,500 / 30,000 (ruby tags 2,360 / 4,800 / 11,800). All three point chests locked, progress bars empty.
+- Scoring paths as displayed: Increase Building Power by 1pt (+1), Use 1-min Construction Speed-up (+10), Buy Packs containing Diamonds (1 Diamond) (+30).
+- Cumulative counter chest top left: 0/2, locked, not bouncing. Ranking row: segment rank 9, #2110 [AP3x]Bears Lair, figure 90,500 - the lagging previous-phase display (the live score is 0; same lag documented 2026-10-26 and in the 0006 unit).
+- Ranking chest: tapped live - opens a contents preview only (Iron Chest (SR) x3, Food Chest (SR) x3, Coin Chest (SR) x3), no Claim button. The ranking reward from the ended Tech Research phase is not claimable from this screen; it arrives by Event mail, per the 1838 finding.
+- Completion sweep: no point chest earned, counter chest locked, ranking chest preview-only, no bouncing chest and no reward red dot on the Arms Race page. Nothing claimable was left unclaimed.
+- Build and research queues (live): Build slot in use: Oil Well (0/1) on the base HUD. The Build menu (Economy tab) shows Oil Well as "Unlock by researching Unlock Oil Well" and Farmland / Iron Mine / Food Warehouse as "Building limit reached"; no build was started and no build timer was read - the Oil Well completion time inside this phase is unverified. A single Oil Well level-up yields far below the 6,250 first-chest threshold in any case. Research queue (via the hammer icon, which opened the Special Forces tree): slot 1 in progress with 1d 06:36:26 left, slot 2 Idle. No research completes inside the phase (2h16m left). Starting new research or a new build on agent initiative is red-lined, so both idle slots stay idle.
+- Judgement: the only free scoring path (building power from a completed upgrade) cannot land the target in this phase: the one build in progress is a single Oil Well, and the speedup path is banned (never burn speedup items) and the pack path is banned (money). Target 30,000 is unreachable inside the red lines. Status skipped-needs-owner per R4: the phase target needs an owner decision (spend speedups or buy packs) to reach, and the phase was judged early (2h16m still left) so the miss is surfaced now, not discovered in the phase's last minutes.
+- Follow-up for the next arms-race unit: the phase runs to about 06:00; re-judge only if the owner directs a spend, or when the next phase starts.
+- Events hub tabs (live): The Age of Oil (badge 1), Arms Race, Desert Battlefield, and a fourth tab with a red exclamation (Wanted Boss, per the 0006 unit). No Zombie tab in the Events hub; the event ended 2026-10-30, chain stays closed, no fresh chain seeded.
+- Figures read live on screen: food 610.2M, iron 933.6M, coin 82.7M, power 148,058,020, diamonds 6,207, energy 117 at entry rising to 118 during the unit.
+- No diamonds or money spent. No research or building started. No stage swapped.
+- Result stats: target 30000, achieved 0, points 0, resources_gained none, costs about 4 minutes, no stamina, no items, no diamonds, verified yes (all figures read live in this unit), blocker_category g (true red-line miss).

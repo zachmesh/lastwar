@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T10:40:33Z
+modified: 2026-11-10T12:32:17Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, Mail red dot standing, three categories unopened; record commit c9a86fa74 on records/2026-11-09)
   - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, 9 reward mails claimed, Alliance Event System Claim All, leadership transfer to Abyss Apex, Issue 230 entry datapoint, power 146736949; record commit 6761c35d1 on records/2026-11-09)
   - source: ticker-0134 mail-rewards execution record 2026-11-10 0143 queue run (done, Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed; record commit e3d186a38 on records/2026-11-10)
+  - source: ticker-0334 mail-rewards execution record 2026-11-10 0355 queue run (done, Claim All sweep, no claimable rewards, R5 warning mail read; record commit b7e79a62 on records/2026-11-10)
 ---
 
 
@@ -934,4 +935,18 @@ the next tick re-produces this regular as a fresh unit.
 - Battle Report: Zombie Horde victory reports Lv.15 to Lv.20, 7 to 8h ago. Claim All answered "No rewards available."
 - In-app Purchases (receipts only) and Favorite were not opened; no claimable attachments live there per the activity metadata.
 - Delete All was never pressed; the per-mail trash button in the Weekly Pass detail was not pressed either.
+- Outcome: no claimable mail rewards in any category this round. Nothing claimed, nothing deleted. Returned to the base screen. No diamonds or money spent.
+
+## What the 2026-11-10 0355 unit added - Claim All sweep, no claimable rewards, R5 warning mail read
+
+- Unit mail-2026-11-10-0230 by ticker-0334, 03:55 to 03:58 local, status done. Evidence in `_records_/2026-11-10/mail-rewards/0355-queue-run.md` (commit b7e79a62 on records/2026-11-10). Computer session cc-394 on the owner Mac mini.
+- Mail category list at entry: red dots on Alliance, Event, System and In-app Purchases; none on Battle Report, Regular or Favorite.
+- Alliance: one "Attention" mail (R5, 1h ago) plus five "New Alliance Assembly Point" mails (3h ago). Claim All showed no reward summary. The Attention mail was opened to verify: a text-only announcement from Abyss Apex, dated 2026-11-10 01:59:02, warning that a few people will leave the server in the next few days and might target the alliance as they leave; it asks members to keep troops away from the walls for the next few days unless participating in an event, to garrison each other if attacked while awake and active, and to save energy and resources for upgrades. No rewards attached, no claim button. No reply was sent and no action was taken on it; it is recorded here as alliance information.
+- Event: train notices ([AP3x] Abyss Apex's Mega Exp..., [AP3x] KaBoom420's train) plus "Weekly Pass" Unclaimed Rewards. Claim All marked the unread mails read and showed no reward summary (the Weekly Pass rewards were already claimed on 2026-11-9, per the 0143 unit).
+- System: "Planned Update Notice" (46m ago), "(President Mail) Transfer Update" (19h ago), "Season Closed" (1d ago), "(President Mail) 2110 | Transfer..." (3d ago), "Pack and Event Adjustment Notice" (4d ago), "(President Mail) Server 2110 ..." (5d ago). Claim All showed no reward summary.
+- Regular: victory reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Claim All showed no reward summary.
+- Battle Report: Zombie Horde victory reports Lv.15 to Lv.20, 10h ago. Claim All showed no reward summary.
+- In-app Purchases (receipts only) and Favorite were not opened; no claimable attachments live there per the activity metadata.
+- One spurious "target app exited or restarted" error appeared on a back tap between System and Regular; the next observe showed the System list open normally - the app never exited (same spurious error as in the 0143 unit). Re-observe before acting on a spurious exit error.
+- Delete All was never pressed.
 - Outcome: no claimable mail rewards in any category this round. Nothing claimed, nothing deleted. Returned to the base screen. No diamonds or money spent.
