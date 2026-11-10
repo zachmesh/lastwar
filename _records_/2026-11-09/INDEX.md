@@ -2958,3 +2958,63 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 - Pre-reset sweep pair already present, both passes done (zero-sweep 1630 and 1730 in done, chain pre-reset-sweep-2026-11-09); production check skipped (22:00 hour run). Branch-copy gap: the branch _queue_/done holds only the 1730 file.
 - Scout diff on the branch observation (61 observed, 11 actionable) applied to the live pool with the branch's fixed tool (post-#535/#527/#510): 7 already-queued, 0 enqueued, candidates 1 (inventory-icon-red-dot), promotion proposals 1 (already decided REJECTED by the knowledge organiser 1932 pass), unexplained red dots 0 (diff); narrative seen 37, unexplained 8. Branch-closed 0, shared-pool-closed 0. No withdrawals. Pool inbox 69, claimed 1 (device token), done 1406.
 - No new Issue filed. Status: done. Full detail in queue-planning/2240-run.md.
+
+## 23:11 to 23:18 - Ticker pass ticker-2304, harvest unit partial
+
+- Harvest unit harvest-2026-11-09-2203 partial: food all collected in one tap (plus 2.0M HUD, 596.9M to 598.9M) and 1 iron bubble (plus 1.8M HUD, 920.7M to 922.5M); coin 79.2M unchanged. 5 iron bubbles (about 1.30M each) and 5 coin bubbles (225.0K to 282.7K) remain, and the Armed Truck loot check (follow-up from the 1220 unit) is still unchecked - the next harvest unit resumes from there. Entry state: an SR Intercity Trade Reward dialog from the ticker-2230 trucks pass was open and was backed out of without claiming; Trucks screen showed Trade Count 0/5. No panels opened, no diamonds or money spent. Full detail in resource-collection/2326-queue-run.md.
+
+## 23:00 to about 23:23 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-09-2300 (done). BATCH pass (checker _tools_/records_batch.py plain due - in the 23:00 window, 47 minutes left at pass start; merge-aware agrees after the merge - PR 545 already merged in this window); records PR #545 batch-merged 23:15 PT as f1008e40 (44 commits, branch kept); local main fast-forwarded to f1008e40 via bundle (bundle-main-2320.bundle); records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open; batch-pass conflict comments posted on 351 and 301 and a re-verification comment on 425 (main moved). Status: done. Full detail in pr-integration/2300-run.md.
+
+## 23:32 to 23:38 - Tool development pass (no-op)
+
+- Standing hourly tool-developer pass (no-op). Own PR #425 re-verified CLEAN against main f1008e40 by the integrator 2300 batch pass, still owner-gated (OD-20261108-01 open); no new comment or question for the author. Open tooling issues re-triaged: #300s post-2232 comment is organizer evidence (pre-fix gifts unit), #332s remainder is committed-coverage evidence owed to the retro (tool fix merged in PR #333 and verified; coverage file absent because the live tree is stale, #415), #415/#404/#418/#335 unchanged and blocked (owner decision or other jobs owners). Frozen backlog and standing queue re-verified: retro_report.py carries p90/attempts/system_metrics, queue.py carries result-schema validation. No branch, no PR. Full detail in tool-development/2332-run.md.
+
+## 23:30 to about 23:40 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-09-2315 (done). NON-batch pass (checker _tools_/records_batch.py plain due - in the 23:00 window, 28 minutes left at pass start; merge-aware not due - PR 545 already merged 23:15 PT in this window, so this pass is not a batch pass); no records merge. Records PR #556 awaiting the 03:00 batch (head d85fcd4f after the tool-development 2332 commit landed mid-pass; merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open; re-verification/re-check comments posted on 425, 351 and 301. Status: done. Full detail in pr-integration/2315-run.md.
+
+## 23:39 to 23:52 - PR catch-all pass
+
+- PR catch-all pass pr-catchall-2026-11-09-2339 (no-op).
+  Four open PRs, none owned by this job. PRs 545, 554 and 555
+  merged since the 2239 pass (records batch, tools slug guard,
+  knowledge fold into 8 profiles); main moved abeaffadf to
+  f1008e40. PR 556 opened as the new records post-2300 batch,
+  MERGEABLE CLEAN at head d85fcd4f, owned by
+  lastwar-pr-integrator. PR 425 CLEAN but owner-gated,
+  OD-20261108-01 still open, no owner decision. PRs 351 and 301
+  still CONFLICTING on the single action-log file, integrator
+  2300 and 2315 re-checks on both. 94 open issues, zero
+  unclassified; owner-decision issues 132, 154 and 335 still
+  over 24 hours, statements current; 514 and 517 still under
+  24 hours. VPS root disk slipped to 84 percent, 1.6G free.
+  Status: no-op. Full detail in pr-catchall/2339-run.md.
+
+## 23:30 to about 23:48 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-09-2330 (done). NON-batch pass (checker _tools_/records_batch.py plain due - in the 23:00 window, 17 minutes left at pass start; merge-aware not due - PR 545 already merged 23:15 PT in this window, so this pass is not a batch pass); no records merge. Records PR #556 awaiting the 03:00 batch (head 87966646 after the pr-catchall 2339 commit landed mid-pass; merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open; no new comments posted - the 2315-pass notes are the newest on all three and nothing changed since. Status: done. Full detail in pr-integration/2330-run.md.
+
+## 23:40 to 23:50 - Planner pass
+
+- Plan staged 5 units into the live pool (02:57 PST slot on 2026-11-10; already_present 67, skipped_done_current 0, skipped_closed 2 harvest-2026-11-09-2203 and zero-sweep-2026-11-09-1730, reaped 0, expired 0). The 5 were verified new (created 23:43 local, no copies in live done/claimed/completed, none on the branch); they reach the branch through the ticker sync.
+- Pre-reset sweep pair already present, both passes done (zero-sweep 1630 and 1730 in done, chain pre-reset-sweep-2026-11-09); production check skipped (23:00 hour run). Branch-copy gap: the branch _queue_/done holds only the 1730 file.
+- Scout diff on the branch observation (61 observed, 11 actionable) applied to the live pool with the branch's fixed tool (post-#535/#527/#510): 7 already-queued, 0 enqueued, candidates 1 (inventory-icon-red-dot), promotion proposals 1 (already decided REJECTED by the knowledge organiser 1932 pass), unexplained red dots 0 (diff); narrative seen 37, unexplained 8. Branch-closed 0, shared-pool-closed 0. No withdrawals. Pool inbox 71, claimed 1, done 1409.
+- No new Issue filed. Status: done. Full detail in queue-planning/2340-run.md.
+
+
+## 23:32 to about 23:58 - Knowledge organization pass
+
+- Knowledge organization pass knowledge-organization-2026-11-09-2332 (done). Own PR 555 merged with no review comments, so no fix or reply was owed. Folded the ticker-2230 trucks unit (2250) and the ticker-2304 harvest unit (2326) into two profiles, one commit on PR 557 (OPEN, MERGEABLE, CLEAN at verification against main f1008e40c): truck-plunder 1.36.0 (2250 partial, 4 returned trucks settled 2 UR + 2 SR, iron 12.6M, food 12.6M, coin 8.0M; 2026-11-9 18:00 Reward Recovery claimed, badge 500 x3, iron 1.5M, food 1.5M, coin 972.5K; entry trade icon grounded fresh at (55,575), badge 4, Your Truck tab; settlement values measured UR 3.8/3.8/2.4, SR 2.5/2.5/1.6; details-panel paging measured, no_change_observed flag unreliable on this panel; Trade Count 0/5 second-day corroboration of the about-18:00 rollover, duel day 2 ends 2026-11-10 18:00 PT; dispatch 5 UR and plunder 4 fall to the next trucks unit), resource-collection 1.52.0 (2326 partial, food sixth one-tap-per-type confirmation, +2.0M; iron one-by-one a SECOND time, +1.8M with 5 mature iron bubbles still standing - the 0636 "single unexplained outlier" wording is corrected and the iron mechanism is marked UNSETTLED at 5 per-type clears vs 2 one-by-one reads, next-test prescription recorded; 5 iron + 5 coin bubbles and the Armed Truck loot check carry). Issues #502 and #242 commented; no new Issue filed; the planner 2240 plan-vs-2140 flip stays with the retro. Records branch tip moved once mid-run (958b03e36 to a1d3366e7, five meta commits); this record was built on a1d3366e7 by explicit SHA after the ancestry check failed (orphan-root severance, Issue #541). Status: done. Full detail in knowledge-organization/2332-run.md.
+## 23:41 to 23:51 - Ticker pass ticker-2334, radar unit done
+
+- Radar unit radar-2026-11-09-2203 done (duel day 2, stack): Quick Execute ran 5 tasks for 50 stamina (120 to 70), bar flipped to "9 task rewards can be claimed" - not tapped, stacking for the duel day 3 release unit. Radar points 348, stored 1/40, restore 12 tasks in 05:54:47. Pin inventory 11 in frame, none tapped. Entry took three attempts: two bare clicks on the dish panned the base camera to the truck yard; move plus wait 1 second plus click at the freshly measured dish centre norm 52,694 opened the radar - the R2 pivot for this unit. No diamonds or money spent. Full detail in radar-tasks/2351-queue-run.md.
+
+## 23:49 to 23:58 - Ticker pass ticker-2334, survivors unit done
+
+- Survivors unit survivors-2026-11-09-2203 done: gate line verified live first (2 "?" survivors at the Zombies gate), one tap processed the line - no "?" bubbles remain on two re-reads, one smiley bubble seen walking to post; no Recruit card observed, so no named recruit recorded. Quick Dispatch ran in the Iron Mine Lv.27 panel (Output/hr +123066, 11hr 36min, miners Christopher, Elina, Alyssa, Jolene) with the live result "no survivors available for dispatch" - the first survivors unit in the queue era to run it, breaking the 22-partial streak on that point. No diamonds or money spent. Full detail in survivor-intake/2358-queue-run.md.
+
+## 23:48 to about 00:01 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-09-2348 (done). NON-batch pass (checker _tools_/records_batch.py plain due - in the 23:00 window, 10 minutes left at pass start; merge-aware not due - PR 545 already merged 23:15 PT in this window, so this pass is not a batch pass); no records merge. Knowledge PR 557 squash-merged (fold 2250 trucks and 2326 harvest records, truck-plunder 1.36.0, resource-collection 1.52.0; new main 37f58defe); local main fast-forwarded to 37f58defe. Records PR #556 awaiting the 03:00 batch (head a1d3366e7; merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against the new main, OD-20261108-01 still open; re-verification comments posted on 425, 351 and 301 after the main move. Status: done. Full detail in pr-integration/2348-run.md.
