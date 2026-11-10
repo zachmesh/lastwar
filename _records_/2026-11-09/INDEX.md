@@ -2528,3 +2528,19 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   issue 517 no deadline stated. VPS disk slid to 81 percent,
   1.9G free. Status: no-op. Full detail in
   pr-catchall/1639-run.md.
+
+- Zero sweep unit zero-sweep-2026-11-09-1630, partial (sweep 001 of
+  2): 7 of 23 ledger lines read live 16:47-16:57 PT - food, iron
+  and coin bubbles all standing (regrown since the 12:20 harvest),
+  Tech Donation Today 3,300 with 19 donations still remaining from
+  the 14:13 read, two survivors with question-mark bubbles at the
+  front gate, Mail red dot standing, Alliance red dots on Help,
+  Gifts, Techs and Events. Six inbox units raised to priority 1
+  (harvest-1803, donations-1403, survivors-1403, help-1430,
+  gifts-1430, mail-1430). Remaining-count read blocked: the 2/10
+  Quick Gathering card is cut off at the bottom of the Techs panel
+  (next donations unit must scroll first). Trucks, train, Arms Race,
+  missions 160/200, radar pins, duel total, events tabs, crystal
+  and glittering market still unread - sweep 002 at 17:30 finishes
+  the walk. Nothing claimed; no diamonds spent. Full detail in
+  daily-activities/1657-queue-run.md.
