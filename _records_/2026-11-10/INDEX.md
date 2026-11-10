@@ -1140,3 +1140,23 @@ of 2026-10-28.
   open, age 2 days). No new comments posted: main and
   all heads unchanged since the 0600 pass. Status: done.
   Full detail in pr-integration/0615-run.md.
+
+## 06:39 to about 06:57 - Ticker pass (ticker-0634)
+
+- One unit executed: donations-2026-11-10-1343, status failed.
+  The game canvas ignored every tap except one mail
+  back-button tap, so Alliance Techs was never reached and
+  the Donation Count was never read; 0 donations made, the
+  final 1/30 still owed. Nine taps across two windows, two
+  display modes and five methods; fullscreen tap offset
+  +70x measured. The window was returned to its found
+  windowed state. Owner recovery step (Dock-icon click)
+  needed before the next unit can play. GitHub Issue #575
+  filed (tooling class) for the input-blocked-with-live-
+  stream failure mode, distinct from issue #284. Full
+  detail in alliance-donations/0634-queue-run.md.
+- Sync produced 14 units for the 0603/0630 slots; inbox 18
+  at pass start. Zombie Invasion: event still ended, no
+  chain seeded (tab absent, last confirmed 2026-11-09).
+- Own PRs checked first: records PR 569 has no comments
+  or reviews; nothing addressed to this job.
