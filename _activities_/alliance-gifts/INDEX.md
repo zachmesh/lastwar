@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T12:32:17Z
+modified: 2026-11-10T03:49:11Z
 level: L1
-version: 1.42.0
+version: 1.43.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -49,6 +49,7 @@ grounded_in:
   - source: ticker-2119 alliance-gifts execution record 2026-11-08 2138 queue run (done, 448 Regular plus 33 Premium plus 3 Regular claimed, Gift Level 28 progress 195,025,360, progress deltas do not decompose into own claims, Issue #183 evidence; record commit fe08a0907 on records/2026-11-08)
   - source: ticker-0204 alliance-gifts execution record 2026-11-09 0211 queue run (done, Claim All both tabs, 102 Regular and 10 Premium dialog-confirmed, Gift Level 28 progress 195,376,010 to 195,412,790, Premium window +35,760 against 2,300 visible row points, Issue #183 evidence; record commit facef628c on records/2026-11-09)
   - source: ticker-0404 alliance-gifts execution record 2026-11-09 0417 queue run (done, 37 Regular and 2 Premium claimed, both dialogs confirmed, Gift Level 28 progress 195,637,370 to 195,638,460; record commit 9fdcc4c9ee on records/2026-11-09)
+  - source: ticker-1822 alliance-gifts execution record 2026-11-09 1842 queue run (done, Regular 1699 plus Premium 95, Regular progress window exact, leader Abyss Apex; record commit 6761c35d1 on records/2026-11-09)
 ---
 
 
@@ -1362,3 +1363,16 @@ one file per execution.
 - Completion sweep: Premium tab re-read - every visible row reads Claimed, no Claim All button remains, no red dot on the Premium tab. Regular tab re-entered and re-read - every visible row reads Claimed, no Claim All button remains, no red dot on the Regular tab. Back to the Alliance panel: the Alliance Gifts entry carries no red dot. Help and Alliance Techs still carry red dots; those belong to their own regulars, not this unit. Back arrow returned the game to the base screen. The game was left on the base screen.
 - Totals: Regular 37 plus Premium 2, 39 gifts claimed, all dialog-confirmed. Gift Level 28 progress 195,637,370 to 195,638,460 of 206,300,000 (plus 1,090 in-unit as read live at each step: plus 390 Regular window, plus 700 Premium window). No diamonds or money spent, no purchase made, no shop opened, no setting changed. The Alliance Store was not opened.
 - Result stats: target 39, achieved 39, resources_gained progress+1090, points 1090, costs 10m_wall_no_stamina, verified yes, regular_claimed 37, premium_claimed 2, device_takeovers 0.
+
+## What the 2026-11-09 1842 unit added - Regular 1699 and Premium 95 claimed in full, Regular progress window exact, leader Abyss Apex
+
+- Unit gifts-2026-11-09-1430 by ticker-1822, about 18:39 to 18:42 local, status done. Evidence in `_records_/2026-11-09/alliance-gifts/1842-queue-run.md` (commit 6761c35d1 on records/2026-11-09). Claim All pressed on BOTH tabs as the owner directed.
+- Alliance panel: [AP3x] The Apex, Leader Abyss Apex (the leadership transfer read in the sibling 1838 mail unit is confirmed on this screen), Power 13,577,450,619, Members 96/100, Language English. CORRECTION: the leader was Jerry Apex at the 0417 read (Power 13,532,886,654) - the 0417 section's leader line is superseded as of this read; alliance power is up about 44.6M since then.
+- Gift Level 28, progress 198,577,380 / 206,300,000 before the claims.
+- Regular tab: Claim All badge 1698. Claim All answered "A total of 1699 Regular Alliance Gifts were claimed this time" (one gift arrived during the claim). Progress moved to 198,594,370 / 206,300,000 (+16,990, exactly 1699 x 10). Rewards read live: gold chest x176, Iron 1.0K / 7.3K, red gem 5 / 163, Bread 10.0K / 84, 5m speedup / 173, Bread 1.0K / 7.5K, Coin 600 / 6.9K, Coin 6.0K / 28; the popup top row was partly hidden behind the banner and is recorded as read only. Visible Regular gifts were Violet's Gift +10 (allies defeating CL-7 Victims) and Doom Walker Loot +10 (Abyss Apex defeating a Doom Walker).
+- Premium tab: Claim All badge 95. Claim All answered "A total of 95 Premium Alliance Gifts were claimed this time". Progress moved to 198,624,140 / 206,300,000 (+29,770). Rewards read live: bread chest x90, coin bag x41, iron chest x49, purple chest x12, badge 50 x5, 5m speedup x7 and x3, red gem 20 x4, white crystal x160; the popup top row was partly hidden behind the banner and is recorded as read only. Visible Premium gifts were Alliance Gift (SSR) +200 (Super Monthly Pass), (SR) +100 (Preparation Premium Pack) and (R) +50 (Preparation Value Pack).
+- Counter note, Issue #183 evidence: the Regular window reconciles EXACTLY this unit (+16,990 for 1699 gifts at +10 each) - a clean exact-match datapoint, the second after the 0211 unit's Regular window (+1,020 for 102). The Premium window (+29,770 for 95 gifts) is NOT reconcilable from the visible rows alone - the visible SSR/SR/R values sum far below it and the below-fold rows were not read, so the Premium half of #183 stays open; no cause is asserted for either window. Commented on Issue #183 by this run.
+- New gifts kept arriving on both tabs during the visit (Regular Violet's Gifts, Premium UR/SR/SSR purchase gifts) - normal flow; the next gifts unit picks them up.
+- Scrolling banner: President HawksMav appointed NERO as Secretary of Interior (and an earlier appointment as Secretary of Science). Noted, no action.
+- No diamonds or money spent. Assemble was not opened; the Alliance panel was left at the base screen.
+- Result stats: target 1794, achieved 1794, resources_gained Regular 1699 gifts plus Premium 95 gifts, Gift Level progress +46,760 to 198,624,140 / 206,300,000, costs about 4 minutes of unit time, no items spent, verified yes, points 46760.

@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T23:32:17Z
+modified: 2026-11-10T03:49:11Z
 level: L1
-version: 1.43.0
+version: 1.44.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -48,6 +48,7 @@ grounded_in:
   - source: ticker-0204 shop-claims execution record 2026-11-09 0218 queue run (done, reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed Days Left 13; record commit facef628c on records/2026-11-09)
   - source: ticker-0434 shop-claims execution record 2026-11-09 0447 queue run (done, reset-day claims verified already claimed, Free Supply no auto-claim, monthly Daily Gift Claimed, Days Left ticked 13 to 12 inside the same reset day; record commit b6ed78edd0 on records/2026-11-09)
   - source: ticker-1434 shop-claims execution record 2026-11-09 1449 queue run (partial, check-in FREE GIFT Go button unresponsive on three taps, no owned weekly pass, monthly gift already claimed, Donation Count 20/30 passing read; record commit 4860808ff on records/2026-11-09)
+  - source: ticker-1822 shop-claims execution record 2026-11-09 1850 queue run (partial, Hot Deals free pack plus Free Supply auto-claim plus monthly Daily Pickup, Weekly Pass list not scrolled, 18-00 reset 15th confirmation; record commit 6761c35d1 on records/2026-11-09)
 ---
 
 
@@ -1362,10 +1363,24 @@ the free and already paid for parts, never the paid unlocks.
 
 - Unit passes-2026-11-09-1057 by ticker-1434, about 14:38 to 14:49 local, status partial - every shop/pass surface in scope was checked; one free item (check-in FREE GIFT) remains unclaimed behind an unresponsive button; nothing else claimable today. Evidence in `_records_/2026-11-09/shop-claims/1449-queue-run.md` (commit 4860808ff on records/2026-11-09). Computer session cc-295 dropped once mid-unit and was restarted as cc-297 with no game state lost.
 - Hot Deals (Official Event tab): no free pack showing today. The carousel has two pages: page 1 is the Last War Store promo (ID points 1000); page 2 is a check-in event card with FREE GIFT ("Claim your gift today!") and FREE TOMORROW ("Randomly obtain one", x5 x5 x5). The FREE TOMORROW pack is not claimable until tomorrow.
-- Check-in FREE GIFT: three taps on the Go button produced no change (two at 500,937, one at the freshly measured centre 500,955; the control layer reported background clicks not reaching the control). Per rule R2 the Go-button method is ended inside this unit. The 1449 record's own follow-up (try the Events-hub route) is SUPERSEDED within the hour by the 1500 events unit: no check-in tab exists in the Events hub, so the hub route is a dead end. The gift's only known entry is the shop Go button, which ignores background clicks; the remaining idea is a foreground-click attempt on that button (or a different input route), for the next passes unit (passes-2026-11-09-1457 in the inbox).
+- Check-in FREE GIFT: three taps on the Go button produced no change (two at 500,937, one at the freshly measured centre 500,955; the control layer reported background clicks not reaching the control). Per rule R2 the Go-button method is ended inside this unit. The 1449 record's own follow-up (try the Events-hub route) is SUPERSEDED within the hour by the 1500 events unit: no check-in tab exists in the Events hub, so the hub route is a dead end. The gift's only known entry is the shop Go button, which ignores background clicks; the remaining idea is a foreground-click attempt on that button (or a different input route), for the next passes unit (passes-2026-11-09-1457 in the inbox). (2026-11-09 1850 update: the 1457 unit ran 18:47-18:50 and did not attempt the check-in Go button - the foreground-click idea is still open and passes to the next passes unit.)
 - Weekly Pass page: "Weekly Pass rewards reset at 18:00:00" read live. Free Supply chest: the page opened and no claim toast was observed - auto-claim unverified (it may have paid silently or already been claimed). No owned weekly pass: the S2 Drone Components Weekly Pass (Legendary, Daily Pickup x2, Total x7) and the S1 Drone Parts Weekly Pass (Epic, Daily Pickup x15, Total x105) both show a $4.99 Get Now offer, i.e. not owned - nothing to claim, nothing tapped. The Legendary Take All $19.99 row was not tapped.
 - Super Monthly Pass page: Monthly Pass, Squad 4 Lv.20, Days Left 12, Rewards Left 12. The Daily Pickup button reads "Claimed" - today's monthly gift was already claimed before this unit (no passes unit ran earlier today, so most likely by the owner).
 - Note for the activity metadata: the S1 Drone Parts and Coin Weekly Passes owned on 2026-10-25 have expired (S1 3 days left then, Coin 9 days left then); the page now offers S2 Drone Components and S1 Drone Parts as $4.99 purchases. No owned weekly pass remains, so the Daily Pickup step has nothing to claim until a pass is bought (owner decision, never bought by the agent).
 - Passing read for the donations profile: the Alliance Tech panel the game was left on read Donation Count 20/30 at about 14:38 PT - folded into alliance-donations 1.75.1 as the thirty-first replenishment data point.
 - No diamonds or money spent. No price tag tapped. No speedup items used. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: 0 claimed in this unit (monthly gift already claimed today, weekly passes not owned, Hot Deals free pack not showing, check-in FREE GIFT blocked on an unresponsive Go button), costs about 11 minutes, no items spent, verified yes, device_takeovers 0, follow_up passes-2026-11-09-1457-check-in-foreground.
+
+## What the 2026-11-09 1850 unit added - Hot Deals free pack, Free Supply auto-claim, monthly Daily Pickup, Weekly Pass scroll not done, partial
+
+- Unit passes-2026-11-09-1457 by ticker-1822, about 18:47 to 18:50 local, status partial. Evidence in `_records_/2026-11-09/shop-claims/1850-queue-run.md` (commit 6761c35d1 on records/2026-11-09). The 1449 check-in follow-up (foreground-click attempt on the Go button) was NOT attempted in this unit - it is still open and passes to the next passes unit.
+- Shop opened from the base cart icon on HOT DEALS.
+- Hot Deals free pack (Fast Growth Pack): Free Claim paid Resource Choice Chest (UR) x5, Iron Chest (UR) x2, Food Chest (UR) x2, Coin Chest (UR) x2; the page then read "Packs sold out". The free pack rotates - this is the Fast Growth Pack, where the 2026-11-08 1858 unit claimed the Drone Great Value Pack.
+- A second CONGRATULATIONS popup followed: "Free rewards have been automatically claimed" - a chest x1 and red gem 10 x1. This is the Free Supply auto-claim; recorded as observed, page not separately attributed.
+- Weekly Pass tab: rewards reset at 18:00:00 - the FIFTEENTH live confirmation of the line (the twelfth, thirteenth and fourteenth are the 2026-11-09 0218, 0447 and 1449 units). The Free Supply chest had already auto-claimed. The Legendary row shows "Instant Gain on Purchase" with Take All $19.99 - never tapped. Two pass cards visible, both offers, not owned pickups: S2 Drone Components Weekly Pass (Legendary, Daily Pickup x2, Total x7, Get Now $4.99) and S1 Drone Parts Weekly Pass (Epic, Daily Pickup x15, Total x105, Get Now $4.99). No Claim button on either card as shown.
+- Super Monthly Pass tab: Monthly Pass, Days Left 12, Squad 4 Lv.20. Daily Pickup claimed with the green Claim Reward button (one tap, no second tap needed): gold bars x2, red gem 100 x1, stamina 50 x2, iron x200, 5m speedup x60; the button then read Claimed. The $24.99 Monthly Pass Extension was not touched. Rewards Left: 12.
+- Monthly re-claimability explained: the 1449 unit read the monthly button as Claimed at 14:38, yet this unit claimed the Daily Pickup at 18:47 - the 18:00 reset refreshed the monthly Daily Pickup together with the Weekly Pass. The 1449 "most likely by the owner" inference stands for the pre-18:00 claim; this claim is the new reset day's. No contradiction.
+- The Season Battle Pass / Season Weekly Pass path was not hunted in the Week 8 hub, per Issue #469.
+- Not done: the Weekly Pass card list was not scrolled - cards below S1 (for example a Coin Weekly Pass, if still held) were not checked for an owned Pickup button. The next passes unit resumes with the Weekly Pass scroll. Blocker category h.
+- No diamonds or money spent. No price button, Renew, or paid unlock tapped.
+- Result stats: target 3, achieved 2, resources_gained Resource Choice Chest (UR) x5, Iron Chest (UR) x2, Food Chest (UR) x2, Coin Chest (UR) x2, chest x1, red gem 10 x1, gold bars x2, red gem 100 x1, stamina 50 x2, iron x200, 5m speedup x60, costs about 4 minutes of unit time, no items spent, verified yes, blocker_category h, points 0.

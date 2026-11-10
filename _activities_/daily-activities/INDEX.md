@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-10T02:42:02Z
+modified: 2026-11-10T03:49:11Z
 level: L1
-version: 1.22.0
+version: 1.23.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: pre-reset zero sweep execution record 2026-11-08 1740 queue run (second pass, partial, no line moved to zero since 1712, 3 at zero, 1 stack posture, 12 not at zero, 5 unreadable, crystal and glittering not located, power 149,209,253 holds, fifteenth same-day no-train confirmation, scheduling shortfall confirmed a second time; record commit 5f3a904f4 on records/2026-11-08)
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, 7 of 23 ledger lines read live, 6 units raised to priority 1; record commit c9a86fa74 on records/2026-11-09)
   - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, 5 of 23 ledger lines read live, pair total 12 of 23; record commit 2f4d783d8 on records/2026-11-09)
+  - source: ticker-1822 execution records 2026-11-09 1838 1842 1846 1850 queue runs (mail gifts help done, passes partial, three 1403 units expired unrun; record commit 6761c35d1 on records/2026-11-09)
 ---
 
 # Routine activities
@@ -498,3 +499,13 @@ claims cited below were read in this pass's passes unit
 - Sweep actions taken: one inbox unit raised to priority 1 for a line verified non-zero: trucks-2026-11-09-1457. Pool validated after the edit. No new units enqueued - every unread line already has a queued unit for the 18:00-18:57 slots.
 - Count: 5 of 23 lines read live this unit, 4 non-zero; the pair read 12 of 23. The remaining 11 lines are covered by the 18:00-18:57 batch.
 - No diamonds or money spent. No speedup or stamina item used. Tracker untouched (partial unit). Blocker category: h (by-design partial - the pair's walk ends here; the 18:00-18:57 batch verifies the remaining lines). Zombie Invasion: tab still absent from the Events hub; no chain seeded, per the standing rule.
+
+## Ended trade day close, 2026-11-09 19:00 - fuller consolidation sweep (this run)
+
+- This run is the first organizer pass after the 19:00 local reset, so it does the fuller consolidation sweep of the ended trade day (2026-11-08 19:00 to 2026-11-09 19:00) in addition to the incremental fold. Sweep verification: the watermark chain is continuous across the day's 19 organizer runs (1432 worked from 1332, 1532 from 1432, 1632 from 1532, 1732 from 1632, 1832 from 1732), and the only substantive commit after the 1832 watermark (2f4d783d8) is the ticker-1822 pass (6761c35d1), folded here. No ended-trade-day record is left unfolded. The pr-integration 1915 pass merged records PR #531 at the 19:00 batch after re-verifying the Issue #544 repair by merged-tree file counts, so the day's records are complete in main.
+- Last pass of the day, ticker-1822 (18:22-18:51): mail-1430 done (9 mails), gifts-1430 done (1699 Regular + 95 Premium), help-1430 done (2 ally requests), passes-1457 partial (free pack, Free Supply, monthly Daily Pickup; Weekly Pass scroll not done). The 14:03 arms-race, donations and training units all expired unrun - window passed before execution, reaped 18:27:54 in the same pass.
+- Final counters at the reset: trucks 4/5 dispatch, 1/4 plunder (1748 read, unchanged since 02:50) - shortfall dispatch -1, plunder -3; the fix-up trucks-1457 (priority 1, expiry 18:57) has no execution record on the branch and closes unrun. Donations 19/30 remaining at the 1413 close, no later donations unit - 11 of the day's 30 allowance unspent. Arms Race Hero Advancement phase unworked (1403 expired); cumulative chest 7/8 unclaimed at the 1500 read. Training 1403 expired.
+- Power at the close: Total Power 146,736,949 at 18:33 (mail entry read), 6,000 above the 146,730,949 at about 17:53 - the day's fall levelled at the close (Issue #482 datapoint, commented by this run). Gift Level 28 progress 198,624,140 / 206,300,000 at the 1842 close. Alliance leader changed during the day: Abyss Apex (was Jerry Apex at the 0417 read).
+- Still open at the reset, carried to the next trade day: the Weekly Pass scroll (next passes unit resumes with it); the check-in FREE GIFT foreground-click idea (1449 follow-up, still unattempted); the 0335 Rare Iron Mine gathering pin claim (unchecked after two radar units); the radar map pins (unclosed, handed to radar-1803); Quick Dispatch for the 0926 newcomer (survivors); the Season Battle Pass path in the Week 8 hub (Issue #469); the duel-score closing total for the ended day. No execution record for the 18:00-18:57 batch units (radar-1803, train-1830, daily-missions-1800, duel-score-1830, events-1857, secrets-1803, harvest-1803) has landed on the records branch at run close; their outcomes are not recorded here.
+- Next trade day: the planner 1840 staged 12 units (06:03-06:30 slots 2026-11-10: mail, help, gifts, harvest, radar, survivors, train, training, donations, arms-race, star-ceremony, duel-score).
+- No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
