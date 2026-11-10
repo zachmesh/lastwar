@@ -2193,3 +2193,13 @@ modified: 2026-11-10T14:21:00Z
   the 1032 run. Status: done. Full detail in
   knowledge-organization/1132-run.md.
 
+## 11:40 to about 11:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-1140. Plan staged 5
+  units into the live pool (22:57 slots: passes, secrets,
+  treasures, trucks, events; 72 already present),
+  pre-reset sweep pair already present in the live pool (1630
+  and 1730), scout diff re-applied on the 0615 observation with
+  identical 0 counts (idempotent), 0 withdrawals, no issues
+  filed. Pool by_state: inbox 77, claimed 0, done 1451. Status:
+  done. Full detail in queue-planning/1140-run.md.
