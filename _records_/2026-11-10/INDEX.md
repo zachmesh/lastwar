@@ -2093,6 +2093,20 @@ modified: 2026-11-10T14:21:00Z
   synced to the owner Slack DM. Status: done. Full
   detail in pr-integration/1100-run.md.
 
+  PR integration 1115 run (non-batch pass; checker plain due in the
+  11:00 window but merge-aware not due, PR 576 already merged
+  11:02:49 in this window). Opened records PR 583 for
+  records/2026-11-10 (post-1100 batch, 1 commit beyond main, clean,
+  awaiting the 15:00 batch). Records PRs 351 and 301 still conflict
+  with main on the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-probed, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against current main 104511d0, awaiting the owner
+  decision (OD-20261108-01 open, age 3 days). No comments posted
+  this pass per the forward comment convention. No merge, so no
+  local sync-back or Slack sync owed. Status: done. Full detail in
+  pr-integration/1115-run.md.
+
 ## 11:15 to 11:33 - Ticker pass ticker-1104, donations unit partial
 
 - Donations unit donations-2026-11-10-1719 partial. Quick
