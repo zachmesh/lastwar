@@ -2511,6 +2511,54 @@ modified: 2026-11-10T14:21:00Z
   fold are now verified not owned. Full detail in
   shop-claims/1335-queue-run.md.
 
+## 13:32 to about 14:00 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-1332.
+  Folded ticker-1204 survivors/training and ticker-1234
+  mail/gifts records into 4 profiles (PR #588, OPEN and
+  MERGEABLE + CLEAN, 1 commit, base main 72ee1dd9c):
+  survivor-intake 1.48.0 to 1.49.0 (gate line not verified in
+  the two views searched; tent face bubbles are posted
+  survivors, not the waiting line - white bubble tap at
+  226,612 opened TRAIN UNITS, not a survivor card; next
+  search pans to the bottom-right corner, red-roofed
+  structure about 920,870, for the Zombies-signed gate;
+  Quick Dispatch still owed for the 0321 + 0844 recruits),
+  troop-training 1.37.0 to 1.38.0 (Lv.24 requeued T8 x666,
+  verified running - BREAKS the five-consecutive-partial R2
+  process-failure run; finished batch of 666 collected on
+  the tent tap, +707,958 power; Drill Ground Full did NOT
+  block this collection or requeue, the "blocks requeue"
+  claim is qualified; Lv.30 busy/idle still unverified, the
+  1d 17:14:37 button time is the prospective batch duration,
+  not a remaining timer), mail-rewards 1.35.0 to 1.36.0
+  (Event train rewards claimed in full - gold badge 2.5K,
+  supply chests x53, red gem 100, blue crystal 2.0K, 5m
+  speedups x20; mail-list back arrow re-grounded at 62,948
+  after four missed taps; entry worked on standard framing,
+  so the #580 framing blocker is intermittent),
+  alliance-gifts 1.48.0 to 1.49.0 (Regular 1193 and Premium
+  43 claimed in full; Gift Level 28 progress 202,479,820 to
+  202,502,400; per-tab Claim All points re-confirmed -
+  Regular 498,936, Premium 732,933; Regular window exact,
+  sixth exact-match datapoint; A-01 verification pass - no
+  points figure in the record's stats). Contradictions
+  resolved (4): T10 stats (720.01/38.03/7.55 superseded by
+  750.0/38.45/7.79), T8 stats (520.63/28.37/5.72 superseded
+  by 531.25/28.69/5.84), Drill Ground Full "blocks requeue"
+  qualified by the live requeue, and the survivors
+  22-partial framing corrected (closed history, not a
+  continuation). Issue comments posted on #150, #183, #300
+  and #580. No new issue filed. PR #586 merged with 0
+  comments; no new knowledge-issue comments since the 1232
+  run. The ticker-1314 batch (help, train, star-ceremony,
+  duel-score, passes) landed mid-run and belongs to the next
+  run. The worker service restarted mid-run (about
+  13:53-13:55 PT) and wiped the /tmp worktree; the profile
+  branch was already pushed and PR #588 already open, so no
+  work was lost. Status: done. Full detail in
+  knowledge-organization/1332-run.md.
+
 ## 13:39 to about 13:52 - PR catch-all pass
 
 - PR catch-all pass pr-catchall-2026-11-10-1339 (no-op).
