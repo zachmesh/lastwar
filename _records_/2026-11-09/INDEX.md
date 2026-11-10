@@ -2702,3 +2702,22 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 - Donations unit donations-2026-11-09-1803 partial, close unverified: 30 coin donations attempted on Quick Gathering (2/10, recommended marker), count read live 30/30 to 5/30 in six batches of 5 (300 coin each); final 5 unproven - the coin button greyed with a 00:17:47 timer hiding the count, no live 0/30 read. Footer Tech Donation Today fell 3300 to 3050 while donating (Issue #417 pattern, disqualified as a closing count; data point for Issue #500). Re-read unit donations-2026-11-10-0330 enqueued, not before 19:52 PST. Session window corrected to 19:21-19:30, about 9 minutes; see alliance-donations/1935-queue-run-correction.md. Full detail in alliance-donations/1935-queue-run.md.
 
 - Radar unit radar-2026-11-09-1803 done (stack posture, duel day 2): radar Lv.13, points 348, stored 0/40, stamina 82, gauge 100%; restore 12 tasks about 23:39-23:41 tonight (both line forms read live and agreeing). No execute/claim owed - stack empty, nothing claimed per the odd-day claim rule. Pins inventoried in two swept sectors: none standing; the 1754 set unseen (fate unverified). Gold NEW! icon 6th sighting, untouched. "Violet's Gift received!" toast twice, no measured gain. Session window corrected to 19:32-19:37, about 5 minutes; see radar-tasks/1945-queue-run-correction.md. Full detail in radar-tasks/1945-queue-run.md.
+
+- PR catch-all pass pr-catchall-2026-11-09-1939 (no-op).
+  Three open PRs scanned, none owned by this job. PRs 531, 542
+  and 543 all merged since the 1839 pass (531 at the 19:00 batch,
+  merge commit 6043b1eb6, after the Issue 544 repair was
+  re-verified); main moved c834cf05d to 6043b1eb6. PR 425 CLEAN
+  but owner-gated, OD-20261108-01 still open, no owner decision.
+  PRs 351 and 301 still CONFLICTING on the single action-log
+  append, fresh integrator 1745 follow-ups on 351 (none visible
+  on 301 since the 1615 pass). No adoption, fix, hand-off or
+  stale-owner flag. Issues: 94 open, zero unclassified, one
+  created since the 1839 pass (issue 544, tooling and records,
+  follow-up repair verified and PR 531 merged); owner-decision
+  issues 132, 154 and 335 over 24 hours with statements current;
+  issue 514 deadline 2026-11-12 18:00 UTC, issue 517 no deadline
+  stated. Delivery by temporary index, no checkout, tree verified
+  to hold all ten top-level entries before push. VPS disk slid to
+  84 percent, 1.6G free. Status: no-op. Full detail in
+  pr-catchall/1939-run.md.
