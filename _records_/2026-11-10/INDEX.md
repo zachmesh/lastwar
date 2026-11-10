@@ -405,3 +405,7 @@ of 2026-10-28.
   0), chest 11/15, badge cleared, both Dig buttons
   greyed. No fragment exchange. Full detail in
   hidden-treasures/0223-queue-run.md.
+
+## 02:30 to about 02:40 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-10-0230 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge, no knowledge merge. Records PR 559 head moved during the pass to 069a94c7a by the ticker-0204 delivery, re-probed CLEAN and tree-safe at the new head; records PR 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against unchanged main, OD-20261108-01 still open (age 2 days); no new comments posted - main and all heads unchanged since the 0145 notes except 559 ticker append. Status: done. Full detail in pr-integration/0230-run.md.
