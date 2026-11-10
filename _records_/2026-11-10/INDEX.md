@@ -593,3 +593,21 @@ of 2026-10-28.
 ## 03:30 to about 03:35 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0330 (done). NON-batch pass (checker _tools_/records_batch.py plain due but merge-aware not due - PR 556 already merged 03:05 in this window, next batch 07:00); no merges; records PR 559 re-verified CLEAN at new head 047fcf81 (35 commits ahead), awaits the 07:00 batch, no new comment; records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged, no new comments; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open (age 2 days), no new comment. No local main sync-back (no merges). Status: done. Full detail in pr-integration/0330-run.md.
+
+## 03:32 to about 03:40 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-0332.
+  Own PR 425 owner-gated, clean, no unaddressed feedback.
+  Implemented issue 563 (label tooling) as PR 567: `sync`
+  now reports `completion_markers_lost` - markers aged out
+  past 7 days with no local done record, i.e. closings the
+  delivery never carried - separately from
+  `completion_markers_reaped`, with a warning naming the
+  lost units (option 1 from #563). Commit 67ef61de1,
+  branch work/completion-markers-lost-563. Validated on an
+  isolated /tmp scratch pool only: py_compile OK plus 9/9
+  fixture assertions (two lost closings named exactly,
+  healthy aged reap distinguished, fresh/no-timestamp
+  markers kept, second sync idempotent). Issue 563
+  commented with the implementing PR. Status: done. Full
+  detail in tool-development/0332-run.md.
