@@ -2706,3 +2706,15 @@ modified: 2026-11-10T14:21:00Z
   unit since 2026-10-30 to take both on the first try. No
   milestone pending; the $99.99 offer untouched. Full detail
   in vip-rewards/1438-queue-run.md.
+
+## 14:40 to about 14:56 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-1440. Plan staged 12
+  units into the live pool (2026-11-11 02:03/02:30 slots;
+  58 already present, 6 skipped done current, 2 skipped
+  closed), pre-reset sweep pair already present in the live
+  pool (1630 and 1730), scout diff re-applied on the 0615
+  observation with identical 0 counts (idempotent), 0
+  withdrawals, no issues filed. Pool by_state: inbox 70,
+  claimed 0, done 1467. Status: done. Full detail in
+  queue-planning/1440-run.md.
