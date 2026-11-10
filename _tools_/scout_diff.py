@@ -215,12 +215,13 @@ def _is_empty_list_marker(text):
     slug like ``none-builders-hut-quest``. ``empty`` is the same
     marker. A real label such as ``nonexistent-thing`` does not
     match: the marker word must end the text or be followed by a
-    space or an opening parenthesis.
+    space, an opening parenthesis, or sentence punctuation
+    (``none.``, ``empty:`` - issue #536).
     """
     lowered = _strip_inline_comment(text).lower()
     if lowered in ("none", "empty"):
         return True
-    return bool(re.match(r"^(none|empty)[\s(]", lowered))
+    return bool(re.match(r"^(none|empty)([\s(]|[.,;:!?])", lowered))
 
 
 def _parse_labels_block(lines, start):
@@ -810,6 +811,10 @@ def classify(item, regulars, roster, reg_by_activity):
     if not label or state not in KNOWN_STATES:
         return {"class": "unexplained",
                 "reason": "missing label or unknown state"}
+    if _is_empty_list_marker(label):
+        return {"class": "not-actionable", "owner": "",
+                "reason": "empty-list marker, not a label "
+                          "(issue #536)"}
     if suggested and suggested != "new" and suggested in regulars:
         owner = suggested
     elif suggested and suggested != "new" and \
@@ -1210,6 +1215,14 @@ def run(args):
     counts = {"info_satisfied": 0}
 
     def file_candidate(slug, label, surface, clues, from_item):
+        # Issue #536: a slug in the empty-list family (none-*,
+        # empty-*) is prose for "no unmatched labels", never a
+        # discovery - a marker form the parser did not recognise
+        # must not reach the register here either. A real label
+        # survives: slugify("nonexistent-thing") is
+        # "nonexistent-thing", not "none-*".
+        if slug.startswith(("none-", "empty-")):
+            return
         if slug in candidates:
             rec = candidates[slug]
             for clue in clues:
