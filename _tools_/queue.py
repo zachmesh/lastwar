@@ -2399,6 +2399,40 @@ def points_without_achieved(stats):
             and "achieved" not in stats)
 
 
+def points_is_progress_delta(stats, regular=None):
+    """True when stats.points is a progress-bar delta on a gifts unit (issue #300).
+
+    points is score gained in this unit, for scoring types only
+    (task-unit-queue-design.md per-unit measurement table: duel,
+    Arms Race, radar). Gifts is not a scoring type - gifts pay
+    no score, they feed the alliance Gift Level progress bar,
+    and the profile measures them in progress-bar points
+    (per-gift points, Claim All points re-grounded). A points
+    figure on a gifts closing is therefore the progress-bar
+    delta by construction, not a unit score: the only two gifts
+    closings ever to carry points both equal the progress delta
+    named in their own summaries - gifts-2026-11-09-0230 wrote
+    points 1090 against "Gift Level 28 progress 195,637,370
+    to 195,638,460" (delta 1,090) and gifts-2026-11-09-1430
+    wrote points 46760 against "Gift Level 28 progress
+    +46,760" - while their achieved is a claim count (39 and
+    1794), so neither the equality detector nor the
+    no-achieved detector fires. The retro summed 47,850 as
+    points gained; its honest window total is 2,463. This is
+    a warning, never a block, and it is scoped to gifts only:
+    the genuine non-equal gains stay counted - arms-race
+    2026-11-09-1003 points 2000 against achieved 8000 (a
+    rally kill, distinct from the phase total), donations
+    points 50, daily-missions points 100.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular != "gifts":
+        return False
+    points = _stat_number(stats.get("points"))
+    return points is not None and points != 0
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
     if state != "claimed":
@@ -2419,6 +2453,7 @@ def cmd_complete(args):
     missing = missing_stats_keys(args.status, stats)
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
+    points_prog = points_is_progress_delta(stats, fields.get("regular"))
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -2435,7 +2470,9 @@ def cmd_complete(args):
         "stats_warnings": ((["points duplicates achieved"]
                             if points_dup else [])
                            + (["points without achieved"]
-                              if points_noach else [])),
+                              if points_noach else [])
+                           + (["points is progress delta"]
+                              if points_prog else [])),
     }
     # Screen-blocking overlay (issue #436): a short closing that
     # names its overlay records the pool-level blocker, so the
@@ -2487,6 +2524,12 @@ def cmd_complete(args):
               f"and no stats.achieved - points is score gained "
               f"in this unit, not a running total read; a screen "
               f"total belongs in achieved only")
+    if points_prog:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"on a gifts unit - points is score gained in "
+              f"this unit and gifts pay no score; the Gift "
+              f"Level progress gain belongs in the summary and "
+              f"resources_gained only")
     if blocker_note:
         print(blocker_note)
     # Completed-unit marker (issue #438): the done record above
