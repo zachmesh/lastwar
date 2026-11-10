@@ -2739,3 +2739,35 @@ modified: 2026-11-10T14:21:00Z
   miss - the 1157 plan was never executed, no arms-race unit ran in
   the window. One issue comment posted (#565). No new issue filed.
   Status: done. Full detail in knowledge-organization/1432-run.md.
+
+## 15:12 to 15:21 - Ticker pass ticker-1503, scout unit partial
+
+- Scout unit scout-2026-11-09-1800 partial. Stale post-reset
+  head executed against the live game: base re-read (power
+  148,765,978, food 629.3M, iron 952.1M, coin 92.6M,
+  diamonds 6,267, stamina 120); Drill Ground level-up
+  observed (Power +21,600 to 140,200, now Lv.27) and its
+  upgrade panel inspected only (Lv.27 to 28, all costs met,
+  14d 07:32:57; Upgrade and Finish Now untouched); Alliance
+  Gift (R) toast seen. Red dots 8 seen, 5 explained, 3
+  unexplained (Inventory, skull badge 1 with 00:00:47
+  countdown, radio badge 11). Inventory never opened - the
+  point 880,841 failed twice and is retired per rule R2.
+  Store, VIP, passes, missions, duel, radar, heroes and
+  event pages unwalked; the staged scout-midday-2026-11-10-0700
+  unit covers them. Full detail in
+  perception-scout/1521-queue-run.md.
+
+## 15:20 to 15:31 - Ticker pass ticker-1503, harvest unit partial
+
+- Harvest unit harvest-2026-11-10-1403 partial. All three
+  panel pools collected exact (coin +5,236,147 to 97,884,678;
+  food +2,052,949 to 631,359,373; iron +1,922,772 to
+  954,108,872; all Available 0); no resource bubbles standing
+  after. Armed Truck still unlocated (5th deferral) - the 1210
+  candidate at 389,260 is the "!" bubble over the timer
+  building, and the left-column truck icon opens the Secret
+  Command Post (Assist Allies 5/5, Plunder Others 0/3);
+  comment posted on issue #566. VS timer reads 02:39:31 and
+  02:35:02 resolve the 1521 OCR conflict. Full detail in
+  resource-collection/1531-queue-run.md.
