@@ -1163,3 +1163,17 @@ of 2026-10-28.
   #563 both merged since the 0532 triage (PRs #572 and #567);
   no other unimplemented tooling item. Status: no-op.
   Full detail in tool-development/0632-run.md.
+- Integrator pass pr-integration-2026-11-10-0630.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00). No merges. Records PR 569 clean at new head
+  e9ce5634, awaiting the 07:00 batch. Records PRs 351
+  and 301 still conflict with main on the single
+  action-log file, heads unchanged, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated,
+  clean, awaiting the owner decision (OD-20261108-01
+  open, age 2 days). No new comments posted: main
+  unchanged since the 0600 pass and all PR heads
+  unchanged except 569, which moved only by the 0615
+  run-record commit. Status: done.
+  Full detail in pr-integration/0630-run.md.
