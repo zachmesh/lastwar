@@ -1005,6 +1005,21 @@ of 2026-10-28.
   0445. Status: done. Full detail in
   pr-integration/0530-run.md.
 
+
+## 05:37 to 05:51 - Ticker pass ticker-0534, donations unit partial
+
+- Donations unit donations-2026-11-10-0415 partial. Seven coin
+  donations verified live on Quick Construction, Donation Count
+  8/30 to 1/30, 6,300 coin spent, no diamonds. Entry via the
+  Alliance label point (930,721) after the shield-centre tap
+  (934,685) did nothing; Techs tile (709,683) first try. Stopped
+  at the live-read 1/30 per the changed route - the final
+  donation goes via War-tab Rallied Attack in the re-read unit.
+  Replenishment point for Issue #160: 0/30 at 02:53 to 8/30 at
+  05:38, about 1 per 20 minutes. OCR misreads 6 as 5; image
+  verification used at 6/30, 5/30 and 1/30. Full detail in
+  alliance-donations/0534-queue-run.md.
+
 ## 05:39 to about 05:44 - PR catch-all pass
 
 - PR catch-all pass pr-catchall-2026-11-10-0539 (no-op).
