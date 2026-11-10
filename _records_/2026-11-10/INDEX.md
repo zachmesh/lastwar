@@ -2647,3 +2647,7 @@ modified: 2026-11-10T14:21:00Z
   at 05:13). The 5th UR Mega dispatch and the remaining
   plunders resume in the next trucks unit. Full detail
   in truck-plunder/1411-queue-run.md.
+
+## 14:15 to about 14:22 - PR integration pass pr-integration-2026-11-10-1415
+
+- PR integration pass pr-integration-2026-11-10-1415 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); no merges. Tools PR 425 re-verified CLEAN against new main d87c4311 and still owner-gated (OD-20261108-01 open, issue #422 open), no new comment per the no-repeat rule. Records PR 583 carried to the 15:00 batch at head 9f2bd335 (merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged, updated re-check notes posted naming new main d87c4311 (issuecomment-6780803315, issuecomment-6780803688). End-of-pass sweep: 4 open PRs, all decided, no unprocessed PRs. Status: done. Full detail in pr-integration/1415-run.md.
