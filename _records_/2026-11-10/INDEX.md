@@ -474,3 +474,7 @@ of 2026-10-28.
   a task), unexplained red dots 0; 0 withdrawals. No issues
   filed. Pool inbox 69, claimed 1, done 1427. Status: done.
   Full detail in queue-planning/0240-run.md.
+
+## 02:45 to about 02:55 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-10-0245 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); merged knowledge PR 564 (squash bf8488af, 10 profiles folded, gifts 1.46.0, help 1.36.0, mail 1.33.0, train 1.37.0, duel 1.36.0, shop 1.46.0, secrets 1.29.0, events 1.36.0, treasures 1.16.0, arms-race 1.74.0); local main fast-forwarded to bf8488af. Records PRs 559 and 556 re-probed CLEAN against the new main, awaiting the 03:00 batch. Records PRs 351 and 301 still CONFLICTING on the action-log file, re-check comments posted; tools PR 425 owner-gated, re-verified CLEAN against the new main, OD-20261108-01 still open, re-verification comment posted. Status: done. Full detail in pr-integration/0245-run.md.
