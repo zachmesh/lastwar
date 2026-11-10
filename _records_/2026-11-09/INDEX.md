@@ -2835,3 +2835,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 ## 20:39 to 21:25 - Daily retro pass (retro-review-2026-11-09-2115, done)
 
 - Retro file _records_/retro/2026-11-09.md and data appendix (723 branch units, 734 live, gap 11, verdict FAIL; batch compliance 0 violations out of 6). Rolling series entry appended; owner-decisions register v1.9.0 to v2.0.0 with two new items (OD-20261109-01 #514 Transfer Surge, OD-20261109-02 #517 Builders Hut Lv.26). Threshold breaches: 7 named (unverified 73.2%, expired day counts, donations 0.1818, #118 at 7 days, #300 recurrence, ticker-0634 missing ~110h, ledger 12/23); red dots 0, first time. Issues: 2 filed (#549 power fall, #550 Desert Storm), 4 closed (#136 duel-score first pairs, #484 radar first tap, #544 branch repair, #149 red dots 0), 1 reopened (#300 gifts progress-as-points), 29 commented plus 1 correction on #417. Full detail in retro-review/2115-run.md.
+
+## 21:13 to 21:26 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-09-2113 (done). NON-batch pass (checker _tools_/records_batch.py due - not due, outside every batch window, next batch 23:00 PT; merge-aware agrees); no merges; re-verification comments posted on 425, 351 and 301 (main moved to d2bcbc14 since the 2030 notes); records PR 545 verified CLEAN and tree-safe at head d88d542b, awaits the 23:00 batch; records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/2113-run.md.
