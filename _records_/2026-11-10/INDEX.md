@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T12:35:00Z
+modified: 2026-11-10T12:55:00Z
 level: L0
 version: 1.0.0
 description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units
@@ -849,3 +849,23 @@ of 2026-10-28.
   Refresh spend. Issues commented: #183, #565, #570, #482. No new
   issue filed. Status: done. Full detail in
   knowledge-organization/0432-run.md.
+
+## 04:45 to about 12:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0445.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00): knowledge PR 571 reviewed in full and
+  squash-merged (22ffa273a, eight _activities_ profiles
+  folded, training 1.36.0, arms-race 1.75.0, gifts 1.47.0,
+  help 1.37.0, mail 1.34.0, train 1.38.0, duel 1.37.0,
+  trucks 1.38.0); local main fast-forwarded to 22ffa273a.
+  Records PR 569 clean at head 641e1d95, awaiting the
+  07:00 batch. Records PRs 351 and 301 still conflict
+  with main on the single action-log file, heads unchanged,
+  carried for branch-side reconciliation. Tools PR 425
+  owner-gated, clean, awaiting the owner decision
+  (OD-20261108-01 open, age 2 days). Re-verification
+  comments posted on 425, 351 and 301 because main moved
+  this pass. Status: done. Full detail in
+  pr-integration/0445-run.md.
