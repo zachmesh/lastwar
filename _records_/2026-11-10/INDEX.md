@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T12:55:00Z
+modified: 2026-11-10T12:55:44Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units
+description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures)
 status: unverified
 ---
 
@@ -869,3 +869,59 @@ of 2026-10-28.
   comments posted on 425, 351 and 301 because main moved
   this pass. Status: done. Full detail in
   pr-integration/0445-run.md.
+
+## 04:35 to 04:37 - Ticker pass ticker-0434, duel-score unit done
+
+- Duel-score unit duel-score-2026-11-10-0230 done. Personal
+  daily total read live on the VS panel: 1,650,000 against the
+  3,600,000 target (gap 1,950,000), up from 450,000 at the
+  01:51 read. Theme Base Expansion, 13:23:35 left; all three
+  reward chests (40,000 / 150,000 / 540,000) show green checks.
+  No ceremony trophy icon on the base screen. Full detail in
+  alliance-duel/0435-queue-run.md.
+
+## 04:38 to 04:39 - Ticker pass ticker-0434, star-ceremony unit done
+
+- Star-ceremony unit star-ceremony-2026-11-10-0230 done. No
+  trophy icon on the base screen beside the Alliance button, so
+  no Star Ceremony is waiting. Duel total read live on the VS
+  panel: 1,650,000 against the 3,600,000 target (gap
+  1,950,000), unchanged from the 04:35 read. Full detail in
+  alliance-duel/0438-queue-run.md.
+
+## 04:39 to 04:42 - Ticker pass ticker-0434, passes unit done
+
+- Passes unit passes-2026-11-10-0257 done. Nothing claimable
+  in this 18:00 cycle: Weekly Pass list fully scrolled, all
+  four cards are $4.99 purchase offers, Free Supply already
+  taken; Monthly Daily Pickup reads Claimed. Monthly Days
+  Left / Rewards Left now read 11, down from 12 at 02:14
+  (cause unmeasured). Check-in hunt: the Calendar button on
+  the Events hub Base Building card opens the duel theme
+  schedule ("HOW TO GET POINTS"), not a check-in entry -
+  that candidate is ruled out, Issue #553 stays open. Full
+  detail in shop-claims/0440-queue-run.md.
+
+## 04:43 to 04:45 - Ticker pass ticker-0434, secrets unit done
+
+- Secrets unit secrets-2026-11-10-0257 done. Nothing pending:
+  all 8 visible Your Tasks cards stamped PERFECT with no
+  Claim button, Assist Allies 5/5 at cap, Reward Recovery
+  newest record (2026-11-6 18:00) already CLAIMED. Open
+  observation: the list holds 8 cards while the 02:18 record
+  claimed 9 - no 5th SR card exists in the list; the count
+  difference is recorded, not resolved. Total Power
+  148,058,020 on the base screen. Full detail in
+  secret-missions/0444-queue-run.md.
+
+## 04:46 to 04:47 - Ticker pass ticker-0434, treasures unit done
+
+- Treasures unit treasures-2026-11-10-0257 done. No dig
+  possible: fragment stock M1 x13, M2 x12, M3 x0, M4 x6,
+  M5 x1, M6 x6, M7 x10, chest progress 11/15, both Dig
+  buttons greyed; stock unchanged since the 02:23 dig.
+  Tab badge cleared. Follow-up: the Rewards button (gift
+  icon, top right of the map) was not opened - the next
+  treasures unit should check whether chest-progress tier
+  rewards are claimable there. Full detail in
+  hidden-treasures/0446-queue-run.md.

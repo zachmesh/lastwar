@@ -36,28 +36,28 @@
  },
  "duel-score": {
   "status": "done",
-  "at": "2026-11-10T01:52:40-08:00",
-  "note": "Personal duel total 450,000 of 3,600,000 (gap 3,150,000)"
+  "at": "2026-11-10T04:37:35-08:00",
+  "note": "Personal total 1,650,000 of 3,600,000 (gap 1,950,000)"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-11-10T02:11:55-08:00",
-  "note": "No ceremony waiting; duel total 450,000 of 3,600,000"
+  "at": "2026-11-10T04:38:26-08:00",
+  "note": "No Star Ceremony waiting; duel total 1,650,000 of 3,600,000"
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-10T02:14:39-08:00",
-  "note": "Nothing claimable this cycle; check-in hunt continues, Issue #553"
+  "at": "2026-11-10T04:41:58-08:00",
+  "note": "Nothing claimable this cycle; Calendar ruled out as check-in entry (#553 open)"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-10T02:19:06-08:00",
-  "note": "All 9 tasks claimed; assists 5/5 at cap; recovery already CLAIMED"
+  "at": "2026-11-10T04:45:13-08:00",
+  "note": "Nothing pending; all visible tasks PERFECT, assists 5/5, recovery CLAIMED"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-11-10T02:23:32-08:00",
-  "note": "One dig done; chest 11/15; M3 back to 0"
+  "at": "2026-11-10T04:47:24-08:00",
+  "note": "No dig possible (M3 at 0); chest 11/15; Rewards button unchecked"
  },
  "donations": {
   "status": "done",
