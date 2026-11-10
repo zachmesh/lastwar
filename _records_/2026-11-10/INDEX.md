@@ -1343,3 +1343,16 @@ modified: 2026-11-10T14:21:00Z
   posted: main and all heads unchanged since the 0715
   pass. Status: done. Full detail in
   pr-integration/0730-run.md.
+
+## 07:32 to about 07:47 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-0732 (done).
+  Own PR 425 still owner-gated (OD-20261108-01 open, age 2 days),
+  clean against main a8472678b, no unaddressed feedback. New
+  tooling issue #575 (game canvas ignores taps while the pixel
+  stream stays live) taken up: tapcal verify now names an
+  on-target ignored tap input-blocked instead of retrying the
+  same aim; PR #577 opened (commit 926aae7d9), issue #575
+  commented. Validation 26/26 fixture assertions on isolated
+  /tmp fixtures only. Status: done. Full detail in
+  tool-development/0732-run.md.
