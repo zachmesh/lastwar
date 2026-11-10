@@ -2414,3 +2414,7 @@ modified: 2026-11-10T14:21:00Z
   pools. Own PR 425 still owner-gated (OD-20261108-01 open,
   age 3 days), no action owed. Status: done. Full detail in
   tool-development/1232-run.md.
+
+## 12:45 to about 12:57 - PR integration pass pr-integration-2026-11-10-1245
+
+- PR integration pass pr-integration-2026-11-10-1245 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); no records merge. Knowledge PR 586 squash-merged (four-profile fold: radar 1.69.0, donations 1.87.0, arms-race 1.79.0, resource-collection 1.55.0; Refs #585) and tools PR 587 squash-merged (star-ceremony screen totals excluded, retro_report.py 1.5.3; Refs #483; arrived mid-pass); new main 72ee1dd9; local main fast-forwarded to 72ee1dd9. Records PR 583 awaiting the 15:00 batch (merge-tree exit 0, tree 1674130b). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, clean against the first new main then CONFLICTING on _tools_/INDEX.md after the 587 merge, OD-20261108-01 still open; re-verification comments posted on 425, 351 and 301 after the main moves (verified URLs; the 1200 record's claimed notes are not on the threads). Status: done. Full detail in pr-integration/1245-run.md.
