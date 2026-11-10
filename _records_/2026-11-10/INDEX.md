@@ -1556,3 +1556,46 @@ modified: 2026-11-10T14:21:00Z
   retro's threshold check. 0 withdrawals. No issues filed.
   Pool inbox 73, claimed 0, done 1447. Status: no-op.
   Full detail in queue-planning/0846-run.md.
+## 08:36 to about 08:44 - Survivor intake, ticker-0834 queue run
+
+- Unit survivors-2026-11-10-0603, status partial.
+  Gate line verified live at entry: 1 "?" survivor
+  (the remaining second survivor from the 0321 unit).
+  One figure tap at norm 109,696 cleared the "?"
+  bubble; two re-read screenshots show the gate clear,
+  0 "?" remaining, no recruit card and no name or role
+  read. Quick Dispatch was NOT run: visual grounding
+  pointed at norm 354,210, which selected Smelter
+  Lv.26, not Iron Mine Lv.27; deselected cleanly, no
+  upgrade tapped. Quick Dispatch stays owed to the
+  next survivors unit. Full detail in
+  survivor-intake/0844-queue-run.md.
+
+## 08:45 to about 08:46 - Research queue, ticker-0834 queue run
+
+- Unit research-2026-11-10-0603, status done. Flask
+  tap opened the research tree (SPECIAL FORCES), queue
+  state read live from the bottom bar: slot 1 in
+  progress, 1d 01:35:27 left; slot 2 Idle. Nothing
+  finished, no Complete pressed, no new research
+  started. Research name carried as Lv.1 Missile
+  Mastery II, not re-verified. Full detail in
+  research-queue/0846-queue-run.md.
+
+## 08:47 to about 08:50 - Troop training, ticker-0834 queue run
+
+- Unit training-2026-11-10-0603, status partial. No
+  barracks selected, no requeue, Drill Ground not
+  re-read. Computer session cc-424 dropped mid-pass;
+  on restart (cc-426) the game was found on the TECH
+  screen by unexplained navigation - no game input
+  was sent between the 08:46 base screenshot and the
+  TECH screenshot except session restart and window
+  activate. Slot-1 timer reads disagree (1d 01:35:27
+  at 08:46 vs 1d 01:51:59 at about 08:49); one read
+  is misread, neither claimed true without re-read.
+  Back arrow returned the game to base, nothing
+  selected. Fifth consecutive training partial with
+  the same blocker (R2 process failure, already
+  reported by the 0337 pass, commented on issue
+  #150). Full detail in troop-training/0850-queue-run.md.
