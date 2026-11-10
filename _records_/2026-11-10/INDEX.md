@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T21:37:00Z
+modified: 2026-11-10T22:50:16Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures), and the 1204 queue ticker pass with 3 units partial (harvest, survivors, training), and the 1234 queue ticker pass with 2 units done (mail, gifts), and the 1314 queue ticker pass with 4 units done (help, star-ceremony, duel-score, passes) and 1 unit partial (train)
+description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures), and the 1204 queue ticker pass with 3 units partial (harvest, survivors, training), and the 1234 queue ticker pass with 2 units done (mail, gifts), and the 1314 queue ticker pass with 4 units done (help, star-ceremony, duel-score, passes) and 1 unit partial (train), and the 1424 queue ticker pass with 2 units done (daily-missions, vip)
 status: unverified
 ---
 
@@ -2667,7 +2667,6 @@ modified: 2026-11-10T14:21:00Z
   verification comment, not new work; #575 implemented and
   merged as PR #577 (6d9319204 on main). Status: no-op.
   Full detail in tool-development/1432-run.md.
-
 ## 14:39 to about 14:44 - PR catch-all pass
 
 - PR catch-all pass pr-catchall-2026-11-10-1439 (no-op).
@@ -2682,3 +2681,28 @@ modified: 2026-11-10T14:21:00Z
   still over 24 hours, statements current. VPS root disk
   improved to 71 percent, 2.8G free. Status: no-op. Full detail
   in pr-catchall/1439-run.md.
+
+## 14:26 to 14:37 - Ticker pass ticker-1424, daily-missions unit done
+
+- Daily-missions unit daily-missions-2026-11-09-1800 done. All
+  four completed rows claimed (Daily Login, Donate to Alliance
+  Tech 5/5, Help Allies 7/5, Greet Visitors 3/3) and the 40, 80
+  and 120 activity chests claimed; activity 120, 160/200
+  unreached. One Claim tap on Daily Login was followed by all
+  four rows disappearing (badge 7 to 3) - mechanism unverified,
+  end state live-verified by a full top-to-bottom re-check.
+  Remaining tasks all incomplete (Doom Elite, Radar, Recruit
+  Heroes, Kill 5 zombies, Attack a Commander PvP, three
+  gathers, Upgrade a Building) and left undone per the
+  activity metadata. Full detail in
+  daily-missions/1426-queue-run.md.
+
+## 14:38 to 14:43 - Ticker pass ticker-1424, VIP unit done
+
+- VIP unit vip-2026-11-09-1800 done. Daily Freebie claimed
+  (puzzle piece x2, food/iron/coin crates x13 each) and the
+  login chest claimed (plus 100 VIP points, 1,626,930 to
+  1,627,030, 4-day streak, tomorrow 120) - the first VIP
+  unit since 2026-10-30 to take both on the first try. No
+  milestone pending; the $99.99 offer untouched. Full detail
+  in vip-rewards/1438-queue-run.md.
