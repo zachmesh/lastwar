@@ -22,3 +22,4 @@
 0515-run.md
 0530-run.md
 0545-run.md
+0600-run.md
