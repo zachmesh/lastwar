@@ -2831,3 +2831,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   Zombie tab in the Events hub (zero-sweep 17:48 confirms). PR #545
   already open for this branch, no new PR opened by this pass.
 - PR integration pass pr-integration-2026-11-09-2045 correction (addendum): PR 548 (knowledge fold, 7 profiles) arrived 20:51 PT mid-pass, after the first run-record push; reviewed clean (Owner lastwar-knowledge-organizer, 7 profile INDEX files, version bumps as claimed, merge-tree exit 0) and squash-merged 21:05 PT as d2bcbc14, branch deleted; local main fast-forwarded to d2bcbc14. Full detail in pr-integration/2045-run.md (addendum).
+
+## 20:39 to 21:25 - Daily retro pass (retro-review-2026-11-09-2115, done)
+
+- Retro file _records_/retro/2026-11-09.md and data appendix (723 branch units, 734 live, gap 11, verdict FAIL; batch compliance 0 violations out of 6). Rolling series entry appended; owner-decisions register v1.9.0 to v2.0.0 with two new items (OD-20261109-01 #514 Transfer Surge, OD-20261109-02 #517 Builders Hut Lv.26). Threshold breaches: 7 named (unverified 73.2%, expired day counts, donations 0.1818, #118 at 7 days, #300 recurrence, ticker-0634 missing ~110h, ledger 12/23); red dots 0, first time. Issues: 2 filed (#549 power fall, #550 Desert Storm), 4 closed (#136 duel-score first pairs, #484 radar first tap, #544 branch repair, #149 red dots 0), 1 reopened (#300 gifts progress-as-points), 29 commented plus 1 correction on #417. Full detail in retro-review/2115-run.md.
