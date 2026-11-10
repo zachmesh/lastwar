@@ -527,3 +527,65 @@ of 2026-10-28.
 ## 03:15 to about 03:19 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0315 (done). NON-batch pass (checker _tools_/records_batch.py plain due but merge-aware not due - PR 556 already merged 03:05 in this window, next batch 07:00); no merges; records PR 559 re-verified CLEAN after branch-side reconciliation (main merged into branch as 4df2c19a7), awaits the 07:00 batch, clean-recheck comment posted (issuecomment-6765957054); records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged, no new comments; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open, no new comment. No local main sync-back (no merges). Status: done. Full detail in pr-integration/0315-run.md.
+
+## 03:04 to about 03:24 - Ticker pass ticker-0304, own PR first, 3 units partial
+
+- Own PRs first: records PR #559 (records/2026-11-10) was
+  CONFLICTING after the 03:00 batch merged PR #556, on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append). Resolved on the branch side this pass:
+  merged main 9ae2d0797 into records/2026-11-10 (commit
+  4df2c19a7), the log resolved as the ordered concatenation
+  of both sides' lines (base 1430 + main 8 + branch 25 =
+  1463 lines, all valid JSON, chronological order verified);
+  no other file conflicted. PR #559 re-probed CLEAN /
+  MERGEABLE at the new head. The 03:00 integrator comment
+  had described the resolution as done; the live branch
+  head at pass start (21679662) still conflicted, so the
+  merge was performed here. No new PR needed - #559
+  already covers this branch.
+- Radar unit radar-2026-11-10-0203 partial. Duel day 2
+  stack posture. Entry blocked: the dish icon is not
+  locatable on the current base view (camera zoomed/panned
+  state hides the shortcut columns); two move-wait-click
+  attempts delivered as map drags - the visual-grounding
+  point norm 34,324 hit a map bubble (gate toast "...ies
+  are fully loaded, ...e claim them"), the 2334 measured
+  centre norm 52,694 panned the camera to the 1st Squad
+  area. Radar never entered: no live reads, nothing
+  executed or claimed. Next radar unit must use a changed
+  method (long-press variant, or re-centre the camera
+  first). Full detail in radar-tasks/0318-queue-run.md.
+- Survivors unit survivors-2026-11-10-0203 partial. Gate
+  line verified live at entry: 2 "?" survivors. One taken
+  in (left figure norm 424,697; "?" turned smiley, then
+  walked in; no name card shown, so no name/role
+  recorded). The second "?" could not be re-located
+  after the tap delivered as a camera drag; the
+  re-centred gate view shows no "?" (area partly covered
+  by two floating action buttons by the selected truck).
+  Quick Dispatch in the Iron Mine Lv.27 panel is owed to
+  the next survivors unit. Full detail in
+  survivor-intake/0321-queue-run.md.
+- Donations unit donations-2026-11-10-0203 partial. Entry
+  blocked: the Alliance shield is not visible in the
+  current camera state; the grounding point norm 916,387
+  was rejected on the visual check (a hero portrait map
+  pin), and the inherited centre 903,787 sits on map
+  troops in this view, so no blind tap was made. No count
+  read, nothing donated. Last-known (0234, 02:53): count
+  0/30, footer 5100, cooldown 00:13:05 expired since.
+  Next donations unit must reset the camera framing
+  first or tap the Alliance HQ building on the map. Full
+  detail in alliance-donations/0323-queue-run.md.
+- Common thread across the three partials: the base camera
+  sits in a zoomed/panned state where the fixed UI shortcut
+  columns (radar dish, Alliance shield) are off-frame, and
+  background-input taps intermittently deliver as map
+  drags. The next ticker pass inherits this as the named
+  blocker for the entry routes; no issue filed yet - the
+  finding is recorded here for the retro to judge whether
+  it is a repeated failure mode (audit class c/e).
+- No diamonds or money spent. Tracker untouched for all
+  three partial units; the next tick re-produces the
+  regulars.
