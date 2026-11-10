@@ -66,8 +66,8 @@
  },
  "radar": {
   "status": "done",
-  "at": "2026-11-09T19:37:25-08:00",
-  "note": "Stack empty post-roll: points 348, stored 0/40, restore about 23:39, pins inventoried none standing"
+  "at": "2026-11-09T23:46:32-08:00",
+  "note": "Stack done: 5 tasks executed, 9 rewards pending for duel day 3 release, points 348, stored 1/40"
  },
  "building-queues": {
   "status": "done",
@@ -78,5 +78,10 @@
   "status": "done",
   "at": "2026-11-09T20:27:56-08:00",
   "note": "Defense Training VIII completed, power +15,000 to 146,751,949; Missile Mastery II 1d 13:54:11 left; slot 1 Idle"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-11-09T23:52:46-08:00",
+  "note": "Gate line cleared (2 to 0), Quick Dispatch ran, no survivors available for dispatch"
  }
 }

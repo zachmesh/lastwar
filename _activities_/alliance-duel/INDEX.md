@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T06:47:13Z
-version: 1.35.0
+modified: 2026-11-10T10:40:33Z
+version: 1.36.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -41,6 +41,8 @@ grounded_in:
   - source: ticker-0204 alliance-duel execution record 2026-11-09 0217 queue run (done, star ceremony checked only, no trophy icon; record commit facef628c on records/2026-11-09)
   - source: ticker-0404 alliance-duel execution record 2026-11-09 0423 queue run (done, personal duel total 2,005,000 read twice, rank 144, gap 1,595,000, Radar Training day; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-0434 alliance-duel execution record 2026-11-09 0441 queue run (done, star ceremony checked only, no trophy icon, right rail read, VS countdown 13:20:41 consistent with the about-18:00 rollover; record commit b6ed78edd0 on records/2026-11-09)
+  - source: ticker-0134 alliance-duel execution record 2026-11-10 0151 queue run (done, personal total 450,000, theme Base Expansion, 16:08:04 left; record commit e3d186a38 on records/2026-11-10)
+  - source: ticker-0204 alliance-duel execution record 2026-11-10 0211 queue run (done, star ceremony none waiting, personal total 450,000 re-read, 15:48:49 left; record commit 069a94c7a on records/2026-11-10)
 ---
 
 
@@ -997,3 +999,16 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - No ceremony is waiting, so nothing was played or claimed. No diamonds, money, speedups or other spending.
 - The record carries a same-pass correction: the session window first read 21:55 to 21:56 and the costs line read 2 minutes; the unit ran 21:54:40 to 21:55:23 (duration_seconds 43, about 1 minute). The closing figure (no trophy icon, no ceremony waiting) is unaffected.
 - Result stats: target 1, achieved 0, resources_gained none, costs 1m_wall_no_stamina, verified yes, blocker_category none, ceremonies_claimed 0, hearts_sent 0, ceremony_waiting false, device_takeovers 0.
+
+## What the 2026-11-10 0151 and 0211 units added - Base Expansion total 450,000 read twice, no ceremony waiting, two more timers end about 18:00
+
+- Duel-score unit duel-score-2026-11-09-2230 by ticker-0134, 01:51 to 01:52 local, status done. Evidence in `_records_/2026-11-10/alliance-duel/0151-queue-run.md` (commit e3d186a38 on records/2026-11-10). Computer session cc-374 dropped before the read (observe returned observation_unavailable); session cc-376 started and LastWar re-selected, no game state lost - a further Issue #282 device-channel datapoint; commented on #282 by this run.
+- Star-ceremony unit star-ceremony-2026-11-09-2230 by ticker-0204, 02:10 to 02:11 local, status done (checked only). Evidence in `_records_/2026-11-10/alliance-duel/0211-queue-run.md` (commit 069a94c7a on records/2026-11-10). Computer session cc-377, LastWar already frontmost on the base screen.
+- Theme: Base Expansion. Personal daily total 450,000 (gold medal figure under the theme title) at both reads. Target 3,600,000; gap 3,150,000. Reward chests: 40,000 claimed, 150,000 claimed, 540,000 not yet reached. The figures above the chests (8,020 / 9,530 / 18,100) were not identified; they are not the personal total and were not used.
+- Timer arithmetic, fourth and fifth live timers pointing at the about-18:00 rollover (Issue #242 resolution): 16:08:04 left at the 01:51 read ends about 17:59; 15:48:49 left at the 02:11 read ends about 17:59:49. Commented on Issue #242 by this run.
+- CORRECTION on the records' wording: both records say "Not the 19:00 reset closing read" - that 19:00 attribution is superseded by the settled about-18:00 rollover (see the 2154 section's correction for the same stale wording). The day's closing read is the last read before about 18:00, not 19:00.
+- Total unchanged between the two reads (450,000 at both); no duel-point action ran between them. This is a mid-day snapshot, not the day closing figure.
+- No ceremony waiting at either read: no trophy icon beside the Alliance button at the 01:51 base-screen check or the 02:10 check. The settled-week ceremony is not open yet; the current duel week is still running.
+- Cross-record corroboration: the 0143 mail unit's Event category holds a "Duel Progress Alliance Duel Individual Reward" mail 7h old at 01:43, about 18:43 the previous evening - consistent with the about-18:00 rollover mailing the day's individual reward shortly after.
+- Other live reads: Total Power 146,751,949 on the base screen at 02:11, unchanged from the 01:04 pass - a further corroboration of the levelled figure (Issue #482); commented on #482 by this run. Train at the station: Abyss Apex, 00:29:08 to departure at the 02:11 read (boarded carriage 2 at 01:47).
+- No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.

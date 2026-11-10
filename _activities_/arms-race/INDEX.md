@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T04:50:04Z
+modified: 2026-11-10T10:40:33Z
 level: L1
-version: 1.72.0
+version: 1.74.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -78,6 +78,8 @@ grounded_in:
   - source: ticker-1434 event-claims execution record 2026-11-09 1500 queue run (partial, Hero Advancement cross-read only, phase just started timer 03:04:14 score 0 cumulative 7/8; record commit 4860808ff on records/2026-11-09)
   - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, Arms Race Ranking Reward claimed via Event mail, arms-race-1403 expired unrun; record commit 6761c35d1 on records/2026-11-09)
   - source: ticker-1910 arms-race execution record 2026-11-09 1928 queue run (partial, Unit Progression phase read live at 0, timer 02:42:34, tier-3 gap 75,000 via training queues only, no chest earned; record commit e05c662bd on records/2026-11-09)
+  - source: ticker-0004 arms-race execution record 2026-11-10 0006 queue run (unverified, Tech Research phase judged at phase start, score 0/30,000, R4 skipped-needs-owner; record commit 9cfcddabc on records/2026-11-10)
+  - source: ticker-0204 event-claims execution record 2026-11-10 0221 queue run (partial, Arms Race Base Building phase cross-read, timer 03:40:14, score 0, cumulative 0/2; record commit 069a94c7a on records/2026-11-10)
 ---
 
 
@@ -410,7 +412,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 
 - The full phase rotation list and what each phase pays points for.
 - Whether the chest ruby tags also change by phase or segment.
-- When the phase ranking reward lands and where it is claimed.
+- When the phase ranking reward lands and where it is claimed. (2026-11-10 0006 update: the ranking reward for the finished phase is checked via Event mail, per the 1838 mail-route finding - the phase-page ranking chest is preview-only while the phase is live. The 0006 unit's 'check the ranking reward after this phase ends' follow-up is routed to the mail unit, not a phase-page tap.)
 
 - Whether the world Search panel stamina route opened in the 2241 unit (Doom Elite marches from the stamina scoring row arrow) is the intended stamina scoring path for Drone Boost phases generally, or phase specific, and what its march point rate is in a live read. Answered in part 2026-11-03 0609: the stamina-row arrow opened the world Search panel and a Lv-1 Doom Elite attack costs 20 stamina for 2000 points in this Drone Boost phase, so the route is the live stamina scoring path for this phase; re-confirmed 2026-11-09 1345, when the stamina-row arrow opened the radar Search panel again and a CL-7 Victim rally kill cost 20 stamina for 2,000 points, so the route is confirmed for Drone Boost a second time; generality across phases stays open.
 - Whether the drone Upgrade button on the TACTICAL DRONE
@@ -2140,3 +2142,22 @@ slot. Evidence in
 - Other live reads: base HUD at entry food 579.7M, iron 903.6M, coin 68.4M, gold 13.22K, diamonds 6,197, power 146,736,949 - the same figure the 1838 mail unit read at 18:33, so the levelled power figure is corroborated by a second same-pass read (Issue #482; the research completion later in the evening adds +15,000, see research-queue 1.2.0). The power figure disagrees with today's total-power record folder (total-power-149217331); the record notes the same handling as Issue #416 - a second same-day read was needed to corroborate, and this read IS that second read, so the folder figure is the stale one. The Events icon carried a red "1" badge on entry; the Wanted Boss tab in the hub showed a red dot. Not an Arms Race reward; the events unit for this slot owns the hub scan. Mall screen was open on entry (Monthly Pass, Daily Pickup already Claimed); the back arrow returned to base with nothing tapped.
 - No diamonds or money spent, no speedup used, no stamina item opened, no building or research started, no stage swapped.
 - Result stats: target 75000, achieved 0, resources_gained none, costs about 5 minutes, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-10 0006 unit added - Tech Research phase judged at phase start, score 0 of 30,000, R4 skipped-needs-owner, unverified
+
+- Unit arms-race-2026-11-09-2203 by ticker-0004, about 00:06 to 00:13 local, status unverified. First unit inside this phase, so judged under R4 at the phase start. Evidence in `_records_/2026-11-10/arms-race/0006-queue-run.md` (commit 9cfcddabc on records/2026-11-10).
+- Phase: Tech Research, Contest Segment Lv.29-30, 01:51:50 left at first read (01:50:02 at the ranking-chest read) - the phase ends about 01:58 local. Score 0 points. Chest thresholds 6,250 / 12,500 / 30,000 (ruby tags 2,360 / 4,800 / 11,800). All three point chests locked, progress bars empty.
+- Scoring paths as displayed: Increase Tech Power by 1pt (+1), Use 1-min Research Speed-up (+10), Buy Packs containing Diamonds (1 Diamond) (+30).
+- Research queue (live, via the scoring row): Slot 1 Idle. Slot 2 Lv.1 Missile Mastery II upgrade in progress, Time Left 1d 10:11:53. No research completes inside the phase (1h51m left). Starting a new research on agent initiative is red-lined, so the idle slot stays idle.
+- Judgement: the only free scoring path (research completion) cannot land in this phase. The speedup path is banned (never burn speedup items) and the pack path is banned (money). Target 30,000 is unreachable inside the red lines. Status skipped-needs-owner per R4: the phase target needs an owner decision (spend speedups or buy packs) to reach, and the phase was judged early (1h50m still left) so the miss is surfaced now, not discovered in the phase's last minutes. Blocker category g (true red-line miss).
+- Cumulative counter chest top left: 0/2, locked, not bouncing. Ranking row: segment rank 9, #2110 [AP3x]Bears Lair, figure 90,500 - the lagging previous-phase display (the live score is 0; same lag documented 2026-10-26).
+- Nothing earned, nothing claimed: no point chest earned, counter chest locked, ranking chest opens a contents preview only (Iron Chest (SR) x3, Food Chest (SR) x3, Coin Chest (SR) x3 - the same preview contents as the 2026-10-26 Hero Advancement phase), no Claim button. No bouncing chest and no reward red dot on the Arms Race page. The Wanted Boss tab carries a red exclamation - a different event, not this unit's type, left untouched.
+- Follow-up: check the ranking reward after this phase ends, per the owner rule - routed to the mail unit (Event mail, per the 1838 finding), not a phase-page tap; the phase-page ranking chest is preview-only while live.
+- No diamonds or money spent. No research or building started. No stage swapped.
+- Result stats: target 30000, achieved 0, points 0, resources_gained none, costs about 7 minutes, no stamina, no items, no diamonds, verified yes, blocker_category g.
+
+## What the 2026-11-10 0221 events cross-read added - Base Building phase, timer 03:40:14, score 0, cumulative 0/2
+
+- Cross-read inside the events unit events-2026-11-09-2257 by ticker-0204, about 02:19 to 02:21 local (the events unit closed partial). Evidence in `_records_/2026-11-10/event-claims/0221-queue-run.md` (commit 069a94c7a on records/2026-11-10). This is a read-only cross-read, not an arms-race scoring unit; the phase itself is the arms-race unit's job (arms-race-2026-11-10-0203 in inbox).
+- Arms Race page, Base Building phase: timer 03:40:14 left, score 0, point chests at 6,250 / 12,500 / 30,000 all locked. Cumulative chest at top left reads 0/2 (not full, not claimable). The phase rotated since the 15:00 check, when it read 7/8 in Hero Advancement - the 0006 Tech Research phase judged at 00:06 has already ended and a new phase is running.
+- Nothing claimable on this page; no Arms Race grinding was done in the cross-read unit. The phase scoring belongs to the arms-race unit for this slot.
