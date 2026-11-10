@@ -457,3 +457,20 @@ of 2026-10-28.
   #553, #477, #282 and #482 commented. No new issue filed.
   Status: done. Full detail in
   knowledge-organization/0232-run.md.
+
+## 02:40 to about 02:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-0240. Plan staged 12
+  units into the live pool (14:03: harvest, radar, survivors,
+  training, donations, arms-race; 14:30: mail, help, gifts,
+  train, star-ceremony, duel-score; already_present 57,
+  skipped_done_current 3, skipped_closed 2, reaped 0,
+  expired 0). Sweep production skipped (02:00 hour run);
+  tonight's pair for the 19:00 reset is not yet due. Scout
+  diff on the branch observation (896 lines, newest pass
+  1609) applied to the live pool: 7 already-queued, 0
+  enqueued, candidates 1 (inventory-icon-red-dot, draft
+  only), promotion proposals 1 (already decided REJECTED as
+  a task), unexplained red dots 0; 0 withdrawals. No issues
+  filed. Pool inbox 69, claimed 1, done 1427. Status: done.
+  Full detail in queue-planning/0240-run.md.
