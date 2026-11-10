@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T09:47:36Z
+modified: 2026-11-10T11:52:19Z
 level: L0
 version: 1.0.0
 description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units
@@ -663,3 +663,17 @@ of 2026-10-28.
   #500, #558, #220, #450, #423, #160 and #174 commented.
   No new issue filed. Status: done. Full detail in
   knowledge-organization/0332-run.md.
+
+## 03:45 to about 03:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0345.
+  Batch-window pass with a cadence violation: records PR 559 merged
+  03:47 as the second records merge in the 03:00 window (PR 556
+  already merged 03:05:36 by the 0300 pass; the merge-aware checker
+  said not due). Tools PR 567 (Refs #563) and knowledge PR 568
+  squash-merged clean. Records PRs 351 and 301 still conflicting on
+  the single action-log file, heads unchanged, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated, clean,
+  awaiting the owner decision (OD-20261108-01 open). Local main
+  fast-forwarded to 6f336816. Status: partial (cadence violation).
+  Full detail in pr-integration/0345-run.md.
