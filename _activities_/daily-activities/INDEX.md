@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-09T02:40:00Z
+modified: 2026-11-10T01:46:47Z
 level: L1
-version: 1.20.0
+version: 1.21.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: pre-reset zero sweep execution record 2026-11-07 1824 queue run (first pass, partial, first 17:30 sweep to run since 2026-11-02; record commit 840094b6ad on records/2026-11-07)
   - source: pre-reset zero sweep execution record 2026-11-08 1712 queue run (first pass, partial, 11 lines not at zero, 4 at zero, 5 unreadable, duel unmeasured, crystal and glittering not located, server disconnect with clean relaunch, power step-down 641,100 unexplained; record commit 9978e09a8 on records/2026-11-08)
   - source: pre-reset zero sweep execution record 2026-11-08 1740 queue run (second pass, partial, no line moved to zero since 1712, 3 at zero, 1 stack posture, 12 not at zero, 5 unreadable, crystal and glittering not located, power 149,209,253 holds, fifteenth same-day no-train confirmation, scheduling shortfall confirmed a second time; record commit 5f3a904f4 on records/2026-11-08)
+  - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, 7 of 23 ledger lines read live, 6 units raised to priority 1; record commit c9a86fa74 on records/2026-11-09)
 ---
 
 # Routine activities
@@ -468,3 +469,15 @@ claims cited below were read in this pass's passes unit
   new Issue here - the fix-ups are in flight and the next tick
   re-walks the list in the new reset day; the retro judges any
   recurrence.
+
+## Pre-reset zero sweep - first pass, 2026-11-09 1657 (partial)
+
+- Unit zero-sweep-2026-11-09-1630 by ticker-1635, session about 16:47 to 16:57 local. Status partial, verification-only: nothing claimed, no truck dispatched or plundered, no donation made, no chest claimed, no secret task tapped, no pass button tapped inside this unit. Evidence in `_records_/2026-11-09/daily-activities/1657-queue-run.md` (commit c9a86fa74 on records/2026-11-09). Sweep pair 001 of 2; unit 002 at 17:30 finishes the walk. Target: 23 ledger lines; 7 read live in this unit.
+- Live reads, not at zero: food bubbles (line 1) - many wheat bubbles stand over the farmland, regrown since the 12:20 harvest; iron bubbles (line 2) - several blue iron bubbles stand over the mines; coin bubbles (line 3) - several gold coin bubbles stand on the base; alliance donations (line 17) - Tech Donation Today 3,300 live (was 2,250 at the 14:13 donations unit, which had left Donation Count 19/30 remaining with the button still green; no donations unit has run since - the +1,050 rise is unexplained, other members' donations the likely source, unverified); survivors (gate line) - two survivors with question-mark bubbles stand at the front gate, left edge; mail (line 15) - Mail carries a red dot, Battle Report, System and Regular categories still unopened today (Event and Alliance answered "No rewards available." at 10:31); alliance red dots - Help, Alliance Gifts, Alliance Techs and Alliance Events all carry red dots.
+- Lines verified at zero by earlier units today (not re-read live): VIP Daily Freebie and login chest claimed 15:39-15:43 (vip unit, done); daily activity chests 40/80/120 claimed 15:19-15:38 (daily-missions unit, done); Secret Command Post checked 14:51, nothing to deploy (secrets unit, done). These stand on their own units' live reads, not on this sweep's.
+- Lines not walked this unit (for sweep 002 at 17:30): EXP bubbles, titanium bubbles, Armed Truck loot, trucks dispatch 5/plunder 4 counters, train station, Arms Race phase, daily missions 160/200 chests, radar map pins, Alliance Duel daily total vs 3.6M, Events hub tabs, Crystal, Glittering Market.
+- Base HUD at entry: food 556.6M, iron 881.6M, coin 53.6M, diamonds 6,137, power 149,217,331, stamina 87 rising to 88 by close, VIP points 13.22K. VS timer 01:15:42; Events countdown 6d 01:15:42. Build: Oil Well [0/1]; building queue 1/4; research 1/2.
+- Skull timer, Issue #498: a red skull icon with badge 4 and a 00:00:37 countdown stood at the right edge of the base screen at 16:56 - unidentified, recorded unverified, no tap made. Badge 4 is new in the sequence.
+- Sweep actions taken: six inbox units for lines verified non-zero were raised to priority 1 (their (regular, planned_for) pairs already existed, so no duplicates were enqueued): harvest-2026-11-09-1803, donations-2026-11-09-1403, survivors-2026-11-09-1403, help-2026-11-09-1430, gifts-2026-11-09-1430, mail-2026-11-09-1430. Pool validated after the edits.
+- Count: 7 of 23 lines read live this unit; 6 non-zero per the unit stats. The record lists food, iron, coin, donations, survivors, mail and the alliance red-dot roll-up as the seven reads; which one counted as the zero line is not named in the record, so none is claimed zero here. The remaining-count read for donations was blocked: the 2/10 Quick Gathering card is cut off at the bottom of the Techs panel.
+- No diamonds or money spent. No speedup or stamina item used. Tracker untouched (partial unit). Blocker category: h (by-design partial - sweep 002 at 17:30 completes the walk). Zombie Invasion: tab still absent from the Events hub as of the 11:52 record today; no chain seeded, per the standing rule.

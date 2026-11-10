@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T18:32:17Z
+modified: 2026-11-10T01:46:47Z
 level: L1
-version: 1.29.0
+version: 1.30.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,7 @@ grounded_in:
   - source: ticker-0113 mail-rewards execution record 2026-11-09 0138 queue run (partial, Alliance and Event Claim All both "No rewards available", System/Regular/Battle Report not walked, leader row Jerry Apex read live on the Alliance page, Mail button flaky entry (652,793), VIP daily freebie flag; record commit c0ebf0c4f0 on records/2026-11-09)
   - source: ticker-0404 mail-rewards execution record 2026-11-09 0421 queue run (done, all three red-dot categories walked, no claimable attachments, envelope opened at once with no Alliance-first workaround; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-1004 mail-rewards execution record 2026-11-09 1031 queue run (partial, Event and Alliance Claim All both "No rewards available", six train mails carry no attachments, Battle Report/System/Regular not walked, Mail entry (932,791) windowed first try; record commit 09e4f0863 on records/2026-11-09)
+  - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, Mail red dot standing, three categories unopened; record commit c9a86fa74 on records/2026-11-09)
 ---
 
 
@@ -889,3 +890,9 @@ the next tick re-produces this regular as a fresh unit.
 - What was not done: Battle Report, System and Regular were not opened this cycle. On 2026-10-25 they held reports only, but no live read was taken today, so the unit closes partial and the next mail unit resumes with those three categories (queue rule R7).
 - No mail deleted; Delete All never touched. No diamonds or money spent. No other unit's work touched.
 - Result stats: target 1, achieved 0, resources_gained none, costs about 8 minutes of unit time, no items spent, verified yes, blocker_category h, points 0.
+
+## What the 2026-11-09 1657 sweep read added - Mail red dot standing, three categories still unopened today
+
+- Read, not a mail unit: the zero-sweep 001 unit (ticker-1635) read the Mail icon live about 16:47 local. Evidence in `_records_/2026-11-09/daily-activities/1657-queue-run.md` (commit c9a86fa74 on records/2026-11-09). No mail was opened in this read.
+- Mail carries a red dot. Battle Report, System and Regular categories are still unopened today (Event and Alliance answered "No rewards available." at 10:31 per the 1031 unit). The next mail unit resumes with those three categories (queue rule R7, carried from the 1031 unit) - the mail-1430 unit was raised to priority 1 by this sweep.
+- No mail deleted; Delete All never touched. No diamonds or money spent.

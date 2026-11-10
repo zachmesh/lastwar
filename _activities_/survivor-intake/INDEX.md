@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-09T21:32:17Z
-version: 1.43.0
+modified: 2026-11-10T01:46:47Z
+version: 1.44.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -44,6 +44,7 @@ grounded_in:
   - source: ticker-0404 survivor-intake execution record 2026-11-09 0409 queue run (done, one gate visitor processed, Friendly Visitor notifications dialog, Cancel, gate line clear, Gear Factory Lv.20 building bubble; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-0904 survivor-intake execution record 2026-11-09 0926 queue run (partial, gate line of 2 verified live, one intake confirmed by smiley bubble, second survivor unverified, Quick Dispatch not run, gate panning and chat-bar look-alike lessons; record commit 3c788a4a3 on records/2026-11-09)
   - source: ticker-1234 survivor-intake execution record 2026-11-09 1301 queue run (partial, gate inspected from the right-edge pan, no survivor line found, 0 recruits; record commit da81e137e on records/2026-11-09)
+  - source: ticker-1704 survivor-intake execution record 2026-11-09 1729 queue run (partial, gate line not verified, banner hitbox covers the figure strip, R2 third-strike persists; record commit 9806b8352 on records/2026-11-09)
 ---
 
 
@@ -68,6 +69,7 @@ Measured on 2026-10-25.
   bubble alone can miss; the figure is the reliable target, and
   visual grounding found them reliably when taps drifted.
 - The gate sits at the very bottom edge of the base view behind the chat bar; the camera must be panned down before the line is visible - a tap on empty ground near the gate pans the camera (2026-11-09 0926 unit: two taps moved the camera and brought a 2-survivor line into view).
+- The banner quest line at the bottom of the base view covers the gate-figure strip: a tap aimed at a figure under the banner lands on the banner hitbox and opens the Build menu instead (2026-11-09 1729 unit, "Build: Oil Well" banner). Find a camera angle that puts the gate figures clear of the banner before tapping - the figure is still the reliable target, but it cannot be tapped while the banner covers it.
 - Look-alikes measured 2026-11-01 (0913 unit): a centre-right
   circular icon is a pet icon, not a question-mark bubble -
   grounding had misread it as one - and the left-edge green
@@ -977,6 +979,8 @@ Measured on 2026-10-25.
 
 ## Changelog
 
+- 1.44.0 (2026-11-09): 1729 survivors unit folded (partial, verified no): gate line not verified - two '?' bubbles stand but no survivor figure confirmed; figure tap 1 no-change, fullscreen zoom tried, figure tap 2 opened the Build menu - the 'Build: Oil Well' banner hitbox covers the figure strip, new binding constraint (next unit finds a camera angle putting the gate figures clear of the banner before tapping); bubble tap no-change; R2 tap method ended after the second no-change tap; same failure mode as the 2026-10-28 to 2026-10-31 22-of-22 partial run, R2 third-strike blocker persists; re-read unit survivors-2026-11-09-1803 named; Quick Dispatch for the 0926 newcomer still owed; HUD food 556.6M, iron 881.6M, coin 53.6M, diamonds 6,137, stamina 96.
+
 - 1.30.0 (2026-11-05): 0504 survivors unit folded (failed, thirty-third consecutive screen-capture failure, one cheap probe per mac_capture_probe.py in cc-521, no game screen read, no input dispatched, tracker untouched); probe classification OFF_SCREEN_WINDOW high confidence, View-menu inspect the only missing probe step (stale_observation), Chrome observes normally in the same session, recovery still the owner Dock-icon click or mac_lastwar_front.sh; the 1122 close stands as the last live read, its follow-up still waits on the window returning to the active Space; thirty-third occurrence commented onto Issue #282 by this run.
 
 - 1.35.0 (2026-11-07): channel rules carried (propagation follow-up from the 1732 run): the 1020 Mission Control lesson - open_app Mission Control wedged the channel (geometry_mismatch, input gated on observation_required, second launch restores) and background Ctrl+Right does not switch Spaces; the background-Space-keys half was already in this profile from its own 0134 unit, the open_app wedging is the new part; the Dock-icon unblock stands. (1.31.0 through 1.34.0 carry sections without changelog lines; the numbering is preserved, not rewritten.)
@@ -1562,3 +1566,15 @@ Measured on 2026-10-25.
 - Closing reads: gate line - no question-mark bubbles seen at the gate or on the road out. Recruits: 0. This matches the immediately preceding survivors unit (ticker-2201, 2026-11-08 22:18-22:24 PT), which also found no line at the gate and whose only tap opened an "Area No.168" dialog. The gate-line state remains unverified in the activity's sense - an empty gate is recorded as seen, not presumed to mean the line is clear and done - so the unit closes partial and the tracker is left untouched.
 - Follow-up carried: the second survivor of the 0926 line is not waiting at the gate at this read; the next survivors unit re-checks the gate first, and Quick Dispatch for the 0926 newcomer is still owed - it runs when a newcomer with a known building post is verified.
 - Result stats: not stated in the record; recruits 0, gate_line_verified false.
+
+## What the 2026-11-09 1729 unit added - gate line not verified, banner hitbox covers the figure strip, R2 third-strike persists, partial
+
+- Unit survivors-2026-11-09-1403 by ticker-1704, about 17:19 to 17:29 local, status partial, verified no. Evidence in `_records_/2026-11-09/survivor-intake/1729-queue-run.md` (commit 9806b8352 on records/2026-11-09). Tracker untouched for partial, per the queue rules.
+- Entry: base screen, panned to the front gate (the walled entrance with the Zombies sign, bottom of the base view). Two "?" bubbles stand near the gate, just above the "Build: Oil Well [0/1]" banner; a third "?" bubble was visible in the pre-pan view. No survivor figure was verified before any tap - the figures sit in the strip the banner covers, and the small-window view is too coarse to pick a figure out from its bubble.
+- Figure tap 1 (small window, norm 257,845, below the middle "?" bubble): no change, no card, no dialog. Fullscreen attempt: green zoom button entered native fullscreen (1920x1080) for a larger view. Figure tap 2 (norm 406,850) opened the Build menu (Economy tab) instead - the tap landed on the "Build: Oil Well" banner hitbox, which covers the figure strip. No build was started and nothing was spent; the panel was closed with a map tap. Bubble tap (norm 395,819, directly on the left "?" bubble): no change, no card, no dialog. Per rule R2 the tap method ended after the second no-change tap on the gate line. No survivor card or dialog opened in this unit, so no recruit was taken in and Quick Dispatch did not run (there was no intake to dispatch). Exited fullscreen via View menu, Exit Full Screen; the game is back in its 642x951 window.
+- BINDING CONSTRAINT, new: the banner quest line at the bottom of the base view covers the gate-figure strip, so a tap aimed at a figure under the banner lands on the banner hitbox and opens the Build menu instead. The next survivors unit must find a camera angle that puts the gate figures clear of the banner BEFORE tapping again - the figure is still the reliable target, but it cannot be tapped while the banner covers it. (See the entry bullet added above.)
+- This is the same failure mode as the 2026-10-28 to 2026-10-31 run of 22 consecutive partials recorded in this profile (gate line not found or not verified, Quick Dispatch never run) - the R2 third-strike blocker persists. The named re-read unit is survivors-2026-11-09-1803 (not_before 18:03 PT).
+- Closing reads: gate line - 2 "?" bubbles visible at close, figures unverified, recruits taken in 0, line state unverified. Resources at close (HUD): food 556.6M, iron 881.6M, coin 53.6M, diamonds 6,137, stamina 96.
+- Quick Dispatch for the 0926 newcomer is still owed - it runs when a newcomer with a known building post is verified (carried from the 1301 follow-up).
+- No diamonds or money spent. No build started. No other activity's work touched. The Build menu was opened by a mis-tap and closed untouched.
+- Result stats: target 1, achieved 0, resources_gained none, costs 0 stamina plus about 10 minutes, verified no, blocker_category e (repeated blocker - gate line not verified, same failure mode as the 2026-10-28 to 2026-10-31 run), survivors_recruited 0, line_verified no, quick_dispatch_run no, device_takeovers 0.

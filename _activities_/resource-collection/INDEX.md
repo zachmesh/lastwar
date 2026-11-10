@@ -1,9 +1,9 @@
 ---
 title: Resource Collection
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T00:59:08Z
+modified: 2026-11-10T01:46:47Z
 level: L1
-version: 1.48.0
+version: 1.49.0
 description: Collecting building output bubbles and truck loot, one activity folder for collection knowledge
 status: unverified
 grounded_in:
@@ -50,6 +50,7 @@ grounded_in:
   - source: ticker-0634 resource-collection execution record 2026-11-09 0636 queue run (partial, one tap per type cleared all bubbles of that type a second time - food +2.0M, coin +1.3M, iron +1.9M HUD-verified - blue-triangle 596 bubbles over the furnaces cleared on one tap with no HUD move, Issue #508 filed, EXP bubble and Armed Truck loot left for the next unit; record commit 04b12d13 on records/2026-11-09)
   - source: ticker-1204 resource-collection execution record 2026-11-09 1220 queue run (done, all visible bubbles collected - food +3.9M, iron +3.6M, coin +2.6M HUD-verified - one farmland tap collects all food a third time, panel swipe-close method measured, Armed Truck loot unchecked at the 15-minute cap; record commit 6f18bc3be on records/2026-11-09)
   - source: ticker-1534 resource-collection execution record 2026-11-09 1623 queue run (partial, one tap per type cleared all visible of that type a fourth time - iron plus 2.4M, coin plus 1.7M, food plus 2.6M HUD-verified - iron HUD delta again exceeds the visible sum, far-left edge bubble still standing, Armed Truck loot still unlocated, skull timer re-armed datapoints; record commit a7a8ea6c28 on records/2026-11-09)
+  - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, bubbles regrown since the 1220 clear, truck-notice toast corroborated; record commit c9a86fa74 on records/2026-11-09)
 ---
 
 
@@ -814,6 +815,8 @@ regular stays due. Evidence in
 - What the blue-triangle 596 bubbles over the furnace buildings are: four yellow-circle bubbles with a blue triangle icon, each labelled 596, stand over the orange-glowing furnace buildings; one tap cleared all four at once with no HUD total moving. Candidates, unverified: oil from the Age of Oil event (the oil total may live on the event page, not the HUD) or a furnace output that lands in inventory. Tracked as knowledge Issue #508 (labels knowledge). The next harvest unit reads the furnace building panel and, if it is oil, the Age of Oil event page, and states whether these bubbles belong in the zero sweep. (Added 2026-11-09 0636.)
 
 ## Changelog
+
+- 1.49.0 (2026-11-09): 1657 sweep read folded (read-only): food, iron and coin bubbles all standing again by 16:47, regrown since the 1220 full clear - first regrowth-timing datapoint, about 4.5 hours; truck-notice toast fragment corroborated ('...ies are fully loade... ...e claim them' against the 1623 '...lly loa...'), still unverified, truck loot check still first for the next harvest unit; HUD unchanged from the 1623 close (556.6/881.6/53.6), no harvest between reads; far-left edge 308.8K bubble not re-read, carry stands.
 
 - 1.48.0 (2026-11-09): 1623 harvest unit folded (partial, fourth one-tap-per-type confirmation - iron 5 bubbles plus 2.4M, coin 8 bubbles plus 1.7M, food 4 bubbles plus 2.6M, all HUD-verified in-unit; iron HUD delta again exceeds the visible bubble sum, so the base-wide-collection candidate is still NOT verified and Issue #502 stays open pending the daily retro's closure decision; far-left edge green 308.8K bubble still standing half off-frame, not tapped per the 2006 rule, EXP candidate carried since 0636; Armed Truck loot still unlocated with no collectable loot bubble over the parked vehicles, unverified toast fragment '...lly loa...' recorded not claimed; skull timer re-armed datapoints for Issue #498, badge sequence 1, 2, 3, 1, 3 across the two units; device token lease expired mid-unit at 16:16, no contention, unit finished inside the pass budget).
 
@@ -1606,3 +1609,12 @@ regular stays due. Evidence in
 - Remainder, carried: one green 308.8K bubble at the far left edge, half off-frame, still standing after the food tap - either a different type (EXP candidate) or outside the per-type clear. Not tapped: the 2006 rule bars tapping an ambiguous half-off-frame edge shape. It is not established whether this is the 0636 unit's far-left EXP bubble (then about 490K, light-blue) - the value and colour differ - so the edge-bubble carry covers both readings until a unit reads the edge bubble's icon and value together. Armed Truck loot: no collectable loot bubble seen over the parked vehicles in any view this unit; the loot-panel entry remains unlocated (standing). The Season 2 area at the bottom was left out of the sweep, per the standing rule that it is not main-base harvest. The full-map zero-remaining acceptance is not met (edge bubble outstanding), so the tracker is untouched and the regular stays due.
 - Result stats: bubbles_cleared 17 visible (5 iron, 8 coin, 4 food), food_gained_m 2.6, iron_gained_m 2.4, coin_gained_m 1.7, resources_gained food 2.6M, iron 2.4M, coin 1.7M HUD-verified.
 
+
+## What the 2026-11-09 1657 sweep read added - bubbles regrown since the 12:20 clear, truck-notice toast corroborated, nothing collected
+
+- Read, not a harvest unit: the zero-sweep 001 unit (ticker-1635) read the base live about 16:47 to 16:57 local. Evidence in `_records_/2026-11-09/daily-activities/1657-queue-run.md` (commit c9a86fa74 on records/2026-11-09). Nothing was collected in this read.
+- Regrowth timing, first datapoint: food, iron and coin bubbles all stand again - many wheat bubbles over the farmland, several blue iron bubbles over the mines, several gold coin bubbles on the base - regrown since the 1220 unit collected them all at about 12:20. Full clear to standing bubbles again inside about 4.5 hours. No per-type counts were read in this sweep; the next harvest unit re-reads them live.
+- Toast fragment corroborated: a toast glimpsed at the left edge behind the Techs panel read "...ies are fully loade... ...e claim them" - the second fragment of the same notice the 1623 unit saw as "...lly loa..." at about 16:20. Both fragments point at the Armed Truck fully-loaded notice; still unverified, not claimed. The next harvest unit still checks the truck loot first.
+- HUD at sweep entry: food 556.6M, iron 881.6M, coin 53.6M, diamonds 6,137, power 149,217,331, stamina 87 rising to 88 by close, VIP points 13.22K - unchanged from the 1623 close (16:23), so no harvest landed between the two reads.
+- Far-left edge bubble (308.8K, 1623 carry) was not re-read in this sweep - the carry stands, and the edge bubble is also carried on the sweep-002 list. Armed Truck loot still unlocated.
+- No diamonds or money spent. No speedup or stamina item used.
