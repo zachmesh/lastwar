@@ -816,3 +816,19 @@ of 2026-10-28.
   24 hours, statements current; 514 and 517 still under 24 hours (517 with
   the banner quest now reading "Build: Oil Well"). VPS root disk 76 percent,
   2.4G free. Status: no-op. Full detail in pr-catchall/0439-run.md.
+
+## 04:40 to about 04:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-0440. Plan staged 1
+  unit into the live pool (16:30 zero-sweep, first pass of
+  tonight's pre-reset sweep pair; already_present 60,
+  skipped_done_current 9, skipped_closed 5, reaped 0,
+  expired 0). Sweep production skipped (04:00 hour run);
+  the final pass is due from the 17:00-hour run. Scout diff
+  on the branch observation (896 lines, newest pass 1609)
+  applied to the live pool: 7 already-queued, 0 enqueued,
+  candidates 1 (inventory-icon-red-dot, draft only),
+  promotion proposals 1 (already decided REJECTED as a
+  task), unexplained red dots 0; 0 withdrawals. No issues
+  filed. Pool inbox 60, claimed 1, done 1442. Status: done.
+  Full detail in queue-planning/0440-run.md.
