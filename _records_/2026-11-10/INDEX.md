@@ -2590,3 +2590,6 @@ modified: 2026-11-10T14:21:00Z
   withdrawals, no issues filed. Pool by_state: inbox 63,
   claimed 1, done 1461. Status: done. Full detail in
   queue-planning/1340-run.md.
+## 14:00 to about 14:09 - PR integration pass pr-integration-2026-11-10-1400
+
+- PR integration pass pr-integration-2026-11-10-1400 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); knowledge PR 588 merged (squash, 4 activity profiles folded: survivor-intake 1.49.0, troop-training 1.38.0, mail-rewards 1.36.0, alliance-gifts 1.49.0; new main d87c4311; local main synced back by bundle). Tools PR 425 re-verified CLEAN and still owner-gated (OD-20261108-01 open, issue #422 open), no new comment per the no-repeat rule. Records PR 583 carried to the 15:00 batch at head 401f2bd19 (merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged, no new notes per the no-repeat rule. End-of-pass sweep: 4 open PRs, all decided, no unprocessed PRs. Status: done. Full detail in pr-integration/1400-run.md.
