@@ -2159,3 +2159,37 @@ modified: 2026-11-10T14:21:00Z
   514 and 517 all over 24 hours with statements current.
   VPS root disk 80 percent with 2.0G free. Status: no-op.
   Full detail in pr-catchall/1139-run.md.
+## 11:32 to about 11:50 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-1132.
+  Folded ticker-1004 and ticker-1104 records into 6 profiles
+  (PR #584, OPEN and MERGEABLE + CLEAN, 1 commit, base main
+  104511d0): shop-claims 1.47.0 to 1.48.0 (4 tabs checked,
+  nothing claimable, Monthly Claimed 11/11; Weekly Pass scroll
+  failed on three methods, Iron/Coin cards below the fold NOT
+  re-verified, press-drag is the standing scroll method;
+  check-in banner absent on this opening, Issue #553 stays
+  open), secret-missions 1.30.0 to 1.31.0 (8 cards all PERFECT,
+  assists 5/5 at cap; 8-vs-9 count RESOLVED as a miscount;
+  orange hexagon badge MOVED to Protect Refugee Camp, still
+  unexplained), hidden-treasures 1.17.0 to 1.18.0 (M3 at 0, no
+  dig; Rewards button CHECKED - odds preview only, the 0446
+  follow-up is closed), event-claims 1.37.0 to 1.38.0 (partial
+  hub sweep 4/6; Hero Advancement free paths cannot reach tier
+  3; Age of Oil stage-1 node info-only; Desert Storm registered
+  20/20, battle 2026-11-13 03:00-03:30; Wanted Boss Code 64 not
+  out), arms-race 1.77.0 to 1.78.0 (Hero Advancement cross-read;
+  Drone Boost phase ended with no scoring unit in its window,
+  tier-3 push never executed, phase closed at score 0),
+  alliance-donations 1.85.0 to 1.86.0 (6 coin donations verified
+  7/30 to 1/30, stopped at the 1/30 floor; compact-OCR warning -
+  6/30 misread as "5130", count digits must be image-verified;
+  replenishment thirty-seventh data point for Issue #160, +6
+  over about 2h). Contradiction resolved: secrets 8-vs-9 count.
+  Issue comments posted on #160, #553, #550, #477 and #549. No
+  new issue filed. Trucks unit 0657 expired unexecuted (no
+  execution learning); 1057 trucks unit re-staged. PR #582
+  merged with 0 comments; no new knowledge-issue comments since
+  the 1032 run. Status: done. Full detail in
+  knowledge-organization/1132-run.md.
+
