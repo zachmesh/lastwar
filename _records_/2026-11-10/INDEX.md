@@ -1844,3 +1844,33 @@ modified: 2026-11-10T14:21:00Z
   comment convention (post only on material change).
   Status: done. Full detail in
   pr-integration/1000-run.md.
+## 09:34 to about 10:06 - Ticker pass ticker-0934, 3 units
+
+- Train unit train-2026-11-10-0630 partial, checked only:
+  both preparation signals absent (no "Boarding closes in"
+  banner, no locomotive icon in the left icon column), no
+  train preparing in this window; the station panel was not
+  opened (preparation-only surface). A tap at norm (905,
+  790) meant for the BASE button opened the Drill Ground
+  upgrade panel and was closed untouched (no Upgrade, no
+  Finish Now). Tracker untouched. Full detail in
+  alliance-train/0946-queue-run.md.
+- Star-ceremony unit star-ceremony-2026-11-10-0630 done,
+  checked only: no trophy icon on the right rail beside
+  the Alliance icon, no ceremony waiting (Tuesday,
+  ceremony is a weekend claim); VS countdown 08:03:34.
+  Tracker marked done. Full detail in
+  alliance-duel/0958-queue-run.md.
+- Duel-score unit duel-score-2026-11-10-0630 done:
+  personal daily total 1,650,000 read live twice (Base
+  Expansion, 07:57:54 left), gap 1,950,000 against
+  3,600,000; unchanged since the 04:35 read. Tracker
+  marked done. Full detail in
+  alliance-duel/1004-queue-run.md.
+- Computer sessions cc-430, cc-432 and cc-433 on the owner
+  Mac mini (cc-430 and cc-432 dropped mid-pass and were
+  restarted; no game state lost, no different-device
+  dialog, no login demanded). No diamonds or money spent.
+  Zombie Invasion: not seeded - the event ended 2026-10-30
+  and its tab is still absent from the Events hub (last
+  re-confirmed 2026-11-09).
