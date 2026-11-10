@@ -181,3 +181,7 @@ of 2026-10-28.
 ## 00:45 to about 01:05 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0045 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge. Knowledge PR 560 squash-merged (five-profile fold: radar 1.66.0, survivors 1.46.0, arms-race 1.73.0, donations 1.79.0, troop-training 1.35.0; new main 594c6fd31); local main fast-forwarded to 594c6fd31. Records PRs 559 and 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against the new main, OD-20261108-01 still open; re-verification comments posted on 425, 351 and 301 after the main move. Status: done. Full detail in pr-integration/0045-run.md.
+
+## 01:05 to about 01:20 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-10-0105 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge, no knowledge merge. Records PRs 559 and 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against unchanged main, OD-20261108-01 still open (age 2 days); no new comments posted - heads and main unchanged since the 0045 notes. Status: done. Full detail in pr-integration/0105-run.md.
