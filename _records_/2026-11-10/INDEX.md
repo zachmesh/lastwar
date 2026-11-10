@@ -2443,3 +2443,7 @@ modified: 2026-11-10T14:21:00Z
   right than the Regular one at (498,936), because of the
   "Hide your name on Gifts" checkbox. Full detail in
   alliance-gifts/1310-queue-run.md.
+
+## 13:15 to about 13:20 - PR integration pass pr-integration-2026-11-10-1315
+
+- PR integration pass pr-integration-2026-11-10-1315 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); no merges, no comments posted - main 72ee1dd9 and heads on 425, 351 and 301 unchanged since the 1245 pass, so its re-verification notes stand and the no-repeat rule applies. Records PR 583 carried to the 15:00 batch at head 98abbc76 (advanced by the ticker-1234 mail/gifts delivery; merge-tree exit 0, tree 0c2044ba). Tools PR 425 owner-gated, conflicting on _tools_/INDEX.md (merge-tree exit 1, re-probed this pass), OD-20261108-01 still open, issue #422 still open. Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged. Merge-aware checker first attempt discarded (merges file was JSON lines, not a JSON array); retry with an array governed. End-of-pass sweep: 4 open PRs, all decided, no unprocessed PRs. Status: done. Full detail in pr-integration/1315-run.md.
