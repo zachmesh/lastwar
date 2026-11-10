@@ -2361,3 +2361,15 @@ modified: 2026-11-10T14:21:00Z
   (idempotent), 0 withdrawals, no issues filed. Pool by_state:
   inbox 71, claimed 0, done 1454. Status: done. Full detail in
   queue-planning/1240-run.md.
+
+## 12:32 to about 12:53 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-1232.
+  Done: implemented issue #483 (retro action B-2026-11-09-02)
+  in PR #587 - retro_report.py 1.5.3 excludes star-ceremony
+  duel screen totals from the summed attainment
+  (achieved_screen_excluded), queue.py complete warns at
+  close time; 36/36 fixture checks pass on isolated /tmp
+  pools. Own PR 425 still owner-gated (OD-20261108-01 open,
+  age 3 days), no action owed. Status: done. Full detail in
+  tool-development/1232-run.md.
