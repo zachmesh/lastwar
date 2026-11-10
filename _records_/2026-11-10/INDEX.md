@@ -189,3 +189,16 @@ of 2026-10-28.
 ## 01:15 to about 01:25 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0115 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge, no knowledge merge. Records PRs 559 and 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against unchanged main, OD-20261108-01 still open (age 2 days); no new comments posted - heads and main unchanged since the 0045 notes. Status: done. Full detail in pr-integration/0115-run.md.
+  troop-training/0034-queue-run.md.
+## 01:08 to about 01:12 - Ticker pass ticker-0104, building-queues unit done
+
+- Building-queues unit building-queues-2026-11-09-2203 done: Lv.29 Aircraft Center upgrade 2d 01:14:21 left (coherent with the 2026-11-09 20:20 read of 2d 06:07:55), slots 2-4 idle, nothing started, no Speed Up tapped. Full detail in building-queues/0112-queue-run.md.
+- Observations: Total Power reads 146,751,949, down about 2.47M from 149,217,331 read live 2026-11-09 07:45, cause not established (Alliance War banner showing); banner quest now reads "Build: Oil Well (0/1)", yesterday's Builders Hut Lv.26 quest no longer the banner (Issue #517 stays open).
+
+## 01:13 to about 01:16 - Ticker pass ticker-0104, research-queue unit done
+
+- Research-queue unit research-2026-11-09-2203 done: slot 1 in progress, timer read live four times (1d 09:07:47 down to 1d 09:04:53, coherent), slot 2 Idle, nothing finished to Complete, no new research started. The running research's name was not re-read live in this unit (carried as Lv.1 Missile Mastery II from the 2026-11-09 20:31 live read, timer coherent). Route correction: the flask icon opens the research tree, not the list-style queue panel described in the 2031 record; the queue state reads from the bottom bar, and the blue arrow opens the SPEED UP panel (closed untouched, Finish Now 4,201 diamonds not tapped). Full detail in research-queue/0116-queue-run.md.
+
+## 01:18 to about 01:29 - Ticker pass ticker-0104, donations unit partial
+
+- Donations unit donations-2026-11-10-0820 partial: Quick Construction count read live 3/30 at entry, 2 coin donations landed (3/30 to 2/30 to 1/30, 1,800 coin), then stopped at the live 1/30 per the standing changed route - no tap from 1/30 on Quick Construction. War-tab Rallied Attack (7/10, recommended badge) also reads 1/30 live, so no tap there either; the paired 1/30 reads support a shared remaining count (Issues #160, #450). Tree scroll direction corrected: drag down does not scroll, drag up does. Footer 4150 to 4300 observed only. Re-read unit donations-2026-11-10-0923 enqueued (not-before 02:00 PST). Full detail in alliance-donations/0129-queue-run.md.
