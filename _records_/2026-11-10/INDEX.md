@@ -2286,3 +2286,4 @@ modified: 2026-11-10T14:21:00Z
   comments posted: main and all heads unchanged since the
   1200 pass, so none were owed. Status: done. Full detail
   in pr-integration/1215-run.md.
+- PR integration pass pr-integration-2026-11-10-1230 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); no records merge, no knowledge merge. Records PR 583 awaiting the 15:00 batch (merge-tree exit 0, tree 0e0c7a57). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against unchanged main 4884c1fb5, OD-20261108-01 still open; no new comments posted - main and all heads unchanged since the 1200 notes. Status: done. Full detail in pr-integration/1230-run.md.
