@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T23:32:17Z
+modified: 2026-11-10T02:42:02Z
 level: L1
-version: 1.34.0
+version: 1.35.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-0434 event-claims execution record 2026-11-09 0450 queue run (partial, hub swept all 7 tabs with Level Swap gone, Age of Oil milestones verified claimed, Wanted Boss rotated back to Code 87, check-in gift entry blocked a second consecutive unit; record commit b6ed78edd0 on records/2026-11-09)
   - source: ticker-0704 event-claims execution record 2026-11-09 0706 queue run (done, both scout signals checked live, nothing claimable - Wanted Boss Code 87 not out yet, Go 09:44:17 at close, appears server 00:00, Rewards Individual tiers and Goals all unreached, Arms Race Tech Research score 0, cumulative 6/8; record commit 5ef03f4b on records/2026-11-09)
   - source: ticker-1434 event-claims execution record 2026-11-09 1500 queue run (partial, Hero Advancement just started timer 03:04:14 score 0 cumulative 7/8, Desert Storm badge a notice not a claim, no check-in tab in the Events hub; record commit 4860808ff on records/2026-11-09)
+  - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, 5 of 23 ledger lines read live, Desert Storm re-read, no Zombie tab; record commit 2f4d783d8 on records/2026-11-09)
 ---
 
 
@@ -1272,3 +1273,11 @@ that drag is the sweep-completeness check, not wasted motion.
 - NOT performed (carried): the unswept tabs - Age of Oil, Winter Battlefield, Level Swap, Wanted Boss, Community - and the Arms Race cumulative chest re-check (7/8, one tier away from claimable). The next events unit sweeps them.
 - No diamonds or money spent. No price tag tapped. No Arms Race grinding done in this unit (left to the arms-race unit). Desert Storm registration buttons not tapped. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target claimable event rewards on the two tabs checked, achieved 0 claimed (0 claimable found), resources_gained none, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 1748 unit added - zero-sweep read, Desert Storm re-read, no Zombie tab, Crystal/Glittering tabs not in visible row
+
+- Unit zero-sweep-2026-11-09-1730 by ticker-1734, about 17:38 to 17:48 local, status partial - the sweep reads only. Evidence in `_records_/2026-11-09/daily-activities/1748-queue-run.md` (commit 2f4d783d8 on records/2026-11-09). The Events hub tabs line is one of the 5 lines read live in this unit.
+- Events hub tabs visible: Winter Battlefield, Desert Storm Battlefield (selected), Wanted Boss. No Zombie Invasion tab (event still ended, no chain seeded, per the standing rule).
+- Desert Storm Battlefield (re-read): Registration ends in 2d 00:14:37 at about 17:46; Battle Day 2026-11-13, 03:00-03:30; Participants 20/20; Task Force A (You) vs Task Force B. Consistent with the 1500 unit's read (registration ends 2d 03:03:28 at about 14:55) - registration ends about 2026-11-11 17:46-18:00. Nothing tapped here; handed to the events-2026-11-09-1857 unit.
+- No Crystal or Glittering Market tab in the visible row (the row may scroll; absence not confirmed). Crystal (R5, age 15 days from 2026-10-25) and Glittering Market (R5, age 9 days from 2026-10-31) still not located by any evidence today; no new surface found in this sweep.
+- No diamonds or money spent. No registration button tapped.

@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-09T14:32:17Z
+modified: 2026-11-10T02:42:02Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, bus icon tap-verified Trucks, dot clears on open, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, blue truck/bus icon is Trucks, 0/5 trades, 4 own + 4 others waiting, 0022 white-truck mapping corrected); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0534 truck-plunder execution record 2026-11-09 0541 queue run (partial, trade entry blocked in current column set, both methods failed, WORLD-corner route re-confirms the 0538 correction, counters not re-read, shortfall carried 4/5 and 1/4; record commit a9b838c5ed on records/2026-11-09)
+  - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, 5 of 23 ledger lines read live, trucks 4/5 dispatch 1/4 plunder live, trade entry route measured in the current icon set; record commit 2f4d783d8 on records/2026-11-09)
 ---
 
 # Truck plunder - Intercity Trade
@@ -155,6 +156,7 @@ train also runs on this screen as a trade vehicle.
   fixed point.
 
 - Working entry route, 2026-11-04 (0242 unit): when the left-column vehicle-front icon carries NO badge, it does not open trade - a tap at norm 54,568 only panned the base map and a tap at the grounded centre 55,578 did nothing, matching the 2026-10-30 evening no-badge pattern. The route that worked: a tap at norm 913,940, on the bottom-right WORLD corner of the base screen, opened Intercity Trade directly on the Others' Trucks view. Next trucks units try this WORLD-corner route first when the column icon carries no badge. The mechanism (why that corner opens trade) is unverified, only the observed result. (2026-11-09 0541 correction: the WORLD-corner route is NOT a direct trade entry - the 0538 unit's tap at 913,940 opened the World map, not trade, and the 0541 unit re-tried it and again reached only the World map. The standing instruction above to try the WORLD-corner route first is superseded; do not cite 913,940 as a trade entry. The badgeless-icon rule itself stands - the 0541 tap at the grounded train-front centre (55,594) only panned the base map, a third confirmation of the rule after 0242 and the 2026-10-30 evening pattern.) Do not re-tap the station building at 592,189 blindly: it produced no change in this framing, a third framing failure for station taps after 2347 and 0344. Detail in the 0242 section below.
+- Working entry route, 2026-11-09 (1748 zero-sweep read, 17:40): in the current icon set the blue truck-front icon at norm y about 573 opens Intercity Trade directly on the first tap; the jeep icon below it is the Secret Command Post, not trade. This resolves the entry block the 0541 unit hit in the same day's earlier column set (badgeless train-front icon only panned the map, WORLD-corner route opened only the World map). Find the trade icon by glyph and badge, not by a fixed point - the column set rotates; re-ground fresh in every unit.
 
 ## How it is done - dispatching
 
@@ -1703,3 +1705,12 @@ settlement and dispatch execution record).
 - No diamonds or money spent. No Trade Contract spent. No truck dispatched, no plunder fought, no alliance mate touched. No login or verification was demanded, no different-device dialog appeared, and no password or Touch ID step was used.
 - Result stats: target dispatch 5, plunder 4, achieved dispatch 0, plunder 0 (nothing completed in this unit; the carried shortfall dispatch 4/5, plunder 1/4 is the 0250 unit's live close, not a re-read here, so no trade_count or plunder_count is stated), points 0, resources_gained none, costs none, about 9 minutes of unit time, verified no, blocker_category e.
 - Follow-up: the next trucks unit arrives with a changed entry method (foreground click variant on the icon, or the station-area route), re-grounds the column fresh, and re-reads both counters live on the trade screen first.
+
+## What the 2026-11-09 1748 unit added - zero-sweep read, trucks 4/5 dispatch 1/4 plunder live, shortfall carried, fix-up raised to priority 1
+
+- Unit zero-sweep-2026-11-09-1730 by ticker-1734, about 17:38 to 17:48 local, status partial - the sweep reads only, nothing claimed, no truck dispatched or plundered. Evidence in `_records_/2026-11-09/daily-activities/1748-queue-run.md` (commit 2f4d783d8 on records/2026-11-09). The trucks line (line 18) is one of the 5 lines read live in this unit.
+- Counters read live on the trade screen: Today's Trade Count 4/5 (four trucks out on Your Truck tab), Your Plunder Count Today 1/4 (Others' Trucks tab). Unchanged from the 0250 unit's live close at 02:50 - no dispatch and no plunder has landed in the about 15 hours between the reads. Shortfall with the trade day ending at the 19:00 reset: dispatch -1, plunder -3.
+- Fix-up: trucks-2026-11-09-1457 raised to priority 1 (expires 18:57); the executor runs it next in this pass. One inbox unit raised, no new unit enqueued - every unread line already had a queued unit.
+- Entry route, measured in the current icon set: the blue truck-front icon at norm y about 573 opens Intercity Trade directly on the first tap; the jeep icon below it is the Secret Command Post, not trade. This resolves the entry block the 0541 unit hit earlier today (badgeless train-front icon only panned the map; WORLD-corner route opened only the World map). See the updated Working entry route entry.
+- No diamonds or money spent. No Trade Contract spent.
+- Result stats (sweep unit): target 23, achieved 5, resources_gained none, costs 10min-device-session, verified no, blocker_category h, lines_read 5, lines_nonzero 4, units_raised_priority1 1.
