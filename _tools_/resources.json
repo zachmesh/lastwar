@@ -1,0 +1,150 @@
+{
+ "note": "Resource definitions for the resource map - floors are the low water marks a run should flag, sinks are the known spends, push sources are where more comes from. Values are judgement calls from play on 2026-10-25, to be tuned with the owner. total_power is a growth metric tracked per the playbook objective, not a spendable resource.",
+ "resources": {
+  "black_rock": {
+   "crit_below": null,
+   "label": "Coal (Season 2 black rock HUD icon; recorded under the black_rock key in the first snapshots)",
+   "push_sources": [
+    "season events",
+    "faction duel rewards"
+   ],
+   "sinks": [
+    "season mechanics"
+   ],
+   "warn_below": null
+  },
+  "coin": {
+   "crit_below": 2000000,
+   "label": "Coin (gold)",
+   "push_sources": [
+    "intercity trucks, about 1.2M to 2.4M gold per truck",
+    "truck plunder, about 600K gold per UR truck",
+    "VIP daily freebie boxes",
+    "radar task rewards",
+    "world map gathering (60 coin tiles)"
+   ],
+   "sinks": [
+    "research - the largest sink at this level",
+    "Lv.30 building upgrades",
+    "hero and drone growth"
+   ],
+   "warn_below": 10000000
+  },
+  "diamonds_red": {
+   "crit_below": null,
+   "label": "Red diamonds (premium currency)",
+   "push_sources": [
+    "free supply pickup",
+    "event rewards",
+    "train arrival mail"
+   ],
+   "sinks": [
+    "never spent autonomously - red line"
+   ],
+   "warn_below": 1000
+  },
+  "food": {
+   "crit_below": 20000000,
+   "label": "Food",
+   "push_sources": [
+    "intercity trucks, about 3.0M to 3.8M per truck",
+    "farmland harvest bubbles",
+    "radar task rewards",
+    "world map gathering"
+   ],
+   "sinks": [
+    "troop training batches, about 5.5M per T10 batch",
+    "research",
+    "building upgrades"
+   ],
+   "warn_below": 50000000
+  },
+  "gold_bars": {
+   "crit_below": null,
+   "label": "Gold bars (HUD)",
+   "push_sources": [
+    "events and passes"
+   ],
+   "sinks": [
+    "shop and upgrade uses, to verify"
+   ],
+   "warn_below": null
+  },
+  "honor": {
+   "crit_below": null,
+   "label": "Alliance honor points (Alliance Store currency, refreshes Monday 00:00 server time)",
+   "push_sources": [
+    "alliance activity and donations"
+   ],
+   "sinks": [
+    "Alliance Store items - buying is an owner decision"
+   ],
+   "warn_below": null
+  },
+  "iron": {
+   "crit_below": 20000000,
+   "label": "Iron",
+   "push_sources": [
+    "intercity trucks, about 3.0M to 3.8M per truck",
+    "iron mine bubbles",
+    "radar task rewards",
+    "world map gathering"
+   ],
+   "sinks": [
+    "troop training batches, about 5.5M per T10 batch",
+    "research",
+    "building upgrades"
+   ],
+   "warn_below": 50000000
+  },
+  "stamina": {
+   "crit_below": null,
+   "label": "Stamina (cap 120)",
+   "push_sources": [
+    "regenerates 1 per 300 seconds",
+    "free 75 claim at the radar, twice a day"
+   ],
+   "sinks": [
+    "radar tasks, 5 to 10 per task",
+    "world map actions"
+   ],
+   "warn_below": null
+  },
+  "titanium_alloy": {
+   "crit_below": null,
+   "label": "Titanium alloy (blue crystal HUD resource, Season 2)",
+   "push_sources": [
+    "season activities"
+   ],
+   "sinks": [
+    "season upgrades, to verify"
+   ],
+   "warn_below": null
+  },
+  "total_power": {
+   "crit_below": null,
+   "label": "Total Power (Individual Power ranking, warzone)",
+   "push_sources": [
+    "hero growth",
+    "troop tiers",
+    "research",
+    "building power"
+   ],
+   "sinks": [],
+   "warn_below": null
+  },
+  "trade_contracts": {
+   "crit_below": null,
+   "label": "Trade Contracts (items)",
+   "push_sources": [
+    "events and shops"
+   ],
+   "sinks": [
+    "train tickets, 3 per boarding under the standing rule",
+    "truck refresh after the free one - never paid autonomously"
+   ],
+   "warn_below": 20
+  }
+ },
+ "version": 1
+}

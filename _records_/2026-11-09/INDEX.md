@@ -2632,3 +2632,8 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   duel-score-1830 reads the closing total. Map pins unclosed, handed
   to radar-1803 under post-roll stack posture. Full detail in
   radar-tasks/1754-queue-run.md.
+
+## Branch repair (2026-11-09 ~18:15 PT, main agent)
+
+- Records branch records/2026-11-09 carried a poisoned commit bcad9a0e (pr-catchall 1739 run, committed from a detached sparse-checkout worktree whose index held only _records_): it deleted 4,510 files - AGENTS.md, README.md, all of _activities_, _conventions_, _knowledge_, _tools_, tools/ and _logs_ - from the branch tree. Five following commits (tool-dev 1732, organizer 1732 + correction, integrator 1745 + addendum) built on the broken tree and only touched _records_, so the deletions persisted; ticker-1734 re-added _logs_ and _queue_ only. The integrator 1745 pass found PR #531 CONFLICTING on the poisoned commit and commented, not merged. Issue #541 tracks the rebuild.
+- Repair: non-records paths (AGENTS.md, README.md, _activities_, _conventions_, _knowledge_, _tools_, tools/) restored from current main c834cf05 (PR #540 merge); the four action-log lines the broken commits never carried (catchall 1739, tool-dev 1732, organizer 1732, integrator 1745) reconstructed from their run records and inserted in timestamp order; planner 1740 commit 5258cec573 cherry-picked on top. No content lost: _records_ diff against the broken tip is only the planner 1740 additions, and the branch diff against main is records/_logs_/_queue_-only again (verified by merge-tree). Attribution correction: the poison commit is the catchall 1739 sparse-worktree delivery, not the tool-dev 1732 delivery as the planner 1740 run record states.
