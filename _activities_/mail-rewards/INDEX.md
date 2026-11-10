@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T12:32:17Z
+modified: 2026-11-10T18:32:17Z
 level: L1
-version: 1.34.0
+version: 1.35.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -40,6 +40,7 @@ grounded_in:
   - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, 9 reward mails claimed, Alliance Event System Claim All, leadership transfer to Abyss Apex, Issue 230 entry datapoint, power 146736949; record commit 6761c35d1 on records/2026-11-09)
   - source: ticker-0134 mail-rewards execution record 2026-11-10 0143 queue run (done, Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0334 mail-rewards execution record 2026-11-10 0355 queue run (done, Claim All sweep, no claimable rewards, R5 warning mail read; record commit b7e79a62 on records/2026-11-10)
+  - source: ticker-0904 mail-rewards execution record 2026-11-10 0929 queue run (partial, entry blocked by camera framing, Mail panel never opened, fourth unit this reset day with the same blocker, Issue #580; record commit 31892dde on records/2026-11-10)
 ---
 
 
@@ -950,3 +951,15 @@ the next tick re-produces this regular as a fresh unit.
 - One spurious "target app exited or restarted" error appeared on a back tap between System and Regular; the next observe showed the System list open normally - the app never exited (same spurious error as in the 0143 unit). Re-observe before acting on a spurious exit error.
 - Delete All was never pressed.
 - Outcome: no claimable mail rewards in any category this round. Nothing claimed, nothing deleted. Returned to the base screen. No diamonds or money spent.
+
+## What the 2026-11-10 0929 unit added - entry blocked by camera framing, Mail panel never opened, partial
+
+- Unit mail-2026-11-10-0630 by ticker-0904, about 09:25 to 09:29 local, status partial. Evidence in `_records_/2026-11-10/mail-rewards/0929-queue-run.md` (commit 31892dde on records/2026-11-10). Computer session cc-429 on the owner Mac mini (cc-428 dropped between units, recovered).
+- Entry attempt 1: Mail envelope tap at the fresh measured centre (931,757) on the standard base framing delivered as a camera pan, not a button tap - the Mail panel never opened, and the view jumped to a panned framing (Drill Ground Lv.25, "15:26" timer) with the right rail (Mail, Alliance, Inventory, WORLD) off-frame. This is the background-input tap-delivers-as-drag failure mode the 0304 pass named the same morning.
+- Recovery attempt 1: drag from (200,500) to (450,500) moved the camera back toward the standard framing (top HUD and HQ back in view) but still panned down-left, right rail still off-frame.
+- Recovery attempt 2: reverse drag from (450,500) to (200,500) moved the camera back to the panned-right framing (Drill Ground Lv.25, "15:27"). The two drags oscillate between two panned framings; neither restores the right rail.
+- Per queue rule R2, the entry attempts stop here: no further blind taps or drags inside this unit. The Mail panel was never opened, no category was swept, nothing was claimed, nothing was deleted.
+- Blocker: camera framing (audit class c/e - tap method / repeated blocker): background-input taps intermittently deliver as map drags, and the base camera then sits in a panned state where the fixed right-rail shortcut column is off-frame. This is the fourth unit this reset day with the same blocker (the 0304 pass's radar, survivors and donations units), so it is a repeated failure mode, not a one-off. Filed as GitHub issue #580 (play) from this record.
+- LESSON: the next mail unit must reset the camera framing first (the standard framing WAS present at 09:14 this pass, so the framing changes between passes) or find a Mail entry that does not depend on the right rail.
+- No diamonds or money spent, no mail claimed or deleted (Delete All never pressed, Claim All never reached), no building or research started. The trucks screen was not re-entered in this unit.
+- Result stats: target all mail categories swept, claimable rewards claimed, achieved 0 categories swept, Mail panel never opened, resources_gained none, costs about 8 minutes, no items spent, verified yes (the non-entry is observed live in this unit), blocker_category e (repeated blocker - camera framing, fourth unit this reset day).

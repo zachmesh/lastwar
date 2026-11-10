@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T13:32:17Z
-version: 1.38.0
+modified: 2026-11-10T18:32:17Z
+version: 1.39.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -46,6 +46,7 @@ grounded_in:
   - source: ticker-0434 alliance-duel execution records 2026-11-10 0435 and 0438 queue runs (done, duel total 1,650,000 read twice, sixth and seventh timers end about 18:00, no ceremony waiting, red circular countdown icon above the Alliance button; record commit 5ba07ce2b4 on records/2026-11-10)
   - source: ticker-0434 shop-claims execution record 2026-11-10 0440 queue run (done, Calendar button opens the HOW TO GET POINTS dialog with the Day 3 duel theme schedule; record commit 5ba07ce2b4 on records/2026-11-10)
   - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, Alliance Duel screen read live inside the training unit - Base Expansion, 14:18:29 remaining, alliance target 1,650,000, UR truck dispatch +300,000, UR secret task +225,000; record commit b7e79a62 on records/2026-11-10)
+  - source: ticker-0934 alliance-duel execution records 2026-11-10 0958 queue run (star ceremony checked only, no trophy icon, red skull badge 5 with 00:00:09) and 1004 queue run (duel total 1,650,000 read live twice, gap 1,950,000; record commit 226f5c37 on records/2026-11-10)
 ---
 
 
@@ -1038,3 +1039,19 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Not the day closing read: the day rolls over about 18:00, and the day still has about 13.4 hours to run at the 04:35 read. The closing read is the last read before about 18:00, not 19:00 (see the 0151/0211 correction for the same stale wording in both records).
 - No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
 - Result stats: neither record carries a stats block; the reads are recorded as target 3,600,000, total 1,650,000, gap 1,950,000, points 0 (0435, corrected from 1,650,000 by the queue tool), verified yes, blocker_category none.
+
+## What the 2026-11-10 0958 and 1004 units added - star ceremony checked only, no trophy; duel total 1,650,000 read twice, gap 1,950,000
+
+- Star-ceremony unit star-ceremony-2026-11-10-0630 by ticker-0934, about 09:56 to 09:59 local, status done (checked only). Evidence in `_records_/2026-11-10/alliance-duel/0958-queue-run.md` (commit 226f5c37 on records/2026-11-10). Computer session cc-432 on the owner Mac mini (session cc-430 dropped mid-pass between the two units; restarted as cc-432, LastWar re-selected, no game state lost).
+- Base screen, read live about 09:58: resources food 612.5M, iron 939.3M, coin 84.1M, diamonds 13.22K; total power 148,058,020; "Build: Oil Well [0/1]".
+- Right rail, read live on the same screenshot: Events badge 2, gold VS medallion with countdown 08:03:34, 3d 08:13:34 icon, 5d 08:03:34 icon, red skull badge 5 with 00:00:09, Alliance shield, Mail, Inventory, WORLD. No trophy icon beside the Alliance icon. The ceremony trophy appears only while a ceremony is waiting; the Star Ceremony is a weekend claim and today is Tuesday, so none is waiting.
+- The VS countdown 08:03:34 is consistent with the duel day rolling over about 18:00 local.
+- Skull-timer datapoint (Issue #498): the right-rail element reads this time as a red skull with badge 5 and countdown 00:00:09 at about 09:58 - the skull shape, the badge count and the countdown are recorded together in one read for the first time. Whether the 0435 unit's "red circular icon with 00:00:33 countdown" is the same element is still not pinned by a same-frame comparison, but the position above the Alliance button and the countdown match; commented on Issue #498 by this run.
+- Outcome: done, checked only. No ceremony waiting, nothing claimed, nothing tapped. Tracker marked done for star-ceremony. No diamonds, money, speedups or other spending. Game left on the own base screen.
+- Duel-score unit duel-score-2026-11-10-0630 by ticker-0934, 10:02 to 10:06 local, status done. Evidence in `_records_/2026-11-10/alliance-duel/1004-queue-run.md` (commit 226f5c37 on records/2026-11-10). Computer session cc-433 on the owner Mac mini (session cc-432 dropped during the token wait between units; restarted as cc-433, LastWar re-selected, no game state lost).
+- Alliance Duel panel, opened from the gold VS medallion on the right rail, read live about 10:03: Today's Theme Base Expansion, countdown 07:57:54. Personal daily total 1,650,000.
+- Re-read about 10:04 (second observation after a transient capture failure and a re-activate): total 1,650,000 again, countdown 07:57:15, theme Base Expansion. The countdown ticked down consistently between the two reads, so the total is a confirmed live read, not a stale frame. Timer arithmetic, eighth live timer pointing at the about-18:00 rollover (Issue #242 resolution): 07:57:54 left at the 10:03 read ends about 18:00:54. Commented on Issue #242 by this run.
+- Gap against the 3,600,000 target: 1,950,000. Chest thresholds 40,000 / 150,000 / 540,000 all show reached (green checkmarks). No chest was tapped: the duel-score unit is read-only and chest claims belong to their owning regulars.
+- CORRECTION: the total is unchanged since the ticker-0434 read at 04:35 (1,650,000, record 0435-queue-run.md): the +1,200,000 above happened between 02:11 and 04:35, and no points were scored between 04:35 and this 10:03 read. The unit stats were corrected in the same pass to the established pattern (points 0, gap 1,950,000, blocker_category none); the complete tool had first recorded points as 1,650,000, duplicating achieved.
+- Movement since the last read: 450,000 at 01:51 and 02:11 (ticker-0134/0204 units) to 1,650,000 now, +1,200,000 during the morning. No scoring action was taken by this unit; the rise is other units' and the owner's play (a UR truck dispatch pays +300,000 per the panel's scoring list, so the rise is consistent with four UR dispatches, noted as consistency only, not a derived claim). This is the same +1,200,000 the 0435 read already verified against the 0248 trucks unit's 4 UR dispatches at the live 300,000 rate (Issue #565).
+- Outcome: done. Personal total 1,650,000 read live twice, gap 1,950,000. Tracker marked done for duel-score. Returned to the base screen with the panel back arrow. No diamonds, money, speedups or stamina spent; no scoring action taken, no chest tapped, no grind. Game left on the own base screen.

@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T12:32:17Z
+modified: 2026-11-10T18:32:17Z
 level: L1
-version: 1.47.0
+version: 1.48.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -53,6 +53,7 @@ grounded_in:
   - source: 2026-11-09 daily retro, execution-knowledge action A-2026-11-09-01 (Issue #300): never write the Gift Level progress gain into stats.points - the progress is alliance-wide, not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match
   - source: ticker-0134 alliance-gifts execution record 2026-11-10 0135 queue run (done, 70 Regular and 6 Premium claimed, both windows reconcile exactly, Gift Level 28 progress 200,393,010; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0334 alliance-gifts execution record 2026-11-10 0346 queue run (done, 110 Regular and 7 Premium claimed, both windows reconcile exactly, Gift Level 28 progress 200,816,740; record commit b7e79a62 on records/2026-11-10)
+  - source: ticker-0904 alliance-gifts execution record 2026-11-10 0932 queue run (partial, entry blocked by the same camera framing as the mail unit, Gifts panel never opened, fifth unit this reset day with the same blocker, Issue #580; record commit 31892dde on records/2026-11-10)
 ---
 
 
@@ -843,6 +844,8 @@ one file per execution.
 - 1.45.0 (2026-11-09): 2121 gifts unit folded (done, dialog-confirmed 113 Regular plus 57 Premium, 170 total, both tabs verified clear; Gift Level 28 progress 199,689,560 to 199,708,580 of 206,300,000; Regular window exact (+1,130 for 113 gifts), third exact-match datapoint, commented on Issue #183; Premium window +17,890 not decomposed from visible rows; entry lesson - hidden base UI revealed by one tap at (935,726), shield re-grounded fresh at (927,726); leadership transfer to Abyss Apex confirmed on the Alliance panel; total power 146,751,949, up 15,000 from the 18:33 low, commented on Issue #482; A-01 first verification test - the record's stats.points 19020 is the pre-fix progress-as-points line, superseded the same way as 0417/1842, tools fix PR #552 merged after this unit ran, post-fix test is the next gifts unit, commented on Issue #300).
 - 1.46.0 (2026-11-10): 0135 gifts unit folded (done, dialog-confirmed 70 Regular plus 6 Premium, 76 total, both tabs verified clear; Gift Level 28 progress 200,390,860 to 200,393,010 of 206,300,000; Regular window exact (+700 for 70 gifts), fourth exact-match datapoint; Premium window +1,450 reconciles exactly from the six gifts' values, first Premium exact reconciliation, commented on Issue #183; Premium badge 5 but dialog claimed 6, a sixth gift arrived mid-claim; entry - background input reached the Alliance button on the first tap, no foreground repair needed).
 
+- 1.48.0 (2026-11-10): 0932 gifts unit folded (partial, entry blocked by the camera framing left by the mail unit this pass, Gifts panel never opened, no tab claimed, Gift Level progress not read; fifth unit this reset day with the same blocker, Issue #580 (play) carries it, no new issue; next unit must reset the camera framing first or find a non-right-rail entry).
+
 - 1.47.0 (2026-11-10): 0346 gifts unit folded (done, dialog-confirmed 110 Regular plus 7 Premium, 117 total, both tabs verified clear; Gift Level 28 progress 200,813,790 to 200,816,740 of 206,300,000; Regular window exact (+1,100 for 110 gifts), fifth exact-match datapoint; Premium window +1,850 reconciles exactly (2 UR +500, 1 R +50, 4 SSR +200), second Premium exact reconciliation, commented on Issue #183; back-arrow x differs per screen, about 62 on the gifts screen against about 156 on the Alliance panel and the Events screen; alliance 96/100 members, power 13,637,956,029).
 
 - 1.42.0 (2026-11-09): 0417 gifts unit folded (done, dialog-confirmed 37 Regular plus 2 Premium, 39 total, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 195,637,370 to 195,638,460 of 206,300,000, total +1,090 - Regular window +390 against +370 expected for 37 gifts, the extra +20 recorded unexplained as new Issue #183 evidence commented by this run, Premium window +700 exactly 500 plus 200; Premium Claim All re-grounded fresh at (744,936); Hide-your-name unchecked before and after; alliance 96/100 members, power 13,532,886,654).
@@ -1427,3 +1430,14 @@ one file per execution.
 - Completion sweep: after both claims the Claim All button is gone from both tabs and every visible row on both tabs reads Claimed. The Premium list scrolled to its tail shows only Claimed rows, ending at the MR +1000 row (Abyss Apex purchased Mega Express Contract, already claimed in an earlier round). The Regular list scrolled down shows only Claimed rows (Violet's Gift +10 rows and a Doom Walker Loot +10 row, Crow Apex Defeated Doom Walker).
 - Note for the next unit: the back-arrow button sits at different x positions per screen - about norm x 62 on the gifts screen, about x 156 on the Alliance panel and the Events screen. Tapping x 156 on the gifts screen misses the button. Ground the back arrow fresh per panel (see "How it is done").
 - Totals: 110 Regular plus 7 Premium, 117 gifts claimed, all dialog-confirmed. Gift Level progress 200,813,790 to 200,816,740 (+2,950), still Level 28. No diamonds or money spent, no purchase made, no shop opened, no setting changed.
+
+## What the 2026-11-10 0932 unit added - entry blocked by the same camera framing, Gifts panel never opened, partial
+
+- Unit gifts-2026-11-10-0630 by ticker-0904, about 09:31 to 09:32 local, status partial. Evidence in `_records_/2026-11-10/alliance-gifts/0932-queue-run.md` (commit 31892dde on records/2026-11-10). Computer session cc-429 on the owner Mac mini.
+- Entry blocked before any gifts action: the base camera is still in the panned framing left by the mail unit this pass (Drill Ground Lv.25, "15:30" timer, read live on a fresh screenshot in this unit). The right rail - Alliance shield, Mail, Inventory, WORLD - is off-frame, so the Alliance Gifts entry cannot be reached.
+- No blind tap or drag was attempted in this unit: the mail unit already proved two drags only oscillate between two panned framings without restoring the rail, and the pass budget was nearly out. Per queue rule R2 the unit stops here rather than repeating the failed method.
+- The Gifts panel was never opened, no tab was claimed, Gift Level progress was not read. Nothing claimed, nothing spent.
+- Blocker: camera framing (audit class c/e - tap method / repeated blocker), same as the mail unit this pass: GitHub issue #580 (play), filed from the mail record. This is the fifth unit this reset day with the same blocker (the 0304 pass's radar, survivors and donations units, plus mail and gifts this pass). No new issue filed - #580 already carries it.
+- LESSON: the next gifts unit needs the camera framing reset first (the standard framing WAS present at 09:14 this pass), or a Gifts entry that does not depend on the right rail.
+- No diamonds or money spent, no gifts claimed, no building or research started.
+- Result stats: target Claim All on both tabs (Regular and Premium), both verified empty, achieved 0 tabs claimed, Gifts panel never opened, resources_gained none, costs about 2 minutes, no items spent, verified yes (the blocked entry is observed live in this unit), blocker_category e (repeated blocker - camera framing, fifth unit this reset day).
