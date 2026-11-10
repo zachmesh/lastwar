@@ -1356,3 +1356,18 @@ modified: 2026-11-10T14:21:00Z
   commented. Validation 26/26 fixture assertions on isolated
   /tmp fixtures only. Status: done. Full detail in
   tool-development/0732-run.md.
+
+## 07:32 to about 07:50 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-0732.
+  Folded ticker-0634 donations (failed, canvas ignored taps,
+  Issue #575) and ticker-0704 radar + arms-race records into 3
+  profiles (PR #578, OPEN and MERGEABLE): donations 1.82.0 to
+  1.83.0 (input-blocked-with-live-stream failure mode, fullscreen
+  offset +70x measured, coin/food transposition corrected),
+  radar-tasks 1.67.0 to 1.68.0 (Claim All-only bar, 9 pending,
+  dish re-grounded 47,717), arms-race 1.76.0 to 1.77.0 (Drone
+  Boost phase, tier-3 plan 300 stamina, R4 reachable). Issue
+  comments #282 and #575. No new issue filed. Slack DM sent.
+  Status: done. Full detail in
+  knowledge-organization/0732-run.md.
