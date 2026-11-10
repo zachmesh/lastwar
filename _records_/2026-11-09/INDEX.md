@@ -2574,3 +2574,10 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   2026-10-31 run of 22 partials - R2 third-strike blocker
   persists; re-read unit named: survivors-2026-11-09-1803.
   Full detail in survivor-intake/1729-queue-run.md.
+
+## 16:40 to about 17:22 - Planner pass
+
+- Plan staged 17 units into the live pool (18:03-18:57 PST slots tonight; the same 17 slots were already on the branch from the 14:42 ticker sync, so the delivery carries no unit files); already_present 56, skipped_done_current 3, skipped_closed harvest-2026-11-09-1403 (executed 16:23), reaped 0, expired 0.
+- Pre-reset sweep pair already present (zero-sweep 1630 done, 1730 inbox, chain pre-reset-sweep-2026-11-09); production skipped, not the 17:00 hour run.
+- Scout diff on the branch observation (61 observed, 11 actionable) applied through the worktree route: 9 already-queued, 3 artifact enqueues (none-* unmatched-label lines, Issue #536) removed, 0 net new units; promotion proposals 3. The body's --root names the repo root but the tool expects the pool dir; a first apply with the literal root minted 12 units into a stray inbox/ (deleted, live pool untouched) - Issue #537.
+- No withdrawals. Labels aligned on #506/#477 (play, idea). Issues #536 and #537 filed (tooling). Status: done. Full detail in queue-planning/1640-run.md.
