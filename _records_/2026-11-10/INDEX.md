@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T14:21:00Z
+modified: 2026-11-10T15:31:00Z
 level: L0
 version: 1.0.0
 description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures)
@@ -1262,3 +1262,21 @@ of 2026-10-28.
   the records merge and all PR heads are unchanged
   since the 0600 pass. Status: done.
   Full detail in pr-integration/0700-run.md.
+
+## 07:15 to about 07:31 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0715.
+  Non-batch pass per the checker (plain due but
+  merge-aware not due - PR 569 already merged 07:08:03
+  in the 07:00 window, next batch 11:00): no merges.
+  Opened records PR 576 for the post-0700-batch commits
+  (head 718d80ef, clean, awaiting the 11:00 batch).
+  Records PRs 351 and 301 still conflict with main on
+  the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-probed, carried
+  for branch-side reconciliation. Tools PR 425
+  owner-gated, clean, unchanged, awaiting the owner
+  decision (OD-20261108-01 open, age 2 days). No new
+  comments posted: main and all heads unchanged since
+  the 0700 pass. Status: done. Full detail in
+  pr-integration/0715-run.md.
