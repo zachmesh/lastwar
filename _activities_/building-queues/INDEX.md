@@ -1,9 +1,9 @@
 ---
 title: Building Queues
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T17:32:17Z
+modified: 2026-11-10T04:50:04Z
 level: L1
-version: 1.2.0
+version: 1.3.0
 description: Checking build queues and upgrade state, one activity folder for building knowledge
 status: unverified
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: owner structure direction on activity folders, 2026-10-25
   - source: ticker-0736 scout-discovery execution record 2026-11-09 0744 queue run (done, building queue read live - Lv.29 Aircraft Center 2d 18:40:11 left, slots 2-4 idle, hammer entry (44,195), 2.5-day clock gap flagged; record commit 36992d92e on records/2026-11-09)
   - source: ticker-0842 scout-discovery execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest measured read-only - Lv.25 to 26, Iron 170.0M, Food 56.9M, Original Time 15d 08:05:18, Upgrade button 7d 07:16:49, Finish Now 18,188 diamonds, owner-decision Issue #517; record commit ec55aa585 on records/2026-11-09)
+  - source: ticker-1934 building-queues execution record 2026-11-09 2020 queue run (done, Aircraft Center 2d 06:07:55 left, slots 2-4 idle, hammer entry (44,195); record commit 69d8e38ec on records/2026-11-09)
 ---
 
 
@@ -50,7 +51,7 @@ owner choice unless it was already queued. Executions are recorded in
 
 - What the idle slots should build next. That choice is with the
   owner, together with the research direction. (2026-11-09 0744 update: three slots are idle now, not two; the Drill Ground upgrade's fate is unverified, see the correction above.)
-- The about 2.5-day gap in the Aircraft Center upgrade clock (2026-10-25 read 19d 18h left, arithmetic expects about 4d 18h left after 15 days, live read 2d 18:40) - possibly owner-applied speedups or a different earlier state. Flagged, not resolved. (Added 2026-11-09 0744.)
+- The about 2.5-day gap in the Aircraft Center upgrade clock (2026-10-25 read 19d 18h left, arithmetic expects about 4d 18h left after 15 days, live read 2d 18:40) - possibly owner-applied speedups or a different earlier state. Flagged, not resolved. (Added 2026-11-09 0744. 2026-11-09 2020 update: the 2d 06:07:55 read 12h33m after the 0744 read falls 12:32:16 against 12:33 of wall time - the two reads cohere and the gap is not widened by this read.)
 - Whether the Lv.26 Builders Hut upgrade should start now (owner-decision Issue #517): the 15d 08:05:18 original time (7d 07:16:49 effective as displayed) is the longest build commitment measured so far, and it would occupy the slot the Lv.29 Aircraft Center finishes into; if approved, the building-queues regular (PR #515, Refs #513) owns the execution. Whether the banner quest pays a separate reward on completion is untested. (Added 2026-11-09 0848.)
 
 ## What the 2026-11-09 0744 scout-discovery unit added - Aircraft Center 2d 18:40 left, three slots idle, 2.5-day clock gap flagged
@@ -72,3 +73,13 @@ owner choice unless it was already queued. Executions are recorded in
 - Building queue read 1/4 at the time (Lv.29 Aircraft Center in progress, per the 0744 unit), so a free builder slot exists, but the 15-day build is the longest commitment measured so far. Starting a building is a red line (never start buildings on own initiative), so the Upgrade button was NOT tapped and Finish Now was NOT tapped.
 - Owner decision: Issue #517 filed (owner-decision) - start the Lv.26 Builders Hut upgrade now, or leave it queued? If approved, the building-queues regular (PR #515, Refs #513) would own the execution. Candidate stays learn-only until the owner decides.
 - Result stats: target explain-builders-hut-lv26-quest-mechanism-cost-time-rewards, achieved 1, resources_gained none, costs about 5 minutes, no items spent, no diamonds spent, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 2020 unit added - Aircraft Center 2d 06:07:55 left, slots 2-4 idle, clock coherent with the 0744 read, done
+
+- Unit building-queues-2026-11-09-1803 by ticker-1934, about 20:17 to 20:20 local, status done. Read-only check; nothing started, no Speed Up tapped, no Construct tapped. Evidence in `_records_/2026-11-09/building-queues/2020-queue-run.md` (commit 69d8e38ec on records/2026-11-09). The owning regular now exists (Issue #513, tooling - sync produced this unit); the ticker-1934 pass commented Issue #513.
+- Entry: hammer icon at norm (44,195) on the base screen opened the BUILDING QUEUE panel on the first try.
+- Slot 1: Lv.29 Aircraft Center upgrade in progress, Time Left 2d 06:07:55, progress bar about two thirds full. Speed Up button present, NOT tapped. Slot 2: Idle. Slot 3: Idle. Slot 4: Idle. Construct button on each, NOT tapped. Header: "Commander, manage your Building Queues here. Enhance development speed by hiring more queues or accelerating building."
+- Consistency: the 07:46 read today (scout-discovery unit, ticker-0736) had the same slot 1 at 2d 18:40:11 left. 12 hours 33 minutes later the clock reads 2d 06:07:55, a fall of 12:32:16 against 12:33 of wall time - the two reads cohere and the 2.5-day gap flagged that morning is not widened by this read.
+- The Drill Ground upgrade from the 2026-10-25 read is still not re-read; its state stays unverified. The Builders Hut Lv.26 banner quest (owner-decision Issue #517) was not re-opened in this unit; starting it stays owner-only. Three slots idle, as at 07:46.
+- Computer session cc-338 dropped between units and cc-340 was started to recover, no game state lost; the Alliance Techs panel from the previous unit was still open and was closed back to the base (panel X, then the Alliance menu back arrow) before the hammer tap. No different-device dialog, no login or verification demanded, no password or Touch ID step used. No diamonds or money spent, no speedup used, no stamina item opened, no building or research started.
+- Result stats: target queue state read live, achieved 4 slots read live, resources_gained none, costs about 3 minutes, no items spent, verified yes (same-unit live reads), blocker_category none.

@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T02:42:02Z
+modified: 2026-11-10T04:50:04Z
 level: L1
-version: 1.34.0
+version: 1.35.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, blue truck/bus icon is Trucks, 0/5 trades, 4 own + 4 others waiting, 0022 white-truck mapping corrected); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-0534 truck-plunder execution record 2026-11-09 0541 queue run (partial, trade entry blocked in current column set, both methods failed, WORLD-corner route re-confirms the 0538 correction, counters not re-read, shortfall carried 4/5 and 1/4; record commit a9b838c5ed on records/2026-11-09)
   - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, 5 of 23 ledger lines read live, trucks 4/5 dispatch 1/4 plunder live, trade entry route measured in the current icon set; record commit 2f4d783d8 on records/2026-11-09)
+  - source: ticker-1910 sync record 2026-11-09 (trucks-2026-11-09-1457 fix-up expired unrun, window passed before execution, reaped 19:14 in the ticker-1910 pass; record commit e05c662bd on records/2026-11-09)
 ---
 
 # Truck plunder - Intercity Trade
@@ -1714,3 +1715,10 @@ settlement and dispatch execution record).
 - Entry route, measured in the current icon set: the blue truck-front icon at norm y about 573 opens Intercity Trade directly on the first tap; the jeep icon below it is the Secret Command Post, not trade. This resolves the entry block the 0541 unit hit earlier today (badgeless train-front icon only panned the map; WORLD-corner route opened only the World map). See the updated Working entry route entry.
 - No diamonds or money spent. No Trade Contract spent.
 - Result stats (sweep unit): target 23, achieved 5, resources_gained none, costs 10min-device-session, verified no, blocker_category h, lines_read 5, lines_nonzero 4, units_raised_priority1 1.
+
+## What the 2026-11-09 1910 sync added - fix-up trucks-1457 expired unrun, trade-day shortfall closes unfilled
+
+- Sync record in the ticker-1910 pass, about 19:14 local: the fix-up unit trucks-2026-11-09-1457 (raised to priority 1 by the 1748 sweep, expires 18:57) was reaped as expired - `_queue_/done/trucks-2026-11-09-1457.md` records status expired, window passed before execution, 0 attempts, finished 19:14 in the ticker-1910 pass (commit e05c662bd on records/2026-11-09). No truck was dispatched and no plunder was fought in this pass.
+- CORRECTION: the 1748 section's "the executor runs it next in this pass" did not happen - the unit expired before execution. The ended trade day's shortfall (dispatch 4/5, plunder 1/4, shortfall -1/-3, last read live 17:40) closes unfilled; the counters reset with the new trade day at the 19:00 reset. No further fix-up is owed for the ended day.
+- No diamonds or money spent. No Trade Contract spent.
+- Result stats: target dispatch 5, plunder 4, achieved dispatch 4, plunder 1 for the ended trade day (shortfall -1/-3), verified yes (same-pass live reads), blocker_category none.
