@@ -2012,3 +2012,63 @@ modified: 2026-11-10T14:21:00Z
   identical 0 counts (idempotent), 0 withdrawals, no issues
   filed. Pool by_state: inbox 73, claimed 0, done 1451. Status:
   done. Full detail in queue-planning/1040-run.md.
+## 10:24 to 10:29 - Ticker pass ticker-1004, passes unit done
+
+- Passes unit passes-2026-11-10-0657 done. Four shop tabs
+  checked live, nothing claimable this cycle: HOT DEALS
+  landing is the web-store promo only; Weekly Pass shows the
+  S2 Drone Components and S1 Drone Parts cards as $4.99
+  purchase offers with no Claim button, Free Supply with no
+  claim affordance (already taken this cycle); Super Monthly
+  Pass Daily Pickup reads Claimed, Days Left 11, Rewards
+  Left 11; Weekly Deal holds only paid bundles ($99.99 /
+  $19.99 / $49.99). Legendary Take All $19.99 and the $24.99
+  extension untouched. Scroll blocker: the Weekly Pass list
+  would not scroll (3 attempts, no change), so the Iron and
+  Coin cards below the fold were not re-verified in this unit
+  (verified same-cycle at 04:40); next unit retries with a
+  changed scroll method. Full detail in
+  shop-claims/1029-queue-run.md.
+
+## 10:32 to 10:36 - Ticker pass ticker-1004, secrets unit done
+
+- Secrets unit secrets-2026-11-10-0657 done. Secret Command
+  Post: 8 Your Tasks cards, all PERFECT, no Claim button
+  anywhere (count confirmed 8, resolving the 02:18 "9" as a
+  miscount); assists 5/5 at cap; Reward Recovery newest
+  record 2026-11-6 18:00 already CLAIMED, nothing new.
+  Nothing to deploy, Mega Refresh not used (cost still
+  unobserved). Open observation: the orange hexagon badge
+  was seen on Protect Refugee Camp this unit, while 04:44
+  saw it on Provide Tech Support - meaning still
+  unexplained. Scroll note: the plain scroll action does
+  not move this list (same as Weekly Pass); press-drag is
+  the working method. Token lease expired mid-unit; the
+  unit continued on the claim lease. Full detail in
+  secret-missions/1036-queue-run.md.
+
+## 10:38 to 10:40 - Ticker pass ticker-1004, treasures unit done
+
+- Treasures unit treasures-2026-11-10-0657 done. Fragment
+  stock read live: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1,
+  M6 x6, M7 x10 - M3 at 0, so no dig is possible and both
+  Dig buttons sit greyed out. Chest progress still 11/15.
+  Rewards button now checked: it opens a REWARD PREVIEW
+  (dig odds UR 10%, SSR 30%, SR 60%), not a claimable
+  reward. No exchange opened. Full detail in
+  hidden-treasures/1040-queue-run.md.
+
+## 10:42 to 10:45 - Ticker pass ticker-1004, events unit partial
+
+- Events unit events-2026-11-10-0657 partial. Hub sweep
+  read 4 of 6 tabs live, nothing claimable: Arms Race Hero
+  Advancement phase (03:18 left, score 0, chests 0/2 -
+  free paths cannot reach tier 3 this phase, noted for the
+  arms-race unit); Age of Oil both milestones complete
+  (4219/500 research, 17573/500 upgrades, medallion is
+  info-only); Desert Storm registered, battle 2026-11-13
+  03:00-03:30, 20/20; Wanted Boss Code 64 not yet appeared
+  (Go countdown 06:15:23). Survey Center and Community not
+  re-read this unit (last read 05:19, nothing claimable);
+  the 10:57 events unit re-sweeps them. Full detail in
+  event-claims/1045-queue-run.md.
