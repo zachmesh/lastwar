@@ -1948,3 +1948,34 @@ modified: 2026-11-10T14:21:00Z
   517 all over 24 hours with statements current. VPS root
   disk 79 percent with 2.1G free. Status: no-op.
   Full detail in pr-catchall/1039-run.md.
+
+## 10:32 to about 10:55 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-1032.
+  Folded ticker-0904 and ticker-0934 records into 7 profiles
+  (PR #582, OPEN and MERGEABLE + CLEAN, 1 commit, base main
+  e16fb141): building-queues 1.4.0 to 1.5.0 (Aircraft Center
+  1d 17:13:16 left, clock coherent with the 0112 read, Total
+  Power 148,058,020, up about 1.31M from 01:08, no cause
+  established), alliance-donations 1.84.0 to 1.85.0 (2 coin
+  donations verified 3/30 to 1/30, stopped at the 1/30 floor,
+  replenishment thirty-sixth data point for Issue #160),
+  alliance-help 1.37.0 to 1.38.0 (2 ally helps, header
+  1,040/1,000 unchanged in-session; ENTRY CORRECTION - the
+  (44,568) bubble is the Trucks shortcut, not help),
+  mail-rewards 1.34.0 to 1.35.0 (entry blocked by camera
+  framing, fourth unit this reset day with the same blocker,
+  Issue #580 filed), alliance-gifts 1.47.0 to 1.48.0 (entry
+  blocked by the same panned framing, fifth unit, no new
+  issue), alliance-train 1.38.0 to 1.39.0 (checked only, no
+  train preparing; CORRECTION - (905,790) is not a BASE
+  button, (59,428) locomotive label was a mislabel of
+  resource bubbles), alliance-duel 1.38.0 to 1.39.0 (no
+  ceremony waiting; skull badge 5 with 00:00:09 for Issue
+  #498; duel total 1,650,000 read twice, gap 1,950,000,
+  unchanged since 04:35). One contradiction resolved: the
+  duel-score stats were corrected in-pass (points 1,650,000
+  duplicating achieved -> 0). Issue comments on #160, #498,
+  #242 and #549; no new issue filed. Slack DM sent.
+  Status: done. Full detail in
+  knowledge-organization/1032-run.md.
