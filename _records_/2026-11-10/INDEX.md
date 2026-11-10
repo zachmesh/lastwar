@@ -2117,3 +2117,16 @@ modified: 2026-11-10T14:21:00Z
   "5130" - the count digit must be verified from the
   screenshot, never from compact OCR alone. Full detail in
   alliance-donations/1133-queue-run.md.
+
+  PR integration 1130 run (non-batch pass; checker plain due in the
+  11:00 window but merge-aware not due, PR 576 already merged
+  11:02:49 in this window). Records PR 583 carried to the 15:00
+  batch at new head 4488ef50 (5 commits beyond main, clean).
+  Records PRs 351 and 301 still conflict with main on the single
+  file _logs_/repo-actions/action-log.jsonl (append-append), heads
+  unchanged, re-probed, carried for branch-side reconciliation.
+  Tools PR 425 owner-gated, clean, re-verified against current
+  main 104511d0, awaiting the owner decision (OD-20261108-01 open,
+  age 3 days). No comments posted this pass per the forward comment
+  convention. No merge, so no local sync-back or Slack sync owed.
+  Status: done. Full detail in pr-integration/1130-run.md.
