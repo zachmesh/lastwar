@@ -1825,3 +1825,22 @@ modified: 2026-11-10T14:21:00Z
   335, 514 and 517 all over 24 hours with statements current.
   Status: no-op.
   Full detail in pr-catchall/0939-run.md.
+## 10:00 to about 10:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1000.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 11:00): no records merges.
+  No knowledge or code PR merged. Records PR 576 clean
+  at head a74cfaf37 (29 commits beyond main), awaiting
+  the 11:00 batch. Records PRs 351 and 301 still conflict
+  with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against new main e16fb141a, awaiting the
+  owner decision (OD-20261108-01 open, age 2 days).
+  Three re-verification comments were posted in error
+  this pass and deleted the same pass per the forward
+  comment convention (post only on material change).
+  Status: done. Full detail in
+  pr-integration/1000-run.md.
