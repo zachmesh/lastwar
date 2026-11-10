@@ -143,3 +143,21 @@ of 2026-10-28.
   unverified again. Commented on open issue #150 with the
   data point. No diamonds or money spent. Full detail in
   troop-training/0034-queue-run.md.
+## 00:32 to about 00:55 - Knowledge organization 0032 run
+
+- Five substantive records in three ticker passes folded into five
+  profiles in two commits on PR 560 (OPEN and MERGEABLE, CLEAN, 2
+  commits, against main 37f58defe): radar-tasks 1.66.0 (2351 stack
+  day, Quick Execute 5 tasks, 9 rewards pending, dish (52,694)
+  move-wait-click), survivor-intake 1.46.0 (2358 gate cleared live,
+  Quick Dispatch ran first time in the queue era), arms-race 1.73.0
+  (0006 Tech Research 0/30,000, R4 skipped-needs-owner), alliance-
+  donations 1.79.0 (0011, 9 donations verified, footer not account-
+  attributable, Issue #558, "27 of 30" day total superseded - at
+  least 38 landed this reset day, "30" is a rolling allowance cap)
+  and troop-training 1.35.0 (0034, formation-yard taps resolve to
+  squads and the Wall, Drill Ground route does not reproduce).
+  Own PRs 555 and 557 merged with no review comments. Issues #558,
+  #220, #500, #160, #174, #423, #417 and #484 commented; #150 was
+  already commented by the ticker-0034 pass. Full detail in
+  knowledge-organization/0032-run.md.
