@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T21:10:00Z
+modified: 2026-11-10T21:37:00Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures), and the 1204 queue ticker pass with 3 units partial (harvest, survivors, training), and the 1234 queue ticker pass with 2 units done (mail, gifts)
+description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures), and the 1204 queue ticker pass with 3 units partial (harvest, survivors, training), and the 1234 queue ticker pass with 2 units done (mail, gifts), and the 1314 queue ticker pass with 4 units done (help, star-ceremony, duel-score, passes) and 1 unit partial (train)
 status: unverified
 ---
 
@@ -2461,3 +2461,52 @@ modified: 2026-11-10T14:21:00Z
   log_append gate mention; gh CLEAN/MERGEABLE again, still
   owner-gated (OD-20261108-01 open). Status: done.
   Full detail in tool-development/1332-run.md.
+## 13:16 to 13:22 - Ticker pass ticker-1314, help unit done
+
+- Help unit help-2026-11-10-1030 done. Help All pressed once;
+  GoldenSonya Food Output V research helped, no ally requests
+  remain. Points read 1,040/1,000 at entry and after the press
+  in the same dialog instance (no close/reopen re-read, so no
+  points delta claimed). The base-screen help-bubble tile tap
+  at (810,705) did nothing; the unit pivoted to the Alliance
+  panel route under R2. Full detail in
+  alliance-help/1316-queue-run.md.
+
+## 13:22 to 13:25 - Ticker pass ticker-1314, train unit partial
+
+- Train unit train-2026-11-10-1030 partial. No train
+  preparing at this check: no train icon in the left icon
+  column and no "Boarding closes in" banner under the
+  resource bar, so the unit closed without panning the base
+  edge per the activity metadata. Nothing boarded. Full
+  detail in alliance-train/1322-queue-run.md.
+
+## 13:27 to 13:29 - Ticker pass ticker-1314, star-ceremony unit done
+
+- Star-ceremony unit star-ceremony-2026-11-10-1030 done. No
+  ceremony trophy icon beside the Alliance button, so no Star
+  Ceremony is waiting. Personal duel total read live on the
+  Today's Theme tab: 1,650,000 of 3,600,000 (gap 1,950,000),
+  theme Base Expansion, unchanged since the 0438 read. Not
+  the 19:00 reset closing read. Full detail in
+  alliance-duel/1327-queue-run.md.
+
+## 13:31 to 13:33 - Ticker pass ticker-1314, duel-score unit done
+
+- Duel-score unit duel-score-2026-11-10-1030 done. Personal
+  duel total read live in this unit on the Today's Theme tab:
+  1,650,000 of 3,600,000 (gap 1,950,000), theme Base
+  Expansion, unchanged all duel day. Not the 19:00 reset
+  closing read. Full detail in alliance-duel/1331-queue-run.md.
+
+## 13:35 to 13:41 - Ticker pass ticker-1314, passes unit done
+
+- Passes unit passes-2026-11-10-1057 done. Four shop tabs
+  checked live, nothing claimable: Hot Deals has only the
+  store promo, all four Weekly Pass cards are unowned Get
+  Now $4.99 offers, Monthly Daily Pickup already Claimed
+  (11 days left), Weekly Deal is paid-only. The 1029
+  follow-up is answered - a press-drag scroll moved the
+  Weekly Pass list and the Iron and Coin cards below the
+  fold are now verified not owned. Full detail in
+  shop-claims/1335-queue-run.md.
