@@ -2721,3 +2721,4 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   to hold all ten top-level entries before push. VPS disk slid to
   84 percent, 1.6G free. Status: no-op. Full detail in
   pr-catchall/1939-run.md.
+- Tool-developer pass tool-development-2026-11-09-1932. Done: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 1845 note re-verified CLEAN against new main 6043b1eb6); issue #539 taken as the single item - resolve_pool_root() now prefers _queue_ when a repo root holds both a stray top-level pool and a _queue_ subdir, and pool_root_warning names the stray on read and write paths; PR #546 opened (commit 569511eb4, MERGEABLE/CLEAN); 31 fixture assertions 31/31 on isolated /tmp scratch pools, negative control reproduces the #539 misread on main (6/1 vs fixed 7/0); progress commented on #539 and synced to the owner Slack DM. Full detail in tool-development/1932-run.md.
