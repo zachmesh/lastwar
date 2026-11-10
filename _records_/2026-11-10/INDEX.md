@@ -1979,3 +1979,25 @@ modified: 2026-11-10T14:21:00Z
   #242 and #549; no new issue filed. Slack DM sent.
   Status: done. Full detail in
   knowledge-organization/1032-run.md.
+
+## 10:45 to about 10:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1045.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 11:00): no records merges.
+  Knowledge PR 582 merged by squash (seven activity
+  profiles folded, main 7cdec6e3). Records PR 576 clean
+  at head 8f07615b (36 commits beyond main), awaiting
+  the 11:00 batch. Records PRs 351 and 301 still conflict
+  with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against current main 7cdec6e3, awaiting the
+  owner decision (OD-20261108-01 open, age 2 days).
+  Three re-verification comments were posted in error
+  this pass and deleted the same pass per the forward
+  comment convention (post only on material change).
+  Local main synced back by bundle to 7cdec6e3. Merge
+  synced to the owner's Slack DM. Status: done. Full
+  detail in pr-integration/1045-run.md.
