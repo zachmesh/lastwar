@@ -1472,3 +1472,30 @@ modified: 2026-11-10T14:21:00Z
   posted this pass: nothing material changed since the
   0800 re-verification notes. Status: done. Full detail in
   pr-integration/0815-run.md.
+
+## 08:12 to about 08:15 - Alliance donations, ticker-0804 queue run
+
+- Unit donations-2026-11-10-1600, status partial, verified no.
+  The named re-read unit from the 0747 follow-up: Rallied Attack
+  panel already open at entry, Donation Count read live 1/30,
+  Tech EXP 24.6K/4.5M. One 800-coin tap dispatched from the
+  live 1/30 on the War-tab node per the changed route; the
+  button greyed with a 00:11:08 cooldown timer hiding the count,
+  and Tech EXP stayed 24.6K, so the landing is unproven and most
+  likely eaten (same grey-plus-timer, no-landing shape as the
+  2018 unit). No diamonds. A named re-read unit is enqueued for
+  after the cooldown (not before 08:28). Full detail in
+  alliance-donations/0815-queue-run.md.
+
+## 08:17 to about 08:26 - Resource collection, ticker-0804 queue run
+
+- Unit harvest-2026-11-10-0603, status partial, verified yes for
+  the iron gain, no for the sweep. One tap on a grounded green
+  bubble centre at (167, 324) collected iron plus 3.4M
+  HUD-verified (935.9M to 939.3M); food and coin unchanged, so
+  the aimed "food" bubble was iron - the R2 type-identification
+  failure again. Blue triangles unchanged at 4. The iron
+  one-tap test (Issue #502) stays inconclusive: no pre-tap iron
+  inventory was read. Sweep incomplete at the token expiry;
+  edges, Armed Truck and farmland re-tap fall to the next
+  harvest unit. Full detail in resource-collection/0826-queue-run.md.
