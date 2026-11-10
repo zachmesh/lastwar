@@ -355,8 +355,24 @@ def pool_root_warning(root):
     did exactly that). A pool that exists but is empty still has
     its state directories, so only the no-directory case warns.
     Warning only, never a block, matching complete's convention.
+
+    A resolved _queue_ pool whose parent still holds top-level
+    pool state directories warns too (issue #539): the parent is
+    a repository root with a stray pool beside the real one, and
+    the stray must be removed rather than silently ignored, or a
+    later diff against the repository root reads the wrong pool.
     """
     if any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        if os.path.basename(os.path.abspath(root)) == "_queue_":
+            parent = os.path.dirname(os.path.abspath(root))
+            stray = [s for s in STATES
+                     if os.path.isdir(state_dir(parent, s))]
+            if stray:
+                return (f"warning: stray pool state at {parent}: "
+                        f"{', '.join(stray)} beside the resolved pool "
+                        "- remove the stray so a later diff against "
+                        "the repository root cannot read the wrong "
+                        "pool (issue #539)")
         return ""
     return (f"warning: pool root {root} holds no inbox, claimed "
             "or done directory - the counts below describe an "
@@ -376,10 +392,16 @@ def resolve_pool_root(root):
     other root passes through unchanged for the caller to judge:
     read commands warn through pool_root_warning, write commands
     refuse (see cmd_enqueue).
+
+    A root holding BOTH top-level pool state directories and a
+    _queue_ subdirectory is a repository root with a stray pool
+    beside the real one (issue #539: any pre-#512 run minted a
+    stray <repo>/inbox/, and the stray is never read by the
+    ticker): a genuine pool never contains a _queue_ subdir, so
+    resolve it to <root>/_queue_ and let pool_root_warning name
+    the stray so it gets removed instead of silently ignored.
     """
     if not root:
-        return root
-    if any(os.path.isdir(state_dir(root, s)) for s in STATES):
         return root
     queue_dir = os.path.join(root, "_queue_")
     if os.path.isdir(queue_dir):
@@ -2087,7 +2109,13 @@ def cmd_enqueue(args):
     # <root>/inbox/ and report "queued" into a pool nobody reads.
     # Read commands keep the warn-only pool_root_warning convention
     # (issue #199); only this write path refuses, before anything
-    # is created or written.
+    # is created or written. The warning also fires here: a stray
+    # pool beside the resolved _queue_ pool (issue #539) must be
+    # named on the write path too, so it gets removed instead of
+    # silently ignored.
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
     if not any(os.path.isdir(state_dir(args.root, s)) for s in STATES):
         print(f"refused: pool root {args.root} holds no inbox, "
               "claimed or done directory - the pool was not found, "
