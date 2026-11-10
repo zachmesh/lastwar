@@ -2745,3 +2745,9 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   inventory-icon-red-dot promotion proposal is already
   decided in perception-scout (candidate REJECTED as a
   task). Full detail in knowledge-organization/1932-run.md.
+## 19:40 to about 19:53 - Planner pass
+
+- Plan staged 6 units into the live pool (0657 slots 2026-11-10: passes, secrets, treasures, trucks, events, plus scout-midday-2026-11-10-0700; already_present 61, skipped_done_current 3, skipped_closed 4, reaped 0, expired 5, stale_done_dropped 3).
+- Pre-reset sweep pair already present, both passes done (zero-sweep 1630 and 1730 in done, chain pre-reset-sweep-2026-11-09); production check skipped (19:00 hour run).
+- Scout diff on the branch observation (61 observed, 11 actionable) applied to the live pool with the branch's fixed tool (post-#535/#527/#510): 7 already-queued, 0 enqueued, candidates 1 (inventory-icon-red-dot), promotion proposals 1, unexplained red dots 0 (diff); narrative seen 37, unexplained 8. Branch-closed 1 (arms-race-2026-11-09-1803). No withdrawals. Pool inbox 70, claimed 0, done 1395.
+- Branch repair verified complete: PR #531 merged at 19:32 into main 6043b1eb after the repair follow-up (merged tree 4,657 files); Issue #544's finding is resolved by that repair and merge, #544 itself stays open for the retro. No new Issue filed. Status: done. Full detail in queue-planning/1940-run.md.
