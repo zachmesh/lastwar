@@ -342,3 +342,66 @@ of 2026-10-28.
 ## 02:15 to about 02:25 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0215 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge, no knowledge merge. Records PRs 559 (head abcd9381) and 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against unchanged main, OD-20261108-01 still open (age 2 days); no new comments posted - main and all heads unchanged since the 0145 notes. Status: done. Full detail in pr-integration/0215-run.md.
+## 02:10 to 02:11 - Ticker pass ticker-0204, star-ceremony unit done
+
+- Star-ceremony unit star-ceremony-2026-11-09-2230 done. No
+  trophy icon on the base screen beside the Alliance button, so
+  no Star Ceremony is waiting. Duel total read live on the VS
+  panel: 450,000 against the 3,600,000 target (gap 3,150,000).
+  Theme Base Expansion, 15:48:49 left; chests 40,000 and
+  150,000 claimed, 540,000 not yet reached. Total Power
+  146,751,949. Train Abyss Apex at the station, 00:29:08 to
+  departure. Full detail in alliance-duel/0211-queue-run.md.
+
+## 02:12 to 02:14 - Ticker pass ticker-0204, passes unit done
+
+- Passes unit passes-2026-11-09-2257 done. Weekly Pass list
+  fully scrolled: four cards all $4.99 purchase offers, none
+  owned, no Claim button; Free Supply already taken this
+  18:00 cycle; Monthly Daily Pickup verified Claimed (Days
+  Left 12). Check-in hunt (Issue #553): Events hub tab strip
+  scrolled - no check-in tab; remaining candidate is the
+  Calendar button on the Base Building card. Nothing spent;
+  Legendary $19.99 Take All untouched. Full detail in
+  shop-claims/0214-queue-run.md.
+
+## 02:15 to 02:18 - Ticker pass ticker-0204, secrets unit done
+
+- Secrets unit secrets-2026-11-09-2257 done. All 9 finished
+  tasks claimed in one tap (Refined Iron Module 1.8K, UR
+  Hero Universal Shard x1, Treasure Map Fragment #3 x1; a
+  Treasure Map completed). Cards stamped PERFECT, Your
+  Tasks badge cleared; assists already 5/5 at cap. Report
+  notes: [ENJY] commander plundered task rewards twice at
+  23:09 yesterday; [AP3x]MesutCLK Apex helped claim at
+  02:08. Reward Recovery re-checked: newest 2026-11-6
+  record already CLAIMED, nothing pending. Hidden
+  Treasures tab carries a red 1 badge (treasures unit's
+  work). No new tasks to deploy until the reset batch.
+  Full detail in secret-missions/0218-queue-run.md.
+
+## 02:19 to 02:21 - Ticker pass ticker-0204, events unit partial
+
+- Events unit events-2026-11-09-2257 partial: three tabs
+  swept, nothing claimable. Arms Race Base Building phase
+  (03:40:14 left, score 0, cumulative chest 0/2). Wanted
+  Boss Code 64 (gorilla), not out until server 00:00
+  (Go 14:39:59); Rewards tiers rank-paid, nothing to
+  claim. The Age of Oil milestones all complete
+  (3740/500, 15371/500, 16219/10000) with no Claim
+  buttons. Unswept tabs for the next events unit: Winter
+  Battlefield, Level Swap, Community, Survey Center,
+  Desert Battlefield. Full detail in
+  event-claims/0221-queue-run.md.
+
+## 02:21 to 02:23 - Ticker pass ticker-0204, treasures unit done
+
+- Treasures unit treasures-2026-11-09-2257 done. One dig:
+  the secrets claim restocked M3 to x1, completing one
+  set (M1 x14, M2 x13, M3 x1, M4 x7, M5 x2, M6 x7, M7
+  x11; chest 10/15). Dig paid iron chest x12, coin piles
+  x12, medal x600, 1m speedups x125, silver ingots x100.
+  Post-dig verified: each fragment down 1 (M3 back to
+  0), chest 11/15, badge cleared, both Dig buttons
+  greyed. No fragment exchange. Full detail in
+  hidden-treasures/0223-queue-run.md.
