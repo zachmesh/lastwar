@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-10T01:46:47Z
+modified: 2026-11-10T02:42:02Z
 level: L1
-version: 1.21.0
+version: 1.22.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: pre-reset zero sweep execution record 2026-11-08 1712 queue run (first pass, partial, 11 lines not at zero, 4 at zero, 5 unreadable, duel unmeasured, crystal and glittering not located, server disconnect with clean relaunch, power step-down 641,100 unexplained; record commit 9978e09a8 on records/2026-11-08)
   - source: pre-reset zero sweep execution record 2026-11-08 1740 queue run (second pass, partial, no line moved to zero since 1712, 3 at zero, 1 stack posture, 12 not at zero, 5 unreadable, crystal and glittering not located, power 149,209,253 holds, fifteenth same-day no-train confirmation, scheduling shortfall confirmed a second time; record commit 5f3a904f4 on records/2026-11-08)
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, 7 of 23 ledger lines read live, 6 units raised to priority 1; record commit c9a86fa74 on records/2026-11-09)
+  - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, 5 of 23 ledger lines read live, pair total 12 of 23; record commit 2f4d783d8 on records/2026-11-09)
 ---
 
 # Routine activities
@@ -481,3 +482,19 @@ claims cited below were read in this pass's passes unit
 - Sweep actions taken: six inbox units for lines verified non-zero were raised to priority 1 (their (regular, planned_for) pairs already existed, so no duplicates were enqueued): harvest-2026-11-09-1803, donations-2026-11-09-1403, survivors-2026-11-09-1403, help-2026-11-09-1430, gifts-2026-11-09-1430, mail-2026-11-09-1430. Pool validated after the edits.
 - Count: 7 of 23 lines read live this unit; 6 non-zero per the unit stats. The record lists food, iron, coin, donations, survivors, mail and the alliance red-dot roll-up as the seven reads; which one counted as the zero line is not named in the record, so none is claimed zero here. The remaining-count read for donations was blocked: the 2/10 Quick Gathering card is cut off at the bottom of the Techs panel.
 - No diamonds or money spent. No speedup or stamina item used. Tracker untouched (partial unit). Blocker category: h (by-design partial - sweep 002 at 17:30 completes the walk). Zombie Invasion: tab still absent from the Events hub as of the 11:52 record today; no chain seeded, per the standing rule.
+
+## Pre-reset zero sweep - second pass, 2026-11-09 1748 (partial)
+
+- Unit zero-sweep-2026-11-09-1730 by ticker-1734, session about 17:38 to 17:48 local. Status partial, verification-only: nothing claimed, no truck dispatched or plundered, no donation made, no chest claimed, no secret task tapped, no pass button tapped inside this unit. Evidence in `_records_/2026-11-09/daily-activities/1748-queue-run.md` (commit 2f4d783d8 on records/2026-11-09). Sweep pair 002 of 2; sweep 001 (16:35) read 7 lines; together the pair read 12 of 23. Target: 23 ledger lines; 5 read live in this unit, 4 of them non-zero.
+- Live reads, not at zero: food bubbles (line 1) - many wheat bubbles stand over the farmland, same as at 16:35; iron bubbles (line 2) - several blue iron bubbles stand over the mines; coin bubbles (line 3) - several gold coin bubbles stand on the base; trucks (line 18) - dispatch 4/5, plunder 1/4 read live on the trade screen, shortfall dispatch -1, plunder -3 with the trade day ending at the 19:00 reset; fix-up trucks-2026-11-09-1457 raised to priority 1 (expires 18:57).
+- Lines read live, at zero or absent: Events hub tabs - Winter Battlefield, Desert Storm Battlefield (selected), Wanted Boss; no Zombie Invasion tab; no Crystal or Glittering Market tab in the visible row (row may scroll, absence not confirmed). Desert Storm Battlefield: registration ends in 2d 00:14:37, Battle Day 2026-11-13, 03:00-03:30, Participants 20/20, Task Force A (You) vs Task Force B; handed to the events-2026-11-09-1857 unit, no tap made here.
+- Lines not read live this unit (handed to queued units): EXP bubbles, titanium bubbles, Armed Truck loot - harvest-2026-11-09-1803 (already priority 1); the 3.9K labelled icons visible over the base look like EXP bubbles but the type was not individually confirmed - unverified. Train station - train-2026-11-09-1430 (due now, expires 18:30) and train-2026-11-09-1830. Arms Race phase - arms-race-2026-11-09-1803. Daily missions 160/200 chests - daily-missions-2026-11-09-1800. Radar map pins - radar-2026-11-09-1803. Alliance Duel daily total vs 3.6M - duel-score-2026-11-09-1830. Crystal (R5, age 15 days from 2026-10-25) and Glittering Market (R5, age 9 days from 2026-10-31) - still not located by any evidence today; no new surface found in this sweep.
+- Base HUD at entry: food 556.6M, iron 881.6M, coin 53.6M, diamonds 6,137, VIP 13.22K, power 148,140,193, stamina 99, VS timer 00:20:00, Events countdown 6d 00:20:01. Build: Oil Well [0/1]; building queue 1/4; research 1/2. At close: power 147,469,864, stamina 100, VS 00:15:25, Events 6d 00:15:25.
+- Power falling, cause unverified: Total Power read 149,217,331 at 16:35, 148,140,193 at about 17:40 and 147,469,864 at about 17:45 - down about 1.75M in 70 minutes while no battle unit ran (radar 17:07-17:17 and survivors 17:19-17:29 were both partial, no fights). The radar unit read 146,730,949 at about 17:53, so the fall continues to about 2.49M in about 78 minutes. The system feed shows truncated "Mutant Raider has been..." messages. Whether mutant raids drain power is unverified; flagged for the daily retro, no new issue filed on a single observation - the datapoint is commented onto the matching open issue #482 by this run. This is the second day running with an unexplained step-down (641,100 on 2026-11-08, Issue #482).
+- Secret Command Post, incidental read: a tap on the left icon column opened the Secret Command Post instead of trade (the two shortcut sets share the slot, per the truck-plunder metadata). Secret Mobile Squad reads Assist Allies 5/5, Plunder Others 0/3, with four SSR task cards all marked PERFECT. Handed to secrets-2026-11-09-1803; nothing tapped further there.
+- Entry route learned: in the current icon set the blue truck-front icon at norm y about 573 opens Intercity Trade directly; the jeep below it is the Secret Command Post.
+- Skull timer, Issue #498: a red skull icon with badge 1 and a seconds countdown (00:00:09 falling to 00:00:04) and a target icon with badge 1 (00:00:25) stand at the right edge of the base screen - unidentified, recorded unverified, no tap made (same item as sweep 001, which read badge 4 with 00:00:37 at 16:56). Commented on Issue #498 by this run.
+- Donations line (line 17) was not re-read this unit: sweep 001 found Donation Count 19/30 remaining at 14:13; donations units donations-2026-11-09-1403 (priority 1) and donations-2026-11-09-1803 cover it.
+- Sweep actions taken: one inbox unit raised to priority 1 for a line verified non-zero: trucks-2026-11-09-1457. Pool validated after the edit. No new units enqueued - every unread line already has a queued unit for the 18:00-18:57 slots.
+- Count: 5 of 23 lines read live this unit, 4 non-zero; the pair read 12 of 23. The remaining 11 lines are covered by the 18:00-18:57 batch.
+- No diamonds or money spent. No speedup or stamina item used. Tracker untouched (partial unit). Blocker category: h (by-design partial - the pair's walk ends here; the 18:00-18:57 batch verifies the remaining lines). Zombie Invasion: tab still absent from the Events hub; no chain seeded, per the standing rule.

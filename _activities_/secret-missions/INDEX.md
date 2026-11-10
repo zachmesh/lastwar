@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T23:32:17Z
+modified: 2026-11-10T02:42:02Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,7 @@ grounded_in:
   - source: ticker-0204 secret-missions execution record 2026-11-09 0221 queue run (done, 8 resolved cards same as 2253, assists 5/5 at cap, recovery claimed, post icon now at (55,657); record commit facef628c on records/2026-11-09)
   - source: ticker-0504 secret-missions execution record 2026-11-09 0517 queue run (done, 4 cards all PERFECT, assists 5/5 at cap, recovery claimed, no new own tasks since the 22:49 claim on 2026-11-08, Mega Deploy no-change; record commit be01e91134 on records/2026-11-09)
   - source: ticker-1434 secret-missions execution record 2026-11-09 1456 queue run (done, 4 cards all PERFECT again, assists 5/5 at cap, no new own tasks since the 22:49 claim on 2026-11-08, entry (55,636) re-confirmed; record commit 4860808ff on records/2026-11-09)
+  - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, incidental Secret Mobile Squad read, same 4 PERFECT cards, assists 5/5; record commit 2f4d783d8 on records/2026-11-09)
 ---
 
 
@@ -1055,7 +1056,7 @@ secrets-2026-10-31-2257, status partial).
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
-  new own tasks after the dispatched ones return. (2026-11-09 0517 update: no new own tasks have appeared since the 22:49 claim on 2026-11-08 - the list holds only the same 4 PERFECT cards, and the other three claimed cards plus the plundered card have dropped off between the 02:21 and 05:17 reads. The refresh cycle for new own tasks after a batch is claimed stays an open question; the next secrets unit re-checks.) (2026-11-09 1456 update: the 1456 unit re-confirmed the same 4 PERFECT cards at about 14:51, still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays open.)
+  new own tasks after the dispatched ones return. (2026-11-09 0517 update: no new own tasks have appeared since the 22:49 claim on 2026-11-08 - the list holds only the same 4 PERFECT cards, and the other three claimed cards plus the plundered card have dropped off between the 02:21 and 05:17 reads. The refresh cycle for new own tasks after a batch is claimed stays an open question; the next secrets unit re-checks.) (2026-11-09 1456 update: the 1456 unit re-confirmed the same 4 PERFECT cards at about 14:51, still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays open.) (2026-11-09 1748 update: the zero-sweep's incidental Secret Mobile Squad read at about 17:40 still shows the same 4 SSR cards all PERFECT, Assist Allies 5/5, Plunder Others 0/3 on that panel; still no new own tasks since the 22:49 claim on 2026-11-08.)
 - Whether the remaining 90% of a plundered task's rewards reaches the
   account: the 2026-11-08 2253 unit found SR Retrieve Valuable
   Supplies plundered at 10% by [BZGR]FredoSauce at 19:40 (chest x1,
@@ -1429,3 +1430,11 @@ secrets-2026-10-31-2257, status partial).
 - NOT done: no new secret tasks have appeared since the 22:49 claim on 2026-11-08; the refresh cycle for new own tasks after a batch is claimed stays an open question for the profile (see the updated Open questions entry). The next secrets unit re-checks.
 - No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 3, achieved 3 (claim state verified, assists 5/5 verified at cap, deploy state verified with no pending), resources_gained none, costs 5min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 1748 unit added - incidental Secret Mobile Squad read, same 4 PERFECT cards, assists 5/5, entry jeep/truck distinction
+
+- Unit zero-sweep-2026-11-09-1730 by ticker-1734, about 17:38 to 17:48 local, status partial - the sweep reads only. Evidence in `_records_/2026-11-09/daily-activities/1748-queue-run.md` (commit 2f4d783d8 on records/2026-11-09). A tap on the left icon column opened the Secret Command Post instead of trade (the two shortcut sets share the slot, per the truck-plunder metadata); nothing was tapped further there.
+- Secret Mobile Squad read live: Assist Allies 5/5, Plunder Others 0/3, with four SSR task cards all marked PERFECT. The 0/3 figure is the Secret Mobile Squad panel figure - the same panel read 0/3 in the 2026-11-01 sweep visit, while the main post screen reads 0/5; the two denominators are not merged (see the denominator note). Plunder Others not touched (PvP, no owner instruction).
+- The same 4 SSR cards as the 1456 unit (about 14:51) - still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays an open question (see the updated Open questions entry).
+- Entry lesson, current icon set: the blue truck-front icon at norm y about 573 opens Intercity Trade directly; the jeep below it is the Secret Command Post. Handed to secrets-2026-11-09-1803; nothing tapped further there.
+- No diamonds or money spent.
