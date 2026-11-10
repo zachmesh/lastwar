@@ -1617,3 +1617,21 @@ modified: 2026-11-10T14:21:00Z
   decision (OD-20261108-01 open, age 2 days). No new
   comments posted this pass. Slack DM sync sent. Status:
   done. Full detail in pr-integration/0845-run.md.
+
+## 09:00 to about 09:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0900.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 11:00): no merges. Records PR 576
+  clean, awaiting the 11:00 batch. Records PRs 351 and 301
+  still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against new main, awaiting the owner
+  decision (OD-20261108-01 open, age 2 days). Three
+  re-verification comments were posted then deleted this
+  pass per the forward comment convention recorded in the
+  0800 run record (post only on material change; main
+  moving alone does not warrant one). Status: done. Full
+  detail in pr-integration/0900-run.md.
