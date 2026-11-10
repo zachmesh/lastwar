@@ -1749,3 +1749,23 @@ modified: 2026-11-10T14:21:00Z
   since the 0832 run; #575 implemented and merged as PR #577.
   Status: no-op. Full detail in
   tool-development/0932-run.md.
+
+## 09:32 to about 09:50 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-0932.
+  Folded ticker-0834 survivors, research and training records
+  into 3 profiles (PR #581, OPEN and MERGEABLE): survivor-intake
+  1.47.0 to 1.48.0 (last gate survivor taken in, gate clear on
+  two re-reads, Quick Dispatch still owed; CORRECTION - norm
+  354,210 is Smelter Lv.26, not the Iron Mine), research-queue
+  1.3.0 to 1.4.0 (slot 1 1d 01:35:27, slot 2 Idle, flask opens
+  the tree again), troop-training 1.36.0 to 1.37.0 (fifth
+  consecutive partial, R2 process failure stands, TECH-screen
+  navigation unexplained, new grounding route owed). One
+  contradiction resolved: slot-1 timer 1d 01:35:27 vs
+  1d 01:51:59 - neither claimed as true, re-read owed. No
+  issue comments (ticker already commented #150), no new
+  issue filed. Ticker-0904 records (31892ddef) landed during
+  this run and belong to the 1032 run. Slack DM sent.
+  Status: done. Full detail in
+  knowledge-organization/0932-run.md.
