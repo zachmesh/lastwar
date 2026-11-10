@@ -72,7 +72,10 @@ given explicitly with --root. --root accepts a pool directory or
 a repository root, resolved to its _queue_ folder (issue #510);
 --apply refuses a root holding no pool state directory, so a
 wrong root fails loudly instead of writing units into a fresh
-empty directory nobody reads.
+empty directory nobody reads. A dry run against a root holding
+no pool state directory prints the same pool_root_warning
+queue.py prints, so its counts never silently describe an
+empty pool (issue #537).
 
 Idempotency: produced units dedupe on (regular, planned_for)
 exactly as sync and plan do, and dynamic units carry their
@@ -2123,6 +2126,17 @@ def main(argv=None):
     if args.root:
         args.root = os.path.abspath(args.root)
         args.root = Q.resolve_pool_root(args.root)
+    if args.root and not args.apply:
+        # A dry run against a wrong root used to report its counts
+        # against an empty pool with nothing to show it never saw
+        # the pool (issue #537): the 1640 planner pass read an
+        # empty pool and filed phantom units before --apply refused.
+        # Warn through the same pool_root_warning queue.py prints,
+        # so the read path fails loudly too. --apply keeps its own
+        # refusal below.
+        warning = Q.pool_root_warning(args.root)
+        if warning:
+            print(warning, file=sys.stderr)
     if args.apply and not any(
             os.path.isdir(Q.state_dir(args.root, s))
             for s in Q.STATES):
