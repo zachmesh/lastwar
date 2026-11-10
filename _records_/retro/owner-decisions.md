@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-09T05:09:00Z
-version: 1.9.0
+modified: 2026-11-10T05:20:00Z
+version: 2.0.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -323,6 +323,69 @@ one mention in a summary.
   every run.
 - status: open
 
+
+### OD-20261109-01 - Transfer Surge warzone transfer
+
+- opened: 2026-11-09
+- item: whether Bears Lair should stay in Warzone
+  #2110 or apply to transfer to another warzone
+  during Application Day (ends 2026-11-12 18:00
+  UTC), and if so to which warzone.
+- context: discovered 2026-11-09 by scout
+  exploration unit scout-scout-discovery-2026-11-09-004
+  (executor ticker-0804), record
+  _records_/2026-11-09/season-ii-countdown-6d/0812-queue-run.md.
+  The Season II countdown opens TRANSFER SURGE, the
+  cross-warzone transfer event. Application Day runs
+  11/8 18:00:00 to 11/12 18:00:00 UTC, then Transfer
+  Day to 11/13 and Display Stage to 11/15. Transfer
+  Warzone Group (32) includes our #2110. Applying
+  would move Bears Lair out of Warzone #2110 (and out
+  of the AP3x alliance) into a chosen warzone,
+  subject to mutual approval. The full carry-over
+  rules were read live into the record. No Apply was
+  tapped. Filed as GitHub issue #514 (labels
+  owner-decision).
+- decision needed: stay in #2110, or apply to
+  transfer - and if so to which warzone - before
+  2026-11-12 18:00 UTC.
+- age tracking: opened 2026-11-09, age 0 days at
+  filing; the retro recomputes and reports the age
+  every run. The item is window-bound: it expires
+  undecided at 2026-11-12 18:00 UTC.
+- status: open
+
+### OD-20261109-02 - start Builders Hut Lv.25 to Lv.26 upgrade
+
+- opened: 2026-11-09
+- item: whether to start the Builders Hut Lv.25 to
+  Lv.26 upgrade (15-day build, measured
+  2026-11-09).
+- context: measured live 2026-11-09 about 08:48 PT
+  by scout exploration unit
+  scout-scout-discovery-2026-11-09-009 (ticker-0842),
+  record _records_/2026-11-09/upgrade-builders-hut-to/0848-queue-run.md.
+  Builder's Hut Lv.25 to 26: power 90,800 to 108,300;
+  Free Construction Speed-up Time 00:20:00 to
+  00:22:00; Hero EXP 22.0M shown on the panel. Cost,
+  all prerequisites met (green checks): Lv.26
+  Headquarters, Iron 170.0M (have 866.8M), Food 56.9M
+  (have 542.1M). Original time 15d 08:05:18; the
+  Upgrade button shows 7d 07:16:49 (effective time
+  after bonuses, as displayed). Finish Now would
+  cost 18,188 diamonds - never tapped, red line.
+  Building queue 1/4 at the time (Lv.29 Aircraft
+  Center in progress), so a free builder slot exists.
+  Starting a building is owner-only by red line, and
+  the 15-day build is the longest commitment measured
+  so far. Filed as GitHub issue #517 (labels
+  owner-decision).
+- decision needed: start the Lv.26 upgrade, or leave
+  the Builders Hut at Lv.25.
+- age tracking: opened 2026-11-09, age 0 days at
+  filing; the retro recomputes and reports the age
+  every run.
+- status: open
 ## 2026-11-04 retro notes (all items, ages recomputed)
 
 - OD-20261031-01: age 4 days. No new skipped-needs-owner on Nov 4 (arms units closed partial or capture-failed); gap persists in partial form (Tech Research and Base Building tier-3 unreachable inside red lines, Unit Progression tier-3 gap 75,000). No owner decision appeared in the records, chat or Slack DM.
@@ -382,3 +445,18 @@ None yet.
 - OD-20261108-01: age 0 days at filing (PR #425 log-gate policy amendment, owner-gated, escalated 2026-11-07 2245, still undecided Nov 8).
 - OD-20261108-02: age 0 days at filing (#415 live-checkout re-sync mechanism, surfaced by the tool-developer 1832 run; manual re-sync done Nov 8 18:42).
 - Two new owner-decision items from the Nov 8 window (OD-20261108-01, OD-20261108-02). All nine items are open; the seven carried items are open longer than 48 hours and are named in the Nov 8 retro chat report and Slack sync until decided.
+
+## 2026-11-09 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 9 days. No new skipped-needs-owner on Nov 9 (Nov 9 day skipped 0 in either pool); the arms-race 1803 unit closed partial (Unit Progression, score 0, timer 02:42:34, tier-3 gap 75,000 via training queues only). The gap persists in partial form, now in a fourth phase shape. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 9 days, event-bound. Unaddressed a ninth day: no Nov 9 events record mentions the Day 07 tile or a decoration choice, and the Nov 9 events hub reads contain no Halloween surface. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 9 days. Nov 9 survivors 0203 done (gate line verified clear, 0 recruits) - the 41-run non-done streak is broken; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 8 days, unaddressed.
+- OD-20261101-02: age 8 days, unaddressed.
+- OD-20261101-03: age 8 days. No Nov 9 record mentions the Season Photo actions; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 4 days. New evidence: 0 batch violations out of 6 merges today, so the process half had no new instance to catch; PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 1 day. PR #425 still open, still awaiting owner decision (integrator's 19:40 Slack note names it).
+- OD-20261108-02: age 1 day. No new drift evidence today; Issue #415 still open.
+- OD-20261109-01: age 0 days at filing (Issue #514, Transfer Surge; decision needed before 2026-11-12 18:00 UTC).
+- OD-20261109-02: age 0 days at filing (Issue #517, Builders Hut Lv.26 upgrade).
+- Two new owner-decision items from the Nov 9 window (OD-20261109-01, OD-20261109-02). All eleven items are open; the nine carried items are open longer than 48 hours and are named in the Nov 9 retro chat report and Slack sync until decided.

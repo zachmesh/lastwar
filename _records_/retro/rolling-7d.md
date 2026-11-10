@@ -1,8 +1,8 @@
 ---
 title: Rolling 7 day metrics
 created: 2026-11-01T05:30:00Z
-modified: 2026-11-08T05:08:00Z
-version: 1.4.0
+modified: 2026-11-10T05:20:00Z
+version: 1.5.0
 description: Standing cross-day series beside the daily retro files, regenerated from unit results
 status: complete
 grounded_in:
@@ -460,3 +460,57 @@ remain the immutable source.
   days (#118), no breach. Recurrence of closed
   improvements' root causes 0 of 3, no breach.
 - Detail - daily retro 2026-11-08 in this folder.
+
+## Entry 2026-11-09
+
+- Derived from - 723 done units, finished local PDT
+  2026-11-03 to 2026-11-09, read 2026-11-10T05:35Z.
+  Branch pool (records/2026-11-09 tip d88d542b87, re-run
+  from 50935183e1 when the branch advanced mid-run);
+  live pool holds 734 in the same window, gap 11.
+  Nov 9 is a partial day at the re-run (101 branch).
+- Totals - done 103, partial 162, skipped-needs-owner 3,
+  failed 107, expired 348. Executor time 111,803 seconds
+  (31.1 hours), median unit 237 seconds, p90 612 seconds.
+- Best types by done percent - scout 21 of 49, gifts 10
+  of 35, help 9 of 33, mail 9 of 33, passes 9 of 37,
+  treasures 8 of 36, secrets 7 of 36.
+- Worst types by done percent - train 0 of 34, training
+  0 of 36, vip 0 of 10, zero-sweep 0 of 15, crystal-shop
+  0 of 2, glittering-market 0 of 2, ghost-ops 0 of 1.
+- Measurement state - numeric target over achieved
+  pairs 271, summed attainment 0.5541
+  (achieved_sum 8,333,047, target_sum 15,039,671);
+  the summed figure is NOT comparable: it is
+  dominated by one misattributed figure
+  (star-ceremony-2026-11-04-0630 carries a duel
+  screen total 4,772,100 in achieved); without
+  it the window attainment is about 0.31, itself
+  dominated by the duel-score running totals
+  (3,385,000 across 2 units reading the same rising
+  total). Points 50,313 reported, 2,463 honest
+  (gifts progress-as-points 47,850 excluded);
+  the tool excludes 1 copied-points unit
+  (arms-race-2026-11-09-0203, 82,500).
+  Units carrying blocker_category: e 108, h 78,
+  f 36, c 28, none 27, b 6, d 4, g 3, a 1, plus
+  non-enum values access-failed 1, time 1, timer 1,
+  unverified-close 1. Unverified closings 529 (73.2
+  percent), down 7.5 points on yesterday's 80.7
+  percent.
+- Threshold breaches - expired/unexecuted in day
+  counts (17 branch, 28 live); quota attainment under
+  0.8 rolling (donations 0.1818; trucks 0.8333 no
+  longer breaches but the trade-day close is unknown
+  for the third day); unverified rate over 20 percent
+  (73.2 percent, down 7.5 points week over week);
+  oldest open improvement over 7 days (#118, 7 days
+  old - first breach); recurrence of a closed
+  improvement's root cause 1 (#300, gifts
+  progress-as-points); daily standing job artifact
+  missing (ticker-0634 record, #342, about 110
+  hours); ledger coverage 12 of 23 (sweep pair ran
+  both passes, walk thinned from 18 of 23).
+  Unexplained red dots 0 - NO breach, first time.
+  Batch compliance clean (0 violations out of 6).
+- Detail - daily retro 2026-11-09 in this folder.
