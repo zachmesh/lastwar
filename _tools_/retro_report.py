@@ -102,7 +102,18 @@ What is counted, per section 14 -
     queue.py complete warns at close time so future gifts
     closings carry no points key. Genuine non-equal gains
     stay counted: arms-race 2000 against achieved 8000, radar,
-    donations, daily-missions.
+    donations, daily-missions. A fourth exception (issue #483):
+    a star-ceremony achieved figure that is a duel screen total
+    is not summed either - the unit carries another regular's
+    target/achieved pair (target 3600000, the duel target) with
+    0 ceremonies claimed, so its achieved (791250 on
+    2026-11-01-1830, 4772100 on 2026-11-04-0630) is a borrowed
+    total, not this unit's gain. Both the target and the
+    achieved are excluded from the summed attainment, and the
+    unit is counted under achieved_screen_excluded, never
+    silently dropped. queue.py complete warns at close time so
+    future star-ceremony closings carry the ceremony count
+    only.
 
 Data sources are only inside the repository - the done pool at
 _queue_/done and, as a fallback, the day INDEX files in
@@ -150,7 +161,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.5.2"
+TOOL_VERSION = "1.5.3"
 
 
 def _load_queue():
@@ -467,6 +478,8 @@ def _empty_bucket():
         "points_no_achieved_excluded_units": [],
         "points_progress_excluded": 0,
         "points_progress_excluded_units": [],
+        "achieved_screen_excluded": 0,
+        "achieved_screen_excluded_units": [],
         "costs": {},
         "blockers": {},
         "named_blockers": {},
@@ -501,7 +514,12 @@ def _feed(bucket, unit):
         stats = {}
     target = _num(stats.get("target"))
     achieved = _num(stats.get("achieved"))
-    if target is not None and achieved is not None:
+    screen = getattr(Q, "achieved_is_screen_total", None)
+    if (target is not None and achieved is not None and screen is not None
+            and screen(stats, unit.get("regular"))):
+        bucket["achieved_screen_excluded"] += 1
+        bucket["achieved_screen_excluded_units"].append(unit["unit"])
+    elif target is not None and achieved is not None:
         bucket["target_sum"] += target
         bucket["achieved_sum"] += achieved
         bucket["attainment_units"] += 1
@@ -607,6 +625,9 @@ def _summarise(bucket):
             "points_progress_excluded"],
         "points_progress_excluded_units": bucket[
             "points_progress_excluded_units"],
+        "achieved_screen_excluded": bucket["achieved_screen_excluded"],
+        "achieved_screen_excluded_units": bucket[
+            "achieved_screen_excluded_units"],
         "costs": {k: _clean(v) for k, v in
                   sorted(bucket["costs"].items())},
         "resources_per_minute": {k: _clean(v / minutes) for k, v in
