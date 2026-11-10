@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T19:32:17Z
+modified: 2026-11-10T22:32:17Z
 level: L1
-version: 1.38.0
+version: 1.39.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-0204 event-claims execution record 2026-11-10 0221 queue run (partial, Arms Race Base Building, Wanted Boss Code 64, Age of Oil milestones all complete; record commit 069a94c7a on records/2026-11-10)
   - source: ticker-0504 event-claims execution record 2026-11-10 0519 queue run (done, hub sweep complete, nothing claimable, Survey Center opened, Desert Storm re-read, hub roster now six tabs; record commit 19608e2c9e on records/2026-11-10)
   - source: ticker-1004 event-claims execution record 2026-11-10 1045 queue run (partial, 4 of 6 hub tabs read, Hero Advancement free paths cannot reach tier 3, Age of Oil stage-1 node info-only, Desert Storm registered, Wanted Boss Code 64 not out; record commit 2218eb3cd on records/2026-11-10)
+  - source: ticker-1343 event-claims execution record 2026-11-10 1358 queue run (done, full 6-tab hub sweep, nothing claimable, 10:45 follow-up closed, Hero Advancement ends about 14:03 at score 0; record commit b2c2b7a43 on records/2026-11-10)
 ---
 
 
@@ -1321,3 +1322,17 @@ that drag is the sweep-completeness check, not wasted motion.
 - Live reads: base screen after the check - Total Power 148,058,020, coin 84.1M, food 612.5M, iron 939.3M, diamonds 6,207, stamina 120. Unchanged during this unit.
 - No diamonds or money spent. No price button, Go navigation, Renew, or paid unlock tapped. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 6, achieved 4 (tabs read live), resources_gained none, costs about 7 minutes, no stamina or items spent, verified yes, blocker_category h, follow_up re-sweep Survey Center and Community in the 10:57 events unit.
+
+## What the 2026-11-10 1358 unit added - full 6-tab hub sweep, nothing claimable, 10:45 follow-up closed
+
+- Unit events-2026-11-10-1057 by ticker-1343, about 13:52 to 13:58 local, status done. Evidence in `_records_/2026-11-10/event-claims/1358-queue-run.md` (commit b2c2b7a43 on records/2026-11-10). Computer sessions cc-463 then cc-464 on the owner Mac mini - cc-463 dropped mid-unit, cc-464 started, LastWar re-selected, no game state lost.
+- Events hub opened from the base Events icon. All six tabs read live in this unit, completing the 10:45 unit's follow-up (Survey Center and Community were unread then). The follow-up is closed.
+- Arms Race tab: Hero Advancement phase live, 00:05:51 remaining at the read (phase ends about 14:03), score 0, cumulative chest 0/2, point chests thresholds 2,000 / 4,000 / 12,000. Scoring paths: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds (1 Diamond) +30 (red-lined, never). No chest claimable. The account row reads rank 9, #2110 [AP3x]Bears Lair, 90,500 - the 90,500 is the cumulative event figure shown on that row, while the live phase score is 0; the two figures are not the same (the row figure is the lagging previous-phase display, see the arms-race profile). The 10:45 R4 judgment stands: the free paths cannot reach tier 3 (12,000) this phase. This is recorded here only; the phase is the arms-race unit's work - cross-read folded into arms-race 1.80.0.
+- Age of Oil tab: warzone track stages 1-4. "Unlock Tech: The Age of Oil" - Complete 500 Tech Research, 4377/500, 5d 04:04:17 left. "Unlock Stage: Base Expansion II" - Complete 500 Building Upgrades, 17987/500. Both bars full, no claim. Progress grew since the 10:45 read (4219 to 4377, 17573 to 17987). The stage-1 badge 1 marks the node as unviewed, not a claimable reward (same as the 10:45 read).
+- Desert Battlefield tab: Desert Storm Battlefield, registered (Task Force A, You), registration ends in 1d 04:03:45, battle 2026-11-13 03:00-03:30, Participants 20/20. Nothing claimable.
+- Wanted Boss tab: Code 64, "Appears at server time: 00:00", Go button with 03:03:19 countdown and a red dot. Rewards pay on completing 1 attack; the boss has not appeared yet, so no attack and no claim is possible now. Go not tapped.
+- Survey Center tab: Season 11: Polar World Experience Survey with a Proceed button - a survey for the owner, not a claim. Proceed not tapped. The tab badge 1 and the survey row red dot mark the unanswered survey, not a reward.
+- Community tab: 500 Diamonds already Claimed. Nothing to claim. A world banner scrolled past ("aBBcCdDeEf dug up 1 Golden Mobile Squad with the treasure map") - another player's dig, not this account's.
+- Live reads: base screen after the check - Total Power 148,765,970, coin 84.1M, food 615.9M, iron 938.8M, diamonds 6,207, stamina 120. Unchanged during this unit.
+- No diamonds or money spent. No price button, Go navigation, Renew, paid unlock, or survey Proceed tapped. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 6, achieved 6 (tabs read live), resources_gained none, costs about 6 minutes, no stamina or items spent, verified yes, blocker_category none, claims_made 0, follow_up none.

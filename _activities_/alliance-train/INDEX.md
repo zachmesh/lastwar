@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T18:32:17Z
+modified: 2026-11-10T22:32:17Z
 level: L1
-version: 1.39.0
+version: 1.40.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -42,6 +42,7 @@ grounded_in:
   - source: ticker-0134 alliance-train execution record 2026-11-10 0147 queue run (done, boarded carriage 2 of the Abyss Apex train, 3-contract gift missed on the cinematic skip double-tap; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0404 alliance-train execution record 2026-11-10 0413 queue run (done, boarded carriage 2 of the Missile Apex train, 3-contract gift missed again on the cinematic skip double-tap, second identical occurrence today; record commit 00a39c11 on records/2026-11-10)
   - source: ticker-0934 alliance-train execution record 2026-11-10 0946 queue run (partial, checked only, both preparation signals absent, no train preparing, (905,790) is not a BASE button, (59,428) locomotive label was a mislabel; record commit 226f5c37 on records/2026-11-10)
+  - source: ticker-1314 alliance-train execution record 2026-11-10 1322 queue run (partial, checked only, both preparation signals absent, no train preparing, red-badge countdown icon at the right edge is a different event; record commit d781dac9d on records/2026-11-10)
 ---
 
 # Alliance train
@@ -1168,3 +1169,12 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Mislabel correction: the earlier left-column grounding that labelled a point near (59, 428) a locomotive icon was also a mislabel: the enlarged crop shows in-world resource bubbles (iron 175.1K, food 965.1K), not a UI icon. Grounding labels for this column are not trusted without a crop check.
 - Outcome: partial, checked only. No train in preparation in this window by both preparation signals; nothing boarded, no Trade Contracts spent, no train summoned, no conductor role taken. The station panel was not opened (preparation-only surface, no signals). Tracker untouched, so the next tick re-produces this regular.
 - Red lines: nothing spent, no paid button tapped, no donation, no rally join, no toggle changed, no building or research started. Game left on the own base screen.
+
+## What the 2026-11-10 1322 unit added - checked only, both preparation signals absent, no train preparing, partial
+
+- Unit train-2026-11-10-1030 by ticker-1314, 13:22 to 13:25 local, status partial, checked only. Evidence in `_records_/2026-11-10/alliance-train/1322-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-461 on the owner Mac mini (session cc-460 from the previous unit had closed in between; a fresh session was started, no game state lost).
+- Clean base view at 13:23: neither preparation signal is present. No train icon in the left icon column (hammer 1/4, flask 1/2, chat with badge 2, truck, radar with badge 11, hammer), and no "Boarding closes in" banner under the resource bar. A red-badge icon with a 00:00:54 countdown sits at the right edge mid-screen; that is a different event, not the train banner - a negative signal datapoint for the signals list.
+- Per the alliance-train activity metadata, the unit closes partial without panning the base edge, and re-checks only when a train is preparing. No station panel was opened and no boarding action was taken. No login or verification was demanded, and no different-device dialog appeared.
+- Outcome: no train preparing at this check. Nothing boarded. The 04:13 unit of this reset day already boarded carriage 2 of the Missile Apex train, so today's regular train is accounted for; a later Mega Express preparation, if any, will be picked up by the next train unit.
+- Figures read live on screen: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry.
+- Result stats: target 1, achieved 0, resources_gained none, costs about 3 minutes play, verified yes, blocker_category h (by-design partial, no train preparing), device_takeovers 0.

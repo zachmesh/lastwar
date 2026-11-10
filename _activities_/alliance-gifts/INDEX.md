@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T21:32:17Z
+modified: 2026-11-10T22:32:17Z
 level: L1
-version: 1.49.0
+version: 1.50.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -55,6 +55,7 @@ grounded_in:
   - source: ticker-0334 alliance-gifts execution record 2026-11-10 0346 queue run (done, 110 Regular and 7 Premium claimed, both windows reconcile exactly, Gift Level 28 progress 200,816,740; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0904 alliance-gifts execution record 2026-11-10 0932 queue run (partial, entry blocked by the same camera framing as the mail unit, Gifts panel never opened, fifth unit this reset day with the same blocker, Issue #580; record commit 31892dde on records/2026-11-10)
   - source: ticker-1234 alliance-gifts execution record 2026-11-10 1310 queue run (done, Regular 1193 and Premium 43 claimed in full, per-tab Claim All points re-confirmed, Gift Level 28 progress 202,479,820 to 202,502,400; record commit 98abbc761 on records/2026-11-10)
+  - source: ticker-1314 alliance-help execution record 2026-11-10 1316 queue run (done, cross-read: Alliance Gifts red dot back minutes after the 1310 full claim, new gifts arriving; record commit d781dac9d on records/2026-11-10)
 ---
 
 
@@ -1458,3 +1459,10 @@ one file per execution.
 - A-01 verification (Issue #300): this unit's stats carry no points figure - the Gift Level progress gain (+22,580) is not written into stats.points, per retro action A-2026-11-09-01. Commented on Issue #300 by this run.
 - Figures read live: food 615.9M, iron 938.8M, coin 84.1M, diamonds 6,207, power 148,765,978 at entry and at close (unchanged). No login or verification demanded, no different-device dialog.
 - Result stats: target 1236, achieved 1236, resources_gained 1193 Regular gifts + 43 Premium gifts (gift progress +22,580), costs about 5 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-10 1316 help-unit cross-read added - Gifts red dot back minutes after the 1310 full claim
+
+- Cross-read inside the help unit help-2026-11-10-1030 by ticker-1314, about 13:16 to 13:22 local (the help unit closed done). Evidence in `_records_/2026-11-10/alliance-help/1316-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-460 on the owner Mac mini.
+- Alliance panel: the Alliance Gifts button still showed a red dot, minutes after the 1310 gifts unit (ticker-1234, about 13:01 to 13:05) claimed both tabs in full - new gifts are already arriving; allies are active. The red dot belongs to the next gifts unit, not the help unit; nothing was claimed here.
+- This is the second same-day observation of the gifts red dot reappearing within minutes of a full claim (the 0350 help unit saw the same after that pass's gifts claim). Gift arrival is fast enough that a red dot minutes after a full claim does not by itself mean the claim failed - the next gifts unit re-reads both tabs live rather than assuming the claim missed.
+- No diamonds or money spent.
