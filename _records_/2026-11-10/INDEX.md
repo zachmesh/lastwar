@@ -1066,3 +1066,27 @@ of 2026-10-28.
   task), unexplained red dots 0; 0 withdrawals. No issues
   filed. Pool inbox 58, claimed 0, done 1446. Status: done.
   Full detail in queue-planning/0540-run.md.
+
+## 05:32 to about 05:56 - Knowledge-organizer pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-10-0532.
+  Own PR 571 merged with no review comments, no feedback owed.
+  Folded ticker-0434 (duel 0435, star-ceremony 0438, passes 0440,
+  secrets 0444, treasures 0446) and ticker-0504 (trucks 0513,
+  events 0519) records into 7 profiles (PR 573, MERGED by the
+  integrator, base main 22ffa273a): duel 1.38.0, arms-race 1.76.0,
+  shop 1.47.0, secrets 1.30.0, treasures 1.17.0, trucks 1.39.0,
+  events 1.37.0. The mid-run ticker-0534 donations 0534 record
+  was folded into donations 1.82.0 as its own PR 574 (OPEN and
+  MERGEABLE, base main 985a1b189c).
+  CORRECTIONS: the 0435 personal-total read (1,650,000, up 1,200,000
+  from 450,000) VERIFIES the live UR truck dispatch rate +300,000
+  and the 0248 expected score 1,200,000; the 8,020 / 9,530 / 18,100
+  chest figures' MEANING is still not identified (the 0432
+  "resolving" claim is superseded); Iron Weekly Pass Daily Pickup
+  x2 confirmed, 2212 x1 superseded; Calendar button ruled out as a
+  check-in entry; Survey Center opened (Season 11 survey, needs the
+  owner's answers); hub roster now six tabs, Winter Battlefield and
+  Level Swap rotated out. Issues commented: #242, #482, #498, #506,
+  #550, #553, #565, #160, #282. No new issue filed. Status: done.
+  Full detail in knowledge-organization/0532-run.md.
