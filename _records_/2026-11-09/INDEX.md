@@ -2599,3 +2599,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   issue 517 no deadline stated. VPS disk recovered to 79
   percent, 2.0G free. Status: no-op. Full detail in
   pr-catchall/1739-run.md.
+
+## 17:32 to about 17:52 — Tool development pass
+
+- Tool-developer pass tool-development-2026-11-09-1732. Done: own PR 425 checked first (owner-gated on the policy amendment, OD-20261108-01 still open, no action owed; integrator 1700 notes re-verified CLEAN against main bdd6612c); issue #537 taken as the single item - scout_diff.py dry run now prints pool_root_warning when --root holds no pool state directory, so a wrong root fails loudly on the read path too (the resolve and --apply refusal halves were already in main via PR #512); PR #538 opened (commit bbf9c364d); 8 fixture assertion groups 8/8 on isolated /tmp scratch pools, negative control reproduces the silent dry run on main; progress commented on #537; follow-up issue #539 filed for the poisoned-root trap (a root holding both a stray top-level inbox/ and _queue_/ reads the stray as the pool); #536 verified already fixed in main by PR #529, no code change. Full detail in tool-development/1732-run.md.
