@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T12:55:44Z
+modified: 2026-11-10T13:11:00Z
 level: L0
 version: 1.0.0
 description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures)
@@ -925,3 +925,18 @@ of 2026-10-28.
   treasures unit should check whether chest-progress tier
   rewards are claimable there. Full detail in
   hidden-treasures/0446-queue-run.md.
+
+## 05:00 to about 05:11 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0500.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00): no new PRs, no merges, no comments. Records PR
+  569 clean at head 5ba07ce2b4, awaiting the 07:00 batch.
+  Records PRs 351 and 301 still conflict with main on the
+  single action-log file, heads unchanged, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated,
+  clean, awaiting the owner decision (OD-20261108-01 open,
+  age 2 days). No new comment on any PR: nothing changed
+  since the 0445 re-verifications. Status: done. Full detail in
+  pr-integration/0500-run.md.
