@@ -1672,3 +1672,51 @@ modified: 2026-11-10T14:21:00Z
   pass per the forward comment convention recorded in the
   0800 run record (post only on material change). Status:
   done. Full detail in pr-integration/0915-run.md.
+## 09:11 to about 09:32 - Ticker pass ticker-0904, 5 units
+
+- Own PRs first: records PR #576 (records/2026-11-10, post-0700
+  batch) is OPEN, MERGEABLE and CLEAN, with no comments and
+  nothing addressed to this job. No conflict to resolve, no
+  question to answer. Zombie Invasion: no chain seeded - the
+  event ended 2026-10-30 and the tab is still absent from the
+  Events hub (chain zombie-2026-10-28 closed, unit 066).
+- Building-queues unit building-queues-2026-11-10-0603 done:
+  Lv.29 Aircraft Center upgrade 1d 17:13:16 left (coherent
+  with the 01:12 read of 2d 01:14:21), slots 2-4 idle, nothing
+  started, no Speed Up tapped. Total Power reads 148,058,020,
+  up about 1.31M from 146,751,949 at 01:08, cause not
+  established. Banner quest still "Build: Oil Well (0/1)".
+  Full detail in building-queues/0914-queue-run.md.
+- Donations re-read unit donations-2026-11-10-1616 partial:
+  2 coin donations verified live on Quick Construction, count
+  3/30 to 1/30 (1,800 coin, Tech EXP +100), stopped at the
+  live 1/30 per the standing changed route. Footer 6600 to
+  6850 observed only (disqualified, Issue #558). Re-read unit
+  donations-2026-11-10-1719 enqueued for 10:00 PT. Full
+  detail in alliance-donations/0918-queue-run.md.
+- Help unit help-2026-11-10-0630 done: Help All delivered 2
+  ally helps (Commander 3423d2110 Oil Well Lv.22, specialist
+  Donut Oil Well Lv.28), no requests waiting. Header
+  1,040/1,000 unchanged in-session (known lag). Entry
+  correction: the left-edge blue bubble is the trucks
+  shortcut, not help - it opened the trucks screen (Trade
+  Count 4/5, four trucks out), nothing dispatched or
+  plundered there. Full detail in
+  alliance-help/0924-queue-run.md.
+- Mail unit mail-2026-11-10-0630 partial: entry blocked by
+  camera framing - the Mail tap delivered as a camera pan
+  and two drags only oscillated between two panned framings
+  without restoring the right rail. Mail panel never opened,
+  nothing claimed or deleted. Fourth unit this reset day
+  with this blocker; filed as GitHub issue #580 (play).
+  Full detail in mail-rewards/0929-queue-run.md.
+- Gifts unit gifts-2026-11-10-0630 partial: entry blocked by
+  the same camera framing (issue #580) - the camera was
+  still panned from the mail unit, right rail off-frame,
+  Gifts panel never opened. Fifth unit this reset day with
+  this blocker; no new issue filed. Full detail in
+  alliance-gifts/0932-queue-run.md.
+- No diamonds or money spent. Computer sessions cc-427,
+  cc-428 and cc-429 (sessions drop between units, recovered
+  with no game state lost). No different-device dialog, no
+  login demanded.
