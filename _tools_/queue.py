@@ -64,9 +64,9 @@ Usage:
              # record lands in the local pool or after 7 days.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
-             # a re-acquire by the same executor within 60 seconds of
-             # expiry renews the lease (issue #461); any other holder
-             # is refused while the lease is live.
+             # a re-acquire by the same executor always renews the
+             # lease (issue #461); any other holder is refused
+             # while the lease is live.
   queue.py [--root DIR] token-release --executor NAME
              # the token lives in the main checkout's _queue_/claimed/,
              # shared by every worktree of the repo (issue #383), so a
@@ -179,11 +179,17 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
-TOKEN_RENEW_WINDOW_SECONDS = 60  # issue #461: a same-holder
-# re-acquire landing this close to expiry renews the lease instead of
-# reporting held - the 2026-11-08 ticker-1049 secrets unit re-acquired
-# 3 seconds before expiry, was refused, and its game input then ran
-# with no token held until the next acquire 6 minutes later.
+# Issue #461: a same-holder re-acquire always renews the lease.
+# The 2026-11-08 rule renewed only within 60 seconds of expiry, but
+# the executor loop re-acquires at every unit boundary (design
+# section 6), so a re-acquire after a short unit lands minutes before
+# expiry and was refused - ticker-0234 (2026-11-10 02:50 PST) and
+# ticker-0504 (05:20 PST) both ran game input with no token held
+# after exactly that refusal. Renewing only ever extends the current
+# pass's own lease (executor names are per-pass), a different holder
+# is still refused while the lease is live, and a dead pass's lease
+# still expires 15 minutes after its last renewal, so mutual
+# exclusion and the expiry safety valve are unchanged.
 DEFAULT_LEASE_MINUTES = 20
 DEFAULT_EST_MINUTES = 5
 DEFAULT_MAX_ATTEMPTS = 3
@@ -3024,16 +3030,17 @@ def cmd_token_acquire(args):
         fields, _ = read_unit(path)
         lease = parse_iso(fields.get("lease_until", ""))
         if lease and lease > now_utc():
-            remaining = (lease - now_utc()).total_seconds()
-            # Issue #461: a re-acquire by the holder itself that lands
-            # just before expiry renews the lease instead of reporting
-            # held - the old code refused it, so the holder's game
-            # input ran with no token until the next acquire. A
-            # different executor is still refused, and a holder with
-            # ample lease left is still refused, so the
-            # mutual-exclusion guarantee is unchanged.
-            if (fields.get("claimed_by") == args.executor
-                    and remaining <= TOKEN_RENEW_WINDOW_SECONDS):
+            # Issue #461: a re-acquire by the holder itself always
+            # renews the lease instead of reporting held - the
+            # 2026-11-08 rule renewed only within 60 seconds of
+            # expiry, but the executor loop re-acquires at every
+            # unit boundary, so a re-acquire after a short unit
+            # lands minutes before expiry and was refused, and the
+            # holder's game input then ran with no token. A
+            # different executor is still refused while the lease
+            # is live, so the mutual-exclusion guarantee is
+            # unchanged.
+            if fields.get("claimed_by") == args.executor:
                 fields = {"claimed_by": args.executor,
                           "claimed_at": fields.get("claimed_at", "")
                           or iso(now_utc()),
