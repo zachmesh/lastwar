@@ -13,3 +13,16 @@
 0300-run.md
 0315-run.md
 0330-run.md
+0345-run.md
+0400-run.md
+0415-run.md
+0430-run.md
+0445-run.md
+0500-run.md
+0515-run.md
+0530-run.md
+0545-run.md
+0600-run.md
+0615-run.md
+0630-run.md
+0645-run.md
