@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T12:32:17Z
+modified: 2026-11-10T18:32:17Z
 level: L1
-version: 1.37.0
+version: 1.38.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-1822 alliance-help execution record 2026-11-09 1846 queue run (done, bubble plus Help All cleared 2 ally requests, header 140 of 1000 unchanged; record commit 6761c35d1 on records/2026-11-09)
   - source: ticker-0134 alliance-help execution record 2026-11-10 0140 queue run (done, bubble tile no-change, Help All via panel, header 420 to 720 after close/reopen; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0334 alliance-help execution record 2026-11-10 0350 queue run (done, Help All for two Farmland helps, header 720 to 1,040 after close/reopen, counter above the 1,000 target; record commit b7e79a62 on records/2026-11-10)
+  - source: ticker-0904 alliance-help execution record 2026-11-10 0924 queue run (done, 2 ally helps delivered, header 1,040/1,000 unchanged in-session, left-edge bubble at (44,568) is the Trucks shortcut not help; record commit 31892dde on records/2026-11-10)
 ---
 
 
@@ -951,3 +952,15 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Dialog closed and reopened: points now read 1,040/1,000 (+320 for the two helps), list still only the two own rows. No ally requests waiting. The counter reads above the 1,000 display target, so the 1,000 figure is a target, not a hard cap. Points per help are not a fixed 150: the 0140 unit's two helps gave +300, this unit's two Farmland helps gave +320 (160 each) - the rate varies, possibly by helped task type, unverified.
 - The reopened dialog shows the own rows differently: "Time reduced: 13:00:22" on the Missile Mastery II row and "Time reduced: 3d 23:58:04" on the Aircraft Center row, in place of the 30/30 bars. Recorded as displayed; whether that is total time reduced by allies or time remaining was not established in this unit.
 - Outcome: Help All pressed once, 2 ally helps delivered (1717Flower Lv.25 Farmland x2). Today's help points 720 to 1,040 of 1,000, read live after a close/reopen re-read. Returned to the base screen. No diamonds or money spent. No other unit's work touched.
+
+## What the 2026-11-10 0924 unit added - Help All for 2 ally helps, header 1,040/1,000 unchanged in-session, entry correction: the (44,568) bubble is Trucks, done
+
+- Unit help-2026-11-10-0630 by ticker-0904, about 09:21 to 09:24 local, status done. Evidence in `_records_/2026-11-10/alliance-help/0924-queue-run.md` (commit 31892dde on records/2026-11-10). Computer sessions cc-427 (dropped between units, recovered) and cc-428 on the owner Mac mini.
+- ENTRY CORRECTION: the left-edge blue speech-bubble icon with a red "2" badge at (44,568) is the TRUCKS shortcut, not help - it opened the trucks screen (Today's Trade Count 4/5, four trucks out, Your Truck tab). Nothing was dispatched or plundered there; the back arrow returned to the base. The Trade Count 4/5 read is passed to the trucks unit, not acted on here. One unit, one task type.
+- Alliance panel route used instead: shield at the fresh measured centre (931,689) opened the Alliance menu first try; Help tile at (685,515) opened the HELP panel.
+- HELP panel at entry, read live: header "Today's points gained from Alliance Help: 1,040/1,000". Four rows: Bears Lair (own) Missile Mastery II research, Time reduced 15:00:22; Bears Lair (own) building Lv.30 Aircraft Center, Time reduced 3d 23:58:04; Commander 3423d2110 (ally) building Lv.22 Oil Well; specialist Donut (ally) building Lv.28 Oil Well.
+- Help All pressed at (495,770). Toast: allies are very grateful for the assistance. Both ally rows gone on the re-read; only the two own Bears Lair rows remain, each 30/30.
+- Header re-read after a close/reopen: still 1,040/1,000 - the counter did not move in-session for these two helps (known lag behaviour; the 0134 unit saw it move after a close/reopen, this unit did not). The helps themselves are verified delivered by the cleared rows, so the header figure is recorded as read, not as the closing proof.
+- No ally requests waiting at close.
+- No diamonds or money spent, no speedup used, no stamina item opened, no building or research started. Nothing was dispatched or plundered on the trucks screen opened by the mis-tap.
+- Result stats: target all waiting ally helps delivered, achieved 2 ally helps delivered, 0 waiting, resources_gained none, points header 1,040/1,000 unchanged in-session (lag, see above), costs about 8 minutes, no items spent, verified yes (ally rows cleared, read live in this unit), blocker_category none.

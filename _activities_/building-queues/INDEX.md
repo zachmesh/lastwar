@@ -1,9 +1,9 @@
 ---
 title: Building Queues
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T09:38:29Z
+modified: 2026-11-10T18:32:17Z
 level: L1
-version: 1.4.0
+version: 1.5.0
 description: Checking build queues and upgrade state, one activity folder for building knowledge
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: ticker-0842 scout-discovery execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest measured read-only - Lv.25 to 26, Iron 170.0M, Food 56.9M, Original Time 15d 08:05:18, Upgrade button 7d 07:16:49, Finish Now 18,188 diamonds, owner-decision Issue #517; record commit ec55aa585 on records/2026-11-09)
   - source: ticker-1934 building-queues execution record 2026-11-09 2020 queue run (done, Aircraft Center 2d 06:07:55 left, slots 2-4 idle, hammer entry (44,195); record commit 69d8e38ec on records/2026-11-09)
   - source: ticker-0104 building-queues execution record 2026-11-10 0112 queue run (done, Aircraft Center 2d 01:14:21 left, slots 2-4 idle, banner quest now Build Oil Well; record commit e5272617a on records/2026-11-10)
+  - source: ticker-0904 building-queues execution record 2026-11-10 0914 queue run (done, Aircraft Center 1d 17:13:16 left, slots 2-4 idle, clock coherent with the 0112 read, Total Power up about 1.31M; record commit 31892dde on records/2026-11-10)
 ---
 
 
@@ -97,3 +98,15 @@ owner choice unless it was already queued. Executions are recorded in
 - Resources rose since the 2026-11-09 07:45 read (food 542.1M to 598.9M, iron 866.8M to 922.5M, coin 44.2M to 80.6M) - consistent with overnight collection, not measured as a claim in this unit.
 - Computer session cc-371 on the owner Mac mini. No different-device dialog, no login or verification demanded, no password or Touch ID step used. No diamonds or money spent, no speedup used, no stamina item opened, no building or research started.
 - Result stats: target queue state read live, achieved 4 slots read live, resources_gained none, costs about 4 minutes, no items spent, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-10 0914 unit added - Aircraft Center 1d 17:13:16 left, slots 2-4 idle, clock coherent, Total Power up about 1.31M, done
+
+- Unit building-queues-2026-11-10-0603 by ticker-0904, about 09:11 to 09:14 local, status done. Read-only check; nothing started, no Speed Up tapped, no Construct tapped. Evidence in `_records_/2026-11-10/building-queues/0914-queue-run.md` (commit 31892dde on records/2026-11-10).
+- Entry: hammer icon at norm (44,195) on the base screen opened the BUILDING QUEUE panel on the first try.
+- Slot 1: Lv.29 Aircraft Center upgrade in progress, Time Left 1d 17:13:16, progress bar about two thirds full. Speed Up button present, NOT tapped (speedups are a red line). Slot 2: Idle. Slot 3: Idle. Slot 4: Idle. Construct button on each, NOT tapped - never start buildings on own initiative, owner-only. Header: "Commander, manage your Building Queues here. Enhance development speed by hiring more queues or accelerating building." Panel closed with its own X at (849,221); base screen confirmed after.
+- Consistency: the 2026-11-10 01:12 read (ticker-0104) had the same slot 1 at 2d 01:14:21 left. About 8h01m later the clock reads 1d 17:13:16, a fall of 8:01:05 against about 8:01 of wall time - the two reads cohere and the 2.5-day gap flagged on 2026-11-09 is not widened by this read.
+- Base HUD at entry (about 09:12 PT): food 612.5M, iron 939.3M, coin 84.1M, hero EXP 13.22K, diamonds 6,207, Total Power 148,058,020, stamina 120. Total Power reads 148,058,020, up from 146,751,949 read live 2026-11-10 01:08 - a rise of about 1.31M. No cause established in this unit; flagged, not concluded.
+- Banner quest still reads "Build: Oil Well (0/1)", unchanged from the 01:12 read. The Builders Hut Lv.26 quest question (owner-decision Issue #517) stays open as filed.
+- The Drill Ground upgrade from the 2026-10-25 read is still not re-read; its state stays unverified.
+- No different-device dialog, no login or verification demanded, no password or Touch ID step used. No diamonds or money spent, no speedup used, no stamina item opened, no building or research started.
+- Result stats: target queue state read live, achieved 4 slots read live, resources_gained none, costs about 3 minutes, no items spent, verified yes (same-unit live reads), blocker_category none.
