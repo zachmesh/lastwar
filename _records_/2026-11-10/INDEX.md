@@ -1425,3 +1425,18 @@ modified: 2026-11-10T14:21:00Z
   decision (OD-20261108-01 open, age 2 days). No new
   comments posted. Status: done. Full detail in
   pr-integration/0745-run.md.
+
+## 07:47 to about 08:02 - Alliance donations, ticker-0734 queue run
+
+- Unit donations-2026-11-10-0603, status partial, verified no.
+  8 coin donations: 7 count-verified on Quick Construction
+  (Donation Count 8/30 to 1/30 live, 900 coin each), then the
+  changed route to the War tab: Rallied Attack read 1/30 live
+  minutes later (paired-read evidence for the shared count),
+  one 800-coin tap landed by the EXP-delta check (Tech EXP
+  24.5K to 24.6K) but the button greyed behind a 00:07:30
+  timer hiding the count, so no live 0/30 read exists and the
+  close is unverified. Coin spent 7,100, no diamonds. The
+  red-panda badge has moved to Troop Movement. A named
+  re-read unit is enqueued for after the cooldown (not before
+  08:08). Full detail in alliance-donations/0747-queue-run.md.
