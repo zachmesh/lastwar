@@ -845,7 +845,13 @@ def cmd_sync(args):
     # pool no longer needs - the done record landed, or the marker
     # outlived the delivery lag - so the live directory stays
     # bounded; a live marker still suppresses its unit below.
-    markers_reaped = reap_stale_completion_markers(args.root)
+    markers = reap_stale_completion_markers(args.root)
+    markers_reaped = markers["reaped"]
+    markers_lost = markers["lost"]
+    if markers_lost:
+        print("warning: completion markers aged out with no local "
+              f"done record - the delivery never carried these "
+              f"closings: {", ".join(markers_lost)} (issue #563)")
     # Roster staleness (issue #198): sync stages from the tracker,
     # which reads the roster next to this tool, so a stale tree
     # stages nothing for a regular the live pool still holds
@@ -917,6 +923,7 @@ def cmd_sync(args):
                       "branch_done_reconcile_warning": branch_warning,
                       "blockers_reaped": blockers_reaped,
                       "completion_markers_reaped": markers_reaped,
+                      "completion_markers_lost": markers_lost,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "skipped_closed": skipped_closed,
@@ -2946,14 +2953,20 @@ def reap_stale_completion_markers(root):
     the closing, and the suppression lapsing makes that gap
     visible instead of hiding it behind a stale file. A file that
     does not parse to a unit and status suppresses nothing, so it
-    is dropped too. Returns the list of unit ids dropped.
+    is dropped too. Returns a dict with the unit ids dropped
+    ("reaped") and, separately, the dropped ids whose closing was
+    lost (issue #563): a valid marker older than
+    COMPLETED_STALE_HOURS with no local done record - the
+    delivery never carried that closing, so the retro can triage
+    each named unit instead of counting one more bare integer.
     """
     home = completion_home(root)
     folder = os.path.join(home, COMPLETED_DIRNAME)
     if not os.path.isdir(folder):
-        return []
+        return {"reaped": [], "lost": []}
     stamp = now_utc()
     dropped = []
+    lost = []
     for name in sorted(os.listdir(folder)):
         if not name.endswith(".md"):
             continue
@@ -2967,6 +2980,7 @@ def reap_stale_completion_markers(root):
         valid = (fields.get("unit") == unit
                  and bool(fields.get("status")))
         keep = False
+        aged_out = False
         if valid:
             if _has_done_record(root, unit):
                 keep = False
@@ -2974,6 +2988,7 @@ def reap_stale_completion_markers(root):
                     (stamp - finished).total_seconds() > \
                     COMPLETED_STALE_HOURS * 3600:
                 keep = False
+                aged_out = True
             else:
                 keep = True
         if keep:
@@ -2985,7 +3000,9 @@ def reap_stale_completion_markers(root):
         except OSError:
             continue
         dropped.append(unit)
-    return dropped
+        if aged_out:
+            lost.append(unit)
+    return {"reaped": dropped, "lost": lost}
 
 
 def _write_token_file(path, fields):
