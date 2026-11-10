@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T23:32:17Z
+modified: 2026-11-10T01:46:47Z
 level: L1
-version: 1.75.1
+version: 1.76.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -89,6 +89,7 @@ grounded_in:
   - source: ticker-0304 alliance-donations execution record 2026-11-09 0324 queue run (partial, one coin donation verified live 9/30 to 8/30 on Rallied Attack, replenishment 29th data point, hard closing rule under re-examination per Issue #500; record commit e6f80f1e2 on records/2026-11-09)
   - source: ticker-1345 alliance-donations execution record 2026-11-09 1413 queue run (partial, 11 coin donations verified live 30/30 to 19/30 on Quick Gathering, count confirmed a remaining daily allowance, footer 2,250 question open; record commit 63eccdb92 on records/2026-11-09)
   - source: ticker-1434 shop-claims execution record 2026-11-09 1449 queue run (partial, Donation Count 20/30 passing read at about 14:38, thirty-first replenishment data point; record commit 4860808ff on records/2026-11-09)
+  - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, footer 3300 with no own donations between reads, Techs panel card cut off; record commit c9a86fa74 on records/2026-11-09)
 ---
 
 
@@ -3647,7 +3648,7 @@ enqueued for after the cooldown (not before about
 - Donation Count, same-unit stepwise confirmation that it is the remaining daily allowance: 30/30 at entry, 29/30 after 1 donation, 24/30 after 6, 19/30 at close. No replenishment inside the unit.
 - Replenishment, thirtieth data point for Issues #160, #174, #423 and #500: the count stood at a live-read 8/30 at the 0324 close (about 03:31) and 30/30 at this unit's entry (about 14:03) - +22 over about 10 hours 32 minutes, about 1 per 29 minutes as a two-endpoint estimate only, NOT a measured rate, and no reset fell between the reads. The count is capped at 30, so the refill may have completed earlier than the entry read.
 - Tech EXP bar at close 37.5K/600.0K. The bar is shared (alliance-wide), so its movement is not attributed solely to this unit's 11 donations.
-- Open question, Tech Donation Today footer: the footer read 2,250 at entry while the Donation Count read a full 30/30 remaining. At 50 points per donation, 2,250 implies 45 donations, over the 30 cap, so the footer cannot be this reset day's own donations starting from 0. The footer stood at 2,200 at the 0324 unit's entry (03:24) and 2,200 at the 2350 close the night before, then rose exactly +50 by this unit's entry - matching the single 0324 donation - so the footer increments 50 per own donation but does not reset to 0 with the daily count. Either it counts a different window than the reset day or it includes other contribution sources. The next unit re-reads the footer after donating and compares it against the count movement. Commented on Issue #417 (counter semantics) by this run; Issue #500's "footer as the better day total" hypothesis is constrained by this read, not confirmed by it.
+- Open question, Tech Donation Today footer: the footer read 2,250 at entry while the Donation Count read a full 30/30 remaining. At 50 points per donation, 2,250 implies 45 donations, over the 30 cap, so the footer cannot be this reset day's own donations starting from 0. The footer stood at 2,200 at the 0324 unit's entry (03:24) and 2,200 at the 2350 close the night before, then rose exactly +50 by this unit's entry - matching the single 0324 donation - so the footer increments 50 per own donation but does not reset to 0 with the daily count. Either it counts a different window than the reset day or it includes other contribution sources. The next unit re-reads the footer after donating and compares it against the count movement. Commented on Issue #417 (counter semantics) by this run; Issue #500's "footer as the better day total" hypothesis is constrained by this read, not confirmed by it. (2026-11-09 1657 update: the footer read 3,300 live at about 16:47, up 1,050 from 2,250, with NO donations unit running between 14:13 and 16:47 - the footer moves without any own donation, so the 'increments 50 per own donation' reading is superseded; the footer counts alliance-wide contributions (likely, unverified) or a different window, NOT own donations alone. The Donation Count remaining was NOT re-read this unit - the 2/10 Quick Gathering card is cut off at the bottom of the Techs panel, so the next donations unit must scroll the Techs panel down first to reach the card.)
 - Cross-read: the new Arms Race phase (Hero Advancement, thresholds 2,000/4,000/12,000, timer 03:56 at 14:03) was seen on the way through Events but left for the next arms-race unit.
 - No diamonds or money spent. No other activity touched.
 - Result stats: target 30, achieved 11, points 550, resources_gained Tech EXP 550, contribution 550 points, costs 3,300 coin, about 10 minutes of unit time, verified yes, blocker_category h.
@@ -3655,3 +3656,11 @@ enqueued for after the cooldown (not before about
 ## Replenishment thirty-first data point - 2026-11-09 1449 passing read
 
 - Replenishment, thirty-first data point for Issues #160, #174, #423 and #500: the count stood at a live-read 19/30 at the 1413 close (about 14:13) and 20/30 at the passes unit's passing read on the Alliance Tech panel (about 14:38) - +1 over about 25 minutes, consistent with the about-1-per-29-minutes two-endpoint estimate from the thirtieth point, NOT a measured rate, and no reset fell between the reads. A single short interval constrains the rate only loosely. Evidence in `_records_/2026-11-09/shop-claims/1449-queue-run.md` (commit 4860808ff on records/2026-11-09). Commented on Issue #500 by this run.
+
+## What the 2026-11-09 1657 sweep read added - footer 3,300 with no own donations between reads, Techs panel card cut off, count not re-read
+
+- Read, not a donations unit: the zero-sweep 001 unit (ticker-1635) read the Alliance Techs panel live about 16:47 local. Evidence in `_records_/2026-11-09/daily-activities/1657-queue-run.md` (commit c9a86fa74 on records/2026-11-09). No donation was made in this read.
+- CORRECTION: Tech Donation Today read 3,300 live, up 1,050 from the 2,250 the 1413 donations unit read at about 14:13 - with NO donations unit running in between. The 1413 section's "the footer increments 50 per own donation" reading is superseded as a complete account: the footer moves without any own donation, so it counts alliance-wide contributions (the likely source, unverified - no member-level read was taken) or a different window, NOT own donations alone. At 50 points per donation, +1,050 is 21 donations' worth from other members. Commented on Issue #417 by this run. The footer stays disqualified as a closing count - this read strengthens the disqualification, it does not repair it.
+- The Donation Count remaining was NOT re-read in this unit: the 2/10 Quick Gathering card (the 1413 unit's target node) is cut off at the bottom of the Techs panel, and one tap on its visible part changed nothing (method ended per R2). The next donations unit must scroll the Techs panel down first to reach the card. The last known count remains 19/30 from the 1413 close (about 14:13), with the button still green then.
+- No replenishment datapoint is added by this read - no count was read - so Issues #160, #174, #423 and #500 gain no new rate evidence from it.
+- No diamonds or money spent. No other activity touched.
