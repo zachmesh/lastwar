@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T07:41:00Z
+modified: 2026-11-10T11:32:17Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -40,6 +40,7 @@ grounded_in:
   - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, 5 of 23 ledger lines read live, trucks 4/5 dispatch 1/4 plunder live, trade entry route measured in the current icon set; record commit 2f4d783d8 on records/2026-11-09)
   - source: ticker-1910 sync record 2026-11-09 (trucks-2026-11-09-1457 fix-up expired unrun, window passed before execution, reaped 19:14 in the ticker-1910 pass; record commit e05c662bd on records/2026-11-09)
   - source: ticker-2230 truck-plunder execution record 2026-11-09 2250 queue run (partial, 4 returned trucks settled 2 UR + 2 SR, 2026-11-9 18:00 Reward Recovery claimed, Trade Count 0/5 on the new trade day, dispatch 5 UR and plunder 4 fall to the next unit; record commit 70248cbb7 on records/2026-11-09)
+  - source: ticker-0234 truck-plunder execution record 2026-11-10 0248 queue run (partial, first Mega Mode execution end to end on a UR day, 4 UR dispatched, 1 plunder won, Trade Count 4/5, Plunder Count 1/4; record commit 2802653981 on records/2026-11-10)
 ---
 
 # Truck plunder - Intercity Trade
@@ -204,6 +205,7 @@ train also runs on this screen as a trade vehicle.
   - Because a refresh replaces the whole roll, a chase can pass
     through several low rolls - keep going until SR or above
     lands, then dispatch immediately without further refreshes.
+- Mega Mode dispatch (UR days), observed end to end 2026-11-10 (0248 unit, Issue #565): on the Your Truck tab the Mega Mode button opens two tabs. Mega Refresh lists the four slot rolls with rarity and journey time (0248 rolls: No.1 R 04:08:02, No.2 N 03:40:04, No.3 N 03:48:04, No.4 N 04:26:21 - none UR, so all four needed refreshes). A first refresh costs 3 Trade Contracts per truck (dialog-confirmed before spending); a re-refresh of an already-refreshed truck costs 1 (inferred from the button readings 9/158, 6/149, 3/149, 1/146). The 0248 unit spent 12 contracts in total (stock 158 to 146) and all four rerolled UR (No.1 04:37:27, No.2 04:16:08, No.4 03:42:29, No.3 03:53:44). The "Refresh all to Reindeer Sleigh Ride" checkbox was left unchecked; what it does is unobserved. Mega Dispatch shows preassigned escorts (Squad 1 25.20M, Squad 3 20.37M, Squad 2 19.08M, Squad 4 16.54M); Select All, Dispatch Selected, Confirm ("about to dispatch 4") dispatches all four at once - "All current trade trucks have been dispatched. Time for a coffee break!", Today's Dispatches 4/5, Trade Count 4/5. Expected duel score 4 times 100,000 = 400,000 (Handbook rate, not a live read - the duel-score unit verifies it live). Mega Mode does NOT convert a held roll to UR (0821 finding stands); it refreshes the slots until UR lands, then dispatches them as a batch.
 - Let's Go dispatches. Journeys observed ran about 4 to just under 5
   hours. Rewards land when the truck arrives.
 
@@ -457,13 +459,7 @@ train also runs on this screen as a trade vehicle.
   other players run golden trains as trade vehicles, so parts of this
   system may be season shaped. Truck trade itself is a permanent
   system per the guides.
-- Mega Mode is a VIP privilege - the VIP screen lists Activate the
-  Mega Mode of Trade Trucks among the VIP 13 privileges, and this
-  account is VIP 13, so Mega Mode is unlocked here (confirmed
-  2026-10-25 on the VIP screen, see
-  [vip-rewards](../vip-rewards/INDEX.md)). What a Mega dispatch does
-  differently is still unobserved. The fifth trade in the daily
-  count of 5 may be a Mega dispatch - open question below.
+- Mega Mode is a VIP privilege - the VIP screen lists Activate the Mega Mode of Trade Trucks among the VIP 13 privileges, and this account is VIP 13, so Mega Mode is unlocked here (confirmed 2026-10-25 on the VIP screen, see [vip-rewards](../vip-rewards/INDEX.md)). OBSERVED END TO END 2026-11-10 (0248 unit, ticker-0234, duel day 2 Base Expansion, Issue #565): Mega Mode has two tabs, Mega Refresh and Mega Dispatch. Mega Refresh lists the four slot rolls with rarity and journey time; a first refresh costs 3 Trade Contracts per truck (dialog-confirmed, 9 for a 3-truck batch, 3 for one truck), and a re-refresh of an already-refreshed truck costs 1 (inferred from the button readings 9/158, 6/149, 3/149, 1/146 - inferred, not measured). Mega Dispatch shows preassigned escorts and dispatches all four slots at once (Select All, Dispatch Selected, Confirm). The fifth daily trade is a second wave after trucks return, NOT a Mega-only fifth - all four slots were out after the Mega dispatch and the 5th dispatch waits on returns.
 
 ## What is known from 2026-10-25
 
@@ -1555,7 +1551,7 @@ settlement and dispatch execution record).
 - What a Mega dispatch does differently, and what the fifth daily
   trade is. Mega Mode itself is a VIP 13 privilege, unlocked on this
   account. The owner dispatch rule for Alliance Duel UR days (Mega
-  Mode, UR trucks only) is recorded above but not yet executed. (2026-11-03 0821 update: Mega Mode tapped from the dispatch panel only reopens the Mega summary and Mega Dispatch still lists no dispatchable truck, and Mega Mode does not convert a held roll to UR as far as that unit could observe - the dispatch-difference question itself is still open.)
+  Mode, UR trucks only) is recorded above but not yet executed. (2026-11-03 0821 update: Mega Mode tapped from the dispatch panel only reopens the Mega summary and Mega Dispatch still lists no dispatchable truck, and Mega Mode does not convert a held roll to UR as far as that unit could observe - the dispatch-difference question itself is still open.) (2026-11-10 0248 update: ANSWERED - Mega Mode is a batch refresh plus batch dispatch of all four slots (see the Scope paragraph and the 0248 section below); the fifth trade is a second wave after returns, not a Mega-only fifth. The "Refresh all to Reindeer Sleigh Ride" checkbox was left unchecked and its effect is still unobserved; the expected 400,000 duel score (Handbook rate) still awaits a live duel-score read. Issue #565.)
 - Whether the 2026-10-25 Alliance Duel day scored UR truck
   dispatches - the daily duel category was not verified that day,
   so the evening dispatches ran under normal day handling.
@@ -1739,3 +1735,16 @@ settlement and dispatch execution record).
 - Not done: dispatch 0 of 5 new UR trucks (Mega Mode, duel day 2) - the yard is clear after the 4 settlements and no slot was used; plunder 0 of 4, Plunder Count unread. Both fall to the next trucks unit.
 - No diamonds or money spent. No Trade Contracts spent. No paid button tapped. No login or verification demanded, no different-device dialog appeared.
 - Result stats: target settle 4, dispatch 5, plunder 4, achieved settled 4, dispatched 0, plundered 0, resources_gained iron 14.1M, food 14.1M, coin 8.97M, badge 500 x8, costs 19m wall, no stamina, no diamonds, no contracts, verified yes, blocker_category h, trucks_settled 4, recovery_claimed 1, trade_count 0, plunder_count unread, device_takeovers 0.
+
+## What the 2026-11-10 0248 unit added - first Mega Mode execution, 4 UR dispatched, 1 plunder won, partial
+
+- Unit trucks-2026-11-09-2257 by ticker-0234, about 02:36 to 02:48 local, status partial. Evidence in `_records_/2026-11-10/truck-plunder/0248-queue-run.md` (commit 2802653981 on records/2026-11-10; issue numbers named in commit 2167966207). Duel day 2, Base Expansion - UR truck dispatches score 100,000 each (Handbook rate, from tools/duel.py).
+- Entry: base-screen left column, blue truck-front icon with red badge 4, grounded at norm 52,569. Trade screen opened on Others' Trucks; Your Truck tab showed 4 empty slots and the Mega Mode button.
+- Counters, read live on the trade screen: entry Today's Trade Count 0/5, Your Plunder Count Today 0/4, yard empty, no returned truck to settle. Close: Trade Count 4/5, Plunder Count 1/4, both read live in this unit.
+- Mega Mode, first execution of the standing UR-day rule (see the dispatch section above for the mechanics): Mega Refresh rolls No.1 R 04:08:02, No.2 N 03:40:04, No.3 N 03:48:04, No.4 N 04:26:21; all four refreshed to UR (batch 1 No.1, No.2, No.4; batch 2 No.3 alone); 12 Trade Contracts spent (158 to 146), no diamonds; escorts Squad 1 25.20M, Squad 3 20.37M, Squad 2 19.08M, Squad 4 16.54M; four gold UR trucks visible on the road on the Your Truck view. Expected duel score 400,000, Handbook rate, pending live verification by the duel-score unit. The "Refresh all to Reindeer Sleigh Ride" checkbox was left unchecked, unobserved. Filed as knowledge Issue #565 by this unit; this fold answers it.
+- Plunder: attempt 1 [BROT]TPM01, UR, Lv.30, guard 11.2M, three UR shard stacks (100 x1 at positions 1, 2, 6) - Quick Plunder opened battle prep (25.20M vs 11.25M); the Battle tap showed the toast "The target has disappeared" and a second tap did nothing; the truck was gone from the road. No plunder counted - a listed target can vanish between inspection and Battle. Attempt 2 [STCL]De Stenenman, UR, Lv.30, guard 24.6M (prep 24.69M), two 500 x3 UR shard stacks at right-side cargo positions 5 and 6, arrives in 01:49 - Quick Plunder, Battle (25.20M vs 24.69M), Mission Completed. Yield, read live on the rewards screen: iron 951.8K, food 951.8K, coin 607.5K, 5m speedups x10 in four stacks (5, 2, 2, 1), UR shard 500 x3 plus Extra x3 (6 total), one blue chest x1. Plunder Count 1/4 after Return.
+- Not done: dispatch 1 of 5 still open - all four slots are out until the trucks return (dispatches 03:42 to 04:37, plus the return leg), so the 5th dispatch is a second wave, not available now. Plunder 3 of 4 still open. Reward Recovery (Recover button, bottom left of the trade screen) still carries a red dot - not checked in this unit.
+- Coordinate lesson: one Return tap missed because pixel coordinates were passed where the control expects normalized 0-1000 coordinates; re-grounded at norm 662,893 and it worked. Coordinates for computer.control are always normalized.
+- Mid-unit transient, about 02:51 during the No.3 refresh confirm: an observe call failed "target app exited or restarted", but LastWar was still running (pid 1908) and the refresh dialog was still up. No different-device dialog was seen in this unit; kick count 0.
+- No diamonds spent. No other unit's work touched.
+- Result stats: target dispatch 5, plunder 4, achieved dispatch 4, plunder 1, resources_gained iron 951.8K, food 951.8K, coin 607.5K, UR shards 500 x6, 5m speedups x10, blue chest x1, points 400000 (expected duel points, Handbook rate, pending live verification by the duel-score unit), costs 12 Trade Contracts, about 12 minutes, verified yes (counters and rewards read live in-unit), blocker_category h (by-design partial - the 15 minute unit cap closed the quota mid-way; dispatch 4/5, plunder 1/4, remainder resumes in the next trucks unit).
