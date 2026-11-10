@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T01:46:47Z
+modified: 2026-11-10T02:42:02Z
 level: L1
-version: 1.62.0
+version: 1.63.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -64,6 +64,7 @@ grounded_in:
   - source: ticker-0842 radar-tasks execution record 2026-11-09 0852 queue run (partial, release day, 3 tasks executed, 11 claims, points 311 to 322, stored 2/40 to 0/40, dish grounded (51,726) first tap, 12-task restore did NOT land as a batch, Iron Mine gathering pin claim first next unit; record commit ec55aa585 on records/2026-11-09)
   - source: ticker-1234 radar-tasks execution record 2026-11-09 1253 queue run (partial, release day, 6 tasks executed, 14 claims, points 322 to 336, stored 3/40 to 0/40, dish grounded (62,727) first tap, 6 pins inventoried unworked; record commit da81e137e on records/2026-11-09)
   - source: ticker-1704 radar-tasks execution record 2026-11-09 1717 queue run (partial, release day 1, ordinary cycle clear, 1244 pin set absent, restore lands 12 tasks about 1740, R6 successor enqueued; record commit 9806b8352 on records/2026-11-09)
+  - source: ticker-1734 radar-tasks execution record 2026-11-09 1754 queue run (partial, release day 1, restored batch of 12 claimed before the 18:00 roll, points 336 to 348, stored 0/40, dish re-grounded (47,694) first tap; record commit 2f4d783d8 on records/2026-11-09)
 ---
 
 
@@ -151,6 +152,7 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
 - 2026-11-09 0852: dish grounded fresh from the current base screenshot at norm (51,726) (red badge 6 on the dish) and opened the radar on the first tap - the (50,740) retro preference was not needed this unit. The camera was still panned on the Drill Ground cluster from the previous unit; the dish is a HUD icon and the tap landed cleanly without a view restore. A merely panned camera does not block the dish tap; the restore-first rule still binds when a building panel is open (see the entry precondition).
 - 2026-11-09 1253: dish grounded fresh at norm (62,727) (red badge 1) and opened the radar on the first tap - the 2026-10-29 measured point works again in this window, so (62,727) is not stale after all; the dish still drifts per session, so every unit still re-grounds fresh. Commented on Issue #484 by this run: (62,727) is the newest verified first-tap point, joining (51,718) and (51,726); the (50,740) retro preference remains untested as a direct tap.
 - 2026-11-09 1717: dish grounded fresh at norm (62,727) and opened the radar on the first tap again - the same point as the 1253 unit, so (62,727) is re-confirmed in this window; the dish still drifts per session, so every unit still re-grounds fresh. Commented on Issue #484 by this run.
+- 2026-11-09 1754: dish grounded fresh at norm (47,694) from the 17:45 base screenshot and opened the radar on the first tap - the 17:07 unit's (62,727) point is stale for the current icon set; the dish sits at norm y about 694 now, below the trade jeep. The dish drifts within the day as the icon set rotates, so every unit still re-grounds fresh. Commented on Issue #484 by this run.
 - 2026-11-09 0636: another entry point, found by a harvest unit, not the dish - the gold circle with a blue gem above the blue truck vehicle on the base opens the world/radar map, which showed "6 task rewards can be claimed" with a Claim All button at 06:49. It is a radar shortcut, not the Armed Truck loot; the rewards were left untouched for the radar unit. A radar unit arriving through this shortcut still verifies the radar screen (level, points, stored count, stamina) before any work, same as the dish entry.
 - Entry precondition, binding from the 1026 and 1439
   units: when the camera is panned onto the Drill Ground
@@ -2560,3 +2562,16 @@ are still open, per the protocol.
 - Duel delta test still owed: the VS panel was not opened in this unit.
 - No diamonds or money spent. No priced button tapped. No other activity's rewards touched. The Mission-screen radio icon was not opened. No pin was tapped blindly after the R2 method end.
 - Result stats: target 1, achieved 0, resources_gained none, costs 0 stamina plus about 10 minutes, verified yes, blocker_category f (the 12:44 pin set was no longer standing at entry - missing precondition), stored_tasks 0, tasks_executed 0, tasks_claimed 0, pins_inventoried 1, pins_worked 0, pins_absent 6, stamina 94, radar_points 336, restore_in_minutes 24, free_stamina_claims 0, device_takeovers 0.
+
+## What the 2026-11-09 1754 unit added - release day 1, restored batch of 12 claimed before the 18:00 roll, points 336 to 348, pins unclosed, partial
+
+- Unit radar-2026-11-10-0118 by ticker-1734, about 17:51 to 17:54 local, status partial - the R6 objective (claim the restored batch before the 18:00 roll) is met, but the release completion standard also requires every map pin closed, and the pins are unclosed. Evidence in `_records_/2026-11-09/radar-tasks/1754-queue-run.md` (commit 2f4d783d8 on records/2026-11-09). Tracker untouched for partial, per the queue rules.
+- Entry (measured): dish grounded fresh at norm (47,694) from the 17:45 base screenshot and opened the radar on the first tap - the 17:07 unit's (62,727) point is stale for the current icon set; the dish sits at norm y about 694 now, below the trade jeep. CORRECTION: the 1717 section's "(62,727) is re-confirmed in this window" holds only for 17:07 - by 17:51 the dish has moved with the icon-set rotation, so (62,727) is not a standing point; the re-ground-fresh rule is what carries, not any one point. Commented on Issue #484 by this run. Entry verified on the radar screen itself: Lv.13, radar points 336, stored 1/40, stamina 101, restore line "12 Radar Task(s) will be restored in 05:48:47", "Fully restore at 11-10 17:39:11 local time". Live duel posture from _tools_/duel.py at entry: duel day 1, Radar Training, radar posture release, day ends 18:00 PT, about 9 minutes left.
+- Restored batch claimed: Quick Execute 4 tasks, stamina 101 to 61 (40 spent); bar flipped to Claim All, 11 rewards; Claim All claimed 11 (purple disc 110, Hero EXP 13.9M, upgrade ore 864, drone chip 2.4K, iron 3.0M, food 3.2M, coin 2.5M, Lv.1 chest 1), radar points 336 to 347; bar then read "1 task rewards can be claimed", Claim All again (purple disc 10, Hero EXP 1.7M, drone chip 800, food 885.6K, coin 136.8K), points 347 to 348, stored 0/40, the claim bar gone. Totals: 12 task rewards claimed - the full restored batch of 12 that landed about 17:40 - Hero EXP 15.6M, upgrade ore 864, drone chip 3.2K, iron 3.0M, food about 4.1M, coin about 2.64M, Lv.1 chest 1, purple disc 120. The purple disc is transcribed as displayed; it is NOT equated with the radar-points HUD, which rose only 12 (one per claim) - the disc is a separate reward item, not the points counter.
+- Expected duel contribution 12 x 30,000 = 360,000 - NOT read live; the duel-score-2026-11-09-1830 unit reads the closing total after the 18:00 roll. The delta test is still owed.
+- Pins - not closed this unit: the map still shows pins with red dots at close (2 green skull, grey fist pins, blue teardrop, orange skull, plane pin, alliance portraits). No pin was tapped: the 18:00 roll falls inside the unit's window, and pin work after the roll belongs to radar-2026-11-09-1803 under stack posture. That unit inventories the pins. Per the release standard, pins left unattempted make this unit partial, never done.
+- Gold NEW! icon: the gold icon with a NEW! badge at the top of the radar screen is still untouched and its function still unknown - fifth sighting (2335, 0159, 1253, 1717, 1754). The brown animal-face circle was not re-checked this unit.
+- Alliance toast during the unit: "Important: President HawksMav appointed FireflyJ as Secretary of Interior!" - alliance news, no game action taken.
+- Base power read 146,730,949 at about 17:53, continuing the fall recorded in sweep 002 (149,217,331 at 16:35) - flagged for the daily retro, cause unverified; see the sweep 002 section in daily-activities 1.22.0 and the comment on Issue #482 by this run.
+- No diamonds or money spent. No stamina items used - only the 40 stamina points spent through Quick Execute.
+- Result stats: target 12, achieved 12, resources_gained hero-exp-15.6M-upgrade-ore-864-drone-chip-3.2K-iron-3.0M-food-4.1M-coin-2.64M-lv1-chest-1, costs 40-stamina, verified no, blocker_category h, tasks_completed 4, rewards_claimed 12.
