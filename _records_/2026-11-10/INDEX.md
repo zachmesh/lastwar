@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T13:36:00Z
+modified: 2026-11-10T14:00:00Z
 level: L0
 version: 1.0.0
 description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures)
@@ -1090,3 +1090,23 @@ of 2026-10-28.
   Level Swap rotated out. Issues commented: #242, #482, #498, #506,
   #550, #553, #565, #160, #282. No new issue filed. Status: done.
   Full detail in knowledge-organization/0532-run.md.
+
+## 05:45 to about 05:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0545.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00). Merged tools PR 572 (same-holder token-lease
+  renewal, Refs #461, squash 856daeca) and knowledge PRs
+  573 (0532 profiles fold, squash 985a1b18) and 574 (0534
+  donations fold, squash 7c5f097e), the latter two opened
+  mid-pass and reviewed in the same pass. Records
+  PR 569 clean at head 930e7a16, awaiting the 07:00
+  batch. Records PRs 351 and 301 still conflict with main
+  on the single action-log file, heads unchanged, carried
+  for branch-side reconciliation. Tools PR 425
+  owner-gated, clean, awaiting the owner decision
+  (OD-20261108-01 open, age 2 days). Re-verification
+  comments posted on 425, 351 and 301 because main moved;
+  issue #461 commented with the 572 merge link. Status:
+  done. Full detail in pr-integration/0545-run.md.
