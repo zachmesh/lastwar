@@ -2072,3 +2072,14 @@ modified: 2026-11-10T14:21:00Z
   re-read this unit (last read 05:19, nothing claimable);
   the 10:57 events unit re-sweeps them. Full detail in
   event-claims/1045-queue-run.md.
+
+## 11:15 to 11:33 - Ticker pass ticker-1104, donations unit partial
+
+- Donations unit donations-2026-11-10-1719 partial. Quick
+  Construction 8/10, 6 coin donations verified live 7/30 to
+  1/30 (900 coin each, 5,400 total), stopped at the live-read
+  1/30 per the changed route; count replenished +6 since the
+  0904 pass left it at 1/30. Compact OCR misread 6/30 as
+  "5130" - the count digit must be verified from the
+  screenshot, never from compact OCR alone. Full detail in
+  alliance-donations/1133-queue-run.md.
