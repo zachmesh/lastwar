@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T19:32:17Z
+modified: 2026-11-10T20:32:17Z
 level: L1
-version: 1.78.0
+version: 1.79.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -84,6 +84,7 @@ grounded_in:
   - source: ticker-0504 event-claims execution record 2026-11-10 0519 queue run (done, Arms Race Base Building cross-read, timer 00:44:05, score 0, cumulative 0/2; record commit 19608e2c9e on records/2026-11-10)
   - source: ticker-0704 arms-race execution record 2026-11-10 0734 queue run (partial, first unit of the Drone Boost phase, ends about 10:06, score 0, tier-3 plan 300 stamina via 15 Doom Elite kills, stamina credit to verify live; record commit d808b384b on records/2026-11-10)
   - source: ticker-1004 event-claims execution record 2026-11-10 1045 queue run (partial, Arms Race Hero Advancement cross-read, timer 03:18:03, score 0, free paths cannot reach tier 3; record commit 2218eb3cd on records/2026-11-10)
+  - source: ticker-1134 arms-race execution record 2026-11-10 1157 queue run (partial, first unit of the Hero Advancement phase, R4 phase-start judgement and just-enough plan, score 0, tier-3 needs one hero level-up, Morrison Lv.124 cheapest visible candidate; record commit dd29016c1 on records/2026-11-10)
 ---
 
 
@@ -2205,6 +2206,18 @@ slot. Evidence in
 
 - Cross-read inside the events unit events-2026-11-10-0657 by ticker-1004, about 10:42 to 10:45 local (the events unit closed partial). Evidence in `_records_/2026-11-10/event-claims/1045-queue-run.md` (commit 2218eb3cd on records/2026-11-10). This is a read-only cross-read, not an arms-race scoring unit; the phase itself is the arms-race unit's job.
 - Arms Race page, Hero Advancement phase: timer 03:18:03 left, so the phase ends about 14:00. Score 0, point chests at 2,000 / 4,000 / 12,000, cumulative chest 0/2, all locked. Scoring paths as displayed: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds (1 Diamond) +30 (red-lined, never).
-- Judgement carried from the cross-read: the free paths cannot reach tier 3 (12,000) this phase - 30 recruitments at +400 would be needed, and the EXP path pays +1 per 2,000 spent. The next arms-race unit should judge the phase under R4 rather than grind it.
+- Judgement carried from the cross-read: the free paths cannot reach tier 3 (12,000) this phase - 30 recruitments at +400 would be needed, and the EXP path pays +1 per 2,000 spent. The next arms-race unit should judge the phase under R4 rather than grind it. (2026-11-10 1157 update: the next arms-race unit did judge under R4 - see the 1157 section: tier-3 plan is one hero level-up, EXP only, on the cheapest confirmed hero; no scoring action was taken in that unit, so the plan is now the standing carry for the next unit inside the phase window ending about 14:02.)
 - Phase accounting: the Drone Boost phase judged by the 0734 unit (tier-3 plan 300 stamina via 15 Doom Elite kills, window ending about 10:06) has ended with no scoring unit having run inside its window - the tier-3 push was never executed, so the phase closed at score 0. The stamina-credit verification the 0734 unit left open (verify +100 per stamina live on the first scoring action) is still untested and carries to the next stamina-scoring phase, not to this Hero Advancement phase, whose scoring paths do not include a stamina row.
 - Nothing claimable on this page; no Arms Race grinding was done in the cross-read unit. The phase scoring belongs to the arms-race unit for this slot.
+
+## What the 2026-11-10 1157 unit added - Hero Advancement phase judged at phase start, score 0 of 12,000, R4 just-enough plan one hero level-up, partial
+
+- Unit arms-race-2026-11-10-1003 by ticker-1134, about 11:52 to 11:57 local, status partial. Evidence in `_records_/2026-11-10/arms-race/1157-queue-run.md` (commit dd29016c1 on records/2026-11-10). This is the first unit of the Hero Advancement phase. Tracker untouched, so the next tick re-produces this regular.
+- Phase read live (R4 first unit of the phase): Hero Advancement. Timer 02:05:45 left at the 11:56 read, so the phase ends about 14:02 PT. The previous Drone Boost phase ended about 10:06 (the 0734 unit's read). Score 0. Point chests: 2,000 (2,360 rubies), 4,000 (4,800), 12,000 (11,800) - all locked, none earned. Cumulative chest 0/2, locked. Scoring paths as displayed: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds (1 Diamond) +30 (red-lined, never).
+- Just-enough plan (tier 3 = 12,000): scoring rate, verified 2026-10-26 and re-confirmed by the 2026-11-09 McGregor precedent: +1 point per 2,000 Hero EXP used, so tier 3 needs 24.0M EXP in level-ups. One level at the Lv.120 band costs about 75.0M EXP (37,500 points, 2026-10-26) and at Lv.145 costs 165M EXP (82,500 points, 2026-11-09) - a single level-up of any hero at Lv.120 or above overshoots tier 3 on its own. Hero Recruitment path: +400 each, so 30 recruitments for tier 3. Ticket stock is unverified and almost certainly short of 30; not the plan unless the executing unit counts 30 tickets in hand. Diamond packs are red-lined and excluded from the plan. Cheapest visible candidate: Morrison "The Reaper", UR, Lv.124, Power 1,733,222 - the lowest-level hero on the first screen of the Hero List (next lowest visible is Lv.125). His detail page EXP bar reads "1.4G/83.0M" as displayed (the G/M mix is unresolved from the screenshot alone). The executing unit must verify the exact EXP cost on the Upgrade panel before confirming, and must scroll the Hero List to confirm no lower-level hero sits below the fold before spending on Morrison.
+- Plan for the next arms-race unit: one level-up, EXP only, on the cheapest confirmed hero; re-read the Arms Race score immediately (expect 12,000 cleared by the single level); claim every earned point chest and the cumulative chest if it unlocks; then stop - no second level-up. If the single level-up lands short of 12,000, the unit levels one more time on the same hero and re-reads.
+- What was done: phase, score, thresholds and scoring paths read live; the plan above is set for the following units. No scoring action was taken in this unit: the level-up is an irreversible EXP spend and the remaining minutes did not allow a safe execute-and-verify cycle (Upgrade panel cost unconfirmed, cheapest hero unconfirmed below the fold), so the spend falls to the next unit with a full budget inside the phase window (ends about 14:02).
+- No chest earned, so nothing claimed. Completion sweep: the Arms Race page shows no bouncing chest and no reward red dot; the three point chests and the cumulative 0/2 chest are locked, and the ranking-row chest was not tapped (taps retired per the 0609 unit; the ranking reward arrives via Event mail per the 1822 unit). The game was left on Morrison's hero detail page.
+- Outcome partial: the phase-start judgement and the just-enough plan are recorded; the tier-3 push (one hero level-up, EXP only) is work for the following units inside the phase window (ends about 14:02). The next arms-race unit inherits this plan and must verify the Upgrade-panel EXP cost live before confirming.
+- No diamonds or money spent. No diamond pack tapped. No speedup burned. No research or building started. No stage swapped. No hero skill, shard, gear or Tier upgrade touched - only the level-up EXP bar was read. No radar pin tapped from this unit. No zombie chain seeded (event still ended).
+- Result stats: target 12000, achieved 0, resources_gained none, costs about 5 minutes, verified yes, blocker_category h, phase Hero Advancement, phase_ends_about 14:02 PT, score_before 0, score_after 0, stamina 110, chests_claimed 0, cumulative 0/2, entry_attempts 2, device_takeovers 0.

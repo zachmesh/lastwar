@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T15:32:17Z
+modified: 2026-11-10T20:32:17Z
 level: L1
-version: 1.68.0
+version: 1.69.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -70,6 +70,7 @@ grounded_in:
   - source: ticker-2334 radar-tasks execution record 2026-11-09 2351 queue run (done, stack day, Quick Execute 5 tasks, 9 rewards pending, 11 pins inventoried, dish re-grounded (52,694) with move-wait-click; record commit 10b431e97 on records/2026-11-09)
   - source: ticker-0304 radar-tasks execution record 2026-11-10 0318 queue run (partial, entry blocked, dish icon not grounded, 9 pending rewards stay stacked; record commit 047fcf81b2 on records/2026-11-10)
   - source: ticker-0704 radar-tasks execution record 2026-11-10 0727 queue run (partial, stack day, Claim All-only bar with 9 rewards pending, no Quick Execute offer, dish re-grounded fresh at norm 47,717, 6 pins inventoried untapped; record commit d808b384b on records/2026-11-10)
+  - source: ticker-1134 radar-tasks execution record 2026-11-10 1146 queue run (done, stack day, Quick Execute 1 task offered with 11 pending then bar flipped back to Claim All-only, stored 23/40, dish re-grounded fresh at norm 54,718, 4 skull pins inventoried, NEW! badge ninth sighting; record commit dd29016c1 on records/2026-11-10)
 ---
 
 
@@ -293,7 +294,7 @@ execution records):
   Execute offer (1 task) despite 7 rewards pending from the
   06:12 close, and ran it. What selects which offer the bar
   presents is not understood (open question); never assume
-  either way - read the bar that is actually shown. (2026-11-10 0727 update: the offer flipped since the 2351 unit - that unit ran Quick Execute 5 tasks with the same 9 pending, and this unit, about 7.5 hours later, is offered Claim All only with the same 9 pending and no Quick Execute. The rule that selects the offer is still open; the flip is recorded, not explained.)
+  either way - read the bar that is actually shown. (2026-11-10 0727 update: the offer flipped since the 2351 unit - that unit ran Quick Execute 5 tasks with the same 9 pending, and this unit, about 7.5 hours later, is offered Claim All only with the same 9 pending and no Quick Execute. The rule that selects the offer is still open; the flip is recorded, not explained.) (2026-11-10 1146 update: the offer flipped AGAIN, twice in one unit - the bar offered one Quick Execute with 11 rewards already pending, the unit ran it (stamina 120 to 110, points stayed 348, so one task executed and nothing claimed), and the bar then flipped back to Claim All only with 11 pending and no further Quick Execute offer. The bar CAN offer Quick Execute while rewards sit pending, so the 0727 Claim All-only state is not a lockout that only a claim clears; what selects the offer is still open, and the flip is recorded, not explained. Stored 23/40 at entry, restore 12 tasks in about 5h54m, fully restore 11-10 23:39:11.)
 - Bottom-bar hitbox, measured 2026-11-03 1450: taps at norm y
   890, 905, 910 and 912 on the Claim All button did NOTHING
   (five taps across two attempts, including a double-click);
@@ -1136,11 +1137,11 @@ are still open, per the protocol.
 - Dish badge meaning: the dish badge read "10" at entry on
   2026-11-08 2335 while stored was 39 of 40 and only 1 task was
   Quick Executable - the badge number does not equal the stored
-  count. What it counts is not established. (Added 2026-11-08 2335.)
+  count. What it counts is not established. (Added 2026-11-08 2335.) (2026-11-10 1146 update: dish badge still 9 while pending rewards rose to 11 - the badge does not track the pending count. The 0727 '9 pending match the dish badge 9' reading is superseded as a match; the badge is a separate, still-unidentified counter.)
 - Gold NEW! icon on the radar screen: a gold icon with a NEW!
   badge sits at the top of the radar screen (about norm 295,60),
   seen 2026-11-08 2335, function unknown, never tapped.
-  (Added 2026-11-08 2335.) (2026-11-09 1253: re-seen, still untouched, function still unknown.) (2026-11-09 2351: re-seen, still untouched, function still unknown - seventh sighting.)
+  (Added 2026-11-08 2335.) (2026-11-09 1253: re-seen, still untouched, function still unknown.) (2026-11-09 2351: re-seen, still untouched, function still unknown - seventh sighting.) (2026-11-10 1146: re-seen on the chest icon at the top of the radar screen, ninth sighting, still untapped and unidentified - the next unit identifies it before any claim decision.)
 - Blue-triangle item identity - radar Claim All rewards repeatedly include a blue-triangle item (366 on 2026-11-09 0852, 726 on 2026-11-09 1253, 450 and 540 on earlier units), unidentified, likely drone parts, unverified. Whether it is the same item as the blue-triangle 596 bubbles over furnace buildings (Issue #508) is unverified - the 1253 unit gives #508 no direct evidence beyond the shared shape, and the item is recorded here as a candidate link only.
 
 ## What the 2026-11-02 1508 unit closed for radar
@@ -1503,6 +1504,8 @@ are still open, per the protocol.
   superseded in place by this close inventory, not erased.
 
 ## Changelog
+
+- 1.69.0, 2026-11-10 - 1146 unit folded (done, stack day): Quick Execute offered with 11 rewards already pending - 1 task executed (stamina 120 to 110, points stayed 348), then the bar flipped back to Claim All-only with 11 pending, so the offer flips both ways and the selecting rule stays open; dish badge still 9 while pending rose to 11, so the badge does not track the pending count (the 0727 match reading is superseded); dish re-grounded fresh at norm (54,718), first-tap open with move-wait-click; entry Lv.13, points 348, stored 23/40, stamina 120, restore 12 tasks in 05:55:04, fully restore 11-10 23:39:11; 4 skull pins inventoried untapped (blue top-centre, orange top-centre-right, grey right, green bottom-left), no shoe or handshake pin stands now, the 0727 set of 6 has rotated; NEW! badge on the chest icon, ninth sighting, still untapped and unidentified; base-screen reads food 612.5M, iron 939.3M, coin 84.1M, diamonds 13.22K, Total Power 148,058,020 (display only); nothing claimed, 11 pending rewards stay stacked for the duel day 3 release unit.
 
 - 1.68.0, 2026-11-10 - 0727 unit folded (partial, stack day): Claim All-only bar with 9 rewards pending and no Quick Execute offer - the offer flipped since the 2351 unit ran Quick Execute 5 tasks with the same 9 pending, so the selecting rule stays open; dish re-grounded fresh at norm (47,717), first-tap open with move-wait-click (retro A-02 verification), the grounding tool mislabelled the yellow radio device at (50,861) as the dish; entry Lv.13, points 348, stored 13/40, stamina 120, restore "Fully restore at 11-10 23:39:11 local time"; 6 pins inventoried untapped (4 skull: blue top centre, orange top centre-right, teal right, green bottom left; orange shoe left; blue handshake top left over [AP3x]TrapQueen37), alliance portrait pins are not task pins; NEW! badge on the chest icon at the top of the radar screen, eighth sighting of the gold NEW! icon, still untapped and unidentified - the next unit identifies it before any claim decision; base-screen reads food 612.5M, iron 935.9M, coin 84.1M, diamonds 13.22K, Total Power 148,058,020 (display only); "Violet's Gift received!" toast seen, nothing tapped for it; nothing executed or claimed, 9 pending rewards stay stacked for the duel day 3 release unit.
 
@@ -2632,3 +2635,17 @@ are still open, per the protocol.
 - Outcome partial: execution was impossible - the bar offers no Quick Execute while 9 rewards sit pending, and the stack-day red lines forbid the Claim All tap that would clear them. The next radar unit inherits the blocker, the 9 pending count, the stored 13/40 read and the pin inventory above, and should check first whether the bar offers Quick Execute again.
 - No diamonds or money spent. No Claim All tapped. No map pin tapped. No other activity's rewards touched. The game was left on the radar screen.
 - Result stats: target 13, achieved 0, resources_gained none, costs about 12 minutes, verified yes, blocker_category e, stored_before 13, stored_after 13, pending_rewards 9, stamina_before 120, stamina_after 120, radar_points_before 348, radar_points_after 348, pins_inventoried 6, entry_attempts 1, device_takeovers 0.
+
+## What the 2026-11-10 1146 unit added - stack day, Quick Execute 1 task offered with 11 pending, bar flipped back to Claim All-only, dish re-grounded (54,718), done
+
+- Unit radar-2026-11-10-1003 by ticker-1134, about 11:44 to 11:46 local, status done. Posture: stack (duel day 2, Base Expansion; tools/duel.py radar_posture stack at 11:41 PT, the unit window stamp agrees). Evidence in `_records_/2026-11-10/radar-tasks/1146-queue-run.md` (commit dd29016c1 on records/2026-11-10). Tracker marked done for this regular.
+- Entry: Mac mini online, last_seen 2026-11-10T19:16:33Z. Computer session cc-443. open_app LastWar returned outcome_unknown; the game window 489932 was already open on the Alliance Techs detail panel (Quick Construction 8/10, Donation Count 2/30) left by the ticker-1104 donations unit, so no relaunch. Closed the detail panel X, the tech list X, and the Alliance screen back arrow to reach the base view. Nothing was tapped in the Alliance screens; the Help, Alliance Gifts and Alliance Techs red dots seen there belong to other units. Dish grounded fresh from the current base screenshot: the satellite dish is the blue circle with the red badge 9 at norm (54,718) by the visual grounding tool, inside the historical 47-62, 694-727 cluster. Move, wait 1 second, then click opened the radar on the first tap. Entry verified on the radar screen itself: Lv.13, radar points 348, stored 23/40, stamina 120, restore line "12 Radar Task(s) will be restored in 05:55:04" and "Fully restore at 11-10 23:39:11 local time".
+- Base-screen reads at entry (display only): food 612.5M, iron 939.3M, coin 84.1M, diamonds 13.22K, Total Power 148,058,020, stamina 120, Build Oil Well [0/1].
+- Quick Execute offered WITH pending rewards present, then the bar flipped back: the bottom bar offered Quick Execute - "You can complete 1 tasks, requires 10 Stamina." Tapped Quick Execute at norm (501,952). Stamina read 120 to 110 afterwards, proving the one task executed; radar points stayed 348, proving nothing was claimed. After the batch the bar flipped to Claim All only: "11 task rewards can be claimed", no further Quick Execute offer. Claim All was NOT tapped, per the stack-day red line. Named blocker, carried to the next unit: Claim All-only bar, 11 rewards pending, no Quick Execute offer. The offer flipped twice today: the 0727 unit found Claim All only at entry, this unit was offered one Quick Execute with pending rewards present and then flipped back. The rule that selects the offer is still open. See the Quick Execute section update.
+- Deltas against the 0727 read (observed, mechanism unverified): stored 13/40 to 23/40, pending rewards 9 to 11. One of the plus 2 pending is this unit's executed task; the other plus 1 pending and the plus 10 stored are consistent with a restore landing between the units, but the restore timing was not measured live, so no mechanism is claimed. Stored 23/40 plus the 12-task restore in about 5h54m stays under the 40 cap (35), so no headroom action is owed before the next unit. Dish badge still 9 while pending rose to 11 - the badge does not track the pending count; see the updated open question.
+- Closing reads, all live on the radar screen: stored 23/40, pending rewards 11, radar points 348, stamina 110, restore "12 Radar Task(s) will be restored in 05:54:17".
+- Pin inventory, untapped per the stack handling rule, all red-dotted skull pins: blue skull top-centre about (517,334), orange skull top-centre-right about (584,334), grey skull right about (724,366), green skull bottom-left about (299,652). Alliance member portrait pins stand on the map and are not task pins. No shoe or handshake pin stands now; the 0727 inventory of 6 pins has rotated.
+- A NEW! badge sits on the chest icon at the top of the radar screen, next to Lv.13 / 348. It was not tapped (stack day, unknown content); the next unit should identify it before any claim decision. This is the ninth sighting of the gold NEW! icon; function still unknown. See the updated open question.
+- Outcome done: the stack-day completion standard is met - the radar screen was entered and verified, the only offered executable ordinary task was executed, closing reads are recorded, and the pin inventory was taken untapped. The next radar unit inherits the Claim All-only blocker, the 11 pending count, the stored 23/40 read and the pin inventory above, and should check first whether the bar offers Quick Execute again.
+- No diamonds or money spent. No Claim All tapped. No map pin tapped. No other activity's rewards touched. The game was left on the radar screen.
+- Result stats: target 1, achieved 1, resources_gained none, costs stamina 10 and about 6 minutes, verified yes, stored_before 23, stored_after 23, pending_rewards 11, stamina_before 120, stamina_after 110, radar_points_before 348, radar_points_after 348, pins_inventoried 4, entry_attempts 1, device_takeovers 0.
