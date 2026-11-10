@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-08T14:42:04Z
+modified: 2026-11-10T00:59:08Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,7 @@ grounded_in:
   - source: ticker-0434 perception-scout execution record 2026-11-08 0454 queue run (done, VIP re-check, Freebie still claimable, record commit caa661bab on records/2026-11-08)
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Freebie re-check, cart dot is the Store shortcut, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, VIP panel re-read, Daily Freebie still claimable, cart dot absent, VIP Store full stock); record commit 707bcec0d8 on records/2026-11-08
+  - source: ticker-1518 vip-rewards execution record 2026-11-09 1540 queue run (done, Daily Freebie and login chest both claimed in one pass, freebie blocker did NOT recur, plain tap at norm 759,670, VIP points 1,613,660 to 1,613,740 plus 80, freebie countdown to the 18:00 reset superseding the 24-hour-cycle correction; record commit da249faca3 on records/2026-11-09)
 ---
 
 
@@ -177,7 +178,7 @@ Measured on 2026-10-25.
 
 ## Open questions
 
-- Whether the freebie contents rotate or are fixed per level.
+- Whether the freebie contents rotate or are fixed per level. (2026-11-09 1540 update: the same contents again - puzzle piece x2, food crate x13, iron crate x13, coin crate x13 - claimed live; rotation across days still unanswered.)
 - What reaching VIP 14 pays and unlocks.
 
 ## What the 2026-11-02 2138 unit found - checked only, both items already claimed
@@ -260,6 +261,15 @@ Measured on 2026-10-25.
 - Supporting re-read: the 2138 unit on 2026-11-02 read a grey countdown of 20:20:15 at about 21:38, after the reset. Under a reset clock the countdown at 21:38 would read about 21h22m to the next 19:00 reset; observed 20:20:15 puts the unlock at about 17:58 the next day, which matches a 24-hour cycle from a claim at about 17:58 on 2026-11-02. The 2138 section's "the freebie for this reset day is already claimed" is re-read as: already claimed for the running 24-hour cycle, unlock about 17:58 the next day.
 - The reset-rule paragraph in Cadence is revised with it: a round that runs after 19:00 does NOT automatically find a fresh freebie. Whether it is claimable depends on when it was last claimed (unlock is last claim plus about 24 hours), so units must read the countdown or the button live rather than assume a refresh at the reset. The 2026-10-25 owner claim at about 20:53 is re-read as the about-18:59 unlock claimed late, not as a reset-driven refresh; the paragraph's "afternoon claim" can only be the previous day's claim, since the 14:00 countdown reading rules out a claim that afternoon. The standing rule that a round is not closed without opening the VIP screen stands - as a check, not as an assumption of a fresh freebie.
 - No other claim in this profile changes: the login chest, the streak and points reads, and the Freebie-button failure mode are all re-confirmed by the two units.
+
+## Correction 2026-11-09 - the Daily Freebie unlocks at the 18:00 daily reset, not on a 24-hour cycle from the last claim; the Freebie-button blocker did not recur
+
+- Source: the 1540 record below (ticker-1518, 2026-11-09 15:39 to 15:43 local).
+- Superseded in this profile: the Correction 2026-11-07 claim "The countdown runs about 24 hours from the last claim". The 1540 unit claimed the freebie at about 15:41 and the button then became a countdown reading 02:19:43, then 02:18:38 - pointing at about 18:01 the same day, the 18:00 daily reset (Issue #242). A 24-hour cycle from the claim would read about 24 hours, not 2 hours 19 minutes. The 1747 and 1812 data (unlock about 18:02, last claim about 18:02 the day before) fits both models and does not discriminate; the 1540 late claim does. The freebie unlocks at the 18:00 daily reset: one freebie per reset day, claimable from the reset until claimed, and a late claim does not push the next unlock out. The 2138 countdown (20:20:15 at about 21:38, unlock about 17:58 the next day) is equally consistent with the reset reading.
+- Revised rule: a round that runs after the 18:00 reset DOES find a fresh freebie; a round that runs before it finds only the current cycle's freebie if still unclaimed. Units still read the button or the countdown live rather than assuming, because the unlock lands at about 18:01 to 18:02, not exactly 18:00. The "not on the 19:00 reset clock" part of the 2026-11-07 Correction stands - the reset is 18:00, not 19:00.
+- Superseded as well: the Freebie-button repeat blocker as a standing state. The 1540 unit's plain single tap at the freshly grounded centre (norm 759,670) claimed the freebie at once - the ticker-1734 blocker (four input variants at norm about 739,637 on 2026-11-07) did NOT recur. The 1734 centre is not re-asserted; centres are grounded fresh each unit (R2). The button is no longer treated as dead; a future failure is a new observation, not a recurrence of a standing blocker.
+- No other claim in this profile changes: the login chest, the streak and points reads stand as the 1540 unit read them.
+
 
 ## What the 2026-11-07 1830 unit added - avatar-tap route blocked by the popularity popup, VIP entry not located, freebie not retried
 
@@ -363,3 +373,15 @@ Measured on 2026-10-25.
   the VIP panel and the Store screen, still unexplained).
 - Game left safe: game left on the base screen. No claim, no purchase. No
   Assemble, no teleport.
+
+## What the 2026-11-09 1540 unit added - Daily Freebie and login chest both claimed in one pass, freebie blocker did not recur, done
+
+- Unit vip-2026-11-08-1800 by ticker-1518, about 15:39 to 15:43 local, status done - the VIP13 Daily Freebie and the login chest were both claimed in this unit, each verified by a live points read before and after. No previous VIP unit had taken both in one pass since 2026-10-30; the freebie button's standing unresponsive blocker (ticker-1734, four input variants at norm about 739,637 on 2026-11-07) did NOT recur - the plain single tap at norm 759,670 claimed it at once. Evidence in `_records_/2026-11-09/vip-rewards/1540-queue-run.md` (commit da249faca3 on records/2026-11-09). Session cc-310 on the owner Mac mini. No session drop, no device-access error, no different-device dialog, no login demanded. LastWar was already running on the base screen.
+- Entry, read live about 15:40 local: base screen, power 149,317,331; food 554.9M, iron 879.2M, coin 51.8M; diamonds 6,137. Avatar tap opened MY PROFILE; the "You're very popular!" popup appeared again ([AP3x]namolla liked the profile, 1,810 +1) and was dismissed with the plain blue "Awesome!" button, no price tag, no spend. Clean profile: Lv.30 [AP3x]Bears Lair, 149.2M power, 48.6K kills, Lv.63, Lv.2, [AP3x]The Apex, VIP13 badge WITH a red dot, #2110, likes 1,815, Moments "No posts found."
+- VIP screen, read live about 15:41 local: VIP13, "You've logged in 3 days in a row. Collect 100 VIP points tomorrow." Points 1,613,660 / 2,000,000. Login chest top right carried a red dot. Daily Freebie showed a green Claim button with puzzle piece x2, food crate x13, iron crate x13, coin crate x13.
+- Daily Freebie, claimed about 15:41 local: one plain tap on Claim, CONGRATULATIONS banner at once, rewards puzzle piece x2, food crate x13, iron crate x13, coin crate x13. Points unchanged at 1,613,660 after the claim (freebie pays no VIP points). The button became a countdown reading 02:19:43, then 02:18:38 - next freebie at the 18:00 reset (see the Correction 2026-11-09 above: the reset-anchored unlock supersedes the 24-hour-cycle reading).
+- Login chest, claimed about 15:42 local, independently of the freebie: one plain tap on the top-right chest, CONGRATULATIONS popup - "Today's VIP Points 80, Consecutive Login Days 3, Next Day's VIP Points 100. More continuous login days, more VIP points." Points read live after: 1,613,740 / 2,000,000, up exactly 80 from 1,613,660.
+- Close-out, read live about 15:42 local: chest top right open with no red dot; freebie on countdown; profile VIP13 badge red dot cleared on return to MY PROFILE. The VIP Exclusive $99.99 offer was never tapped. Game left on the base screen.
+- Follow-up: none. Both VIP items for this reset day are claimed; the next freebie is due after the 18:00 reset. Note for the planner: the vip-2026-11-09-2349 unit the planner-1540 pass enqueued on the stale observation's "VIP icon red dot bottom left" entry carries a premise the 1609 scout corrected (that icon is the HEROES button, not VIP - see the perception-scout 1609 fold); if the ticker picks it up after the 18:00 reset it would find the new cycle's freebie genuinely claimable, so the unit is a phantom for its stated reason, not necessarily a no-op.
+- No diamonds spent, no money spent, no paid offer tapped, no points-plus button tapped. Game left on the base screen.
+

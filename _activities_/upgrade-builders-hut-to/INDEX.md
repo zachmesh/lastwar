@@ -1,13 +1,14 @@
 ---
 title: Upgrade Builders Hut to Lv.26
 created: 2026-11-09T20:32:17Z
-modified: 2026-11-09T20:32:17Z
+modified: 2026-11-10T00:59:08Z
 level: L1
-version: 1.0.0
+version: 1.1.0
 description: Banner quest to upgrade the Builders Hut from Lv.25 to Lv.26 - cost, time and panels measured read-only, owner-only, waits on the owners decision in Issue 517
 status: unverified
 grounded_in:
   - source: ticker-1204 scout discovery unit 018 execution record 2026-11-09 1204 queue run (done, Builders Hut Lv.26 banner quest profiled live - cost Iron 170.0M plus Food 56.9M plus Lv.26 HQ, all met, original time 15d 08:05:18, no reward shown, no deadline, upgrade panel X unresponsive to background clicks; record commit 6f18bc3be on records/2026-11-09)
+  - source: ticker-1534 perception-scout execution record 2026-11-09 1609 queue run (partial, banner quest now reads Build Oil Well 0 of 1 at about 16:03, Builders Hut quest no longer the displayed banner quest, upgrade still unstarted; record commit a7a8ea6c28 on records/2026-11-09)
   - source: ticker-0842 scout discovery unit 009 execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest first explored read-only - cost, time and Finish Now measured, owner-decision Issue 517 filed; record commit ec55aa585 on records/2026-11-09)
 ---
 
@@ -23,7 +24,7 @@ this quest can never execute as a unit - it waits on the owner's
 decision in GitHub Issue #517 (owner-decision). If approved, the
 building-queues regular (PR #515, Refs #513) would own the execution.
 Until then this profile is learn-only. Executions are recorded in
-`_records_/<date>/upgrade-builders-hut-to/`, one file per execution.
+`_records_/<date>/upgrade-builders-hut-to/`, one file per execution. (2026-11-09 1609 update: the banner quest no longer reads Upgrade Builder's Hut - the 1609 scout read the banner as 'Build: Oil Well [0/1]' at about 16:03. The Builders Hut quest is not displayed as the banner quest as of that read; the upgrade itself is still unstarted and still waits on Issue #517. The cost, time and panel measurements below stand as the 1204 read.)
 
 ## How it is done
 
@@ -95,6 +96,7 @@ Until then this profile is learn-only. Executions are recorded in
   unmeasured.
 - The owner's decision in Issue #517: start the Lv.26 upgrade now,
   or leave it queued.
+- Whether the banner quest rotates back to the Builders Hut quest after the Oil Well quest completes, or the Oil Well quest is simply the next banner quest in a sequence - unmeasured; the banner read 2026-11-09 about 16:03 is the only Oil Well data point.
 
 ## What the 2026-11-09 1204 scout-discovery unit added - Builders Hut Lv.26 quest measured, upgrade panel X unresponsive
 
@@ -120,3 +122,10 @@ Until then this profile is learn-only. Executions are recorded in
   0, surfaces_walked base-screen-banner-quest-builders-hut-detail-
   upgrade-panel, items_observed 1, red_dots_seen 0,
   red_dots_explained 0, unexplained_red_dots 0, unknown_items 0.
+
+## What the 2026-11-09 1609 scout unit added - banner quest rotated to Build: Oil Well, Builders Hut quest no longer displayed
+
+- Unit scout-2026-11-08-1800 by ticker-1534, about 16:01 to 16:09 local, status partial. Evidence in `_records_/2026-11-09/perception-scout/1609-queue-run.md` (commit a7a8ea6c28 on records/2026-11-09). Observe-only; nothing claimed, nothing started.
+- Banner quest, read live about 16:03: "Build: Oil Well [0/1]". The 0606 pass read "Upgrade Builder's Hut to Lv.26 [0/1]", so the banner quest changed during the day. The Builders Hut quest is no longer displayed as the banner quest as of this read; the upgrade itself is still unstarted (owner-only, waits on Issue #517). Whether the banner rotates back after the Oil Well quest completes is unmeasured - the Oil Well quest's cost, time and reward are unread, and no unit is staged to measure them; a later scout-discovery unit measures the banner quest it finds.
+- No other field in this profile changes: the cost, time and panel measurements stand as the 1204 read.
+
