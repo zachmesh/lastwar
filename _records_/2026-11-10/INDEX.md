@@ -1019,3 +1019,19 @@ of 2026-10-28.
   over 24 hours, statements current; 514 and 517 still under 24
   hours. VPS root disk 78 percent, 2.2G free. Status: no-op. Full
   detail in pr-catchall/0539-run.md.
+
+## 05:32 to about 05:48 - Tool-developer pass
+
+- Tool-developer pass tool-development-2026-11-10-0532 (done).
+  Own PR 425 owner-gated, clean, no unaddressed feedback
+  (integrator 0445 pass re-verified CLEAN against main
+  22ffa273a; OD-20261108-01 still open, age 2 days). Fixed the
+  #461 follow-up: the 60-second token-renewal window refused
+  re-acquires landing minutes before expiry, and ticker-0234
+  (02:50 PST) plus ticker-0504 (05:20 PST) both ran game input
+  with no token held after exactly that refusal. Same-holder
+  re-acquire now always renews (PR #572, commit 6dcb13815);
+  different-holder refusal and the expiry safety valve are
+  unchanged. Validation 28/28 fixture assertions on isolated
+  /tmp pools. Status: done. Full detail in
+  tool-development/0532-run.md.
