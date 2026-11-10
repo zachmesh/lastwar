@@ -409,3 +409,17 @@ of 2026-10-28.
 ## 02:30 to about 02:40 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0230 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge, no knowledge merge. Records PR 559 head moved during the pass to 069a94c7a by the ticker-0204 delivery, re-probed CLEAN and tree-safe at the new head; records PR 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against unchanged main, OD-20261108-01 still open (age 2 days); no new comments posted - main and all heads unchanged since the 0145 notes except 559 ticker append. Status: done. Full detail in pr-integration/0230-run.md.
+
+## 02:32 to about 02:38 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-0232.
+  Own PR 425 owner-gated, clean, no unaddressed feedback.
+  Filed issue 563 (label tooling): the delivery-side rule
+  for done files owed by PR 440 (#438) - a completion
+  marker reaped after 7 days with no local done record
+  means the closing was never delivered, and sync stats
+  only counts reaps, so the lost closing vanishes
+  silently. No code change this run: the rule shape
+  (warn vs block, which delivery step) is for the
+  implementing run. Status: done. Full detail in
+  tool-development/0232-run.md.
