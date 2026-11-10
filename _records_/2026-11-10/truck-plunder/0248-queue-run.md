@@ -89,7 +89,7 @@ Mega UR only.
 - Mega Mode mechanics are now observed end to end for the
   first time; the activity metadata still lists Mega dispatch
   as an open question. A knowledge issue is filed from this
-  record so the metadata update is not lost.
+  record so the metadata update is not lost. Issue #565.
 
 ## Result stats
 

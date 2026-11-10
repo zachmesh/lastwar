@@ -516,6 +516,6 @@ of 2026-10-28.
   Armed Truck still unlocated (third deferral): the blue
   vehicle tapped is 2nd Squad Lv.20, not the truck; a gate
   toast reads "...ies are fully loaded, ...e claim them"
-  with the full text off-frame. R2 escalation filed as a
-  GitHub issue from this record. Full detail in
+  with the full text off-frame. R2 escalation filed as
+  GitHub issue #566 from this record. Full detail in
   resource-collection/0257-queue-run.md.

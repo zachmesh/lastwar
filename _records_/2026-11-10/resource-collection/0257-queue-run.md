@@ -42,7 +42,7 @@ Unit harvest-2026-11-10-0203, executor ticker-0234. Status partial.
   Armed Truck check (2026-11-09 0636, 1220, now). Per rule R2
   the blocker belongs in the activity metadata with a changed
   entry route before any further unit of this type runs; that
-  is a tier-2 change, so it is filed as a GitHub issue from
+  is a tier-2 change, so it is filed as GitHub issue #566 from
   this record instead of being edited into the metadata here.
 
 ## Result stats
