@@ -1,0 +1,8 @@
+device-token.md
+# Live-only pool state, like the device token: overlay blocker
+# files (issue #436) guide the next pick and are never records.
+blockers/
+# Completion markers (issue #438) record closings made in a
+# detached worktree, so the next pass never re-picks them; they
+# are live-only pool state, never records.
+completed/
