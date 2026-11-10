@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T20:32:17Z
+modified: 2026-11-10T22:32:17Z
 level: L1
-version: 1.79.0
+version: 1.80.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -85,6 +85,7 @@ grounded_in:
   - source: ticker-0704 arms-race execution record 2026-11-10 0734 queue run (partial, first unit of the Drone Boost phase, ends about 10:06, score 0, tier-3 plan 300 stamina via 15 Doom Elite kills, stamina credit to verify live; record commit d808b384b on records/2026-11-10)
   - source: ticker-1004 event-claims execution record 2026-11-10 1045 queue run (partial, Arms Race Hero Advancement cross-read, timer 03:18:03, score 0, free paths cannot reach tier 3; record commit 2218eb3cd on records/2026-11-10)
   - source: ticker-1134 arms-race execution record 2026-11-10 1157 queue run (partial, first unit of the Hero Advancement phase, R4 phase-start judgement and just-enough plan, score 0, tier-3 needs one hero level-up, Morrison Lv.124 cheapest visible candidate; record commit dd29016c1 on records/2026-11-10)
+  - source: ticker-1343 event-claims execution record 2026-11-10 1358 queue run (done, Arms Race Hero Advancement cross-read, timer 00:05:51, score 0, phase ends about 14:03, phase closed unplayed at 0 of 12,000; record commit b2c2b7a43 on records/2026-11-10)
 ---
 
 
@@ -2221,3 +2222,12 @@ slot. Evidence in
 - Outcome partial: the phase-start judgement and the just-enough plan are recorded; the tier-3 push (one hero level-up, EXP only) is work for the following units inside the phase window (ends about 14:02). The next arms-race unit inherits this plan and must verify the Upgrade-panel EXP cost live before confirming.
 - No diamonds or money spent. No diamond pack tapped. No speedup burned. No research or building started. No stage swapped. No hero skill, shard, gear or Tier upgrade touched - only the level-up EXP bar was read. No radar pin tapped from this unit. No zombie chain seeded (event still ended).
 - Result stats: target 12000, achieved 0, resources_gained none, costs about 5 minutes, verified yes, blocker_category h, phase Hero Advancement, phase_ends_about 14:02 PT, score_before 0, score_after 0, stamina 110, chests_claimed 0, cumulative 0/2, entry_attempts 2, device_takeovers 0.
+
+## What the 2026-11-10 1358 events cross-read added - Hero Advancement phase closed at score 0, tier-3 push never executed, miss
+
+- Cross-read inside the events unit events-2026-11-10-1057 by ticker-1343, about 13:52 to 13:58 local (the events unit closed done). Evidence in `_records_/2026-11-10/event-claims/1358-queue-run.md` (commit b2c2b7a43 on records/2026-11-10). This is a read-only cross-read, not an arms-race scoring unit; the phase itself is the arms-race unit's job.
+- Arms Race page, Hero Advancement phase: timer 00:05:51 left at the read, so the phase ends about 14:03. Score 0, point chests at 2,000 / 4,000 / 12,000, cumulative chest 0/2, all locked. Scoring paths as displayed: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds (1 Diamond) +30 (red-lined, never). No chest claimable.
+- Account row: rank 9, #2110 [AP3x]Bears Lair, 90,500 - the 90,500 is the cumulative event figure shown on that row, while the live phase score is 0; the two figures are not the same. The row figure is the lagging previous-phase display, the same lag documented 2026-10-26 and in the 0006 and 0342 units.
+- PHASE OUTCOME: the phase closed at score 0 of 12,000 - a miss. The 1157 unit's just-enough plan (one hero level-up, EXP only, Morrison Lv.124 cheapest visible candidate) was NEVER executed: no arms-race unit ran inside the window between the 1157 judgement (11:57) and the phase end (about 14:03) - no arms-race record exists after 1157 on 2026-11-10 - so the tier-3 push did not happen and no chest was earned.
+- WINDOW-CLOSURE LESSON: a phase-start judgement without a staged scoring unit in the window closes unplayed - the same shape as the Drone Boost phase judged by the 0734 unit (tier-3 plan 300 stamina, window ending about 10:06, closed at score 0 with the plan never executed). The standing plan for the next Hero Advancement phase carries forward (one level-up, EXP only, cheapest confirmed hero, verify the Upgrade-panel EXP cost live before confirming), but the plan alone does not score - a scoring unit must be staged inside the window.
+- The ranking-row chest for the finished phase falls to the first run after the phase ends (Event mail per the 1822 finding); the ranking reward check is owed. Nothing claimable on this page; no Arms Race grinding was done in the cross-read unit.

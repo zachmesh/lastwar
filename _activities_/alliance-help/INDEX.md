@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T18:32:17Z
+modified: 2026-11-10T22:32:17Z
 level: L1
-version: 1.38.0
+version: 1.39.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -40,6 +40,7 @@ grounded_in:
   - source: ticker-0134 alliance-help execution record 2026-11-10 0140 queue run (done, bubble tile no-change, Help All via panel, header 420 to 720 after close/reopen; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0334 alliance-help execution record 2026-11-10 0350 queue run (done, Help All for two Farmland helps, header 720 to 1,040 after close/reopen, counter above the 1,000 target; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0904 alliance-help execution record 2026-11-10 0924 queue run (done, 2 ally helps delivered, header 1,040/1,000 unchanged in-session, left-edge bubble at (44,568) is the Trucks shortcut not help; record commit 31892dde on records/2026-11-10)
+  - source: ticker-1314 alliance-help execution record 2026-11-10 1316 queue run (done, Help All for 1 ally help, header 1,040/1,000 unchanged in-session, bubble tile (810,705) no-change, own rows Time reduced 18:00:22 and 3d 23:58:04; record commit d781dac9d on records/2026-11-10)
 ---
 
 
@@ -964,3 +965,17 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - No ally requests waiting at close.
 - No diamonds or money spent, no speedup used, no stamina item opened, no building or research started. Nothing was dispatched or plundered on the trucks screen opened by the mis-tap.
 - Result stats: target all waiting ally helps delivered, achieved 2 ally helps delivered, 0 waiting, resources_gained none, points header 1,040/1,000 unchanged in-session (lag, see above), costs about 8 minutes, no items spent, verified yes (ally rows cleared, read live in this unit), blocker_category none.
+
+## What the 2026-11-10 1316 unit added - Help All for 1 ally help, header 1,040/1,000 unchanged in-session, bubble tile (810,705) no-change, done
+
+- Unit help-2026-11-10-1030 by ticker-1314, 13:16 to 13:22 local, status done. Evidence in `_records_/2026-11-10/alliance-help/1316-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-460 on the owner Mac mini. Background input reached the Alliance button on the first tap; no foreground repair was needed.
+- Base screen at entry: the tan help-bubble tile left of the Alliance button was tapped once at (810,705) with no visible effect (no panel opened, no toast). One no-change tap only, so the unit pivoted to the Alliance panel route under rule R2 rather than re-tapping the tile. The tile's exact tap point is not re-grounded here; the next unit that tries the bubble should measure it fresh.
+- Alliance panel: Help button carried a red dot (requests waiting). The Alliance Gifts button also still showed a red dot, minutes after the 1310 gifts unit of the previous pass claimed both tabs - new gifts are already arriving; that red dot belongs to the next gifts unit, not this one (see the gifts profile cross-read).
+- Help dialog at entry: Today's points gained from Alliance Help 1,040/1,000. Rows: Bears Lair (own) Missile Mastery II research, Time reduced 18:00:22; Bears Lair (own) Lv.30 Aircraft Center, Time reduced 3d 23:58:04; GoldenSonya, Need help with Food Output V research (the only ally request waiting).
+- Help All pressed. The game answered "Allies are very grateful for your assistance". The GoldenSonya row disappeared from the list; only the two own rows remained, now showing 30/30 bars in place of the Time reduced figures. No ally requests waiting.
+- The points counter still read 1,040/1,000 in the same dialog instance after the press. The dialog was closed without a close/reopen re-read, so no points delta is claimed for this help - the 0350 unit showed the counter only moves on a reopened dialog, and this unit did not do that re-read. The counter already stood above the 1,000 display target at entry.
+- COUNTER NOTE: the counter has now stood at 1,040/1,000 across the 0350, 0924 and 1316 units. The 0924 close/reopen re-read still showed 1,040 after two helps, so whether helps delivered after the 1,000 target add points at all is unverified - the next unit must do the close/reopen re-read after its helps.
+- OWN-ROW FIGURES: Missile Mastery II "Time reduced" reads 18:00:22 here, up from 15:00:22 at the 0924 read and 13:00:22 at the 0350 reopened read; the Aircraft Center figure is unchanged at 3d 23:58:04 across all three reads. Recorded as displayed; whether "Time reduced" is total time reduced by allies or time remaining was not established in this unit.
+- Outcome: Help All pressed once, 1 ally help delivered (GoldenSonya Food Output V research). No ally requests remain. Returned to the base screen.
+- Figures read live on screen: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1, resources_gained none, points unverified (counter 1,040/1,000 before and after in the same dialog instance, no close/reopen re-read), costs about 6 minutes play, verified yes, blocker_category none, device_takeovers 0.

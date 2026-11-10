@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T19:32:17Z
+modified: 2026-11-10T22:32:17Z
 level: L1
-version: 1.48.0
+version: 1.49.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -52,6 +52,7 @@ grounded_in:
   - source: ticker-0204 shop-claims execution record 2026-11-10 0214 queue run (done, Weekly Pass list fully scrolled, no owned Pickup, check-in hunt no tab in the Events hub; record commit 069a94c7a on records/2026-11-10)
   - source: ticker-0434 shop-claims execution record 2026-11-10 0440 queue run (done, Weekly Pass list re-scrolled, Iron Daily Pickup x2 confirmed, Monthly Days Left 11, Calendar button ruled out as check-in entry; record commit 5ba07ce2b4 on records/2026-11-10)
   - source: ticker-1004 shop-claims execution record 2026-11-10 1029 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, Weekly Pass scroll failed on three methods, check-in banner absent; record commit 2218eb3cd on records/2026-11-10)
+  - source: ticker-1314 shop-claims execution record 2026-11-10 1335 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, press-drag scroll answered the 1029 follow-up, all four Weekly Pass cards verified not owned, Iron Daily Pickup x3; record commit d781dac9d on records/2026-11-10)
 ---
 
 
@@ -1447,3 +1448,18 @@ the free and already paid for parts, never the paid unlocks.
 - The Season Battle Pass / Season Weekly Pass path was not hunted in the Week 8 hub, per Issue #469.
 - No money spent; the Legendary $19.99 Take All, the $24.99 extension, all $4.99 Get Now buttons and the three Weekly Deal price buttons were left untouched.
 - Result stats: target 3, achieved 0, resources_gained none, costs about 5 minutes of unit time, no items spent, verified yes, blocker_category none, points 0.
+
+## What the 2026-11-10 1335 unit added - checked only, Weekly Pass scroll answered by press-drag, all four cards verified not owned, Monthly Claimed 11/11
+
+- Unit passes-2026-11-10-1057 by ticker-1314, 13:35 to 13:41 local, status done. Evidence in `_records_/2026-11-10/shop-claims/1335-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-462 on the owner Mac mini (session cc-461 from the previous unit had closed in between; a fresh session was started, no game state lost).
+- Shop opened from the base cart icon. HOT DEALS landing: only the "Visit the Last War Store for more rewards!" promo with a Go button. No free pack showing.
+- Weekly Pass page reads "Weekly Pass rewards reset at 18:00:00" - the nineteenth live confirmation of the line; the same 18:00-to-18:00 cycle as the 1029 record, so the 18:47 claims of ticker-1822 still stand. Free Supply chest shows no claim button (auto-claim on page open per the activity metadata; no toast appeared on this open, and the morning unit also found nothing).
+- All four pass cards verified in this unit - S2 Drone Components Weekly Pass (Legendary, Daily Pickup x2, Total x7), S1 Drone Parts Weekly Pass (Epic, Daily Pickup x15, Total 105), Iron Weekly Pass (Elite, Daily Pickup x3, Total x21), Coin Weekly Pass (Elite, Daily Pickup x3, Total x21) - every one carries a Get Now $4.99 button, none is owned, no Claim button anywhere.
+- SCROLL ANSWERED: the 1029 follow-up is closed - a press-drag scroll (start 500,750 to 500,400) moved the list where scroll_amount 5 did not, and the Iron and Coin cards below the fold are now verified, not assumed. Press-drag is the confirmed working list-scroll method for this page.
+- CONTRADICTION: the Iron Weekly Pass now reads Daily Pickup x3, Total x21 - the 0214 and 0440 reads said Daily Pickup x2, Total x7 in the same 18:00-to-18:00 cycle. The newest verified on-screen read (this unit) stands at x3 / Total x21; the x2 / Total x7 figures are superseded pending a re-read. Note the arithmetic: x3 times 7 days is 21, internally consistent; the earlier x2 with Total x7 never multiplied out. The next passes unit re-reads the Iron card to confirm.
+- The Legendary Take All $19.99 row was left untouched.
+- Super Monthly Pass tab: Monthly Pass, Squad 4 Lv.20, Days Left 11, Rewards Left 11. Daily Pickup button reads Claimed (grey) - already claimed for this cycle. The $24.99 Monthly Pass Extension was left untouched.
+- Weekly Deal tab (2026-11-9 00:00:00 to 2026-11-15 23:59:59): three paid bundles only - Valor Badge $99.99, Base Upgrade $19.99, UR Set $49.99. Nothing free.
+- Check-in (Issue #553): the shop Go-button foreground-click attempt, the standing idea, was NOT tried in this unit. The issue stays open: the check-in free gift is still unclaimed with no working entry found.
+- No diamonds or money spent. No price button, Renew, paid unlock or Legendary Take All tapped. No other task type was executed in this unit.
+- Result stats: target 3, achieved 0, resources_gained none, costs about 6 minutes play, verified yes, blocker_category none, device_takeovers 0.
