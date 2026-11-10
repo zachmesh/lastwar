@@ -2270,3 +2270,19 @@ modified: 2026-11-10T14:21:00Z
   notes written against a stale VPS local main ref, then
   three corrections naming live main 4884c1fb5. Status:
   done. Full detail in pr-integration/1200-run.md.
+
+## 12:15 to about 12:25 - PR integration pass
+
+  PR integration 1215 run (non-batch pass; checker plain and
+  merge-aware both not due, outside every batch window, next
+  batch 15:00). Records PR 583 carried to the 15:00 batch at
+  unchanged head 1d9a962aa, re-probed clean against live main
+  4884c1fb5. Records PRs 351 and 301 still conflict with main
+  on the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-probed, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated,
+  clean, re-verified against live main 4884c1fb5, awaiting
+  the owner decision (OD-20261108-01 still open). No
+  comments posted: main and all heads unchanged since the
+  1200 pass, so none were owed. Status: done. Full detail
+  in pr-integration/1215-run.md.
