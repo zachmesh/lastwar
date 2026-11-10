@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T08:41:17Z
+modified: 2026-11-10T08:55:00Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes and the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial
+description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, and the 0034 queue ticker pass with a training partial
 status: unverified
 ---
 
@@ -126,3 +126,20 @@ of 2026-10-28.
   current; 514 and 517 still under 24 hours. VPS root disk
   slipped to 86 percent, 1.4G free. Status: no-op. Full detail
   in pr-catchall/0044-run.md.
+## 00:34 to about 00:50 - Ticker pass ticker-0034, training unit partial
+
+- Training unit training-2026-11-09-2203 partial: Drill Ground
+  screen not re-read live, no barracks requeued. Camera panned
+  down to the formation yard; three fresh grounding taps for
+  the Drill Ground all resolved elsewhere - red car tap
+  selected 2nd Squad Lv.20 ("The truck is full, waiting for
+  your command"), FORMATION fence-sign tap selected Wall
+  Lv.26, empty-pavement tap selected 2nd Squad Lv.20 again.
+  Negative grounding result: at this camera view, formation
+  yard taps resolve to parked squads or the Wall, never to a
+  Drill Ground building; the 0039 selection route does not
+  reproduce from these points. Drill Ground Full
+  (39,460/39,460, last read live 2026-10-31) carried
+  unverified again. Commented on open issue #150 with the
+  data point. No diamonds or money spent. Full detail in
+  troop-training/0034-queue-run.md.
