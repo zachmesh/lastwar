@@ -2453,6 +2453,40 @@ def points_is_progress_delta(stats, regular=None):
     return points is not None and points != 0
 
 
+def achieved_is_screen_total(stats, regular=None):
+    """True when stats.achieved is a screen total on a star-ceremony unit (issue #483).
+
+    achieved is the unit's own gain against its target, not a running
+    total read off another screen: a duel total read belongs to the
+    duel-score regular, which carries the duel target 3600000 by
+    design (issue #136). Star-ceremony is not a scoring type - its
+    target is 1 (one ceremony check) and its achieved is the ceremony
+    count, 0 or 1. The two closings that wrote a duel total into
+    achieved both carry the duel target 3600000 with 0 ceremonies
+    claimed: star-ceremony-2026-11-01-1830 wrote achieved 791250
+    ("personal duel total read live 791250 vs target 3600000, gap
+    2808750") and star-ceremony-2026-11-04-0630 wrote achieved
+    4772100 ("duel total 4772100 vs target 3600000, exceeded by
+    1172100"). The Nov 4 unit alone carried the window attainment
+    from about 0.093 to 1.1907 (achieved_sum 4813220 against
+    target_sum 4042308; without it, achieved 41120). A
+    star-ceremony closing whose target is not the ceremony count
+    (1) and whose achieved is above 1 therefore carries another
+    regular's target/achieved pair by construction. The target
+    check keeps a future target-1 closing honest: a ceremony
+    count of 2 or more under target 1 is not excluded here.
+    This is a warning, never a block.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular != "star-ceremony":
+        return False
+    target = _stat_number(stats.get("target"))
+    achieved = _stat_number(stats.get("achieved"))
+    return (target is not None and achieved is not None
+            and target != 1 and achieved > 1)
+
+
 def blocker_category_not_enum(stats):
     """True when stats.blocker_category is present but not an audit class (issue #130).
 
@@ -2505,6 +2539,7 @@ def cmd_complete(args):
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
+    achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
     blocker_bad = blocker_category_not_enum(stats)
     fields["result"] = {
         "status": args.status,
@@ -2525,6 +2560,8 @@ def cmd_complete(args):
                               if points_noach else [])
                            + (["points is progress delta"]
                               if points_prog else [])
+                           + (["achieved is screen total"]
+                              if achieved_screen else [])
                            + (["blocker_category not in enum a-i"]
                               if blocker_bad else [])),
     }
