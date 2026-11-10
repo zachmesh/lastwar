@@ -628,3 +628,19 @@ of 2026-10-28.
   statements current; 514 and 517 still under 24 hours (crossing 24 hours
   at 16:23:24Z and 16:49:56Z today). VPS root disk 80 percent, 2.0G free.
   Status: no-op. Full detail in pr-catchall/0339-run.md.
+
+## 03:40 to about 03:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-0340. Plan staged 5
+  units into the live pool (14:57: passes, secrets, treasures,
+  trucks, events; already_present 63, skipped_done_current 1,
+  skipped_closed 5, reaped 0, expired 0). Sweep production
+  skipped (03:00 hour run); tonight's pair for the 19:00 reset
+  is not yet due. Scout diff on the branch observation (896
+  lines, newest pass 1609) applied to the live pool: 7
+  already-queued, 0 enqueued, candidates 1
+  (inventory-icon-red-dot, draft only), promotion proposals 1
+  (already decided REJECTED as a task), unexplained red dots 0;
+  0 withdrawals. No issues filed. Pool inbox 67, claimed 1,
+  done 1434. Status: done. Full detail in
+  queue-planning/0340-run.md.
