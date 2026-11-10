@@ -2790,3 +2790,9 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   top-level entries before push. VPS disk slid to 87 percent,
   1.4G free. Status: no-op. Full detail in
   pr-catchall/2039-run.md.
+## 20:40 to 20:50 - Planner pass
+
+- Plan staged 0 units into the live pool (horizon already covered; already_present 66, skipped_done_current 3, skipped_closed 5, reaped 0, expired 0).
+- Pre-reset sweep pair already present, both passes done (zero-sweep 1630 and 1730 in done, chain pre-reset-sweep-2026-11-09); production check skipped (20:00 hour run).
+- Scout diff on the branch observation (61 observed, 11 actionable) applied to the live pool with the branch's fixed tool (post-#535/#527/#510): 7 already-queued, 0 enqueued, candidates 1 (inventory-icon-red-dot), promotion proposals 1 (already decided REJECTED by the knowledge organiser 1932 pass), unexplained red dots 0 (diff); narrative seen 37, unexplained 8. Branch-closed 2 (arms-race-2026-11-09-1803, harvest-2026-11-09-1803). No withdrawals. Pool inbox 69, claimed 0, done 1395.
+- 1740 pending commit verified picked up: branch 1740-run.md is byte-identical to the live-tree superseding version; no pickup owed. No new Issue filed. Status: done. Full detail in queue-planning/2040-run.md.
