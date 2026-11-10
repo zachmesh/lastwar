@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T01:46:47Z
+modified: 2026-11-10T03:49:11Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-0404 mail-rewards execution record 2026-11-09 0421 queue run (done, all three red-dot categories walked, no claimable attachments, envelope opened at once with no Alliance-first workaround; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-1004 mail-rewards execution record 2026-11-09 1031 queue run (partial, Event and Alliance Claim All both "No rewards available", six train mails carry no attachments, Battle Report/System/Regular not walked, Mail entry (932,791) windowed first try; record commit 09e4f0863 on records/2026-11-09)
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, Mail red dot standing, three categories unopened; record commit c9a86fa74 on records/2026-11-09)
+  - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, 9 reward mails claimed, Alliance Event System Claim All, leadership transfer to Abyss Apex, Issue 230 entry datapoint, power 146736949; record commit 6761c35d1 on records/2026-11-09)
 ---
 
 
@@ -894,5 +895,19 @@ the next tick re-produces this regular as a fresh unit.
 ## What the 2026-11-09 1657 sweep read added - Mail red dot standing, three categories still unopened today
 
 - Read, not a mail unit: the zero-sweep 001 unit (ticker-1635) read the Mail icon live about 16:47 local. Evidence in `_records_/2026-11-09/daily-activities/1657-queue-run.md` (commit c9a86fa74 on records/2026-11-09). No mail was opened in this read.
-- Mail carries a red dot. Battle Report, System and Regular categories are still unopened today (Event and Alliance answered "No rewards available." at 10:31 per the 1031 unit). The next mail unit resumes with those three categories (queue rule R7, carried from the 1031 unit) - the mail-1430 unit was raised to priority 1 by this sweep.
+- Mail carries a red dot. Battle Report, System and Regular categories are still unopened today (Event and Alliance answered "No rewards available." at 10:31 per the 1031 unit). The next mail unit resumes with those three categories (queue rule R7, carried from the 1031 unit) - the mail-1430 unit was raised to priority 1 by this sweep. (2026-11-09 1838 update: the mail-1430 unit ran 18:29-18:38 and walked all three - System claimed the Season Closed gift, Regular and Battle Report held reports only. The R7 carry is closed.)
 - No mail deleted; Delete All never touched. No diamonds or money spent.
+
+## What the 2026-11-09 1838 unit added - 9 reward mails claimed, Alliance/Event/System Claim All, leadership transfer to Abyss Apex, entry (935,797)
+
+- Unit mail-2026-11-09-1430 by ticker-1822, about 18:29 to 18:38 local, status done. Evidence in `_records_/2026-11-09/mail-rewards/1838-queue-run.md` (commit 6761c35d1 on records/2026-11-09). Computer session on the owner Mac mini. The 1657 sweep's R7 carry is closed by this unit: Battle Report, System and Regular are all walked here.
+- Base screen at 18:33: Total Power 146,736,949; Coin 56.3M, Bread 560.7M, Iron 884.6M (top bar). Power datapoint for Issue #482: 146,736,949 is 6,000 ABOVE the radar unit's 146,730,949 at about 17:53 - the day's fall has levelled at the close, not continued. Commented on Issue #482 by this run.
+- Entry, Issue #230 evidence: on entry the game still showed a leftover CONGRATULATIONS popup from the 17:54 radar claim (Radar x10, EXP 1.7M, x800, Bread 885.6K, Coin 136.8K) - observed, not claimed by this unit; dismissed with one tap below the popup. The Mail button: first tap at (935, 820) showed no change; a second tap at the freshly measured icon centre (935, 797) opened Mail. Background clicks reach the game in windowed 642x951 mode, but the first tap can land without effect - the entry point drifts per session, re-ground fresh each unit. Commented onto Issue #230 by this run.
+- Alliance: Claim All claimed 5 mails - Daily Donation Rankings (29m ago), Zombie Siege Report (Alliance) and (Individual) (45m ago), Defense Success Reward (57m ago), [Alliance Exercise] Alliance Reward (3h ago). Rewards read live: Coin 12.1M, Bread 19.0M, Iron 19.0M, 5m speedups x24, x31, x18, x33 and x14, 1m speedups x225 and x225. The popup top row was partly hidden behind the banner (147.0M, 30.0K, 4.0K, 400 with icons obscured) and is recorded as read, labels unverified.
+- Event: Claim All claimed 3 mails - Duel Progress / Alliance Duel Individual Reward (29m ago), Daily Participation Rewards (29m ago), Arms Race Ranking Reward (32m ago). Rewards read live: EXP item x30, Coin 30.0K x50, Bread 50.0K x50, coin bags x69, bread chest x69, iron chest x69, blue crystal 1.5K, Lv.2 chest x2, red gems 10 x5 and 50 x4. Top row again partly hidden behind the banner, recorded as read only. The Arms Race Ranking Reward arriving by Event mail is folded into arms-race 1.71.0 - ranking chests are claimed via Event mail, not on the phase page.
+- Battle Report: 6 Victory reports vs Lv.15-20 Zombie Horde (48m to 54m ago), reports only, no attachments. Regular: battle reports only (Lv.1 CL-7 Victim 4h ago, Lv.1 and Lv.57 Doom Elite 2d ago), no attachments.
+- System: Season Closed (1d ago) carried a gift icon; Claim All answered REWARD CLAIMED with red gems x50. Other System mails are notices only (President Mail transfer updates, Pack and Event Adjustment, Server 2110, Maintenance Completed).
+- Leadership Transfer Notice in Alliance: Abyss Apex has become the new Alliance leader (title cut off on screen). Confirmed on the Alliance panel in the sibling 1842 gifts unit (Leader Abyss Apex, Power 13,577,450,619, Members 96/100). CORRECTION: the leader was Jerry Apex at the 0417 gifts read - the 0417 section's leader line is superseded as of this read. Scrolling banner: President HawksMav appointed YOUGO^Apex Secretary of Defense and another member Secretary of Science; the gifts unit also saw NERO appointed Secretary of Interior. Alliance news, no action.
+- Favorite was not opened: no gift icon and no red dot on the category list.
+- No mail deleted; Delete All never touched. No diamonds or money spent.
+- Result stats: target 9, achieved 9, resources_gained Coin 12.1M plus Coin 30.0K x50, Bread 19.0M plus Bread 50.0K x50, Iron 19.0M, red gems 50 plus 10 x5 and 50 x4, EXP item x30, speedups 5m x106 and 1m x450, coin bags x69, bread chest x69, iron chest x69, blue crystal 1.5K, Lv.2 chest x2, costs about 9 minutes of unit time, no items spent, verified yes, points 0.

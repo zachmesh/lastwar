@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-09T18:32:17Z
+modified: 2026-11-10T03:49:11Z
 level: L1
-version: 1.33.0
+version: 1.34.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -36,6 +36,7 @@ grounded_in:
   - source: ticker-0034 alliance-help execution record 2026-11-09 0100 queue run (done, Help All pressed once, one ally request cleared, header 360/1,000 unchanged in-session, own rows 30/30, base-screen bubble tile (609,713) no-change, Help (523,507), Help All (488,778), session cc-197 dropped, cc-200 recovery; record commit 77db994162 on records/2026-11-09)
   - source: ticker-0404 alliance-help execution record 2026-11-09 0419 queue run (done, Help All cleared one ally request, header 520/1,000 unchanged at close; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-1004 alliance-help execution record 2026-11-09 1019 queue run (partial, Alliance button unresponsive to background clicks in fullscreen, six taps in four variants, duplicate LastWar window 508052, Help All not reached, red dot waiting; record commit 09e4f0863 on records/2026-11-09)
+  - source: ticker-1822 alliance-help execution record 2026-11-09 1846 queue run (done, bubble plus Help All cleared 2 ally requests, header 140 of 1000 unchanged; record commit 6761c35d1 on records/2026-11-09)
 ---
 
 
@@ -892,7 +893,7 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Help page opened at norm 685,515. Header read live: "Today's points gained from Alliance Help: 520/1,000".
 - Rows before Help All: three own requests, all already 30/30 - Bears Lair, Missile Mastery II research; Bears Lair, Defense Training VIII research; Bears Lair, building Lv.30 Aircraft Center - and one ally request: 꿀밤Bamie, Oil Output I research.
 - Help All tapped at norm 495,765. The toast read live: "Allies are very grateful for your assistance!"
-- Closing read: the ally row is gone; the three own rows now read reduced-time displays - Missile Mastery II "Time reduced: 18:00:22", Defense Training VIII "Time reduced: 10:02:00", Lv.30 Aircraft Center "Time reduced: 3d 23:58:04". The header still read 520/1,000 at the closing read, so no points increase is claimed - the single cleared ally request is the verified outcome. This matches the standing pattern across the 0836, 0308, 0710, 0837 and 0100 units (header unchanged in-session); the 2214 unit is the exception where the header moved 100 to 360.
+- Closing read: the ally row is gone; the three own rows now read reduced-time displays - Missile Mastery II "Time reduced: 18:00:22", Defense Training VIII "Time reduced: 10:02:00", Lv.30 Aircraft Center "Time reduced: 3d 23:58:04". The header still read 520/1,000 at the closing read, so no points increase is claimed - the single cleared ally request is the verified outcome. This matches the standing pattern across the 0836, 0308, 0710, 0837 and 0100 units (header unchanged in-session); the 2214 unit is the exception where the header moved 100 to 360. (1846 update: a sixth in-session-unchanged datapoint - header 140/1,000 after the bubble press plus Help All cleared two ally requests.)
 - Help dialog closed with its X; back arrow returned the game to the base screen. The game was left on the base screen. No diamonds or money spent, no other unit's work touched, Assemble not opened.
 - Result stats: target 1, achieved 1, resources_gained none, points 0, costs 2m_wall_no_stamina, verified yes, helps_cleared 1, device_takeovers 0.
 
@@ -907,3 +908,13 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Blocker, queue rule R2: same-method taps ended after the second no-change tap; the variants above were the pivot attempts inside this unit. The Alliance button does not respond to background coordinate clicks in this fullscreen session, while the green menu arrow does. Changed method for the next unit: exit fullscreen to the native 642x951 window (menu View to Exit Full Screen) and retry the Alliance tap there, or find a click_element route if an Alliance label element appears in the observation. Do NOT repeat the fullscreen background-click sequence.
 - The red dot means the objective is still pending, not absent: the next help unit must still press Help All.
 - Result stats: target 1, achieved 0, resources_gained none, costs about 13 minutes of unit time, no items spent, verified no, blocker_category c, points 0.
+
+## What the 2026-11-09 1846 unit added - bubble press plus Help All cleared two ally requests, header 140/1,000 unchanged in-session
+
+- Unit help-2026-11-09-1430 by ticker-1822, about 18:43 to 18:46 local, status done. Evidence in `_records_/2026-11-09/alliance-help/1846-queue-run.md` (commit 6761c35d1 on records/2026-11-09).
+- The base-screen help bubble (yellow tile left of the Alliance shield, lower right) was tapped once at 18:44 and the game answered "Allies are very grateful for your assistance!" - the bubble press works from the base screen.
+- Help page opened afterwards to verify: header read "Today's points gained from Alliance Help: 140/1,000". Two ally requests were still waiting - PrincessEsra10xoxo (Lv.21 Crystal Factory) and AMD Commander (Lv.29 Oil Well) - plus this account's own two requests, both already 30/30 (Missile Mastery II research, Lv.30 Aircraft Center).
+- Help All pressed at 18:46; the game answered "Allies are very grateful for your assistance!" again and both ally rows left the list. Only the two own 30/30 requests remain.
+- The points header still read 140/1,000 after both presses - recorded as read; whether the counter lags or counts only some helps is an open question, not a conclusion. This is the sixth in-session-unchanged datapoint (see the updated pattern note in the 0419 section); the 2214 unit remains the only exception where the header moved in-session.
+- No diamonds or money spent. No other unit's work touched.
+- Result stats: target 2, achieved 2, resources_gained none counted (helps given, points header read 140/1,000 unchanged), costs about 3 minutes of unit time, no items spent, verified yes, points 0.

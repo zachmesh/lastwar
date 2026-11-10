@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T23:32:17Z
+modified: 2026-11-10T03:49:11Z
 level: L1
-version: 1.70.0
+version: 1.71.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -76,6 +76,7 @@ grounded_in:
   - source: ticker-0945 arms-race execution record 2026-11-09 0949 queue run (partial, Events entry not located in the windowed portrait or letterboxed portrait layouts, (672,132)/(683,150) landscape groundings do not apply, phase page not reached, current phase unknown; record commit eef6edad9 on records/2026-11-09)
   - source: ticker-1345 arms-race execution record 2026-11-09 1345 queue run (partial, Drone Boost phase missed on a late pickup, score 8,000 of 30,000, 1,500 chest claimed, stamina-kill credit on the kill, cumulative chest 7/8; record commit 63eccdb92 on records/2026-11-09)
   - source: ticker-1434 event-claims execution record 2026-11-09 1500 queue run (partial, Hero Advancement cross-read only, phase just started timer 03:04:14 score 0 cumulative 7/8; record commit 4860808ff on records/2026-11-09)
+  - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, Arms Race Ranking Reward claimed via Event mail, arms-race-1403 expired unrun; record commit 6761c35d1 on records/2026-11-09)
 ---
 
 
@@ -2106,7 +2107,7 @@ slot. Evidence in
 - The 1,500-point chest claimed (already earned at 6,000): CONGRATULATIONS popup. Rewards read: Arms Race Badge x1, medals x200, 5m speedup x8, plus resource chests x4 each of two kinds (names unread in the popup).
 - Stamina path, measured end to end: the "Use 1 Stamina" row's >> arrow opens the radar Search panel (Zombies / Gather / Doom Elite tabs). One Search found a CL-7 Victim, Lv.1, Suggested Power 9,000, stamina cost 20, despawn 00:59:47. Deploy panel Squad 1, 25.19M vs 9.00K, Easy Win, Unit Count 2,231/2,231, Rally Time 1min selected, Rally tapped at the button's lower edge. Stamina charged on Rally: 74 to 54. Rally 1:00, march to a 14 km target, battle, squad home (March Queues 0/4). Score still read 6,000 while the rally was running, 8,000 after the kill: points credit on the kill, not on the stamina spend. One kill is +2,000, 20 stamina x 100.
 - Miss verdict: score at close 8,000 of 30,000, chests claimed 1 of 3 (1,500). The 10,000 chest needed 2,000 more points, one more 20-stamina kill; the 30,000 chest needed 24,000 points, twelve kills. No second attack: at the kill the phase timer read 00:00:07, and a second rally-plus-march cycle takes about 2.5 minutes, past the phase end, so no further stamina was spent. Miss cause: the unit was produced for the 10:03 slot but only picked up at 13:47, with 9 minutes of the phase left; twelve 20-stamina rally kills could not fit in that window. Blocker category a (window closure), with late pickup as the contributing cause. The next tick re-produces arms-race for the new phase; the tracker is left untouched.
-- Cumulative chest 6/8 at start, 7/8 at close, not yet claimable. Ranking row: #2110 [AP3x]Bears Lair, rank 8, cumulative event points 88,500 at start, 90,500 at close. Ranking-row chest preview only while the phase is live, per standing knowledge; claimable by the next unit after the phase rolls.
+- Cumulative chest 6/8 at start, 7/8 at close, not yet claimable. Ranking row: #2110 [AP3x]Bears Lair, rank 8, cumulative event points 88,500 at start, 90,500 at close. Ranking-row chest preview only while the phase is live, per standing knowledge; claimable by the next unit after the phase rolls. (1838 update: claimed via Event mail - see the 1838 section.)
 - Stamina at close 55 (regen during the unit). No diamonds or money spent. No speedup items used. No stamina items opened: the on-hand 74 stamina covered the one kill attempted, and further refills could not have landed another kill inside the phase.
 - Cross-read from the 1413 donations unit (same pass): the new phase after Drone Boost is Hero Advancement, thresholds 2,000 / 4,000 / 12,000, timer 03:56 at 14:03. The next arms-race unit works that phase.
 - Zombie Invasion tab still absent from the Events hub (Arms Race, Winter Battlefield, Desert Battlefield visible); the event ended 2026-10-30, chain stays closed, no fresh chain seeded. Folded into zombie-invasion 1.22.3.
@@ -2116,5 +2117,13 @@ slot. Evidence in
 
 - Cross-read from the events unit events-2026-11-09-1057 by ticker-1434, about 14:55 to 15:00 local. Evidence in `_records_/2026-11-09/event-claims/1500-queue-run.md` (commit 4860808ff on records/2026-11-09). No Arms Race grinding was done in this unit; that belongs to the arms-race unit type.
 - Phase: Hero Advancement, Contest Segment Lv.29-30, just started, timer 03:04:14 left at first read. Score 0, point chests at 2,000 / 4,000 / 12,000 all locked, cumulative chest 7/8 (not full, not claimable). Ranking #2110 [AP3x]Bears Lair, 90,500 shown. Countdown consistency check, no contradiction: the 1345 cross-read saw timer 03:56 at 14:03, and this read of 03:04:14 at about 14:55 steps down by the elapsed time between the reads.
-- The phase is the arms-race unit's job: arms-race-2026-11-09-1403 is in the inbox. The next arms-race unit works this phase and claims the Drone Boost ranking chest after the phase rolls, if claimable.
+- The phase is the arms-race unit's job: arms-race-2026-11-09-1403 is in the inbox. The next arms-race unit works this phase and claims the Drone Boost ranking chest after the phase rolls, if claimable. (2026-11-09 1838 update: ranking rewards arrive by Event mail - the 1838 mail unit claimed an Arms Race Ranking Reward mail 32m old. The phase is not attributable from the mail alone, so the Drone Boost chest is not individually confirmed; the route is. The 1403 unit itself expired unrun - see the 1838 section.)
+- Result stats: cross-read only, no points gained in this unit, verified yes (same-unit live reads).
+
+## What the 2026-11-09 1838 mail unit added - ranking chest arrives by Event mail, Hero Advancement phase unworked, 1403 expired
+
+- Cross-read from the mail unit mail-2026-11-09-1430 by ticker-1822, about 18:29 to 18:38 local. Evidence in `_records_/2026-11-09/mail-rewards/1838-queue-run.md` (commit 6761c35d1 on records/2026-11-09). No Arms Race grinding was done in this unit; that belongs to the arms-race unit type.
+- An Arms Race Ranking Reward mail (32m old at the 18:33 read) was claimed in the Event category among the 3 Event mails (Duel Progress / Alliance Duel Individual Reward, Daily Participation Rewards, Arms Race Ranking Reward). The reward contents are not individually attributable - the Event Claim All paid one combined popup. Route established: ranking rewards arrive by Event mail and are claimed there, not on the phase page. The phase the chest belongs to is not readable from the mail (Drone Boost ended 14:00, Hero Advancement ended about 18:00), so the Drone Boost ranking chest is not individually confirmed.
+- Hero Advancement phase unworked: arms-race-2026-11-09-1403 expired unrun - `_queue_/done/arms-race-2026-11-09-1403.md` records status expired, window passed before execution, reaped 18:27:54 in the ticker-1822 pass. No arms-race unit ran the Hero Advancement phase (thresholds 2,000 / 4,000 / 12,000); the phase's point chests and the cumulative 7/8 chest close unclaimed for this trade day. The planner 1840 staged an arms-race unit for the next trade day (06:03-06:30 slots 2026-11-10).
+- No diamonds or money spent. No stamina items used.
 - Result stats: cross-read only, no points gained in this unit, verified yes (same-unit live reads).
