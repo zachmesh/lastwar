@@ -2814,3 +2814,22 @@ modified: 2026-11-10T14:21:00Z
   duplicate-candidate units and was discarded uncommitted before
   any commit. Status: done. Full detail in
   queue-planning/1540-run.md.
+## 15:42 to 15:55 - Ticker pass ticker-1538, radar unit partial
+
+- Radar unit radar-2026-11-10-1403 partial. Duel day 2 Base
+  Expansion, radar posture stack (live duel.py). Dish
+  re-grounded fresh at norm 53,717, first tap opened the
+  radar: Lv.13, points 348, stored 23/40, stamina 120,
+  restore 12 tasks in 01:54 at entry. Bottom bar Claim
+  All-only, 11 task rewards pending, no Quick Execute offer;
+  Claim All not tapped (stack day). Two changed-method
+  probes per rule R2, both no-change: the stored-tasks "?"
+  indicator at 46,108 is display-only, and the NEW! chest
+  icon at 283,59 does not respond to a background click
+  (content still unidentified). Pin inventory untapped: blue,
+  orange, grey and green skull pins, the same 4 as the 1146
+  unit. Stored 23 plus the 12-task restore about 17:37 PT
+  reaches 35, under the 40 cap; the 11 pending rewards go
+  to the day 3 release unit after the 18:00 rollover. The
+  tracker is untouched. Full detail in
+  radar-tasks/1555-queue-run.md.
