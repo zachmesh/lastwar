@@ -258,3 +258,6 @@ of 2026-10-28.
   task), unexplained red dots 0; 0 withdrawals. No issues
   filed. Pool inbox 65, claimed 1, done 1419. Status:
   no-op. Full detail in queue-planning/0140-run.md.
+## 01:45 to about 02:00 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-10-0145 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge. Knowledge PR 561 squash-merged (three-profile fold: building-queues 1.4.0, research-queue 1.3.0, alliance-donations 1.80.0) and tools PR 562 squash-merged (blocker_category a-to-i enum validation, Refs #130); new main dced7ee91; local main fast-forwarded to dced7ee91. Records PRs 559 (head e63b550b) and 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against the new main, OD-20261108-01 still open; re-verification comments posted on 425, 351 and 301 after the main move. Status: done. Full detail in pr-integration/0145-run.md.
