@@ -2995,3 +2995,10 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 ## 23:30 to about 23:48 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-09-2330 (done). NON-batch pass (checker _tools_/records_batch.py plain due - in the 23:00 window, 17 minutes left at pass start; merge-aware not due - PR 545 already merged 23:15 PT in this window, so this pass is not a batch pass); no records merge. Records PR #556 awaiting the 03:00 batch (head 87966646 after the pr-catchall 2339 commit landed mid-pass; merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open; no new comments posted - the 2315-pass notes are the newest on all three and nothing changed since. Status: done. Full detail in pr-integration/2330-run.md.
+
+## 23:40 to 23:50 - Planner pass
+
+- Plan staged 5 units into the live pool (02:57 PST slot on 2026-11-10; already_present 67, skipped_done_current 0, skipped_closed 2 harvest-2026-11-09-2203 and zero-sweep-2026-11-09-1730, reaped 0, expired 0). The 5 were verified new (created 23:43 local, no copies in live done/claimed/completed, none on the branch); they reach the branch through the ticker sync.
+- Pre-reset sweep pair already present, both passes done (zero-sweep 1630 and 1730 in done, chain pre-reset-sweep-2026-11-09); production check skipped (23:00 hour run). Branch-copy gap: the branch _queue_/done holds only the 1730 file.
+- Scout diff on the branch observation (61 observed, 11 actionable) applied to the live pool with the branch's fixed tool (post-#535/#527/#510): 7 already-queued, 0 enqueued, candidates 1 (inventory-icon-red-dot), promotion proposals 1 (already decided REJECTED by the knowledge organiser 1932 pass), unexplained red dots 0 (diff); narrative seen 37, unexplained 8. Branch-closed 0, shared-pool-closed 0. No withdrawals. Pool inbox 71, claimed 1, done 1409.
+- No new Issue filed. Status: done. Full detail in queue-planning/2340-run.md.
