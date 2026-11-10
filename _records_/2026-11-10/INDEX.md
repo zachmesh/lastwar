@@ -1280,3 +1280,47 @@ of 2026-10-28.
   comments posted: main and all heads unchanged since
   the 0700 pass. Status: done. Full detail in
   pr-integration/0715-run.md.
+modified: 2026-11-10T14:21:00Z
+## 07:15 to about 07:30 - Ticker pass (ticker-0704)
+- One unit executed: radar-2026-11-10-0603, status partial.
+  Duel day 2 Base Expansion, radar stack. Dish re-grounded
+  fresh from a magnified left-column crop at norm (47,717)
+  (blue circle, red badge 9); the grounding tool mislabelled
+  the yellow Mission radio at (50,861) as the dish. Radar
+  entered first tap and verified: Lv.13, points 348, stored
+  13/40, stamina 120, restore "Fully restore at 11-10
+  23:39:11 local time". The bottom bar presents Claim All
+  only ("9 task rewards can be claimed"), no Quick Execute
+  offer, so nothing was executed and nothing was claimed
+  (stack-day red lines); named blocker carried to the next
+  unit. Pin inventory, untapped: 4 skull pins (blue, orange,
+  teal, green), 1 orange shoe pin, 1 blue handshake pin, all
+  red-dotted; a NEW! badge on the radar chest icon was left
+  untouched and unidentified. Full detail in
+  radar-tasks/0727-queue-run.md.
+- Sync produced 6 units (passes, secrets, treasures, trucks,
+  events 0657; scout-midday 0700); inbox 23 at pass start.
+  Zombie Invasion: event still ended, no chain seeded (tab
+  absent from the Events hub, last confirmed by the 0604
+  scout-midday unit and the 0504 events unit today).
+- Own PRs checked first: no open PR for records/2026-11-10
+  (PRs 559 and 569 both merged); open PRs 425 (tools,
+  owner-gated), 351 and 301 (integrator-owned records,
+  action-log conflicts) carry nothing addressed to this job.
+## 07:23 to about 07:28 - Ticker pass (ticker-0704), arms-race unit
+- Arms-race unit arms-race-2026-11-10-0603, status partial.
+  R4 first unit of the Drone Boost phase (ends about 10:06):
+  score 0, chests 1,500 / 10,000 / 30,000, cumulative 0/2.
+  Scoring rows: Drone Battle Data +1 per 10, Stamina +100
+  per 1, diamond packs +30 (red-lined). Tier-3 plan: 300
+  stamina of scoring actions (15 Doom Elite kills at 20
+  stamina for +2,000 each, per the 2026-11-03 0609
+  measurement); the stamina credit itself is unverified
+  and the next unit must verify it live. No scoring action
+  was taken in this unit (no safe in-scope stamina use in
+  the remaining minutes; the 4 radar skull pins are
+  unverified class and must be identified before any
+  attack, never tapped blind on a stack day). No chest
+  earned, none claimed; completion sweep clean (no bouncing
+  chest or reward red dot). Events hub has no Zombie
+  Invasion tab. Full detail in arms-race/0734-queue-run.md.
