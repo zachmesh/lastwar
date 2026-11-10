@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T06:47:13Z
+modified: 2026-11-10T10:40:33Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-0504 secret-missions execution record 2026-11-09 0517 queue run (done, 4 cards all PERFECT, assists 5/5 at cap, recovery claimed, no new own tasks since the 22:49 claim on 2026-11-08, Mega Deploy no-change; record commit be01e91134 on records/2026-11-09)
   - source: ticker-1434 secret-missions execution record 2026-11-09 1456 queue run (done, 4 cards all PERFECT again, assists 5/5 at cap, no new own tasks since the 22:49 claim on 2026-11-08, entry (55,636) re-confirmed; record commit 4860808ff on records/2026-11-09)
   - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, incidental Secret Mobile Squad read, same 4 PERFECT cards, assists 5/5; record commit 2f4d783d8 on records/2026-11-09)
+  - source: ticker-0204 secret-missions execution record 2026-11-10 0218 queue run (done, all 9 tasks claimed in one tap, PERFECT stamps, recovery re-checked closed; record commit 069a94c7a on records/2026-11-10)
 ---
 
 
@@ -1057,6 +1058,7 @@ secrets-2026-10-31-2257, status partial).
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
   new own tasks after the dispatched ones return. (2026-11-09 0517 update: no new own tasks have appeared since the 22:49 claim on 2026-11-08 - the list holds only the same 4 PERFECT cards, and the other three claimed cards plus the plundered card have dropped off between the 02:21 and 05:17 reads. The refresh cycle for new own tasks after a batch is claimed stays an open question; the next secrets unit re-checks.) (2026-11-09 1456 update: the 1456 unit re-confirmed the same 4 PERFECT cards at about 14:51, still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays open.) (2026-11-09 1748 update: the zero-sweep's incidental Secret Mobile Squad read at about 17:40 still shows the same 4 SSR cards all PERFECT, Assist Allies 5/5, Plunder Others 0/3 on that panel; still no new own tasks since the 22:49 claim on 2026-11-08.) (2026-11-09 2211 update: ANSWERED - a fresh batch of 9 tasks appeared between the 14:51 check and 22:03, so new own tasks arrive after the daily reset. The record attributes the refresh to the 19:00 reset, but that instant is not separately verified - the about-18:00 rollover (Issue #242) is also inside the window, and no reset instant was measured for the post.)
+- What the orange hexagon badge on a claimed secret-task row means: the 2026-11-10 0218 unit found the Provide Tech Support row carrying an orange hexagon badge instead of a gold PERFECT stamp after the claim-all; its Claim button is gone like the others, so it is claimed. Possibly the ally-assisted claim mark. (Added 2026-11-10 0218.)
 - Whether the remaining 90% of a plundered task's rewards reaches the
   account: the 2026-11-08 2253 unit found SR Retrieve Valuable
   Supplies plundered at 10% by [BZGR]FredoSauce at 19:40 (chest x1,
@@ -1449,3 +1451,20 @@ secrets-2026-10-31-2257, status partial).
 - Reward Recovery panel was not re-opened in this unit (the 1456 record asked the next unit to re-check it); the Record button opened the Secret Task Report (Assist log) instead, which confirmed the five assists above. The next secrets unit re-checks Reward Recovery via the Recover button.
 - Plunder Others 0/5, untouched (PvP, needs owner instruction). No diamonds or money spent. No speedups burned. No paid button tapped.
 - Result stats: target 3, achieved 3 (assists 5/5 verified at cap, deploy of 9 verified running, claim state verified with nothing pending), resources_gained Mystery Supply Box x30, Hero EXP 2064000, Refined Iron Module x192, chest x25, 5m Speed-up x5, 324.9K x2, costs 9m_wall_no_stamina, verified yes, blocker_category none, assists_done 5, tasks_deployed 9, ur_tasks_deployed 2, device_takeovers 0, follow_up reward-recovery re-check.
+
+## What the 2026-11-10 0218 unit added - all 9 tasks claimed in one tap, PERFECT stamps, orange hexagon badge on one row, recovery re-checked closed
+
+- Unit secrets-2026-11-09-2257 by ticker-0204, about 02:15 to 02:18 local, status done. Evidence in `_records_/2026-11-10/secret-missions/0218-queue-run.md` (commit 069a94c7a on records/2026-11-10). Computer session cc-378 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified.
+- Ally assists already at cap: Assist Allies 5/5 for this reset day (done 22:03 to 22:11 on 2026-11-09 by ticker-2148). Nothing to assist in this unit.
+- All 9 tasks dispatched at 22:06 on 2026-11-09 were finished. One Claim tap on UR Rescue Test Subject collected all 9 at once, as the metadata promises. Headline rewards on the CONGRATULATIONS popup: Refined Iron Module 1.8K, UR Hero Universal Shard x1, Treasure Map Fragment #3 x1. A toast read "...n the treasure map - congrats!" (a Treasure Map completed from fragments). Per-card reward tiles read live before the claim: Rescue Test Subject (fragment x5, chest x57, 12.3M, puzzle x1, 2.4K), Disrupt electric grid (fragment x2, chest x57, 4.1M, 3.2M, 3.2M), Provide Tech Support to Refugees (fragment x1, chest x37, 2.4M, 290, chest x5), Protect Refugee Camp (fragment x1, chest x37, 2.4M, 1.9M, 1.9M), plus the five 30-minute SR tasks below the scroll.
+- Claim verified live after closing the report: the cards are stamped PERFECT in gold and the Your Tasks badge cleared. One exception in appearance: the Provide Tech Support row shows an orange hexagon badge instead of a gold PERFECT stamp. Its Claim button is gone like the others, so it is claimed; the badge meaning is unexplained - possibly the ally-assisted claim mark - and is noted, not counted. See the updated Open questions entry.
+- Secret Task Report: [ENJY] commander 1e6c22113 "Plundered your task rewards" twice at 11-9 23:09 (chest x3, 29, 247.7K EXP; chest x3, 195.0K, 195.0K, 247.7K EXP) - another player took part of the finished task rewards before this claim. [AP3x]MesutCLK Apex "helped you claim task rewards" at 11-10 02:08. Like All tapped; the MesutCLK row now shows a blue thumbs-up.
+- No new pending tasks: Your Tasks holds only the 9 claimed cards. New tasks appear after the daily reset (2211 record; the 0218 record cites a 19:00 reset, but that instant is not separately verified - the about-18:00 rollover is also inside the window), so Mega Deploy was not used - nothing to deploy - and Mega Refresh was not used - its cost is still unobserved and there was no pending batch to roll.
+- Reward Recovery re-checked (the follow-up the 2211 record left open): the newest record, 2026-11-6 18:00, reads 8 unstarted tasks completed by the system and is already CLAIMED; the older 2026-10-24 19:00 record sits below it. Nothing new to claim; the follow-up is closed.
+- Hidden Treasures tab carries a red 1 badge - a new treasure item, likely the completed Treasure Map. That is the hidden-treasures unit's work; not touched here.
+- Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Live reads: base screen after the claim - steel 922.5M to 930.4M (claim payout visible in the top bar); Total Power 146,751,949, unchanged.
+- The two UR tasks are now complete; the duel total re-read belongs to the duel-score unit (02:30 cycle pending in the inbox).
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (claim of 9 verified, assists at cap verified, recovery re-checked), resources_gained Refined Iron Module 1.8K, UR Hero Universal Shard x1, Treasure Map Fragment #3 x1, steel +7.9M, costs 3m_wall_no_stamina, verified yes, blocker_category none, assists_done 0, tasks_claimed 9, tasks_deployed 0, ur_tasks_claimed 2, device_takeovers 0, follow_up hidden-treasures badge 1 for the treasures unit.

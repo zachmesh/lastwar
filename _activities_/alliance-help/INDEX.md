@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T06:47:13Z
+modified: 2026-11-10T10:40:33Z
 level: L1
-version: 1.35.0
+version: 1.36.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -37,6 +37,7 @@ grounded_in:
   - source: ticker-0404 alliance-help execution record 2026-11-09 0419 queue run (done, Help All cleared one ally request, header 520/1,000 unchanged at close; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-1004 alliance-help execution record 2026-11-09 1019 queue run (partial, Alliance button unresponsive to background clicks in fullscreen, six taps in four variants, duplicate LastWar window 508052, Help All not reached, red dot waiting; record commit 09e4f0863 on records/2026-11-09)
   - source: ticker-1822 alliance-help execution record 2026-11-09 1846 queue run (done, bubble plus Help All cleared 2 ally requests, header 140 of 1000 unchanged; record commit 6761c35d1 on records/2026-11-09)
+  - source: ticker-0134 alliance-help execution record 2026-11-10 0140 queue run (done, bubble tile no-change, Help All via panel, header 420 to 720 after close/reopen; record commit e3d186a38 on records/2026-11-10)
 ---
 
 
@@ -893,7 +894,7 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Help page opened at norm 685,515. Header read live: "Today's points gained from Alliance Help: 520/1,000".
 - Rows before Help All: three own requests, all already 30/30 - Bears Lair, Missile Mastery II research; Bears Lair, Defense Training VIII research; Bears Lair, building Lv.30 Aircraft Center - and one ally request: 꿀밤Bamie, Oil Output I research.
 - Help All tapped at norm 495,765. The toast read live: "Allies are very grateful for your assistance!"
-- Closing read: the ally row is gone; the three own rows now read reduced-time displays - Missile Mastery II "Time reduced: 18:00:22", Defense Training VIII "Time reduced: 10:02:00", Lv.30 Aircraft Center "Time reduced: 3d 23:58:04". The header still read 520/1,000 at the closing read, so no points increase is claimed - the single cleared ally request is the verified outcome. This matches the standing pattern across the 0836, 0308, 0710, 0837 and 0100 units (header unchanged in-session); the 2214 unit is the exception where the header moved 100 to 360. (1846 update: a sixth in-session-unchanged datapoint - header 140/1,000 after the bubble press plus Help All cleared two ally requests.)
+- Closing read: the ally row is gone; the three own rows now read reduced-time displays - Missile Mastery II "Time reduced: 18:00:22", Defense Training VIII "Time reduced: 10:02:00", Lv.30 Aircraft Center "Time reduced: 3d 23:58:04". The header still read 520/1,000 at the closing read, so no points increase is claimed - the single cleared ally request is the verified outcome. This matches the standing pattern across the 0836, 0308, 0710, 0837 and 0100 units (header unchanged in-session); the 2214 unit is the exception where the header moved 100 to 360. (1846 update: a sixth in-session-unchanged datapoint - header 140/1,000 after the bubble press plus Help All cleared two ally requests.) (0140 update: a seventh in-session-unchanged datapoint - header 420/1,000 in the same dialog instance after Help All cleared two ally requests; after close/reopen it read 720/1,000, +300 for the two helps, the first measured per-help rate of 150 points. The counter-lag resolution stands: closing figures must be read after a page reopen.)
 - Help dialog closed with its X; back arrow returned the game to the base screen. The game was left on the base screen. No diamonds or money spent, no other unit's work touched, Assemble not opened.
 - Result stats: target 1, achieved 1, resources_gained none, points 0, costs 2m_wall_no_stamina, verified yes, helps_cleared 1, device_takeovers 0.
 
@@ -928,3 +929,13 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Header movement across the day: 140/1,000 at the 1846 unit (about 18:46) to 420/1,000 here (about 21:22) - the header moves between units as helps accumulate; the in-session-unchanged pattern from the 1846 unit stands for within-unit reads.
 - No diamonds or money spent. No other unit's work touched.
 - Result stats: target 1, achieved 1, resources_gained waiting ally help requests cleared via base bubble; Help page verified only own two requests remain, costs about 3 minutes of unit time, no items spent, verified yes, points 0.
+
+## What the 2026-11-10 0140 unit added - bubble tile no-change, Help All via panel, header 420 to 720 after close/reopen, seventh in-session-unchanged datapoint
+
+- Unit help-2026-11-09-2230 by ticker-0134, 01:40 to 01:42 local, status done. Evidence in `_records_/2026-11-10/alliance-help/0140-queue-run.md` (commit e3d186a38 on records/2026-11-10). Computer session cc-373 on the owner Mac mini.
+- Base-screen help bubble: two taps at the yellow tile left of the Alliance button produced no change (background input does not reach that tile in this session). Per R2 the method was abandoned after the second no-change tap; the Alliance panel route was used instead. The bubble tile's exact active point is still ungrounded - it may not be the help tile at all, or its tap point differs from the tile centre. This REFINES the 2124 section: the (833,724) point that worked at 21:22 did not work here, so the tile's active point drifts per session and must be re-grounded fresh, never reused; the Alliance panel route is the standing fallback when the bubble does not answer.
+- Alliance panel: Help button carried a red dot; Alliance Gifts no longer did (gifts claimed earlier this pass).
+- Help dialog at entry: Today's points gained from Alliance Help 420/1,000. Rows: Bears Lair (own) Missile Mastery II research 30/30, Bears Lair (own) Lv.30 Aircraft Center 30/30, Roronoa zo Lv.27 Oil Well, Dogo Oil Output I research.
+- Help All pressed. The two ally rows disappeared from the list; only the two own 30/30 rows remained. The points counter still read 420/1,000 in the same dialog instance - the seventh in-session-unchanged datapoint (see the updated pattern note in the 0419 section; the counter-lag resolution stands).
+- Dialog closed and reopened: points now read 720/1,000 (+300 for the two helps, the first measured per-help rate of 150 points per help), list still only the two own 30/30 rows. No ally requests waiting.
+- Outcome: Help All pressed once, 2 ally helps delivered (Roronoa zo Oil Well, Dogo Oil Output I). Today's help points 420 to 720 of 1,000, read live after a close/reopen re-read. Returned to the base screen. No diamonds or money spent. No other unit's work touched.

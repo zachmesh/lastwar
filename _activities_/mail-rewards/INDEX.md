@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T06:47:13Z
+modified: 2026-11-10T10:40:33Z
 level: L1
-version: 1.32.0
+version: 1.33.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -38,6 +38,7 @@ grounded_in:
   - source: ticker-1004 mail-rewards execution record 2026-11-09 1031 queue run (partial, Event and Alliance Claim All both "No rewards available", six train mails carry no attachments, Battle Report/System/Regular not walked, Mail entry (932,791) windowed first try; record commit 09e4f0863 on records/2026-11-09)
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, Mail red dot standing, three categories unopened; record commit c9a86fa74 on records/2026-11-09)
   - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, 9 reward mails claimed, Alliance Event System Claim All, leadership transfer to Abyss Apex, Issue 230 entry datapoint, power 146736949; record commit 6761c35d1 on records/2026-11-09)
+  - source: ticker-0134 mail-rewards execution record 2026-11-10 0143 queue run (done, Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed; record commit e3d186a38 on records/2026-11-10)
 ---
 
 
@@ -921,3 +922,16 @@ the next tick re-produces this regular as a fresh unit.
 - System: Claim All pressed, no change - notices only (Season Closed, President Mail, Server 2110 notice, Maintenance Complete). Regular: Claim All pressed, no change - Victory battle reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Battle Report: Claim All pressed, no change - 6 Victory reports vs Lv.15-20 Zombie Horde (3h ago), reports only.
 - No mail deleted anywhere; Delete All never touched. Returned to the base screen.
 - Result stats: target 1, achieved 1, resources_gained Event "Weekly Pass" Unclaimed Rewards mail - red gem x10, white crystal x4 (as shown on the REWARD CLAIMED popup), costs about 4 minutes of unit time, no items spent, verified yes, points 0.
+
+## What the 2026-11-10 0143 unit added - Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed, session drop recovered
+
+- Unit mail-2026-11-09-2230 by ticker-0134, 01:43 to 01:46 local, status done. Evidence in `_records_/2026-11-10/mail-rewards/0143-queue-run.md` (commit e3d186a38 on records/2026-11-10). Computer session cc-373 dropped mid-unit (observe returned observation_unavailable); session cc-374 started and LastWar re-selected, no game state lost - a further Issue #282 device-channel datapoint; commented on #282 by this run.
+- Mail category list at entry: red dots on Alliance, Event and In-app Purchases.
+- Alliance: six "New Alliance Assembly Point" mails, all 1h ago. Claim All answered "No rewards available."
+- Event: three unread notices ([AP3x] KaBoom420's train, [AP3x] Abyss Apex's Mega Exp..., second train mail) plus three read mails ("Weekly Pass" Unclaimed Rewards 6h ago, Duel Progress Alliance Duel Individual Reward 7h ago, Daily Participation Rewards 7h ago). Claim All marked the three unread mails read and showed no reward summary. The "Weekly Pass" mail was opened to verify: its two reward icons (red gem x10, grey item x4) both carry green checkmarks, dated 2026-11-9 18:47:54 - already claimed, no claim button. This corroborates the 18:47 pass claims (shop-claims 1850); the Duel Progress mail at about 18:43 (7h before 01:43) is consistent with the about-18:00 duel rollover (Issue #242). One tap on that mail row first returned a spurious "target app exited" error; the next observe showed the mail open normally - the app never exited. A spurious exit error on a mail-row tap is recorded here: re-observe before acting on it.
+- System: "Season Closed", President Mails, "Maintenance Complete". Claim All answered "No rewards available."
+- Regular: victory reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Claim All answered "No rewards available."
+- Battle Report: Zombie Horde victory reports Lv.15 to Lv.20, 7 to 8h ago. Claim All answered "No rewards available."
+- In-app Purchases (receipts only) and Favorite were not opened; no claimable attachments live there per the activity metadata.
+- Delete All was never pressed; the per-mail trash button in the Weekly Pass detail was not pressed either.
+- Outcome: no claimable mail rewards in any category this round. Nothing claimed, nothing deleted. Returned to the base screen. No diamonds or money spent.

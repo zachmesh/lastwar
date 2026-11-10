@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T06:47:13Z
+modified: 2026-11-10T10:40:33Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: ticker-2201 alliance-train execution record 2026-11-08 2211 queue run (partial, checked only, both preparation signals absent, no train preparing; record commit 8960535c on records/2026-11-08)
   - source: ticker-0204 alliance-train execution record 2026-11-09 0215 queue run (partial, checked only, both preparation signals absent, banner-only check, 37 seconds; record commit facef628c on records/2026-11-09)
   - source: ticker-0404 alliance-train execution record 2026-11-09 0421 queue run (partial, checked only, no train in preparation, both preparation signals absent; record commit 9fdcc4c9ee on records/2026-11-09)
+  - source: ticker-0134 alliance-train execution record 2026-11-10 0147 queue run (done, boarded carriage 2 of the Abyss Apex train, 3-contract gift missed on the cinematic skip double-tap; record commit e3d186a38 on records/2026-11-10)
 ---
 
 # Alliance train
@@ -136,6 +137,7 @@ literal train, so both readings of the request are in the system.
   choice is made in the boarding moment or not at all, so
   verify the carriage on the platform BEFORE tapping its plus
   whenever the entry path allows it.
+- Cinematic skip rule, learned 2026-11-10 0147 - tapping a carriage plus opens a train cinematic ("Tap the screen twice to skip"); skip it with a SINGLE tap followed by a fresh observation, never a blind double-tap at screen centre. The 0147 unit's second tap landed on carriage 2's plus at the platform centre and opened the THANK THE CONDUCTOR dialog before the carriage was verified; closing it without gifting lost the standing 3-Trade-Contract ticket for that ride, because the dialog does not reopen. A gift dialog opened on an unverified carriage loses the gift either way - close without gifting, or gift blind - so the only safe path is the single-tap skip.
 - After the ride, the carriage reward arrives as an Event category
   mail titled Train arrival reward, with a Claim button on the mail.
   Claim it there - the reward does not credit silently. Claiming
@@ -1121,3 +1123,16 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Trade Count 0/5 read at 21:30 corroborates the about-18:00 trade reset (Issue #242 follow-up): the trade day restarted about 18:00 and no dispatch had been made in the new trade day by 21:30.
 - No train is preparing, so per the activity metadata the unit closes partial without panning the base edge, and the next train unit re-checks the two signals.
 - Result stats: target 1, achieved 0, resources_gained none, costs about 6 minutes of unit time (including the entry re-grounding), no items spent, verified yes, points 0, blocker_category h.
+
+## What the 2026-11-10 0147 unit added - boarded carriage 2 of the Abyss Apex train, 3-contract gift missed on the cinematic skip double-tap
+
+- Unit train-2026-11-09-2230 by ticker-0134, 01:47 to 01:51 local, status done (boarded; gift missed - deviation recorded). Evidence in `_records_/2026-11-10/alliance-train/0147-queue-run.md` (commit e3d186a38 on records/2026-11-10). Computer session cc-374 on the owner Mac mini.
+- Base screen: no "Boarding closes in" banner under the resource bar. The left icon column carries a locomotive train icon (verified by enlarged crop).
+- Tapped the train icon: camera panned to the station. A yellow train stands at the platform, conductor Abyss Apex, countdown 00:51:42 to departure, carriage "+" bubbles visible. This is the positive counterpart to the 2133 grounding mislabel: the left-column locomotive icon IS the train entry when present, distinct from the Trucks circle (blue circle, white vehicle front, red dot). Commented on Issue #205 by this run.
+- Tapped a carriage "+" bubble: a train cinematic opened ("Tap the screen twice to skip"). Double-tapped to skip; the second tap landed at the platform screen centre and opened the THANK THE CONDUCTOR dialog (Trade Contracts owned 158, quantity slider at 1, Like & Thank and Gift Contract buttons).
+- The dialog had opened on an unverified carriage, so it was closed via X without gifting, to read the platform first (standing rule: verify the carriage before tapping its plus). The first X tap did not close it; a second, precisely grounded X tap did.
+- Platform read after the close: countdown 00:50:25, Train Rating 83,450, conductor Abyss Apex. Carriages top to bottom: 1 at 5/7 with "+", 2 at 5/7 with the own avatar in place of "+", 3 at 8/7 with "+", 4 at 15/7 with "+". Carriage 2 reward set: 2.5K badge x1, 100 badge x1, red gem x1, chest x20, blue chest x50, blue item 2.0K.
+- The own avatar (night-sky profile picture, matching the base top-left avatar) sitting in carriage 2 proves the account is aboard carriage 2: the blind second tap of the skip double-tap had landed on carriage 2's "+" (the platform centre), which is the standing-rule carriage, and the "+" tap itself takes the seat.
+- DEVIATION - gift missed: the seat was taken by the "+" tap, but the THANK THE CONDUCTOR dialog was closed without gifting, so the standing 3 Trade Contract ticket was NOT given. The dialog does not reopen once closed (learned 2026-10-27), so the gift step cannot be redone for this ride. Trade Contracts remain 158; none spent. The seat is held and the carriage 2 reward will still arrive as an Event mail ("Train arrival reward") after departure in about 50 minutes.
+- LESSON (new standing rule, see "How it is done"): the cinematic skip must be a single tap followed by a fresh observation, never a blind double-tap at screen centre - the second tap can land on a carriage "+" and open the gift dialog before the carriage is verified.
+- Outcome: boarded carriage 2 of the Abyss Apex train (departure in about 50 minutes from the platform read). 0 of 3 Trade Contracts gifted - deviation recorded above. Returned from the platform to the station view. No diamonds or money spent.
