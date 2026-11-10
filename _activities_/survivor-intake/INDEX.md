@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-10T01:46:47Z
-version: 1.44.0
+modified: 2026-11-10T05:41:57Z
+version: 1.45.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-0904 survivor-intake execution record 2026-11-09 0926 queue run (partial, gate line of 2 verified live, one intake confirmed by smiley bubble, second survivor unverified, Quick Dispatch not run, gate panning and chat-bar look-alike lessons; record commit 3c788a4a3 on records/2026-11-09)
   - source: ticker-1234 survivor-intake execution record 2026-11-09 1301 queue run (partial, gate inspected from the right-edge pan, no survivor line found, 0 recruits; record commit da81e137e on records/2026-11-09)
   - source: ticker-1704 survivor-intake execution record 2026-11-09 1729 queue run (partial, gate line not verified, banner hitbox covers the figure strip, R2 third-strike persists; record commit 9806b8352 on records/2026-11-09)
+  - source: ticker-2040 survivor-intake execution record 2026-11-09 2055 queue run (partial, gate line cleared live with one grounded bubble tap, R2 third-strike blocker broken, Quick Dispatch deferred per R7; record commit ca96fa0c9 on records/2026-11-09)
 ---
 
 
@@ -160,7 +161,7 @@ Measured on 2026-10-25.
   before any tap, and closes unverified with a named re-read
   unit if the line cannot be verified, instead of closing on a
   presumed line state.
-- Follow-up carried from the 2000 unit (2026-11-07): with a line verified and processed, Quick Dispatch is the first action of the next survivors unit (rule R7) - open a building panel and run it, so the newcomers are posted. The third-strike blocker persists until a unit runs it.
+- Follow-up carried from the 2000 unit (2026-11-07): with a line verified and processed, Quick Dispatch is the first action of the next survivors unit (rule R7) - open a building panel and run it, so the newcomers are posted. The third-strike blocker persists until a unit runs it. (Update 2026-11-09 2055: BROKEN - the 2055 unit verified the gate line live and cleared it with one grounded bubble tap; see the 2055 section below. The blocker no longer stands. Quick Dispatch is now the first action of the next survivors unit per rule R7, for the 2055 newcomer.)
 - Update 2026-11-09 1301: the gate re-check the 0926 unit ordered found no line - panned to the right edge, inspected the gate area on a cropped enlargement, no survivor figures and no question-mark bubbles at the gate, on the road out, or in the plaza. The second survivor of the 0926 line is therefore not waiting at the gate at this read; whether it walked to its post or the line state changed another way is unverified. 0 recruits, Quick Dispatch did not run (no intake happened in this unit). The gate-line state remains unverified in the activity's sense - an empty gate is recorded as seen, not presumed to mean the line is clear and done - so the unit closes partial and the tracker is left untouched. This matches the 2026-11-08 22:18 unit, which also found no line at the gate.
 
 ## What the 2026-11-01 early unit added
@@ -979,6 +980,8 @@ Measured on 2026-10-25.
 
 ## Changelog
 
+- 1.45.0 (2026-11-09): 2055 survivors unit folded (partial, gate line cleared live - two "?" bubbles at the gate, one tap at the visually grounded bubble point (233,832) above the banner strip took the survivor in, 0 "?" bubbles at the gate after; R2 third-strike blocker from the 1403 unit BROKEN - the changed method was a fresh visual grounding of the bubble itself plus a tap above the banner strip instead of a tap on a figure inside the banner strip; one "?" bubble remains in the frame at (771,687) over a building on the right side, not at the gate; supplies dialog line seen, matching a dialog survivor walking in, not a Recruit card; Quick Dispatch deferred per rule R7 - token expired 21:03, first action of the next survivors unit).
+
 - 1.44.0 (2026-11-09): 1729 survivors unit folded (partial, verified no): gate line not verified - two '?' bubbles stand but no survivor figure confirmed; figure tap 1 no-change, fullscreen zoom tried, figure tap 2 opened the Build menu - the 'Build: Oil Well' banner hitbox covers the figure strip, new binding constraint (next unit finds a camera angle putting the gate figures clear of the banner before tapping); bubble tap no-change; R2 tap method ended after the second no-change tap; same failure mode as the 2026-10-28 to 2026-10-31 22-of-22 partial run, R2 third-strike blocker persists; re-read unit survivors-2026-11-09-1803 named; Quick Dispatch for the 0926 newcomer still owed; HUD food 556.6M, iron 881.6M, coin 53.6M, diamonds 6,137, stamina 96.
 
 - 1.30.0 (2026-11-05): 0504 survivors unit folded (failed, thirty-third consecutive screen-capture failure, one cheap probe per mac_capture_probe.py in cc-521, no game screen read, no input dispatched, tracker untouched); probe classification OFF_SCREEN_WINDOW high confidence, View-menu inspect the only missing probe step (stale_observation), Chrome observes normally in the same session, recovery still the owner Dock-icon click or mac_lastwar_front.sh; the 1122 close stands as the last live read, its follow-up still waits on the window returning to the active Space; thirty-third occurrence commented onto Issue #282 by this run.
@@ -1578,3 +1581,12 @@ Measured on 2026-10-25.
 - Quick Dispatch for the 0926 newcomer is still owed - it runs when a newcomer with a known building post is verified (carried from the 1301 follow-up).
 - No diamonds or money spent. No build started. No other activity's work touched. The Build menu was opened by a mis-tap and closed untouched.
 - Result stats: target 1, achieved 0, resources_gained none, costs 0 stamina plus about 10 minutes, verified no, blocker_category e (repeated blocker - gate line not verified, same failure mode as the 2026-10-28 to 2026-10-31 run), survivors_recruited 0, line_verified no, quick_dispatch_run no, device_takeovers 0.
+
+## What the 2026-11-09 2055 unit added - gate line cleared live, R2 third-strike blocker broken, Quick Dispatch deferred (R7), partial
+
+- Unit survivors-2026-11-09-1803 by ticker-2040, about 20:48 to 20:55 local, status partial. Evidence in `_records_/2026-11-09/survivor-intake/2055-queue-run.md` (commit ca96fa0c9 on records/2026-11-09). Computer session cc-343 on the owner Mac mini, LastWar already frontmost, base screen.
+- Gate line verified live: before the tap, two "?" bubbles stood at the front gate above the "Build: Oil Well [0/1]" banner; one tap at the visually grounded bubble point (233,832) - above the banner strip, not inside it - took the survivor in. Post-tap screenshot: no "?" bubble remains at the gate (visual grounding count on the post-tap screenshot found 1 "?" bubble in the whole frame, at (771,687), over a building on the right side, not at the gate). Chat showed a supplies dialog line ("...g supplies, ...depart again"), matching a dialog survivor speaking a line and walking in, not a Recruit card.
+- This BREAKS the R2 third-strike blocker from unit 1403 the same day (gate line not verified, figure tap no-op, fullscreen tap opened the Build menu): the changed method was a fresh visual grounding of the bubble itself plus a tap above the banner strip instead of a tap on a figure inside the banner strip. The 1729 section's "R2 third-strike blocker persists" and the standing-blocker section's "persists until a unit runs it" are superseded as of this unit - the blocker no longer stands, and the 22-of-22 partial run of 2026-10-28 to 2026-10-31 is closed as a failure mode by this live clear.
+- Quick Dispatch not run: the token expired at 21:03 PT and the pass budget did not allow a safe building-panel navigation (no grounded Iron Mine or Farmland panel point in this unit). Per queue rule R7, Quick Dispatch is the first action of the next survivors unit - open a building panel and run it, so the 2055 newcomer is posted.
+- No diamonds or money spent. No card opened, nothing bought, nothing deleted.
+- Result stats: target clear the gate line, achieved line cleared (0 "?" bubbles at the gate, live read), resources gained 1 dialog survivor taken in (name not captured), verified yes.

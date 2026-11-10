@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T04:50:04Z
+modified: 2026-11-10T05:41:57Z
 level: L1
-version: 1.64.0
+version: 1.65.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -66,6 +66,7 @@ grounded_in:
   - source: ticker-1704 radar-tasks execution record 2026-11-09 1717 queue run (partial, release day 1, ordinary cycle clear, 1244 pin set absent, restore lands 12 tasks about 1740, R6 successor enqueued; record commit 9806b8352 on records/2026-11-09)
   - source: ticker-1734 radar-tasks execution record 2026-11-09 1754 queue run (partial, release day 1, restored batch of 12 claimed before the 18:00 roll, points 336 to 348, stored 0/40, dish re-grounded (47,694) first tap; record commit 2f4d783d8 on records/2026-11-09)
   - source: ticker-1910 radar-tasks execution record 2026-11-09 1945 queue run (done, stack posture, dish re-grounded (57,714) first tap, points 348, stored 0/40, restore about 23:39, pins inventoried none standing; record commit e05c662bd on records/2026-11-09)
+  - source: 2026-11-09 daily retro, execution-knowledge action A-2026-11-09-02 (Issue #484, closed by the retro): fresh-ground the dish from the current base screenshot every unit; the (50,740) preference is superseded
 ---
 
 
@@ -131,13 +132,7 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
   mislabelled the truck icon as the dish. Ground the dish
   below the truck icon and verify the radar screen (level,
   stored count, stamina) before any work.
-- PREFERRED FIRST TAP, retro action A-2026-11-08-01 (2026-11-08
-  daily retro, Issue #484): norm (50,740), which opened the radar
-  on the first tap at 13:53 on 2026-11-08 (1355 unit). The (54,583)
-  and (54,780) points failed at 20:15 the same day (2028 unit) -
-  (54,583) opened Intercity Trade, (54,780) opened BUILD - and are
-  not dish points; never reuse them. If the preferred point fails,
-  re-ground the dish from a fresh base screenshot.
+- PREFERRED FIRST TAP, SUPERSEDED 2026-11-09 (retro action A-2026-11-09-02, 2026-11-09 daily retro, Issue #484, closed by the retro): the (50,740) preference from A-2026-11-08-01 is retired - no point is preferred as the first tap; fresh-ground the dish from the current base screenshot every unit. The (50,740) point remains a verified historical first-tap point (1355 unit, 2026-11-08 13:53) but is not the first try. The (54,583) and (54,780) points failed at 20:15 on 2026-11-08 (2028 unit) - (54,583) opened Intercity Trade, (54,780) opened BUILD - and are not dish points; never reuse them. Verification: the next radar unit enters first tap on a freshly grounded point; recheck 2026-11-10 retro.
 - 2026-11-08 2335: first tap at norm (59,687), estimated from the
   fresh screenshot, missed the dish and only showed a transient
   "Achievements 8/16 Completed" tooltip. Re-grounded from a
@@ -1502,6 +1497,8 @@ are still open, per the protocol.
   superseded in place by this close inventory, not erased.
 
 ## Changelog
+
+- 1.65.0, 2026-11-09 - retro action A-2026-11-09-02 applied (Issue #484, closed by the retro): the (50,740) first-tap preference is retired - no point is preferred, fresh-ground the dish from the current base screenshot every unit; the (50,740) point stays a verified historical first-tap point (1355 unit, 2026-11-08 13:53), the (54,583) and (54,780) points are still never to be reused. No new radar unit ran this hour. (1.63.0 and 1.64.0 carry the 1754 and 1945 sections without changelog lines; the numbering is preserved, not rewritten.)
 
 - 1.62.0, 2026-11-09 - 1717 unit folded (partial, release day 1): dish grounded fresh (62,727) first tap again, re-confirmed in this window, commented on Issue #484; ordinary cycle already clear (stored 0/40, pending 0, bar gone); the 1244 pin set (at least 6 distinct pins) is ABSENT about 4.5 hours later, mechanism unverified - pins expire or despawn, new open question; the 0335 Rare Iron Mine gathering claim carry closes as UNVERIFIABLE, not done (pin gone, 720K landing never attributed); brown animal-face circle is NOT a pin - three grounded taps, no card, non-tappable map element; Violet's Gift toast unmeasured (points 336 unchanged); gold NEW! icon fourth sighting, still untouched; restore lands 12 tasks about 17:40 PT, R6 successor radar-2026-11-10-0118 enqueued for the pre-roll claim window 17:40-18:00 (12 tasks about 360,000 duel points at 30,000 each, inference only); points 336, stamina 93 to 94, restore 12 tasks in 00:23:37 at close; duel delta test still owed.
 
