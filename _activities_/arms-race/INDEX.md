@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T13:32:17Z
+modified: 2026-11-10T15:32:17Z
 level: L1
-version: 1.76.0
+version: 1.77.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -82,6 +82,7 @@ grounded_in:
   - source: ticker-0204 event-claims execution record 2026-11-10 0221 queue run (partial, Arms Race Base Building phase cross-read, timer 03:40:14, score 0, cumulative 0/2; record commit 069a94c7a on records/2026-11-10)
   - source: ticker-0334 arms-race execution record 2026-11-10 0342 queue run (skipped-needs-owner, Base Building phase judged at phase start, score 0 of 30,000, R4; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0504 event-claims execution record 2026-11-10 0519 queue run (done, Arms Race Base Building cross-read, timer 00:44:05, score 0, cumulative 0/2; record commit 19608e2c9e on records/2026-11-10)
+  - source: ticker-0704 arms-race execution record 2026-11-10 0734 queue run (partial, first unit of the Drone Boost phase, ends about 10:06, score 0, tier-3 plan 300 stamina via 15 Doom Elite kills, stamina credit to verify live; record commit d808b384b on records/2026-11-10)
 ---
 
 
@@ -2185,3 +2186,16 @@ slot. Evidence in
 - Cross-read inside the events unit events-2026-11-10-0257 by ticker-0504, about 05:15 to 05:19 local (the events unit closed done). Evidence in `_records_/2026-11-10/event-claims/0519-queue-run.md` (commit 19608e2c9e on records/2026-11-10). This is a read-only cross-read, not an arms-race unit; no phase action was taken.
 - Arms Race page (Base Building phase): timer 00:44:05 left at entry, score 0, point chests at 6,250 / 12,500 / 30,000 all locked. Cumulative chest at top left reads 0/2 (not full, not claimable). Rank #2110 [AP3x]Bears Lair. The phase ends about 06:00, consistent with the 0342 judgement; the R4 skipped-needs-owner judgement stands - the target is unreachable inside the red lines and the phase is not re-judged.
 - No Arms Race grinding was done in this unit. No diamonds or money spent.
+
+## What the 2026-11-10 0734 unit added - Drone Boost phase judged at phase start, score 0 of 30,000, tier-3 plan 300 stamina
+
+- Unit arms-race-2026-11-10-0603 by ticker-0704, about 07:26 to 07:34 local, status partial. First unit inside this phase, so judged under R4 at the phase start. Evidence in `_records_/2026-11-10/arms-race/0734-queue-run.md` (commit d808b384b on records/2026-11-10). Tracker untouched, so the next tick re-produces this regular.
+- Phase: Drone Boost. Timer 02:33:14 left at the 07:33 read, so the phase ends about 10:06 PT. The previous Base Building phase ended about 06:01 (the 0221 cross-read timer 03:40:14). This is a new phase instance, not a continuation of the 2026-11-02 or 2026-11-03 Drone Boost phases - those phases' outcomes do not carry into this one. Score 0. Point chests: 1,500 (2,360 rubies), 10,000 (4,800), 30,000 (11,800) - all locked, none earned. Cumulative counter chest top left: 0/2, locked.
+- Scoring rows, read live: Use 10 Drone Battle Data points +1; Use 1 Stamina +100; Buy Packs containing Diamonds (1 Diamond) +30 - red-lined, never used.
+- Ranking row: #2110 [AP3x]Bears Lair, position 9 in the segment, bar reading 90,500 (displayed figure, meaning unverified - it is not the phase score, which is 0). The row above is #2110 [AP3x]Awesome v2. The ranking-row figure is the lagging previous-phase display, the same lag documented 2026-10-26 and in the 0006 and 0342 units.
+- Just-enough plan (tier 3 = 30,000): Drone Battle Data path, +1 per 10 data, so 300,000 data for tier 3 - effectively unreachable; not the plan. Stamina path, +100 per stamina, so 300 stamina for tier 3. Reachable in principle: stamina 120 on hand, plus the Free Claim and the 10/50 stamina items in the hundreds under the 2026-10-28 stamina refill rule. The verified instance of the credit is a Doom Elite kill at 20 stamina for +2,000 (2026-11-03 0609 unit); 15 such kills make tier 3. Whether every stamina use credits (not just kills) is unverified - the next unit must verify the +100 per stamina credit live on its first scoring action. This is the phase's R4 verdict: tier 3 is reachable inside the red lines via the stamina path, so this phase is NOT skipped-needs-owner (contrast the 0006 Tech Research and 0342 Base Building judgements); the scoring work falls to the following units inside the phase window (ends about 10:06).
+- Candidate targets: the 4 skull pins inventoried on the radar map by the 0727 radar unit of this pass (blue, orange, teal, green, all red-dotted). Their class is unverified - they may be Doom Elites, or finished-task pins that would claim instantly on tap and leak a radar claim onto duel day 2 (stack day). The next unit must identify a pin's card before attacking; never tap a skull pin blind on a stack day.
+- What was done: phase, score, thresholds and scoring paths read live; the plan above is set for the following units. No scoring action was taken in this unit: no safe in-scope stamina use was available inside the remaining minutes (radar Quick Execute is blocked by the Claim All-only bar, truck work belongs to the trucks unit, training queues cost no stamina), and a speculative skull-pin attack risked a stack-day claim leak. No chest earned, so nothing claimed. Completion sweep: the Arms Race page shows no bouncing chest and no reward red dot; the three point chests and the cumulative 0/2 chest are locked, and the ranking-row chest is the phase ranking reward, claimable only after the phase ends - the first run after the phase ends checks it.
+- Events hub tab bar re-checked on the way in: Arms Race, Desert Battlefield, Wanted Boss, Survey Center - no Zombie Invasion tab, so the event is still ended and no zombie chain is seeded. Desert Storm Battlefield registration ends in 1d 10:33:44, battle 2026-11-13 03:00-03:30, 20/20 participants (same figures as the 0519 read; no new information, Issue #550 unchanged).
+- No diamonds or money spent. No diamond pack tapped. No speedup burned. No research or building started. No stage swapped. No radar pin tapped from this unit. The game was left on the Arms Race page.
+- Result stats: target 30000, achieved 0, resources_gained none, costs about 11 minutes, verified yes, blocker_category h, phase Drone Boost, phase_ends_about 10:06 PT, score_before 0, score_after 0, stamina 120, chests_claimed 0, cumulative 0/2, entry_attempts 3, device_takeovers 0.
