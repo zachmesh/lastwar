@@ -261,3 +261,76 @@ of 2026-10-28.
 ## 01:45 to about 02:00 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0145 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); no records merge. Knowledge PR 561 squash-merged (three-profile fold: building-queues 1.4.0, research-queue 1.3.0, alliance-donations 1.80.0) and tools PR 562 squash-merged (blocker_category a-to-i enum validation, Refs #130); new main dced7ee91; local main fast-forwarded to dced7ee91. Records PRs 559 (head e63b550b) and 556 awaiting the 03:00 batch (merge-tree exit 0, tree-safe). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against the new main, OD-20261108-01 still open; re-verification comments posted on 425, 351 and 301 after the main move. Status: done. Full detail in pr-integration/0145-run.md.
+## 01:35 to 01:39 - Ticker pass ticker-0134, gifts unit done
+
+- Gifts unit gifts-2026-11-09-2230 done. Claim All on both
+  tabs: 70 Regular and 6 Premium claimed (76 total; the
+  Premium badge read 5 but the summary confirmed 6, a sixth
+  gift arrived during the claim). Gift Level 28 progress
+  200,390,860 to 200,393,010 (+2,150). Both tabs verified
+  empty of claimable gifts. Full detail in
+  alliance-gifts/0135-queue-run.md.
+
+## 01:40 to 01:42 - Ticker pass ticker-0134, help unit done
+
+- Help unit help-2026-11-09-2230 done. Help All pressed:
+  2 ally helps delivered (Roronoa zo Lv.27 Oil Well, Dogo
+  Oil Output I research). Today's help points 420 to 720
+  of 1,000, verified by a close/reopen re-read (the counter
+  was slow to update in the same dialog instance). The
+  base-screen help bubble did not respond to two taps, so
+  the Alliance panel route was used instead. Full detail in
+  alliance-help/0140-queue-run.md.
+
+## 01:39 to about 01:44 - PR catch-all pass
+
+- PR catch-all pass pr-catchall-2026-11-10-0139 (no-op).
+  Five open PRs, none owned by this job. PR 560 merged since the
+  0039 pass (knowledge); main moved 37f58defe to 594c6fd31. PR 559
+  head advanced to 78d871df, MERGEABLE CLEAN, awaits the 03:00
+  batch. PR 556 MERGEABLE CLEAN at head df8a2375, awaits the
+  03:00 batch. PR 425 CLEAN but owner-gated, OD-20261108-01
+  still open, no owner decision. PRs 351 and 301 still
+  CONFLICTING on the single action-log file, integrator 0045
+  re-checks. 95 open issues, zero unclassified; none filed,
+  closed or reopened since the 0039 pass. Owner-decision
+  issues 132, 154 and 335 still over 24 hours, statements
+  current; 514 and 517 still under 24 hours. VPS root disk
+  recovered to 79 percent, 2.1G free. Status: no-op. Full detail
+  in pr-catchall/0144-run.md.
+
+## 01:43 to 01:46 - Ticker pass ticker-0134, mail unit done
+
+- Mail unit mail-2026-11-09-2230 done. Claim All swept
+  Alliance, Event, System, Regular and Battle Report: no
+  claimable rewards anywhere ("No rewards available" in
+  four categories; Event's three unread notices read, and
+  the "Weekly Pass" mail's two rewards already carry green
+  checkmarks). Nothing claimed, nothing deleted. Computer
+  session cc-373 dropped mid-unit; cc-374 recovered with
+  no state lost. Full detail in mail-rewards/0143-queue-run.md.
+
+## 01:47 to 01:51 - Ticker pass ticker-0134, train unit done with deviation
+
+- Train unit train-2026-11-09-2230 done. Boarded carriage
+  2 of the Abyss Apex train (Train Rating 83,450,
+  departure in about 50 minutes from the platform read).
+  Deviation: the 3 Trade Contract gift was NOT given - the
+  cinematic-skip double-tap landed on carriage 2's "+",
+  opening the Thank the Conductor dialog before the
+  carriage was verified, and the dialog was closed to
+  check the platform; it does not reopen. Seat held
+  (own avatar in carriage 2), contracts unspent at 158,
+  reward due as Event mail after the ride. Full detail in
+  alliance-train/0147-queue-run.md.
+
+## 01:51 to 01:52 - Ticker pass ticker-0134, duel-score unit done
+
+- Duel-score unit duel-score-2026-11-09-2230 done. Personal
+  daily total read live on the VS panel: 450,000 against
+  the 3,600,000 target (gap 3,150,000). Theme Base
+  Expansion, 16:08:04 left; chests 40,000 and 150,000
+  claimed, 540,000 not yet reached. No Star Ceremony
+  trophy on the base screen. Computer session cc-374
+  dropped before the read; cc-376 recovered with no state
+  lost. Full detail in alliance-duel/0151-queue-run.md.

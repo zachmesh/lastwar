@@ -13,5 +13,30 @@
   "status": "done",
   "at": "2026-11-10T01:16:54-08:00",
   "note": "Slot 1 in progress 1d 09:04:53, slot 2 Idle, nothing to complete"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-10T01:40:06-08:00",
+  "note": "Claimed 70 Regular and 6 Premium alliance gifts; Gift Level 28 progress 200,390,860 to 200,393,010"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-10T01:43:16-08:00",
+  "note": "Help All pressed: 2 ally helps; help points 420 to 720 of 1,000"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-10T01:46:53-08:00",
+  "note": "Claim All swept all categories; no claimable rewards"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-11-10T01:51:05-08:00",
+  "note": "Boarded carriage 2 of Abyss Apex train; 3-contract gift missed (dialog closed, does not reopen)"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-10T01:52:40-08:00",
+  "note": "Personal duel total 450,000 of 3,600,000 (gap 3,150,000)"
  }
 }
