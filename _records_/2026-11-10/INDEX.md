@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T15:31:00Z
+modified: 2026-11-10T20:34:00Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures)
+description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures), and the 1204 queue ticker pass with 3 units partial (harvest, survivors, training)
 status: unverified
 ---
 
@@ -2287,3 +2287,46 @@ modified: 2026-11-10T14:21:00Z
   1200 pass, so none were owed. Status: done. Full detail
   in pr-integration/1215-run.md.
 - PR integration pass pr-integration-2026-11-10-1230 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); no records merge, no knowledge merge. Records PR 583 awaiting the 15:00 batch (merge-tree exit 0, tree 0e0c7a57). Records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN against unchanged main 4884c1fb5, OD-20261108-01 still open; no new comments posted - main and all heads unchanged since the 1200 notes. Status: done. Full detail in pr-integration/1230-run.md.
+
+## 12:10 to 12:22 - Ticker pass ticker-1204, harvest unit partial
+
+- Harvest unit harvest-2026-11-10-1003 partial. Food bubbles
+  +6.3M (612.5M to 618.8M, one tap cleared all farmland) plus
+  food panel Collect +88,117 (618.8M to 618.9M, Available 0).
+  Iron map-bubble tap missed (pet intercepted, bubbles gone,
+  effect unverified) but iron panel Collect took +2,466,821
+  exactly (939,366,406 to 941,833,227, Available 0). Coin
+  panel not opened, no coin bubbles visible; next harvest unit
+  opens the coin panel first. Armed Truck still unlocated
+  (issue #566, fourth deferral); new candidate: white truck
+  bubble over the blue pad by the helicopter. Panel Collect is
+  a new harvest route not in the activity metadata; filed as
+  issue #585. Full detail in
+  resource-collection/1210-queue-run.md.
+
+## 12:24 to 12:28 - Ticker pass ticker-1204, survivors unit partial
+
+- Survivors unit survivors-2026-11-10-1003 partial,
+  unverified: the gate line was not found. One camera pan
+  right exposed the base's right side with no Zombies-signed
+  gate in view. The tent face bubbles were probed: tapping
+  one opened TRAIN UNITS (Power 1647, Morale 750.0, timer
+  1d 17:14:37), so those bubbles are posted survivors, not
+  the waiting line; nothing trained, nothing finished, panel
+  closed untouched. Next unit should pan to the bottom-right
+  corner (red-roofed structure) for the gate instead of
+  re-probing the tents. Full detail in
+  survivor-intake/1224-queue-run.md.
+
+## 12:29 to 12:33 - Ticker pass ticker-1204, training unit partial
+
+- Training unit training-2026-11-10-1003 partial. Lv.24
+  barracks: toast "Training complete: 666 Lv.8 units are
+  ready", power +707,958 (exactly 666 x 1,063), then a fresh
+  T8 batch x666 queued for 2.9M food + 2.9M iron (food
+  618.9M to 615.9M, iron 941.8M to 938.8M) and verified
+  running ("Training in progress 1d 04:19:43"). Drill Ground
+  Full did not block the requeue. Lv.30 barracks state still
+  unverified (its 1d 17:14:37 is the batch duration, not a
+  remaining timer); two barracks unchecked. Full detail in
+  troop-training/1229-queue-run.md.
