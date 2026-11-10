@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T21:32:17Z
+modified: 2026-11-10T23:32:17Z
 level: L1
-version: 1.38.0
+version: 1.39.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, fourth consecutive training partial with the same blocker, R2 process failure, wide-zoom and panned-down tent taps select nothing, Duel screen live read UR truck dispatch +300,000; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0834 troop-training execution record 2026-11-10 0850 queue run (partial, fifth consecutive training partial, R2 process failure, game found on TECH screen by unexplained navigation, slot-1 timer discrepancy, no barracks requeued; record commit 5473d6845 on records/2026-11-10)
   - source: ticker-1204 troop-training execution record 2026-11-10 1229 queue run (partial, Lv.24 requeued T8 x666 verified running, Drill Ground Full did not block it, R2 five-partial run broken, T8/T10 stats corrected live; record commit 88e51ae5d on records/2026-11-10)
+  - source: ticker-1503 perception-scout execution record 2026-11-10 1521 queue run (partial, Drill Ground level-up to Lv.27 live, upgrade to Lv.28 available with costs met, not started; record commit f530c19b7 on records/2026-11-10)
 ---
 
 # Troop training
@@ -183,6 +184,7 @@ Observed in game on this account, first execution 2026-10-25.
 - Update 2026-11-09 1330: Drill Ground Full re-confirmed live on a second barracks - Lv.27 is idle and blocked, the pistol tap producing the toast 'Drill Ground Full: Unable to add more units' (read live by OCR), no TRAIN UNITS panel opened. The 2050 unit read the same blocker for Lv.24 on 2026-11-07, so the blocker now spans two barracks two days apart. No timer bubble stands above the Lv.27 tent, consistent with idle. The clearing method is still unknown from a live read; Quick Dispatch is still the only candidate control seen, untested. Grounding drift: the building at norm (435,518) is the ICU hospital, not a barracks - the 2050 grounding point no longer maps to a barracks in the current camera view.
 - Update 2026-11-10 0337: fourth consecutive training partial with the same blocker (0039, 1330, 0034, this unit), each with a changed method and none requeuing a barracks - per queue rule R2 a fourth identical partial is a process failure, not a result, and it was reported as one on Issue #150 by the ticker pass (comment 2026-11-10T11:42:26Z). The beige tents at the base right edge do not select at wide zoom or in the panned-down view; the top-right corner hotspots belong to the VS and radar entries. The Drill Ground screen was NOT re-read live; the Drill Ground Full toast (39,460 of 39,460, last read live 2026-10-31) stays carried forward unverified. The next unit needs a new grounding route, not another tap on these tent points. (Update 2026-11-10 0850: fifth consecutive partial with the same blocker - 0039, 1330, 0034, 0337, this unit - R2 process failure stands, and this unit added its evidence comment to Issue #150 as well. The untried routes named for the next unit are the full-observe accessibility tree with click_element on the tent control, and a fullscreen reframe via the green zoom button (never Ctrl-Cmd-F or Escape, both crash the app). The right-edge tent points (0337) and the formation-yard points (0034) are retired and must not be re-tapped.)
 - Update 2026-11-10 1229: the five-consecutive-partial R2 process failure is BROKEN - the 1229 unit requeued the Lv.24 barracks (T8 x666) and verified it running ('Training in progress 1d 04:19:43'), the first requeue since the 0850 unit. The Drill Ground Full blocker (39,460 of 39,460, last read live 2026-10-31) did NOT block this collection or requeue: the finished batch counted into power on the tent tap (+707,958, exactly 666 x 1,063) with no Drill Ground visit, no toast appeared, and the new batch is running. The standing claim that Drill Ground Full 'blocked both collection and requeue' is contradicted by this live requeue and is now qualified - the toast appeared in earlier units (2050 for Lv.24, 1330 for Lv.27), but it did not stop this unit. Whether the Drill Ground is still full is unverified (not re-read live); the clearing method remains unknown from a live read, and Quick Dispatch stays untapped (owner decision). Commented on Issue #150 by this run. The unit is still partial (1 of 4 barracks requeued, 2 unchecked), so the done-streak metric is unchanged - only the same-blocker partial run is broken.
+- Update 2026-11-10 1521 (scout cross-read): the Drill Ground levelled up live to Lv.27 (Power 118,600 to 140,200, Unit Count +7,200 to +7,400, +21,600 total power verified) - this supersedes the standing Lv.30 reads (0039, 0129), now treated as misidentifications, not deleted. Upgrade to Lv.28 is available with all costs met and was NOT started (red line, owner-initiative); the 24.0M EXP reward card was not tapped. The Full state is still unverified (not re-read live); Quick Dispatch stays untapped (owner decision).
 
 ## What the 2026-11-01 0045 unit added
 
@@ -822,6 +824,8 @@ Observed in game on this account, first execution 2026-10-25.
 
 ## Changelog
 
+- 1.39.0 (2026-11-10): 1521 scout cross-read folded (partial, Drill Ground levelled up live to Lv.27 - Power 118,600 to 140,200, Unit Count +7,200 to +7,400, +21,600 total power verified; CORRECTION the standing Lv.30 reads (0039, 0129) are superseded as misidentifications, not deleted; upgrade to Lv.28 available with costs met, NOT started - red line, owner-initiative; 24.0M EXP reward card untapped; Full state still unverified, Quick Dispatch still untapped, owner decision; next unit reads the Lv.30 "Training in progress" line and the Drill Ground screen live).
+
 - 1.2.0 (2026-11-01): inherited-point staleness after camera
   drift (708,602 and 617,570 both missed), the no-ungrounded-tap
   rule applied to a crop with no groundable barracks row, the
@@ -1443,3 +1447,12 @@ Observed in game on this account, first execution 2026-10-25.
 - T10 panel stats from the same survivors-unit read: Power 1647, Morale 750.0, Squad Load 2200, Unit HP 4726.34, Unit Attack 38.45, Unit Defense 7.79, counts Lv.7 715, Lv.8 1,332, Lv.9 1,152, Lv.10 35.8K, slider 793, cost 5.5M food plus 5.5M iron. See the corrected baseline stats above.
 - Not checked: two further barracks unchecked; the four-barracks sweep did not finish inside this unit's window.
 - Result stats: target keep all four barracks busy, requeue any idle one at highest tier and cap count; achieved 1 of 4 barracks requeued (Lv.24, T8 x666, verified running); 1 known panel read but state unverified; 2 unchecked; resources_gained 666 Lv.8 units counted (+707,958 power); points 0; costs about 4 minutes, 2.9M food and 2.9M iron for the new batch, no items spent; verified yes (power delta, cost delta and running timer all read live in-unit); blocker_category h (by-design partial - unit window ended mid-sweep).
+
+## What the 2026-11-10 1521 scout read added - Drill Ground level-up to Lv.27, upgrade to Lv.28 available with costs met, Lv.30 reads superseded, partial
+
+- Cross-read, not a training unit: the ticker-1503 perception-scout pass (scout-2026-11-09-1800, about 15:12 to 15:21 local, status partial) observed the Drill Ground level up live. Evidence in `_records_/2026-11-10/perception-scout/1521-queue-run.md` (commit f530c19b7 on records/2026-11-10). Computer session cc-474 on the owner Mac mini.
+- Level-up observed 15:13: the "DRILL GROUND LEVEL UP!" celebration surfaced after the scout's first Inventory tap; Power 118,600 to 140,200, Unit Count +7,200 to +7,400; the 24.0M EXP reward card was not tapped. Total power re-read live after dismissal at 148,787,578, confirming +21,600. Building now reads Drill Ground Lv.27.
+- CORRECTION - Drill Ground level: this live level-up read supersedes the profile's standing Lv.30 reads (0039 unit on 2026-11-09, re-confirmed by the 0129 arms-race unit) - a building cannot fall from Lv.30 to Lv.27, so those reads are now treated as misidentifications of the structure, not deleted. The 2050 unit's Lv.25 read (2026-11-07, Unit Count +7812) is likewise not reconciled with the +7,200/+7,400 figures here; the Unit Count series (+7812 at Lv.25, +10080 at the Lv.30 read, +7,200 to +7,400 at Lv.26 to 27) does not progress monotonically and is not explained from these reads. The newest verified on-screen figures stand: Drill Ground Lv.27, Power 140,200, Unit Count +7,400. The next training unit re-reads the Drill Ground screen live to confirm.
+- Upgrade panel, inspected only by the scout: Lv.27 to 28, Hero EXP 26.0M, Unit Count +7,400 to +7,600, Power 140,200 to 165,800; costs all met (Lv.28 Headquarters, iron 952.1M/102.0M, food 629.3M/314.5M); Original Time 30d 01:27:10, Upgrade button 14d 07:32:57. "Finish Now 33,887" diamonds and "Upgrade" both untouched (red lines) - starting a building upgrade is owner-only, not a training-unit action. No issue filed; the upgrade availability is routed through the scout diff (no building-upgrade regular exists).
+- Drill Ground Full state: still unverified - the level-up celebration is not a Full-state read, and the Drill Ground screen was not re-read live in this pass. The 1229 qualification stands (Full did not block the Lv.24 requeue); the clearing method remains unknown, and Quick Dispatch stays untapped (owner decision).
+- No barracks was requeued by this read; the Lv.24 batch (requeued 1229, 1d 04:20:26) runs to about 2026-11-11 16:50. The next training unit's standing work is unchanged: read the Lv.30 "Training in progress" line (not the button time), check the two unchecked barracks, re-read the Drill Ground screen live.
