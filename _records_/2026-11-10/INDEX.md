@@ -1599,3 +1599,21 @@ modified: 2026-11-10T14:21:00Z
   the same blocker (R2 process failure, already
   reported by the 0337 pass, commented on issue
   #150). Full detail in troop-training/0850-queue-run.md.
+
+## 08:45 to about 08:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0845.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 11:00): merged knowledge PR 579
+  by squash (donations 1.84.0, resource-collection 1.54.0),
+  merge commit c1b161e3; local main fast-forwarded to
+  c1b161e3 via bundle pi-0845-main.bundle. Records PR 576
+  clean, awaiting the 11:00 batch. Records PRs 351 and 301
+  still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against new main, awaiting the owner
+  decision (OD-20261108-01 open, age 2 days). No new
+  comments posted this pass. Slack DM sync sent. Status:
+  done. Full detail in pr-integration/0845-run.md.
