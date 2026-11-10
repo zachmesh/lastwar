@@ -956,3 +956,35 @@ of 2026-10-28.
   since the 0500 pass except the 0500 run record commit.
   Status: done. Full detail in
   pr-integration/0515-run.md.
+
+## 05:05 to 05:13 - Ticker pass ticker-0504, trucks unit partial
+
+- Trucks unit trucks-2026-11-10-0257 partial. Trade Count 4/5,
+  Plunder Count 1/4 to 2/4, both read live. Reward Recovery
+  2026-11-7 18:00 record claimed (1 unstarted transport):
+  puzzle x1, badge 500 x6, chest x1, purple chest x25, iron
+  1.9M, food 1.9M, coin 1.2M. The 2026-11-6 record is already
+  CLAIMED per the 04:43 secrets unit, so no recovery record
+  remains unclaimed. No dispatch: all four slots out (four gold
+  UR trucks on the road, two flame-marked); the 5th dispatch
+  awaits returns around 07:00 to 09:00 PST. One plunder won:
+  SSR #2090 Lv.19 guard 2.4M, yield iron 389.0K, food 389.0K,
+  coin 197.0K, item x1, no UR shards (cargo carried none).
+  Token lease expired mid-unit; continued on the claim lease,
+  no other pass could take the token before the 05:30 tick.
+  Full detail in truck-plunder/0513-queue-run.md.
+
+## 05:15 to 05:19 - Ticker pass ticker-0504, events unit done
+
+- Events unit events-2026-11-10-0257 done. Hub sweep finished:
+  Arms Race (Base Building, 00:44 left, score 0, chests locked,
+  cumulative 0/2), Survey Center (Season 11 Polar World
+  Experience Survey - a survey to fill, not a claim, left for
+  the owner), Community (500 diamonds already Claimed), Desert
+  Storm Battlefield (registered, Task Force A, 20/20, battle
+  2026-11-13 03:00-03:30; Achievement Wall "No data
+  available..."). Nothing claimable on any tab. Hub roster
+  change: six tabs now (Age of Oil, Arms Race, Desert
+  Battlefield, Wanted Boss, Survey Center, Community); Winter
+  Battlefield and Level Swap have rotated out. Full detail in
+  event-claims/0519-queue-run.md.
