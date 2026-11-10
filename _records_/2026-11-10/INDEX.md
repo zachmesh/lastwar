@@ -1769,3 +1769,27 @@ modified: 2026-11-10T14:21:00Z
   this run and belong to the 1032 run. Slack DM sent.
   Status: done. Full detail in
   knowledge-organization/0932-run.md.
+
+## 09:45 to about 09:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0945.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 11:00): no records merges.
+  Knowledge PR 581 merged (squash, e16fb141a): fold
+  ticker-0834 survivors + research + training
+  (survivor-intake 1.48.0, research-queue 1.4.0,
+  troop-training 1.37.0); local main synced back by
+  bundle. Records PR 576 clean at head 03f4c609 (27
+  commits beyond main), awaiting the 11:00 batch.
+  Records PRs 351 and 301 still conflict with main on
+  the single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-probed, carried
+  for branch-side reconciliation. Tools PR 425
+  owner-gated, clean, re-verified against new main
+  e16fb141a, awaiting the owner decision
+  (OD-20261108-01 open, age 2 days). Three
+  re-verification comments were posted in error this
+  pass and deleted the same pass per the forward
+  comment convention (post only on material change).
+  Status: done. Full detail in
+  pr-integration/0945-run.md.
