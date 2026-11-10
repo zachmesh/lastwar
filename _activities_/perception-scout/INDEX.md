@@ -1,13 +1,15 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-08T21:39:04Z
+modified: 2026-11-10T01:46:47Z
 level: L1
-version: 1.42.0
+version: 1.56.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
   - source: owner direction of 2026-10-31 - perceive the game first, see what is available, place it into the queue dynamically
+  - source: ticker-1104 scout discovery unit 012 execution record 2026-11-09 1117 queue run (done, Survey Center explored read-only - one live Season 11 Polar World Experience Survey, Instructions read in full, Proceed opens a SurveyMonkey link in the owner's Chrome, tab left open, nothing answered; record commit 46d7110f on records/2026-11-09)
+  - source: ticker-1038 scout discovery unit 011 execution record 2026-11-09 1044 queue run (done, Transfer Surge confirmed live in all 3 tabs, candidate rejected as a task, duplicate of unit 004 exploration; record commit d630be83 on records/2026-11-09)
   - source: perception-driven queue design in the local conventions
   - source: task unit queue design section 13
   - source: perception-scout execution record 2026-11-01 0215 PST, first day observation
@@ -62,6 +64,29 @@ grounded_in:
   - source: ticker-1131 perception-scout execution record 2026-11-08 1144 queue run (partial, station re-check, ninth no-train confirmation, Wars dot rally-link third positive case not a settlement, Wars page back arrow re-grounded to (56, 938)); record commit 3110bb6a6 on records/2026-11-08
   - source: ticker-1134 perception-scout execution record 2026-11-08 1159 queue run (done, Doomsday count finish read live, Rewards 13 first-kill + 9 cumulative rows all claimed, Damage Ranking top 6, Ranking Reward tiers, chain scout-2026-11-03 complete); record commit ce3dcc4bf on records/2026-11-08
   - source: ticker-1223 perception-scout execution record 2026-11-08 1243 queue run (partial, station re-check, tenth no-train confirmation, Wars dot absent with empty Rally Intel, fourth same-day datapoint for Issue #212); record commit 1ab3d2ca on records/2026-11-08
+  - source: ticker-1534 perception-scout execution record 2026-11-08 1545 queue run (partial, station re-check, eleventh no-train confirmation, Wars dot absent with empty Rally Intel, fifth same-day datapoint for Issue #212); record commit 0e74367c1 on records/2026-11-08
+  - source: ticker-1604 perception-scout execution record 2026-11-08 1615 queue run (partial, station panel re-check, twelfth no-train confirmation, Wars dot absent with empty Rally Intel, sixth same-day datapoint for Issue 212, return-pass dot re-check; record commit d8b700b90 on records/2026-11-08)
+  - source: ticker-1646 perception-scout execution record 2026-11-08 1704 queue run (partial, Events hub strip verified at both ends, Arms Race Tech Research read live, Frontline dot unexplained; record commit 9978e09a8 on records/2026-11-08)
+  - source: ticker-1822 perception-scout execution record 2026-11-08 1839 queue run (done, station re-check fourteenth no-train confirmation, Wars dot present with a rally waiting then cleared on return, fullscreen tap failure filed as tooling Issue #475; record commit 41fd5d472 on records/2026-11-08)
+  - source: ticker-0140 perception-scout execution record 2026-11-09 0150 queue run (partial, station panel and Wars dot, leader Jerry Apex re-confirmed live, members 96/100, Wars dot absent seventh datapoint, sixteenth no-train, skull timer new unexplained signal filed as Issue #498, fullscreen tap failure re-confirmed; record commit 3d5dc8314 on records/2026-11-09)
+  - source: ticker-0604 perception-scout execution record 2026-11-09 0606 queue run (partial, first perception of reset day 2026-11-09, two new Events tabs Age of Oil and Survey Center, Level Swap gone, 99+ chat badge unexplained, skull badge gone after expiry; record commit ab0c42f5e3 on records/2026-11-09)
+  - source: ticker-0704 scout-discovery execution record 2026-11-09 0718 queue run (done, 99+ chat badge resolved - unread Alliance chat count, clears on opening the Alliance tab, candidate REJECTED as a task; season skills reset announcement noted; record commit 5ef03f4b on records/2026-11-09)
+  - source: ticker-0704 event-claims execution record 2026-11-09 0706 queue run (done, Events tab-bar cross-read - Wanted Boss red dot persists, Survey Center and Community no dots, Community last tab; record commit 5ef03f4b on records/2026-11-09)
+  - source: ticker-0736 scout-discovery execution record 2026-11-09 0744 queue run (done, building and research queues read live, flask centre grounded (59,249), Decoration Gallery sighted; record commit 36992d92e on records/2026-11-09)
+  - source: ticker-0736 scout-discovery execution record 2026-11-09 0755 queue run (done, Inventory red dot resolved - Special tab badge 1509 plus per-item new-item dots, candidate REJECTED as a task; record commit 36992d92e on records/2026-11-09)
+  - source: ticker-0804 scout-discovery execution record 2026-11-09 0812 queue run (done, Season II countdown is the Transfer Surge entry, Application Day 1/4 to 11/12 18:00 UTC, owner-decision Issue #514; record commit b58fc31b6 on records/2026-11-09)
+  - source: ticker-0804 scout-discovery execution record 2026-11-09 0825 queue run (done, Survey Center feedback-survey hub, one live Season II survey, reward unmeasured, candidate REJECTED as a routine task; record commit b58fc31b6 on records/2026-11-09)
+  - source: ticker-0804 scout-discovery execution record 2026-11-09 0829 queue run (done, Age of Oil is the Season II warzone collective-progression page, Tech 2383/500 and Building 10721/500 exceeded, Hero 8833/10000, reward claim state unmeasured; record commit b58fc31b6 on records/2026-11-09)
+  - source: ticker-0804 scout-discovery units 008 and 010 done verdicts (Total Power 149,117,331 re-read, live HUD total not a task; full 7-tab Events strip with no Zombie tab; read from this pass screens, no separate queue-run records; commit b58fc31b6 on records/2026-11-09)
+  - source: ticker-0842 scout-discovery execution record 2026-11-09 0848 queue run (done, Builders Hut Lv.26 banner quest explored and measured read-only, owner-decision Issue #517, 0606 unmatched list now fully resolved; record commit ec55aa585 on records/2026-11-09)
+  - source: ticker-0904 survivor-intake execution record 2026-11-09 0926 queue run (partial, Season Closed system letter read in mail - Season II ended 2026-11-08 17:00:05, season buildings removed, skill points returned - corroborates the 0812 Transfer Surge resolution; record commit 3c788a4a3 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1146 queue run (done, Age of Oil explored read-only - warzone counters tech 2607/500, building 11186/500, heroes 9465/10000, Research Ranking read in full with top-20 reward tiers, Base Expansion II icon corrected to a stage-info button; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1149 queue run (done, Total Power 149,217,331 read live twice, known HUD figure, candidate rejected as a task, 472,287 below the 2026-10-25 baseline; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1152 queue run (done, Zombie Invasion tab still absent, event still ended, no chain seeded; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1134 scout-discovery execution record 2026-11-09 1158 queue run (partial, Decoration Gallery entry not re-located - the 44,284 point opened the MEGA EXPRESS CONTRACT 99.99 dollar offer popup instead, Overview values already measured by unit 002; record commit d2df49670 on records/2026-11-09)
+  - source: ticker-1204 scout-discovery execution record 2026-11-09 1204 queue run (done, Builders Hut Lv.26 banner quest profiled live - cost Iron 170.0M plus Food 56.9M plus Lv.26 HQ, all met, original time 15d 08:05:18, no reward shown, no deadline, upgrade panel X unresponsive to background clicks; record commit 6f18bc3be on records/2026-11-09)
+  - source: ticker-1534 perception-scout execution record 2026-11-09 1609 queue run (partial, store group - Inventory tabs read, Hero List encountered by mis-tap, bottom-left gold icon corrected to HEROES with the hero-upgrade dot, skull timer re-armed datapoints, Inventory dot cleared by opening, banner quest changed to Build Oil Well; record commit a7a8ea6c28 on records/2026-11-09)
+  - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, base/HUD re-read, skull badge 4; record commit c9a86fa74 on records/2026-11-09)
 ---
 
 
@@ -1685,7 +1710,7 @@ observe-only, nothing claimed). Evidence in
 
 - Season II badge 1, seen in the 0436 and 0514 units of
   2026-11-02 and still unexplained, carried with the other
-  unexplained dots above.
+  unexplained dots above. (2026-11-09 0812 update: RESOLVED - the Season II right-edge element is the Transfer Surge entry, a map icon with blue and red pins carrying a 6d countdown, verified live by the scout-discovery unit; the '1' reading from 2026-11-02 was never re-seen as a count and is treated as the same countdown signal, not a separate dot. Applying to transfer is an owner-only move, filed as owner-decision Issue #514.) (2026-11-09 0926 corroboration: the Season Closed system letter read in mail, dated 2026-11-08 17:00:05, states Season II ended, season buildings removed, skill points returned - consistent with the Transfer Surge resolution above; the letter is mail work, not a scout read.)
 
 - The unexplained red dots as restated by the 1437 unit
   (Alliance dot seen again, Inventory dot, 99+ badge,
@@ -1693,7 +1718,7 @@ observe-only, nothing claimed). Evidence in
   re-seen and not cleared) and the unknown items
   (furnace overdrive toast now reading [22/60], second
   HUD row labels, 780 km home icon meaning) - carried
-  to the successor scout unit, not closed on silence.
+  to the successor scout unit, not closed on silence. (2026-11-09 0718 update: the 99+ badge is RESOLVED - it counts unread Alliance chat messages and clears on opening the Alliance tab, verified live by the scout-discovery unit; no reward, cost, deadline or scoring, candidate REJECTED as a task, no execution unit is produced from it. The remaining unexplained items in this bullet - Season II badge 1, Inventory dot, building badge 5, NEW! chest badge 3, furnace toast, second HUD row labels, 780 km home icon - stay carried. (2026-11-09 0755 update: the Inventory dot is RESOLVED - it is the new-items badge on the Inventory Special tab (1509) plus per-item red dots on unopened items, verified live by the scout-discovery unit; no reward, cost, deadline or scoring, candidate REJECTED as a task, no execution unit is produced from it; the unopened chests are inventory the owner opens at will. The remaining unexplained items in this bullet - Season II badge 1, building badge 5, NEW! chest badge 3, furnace toast, second HUD row labels, 780 km home icon - stay carried. (2026-11-09 0812 update: the Season II badge 1 is RESOLVED - the Season II right-edge element is the Transfer Surge entry, a map icon with blue and red pins carrying a 6d countdown (6d 09:38:20 at the 0812 read), verified live by the scout-discovery unit; the '1' reading from 2026-11-02 was never re-seen as a count and is treated as the same countdown signal, not a separate dot. Applying to transfer is an owner-only move, filed as owner-decision Issue #514. The remaining unexplained items in this bullet - building badge 5, NEW! chest badge 3, furnace toast, second HUD row labels, 780 km home icon - stay carried.))) (2026-11-09 1609 update: the Inventory dot is re-read - the icon dot cleared on opening the panel with no badged item inside either tab at that moment, so the 0606 'Inventory dot contents' unknown closes as a new-item indicator cleared by opening, not a claimable item; the 0755 Special-badge mechanism stands as what the dot counts when unopened items exist. The 0606 'VIP red dot bottom left' reading is CORRECTED - that icon is the HEROES button and its dot is the hero-upgrade dot (8 red-dotted hero cards); the VIP panel entry point is still ungrounded. The skull timer has new re-arming datapoints (Issue #498, still unidentified). The 99+ badge was seen again; its mechanism stands resolved per the 0718 update (unread Alliance chat count, clears on opening the Alliance tab) - this unit did not open chat. The remaining unexplained items in this bullet - building badge 5, NEW! chest badge 3, furnace toast, second HUD row labels, 780 km home icon - stay carried.) (2026-11-09 1657 update: skull badge 4 with 00:00:37 at 16:56 - badge 4 is new in the sequence; still unidentified, still Issue #498.)
 - Whether stale staged scout units execute or expire - see the
   filing question in the 2026-11-01 section; a queue-rule
   decision, not a scout-unit decision. (2026-11-03 0910 update: a stale 11-02 post-reset scout unit DID execute when the queue `next` pick returned it and still yielded live reads, so execution of stale units is observed, not merely hypothesised; whether the planner or retro expires the chain is still open.)
@@ -3075,3 +3100,701 @@ observe-only, nothing claimed). Evidence in
   discrepancy and the +2.4K Achievements lower bound still have no
   carrier - their chain (scout-2026-11-03) is complete, so they need
   a fresh scout unit.
+
+## What the 2026-11-08 1545 unit added - station re-check, eleventh no-train confirmation, Wars dot absent with empty Rally Intel, fifth #212 datapoint
+
+- Unit scout-scout-2026-11-02-013 by ticker-1534, chain
+  scout-2026-11-02 seq 13, about 15:43 to 15:45 local, status
+  partial - the station window was fully walked observe-only and
+  the Wars dot was read live, but the chain continues by design
+  (the station remainder stays carried; the successor re-checks the
+  two preparation signals first). Evidence in
+  `_records_/2026-11-08/perception-scout/1545-queue-run.md` (commit
+  0e74367c1 on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-08/perception-scout/observation.md`.
+  Observe-only throughout; nothing claimed, fought, dispatched,
+  donated, boarded, dug or bought. Successor
+  scout-scout-2026-11-02-014 enqueued with the same window.
+- Session: computer session cc-138 on the owner Mac mini
+  (1c817413-83e2-0545-cb90-36d5e096a6bd). No device-access error, no
+  different-device dialog, no login demanded. No screen-capture
+  failure. One control call failed first on a missing
+  observation_id (stale_observation); retried with the returned
+  observation_id, no input lost. The open_app launch returned
+  outcome_unknown; the game was already open and selected, verified
+  by observe before any input.
+- Base screen, read live about 15:44 local: power 149,850,353
+  (unchanged from the 00:16, 04:16, 04:40, 08:45, 11:38 and 12:42
+  reads); food 490.8M, iron 813.3M, coin 12.3M; second row 25.0M,
+  922.2K; diamonds 13.22K; cart 4,397; stamina 113 (was 120 at
+  12:42); Season II 7d 02:18:08. Left column: avatar Lv.30, hammer
+  2/4, flask 2/2, green face 6.5C, radio badge 4, white truck,
+  question marks, survivor portrait badge 10, megaphone badge 4.
+  Right column: Events x2, VS, Season II, Alliance with a red dot,
+  Mail, Inventory with a red dot, WORLD; 99+ badge. Furnace toast
+  read in full this unit: "High-temp Furnace total overdrive time
+  (in sec) [22/60]" - recurring, unexplained, observed only, a
+  red-line surface never touched. Resource bubbles standing on many
+  buildings, observed only, not collected; the harvest regular owns
+  collection. Chat ticker lines "Buckeye16:" and "MetalMick:" seen,
+  not read in full.
+- Train-preparation signals, both absent: no train icon in the left
+  column; no "Boarding closes in" banner under the resource bar -
+  the banner area shows the High-temp Furnace overdrive line and a
+  Breaking News line ("Breaking News: Intense battle...") instead.
+  No train is preparing in this window; the STATION PLATFORM screen
+  has no live state to read. Eleventh no-train confirmation in this
+  chain (third 2134, fourth 0022, fifth 2304, sixth 0118, seventh
+  0440 re-check, eighth 0845, ninth 1131, tenth 1223, eleventh this
+  unit). The platform stays a preparation-only surface, carried not
+  closed; the successor re-checks the two preparation signals first
+  rather than re-panning.
+- Alliance panel, read live about 15:47 local: [AP3x] The Apex,
+  Overall Rating 5.0, Leader Abŷss Apex, Power 13,299,306,666,
+  Members 95/100, Language English. Panel dots: Help, Alliance
+  Gifts, Alliance Techs. NO dot on Alliance Wars, Members or
+  Alliance Store. Assemble and Strength Ranking below the fold.
+  Alliance Star (Event 40), Time Left 02:07:08. Bottom row: Record,
+  Applicants, Alliance Star, Settings.
+- Wars dot absent, rally list empty - fifth same-day datapoint for
+  the rally link, NOT a settlement (Issue #212): Alliance Wars
+  opened observe-only; the Rally Intel tab reads "No Alliance Rally
+  currently." No rally joined. The dot was present 11:41 with two
+  rallies rallying, the list empty 11:44 after the timers expired,
+  the dot absent 08:44 with none seen, the dot absent 12:42 with
+  the list empty, and the dot absent now with the list empty. This
+  does not settle Issue #212 - on 2026-11-03 the dot was present
+  while both Wars tabs read empty, so a rally does not explain the
+  dot by itself. Commented on Issue #212 by this unit; commented by
+  this run with the fold.
+- Back-arrow grounding re-confirmed: the Wars page back arrow
+  grounds at norm (56, 938) and the Alliance panel back arrow at
+  (183, 938); both returned at once. No back-arrow point stands
+  across screens; re-ground fresh per screen.
+- Red dot accounting: Help, Alliance Gifts, Alliance Techs
+  explained; Wars absent. Explained 3, unexplained 0 in this
+  unit's window. Standing carried unknowns seen again: furnace
+  overdrive toast, 99+ chat badge.
+- Follow-up: successor seq 014 enqueued in chain scout-2026-11-02
+  with the same window (station panel only, train entry and
+  preparation state; Wars dot Issue #212). The Bloody Valor
+  discrepancy and the +2.4K Achievements lower bound still have no
+  carrier - their chain (scout-2026-11-03) is complete, so they need
+  a fresh scout unit.
+
+## What the 2026-11-08 1615 and 1704 scout units added - station re-check twelfth and thirteenth no-train confirmations, Events hub strip rotated, Tech Research live again
+
+- Unit scout-scout-2026-11-02-014 by ticker-1604, chain
+  scout-2026-11-02 seq 14, about 16:09 to 16:15 local, status
+  partial - the station window was fully walked observe-only and
+  the Wars dot was read live, but the chain continues by design
+  (the station remainder stays carried; the successor re-checks the
+  two preparation signals first). Evidence in
+  `_records_/2026-11-08/perception-scout/1615-queue-run.md` (commit
+  d8b700b90 on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-08/perception-scout/observation.md`.
+  Observe-only throughout; nothing claimed, fought, dispatched,
+  donated, boarded, dug or bought. Successor
+  scout-scout-2026-11-02-015 enqueued with the same window.
+- Session: computer session cc-139 on the owner Mac mini
+  (1c817413-83e2-0545-cb90-36d5e096a6bd). No device-access error, no
+  different-device dialog, no login demanded. No screen-capture
+  failure. One control call failed first on a missing
+  observation_id (stale_observation); retried with the returned
+  observation_id, no input lost. LastWar was already running and
+  selected, verified by list_apps and observe before any input.
+- Base screen, read live about 16:12 local: power 149,850,353
+  (unchanged from the 00:16, 04:16, 04:40, 08:45, 11:38, 12:42
+  and 15:44 reads); food 490.8M, iron 813.3M, coin 12.3M; second
+  row 25.0M, 922.2K; diamonds 13.22K; cart 4,397; stamina 119
+  (was 113 at 15:44); Season II 7d 01:48:45. Left column: avatar
+  Lv.30, hammer 2/4, flask 2/2, green face 6.5C, radio badge 4,
+  white truck, question marks, survivor portrait badge 10,
+  megaphone badge 4. Right column: Events x2, VS, Season II,
+  Alliance with a red dot, Mail, Inventory with a red dot, WORLD;
+  99+ badge. Furnace toast recurring, observed only, not read in
+  full this unit (text cut at the screen edge in the capture; the
+  1545 unit read it in full as [22/60]) - a red-line surface never
+  touched.
+- Train-preparation signals, both absent: no train icon in the left
+  column; no "Boarding closes in" banner under the resource bar -
+  the banner area shows the High-temp Furnace overdrive line and a
+  Breaking News line ("Breaking News: Intense battle...") instead.
+  No train is preparing in this window; the STATION PLATFORM screen
+  has no live state to read. Twelfth no-train confirmation in this
+  chain (third 2134, fourth 0022, fifth 2304, sixth 0118, seventh
+  0440 re-check, eighth 0845, ninth 1131, tenth 1223, eleventh
+  1534, twelfth this unit). The platform stays a preparation-only
+  surface, carried not closed; the successor re-checks the two
+  preparation signals first rather than re-panning.
+- Alliance panel, read live about 16:14 local: [AP3x] The Apex,
+  Overall Rating 5.0, Leader Abŷss Apex, Power 13,338,108,353,
+  Members 95/100, Language English. Panel dots: Help, Alliance
+  Gifts, Alliance Techs. NO dot on Alliance Wars, Members or
+  Alliance Store. Assemble and Strength Ranking below the fold.
+  Alliance Star (Event 40), Time Left 01:37:41. Bottom row: Record,
+  Applicants, Alliance Star, Settings.
+- Wars dot absent, rally list empty - sixth same-day datapoint for
+  the rally link, NOT a settlement (Issue #212): Alliance Wars
+  opened observe-only; the Rally Intel tab reads "No Alliance Rally
+  currently." No rally joined. The dot was present 11:41 with two
+  rallies rallying, the list empty 11:44 after the timers expired,
+  the dot absent 08:44 with none seen, the dot absent 12:42 with
+  the list empty, the dot absent 15:48 with the list empty, and
+  the dot absent now with the list empty. This does not settle
+  Issue #212 - on 2026-11-03 the dot was present while both Wars
+  tabs read empty, so a rally does not explain the dot by itself.
+  Commented on Issue #212 by this unit; commented by this run with
+  the fold.
+- Return-pass dot re-check: after returning from Wars, the Alliance
+  panel was read again at about 16:16 local - Alliance Wars still
+  has NO dot; Help, Alliance Gifts and Alliance Techs still
+  dotted; Alliance Star Time Left 01:36:08. This closes, for this
+  unit's window, the gap the 1131 unit left open (no return-pass
+  dot read after the rallies launched). The return-pass re-read is
+  now a standing step for Wars-dot units: read the panel dots
+  again after leaving the Wars page, before closing the unit.
+- Back-arrow grounding re-confirmed: the Wars page back arrow
+  grounds at norm (56, 938) and the Alliance panel back arrow at
+  (183, 938); both returned at once. No back-arrow point stands
+  across screens; re-ground fresh per screen.
+- Red dot accounting: Help, Alliance Gifts, Alliance Techs
+  explained; Wars absent. Explained 3, unexplained 0 in this
+  unit's window. Other dots noted in passing, outside scope and
+  previously explained: Events x2, Mail, Inventory, Season II,
+  99+, hammer, radio 4, white truck, survivor 10, megaphone 4.
+- Unit scout-2026-11-07-1800 by ticker-1646, about 16:58 to 17:04
+  local, status partial - the hub strip was verified at both ends
+  and the Arms Race phase and score were read live, but the
+  Frontline Breakthrough, Winter Battlefield and The Doomsday
+  pages were not opened inside this unit, so the group is not
+  complete. Evidence in
+  `_records_/2026-11-08/perception-scout/1704-queue-run.md` (commit
+  9978e09a8 on records/2026-11-08) and the observation appended to
+  `_records_/2026-11-08/perception-scout/observation.md`. No claim,
+  fight, dispatch or purchase was made. Tracker untouched.
+- Session: computer session cc-141 on the owner Mac mini. No
+  device-access error, no different-device dialog, no login
+  demanded. No screen-capture failure. One control call failed
+  first on a missing observation_id (stale_observation); retried
+  with the returned observation_id, no input lost. LastWar was
+  already running and selected, verified by list_apps and observe
+  before any input.
+- Base screen, read live about 16:58 local: power 149,850,353
+  (unchanged from the 00:16, 04:16, 04:40, 08:45, 11:38, 12:42,
+  15:44 and 16:12 reads); food 490.8M, iron 813.3M, coin 12.3M;
+  second row 25.0M, 922.2K; diamonds 13.22K; cart 4,417 (was
+  4,397); stamina 120 (was 119 at 16:12). Season II 7d 01:05:48.
+  Left column: avatar Lv.30, hammer 2/4 with red dot, flask 2/2,
+  green face 6.5C, radio badge 4, white truck with red dot,
+  survivor portrait badge 10, megaphone badge 4. Right column:
+  Events x2, VS, Season II, Alliance with a red dot, Mail,
+  Inventory with a red dot, WORLD; 99+ badge. Wanted Boss badge 1,
+  timer 00:00:32. Furnace toast read in full again via OCR:
+  "High-temp Furnace total overdrive time (in sec) [22/60]" -
+  recurring, unexplained, observed only, a red-line surface never
+  touched.
+- Train-preparation signals, both absent again: no train icon in
+  the left column; no "Boarding closes in" banner under the
+  resource bar. Thirteenth same-day no-train confirmation (twelfth
+  in chain scout-2026-11-02 by the 1615 unit; this unit is the
+  staged scout-2026-11-07-1800 head, not that chain, so the count
+  is carried here as a same-day tally, not a chain sequence). The
+  platform stays a preparation-only surface, carried not closed.
+- Events hub entry-point lesson: the hub opened from the base
+  Events icon, re-grounded fresh at norm (915, 135) on this
+  763x1050 window - the 683,150 point from unit 057 does not land
+  on this window size. Re-ground the Events entry every unit; do
+  not carry a hub-entry point across window sizes. The hub opened
+  on the Community page, the page the last pass left it on.
+- Tab strip verified at both ends, read live: left end Arms Race;
+  then Frontline Breakthrough (red badge 1); Winter Battlefield;
+  The Doomsday; right end Community. Five tabs. NO Zombie Invasion
+  tab - the chain-close rule from unit 066 stands, no fresh zombie
+  chain seeded. ROTATION, measured 2026-11-08: Desert Storm
+  Battlefield, Level Swap and Wanted Boss (seen 2026-10-30) are
+  gone from the strip; Frontline Breakthrough and The Doomsday are
+  present. The strip order and membership have rotated since the
+  last full verification - a strip read from an earlier date is
+  not current evidence for the strip today.
+- Community page re-read: join-community text, 200 Diamonds visit
+  bonus, 500 Diamonds Discord-link bonus after Headquarters Lv.8,
+  the 500 shown as Claimed. No social link tapped.
+- Arms Race page read live about 17:03 local: phase Tech Research,
+  Contest Segment Lv.29-30, timer 01:03:01 remaining, personal
+  score 0, rank #2110 [AP3x]Bears Lair (tied with #2110
+  [FATC]·루피 above it). Chest thresholds 6,250 / 12,500 / 30,000
+  with the displayed figures 2,360 / 4,800 / 11,800 above them -
+  recorded as displayed in the record; the standing profile
+  reading (arms-race 1.59.0, 1333 section) is that these are ruby
+  tags, not personal progress, and the 1704 figures agree with
+  that reading exactly. Chest counter 0/2. Scoring paths:
+  Increase Tech Power by 1pt (+1), Use 1-min Research Speed-up
+  (+10), Buy Packs containing Diamonds (1 Diamond) (+30, diamond
+  path, never tapped). Observed only - the arms-race regular owns
+  tier work; its 1803 unit is already queued and the phase ends
+  about 18:06 local, inside that unit's window. Folded into the
+  arms-race profile by this run (1.59.0 to 1.60.0).
+- Red dot accounting: seen in this unit's window - Frontline
+  Breakthrough badge 1, base Events badge x2. Explained 1: the
+  Frontline tab dot is one count of the base x2 roll-up.
+  Unexplained 1: the second count of the base x2 roll-up - no
+  second tab dot was seen on the strip, so it stays open for the
+  events unit. The Frontline dot itself is unexplained (page
+  unwalked); the events regular's 1857 unit is queued and carries
+  both. Other dots noted in passing, outside this unit's scope and
+  previously explained to their owning regulars: hammer, radio 4,
+  white truck, survivor 10, megaphone 4, Alliance, Mail,
+  Inventory, Season II, 99+.
+- Unknown items 1: the meaning of the 2,360 / 4,800 / 11,800
+  figures above the Arms Race chests, carried in the record as
+  displayed - resolved by the standing ruby-tag reading in the
+  arms-race profile, not a new unknown.
+- Carried forward: unwalked Frontline Breakthrough, Winter
+  Battlefield and The Doomsday pages; the duel page and radar
+  panel (not in this unit's group). No successor enqueued from
+  this unit: the scout-2026-11-02 chain seq 015 is already pending
+  in inbox for the station remainder, and the staged heads
+  scout-2026-11-07-1900 and scout-2026-11-08-1800 remain in inbox
+  for later ticks; a duplicate scout head would violate the
+  (regular, planned_for) invariant. Game left on the Arms Race
+  page inside the Events hub.
+- Power step-down, open question from the 1712 zero sweep (same
+  pass, daily-activities record, not a scout unit): after a server
+  disconnect and relaunch the base read showed power 149,209,253
+  against 149,850,353 at the 16:58 and 16:12 reads - a 641,100 step
+  down with no fight, dispatch or claim in between in that pass.
+  Recorded as displayed, cause unexplained, not asserted as a
+  loss. The next scout base read should confirm whether the figure
+  holds. Folded in full into the daily-activities profile by this
+  run (1.18.0 to 1.19.0).
+- Follow-up, carried: successor seq 015 enqueued in chain
+  scout-2026-11-02 with the same window (station panel only,
+  train entry and preparation state; Wars dot Issue #212). The
+  Bloody Valor discrepancy and the +2.4K Achievements lower bound
+  still have no carrier - their chain (scout-2026-11-03) is
+  complete, so they need a fresh scout unit. The Frontline dot
+  and the second Events count are carried by the events 1857
+  unit.
+
+## What the 2026-11-08 1839 scout unit added - station re-check, fourteenth no-train confirmation, Wars dot present with rally then cleared, fullscreen tap failure (Issue #475)
+
+- Unit scout-scout-2026-11-02-015 by ticker-1822, about 18:33 to
+  18:39 local, status done - both halves of the window were read
+  live: the two train-preparation signals were checked (both
+  absent) and the Wars dot was checked on the Alliance panel, in
+  the Wars tabs, and again on return (present with a rally waiting,
+  cleared after its timer expired). Observe-only; nothing claimed,
+  fought, dispatched or purchased. Evidence in
+  `_records_/2026-11-08/perception-scout/1839-queue-run.md`
+  (commit 41fd5d472 on records/2026-11-08) and the appended section
+  in `_records_/2026-11-08/perception-scout/observation.md`.
+  Tracker untouched (scout is a perception regular; the tracker
+  records no completion for it).
+- Session: computer sessions cc-147 and cc-148 on the owner Mac
+  mini (1c817413-83e2-0545-cb90-36d5e096a6bd). Session cc-147 dropped
+  once mid-unit (describe returned observation_unavailable); cc-148
+  was started and LastWar re-selected, no game state lost. One
+  control call failed first on a missing observation_id
+  (stale_observation); retried with the returned observation_id, no
+  input lost. No device-access error, no different-device dialog, no
+  login demanded. LastWar was already running.
+- Base screen about 18:33 local: power 149,209,253 (unchanged from
+  the 17:06 zero-sweep read; the 641,100 step-down from the 16:58
+  read was already recorded by that unit, cause unexplained); food
+  490.8M, iron 816.9M, coin 15.9M; diamonds 13.22K; cart 4,417;
+  stamina 120; Season II 6d 23:23:04, VS timer 23:23:03. Left column:
+  avatar Lv.30, hammer 2/4, flask 2/2, green face 6.5C, radio badge
+  4, white truck, survivor portrait badge 10, megaphone badge 4.
+  Right column: Events badge 3 (was x2 at 17:04), VS, Season II,
+  Alliance with a red dot, Mail, Inventory with a red dot, WORLD;
+  99+ badge. Wanted Boss badge 2 (was 1), timer 00:00:46. Furnace
+  toast recurring, not read in full this unit.
+- Both train-preparation signals absent: no train icon in the left
+  column; no "Boarding closes in" banner under the resource bar -
+  the banner area shows the Breaking News line and a Tactical Master
+  Supply Box rumor ticker instead. No train is preparing in this
+  window; the STATION PLATFORM screen has no live state to read.
+  Fourteenth same-day no-train confirmation (thirteenth in chain
+  scout-2026-11-02). The platform stays a preparation-only surface,
+  carried not closed.
+- NEW METHOD FINDING - fullscreen tap failure: this unit entered
+  fullscreen (1920x1080) via the green zoom button first. Five taps
+  on the Alliance button and its label in fullscreen (norm 699,701;
+  698,694; 635,694 twice; 699,730) never opened the Alliance panel -
+  each reported change_observed with a new surface but the panel
+  never appeared on screen. The same button in the 642x951 windowed
+  geometry (after View menu, Exit Full Screen) opened at once at
+  norm 896,702. Background input plus fullscreen geometry is the
+  standing hypothesis for the mismatch; do NOT enter fullscreen for
+  tap work until this is resolved. Filed as tooling Issue #475 by
+  this unit.
+- Alliance panel about 18:40 local: [AP3x] The Apex, Overall Rating
+  5.0, Leader Abŷss Apex, Power 13,310,720,664, Members 95/100,
+  Language English. Panel dots: Alliance Wars PRESENT (first time
+  today since the 11:41 read), Help, Alliance Gifts, Alliance Techs.
+  NO dot on Members, Alliance Store, Assemble, Strength Ranking,
+  Alliance Events or Alliance City. "Important: President" banner at
+  the top right, truncated and unread.
+- Alliance Wars about 18:41 local: Rally Intel tab holds ONE rally -
+  [AP3x]Kkkayyyyy, "Waiting for allies...", timer 00:00:39,
+  Count/Limit (2/5), target Lv.30 CL-7 Victim, 46km away.
+  Achievements 8/16 Completed. No rally joined. Individual Intel tab
+  reads "There are no ongoing Alliance Wars currently."
+- Return-pass dot re-check about 18:43 local: Alliance Wars has NO
+  dot; Help, Alliance Gifts and Alliance Techs still dotted. The
+  rally's 39-second timer had expired by the return, so the dot
+  clears when the rally leaves the waiting state.
+- Unexplained floating text, observed only: "Allies are very
+  grateful for your assistance" appeared twice in the mid-screen
+  toast position after map taps at norm (635,694) in fullscreen. It
+  may be a periodic alliance ticker rather than caused by the taps;
+  no Help action was taken and nothing was claimed.
+- Back-arrow grounding re-confirmed: the Wars page back arrow
+  grounds at norm (62, 920) and the Alliance panel back arrow at
+  (132, 936) on this 642x951 window; both returned at once. No
+  back-arrow point is standing across screens or window sizes;
+  re-ground fresh per screen.
+- Resource bubbles standing on many buildings, observed only, not
+  collected; the harvest regular owns collection.
+- Red dot accounting: seen in this unit's window: Help, Alliance
+  Gifts, Alliance Techs, Wars (present, then cleared on return -
+  explained by the rally waiting, then expired). Explained 4,
+  unexplained 0 for this unit's window. Other dots noted in passing,
+  outside this unit's scope and previously explained to their owning
+  regulars: Events badge 3 (up from x2 at 17:04; the 1646 unit left
+  one count of the x2 unexplained and the third count is likewise
+  open for the events unit, whose 1857 unit is queued), Mail,
+  Inventory, Season II, 99+, hammer, radio 4, white truck, survivor
+  10, megaphone 4, Wanted Boss 2.
+- Unknown items 2: the "Allies are very grateful" toast trigger, and
+  the truncated "Important: President" banner on the Alliance panel.
+- Carried forward: seventh same-day datapoint for Issue #212 (dot
+  present 11:41 with two rallies rallying; dot absent 08:44, 12:42,
+  15:48, 16:15 with the list empty; dot present now with one rally
+  waiting; dot cleared on return after its timer expired). It does
+  NOT settle #212: on 2026-11-03 the dot was present while both Wars
+  tabs read empty. Issue #212 stays open; closure belongs to the
+  daily retro, with evidence. Commented on Issue #212 by this unit.
+- Successor enqueued from this unit: scout-scout-2026-11-02-016,
+  same window (station panel only, train entry and preparation
+  state; Wars dot Issue #212). The station remainder stays carried
+  for the next scout-alliance unit, which re-checks the two
+  preparation signals first.
+- Game left on the base screen, windowed 642x951 (exited fullscreen
+  via View menu, Exit Full Screen).
+
+## What the 2026-11-08 2012 unit added - fifteenth no-train, Wars dot eighth datapoint: absent with rallies present, present on a fresh rally
+
+- Unit scout-scout-2026-11-02-016 by ticker-2002, about
+  20:06-20:15 local, status done. Evidence in
+  `_records_/2026-11-08/perception-scout/2012-queue-run.md`
+  (commit eee08287 on records/2026-11-08) and the appended
+  section in `_records_/2026-11-08/perception-scout/observation.md`.
+  Observe-only; nothing claimed, fought, dispatched or
+  purchased. No rally joined. Tracker untouched (scout is a
+  perception regular; the tracker records no completion for it).
+- Base screen about 20:07 local: power 149,209,253 (unchanged
+  from the 17:06 zero-sweep read and the 18:33 read; the 641,100
+  step-down from the 16:58 read was already recorded by the
+  zero-sweep unit, cause unexplained); food 499.1M, iron 821.2M,
+  coin 15.9M; diamonds 13.22K; cart 4,467 (was 4,417 at 18:33);
+  stamina 120; Season II 6d 21:52:16, VS timer 21:52:16. Left
+  column: avatar Lv.30, hammer 2/4, flask 2/2, radio with a red
+  dot, white truck, survivor portrait badge 10, megaphone badge
+  4. Right column: Events badge 3, VS, Season II, Alliance with
+  a red dot, Mail with a red dot, Inventory with a red dot,
+  WORLD; 99+ badge. Wanted Boss badge 1, timer 00:00:53.
+  "Important: President HawksMav appointed..." banner at the top,
+  truncated and unread in full. Furnace toast recurring, not read
+  in full this unit.
+- Both train-preparation signals absent: no train icon in the
+  left column; no "Boarding closes in" banner under the resource
+  bar - the banner area shows the President appointment line and
+  a Breaking News ticker instead. No train is preparing in this
+  window; the STATION PLATFORM screen has no live state to read.
+  Fifteenth same-day no-train confirmation (fourteenth in chain
+  scout-2026-11-02). The platform stays a preparation-only
+  surface, carried not closed.
+- Alliance panel about 20:09 local: [AP3x] The Apex, Overall
+  Rating 5.0, Leader Abŷss Apex, Power 13,479,890,272, Members
+  96/100 (was 95/100 at 18:40), Language English. Panel dots:
+  Help, Alliance Gifts, Alliance Techs. NO dot on Alliance Wars,
+  Members, Alliance Store, Assemble, Strength Ranking, Alliance
+  Events or Alliance City. The Alliance button opened at once at
+  norm 896,702 in the 642x951 windowed geometry, confirming the
+  1839 grounding. Fullscreen was NOT entered (Issue #475 stands -
+  do not enter fullscreen for tap work).
+- Alliance Wars about 20:10 local: Rally Intel tab holds THREE
+  rallies, all [AP3x]EmberSteel against Lv.30 CL-7 Victim, each
+  Count/Limit (1/5) - "Rallying..." 00:00:48, 24km away;
+  "Rallying..." 00:00:52, 14km away; "Waiting for allies..."
+  00:01:09 (distance below the fold, unread). No rally joined.
+  Individual Intel tab reads "There are no ongoing Alliance Wars
+  currently." A treasure-map ticker ran across the top:
+  "[AP3x]Eggbutt dug up 1 Golden Mobile Squad with the treasure
+  map - congrats!"
+- Return-pass dot re-check about 20:12 local: Alliance Wars NOW
+  HAS a red dot; Help, Alliance Gifts and Alliance Techs still
+  dotted. The dot appeared between the 20:09 panel entry and
+  this return, while the unit was inside the Wars page. Toasts on
+  the panel: "President HawksMav appointed GoodMan527314 as
+  Secretary of Interior!" and "Violet's Gift received!"
+  (transient tickers, observed only).
+- Second Rally Intel read about 20:14 local: a NEW rally sits at
+  the top of the list - [AP3x]TheGoldenEclipse, "Rallying..."
+  00:00:22, Count/Limit (1/5), Lv.30 CL-7 Victim, 28km away -
+  created between the 20:10 and 20:14 reads. The other rows are
+  still EmberSteel rallies (Rallying 00:00:24, 19km away; Waiting
+  for allies 00:01:51). The new rally is the only change in the
+  list between the two reads.
+- Back-arrow grounding re-confirmed: the Wars page back arrow
+  grounds at norm (62, 930) and the Alliance panel back arrow at
+  (140, 930) on this 642x951 window; both returned at once. No
+  back-arrow point is standing across screens or window sizes;
+  re-ground fresh per screen. Game left on the base screen.
+- Resource bubbles standing on many buildings, observed only, not
+  collected; the harvest regular owns collection.
+- Red dot accounting: seen in this unit's window: Help, Alliance
+  Gifts, Alliance Techs, Wars (absent at entry, present on
+  return - explained by the fresh rally created between the
+  reads). Explained 4, unexplained 0 for this unit's window.
+  Other dots noted in passing, outside this unit's scope and
+  previously explained to their owning regulars: Events badge 3,
+  Mail, Inventory, Season II, 99+, hammer, radio, white truck,
+  survivor 10, megaphone 4, Wanted Boss 1.
+- Carried forward: eighth same-day datapoint for Issue #212 (dot
+  ABSENT with three live rallies present, then present when a
+  fresh rally was created - the sharpest evidence yet that the
+  dot fires on rally creation, not on rally presence). It does
+  NOT settle #212: on 2026-11-03 the dot was present while both
+  Wars tabs read empty, so a rally does not explain the dot by
+  itself. Issue #212 stays open; closure belongs to the daily
+  retro, with evidence. Commented on Issue #212 by this unit.
+- Successor enqueued from this unit: scout-scout-2026-11-02-017,
+  same window (station panel only, train entry and preparation
+  state; Wars dot Issue #212). The station remainder stays
+  carried for the next scout-alliance unit, which re-checks the
+  two preparation signals first.
+- Session note: one control call failed first on a missing
+  observation_id (stale_observation); retried with the returned
+  observation_id, no input lost. No session drop, no
+  device-access error, no different-device dialog, no login
+  demanded. LastWar was already running in its 642x951 window.
+
+## What the 2026-11-09 0150 unit added - leader Jerry Apex re-confirmed, Wars dot absent seventh datapoint, sixteenth no-train, skull timer new unexplained signal (Issue #498), fullscreen tap failure re-confirmed
+
+- Unit scout-scout-2026-11-02-017 by ticker-0140, about 01:41 to 01:50 local, status partial. Evidence in `_records_/2026-11-09/perception-scout/0150-queue-run.md` (commit 3d5dc8314 on records/2026-11-09) and the appended section of `_records_/2026-11-09/perception-scout/observation.md`. Observe-only throughout; nothing claimed, fought, dispatched, donated, dug or bought. No successor unit is enqueued from this stale-chain unit under the (regular, planned_for) anti-duplication invariant.
+- Alliance panel read live about 01:54: [AP3x] The Apex, Overall Rating 5.0, Leader Jerry Apex, Power 13,532,886,654, Members 96/100, Language English. Leader change confirmed live a second time (the 0113 mail unit read it first) - was Abuss Apex / Texan Apex in earlier records. Members 96/100 (was 95/100 at the 18:40 read on 2026-11-08). Panel dots: Help, Alliance Gifts only; NO dot on Alliance Wars, Members, Alliance Store, Alliance Techs, Assemble, Strength Ranking, Alliance Events or Alliance City.
+- Wars dot, Issue #212: ABSENT on Alliance Wars. Seventh same-day datapoint (absent 12:43, 15:45 and 16:15; present with a rally waiting at 18:39, cleared on return). No rally waiting per the dot signal. The Rally Intel tab itself was not opened this unit; the tab read belongs to the alliance group remainder of the current day's scout pass.
+- Station / train: sixteenth same-day no-train confirmation, fourteenth in chain scout-2026-11-02. Both preparation signals absent: no "Boarding closes in" banner under the resource bar, no train icon in the left column. The blue bus icon at (55,573) opens the TRUCKS screen, not the station - re-confirming the 2026-10-28 / 2026-11-01 entry-icon correction (the 1813 unit hit the same). Mail corroboration: DCna8ive's train arrived 1h ago and departed 3h ago, so the last train already ran.
+- Trucks screen, opened by the bus-icon tap (observed only): "Today's Trade Count: 0/5"; "Filter out trucks from your Warzone" checked; a truncated "Important: President HawksMav appointe..." banner; History button top-right; four yellow trucks shown with blue cargo icons; "Mega Mode" button; tabs "Others' Trucks" (badge 4) and "Your Truck" (badge 4, selected); Recover button (red dot) bottom-left. Nothing dispatched, nothing claimed: the trucks regular owns this surface and trucks-2026-11-08-2257 is already in the inbox.
+- NEW unexplained signal, about 01:57: a skull icon with a red badge 1 and a 00:00:24 countdown appeared at the right edge mid-screen on the base view. Meaning unverified - not opened (observe-only), carried to the current day's scout pass. Not the first sighting: the 2026-11-07 1828 star-ceremony read saw a red target/skull icon with countdown 00:00:29 and badge 2, and the 0202 harvest and 0159 radar units of this same pass saw it again (badges 4 and 1/4/2, timers about 00:00:23-00:00:28). Filed as knowledge Issue #498 by this run (badge count and timer do not behave like a single countdown; the radar orange skull pins may be the same signal, hypothesis only).
+- Fullscreen tap failure re-confirmed, Issue #475 (tooling): in fullscreen 1920x1080 a tap at (838,700) on the Alliance icon did nothing, while the mail back arrow at (323,951) worked in the same geometry - the failure is button/area-specific, not total. After View menu, Exit Full Screen, the Alliance button opened at once at (931,705) in the 642x951 window. Never use Ctrl+Cmd+F or Esc on this app (crash risk). Commented onto Issue #475 by this run.
+- Red dot accounting: 10 badge signals seen, 6 explained (Events 3 to events / arms-race; Alliance dot as the Help + Gifts roll-up; Help dot to the help regular; Gifts dot to the gifts regular; bus-icon dot to the trucks regular, unit queued; Mail dot to the mail regular, System / Regular / Battle Report still unwalked per the 0113 record), 4 unexplained (Inventory dot, 99+ badge, skull badge 1 with the 00:00:24 timer, hammer 1/4 counter). Unknown items 2: furnace overdrive toast (not re-read this unit); skull timer meaning (Issue #498).
+- Figures read live: power 149,209,253 (unchanged from the 0113 read); food 513.8M, iron 838.3M, coin 25.2M, diamonds 6,027; 13.22K with a plus button; stamina 60 rising to 61. VS timer 16:16:29, Season II 6d 16:16:29. Task: "Upgrade Builder's Hut to Lv.26 [0/1]". No diamonds or money spent. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 2, achieved 2, resources_gained none, costs about 9 minutes of unit time, no items spent, verified yes, blocker_category c.
+
+## What the 2026-11-09 0606 unit added - first perception of reset day 2026-11-09, two new Events tabs, Level Swap gone, 99+ chat badge unexplained
+
+- Unit scout-midday-2026-11-08-0700 by ticker-0604, about 06:06 to 06:18 local, status partial. Evidence in `_records_/2026-11-09/perception-scout/0606-queue-run.md` (commit ab0c42f5e3 on records/2026-11-09) and the appended section of `_records_/2026-11-09/perception-scout/observation.md`. Observe-only throughout; nothing claimed, fought, dispatched, donated, dug or bought. No successor unit is enqueued from this unit under the (regular, planned_for) anti-duplication invariant - the staged scout-midday-2026-11-09-0700 unit (07:00 local) covers the remainder.
+- Slot note: this unit's slot was the 2026-11-08 midday pass (07:00 local 2026-11-08); that reset day had already ended at the 19:00 reset. The pass was executed against the live game instead of being left to expire, and its observations were recorded in the current reset day file, the first perception of reset day 2026-11-09. Nothing was attributed to 2026-11-08. (Stale-unit execution, as in the 2026-11-03 0910 precedent.)
+- Base screen and HUD, read live about 06:05: food 540.1M, iron 864.9M, coin 42.9M, diamonds 6,077, stamina 113, total power 149,217,331, building queue 1/4, research 1/2, many resource bubbles standing, Builders Hut Lv.26 banner quest 0 of 1, truck icon with a question marker. VS timer 11:51:24, Season II countdown 6d 11:51:24 (the same Season II timer the 0140 pass read at 6d 16:16:29). The VS timer read is a fourth live timer this reset day pointing at the about-18:00 rollover (after 14:52:31 at the 0306 cross-read, 13:37:36 at the 0423 panel read, 13:20:41 at the 0441 read) - commented onto Issue #242 by this run.
+- Events hub, full tab-bar scroll: seven tabs - The Age of Oil, Arms Race, Winter Battlefield, Desert Battlefield, Wanted Boss, Survey Center, Community. No Zombie Invasion tab anywhere on the bar - the event is still ended, no chain seeded. Level Swap, present 2026-10-30, is gone. Arms Race page cross-read: Tech Research phase live, folded into the arms-race profile (0606 section there).
+- Unmatched labels (discovery): The Age of Oil and Survey Center, both new against the 2026-10-30 roster. The Age of Oil is already tracked as knowledge Issue #477 (milestones verified claimed by the 0450 unit); this pass only re-confirms the tab is present and does not open the page, so no new comment was posted there. Survey Center is genuinely new - never opened, contents unknown; its first sighting is the 0535 arms-race unit's hub tab-bar read (unflagged there), flagged as unmatched by this pass. Filed as knowledge Issue #506 by this run.
+- Mail: seven categories (Battle Report, Alliance, Event, System, Regular, In-app Purchases, Favorite). Event carries the one unread mail (top, [AP3x] Abyss Apex train notice, 4m ago) and a Claim All button; the other five visible Event mails are alliance train notices 2h to 8h old. Delete All present and untouched. CHECKLIST CORRECTION: the scout checklist's "six categories" is stale - seven are read live here, agreeing with the seven names the 2026-11-07 1740 mail unit already listed. Mail categories are seven.
+- Red dot accounting: 6 seen, 5 explained, 1 unexplained. Events badge 1 to the Wanted Boss red dot; Mail badge 1 to the one unread Event mail; Alliance red dot to the queued alliance units; Inventory red dot with the reason recorded (contents unread, no owning regular); VIP red dot to the queued vip unit. (2026-11-09 1609 correction: this reading is CORRECTED - the bottom-left gold icon is the HEROES button, not VIP, and its red dot is the hero-upgrade dot; see the 1609 section below. The VIP panel entry point is still ungrounded.) Unexplained 1: the 99+ chat badge, visible in the 06:05 base screenshot but first classified after the pass closed; carried unexplained to the staged 07:00 midday unit. The pass first reported 5 seen and 0 unexplained; the corrected accounting is 6 seen, 5 explained, 1 unexplained, and the unit stats were corrected to match before delivery.
+- Skull timer, Issue #498: the skull badge from the 0140 pass was NOT seen - its 00:00:24 countdown had expired long before this pass. That is consistent with the badge being a transient countdown, not a persistent state; commented onto Issue #498 by this run.
+- Scout diff: tools/scout_diff.py dry run over the observation file - 29 observed, 8 actionable, 12 to enqueue, 3 already queued, 9 candidates, 0 unexplained red dots. The plan was NOT applied: its three execution enqueues (events, help, mail) duplicate units already staged for the 10:30 and 10:57 PT slots - the diff wrote the local slot time as UTC. Filed as tooling Issue #505 by the ticker unit (owned by lastwar-tool-developer, not duplicated here). The diff also drafted exploration candidates for info-only reads (Total Power total, building queue counts, the absent Zombie tab note) - misclassified, not filed. Only the two genuine unmatched labels above stand as candidates.
+- Not walked in this pass: Store by section, VIP page, passes pages, daily missions panel, alliance panel and station, duel page, radar panel, world map pins and loot box, Inventory contents, and the Age of Oil, Survey Center, Wanted Boss and Community event pages. The staged scout-midday-2026-11-09-0700 unit (07:00 local) covers them; no duplicate successor was enqueued.
+- Result stats: no result stats were recorded in the unit record beyond the red-dot accounting above; costs about 12 minutes of unit time (06:06 to 06:18), no items spent, verified yes.
+
+## What the 2026-11-09 0718 scout-discovery unit added - 99+ chat badge RESOLVED as the unread Alliance chat count, candidate rejected as a task
+
+- Unit scout-scout-discovery-2026-11-09-001 by ticker-0704, about 07:18 to 07:29 local, status done. Evidence in `_records_/2026-11-09/99-badge-at-chat/0718-queue-run.md` (commit 5ef03f4b on records/2026-11-09). Read-only exploration of the candidate the scout diff classified after the 06:05 scout pass closed (99+ badge at chat icon, base/hud).
+- Entry point (measured): base screen left edge, speech-bubble chat icon (red badge 3 at entry); the bottom chat ticker also carries the count. Tapping the ticker text itself does nothing; the chat icon opens the Chat panel. Tapping a player avatar inside the chat list opens that player's profile - read-only, closed untouched (no player details recorded).
+- Mechanism (measured): the 99+ badge sits on the Alliance tab of the Chat panel and counts unread Alliance channel messages. Opening the Alliance tab clears it - verified live: badge present on entry to Chat, gone after the Alliance tab opened. World sub-tabs carry their own small red dots (Season, English, Duel); the World list showed a "470 new message(s)" banner. Private tab carries a red badge 2 (not opened in this unit).
+- Rewards, cost, cycle, scoring (all measured): none - reading chat pays nothing, costs nothing (no diamonds, items or stamina), has no expiry (the count grows with unread messages and clears on read), and scores nothing.
+- Verdict: candidate REJECTED as a task - the 99+ badge is an informational unread-message counter for Alliance chat, not a playable task. No execution unit should be produced from it; the owner reads alliance chat himself when he wants to. No _activities_ entry is created for a rejected candidate; the resolution lives in this fold and in the open-questions update above. The provisional filing stays in `_records_/2026-11-09/perception-scout/scout-diff-output/scout-candidates-2026-11-09.md`.
+- Side observation (game state, not chat content): opening the Alliance tab showed an Alliance Announcement - season skills reset, the season has ended, all season skills are now inactive, spent points fully refunded. Noted here as a state fact; no action taken. A leader banner asks members to enable notifications for crucial Alliance news (Open / X) - not tapped, a settings change is the owner's decision, not this unit's.
+- Cross-read from the 0706 events unit in the same ticker pass: the Events tab bar scrolled right shows the Wanted Boss red dot persisting after the visit, Survey Center and Community with no red dots, Community the last tab (the bar does not scroll further). Survey Center was NOT opened, so Issue #506 gets no new evidence from this pass; Age of Oil was not opened either, so Issue #477 gets none.
+- Result stats: target explain the 99+ badge mechanism from live reads, achieved 1 mechanism explained and verified (badge clears on opening Alliance tab), resources_gained none, costs 11 minutes, no items spent, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 0744 and 0755 scout-discovery units added - Inventory red dot RESOLVED, Decoration Gallery sighted, queue panels read live
+
+- Units scout-scout-discovery-2026-11-09-002 (about 07:44 to 07:53 local) and -003 (about 07:55 to 07:57 local) by ticker-0736, both status done. Evidence in `_records_/2026-11-09/building-queue-1-of/0744-queue-run.md` and `_records_/2026-11-09/inventory-icon-red-dot/0755-queue-run.md` (commit 36992d92e on records/2026-11-09). The queue-panel reads are folded in building-queues 1.1.0 and research-queue 1.1.0; this section carries the scout-discovery verdicts.
+- Inventory red dot RESOLVED (0755): the red dot on the base HUD Inventory icon (right edge, above the WORLD button) is explained by the Inventory's own badges. Opening the icon (tap [927,868]) shows the INVENTORY on the Special tab, which carries a red badge reading 1509. Inside Special, many individual items carry a small red dot (new/unopened items): the gold chest x240, the purple ? chest x1,169, the green gift box x2, the gold chest x42, the purple chest x1, the blue chest x2, the orange chest x1, the orange chest x1, and the gold chest in row 4, among others.
+- Special tab contents read live (selected item Amethyst Crystal x4,882; detail: "A rare ore produced by the Crystal Factory. Use to redeem items in the Crystal Shop."): a grey-blue crystal x248,600, chests x240 / x1,169 / x2 / x42 / x1 / x2 / x1 / x2 / x3 / x1, plus Lv.5, Lv.3 and Lv.2 chests in row 4. The other tabs (Resources, Speed-up, Heroes, Gear, Gift) were NOT opened in this unit - whether they carry their own dots is untested. The Special badge alone explains the icon dot.
+- Verdict: candidate REJECTED as a task - the Inventory red dot is an informational new-items counter, not a claimable reward with a deadline. No reward, cost, deadline or scoring attaches to viewing it. Same verdict class as the 99+ chat badge (0718). No execution unit is produced from it; the unopened chests are inventory the owner opens at will, and the 1509 badge will clear as items are used. No _activities_ entry is created for a rejected candidate; the resolution lives in this fold and in the open-questions update above. The detail pane's Use button was NOT tapped (read-only exploration; using an item is an action, not a read). No item was opened, used or redeemed.
+- Decoration Gallery sighted (0744, incidental): the mis-tap at [44,284] while grounding the research flask icon opened the Decoration Gallery (Overview tab), a surface NOT in the day observation file - a new candidate signal, appended to the day observation file by the unit. Collection Progress: UR 18/39, SSR 7/19, SR 4/4. Total Decor Combat Power 6,160,413. Bonuses: Hero Attack +5494, Hero Defense +810, Hero HP +172515, March Size +2, Increase Damage to Monsters +1.62%, Construction Speed +15.00%, Secret Mobile Squad Dispatch +3. Nothing was tapped inside the gallery; closed with the blue back arrow at [156,952]. The gallery contents are untested beyond this Overview read; exploration of its tabs belongs to a future scout pass, not to this fold.
+- Queue panels read live (0744, cross-read): building queue - Lv.29 Aircraft Center 2d 18:40:11 left, about two thirds full, slots 2-4 idle (folded in building-queues 1.1.0); research queue - Defense Training VIII completed and unpressed for want of an owning regular (Issue #513, tooling), Lv.1 Missile Mastery II 2d 02:29:17 left, about half full (folded in research-queue 1.1.0). Entry grounding: hammer icon tap [44,195] works; flask icon centre (59,249) - ground from a fresh crop, never re-tap the left-edge x (three misroutes at x 44-47).
+- Base HUD at entry (07:45 PT): food 542.1M, iron 866.8M, coin 44.2M, diamonds 6,077, hero EXP 13.22K, Total Power 149,217,331, stamina 120. Banner quest: "Upgrade Builder's Hut to Lv.26 (0/1)" - owner-only, not started.
+- Result stats: 0744 target learn-building-research-queue-state, achieved 1 (both panels read live), costs about 13 minutes; 0755 target explain-inventory-red-dot-mechanism, achieved 1, costs about 3 minutes; resources_gained none for both, no items spent, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 0804 scout-discovery units added - Transfer Surge, Survey Center and Age of Oil explored, full Events strip verified, Total Power re-read
+
+- Units scout-scout-discovery-2026-11-09-004 (about 08:12 to 08:23 local), -005 (about 08:24 to 08:28) and -007 (about 08:29 to 08:32) by ticker-0804, all status done; unit -006 is a duplicate of -005 with no separate findings, and units -008 and -010 were read from this pass's screens with no game time, also done. Evidence in `_records_/2026-11-09/season-ii-countdown-6d/0812-queue-run.md`, `_records_/2026-11-09/survey-center/0825-queue-run.md`, `_records_/2026-11-09/the-age-of-oil/0829-queue-run.md` and the appended section of `_records_/2026-11-09/perception-scout/observation.md` (commit b58fc31b6 on records/2026-11-09). The two unmatched labels from the 0606 pass (Age of Oil, Survey Center) are now both explored; the unmatched list stands empty after this pass.
+- Season II countdown RESOLVED (0812): the Season II countdown at the base right edge is the Transfer Surge entry. The right column reads, top to bottom: Events (badge 1), VS with a NEW tag and timer 09:38:20, then a map icon with blue and red pins labelled 6d 09:38:20. Tapping that map icon (normalized 919,276) opens TRANSFER SURGE. The 6d countdown is the Season II countdown the 0606 scout read at 6d 11:51:24; the VS timer shares its time-of-day component. The Transfer Surge page itself carries its own shorter timer, 3d 09:38:42 at last read.
+- Transfer Surge (0812): the cross-warzone transfer event for the Season II window. Home: Application Day 1/4, 11.09-11.13, timer 3d 09:44:42 at first read. Warzones #2085-#2096 shown Semi-open, with Ideal Environment, Easy Alliance Changes and Talk and Connect buttons (not tapped). Your Status and Follower 0/50 at the bottom. Details: Transfer Warzone Group (32): #2087 #2102 #2110 #2086 #2089 #2104 #2115 #2085 #2114 #2095 #2088 #2091 #2097 #2116 #2112 #2105 #2094 #2106 #2098 #2111 #2092 #2108 #2113 #2100 #2099 #2101 #2096 #2103 #2093 #2107 #2090 #2109. Each listing shows an alliance ad, a language, slot counts, "Requirements met" and an Apply button. No Apply button was tapped - applying is an owner-only decision. Transfer Guide, Event Time tab: Prep Day 11/1 18:00:00 ~ 11/8 18:00:00; Application Day 11/8 18:00:00 ~ 11/12 18:00:00 (current); Transfer Day 11/12 18:00:00 ~ 11/13 18:00:00; Display Stage 11/13 18:00:00 ~ 11/15 18:00:00. Transfer Guide, Transfer Tips tab: 1 Find the right Warzone; 2 Talk and apply; 3 Wait for approval and transfer; 4 A fresh start. Event Guidelines tab read in full (carry-over rules per activity - Alliance Duel personal and old Warzone Alliance points kept; Radar Tasks active progress kept; Secret Mobile Squad ongoing tasks transfer; Ghost Ops tasks in progress instantly completed on transfer, rewards by mail; Intercity Trade ongoing trucks and trains completed right away; Zombie Siege first Alliance join triggers no 48-hour cooldown, and if the event already started when you join, you cannot join this time; Individual Arms Race points carry over if the stage has not switched; Zombie Invasion monster summoning level progress and Courage Medals carry over; Armed Truck accumulated rewards retained; see the record for the full list).
+- Verdict (0812): NOT proposed as an executable regular - the only action it offers (Apply to transfer warzones) is a consequential owner-only move, leaving Warzone #2110 and the AP3x alliance. Filed as owner-decision Issue #514: whether Bears Lair should apply to transfer during Application Day, deadline 2026-11-12 18:00:00 UTC. No diamonds or money spent, nothing applied for, nothing used. The 6d base countdown keeps counting toward the Season II window end while Application Day runs.
+- Survey Center RESOLVED (0825): the feedback-survey hub in the Events hub (tab bar: ...Battlefield, Desert Battlefield, Wanted Boss with a red dot, Survey Center). Its page reads "Survey Center - We'd love to hear from you!" and carries one live entry: "Season II: Polar World Experience Survey", with a blue chest icon and a button that first read Go, then Proceed after one tap, with a red dot appearing on the card. No countdown is shown on the card. INSTRUCTIONS read in full: 1 When there are available surveys, the Survey Center will appear in Special Ops. 2 Click to proceed and fill out the survey through the provided link, then return to the Survey Center to claim rewards. 3 If you exit midway, return and click "Continue" to resume. 4 Each survey can only be submitted once; a revisit shows as completed. 5 Timed surveys disappear when the countdown ends. 6 Surveys without a countdown disappear 3 hours after completion. 7 If you complete the survey but do not claim the reward before it disappears, it will be sent via mail. Mechanism: the survey itself is filled out through an external link; the reward is claimed back in the Survey Center after completion (or mailed if unclaimed before the entry disappears). The live entry shows no countdown, so under rule 6 it is untimed before completion.
+- Survey Center blocker and correction (0825): the Proceed button did not respond to background input - two coordinate taps at (763,762), one click_element on the Proceed OCR control and one click_foreground attempt (rejected: no Accessibility Action ID for an OCR control) all produced no change, and the survey link never opened. The reward content for the Season II survey is therefore unmeasured. Correction, observed 08:29 in the next unit's session: the Proceed tap HAD worked, with a delay - at the next activation the frontmost app was Chrome showing "Season II: Polar World Experience Survey", i.e. the survey link opened in the owner's browser after the session ended. Nothing was filled in or submitted there; the page was left open for the owner.
+- Verdict (0825): candidate REJECTED as a routine task - completing a survey means answering feedback in the owner's voice, which is the owner's own action, not queue work; the agent's role is at most to notice a new survey. No survey was submitted, no reward claimed, nothing spent. Follow-up: none for this candidate. If the owner fills the Season II survey, the reward claim in the Survey Center (or its arrival by mail) is worth one check; no unit is staged for that.
+- The Age of Oil RESOLVED (0829): the leftmost tab of the Events hub (tab order: The Age of Oil, Arms Race, Winter Battlefield, Desert Battlefield, Wanted Boss, Survey Center, Community). The tab strip scrolls horizontally; two rightward drags on the strip were needed to bring it into view. Its page is the Season II warzone-progression event, on the same 6d countdown as the base Season II label (6d 09:28:43 at first read, 6d 09:28:16 at last read). A 4-stage track sits at the top (stage 1 active, stages 2-4 unlit) with a play button at the right (not tapped - read only, and a video control is out of scope for this unit).
+- Age of Oil goals (0829): three warzone-wide collective goal cards, each with a ranking icon at its right (not tapped). 1 Unlock Tech: The Age of Oil - "Complete a total of 500 Tech Research in this Warzone", progress 2383/500, bar full, a circular reward icon below the bar. 2 Unlock Stage: Base Expansion II - "Complete a total of 500 Building Upgrades in this Warzone", progress 10721/500, bar full, a green-arrows circular reward icon below the bar. 3 Hero Mobilization - "Perform a total of 10000 Hero Recruitments in this Warzone", progress 8833/10000, green bar not full, a gold chest icon at the card's right and a greyed hexagon icon below the bar. The first two goals are already exceeded by the warzone; the third is at 88% with about 6d 09:28 left. The goals count warzone-wide totals, not this account's own counts - the account's own research and building activity feeds them, but no personal target, reward amount or claim state was read: the reward icons below the cards were not tapped (read-only exploration), so whether the two completed goals carry a claimable warzone reward, and what it pays, is unmeasured. The Base Expansion II chest from Issue #477 stays unmeasured on that point.
+- Verdict (0829): NOT a routine executable task - the goals advance passively as the warzone plays, and there is no agent action to take on this page beyond watching the Hero Mobilization count; if the completed goals carry a claimable reward, that claim belongs to a future execution unit once the reward state is read, not to this exploration. No reward icon was tapped, nothing claimed, nothing spent. Follow-up: the two completed goals' reward claim state is the open question for a later unit (read the reward icons' state, claim if earned and free). No regular is proposed.
+- Full Events strip verified, Zombie tab absent (010): the full Events tab strip seen across this pass (Age of Oil, Arms Race, Winter Battlefield, Desert Battlefield, Wanted Boss, Survey Center, Community) carries no Zombie tab; the event ended 2026-10-30, no chain seeded; info-only note, candidate rejected as a task. This is the standing zombie rule re-confirmed on a full-strip read.
+- Total Power re-read (008): Total Power is a live HUD total, not a task - read 149,117,331 on this pass base screens (08:12, 08:29, 08:32); no reward, cost, deadline or scoring; candidate rejected as a task, same misclassification the 0606 scout already flagged. The figure is 100,000 below the 07:45 read of 149,217,331 (0744 unit, also 06:37); the cause is unestablished from these screens, recorded as read, not interpreted.
+- Result stats: 0812 target explain-season-ii-countdown-mechanism, achieved 1, costs about 11 minutes; 0825 target explain-survey-center-mechanism, achieved 1, costs about 4 minutes; 0829 target explain-the-age-of-oil-mechanism, achieved 1, costs about 3 minutes; 006 duplicate of 005, no game time; 008 and 010 read from this pass screens, no game time; resources_gained none for all, no items spent, verified yes (same-unit live reads for 004/005/007), blocker_category none.
+
+## What the 2026-11-09 0848 scout-discovery unit added - Builders Hut Lv.26 banner quest explored, 0606 unmatched list fully resolved
+
+- Unit scout-scout-discovery-2026-11-09-009 by ticker-0842, session cc-245, about 08:48 to 08:53 local, status done. Evidence in `_records_/2026-11-09/upgrade-builders-hut-to/0848-queue-run.md` (commit ec55aa585 on records/2026-11-09) and the day observation file. Observe-only throughout.
+- The Builders Hut banner quest from the 0606 pass is now explored: banner quest "Upgrade Builder's Hut to Lv.26 (0/1)" at the bottom left of the base screen above the HEROES button; tap pans the camera to the Builder's Hut (Lv.25) and selects it; green up-arrow opens the upgrade panel. Measured on the panel: Lv.25 to 26, Power 90,800 to 108,300, Free Construction Speed-up Time 00:20:00 to 00:22:00, Hero EXP 22.0M; cost Lv.26 Headquarters (met), Iron 170.0M, Food 56.9M; Original Time 15d 08:05:18, Upgrade button 7d 07:16:49; Finish Now 18,188 diamonds. No deadline or countdown seen; whether the banner quest pays a separate reward on completion is untested. Starting a building is owner-only - Upgrade NOT tapped, Finish Now NOT tapped; owner-decision Issue #517 filed. Building queue 1/4 at the time (Lv.29 Aircraft Center in progress). Full values folded in building-queues 1.2.0.
+- The 0606 unmatched list is now fully resolved: the Builders Hut quest was its last open item. unmatched_labels: none.
+- Corroboration from the 0926 survivors unit (mail read, not a scout read): the Season Closed system letter (2026-11-08 17:00:05) states Season II ended, season buildings removed, skill points returned - consistent with the 0812 Transfer Surge resolution.
+- Result stats: target explain-builders-hut-lv26-quest-mechanism-cost-time-rewards, achieved 1, resources_gained none, costs about 5 minutes, no items spent, no diamonds spent, verified yes (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 1104 scout-discovery units added - Survey Center learned read-only, survey-center-tab duplicate filing, Transfer Surge re-exploration duplicate
+
+- Unit scout-scout-discovery-2026-11-09-012 by ticker-1104, about
+  11:09 to 11:17 local, status done. Evidence in
+  `_records_/2026-11-09/survey-center/1117-queue-run.md` (commit
+  46d7110f on records/2026-11-09). The Survey Center candidate is now
+  learned read-only and has its own profile: survey-center 1.0.0 (6 of
+  7 fields, reward unmeasured, owner-gated). The day observation file
+  gained the Survey Center exploration section; unmatched_labels stays
+  none.
+- Unit 013 in the same pass (record
+  `_records_/2026-11-09/survey-center-tab/1120-queue-run.md`) is a
+  duplicate of unit 012: the scout diff filed the same Events hub tab
+  twice, once as the unmatched label "Survey Center" and once as the
+  events-surface tab "Survey Center tab". One entity, two units - a
+  diff filing quirk to watch when a new tab appears both as a label
+  and as a surface tab.
+- Unit scout-scout-discovery-2026-11-09-011 by ticker-1038, about
+  10:44 to 10:54 local, status done. Evidence in
+  `_records_/2026-11-09/season-ii-countdown-6d/1044-queue-run.md`
+  (commit d630be83 on records/2026-11-09). Transfer Surge confirmed
+  live in all 3 tabs, candidate rejected as a task; the mechanism has
+  its own rejected-candidate profile: season-ii-countdown-6d 1.0.0.
+  This unit re-explored the candidate after unit 004 (ticker-0804)
+  had already closed it - the pool staged a duplicate after closure,
+  a stale-pool re-production tracked in Issue #466. The deadline
+  discrepancy (issue #514 says the application phase ends 2026-11-12
+  18:00 UTC, the live countdown implies about 2026-11-13 02:00 UTC)
+  is flagged in the #514 comment for the retro to confirm.
+- Result stats: 1117 target learn-survey-center-profile-fields,
+  achieved 6 of 7, costs about 8 minutes; 1120 duplicate of 012, no
+  game session, costs about 3 minutes; 1044 target
+  explain-season-ii-countdown-mechanism, achieved 1, costs about 11
+  minutes; resources_gained none for all, no items spent, verified yes
+  (same-unit live reads), blocker_category none.
+
+## What the 2026-11-09 1134 scout-discovery units added - Age of Oil learned with ranking rewards, Total Power re-read, Zombie tab still absent, Decoration Gallery entry unreliable
+
+- Unit scout-scout-discovery-2026-11-09-014 by ticker-1134, about
+  11:36 to 11:46 local, status done. Evidence in
+  `_records_/2026-11-09/the-age-of-oil/1146-queue-run.md` (commit
+  d2df49670 on records/2026-11-09). The Age of Oil candidate is now
+  learned read-only and has its own profile: the-age-of-oil 1.0.0 (6 of
+  7 fields, Hero Mobilization chest unmeasured). Research Ranking
+  reward tiers measured in full, top 20 only; event ends about
+  2026-11-15 17:56 PT. The Base Expansion II icon is corrected - a
+  stage-info button with a Go popup, not a chest and not unresponsive
+  - which resolves the "chest unresponsive" half of Issue #477. The
+  day observation file gained the Age of Oil exploration section.
+- Unit scout-scout-discovery-2026-11-09-015 by ticker-1134, about
+  11:49 local, status done. Evidence in
+  `_records_/2026-11-09/total-power-149217331/1149-queue-run.md`
+  (commit d2df49670 on records/2026-11-09). Total Power 149,217,331
+  read live twice in the unit 014 session, unchanged, matching the
+  observation value - a known HUD figure, candidate rejected as a
+  task, tracked in Issue #482. 472,287 below the 2026-10-25 baseline
+  of 149,689,618; that delta does not match #482's 641,100 step-down
+  figure for 2026-11-08, so the step-down accounting stays open. No
+  game session was opened for this unit.
+- Unit scout-scout-discovery-2026-11-09-016 by ticker-1134, about
+  11:52 local, status done. Evidence in
+  `_records_/2026-11-09/zombie-invasion-tab-absent/1152-queue-run.md`
+  (commit d2df49670 on records/2026-11-09). Zombie Invasion tab still
+  absent from the Events hub tab bar, read end to end in the unit 014
+  session - the event is still ended, no chain seeded, per the
+  zombie-invasion no-seed rule. No game session was opened for this
+  unit.
+- Unit scout-scout-discovery-2026-11-09-017 by ticker-1134, about
+  11:58 local, status partial. Evidence in
+  `_records_/2026-11-09/decoration-gallery-overview-ur/1158-queue-run.md`
+  (commit d2df49670 on records/2026-11-09). The Decoration Gallery
+  entry was not re-located - the [44,284] point opened the MEGA
+  EXPRESS CONTRACT $99.99 offer popup instead (closed untouched).
+  Overview values are already measured by unit 002 and match the day
+  observation file exactly; the gallery now has its own profile:
+  decoration-gallery-overview-ur 1.0.0. Tabs beyond Overview stay
+  unmeasured; the successor must re-ground the entry fresh (R2).
+- Result stats: 1146 target learn-the-age-of-oil-profile-fields,
+  achieved 6 of 7, costs about 10 minutes; 1149 target
+  learn-total-power-profile-fields, achieved 1, costs about 3 minutes,
+  no game session; 1152 target learn-zombie-invasion-tab-absent,
+  achieved 1, costs about 3 minutes, no game session; 1158 target
+  learn-decoration-gallery-profile-fields, achieved 0, partial,
+  blocker_category c, costs about 3 minutes; resources_gained none for
+  all, no items spent, verified yes (same-unit live reads).
+- Red dot accounting (this pass): seen 1 (red "!" badge at the right
+  edge of the Events hub tab bar, in every Age of Oil screenshot),
+  explained 0. Unexplained 1 - the badge was not attributed to a tab.
+  Unknown items 1 - the Hero Mobilization gold chest.
+
+## What the 2026-11-09 1204 scout-discovery unit added - Builders Hut Lv.26 quest measured, upgrade panel X unresponsive
+
+- Unit scout-scout-discovery-2026-11-09-018 by ticker-1204, about
+  12:04 to 12:13 local, status done. Evidence in
+  `_records_/2026-11-09/upgrade-builders-hut-to/1204-queue-run.md`
+  (commit 6f18bc3be on records/2026-11-09). The Builders Hut Lv.26
+  banner quest is now measured on every field except the reward
+  (unshown) and the Upgrade-button time gap (unexplained), and has
+  its own profile: upgrade-builders-hut-to 1.0.0 (owner-only,
+  learn-only, waits on Issue #517). Cost Iron 170.0M + Food 56.9M +
+  Lv.26 HQ, all met; original time 15d 08:05:18, Upgrade button
+  7d 07:16:49; Finish Now 18,188 diamonds, read only. No reward
+  shown, no deadline.
+- Close blocker: the upgrade panel's X did not respond to background
+  clicks (two single taps, one double-click, one 1-second hold at
+  the grounded X point (820, 238), plus a tap on the dimmed map
+  outside the panel, all no-change) - the same background-click
+  resistant class as the zombie Store button. The panel was left open
+  at the unit's close; the left-edge swipe-back gesture verified by
+  the 1220 harvest unit is the working close for this panel class.
+- Result stats: target learn-builders-hut-quest-profile-fields,
+  achieved 1, resources_gained none, costs about 9 minutes of unit
+  time, no items spent, verified yes, blocker_category none, points
+  0, surfaces_walked base-screen-banner-quest-builders-hut-detail-
+  upgrade-panel, items_observed 1, red_dots_seen 0,
+  red_dots_explained 0, unexplained_red_dots 0, unknown_items 0.
+
+## What the 2026-11-09 1609 unit added - Inventory tabs read, HEROES-button correction, skull timer re-arms, banner quest rotated to Oil Well, partial
+
+- Unit scout-2026-11-08-1800 by ticker-1534, about 16:01 to 16:09 local, status partial. Stale scout-2026-11-08-1800 head executed live, store group - Inventory tabs; base and HUD re-read. Evidence in `_records_/2026-11-09/perception-scout/1609-queue-run.md` (commit a7a8ea6c28 on records/2026-11-09) and the appended section of `_records_/2026-11-09/perception-scout/observation.md`. Computer session cc-311. Observe-only throughout: nothing claimed, fought, dispatched, donated, dug or bought. The 5,000 Diamonds slider was read only; the Use button was never tapped.
+- Base screen and HUD, read live about 16:03: power 149,217,331 (unchanged from the 0606 read at 06:05); food 554.0M (was 540.1M), iron 879.2M (was 864.9M), coin 51.9M (was 42.9M); 13.22K with a plus button (identity as displayed, not asserted); stamina 80, rising to 81 by the 16:09 close; cart 6,137. VS timer 01:56:23, Season II countdown 6d 01:56:22. Building queue 1/4, research 1/2. Banner quest now reads "Build: Oil Well [0/1]" - the 0606 pass read "Upgrade Builder's Hut to Lv.26 [0/1]", so the banner quest changed during the day; owner-only either way, never started by a scout (see the upgrade-builders-hut-to 1.1.0 fold). President banner: "President HawksMav appointed ... as Secretary of Development!" (name partly obscured by the ticker). Resource bubbles standing on many buildings (food, coin, iron), observed only, harvest owns. Truck icon with a question marker at the left edge, as at 0606. Chat ticker: "Breaking News: Intense battle ...", "Cinmor: Ty", "TheGoldenEclipse: Thank you ...".
+- Total Power note: 149,217,331 at 16:03 and 16:09, against 149,317,331 read at the 1519 close (15:38) and the 1540 entry (15:40) - the value moves both ways by exactly 100,000 within the hour, so the step-down reading in Issue #482 is ruled out as a one-way move; either a transient plus-or-minus 100,000 component or a single-digit read artifact in the hundred-thousands place, both hypotheses open, commented on Issue #482 by this run; the retro arbitrates.
+- Skull timer, Issue #498, new datapoints: at about 16:03 the skull icon at the right edge read badge 1 with a 00:00:43 countdown; by the post-Inventory base read about 16:07 it was gone; at the 16:09 close it was back with badge 2 and a 00:00:23 countdown. The timer is short (tens of seconds), re-arms within minutes, and the badge increments. What it opens is still unidentified - the next scout unit should tap it while its timer is live. No zombie check was made in this unit (Events hub unwalked); no zombie chain seeded, per the standing rule that the event ended 2026-10-30 and no live return sighting exists.
+- Inventory, Special tab, read live about 16:04: Amethyst Crystal 4,882 (selected; "A rare ore produced by the Crystal Factory. Use to redeem items in the Crystal Shop."); blue crystal 251,400 (was 248,600 at the 0755 read); gold chest 240; purple-gold ? box 1,169; green gift box 2; gold chest 42; purple chest 1; blue chest 2; orange chest 1; purple chest 2; silver chest 3; orange chest 1; bottom row gold chest, Lv.5 chest, Lv.3 chest, Lv.2 chest (counts unread, below the fold edge). No red dot on any item in either tab read.
+- Inventory, Resources tab, read live about 16:05: diamond items by denomination - 5,000 x16 (selected; slider set to 16, Total 80.00K), 10.0K x4, 100 x934, 200 x15, 1.0K x1, 500 x13, 5 x1,417, 1 x2,500, 10 x129, 20 x20, 50 x125; resource crates 322 and more below the fold (counts unread). The 80K diamonds in the 5,000 items alone dwarf the 6,077 HUD diamond figure the 0606 pass read - the HUD figure and the item stock are different things; recorded as displayed, not reconciled.
+- Inventory red dot resolved: the base Inventory icon carried a red dot at entry (as at 0606) and carries none on the 16:09 close. Opening the panel cleared it; no badged item was found inside either tab. The 0606 unknown "Inventory dot contents" closes as a new-item indicator cleared by opening, not as a claimable item. (The 0755 Special-badge mechanism stands as what the dot counts when unopened items exist; the tab badge count was not re-read in this unit.)
+- Hero List, encountered about 16:08 by a mis-tap: the tap aimed at the bottom-left gold icon (the 0606 pass's "VIP red dot bottom left") opened HERO LIST, not VIP. CORRECTION: that icon is the HEROES button and its red dot is the hero-upgrade dot - the list shows 8 red-dotted hero cards. The VIP panel entry point is still ungrounded; the 0606 "VIP red dot" reading is corrected to the heroes dot (see the correction note in the 0606 section above). Hero List, All tab: 16 heroes visible - Lv.150 x10, Lv.146 x1, Lv.145 x1, Lv.140 x1, Lv.125 x1, Lv.124 x1, all 5-star. Red dots on 8 cards (upgrade available, observed only). Recruit Heroes and Recommend buttons at the bottom, not tapped. Back arrow at norm 136,930 returned to base at once (the first tap at 103,937 clipped the portrait icon below the arrow and did nothing - re-ground the arrow fresh every unit).
+- Closing base read about 16:09: power 149,217,331, food 554.0M, iron 879.2M, coin 51.9M, stamina 81, cart 6,137, VS timer 01:51:12, Season II 6d 01:51:12. Events badge 1, Mail red dot, Alliance red dot, radio badge 4, 99+ chat badge all still showing. Game left on the base screen.
+- Red dot accounting: seen 19 badge signals (Events 1, Mail 1, Alliance 1, radio 4, Inventory 1 at entry, skull 2 at close, hero-list red dots 8, 99+ chat badge 1). Explained 16: Inventory 1 (cleared by opening, no badged item inside), radio 4 to the help regular, Events 1 to the Wanted Boss dot (0606 carry), Mail 1 to unread Event mail (0606 carry), Alliance 1 to the queued alliance units, hero-list 8 to hero upgrade availability (observed only). Unexplained 3: skull badge 2 (Issue #498, re-armed datapoint above), 99+ chat badge (mechanism resolved per the 0718 update - unread Alliance chat count; this unit did not open chat, so it stays standing, not re-explained in-unit).
+- Unknown items carried: skull timer identity and recurrence (Issue #498), the 13.22K second-row figure identity, the 99+ badge meaning (resolved per 0718, carried as standing), the VIP panel entry point (still ungrounded), the Oil Well banner quest change since 06:05 (owner-only, unmeasured - a later scout-discovery unit measures it).
+- Unwalked, carried: scout-store remainder - Mall strip (tabs and prices), VIP panel, passes, daily missions list. Duel page and radar panel also unwalked today. No successor unit is enqueued from this unit: the current reset day's scout work continues through the scout-midday unit already in inbox; a stale-chain successor would duplicate it, per the ticker-0436 precedent.
+- Result stats: surfaces_walked 3 (base/HUD, Inventory, Hero List encountered), items_observed 37, red_dots_seen 19, red_dots_explained 16, red_dots_unexplained 3, unknown_items 5, resources_gained none, observation only.
+
+
+## What the 2026-11-09 1657 sweep read added - base/HUD re-read, skull badge 4, alliance red dots
+
+- Read, not a scout unit: the zero-sweep 001 unit (ticker-1635) re-read the base and HUD live about 16:47 to 16:57 local. Evidence in `_records_/2026-11-09/daily-activities/1657-queue-run.md` (commit c9a86fa74 on records/2026-11-09). Observe-only throughout: nothing claimed, fought, dispatched, donated, dug or bought.
+- Base screen and HUD, read live about 16:47: power 149,217,331 (unchanged from the 1609 read at 16:03); food 556.6M, iron 881.6M, coin 53.6M (unchanged from the 1623 close at 16:23); diamonds 6,137; stamina 87, rising to 88 by the 16:57 close; VIP points 13.22K. VS timer 01:15:42, Season II countdown 6d 01:15:42. Building queue 1/4, research 1/2. Banner quest still reads "Build: Oil Well [0/1]" - re-confirmed since the 1609 rotation.
+- Skull timer, Issue #498, new datapoint: at about 16:56 the skull icon at the right edge read badge 4 with a 00:00:37 countdown. Badge 4 is new in the sequence (1, 2, 3, 1, 3 across the 1609 and 1623 units, now 4). The timer is short (tens of seconds), re-arms within minutes, and the badge does not count down monotonically. What it opens is still unidentified - the next scout unit should tap it while its timer is live. No zombie check was made in this unit (Events hub unwalked); no zombie chain seeded, per the standing rule that the event ended 2026-10-30 and no live return sighting exists.
+- Red dots seen: Alliance Help, Gifts, Techs and Events all carry red dots; Mail carries a red dot. Each maps to its owning regular; no new explanation is offered here. Resource bubbles standing on many buildings (harvest owns), two survivors with "?" bubbles at the gate (survivors owns), donations footer 3,300 (donations owns).
+- Total Power note: 149,217,331 at 16:47, unchanged from the 1609 read - no new movement to report against Issue #482.
+- Unwalked, carried: the sweep-002 list (trucks counters, train station, Arms Race phase, daily missions 160/200, radar pins, duel total, events tabs, crystal, glittering market) is the next pass's work, not this unit's.
+- Result stats: surfaces_walked 1 (base/HUD), resources_gained none, observation only.

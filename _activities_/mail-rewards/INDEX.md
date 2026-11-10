@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T05:32:17Z
+modified: 2026-11-10T18:32:17Z
 level: L1
-version: 1.25.0
+version: 1.35.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -32,6 +32,15 @@ grounded_in:
   - source: ticker-1727 mail-rewards execution record 2026-11-07 1740 queue run (done, all six claimable categories checked, nothing claimable; record commit 69997e12a1 on records/2026-11-07)
   - source: ticker-2006 mail-rewards execution record 2026-11-07 2028 queue run (done, Alliance Daily Donation Rankings and 3 Event mails claimed, other categories clear by list read, verified clean after claims; record commit e9bf320c92 on records/2026-11-07)
   - source: ticker-2034 mail-rewards execution record 2026-11-07 2052 queue run (done, Alliance and Event Claim All answered "No rewards available", nothing claimed, envelope grounded at norm 936,790, "Unclaimed -Daily Task- Reward" is notification-only; record commit 7a4a104930 on records/2026-11-07)
+  - source: ticker-2119 mail-rewards execution record 2026-11-08 2132 queue run (done, Alliance and Event mail claimed in full, 10 mails, Claim All both categories; record commit fe08a0907 on records/2026-11-08)
+  - source: ticker-0113 mail-rewards execution record 2026-11-09 0138 queue run (partial, Alliance and Event Claim All both "No rewards available", System/Regular/Battle Report not walked, leader row Jerry Apex read live on the Alliance page, Mail button flaky entry (652,793), VIP daily freebie flag; record commit c0ebf0c4f0 on records/2026-11-09)
+  - source: ticker-0404 mail-rewards execution record 2026-11-09 0421 queue run (done, all three red-dot categories walked, no claimable attachments, envelope opened at once with no Alliance-first workaround; record commit 9fdcc4c9ee on records/2026-11-09)
+  - source: ticker-1004 mail-rewards execution record 2026-11-09 1031 queue run (partial, Event and Alliance Claim All both "No rewards available", six train mails carry no attachments, Battle Report/System/Regular not walked, Mail entry (932,791) windowed first try; record commit 09e4f0863 on records/2026-11-09)
+  - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, Mail red dot standing, three categories unopened; record commit c9a86fa74 on records/2026-11-09)
+  - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, 9 reward mails claimed, Alliance Event System Claim All, leadership transfer to Abyss Apex, Issue 230 entry datapoint, power 146736949; record commit 6761c35d1 on records/2026-11-09)
+  - source: ticker-0134 mail-rewards execution record 2026-11-10 0143 queue run (done, Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed; record commit e3d186a38 on records/2026-11-10)
+  - source: ticker-0334 mail-rewards execution record 2026-11-10 0355 queue run (done, Claim All sweep, no claimable rewards, R5 warning mail read; record commit b7e79a62 on records/2026-11-10)
+  - source: ticker-0904 mail-rewards execution record 2026-11-10 0929 queue run (partial, entry blocked by camera framing, Mail panel never opened, fourth unit this reset day with the same blocker, Issue #580; record commit 31892dde on records/2026-11-10)
 ---
 
 
@@ -47,6 +56,7 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
 ## How to enter
 
 - Base screen, Mail button on the right rail (envelope icon).
+- Entry, windowed (2026-11-09 1031): the Mail button tap at the freshly grounded centre (932,791) in windowed 642x951 opened Mail at once - windowed background clicks reach the game, unlike the fullscreen Alliance taps in the sibling 1019 help unit. The point still drifts per session, so re-ground fresh each unit (Issue #230).
 - The category rail, top to bottom, reads - Battle Report, Alliance,
   Event, Season, System, Regular, In-app Purchases (corrected
   2026-11-01 by the 1730 unit; the earlier list omitted Event and
@@ -840,3 +850,116 @@ the next tick re-produces this regular as a fresh unit.
 - Battle Report, Season, System and Regular were not opened: no red dots stood on them, and the metadata records them as reports-only. Delete All was never pressed anywhere.
 - Figures read live on screen: power 149,850,353 at entry and at close; food 478.8M, iron 802.1M, coin 6.9M. No diamonds, money, speedups or paid buttons were used. No other task type was executed in this unit. No login or verification was demanded, and no different-device dialog appeared.
 - Result statistics: target 2, achieved 2, resources_gained none, costs about 4 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-08 2132 unit added - Alliance and Event mail claimed in full, 10 mails
+
+- Unit mail-2026-11-08-1830 by ticker-2119, about 21:28 to 21:32 local, status done. Evidence in `_records_/2026-11-08/mail-rewards/2132-queue-run.md` (commit fe08a0907 on records/2026-11-08). All claimable mail claimed.
+- Alliance - Claim All: five mails, all 3h ago, all with gift icons before the claim - Daily Donation Rankings; Weekly Donation Ranking; 3v3 Brawl, Major's Gift (three times). CONGRATULATIONS popup items as read from the zoomed screenshot (icon, count at bottom-right; a top-left number reads as the item denomination where present, that reading is the unit's inference): blue medal 750, iron crate 30, gold chest 240, food crate 30, gold badge 500 x2, coin chest 30, EXP crate 30, red gem 50, gold badge 50 x4. Verified after dismissing the popup: the gift icons are gone from all five mails (envelopes show opened), and the Claim All button lost its red dot. The New Alliance Marker mail below them never carried a gift icon.
+- Event - Claim All: five mails with gift icons before the claim - "Weekly Pass" Unclaimed Reward (2h ago); Unclaimed VIP Daily Level Reward; Unclaimed Event Reward (3h ago); Alliance Star Scratch Card Reward (3h ago); Season Resource Conversion (4h ago). CONGRATULATIONS popup items as read from the zoomed screenshot (same two-number reading): gold puzzle piece 2, green gift box 2, gold badge 500 x1, red gem 1.5K, gold badge 50 x1, EXP book 1.0K x3, coin chest 13, food crate 13, iron crate 13, grey steel blocks 4, EXP book 100 x2.6K, red gem 10 x2. Verified after dismissing the popup: the gift icons are gone from all five mails, and the Claim All button lost its red dot. The [AP3x] Missile Apex's train mail (13h ago) never carried a gift icon. The scrolling alliance-appointment banner at the top of the Event list is informational only.
+- Not opened: Battle Report, System, Regular - no gift icon on their category rows, so nothing claimable by the gift-icon indicator; not opened this unit. In-app Purchases keeps its red dot, but it holds receipts only, nothing to claim. Category-level re-check after both claims: no category row shows a gift icon.
+- Note, against the 2052 unit's "Unclaimed" finding: the 2052 "Unclaimed -Daily Task- Reward" mail was notification-only (no attachment claimable through Claim All), but this unit's "Unclaimed" mails (Weekly Pass Unclaimed Reward, Unclaimed VIP Daily Level Reward, Unclaimed Event Reward) DID carry claimable attachments, verified by the popup items and the cleared gift icons. "Unclaimed" in a mail title does not by itself mean notification-only - the gift icon on the row is the indicator.
+- Red lines held: Delete All never pressed, no diamonds or money spent, no mail deleted, no other unit's work touched.
+- Result stats: target 10, achieved 10, resources_gained alliance 5 mails plus event 5 mails, popup items as listed above, costs 5 minutes, no items spent, verified yes.
+
+## What the 2026-11-09 0138 unit added - Alliance and Event Claim All no rewards, System/Regular/Battle Report unwalked, leader row Jerry Apex, Mail button flaky
+
+- Unit mail-2026-11-08-2230 by ticker-0113, about 01:20 to 01:38 local, status partial. Evidence in `_records_/2026-11-09/mail-rewards/0138-queue-run.md` (commit c0ebf0c4f0 on records/2026-11-09).
+- Mail home read live at entry: red dots on Alliance, Event and In-app Purchases. Note under the list - mails older than 30 days are deleted automatically.
+- Alliance list read live: Leadership Transfer Notice (red, 2h ago) - "Jerry Apex has become the new Alliance..." (full text not opened); Daily Donation Rankings (7h ago); Weekly Donation Ranking (7h ago); 3v3 Brawl Major's Gift x3 (7h ago). Claim All pressed - toast "No rewards available.", nothing claimed.
+- Event list read live: "[AP3x] DCna8ive's train has arrived" (train arrival); "[AP3x] Missile Apex's Mega Ex..." (3h ago); "[AP3x] DCna8ive's train has departed" (3h ago); "Weekly Pass Unclaimed Rewards" (6h ago); "Unclaimed VIP Daily Level Rewards" (7h ago). Claim All pressed - toast "No rewards available.", nothing claimed. The two "Unclaimed" mails read as notifications, not claimable attachments - consistent with the 2132 gift-icon rule (neither carried a gift icon here; "Unclaimed" in a title does not by itself mean notification-only, the gift icon on the row is the indicator).
+- Leadership change, read live: the Alliance page was opened once as a navigation check and its leader row reads Jerry Apex (previously Texan Apex per the repo), [AP3x] The Apex, 96/100 members. The Leadership Transfer Notice itself was not opened in full, so the transfer mechanics are not asserted - only the live leader row and the preview line. The next alliance-facing unit should confirm the leader row again live.
+- Mail entry, flaky (Issue #230 evidence): the Mail button itself did not respond to five background taps at two grounded points ((707, 792) twice, (650, 791) single and double, manual mouse press) and only opened on a later tap at (652, 793) after the Alliance page had been visited. The entry point is flaky and the next mail unit should re-ground it fresh rather than reuse a stale point. Commented onto Issue #230 by this run.
+- VIP flag, for the vip regular (not this unit's work): the "Unclaimed VIP Daily Level Rewards" mail (7h ago) suggests the VIP daily freebie may still be unclaimed - the vip unit in the inbox should check the VIP screen, not the mail.
+- What was not done: System, Regular and Battle Report categories were not walked in this unit (unit cap reached at the Event Claim All). Per queue rule R7 they are the first action of the next mail unit. In-app Purchases was not opened (receipts only, nothing to claim, per the activity metadata).
+- Figures read live: power 149,209,253; food 513.8M, iron 838.3M, coin 25.2M, diamonds 6,027. No diamonds or money spent. Delete All never pressed. No mail deleted. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 5, achieved 2, resources_gained none, costs about 15 minutes of unit time, no items spent, verified yes, blocker_category c.
+
+## What the 2026-11-09 0421 unit added - all three red-dot categories walked, no claimable attachments, envelope opened at once (no Alliance-first workaround)
+
+- Unit mail-2026-11-09-0230 by ticker-0404, about 04:19 to 04:21 local, status done. Evidence in `_records_/2026-11-09/mail-rewards/0421-queue-run.md` (commit 9fdcc4c9ee on records/2026-11-09). Computer session cc-220 on the owner Mac mini.
+- Entry: Mail envelope button grounded fresh at norm 931,790 on the base screen and tapped once; the Mail home opened at once (no Alliance-first workaround needed this unit, unlike the 0138 unit - the workaround is a fallback, not the entry route).
+- Mail home red dots: Event, Regular, In-app Purchases. Battle Report, Alliance, System and Favorite carried no red dot.
+- Event list: [AP3x] Missile Apex's train has... (22m ago, unread); [AP3x] Abyss Apex's Mega Exp... (2h ago, unread); [AP3x] Missile Apex's train has... (2h ago, unread); [AP3x] DCna8ive's train has a... (4h ago); [AP3x] Missile Apex's Mega Ex... (6h ago); [AP3x] DCna8ive's train has d... (6h ago). A new train mail arrived at the top during the visit (12m ago at the Claim All read). Claim All tapped at norm 746,948: toast "No rewards available." Nothing claimed. These are notification mails, not claimable attachments.
+- Regular list: battle reports - Victory vs Lv.57 Doom Elite and similar, 1d ago and older. Claim All tapped at norm 746,948: toast "No rewards available." Nothing claimed.
+- In-app Purchases list: receipts only, as the profile states - 2026-11-08 10:53:07, Pack purchased: Drone Great Value Pack; 2026-11-07 18:42:14, Pack purchased: Gear Master Pack. Claim All was not pressed here: the list holds receipts only, nothing to claim.
+- Delete All was not pressed in any category. Nothing was deleted. Back arrow returned the game to the base screen. The game was left on the base screen. No diamonds or money spent.
+- Result stats: target 3, achieved 3, resources_gained none, costs 2m_wall_no_stamina, verified yes, categories_walked 3, claimed 0, device_takeovers 0. 0 claimed is the complete result, not a miss.
+
+## What the 2026-11-09 1031 unit added - Event and Alliance Claim All no rewards, train mails carry no attachments, partial
+
+- Unit mail-2026-11-09-0630 by ticker-1004, about 10:23 to 10:31 local, status partial. Evidence in `_records_/2026-11-09/mail-rewards/1031-queue-run.md` (commit 09e4f0863 on records/2026-11-09).
+- Entry: Mail opened from the base screen in windowed 642x951 mode - the Mail button tap at the freshly grounded centre (932,791) worked at once. Windowed background clicks reach the game, unlike the fullscreen Alliance taps in the sibling 1019 help unit. Entry point still drifts per session; re-ground fresh each unit (Issue #230).
+- Event category (red dot on entry): six train mails - Abyss Apex 2h and 4h ago (unread, red dots), Missile Apex 6h ago, Abyss Apex Mega Express 8h ago, Missile Apex 8h ago, DCna8ive 10h ago. Claim All answered "No rewards available." The two red dots cleared and the envelopes show opened afterwards - the train mails carry no claimable attachments.
+- Alliance category: leadership notice (11h ago), Daily Donation Rankings, Weekly Donation Ranking (16h ago), Major's Gift, 3v3 Brawl. Claim All answered "No rewards available." again - no claimable attachments in Alliance either.
+- What was not done: Battle Report, System and Regular were not opened this cycle. On 2026-10-25 they held reports only, but no live read was taken today, so the unit closes partial and the next mail unit resumes with those three categories (queue rule R7).
+- No mail deleted; Delete All never touched. No diamonds or money spent. No other unit's work touched.
+- Result stats: target 1, achieved 0, resources_gained none, costs about 8 minutes of unit time, no items spent, verified yes, blocker_category h, points 0.
+
+## What the 2026-11-09 1657 sweep read added - Mail red dot standing, three categories still unopened today
+
+- Read, not a mail unit: the zero-sweep 001 unit (ticker-1635) read the Mail icon live about 16:47 local. Evidence in `_records_/2026-11-09/daily-activities/1657-queue-run.md` (commit c9a86fa74 on records/2026-11-09). No mail was opened in this read.
+- Mail carries a red dot. Battle Report, System and Regular categories are still unopened today (Event and Alliance answered "No rewards available." at 10:31 per the 1031 unit). The next mail unit resumes with those three categories (queue rule R7, carried from the 1031 unit) - the mail-1430 unit was raised to priority 1 by this sweep. (2026-11-09 1838 update: the mail-1430 unit ran 18:29-18:38 and walked all three - System claimed the Season Closed gift, Regular and Battle Report held reports only. The R7 carry is closed.)
+- No mail deleted; Delete All never touched. No diamonds or money spent.
+
+## What the 2026-11-09 1838 unit added - 9 reward mails claimed, Alliance/Event/System Claim All, leadership transfer to Abyss Apex, entry (935,797)
+
+- Unit mail-2026-11-09-1430 by ticker-1822, about 18:29 to 18:38 local, status done. Evidence in `_records_/2026-11-09/mail-rewards/1838-queue-run.md` (commit 6761c35d1 on records/2026-11-09). Computer session on the owner Mac mini. The 1657 sweep's R7 carry is closed by this unit: Battle Report, System and Regular are all walked here.
+- Base screen at 18:33: Total Power 146,736,949; Coin 56.3M, Bread 560.7M, Iron 884.6M (top bar). Power datapoint for Issue #482: 146,736,949 is 6,000 ABOVE the radar unit's 146,730,949 at about 17:53 - the day's fall has levelled at the close, not continued. Commented on Issue #482 by this run.
+- Entry, Issue #230 evidence: on entry the game still showed a leftover CONGRATULATIONS popup from the 17:54 radar claim (Radar x10, EXP 1.7M, x800, Bread 885.6K, Coin 136.8K) - observed, not claimed by this unit; dismissed with one tap below the popup. The Mail button: first tap at (935, 820) showed no change; a second tap at the freshly measured icon centre (935, 797) opened Mail. Background clicks reach the game in windowed 642x951 mode, but the first tap can land without effect - the entry point drifts per session, re-ground fresh each unit. Commented onto Issue #230 by this run.
+- Alliance: Claim All claimed 5 mails - Daily Donation Rankings (29m ago), Zombie Siege Report (Alliance) and (Individual) (45m ago), Defense Success Reward (57m ago), [Alliance Exercise] Alliance Reward (3h ago). Rewards read live: Coin 12.1M, Bread 19.0M, Iron 19.0M, 5m speedups x24, x31, x18, x33 and x14, 1m speedups x225 and x225. The popup top row was partly hidden behind the banner (147.0M, 30.0K, 4.0K, 400 with icons obscured) and is recorded as read, labels unverified.
+- Event: Claim All claimed 3 mails - Duel Progress / Alliance Duel Individual Reward (29m ago), Daily Participation Rewards (29m ago), Arms Race Ranking Reward (32m ago). Rewards read live: EXP item x30, Coin 30.0K x50, Bread 50.0K x50, coin bags x69, bread chest x69, iron chest x69, blue crystal 1.5K, Lv.2 chest x2, red gems 10 x5 and 50 x4. Top row again partly hidden behind the banner, recorded as read only. The Arms Race Ranking Reward arriving by Event mail is folded into arms-race 1.71.0 - ranking chests are claimed via Event mail, not on the phase page.
+- Battle Report: 6 Victory reports vs Lv.15-20 Zombie Horde (48m to 54m ago), reports only, no attachments. Regular: battle reports only (Lv.1 CL-7 Victim 4h ago, Lv.1 and Lv.57 Doom Elite 2d ago), no attachments.
+- System: Season Closed (1d ago) carried a gift icon; Claim All answered REWARD CLAIMED with red gems x50. Other System mails are notices only (President Mail transfer updates, Pack and Event Adjustment, Server 2110, Maintenance Completed).
+- Leadership Transfer Notice in Alliance: Abyss Apex has become the new Alliance leader (title cut off on screen). Confirmed on the Alliance panel in the sibling 1842 gifts unit (Leader Abyss Apex, Power 13,577,450,619, Members 96/100). CORRECTION: the leader was Jerry Apex at the 0417 gifts read - the 0417 section's leader line is superseded as of this read. Scrolling banner: President HawksMav appointed YOUGO^Apex Secretary of Defense and another member Secretary of Science; the gifts unit also saw NERO appointed Secretary of Interior. Alliance news, no action.
+- Favorite was not opened: no gift icon and no red dot on the category list.
+- No mail deleted; Delete All never touched. No diamonds or money spent.
+- Result stats: target 9, achieved 9, resources_gained Coin 12.1M plus Coin 30.0K x50, Bread 19.0M plus Bread 50.0K x50, Iron 19.0M, red gems 50 plus 10 x5 and 50 x4, EXP item x30, speedups 5m x106 and 1m x450, coin bags x69, bread chest x69, iron chest x69, blue crystal 1.5K, Lv.2 chest x2, costs about 9 minutes of unit time, no items spent, verified yes, points 0.
+
+## What the 2026-11-09 2129 unit added - done, Event Weekly Pass rewards claimed, other categories reports only
+
+- Unit mail-2026-11-09-1830 by ticker-2109, about 21:26 to 21:29 local, status done. Evidence in `_records_/2026-11-09/mail-rewards/2129-queue-run.md` (commit 88c1abf8e on records/2026-11-09).
+- Mail category list: Battle Report (red dot), Alliance, Event (gift icon), System, Regular, In-app Purchases (red dot, receipts only), Favorite.
+- Event: Claim All claimed the "Weekly Pass" Unclaimed Rewards mail (2h ago) - REWARD CLAIMED popup showed red gem x10 and white crystal x4, the only two items on the popup. After the claim its gift icon was gone and its envelope showed read. The other Event rows are reports with no attachments: Duel Progress (Alliance Duel Individual Reward, 3h ago), Daily Participation Rewards (3h ago), Arms Race Ranking Reward (3h ago), two [AP3x] Abyss Apex train arrival mails (13h and 15h ago).
+- Alliance: Claim All pressed, no change - nothing claimable. Rows are Daily Donation Rankings (3h ago), Zombie Siege Report (Alliance) and (Individual) (3h ago), Defense Success Reward (3h ago), [Alliance Exercise] Alliance Reward (5h ago), Leadership Transfer Notice - Abyss Apex has become the new Alliance leader (18h ago).
+- System: Claim All pressed, no change - notices only (Season Closed, President Mail, Server 2110 notice, Maintenance Complete). Regular: Claim All pressed, no change - Victory battle reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Battle Report: Claim All pressed, no change - 6 Victory reports vs Lv.15-20 Zombie Horde (3h ago), reports only.
+- No mail deleted anywhere; Delete All never touched. Returned to the base screen.
+- Result stats: target 1, achieved 1, resources_gained Event "Weekly Pass" Unclaimed Rewards mail - red gem x10, white crystal x4 (as shown on the REWARD CLAIMED popup), costs about 4 minutes of unit time, no items spent, verified yes, points 0.
+
+## What the 2026-11-10 0143 unit added - Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed, session drop recovered
+
+- Unit mail-2026-11-09-2230 by ticker-0134, 01:43 to 01:46 local, status done. Evidence in `_records_/2026-11-10/mail-rewards/0143-queue-run.md` (commit e3d186a38 on records/2026-11-10). Computer session cc-373 dropped mid-unit (observe returned observation_unavailable); session cc-374 started and LastWar re-selected, no game state lost - a further Issue #282 device-channel datapoint; commented on #282 by this run.
+- Mail category list at entry: red dots on Alliance, Event and In-app Purchases.
+- Alliance: six "New Alliance Assembly Point" mails, all 1h ago. Claim All answered "No rewards available."
+- Event: three unread notices ([AP3x] KaBoom420's train, [AP3x] Abyss Apex's Mega Exp..., second train mail) plus three read mails ("Weekly Pass" Unclaimed Rewards 6h ago, Duel Progress Alliance Duel Individual Reward 7h ago, Daily Participation Rewards 7h ago). Claim All marked the three unread mails read and showed no reward summary. The "Weekly Pass" mail was opened to verify: its two reward icons (red gem x10, grey item x4) both carry green checkmarks, dated 2026-11-9 18:47:54 - already claimed, no claim button. This corroborates the 18:47 pass claims (shop-claims 1850); the Duel Progress mail at about 18:43 (7h before 01:43) is consistent with the about-18:00 duel rollover (Issue #242). One tap on that mail row first returned a spurious "target app exited" error; the next observe showed the mail open normally - the app never exited. A spurious exit error on a mail-row tap is recorded here: re-observe before acting on it.
+- System: "Season Closed", President Mails, "Maintenance Complete". Claim All answered "No rewards available."
+- Regular: victory reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Claim All answered "No rewards available."
+- Battle Report: Zombie Horde victory reports Lv.15 to Lv.20, 7 to 8h ago. Claim All answered "No rewards available."
+- In-app Purchases (receipts only) and Favorite were not opened; no claimable attachments live there per the activity metadata.
+- Delete All was never pressed; the per-mail trash button in the Weekly Pass detail was not pressed either.
+- Outcome: no claimable mail rewards in any category this round. Nothing claimed, nothing deleted. Returned to the base screen. No diamonds or money spent.
+
+## What the 2026-11-10 0355 unit added - Claim All sweep, no claimable rewards, R5 warning mail read
+
+- Unit mail-2026-11-10-0230 by ticker-0334, 03:55 to 03:58 local, status done. Evidence in `_records_/2026-11-10/mail-rewards/0355-queue-run.md` (commit b7e79a62 on records/2026-11-10). Computer session cc-394 on the owner Mac mini.
+- Mail category list at entry: red dots on Alliance, Event, System and In-app Purchases; none on Battle Report, Regular or Favorite.
+- Alliance: one "Attention" mail (R5, 1h ago) plus five "New Alliance Assembly Point" mails (3h ago). Claim All showed no reward summary. The Attention mail was opened to verify: a text-only announcement from Abyss Apex, dated 2026-11-10 01:59:02, warning that a few people will leave the server in the next few days and might target the alliance as they leave; it asks members to keep troops away from the walls for the next few days unless participating in an event, to garrison each other if attacked while awake and active, and to save energy and resources for upgrades. No rewards attached, no claim button. No reply was sent and no action was taken on it; it is recorded here as alliance information.
+- Event: train notices ([AP3x] Abyss Apex's Mega Exp..., [AP3x] KaBoom420's train) plus "Weekly Pass" Unclaimed Rewards. Claim All marked the unread mails read and showed no reward summary (the Weekly Pass rewards were already claimed on 2026-11-9, per the 0143 unit).
+- System: "Planned Update Notice" (46m ago), "(President Mail) Transfer Update" (19h ago), "Season Closed" (1d ago), "(President Mail) 2110 | Transfer..." (3d ago), "Pack and Event Adjustment Notice" (4d ago), "(President Mail) Server 2110 ..." (5d ago). Claim All showed no reward summary.
+- Regular: victory reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Claim All showed no reward summary.
+- Battle Report: Zombie Horde victory reports Lv.15 to Lv.20, 10h ago. Claim All showed no reward summary.
+- In-app Purchases (receipts only) and Favorite were not opened; no claimable attachments live there per the activity metadata.
+- One spurious "target app exited or restarted" error appeared on a back tap between System and Regular; the next observe showed the System list open normally - the app never exited (same spurious error as in the 0143 unit). Re-observe before acting on a spurious exit error.
+- Delete All was never pressed.
+- Outcome: no claimable mail rewards in any category this round. Nothing claimed, nothing deleted. Returned to the base screen. No diamonds or money spent.
+
+## What the 2026-11-10 0929 unit added - entry blocked by camera framing, Mail panel never opened, partial
+
+- Unit mail-2026-11-10-0630 by ticker-0904, about 09:25 to 09:29 local, status partial. Evidence in `_records_/2026-11-10/mail-rewards/0929-queue-run.md` (commit 31892dde on records/2026-11-10). Computer session cc-429 on the owner Mac mini (cc-428 dropped between units, recovered).
+- Entry attempt 1: Mail envelope tap at the fresh measured centre (931,757) on the standard base framing delivered as a camera pan, not a button tap - the Mail panel never opened, and the view jumped to a panned framing (Drill Ground Lv.25, "15:26" timer) with the right rail (Mail, Alliance, Inventory, WORLD) off-frame. This is the background-input tap-delivers-as-drag failure mode the 0304 pass named the same morning.
+- Recovery attempt 1: drag from (200,500) to (450,500) moved the camera back toward the standard framing (top HUD and HQ back in view) but still panned down-left, right rail still off-frame.
+- Recovery attempt 2: reverse drag from (450,500) to (200,500) moved the camera back to the panned-right framing (Drill Ground Lv.25, "15:27"). The two drags oscillate between two panned framings; neither restores the right rail.
+- Per queue rule R2, the entry attempts stop here: no further blind taps or drags inside this unit. The Mail panel was never opened, no category was swept, nothing was claimed, nothing was deleted.
+- Blocker: camera framing (audit class c/e - tap method / repeated blocker): background-input taps intermittently deliver as map drags, and the base camera then sits in a panned state where the fixed right-rail shortcut column is off-frame. This is the fourth unit this reset day with the same blocker (the 0304 pass's radar, survivors and donations units), so it is a repeated failure mode, not a one-off. Filed as GitHub issue #580 (play) from this record.
+- LESSON: the next mail unit must reset the camera framing first (the standard framing WAS present at 09:14 this pass, so the framing changes between passes) or find a Mail entry that does not depend on the right rail.
+- No diamonds or money spent, no mail claimed or deleted (Delete All never pressed, Claim All never reached), no building or research started. The trucks screen was not re-entered in this unit.
+- Result stats: target all mail categories swept, claimable rewards claimed, achieved 0 categories swept, Mail panel never opened, resources_gained none, costs about 8 minutes, no items spent, verified yes (the non-entry is observed live in this unit), blocker_category e (repeated blocker - camera framing, fourth unit this reset day).

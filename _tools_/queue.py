@@ -64,9 +64,9 @@ Usage:
              # record lands in the local pool or after 7 days.
   queue.py [--root DIR] release --unit UNIT      # partial: back to inbox
   queue.py [--root DIR] token-acquire --executor NAME
-             # a re-acquire by the same executor within 60 seconds of
-             # expiry renews the lease (issue #461); any other holder
-             # is refused while the lease is live.
+             # a re-acquire by the same executor always renews the
+             # lease (issue #461); any other holder is refused
+             # while the lease is live.
   queue.py [--root DIR] token-release --executor NAME
              # the token lives in the main checkout's _queue_/claimed/,
              # shared by every worktree of the repo (issue #383), so a
@@ -123,12 +123,22 @@ Usage:
              # in slots_before_reset_minutes with the absolute
              # reset_utc instant as expiry, chain prefix in
              # chain_id_prefix); sync never stages fixed-slot
-             # regulars, plan owns them
+             # regulars, plan owns them. A reset-anchored regular
+             # carrying fixup_regulars also stages one pre-reset
+             # fix-up unit per ledger regular for each reset day
+             # its windows cover (issue #147) - plan is the early
+             # path, sweep the just-in-time one.
   queue.py [--root DIR] sweep [--regular zero-sweep]
              [--date YYYY-MM-DD] [--regulars-json FILE]
              # produce the pre-reset sweep pair for one reset day
              # from the fixed-slots regular - slots reset-anchored,
              # expiry at the reset instant itself (issue #147);
+             # before the pair it stages one fix-up unit per
+             # ledger fix-up regular at the pair-midpoint slot,
+             # priority 1, expiring at the reset, so the sweep's
+             # fix-ups are claimable before the reset instead of
+             # sitting in the inbox with not_before at or after
+             # it (issue #147, eighth failure running);
              # the planner's manual step calls this instead of
              # hand-computing wall times, so a pair staged through
              # this command can never again carry the old
@@ -142,10 +152,17 @@ Usage:
              # of the day's chain (issue #410), so the stale pair
              # is withdrawn first instead of silently compounded,
              # and plan warns on the same collision through
-             # _produce_for_window
+             # _produce_for_window; refuses also when the roster
+             # entry carries no fixup_regulars list, an empty
+             # list, or an unknown fix-up regular (issue #147),
+             # so a pair with no fix-ups cannot silently repeat
+             # the eighth-failure pattern
 
---root defaults to the repository _queue_ folder; tests point it at a
-scratch directory.
+--root defaults to the repository _queue_ folder; it also accepts
+a repository root, resolved to its _queue_ folder, or a pool
+directory directly (issue #510). enqueue refuses a root holding
+no pool state directory, so a wrong root never mints units into
+a fresh empty directory; tests point it at a scratch directory.
 
 Frontmatter dialect: the small YAML subset this tool writes - plain
 scalars, [a, b] flow lists, and mappings nested by 2 space indents
@@ -162,11 +179,17 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
-TOKEN_RENEW_WINDOW_SECONDS = 60  # issue #461: a same-holder
-# re-acquire landing this close to expiry renews the lease instead of
-# reporting held - the 2026-11-08 ticker-1049 secrets unit re-acquired
-# 3 seconds before expiry, was refused, and its game input then ran
-# with no token held until the next acquire 6 minutes later.
+# Issue #461: a same-holder re-acquire always renews the lease.
+# The 2026-11-08 rule renewed only within 60 seconds of expiry, but
+# the executor loop re-acquires at every unit boundary (design
+# section 6), so a re-acquire after a short unit lands minutes before
+# expiry and was refused - ticker-0234 (2026-11-10 02:50 PST) and
+# ticker-0504 (05:20 PST) both ran game input with no token held
+# after exactly that refusal. Renewing only ever extends the current
+# pass's own lease (executor names are per-pass), a different holder
+# is still refused while the lease is live, and a dead pass's lease
+# still expires 15 minutes after its last renewal, so mutual
+# exclusion and the expiry safety valve are unchanged.
 DEFAULT_LEASE_MINUTES = 20
 DEFAULT_EST_MINUTES = 5
 DEFAULT_MAX_ATTEMPTS = 3
@@ -178,6 +201,13 @@ DEFAULT_MAX_ATTEMPTS = 3
 REQUIRED_STATS_KEYS = ("target", "achieved", "resources_gained",
                        "costs", "verified")
 SHORT_CLOSING_STATUSES = ("partial", "failed", "skipped-needs-owner")
+# Miss-audit root-cause classes, task-unit-queue-design.md per-unit
+# measurement table (mirrored in _tools_/retro_report.py
+# BLOCKER_CLASSES): a window closure, b crowding out, c tap
+# method, d inference over live read, e repeated blocker,
+# f missing precondition, g true red-line miss, h by-design
+# partial, i owner-named without escalation.
+BLOCKER_CATEGORIES = "abcdefghi"
 STATES = ("inbox", "claimed", "done")
 TOKEN_NAME = "device-token.md"
 FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
@@ -338,12 +368,58 @@ def pool_root_warning(root):
     did exactly that). A pool that exists but is empty still has
     its state directories, so only the no-directory case warns.
     Warning only, never a block, matching complete's convention.
+
+    A resolved _queue_ pool whose parent still holds top-level
+    pool state directories warns too (issue #539): the parent is
+    a repository root with a stray pool beside the real one, and
+    the stray must be removed rather than silently ignored, or a
+    later diff against the repository root reads the wrong pool.
     """
     if any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        if os.path.basename(os.path.abspath(root)) == "_queue_":
+            parent = os.path.dirname(os.path.abspath(root))
+            stray = [s for s in STATES
+                     if os.path.isdir(state_dir(parent, s))]
+            if stray:
+                return (f"warning: stray pool state at {parent}: "
+                        f"{', '.join(stray)} beside the resolved pool "
+                        "- remove the stray so a later diff against "
+                        "the repository root cannot read the wrong "
+                        "pool (issue #539)")
         return ""
     return (f"warning: pool root {root} holds no inbox, claimed "
             "or done directory - the counts below describe an "
             "empty or wrong root, not the live pool")
+
+
+def resolve_pool_root(root):
+    """Return the pool directory for a repository root or a pool dir.
+
+    --root names a pool, but the planner body passes the repository
+    root (issue #510): the first --apply then wrote units into a
+    stray <repo>/inbox/ the ticker never reads. A root holding a
+    _queue_ subdirectory and no pool state directory of its own is
+    a repository root, so resolve it to <root>/_queue_; a root that
+    already holds pool state directories is a pool and passes
+    through unchanged, matching pool_gap.py's resolve_pool. Any
+    other root passes through unchanged for the caller to judge:
+    read commands warn through pool_root_warning, write commands
+    refuse (see cmd_enqueue).
+
+    A root holding BOTH top-level pool state directories and a
+    _queue_ subdirectory is a repository root with a stray pool
+    beside the real one (issue #539: any pre-#512 run minted a
+    stray <repo>/inbox/, and the stray is never read by the
+    ticker): a genuine pool never contains a _queue_ subdir, so
+    resolve it to <root>/_queue_ and let pool_root_warning name
+    the stray so it gets removed instead of silently ignored.
+    """
+    if not root:
+        return root
+    queue_dir = os.path.join(root, "_queue_")
+    if os.path.isdir(queue_dir):
+        return queue_dir
+    return root
 
 
 CONFLICT_MARKERS = ("<<<<<<<", "=======", ">>>>>>>", "|||||||")
@@ -745,23 +821,26 @@ def cmd_sync(args):
               f"problem(s) - repair the unit files and re-run "
               f"(issue #441)", file=sys.stderr)
         return 1
-    # 1. reap expired claims, expire stale inbox units, and drop
-    # inbox copies of units already closed in done (issue #213)
-    reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root)
-    stale_done_dropped = _drop_done_duplicates(args.root)
-    # Branch reconciliation (issue #446): drop inbox copies of
-    # units already closed on today's delivered records branch.
-    # A unit completed in a detached worktree lands its done
-    # record on the branch, never in this pool, so the local drop
-    # above cannot see it - without this step the next tick hands
-    # the same unit out again. A branch that cannot be read warns
-    # and the tick continues on local state only.
+    # Branch reconciliation (issue #446) is fetched FIRST, before
+    # expiry (issue #465): a unit whose true done record lives
+    # only on the delivered records branch must not take a bogus
+    # local expiry - _expire_stale drops its stale inbox copy
+    # instead. A branch that cannot be read warns and the tick
+    # continues on local state only.
     branch = "records/%s" % datetime.now(LOCAL_TZ).date().isoformat()
     branch_done, branch_warning = records_branch_done_units(
         args.root, branch)
     if branch_warning:
         print(f"warning: {branch_warning} (issue #446)", file=sys.stderr)
+    # 1. reap expired claims, expire stale inbox units, and drop
+    # inbox copies of units already closed in done (issue #213).
+    # A unit completed in a detached worktree lands its done
+    # record on the branch, never in this pool, so the local drop
+    # below cannot see it - without the branch drop the next tick
+    # hands the same unit out again.
+    reaped = _reap_claimed(args.root)
+    expired = _expire_stale(args.root, branch_done, branch)
+    stale_done_dropped = _drop_done_duplicates(args.root)
     branch_done_dropped = drop_branch_done_duplicates(
         args.root, branch_done, branch)
     # Screen-blocking overlay (issue #436): drop blockers whose
@@ -772,7 +851,13 @@ def cmd_sync(args):
     # pool no longer needs - the done record landed, or the marker
     # outlived the delivery lag - so the live directory stays
     # bounded; a live marker still suppresses its unit below.
-    markers_reaped = reap_stale_completion_markers(args.root)
+    markers = reap_stale_completion_markers(args.root)
+    markers_reaped = markers["reaped"]
+    markers_lost = markers["lost"]
+    if markers_lost:
+        print("warning: completion markers aged out with no local "
+              f"done record - the delivery never carried these "
+              f"closings: {", ".join(markers_lost)} (issue #563)")
     # Roster staleness (issue #198): sync stages from the tracker,
     # which reads the roster next to this tool, so a stale tree
     # stages nothing for a regular the live pool still holds
@@ -844,6 +929,7 @@ def cmd_sync(args):
                       "branch_done_reconcile_warning": branch_warning,
                       "blockers_reaped": blockers_reaped,
                       "completion_markers_reaped": markers_reaped,
+                      "completion_markers_lost": markers_lost,
                       "due": len(due_items), "produced": produced,
                       "already_queued": already,
                       "skipped_closed": skipped_closed,
@@ -1143,7 +1229,7 @@ def _unit_id_for_window(item, planned_local):
 
 
 def _produce_for_window(root, item, planned_local, window="",
-                        closed_ids=None):
+                        closed_ids=None, expires_dt=None, priority=None):
     """Enqueue the unit for one (regular, window) pair, or return
     None when that pair already exists in any state - the pool's
     anti-duplication invariant, shared by sync and plan. A pair
@@ -1152,7 +1238,13 @@ def _produce_for_window(root, item, planned_local, window="",
     records branch or in another worktree, and minting a fresh
     unit with the same deterministic id would re-execute it
     (issue #466). Callers that pass no closed set keep the old
-    behaviour; plan wires its own set under #465."""
+    behaviour; plan passes its own set (issue #465) and sweep
+    keeps the old behaviour. expires_dt overrides the
+    cadence-derived expiry and priority overrides the
+    SYNC_PRIORITY default - both are used by the pre-reset
+    sweep fix-ups (issue #147), which expire at the reset they
+    serve and run at priority 1 regardless of their regular's
+    usual cadence and priority."""
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -1211,22 +1303,23 @@ def _produce_for_window(root, item, planned_local, window="",
               file=sys.stderr)
         return None
     cadence = item.get("cadence", "")
-    if cadence == "fixed-slots" and _reset_anchored_offsets(item):
-        # The slot's own reset instant is its expiry: a sweep
-        # unit never outlives the trade day it walks (issue #147).
-        expires_dt = _next_reset_utc(
-            planned_utc, _parse_hhmm(item.get("reset_utc")))
-    elif cadence == "fixed-slots" and item.get("expires_local"):
-        exp = _parse_hhmm(item.get("expires_local"))
-        if exp is not None:
-            expires_dt = _next_local_time(
-                planned_local, exp).astimezone(timezone.utc)
+    if expires_dt is None:
+        if cadence == "fixed-slots" and _reset_anchored_offsets(item):
+            # The slot's own reset instant is its expiry: a sweep
+            # unit never outlives the trade day it walks (issue #147).
+            expires_dt = _next_reset_utc(
+                planned_utc, _parse_hhmm(item.get("reset_utc")))
+        elif cadence == "fixed-slots" and item.get("expires_local"):
+            exp = _parse_hhmm(item.get("expires_local"))
+            if exp is not None:
+                expires_dt = _next_local_time(
+                    planned_local, exp).astimezone(timezone.utc)
+            else:
+                expires_dt = planned_utc + timedelta(hours=4)
+        elif cadence in ("daily-reset", "weekly-thu"):
+            expires_dt = planned_utc + timedelta(days=1)
         else:
             expires_dt = planned_utc + timedelta(hours=4)
-    elif cadence in ("daily-reset", "weekly-thu"):
-        expires_dt = planned_utc + timedelta(days=1)
-    else:
-        expires_dt = planned_utc + timedelta(hours=4)
     chain_id, chain_seq = "", ""
     prefix = item.get("chain_id_prefix", "")
     if prefix:
@@ -1248,7 +1341,8 @@ def _produce_for_window(root, item, planned_local, window="",
         "regular": regular,
         "activity": item.get("activity", ""),
         "segment": item.get("segment", ""),
-        "priority": SYNC_PRIORITY.get(regular, 3),
+        "priority": priority if priority is not None else \
+            SYNC_PRIORITY.get(regular, 3),
         "created_at": iso(now_utc()),
         "expires_at": iso(expires_dt),
         "planned_for": planned_iso,
@@ -1281,7 +1375,7 @@ def _reap_claimed(root):
     return moved
 
 
-def _expire_stale(root):
+def _expire_stale(root, branch_done=None, branch=None):
     """Inbox units whose window has fully passed move to done with
     status expired - the next window's unit supersedes them, and the
     statistics keep the miss visible instead of losing it. The
@@ -1295,12 +1389,30 @@ def _expire_stale(root):
     with an expiry (queue-planning 1457 follow-up). A completion
     marker for the same unit counts as a done record here (issue
     #438): the unit closed in another worktree, so expiry must not
-    overwrite that result either."""
+    overwrite that result either. A unit id in branch_done counts
+    the same (issue #465): the unit closed on the delivered
+    records branch, so expiry must not overwrite that result with
+    a bogus miss either - the stale inbox copy is dropped
+    instead. Callers that pass no branch set keep the old
+    behaviour; sync and plan fetch the branch first and pass it."""
     moved = 0
     stamp = now_utc()
     for f in list_units(root, "inbox"):
         expires = parse_iso(f.get("expires_at", ""))
         if expires and expires <= stamp and f.get("unit"):
+            if branch_done and f["unit"] in branch_done:
+                # The unit already closed on the delivered records
+                # branch (issue #465): writing an expiry here
+                # would clobber that executed result with a miss,
+                # the same bug class the done-exists branch guards
+                # for a local record.
+                print(f"warning: {f['unit']} already done on "
+                      f"{branch or 'the records branch'} - dropping "
+                      f"the stale inbox copy instead of "
+                      f"overwriting it with an expiry",
+                      file=sys.stderr)
+                os.remove(unit_path(root, "inbox", f["unit"]))
+                continue
             done_path = unit_path(root, "done", f["unit"])
             if os.path.exists(done_path) or has_completion_marker(
                     root, f["unit"]):
@@ -1535,9 +1647,22 @@ def cmd_plan(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
+    # Branch reconciliation (issues #446, #465): fetch today's
+    # delivered records branch first, so expiry drops (never
+    # expires) inbox copies already closed on the branch and
+    # staging below skips their slots. A branch that cannot be
+    # read warns and the run continues on local state only.
+    branch = "records/%s" % datetime.now(LOCAL_TZ).date().isoformat()
+    branch_done, branch_warning = records_branch_done_units(
+        args.root, branch)
+    if branch_warning:
+        print(f"warning: {branch_warning} (issue #446)",
+              file=sys.stderr)
     reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root)
+    expired = _expire_stale(args.root, branch_done, branch)
     stale_done_dropped = _drop_done_duplicates(args.root)
+    branch_done_dropped = drop_branch_done_duplicates(
+        args.root, branch_done, branch)
     defs_path = args.regulars_json or os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "regulars.json")
     with open(defs_path, encoding="utf-8") as fh:
@@ -1573,10 +1698,51 @@ def cmd_plan(args):
     due_now = {i["id"]: bool(i.get("due"))
                for i in tracker_doc.get("items", [])}
     horizon_end = now_local + timedelta(hours=args.hours)
-    planned, present, skipped_done = [], 0, 0
+    # Closed slots (issue #465): a slot already closed on the
+    # delivered branch or by a live completion marker is not
+    # staged at all - the tracker has no per-slot done state for
+    # fixed-slots regulars, so without this the planner re-stages
+    # a slot another worktree already executed, exactly what the
+    # 1340 run did to training/donations/arms-race-2026-11-08-1003.
+    # Markers are read after the step-1 reap, so only live
+    # markers count.
+    closed = {unit: "done on %s" % branch for unit in branch_done}
+    for unit in completion_marker_units(args.root):
+        closed.setdefault(unit, "completion marker in another "
+                                "worktree")
+    planned, present, skipped_done, skipped_closed = [], 0, 0, []
+    fixups_planned, fixups_present = [], 0
     for item in regs:
         current = cycle_start_local(item, now_local)
-        for w in plan_windows(item, now_local, horizon_end):
+        windows = plan_windows(item, now_local, horizon_end)
+        # Pre-reset fix-ups (issue #147): a reset-anchored regular
+        # carrying fixup_regulars stages one fix-up unit per
+        # ledger regular for each reset day its windows cover,
+        # before its own windows are produced - so the fix-ups
+        # exist from the morning (the planner calls sweep only at
+        # about 17:50, ten minutes before the reset, which is too
+        # late for more than one fix-up to run) and their
+        # created_at precedes the final pass. A roster entry with
+        # no fixup_regulars list stages nothing here; a present
+        # but invalid list warns and continues - plan never blocks
+        # the whole staging run, while sweep refuses outright.
+        if item.get("cadence") == "fixed-slots" and \
+                _reset_anchored_offsets(item) and \
+                item.get("fixup_regulars") is not None:
+            for day in sorted({w.date() for w in windows}):
+                fix = _stage_sweep_fixups(
+                    args.root, regs, item, day, closed_ids=closed)
+                if fix["error"]:
+                    print(f"warning: sweep fix-ups for "
+                          f"{item.get('id')} "
+                          f"{day.isoformat()} not staged: "
+                          f"{fix['error']} (issue #147)",
+                          file=sys.stderr)
+                else:
+                    fixups_planned.extend(fix["produced"])
+                    fixups_present += fix["already_present"]
+                    skipped_closed.extend(fix["skipped_closed"])
+        for w in windows:
             # The tracker has no per-slot done state, so the
             # current-window skip must not drop a fixed-slot unit;
             # the (regular, planned_for) dedupe in _produce already
@@ -1586,9 +1752,12 @@ def cmd_plan(args):
                 skipped_done += 1
                 continue
             unit = _produce_for_window(
-                args.root, item, w, duel_window_text(item["id"], w))
+                args.root, item, w, duel_window_text(item["id"], w),
+                closed_ids=closed)
             if unit:
                 planned.append(unit)
+            elif _unit_id_for_window(item, w) in closed:
+                skipped_closed.append(_unit_id_for_window(item, w))
             else:
                 present += 1
     # Window aged unscheduled priority-1 units (issue #128) - plan
@@ -1601,13 +1770,100 @@ def cmd_plan(args):
     print(json.dumps({"horizon_hours": args.hours, "reaped": reaped,
                       "expired": expired,
                       "stale_done_dropped": stale_done_dropped,
+                      "branch_done_reconciled": branch_done_dropped,
+                      "branch_done_reconcile_warning": branch_warning,
                       "planned": planned,
                       "already_present": present,
+                      "fixups_planned": fixups_planned,
+                      "fixups_already_present": fixups_present,
                       "skipped_done_current": skipped_done,
+                      "skipped_closed": skipped_closed,
                       "roster_stale_regulars": stale_roster,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
     return 0
+
+
+def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
+    """Stage one pre-reset fix-up unit per ledger regular (issue #147).
+
+    The sweep pair walks the ledger and its fix-ups are the units
+    that close the not-at-zero lines - but on 2026-11-08 every
+    fix-up in the inbox carried not_before at or after the 18:00
+    reset (the planner stages the every-run fix-up regulars on a
+    4-hour grid whose evening window is 18:03, and the daily-reset
+    ones at 18:00 itself), so none could run before the reset and
+    the trade day closed with 12 lines not at zero, the eighth
+    consecutive failure. The fix-up slot is the midpoint of the
+    pair's slots (reset - 60 minutes for the [90, 30] pair, 17:00
+    local): after the first pass so the ticker is free to pick
+    them, before the reset so they can still close the day, and
+    off the planner's 4-hour grid so no ordinary window collides
+    with it. Each fix-up runs at priority 1 (the design's fix-up
+    priority, section 12) and expires at the reset it serves, so
+    an unclaimed fix-up never outlives its trade day. Fix-ups are
+    staged before the pair in the same production call, so
+    pick_key orders them ahead of the final pass at equal expiry
+    (the reset) and priority (1): their created_at stamp is never
+    later than the pair's, and on a same-second tie the stable
+    sort keeps the alphabetical pool order, in which every
+    fix-up regular's name sorts before zero-sweep.
+
+    Returns {"produced": [...], "already_present": n,
+    "skipped_closed": [...], "error": str-or-None}. error is set
+    (and nothing is staged) when the roster entry carries no
+    fixup_regulars list, the list is empty, or it names a regular
+    the roster does not hold. A reset day whose reset instant is
+    already past stages nothing and reports no error - plan asks
+    for every reset day its horizon covers, including one whose
+    pair slot already passed.
+    """
+    fixups = item.get("fixup_regulars")
+    if fixups is None:
+        return {"produced": [], "already_present": 0,
+                "skipped_closed": [],
+                "error": f"regular {item.get('id')!r} carries no "
+                         f"fixup_regulars list - sync the tree to "
+                         f"main before producing the sweep pair"}
+    if not isinstance(fixups, list) or not fixups:
+        return {"produced": [], "already_present": 0,
+                "skipped_closed": [],
+                "error": f"regular {item.get('id')!r} carries an "
+                         f"empty fixup_regulars list - a sweep pair "
+                         f"with no fix-ups repeats the issue #147 "
+                         f"defect"}
+    by_id = {r.get("id"): r for r in regs}
+    for fid in fixups:
+        if fid not in by_id:
+            return {"produced": [], "already_present": 0,
+                    "skipped_closed": [],
+                    "error": f"fixup regular {fid!r} is not in the "
+                             f"roster - fix fixup_regulars on "
+                             f"regular {item.get('id')!r} before "
+                             f"producing the sweep pair"}
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    if reset_local <= datetime.now(LOCAL_TZ):
+        return {"produced": [], "already_present": 0,
+                "skipped_closed": [], "error": None}
+    offsets = _reset_anchored_offsets(item)
+    midpoint = (offsets[0] + offsets[-1]) // 2
+    slot = reset_local - timedelta(minutes=midpoint)
+    reset_utc = reset_local.astimezone(timezone.utc)
+    produced, already, skipped = [], 0, []
+    for fid in fixups:
+        unit_id = _unit_id_for_window(by_id[fid], slot)
+        unit = _produce_for_window(
+            root, by_id[fid], slot,
+            f"pre-reset fix-up for {local_date.isoformat()} sweep",
+            closed_ids=closed_ids, expires_dt=reset_utc, priority=1)
+        if unit:
+            produced.append(unit)
+        elif closed_ids and unit_id in closed_ids:
+            skipped.append(unit_id)
+        else:
+            already += 1
+    return {"produced": produced, "already_present": already,
+            "skipped_closed": skipped, "error": None}
 
 
 def cmd_sweep(args):
@@ -1629,6 +1885,15 @@ def cmd_sweep(args):
     stale tree fails loudly instead of staging a wall-clock pair
     with the old 19:00 expiry, and when the reset instant for the
     date is already past, so a late call cannot stage dead units.
+    It also stages the day's fix-ups before the pair
+    (_stage_sweep_fixups, issue #147, eighth failure running):
+    one priority-1 unit per ledger fix-up regular at the
+    pair-midpoint slot, expiring at the reset, so the sweep's
+    fix-ups are claimable in the pre-reset window instead of
+    sitting in the inbox with not_before at or after the reset.
+    A roster entry with no fixup_regulars list, an empty list,
+    or an unknown fix-up regular is refused the same way - a
+    pair with no fix-ups would silently repeat the #147 defect.
     It also refuses when the pool already holds a stale-geometry
     unit of the day's chain (issue #410): the (regular,
     planned_for) dedupe would otherwise count the stale first
@@ -1735,6 +2000,29 @@ def cmd_sweep(args):
               " - withdraw the stale pair and re-run sweep "
               "(issue #410)")
         return 1
+    # Pre-reset fix-ups (issue #147): staged before the pair so
+    # their created_at precedes the final pass and pick_key orders
+    # them ahead of it. The closed set is the same branch-done +
+    # completion-marker set plan consults (issues #465, #466), so
+    # a fix-up already closed on the delivered branch is not
+    # re-staged as a phantom the way the 1630 pair unit was on
+    # 2026-11-08. A branch that cannot be read warns and the run
+    # continues on local state only, as in plan.
+    branch = "records/%s" % local_date.isoformat()
+    branch_done, branch_warning = records_branch_done_units(
+        args.root, branch)
+    if branch_warning:
+        print(f"warning: {branch_warning} (issues #446, #466)",
+              file=sys.stderr)
+    closed = {unit: "done on %s" % branch for unit in branch_done}
+    for unit in completion_marker_units(args.root):
+        closed.setdefault(unit, "completion marker in another "
+                                "worktree")
+    fix = _stage_sweep_fixups(args.root, regs, item, local_date,
+                              closed_ids=closed)
+    if fix["error"]:
+        print(f"refused: {fix['error']} (issue #147)")
+        return 1
     produced, already = [], 0
     for idx, slot in enumerate(slots):
         if len(slots) == 2:
@@ -1750,7 +2038,10 @@ def cmd_sweep(args):
     print(json.dumps({
         "regular": args.regular, "date": local_date.isoformat(),
         "reset_at": iso(reset_local.astimezone(timezone.utc)),
-        "produced": produced, "already_present": already},
+        "produced": produced, "already_present": already,
+        "fixups_produced": fix["produced"],
+        "fixups_already_present": fix["already_present"],
+        "fixups_skipped_closed": fix["skipped_closed"]},
         ensure_ascii=False))
     return 0
 
@@ -1832,6 +2123,24 @@ def _sweep_enqueue_refusal(args):
 
 
 def cmd_enqueue(args):
+    # Wrong-root gate (issue #510): a root holding no pool state
+    # directory is not a pool, so refuse instead of minting an
+    # inbox under it - a wrong root used to silently create a stray
+    # <root>/inbox/ and report "queued" into a pool nobody reads.
+    # Read commands keep the warn-only pool_root_warning convention
+    # (issue #199); only this write path refuses, before anything
+    # is created or written. The warning also fires here: a stray
+    # pool beside the resolved _queue_ pool (issue #539) must be
+    # named on the write path too, so it gets removed instead of
+    # silently ignored.
+    warning = pool_root_warning(args.root)
+    if warning:
+        print(warning)
+    if not any(os.path.isdir(state_dir(args.root, s)) for s in STATES):
+        print(f"refused: pool root {args.root} holds no inbox, "
+              "claimed or done directory - the pool was not found, "
+              "nothing queued (issue #510)")
+        return 1
     if args.est_minutes > UNIT_CAP_MINUTES:
         print(f"refused: est_minutes {args.est_minutes} exceeds the "
               f"{UNIT_CAP_MINUTES} minute unit cap - split the task")
@@ -2110,6 +2419,105 @@ def points_without_achieved(stats):
             and "achieved" not in stats)
 
 
+def points_is_progress_delta(stats, regular=None):
+    """True when stats.points is a progress-bar delta on a gifts unit (issue #300).
+
+    points is score gained in this unit, for scoring types only
+    (task-unit-queue-design.md per-unit measurement table: duel,
+    Arms Race, radar). Gifts is not a scoring type - gifts pay
+    no score, they feed the alliance Gift Level progress bar,
+    and the profile measures them in progress-bar points
+    (per-gift points, Claim All points re-grounded). A points
+    figure on a gifts closing is therefore the progress-bar
+    delta by construction, not a unit score: the only two gifts
+    closings ever to carry points both equal the progress delta
+    named in their own summaries - gifts-2026-11-09-0230 wrote
+    points 1090 against "Gift Level 28 progress 195,637,370
+    to 195,638,460" (delta 1,090) and gifts-2026-11-09-1430
+    wrote points 46760 against "Gift Level 28 progress
+    +46,760" - while their achieved is a claim count (39 and
+    1794), so neither the equality detector nor the
+    no-achieved detector fires. The retro summed 47,850 as
+    points gained; its honest window total is 2,463. This is
+    a warning, never a block, and it is scoped to gifts only:
+    the genuine non-equal gains stay counted - arms-race
+    2026-11-09-1003 points 2000 against achieved 8000 (a
+    rally kill, distinct from the phase total), donations
+    points 50, daily-missions points 100.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular != "gifts":
+        return False
+    points = _stat_number(stats.get("points"))
+    return points is not None and points != 0
+
+
+def achieved_is_screen_total(stats, regular=None):
+    """True when stats.achieved is a screen total on a star-ceremony unit (issue #483).
+
+    achieved is the unit's own gain against its target, not a running
+    total read off another screen: a duel total read belongs to the
+    duel-score regular, which carries the duel target 3600000 by
+    design (issue #136). Star-ceremony is not a scoring type - its
+    target is 1 (one ceremony check) and its achieved is the ceremony
+    count, 0 or 1. The two closings that wrote a duel total into
+    achieved both carry the duel target 3600000 with 0 ceremonies
+    claimed: star-ceremony-2026-11-01-1830 wrote achieved 791250
+    ("personal duel total read live 791250 vs target 3600000, gap
+    2808750") and star-ceremony-2026-11-04-0630 wrote achieved
+    4772100 ("duel total 4772100 vs target 3600000, exceeded by
+    1172100"). The Nov 4 unit alone carried the window attainment
+    from about 0.093 to 1.1907 (achieved_sum 4813220 against
+    target_sum 4042308; without it, achieved 41120). A
+    star-ceremony closing whose target is not the ceremony count
+    (1) and whose achieved is above 1 therefore carries another
+    regular's target/achieved pair by construction. The target
+    check keeps a future target-1 closing honest: a ceremony
+    count of 2 or more under target 1 is not excluded here.
+    This is a warning, never a block.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular != "star-ceremony":
+        return False
+    target = _stat_number(stats.get("target"))
+    achieved = _stat_number(stats.get("achieved"))
+    return (target is not None and achieved is not None
+            and target != 1 and achieved > 1)
+
+
+def blocker_category_not_enum(stats):
+    """True when stats.blocker_category is present but not an audit class (issue #130).
+
+    blocker_category is the miss-audit root-cause class, one
+    letter a to i (task-unit-queue-design.md per-unit
+    measurement table). The 2026-11-09 retro found non-enum
+    values persisting in the pool - access-failed, time,
+    timer, unverified-close - and named the queue tool
+    validation that would enforce the enum as the standing
+    gap behind #130; the main-tree pool snapshot carries the
+    same family plus none and contested. Acceptance mirrors
+    retro_report.py _blocker_class: a single letter, or a
+    letter followed by a space, hyphen or colon (so "e -
+    repeated blocker" still reads as e). Absence is not
+    flagged here - missing_stats_keys owns that. This is a
+    warning, never a block.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if "blocker_category" not in stats:
+        return False
+    raw = stats.get("blocker_category")
+    if not isinstance(raw, str):
+        return True
+    text = raw.strip().lower()
+    if not text:
+        return True
+    return not (text[0] in BLOCKER_CATEGORIES
+                and (len(text) == 1 or text[1] in " -:"))
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
     if state != "claimed":
@@ -2130,6 +2538,9 @@ def cmd_complete(args):
     missing = missing_stats_keys(args.status, stats)
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
+    points_prog = points_is_progress_delta(stats, fields.get("regular"))
+    achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
+    blocker_bad = blocker_category_not_enum(stats)
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -2146,7 +2557,13 @@ def cmd_complete(args):
         "stats_warnings": ((["points duplicates achieved"]
                             if points_dup else [])
                            + (["points without achieved"]
-                              if points_noach else [])),
+                              if points_noach else [])
+                           + (["points is progress delta"]
+                              if points_prog else [])
+                           + (["achieved is screen total"]
+                              if achieved_screen else [])
+                           + (["blocker_category not in enum a-i"]
+                              if blocker_bad else [])),
     }
     # Screen-blocking overlay (issue #436): a short closing that
     # names its overlay records the pool-level blocker, so the
@@ -2198,6 +2615,12 @@ def cmd_complete(args):
               f"and no stats.achieved - points is score gained "
               f"in this unit, not a running total read; a screen "
               f"total belongs in achieved only")
+    if points_prog:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"on a gifts unit - points is score gained in "
+              f"this unit and gifts pay no score; the Gift "
+              f"Level progress gain belongs in the summary and "
+              f"resources_gained only")
     if blocker_note:
         print(blocker_note)
     # Completed-unit marker (issue #438): the done record above
@@ -2573,14 +2996,20 @@ def reap_stale_completion_markers(root):
     the closing, and the suppression lapsing makes that gap
     visible instead of hiding it behind a stale file. A file that
     does not parse to a unit and status suppresses nothing, so it
-    is dropped too. Returns the list of unit ids dropped.
+    is dropped too. Returns a dict with the unit ids dropped
+    ("reaped") and, separately, the dropped ids whose closing was
+    lost (issue #563): a valid marker older than
+    COMPLETED_STALE_HOURS with no local done record - the
+    delivery never carried that closing, so the retro can triage
+    each named unit instead of counting one more bare integer.
     """
     home = completion_home(root)
     folder = os.path.join(home, COMPLETED_DIRNAME)
     if not os.path.isdir(folder):
-        return []
+        return {"reaped": [], "lost": []}
     stamp = now_utc()
     dropped = []
+    lost = []
     for name in sorted(os.listdir(folder)):
         if not name.endswith(".md"):
             continue
@@ -2594,6 +3023,7 @@ def reap_stale_completion_markers(root):
         valid = (fields.get("unit") == unit
                  and bool(fields.get("status")))
         keep = False
+        aged_out = False
         if valid:
             if _has_done_record(root, unit):
                 keep = False
@@ -2601,6 +3031,7 @@ def reap_stale_completion_markers(root):
                     (stamp - finished).total_seconds() > \
                     COMPLETED_STALE_HOURS * 3600:
                 keep = False
+                aged_out = True
             else:
                 keep = True
         if keep:
@@ -2612,7 +3043,9 @@ def reap_stale_completion_markers(root):
         except OSError:
             continue
         dropped.append(unit)
-    return dropped
+        if aged_out:
+            lost.append(unit)
+    return {"reaped": dropped, "lost": lost}
 
 
 def _write_token_file(path, fields):
@@ -2634,16 +3067,17 @@ def cmd_token_acquire(args):
         fields, _ = read_unit(path)
         lease = parse_iso(fields.get("lease_until", ""))
         if lease and lease > now_utc():
-            remaining = (lease - now_utc()).total_seconds()
-            # Issue #461: a re-acquire by the holder itself that lands
-            # just before expiry renews the lease instead of reporting
-            # held - the old code refused it, so the holder's game
-            # input ran with no token until the next acquire. A
-            # different executor is still refused, and a holder with
-            # ample lease left is still refused, so the
-            # mutual-exclusion guarantee is unchanged.
-            if (fields.get("claimed_by") == args.executor
-                    and remaining <= TOKEN_RENEW_WINDOW_SECONDS):
+            # Issue #461: a re-acquire by the holder itself always
+            # renews the lease instead of reporting held - the
+            # 2026-11-08 rule renewed only within 60 seconds of
+            # expiry, but the executor loop re-acquires at every
+            # unit boundary, so a re-acquire after a short unit
+            # lands minutes before expiry and was refused, and the
+            # holder's game input then ran with no token. A
+            # different executor is still refused while the lease
+            # is live, so the mutual-exclusion guarantee is
+            # unchanged.
+            if fields.get("claimed_by") == args.executor:
                 fields = {"claimed_by": args.executor,
                           "claimed_at": fields.get("claimed_at", "")
                           or iso(now_utc()),
@@ -2732,6 +3166,8 @@ def gather_stats(root):
               "stats_points_dup": 0, "stats_points_dup_units": [],
               "stats_points_no_achieved": 0,
               "stats_points_no_achieved_units": [],
+              "stats_blocker_not_enum": 0,
+              "stats_blocker_not_enum_units": [],
               "stall_expired": 0, "stall_expired_units": [],
               "newest_finished_at": None,
               "newest_finished_age_minutes": None,
@@ -2837,6 +3273,12 @@ def gather_stats(root):
                     report["stats_points_no_achieved"] += 1
                     report["stats_points_no_achieved_units"].append(
                         f.get("unit"))
+                if blocker_category_not_enum(
+                        dup_stats if isinstance(dup_stats, dict)
+                        else {}):
+                    report["stats_blocker_not_enum"] += 1
+                    report["stats_blocker_not_enum_units"].append(
+                        f.get("unit"))
                 if status in ("failed", "skipped-needs-owner"):
                     entry["failed"] += 1
                 dur = result.get("duration_seconds")
@@ -2901,6 +3343,10 @@ def cmd_stats(args):
               f"{report['stats_points_no_achieved']}")
         print("  stats_points_no_achieved_units: "
               f"[{', '.join(report['stats_points_no_achieved_units'])}]")
+        print(f"  stats_blocker_not_enum: "
+              f"{report['stats_blocker_not_enum']}")
+        print("  stats_blocker_not_enum_units: "
+              f"[{', '.join(report['stats_blocker_not_enum_units'])}]")
         d = report["durations_seconds"]
         if d:
             print(f"  durations_seconds: count {d['count']}, "
@@ -2961,6 +3407,10 @@ def cmd_stats(args):
             print(f"  stats points without achieved: "
                   f"{report['stats_points_no_achieved']} "
                   f"({', '.join(report['stats_points_no_achieved_units'])})")
+        if report["stats_blocker_not_enum"]:
+            print(f"  stats blocker_category not in enum: "
+                  f"{report['stats_blocker_not_enum']} "
+                  f"({', '.join(report['stats_blocker_not_enum_units'])})")
         d = report["durations_seconds"]
         if d:
             print(f"  durations: n={d['count']} avg={d['avg']}s "
@@ -3087,7 +3537,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_stats)
 
     args = parser.parse_args(argv)
-    args.root = os.path.abspath(args.root)
+    args.root = resolve_pool_root(os.path.abspath(args.root))
     return args.fn(args)
 
 

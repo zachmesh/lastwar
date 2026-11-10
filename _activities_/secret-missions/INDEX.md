@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-08T19:39:51Z
+modified: 2026-11-10T19:32:17Z
 level: L1
-version: 1.20.0
+version: 1.31.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -30,6 +30,16 @@ grounded_in:
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, white truck badge 8 is the Secret Command Post entry, task rows read, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, white truck is the Secret Command Post entry, Your Tasks badge 17, Ally Tasks badge 5, 0022 mapping corrected); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-1049 secret-missions execution record 2026-11-08 1114 queue run (partial, four finished tasks claimed at once with PERFECT stamps, Claim tap worked first try, Mega Deploy and Reward Recovery not reached); record commit 355d3f11c on records/2026-11-08
+  - source: ticker-1434 secret-missions execution record 2026-11-08 1456 queue run (done, Mega Deploy of all 8 pending tasks verified running, Reward Recovery 2026-11-6 claimed, ally assists 0/5 carried); record commit dfd3c87f9 on records/2026-11-08
+  - source: ticker-1851 secret-missions execution record 2026-11-08 1907 queue run (done, 8 finished tasks claimed, 8 pending Mega Deployed, ally assists 5/5, new duel week Radar Training day 1, Ally Tasks badge counts remaining assists; record commit cff344153 on records/2026-11-08)
+  - source: ticker-2235 secret-missions execution record 2026-11-08 2253 queue run (done, 7 finished tasks claimed, one task's rewards plundered at 10% by [BZGR]FredoSauce, remaining 90% unverified; record commit 0c9686b4f on records/2026-11-08)
+  - source: ticker-0204 secret-missions execution record 2026-11-09 0221 queue run (done, 8 resolved cards same as 2253, assists 5/5 at cap, recovery claimed, post icon now at (55,657); record commit facef628c on records/2026-11-09)
+  - source: ticker-0504 secret-missions execution record 2026-11-09 0517 queue run (done, 4 cards all PERFECT, assists 5/5 at cap, recovery claimed, no new own tasks since the 22:49 claim on 2026-11-08, Mega Deploy no-change; record commit be01e91134 on records/2026-11-09)
+  - source: ticker-1434 secret-missions execution record 2026-11-09 1456 queue run (done, 4 cards all PERFECT again, assists 5/5 at cap, no new own tasks since the 22:49 claim on 2026-11-08, entry (55,636) re-confirmed; record commit 4860808ff on records/2026-11-09)
+  - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, incidental Secret Mobile Squad read, same 4 PERFECT cards, assists 5/5; record commit 2f4d783d8 on records/2026-11-09)
+  - source: ticker-0204 secret-missions execution record 2026-11-10 0218 queue run (done, all 9 tasks claimed in one tap, PERFECT stamps, recovery re-checked closed; record commit 069a94c7a on records/2026-11-10)
+  - source: ticker-0434 secret-missions execution record 2026-11-10 0444 queue run (done, 8 cards all PERFECT, assists at cap, recovery re-checked closed, 8-vs-9 count question; record commit 5ba07ce2b4 on records/2026-11-10)
+  - source: ticker-1004 secret-missions execution record 2026-11-10 1036 queue run (done, 8 cards all PERFECT, assists at cap, 8-vs-9 count resolved as a miscount, orange hexagon badge moved to Protect Refugee Camp, recovery re-checked closed; record commit 2218eb3cd on records/2026-11-10)
 ---
 
 
@@ -177,6 +187,11 @@ post screen carries two sibling tabs registered as their own types -
   showing a visible countdown can be marked. Empty state text - No
   marked Secret Tasks. Please find one and share it to the Alliance
   Chat.
+- MEASURED 2026-11-08 1907: the Ally Tasks badge counts REMAINING
+  assists, not the number of rows - it read 5 at 0/5, 2 at 3/5, and
+  was gone at 5/5, while four rows stayed visible and the list
+  refilled as assists were used (a Dogo row appeared after the
+  fourth assist). Read the badge as remaining assists.
 
 ## Task catalogue - observed tasks
 
@@ -1044,7 +1059,16 @@ secrets-2026-10-31-2257, status partial).
 - Whether the auto assigned hero teams in Mega Deploy can be edited,
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
-  new own tasks after the dispatched ones return.
+  new own tasks after the dispatched ones return. (2026-11-09 0517 update: no new own tasks have appeared since the 22:49 claim on 2026-11-08 - the list holds only the same 4 PERFECT cards, and the other three claimed cards plus the plundered card have dropped off between the 02:21 and 05:17 reads. The refresh cycle for new own tasks after a batch is claimed stays an open question; the next secrets unit re-checks.) (2026-11-09 1456 update: the 1456 unit re-confirmed the same 4 PERFECT cards at about 14:51, still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays open.) (2026-11-09 1748 update: the zero-sweep's incidental Secret Mobile Squad read at about 17:40 still shows the same 4 SSR cards all PERFECT, Assist Allies 5/5, Plunder Others 0/3 on that panel; still no new own tasks since the 22:49 claim on 2026-11-08.) (2026-11-09 2211 update: ANSWERED - a fresh batch of 9 tasks appeared between the 14:51 check and 22:03, so new own tasks arrive after the daily reset. The record attributes the refresh to the 19:00 reset, but that instant is not separately verified - the about-18:00 rollover (Issue #242) is also inside the window, and no reset instant was measured for the post.)
+- What the orange hexagon badge on a claimed secret-task row means: the 2026-11-10 0218 unit found the Provide Tech Support row carrying an orange hexagon badge instead of a gold PERFECT stamp after the claim-all; its Claim button is gone like the others, so it is claimed. Possibly the ally-assisted claim mark. (Added 2026-11-10 0218.) (2026-11-10 0444 update: the badge is still on the same Provide Tech Support to Refugees row, still unexplained.) (2026-11-10 1036 update: the badge has MOVED - it now sits on the Protect Refugee Camp card instead, in the mid-scroll screenshot, with the same reward row (1, 37, 2.4M, 1.9M, 1.9M) as Protect Refugee Camp. All 8 cards show no Claim button either way, so nothing is pending, but the badge's meaning and which card carries it are still unexplained. Next unit re-reads the badge on both cards.)
+- Your Tasks count 8 vs 9: the 0218 record says one Claim tap collected all 9 tasks at once (4 UR/SSR plus five 30-minute SR tasks); the 0444 unit counts 8 cards, 4 SR, scrolled twice - no 5th SR card between Protect Refugee Camp and Retrieve Raw Materials, and the list ends at Retrieve Agent Profile. Either the 0218 count was off by one or one SR card left the list since. Nothing pending either way (all 8 PERFECT, no Claim button). The next secrets unit recounts the list against this note. (Added 2026-11-10 0444.) (2026-11-10 1036 update: RESOLVED - the 1036 unit counted 8 again, drag-scrolled top to bottom, and confirms 8 cards; the 02:18 "9 tasks" count was a miscount. The count is 8: 2 UR, 2 SSR, 4 SR. Nothing pending either way - all 8 PERFECT, no Claim button.)
+- Whether the remaining 90% of a plundered task's rewards reaches the
+  account: the 2026-11-08 2253 unit found SR Retrieve Valuable
+  Supplies plundered at 10% by [BZGR]FredoSauce at 19:40 (chest x1,
+  iron 97.5K, food 97.5K, Hero EXP 123.9K of a displayed chest x25,
+  Hero EXP 1.2M, iron 975.0K, food 975.0K); the claim-all at 22:49
+  did not stamp the card and no received total was shown, so the
+  other 90% is unverified. (Added 2026-11-08 2253.)
 
 ## What the 2026-11-04 0545 unit added - second consecutive Claim-blocker partial, foreground still untested
 
@@ -1212,3 +1236,269 @@ secrets-2026-10-31-2257, status partial).
   this race.
 - Game left safe: no diamonds, money or other spending; no Mega
   Refresh tapped; no alliance diplomacy, no assembly, no teleport.
+
+## What the 2026-11-08 1456 secrets unit added - Mega Deploy of all 8 pending tasks verified running, Reward Recovery 2026-11-6 claimed, ally assists carried
+
+- Unit secrets-2026-11-08-1057 by ticker-1434, about 14:53 to 15:02
+  local, status done - all 8 pending secret tasks Mega Deployed and
+  the 2026-11-6 Reward Recovery record claimed in full. Ally assists
+  (0/5) were not reached before the token lease expired. Evidence in
+  `_records_/2026-11-08/secret-missions/1456-queue-run.md` (commit
+  dfd3c87f9 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-133 on the owner Mac mini, LastWar
+  already running. No device-access error, no different-device
+  dialog, no login demanded. Total Power read live on base at entry
+  and at close: 149,850,353.
+- Duel posture: day 7, off day - settlement (per the 1439 duel-score
+  unit this pass and tools/duel.py) - no scoring actions today, so
+  the duel-day Mega Refresh rule does not apply and normal Mega
+  Deploy is the default. No Mega Refresh tapped.
+- Secret Command Post opened from the base left-column slot at norm
+  53,625 and its title verified before any further tap. Live state at
+  entry: Assist Allies 0/5, Plunder Others 0/5, Your Tasks badge 8,
+  Ally Tasks badge 5, Others' Tasks badge 1, Hidden Treasures badge 1
+  (sibling regular, not touched). No finished task was showing - all
+  four tasks ticker-1049 claimed at 11:14 are done, and the 8 pending
+  tasks showed blue Go buttons, so there was nothing to claim in this
+  unit.
+- Mega Deploy: the MEGA DEPLOY REMINDER panel listed 8 tasks, every
+  checkbox already green-checked and UR Only OFF (empty box) - no
+  re-checking needed and no UR Only toggle touched. The 8 tasks: UR
+  Rescue Missing Agent (02:00:00, 3 heroes), SSR Search for Missing
+  Refugees (01:00:00, 2 heroes) x2, SSR Protect Refugee Camp
+  (01:00:00, 2 heroes), Retrieve Agent Profile (00:30:00, 2 heroes),
+  Retrieve Abandoned Gear (00:30:00, 2 heroes), Retrieve Raw Materials
+  (00:30:00, 2 heroes), Retrieve Valuable Supplies (00:30:00, 2
+  heroes). Perform Now tapped once; the panel closed and the screen
+  jumped to the world map (unexplained - no tap was made on the map).
+  Verified by reopening the post: Your Tasks badge is GONE and all
+  four visible tasks carry running countdowns (UR Rescue Missing Agent
+  02:00:03, both SSR Search for Missing Refugees 01:00:06, SSR Protect
+  Refugee Camp 01:00:13), and the Mega Refresh / Mega Deploy buttons
+  are greyed out. All 8 tasks are deployed. Note for the next unit:
+  when every checkbox arrives already green-checked with UR Only OFF,
+  no hand re-checking is needed - the standing re-check rule covers
+  the case where unchecking UR Only resets the boxes, which did not
+  happen here.
+- Reward Recovery: the Recover button carried a red dot. The REWARD
+  RECOVERY panel held a claimable record 2026-11-6 18:00 - "OVER THE
+  PAST 1 DAYS, YOU HAD 8 UNSTARTED SECRET TASKS. WE'VE SINCE
+  COMPLETED THEM FOR YOU AND RECOVERED SOME OF THE REWARDS." Claim
+  tapped; CONGRATULATIONS panel verified. Rewards claimed: Treasure
+  Map Fragments 3 + 3 + 1 + 1, Mystery Supply Box x224, puzzle piece
+  x2, chest x315, Skill Medal 1.2K, blue triangle 1.0K, iron 406 +
+  1.3M, Hero EXP 13.8M, Lv.1 chest x10, food 1.3M. (Item identities
+  for the crate/chest icons are as shown on screen; the 2026-10-24
+  19:00 record below it was already CLAIMED per the activity metadata
+  and was not touched.)
+- Not performed: ally assists (0/5, Ally Tasks badge 5) were not
+  used - the token lease expired at 15:01 during this unit and the
+  pass budget ended before the Ally Tasks tab could be worked. They
+  carry to the next secrets unit.
+- Game left safe: base screen. No diamonds, money or other spending;
+  no Mega Refresh tapped; no alliance diplomacy, no assembly, no
+  teleport. Plunder Others was not touched (PvP, needs owner
+  instruction).
+
+## What the 2026-11-08 1907 secrets unit added - 8 finished claimed, 8 pending Mega Deployed, ally assists 5/5, new duel week Radar Training day 1
+
+- Unit secrets-2026-11-08-1457 by ticker-1851, about 18:59 to 19:07
+  local, status done - 8 finished tasks claimed, 8 pending tasks
+  Mega Deployed, ally assists 5/5. Session cc-149 on the owner Mac
+  mini. Evidence in
+  `_records_/2026-11-08/secret-missions/1907-queue-run.md` (commit
+  cff344153 on records/2026-11-08). Tracker untouched.
+- Duel posture (tools/duel.py): new duel week, day 1, theme Radar
+  Training, day ends 2026-11-09 18:00 PT. Secret tasks are not in
+  today's scoring list (radar tasks, stamina, drone parts, world map
+  gathering, chip chests), so the duel-day Mega Refresh rule does not
+  apply; normal Mega Deploy is the default. No Mega Refresh tapped.
+- Secret Command Post opened from the base left-column slot at norm
+  53,625, title verified. Live state at entry: Assist Allies 0/5,
+  Plunder Others 0/5, Your Tasks badge 16, Ally Tasks badge 5.
+- Claimed the 8 finished tasks deployed by ticker-1434 at about
+  15:00 (UR Rescue Missing Agent 2h, 2x SSR Search for Missing
+  Refugees 1h, SSR Protect Refugee Camp 1h, 4x 30-minute retrieves).
+  One Claim tap collected all finished tasks at once; the four
+  visible cards now carry gold PERFECT stamps. The congratulations
+  panel listed four ally helpers (JAGX twice at 16:03, Aldiina at
+  17:33, one more above the fold) and was dismissed with Like All
+  (all four rows show blue thumbs-up).
+- The claim of the 8 finished tasks paid no itemized reward list:
+  the congratulations panel showed ally helpers, not rewards. The
+  four visible cards displayed these rewards before claiming - UR
+  Rescue Missing Agent (fragment x2, chest x27, Hero EXP 4.1M, blue
+  triangle 800, chest 300), SSR Search for Missing Refugees x2
+  (fragment x1, chest x27, Hero EXP 2.4M, puzzle piece x1, medal
+  870), SSR Protect Refugee Camp (fragment x1, chest x27, Hero EXP
+  2.4M, iron 1.9M, food 1.9M) - but those are the cards' displayed
+  rewards, not a confirmed received total, and the four 30-minute
+  retrieve cards below the fold were not read before the claim. No
+  received total is asserted for the claim.
+- Reward Recovery checked: the 2026-11-6 18:00 record reads CLAIMED
+  (claimed by ticker-1434); the 2026-10-24 record is settled. No new
+  recovery record exists; nothing claimed here.
+- Mega Deploy: the MEGA DEPLOY REMINDER panel listed 8 pending
+  tasks, every checkbox already green-checked and UR Only OFF. The
+  8 tasks: SSR Search for Missing Refugees 01:00:00 x2, Train
+  Refugees 01:00:00, SSR Protect Refugee Camp 01:00:00, Retrieve
+  Agent Profile 00:30:00, Retrieve Abandoned Gear 00:30:00,
+  Retrieve Raw Materials 00:30:00, Retrieve Valuable Supplies
+  00:30:00 - all 2 heroes each, no UR task in this batch. Perform
+  Now tapped once; the panel closed and the screen jumped to the
+  world map (same behaviour as ticker-1434). Verified by reopening
+  the post: Your Tasks badge is GONE, the four visible tasks carry
+  running countdowns (01:00:11, 01:00:19, 01:00:21, 01:00:33), and
+  Mega Refresh / Mega Deploy are greyed out. All 8 tasks deployed.
+- Ally assists 5/5, all SSR rows from [AP3x]namolla, each paid on
+  the spot:
+  1. Mystery Supply Box x3, Refined Iron Module x29, Hero EXP 247.7K
+  2. Iron 195.0K, Mystery Supply Box x3, Food 195.0K, Hero EXP
+     247.7K (banner: Alliance Gift (SSR) received!)
+  3. Mystery Supply Box x3, Hero EXP 247.7K, Skill Medal x87
+  4. Mystery Supply Box x3, Hero EXP 247.7K, Skill Medal x87
+  5. Mystery Supply Box x3, Upgrade Ore x48, Resource Chest x15,
+     Hero EXP 247.7K
+  Assist totals (summed from the five live popups): Mystery Supply
+  Box x15, Hero EXP 1,238.5K, Skill Medal x174, Refined Iron Module
+  x29, Iron 195.0K, Food 195.0K, Upgrade Ore x48, Resource Chest
+  x15. Counter verified 5/5 at close; the Ally Tasks badge is gone.
+  The list refills as assists are used (a Dogo row appeared after
+  the fourth assist), so further rows exist but the daily cap is
+  reached.
+- BADGE RULE (new, measured 2026-11-08): the Ally Tasks badge counts
+  remaining assists (5 at 0/5, 2 at 3/5, gone at 5/5), not the number
+  of rows: four rows stay visible while the list refills. See the
+  Ally assists standing section.
+- Power: base read 149,209,253 at 18:52; a world-map OCR read after
+  Perform Now suggested 149,109,253. The digit is uncertain from the
+  downscaled screenshot, so no drop is asserted. The 641,100
+  step-down from 16:58 noted in the 18:30 zero sweep stays
+  unexplained.
+- Plunder Others 0/5 untouched (PvP, needs owner instruction).
+- Correction note (same pass, 19:08): the first draft of the record
+  was written with estimated times (19:15 finish, 15 minutes) and
+  the file was first named 1915-queue-run.md. The live clock showed
+  19:07 at close and the unit's structured result records 02:59:33Z
+  to 03:07:07Z, 454 seconds. The file was renamed to
+  1907-queue-run.md and the times corrected. Nothing about the play
+  changed.
+- Game left safe: base screen. No diamonds, money, speedups or paid
+  buttons used. No login or verification demanded, no
+  different-device dialog appeared.
+
+## What the 2026-11-08 2253 unit added - 7 finished tasks claimed, one task's rewards plundered at 10%
+
+- Unit secrets-2026-11-08-1857 by ticker-2235, about 22:44 to 22:53 local, status done. Evidence in `_records_/2026-11-08/secret-missions/2253-queue-run.md` (commit 0c9686b4f on records/2026-11-08).
+- Claimed 7 finished tasks with one Claim tap (claiming one collects all finished tasks at once, as before). All seven cards now carry gold PERFECT stamps and the Your Tasks badge is gone. The congratulations panel showed ally helpers, not an itemized reward list, so the rewards below are the cards' displayed rewards, not a confirmed received total: (1) SSR Search for Missing Refugees - fragment x1, chest x27, Hero EXP 2.4M, puzzle piece x1, medal 870; (2) SSR Search for Missing Refugees - same as (1); (3) SSR Train Refugees - fragment x1, chest x27, Hero EXP 2.4M, blue triangle 480, chest 150; (4) SSR Protect Refugee Camp - fragment x1, chest x27, Hero EXP 2.4M, iron 1.9M, food 1.9M; (5) SR Retrieve Raw Materials - fragment x1, chest x25, Hero EXP 1.2M, chest 150; (6) SR Retrieve Agent Profile - fragment x1, chest x25, Hero EXP 1.2M, medal 440; (7) SR Retrieve Abandoned Gear - fragment x1, chest x25, Hero EXP 1.2M, blue triangle 240.
+- Helpers on the congratulations panel: [AP3x]AshenRise 11-8 21:00, [AP3x]Buckeye16 11-8 20:17, [AP3x]MetalMick 11-8 20:07, plus one further row whose name was not read. Liked them with Like All.
+- Assist Allies 5/5 (daily cap reached in this reset day by ticker-1851 at 19:07); no assists left to do. Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Reward Recovery panel: the 2026-11-6 18:00 record reads CLAIMED (8 unstarted tasks recovered: fragments x3, x3, x1, x1, Mystery Supply Box x224, puzzle x2, chest x315, medal 1.2K, blue triangle 1.0K, Hero EXP 13.8M). The 2026-10-24 19:00 record sits collapsed below it, presumed settled. Nothing to claim there.
+- No pending tasks to deploy: the Your Tasks list holds only the 8 resolved cards (7 PERFECT plus the plundered card below). Mega Deploy was tapped twice at its measured centre and opened no panel on either tap (R2: method ended after two no-change taps) - consistent with nothing pending to deploy.
+- PLUNDER FINDING, new mechanic for this profile: the eighth card of the 19:07 batch, SR Retrieve Valuable Supplies, carries no PERFECT stamp and no Claim button. Its orange badge opens a SECRET TASK REPORT: [BZGR]FredoSauce plundered its rewards at 11-8 19:40 - chest x1, iron 97.5K, food 97.5K, Hero EXP 123.9K - exactly 10% of the card's displayed rewards (chest x25, Hero EXP 1.2M, iron 975.0K, food 975.0K). The card's "[1]" marker counts the one plunder report. A running task's rewards can be plundered at 10% by another player, and the plundered card then shows only its report badge instead of a claim.
+- Whether the remaining 90% of the plundered task's rewards reached the account is UNVERIFIED: the claim-all at 22:49 did not stamp this card, and no received total for it was shown. Recorded as an open question below, not as a received claim.
+- Entry note: the circular left-column icon at norm (55,573) opened the Trucks screen (the rotating shortcut set), not the post. The post opened from the car icon at norm (55,636). Verify the SECRET COMMAND POST title before tapping further, as the metadata warns.
+- Red lines held: no diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (claim 7 finished, assists 5/5 verified at cap, no pending to deploy), resources_gained (displayed rewards above, received total not itemized), costs 9min-no-items-spent, verified yes, device_takeovers 0, follow_up plunder-10pct-mechanic.
+
+## What the 2026-11-09 0221 unit added - 8 resolved cards unchanged, assists 5/5 at cap, recovery claimed, post icon rotated to (55,657)
+
+- Unit secrets-2026-11-08-2257 by ticker-0204, about 02:19 to 02:21 local, status done (checked only; nothing to claim, nothing pending to deploy). Evidence in `_records_/2026-11-09/secret-missions/0221-queue-run.md` (commit facef628c on records/2026-11-09). Computer session cc-211. No different-device dialog appeared.
+- Entry: the left-column vehicle icon at norm 55,657 opened SECRET COMMAND POST at once; the title was verified before any further tap. The column set has rotated since the 2253 unit: the post icon now sits at 657, not 636. (The 2253 fold's entry note - the circular icon at (55,573) opens Trucks, the post opened from the car icon at (55,636) - is superseded for this rotation; the rotating shortcut set means the post point must be re-grounded fresh each unit, title verified before tapping further.)
+- Your Tasks, read live in full (scrolled once): the same 8 resolved cards as the 2253 unit - 7 stamped PERFECT in gold (SSR Search for Missing Refugees x2, SSR Train Refugees, SSR Protect Refugee Camp, SR Retrieve Raw Materials, SR Retrieve Agent Profile, SR Retrieve Abandoned Gear) and SR Retrieve Valuable Supplies carrying the orange [1] plunder-report badge with no PERFECT stamp and no Claim button. No finished-unclaimed task, no pending task, no Claim button anywhere in the list.
+- Assist Allies: 5/5 (daily cap, reached in this reset day by ticker-1851 at 19:07 on 2026-11-08). Plunder Others: 0/5, untouched. Reward Recovery panel read live: the 2026-11-6 18:00 record reads CLAIMED (fragments x3, x3, x1, x1, Mystery Supply Box x224, puzzle x2, chest x315, medal 1.2K, blue triangle 1.0K, Hero EXP 13.8M). The 2026-10-24 19:00 record sits collapsed below it, presumed settled. Nothing to claim there.
+- No Mega Deploy: nothing pending to deploy, and the panel was not opened. Today is a Radar Training duel day, so the UR-secret-tasks Mega Refresh rule does not apply in any case. The Hidden Treasures tab badge (1) belongs to the treasures regular, not this unit; it was left alone.
+- Exit note: the post back arrow sits at norm 148,947 (button centre); a tap at norm 62,948 landed on the button's left edge and produced no change, and the corrected tap at 148,947 returned the game to the base screen. Same one-row lesson as the duel panel this pass: ground the back-arrow centre fresh per panel.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared. The game was left on the base screen.
+- Result stats: target 3, achieved 3 (claim 0 finished - none pending, assists 5/5 verified at cap, no pending to deploy), resources_gained none, costs about 3 minutes, no items spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 0517 unit added - 4 cards all PERFECT, assists 5/5 at cap, no new own tasks since the 22:49 claim, Mega Deploy no-change
+
+- Unit secrets-2026-11-09-0257 by ticker-0504, about 05:06 to 05:17 local, status done. Evidence in `_records_/2026-11-09/secret-missions/0517-queue-run.md` (commit be01e91134 on records/2026-11-09). Computer session cc-224 on the owner Mac mini. No different-device dialog appeared.
+- Entry: Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified before tapping further. The train icon at norm (55,573) opens the Trucks screen, as the ticker-2235 run found. Entry point re-grounded again this unit: the post icon sat at (55,657) at the 0221 read and at (55,636) here - the rotating shortcut set keeps moving, so the post point must be re-grounded fresh each unit, title verified before tapping further. The 0221 section's (55,657) point is superseded for this rotation.
+- Your Tasks holds exactly 4 cards, all stamped PERFECT in gold, no Claim button on any of them: SSR Search for Missing Refugees x2, SSR Train Refugees, SSR Protect Refugee Camp. These are the same four cards ticker-2235 claimed at 22:49 on 2026-11-08; the other three claimed cards and the plundered card from that batch have dropped off the list between the 0221 read (8 cards) and this read (4 cards). Nothing to claim this cycle. A scroll of the list produced no change, so the list holds only these four cards.
+- Assist Allies 5/5, read live - the daily cap is reached, no assists left to do. Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Reward Recovery panel: the 2026-11-6 18:00 record reads CLAIMED (8 unstarted tasks, same as ticker-2235 found); the 2026-10-24 19:00 record sits collapsed below it. Nothing new to claim.
+- Mega Deploy tapped once at its measured centre and opened no panel (no-change), consistent with nothing pending to deploy; not retried, per R2 and the ticker-2235 two-tap evidence for the same list state.
+- NOT done: no new secret tasks have appeared since the 22:49 claim on 2026-11-08; the refresh cycle for new own tasks after a batch is claimed stays an open question for the profile (see the updated Open questions entry). The next secrets unit re-checks.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (claim state verified, assists 5/5 verified at cap, deploy state verified with no pending), resources_gained none, costs 11min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 1456 unit added - 4 cards all PERFECT again, assists 5/5 at cap, no new own tasks, entry (55,636) re-confirmed
+
+- Unit secrets-2026-11-09-1057 by ticker-1434, about 14:51 to 14:56 local, status done. Evidence in `_records_/2026-11-09/secret-missions/1456-queue-run.md` (commit 4860808ff on records/2026-11-09). Computer session cc-298 on the owner Mac mini. No different-device dialog appeared.
+- Entry: Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified. The (55,636) point from the 0517 unit holds for this rotation. First tap at norm (56,575) opened Intercity Trade instead - that is the train icon, as the ticker-0504 record warned; the trade screen was left untouched and closed at once.
+- Your Tasks holds exactly the same 4 cards as ticker-0504 found at 05:17, all stamped PERFECT in gold, no Claim button on any: SSR Search for Missing Refugees x2, SSR Train Refugees, SSR Protect Refugee Camp (all Lv.5). Nothing to claim.
+- Assist Allies 5/5, read live - the daily cap is reached, no assists left to do. Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Reward Recovery was not re-opened in this unit: the 0504 record read CLAIMED at 05:17 today and no new record is signalled; the next secrets unit re-checks the panel.
+- No pending tasks to deploy, so Mega Deploy was not tapped.
+- NOT done: no new secret tasks have appeared since the 22:49 claim on 2026-11-08; the refresh cycle for new own tasks after a batch is claimed stays an open question for the profile (see the updated Open questions entry). The next secrets unit re-checks.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (claim state verified, assists 5/5 verified at cap, deploy state verified with no pending), resources_gained none, costs 5min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 1748 unit added - incidental Secret Mobile Squad read, same 4 PERFECT cards, assists 5/5, entry jeep/truck distinction
+
+- Unit zero-sweep-2026-11-09-1730 by ticker-1734, about 17:38 to 17:48 local, status partial - the sweep reads only. Evidence in `_records_/2026-11-09/daily-activities/1748-queue-run.md` (commit 2f4d783d8 on records/2026-11-09). A tap on the left icon column opened the Secret Command Post instead of trade (the two shortcut sets share the slot, per the truck-plunder metadata); nothing was tapped further there.
+- Secret Mobile Squad read live: Assist Allies 5/5, Plunder Others 0/3, with four SSR task cards all marked PERFECT. The 0/3 figure is the Secret Mobile Squad panel figure - the same panel read 0/3 in the 2026-11-01 sweep visit, while the main post screen reads 0/5; the two denominators are not merged (see the denominator note). Plunder Others not touched (PvP, no owner instruction).
+- The same 4 SSR cards as the 1456 unit (about 14:51) - still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays an open question (see the updated Open questions entry).
+- Entry lesson, current icon set: the blue truck-front icon at norm y about 573 opens Intercity Trade directly; the jeep below it is the Secret Command Post. Handed to secrets-2026-11-09-1803; nothing tapped further there.
+- No diamonds or money spent.
+
+## What the 2026-11-09 2211 unit added - assists 5/5 at cap, 9 tasks Mega Deployed, refresh cycle answered
+
+- Unit secrets-2026-11-09-1857 by ticker-2148, about 22:03 to 22:11 local, status done. Evidence in `_records_/2026-11-09/secret-missions/2211-queue-run.md` (commit dd0b32e7a on records/2026-11-09).
+- Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified.
+- Ally assists, 0/5 to 5/5, all UR rows with blue Assist buttons - a fresh confirmation that UR rows assist normally (the metadata open question about UR ally rows showing no Assist button is answered for this roster; the 2026-11-01 correction stands): [AP3x] JerryLogDog 22:04, [AP3x] JerryLogDog 22:05, [AP3x] spac3cadet 22:06, [AP3x] Dw1968 22:06, [AP3x] Black Death 22:06. Each assist paid on the spot; the Secret Task Report (Assist tab) itemises all five. Per-row rewards: Mystery Supply Box x6, Hero EXP 412.8K, chest x5 and Refined Iron Module x48 each, except Dw1968 which paid Mystery Supply Box x6, 5m Speed-up x5, 324.9K x2 and Hero EXP 412.8K. Totals: Mystery Supply Box x30, Hero EXP 2,064,000, Refined Iron Module x192, chest x25, 5m Speed-up x5, 324.9K x2. The first assist popup also showed extra speedup tiles (5m Research Speed-up x1, 5m Speed-up x3 and x1, one blue tile unread) that the report row does not itemise; they are noted here, not counted in the totals above.
+- Mega Deploy: the post holds a fresh batch of 9 tasks (new since the 14:51 check, which found only the 4 PERFECT cards) - the refresh-cycle open question is answered: new own tasks appear after the daily reset (see the updated Open questions entry). All 9 checked in the MEGA DEPLOY REMINDER panel, UR Only off: UR Rescue Test Subject 4:00:00, UR Disrupt electric grid 2:00:00, SSR Provide Tech Support to Refugees 1:00:00, SSR Protect Refugee Camp 1:00:00 x2, SR Retrieve Agent Profile 0:30:00, SR Retrieve Abandoned Gear 0:30:00, SR Retrieve Raw Materials 0:30:00, SR Retrieve Valuable Supplies 0:30:00. Perform Now tapped. Mega Refresh was NOT used: its cost is unobserved and two UR tasks were already present, so the duel-day refresh was skipped rather than risk a diamond cost.
+- Deploy verified live on re-opening the post: Rescue Test Subject 03:59:47, Disrupt electric grid 01:59:57, Provide Tech Support 00:59:38, Protect Refugee Camp 00:59:48, all counting down. The remaining five rows sit below the scroll and were not individually re-read; they were all checked in the panel and the Your Tasks badge cleared with Mega Refresh and Mega Deploy greyed out after the dispatch. The two UR tasks count 225,000 duel points each when they complete; no duel points claimed yet.
+- Reward Recovery panel was not re-opened in this unit (the 1456 record asked the next unit to re-check it); the Record button opened the Secret Task Report (Assist log) instead, which confirmed the five assists above. The next secrets unit re-checks Reward Recovery via the Recover button.
+- Plunder Others 0/5, untouched (PvP, needs owner instruction). No diamonds or money spent. No speedups burned. No paid button tapped.
+- Result stats: target 3, achieved 3 (assists 5/5 verified at cap, deploy of 9 verified running, claim state verified with nothing pending), resources_gained Mystery Supply Box x30, Hero EXP 2064000, Refined Iron Module x192, chest x25, 5m Speed-up x5, 324.9K x2, costs 9m_wall_no_stamina, verified yes, blocker_category none, assists_done 5, tasks_deployed 9, ur_tasks_deployed 2, device_takeovers 0, follow_up reward-recovery re-check.
+
+## What the 2026-11-10 0218 unit added - all 9 tasks claimed in one tap, PERFECT stamps, orange hexagon badge on one row, recovery re-checked closed
+
+- Unit secrets-2026-11-09-2257 by ticker-0204, about 02:15 to 02:18 local, status done. Evidence in `_records_/2026-11-10/secret-missions/0218-queue-run.md` (commit 069a94c7a on records/2026-11-10). Computer session cc-378 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified.
+- Ally assists already at cap: Assist Allies 5/5 for this reset day (done 22:03 to 22:11 on 2026-11-09 by ticker-2148). Nothing to assist in this unit.
+- All 9 tasks dispatched at 22:06 on 2026-11-09 were finished. One Claim tap on UR Rescue Test Subject collected all 9 at once, as the metadata promises. Headline rewards on the CONGRATULATIONS popup: Refined Iron Module 1.8K, UR Hero Universal Shard x1, Treasure Map Fragment #3 x1. A toast read "...n the treasure map - congrats!" (a Treasure Map completed from fragments). Per-card reward tiles read live before the claim: Rescue Test Subject (fragment x5, chest x57, 12.3M, puzzle x1, 2.4K), Disrupt electric grid (fragment x2, chest x57, 4.1M, 3.2M, 3.2M), Provide Tech Support to Refugees (fragment x1, chest x37, 2.4M, 290, chest x5), Protect Refugee Camp (fragment x1, chest x37, 2.4M, 1.9M, 1.9M), plus the five 30-minute SR tasks below the scroll.
+- Claim verified live after closing the report: the cards are stamped PERFECT in gold and the Your Tasks badge cleared. One exception in appearance: the Provide Tech Support row shows an orange hexagon badge instead of a gold PERFECT stamp. Its Claim button is gone like the others, so it is claimed; the badge meaning is unexplained - possibly the ally-assisted claim mark - and is noted, not counted. See the updated Open questions entry.
+- Secret Task Report: [ENJY] commander 1e6c22113 "Plundered your task rewards" twice at 11-9 23:09 (chest x3, 29, 247.7K EXP; chest x3, 195.0K, 195.0K, 247.7K EXP) - another player took part of the finished task rewards before this claim. [AP3x]MesutCLK Apex "helped you claim task rewards" at 11-10 02:08. Like All tapped; the MesutCLK row now shows a blue thumbs-up.
+- No new pending tasks: Your Tasks holds only the 9 claimed cards. New tasks appear after the daily reset (2211 record; the 0218 record cites a 19:00 reset, but that instant is not separately verified - the about-18:00 rollover is also inside the window), so Mega Deploy was not used - nothing to deploy - and Mega Refresh was not used - its cost is still unobserved and there was no pending batch to roll.
+- Reward Recovery re-checked (the follow-up the 2211 record left open): the newest record, 2026-11-6 18:00, reads 8 unstarted tasks completed by the system and is already CLAIMED; the older 2026-10-24 19:00 record sits below it. Nothing new to claim; the follow-up is closed.
+- Hidden Treasures tab carries a red 1 badge - a new treasure item, likely the completed Treasure Map. That is the hidden-treasures unit's work; not touched here.
+- Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Live reads: base screen after the claim - steel 922.5M to 930.4M (claim payout visible in the top bar); Total Power 146,751,949, unchanged.
+- The two UR tasks are now complete; the duel total re-read belongs to the duel-score unit (02:30 cycle pending in the inbox).
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (claim of 9 verified, assists at cap verified, recovery re-checked), resources_gained Refined Iron Module 1.8K, UR Hero Universal Shard x1, Treasure Map Fragment #3 x1, steel +7.9M, costs 3m_wall_no_stamina, verified yes, blocker_category none, assists_done 0, tasks_claimed 9, tasks_deployed 0, ur_tasks_claimed 2, device_takeovers 0, follow_up hidden-treasures badge 1 for the treasures unit.
+
+## What the 2026-11-10 0444 unit added - 8 cards all PERFECT, assists at cap, recovery closed, 8-vs-9 count question opened
+
+- Unit secrets-2026-11-10-0257 by ticker-0434, about 04:43 to 04:45 local, status done. Evidence in `_records_/2026-11-10/secret-missions/0444-queue-run.md` (commit 5ba07ce2b4 on records/2026-11-10). Computer session cc-400 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified.
+- Ally assists already at cap: Assist Allies 5/5 for this reset day. Nothing to assist in this unit.
+- Your Tasks holds 8 visible cards, every one stamped PERFECT in gold, no Claim button anywhere: UR Rescue Test Subject, UR Disrupt electric grid, SSR Provide Tech Support to Refugees (orange hexagon badge, as at 02:18, meaning still unexplained), SSR Protect Refugee Camp, SR Retrieve Raw Materials, SR Retrieve Abandoned Gear, SR Retrieve Valuable Supplies, SR Retrieve Agent Profile. The list was scrolled top to bottom twice; Protect Refugee Camp is directly followed by Retrieve Raw Materials, and Retrieve Agent Profile is the last card.
+- COUNT QUESTION (open): the 02:18 record says one Claim tap collected all 9 tasks at once (4 UR/SSR plus five 30-minute SR tasks). This unit counts 8 cards, 4 SR. No 5th SR card exists between Protect Refugee Camp and Retrieve Raw Materials, and the list ends at Retrieve Agent Profile. Either the 02:18 count was off by one, or one SR card left the list since. All 8 visible cards are PERFECT with no Claim button, so nothing is pending either way; the count difference is recorded, not resolved. The next secrets unit recounts the list against this note. See the new Open questions entry.
+- Nothing to claim, nothing to deploy: Mega Deploy was not used - no pending batch - and Mega Refresh was not used - its cost is still unobserved and there was no pending batch to roll.
+- Reward Recovery re-checked: the newest record, 2026-11-6 18:00, reads 8 unstarted tasks completed by the system and is already CLAIMED; the older 2026-10-24 19:00 record sits below it. Nothing new to claim.
+- Hidden Treasures tab carries a red badge - that is the hidden-treasures unit's work; not touched here.
+- Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Live reads: base screen after the check - Total Power 148,058,020 (up from 146,751,949 at the 02:18 read - building upgrades collected between reads, not this unit's work; a re-confirmation of the levelled figure, commented on Issue #482 by this run). Steel, food, coin top bar unchanged during this unit.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (no pending claims verified, assists at cap verified, recovery re-checked), resources_gained none, costs about 3 minutes, no stamina or items spent, verified yes, blocker_category none, assists_done 0, tasks_claimed 0, tasks_deployed 0, ur_tasks_claimed 0, device_takeovers 0, follow_up recount the Your Tasks list next unit (8 vs 9).
+
+## What the 2026-11-10 1036 unit added - 8 cards all PERFECT, assists at cap, 8-vs-9 count RESOLVED as a miscount, orange badge moved
+
+- Unit secrets-2026-11-10-0657 by ticker-1004, about 10:32 to 10:36 local, status done. Evidence in `_records_/2026-11-10/secret-missions/1036-queue-run.md` (commit 2218eb3cd on records/2026-11-10). Computer session cc-434 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified.
+- Ally assists already at cap: Assist Allies 5/5 for this reset day. Nothing to assist in this unit.
+- Your Tasks holds 8 visible cards, every one stamped PERFECT in gold, no Claim button anywhere: UR Rescue Test Subject, UR Disrupt electric grid, SSR Provide Tech Support to Refugees, SSR Protect Refugee Camp, SR Retrieve Raw Materials, SR Retrieve Abandoned Gear, SR Retrieve Valuable Supplies, SR Retrieve Agent Profile. The list was drag-scrolled top to bottom (the plain scroll action does not move this list - same failure as the Weekly Pass list in the passes unit this pass; press-drag is the working method). Count confirmed 8, which RESOLVES the 04:44 open observation: the 02:18 "9 tasks" count was a miscount. See the updated Open questions entries.
+- OPEN OBSERVATION - orange hexagon badge moves: the 04:44 record saw the orange hexagon badge on the Provide Tech Support to Refugees card (right side, where PERFECT sits on the other cards). In this unit the badge was seen on the Protect Refugee Camp card instead, in the mid-scroll screenshot, with the same reward row (1, 37, 2.4M, 1.9M, 1.9M) as Protect Refugee Camp. All 8 cards show no Claim button either way, so nothing is pending, but the badge's meaning and which card carries it are still unexplained. Next unit should re-read the badge on both cards.
+- Nothing to claim, nothing to deploy: Mega Deploy was not used - no pending batch - and Mega Refresh was not used - its cost is still unobserved and there was no pending batch to roll.
+- Reward Recovery re-checked: the newest record, 2026-11-6 18:00, reads 8 unstarted tasks completed by the system and is already CLAIMED; the older 2026-10-24 19:00 record sits below it. Nothing new to claim.
+- Hidden Treasures tab carries a red badge - that is the hidden-treasures unit's work; not touched here.
+- Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Live reads: base screen after the check - Total Power 148,058,020, coin 84.1M, food 612.5M, iron 939.3M, diamonds 6,207, stamina 120. Unchanged during this unit.
+- Token lease expired mid-unit (10:37); the unit continued on the claim lease to 10:51, no other pass took the token in between.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (no pending claims verified, assists at cap verified, recovery re-checked), resources_gained none, costs about 4 minutes, no stamina or items spent, verified yes, blocker_category none, assists_done 0, tasks_claimed 0, tasks_deployed 0, ur_tasks_claimed 0, device_takeovers 0, follow_up re-read the orange hexagon badge on Provide Tech Support and Protect Refugee Camp next unit.

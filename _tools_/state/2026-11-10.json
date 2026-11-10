@@ -1,0 +1,72 @@
+{
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-11-10T03:45:43-08:00",
+  "note": "Base Building phase: score 0/30000, only free path is building power from one Oil Well in progress, speedup and pack paths red-lined"
+ },
+ "building-queues": {
+  "status": "done",
+  "at": "2026-11-10T09:14:14-08:00",
+  "note": "Lv.29 Aircraft Center 1d 17:13:16 left, slots 2-4 idle"
+ },
+ "research": {
+  "status": "done",
+  "at": "2026-11-10T08:46:23-08:00",
+  "note": "Slots read live: slot 1 running 1d 01:35:27, slot 2 Idle"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-10T03:49:35-08:00",
+  "note": "Claim All both tabs: 110 Regular + 7 Premium = 117 gifts; Gift Level 28 progress 200,816,740/206,300,000"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-10T09:23:49-08:00",
+  "note": "Help All: 2 ally helps delivered, none waiting"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-10T03:58:12-08:00",
+  "note": "Claim All swept all categories: no claimable rewards; R5 warning mail read (server leavers may target alliance)"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-11-10T04:14:02-08:00",
+  "note": "Boarded carriage 2 of Missile Apex train; 3-contract gift missed (issue #570)"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-10T10:03:29-08:00",
+  "note": "Personal total 1650000, gap 1950000 (Base Expansion)"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-10T09:57:09-08:00",
+  "note": "No trophy icon, no ceremony waiting (checked only)"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-10T10:30:48-08:00",
+  "note": "Shop checked 10:29: 4 tabs, nothing claimable; Monthly Daily Pickup Claimed, Rewards Left 11"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-10T10:37:08-08:00",
+  "note": "Post checked 10:36: 8 tasks all PERFECT, assists 5/5, recovery CLAIMED"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-10T10:40:11-08:00",
+  "note": "Fragments 10:42: M3 x0, no dig; chest 11/15; Rewards is odds preview only"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-11-10T02:54:07-08:00",
+  "note": "Donation Count 0/30 read live via entry count 6/30 plus footer delta 4800 to 5100; count refills in bursts, next slot re-reads"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-10T05:19:27-08:00",
+  "note": "Hub sweep complete 05:19: 6 tabs checked, nothing claimable; Season 11 survey open for owner"
+ }
+}
