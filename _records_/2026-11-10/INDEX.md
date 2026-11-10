@@ -1050,3 +1050,19 @@ of 2026-10-28.
   unchanged. Validation 28/28 fixture assertions on isolated
   /tmp pools. Status: done. Full detail in
   tool-development/0532-run.md.
+
+## 05:40 to about 05:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-0540. Plan staged 1
+  unit into the live pool (17:30 zero-sweep, final pass of
+  tonight's pre-reset sweep pair; already_present 57,
+  skipped_done_current 12, skipped_closed 6, reaped 0,
+  expired 0). Sweep production skipped (05:00 hour run);
+  the pair is now complete in the live pool. Scout diff
+  on the branch observation (896 lines, newest pass 1609)
+  applied to the live pool: 7 already-queued, 0 enqueued,
+  candidates 1 (inventory-icon-red-dot, draft only),
+  promotion proposals 1 (already decided REJECTED as a
+  task), unexplained red dots 0; 0 withdrawals. No issues
+  filed. Pool inbox 58, claimed 0, done 1446. Status: done.
+  Full detail in queue-planning/0540-run.md.
