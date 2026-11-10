@@ -195,6 +195,13 @@ DEFAULT_MAX_ATTEMPTS = 3
 REQUIRED_STATS_KEYS = ("target", "achieved", "resources_gained",
                        "costs", "verified")
 SHORT_CLOSING_STATUSES = ("partial", "failed", "skipped-needs-owner")
+# Miss-audit root-cause classes, task-unit-queue-design.md per-unit
+# measurement table (mirrored in _tools_/retro_report.py
+# BLOCKER_CLASSES): a window closure, b crowding out, c tap
+# method, d inference over live read, e repeated blocker,
+# f missing precondition, g true red-line miss, h by-design
+# partial, i owner-named without escalation.
+BLOCKER_CATEGORIES = "abcdefghi"
 STATES = ("inbox", "claimed", "done")
 TOKEN_NAME = "device-token.md"
 FM_ORDER = ["unit", "regular", "activity", "segment", "priority",
@@ -2433,6 +2440,37 @@ def points_is_progress_delta(stats, regular=None):
     return points is not None and points != 0
 
 
+def blocker_category_not_enum(stats):
+    """True when stats.blocker_category is present but not an audit class (issue #130).
+
+    blocker_category is the miss-audit root-cause class, one
+    letter a to i (task-unit-queue-design.md per-unit
+    measurement table). The 2026-11-09 retro found non-enum
+    values persisting in the pool - access-failed, time,
+    timer, unverified-close - and named the queue tool
+    validation that would enforce the enum as the standing
+    gap behind #130; the main-tree pool snapshot carries the
+    same family plus none and contested. Acceptance mirrors
+    retro_report.py _blocker_class: a single letter, or a
+    letter followed by a space, hyphen or colon (so "e -
+    repeated blocker" still reads as e). Absence is not
+    flagged here - missing_stats_keys owns that. This is a
+    warning, never a block.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if "blocker_category" not in stats:
+        return False
+    raw = stats.get("blocker_category")
+    if not isinstance(raw, str):
+        return True
+    text = raw.strip().lower()
+    if not text:
+        return True
+    return not (text[0] in BLOCKER_CATEGORIES
+                and (len(text) == 1 or text[1] in " -:"))
+
+
 def cmd_complete(args):
     state, path = find_unit(args.root, args.unit)
     if state != "claimed":
@@ -2454,6 +2492,7 @@ def cmd_complete(args):
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
+    blocker_bad = blocker_category_not_enum(stats)
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -2472,7 +2511,9 @@ def cmd_complete(args):
                            + (["points without achieved"]
                               if points_noach else [])
                            + (["points is progress delta"]
-                              if points_prog else [])),
+                              if points_prog else [])
+                           + (["blocker_category not in enum a-i"]
+                              if blocker_bad else [])),
     }
     # Screen-blocking overlay (issue #436): a short closing that
     # names its overlay records the pool-level blocker, so the
@@ -3064,6 +3105,8 @@ def gather_stats(root):
               "stats_points_dup": 0, "stats_points_dup_units": [],
               "stats_points_no_achieved": 0,
               "stats_points_no_achieved_units": [],
+              "stats_blocker_not_enum": 0,
+              "stats_blocker_not_enum_units": [],
               "stall_expired": 0, "stall_expired_units": [],
               "newest_finished_at": None,
               "newest_finished_age_minutes": None,
@@ -3169,6 +3212,12 @@ def gather_stats(root):
                     report["stats_points_no_achieved"] += 1
                     report["stats_points_no_achieved_units"].append(
                         f.get("unit"))
+                if blocker_category_not_enum(
+                        dup_stats if isinstance(dup_stats, dict)
+                        else {}):
+                    report["stats_blocker_not_enum"] += 1
+                    report["stats_blocker_not_enum_units"].append(
+                        f.get("unit"))
                 if status in ("failed", "skipped-needs-owner"):
                     entry["failed"] += 1
                 dur = result.get("duration_seconds")
@@ -3233,6 +3282,10 @@ def cmd_stats(args):
               f"{report['stats_points_no_achieved']}")
         print("  stats_points_no_achieved_units: "
               f"[{', '.join(report['stats_points_no_achieved_units'])}]")
+        print(f"  stats_blocker_not_enum: "
+              f"{report['stats_blocker_not_enum']}")
+        print("  stats_blocker_not_enum_units: "
+              f"[{', '.join(report['stats_blocker_not_enum_units'])}]")
         d = report["durations_seconds"]
         if d:
             print(f"  durations_seconds: count {d['count']}, "
@@ -3293,6 +3346,10 @@ def cmd_stats(args):
             print(f"  stats points without achieved: "
                   f"{report['stats_points_no_achieved']} "
                   f"({', '.join(report['stats_points_no_achieved_units'])})")
+        if report["stats_blocker_not_enum"]:
+            print(f"  stats blocker_category not in enum: "
+                  f"{report['stats_blocker_not_enum']} "
+                  f"({', '.join(report['stats_blocker_not_enum_units'])})")
         d = report["durations_seconds"]
         if d:
             print(f"  durations: n={d['count']} avg={d['avg']}s "
