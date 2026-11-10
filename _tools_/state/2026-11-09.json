@@ -6,13 +6,13 @@
  },
  "treasures": {
   "status": "done",
-  "at": "2026-11-09T05:12:47-08:00",
-  "note": "1 dig executed, chest progress 10/15"
+  "at": "2026-11-09T22:13:21-08:00",
+  "note": "Stock M3 x0, no dig possible, both Dig buttons greyed"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-09T14:54:05-08:00",
-  "note": "Post checked 14:56 PT: 4 cards PERFECT, assists 5/5 at cap, nothing to claim or deploy"
+  "at": "2026-11-09T22:11:48-08:00",
+  "note": "5 assists to cap, 9 tasks Mega Deployed and verified running"
  },
  "events": {
   "status": "done",
@@ -48,6 +48,21 @@
   "status": "done",
   "at": "2026-11-09T21:21:46-08:00",
   "note": "Regular 113 + Premium 57 claimed in full, Gift Level 199,708,580/206,300,000"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-09T21:54:32-08:00",
+  "note": "Personal total 0 read live twice, theme Base Expansion, alliance trailing 256,949,555 vs 307,894,587"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-09T21:55:23-08:00",
+  "note": "No trophy icon on base screen, no ceremony waiting"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-09T22:01:23-08:00",
+  "note": "Weekly Pass list fully scrolled, no owned pickups; Monthly Claimed; check-in banner filed as Issue #553"
  },
  "radar": {
   "status": "done",
