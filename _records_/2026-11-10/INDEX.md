@@ -2531,3 +2531,14 @@ modified: 2026-11-10T14:21:00Z
 ## 13:45 to about 13:52 - PR integration pass pr-integration-2026-11-10-1345
 
 - PR integration pass pr-integration-2026-11-10-1345 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); no merges; tools PR 425 author-resolved its conflict at the 1332 tool-development run (head 0fb5a27f6), re-verified CLEAN against live main 72ee1dd9, still owner-gated (OD-20261108-01 open), verification comment posted (issuecomment-6780128543). Records PR 583 carried to the 15:00 batch at head b2223f5b (merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged, no new notes per the no-repeat rule. End-of-pass sweep: 4 open PRs, all decided, no unprocessed PRs. Status: done. Full detail in pr-integration/1345-run.md.
+## 13:40 to about 13:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-1340. Plan staged 0
+  units into the live pool (12-hour horizon already covered;
+  64 already present, 6 skipped done current, 8 skipped
+  closed), pre-reset sweep pair already present in the live
+  pool (1630 and 1730), scout diff re-applied on the 0615
+  observation with identical 0 counts (idempotent), 0
+  withdrawals, no issues filed. Pool by_state: inbox 63,
+  claimed 1, done 1461. Status: done. Full detail in
+  queue-planning/1340-run.md.
