@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-10T06:47:13Z
+modified: 2026-11-10T10:40:33Z
 level: L1
-version: 1.15.0
+version: 1.16.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -25,6 +25,7 @@ grounded_in:
   - source: ticker-1434 hidden-treasures execution record 2026-11-08 1459 queue run (done, one dig executed, fragments M1-M7 each down 1, chest progress 6/15 to 7/15, tab badge 1 while stock allowed 3 digs - badge-equals-digs rule disproved); record commit dfd3c87f9 on records/2026-11-08
   - source: ticker-2235 hidden-treasures execution record 2026-11-08 2255 queue run (done, one dig executed, fragments M1-M7 each down 1, chest progress 7/15 to 8/15, 2 digs remain capped by M3, tab badge 1 re-confirmed not the dig count; record commit 0c9686b4f on records/2026-11-08)
   - source: ticker-0504 hidden-treasures execution record 2026-11-09 0525 queue run (done, 1 dig executed, fragments M1-M7 each down 1, chest progress 9/15 to 10/15, M3 binding at x1, tab badge 1 with exactly 1 dig possible; record commit be01e91134 on records/2026-11-09)
+  - source: ticker-0204 hidden-treasures execution record 2026-11-10 0223 queue run (done, 1 dig after the secrets claim restocked M3, chest 11/15; record commit 069a94c7a on records/2026-11-10)
 ---
 
 # Hidden treasures
@@ -584,3 +585,14 @@ as Hidden Treasure.
 - The stock is identical to the post-dig state read at 05:20 today (0525 record): the five ally assists done in the secrets unit of this same pass paid no fragments, and no other fragment income arrived since. M3 at 0 is the binding fragment - no complete set, no dig possible.
 - No fragment exchange was inspected or executed (needs owner approval). The 9 tasks Mega Deployed in this pass finish from 22:33 onward; the next treasures unit re-checks after a claim.
 - Result stats: target 1, achieved 1 (fragment stock verified live, dig state verified with both buttons greyed), resources_gained none, costs 2m_wall_no_stamina, verified yes, blocker_category none, digs_done 0, device_takeovers 0, follow_up none.
+
+## What the 2026-11-10 0223 unit added - 1 dig after the secrets claim restocked M3, chest 11/15, M3 binding again
+
+- Unit treasures-2026-11-09-2257 by ticker-0204, about 02:21 to 02:23 local, status done. Evidence in `_records_/2026-11-10/hidden-treasures/0223-queue-run.md` (commit 069a94c7a on records/2026-11-10). Computer session cc-378 on the owner Mac mini.
+- Hidden Treasures tab opened from the Secret Command Post; red badge 1 on the tab (one dig possible).
+- Fragment stock before the dig, read live: M1 x14, M2 x13, M3 x1, M4 x7, M5 x2, M6 x7, M7 x11. Chest progress 10/15. Skip Animation ticked. Dig 1 time active, Dig 2 time(s) greyed - M3 at x1 is the binding fragment.
+- The stock moved since the 22:14 check (M1 x14, M2 x11, M3 x0, M4 x4, M5 x2, M6 x4, M7 x10): the secrets claim at 02:16 restocked M2 +2, M3 +1, M4 +3, M6 +3, M7 +1, completing the one set the badge advertised. This is the first measured restock delta tying a secrets claim to fragment stock - the secrets-to-treasures restock link is now measured, not inferred.
+- Dig: Dig 1 time tapped with Skip Animation on. CONGRATULATIONS popup paid 7 tiles: iron chest x12, coin piles x12, medal x600, 1m speedup x25, 1m speedup x50, 1m speedup x50, silver ingots x100. The chest tier won was not displayed (same as 2026-10-25).
+- Post-dig state verified live: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10 (each kind down exactly 1); chest progress 11/15; tab badge cleared; both Dig buttons greyed out.
+- No fragment exchange inspected or executed (needs owner approval). No diamonds or money spent. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1 (one dig executed and verified), resources_gained iron chest x12, coin piles x12, medal x600, 1m speedup x125, silver ingots x100, costs 2m_wall_no_stamina, verified yes, blocker_category none, digs_done 1, device_takeovers 0, follow_up none.

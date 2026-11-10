@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T08:42:00Z
+modified: 2026-11-10T10:40:33Z
 level: L1
-version: 1.73.0
+version: 1.74.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -79,6 +79,7 @@ grounded_in:
   - source: ticker-1822 mail-rewards execution record 2026-11-09 1838 queue run (done, Arms Race Ranking Reward claimed via Event mail, arms-race-1403 expired unrun; record commit 6761c35d1 on records/2026-11-09)
   - source: ticker-1910 arms-race execution record 2026-11-09 1928 queue run (partial, Unit Progression phase read live at 0, timer 02:42:34, tier-3 gap 75,000 via training queues only, no chest earned; record commit e05c662bd on records/2026-11-09)
   - source: ticker-0004 arms-race execution record 2026-11-10 0006 queue run (unverified, Tech Research phase judged at phase start, score 0/30,000, R4 skipped-needs-owner; record commit 9cfcddabc on records/2026-11-10)
+  - source: ticker-0204 event-claims execution record 2026-11-10 0221 queue run (partial, Arms Race Base Building phase cross-read, timer 03:40:14, score 0, cumulative 0/2; record commit 069a94c7a on records/2026-11-10)
 ---
 
 
@@ -2154,3 +2155,9 @@ slot. Evidence in
 - Follow-up: check the ranking reward after this phase ends, per the owner rule - routed to the mail unit (Event mail, per the 1838 finding), not a phase-page tap; the phase-page ranking chest is preview-only while live.
 - No diamonds or money spent. No research or building started. No stage swapped.
 - Result stats: target 30000, achieved 0, points 0, resources_gained none, costs about 7 minutes, no stamina, no items, no diamonds, verified yes, blocker_category g.
+
+## What the 2026-11-10 0221 events cross-read added - Base Building phase, timer 03:40:14, score 0, cumulative 0/2
+
+- Cross-read inside the events unit events-2026-11-09-2257 by ticker-0204, about 02:19 to 02:21 local (the events unit closed partial). Evidence in `_records_/2026-11-10/event-claims/0221-queue-run.md` (commit 069a94c7a on records/2026-11-10). This is a read-only cross-read, not an arms-race scoring unit; the phase itself is the arms-race unit's job (arms-race-2026-11-10-0203 in inbox).
+- Arms Race page, Base Building phase: timer 03:40:14 left, score 0, point chests at 6,250 / 12,500 / 30,000 all locked. Cumulative chest at top left reads 0/2 (not full, not claimable). The phase rotated since the 15:00 check, when it read 7/8 in Hero Advancement - the 0006 Tech Research phase judged at 00:06 has already ended and a new phase is running.
+- Nothing claimable on this page; no Arms Race grinding was done in the cross-read unit. The phase scoring belongs to the arms-race unit for this slot.
