@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T03:49:11Z
+modified: 2026-11-10T05:41:57Z
 level: L1
-version: 1.43.0
+version: 1.44.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -50,6 +50,7 @@ grounded_in:
   - source: ticker-0204 alliance-gifts execution record 2026-11-09 0211 queue run (done, Claim All both tabs, 102 Regular and 10 Premium dialog-confirmed, Gift Level 28 progress 195,376,010 to 195,412,790, Premium window +35,760 against 2,300 visible row points, Issue #183 evidence; record commit facef628c on records/2026-11-09)
   - source: ticker-0404 alliance-gifts execution record 2026-11-09 0417 queue run (done, 37 Regular and 2 Premium claimed, both dialogs confirmed, Gift Level 28 progress 195,637,370 to 195,638,460; record commit 9fdcc4c9ee on records/2026-11-09)
   - source: ticker-1822 alliance-gifts execution record 2026-11-09 1842 queue run (done, Regular 1699 plus Premium 95, Regular progress window exact, leader Abyss Apex; record commit 6761c35d1 on records/2026-11-09)
+  - source: 2026-11-09 daily retro, execution-knowledge action A-2026-11-09-01 (Issue #300): never write the Gift Level progress gain into stats.points - the progress is alliance-wide, not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match
 ---
 
 
@@ -100,6 +101,7 @@ one file per execution.
 - Gift Level 28 on 2026-10-25, with progress 161,149,070 of
   206,300,000 before the evening claims and about 161,153,870 after -
   claimed gifts feed the level progress.
+- CORRECTION, retro action A-2026-11-09-01 (2026-11-09 daily retro, tracked on reopened Issue #300): never write the Gift Level progress gain into stats.points - the progress is alliance-wide and is not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match. Verification: the next gifts unit carries points 0 or a scored figure with a matching achieved; recheck 2026-11-10 retro. The 0417 section's "points 1090" and the 1842 section's "points 46760" both write the progress gain into stats.points and are superseded as points figures - the records themselves are append-only and unchanged, only this profile's reading of them as points is corrected.
 
 ## What is known from 2026-10-25
 
@@ -826,6 +828,8 @@ one file per execution.
 - 1.34.0 (2026-11-07): 2033 gifts unit folded (done, dialog-confirmed 437 Regular and 7 Premium across two Regular sweeps and one Premium sweep, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 192,787,590 to 192,799,520 of 206,300,000, total +11,930 - sweep deltas do not decompose into own claims alone (sweep 1 +4,370 for 434 gifts vs +4,340 expected, sweep 2 +6,900 for 3 gifts vs +30 expected), the bar is alliance-wide so the full delta must not be attributed to own claims, filed as Issue #183 evidence by the ticker pass; 3 new gifts arrived mid-unit so re-check Regular after Premium; alliance 95/100 members, power 13,249,423,507; "Hide your name on Gifts" checkbox left unchecked and untouched).
 
 - 1.41.0 (2026-11-09): 0211 gifts unit folded (done, dialog-confirmed 102 Regular plus 10 Premium, 112 total, both tabs verified clear; Gift Level 28 progress 195,376,010 to 195,412,790 of 206,300,000; Regular window exact (+1,020 for 102 gifts), Premium window +35,760 against 2,300 visible row points, new Issue #183 evidence already commented by the ticker job; Premium Claim All re-grounded fresh at (744,936); observation capture failed once during the Premium claim, Issue #282 family, commented by this run; Hide-your-name unchecked before and after; alliance 96/100 members, power 13,532,886,654).
+
+- 1.44.0 (2026-11-09): retro action A-2026-11-09-01 applied (Issue #300): Gift Level progress gain is never written into stats.points - the progress is alliance-wide, not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match; the 0417 "points 1090" and 1842 "points 46760" stats lines are superseded as points figures, the records unchanged. No new gifts unit ran this hour. (1.43.0 carries the 1842 section without a changelog line; the numbering is preserved, not rewritten.)
 
 - 1.42.0 (2026-11-09): 0417 gifts unit folded (done, dialog-confirmed 37 Regular plus 2 Premium, 39 total, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 195,637,370 to 195,638,460 of 206,300,000, total +1,090 - Regular window +390 against +370 expected for 37 gifts, the extra +20 recorded unexplained as new Issue #183 evidence commented by this run, Premium window +700 exactly 500 plus 200; Premium Claim All re-grounded fresh at (744,936); Hide-your-name unchecked before and after; alliance 96/100 members, power 13,532,886,654).
 

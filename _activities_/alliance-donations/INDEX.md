@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T04:50:04Z
+modified: 2026-11-10T05:41:57Z
 level: L1
-version: 1.77.0
+version: 1.78.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -92,6 +92,7 @@ grounded_in:
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, footer 3300 with no own donations between reads, Techs panel card cut off; record commit c9a86fa74 on records/2026-11-09)
   - source: ticker-1910 alliance-donations execution record 2026-11-09 1935 queue run (partial, 30 coin donations attempted on Quick Gathering, count read live 30 to 5/30, final 5 unproven behind a 00:17:47 timer, footer 3300 to 3050; record commit e05c662bd on records/2026-11-09)
   - source: ticker-1934 alliance-donations execution record 2026-11-09 2015 queue run (partial, re-read unit donations-2026-11-10-0330, count 2/30 to 1/30 live, second donation greyed with a 00:15:00 timer, footer 3050 to 3250; record commit 69d8e38ec on records/2026-11-09)
+  - source: 2026-11-09 daily retro, execution-knowledge action A-2026-11-09-03 (Issue #417): the Tech Donation Today footer is disqualified as a closing count - it fell 3,300 to 3,050 while 30 donations were made, then rose 3,050 to 3,250 across the re-read unit's 2 donations; close only on the Donation Count read
 ---
 
 
@@ -299,7 +300,7 @@ hard, and they override any earlier closing habit in this file.
   read live six hours and two hours before the trade-day reset (absolute 02:00 UTC, about 18:00 PST in winter, 19:00 PDT in summer), and a
   shortfall raises the next donations unit to priority 1. A day
   may not discover an un-donated remainder at its end.
-- Re-examination note 2026-11-09 (GitHub Issue #500): the 0324 unit read the Rallied Attack count live at 9/30 about 03:29 after the 2350 unit left it at a live-read 1/30 about 23:50 with the button greyed on a timer, no reset between - the count refills, so a 0 read may be a burst floor rather than the day total, and Tech Donation Today may be the better day total. This does NOT change the rule yet: no live 0 read exists, the footer stays disqualified as a closing count (it fell 6900 to 1800 while donations were made, Issue #417), and the live-read core above still binds every unit until the daily retro rules on Issue #500. The deciding test is owed to the successor unit: donate until the button greys, then re-read the count and the footer live after the cooldown.
+- Re-examination note 2026-11-09 (GitHub Issue #500): the 0324 unit read the Rallied Attack count live at 9/30 about 03:29 after the 2350 unit left it at a live-read 1/30 about 23:50 with the button greyed on a timer, no reset between - the count refills, so a 0 read may be a burst floor rather than the day total, and Tech Donation Today may be the better day total. The daily retro HAS now ruled (2026-11-09, action A-2026-11-09-03, Issue #417): the Tech Donation Today footer is disqualified as a closing count - the deciding pair is the Nov 9 fall 3,300 to 3,050 while 30 donations were made, then the rise 3,050 to 3,250 across the re-read unit's 2 donations; close only on the Donation Count read. Verification: a donations unit closes on the Donation Count read only; recheck 2026-11-10 retro. Issue #500's replenishment question stays open - the count refills, so a 0 read may be a burst floor rather than the day total. The deciding test is owed to the successor unit: donate until the button greys, then re-read the count and the footer live after the cooldown.
 
 ## What the 2026-11-01 2348 unit added
 
