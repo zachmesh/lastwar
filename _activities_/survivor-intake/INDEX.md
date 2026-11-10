@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-10T05:41:57Z
-version: 1.45.0
+modified: 2026-11-10T08:42:00Z
+version: 1.46.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -46,6 +46,7 @@ grounded_in:
   - source: ticker-1234 survivor-intake execution record 2026-11-09 1301 queue run (partial, gate inspected from the right-edge pan, no survivor line found, 0 recruits; record commit da81e137e on records/2026-11-09)
   - source: ticker-1704 survivor-intake execution record 2026-11-09 1729 queue run (partial, gate line not verified, banner hitbox covers the figure strip, R2 third-strike persists; record commit 9806b8352 on records/2026-11-09)
   - source: ticker-2040 survivor-intake execution record 2026-11-09 2055 queue run (partial, gate line cleared live with one grounded bubble tap, R2 third-strike blocker broken, Quick Dispatch deferred per R7; record commit ca96fa0c9 on records/2026-11-09)
+  - source: ticker-2334 survivor-intake execution record 2026-11-09 2358 queue run (done, gate line verified and cleared live, Quick Dispatch ran first time in the queue era; record commit 10b431e97 on records/2026-11-09)
 ---
 
 
@@ -94,6 +95,7 @@ Measured on 2026-10-25.
   walk to their post. The line is clear when no question mark
   bubbles remain at the gate.
 - Figure taps can process a survivor without opening a card - measured 2026-11-07 (2000 unit): four question-mark survivors grounded at the gate, a tap on the first figure turned the "?" bubbles into yellow smiley faces and the figures walked in, with no New Survivor Incoming card opening and no name, role or trait read for any survivor. A smiley change is processed state, not a recruit identity; do not claim a recruit was taken in from the smiley alone. (2026-11-09 0926 re-confirmation: a tap on the right-hand figure of a 2-survivor line cleared both '?' bubbles and raised one yellow smiley-face bubble at the gate - one intake confirmed by the smiley, but no Recruit card, name or role was read, so the intake is recorded unverified in detail; the second survivor's state was unverified at unit close - only one smiley bubble visible - so the next unit re-checks the gate first.)
+- Tap method, 2026-11-09 2358: move, wait 1 second, then click - the bare-click-as-map-drag lesson from the radar unit in the same pass applied here; the tap at norm (452,657) processed the right-hand figure of the gate line. One tap cleared both '?' bubbles from the gate, but only one smiley-face bubble was seen walking to post, so the processed count is recorded as at least 1, not 2 - the same pattern as the 0926 unit, and the second figure's exit is still unexplained.
 
 ## Cadence
 
@@ -976,7 +978,7 @@ Measured on 2026-10-25.
   buildings, not a gate line, in the 2112 current view -
   the pointer is qualified, not erased, and the next unit
   grounds fresh rather than navigating to it.
-- Quick Dispatch after intake (2026-11-09 0926): Quick Dispatch did NOT run in the 0926 unit - the starved subtask from the 2026-10-31 retro note - and is the first action of the next survivors unit per rule R7, in the Iron Mine panel or whichever building panel the newcomer belongs to. The second survivor of the 0926 line is unverified at unit close; the next unit re-checks the gate first, then runs Quick Dispatch, then intakes. (2026-11-09 1301 update: gate re-checked first per this order - no line, 0 recruits; Quick Dispatch did not run, no intake happened in this unit; the 0926 newcomer's dispatch is still owed.)
+- Quick Dispatch after intake (2026-11-09 0926): Quick Dispatch did NOT run in the 0926 unit - the starved subtask from the 2026-10-31 retro note - and is the first action of the next survivors unit per rule R7, in the Iron Mine panel or whichever building panel the newcomer belongs to. The second survivor of the 0926 line is unverified at unit close; the next unit re-checks the gate first, then runs Quick Dispatch, then intakes. (2026-11-09 1301 update: gate re-checked first per this order - no line, 0 recruits; Quick Dispatch did not run, no intake happened in this unit; the 0926 newcomer's dispatch is still owed.) (2026-11-09 2358 update: Quick Dispatch RAN - the first survivors unit in the queue era to run it. Iron Mine Lv.27, result 'no survivors available for dispatch', posts full (Christopher, Elina, Alyssa, Jolene), Output/hr +123066, Max Production Time 11hr 36min. The R7 carry from 0926/2055 is discharged: the newcomer's dispatch was attempted and the outcome matches the 2026-10-25 precedent (full posts, no newcomer waiting, nothing changes). The 22-partial streak is broken on the Quick Dispatch point as well as the gate-clear point.)
 
 ## Changelog
 
@@ -1590,3 +1592,15 @@ Measured on 2026-10-25.
 - Quick Dispatch not run: the token expired at 21:03 PT and the pass budget did not allow a safe building-panel navigation (no grounded Iron Mine or Farmland panel point in this unit). Per queue rule R7, Quick Dispatch is the first action of the next survivors unit - open a building panel and run it, so the 2055 newcomer is posted.
 - No diamonds or money spent. No card opened, nothing bought, nothing deleted.
 - Result stats: target clear the gate line, achieved line cleared (0 "?" bubbles at the gate, live read), resources gained 1 dialog survivor taken in (name not captured), verified yes.
+
+## What the 2026-11-09 2358 unit added - gate line verified and cleared live, Quick Dispatch ran first time in the queue era, done
+
+- Unit survivors-2026-11-09-2203 by ticker-2334, about 23:49 to 23:58 local, status done. Evidence in `_records_/2026-11-09/survivor-intake/2358-queue-run.md` (commit 10b431e97 on records/2026-11-09). Tracker marked done.
+- Gate verified live before any tap, per the R2 third-strike instruction: two survivors with white "?" bubbles stood in line at the front gate (the walled entrance signed "Zombies DEFEND"), figures at about norm (413,673) and (452,657) on the base screen at 23:49 PT. This is the first survivors unit in the queue era to verify the line before acting - the 22 of 22 partials of 2026-10-28 to 2026-10-31 all closed with the line not found or not verified.
+- One tap on the right-hand figure (move, wait 1 second, click at norm 452,657 - the bare-click-as-map-drag lesson from the radar unit in this same pass applied here). After the tap, no "?" bubbles remain at the gate. A smiley-face bubble was seen on a figure walking from the gate toward the buildings - a processed survivor walking to post. A second re-read at 23:51 confirmed the gate still shows no "?" bubbles: the line is clear.
+- No Recruit card was observed in this unit, so no named recruit with role and trait is recorded. The figures were dialog-type survivors (they speak a line and walk in); the exact dialog line was not captured - truck prompt toasts ("Supplies are fully loaded, please claim them", then "The truck is full, waiting for your command") were cycling from the truck driver figure at the same time and no survivor dialog text was read. Stated as unverified, not asserted.
+- Second figure's exit unexplained: after the single tap both "?" bubbles were gone from the gate. One tap processes one figure, so the second figure's departure is unexplained - it may have walked in behind the first, or the tap may have caught a figure whose card advanced both. The gate re-reads prove the line is clear either way; the count of processed survivors is recorded as at least 1, not 2. The same pattern as the 0926 unit.
+- Quick Dispatch ran - the first survivors unit in the queue era to run it. The Iron Mine Lv.27 was tapped (norm 545,452), its paw (details) button opened the Building Details panel, and Quick Dispatch was tapped at 23:56 PT. Result, read live: "no survivors available for dispatch". The panel after the tap is unchanged - Output/hr +123066, Max Production Time 11hr 36min, four Miner posts full: Christopher, Elina, Alyssa, Jolene. The outcome matches the 2026-10-25 precedent (full posts, no newcomer waiting, nothing changes). The R7 carry from the 0926/2055 units is discharged.
+- Truck toasts are not survivor dialogs: the truck driver figure by the green truck cycles truck prompt toasts ("Supplies are fully loaded, please claim them" / "The truck is full, waiting for your command"); those toasts belong to the trucks unit, not this one, and were left alone.
+- No diamonds or money spent. No priced button tapped. No truck was claimed or dispatched. No other activity's rewards touched.
+- Result stats: target 1, achieved 1, resources_gained none, costs about 10 minutes, verified yes, survivors_at_gate 2, survivors_remaining 0, recruits_named 0, dialog_processed_at_least 1, quick_dispatch ran, quick_dispatch_result no survivors available for dispatch, iron_mine_output_per_hr 123066, device_takeovers 0.
