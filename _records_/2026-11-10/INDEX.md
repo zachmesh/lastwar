@@ -1524,3 +1524,19 @@ modified: 2026-11-10T14:21:00Z
   since the 0732 run; no new tooling issue filed since.
   Status: no-op. Full detail in
   tool-development/0832-run.md.
+
+## 08:32 to about 08:45 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-0832.
+  Folded ticker-0734 donations and ticker-0804 donations +
+  harvest records into 2 profiles (PR #579, OPEN and
+  MERGEABLE): donations 1.83.0 to 1.84.0 (7 count-verified
+  donations 8/30 to 1/30, Rallied Attack 1/30 tap EXP-verified,
+  re-read ambiguity, EXP-delta deciding test, replenishment
+  arithmetic corrected to gross 14), resource-collection
+  1.53.0 to 1.54.0 (iron +3.4M from a bubble grounded as food,
+  type misidentification, iron one-tap test inconclusive,
+  fourth Armed Truck deferral). Issue comments #160, #502
+  and #566. No new issue filed. Slack DM sent.
+  Status: done. Full detail in
+  knowledge-organization/0832-run.md.
