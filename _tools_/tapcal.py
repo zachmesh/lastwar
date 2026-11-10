@@ -41,10 +41,16 @@ numbers the retro can read:
                tap landed, whether the state changed, where
                grounding found the element afterwards), decide
                verified / retry with a compensated next aim /
-               exhausted / unverified. The loop itself still runs
-               with the executor; this subcommand is the decision
-               the loop feeds on, so a miss is measured and the
-               retry aim is computed, never eye-estimated again.
+               exhausted / unverified / input-blocked. A tap
+               that lands exactly on the target and changes
+               nothing is "ignored", not a miss: a retry would
+               re-aim at the same point, so the loop verdict
+               is input-blocked and the recovery is to re-front
+               the app and re-probe (issue #575). The loop
+               itself still runs with the executor; this
+               subcommand is the decision the loop feeds on, so
+               a miss is measured and the retry aim is computed,
+               never eye-estimated again.
 
 Window geometry (issue #475, 2026-11-08): five taps on the
 Alliance button in fullscreen (1920x1080) never opened the
@@ -61,6 +67,14 @@ windowed and fullscreen observations would hide exactly the
 fullscreen-only shift #475 is about. The two geometries seen
 so far are "windowed-642x951" and "fullscreen-1920x1080";
 any other non-empty string is accepted and grouped as-is.
+A 2026-11-10 session (issue #575) measured the fullscreen
+offset by three agreeing cursor reads at about +70 right,
+-14 up, and a tap aimed at the compensated point worked, so
+a fullscreen offset is real and compensable through
+`calibrate` / `compensate`. The same session also had taps
+landing exactly on target ignored in both geometries: that
+is input-blocked, not geometry, and `verify` names it so
+instead of retrying the same aim.
 
 Coordinates are the normalized 0..1000 convention already used
 in execution records (norm x,y, x right, y down). Every value
@@ -147,6 +161,10 @@ A verified attempt ends the loop, so no attempt may follow one.
 The verdict is verified when any attempt changed the state;
 not-started when no attempt exists yet (the next aim is the
 target under the session compensation, when one is given);
+input-blocked when the last attempt landed exactly on the
+target and changed nothing (issue #575): no next aim is
+given, because a retry would re-aim at the same point - the
+recovery is to re-front the app and re-probe instead;
 exhausted when 1 + max_retries attempts all missed; unverified
 when the last attempt carries no measurement at all (no tap
 placed and no re-grounding) and no retry aim can be computed;
@@ -169,7 +187,7 @@ import json
 import statistics
 import sys
 
-TOOL_VERSION = "1.2.0"
+TOOL_VERSION = "1.3.0"
 COORD_MIN = 0
 COORD_MAX = 1000
 
@@ -740,6 +758,13 @@ def verify_case(case):
     for attempt in attempts:
         if attempt["changed"]:
             verdict = "verified"
+        elif attempt["tapped"] is not None and attempt["tapped"] == target:
+            # Landed exactly on the target and changed nothing:
+            # the tap reached the right pixel and the game
+            # ignored it (issue #575). That is input-blocked,
+            # not a miss - a retry would re-aim at this same
+            # point, so it must not be scored as a miss.
+            verdict = "ignored"
         elif attempt["tapped"] is not None:
             verdict = "miss"
         elif attempt["observed"] is not None:
@@ -783,6 +808,14 @@ def verify_case(case):
     elif not attempts:
         verdict = "not-started"
         next_aim, basis, clamped = next_aim_for(None, target, compensation)
+    elif attempt_results and attempt_results[-1]["verdict"] == "ignored":
+        # The last tap hit the target exactly and the game
+        # ignored it (issue #575). A retry would re-aim at the
+        # same point, so the loop stops here whatever the retry
+        # budget: this outranks the count-based exhausted
+        # verdict, which would hide the cause.
+        verdict = "input-blocked"
+        next_aim, basis, clamped = None, None, []
     elif len(attempts) >= 1 + max_retries:
         verdict = "exhausted"
         next_aim, basis, clamped = None, None, []
@@ -841,6 +874,12 @@ def fmt_verify(result):
         )
         if result["clamped"]:
             lines.append(f"clamped axes: {', '.join(result['clamped_axes'])}")
+    if result["verdict"] == "input-blocked":
+        lines.append(
+            "recovery: re-front the app (Dock icon / "
+            "mac_lastwar_front.sh), then re-probe; do not retry "
+            "the same aim"
+        )
     return "\n".join(lines) + "\n"
 
 
