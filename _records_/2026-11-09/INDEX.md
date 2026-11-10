@@ -2544,3 +2544,4 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   and glittering market still unread - sweep 002 at 17:30 finishes
   the walk. Nothing claimed; no diamonds spent. Full detail in
   daily-activities/1657-queue-run.md.
+- PR integration pass pr-integration-2026-11-09-1645 (done). NON-batch pass (plain and merge-aware checker both not due - outside every batch window; next batch 19:00 PT); no merges; no comments posted (nothing changed since the 1630-pass notes); records PR 531 awaits the 19:00 batch (20 commits, head c9a86fa7, after the ticker-1635 delivery); records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/1645-run.md.
