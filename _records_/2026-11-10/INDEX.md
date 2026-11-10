@@ -1407,3 +1407,21 @@ modified: 2026-11-10T14:21:00Z
   and 335 still over 24 hours with statements current;
   514 and 517 cross 24 hours later today. Status: no-op.
   Full detail in pr-catchall/0739-run.md.
+## 07:45 to about 08:03 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0745.
+  Non-batch pass per the checker (plain due but
+  merge-aware not due - PR 569 already merged 07:08:03
+  in the 07:00 window, next batch 11:00): merged tools
+  PR 577 (tapcal input-blocked, Refs #575) and
+  knowledge PR 578 (0732 fold, donations 1.83.0, radar
+  1.68.0, arms 1.77.0). Records PR 576 clean, awaiting
+  the 11:00 batch. Records PRs 351 and 301 still
+  conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against current main, awaiting the owner
+  decision (OD-20261108-01 open, age 2 days). No new
+  comments posted. Status: done. Full detail in
+  pr-integration/0745-run.md.
