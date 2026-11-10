@@ -519,3 +519,7 @@ of 2026-10-28.
   with the full text off-frame. R2 escalation filed as
   GitHub issue #566 from this record. Full detail in
   resource-collection/0257-queue-run.md.
+
+## 03:00 to about 03:09 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-10-0300 (done). BATCH pass (checker _tools_/records_batch.py plain and merge-aware both due - first batch merge in the 03:00 window); merged records PR 556 (10 commits, merge commit 9ae2d0797, main bf8488af to 9ae2d0797, 4744 to 4758 files, nothing deleted); records PR 559 CLEAN at pass start but conflicted after the 556 merge on the action-log file (append-append), conflict comment posted, branch-side resolution, stays open for the 07:00 batch. Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged, no new comments. Tools PR 425 owner-gated, re-verified CLEAN against the new main, OD-20261108-01 still open, no new comment. Local main fast-forwarded to 9ae2d0797 via bundle. Status: done. Full detail in pr-integration/0300-run.md.
