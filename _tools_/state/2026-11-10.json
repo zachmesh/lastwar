@@ -68,5 +68,10 @@
   "status": "done",
   "at": "2026-11-10T05:19:27-08:00",
   "note": "Hub sweep complete 05:19: 6 tabs checked, nothing claimable; Season 11 survey open for owner"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-10T11:47:28-08:00",
+  "note": "Stack day: Quick Execute 1 task, stamina 120 to 110, points 348 unchanged; Claim All-only bar, 11 pending, not tapped"
  }
 }

@@ -2220,3 +2220,36 @@ modified: 2026-11-10T14:21:00Z
   301 because main moved this pass. Local main fast-forwarded to
   4884c1fb5. Merge synced to the owner Slack DM. Status: done.
   Full detail in pr-integration/1145-run.md.
+
+## 11:40 to 11:46 - Ticker pass ticker-1134, radar unit done
+
+- Radar unit radar-2026-11-10-1003 done. Stack day, duel day 2.
+  Quick Execute 1 task (stamina 120 to 110, radar points 348
+  unchanged); bar flipped to Claim All-only with 11 rewards
+  pending, not tapped. Stored 23/40, restore 12 in about 5h54m,
+  4 skull pins inventoried untapped. Full detail in
+  radar-tasks/1146-queue-run.md.
+
+## 11:48 to 11:50 - Ticker pass ticker-1134, donations unit partial
+
+- Donations unit donations-2026-11-10-1003 partial. Quick
+  Construction 8/10, 2 coin donations verified live 3/30 to
+  1/30 (900 coin each, 1,800 total), stopped at the live-read
+  1/30 per the changed route; count replenished +2 since the
+  1104 pass left it at 1/30. Compact OCR misread 3/30 as
+  "3130" - the count digit was verified from the screenshot,
+  never from compact OCR alone. Full detail in
+  alliance-donations/1150-queue-run.md.
+
+## 11:52 to 11:57 - Ticker pass ticker-1134, arms-race unit partial
+
+- Arms-race unit arms-race-2026-11-10-1003 partial. First unit
+  of the Hero Advancement phase (ends about 14:02 PT), judged
+  at phase start per R4: score 0, tier 3 at 12,000 points,
+  scoring +1 per 2,000 Hero EXP. Just-enough plan: one EXP
+  level-up on the cheapest hero - Morrison "The Reaper"
+  Lv.124 is the lowest visible, exact Upgrade-panel cost to
+  be verified before confirming. No scoring action taken in
+  this unit; the spend falls to the next unit. Events hub
+  re-checked: still no Zombie Invasion tab, no chain seeded.
+  Full detail in arms-race/1157-queue-run.md.
