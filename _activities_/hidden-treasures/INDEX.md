@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-10T13:32:17Z
+modified: 2026-11-10T19:32:17Z
 level: L1
-version: 1.17.0
+version: 1.18.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: ticker-0504 hidden-treasures execution record 2026-11-09 0525 queue run (done, 1 dig executed, fragments M1-M7 each down 1, chest progress 9/15 to 10/15, M3 binding at x1, tab badge 1 with exactly 1 dig possible; record commit be01e91134 on records/2026-11-09)
   - source: ticker-0204 hidden-treasures execution record 2026-11-10 0223 queue run (done, 1 dig after the secrets claim restocked M3, chest 11/15; record commit 069a94c7a on records/2026-11-10)
   - source: ticker-0434 hidden-treasures execution record 2026-11-10 0446 queue run (done, checked only, no dig possible, M3 binding at zero, tab badge cleared, Rewards button unopened; record commit 5ba07ce2b4 on records/2026-11-10)
+  - source: ticker-1004 hidden-treasures execution record 2026-11-10 1040 queue run (done, checked only, no dig possible, M3 at 0, Rewards button checked and is an odds preview only; record commit 2218eb3cd on records/2026-11-10)
 ---
 
 # Hidden treasures
@@ -318,7 +319,7 @@ as Hidden Treasure.
   recovery record dropped five kinds, but no controlled mapping yet.
 - Whether the Golden Mobile Squad Decoration has dropped for this
   account in the past.
-- What the Rewards button (gift icon, top right of the Hidden Treasures map) opens - no unit has opened it yet; whether chest-progress tier rewards are claimable there. Follow-up for the next treasures unit. (Added 2026-11-10 0446.)
+- What the Rewards button (gift icon, top right of the Hidden Treasures map) opens - no unit has opened it yet; whether chest-progress tier rewards are claimable there. Follow-up for the next treasures unit. (Added 2026-11-10 0446.) (2026-11-10 1040 update: ANSWERED - the button opens a REWARD PREVIEW panel, "Rewards from a single dig": Chest (UR) Drop Rate 10.0%, Chest (SSR) 30.0%, Chest (SR) 60.0%, each chest opening 10 rewards with specific probabilities. It is an odds preview, not a claimable reward. Nothing to claim there.)
 
 ## What the 2026-11-02 2135 unit added - 2 digs, done
 
@@ -610,3 +611,15 @@ as Hidden Treasure.
 - No dig possible until the next secret mission claim restocks fragments (M3 at 0 is binding again). Nothing spent, nothing claimed.
 - No diamonds or money spent. No fragment exchange inspected or executed (needs owner approval). No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 1, achieved 1 (check completed - no dig possible, no complete set), resources_gained none, costs about 2 minutes, no stamina or items spent, verified yes, blocker_category none, digs_done 0, device_takeovers 0, follow_up check the Rewards button next unit.
+
+## What the 2026-11-10 1040 unit added - checked only, no dig possible, M3 binding at zero, Rewards button is an odds preview only
+
+- Unit treasures-2026-11-10-0657 by ticker-1004, about 10:38 to 10:40 local, status done. Evidence in `_records_/2026-11-10/hidden-treasures/1040-queue-run.md` (commit 2218eb3cd on records/2026-11-10). Computer session cc-434 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636); Hidden Treasures tab opened.
+- Fragment stock read live from the map: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10. M3 is 0, so no complete set is on hand and no dig is possible. Both Dig buttons read greyed out, untouched. The stock is identical to the 0446 post-dig state - no fragment income arrived since the 02:23 dig.
+- Chest progress track still reads 11/15, unchanged from the 04:47 read.
+- Rewards button checked (it was unchecked at 04:47): it opens a REWARD PREVIEW panel, "Rewards from a single dig" - Chest (UR) Drop Rate 10.0%, Chest (SSR) 30.0%, Chest (SR) 60.0%, each chest opening 10 rewards with specific probabilities. It is an odds preview, not a claimable reward. Nothing to claim there. See the updated Open questions entry - the 0446 follow-up is closed.
+- No fragment exchange was opened or executed (owner approval required; none sought).
+- Live reads: base screen after the check - Total Power 148,058,020, coin 84.1M, food 612.5M, iron 939.3M, diamonds 6,207, stamina 120. Unchanged during this unit.
+- No diamonds or money spent. No dig executed (none possible). No exchange executed. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 0 (no dig possible, M3 at 0), resources_gained none, costs about 4 minutes, no stamina or items spent, verified yes, blocker_category none, digs_done 0, follow_up none.

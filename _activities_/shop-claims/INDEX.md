@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T13:32:17Z
+modified: 2026-11-10T19:32:17Z
 level: L1
-version: 1.47.0
+version: 1.48.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -51,6 +51,7 @@ grounded_in:
   - source: ticker-1822 shop-claims execution record 2026-11-09 1850 queue run (partial, Hot Deals free pack plus Free Supply auto-claim plus monthly Daily Pickup, Weekly Pass list not scrolled, 18-00 reset 15th confirmation; record commit 6761c35d1 on records/2026-11-09)
   - source: ticker-0204 shop-claims execution record 2026-11-10 0214 queue run (done, Weekly Pass list fully scrolled, no owned Pickup, check-in hunt no tab in the Events hub; record commit 069a94c7a on records/2026-11-10)
   - source: ticker-0434 shop-claims execution record 2026-11-10 0440 queue run (done, Weekly Pass list re-scrolled, Iron Daily Pickup x2 confirmed, Monthly Days Left 11, Calendar button ruled out as check-in entry; record commit 5ba07ce2b4 on records/2026-11-10)
+  - source: ticker-1004 shop-claims execution record 2026-11-10 1029 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, Weekly Pass scroll failed on three methods, check-in banner absent; record commit 2218eb3cd on records/2026-11-10)
 ---
 
 
@@ -759,7 +760,7 @@ the free and already paid for parts, never the paid unlocks.
 - What the dark rock item in the Season Weekly Pass pickup is -
   coal or titanium alloy; the tile only showed 10.0K.
 - Monthly Pass Days Left boundary: the 0538 read of 13 at 05:36 local follows the 0407 read of 14 at 04:07 local the same day - the decrement falls between 04:07 and 05:36, so the daily boundary for the Monthly Pass is unread; the next Mall re-read must record Days Left with its time. (2026-11-09 0447 update: Days Left read 13 at 02:18 and 12 at 04:47 inside the SAME reset day, so the counter ticked between 02:18 and 04:47 local with no reset between - the decrement is a time-of-day tick, not a reset-day tick. Combined with the 2026-11-08 window (04:07 to 05:36), the boundary narrows to between 04:07 and 04:47 local IF it is a fixed time of day; that fixed-time reading is an inference from two days, not a verified exact time. No cause is asserted for the tick.) (2026-11-10 0440 update: Days Left 12 at 02:14 to 11 at 04:40 inside the same 18:00 cycle, and Rewards Left 12 to 11 with it; the tick falls inside the 04:07-04:47 window again, consistent with the fixed-time inference; cause still unmeasured, recorded as observed, not attributed.)
-- Shop check-in banner free gift: entry unproven. The HOT DEALS carousel banner 2 offers a FREE GIFT ("Claim your ... today!") and FREE TOMORROW (x5, x5, x5, "Randomly obtain one"); one Go tap produced no navigation in both the 1449 unit (three taps) and the 2212 unit (one tap). The Events-hub route is a dead end (1500 events unit: no check-in tab in the hub). The remaining idea is a foreground-click attempt on the shop Go button. Tracked on Issue #553 (knowledge). (Added 2026-11-09 2212.) (2026-11-10 0214 update: the Events-hub tab strip was scrolled again - tabs seen ...of Oil, medal, Desert Battlefield, Wanted Boss, Survey Center, Community - and no check-in tab exists there, second confirmation of the hub dead end. The remaining candidate entry is the Calendar button on the Events hub Base Building card (top right), not opened in this unit. The shop Go button was not re-tapped. Issue #553 stays open; commented by this run.) (2026-11-10 0440 update: the Calendar button is RULED OUT - it opens a "HOW TO GET POINTS" dialog with the Day 3 duel theme schedule, not a check-in entry. The shop Go button was not re-tapped. No working entry has been found; the check-in free gift is still unclaimed. Issue #553 stays open; commented by this run.)
+- Shop check-in banner free gift: entry unproven. The HOT DEALS carousel banner 2 offers a FREE GIFT ("Claim your ... today!") and FREE TOMORROW (x5, x5, x5, "Randomly obtain one"); one Go tap produced no navigation in both the 1449 unit (three taps) and the 2212 unit (one tap). The Events-hub route is a dead end (1500 events unit: no check-in tab in the hub). The remaining idea is a foreground-click attempt on the shop Go button. Tracked on Issue #553 (knowledge). (Added 2026-11-09 2212.) (2026-11-10 0214 update: the Events-hub tab strip was scrolled again - tabs seen ...of Oil, medal, Desert Battlefield, Wanted Boss, Survey Center, Community - and no check-in tab exists there, second confirmation of the hub dead end. The remaining candidate entry is the Calendar button on the Events hub Base Building card (top right), not opened in this unit. The shop Go button was not re-tapped. Issue #553 stays open; commented by this run.) (2026-11-10 0440 update: the Calendar button is RULED OUT - it opens a "HOW TO GET POINTS" dialog with the Day 3 duel theme schedule, not a check-in entry. The shop Go button was not re-tapped. No working entry has been found; the check-in free gift is still unclaimed. Issue #553 stays open; commented by this run.) (2026-11-10 1029 update: the check-in banner was NOT visible at all on this opening - the 0440 unit saw it, so it may have rotated or expired. No Go button was tapped (no banner to tap). The standing idea stays the foreground-click attempt on the shop Go button when the banner is showing. Issue #553 stays open; commented by this run.)
 
 
 ## What the 2026-11-03 2234 unit added - checked only, 0 claims, 1812 cycle state confirmed
@@ -1431,3 +1432,18 @@ the free and already paid for parts, never the paid unlocks.
 - Record correction (same pass, before commit): the file was first written with "about 10 minutes" of costs and a 04:40 to 04:50 window; both are wrong. The unit ran 04:39 to 04:42 local (claim 04:38:46, tracker done stamp 04:41:58, about 3 minutes). The closing figures are unaffected.
 - No money spent; the Legendary $19.99 Take All, the $24.99 extension and all four $4.99 Get Now buttons were left untouched.
 - Result stats: target 3, achieved 0, resources_gained none, costs about 3 minutes of unit time, no items spent, verified yes, blocker_category none, points 0.
+
+## What the 2026-11-10 1029 unit added - checked only, Weekly Pass scroll failed on three methods, Monthly Claimed 11/11, check-in banner absent
+
+- Unit passes-2026-11-10-0657 by ticker-1004, about 10:28 to 10:29 local, status done. Evidence in `_records_/2026-11-10/shop-claims/1029-queue-run.md` (commit 2218eb3cd on records/2026-11-10).
+- Shop opened from the base cart icon. HOT DEALS landing shows only the "Visit the Last War Store for more rewards!" promo with the Go button (not tapped). No free pack on the landing page. No check-in banner was visible on this opening (the 0440 record saw one; it may have rotated or expired). See the updated Open questions entry.
+- Weekly Pass page reads "Weekly Pass rewards reset at 18:00:00" - the eighteenth live confirmation of the line; the same 18:00-to-18:00 cycle as the 0440 record, so the 18:47 claims of ticker-1822 still stand.
+- Free Supply chest: visible, no Claim button, no red dot. Consistent with already taken this cycle (auto-claims on page open per the activity metadata); no claim toast was observed in this unit.
+- Legendary row: "Instant Gain on Purchase", Take All $19.99 - never tapped.
+- Weekly Pass cards seen (top of the list): S2 Drone Components Weekly Pass (Legendary), Daily Pickup x2, Total x7, Get Now $4.99; S1 Drone Parts Weekly Pass (Epic), Daily Pickup x15, Total x105, Get Now $4.99. Both are purchase offers, not owned passes; no Claim button on either.
+- Super Monthly Pass tab: Monthly Pass, Days Left 11, Squad 4 Lv.20. Daily Pickup button reads Claimed. Rewards Left: 11. The $24.99 Monthly Pass Extension was not touched. Same readings as the 0440 record.
+- Weekly Deal tab (2026-11-9 00:00:00 - 2026-11-15 23:59:59): Valor Badge $99.99, Base Upgrade $19.99, UR Set $49.99, each "1 purchases available". All paid bundles, nothing free.
+- SCROLL BLOCKER: the Weekly Pass list would not scroll in this unit - a plain scroll action, a drag from 700 to 300, and a scroll with scroll_direction down and scroll_amount 5 all returned no change. The S1 card is cut off at the bottom edge, so the Iron and Coin Weekly Pass cards below the fold were NOT re-verified in this unit. The 0440 record verified all four cards in this same cycle (none owned, no Claim button), so the unit still closes as checked with nothing claimable. Standing method going forward: press-drag is the working list-scroll method - the secrets unit of this same pass drag-scrolled its Your Tasks list top to bottom after the plain scroll action failed there too. Next passes unit retries the Weekly Pass scroll with a press-drag stroke (or a list-container scroll) to re-verify the Iron and Coin cards below the fold.
+- The Season Battle Pass / Season Weekly Pass path was not hunted in the Week 8 hub, per Issue #469.
+- No money spent; the Legendary $19.99 Take All, the $24.99 extension, all $4.99 Get Now buttons and the three Weekly Deal price buttons were left untouched.
+- Result stats: target 3, achieved 0, resources_gained none, costs about 5 minutes of unit time, no items spent, verified yes, blocker_category none, points 0.

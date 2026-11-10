@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T13:32:17Z
+modified: 2026-11-10T19:32:17Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -39,6 +39,7 @@ grounded_in:
   - source: zero-sweep 002 execution record 2026-11-09 1748 queue run (partial, incidental Secret Mobile Squad read, same 4 PERFECT cards, assists 5/5; record commit 2f4d783d8 on records/2026-11-09)
   - source: ticker-0204 secret-missions execution record 2026-11-10 0218 queue run (done, all 9 tasks claimed in one tap, PERFECT stamps, recovery re-checked closed; record commit 069a94c7a on records/2026-11-10)
   - source: ticker-0434 secret-missions execution record 2026-11-10 0444 queue run (done, 8 cards all PERFECT, assists at cap, recovery re-checked closed, 8-vs-9 count question; record commit 5ba07ce2b4 on records/2026-11-10)
+  - source: ticker-1004 secret-missions execution record 2026-11-10 1036 queue run (done, 8 cards all PERFECT, assists at cap, 8-vs-9 count resolved as a miscount, orange hexagon badge moved to Protect Refugee Camp, recovery re-checked closed; record commit 2218eb3cd on records/2026-11-10)
 ---
 
 
@@ -1059,8 +1060,8 @@ secrets-2026-10-31-2257, status partial).
   and whether team strength changes task rewards.
 - Whether dispatch choice affects rewards, and the refresh cycle for
   new own tasks after the dispatched ones return. (2026-11-09 0517 update: no new own tasks have appeared since the 22:49 claim on 2026-11-08 - the list holds only the same 4 PERFECT cards, and the other three claimed cards plus the plundered card have dropped off between the 02:21 and 05:17 reads. The refresh cycle for new own tasks after a batch is claimed stays an open question; the next secrets unit re-checks.) (2026-11-09 1456 update: the 1456 unit re-confirmed the same 4 PERFECT cards at about 14:51, still no new own tasks since the 22:49 claim on 2026-11-08; the refresh cycle stays open.) (2026-11-09 1748 update: the zero-sweep's incidental Secret Mobile Squad read at about 17:40 still shows the same 4 SSR cards all PERFECT, Assist Allies 5/5, Plunder Others 0/3 on that panel; still no new own tasks since the 22:49 claim on 2026-11-08.) (2026-11-09 2211 update: ANSWERED - a fresh batch of 9 tasks appeared between the 14:51 check and 22:03, so new own tasks arrive after the daily reset. The record attributes the refresh to the 19:00 reset, but that instant is not separately verified - the about-18:00 rollover (Issue #242) is also inside the window, and no reset instant was measured for the post.)
-- What the orange hexagon badge on a claimed secret-task row means: the 2026-11-10 0218 unit found the Provide Tech Support row carrying an orange hexagon badge instead of a gold PERFECT stamp after the claim-all; its Claim button is gone like the others, so it is claimed. Possibly the ally-assisted claim mark. (Added 2026-11-10 0218.) (2026-11-10 0444 update: the badge is still on the same Provide Tech Support to Refugees row, still unexplained.)
-- Your Tasks count 8 vs 9: the 0218 record says one Claim tap collected all 9 tasks at once (4 UR/SSR plus five 30-minute SR tasks); the 0444 unit counts 8 cards, 4 SR, scrolled twice - no 5th SR card between Protect Refugee Camp and Retrieve Raw Materials, and the list ends at Retrieve Agent Profile. Either the 0218 count was off by one or one SR card left the list since. Nothing pending either way (all 8 PERFECT, no Claim button). The next secrets unit recounts the list against this note. (Added 2026-11-10 0444.)
+- What the orange hexagon badge on a claimed secret-task row means: the 2026-11-10 0218 unit found the Provide Tech Support row carrying an orange hexagon badge instead of a gold PERFECT stamp after the claim-all; its Claim button is gone like the others, so it is claimed. Possibly the ally-assisted claim mark. (Added 2026-11-10 0218.) (2026-11-10 0444 update: the badge is still on the same Provide Tech Support to Refugees row, still unexplained.) (2026-11-10 1036 update: the badge has MOVED - it now sits on the Protect Refugee Camp card instead, in the mid-scroll screenshot, with the same reward row (1, 37, 2.4M, 1.9M, 1.9M) as Protect Refugee Camp. All 8 cards show no Claim button either way, so nothing is pending, but the badge's meaning and which card carries it are still unexplained. Next unit re-reads the badge on both cards.)
+- Your Tasks count 8 vs 9: the 0218 record says one Claim tap collected all 9 tasks at once (4 UR/SSR plus five 30-minute SR tasks); the 0444 unit counts 8 cards, 4 SR, scrolled twice - no 5th SR card between Protect Refugee Camp and Retrieve Raw Materials, and the list ends at Retrieve Agent Profile. Either the 0218 count was off by one or one SR card left the list since. Nothing pending either way (all 8 PERFECT, no Claim button). The next secrets unit recounts the list against this note. (Added 2026-11-10 0444.) (2026-11-10 1036 update: RESOLVED - the 1036 unit counted 8 again, drag-scrolled top to bottom, and confirms 8 cards; the 02:18 "9 tasks" count was a miscount. The count is 8: 2 UR, 2 SSR, 4 SR. Nothing pending either way - all 8 PERFECT, no Claim button.)
 - Whether the remaining 90% of a plundered task's rewards reaches the
   account: the 2026-11-08 2253 unit found SR Retrieve Valuable
   Supplies plundered at 10% by [BZGR]FredoSauce at 19:40 (chest x1,
@@ -1485,3 +1486,19 @@ secrets-2026-10-31-2257, status partial).
 - Live reads: base screen after the check - Total Power 148,058,020 (up from 146,751,949 at the 02:18 read - building upgrades collected between reads, not this unit's work; a re-confirmation of the levelled figure, commented on Issue #482 by this run). Steel, food, coin top bar unchanged during this unit.
 - No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 3, achieved 3 (no pending claims verified, assists at cap verified, recovery re-checked), resources_gained none, costs about 3 minutes, no stamina or items spent, verified yes, blocker_category none, assists_done 0, tasks_claimed 0, tasks_deployed 0, ur_tasks_claimed 0, device_takeovers 0, follow_up recount the Your Tasks list next unit (8 vs 9).
+
+## What the 2026-11-10 1036 unit added - 8 cards all PERFECT, assists at cap, 8-vs-9 count RESOLVED as a miscount, orange badge moved
+
+- Unit secrets-2026-11-10-0657 by ticker-1004, about 10:32 to 10:36 local, status done. Evidence in `_records_/2026-11-10/secret-missions/1036-queue-run.md` (commit 2218eb3cd on records/2026-11-10). Computer session cc-434 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified.
+- Ally assists already at cap: Assist Allies 5/5 for this reset day. Nothing to assist in this unit.
+- Your Tasks holds 8 visible cards, every one stamped PERFECT in gold, no Claim button anywhere: UR Rescue Test Subject, UR Disrupt electric grid, SSR Provide Tech Support to Refugees, SSR Protect Refugee Camp, SR Retrieve Raw Materials, SR Retrieve Abandoned Gear, SR Retrieve Valuable Supplies, SR Retrieve Agent Profile. The list was drag-scrolled top to bottom (the plain scroll action does not move this list - same failure as the Weekly Pass list in the passes unit this pass; press-drag is the working method). Count confirmed 8, which RESOLVES the 04:44 open observation: the 02:18 "9 tasks" count was a miscount. See the updated Open questions entries.
+- OPEN OBSERVATION - orange hexagon badge moves: the 04:44 record saw the orange hexagon badge on the Provide Tech Support to Refugees card (right side, where PERFECT sits on the other cards). In this unit the badge was seen on the Protect Refugee Camp card instead, in the mid-scroll screenshot, with the same reward row (1, 37, 2.4M, 1.9M, 1.9M) as Protect Refugee Camp. All 8 cards show no Claim button either way, so nothing is pending, but the badge's meaning and which card carries it are still unexplained. Next unit should re-read the badge on both cards.
+- Nothing to claim, nothing to deploy: Mega Deploy was not used - no pending batch - and Mega Refresh was not used - its cost is still unobserved and there was no pending batch to roll.
+- Reward Recovery re-checked: the newest record, 2026-11-6 18:00, reads 8 unstarted tasks completed by the system and is already CLAIMED; the older 2026-10-24 19:00 record sits below it. Nothing new to claim.
+- Hidden Treasures tab carries a red badge - that is the hidden-treasures unit's work; not touched here.
+- Plunder Others 0/5, untouched (PvP, needs owner instruction).
+- Live reads: base screen after the check - Total Power 148,058,020, coin 84.1M, food 612.5M, iron 939.3M, diamonds 6,207, stamina 120. Unchanged during this unit.
+- Token lease expired mid-unit (10:37); the unit continued on the claim lease to 10:51, no other pass took the token in between.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3 (no pending claims verified, assists at cap verified, recovery re-checked), resources_gained none, costs about 4 minutes, no stamina or items spent, verified yes, blocker_category none, assists_done 0, tasks_claimed 0, tasks_deployed 0, ur_tasks_claimed 0, device_takeovers 0, follow_up re-read the orange hexagon badge on Provide Tech Support and Protect Refugee Camp next unit.
