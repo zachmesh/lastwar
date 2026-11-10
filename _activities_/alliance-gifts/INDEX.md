@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T10:40:33Z
+modified: 2026-11-10T12:32:17Z
 level: L1
-version: 1.46.0
+version: 1.47.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -52,6 +52,7 @@ grounded_in:
   - source: ticker-1822 alliance-gifts execution record 2026-11-09 1842 queue run (done, Regular 1699 plus Premium 95, Regular progress window exact, leader Abyss Apex; record commit 6761c35d1 on records/2026-11-09)
   - source: 2026-11-09 daily retro, execution-knowledge action A-2026-11-09-01 (Issue #300): never write the Gift Level progress gain into stats.points - the progress is alliance-wide, not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match
   - source: ticker-0134 alliance-gifts execution record 2026-11-10 0135 queue run (done, 70 Regular and 6 Premium claimed, both windows reconcile exactly, Gift Level 28 progress 200,393,010; record commit e3d186a38 on records/2026-11-10)
+  - source: ticker-0334 alliance-gifts execution record 2026-11-10 0346 queue run (done, 110 Regular and 7 Premium claimed, both windows reconcile exactly, Gift Level 28 progress 200,816,740; record commit b7e79a62 on records/2026-11-10)
 ---
 
 
@@ -97,6 +98,7 @@ one file per execution.
   gifts is not a scoring type - points is score gained, for
   scoring types only - so a gifts closing carries no points
   key at all (issue #300).
+- The back-arrow button sits at different x positions per screen (0346: about norm x 62 on the gifts screen, about x 156 on the Alliance panel and the Events screen) - ground it fresh per panel, never reuse one screen's point on another.
 
 ## Cadence
 
@@ -841,6 +843,8 @@ one file per execution.
 - 1.45.0 (2026-11-09): 2121 gifts unit folded (done, dialog-confirmed 113 Regular plus 57 Premium, 170 total, both tabs verified clear; Gift Level 28 progress 199,689,560 to 199,708,580 of 206,300,000; Regular window exact (+1,130 for 113 gifts), third exact-match datapoint, commented on Issue #183; Premium window +17,890 not decomposed from visible rows; entry lesson - hidden base UI revealed by one tap at (935,726), shield re-grounded fresh at (927,726); leadership transfer to Abyss Apex confirmed on the Alliance panel; total power 146,751,949, up 15,000 from the 18:33 low, commented on Issue #482; A-01 first verification test - the record's stats.points 19020 is the pre-fix progress-as-points line, superseded the same way as 0417/1842, tools fix PR #552 merged after this unit ran, post-fix test is the next gifts unit, commented on Issue #300).
 - 1.46.0 (2026-11-10): 0135 gifts unit folded (done, dialog-confirmed 70 Regular plus 6 Premium, 76 total, both tabs verified clear; Gift Level 28 progress 200,390,860 to 200,393,010 of 206,300,000; Regular window exact (+700 for 70 gifts), fourth exact-match datapoint; Premium window +1,450 reconciles exactly from the six gifts' values, first Premium exact reconciliation, commented on Issue #183; Premium badge 5 but dialog claimed 6, a sixth gift arrived mid-claim; entry - background input reached the Alliance button on the first tap, no foreground repair needed).
 
+- 1.47.0 (2026-11-10): 0346 gifts unit folded (done, dialog-confirmed 110 Regular plus 7 Premium, 117 total, both tabs verified clear; Gift Level 28 progress 200,813,790 to 200,816,740 of 206,300,000; Regular window exact (+1,100 for 110 gifts), fifth exact-match datapoint; Premium window +1,850 reconciles exactly (2 UR +500, 1 R +50, 4 SSR +200), second Premium exact reconciliation, commented on Issue #183; back-arrow x differs per screen, about 62 on the gifts screen against about 156 on the Alliance panel and the Events screen; alliance 96/100 members, power 13,637,956,029).
+
 - 1.42.0 (2026-11-09): 0417 gifts unit folded (done, dialog-confirmed 37 Regular plus 2 Premium, 39 total, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 195,637,370 to 195,638,460 of 206,300,000, total +1,090 - Regular window +390 against +370 expected for 37 gifts, the extra +20 recorded unexplained as new Issue #183 evidence commented by this run, Premium window +700 exactly 500 plus 200; Premium Claim All re-grounded fresh at (744,936); Hide-your-name unchecked before and after; alliance 96/100 members, power 13,532,886,654).
 
 - 1.40.0 (2026-11-08): 2138 gifts unit folded (done, dialog-confirmed 448 Regular plus 33 Premium plus 3 Regular re-check, 484 total, both tabs verified clear; Gift Level 28 progress 195,006,290 to 195,025,360 of 206,300,000, three more non-reconciling deltas as Issue #183 evidence commented by this run - +4,750 for 448 Regular against 4,480 expected, +12,940 for 33 Premium against no clean UR/SSR split, +1,380 for 3 Regular against 30 expected; Premium Claim All re-grounded fresh at (740,945) after the first tap landed on the "Hide your name" label; alliance 96/100 members, power 13,479,890,272).
@@ -1411,3 +1415,15 @@ one file per execution.
 - Counter note, Issue #183 evidence: the Regular window reconciles EXACTLY this unit (+700 for 70 gifts at +10 each) - a clean exact-match datapoint, the fourth after the 0211, 1842 and 2121 units' Regular windows. The Premium window (+1,450) reconciles exactly here too - the first Premium exact reconciliation, because all six rows' values were known; the Premium half of #183 stays open only where below-fold rows go unread. Commented on Issue #183 by this run.
 - Completion sweep: after both claims the Claim All button is gone from both tabs and every visible row on both tabs reads Claimed; the Premium list scrolled to its tail shows only Claimed rows (the SR Preparation Premium +100 and UR +500 rows at the tail were already claimed in earlier rounds). Returned to the base screen.
 - Totals: 70 Regular plus 6 Premium, 76 gifts claimed, all dialog-confirmed. Gift Level progress 200,390,860 to 200,393,010 (+2,150), still Level 28. No diamonds or money spent, no purchase made, no shop opened, no setting changed.
+
+## What the 2026-11-10 0346 unit added - 110 Regular and 7 Premium claimed, both windows reconcile exactly, Gift Level 28 progress 200,816,740
+
+- Unit gifts-2026-11-10-0230 by ticker-0334, 03:46 to 03:49 local, status done. Evidence in `_records_/2026-11-10/alliance-gifts/0346-queue-run.md` (commit b7e79a62 on records/2026-11-10). Computer session cc-392 on the owner Mac mini. Background input reached the Alliance button on the first tap; no foreground repair was needed.
+- Alliance panel: [AP3x] The Apex, Leader Abyss Apex, Power 13,637,956,029, Members 96/100, Language English. The Alliance Gifts entry carried a red dot.
+- Gift Level 28, progress 200,813,790/206,300,000 at entry.
+- Regular tab: Claim All badge 110. Rows are Violet's Gift +10 each (KaBoom420 Defeated CL-7 Victim, timestamps 23:53:36, 23:52:14, 23:52:09, 23:51:56). Claim All summary dialog: "A total of 110 Regular Alliance Gifts were claimed this time". Rewards shown: gold chest x7, iron 1.0K x420, 5m speedup x11, red gem 5 x14, bread 1.0K x420, bread 10.0K x56, coin 600 x448, coin 6.0K x28. Progress after: 200,814,890 (+1,100, 110 x 10 points).
+- Premium tab: Claim All badge 7. Visible rows: Alliance Gift (UR) +500 (Someone purchased Preparation Deluxe Pack, 23:52:38), (R) +50 (Preparation Value Pack, 23:34:53), (SSR) +200 (Preparation Rare Pack, 23:34:13), (SSR) +200 (Preparation Rare Pack, 23:34:04), and a fifth UR row cut off at the fold. Claim All summary dialog: "A total of 7 Premium Alliance Gifts were claimed this time". Rewards shown: coin pile x6, gold card x1, gold coins x16, supply chest x8 (the row icons confirm the split: UR coin pile x6, R gold card x1, SSR chests x4 + x4). Progress after: 200,816,740 (+1,850; reconciles as 2 UR +500, 1 R +50, 4 SSR +200).
+- Counter note, Issue #183 evidence: the Regular window reconciles EXACTLY this unit (+1,100 for 110 gifts at +10 each) - a clean exact-match datapoint, the fifth after the 0211, 1842, 2121 and 0135 units' Regular windows. The Premium window (+1,850) reconciles exactly here too - the second Premium exact reconciliation after the 0135 unit, because all seven rows' values were known. Commented on Issue #183 by this run.
+- Completion sweep: after both claims the Claim All button is gone from both tabs and every visible row on both tabs reads Claimed. The Premium list scrolled to its tail shows only Claimed rows, ending at the MR +1000 row (Abyss Apex purchased Mega Express Contract, already claimed in an earlier round). The Regular list scrolled down shows only Claimed rows (Violet's Gift +10 rows and a Doom Walker Loot +10 row, Crow Apex Defeated Doom Walker).
+- Note for the next unit: the back-arrow button sits at different x positions per screen - about norm x 62 on the gifts screen, about x 156 on the Alliance panel and the Events screen. Tapping x 156 on the gifts screen misses the button. Ground the back arrow fresh per panel (see "How it is done").
+- Totals: 110 Regular plus 7 Premium, 117 gifts claimed, all dialog-confirmed. Gift Level progress 200,813,790 to 200,816,740 (+2,950), still Level 28. No diamonds or money spent, no purchase made, no shop opened, no setting changed.

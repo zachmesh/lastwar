@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T10:40:33Z
-version: 1.36.0
+modified: 2026-11-10T12:32:17Z
+version: 1.37.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -43,6 +43,7 @@ grounded_in:
   - source: ticker-0434 alliance-duel execution record 2026-11-09 0441 queue run (done, star ceremony checked only, no trophy icon, right rail read, VS countdown 13:20:41 consistent with the about-18:00 rollover; record commit b6ed78edd0 on records/2026-11-09)
   - source: ticker-0134 alliance-duel execution record 2026-11-10 0151 queue run (done, personal total 450,000, theme Base Expansion, 16:08:04 left; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0204 alliance-duel execution record 2026-11-10 0211 queue run (done, star ceremony none waiting, personal total 450,000 re-read, 15:48:49 left; record commit 069a94c7a on records/2026-11-10)
+  - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, Alliance Duel screen read live inside the training unit - Base Expansion, 14:18:29 remaining, alliance target 1,650,000, UR truck dispatch +300,000, UR secret task +225,000; record commit b7e79a62 on records/2026-11-10)
 ---
 
 
@@ -1011,4 +1012,13 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - No ceremony waiting at either read: no trophy icon beside the Alliance button at the 01:51 base-screen check or the 02:10 check. The settled-week ceremony is not open yet; the current duel week is still running.
 - Cross-record corroboration: the 0143 mail unit's Event category holds a "Duel Progress Alliance Duel Individual Reward" mail 7h old at 01:43, about 18:43 the previous evening - consistent with the about-18:00 rollover mailing the day's individual reward shortly after.
 - Other live reads: Total Power 146,751,949 on the base screen at 02:11, unchanged from the 01:04 pass - a further corroboration of the levelled figure (Issue #482); commented on #482 by this run. Train at the station: Abyss Apex, 00:29:08 to departure at the 02:11 read (boarded carriage 2 at 01:47).
+- No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
+
+## What the 2026-11-10 0337 training-unit cross-read added - Base Expansion posture, UR truck dispatch +300,000 live, chest figures paired
+
+- Cross-read inside the training unit training-2026-11-10-0203 by ticker-0334, about 03:37 to 03:42 local (the training unit closed partial). Evidence in `_records_/2026-11-10/troop-training/0337-queue-run.md` (commit b7e79a62 on records/2026-11-10). This is a read-only cross-read, not a duel-score unit; the personal total was not read here.
+- Alliance Duel screen, read live: Today's Theme Base Expansion, 14:18:29 remaining (ends about 18:00, consistent with the settled about-18:00 rollover, Issue #242), alliance target 1,650,000 points.
+- Reward chests 8,020 / 9,530 / 18,100 with progress bars 40,000 / 150,000 / 540,000. This pairs the 8,020 / 9,530 / 18,100 figures with the 40,000 / 150,000 / 540,000 progress bars, resolving the 0151/0211 section's "not identified" - the figures are the chest figures above the progress bars (reading them as ruby tags, by analogy with the arms-race chest tags, is an inference, not a live label read).
+- Scoring actions read live: Dispatch UR Trade Truck 1 time +300,000.0 and Perform 1 UR Secret Task +225,000.0. Today is a duel UR day for trucks.
+- CORRECTION: the +300,000 live rate supersedes the 100,000 Handbook rate in tools/duel_schedule.json for a UR truck dispatch. The 0248 trucks unit's expected score is therefore 1,200,000 (4 times 300,000), not 400,000 - corrected in the truck-plunder profile (1.38.0) and flagged on Issue #565. The +225,000 is the first live UR secret-task rate (the Handbook Legendary figure is 75,000, a different tier). The duel-score unit's live personal-total read is the verification for both.
 - No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
