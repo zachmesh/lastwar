@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T12:32:17Z
-version: 1.37.0
+modified: 2026-11-10T13:32:17Z
+version: 1.38.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -43,6 +43,8 @@ grounded_in:
   - source: ticker-0434 alliance-duel execution record 2026-11-09 0441 queue run (done, star ceremony checked only, no trophy icon, right rail read, VS countdown 13:20:41 consistent with the about-18:00 rollover; record commit b6ed78edd0 on records/2026-11-09)
   - source: ticker-0134 alliance-duel execution record 2026-11-10 0151 queue run (done, personal total 450,000, theme Base Expansion, 16:08:04 left; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0204 alliance-duel execution record 2026-11-10 0211 queue run (done, star ceremony none waiting, personal total 450,000 re-read, 15:48:49 left; record commit 069a94c7a on records/2026-11-10)
+  - source: ticker-0434 alliance-duel execution records 2026-11-10 0435 and 0438 queue runs (done, duel total 1,650,000 read twice, sixth and seventh timers end about 18:00, no ceremony waiting, red circular countdown icon above the Alliance button; record commit 5ba07ce2b4 on records/2026-11-10)
+  - source: ticker-0434 shop-claims execution record 2026-11-10 0440 queue run (done, Calendar button opens the HOW TO GET POINTS dialog with the Day 3 duel theme schedule; record commit 5ba07ce2b4 on records/2026-11-10)
   - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, Alliance Duel screen read live inside the training unit - Base Expansion, 14:18:29 remaining, alliance target 1,650,000, UR truck dispatch +300,000, UR secret task +225,000; record commit b7e79a62 on records/2026-11-10)
 ---
 
@@ -184,7 +186,7 @@ decision (deferred, not ruled non-goals).
 - Each unit is read-only - open the duel panel from the gold VS
   medallion, read the personal daily total, and close with the
   unit result stats target 3600000, achieved set to the total
-  read live, and the gap target minus achieved. Fragment scores
+  read live, and the gap target minus achieved. (2026-11-10 0435 update: stats.points for a read-only duel-score unit is 0 - the personal total is a read, not a score gained inside the unit; the 0435 unit was first completed with points 1,650,000 and the queue tool corrected it to 0. The achieved figure still carries the total read live. Same family as the gifts A-2026-11-09-01 rule: never write a read/progress figure into points.) Fragment scores
   never substitute, and the Duel Progress mail is a cross-check
   only.
 - The last unit executed before the about-18:00 duel rollover
@@ -1018,7 +1020,21 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 
 - Cross-read inside the training unit training-2026-11-10-0203 by ticker-0334, about 03:37 to 03:42 local (the training unit closed partial). Evidence in `_records_/2026-11-10/troop-training/0337-queue-run.md` (commit b7e79a62 on records/2026-11-10). This is a read-only cross-read, not a duel-score unit; the personal total was not read here.
 - Alliance Duel screen, read live: Today's Theme Base Expansion, 14:18:29 remaining (ends about 18:00, consistent with the settled about-18:00 rollover, Issue #242), alliance target 1,650,000 points.
-- Reward chests 8,020 / 9,530 / 18,100 with progress bars 40,000 / 150,000 / 540,000. This pairs the 8,020 / 9,530 / 18,100 figures with the 40,000 / 150,000 / 540,000 progress bars, resolving the 0151/0211 section's "not identified" - the figures are the chest figures above the progress bars (reading them as ruby tags, by analogy with the arms-race chest tags, is an inference, not a live label read).
+- Reward chests 8,020 / 9,530 / 18,100 with progress bars 40,000 / 150,000 / 540,000. The 8,020 / 9,530 / 18,100 figures sit above the 40,000 / 150,000 / 540,000 progress bars - their position above the chests is confirmed (the 0435 record's own wording is "The figures above the chests"). CORRECTION 2026-11-10 0435 (this run): their MEANING is still not identified - the 0435 unit again did not identify them ("were not identified; they are not the personal total and were not used"), so the 0432 fold's "resolving the 0151/0211 not identified" claim is superseded; only the position is established, and reading them as ruby tags, by analogy with the arms-race chest tags, remains an inference, not a live label read.
 - Scoring actions read live: Dispatch UR Trade Truck 1 time +300,000.0 and Perform 1 UR Secret Task +225,000.0. Today is a duel UR day for trucks.
 - CORRECTION: the +300,000 live rate supersedes the 100,000 Handbook rate in tools/duel_schedule.json for a UR truck dispatch. The 0248 trucks unit's expected score is therefore 1,200,000 (4 times 300,000), not 400,000 - corrected in the truck-plunder profile (1.38.0) and flagged on Issue #565. The +225,000 is the first live UR secret-task rate (the Handbook Legendary figure is 75,000, a different tier). The duel-score unit's live personal-total read is the verification for both.
 - No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
+
+## What the 2026-11-10 0435 and 0438 units added - duel total 1,650,000 read twice, sixth and seventh timers end about 18:00, no ceremony waiting
+
+- Duel-score unit duel-score-2026-11-10-0230 by ticker-0434, 04:35 to 04:37 local, status done. Evidence in `_records_/2026-11-10/alliance-duel/0435-queue-run.md` (commit 5ba07ce2b4 on records/2026-11-10). Computer session cc-397 on the owner Mac mini, LastWar already open on the base screen, no relaunch needed.
+- Star-ceremony unit star-ceremony-2026-11-10-0230 by ticker-0434, 04:38 to 04:39 local, status done (checked only). Evidence in `_records_/2026-11-10/alliance-duel/0438-queue-run.md` (commit 5ba07ce2b4 on records/2026-11-10). Computer session cc-398.
+- Theme: Base Expansion. Personal daily total 1,650,000 (gold medal figure under the theme title, confirmed by OCR as well as the screenshot in the 0438 read) at both reads. Target 3,600,000; gap 1,950,000. Up from 450,000 at the 01:51 read - a rise of 1,200,000 between reads, matching the 0248 trucks unit's 4 UR dispatches at the live 300,000 rate (inference: no other scoring action was recorded between the reads; the 0248 dispatches are the only scored actions in the window). This VERIFIES the 1,200,000 expected score from the 0337 correction - the live 300,000-per-dispatch rate is now confirmed by the personal-total read. Commented on Issue #565 by this run.
+- Reward chests: green check marks under all three chests (40,000, 150,000 and 540,000); the 540,000 threshold is passed at a 1,650,000 total. The figures above the chests (8,020 / 9,530 / 18,100) were not identified in either read; they are not the personal total and were not used - see the correction to the 0337 section above: their meaning stays unidentified, only their position above the chests is established.
+- Timer arithmetic, sixth and seventh live timers pointing at the about-18:00 rollover (Issue #242 resolution): 13:23:35 left at the 04:35 read ends about 17:58:35; 13:21:51 left at the 04:38 read ends about 17:59:51. Commented on Issue #242 by this run.
+- No ceremony waiting at either read: no trophy icon beside the Alliance button. A red circular icon with a 00:00:33 countdown sits above the Alliance button; it is not the ceremony trophy and was left untouched. It may be the Issue #498 skull-timer icon - but no skull and no badge count were recorded in either read, so the identity is unconfirmed; commented on Issue #498 by this run. The next ceremony unit should record the icon's shape and badge if it reappears.
+- Stats convention: this read-only duel-score unit's stats.points is 0 - the personal total is a read, not a score gained inside the unit. The unit was first completed with points 1,650,000 and the queue tool corrected it to 0 (points is score gained inside the unit, not a running total read). The achieved figure still carries the total read live. See the tracking-section note above.
+- Cross-read from the 0440 passes unit (evidence `_records_/2026-11-10/shop-claims/0440-queue-run.md`, commit 5ba07ce2b4): the Calendar button on the Events hub Base Building card opens a "HOW TO GET POINTS" dialog carrying the Day 3 theme schedule - 02:00 Base Building, 06:00 Drone Boost, 10:00 Hero Advancement, 14:00 Base Building, 18:00 Drone Boost, 22:00 Hero Advancement - and "Swap attempts today: 1/1". The dialog is the theme schedule for the current duel day, not a check-in entry (Issue #553).
+- Not the day closing read: the day rolls over about 18:00, and the day still has about 13.4 hours to run at the 04:35 read. The closing read is the last read before about 18:00, not 19:00 (see the 0151/0211 correction for the same stale wording in both records).
+- No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
+- Result stats: neither record carries a stats block; the reads are recorded as target 3,600,000, total 1,650,000, gap 1,950,000, points 0 (0435, corrected from 1,650,000 by the queue tool), verified yes, blocker_category none.
