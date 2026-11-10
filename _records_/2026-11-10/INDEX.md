@@ -2593,3 +2593,57 @@ modified: 2026-11-10T14:21:00Z
 ## 14:00 to about 14:09 - PR integration pass pr-integration-2026-11-10-1400
 
 - PR integration pass pr-integration-2026-11-10-1400 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); knowledge PR 588 merged (squash, 4 activity profiles folded: survivor-intake 1.49.0, troop-training 1.38.0, mail-rewards 1.36.0, alliance-gifts 1.49.0; new main d87c4311; local main synced back by bundle). Tools PR 425 re-verified CLEAN and still owner-gated (OD-20261108-01 open, issue #422 open), no new comment per the no-repeat rule. Records PR 583 carried to the 15:00 batch at head 401f2bd19 (merge-tree exit 0). Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged, no new notes per the no-repeat rule. End-of-pass sweep: 4 open PRs, all decided, no unprocessed PRs. Status: done. Full detail in pr-integration/1400-run.md.
+## 13:44 to 13:49 - Ticker pass ticker-1343, secrets unit done
+
+- Secrets unit secrets-2026-11-10-1057 done. All 8 visible
+  tasks PERFECT with no Claim button: UR Rescue Test Subject,
+  UR Disrupt electric grid, SSR Provide Tech Support to
+  Refugees, SSR Protect Refugee Camp, SR Retrieve Raw
+  Materials, SR Retrieve Abandoned Gear, SR Retrieve
+  Valuable Supplies, SR Retrieve Agent Profile. Assists at
+  cap 5/5. Reward Recovery newest record 2026-11-6 18:00
+  already CLAIMED, nothing new. The orange hexagon badge
+  moved between the two SSR cards as the list scrolled and
+  is still unexplained, but it is not a Claim button. Full
+  detail in secret-missions/1349-queue-run.md.
+
+## 13:50 to 13:51 - Ticker pass ticker-1343, treasures unit done
+
+- Treasures unit treasures-2026-11-10-1057 done. Fragment
+  stock read live: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1,
+  M6 x6, M7 x10 - M3 at 0, so no dig is possible and both
+  Dig buttons stay greyed out. Chest progress 11/15,
+  unchanged. Stock identical to the 10:40 read. Full
+  detail in hidden-treasures/1351-queue-run.md.
+
+## 13:52 to 13:58 - Ticker pass ticker-1343, events unit done
+
+- Events unit events-2026-11-10-1057 done. Full 6-tab hub
+  sweep, nothing claimable on any tab: Arms Race Hero
+  Advancement phase ends about 14:03 with score 0 and no
+  chest claimable (free paths cannot reach tier 3);
+  Age of Oil both stages full (4377/500, 17987/500);
+  Desert Battlefield registered, battle 2026-11-13;
+  Wanted Boss Code 64 appears at server 00:00 (Go
+  03:03:19); Survey Center holds only the owner survey;
+  Community 500 diamonds already Claimed. The 10:45
+  follow-up (Survey Center and Community unread) is
+  closed. Device session cc-463 dropped mid-unit and
+  cc-464 recovered with no state lost. Full detail in
+  event-claims/1358-queue-run.md.
+
+## 13:59 to 14:11 - Ticker pass ticker-1343, trucks unit partial
+
+- Trucks unit trucks-2026-11-10-1057 partial. All four
+  returned UR trucks settled: truck 1 (Squad 4, looted)
+  2.8M/2.8M/1.8M and truck 2 (intact) 3.8M/3.8M/2.4M by
+  explicit Truck Details views; the yard then showed
+  empty and the HUD proves all four cargoes landed
+  (food 615.9M to 629.2M, iron 938.8M to 952.1M, coin
+  84.1M to 92.6M). How trucks 3 and 4 cleared is
+  unverified - next unit watches whether one details
+  view settles the whole yard. Trade Count 4/5 live;
+  Plunder Count not re-read this unit (last live 2/4
+  at 05:13). The 5th UR Mega dispatch and the remaining
+  plunders resume in the next trucks unit. Full detail
+  in truck-plunder/1411-queue-run.md.
