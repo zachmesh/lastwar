@@ -1,8 +1,8 @@
 {
  "arms-race": {
   "status": "skipped",
-  "at": "2026-11-10T00:11:37-08:00",
-  "note": "Tech Research phase: score 0/30000, no research completes in-phase (Missile Mastery II 1d 10h left), speedup and pack paths red-lined"
+  "at": "2026-11-10T03:45:43-08:00",
+  "note": "Base Building phase: score 0/30000, only free path is building power from one Oil Well in progress, speedup and pack paths red-lined"
  },
  "building-queues": {
   "status": "done",
@@ -16,18 +16,18 @@
  },
  "gifts": {
   "status": "done",
-  "at": "2026-11-10T01:40:06-08:00",
-  "note": "Claimed 70 Regular and 6 Premium alliance gifts; Gift Level 28 progress 200,390,860 to 200,393,010"
+  "at": "2026-11-10T03:49:35-08:00",
+  "note": "Claim All both tabs: 110 Regular + 7 Premium = 117 gifts; Gift Level 28 progress 200,816,740/206,300,000"
  },
  "help": {
   "status": "done",
-  "at": "2026-11-10T01:43:16-08:00",
-  "note": "Help All pressed: 2 ally helps; help points 420 to 720 of 1,000"
+  "at": "2026-11-10T03:54:02-08:00",
+  "note": "Help All: 2 ally helps (1717Flower Farmland x2); help points 720 to 1,040/1,000"
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-10T01:46:53-08:00",
-  "note": "Claim All swept all categories; no claimable rewards"
+  "at": "2026-11-10T03:58:12-08:00",
+  "note": "Claim All swept all categories; no claimable rewards; R5 warning mail read (server leavers may target alliance)"
  },
  "train": {
   "status": "done",

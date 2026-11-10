@@ -677,3 +677,47 @@ of 2026-10-28.
   awaiting the owner decision (OD-20261108-01 open). Local main
   fast-forwarded to 6f336816. Status: partial (cadence violation).
   Full detail in pr-integration/0345-run.md.
+## 03:37 to about 03:58 - Ticker pass ticker-0334, 5 units
+
+- Own PRs first: records PR #559 (records/2026-11-10) was open
+  and CLEAN at pass start, awaiting the 07:00 batch, with
+  nothing addressed to this job; the integrator merged it at
+  03:47 during this pass and opened records PR #569 for the
+  branch. No conflict to resolve, no question to answer.
+- Training unit training-2026-11-10-0203 partial. Four fresh
+  tent points at wide zoom and in the panned-down view selected
+  no barracks; two misfired into the radar map and the Alliance
+  Duel screen (duel Base Expansion read live, UR day). Drill
+  Ground not re-read; Drill Ground Full (39,460 of 39,460)
+  stays carried forward unverified. Fourth consecutive training
+  partial with the same blocker, so per queue rule R2 a process
+  failure, reported to the owner as one; commented on issue
+  #150. Power 146,751,949 at entry rising to 148,058,020 during
+  the unit (cause not established, not attributed). Full detail
+  in troop-training/0337-queue-run.md.
+- Arms-race unit arms-race-2026-11-10-0203 skipped-needs-owner
+  per R4. First unit inside the Base Building phase: score 0,
+  thresholds 6,250 / 12,500 / 30,000, 02:16:46 left; only free
+  path is building power from one Oil Well in progress, speedup
+  and pack paths red-lined. Ranking chest preview-only (Iron /
+  Food / Coin Chest (SR) x3 each), nothing claimable. Full
+  detail in arms-race/0342-queue-run.md.
+- Gifts unit gifts-2026-11-10-0230 done. Claim All on both tabs:
+  110 Regular and 7 Premium, 117 gifts total; Gift Level 28
+  progress 200,813,790 to 200,816,740. Both tabs verified empty
+  of claimable gifts. Full detail in
+  alliance-gifts/0346-queue-run.md.
+- Help unit help-2026-11-10-0230 done. Help All pressed for two
+  ally requests (1717Flower Lv.25 Farmland x2); today's help
+  points 720 to 1,040 of 1,000, read live after a close/reopen
+  re-read. No requests waiting. Full detail in
+  alliance-help/0350-queue-run.md.
+- Mail unit mail-2026-11-10-0230 done. Claim All swept Alliance,
+  Event, System, Regular and Battle Report: no claimable
+  rewards. R5 Attention mail read (Abyss Apex, 01:59:02):
+  players leaving the server may target the alliance, keep
+  troops off the walls unless in an event. Delete All never
+  pressed. Full detail in mail-rewards/0355-queue-run.md.
+- Zombie Invasion: no chain seeded, event ended 2026-10-30 and
+  the tab is still absent from the Events hub. No diamonds or
+  money spent.
