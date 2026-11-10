@@ -1,8 +1,8 @@
 ---
 title: Survivor Intake
 created: 2026-10-25T21:55:00Z
-modified: 2026-11-10T17:32:17Z
-version: 1.48.0
+modified: 2026-11-10T21:32:17Z
+version: 1.49.0
 description: Collecting the survivors who queue at the base front gate - recruit cards, dialog survivors and their building posts
 grounded_in:
   - source: task named by the owner on 2026-10-25 - the line at the front door
@@ -49,6 +49,7 @@ grounded_in:
   - source: ticker-2334 survivor-intake execution record 2026-11-09 2358 queue run (done, gate line verified and cleared live, Quick Dispatch ran first time in the queue era; record commit 10b431e97 on records/2026-11-09)
   - source: ticker-0304 survivor-intake execution record 2026-11-10 0321 queue run (partial, 1 of 2 gate survivors taken in, second unrelocated after a camera pan, Quick Dispatch still owed; record commit 047fcf81b2 on records/2026-11-10)
   - source: ticker-0834 survivor-intake execution record 2026-11-10 0844 queue run (partial, last gate survivor taken in, gate clear on two re-reads, Quick Dispatch still owed, Iron Mine mis-grounded as Smelter Lv.26; record commit 5473d6845 on records/2026-11-10)
+  - source: ticker-1204 survivor-intake execution record 2026-11-10 1224 queue run (partial, verified no, gate line not verified, tent face bubbles are posted survivors not the waiting line, next search bottom-right corner; record commit 88e51ae5d on records/2026-11-10)
 ---
 
 
@@ -84,6 +85,7 @@ Measured on 2026-10-25.
 - A bubble with an exclamation mark is a visitor, not a recruit -
   one opened a Friendly Visitor dialog asking to enable
   notifications. Cancel left it untouched; nothing was enabled.
+- Tent face bubbles are posted survivors, not the waiting line (2026-11-10 1224 update, re-confirming the 2026-11-07 1655 reading): gold bubbles (capped man, blue-haired woman, blue-capped man) and white bubbles (blue-capped boy) sit over the training tents; tapping one white bubble (norm 226,612) opened the TRAIN UNITS panel, not a survivor card. Do not re-probe the tents for the line. Next search: pan to the bottom-right corner (red-roofed structure seen at about norm 920,870) and look for the Zombies-signed gate there.
 
 ## How a recruit is taken in
 
@@ -984,6 +986,8 @@ Measured on 2026-10-25.
 
 ## Changelog
 
+- 1.49.0 (2026-11-10): 1224 survivors unit folded (partial, verified no - gate line not verified in the two views searched (base plus right/down pan: Big Ben, pink car, radar dish, purple crystal), no Zombies-signed walled entrance seen; tent face bubbles are posted survivors/tent markers, not the waiting line (white bubble tap at 226,612 opened the TRAIN UNITS panel, not a survivor card) - re-confirms the 1655 reading; FRAMING CORRECTION - the record's 'same blocker as the 22 partials of 2026-10-28 to 2026-10-31' is stale framing, that run is closed history (broken 2055, Quick Dispatch ran 2358), this is a fresh unverified partial; next search pans to the bottom-right corner (red-roofed structure about 920,870) for the Zombies-signed gate; T10 panel read via the bubble tap (Power 1647, Morale 750.0, Attack 38.45, Defense 7.79, slider 793, 1d 17:14:37 prospective duration); Quick Dispatch still owed for the 0321 + 0844 recruits; blocker_category e).
+
 - 1.48.0 (2026-11-10): 0844 survivors unit folded (partial, last gate survivor taken in - the remaining second survivor of the 0321 line, "?" bubble norm 109,654, figure norm 109,696 grounded fresh from a 2x enlarged crop, move-wait-click, 30 percent visual change in the gate region, no "?" bubble at the gate on the post-tap screenshot and on a second re-read, gate line clear; no Recruit card, no name or role, intake verified by the "?"-cleared sequence on two screenshots, processed count recorded as 1; Quick Dispatch NOT run, owed again per rule R7 for this recruit and the 0321 recruit, in the Iron Mine Lv.27 panel after re-locating the mine; CORRECTION - the brown building at norm 354,210 is Smelter Lv.26, not the Iron Mine (tap selected Smelter Lv.26, deselected with an empty-road tap at 450,600); the 2358 pointer (545,452) not re-tested, camera framing had shifted, stays qualified; truck prompt toasts cycling from the truck driver figure at the gate left alone; HUD food 612.5M, iron 939.3M, coin 84.1M, diamonds 13.22K, power 148,058,020).
 
 - 1.47.0 (2026-11-10): 0321 survivors unit folded (partial, gate line verified live with 2 "?" survivors; first taken in by move-wait-click, smiley-then-gone, no name/role card shown; second tap delivered as a map drag, camera panned to Wall Lv.26, survivor unrelocated behind two floating action buttons (blue house, green up-arrow) of unknown function; Quick Dispatch NOT run, owed again per rule R7 in the Iron Mine Lv.27 panel after re-locating the gate line; HUD food 610.2M, iron 933.6M, coin 82.7M unchanged). (1.46.0 carries the 2358 section without a changelog line; the numbering is preserved, not rewritten.)
@@ -1633,3 +1637,14 @@ Measured on 2026-10-25.
 - Closing reads: gate line at entry: 1 "?" survivor, verified live. Survivors taken in: 1 (name/role not captured - no card shown). Survivors remaining: 0 "?" at the gate on two re-read screenshots. Gate line at close: clear as observed, 0 "?" bubbles. Quick Dispatch: not run (owed to the next unit). HUD at close, unchanged through the unit: food 612.5M, iron 939.3M, coin 84.1M, diamonds 13.22K, total power 148,058,020.
 - No diamonds or money spent. No priced button tapped. No truck touched. No upgrade tapped (the Smelter Lv.26 up-arrow was left alone). No other activity's rewards touched.
 - Result stats: target 1, achieved 1, resources_gained none, costs about 8 minutes, verified yes, blocker_category c, survivors_taken_in 1, survivors_remaining 0, line_verified yes, quick_dispatch_run no, device_takeovers 0.
+
+## What the 2026-11-10 1224 unit added - gate line not verified, tent face bubbles are posted survivors not the line, next search bottom-right corner, partial
+
+- Unit survivors-2026-11-10-1003 by ticker-1204, about 12:24 to 12:28 local, status partial, unverified. Evidence in `_records_/2026-11-10/survivor-intake/1224-queue-run.md` (commit 88e51ae5d on records/2026-11-10).
+- Base screen at 12:25, then one drag panning the camera right/down to expose the right side of the base (Big Ben, pink car, radar dish, purple crystal). No walled entrance signed Zombies and no line of question-mark bubbles was seen in either view.
+- Tent face bubbles checked: gold bubbles (capped man, blue-haired woman, blue-capped man) and white bubbles (blue-capped boy) sit over the training tents. Tapping one white bubble (norm 226,612) opened the TRAIN UNITS panel, not a survivor card: Power 1647, Morale 750.0, Squad Load Capacity 2200, Unit HP 4726.34, Unit Attack 38.45, Unit Defense 7.79, counts Lv.7 715, Lv.8 1,332, Lv.9 1,152, Lv.10 35.8K, slider 793, cost 5.5M food plus 5.5M iron, timer 1d 17:14:37. No Train and no Finish Now tapped. Panel closed untouched. The panel's 1d 17:14:37 is the prospective batch duration, not a remaining timer (training profile, 1229 lesson).
+- Conclusion: the tent face bubbles are posted survivors (or the tents' own markers), not the waiting line - re-confirming the 2026-11-07 1655 reading. The waiting line is still unlocated. See the updated How to enter entry.
+- FRAMING CORRECTION: the record calls this "the same blocker as the 22 partial survivor units of 2026-10-28 to 2026-10-31". That run is closed history: the R2 third-strike blocker was broken by the 2055 unit on 2026-11-09 (gate line cleared live with one grounded bubble tap) and Quick Dispatch ran in the 2358 unit. This unit is a fresh unverified partial - the gate line was not found in the two views searched - not a continuation of the 22-of-22 run. The claim discipline stands: the unit does not claim the gate is empty, only that no waiting line was found in the pans searched.
+- Next search: the next unit should pan to the bottom-right corner (red-roofed structure seen at about norm 920,870) and look for the Zombies-signed gate there, instead of re-probing the tents.
+- Quick Dispatch NOT run: no survivor was taken in, so it is still owed for the 0321 and 0844 recruits (two recruits), in the Iron Mine Lv.27 panel after re-locating the mine.
+- Result stats: target take in every waiting survivor at the front gate then run Quick Dispatch, achieved 0 recruited, 0 dispatched, gate line not verified, resources_gained none, points 0, costs about 4 minutes, no items spent, verified no, blocker_category e (repeated blocker - gate line not found).
