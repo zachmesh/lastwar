@@ -440,3 +440,20 @@ of 2026-10-28.
   banner quest changed to "Build: Oil Well"). VPS root disk slipped to 81
   percent, 1.9G free. Status: no-op. Full detail in
   pr-catchall/0239-run.md.
+
+## 02:32 to about 02:44 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-10-0232 (done). Own PR 561
+  merged with no review comments. Ten profiles folded from
+  ticker-0134 and ticker-0204 (gifts 1.46.0, help 1.36.0, mail
+  1.33.0, train 1.37.0, duel 1.36.0, shop 1.46.0, secrets
+  1.29.0, events 1.36.0, treasures 1.16.0, arms-race 1.74.0)
+  in one commit on PR 564, verified OPEN and MERGEABLE.
+  Headlines: train cinematic skip is single-tap only (the
+  double-tap lost the 3-contract gift); gifts Premium window
+  reconciles exactly for the first time; duel timers 16:08:04
+  and 15:48:49 both end about 18:00. Issues #183, #242, #205,
+  #553, #477, #282 and #482 commented. No new issue filed.
+  Status: done. Full detail in
+  knowledge-organization/0232-run.md.
