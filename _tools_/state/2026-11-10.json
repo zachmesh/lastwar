@@ -1,0 +1,67 @@
+{
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-11-10T00:11:37-08:00",
+  "note": "Tech Research phase: score 0/30000, no research completes in-phase (Missile Mastery II 1d 10h left), speedup and pack paths red-lined"
+ },
+ "building-queues": {
+  "status": "done",
+  "at": "2026-11-10T01:12:43-08:00",
+  "note": "Lv.29 Aircraft Center 2d 01:14:21 left, slots 2-4 idle"
+ },
+ "research": {
+  "status": "done",
+  "at": "2026-11-10T01:16:54-08:00",
+  "note": "Slot 1 in progress 1d 09:04:53, slot 2 Idle, nothing to complete"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-10T01:40:06-08:00",
+  "note": "Claimed 70 Regular and 6 Premium alliance gifts; Gift Level 28 progress 200,390,860 to 200,393,010"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-10T01:43:16-08:00",
+  "note": "Help All pressed: 2 ally helps; help points 420 to 720 of 1,000"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-10T01:46:53-08:00",
+  "note": "Claim All swept all categories; no claimable rewards"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-11-10T01:51:05-08:00",
+  "note": "Boarded carriage 2 of Abyss Apex train; 3-contract gift missed (dialog closed, does not reopen)"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-10T01:52:40-08:00",
+  "note": "Personal duel total 450,000 of 3,600,000 (gap 3,150,000)"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-10T02:11:55-08:00",
+  "note": "No ceremony waiting; duel total 450,000 of 3,600,000"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-10T02:14:39-08:00",
+  "note": "Nothing claimable this cycle; check-in hunt continues, Issue #553"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-10T02:19:06-08:00",
+  "note": "All 9 tasks claimed; assists 5/5 at cap; recovery already CLAIMED"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-10T02:23:32-08:00",
+  "note": "One dig done; chest 11/15; M3 back to 0"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-11-10T02:54:07-08:00",
+  "note": "Donation Count 0/30 read live via entry count 6/30 plus footer delta 4800 to 5100; count refills in bursts, next slot re-reads"
+ }
+}
