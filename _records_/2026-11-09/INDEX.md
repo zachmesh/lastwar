@@ -2830,3 +2830,4 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   seeded - event ended 2026-10-30, chain closed at unit 066, no
   Zombie tab in the Events hub (zero-sweep 17:48 confirms). PR #545
   already open for this branch, no new PR opened by this pass.
+- PR integration pass pr-integration-2026-11-09-2045 correction (addendum): PR 548 (knowledge fold, 7 profiles) arrived 20:51 PT mid-pass, after the first run-record push; reviewed clean (Owner lastwar-knowledge-organizer, 7 profile INDEX files, version bumps as claimed, merge-tree exit 0) and squash-merged 21:05 PT as d2bcbc14, branch deleted; local main fast-forwarded to d2bcbc14. Full detail in pr-integration/2045-run.md (addendum).
