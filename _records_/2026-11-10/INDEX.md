@@ -1210,3 +1210,20 @@ of 2026-10-28.
   check. 0 withdrawals. No issues filed. Pool inbox 72,
   claimed 0, done 1447. Status: done. Full detail in
   queue-planning/0640-run.md.
+
+## 06:45 to about 06:58 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0645.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00). No merges. Records PR 569 clean at new head
+  5c3377ae, awaiting the 07:00 batch. Records PRs 351
+  and 301 still conflict with main on the single
+  action-log file, heads unchanged, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated,
+  clean, awaiting the owner decision (OD-20261108-01
+  open, age 2 days). No new comments posted: main
+  unchanged since the 0600 pass and all PR heads
+  unchanged except 569, which moved only by run-record
+  and no-op commits. Status: done.
+  Full detail in pr-integration/0645-run.md.
