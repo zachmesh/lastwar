@@ -16,18 +16,18 @@
  },
  "gifts": {
   "status": "done",
-  "at": "2026-11-10T03:49:35-08:00",
-  "note": "Claim All both tabs: 110 Regular + 7 Premium = 117 gifts; Gift Level 28 progress 200,816,740/206,300,000"
+  "at": "2026-11-10T13:06:01-08:00",
+  "note": "Regular 1193 + Premium 43 gifts claimed"
  },
  "help": {
   "status": "done",
-  "at": "2026-11-10T09:23:49-08:00",
-  "note": "Help All: 2 ally helps delivered, none waiting"
+  "at": "2026-11-10T13:21:36-08:00",
+  "note": "Help All pressed once; GoldenSonya Food Output V helped; no ally requests remain"
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-10T03:58:12-08:00",
-  "note": "Claim All swept all categories: no claimable rewards; R5 warning mail read (server leavers may target alliance)"
+  "at": "2026-11-10T13:00:04-08:00",
+  "note": "Event train rewards claimed; other categories swept, nothing claimable"
  },
  "train": {
   "status": "done",
@@ -36,28 +36,28 @@
  },
  "duel-score": {
   "status": "done",
-  "at": "2026-11-10T10:03:29-08:00",
-  "note": "Personal total 1650000, gap 1950000 (Base Expansion)"
+  "at": "2026-11-10T13:27:08-08:00",
+  "note": "Duel total 1,650,000 of 3,600,000, gap 1,950,000"
  },
  "star-ceremony": {
   "status": "done",
-  "at": "2026-11-10T09:57:09-08:00",
-  "note": "No trophy icon, no ceremony waiting (checked only)"
+  "at": "2026-11-10T13:25:32-08:00",
+  "note": "No ceremony waiting; duel total 1,650,000 of 3,600,000, gap 1,950,000"
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-10T10:30:48-08:00",
-  "note": "Shop checked 10:29: 4 tabs, nothing claimable; Monthly Daily Pickup Claimed, Rewards Left 11"
+  "at": "2026-11-10T13:31:33-08:00",
+  "note": "Four shop tabs checked, nothing claimable; monthly pickup already Claimed"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-10T10:37:08-08:00",
-  "note": "Post checked 10:36: 8 tasks all PERFECT, assists 5/5, recovery CLAIMED"
+  "at": "2026-11-10T13:49:54-08:00",
+  "note": "All 8 tasks PERFECT, assists 5/5, recovery already claimed"
  },
  "treasures": {
   "status": "done",
-  "at": "2026-11-10T10:40:11-08:00",
-  "note": "Fragments 10:42: M3 x0, no dig; chest 11/15; Rewards is odds preview only"
+  "at": "2026-11-10T13:52:14-08:00",
+  "note": "No dig possible, M3 at 0; chest progress 11/15"
  },
  "donations": {
   "status": "done",
@@ -66,7 +66,22 @@
  },
  "events": {
   "status": "done",
-  "at": "2026-11-10T05:19:27-08:00",
-  "note": "Hub sweep complete 05:19: 6 tabs checked, nothing claimable; Season 11 survey open for owner"
+  "at": "2026-11-10T13:58:34-08:00",
+  "note": "Full 6-tab sweep, nothing claimable"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-10T11:47:28-08:00",
+  "note": "Stack day: Quick Execute 1 task, stamina 120 to 110, points 348 unchanged; Claim All-only bar, 11 pending, not tapped"
+ },
+ "daily-missions": {
+  "status": "done",
+  "at": "2026-11-10T14:37:57-08:00",
+  "note": "4 rows + chests 40/80/120 claimed, activity 120"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-10T14:43:40-08:00",
+  "note": "Freebie + login chest claimed, VIP points 1627030"
  }
 }
