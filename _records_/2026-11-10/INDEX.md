@@ -2253,3 +2253,20 @@ modified: 2026-11-10T14:21:00Z
   this unit; the spend falls to the next unit. Events hub
   re-checked: still no Zombie Invasion tab, no chain seeded.
   Full detail in arms-race/1157-queue-run.md.
+
+## 12:00 to about 12:10 - PR integration pass
+
+  PR integration 1200 run (non-batch pass; checker plain and
+  merge-aware both not due, outside every batch window, next
+  batch 15:00). Records PR 583 carried to the 15:00 batch at
+  new head dd29016c1 (ticker-1134 delivery landed mid-pass).
+  Records PRs 351 and 301 still conflict with main on the
+  single file _logs_/repo-actions/action-log.jsonl
+  (append-append), heads unchanged, re-probed, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated,
+  clean, re-verified against live main 4884c1fb5, awaiting
+  the owner decision (OD-20261108-01 still open). Six
+  comments posted on 425, 351 and 301: three re-verification
+  notes written against a stale VPS local main ref, then
+  three corrections naming live main 4884c1fb5. Status:
+  done. Full detail in pr-integration/1200-run.md.
