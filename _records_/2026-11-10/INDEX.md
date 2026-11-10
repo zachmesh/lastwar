@@ -644,3 +644,22 @@ of 2026-10-28.
   0 withdrawals. No issues filed. Pool inbox 67, claimed 1,
   done 1434. Status: done. Full detail in
   queue-planning/0340-run.md.
+
+## 03:32 to about 03:50 - Knowledge organization pass
+
+- Knowledge organization pass
+  knowledge-organization-2026-11-10-0332 (done). Own PR 564
+  merged with no review comments. Five profiles folded from
+  ticker-0234 and ticker-0304 (truck-plunder 1.37.0,
+  alliance-donations 1.81.0, resource-collection 1.53.0,
+  radar-tasks 1.67.0, survivor-intake 1.47.0) in one commit
+  on PR 568, verified OPEN and MERGEABLE. Headlines: Mega
+  Mode is a batch refresh plus batch dispatch of all four
+  slots (first refresh 3 Trade Contracts per truck, fifth
+  trade a second wave); Armed Truck loot check deferred a
+  third time, escalated as Issue #566; radar, survivors and
+  donations all hit entry/drag failures in the same
+  zoomed/panned camera state. Issues #565, #566, #502,
+  #500, #558, #220, #450, #423, #160 and #174 commented.
+  No new issue filed. Status: done. Full detail in
+  knowledge-organization/0332-run.md.
