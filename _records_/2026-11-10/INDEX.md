@@ -1193,3 +1193,20 @@ of 2026-10-28.
   514 and 517 cross 24 hours later today. Knowledge-organizer
   0532 fold comments landed on issues 550, 553 and 565.
   Status: no-op. Full detail in pr-catchall/0639-run.md.
+
+## 06:40 to about 06:47 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-0640. Plan staged 15
+  units into the live pool (18:00 to 18:30 slots;
+  already_present 57, skipped_done_current 4,
+  skipped_closed 3, reaped 0, expired 0). Sweep production
+  skipped (06:00 hour run); the pair is already complete in
+  the live pool. Scout diff on the live-tree observation
+  (0615 pass, narrative-only) applied to the live pool:
+  observed 0, actionable 0, 0 enqueued, candidates 0,
+  promotion proposals 0, unexplained red dots (diff) 0;
+  narrative accounting seen 8, unexplained 2 (Inventory
+  dot, skull badge 13), left for the retro's threshold
+  check. 0 withdrawals. No issues filed. Pool inbox 72,
+  claimed 0, done 1447. Status: done. Full detail in
+  queue-planning/0640-run.md.
