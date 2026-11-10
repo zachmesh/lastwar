@@ -2800,3 +2800,33 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 
 - Knowledge organization pass knowledge-organization-2026-11-09-2032 (done). Own PR 547 merged with no review comments, so no fix or reply was owed. Folded the ticker-1910 pass (arms-race 1928, donations 1935, radar 1945, trucks-1457 expiry) and the ticker-1934 pass (donations 2015, building-queues 2020, harvest 2030, research 2031) into seven profiles, one commit on PR 548 (OPEN, MERGEABLE, CLEAN): arms-race 1.72.0 (Unit Progression read live at 0, timer 02:42:34, tier-3 gap 75,000 via training queues only, R4 assessment, no Zombie tab third confirmation today, power 146,736,949 corroborates the 1838 mail read), alliance-donations 1.77.0 (30 coin donations attempted, count 30 to 5/30 live, final 5 unproven behind a 00:17:47 timer, footer fell 3300 to 3050; re-read entry 2/30 proves 3 of the final 5 landed, 1 more verified live, footer rose 3050 to 3250, day tally 29 of 30 verified), radar-tasks 1.64.0 (dish re-grounded (57,714) first tap, (62,727) and (47,694) stale this rotation, restore lines agree about 23:39-23:41 PT, pins inventoried none standing, Gold NEW! icon sixth sighting), truck-plunder 1.35.0 (fix-up trucks-1457 expired unrun, ended trade-day shortfall -1/-3 closes unfilled), building-queues 1.3.0 (Aircraft Center 2d 06:07:55 left, slots 2-4 idle, clock coherent with the 0744 read), resource-collection 1.50.0 (fifth one-tap-per-type confirmation, food +2.7M, coin +1.8M, iron +2.6M, all HUD-verified; furnace triangle tap selected a building, Issue #508), research-queue 1.2.0 (Defense Training VIII completed, power +15,000 to 146,751,949, slot 1 now Idle, Issue #513 gap closed in substance). Two corrections: the 1657 last-known-count 19/30 superseded by the reset-day 30/30, and the 1748 fix-up did not run before expiring. Issues #484, #417, #482, #508 and #502 commented; #500 and #513 already commented by the ticker-1934 pass. No new knowledge issues; retro not landed. Status: done. Full detail in knowledge-organization/2032-run.md.
 - PR integration pass pr-integration-2026-11-09-2045 (done). NON-batch pass (checker _tools_/records_batch.py due - not due, outside every batch window, next batch 23:00 PT; merge-aware agrees); no merges, no new comments (no-repeat rule - neither any PR head nor main moved since the 2030 notes); records PR 545 verified CLEAN and tree-safe at head 0c2fa4b7, awaits the 23:00 batch; records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/2045-run.md.
+## 20:48 to 20:55 - Ticker pass ticker-2040, survivors partial, gate line cleared live
+
+- Survivors unit survivors-2026-11-09-1803 partial: gate line verified
+  clear live - one tap at the visually grounded "?" bubble point
+  (233, 832), above the "Build: Oil Well" banner strip, took the
+  waiting survivor in (dialog line about supplies in chat, no
+  Recruit card); post-tap grounding count found 0 "?" bubbles at
+  the gate. This breaks the R2 third-strike blocker from unit 1403
+  the same day (figure tap inside the banner strip no-op, fullscreen
+  tap opened the Build menu). Quick Dispatch not run - token
+  expiring, first action of the next survivors unit (R7). No
+  diamonds or money spent. Full detail in
+  survivor-intake/2055-queue-run.md.
+
+- Training unit training-2026-11-09-1803 partial: no barracks panel
+  opened - three taps on the freshly grounded top-row tent point
+  (283, 230) produced no change (first tap showed a "+45" float and
+  a portrait marker, no button row; second and third no-change, the
+  control advising background clicks do not reach some controls).
+  Drill Ground not read live, no batch requeued. Next training unit
+  must change the entry route (click_element or a truly frontmost
+  click) before tapping a tent again (R2). No diamonds or money
+  spent. Full detail in troop-training/2103-queue-run.md.
+
+- Pass note: token held 20:48-21:03 (one renewal attempt refused
+  while the lease was live, then released); computer sessions cc-343
+  (dropped mid-pass, recovered) and cc-344; Zombie Invasion not
+  seeded - event ended 2026-10-30, chain closed at unit 066, no
+  Zombie tab in the Events hub (zero-sweep 17:48 confirms). PR #545
+  already open for this branch, no new PR opened by this pass.
