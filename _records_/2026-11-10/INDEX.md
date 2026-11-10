@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T20:34:00Z
+modified: 2026-11-10T21:10:00Z
 level: L0
 version: 1.0.0
-description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures), and the 1204 queue ticker pass with 3 units partial (harvest, survivors, training)
+description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units, and the 0434 queue ticker pass with 5 units done (duel-score, star-ceremony, passes, secrets, treasures), and the 1204 queue ticker pass with 3 units partial (harvest, survivors, training), and the 1234 queue ticker pass with 2 units done (mail, gifts)
 status: unverified
 ---
 
@@ -2422,3 +2422,24 @@ modified: 2026-11-10T14:21:00Z
 ## 13:00 to about 13:08 - PR integration pass pr-integration-2026-11-10-1300
 
 - PR integration pass pr-integration-2026-11-10-1300 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 15:00 PT); no merges, no comments posted - main 72ee1dd9 and all heads unchanged since the 1245 pass, so its re-verification notes stand and the no-repeat rule applies. Records PR 583 carried to the 15:00 batch at head 71535328 (merge-tree exit 0, tree f82b8c01). Tools PR 425 owner-gated, conflicting on _tools_/INDEX.md (merge-tree exit 1, re-probed this pass), OD-20261108-01 still open, issue #422 still open. Records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged. End-of-pass sweep: 4 open PRs, all decided, no unprocessed PRs. Status: done. Full detail in pr-integration/1300-run.md.
+
+## 12:45 to 12:59 - Ticker pass ticker-1234, mail unit done
+
+- Mail unit mail-2026-11-10-1030 done. Event train rewards
+  claimed (gold badge 2.5K x1, supply chests x53, red gem
+  100 x1, blue crystal 2.0K, 5m speedups x20); Alliance,
+  System, Regular and Battle Report swept with nothing
+  claimable. The mail back arrow's measured centre in the
+  642x951 window is (62,948) - earlier taps at y about 902
+  missed high. Full detail in
+  mail-rewards/1259-queue-run.md.
+
+## 13:01 to 13:05 - Ticker pass ticker-1234, gifts unit done
+
+- Gifts unit gifts-2026-11-10-1030 done. Regular 1193 and
+  Premium 43 alliance gifts claimed on both tabs; gift
+  progress 202,479,820 to 202,502,400 (+22,580), Level 28.
+  The Premium Claim All sits at about (732,933), further
+  right than the Regular one at (498,936), because of the
+  "Hide your name on Gifts" checkbox. Full detail in
+  alliance-gifts/1310-queue-run.md.
