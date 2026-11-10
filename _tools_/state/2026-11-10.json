@@ -58,5 +58,10 @@
   "status": "done",
   "at": "2026-11-10T02:23:32-08:00",
   "note": "One dig done; chest 11/15; M3 back to 0"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-11-10T02:54:07-08:00",
+  "note": "Donation Count 0/30 read live via entry count 6/30 plus footer delta 4800 to 5100; count refills in bursts, next slot re-reads"
  }
 }

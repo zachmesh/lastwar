@@ -478,3 +478,44 @@ of 2026-10-28.
 ## 02:45 to about 02:55 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-10-0245 (done). NON-batch pass (checker _tools_/records_batch.py plain and merge-aware both not due - outside every batch window, next batch 03:00 PT); merged knowledge PR 564 (squash bf8488af, 10 profiles folded, gifts 1.46.0, help 1.36.0, mail 1.33.0, train 1.37.0, duel 1.36.0, shop 1.46.0, secrets 1.29.0, events 1.36.0, treasures 1.16.0, arms-race 1.74.0); local main fast-forwarded to bf8488af. Records PRs 559 and 556 re-probed CLEAN against the new main, awaiting the 03:00 batch. Records PRs 351 and 301 still CONFLICTING on the action-log file, re-check comments posted; tools PR 425 owner-gated, re-verified CLEAN against the new main, OD-20261108-01 still open, re-verification comment posted. Status: done. Full detail in pr-integration/0245-run.md.
+
+## 02:36 to 02:48 - Ticker pass ticker-0234, trucks unit partial
+
+- Trucks unit trucks-2026-11-09-2257 partial. Duel day 2 (Base
+  Expansion): 4 UR trucks dispatched by Mega Mode, Trade Count
+  0/5 to 4/5; 1 plunder won, Plunder Count 0/4 to 1/4. Mega
+  Refresh cost 3 Trade Contracts per truck first refresh (12
+  spent, 158 to 146); all four rolls rerolled UR (No.1 04:37:27,
+  No.2 04:16:08, No.3 03:53:44, No.4 03:42:29). Expected duel
+  score 400,000 (Handbook rate, duel-score unit to verify).
+  Plunder: [STCL]De Stenenman UR (guard 24.6M, two 500 x3 shard
+  stacks right-side) won - iron 951.8K, food 951.8K, coin
+  607.5K, UR shards 500 x6, 5m speedups x10. First plunder
+  target [BROT]TPM01 vanished before Battle. Remaining: 5th
+  dispatch (second wave, slots full) and 3 plunders; Reward
+  Recovery red dot unchecked. Full detail in
+  truck-plunder/0248-queue-run.md.
+
+## 02:49 to 02:53 - Ticker pass ticker-0234, donations unit done
+
+- Donations re-read unit donations-2026-11-10-0923 done.
+  Quick Construction Donation Count read live 6/30 remaining
+  (replenished from 1/30 at 01:23); 6 coin donations at 900
+  coin each (5,400 coin), count falling 6 to 2 read live per
+  tap, final two taps confirmed by the Tech Donation Today
+  footer delta 4800 to 5100 (+300 = 6 x 50). Count closes
+  0/30; coin button greyed with a 00:13:05 timer. The count
+  refills in bursts, so the next slot unit re-reads live.
+  Full detail in alliance-donations/0253-queue-run.md.
+
+## 02:54 to 02:57 - Ticker pass ticker-0234, harvest unit partial
+
+- Harvest unit harvest-2026-11-10-0203 partial. Bubbles
+  collected, HUD-verified: food 607.8M to 610.2M, iron
+  931.4M to 933.6M, coin 81.2M to 82.7M; field clear.
+  Armed Truck still unlocated (third deferral): the blue
+  vehicle tapped is 2nd Squad Lv.20, not the truck; a gate
+  toast reads "...ies are fully loaded, ...e claim them"
+  with the full text off-frame. R2 escalation filed as a
+  GitHub issue from this record. Full detail in
+  resource-collection/0257-queue-run.md.
