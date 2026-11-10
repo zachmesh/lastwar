@@ -1,6 +1,6 @@
 ---
 title: Scout Round Summary Section 2026-11-10
-created: 2026-11-10T14:45:34Z
+created: 2026-11-10T15:49:07Z
 description: Perception coverage section, ready to paste verbatim into the day round summary - every figure copied from the coverage report of the same run, no new numbers
 ---
 

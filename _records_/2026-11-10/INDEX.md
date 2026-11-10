@@ -1371,3 +1371,21 @@ modified: 2026-11-10T14:21:00Z
   comments #282 and #575. No new issue filed. Slack DM sent.
   Status: done. Full detail in
   knowledge-organization/0732-run.md.
+
+## 07:40 to about 07:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-0740. Plan staged 5
+  units into the live pool (18:57 slots;
+  already_present 70, skipped_done_current 0,
+  skipped_closed 3, reaped 0, expired 0,
+  stale_done_dropped 2). Sweep production skipped (07:00
+  hour run); the pair is already complete in the live
+  pool. Scout diff on the live-tree observation (0615
+  pass, narrative-only) applied to the live pool:
+  observed 0, actionable 0, 0 enqueued, candidates 0,
+  promotion proposals 0, unexplained red dots (diff) 0;
+  narrative accounting seen 8, unexplained 2 (Inventory
+  dot, skull badge 13), left for the retro's threshold
+  check. 0 withdrawals. No issues filed. Pool inbox 75,
+  claimed 0, done 1447. Status: done. Full detail in
+  queue-planning/0740-run.md.
