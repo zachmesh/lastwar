@@ -2072,3 +2072,23 @@ modified: 2026-11-10T14:21:00Z
   re-read this unit (last read 05:19, nothing claimable);
   the 10:57 events unit re-sweeps them. Full detail in
   event-claims/1045-queue-run.md.
+
+## 11:00 to about 11:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1100.
+  Batch pass per the checker (plain and merge-aware both
+  due, 11:00 window, first batch merge in the window):
+  records PR 576 merged (40 commits, merge commit
+  104511d0, main now 4,965 files). Records PRs 351 and
+  301 still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against new main 104511d0, awaiting the
+  owner decision (OD-20261108-01 open, age 3 days).
+  Three re-verification comments were posted in error
+  this pass and deleted the same pass per the forward
+  comment convention (post only on material change).
+  Local main synced back by bundle to 104511d0. Merge
+  synced to the owner Slack DM. Status: done. Full
+  detail in pr-integration/1100-run.md.
