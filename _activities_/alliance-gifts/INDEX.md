@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T05:41:57Z
+modified: 2026-11-10T06:47:13Z
 level: L1
-version: 1.44.0
+version: 1.45.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -107,7 +107,7 @@ one file per execution.
 - Gift Level 28 on 2026-10-25, with progress 161,149,070 of
   206,300,000 before the evening claims and about 161,153,870 after -
   claimed gifts feed the level progress.
-- CORRECTION, retro action A-2026-11-09-01 (2026-11-09 daily retro, tracked on reopened Issue #300): never write the Gift Level progress gain into stats.points - the progress is alliance-wide and is not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match. Verification: the next gifts unit carries points 0 or a scored figure with a matching achieved; recheck 2026-11-10 retro. The 0417 section's "points 1090" and the 1842 section's "points 46760" both write the progress gain into stats.points and are superseded as points figures - the records themselves are append-only and unchanged, only this profile's reading of them as points is corrected.
+- CORRECTION, retro action A-2026-11-09-01 (2026-11-09 daily retro, tracked on reopened Issue #300): never write the Gift Level progress gain into stats.points - the progress is alliance-wide and is not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match. Verification: the next gifts unit carries points 0 or a scored figure with a matching achieved; recheck 2026-11-10 retro. The 0417 section's "points 1090" and the 1842 section's "points 46760" both write the progress gain into stats.points and are superseded as points figures - the records themselves are append-only and unchanged, only this profile's reading of them as points is corrected. (2026-11-09 2121 update: the first verification test still wrote points 19020 - the record was written by the pre-fix stats writer before the PR #552 tools fix merged; that line is superseded as a points figure the same way, and the post-fix test is the next gifts unit.)
 
 ## What is known from 2026-10-25
 
@@ -837,6 +837,8 @@ one file per execution.
 
 - 1.44.0 (2026-11-09): retro action A-2026-11-09-01 applied (Issue #300): Gift Level progress gain is never written into stats.points - the progress is alliance-wide, not this unit's score; points for gifts stays 0 unless a scored gain is read with an achieved figure to match; the 0417 "points 1090" and 1842 "points 46760" stats lines are superseded as points figures, the records unchanged. No new gifts unit ran this hour. (1.43.0 carries the 1842 section without a changelog line; the numbering is preserved, not rewritten.)
 
+- 1.45.0 (2026-11-09): 2121 gifts unit folded (done, dialog-confirmed 113 Regular plus 57 Premium, 170 total, both tabs verified clear; Gift Level 28 progress 199,689,560 to 199,708,580 of 206,300,000; Regular window exact (+1,130 for 113 gifts), third exact-match datapoint, commented on Issue #183; Premium window +17,890 not decomposed from visible rows; entry lesson - hidden base UI revealed by one tap at (935,726), shield re-grounded fresh at (927,726); leadership transfer to Abyss Apex confirmed on the Alliance panel; total power 146,751,949, up 15,000 from the 18:33 low, commented on Issue #482; A-01 first verification test - the record's stats.points 19020 is the pre-fix progress-as-points line, superseded the same way as 0417/1842, tools fix PR #552 merged after this unit ran, post-fix test is the next gifts unit, commented on Issue #300).
+
 - 1.42.0 (2026-11-09): 0417 gifts unit folded (done, dialog-confirmed 37 Regular plus 2 Premium, 39 total, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 195,637,370 to 195,638,460 of 206,300,000, total +1,090 - Regular window +390 against +370 expected for 37 gifts, the extra +20 recorded unexplained as new Issue #183 evidence commented by this run, Premium window +700 exactly 500 plus 200; Premium Claim All re-grounded fresh at (744,936); Hide-your-name unchecked before and after; alliance 96/100 members, power 13,532,886,654).
 
 - 1.40.0 (2026-11-08): 2138 gifts unit folded (done, dialog-confirmed 448 Regular plus 33 Premium plus 3 Regular re-check, 484 total, both tabs verified clear; Gift Level 28 progress 195,006,290 to 195,025,360 of 206,300,000, three more non-reconciling deltas as Issue #183 evidence commented by this run - +4,750 for 448 Regular against 4,480 expected, +12,940 for 33 Premium against no clean UR/SSR split, +1,380 for 3 Regular against 30 expected; Premium Claim All re-grounded fresh at (740,945) after the first tap landed on the "Hide your name" label; alliance 96/100 members, power 13,479,890,272).
@@ -1386,3 +1388,14 @@ one file per execution.
 - Scrolling banner: President HawksMav appointed NERO as Secretary of Interior (and an earlier appointment as Secretary of Science). Noted, no action.
 - No diamonds or money spent. Assemble was not opened; the Alliance panel was left at the base screen.
 - Result stats: target 1794, achieved 1794, resources_gained Regular 1699 gifts plus Premium 95 gifts, Gift Level progress +46,760 to 198,624,140 / 206,300,000, costs about 4 minutes of unit time, no items spent, verified yes, points 46760.
+
+## What the 2026-11-09 2121 unit added - done, 113 Regular and 57 Premium claimed, Regular window exact, points 19020 is the pre-fix stats line
+
+- Unit gifts-2026-11-09-1830 by ticker-2109, about 21:12 to 21:21 local, status done. Evidence in `_records_/2026-11-09/alliance-gifts/2121-queue-run.md` (commit 88c1abf8e on records/2026-11-09).
+- Entry: the base screen entered with the side UI columns hidden (no right-column buttons visible in the first screenshot). One tap at norm (935,726) brought the UI overlay up; the Alliance shield then grounded fresh at (927,726) with a red dot, and opened the panel at once. A unit that finds the base UI hidden should tap once to reveal it and re-ground the entry point on the revealed screen, never tap a stale point blindly.
+- Alliance panel read live: [AP3x] The Apex, Leader Abyss Apex (the leadership transfer read in the mail unit is confirmed on this screen), Power 13,577,450,619, Members 96/100, Language English.
+- Regular tab: Claim All badge 113. Claim All answered "A total of 113 Regular Alliance Gifts were claimed this time". Progress moved 199,689,560 to 199,690,690 / 206,300,000 (+1,130, exactly 113 x 10) - a clean exact-match datapoint, the third after the 0211 and 1842 units' Regular windows; commented on Issue #183 by this run. Rewards read live: gold chest x13, iron 1.0K x532, 5m speedup x19, coin 600 x532, bread 1.0K x308, red gem 5 x9, coin 6.0K x84; the popup top row was partly hidden behind the banner and is recorded as read only. Visible Regular gifts were Violet's Gift +10 (allies defeating CL-7 Victims) and Alliance Gifts +10 (TheGoldenEclipse defeating a Doom Elite).
+- Premium tab: Claim All badge 57. Claim All answered "A total of 57 Premium Alliance Gifts were claimed this time". Progress moved to 199,708,580 / 206,300,000 (+17,890). Rewards read live: purple chest x14, badge 50 x5, iron chest x38, coin bag x39, bread chest x17, white crystal x120, red gem 50 x1, red gem 5 x1, 5m speedup x3; the popup top row was partly hidden behind the banner and is recorded as read only. Visible Premium gifts were Alliance Gift (SR) +100 (Preparation Premium Pack), (UR) +500 (Preparation Deluxe Pack) and (R) +50 (Preparation Value Pack). The Premium window (+17,890) does not decompose from the visible rows alone; the Premium half of Issue #183 stays open.
+- Closing read: both tabs show all rows "Claimed", no Claim All button and no red dot on either tab. Returned to the base screen (total power 146,751,949; Build: Oil Well [0/1], not this unit's work). Total power 146,751,949 is 15,000 ABOVE the 18:33 read of 146,736,949 in the Issue #549 series - the fall has stopped and the figure moved up slightly; commented on Issue #482 by this run. The power accounting stays open with #549 tracking the series.
+- A-01 verification, first test: this unit's stats.points reads 19020 - the Gift Level progress gain written as points by the pre-fix stats writer. That line is superseded as a points figure the same way as the 0417 and 1842 lines; the A-01 rule stands unchanged. The tools fix (PR #552, merged after this unit ran) excludes the progress delta from points going forward; the post-fix verification test is the next gifts unit. Commented on Issue #300 by this run.
+- Result stats: target 170, achieved 170, resources_gained Regular 113 gifts plus Premium 57 gifts, Gift Level progress +19,020 to 199,708,580 / 206,300,000, costs about 9 minutes of unit time, no items spent, verified yes, points 19020 (superseded as a points figure - see the A-01 note above).

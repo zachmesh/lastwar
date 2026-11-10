@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-09T13:32:17Z
-version: 1.34.0
+modified: 2026-11-10T06:47:13Z
+version: 1.35.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -12,7 +12,7 @@ grounded_in:
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1324 star-ceremony unit)
   - source: in-game screens observed on the owner Mac mini, 2026-11-01 (1745 star-ceremony unit)
   - source: radar execution record 2026-11-01 1904 queue run (duel delta test still owed after 25 release-day claims)
-  - source: queue-planning execution record 2026-11-01 1840 run (duel-score staging gap: live pool tree predates the PR 137 merge)
+  - source: "queue-planning execution record 2026-11-01 1840 run (duel-score staging gap: live pool tree predates the PR 137 merge)"
   - source: queue-planning execution record 2026-11-01 2040 run (third consecutive plan staging no duel-score unit) and daily retro 2026-11-01 (gap commented on Issue #136, kept open)
   - source: queue-planning execution record 2026-11-01 2340 run (sixth consecutive plan staging no duel-score unit)
   - source: ticker-0034 star-ceremony execution record 2026-11-02 0047 queue run (latest live duel total 1,113,750)
@@ -29,7 +29,7 @@ grounded_in:
   - source: ticker-0434 alliance-duel execution record 2026-11-04 0456 queue run (done, star-ceremony trophy watch, no ceremony waiting, right-rail read, grounding timeout caveat)
   - source: ticker-0834 alliance-duel execution record 2026-11-04 0839 queue run (done, no ceremony waiting, personal duel total 4,772,100 against the 3,600,000 target, read live)
   - source: ticker-1340 alliance-duel execution record 2026-11-04 1344 queue run (failed, Mac screen-capture failure on every capture step, no game input dispatched, third consecutive ticker pass to fail this way, Issue 284; ceremony and duel total unmeasured)
-  - source: ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental Alliance Duel page read during the navigation detour: Today's Theme Enemy Buster, 01:14:51 left, alliance score 225,000, chest thresholds 40,000 / 150,000 / 540,000; record commit a85cfdafa8 on records/2026-11-07)
+  - source: "ticker-1633 alliance-donations execution record 2026-11-07 1633 queue run (incidental Alliance Duel page read during the navigation detour: Today's Theme Enemy Buster, 01:14:51 left, alliance score 225,000, chest thresholds 40,000 / 150,000 / 540,000; record commit a85cfdafa8 on records/2026-11-07)"
   - source: ticker-1818 alliance-duel execution record 2026-11-07 1828 queue run (partial, league calculating, personal total unread, roulette 0 tokens)
   - source: ticker-2304 perception-scout execution record 2026-11-07 2311 queue run (partial, Star Ceremony Event 40 playback read live, bonus rewards purple gem 4.0K and gold chest badge 14 claimable; record commit 03dc69e0c on records/2026-11-07)
   - source: ticker-0104 perception-scout execution record 2026-11-08 0122 queue run (partial, Alliance Star ceremony read live, slide 1 S2 Big Shot Texan Apex, chest 0/1, ceremony exit route unknown; record commit 33bb20050a on records/2026-11-08)
@@ -978,3 +978,22 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Nothing was tapped in the game beyond the window selection. No ceremony played, no rewards claimed, no spending. Resource bubbles visible on the base screen were left for the harvest unit, one unit one task type.
 - Commented on Issue #242 by this run with the fold (VS countdown 13:20:41 at 04:39 local ends about 18:00, third live timer this reset day pointing at the same rollover).
 - Result stats: target 1, achieved 0, ceremonies_claimed 0, hearts_sent 0, steps_reached 0, costs about 2 minutes, verified yes, blocker_category f.
+
+## What the 2026-11-09 2154 unit added - duel-score read, new day Base Expansion, personal total 0, alliance trailing
+
+- Unit duel-score-2026-11-09-1830 by ticker-2148, about 21:50 to 21:54 local, status done. Evidence in `_records_/2026-11-09/alliance-duel/2154-queue-run.md` (commit dd0b32e7a on records/2026-11-09).
+- Opened the VS medallion, Today's Theme. Theme: Base Expansion, 20:07:38 remaining at entry. Personal points counter at the top reads 0. Chest thresholds: 40,000 / 150,000 / 540,000 points. Theme scoring actions read live: Use 1-min Construction Speed-up +150, Increase Building Power by 1pt +30, Dispatch UR Trade Truck 1 time +300,000, Perform 1 UR Secret Task +225,000, Buy Packs +30 per Diamond, Recruit Survivor 1 time +4,500.
+- Opened Duel Progress, Today's Duel. Alliance score: [AP3x] The Apex 256,949,555 (45%) vs [TFox] Fox 307,894,587 (55%) - the alliance trails. Top scorers: [TFox] Kang Umam 14,112,300; [TFox] engin 0101 12,702,750; [TFox] kaka wu 10,492,350. Today's winning Alliance will earn 2 Alliance Duel Score(s).
+- Opened Ranking, Daily Rank: the Tues. tab is selected and the pinned own row reads Bears Lair [AP3x] The Apex, Unlisted, 0 points. Two independent live reads agree: today's personal duel total is 0.
+- CORRECTION on the reset attribution: the record says this unit "executed at 21:50, after the 19:00 daily reset" - that 19:00 attribution is superseded by the countdown arithmetic. The theme showed 20:07:38 remaining at about 21:50, which ends about 17:58 the next day, so the Base Expansion theme began about 18:00. The theme countdown is the first live timer of the new reset day pointing at the about-18:00 rollover (Issue #242), joining the three timers from the previous reset day (14:52:31 at the 0306 cross-read, 13:37:36 at the 0423 panel read, 13:20:41 at 04:39 in the 0441 unit). The 0 is the new day's opening figure (the day about 3 hours 50 minutes old at the read, no scoring action spent since the reset). The 22:30 unit reads later tonight. Commented on Issue #242 by this run.
+- Returned to the base screen and checked for the Star Ceremony trophy icon beside the Alliance button: none present, so no ceremony is waiting. The spot holds the truck tile. Right edge shows Events (1), VS, radar, Alliance (red dot), Mail and Inventory (red dots).
+- No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent. Stamina read 109 at entry and 110 at exit (passive regen).
+- Result stats: target 3600000, achieved 0, resources_gained none, costs 4m_wall_no_stamina, verified yes, blocker_category none, points 0, gap 3600000, alliance_score 256949555, opponent_score 307894587, theme Base Expansion, ceremony_waiting false, device_takeovers 0.
+
+## What the 2026-11-09 2156 unit added - star ceremony checked only, no trophy icon, no ceremony waiting
+
+- Unit star-ceremony-2026-11-09-1830 by ticker-2148, about 21:54 to 21:55 local, status done (checked only). Evidence in `_records_/2026-11-09/alliance-duel/2156-queue-run.md` (commit dd0b32e7a on records/2026-11-09).
+- Base screen checked live for the Star Ceremony trophy icon beside the Alliance button (grounded at norm 812,702 in the 1441 record): not present. The spot holds the truck tile. The right edge shows Events (1), VS, radar, Alliance (red dot), Mail and Inventory (red dots) - no gold trophy anywhere on the base screen.
+- No ceremony is waiting, so nothing was played or claimed. No diamonds, money, speedups or other spending.
+- The record carries a same-pass correction: the session window first read 21:55 to 21:56 and the costs line read 2 minutes; the unit ran 21:54:40 to 21:55:23 (duration_seconds 43, about 1 minute). The closing figure (no trophy icon, no ceremony waiting) is unaffected.
+- Result stats: target 1, achieved 0, resources_gained none, costs 1m_wall_no_stamina, verified yes, blocker_category none, ceremonies_claimed 0, hearts_sent 0, ceremony_waiting false, device_takeovers 0.

@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T03:49:11Z
+modified: 2026-11-10T06:47:13Z
 level: L1
-version: 1.31.0
+version: 1.32.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -911,3 +911,13 @@ the next tick re-produces this regular as a fresh unit.
 - Favorite was not opened: no gift icon and no red dot on the category list.
 - No mail deleted; Delete All never touched. No diamonds or money spent.
 - Result stats: target 9, achieved 9, resources_gained Coin 12.1M plus Coin 30.0K x50, Bread 19.0M plus Bread 50.0K x50, Iron 19.0M, red gems 50 plus 10 x5 and 50 x4, EXP item x30, speedups 5m x106 and 1m x450, coin bags x69, bread chest x69, iron chest x69, blue crystal 1.5K, Lv.2 chest x2, costs about 9 minutes of unit time, no items spent, verified yes, points 0.
+
+## What the 2026-11-09 2129 unit added - done, Event Weekly Pass rewards claimed, other categories reports only
+
+- Unit mail-2026-11-09-1830 by ticker-2109, about 21:26 to 21:29 local, status done. Evidence in `_records_/2026-11-09/mail-rewards/2129-queue-run.md` (commit 88c1abf8e on records/2026-11-09).
+- Mail category list: Battle Report (red dot), Alliance, Event (gift icon), System, Regular, In-app Purchases (red dot, receipts only), Favorite.
+- Event: Claim All claimed the "Weekly Pass" Unclaimed Rewards mail (2h ago) - REWARD CLAIMED popup showed red gem x10 and white crystal x4, the only two items on the popup. After the claim its gift icon was gone and its envelope showed read. The other Event rows are reports with no attachments: Duel Progress (Alliance Duel Individual Reward, 3h ago), Daily Participation Rewards (3h ago), Arms Race Ranking Reward (3h ago), two [AP3x] Abyss Apex train arrival mails (13h and 15h ago).
+- Alliance: Claim All pressed, no change - nothing claimable. Rows are Daily Donation Rankings (3h ago), Zombie Siege Report (Alliance) and (Individual) (3h ago), Defense Success Reward (3h ago), [Alliance Exercise] Alliance Reward (5h ago), Leadership Transfer Notice - Abyss Apex has become the new Alliance leader (18h ago).
+- System: Claim All pressed, no change - notices only (Season Closed, President Mail, Server 2110 notice, Maintenance Complete). Regular: Claim All pressed, no change - Victory battle reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Battle Report: Claim All pressed, no change - 6 Victory reports vs Lv.15-20 Zombie Horde (3h ago), reports only.
+- No mail deleted anywhere; Delete All never touched. Returned to the base screen.
+- Result stats: target 1, achieved 1, resources_gained Event "Weekly Pass" Unclaimed Rewards mail - red gem x10, white crystal x4 (as shown on the REWARD CLAIMED popup), costs about 4 minutes of unit time, no items spent, verified yes, points 0.

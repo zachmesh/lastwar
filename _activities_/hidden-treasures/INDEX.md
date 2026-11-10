@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-09T13:32:17Z
+modified: 2026-11-10T06:47:13Z
 level: L1
-version: 1.14.0
+version: 1.15.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -575,3 +575,12 @@ as Hidden Treasure.
 - Badge note: badge 1 with exactly 1 dig possible is consistent with the disproved badge-equals-digs rule's coincidence (badge 1 when 1 possible), not evidence for it - the 1459 and 2255 disproofs stand. See the updated Open questions entry.
 - No diamonds or money spent. No fragment exchange executed (needs owner approval). No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 1, achieved 1 (1 dig from badge 1), resources_gained chest x24, coin x36, 1m speedup x50, 1m speedup x25, silver ingot x200, costs 5min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 2214 unit added - checked only, fragment stock unchanged since the 0525 dig, M3 still binding at zero
+
+- Unit treasures-2026-11-09-1857 by ticker-2148, about 22:12 to 22:14 local, status done (checked only). Evidence in `_records_/2026-11-09/hidden-treasures/2214-queue-run.md` (commit dd0b32e7a on records/2026-11-09).
+- Hidden Treasures tab opened from the Secret Command Post; no red badge on the tab.
+- Fragment stock, read live: M1 x14, M2 x11, M3 x0, M4 x4, M5 x2, M6 x4, M7 x10. Chest progress 10/15. Skip Animation ticked. Both Dig buttons greyed out.
+- The stock is identical to the post-dig state read at 05:20 today (0525 record): the five ally assists done in the secrets unit of this same pass paid no fragments, and no other fragment income arrived since. M3 at 0 is the binding fragment - no complete set, no dig possible.
+- No fragment exchange was inspected or executed (needs owner approval). The 9 tasks Mega Deployed in this pass finish from 22:33 onward; the next treasures unit re-checks after a claim.
+- Result stats: target 1, achieved 1 (fragment stock verified live, dig state verified with both buttons greyed), resources_gained none, costs 2m_wall_no_stamina, verified yes, blocker_category none, digs_done 0, device_takeovers 0, follow_up none.
