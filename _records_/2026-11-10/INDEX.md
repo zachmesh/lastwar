@@ -832,3 +832,20 @@ of 2026-10-28.
   task), unexplained red dots 0; 0 withdrawals. No issues
   filed. Pool inbox 60, claimed 1, done 1442. Status: done.
   Full detail in queue-planning/0440-run.md.
+
+## 04:32 to about 04:48 - Knowledge-organizer pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-10-0432.
+  Own PR 568 merged with no review comments, no feedback owed.
+  Folded ticker-0334 (training 0337, arms-race 0342, gifts 0346,
+  help 0350, mail 0355) and ticker-0404 (train 0413) records into
+  8 profiles (PR 571, OPEN and MERGEABLE, base main 6f336816):
+  training 1.36.0, arms-race 1.75.0, gifts 1.47.0, help 1.37.0,
+  mail 1.34.0, train 1.38.0, duel 1.37.0, trucks 1.38.0.
+  CORRECTION: live UR truck dispatch rate +300,000 supersedes the
+  100,000 Handbook rate; 0248 expected score 1,200,000 not 400,000.
+  Help per-help rate corrected (150 not fixed; 0350 measured 160).
+  Trade Contracts 158 to 146 drop explained by the 0248 Mega
+  Refresh spend. Issues commented: #183, #565, #570, #482. No new
+  issue filed. Status: done. Full detail in
+  knowledge-organization/0432-run.md.
