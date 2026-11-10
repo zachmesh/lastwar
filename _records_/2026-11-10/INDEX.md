@@ -2203,3 +2203,20 @@ modified: 2026-11-10T14:21:00Z
   identical 0 counts (idempotent), 0 withdrawals, no issues
   filed. Pool by_state: inbox 77, claimed 0, done 1451. Status:
   done. Full detail in queue-planning/1140-run.md.
+
+## 11:45 to about 12:00 - PR integration pass
+
+  PR integration 1145 run (non-batch pass; checker plain due in the
+  11:00 window but merge-aware not due, PR 576 already merged
+  11:02:49 in this window). Knowledge PR 584 reviewed clean and
+  squash-merged as 4884c1fb5. Records PR 583 carried to the 15:00
+  batch at new head 5b8fdda8 (10 commits beyond main, clean).
+  Records PRs 351 and 301 still conflict with main on the single
+  file _logs_/repo-actions/action-log.jsonl (append-append), heads
+  unchanged, re-probed, carried for branch-side reconciliation.
+  Tools PR 425 owner-gated, clean, re-verified against new main
+  4884c1fb5, awaiting the owner decision (OD-20261108-01 open,
+  age 3 days). Re-verification comments posted on 425, 351 and
+  301 because main moved this pass. Local main fast-forwarded to
+  4884c1fb5. Merge synced to the owner Slack DM. Status: done.
+  Full detail in pr-integration/1145-run.md.
