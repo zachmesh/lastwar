@@ -2611,3 +2611,23 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 ## 17:45 to about 18:00 — PR integration pass
 
 - PR integration pass pr-integration-2026-11-09-1745 (done). NON-batch pass (plain and merge-aware checker both not due - outside every batch window; next batch 19:00 PT); merged tools PR 538 and knowledge PR 540 (both clean, squash, branch deleted); records PR 531 found CONFLICTING - poisoned branch commit bcad9a0e deleted 4,510 files, conflict commented, branch-side revert + re-delivery owed before the 19:00 batch; records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open; this pass's action-log line NOT added - the log file does not exist in the poisoned branch head tree. Status: done. Full detail in pr-integration/1745-run.md.
+- Zero sweep unit zero-sweep-2026-11-09-1730, partial: 17:38-17:48 PT,
+  sweep 002 of 2 - 5 of 23 ledger lines read live (pair total 12 of
+  23). Trucks short: dispatch 4/5, plunder 1/4, trade day ends 19:00;
+  trucks-2026-11-09-1457 raised to priority 1 and run next this pass.
+  Food/iron/coin bubbles still standing. Events hub: Desert Storm
+  Battlefield tab (registration ends 2d 00:14:37, battle day
+  2026-11-13 03:00-03:30, 20/20 participants); no Zombie tab, no
+  Crystal/Glittering tab in the visible row. Power fell 149,217,331
+  (16:35) to 147,469,864 (17:45), cause unverified, flagged for retro.
+  Full detail in daily-activities/1748-queue-run.md.
+
+- Radar unit radar-2026-11-10-0118, partial: 17:51-17:54 PT, release
+  day 1 - the restored batch of 12 tasks claimed before the 18:00
+  roll (Quick Execute 4 tasks, 40 stamina; Claim All 11 + 1 rewards:
+  EXP 15.6M, ore 864, drone chip 3.2K, iron 3.0M, food ~4.1M, coin
+  ~2.64M, Lv.1 chest 1; radar points 336 to 348, stored 0/40).
+  Expected duel contribution 12 x 30,000 = 360,000, not read live;
+  duel-score-1830 reads the closing total. Map pins unclosed, handed
+  to radar-1803 under post-roll stack posture. Full detail in
+  radar-tasks/1754-queue-run.md.
