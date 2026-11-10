@@ -2839,3 +2839,6 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 ## 21:13 to 21:26 - PR integration pass
 
 - PR integration pass pr-integration-2026-11-09-2113 (done). NON-batch pass (checker _tools_/records_batch.py due - not due, outside every batch window, next batch 23:00 PT; merge-aware agrees); no merges; re-verification comments posted on 425, 351 and 301 (main moved to d2bcbc14 since the 2030 notes); records PR 545 verified CLEAN and tree-safe at head d88d542b, awaits the 23:00 batch; records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/2113-run.md.
+## 21:15 to 21:38 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-09-2115 (done). NON-batch pass (checker _tools_/records_batch.py due - not due, outside every batch window, next batch 23:00 PT; merge-aware agrees); no merges; no re-verification comments (no head moved, main unmoved at d2bcbc14, owner undecided since the 2113 notes); records PR 545 re-probed CLEAN and tree-safe at new head eb32b1d3, awaits the 23:00 batch; records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/2115-run.md.
