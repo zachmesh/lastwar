@@ -1246,3 +1246,19 @@ of 2026-10-28.
   chain seeded (tab absent, last confirmed 2026-11-09).
 - Own PRs checked first: records PR 569 has no comments
   or reviews; nothing addressed to this job.
+
+## 07:00 to about 07:18 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0700.
+  BATCH pass per the checker (plain and merge-aware both
+  due, 07:00 window, first batch merge in the window).
+  Merged records PR 569 (36 commits, merge commit
+  a8472678, branch kept). Records PRs 351 and 301 still
+  conflict with main on the single action-log file,
+  heads unchanged, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  awaiting the owner decision (OD-20261108-01 open, age
+  2 days). No new comments posted: main moved only by
+  the records merge and all PR heads are unchanged
+  since the 0600 pass. Status: done.
+  Full detail in pr-integration/0700-run.md.

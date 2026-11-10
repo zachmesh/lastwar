@@ -26,3 +26,4 @@
 0615-run.md
 0630-run.md
 0645-run.md
+0700-run.md
