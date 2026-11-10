@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T02:42:02Z
+modified: 2026-11-10T04:50:04Z
 level: L1
-version: 1.63.0
+version: 1.64.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -65,6 +65,7 @@ grounded_in:
   - source: ticker-1234 radar-tasks execution record 2026-11-09 1253 queue run (partial, release day, 6 tasks executed, 14 claims, points 322 to 336, stored 3/40 to 0/40, dish grounded (62,727) first tap, 6 pins inventoried unworked; record commit da81e137e on records/2026-11-09)
   - source: ticker-1704 radar-tasks execution record 2026-11-09 1717 queue run (partial, release day 1, ordinary cycle clear, 1244 pin set absent, restore lands 12 tasks about 1740, R6 successor enqueued; record commit 9806b8352 on records/2026-11-09)
   - source: ticker-1734 radar-tasks execution record 2026-11-09 1754 queue run (partial, release day 1, restored batch of 12 claimed before the 18:00 roll, points 336 to 348, stored 0/40, dish re-grounded (47,694) first tap; record commit 2f4d783d8 on records/2026-11-09)
+  - source: ticker-1910 radar-tasks execution record 2026-11-09 1945 queue run (done, stack posture, dish re-grounded (57,714) first tap, points 348, stored 0/40, restore about 23:39, pins inventoried none standing; record commit e05c662bd on records/2026-11-09)
 ---
 
 
@@ -153,6 +154,7 @@ Executions are recorded in `_records_/<date>/radar-tasks/`, one file per executi
 - 2026-11-09 1253: dish grounded fresh at norm (62,727) (red badge 1) and opened the radar on the first tap - the 2026-10-29 measured point works again in this window, so (62,727) is not stale after all; the dish still drifts per session, so every unit still re-grounds fresh. Commented on Issue #484 by this run: (62,727) is the newest verified first-tap point, joining (51,718) and (51,726); the (50,740) retro preference remains untested as a direct tap.
 - 2026-11-09 1717: dish grounded fresh at norm (62,727) and opened the radar on the first tap again - the same point as the 1253 unit, so (62,727) is re-confirmed in this window; the dish still drifts per session, so every unit still re-grounds fresh. Commented on Issue #484 by this run.
 - 2026-11-09 1754: dish grounded fresh at norm (47,694) from the 17:45 base screenshot and opened the radar on the first tap - the 17:07 unit's (62,727) point is stale for the current icon set; the dish sits at norm y about 694 now, below the trade jeep. The dish drifts within the day as the icon set rotates, so every unit still re-grounds fresh. Commented on Issue #484 by this run.
+- 2026-11-09 1945: dish grounded fresh at norm (57,714) from the live base screenshot (bbox 16-98 x 688-740) and opened the radar on the first tap - the (62,727) and (47,694) points are stale for this rotation; the dish sits below the trade jeep, as the 1754 unit found. The re-ground-fresh rule is what carries, not any one point. Commented on Issue #484 by this run. (Note: the 1945 record states the ticker-1910 run commented on Issue #484, but the latest comment on the issue at fold time is the 1832 organizer run's 02:44Z comment on the 1754 read, so the 1945 datapoint is commented here, not by that run.)
 - 2026-11-09 0636: another entry point, found by a harvest unit, not the dish - the gold circle with a blue gem above the blue truck vehicle on the base opens the world/radar map, which showed "6 task rewards can be claimed" with a Claim All button at 06:49. It is a radar shortcut, not the Armed Truck loot; the rewards were left untouched for the radar unit. A radar unit arriving through this shortcut still verifies the radar screen (level, points, stored count, stamina) before any work, same as the dish entry.
 - Entry precondition, binding from the 1026 and 1439
   units: when the camera is panned onto the Drill Ground
@@ -2575,3 +2577,15 @@ are still open, per the protocol.
 - Base power read 146,730,949 at about 17:53, continuing the fall recorded in sweep 002 (149,217,331 at 16:35) - flagged for the daily retro, cause unverified; see the sweep 002 section in daily-activities 1.22.0 and the comment on Issue #482 by this run.
 - No diamonds or money spent. No stamina items used - only the 40 stamina points spent through Quick Execute.
 - Result stats: target 12, achieved 12, resources_gained hero-exp-15.6M-upgrade-ore-864-drone-chip-3.2K-iron-3.0M-food-4.1M-coin-2.64M-lv1-chest-1, costs 40-stamina, verified no, blocker_category h, tasks_completed 4, rewards_claimed 12.
+
+## What the 2026-11-09 1945 unit added - stack empty, dish re-grounded (57,714), restore lines agree, pins inventoried none standing, done
+
+- Unit radar-2026-11-09-1803 by ticker-1910, about 19:32 to 19:37 local, status done. Posture: stack (duel day 2, Base Expansion; duel.py confirms radar_posture stack, day ends 2026-11-10 18:00 PT). Tracker marked done. Evidence in `_records_/2026-11-09/radar-tasks/1945-queue-run.md` (commit e05c662bd on records/2026-11-09). Session window and duration corrected by the append-only correction record (19:32-19:37, about 5 minutes; the record's 19:36-19:45 and about-9-minute figures are superseded).
+- Entry: radar entered first tap on the dish at norm (57,714), grounded fresh from the live base screenshot with the dish located by visual grounding (bbox 16-98 x 688-740) - below the trade jeep, as the 1754 unit found. The (62,727) and (47,694) points are stale for this rotation; the re-ground-fresh rule is what carries. Entry verified on the radar screen itself: Lv.13, radar points 348 (unchanged from the 1754 close), stored 0/40, stamina 82, green gauge 100%. No bottom action bar - nothing stored to execute, no rewards pending to claim. Stack empty, so per the stack-day completion standard (0159 precedent) no Quick Execute and no Claim All are owed; under stack posture nothing is claimed in any case (odd-day claim rule).
+- Restore line: two alternating forms read live in this unit - "12 Radar Task(s) will be restored in 04:03:03" and "Fully restore at 11-10 23:39:11 local time". They agree within about 2 minutes (restore lands about 23:39-23:41 PT tonight), unlike the 1253 unit's 6-hour disagreement - the earlier "17:39:11" reads were stale. The close read (23:39:11) is the live one.
+- Pin inventory (stack rule: inventoried, untapped): two map sectors swept by drag (west, then east) - no pin with a red dot stands in either sector. The 1754 close listed pins with red dots (2 green skull, grey fist pins, blue teardrop, orange skull, plane pin, alliance portraits) - none of that set was seen in the swept sectors, so its fate is unverified (despawned at the 18:00 roll, as the 1717 unit found the 12:44 set absent, or sitting in unswept sectors). The next radar unit re-inventories from its own entry read. The brown animal-face circle was seen in both sectors (southwest edge, then east edge as the map panned) - the non-tappable map element identified by the 1717 unit, no red dot, left alone.
+- Gold NEW! icon at the top of the radar screen (next to the 348 points) still untouched, function still unknown - sixth sighting (2335, 0159, 1253, 1717, 1754, this unit).
+- "Violet's Gift received!" toast appeared twice in this unit (at radar entry and during the sweep). No reward was measured from it - radar points stayed 348, stamina stayed 82 - so nothing is claimed as gained. Recorded as observed, not as a reward, as the 1717 unit did.
+- Base HUD power re-read 146,736,949 on the base screenshot (image read); one compact OCR read showed 146,730,949, an OCR misread of the same figure. Duel delta test still owed: the VS panel was not opened in this unit.
+- No diamonds or money spent, no stamina spent, no stamina items used, nothing claimed, fought, dispatched or bought. Computer session cc-337 (cc-335 dropped between units, recovered with no state lost). Game left on the base screen.
+- Result stats: target 0, achieved 0, resources_gained none, costs 0 stamina plus about 5 minutes, verified yes, blocker_category none, stored_tasks 0, tasks_executed 0, tasks_claimed 0, pins_inventoried 0, pins_worked 0, stamina 82, radar_points 348, restore_in_minutes 243, free_stamina_claims 0, device_takeovers 0.

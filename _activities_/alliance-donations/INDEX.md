@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T01:46:47Z
+modified: 2026-11-10T04:50:04Z
 level: L1
-version: 1.76.0
+version: 1.77.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -90,6 +90,8 @@ grounded_in:
   - source: ticker-1345 alliance-donations execution record 2026-11-09 1413 queue run (partial, 11 coin donations verified live 30/30 to 19/30 on Quick Gathering, count confirmed a remaining daily allowance, footer 2,250 question open; record commit 63eccdb92 on records/2026-11-09)
   - source: ticker-1434 shop-claims execution record 2026-11-09 1449 queue run (partial, Donation Count 20/30 passing read at about 14:38, thirty-first replenishment data point; record commit 4860808ff on records/2026-11-09)
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, footer 3300 with no own donations between reads, Techs panel card cut off; record commit c9a86fa74 on records/2026-11-09)
+  - source: ticker-1910 alliance-donations execution record 2026-11-09 1935 queue run (partial, 30 coin donations attempted on Quick Gathering, count read live 30 to 5/30, final 5 unproven behind a 00:17:47 timer, footer 3300 to 3050; record commit e05c662bd on records/2026-11-09)
+  - source: ticker-1934 alliance-donations execution record 2026-11-09 2015 queue run (partial, re-read unit donations-2026-11-10-0330, count 2/30 to 1/30 live, second donation greyed with a 00:15:00 timer, footer 3050 to 3250; record commit 69d8e38ec on records/2026-11-09)
 ---
 
 
@@ -3664,3 +3666,29 @@ enqueued for after the cooldown (not before about
 - The Donation Count remaining was NOT re-read in this unit: the 2/10 Quick Gathering card (the 1413 unit's target node) is cut off at the bottom of the Techs panel, and one tap on its visible part changed nothing (method ended per R2). The next donations unit must scroll the Techs panel down first to reach the card. The last known count remains 19/30 from the 1413 close (about 14:13), with the button still green then.
 - No replenishment datapoint is added by this read - no count was read - so Issues #160, #174, #423 and #500 gain no new rate evidence from it.
 - No diamonds or money spent. No other activity touched.
+
+## What the 2026-11-09 1935 unit added - 30 coin donations attempted, count 30/30 to 5/30 live, final 5 unproven behind a 00:17:47 timer, footer fell 3300 to 3050, partial unverified
+
+- Unit donations-2026-11-09-1803 by ticker-1910, about 19:21 to 19:30 local, status partial, close UNVERIFIED under the hard closing rule. Evidence in `_records_/2026-11-09/alliance-donations/1935-queue-run.md` (commit e05c662bd on records/2026-11-09). Session window and duration corrected by the append-only correction record (19:21-19:30, about 9 minutes; the record's 19:21-19:35 figure is superseded).
+- Entry: Alliance menu re-grounded fresh from the base screenshot - Alliance shield at norm (930,707) opened the menu on the first try. [AP3x] The Apex, Leader Abyss Apex (leadership transfer re-confirmed), Power 13,577,450,619, Members 96/100. Alliance Techs tile at (685,678) opened the panel on the first try.
+- Development tab tree (scrolled): Auto Rally Max Level, Quick Construction 8/10, Great Helper Max Level, Quick Gathering 2/10 carrying the recommended marker (small round red-panda badge), Iron Output 1/10, Food Output 1/10, Coin Output 2/10. Footer Tech Donation Today: 3300 at entry.
+- Quick Gathering panel: Tech EXP Required 37.5K/600.0K, Current +8%, Next Level +12%, Donation Reward EXP 50 + badge 50 per donation. Donation Count: 30/30 at entry (new reset day, full allowance). Coin button Donate 300 (green); diamond button Donate 2 (never used).
+- 30 coin donations attempted in six batches of 5 on the green coin button (centre norm 658,754), 300 coin each, 9,000 coin total. Coin on hand 68.4M throughout; the diamond button was never tapped. Donation Count read live after each batch: 30/30 at entry, then 25/30, 20/30, 15/30, 10/30, 5/30. Every batch landed in full - no tap was eaten, no grey-out appeared mid-run. Tech EXP rose 37.5K to 40.6K across the unit.
+- Final batch: 5 taps dispatched from the live 5/30 read; the coin button then greyed with a green 00:17:47 timer and the Donation Count label vanished behind it. No live 0/30 read exists, so the last 5 landings are unproven by count - the Tech EXP step 40.1K to 40.6K is consistent with 5 landings but is inference, not a live count read, and is banned as a closing figure by rule R1 and the hard closing rule.
+- CORRECTION: the 1657 section's "last known count remains 19/30 from the 1413 close" is superseded as the standing count - the reset day gives a full 30/30 at this unit's entry (19:21), and the count falls live with donations inside the unit, with no replenishment inside the unit. The footer re-read after the panel closed: Tech Donation Today 3050, DOWN from 3300 at entry despite 30 coin donations made. This is the Issue #417 footer anomaly again - the footer is disqualified as a closing count, and the 3300-to-3050 fall is a data point for the Issue #500 deciding test (donate until grey, re-read count and footer after the cooldown). Commented on Issue #417 by this run.
+- Base HUD power re-read 146,736,949, agreeing with the arms-race unit's read in the same pass - the Issue #416-pattern discrepancy is corroborated as the live HUD figure, not an outlier read.
+- Status partial, verified no. The day target (live 0/30) is not proven. The re-read unit after the cooldown (about 19:52 PST) re-reads the count live: 0/30 closes the day, anything above 0 donates the remainder. Re-read unit donations-2026-11-10-0330 enqueued, not before 19:52.
+- No diamonds or money spent, no speedup used, no stamina item opened. No different-device dialog, no login or verification demanded, no password or Touch ID step used. Computer session cc-335 (cc-334 dropped between units, recovered with no state lost).
+- Result stats: target 30, achieved 25 (verified by live count; 5 more attempted, unproven), resources_gained Tech EXP 3.1K, costs 9,000 coin, about 9 minutes of unit time, verified no, blocker_category e.
+
+## What the 2026-11-09 2015 unit added - re-read after the 1935 cooldown, 1 verified donation, count 2/30 to 1/30, final 1 corroborated not verified, footer rose 3050 to 3250, partial unverified
+
+- Unit donations-2026-11-10-0330 by ticker-1934, about 20:06 to 20:15 local, status partial, close UNVERIFIED under the hard closing rule. Evidence in `_records_/2026-11-09/alliance-donations/2015-queue-run.md` (commit 69d8e38ec on records/2026-11-09). Tracker untouched; a named re-read unit is enqueued for after the cooldown (not before 20:30 PST).
+- Entry: Alliance shield at norm (930,707) opened the menu on the first try. [AP3x] The Apex, Leader Abyss Apex, Power 13,577,450,619, Members 96/100. Alliance Techs tile at (685,678) opened the panel on the first try. Development tab tree (scrolled): Quick Construction 8/10, Great Helper Max Level, Quick Gathering 2/10 carrying the recommended marker, Iron Output 1/10, Food Output 1/10, Coin Output 2/10. Footer Tech Donation Today: 3050 at entry.
+- Quick Gathering panel: Tech EXP Required 40.6K/600.0K, Current +8%, Next Level +12%, Donation Reward EXP 50 + badge 50 per donation. Donation Count: 2/30 at entry (new reset day, 28 already landed). Coin button Donate 300 (green); diamond button Donate 2 (never used).
+- Reconciliation with the 1935 unit: the 1935 unit verified 25 donations by live count (30 to 5/30) and left its final 5 unproven. This unit's entry count of 2/30 means 28 of the day's 30 had landed before it, so 3 of the 1935 final 5 landed and 2 did not.
+- 2 coin donations attempted on the green coin button (centre norm 658,754), 300 coin each, 600 coin total. Coin on hand 68.3M throughout; the diamond button was never tapped. Donation Count read live after the first donation: 1/30. The second donation then greyed the coin button with a green 00:15:00 timer and the Donation Count label vanished behind it. Tech EXP rose 40.6K to 40.8K and the top-bar badge count 365.0K to 365.2K across the two donations. Panel reopened and re-read: the timer still shows (about 00:13:xx) and the count stays hidden, so no live 0/30 read exists in this unit. The grey-out plus the EXP and badge steps corroborate the second landing but are not a live count read, and are not used as a closing figure under rule R1 and the hard closing rule.
+- Footer: re-read after the panel closed, Tech Donation Today 3250, UP 200 from 3050 at entry for 2 donations, i.e. +100 per donation by arithmetic. That rate disagrees with the 50 to 60 per donation in the metadata history, so the footer stays disqualified as a closing count (Issue #417 pattern) and both rates stand as data points for the Issue #500 deciding test, not as a conclusion. Commented on Issue #500 by the ticker-1934 pass; the 1935 fall (3300 to 3050) and this rise are commented together on Issue #417 by this run.
+- Day tally now: 29 of 30 verified by live count (25 in the 1935 unit, 1 here, plus the 3 of the 1935 final 5 proven by this unit's entry count of 2/30); 1 remains, corroborated by grey-out and EXP/badge steps but not count-verified. Re-read unit donations-2026-11-10-0415 enqueued, not before 20:30 PST.
+- No diamonds or money spent, no speedup used, no stamina item opened. No different-device dialog, no login or verification demanded, no password or Touch ID step used.
+- Result stats: target 2, achieved 1 (verified by live count; 1 more attempted, corroborated not verified), resources_gained Tech EXP 200, badge 200, costs 600 coin, about 10 minutes of unit time, verified no, blocker_category e.
