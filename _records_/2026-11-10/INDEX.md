@@ -1324,3 +1324,22 @@ modified: 2026-11-10T14:21:00Z
   earned, none claimed; completion sweep clean (no bouncing
   chest or reward red dot). Events hub has no Zombie
   Invasion tab. Full detail in arms-race/0734-queue-run.md.
+
+## 07:30 to about 07:43 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0730.
+  Non-batch pass per the checker (plain due but
+  merge-aware not due - PR 569 already merged 07:08:03
+  in the 07:00 window, next batch 11:00): no merges.
+  Records PR 576 open at head 152fb1bdb (branch since
+  advanced to d808b384 by the ticker-0704 commit),
+  clean, awaiting the 11:00 batch. Records PRs 351 and
+  301 still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  unchanged, awaiting the owner decision
+  (OD-20261108-01 open, age 2 days). No new comments
+  posted: main and all heads unchanged since the 0715
+  pass. Status: done. Full detail in
+  pr-integration/0730-run.md.
