@@ -2488,3 +2488,25 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   No withdrawals. Pool inbox 89, claimed 0, done 1366
   (worktree pool). Status: done. Full detail in
   queue-planning/1540-run.md.
+- Perception scout unit scout-2026-11-08-1800, partial: stale
+  post-reset head executed live 16:01-16:09 PT - base/HUD re-read
+  (power 149,217,331, food 554.0M, iron 879.2M, coin 51.9M,
+  stamina 80-81), Inventory Special and Resources tabs read
+  (Amethyst Crystal 4,882; 5,000-diamond items x16 = 80K),
+  Inventory red dot resolved by opening (no badged item inside),
+  Hero List encountered by mis-tap (16 heroes, 8 red dots;
+  bottom-left gold icon is HEROES, not VIP - corrects the 0606
+  VIP-dot reading), skull timer re-armed badge 1/00:00:43 to
+  badge 2/00:00:23 (Issue #498). 37 items, 19 dots seen, 16
+  explained, 3 unexplained. Full detail in
+  perception-scout/1609-queue-run.md.
+
+- Harvest unit harvest-2026-11-09-1403, partial: visible main
+  base swept 16:14-16:23 PT - iron plus 2.4M, coin plus 1.7M,
+  food plus 2.6M, all HUD-verified, one tap per type clearing
+  all visible bubbles of that type (5 iron, 8 coin, 4 food,
+  17 bubbles); HUD deltas again exceed visible bubble sums
+  (Issue #502). One green 308.8K bubble at the far left edge
+  still standing, Armed Truck loot unchecked, skull timer
+  re-armed repeatedly (Issue #498: badge 3/25s, 3/29s, 1/50s,
+  3/37s). Full detail in resource-collection/1623-queue-run.md.

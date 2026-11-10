@@ -552,3 +552,345 @@ not a chest, and it responds.
   tab bar, in every Age of Oil screenshot), explained 0.
   Unexplained 1 - the badge was not attributed to a tab.
   Unknown items 1 - the Hero Mobilization gold chest.
+
+## Pass 1609 - base, HUD, Inventory, Hero List (ticker-1534)
+
+Session about 16:01 to 16:09 local, computer session cc-311.
+Partial pass: its unit (scout-2026-11-08-1800) belonged to the
+2026-11-08 18:00 post-reset slot, already past, so the pass ran
+against the live game and is filed here as a read of the current
+game state, per the ticker-0436 stale-scout precedent.
+Observe-only throughout. Full unit record at
+`perception-scout/1609-queue-run.md`.
+
+### Base screen and HUD, read live about 16:03 and 16:09 local
+
+- Power 149,217,331 (unchanged from the 0606 read); food
+  554.0M, iron 879.2M, coin 51.9M; 13.22K with a plus button;
+  stamina 80 rising to 81; cart 6,137. VS timer 01:56:23,
+  Season II countdown 6d 01:56:22. Building queue 1/4,
+  research 1/2. Banner quest now "Build: Oil Well [0/1]"
+  (was "Upgrade Builder's Hut to Lv.26 [0/1]" at 0606).
+  President banner: "President HawksMav appointed ... as
+  Secretary of Development!"
+- Many resource bubbles standing (food, coin, iron amounts
+  unread individually); truck icon with a question marker at
+  the left edge. Chat ticker: "Breaking News: Intense battle
+  ...", "Cinmor: Ty", "TheGoldenEclipse: Thank you ...".
+- Skull timer, Issue #498, new datapoint: badge 1 with
+  00:00:43 at about 16:03, gone by about 16:07, back with
+  badge 2 and 00:00:23 at the 16:09 close. Short countdown,
+  re-arms within minutes, badge increments. Still
+  unidentified; the next scout unit should tap it while its
+  timer is live.
+
+### Inventory, read live about 16:04 to 16:05 local
+
+- Special tab: Amethyst Crystal 4,882 (selected; "A rare ore
+  produced by the Crystal Factory. Use to redeem items in the
+  Crystal Shop."); blue crystal 251,400; gold chest 240;
+  purple-gold ? box 1,169; green gift box 2; gold chest 42;
+  purple chest 1; blue chest 2; orange chest 1; purple chest
+  2; silver chest 3; orange chest 1; bottom row gold chest,
+  Lv.5 chest, Lv.3 chest, Lv.2 chest (counts unread).
+- Resources tab: diamond items - 5,000 x16 (slider Total
+  80.00K), 10.0K x4, 100 x934, 200 x15, 1.0K x1, 500 x13,
+  5 x1,417, 1 x2,500, 10 x129, 20 x20, 50 x125; resource
+  crates 322 and more below the fold. The Use button was
+  never tapped.
+- Inventory red dot resolved: present at entry, gone on the
+  16:09 close, no badged item inside either tab. The 0606
+  unknown "Inventory dot contents" closes as a new-item
+  indicator cleared by opening.
+
+### Hero List, encountered about 16:08 local (mis-tap)
+
+- The bottom-left gold icon (the 0606 pass's "VIP red dot
+  bottom left") opens HERO LIST, not VIP. Correction: the
+  icon is the HEROES button and its red dot is the
+  hero-upgrade dot (8 red-dotted hero cards in the list).
+  The VIP panel entry point is still ungrounded.
+- All tab: 16 heroes - Lv.150 x10, Lv.146, Lv.145, Lv.140,
+  Lv.125, Lv.124, all 5-star. Red dots on 8 cards
+  (upgrade available, observed only). Recruit Heroes and
+  Recommend buttons not tapped. Back arrow re-grounded at
+  norm 136,930 (a tap at 103,937 clipped the portrait icon
+  below the arrow and did nothing).
+
+### Red dot accounting (this pass)
+
+- Seen 19, explained 16 (Inventory 1 cleared by opening;
+  radio 4 to help; Events 1 to Wanted Boss; Mail 1 to unread
+  Event mail; Alliance 1 to queued alliance units; hero-list
+  8 to hero upgrade availability).
+- Unexplained 3: skull badge 2 (Issue #498), 99+ chat badge.
+- Unknown items 5: skull timer identity and recurrence,
+  the 13.22K second-row figure identity, the 99+ badge
+  meaning, the VIP panel entry point, the Oil Well banner
+  quest change since 06:05.
+
+### Structured items (this pass)
+
+observed_items:
+  - surface: base/hud
+    label: Total Power 149217331
+    state: info-only
+    deadline: ""
+    est_value_or_score: 149217331
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Food total 554.0M
+    state: info-only
+    deadline: ""
+    est_value_or_score: 554.0M
+    suggested_unit: harvest
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Iron total 879.2M
+    state: info-only
+    deadline: ""
+    est_value_or_score: 879.2M
+    suggested_unit: harvest
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Coin total 51.9M
+    state: info-only
+    deadline: ""
+    est_value_or_score: 51.9M
+    suggested_unit: harvest
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Second-row figure 13.22K with plus button, identity unread
+    state: info-only
+    deadline: ""
+    est_value_or_score: 13.22K
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Stamina 80 rising to 81
+    state: info-only
+    deadline: ""
+    est_value_or_score: 80 to 81
+    suggested_unit: arms-race
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Cart 6137
+    state: info-only
+    deadline: ""
+    est_value_or_score: 6137
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: VS duel timer 01:56:23
+    state: info-only
+    deadline: ""
+    est_value_or_score: 1 hour 56 minutes left
+    suggested_unit: duel-score
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Season II countdown 6d 01:56:22
+    state: info-only
+    deadline: ""
+    est_value_or_score: 6 days 1 hour 56 minutes
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: base
+    label: Building queue 1 of 4 and research 1 of 2
+    state: in-progress
+    deadline: ""
+    est_value_or_score: 1 of 4 building, 1 of 2 research
+    suggested_unit: none
+    redline_check: clear - reading only, no new starts
+  - surface: base
+    label: Resource bubbles standing on base
+    state: claimable
+    deadline: 2026-11-09T19:00:00-08:00
+    est_value_or_score: many food coin and iron bubbles, individual amounts unread
+    suggested_unit: harvest
+    redline_check: clear - harvest sweep collects them
+  - surface: base
+    label: Banner quest Build Oil Well 0 of 1, changed from Builders Hut Lv.26 at 0606
+    state: doable
+    deadline: ""
+    est_value_or_score: 0 of 1
+    suggested_unit: new
+    redline_check: blocked - never start buildings on own initiative, owner-only
+  - surface: base
+    label: President banner HawksMav appointed Secretary of Development
+    state: info-only
+    deadline: ""
+    est_value_or_score: appointment notice
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Radio badge 4
+    state: doable
+    deadline: ""
+    est_value_or_score: 4
+    suggested_unit: help
+    redline_check: clear - help unit already queued
+  - surface: base
+    label: Truck icon with question marker at left edge
+    state: info-only
+    deadline: ""
+    est_value_or_score: marker meaning unread
+    suggested_unit: trucks
+    redline_check: clear - reading only
+  - surface: base/hud
+    label: Skull badge 1 with 00:00:43, gone by 16:07, back badge 2 with 00:00:23 at 16:09
+    state: info-only
+    deadline: ""
+    est_value_or_score: badge 1 to 2, countdown tens of seconds, re-arms within minutes
+    suggested_unit: new
+    redline_check: clear - reading only, next scout unit taps it while live, Issue 498
+  - surface: base/hud
+    label: Events icon badge 1
+    state: claimable
+    deadline: ""
+    est_value_or_score: 1
+    suggested_unit: events
+    redline_check: clear - explained by the Wanted Boss red dot
+  - surface: base/hud
+    label: Mail icon red dot
+    state: claimable
+    deadline: ""
+    est_value_or_score: 1
+    suggested_unit: mail
+    redline_check: clear - explained by one unread Event mail
+  - surface: base/hud
+    label: Alliance icon red dot
+    state: doable
+    deadline: ""
+    est_value_or_score: red dot, contents unread
+    suggested_unit: alliance-help
+    redline_check: clear - alliance units already queued for this window
+  - surface: base/hud
+    label: 99+ badge at chat icon
+    state: info-only
+    deadline: ""
+    est_value_or_score: 99 plus, meaning unverified, likely unread chat count
+    suggested_unit: none
+    redline_check: clear - reading only, carried unexplained
+  - surface: inventory/special
+    label: Amethyst Crystal 4882
+    state: info-only
+    deadline: ""
+    est_value_or_score: 4882
+    suggested_unit: crystal-shop
+    redline_check: clear - reading only
+  - surface: inventory/special
+    label: Blue crystal 251400
+    state: info-only
+    deadline: ""
+    est_value_or_score: 251400
+    suggested_unit: crystal-shop
+    redline_check: clear - reading only
+  - surface: inventory/special
+    label: Gold chest 240
+    state: info-only
+    deadline: ""
+    est_value_or_score: 240
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/special
+    label: Purple-gold question box 1169
+    state: info-only
+    deadline: ""
+    est_value_or_score: 1169
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/special
+    label: Green gift box 2
+    state: info-only
+    deadline: ""
+    est_value_or_score: 2
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/special
+    label: Gold chest 42
+    state: info-only
+    deadline: ""
+    est_value_or_score: 42
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/special
+    label: Purple chest 1, blue chest 2, orange chest 1, purple chest 2, silver chest 3, orange chest 1
+    state: info-only
+    deadline: ""
+    est_value_or_score: 1, 2, 1, 2, 3, 1
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/special
+    label: Bottom-row chests gold, Lv.5, Lv.3, Lv.2, counts unread
+    state: info-only
+    deadline: ""
+    est_value_or_score: counts unread
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/resources
+    label: 5000 Diamonds x16, slider Total 80.00K
+    state: info-only
+    deadline: ""
+    est_value_or_score: 16 items, 80000 diamonds
+    suggested_unit: none
+    redline_check: clear - reading only, Use never tapped
+  - surface: inventory/resources
+    label: Diamond items 10.0K x4, 100 x934, 200 x15, 1.0K x1, 500 x13
+    state: info-only
+    deadline: ""
+    est_value_or_score: 4, 934, 15, 1, 13
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/resources
+    label: Diamond items 5 x1417, 1 x2500, 10 x129, 20 x20, 50 x125
+    state: info-only
+    deadline: ""
+    est_value_or_score: 1417, 2500, 129, 20, 125
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory/resources
+    label: Resource crates 322 and more below the fold
+    state: info-only
+    deadline: ""
+    est_value_or_score: 322 plus unread
+    suggested_unit: none
+    redline_check: clear - reading only
+  - surface: inventory
+    label: Inventory red dot cleared by opening, no badged item inside either tab
+    state: info-only
+    deadline: ""
+    est_value_or_score: dot present at entry, gone at close
+    suggested_unit: none
+    redline_check: clear - reading only, closes the 0606 unknown
+  - surface: heroes/list
+    label: Hero List All tab, 16 heroes, Lv.150 x10, Lv.146, Lv.145, Lv.140, Lv.125, Lv.124, all 5-star
+    state: info-only
+    deadline: ""
+    est_value_or_score: 16 heroes
+    suggested_unit: arms-race
+    redline_check: clear - reading only
+  - surface: heroes/list
+    label: Red dots on 8 hero cards, upgrade available
+    state: doable
+    deadline: ""
+    est_value_or_score: 8
+    suggested_unit: arms-race
+    redline_check: clear - observed only, hero leveling belongs to arms-race phases
+  - surface: heroes/list
+    label: Bottom-left gold icon is the HEROES button, not VIP
+    state: info-only
+    deadline: ""
+    est_value_or_score: tap opened HERO LIST
+    suggested_unit: none
+    redline_check: clear - corrects the 0606 VIP red dot reading, VIP entry still ungrounded
+  - surface: heroes/list
+    label: Recruit Heroes and Recommend buttons, not tapped
+    state: info-only
+    deadline: ""
+    est_value_or_score: buttons seen
+    suggested_unit: none
+    redline_check: clear - reading only
+
+unmatched_labels:
+  - none in the surfaces actually walked
