@@ -2001,3 +2001,14 @@ modified: 2026-11-10T14:21:00Z
   Local main synced back by bundle to 7cdec6e3. Merge
   synced to the owner's Slack DM. Status: done. Full
   detail in pr-integration/1045-run.md.
+## 10:40 to about 10:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-1040. Plan staged 12
+  units into the live pool (22:03 and 22:30 slots: mail, help,
+  gifts, harvest, radar, survivors, train, training, donations,
+  arms-race, star-ceremony, duel-score; 61 already present),
+  pre-reset sweep pair already present in the live pool (1630
+  and 1730), scout diff re-applied on the 0615 observation with
+  identical 0 counts (idempotent), 0 withdrawals, no issues
+  filed. Pool by_state: inbox 73, claimed 0, done 1451. Status:
+  done. Full detail in queue-planning/1040-run.md.
