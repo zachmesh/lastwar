@@ -82,7 +82,12 @@ consults today's delivered records branch (issue #466): a unit
 already closed on the branch whose inbox copy the plan already
 dropped is reported already-queued instead of re-enqueued, and
 an exploration already closed on the branch today is not staged
-again. A second run over the same observation reports every
+again. The dedupe also reads the shared main-checkout pool's
+done/ records (issue #533): a slot the ticker already closed in
+the live pool - whose delivery has not landed on the records
+branch yet - is reported already-queued instead of re-enqueued,
+so a stale observation cannot re-enqueue a reward claimed after
+it was read. A second run over the same observation reports every
 entry as already queued and applies zero new units.
 
 Priority: the formula of section 5 of the perception design -
@@ -1017,6 +1022,48 @@ def branch_exploration_slugs(root, branch, date):
     return slugs, None
 
 
+def shared_pool_done_units(root):
+    """Unit ids closed in the shared main-checkout pool (issue #533).
+
+    The worktree pool this diff runs against is a snapshot: a unit
+    the ticker closed in the live pool lands in the worktree's
+    done/ only when the next pool sync copies it, and on the
+    delivered records branch only when its delivery lands - the
+    1540 planner pass re-enqueued the VIP reward ticker-1518 had
+    claimed seven minutes earlier because neither copy had
+    arrived yet. The live pool itself is the main checkout's
+    _queue_, reachable from any worktree through the same shared
+    home queue.py uses for completion markers
+    (Q.completion_home), so its done/ records are the ticker
+    result the diff was missing. A file counts when it names its
+    unit and carries a result status, mirroring
+    Q._has_done_record: any result status (done, partial, failed,
+    skipped-needs-owner, expired) means the unit already closed.
+    Returns (ids, warning): warning is None on success; a shared
+    home with no done/ directory simply holds no live
+    completions, and an unreadable file is skipped, never fatal.
+    """
+    home = Q.completion_home(root)
+    folder = os.path.join(home, "done")
+    if not os.path.isdir(folder):
+        return set(), None
+    ids = set()
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".md"):
+            continue
+        try:
+            fields, _ = Q.read_unit(os.path.join(folder, name))
+        except (OSError, ValueError, UnicodeDecodeError):
+            continue
+        unit = fields.get("unit")
+        if not unit:
+            continue
+        result = fields.get("result", {})
+        if isinstance(result, dict) and result.get("status"):
+            ids.add(unit)
+    return ids, None
+
+
 def _result_text(result, key):
     if not isinstance(result, dict):
         return ""
@@ -1125,8 +1172,11 @@ def run(args):
     branch = ""
     branch_warning = None
     closed = set()
+    branch_closed_ids = set()
+    shared_done = set()
     branch_explored = set()
     branch_closed = []
+    shared_closed = []
     if args.root:
         branch = "records/%s" % now_local.date().isoformat()
         branch_done, branch_warning = Q.records_branch_done_units(
@@ -1140,6 +1190,15 @@ def run(args):
         closed = set(branch_done)
         for unit in Q.completion_marker_units(args.root):
             closed.add(unit)
+        branch_closed_ids = set(closed)
+        # Shared-pool done consultation (issue #533): the live
+        # pool's done/ records close slots the delivered branch
+        # has not seen yet - the 1540 pass re-enqueued the VIP
+        # reward on exactly that gap. The worktree pool already
+        # contributes its own done/ through pool_units, so only
+        # the shared home adds anything here.
+        shared_done, _ = shared_pool_done_units(args.root)
+        closed |= shared_done
 
     actionable = {}          # (regular, planned_iso) -> entry
     candidates = {}          # slug -> candidate record
@@ -1261,9 +1320,20 @@ def run(args):
                 # The slot already closed on the delivered branch
                 # (or by a live completion marker) - the live pool
                 # holds no trace of it, but minting a fresh unit
-                # would re-execute the slot (issue #466).
+                # would re-execute the slot (issue #466). A slot
+                # closed only in the shared pool's done/ records
+                # is the same suppression through the live pool
+                # (issue #533). The two lists partition the
+                # suppressions: branch_closed_ids (branch plus
+                # markers) counts under branch_closed, a slot the
+                # shared pool alone knew counts under
+                # shared_closed, so the retro can see which input
+                # saved each re-enqueue.
                 action = "already-queued"
-                branch_closed.append(slot_unit)
+                if slot_unit in branch_closed_ids:
+                    branch_closed.append(slot_unit)
+                elif slot_unit in shared_done:
+                    shared_closed.append(slot_unit)
         trigger = "claimable now"
         if entry["priority"] == 1:
             trigger = "deadline approaching, expiry band"
@@ -1545,6 +1615,8 @@ def run(args):
         "already_queued": len(already),
         "already_queued_branch_done": len(branch_closed),
         "branch_closed": sorted(branch_closed),
+        "already_queued_shared_pool_done": len(shared_closed),
+        "shared_pool_closed": sorted(shared_closed),
         "branch_done_reconcile_warning": branch_warning,
         "raises": len(raises),
         "applied": len(applied),
@@ -1629,6 +1701,17 @@ def run(args):
         branch_line = ("- branch done check - not run: the pool "
                        "was not read (no --root), so a unit closed "
                        "on the branch could not be checked")
+    if args.root:
+        shared_line = (
+            f"- already closed in the shared live pool's done/ "
+            f"records - {len(shared_closed)} "
+            f"entr{'y' if len(shared_closed) == 1 else 'ies'} "
+            f"not re-enqueued (issue #533)")
+    else:
+        shared_line = ("- shared-pool done check - not run: the "
+                       "pool was not read (no --root), so a unit "
+                       "closed in the live pool could not be "
+                       "checked")
     cov = ["---",
            f"title: Scout Coverage {date}",
            f"created: {iso(stamp)}",
@@ -1646,6 +1729,7 @@ def run(args):
            f"{coverage['raises']}, applied this run "
            f"{coverage['applied']})",
            branch_line,
+           shared_line,
            f"- already satisfied, read as day evidence - "
            f"{coverage['already_satisfied']}",
            f"- known, not actionable - "
@@ -1872,6 +1956,8 @@ def run(args):
               f"{coverage['applied']}"
               + (f", branch-closed {len(branch_closed)}"
                  if branch_closed else "")
+              + (f", shared-pool-closed {len(shared_closed)}"
+                 if shared_closed else "")
               + f"); already satisfied "
               f"{coverage['already_satisfied']}, known not "
               f"actionable {coverage['not_actionable']}.")
@@ -2004,6 +2090,9 @@ def run(args):
         if branch_closed:
             print(f"branch-closed, not re-enqueued - "
                   f"{', '.join(sorted(branch_closed))}")
+        if shared_closed:
+            print(f"shared-pool-closed, not re-enqueued - "
+                  f"{', '.join(sorted(shared_closed))} (issue #533)")
         if applied:
             print(f"applied {len(applied)} - "
                   f"{', '.join(applied)}")
