@@ -2680,3 +2680,10 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 - Help unit help-2026-11-09-1430 done: base-screen help bubble pressed, then Help All on the Help page cleared PrincessEsra10xoxo (Lv.21 Crystal Factory) and AMD Commander (Lv.29 Oil Well); only the account's own two 30/30 requests remain. Points header read 140/1,000 unchanged after both presses (open question). Full detail in alliance-help/1846-queue-run.md.
 
 - Passes unit passes-2026-11-09-1457 partial: Hot Deals free Fast Growth Pack claimed, Free Supply auto-claim taken, Super Monthly Pass Daily Pickup claimed (gold bars x2, red gem 100, stamina 50 x2, iron x200, 5m speedup x60); Weekly Pass list not fully scrolled, next passes unit resumes with the scroll. Legendary $19.99 Take All and $24.99 extension untouched. Full detail in shop-claims/1850-queue-run.md.
+
+## 18:40 to about 18:58 - Planner pass
+
+- Plan staged 12 units into the live pool (06:03-06:30 slots 2026-11-10: mail, help, gifts, harvest, radar, survivors, train, training, donations, arms-race, star-ceremony, duel-score; already_present 58, skipped_done_current 2, skipped_closed zero-sweep-2026-11-09-1730, reaped 0, expired 3).
+- Pre-reset sweep pair already present, both passes done (zero-sweep 1630 and 1730 in done, chain pre-reset-sweep-2026-11-09); production check skipped (18:00 hour run).
+- Scout diff on the branch observation (61 observed, 11 actionable) applied to the live pool with main's fixed tool (post-#535/#527/#510): 7 already-queued, 0 enqueued, candidates 1 (inventory-icon-red-dot), promotion proposals 1, unexplained red dots 0 (diff); narrative seen 37, unexplained 8. No withdrawals. Pool inbox 72, claimed 0, done 1390.
+- Repo-integrity finding: the branch tip is still missing 4,414 files against the last good tip 78f9acfcd (2,946 _records_, 1,464 _queue_, 4 _logs_) - the repair b6e7b41e5 restored only 101 files, and the integrator's CLEAN verifications were conflict-only (merged tree would have 329 files vs main's 4,692). Issue #544 filed (tooling, records) and PR #531 warned not to merge at the 19:00 batch. Status: done. Full detail in queue-planning/1840-run.md.
