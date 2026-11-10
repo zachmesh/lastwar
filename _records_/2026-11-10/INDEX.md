@@ -2797,3 +2797,20 @@ modified: 2026-11-10T14:21:00Z
   still over 24 hours, statements current. VPS root disk at 71
   percent, 2.8G free. Status: no-op. Full detail in
   pr-catchall/1539-run.md.
+
+## 15:40 to about 15:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-1540. Plan staged 5
+  units into the live pool (2026-11-11 02:57 slots for passes,
+  secrets, treasures, trucks and events; 68 already present, 2
+  skipped done current, 3 skipped closed), pre-reset sweep pair
+  already present in the live pool (1630 and 1730), scout diff
+  re-applied on the two-pass observation (0615 + new 1512
+  ticker-1503 pass) with identical 0 counts (idempotent), 0
+  withdrawals, no issues filed. New in the 1512 pass: radio /
+  broadcast icon badge 11, recorded for the retro's threshold
+  check. Pool by_state: inbox 73, claimed 0, done 1469. A
+  stale worktree base (bf83bdd19 vs true tip 6b5df48) staged 82
+  duplicate-candidate units and was discarded uncommitted before
+  any commit. Status: done. Full detail in
+  queue-planning/1540-run.md.
