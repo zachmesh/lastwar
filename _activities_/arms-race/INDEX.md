@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T12:32:17Z
+modified: 2026-11-10T13:32:17Z
 level: L1
-version: 1.75.0
+version: 1.76.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -81,6 +81,7 @@ grounded_in:
   - source: ticker-0004 arms-race execution record 2026-11-10 0006 queue run (unverified, Tech Research phase judged at phase start, score 0/30,000, R4 skipped-needs-owner; record commit 9cfcddabc on records/2026-11-10)
   - source: ticker-0204 event-claims execution record 2026-11-10 0221 queue run (partial, Arms Race Base Building phase cross-read, timer 03:40:14, score 0, cumulative 0/2; record commit 069a94c7a on records/2026-11-10)
   - source: ticker-0334 arms-race execution record 2026-11-10 0342 queue run (skipped-needs-owner, Base Building phase judged at phase start, score 0 of 30,000, R4; record commit b7e79a62 on records/2026-11-10)
+  - source: ticker-0504 event-claims execution record 2026-11-10 0519 queue run (done, Arms Race Base Building cross-read, timer 00:44:05, score 0, cumulative 0/2; record commit 19608e2c9e on records/2026-11-10)
 ---
 
 
@@ -2178,3 +2179,9 @@ slot. Evidence in
 - Figures read live on screen: food 610.2M, iron 933.6M, coin 82.7M, power 148,058,020, diamonds 6,207, energy 117 at entry rising to 118 during the unit.
 - No diamonds or money spent. No research or building started. No stage swapped.
 - Result stats: target 30000, achieved 0, points 0, resources_gained none, costs about 4 minutes, no stamina, no items, no diamonds, verified yes (all figures read live in this unit), blocker_category g (true red-line miss).
+
+## What the 2026-11-10 0519 events cross-read added - Base Building phase, timer 00:44:05, score 0, cumulative 0/2
+
+- Cross-read inside the events unit events-2026-11-10-0257 by ticker-0504, about 05:15 to 05:19 local (the events unit closed done). Evidence in `_records_/2026-11-10/event-claims/0519-queue-run.md` (commit 19608e2c9e on records/2026-11-10). This is a read-only cross-read, not an arms-race unit; no phase action was taken.
+- Arms Race page (Base Building phase): timer 00:44:05 left at entry, score 0, point chests at 6,250 / 12,500 / 30,000 all locked. Cumulative chest at top left reads 0/2 (not full, not claimable). Rank #2110 [AP3x]Bears Lair. The phase ends about 06:00, consistent with the 0342 judgement; the R4 skipped-needs-owner judgement stands - the target is unreachable inside the red lines and the phase is not re-judged.
+- No Arms Race grinding was done in this unit. No diamonds or money spent.
