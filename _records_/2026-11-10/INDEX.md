@@ -2833,3 +2833,24 @@ modified: 2026-11-10T14:21:00Z
   to the day 3 release unit after the 18:00 rollover. The
   tracker is untouched. Full detail in
   radar-tasks/1555-queue-run.md.
+
+## 15:32 to about 15:59 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-10-1532
+  (done). Worked from the 1432 run's watermark (substantive through
+  b2c2b7a43, meta through 5a0a762d1). Own PRs #588 and #589 both
+  merged with 0 comments, 0 reviews - no feedback owed. Folded
+  ticker-1424 (daily-missions 1426, vip 1438) and ticker-1503
+  (scout 1521, harvest 1531) plus the caught-up ticker-0604 scout
+  0615 record into 6 profiles: daily-missions 1.12.0, vip-rewards
+  1.17.0, resource-collection 1.56.0, perception-scout 1.57.0,
+  troop-training 1.39.0, secret-missions 1.33.0. Profiles PR #591,
+  commit 34d14d6f, OPEN + MERGEABLE + CLEAN, base main b0993be65.
+  Contradictions resolved: Drill Ground level Lv.27 (1521 live
+  level-up) supersedes the Lv.30 reads (0039, 0129); VIP "first
+  since 2026-10-30" superseded by the 1540 fold; missions
+  mechanism hedge superseded by the 1519 verification. Watermark
+  repair: the 0615 scout record fell between the 0632 and 0732
+  watermarks and was never folded until this run. Issue comments
+  posted: #585, #566, #498, #208. No new issue filed. Status:
+  done. Full detail in knowledge-organization/1532-run.md.
