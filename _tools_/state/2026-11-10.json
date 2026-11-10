@@ -27,12 +27,12 @@
  "mail": {
   "status": "done",
   "at": "2026-11-10T03:58:12-08:00",
-  "note": "Claim All swept all categories; no claimable rewards; R5 warning mail read (server leavers may target alliance)"
+  "note": "Claim All swept all categories: no claimable rewards; R5 warning mail read (server leavers may target alliance)"
  },
  "train": {
   "status": "done",
-  "at": "2026-11-10T01:51:05-08:00",
-  "note": "Boarded carriage 2 of Abyss Apex train; 3-contract gift missed (dialog closed, does not reopen)"
+  "at": "2026-11-10T04:14:02-08:00",
+  "note": "Boarded carriage 2 of Missile Apex train; 3-contract gift missed (issue #570)"
  },
  "duel-score": {
   "status": "done",

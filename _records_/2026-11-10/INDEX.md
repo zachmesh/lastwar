@@ -737,3 +737,22 @@ of 2026-10-28.
   425, 351 and 301 against the no-repeat rule (heads
   unchanged; noted for the retro). Status: done. Full
   detail in pr-integration/0400-run.md.
+
+## 04:04 to 04:13 - Ticker pass ticker-0404, train unit done with deviation
+
+- Train unit train-2026-11-10-0230 done. Boarded carriage 2
+  of the Missile Apex train (Train Rating 68,350, departure
+  about 06:41 local); seat verified held via the own avatar
+  in carriage 2 and MY PROFILE opening on tap. Carriage 2
+  rewards: badge 2.5K x1, blue chest x2, gold chest x20,
+  triangle 2.5K and 2.0K.
+- DEVIATION, second identical occurrence today: the 3 Trade
+  Contract gift was NOT given - the cinematic was skipped
+  with a blind double-tap again, the second tap opened the
+  conductor dialog on an unverified carriage, and the dialog
+  was closed without gifting (it does not reopen). Same cause
+  as the 01:47 Abyss Apex unit; the record-only lesson did not
+  stick. Filed as GitHub issue #570 (play). Trade Contracts
+  146, none spent; the 158-to-146 drop since 01:47 is
+  unexplained and unattributed. Full detail in
+  alliance-train/0413-queue-run.md.
