@@ -90,6 +90,12 @@ one file per execution.
   minutes after a claim - one extra Regular gift arrived and was
   claimed during the same evening visit. The Alliance Gifts entry
   keeps its red dot while any gift waits.
+- Record the claim in the summary and resources_gained (counts
+  claimed on each tab, Gift Level progress before and after).
+  Never write the Gift Level progress gain into stats.points:
+  gifts is not a scoring type - points is score gained, for
+  scoring types only - so a gifts closing carries no points
+  key at all (issue #300).
 
 ## Cadence
 

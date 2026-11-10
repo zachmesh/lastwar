@@ -90,7 +90,19 @@ What is counted, per section 14 -
     2924/2948/2989, arms-race 37500) are all screen totals.
     Such points are counted under points_no_achieved_excluded,
     never silently dropped, and queue.py complete warns at
-    close time so future closings carry an achieved read.
+    close time so future closings carry an achieved read. A
+    third exception (issue #300, reopened 2026-11-09): a
+    nonzero points value on a gifts unit is not summed either
+    - gifts pay no score, so the figure is the Gift Level
+    progress-bar delta by construction (the Nov 9 closings
+    wrote 1090 and 46760, each equal to the progress delta
+    named in its own summary, against claim-count achieved
+    39 and 1794). Such points are counted under
+    points_progress_excluded, never silently dropped, and
+    queue.py complete warns at close time so future gifts
+    closings carry no points key. Genuine non-equal gains
+    stay counted: arms-race 2000 against achieved 8000, radar,
+    donations, daily-missions.
 
 Data sources are only inside the repository - the done pool at
 _queue_/done and, as a fallback, the day INDEX files in
@@ -138,7 +150,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.5.1"
+TOOL_VERSION = "1.5.2"
 
 
 def _load_queue():
@@ -453,6 +465,8 @@ def _empty_bucket():
         "points_dup_excluded_units": [],
         "points_no_achieved_excluded": 0,
         "points_no_achieved_excluded_units": [],
+        "points_progress_excluded": 0,
+        "points_progress_excluded_units": [],
         "costs": {},
         "blockers": {},
         "named_blockers": {},
@@ -501,12 +515,16 @@ def _feed(bucket, unit):
     points = _num(stats.get("points"))
     dup = getattr(Q, "points_duplicates_achieved", None)
     noach = getattr(Q, "points_without_achieved", None)
+    prog = getattr(Q, "points_is_progress_delta", None)
     if points is not None and dup is not None and dup(stats, unit.get("regular")):
         bucket["points_dup_excluded"] += 1
         bucket["points_dup_excluded_units"].append(unit["unit"])
     elif points is not None and noach is not None and noach(stats):
         bucket["points_no_achieved_excluded"] += 1
         bucket["points_no_achieved_excluded_units"].append(unit["unit"])
+    elif points is not None and prog is not None and prog(stats, unit.get("regular")):
+        bucket["points_progress_excluded"] += 1
+        bucket["points_progress_excluded_units"].append(unit["unit"])
     elif points is not None:
         bucket["points_total"] += points
         bucket["points_units"] += 1
@@ -585,6 +603,10 @@ def _summarise(bucket):
             "points_no_achieved_excluded"],
         "points_no_achieved_excluded_units": bucket[
             "points_no_achieved_excluded_units"],
+        "points_progress_excluded": bucket[
+            "points_progress_excluded"],
+        "points_progress_excluded_units": bucket[
+            "points_progress_excluded_units"],
         "costs": {k: _clean(v) for k, v in
                   sorted(bucket["costs"].items())},
         "resources_per_minute": {k: _clean(v / minutes) for k, v in
