@@ -30,3 +30,4 @@
 0715-run.md
 0730-run.md
 0745-run.md
+0800-run.md

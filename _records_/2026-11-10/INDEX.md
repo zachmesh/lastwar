@@ -1440,3 +1440,19 @@ modified: 2026-11-10T14:21:00Z
   red-panda badge has moved to Troop Movement. A named
   re-read unit is enqueued for after the cooldown (not before
   08:08). Full detail in alliance-donations/0747-queue-run.md.
+
+## 08:09 to about 08:20 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0800.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 11:00): no merges. Records PR
+  576 clean, awaiting the 11:00 batch. Records PRs 351
+  and 301 still conflict with main on the single file
+  _logs_/repo-actions/action-log.jsonl (append-append),
+  heads unchanged, re-probed, carried for branch-side
+  reconciliation. Tools PR 425 owner-gated, clean,
+  re-verified against current main, awaiting the owner
+  decision (OD-20261108-01 open, age 2 days).
+  Re-verification comments posted on 425, 351 and 301.
+  Status: done. Full detail in
+  pr-integration/0800-run.md.
