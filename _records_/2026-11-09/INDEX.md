@@ -2962,3 +2962,7 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 ## 23:11 to 23:18 - Ticker pass ticker-2304, harvest unit partial
 
 - Harvest unit harvest-2026-11-09-2203 partial: food all collected in one tap (plus 2.0M HUD, 596.9M to 598.9M) and 1 iron bubble (plus 1.8M HUD, 920.7M to 922.5M); coin 79.2M unchanged. 5 iron bubbles (about 1.30M each) and 5 coin bubbles (225.0K to 282.7K) remain, and the Armed Truck loot check (follow-up from the 1220 unit) is still unchecked - the next harvest unit resumes from there. Entry state: an SR Intercity Trade Reward dialog from the ticker-2230 trucks pass was open and was backed out of without claiming; Trucks screen showed Trade Count 0/5. No panels opened, no diamonds or money spent. Full detail in resource-collection/2326-queue-run.md.
+
+## 23:00 to about 23:23 - PR integration pass
+
+- PR integration pass pr-integration-2026-11-09-2300 (done). BATCH pass (checker _tools_/records_batch.py plain due - in the 23:00 window, 47 minutes left at pass start; merge-aware agrees after the merge - PR 545 already merged in this window); records PR #545 batch-merged 23:15 PT as f1008e40 (44 commits, branch kept); local main fast-forwarded to f1008e40 via bundle (bundle-main-2320.bundle); records PRs 351 and 301 still CONFLICTING on the action-log file, heads unchanged; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open; batch-pass conflict comments posted on 351 and 301 and a re-verification comment on 425 (main moved). Status: done. Full detail in pr-integration/2300-run.md.
