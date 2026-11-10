@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-09T12:32:17Z
+modified: 2026-11-10T06:47:13Z
 level: L1
-version: 1.35.0
+version: 1.36.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -105,6 +105,7 @@ literal train, so both readings of the request are in the system.
   That evening the account was already aboard carriage 2, so no
   boarding action was needed or taken; how the seat was taken (the
   owner phone is the likely actor) is unobserved.
+- 2026-11-09 2133: visual grounding put a train locomotive icon at (47,571); tapping it opened the Trucks screen. The left-column blue circle with the white vehicle front and a red dot is the Trucks entry, not the train - the red dot marks the 0/5 trade count. Do not tap a grounding-labelled train icon in the left column without verifying the screen that opens.
 
 ## How it is done
 
@@ -1110,3 +1111,13 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Preparation signals, both absent: no "Boarding closes in" banner under the resource bar (the top strip carries an alliance announcement fragment, not a boarding banner); no train icon in the left icon column (bus, truck, radar with red dot 1, hammer only).
 - No train is in preparation. Per the activity metadata the unit closes partial (checked only) without panning to the station, and the train is re-checked only when a train is preparing. This continues the no-train check-only chain (see the fold sections from 1826 onward); no chain count is asserted here.
 - Result stats: target 1, achieved 0, resources_gained none, costs 1m_wall_no_stamina, verified no, blocker_category h, train_preparing false, device_takeovers 0.
+
+## What the 2026-11-09 2133 unit added - checked only, no train preparing, grounding mislabel opens Trucks again
+
+- Unit train-2026-11-09-1830 by ticker-2109, about 21:30 to 21:33 local, status partial. Evidence in `_records_/2026-11-09/alliance-train/2133-queue-run.md` (commit 88c1abf8e on records/2026-11-09).
+- Clean base view checked for the two preparation signals: no "Boarding closes in HH:MM:SS" banner under the resource bar (only the scrolling news banner), and no train icon in the left icon column.
+- The last train already arrived: the Event mail list read in the mail unit of this same pass holds two [AP3x] Abyss Apex train arrival mails (13h and 15h ago).
+- Entry confusion, recorded so the next unit does not repeat it: a first tap at norm (86,505) changed nothing; a second tap at norm (47,571) - inside the bounding box visual grounding returned for a "train locomotive icon" - opened the Trucks screen instead (Today's Trade Count: 0/5, four trucks, Mega Mode). CORRECTION: the left-column blue circle with the white vehicle front and a red dot is the Trucks entry, not the train; the red dot marks the 0/5 trade count. The Trucks screen was exited at once with the back arrow and nothing on it was touched - no dispatch, no Mega Mode, no other truck action. The white side-view truck icon below it was not tapped. This repeats the 0509 grounding-mislabel pattern with a fresh coordinate; commented on Issue #205 by this run.
+- Trade Count 0/5 read at 21:30 corroborates the about-18:00 trade reset (Issue #242 follow-up): the trade day restarted about 18:00 and no dispatch had been made in the new trade day by 21:30.
+- No train is preparing, so per the activity metadata the unit closes partial without panning the base edge, and the next train unit re-checks the two signals.
+- Result stats: target 1, achieved 0, resources_gained none, costs about 6 minutes of unit time (including the entry re-grounding), no items spent, verified yes, points 0, blocker_category h.
