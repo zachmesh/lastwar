@@ -2718,3 +2718,24 @@ modified: 2026-11-10T14:21:00Z
   withdrawals, no issues filed. Pool by_state: inbox 70,
   claimed 0, done 1467. Status: done. Full detail in
   queue-planning/1440-run.md.
+## 14:32 to about 14:58 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-10-1432
+  (done). Worked from the 1332 run's watermark (substantive through
+  98abbc761, meta through e4863de92). Own PR #588 merged with 0
+  comments, 0 reviews - no feedback owed. No new knowledge-issue
+  comments since the 1332 run. Folded ticker-1314 (help 1316, train
+  1322, duel-score 1327 + 1331, passes 1335) and ticker-1343
+  (secrets 1349, treasures 1351, events 1358, trucks 1411) into 10
+  profiles: alliance-help 1.39.0, alliance-train 1.40.0,
+  alliance-duel 1.40.0, shop-claims 1.49.0, secret-missions 1.32.0,
+  hidden-treasures 1.19.0, event-claims 1.39.0, truck-plunder 1.40.0,
+  arms-race 1.80.0, alliance-gifts 1.50.0. Profiles PR #589, commit
+  1752ede71, OPEN + MERGEABLE + CLEAN, base main d87c43115.
+  Contradictions resolved: Iron Weekly Pass Daily Pickup x3 / Total
+  x21 supersedes x2 / Total x7; the 1411 record's 100,000 Handbook
+  truck rate is superseded by the 0337 live +300,000 read (flagged on
+  Issue #565). Hero Advancement phase closed at score 0 of 12,000, a
+  miss - the 1157 plan was never executed, no arms-race unit ran in
+  the window. One issue comment posted (#565). No new issue filed.
+  Status: done. Full detail in knowledge-organization/1432-run.md.
