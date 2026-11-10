@@ -2510,3 +2510,4 @@ untouched. Full detail in event-claims/0224-queue-run.md.
   still standing, Armed Truck loot unchecked, skull timer
   re-armed repeatedly (Issue #498: badge 3/25s, 3/29s, 1/50s,
   3/37s). Full detail in resource-collection/1623-queue-run.md.
+- PR integration pass pr-integration-2026-11-09-1630 (done). NON-batch pass (plain and merge-aware checker both not due - outside every batch window; next batch 19:00 PT); no merges; re-verification follow-ups posted on PRs 425 and 351 (see commenting note in the run record); records PR 531 awaits the 19:00 batch (1 commit, head a7a8ea6c28, after the ticker-1534 delivery squashed the branch); records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/1630-run.md.
