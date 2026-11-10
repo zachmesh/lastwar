@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-10
 created: 2026-11-10T08:12:00Z
-modified: 2026-11-10T11:52:19Z
+modified: 2026-11-10T12:03:58Z
 level: L0
 version: 1.0.0
 description: The 0000 and 0015 PR integration passes, the 0004 queue ticker pass with an arms-race Tech Research phase judgement and a donations partial, the 0034 queue ticker pass with a training partial, and the 0040 queue planning pass with 0 units staged and 0 net new diff units
@@ -721,3 +721,19 @@ of 2026-10-28.
 - Zombie Invasion: no chain seeded, event ended 2026-10-30 and
   the tab is still absent from the Events hub. No diamonds or
   money spent.
+
+## 04:00 to about 04:04 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-0400.
+  Non-batch pass per the checker (plain and merge-aware
+  both not due, outside every batch window, next batch
+  07:00): no merges. Records PR 569 clean at head
+  b7e79a62, awaiting the 07:00 batch. Records PRs 351
+  and 301 still conflict with main on the single
+  action-log file, heads unchanged, carried for
+  branch-side reconciliation. Tools PR 425 owner-gated,
+  clean, awaiting the owner decision (OD-20261108-01
+  open, age 2 days). Re-verification comments posted on
+  425, 351 and 301 against the no-repeat rule (heads
+  unchanged; noted for the retro). Status: done. Full
+  detail in pr-integration/0400-run.md.
