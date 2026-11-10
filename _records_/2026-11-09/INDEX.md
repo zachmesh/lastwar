@@ -2550,3 +2550,26 @@ untouched. Full detail in event-claims/0224-queue-run.md.
 - Knowledge organization pass knowledge-organization-2026-11-09-1632 (done). Own PRs 530 and 532 merged with no review comments, so no fix or reply was owed. Folded ticker-1518 daily-missions 1519 + vip-rewards 1540 and ticker-1534 scout 1609 + harvest 1623 into five profiles, one commit on PR 534 (OPEN, MERGEABLE, CLEAN): daily-missions 1.11.0 (one-tap-multi-claim VERIFIED for rows and chests, fourth observation with before/after reads, activity 0 to 140, 40/80/120 chests claimed with contents, slow-drag scroll measured, claim-each-task-individually rule superseded), vip-rewards 1.16.0 (Daily Freebie and login chest both claimed in one pass, freebie blocker did NOT recur, points 1,613,660 to 1,613,740 plus 80, Correction 2026-11-09 - the freebie unlocks at the 18:00 daily reset, not on a 24-hour cycle from the last claim), perception-scout 1.55.0 (bottom-left gold icon CORRECTED to HEROES with the hero-upgrade dot, Inventory dot cleared by opening, skull timer re-arms, banner quest changed to Build Oil Well, Inventory contents re-read), resource-collection 1.48.0 (fourth one-tap-per-type confirmation, iron HUD delta again exceeds the visible sum, edge bubble still standing, Armed Truck loot still unlocated, missing 1.47.0 changelog line repaired), upgrade-builders-hut-to 1.1.0 (banner quest rotated to Oil Well, Builders Hut reading marked stale with the 1609 date, upgrade still waits on Issue #517). Issues #171, #208, #482, #498, #502, #513 and #533 commented. No new knowledge issues; retro not landed. Status: done. Full detail in knowledge-organization/1632-run.md.
 - PR integration pass pr-integration-2026-11-09-1700 (done). NON-batch pass (plain and merge-aware checker both not due - outside every batch window; next batch 19:00 PT); merged knowledge PR 534 and tools PR 535 (both clean, squash, branch deleted); re-verification follow-ups posted on PRs 425, 351 and 301 (two rounds, after each main move); records PR 531 awaits the 19:00 batch (23 commits, head dd82c6327a); records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/1700-run.md.
 - PR integration pass pr-integration-2026-11-09-1715 (done). NON-batch pass (plain and merge-aware checker both not due - outside every batch window; next batch 19:00 PT); no merges; no comments posted (nothing changed since the 1700-pass notes); records PR 531 awaits the 19:00 batch (25 commits, head 4640a2b4); records PRs 351 and 301 still CONFLICTING on the action-log file; tools PR 425 owner-gated, re-verified CLEAN, OD-20261108-01 still open. Status: done. Full detail in pr-integration/1715-run.md.
+
+- Radar unit radar-2026-11-09-1403, partial: 17:07-17:17 PT,
+  release day 1 - ordinary cycle already clear (stored 0/40,
+  pending 0, bar gone); the 6-pin set inventoried 12:44 is
+  absent from all swept sectors (west/east/north), presumably
+  expired in the 4.5h gap, mechanism unverified; brown
+  animal-face circle is non-tappable (3 grounded taps, no
+  card, no red dot). Restore lands 12 tasks about 17:40 PT,
+  20 min before the 18:00 duel roll - priority 1 radar
+  successor enqueued for the pre-roll claim window (R6).
+  Full detail in radar-tasks/1717-queue-run.md.
+
+- Survivors unit survivors-2026-11-09-1403, partial (verified
+  no): 17:19-17:29 PT - gate line not verified; 2 "?" bubbles
+  stand at the gate but no survivor figure could be confirmed
+  (figures sit in the strip the "Build: Oil Well" banner
+  covers); a figure tap no-opped, a fullscreen figure tap
+  opened the Build menu instead (closed untouched, nothing
+  spent), a bubble tap no-opped. No recruit taken in, Quick
+  Dispatch not run. Same failure mode as the 2026-10-28 to
+  2026-10-31 run of 22 partials - R2 third-strike blocker
+  persists; re-read unit named: survivors-2026-11-09-1803.
+  Full detail in survivor-intake/1729-queue-run.md.
