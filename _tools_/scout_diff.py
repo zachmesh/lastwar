@@ -2126,14 +2126,17 @@ def main(argv=None):
     if args.root:
         args.root = os.path.abspath(args.root)
         args.root = Q.resolve_pool_root(args.root)
-    if args.root and not args.apply:
+    if args.root:
         # A dry run against a wrong root used to report its counts
         # against an empty pool with nothing to show it never saw
         # the pool (issue #537): the 1640 planner pass read an
         # empty pool and filed phantom units before --apply refused.
         # Warn through the same pool_root_warning queue.py prints,
         # so the read path fails loudly too. --apply keeps its own
-        # refusal below.
+        # refusal below. The warning also fires on --apply: a
+        # stray pool beside the resolved _queue_ pool (issue #539)
+        # must be named on the write path too, so it gets removed
+        # instead of silently ignored.
         warning = Q.pool_root_warning(args.root)
         if warning:
             print(warning, file=sys.stderr)
