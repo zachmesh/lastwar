@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T15:32:17Z
+modified: 2026-11-10T19:32:17Z
 level: L1
-version: 1.77.0
+version: 1.78.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -83,6 +83,7 @@ grounded_in:
   - source: ticker-0334 arms-race execution record 2026-11-10 0342 queue run (skipped-needs-owner, Base Building phase judged at phase start, score 0 of 30,000, R4; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0504 event-claims execution record 2026-11-10 0519 queue run (done, Arms Race Base Building cross-read, timer 00:44:05, score 0, cumulative 0/2; record commit 19608e2c9e on records/2026-11-10)
   - source: ticker-0704 arms-race execution record 2026-11-10 0734 queue run (partial, first unit of the Drone Boost phase, ends about 10:06, score 0, tier-3 plan 300 stamina via 15 Doom Elite kills, stamina credit to verify live; record commit d808b384b on records/2026-11-10)
+  - source: ticker-1004 event-claims execution record 2026-11-10 1045 queue run (partial, Arms Race Hero Advancement cross-read, timer 03:18:03, score 0, free paths cannot reach tier 3; record commit 2218eb3cd on records/2026-11-10)
 ---
 
 
@@ -2199,3 +2200,11 @@ slot. Evidence in
 - Events hub tab bar re-checked on the way in: Arms Race, Desert Battlefield, Wanted Boss, Survey Center - no Zombie Invasion tab, so the event is still ended and no zombie chain is seeded. Desert Storm Battlefield registration ends in 1d 10:33:44, battle 2026-11-13 03:00-03:30, 20/20 participants (same figures as the 0519 read; no new information, Issue #550 unchanged).
 - No diamonds or money spent. No diamond pack tapped. No speedup burned. No research or building started. No stage swapped. No radar pin tapped from this unit. The game was left on the Arms Race page.
 - Result stats: target 30000, achieved 0, resources_gained none, costs about 11 minutes, verified yes, blocker_category h, phase Drone Boost, phase_ends_about 10:06 PT, score_before 0, score_after 0, stamina 120, chests_claimed 0, cumulative 0/2, entry_attempts 3, device_takeovers 0.
+
+## What the 2026-11-10 1045 events cross-read added - Hero Advancement phase, timer 03:18:03, score 0, free paths cannot reach tier 3
+
+- Cross-read inside the events unit events-2026-11-10-0657 by ticker-1004, about 10:42 to 10:45 local (the events unit closed partial). Evidence in `_records_/2026-11-10/event-claims/1045-queue-run.md` (commit 2218eb3cd on records/2026-11-10). This is a read-only cross-read, not an arms-race scoring unit; the phase itself is the arms-race unit's job.
+- Arms Race page, Hero Advancement phase: timer 03:18:03 left, so the phase ends about 14:00. Score 0, point chests at 2,000 / 4,000 / 12,000, cumulative chest 0/2, all locked. Scoring paths as displayed: 1 Hero Recruitment +400, Use at least 2,000 Hero EXP at a time +1, Buy Packs containing Diamonds (1 Diamond) +30 (red-lined, never).
+- Judgement carried from the cross-read: the free paths cannot reach tier 3 (12,000) this phase - 30 recruitments at +400 would be needed, and the EXP path pays +1 per 2,000 spent. The next arms-race unit should judge the phase under R4 rather than grind it.
+- Phase accounting: the Drone Boost phase judged by the 0734 unit (tier-3 plan 300 stamina via 15 Doom Elite kills, window ending about 10:06) has ended with no scoring unit having run inside its window - the tier-3 push was never executed, so the phase closed at score 0. The stamina-credit verification the 0734 unit left open (verify +100 per stamina live on the first scoring action) is still untested and carries to the next stamina-scoring phase, not to this Hero Advancement phase, whose scoring paths do not include a stamina row.
+- Nothing claimable on this page; no Arms Race grinding was done in the cross-read unit. The phase scoring belongs to the arms-race unit for this slot.
