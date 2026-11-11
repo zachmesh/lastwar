@@ -1825,3 +1825,14 @@ of 2026-10-28.
   0), 0 withdrawals, no new issue. Pool inbox 80, claimed 0,
   done 1554. Status: no-op. Full detail in
   queue-planning/0840-run.md.
+- Integrator pass pr-integration-2026-11-11-0900.
+  NON-batch pass (checker due exit 1, outside every batch
+  window, next batch point 11:00 PT). No merges. Records
+  PRs 636 (2026-11-11, head e59753b71, CLEAN) and 615
+  (2026-11-10, head dd865af64b9, CLEAN) await the 11:00
+  batch. Tools PR 425 re-verified CLEAN against unchanged
+  main f0c385f46 (merge-tree exit 0), still owner-gated
+  (OD-20261108-01 open); no new comment (head unchanged
+  since the 0845 re-verification). No Slack sync (silent
+  run). Status: done. Full detail in
+  pr-integration/0900-run.md.
