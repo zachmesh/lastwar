@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-11-11T06:32:17Z
+modified: 2026-11-11T08:32:17Z
 level: L1
-version: 1.25.0
+version: 1.26.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -21,6 +21,7 @@ grounded_in:
   - source: ticker-1806 alliance-gifts execution record 2026-11-10 1810 queue run (done, Zombie Invasion tab seen live in the Events hub tab bar about 18:11, beside Desert Battlefield and a partially visible "...f Oil" tab, after absence re-confirmed about 17:56 the same day; chain head zombie-2026-11-10-001 seeded for the next unit to verify the event page; record commit 20a62ff0 on records/2026-11-10)
   - source: ticker-1952 zombie-invasion execution record 2026-11-10 2008 queue run (partial, event page VERIFIED live - new variant Zombie Invasion - Glacieradon, 1 Lv.10 kill with LOOT claimed, wave still live at the unit cap, successor enqueued; record commit d29bc658c on records/2026-11-10)
   - source: ticker-2154 zombie-invasion execution record 2026-11-10 2219 queue run (partial, Glacieradon chain 002, 1 Lv.10 kill X:516 Y:394 with its LOOT row read before Claim All - coin 268,000 verified, boss clue counter 40/40 with the challenge opening 2026-11-12 18:00, parallel dispatch missed on two mistaps, Lv.28 Ironhead sighted, successor 003 enqueued; record commit b11294e7f on records/2026-11-10)
+  - source: ticker-2334 zombie-invasion execution record 2026-11-10 2340 queue run (partial, Glacieradon chain 003, server maintenance blocked the first half - disconnect dialog, update restart, maintenance dialog, login retry recovered - 1 Lv.10 kill X:471 Y:355 with its LOOT row read before Claim All - coin 268,000 verified, event timer 2d 18:12:18, boss clue counter 40/40, challenge opens 2026-11-12 18:00, successor 004 enqueued; record commit 5c07e8d40 on records/2026-11-10)
 ---
 
 # Zombie invasion
@@ -93,7 +94,7 @@ execution.
   007 - that is now the standard dispatch method, and a
   parallel attempt should batch the second squad's whole
   sequence the same way immediately after the first
-  March. (2026-11-10 2219 update: parallel dispatch missed again in the Glacieradon variant - while Squad 1 was out, a tap at 498,505 opened a Teleport/Profession tile menu instead (the map had shifted under the aim point) and the follow-up at 450,350 opened a Lv.28 Ironhead card; no second march, squads_parallel 1. The binding limit was the short round trip (about 80 seconds) plus the two mistaps, not the march cap of 4. Re-ground every map tap on the current screenshot - the map is dense with tappable tiles here.) Squad 2's deploy panel (unit 006) - 20.92M
+  March. (2026-11-10 2219 update: parallel dispatch missed again in the Glacieradon variant - while Squad 1 was out, a tap at 498,505 opened a Teleport/Profession tile menu instead (the map had shifted under the aim point) and the follow-up at 450,350 opened a Lv.28 Ironhead card; no second march, squads_parallel 1. The binding limit was the short round trip (about 80 seconds) plus the two mistaps, not the march cap of 4. Re-ground every map tap on the current screenshot - the map is dense with tappable tiles here.) (2026-11-10 2340 update: squads_parallel 1 again - the maintenance recovery consumed the first half of the unit window, leaving no time for a parallel second dispatch; the binding limit was the remaining unit time, not the march cap of 4. The successor should run parallel dispatches while the wave lasts.) Squad 2's deploy panel (unit 006) - 20.92M
   power, five Lv.150 heroes, Unit Count 2,175 of 2,175;
   its versus line read Unknown / Evenly Matched against
   the same Lv.10 card Squad 1 read as 670,000 / Easy
@@ -201,6 +202,24 @@ execution.
   the event Store currency - see the Store entry under What
   is known, including the coin chests that are the event's
   confirmed coin source.
+- Server maintenance windows (2026-11-10 2340) - a maintenance
+  shutdown is announced by a server banner about 7 minutes
+  ahead (seen 23:14 in the 2319 donations unit) and, once it
+  lands, the game shows "Server disconnected. Please restart
+  the game." - click_element on Confirm does nothing, a
+  coordinate tap at 501,545 exits the app (the restart itself,
+  not a crash). Relaunch shows a SYSTEM ANNOUNCEMENT "Update
+  complete, please restart the game." (Confirm 502,568 -
+  click_element no-change, coordinate tap dismisses and the
+  game restarts). Then "The server is under maintenance.
+  Please wait a moment, we'll be back with you shortly."
+  with Cancel / Confirm, plus "Login failed. Please retry or
+  contact Support" at the bottom - one Confirm tap at 634,568
+  retries the login and the game loads to the base screen.
+  The maintenance came back on its own; no "active on a
+  different device" dialog appeared. Do not treat the
+  disconnect as a crash - recover through the dialog
+  sequence and keep the unit going.
 
 ## What is known from 2026-10-28
 
@@ -697,7 +716,7 @@ execution.
   2026-10-28 - two consecutive later-wave Lv.10 rows paid
   exactly 268,000 each while the 5 round 1 rows averaged
   214,400; what sets a row's coin line (wave, distance,
-  target) is still open. (2026-11-10 2219 update: VERIFIED for this variant - the 2219 LOOT row was read before Claim All: medal x10, green crate x1, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K, and the HUD moved +0.3M on each resource. A later-wave Lv.10 row pays exactly 268,000 coins, third confirmation (units 006/007, 2008 HUD-inferred, 2219 row-read). What sets a row's coin line is still open; the Lv.28 Ironhead LOOT coin line is unmeasured.)
+  target) is still open. (2026-11-10 2219 update: VERIFIED for this variant - the 2219 LOOT row was read before Claim All: medal x10, green crate x1, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K, and the HUD moved +0.3M on each resource. A later-wave Lv.10 row pays exactly 268,000 coins, third confirmation (units 006/007, 2008 HUD-inferred, 2219 row-read). What sets a row's coin line is still open; the Lv.28 Ironhead LOOT coin line is unmeasured.) (2026-11-10 2340 update: fourth confirmation - the 2340 LOOT row was read before Claim All: Lv.10 X:471 Y:355, medal x10, green box x4, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K, HUD coin 109.9M to 110.2M. A later-wave Lv.10 row pays exactly 268,000 coins.)
 - The 480-medal, Limit 20 chest's name and yield -
   answered by unit 047 on 2026-10-29 - it is Coin
   Chest (UR), yield 2.43M coins at Base Lv.30.
@@ -717,14 +736,14 @@ execution.
   rewards scale with level. (2026-11-10 2219 update: YES in this variant - a Lv.28 Ironhead was sighted (not attacked): Suggested Power 2,396,500, stamina cost 10, despawn 19:35:38; Guaranteed Reward drone data 780, hero EXP 105.0K, iron obscured by the cursor; Potential Reward green crate x1, green box x4, gold ticket x1. How medals and rewards scale with level is unmeasured - the Lv.28 LOOT coin line is the next read.)
 - Where the stamina Free Claim lives - not located in
   round 1.
-- The plus 10 stamina read after a kill - drop or regen. (2026-11-10 2219 update: one more datapoint - stamina 44 at the march, 45 at the LOOT read, a regen tick; still open whether the plus-stamina read is a drop or regen.)
+- The plus 10 stamina read after a kill - drop or regen. (2026-11-10 2219 update: one more datapoint - stamina 44 at the march, 45 at the LOOT read, a regen tick; still open whether the plus-stamina read is a drop or regen.) (2026-11-10 2340 update: stamina 127 to 117, exactly the 10 cost, no plus-stamina read this unit.)
 - Any daily attempt cap or diminishing returns (none seen).
 - Failure conditions - what a loss costs, and whether stamina
   is refunded.
 - What Boss Search does differently from Search (inspected
   in round 1 - rally-class targets, no coin line seen; no
   rally started).
-- Glacieradon variant (2026-11-10 2008): the 0/40 counter's label is unread (likely boss clue progress); which Store rows are Coin Chests in this variant is NOT established; whether the gift-box claim is named Alliance Gifts by the game (toast wording) is an open read; Boss Search is untested in this variant. (2026-11-10 2219 update: the counter now reads 40/40 (was 0/40 in 2008) with 'Challenge begins in: 1d 19:46:34. Your Timezone: 2026-11-12 18:00' - the boss challenge opens 2026-11-12 18:00 local; the counter's label is still unread. Store Coin Chest rows in this variant are still NOT established - Store not visited in 2219, medal balance not re-read (unit 001's live read was 3950; this kill adds a card-stated medal x10, unverified as a balance). The 'Alliance Gifts received!' toast appeared again in 2219, this time immediately after the March tap and before any LOOT claim - cause still unknown, quoted verbatim. Boss Search still untested in this variant.)
+- Glacieradon variant (2026-11-10 2008): the 0/40 counter's label is unread (likely boss clue progress); which Store rows are Coin Chests in this variant is NOT established; whether the gift-box claim is named Alliance Gifts by the game (toast wording) is an open read; Boss Search is untested in this variant. (2026-11-10 2219 update: the counter now reads 40/40 (was 0/40 in 2008) with 'Challenge begins in: 1d 19:46:34. Your Timezone: 2026-11-12 18:00' - the boss challenge opens 2026-11-12 18:00 local; the counter's label is still unread. Store Coin Chest rows in this variant are still NOT established - Store not visited in 2219, medal balance not re-read (unit 001's live read was 3950; this kill adds a card-stated medal x10, unverified as a balance). The 'Alliance Gifts received!' toast appeared again in 2219, this time immediately after the March tap and before any LOOT claim - cause still unknown, quoted verbatim. Boss Search still untested in this variant.) (2026-11-10 2340 update: event timer 2d 18:12:18 remaining, boss clue counter still 40/40, 'Challenge begins in: 1d 18:12:15. Your Timezone: 2026-11-12 18:00' re-confirmed; next wave arrives about 23:57. Store Coin Chest rows in this variant are still NOT established - Store not visited in 2340, medal balance not re-read (unit 001's live read was 3950; this kill adds a card-stated medal x10, unverified as a balance). Boss Search still untested in this variant.)
 
 ## What the 2026-11-10 1810 sighting added - Zombie Invasion tab seen live again, event page verification owed
 
@@ -766,3 +785,16 @@ execution.
 - Stamina 44 at the march, 45 at the LOOT read (regen tick) - one more plus-stamina read for the open question in the activity metadata. Store not visited in this unit (pass budget): the medal balance was not re-read live and no Coin Chest redemption was attempted. Unit 001's live Store read was 3950 medals; this unit's kill adds a card-stated medal x10, unverified as a balance. The Store coin-chest identification from unit 001's follow-up stays open for the successor.
 - Result stats: zombies_killed 1 (verified: Victory implied by Returning march, stamina 54 to 44, March Queues 1/4 to 0/4, LOOT row X:516 Y:394 claimed). cleared false: the wave is live, more Lv.10 piles visible on the map, next wave arrives about 22:54. coin_before 105.9M HUD, coin_after 106.1M HUD, coins_collected 268,000 (row read before Claim All). medals_before not re-read, medals_after not re-read. chests_opened 0. squads_parallel 1. Target: kill wave zombies and claim LOOT; achieved: 1 Lv.10 kill and its LOOT row claimed. Verified yes (same-unit live reads: row coin line, HUD deltas, stamina, queue state). Blocker category h (by-design partial - chain continuation).
 - Follow-up: successor enqueued to start now (chain rule, cleared false). It should run parallel dispatches with freshly grounded map taps, visit the Store to identify this event's Coin Chest rows by tooltip and re-read the medal balance, and check the Lv.28 Ironhead LOOT coin line if it dispatches on one.
+
+## What the 2026-11-10 2340 ticker-2334 run added - Glacieradon chain 003, maintenance recovery, 1 Lv.10 kill, LOOT 268,000 coins claimed
+
+- Unit zombie-invasion-zombie-2026-11-10-003 by ticker-2334, chain zombie-2026-11-10 seq 3, about 23:40 to 23:53 local, status partial - the wave is still live and the chain continues. Evidence in `_records_/2026-11-10/zombie-invasion/2340-queue-run.md` (commit 5c07e8d40 on records/2026-11-10). Computer sessions cc-521 and cc-524 on the owner Mac mini; cc-521 dropped once mid-unit (wait returned no active session), cc-524 was started and the game state was intact on recovery - no game input was replayed.
+- Server maintenance ate the first half of the unit: at entry LastWar showed "Server disconnected. Please restart the game." with a Confirm button - click_element on Confirm produced no change, a coordinate tap at 501,545 exited the app (the restart itself, not a crash). Relaunch showed a SYSTEM ANNOUNCEMENT "Update complete, please restart the game." with Confirm at 502,568 - click_element no-change, a coordinate tap dismissed the dialog and the game restarted. After the restart a second dialog: "The server is under maintenance. Please wait a moment, we'll be back with you shortly." with Cancel / Confirm, plus "Login failed. Please retry or contact Support" at the bottom - one Confirm tap at 634,568 retried the login and the game loaded to the base screen. This matches the 2319 donations record, which saw a server banner warning of a maintenance shutdown in 7 minutes at its entry - the maintenance was announced and the game came back on its own. No "active on a different device" dialog appeared at any point. See the new maintenance entry under Scope and availability.
+- Entry state, read live about 23:47: food 655.4M, iron 978.5M, coin 109.9M (HUD-rounded), gold 13.22K, stamina 127. Total Power 149,218,973.
+- Event page re-verified live: Events icon at 927,131 opened the Events hub; the tab bar read The Age of Oil (red 1 badge), Arms Race, Desert Battlefield and a partially visible "Zon..." tab at the right edge - tapping it at 860,131 opened the Zombie Invasion - Glacieradon page. Page read live: event timer 2d 18:12:18 remaining, "Zombies are invading! Protect our City! Challenge the fearsome Beast Glacieradon!", Store / Ranking / Rewards buttons, Alliance Finding / My Findings tabs, boss clue counter 40/40 with "Challenge begins in: 1d 18:12:15. Your Timezone: 2026-11-12 18:00". Alliance Finding lists Lv.80 and Lv.85 Zombie Bosses at 546km, 487km, 486km, 506km. "The next wave of Invading Zombies will arrive in 00:06:50" at the read (about 23:57).
+- The kill: Search at 379,936 found a Lv.10 Invading Zombies target: Guaranteed Reward medal x10, drone data 1.3K, hero EXP 263.0K, iron 268.0K, food 268.0K; Potential Reward green crate x1, green box x4, gold ticket x1; Suggested Power 670,000; stamina cost 10; despawn 11:04:34. Crossed-swords at 496,736 opened the deploy panel: Squad 1, Unit Count 2,231/2,231, Easy Win, march 00:01:38. March at 500,755 dispatched at once. Stamina 127 to 117, March Queues 1/4, squad Returning 00:00:57 on the next read and home by the LOOT claim.
+- Parallel dispatch not achieved: squads_parallel 1 - only one dispatch was attempted in this unit. The maintenance recovery consumed the first half of the unit window, leaving no time for a parallel second dispatch - the binding limit was the remaining unit time, not the march cap of 4. The successor should run parallel dispatches while the wave lasts. See the updated parallel-dispatch entry.
+- LOOT claim: gift badge read 1 at the right end of the March Queues bar after the squad's return; the gift box re-grounded fresh on the current screenshot at 308,237 opened the LOOT panel. One row, read before claiming: Lv.10 Invading Zombies X:471 Y:355, medal x10, green box x4, iron 268.0K, food 268.0K, coin 268.0K, hero EXP 263.0K. Claim All (plain blue, no price tag) at 499,765 tapped once; panel closed. Coin HUD 109.9M to 110.2M, food 655.4M to 655.7M, iron 978.5M to 978.7M - each displayed move consistent with the single 268,000 row (HUD rounds to 0.1M). Gift badge gone after the claim. March Queues 0/4. This is the fourth row-read coin verification in this variant - see the updated coin-per-kill open question.
+- Stamina 117 at close, no refill needed. Store not visited in this unit (unit time): the medal balance was not re-read live and no Coin Chest redemption was attempted. The Store coin-chest identification from unit 001's follow-up stays open for the successor.
+- Result stats: zombies_killed 1 (verified: Victory implied by Returning march, stamina 127 to 117, March Queues 1/4 to 0/4, LOOT row X:471 Y:355 claimed). cleared false: the wave is live, next wave arrives about 23:57, more targets may appear. coin_before 109.9M HUD, coin_after 110.2M HUD, coins_collected 268,000 (row read before Claim All). medals_before not re-read, medals_after not re-read. chests_opened 0. squads_parallel 1. Target: kill wave zombies and claim LOOT; achieved: 1 Lv.10 kill and its LOOT row claimed. Verified yes (same-unit live reads: row coin line, HUD deltas, stamina, queue state). Blocker category h (by-design partial - chain continuation).
+- Follow-up: successor enqueued to start now (chain rule, cleared false). It should run parallel dispatches with freshly grounded map taps, visit the Store to identify this event's Coin Chest rows by tooltip and re-read the medal balance, and check the next wave's targets after 23:57.
