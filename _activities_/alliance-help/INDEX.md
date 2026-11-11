@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T18:32:17Z
+modified: 2026-11-11T11:32:17Z
 level: L1
-version: 1.38.0
+version: 1.41.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -40,6 +40,9 @@ grounded_in:
   - source: ticker-0134 alliance-help execution record 2026-11-10 0140 queue run (done, bubble tile no-change, Help All via panel, header 420 to 720 after close/reopen; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0334 alliance-help execution record 2026-11-10 0350 queue run (done, Help All for two Farmland helps, header 720 to 1,040 after close/reopen, counter above the 1,000 target; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0904 alliance-help execution record 2026-11-10 0924 queue run (done, 2 ally helps delivered, header 1,040/1,000 unchanged in-session, left-edge bubble at (44,568) is the Trucks shortcut not help; record commit 31892dde on records/2026-11-10)
+  - source: ticker-1314 alliance-help execution record 2026-11-10 1316 queue run (done, Help All for 1 ally help, header 1,040/1,000 unchanged in-session, bubble tile (810,705) no-change, own rows Time reduced 18:00:22 and 3d 23:58:04; record commit d781dac9d on records/2026-11-10)
+  - source: ticker-1806 alliance-help execution record 2026-11-10 1818 queue run (done, Help All pressed twice, 3 ally helps, header 0 to 40/1,000 after close and reopen, 20 points per help, third help's +20 pending the next unit's header read; record commit 20a62ff0 on records/2026-11-10)
+  - source: ticker-0212 alliance-help execution record 2026-11-11 0220 queue run (done, Help All cleared all waiting ally requests, header 80/1,000 unchanged in-session, eighth in-session-unchanged datapoint; record commit b0615980f on records/2026-11-11)
 ---
 
 
@@ -614,7 +617,7 @@ Measured in the 0135 help unit (ticker-0134, window mode
 
 - The daily help cap and what helpers and helped players each receive. (2026-11-10 0350 update: the counter read 1,040/1,000 after the close/reopen re-read, so 1,000 is a display target, not a hard cap; per-help points vary - 150 in the 0140 unit, 160 in the 0350 unit - possibly by helped task type, unverified.)
 - How a Healing Help request is helped (Help All, or a different surface such as the hospital) - first seen 2026-11-02 1741, papillon707 request unhelped after two Help All presses and a row tap.
-- What the "Today's points gained from Alliance Help" header counter counts: ANSWERED 2026-11-08 2214 - it counts the helps Help All delivers, but it does NOT update inside one open Help session: after each Help All press the header still showed the pre-press value until the page was closed and reopened (100/1,000 in-session after the first press, 340/1,000 after reopen; 340/1,000 in-session after the second, 360/1,000 after reopen). The 1413 unit's 0/1,000 read before and after was a stale in-session read, not a narrower count. Closing figures for help units must be read after a page reopen. (The 1413 section is left standing as the record of what was observed then.)
+- What the "Today's points gained from Alliance Help" header counter counts: ANSWERED 2026-11-08 2214 - it counts the helps Help All delivers, but it does NOT update inside one open Help session: after each Help All press the header still showed the pre-press value until the page was closed and reopened (100/1,000 in-session after the first press, 340/1,000 after reopen; 340/1,000 in-session after the second, 360/1,000 after reopen). The 1413 unit's 0/1,000 read before and after was a stale in-session read, not a narrower count. Closing figures for help units must be read after a page reopen. (The 1413 section is left standing as the record of what was observed then.) (2026-11-11 0220 update: eighth in-session-unchanged datapoint - header 80/1,000 before and after Help All cleared at least two ally requests; no close/reopen re-read was taken, so the points gain from this unit is unverified; the close/reopen rule stands.)
 
 
 ## What the 2026-11-03 1121 unit added - done through the base-screen bubble, header 1240 unchanged, Help All no requests yet
@@ -964,3 +967,41 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - No ally requests waiting at close.
 - No diamonds or money spent, no speedup used, no stamina item opened, no building or research started. Nothing was dispatched or plundered on the trucks screen opened by the mis-tap.
 - Result stats: target all waiting ally helps delivered, achieved 2 ally helps delivered, 0 waiting, resources_gained none, points header 1,040/1,000 unchanged in-session (lag, see above), costs about 8 minutes, no items spent, verified yes (ally rows cleared, read live in this unit), blocker_category none.
+
+## What the 2026-11-10 1316 unit added - Help All for 1 ally help, header 1,040/1,000 unchanged in-session, bubble tile (810,705) no-change, done
+
+- Unit help-2026-11-10-1030 by ticker-1314, 13:16 to 13:22 local, status done. Evidence in `_records_/2026-11-10/alliance-help/1316-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-460 on the owner Mac mini. Background input reached the Alliance button on the first tap; no foreground repair was needed.
+- Base screen at entry: the tan help-bubble tile left of the Alliance button was tapped once at (810,705) with no visible effect (no panel opened, no toast). One no-change tap only, so the unit pivoted to the Alliance panel route under rule R2 rather than re-tapping the tile. The tile's exact tap point is not re-grounded here; the next unit that tries the bubble should measure it fresh.
+- Alliance panel: Help button carried a red dot (requests waiting). The Alliance Gifts button also still showed a red dot, minutes after the 1310 gifts unit of the previous pass claimed both tabs - new gifts are already arriving; that red dot belongs to the next gifts unit, not this one (see the gifts profile cross-read).
+- Help dialog at entry: Today's points gained from Alliance Help 1,040/1,000. Rows: Bears Lair (own) Missile Mastery II research, Time reduced 18:00:22; Bears Lair (own) Lv.30 Aircraft Center, Time reduced 3d 23:58:04; GoldenSonya, Need help with Food Output V research (the only ally request waiting).
+- Help All pressed. The game answered "Allies are very grateful for your assistance". The GoldenSonya row disappeared from the list; only the two own rows remained, now showing 30/30 bars in place of the Time reduced figures. No ally requests waiting.
+- The points counter still read 1,040/1,000 in the same dialog instance after the press. The dialog was closed without a close/reopen re-read, so no points delta is claimed for this help - the 0350 unit showed the counter only moves on a reopened dialog, and this unit did not do that re-read. The counter already stood above the 1,000 display target at entry.
+- COUNTER NOTE: the counter has now stood at 1,040/1,000 across the 0350, 0924 and 1316 units. The 0924 close/reopen re-read still showed 1,040 after two helps, so whether helps delivered after the 1,000 target add points at all is unverified - the next unit must do the close/reopen re-read after its helps.
+- OWN-ROW FIGURES: Missile Mastery II "Time reduced" reads 18:00:22 here, up from 15:00:22 at the 0924 read and 13:00:22 at the 0350 reopened read; the Aircraft Center figure is unchanged at 3d 23:58:04 across all three reads. Recorded as displayed; whether "Time reduced" is total time reduced by allies or time remaining was not established in this unit.
+- Outcome: Help All pressed once, 1 ally help delivered (GoldenSonya Food Output V research). No ally requests remain. Returned to the base screen.
+- Figures read live on screen: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1, resources_gained none, points unverified (counter 1,040/1,000 before and after in the same dialog instance, no close/reopen re-read), costs about 6 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-10 1818 unit added - Help All pressed twice, 3 ally helps, header 0 to 40/1,000 after close and reopen, done
+
+- Unit help-2026-11-10-1430 by ticker-1806, about 18:18 to 18:21 local, status done. Evidence in `_records_/2026-11-10/alliance-help/1818-queue-run.md` (commit 20a62ff0 on records/2026-11-10). Computer session cc-488 on the owner Mac mini. Background input reached every button on the first tap; no foreground repair was needed.
+- Entry: from the Alliance Gifts screen, back arrow to the Alliance panel, then the Help tile at norm (698, 510).
+- Help dialog at entry: header "Today's points gained from Alliance Help: 0/1,000" - a fresh day's counter after the 18:00 reset (the 1316 unit closed the previous day at 1,040/1,000). Four rows: own Bears Lair "Need help with Missile Mastery II research" and "Need help with building Lv.30 Aircraft Center", specialist Donut "Need help with Oil Output I research", Teemo "Need help with Missile Vehicle - Defense II research".
+- First Help All at norm (498, 764): both ally rows cleared live - only the two own Bears Lair rows remained. Header still 0/1,000 in-session, the known lag.
+- Close and reopen: header read live at 40/1,000 - the two helps moved the counter, 20 points each. A new ally row had arrived in the meantime: Teemo "Need help with Missile Vehicle - Damage II research".
+- Second Help All: Teemo's row cleared live, only the two own rows remain. Header still 40/1,000 in-session; the third help's +20 follows the same lag pattern and will be read by the next help unit's header.
+- COUNTER NOTE: the in-session lag is re-confirmed, and the close/reopen rule stands - closing figures must be read after a page reopen. Per-help rate measured again at 20 points (the 0140 unit measured 150 per help on a different day's counter, so the rate is not a fixed constant across days; recorded as measured, not as a rule). The counter question from the 1316 unit - whether helps delivered after the 1,000 target add points at all - is not answered by this unit, which ran on a fresh 0/1,000 counter; it stays open.
+- Outcome: done. 3 ally requests helped (Donut Oil Output I, Teemo Missile Vehicle - Defense II, Teemo Missile Vehicle - Damage II). Header verified 0 to 40/1,000 after close and reopen; the third help's points are pending the next unit's header read. No diamonds or money spent, no red line touched. The game was left on the Help dialog with only own requests visible.
+- Result stats: target 3, achieved 3, resources_gained none, points 40 verified after close and reopen (third help's +20 pending), costs about 3 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-11 0220 unit added - Help All for at least 2 ally helps, header 80/1,000 unchanged in-session, eighth datapoint
+
+- Unit help-2026-11-10-2230 by ticker-0212, 02:19 to 02:20 local, status done. Evidence in `_records_/2026-11-11/alliance-help/0220-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539 on the owner Mac mini.
+- Entry: no help bubble on the base screen, so the unit went through Alliance, then Help; both taps landed first time. The Alliance button kept a red dot at entry; the Help button in the Alliance panel also carried a red dot.
+- Help page before: header "Today's points gained from Alliance Help: 80/1,000". Own requests: Bears Lair Lv.30 Aircraft Center 30/30, Bears Lair Missile Mastery II research 30/30. Waiting ally requests: miss direction, Aircraft Synergy - Attack I research; Amarky257, Tank Mastery II research; a further row was cut off at the bottom of the list, so at least 2 ally requests waited and possibly more.
+- Help All: one tap; the game answered "Allies are very grateful for your assistance!" After the tap the list held only the two own requests, now showing "Time reduced: 3d 23:58:04" (Aircraft Center) and "Time reduced: 15:00:22" (Missile Mastery II). No ally request remained.
+- Header still read 80/1,000 after the tap, so no points gain is claimed from this unit - the counter did not move on the live read. The exact number of helps given is therefore unverified (at least the two visible ally rows); the cleared list is the verified outcome.
+- COUNTER NOTE: eighth in-session-unchanged datapoint (see the open-questions entry). No close/reopen re-read was taken in this unit, so the per-help points gain is unverified here; the close/reopen rule stands - closing figures must be read after a page reopen.
+- OWN-ROW FIGURES: Aircraft Center "Time reduced" 3d 23:58:04 is unchanged across the 0924, 1316 and this read; Missile Mastery II reads 15:00:22 here, against 18:00:22 at the 1316 read and 13:00:22 at the 0350 reopened read. Recorded as displayed; whether "Time reduced" is total time reduced by allies or time remaining was not established in this unit.
+- Outcome: done. All waiting ally requests cleared. No diamonds or money spent. The game was left on the base screen.
+- Result stats: target press Help All and clear all waiting ally requests, achieved all waiting ally requests cleared, resources_gained none itemised, points 0 (header 80/1000 before and after), costs about 2 minutes play, verified yes, blocker_category none, helps_given at-least-2-unverified-count, device_takeovers 0.

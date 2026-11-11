@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T18:32:17Z
+modified: 2026-11-11T18:32:17Z
 level: L1
-version: 1.35.0
+version: 1.38.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,9 @@ grounded_in:
   - source: ticker-0134 mail-rewards execution record 2026-11-10 0143 queue run (done, Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0334 mail-rewards execution record 2026-11-10 0355 queue run (done, Claim All sweep, no claimable rewards, R5 warning mail read; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0904 mail-rewards execution record 2026-11-10 0929 queue run (partial, entry blocked by camera framing, Mail panel never opened, fourth unit this reset day with the same blocker, Issue #580; record commit 31892dde on records/2026-11-10)
+  - source: ticker-1234 mail-rewards execution record 2026-11-10 1259 queue run (done, Event train rewards claimed in full, mail-list back arrow re-grounded at norm 62,948; record commit 98abbc761 on records/2026-11-10)
+  - source: ticker-0212 mail-rewards execution record 2026-11-11 0222 queue run (done, Alliance Daily Donation Rankings and Event Arms Race rewards claimed, both lists verified empty of gift icons; record commit b0615980f on records/2026-11-11)
+  - source: ticker-1012 mail-rewards execution record 2026-11-11 1029 queue run (done, every category walked, Event Zombie Invasion Intel + train mails and System Maintenance + Survey claimed, HUD deltas verify coin/food/diamonds exactly, normalized-coordinates correction; record commit c0c788be on records/2026-11-11)
 ---
 
 
@@ -57,6 +60,7 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
 
 - Base screen, Mail button on the right rail (envelope icon).
 - Entry, windowed (2026-11-09 1031): the Mail button tap at the freshly grounded centre (932,791) in windowed 642x951 opened Mail at once - windowed background clicks reach the game, unlike the fullscreen Alliance taps in the sibling 1019 help unit. The point still drifts per session, so re-ground fresh each unit (Issue #230).
+- Coordinates are 0-1000 normalized, not window pixels (2026-11-11 1029 unit): a click at pixel (599,756) landed at normalized (599,756) = pixel (385,719) and missed Mail. Grounding the Mail button at normalized (931,785) and clicking there opened Mail. All later clicks in the unit used normalized coordinates from screenshots/grounding and worked. Never feed pixel coordinates to computer.control.
 - The category rail, top to bottom, reads - Battle Report, Alliance,
   Event, Season, System, Regular, In-app Purchases (corrected
   2026-11-01 by the 1730 unit; the earlier list omitted Event and
@@ -65,8 +69,10 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
 - Every category list ends with Delete All and Claim All buttons.
   Claim All claims every claimable attachment in that category at
   once. Purchases holds receipts only - nothing to claim.
+- Favorite row: tapping the row body did not navigate; the row arrow at the right edge did (2026-11-11 1029 unit).
+- Dismissing a reward popup: one tap on the dimmed area above the banner closed it (2026-11-11 1029 unit).
 - The back arrow sits at the bottom left of the mail screens, both in
-  the category list and inside an open mail.
+  the category list and inside an open mail. (2026-11-10 1259 update: the mail-list back arrow's true centre in the 642x951 window is (62,948) - taps at (57,902), (40,900), (55,925) and (40,955) all missed high, the button sits at about y 869-935 px, centre about y 902 px; measure the centre fresh from a screenshot crop in each unit. The AX tree carries no back-button element (game canvas), so coordinate taps at the freshly measured centre are the working route; keyboard input is unavailable in this app - focus belongs to the other LastWar window.)
 
 ## Cadence
 
@@ -592,6 +598,7 @@ the next tick re-produces this regular as a fresh unit.
 
 - Which recurring senders are worth keeping unread as evidence, and which
   reward mails expire if not claimed in time.
+- Unidentified blue icon 3.0K in the Event CONGRATULATIONS popup (2026-11-11 1029 unit): recorded as read but unidentified; the 530 medals and 4.4M hero EXP from the same popup have no HUD counter to verify against, while the coin, food and diamond deltas verified exactly.
 
 
 ## What the 2026-11-03 1055 unit added - mail entry mis-targeted to Alliance twice, then no-change, filed as Issue 230
@@ -963,3 +970,45 @@ the next tick re-produces this regular as a fresh unit.
 - LESSON: the next mail unit must reset the camera framing first (the standard framing WAS present at 09:14 this pass, so the framing changes between passes) or find a Mail entry that does not depend on the right rail.
 - No diamonds or money spent, no mail claimed or deleted (Delete All never pressed, Claim All never reached), no building or research started. The trucks screen was not re-entered in this unit.
 - Result stats: target all mail categories swept, claimable rewards claimed, achieved 0 categories swept, Mail panel never opened, resources_gained none, costs about 8 minutes, no items spent, verified yes (the non-entry is observed live in this unit), blocker_category e (repeated blocker - camera framing, fourth unit this reset day).
+
+## What the 2026-11-10 1259 unit added - Event train rewards claimed in full, mail-list back arrow re-grounded at (62,948), done
+
+- Unit mail-2026-11-10-1030 by ticker-1234, about 12:45 to 12:59 local, status done. Evidence in `_records_/2026-11-10/mail-rewards/1259-queue-run.md` (commit 98abbc761 on records/2026-11-10). Session cc-454 on the owner Mac mini.
+- Entry worked on standard framing: the Mail panel opened and the category list read red dots on Alliance and In-app Purchases, a gift icon on Event, no dots on Battle Report, Regular or Favorite. The #580 framing blocker is intermittent - the framing changes between passes; this unit needed no framing reset. Commented on Issue #580 by this run.
+- Event: train mails ([AP3x] Missile Apex's and [AP3x] Abyss Apex's trains, 4h to 10h ago) plus "Train arrival reward!". Claim All produced a CONGRATULATIONS summary: gold badge 2.5K x1, supply chest x3, red gem 100 x1, supply chest x50, blue crystal 2.0K, 5m speedups x3, x2, x1, x8 and x6 (20 in total). All claimed.
+- Alliance: five "New Alliance Assembly Point" mails (8h and 12h ago) plus the "Attention" mail (10h ago, R5-marked, already read in full by the 0355 unit - Abyss Apex warning about leavers targeting the alliance). Claim All showed no reward summary. No claimable attachments.
+- System: "Planned Update Notice", "(President Mail) Transfer Update", "Season Closed", "Pack and Event Adjustment Notice", "(President Mail) Server 2110 ...". Claim All showed no reward summary.
+- Regular: victory reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Claim All showed no reward summary.
+- Battle Report: Zombie Horde victory reports Lv.15 to Lv.20, 19h ago. Claim All showed no reward summary.
+- In-app Purchases (receipts only) and Favorite were not opened; no claimable attachments live there per the activity metadata.
+- Delete All was never pressed.
+- BACK-ARROW BLOCKER RESOLVED IN-UNIT: the mail list back arrow did not respond to taps at (57,902) and (40,900) on window 489932, nor to a press-hold or taps at (55,925) and (40,955) on window 508052 - four no-change attempts in total. A fresh screenshot crop measured the arrow's true centre in the 642x951 window at (62,948); a tap there worked at once, and the same point worked for every later back tap in this unit. Earlier taps missed high (the button sits at about y 869-935 px, centre about y 902 px). Keyboard input is unavailable in this app - focus belongs to the other LastWar window - and the AX tree carries no back button element (game canvas), so coordinate taps at the freshly measured centre are the working route. See the updated How to enter entry.
+- Figures read live: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry and at close (unchanged). No login or verification demanded, no different-device dialog.
+- Result stats: target 1, achieved 1, resources_gained Event train bundle (gold badge 2.5K x1, supply chests x53, red gem 100 x1, blue crystal 2.0K, 5m speedups x20), costs about 14 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-11 0222 unit added - Alliance and Event Claim All, Daily Donation Rankings and Arms Race rewards claimed
+
+- Unit mail-2026-11-10-2230 by ticker-0212, 02:20 to 02:22 local, status done. Evidence in `_records_/2026-11-11/mail-rewards/0222-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539 on the owner Mac mini.
+- Category list at entry: Battle Report no gift icon; Alliance gift icon; Event gift icon; System one mail with a player avatar, no gift icon; Regular unread red dot, no gift icon; In-app Purchases unread red dot, receipts only; Favorite no icon. Only Alliance and Event carried a gift icon, so only those two categories were opened and claimed. Regular, System and Battle Report were not opened in this unit; they showed no gift icon on the category row.
+- Alliance: list - Daily Donation Rankings (8h ago, gift icon), Voting Results (10h ago, unread), New Alliance Assembly Point (21h ago), Attention (1d ago, R5), New Alliance Assembly Point (1d ago, twice). Claim All tapped. Summary dialog: red gem x10, gold badge 50 x4. The Daily Donation Rankings gift icon was gone afterwards.
+- Event: list - train mails from [AP3x] Missile Apex and [AP3x] MrCallejon (12m, 2h and 4h ago) plus "Unclaimed Arms Race event re..." (4h ago, gift icon). Claim All tapped. Summary dialog tiles read live: grey crates x57, grey-blue crates x30, blue crystal 38.0K, gold coins x57, blue triangle x500, iron x4, Lv.2 chest x1, red gem 50 x2, red gem 10 x5, 5m speedup x8. One further row of tiles at the top of the dialog was cut off by the banner and is not recorded - its icons and counts were not read live.
+- After the tap the list showed no red dots and no gift icon on the Arms Race mail; all rows greyed. Delete All was never pressed.
+- Outcome: done. Alliance Daily Donation Rankings claimed; Event Arms Race and train mail attachments claimed. No diamonds or money spent. The game was left on the base screen.
+- Result stats: target claim every claimable reward attachment in mail, achieved Alliance Daily Donation Rankings claimed and Event Arms Race and train mail attachments claimed, resources_gained Alliance red gem x10, gold badge 50 x4; Event grey crates x57, grey-blue crates x30, blue crystal 38.0K, gold coins x57, blue triangle x500, iron x4, Lv.2 chest x1, red gem 50 x2, red gem 10 x5, 5m speedup x8 (plus one cut-off top row not read), costs about 2 minutes play, verified yes, blocker_category none, categories_with_gift_icons 2, categories_checked 2, device_takeovers 0.
+
+## What the 2026-11-11 1029 unit added - done, every category walked, Event Intel + train mails and System Maintenance + Survey claimed, normalized-coordinates correction
+
+- Unit mail-2026-11-11-0630 by ticker-1012, about 10:15 to 10:29 local, status done. Evidence in `_records_/2026-11-11/mail-rewards/1029-queue-run.md` (commit c0c788be on records/2026-11-11). Computer session cc-593 on the owner Mac mini.
+- Entry state (base HUD, read live about 10:15): food 680.8M, iron 1.0G, coin 127.8M, gold 13.22K, diamonds 6,317. Total Power 149,218,973; stamina 110. Mail button carried a red dot.
+- Method correction - coordinates are 0-1000 normalized, not window pixels: a click at pixel (599,756) landed at normalized (599,756) = pixel (385,719) and missed Mail. Grounding the Mail button (normalized 931,785) and clicking there opened Mail. All later clicks in this unit used normalized coordinates from screenshots/grounding and worked. Never feed pixel coordinates to computer.control. See the updated How to enter entry.
+- Event - Claim All (gift icon on the category row): 2x Zombie Invasion - Intel Reward (1h, 2h ago) and 3x [AP3x] Missile Apex train mails (2h, 4h, 6h ago); Stamina Returned / Attack Canceled (7h ago) carried no attachment. CONGRATULATIONS popup ("Alliance Gifts received!"): event medals x530, hero EXP 4.4M, unidentified blue icon 3.0K, stamina items 10x4, coin 1.8M, food 1.4M, iron 1.4M. After claiming: all envelopes open, no gift icons, no red dots, Claim All red dot gone.
+- System - Claim All (two gift icons, red dot on Claim All): Maintenance Completed (10h ago) and Unclaimed Survey Reward (12h ago). REWARD CLAIMED popup: red gem x400. Patch Notes (11h ago, unread), Planned Update Notice, (President Mail) Transfer Update, Season Closed - no attachments.
+- Alliance - Claim All pressed, nothing claimable: Daily Donation Rankings (16h ago), Voting Results (18h ago), 3x New Alliance Assembly Point (1d ago), Attention R5 (1d ago); no gift icons, no red dots, no popup after Claim All. Assembly Point mails are informational only; no assembly action taken.
+- Regular - Claim All pressed, nothing claimable: six Victory / Invading Zombies battle reports (1h-3h ago), no gift icons, no red dots.
+- Battle Report - Claim All pressed, nothing claimable: Victory vs Lv.15-20 Zombie Horde reports (1d ago), no gift icons, no red dots.
+- Favorite - Claim All pressed, nothing claimable: one favorited mail, Victory in Attack vs RebelSerpent, 785 units defeated, dated 1-21; no gift icon. Tapping the Favorite row body did not navigate; the row arrow at the right edge did.
+- In-app Purchases - not opened: receipts only per the activity metadata; nothing to claim.
+- Exit state (base HUD, read live about 10:29): food 682.2M (+1.4M), iron 1.0G (HUD rounding hides +1.4M), coin 129.6M (+1.8M), diamonds 6,717 (+400). Total Power 149,218,973 (unchanged); stamina 112 (+2 regen during the unit). Mail button red dot gone. HUD deltas verify the Event popup (coin, food) and the System popup (diamonds) exactly. The unidentified 3.0K blue icon from the Event popup is recorded as read but unidentified; the 530 medals and 4.4M hero EXP have no HUD counter to verify against.
+- Dismissing a reward popup: one tap on the dimmed area above the banner closed it.
+- Outcome: done - every mail category walked, every claimable attachment claimed. No diamonds or money spent. The game was left on the base screen.
+- Result stats: target claim every claimable reward attachment in mail, achieved Event 2x Intel Reward + 3x train mails claimed and System Maintenance Completed + Unclaimed Survey Reward claimed, resources_gained medals x530, hero EXP 4.4M, stamina items 10x4, coin 1.8M, food 1.4M, iron 1.4M, red gem x400, costs about 14 minutes, verified yes, blocker_category none, categories_with_gift_icons 2, categories_checked 6, device_takeovers 0.

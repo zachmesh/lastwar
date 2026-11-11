@@ -1,9 +1,9 @@
 ---
 title: Alliance Train
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T18:32:17Z
+modified: 2026-11-11T10:32:17Z
 level: L1
-version: 1.39.0
+version: 1.41.0
 description: Boarding the alliance train at the station for carriage rewards, one activity folder for train knowledge
 status: unverified
 grounded_in:
@@ -42,6 +42,8 @@ grounded_in:
   - source: ticker-0134 alliance-train execution record 2026-11-10 0147 queue run (done, boarded carriage 2 of the Abyss Apex train, 3-contract gift missed on the cinematic skip double-tap; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0404 alliance-train execution record 2026-11-10 0413 queue run (done, boarded carriage 2 of the Missile Apex train, 3-contract gift missed again on the cinematic skip double-tap, second identical occurrence today; record commit 00a39c11 on records/2026-11-10)
   - source: ticker-0934 alliance-train execution record 2026-11-10 0946 queue run (partial, checked only, both preparation signals absent, no train preparing, (905,790) is not a BASE button, (59,428) locomotive label was a mislabel; record commit 226f5c37 on records/2026-11-10)
+  - source: ticker-1314 alliance-train execution record 2026-11-10 1322 queue run (partial, checked only, both preparation signals absent, no train preparing, red-badge countdown icon at the right edge is a different event; record commit d781dac9d on records/2026-11-10)
+  - source: ticker-0155 alliance-train execution record 2026-11-11 0209 queue run (failed, boarding missed - plus buttons gone at platform timer 00:04:55, boarding closes about 5 minutes before departure, account not aboard, pick-order gap filed as tooling Issue #623; record commit 72b82b0e3 on records/2026-11-11)
 ---
 
 # Alliance train
@@ -140,6 +142,7 @@ literal train, so both readings of the request are in the system.
   verify the carriage on the platform BEFORE tapping its plus
   whenever the entry path allows it.
 - Cinematic skip rule, learned 2026-11-10 0147 - tapping a carriage plus opens a train cinematic ("Tap the screen twice to skip"); skip it with a SINGLE tap followed by a fresh observation, never a blind double-tap at screen centre. The 0147 unit's second tap landed on carriage 2's plus at the platform centre and opened the THANK THE CONDUCTOR dialog before the carriage was verified; closing it without gifting lost the standing 3-Trade-Contract ticket for that ride, because the dialog does not reopen. A gift dialog opened on an unverified carriage loses the gift either way - close without gifting, or gift blind - so the only safe path is the single-tap skip.
+- Closing-boarding rule, learned 2026-11-11 0209 - boarding closes about 5 minutes before departure: the platform plus buttons were present at timer 00:05:19 and gone at 00:04:55, and the banner read 00:01:13 at about 02:03:20 for a close about 02:04:30. When the banner is under about 2 minutes, tap the carriage-2 plus FIRST and read the metadata after - the standing rule (carriage 2, 3 Trade Contracts) is already known and the platform screen itself shows the occupancy. A metadata read must never sit between the platform open and the boarding tap while the banner is under about 2 minutes. The 0209 unit lost the boarding to a metadata read in that window; the account missed the train. The queue's pick order does not see the boarding close either - filed as tooling Issue #623.
 - After the ride, the carriage reward arrives as an Event category
   mail titled Train arrival reward, with a Claim button on the mail.
   Claim it there - the reward does not credit silently. Claiming
@@ -1168,3 +1171,21 @@ Measured in the 0110 train unit (ticker-0104, window mode
 - Mislabel correction: the earlier left-column grounding that labelled a point near (59, 428) a locomotive icon was also a mislabel: the enlarged crop shows in-world resource bubbles (iron 175.1K, food 965.1K), not a UI icon. Grounding labels for this column are not trusted without a crop check.
 - Outcome: partial, checked only. No train in preparation in this window by both preparation signals; nothing boarded, no Trade Contracts spent, no train summoned, no conductor role taken. The station panel was not opened (preparation-only surface, no signals). Tracker untouched, so the next tick re-produces this regular.
 - Red lines: nothing spent, no paid button tapped, no donation, no rally join, no toggle changed, no building or research started. Game left on the own base screen.
+
+## What the 2026-11-10 1322 unit added - checked only, both preparation signals absent, no train preparing, partial
+
+- Unit train-2026-11-10-1030 by ticker-1314, 13:22 to 13:25 local, status partial, checked only. Evidence in `_records_/2026-11-10/alliance-train/1322-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-461 on the owner Mac mini (session cc-460 from the previous unit had closed in between; a fresh session was started, no game state lost).
+- Clean base view at 13:23: neither preparation signal is present. No train icon in the left icon column (hammer 1/4, flask 1/2, chat with badge 2, truck, radar with badge 11, hammer), and no "Boarding closes in" banner under the resource bar. A red-badge icon with a 00:00:54 countdown sits at the right edge mid-screen; that is a different event, not the train banner - a negative signal datapoint for the signals list.
+- Per the alliance-train activity metadata, the unit closes partial without panning the base edge, and re-checks only when a train is preparing. No station panel was opened and no boarding action was taken. No login or verification was demanded, and no different-device dialog appeared.
+- Outcome: no train preparing at this check. Nothing boarded. The 04:13 unit of this reset day already boarded carriage 2 of the Missile Apex train, so today's regular train is accounted for; a later Mega Express preparation, if any, will be picked up by the next train unit.
+- Figures read live on screen: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry.
+- Result stats: target 1, achieved 0, resources_gained none, costs about 3 minutes play, verified yes, blocker_category h (by-design partial, no train preparing), device_takeovers 0.
+
+## What the 2026-11-11 0209 unit added - boarding missed, plus buttons gone at platform timer 00:04:55, boarding closes about 5 minutes before departure, account not aboard, failed
+
+- Unit train-2026-11-10-2230 by ticker-0155, 02:04 to 02:09 local, status failed. Evidence in `_records_/2026-11-11/alliance-train/0209-queue-run.md` (commit 72b82b0e3 on records/2026-11-11). Computer session cc-536 on the owner Mac mini.
+- Entry - banner tap opened the platform while boarding was still open: the "Boarding closes in" banner was first seen during the training unit of this pass (00:02:51, then 00:02:38 at the paw tap). On the Events screen at the arms-race interruption it read 00:01:13. This unit was claimed out of queue order: `next` had returned research-2026-11-10-2203, but the train boarding was the live expiring event (about 1 minute left), so the train unit train-2026-11-10-2230 (planned 22:30, expires 02:30) was claimed instead. Tapping the banner opened the STATION PLATFORM at timer 00:05:19: Train Rating 108,350, carriages 5/7, 7/7, 6/7, 7/7, plus buttons visible on all four carriages. Carriage 2 (standing rule) showed 7/7.
+- Boarding missed - the plus tap landed after boarding closed: before tapping, the unit read the activity metadata in full. That read cost the boarding window: by the time the carriage-2 plus was tapped, the plus buttons were gone from all four carriages, the timer read 00:04:55, no THANK THE CONDUCTOR dialog opened, and occupancy was unchanged (5/7, 7/7, 6/7, 7/7). A second tap on the same spot changed nothing. The banner countdown and the platform timer agree on the close: the banner read 00:01:13 at about 02:03:20 (close about 02:04:30), and the platform plus buttons were present at timer 00:05:19 and gone at 00:04:55 - boarding closes about 5 minutes before departure. LESSON (new standing rule, see "How it is done"): on a closing boarding window, tap the carriage-2 plus FIRST and read the metadata after - the standing rule (carriage 2, 3 Trade Contracts) is already known and the platform screen itself shows the occupancy. A metadata read must never sit between the platform open and the boarding tap while the banner is under about 2 minutes.
+- Verification - account not aboard: carriage 3's passenger list was opened (6/7): [AP3x] Dogo, [AP3x]AshenRise, [AP3x]LAMP 1, [AP3x]Janet A, [AP3x]sebfin13, [AP3x]Raze Cromwell. [AP3x]Bears Lair is not among them. The account is not aboard this train. The train departs in about 4 minutes (timer 00:03:37 at close) without this account. No Trade Contracts were spent, no dialog was opened, no other carriage was tapped for boarding. No diamonds or money spent. No login or verification demanded. No "active on a different device" dialog appeared.
+- Follow-up: Issue #623 (tooling) filed for the pick-order gap behind this miss: train units are picked by slot expiry, not by the boarding close, so a closing boarding is invisible to the queue's pick order. The issue links this record; the tool-developer owns it (worktree work/train-boarding-close-623 already open). The next train unit (train-2026-11-11-0230, not_before 02:30) covers the next preparation. The game was left on the STATION PLATFORM screen.
+- Result stats: target board carriage 2 with 3 Trade Contracts; achieved not boarded - boarding closed before the plus tap landed; resources_gained none; points 0; costs about 5 minutes, no items spent, no contracts spent; verified yes (platform, occupancies, passenger list and missing plus buttons all read live in-unit); blocker_category a; boarded no, carriage_target 2, carriage_2_occupancy 7/7, train_rating 108350, timer_at_entry 00:05:19, timer_at_close 00:03:37, boarding_close_about 02:04:30, contracts_spent 0, device_takeovers 0.

@@ -22,6 +22,12 @@ Usage:
              # old 17:30/18:30/19:00 wall geometry used to pre-empt
              # the sweep subcommand's correct pair - stage the pair
              # with queue.py sweep instead.
+             # enqueue mints the unit into the live pool (issue
+             # #598): when this copy runs from a linked worktree,
+             # the unit lands in the main checkout's _queue_/inbox
+             # instead of the worktree's, so a pass that delivers
+             # via a worktree cannot strand a unit on the records
+             # branch - the next tick reads the live pool only.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate
              # pool integrity (issue #441): exit 0 when every unit
@@ -41,6 +47,19 @@ Usage:
              # the same overlay.
   queue.py [--root DIR] claim --unit UNIT --executor NAME
              [--lease-minutes 20]
+  queue.py [--root DIR] deadline --unit UNIT
+             (--expires-at ISO | --closes-in SECONDS)
+             [--priority N] [--reason TEXT]
+             # stamp a real deadline onto an inbox unit whose slot
+             # expiry is later than its true deadline (issue #623):
+             # a train unit staged to its slot end is picked by
+             # that expiry, so a boarding closing in minutes is
+             # invisible to next - the executor stamps the banner
+             # countdown when it sees it and next returns the
+             # train first. Only tightens: refuses a deadline at
+             # or after the current expiry, a past deadline, and
+             # any unit not in inbox; re-stamping the same value
+             # is a no-op. The stamp is recorded in the unit body.
   queue.py [--root DIR] complete --unit UNIT --status done
              [--summary TEXT] [--claimed-items a,b] [--evidence PATH]
              [--follow-up TEXT] [--stat key=value ...]
@@ -50,6 +69,11 @@ Usage:
              # required result.stats key, so an incomplete closing
              # is flagged in the result itself at the moment it is
              # made instead of surfacing only in the retro.
+             # complete also flags a closing whose duration runs
+             # over the 15-minute unit cap in result.stats_warnings
+             # and warns on stdout (exit still 0), so an overrun is
+             # visible in the unit file at the moment it is made
+             # instead of surfacing only in the retro (issue #608).
              # a short closing that names its overlay with
              # --stat blocker_overlay=<slug> records the
              # pool-level blocker (the slug maps to its clearing
@@ -157,6 +181,29 @@ Usage:
              # list, or an unknown fix-up regular (issue #147),
              # so a pair with no fix-ups cannot silently repeat
              # the eighth-failure pattern
+  queue.py [--root DIR] sweep-status [--regular zero-sweep]
+             [--date YYYY-MM-DD] [--regulars-json FILE]
+             # report one reset day's sweep pair by result.status,
+             # never by pool membership (issue #610): a pass counts
+             # as executed only when its result.status is done or
+             # partial - expired units land in done exactly like
+             # executed ones, so the 2040 planner run's "both in
+             # done" read reported a false complete while the final
+             # pass was expired. Exit 0 when the pair is complete,
+             # 1 when it is not, 2 when the roster or regular
+             # cannot be read; read-only, and it resolves the root
+             # to the live pool (issue #598).
+  queue.py [--root DIR] cap-audit [--start YYYY-MM-DD]
+             [--end YYYY-MM-DD]
+             # list every done closing whose duration runs over the
+             # 15-minute unit cap (900 seconds), by local finished
+             # date in the window (issue #608): the retro's Nov 4-10
+             # window held 12 such units, hand-counted from the
+             # pool - this command reproduces that list
+             # mechanically. Defaults cover the 7 days ending today
+             # local. Exit 0 when no closing is over the cap, 1
+             # when any is, 2 on a bad date; read-only, and it
+             # resolves the root to the live pool (issue #598).
 
 --root defaults to the repository _queue_ folder; it also accepts
 a repository root, resolved to its _queue_ folder, or a pool
@@ -179,6 +226,7 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
+UNIT_CAP_SECONDS = UNIT_CAP_MINUTES * 60   # 900: the cap, in seconds
 # Issue #461: a same-holder re-acquire always renews the lease.
 # The 2026-11-08 rule renewed only within 60 seconds of expiry, but
 # the executor loop re-acquires at every unit boundary (design
@@ -1166,8 +1214,25 @@ def plan_windows(item, now_local, horizon_end):
 
 
 def duel_window_text(regular, planned_local):
-    naive = planned_local.replace(tzinfo=None)
-    duel_day = (naive - DUEL_ANCHOR_LOCAL).days % 7 + 1
+    # Absolute 24h steps from the anchor (issue #603): the old
+    # naive wall-clock subtraction kept the previous duel day
+    # until 19:00 local, but since the 2026-11-02 daylight-saving
+    # end the roll is 18:00 PST (02:00 UTC, issue #242) - so a
+    # slot in the 18:00-19:00 hour was stamped one duel day
+    # behind, e.g. radar-2026-11-10-1803 "duel day 2 - radar
+    # stack" while the live day was 3 release. Timestamps are
+    # the absolute measure here, as in duel.py current() and in
+    # cycle_start_local's daily-reset branch: wall-clock
+    # arithmetic on an aware datetime sharing one tzinfo is not
+    # elapsed time. A naive caller time is read as schedule-local
+    # wall time, mirroring duel.py. Both call sites (sync, plan)
+    # pass an aware LOCAL_TZ planned_local.
+    if planned_local.tzinfo is None:
+        planned_local = planned_local.replace(tzinfo=LOCAL_TZ)
+    anchor = DUEL_ANCHOR_LOCAL.replace(tzinfo=LOCAL_TZ)
+    day_index = int((planned_local.timestamp()
+                     - anchor.timestamp()) // 86400)
+    duel_day = day_index % 7 + 1
     if regular == "radar":
         posture = "release" if duel_day in RADAR_RELEASE_DAYS \
             else "stack"
@@ -1245,6 +1310,12 @@ def _produce_for_window(root, item, planned_local, window="",
     sweep fix-ups (issue #147), which expire at the reset they
     serve and run at priority 1 regardless of their regular's
     usual cadence and priority."""
+    # Live-pool production (issue #598): sync / plan / sweep mint
+    # through here, and a pass running this copy from a delivery
+    # worktree would otherwise stage the unit into the worktree's
+    # inbox, where the live pool never sees it - resolve to the
+    # main checkout's _queue_ first; a scratch root keeps itself.
+    root = live_pool_root(root)
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -1795,7 +1866,7 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     ones at 18:00 itself), so none could run before the reset and
     the trade day closed with 12 lines not at zero, the eighth
     consecutive failure. The fix-up slot is the midpoint of the
-    pair's slots (reset - 60 minutes for the [90, 30] pair, 17:00
+    pair's slots (reset - 90 minutes for the [120, 60] pair, 16:30
     local): after the first pass so the ticker is free to pick
     them, before the reset so they can still close the day, and
     off the planner's 4-hour grid so no ordinary window collides
@@ -2046,6 +2117,216 @@ def cmd_sweep(args):
     return 0
 
 
+def cmd_sweep_status(args):
+    """Report one reset day's sweep pair by result status, never by
+    pool membership.
+
+    Issue #610: the 2040 planner run reported tonight's sweep pair
+    complete because both passes sat in _queue_/done/ - but the
+    final pass's result.status was expired (window passed before
+    execution), and expired units land in done exactly like
+    executed ones. Pool membership in done does not mean executed,
+    so a pair check that reads location reports a false complete
+    and hides the tenth consecutive sweep failure.
+
+    This command reads the same reset-anchored geometry sweep
+    stages from (the fixed-slots regular's slots_before_reset,
+    chain id, reset instant) and reports, for each expected pass,
+    where its unit file sits and what result.status it carries.
+    A pass counts as executed only when its result.status is done
+    or partial; expired, failed and skipped-needs-owner are closed
+    without execution, a done file with no result status is a bare
+    file (not a completed execution, the same rule as
+    _has_done_record), and inbox / claimed / absent are pending,
+    claimed and missing. pair_complete is true only when every
+    pass executed with the expected chain sequence. Exit 0 when
+    the pair is complete, 1 when it is not, 2 when the roster or
+    regular cannot be read - the gate command's exit-code
+    convention (log_append.py), so a planner run can gate on it.
+
+    Read-only: it writes nothing to the pool. It resolves the
+    root to the live pool (issue #598), so a copy running from a
+    delivery worktree reads the live pool, not the worktree's
+    stale copy. Unlike sweep it never refuses a past reset -
+    checking a past day's pair is the whole point. Done wins over
+    inbox and claimed when a unit id sits in more than one state
+    (a stale inbox duplicate, issue #213): the done record is
+    the closing, so the status check reads that one.
+    """
+    root = live_pool_root(args.root)
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"refused: cannot read roster {defs_path}: {exc}")
+        return 2
+    item = next((r for r in regs if r.get("id") == args.regular), None)
+    if item is None:
+        print(f"refused: regular {args.regular!r} not in roster "
+              f"{defs_path} - sync the tree to main before checking "
+              f"the sweep pair")
+        return 2
+    if item.get("cadence") != "fixed-slots" or \
+            not _reset_anchored_offsets(item):
+        print(f"refused: regular {args.regular!r} carries no "
+              f"reset-anchored slots (reset_utc + "
+              f"slots_before_reset_minutes) - no sweep pair to "
+              f"check (issue #610)")
+        return 2
+    if args.date:
+        try:
+            year, month, day = (int(x) for x in args.date.split("-"))
+            local_date = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --date {args.date!r} is not YYYY-MM-DD")
+            return 2
+    else:
+        local_date = datetime.now(LOCAL_TZ).date()
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    slots = _reset_anchored_slots(item, local_date)
+    chain_id = item.get("chain_id_prefix", "") + \
+        local_date.isoformat() if item.get("chain_id_prefix") else ""
+    passes = []
+    for idx, slot in enumerate(slots):
+        unit = _unit_id_for_window(item, slot)
+        label = ("first pass" if idx == 0 else "final pass") \
+            if len(slots) == 2 else f"pass {idx + 1}"
+        record = {"unit": unit, "label": label,
+                  "slot": iso(slot.astimezone(timezone.utc)),
+                  "seq": idx + 1, "location": "absent",
+                  "status": "missing", "executed": False,
+                  "geometry_ok": False, "finished_at": ""}
+        state, path = None, None
+        for cand in ("done", "claimed", "inbox"):
+            cand_path = unit_path(root, cand, unit)
+            if os.path.exists(cand_path):
+                state, path = cand, cand_path
+                break
+        if state is None:
+            passes.append(record)
+            continue
+        record["location"] = state
+        fields, _ = read_unit(path)
+        planned = parse_iso(fields.get("planned_for", ""))
+        try:
+            seq = int(fields.get("chain_seq", 0))
+        except (TypeError, ValueError):
+            seq = None
+        record["geometry_ok"] = (
+            planned is not None and
+            iso(planned) == iso(slot.astimezone(timezone.utc)) and
+            seq == idx + 1)
+        result = fields.get("result", {})
+        if not isinstance(result, dict):
+            result = {}
+        if state == "done":
+            status = result.get("status", "")
+            if not status:
+                record["status"] = "done-no-result"
+            else:
+                record["status"] = status
+                record["finished_at"] = \
+                    result.get("finished_at", "") or ""
+        elif state == "claimed":
+            record["status"] = "claimed"
+        else:
+            record["status"] = "pending"
+        record["executed"] = (record["status"] in ("done", "partial")
+                              and record["geometry_ok"])
+        passes.append(record)
+    complete = bool(passes) and all(p["executed"] for p in passes)
+    print(json.dumps({
+        "regular": args.regular, "date": local_date.isoformat(),
+        "chain_id": chain_id,
+        "reset_at": iso(reset_local.astimezone(timezone.utc)),
+        "passes": passes,
+        "executed_passes": sum(1 for p in passes if p["executed"]),
+        "total_passes": len(passes),
+        "pair_complete": complete},
+        ensure_ascii=False))
+    return 0 if complete else 1
+
+def cmd_cap_audit(args):
+    """List every done closing over the 15-minute unit cap.
+
+    Issue #608: the 2026-11-10 retro found 12 units in the Nov 4-10
+    window over 900 seconds (local finished dates) - trucks
+    2026-11-09-1857 at 1,226s, donations 2026-11-10-1343 at 1,140s
+    and 10 more - hand-counted from the pool, because no tool
+    listed them. This command reproduces that list mechanically:
+    every done unit whose result.finished_at falls in the window
+    (local dates) and whose result.duration_seconds is over
+    UNIT_CAP_SECONDS. All closing statuses count - done, partial
+    and failed all ran over the cap - and a done file with no
+    duration or no finished_at is skipped, not counted. Exit 0
+    when no closing is over the cap, 1 when any is, 2 on a bad
+    date - the gate command's exit-code convention (log_append.py),
+    so a retro run can gate on it.
+
+    Read-only: it writes nothing to the pool. It resolves the
+    root to the live pool (issue #598), so a copy running from a
+    delivery worktree reads the live pool, not the worktree's
+    stale copy.
+    """
+    root = live_pool_root(args.root)
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    if args.end:
+        try:
+            year, month, day = (int(x) for x in args.end.split("-"))
+            end = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --end {args.end!r} is not YYYY-MM-DD")
+            return 2
+    else:
+        end = datetime.now(LOCAL_TZ).date()
+    if args.start:
+        try:
+            year, month, day = (int(x) for x in args.start.split("-"))
+            start = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --start {args.start!r} is not YYYY-MM-DD")
+            return 2
+    else:
+        start = end - timedelta(days=6)
+    if start > end:
+        print(f"refused: --start {args.start!r} is after --end "
+              f"{args.end!r}")
+        return 2
+    over = []
+    for f in list_units(root, "done"):
+        result = f.get("result", {})
+        if not isinstance(result, dict):
+            continue
+        duration = result.get("duration_seconds")
+        if not isinstance(duration, int) or \
+                duration <= UNIT_CAP_SECONDS:
+            continue
+        finished = parse_iso(result.get("finished_at", ""))
+        if finished is None:
+            continue
+        if not (start <= finished.astimezone(LOCAL_TZ).date() <= end):
+            continue
+        over.append({"unit": f.get("unit"),
+                     "regular": f.get("regular"),
+                     "status": result.get("status", ""),
+                     "finished_at": result.get("finished_at", ""),
+                     "duration_seconds": duration})
+    over.sort(key=lambda e: (e["finished_at"], e["unit"]))
+    print(json.dumps({
+        "start": start.isoformat(), "end": end.isoformat(),
+        "cap_seconds": UNIT_CAP_SECONDS,
+        "over_cap_count": len(over), "over_cap": over},
+        ensure_ascii=False))
+    return 1 if over else 0
+
+
 def _sweep_enqueue_refusal(args):
     """Refusal message when a hand-enqueued zero-sweep unit does not
     match the reset-anchored geometry, or None when it may proceed.
@@ -2123,6 +2404,18 @@ def _sweep_enqueue_refusal(args):
 
 
 def cmd_enqueue(args):
+    # Live-pool production (issue #598): resolve the pool first,
+    # before the wrong-root gate and before anything is read or
+    # written - a unit enqueued into a delivery worktree's inbox
+    # reaches only the records branch, while the next tick reads
+    # the live pool. Every check below (gate, chain, sequence,
+    # existence) therefore runs against the live pool, and the
+    # note names the redirect so a run log shows where the unit
+    # actually landed.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"enqueueing into the live pool {root} (issue #598)")
     # Wrong-root gate (issue #510): a root holding no pool state
     # directory is not a pool, so refuse instead of minting an
     # inbox under it - a wrong root used to silently create a stray
@@ -2133,11 +2426,11 @@ def cmd_enqueue(args):
     # pool beside the resolved _queue_ pool (issue #539) must be
     # named on the write path too, so it gets removed instead of
     # silently ignored.
-    warning = pool_root_warning(args.root)
+    warning = pool_root_warning(root)
     if warning:
         print(warning)
-    if not any(os.path.isdir(state_dir(args.root, s)) for s in STATES):
-        print(f"refused: pool root {args.root} holds no inbox, "
+    if not any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        print(f"refused: pool root {root} holds no inbox, "
               "claimed or done directory - the pool was not found, "
               "nothing queued (issue #510)")
         return 1
@@ -2155,18 +2448,18 @@ def cmd_enqueue(args):
         # extend a chain with a different regular than its existing
         # units, so per-type statistics stay clean.
         for state in STATES:
-            for f in list_units(args.root, state):
+            for f in list_units(root, state):
                 if f.get("chain_id") == args.chain_id and \
                         f.get("regular") not in ("", args.regular):
                     print(f"refused: chain {args.chain_id} belongs to "
                           f"regular {f.get('regular')}, not "
                           f"{args.regular}")
                     return 1
-        chain_seq = chain_seq_next(args.root, args.chain_id)
+        chain_seq = chain_seq_next(root, args.chain_id)
         unit = f"{args.regular}-{args.chain_id}-{chain_seq:03d}"
     else:
         unit = f"{args.regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}"
-    path = unit_path(args.root, "inbox", unit)
+    path = unit_path(root, "inbox", unit)
     if os.path.exists(path):
         print(f"already queued: {unit}")
         return 1
@@ -2186,7 +2479,7 @@ def cmd_enqueue(args):
     body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
-    os.makedirs(state_dir(args.root, "inbox"), exist_ok=True)
+    os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
     print(f"queued {unit}")
     return 0
@@ -2318,6 +2611,133 @@ def cmd_claim(args):
           f"until {fields['lease_until']}")
     return 0
 
+
+def _parse_closes_in(text):
+    """Seconds from a banner countdown: an integer, or HH:MM:SS."""
+    try:
+        seconds = int(text)
+    except (TypeError, ValueError):
+        parts = (text or "").split(":")
+        if len(parts) != 3:
+            return None
+        try:
+            hours, minutes, seconds = (int(p) for p in parts)
+        except ValueError:
+            return None
+        seconds = hours * 3600 + minutes * 60 + seconds
+    return seconds if seconds > 0 else None
+
+
+def cmd_deadline(args):
+    # Real deadlines (issue #623): a unit's slot expiry is not
+    # always its true deadline - a train unit staged to its slot
+    # end is picked by that expiry, so a boarding closing in
+    # minutes is invisible to next and the pass hands out other
+    # work while the boarding closes. The executor stamps the
+    # boarding close when the banner shows it (countdown from
+    # the banner, or an absolute close), and next returns the
+    # train first. Only tightens: a deadline at or after the
+    # current expiry, a past deadline, and any unit not in
+    # inbox are refused, so a stamp can never widen a window
+    # or resurrect a closing. Re-stamping the same value is a
+    # no-op success, so a banner re-read is idempotent. The
+    # stamp is recorded in the unit body, and sync never
+    # rewrites it: production skips a (regular, planned_for)
+    # pair that already exists instead of re-minting it, and
+    # the aged priority-1 windowing only touches units with no
+    # planned_for, which a staged train unit always has.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"stamping into the live pool {root} (issue #598)")
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    if not any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        print(f"refused: pool root {root} holds no inbox, "
+              "claimed or done directory - the pool was not found, "
+              "nothing stamped (issue #510)")
+        return 1
+    if args.expires_at and args.closes_in:
+        print("refused: pass exactly one of --expires-at and "
+              "--closes-in")
+        return 1
+    stamp = now_utc()
+    if args.expires_at:
+        deadline = parse_iso(args.expires_at)
+        if deadline is None:
+            print(f"refused: --expires-at {args.expires_at!r} is not "
+                  "a UTC timestamp YYYY-MM-DDTHH:MM:SSZ")
+            return 1
+    elif args.closes_in:
+        seconds = _parse_closes_in(args.closes_in)
+        if seconds is None:
+            print(f"refused: --closes-in {args.closes_in!r} is not "
+                  "seconds or HH:MM:SS")
+            return 1
+        deadline = stamp + timedelta(seconds=seconds)
+    else:
+        print("refused: pass --expires-at or --closes-in")
+        return 1
+    if deadline <= stamp:
+        print(f"refused: deadline {iso(deadline)} is not in the "
+              "future - the boarding already closed, let reap "
+              "expire the unit instead of stamping a dead deadline")
+        return 1
+    state, path = find_unit(root, args.unit)
+    if state != "inbox":
+        print(f"cannot stamp {args.unit}: state is {state}")
+        return 1
+    if _has_done_record(root, args.unit):
+        print(f"cannot stamp {args.unit}: already has a done "
+              f"record - the inbox copy is stale, run sync to "
+              f"drop it instead of stamping it")
+        return 1
+    if has_completion_marker(root, args.unit):
+        print(f"cannot stamp {args.unit}: already closed in "
+              f"another worktree - the inbox copy is stale, run "
+              f"sync to drop it instead of stamping it")
+        return 1
+    fields, body = read_unit(path)
+    current = parse_iso(fields.get("expires_at", ""))
+    if current is not None and deadline >= current:
+        if deadline == current:
+            print(f"already stamped: {args.unit} expires_at is "
+                  f"already {iso(current)}")
+            return 0
+        print(f"refused: deadline {iso(deadline)} is not earlier "
+              f"than the current expiry {iso(current)} - deadline "
+              "only tightens, it never widens a window")
+        return 1
+    old_expires = fields.get("expires_at", "")
+    old_priority = fields.get("priority", 3)
+    fields["expires_at"] = iso(deadline)
+    if args.priority is not None:
+        fields["priority"] = args.priority
+    reason = args.reason or "no reason given"
+    note = (f"Deadline stamped {iso(deadline)} from "
+            f"{old_expires or 'no expiry'} ({reason}).")
+    body = (body or "").rstrip("\n") + "\n\n" + note + "\n"
+    write_unit(path, fields, body)
+    rank = None
+    total = 0
+    for f in sorted(
+            (f for f in list_units(root, "inbox")
+             if _actionable(f, stamp)
+             and not _has_done_record(root, f.get("unit"))
+             and not has_completion_marker(root, f.get("unit"))),
+            key=lambda f: pick_key(f, stamp)):
+        total += 1
+        if f.get("unit") == args.unit and rank is None:
+            rank = total
+    print(f"deadline {args.unit}: expires_at "
+          f"{old_expires or '-'} -> {iso(deadline)}"
+          + (f", priority {old_priority} -> {args.priority}"
+             if args.priority is not None else "")
+          + (f", pick rank {rank} of {total} actionable inbox units"
+             if rank is not None
+             else ", not actionable yet (not_before in the future)"))
+    return 0
 
 def _stat_number(value):
     """Coerce a stats scalar to a number, or None (retro _num)."""
@@ -2453,6 +2873,41 @@ def points_is_progress_delta(stats, regular=None):
     return points is not None and points != 0
 
 
+def points_is_expected_score(stats, regular=None):
+    """True when stats.points is a Handbook-rate expected score on a trucks unit (issue #300).
+
+    points is score gained in this unit, for scoring types only
+    (task-unit-queue-design.md per-unit measurement table: duel,
+    Arms Race, radar). Trucks is not a scoring type - a trucks
+    unit never reads the VS panel; duel-score reads belong to
+    the duel-score regular, which verifies the gain live. A
+    points figure on a trucks closing is therefore a
+    Handbook-rate expected score by construction, not a unit
+    score: trucks-2026-11-09-2257 wrote points 400000 (4 times
+    the 100,000 Handbook rate from tools/duel.py), labeled in
+    its own record "expected duel points, Handbook rate,
+    pending live verification by the duel-score unit", while
+    its achieved is a dispatch/plunder count ("dispatch 4,
+    plunder 1"), so neither the equality detector nor the
+    no-achieved detector fires. The Nov 10 retro window summed
+    403,592 as points gained against an honest 3,592. This is
+    a warning, never a block, and it is scoped to trucks only:
+    the genuine non-equal gains stay counted - arms-race
+    2026-11-09-1003 points 2000 against achieved 8000 (a
+    rally kill, distinct from the phase total), donations
+    points 50, daily-missions points 100. The trucks profile
+    already carries the prevention rule (retro action
+    A-2026-11-10-01: never write an expected or Handbook-rate
+    score into stats.points); this is the detector half.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular != "trucks":
+        return False
+    points = _stat_number(stats.get("points"))
+    return points is not None and points != 0
+
+
 def achieved_is_screen_total(stats, regular=None):
     """True when stats.achieved is a screen total on a star-ceremony unit (issue #483).
 
@@ -2539,8 +2994,11 @@ def cmd_complete(args):
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
+    points_exp = points_is_expected_score(stats, fields.get("regular"))
     achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
     blocker_bad = blocker_category_not_enum(stats)
+    over_cap = isinstance(duration, int) and \
+        duration > UNIT_CAP_SECONDS
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -2560,10 +3018,14 @@ def cmd_complete(args):
                               if points_noach else [])
                            + (["points is progress delta"]
                               if points_prog else [])
+                           + (["points is expected score"]
+                              if points_exp else [])
                            + (["achieved is screen total"]
                               if achieved_screen else [])
                            + (["blocker_category not in enum a-i"]
-                              if blocker_bad else [])),
+                              if blocker_bad else [])
+                           + (["duration exceeds 15-minute unit cap"]
+                              if over_cap else [])),
     }
     # Screen-blocking overlay (issue #436): a short closing that
     # names its overlay records the pool-level blocker, so the
@@ -2621,6 +3083,16 @@ def cmd_complete(args):
               f"this unit and gifts pay no score; the Gift "
               f"Level progress gain belongs in the summary and "
               f"resources_gained only")
+    if points_exp:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"on a trucks unit - points is score gained in "
+              f"this unit and trucks pay no live-read score; a "
+              f"Handbook-rate expected score belongs in the "
+              f"summary only, verified live by the duel-score unit")
+    if over_cap:
+        print(f"warning: {args.unit} ran {duration}s, over the "
+              f"{UNIT_CAP_MINUTES}-minute unit cap - split the "
+              f"task next time so a unit stays inside one pass")
     if blocker_note:
         print(blocker_note)
     # Completed-unit marker (issue #438): the done record above
@@ -2739,6 +3211,30 @@ def _shared_token_home(root):
     if os.path.isdir(main_queue):
         return main_queue
     return None
+
+
+def live_pool_root(root):
+    """Live pool for a root that may sit in a linked worktree.
+
+    New units are live pool state: the next tick's `next` reads
+    the live pool's inbox, never a records branch's, so a unit
+    enqueued into a delivery worktree's inbox is stranded - it
+    reaches only the records branch (issue #598: ticker-1806
+    seeded the zombie chain head into the records branch inbox
+    and the live pool never saw it). The token, blockers and
+    completion markers already resolve to the main checkout
+    through _shared_token_home (issues #383, #438); production
+    does the same, so enqueue and the sync / plan / sweep
+    production path always mint into the main checkout's _queue_
+    when this copy runs from a linked worktree. A root that is
+    not in a repo (tests, scratch dirs) or whose main checkout
+    holds no _queue_ keeps the given root, and the main checkout
+    itself resolves to itself.
+    """
+    shared = _shared_token_home(root)
+    if shared is not None:
+        return shared
+    return os.path.abspath(root)
 
 
 def token_path(root):
@@ -3488,6 +3984,14 @@ def main(argv=None):
                    default=DEFAULT_LEASE_MINUTES)
     p.set_defaults(fn=cmd_claim)
 
+    p = sub.add_parser("deadline")
+    p.add_argument("--unit", required=True)
+    p.add_argument("--expires-at", default="")
+    p.add_argument("--closes-in", default="")
+    p.add_argument("--priority", type=int, default=None)
+    p.add_argument("--reason", default="")
+    p.set_defaults(fn=cmd_deadline)
+
     p = sub.add_parser("complete")
     p.add_argument("--unit", required=True)
     p.add_argument("--status", default="done",
@@ -3530,6 +4034,17 @@ def main(argv=None):
     p.add_argument("--date", default="")
     p.add_argument("--regulars-json", default="")
     p.set_defaults(fn=cmd_sweep)
+
+    p = sub.add_parser("sweep-status")
+    p.add_argument("--regular", default="zero-sweep")
+    p.add_argument("--date", default="")
+    p.add_argument("--regulars-json", default="")
+    p.set_defaults(fn=cmd_sweep_status)
+
+    p = sub.add_parser("cap-audit")
+    p.add_argument("--start", default="")
+    p.add_argument("--end", default="")
+    p.set_defaults(fn=cmd_cap_audit)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],

@@ -514,3 +514,68 @@ remain the immutable source.
   Unexplained red dots 0 - NO breach, first time.
   Batch compliance clean (0 violations out of 6).
 - Detail - daily retro 2026-11-09 in this folder.
+
+## Entry 2026-11-10
+
+- Derived from - 826 done units, finished local PDT
+  2026-11-04 to 2026-11-10, read 2026-11-11T05:35Z
+  (second re-run from c9eb29ccd2; first read
+  2026-11-11T05:05Z from 91f5dc59eb).
+  Branch pool (records/2026-11-10 tip c9eb29ccd2, re-run
+  twice when the branch advanced mid-run);
+  live pool holds 795 in the same window, gap 31.
+  Nov 10 is a partial day at the re-run (112 branch).
+- Totals - done 153, partial 197, skipped-needs-owner 5,
+  failed 108, expired 363. Executor time 142,073 seconds
+  (39.5 hours), median unit 243 seconds, p90 618 seconds.
+- Best types by done percent - scout 21 of 49, gifts 15
+  of 41, help 15 of 39, passes 14 of 42, mail 13 of 39,
+  secrets 11 of 40, treasures 11 of 39.
+- Worst types by done percent - training 0 of 41,
+  zero-sweep 0 of 17, crystal-shop 0 of 2,
+  glittering-market 0 of 2, ghost-ops 0 of 1, harvest
+  1 of 41, donations 1 of 63, survivors 2 of 43,
+  train 2 of 39.
+- Measurement state - numeric target over achieved
+  pairs 329, summed attainment 0.3042
+  (achieved_sum 9,006,144, target_sum 29,603,804);
+  the summed figure is NOT comparable: tool 1.5.3
+  excludes the star-ceremony duel screen totals
+  (4 units) that inflated the Nov 9 figure to
+  0.5541, and the remaining attainment is still
+  dominated by the duel-score running totals
+  (1,650,000 read 4 times on the same day). Points
+  403,592 reported, 3,592 honest (trucks expected
+  score 400,000 excluded - a Handbook-rate product,
+  never read live); the tool excludes 1
+  copied-points unit (arms-race-2026-11-09-0203,
+  82,500).
+  Units carrying blocker_category: e 120, h 97,
+  f 38, c 36, none 63, b 5, d 5, g 5, a 1, plus
+  non-enum values access-failed 1, time 1,
+  unverified-close 1. Unverified closings 548 (66.3
+  percent), down 6.9 points on yesterday's 73.2
+  percent.
+- Threshold breaches - unexplained red dots 3
+  (narrative accounting; diff-counted 0 is blind);
+  expired/unexecuted in day counts (15 branch, 4
+  live); quota attainment under 0.8 rolling
+  (donations 0.2266; trucks 1.0 over 1 pair but the
+  trade-day close is unknown for the fourth day);
+  unverified rate over 20 percent (66.3 percent,
+  down 6.9 points week over week); oldest open
+  improvement over 7 days (#118, 8 days old -
+  second day); recurrence of a closed improvement's
+  root cause 1 (#149, perception blackout, 1 day
+  after closure); daily standing job artifact
+  missing (ticker-0634 record, #342, about 134
+  hours; planner 1840/1940 records undelivered,
+  2040 landed 20:50; the 2040 run falsely claims
+  the sweep pair complete; duel-score-2026-11-10-
+  1803 absent from both pools with no done record);
+  ledger coverage 1 of 23 (sweep 001 ran, sweep
+  002 expired unexecuted). Batch compliance 1
+  violation (PR 556 merged 22:59:55, 5 seconds
+  before the 2300 window). Unit cap: 12 units over
+  900 seconds in the window, 4 today.
+- Detail - daily retro 2026-11-10 in this folder.

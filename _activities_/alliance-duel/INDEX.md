@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T18:32:17Z
-version: 1.39.0
+modified: 2026-11-11T11:32:17Z
+version: 1.42.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -47,6 +47,9 @@ grounded_in:
   - source: ticker-0434 shop-claims execution record 2026-11-10 0440 queue run (done, Calendar button opens the HOW TO GET POINTS dialog with the Day 3 duel theme schedule; record commit 5ba07ce2b4 on records/2026-11-10)
   - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, Alliance Duel screen read live inside the training unit - Base Expansion, 14:18:29 remaining, alliance target 1,650,000, UR truck dispatch +300,000, UR secret task +225,000; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0934 alliance-duel execution records 2026-11-10 0958 queue run (star ceremony checked only, no trophy icon, red skull badge 5 with 00:00:09) and 1004 queue run (duel total 1,650,000 read live twice, gap 1,950,000; record commit 226f5c37 on records/2026-11-10)
+  - source: ticker-1314 alliance-duel execution records 2026-11-10 1327 queue run (star ceremony checked only, no trophy icon, duel total 1,650,000) and 1331 queue run (duel total 1,650,000 read live, gap 1,950,000; record commit d781dac9d on records/2026-11-10)
+  - source: 2026-11-10 daily retro, execution-knowledge action A-2026-11-10-06 (Issue #609): schedule a duel-score unit after the last live read and before the duel rollover so the closing total is read, not inferred; Nov 10 last read 13:33, no closing read
+  - source: ticker-0212 alliance-duel execution records 2026-11-11 0224 and 0225 queue runs (done, duel total 1,650,000 read live on day 3 Age of Science, gap 1,950,000, alliance trailing TFox, no ceremony waiting; record commit b0615980f on records/2026-11-11)
 ---
 
 
@@ -195,6 +198,7 @@ decision (deferred, not ruled non-goals).
   alliance-duel record; a post-rollover read on the
   previous-day Ranking tab carries it equally (2026-11-03
   1809 precedent).
+- SCHEDULING RULE, 2026-11-10 retro action A-2026-11-10-06 (Issue #609): a duel-score unit is scheduled to run after the last live read and before the about-18:00 duel rollover, so the day's closing total is read, not inferred. The retro's 'before the 19:00 reset' wording is corrected here: the duel day rolls at about 18:00 (02:00 UTC absolute boundary), so a read after 18:00 falls on the new day and cannot carry the closed day's total (the previous-day Ranking tab can, per the 1809 precedent above). Nov 10 miss: the last read was 13:33 and the 1803 unit sat in inbox, so no closing read was taken. Verification: a live closing total read on Nov 11; recheck 2026-11-11 retro.
 - A tracking unit never grinds, spends or buys to chase the
   target - scoring actions stay with the themed-day regulars
   under the duel day gates in _tools_/duel_schedule.json.
@@ -1055,3 +1059,29 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - CORRECTION: the total is unchanged since the ticker-0434 read at 04:35 (1,650,000, record 0435-queue-run.md): the +1,200,000 above happened between 02:11 and 04:35, and no points were scored between 04:35 and this 10:03 read. The unit stats were corrected in the same pass to the established pattern (points 0, gap 1,950,000, blocker_category none); the complete tool had first recorded points as 1,650,000, duplicating achieved.
 - Movement since the last read: 450,000 at 01:51 and 02:11 (ticker-0134/0204 units) to 1,650,000 now, +1,200,000 during the morning. No scoring action was taken by this unit; the rise is other units' and the owner's play (a UR truck dispatch pays +300,000 per the panel's scoring list, so the rise is consistent with four UR dispatches, noted as consistency only, not a derived claim). This is the same +1,200,000 the 0435 read already verified against the 0248 trucks unit's 4 UR dispatches at the live 300,000 rate (Issue #565).
 - Outcome: done. Personal total 1,650,000 read live twice, gap 1,950,000. Tracker marked done for duel-score. Returned to the base screen with the panel back arrow. No diamonds, money, speedups or stamina spent; no scoring action taken, no chest tapped, no grind. Game left on the own base screen.
+
+## What the 2026-11-10 1327 and 1331 units added - duel total 1,650,000 read twice more, unchanged all duel day, gap 1,950,000
+
+- Star-ceremony unit star-ceremony-2026-11-10-1030 by ticker-1314, 13:27 to 13:29 local, status done (checked only). Evidence in `_records_/2026-11-10/alliance-duel/1327-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-461 on the owner Mac mini, LastWar already open on the base screen.
+- Duel-score unit duel-score-2026-11-10-1030 by ticker-1314, 13:31 to 13:33 local, status done. Evidence in `_records_/2026-11-10/alliance-duel/1331-queue-run.md` (commit d781dac9d on records/2026-11-10). Computer session cc-461 on the owner Mac mini, LastWar already open on the base screen.
+- Theme: Base Expansion. Personal daily total 1,650,000 (gold medal figure under the theme title; the 1331 read confirmed by OCR as well as the screenshot) at both reads. Target 3,600,000; gap 1,950,000. Unchanged from the 0435, 0438 and 1004 reads - five reads at 1,650,000 across the day, and no points scored between 04:35 and 13:33.
+- All three theme chests (40,000 / 150,000 / 540,000) show green checkmarks, already claimed.
+- Timer arithmetic, ninth and tenth live timers pointing at the about-18:00 rollover (Issue #242 resolution): 04:35:38 left at the 13:27 read ends about 18:02:38; 04:33:27 left at the 13:31 read ends about 18:04:27.
+- No ceremony waiting at the 1327 read: no trophy icon on the base screen beside the Alliance button. The red circular icon with a short countdown above the Alliance button is not the ceremony trophy and was left untouched (same as the 0438 unit found this morning). A "Violet's Gift received!" toast appeared on the base screen before the 1331 panel was opened; it is an ally gift arrival, not part of this unit, and was left for the gifts regular.
+- CORRECTION on the records' wording: both records say "Not the 19:00 reset closing read" - that 19:00 attribution is superseded by the settled about-18:00 rollover (see the 0151/0211 correction for the same stale wording). The day's closing read is the last read before about 18:00, not 19:00. These are mid-day reads; the closing read is still owed from the last duel-score unit before about 18:00.
+- No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
+- Result stats: target 3600000, achieved 1650000, gap 1950000, resources_gained none, costs about 3 minutes (1327) and 2 minutes (1331) play, verified yes, blocker_category none, points 0 (read-only units; the personal total is a read, not a score gained inside the unit), device_takeovers 0.
+
+## What the 2026-11-11 0224 and 0225 units added - day 3 Age of Science, duel total 1,650,000 again, gap 1,950,000, no ceremony waiting
+
+- Duel-score unit duel-score-2026-11-10-2230 by ticker-0212, 02:23 to 02:24 local, status done. Evidence in `_records_/2026-11-11/alliance-duel/0224-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539 on the owner Mac mini.
+- Star-ceremony unit star-ceremony-2026-11-10-2230 by ticker-0212, 02:25 local, status done (checked only). Evidence in `_records_/2026-11-11/alliance-duel/0225-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539.
+- Theme: Age of Science, day 3. Personal daily total 1,650,000 read live on the panel. Target 3,600,000; gap 1,950,000. The three personal reward chests (40,000 / 150,000 / 540,000) all show claimed checkmarks. NOTE: 1,650,000 is the same figure as every read on the 11-10 duel day (0435, 1004, 1331) - the day-3 total at 02:23 happens to equal the day-2 figure; recorded as measured, no carry-over is asserted (the day-2 figure was read on a different theme day).
+- Scoring paths on the tab, read live: 1-min Research Speed-up +150, Tech Power +1pt +30, 1 Valor Badge +750, 1 Radar Task +30,000, Diamond packs +30 per diamond, Lv.1 Drone Component Chest +2,750.
+- Duel Progress cross-check: [AP3x] The Apex #2110 at 362,981,998 (40%) vs [TFox] Fox #2115 at 538,728,501 (60%). Today's winning alliance earns 2 Alliance Duel Scores. The Apex is trailing. Top members: [TFox]Mathewzetsu 22,693,950, [TFox]Satriaa Batang Hitam 18,403,594, [AP3x]별꼴오소리Teemo 15,199,150.
+- Timer arithmetic, eleventh and twelfth live timers pointing at the about-18:00 rollover (Issue #242 resolution): 15:36:51 left at the 02:23 read ends about 18:00; VS 15:35:15 at the 02:25 read ends about 18:00. Day ends 2026-11-11 18:00 PT per tools/duel.py posture (duel day 3, 15.6 hours left at the read, Win points 2, Radar posture: release).
+- No ceremony waiting at either read: no trophy icon beside the Alliance button. The Alliance button keeps a red dot (Store/Help residue, not a ceremony). Right rail at the 0225 read: Events (2), VS 15:35:15, radar 2d and 4d timers, the zombie icon with a 2 badge and a 00:00:13 timer, Alliance with a red dot, Mail and Inventory.
+- Side observation: diamonds read 6,287 at pass entry and 6,307 on the base screen after the mail claims, plus 20. No summary dialog in this pass itemised diamonds, so the source is unattributed here; recorded as observed.
+- Not the day closing read: the day rolls over about 18:00, and the day still has about 15.6 hours to run at the 02:23 read. The closing read is still owed from the last duel-score unit before about 18:00 (retro action A-2026-11-10-06, Issue #609; recheck 2026-11-11 retro).
+- No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
+- Result stats: target 3600000, achieved 1650000, gap 1950000, resources_gained none, costs about 1 minute (0224) and 1 minute (0225) play, verified yes, blocker_category none, points 0 (read-only units; the personal total is a read, not a score gained inside the unit), device_takeovers 0.
