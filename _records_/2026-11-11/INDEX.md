@@ -843,20 +843,73 @@ of 2026-10-28.
   worktree early in this pass; no loss identified, rule
   recorded going forward. Full detail in
   pr-integration/0400-run.md.
+## About 04:05 to 04:12 - Ticker pass ticker-0404, zombie-invasion unit 008 partial
 
-## 04:15 to about 04:20 - pr-integration 0415 pass (non-batch)
+- Ticker pass ticker-0404. Own PRs first: records PR 627
+  (2026-11-11, post-0300 batch) OPEN and MERGEABLE with no
+  comments; records PR 615 (2026-11-10) OPEN and MERGEABLE,
+  integrator note says reconciled by ticker-0313 and ready
+  for the next batch merge. No question addressed to this
+  job. Zombie-invasion unit
+  zombie-invasion-zombie-2026-11-10-008 partial: 2 Lv.10
+  kills in parallel (X:434 Y:404, X:430 Y:425), both LOOT
+  rows claimed for 536,000 coins (coin HUD 119.0M to
+  119.5M); squads_parallel 2; stamina 67 to 48; medals
+  4060 to 4080 (Store header, live). Store Coin Chest
+  (SSR) row below the fold and not reached — the Store
+  list does not move on the scroll action; no redemption
+  made. Cleared false, successor enqueued. Status:
+  partial. Full detail in
+  zombie-invasion/0412-queue-run.md.
 
-- Standing PR integrator pass, NON-batch: checker plain
-  and merge-aware both not due (outside every batch
-  window; next batch 07:00 PT). No merges. Records PRs
-  627 (2026-11-11, branch tip 3f5a93dd) and 615
-  (2026-11-10, head 5f302d8cc3) both probed CLEAN against
-  main 775e3254e and await the 07:00 batch. Tools PR 425
-  still owner-gated (OD-20261108-01 open, no owner
-  decision); head 0fb5a27f6 unchanged and main unchanged
-  since the 0345 verification, so no new comment
-  (identical verification, merged tree 31b46364). Process
-  note: a git checkout main plus git pull in the shared
-  VPS main worktree early in this pass, verified a no-op,
-  no loss identified. Full detail in
-  pr-integration/0415-run.md.
+
+## About 04:13 to 04:17 - Ticker pass ticker-0404, harvest unit partial
+
+- Ticker pass ticker-0404 (continued). Harvest unit
+  harvest-2026-11-11-0203 partial: all farmland bubbles
+  collected in one tap (food 668.2M to 670.2M), iron
+  +1.8M (990.9M to 992.7M), coin +1.4M (119.5M to
+  120.9M, HUD-verified); two coin bubbles tapped
+  individually. Two mis-taps opened the Iron Mine Lv.27
+  panels (Output/hr +129,258, Max Production Time 11hr
+  36min; Javier assigned Miner at +54.00%); the
+  Survivor List X ignored two taps and Selected did
+  nothing — a dim-area tap closed it. 1–2 small coin
+  bubbles remain and the Armed Truck was not checked;
+  the next harvest unit picks both up. Status: partial.
+  Full detail in resource-collection/0417-queue-run.md.
+## About 04:05 to 04:12 - Ticker pass ticker-0404, zombie-invasion unit 008 partial
+
+- Ticker pass ticker-0404. Own PRs first: records PR 627
+  (2026-11-11, post-0300 batch) OPEN and MERGEABLE with no
+  comments; records PR 615 (2026-11-10) OPEN and MERGEABLE,
+  integrator note says reconciled by ticker-0313 and ready
+  for the next batch merge. No question addressed to this
+  job. Zombie-invasion unit
+  zombie-invasion-zombie-2026-11-10-008 partial: 2 Lv.10
+  kills in parallel (X:434 Y:404, X:430 Y:425), both LOOT
+  rows claimed for 536,000 coins (coin HUD 119.0M to
+  119.5M); squads_parallel 2; stamina 67 to 48; medals
+  4060 to 4080 (Store header, live). Store Coin Chest
+  (SSR) row below the fold and not reached — the Store
+  list does not move on the scroll action; no redemption
+  made. Cleared false, successor enqueued. Status:
+  partial. Full detail in
+  zombie-invasion/0412-queue-run.md.
+
+
+## About 04:13 to 04:17 - Ticker pass ticker-0404, harvest unit partial
+
+- Ticker pass ticker-0404 (continued). Harvest unit
+  harvest-2026-11-11-0203 partial: all farmland bubbles
+  collected in one tap (food 668.2M to 670.2M), iron
+  +1.8M (990.9M to 992.7M), coin +1.4M (119.5M to
+  120.9M, HUD-verified); two coin bubbles tapped
+  individually. Two mis-taps opened the Iron Mine Lv.27
+  panels (Output/hr +129,258, Max Production Time 11hr
+  36min; Javier assigned Miner at +54.00%); the
+  Survivor List X ignored two taps and Selected did
+  nothing — a dim-area tap closed it. 1–2 small coin
+  bubbles remain and the Armed Truck was not checked;
+  the next harvest unit picks both up. Status: partial.
+  Full detail in resource-collection/0417-queue-run.md.
