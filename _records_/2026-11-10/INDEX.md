@@ -3046,3 +3046,16 @@ modified: 2026-11-10T14:21:00Z
   closed or reopened; owner-decision issues 132, 154, 335,
   514 and 517 all over 24 hours with statements current.
   Status: no-op. Full detail in pr-catchall/1739-run.md.
+## 17:40 to about 17:52 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-1740. Plan staged 0
+  units into the live pool (12-hour horizon already fully
+  covered; 67 already present, 2 skipped done current, 7
+  skipped closed), pre-reset sweep pair verified present in
+  the 17:00 hour run (first pass done, final pass in inbox,
+  0 enqueued), scout diff re-applied on the unchanged
+  two-pass observation with identical 0 counts
+  (idempotent), 0 withdrawals, Issue #593 filed for the
+  newly seen three-button shortcut cluster (play, idea).
+  Pool by_state: inbox 69, claimed 0, done 1474. Status:
+  done. Full detail in queue-planning/1740-run.md.
