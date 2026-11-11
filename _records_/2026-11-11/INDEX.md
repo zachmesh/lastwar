@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-11
 created: 2026-11-11T08:17:13Z
-modified: 2026-11-11T08:50:54Z
+modified: 2026-11-11T09:47:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened)
+description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened); the 0132 knowledge organization pass (folded the ticker-0004/0055 passes; PR #621 opened)
 status: unverified
 ---
 
@@ -199,3 +199,25 @@ of 2026-10-28.
   clean, unchanged (OD-20261108-01 open). Status: done.
   Full detail in pr-integration/0115-run.md.
 - Integrator pass pr-integration-2026-11-11-0130. Non-batch pass per the checker (plain not due, outside every batch window, next batch 03:00): no records merges, no knowledge/code merges; re-verification comments posted on PRs 301 and 425 against new main 177477ac. Records PRs 301, 615 and 618 re-verified CLEAN against main 177477ac, awaiting the 03:00 batch; PR 618 head 79418ebd (the 0115 run-record commit). Tools PR 425 owner-gated, clean, unchanged (OD-20261108-01 open). Status: done. Full detail in pr-integration/0130-run.md.
+
+## 01:32 to about 01:47 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-0132, worked from
+  the 0032 run watermark (substantive through 5c07e8d40). Folded
+  the ticker-0004 pass (commit 9ba46aa1: donations 0024, zombie
+  0030) and the ticker-0055 pass (commit b88b502d: donations
+  0107, harvest 0117): alliance-donations 1.93.0 to 1.94.0
+  (replenishment datapoints 46th +1 in ~28 min, 47th +1 in
+  ~27 min, conditional 48th; route held in 0024, deviated in
+  0757; cooldown range corrected to 02:50-19:35), zombie-invasion
+  1.26.0 to 1.27.0 (first parallel dispatch squads_parallel 2,
+  2 Lv.10 kills, LOOT 536,000 coins, 5th/6th 268,000-row
+  confirmations, +10 medals per kill confirmed, 120-medal row
+  corrected to Universal Exclusive Weapon Shard), resource-
+  collection 1.57.0 to 1.58.0 (food +1.6M, coin +1.1M, iron
+  +1.4M verified; grounding-normalization method correction;
+  Armed Truck eighth deferral) and perception-driven-queue
+  1.2.3 to 1.2.4 (same correction). PR #621 opened (1 commit
+  57ce6040e). Issue comments posted on #160, #500, #558, #599,
+  #566, #502. No new issue. Status: done. Full detail in
+  knowledge-organization/0132-run.md.
