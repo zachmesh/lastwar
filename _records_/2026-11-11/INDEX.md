@@ -1204,3 +1204,18 @@ of 2026-10-28.
   (OD-20261108-01 open), head 0fb5a27f6, MERGEABLE/CLEAN, no
   action owed. Status: done. Full detail in
   tool-development/0532-run.md.
+
+## 05:40 to about 05:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-0540. Plan staged 1
+  unit (zero-sweep-2026-11-11-1730, seq-2 of tonight's sweep
+  pair, completing the pair; 67 already present for the next
+  12 hours, 4 skipped done-current, 4 skipped closed
+  harvest-2026-11-11-0203, radar-2026-11-11-0203,
+  survivors-2026-11-11-0203 and zero-sweep-2026-11-10-1730,
+  0 reaped/expired); sweep production skipped (05:00 hour).
+  Scout diff on the 2026-11-10 15:14 observation re-applied
+  with identical 0 counts (observed/actionable/enqueued/
+  candidates/unexplained 0), 0 withdrawals, no new issue.
+  Pool inbox 74, claimed 1, done 1536. Status: done.
+  Full detail in queue-planning/0540-run.md.
