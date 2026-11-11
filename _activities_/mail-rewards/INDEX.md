@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T21:32:17Z
+modified: 2026-11-11T11:32:17Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -42,6 +42,7 @@ grounded_in:
   - source: ticker-0334 mail-rewards execution record 2026-11-10 0355 queue run (done, Claim All sweep, no claimable rewards, R5 warning mail read; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0904 mail-rewards execution record 2026-11-10 0929 queue run (partial, entry blocked by camera framing, Mail panel never opened, fourth unit this reset day with the same blocker, Issue #580; record commit 31892dde on records/2026-11-10)
   - source: ticker-1234 mail-rewards execution record 2026-11-10 1259 queue run (done, Event train rewards claimed in full, mail-list back arrow re-grounded at norm 62,948; record commit 98abbc761 on records/2026-11-10)
+  - source: ticker-0212 mail-rewards execution record 2026-11-11 0222 queue run (done, Alliance Daily Donation Rankings and Event Arms Race rewards claimed, both lists verified empty of gift icons; record commit b0615980f on records/2026-11-11)
 ---
 
 
@@ -979,3 +980,13 @@ the next tick re-produces this regular as a fresh unit.
 - BACK-ARROW BLOCKER RESOLVED IN-UNIT: the mail list back arrow did not respond to taps at (57,902) and (40,900) on window 489932, nor to a press-hold or taps at (55,925) and (40,955) on window 508052 - four no-change attempts in total. A fresh screenshot crop measured the arrow's true centre in the 642x951 window at (62,948); a tap there worked at once, and the same point worked for every later back tap in this unit. Earlier taps missed high (the button sits at about y 869-935 px, centre about y 902 px). Keyboard input is unavailable in this app - focus belongs to the other LastWar window - and the AX tree carries no back button element (game canvas), so coordinate taps at the freshly measured centre are the working route. See the updated How to enter entry.
 - Figures read live: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry and at close (unchanged). No login or verification demanded, no different-device dialog.
 - Result stats: target 1, achieved 1, resources_gained Event train bundle (gold badge 2.5K x1, supply chests x53, red gem 100 x1, blue crystal 2.0K, 5m speedups x20), costs about 14 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-11 0222 unit added - Alliance and Event Claim All, Daily Donation Rankings and Arms Race rewards claimed
+
+- Unit mail-2026-11-10-2230 by ticker-0212, 02:20 to 02:22 local, status done. Evidence in `_records_/2026-11-11/mail-rewards/0222-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539 on the owner Mac mini.
+- Category list at entry: Battle Report no gift icon; Alliance gift icon; Event gift icon; System one mail with a player avatar, no gift icon; Regular unread red dot, no gift icon; In-app Purchases unread red dot, receipts only; Favorite no icon. Only Alliance and Event carried a gift icon, so only those two categories were opened and claimed. Regular, System and Battle Report were not opened in this unit; they showed no gift icon on the category row.
+- Alliance: list - Daily Donation Rankings (8h ago, gift icon), Voting Results (10h ago, unread), New Alliance Assembly Point (21h ago), Attention (1d ago, R5), New Alliance Assembly Point (1d ago, twice). Claim All tapped. Summary dialog: red gem x10, gold badge 50 x4. The Daily Donation Rankings gift icon was gone afterwards.
+- Event: list - train mails from [AP3x] Missile Apex and [AP3x] MrCallejon (12m, 2h and 4h ago) plus "Unclaimed Arms Race event re..." (4h ago, gift icon). Claim All tapped. Summary dialog tiles read live: grey crates x57, grey-blue crates x30, blue crystal 38.0K, gold coins x57, blue triangle x500, iron x4, Lv.2 chest x1, red gem 50 x2, red gem 10 x5, 5m speedup x8. One further row of tiles at the top of the dialog was cut off by the banner and is not recorded - its icons and counts were not read live.
+- After the tap the list showed no red dots and no gift icon on the Arms Race mail; all rows greyed. Delete All was never pressed.
+- Outcome: done. Alliance Daily Donation Rankings claimed; Event Arms Race and train mail attachments claimed. No diamonds or money spent. The game was left on the base screen.
+- Result stats: target claim every claimable reward attachment in mail, achieved Alliance Daily Donation Rankings claimed and Event Arms Race and train mail attachments claimed, resources_gained Alliance red gem x10, gold badge 50 x4; Event grey crates x57, grey-blue crates x30, blue crystal 38.0K, gold coins x57, blue triangle x500, iron x4, Lv.2 chest x1, red gem 50 x2, red gem 10 x5, 5m speedup x8 (plus one cut-off top row not read), costs about 2 minutes play, verified yes, blocker_category none, categories_with_gift_icons 2, categories_checked 2, device_takeovers 0.
