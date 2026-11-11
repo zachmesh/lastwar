@@ -43,5 +43,10 @@
   "status": "done",
   "at": "2026-11-11T03:06:58-08:00",
   "note": "No dig: M3=0; chest track 12/15"
+ },
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-11-11T05:40:44-08:00",
+  "note": "Tech Research re-verified live 0535: score 0 vs 6250/12500/30000, no in-scope path, no rewards claimable"
  }
 }

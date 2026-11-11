@@ -1235,3 +1235,58 @@ of 2026-10-28.
   and re-verification commented (main moved by two
   merges since 0445). Status: done. Full detail in
   pr-integration/0553-run.md.
+
+## 05:35 to about 05:57 - Ticker pass ticker-0534, arms-race, donations, training and research units
+
+- Arms Race (0535, ticker-0534, skipped-needs-owner): Tech
+  Research re-verified live, score 0 against thresholds 6,250 /
+  12,500 / 30,000, phase timer 00:20:48 at first read (ends about
+  06:00). Only in-scope path is a research completion, none lands
+  in the phase; the other paths are the banned speedup and pack
+  spends. Ranking chest opens a contents preview only (Iron/Food/
+  Coin Chest (SR) 3 each), cumulative chest 7/8, nothing claimable.
+  Entry note: Events icon grounds live at (934,160); the tab bar
+  shifts, a drag was needed to reveal the Arms Race tab. Correction
+  in the record: the 23h30m/1d08h timers cited as a "0004 live
+  read" are the 2026-10-26 example, not a 2026-11-11 live read;
+  the live queue read in the 0553 research unit (slot 1 busy
+  04:27, slot 2 Idle) now supports the no-completion conclusion.
+  Detail in arms-race/0535-queue-run.md.
+
+- Donations (0541, ticker-0534, partial): 4 coin donations to
+  Rallied Attack (7/10), verified by two live reads - Tech EXP
+  24.9K to 25.1K and Tech Donation Today footer 3400 to 3600.
+  The fifth tap hit the burst limit; the coin button greyed with
+  a 00:19:31 cooldown that hides the Donation Count label, so the
+  closing 7/30 is derived, not live-read, and the tracker stays
+  untouched. 23 remain (derived); the next unit re-reads after
+  the cooldown ends about 06:19. Entry findings: the Arms Race
+  page back arrow ignores background clicks (three dead variants)
+  - the Desert Battlefield detour works; the Alliance shield
+  fresh centre (919,694) opened on the first tap. The unit ran
+  about 6 minutes (claimed 05:41:13, token released 05:47:18),
+  inside the 15 minute cap. Detail in
+  alliance-donations/0541-queue-run.md.
+
+- Training (0548, ticker-0534, partial): 1 of 4 barracks checked
+  - Lv.24, T8 x666, "Training in progress 11:01:26", busy until
+  about 16:58, no action possible; Speed Up not tapped. A tap at
+  (763,584) opened the radar map instead of a barracks (no radar
+  action taken); tents must be re-grounded fresh every unit. The
+  other three barracks unchecked; the Lv.27 idle / Drill Ground
+  Full state is carried from unit 2146, unverified today, and the
+  Drill Ground live read assigned to this unit did not happen
+  (pass budget ended at the Lv.24 panel) - it stays the next
+  training unit's first action. The unit ran about 4 minutes
+  (claimed 05:48:15, completed 05:52:27). Detail in
+  troop-training/0548-queue-run.md.
+
+- Research (0553, ticker-0534, done): queue read live in full -
+  slot 1 busy, countdown 04:27:41 falling to 04:26:35 (finishes
+  about 10:21), slot 2 Idle; nothing finished, nothing completed.
+  Slot 2 idle is reported for the owner direction (no research
+  started). TECH hub: Development 84%, Economy 98%, Hero 68%,
+  Units 77%, Squad 1 Max, Squad 2 11%, Squad 4 0%, Alliance Duel
+  Max, Intercity Truck 95%. This live queue read also repairs the
+  0535 arms-race record's evidence (see its correction). Detail in
+  research-queue/0553-queue-run.md.
