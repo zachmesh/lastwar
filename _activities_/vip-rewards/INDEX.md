@@ -1,9 +1,9 @@
 ---
 title: VIP Rewards
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T00:59:08Z
+modified: 2026-11-10T23:32:17Z
 level: L1
-version: 1.16.0
+version: 1.17.0
 description: Claiming the daily VIP gift and VIP level rewards, one activity folder for VIP claim knowledge
 status: unverified
 grounded_in:
@@ -23,6 +23,7 @@ grounded_in:
   - source: ticker-0504 perception-scout execution record 2026-11-08 0512 queue run (done, Freebie re-check, cart dot is the Store shortcut, record commit 111f7e954 on records/2026-11-08)
   - source: ticker-0534 perception-scout execution record 2026-11-08 0542 queue run (done, VIP panel re-read, Daily Freebie still claimable, cart dot absent, VIP Store full stock); record commit 707bcec0d8 on records/2026-11-08
   - source: ticker-1518 vip-rewards execution record 2026-11-09 1540 queue run (done, Daily Freebie and login chest both claimed in one pass, freebie blocker did NOT recur, plain tap at norm 759,670, VIP points 1,613,660 to 1,613,740 plus 80, freebie countdown to the 18:00 reset superseding the 24-hour-cycle correction; record commit da249faca3 on records/2026-11-09)
+  - source: ticker-1424 vip-rewards execution record 2026-11-10 1438 queue run (done, Daily Freebie and login chest both claimed on first taps, VIP points 1,626,930 to 1,627,030 plus 100, streak 4 days; record commit edd4659a3 on records/2026-11-10)
 ---
 
 
@@ -178,7 +179,7 @@ Measured on 2026-10-25.
 
 ## Open questions
 
-- Whether the freebie contents rotate or are fixed per level. (2026-11-09 1540 update: the same contents again - puzzle piece x2, food crate x13, iron crate x13, coin crate x13 - claimed live; rotation across days still unanswered.)
+- Whether the freebie contents rotate or are fixed per level. (2026-11-09 1540 update: the same contents again - puzzle piece x2, food crate x13, iron crate x13, coin crate x13 - claimed live; rotation across days still unanswered.) (2026-11-10 1438 update: the same contents again - puzzle piece x2, food crate x13, iron crate x13, coin crate x13 - claimed live a second consecutive day; rotation across days still unanswered.)
 - What reaching VIP 14 pays and unlocks.
 
 ## What the 2026-11-02 2138 unit found - checked only, both items already claimed
@@ -385,3 +386,14 @@ Measured on 2026-10-25.
 - Follow-up: none. Both VIP items for this reset day are claimed; the next freebie is due after the 18:00 reset. Note for the planner: the vip-2026-11-09-2349 unit the planner-1540 pass enqueued on the stale observation's "VIP icon red dot bottom left" entry carries a premise the 1609 scout corrected (that icon is the HEROES button, not VIP - see the perception-scout 1609 fold); if the ticker picks it up after the 18:00 reset it would find the new cycle's freebie genuinely claimable, so the unit is a phantom for its stated reason, not necessarily a no-op.
 - No diamonds spent, no money spent, no paid offer tapped, no points-plus button tapped. Game left on the base screen.
 
+## What the 2026-11-10 1438 unit added - Daily Freebie and login chest both claimed on first taps, VIP points 1,626,930 to 1,627,030, done
+
+- Unit vip-2026-11-09-1800 by ticker-1424, about 14:38 to 14:44 local, status done - the Daily Freebie and the login chest were both claimed in this unit. Evidence in `_records_/2026-11-10/vip-rewards/1438-queue-run.md` (commit edd4659a3 on records/2026-11-10). Computer session cc-473 on the owner Mac mini (the earlier session cc-469 had closed between units, so a fresh session was started). No device-access error, no different-device dialog, no login demanded. LastWar was already running on the base screen at entry.
+- CORRECTION to the record's framing: the record calls this "the first VIP unit since 2026-10-30 to take both" - the 1540 unit on 2026-11-09 already took both in one pass, so this is the SECOND consecutive unit to take both, not the first since 2026-10-30. The activity metadata's "3 of the 4 queue-era units closed partial on unresponsive claim buttons" predates the 1540 fold.
+- VIP screen read live at entry: VIP13, logged in 4 days in a row, collect 120 VIP points tomorrow, points 1,626,930/2,000,000. The profile VIP13 badge carried its red dot; the login chest at the top right of the VIP screen carried its red dot.
+- Daily Freebie claimed on the first tap: puzzle piece x2, food crate x13, iron crate x13, coin crate x13 (the CONGRATULATIONS popup showed the same four items) - the same contents as the 1540 claim on 2026-11-09, a second consecutive identical day; the rotation question stays open. The button then read a countdown of 03:19:17, pointing at the about 18:00 local refresh.
+- Login chest claimed on the first tap: the popup read "Today's VIP Points 100, Consecutive Login Days 4, Next Day's VIP Points 120". Points read live after the claim at 1,627,030/2,000,000, up exactly 100. The chest's red dot was gone on the closing read.
+- The freebie-button blocker from the 1734 unit (four input variants unresponsive) did NOT recur for the second consecutive unit - both items claimed on plain first taps here and in the 1540 unit.
+- The VIP Exclusive $99.99 offer on the same screen was not touched, nor the points plus button or the cart shortcut.
+- Returned to the base screen at close. This unit closes the P1 anomaly carried in the 2026-11-10 1432 round summary (vip-2026-11-09-1800 unclaimed about 20.5h) - the unit is now claimed.
+- No VIP level milestone was pending. No diamonds spent, no money spent, no paid offer tapped, no points-plus button tapped. Game left on the base screen.
