@@ -356,3 +356,16 @@ of 2026-10-28.
   (OD-20261108-01 open). No comments posted this pass
   (no-repeat rule). Status: done. Full detail in
   pr-integration/0215-run.md.
+
+## 02:30 to about 02:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0230. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): no records merges, no
+  knowledge/code merges; records PRs 301, 615 and 618
+  re-verified CLEAN against main a2c42a7a, awaiting the
+  03:00 batch; PR 618 head advanced a849d4c9 to dbf64bdd
+  (0215 run-record commit), re-verified CLEAN; tools PR 425
+  owner-gated, clean, unchanged (OD-20261108-01 open). No
+  comments posted this pass (no-repeat rule). Status: done.
+  Full detail in pr-integration/0230-run.md.
