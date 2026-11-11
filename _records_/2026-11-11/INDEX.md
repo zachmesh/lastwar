@@ -2263,3 +2263,21 @@ of 2026-10-28.
   since the 1245 verification note). No merges; no
   Slack sync (silent run). Status: done.
   Full detail in pr-integration/1315-run.md.
+
+## 12:59 to about 13:24 - Ticker pass ticker-1259, survivors unit 1003 partial
+
+- Survivor-intake (1259, ticker-1259, partial, unverified): no
+  recruit verified, gate line never reached. The executor's
+  zoom click left the game window in Zoom to Fit (1920x1080,
+  game letterboxed); from there no canvas tap landed - home
+  button snapped, unsnapped and long-press, base tap, and a tap
+  on the second window surface all showed no change, although
+  the button was measured on-screen (capture x 801-852,
+  y 626-706). Restoration failed: View menu toggle ignored,
+  resize_window refused, Cmd-Tab blocked, activate selects
+  background input only, and the channel never moves the system
+  cursor so the Dock cannot be clicked. The next pass hits the
+  same wall until the window is back windowed 642x951 and
+  frontmost - that needs a real mouse action on the Mac. Zoom
+  must never be used as an activation step again. Tooling Issue
+  #648 filed. Detail in survivor-intake/1259-queue-run.md.
