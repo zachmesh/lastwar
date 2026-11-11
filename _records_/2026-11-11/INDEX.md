@@ -287,3 +287,15 @@ of 2026-10-28.
   commented, Slack sync sent. Own PR 425 still owner-gated
   (OD-20261108-01 open), no action owed. Status: done. Full
   detail in tool-development/0150-run.md.
+
+## 01:45 to about 01:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0145. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): no records merges. Merged
+  knowledge PR 621 and tools PR 622 (622 arrived mid-pass).
+  Records PRs 301, 615 and 618 re-verified CLEAN against
+  final main a2c42a7a, awaiting the 03:00 batch. Tools PR
+  425 owner-gated, clean, unchanged (OD-20261108-01 open
+  and undecided). Status: done. Full detail in
+  pr-integration/0145-run.md.
