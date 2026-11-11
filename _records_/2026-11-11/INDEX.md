@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-11
 created: 2026-11-11T08:17:13Z
-modified: 2026-11-11T15:02:54Z
+modified: 2026-11-11T15:14:38Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened); the 0132 knowledge organization pass (folded the ticker-0004/0055 passes; PR #621 opened); the 0232 knowledge organization pass (folded the ticker-0135/0155 passes; PR #624 opened); the 0315 PR integration pass - NON-batch pass (checker plain due yes inside the 03:00-04:00 PT window, but merge-aware not due - PR 618 already merged in this window by the 0300 batch pass, first-pass rule bars a second batch merge); no merges; records PR 615 reconciled branch-side by ticker-0313 (merged main 51c5741d7, merge commit 5f302d8cc3), re-verified CLEAN at head 5f302d8cc, awaiting the 07:00 batch; records PR 627 clean at head b519b5636, awaiting the 07:00 batch; tools PR 425 owner-gated, clean, unchanged, no new comment; the 0330 PR integration pass - NON-batch pass (checker plain due yes inside the 03:00-04:00 PT window, but merge-aware not due - PR 618 already merged in this window by the 0300 batch pass, first-pass rule bars a second batch merge); no merges; records PR 627 clean at head 0fb84bb75, awaiting the 07:00 batch; records PR 615 clean at head 5f302d8cc3, awaiting the 07:00 batch; tools PR 425 owner-gated, clean, unchanged, re-verification comment posted (redundant against unchanged main, noted in the run record)
@@ -1483,3 +1483,19 @@ of 2026-10-28.
   returned trucks to settle; Recover red dot still waiting. Next
   trucks unit resumes the shortfall (dispatch to 5/5, plunder to
   4/4). Detail in truck-plunder/0701-queue-run.md.
+
+## 07:00 to about 07:14 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0700.
+  BATCH pass (checker plain and merge-aware both due,
+  window 07:00-08:00 PT). Merged knowledge PR 635
+  (squash 41590c5bc) and records PR 627 (merge df82f25ad,
+  49 commits). Records PR 615 conflicted on 9 _queue_
+  files after the 627 merge; conflict comment posted,
+  carried to the 11:00 batch after a branch-side
+  reconcile. Tools PR 425 still owner-gated
+  (OD-20261108-01 open), re-verified CLEAN against new
+  main df82f25ad, re-verification comment posted. Local
+  main synced to df82f25ad via the bundle route. Slack
+  sync sent (ts 1794409847.071799). Status: done. Full
+  detail in pr-integration/0700-run.md.
