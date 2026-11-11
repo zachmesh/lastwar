@@ -3803,3 +3803,4 @@ modified: 2026-11-10T14:21:00Z
   Store not visited; medal balance not re-read. Successor
   enqueued to start now. Full detail in
   zombie-invasion/2219-queue-run.md.
+- Integrator pass pr-integration-2026-11-10-2215. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. No knowledge/code PR arrived. Records PR #597 verified CLEAN at two heads seen this pass (b8bf6925, b11294e7) and awaits the 23:00 batch; 1 verification comment posted plus 1 correction (tree/stat slip fixed at once). Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against the unchanged main e533edfd3; no new comment owed. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2215-run.md.
