@@ -2971,3 +2971,17 @@ modified: 2026-11-10T14:21:00Z
   re-grounds from the 12:29 record's successful tent point
   before any pan. Base left on the top-edge view. Nothing
   spent. Full detail in troop-training/1649-queue-run.md.
+
+## 17:00 to about 17:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1700.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 19:00): no records merges.
+  Records PR 590 clean at head 986c1877 (24 commits beyond
+  main), awaiting the 19:00 batch. Records PRs 351 and 301
+  still conflicting on the action-log file. Tools PR 425
+  owner-gated, clean at new head 0fb5a27f (merge of main),
+  OD-20261108-01 still open. One re-verification comment
+  stands on 425 (new head); two comments on 351/301 posted
+  then deleted per the forward comment convention. Status:
+  done. Full detail in pr-integration/1700-run.md.
