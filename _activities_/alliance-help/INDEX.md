@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T11:32:17Z
+modified: 2026-11-11T22:32:17Z
 level: L1
-version: 1.41.0
+version: 1.42.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -43,6 +43,7 @@ grounded_in:
   - source: ticker-1314 alliance-help execution record 2026-11-10 1316 queue run (done, Help All for 1 ally help, header 1,040/1,000 unchanged in-session, bubble tile (810,705) no-change, own rows Time reduced 18:00:22 and 3d 23:58:04; record commit d781dac9d on records/2026-11-10)
   - source: ticker-1806 alliance-help execution record 2026-11-10 1818 queue run (done, Help All pressed twice, 3 ally helps, header 0 to 40/1,000 after close and reopen, 20 points per help, third help's +20 pending the next unit's header read; record commit 20a62ff0 on records/2026-11-10)
   - source: ticker-0212 alliance-help execution record 2026-11-11 0220 queue run (done, Help All cleared all waiting ally requests, header 80/1,000 unchanged in-session, eighth in-session-unchanged datapoint; record commit b0615980f on records/2026-11-11)
+  - source: ticker-1408 alliance-help execution record 2026-11-11 1410 queue run (done, Help All pressed twice for 3 ally helps, points 500 to 520 verified live on a reopened dialog, Alliance button opens in fullscreen at re-grounded (652,711) snap off, Help dialog X background-click-resistant, tap offset measured; record commit d00afba5a on records/2026-11-11)
 ---
 
 
@@ -67,7 +68,7 @@ counts helps, and any caps. Executions are recorded in
   bring the game window to the foreground and re-observe before
   tapping again. The same-day later units recovered, so this
   blocker is transient, not a dead entry route.
-- Fullscreen Alliance-button failure, 2026-11-09 1019: in fullscreen 1920x1080 the Alliance shield button did not respond to six background taps in four variants (coordinate clicks, hold, second window), while the green menu arrow at (484,975) did respond to background input - background clicks reach some controls and not others in fullscreen. Two LastWar windows exist (489932 titled "Last War", 508052 empty title); the duplicate window may be part of the blocker. Changed method for the next unit: exit fullscreen to the native 642x951 window and retry the Alliance tap there, or find a click_element route if an Alliance label element appears in the observation. Do NOT repeat the fullscreen background-click sequence.
+- Fullscreen Alliance-button failure, 2026-11-09 1019: in fullscreen 1920x1080 the Alliance shield button did not respond to six background taps in four variants (coordinate clicks, hold, second window), while the green menu arrow at (484,975) did respond to background input - background clicks reach some controls and not others in fullscreen. Two LastWar windows exist (489932 titled "Last War", 508052 empty title); the duplicate window may be part of the blocker. Changed method for the next unit: exit fullscreen to the native 642x951 window and retry the Alliance tap there, or find a click_element route if an Alliance label element appears in the observation. Do NOT repeat the fullscreen background-click sequence. (CORRECTION 2026-11-11 1410: the "exit fullscreen" changed method is SUPERSEDED for this button - in the same fullscreen 1920x1080 window the Alliance button DID open: taps at (633,715) and (633,712) did nothing, but a tap at the re-grounded centre (652,711) with snap off opened the panel at once. click_element with label "Alliance" fails - the game is a canvas, no such control exists. The mechanism is measured in the same pass (tooling Issue #652): background canvas taps in this fullscreen window land about (-23 x, +10 y) normalized from the specified point, so narrow controls miss while wide controls land - the Alliance button needs its fresh centre plus snap off, not a window change. The Help dialog X is the same class: three taps at (568,211) did not respond, and the dialog was closed with the panel back arrow instead; per R2 the X was not tapped a fourth time. The Alliance panel back arrow likewise ignored three taps at its measured centre (328,951), then closed on a compensated tap at (351,941) (Issue #652, same pass). Receipt lesson from the same unit: the help-bubble tile tap at (602,712) read no-change on its receipt, but the toast "Allies are very grateful for your assistance" and the tile gone on the next observation prove the tap delivered - verify by observation, not by receipt alone.)
 
 ## Standing instruction from the owner
 
@@ -1005,3 +1006,19 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - OWN-ROW FIGURES: Aircraft Center "Time reduced" 3d 23:58:04 is unchanged across the 0924, 1316 and this read; Missile Mastery II reads 15:00:22 here, against 18:00:22 at the 1316 read and 13:00:22 at the 0350 reopened read. Recorded as displayed; whether "Time reduced" is total time reduced by allies or time remaining was not established in this unit.
 - Outcome: done. All waiting ally requests cleared. No diamonds or money spent. The game was left on the base screen.
 - Result stats: target press Help All and clear all waiting ally requests, achieved all waiting ally requests cleared, resources_gained none itemised, points 0 (header 80/1000 before and after), costs about 2 minutes play, verified yes, blocker_category none, helps_given at-least-2-unverified-count, device_takeovers 0.
+
+## What the 2026-11-11 1410 unit added - Help All pressed twice, 3 ally helps, points 500 to 520 verified live, fullscreen Alliance button opens at re-grounded centre, done
+
+- Unit help-2026-11-11-1030 by ticker-1408, 14:10 to 14:20 local, status done. Evidence in `_records_/2026-11-11/alliance-help/1410-queue-run.md` (commit d00afba5a on records/2026-11-11). Sessions cc-624 (dropped mid-unit, recovered as cc-625) and cc-625 on the owner Mac mini.
+- Entry: base screen at entry. The tan help-bubble tile left of the Alliance button was tapped once at (602,712). Its receipt read no change, but the next observation caught the toast "Allies are very grateful for your assistance" and the following screenshot showed the tile gone, so the bubble press did deliver helps. The receipt's no-change reading was wrong, not the tap - verify by observation, not by receipt alone.
+- Alliance button in the 1920x1080 fullscreen window: taps at (633,715) and (633,712) did nothing (background clicks do not reach this control at those points); a tap at the re-grounded centre (652,711) with snap off opened the panel. click_element with label "Alliance" fails - the game is a canvas, no such control exists. CORRECTION to the 1019 fullscreen-failure entry: the "exit fullscreen and retry" changed method is superseded for this button - it opens in fullscreen at its fresh centre with snap off. See the updated How it is done entry.
+- Help dialog at entry: Today's points gained from Alliance Help 500/1,000. Rows: Bears Lair (own) Lv.30 Aircraft Center 30/30; KaBoom420, Need Healing Help; Comandante DT, Need help with Oil Output I research.
+- Help All pressed once. The game answered "Allies are very grateful for your assistance" and both ally rows disappeared; only the own row remained.
+- The dialog X did not respond to three taps at (568,211) (background-click-resistant control, same class as the Alliance button was); the dialog was closed with the panel back arrow instead. Per rule R2 the X was not tapped a fourth time.
+- Help dialog reopened for the counter re-read: points 520/1,000, a verified live delta of +20 for the two helps. A new row had arrived during the unit: Obiwanslostbro, Need help with Oil Output I research.
+- Help All pressed a second time for the new row; the toast answered again. The Help button's red dot was gone afterwards - no ally requests waiting.
+- The final back-arrow tap to leave the Alliance panel did not register; the pass was left on the Alliance panel, harmless for the next unit. (The Alliance panel back arrow ignored three taps at its measured centre (328,951) in this pass, then closed on a compensated tap at (351,941) - tooling Issue #652, same pass.)
+- Outcome: done. Help All pressed twice, 3 ally helps delivered (KaBoom420 healing, Comandante DT Oil Output I research, Obiwanslostbro Oil Output I research). No ally requests remain. Points 500 to 520 verified live on a reopened dialog - the close/reopen rule applied, and the per-help +10 (20 for two helps) is a live-verified figure, against the 0220 unit's in-session-unchanged header.
+- Figures read live on screen: food 687.5M, iron 1.0G, coin 134.7M, power 149,218,973, diamonds 6,717 at entry. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 3, achieved 3, points_gained 20, verified yes, blocker_category session-drop, device_takeovers 0.
+- No diamonds or money spent. No other task type was executed in this unit.
