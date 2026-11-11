@@ -1,8 +1,8 @@
 {
  "gifts": {
   "status": "done",
-  "at": "2026-11-11T02:18:40-08:00",
-  "note": "Claim All both tabs: Regular 667, Premium 52; gift level 205,158,210 to 205,177,930"
+  "at": "2026-11-11T10:34:06-08:00",
+  "note": "Gifts done: Regular 312, Premium 19; Level 28, 131,830 short of 29"
  },
  "help": {
   "status": "done",
@@ -11,8 +11,8 @@
  },
  "mail": {
   "status": "done",
-  "at": "2026-11-11T02:22:47-08:00",
-  "note": "Claim All Alliance + Event; Daily Donation Rankings and Arms Race/train mail rewards claimed"
+  "at": "2026-11-11T10:27:53-08:00",
+  "note": "Mail done: Event + System claimed (diamonds +400, coin +1.8M, food +1.4M); other categories empty"
  },
  "duel-score": {
   "status": "done",
@@ -48,5 +48,10 @@
   "status": "skipped",
   "at": "2026-11-11T05:40:44-08:00",
   "note": "Tech Research re-verified live 0535: score 0 vs 6250/12500/30000, no in-scope path, no rewards claimable"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-11T12:40:28-08:00",
+  "note": "Release day: 12 claimed, points 415 to 427, stored 0/40"
  }
 }

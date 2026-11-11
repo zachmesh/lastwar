@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-11
 created: 2026-11-11T08:17:13Z
-modified: 2026-11-11T15:14:38Z
+modified: 2026-11-11T20:50:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened); the 0132 knowledge organization pass (folded the ticker-0004/0055 passes; PR #621 opened); the 0232 knowledge organization pass (folded the ticker-0135/0155 passes; PR #624 opened); the 0315 PR integration pass - NON-batch pass (checker plain due yes inside the 03:00-04:00 PT window, but merge-aware not due - PR 618 already merged in this window by the 0300 batch pass, first-pass rule bars a second batch merge); no merges; records PR 615 reconciled branch-side by ticker-0313 (merged main 51c5741d7, merge commit 5f302d8cc3), re-verified CLEAN at head 5f302d8cc, awaiting the 07:00 batch; records PR 627 clean at head b519b5636, awaiting the 07:00 batch; tools PR 425 owner-gated, clean, unchanged, no new comment; the 0330 PR integration pass - NON-batch pass (checker plain due yes inside the 03:00-04:00 PT window, but merge-aware not due - PR 618 already merged in this window by the 0300 batch pass, first-pass rule bars a second batch merge); no merges; records PR 627 clean at head 0fb84bb75, awaiting the 07:00 batch; records PR 615 clean at head 5f302d8cc3, awaiting the 07:00 batch; tools PR 425 owner-gated, clean, unchanged, re-verification comment posted (redundant against unchanged main, noted in the run record)
@@ -2183,3 +2183,38 @@ of 2026-10-28.
   0 withdrawals, no new issue. Pool inbox 79, claimed 0,
   done 1568. Status: done. Full detail in
   queue-planning/1240-run.md.
+## 12:22 to about 12:31 - Ticker pass ticker-1204, zombie-invasion unit 015 partial
+
+- Zombie-invasion (1222, ticker-1204, partial): one Lv.10 kill
+  dispatched (Squad 1 to X:517 Y:417), squads_parallel 1, stamina
+  95 to 87. One LOOT row claimed in-unit for 268,000 coins (medal
+  x10, iron 268.0K, food 268.0K, hero EXP 263.0K); coin HUD 131.9M
+  to 132.1M, food 685.1M to 685.4M. Second dispatch failed at the
+  March step (stamina unchanged, queue stayed 1/4, "Unable to..."
+  toast — target likely taken/moved); first batched dispatch also
+  failed (card not open when the swords tap landed) — single-step
+  with a screen read between steps is the working method. Gift box
+  needed a map drag first: the [UCKF]DaLoneWolf89 base sat under
+  its icon and swallowed two taps with its profile card; snap-free
+  tap at (311,221) after the drag opened LOOT. Search grounds at
+  (366,950), swords at (498,731) on this layout. Store not
+  visited; medals_after 4150 derived, not live-read. Cleared
+  false, successor enqueued. Detail in
+  zombie-invasion/1222-queue-run.md.
+
+## 12:33 to about 12:39 - Ticker pass ticker-1204, radar unit 1003 done
+
+- Radar-tasks (1233, ticker-1204, done, duel day 3 release):
+  entered first try, dish re-grounded at (53,720). Quick
+  Execute ran 3 tasks (stamina 88 to 58); Claim All twice
+  claimed 12 rewards (11, then 1); radar points 415 to 427,
+  stored 1/40 to 0/40, no bar offer left. Rewards: radar
+  tokens 120, EXP 15.6M, blue crystal 774, skill medals 4.0K,
+  iron 5.0M, food 2.1M, coin 2.48M, plus a banner-read +5,000
+  diamonds from a Mystery Supply Box. 8 pins inventoried at
+  entry (2 portraits, 2 grey skulls, 2 grey fists, blue skull,
+  green fist, brown portrait); none standing in the closing
+  view - their rewards came through Claim All. Restore line
+  alternates "12 tasks in 05:01:51" / "Fully restore at 11-12
+  17:39:11". Duel delta test still owed (no VS panel visit).
+  Detail in radar-tasks/1233-queue-run.md.
