@@ -2483,3 +2483,15 @@ of 2026-10-28.
   (observed/actionable/enqueued/candidates/unexplained 0), 0
   withdrawals, no new issue. Pool inbox 78, claimed 1, done
   1578. Status: done. Full detail in queue-planning/1440-run.md.
+
+## 14:45 to about 14:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1445.
+  Non-batch pass (checker not due, next batch 15:00 PT):
+  merged tools PR 653 (tapcal 1.4.0, squash a902c61b3,
+  Refs #646); records PR 643 clean at head 11778923 (37
+  commits beyond new main a902c61b3), awaiting the 15:00
+  batch. Tools PR 425 owner-gated (OD-20261108-01 still
+  open), head moved to 721830b7f, re-verified CLEAN,
+  comment posted. Slack sync sent. Status: done.
+  Full detail in pr-integration/1445-run.md.
