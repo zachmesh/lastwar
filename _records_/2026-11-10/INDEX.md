@@ -3864,3 +3864,23 @@ modified: 2026-11-10T14:21:00Z
   Own PR 425 still owner-gated (OD-20261108-01 open), re-verified
   CLEAN; no unaddressed feedback. Status: done. Full detail in
   tool-development/2232-run.md.
+## 22:40 to 22:51 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-2240. Plan staged
+  12 units for the 2026-11-11 10:03 and 10:30 slots (mail,
+  help, gifts, harvest, radar, survivors, train, training,
+  donations, arms-race, star-ceremony, duel-score);
+  already_present 59, skipped_done_current 2,
+  skipped_closed 1 (zero-sweep-2026-11-10-1730), reaped 0,
+  expired 6 (the six unclaimed 1830-slot units). Pre-reset
+  sweep production skipped (22:00 hour); tonight's pair
+  INCOMPLETE by queue.py sweep-status (PR 611 merged
+  21:45 local) - 1630 partial (1/23 ledger lines), 1730
+  expired unexecuted, eleventh consecutive sweep failure.
+  Scout diff on the 15:14 observation re-applied: observed
+  0, actionable 0, 0 enqueued, 0 candidates, 0 unexplained
+  (diff-counted); narrative red dots unexplained 2 (0615
+  pass) and 3 (1512 pass), left for the retro's threshold
+  check. Withdrawals 0. Pool by_state: inbox 76, claimed 0,
+  done 1500. No new issues. Status: done. Full detail in
+  queue-planning/2240-run.md.
