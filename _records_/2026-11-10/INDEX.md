@@ -3549,6 +3549,26 @@ modified: 2026-11-10T14:21:00Z
   unimplemented items, both out of one-run scope. Status:
   no-op. Full detail in tool-development/2032-run.md.
 
+## 20:32 to about 20:49 - Knowledge organization pass
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-10-2032.
+  Folded the only new substantive commit since the 1932 run's watermark
+  (acb566fad): d29bc658c (ticker-1952: zombie-invasion 2008 +
+  alliance-donations 2015). Profiles PR #602 (commit 1ef9d4e3be, base
+  main d42b4f983): zombie-invasion 1.23.1 -> 1.24.0 (Glacieradon event
+  page VERIFIED live - new variant, 2d 21:58:23 timer, 0/40 counter,
+  1 Lv.10 kill, LOOT claimed, Store read live with medal balance 3950;
+  October "event ended" claim superseded, chain live again) and
+  alliance-donations 1.89.0 -> 1.90.0 (2015 re-read: 1 coin donation
+  confirmed 2/30 to 1/30; CORRECTION - the footer reset 19:24-19:34,
+  the count did NOT reset then, 1919 "remainder is moot" superseded;
+  count's reset time stays unpinned, R3 anchor stays unpinned).
+  Integrator feedback on merged PR #600 (body listed 4 files, diff had
+  5) addressed by a reply on #600 (comment 6787240951); Issue #599
+  commented with the 1.90.0 fold (comment 6787241278). No new issue
+  filed; no 2026-11-10 retro has landed yet. Status: done. Full detail
+  in knowledge-organization/2032-run.md.
+
 ## 20:39 to 20:49 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-10-2039. No-op: no PR names
@@ -3582,3 +3602,4 @@ modified: 2026-11-10T14:21:00Z
   about 30px twice and opened the Iron Mine panel instead.
   Tracker untouched. Full detail in
   resource-collection/2042-queue-run.md.
+
