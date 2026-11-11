@@ -3059,3 +3059,18 @@ modified: 2026-11-10T14:21:00Z
   newly seen three-button shortcut cluster (play, idea).
   Pool by_state: inbox 69, claimed 0, done 1474. Status:
   done. Full detail in queue-planning/1740-run.md.
+
+## 17:45 to about 17:54 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1745.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 19:00): no records merges.
+  Knowledge PR 594 squash-merged (fold ticker-1634 and
+  ticker-1704 records, 6 activity profiles) as 08638153;
+  local main fast-forwarded to the merge. Records PRs 590,
+  351 and 301 all clean and awaiting the 19:00 batch; 351
+  and 301 conflicts resolved on the branch side by
+  ticker-1734 since the 1715 pass. Tools PR 425
+  owner-gated, clean at unchanged head 0fb5a27f,
+  OD-20261108-01 still open. No comments posted. Status:
+  done. Full detail in pr-integration/1745-run.md.
