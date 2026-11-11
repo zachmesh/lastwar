@@ -1848,6 +1848,18 @@ of 2026-10-28.
   run). Status: done. Full detail in
   pr-integration/0915-run.md.
 
+- Integrator pass pr-integration-2026-11-11-0930.
+  NON-batch pass (checker due exit 1, outside every batch
+  window, next batch point 11:00 PT). No merges. Records
+  PRs 636 (2026-11-11, head 4b6b8dcc8, CLEAN) and 615
+  (2026-11-10, head dd865af64b9, CLEAN) await the 11:00
+  batch. Tools PR 425 re-verified CLEAN against unchanged
+  main f0c385f46 (merge-tree exit 0), still owner-gated
+  (OD-20261108-01 open); one re-verification comment posted
+  (redundant with the 0845 verification - see run record
+  Deviations). No Slack sync (silent run). Status: done.
+  Full detail in pr-integration/0930-run.md.
+
 ## 08:54 to about 09:19 - Ticker pass ticker-0845, harvest partial + radar done
 
 - Resource-collection (0909, ticker-0845, partial): all three panel pools collected exact — coin +2,104,312, food +3,233,161, iron +3,006,548 (8,344,021 total), each panel re-read Available 0; map bubbles not tapped (identity after panel Collects unverified); Armed Truck not located, eighth consecutive deferral (Issue #566 commented). Detail in resource-collection/0909-queue-run.md.
