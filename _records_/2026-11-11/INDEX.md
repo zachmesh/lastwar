@@ -2124,3 +2124,15 @@ of 2026-10-28.
   marker line in this INDEX above the 1145 entry, flagged
   for the retro. Status: done. Full detail in
   pr-integration/1203-run.md.
+
+## About 12:15 to about 12:20 - PR integration 1215 run, non-batch pass
+
+- NON-batch pass: checker not due (outside every batch
+  window; next batch 15:00 PT). Records PR #643 verified
+  CLEAN at head 4dda3196, awaiting the 15:00 batch. Tools
+  PR #425 still CONFLICTING on _tools_/INDEX.md at
+  unchanged head 0fb5a27f, still owner-gated
+  (OD-20261108-01 open); no new comment - the 1203 note
+  covers the unchanged state. No merges; no sync-back owed;
+  no Slack sync (silent run). Status: done. Full detail in
+  pr-integration/1215-run.md.
