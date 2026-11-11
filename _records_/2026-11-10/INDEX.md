@@ -3675,3 +3675,37 @@ modified: 2026-11-10T14:21:00Z
   owner-gated (OD-20261108-01 open), re-verified CLEAN against
   main 49895f66c; no unaddressed feedback. Status: done. Full
   detail in tool-development/2132-run.md.
+
+## 21:26 to about 21:46 - Ticker pass ticker-2122, donations and training units partial
+
+- Donations unit donations-2026-11-10-1803 partial. Radar exit
+  solved: the 2118 taps sat above the button row; Home at the
+  fresh measured centre (927,952) worked first try. Alliance
+  entry at (930,717) first try. Quick Construction 8/10
+  (recommended, Development): Donation Count 4/30 at entry, 3
+  coin donations confirmed by live count reads (4 to 3 to 2
+  to 1, 900 coin each), 4th tap landing unknown - button
+  greyed with a 00:14:25 timer hiding the count, the same end
+  state as 1913 and 2015. Footer 700 to 1150 live (+450;
+  points per donation unstable, not used to derive the count).
+  New mechanism evidence: the count replenished from 1-or-0
+  at 20:15 to 4 at 21:26 with no donation in between - it is
+  a replenishing burst allowance, not a pure daily remaining;
+  further evidence for Issue #599. Tracker untouched;
+  re-read unit donations-2026-11-11-0535 enqueued for after
+  the cooldown (not_before 21:48 PT). Full detail in
+  alliance-donations/2133-queue-run.md.
+
+- Training unit training-2026-11-10-1803 partial. Tents
+  re-grounded fresh from the current screenshot (no pans; the
+  1229 point no longer matches this framing). Lv.27 barracks:
+  finished batch of 313 Lv.9 collected on the pistol tap,
+  Total Power 148,787,578 to 149,210,754 (+423,176 = 313 x
+  1,352, verified live). Requeue blocked by a live "Drill
+  Ground Full: Unable to add more units." toast - collection
+  and requeue are decoupled. Drill Ground screen not read
+  live (pass budget ended at the toast); next training unit
+  reads it first and works the nearest allowed clearing
+  action. Lv.24 batch still running (due ~16:49 on
+  2026-11-11); Lv.30 and fourth barracks unchecked. Tracker
+  untouched. Full detail in troop-training/2146-queue-run.md.
