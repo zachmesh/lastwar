@@ -158,3 +158,32 @@ of 2026-10-28.
   Tools PR 425 owner-gated, clean, unchanged
   (OD-20261108-01 open). Status: done. Full
   detail in pr-integration/0100-run.md.
+
+## 00:57 to about 01:17 - Queue ticker pass (ticker-0055)
+
+- Donations unit donations-2026-11-11-0757, Quick
+  Construction 8/10 (recommended). Three coin taps at 900
+  coin each; tap 1 confirmed by live count read 2/30 to
+  1/30; taps 2 and 3 evidenced by the green-to-greyed
+  button change, final count timer-hidden behind a
+  00:18:48 cooldown. Partial, unverified close; tracker
+  untouched; a named re-read unit is enqueued for after
+  the cooldown (not_before 2026-11-11T09:29:00Z). A
+  "Hold down for easier continuous donations" toast was
+  seen on tap 3 - new knowledge, noted in the record
+  only. Full detail in
+  alliance-donations/0107-queue-run.md.
+
+- Harvest unit harvest-2026-11-10-2203. Food plus 1.6M
+  (656.2M to 657.8M) and coin plus 1.1M (110.7M to
+  111.8M) verified by live HUD reads, all bubbles of
+  both kinds cleared. Iron plus 1.4M verified
+  (979.3M to 980.7M) on the second tap; the first
+  iron tap's effect is unverified (bubbles gone, no
+  HUD movement - the tap point was converted from
+  grounding output as pixels instead of normalized
+  coordinates, a method error corrected in the
+  record). Armed Truck not located (Issue 566 stands);
+  one small edge bubble remains. Partial; tracker
+  untouched. Full detail in
+  resource-collection/0117-queue-run.md.
