@@ -1940,3 +1940,5 @@ of 2026-10-28.
 - Zombie-invasion unit 013 stays in inbox for the next tick (pass budget reached after the two units).
 - Integrator pass pr-integration-2026-11-11-1000.
   Full detail in pr-integration/1000-run.md.
+- Integrator pass pr-integration-2026-11-11-1015.
+  Full detail in pr-integration/1015-run.md.
