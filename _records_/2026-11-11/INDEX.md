@@ -1915,3 +1915,5 @@ of 2026-10-28.
   Slack sync sent (ts 1794419298.860109). Status:
   done. Full detail in
   knowledge-organization/0932-run.md.
+- Integrator pass pr-integration-2026-11-11-0945.
+  Full detail in pr-integration/0945-run.md.
