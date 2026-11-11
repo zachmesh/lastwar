@@ -3948,3 +3948,20 @@ modified: 2026-11-10T14:21:00Z
   zombie-invasion-zombie-2026-11-10-003; the 22:19 zombie unit ran
   on the Glacieradon page, so the event's return is for the next
   unit to verify live.
+
+## 23:32 to 23:44 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-2332.
+  Implemented issue #608: queue.py complete now flags a closing
+  whose duration runs over the 15-minute unit cap in
+  result.stats_warnings and warns on stdout (exit still 0), and
+  the new cap-audit subcommand lists every over-cap closing in a
+  local-finished-date window, so the retro's Nov 4-10 list of 12
+  is reproducible mechanically instead of hand-counted. PR #616
+  opened (branch work/unit-cap-audit-608, commit 18fb29b91, Refs
+  #608), verified MERGEABLE/CLEAN; issue #608 commented.
+  Validation on isolated /tmp fixtures only: py_compile clean,
+  28/28 assertions passed. Own PR 425 still owner-gated
+  (OD-20261108-01 open), re-verified CLEAN; no unaddressed
+  feedback. Status: done. Full detail in
+  tool-development/2332-run.md.
