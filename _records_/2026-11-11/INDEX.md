@@ -1990,3 +1990,22 @@ of 2026-10-28.
   0), 0 withdrawals, no new issue. Pool inbox 80, claimed 0,
   done 1560. Status: done. Full detail in
   queue-planning/1040-run.md.
+
+## 10:45 to about 10:58 - Ticker pass ticker-1045, zombie-invasion unit 013 partial
+
+- Zombie-invasion (1048, ticker-1045, partial): two Lv.10 kills
+  dispatched in parallel (Squad 1 to X:404 Y:332, Squad 2 to
+  X:381 Y:319), squads_parallel 2, stamina 117 to 98. One LOOT row
+  claimed in-unit for 268,000 coins (medal x10, iron 268.0K, food
+  268.0K, hero EXP 263.0K); coin HUD 129.6M to 129.9M, food
+  682.2M to 682.5M. Gift badge 1 re-grounded at (308,237) on the
+  current map view; Claim All plain blue, no price tag. Squad 2
+  still outbound at close (00:00:40), its row lands for the
+  successor. Third Search opened a Lv.85 Zombie Boss card (Found
+  by [AP3x]MegaLoki Apex, 34.5M) instead of an Lv.10 target — no
+  march made. Event live as Glacieradon variant, 2d 07:08:39 left,
+  boss challenge begins 2026-11-12 18:00, next wave about 10:53.
+  Store not visited; medals_after 4140 derived, not live-read.
+  Filed Issue #642 (stale chain-close note in the zombie profile
+  plus the Search-may-open-a-boss observation). Cleared false,
+  successor enqueued. Detail in zombie-invasion/1048-queue-run.md.
