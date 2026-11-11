@@ -2381,3 +2381,16 @@ of 2026-10-28.
   this commit. Slack merge summaries sent to the owner
   Trirvia DM. Status: done.
   Full detail in pr-integration/1345-run.md.
+
+## About 14:11 to about 14:17 - PR integration 1411 run, non-batch pass, no merges
+
+- PR integration pass pr-integration-2026-11-11-1411, non-batch
+  (checker _tools_/records_batch.py due: no, next batch 15:00
+  PT). No merges this pass. Records PR 643 CLEAN at head
+  b6c5c0bc (30 commits beyond main 7e6f44d9), awaiting the
+  15:00 batch. Tools PR 425 unchanged 721830b7f, re-verified
+  CLEAN against new main 7e6f44d9, still owner-gated
+  (OD-20261108-01 open); re-verification comment posted
+  because main advanced (651 merged since the 1345 note).
+  Status: done.
+  Full detail in pr-integration/1411-run.md.
