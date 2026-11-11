@@ -1219,3 +1219,19 @@ of 2026-10-28.
   candidates/unexplained 0), 0 withdrawals, no new issue.
   Pool inbox 74, claimed 1, done 1536. Status: done.
   Full detail in queue-planning/0540-run.md.
+
+## 05:45 to about 05:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0553.
+  NON-batch pass (checker plain and merge-aware both
+  not due, next batch 07:00 PT). Merged 2 PRs: 634
+  (tools, pass_worktree.py sync, Refs #631) and 633
+  (knowledge fold, alliance-donations 1.97.0, radar-tasks
+  1.74.0, survivor-intake 1.53.0); main 2cd992888 to
+  1ca79675f, synced back to the local VM. Records PRs
+  627 (35 ahead) and 615 (14 ahead) clean, awaiting the
+  07:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01), re-verified CLEAN against new main
+  and re-verification commented (main moved by two
+  merges since 0445). Status: done. Full detail in
+  pr-integration/0553-run.md.
