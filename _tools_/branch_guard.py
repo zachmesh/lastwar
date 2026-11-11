@@ -25,7 +25,7 @@ repo does not hold the tip's parents". This tool makes the
 distinction explicit, so a reconcile never again concludes
 "unrelated" from an unverified local view.
 
-Two commands, standard library only:
+Three commands, standard library only:
 
   check - fetch a branch tip from a remote into a private ref
           (``refs/remotes/branch-guard/<branch>``; no local branch
@@ -42,6 +42,36 @@ Two commands, standard library only:
           tip is unknown here, or a tip parent object is missing).
           ``--no-fetch`` skips the fetch and checks the tip already
           held under the private ref (offline re-checks and tests).
+
+  based-on - fetch a branch tip and the base tip (default main)
+          into private refs (``refs/remotes/branch-guard/<branch>``
+          and ``refs/remotes/branch-guard/<base>``; no local branch
+          is moved), then report their merge-base. The fetch
+          force-updates the private refs: they are scratch owned by
+          this tool, and a force-rewritten branch must not leave a
+          stale private tip behind. Exit 0 when a merge-base exists
+          (the branch descends from the base; when the merge-base
+          is the base tip the branch was created from that tip), 1
+          when the histories genuinely share no ancestor (the
+          branch is an orphan), 2 when the ancestry cannot be
+          verified (fetch failed, a tip is unknown here, or a tip
+          parent object is missing). A missing parent means the
+          verdict is unverifiable, never orphan: issue #605 filed
+          records/2026-11-10 as an orphan branch whose "root commit
+          03c1007f1d has NO parents", but the live object store
+          proves the opposite - 03c1007f1d is a merge commit with
+          two parents (d29bc658c, f7654685c) and the branch has a
+          merge-base with main. The retro's local view lacked the
+          parents, so ``merge-base`` found no common ancestor and
+          stale view was misread as an orphan - the same
+          failure mode as issue #485. When a fetch fails, based-on
+          retries it once with --refetch, which skips negotiation
+          and restores objects a stale view advertised as held:
+          without the retry the same stale view fails the repair
+          fetch with "did not send all necessary objects". Run
+          based-on before ever concluding a branch is orphan;
+          never file an orphan issue on a merge-base verdict from
+          an unfetched view.
 
   sweep - scan every tracked file in the working tree for lines
           shaped like an unresolved merge-conflict marker
@@ -73,6 +103,9 @@ Usage:
   branch_guard.py check --repo PATH --branch BRANCH --previous SHA
                         [--remote REMOTE] [--no-fetch]
                         [--format text|json]
+  branch_guard.py based-on --repo PATH --branch BRANCH
+                        [--base BASE] [--remote REMOTE] [--no-fetch]
+                        [--format text|json]
   branch_guard.py sweep --repo PATH [--format text|json]
 """
 
@@ -83,7 +116,7 @@ import re
 import subprocess
 import sys
 
-TOOL_VERSION = "1.1.0"
+TOOL_VERSION = "1.2.0"
 
 PRIVATE_REF_PREFIX = "refs/remotes/branch-guard/"
 
@@ -274,6 +307,188 @@ def cmd_check(args):
     return 2
 
 
+def cmd_based_on(args):
+    repo = args.repo
+    branch = args.branch
+    base = args.base
+    private_ref = PRIVATE_REF_PREFIX + branch
+    private_base_ref = PRIVATE_REF_PREFIX + base
+
+    if branch == base:
+        print(f"error: branch and base are the same ref {branch!r}",
+              file=sys.stderr)
+        return 2
+    for ref in (private_ref, private_base_ref):
+        proc = _run_git(["check-ref-format", ref], cwd=repo)
+        if proc is None or proc.returncode != 0:
+            print(f"error: {ref!r} does not form a valid ref",
+                  file=sys.stderr)
+            return 2
+
+    branch_tip = None
+    base_tip = None
+    fetch_error = None
+    if not args.no_fetch:
+        for name, refspec, label in (
+                (branch, f"+{branch}:{private_ref}", "branch"),
+                (base, f"+{base}:{private_base_ref}", "base")):
+            proc = _run_git(
+                ["fetch", "--no-tags", args.remote, refspec], cwd=repo)
+            if proc is not None and proc.returncode != 0:
+                # A repo whose object store is missing a tip parent
+                # advertises the tip as a have, so the server omits
+                # the parents and the fetch fails with "did not send
+                # all necessary objects" - the exact stale view
+                # behind issue #605. Re-fetch without negotiation:
+                # the server sends the full history of the ref and
+                # the missing objects are restored.
+                proc = _run_git(
+                    ["fetch", "--no-tags", "--refetch", args.remote,
+                     refspec], cwd=repo)
+            if proc is None or proc.returncode != 0:
+                detail = (proc.stderr.strip().splitlines() or [""])[-1] \
+                    if proc is not None else "git fetch could not run"
+                fetch_error = (f"fetch of the {label} {name} from "
+                               f"{args.remote} failed: {detail}")
+                break
+    if fetch_error is None:
+        branch_tip = _resolve_commit(repo, private_ref)
+        if branch_tip is None and args.no_fetch:
+            # Offline re-check: fall back to a local branch of the
+            # same name when the private ref was never fetched.
+            branch_tip = _resolve_commit(repo, branch)
+        base_tip = _resolve_commit(repo, private_base_ref)
+        if base_tip is None and args.no_fetch:
+            base_tip = _resolve_commit(repo, base)
+
+    result = {
+        "version": TOOL_VERSION,
+        "branch": branch,
+        "base": base,
+        "remote": args.remote,
+        "branch_tip": branch_tip,
+        "base_tip": base_tip,
+        "merge_base": None,
+        "based_on": False,
+        "tip_is_root": None,
+        "parents_present": None,
+        "status": "unverifiable",
+        "text": [],
+    }
+
+    if fetch_error is not None:
+        result["text"] = [
+            f"{branch}: CANNOT VERIFY - {fetch_error}",
+            "Do not conclude the branch is an orphan; fix the "
+            "fetch and re-run.",
+        ]
+        _render(result, args.format)
+        return 2
+    if branch_tip is None:
+        result["text"] = [
+            f"{branch}: CANNOT VERIFY - no tip held locally under "
+            f"{private_ref}" + (" (fetch was skipped)" if args.no_fetch
+                                else ""),
+            "Run without --no-fetch so the tip is fetched first.",
+        ]
+        _render(result, args.format)
+        return 2
+    if base_tip is None:
+        result["text"] = [
+            f"{base}: CANNOT VERIFY - no tip held locally under "
+            f"{private_base_ref}" + (" (fetch was skipped)"
+                                     if args.no_fetch else ""),
+            "Run without --no-fetch so the base tip is fetched first.",
+        ]
+        _render(result, args.format)
+        return 2
+
+    parents = _tip_parents(repo, branch_tip)
+    if parents is None:
+        result["text"] = [
+            f"{branch}: CANNOT VERIFY - tip {branch_tip} cannot be "
+            "read in this repo",
+            "Do not conclude the branch is an orphan; re-fetch and "
+            "re-run.",
+        ]
+        _render(result, args.format)
+        return 2
+    result["tip_is_root"] = len(parents) == 0
+
+    missing = [p for p in parents if not _object_present(repo, p)]
+    if missing:
+        result["parents_present"] = False
+        result["text"] = [
+            f"{branch}: CANNOT VERIFY - tip {branch_tip} has "
+            f"{len(missing)} parent object(s) missing locally "
+            f"({missing[0][:12]}...)",
+            "The tip's ancestry cannot be checked from this repo: "
+            "a missing parent is not evidence the branch is an "
+            "orphan (issues #485, #605). Re-fetch and re-run; never "
+            "file an orphan issue on this verdict.",
+        ]
+        _render(result, args.format)
+        return 2
+    result["parents_present"] = True
+
+    proc = _run_git(["merge-base", base_tip, branch_tip], cwd=repo)
+    if proc is None or proc.returncode not in (0, 1):
+        detail = ""
+        if proc is not None:
+            detail = (proc.stderr.strip().splitlines() or [""])[-1]
+        code = proc.returncode if proc is not None else "?"
+        result["text"] = [
+            f"{branch}: CANNOT VERIFY - git merge-base failed "
+            f"(exit {code}): {detail}",
+            "Do not conclude the branch is an orphan.",
+        ]
+        _render(result, args.format)
+        return 2
+    if proc.returncode == 0:
+        merge_base = proc.stdout.strip()
+        result["merge_base"] = merge_base
+        result["based_on"] = True
+        result["status"] = "based-on"
+        if merge_base == base_tip:
+            created = (f"created from {base} tip "
+                       f"{base_tip[:12]}")
+        else:
+            created = (f"branched from {base} at "
+                       f"{merge_base[:12]}; {base} has since moved "
+                       f"to {base_tip[:12]}")
+        result["text"] = [
+            f"{branch}: based on {base} - merge-base "
+            f"{merge_base[:12]} ({created})",
+            "Not an orphan.",
+        ]
+        _render(result, args.format)
+        return 0
+    # returncode 1: no common ancestor. Both histories were fetched
+    # (unless --no-fetch) and the tip's parents are verified
+    # present, so the verdict is real - except in --no-fetch mode,
+    # where the histories were never fetched and the run must say so.
+    result["status"] = "orphan"
+    if result["tip_is_root"]:
+        verdict = (f"tip {branch_tip[:12]} is a genuine root commit "
+                   "(zero parents, all objects verified)")
+    else:
+        verdict = (f"tip {branch_tip[:12]} has "
+                   f"{len(parents)} parent(s) and shares no ancestor "
+                   f"with {base} (tip parents verified present)")
+    text = [
+        f"{branch}: ORPHAN - {verdict}",
+        "Stop: do not treat the branch as a continuation of "
+        f"{base}. Reconcile by hand.",
+    ]
+    if args.no_fetch:
+        text.append("Offline verdict: re-run with a fetch before "
+                    "acting on it - an unfetched view cannot prove "
+                    "a branch is orphan (issue #605).")
+    result["text"] = text
+    _render(result, args.format)
+    return 1
+
+
 # Lines shaped like the conflict markers git writes. A real marker
 # is a seven-character opener/closer with at most one label token
 # (``<<<<<<< HEAD``, ``>>>>>>> <sha>``), the bare seven-character
@@ -386,8 +601,10 @@ def build_parser():
         prog="branch_guard.py",
         description="Guard a records-branch reconcile: verify the "
                     "tip is a fast-forward over the previous tip "
-                    "(check, issue #485) and the merged tree carries "
-                    "no conflict markers (sweep, issue #441).")
+                    "(check, issue #485), the merged tree carries "
+                    "no conflict markers (sweep, issue #441), and a "
+                    "branch descends from its base by merge-base "
+                    "(based-on, issue #605).")
     parser.add_argument("--version", action="version",
                         version=f"%(prog)s {TOOL_VERSION}")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -412,6 +629,29 @@ def build_parser():
     p_check.add_argument("--format", choices=["text", "json"],
                          default="text")
     p_check.set_defaults(func=cmd_check)
+
+    p_based_on = sub.add_parser(
+        "based-on",
+        help="fetch a branch tip and the base tip, then report "
+             "their merge-base (exit 0 based-on, 1 orphan, "
+             "2 cannot verify)")
+    p_based_on.add_argument("--repo", required=True,
+                            help="repository path (worktree or clone)")
+    p_based_on.add_argument("--branch", required=True,
+                            help="branch to check, e.g. "
+                                 "records/2026-11-10")
+    p_based_on.add_argument("--base", default="main",
+                            help="base branch the branch must descend "
+                                 "from (default: main)")
+    p_based_on.add_argument("--remote", default="github",
+                            help="remote to fetch both tips from "
+                                 "(default: github)")
+    p_based_on.add_argument("--no-fetch", action="store_true",
+                            help="check the tips already held locally "
+                                 "instead of fetching them")
+    p_based_on.add_argument("--format", choices=["text", "json"],
+                            default="text")
+    p_based_on.set_defaults(func=cmd_based_on)
 
     p_sweep = sub.add_parser(
         "sweep",
