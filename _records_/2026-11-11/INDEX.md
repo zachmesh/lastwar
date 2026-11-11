@@ -187,3 +187,14 @@ of 2026-10-28.
   one small edge bubble remains. Partial; tracker
   untouched. Full detail in
   resource-collection/0117-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-11-0115. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): no records merges, no
+  knowledge/code merges, no comments (no-repeat rule).
+  Records PRs 301, 615 and 618 re-verified CLEAN against
+  main 177477ac, awaiting the 03:00 batch; PR 618 head
+  2c00fa6e (moved from 9eb7d043 since the 0100 pass, the
+  0100 run-record commit only). Tools PR 425 owner-gated,
+  clean, unchanged (OD-20261108-01 open). Status: done.
+  Full detail in pr-integration/0115-run.md.
