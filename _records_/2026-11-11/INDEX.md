@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-11
 created: 2026-11-11T08:17:13Z
-modified: 2026-11-11T10:43:41Z
+modified: 2026-11-11T11:07:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened); the 0132 knowledge organization pass (folded the ticker-0004/0055 passes; PR #621 opened); the 0232 knowledge organization pass (folded the ticker-0135/0155 passes; PR #624 opened)
@@ -520,3 +520,64 @@ of 2026-10-28.
   Local main sync-back deferred (shallow clone + dirty tree).
   Slack sync sent. Status: done.
   Full detail in pr-integration/0245-run.md.
+## 02:46 to about 02:49 - Ticker pass ticker-0234, passes unit done
+
+- Ticker pass ticker-0234. Passes unit passes-2026-11-10-2257
+  done: shop checked live, nothing claimable - Hot Deals free
+  pack not available ("FREE TOMORROW"), no weekly pass owned
+  (all four cards $4.99 purchase offers), Monthly Pass Daily
+  Pickup already Claimed (11 days/rewards left); Legendary
+  Take All $19.99 and Monthly Extension $24.99 untouched.
+  Free Supply auto-claim not observed. Open question: Monthly
+  Claimed state vs the 19:00 reset (previous claim by
+  ticker-1834 at 18:36 PT 2026-11-10). Status: done. Full
+  detail in shop-claims/0249-queue-run.md.
+
+
+## 02:50 to about 02:59 - Ticker pass ticker-0234, secrets unit done
+
+- Ticker pass ticker-0234 (continued). Secrets unit
+  secrets-2026-11-10-2257 done: post checked live - 7
+  tasks PERFECT (nothing claimable, inert on tap), UR
+  Rescue Officer anomalous (no countdown/PERFECT/Claim;
+  its icon opens the Secret Task Report with 2 plunders
+  of our task rewards, 11-10 20:53 [III5]Rul07 and 20:55
+  [TOO]denn bagus, chest x6 + 5m x5 + 412.8K EXP + 144
+  medals each); assists 5/5 at cap; Reward Recovery
+  2026-11-6 CLAIMED, nothing pending; Mega Deploy
+  unresponsive (no pending tasks). Knowledge Issue #626
+  filed for the plunder discovery. Reset boundary now
+  reads 18:00 on four converging live readings (Weekly
+  Pass page, 1847 batch refresh, Monthly Claimed after
+  the 18:36 claim, assists still 5/5 at 02:59) vs the
+  standing 19:00 notes - flagged, not rewritten. Status:
+  done. Full detail in secret-missions/0259-queue-run.md.
+
+
+## 02:59 to about 03:05 - Ticker pass ticker-0234, events unit done
+
+- Ticker pass ticker-0234 (continued). Events unit
+  events-2026-11-10-2257 done: hub swept tab by tab,
+  nothing claimable. The Age of Oil both goals exceeded
+  (6421/500 Tech Research, 20418/500 Building Upgrades)
+  but no Claim button found, stage-1 badge unresolved;
+  Desert Battlefield registered 20/20, battle
+  2026-11-13 03:00-03:30; Zombie Store red dot left for
+  the zombie chain; Wanted Boss Code 39 goals unreached
+  (best single attack 1,097,397,868 vs 1.5B); Community
+  500 diamonds already Claimed; no Level Swap tab in
+  the hub. One transient privacy_unverified control
+  block cleared on re-observe. Status: done. Full
+  detail in event-claims/0305-queue-run.md.
+
+
+## About 03:05 to 03:07 - Ticker pass ticker-0234, treasures unit done
+
+- Ticker pass ticker-0234 (continued). Treasures unit
+  treasures-2026-11-10-2257 done: fragment stock read
+  live (M1 12, M2 11, M3 0, M4 6, M5 1, M6 6, M7 10),
+  no dig possible because M3 is 0; chest progress
+  12/15; dig odds confirmed in the Reward Preview
+  panel (UR 10%, SSR 30%, SR 60%, 10 rewards per
+  chest). No exchange offered or executed. Status:
+  done. Full detail in hidden-treasures/0307-queue-run.md.
