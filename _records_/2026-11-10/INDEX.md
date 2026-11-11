@@ -3846,3 +3846,21 @@ modified: 2026-11-10T14:21:00Z
   evidence, comment 6789049943); no new issue filed.
   Slack DM sent (ts 1794379635.616939). Status: done. Full
   detail in knowledge-organization/2232-run.md.- Integrator pass pr-integration-2026-11-10-2245. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Knowledge PR 613 reviewed clean and merged by squash (d742bbb91, arms-race 1.83.0, zombie-invasion 1.25.0); local main fast-forwarded to d742bbb91. Records PR 597 verified CLEAN (head 17b82315d, 46 commits) and awaits the 23:00 batch; 1 verification comment posted. Records PRs 351 and 301 re-verified CLEAN against the new main d742bbb91; 1 re-verification comment posted on each. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against the new main (merged tree 13bd33c5); no new comment. Slack DM sync sent for the 613 merge (ts 1794380193.472109). Records branch head moved to 75f7e877b9 after the 597 verification, so the 23:00 batch must re-verify it. Status: done. Full detail in pr-integration/2245-run.md.
+
+## 22:32 to about 23:00 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-2232.
+  Implemented issue #606: the pre-reset sweep pair now stages at
+  120/60 minutes before the reset (seq-1 16:00, fix-ups at the pair
+  midpoint 16:30, seq-2 17:00 with a 60-minute claim window spanning
+  the 17:03 and 17:33 ticker passes) instead of 90/30, so the final
+  pass no longer expires inside a single ticker cycle; reset_utc
+  stays 02:00 and the expiry stays at the reset instant. PR #614
+  opened (branch work/sweep-seq2-window, commit 91798ec0f, Refs
+  #606), verified MERGEABLE/CLEAN; issue #606 commented, including
+  the correction that the reset is 18:00 PST in winter (the issue's
+  "19:00 reset" is the stale PDT label). Validation on isolated
+  /tmp fixtures only: py_compile clean, 50/50 assertions passed.
+  Own PR 425 still owner-gated (OD-20261108-01 open), re-verified
+  CLEAN; no unaddressed feedback. Status: done. Full detail in
+  tool-development/2232-run.md.
