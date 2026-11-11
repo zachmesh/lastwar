@@ -2293,3 +2293,7 @@ of 2026-10-28.
   since the 1245 verification note). No merges; no
   Slack sync (silent run). Status: done.
   Full detail in pr-integration/1330-run.md.
+
+## About 13:32 to about 13:44 - Tool development 1332 run, issue #648 implemented in PR #649
+
+- Issue #648 (ticker-1259 zoom click broke the control channel) implemented in PR #649 (branch work/zoomed-window-probe-648, commit 5f96e1f17): mac_capture_probe 1.2.0 -> 1.3.0 gains ZOOMED_WINDOW_INPUT_BLOCKED (exit 14, stop_pass yes); checklist step 6 states the window-state precondition (windowed 642x951 AND frontmost) and never clicking the green zoom button as an activation step. Validation: py_compile clean, 22/22 fixture assertions on isolated /tmp fixtures, six regression fixtures unchanged from main 1.2.0. PR verified MERGEABLE/CLEAN. Issue #648 commented with the implementing PR. Own PR #425 still owner-gated (OD-20261108-01 open), MERGEABLE/CLEAN, no action owed. Slack summary sent to the owner Trirvia DM. Status: done. Full detail in tool-development/1332-run.md.
