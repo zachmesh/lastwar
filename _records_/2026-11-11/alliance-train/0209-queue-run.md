@@ -65,6 +65,13 @@ Activity: alliance-train. Computer session cc-536.
   or money spent. No login or verification demanded. No
   "active on a different device" dialog appeared.
 
+## Follow-up
+
+- Issue #623 (tooling) filed for the pick-order gap behind
+  this miss: train units are picked by slot expiry, not by
+  the boarding close, so a closing boarding is invisible
+  to the queue's pick order. The issue links this record.
+
 ## Close
 
 - Failed. Boarding closed before the boarding tap landed;
