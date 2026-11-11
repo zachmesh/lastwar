@@ -1640,3 +1640,26 @@ of 2026-10-28.
   has not moved since the 0700 verification. No merges,
   no PRs opened, no Slack sync. Status: done. Full detail
   in pr-integration/0745-run.md.
+
+## 07:32 to about 07:55 - Knowledge organization pass
+
+- Knowledge organization pass
+  lastwar-knowledge-organizer-2026-11-11-0732. Folded
+  the ticker-0637 pass (passes 0656, secrets 0651,
+  treasures 0654, trucks 0701) and the ticker-0707
+  pass (zombie 0724, donations 0733) into 7 profiles,
+  PR #637 opened (1 commit f11aeab52, 7 files, 121
+  insertions, 23 deletions): shop-claims 1.53.0,
+  secret-missions 1.37.0, hidden-treasures 1.22.0,
+  truck-plunder 1.42.0, alliance-donations 1.100.0,
+  radar-tasks 1.75.0, zombie-invasion 1.31.0. Own PR
+  #635 merged in the 07:00 batch with no feedback;
+  #637 awaits the integrator. Issue comments posted
+  on #553, #626, #558, #242, #160, #500. Four
+  contradictions resolved (radar 0505 stray 0141
+  stats line deleted, trucks 0701 duration corrected
+  to 217 seconds, check-in Events-hub suggestion
+  corrected as a dead end, donations changed-route
+  tally brought current). No new issue filed. Slack
+  sync sent (ts 1794412528.754729). Status: done.
+  Full detail in knowledge-organization/0732-run.md.
