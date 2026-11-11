@@ -22,6 +22,12 @@ Usage:
              # old 17:30/18:30/19:00 wall geometry used to pre-empt
              # the sweep subcommand's correct pair - stage the pair
              # with queue.py sweep instead.
+             # enqueue mints the unit into the live pool (issue
+             # #598): when this copy runs from a linked worktree,
+             # the unit lands in the main checkout's _queue_/inbox
+             # instead of the worktree's, so a pass that delivers
+             # via a worktree cannot strand a unit on the records
+             # branch - the next tick reads the live pool only.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate
              # pool integrity (issue #441): exit 0 when every unit
@@ -1245,6 +1251,12 @@ def _produce_for_window(root, item, planned_local, window="",
     sweep fix-ups (issue #147), which expire at the reset they
     serve and run at priority 1 regardless of their regular's
     usual cadence and priority."""
+    # Live-pool production (issue #598): sync / plan / sweep mint
+    # through here, and a pass running this copy from a delivery
+    # worktree would otherwise stage the unit into the worktree's
+    # inbox, where the live pool never sees it - resolve to the
+    # main checkout's _queue_ first; a scratch root keeps itself.
+    root = live_pool_root(root)
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -2123,6 +2135,18 @@ def _sweep_enqueue_refusal(args):
 
 
 def cmd_enqueue(args):
+    # Live-pool production (issue #598): resolve the pool first,
+    # before the wrong-root gate and before anything is read or
+    # written - a unit enqueued into a delivery worktree's inbox
+    # reaches only the records branch, while the next tick reads
+    # the live pool. Every check below (gate, chain, sequence,
+    # existence) therefore runs against the live pool, and the
+    # note names the redirect so a run log shows where the unit
+    # actually landed.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"enqueueing into the live pool {root} (issue #598)")
     # Wrong-root gate (issue #510): a root holding no pool state
     # directory is not a pool, so refuse instead of minting an
     # inbox under it - a wrong root used to silently create a stray
@@ -2133,11 +2157,11 @@ def cmd_enqueue(args):
     # pool beside the resolved _queue_ pool (issue #539) must be
     # named on the write path too, so it gets removed instead of
     # silently ignored.
-    warning = pool_root_warning(args.root)
+    warning = pool_root_warning(root)
     if warning:
         print(warning)
-    if not any(os.path.isdir(state_dir(args.root, s)) for s in STATES):
-        print(f"refused: pool root {args.root} holds no inbox, "
+    if not any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        print(f"refused: pool root {root} holds no inbox, "
               "claimed or done directory - the pool was not found, "
               "nothing queued (issue #510)")
         return 1
@@ -2155,18 +2179,18 @@ def cmd_enqueue(args):
         # extend a chain with a different regular than its existing
         # units, so per-type statistics stay clean.
         for state in STATES:
-            for f in list_units(args.root, state):
+            for f in list_units(root, state):
                 if f.get("chain_id") == args.chain_id and \
                         f.get("regular") not in ("", args.regular):
                     print(f"refused: chain {args.chain_id} belongs to "
                           f"regular {f.get('regular')}, not "
                           f"{args.regular}")
                     return 1
-        chain_seq = chain_seq_next(args.root, args.chain_id)
+        chain_seq = chain_seq_next(root, args.chain_id)
         unit = f"{args.regular}-{args.chain_id}-{chain_seq:03d}"
     else:
         unit = f"{args.regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}"
-    path = unit_path(args.root, "inbox", unit)
+    path = unit_path(root, "inbox", unit)
     if os.path.exists(path):
         print(f"already queued: {unit}")
         return 1
@@ -2186,7 +2210,7 @@ def cmd_enqueue(args):
     body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
-    os.makedirs(state_dir(args.root, "inbox"), exist_ok=True)
+    os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
     print(f"queued {unit}")
     return 0
@@ -2739,6 +2763,30 @@ def _shared_token_home(root):
     if os.path.isdir(main_queue):
         return main_queue
     return None
+
+
+def live_pool_root(root):
+    """Live pool for a root that may sit in a linked worktree.
+
+    New units are live pool state: the next tick's `next` reads
+    the live pool's inbox, never a records branch's, so a unit
+    enqueued into a delivery worktree's inbox is stranded - it
+    reaches only the records branch (issue #598: ticker-1806
+    seeded the zombie chain head into the records branch inbox
+    and the live pool never saw it). The token, blockers and
+    completion markers already resolve to the main checkout
+    through _shared_token_home (issues #383, #438); production
+    does the same, so enqueue and the sync / plan / sweep
+    production path always mint into the main checkout's _queue_
+    when this copy runs from a linked worktree. A root that is
+    not in a repo (tests, scratch dirs) or whose main checkout
+    holds no _queue_ keeps the given root, and the main checkout
+    itself resolves to itself.
+    """
+    shared = _shared_token_home(root)
+    if shared is not None:
+        return shared
+    return os.path.abspath(root)
 
 
 def token_path(root):
