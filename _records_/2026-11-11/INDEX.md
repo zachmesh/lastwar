@@ -123,3 +123,16 @@ of 2026-10-28.
   zero unclassified, unchanged; owner-decision issues 132, 154,
   335, 514 and 517 all over 24 hours with statements current.
   Status: no-op. Full detail in pr-catchall/0039-run.md.
+
+## 00:40 to about 00:55 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-0040. Plan staged 0
+  units (73 already present for the next 12 hours, 1 skipped
+  closed zero-sweep-2026-11-10-1730, 0 reaped/expired); sweep
+  production skipped (00:00 hour), tonight's pair not yet
+  staged, due from the 17:00 run under the new geometry
+  (PR #614). Scout diff on the 2026-11-10 15:14 observation
+  re-applied with identical 0 counts (observed/actionable/
+  enqueued/candidates/unexplained 0), 0 withdrawals, no new
+  issue. Pool inbox 77, claimed 0, done 1507. Status: no-op.
+  Full detail in queue-planning/0040-run.md.
