@@ -3481,3 +3481,52 @@ modified: 2026-11-10T14:21:00Z
 ## 20:00 to about 20:10 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-10-2000. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Merged tools PR #601 (squash, d42b4f98) - live-pool enqueue and tracker state (Refs #598), independently verified 22/22 on isolated fixtures. Records PR #597 verified CLEAN (head ec0f735ff, 12 commits) and awaits the 23:00 batch. Tools PR #425 re-verified CLEAN against new main d42b4f98, still owner-gated (OD-20261108-01 open). Records PRs #351 and #301 still conflicting on the action-log file, conflict comments from the 1900 pass verified present. 2 comments posted (601, 597). Local main fast-forwarded to d42b4f98 by bundle. Status: done. Full detail in pr-integration/2000-run.md.
+## 19:52 to 20:08 - Ticker pass ticker-1952, zombie-invasion unit 001 partial (Glacieradon page verified, 1 kill)
+
+- Zombie Invasion chain head zombie-invasion-zombie-2026-11-10-001 partial.
+  Event page VERIFIED live for the NEW variant "Zombie Invasion -
+  Glacieradon": pre-wave countdown 00:06:15 at entry, live-wave layout
+  from 20:01 with event timer 2d 21:58:23, boss-clue text ("No Zombie
+  Boss found yet. Killing Invading Zombies on world map might reveal
+  their clues."), a 0/40 counter, next wave in 00:31:08, Search and
+  Boss Search buttons. Rewards panel is a boss-reward reference table
+  (Lv 5-75 / 80-100 / 105-135), not a claimable track. Store medal
+  balance read live at 3950; 50 Stamina item available at 10 medals
+  Limit 3 (October event: sold out); which rows are Coin Chests in
+  this event is NOT established.
+- One Lv.10 Invading Zombies kill (Suggested Power 670,000, stamina
+  10, despawn 11:57:53): Squad 1, 25.20M vs 670.00K, Easy Win, 6
+  second march, stamina 120 to 110, Victory banner, squad home.
+  squads_parallel 1 (single dispatch only - parallel rule not
+  exercised this unit).
+- LOOT: gift badge 5 at entry, 6 after the kill; gift box
+  re-grounded to 304,226 (moves with the map view); Claim All
+  tapped once, toast "Alliance Gifts received!". Rows NOT read
+  before claiming, so the exact coins collected are unverified:
+  HUD coin 97.8M to 98.1M, food 631.4M to 631.7M, iron 954.2M to
+  954.4M (about one 268K row's worth). Medal balance after the kill
+  not re-read. Chests opened 0.
+- cleared false: wave live, next wave about 20:32. Successor
+  zombie-invasion-zombie-2026-11-10-002 enqueued to start now.
+  Full detail in zombie-invasion/2008-queue-run.md.
+
+## 20:10 to 20:15 - Ticker pass ticker-1952, donations re-read unit partial (unverified close)
+
+- Donations re-read unit donations-2026-11-11-0336 partial,
+  unverified close. New-day Donation Count read live 2/30
+  remaining at Quick Construction (8/10); 1 coin donation
+  confirmed (count 2/30 to 1/30, 900 coin); the 2nd tap
+  greyed the coin button with a 00:14:47 cooldown timer
+  that hides the count label, so the final count (0/30 or
+  1/30) is unread. Tech Donation Today footer re-read live
+  550 to 700 (+150 for the two taps - footer points per
+  donation are not stable, so the footer cannot derive the
+  count). Tracker untouched. Re-read unit
+  donations-2026-11-11-0413 enqueued for after the
+  cooldown (not_before 04:30Z).
+- Count-versus-footer day boundary: the count read 2/30 at
+  20:12 while the footer sits post-reset at 550 - if the
+  count never reset, 1913's four taps brought the old day's
+  6/30 to 2/30; the count's own reset time stays unpinned.
+  Evidence added as a comment on knowledge Issue #599.
+  Full detail in alliance-donations/2015-queue-run.md.
