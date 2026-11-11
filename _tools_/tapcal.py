@@ -133,6 +133,8 @@ Usage:
                        --x X --y Y [--landmark L] [--screenshot S]
   tapcal.py anchor-list --store FILE [--format text|json]
   tapcal.py verify --case FILE [--format text|json]
+  tapcal.py variant --control CLASS [--format text|json]
+  tapcal.py variant --list [--format text|json]
 
 A verification case for `verify` is a JSON object:
 
@@ -145,6 +147,10 @@ A verification case for `verify` is a JSON object:
                     #475)
   compensation      optional {"dx": .., "dy": ..} session offset
                     from `calibrate`
+  control           optional string, the control class of the
+                    target, e.g. "top-bar-icon" or
+                    "collect-button" (issue #646); names the
+                    first-try variant for a not-started case
   max_retries       optional int >= 0, default 2; the loop allows
                     1 + max_retries attempts in total
   attempts          list, in order, of:
@@ -153,6 +159,9 @@ A verification case for `verify` is a JSON object:
     tapped          {"x": int, "y": int} or null, where the tap
                     actually landed (null when no tap was placed)
     changed         bool, whether the game state changed
+    variant         optional "snapped" or "unsnapped", the
+                    background-click variant the tap used
+                    (issue #646)
     observed        {"x": int, "y": int} or null, where grounding
                     found the element after the tap (null when
                     it was not re-grounded)
@@ -175,6 +184,29 @@ re-grounded, and the re-grounded element under the session
 compensation when no tap was placed. A next aim is rounded to
 integers and clamped to 0..1000, with clamped axes named.
 
+Per-control tap variant (issue #646): the background-click
+variant that works flips by control type inside one unit -
+resource top-bar icons open on an unsnapped tap (snapped taps
+did nothing twice on the coin icon), panel Collect buttons
+collect on a snapped tap (an unsnapped Collect did not
+register). `variant` reports the measured first-try variant
+for a control class; `verify` takes an optional control class
+and an optional variant per attempt. When the last attempt
+landed exactly on the target and changed nothing, the verdict
+is retry-variant-flip instead of input-blocked when the other
+variant has not yet been tried on target: the next aim is the
+same point with the flipped variant, because a wrong-variant
+tap is not input-blocked (issue #575 names the state only
+once both variants have been tried on target with no change).
+A variant flip is a changed method under R2, not a retry of
+the same method, so it outranks the count-based exhausted
+verdict, and it can fire at most once per target. The rows
+are provisional: one unit of evidence (ticker-1104 harvest
+1155, session cc-600, 2026-11-11); a second confirming unit
+promotes a row to confirmed. `changed` must come from the
+post-tap read (Owned/Available), not the receipt verdict -
+the coin Collect receipt said no change while Owned had moved.
+
 The compensation file for `compensate` is the JSON object
 `calibrate` writes with --out (or an equivalent {"dx":..,
 "dy":..} object). Exit codes: 0 success (even when the rate
@@ -187,7 +219,7 @@ import json
 import statistics
 import sys
 
-TOOL_VERSION = "1.3.0"
+TOOL_VERSION = "1.4.0"
 COORD_MIN = 0
 COORD_MAX = 1000
 
@@ -197,6 +229,52 @@ COORD_MAX = 1000
 GEOMETRY_UNSPECIFIED = "unspecified"
 GEOMETRY_WINDOWED = "windowed-642x951"
 GEOMETRY_FULLSCREEN = "fullscreen-1920x1080"
+
+# Background-click variants (issue #646). A tap is delivered
+# either snapped to the control (snap_to_control true) or
+# unsnapped (exact pointer). Which one works flips by control
+# type inside one unit, so the loop must never repeat the same
+# variant after a no-change tap.
+VARIANT_SNAPPED = "snapped"
+VARIANT_UNSNAPPED = "unsnapped"
+
+# Measured first-try variant per control class (issue #646).
+# One unit of evidence so far: ticker-1104 harvest unit 1155,
+# session cc-600, 2026-11-11, windowed 642x951. Both rows are
+# provisional until a second unit confirms them; the tool
+# reports the status and the unit count so no executor treats
+# a single-unit finding as established. The 0909 harvest unit
+# the same day found panel X buttons ignoring both variants,
+# and the 0541 donations unit found a back arrow ignoring
+# three variants, so the table claims nothing beyond the two
+# measured classes.
+CONTROL_VARIANTS = {
+    "top-bar-icon": {
+        "first_try": VARIANT_UNSNAPPED,
+        "status": "provisional",
+        "units": 1,
+        "issue": 646,
+        "evidence": (
+            "two snapped taps on the coin icon (575,55) did "
+            "nothing; one unsnapped tap at the same point "
+            "opened the panel at once; food (248,55) and iron "
+            "(414,55) opened on the first unsnapped tap"
+        ),
+    },
+    "collect-button": {
+        "first_try": VARIANT_SNAPPED,
+        "status": "provisional",
+        "units": 1,
+        "issue": 646,
+        "evidence": (
+            "coin Collect did not register on an unsnapped "
+            "tap at (751,584); a snapped tap at (751,580) "
+            "collected at once (Owned 130,716,351 to "
+            "131,920,128); food and iron Collects landed on "
+            "the first snapped tap"
+        ),
+    },
+}
 
 
 class InputError(Exception):
@@ -251,6 +329,55 @@ def check_geometry(value, where):
     if not isinstance(value, str) or not value:
         raise InputError(f"{where}: expected a non-empty string, got {value!r}")
     return value
+
+
+def check_variant(value, where):
+    if value is None:
+        return None
+    if value not in (VARIANT_SNAPPED, VARIANT_UNSNAPPED):
+        raise InputError(
+            f"{where}: variant must be 'snapped' or 'unsnapped', "
+            f"got {value!r}"
+        )
+    return value
+
+
+def check_control(value, where):
+    if value is None:
+        return None
+    if not isinstance(value, str) or not value:
+        raise InputError(f"{where}: expected a non-empty string, got {value!r}")
+    if value not in CONTROL_VARIANTS:
+        known = ", ".join(sorted(CONTROL_VARIANTS))
+        raise InputError(
+            f"{where}: unknown control class {value!r}; "
+            f"known classes: {known}"
+        )
+    return value
+
+
+def variant_advice(control):
+    """Measured first-try variant advice for a control class."""
+    row = CONTROL_VARIANTS[control]
+    return {
+        "tool": "tapcal",
+        "version": TOOL_VERSION,
+        "control": control,
+        "first_try": row["first_try"],
+        "status": row["status"],
+        "units": row["units"],
+        "issue": row["issue"],
+        "evidence": row["evidence"],
+        "rule": (
+            "on a no-change tap that lands on target, flip the "
+            "variant before re-aiming; never repeat the same "
+            "variant after a no-change"
+        ),
+        "note": (
+            "changed must come from the post-tap read "
+            "(Owned/Available), not the receipt verdict"
+        ),
+    }
 
 
 def parse_tap(entry, index):
@@ -645,6 +772,7 @@ def parse_verify_attempt(entry, index):
     if entry.get("changed") is None:
         raise InputError(f"{where}: missing required field 'changed'")
     changed = check_bool(entry.get("changed"), f"{where} changed")
+    variant = check_variant(entry.get("variant"), f"{where} variant")
     observed = entry.get("observed")
     if observed is not None:
         observed = check_point(observed, f"{where} observed")
@@ -653,6 +781,7 @@ def parse_verify_attempt(entry, index):
         "aim": aim,
         "tapped": tapped,
         "changed": changed,
+        "variant": variant,
         "observed": observed,
     }
 
@@ -667,6 +796,7 @@ def parse_verify_case(data, path):
         raise InputError(f"{path}: missing required field 'target'")
     target = check_point(data["target"], f"{path} target")
     geometry = check_geometry(data.get("geometry"), f"{path} geometry")
+    control = check_control(data.get("control"), f"{path} control")
     compensation = data.get("compensation")
     if compensation is not None:
         compensation = parse_comp(compensation, f"{path} compensation")
@@ -701,6 +831,7 @@ def parse_verify_case(data, path):
         "activity": activity,
         "target": target,
         "geometry": geometry,
+        "control": control,
         "compensation": compensation,
         "max_retries": max_retries,
         "attempts": attempts,
@@ -749,11 +880,20 @@ def next_aim_for(last, target, compensation):
     return None, None, []
 
 
+def flip_variant(variant):
+    """The other background-click variant (issue #646)."""
+    if variant == VARIANT_SNAPPED:
+        return VARIANT_UNSNAPPED
+    return VARIANT_SNAPPED
+
+
 def verify_case(case):
     target = case["target"]
     compensation = case["compensation"]
     attempts = case["attempts"]
     max_retries = case["max_retries"]
+    control = case.get("control")
+    advice = variant_advice(control) if control is not None else None
     attempt_results = []
     for attempt in attempts:
         if attempt["changed"]:
@@ -796,26 +936,61 @@ def verify_case(case):
                 "tapped": attempt["tapped"],
                 "observed": attempt["observed"],
                 "changed": attempt["changed"],
+                "variant": attempt["variant"],
                 "miss_dx": miss["dx"] if miss else None,
                 "miss_dy": miss["dy"] if miss else None,
                 "ground_dx": ground["dx"] if ground else None,
                 "ground_dy": ground["dy"] if ground else None,
             }
         )
+    # Variants already tried on target with no change: only an
+    # on-target tap tests its variant (issue #646) - a tap that
+    # missed the point says nothing about its variant.
+    tried_on_target = {
+        attempt["variant"]
+        for attempt in attempts
+        if attempt["variant"] is not None
+        and attempt["tapped"] is not None
+        and attempt["tapped"] == target
+        and not attempt["changed"]
+    }
+    next_variant = None
     if any(result["verdict"] == "verified" for result in attempt_results):
         verdict = "verified"
         next_aim, basis, clamped = None, None, []
     elif not attempts:
         verdict = "not-started"
         next_aim, basis, clamped = next_aim_for(None, target, compensation)
+        if advice is not None:
+            next_variant = advice["first_try"]
     elif attempt_results and attempt_results[-1]["verdict"] == "ignored":
-        # The last tap hit the target exactly and the game
-        # ignored it (issue #575). A retry would re-aim at the
-        # same point, so the loop stops here whatever the retry
-        # budget: this outranks the count-based exhausted
-        # verdict, which would hide the cause.
-        verdict = "input-blocked"
-        next_aim, basis, clamped = None, None, []
+        last_variant = attempts[-1]["variant"]
+        if (
+            last_variant is not None
+            and flip_variant(last_variant) not in tried_on_target
+        ):
+            # The last tap hit the target exactly with the wrong
+            # variant and the game ignored it (issue #646): the
+            # recovery is to flip the variant, not to declare
+            # the input blocked. A flip is a changed method
+            # under R2, not a retry of the same method, so it
+            # outranks the count-based exhausted verdict, and
+            # it can fire at most once per target - after the
+            # flip both variants are tried and the branch below
+            # names the state input-blocked.
+            verdict = "retry-variant-flip"
+            next_variant = flip_variant(last_variant)
+            next_aim, basis, clamped = dict(target), "variant-flip", []
+        else:
+            # Both variants tried on target with no change, or
+            # no variant recorded: the tap reached the right
+            # pixel and the game ignored it (issue #575). A
+            # retry would re-aim at the same point, so the loop
+            # stops here whatever the retry budget: this
+            # outranks the count-based exhausted verdict,
+            # which would hide the cause.
+            verdict = "input-blocked"
+            next_aim, basis, clamped = None, None, []
     elif len(attempts) >= 1 + max_retries:
         verdict = "exhausted"
         next_aim, basis, clamped = None, None, []
@@ -827,18 +1002,24 @@ def verify_case(case):
         next_aim, basis, clamped = next_aim_for(
             attempts[-1], target, compensation
         )
+        # A miss is a landing error: the variant was never
+        # tested on target, so the retry keeps it.
+        next_variant = attempts[-1]["variant"]
     return {
         "tool": "tapcal",
         "version": TOOL_VERSION,
         "activity": case["activity"],
         "target": target,
         "geometry": case["geometry"],
+        "control": control,
+        "variant_advice": advice,
         "verdict": verdict,
         "attempts_used": len(attempts),
         "retries_remaining": max(0, 1 + max_retries - len(attempts)),
         "attempts": attempt_results,
         "next_aim": next_aim,
         "next_aim_basis": basis,
+        "next_variant": next_variant,
         "clamped": bool(clamped),
         "clamped_axes": clamped,
     }
@@ -863,6 +1044,8 @@ def fmt_verify(result):
                 f"ground {fmt_num(attempt['ground_dx'])},"
                 f"{fmt_num(attempt['ground_dy'])}"
             )
+        if attempt["variant"] is not None:
+            notes.append(f"variant {attempt['variant']}")
         if notes:
             detail += " (" + "; ".join(notes) + ")"
         lines.append(f"attempt {attempt['attempt']}: {detail}")
@@ -874,11 +1057,42 @@ def fmt_verify(result):
         )
         if result["clamped"]:
             lines.append(f"clamped axes: {', '.join(result['clamped_axes'])}")
+    if result["next_variant"] is not None:
+        lines.append(f"next variant: {result['next_variant']}")
+    if result["verdict"] == "retry-variant-flip":
+        lines.append(
+            "recovery: re-tap the same point with the flipped "
+            "variant; verify by the post-tap read, not the receipt"
+        )
     if result["verdict"] == "input-blocked":
         lines.append(
             "recovery: re-front the app (Dock icon / "
             "mac_lastwar_front.sh), then re-probe; do not retry "
             "the same aim"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def fmt_variant(advice):
+    lines = [
+        f"control: {advice['control']}",
+        f"first-try variant: {advice['first_try']}",
+        f"status: {advice['status']} "
+        f"(units: {advice['units']}, issue #{advice['issue']})",
+        f"evidence: {advice['evidence']}",
+        f"rule: {advice['rule']}",
+        f"note: {advice['note']}",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def fmt_variant_list(rows):
+    lines = []
+    for advice in rows:
+        lines.append(
+            f"{advice['control']}: first-try {advice['first_try']} "
+            f"({advice['status']}, units {advice['units']}, "
+            f"issue #{advice['issue']})"
         )
     return "\n".join(lines) + "\n"
 
@@ -923,6 +1137,13 @@ def build_parser():
     verify = sub.add_parser("verify", help="tap-verify loop decision for one target")
     verify.add_argument("--case", required=True)
     verify.add_argument("--format", choices=("text", "json"), default="text")
+
+    variant = sub.add_parser(
+        "variant", help="first-try tap variant for a control class"
+    )
+    variant.add_argument("--control", default=None)
+    variant.add_argument("--list", action="store_true")
+    variant.add_argument("--format", choices=("text", "json"), default="text")
 
     return parser
 
@@ -1026,6 +1247,30 @@ def main(argv=None):
                 print(json.dumps(result, indent=2, sort_keys=True))
             else:
                 print(fmt_verify(result), end="")
+            return 0
+
+        if args.command == "variant":
+            if args.list and args.control is not None:
+                raise InputError("variant: pass --control or --list, not both")
+            if args.list:
+                rows = [
+                    variant_advice(control)
+                    for control in sorted(CONTROL_VARIANTS)
+                ]
+                if args.format == "json":
+                    print(json.dumps({"variants": rows}, indent=2, sort_keys=True))
+                else:
+                    print(fmt_variant_list(rows), end="")
+                return 0
+            if args.control is None:
+                raise InputError("variant: pass --control CLASS or --list")
+            advice = variant_advice(
+                check_control(args.control, "variant --control")
+            )
+            if args.format == "json":
+                print(json.dumps(advice, indent=2, sort_keys=True))
+            else:
+                print(fmt_variant(advice), end="")
             return 0
 
         return 2
