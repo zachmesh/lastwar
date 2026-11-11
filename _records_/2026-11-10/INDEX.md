@@ -2998,3 +2998,10 @@ modified: 2026-11-10T14:21:00Z
   OD-20261108-01 still open. No comments posted: nothing
   changed since the 1700 pass. Status: done. Full detail in
   pr-integration/1715-run.md.
+## 17:06 to 17:13 - Ticker pass ticker-1704, Arms Race unit partial
+
+- Arms Race unit arms-race-2026-11-10-1403 partial. Base Building phase, score 21,600 of 30,000, segment rank 12. Both earned point chests (6,250 and 12,500) claimed in one tap plus the cumulative counter chest (3/2) - Skill Medals 600, Arms Race Badges 3, SR iron/food/coin chests 12 each, 5m speedups 28, gold ticket 1, puzzle pieces 2, red gem 1. Tier 3 short by 8,400: no finished building upgrade to collect (Oil Well [0/1] still in progress), speedup and pack paths are red lines. Priority 1 successor arms-race-2026-11-11-0112 enqueued, expiring at phase close 02:00Z. Nothing spent. Full detail in arms-race/1712-queue-run.md.
+
+## 17:15 to 17:34 - Ticker pass ticker-1704, donations unit partial (unverified close)
+
+- Donations unit donations-2026-11-10-1403 partial, unverified. 17 coin donations to Quick Construction (8/10): count read live 17/30 at entry, 16/30, then 8/30. After the last batch the coin button greyed with a 00:04:21 cooldown and the count label vanished behind the timer, so the final count was not read live and the unit does not close on arithmetic. Footer Tech Donation Today moved 7600 to 9300 (+1700 over exactly 17 taps). Re-read unit donations-2026-11-11-0122 enqueued for after the cooldown (not_before 01:40Z). Entry blocker broken: Alliance shield at fresh measured centre (927, 715) in this window opened the menu at once. Nothing spent but 15,300 coin. Full detail in alliance-donations/1734-queue-run.md.
