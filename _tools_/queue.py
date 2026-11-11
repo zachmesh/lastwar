@@ -163,6 +163,18 @@ Usage:
              # list, or an unknown fix-up regular (issue #147),
              # so a pair with no fix-ups cannot silently repeat
              # the eighth-failure pattern
+  queue.py [--root DIR] sweep-status [--regular zero-sweep]
+             [--date YYYY-MM-DD] [--regulars-json FILE]
+             # report one reset day's sweep pair by result.status,
+             # never by pool membership (issue #610): a pass counts
+             # as executed only when its result.status is done or
+             # partial - expired units land in done exactly like
+             # executed ones, so the 2040 planner run's "both in
+             # done" read reported a false complete while the final
+             # pass was expired. Exit 0 when the pair is complete,
+             # 1 when it is not, 2 when the roster or regular
+             # cannot be read; read-only, and it resolves the root
+             # to the live pool (issue #598).
 
 --root defaults to the repository _queue_ folder; it also accepts
 a repository root, resolved to its _queue_ folder, or a pool
@@ -2058,6 +2070,140 @@ def cmd_sweep(args):
     return 0
 
 
+def cmd_sweep_status(args):
+    """Report one reset day's sweep pair by result status, never by
+    pool membership.
+
+    Issue #610: the 2040 planner run reported tonight's sweep pair
+    complete because both passes sat in _queue_/done/ - but the
+    final pass's result.status was expired (window passed before
+    execution), and expired units land in done exactly like
+    executed ones. Pool membership in done does not mean executed,
+    so a pair check that reads location reports a false complete
+    and hides the tenth consecutive sweep failure.
+
+    This command reads the same reset-anchored geometry sweep
+    stages from (the fixed-slots regular's slots_before_reset,
+    chain id, reset instant) and reports, for each expected pass,
+    where its unit file sits and what result.status it carries.
+    A pass counts as executed only when its result.status is done
+    or partial; expired, failed and skipped-needs-owner are closed
+    without execution, a done file with no result status is a bare
+    file (not a completed execution, the same rule as
+    _has_done_record), and inbox / claimed / absent are pending,
+    claimed and missing. pair_complete is true only when every
+    pass executed with the expected chain sequence. Exit 0 when
+    the pair is complete, 1 when it is not, 2 when the roster or
+    regular cannot be read - the gate command's exit-code
+    convention (log_append.py), so a planner run can gate on it.
+
+    Read-only: it writes nothing to the pool. It resolves the
+    root to the live pool (issue #598), so a copy running from a
+    delivery worktree reads the live pool, not the worktree's
+    stale copy. Unlike sweep it never refuses a past reset -
+    checking a past day's pair is the whole point. Done wins over
+    inbox and claimed when a unit id sits in more than one state
+    (a stale inbox duplicate, issue #213): the done record is
+    the closing, so the status check reads that one.
+    """
+    root = live_pool_root(args.root)
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"refused: cannot read roster {defs_path}: {exc}")
+        return 2
+    item = next((r for r in regs if r.get("id") == args.regular), None)
+    if item is None:
+        print(f"refused: regular {args.regular!r} not in roster "
+              f"{defs_path} - sync the tree to main before checking "
+              f"the sweep pair")
+        return 2
+    if item.get("cadence") != "fixed-slots" or \
+            not _reset_anchored_offsets(item):
+        print(f"refused: regular {args.regular!r} carries no "
+              f"reset-anchored slots (reset_utc + "
+              f"slots_before_reset_minutes) - no sweep pair to "
+              f"check (issue #610)")
+        return 2
+    if args.date:
+        try:
+            year, month, day = (int(x) for x in args.date.split("-"))
+            local_date = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --date {args.date!r} is not YYYY-MM-DD")
+            return 2
+    else:
+        local_date = datetime.now(LOCAL_TZ).date()
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    slots = _reset_anchored_slots(item, local_date)
+    chain_id = item.get("chain_id_prefix", "") + \
+        local_date.isoformat() if item.get("chain_id_prefix") else ""
+    passes = []
+    for idx, slot in enumerate(slots):
+        unit = _unit_id_for_window(item, slot)
+        label = ("first pass" if idx == 0 else "final pass") \
+            if len(slots) == 2 else f"pass {idx + 1}"
+        record = {"unit": unit, "label": label,
+                  "slot": iso(slot.astimezone(timezone.utc)),
+                  "seq": idx + 1, "location": "absent",
+                  "status": "missing", "executed": False,
+                  "geometry_ok": False, "finished_at": ""}
+        state, path = None, None
+        for cand in ("done", "claimed", "inbox"):
+            cand_path = unit_path(root, cand, unit)
+            if os.path.exists(cand_path):
+                state, path = cand, cand_path
+                break
+        if state is None:
+            passes.append(record)
+            continue
+        record["location"] = state
+        fields, _ = read_unit(path)
+        planned = parse_iso(fields.get("planned_for", ""))
+        try:
+            seq = int(fields.get("chain_seq", 0))
+        except (TypeError, ValueError):
+            seq = None
+        record["geometry_ok"] = (
+            planned is not None and
+            iso(planned) == iso(slot.astimezone(timezone.utc)) and
+            seq == idx + 1)
+        result = fields.get("result", {})
+        if not isinstance(result, dict):
+            result = {}
+        if state == "done":
+            status = result.get("status", "")
+            if not status:
+                record["status"] = "done-no-result"
+            else:
+                record["status"] = status
+                record["finished_at"] = \
+                    result.get("finished_at", "") or ""
+        elif state == "claimed":
+            record["status"] = "claimed"
+        else:
+            record["status"] = "pending"
+        record["executed"] = (record["status"] in ("done", "partial")
+                              and record["geometry_ok"])
+        passes.append(record)
+    complete = bool(passes) and all(p["executed"] for p in passes)
+    print(json.dumps({
+        "regular": args.regular, "date": local_date.isoformat(),
+        "chain_id": chain_id,
+        "reset_at": iso(reset_local.astimezone(timezone.utc)),
+        "passes": passes,
+        "executed_passes": sum(1 for p in passes if p["executed"]),
+        "total_passes": len(passes),
+        "pair_complete": complete},
+        ensure_ascii=False))
+    return 0 if complete else 1
+
 def _sweep_enqueue_refusal(args):
     """Refusal message when a hand-enqueued zero-sweep unit does not
     match the reset-anchored geometry, or None when it may proceed.
@@ -3578,6 +3724,12 @@ def main(argv=None):
     p.add_argument("--date", default="")
     p.add_argument("--regulars-json", default="")
     p.set_defaults(fn=cmd_sweep)
+
+    p = sub.add_parser("sweep-status")
+    p.add_argument("--regular", default="zero-sweep")
+    p.add_argument("--date", default="")
+    p.add_argument("--regulars-json", default="")
+    p.set_defaults(fn=cmd_sweep_status)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],
