@@ -3948,3 +3948,27 @@ modified: 2026-11-10T14:21:00Z
   zombie-invasion-zombie-2026-11-10-003; the 22:19 zombie unit ran
   on the Glacieradon page, so the event's return is for the next
   unit to verify live.
+
+- Zombie Invasion 2340 (ticker-2334, 23:40-23:53, partial, chain
+  continues): server maintenance ate the first half of the unit -
+  "Server disconnected" dialog, an "Update complete, please restart
+  the game" announcement, then "The server is under maintenance"
+  with a failed login; one Confirm retry brought the game back to
+  the base screen (the maintenance was announced in the 2319
+  donations record). Glacieradon page re-verified live (2d 18:12:18
+  left, 40/40 boss clues, challenge opens 2026-11-12 18:00, next
+  wave about 23:57). 1 Lv.10 kill (X:471 Y:355), LOOT row read
+  before Claim All and claimed for 268,000 coins (coin HUD 109.9M
+  to 110.2M); stamina 127 to 117, no refill. squads_parallel 1 -
+  no time for a parallel second dispatch after the recovery.
+  Store not visited; medal balance not re-read. Successor
+  enqueued to start now. Full detail in
+  zombie-invasion/2340-queue-run.md.
+
+- Alliance donations 2354 (ticker-2334, 23:54-23:59, partial):
+  re-read after the 2319 cooldown, 1 coin donation verified live
+  2/30 to 1/30 on Quick Construction, stopped at the 1/30 floor
+  per the changed route; count replenished +1 since 23:16 with no
+  landed donation in between. Named re-read unit
+  donations-2026-11-11-0757 enqueued for 00:15 PT. Full detail in
+  alliance-donations/2354-queue-run.md.
