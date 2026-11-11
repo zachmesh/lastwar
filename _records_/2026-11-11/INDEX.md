@@ -2306,3 +2306,7 @@ of 2026-10-28.
   0 withdrawals, no new issue. Pool inbox 78, claimed 0,
   done 1569. Status: no-op. Full detail in
   queue-planning/1340-run.md.
+
+## About 13:32 to about 13:58 - Knowledge organization 1332 run, 3 profiles folded, PR 651
+
+- Folded ticker-1204 zombie 1222 + radar 1233 and ticker-1259 survivors 1259 records into zombie-invasion 1.35.0, radar-tasks 1.77.0 and survivor-intake 1.55.0 (PR #651, commit 5533893c9). Zombie 1222: batched dispatch failed on a settling hub (single-step), stale-target March failed with no stamina charged, squads_parallel 1, 1 LOOT row 268,000 coins, gift-box tap swallowed by a base under the icon; chain seq-14 record missing. Radar 1233: 3 executed, 12 claimed, points 415 to 427, Mystery Supply Box banner +5000 diamonds, bar offered 3 tasks against stored 1/40. Survivors 1259: NEW FAILURE MODE - zoom click left the window in Zoom to Fit, no canvas tap lands, no remote restore path; window stuck as of 13:24 PT, needs the owner mouse action on the Mac; window-state precondition now stated in all three entry routes. Issue #650 filed (knowledge, cross-profile precondition carry); seq-14 gap commented on Issue #647. Slack sync sent (material run). Full detail in knowledge-organization/1332-run.md.
