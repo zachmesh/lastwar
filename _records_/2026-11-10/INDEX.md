@@ -3107,3 +3107,41 @@ modified: 2026-11-10T14:21:00Z
   #594, commit 50cfa4bd, MERGED at 01:51:36Z with 0 comments and 0
   reviews, base main 80935570. Status: done. Full detail in
   knowledge-organization/1732-run.md.
+
+## 17:34 to about 18:00 - Queue ticker pass (ticker-1734)
+
+- Own PRs first: records PRs 351 (2026-11-05) and 301
+  (2026-11-04) were CONFLICTING on
+  _logs_/repo-actions/action-log.jsonl; both resolved by
+  merging main into the branch and restoring the audit
+  objects missing from main (351: 1 line, the 2026-11-06
+  03:00 batch integrator line recording the merge of
+  records PR 345; 301: 4 lines, the pr-integration 2300
+  batch merge of PR 293, the planner-2240 and planner-2340
+  pass records, and the ticker-2334 pass record). Verified
+  every log line parses as exactly one JSON object, with
+  no glued multi-object lines reintroduced; both PRs now
+  MERGEABLE CLEAN. Resolution comments posted on both
+  PRs. Note for the integrator on 301: it also restores
+  the 11 missing 2026-11-04 evening record files and the
+  executed (failed, screen-capture Issue 284) results for
+  donations-2026-11-04-2203 and radar-2026-11-04-2203,
+  which main currently holds only as expired reaper stubs
+  with no evidence link. Records PR 590 (today) clean, no
+  comments. Tools PR 425 is not owned by this job.
+- Arms Race unit arms-race-2026-11-11-0112 (Base Building
+  re-check, rule R6 successor of the 1712 unit): score
+  21,600 of 30,000 at both live reads, timer 00:06:45 to
+  00:05:27; Building Queue holds only the Lv.29 Aircraft
+  Center upgrade (1d 08:32 left) and three idle queues, so
+  no finished building lands inside the phase and tier 3
+  is missed by 8,400 (blocker f). Nothing claimed in this
+  unit; cumulative chest 3/8, not claimable; completion
+  sweep clean, no Zombie Invasion tab in the Events
+  strip. Status: partial. Full detail in
+  arms-race/1756-queue-run.md.
+- Zombie Invasion: not seeded; the event ended 2026-10-30
+  and the Events hub carries no Zombie tab.
+- Sync: due 22, produced none (14 regulars already
+  queued); the stale survivors-2026-11-10-1403 inbox copy
+  was dropped because a done record already exists.
