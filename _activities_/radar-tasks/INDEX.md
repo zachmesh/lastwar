@@ -1,9 +1,9 @@
 ---
 title: Radar Tasks
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T13:32:17Z
+modified: 2026-11-11T15:32:17Z
 level: L1
-version: 1.74.0
+version: 1.75.0
 proficiency: learning
 description: Radar stored tasks, Quick Execute coverage and exceptions, map pin handling, stack and release completion standards and duel scoring
 status: unverified
@@ -76,6 +76,7 @@ grounded_in:
   - source: ticker-2055 radar-tasks execution record 2026-11-10 2107 queue run (partial, duel day 3 release, 27 claims, 8 Quick Execute, points 348 to 375, stored 35/40 to 13/40, stamina 120 to 40, 15 pins inventoried not worked, dish re-grounded (86,712) first tap, stale day-2 window label, duel score not read; record commit c9eb29ccd on records/2026-11-10)
   - source: ticker-0135 radar-tasks execution record 2026-11-11 0141 queue run (partial, duel day 3 release, 28 claims, 9 Quick Execute, points 375 to 403, stored 28/40 to 0/40, stamina 112 to 23, 19 extra rewards, 10 pins inventoried not worked, dish re-grounded (53,707) first tap, duel score not read; record commit a77e4e1d0 on records/2026-11-11)
   - source: ticker-0504 radar-tasks execution record 2026-11-11 0505 queue run (partial, duel day 3 release, stored already 0/40, no bar offer, one pin unresponsive to three tap variants, dish re-grounded (53,718) first tap, coordinate normalization lesson, duel score not read; record commit 74344e28b on records/2026-11-11)
+  - source: ticker-0637 secret-missions execution record 2026-11-11 0651 queue run (done, radar cross-read inside the secrets unit - 12 Radar Tasks restore in 04:51:38, 6 tasks completable for 60 stamina, Quick Execute not tapped; record commit f8ee03b36 on records/2026-11-11)
 ---
 
 
@@ -2721,4 +2722,11 @@ are still open, per the protocol.
 - Pins - worked first per R7, unresponsive (release rule unmet, hence partial): only ONE pin is visible in this map view: a small round brown portrait-like pin at the lower left, norm (129,780). The six pins inventoried by the 0141 unit (portrait man, blue skull, blue arrow, orange arrow, orange axe, purple skull) are NOT visible in this frame - the map view differs from the 0141 unit's views, and no pan was attempted inside the time cap. Three tap variants on the visible pin, all no-change: (1) a first tap at norm (90,750), mis-aimed off the grounded point; (2) a tap at the grounded centre (129,780) with snap_to_control false; (3) a tap at the same point with the default snap. No bottom card opened, no state change, the pin still stands. Per R2 the tap method is ended at this point inside the unit; the next radar unit must pivot - re-ground the pin fresh, try a long-press, or pan the map to the 0141 pins before tapping again. Whether the pin is a non-interactive map marker or a tap that needs a different gesture is NOT settled - not assumed. Duel score was NOT read before or after (no VS panel visit), so the duel delta test (10,000 vs 30,000 per task) is still owed.
 - Outcome partial: the release cycle is genuinely exhausted (stored 0/40, no bar offer, points unchanged), but the release-day standard (every pin completed, claimed, or identified with a reason) is not met - one pin stands unworked and unresponsive to taps. The tracker is left untouched, so the next tick re-produces the radar regular and the work resumes as a fresh unit. No diamonds or money spent. No priced button tapped. No other activity's rewards touched.
 - Result stats: target 1, achieved 0, resources_gained none, costs stamina 0 plus about 13 minutes, verified yes, blocker_category c, tasks_claimed 0, tasks_executed 0, pins_inventoried 1, pins_worked 0, free_stamina_claims 0, radar_points_before 403, radar_points_after 403, stored_before 0, stored_after 0, stamina_before 59, stamina_after 59, duel_score_before not-read, duel_score_after not-read, entry_attempts 1, device_takeovers 0.
-- Result stats: target 1, achieved 0, resources_gained coin 5,504,000 plus iron 7,840,000 plus food 8,040,000 plus Hero EXP 35.2M plus coils 280 plus blue triangles 1626 plus other item 9.6K plus Lv.1 chests x2, costs stamina 90 plus about 7 minutes, verified yes, blocker_category h, tasks_claimed 28, tasks_executed 9, pins_inventoried 10, pins_worked 0, free_stamina_claims 0, radar_points_before 375, radar_points_after 403, stored_before 28, stored_after 0, stamina_before 112, stamina_after 23, duel_score_before not-read, duel_score_after not-read, entry_attempts 1, device_takeovers 0.
+
+## What the 2026-11-11 0651 secrets-unit cross-read added - radar map glance, 12 tasks restore in 04:51:38, 6 completable for 60 stamina, radar unit to claim
+
+- Cross-read inside unit secrets-2026-11-11-0257 by ticker-0637, about 06:47 local. Evidence in `_records_/2026-11-11/secret-missions/0651-queue-run.md` (commit f8ee03b36 on records/2026-11-11). The secrets unit took a wrong turn on entry - the radio-tower icon at (56,699) opened the radar map - and read the radar state before backing out. Quick Execute was NOT tapped (radar's unit, not this one).
+- Radar map read live: 12 Radar Tasks restore in 04:51:38, 6 tasks completable for 60 stamina. Stored count was not read in the glance. The 6 completable tasks are the next radar unit's handover: duel posture today is "release" - the radar unit should claim them.
+- RESTORE-TIMER SEMANTICS UNRECONCILED: the 0505 unit read "12 Radar Task(s) will be restored in 00:30:45" with "Fully restore at 11-12 05:39:11 local time" at about 05:05; this glance reads 04:51:38 at about 06:47 with no "Fully restore" line recorded. Whether 04:51:38 counts to the next restore batch or to full restore is unpinned - the two figures are recorded as observed, not reconciled. The next radar unit re-reads both lines together.
+- CORRECTION to the 0505 section above: it carried a second Result stats line (28 tasks claimed, coin 5,504,000, iron 7,840,000, food 8,040,000, Hero EXP 35.2M, coils 280, blue triangles 1626, item 9.6K, Lv.1 chests x2, stamina 112 to 23, points 375 to 403, stored 28 to 0) - those are the 0141 unit's totals, pasted in error. The 0505 record's own stats are 0 claimed, no resources, stored 0/40 throughout. The stray line is deleted in this run; the 0505 section now carries only its own stats. The 0141 totals stand in the 0141 section, where they belong.
+- No radar action was taken in this unit; no diamonds or money spent.
