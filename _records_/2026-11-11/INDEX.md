@@ -299,3 +299,35 @@ of 2026-10-28.
   425 owner-gated, clean, unchanged (OD-20261108-01 open
   and undecided). Status: done. Full detail in
   pr-integration/0145-run.md.
+
+## 01:56 to about 02:13 - Ticker pass ticker-0155, training unit partial; arms-race unit partial; train unit failed
+
+- Training unit training-2026-11-10-2203 partial: Lv.30
+  barracks checked; pistol tapped twice and paw once, each
+  closed the button row with no panel and no power change
+  (149,218,973 before and after); Drill Ground screen
+  still not read live - fourth consecutive unit closing on
+  the same blocker, the next unit must locate the Drill
+  Ground building first, not re-tap the pistol. Other
+  three barracks unchecked (Lv.24 known running until
+  about 16:49). Train boarding banner seen during the unit
+  (closes 00:02:51 at first sight). Full detail in
+  troop-training/0213-queue-run.md.
+- Arms-race unit arms-race-2026-11-10-2203 partial:
+  interrupted before the phase read - the train boarding
+  was closing in about 1 minute, so the unit closed at
+  once for the train unit to attempt boarding. No phase,
+  score or threshold read; the 0004 R4 Tech Research
+  judgement is not carried forward as the current phase.
+  Full detail in arms-race/0205-queue-run.md.
+- Train unit train-2026-11-10-2230 failed: boarding
+  closed before the carriage-2 plus tap landed (banner
+  00:01:13 at about 02:03:20, close about 02:04:30;
+  platform plus buttons present at timer 00:05:19, gone
+  at 00:04:55). The metadata read between the platform
+  open and the boarding tap cost the window - the next
+  train unit taps the carriage-2 plus first. Account not
+  aboard (carriage 3 passenger list read: 6 riders, no
+  Bears Lair); the train departs in about 4 minutes
+  without this account. No contracts spent. Full detail
+  in alliance-train/0209-queue-run.md.
