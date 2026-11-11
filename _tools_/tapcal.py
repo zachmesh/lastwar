@@ -51,6 +51,18 @@ numbers the retro can read:
                subcommand is the decision the loop feeds on, so
                a miss is measured and the retry aim is computed,
                never eye-estimated again.
+  narrow       - whether a narrow control needs its first tap
+               compensated (issue #652): given the control's
+               half-width and half-height around a grounded
+               target and the session compensation, the
+               uncompensated tap lands at target + offset; when
+               that landing falls outside the control on any
+               axis the verdict is compensate-first with the
+               compensated aim, and when it stays inside on
+               both axes the verdict is uncompensated-ok. A
+               landing exactly on the control boundary counts
+               as a miss, so an offset that meets the
+               half-extent already forces compensation.
 
 Window geometry (issue #475, 2026-11-08): five taps on the
 Alliance button in fullscreen (1920x1080) never opened the
@@ -135,6 +147,9 @@ Usage:
   tapcal.py verify --case FILE [--format text|json]
   tapcal.py variant --control CLASS [--format text|json]
   tapcal.py variant --list [--format text|json]
+  tapcal.py narrow --x X --y Y --half-width W --half-height H
+                   --comp FILE [--format text|json]
+                   [--geometry G]
 
 A verification case for `verify` is a JSON object:
 
@@ -207,6 +222,23 @@ promotes a row to confirmed. `changed` must come from the
 post-tap read (Owned/Available), not the receipt verdict -
 the coin Collect receipt said no change while Owned had moved.
 
+Narrow controls in fullscreen (issue #652): ticker-1408
+(2026-11-11) measured a fullscreen 1920x1080 offset of about
+-23 x, +10 y: the Alliance panel back arrow ignored three taps
+at its measured centre (328,951) and closed on a compensated
+tap at (351,941), while wide controls (Alliance button
+652,711; Help All 480,778) still landed uncompensated because
+the offset stayed inside them. The offset is per session, not
+per geometry: a 2026-11-10 session (issue #575) measured about
++70 right, -14 up in the same fullscreen geometry, so a
+compensation carried across sessions would mis-aim. `narrow`
+therefore takes the session's own compensation file and
+refuses to judge without one, and --geometry refuses a
+compensation recorded for another geometry. Give the control's
+half-extent from its grounded bounds; the dialog X, which
+stayed unresponsive in the ticker-1408 unit, is the next
+narrow control to try compensated first.
+
 The compensation file for `compensate` is the JSON object
 `calibrate` writes with --out (or an equivalent {"dx":..,
 "dy":..} object). Exit codes: 0 success (even when the rate
@@ -219,7 +251,7 @@ import json
 import statistics
 import sys
 
-TOOL_VERSION = "1.4.0"
+TOOL_VERSION = "1.5.0"
 COORD_MIN = 0
 COORD_MAX = 1000
 
@@ -313,6 +345,14 @@ def check_point(point, where):
                 f"{where}: {axis}={value} outside {COORD_MIN}..{COORD_MAX}"
             )
     return {"x": point["x"], "y": point["y"]}
+
+
+def check_half_extent(value, where):
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise InputError(f"{where}: expected a number, got {value!r}")
+    if value <= 0:
+        raise InputError(f"{where}: must be positive, got {value!r}")
+    return value
 
 
 def check_bool(value, where, default=False):
@@ -596,6 +636,59 @@ def compensate_point(comp, x, y):
     }
 
 
+def narrow_decision(target, half_width, half_height, comp, geometry=None):
+    """Compensate-first decision for a narrow control (issue #652).
+
+    The uncompensated tap lands at target + offset. It hits the
+    control only while the offset stays strictly inside the
+    half-extent on both axes: a landing exactly on the boundary
+    is a miss, so an offset that meets a half-extent already
+    forces compensation. When any axis fails, the first aim is
+    the compensated aim from compensate_point; otherwise the
+    target itself.
+    """
+    dx = comp["dx"]
+    dy = comp["dy"]
+    landed = {"x": target["x"] + dx, "y": target["y"] + dy}
+    failed_axes = []
+    if abs(dx) >= half_width:
+        failed_axes.append("x")
+    if abs(dy) >= half_height:
+        failed_axes.append("y")
+    if failed_axes:
+        aimed = compensate_point(comp, target["x"], target["y"])
+        return {
+            "tool": "tapcal",
+            "version": TOOL_VERSION,
+            "target": dict(target),
+            "half_width": half_width,
+            "half_height": half_height,
+            "offset": {"dx": dx, "dy": dy},
+            "landing": landed,
+            "verdict": "compensate-first",
+            "failed_axes": failed_axes,
+            "first_aim": aimed["compensated"],
+            "clamped": aimed["clamped"],
+            "clamped_axes": aimed["clamped_axes"],
+            "geometry": geometry,
+        }
+    return {
+        "tool": "tapcal",
+        "version": TOOL_VERSION,
+        "target": dict(target),
+        "half_width": half_width,
+        "half_height": half_height,
+        "offset": {"dx": dx, "dy": dy},
+        "landing": landed,
+        "verdict": "uncompensated-ok",
+        "failed_axes": [],
+        "first_aim": dict(target),
+        "clamped": False,
+        "clamped_axes": [],
+        "geometry": geometry,
+    }
+
+
 def parse_comp(data, path):
     if not isinstance(data, dict):
         raise InputError(f"{path}: expected a compensation object")
@@ -712,6 +805,29 @@ def fmt_compensate(result):
         f"compensated: {comp['x']},{comp['y']}\n"
         f"clamped: {result['clamped']}\n"
     )
+
+
+def fmt_narrow(result):
+    target = result["target"]
+    landing = result["landing"]
+    aim = result["first_aim"]
+    lines = [
+        f"target: {fmt_num(target['x'])},{fmt_num(target['y'])}",
+        f"control half-extent: {fmt_num(result['half_width'])}"
+        f" x {fmt_num(result['half_height'])}",
+        f"offset: {fmt_num(result['offset']['dx'])},"
+        f"{fmt_num(result['offset']['dy'])}",
+        f"landing uncompensated: {fmt_num(landing['x'])},"
+        f"{fmt_num(landing['y'])}",
+        f"verdict: {result['verdict']}",
+    ]
+    if result["failed_axes"]:
+        lines.append(f"failed axes: {', '.join(result['failed_axes'])}")
+    lines.append(f"first aim: {fmt_num(aim['x'])},{fmt_num(aim['y'])}")
+    lines.append(f"clamped: {result['clamped']}")
+    if result["geometry"] is not None:
+        lines.append(f"geometry: {result['geometry']}")
+    return "\n".join(lines) + "\n"
 
 
 def fmt_anchors(anchors):
@@ -1145,6 +1261,21 @@ def build_parser():
     variant.add_argument("--list", action="store_true")
     variant.add_argument("--format", choices=("text", "json"), default="text")
 
+    narrow = sub.add_parser(
+        "narrow", help="compensate-first decision for a narrow control"
+    )
+    narrow.add_argument("--x", required=True, type=float)
+    narrow.add_argument("--y", required=True, type=float)
+    narrow.add_argument("--half-width", required=True, type=float)
+    narrow.add_argument("--half-height", required=True, type=float)
+    narrow.add_argument("--comp", required=True)
+    narrow.add_argument("--format", choices=("text", "json"), default="text")
+    narrow.add_argument(
+        "--geometry",
+        default=None,
+        help="refuse a compensation recorded for another geometry",
+    )
+
     return parser
 
 
@@ -1271,6 +1402,36 @@ def main(argv=None):
                 print(json.dumps(advice, indent=2, sort_keys=True))
             else:
                 print(fmt_variant(advice), end="")
+            return 0
+
+        if args.command == "narrow":
+            raw_comp = load_json(args.comp)
+            comp = parse_comp(raw_comp, args.comp)
+            if args.geometry is not None:
+                comp_geometry = raw_comp.get("geometry")
+                if (
+                    comp_geometry is not None
+                    and comp_geometry != args.geometry
+                ):
+                    raise InputError(
+                        "narrow: compensation was recorded for geometry "
+                        f"{comp_geometry!r}, not {args.geometry!r}; "
+                        "calibrate the offset for this session and "
+                        "geometry instead of reusing another one "
+                        "(issue #652)"
+                    )
+            point = check_point({"x": args.x, "y": args.y}, "target")
+            half_width = check_half_extent(args.half_width, "half-width")
+            half_height = check_half_extent(
+                args.half_height, "half-height"
+            )
+            result = narrow_decision(
+                point, half_width, half_height, comp, args.geometry
+            )
+            if args.format == "json":
+                print(json.dumps(result, indent=2, sort_keys=True))
+            else:
+                print(fmt_narrow(result), end="")
             return 0
 
         return 2
