@@ -3911,3 +3911,5 @@ modified: 2026-11-10T14:21:00Z
   different-device dialog. Monthly gift already Claimed
   (Days Left 11, Rewards Left 11). Nothing claimed, nothing
   spent. Full detail in shop-claims/2256-queue-run.md.
+
+- Integrator pass pr-integration-2026-11-10-2300. BATCH pass: checker due yes (window 23:00-00:00 PT), first pass in the window. Merged tools PR #614 by squash (bd81998c, sweep pair 120/60, Refs #606) and records PRs #597 (merge 203940a0, 51 commits) and #351 (merge 67350afe, 5 commits), branches not deleted; local main fast-forwarded to 67350afe by bundle. Records PR #301 conflicted on the action-log file after the merges, conflict comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), no new comment. 1 comment posted. Slack DM sync sent for the merges (ts 1794381077.288909). Status: done. Full detail in pr-integration/2300-run.md.
