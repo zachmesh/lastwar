@@ -41,3 +41,18 @@ of 2026-10-28.
   undecided). Records PRs 301, 615 and 618 re-verified
   CLEAN, awaiting the 03:00 batch. Status: done. Full detail
   in pr-integration/0015-run.md.
+
+## 00:32 to about 00:47 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-0032, worked from
+  the 2332 run watermark (substantive through a17f65702). Folded
+  the ticker-2334 pass (commit 5c07e8d40): zombie-invasion
+  1.25.0 to 1.26.0 (2340 maintenance-recovery dialog sequence,
+  Glacieradon page re-verified live, 1 Lv.10 kill X:471 Y:355,
+  LOOT 268,000 coins verified, fourth row-read confirmation) and
+  alliance-donations 1.92.0 to 1.93.0 (2354 one coin donation
+  verified 2/30 to 1/30, changed route held, replenishment
+  forty-fifth datapoint +1 over about 40 minutes). PR #619
+  opened (1 commit b7c5ee00e). Issue comments posted on #160,
+  #500, #558, #599. No contradictions, no new issue. Status:
+  done. Full detail in knowledge-organization/0032-run.md.
