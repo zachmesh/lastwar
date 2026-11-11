@@ -955,6 +955,31 @@ of 2026-10-28.
   Status: no-op. Full detail in
   tool-development/0432-run.md.
 
+## 04:32 to about 04:43 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-0432, worked from
+  the 0332 run watermark (substantive through 2abfb335c). Folded
+  the ticker-0313 pass (commit 4ffc07fa6: donations 0316/0321/0323,
+  zombie 0324), the ticker-0336 pass (commit 6914ac3aa: donations
+  0353, zombie 0341) and the ticker-0404 pass (commit 78dfab461:
+  zombie 0412, harvest 0417): alliance-donations 1.95.0 to 1.96.0
+  (3 coin donations 4/30 to 1/30 in 0316, paired War-tab reads
+  1/30 on both nodes in 0321 and 0353, superseded re-read 0323;
+  50th and 51st replenishment datapoints; route held),
+  zombie-invasion 1.28.0 to 1.29.0 (chain 006 to 008, 5 Lv.10
+  kills, 1,340,000 coins; R2 dispatch method changed in 0324 and
+  verified in 0341; Coin Chest (SSR) row identified - 160 medals
+  Limit 100, Owned 153; CORRECTION: medals pay +10 per claimed
+  LOOT row, not per kill; LOOT stamina +10 does not pay at claim
+  time), resource-collection 1.58.0 to 1.59.0 (food +2.0M, iron
+  +1.8M, coin +1.4M; Iron Mine Lv.27 read live; Armed Truck
+  ninth deferral). PR #628 merged with no feedback; PR #630
+  opened (1 commit 489e843dd). Issue comments posted on #160,
+  #450, #558, #566, #629. No new issue. Concurrent landing for
+  the next run: the donations re-read unit
+  donations-2026-11-11-1157 (not_before 12:30:00Z). Status: done.
+  Full detail in knowledge-organization/0432-run.md.
+
 ## 04:39 to about 04:43 - PR catch-all pass
 
 - PR-catchall pass pr-catchall-2026-11-11-0439. No-op:
