@@ -3915,3 +3915,36 @@ modified: 2026-11-10T14:21:00Z
 - Integrator pass pr-integration-2026-11-10-2300. BATCH pass: checker due yes (window 23:00-00:00 PT), first pass in the window. Merged tools PR #614 by squash (bd81998c, sweep pair 120/60, Refs #606) and records PRs #597 (merge 203940a0, 51 commits) and #351 (merge 67350afe, 5 commits), branches not deleted; local main fast-forwarded to 67350afe by bundle. Records PR #301 conflicted on the action-log file after the merges, conflict comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), no new comment. 1 comment posted. Slack DM sync sent for the merges (ts 1794381077.288909). Status: done. Full detail in pr-integration/2300-run.md.
 
 - Integrator pass pr-integration-2026-11-10-2315. NON-batch pass: checker plain due yes (clock-only) but merge-aware due no - records PRs 597 and 351 already merged in this window at the 2300 batch pass, so no records merge this pass. Opened records PR #615 for records/2026-11-10 (post-2300 batch, 1 commit, MERGEABLE/CLEAN), awaiting the 03:00 batch. Records PR #301 still conflicted on the action-log file, already noted at the 2300 pass, no new comment. Tools PR #425 re-verified CLEAN against new main 67350afe, still owner-gated (OD-20261108-01 open), no new comment. 0 comments posted. Status: done. Full detail in pr-integration/2315-run.md.
+## 23:12 to 23:19 - Ticker pass ticker-2312, donations unit partial
+
+- Donations unit donations-2026-11-11-0535 partial (ticker-2312,
+  23:12-23:19). Re-read of the 2133 unverified close. Donation
+  Count read live 2/30 on Quick Construction 8/10 at 23:16 (1 or 0
+  at the 2133 close, so the count replenished by 1 or 2 over the
+  cooldown - further evidence for the replenishing burst allowance,
+  Issue #599). Two coin donations at 900 coin each: tap 1 confirmed
+  by live read 2/30 to 1/30; tap 2 greyed the button with a
+  00:09:58 timer hiding the count label, so the close is unverified
+  per the hard rule (R1) and the tracker stays untouched. Footer
+  corroboration only: Tech Donation Today 1400 to 1600 live. The
+  00:09:58 cooldown is shorter than the earlier 00:13:28 /
+  00:14:47 / 00:14:25 timers - unpinned whether the length varies.
+  A named re-read unit is enqueued for after the cooldown
+  (donations-2026-11-11-0719, not_before 23:30 PT). A server
+  banner warned of a maintenance shutdown in 7 minutes at entry,
+  so the pass ended after this unit and no further game unit was
+  attempted. Nothing spent. Full detail in
+  alliance-donations/2319-queue-run.md.
+
+- Own-PRs check first: no open PR for the live records/2026-11-10
+  branch (PR #597 merged at the 19:00 batch); open PR #301
+  (records/2026-11-04, Owner: lastwar-pr-integrator) conflicted
+  again on the action-log at the 23:00 batch pass (integrator
+  comment, main moved by the 597 and 351 merges) - integrator-owned,
+  not this job's, left for the integrator/ticker reconciliation
+  path; PR #425 still owner-gated (OD-20261108-01 open). Zombie
+  Invasion: no fresh chain seeded - the event ended 2026-10-30 per
+  unit 066 and the inbox already holds chain unit
+  zombie-invasion-zombie-2026-11-10-003; the 22:19 zombie unit ran
+  on the Glacieradon page, so the event's return is for the next
+  unit to verify live.
