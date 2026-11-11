@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-11
 created: 2026-11-11T08:17:13Z
-modified: 2026-11-11T12:48:36Z
+modified: 2026-11-11T15:02:54Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened); the 0132 knowledge organization pass (folded the ticker-0004/0055 passes; PR #621 opened); the 0232 knowledge organization pass (folded the ticker-0135/0155 passes; PR #624 opened); the 0315 PR integration pass - NON-batch pass (checker plain due yes inside the 03:00-04:00 PT window, but merge-aware not due - PR 618 already merged in this window by the 0300 batch pass, first-pass rule bars a second batch merge); no merges; records PR 615 reconciled branch-side by ticker-0313 (merged main 51c5741d7, merge commit 5f302d8cc3), re-verified CLEAN at head 5f302d8cc, awaiting the 07:00 batch; records PR 627 clean at head b519b5636, awaiting the 07:00 batch; tools PR 425 owner-gated, clean, unchanged, no new comment; the 0330 PR integration pass - NON-batch pass (checker plain due yes inside the 03:00-04:00 PT window, but merge-aware not due - PR 618 already merged in this window by the 0300 batch pass, first-pass rule bars a second batch merge); no merges; records PR 627 clean at head 0fb84bb75, awaiting the 07:00 batch; records PR 615 clean at head 5f302d8cc3, awaiting the 07:00 batch; tools PR 425 owner-gated, clean, unchanged, re-verification comment posted (redundant against unchanged main, noted in the run record)
@@ -1448,3 +1448,38 @@ of 2026-10-28.
   donations re-read unit enqueued by 0635 for after about 06:51
   local. Status: done. Full detail in
   knowledge-organization/0632-run.md.
+
+- Passes (0656, ticker-0637, partial): Free Supply claimed on the
+  Weekly Pass page - ruby x10, iron x4. Super Monthly Pass daily
+  gift already Claimed today (Days Left 10, Rewards Left 10). Both
+  weekly pass cards (S2 Drone Components, S1 Drone Parts) are $4.99
+  purchase offers, not owned passes - no Daily Pickup claimable.
+  Legendary Take All $19.99 untouched. Hot Deals FREE GIFT
+  check-in card still unclaimed: card taps only swipe the carousel
+  and a Go tap landed mid-transition; next unit should let the card
+  settle, then tap Go, or reach the check-in event via the Events
+  hub. Detail in shop-claims/0656-queue-run.md.
+
+- Secrets (0651, ticker-0637, done): all 8 Your Tasks read live - 7
+  PERFECT, no Claim button (rewards already collected); UR Rescue
+  Officer still shows no stamp, countdown or Claim (Issue #626 open).
+  Assist Allies 5/5 at cap; Reward Recovery 2026-11-6 entry already
+  CLAIMED. Nothing to deploy, no Mega Refresh (secret tasks do not
+  score on Science day). Radar handover: 12 tasks restore in
+  04:51:38, 6 completable for 60 stamina. Detail in
+  secret-missions/0651-queue-run.md.
+
+- Treasures (0654, ticker-0637, done): fragment counts read live -
+  M1 x12, M2 x11, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10; chest progress
+  12/15. M3 at zero means no complete set, no dig possible; Dig
+  buttons greyed out and untouched. No exchange. Detail in
+  hidden-treasures/0654-queue-run.md.
+
+- Trucks (0701, ticker-0637, partial): entry via the top left-column
+  icon (51,576) straight into Intercity Trade. Trade Count 0/5 to
+  1/5: slot 1 rolled N, free refresh kept N, contract refresh rolled
+  UR (iron 3.8M, food 3.8M, coin 2.4M, arrives ~03:18), dispatched
+  with Let's Go, Squad 1 escort. Plunder Count 0/4 untouched; no
+  returned trucks to settle; Recover red dot still waiting. Next
+  trucks unit resumes the shortfall (dispatch to 5/5, plunder to
+  4/4). Detail in truck-plunder/0701-queue-run.md.
