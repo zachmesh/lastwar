@@ -2104,3 +2104,9 @@ of 2026-10-28.
   Pool inbox 80, claimed 0, done 1566. Status: done. Full
   detail in queue-planning/1140-run.md.
 >>>>>>> 2fd7f8e3e (docs(records): queue planning 1140 run record (2026-11-11))
+
+## About 11:45 to about 11:58 - PR integration 1145 run, merged PRs 644 and 645, non-batch pass
+
+- NON-batch pass: plain checker said due for the 11:00 window but merge-aware said not due - PRs 615 and 636 were already merged in the window by the 1100 pass, so only the first pass at or after a batch point merges. Audit flag for the retro: two records merges landed in the 11:00 window (615 at 19:06:27Z, 636 at 19:07:03Z), one per window under the first-pass rule (issue #418).
+- Merged PR #644 (knowledge, zombie-invasion 1.34.0, squash b3fdbad3): chain-close note corrected - the event returned 2026-11-10 as Glacieradon, chain zombie-2026-11-10 live through unit 013; source record 8eed5fa0 verified on main. Merged PR #645 (tools, Refs #149, squash 65e68715): scout_diff now parses heading-carried red-dot accounting, Nov 10 unexplained 0 -> 5; non-blocking follow-up comment posted about stacked countdown + base-screen tails.
+- Records PR #643 verified CLEAN at head c1d71f8f, awaiting the 15:00 batch. Tools PR #425 still CONFLICTING on _tools_/INDEX.md at unchanged head 0fb5a27f, still owner-gated (OD-20261108-01 open); no new comment. Local main synced to 65e68715. Slack sync sent to the owner Trirvia DM (ts 1794426960.182729). Base warning: the local records branch in ~/lastwar-push is a stale fork (merge-base 2026-11-03); this record was re-based twice onto the moving remote tip (c1d71f8f, then f01281bd) after push guards refused. Status: done. Full detail in pr-integration/1145-run.md.
