@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T11:32:17Z
+modified: 2026-11-11T18:32:17Z
 level: L1
-version: 1.52.0
+version: 1.53.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -58,6 +58,7 @@ grounded_in:
   - source: ticker-1314 alliance-help execution record 2026-11-10 1316 queue run (done, cross-read: Alliance Gifts red dot back minutes after the 1310 full claim, new gifts arriving; record commit d781dac9d on records/2026-11-10)
   - source: ticker-1806 alliance-gifts execution record 2026-11-10 1810 queue run (done, dialog-confirmed 464 Regular plus 14 Premium, 478 total, Gift Level 28 progress 203,638,690 to 203,653,640, per-step deltas unattributed as Issue #183 evidence, badge 11 vs dialog 12 second-sweep gap, Zombie Invasion tab seen live in the Events hub; record commit 20a62ff0 on records/2026-11-10)
   - source: ticker-0212 alliance-gifts execution record 2026-11-11 0218 queue run (done, dialog-confirmed 667 Regular and 52 Premium, both tabs verified empty, Gift Level 28 progress 205,158,210 to 205,177,930; record commit b0615980f on records/2026-11-11)
+  - source: ticker-1012 alliance-gifts execution record 2026-11-11 1042 queue run (done, dialog-confirmed 312 Regular and 19 Premium, both tabs verified Claimed, Gift Level 28 progress 206,145,210 to 206,168,170, Premium Claim All re-grounded at 744,939; record commit c0c788be on records/2026-11-11)
 ---
 
 
@@ -863,6 +864,8 @@ one file per execution.
 
 - 1.52.0 (2026-11-11): 0218 gifts unit folded (done, dialog-confirmed 667 Regular plus 52 Premium, 719 total, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 205,158,210 to 205,177,930 of 206,300,000; Regular window exact (+6,670 for 667 gifts), eighth Regular datapoint, exact; Premium window +13,050 for 52 gifts, visible rows MR 1000 plus 2 SSR 200 plus R 50 do not sum to it, below-fold rows unread so no exact reconciliation claimed, commented on Issue #183; top Premium rows show a Mega Express Contract MR gift plus 1000, two MetalMick Preparation Rare Pack SSR gifts plus 200 each, a Preparation Value Pack R gift plus 50; entry worked on standard framing, #580 blocker did not recur).
 
+- 1.53.0 (2026-11-11): 1042 gifts unit folded (done, dialog-confirmed 312 Regular plus 19 Premium, 331 total, both tabs verified Claimed with no red dot and no Claim All button; Gift Level 28 progress 206,145,210 to 206,168,170 of 206,300,000, 131,830 short of Level 29; Regular window 310 plus 2 late arrivals claimed on a re-check; Premium badge 18 to 19 as one gift arrived mid-unit; progress read 206,168,150 and later 206,168,170 while this unit claimed nothing in between, so allies claiming also moves it - Issue #183 evidence, commented by this run; Premium Claim All re-grounded at (744,939) against Regular (498,936), first Premium attempt at the Regular coordinates missed; Hide-your-name checkbox verified still unchecked after a stray click; session drop cc-593 to cc-594 between units, no loss).
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -1461,7 +1464,7 @@ one file per execution.
 - Regular tab: Violet's Gift +10 each, from LAMP 1 and KaBoom420 defeating CL-7 Victims. Claim All summary: "A total of 1193 Regular Alliance Gifts were claimed this time". Progress rose to 202,491,750 (+11,930).
 - Premium tab: Alliance Gift (SSR) +200 from Preparation Rare Pack purchases, Alliance Gift (UR) +500 each from Preparation Deluxe Pack purchases. Claim All summary: "A total of 43 Premium Alliance Gifts were claimed this time". Progress rose to 202,502,400 (+10,650). The post-claim list showed every row as Claimed and the Claim All button gone.
 - Back on the Alliance panel the Alliance Gifts red dot was gone.
-- CLAIM ALL POINT DIFFERS PER TAB, RE-CONFIRMED: the Regular Claim All sits centred at about (498,936) in the 642x951 window; the Premium Claim All sits further right at about (732,933) because the "Hide your name on Gifts" checkbox occupies the left space. Two taps at the Regular point on the Premium tab did nothing; a tap at the re-grounded Premium point worked at once. See the updated Claim All entry.
+- CLAIM ALL POINT DIFFERS PER TAB, RE-CONFIRMED: the Regular Claim All sits centred at about (498,936) in the 642x951 window; the Premium Claim All sits further right at about (732,933) because the "Hide your name on Gifts" checkbox occupies the left space. Two taps at the Regular point on the Premium tab did nothing; a tap at the re-grounded Premium point worked at once. See the updated Claim All entry. (2026-11-11 1042 update: re-confirmed - Regular Claim All at normalized (498,936), Premium at (744,939); a first Premium attempt at the Regular coordinates missed the button and landed on empty space, corrected after a screenshot. Always re-ground the button per tab.)
 - Progress windows (Issue #183): Regular +11,930 for 1193 gifts = 10 each exactly - sixth exact-match datapoint, commented on Issue #183 by this run. Premium +10,650 for 43 gifts; the record does not itemise the SSR/UR mix, so no exact reconciliation is claimed - recorded as read.
 - A-01 verification (Issue #300): this unit's stats carry no points figure - the Gift Level progress gain (+22,580) is not written into stats.points, per retro action A-2026-11-09-01. Commented on Issue #300 by this run.
 - Figures read live: food 615.9M, iron 938.8M, coin 84.1M, diamonds 6,207, power 148,765,978 at entry and at close (unchanged). No login or verification demanded, no different-device dialog.
@@ -1495,3 +1498,14 @@ one file per execution.
 - Verification: after both claims, both tabs' rows all read Claimed, both Claim All buttons gone, both tab red dots gone. Both tabs empty.
 - Counter note, Issue #183 evidence: the Regular window reconciles exactly (+6,670 for 667 gifts) - the eighth Regular datapoint, exact. The Premium window (+13,050 for 52 gifts) does not decompose from the visible rows (MR 1000 + 2x SSR 200 + R 50 = 1,450 visible); below-fold rows were unread, so no exact reconciliation is claimed. Commented on Issue #183 by this run. The counter is alliance-shared; per-step deltas are never attributed to own claims alone.
 - Outcome: done. Regular 667 claimed, Premium 52 claimed, 719 gifts total. Target 719, achieved 719. No diamonds or money spent, no paid button tapped. The game was left on the base screen.
+
+## What the 2026-11-11 1042 unit added - done, 312 Regular and 19 Premium claimed, Premium Claim All re-grounded at (744,939), late arrivals caught on re-check
+
+- Unit gifts-2026-11-11-0630 by ticker-1012, about 10:28 to 10:42 local, status done. Evidence in `_records_/2026-11-11/alliance-gifts/1042-queue-run.md` (commit c0c788be on records/2026-11-11). Computer session cc-594 (cc-593 dropped between units; fresh session started, window re-selected with no loss).
+- Entry state (read live): Alliance panel: [AP3x] The Apex, Leader Abyss Apex, Power 13,807,816,778, Members 96/100, English. Alliance Gifts entry carried a red dot; both tabs carried red dots. Gift Level 28, progress 206,145,210 / 206,300,000 at entry (Level 29 at 206,300,000).
+- Regular tab - Claim All, 310 + 2 late arrivals: first Claim All (badge 310): "A total of 310 Regular Alliance Gifts were claimed this time". Rows were Doom Elite / Zombie Boss kills at +10 points each (Raze Cromwell, MetalMick). Rewards grid as displayed: red gem 5 (sub-count 45), horn 5m (31), food 1.0K (1.0K), coin 600 (1.5K), iron 1.0K (1.1K), food 10.0K (28), coin 6.0K (56). Item identities beyond the icon are recorded as displayed, not independently verified. Progress after the claim: 206,155,470 / 206,300,000. Re-check after the Premium claim found the entry red dot still lit: 2 new Regular gifts had arrived - Doom Walker Loot (23:58:14, MegaLoki Apex Defeated Doom Walker) and Alliance Gifts (23:58:11, Nuna Knuckles Defeated Zombie Boss), both +10. Second Claim All: "A total of 2 Regular Alliance Gifts were claimed this time". Regular total this unit: 312.
+- Premium tab - Claim All, 19: first view showed badge 18; by claim time one more had arrived (Demoralyzed purchased Take All, SSR +200, 23:59:45), badge 19. Claim All: "A total of 19 Premium Alliance Gifts were claimed this time". Rows were SSR +200 / SR +100 from ally purchases (Preparation Rare Pack, Preparation Premium Pack, VIP Exclusive, Take All). Rewards grid as displayed: gold badge 2.5K x1, purple badge 500 x1, purple chest x11, gold coins x18, brown bundle x10, blue chest x6, gold badge 50 x5, red gem 20 x1, horn 5m x2, red gem 5 x1. The red gem is the same icon as the diamond currency; the exact mapping of grid cells to inventory is not independently verified. Progress after the claim: 206,160,470 / 206,300,000. Premium total this unit: 19.
+- Claim All points, re-confirmed: the Premium Claim All button sits further right than the Regular one (the "Hide your name on Gifts" checkbox occupies the left): Regular Claim All at normalized (498,936), Premium at (744,939). A first Premium attempt at the Regular coordinates missed the button and landed on empty space; corrected after a screenshot. Always re-ground the button per tab. See the updated Claim All entry.
+- Progress note, Issue #183 evidence: the Gift Level progress is alliance-wide, not solely this unit's doing - it read 206,168,150 and later 206,168,170 while this unit claimed nothing in between, so allies claiming also moves it. Do not attribute progress deltas to this unit's claims alone. Last read: 206,168,170 / 206,300,000 (131,830 short of Level 29).
+- Verification (read live): after the second Regular claim, Premium re-checked: every row "Claimed", no Claim All button, no red dot on either tab. Alliance panel after exit: Alliance Gifts red dot gone. (Alliance Wars, Help, Alliance Store, Alliance Techs still carry red dots - other units' work.) "Hide your name on Gifts" checkbox was never touched; verified still unchecked after a stray click.
+- Outcome: done. Regular 312 claimed, Premium 19 claimed, 331 gifts total. No diamonds or money spent, no paid button tapped. The game was left on the base screen.
