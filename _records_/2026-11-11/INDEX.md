@@ -2072,3 +2072,9 @@ of 2026-10-28.
   decision deadline 2026-11-12 18:00 UTC. VPS root disk 81
   percent (1.9G free). Silent run, no Slack sync. Status:
   done. Full detail in pr-catchall/1139-run.md.
+
+## About 11:32 to about 11:47 - Knowledge organization 1132 run, 1 profile folded, PR 644
+
+- Zombie-invasion 1.34.0 (ticker-1045, commit 8eed5fa0). PR #644, 1 commit (3a25ba0b), base main 3594e469, OPEN at run end. Full detail in knowledge-organization/1132-run.md.
+- 1048 zombie: 2 Lv.10 kills in parallel, 1 LOOT row claimed 268,000 coins; CORRECTION - the 2026-10-30 chain-close note is superseded: the event returned 2026-11-10 as Glacieradon, chain zombie-2026-11-10 live through unit 013. Third Search opened a Lv.85 Zombie Boss card (rally-class, no march); skull timer 00:00:57 to 00:00:36 is NOT the wave countdown; medals 4140 derived, not live-read.
+- Issue comments: #642, #498. Slack summary sent to the owner Trirvia DM (ts 1794426287.151639). Stats: profiles updated 1, contradictions resolved 1, stale marked 1, gaps filed 0.
