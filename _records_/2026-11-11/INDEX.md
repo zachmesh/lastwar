@@ -913,3 +913,20 @@ of 2026-10-28.
   bubbles remain and the Armed Truck was not checked;
   the next harvest unit picks both up. Status: partial.
   Full detail in resource-collection/0417-queue-run.md.
+
+## 04:30 to about 04:35 - pr-integration 0430 pass (non-batch)
+
+- Standing PR integrator pass, NON-batch: checker plain
+  and merge-aware both not due (outside every batch
+  window; next batch 07:00 PT). No merges. Records PRs
+  627 (2026-11-11, head 78dfab461) and 615
+  (2026-11-10, head 5f302d8cc3) both probed CLEAN against
+  main 775e3254e and await the 07:00 batch. Tools PR 425
+  still owner-gated (OD-20261108-01 open, no owner
+  decision); head 0fb5a27f6 unchanged and main unchanged
+  since the 0345 verification, so no new comment
+  (identical verification, merged tree 31b46364). Process
+  note: git fetch commands in the shared VPS main
+  worktree early in this pass, read-side only, no
+  checkout pull or reset, no loss identified. Full detail in
+  pr-integration/0430-run.md.
