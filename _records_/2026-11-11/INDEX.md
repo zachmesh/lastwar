@@ -198,3 +198,4 @@ of 2026-10-28.
   0100 run-record commit only). Tools PR 425 owner-gated,
   clean, unchanged (OD-20261108-01 open). Status: done.
   Full detail in pr-integration/0115-run.md.
+- Integrator pass pr-integration-2026-11-11-0130. Non-batch pass per the checker (plain not due, outside every batch window, next batch 03:00): no records merges, no knowledge/code merges; re-verification comments posted on PRs 301 and 425 against new main 177477ac. Records PRs 301, 615 and 618 re-verified CLEAN against main 177477ac, awaiting the 03:00 batch; PR 618 head 79418ebd (the 0115 run-record commit). Tools PR 425 owner-gated, clean, unchanged (OD-20261108-01 open). Status: done. Full detail in pr-integration/0130-run.md.
