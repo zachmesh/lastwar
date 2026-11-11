@@ -1,0 +1,87 @@
+{
+ "arms-race": {
+  "status": "skipped",
+  "at": "2026-11-10T03:45:43-08:00",
+  "note": "Base Building phase: score 0/30000, only free path is building power from one Oil Well in progress, speedup and pack paths red-lined"
+ },
+ "building-queues": {
+  "status": "done",
+  "at": "2026-11-10T09:14:14-08:00",
+  "note": "Lv.29 Aircraft Center 1d 17:13:16 left, slots 2-4 idle"
+ },
+ "research": {
+  "status": "done",
+  "at": "2026-11-10T08:46:23-08:00",
+  "note": "Slots read live: slot 1 running 1d 01:35:27, slot 2 Idle"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-10T13:06:01-08:00",
+  "note": "Regular 1193 + Premium 43 gifts claimed"
+ },
+ "help": {
+  "status": "done",
+  "at": "2026-11-10T13:21:36-08:00",
+  "note": "Help All pressed once; GoldenSonya Food Output V helped; no ally requests remain"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-10T13:00:04-08:00",
+  "note": "Event train rewards claimed; other categories swept, nothing claimable"
+ },
+ "train": {
+  "status": "done",
+  "at": "2026-11-10T04:14:02-08:00",
+  "note": "Boarded carriage 2 of Missile Apex train; 3-contract gift missed (issue #570)"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-10T13:27:08-08:00",
+  "note": "Duel total 1,650,000 of 3,600,000, gap 1,950,000"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-10T13:25:32-08:00",
+  "note": "No ceremony waiting; duel total 1,650,000 of 3,600,000, gap 1,950,000"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-10T13:31:33-08:00",
+  "note": "Four shop tabs checked, nothing claimable; monthly pickup already Claimed"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-10T13:49:54-08:00",
+  "note": "All 8 tasks PERFECT, assists 5/5, recovery already claimed"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-10T13:52:14-08:00",
+  "note": "No dig possible, M3 at 0; chest progress 11/15"
+ },
+ "donations": {
+  "status": "done",
+  "at": "2026-11-10T02:54:07-08:00",
+  "note": "Donation Count 0/30 read live via entry count 6/30 plus footer delta 4800 to 5100; count refills in bursts, next slot re-reads"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-10T13:58:34-08:00",
+  "note": "Full 6-tab sweep, nothing claimable"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-10T11:47:28-08:00",
+  "note": "Stack day: Quick Execute 1 task, stamina 120 to 110, points 348 unchanged; Claim All-only bar, 11 pending, not tapped"
+ },
+ "daily-missions": {
+  "status": "done",
+  "at": "2026-11-10T14:37:57-08:00",
+  "note": "4 rows + chests 40/80/120 claimed, activity 120"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-10T14:43:40-08:00",
+  "note": "Freebie + login chest claimed, VIP points 1627030"
+ }
+}

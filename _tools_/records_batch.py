@@ -43,9 +43,13 @@ Two commands, both standard library only:
           --merges, due stays clock-only, as in 1.0.0.
   audit - the retro's audit input. Reads a JSON list of records
           merges (merge timestamps as recorded by gh) and lists
-          the ones that fell outside any batch window. Exit 0 on
-          a successful audit even when violations are found -
-          a violation is a finding, not a tool failure - and 2
+          the ones that fell outside any batch window, and the
+          second and later merges inside a batch window: the
+          first-pass rule (issue #418) allows one records merge
+          per window, so a second merge in the same window is a
+          violation even though it sits inside the window. Exit
+          0 on a successful audit even when violations are found
+          - a violation is a finding, not a tool failure - and 2
           on an unreadable or malformed input file.
 
 A merge timestamp exactly at a batch point is compliant; exactly
@@ -80,7 +84,7 @@ from zoneinfo import ZoneInfo
 LOCAL_TZ = ZoneInfo("America/Los_Angeles")
 BATCH_HOURS = (3, 7, 11, 15, 19, 23)
 BATCH_WINDOW_MINUTES = 60
-TOOL_VERSION = "1.1.0"
+TOOL_VERSION = "1.2.0"
 
 
 def parse_time(text):
@@ -253,6 +257,14 @@ def audit_merges(merges, window_minutes=BATCH_WINDOW_MINUTES):
     string or an aware datetime. The result is JSON-ready: every
     merge is classified, violations carry their PR number and
     timestamp, and a clean audit says so explicitly.
+
+    Two violation kinds (issue #418): a merge outside any batch
+    window, and a second or later merge inside a batch window.
+    The first-pass rule allows one records merge per window, so
+    the earliest merge in a window is the compliant one and each
+    later merge in the same window is a violation, even though
+    it sits inside the window. Each record carries a `reason`
+    naming its classification.
     """
     checked = []
     violations = []
@@ -268,11 +280,29 @@ def audit_merges(merges, window_minutes=BATCH_WINDOW_MINUTES):
             "compliant": window is not None,
             "window_start": window[0].isoformat() if window else None,
             "window_end": window[1].isoformat() if window else None,
+            "reason": ("inside batch window" if window is not None
+                       else "outside any batch window"),
         }
         checked.append(record)
-        if window is None:
-            violations.append(record)
     checked.sort(key=lambda item: (item["merged_at"], str(item["number"])))
+    # First pass per window: the earliest merge in each window is
+    # the batch merge; every later merge in the same window is a
+    # second-merge violation (issue #418).
+    seen_windows = {}
+    for record in checked:
+        if not record["compliant"]:
+            violations.append(record)
+            continue
+        first = seen_windows.get(record["window_start"])
+        if first is None:
+            seen_windows[record["window_start"]] = record
+            continue
+        record["compliant"] = False
+        record["reason"] = (
+            f"second records merge in batch window "
+            f"{record['window_start']} to {record['window_end']}; "
+            f"first was PR #{first['number']} at {first['merged_at']}")
+        violations.append(record)
     violations.sort(key=lambda item: (item["merged_at"],
                                        str(item["number"])))
     return {
@@ -332,7 +362,7 @@ def _render_audit(audit, fmt):
         for item in audit["violations"]:
             print(f"- PR #{item['number']} merged "
                   f"{item['merged_at']} America/Los_Angeles - "
-                  "outside any batch window")
+                  f"{item.get('reason', 'outside any batch window')}")
 
 
 def main(argv=None):

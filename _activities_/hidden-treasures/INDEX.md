@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-04T17:40:01Z
+modified: 2026-11-10T22:32:17Z
 level: L1
-version: 1.11.0
+version: 1.19.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -22,6 +22,13 @@ grounded_in:
   - source: ticker-0834 hidden-treasures execution record 2026-11-03 0838 queue run (done, checked only, counts identical to 0349, M3 at zero)
   - source: ticker-1234 hidden-treasures execution record 2026-11-03 1243 queue run (done, checked only, counts identical to 0838, M3 at zero, leftover Gold Mine panel entry)
   - source: ticker-0834 hidden-treasures execution record 2026-11-04 0847 queue run (done, checked only, fragment counts identical to 0838/1243, M3 still binding)
+  - source: ticker-1434 hidden-treasures execution record 2026-11-08 1459 queue run (done, one dig executed, fragments M1-M7 each down 1, chest progress 6/15 to 7/15, tab badge 1 while stock allowed 3 digs - badge-equals-digs rule disproved); record commit dfd3c87f9 on records/2026-11-08
+  - source: ticker-2235 hidden-treasures execution record 2026-11-08 2255 queue run (done, one dig executed, fragments M1-M7 each down 1, chest progress 7/15 to 8/15, 2 digs remain capped by M3, tab badge 1 re-confirmed not the dig count; record commit 0c9686b4f on records/2026-11-08)
+  - source: ticker-0504 hidden-treasures execution record 2026-11-09 0525 queue run (done, 1 dig executed, fragments M1-M7 each down 1, chest progress 9/15 to 10/15, M3 binding at x1, tab badge 1 with exactly 1 dig possible; record commit be01e91134 on records/2026-11-09)
+  - source: ticker-0204 hidden-treasures execution record 2026-11-10 0223 queue run (done, 1 dig after the secrets claim restocked M3, chest 11/15; record commit 069a94c7a on records/2026-11-10)
+  - source: ticker-0434 hidden-treasures execution record 2026-11-10 0446 queue run (done, checked only, no dig possible, M3 binding at zero, tab badge cleared, Rewards button unopened; record commit 5ba07ce2b4 on records/2026-11-10)
+  - source: ticker-1004 hidden-treasures execution record 2026-11-10 1040 queue run (done, checked only, no dig possible, M3 at 0, Rewards button checked and is an odds preview only; record commit 2218eb3cd on records/2026-11-10)
+  - source: ticker-1343 hidden-treasures execution record 2026-11-10 1351 queue run (done, checked only, no dig possible, M3 at 0, stock identical to the 10:40 read, chest 11/15; record commit b2c2b7a43 on records/2026-11-10)
 ---
 
 # Hidden treasures
@@ -40,8 +47,12 @@ itself and its dispatches belong to
 
 - Open the Secret Command Post (see the entry notes in
   secret-missions) and tap the Hidden Treasures tab. The tab carries a
-  red count badge - the badge showed 1 on first entry on 2026-10-25,
-  and that badge is exactly the number of digs currently possible.
+  red count badge - the badge showed 1 on first entry on 2026-10-25.
+  CORRECTED 2026-11-08 1459: the badge is NOT the number of digs
+  currently possible - on 2026-11-08 it read 1 while the fragment
+  stock (M3 and M5 at 3) allowed 3 digs. The dig count is capped by
+  the scarcest fragment stock, not by the badge; what the badge counts
+  is unconfirmed (see Open questions).
 
 ## How it is done
 
@@ -52,7 +63,8 @@ itself and its dispatches belong to
 - A dig consumes one each of fragments M1 through M7. The scarcest
   fragment caps the dig count - on 2026-10-25 the stock was M1 14,
   M2 13, M3 4, M4 4, M5 1, M6 6, M7 8, so M5 limited the account to
-  the 1 dig the badge advertised.
+  the 1 dig the stock allowed (the badge happened to read 1 then; the
+  badge is not the dig count - see the 2026-11-08 correction above).
 - Dig odds shown in game - Chest UR 10 percent, SSR 30 percent, SR
   60 percent, and an opened chest pays 10 rewards.
 - Tick Skip Animation, then tap Dig 1 time.
@@ -65,8 +77,9 @@ itself and its dispatches belong to
 ## Cadence
 
 - Dig whenever a full set of seven fragments is on hand, which the
-  tab badge counts. Fragment income is a by-product of the secret
-  missions cadence.
+  scarcest fragment stock counts - NOT the tab badge (CORRECTED
+  2026-11-08 1459: the badge read 1 while stock allowed 3 digs).
+  Fragment income is a by-product of the secret missions cadence.
 
 ## Scope and availability
 
@@ -292,6 +305,11 @@ as Hidden Treasure.
 ## Open questions
 
 - What the chest progress track pays at 15 of 15.
+- What the Hidden Treasures tab badge counts - it read 1 on
+  2026-11-08 while the fragment stock allowed 3 digs, so it is not
+  the dig count; its meaning is unconfirmed. (Added 2026-11-08 1459;
+  re-confirmed 2026-11-08 2255: badge 1 both before and after the
+  dig while stock allowed 3 digs before and 2 after.) (2026-11-09 0525 update: badge 1 again, this time with the stock allowing exactly 1 dig (M3 binding at x1) - badge 1 when 1 dig is possible is consistent with the disproved rule's coincidence, not evidence for it; the 1459/2255 disproofs stand and the badge's meaning stays open.) (2026-11-10 0446 update: no red badge on the tab now - the 02:23 dig cleared it. The small red-brown circle below the tab icon is a pet avatar decoration, not a badge - verified by a cropped close-up.)
 - Whether the 1 of 15 track read on 2026-11-01 is a reset of the
   10 of 15 track, a new track, or a different counter - the change
   is recorded, the mechanism is not. The 1420 dig advanced it
@@ -302,6 +320,7 @@ as Hidden Treasure.
   recovery record dropped five kinds, but no controlled mapping yet.
 - Whether the Golden Mobile Squad Decoration has dropped for this
   account in the past.
+- What the Rewards button (gift icon, top right of the Hidden Treasures map) opens - no unit has opened it yet; whether chest-progress tier rewards are claimable there. Follow-up for the next treasures unit. (Added 2026-11-10 0446.) (2026-11-10 1040 update: ANSWERED - the button opens a REWARD PREVIEW panel, "Rewards from a single dig": Chest (UR) Drop Rate 10.0%, Chest (SSR) 30.0%, Chest (SR) 60.0%, each chest opening 10 rewards with specific probabilities. It is an odds preview, not a claimable reward. Nothing to claim there.)
 
 ## What the 2026-11-02 2135 unit added - 2 digs, done
 
@@ -490,3 +509,130 @@ as Hidden Treasure.
 - M3 at zero caps complete sets at zero, so no dig is possible; the Dig buttons were not tapped. No fragment exchange was made (exchanges need owner approval).
 - The Secret Task tab's red dot is the secrets unit's unclaimed tasks, not this unit's work; nothing there was touched.
 - Back arrow tap did not navigate; a left-edge swipe drag returned to the base screen, as in the earlier units of this pass. Outcome: done, checked, no dig available.
+
+## What the 2026-11-08 1459 treasures unit added - one dig executed, badge-equals-digs rule disproved, chest progress 7/15
+
+- Unit treasures-2026-11-08-1057 by ticker-1434, about 14:57 to 15:00
+  local, status done - one treasure dig executed and verified, chest
+  progress 6/15 to 7/15, 2 digs remain by stock. Evidence in
+  `_records_/2026-11-08/hidden-treasures/1459-queue-run.md` (commit
+  dfd3c87f9 on records/2026-11-08). Tracker untouched.
+- Session: computer session cc-134 on the owner Mac mini, LastWar
+  already running. The deployed secret tasks from the previous unit
+  of this pass showed running countdowns (UR Rescue Missing Agent
+  about 01:57, SSR tasks about 00:57). No device-access error, no
+  different-device dialog, no login demanded. Total Power read live
+  on base at entry and at close: 149,850,353.
+- Fragment stock read live before the dig: M1 x16, M2 x15, M3 x3,
+  M4 x7, M5 x3, M6 x7, M7 x13. Scarcest M3 and M5 at x3, so 3 digs
+  were possible by stock, while the tab badge still read 1 - the
+  badge does NOT match the stock count this unit. CORRECTION: this
+  disproves the badge-equals-digs rule this profile carried since
+  2026-10-25 (first read) and re-confirmed on 2026-11-01 (second
+  confirmation) - in both earlier reads the badge happened to read 1
+  when the stock allowed exactly 1 dig, so the rule was never
+  actually tested until now. The standing claims in How to enter and
+  Cadence are corrected above; what the badge counts is an open
+  question. Chest progress read 6/15 before the dig. Skip Animation
+  was already ticked.
+- Dig: tapped Dig 1 time only, per the activity metadata (one dig
+  per unit). CONGRATULATIONS panel verified. Rewards as shown (item
+  identities for the icons are unverified, recorded as shown): grey
+  crates x24, orange food(?) x12, coin piles x12, medal 900, blue
+  triangle 400, silver ingots x100. No chest tier was displayed.
+- Verified after dismissing the panel: each fragment down exactly 1
+  (M1 x15, M2 x14, M3 x2, M4 x6, M5 x2, M6 x6, M7 x12); chest
+  progress 6/15 to 7/15; Dig buttons now read Dig 1 time and Dig 2
+  time(s), so 2 more digs remain possible by stock. The tab badge
+  still reads 1.
+- The remaining 2 possible digs were not taken: one dig per unit is
+  the activity's standing pattern, and the stock stays for the next
+  treasures unit.
+- Navigation slip: the batched double back-tap out of the post
+  opened the Chat screen on the second tap (the post's back arrow and
+  the base screen's chat entry share the spot in sequence). No chat
+  content was read, tapped or recorded; the Chat screen was exited at
+  once with its back arrow. The game was left on the base screen.
+  Lesson: do not batch the post-exit back-tap with a second tap - the
+  second tap lands on whatever the base screen shows under that spot.
+- Game left safe: base screen. No diamonds, money or other spending;
+  no exchange touched.
+
+## What the 2026-11-08 2255 unit added - 1 dig, chest 8/15, 2 digs remain capped by M3
+
+- Unit treasures-2026-11-08-1857 by ticker-2235, about 22:54 to 22:55 local, status done. Evidence in `_records_/2026-11-08/hidden-treasures/2255-queue-run.md` (commit 0c9686b4f on records/2026-11-08).
+- One treasure dig executed (Dig 1 time, Skip Animation on). Congratulations panel rewards, read live from its six tiles: chest stack x24, coin sacks x12, gold coins x24, medal 600, blue triangle 400, silver ingots 100. The chest tier won was not displayed on the panel.
+- Fragment stocks verified live before and after the dig. Before: M1 x17, M2 x14, M3 x3, M4 x7, M5 x5, M6 x7, M7 x13. After: M1 x16, M2 x13, M3 x2, M4 x6, M5 x4, M6 x6, M7 x12 - exactly one of each fragment consumed. Chest progress 7/15 before, 8/15 after. The Dig button now reads "Dig 2 time(s)": 2 digs remain by stock, capped by M3 x2.
+- The remaining 2 possible digs were not taken: one dig per unit is the activity's standing pattern, and the stock stays for the next treasures unit.
+- Tab badge re-confirmation: the Hidden Treasures tab badge read 1 both before and after the dig, while the stock allowed 3 digs before and 2 after, so the badge does not count digs possible by stock - re-confirmed against the 1459 disproof of the badge-equals-digs rule. Its meaning stays open (see Open questions).
+- No fragment exchange was opened or executed (needs owner approval).
+- Red lines held: no diamonds or money spent. No speedups burned. No paid button tapped. No fragment exchange. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1, resources_gained (chest-stack x24, coin-sacks x12, gold-coins x24, medal 600, blue-triangle 400, silver-ingots 100), costs 2min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 0525 unit added - 1 dig, chest 10/15, M3 binding at zero, badge 1 with exactly 1 dig possible
+
+- Unit treasures-2026-11-09-0257 by ticker-0504, about 05:20 to 05:25 local, status done. Evidence in `_records_/2026-11-09/hidden-treasures/0525-queue-run.md` (commit be01e91134 on records/2026-11-09). Computer session cc-224, same session as the secrets unit of this pass.
+- Hidden Treasures tab opened from the Secret Command Post; the tab badge read 1, exactly the number of digs possible this time.
+- Fragment stock before the dig, read live: M1 x15, M2 x12, M3 x1, M4 x5, M5 x3, M6 x5, M7 x11. M3 was the binding fragment, so exactly 1 dig was possible. Skip Animation was already ticked. Tapped Dig 1 time.
+- CONGRATULATIONS panel paid 5 visible stacks: chest x24, coin x36, 1m speedup x50, 1m speedup x25, silver ingot x200. The chest tier won was not displayed, and the two speedup stacks carry different icons (types not fully identified); recorded as displayed.
+- Verified live after the dig: fragment stock M1 x14, M2 x11, M3 x0, M4 x4, M5 x2, M6 x4, M7 x10 - each down by exactly 1, one full set consumed. Chest progress track 9/15 to 10/15. Both Dig buttons now greyed and the tab badge cleared - no complete set left (M3 at 0 is the binding fragment).
+- No further dig is possible until M3 (and the other kinds) are restocked by secret mission claims. The next treasures unit re-checks. The one-dig-per-unit standing pattern was followed; the stock stays for the next unit.
+- Badge note: badge 1 with exactly 1 dig possible is consistent with the disproved badge-equals-digs rule's coincidence (badge 1 when 1 possible), not evidence for it - the 1459 and 2255 disproofs stand. See the updated Open questions entry.
+- No diamonds or money spent. No fragment exchange executed (needs owner approval). No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1 (1 dig from badge 1), resources_gained chest x24, coin x36, 1m speedup x50, 1m speedup x25, silver ingot x200, costs 5min-no-items-spent, verified yes, device_takeovers 0, follow_up none.
+
+## What the 2026-11-09 2214 unit added - checked only, fragment stock unchanged since the 0525 dig, M3 still binding at zero
+
+- Unit treasures-2026-11-09-1857 by ticker-2148, about 22:12 to 22:14 local, status done (checked only). Evidence in `_records_/2026-11-09/hidden-treasures/2214-queue-run.md` (commit dd0b32e7a on records/2026-11-09).
+- Hidden Treasures tab opened from the Secret Command Post; no red badge on the tab.
+- Fragment stock, read live: M1 x14, M2 x11, M3 x0, M4 x4, M5 x2, M6 x4, M7 x10. Chest progress 10/15. Skip Animation ticked. Both Dig buttons greyed out.
+- The stock is identical to the post-dig state read at 05:20 today (0525 record): the five ally assists done in the secrets unit of this same pass paid no fragments, and no other fragment income arrived since. M3 at 0 is the binding fragment - no complete set, no dig possible.
+- No fragment exchange was inspected or executed (needs owner approval). The 9 tasks Mega Deployed in this pass finish from 22:33 onward; the next treasures unit re-checks after a claim.
+- Result stats: target 1, achieved 1 (fragment stock verified live, dig state verified with both buttons greyed), resources_gained none, costs 2m_wall_no_stamina, verified yes, blocker_category none, digs_done 0, device_takeovers 0, follow_up none.
+
+## What the 2026-11-10 0223 unit added - 1 dig after the secrets claim restocked M3, chest 11/15, M3 binding again
+
+- Unit treasures-2026-11-09-2257 by ticker-0204, about 02:21 to 02:23 local, status done. Evidence in `_records_/2026-11-10/hidden-treasures/0223-queue-run.md` (commit 069a94c7a on records/2026-11-10). Computer session cc-378 on the owner Mac mini.
+- Hidden Treasures tab opened from the Secret Command Post; red badge 1 on the tab (one dig possible).
+- Fragment stock before the dig, read live: M1 x14, M2 x13, M3 x1, M4 x7, M5 x2, M6 x7, M7 x11. Chest progress 10/15. Skip Animation ticked. Dig 1 time active, Dig 2 time(s) greyed - M3 at x1 is the binding fragment.
+- The stock moved since the 22:14 check (M1 x14, M2 x11, M3 x0, M4 x4, M5 x2, M6 x4, M7 x10): the secrets claim at 02:16 restocked M2 +2, M3 +1, M4 +3, M6 +3, M7 +1, completing the one set the badge advertised. This is the first measured restock delta tying a secrets claim to fragment stock - the secrets-to-treasures restock link is now measured, not inferred.
+- Dig: Dig 1 time tapped with Skip Animation on. CONGRATULATIONS popup paid 7 tiles: iron chest x12, coin piles x12, medal x600, 1m speedup x25, 1m speedup x50, 1m speedup x50, silver ingots x100. The chest tier won was not displayed (same as 2026-10-25).
+- Post-dig state verified live: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10 (each kind down exactly 1); chest progress 11/15; tab badge cleared; both Dig buttons greyed out.
+- No fragment exchange inspected or executed (needs owner approval). No diamonds or money spent. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1 (one dig executed and verified), resources_gained iron chest x12, coin piles x12, medal x600, 1m speedup x125, silver ingots x100, costs 2m_wall_no_stamina, verified yes, blocker_category none, digs_done 1, device_takeovers 0, follow_up none.
+
+## What the 2026-11-10 0446 unit added - checked only, no dig possible, M3 binding at zero, tab badge cleared, Rewards button unopened
+
+- Unit treasures-2026-11-10-0257 by ticker-0434, about 04:46 to 04:47 local, status done. Evidence in `_records_/2026-11-10/hidden-treasures/0446-queue-run.md` (commit 5ba07ce2b4 on records/2026-11-10). Computer session cc-401 on the owner Mac mini.
+- Hidden Treasures tab opened from the Secret Command Post.
+- Fragment stock, read live: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10. Chest progress 11/15. Skip Animation ticked.
+- No complete set: M3 at x0 is the binding fragment, so no dig is possible. Both Dig buttons are greyed out, exactly as the 02:23 record left them; the stock is unchanged since that dig (post-dig state M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10 - identical).
+- The tab carries no red badge now (the 02:23 dig cleared it). The small red-brown circle below the tab icon is a pet avatar decoration, not a badge - verified by a cropped close-up. See the badge open question's 0446 update.
+- The Rewards button (gift icon, top right of the map) was not opened in this unit; no prior unit has examined it. It is left as a follow-up for the next treasures unit to check whether chest-progress tier rewards are claimable there. See the new Open questions entry.
+- No dig possible until the next secret mission claim restocks fragments (M3 at 0 is binding again). Nothing spent, nothing claimed.
+- No diamonds or money spent. No fragment exchange inspected or executed (needs owner approval). No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 1 (check completed - no dig possible, no complete set), resources_gained none, costs about 2 minutes, no stamina or items spent, verified yes, blocker_category none, digs_done 0, device_takeovers 0, follow_up check the Rewards button next unit.
+
+## What the 2026-11-10 1040 unit added - checked only, no dig possible, M3 binding at zero, Rewards button is an odds preview only
+
+- Unit treasures-2026-11-10-0657 by ticker-1004, about 10:38 to 10:40 local, status done. Evidence in `_records_/2026-11-10/hidden-treasures/1040-queue-run.md` (commit 2218eb3cd on records/2026-11-10). Computer session cc-434 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636); Hidden Treasures tab opened.
+- Fragment stock read live from the map: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10. M3 is 0, so no complete set is on hand and no dig is possible. Both Dig buttons read greyed out, untouched. The stock is identical to the 0446 post-dig state - no fragment income arrived since the 02:23 dig.
+- Chest progress track still reads 11/15, unchanged from the 04:47 read.
+- Rewards button checked (it was unchecked at 04:47): it opens a REWARD PREVIEW panel, "Rewards from a single dig" - Chest (UR) Drop Rate 10.0%, Chest (SSR) 30.0%, Chest (SR) 60.0%, each chest opening 10 rewards with specific probabilities. It is an odds preview, not a claimable reward. Nothing to claim there. See the updated Open questions entry - the 0446 follow-up is closed.
+- No fragment exchange was opened or executed (owner approval required; none sought).
+- Live reads: base screen after the check - Total Power 148,058,020, coin 84.1M, food 612.5M, iron 939.3M, diamonds 6,207, stamina 120. Unchanged during this unit.
+- No diamonds or money spent. No dig executed (none possible). No exchange executed. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 0 (no dig possible, M3 at 0), resources_gained none, costs about 4 minutes, no stamina or items spent, verified yes, blocker_category none, digs_done 0, follow_up none.
+
+## What the 2026-11-10 1351 unit added - checked only, stock identical to 10:40, M3 at 0, chest 11/15
+
+- Unit treasures-2026-11-10-1057 by ticker-1343, about 13:50 to 13:51 local, status done. Evidence in `_records_/2026-11-10/hidden-treasures/1351-queue-run.md` (commit b2c2b7a43 on records/2026-11-10). Computer session cc-463 on the owner Mac mini.
+- Secret Command Post opened from the car icon at norm (55,636); Hidden Treasures tab opened.
+- Fragment stock read live from the map: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10. M3 is 0, so no complete set is on hand and no dig is possible. Both Dig buttons read greyed out, untouched. Stock is identical to the 10:40 read - no fragment income since then.
+- Chest progress track still reads 11/15, unchanged from the 04:47 and 10:40 reads.
+- Skip Animation stays ticked.
+- No fragment exchange was opened or executed (owner approval required; none sought).
+- Live reads: base screen after the check - Total Power 148,765,970, coin 84.1M, food 615.9M, iron 938.8M, diamonds 6,207, stamina 120. Unchanged during this unit.
+- No diamonds or money spent. No dig executed (none possible). No exchange executed. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 0 (no dig possible, M3 at 0), resources_gained none, costs about 2 minutes, no stamina or items spent, verified yes, blocker_category none, digs_done 0, follow_up none.
