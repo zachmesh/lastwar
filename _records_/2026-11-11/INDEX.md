@@ -1123,3 +1123,37 @@ of 2026-10-28.
   a detached VPS worktree (local VM workspace busy with
   another agent's in-flight work). Status: done. Full
   detail in pr-integration/0530-run.md.
+
+## 05:32 to about 05:41 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-0532, worked from
+  the 0432 run watermark (substantive through 78dfab461). Folded
+  the ticker-0434 pass (commit 16dc4a813: donations 0434) and the
+  ticker-0504 pass (commit 74344e28b: radar 0505, survivors 0520):
+  alliance-donations 1.96.0 to 1.97.0 (3 coin donations 3/30 to
+  1/30 on Rallied Attack, Tech EXP 24.6K to 24.9K; 52nd
+  replenishment datapoint, +2 over about 40 minutes, clean
+  interval; War tree re-read at the same levels, drag (500,550)
+  to (500,300); footer 3150 unchanged while the count
+  replenished +2; CHANGED ROUTE DEVIATION - tap 3 from live 1/30
+  eaten, tap 4 from 1/30 landed, sixth deviation, root cause a
+  stale 1.5.0 worktree profile, Issue #631; A-02 recheck for the
+  2026-11-11 retro: the route held on every current profile and
+  was breached only where the profile was stale), radar-tasks
+  1.73.0 to 1.74.0 (release cycle exhausted - stored 0/40, no bar
+  offer, points 403, stamina 59/120, restore 12 tasks in
+  00:30:45, fully restore 11-12 05:39:11 local; dish (53,718)
+  agrees with the 0141 (53,707); coordinate lesson - control
+  coordinates are NORMALIZED 0-1000, not pixels; one brown
+  portrait-like pin at (129,780) unresponsive to three tap
+  variants, R2 tap method ended; duel delta test still owed),
+  survivor-intake 1.52.0 to 1.53.0 (one '?' bubble vanished on
+  the figure tap with no recruit card read, intake unverified;
+  the remaining figure is a red-panda pet marker, not a
+  survivor; next unit grounds fresh AND crops the gate before
+  any tap). PR #630 merged with no feedback; PR #633 opened (1
+  commit eb62228fa). Issue comments posted on #160, #599, #500,
+  #558, #631, #168. No new issue. Concurrent landing for the
+  next run: the donations re-read unit donations-2026-11-11-1249
+  (not_before 13:10:00Z). Status: done. Full detail in
+  knowledge-organization/0532-run.md.
