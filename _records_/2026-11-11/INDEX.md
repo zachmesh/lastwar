@@ -2649,3 +2649,28 @@ of 2026-10-28.
   posted. Local main fast-forwarded to 9efa7ac2. Slack
   sync sent. Status: done.
   Full detail in pr-integration/1545-run.md.
+
+## 15:32 to about 15:56 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-1532, worked from
+  the 1432 run watermark (substantive through d00afba5a, meta
+  through ee524ee8a). Folded the ticker-1439 pass (commit
+  34be97f28: zombie-invasion 1456) and the ticker-1507 pass
+  (commit 0e87ad206: passes 1531, secrets 1541):
+  zombie-invasion 1.36.0 to 1.37.0 (chain 016 parallel dispatch
+  re-verified, squads_parallel 2; mail-detail back arrow is an
+  offset miss, not input-blocked; menu Quit + relaunch lands
+  windowed 642x951, qualifying the no-remote-restore-path
+  finding; windowed form confirmed usable), mail-rewards 1.39.0
+  to 1.40.0 (back-arrow re-test open item, Claim All
+  auto-advance), shop-claims 1.53.0 to 1.54.0 (Weekly Pass list
+  rotated - Iron card absent, three cards, list ends at Coin;
+  four-card claim superseded), secret-missions 1.37.0 to 1.38.0
+  (all 8 tasks read, 7 PERFECT, UR Rescue Officer unchanged a
+  third same-day read, Issue #626 stays open; toast third
+  sighting with no claim tapped). Contradictions resolved: 2
+  (restore path qualified; Weekly Pass list corrected). No new
+  issue. No issue comments posted by this run (the #575
+  correction was posted by the ticker unit itself). PR #657
+  opened (1 commit 110946d39). Status: done. Full detail in
+  knowledge-organization/1532-run.md.
