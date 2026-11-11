@@ -2499,3 +2499,25 @@ of 2026-10-28.
 ## About 14:32 to about 15:05 - Knowledge organization 1432 run, 7 profiles folded, PR 654
 
 - Folded ticker-1332 training 1340 + arms-race 1347 and ticker-1408 help 1410 + mail 1422 records into troop-training 1.44.0, arms-race 1.85.0, zombie-invasion 1.36.0, radar-tasks 1.78.0, survivor-intake 1.56.0, alliance-help 1.42.0 and mail-rewards 1.39.0 (PR #654, commit ff463c36a). CORRECTION: the 1259 "no canvas tap lands in Zoom to Fit" claim is superseded by the 1340/1347 on-screen evidence (back arrow, Iron Mine selection, Mall open/exit all landed in the same fullscreen framing); the stop-rule is withdrawn, units proceed on verified working points; the mechanism is measured by the ticker-1408 pass as a tap offset of about (-23 x, +10 y) normalized (Issue #652). Training 1340: 0 of 4 barracks, tent grounding missed again, Drill Ground tap landed on Iron Mine Lv.27, radar-map exit by back arrow (326,948). Arms-race 1347: phase never read, (645,62) opens the Mall (retired as an Events entry), Events icon (707,146) two no-change taps. Help 1410: Help All x2, 3 ally helps, points 500 to 520 verified live; Alliance button opens in fullscreen at (652,711) snap off, 1019 "exit fullscreen" method superseded. Mail 1422: Event Claim All paid medal 280, EXP 2.4M, Battle Data 1.5K, 10-stamina x2, coin 969.0K; Season row gone from the hub. Comments posted on Issues #650 (carry uses the corrected wording) and #648 (input is offset, not blocked). Slack sync sent (material run - corrects the 1332 message). Full detail in knowledge-organization/1432-run.md.
+## 14:40 to 14:56 - Ticker pass ticker-1439, zombie-invasion unit 016 partial
+
+- Zombie Invasion (1456, ticker-1439, partial): 2 squads dispatched
+  in parallel — Squad 1 to X:586 Y:340 and Squad 2 to X:454 Y:281,
+  both Lv.10, Easy Win, 10 stamina each, stamina 85 to 66,
+  squads_parallel 2 (first parallel dispatch in this chain since
+  unit 052's cap-4 run on 2026-10-30). Both kills land after the
+  unit closed; the successor must claim the 2 LOOT rows (about
+  268,000 coins each) from the gift badge. Mail at entry was
+  already claimed by ticker-1408's mail unit 1030 — this unit's
+  Claim All taps were redundant no-ops, no mail income here. The
+  train mail detail's back arrow ignored four tap attempts; the
+  taps are consistent with the -23x tap offset ticker-1408
+  measured in the same fullscreen window (issue #652), so they
+  do NOT prove the control input-blocked — the #575 comment
+  filed mid-unit is corrected by a follow-up comment; recovery
+  was menu Quit plus relaunch, which landed the app windowed 642x951 — all
+  taps in this unit used that window's normalized coordinates
+  and worked first try unsnapped. Coin 135.6M before and after
+  (no kills landed in-unit); medals 4150 derived, not live-read;
+  Store not visited. Cleared false; successor 017 enqueued to
+  start now. Detail in zombie-invasion/1456-queue-run.md.
