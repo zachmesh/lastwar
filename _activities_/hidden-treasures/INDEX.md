@@ -1,9 +1,9 @@
 ---
 title: Hidden Treasures
 created: 2026-10-26T04:00:00Z
-modified: 2026-11-10T22:32:17Z
+modified: 2026-11-11T03:32:17Z
 level: L1
-version: 1.19.0
+version: 1.20.0
 description: Treasure map fragment collection, ally exchange and digging, one activity folder for hidden treasure knowledge
 status: unverified
 grounded_in:
@@ -29,6 +29,7 @@ grounded_in:
   - source: ticker-0434 hidden-treasures execution record 2026-11-10 0446 queue run (done, checked only, no dig possible, M3 binding at zero, tab badge cleared, Rewards button unopened; record commit 5ba07ce2b4 on records/2026-11-10)
   - source: ticker-1004 hidden-treasures execution record 2026-11-10 1040 queue run (done, checked only, no dig possible, M3 at 0, Rewards button checked and is an odds preview only; record commit 2218eb3cd on records/2026-11-10)
   - source: ticker-1343 hidden-treasures execution record 2026-11-10 1351 queue run (done, checked only, no dig possible, M3 at 0, stock identical to the 10:40 read, chest 11/15; record commit b2c2b7a43 on records/2026-11-10)
+  - source: ticker-1834 hidden-treasures execution record 2026-11-10 1855 queue run (done, checked only, fragment stock identical to the 13:51 read, M3 at 0, no dig possible, chest 11/15; record commit af56d36ec on records/2026-11-10)
 ---
 
 # Hidden treasures
@@ -634,5 +635,18 @@ as Hidden Treasure.
 - Skip Animation stays ticked.
 - No fragment exchange was opened or executed (owner approval required; none sought).
 - Live reads: base screen after the check - Total Power 148,765,970, coin 84.1M, food 615.9M, iron 938.8M, diamonds 6,207, stamina 120. Unchanged during this unit.
+- No diamonds or money spent. No dig executed (none possible). No exchange executed. No login or verification was demanded, and no different-device dialog appeared.
+- Result stats: target 1, achieved 0 (no dig possible, M3 at 0), resources_gained none, costs about 2 minutes, no stamina or items spent, verified yes, blocker_category none, digs_done 0, follow_up none.
+
+## What the 2026-11-10 1855 unit added - checked only, stock identical to 13:51, M3 at 0, chest 11/15
+
+- Unit treasures-2026-11-10-1457 by ticker-1834, 18:55 to 18:57 local, status done. Evidence in `_records_/2026-11-10/hidden-treasures/1855-queue-run.md` (commit af56d36ec on records/2026-11-10). Computer session cc-492 on the owner Mac mini (session cc-491 from the secrets unit had closed in between; a fresh session was started, no game state lost).
+- Secret Command Post opened from the truck icon at norm (56,643); Hidden Treasures tab opened.
+- Fragment stock read live from the map: M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10. M3 is 0, so no complete set is on hand and no dig is possible. Both Dig buttons read greyed out, untouched. Stock is identical to the 13:51 read - no fragment income since then, and the 8 tasks deployed in the secrets unit of this same pass have not finished yet.
+- Chest progress track still reads 11/15, unchanged from the 04:47, 10:40 and 13:51 reads.
+- Skip Animation stays ticked.
+- Fourth consecutive identical stock read (0446, 1040, 1351, 1855): no fragment income all day since the 02:23 dig. The measured secrets-to-treasures restock link (02:23) has not fired again because no secrets claim has completed since - the 18:47 batch's earliest finish is 00:30:00. Next dig waits on an M3 fragment from secret mission claims.
+- No fragment exchange was opened or executed (owner approval required; none sought).
+- Live reads: base screen after the check - coin 97.8M, power 148,787,578. Unchanged during this unit.
 - No diamonds or money spent. No dig executed (none possible). No exchange executed. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 1, achieved 0 (no dig possible, M3 at 0), resources_gained none, costs about 2 minutes, no stamina or items spent, verified yes, blocker_category none, digs_done 0, follow_up none.
