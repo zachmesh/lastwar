@@ -2873,6 +2873,41 @@ def points_is_progress_delta(stats, regular=None):
     return points is not None and points != 0
 
 
+def points_is_expected_score(stats, regular=None):
+    """True when stats.points is a Handbook-rate expected score on a trucks unit (issue #300).
+
+    points is score gained in this unit, for scoring types only
+    (task-unit-queue-design.md per-unit measurement table: duel,
+    Arms Race, radar). Trucks is not a scoring type - a trucks
+    unit never reads the VS panel; duel-score reads belong to
+    the duel-score regular, which verifies the gain live. A
+    points figure on a trucks closing is therefore a
+    Handbook-rate expected score by construction, not a unit
+    score: trucks-2026-11-09-2257 wrote points 400000 (4 times
+    the 100,000 Handbook rate from tools/duel.py), labeled in
+    its own record "expected duel points, Handbook rate,
+    pending live verification by the duel-score unit", while
+    its achieved is a dispatch/plunder count ("dispatch 4,
+    plunder 1"), so neither the equality detector nor the
+    no-achieved detector fires. The Nov 10 retro window summed
+    403,592 as points gained against an honest 3,592. This is
+    a warning, never a block, and it is scoped to trucks only:
+    the genuine non-equal gains stay counted - arms-race
+    2026-11-09-1003 points 2000 against achieved 8000 (a
+    rally kill, distinct from the phase total), donations
+    points 50, daily-missions points 100. The trucks profile
+    already carries the prevention rule (retro action
+    A-2026-11-10-01: never write an expected or Handbook-rate
+    score into stats.points); this is the detector half.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular != "trucks":
+        return False
+    points = _stat_number(stats.get("points"))
+    return points is not None and points != 0
+
+
 def achieved_is_screen_total(stats, regular=None):
     """True when stats.achieved is a screen total on a star-ceremony unit (issue #483).
 
@@ -2959,6 +2994,7 @@ def cmd_complete(args):
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
+    points_exp = points_is_expected_score(stats, fields.get("regular"))
     achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
     blocker_bad = blocker_category_not_enum(stats)
     over_cap = isinstance(duration, int) and \
@@ -2982,6 +3018,8 @@ def cmd_complete(args):
                               if points_noach else [])
                            + (["points is progress delta"]
                               if points_prog else [])
+                           + (["points is expected score"]
+                              if points_exp else [])
                            + (["achieved is screen total"]
                               if achieved_screen else [])
                            + (["blocker_category not in enum a-i"]
@@ -3045,6 +3083,12 @@ def cmd_complete(args):
               f"this unit and gifts pay no score; the Gift "
               f"Level progress gain belongs in the summary and "
               f"resources_gained only")
+    if points_exp:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"on a trucks unit - points is score gained in "
+              f"this unit and trucks pay no live-read score; a "
+              f"Handbook-rate expected score belongs in the "
+              f"summary only, verified live by the duel-score unit")
     if over_cap:
         print(f"warning: {args.unit} ran {duration}s, over the "
               f"{UNIT_CAP_MINUTES}-minute unit cap - split the "
