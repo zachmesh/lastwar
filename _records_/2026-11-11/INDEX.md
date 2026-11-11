@@ -1058,3 +1058,19 @@ of 2026-10-28.
   Glacieradon (main zombie-invasion 1.29.0) and chain
   zombie-2026-11-10 unit 009 already sits in the inbox; the
   pass's token expired before a second unit could run.
+
+## 05:00 to about 05:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0500.
+  NON-batch pass (checker plain and merge-aware both
+  not due, next batch 07:00 PT). No merges. Records PRs
+  627 (26 ahead) and 615 (14 ahead) clean, awaiting the
+  07:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01), head and main unchanged since the
+  0450 re-verification, no comment posted per the
+  no-repeat rule. Process note: checkout and pull ran in
+  the shared VPS main worktree at pass start, against the
+  standing rule; main was already checked out, pull
+  fast-forwarded one commit, no other change resulted.
+  Status: done. Full detail in
+  pr-integration/0500-run.md.
