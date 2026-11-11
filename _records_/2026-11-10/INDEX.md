@@ -3569,6 +3569,37 @@ modified: 2026-11-10T14:21:00Z
   filed; no 2026-11-10 retro has landed yet. Status: done. Full detail
   in knowledge-organization/2032-run.md.
 
+## 21:32 to about 22:15 - Knowledge organization pass
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-10-2132.
+  Folded the new substantive records since the 2032 watermark
+  (6269f5324, c9eb29ccd, ccb00e883) and the 2026-11-10 retro
+  execution-knowledge actions A-01/A-02/A-03/A-06 into 8 profiles
+  on PR #612 (commit 4f1180880a, base main a8059f2ff): radar-tasks
+  1.71.0 -> 1.72.0 (2107 duel day 3 release, 27 claims, points
+  348 to 375, 15 pins none worked, stale day-2 label filed as
+  tooling #603), survivor-intake 1.50.0 -> 1.51.0 (2118 fourth
+  identical partial; CORRECTION - radar exit was a mis-measured
+  point, Home (927,952) works first try), resource-collection
+  1.56.0 -> 1.57.0 (2042 food +3.5M / coin +2.3M verified, iron
+  inconclusive, Armed Truck 7th deferral), truck-plunder 1.40.0
+  -> 1.41.0 (A-01 points rule, #300), alliance-donations 1.90.0
+  -> 1.91.0 (2133: 3 confirmed donations, count replenished
+  +3-4 with footer flat - burst allowance; A-02 route citation;
+  CORRECTION - A-02 "held all day" does not hold for the
+  2015/2133 final taps), perception-scout 1.57.0 -> 1.58.0
+  (A-03 re-ground rule, #149), alliance-duel 1.40.0 -> 1.41.0
+  (A-06 closing read before the about-18:00 rollover, #609;
+  corrects the retro's 19:00 wording), troop-training 1.40.0
+  -> 1.41.0 (2146: 313 Lv.9 collected, power +423,176; Drill
+  Ground Full blocks requeue but not collection - decoupled;
+  1229 tent point stale). A-04 already folded by PR #602;
+  A-05 already carried in 1.56.0. Issue comments posted on
+  #502, #566, #168, #599, #500, #150; no new issue filed.
+  Own PR #602 merged 04:48:07Z with no comments. Slack DM
+  sent (ts 1794377698.865479). Status: done. Full detail in
+  knowledge-organization/2132-run.md.
+
 ## 20:39 to 20:49 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-10-2039. No-op: no PR names
