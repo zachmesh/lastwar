@@ -71,3 +71,12 @@ of 2026-10-28.
   still owner-gated (OD-20261108-01 open), re-verified CLEAN
   against main 0a31d7a0; no unaddressed feedback. Status: done.
   Full detail in tool-development/0032-run.md.
+
+- Integrator pass pr-integration-2026-11-11-0030. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): no records merges. Merged
+  knowledge PR 619 and tools PR 620 (both arrived mid-pass).
+  Records PRs 301, 615 and 618 re-verified CLEAN, awaiting
+  the 03:00 batch. Tools PR 425 owner-gated, clean,
+  unchanged (OD-20261108-01 open and undecided). Status:
+  done. Full detail in pr-integration/0030-run.md.
