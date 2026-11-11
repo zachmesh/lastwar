@@ -3660,3 +3660,18 @@ modified: 2026-11-10T14:21:00Z
 ## 20:40 to 21:45 - Daily retro pass (retro-review-2026-11-10-2140, done)
 
 - Retro file _records_/retro/2026-11-10.md and data appendix (826 branch units after the second re-run, 795 live, gap 31, verdict FAIL; batch compliance 1 violation out of 6, PR 556 merged 22:59:55, 5 seconds before the 2300 window). Rolling series entry appended; owner-decisions register v2.0.0 to v2.1.0, no new items, none decided, 11 open, 9 over 48 hours. Threshold breaches: 10 named (red dots 3 narrative, expired day counts 15 branch, donations 0.2266, unverified 66.3%, #118 at 8 days, #149 recurrence, ticker-0634 missing ~134h plus planner 1840/1940 records undelivered plus the 2040 run falsely claiming the sweep pair complete plus duel-score-1803 absent from both pools, ledger 1/23, batch violation, 12 units over 900s). The branch advanced twice during the run (to 91f5dc59eb, then c9eb29ccd2); the aggregation was re-run from each fresh tip and the re-run picked up the ticker-2055 radar/survivors units and the planner 2040 record. Issues: 7 filed (#604 batch violation, #605 orphan branch, #606 sweep-002 expiry, #607 planner records undelivered, #608 unit cap, #609 duel double-count, #610 planner false sweep-complete), 4 closed (#483 star-ceremony exclusion, #539 resolve_pool_root, #510 same fix, #585 harvest Panel Collect), 1 reopened (#149 perception blackout), 31 carried-issue comments plus 2 corrections (#607, #251). Issue #603 (stale duel-day radar label) was filed by the ticker-2055 pass during the run. Full detail in retro-review/2140-run.md.
+
+## 21:32 to about 21:40 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-2132.
+  Implemented issue #610: `queue.py sweep-status` reports the
+  pre-reset sweep pair by result.status (done/partial), never by
+  pool membership - the 2040 planner run's false complete (1730
+  expired in done) now reads as an incomplete. PR #611 opened
+  (branch work/sweep-pair-status-check, commit 63f695358, Refs
+  #610); issue #610 commented. Validation on isolated /tmp
+  fixtures only: py_compile clean, 29/29 assertions passed,
+  read-only (fixture trees hash-identical). Own PR 425 still
+  owner-gated (OD-20261108-01 open), re-verified CLEAN against
+  main 49895f66c; no unaddressed feedback. Status: done. Full
+  detail in tool-development/2132-run.md.
