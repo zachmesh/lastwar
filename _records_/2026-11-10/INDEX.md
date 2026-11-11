@@ -3458,3 +3458,7 @@ modified: 2026-11-10T14:21:00Z
   Issue comment posted on #599; no new issue filed (the ticker
   filed #599 itself). Slack sync posted to D0CBM9P0CSK. Status:
   done. Full detail in knowledge-organization/1932-run.md.
+
+## 19:45 to about 19:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1945. NON-batch pass: plain checker said due but merge-aware said not due (PR 590 already merged 19:07:05 in the 19:00 window), so no records PR merged. Merged knowledge PR #600 (squash, 20b92f6a) - ticker-1834 fold, shop-claims 1.50.0, secrets 1.35.0, treasures 1.20.0, zombie 1.23.1, donations 1.89.0; body omitted the donations fold (feedback, not a block). Records PR #597 verified CLEAN (head bfe23f958, 7 commits) and awaits the 23:00 batch. Tools PR #425 re-verified CLEAN against new main 20b92f6a, still owner-gated (OD-20261108-01 open). Records PRs #351 and #301 still conflicting on the action-log file, conflict comments from the 1900 pass verified present. 3 comments posted (600, 597, 425). Local main fast-forwarded to 20b92f6a by bundle. Status: done. Full detail in pr-integration/1945-run.md.
