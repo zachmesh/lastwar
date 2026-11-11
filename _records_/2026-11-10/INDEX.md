@@ -2894,7 +2894,7 @@ modified: 2026-11-10T14:21:00Z
   2.7G free. Status: no-op. Full detail in
   pr-catchall/1639-run.md.
 
-## 16:32 to about 16:56 - Knowledge organization pass
+## 16:32 to about 16:52 - Knowledge organization pass
 
 - Knowledge-organizer pass knowledge-organization-2026-11-10-1632
   (done). Worked from the 1532 run's watermark (substantive through
