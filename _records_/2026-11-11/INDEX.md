@@ -1933,3 +1933,8 @@ of 2026-10-28.
   withdrawals, no new issue. Pool inbox 78, claimed 0,
   done 1554. Status: no-op. Full detail in
   queue-planning/0940-run.md.
+## 09:39 to about 10:07 - Ticker pass ticker-0936, survivors partial + donations partial
+
+- Survivor-intake (0941, ticker-0936, partial): one gate survivor processed - "?" bubble at norm (114,650) and human figure at (109,688) verified from a pre-tap crop, both gone on two post-tap screenshots, no recruit card or smiley observed, gate line clear as observed; 0 recruits identified, Quick Dispatch did not run (no verified post, per the 1644 refinement and the 0520 precedent); one computer-session drop recovered; the 0520 pet-marker confusion is not repeated - the before-crop proves a human figure. Detail in survivor-intake/0941-queue-run.md.
+- Alliance-donations (1004, ticker-0936, partial): 2 coin donations verified live on Unit Load Capacity (recommended marker moved from Rallied Attack to Unit Load Capacity, read fresh), count 8/30 to 6/30, Tech EXP 3.7K to 3.8K, coin cost 300 per donation on this node; stopped on the pass budget with the button still green, no cooldown; remaining 6/30 (replenishing) handed to donations-2026-11-11-1003 in inbox. Detail in alliance-donations/1004-queue-run.md.
+- Zombie-invasion unit 013 stays in inbox for the next tick (pass budget reached after the two units).
