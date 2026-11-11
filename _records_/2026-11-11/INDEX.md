@@ -1528,3 +1528,35 @@ of 2026-10-28.
   no issue of any class filed since then. No code changed, no
   PR opened. Status: no-op. Full detail in
   tool-development/0732-run.md.
+
+## 07:10 to about 07:34 - Ticker pass ticker-0707, zombie-invasion unit 010 partial; donations unit 1430 partial
+
+- Zombie-invasion (0724, ticker-0707, partial): three Lv.10 kills in
+  parallel (Squads 1-3 to X:475 Y:359, X:412 Y:402, X:483 Y:348),
+  squads_parallel 3, all three LOOT rows claimed in-unit for 804,000
+  coins (268,000 each; medal x10, iron 268.0K, food 268.0K, hero EXP
+  263.0K per row). Coin HUD 121.4M to 122.2M, food and iron each
+  +804,000. Gift badge 3 re-grounded at (323,224) on the current map
+  view; Claim All plain blue, no price tag. Store header read live:
+  medals 4130, against unit 008's 4080 close - a +50 delta against
+  +30 from the kills, +20 unexplained (alliance-gift toast seen on
+  the event page is one candidate; only the two live reads are
+  reported). 50 Stamina item 10 medals Limit 3 available; Coin
+  Chest (SSR) row still below the fold, no redemption, drag attempt
+  deferred to the successor. Stamina 64 to 36. Next wave about
+  07:54; cleared false, successor enqueued. One computer session
+  drop (cc-574 to cc-575), no game state lost. Detail in
+  zombie-invasion/0724-queue-run.md.
+
+- Donations (0733, ticker-0707, partial): re-read unit for the
+  0635 cooldown. Ran from the CURRENT main profile 1.99.0 (disk
+  copy is the stale 1.5.0 behind Issue #631). Donation Count
+  read live 3/30 at entry on Rallied Attack; 2 coin donations
+  verified (3/30 to 2/30 to 1/30, Tech EXP 25.2K to 25.4K),
+  stopped at the live-read 1/30 per the changed route - button
+  stayed green, no timer, route HELD. The 0635 tap-2 landing
+  stays UNVERIFIED: the count replenished 1/30 to 3/30 between
+  units, so 3/30 fits both outcomes, and the EXP granularity
+  cannot decide it. The 1/30 remainder goes to the next staged
+  donations unit (1003). Detail in
+  alliance-donations/0733-queue-run.md.
