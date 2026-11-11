@@ -2009,3 +2009,18 @@ of 2026-10-28.
   Filed Issue #642 (stale chain-close note in the zombie profile
   plus the Search-may-open-a-boss observation). Cleared false,
   successor enqueued. Detail in zombie-invasion/1048-queue-run.md.
+
+## 11:00 to about 11:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1100.
+  BATCH pass (checker plain and merge-aware both due,
+  window 11:00-12:00 PT; first pass in the window).
+  Merged records PR 615 (2026-11-10, merge 11f4b78e) and
+  records PR 636 (2026-11-11, merge 3594e469), branches
+  not deleted. Tools PR 425 now CONFLICTING on
+  _tools_/INDEX.md at unchanged head 0fb5a27f (main gained
+  a row from PR #639), still owner-gated (OD-20261108-01
+  open); conflict comment posted. No knowledge/code PR
+  open, no sync-back owed. Slack sync sent (ts
+  1794424129.563069). Status: done. Full detail in
+  pr-integration/1100-run.md.
