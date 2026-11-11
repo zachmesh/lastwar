@@ -1,9 +1,9 @@
 ---
 title: Secret Missions
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T11:32:17Z
+modified: 2026-11-11T15:32:17Z
 level: L1
-version: 1.36.0
+version: 1.37.0
 description: Secret Command Post dispatches and ally assists, one activity folder for secret mission knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-1503 resource-collection execution record 2026-11-10 1531 queue run (partial, Secret Command Post entry re-confirmed via the left-column truck icon, Provide Tech Support SSR not perfect at 15:25, Plunder Others 0/3; record commit f530c19b7 on records/2026-11-10)
   - source: zero-sweep 001 execution record 2026-11-10 1634 queue run (partial, Secret Command Post read live at 16:49, Assist Allies 5/5, Plunder Others 0/3, Provide Tech Support SSR still not perfect with the orange hexagon badge on it; record commit 986c1877 on records/2026-11-10)
   - source: ticker-0234 secret-missions execution record 2026-11-11 0259 queue run (done, Secret Task Report read live - two plunders of our finished tasks, UR Rescue Officer anomalous, 7 cards PERFECT with no Claim button, Mega Deploy no-change, assists at cap, Issue #626; record commit 2abfb335c on records/2026-11-11)
+  - source: ticker-0637 secret-missions execution record 2026-11-11 0651 queue run (done, all 8 tasks read live, 7 PERFECT, UR Rescue Officer unchanged since 0259, assists 5/5 at cap, recovery 2026-11-6 CLAIMED re-verified, Secret Task Report assist entries read, Mega Deploy not retried; record commit f8ee03b36 on records/2026-11-11)
 ---
 
 
@@ -1571,3 +1572,18 @@ secrets-2026-10-31-2257, status partial).
 - Live reads: base at entry - food 666.8M, iron 989.5M, coin 118.2M, power 149,218,973, diamonds 6,307, stamina 6 rising to 7. Unchanged during this unit.
 - No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 3, achieved 3 (claim check of 8 cards, assists at cap verified, recovery re-checked), resources_gained none, costs about 10 minutes play, verified yes, blocker_category none, assists_done 0, tasks_claimed 0, tasks_deployed 0, device_takeovers 0, follow_up UR Rescue Officer state and plunder mechanic re-read next unit; knowledge Issue #626 filed for the Secret Task Report / plunder discovery.
+
+## What the 2026-11-11 0651 unit added - all 8 tasks read live, 7 PERFECT, UR Rescue Officer unchanged since 02:59, assists at cap, recovery re-verified, done
+
+- Unit secrets-2026-11-11-0257 by ticker-0637, 06:46 to 06:51 local, status done. Evidence in `_records_/2026-11-11/secret-missions/0651-queue-run.md` (commit f8ee03b36 on records/2026-11-11).
+- Duel posture (tools/duel.py): Day 3, Age of Science, 11.2 hours left. Scoring today is research power, valor badges, drone component chests and radar claims - secret tasks do not score today, so no Mega Refresh was used (its cost is still unobserved).
+- Entry: Secret Command Post from the car icon at norm (55,636) in the base left column; title SECRET COMMAND POST verified - the same entry point as the 0259 unit. Wrong turn on the way in, the same as 0259: the radio-tower icon at (56,699) opens the radar map (12 Radar Tasks restore in 04:51:38, 6 tasks completable for 60 stamina - radar's unit, not this one; Quick Execute NOT tapped). The radar glance is folded as a cross-read in the radar-tasks profile.
+- Your Tasks read live in full, all 8 cards of the 18:47 batch: 7 stamped PERFECT in gold (SSR Protect Refugee Camp x2, SSR Provide Tech Support to Refugees, SR Retrieve Agent Profile, SR Retrieve Valuable Supplies, SR Retrieve Abandoned Gear, SR Retrieve Raw Materials) and no Claim button anywhere - the finished rewards were already collected, consistent with unit 0259 at 02:59.
+- UR Rescue Officer (top card, Lv.5) still shows no PERFECT stamp, no countdown and no Claim button - the same state unit 0259 found at 02:59, now re-read unchanged four hours later. Its orange icon opens the SECRET TASK REPORT, not a dispatch panel. Already tracked as knowledge Issue #626 (plunder mechanic); commented by this run with this re-read. The 0259 open question (did the 20:53/20:55 plunders take this task's rewards, or is it a fresh pending task Mega Deploy cannot see?) is still unanswered - the card has not moved in either direction.
+- Assist Allies reads 5/5 - at cap for the 18:00-to-18:00 assist day; no assists tapped. Plunder Others 0/5, untouched.
+- SECRET TASK REPORT (Assist tab): [AP3x]Skinner Box 11-10 21:00 "helped you claim task rewards"; [AP3x]spac3cadet x3 at 11-10 18:51 "You earned rewards for assisting this Commander's task" (chest x1 + 97.5K + 97.5K + 123.9K Hero EXP; chest x1 + 123.9K EXP + medal x44; chest x1 + x15 + 123.9K EXP); [AP3x]Boss Hog 05 at 11-10 18:51 (cut off). Plunder tab not opened - the two plunder entries are already in Issue #626. The assist entries show assists do pay the assister (chests, Hero EXP, medals) - new evidence for the assist mechanic, recorded here and on Issue #626.
+- REWARD RECOVERY (Recover button): entry 2026-11-6 18:00 reads CLAIMED - 8 unstarted secret tasks completed by the system, rewards map fragments x3/x3/x1/x1, mystery box x224, puzzle x2, chest x315, medal 1.2K, 1.0K, Hero EXP 13.8M. Nothing to claim. The 2026-10-24 19:00 entry sits below, collapsed. Only the last 7 recovery records are retained. Re-verified identical to the 0259 read.
+- Mega Deploy NOT tapped: unit 0259 tried it twice with no change and there is no pending task to deploy (R2 - no repeat of a failed method). Mega Refresh NOT used (duel day does not score secret tasks; cost unobserved).
+- Handover: radar - 12 tasks restore in 04:51:38, 6 completable for 60 stamina; duel posture today is "release" - the radar unit should claim them.
+- No diamonds or money spent. No speedups burned. No paid button tapped. Plunder Others untouched. No other task type was executed in this unit.
+- Result stats: target claim finished tasks, dispatch pending tasks, use assists; achieved all 8 tasks read live, nothing claimable, nothing pending to deploy, assists at cap; resources_gained none; points none (secret tasks do not score on Science day); costs about 5 minutes; verified yes - every figure above was read live on screen in this unit; blocker_category none.
