@@ -581,3 +581,19 @@ of 2026-10-28.
   panel (UR 10%, SSR 30%, SR 60%, 10 rewards per
   chest). No exchange offered or executed. Status:
   done. Full detail in hidden-treasures/0307-queue-run.md.
+  Local main sync-back deferred (shallow clone + dirty tree).
+  Slack sync sent. Status: done.
+  Full detail in pr-integration/0245-run.md.
+
+## 03:00 to about 03:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0300. BATCH
+  pass per the checker (plain and merge-aware due yes,
+  window 03:00-04:00 PT): merged records PR 618
+  (2026-11-11, merge commit dc6420e3b) and records PR 301
+  (2026-11-04, merge commit 51c5741d7); records PR 615
+  (2026-11-10) turned conflicting on the action-log file
+  after the merges, conflict comment posted; tools PR 425
+  owner-gated, clean, unchanged (OD-20261108-01 open), no
+  new comment. Slack sync sent. Status: done.
+  Full detail in pr-integration/0300-run.md.
