@@ -3884,3 +3884,30 @@ modified: 2026-11-10T14:21:00Z
   check. Withdrawals 0. Pool by_state: inbox 76, claimed 0,
   done 1500. No new issues. Status: done. Full detail in
   queue-planning/2240-run.md.
+
+- Donations unit donations-2026-11-11-0413 partial
+  (ticker-2231, 22:43-22:49). Re-read after the ticker-1952
+  00:14:47 cooldown: Donation Count read live 4/30 at entry on
+  Quick Construction (8/10, +20% toward +22.5%, Tech EXP
+  3.0M/6.0M, coin Donate 900), 3 coin donations verified live
+  4/30 to 3/30 to 2/30 to 1/30, 2,700 coin spent; stopped at
+  the live-read 1/30 per the changed route (no tap from 1/30
+  on Quick Construction). Button stayed green at 1/30 with no
+  cooldown timer. Count rose 1/30 to 4/30 across the cooldown
+  interval (Issue #160 replenishment point). War-tab Rallied
+  Attack count not re-read; successor re-read
+  donations-2026-11-11-0650 enqueued for 23:30 PT. Full detail
+  in alliance-donations/2249-queue-run.md.
+
+- Passes unit passes-2026-11-10-1857 partial
+  (ticker-2231, 22:51-22:56). Hot Deals promo-only, no free
+  pack (Go button not tapped, external store). Weekly Pass
+  reset 18:00:00 re-confirmed; S2 Drone Components and S1
+  Drone Parts cards show Get Now $4.99 offers, not owned
+  pickups; Free Supply state unverified and the lower cards
+  unchecked (list drag did not scroll). The app exited on
+  the Super Monthly Pass tab tap; relaunched clean (single
+  window, pid 78374), state intact, no login demand, no
+  different-device dialog. Monthly gift already Claimed
+  (Days Left 11, Rewards Left 11). Nothing claimed, nothing
+  spent. Full detail in shop-claims/2256-queue-run.md.
