@@ -3741,16 +3741,4 @@ modified: 2026-11-10T14:21:00Z
   withdrawals, no issues filed. Pool inbox 71, claimed 0,
   done 1492. Status: done. Full detail in
   queue-planning/2140-run.md.
-## 21:40 to 21:50 - Queue planning pass (queue-planning-2026-11-10-2140, done)
-
-- Planner pass queue-planning-2026-11-10-2140. Plan staged 0
-  units (horizon already covered to about 09:40 2026-11-11;
-  already_present 67, skipped_done_current 1, skipped_closed
-  6, reaped 0, expired 0). Pre-reset sweep pair corrected to
-  INCOMPLETE by result.status: 1630 partial (1/23 ledger
-  lines), 1730 expired unexecuted (Issues #606, #610);
-  production skipped (21:00 hour run). Scout diff on the
-  two-pass observation applied with all zero counts, 0
-  withdrawals, no issues filed. Pool inbox 71, claimed 0,
-  done 1492. Status: done. Full detail in
-  queue-planning/2140-run.md.
+- Integrator pass pr-integration-2026-11-10-2130. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Tools PR #611 squash-merged (queue.py sweep-status, Refs #610; merge commit a8059f2f; local main fast-forwarded). Records PR #597 verified CLEAN at four heads seen this pass (503fd3797, 349a843af, 9a95c4b0e, 120efae10) and awaits the 23:00 batch; 4 verification comments posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main a8059f2f; 1 re-verification comment posted. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2130-run.md.
