@@ -2854,3 +2854,16 @@ modified: 2026-11-10T14:21:00Z
   watermarks and was never folded until this run. Issue comments
   posted: #585, #566, #498, #208. No new issue filed. Status:
   done. Full detail in knowledge-organization/1532-run.md.
+
+## 16:06 to 16:15 - Ticker pass ticker-1604, survivors unit partial
+
+- Survivors unit survivors-2026-11-10-1403 partial, unverified.
+  Gate inspected at the bottom edge in a panned-down view and in
+  an enlarged crop (brown-sign gate section at about norm 545,216):
+  no question-mark bubbles, no waiting survivor figures at the
+  gate, on the road outside it, or just inside it. One tap on the
+  gate sign produced no change. A mis-tap opened the Profession
+  Hall Lv.1 radial menu and was closed untouched (its brown
+  portrait icon is the hall's appoint control, not a survivor).
+  No intake, no Quick Dispatch; the R7 first-action carryover
+  stands. Full detail in survivor-intake/1615-queue-run.md.
