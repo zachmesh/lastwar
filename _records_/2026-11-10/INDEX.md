@@ -3145,3 +3145,16 @@ modified: 2026-11-10T14:21:00Z
 - Sync: due 22, produced none (14 regulars already
   queued); the stale survivors-2026-11-10-1403 inbox copy
   was dropped because a done record already exists.
+
+## 18:00 to about 18:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1800.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 19:00): no records merges.
+  Records PRs 590, 351 and 301 all clean and awaiting
+  the 19:00 batch; 351 and 301 conflicts resolved on the
+  branch side, verified clean this pass. Tools PR 425
+  owner-gated, clean at unchanged head 0fb5a27f,
+  OD-20261108-01 still open. Three comments posted (351,
+  301, 425 re-verification). Status: done. Full detail in
+  pr-integration/1800-run.md.
