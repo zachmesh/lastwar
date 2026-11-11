@@ -3383,3 +3383,18 @@ modified: 2026-11-10T14:21:00Z
   conflict comments from the 1900 pass verified present,
   no new comment. No Slack sync, silent run. Status:
   done. Full detail in pr-integration/1915-run.md.
+
+## 19:19 to 19:35 - Ticker pass ticker-1913, donations unit partial (unverified close)
+
+- Donations re-read unit donations-2026-11-11-0122 partial,
+  unverified close. Entry count 6/30 live, 2 coin donations
+  confirmed (count 6/30 to 4/30); final two taps greyed the
+  button with a 00:14:57 timer that hides the count, so the
+  final count is unread and the tracker stays untouched.
+  Re-read unit enqueued for after the cooldown (not_before
+  03:48Z). New finding: Tech Donation Today fell 9300 to 550
+  inside the unit - the donation-day counter reset between
+  about 19:24 and 19:34 PST, not at the assumed 19:00 reset;
+  filed as knowledge Issue #599. The Donate button also showed a
+  "Hold down for easier continuous donations" hint. Nothing
+  spent. Full detail in alliance-donations/1919-queue-run.md.
