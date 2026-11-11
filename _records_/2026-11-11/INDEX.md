@@ -1942,3 +1942,5 @@ of 2026-10-28.
   Full detail in pr-integration/1000-run.md.
 - Integrator pass pr-integration-2026-11-11-1015.
   Full detail in pr-integration/1015-run.md.
+- Integrator pass pr-integration-2026-11-11-1030.
+  Full detail in pr-integration/1030-run.md.
