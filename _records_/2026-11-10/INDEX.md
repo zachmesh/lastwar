@@ -3195,3 +3195,14 @@ modified: 2026-11-10T14:21:00Z
   reopen; the third help's +20 follows the known in-session lag
   and is left for the next help unit's header read. Full detail
   in alliance-help/1818-queue-run.md.
+## 18:30 to about 18:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1830.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 19:00): no records merges.
+  Records PRs 590, 351 and 301 all clean and awaiting
+  the 19:00 batch (590 head advanced to f4f780f3, verified
+  clean, 1 verification comment posted). Tools PR 425
+  owner-gated, clean at unchanged head 0fb5a27f,
+  OD-20261108-01 still open. Status: done.
+  Full detail in pr-integration/1830-run.md.
