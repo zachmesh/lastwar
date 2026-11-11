@@ -409,6 +409,19 @@ _ACCOUNTING_LINE = re.compile(
     r"\s*:?\s*(?P<count>\d+)\b",
     re.IGNORECASE)
 
+# A heading may carry a pass's whole accounting in itself
+# ("Red dots - 8 seen, 6 explained, 2 unexplained", attested
+# 2026-11-10): the counts live in the heading and the bullets
+# below it list the items, so the heading starts the section
+# with its counts already stated. The hyphen form is the only
+# attested one; an em-dash or a bare "Red dots 8 seen" heading
+# does not match, and reads as no section rather than a guess.
+_HEADING_COUNTS = re.compile(
+    r"^#{1,6}\s*red\s+dots?\s*-\s*(?P<seen>\d+)\s+seen\s*,"
+    r"\s*(?P<explained>\d+)\s+explained\s*,"
+    r"\s*(?P<unexplained>\d+)\s+unexplained\b",
+    re.IGNORECASE)
+
 
 def parse_narrative_accounting(text):
     """Per-pass red-dot accounting sections of a narrative
@@ -431,6 +444,18 @@ def parse_narrative_accounting(text):
     names), so a qualified line can name its dots too;
     a line whose names still cannot be counted stays
     unnamed, and the distinct figure stays a floor.
+    A heading may instead carry the whole accounting
+    ("Red dots - 8 seen, 6 explained, 2 unexplained",
+    attested 2026-11-10): the heading starts the section
+    with its counts already stated, and the "- Unexplained:"
+    bullet below it names the dots against the heading's
+    count. Bullet lines never overwrite heading counts -
+    an "- Explained: hammer 1/4 ..." bullet is a queue
+    indicator, not a count - and the names are taken from
+    the bullet's item list with its parentheticals stripped
+    before splitting, so a comma inside a parenthesis
+    ("(carried from 2026-11-09, badge moved 13 to 1)")
+    never splits an item in two.
     A count a section does not state reads as None, never
     as zero - a line naming a dot without a number (for
     example "Unexplained: the Alliance Wars dot") states
@@ -452,9 +477,15 @@ def parse_narrative_accounting(text):
             return
         section["unexplained_text_present"] = \
             bullet_text is not None
-        section["unexplained_names"] = (
-            _counted_unexplained_names(bullet_text)
-            if bullet_text else [])
+        if section.get("heading_counted"):
+            section["unexplained_names"] = (
+                _heading_counted_unexplained_names(
+                    bullet_text, section.get("unexplained"))
+                if bullet_text else [])
+        else:
+            section["unexplained_names"] = (
+                _counted_unexplained_names(bullet_text)
+                if bullet_text else [])
 
     for raw in text.splitlines():
         stripped = raw.strip()
@@ -465,7 +496,15 @@ def parse_narrative_accounting(text):
                 current = {key: None for key in ACCOUNTING_KEYS}
                 sections.append(current)
             else:
-                current = None
+                heading = _HEADING_COUNTS.match(stripped)
+                if heading:
+                    current = {
+                        key: int(heading.group(key))
+                        for key in ACCOUNTING_KEYS}
+                    current["heading_counted"] = True
+                    sections.append(current)
+                else:
+                    current = None
             continue
         if current is None:
             continue
@@ -476,18 +515,24 @@ def parse_narrative_accounting(text):
                 continue
             _finalize(current, unexplained_text)
             unexplained_text = None
-        m = _ACCOUNTING_LINE.match(stripped)
-        if m:
-            qualifier = (m.group("qualifier") or "").strip()
-            rest = stripped[m.end():]
-            if qualifier and re.match(r"\s*:\s*\d", rest):
-                # The digits were a scope identifier, not the
-                # count ("Unexplained in group 2: 3 dots"):
-                # the real count follows the colon. Inventing
-                # the identifier as the count would be worse
-                # than stating none, so the line reads as
-                # nameless.
-                m = None
+        m = None
+        if not current.get("heading_counted"):
+            # Heading-counted sections already carry their
+            # counts: a bullet must never overwrite them -
+            # "- Explained: hammer 1/4 ..." would otherwise
+            # read its queue indicator as explained 1.
+            m = _ACCOUNTING_LINE.match(stripped)
+            if m:
+                qualifier = (m.group("qualifier") or "").strip()
+                rest = stripped[m.end():]
+                if qualifier and re.match(r"\s*:\s*\d", rest):
+                    # The digits were a scope identifier, not the
+                    # count ("Unexplained in group 2: 3 dots"):
+                    # the real count follows the colon. Inventing
+                    # the identifier as the count would be worse
+                    # than stating none, so the line reads as
+                    # nameless.
+                    m = None
         if m:
             current[m.group(1).lower()] = int(m.group("count"))
             if m.group(1).lower() == "unexplained":
@@ -622,6 +667,55 @@ def _counted_unexplained_names(bullet_text):
         if len(item.split()) > 6:
             continue
         kept.append(item)
+    return kept if len(kept) == count else []
+
+
+def _heading_counted_unexplained_names(bullet_text, count):
+    """Names from a heading-counted unexplained bullet, or [].
+
+    The heading already stated the count ("Red dots - 8 seen,
+    6 explained, 3 unexplained"), so this bullet only has to
+    name that many dots: its items are split on commas and
+    semicolons after the parentheticals are stripped, because
+    a parenthetical may itself carry a comma ("(carried from
+    2026-11-09, badge moved 13 to 1)") that is not an item
+    separator. A trailing countdown tail ("with 00:00:47
+    countdown") and the base-screen location tail ("on the
+    base screen") name the sighting, not the dot, so they are
+    cut before normalising; an empty-list marker ("none",
+    "empty") names nothing. The usual exclusions and the
+    six-word cap still apply to each name, and a list whose
+    kept items do not equal the heading count names nothing,
+    exactly like the counted-line rule.
+    """
+    if not bullet_text or count is None or count == 0:
+        return []
+    _lead, _sep, rest = bullet_text.partition(":")
+    rest = rest.strip()
+    if not rest:
+        return []
+    rest = re.sub(r"\([^)]*\)", "", rest)
+    kept = []
+    for raw_item in re.split(r"[,;]", rest):
+        item = raw_item.strip().strip(".").strip()
+        item = re.sub(
+            r"\s+with\s+\d{1,2}:\d{2}(?::\d{2})?\s+countdown\s*$",
+            "", item, flags=re.IGNORECASE)
+        item = re.sub(
+            r"\s+on\s+the\s+base\s+screen\s*$",
+            "", item, flags=re.IGNORECASE)
+        compound = _compound_dot_names(item)
+        if compound is not None:
+            kept.extend(compound)
+            continue
+        name = _normalize_dot_name(item)
+        if not name or name in ("none", "empty"):
+            continue
+        if _DOT_NAME_EXCLUDE.search(name):
+            continue
+        if len(name.split()) > 6:
+            continue
+        kept.append(name)
     return kept if len(kept) == count else []
 
 
