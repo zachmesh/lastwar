@@ -2462,3 +2462,8 @@ of 2026-10-28.
   markers. VPS root disk 87 percent (1.3G free). Silent run, no
   Slack sync.
   Status: no-op. Full detail in pr-catchall/1439-run.md.
+
+
+## About 14:32 to about 14:46 - Tool development 1432 run, issue #646 implemented in PR #653
+
+- Issue #646 (background-click variant differs by control: top-bar icons need unsnapped taps, Collect buttons need snapped taps) implemented in PR #653 (branch work/tap-variant-646, commit af5cc3ae2): tapcal.py 1.3.0 -> 1.4.0 gains a `variant` subcommand (top-bar-icon first-try unsnapped, collect-button first-try snapped, both provisional, one unit of evidence) and the `retry-variant-flip` verdict for an on-target no-change tap with the other variant untried; both-variants-tried still reads input-blocked (#575). Validation: py_compile clean on all _tools_/*.py, 52/52 fixture assertions on isolated /tmp fixtures, 8 regression cases identical to main 1.3.0. PR verified MERGEABLE/CLEAN. Issue #646 commented with the implementing PR. Own PR #425 still owner-gated (OD-20261108-01 open), MERGEABLE/CLEAN, no action owed. Slack summary sent to the owner Trirvia DM. Status: done. Full detail in tool-development/1432-run.md.
