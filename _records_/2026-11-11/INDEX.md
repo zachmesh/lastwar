@@ -1074,3 +1074,18 @@ of 2026-10-28.
   fast-forwarded one commit, no other change resulted.
   Status: done. Full detail in
   pr-integration/0500-run.md.
+
+- Radar tasks (0505, ticker-0504, partial): release cycle
+  exhausted - stored 0/40, no Claim All / Quick Execute offer,
+  radar points 403 unchanged, next restore 12 tasks at about
+  05:39 local. One pin visible (round brown, lower left) and
+  unresponsive to three tap variants; the 0141 pins are not in
+  this map view. Duel delta test still owed. Detail in
+  radar-tasks/0505-queue-run.md.
+
+- Survivor intake (0520, ticker-0504, partial, unverified): one
+  "?" bubble at the gate vanished on tap with no recruit card,
+  name or dialog ever read; the figure left standing is a red
+  panda pet marker. No recruit verified, no Quick Dispatch. Next
+  unit must crop-identify the figure before tapping. Detail in
+  survivor-intake/0520-queue-run.md.
