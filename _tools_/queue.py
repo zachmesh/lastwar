@@ -1201,8 +1201,25 @@ def plan_windows(item, now_local, horizon_end):
 
 
 def duel_window_text(regular, planned_local):
-    naive = planned_local.replace(tzinfo=None)
-    duel_day = (naive - DUEL_ANCHOR_LOCAL).days % 7 + 1
+    # Absolute 24h steps from the anchor (issue #603): the old
+    # naive wall-clock subtraction kept the previous duel day
+    # until 19:00 local, but since the 2026-11-02 daylight-saving
+    # end the roll is 18:00 PST (02:00 UTC, issue #242) - so a
+    # slot in the 18:00-19:00 hour was stamped one duel day
+    # behind, e.g. radar-2026-11-10-1803 "duel day 2 - radar
+    # stack" while the live day was 3 release. Timestamps are
+    # the absolute measure here, as in duel.py current() and in
+    # cycle_start_local's daily-reset branch: wall-clock
+    # arithmetic on an aware datetime sharing one tzinfo is not
+    # elapsed time. A naive caller time is read as schedule-local
+    # wall time, mirroring duel.py. Both call sites (sync, plan)
+    # pass an aware LOCAL_TZ planned_local.
+    if planned_local.tzinfo is None:
+        planned_local = planned_local.replace(tzinfo=LOCAL_TZ)
+    anchor = DUEL_ANCHOR_LOCAL.replace(tzinfo=LOCAL_TZ)
+    day_index = int((planned_local.timestamp()
+                     - anchor.timestamp()) // 86400)
+    duel_day = day_index % 7 + 1
     if regular == "radar":
         posture = "release" if duel_day in RADAR_RELEASE_DAYS \
             else "stack"
