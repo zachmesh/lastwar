@@ -32,6 +32,26 @@ must not answer such evidence with "run the checklist", because
 each checklist invoke costs another 120s timeout and cannot
 succeed while the channel is stalled.
 
+Version 1.3.0 adds the third form, first seen at ticker-1259 on
+2026-11-11 (issue #648): the window is on-screen and the pixel
+stream works, but the window sits in Zoom to Fit at 1920x1080 (not
+the windowed 642x951) and the app is not frontmost, so the canvas
+takes no background input - five grounded taps on the home button
+and a base building produced no change, and no remote step
+restores it (the View-menu Zoom to Fit toggle is ignored without
+keyboard focus, resize to 642x951 is refused, Cmd-Tab is blocked
+as a system command, activate selects for background input only).
+The executor reached this state by clicking the green zoom button
+as an activation step: the button changes window state instead of
+bringing the app forward, so it must never be used for activation.
+The probe classifies this evidence as ZOOMED_WINDOW_INPUT_BLOCKED:
+stop the pass, do not tap, recover with one owner mouse action on
+the Mac (click the LastWar Dock icon, or un-zoom the window), then
+re-probe and expect windowed 642x951 and frontmost. Every unit
+entry route carries the window-state precondition - windowed
+642x951 AND frontmost - before any tap; a pass that finds the
+window zoomed stops and escalates instead of tapping.
+
 This tool touches no device and no game state. It only reads an
 evidence JSON file the worker assembles from its own device calls
 and prints the classification. The worker runs the probe calls;
@@ -41,9 +61,13 @@ Evidence schema (every field optional; missing means unknown):
   {
     "window": {"app": "LastWar", "on_screen": false,
                "width": 1920, "height": 1080, "x": 0, "y": 0,
-               "window_id": 160366},
+               "window_id": 160366, "app_active": false},
     "view_menu": ["Landscape Orientation", "Portrait Orientation",
                   "Zoom to Fit", "Enter Full Screen"],
+    "app_active": false,
+    "zoom_to_fit_checked": true,
+    "canvas_taps_ignored": ["home (645,949) snapped, no change",
+                            "home (645,949) unsnapped, no change"],
     "capture_errors": ["Failed to start stream due to audio/video capture failure"],
     "capture_attempts": 8,
     "chrome_observes_ok": true,
@@ -67,7 +91,13 @@ plain count; "invoke_offline" accepts the same shape for calls
 that returned node_offline (the device is offline) and is the
 only place those calls are recorded; "invoke_responses" is the
 count of invokes that returned a response (0 in a full stall),
-not counting node_offline returns.
+not counting node_offline returns. "app_active" is also read
+from window.app_active, and "zoom_to_fit_checked" from
+window.zoom_to_fit_checked; a view_menu entry of
+"Zoom to Fit (checked)" records the same checked state.
+"canvas_taps_ignored" accepts a bool, a count, or a list of tap
+descriptions (each tap grounded on a control that produced no
+change); "taps_ignored" is accepted as an alias.
 
 Diagnoses:
   OFF_SCREEN_WINDOW   the game window is off-screen (inactive Space)
@@ -79,6 +109,11 @@ Diagnoses:
                       node_offline and device.list reports it
                       offline with no wake-up path, so no invoke
                       can run until it is back
+  ZOOMED_WINDOW_INPUT_BLOCKED the window is on-screen and the
+                      capture stream works, but the window sits
+                      in Zoom to Fit (1920x1080, not the
+                      windowed 642x951) and the app is not
+                      frontmost, so the canvas takes no input
   HEALTHY             window on-screen, capture works
   UNKNOWN             evidence too thin to tell; probe steps are owed
 
@@ -88,14 +123,15 @@ Usage:
   mac_capture_probe.py --version
 
 Exit codes: 0 HEALTHY, 1 UNKNOWN, 10 OFF_SCREEN_WINDOW,
-11 CAPTURE_STREAM_DOWN, 12 CHANNEL_STALL, 13 DEVICE_OFFLINE.
+11 CAPTURE_STREAM_DOWN, 12 CHANNEL_STALL, 13 DEVICE_OFFLINE,
+14 ZOOMED_WINDOW_INPUT_BLOCKED.
 """
 
 import argparse
 import json
 import sys
 
-TOOL_VERSION = "1.2.0"
+TOOL_VERSION = "1.3.0"
 
 CAPTURE_ERROR = "Failed to start stream due to audio/video capture failure"
 
@@ -105,6 +141,7 @@ EXIT_OFF_SCREEN = 10
 EXIT_STREAM_DOWN = 11
 EXIT_STALL = 12
 EXIT_OFFLINE = 13
+EXIT_ZOOMED = 14
 
 DIAGNOSIS_EXIT = {
     "HEALTHY": EXIT_HEALTHY,
@@ -113,6 +150,7 @@ DIAGNOSIS_EXIT = {
     "CAPTURE_STREAM_DOWN": EXIT_STREAM_DOWN,
     "CHANNEL_STALL": EXIT_STALL,
     "DEVICE_OFFLINE": EXIT_OFFLINE,
+    "ZOOMED_WINDOW_INPUT_BLOCKED": EXIT_ZOOMED,
 }
 
 PROBE_CHECKLIST = [
@@ -125,15 +163,24 @@ PROBE_CHECKLIST = [
     'the device is offline).',
     '1. computer.control list_windows with app "LastWar" (the name '
     '"Last War" returns 0 windows): record on_screen, size, position, '
-    'window_id.',
+    'window_id, and whether the app is frontmost (app_active).',
     '2. computer.control inspect_menu on the View menu: record whether '
     '"Enter Full Screen" is listed (listed means windowed, not native '
-    'fullscreen) or "Exit Full Screen" is listed (native fullscreen).',
+    'fullscreen) or "Exit Full Screen" is listed (native fullscreen), '
+    'and whether "Zoom to Fit" is checked (checked means the window '
+    'is zoomed, not the windowed 642x951 layout).',
     '3. One computer.observe attempt (compact) and note the exact error.',
     '4. One control observation of a Chrome window in the same session: '
     'record whether it succeeds (channel works for other apps).',
     '5. If on_screen is false, one computer.control activate for '
     'LastWar: record on_screen and brought_to_front.',
+    '6. Before any tap: the window-state precondition is windowed '
+    '642x951 AND frontmost. If the window is zoomed (Zoom to Fit '
+    'checked) or the app is not frontmost, do not tap: record '
+    'zoom_to_fit_checked and app_active, and classify '
+    'ZOOMED_WINDOW_INPUT_BLOCKED instead of tapping. Never click '
+    'the green zoom button as an activation step: it changes window '
+    'state instead of bringing the app forward.',
     'Stop after the checklist. Do not repeat capture attempts: with '
     'the off-screen signature, further attempts cannot succeed.',
 ]
@@ -179,6 +226,20 @@ RECOMMENDATIONS = {
         "device online with a fresh last_seen. Record the node_offline "
         "calls under invoke_offline."
     ),
+    "ZOOMED_WINDOW_INPUT_BLOCKED": (
+        "Stop the pass. Do not tap: the canvas takes no input in this "
+        "state, so every further tap burns budget and cannot land, and "
+        "never click the green zoom button as an activation step - it "
+        "changes window state instead of bringing the app forward, "
+        "and is how the window got here. Recovery is one owner step "
+        "on the Mac mini, a real mouse action: click the LastWar Dock "
+        "icon once, or un-zoom the window (View menu, uncheck Zoom to "
+        "Fit), then re-probe and expect windowed 642x951 and "
+        "frontmost (app_active true). Never use Control-Command-F or "
+        "Escape on this app (both crash it). Every unit entry route "
+        "carries the window-state precondition - windowed 642x951 AND "
+        "frontmost - before any tap."
+    ),
     "HEALTHY": "Proceed: the window is on-screen and capture works.",
     "UNKNOWN": (
         "Probe incomplete - run the checklist "
@@ -203,6 +264,17 @@ def _timeout_count(value):
     return 0
 
 
+def _ignored_tap_count(value):
+    """Count ignored taps from a bool, a count, or a list of taps."""
+    if isinstance(value, bool):
+        return 1 if value else 0
+    if isinstance(value, list):
+        return len(value)
+    if isinstance(value, int):
+        return value
+    return 0
+
+
 def classify(evidence):
     """Classify capture-failure evidence into a diagnosis dict.
 
@@ -217,6 +289,19 @@ def classify(evidence):
     capture_errors = _get(evidence, "capture_errors", "errors", default=[])
     chrome_ok = _get(evidence, "chrome_observes_ok")
     activate = _get(evidence, "activate", default={}) or {}
+    app_active = _get(window, "app_active",
+                      default=_get(evidence, "app_active"))
+    zoom_checked = _get(evidence, "zoom_to_fit_checked",
+                        default=_get(window, "zoom_to_fit_checked"))
+    if zoom_checked is None:
+        # A view_menu entry of "Zoom to Fit (checked)" records the
+        # same checked state for evidence assembled by hand.
+        zoom_checked = any(
+            isinstance(item, str)
+            and item.strip().lower() == "zoom to fit (checked)"
+            for item in (view_menu or []))
+    taps_ignored = _get(evidence, "canvas_taps_ignored", "taps_ignored")
+    ignored_tap_count = _ignored_tap_count(taps_ignored)
     timeouts = _get(evidence, "invoke_timeouts", "timeouts")
     timeout_count = _timeout_count(timeouts)
     offline = _get(evidence, "invoke_offline", "offline")
@@ -260,6 +345,15 @@ def classify(evidence):
     else:
         missing.append("list_windows with app LastWar (on_screen)")
 
+    width = _get(window, "width")
+    height = _get(window, "height")
+    if width is not None and height is not None:
+        lines.append("LastWar window geometry %sx%s" % (width, height))
+    if app_active is True:
+        lines.append("LastWar is the frontmost app (app_active true)")
+    elif app_active is False:
+        lines.append("LastWar is not the frontmost app (app_active false)")
+
     enter_fullscreen = any(
         isinstance(item, str) and item.strip() == "Enter Full Screen"
         for item in (view_menu or []))
@@ -275,6 +369,10 @@ def classify(evidence):
         lines.append("View menu read, no fullscreen entry named")
     else:
         missing.append("View-menu inspect (Enter/Exit Full Screen)")
+
+    if zoom_checked is True:
+        lines.append('View menu shows "Zoom to Fit" checked: the window '
+                     "is zoomed, not the windowed 642x951 layout")
 
     if capture_errors:
         lines.append("capture error: %s (x%d)"
@@ -294,6 +392,17 @@ def classify(evidence):
     if activate:
         lines.append("activate reports on_screen=%s brought_to_front=%s"
                      % (activate_on_screen, brought_to_front))
+
+    if ignored_tap_count > 0:
+        if isinstance(taps_ignored, list) and taps_ignored:
+            lines.append(
+                "%d grounded canvas tap(s) produced no change "
+                "(%s)" % (ignored_tap_count,
+                          ", ".join(str(t) for t in taps_ignored)))
+        else:
+            lines.append(
+                "%d grounded canvas tap(s) produced no change"
+                % ignored_tap_count)
 
     diagnosis = "UNKNOWN"
     confidence = "low"
@@ -322,6 +431,17 @@ def classify(evidence):
     elif on_screen is False:
         diagnosis = "OFF_SCREEN_WINDOW"
         confidence = "medium"
+    elif (on_screen is True and not capture_errors and zoom_checked
+            and (app_active is False or ignored_tap_count > 0)):
+        # Zoom to Fit with the app not frontmost, or with grounded
+        # taps already ignored: the canvas takes no input in this
+        # state, so this is not a healthy window even though the
+        # pixel stream works. High only when both halves of the
+        # signature are present; without tap evidence the pass
+        # stops on the zoomed state alone at medium confidence.
+        diagnosis = "ZOOMED_WINDOW_INPUT_BLOCKED"
+        confidence = ("high" if app_active is False
+                      and ignored_tap_count > 0 else "medium")
     elif on_screen is True and not capture_errors:
         diagnosis = "HEALTHY"
         confidence = "high"
@@ -345,7 +465,8 @@ def classify(evidence):
         "stop_pass": diagnosis in ("OFF_SCREEN_WINDOW",
                                    "CAPTURE_STREAM_DOWN",
                                    "CHANNEL_STALL",
-                                   "DEVICE_OFFLINE"),
+                                   "DEVICE_OFFLINE",
+                                   "ZOOMED_WINDOW_INPUT_BLOCKED"),
         "evidence": lines,
         "missing_probe_steps": missing,
         "recommendation": RECOMMENDATIONS[diagnosis],
