@@ -3462,3 +3462,18 @@ modified: 2026-11-10T14:21:00Z
 ## 19:45 to about 19:53 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-10-1945. NON-batch pass: plain checker said due but merge-aware said not due (PR 590 already merged 19:07:05 in the 19:00 window), so no records PR merged. Merged knowledge PR #600 (squash, 20b92f6a) - ticker-1834 fold, shop-claims 1.50.0, secrets 1.35.0, treasures 1.20.0, zombie 1.23.1, donations 1.89.0; body omitted the donations fold (feedback, not a block). Records PR #597 verified CLEAN (head bfe23f958, 7 commits) and awaits the 23:00 batch. Tools PR #425 re-verified CLEAN against new main 20b92f6a, still owner-gated (OD-20261108-01 open). Records PRs #351 and #301 still conflicting on the action-log file, conflict comments from the 1900 pass verified present. 3 comments posted (600, 597, 425). Local main fast-forwarded to 20b92f6a by bundle. Status: done. Full detail in pr-integration/1945-run.md.
+
+## 19:32 to about 19:58 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-1932.
+  Implemented issue #598: queue production and tracker
+  state now resolve to the live pool from a linked
+  worktree (live_pool_root in queue.py, live_state_dir
+  in regulars.py) - PR #601 opened (branch
+  work/live-pool-enqueue-598, commit ecc6c26c3, Refs
+  #598), issue #598 commented; validation 22/22 fixture
+  assertions on an isolated scratch pool, pristine-code
+  control reproduces the stranding. Own PR 425 still
+  owner-gated (OD-20261108-01 open), no action owed.
+  Status: done. Full detail in
+  tool-development/1932-run.md.
