@@ -1,9 +1,9 @@
 ---
 title: Troop Training
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T23:32:17Z
+modified: 2026-11-11T01:32:17Z
 level: L1
-version: 1.39.0
+version: 1.40.0
 description: Training new troops in the barracks, tier by tier, one activity folder for training knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, fourth consecutive training partial with the same blocker, R2 process failure, wide-zoom and panned-down tent taps select nothing, Duel screen live read UR truck dispatch +300,000; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0834 troop-training execution record 2026-11-10 0850 queue run (partial, fifth consecutive training partial, R2 process failure, game found on TECH screen by unexplained navigation, slot-1 timer discrepancy, no barracks requeued; record commit 5473d6845 on records/2026-11-10)
   - source: ticker-1204 troop-training execution record 2026-11-10 1229 queue run (partial, Lv.24 requeued T8 x666 verified running, Drill Ground Full did not block it, R2 five-partial run broken, T8/T10 stats corrected live; record commit 88e51ae5d on records/2026-11-10)
+  - source: ticker-1634 troop-training execution record 2026-11-10 1649 queue run (partial, verified no, no barracks tent located after three camera pans, blind-pan method retired under R2, Lv.24 T8 batch still running to about 2026-11-11 16:49; record commit 986c1877 on records/2026-11-10)
   - source: ticker-1503 perception-scout execution record 2026-11-10 1521 queue run (partial, Drill Ground level-up to Lv.27 live, upgrade to Lv.28 available with costs met, not started; record commit f530c19b7 on records/2026-11-10)
 ---
 
@@ -80,13 +81,13 @@ troops and riding the train are different systems and are kept apart.
   Count cap, and the blue Train button starts the batch. The yellow
   Finish Now button is never used, under the recording rules on
   spending.
-- Entry, 2026-11-10 1229: a tap on the tent carrying the gold face bubble (norm 374,526) selected the Lv.24 barracks and raised the toast 'Training complete: 666 Lv.8 units are ready' - the gold-bubble tent is a working entry point for Lv.24 in that framing. Re-ground fresh in the unit's own view; the point is framing-bound, not portable.
+- Entry, 2026-11-10 1229: a tap on the tent carrying the gold face bubble (norm 374,526) selected the Lv.24 barracks and raised the toast 'Training complete: 666 Lv.8 units are ready' - the gold-bubble tent is a working entry point for Lv.24 in that framing. Re-ground fresh in the unit's own view; the point is framing-bound, not portable. (2026-11-10 1649 update: the blind-pan method is RETIRED under rule R2 - three pans in this unit (down overshot into full fog, right barely moved the view, long right overshot past the base edge into fog with a mountain peak) never landed on a tent. The next training unit re-grounds from the 1229 record's successful entry - read troop-training/1229-queue-run.md for the measured tent point that opened TRAIN UNITS that day - and goes straight to that point before any pan. If the tents still cannot be located from that grounding, the blocker is filed as a GitHub issue instead of a third identical partial.)
 
 ## How it is done
 
 - Keep every barracks busy. One batch per barracks at its highest
   unlocked tier, count left at the cap, then press Train.
-- Busy/idle is read from the 'Training in progress' line in the TRAIN UNITS panel, not from the button time: the 1d 17:14:37 shown on the Lv.30 panel's buttons is the prospective batch duration (2026-11-10 1229 lesson); a barracks showing only the button time is state-unverified.
+- Busy/idle is read from the 'Training in progress' line in the TRAIN UNITS panel, not from the button time: the 1d 17:14:37 shown on the Lv.30 panel's buttons is the prospective batch duration (2026-11-10 1229 lesson); a barracks showing only the button time is state-unverified. (2026-11-10 1649 update: the Lv.24 T8 x666 batch queued at 12:29 for 1d 04:19:43 is still running and is not due for requeue until about 16:49 on 2026-11-11; Lv.30, Lv.27 and the fourth barracks are state-unverified in this unit.)
 - Queueing a batch costs food and iron only, paid up front. No diamond
   use, no instant finish.
 - Training finishing also feeds VS Unit Progression and Arms Race
@@ -824,6 +825,8 @@ Observed in game on this account, first execution 2026-10-25.
 
 ## Changelog
 
+- 1.40.0 (2026-11-10): 1649 training unit folded (partial, verified no - no barracks tent located after three camera pans: down overshot into full fog, right barely moved the view, long right overshot past the base edge into fog; blind-pan method RETIRED under rule R2, next unit re-grounds from the 1229 record's successful tent point and goes straight to it before any pan, and files a GitHub issue if the tents still cannot be located; Lv.24 T8 x666 batch queued 12:29 for 1d 04:19:43 still running, not due for requeue until about 2026-11-11 16:49; Lv.30 '1d 17:14:37' is a batch duration, not a remaining timer; skull badge moved 1 to 4 to 2 with countdown 00:00:24 to 00:00:52 inside the unit - same-unit evidence for Issue #498; blocker_category e).
+
 - 1.39.0 (2026-11-10): 1521 scout cross-read folded (partial, Drill Ground levelled up live to Lv.27 - Power 118,600 to 140,200, Unit Count +7,200 to +7,400, +21,600 total power verified; CORRECTION the standing Lv.30 reads (0039, 0129) are superseded as misidentifications, not deleted; upgrade to Lv.28 available with costs met, NOT started - red line, owner-initiative; 24.0M EXP reward card untapped; Full state still unverified, Quick Dispatch still untapped, owner decision; next unit reads the Lv.30 "Training in progress" line and the Drill Ground screen live).
 
 - 1.2.0 (2026-11-01): inherited-point staleness after camera
@@ -1456,3 +1459,13 @@ Observed in game on this account, first execution 2026-10-25.
 - Upgrade panel, inspected only by the scout: Lv.27 to 28, Hero EXP 26.0M, Unit Count +7,400 to +7,600, Power 140,200 to 165,800; costs all met (Lv.28 Headquarters, iron 952.1M/102.0M, food 629.3M/314.5M); Original Time 30d 01:27:10, Upgrade button 14d 07:32:57. "Finish Now 33,887" diamonds and "Upgrade" both untouched (red lines) - starting a building upgrade is owner-only, not a training-unit action. No issue filed; the upgrade availability is routed through the scout diff (no building-upgrade regular exists).
 - Drill Ground Full state: still unverified - the level-up celebration is not a Full-state read, and the Drill Ground screen was not re-read live in this pass. The 1229 qualification stands (Full did not block the Lv.24 requeue); the clearing method remains unknown, and Quick Dispatch stays untapped (owner decision).
 - No barracks was requeued by this read; the Lv.24 batch (requeued 1229, 1d 04:20:26) runs to about 2026-11-11 16:50. The next training unit's standing work is unchanged: read the Lv.30 "Training in progress" line (not the button time), check the two unchecked barracks, re-read the Drill Ground screen live.
+
+## What the 2026-11-10 1649 unit added - no barracks tent located after three pans, blind-pan method retired, partial
+
+- Unit training-2026-11-10-1403 by ticker-1634, about 16:45 to 16:49 local, status partial, unverified. Evidence in `_records_/2026-11-10/troop-training/1649-queue-run.md` (commit 986c1877 on records/2026-11-10). Tracker untouched for partial, per the queue rules.
+- Entry: base view at entry shows only the top-left corner of the base; the four barracks tents (lower middle of the base per the activity metadata) are not in frame, and the lower two thirds of the screen are fog. Base HUD read live: power 148,787,578; food 631.3M; iron 954.1M; coin 97.8M; diamonds 6,267; stamina 120; level 30. VS timer 01:13:28 at entry, 01:10:39 at close; Season II 3d 01:23:28; third timer 5d 01:13:28 (meaning unverified).
+- Three pans tried, none located a tent: pan 1 down (drag norm 320,700 to 320,250, the 1615 survivors grounding) overshot into full fog; pan 2 right (drag norm 500,500 to 200,500) moved the view only slightly, top edge of the base stayed in frame, no tent appeared; pan 3 right long (drag norm 550,450 to 100,450) overshot past the right edge of the base into fog with a mountain peak at the top. Restore drag (norm 200,450 to 500,450) returned the view to the base's top edge, where the game was left. No TRAIN UNITS panel was opened and no batch was queued. No Finish Now button and no upgrade shortcut were tapped.
+- METHOD CHANGE under rule R2: the blind-pan method is retired inside this unit after the three no-locate pans - the drags either barely move the view or overshoot the base edge into fog, and they never land on the tents. The next training unit must re-ground from the 12:29 record's successful entry - read troop-training/1229-queue-run.md for the measured tent point that opened TRAIN UNITS that day - and go straight to that point before any pan. If the tents still cannot be located from that grounding, the blocker is filed as a GitHub issue instead of a third identical partial. See the updated How to enter entry.
+- Known state, not re-verified in this unit: Lv.24 barracks - a fresh T8 batch x666 was queued at 12:29 for 1d 04:19:43, so it is still running and is not due for requeue until about 16:49 on 2026-11-11. The 12:29 unit also showed Drill Ground Full did not block that requeue. Lv.30, Lv.27 and the fourth barracks: states unverified; the Lv.30 "1d 17:14:37" seen at 12:24 is a batch duration, not a remaining timer. See the updated How it is done entry.
+- Cross-reads: skull badge on the base right edge moved 1 to 4 to 2 with a 00:00:24 to 00:00:52 countdown inside this unit - same-unit evidence that the badge count and countdown change between reads, for Issue #498 (folded in radar-tasks). Toasts seen: "Violet's Gift received!" (the gifts regular owns it) and "Important: President HawksMav appointed..." (truncated, unread).
+- Result stats: target check all 4 barracks, requeue any finished batch at its highest tier; achieved 0 barracks checked, 0 batches requeued; resources_gained none; points 0; costs 5min-device-session; verified no (no barracks state read live in this unit); blocker_category e (repeated blocker - barracks tents not located; training units have closed partial on location since the 2026-10-28 to 2026-10-31 queue era).
