@@ -3986,3 +3986,31 @@ modified: 2026-11-10T14:21:00Z
   Removed one stray bare `<<<<` line at INDEX line 3807 (merge
   fragment above the 2239 section). Status: no-op. Full detail in
   pr-catchall/2339-run.md.
+
+## 23:32 to about 23:48 - Knowledge organization pass
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-10-2332.
+  Folded the new substantive records since the 2232 watermark
+  (a17f65702) into 2 profiles on PR #617 (commit 650c5831f,
+  base main 67350afe): alliance-donations 1.91.0 -> 1.92.0
+  (2249: 3 coin donations verified live 4/30 to 1/30, stopped
+  at the 1/30 floor per the changed route - the route HELD,
+  button stayed green with no cooldown timer; replenishment
+  forty-third datapoint +3 over ~2.5h. 2319: count live 2/30
+  at 23:16, 1 donation confirmed 2/30 to 1/30, second tap
+  from 1/30 greyed with a 00:09:58 timer, close unverified;
+  replenishment forty-fourth datapoint +1 in ~27 min on the
+  tight 2249 anchor, superseding the record's 2133 anchor;
+  footer 1400 at entry, +250 with NO unit donating in between
+  - the strongest disproof yet that the footer tracks own
+  donations; maintenance-shutdown banner ended the pass),
+  shop-claims 1.50.0 -> 1.51.0 (2256: Hot Deals promo only;
+  Weekly Pass 18:00 reset line read live again, twenty-first
+  confirmation; Free Supply state unverified; monthly gift
+  already Claimed, 11/11 unchanged; app exit on the Super
+  Monthly Pass tab tap with a clean relaunch - incidental,
+  not tab-caused, duplicate 642x919 window gone after the
+  relaunch). Own PR #613 merged with no comments. Issue
+  comments posted on #160, #500, #558, #599, #575 (5); no
+  new issue filed. Slack DM sent (ts TBD). Status: done. Full
+  detail in knowledge-organization/2332-run.md.
