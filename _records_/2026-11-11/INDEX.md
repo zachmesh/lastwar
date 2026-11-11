@@ -767,3 +767,17 @@ of 2026-10-28.
   deadline 2026-11-12 18:00 UTC. VPS root disk 82 percent
   (1.8G free). Status: no-op. Full detail in
   pr-catchall/0339-run.md.
+
+## 03:40 to about 03:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-0340. Plan staged 5
+  units (the 14:57 slots, 65 already present for the next
+  12 hours, 3 skipped done-current, 1 skipped closed
+  zero-sweep-2026-11-10-1730, 0 reaped/expired); sweep
+  production skipped (03:00 hour), tonight's pair not yet
+  staged, due from the 17:00 run under the new geometry
+  (PR #614). Scout diff on the 2026-11-10 15:14 observation
+  re-applied with identical 0 counts (observed/actionable/
+  enqueued/candidates/unexplained 0), 0 withdrawals, no new
+  issue. Pool inbox 76, claimed 1, done 1528. Status: done.
+  Full detail in queue-planning/0340-run.md.
