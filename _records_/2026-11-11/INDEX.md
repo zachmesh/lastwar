@@ -1089,3 +1089,18 @@ of 2026-10-28.
   panda pet marker. No recruit verified, no Quick Dispatch. Next
   unit must crop-identify the figure before tapping. Detail in
   survivor-intake/0520-queue-run.md.
+
+## 05:15 to about 05:22 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0515.
+  NON-batch pass (checker plain and merge-aware both
+  not due, next batch 07:00 PT). No merges. Records PRs
+  627 (28 ahead) and 615 (14 ahead) clean, awaiting the
+  07:00 batch; 627 advanced by the ticker-0504 delivery
+  during this pass. Tools PR 425 still owner-gated
+  (OD-20261108-01), head and main unchanged since the
+  0500 verification, no comment posted per the
+  no-repeat rule. Process note: fetch-only in the shared
+  VPS main worktree at pass start, no checkout or pull,
+  working tree untouched. Status: done. Full detail in
+  pr-integration/0515-run.md.
