@@ -1663,3 +1663,26 @@ of 2026-10-28.
   tally brought current). No new issue filed. Slack
   sync sent (ts 1794412528.754729). Status: done.
   Full detail in knowledge-organization/0732-run.md.
+## 07:41 to about 08:00 - Ticker pass ticker-0741, zombie-invasion unit 011 partial
+
+- Zombie-invasion (0800, ticker-0741, partial): three Lv.10 kills
+  (Squads 1-2 in parallel to X:484 Y:329 and X:540 Y:350,
+  squads_parallel 2, then Squad 1 to home-cluster X:486 Y:427),
+  all three LOOT rows read before claiming and claimed in-unit
+  for 804,000 coins (268,000 each; medal x10, iron 268.0K, food
+  268.0K, hero EXP 263.0K per row; the third row carried no green
+  crate, only green box x4, so the crate is not guaranteed). Coin
+  HUD 122.2M to 123.0M, food and iron each +804,000. Gift badge 2
+  then 1 re-grounded at (308,233) on the current map view; Claim
+  All plain blue, no price tag. Stamina 41 to 13 (30 spent, +2
+  regen ticks observed). First March tap failed with a channel
+  stale_observation error (no input sent, panel stayed open),
+  retried at once and dispatched. Store not visited; medals not
+  re-read live (+30 by card against unit 010's live 4130 close, no
+  derived total reported); Coin Chest (SSR) row scroll/drag
+  blocker stays open for the successor. Event timer 2d 10:12:58,
+  boss clue 40/40, challenge begins 2026-11-12 18:00; next wave
+  00:07:32 at the 07:52 read (about 07:59, disagrees with unit
+  010's derived 07:54, unresolved). Cleared false, successor
+  enqueued to start now. Detail in
+  zombie-invasion/0800-queue-run.md.
