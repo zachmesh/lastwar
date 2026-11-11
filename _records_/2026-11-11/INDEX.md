@@ -1031,3 +1031,30 @@ of 2026-10-28.
   standing rule; no change resulted, recorded for the
   retro. Status: done. Full detail in
   pr-integration/0450-run.md.
+## About 04:34 to 04:51 - Ticker pass ticker-0434, donations unit partial
+
+- Own PRs first: records PR 627 (2026-11-11, post-0300 batch)
+  verified OPEN with no comments; records PR 615 already
+  reconciled by ticker-0313. No question addressed to this job.
+- Donations unit donations-2026-11-11-1157 partial: War-tab
+  Rallied Attack re-read after the ticker-0336 1/30 close.
+  Donation Count live 3/30 at entry (replenished +2 from the
+  1119 paired 1/30 read about 40 minutes earlier); 3 coin
+  donations verified live (count 3/30 to 2/30 to 1/30, Tech
+  EXP bar 24.6K to 24.9K, 2,400 coin). Taps 3 and 4 were made
+  from a live 1/30 count, breaching the changed route (stop at
+  the live-read 1/30, no tap from 1/30): tap 3 was eaten (no
+  EXP move, count still 1/30 after the 00:04:50 cooldown
+  waited out in-unit), tap 4 landed and the closing count is
+  hidden behind a 00:18:58 cooldown timer, so the close is
+  unverified per R1 and the tracker stays untouched. Cause:
+  this pass executed from the worktree's stale activity
+  profile (disk alliance-donations 1.5.0 vs main 1.96.0).
+  Stale-files finding filed as GitHub Issue #631 (tooling).
+  Re-read unit enqueued for after the cooldown
+  (not_before 2026-11-11T13:10:00Z). Status: partial. Full
+  detail in alliance-donations/0434-queue-run.md.
+- Zombie Invasion: no seeding done - the event is back as
+  Glacieradon (main zombie-invasion 1.29.0) and chain
+  zombie-2026-11-10 unit 009 already sits in the inbox; the
+  pass's token expired before a second unit could run.
