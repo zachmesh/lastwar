@@ -1774,3 +1774,24 @@ of 2026-10-28.
   issues 132, 154, 335, 514 and 517 all over 24 hours with
   statements current. VPS disk recovered to 82 percent, 1.8G
   free. Status: no-op. Full detail in pr-catchall/0839-run.md.
+## 08:32 to about 08:48 - Knowledge organization pass
+
+- Knowledge organization pass
+  lastwar-knowledge-organizer-2026-11-11-0832. Folded
+  the ticker-0741 zombie 0800 record (chain 011, 3
+  Lv.10 kills, LOOT 804,000 coins) and the ticker-0804
+  zombie 0832 record (chain 012, 1 Lv.10 kill, LOOT
+  268,000 coins, landed during this run) into 1
+  profile, PR #638 opened (2 commits 160da481f and
+  b3acf9f7c, 1 file, 37 insertions, 9 deletions):
+  zombie-invasion 1.33.0. Own PR #637 merged in the
+  08:00 batch with no feedback; #638 awaits the
+  integrator. No knowledge issue updated since the
+  0732 run; no issue comments posted. Two
+  contradictions resolved (wave-time discrepancy
+  resolved in favour of the 0800 live countdown, 0724
+  07:54 derivation withdrawn; 0832 'net 8' stamina
+  line not carried against its own 18-to-9 live read).
+  No new issue filed. Slack sync sent (ts
+  1794415679.282389). Status: done. Full detail in
+  knowledge-organization/0832-run.md.
