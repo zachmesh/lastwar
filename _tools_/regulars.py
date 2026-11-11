@@ -29,6 +29,8 @@ the local wall time of the reset shifts with daylight saving
 without reset_utc keeps the old reset_local wall-time boundary.
 A weekly-thu regular is only due on Thursdays.
 Use --segment N with list/todo to see one segment's regulars.
+Done/skip stamps are aware America/Los_Angeles times (issue #407);
+older naive stamps are still read as local wall time.
 """
 import argparse, json, os, sys
 from datetime import datetime, date, time as dtime, timedelta, timezone
@@ -196,7 +198,7 @@ def main():
         state = load_state(day)
         state[args.id] = {
             "status": "done" if args.cmd == "done" else "skipped",
-            "at": datetime.now().isoformat(timespec="seconds"),
+            "at": datetime.now(LOCAL_TZ).isoformat(timespec="seconds"),
             "note": args.note,
         }
         save_state(day, state)

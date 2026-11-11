@@ -1,8 +1,8 @@
 ---
 title: Rolling 7 day metrics
 created: 2026-11-01T05:30:00Z
-modified: 2026-11-04T04:50:00Z
-version: 1.3.0
+modified: 2026-11-10T05:20:00Z
+version: 1.5.0
 description: Standing cross-day series beside the daily retro files, regenerated from unit results
 status: complete
 grounded_in:
@@ -353,3 +353,164 @@ remain the immutable source.
   (no sweep). Oldest open improvement 4 days,
   no breach.
 - Detail - daily retro 2026-11-06 in this folder.
+
+## Entry 2026-11-07
+
+- Derived from - 688 done units, finished local PST
+  2026-11-01 to 2026-11-07, read from the
+  records/2026-11-07 branch tip b8cf68e000
+  (pr-integration 2011 run), tool
+  _tools_/retro_report.py 1.5.0, pool state sha256
+  a971973417c4dad91468c1692844878aec3a9b24fcc06903c5eac6a5090dbf08.
+  Live working-tree pool holds 746 in the same
+  window (pool sha256
+  a58ae379a9979ff41f40eeaaf8fd055844ebcd1f0330243823966bd3d13fe6b1);
+  gap 58, pool_gap.py FAIL. Nov 3 backfill deficit
+  still 88; branch leads the live tree Nov 5-7 by
+  36, 17 and 2.
+- Totals - done 114, partial 162, failed 122,
+  expired 288, skipped-needs-owner 2. Executor
+  time 115,637 seconds, median unit 232.5 seconds,
+  p90 592 seconds. Attempts mean 0.5814, max 1.
+- Worst types by done percent - arms-race 0 of 37,
+  crystal-shop 0 of 3, glittering-market 0 of 3,
+  zero-sweep 0 of 16, duel-score 0 of 17, training
+  0 of 37, survivors 1 of 39, harvest 1 of 37.
+- Best types - gifts 15 of 36, help 14 of 35,
+  passes 14 of 38, events 11 of 36, mail 11 of 35,
+  treasures 11 of 37, star-ceremony 11 of 34,
+  train 9 of 36.
+- Measurement state - numeric target over achieved
+  pairs 247, summed attainment 0.7377
+  (achieved_sum 5,604,421, target_sum 7,597,211);
+  units carrying blocker_category 637 of 688 (51
+  lack the key); unverified closings 582 (84.6
+  percent), down 1.2 points on yesterday's 85.8
+  percent. Points 187, up 11 on yesterday; the
+  tool excludes the same 2 copied-points units.
+- Threshold breaches - unexplained red dots not
+  proven clean (third blackout day, no
+  observation); expired/unexecuted in day counts
+  (62 branch, 64 live); quota attainment under
+  0.8 rolling (trucks 0.439, donations 0.1184);
+  unverified rate over 20 percent at the end of
+  the first full post-specification week (84.6
+  percent); closed improvement recurrence BREACH
+  (#128, #149 and #251; recurrence 3 of 6,
+  corrected from the Nov 6 retro's 2 of 5, which
+  missed #128); daily standing job artifact
+  missing (ticker-0634 record, #342; Nov 7 scout
+  observation); ledger coverage 13 of 23 (sweep
+  first pass partial, final pass missed).
+  Oldest open improvement 5 days, no breach.
+- Detail - daily retro 2026-11-07 in this folder.
+
+## Entry 2026-11-08
+
+- Derived from - 731 done units, finished local PST
+  2026-11-02 to 2026-11-08, read from the
+  records/2026-11-08 branch tip 78e34bfa23
+  (merge reconcile ticker-2004-1108-delivery),
+  tool _tools_/retro_report.py 1.5.1, pool state
+  sha256
+  5b325b733c823666b7235a872a1c11a081726dc5a6822e4bacc483bd41f36b71.
+  Live working-tree pool holds 767 in the same
+  window (pool sha256
+  f86da8eadd65c78e422e3aab1dc9e00cc138fa10197430af0c7f95db1cddd45e);
+  gap 36, pool_gap.py FAIL. Nov 3 backfill deficit
+  still 88; branch leads the live tree Nov 5, 6
+  and 8 by 36, 17 and 32.
+- Totals - done 101, partial 178, failed 110,
+  expired 340, skipped-needs-owner 2. Executor
+  time 115,384 seconds, median unit 237 seconds,
+  p90 586 seconds. Attempts mean 0.5349, max 1.
+- Worst types by done percent - ghost-ops 0 of 1,
+  crystal-shop 0 of 2, glittering-market 0 of 3,
+  daily-missions 0 of 12, zero-sweep 0 of 16,
+  duel-score 0 of 23, arms-race 0 of 37, harvest
+  0 of 37, training 0 of 37, survivors 0 of 38.
+- Best types - mail 12 of 35, gifts 12 of 36,
+  passes 12 of 38, help 11 of 35, treasures 10
+  of 38, events 9 of 36, star-ceremony 7 of 34,
+  secrets 7 of 37.
+- Measurement state - numeric target over achieved
+  pairs 266, summed attainment 1.1907
+  (achieved_sum 4,813,220, target_sum 4,042,308);
+  the summed figure is NOT comparable: it is
+  dominated by one misattributed figure
+  (star-ceremony-2026-11-04-0630 carries a duel
+  screen total 4,772,100 in achieved); without
+  it the window attainment is about 0.093.
+  Units carrying blocker_category 696 of 731 (35
+  lack the key); unverified closings 590 (80.7
+  percent), down 3.9 points on yesterday's 84.6
+  percent. Points 404, up 217 on yesterday; the
+  tool excludes the same 1 copied-points unit.
+- Threshold breaches - unexplained red dots 14
+  (planner diff, unchanged across the 1340-1940
+  runs); expired/unexecuted in day counts (68
+  branch, 64 live); quota attainment under 0.8
+  rolling (trucks 0.5556, donations 0.1372);
+  unverified rate over 20 percent (80.7 percent,
+  down 3.9 points week over week); daily standing
+  job artifact missing (ticker-0634 record, #342,
+  about 88 hours); ledger coverage 18 of 23
+  (sweep pair ran both passes, fix-ups staged
+  past the reset). Oldest open improvement 6
+  days (#118), no breach. Recurrence of closed
+  improvements' root causes 0 of 3, no breach.
+- Detail - daily retro 2026-11-08 in this folder.
+
+## Entry 2026-11-09
+
+- Derived from - 723 done units, finished local PDT
+  2026-11-03 to 2026-11-09, read 2026-11-10T05:35Z.
+  Branch pool (records/2026-11-09 tip d88d542b87, re-run
+  from 50935183e1 when the branch advanced mid-run);
+  live pool holds 734 in the same window, gap 11.
+  Nov 9 is a partial day at the re-run (101 branch).
+- Totals - done 103, partial 162, skipped-needs-owner 3,
+  failed 107, expired 348. Executor time 111,803 seconds
+  (31.1 hours), median unit 237 seconds, p90 612 seconds.
+- Best types by done percent - scout 21 of 49, gifts 10
+  of 35, help 9 of 33, mail 9 of 33, passes 9 of 37,
+  treasures 8 of 36, secrets 7 of 36.
+- Worst types by done percent - train 0 of 34, training
+  0 of 36, vip 0 of 10, zero-sweep 0 of 15, crystal-shop
+  0 of 2, glittering-market 0 of 2, ghost-ops 0 of 1.
+- Measurement state - numeric target over achieved
+  pairs 271, summed attainment 0.5541
+  (achieved_sum 8,333,047, target_sum 15,039,671);
+  the summed figure is NOT comparable: it is
+  dominated by one misattributed figure
+  (star-ceremony-2026-11-04-0630 carries a duel
+  screen total 4,772,100 in achieved); without
+  it the window attainment is about 0.31, itself
+  dominated by the duel-score running totals
+  (3,385,000 across 2 units reading the same rising
+  total). Points 50,313 reported, 2,463 honest
+  (gifts progress-as-points 47,850 excluded);
+  the tool excludes 1 copied-points unit
+  (arms-race-2026-11-09-0203, 82,500).
+  Units carrying blocker_category: e 108, h 78,
+  f 36, c 28, none 27, b 6, d 4, g 3, a 1, plus
+  non-enum values access-failed 1, time 1, timer 1,
+  unverified-close 1. Unverified closings 529 (73.2
+  percent), down 7.5 points on yesterday's 80.7
+  percent.
+- Threshold breaches - expired/unexecuted in day
+  counts (17 branch, 28 live); quota attainment under
+  0.8 rolling (donations 0.1818; trucks 0.8333 no
+  longer breaches but the trade-day close is unknown
+  for the third day); unverified rate over 20 percent
+  (73.2 percent, down 7.5 points week over week);
+  oldest open improvement over 7 days (#118, 7 days
+  old - first breach); recurrence of a closed
+  improvement's root cause 1 (#300, gifts
+  progress-as-points); daily standing job artifact
+  missing (ticker-0634 record, #342, about 110
+  hours); ledger coverage 12 of 23 (sweep pair ran
+  both passes, walk thinned from 18 of 23).
+  Unexplained red dots 0 - NO breach, first time.
+  Batch compliance clean (0 violations out of 6).
+- Detail - daily retro 2026-11-09 in this folder.

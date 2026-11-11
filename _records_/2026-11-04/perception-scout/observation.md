@@ -139,3 +139,35 @@ Full unit record at `perception-scout/0919-queue-run.md`.
 - Carried unwalked: station panel and loot box
   re-check only.
 - unmatched_labels: none in the surfaces actually walked.
+
+### Scout-events, 2150 unit (ticker-2134, stale 11-04 midday chain) - late catch-up read 2026-11-07 about 21:44 to 21:50 local
+
+- Drone Boost (star-icon tab): Contest Segment Lv.29-30, 0/2 chests, score 0, timer 00:14:48; tiers 1,500 / 10,000 / 30,000 at 2,360 / 4,800 / 11,800; scoring rows Drone Battle Data +1, Stamina +100, diamond packs +30 (observed only). Own rank 7, #2110 [AP3x]Bears Lair, score 0.
+- Frontline Breakthrough (tab badge 1): timer 20:04:23, phase Saving Soldiers, 42%; reward row red gem 100, gold card 10, crates 18, coins 18, 3, 3; Challenge button red dot (observed only).
+- Winter Battlefield (5v5): "Event is starting soon", countdown 20:14:01; windows 11/08 20:00-22:00, 11/09 03:00-05:00, 11/09 13:00-15:00, Base Lv.15+; Match greyed.
+- The Doomsday (tab badge 22): timer 20:12:58; Warzone Guardian [CTR1]초리vv, Total Damage 1.8G; Alliance Threat (0), Warzone Threat (0), "Threat Neutralized"; Rewards dot. Known label (event-claims metadata), not new.
+- Scrolling banner: "Important: President HawksMav appointe..." (cut off), still unread in full.
+- No Zombie Invasion tab. Tabs seen: Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday, Community. Desert Storm Battlefield, Level Swap, Wanted Boss not re-verified in this scroll.
+- Red dot accounting: 6 seen, 5 explained, 0 unexplained. Unknown items: what The Doomsday badge 22 counts; the full President banner text; the furnace overdrive toast [22/60].
+- Carried unwalked: Community tab, Desert Storm / Level Swap / Wanted Boss re-verification, scout-store and scout-alliance groups, the two left-column badges, the station-panel re-check.
+
+### Scout remainder, 0022 unit (ticker-0004, stale 11-04 midday chain seq 2) - late catch-up read 2026-11-08 about 00:13-00:22 local
+
+- Community tab and tab re-verification answered by this pass's first unit (0011, 00:06-00:11 local): Community 500 Diamonds Discord-link reward already Claimed, no dot; Events hub roster 5 tabs (Arms Race, Frontline Breakthrough, Winter Battlefield, The Doomsday, Community); Desert Storm Battlefield, Level Swap, Wanted Boss all ended.
+- Left-column badges (base screen, live): hammer 2/4 red dot (construction-queue signal, exact trigger unread, no owning regular in the queue), radar red dot (radar regular), white truck red dot (trucks regular); flask 2/2, green face 6.5C, wrench, yellow device icon with red dot.
+- Station-panel re-check: both preparation signals absent (no train icon in the left column, no "Boarding closes in" banner) - fourth consecutive confirmation, no train preparing; check stopped at the signals per the hardened route (alliance-train 1.6.0).
+- Store group (partial): Official Event tab (red dot - check-in gift, shop-claims); Weekly Deal tab 2026-11-2 to 2026-11-8 23:59:59, three paid packs observed only (Valor Badge $99.99, Base Upgrade $19.99, UR Set $49.99, each 1 purchase available) - closes the Weekly Deal page item carried from the 2209 unit.
+- Red dot accounting: 11 seen, 11 explained, 0 unexplained in the surfaces walked. Unknown items: hammer dot's exact trigger and ownerless routing; full President banner text ("Important: President Haw..." cut off); furnace toast [22/60]; 99+ badge; Season II badge 1.
+- Carried unwalked: Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall and Hot Sale Packs tabs - successor seq 003 of chain scout-mid-2026-11-04.
+
+### Scout-store, 0538 unit (ticker-0534, stale 11-04 midday chain seq 3) - late catch-up read 2026-11-08 about 05:36-05:39 local
+
+- Super Monthly Pass: Days Left 13, Squad 4 Lv.20, Daily Pickup already Claimed, Rewards Left 13, Extension $24.99 (paid, observed only).
+- Weekly Pass: rewards reset at 18:00:00; Free Supply box contents unread (tap would claim, scout does not open); Legendary Take All $19.99; four $4.99 cards - Drone Components (Legendary), Drone Parts (Epic), Iron (Elite), Coin (Elite), all Validity 7 Day(s).
+- Diamond: six first-buy x2 packs, 10000+$1000 $99.99 down to 100+$10 $0.99 (bottom two prices edge-cut, partial).
+- Gold Brick Mall: Extra 5% Bonus, eight packs $4.99 to $999.99 with Free Gifts (top two prices final-digit cut, recorded at ladder values).
+- Hot Sale Packs: "Packs sold out", unchanged.
+- President banner: RedFox26 fragment now reads "...inted RedFox26 as Secretary of Defense!" (reconstructs the full text with the earlier fragment); a newer banner rotated in: "Important: President HawksMav appointed Thunder TLS as ..." (cut off).
+- Red dot accounting: 0 seen, 0 explained, 0 unexplained in the five tabs walked. Unknown items: Diamond bottom-row prices, Gold Brick top prices, Free Supply contents, Thunder TLS banner remainder.
+- Carried unwalked: none - the stale 2026-11-04 midday chain is now complete.
+- NOTE: duplicate execution - ticker-0404 already walked these tabs (0407 record); this is a confirmatory re-read from a stale pool, see issue #446.

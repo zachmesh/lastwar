@@ -1,8 +1,8 @@
 ---
 title: Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-01T05:38:00Z
-version: 1.10.0
+modified: 2026-11-09T20:32:17Z
+version: 1.13.0
 description: One folder per activity type, each accumulating knowledge for that type
 grounded_in:
   - source: human-authored
@@ -56,3 +56,8 @@ file per execution, under the date it happened.
 - [`tool-development/`](tool-development/INDEX.md)
 - [`knowledge-organization/`](knowledge-organization/INDEX.md)
 - [`pr-integration/`](pr-integration/INDEX.md)
+- [`survey-center/`](survey-center/INDEX.md)
+- [`season-ii-countdown-6d/`](season-ii-countdown-6d/INDEX.md)
+- [`the-age-of-oil/`](the-age-of-oil/INDEX.md)
+- [`decoration-gallery-overview-ur/`](decoration-gallery-overview-ur/INDEX.md)
+- [`upgrade-builders-hut-to/`](upgrade-builders-hut-to/INDEX.md)

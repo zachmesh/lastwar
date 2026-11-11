@@ -68,14 +68,30 @@ changes nothing in any pool. With --apply it feeds the plan's
 enqueue entries to _tools_/queue.py enqueue, one call per unit, so
 every unit it creates passes the same validation as a manual
 enqueue - and --apply refuses to run unless the pool root is
-given explicitly with --root.
+given explicitly with --root. --root accepts a pool directory or
+a repository root, resolved to its _queue_ folder (issue #510);
+--apply refuses a root holding no pool state directory, so a
+wrong root fails loudly instead of writing units into a fresh
+empty directory nobody reads. A dry run against a root holding
+no pool state directory prints the same pool_root_warning
+queue.py prints, so its counts never silently describe an
+empty pool (issue #537).
 
 Idempotency: produced units dedupe on (regular, planned_for)
 exactly as sync and plan do, and dynamic units carry their
 source observation item (date, surface, label) in their window
-text, which the tool checks before enqueueing. A second run over
-the same observation reports every entry as already queued and
-applies zero new units.
+text, which the tool checks before enqueueing. The dedupe also
+consults today's delivered records branch (issue #466): a unit
+already closed on the branch whose inbox copy the plan already
+dropped is reported already-queued instead of re-enqueued, and
+an exploration already closed on the branch today is not staged
+again. The dedupe also reads the shared main-checkout pool's
+done/ records (issue #533): a slot the ticker already closed in
+the live pool - whose delivery has not landed on the records
+branch yet - is reported already-queued instead of re-enqueued,
+so a stale observation cannot re-enqueue a reward claimed after
+it was read. A second run over the same observation reports every
+entry as already queued and applies zero new units.
 
 Priority: the formula of section 5 of the perception design -
 deadline pressure times value over expected duration - mapped
@@ -94,7 +110,8 @@ Usage:
                 [--now ISO] [--apply] [--format text|json]
 
 Pool reads (the dedupe checks and the learned estimates) happen
-only when --root names a pool; without it the diff runs against
+only when --root names a pool or a repository root resolved to
+its _queue_ folder; without it the diff runs against
 an empty pool view. The observation, regulars, activities roster
 and ledger default to the repository this tool lives in
 (override with --repo).
@@ -179,6 +196,34 @@ def _parse_items_block(lines, start):
     return items, i
 
 
+def _strip_inline_comment(text):
+    """Drop a trailing ``# ...`` YAML comment (issue #527).
+
+    A comment starts at a ``#`` preceded by whitespace; a ``#``
+    glued to a word is part of the value.
+    """
+    return re.split(r"\s+#", text, maxsplit=1)[0].strip()
+
+
+def _is_empty_list_marker(text):
+    """True when a label line is the prose form of an empty list.
+
+    Day observations write an empty unmatched list as a bare
+    ``unmatched_labels: none`` or as a block line ``- none (...)``
+    with a parenthetical explanation (issue #527). Either form means
+    no label, so it must not reach the candidate classifier as a
+    slug like ``none-builders-hut-quest``. ``empty`` is the same
+    marker. A real label such as ``nonexistent-thing`` does not
+    match: the marker word must end the text or be followed by a
+    space, an opening parenthesis, or sentence punctuation
+    (``none.``, ``empty:`` - issue #536).
+    """
+    lowered = _strip_inline_comment(text).lower()
+    if lowered in ("none", "empty"):
+        return True
+    return bool(re.match(r"^(none|empty)([\s(]|[.,;:!?])", lowered))
+
+
 def _parse_labels_block(lines, start):
     """Parse one unmatched_labels value - an inline flow list, a
     plain scalar, or a block list of scalars."""
@@ -188,7 +233,9 @@ def _parse_labels_block(lines, start):
         line = lines[i]
         m = re.match(r"^\s*- (.+)$", line)
         if m and not line.lstrip().startswith("- surface"):
-            labels.append(m.group(1).strip())
+            text = m.group(1).strip()
+            if not _is_empty_list_marker(text):
+                labels.append(text)
             i += 1
             continue
         break
@@ -215,18 +262,18 @@ def parse_observation_text(text):
                 inner = rest.strip("[]").strip()
                 if inner:
                     labels.extend(x.strip() for x in
-                                  inner.split(",") if x.strip())
+                                  inner.split(",") if x.strip() and
+                                  not _is_empty_list_marker(x))
                 i += 1
                 continue
-            if rest and rest.lower() not in ("none", "empty"):
-                labels.append(rest)
+            if rest:
+                rest = _strip_inline_comment(rest)
+                if not _is_empty_list_marker(rest):
+                    labels.append(rest)
                 i += 1
                 continue
-            if not rest:
-                found, i = _parse_labels_block(lines, i + 1)
-                labels.extend(found)
-                continue
-            i += 1
+            found, i = _parse_labels_block(lines, i + 1)
+            labels.extend(found)
             continue
         i += 1
     seen = set()
@@ -252,7 +299,8 @@ def parse_observation_json(doc):
                                  if isinstance(v, dict))
                 elif key == "unmatched_labels" and \
                         isinstance(value, list):
-                    labels.extend(str(v) for v in value)
+                    labels.extend(str(v) for v in value
+                                  if not _is_empty_list_marker(str(v)))
                 else:
                     walk(value)
         elif isinstance(node, list):
@@ -763,6 +811,10 @@ def classify(item, regulars, roster, reg_by_activity):
     if not label or state not in KNOWN_STATES:
         return {"class": "unexplained",
                 "reason": "missing label or unknown state"}
+    if _is_empty_list_marker(label):
+        return {"class": "not-actionable", "owner": "",
+                "reason": "empty-list marker, not a label "
+                          "(issue #536)"}
     if suggested and suggested != "new" and suggested in regulars:
         owner = suggested
     elif suggested and suggested != "new" and \
@@ -785,6 +837,27 @@ def classify(item, regulars, roster, reg_by_activity):
                         "reason": "profiled in the roster with no "
                                   "producing regular"}
         else:
+            # Issue #505: an unknown slug is a discovery candidate
+            # only when the item is something to do - a claimable or
+            # doable task with no owning regular. A read-only item
+            # (info-only, in-progress, locked) or a red-line-blocked
+            # item is day evidence, not an unknown task: filing it
+            # as a candidate mints exploration units for Total Power
+            # totals, building-queue counts and absence notes, and
+            # duplicates genuine discoveries under a second slug
+            # (survey-center-tab beside survey-center).
+            if state not in ACTIONABLE_STATES:
+                reason = {"in-progress": "already under way",
+                          "locked": "locked or not yet open - " +
+                                    str(item.get("redline_check", "")),
+                          "info-only": "read for the record, day "
+                                       "evidence"}[state]
+                return {"class": "not-actionable", "owner": "",
+                        "reason": reason}
+            if redline_blocked(item):
+                return {"class": "not-actionable", "owner": "",
+                        "reason": "red line - " +
+                                  str(item.get("redline_check", ""))}
             return {"class": "candidate", "slug": slug,
                     "known_candidate": False}
     if redline_blocked(item):
@@ -910,6 +983,95 @@ def exploration_done_units(units, slug):
     return sorted(done, key=lambda f: str(f.get("_file", "")))
 
 
+def branch_exploration_slugs(root, branch, date):
+    """Candidate slugs whose exploration already closed on the
+    delivered records branch on this date (issue #466).
+
+    The branch done set from queue.py names unit ids only, and an
+    exploration unit id carries no slug - so the slug comes from
+    the done unit's window text, which the diff itself wrote as
+    "scout <date> - exploration - <slug> - ...". One git grep over
+    the private ref the branch fetch already populated (queue.py
+    records_branch_done_units) lists the window lines; only this
+    date's slugs count, so a candidate explored on an earlier day
+    still gets its next exploration unit. Returns (slugs, warning):
+    warning is None on success, else a short reason - the caller
+    warns and the run continues on local state only, as with the
+    branch done set itself.
+    """
+    ref = "%s/%s" % (Q.BRANCH_RECONCILE_REF,
+                     branch.replace("/", "-"))
+    # The pathspec is relative to the pool dir this tool runs in -
+    # the pool IS the _queue_ folder, so "done/" is _queue_/done/.
+    # git grep has no ":/" top magic (it fails with "Unimplemented
+    # pathspec magic"), so the repo-root-relative form cannot be
+    # used here; scoping to done/ matters because the branch also
+    # carries _records_ files that quote exploration windows of
+    # units that were only planned, never closed.
+    try:
+        out = subprocess.run(
+            ["git", "-C", root, "grep", "-h", "-F", "-e",
+             "exploration - ", ref, "--", "done/"],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return set(), ("branch exploration grep failed, "
+                       "branch check skipped")
+    if out.returncode not in (0, 1):
+        return set(), ("branch exploration grep failed, "
+                       "branch check skipped")
+    slugs = set()
+    needle = re.compile(
+        r"scout (\d{4}-\d{2}-\d{2}) - exploration - "
+        r"([a-z0-9-]+) -")
+    for line in (out.stdout or "").splitlines():
+        match = needle.search(line)
+        if match and match.group(1) == date:
+            slugs.add(match.group(2))
+    return slugs, None
+
+
+def shared_pool_done_units(root):
+    """Unit ids closed in the shared main-checkout pool (issue #533).
+
+    The worktree pool this diff runs against is a snapshot: a unit
+    the ticker closed in the live pool lands in the worktree's
+    done/ only when the next pool sync copies it, and on the
+    delivered records branch only when its delivery lands - the
+    1540 planner pass re-enqueued the VIP reward ticker-1518 had
+    claimed seven minutes earlier because neither copy had
+    arrived yet. The live pool itself is the main checkout's
+    _queue_, reachable from any worktree through the same shared
+    home queue.py uses for completion markers
+    (Q.completion_home), so its done/ records are the ticker
+    result the diff was missing. A file counts when it names its
+    unit and carries a result status, mirroring
+    Q._has_done_record: any result status (done, partial, failed,
+    skipped-needs-owner, expired) means the unit already closed.
+    Returns (ids, warning): warning is None on success; a shared
+    home with no done/ directory simply holds no live
+    completions, and an unreadable file is skipped, never fatal.
+    """
+    home = Q.completion_home(root)
+    folder = os.path.join(home, "done")
+    if not os.path.isdir(folder):
+        return set(), None
+    ids = set()
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".md"):
+            continue
+        try:
+            fields, _ = Q.read_unit(os.path.join(folder, name))
+        except (OSError, ValueError, UnicodeDecodeError):
+            continue
+        unit = fields.get("unit")
+        if not unit:
+            continue
+        result = fields.get("result", {})
+        if isinstance(result, dict) and result.get("status"):
+            ids.add(unit)
+    return ids, None
+
+
 def _result_text(result, key):
     if not isinstance(result, dict):
         return ""
@@ -1007,6 +1169,45 @@ def run(args):
     units = pool_units(args.root)
     now_local = stamp.astimezone(LOCAL_TZ)
 
+    # Branch-closed consultation (issue #466): a unit closed on
+    # today's delivered records branch whose inbox copy the plan
+    # already dropped looks unqueued to this diff, so without this
+    # the diff re-enqueues it - the planner 0840 run did exactly
+    # that to six exploration units closed on the branch. The
+    # closed set mirrors queue.py sync/plan: branch done ids plus
+    # live completion markers. A branch that cannot be read warns
+    # and the run continues on local state only.
+    branch = ""
+    branch_warning = None
+    closed = set()
+    branch_closed_ids = set()
+    shared_done = set()
+    branch_explored = set()
+    branch_closed = []
+    shared_closed = []
+    if args.root:
+        branch = "records/%s" % now_local.date().isoformat()
+        branch_done, branch_warning = Q.records_branch_done_units(
+            args.root, branch)
+        if branch_warning is None:
+            branch_explored, branch_warning = \
+                branch_exploration_slugs(args.root, branch, date)
+        if branch_warning:
+            print(f"warning: {branch_warning} (issue #466)",
+                  file=sys.stderr)
+        closed = set(branch_done)
+        for unit in Q.completion_marker_units(args.root):
+            closed.add(unit)
+        branch_closed_ids = set(closed)
+        # Shared-pool done consultation (issue #533): the live
+        # pool's done/ records close slots the delivered branch
+        # has not seen yet - the 1540 pass re-enqueued the VIP
+        # reward on exactly that gap. The worktree pool already
+        # contributes its own done/ through pool_units, so only
+        # the shared home adds anything here.
+        shared_done, _ = shared_pool_done_units(args.root)
+        closed |= shared_done
+
     actionable = {}          # (regular, planned_iso) -> entry
     candidates = {}          # slug -> candidate record
     not_actionable = []
@@ -1014,6 +1215,14 @@ def run(args):
     counts = {"info_satisfied": 0}
 
     def file_candidate(slug, label, surface, clues, from_item):
+        # Issue #536: a slug in the empty-list family (none-*,
+        # empty-*) is prose for "no unmatched labels", never a
+        # discovery - a marker form the parser did not recognise
+        # must not reach the register here either. A real label
+        # survives: slugify("nonexistent-thing") is
+        # "nonexistent-thing", not "none-*".
+        if slug.startswith(("none-", "empty-")):
+            return
         if slug in candidates:
             rec = candidates[slug]
             for clue in clues:
@@ -1118,6 +1327,29 @@ def run(args):
                 have = 3
             action = "raise" if entry["priority"] < have \
                 else "already-queued"
+        elif closed:
+            slot_unit = Q._unit_id_for_window(
+                regulars[entry["regular"]],
+                parse_iso(entry["planned_for"]).astimezone(
+                    LOCAL_TZ))
+            if slot_unit in closed:
+                # The slot already closed on the delivered branch
+                # (or by a live completion marker) - the live pool
+                # holds no trace of it, but minting a fresh unit
+                # would re-execute the slot (issue #466). A slot
+                # closed only in the shared pool's done/ records
+                # is the same suppression through the live pool
+                # (issue #533). The two lists partition the
+                # suppressions: branch_closed_ids (branch plus
+                # markers) counts under branch_closed, a slot the
+                # shared pool alone knew counts under
+                # shared_closed, so the retro can see which input
+                # saved each re-enqueue.
+                action = "already-queued"
+                if slot_unit in branch_closed_ids:
+                    branch_closed.append(slot_unit)
+                elif slot_unit in shared_done:
+                    shared_closed.append(slot_unit)
         trigger = "claimable now"
         if entry["priority"] == 1:
             trigger = "deadline approaching, expiry band"
@@ -1145,9 +1377,17 @@ def run(args):
         label = rec["label"] or slug
         marker = f"scout {date} - exploration - {slug} - {label}"
         existing = find_existing(units, "scout", "", marker)
+        action = "already-queued" if existing else "enqueue"
+        if not existing and slug in branch_explored:
+            # This candidate's exploration already closed on the
+            # delivered branch today - the live pool holds no trace
+            # of it, but staging a fresh exploration would repeat
+            # the 0840 run's re-enqueue of the same six units
+            # (issue #466).
+            action = "already-queued"
+            branch_closed.append(slug)
         plan.append({
-            "action": "already-queued" if existing else "enqueue",
-            "kind": "exploration", "regular": "scout",
+            "action": action, "kind": "exploration", "regular": "scout",
             "activity": slug,
             "segment": regulars.get("scout", {}).get("segment",
                                                      ""),
@@ -1389,6 +1629,11 @@ def run(args):
         "queued_entries": len(plan),
         "to_enqueue": len(to_enqueue),
         "already_queued": len(already),
+        "already_queued_branch_done": len(branch_closed),
+        "branch_closed": sorted(branch_closed),
+        "already_queued_shared_pool_done": len(shared_closed),
+        "shared_pool_closed": sorted(shared_closed),
+        "branch_done_reconcile_warning": branch_warning,
         "raises": len(raises),
         "applied": len(applied),
         "already_satisfied": counts["info_satisfied"],
@@ -1458,6 +1703,31 @@ def run(args):
                       "finding)")
     else:
         basis_note = " (classified structured items)"
+    if branch_warning:
+        branch_line = (f"- branch done check unavailable - "
+                       f"{branch_warning}; the diff ran on local "
+                       f"state only")
+    elif branch:
+        branch_line = (
+            f"- already closed on the delivered branch "
+            f"{branch} - {len(branch_closed)} "
+            f"entr{'y' if len(branch_closed) == 1 else 'ies'} "
+            f"not re-enqueued")
+    else:
+        branch_line = ("- branch done check - not run: the pool "
+                       "was not read (no --root), so a unit closed "
+                       "on the branch could not be checked")
+    if args.root:
+        shared_line = (
+            f"- already closed in the shared live pool's done/ "
+            f"records - {len(shared_closed)} "
+            f"entr{'y' if len(shared_closed) == 1 else 'ies'} "
+            f"not re-enqueued (issue #533)")
+    else:
+        shared_line = ("- shared-pool done check - not run: the "
+                       "pool was not read (no --root), so a unit "
+                       "closed in the live pool could not be "
+                       "checked")
     cov = ["---",
            f"title: Scout Coverage {date}",
            f"created: {iso(stamp)}",
@@ -1474,6 +1744,8 @@ def run(args):
            f"{coverage['already_queued']}, priority raises "
            f"{coverage['raises']}, applied this run "
            f"{coverage['applied']})",
+           branch_line,
+           shared_line,
            f"- already satisfied, read as day evidence - "
            f"{coverage['already_satisfied']}",
            f"- known, not actionable - "
@@ -1697,7 +1969,12 @@ def run(args):
               f"{coverage['to_enqueue']}, already queued "
               f"{coverage['already_queued']}, priority raises "
               f"{coverage['raises']}, applied this run "
-              f"{coverage['applied']}); already satisfied "
+              f"{coverage['applied']}"
+              + (f", branch-closed {len(branch_closed)}"
+                 if branch_closed else "")
+              + (f", shared-pool-closed {len(shared_closed)}"
+                 if shared_closed else "")
+              + f"); already satisfied "
               f"{coverage['already_satisfied']}, known not "
               f"actionable {coverage['not_actionable']}.")
     if coverage_basis == "frontmatter-fallback":
@@ -1826,6 +2103,12 @@ def run(args):
               f"promotion proposals "
               f"{coverage['promotion_proposals']}")
         print(f"outputs in {out_dir}")
+        if branch_closed:
+            print(f"branch-closed, not re-enqueued - "
+                  f"{', '.join(sorted(branch_closed))}")
+        if shared_closed:
+            print(f"shared-pool-closed, not re-enqueued - "
+                  f"{', '.join(sorted(shared_closed))} (issue #533)")
         if applied:
             print(f"applied {len(applied)} - "
                   f"{', '.join(applied)}")
@@ -1855,6 +2138,27 @@ def main(argv=None):
                      "explicitly")
     if args.root:
         args.root = os.path.abspath(args.root)
+        args.root = Q.resolve_pool_root(args.root)
+    if args.root:
+        # A dry run against a wrong root used to report its counts
+        # against an empty pool with nothing to show it never saw
+        # the pool (issue #537): the 1640 planner pass read an
+        # empty pool and filed phantom units before --apply refused.
+        # Warn through the same pool_root_warning queue.py prints,
+        # so the read path fails loudly too. --apply keeps its own
+        # refusal below. The warning also fires on --apply: a
+        # stray pool beside the resolved _queue_ pool (issue #539)
+        # must be named on the write path too, so it gets removed
+        # instead of silently ignored.
+        warning = Q.pool_root_warning(args.root)
+        if warning:
+            print(warning, file=sys.stderr)
+    if args.apply and not any(
+            os.path.isdir(Q.state_dir(args.root, s))
+            for s in Q.STATES):
+        parser.error(f"--apply root {args.root} holds no inbox, "
+                     "claimed or done directory - the pool was "
+                     "not found, nothing applied (issue #510)")
     return run(args)
 
 

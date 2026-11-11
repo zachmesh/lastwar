@@ -1,0 +1,87 @@
+{
+ "help": {
+  "status": "done",
+  "at": "2026-11-09T21:25:04-08:00",
+  "note": "Base help bubble pressed, waiting ally requests cleared; Help page 420/1,000, only own requests remain"
+ },
+ "treasures": {
+  "status": "done",
+  "at": "2026-11-09T22:13:21-08:00",
+  "note": "Stock M3 x0, no dig possible, both Dig buttons greyed"
+ },
+ "secrets": {
+  "status": "done",
+  "at": "2026-11-09T22:11:48-08:00",
+  "note": "5 assists to cap, 9 tasks Mega Deployed and verified running"
+ },
+ "events": {
+  "status": "done",
+  "at": "2026-11-09T07:17:23-08:00",
+  "note": "Checked live 07:06-07:18: Wanted Boss not out (server 00:00), nothing claimable"
+ },
+ "scout": {
+  "status": "done",
+  "at": "2026-11-09T12:17:35-08:00",
+  "note": "Builders Hut Lv.26 banner quest discovery unit 018 done; scout pass itself done 10:52, re-stamped by this discovery unit"
+ },
+ "harvest": {
+  "status": "done",
+  "at": "2026-11-09T12:30:36-08:00",
+  "note": "Bubbles collected 12:20-12:33 PT, food +3.9M iron +3.6M coin +2.6M; Armed Truck unchecked, follow-up next harvest unit"
+ },
+ "daily-missions": {
+  "status": "done",
+  "at": "2026-11-09T15:37:57-08:00",
+  "note": "Claimed 5 completed rows and activity chests 40/80/120; activity 140"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-09T15:42:52-08:00",
+  "note": "Daily Freebie and login chest claimed; VIP points 1,613,660 to 1,613,740"
+ },
+ "mail": {
+  "status": "done",
+  "at": "2026-11-09T21:29:55-08:00",
+  "note": "Event Weekly Pass rewards claimed (red gem x10, white crystal x4); other categories reports only"
+ },
+ "gifts": {
+  "status": "done",
+  "at": "2026-11-09T21:21:46-08:00",
+  "note": "Regular 113 + Premium 57 claimed in full, Gift Level 199,708,580/206,300,000"
+ },
+ "duel-score": {
+  "status": "done",
+  "at": "2026-11-09T21:54:32-08:00",
+  "note": "Personal total 0 read live twice, theme Base Expansion, alliance trailing 256,949,555 vs 307,894,587"
+ },
+ "star-ceremony": {
+  "status": "done",
+  "at": "2026-11-09T21:55:23-08:00",
+  "note": "No trophy icon on base screen, no ceremony waiting"
+ },
+ "passes": {
+  "status": "done",
+  "at": "2026-11-09T22:01:23-08:00",
+  "note": "Weekly Pass list fully scrolled, no owned pickups; Monthly Claimed; check-in banner filed as Issue #553"
+ },
+ "radar": {
+  "status": "done",
+  "at": "2026-11-09T23:46:32-08:00",
+  "note": "Stack done: 5 tasks executed, 9 rewards pending for duel day 3 release, points 348, stored 1/40"
+ },
+ "building-queues": {
+  "status": "done",
+  "at": "2026-11-09T20:19:34-08:00",
+  "note": "Queue read live 20:19: slot 1 Lv.29 Aircraft Center 2d 06:07:55 left, slots 2-4 idle"
+ },
+ "research": {
+  "status": "done",
+  "at": "2026-11-09T20:27:56-08:00",
+  "note": "Defense Training VIII completed, power +15,000 to 146,751,949; Missile Mastery II 1d 13:54:11 left; slot 1 Idle"
+ },
+ "survivors": {
+  "status": "done",
+  "at": "2026-11-09T23:52:46-08:00",
+  "note": "Gate line cleared (2 to 0), Quick Dispatch ran, no survivors available for dispatch"
+ }
+}
