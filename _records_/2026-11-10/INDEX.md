@@ -2937,3 +2937,37 @@ modified: 2026-11-10T14:21:00Z
   issues filed. Pool by_state: inbox 70, claimed 0, done
   1471. Status: no-op. Full detail in
   queue-planning/1640-run.md.
+
+## 16:38 to 16:42 - Ticker pass ticker-1634, zero-sweep unit partial
+
+- Zero-sweep unit zero-sweep-2026-11-10-1630 partial (sweep
+  001 of 2). Base HUD read live: power 148,787,578, food
+  631.3M, iron 954.1M, coin 97.8M, diamonds 6,267, stamina
+  120; VS 01:20:54. One coin bubble standing over the purple
+  building, so ledger line 3 is not at zero; the staged
+  harvest-2026-11-10-1803 unit owns collection. Secret
+  Command Post read live: Assist Allies 5/5, Plunder Others
+  0/3, 3 PERFECT tasks visible plus the orange hexagon badge
+  on Provide Tech Support, no Claim button - matching the
+  13:49 read; the staged secrets-2026-11-10-1830 unit
+  re-verifies. The left-column truck icon opens the Command
+  Post, confirming the 15:31 finding. All other ledger lines
+  unwalked in this unit and pass to the staged 17:30 sweep
+  (same chain, seq 2). No fix-up units enqueued - both
+  non-zero observations already have staged units. Nothing
+  claimed, nothing spent. Full detail in
+  daily-activities/1634-queue-run.md.
+
+## 16:45 to 16:49 - Ticker pass ticker-1634, training unit partial
+
+- Training unit training-2026-11-10-1403 partial, unverified.
+  No barracks tent located: three camera pans (down, right,
+  long right) either barely moved the view or overshot the
+  base edge into fog. No TRAIN UNITS panel opened, no batch
+  requeued. Known state, not re-verified: the Lv.24 T8 x666
+  batch queued 12:29 runs 1d 04:19:43 and is still running;
+  Lv.30, Lv.27 and the fourth barracks unverified. Blind
+  panning is retired under rule R2 - the next training unit
+  re-grounds from the 12:29 record's successful tent point
+  before any pan. Base left on the top-edge view. Nothing
+  spent. Full detail in troop-training/1649-queue-run.md.
