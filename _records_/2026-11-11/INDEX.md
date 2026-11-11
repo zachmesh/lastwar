@@ -1422,3 +1422,29 @@ of 2026-10-28.
   0), 0 withdrawals, no new issue. Pool inbox 80, claimed 1,
   done 1547. Status: done. Full detail in
   queue-planning/0640-run.md.
+
+## 06:32 to about 06:57 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-0632, worked from
+  the 0532 run watermark (substantive through 74344e28b). Folded
+  the ticker-0534 pass (commit a3ef6b276: donations 0541,
+  arms-race 0535, research 0553, training 0548) and the
+  ticker-0604 pass (commit e14a1a981: donations 0635, zombie
+  0622): alliance-donations 1.97.0 to 1.99.0 (4 coin donations
+  verified 3/30 to 7/30 derived in 0541, live 2/30 in 0635
+  supersedes the derived close, 53rd and 54th replenishment
+  datapoints, tap 2 from 1/30 unverified - seventh changed-route
+  deviation, Expert Nurse 1/10 named), arms-race 1.83.0 to
+  1.84.0 (Tech Research re-verified, tier 3 unreachable, 0004
+  timer citation corrected), research-queue 1.4.0 to 1.5.0 (slot
+  1 busy 04:27:41, timer discrepancy resolved for 0846),
+  troop-training 1.42.0 to 1.43.0 (Lv.24 busy 11:01:26, Drill
+  Ground read still not done), zombie-invasion 1.29.0 to 1.30.0
+  (chain 009, 2 Lv.10 kills, 536,000 coins, medals 4100). PR
+  #633 merged with no feedback; PR #635 opened (2 commits
+  dc895536a, dd0668aa1). Issue comments posted on #160, #500
+  (x2), #558, #220, #450, #150. No new issue. Contradictions
+  resolved: 3. Concurrent landing for the next run: the
+  donations re-read unit enqueued by 0635 for after about 06:51
+  local. Status: done. Full detail in
+  knowledge-organization/0632-run.md.
