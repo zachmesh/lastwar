@@ -4,7 +4,7 @@ regular: zombie-invasion
 activity: zombie-invasion
 segment:
 priority: 4
-created_at: 2026-11-11T02:17:59Z
+created_at: 2026-11-11T03:01:43Z
 expires_at:
 planned_for:
 not_before:

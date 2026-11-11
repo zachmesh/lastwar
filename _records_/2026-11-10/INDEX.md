@@ -3282,3 +3282,73 @@ modified: 2026-11-10T14:21:00Z
   OD-20261108-01 still open. 4 verification comments
   posted. Status: done. Full detail in
   pr-integration/1845-run.md.
+## 18:36 to 18:46 - Ticker pass ticker-1834, passes unit done
+
+- Passes unit passes-2026-11-10-1457 done. Hot Deals free pack
+  claimed (Research Speed-up Pack: 1h Research Speed-up x25,
+  Coin Chest (UR) x5, CONGRATULATIONS verified); Free Supply
+  auto-claimed (blue chest x1, ruby x10); Super Monthly Pass
+  Daily Pickup claimed (Monthly Pass, Squad 4 Lv.20, Days Left
+  11, Rewards Left 11; DAILY GIFT panel: gold bars x2, red
+  diamonds x100, gold tickets x2, iron x200, 5-minute speedups
+  x60; button now Claimed). All four Weekly Pass cards verified
+  not owned (S2 Drone Components, S1 Drone Parts, Iron, Coin -
+  every one Get Now $4.99, no Claim button); Legendary Take All
+  $19.99 and the $24.99 Monthly Pass Extension untouched.
+  Weekly Deal paid only (Valor Badge $99.99, Base Upgrade
+  $19.99, UR Set $49.99). Entry state: game opened on the
+  Alliance screen with the HELP dialog (both requests 30/30,
+  points 40/1,000) - closed untouched, help unit's work.
+  Calibration: computer.control coordinates are normalized
+  0-1000 on both axes; back arrow measured centre (168,917)
+  after three no-change taps at (168,872). Drag scrolls the
+  Weekly Pass list where wheel scroll does not. Nothing spent.
+  Full detail in shop-claims/1836-queue-run.md.
+
+## 18:47 to 18:53 - Ticker pass ticker-1834, secrets unit done
+
+- Secrets unit secrets-2026-11-10-1457 done. Fresh post-18:00
+  batch found where the 13:49 unit and the 16:34 sweep had left
+  everything PERFECT and claimed: 8 pending tasks, assists
+  0/5. All 8 deployed by Mega Deploy with UR Only off (UR
+  Rescue Officer 2h, SSR Provide Tech Support 1h, SSR Protect
+  Refugee Camp 1h x2, four 30-minute retrieves) and verified
+  running on countdowns; no Mega Refresh, since duel day 3
+  (Age of Science) does not score UR secret tasks. Ally
+  assists 5/5 used (Boss Hog 05 x2, spac3cadet x3; first
+  assist paid Mystery Supply Box x1, Upgrade Ore x24, Hero
+  EXP 123.9K; the five assists list in the Record panel at
+  18:51). Remaining ally rows are UR countdown-only with no
+  Assist button. Reward Recovery re-checked: 2026-11-6 record
+  CLAIMED, nothing pending. Plunder Others 0/5 untouched.
+  The orange hexagon badge was not observed on the fresh
+  cards; follow-up stays open. Nothing spent. Full detail in
+  secret-missions/1847-queue-run.md.
+
+## 18:55 to 18:57 - Ticker pass ticker-1834, treasures unit done
+
+- Treasures unit treasures-2026-11-10-1457 done. Fragment
+  stock read live from the map, identical to the 13:51 read:
+  M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10. M3 at
+  0 caps the set count at zero, both Dig buttons greyed out,
+  no dig possible; chest progress still 11/15, Skip Animation
+  ticked. No exchange opened or executed. Nothing spent. Full
+  detail in hidden-treasures/1855-queue-run.md.
+
+## 19:00 - Ticker pass ticker-1834, zombie chain head restored to the live pool
+
+- Zombie Invasion tab sighting (ticker-1806, 18:11, recorded in
+  alliance-gifts/1810-queue-run.md): the Events hub tab bar
+  showed a Zombie Invasion tab live, the first sighting since
+  the event ended 2026-10-30. Ticker-1806 seeded chain head
+  zombie-2026-11-10-001, but the unit only reached the
+  records branch inbox - the live pool never held it, so no
+  ticker pass could pick it up. This pass re-seeded the same
+  chain head (zombie-2026-11-10-001, priority 4, est 12) into
+  the live inbox; the next tick verifies the event page. No
+  zombie unit was executed in this pass. The strand - an
+  enqueue landing in a delivery worktree instead of the live
+  pool - is filed as a tooling Issue for the queue. The
+  activity metadata's "do not seed until a tab is seen live"
+  condition is now met by the 18:11 sighting; the metadata
+  text itself is tier-2 and left for the knowledge flow.
