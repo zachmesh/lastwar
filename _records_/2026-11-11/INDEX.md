@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-11
 created: 2026-11-11T08:17:13Z
-modified: 2026-11-11T09:52:00Z
+modified: 2026-11-11T10:43:41Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened); the 0132 knowledge organization pass (folded the ticker-0004/0055 passes; PR #621 opened)
+description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR 618 opened this pass; the 0004 queue ticker pass with 2 units partial (donations, zombie-invasion); the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch; the 0032 knowledge organization pass (folded the ticker-2334 pass; PR #619 opened); the 0032 tool development pass (issue #605 implemented; PR #620 opened); the 0132 knowledge organization pass (folded the ticker-0004/0055 passes; PR #621 opened); the 0232 knowledge organization pass (folded the ticker-0135/0155 passes; PR #624 opened)
 status: unverified
 ---
 
@@ -413,6 +413,35 @@ of 2026-10-28.
   successor 006 enqueued to start now. Full detail in
   zombie-invasion/0238-queue-run.md.
 
+## 02:32 to about 02:43 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-0232, worked from
+  the 0132 run watermark (substantive through b88b502d). Folded
+  the ticker-0135 pass (commit a77e4e1d0: donations 0148, radar
+  0141, survivors 0144) and the ticker-0155 pass (commit
+  72b82b0e3: train 0209, arms-race 0205, training 0213):
+  alliance-donations 1.94.0 to 1.95.0 (49th replenishment
+  datapoint +1 in ~40 min; route deviated a fifth time, tap
+  from live 1/30 behind a 00:17:30 timer; blue house button
+  is the Wall defense control, not a camera reset; footer
+  2500 flat), radar-tasks 1.72.0 to 1.73.0 (28 claims, 9
+  executed, 19 extra rewards, stored cleared to 0/40, pins
+  deferred twice so the next unit works pins FIRST),
+  survivor-intake 1.51.0 to 1.52.0 (radar exit broken with
+  fresh-grounded Home (916,953); gate line verified with 2
+  survivors, intake unverified after a blind double-tap),
+  alliance-train 1.40.0 to 1.41.0 (boarding missed, closes
+  about 5 minutes before departure, plus-first rule; Issue
+  #623 filed for the pick-order gap) and troop-training
+  1.41.0 to 1.42.0 (Lv.30 pistol x2 + paw x1 no-panel, Drill
+  Ground screen still unread live, fourth consecutive unit
+  on the same blocker). Arms-race 0205 carried no phase
+  read, so no arms-race fold. PR #624 opened (1 commit
+  efcb0fc0f). Issue comments posted on #160, #500, #558,
+  #150, #168. No new issue. Status: done. Full detail in
+  knowledge-organization/0232-run.md.
+
+
 ## 02:42 to about 02:43 - PR catch-all pass
 
 - Catch-all pass pr-catchall-2026-11-11-0242. No adoption, no
@@ -425,3 +454,4 @@ of 2026-10-28.
   owner-decision issues 132, 154, 335, 514 and 517 all over
   24 hours with statements current. Status: no-op. Full
   detail in pr-catchall/0242-run.md.
+
