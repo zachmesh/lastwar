@@ -1758,3 +1758,9 @@ of 2026-10-28.
   instructed, merge-tree probe against current main exit 0, pushed
   and verified (remote tip dd865af64b9), reconciliation comment
   posted; the PR awaits the 11:00 batch merge.
+
+## 08:54 to about 09:19 - Ticker pass ticker-0845, harvest partial + radar done
+
+- Resource-collection (0909, ticker-0845, partial): all three panel pools collected exact — coin +2,104,312, food +3,233,161, iron +3,006,548 (8,344,021 total), each panel re-read Available 0; map bubbles not tapped (identity after panel Collects unverified); Armed Truck not located, eighth consecutive deferral (Issue #566 commented). Detail in resource-collection/0909-queue-run.md.
+- Radar-tasks (0922, ticker-0845, done): duel day 3 release — 7 tasks executed, 12 rewards claimed, radar points 403 to 415, stored 1/40 to 0/40, stamina 18 to 98 (free claim exhausted 0/2, 3x 50-stamina items used after the x3 pill consumed three at one tap); 9 pins inventoried at entry, 0 standing at close, clearing mechanism unverified (Issue #632 commented). Detail in radar-tasks/0922-queue-run.md.
+- Zombie-invasion unit 013 stays in inbox for the next tick (pass budget reached after the two units).
