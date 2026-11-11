@@ -3622,3 +3622,37 @@ modified: 2026-11-10T14:21:00Z
 ## 21:00 to about 21:07 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-10-2100. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Records PR #597 verified CLEAN (head 65d21503b, 28 commits) and awaits the 23:00 batch; 1 verification comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 49895f66c; no new comment (head and main unchanged since the 2045 re-verification). Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2100-run.md.
+
+## 20:55 to 21:07 - Ticker pass ticker-2055, radar unit partial
+
+- Radar unit radar-2026-11-10-1803 partial. Live posture was
+  duel day 3 release (duel.py, Age of Science), not the unit's
+  stale day-2 stack label - the stack was released: 27 tasks
+  claimed in 4 Claim All batches (radar points 348 to 375,
+  +1 per claim), 8 tasks executed via Quick Execute (stamina
+  120 to 40), stored 35/40 to 13/40, restore 12 tasks at
+  23:39:11 local. Coins +5,352,400, iron +9.7M, food
+  +8,948,000, Hero EXP +39.6M. Entry unblocked with the
+  changed method (dish re-grounded fresh at norm 86,712 in
+  the 642x951 window, first try). 15 map pins inventoried
+  with red dots, none worked - the release cycle filled the
+  unit, so pins plus 2 remaining Quick Execute tasks fall to
+  the next radar unit. Duel score not read, delta test still
+  owed. Tracker untouched. Full detail in
+  radar-tasks/2107-queue-run.md.
+
+- Survivors unit survivors-2026-11-10-1803 partial. The game
+  was left on the radar screen by the radar unit and its exit
+  buttons (home x3 variants, back arrow x2, incl. exact input)
+  did not respond to background clicks, so the base gate was
+  never reached and the line stayed unverified; 0 recruited,
+  Quick Dispatch not run. Fourth survivors partial today on
+  the same blocker (0321, 1224, 1615, 2118) plus 22/22 in the
+  queue era - a process failure under R2, reported to the
+  owner. Next survivors unit must first solve the radar exit
+  and then try the 1615 alternative gate location
+  (bottom-right corner by the red-roofed structure). Game
+  left on the radar screen (points 375, stored 13/40,
+  stamina 41, Quick Execute 2 tasks pending). Tracker
+  untouched. Full detail in
+  survivor-intake/2118-queue-run.md.
