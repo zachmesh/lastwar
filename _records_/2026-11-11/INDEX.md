@@ -235,3 +235,43 @@ of 2026-10-28.
   issues 132, 154, 335, 514 and 517 all over 24 hours with
   statements current. Status: no-op. Full detail in
   pr-catchall/0139-run.md.
+
+## 01:33 to about 01:49 - Queue ticker pass (ticker-0135)
+
+- Radar unit radar-2026-11-10-2203, duel day 3 release. 28
+  claims in 6 Claim All batches, 9 Quick Execute, radar
+  points 375 to 403, stored 28/40 to 0/40, stamina 112 to
+  23; coin 5,504,000, iron 7,840,000, food 8,040,000, Hero
+  EXP 35.2M gained. Every Claim All paid more rewards than
+  the tasks just executed (28 claimed against 9 executed) -
+  the extra-rewards pattern from the 2055 unit, still
+  unexplained. Pins inventoried (10) not worked, so the
+  release standard is unmet; per R7 the next radar unit
+  must work pins first. Duel score not read, delta test
+  still owed. Partial; tracker untouched. Full detail in
+  radar-tasks/0141-queue-run.md.
+
+- Survivors unit survivors-2026-11-10-2203. The radar-exit
+  blocker that stranded four survivors units today is
+  broken: the Home button re-grounded fresh at norm
+  (916,953) worked first try (the 2055 attempts were all
+  a few points too high). Gate line verified live with 2
+  waiting survivors, read clear after two taps - but the
+  intake is unverified (no card read, no Recruit tapped)
+  and Quick Dispatch did not run. Partial; tracker
+  untouched. Next unit must tap one survivor and read
+  before any second tap. Full detail in
+  survivor-intake/0144-queue-run.md.
+
+- Donations unit donations-2026-11-10-2203, Quick
+  Construction 8/10 (recommended). Donation Count read
+  live 2/30 at entry (replenished from 1/30 since the
+  0107 close, Issue #599); tap 1 confirmed 2/30 to 1/30;
+  tap 2 registered (button greyed) but the count is
+  timer-hidden behind a 00:17:30 cooldown. Partial,
+  unverified close; tracker untouched; a named re-read
+  unit is enqueued for after the cooldown (not_before
+  2026-11-11T10:11:00Z). Entry detour noted: the blue
+  house button opens the Wall defense lineup, not a
+  camera reset; the camera was reset by map drag. Full
+  detail in alliance-donations/0148-queue-run.md.
