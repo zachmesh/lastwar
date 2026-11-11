@@ -2281,3 +2281,15 @@ of 2026-10-28.
   frontmost - that needs a real mouse action on the Mac. Zoom
   must never be used as an activation step again. Tooling Issue
   #648 filed. Detail in survivor-intake/1259-queue-run.md.
+
+## About 13:30 to about 13:35 - PR integration 1330 run, non-batch pass
+
+- NON-batch pass: checker not due (outside every batch
+  window; next batch 15:00 PT). Records PR #643 verified
+  CLEAN at head 33e4fae5 (22 commits beyond main),
+  awaiting the 15:00 batch. Tools PR #425 unchanged head
+  721830b7f, verified MERGEABLE/CLEAN, still owner-gated
+  (OD-20261108-01 open); no new comment (head unchanged
+  since the 1245 verification note). No merges; no
+  Slack sync (silent run). Status: done.
+  Full detail in pr-integration/1330-run.md.
