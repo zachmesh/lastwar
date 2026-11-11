@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T22:32:17Z
+modified: 2026-11-11T02:32:17Z
 level: L1
-version: 1.80.0
+version: 1.82.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -86,6 +86,8 @@ grounded_in:
   - source: ticker-1004 event-claims execution record 2026-11-10 1045 queue run (partial, Arms Race Hero Advancement cross-read, timer 03:18:03, score 0, free paths cannot reach tier 3; record commit 2218eb3cd on records/2026-11-10)
   - source: ticker-1134 arms-race execution record 2026-11-10 1157 queue run (partial, first unit of the Hero Advancement phase, R4 phase-start judgement and just-enough plan, score 0, tier-3 needs one hero level-up, Morrison Lv.124 cheapest visible candidate; record commit dd29016c1 on records/2026-11-10)
   - source: ticker-1343 event-claims execution record 2026-11-10 1358 queue run (done, Arms Race Hero Advancement cross-read, timer 00:05:51, score 0, phase ends about 14:03, phase closed unplayed at 0 of 12,000; record commit b2c2b7a43 on records/2026-11-10)
+  - source: ticker-1704 arms-race execution record 2026-11-10 1712 queue run (partial, Base Building phase 21,600 of 30,000, both earned point chests claimed in one tap, cumulative chest 3/2 claimed, tier 3 short by 8,400, successor staged; record commit 474309ac on records/2026-11-10)
+  - source: ticker-1734 arms-race execution record 2026-11-10 1756 queue run (partial, Base Building phase closed 21,600 of 30,000, tier 3 missed by 8,400, Building Queue holds only the Lv.29 Aircraft Center upgrade 1d 08:32 with three idle queues, Oil Well vs Aircraft Center identity disagreement filed as Issue #595, cumulative chest 3/8, no successor for this phase; record commit d3b32975 on records/2026-11-10)
 ---
 
 
@@ -110,7 +112,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 ## How to enter
 
 - Open Events from the base screen.
-- Events entry is layout-scoped (2026-11-09 0949): the (672,132) grounding was measured in landscape fullscreen and does not apply to letterboxed portrait fullscreen or windowed portrait - in both, that point is map scenery. Ground the Events entry fresh from the live layout each unit; first check whether the announcement banner hides the globe icon.
+- Events entry is layout-scoped (2026-11-09 0949): the (672,132) grounding was measured in landscape fullscreen and does not apply to letterboxed portrait fullscreen or windowed portrait - in both, that point is map scenery. Ground the Events entry fresh from the live layout each unit; first check whether the announcement banner hides the globe icon. (2026-11-10 1756 update: in the windowed portrait layout the globe icon sits top-right at norm (934, 137) - a fresh grounding for this layout, not a reuse of the landscape (672,132).)
 - Open the Arms Race banner. The current phase, its tasks and the
   time left in the phase are shown on the event page.
 
@@ -455,7 +457,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   earned chests at once (combined Skill Medals 1.6K, Arms
   Race Badges, SR coin, food and iron chests and 68 of the
   5m speedups), the page chest counter moved 0 of 2 to 6 of
-  2, and re-tapping a claimed chest shows only its contents.
+  2, and re-tapping a claimed chest shows only its contents. (2026-11-10 1712 update, Base Building: one tap on the 6,250 chest claimed both earned point chests at once - combined Skill Medal 600, Arms Race Badge 3, Iron Chest (SR) 12, Food Chest (SR) 12, Coin Chest (SR) 12, 5m Speed-up 28; a re-tap on the 12,500 chest opened its contents preview only, confirming it was already claimed. The one-tap-claims-all-earned rule holds for Base Building too.)
   The ranking row chest opened only a contents preview while
   the phase was live, so the phase ranking reward is claimed
   after the phase ends, in the next run, as the owner rule
@@ -477,7 +479,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   about three quarters full, so progress carries past a
   claimed tier into the next tier's threshold. What action
   increments the counter, and the exact item names, are still
-  unverified. The ranking reward chest preview was also read
+  unverified. (2026-11-10 1712 update: the counter read 0/2 at entry and 3/2 after the two point-chest claims, then one tap claimed it - gold ticket item 1, pink puzzle items 2, red gem tagged 50 x1, identical to the 2026-10-26 cumulative claim. The 3/2 overfill re-confirms that progress carries past a claimed tier; the item names stay unverified.) The ranking reward chest preview was also read
   in full this run - Iron Chest (SR) 3, Food Chest (SR) 3,
   Coin Chest (SR) 3 for this account at segment rank 8.
 - Owner correction later on 2026-10-26 - after the three point
@@ -2231,3 +2233,32 @@ slot. Evidence in
 - PHASE OUTCOME: the phase closed at score 0 of 12,000 - a miss. The 1157 unit's just-enough plan (one hero level-up, EXP only, Morrison Lv.124 cheapest visible candidate) was NEVER executed: no arms-race unit ran inside the window between the 1157 judgement (11:57) and the phase end (about 14:03) - no arms-race record exists after 1157 on 2026-11-10 - so the tier-3 push did not happen and no chest was earned.
 - WINDOW-CLOSURE LESSON: a phase-start judgement without a staged scoring unit in the window closes unplayed - the same shape as the Drone Boost phase judged by the 0734 unit (tier-3 plan 300 stamina, window ending about 10:06, closed at score 0 with the plan never executed). The standing plan for the next Hero Advancement phase carries forward (one level-up, EXP only, cheapest confirmed hero, verify the Upgrade-panel EXP cost live before confirming), but the plan alone does not score - a scoring unit must be staged inside the window.
 - The ranking-row chest for the finished phase falls to the first run after the phase ends (Event mail per the 1822 finding); the ranking reward check is owed. Nothing claimable on this page; no Arms Race grinding was done in the cross-read unit.
+
+## What the 2026-11-10 1712 unit added - Base Building phase 21,600 of 30,000, both earned point chests claimed in one tap, cumulative 3/2 claimed, tier 3 short by 8,400, partial
+
+- Unit arms-race-2026-11-10-1403 by ticker-1704, about 17:06 to 17:13 local, status partial. Evidence in `_records_/2026-11-10/arms-race/1712-queue-run.md` (commit 474309ac on records/2026-11-10). Duel day 2, Base Expansion theme, day ends 18:00.
+- Live read: phase Base Building, Contest Segment Lv.29-30, timer 00:51:45 at first read (00:48:50 at close). Score 21,600, segment rank 12, combined rank #2110 [AP3x]Bears Lair. Thresholds 6,250 / 12,500 / 30,000. Gap to tier 3: 8,400. Scoring paths as displayed: Increase Building Power by 1pt +1, Use 1-min Construction Speed-up +10, Buy Packs containing Diamonds +30 per diamond. NOTE: the 21,600 is a running total read, not points gained in the unit (queue.py flagged a points-duplicates caveat on the record) - the same running-total discipline as the duel-score read.
+- Claimed: point chest 1 (6,250) tapped once claimed BOTH earned point chests at once (as in the 2026-10-26 Hero Advancement run) - CONGRATULATIONS contents combined: Skill Medal 600, Arms Race Badge 3, Iron Chest (SR) 12, Food Chest (SR) 12, Coin Chest (SR) 12, 5m Speed-up 28. Point chest 2 (12,500) re-tap opened its contents preview only (Skill Medal 400, Arms Race Badge 2, Coin Chest (SR) 8, Food Chest (SR) 8, Iron Chest (SR) 8, 5m Speed-up 20), confirming it was already claimed by the first tap. See the updated claim entry.
+- Cumulative counter chest top-left read 0/2 at entry, 3/2 after the point-chest claim: tapped and claimed - gold ticket x1, pink puzzle-piece item x2, red gem x1 (tagged 50). Identical to the 2026-10-26 cumulative claim. See the updated cumulative entry.
+- Ranking row chest: preview only while the phase is live, as in prior runs; the phase ranking reward is claimed after the phase ends, in the next run.
+- Tier 3 not reached: no finished building upgrade is collectable now. Base screen shows "Build: Oil Well [0/1]" - the Oil Well upgrade is still in progress, no green finished checkmark visible on the base. The hammer-icon tap at (55, 221) missed its target and panned the map instead (R2 note: re-ground the build-queue entry from the base screen before tapping again); the Oil Well timer was not read in this unit, but the donations unit in the same pass read it live at 1d 09:08:00 remaining - no building completion lands inside the current phase, which corroborates the tier-3 shortfall. (2026-11-10 1756 CORRECTION: the 1756 successor unit read the live Building Queue panel and it names the single in-progress upgrade Lv.29 Aircraft Center at 1d 08:32:23, slots 2-4 Idle - the 1712 'Oil Well still in progress' naming is SUPERSEDED as the upgrade identity. The base screen's 'Build: Oil Well [0/1]' label is a quest indicator, not a finished upgrade, and whether it tracks the same upgrade under a quest name is unverified. Residual disagreement filed as Issue #595: the 1756 timer reads about 9 minutes LONGER than the 1712 timer predicts for the same upgrade (about 1d 08:23 expected, 1d 08:32 read). The queue panel is the authoritative upgrade-identity surface until Issue #595 is settled.) The other two scoring paths are red lines: no speedups burned, no packs bought.
+- Per rule R6 (last 60 minutes of the phase window), a priority 1 successor was enqueued before closing: arms-race-2026-11-11-0112, expires 2026-11-11T02:00:00Z (phase close), to re-check for a finished building upgrade inside this phase.
+- PHASE NOTE: the 1632 run's standing plan (one hero level-up, EXP only, cheapest confirmed hero) belongs to the Hero Advancement phase, which closed unplayed at 0 of 12,000 about 14:03 (1358 cross-read) - it does NOT apply to this Base Building phase, and it carries to the NEXT Hero Advancement phase, not this one.
+- Completion sweep: Events screen re-scanned - no bouncing chest or reward red dot remains on the Arms Race card or page. The Survey Center tab carries a red dot (1) - not an Arms Race reward, left for its own unit (Issue #506).
+- Nothing spent: no diamonds, no money, no speedup items, no stamina items.
+- Result stats: target 30,000, achieved 21,600, verified yes (same-unit live reads), blocker_category f (missing precondition - no finished building upgrade lands inside the phase; the speedup and pack paths are red-line barred). Follow-up: successor arms-race-2026-11-11-0112 (priority 1, expires phase close 02:00Z).
+
+## What the 2026-11-10 1756 unit added - Base Building phase closed 21,600 of 30,000, tier 3 missed by 8,400, queue holds only the Lv.29 Aircraft Center upgrade, partial
+
+- Unit arms-race-2026-11-11-0112 by ticker-1734, about 17:52 to 17:56 local, status partial. This is the rule R6 successor the 1712 unit enqueued, re-checking for a finished building upgrade before the phase closes. Evidence in `_records_/2026-11-10/arms-race/1756-queue-run.md` (commit d3b32975 on records/2026-11-10). Duel day 2, Base Expansion theme, day ends 18:00.
+- Live read: phase Base Building, Contest Segment Lv.29-30, timer 00:06:45 at first read, 00:05:27 at close (phase ends about 18:02). Score 21,600 at first read and again at close, segment rank 12, combined rank #2110 [AP3x]Bears Lair. Thresholds 6,250 / 12,500 / 30,000. Gap to tier 3: 8,400, unchanged from the 1712 read. Scoring paths as displayed: Increase Building Power by 1pt +1, Use 1-min Construction Speed-up +10, Buy Packs containing Diamonds +30 per diamond. The 21,600 is a running total read, not points gained in the unit.
+- Building queue check: the Building Power scoring-row arrow opened the Building Queue panel on the first tap. Slot 1: Lv.29 Aircraft Center upgrade in progress, Time Left 1d 08:32:23 at the read (1d 08:32:35 at panel entry). Slots 2, 3, 4: Idle. No Construct tapped (never start buildings on agent initiative). No finished building anywhere in the queue, so no Building Power can land inside this phase.
+- CORRECTION - upgrade identity (supersedes the 1712 section): the 1712 unit named the in-progress upgrade Oil Well at 1d 09:08:00 (read by the donations unit in the same pass). This unit's live queue read names it Lv.29 Aircraft Center at 1d 08:32:23, about 45 minutes later - roughly 9 minutes LONGER than the 1712 timer would predict (about 1d 08:23). The queue panel is the live read and stands; the base screen "Build: Oil Well [0/1]" label is a quest indicator, not a finished upgrade. Whether the Oil Well label tracks the same upgrade under a quest name is unverified and left for a later unit to reconcile - filed as Issue #595 (knowledge), with the timer discrepancy carried as the residual question. The next unit that reads the queue records the building name and timer from the queue panel AND the base-screen "Build:" label in the same pass.
+- Tier 3 not reached: the only legal scoring path cannot score inside the remaining window - the single in-progress upgrade needs 1d 08h, and the other two paths (speedups, packs) are red lines. Per the 2026-10-31 phase-final miss rule, no refill or spend was made for a phase whose arithmetic cannot close.
+- TIMING LESSON for R6 successors: this unit's expires_at (2026-11-11T02:00:00Z) ran about 2 minutes ahead of the live phase close (about 02:02Z) - the R6 successor expiry was set to the nominal 18:00 close, not the live timer. Set the successor expiry to the live timer read, not the nominal close.
+- Claims: nothing claimed in this unit. Point chests 1 (6,250) and 2 (12,500) were already claimed by the 1712 unit; the progress bar stands full to 12,500. Cumulative counter chest top-left reads 3/8 at both reads: not full, not claimable, no bounce. The 30,000 gold point chest stands locked. Ranking-row chest: preview-only while the phase is live; the phase ranking reward is claimed after the phase ends, via Event mail (mail unit's route).
+- Completion sweep: Events screen re-scanned at close - no bouncing chest or reward red dot on the Arms Race card or page. The "...of Oil" tab red dot (1) and the Wanted Boss tab red dot (1) belong to other events and were left for their own units; one unit, one task type. No Zombie Invasion tab in the Events strip at this unit's close scan (about 17:56) - the gifts unit 15 minutes later DID see the tab (see the zombie-invasion profile); the tab reappeared between the two reads, around the 18:00 rollover.
+- Entry notes: game opened on the Alliance Techs panel (Development tab, Tech Donation Today 9300), closed with its X; the Alliance overview underneath (leader Abyss Apex, power 13,731,386,776, members 96/100) was left via its back arrow to the base. Events entry grounded fresh from the live base layout: globe icon top-right at norm (934, 137) in the windowed portrait layout. See the updated Events entry note.
+- Figures read live on screen: food 631.3M, iron 954.1M, coin 97.8M, gold 13.22K, power 148,787,578, stamina 120, diamonds 6,267.
+- No successor enqueued for this phase: it ends about 18:02, before the next tick, and a successor expiring at the phase end could do no further work; the next tick's arms-race unit serves the new phase.
+- Result stats: target 30,000, achieved 21,600, verified yes (same-unit live reads). Blocker category f (missing precondition - no finished building upgrade lands inside the phase; the speedup and pack paths are red-line barred). Follow-up: none for this phase; the next tick's arms-race unit serves the new phase, and the mail unit claims the phase ranking reward via Event mail after the phase ends.

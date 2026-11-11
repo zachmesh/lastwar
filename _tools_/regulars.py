@@ -31,8 +31,13 @@ A weekly-thu regular is only due on Thursdays.
 Use --segment N with list/todo to see one segment's regulars.
 Done/skip stamps are aware America/Los_Angeles times (issue #407);
 older naive stamps are still read as local wall time.
+Tracker state is live pool state (issue #598): when this copy runs
+from a linked worktree, done/skip marks - and todo/list reads -
+resolve to the main checkout's _tools_/state, so a mark made
+during a delivery-worktree pass is visible to the next tick
+instead of stranding on the records branch.
 """
-import argparse, json, os, sys
+import argparse, json, os, subprocess, sys
 from datetime import datetime, date, time as dtime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -40,12 +45,49 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFS = os.path.join(ROOT, "regulars.json")
 STATE_DIR = os.path.join(ROOT, "state")
 
+def live_state_dir():
+    """State directory of the main checkout when this copy lives in
+    a linked worktree.
+
+    Tracker state is live pool state like the queue: a `done` mark
+    written into a delivery worktree's state file reaches only the
+    records branch, and the live tracker keeps reading the old
+    stamp until a records batch merges it back (issue #598: the
+    1806 gifts/help marks at 18:17/18:21 never reached the live
+    tracker, which still read 13:06/13:21). Resolve through the
+    git common dir exactly like queue.py's _shared_token_home, so
+    a worktree copy reads and writes the main checkout's
+    _tools_/state. A copy that is not in a repo (tests, scratch)
+    or whose main checkout holds no _tools_/state keeps the local
+    dir, and the main checkout itself resolves to itself.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "-C", ROOT, "rev-parse", "--git-common-dir"],
+            capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return STATE_DIR
+    if out.returncode != 0:
+        return STATE_DIR
+    common = out.stdout.strip()
+    if not common:
+        return STATE_DIR
+    if not os.path.isabs(common):
+        common = os.path.normpath(os.path.join(ROOT, common))
+    if os.path.basename(os.path.normpath(common)) != ".git":
+        return STATE_DIR
+    main_state = os.path.join(
+        os.path.dirname(os.path.normpath(common)), "_tools_", "state")
+    if os.path.isdir(main_state):
+        return main_state
+    return STATE_DIR
+
 def load_defs():
     with open(DEFS) as f:
         return json.load(f)["regulars"]
 
 def state_path(day):
-    return os.path.join(STATE_DIR, day.isoformat() + ".json")
+    return os.path.join(live_state_dir(), day.isoformat() + ".json")
 
 def load_state(day):
     p = state_path(day)
@@ -55,7 +97,7 @@ def load_state(day):
     return {}
 
 def save_state(day, state):
-    os.makedirs(STATE_DIR, exist_ok=True)
+    os.makedirs(live_state_dir(), exist_ok=True)
     with open(state_path(day), "w") as f:
         json.dump(state, f, indent=1, ensure_ascii=False)
 

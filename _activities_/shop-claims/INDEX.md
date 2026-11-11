@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T22:32:17Z
+modified: 2026-11-11T03:32:17Z
 level: L1
-version: 1.49.0
+version: 1.50.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -53,6 +53,7 @@ grounded_in:
   - source: ticker-0434 shop-claims execution record 2026-11-10 0440 queue run (done, Weekly Pass list re-scrolled, Iron Daily Pickup x2 confirmed, Monthly Days Left 11, Calendar button ruled out as check-in entry; record commit 5ba07ce2b4 on records/2026-11-10)
   - source: ticker-1004 shop-claims execution record 2026-11-10 1029 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, Weekly Pass scroll failed on three methods, check-in banner absent; record commit 2218eb3cd on records/2026-11-10)
   - source: ticker-1314 shop-claims execution record 2026-11-10 1335 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, press-drag scroll answered the 1029 follow-up, all four Weekly Pass cards verified not owned, Iron Daily Pickup x3; record commit d781dac9d on records/2026-11-10)
+  - source: ticker-1834 shop-claims execution record 2026-11-10 1836 queue run (done, 3 claims, new reset day's Hot Deals free pack plus Free Supply auto-claim plus monthly Daily Pickup, all four Weekly Pass cards verified not owned, Iron Daily Pickup x3 Total x21 confirmed; record commit af56d36ec on records/2026-11-10)
 ---
 
 
@@ -78,6 +79,14 @@ Executions are recorded in `_records_/<date>/shop-claims/`, one file per executi
 - The Weekly Pass tab lists the Free Supply chest, the Legendary
   bundle row, and every weekly pass card, owned and for sale mixed.
 - The Super Monthly Pass tab holds the monthly pass and its daily gift.
+- COORDINATE CALIBRATION (measured 2026-11-10 1836): computer.control
+  coordinates are normalized 0-1000 on BOTH axes. Convert screenshot
+  pixels as x/642*1000 and y/951*1000 in the 642x951 window. The shop
+  back arrow's measured centre is (168,917) - taps at (168,872)
+  failed three times with no change. The HELP dialog X closes at
+  (841,200). Press-drag (500,750) to (500,300) is the confirmed
+  list-scroll method for the Weekly Pass page; scroll_amount 5 does
+  not move the list.
 
 ## Cadence
 
@@ -1456,10 +1465,23 @@ the free and already paid for parts, never the paid unlocks.
 - Weekly Pass page reads "Weekly Pass rewards reset at 18:00:00" - the nineteenth live confirmation of the line; the same 18:00-to-18:00 cycle as the 1029 record, so the 18:47 claims of ticker-1822 still stand. Free Supply chest shows no claim button (auto-claim on page open per the activity metadata; no toast appeared on this open, and the morning unit also found nothing).
 - All four pass cards verified in this unit - S2 Drone Components Weekly Pass (Legendary, Daily Pickup x2, Total x7), S1 Drone Parts Weekly Pass (Epic, Daily Pickup x15, Total 105), Iron Weekly Pass (Elite, Daily Pickup x3, Total x21), Coin Weekly Pass (Elite, Daily Pickup x3, Total x21) - every one carries a Get Now $4.99 button, none is owned, no Claim button anywhere.
 - SCROLL ANSWERED: the 1029 follow-up is closed - a press-drag scroll (start 500,750 to 500,400) moved the list where scroll_amount 5 did not, and the Iron and Coin cards below the fold are now verified, not assumed. Press-drag is the confirmed working list-scroll method for this page.
-- CONTRADICTION: the Iron Weekly Pass now reads Daily Pickup x3, Total x21 - the 0214 and 0440 reads said Daily Pickup x2, Total x7 in the same 18:00-to-18:00 cycle. The newest verified on-screen read (this unit) stands at x3 / Total x21; the x2 / Total x7 figures are superseded pending a re-read. Note the arithmetic: x3 times 7 days is 21, internally consistent; the earlier x2 with Total x7 never multiplied out. The next passes unit re-reads the Iron card to confirm.
+- CONTRADICTION: the Iron Weekly Pass now reads Daily Pickup x3, Total x21 - the 0214 and 0440 reads said Daily Pickup x2, Total x7 in the same 18:00-to-18:00 cycle. The newest verified on-screen read (this unit) stands at x3 / Total x21; the x2 / Total x7 figures are superseded pending a re-read. Note the arithmetic: x3 times 7 days is 21, internally consistent; the earlier x2 with Total x7 never multiplied out. The next passes unit re-reads the Iron card to confirm. (2026-11-10 1836 update: CONFIRMED - the 1836 unit re-read the Iron card live: Daily Pickup x3, Total x21. The x2 / Total x7 figures are superseded; the 1335 read stands.)
 - The Legendary Take All $19.99 row was left untouched.
 - Super Monthly Pass tab: Monthly Pass, Squad 4 Lv.20, Days Left 11, Rewards Left 11. Daily Pickup button reads Claimed (grey) - already claimed for this cycle. The $24.99 Monthly Pass Extension was left untouched.
 - Weekly Deal tab (2026-11-9 00:00:00 to 2026-11-15 23:59:59): three paid bundles only - Valor Badge $99.99, Base Upgrade $19.99, UR Set $49.99. Nothing free.
 - Check-in (Issue #553): the shop Go-button foreground-click attempt, the standing idea, was NOT tried in this unit. The issue stays open: the check-in free gift is still unclaimed with no working entry found.
 - No diamonds or money spent. No price button, Renew, paid unlock or Legendary Take All tapped. No other task type was executed in this unit.
 - Result stats: target 3, achieved 0, resources_gained none, costs about 6 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-10 1836 unit added - new reset day's three claims, all four Weekly Pass cards re-verified not owned, Iron x3 confirmed
+
+- Unit passes-2026-11-10-1457 by ticker-1834, 18:36 to 18:46 local, status done. Evidence in `_records_/2026-11-10/shop-claims/1836-queue-run.md` (commit af56d36ec on records/2026-11-10). Computer session cc-490 on the owner Mac mini, LastWar already open.
+- Three claims done, all in the new 18:00 reset day. HOT DEALS free pack: RESEARCH SPEED-UP PACK, timer 23:18:39, Availability 1 - 1h Research Speed-up x25 and Coin Chest (UR) x5. Free Claim tapped once; CONGRATULATIONS panel verified both items, then "Packs sold out" behind it. Free Supply auto-claim on the same Hot Deals open: "Free rewards have been automatically claimed" - blue chest x1 and ruby x10. Super Monthly Pass Daily Pickup: Monthly Pass, Squad 4 Lv.20, Days Left 11, Rewards Left 11. Claim Reward tapped once; DAILY GIFT panel verified - gold bars x2, red diamonds x100, gold tickets x2, iron x200, 5-minute speedups x60 - and the button now reads Claimed (grey). The $24.99 Monthly Pass Extension was left untouched.
+- Weekly Pass page reads "Weekly Pass rewards reset at 18:00:00" - the twentieth live confirmation of the line. All four pass cards verified again in this unit - S2 Drone Components Weekly Pass (Legendary, Daily Pickup x2, Total x7), S1 Drone Parts Weekly Pass (Epic, Daily Pickup x15, Total 105), Iron Weekly Pass (Elite, Daily Pickup x3, Total x21), Coin Weekly Pass (Elite, Daily Pickup x3, Total x21) - every one carries a Get Now $4.99 button, none is owned, no Claim button anywhere.
+- CONTRADICTION RESOLVED: the Iron Weekly Pass reads Daily Pickup x3, Total x21 here, confirming the 1335 correction - the earlier x2 / Total x7 figures (0214, 0440) are now superseded by two consecutive live reads (1335, 1836). The Coin card reads x3 / Total x21 as in 1335.
+- Weekly Deal tab (2026-11-9 00:00:00 to 2026-11-15 23:59:59): three paid bundles only - Valor Badge $99.99, Base Upgrade $19.99, UR Set $49.99. Nothing free. The Legendary Take All $19.99 row was left untouched.
+- Entry state: the game opened on the Alliance screen with the HELP dialog showing - both help requests 30/30 full, "Today's points gained from Alliance Help: 40/1,000". That is the help unit's work, not this unit's; it corroborates the 1818 help read of 40/1,000. The dialog was closed untouched and no Help All was tapped.
+- Check-in (Issue #553): the shop Go-button foreground-click attempt, the standing idea, was NOT tried in this unit. The issue stays open: the check-in free gift is still unclaimed with no working entry found.
+- CALIBRATION learned in this unit: computer.control coordinates are normalized 0-1000 on BOTH axes. The back-arrow taps at (168,872) failed three times with no change because y 872 landed above the button in image pixels; the measured centre is (168,917) and that tap navigated at once. The HELP dialog X closed at (841,200). Future units: convert screenshot pixels as x/642*1000 and y/951*1000. Scroll: scroll_amount 5 at (500,600) did not move the Weekly Pass list; a press-drag from (500,750) to (500,300) scrolled it, confirming the 1335 unit's finding.
+- No diamonds or money spent. No price button, Renew, paid unlock or Legendary Take All tapped. No other task type was executed in this unit.
+- Result stats: target 3, achieved 3, resources_gained Coin Chest (UR) x5 plus 1h Research Speed-up x25 plus Monthly Pass daily gift (gold bars x2, red diamonds x100, gold tickets x2, iron x200, 5-minute speedups x60) plus Free Supply (blue chest x1, ruby x10), costs about 10 minutes play, verified yes, blocker_category none, device_takeovers 0.
