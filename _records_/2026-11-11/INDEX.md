@@ -2619,3 +2619,19 @@ of 2026-10-28.
 ## About 15:32 to about 15:44 - Tool development 1532 run, issue #652 implemented in PR #656
 
 - Issue #652 (background canvas taps land offset in the 1920x1080 fullscreen window, about -23 x, +10 y) implemented in PR #656 (branch work/narrow-control-compensation-652, commit 0af7ee6c4): tapcal.py 1.4.0 -> 1.5.0 gains a `narrow` subcommand (compensate-first when the session offset pushes the landing outside a control's half-extent, uncompensated-ok when it stays inside; boundary counts as a miss; refuses a compensation from another session or geometry). Validation: py_compile clean on all _tools_/*.py, 31/31 fixture assertions on isolated /tmp fixtures, 6 regression cases identical to main 1.4.0. PR verified MERGEABLE/CLEAN. Issue #652 commented with the implementing PR. Own PR #425 still owner-gated (OD-20261108-01 open), MERGEABLE/CLEAN, no action owed. Slack summary sent to the owner Trirvia DM. Status: done. Full detail in tool-development/1532-run.md.
+
+## 15:40 to about 15:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-1540. Plan staged 5
+  units for the 18:57 PST slots (passes, secrets, treasures,
+  trucks, events; 71 already present, 2 skipped done-current,
+  1 skipped closed; 3 expired (1057 UTC slots, windows passed
+  unexecuted); roster stale warning, issue #198). Sweep
+  production skipped (15:00 hour); tonight's pair already
+  complete in the live pool and on the branch tip (1630 and
+  1730 local, both expiring at the 19:00 reset instant).
+  Scout diff on the 2026-11-10 15:14 observation re-applied
+  with identical 0 counts
+  (observed/actionable/enqueued/candidates/unexplained 0), 0
+  withdrawals, no new issue. Pool inbox 81, claimed 0, done
+  1584. Status: done. Full detail in queue-planning/1540-run.md.
