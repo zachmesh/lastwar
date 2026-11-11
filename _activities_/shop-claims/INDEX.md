@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T07:32:17Z
+modified: 2026-11-11T11:32:17Z
 level: L1
-version: 1.51.0
+version: 1.52.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -55,6 +55,7 @@ grounded_in:
   - source: ticker-1314 shop-claims execution record 2026-11-10 1335 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, press-drag scroll answered the 1029 follow-up, all four Weekly Pass cards verified not owned, Iron Daily Pickup x3; record commit d781dac9d on records/2026-11-10)
   - source: ticker-1834 shop-claims execution record 2026-11-10 1836 queue run (done, 3 claims, new reset day's Hot Deals free pack plus Free Supply auto-claim plus monthly Daily Pickup, all four Weekly Pass cards verified not owned, Iron Daily Pickup x3 Total x21 confirmed; record commit af56d36ec on records/2026-11-10)
   - source: ticker-2231 shop-claims execution record 2026-11-10 2256 queue run (partial, Hot Deals promo only, Weekly Pass no owned pickup on screen, Free Supply state unverified, monthly gift already Claimed, app exit on the monthly tab tap with a clean relaunch; record commit d22fd7cf1 on records/2026-11-10)
+  - source: ticker-0234 shop-claims execution record 2026-11-11 0249 queue run (done, checked live, nothing claimable, Weekly Pass 18:00 reset twenty-second confirmation, Monthly Pass 11/11 Claimed; record commit 2abfb335c on records/2026-11-11)
 ---
 
 
@@ -99,7 +100,7 @@ Executions are recorded in `_records_/<date>/shop-claims/`, one file per executi
   carried unresolved through the 1039 and 1340 sections - the
   1812 unit both re-read the line and confirmed it
   behaviourally (Coin pass lapsed about 18:03, new-cycle
-  Free Supply auto-claim fired on shop open). (2026-11-10 2256 update: the reset line read live "Weekly Pass rewards reset at 18:00:00" again - the twenty-first live confirmation. The Free Supply chest showed no status label on this visit - no auto-claim was observed and no "Claimed" label was read - so its state is unverified, not claimed; the auto-claim in this bullet is not universal, matching the 0218 unit's no-auto-claim read.)
+  Free Supply auto-claim fired on shop open). (2026-11-10 2256 update: the reset line read live "Weekly Pass rewards reset at 18:00:00" again - the twenty-first live confirmation. The Free Supply chest showed no status label on this visit - no auto-claim was observed and no "Claimed" label was read - so its state is unverified, not claimed; the auto-claim in this bullet is not universal, matching the 0218 unit's no-auto-claim read.) (2026-11-11 0249 update: the twenty-second live confirmation - the reset line read 'Weekly Pass rewards reset at 18:00:00' again, and no auto-claim toast was observed on opening the page, so the Free Supply auto-claim state is unverified this unit too. The Monthly Pass Daily Pickup reads Claimed although no passes unit has run since the 19:00 reset - if the pass reset is 18:00 as the page displays, the 18:36 claim covers this cycle; if it is 19:00, the Claimed state is unexplained. Recorded as an open question, not a verified explanation.)
 - Each owned pass pays one Daily Pickup per day; after claiming, the
   card reads Already claimed today and its button turns into Renew.
 - The Free Supply chest on the Weekly Pass page auto claims when the
@@ -1500,3 +1501,14 @@ the free and already paid for parts, never the paid unlocks.
 - Close: nothing claimed, nothing spent. Status partial: the Weekly Pass Free Supply state and the lower pass cards are unverified, so the tracker stays untouched and the next tick re-produces the regular. Follow-up: the next passes unit re-checks the Weekly Pass Free Supply label and scrolls the full pass list with a press-drag.
 - The shop was closed back to the map before the unit ended; Total Power 149,218,973 at close.
 - Result stats: target check-Hot-Deals-free-pack-Weekly-Pass-owned-pickups-monthly-daily-gift-claim-only-free-owned; achieved Hot-Deals-promo-only-Weekly-Pass-read-no-owned-pickup-on-screen-monthly-gift-already-Claimed-app-crash-plus-clean-relaunch; resources_gained none; costs 0-spent-5-min; verified yes; blocker_category h; claims_made 0; monthly_days_left 11; monthly_rewards_left 11.
+
+## What the 2026-11-11 0249 unit added - checked only, Hot Deals free pack not available, Monthly Claimed 11/11, Weekly Pass 18:00 twenty-second confirmation
+
+- Unit passes-2026-11-10-2257 by ticker-0234, 02:46 to 02:49 local, status done (checked, nothing claimable). Evidence in `_records_/2026-11-11/shop-claims/0249-queue-run.md` (commit 2abfb335c on records/2026-11-11). Session cc-543, LastWar window 636402; token held until 11:01:08Z.
+- Entry state: food 666.8M, iron 989.5M, coin 118.2M, gold 13.22K, diamonds 6,307; Total Power 149,218,973; stamina 6.
+- Hot Deals: page shows the "Visit the Last War Store" web-store promo carousel with a Go button; no free pack row visible. OCR on first open read "FREE TOMORROW" - the free pack is not available today (already claimed or not offered this cycle). Nothing claimed here.
+- Weekly Pass page: header "Weekly Pass rewards reset at 18:00:00" (as displayed) - the twenty-second live confirmation. Free Supply chest shown top-left; no auto-claim toast observed on opening the page, and no payout seen - auto-claim state unverified this unit. Four pass cards, all purchase offers with a "Get Now $4.99" button and no claim button: S2 Drone Components Weekly Pass (Legendary) - Daily Pickup x2, Total x7; S1 Drone Parts Weekly Pass (Epic) - Daily Pickup x15, Total 105; Iron Weekly Pass (Elite) - Daily Pickup iron, Total x21; Coin Weekly Pass (Elite) - Daily Pickup coin x3, Total x21. No weekly pass is owned, so no Daily Pickup is claimable. Legendary row: "Take All $19.99" - NOT tapped (red line).
+- Super Monthly Pass page: Monthly Pass, Days Left 11, Rewards Left 11. Daily Pickup button reads Claimed (grey) - today's gift already taken. "Monthly Pass Extension $24.99" - NOT tapped (purchase).
+- OPEN QUESTION: the Monthly Pass Daily Pickup reads Claimed although no passes unit has run since the 19:00 reset. The previous passes unit (ticker-1834, 18:36 PT 2026-11-10, record shop-claims/1836-queue-run.md) claimed the monthly gift, the free pack and the Free Supply for its cycle. If the pass reset is 18:00 as the Weekly Pass page literally displays, that claim covers this cycle; if the reset is 19:00, the Claimed state is unexplained and the next passes unit should re-check it. Recorded here as an open question, not as a verified explanation.
+- No diamonds or money spent; no price tag tapped.
+- Result stats: target 0 (nothing claimable found live), achieved 0, resources_gained none, costs about 3 minutes play, verified yes, blocker_category none.

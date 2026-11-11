@@ -1,9 +1,9 @@
 ---
 title: Alliance Gifts
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T02:32:17Z
+modified: 2026-11-11T11:32:17Z
 level: L1
-version: 1.51.0
+version: 1.52.0
 description: Claiming alliance gifts, one activity folder for gift knowledge
 status: unverified
 grounded_in:
@@ -57,6 +57,7 @@ grounded_in:
   - source: ticker-1234 alliance-gifts execution record 2026-11-10 1310 queue run (done, Regular 1193 and Premium 43 claimed in full, per-tab Claim All points re-confirmed, Gift Level 28 progress 202,479,820 to 202,502,400; record commit 98abbc761 on records/2026-11-10)
   - source: ticker-1314 alliance-help execution record 2026-11-10 1316 queue run (done, cross-read: Alliance Gifts red dot back minutes after the 1310 full claim, new gifts arriving; record commit d781dac9d on records/2026-11-10)
   - source: ticker-1806 alliance-gifts execution record 2026-11-10 1810 queue run (done, dialog-confirmed 464 Regular plus 14 Premium, 478 total, Gift Level 28 progress 203,638,690 to 203,653,640, per-step deltas unattributed as Issue #183 evidence, badge 11 vs dialog 12 second-sweep gap, Zombie Invasion tab seen live in the Events hub; record commit 20a62ff0 on records/2026-11-10)
+  - source: ticker-0212 alliance-gifts execution record 2026-11-11 0218 queue run (done, dialog-confirmed 667 Regular and 52 Premium, both tabs verified empty, Gift Level 28 progress 205,158,210 to 205,177,930; record commit b0615980f on records/2026-11-11)
 ---
 
 
@@ -860,6 +861,8 @@ one file per execution.
 
 - 1.40.0 (2026-11-08): 2138 gifts unit folded (done, dialog-confirmed 448 Regular plus 33 Premium plus 3 Regular re-check, 484 total, both tabs verified clear; Gift Level 28 progress 195,006,290 to 195,025,360 of 206,300,000, three more non-reconciling deltas as Issue #183 evidence commented by this run - +4,750 for 448 Regular against 4,480 expected, +12,940 for 33 Premium against no clean UR/SSR split, +1,380 for 3 Regular against 30 expected; Premium Claim All re-grounded fresh at (740,945) after the first tap landed on the "Hide your name" label; alliance 96/100 members, power 13,479,890,272).
 
+- 1.52.0 (2026-11-11): 0218 gifts unit folded (done, dialog-confirmed 667 Regular plus 52 Premium, 719 total, both tabs verified clear with no red dot and no Claim All button; Gift Level 28 progress 205,158,210 to 205,177,930 of 206,300,000; Regular window exact (+6,670 for 667 gifts), eighth Regular datapoint, exact; Premium window +13,050 for 52 gifts, visible rows MR 1000 plus 2 SSR 200 plus R 50 do not sum to it, below-fold rows unread so no exact reconciliation claimed, commented on Issue #183; top Premium rows show a Mega Express Contract MR gift plus 1000, two MetalMick Preparation Rare Pack SSR gifts plus 200 each, a Preparation Value Pack R gift plus 50; entry worked on standard framing, #580 blocker did not recur).
+
 ## What the 2026-11-03 1113 unit added - done, 289 Regular and 2 Premium, progress plus 2950 exact, Hide-your-name unchecked
 
 - Ticker-1104, unit gifts-2026-11-03-1030, about
@@ -1482,3 +1485,13 @@ one file per execution.
 - Counter note, Issue #183 evidence: three more non-reconciling per-step deltas in one unit - Regular sweep 1 +5,560 for 452 gifts (+1,040 over 452 x 10), Premium +7,310 for 14 gifts (visible rows MR 1000 + SR 100 + R 50 + SSR 200 do not sum to it, below-fold rows unread), Regular second sweep +2,080 for 12 gifts (+1,960 over 12 x 10). Seventh Regular datapoint, non-exact (the sixth, 1310, was exact). Commented on Issue #183 by this run. The counter is alliance-shared; per-step deltas are never attributed to own claims alone.
 - Zombie Invasion tab sighting: on entry to this unit the Events hub tab bar showed a Zombie Invasion tab (beside Desert Battlefield and a partially visible "...f Oil" tab). Folded in zombie-invasion 1.23.0 - the tab is back after the 2026-11-09 absence reads, verification of the event page itself is owed by the seeded chain head.
 - Outcome: done. Regular 464 claimed (452 + 12), Premium 14 claimed, 478 gifts total. Target 478, achieved 478. No diamonds or money spent, no paid button tapped, no red line touched. The game was left on the Alliance Gifts Regular tab.
+
+## What the 2026-11-11 0218 unit added - 667 Regular and 52 Premium claimed, Regular window exact, progress 205,177,930
+
+- Unit gifts-2026-11-10-2230 by ticker-0212, 02:15 to 02:18 local, status done. Evidence in `_records_/2026-11-11/alliance-gifts/0218-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539 on the owner Mac mini.
+- Entry: food 666.0M, iron 988.7M, coin 117.4M, gold 13.22K, diamonds 6,287, Total Power 149,218,973. Gift Level 28 progress 205,158,210 of 206,300,000 before the claims. Alliance button then Alliance Gifts opened on the first tap each.
+- Regular tab: Claim All badge 667; summary dialog "A total of 667 Regular Alliance Gifts were claimed this time". Progress 205,158,210 to 205,164,880, +6,670, exactly 667 x 10. Reward tiles: bread 1.0K x2800, 5m speedup x82, iron 1.0K x2000, coin 600 x3800, red gem 5 x70, coin 6.0K x112, iron 10.0K x168, bread 10.0K x84. Totals: bread 3.64M, iron 3.68M, coin 2.952M, 5m speedups x82, red gems 350.
+- Premium tab: Claim All badge 52; summary dialog "A total of 52 Premium Alliance Gifts were claimed this time". Progress 205,164,880 to 205,177,930, +13,050. Top gifts before claiming: Alliance Gift (MR) +1000 from a Mega Express Contract purchase, two Alliance Gift (SSR) +200 each from MetalMick Preparation Rare Pack purchases, Alliance Gift (R) +50 from a Preparation Value Pack purchase. Reward tiles: grey crates x14, gold coins x40, purple chest x8, gold badge 50 x10, 5m speedup x25, 5m speedup x1, red gem 5 x2, red gem 20 x1, red gem 50 x1, iron x180.
+- Verification: after both claims, both tabs' rows all read Claimed, both Claim All buttons gone, both tab red dots gone. Both tabs empty.
+- Counter note, Issue #183 evidence: the Regular window reconciles exactly (+6,670 for 667 gifts) - the eighth Regular datapoint, exact. The Premium window (+13,050 for 52 gifts) does not decompose from the visible rows (MR 1000 + 2x SSR 200 + R 50 = 1,450 visible); below-fold rows were unread, so no exact reconciliation is claimed. Commented on Issue #183 by this run. The counter is alliance-shared; per-step deltas are never attributed to own claims alone.
+- Outcome: done. Regular 667 claimed, Premium 52 claimed, 719 gifts total. Target 719, achieved 719. No diamonds or money spent, no paid button tapped. The game was left on the base screen.
