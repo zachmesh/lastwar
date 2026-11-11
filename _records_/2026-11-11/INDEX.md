@@ -1179,3 +1179,28 @@ of 2026-10-28.
   current; issue 514 decision deadline 2026-11-12 18:00 UTC.
   VPS root disk 83 percent (1.7G free). Status: no-op. Full
   detail in pr-catchall/0539-run.md.
+
+## 05:32 to about 05:52 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-11-0532.
+  Implemented issue #631 in PR #634 (branch
+  work/worktree-profile-sync-631, commit 7abfd2aca, Refs
+  #631): pass_worktree.py gains a `sync` subcommand that
+  refreshes a pass worktree's `_activities_` and
+  `_conventions_` trees from the fresh tip of main (fetched
+  from `github` by default, so a stale local main can never
+  bless a stale worktree), for the ticker to call after
+  `create` and before executing units. Refuses only a file
+  it would overwrite whose disk content differs from both
+  the index and main; updates the working tree only, never
+  the index; restores files missing on disk; leaves files
+  main does not have alone; re-verifies every refreshed
+  file against the source blob. Validation: py_compile
+  clean, 45/45 fixture assertions on isolated scratch repos
+  plus a real-shape dry run on the repo itself (worktree at
+  main~1 synced to main 2cd992888, exactly the 3 differing
+  files updated, re-run already in sync). Issue #631
+  commented with the PR link. Own PR 425 still owner-gated
+  (OD-20261108-01 open), head 0fb5a27f6, MERGEABLE/CLEAN, no
+  action owed. Status: done. Full detail in
+  tool-development/0532-run.md.
