@@ -23,7 +23,7 @@ so the location - not the sweep - is what this tool changes:
 pass worktrees live under ~/workspace/lastwar-worktrees/ and
 this tool refuses any target under the system temp directory.
 
-Three commands, standard library only:
+Four commands, standard library only:
 
   create - create a worktree under the worktrees root (default
            <parent of the main checkout>/lastwar-worktrees, so
@@ -39,6 +39,36 @@ Three commands, standard library only:
            a second create is a clean error, never a duplicate.
            Exit 0 on success, 1 when git fails, 2 on a usage
            or input error (bad name, /tmp target, not a repo).
+  sync   - refresh a pass worktree's ``_activities_`` and
+           ``_conventions_`` trees from the fresh tip of main,
+           so an executor never plays against a superseded
+           profile (issue #631: the ticker-0434 pass executed
+           its donations unit against a worktree copy of the
+           alliance-donations profile at version 1.5.0 while
+           main carried 1.96.0, and the stale rule - donate
+           until the count reads 0 - spent the last donation
+           against the changed route). By default the source
+           is fetched from the ``github`` remote first, so a
+           stale local main ref can never bless a stale
+           worktree as current; ``--no-fetch`` uses the local
+           ref as-is. A file the sync would overwrite is
+           refused only when its disk content differs from
+           both the index and main - a genuine local edit;
+           a pristine stale file is updated, a file already
+           matching main is in sync (so a re-run is a
+           no-op), a file missing on disk is restored, and
+           a file main does not have is reported and left
+           alone. The sync updates the working tree only -
+           never the index, so a delivery commit by explicit
+           pathspec cannot sweep the refreshed profiles
+           into a records branch - and re-verifies every
+           refreshed file against the source blob before
+           reporting. Exit 0 when synced (or already
+           in sync), 1 when a git operation or the
+           post-sync verification fails, 2 when the sync
+           cannot run (bad path, not a worktree under the
+           root, the main checkout itself, a locally edited
+           file, fetch or ref failure).
   list   - list the worktrees under the root with branch, HEAD
            and age, plus orphan directories that are not git
            worktrees. Exit 0, 2 when the root cannot be resolved.
@@ -60,12 +90,15 @@ Three commands, standard library only:
 
 Usage:
   pass_worktree.py [--root DIR] create NAME [--branch BRANCH] [--base REF]
+  pass_worktree.py [--root DIR] sync PATH [--ref REF] [--remote NAME] [--no-fetch]
+                   [--format text|json]
   pass_worktree.py [--root DIR] list [--format text|json]
   pass_worktree.py [--root DIR] prune [--older-than-hours N] [--dry-run|--write]
                    [--format text|json]
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -78,6 +111,8 @@ from pathlib import Path
 NAME_RE = re.compile(r"^[a-z0-9]+([-.][a-z0-9]+)*$")
 LIVE_WRITE_WINDOW_SECONDS = 3600
 DEFAULT_PRUNE_OLDER_HOURS = 24
+SYNC_TREES = ("_activities_", "_conventions_")
+DEFAULT_SYNC_REMOTE = "github"
 
 
 class ToolError(Exception):
@@ -207,6 +242,137 @@ def branch_exists(main, branch):
     return proc.returncode == 0
 
 
+def git_blob_sha(data):
+    """The git blob id for `data` (sha1 of "blob <len>" + NUL + data)."""
+    head = ("blob %d" % len(data)).encode("ascii") + bytes([0])
+    return hashlib.sha1(head + data).hexdigest()
+
+
+def index_blobs(worktree):
+    """Map of relpath -> blob sha for the sync trees in the index."""
+    proc = run_git(
+        ["ls-files", "-s", "--"] + list(SYNC_TREES), cwd=worktree
+    )
+    if proc.returncode != 0:
+        raise ToolError(
+            "git ls-files of %s failed: %s" % (worktree, proc.stderr.strip())
+        )
+    tree = {}
+    for line in proc.stdout.splitlines():
+        if not line.strip():
+            continue
+        meta, _, path = line.partition("\t")
+        parts = meta.split()
+        if len(parts) < 3 or not path:
+            raise ToolError("unparsable ls-files line: %r" % line)
+        tree[path] = parts[1]
+    return tree
+
+
+def working_tree_blobs(path):
+    """Map of relpath -> blob sha for the sync trees on disk under `path`.
+
+    A regular file is hashed with ``git hash-object``, which applies
+    the same clean filters (line-ending and text-attribute conversion)
+    git itself would apply, so a checked-out file compares equal to
+    its source blob even where the checkout converted line endings.
+    A symlink contributes the blob id of its target string, the same
+    value git stores for a mode-120000 entry, so a symlinked profile
+    compares equal to the source tree instead of looking stale.
+    """
+    tree = {}
+    for tree_name in SYNC_TREES:
+        base = Path(path) / tree_name
+        if not base.is_dir():
+            continue
+        for dirpath, dirnames, filenames in os.walk(base):
+            for name in filenames:
+                full = Path(dirpath) / name
+                rel = str(full.relative_to(path))
+                try:
+                    if full.is_symlink():
+                        data = os.readlink(full).encode()
+                        tree[rel] = git_blob_sha(data)
+                        continue
+                except OSError as exc:
+                    raise ToolError("cannot read %s: %s" % (full, exc))
+                proc = run_git(["hash-object", rel], cwd=path)
+                if proc.returncode != 0:
+                    raise ToolError(
+                        "git hash-object of %s failed: %s"
+                        % (full, proc.stderr.strip())
+                    )
+                tree[rel] = proc.stdout.strip()
+    return tree
+
+
+def source_tree_blobs(main, sha):
+    """Map of relpath -> blob sha for the sync trees at commit `sha`."""
+    proc = run_git(
+        ["ls-tree", "-r", "--full-name", sha, "--"] + list(SYNC_TREES),
+        cwd=main,
+    )
+    if proc.returncode != 0:
+        raise ToolError(
+            "git ls-tree of %s failed: %s" % (sha, proc.stderr.strip())
+        )
+    tree = {}
+    for line in proc.stdout.splitlines():
+        if not line.strip():
+            continue
+        meta, _, path = line.partition("\t")
+        parts = meta.split()
+        if len(parts) < 3 or not path:
+            raise ToolError("unparsable ls-tree line: %r" % line)
+        if not any(
+            path == tree_name or path.startswith(tree_name + "/")
+            for tree_name in SYNC_TREES
+        ):
+            continue
+        tree[path] = parts[2]
+    if not tree:
+        raise ToolError(
+            "commit %s holds no %s tree" % (sha, " or ".join(SYNC_TREES))
+        )
+    return tree
+
+
+def resolve_source(main, ref, remote, fetch):
+    """(sha, commit ISO time, fetched) for the sync source.
+
+    With fetch, the remote's ref is fetched first and the source is
+    the remote-tracking ref, so a stale local ref can never be the
+    source. Without fetch, the local ref is used as-is.
+    """
+    if fetch:
+        proc = run_git(["fetch", remote, ref], cwd=main)
+        if proc.returncode != 0:
+            raise ToolError(
+                "git fetch %s %s failed: %s"
+                % (remote, ref, proc.stderr.strip())
+            )
+        tracking = "refs/remotes/%s/%s" % (remote, ref)
+        proc = run_git(
+            ["rev-parse", "--verify", tracking + "^{commit}"], cwd=main
+        )
+        if proc.returncode != 0:
+            raise ToolError(
+                "no remote-tracking ref %s after fetching %s %s"
+                % (tracking, remote, ref)
+            )
+        sha = proc.stdout.strip()
+    else:
+        proc = run_git(["rev-parse", "--verify", ref + "^{commit}"], cwd=main)
+        if proc.returncode != 0:
+            raise ToolError(
+                "cannot resolve ref %r: %s" % (ref, proc.stderr.strip())
+            )
+        sha = proc.stdout.strip()
+    proc = run_git(["show", "-s", "--format=%cI", sha], cwd=main)
+    when = proc.stdout.strip() if proc.returncode == 0 else "unknown"
+    return sha, when, fetch
+
+
 def newest_mtime(path):
     """Latest mtime of a path and everything under it."""
     newest = 0.0
@@ -250,6 +416,134 @@ def cmd_create(args, main, root):
     else:
         print(str(target))
         print("branch %s" % branch)
+    return 0
+
+
+def cmd_sync(args, main, root):
+    target = Path(args.path).expanduser().resolve()
+    if not target.is_dir():
+        raise ToolError("no such worktree directory: %s" % target)
+    if not is_under(target, root):
+        raise ToolError(
+            "worktree %s is not under the worktrees root %s"
+            % (target, root)
+        )
+    if target == Path(main).resolve():
+        raise ToolError(
+            "refusing to sync the main checkout itself: %s "
+            "(sync is for pass worktrees under the root)" % target
+        )
+    entries = worktree_entries(main)
+    entry = next(
+        (e for e in entries if Path(e["path"]).resolve() == target), None
+    )
+    if entry is None:
+        raise ToolError(
+            "%s is not a git worktree of this repository" % target
+        )
+    if entry.get("bare"):
+        raise ToolError("refusing to sync a bare worktree: %s" % target)
+    sha, when, fetched = resolve_source(
+        main, args.ref, args.remote, not args.no_fetch
+    )
+    source = source_tree_blobs(main, sha)
+    disk = working_tree_blobs(target)
+    index = index_blobs(target)
+    # A file the sync would overwrite is refused only when its disk
+    # content is a genuine local edit: it differs from both the
+    # source blob and the index blob. A pristine stale file (disk ==
+    # index) is updated; a file already matching the source (a
+    # previous sync left it as an unstaged modification, because the
+    # sync updates the working tree only) is in sync, so a re-run is
+    # a no-op instead of a refusal. A file missing on disk is
+    # restored from the source; a file main does not have is reported
+    # as extra and left alone - the restore never touches it.
+    refused = sorted(
+        p
+        for p in source
+        if p in disk and disk[p] != source[p] and disk[p] != index.get(p)
+    )
+    if refused:
+        raise ToolError(
+            "refusing to sync %s: locally modified under %s "
+            "(differs from both the index and %s %s):\n%s"
+            % (
+                target,
+                " / ".join(SYNC_TREES),
+                args.ref,
+                sha[:12],
+                "\n".join("  " + p for p in refused),
+            )
+        )
+    updated = sorted(
+        p for p in source if p in disk and disk[p] != source[p]
+    )
+    added = sorted(p for p in source if p not in disk)
+    extra = sorted(p for p in disk if p not in source)
+    unchanged = len(source) - len(updated) - len(added)
+    report = {
+        "worktree": str(target),
+        "source": {
+            "ref": args.ref,
+            "remote": None if args.no_fetch else args.remote,
+            "sha": sha,
+            "commit_time": when,
+            "fetched": fetched,
+        },
+        "compared": len(source),
+        "updated": updated,
+        "added": added,
+        "extra": extra,
+        "unchanged": unchanged,
+        "already_in_sync": not updated and not added,
+    }
+    if updated or added:
+        proc = run_git(
+            ["restore", "--source=%s" % sha, "--worktree", "--"]
+            + list(SYNC_TREES),
+            cwd=target,
+        )
+        if proc.returncode != 0:
+            print(proc.stderr.strip(), file=sys.stderr)
+            return 1
+        after = working_tree_blobs(target)
+        still = sorted(p for p in updated + added if after.get(p) != source[p])
+        if still:
+            print(
+                "sync incomplete, still stale after restore: %s"
+                % ", ".join(still),
+                file=sys.stderr,
+            )
+            return 1
+    if args.format == "json":
+        print(json.dumps(report, indent=2))
+    else:
+        if report["already_in_sync"]:
+            print(
+                "%s already in sync with %s %s"
+                % (target, args.ref, sha[:12])
+            )
+        else:
+            for path in updated:
+                print("updated %s" % path)
+            for path in added:
+                print("restored %s" % path)
+            for path in extra:
+                print("extra (left alone) %s" % path)
+            print(
+                "%s synced to %s %s (%s, %d updated, %d restored, "
+                "%d unchanged, %d extra left alone)"
+                % (
+                    target,
+                    args.ref,
+                    sha[:12],
+                    when,
+                    len(updated),
+                    len(added),
+                    unchanged,
+                    len(extra),
+                )
+            )
     return 0
 
 
@@ -446,6 +740,25 @@ def build_parser():
     p_create.add_argument("--base", default=None, help="start point for a new branch")
     p_create.add_argument("--format", choices=["text", "json"], default="text")
 
+    p_sync = sub.add_parser(
+        "sync",
+        help="refresh a pass worktree's activity and convention trees "
+        "from current main",
+    )
+    p_sync.add_argument("path", help="worktree directory to sync")
+    p_sync.add_argument("--ref", default="main", help="source ref (default main)")
+    p_sync.add_argument(
+        "--remote",
+        default=DEFAULT_SYNC_REMOTE,
+        help="remote to fetch the source ref from (default github)",
+    )
+    p_sync.add_argument(
+        "--no-fetch",
+        action="store_true",
+        help="use the local ref without fetching",
+    )
+    p_sync.add_argument("--format", choices=["text", "json"], default="text")
+
     p_list = sub.add_parser("list", help="list worktrees under the root")
     p_list.add_argument("--format", choices=["text", "json"], default="text")
 
@@ -474,6 +787,8 @@ def main(argv=None):
     try:
         if args.command == "create":
             return cmd_create(args, main, root)
+        if args.command == "sync":
+            return cmd_sync(args, main, root)
         if args.command == "list":
             return cmd_list(args, main, root)
         if args.command == "prune":
