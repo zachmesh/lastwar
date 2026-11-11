@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-11T06:32:17Z
+modified: 2026-11-11T14:32:17Z
 level: L1
-version: 1.83.0
+version: 1.84.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -89,6 +89,7 @@ grounded_in:
   - source: ticker-1704 arms-race execution record 2026-11-10 1712 queue run (partial, Base Building phase 21,600 of 30,000, both earned point chests claimed in one tap, cumulative chest 3/2 claimed, tier 3 short by 8,400, successor staged; record commit 474309ac on records/2026-11-10)
   - source: ticker-1734 arms-race execution record 2026-11-10 1756 queue run (partial, Base Building phase closed 21,600 of 30,000, tier 3 missed by 8,400, Building Queue holds only the Lv.29 Aircraft Center upgrade 1d 08:32 with three idle queues, Oil Well vs Aircraft Center identity disagreement filed as Issue #595, cumulative chest 3/8, no successor for this phase; record commit d3b32975 on records/2026-11-10)
   - source: ticker-2154 arms-race execution record 2026-11-10 2209 queue run (done, Hero Advancement phase met on one Morrison Lv.124 to Lv.125 level-up for 41,500 points, all three point chests and the cumulative counter chest claimed, Base Building phase closed with the Oil Well label still [0/1] and no finished upgrade landed, [E118] login recovery on the second Reconnect tap; record commit b11294e7f on records/2026-11-10)
+  - source: ticker-0534 arms-race execution record 2026-11-11 0535 queue run (skipped-needs-owner, Tech Research phase re-verified live, score 0, tier 3 unreachable inside red lines, no rewards claimable, 0004-timer citation withdrawn by correction, no-completion evidence now the 0553 live queue read; record commit a3ef6b276 on records/2026-11-11)
 ---
 
 
@@ -117,6 +118,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
 - Events entry is layout-scoped (2026-11-09 0949): the (672,132) grounding was measured in landscape fullscreen and does not apply to letterboxed portrait fullscreen or windowed portrait - in both, that point is map scenery. Ground the Events entry fresh from the live layout each unit; first check whether the announcement banner hides the globe icon. (2026-11-10 1756 update: in the windowed portrait layout the globe icon sits top-right at norm (934, 137) - a fresh grounding for this layout, not a reuse of the landscape (672,132).)
 - Open the Arms Race banner. The current phase, its tasks and the
   time left in the phase are shown on the event page.
+- Entry, 2026-11-11 0535: the first tap at (683,150) hit the Drone Center building, not Events - the map was zoomed in and the icon sits elsewhere in that view. The Events icon grounds live at (934,160) on the full base UI (red badge 3). The Events tab bar shifts between openings: the Arms Race tab was cut off at the left edge on entry and a tap on its visible fragment did nothing; a drag of the tab bar to the right revealed it fully, and a tap at (397,131) opened the Arms Race page. Re-verify the tab by its title before tapping, as units 011 and 048 already warned. (2026-11-11 0541 update, donations unit: the Arms Race page's back arrow ignored three background-click variants - snapped tap (110,905), re-measured centre (112,907), exact-pointer tap - and the working exit was the Desert Battlefield tab detour, whose back arrow at the fresh measured centre (164,931) returned to the base at once. Back-arrow behaviour differs per Events page; do not repeat the three dead taps from the Arms Race page.)
 
 ## Cadence
 
@@ -503,6 +505,7 @@ Executions are recorded in `_records_/<date>/arms-race/`, one file per execution
   paths are exactly the banned speedup and pack spends. A
   Tech Research phase is therefore only winnable when a
   research completion happens to land inside its window.
+  (2026-11-11 0535 correction: these 23h30m and 1d08h timers are this 2026-10-26 phase's own live read, not the 2026-11-10 0006 unit's - the 0006 judgement carried no timers, and the 0535 record's citation of them as a "0004 live read" is withdrawn in its own correction. The no-completion conclusion for the 2026-11-11 Tech Research phase now rests on the 0553 live queue read: slot 1 busy 04:27:41, finishing about 10:21, slot 2 Idle.)
 - The ranking row lag - during the Tech Research phase the
   ranking row still displayed the finished Hero Advancement
   result (segment rank 8, 37,500) and its chest still opened
@@ -2278,3 +2281,15 @@ slot. Evidence in
 - Completion sweep: Events screen and Arms Race page re-scanned - no bouncing chest or reward red dot remains on the Arms Race card or page. The Age of Oil tab still carries a red (1) badge - a different event, left for its own unit. Train boarding banner observed closing during this unit (00:02:56 at 22:01, 00:00:08 at about 22:05) - noted for the train unit; boarding is not this unit's type. Base power 149,210,754 at entry -> 149,218,973 at close (+8,219, the hero level-up).
 - Nothing spent: no diamonds, no money, no speedup items, no stamina items. One hero level with EXP only.
 - Result stats: target 12,000, achieved 41,500, verified yes (same-unit live reads). Blocker category: none. Follow-up: none.
+
+## What the 2026-11-11 0535 unit added - Tech Research phase re-verified live, score 0, tier 3 unreachable inside red lines, no rewards claimable, skipped-needs-owner
+
+- Unit arms-race-2026-11-11-0203 by ticker-0534, about 05:35 to 05:40 local, status skipped-needs-owner. Evidence in `_records_/2026-11-11/arms-race/0535-queue-run.md` (commit a3ef6b276 on records/2026-11-11). Computer session cc-563 on the owner Mac mini.
+- Live read: phase Tech Research, Contest Segment Lv.29-30, timer 00:20:48 at first read (00:19:50 at close) - the phase ends about 06:00 PT. Score 0 at entry and at close. Thresholds 6,250 / 12,500 / 30,000 (ruby tags 2,360 / 4,800 / 11,800). Scoring paths as displayed: Increase Tech Power by 1pt +1; Use 1-min Research Speed-up +10 (red line, never burned); Buy Packs containing Diamonds +30 per diamond (red line, never spent).
+- Ranking row: #2113 [AOSS]Mizuame on top; #2110 [AP3x]Bears Lair rank 9 with 50,500 - recorded as observed, it is the cumulative day figure (9,000 + 41,500 from the Hero Advancement phase), not the live phase score (0), matching the documented ranking-row lag pattern.
+- Completion sweep: ranking row chest tapped, opens a contents preview only - Iron Chest (SR) 3, Food Chest (SR) 3, Coin Chest (SR) 3 - with no Claim button, as documented for a live phase. Not claimable now; the next run after the phase rolls checks it again. Cumulative counter chest top-left: 7/8, not full, not claimable; no bouncing chest and no reward red dot seen on the Arms Race page. Nothing earned left unclaimed.
+- Entry notes: first tap at (683,150) hit the Drone Center building, not Events - the map was zoomed in and the icon sits elsewhere in that view. The Events icon grounds live at (934,160) on the full base UI (red badge 3). The Events tab bar shifts between openings: the Arms Race tab was cut off at the left edge on entry and a tap on its visible fragment did nothing; a drag of the tab bar to the right revealed it fully, and a tap at (397,131) opened the Arms Race page. Re-verify the tab by its title before tapping, as units 011 and 048 already warned. See the updated How to enter entry.
+- Close: skipped-needs-owner. The tier-3 target (30,000) is unreachable inside the red lines in this phase: the only in-scope path is a research completion, and none lands inside the remaining phase time on the evidence available; the other two paths are the banned speedup and pack spends. No scoring work done, no rewards claimable, nothing spent.
+- Correction (appended 05:58, same pass): the evidence cited for the no-completion leg is withdrawn - the "queue timers 23h30m and 1d08h at about 00:04" from a "0004 live read" do not exist: those timers are the 2026-10-26 Tech Research example in this profile, and the 0004 pass judgement as reported in the 0205 record carried no timers. The conclusion still stands, now on live evidence from the research unit of this same pass (0553): the shared research queue reads slot 1 busy with 04:27:41 remaining (finishes about 10:21) and slot 2 Idle, so no completion lands before the phase ends about 06:00. See the corrected Tech Research example note above and research-queue 1.5.0.
+- Result stats: target read live phase and score, meet tier-3 target just enough, claim earned rewards; achieved phase read live (Tech Research, score 0, thresholds 6250/12500/30000), target unreachable inside red lines, no rewards claimable; resources_gained none; points 0; costs about 5 minutes; verified partial - phase, score, thresholds and both chests read live in this unit; research queue timers from the 0553 live read, not the withdrawn 0004 citation; blocker_category g; phase Tech Research, score_before 0, score_after 0, device_takeovers 0.
+- No diamonds or money spent. No login or verification demanded. No "active on a different device" dialog appeared.
