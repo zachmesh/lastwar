@@ -3217,3 +3217,35 @@ modified: 2026-11-10T14:21:00Z
   #404 (other-jobs adoption) re-verified out of one-run
   scope. Status: no-op. Full detail in
   tool-development/1832-run.md.
+
+## 18:32 to about 18:53 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-10-1832
+  (done). Worked from the 1732 run's watermark (substantive through
+  474309ac, meta through 6136714f). PR #594 merged with 0 comments,
+  0 reviews - no feedback owed. Folded ticker-1734 (arms-race 1756)
+  and ticker-1806 (gifts 1810, help 1818) into 4 profiles:
+  arms-race 1.82.0 (Base Building phase closed 21,600 of 30,000,
+  tier 3 missed by 8,400; queue holds only the Lv.29 Aircraft
+  Center upgrade 1d 08:32, CORRECTION - the 1712 Oil Well naming
+  is superseded as the upgrade identity, residual timer gap filed
+  as Issue #595; R6 successor expiry lesson - use the live timer,
+  not the nominal close; cumulative chest 3/8),
+  alliance-gifts 1.51.0 (done, 464 Regular plus 14 Premium, 478
+  total; Gift Level 28 progress 203,638,690 to 203,653,640;
+  per-step deltas unattributed, seventh Regular datapoint
+  non-exact, commented on Issue #183; Zombie Invasion tab seen
+  live in the Events hub), alliance-help 1.40.0 (done, Help All
+  pressed twice, 3 ally helps, header 0 to 40/1,000 after close
+  and reopen, 20 points per help, third help's +20 pending),
+  zombie-invasion 1.23.0 (Zombie Invasion tab seen live about
+  18:11 after absence re-confirmed about 17:56 the same day;
+  event page NOT yet verified, chain head
+  zombie-2026-11-10-001 seeded; sowing ban holds until
+  verification). Contradictions resolved: upgrade identity
+  (Oil Well superseded by Aircraft Center) and Zombie tab
+  (17:56 absence superseded by the 18:11 sighting). Issue filed:
+  #595 (knowledge). Issue comments: #183. Profiles PR #596,
+  commit 4ddd8b18, awaiting integrator review. Slack DM sent to
+  D0CBM9P0CSK. Status: done. Full detail in
+  knowledge-organization/1832-run.md.
