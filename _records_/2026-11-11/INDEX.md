@@ -1499,3 +1499,20 @@ of 2026-10-28.
   main synced to df82f25ad via the bundle route. Slack
   sync sent (ts 1794409847.071799). Status: done. Full
   detail in pr-integration/0700-run.md.
+
+## 07:19 to about 07:26 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0719.
+  NON-batch pass (checker merge-aware not due: PR #627
+  already merged 07:07:31 PT in the 07:00-08:00 window;
+  next batch point 11:00 PT). Records PR 636 (2026-11-11,
+  head 25bd023d0, CLEAN) awaits the 11:00 batch; records
+  PR 615 (2026-11-10, head 5f302d8cc3) still CONFLICTING
+  on the 9 _queue_ files named at the 0700 pass, conflict
+  comment already posted then, carried after a branch-side
+  reconcile. Tools PR 425 re-verified CLEAN against
+  unchanged main df82f25ad (merge-tree exit 0, tree
+  971fbdce), still owner-gated (OD-20261108-01 open);
+  no new comment, main has not moved since the 0700
+  verification. No merges, no PRs opened, no Slack sync.
+  Status: done. Full detail in pr-integration/0719-run.md.
