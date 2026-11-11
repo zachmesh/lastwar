@@ -3548,3 +3548,20 @@ modified: 2026-11-10T14:21:00Z
   #598) merged 04:04:07Z. #133 and #404 remain the only
   unimplemented items, both out of one-run scope. Status:
   no-op. Full detail in tool-development/2032-run.md.
+
+## 20:28 to 20:42 - Ticker pass ticker-2028, harvest unit partial
+
+- Harvest unit harvest-2026-11-10-1803 partial. Food bubbles
+  all collected in one tap (631.7M to 635.2M, plus 3.5M
+  verified); coin bubbles all collected in one tap (98.1M
+  to 100.4M, plus 2.3M verified). Iron UNVERIFIED: 954.4M
+  to 957.6M across the first tap with no verified cause,
+  and a later crop-grounded iron-bubble tap cleared the
+  bubbles with no iron movement - next unit must re-read
+  the mines live. Armed Truck not located, not claimed
+  (Issue 566 stands); the bottom-left hint tooltip cycled
+  twice pointing at the parked vehicles. Method: bubble
+  centres must be crop-grounded, eyeball taps missed by
+  about 30px twice and opened the Iron Mine panel instead.
+  Tracker untouched. Full detail in
+  resource-collection/2042-queue-run.md.
