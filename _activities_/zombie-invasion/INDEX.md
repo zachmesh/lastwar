@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-11-09T22:32:17Z
+modified: 2026-11-11T02:32:17Z
 level: L1
-version: 1.22.3
+version: 1.23.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -18,6 +18,7 @@ grounded_in:
   - source: owner decision in main chat on 2026-10-28 - execute maximize coin, redeem medals for Coin Chests in the event Store and open the 2 owned Coin Chest (SR) in inventory
   - source: ticker-1134 scout-discovery execution record 2026-11-09 1152 queue run (done, Zombie Invasion tab still absent from the Events hub tab bar, event still ended, no chain seeded; record commit d2df49670 on records/2026-11-09)
   - source: ticker-1345 arms-race execution record 2026-11-09 1345 queue run (partial, Zombie Invasion tab still absent from the Events hub, Arms Race, Winter Battlefield and Desert Battlefield visible, event still ended, no chain seeded; record commit 63eccdb92 on records/2026-11-09)
+  - source: ticker-1806 alliance-gifts execution record 2026-11-10 1810 queue run (done, Zombie Invasion tab seen live in the Events hub tab bar about 18:11, beside Desert Battlefield and a partially visible "...f Oil" tab, after absence re-confirmed about 17:56 the same day; chain head zombie-2026-11-10-001 seeded for the next unit to verify the event page; record commit 20a62ff0 on records/2026-11-10)
 ---
 
 # Zombie invasion
@@ -686,7 +687,7 @@ execution.
   seen live in the Events hub again. Re-confirmed
   2026-11-09 11:38 PT by scout-discovery unit 016
   (ticker-1134) - the tab bar still carries no Zombie
-  Invasion tab, no chain seeded. Re-confirmed 2026-11-09 about 13:47 PT by the ticker-1345 arms-race unit - the tab bar showed Arms Race, Winter Battlefield and Desert Battlefield, still no Zombie Invasion tab, no chain seeded.
+  Invasion tab, no chain seeded. Re-confirmed 2026-11-09 about 13:47 PT by the ticker-1345 arms-race unit - the tab bar showed Arms Race, Winter Battlefield and Desert Battlefield, still no Zombie Invasion tab, no chain seeded. (2026-11-10 1810 UPDATE, supersedes the absence as the newest read: the ticker-1806 gifts unit saw a Zombie Invasion tab live in the Events hub tab bar at about 18:11, beside Desert Battlefield and a partially visible "...f Oil" tab - after the ticker-1734 arms-race unit's close scan at about 17:56 the same day found no Zombie tab in the Events strip. The tab reappeared between the two reads, around the 18:00 rollover (inference, not a measured time). The event page itself is NOT yet verified - the sighting is a tab-bar read only - so the chain head zombie-2026-11-10-001 is seeded for the next unit to open the tab and verify the event page. Until that verification lands, the standing rule holds: no sowing, no zombie chain beyond the verification unit.)
 
 ## Open questions
 
@@ -721,3 +722,11 @@ execution.
 - What Boss Search does differently from Search (inspected
   in round 1 - rally-class targets, no coin line seen; no
   rally started).
+
+## What the 2026-11-10 1810 sighting added - Zombie Invasion tab seen live again, event page verification owed
+
+- Sighting, not a zombie unit: the ticker-1806 gifts unit (gifts-2026-11-10-1430, about 18:10 to 18:16 local) entered the Events hub and read the tab bar live: a Zombie Invasion tab beside Desert Battlefield and a partially visible "...f Oil" tab. Evidence in `_records_/2026-11-10/alliance-gifts/1810-queue-run.md` (commit 20a62ff0 on records/2026-11-10). No zombie unit was executed in this pass.
+- Newest-read rule: this sighting supersedes the absence reads as the newest verified record - the 2026-11-09 absence re-confirmations (scout 1152, arms-race 1345) and the ticker-1734 arms-race unit's close scan at about 17:56 the same day, which found no Zombie Invasion tab in the Events strip. The tab reappeared between 17:56 and 18:11, around the 18:00 rollover (inference: the duel-day / Weekly Pass reset lands about 18:00 per Issue #242; the reappearance time itself was not measured).
+- What is verified: the TAB is back in the Events hub tab bar. What is NOT verified: the event page itself (Store, Ranking, Rewards, Search, wave countdown), whether zombies are nearby, and whether the event runs on the old rules. The chain head zombie-2026-11-10-001 was seeded this pass for the next unit to open the tab and verify the event page.
+- Standing rule, unchanged until that verification lands: do NOT seed a fresh zombie chain beyond the verification unit, and do NOT sow (the 2026-10-30 ban - no sowing until the page reappears - is satisfied only by a verified event page, not by a tab-bar sighting). If the next unit confirms the page live, the chain reopens under the 2026-10-28 owner rules (no daily limit, no hour budget, pause 1 hour only when no zombies are nearby) and this profile records the return as a new round.
+- Result stats: no zombie unit ran; nothing claimed, nothing spent, verified yes for the tab sighting only (same-unit live read), blocker_category none.
