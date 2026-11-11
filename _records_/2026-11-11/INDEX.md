@@ -147,3 +147,14 @@ of 2026-10-28.
   delivery push). Tools PR 425 owner-gated, clean,
   unchanged (OD-20261108-01 open). Status: done. Full
   detail in pr-integration/0045-run.md.
+
+- Integrator pass pr-integration-2026-11-11-0100. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): no records merges, no
+  knowledge/code merges, no comments (no-repeat rule).
+  Records PRs 301, 615 and 618 re-verified CLEAN against
+  main 177477ac, awaiting the 03:00 batch; PR 618 head
+  9eb7d043 (moved from 47dde1d326 since the 0045 pass).
+  Tools PR 425 owner-gated, clean, unchanged
+  (OD-20261108-01 open). Status: done. Full
+  detail in pr-integration/0100-run.md.
