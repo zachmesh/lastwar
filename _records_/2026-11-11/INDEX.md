@@ -2039,3 +2039,18 @@ of 2026-10-28.
   note). No knowledge/code PR open, no sync-back owed.
   Silent run, no Slack sync. Status: done. Full detail
   in pr-integration/1115-run.md.
+
+## 11:30 to about 11:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1130.
+  NON-batch pass (checker plain due but merge-aware not
+  due: records PRs 615 and 636 already merged in the
+  11:00 window by the 1100 pass). No merges. Records PR
+  643 (2026-11-11, post-1100 batch) verified CLEAN at
+  head f677227f, awaiting the 15:00 batch. Tools PR 425
+  still CONFLICTING on _tools_/INDEX.md at unchanged
+  head 0fb5a27f, still owner-gated (OD-20261108-01
+  open); no new comment (unchanged since the 1100
+  note). No knowledge/code PR open, no sync-back owed.
+  Silent run, no Slack sync. Status: done. Full detail
+  in pr-integration/1130-run.md.
