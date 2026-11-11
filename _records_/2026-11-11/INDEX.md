@@ -2319,6 +2319,28 @@ of 2026-10-28.
   Slack sync (silent run). Status: done.
   Full detail in pr-integration/1330-run.md.
 
+
+## About 13:32 to about 13:44 - Tool development 1332 run, issue #648 implemented in PR #649
+
+- Issue #648 (ticker-1259 zoom click broke the control channel) implemented in PR #649 (branch work/zoomed-window-probe-648, commit 5f96e1f17): mac_capture_probe 1.2.0 -> 1.3.0 gains ZOOMED_WINDOW_INPUT_BLOCKED (exit 14, stop_pass yes); checklist step 6 states the window-state precondition (windowed 642x951 AND frontmost) and never clicking the green zoom button as an activation step. Validation: py_compile clean, 22/22 fixture assertions on isolated /tmp fixtures, six regression fixtures unchanged from main 1.2.0. PR verified MERGEABLE/CLEAN. Issue #648 commented with the implementing PR. Own PR #425 still owner-gated (OD-20261108-01 open), MERGEABLE/CLEAN, no action owed. Slack summary sent to the owner Trirvia DM. Status: done. Full detail in tool-development/1332-run.md.
+
+## About 13:39 to about 13:48 - PR catch-all 1339 run, no adoption, no fix
+
+- Catch-all pass pr-catchall-2026-11-11-1339. No adoption, no
+  fix, no hand-off. PR 643 still MERGEABLE at head 8c95c3c2 and
+  rides the 15:00 batch; PR 425 unchanged at head 721830b7f,
+  MERGEABLE, still owner-gated (OD-20261108-01, fourth day),
+  integrator re-confirmed at 1330. No PR merged since the 1239
+  pass; main unchanged at 65e68715. 120 open issues, zero
+  unclassified; two new since the 1239 pass (647 records,
+  stranded ticker-1104 delivery; 648 tooling, Zoom click breaks
+  the control channel), both class-labeled. Owner-decision
+  issues 132, 154, 335, 514 and 517 all over 24 hours with
+  statements current; issue 514 decision deadline 2026-11-12
+  18:00 UTC. Branch-tip day INDEX clean, no markers. VPS root
+  disk 84 percent (1.6G free). Silent run, no Slack sync.
+  Status: no-op. Full detail in pr-catchall/1339-run.md.
+
 - Planner pass queue-planning-2026-11-11-1340. Plan staged 0
   units (74 already present, 2 skipped done-current, 3
   skipped closed; 0 expired, 0 reaped; roster stale warning,
@@ -2335,3 +2357,27 @@ of 2026-10-28.
 ## About 13:32 to about 13:58 - Knowledge organization 1332 run, 3 profiles folded, PR 651
 
 - Folded ticker-1204 zombie 1222 + radar 1233 and ticker-1259 survivors 1259 records into zombie-invasion 1.35.0, radar-tasks 1.77.0 and survivor-intake 1.55.0 (PR #651, commit 5533893c9). Zombie 1222: batched dispatch failed on a settling hub (single-step), stale-target March failed with no stamina charged, squads_parallel 1, 1 LOOT row 268,000 coins, gift-box tap swallowed by a base under the icon; chain seq-14 record missing. Radar 1233: 3 executed, 12 claimed, points 415 to 427, Mystery Supply Box banner +5000 diamonds, bar offered 3 tasks against stored 1/40. Survivors 1259: NEW FAILURE MODE - zoom click left the window in Zoom to Fit, no canvas tap lands, no remote restore path; window stuck as of 13:24 PT, needs the owner mouse action on the Mac; window-state precondition now stated in all three entry routes. Issue #650 filed (knowledge, cross-profile precondition carry); seq-14 gap commented on Issue #647. Slack sync sent (material run). Full detail in knowledge-organization/1332-run.md.
+
+## About 13:45 to about 14:10 - PR integration 1345 run, non-batch pass, PRs 649 and 651 merged
+
+- PR integration pass pr-integration-2026-11-11-1345, non-batch
+  (checker _tools_/records_batch.py due: no, next batch 15:00
+  PT). Tools PR 649 merged by squash (merge commit ee9f5341,
+  13:48 PT): mac_capture_probe 1.3.0 gains
+  ZOOMED_WINDOW_INPUT_BLOCKED (exit 14); validation
+  independently re-run, 22/22 fixture assertions pass.
+  Knowledge PR 651 merged by squash (merge commit 7e6f44d9,
+  14:05 PT): three activity profiles folded (zombie-invasion
+  1.35.0, radar-tasks 1.77.0, survivor-intake 1.55.0); it
+  opened mid-pass and was reviewed in this same pass.
+  Records PR 643 CLEAN at head a05ecf28 (25 commits beyond
+  main ee9f5341), awaiting the 15:00 batch. Tools PR 425
+  unchanged 721830b7f, re-verified CLEAN against new main
+  ee9f5341, still owner-gated (OD-20261108-01 open);
+  re-verification comment posted because main advanced.
+  Restoration: the queue-planning 1340 delivery had dropped
+  the 1332 and 1339 INDEX entries and action-log lines from
+  the tip; both restored verbatim from the parent tip in
+  this commit. Slack merge summaries sent to the owner
+  Trirvia DM. Status: done.
+  Full detail in pr-integration/1345-run.md.
