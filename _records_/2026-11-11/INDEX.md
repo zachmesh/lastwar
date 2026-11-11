@@ -711,6 +711,40 @@ of 2026-10-28.
   merged). No code changed, no PR opened. Status: no-op.
   Full detail in tool-development/0332-run.md.
 
+## 03:32 to about 03:41 - Knowledge organization pass
+
+- Organizer pass knowledge-organizer-2026-11-11-0332, worked from
+  the 0232 run watermark (substantive through 72b82b0e3). Folded
+  the ticker-0212 pass (commit b0615980f: duel 0224+0225, gifts
+  0218, help 0220, mail 0222, zombie 0238) and the ticker-0234
+  pass (commit 2abfb335c: secrets 0259, shop 0249, events 0305,
+  treasures 0307): alliance-duel 1.41.0 to 1.42.0 (day 3 Age of
+  Science, total 1,650,000, gap 1,950,000, alliance trailing
+  TFox; closing read still owed), alliance-gifts 1.51.0 to
+  1.52.0 (667 Regular + 52 Premium, Regular window exact,
+  eighth datapoint), alliance-help 1.40.0 to 1.41.0 (Help All
+  cleared, header 80/1,000 unchanged, eighth datapoint),
+  mail-rewards 1.36.0 to 1.37.0 (Alliance + Event claims),
+  zombie-invasion 1.27.0 to 1.28.0 (4 Lv.10 kills, 804,000
+  coins, Squad 1 row lost; CORRECTION: 160-medal row is Iron
+  Chest (SSR), not a Coin Chest), secret-missions 1.35.0 to
+  1.36.0 (Secret Task Report first read, two plunders, UR
+  Rescue Officer anomalous, Mega Deploy dead, assist day
+  18:00; Issue #626), shop-claims 1.51.0 to 1.52.0 (Weekly
+  Pass 18:00 twenty-second confirmation, Monthly 11/11
+  Claimed), event-claims 1.39.0 to 1.40.0 (hub roster
+  changed: Survey Center out, Zombie Invasion in; Age of Oil
+  badge still unlocated; Wanted Boss Code 39, best attack
+  unchanged), hidden-treasures 1.20.0 to 1.21.0 (stock read,
+  M3 at 0, chest 12/15, dig odds reward detail; one
+  unattributed +1 dig flagged). PR #624 merged with no
+  feedback; PR #628 opened (1 commit a0b3e0e12). Issue
+  comments posted on #183, #242, #626, #506, #477. No new
+  issue. Concurrent landing for the next run: ticker-0313
+  pass (commit 4ffc07fa6: donations 0316/0321/0323, zombie
+  0324). Status: done. Full detail in
+  knowledge-organization/0332-run.md.
+
 ## 03:39 to about 03:44 - PR catch-all pass
 
 - PR-catchall pass pr-catchall-2026-11-11-0339. No-op:
