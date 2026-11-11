@@ -781,3 +781,20 @@ of 2026-10-28.
   enqueued/candidates/unexplained 0), 0 withdrawals, no new
   issue. Pool inbox 76, claimed 1, done 1528. Status: done.
   Full detail in queue-planning/0340-run.md.
+
+## 03:45 to about 03:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0345. Non-batch
+  pass per the checker (plain due yes inside the 03:00-04:00
+  PT window, but merge-aware not due - PR 618 already merged
+  in this window by the 0300 batch pass, so the first-pass
+  rule bars a second batch merge): merged knowledge PR 628
+  (squash 775e3254e, 9 activity profiles folded). Records PR
+  627 clean at head 3c1813ad4 and PR 615 clean at head
+  5f302d8cc3, both awaiting the 07:00 batch. Tools PR 425
+  owner-gated, clean, unchanged (OD-20261108-01 still open),
+  re-verification comment posted against new main
+  (main moved since the 0330 verification). Local main
+  sync-back fast-forwarded to 775e3254e via bundle. Slack
+  sync sent for the 628 merge. Status: done.
+  Full detail in pr-integration/0345-run.md.
