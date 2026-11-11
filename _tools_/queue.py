@@ -22,6 +22,12 @@ Usage:
              # old 17:30/18:30/19:00 wall geometry used to pre-empt
              # the sweep subcommand's correct pair - stage the pair
              # with queue.py sweep instead.
+             # enqueue mints the unit into the live pool (issue
+             # #598): when this copy runs from a linked worktree,
+             # the unit lands in the main checkout's _queue_/inbox
+             # instead of the worktree's, so a pass that delivers
+             # via a worktree cannot strand a unit on the records
+             # branch - the next tick reads the live pool only.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate
              # pool integrity (issue #441): exit 0 when every unit
@@ -157,6 +163,18 @@ Usage:
              # list, or an unknown fix-up regular (issue #147),
              # so a pair with no fix-ups cannot silently repeat
              # the eighth-failure pattern
+  queue.py [--root DIR] sweep-status [--regular zero-sweep]
+             [--date YYYY-MM-DD] [--regulars-json FILE]
+             # report one reset day's sweep pair by result.status,
+             # never by pool membership (issue #610): a pass counts
+             # as executed only when its result.status is done or
+             # partial - expired units land in done exactly like
+             # executed ones, so the 2040 planner run's "both in
+             # done" read reported a false complete while the final
+             # pass was expired. Exit 0 when the pair is complete,
+             # 1 when it is not, 2 when the roster or regular
+             # cannot be read; read-only, and it resolves the root
+             # to the live pool (issue #598).
 
 --root defaults to the repository _queue_ folder; it also accepts
 a repository root, resolved to its _queue_ folder, or a pool
@@ -1245,6 +1263,12 @@ def _produce_for_window(root, item, planned_local, window="",
     sweep fix-ups (issue #147), which expire at the reset they
     serve and run at priority 1 regardless of their regular's
     usual cadence and priority."""
+    # Live-pool production (issue #598): sync / plan / sweep mint
+    # through here, and a pass running this copy from a delivery
+    # worktree would otherwise stage the unit into the worktree's
+    # inbox, where the live pool never sees it - resolve to the
+    # main checkout's _queue_ first; a scratch root keeps itself.
+    root = live_pool_root(root)
     regular = item["id"]
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
@@ -2046,6 +2070,140 @@ def cmd_sweep(args):
     return 0
 
 
+def cmd_sweep_status(args):
+    """Report one reset day's sweep pair by result status, never by
+    pool membership.
+
+    Issue #610: the 2040 planner run reported tonight's sweep pair
+    complete because both passes sat in _queue_/done/ - but the
+    final pass's result.status was expired (window passed before
+    execution), and expired units land in done exactly like
+    executed ones. Pool membership in done does not mean executed,
+    so a pair check that reads location reports a false complete
+    and hides the tenth consecutive sweep failure.
+
+    This command reads the same reset-anchored geometry sweep
+    stages from (the fixed-slots regular's slots_before_reset,
+    chain id, reset instant) and reports, for each expected pass,
+    where its unit file sits and what result.status it carries.
+    A pass counts as executed only when its result.status is done
+    or partial; expired, failed and skipped-needs-owner are closed
+    without execution, a done file with no result status is a bare
+    file (not a completed execution, the same rule as
+    _has_done_record), and inbox / claimed / absent are pending,
+    claimed and missing. pair_complete is true only when every
+    pass executed with the expected chain sequence. Exit 0 when
+    the pair is complete, 1 when it is not, 2 when the roster or
+    regular cannot be read - the gate command's exit-code
+    convention (log_append.py), so a planner run can gate on it.
+
+    Read-only: it writes nothing to the pool. It resolves the
+    root to the live pool (issue #598), so a copy running from a
+    delivery worktree reads the live pool, not the worktree's
+    stale copy. Unlike sweep it never refuses a past reset -
+    checking a past day's pair is the whole point. Done wins over
+    inbox and claimed when a unit id sits in more than one state
+    (a stale inbox duplicate, issue #213): the done record is
+    the closing, so the status check reads that one.
+    """
+    root = live_pool_root(args.root)
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    defs_path = args.regulars_json or os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "regulars.json")
+    try:
+        with open(defs_path, encoding="utf-8") as fh:
+            regs = json.load(fh)["regulars"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"refused: cannot read roster {defs_path}: {exc}")
+        return 2
+    item = next((r for r in regs if r.get("id") == args.regular), None)
+    if item is None:
+        print(f"refused: regular {args.regular!r} not in roster "
+              f"{defs_path} - sync the tree to main before checking "
+              f"the sweep pair")
+        return 2
+    if item.get("cadence") != "fixed-slots" or \
+            not _reset_anchored_offsets(item):
+        print(f"refused: regular {args.regular!r} carries no "
+              f"reset-anchored slots (reset_utc + "
+              f"slots_before_reset_minutes) - no sweep pair to "
+              f"check (issue #610)")
+        return 2
+    if args.date:
+        try:
+            year, month, day = (int(x) for x in args.date.split("-"))
+            local_date = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --date {args.date!r} is not YYYY-MM-DD")
+            return 2
+    else:
+        local_date = datetime.now(LOCAL_TZ).date()
+    reset_local = _reset_instant_for_local_date(item, local_date)
+    slots = _reset_anchored_slots(item, local_date)
+    chain_id = item.get("chain_id_prefix", "") + \
+        local_date.isoformat() if item.get("chain_id_prefix") else ""
+    passes = []
+    for idx, slot in enumerate(slots):
+        unit = _unit_id_for_window(item, slot)
+        label = ("first pass" if idx == 0 else "final pass") \
+            if len(slots) == 2 else f"pass {idx + 1}"
+        record = {"unit": unit, "label": label,
+                  "slot": iso(slot.astimezone(timezone.utc)),
+                  "seq": idx + 1, "location": "absent",
+                  "status": "missing", "executed": False,
+                  "geometry_ok": False, "finished_at": ""}
+        state, path = None, None
+        for cand in ("done", "claimed", "inbox"):
+            cand_path = unit_path(root, cand, unit)
+            if os.path.exists(cand_path):
+                state, path = cand, cand_path
+                break
+        if state is None:
+            passes.append(record)
+            continue
+        record["location"] = state
+        fields, _ = read_unit(path)
+        planned = parse_iso(fields.get("planned_for", ""))
+        try:
+            seq = int(fields.get("chain_seq", 0))
+        except (TypeError, ValueError):
+            seq = None
+        record["geometry_ok"] = (
+            planned is not None and
+            iso(planned) == iso(slot.astimezone(timezone.utc)) and
+            seq == idx + 1)
+        result = fields.get("result", {})
+        if not isinstance(result, dict):
+            result = {}
+        if state == "done":
+            status = result.get("status", "")
+            if not status:
+                record["status"] = "done-no-result"
+            else:
+                record["status"] = status
+                record["finished_at"] = \
+                    result.get("finished_at", "") or ""
+        elif state == "claimed":
+            record["status"] = "claimed"
+        else:
+            record["status"] = "pending"
+        record["executed"] = (record["status"] in ("done", "partial")
+                              and record["geometry_ok"])
+        passes.append(record)
+    complete = bool(passes) and all(p["executed"] for p in passes)
+    print(json.dumps({
+        "regular": args.regular, "date": local_date.isoformat(),
+        "chain_id": chain_id,
+        "reset_at": iso(reset_local.astimezone(timezone.utc)),
+        "passes": passes,
+        "executed_passes": sum(1 for p in passes if p["executed"]),
+        "total_passes": len(passes),
+        "pair_complete": complete},
+        ensure_ascii=False))
+    return 0 if complete else 1
+
 def _sweep_enqueue_refusal(args):
     """Refusal message when a hand-enqueued zero-sweep unit does not
     match the reset-anchored geometry, or None when it may proceed.
@@ -2123,6 +2281,18 @@ def _sweep_enqueue_refusal(args):
 
 
 def cmd_enqueue(args):
+    # Live-pool production (issue #598): resolve the pool first,
+    # before the wrong-root gate and before anything is read or
+    # written - a unit enqueued into a delivery worktree's inbox
+    # reaches only the records branch, while the next tick reads
+    # the live pool. Every check below (gate, chain, sequence,
+    # existence) therefore runs against the live pool, and the
+    # note names the redirect so a run log shows where the unit
+    # actually landed.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"enqueueing into the live pool {root} (issue #598)")
     # Wrong-root gate (issue #510): a root holding no pool state
     # directory is not a pool, so refuse instead of minting an
     # inbox under it - a wrong root used to silently create a stray
@@ -2133,11 +2303,11 @@ def cmd_enqueue(args):
     # pool beside the resolved _queue_ pool (issue #539) must be
     # named on the write path too, so it gets removed instead of
     # silently ignored.
-    warning = pool_root_warning(args.root)
+    warning = pool_root_warning(root)
     if warning:
         print(warning)
-    if not any(os.path.isdir(state_dir(args.root, s)) for s in STATES):
-        print(f"refused: pool root {args.root} holds no inbox, "
+    if not any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        print(f"refused: pool root {root} holds no inbox, "
               "claimed or done directory - the pool was not found, "
               "nothing queued (issue #510)")
         return 1
@@ -2155,18 +2325,18 @@ def cmd_enqueue(args):
         # extend a chain with a different regular than its existing
         # units, so per-type statistics stay clean.
         for state in STATES:
-            for f in list_units(args.root, state):
+            for f in list_units(root, state):
                 if f.get("chain_id") == args.chain_id and \
                         f.get("regular") not in ("", args.regular):
                     print(f"refused: chain {args.chain_id} belongs to "
                           f"regular {f.get('regular')}, not "
                           f"{args.regular}")
                     return 1
-        chain_seq = chain_seq_next(args.root, args.chain_id)
+        chain_seq = chain_seq_next(root, args.chain_id)
         unit = f"{args.regular}-{args.chain_id}-{chain_seq:03d}"
     else:
         unit = f"{args.regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}"
-    path = unit_path(args.root, "inbox", unit)
+    path = unit_path(root, "inbox", unit)
     if os.path.exists(path):
         print(f"already queued: {unit}")
         return 1
@@ -2186,7 +2356,7 @@ def cmd_enqueue(args):
     body = (f"# {args.regular}\n\nProduced by _tools_/queue.py. The "
             "executor reads the activity metadata and the standing "
             "rules before acting.\n")
-    os.makedirs(state_dir(args.root, "inbox"), exist_ok=True)
+    os.makedirs(state_dir(root, "inbox"), exist_ok=True)
     write_unit(path, fields, body)
     print(f"queued {unit}")
     return 0
@@ -2739,6 +2909,30 @@ def _shared_token_home(root):
     if os.path.isdir(main_queue):
         return main_queue
     return None
+
+
+def live_pool_root(root):
+    """Live pool for a root that may sit in a linked worktree.
+
+    New units are live pool state: the next tick's `next` reads
+    the live pool's inbox, never a records branch's, so a unit
+    enqueued into a delivery worktree's inbox is stranded - it
+    reaches only the records branch (issue #598: ticker-1806
+    seeded the zombie chain head into the records branch inbox
+    and the live pool never saw it). The token, blockers and
+    completion markers already resolve to the main checkout
+    through _shared_token_home (issues #383, #438); production
+    does the same, so enqueue and the sync / plan / sweep
+    production path always mint into the main checkout's _queue_
+    when this copy runs from a linked worktree. A root that is
+    not in a repo (tests, scratch dirs) or whose main checkout
+    holds no _queue_ keeps the given root, and the main checkout
+    itself resolves to itself.
+    """
+    shared = _shared_token_home(root)
+    if shared is not None:
+        return shared
+    return os.path.abspath(root)
 
 
 def token_path(root):
@@ -3530,6 +3724,12 @@ def main(argv=None):
     p.add_argument("--date", default="")
     p.add_argument("--regulars-json", default="")
     p.set_defaults(fn=cmd_sweep)
+
+    p = sub.add_parser("sweep-status")
+    p.add_argument("--regular", default="zero-sweep")
+    p.add_argument("--date", default="")
+    p.add_argument("--regulars-json", default="")
+    p.set_defaults(fn=cmd_sweep_status)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],
