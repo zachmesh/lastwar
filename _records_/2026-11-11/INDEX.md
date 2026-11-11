@@ -1405,3 +1405,20 @@ of 2026-10-28.
   main, no comment posted (main unmoved since the 0545
   verification). Status: done. Full detail in
   pr-integration/0645-run.md.
+
+## 06:40 to about 06:49 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-0640. Plan staged 15
+  units for the 18:00-18:30 slots (mail, help, gifts, harvest,
+  vip, daily-missions, radar, survivors, train, training,
+  donations, arms-race, star-ceremony, duel-score, scout;
+  61 already present, 3 skipped done-current, 0 reaped/expired;
+  branch reconcile skipped on a failed fetch, issue #446).
+  Sweep production skipped (06:00 hour); tonight's pair already
+  complete in the live pool (seq-1 16:30, seq-2 17:30, both
+  expiring at the 18:00 reset instant). Scout diff on the
+  2026-11-10 15:14 observation re-applied with identical 0
+  counts (observed/actionable/enqueued/candidates/unexplained
+  0), 0 withdrawals, no new issue. Pool inbox 80, claimed 1,
+  done 1547. Status: done. Full detail in
+  queue-planning/0640-run.md.
