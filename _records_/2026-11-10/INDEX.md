@@ -3158,3 +3158,29 @@ modified: 2026-11-10T14:21:00Z
   OD-20261108-01 still open. Three comments posted (351,
   301, 425 re-verification). Status: done. Full detail in
   pr-integration/1800-run.md.
+
+## 18:10 to 18:16 - alliance gifts queue run (ticker-1806)
+
+- Gifts unit gifts-2026-11-10-1430, done. Claim All on both
+  tabs: Regular 464 (452 + 12 second sweep), Premium 14, 478
+  gifts total, all dialog-confirmed. Gift Level 28 progress
+  203,638,690 to 203,653,640 of 206,300,000, read live at each
+  step; per-gift deltas do not decompose into own claims
+  alone (Issue #183, alliance-shared counter). Hide-your-name
+  checkbox unchecked and untouched. Full detail in
+  alliance-gifts/1810-queue-run.md.
+- Zombie Invasion tab sighting: the Events hub tab bar showed
+  a Zombie Invasion tab live at about 18:11, after the event
+  ended 2026-10-30 and the tab was absent as of 2026-11-09.
+  Chain head zombie-2026-11-10 seeded this pass for the next
+  unit to verify the event page.
+
+## 18:18 to 18:21 - alliance help queue run (ticker-1806)
+
+- Help unit help-2026-11-10-1430, done. Help All pressed twice:
+  3 ally requests helped (specialist Donut Oil Output I, Teemo
+  Missile Vehicle - Defense II, Teemo Missile Vehicle -
+  Damage II). Header verified 0 to 40/1,000 after close and
+  reopen; the third help's +20 follows the known in-session lag
+  and is left for the next help unit's header read. Full detail
+  in alliance-help/1818-queue-run.md.

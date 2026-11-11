@@ -1,12 +1,12 @@
 ---
-unit: gifts-2026-11-10-1430
-regular: gifts
-activity: alliance-gifts
-segment: 2
+unit: daily-missions-2026-11-10-1800
+regular: daily-missions
+activity: daily-missions
+segment: 3
 priority: 3
-created_at: 2026-11-10T23:41:38Z
-expires_at: 2026-11-11T02:30:00Z
-planned_for: 2026-11-10T22:30:00Z
+created_at: 2026-11-11T02:09:16Z
+expires_at: 2026-11-12T02:00:00Z
+planned_for: 2026-11-11T02:00:00Z
 not_before:
 window:
 est_minutes: 5
@@ -19,6 +19,6 @@ claimed_at:
 lease_until:
 ---
 
-# gifts
+# daily-missions
 
 Produced by _tools_/queue.py. The executor reads the activity metadata and the standing rules before acting.
