@@ -843,3 +843,20 @@ of 2026-10-28.
   worktree early in this pass; no loss identified, rule
   recorded going forward. Full detail in
   pr-integration/0400-run.md.
+
+## 04:15 to about 04:20 - pr-integration 0415 pass (non-batch)
+
+- Standing PR integrator pass, NON-batch: checker plain
+  and merge-aware both not due (outside every batch
+  window; next batch 07:00 PT). No merges. Records PRs
+  627 (2026-11-11, branch tip 3f5a93dd) and 615
+  (2026-11-10, head 5f302d8cc3) both probed CLEAN against
+  main 775e3254e and await the 07:00 batch. Tools PR 425
+  still owner-gated (OD-20261108-01 open, no owner
+  decision); head 0fb5a27f6 unchanged and main unchanged
+  since the 0345 verification, so no new comment
+  (identical verification, merged tree 31b46364). Process
+  note: a git checkout main plus git pull in the shared
+  VPS main worktree early in this pass, verified a no-op,
+  no loss identified. Full detail in
+  pr-integration/0415-run.md.
