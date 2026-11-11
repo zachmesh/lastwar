@@ -2073,6 +2073,7 @@ of 2026-10-28.
   percent (1.9G free). Silent run, no Slack sync. Status:
   done. Full detail in pr-catchall/1139-run.md.
 
+<<<<<<< HEAD
 ## About 11:32 to about 11:47 - Knowledge organization 1132 run, 1 profile folded, PR 644
 
 - Zombie-invasion 1.34.0 (ticker-1045, commit 8eed5fa0). PR #644, 1 commit (3a25ba0b), base main 3594e469, OPEN at run end. Full detail in knowledge-organization/1132-run.md.
@@ -2085,3 +2086,21 @@ of 2026-10-28.
 - Issue #149 recurrence fixed: the Nov 10 observation writes its per-pass accounting as headings ("Red dots - 8 seen, 6 explained, 2 unexplained"), which the diff did not parse, so it read 0 unexplained on a day with 5. PR #645 (branch work/scout-heading-counts-149, commit cecc1526): a heading of that form now starts a narrative accounting section with its counts, and its "- Unexplained:" bullet names the dots against the heading count. Validation: py_compile clean, 22/22 fixture assertions, Nov 10 end-to-end 0 -> 5 unexplained with distinct 4 named, Nov 1/3/4/9 outputs byte-identical to main, idempotent re-run. PR verified MERGEABLE/CLEAN. Issue #149 commented with the implementing PR. No closure: closure belongs to the daily retro.
 - Shared-clone race found and recovered in-run: a concurrent worker checked out main at 19:46:08Z between this run's branch creation and its commit, so cecc1526 first landed on local main; fast-forward-merged onto the work branch and local main reset to github/main (b3fdbad3); remote main never pushed, untouched.
 - Slack summary sent to the owner Trirvia DM. Status: done. Full detail in tool-development/1132-run.md.
+=======
+## 11:40 to about 11:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-1140. Plan staged 5
+  units for the 14:57 PST slots (passes, secrets, treasures,
+  trucks, events; 71 already present, 1 skipped done-current,
+  1 skipped closed; 5 expired (0657 UTC slots, windows passed
+  unexecuted); 1 stale inbox copy already closed in another
+  worktree dropped; roster stale warning, issue #198). Sweep
+  production skipped (11:00 hour); tonight's pair already
+  complete in the live pool and on the branch tip (1630 and
+  1730 local, both expiring at the 19:00 reset instant).
+  Scout diff on the 2026-11-10 15:14 observation re-applied
+  with identical 0 counts (observed/actionable/enqueued/
+  candidates/unexplained 0), 0 withdrawals, no new issue.
+  Pool inbox 80, claimed 0, done 1566. Status: done. Full
+  detail in queue-planning/1140-run.md.
+>>>>>>> 2fd7f8e3e (docs(records): queue planning 1140 run record (2026-11-11))
