@@ -2219,6 +2219,31 @@ of 2026-10-28.
   17:39:11". Duel delta test still owed (no VS panel visit).
   Detail in radar-tasks/1233-queue-run.md.
 
+## 13:36 to about 13:46 - Ticker pass ticker-1332, training unit 1003 partial
+
+- Troop-training (1340, ticker-1332, partial): 0 of 4 barracks
+  checked. Radar map exited via the back arrow (grounded
+  (326,948)) after two Home-button taps produced no change.
+  Tent grounding missed again - the (602,578) tap on a
+  grounding box selected nothing. The Drill Ground read did
+  not happen: the grounding-centre tap (395,455) selected
+  Iron Mine Lv.27 instead, left untouched. Lv.24 batch still
+  expected running to about 16:49; Lv.27 idle/blocked state
+  carried, not re-read. Same-blocker partial for Issue #150.
+  Detail in troop-training/1340-queue-run.md.
+
+## 13:47 to about 13:57 - Ticker pass ticker-1332, arms-race unit 1003 partial
+
+- Arms-race (1347, ticker-1332, partial): first unit of the
+  current phase, but the phase was never read. Entry failed
+  twice: the grounded "Events" point (645,62) opened the Mall,
+  and the labelled Events icon (707,146) took two no-change
+  taps. The Mall exit is now grounded precisely at (316,952)
+  (the failed (262,958) taps missed the button). No scoring,
+  no claims, phase ends about 14:00 - the miss is a
+  late-pickup entry failure for this phase. Detail in
+  arms-race/1347-queue-run.md.
+
 ## About 12:39 to about 12:56 - PR catch-all 1239 run, day INDEX markers found and already fixed
 
 - Catch-all pass pr-catchall-2026-11-11-1239. No adoption, no
