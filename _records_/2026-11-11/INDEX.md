@@ -1702,3 +1702,20 @@ of 2026-10-28.
   merge. Local main fast-forwarded to 683ee2a4f. Slack
   sync for the 637 merge. Status: done. Full detail in
   pr-integration/0800-run.md.
+
+## 08:22 to about 08:32 - Ticker pass ticker-0804, zombie-invasion unit 012 partial
+
+- Zombie-invasion (0832, ticker-0804, partial): one Lv.10 kill
+  (X:463 Y:324), 268,000 coins claimed in-unit; squads_parallel 1,
+  stamina-bound (18 at entry, 9 after the march; the 50-stamina
+  item hunt in the Inventory Special tab did not reach the item
+  before the unit clock ran out); wave still live, next wave about
+  09:01; successor enqueued to start now. Store not visited; Coin
+  Chest (SSR) row drag blocker and live medal balance stay open.
+  Detail in zombie-invasion/0832-queue-run.md.
+- PR 615 (records 2026-11-10) reconciled branch-side first this
+  pass: merged main 683ee2a4 (merge commit dd865af64b9), the 9
+  _queue_ conflicts from the integrator's 0700 note resolved as
+  instructed, merge-tree probe against current main exit 0, pushed
+  and verified (remote tip dd865af64b9), reconciliation comment
+  posted; the PR awaits the 11:00 batch merge.
