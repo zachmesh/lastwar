@@ -1795,3 +1795,16 @@ of 2026-10-28.
   No new issue filed. Slack sync sent (ts
   1794415679.282389). Status: done. Full detail in
   knowledge-organization/0832-run.md.
+- Integrator pass pr-integration-2026-11-11-0845.
+  NON-batch pass (checker due exit 1, outside every batch
+  window, next batch point 11:00 PT). One knowledge merge:
+  PR 638 squash-merged to main f0c385f46
+  (zombie-invasion 1.33.0). Records PRs 636 (2026-11-11,
+  head ad0d97875, CLEAN) and 615 (2026-11-10, head
+  dd865af64b9, CLEAN) await the 11:00 batch. Tools PR 425
+  re-verified CLEAN against new main f0c385f46 (merge-tree
+  exit 0), still owner-gated (OD-20261108-01 open);
+  re-verification comment posted. Local main
+  fast-forwarded to f0c385f46. Slack sync for the 638
+  merge. Status: done. Full detail in
+  pr-integration/0845-run.md.
