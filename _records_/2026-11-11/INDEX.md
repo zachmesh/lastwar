@@ -2251,3 +2251,15 @@ of 2026-10-28.
   since the 1245 verification note). No merges; no
   Slack sync (silent run). Status: done.
   Full detail in pr-integration/1300-run.md.
+
+## About 13:15 to about 13:20 - PR integration 1315 run, non-batch pass
+
+- NON-batch pass: checker not due (outside every batch
+  window; next batch 15:00 PT). Records PR #643 verified
+  CLEAN at head ef48e131f (20 commits beyond main),
+  awaiting the 15:00 batch. Tools PR #425 unchanged head
+  721830b7f, verified MERGEABLE/CLEAN, still owner-gated
+  (OD-20261108-01 open); no new comment (head unchanged
+  since the 1245 verification note). No merges; no
+  Slack sync (silent run). Status: done.
+  Full detail in pr-integration/1315-run.md.
