@@ -344,3 +344,15 @@ of 2026-10-28.
   on PRs 301 and 425 (restating the 0145 verification -
   see run record). Status: done. Full detail in
   pr-integration/0200-run.md.
+
+## 02:15 to about 02:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0215. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): no records merges, no
+  knowledge/code merges; records PRs 301, 615 and 618
+  re-verified CLEAN against main a2c42a7a, awaiting the
+  03:00 batch; tools PR 425 owner-gated, clean, unchanged
+  (OD-20261108-01 open). No comments posted this pass
+  (no-repeat rule). Status: done. Full detail in
+  pr-integration/0215-run.md.
