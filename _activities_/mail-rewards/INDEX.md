@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T22:32:17Z
+modified: 2026-11-11T23:32:17Z
 level: L1
-version: 1.39.0
+version: 1.40.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -45,6 +45,7 @@ grounded_in:
   - source: ticker-0212 mail-rewards execution record 2026-11-11 0222 queue run (done, Alliance Daily Donation Rankings and Event Arms Race rewards claimed, both lists verified empty of gift icons; record commit b0615980f on records/2026-11-11)
   - source: ticker-1012 mail-rewards execution record 2026-11-11 1029 queue run (done, every category walked, Event Zombie Invasion Intel + train mails and System Maintenance + Survey claimed, HUD deltas verify coin/food/diamonds exactly, normalized-coordinates correction; record commit c0c788be on records/2026-11-11)
   - source: ticker-1408 mail-rewards execution record 2026-11-11 1422 queue run (partial, Event Claim All paid medal 280, EXP 2.4M, Battle Data 1.5K, 10-stamina x2, coin 969.0K, food 769.0K, iron 769.0K, other categories unchecked, tap offset measured; record commit d00afba5a on records/2026-11-11)
+  - source: ticker-1439 zombie-invasion execution record 2026-11-11 1456 queue run (partial, Glacieradon chain 016, mail already claimed by the 1422 mail unit, Claim All auto-advance to the next unread mail, mail-detail back arrow offset-miss with re-test owed; record commit 34be97f28 on records/2026-11-11)
 ---
 
 
@@ -74,7 +75,7 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
 - Favorite row: tapping the row body did not navigate; the row arrow at the right edge did (2026-11-11 1029 unit).
 - Dismissing a reward popup: one tap on the dimmed area above the banner closed it (2026-11-11 1029 unit).
 - The back arrow sits at the bottom left of the mail screens, both in
-  the category list and inside an open mail. (2026-11-10 1259 update: the mail-list back arrow's true centre in the 642x951 window is (62,948) - taps at (57,902), (40,900), (55,925) and (40,955) all missed high, the button sits at about y 869-935 px, centre about y 902 px; measure the centre fresh from a screenshot crop in each unit. The AX tree carries no back-button element (game canvas), so coordinate taps at the freshly measured centre are the working route; keyboard input is unavailable in this app - focus belongs to the other LastWar window.)
+  the category list and inside an open mail. (2026-11-10 1259 update: the mail-list back arrow's true centre in the 642x951 window is (62,948) - taps at (57,902), (40,900), (55,925) and (40,955) all missed high, the button sits at about y 869-935 px, centre about y 902 px; measure the centre fresh from a screenshot crop in each unit. The AX tree carries no back-button element (game canvas), so coordinate taps at the freshly measured centre are the working route; keyboard input is unavailable in this app - focus belongs to the other LastWar window.) (2026-11-11 1456 update: the mail-DETAIL back arrow in the 1920x1080 fullscreen framing ignored four tap variants at (301,958) - snapped, snapped-explicit, left-edge swipe drag, unsnapped - and click_element label "Back" found no enabled control; but those taps aimed at the arrow's centre would have landed near (278,968) under the measured -23 x, +10 y tap offset (tooling Issue #652), so the failure is consistent with an offset miss and does NOT prove the control input-blocked - the #575 comment filed mid-unit was corrected by a follow-up comment. Re-test the mail-detail back arrow with offset-compensated taps (+23 x, -10 y) aimed at the freshly measured centre before concluding anything about it. Claim All auto-advances: a Claim All tap after the list is claimed opens the next unread mail's detail, so do not tap Claim All twice in a row without checking what opened.)
 
 ## Cadence
 
@@ -601,6 +602,7 @@ the next tick re-produces this regular as a fresh unit.
 - Which recurring senders are worth keeping unread as evidence, and which
   reward mails expire if not claimed in time.
 - Unidentified blue icon 3.0K in the Event CONGRATULATIONS popup (2026-11-11 1029 unit): recorded as read but unidentified; the 530 medals and 4.4M hero EXP from the same popup have no HUD counter to verify against, while the coin, food and diamond deltas verified exactly.
+- Mail-detail back arrow in the fullscreen framing (2026-11-11 1456, ticker-1439 zombie unit 016): four tap variants at (301,958) failed, but the taps are consistent with an offset miss under the measured -23 x, +10 y tap offset - re-test with offset-compensated taps (+23 x, -10 y) aimed at the freshly measured centre before concluding the control is input-blocked. The mail-list back arrow (62,948 in the 642x951 window) is the verified working route in windowed form.
 
 
 ## What the 2026-11-03 1055 unit added - mail entry mis-targeted to Alliance twice, then no-change, filed as Issue 230
@@ -1027,3 +1029,12 @@ the next tick re-produces this regular as a fresh unit.
 - Figures read live on screen: food 687.5M, iron 1.0G, coin 134.7M, power 149,218,973, diamonds 6,717 at entry (unchanged from the help unit). No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 1, achieved 0, categories_claimed 1, categories_total 5, points_gained 0, verified yes, blocker_category none, device_takeovers 0, resources_gained none, costs about 13 minutes play.
 - No diamonds or money spent. No other task type was executed in this unit.
+
+## What the 2026-11-11 1456 ticker-1439 run added - zombie unit 016 mail-detail back arrow offset-miss, Claim All auto-advance
+
+- Unit zombie-invasion-zombie-2026-11-10-016 by ticker-1439, about 14:40 to 14:56 local, status partial (zombie unit, not a mail unit). Evidence in `_records_/2026-11-11/zombie-invasion/1456-queue-run.md` (commit 34be97f28 on records/2026-11-11). Session cc-627 on the owner Mac mini.
+- Mail at entry - already claimed by the mail unit: the game opened on the EVENT mail tab with a Zombie Invasion - Intel Reward mail open under a CONGRATULATIONS! banner (medal x280, Hero EXP 2.4M, Battle Data 1.5K, 10-stamina x2, coin 969.0K, food 769.0K, iron 769.0K). Ticker-1408's mail unit 1030 (14:22-14:35) already did Event Claim All and paid exactly those rewards. This unit's two Claim All taps at about 14:41 were redundant no-ops - the game pays once, so nothing was double-claimed and this unit gained nothing from mail. The second tap opened a train-arrival mail ([AP3x] Missile Apex's train has arrived!, informational, no rewards) as the list auto-advanced to the next unread mail. LESSON: the mail unit owns mail - a non-mail unit must not open mail details in background control unless a relaunch is budgeted; and a Claim All tap after the list is claimed auto-advances to the next unread mail detail, so do not tap Claim All twice in a row without checking what opened.
+- Mail-detail back arrow - offset miss, NOT input-blocked: the train mail detail could not be exited - the back arrow ignored four attempts (coordinate tap snapped (default), coordinate tap snapped explicitly, left-edge swipe drag, coordinate tap unsnapped (snap_to_control=false)) and click_element label "Back" found no enabled control with that label. The mail detail exposes no Accessibility tree (OCR text only); the back arrow is an icon-only control with no AX label. CORRECTION, from the rebased branch tip: ticker-1408 measured a tap offset of about (-23 x, +10 y) normalized in the same fullscreen window (tooling Issue #652). This unit's taps aimed at the arrow's center (301,958) would have landed near (278,968) - left of the button's edge - so the four no-change taps are consistent with an offset miss and do NOT prove the control input-blocked. The tooling Issue #575 comment filed mid-unit is corrected by a follow-up comment in the same issue. Open item: re-test the mail-detail back arrow with offset-compensated taps (+23 x, -10 y) aimed at the freshly measured centre. See the updated How to enter entry and the new Open questions bullet.
+- Recovery: menu Last War > Quit Last War, then open_app relaunch; the app returned to the base screen with state intact, windowed 642x951 (not fullscreen 1920x1080). See the zombie-invasion profile's QUALIFICATION in its Correction section - Quit + relaunch is a remote route back to windowed 642x951.
+- Result stats: no mail unit ran; nothing claimed by this unit, nothing spent. Verified yes (the already-claimed state and the offset arithmetic are same-unit reads against the 1422 record). Blocker_category c.
+- No diamonds or money spent. No mail was deleted (Delete All never pressed).
