@@ -1972,3 +1972,21 @@ of 2026-10-28.
 - Issue comments: #168, #160, #500, #230, #183. Slack summary sent to the owner Trirvia DM (ts 1794422863.922279). Stats: profiles updated 4, contradictions resolved 1, stale marked 0, gaps filed 0.
 - Integrator pass pr-integration-2026-11-11-1045.
   Full detail in pr-integration/1045-run.md.
+## 10:40 to about 10:57 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-1040. Plan staged 12
+  units for the 14:03/14:30 PST slots (mail, help, gifts,
+  harvest, radar, survivors, train, training, donations,
+  arms-race, star-ceremony, duel-score; 64 already present, 1
+  skipped done-current, 1 skipped closed; 6 expired
+  (0603/0630 UTC slots, windows passed unexecuted); 3 stale
+  inbox copies already done on the branch dropped; roster
+  stale warning, issue #198). Sweep production skipped
+  (10:00 hour); tonight's pair already complete in the live
+  pool and on the branch tip (1630 and 1730 local, both
+  expiring at the 19:00 reset instant). Scout diff on the
+  2026-11-10 15:14 observation re-applied with identical 0
+  counts (observed/actionable/enqueued/candidates/unexplained
+  0), 0 withdrawals, no new issue. Pool inbox 80, claimed 0,
+  done 1560. Status: done. Full detail in
+  queue-planning/1040-run.md.
