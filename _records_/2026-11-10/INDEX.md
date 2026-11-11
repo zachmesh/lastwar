@@ -3619,3 +3619,6 @@ modified: 2026-11-10T14:21:00Z
   (idempotent), 0 withdrawals, no issues filed. Pool
   by_state: inbox 74, claimed 0, done 1488. Status: done.
   Full detail in queue-planning/2040-run.md.
+## 21:00 to about 21:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-2100. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Records PR #597 verified CLEAN (head 65d21503b, 28 commits) and awaits the 23:00 batch; 1 verification comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 49895f66c; no new comment (head and main unchanged since the 2045 re-verification). Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2100-run.md.
