@@ -1290,3 +1290,14 @@ of 2026-10-28.
   Max, Intercity Truck 95%. This live queue read also repairs the
   0535 arms-race record's evidence (see its correction). Detail in
   research-queue/0553-queue-run.md.
+## 06:00 to about 06:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0607.
+  NON-batch pass (checker plain and merge-aware both
+  not due, next batch 07:00 PT). No merges. Records PRs
+  627 (36 ahead) and 615 (14 ahead) clean, awaiting the
+  07:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01), re-verified CLEAN against unchanged
+  main, no comment posted (main unmoved since the 0545
+  verification). Status: done. Full detail in
+  pr-integration/0607-run.md.
