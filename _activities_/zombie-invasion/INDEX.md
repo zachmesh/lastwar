@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-11-11T02:32:17Z
+modified: 2026-11-11T03:32:17Z
 level: L1
-version: 1.23.0
+version: 1.23.1
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -727,6 +727,11 @@ execution.
 
 - Sighting, not a zombie unit: the ticker-1806 gifts unit (gifts-2026-11-10-1430, about 18:10 to 18:16 local) entered the Events hub and read the tab bar live: a Zombie Invasion tab beside Desert Battlefield and a partially visible "...f Oil" tab. Evidence in `_records_/2026-11-10/alliance-gifts/1810-queue-run.md` (commit 20a62ff0 on records/2026-11-10). No zombie unit was executed in this pass.
 - Newest-read rule: this sighting supersedes the absence reads as the newest verified record - the 2026-11-09 absence re-confirmations (scout 1152, arms-race 1345) and the ticker-1734 arms-race unit's close scan at about 17:56 the same day, which found no Zombie Invasion tab in the Events strip. The tab reappeared between 17:56 and 18:11, around the 18:00 rollover (inference: the duel-day / Weekly Pass reset lands about 18:00 per Issue #242; the reappearance time itself was not measured).
-- What is verified: the TAB is back in the Events hub tab bar. What is NOT verified: the event page itself (Store, Ranking, Rewards, Search, wave countdown), whether zombies are nearby, and whether the event runs on the old rules. The chain head zombie-2026-11-10-001 was seeded this pass for the next unit to open the tab and verify the event page.
+- What is verified: the TAB is back in the Events hub tab bar. What is NOT verified: the event page itself (Store, Ranking, Rewards, Search, wave countdown), whether zombies are nearby, and whether the event runs on the old rules. The chain head zombie-2026-11-10-001 was seeded this pass for the next unit to open the tab and verify the event page. (2026-11-10 1834 update: the chain head was restored to the live pool; the verification unit is next - see the 1834 section below.)
 - Standing rule, unchanged until that verification lands: do NOT seed a fresh zombie chain beyond the verification unit, and do NOT sow (the 2026-10-30 ban - no sowing until the page reappears - is satisfied only by a verified event page, not by a tab-bar sighting). If the next unit confirms the page live, the chain reopens under the 2026-10-28 owner rules (no daily limit, no hour budget, pause 1 hour only when no zombies are nearby) and this profile records the return as a new round.
 - Result stats: no zombie unit ran; nothing claimed, nothing spent, verified yes for the tab sighting only (same-unit live read), blocker_category none.
+
+## What the 2026-11-10 1834 ticker pass added - chain head restored to the live pool, event-page verification still owed
+
+- Queue-state change, not a zombie unit: the ticker-1834 batch (commit af56d36ec on records/2026-11-10) restored chain head zombie-2026-11-10-001 to the live pool after the 18:11 live tab sighting - the unit had stranded on the branch inbox only. Evidence in the commit's queue-file move and `_records_/2026-11-10/INDEX.md`.
+- Standing rule, unchanged: the next tick verifies the event page; do NOT seed a fresh chain beyond the verification unit, and do NOT sow until the event page itself is verified live. The tab sighting alone does not lift the ban.
