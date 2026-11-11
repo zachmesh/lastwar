@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T03:32:17Z
+modified: 2026-11-11T07:32:17Z
 level: L1
-version: 1.50.0
+version: 1.51.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -54,6 +54,7 @@ grounded_in:
   - source: ticker-1004 shop-claims execution record 2026-11-10 1029 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, Weekly Pass scroll failed on three methods, check-in banner absent; record commit 2218eb3cd on records/2026-11-10)
   - source: ticker-1314 shop-claims execution record 2026-11-10 1335 queue run (done, 4 tabs checked, nothing claimable, Monthly Daily Pickup Claimed, Rewards Left 11, press-drag scroll answered the 1029 follow-up, all four Weekly Pass cards verified not owned, Iron Daily Pickup x3; record commit d781dac9d on records/2026-11-10)
   - source: ticker-1834 shop-claims execution record 2026-11-10 1836 queue run (done, 3 claims, new reset day's Hot Deals free pack plus Free Supply auto-claim plus monthly Daily Pickup, all four Weekly Pass cards verified not owned, Iron Daily Pickup x3 Total x21 confirmed; record commit af56d36ec on records/2026-11-10)
+  - source: ticker-2231 shop-claims execution record 2026-11-10 2256 queue run (partial, Hot Deals promo only, Weekly Pass no owned pickup on screen, Free Supply state unverified, monthly gift already Claimed, app exit on the monthly tab tap with a clean relaunch; record commit d22fd7cf1 on records/2026-11-10)
 ---
 
 
@@ -87,6 +88,7 @@ Executions are recorded in `_records_/<date>/shop-claims/`, one file per executi
   (841,200). Press-drag (500,750) to (500,300) is the confirmed
   list-scroll method for the Weekly Pass page; scroll_amount 5 does
   not move the list.
+- Entry, 2026-11-10 2256: from the Alliance Techs tree, the panel X closed to the Alliance menu, the menu back arrow returned to the map, and the cart icon at (903,63) opened the shop on HOT DEALS, first try each. The cart point (903,63) is confirmed again as the shop entry.
 
 ## Cadence
 
@@ -97,7 +99,7 @@ Executions are recorded in `_records_/<date>/shop-claims/`, one file per executi
   carried unresolved through the 1039 and 1340 sections - the
   1812 unit both re-read the line and confirmed it
   behaviourally (Coin pass lapsed about 18:03, new-cycle
-  Free Supply auto-claim fired on shop open).
+  Free Supply auto-claim fired on shop open). (2026-11-10 2256 update: the reset line read live "Weekly Pass rewards reset at 18:00:00" again - the twenty-first live confirmation. The Free Supply chest showed no status label on this visit - no auto-claim was observed and no "Claimed" label was read - so its state is unverified, not claimed; the auto-claim in this bullet is not universal, matching the 0218 unit's no-auto-claim read.)
 - Each owned pass pays one Daily Pickup per day; after claiming, the
   card reads Already claimed today and its button turns into Renew.
 - The Free Supply chest on the Weekly Pass page auto claims when the
@@ -1485,3 +1487,16 @@ the free and already paid for parts, never the paid unlocks.
 - CALIBRATION learned in this unit: computer.control coordinates are normalized 0-1000 on BOTH axes. The back-arrow taps at (168,872) failed three times with no change because y 872 landed above the button in image pixels; the measured centre is (168,917) and that tap navigated at once. The HELP dialog X closed at (841,200). Future units: convert screenshot pixels as x/642*1000 and y/951*1000. Scroll: scroll_amount 5 at (500,600) did not move the Weekly Pass list; a press-drag from (500,750) to (500,300) scrolled it, confirming the 1335 unit's finding.
 - No diamonds or money spent. No price button, Renew, paid unlock or Legendary Take All tapped. No other task type was executed in this unit.
 - Result stats: target 3, achieved 3, resources_gained Coin Chest (UR) x5 plus 1h Research Speed-up x25 plus Monthly Pass daily gift (gold bars x2, red diamonds x100, gold tickets x2, iron x200, 5-minute speedups x60) plus Free Supply (blue chest x1, ruby x10), costs about 10 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-10 2256 unit added - checked only, Hot Deals promo only, Weekly Pass no owned pickup, monthly gift already Claimed, app exit on the monthly tab tap with a clean relaunch, partial
+
+- Unit passes-2026-11-10-1857 by ticker-2231, 22:51 to 22:56 local, status partial. Evidence in `_records_/2026-11-10/shop-claims/2256-queue-run.md` (commit d22fd7cf1 on records/2026-11-10). Computer sessions cc-518 and cc-519 on the owner Mac mini.
+- Entry - Techs tree to shop in three taps: the game was left on the Alliance Techs tree by the donations unit. The panel X closed to the Alliance menu, the menu back arrow returned to the map, and the cart icon at (903,63) opened the shop on HOT DEALS, first try each. Base state at entry: food 644.6M, iron 967.7M, coin 106.1M (HUD-rounded), gold 405.9K, Total Power 149,218,973, signed in as HidingAnt504.
+- Hot Deals - promo only, no free pack: the page shows only the promo carousel: "Visit the Last War Store for more rewards!" and "Claim points and redeem great rewards / 1000 POINTS" with a Go button. No free pack is showing. The Go button was not tapped: per the 0114 unit it opens the external store, not a claim.
+- Weekly Pass - no owned pickup on screen: the reset line reads live "Weekly Pass rewards reset at 18:00:00", the twenty-first live confirmation of the 18:00 reset (Issue #242). Free Supply chest is shown with no status label read on this visit: no auto-claim was observed and no "Claimed" label was read, so its state is unverified, not claimed. Legendary row reads "Take All $19.99" - never tapped. S2 Drone Components Weekly Pass (Legendary) and S1 Drone Parts Weekly Pass (Epic) both show "Get Now $4.99" - offers to buy, not owned pickups; not tapped. A drag-scroll of the pass list did not move it, so the cards below (Iron, Coin) are unchecked this unit - press-drag (500,750) to (500,300) remains the confirmed scroll method (1335, 1836); the plain drag-scroll used here is not it.
+- App exit on the monthly tab tap, clean relaunch (NEW failure mode): tapping the Super Monthly Pass tab quit LastWar outright (target_app_exited). The launch request after it returned outcome_unknown, so the launch was not repeated; list_windows showed a single new window (634238, 642x951, pid 78374) and the game back on the map with state intact - no login demand, no different-device dialog. The duplicate 642x919 window is gone after the relaunch. Retry after the relaunch: the shop reopened and the Super Monthly Pass tab opened cleanly with no second exit, so the exit was incidental, not tab-caused. Do not treat a single tab-tap exit as a tab blocker; retry once after a clean relaunch before concluding anything.
+- Super Monthly Pass - daily gift already Claimed: Monthly Pass, Days Left 11, Rewards Left 11, Squad 4 Lv.20, "Unlock an extra squad!". The Daily Pickup button reads "Claimed" - today's monthly gift is already claimed, nothing to claim. The Monthly Pass Extension $24.99 button was not tapped. Monthly 11/11 is unchanged since the 1836 claim this reset day.
+- Check-in (Issue #553): the shop Go-button foreground-click attempt, the standing idea, was NOT tried in this unit either. The issue stays open: the check-in free gift is still unclaimed with no working entry found.
+- Close: nothing claimed, nothing spent. Status partial: the Weekly Pass Free Supply state and the lower pass cards are unverified, so the tracker stays untouched and the next tick re-produces the regular. Follow-up: the next passes unit re-checks the Weekly Pass Free Supply label and scrolls the full pass list with a press-drag.
+- The shop was closed back to the map before the unit ended; Total Power 149,218,973 at close.
+- Result stats: target check-Hot-Deals-free-pack-Weekly-Pass-owned-pickups-monthly-daily-gift-claim-only-free-owned; achieved Hot-Deals-promo-only-Weekly-Pass-read-no-owned-pickup-on-screen-monthly-gift-already-Claimed-app-crash-plus-clean-relaunch; resources_gained none; costs 0-spent-5-min; verified yes; blocker_category h; claims_made 0; monthly_days_left 11; monthly_rewards_left 11.
