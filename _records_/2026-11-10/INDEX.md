@@ -3074,3 +3074,36 @@ modified: 2026-11-10T14:21:00Z
   owner-gated, clean at unchanged head 0fb5a27f,
   OD-20261108-01 still open. No comments posted. Status:
   done. Full detail in pr-integration/1745-run.md.
+
+## 17:32 to about 17:53 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-10-1732
+  (done). Worked from the 1632 run's watermark (substantive through
+  514e6447c, meta through 23aa35116). PR #592 merged with 0 comments,
+  0 reviews - no feedback owed. Folded ticker-1634 (zero-sweep 1634,
+  training 1649) and ticker-1704 (arms-race 1712, donations 1734)
+  into 6 profiles: troop-training 1.40.0 (no barracks tent located
+  after three pans, blind-pan method RETIRED under R2, next unit
+  re-grounds from the 1229 record's successful tent point, Lv.24 T8
+  batch still running to about 2026-11-11 16:49), arms-race 1.81.0
+  (Base Building 21,600 of 30,000, tier 3 short by 8,400, one tap
+  claimed both earned point chests, cumulative 3/2 claimed, Oil Well
+  1d 09:08:00 still running, successor staged to phase close
+  02:00Z), alliance-donations 1.88.0 (17 coin donations to Quick
+  Construction, 17/30 to 8/30 live, final count hidden behind a
+  00:04:21 cooldown, re-read unit enqueued; Alliance entry blocker
+  from 2026-11-02 BROKEN at shield (927, 715); footer 7600 to 9300;
+  replenishment 39th data point +16), secret-missions 1.34.0
+  (Command Post read live, Provide Tech Support SSR still not
+  perfect with the orange badge - second consecutive read, supports
+  a new task instance), daily-activities 1.24.0 (pre-reset sweep 001
+  of 2, 1 of 23 lines read live, coin bubble standing, line 3 not at
+  zero), radar-tasks 1.71.0 (base-edge skull badge moved 1 to 4 to 2
+  with countdown 00:00:24 to 00:00:52 inside one unit - same-unit
+  evidence for Issue #498). Contradiction resolved (1): the 1555
+  "diamonds 13.22K" display read is superseded - 13.22K is a separate
+  gold counter beside the avatar, diamonds read 6,267 live. Issue
+  comments posted: #498, #160, #558; no new issue filed. Profiles PR
+  #594, commit 50cfa4bd, MERGED at 01:51:36Z with 0 comments and 0
+  reviews, base main 80935570. Status: done. Full detail in
+  knowledge-organization/1732-run.md.
