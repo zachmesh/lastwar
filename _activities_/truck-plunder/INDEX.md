@@ -1,9 +1,9 @@
 ---
 title: Truck Plunder
 created: 2026-10-25T20:12:00Z
-modified: 2026-11-10T22:32:17Z
+modified: 2026-11-11T05:32:17Z
 level: L1
-version: 1.40.0
+version: 1.41.0
 description: Intercity Trade trucks, dispatching own trucks and plundering the trucks of others, one activity folder for trade knowledge
 status: unverified
 grounded_in:
@@ -44,6 +44,7 @@ grounded_in:
   - source: ticker-0504 truck-plunder execution record 2026-11-10 0513 queue run (partial, Reward Recovery 2026-11-7 record claimed, 1 SSR plunder won, Trade Count 4/5, Plunder Count 2/4; record commit 19608e2c9e on records/2026-11-10)
   - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, Duel screen read live inside the training unit - Dispatch UR Trade Truck +300,000, Perform 1 UR Secret Task +225,000, superseding the 100,000 Handbook rate; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-1343 truck-plunder execution record 2026-11-10 1411 queue run (partial, all 4 returned UR trucks settled HUD-verified, Trade Count 4/5, Plunder Count not re-read, 5th dispatch and plunders resume next unit; record commit b2c2b7a43 on records/2026-11-10)
+  - source: 2026-11-10 daily retro, execution-knowledge action A-2026-11-10-01 (Issue #300): never write an expected or Handbook-rate score into stats.points; points holds live-read scored gains only
 ---
 
 # Truck plunder - Intercity Trade
@@ -1750,8 +1751,8 @@ settlement and dispatch execution record).
 - Coordinate lesson: one Return tap missed because pixel coordinates were passed where the control expects normalized 0-1000 coordinates; re-grounded at norm 662,893 and it worked. Coordinates for computer.control are always normalized.
 - Mid-unit transient, about 02:51 during the No.3 refresh confirm: an observe call failed "target app exited or restarted", but LastWar was still running (pid 1908) and the refresh dialog was still up. No different-device dialog was seen in this unit; kick count 0.
 - No diamonds spent. No other unit's work touched.
-- Result stats: target dispatch 5, plunder 4, achieved dispatch 4, plunder 1, resources_gained iron 951.8K, food 951.8K, coin 607.5K, UR shards 500 x6, 5m speedups x10, blue chest x1, points 1200000 (expected duel points, corrected live rate 300,000 each read 2026-11-10 0337, verified live by the 0435 duel-score read), costs 12 Trade Contracts, about 12 minutes, verified yes (counters and rewards read live in-unit), blocker_category h (by-design partial - the 15 minute unit cap closed the quota mid-way; dispatch 4/5, plunder 1/4, remainder resumes in the next trucks unit).
-- CORRECTION 2026-11-10 0337 (this run): the 100,000 Handbook rate for a UR truck dispatch is superseded by the live Duel screen read of +300,000 per dispatch (0337 record, evidence `_records_/2026-11-10/troop-training/0337-queue-run.md`, commit b7e79a62). The 0248 expected score is therefore 1,200,000, not 400,000. The screen also reads Perform 1 UR Secret Task +225,000 (first live UR secret-task rate; the Handbook Legendary figure is 75,000, a different tier). tools/duel_schedule.json still carries the 100,000 rate; the tool-data correction belongs to the tool-developer (flagged on Issue #565). The duel-score unit's live personal-total read is the verification. The older posture lines in this profile that quote the Handbook 100,000 as tool-reported values stand as history of what the tool said; the live rate above governs.
+- Result stats: target dispatch 5, plunder 4, achieved dispatch 4, plunder 1, resources_gained iron 951.8K, food 951.8K, coin 607.5K, UR shards 500 x6, 5m speedups x10, blue chest x1, points 1200000 (live-read duel gain: 4 UR dispatches at the live 300,000 rate read 2026-11-10 0337, verified by the 0435 duel-score read of the personal total rising 1,200,000 - not an expected figure), costs 12 Trade Contracts, about 12 minutes, verified yes (counters and rewards read live in-unit), blocker_category h (by-design partial - the 15 minute unit cap closed the quota mid-way; dispatch 4/5, plunder 1/4, remainder resumes in the next trucks unit).
+- CORRECTION 2026-11-10 0337 (this run): the 100,000 Handbook rate for a UR truck dispatch is superseded by the live Duel screen read of +300,000 per dispatch (0337 record, evidence `_records_/2026-11-10/troop-training/0337-queue-run.md`, commit b7e79a62). The 0248 expected score is therefore 1,200,000, not 400,000. The screen also reads Perform 1 UR Secret Task +225,000 (first live UR secret-task rate; the Handbook Legendary figure is 75,000, a different tier). tools/duel_schedule.json still carries the 100,000 rate; the tool-data correction belongs to the tool-developer (flagged on Issue #565). The duel-score unit's live personal-total read is the verification. The older posture lines in this profile that quote the Handbook 100,000 as tool-reported values stand as history of what the tool said; the live rate above governs. (2026-11-10 retro action A-2026-11-10-01, Issue #300: stats.points holds live-read scored gains only - never write an expected or Handbook-rate score into stats.points. The 1,200,000 in the 0248 stats above stands under this rule because the 0435 duel-score unit verified the +1,200,000 rise live on the personal total; it is a live-read gain, not an expected figure. The original 400,000 (4 x 100,000 Handbook) was the instance the retro cites. Future units: expected scores go in prose as expected, never in stats.points. Verification: the next retro's window points total contains no unit whose points is a Handbook-rate product; recheck 2026-11-11 retro.)
 
 ## What the 2026-11-10 0513 unit added - recovery claimed, 1 SSR plunder won, partial, 5th dispatch awaits returns
 
