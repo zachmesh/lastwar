@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-10T22:32:17Z
-version: 1.40.0
+modified: 2026-11-11T05:32:17Z
+version: 1.41.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -48,6 +48,7 @@ grounded_in:
   - source: ticker-0334 troop-training execution record 2026-11-10 0337 queue run (partial, Alliance Duel screen read live inside the training unit - Base Expansion, 14:18:29 remaining, alliance target 1,650,000, UR truck dispatch +300,000, UR secret task +225,000; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0934 alliance-duel execution records 2026-11-10 0958 queue run (star ceremony checked only, no trophy icon, red skull badge 5 with 00:00:09) and 1004 queue run (duel total 1,650,000 read live twice, gap 1,950,000; record commit 226f5c37 on records/2026-11-10)
   - source: ticker-1314 alliance-duel execution records 2026-11-10 1327 queue run (star ceremony checked only, no trophy icon, duel total 1,650,000) and 1331 queue run (duel total 1,650,000 read live, gap 1,950,000; record commit d781dac9d on records/2026-11-10)
+  - source: 2026-11-10 daily retro, execution-knowledge action A-2026-11-10-06 (Issue #609): schedule a duel-score unit after the last live read and before the duel rollover so the closing total is read, not inferred; Nov 10 last read 13:33, no closing read
 ---
 
 
@@ -196,6 +197,7 @@ decision (deferred, not ruled non-goals).
   alliance-duel record; a post-rollover read on the
   previous-day Ranking tab carries it equally (2026-11-03
   1809 precedent).
+- SCHEDULING RULE, 2026-11-10 retro action A-2026-11-10-06 (Issue #609): a duel-score unit is scheduled to run after the last live read and before the about-18:00 duel rollover, so the day's closing total is read, not inferred. The retro's 'before the 19:00 reset' wording is corrected here: the duel day rolls at about 18:00 (02:00 UTC absolute boundary), so a read after 18:00 falls on the new day and cannot carry the closed day's total (the previous-day Ranking tab can, per the 1809 precedent above). Nov 10 miss: the last read was 13:33 and the 1803 unit sat in inbox, so no closing read was taken. Verification: a live closing total read on Nov 11; recheck 2026-11-11 retro.
 - A tracking unit never grinds, spends or buys to chase the
   target - scoring actions stay with the themed-day regulars
   under the duel day gates in _tools_/duel_schedule.json.

@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-10T23:32:17Z
+modified: 2026-11-11T05:32:17Z
 level: L1
-version: 1.57.0
+version: 1.58.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -89,6 +89,7 @@ grounded_in:
   - source: zero-sweep 001 execution record 2026-11-09 1657 queue run (partial, base/HUD re-read, skull badge 4; record commit c9a86fa74 on records/2026-11-09)
   - source: ticker-0604 perception-scout execution record 2026-11-10 0615 queue run (partial, first perception of reset day 2026-11-10, Alliance leader back to Abuss Apex, skull badge 13, Desert Storm registration ends 1d 11:49:40; record commit 07f54ac96, folded late by the 1532 run - fell between the 0632 and 0732 watermarks)
   - source: ticker-1503 perception-scout execution record 2026-11-10 1521 queue run (partial, second perception of reset day 2026-11-10, Drill Ground level-up to Lv.27, Inventory point 880,841 retired, VS timer conflict resolved by the harvest unit; record commit f530c19b7 on records/2026-11-10)
+  - source: 2026-11-10 daily retro, execution-knowledge action A-2026-11-10-03 (reopened Issue #149): never reuse a grounded tap point after a view pan; re-ground fresh on every entry attempt
 ---
 
 
@@ -3822,7 +3823,7 @@ observe-only, nothing claimed). Evidence in
 - Drill Ground upgrade panel, inspected only: Lv.27 to 28, Hero EXP 26.0M, Unit Count +7,400 to +7,600, Power 140,200 to 165,800; costs all met (Lv.28 Headquarters, iron 952.1M/102.0M, food 629.3M/314.5M); Original Time 30d 01:27:10, Upgrade button 14d 07:32:57. "Finish Now 33,887" diamonds and "Upgrade" both untouched (red lines). Panel closed via X.
 - Alliance signal: toast "Alliance Gift (R) received!" about 15:15; the gifts regular owns the claim.
 - Red dots: 8 seen, 5 explained, 3 unexplained. Explained: hammer and flask queue indicators; Events badge 2 (Age of Oil 1, Survey Center 1, carried from the 06:14 read); Alliance dot (Wars, Help, Gifts, Techs, carried); Mail dot 1 (Alliance, In-app Purchases, carried). Unexplained: Inventory red dot (contents not opened - two taps at the stale point 880,841 failed, see below); skull icon badge 1 with a 00:00:47 countdown (carried from 2026-11-09, badge moved 13 to 1); radio/broadcast icon badge 11 (new number since 06:14).
-- Inventory point retired (rule R2): two taps at normalized 880,841 (grounded from the first base screenshot) did not open Inventory - the first surfaced the Drill Ground level-up modal; the second panned the base view and exposed a three-button shortcut cluster at the bottom right (blue people, blue cap, green up-arrow), whose green button opened the Drill Ground upgrade panel instead of collapsing the cluster. The point is retired inside this unit. The successor must re-ground Inventory from a fresh full base screenshot and must not reuse 880,841 blindly after a view pan.
+- Inventory point retired (rule R2): two taps at normalized 880,841 (grounded from the first base screenshot) did not open Inventory - the first surfaced the Drill Ground level-up modal; the second panned the base view and exposed a three-button shortcut cluster at the bottom right (blue people, blue cap, green up-arrow), whose green button opened the Drill Ground upgrade panel instead of collapsing the cluster. The point is retired inside this unit. The successor must re-ground Inventory from a fresh full base screenshot and must not reuse 880,841 blindly after a view pan. (2026-11-10 retro action A-2026-11-10-03, reopened Issue #149: the rule restated - never reuse a grounded tap point after a view pan; re-ground fresh on every entry attempt. The (880,841) point is retired; verification is a Nov 11 scout unit opening Inventory on a freshly grounded point and recording its contents; recheck 2026-11-11 retro.)
 - VS timer correction (appended same pass, C1, resolved by the harvest unit of the same pass): the first base screenshot read 02:52:20 and a later compact observe read 01:51:18. The wall time between the two reads was minutes, not 61 minutes, so the two reads conflicted and neither figure was carried forward. The harvest unit's reads (02:39:31 at about 15:22, 02:35:02 at about 15:31) form a consistent countdown from 02:52:20: the "01:51:18" compact-OCR read was a misread of 02:51:18. The 02:52:20 figure stands as a live read.
 - Session-window correction (C1): the 15:12 to 15:21 times above are estimates from the run clock; the computer session cc-474 ran inside the token lease taken 15:05:51 local. Do not cite the end minute as exact.
 - Diff and follow-up: no scout_diff.py run in this pass - the unit hit its 15-minute cap at 15:23 with the token lease ending 15:20:51, so the diff is left to the next scout pass. New observed item: Drill Ground Lv.27 to 28 upgrade available with all costs met (owning regular `new` - no building-upgrade regular in the roster; diff to route). No issue filed: building upgrades are owner-initiative work, not a queue gap or failure mode, and the perception design routes new items through the diff. Unwalked surfaces pass to the staged scout-midday-2026-11-10-0700 unit (07:00 local). Unexplained red dots (Inventory, skull badge 1, radio badge 11) carry to that pass; the skull signal is now on its fourth sighting with a moving badge and needs an owner-named read if it persists.
