@@ -2154,3 +2154,16 @@ of 2026-10-28.
 
 - Own PR 425 conflict resolved: merged current main (65e68715) into work/log-append-delivery-gate (merge commit 721830b7f, pushed); the _tools_/INDEX.md resolution keeps main-side scout_diff.py (#149, PR #645) and retro_report.py (#300, PR #639) rows alongside the branch's fuller log_append.py row (pre-delivery gate); no other file conflicted; branch-vs-main diff unchanged (3 PR files only). Re-validated on isolated /tmp fixtures: py_compile clean, 14/14 gate assertions pass. PR verified MERGEABLE/CLEAN on GitHub at head 721830b7f; still owner-gated (OD-20261108-01 open) - the PR stands mergeable the moment the owner decides. Judgement call recorded in the run file: the 1032 run deferred the rebase, this run resolved it per the "work it until mergeable" ownership rule and the 2026-11-08 precedent; the owner gate itself is untouched.
 - Replied on PR 425 (comment 6806582133). Slack summary sent to the owner Trirvia DM. Status: done. Full detail in tool-development/1232-run.md.
+
+## About 12:45 to about 12:49 - PR integration 1245 run, non-batch pass
+
+- NON-batch pass: checker not due (outside every batch
+  window; next batch 15:00 PT). Records PR #643 verified
+  CLEAN at head 6bb6fead8, awaiting the 15:00 batch. Tools
+  PR #425 conflict RESOLVED by the author at 1232, verified
+  MERGEABLE/CLEAN at new head 721830b7f, still owner-gated
+  (OD-20261108-01 open); integrator verification note posted
+  (comment 6806725994). No merges; no sync-back owed; no
+  Slack sync (silent run). Retro flag resolved: leftover merge
+  marker in this INDEX is gone at this tip. Status: done.
+  Full detail in pr-integration/1245-run.md.
