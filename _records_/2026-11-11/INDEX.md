@@ -471,3 +471,37 @@ of 2026-10-28.
   still owner-gated (OD-20261108-01 open), re-verified CLEAN
   against main a2c42a7a; no unaddressed feedback. Status: done.
   Full detail in tool-development/0232-run.md.
+  knowledge-organization/0132-run.md.
+
+## 01:40 to about 01:44 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-0140. Plan staged 0
+  units (71 already present for the next 12 hours, 3 skipped
+  closed harvest-2026-11-10-2203, radar-2026-11-10-2203,
+  zero-sweep-2026-11-10-1730, 0 reaped/expired); sweep
+  production skipped (01:00 hour), tonight's pair not yet
+  staged, due from the 17:00 run under the new geometry
+  (PR #614). Scout diff on the 2026-11-10 15:14 observation
+  re-applied with identical 0 counts (observed/actionable/
+  enqueued/candidates/unexplained 0), 0 withdrawals, no new
+  issue. Pool inbox 74, claimed 1, done 1510. Status: partial -
+  delivery deferred (GitHub tip moved twice in the push
+  window); the commit is left on the local branch
+  planner-0140-1111-delivery2 for the next pass or the
+  integrator.
+  Full detail in queue-planning/0140-run.md.
+
+## 02:40 to about 02:46 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-0240. Plan staged 12
+  units (the 14:03/14:30 slots, 61 already present for the
+  next 12 hours, 1 skipped closed zero-sweep-2026-11-10-1730,
+  0 reaped/expired); sweep production skipped (02:00 hour),
+  tonight's pair not yet staged, due from the 17:00 run under
+  the new geometry (PR #614). Scout diff on the 2026-11-10
+  15:14 observation re-applied with identical 0 counts
+  (observed/actionable/enqueued/candidates/unexplained 0),
+  0 withdrawals, no new issue. Pool inbox 76, claimed 0,
+  done 1523. This commit also ports the undelivered 0140 run
+  record (0140-run.md, INDEX entry, action-log line).
+  Status: done. Full detail in queue-planning/0240-run.md.
