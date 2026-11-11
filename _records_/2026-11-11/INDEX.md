@@ -136,3 +136,14 @@ of 2026-10-28.
   enqueued/candidates/unexplained 0), 0 withdrawals, no new
   issue. Pool inbox 77, claimed 0, done 1507. Status: no-op.
   Full detail in queue-planning/0040-run.md.
+
+- Integrator pass pr-integration-2026-11-11-0045. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): no records merges, no
+  knowledge/code merges, no comments (no-repeat rule).
+  Records PRs 301, 615 and 618 re-verified CLEAN against
+  main 177477ac, awaiting the 03:00 batch; PR 618 head
+  moved d32e6226 -> 47dde1d326 mid-pass (ticker-0015
+  delivery push). Tools PR 425 owner-gated, clean,
+  unchanged (OD-20261108-01 open). Status: done. Full
+  detail in pr-integration/0045-run.md.
