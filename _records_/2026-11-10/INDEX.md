@@ -3728,3 +3728,16 @@ modified: 2026-11-10T14:21:00Z
   hours with statements current; issue 514 decision deadline
   2026-11-12 18:00 UTC. Status: no-op. Full detail in
   pr-catchall/2139-run.md.
+## 21:40 to 21:50 - Queue planning pass (queue-planning-2026-11-10-2140, done)
+
+- Planner pass queue-planning-2026-11-10-2140. Plan staged 0
+  units (horizon already covered to about 09:40 2026-11-11;
+  already_present 67, skipped_done_current 1, skipped_closed
+  6, reaped 0, expired 0). Pre-reset sweep pair corrected to
+  INCOMPLETE by result.status: 1630 partial (1/23 ledger
+  lines), 1730 expired unexecuted (Issues #606, #610);
+  production skipped (21:00 hour run). Scout diff on the
+  two-pass observation applied with all zero counts, 0
+  withdrawals, no issues filed. Pool inbox 71, claimed 0,
+  done 1492. Status: done. Full detail in
+  queue-planning/2140-run.md.
