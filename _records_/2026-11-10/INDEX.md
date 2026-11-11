@@ -3175,7 +3175,18 @@ modified: 2026-11-10T14:21:00Z
   Chain head zombie-2026-11-10 seeded this pass for the next
   unit to verify the event page.
 
-## 18:18 to 18:21 - alliance help queue run (ticker-1806)
+## 18:15 to about 18:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1815.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 19:00): no records merges.
+  Records PRs 590, 351 and 301 all clean and awaiting
+  the 19:00 batch (590 head advanced to 71b705e5, still
+  clean). Tools PR 425 owner-gated, clean at unchanged
+  head 0fb5a27f, OD-20261108-01 still open. No comments
+  posted: nothing changed since the 1800 pass
+  re-verifications 12 minutes earlier. Status: done.
+  Full detail in pr-integration/1815-run.md.## 18:18 to 18:21 - alliance help queue run (ticker-1806)
 
 - Help unit help-2026-11-10-1430, done. Help All pressed twice:
   3 ally requests helped (specialist Donut Oil Output I, Teemo
