@@ -2167,3 +2167,19 @@ of 2026-10-28.
   Slack sync (silent run). Retro flag resolved: leftover merge
   marker in this INDEX is gone at this tip. Status: done.
   Full detail in pr-integration/1245-run.md.
+
+## 12:40 to about 12:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-1240. Plan staged 1
+  unit for the 00:00 PST slot (ghost-ops-2026-11-12-0000; 74
+  already present, 2 skipped done-current, 2 skipped closed;
+  0 expired, 0 reaped; roster stale warning, issue #198).
+  Sweep production skipped (12:00 hour); tonight's pair
+  already complete in the live pool and on the branch tip
+  (1630 and 1730 local, both expiring at the 19:00 reset
+  instant). Scout diff on the 2026-11-10 15:14 observation
+  re-applied with identical 0 counts
+  (observed/actionable/enqueued/candidates/unexplained 0),
+  0 withdrawals, no new issue. Pool inbox 79, claimed 0,
+  done 1568. Status: done. Full detail in
+  queue-planning/1240-run.md.
