@@ -3265,3 +3265,20 @@ modified: 2026-11-10T14:21:00Z
   owner-decision issues 132, 154, 335, 514, 517 all over 24 hours
   with statements current. Status: no-op. Full detail in
   pr-catchall/1839-run.md.
+
+## 18:45 to about 18:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1845.
+  Non-batch pass per the checker (due no, outside every
+  batch window, next batch 19:00): no records merge.
+  Merged knowledge PR 596 (fold ticker-1734 arms-race
+  and ticker-1806 gifts/help, arms-race 1.82.0, gifts
+  1.51.0, help 1.40.0, zombie 1.23.0) by squash
+  (551695e0); local main fast-forwarded 08638153 to
+  551695e0 by bundle. Records PRs 590, 351 and 301 all
+  clean and awaiting the 19:00 batch (590 head
+  1896719e, 46 commits beyond main). Tools PR 425
+  owner-gated, clean at unchanged head 0fb5a27f,
+  OD-20261108-01 still open. 4 verification comments
+  posted. Status: done. Full detail in
+  pr-integration/1845-run.md.
