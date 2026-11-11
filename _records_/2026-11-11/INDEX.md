@@ -798,3 +798,31 @@ of 2026-10-28.
   sync-back fast-forwarded to 775e3254e via bundle. Slack
   sync sent for the 628 merge. Status: done.
   Full detail in pr-integration/0345-run.md.
+## 03:41 to about 03:52 - ticker-0336 zombie-invasion unit 007
+
+- Zombie Invasion (Glacieradon), chain zombie-2026-11-10 seq 7.
+  Parallel dispatch achieved: Squad 1 to X:414 Y:324 and Squad 2
+  (auto-selected) to X:337 Y:420, both Lv.10, March Queues 2/4.
+  Both LOOT rows read before Claim All, each 268,000 coins -
+  536,000 coins collected; coin HUD 118.5M to 119.0M, food and
+  iron each plus 536K. Medals Store header live 4060. Store
+  Coin Chest (SSR) row identified in this variant: 160 medals,
+  Limit 100, Owned 153, yield 812.16K coins - about 124.3M
+  coins sit unopened in inventory; location still unknown, no
+  chest opened, no redemption made; filed as GitHub Issue #629
+  from this record. LOOT row stamina plus 10 again not observed
+  landing (63 before and after claim). Stamina 82 to 63, no
+  Free Claim used. Cleared false, successor seq 8 enqueued to
+  start now. Status: partial. Full detail in
+  zombie-invasion/0341-queue-run.md.
+## 03:53 to about 03:56 - ticker-0336 donations re-read unit 1119
+
+- Alliance donations, re-read of the ticker-0313 0328 close.
+  Quick Construction count replenished 1/30 to 3/30 live; 2 coin
+  donations verified 3/30 to 1/30 (900 coin each), stopped at the
+  live-read 1/30 floor per the changed route, button still green,
+  no timer. War-tab paired read: Rallied Attack 1/30 within
+  minutes of Quick Construction 1/30 - third paired support for
+  a shared remaining count; War-tab route does not apply. Status:
+  partial, tracker untouched, re-read unit enqueued for after
+  04:30 PT. Full detail in alliance-donations/0353-queue-run.md.
