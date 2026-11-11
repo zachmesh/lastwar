@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T22:32:17Z
+modified: 2026-11-11T02:32:17Z
 level: L1
-version: 1.39.0
+version: 1.40.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-0334 alliance-help execution record 2026-11-10 0350 queue run (done, Help All for two Farmland helps, header 720 to 1,040 after close/reopen, counter above the 1,000 target; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0904 alliance-help execution record 2026-11-10 0924 queue run (done, 2 ally helps delivered, header 1,040/1,000 unchanged in-session, left-edge bubble at (44,568) is the Trucks shortcut not help; record commit 31892dde on records/2026-11-10)
   - source: ticker-1314 alliance-help execution record 2026-11-10 1316 queue run (done, Help All for 1 ally help, header 1,040/1,000 unchanged in-session, bubble tile (810,705) no-change, own rows Time reduced 18:00:22 and 3d 23:58:04; record commit d781dac9d on records/2026-11-10)
+  - source: ticker-1806 alliance-help execution record 2026-11-10 1818 queue run (done, Help All pressed twice, 3 ally helps, header 0 to 40/1,000 after close and reopen, 20 points per help, third help's +20 pending the next unit's header read; record commit 20a62ff0 on records/2026-11-10)
 ---
 
 
@@ -979,3 +980,15 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Outcome: Help All pressed once, 1 ally help delivered (GoldenSonya Food Output V research). No ally requests remain. Returned to the base screen.
 - Figures read live on screen: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 1, achieved 1, resources_gained none, points unverified (counter 1,040/1,000 before and after in the same dialog instance, no close/reopen re-read), costs about 6 minutes play, verified yes, blocker_category none, device_takeovers 0.
+
+## What the 2026-11-10 1818 unit added - Help All pressed twice, 3 ally helps, header 0 to 40/1,000 after close and reopen, done
+
+- Unit help-2026-11-10-1430 by ticker-1806, about 18:18 to 18:21 local, status done. Evidence in `_records_/2026-11-10/alliance-help/1818-queue-run.md` (commit 20a62ff0 on records/2026-11-10). Computer session cc-488 on the owner Mac mini. Background input reached every button on the first tap; no foreground repair was needed.
+- Entry: from the Alliance Gifts screen, back arrow to the Alliance panel, then the Help tile at norm (698, 510).
+- Help dialog at entry: header "Today's points gained from Alliance Help: 0/1,000" - a fresh day's counter after the 18:00 reset (the 1316 unit closed the previous day at 1,040/1,000). Four rows: own Bears Lair "Need help with Missile Mastery II research" and "Need help with building Lv.30 Aircraft Center", specialist Donut "Need help with Oil Output I research", Teemo "Need help with Missile Vehicle - Defense II research".
+- First Help All at norm (498, 764): both ally rows cleared live - only the two own Bears Lair rows remained. Header still 0/1,000 in-session, the known lag.
+- Close and reopen: header read live at 40/1,000 - the two helps moved the counter, 20 points each. A new ally row had arrived in the meantime: Teemo "Need help with Missile Vehicle - Damage II research".
+- Second Help All: Teemo's row cleared live, only the two own rows remain. Header still 40/1,000 in-session; the third help's +20 follows the same lag pattern and will be read by the next help unit's header.
+- COUNTER NOTE: the in-session lag is re-confirmed, and the close/reopen rule stands - closing figures must be read after a page reopen. Per-help rate measured again at 20 points (the 0140 unit measured 150 per help on a different day's counter, so the rate is not a fixed constant across days; recorded as measured, not as a rule). The counter question from the 1316 unit - whether helps delivered after the 1,000 target add points at all - is not answered by this unit, which ran on a fresh 0/1,000 counter; it stays open.
+- Outcome: done. 3 ally requests helped (Donut Oil Output I, Teemo Missile Vehicle - Defense II, Teemo Missile Vehicle - Damage II). Header verified 0 to 40/1,000 after close and reopen; the third help's points are pending the next unit's header read. No diamonds or money spent, no red line touched. The game was left on the Help dialog with only own requests visible.
+- Result stats: target 3, achieved 3, resources_gained none, points 40 verified after close and reopen (third help's +20 pending), costs about 3 minutes play, verified yes, blocker_category none, device_takeovers 0.
