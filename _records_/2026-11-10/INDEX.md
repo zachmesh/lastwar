@@ -4014,3 +4014,23 @@ modified: 2026-11-10T14:21:00Z
   comments posted on #160, #500, #558, #599, #575 (5); no
   new issue filed. Slack DM sent (ts 1794383583.738919). Status: done. Full
   detail in knowledge-organization/2332-run.md.
+## 23:40 to 23:49 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-2340. Plan staged
+  5 units for the 2026-11-11 10:57 slot (passes, secrets,
+  treasures, trucks, events); already_present 67,
+  skipped_done_current 1, skipped_closed 1
+  (zero-sweep-2026-11-10-1730), reaped 0, expired 0.
+  Pre-reset sweep production skipped (23:00 hour);
+  tonight's pair INCOMPLETE by queue.py sweep-status
+  (main copy, PRs #611 and #614 merged) - 1630 partial
+  (1/23 ledger lines), 1730 expired unexecuted, same
+  eleventh consecutive sweep failure as the 2240 run
+  reported. Scout diff on the 15:14 observation
+  re-applied: observed 0, actionable 0, 0 enqueued,
+  0 candidates, 0 unexplained (diff-counted); narrative
+  red dots unexplained 2 (0615 pass) and 3 (1512 pass),
+  left for the retro's threshold check. Withdrawals 0.
+  Pool by_state: inbox 77, claimed 0, done 1505. No new
+  issues. Status: done. Full detail in
+  queue-planning/2340-run.md.
