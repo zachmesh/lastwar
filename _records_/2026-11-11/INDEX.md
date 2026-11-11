@@ -505,3 +505,18 @@ of 2026-10-28.
   done 1523. This commit also ports the undelivered 0140 run
   record (0140-run.md, INDEX entry, action-log line).
   Status: done. Full detail in queue-planning/0240-run.md.
+
+## 02:45 to about 02:56 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0245. Non-batch
+  pass per the checker (plain not due, outside every batch
+  window, next batch 03:00): merged tools PR 625 (queue.py
+  deadline, Refs #623, squash f9bded30) and knowledge PR 624
+  (ticker-0135/0155 fold, squash f53ec832); no records
+  merges; records PRs 301, 615 and 618 re-verified CLEAN
+  against new main f53ec832d9, awaiting the 03:00 batch;
+  tools PR 425 owner-gated, clean, unchanged (OD-20261108-01
+  open), re-verification comment posted because main moved.
+  Local main sync-back deferred (shallow clone + dirty tree).
+  Slack sync sent. Status: done.
+  Full detail in pr-integration/0245-run.md.
