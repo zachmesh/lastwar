@@ -615,6 +615,66 @@ of 2026-10-28.
   sync, no chat report (non-batch, no merges). Full detail
   in pr-integration/0315-run.md.
 
+
+## 03:16 to about 03:20 - Ticker pass ticker-0313, donations unit partial
+
+- Ticker pass ticker-0313. Donations unit
+  donations-2026-11-11-0535 partial: re-read of the
+  ticker-2122 2133 unverified close - Donation Count
+  live 4/30 on Quick Construction at entry (replenished
+  +3 from 1/30 at 23:19); 3 coin donations verified
+  live 4/30 to 1/30, 900 coin each, button stayed green
+  with no cooldown timer; stopped at the live-read
+  1/30 floor per the changed route, no tap from 1/30.
+  Re-read unit donations-2026-11-11-1119 enqueued for
+  about 03:50 PT. Status: partial. Full detail in
+  alliance-donations/0316-queue-run.md.
+
+
+## 03:20 to about 03:22 - Ticker pass ticker-0313, donations unit partial
+
+- Ticker pass ticker-0313 (continued). Donations unit
+  donations-2026-11-11-0908 partial, check-only: Donation
+  Count verified live 1/30 on Quick Construction and
+  1/30 on Rallied Attack within minutes - second paired
+  confirmation of a shared/global remaining count;
+  no donation made at the 1/30 floor on either node
+  per the changed route. Re-read unit
+  donations-2026-11-11-1119 (03:50 PT) covers the next
+  attempt. Status: partial. Full detail in
+  alliance-donations/0321-queue-run.md.
+
+
+## 03:23 to about 03:24 - Ticker pass ticker-0313, donations unit partial
+
+- Ticker pass ticker-0313 (continued). Donations unit
+  donations-2026-11-11-0948 partial, superseded: its
+  re-read question (the 0148 timer-hidden tap) was
+  already answered live by the 0316 and 0321 units of
+  this pass (1/30 on both nodes); closed without game
+  input so the next tick does not re-pick it. The next
+  attempt is the 1119 re-read at 03:50 PT. Status:
+  partial. Full detail in
+  alliance-donations/0323-queue-run.md.
+
+
+## 03:24 to about 03:30 - Ticker pass ticker-0313, zombie-invasion unit partial
+
+- Ticker pass ticker-0313 (continued). Zombie-invasion
+  unit zombie-invasion-zombie-2026-11-10-006 partial:
+  1 Lv.10 kill at X:414 Y:344, 1 LOOT row claimed for
+  268,000 coins (coin 118.2M to 118.5M); Free Claim
+  +75 stamina, inventory 10-stamina x647 and
+  50-stamina x669 counted live; parallel dispatch
+  failed - the batched second dispatch mistargeted a
+  Lv.23 Ironhead card and no second squad marched
+  (squads_parallel 1, R2 changed method recorded for
+  the successor). LOOT row stamina +10 not observed
+  landing (HUD 79 before and after). Store not
+  visited; medals after unverified. Cleared false,
+  successor seq 7 enqueued to start now. Status:
+  partial. Full detail in
+  zombie-invasion/0324-queue-run.md.
 ## 03:30 to about 03:45 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-11-0330. Non-batch
