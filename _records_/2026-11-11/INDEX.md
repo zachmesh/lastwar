@@ -826,3 +826,20 @@ of 2026-10-28.
   a shared remaining count; War-tab route does not apply. Status:
   partial, tracker untouched, re-read unit enqueued for after
   04:30 PT. Full detail in alliance-donations/0353-queue-run.md.
+
+## 04:00 to about 04:10 - pr-integration 0400 pass (non-batch)
+
+- Standing PR integrator pass, NON-batch: checker plain
+  and merge-aware both not due (outside every batch
+  window; next batch 07:00 PT). No merges. Records PRs
+  627 (2026-11-11, branch tip 6914ac3aa) and 615
+  (2026-11-10, head 5f302d8cc3) both probed CLEAN against
+  main 775e3254e and await the 07:00 batch. Tools PR 425
+  still owner-gated (OD-20261108-01 open, no owner
+  decision); head 0fb5a27f6 unchanged and main unchanged
+  since the 0345 verification, so no new comment
+  (identical verification, merged tree 31b46364). Process
+  note: an unnecessary git reset --hard on the VPS main
+  worktree early in this pass; no loss identified, rule
+  recorded going forward. Full detail in
+  pr-integration/0400-run.md.
