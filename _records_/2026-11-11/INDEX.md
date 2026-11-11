@@ -1605,3 +1605,19 @@ of 2026-10-28.
   UTC. VPS root disk 86 percent (1.4G free), below the
   about 1.5G flag threshold. Status: no-op. Full detail in
   pr-catchall/0739-run.md.
+
+## 07:40 to about 07:49 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-0740. Plan staged 5
+  units for the 18:57 slots (passes, secrets, treasures,
+  trucks, events; 72 already present, 0 skipped
+  done-current, 1 skipped closed, 0 reaped/expired; no
+  branch-reconcile warning this run, issue #446). Sweep
+  production skipped (07:00 hour); tonight's pair already
+  complete in the live pool (seq-1 16:30, seq-2 17:30, both
+  expiring at the 18:00 reset instant). Scout diff on the
+  2026-11-10 15:14 observation re-applied with identical 0
+  counts (observed/actionable/enqueued/candidates/unexplained
+  0), 0 withdrawals, no new issue. Pool inbox 80, claimed 0,
+  done 1554. Status: done. Full detail in
+  queue-planning/0740-run.md.
