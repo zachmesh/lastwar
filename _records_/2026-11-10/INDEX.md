@@ -3282,3 +3282,632 @@ modified: 2026-11-10T14:21:00Z
   OD-20261108-01 still open. 4 verification comments
   posted. Status: done. Full detail in
   pr-integration/1845-run.md.
+## 18:36 to 18:46 - Ticker pass ticker-1834, passes unit done
+
+- Passes unit passes-2026-11-10-1457 done. Hot Deals free pack
+  claimed (Research Speed-up Pack: 1h Research Speed-up x25,
+  Coin Chest (UR) x5, CONGRATULATIONS verified); Free Supply
+  auto-claimed (blue chest x1, ruby x10); Super Monthly Pass
+  Daily Pickup claimed (Monthly Pass, Squad 4 Lv.20, Days Left
+  11, Rewards Left 11; DAILY GIFT panel: gold bars x2, red
+  diamonds x100, gold tickets x2, iron x200, 5-minute speedups
+  x60; button now Claimed). All four Weekly Pass cards verified
+  not owned (S2 Drone Components, S1 Drone Parts, Iron, Coin -
+  every one Get Now $4.99, no Claim button); Legendary Take All
+  $19.99 and the $24.99 Monthly Pass Extension untouched.
+  Weekly Deal paid only (Valor Badge $99.99, Base Upgrade
+  $19.99, UR Set $49.99). Entry state: game opened on the
+  Alliance screen with the HELP dialog (both requests 30/30,
+  points 40/1,000) - closed untouched, help unit's work.
+  Calibration: computer.control coordinates are normalized
+  0-1000 on both axes; back arrow measured centre (168,917)
+  after three no-change taps at (168,872). Drag scrolls the
+  Weekly Pass list where wheel scroll does not. Nothing spent.
+  Full detail in shop-claims/1836-queue-run.md.
+
+## 18:47 to 18:53 - Ticker pass ticker-1834, secrets unit done
+
+- Secrets unit secrets-2026-11-10-1457 done. Fresh post-18:00
+  batch found where the 13:49 unit and the 16:34 sweep had left
+  everything PERFECT and claimed: 8 pending tasks, assists
+  0/5. All 8 deployed by Mega Deploy with UR Only off (UR
+  Rescue Officer 2h, SSR Provide Tech Support 1h, SSR Protect
+  Refugee Camp 1h x2, four 30-minute retrieves) and verified
+  running on countdowns; no Mega Refresh, since duel day 3
+  (Age of Science) does not score UR secret tasks. Ally
+  assists 5/5 used (Boss Hog 05 x2, spac3cadet x3; first
+  assist paid Mystery Supply Box x1, Upgrade Ore x24, Hero
+  EXP 123.9K; the five assists list in the Record panel at
+  18:51). Remaining ally rows are UR countdown-only with no
+  Assist button. Reward Recovery re-checked: 2026-11-6 record
+  CLAIMED, nothing pending. Plunder Others 0/5 untouched.
+  The orange hexagon badge was not observed on the fresh
+  cards; follow-up stays open. Nothing spent. Full detail in
+  secret-missions/1847-queue-run.md.
+
+## 18:55 to 18:57 - Ticker pass ticker-1834, treasures unit done
+
+- Treasures unit treasures-2026-11-10-1457 done. Fragment
+  stock read live from the map, identical to the 13:51 read:
+  M1 x13, M2 x12, M3 x0, M4 x6, M5 x1, M6 x6, M7 x10. M3 at
+  0 caps the set count at zero, both Dig buttons greyed out,
+  no dig possible; chest progress still 11/15, Skip Animation
+  ticked. No exchange opened or executed. Nothing spent. Full
+  detail in hidden-treasures/1855-queue-run.md.
+
+## 19:00 - Ticker pass ticker-1834, zombie chain head restored to the live pool
+
+- Zombie Invasion tab sighting (ticker-1806, 18:11, recorded in
+  alliance-gifts/1810-queue-run.md): the Events hub tab bar
+  showed a Zombie Invasion tab live, the first sighting since
+  the event ended 2026-10-30. Ticker-1806 seeded chain head
+  zombie-2026-11-10-001, but the unit only reached the
+  records branch inbox - the live pool never held it, so no
+  ticker pass could pick it up. This pass re-seeded the same
+  chain head (zombie-2026-11-10-001, priority 4, est 12) into
+  the live inbox; the next tick verifies the event page. No
+  zombie unit was executed in this pass. The strand - an
+  enqueue landing in a delivery worktree instead of the live
+  pool - is filed as a tooling Issue for the queue. The
+  activity metadata's "do not seed until a tab is seen live"
+  condition is now met by the 18:11 sighting; the metadata
+  text itself is tier-2 and left for the knowledge flow.
+
+## 19:00 to about 19:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1900.
+  BATCH pass per the checker (plain and merge-aware due
+  yes, window 19:00-20:00 PT, first pass in the window,
+  no prior batch merge): merged records PR 590 by merge
+  commit (d77a4a82), 49 commits, branch kept. Records
+  PRs 351 and 301 were CLEAN before the merge and turned
+  CONFLICTING (single file _logs_/repo-actions/action-log.jsonl,
+  append-append) after it; conflict comments posted on
+  both, carried to a later batch. Tools PR 425 owner-gated,
+  clean at unchanged head 0fb5a27f, OD-20261108-01 still
+  open; no new comment. Slack sync posted to D0CBM9P0CSK
+  (ts 1794366537.382569). Status: done. Full detail in
+  pr-integration/1900-run.md.
+
+## 19:15 to about 19:25 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1915.
+  NON-batch pass per the merge-aware checker (plain due
+  yes, merge-aware due no, PR 590 already merged 19:07
+  in the 19:00 window): 0 merges. Records PR 597 (2
+  commits) awaits the 23:00 batch. Tools PR 425
+  owner-gated, clean at unchanged head 0fb5a27f,
+  OD-20261108-01 still open; no new comment. Records
+  PRs 351 and 301 still CONFLICTING (single file
+  _logs_/repo-actions/action-log.jsonl, append-append);
+  conflict comments from the 1900 pass verified present,
+  no new comment. No Slack sync, silent run. Status:
+  done. Full detail in pr-integration/1915-run.md.
+
+## 19:19 to 19:35 - Ticker pass ticker-1913, donations unit partial (unverified close)
+
+- Donations re-read unit donations-2026-11-11-0122 partial,
+  unverified close. Entry count 6/30 live, 2 coin donations
+  confirmed (count 6/30 to 4/30); final two taps greyed the
+  button with a 00:14:57 timer that hides the count, so the
+  final count is unread and the tracker stays untouched.
+  Re-read unit enqueued for after the cooldown (not_before
+  03:48Z). New finding: Tech Donation Today fell 9300 to 550
+  inside the unit - the donation-day counter reset between
+  about 19:24 and 19:34 PST, not at the assumed 19:00 reset;
+  filed as knowledge Issue #599. The Donate button also showed a
+  "Hold down for easier continuous donations" hint. Nothing
+  spent. Full detail in alliance-donations/1919-queue-run.md.
+## 19:30 to about 19:40 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1930.
+  Non-batch pass per the merge-aware checker (plain due
+  yes but PR 590 already merged 19:07 in the 19:00
+  window, next batch 23:00): no records merge.
+  Records PR 597 (head be38f236, 3 commits beyond
+  main) clean and awaiting the 23:00 batch; tools PR
+  425 owner-gated, clean at unchanged head 0fb5a27f,
+  OD-20261108-01 still open. Records PRs 351 and 301
+  still CONFLICTING (single file
+  _logs_/repo-actions/action-log.jsonl, append-append);
+  conflict comments from the 1900 pass verified
+  present, no new comment. 2 verification comments
+  posted (597 first verification, 425 re-verification;
+  the 425 comment duplicates the 1845 verification at
+  unchanged main and head, noted as an over-comment).
+  No Slack sync, silent run. Status: done. Full detail
+  in pr-integration/1930-run.md.
+
+## 19:39 to 19:44 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-10-1939. No-op: no PR names
+  this job and no PR names an owner whose class plainly does not
+  cover its diff. PR 596 merged by the integrator 1845 pass and
+  PR 590 merged at 19:07 in the 19:00 batch (merge commit
+  d77a4a82); new records PR 597 open and clean, awaiting the
+  23:00 batch. PR 425 MERGEABLE CLEAN but still owner-gated,
+  OD-20261108-01 open in its third day. PRs 351 and 301
+  re-conflicted by the 590 merge (single file action-log.jsonl,
+  append-append); conflict comments from the 1900 pass verified
+  present. Issues: 106 open, 0 unclassified, 2 new (598 tooling,
+  599 knowledge), owner-decision issues 132, 154, 335, 514, 517
+  all over 24 hours with statements current. Status: no-op. Full
+  detail in pr-catchall/1939-run.md.
+
+## 19:32 to about 19:49 - Knowledge organization pass
+
+- Organizer pass knowledge-organization-2026-11-10-1932. First run
+  after the 19:00 local reset: trade-day consolidation sweep plus
+  the incremental fold. The full day watermark chain was
+  re-verified run by run (1332 through 1832) - every substantive
+  commit for 2026-11-10 is accounted for by exactly one run;
+  nothing fell between hourly watermarks. Folded af56d36ec
+  (ticker-1834 passes 1836, secrets 1847, treasures 1855) and
+  acb566fad (ticker-1913 donations 1919, landed mid-run, folded
+  as a second commit rather than deferred): shop-claims 1.50.0,
+  secret-missions 1.35.0, hidden-treasures 1.20.0,
+  zombie-invasion 1.23.1, alliance-donations 1.89.0. Profiles PR
+  #600 (commits 0b0cf986b, c25eeb8ee), OPEN + MERGEABLE + CLEAN.
+  Contradictions resolved: Iron Weekly Pass x3/Total x21 confirmed
+  by a second live read; Provide Tech Support "not perfect"
+  resolved as a fresh post-reset task instance; donation-day reset
+  is NOT at 19:00 (footer 9300 to 550 between 19:24 and 19:34 PST,
+  Issue #599) and the R3 checkpoint anchor is now unpinned. Own PR
+  #596 merged with 0 comments, 0 reviews - no feedback owed. No
+  new knowledge-issue comments; no 2026-11-10 retro landed yet.
+  Issue comment posted on #599; no new issue filed (the ticker
+  filed #599 itself). Slack sync posted to D0CBM9P0CSK. Status:
+  done. Full detail in knowledge-organization/1932-run.md.
+
+## 19:45 to about 19:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1945. NON-batch pass: plain checker said due but merge-aware said not due (PR 590 already merged 19:07:05 in the 19:00 window), so no records PR merged. Merged knowledge PR #600 (squash, 20b92f6a) - ticker-1834 fold, shop-claims 1.50.0, secrets 1.35.0, treasures 1.20.0, zombie 1.23.1, donations 1.89.0; body omitted the donations fold (feedback, not a block). Records PR #597 verified CLEAN (head bfe23f958, 7 commits) and awaits the 23:00 batch. Tools PR #425 re-verified CLEAN against new main 20b92f6a, still owner-gated (OD-20261108-01 open). Records PRs #351 and #301 still conflicting on the action-log file, conflict comments from the 1900 pass verified present. 3 comments posted (600, 597, 425). Local main fast-forwarded to 20b92f6a by bundle. Status: done. Full detail in pr-integration/1945-run.md.
+
+## 19:32 to about 19:58 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-1932.
+  Implemented issue #598: queue production and tracker
+  state now resolve to the live pool from a linked
+  worktree (live_pool_root in queue.py, live_state_dir
+  in regulars.py) - PR #601 opened (branch
+  work/live-pool-enqueue-598, commit ecc6c26c3, Refs
+  #598), issue #598 commented; validation 22/22 fixture
+  assertions on an isolated scratch pool, pristine-code
+  control reproduces the stranding. Own PR 425 still
+  owner-gated (OD-20261108-01 open), no action owed.
+  Status: done. Full detail in
+  tool-development/1932-run.md.
+
+## 20:00 to about 20:10 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-2000. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Merged tools PR #601 (squash, d42b4f98) - live-pool enqueue and tracker state (Refs #598), independently verified 22/22 on isolated fixtures. Records PR #597 verified CLEAN (head ec0f735ff, 12 commits) and awaits the 23:00 batch. Tools PR #425 re-verified CLEAN against new main d42b4f98, still owner-gated (OD-20261108-01 open). Records PRs #351 and #301 still conflicting on the action-log file, conflict comments from the 1900 pass verified present. 2 comments posted (601, 597). Local main fast-forwarded to d42b4f98 by bundle. Status: done. Full detail in pr-integration/2000-run.md.
+## 19:52 to 20:08 - Ticker pass ticker-1952, zombie-invasion unit 001 partial (Glacieradon page verified, 1 kill)
+
+- Zombie Invasion chain head zombie-invasion-zombie-2026-11-10-001 partial.
+  Event page VERIFIED live for the NEW variant "Zombie Invasion -
+  Glacieradon": pre-wave countdown 00:06:15 at entry, live-wave layout
+  from 20:01 with event timer 2d 21:58:23, boss-clue text ("No Zombie
+  Boss found yet. Killing Invading Zombies on world map might reveal
+  their clues."), a 0/40 counter, next wave in 00:31:08, Search and
+  Boss Search buttons. Rewards panel is a boss-reward reference table
+  (Lv 5-75 / 80-100 / 105-135), not a claimable track. Store medal
+  balance read live at 3950; 50 Stamina item available at 10 medals
+  Limit 3 (October event: sold out); which rows are Coin Chests in
+  this event is NOT established.
+- One Lv.10 Invading Zombies kill (Suggested Power 670,000, stamina
+  10, despawn 11:57:53): Squad 1, 25.20M vs 670.00K, Easy Win, 6
+  second march, stamina 120 to 110, Victory banner, squad home.
+  squads_parallel 1 (single dispatch only - parallel rule not
+  exercised this unit).
+- LOOT: gift badge 5 at entry, 6 after the kill; gift box
+  re-grounded to 304,226 (moves with the map view); Claim All
+  tapped once, toast "Alliance Gifts received!". Rows NOT read
+  before claiming, so the exact coins collected are unverified:
+  HUD coin 97.8M to 98.1M, food 631.4M to 631.7M, iron 954.2M to
+  954.4M (about one 268K row's worth). Medal balance after the kill
+  not re-read. Chests opened 0.
+- cleared false: wave live, next wave about 20:32. Successor
+  zombie-invasion-zombie-2026-11-10-002 enqueued to start now.
+  Full detail in zombie-invasion/2008-queue-run.md.
+
+## 20:10 to 20:15 - Ticker pass ticker-1952, donations re-read unit partial (unverified close)
+
+- Donations re-read unit donations-2026-11-11-0336 partial,
+  unverified close. New-day Donation Count read live 2/30
+  remaining at Quick Construction (8/10); 1 coin donation
+  confirmed (count 2/30 to 1/30, 900 coin); the 2nd tap
+  greyed the coin button with a 00:14:47 cooldown timer
+  that hides the count label, so the final count (0/30 or
+  1/30) is unread. Tech Donation Today footer re-read live
+  550 to 700 (+150 for the two taps - footer points per
+  donation are not stable, so the footer cannot derive the
+  count). Tracker untouched. Re-read unit
+  donations-2026-11-11-0413 enqueued for after the
+  cooldown (not_before 04:30Z).
+- Count-versus-footer day boundary: the count read 2/30 at
+  20:12 while the footer sits post-reset at 550 - if the
+  count never reset, 1913's four taps brought the old day's
+  6/30 to 2/30; the count's own reset time stays unpinned.
+  Evidence added as a comment on knowledge Issue #599.
+  Full detail in alliance-donations/2015-queue-run.md.
+
+## 20:15 to about 20:22 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-2015. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. No knowledge/code PR merged. Records PR #597 verified CLEAN (head 9003e0f13, 13 commits) and awaits the 23:00 batch; 1 verification comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2015-run.md.
+
+## 20:30 to about 20:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-2030. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. No knowledge/code PR merged. Records PR #597 verified CLEAN (head 03c1007f, 16 commits) and awaits the 23:00 batch; 1 verification comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2030-run.md.
+
+## 20:32 to about 20:39 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-2032.
+  No-op: own PR 425 still owner-gated (OD-20261108-01
+  open), re-verified CLEAN against current main d42b4f98;
+  no new tooling issue since the 1932 run; PR #601 (Refs
+  #598) merged 04:04:07Z. #133 and #404 remain the only
+  unimplemented items, both out of one-run scope. Status:
+  no-op. Full detail in tool-development/2032-run.md.
+
+## 20:32 to about 20:49 - Knowledge organization pass
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-10-2032.
+  Folded the only new substantive commit since the 1932 run's watermark
+  (acb566fad): d29bc658c (ticker-1952: zombie-invasion 2008 +
+  alliance-donations 2015). Profiles PR #602 (commit 1ef9d4e3be, base
+  main d42b4f983): zombie-invasion 1.23.1 -> 1.24.0 (Glacieradon event
+  page VERIFIED live - new variant, 2d 21:58:23 timer, 0/40 counter,
+  1 Lv.10 kill, LOOT claimed, Store read live with medal balance 3950;
+  October "event ended" claim superseded, chain live again) and
+  alliance-donations 1.89.0 -> 1.90.0 (2015 re-read: 1 coin donation
+  confirmed 2/30 to 1/30; CORRECTION - the footer reset 19:24-19:34,
+  the count did NOT reset then, 1919 "remainder is moot" superseded;
+  count's reset time stays unpinned, R3 anchor stays unpinned).
+  Integrator feedback on merged PR #600 (body listed 4 files, diff had
+  5) addressed by a reply on #600 (comment 6787240951); Issue #599
+  commented with the 1.90.0 fold (comment 6787241278). No new issue
+  filed; no 2026-11-10 retro has landed yet. Status: done. Full detail
+  in knowledge-organization/2032-run.md.
+
+## 21:32 to about 22:15 - Knowledge organization pass
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-10-2132.
+  Folded the new substantive records since the 2032 watermark
+  (6269f5324, c9eb29ccd, ccb00e883) and the 2026-11-10 retro
+  execution-knowledge actions A-01/A-02/A-03/A-06 into 8 profiles
+  on PR #612 (commit 4f1180880a, base main a8059f2ff): radar-tasks
+  1.71.0 -> 1.72.0 (2107 duel day 3 release, 27 claims, points
+  348 to 375, 15 pins none worked, stale day-2 label filed as
+  tooling #603), survivor-intake 1.50.0 -> 1.51.0 (2118 fourth
+  identical partial; CORRECTION - radar exit was a mis-measured
+  point, Home (927,952) works first try), resource-collection
+  1.56.0 -> 1.57.0 (2042 food +3.5M / coin +2.3M verified, iron
+  inconclusive, Armed Truck 7th deferral), truck-plunder 1.40.0
+  -> 1.41.0 (A-01 points rule, #300), alliance-donations 1.90.0
+  -> 1.91.0 (2133: 3 confirmed donations, count replenished
+  +3-4 with footer flat - burst allowance; A-02 route citation;
+  CORRECTION - A-02 "held all day" does not hold for the
+  2015/2133 final taps), perception-scout 1.57.0 -> 1.58.0
+  (A-03 re-ground rule, #149), alliance-duel 1.40.0 -> 1.41.0
+  (A-06 closing read before the about-18:00 rollover, #609;
+  corrects the retro's 19:00 wording), troop-training 1.40.0
+  -> 1.41.0 (2146: 313 Lv.9 collected, power +423,176; Drill
+  Ground Full blocks requeue but not collection - decoupled;
+  1229 tent point stale). A-04 already folded by PR #602;
+  A-05 already carried in 1.56.0. Issue comments posted on
+  #502, #566, #168, #599, #500, #150; no new issue filed.
+  Own PR #602 merged 04:48:07Z with no comments. Slack DM
+  sent (ts 1794377698.865479). Status: done. Full detail in
+  knowledge-organization/2132-run.md.
+
+## 20:39 to 20:49 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-10-2039. No-op: no PR names
+  this job and no PR names an owner whose class plainly does not
+  cover its diff. New knowledge PR 602 opened during the pass
+  (zombie Glacieradon verification + donations 2015 re-read fold,
+  Owner knowledge-organizer, MERGEABLE CLEAN). PR 597 head
+  advanced to the branch tip eee55b5c, MERGEABLE CLEAN, awaiting
+  the 23:00 batch. PR 601 merged 04:04:07Z (tooling, Refs 598).
+  PR 425 MERGEABLE CLEAN but still owner-gated, OD-20261108-01
+  open in its third day. PRs 351 and 301 still conflicting on the
+  single file action-log.jsonl (append-append); conflict comments
+  from the 1900 pass verified present by the integrator 2015 and
+  2030 passes. Issues: 106 open, 0 unclassified, none created
+  since the 1939 pass; owner-decision issues 132, 154, 335, 514,
+  517 all over 24 hours with statements current. Status: no-op.
+  Full detail in pr-catchall/2039-run.md.
+## 20:28 to 20:42 - Ticker pass ticker-2028, harvest unit partial
+
+- Harvest unit harvest-2026-11-10-1803 partial. Food bubbles
+  all collected in one tap (631.7M to 635.2M, plus 3.5M
+  verified); coin bubbles all collected in one tap (98.1M
+  to 100.4M, plus 2.3M verified). Iron UNVERIFIED: 954.4M
+  to 957.6M across the first tap with no verified cause,
+  and a later crop-grounded iron-bubble tap cleared the
+  bubbles with no iron movement - next unit must re-read
+  the mines live. Armed Truck not located, not claimed
+  (Issue 566 stands); the bottom-left hint tooltip cycled
+  twice pointing at the parked vehicles. Method: bubble
+  centres must be crop-grounded, eyeball taps missed by
+  about 30px twice and opened the Iron Mine panel instead.
+  Tracker untouched. Full detail in
+  resource-collection/2042-queue-run.md.
+
+
+## 20:45 to about 20:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-2045. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Knowledge PR #602 squash-merged (zombie-invasion 1.24.0, alliance-donations 1.90.0, Issue 599; new main 49895f66c); local main fast-forwarded to 49895f66c. Records PR #597 verified CLEAN (head fd7a3ba5f, 21 commits) and awaits the 23:00 batch; 2 comments posted (verification + count correction 23 -> 21). Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against the new main; 1 re-verification comment posted. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2045-run.md.
+## 20:40 to about 20:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-2040. Plan staged 18
+  units into the live pool for the 2026-11-11 06:03 to 07:00
+  horizon extension (53 already present, 1 skipped done
+  current, 2 skipped closed), pre-reset sweep pair verified
+  complete (both passes done, 0 enqueued; production
+  skipped, 20:00 hour run), scout diff re-applied on the
+  unchanged two-pass observation with identical 0 counts
+  (idempotent), 0 withdrawals, no issues filed. Pool
+  by_state: inbox 74, claimed 0, done 1488. Status: done.
+  Full detail in queue-planning/2040-run.md.
+## 21:00 to about 21:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-2100. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Records PR #597 verified CLEAN (head 65d21503b, 28 commits) and awaits the 23:00 batch; 1 verification comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 49895f66c; no new comment (head and main unchanged since the 2045 re-verification). Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2100-run.md.
+
+## 20:55 to 21:07 - Ticker pass ticker-2055, radar unit partial
+
+- Radar unit radar-2026-11-10-1803 partial. Live posture was
+  duel day 3 release (duel.py, Age of Science), not the unit's
+  stale day-2 stack label - the stack was released: 27 tasks
+  claimed in 4 Claim All batches (radar points 348 to 375,
+  +1 per claim), 8 tasks executed via Quick Execute (stamina
+  120 to 40), stored 35/40 to 13/40, restore 12 tasks at
+  23:39:11 local. Coins +5,352,400, iron +9.7M, food
+  +8,948,000, Hero EXP +39.6M. Entry unblocked with the
+  changed method (dish re-grounded fresh at norm 86,712 in
+  the 642x951 window, first try). 15 map pins inventoried
+  with red dots, none worked - the release cycle filled the
+  unit, so pins plus 2 remaining Quick Execute tasks fall to
+  the next radar unit. Duel score not read, delta test still
+  owed. Tracker untouched. Full detail in
+  radar-tasks/2107-queue-run.md.
+
+- Survivors unit survivors-2026-11-10-1803 partial. The game
+  was left on the radar screen by the radar unit and its exit
+  buttons (home x3 variants, back arrow x2, incl. exact input)
+  did not respond to background clicks, so the base gate was
+  never reached and the line stayed unverified; 0 recruited,
+  Quick Dispatch not run. Fourth survivors partial today on
+  the same blocker (0321, 1224, 1615, 2118) plus 22/22 in the
+  queue era - a process failure under R2, reported to the
+  owner. Next survivors unit must first solve the radar exit
+  and then try the 1615 alternative gate location
+  (bottom-right corner by the red-roofed structure). Game
+  left on the radar screen (points 375, stored 13/40,
+  stamina 41, Quick Execute 2 tasks pending). Tracker
+  untouched. Full detail in
+  survivor-intake/2118-queue-run.md.
+- Integrator pass pr-integration-2026-11-10-2115. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Records PR #597 verified CLEAN (head c9eb29ccd, 30 commits) and awaits the 23:00 batch; 1 verification comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 49895f66c; no new comment (head and main unchanged since the 2045 re-verification). Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2115-run.md.
+## 20:40 to 21:45 - Daily retro pass (retro-review-2026-11-10-2140, done)
+
+- Retro file _records_/retro/2026-11-10.md and data appendix (826 branch units after the second re-run, 795 live, gap 31, verdict FAIL; batch compliance 1 violation out of 6, PR 556 merged 22:59:55, 5 seconds before the 2300 window). Rolling series entry appended; owner-decisions register v2.0.0 to v2.1.0, no new items, none decided, 11 open, 9 over 48 hours. Threshold breaches: 10 named (red dots 3 narrative, expired day counts 15 branch, donations 0.2266, unverified 66.3%, #118 at 8 days, #149 recurrence, ticker-0634 missing ~134h plus planner 1840/1940 records undelivered plus the 2040 run falsely claiming the sweep pair complete plus duel-score-1803 absent from both pools, ledger 1/23, batch violation, 12 units over 900s). The branch advanced twice during the run (to 91f5dc59eb, then c9eb29ccd2); the aggregation was re-run from each fresh tip and the re-run picked up the ticker-2055 radar/survivors units and the planner 2040 record. Issues: 7 filed (#604 batch violation, #605 orphan branch, #606 sweep-002 expiry, #607 planner records undelivered, #608 unit cap, #609 duel double-count, #610 planner false sweep-complete), 4 closed (#483 star-ceremony exclusion, #539 resolve_pool_root, #510 same fix, #585 harvest Panel Collect), 1 reopened (#149 perception blackout), 31 carried-issue comments plus 2 corrections (#607, #251). Issue #603 (stale duel-day radar label) was filed by the ticker-2055 pass during the run. Full detail in retro-review/2140-run.md.
+
+## 21:32 to about 21:40 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-2132.
+  Implemented issue #610: `queue.py sweep-status` reports the
+  pre-reset sweep pair by result.status (done/partial), never by
+  pool membership - the 2040 planner run's false complete (1730
+  expired in done) now reads as an incomplete. PR #611 opened
+  (branch work/sweep-pair-status-check, commit 63f695358, Refs
+  #610); issue #610 commented. Validation on isolated /tmp
+  fixtures only: py_compile clean, 29/29 assertions passed,
+  read-only (fixture trees hash-identical). Own PR 425 still
+  owner-gated (OD-20261108-01 open), re-verified CLEAN against
+  main 49895f66c; no unaddressed feedback. Status: done. Full
+  detail in tool-development/2132-run.md.
+
+## 21:26 to about 21:46 - Ticker pass ticker-2122, donations and training units partial
+
+- Donations unit donations-2026-11-10-1803 partial. Radar exit
+  solved: the 2118 taps sat above the button row; Home at the
+  fresh measured centre (927,952) worked first try. Alliance
+  entry at (930,717) first try. Quick Construction 8/10
+  (recommended, Development): Donation Count 4/30 at entry, 3
+  coin donations confirmed by live count reads (4 to 3 to 2
+  to 1, 900 coin each), 4th tap landing unknown - button
+  greyed with a 00:14:25 timer hiding the count, the same end
+  state as 1913 and 2015. Footer 700 to 1150 live (+450;
+  points per donation unstable, not used to derive the count).
+  New mechanism evidence: the count replenished from 1-or-0
+  at 20:15 to 4 at 21:26 with no donation in between - it is
+  a replenishing burst allowance, not a pure daily remaining;
+  further evidence for Issue #599. Tracker untouched;
+  re-read unit donations-2026-11-11-0535 enqueued for after
+  the cooldown (not_before 21:48 PT). Full detail in
+  alliance-donations/2133-queue-run.md.
+
+- Training unit training-2026-11-10-1803 partial. Tents
+  re-grounded fresh from the current screenshot (no pans; the
+  1229 point no longer matches this framing). Lv.27 barracks:
+  finished batch of 313 Lv.9 collected on the pistol tap,
+  Total Power 148,787,578 to 149,210,754 (+423,176 = 313 x
+  1,352, verified live). Requeue blocked by a live "Drill
+  Ground Full: Unable to add more units." toast - collection
+  and requeue are decoupled. Drill Ground screen not read
+  live (pass budget ended at the toast); next training unit
+  reads it first and works the nearest allowed clearing
+  action. Lv.24 batch still running (due ~16:49 on
+  2026-11-11); Lv.30 and fourth barracks unchecked. Tracker
+  untouched. Full detail in troop-training/2146-queue-run.md.
+
+## 21:39 to 21:48 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-10-2139. No-op: no PR names
+  this job and no PR names an owner whose class plainly does not
+  cover its diff. New tools PR 611 opened (sweep-status, Refs
+  610, Owner tool-developer, MERGEABLE CLEAN); PR 602 merged
+  04:48:07Z. PR 597 head advanced to the branch tip 9a95c4b0,
+  MERGEABLE CLEAN, awaiting the 23:00 batch. PR 425 MERGEABLE
+  CLEAN but still owner-gated, OD-20261108-01 open in its third
+  day. PRs 351 and 301 still conflicting on the single file
+  action-log.jsonl (append-append); no branch-side
+  reconciliation since the 1900 conflict notices. Issues: 111
+  open, 0 unclassified; 8 filed (#603-#610), 4 closed (#483,
+  #539, #510, #585), 1 reopened (#149) since the 2039 pass.
+  Owner-decision issues 132, 154, 335, 514, 517 all over 24
+  hours with statements current; issue 514 decision deadline
+  2026-11-12 18:00 UTC. Status: no-op. Full detail in
+  pr-catchall/2139-run.md.
+## 21:40 to 21:50 - Queue planning pass (queue-planning-2026-11-10-2140, done)
+
+- Planner pass queue-planning-2026-11-10-2140. Plan staged 0
+  units (horizon already covered to about 09:40 2026-11-11;
+  already_present 67, skipped_done_current 1, skipped_closed
+  6, reaped 0, expired 0). Pre-reset sweep pair corrected to
+  INCOMPLETE by result.status: 1630 partial (1/23 ledger
+  lines), 1730 expired unexecuted (Issues #606, #610);
+  production skipped (21:00 hour run). Scout diff on the
+  two-pass observation applied with all zero counts, 0
+  withdrawals, no issues filed. Pool inbox 71, claimed 0,
+  done 1492. Status: done. Full detail in
+  queue-planning/2140-run.md.
+- Integrator pass pr-integration-2026-11-10-2130. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Tools PR #611 squash-merged (queue.py sweep-status, Refs #610; merge commit a8059f2f; local main fast-forwarded). Records PR #597 verified CLEAN at four heads seen this pass (503fd3797, 349a843af, 9a95c4b0e, 120efae10) and awaits the 23:00 batch; 4 verification comments posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main a8059f2f; 1 re-verification comment posted. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2130-run.md.
+- Integrator pass pr-integration-2026-11-10-2200. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Knowledge PR #612 squash-merged (fold ticker-2028/2055/2122 records + retro A-01/A-02/A-03/A-06; merge commit e533edfd3; local main fast-forwarded). Records PR #597 verified CLEAN at three heads seen this pass (ec3c00c7, 4c9c926d7, 102e2985e) and awaits the 23:00 batch; 5 verification comments posted plus 1 correction. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main e533edfd3; 1 re-verification comment posted. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2200-run.md.
+
+## 21:57 to 22:19 - Ticker pass ticker-2154, arms-race done and zombie-invasion partial
+
+- Arms Race unit arms-race-2026-11-10-1803 done. Hero Advancement
+  phase (22:00-02:00), score 0 to 41,500 against thresholds 2,000 /
+  4,000 / 12,000: one hero level only, Morrison "The Reaper" Lv.124
+  to Lv.125 (about 83M Hero EXP, power +8,219). All three point
+  chests claimed in one tap (Skill Medal 1.6K, Arms Race Badge 6,
+  SR iron/food/coin chests 32 each, 5m speedups 68) plus the
+  cumulative counter chest (gold ticket 1, puzzle pieces 2, red gem
+  1); counter now 7/8. Ranking row rank 4, 50,500; ranking chest
+  preview only (SR chests 6 each) - the ended Base Building phase's
+  ranking reward was not found claimable on the page, still an open
+  question. Login first failed with an [E118] network error; the
+  second Reconnect tap cleared it. Completion sweep clean. Nothing
+  spent. Full detail in arms-race/2209-queue-run.md.
+
+- Zombie Invasion unit zombie-invasion-zombie-2026-11-10-002 partial
+  (ticker-2154, 22:12-22:19). Glacieradon page live, boss clue
+  counter now 40/40 with the challenge opening 2026-11-12 18:00;
+  next wave about 22:54. One Lv.10 kill (X:516 Y:394, Squad 1,
+  stamina 54 to 44) and its LOOT row claimed for 268,000 coins
+  (coin HUD 105.9M to 106.1M). Parallel dispatch missed: two map
+  taps landed on a Teleport tile and a Lv.28 Ironhead card instead
+  (squads_parallel 1, short round trip the binding limit). Lv.28
+  Ironhead sighted, not attacked (Suggested Power 2,396,500).
+  Store not visited; medal balance not re-read. Successor
+  enqueued to start now. Full detail in
+  zombie-invasion/2219-queue-run.md.
+- Integrator pass pr-integration-2026-11-10-2215. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. No knowledge/code PR arrived. Records PR #597 verified CLEAN at two heads seen this pass (b8bf6925, b11294e7) and awaits the 23:00 batch; 1 verification comment posted plus 1 correction (tree/stat slip fixed at once). Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against the unchanged main e533edfd3; no new comment owed. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2215-run.md.
+<<<<
+## 22:39 to 22:44 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-10-2239. No-op: no PR names
+  this job and no PR names an owner whose class plainly does not
+  cover its diff. PR 611 merged at the integrator 2130 pass and
+  PR 612 at the 2200 pass; main now e533edfd3. PR 597 head
+  advanced to the branch tip 38c5caf28, MERGEABLE CLEAN,
+  awaiting the 23:00 batch. PR 425 MERGEABLE CLEAN but still
+  owner-gated, OD-20261108-01 open in its third day. PR 351
+  reconciled by ticker-2231 (merged main e533edfd3, head now
+  e7707f7b), MERGEABLE CLEAN, awaiting the next integrator
+  batch. PR 301 still conflicting on the single file
+  action-log.jsonl (append-append); no branch-side
+  reconciliation since the 1900 conflict notice. Issues: 111
+  open, 0 unclassified, unchanged since the 2139 pass.
+  Owner-decision issues 132, 154, 335, 514, 517 all over 24
+  hours with statements current; issue 514 decision deadline
+  2026-11-12 18:00 UTC. Status: no-op. Full detail in
+  pr-catchall/2239-run.md.- Integrator pass pr-integration-2026-11-10-2230. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. No knowledge/code PR arrived. Records PR #597 verified CLEAN (head 38c5caf28, 43 commits) and awaits the 23:00 batch; 1 verification comment posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against the unchanged main e533edfd3 (merge-tree tree f11d2b11, same as the 2200 verification); no new comment (head and main unchanged since the 2200 re-verification). Records PRs #351 and #301 both had their action-log conflicts resolved on the branch side mid-pass (ticker-2231 merged main e533edfd3 into each; 351 head e7707f7b, 301 head 56236732); both re-verified CLEAN with the resolution spot-checked (0 duplicates, 0 lines dropped) and await the 23:00 batch; 1 verification comment posted on each. Status: done. Full detail in pr-integration/2230-run.md.
+
+## 22:32 to about 22:47 - Knowledge organization pass
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-10-2232.
+  Folded the new substantive record since the 2132 watermark
+  (b11294e7f) into 2 profiles on PR #613 (commit fac1a80b3f,
+  base main e533edfd3): arms-race 1.82.0 -> 1.83.0 (2209 Hero
+  Advancement met on one Morrison Lv.124 to Lv.125 level-up,
+  41,500 points, all point and cumulative chests claimed;
+  [E118] login recovery on the second Reconnect tap; Base
+  Building phase closed with the Oil Well label still [0/1],
+  0112 re-check moot; ended-phase ranking reward not found
+  on the page, mail route stands), zombie-invasion 1.24.0 ->
+  1.25.0 (2219 Glacieradon chain 002, 1 Lv.10 kill, LOOT row
+  read before Claim All - coin 268,000 verified; boss clue
+  counter 40/40, challenge opens 2026-11-12 18:00; parallel
+  dispatch missed on two mistaps; Lv.28 Ironhead sighted;
+  successor 003 enqueued). Own PR #612 merged with no
+  comments. Issue comment posted on #595 (2209 phase-close
+  evidence, comment 6789049943); no new issue filed.
+  Slack DM sent (ts 1794379635.616939). Status: done. Full
+  detail in knowledge-organization/2232-run.md.- Integrator pass pr-integration-2026-11-10-2245. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Knowledge PR 613 reviewed clean and merged by squash (d742bbb91, arms-race 1.83.0, zombie-invasion 1.25.0); local main fast-forwarded to d742bbb91. Records PR 597 verified CLEAN (head 17b82315d, 46 commits) and awaits the 23:00 batch; 1 verification comment posted. Records PRs 351 and 301 re-verified CLEAN against the new main d742bbb91; 1 re-verification comment posted on each. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against the new main (merged tree 13bd33c5); no new comment. Slack DM sync sent for the 613 merge (ts 1794380193.472109). Records branch head moved to 75f7e877b9 after the 597 verification, so the 23:00 batch must re-verify it. Status: done. Full detail in pr-integration/2245-run.md.
+
+## 22:32 to about 23:00 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-10-2232.
+  Implemented issue #606: the pre-reset sweep pair now stages at
+  120/60 minutes before the reset (seq-1 16:00, fix-ups at the pair
+  midpoint 16:30, seq-2 17:00 with a 60-minute claim window spanning
+  the 17:03 and 17:33 ticker passes) instead of 90/30, so the final
+  pass no longer expires inside a single ticker cycle; reset_utc
+  stays 02:00 and the expiry stays at the reset instant. PR #614
+  opened (branch work/sweep-seq2-window, commit 91798ec0f, Refs
+  #606), verified MERGEABLE/CLEAN; issue #606 commented, including
+  the correction that the reset is 18:00 PST in winter (the issue's
+  "19:00 reset" is the stale PDT label). Validation on isolated
+  /tmp fixtures only: py_compile clean, 50/50 assertions passed.
+  Own PR 425 still owner-gated (OD-20261108-01 open), re-verified
+  CLEAN; no unaddressed feedback. Status: done. Full detail in
+  tool-development/2232-run.md.
+## 22:40 to 22:51 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-10-2240. Plan staged
+  12 units for the 2026-11-11 10:03 and 10:30 slots (mail,
+  help, gifts, harvest, radar, survivors, train, training,
+  donations, arms-race, star-ceremony, duel-score);
+  already_present 59, skipped_done_current 2,
+  skipped_closed 1 (zero-sweep-2026-11-10-1730), reaped 0,
+  expired 6 (the six unclaimed 1830-slot units). Pre-reset
+  sweep production skipped (22:00 hour); tonight's pair
+  INCOMPLETE by queue.py sweep-status (PR 611 merged
+  21:45 local) - 1630 partial (1/23 ledger lines), 1730
+  expired unexecuted, eleventh consecutive sweep failure.
+  Scout diff on the 15:14 observation re-applied: observed
+  0, actionable 0, 0 enqueued, 0 candidates, 0 unexplained
+  (diff-counted); narrative red dots unexplained 2 (0615
+  pass) and 3 (1512 pass), left for the retro's threshold
+  check. Withdrawals 0. Pool by_state: inbox 76, claimed 0,
+  done 1500. No new issues. Status: done. Full detail in
+  queue-planning/2240-run.md.
+
+- Donations unit donations-2026-11-11-0413 partial
+  (ticker-2231, 22:43-22:49). Re-read after the ticker-1952
+  00:14:47 cooldown: Donation Count read live 4/30 at entry on
+  Quick Construction (8/10, +20% toward +22.5%, Tech EXP
+  3.0M/6.0M, coin Donate 900), 3 coin donations verified live
+  4/30 to 3/30 to 2/30 to 1/30, 2,700 coin spent; stopped at
+  the live-read 1/30 per the changed route (no tap from 1/30
+  on Quick Construction). Button stayed green at 1/30 with no
+  cooldown timer. Count rose 1/30 to 4/30 across the cooldown
+  interval (Issue #160 replenishment point). War-tab Rallied
+  Attack count not re-read; successor re-read
+  donations-2026-11-11-0650 enqueued for 23:30 PT. Full detail
+  in alliance-donations/2249-queue-run.md.
+
+- Passes unit passes-2026-11-10-1857 partial
+  (ticker-2231, 22:51-22:56). Hot Deals promo-only, no free
+  pack (Go button not tapped, external store). Weekly Pass
+  reset 18:00:00 re-confirmed; S2 Drone Components and S1
+  Drone Parts cards show Get Now $4.99 offers, not owned
+  pickups; Free Supply state unverified and the lower cards
+  unchecked (list drag did not scroll). The app exited on
+  the Super Monthly Pass tab tap; relaunched clean (single
+  window, pid 78374), state intact, no login demand, no
+  different-device dialog. Monthly gift already Claimed
+  (Days Left 11, Rewards Left 11). Nothing claimed, nothing
+  spent. Full detail in shop-claims/2256-queue-run.md.

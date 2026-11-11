@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-10T05:20:00Z
-version: 2.0.0
+modified: 2026-11-11T05:30:00Z
+version: 2.1.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -460,3 +460,18 @@ None yet.
 - OD-20261109-01: age 0 days at filing (Issue #514, Transfer Surge; decision needed before 2026-11-12 18:00 UTC).
 - OD-20261109-02: age 0 days at filing (Issue #517, Builders Hut Lv.26 upgrade).
 - Two new owner-decision items from the Nov 9 window (OD-20261109-01, OD-20261109-02). All eleven items are open; the nine carried items are open longer than 48 hours and are named in the Nov 9 retro chat report and Slack sync until decided.
+
+## 2026-11-10 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 10 days. TWO new skipped-needs-owner on Nov 10, both the standing pattern: arms-race 0203 (ticker-0334, record 0342, Base Building, score 0 of 30,000, only free path Oil Well in progress) and arms-race 2203 (ticker-0004, record 0006, Tech Research, score 0 of 30,000, only research completes in 1d 10h). The building-identity question inside the first skip (#595: Oil Well vs Lv.29 Aircraft Center) is unresolved. No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 10 days, event-bound. Unaddressed a tenth day: no Nov 10 events record mentions the Day 07 tile or a decoration choice, and the Nov 10 events hub reads contain no Halloween surface. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 10 days. Nov 10 survivors 4 partial, 0 done; gate line not verified; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 9 days, unaddressed.
+- OD-20261101-02: age 9 days, unaddressed.
+- OD-20261101-03: age 9 days. No Nov 10 record mentions the Season Photo actions; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 5 days. New evidence: 1 batch violation out of 6 merges today (PR 556 merged 22:59:55, 5 seconds before the 2300 window), so the process half now has a caught instance; the 5-second margin raises the grace question for #418. PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 2 days. PR #425 still open, still awaiting owner decision.
+- OD-20261108-02: age 2 days. New drift evidence: the records/2026-11-10 branch pool's _tools_ is 1.5.2 while main's is 1.5.3 (PR #587), so the branch's own tool under-measures attainment; Issue #415 still open.
+- OD-20261109-01: age 1 day. Transfer Surge decision still needed before 2026-11-12 18:00 UTC; Issue #514 still open.
+- OD-20261109-02: age 1 day. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open.
+- No new owner-decision items from the Nov 10 window (the two arms skips are the OD-20261031-01 pattern; no owner-gated PR was escalated; the Survey Center survey stays on #506, not a register item). All eleven items are open; the nine carried items are open longer than 48 hours and are named in the Nov 10 retro chat report and Slack sync until decided.
