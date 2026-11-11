@@ -2556,3 +2556,46 @@ of 2026-10-28.
   owner-gated (OD-20261108-01 open), head and main
   unchanged since the 1500 re-verification. Status: done.
   Full detail in pr-integration/1530-run.md.
+## 15:18 to about 15:31 - passes shop-claims queue run
+
+- Ticker pass ticker-1507, unit passes-2026-11-11-1057 (10:57 local
+  slot, executed past its 14:57 expiry - counts as late; the sweep
+  stays valid because pass claims do not lapse at the slot end).
+  Status: done (checked, nothing claimable).
+- Hot Deals: store promo plus the check-in banner only (FREE GIFT
+  "Claim your gift today!", FREE TOMORROW x5 x5 x5); no free pack.
+  Go not tapped - check-in entry unproven, Issue #553 stays open.
+- Weekly Pass: reset line "Weekly Pass rewards reset at 18:00:00"
+  (twenty-second live confirmation); Free Supply chest reads
+  Claimed; Legendary Take All $19.99 untouched; S2 Drone, S1 Drone
+  Parts and Coin Weekly Pass cards all Get Now $4.99 offers, none
+  owned. List walked to its end at the Coin card (one scroll worked,
+  three further drags moved nothing); the EXP and Iron cards from
+  the 2026-11-02 read are absent - the list has rotated.
+- Super Monthly Pass: Days Left 10, Rewards Left 10, Daily Pickup
+  Claimed; $24.99 extension untouched.
+- Entry Total Power 149,218,973, coin 135.6M, stamina 70; close
+  stamina 72 (regen), coin unchanged, gift badge still 2 - the 2
+  pending LOOT rows belong to the zombie chain successor (017),
+  not touched. No diamonds or money spent.
+  Full detail in shop-claims/1531-queue-run.md.
+
+## 15:33 to about 15:41 - secret-missions queue run
+
+- Ticker pass ticker-1507, unit secrets-2026-11-11-1057 (10:57 local
+  slot, executed past its 14:57 expiry - counts as late; the read
+  stays valid because secret task states do not lapse at the slot
+  end). Status: done (checked, nothing claimable or deployable).
+- Duel posture Day 3, Age of Science: secret tasks do not score
+  today, so no Mega Refresh was used.
+- Secret Command Post, all 8 cards of the 18:47 batch read live:
+  7 stamped PERFECT, UR Rescue Officer still unstamped with no
+  Claim button (Issue #626, unchanged since 02:59). Assist Allies
+  5/5 at cap; Plunder Others 0/5 untouched. Reward Recovery
+  2026-11-6 entry CLAIMED, nothing to claim. Mega Deploy and Mega
+  Refresh greyed and untapped.
+- Unexplained transient: an "Alliance Gifts received!" toast showed
+  on returning to base; no claim was tapped and the gift badge still
+  reads 2, so nothing was collected by this unit. The 2 pending LOOT
+  rows still belong to the zombie chain successor (017).
+  Full detail in secret-missions/1541-queue-run.md.
