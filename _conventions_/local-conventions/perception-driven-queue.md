@@ -1,9 +1,9 @@
 ---
 title: Perception-Driven Queue
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-07T12:32:17Z
+modified: 2026-11-11T09:32:17Z
 level: L2
-version: 1.2.3
+version: 1.2.4
 description: The scout layer - daily work is determined by what the game screen actually offers, perceived first and scheduled by observation triggers rather than fixed slots, with the regulars kept as a capability profile library and new tasks discovered, profiled and scheduled automatically
 status: phase-2-landed
 grounded_in:
@@ -716,6 +716,25 @@ corrected in the same session and its version raised. No second
 unit may spend itself on a belief already known to be wrong.
 This is the learning form of rule R2: the pivot is recorded
 knowledge, not only a changed tap.
+
+### Visual-grounding coordinate conversion (2026-11-11)
+
+The visual grounding tool returns coordinates in the 0-1000
+NORMALIZED range of the image it is given, not pixels. Convert
+a grounding return to a tap point as: original pixel = crop
+origin + (returned / 1000) * crop size / upscale, then
+normalize to the 642x951 window. Do NOT divide a grounding
+return by the upscale factor. The 2026-11-11 0117 harvest unit
+made exactly that error on its first three taps: the food and
+coin taps still collected (bubbles are large), but the iron tap
+missed by about 48 in x and 45 in y in normalized units and
+most likely hit the mine building instead of the bubble, and
+its top-row disappearance without a HUD credit is recorded
+unverified, not as a collection. The same error explains in
+part the 2042 unit's iron no-credit tap. A tap that misses its
+bubble by this error is a method failure, not a game mechanic -
+the next unit re-grounds with the normalized conversion.
+Recorded in resource-collection 1.58.0.
 
 ### The exploration closing standard
 
