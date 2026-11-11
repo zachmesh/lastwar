@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-11
 created: 2026-11-11T08:17:13Z
-modified: 2026-11-11T08:35:14Z
+modified: 2026-11-11T08:44:15Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, re-verified CLEAN against new main 0a31d7a0, re-verification comment posted; records PRs 615 and 301 re-verified CLEAN, awaiting the 03:00 batch; records/2026-11-11 branch created from main with this pass as its first commits; records PR opened this pass; the 0015 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; tools PR 425 owner-gated, clean, unchanged, no new comment; records PRs 301, 615 and 618 re-verified CLEAN, awaiting the 03:00 batch
@@ -56,3 +56,18 @@ of 2026-10-28.
   opened (1 commit b7c5ee00e). Issue comments posted on #160,
   #500, #558, #599. No contradictions, no new issue. Status:
   done. Full detail in knowledge-organization/0032-run.md.
+## 00:32 to about 00:44 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-11-0032.
+  Implemented issue #605: `branch_guard.py based-on` verifies a
+  branch descends from main by merge-base before calling it
+  orphan - the issue's "root commit 03c1007f1d has NO parents"
+  claim is false (the commit has two parents); the 2026-11-11
+  branch has merge-base 0a31d7a08, created from the main tip.
+  PR #620 opened (branch work/branch-guard-based-on-605, commit
+  5169f84f1, Refs #605); issue #605 commented. Validation on
+  isolated /tmp fixtures only: py_compile clean, 31/31 assertions
+  passed, read-only (fixture trees hash-identical). Own PR 425
+  still owner-gated (OD-20261108-01 open), re-verified CLEAN
+  against main 0a31d7a0; no unaddressed feedback. Status: done.
+  Full detail in tool-development/0032-run.md.
