@@ -1865,3 +1865,14 @@ of 2026-10-28.
 - Resource-collection (0909, ticker-0845, partial): all three panel pools collected exact — coin +2,104,312, food +3,233,161, iron +3,006,548 (8,344,021 total), each panel re-read Available 0; map bubbles not tapped (identity after panel Collects unverified); Armed Truck not located, eighth consecutive deferral (Issue #566 commented). Detail in resource-collection/0909-queue-run.md.
 - Radar-tasks (0922, ticker-0845, done): duel day 3 release — 7 tasks executed, 12 rewards claimed, radar points 403 to 415, stored 1/40 to 0/40, stamina 18 to 98 (free claim exhausted 0/2, 3x 50-stamina items used after the x3 pill consumed three at one tap); 9 pins inventoried at entry, 0 standing at close, clearing mechanism unverified (Issue #632 commented). Detail in radar-tasks/0922-queue-run.md.
 - Zombie-invasion unit 013 stays in inbox for the next tick (pass budget reached after the two units).
+
+- Tool-developer pass tool-development-2026-11-11-0932. Implemented
+  the #300 Nov 10 trucks variant in PR #639 (branch
+  work/trucks-expected-points-300, commit 902db4200): queue.py
+  points_is_expected_score plus complete warning, retro_report.py
+  1.5.3 to 1.5.4 with points_expected_excluded; the Nov 10 window
+  shape now reads honest (2150 vs 402150 on the fixture pool).
+  Own PR 425 still owner-gated (OD-20261108-01 open), head
+  0fb5a27f6, MERGEABLE/CLEAN, no unaddressed feedback. Issue #300
+  commented. Validation 44/44 on isolated /tmp fixtures. Status:
+  done. Full detail in tool-development/0932-run.md.
