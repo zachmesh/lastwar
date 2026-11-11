@@ -1819,7 +1819,7 @@ def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
     ones at 18:00 itself), so none could run before the reset and
     the trade day closed with 12 lines not at zero, the eighth
     consecutive failure. The fix-up slot is the midpoint of the
-    pair's slots (reset - 60 minutes for the [90, 30] pair, 17:00
+    pair's slots (reset - 90 minutes for the [120, 60] pair, 16:30
     local): after the first pass so the ticker is free to pick
     them, before the reset so they can still close the day, and
     off the planner's 4-hour grid so no ordinary window collides
