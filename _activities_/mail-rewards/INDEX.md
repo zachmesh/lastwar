@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-10T18:32:17Z
+modified: 2026-11-10T21:32:17Z
 level: L1
-version: 1.35.0
+version: 1.36.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -41,6 +41,7 @@ grounded_in:
   - source: ticker-0134 mail-rewards execution record 2026-11-10 0143 queue run (done, Claim All sweep, no claimable rewards, Weekly Pass mail verified already claimed; record commit e3d186a38 on records/2026-11-10)
   - source: ticker-0334 mail-rewards execution record 2026-11-10 0355 queue run (done, Claim All sweep, no claimable rewards, R5 warning mail read; record commit b7e79a62 on records/2026-11-10)
   - source: ticker-0904 mail-rewards execution record 2026-11-10 0929 queue run (partial, entry blocked by camera framing, Mail panel never opened, fourth unit this reset day with the same blocker, Issue #580; record commit 31892dde on records/2026-11-10)
+  - source: ticker-1234 mail-rewards execution record 2026-11-10 1259 queue run (done, Event train rewards claimed in full, mail-list back arrow re-grounded at norm 62,948; record commit 98abbc761 on records/2026-11-10)
 ---
 
 
@@ -66,7 +67,7 @@ Executions are recorded in `_records_/<date>/mail-rewards/`, one file per execut
   Claim All claims every claimable attachment in that category at
   once. Purchases holds receipts only - nothing to claim.
 - The back arrow sits at the bottom left of the mail screens, both in
-  the category list and inside an open mail.
+  the category list and inside an open mail. (2026-11-10 1259 update: the mail-list back arrow's true centre in the 642x951 window is (62,948) - taps at (57,902), (40,900), (55,925) and (40,955) all missed high, the button sits at about y 869-935 px, centre about y 902 px; measure the centre fresh from a screenshot crop in each unit. The AX tree carries no back-button element (game canvas), so coordinate taps at the freshly measured centre are the working route; keyboard input is unavailable in this app - focus belongs to the other LastWar window.)
 
 ## Cadence
 
@@ -963,3 +964,18 @@ the next tick re-produces this regular as a fresh unit.
 - LESSON: the next mail unit must reset the camera framing first (the standard framing WAS present at 09:14 this pass, so the framing changes between passes) or find a Mail entry that does not depend on the right rail.
 - No diamonds or money spent, no mail claimed or deleted (Delete All never pressed, Claim All never reached), no building or research started. The trucks screen was not re-entered in this unit.
 - Result stats: target all mail categories swept, claimable rewards claimed, achieved 0 categories swept, Mail panel never opened, resources_gained none, costs about 8 minutes, no items spent, verified yes (the non-entry is observed live in this unit), blocker_category e (repeated blocker - camera framing, fourth unit this reset day).
+
+## What the 2026-11-10 1259 unit added - Event train rewards claimed in full, mail-list back arrow re-grounded at (62,948), done
+
+- Unit mail-2026-11-10-1030 by ticker-1234, about 12:45 to 12:59 local, status done. Evidence in `_records_/2026-11-10/mail-rewards/1259-queue-run.md` (commit 98abbc761 on records/2026-11-10). Session cc-454 on the owner Mac mini.
+- Entry worked on standard framing: the Mail panel opened and the category list read red dots on Alliance and In-app Purchases, a gift icon on Event, no dots on Battle Report, Regular or Favorite. The #580 framing blocker is intermittent - the framing changes between passes; this unit needed no framing reset. Commented on Issue #580 by this run.
+- Event: train mails ([AP3x] Missile Apex's and [AP3x] Abyss Apex's trains, 4h to 10h ago) plus "Train arrival reward!". Claim All produced a CONGRATULATIONS summary: gold badge 2.5K x1, supply chest x3, red gem 100 x1, supply chest x50, blue crystal 2.0K, 5m speedups x3, x2, x1, x8 and x6 (20 in total). All claimed.
+- Alliance: five "New Alliance Assembly Point" mails (8h and 12h ago) plus the "Attention" mail (10h ago, R5-marked, already read in full by the 0355 unit - Abyss Apex warning about leavers targeting the alliance). Claim All showed no reward summary. No claimable attachments.
+- System: "Planned Update Notice", "(President Mail) Transfer Update", "Season Closed", "Pack and Event Adjustment Notice", "(President Mail) Server 2110 ...". Claim All showed no reward summary.
+- Regular: victory reports only (Lv.1 CL-7 Victim, Lv.1 and Lv.57 Doom Elite). Claim All showed no reward summary.
+- Battle Report: Zombie Horde victory reports Lv.15 to Lv.20, 19h ago. Claim All showed no reward summary.
+- In-app Purchases (receipts only) and Favorite were not opened; no claimable attachments live there per the activity metadata.
+- Delete All was never pressed.
+- BACK-ARROW BLOCKER RESOLVED IN-UNIT: the mail list back arrow did not respond to taps at (57,902) and (40,900) on window 489932, nor to a press-hold or taps at (55,925) and (40,955) on window 508052 - four no-change attempts in total. A fresh screenshot crop measured the arrow's true centre in the 642x951 window at (62,948); a tap there worked at once, and the same point worked for every later back tap in this unit. Earlier taps missed high (the button sits at about y 869-935 px, centre about y 902 px). Keyboard input is unavailable in this app - focus belongs to the other LastWar window - and the AX tree carries no back button element (game canvas), so coordinate taps at the freshly measured centre are the working route. See the updated How to enter entry.
+- Figures read live: food 615.9M, iron 938.8M, coin 84.1M, power 148,765,978, diamonds 6,207 at entry and at close (unchanged). No login or verification demanded, no different-device dialog.
+- Result stats: target 1, achieved 1, resources_gained Event train bundle (gold badge 2.5K x1, supply chests x53, red gem 100 x1, blue crystal 2.0K, 5m speedups x20), costs about 14 minutes play, verified yes, blocker_category none, device_takeovers 0.
