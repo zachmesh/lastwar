@@ -1965,3 +1965,8 @@ of 2026-10-28.
   issues 132, 154, 335, 514 and 517 all over 24 hours with
   statements current. Status: no-op. Full detail in
   pr-catchall/1039-run.md.
+## About 10:32 to about 10:47 - Knowledge organization 1032 run, 4 profiles folded, PR 641
+
+- Survivor-intake 1.54.0 and alliance-donations 1.101.0 (ticker-0936, commit 5c18f9174), mail-rewards 1.38.0 and alliance-gifts 1.53.0 (ticker-1012, commit c0c788be). PR #641, 2 commits (55fe8784, 42cc69d9), base main d3979d5c, OPEN at run end. Full detail in knowledge-organization/1032-run.md.
+- 0941 survivors: 1 gate survivor processed, 0 recruits identified; CORRECTION - the 0520 pet-marker question is settled: the pre-tap crop proves a human survivor, the pet marker sits elsewhere. 1004 donations: 2 coin donations verified 8/30 to 6/30 on Unit Load Capacity; recommended marker moved from Rallied Attack; coin cost 300 on this node; fifty-sixth replenishment data point. 1029 mail done: CORRECTION - coordinates are 0-1000 normalized, not window pixels. 1042 gifts done: 312 Regular + 19 Premium; Premium Claim All re-grounded at (744,939).
+- Issue comments: #168, #160, #500, #230, #183. Slack summary sent to the owner Trirvia DM (ts 1794422863.922279). Stats: profiles updated 4, contradictions resolved 1, stale marked 0, gaps filed 0.
