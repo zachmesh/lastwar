@@ -3005,3 +3005,17 @@ modified: 2026-11-10T14:21:00Z
 ## 17:15 to 17:34 - Ticker pass ticker-1704, donations unit partial (unverified close)
 
 - Donations unit donations-2026-11-10-1403 partial, unverified. 17 coin donations to Quick Construction (8/10): count read live 17/30 at entry, 16/30, then 8/30. After the last batch the coin button greyed with a 00:04:21 cooldown and the count label vanished behind the timer, so the final count was not read live and the unit does not close on arithmetic. Footer Tech Donation Today moved 7600 to 9300 (+1700 over exactly 17 taps). Re-read unit donations-2026-11-11-0122 enqueued for after the cooldown (not_before 01:40Z). Entry blocker broken: Alliance shield at fresh measured centre (927, 715) in this window opened the menu at once. Nothing spent but 15,300 coin. Full detail in alliance-donations/1734-queue-run.md.
+
+## 17:30 to about 17:37 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-10-1730.
+  Non-batch pass per the checker (due: no - outside every
+  batch window, next batch 19:00): no records merges.
+  Records PR 590 clean at new head 474309ac (27 commits beyond
+  main), awaiting the 19:00 batch. Records PRs 351 and 301
+  still conflicting on the action-log file. Tools PR 425
+  owner-gated, clean at unchanged head 0fb5a27f,
+  OD-20261108-01 still open. Two re-verification comments
+  posted in error then deleted per the forward comment
+  convention. Status: done. Full detail in
+  pr-integration/1730-run.md.
