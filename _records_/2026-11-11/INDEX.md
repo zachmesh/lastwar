@@ -1686,3 +1686,19 @@ of 2026-10-28.
   010's derived 07:54, unresolved). Cleared false, successor
   enqueued to start now. Detail in
   zombie-invasion/0800-queue-run.md.
+- Integrator pass pr-integration-2026-11-11-0800.
+  NON-batch pass (checker due exit 1, outside every batch
+  window, next batch point 11:00 PT). Knowledge PR 637
+  squash-merged (683ee2a4f, 7 activity profiles).
+  Records PR 636 (2026-11-11, head 38728a30f, CLEAN,
+  probe tree 2478bdcc) awaits the 11:00 batch; records
+  PR 615 (2026-11-10, head 5f302d8cc3) still CONFLICTING
+  on the same _queue_ files named at the 0700 pass,
+  re-probed identical this pass, conflict comment already
+  posted then, carried. Tools PR 425 re-verified CLEAN
+  against new main 683ee2a4f (merge-tree exit 0, tree
+  ad3da8d28), still owner-gated (OD-20261108-01 open);
+  re-verification comment posted, main moved via the 637
+  merge. Local main fast-forwarded to 683ee2a4f. Slack
+  sync for the 637 merge. Status: done. Full detail in
+  pr-integration/0800-run.md.
