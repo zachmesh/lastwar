@@ -1301,3 +1301,34 @@ of 2026-10-28.
   main, no comment posted (main unmoved since the 0545
   verification). Status: done. Full detail in
   pr-integration/0607-run.md.
+
+## 06:12 to about 06:22 - Ticker pass ticker-0604, zombie-invasion unit 009
+
+- Zombie Invasion (0622, ticker-0604, partial): 2 Lv.10 kills in
+  parallel (X:560 Y:399, X:555 Y:389), squads_parallel 2; both LOOT
+  rows read before Claim All (medal x10, green crate x1, iron 268.0K,
+  food 268.0K, coin 268.0K, hero EXP 263.0K each) and claimed for
+  536,000 coins. Coin panel exact 120,927,972 to 121,463,972
+  (+536,000 exactly). Medals 4080 (unit 008 live) to 4100 (Store
+  header live). Event Glacieradon verified live, 2d 11:43:40 left,
+  challenge 40/40 begins 2026-11-12 18:00, next wave in about 00:33;
+  wave live, cleared false, successor enqueued to start now. Store
+  first screen: gold chest 120 / gold bar 80 / gold bar 80 / 50
+  Stamina 10 (Limit 3, available in this variant) / crate 160; one
+  scroll attempt moved nothing, so the Coin Chest (SSR) row below the
+  fold stays unverified and no redemption was made. Session cc-567
+  dropped mid-unit, cc-568 recovered with no state lost. Detail in
+  zombie-invasion/0622-queue-run.md.
+
+- Donations (0635, ticker-0604, partial): Donation Count re-read
+  live at 2/30 on Rallied Attack (7/10, marker fresh) — 5 below
+  the 0534 unit's derived 7/30, so that derivation was wrong and
+  the live 2/30 stands. Tap 1 from 2/30 landed verified (count
+  1/30, Tech EXP 25.1K to 25.2K). Tap 2 from 1/30 greyed the
+  button behind a 00:15:49 timer with the count hidden and EXP
+  unchanged at 25.2K, so its landing is unverified — the War-tab
+  1/30 tap stays unproven. Close is unverified per the hard rule,
+  tracker untouched, re-read unit enqueued for after about 06:51.
+  Entry note: the Zombie Store X at (833,205) did not close the
+  panel (three taps across two units); the Events back arrow did.
+  Detail in alliance-donations/0635-queue-run.md.
