@@ -4202,3 +4202,21 @@ modified: 2026-11-10T14:21:00Z
   Pool by_state: inbox 77, claimed 0, done 1505. No new
   issues. Status: done. Full detail in
   queue-planning/2340-run.md.
+
+- Integrator pass pr-integration-2026-11-10-2345. NON-batch
+  pass: checker plain due yes (clock-only) but merge-aware
+  due no - records PRs 597 and 351 already merged in the
+  23:00 window at the 2300 batch pass, so no records PR
+  merged. Tools PR 616 squash-merged (queue.py cap-audit,
+  Refs #608; merge commit f7dbcc92; issue #608 commented
+  with the merge link) and knowledge PR 617 squash-merged
+  (donations 1.92.0, shop-claims 1.51.0; merge commit
+  0a31d7a0); 617 arrived mid-pass and was handled in the
+  same sweep. Records PRs 615 and 301 re-verified CLEAN
+  and awaiting the 03:00 batch. Tools PR 425 still
+  owner-gated (OD-20261108-01 open), re-verified CLEAN
+  against new main f7dbcc92; 1 re-verification comment
+  posted. Local main fast-forwarded to 0a31d7a0 by bundle.
+  Slack DM sync sent for the merges (ts 1794383915.446139).
+  Status: done. Full detail in
+  pr-integration/2345-run.md.
