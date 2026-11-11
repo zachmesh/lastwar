@@ -1015,3 +1015,19 @@ of 2026-10-28.
   candidates/unexplained 0), 0 withdrawals, no new issue.
   Pool inbox 76, claimed 1, done 1532. Status: done.
   Full detail in queue-planning/0440-run.md.
+
+## 04:45 to about 04:50 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0450.
+  NON-batch pass (checker plain and merge-aware both
+  not due, next batch 07:00 PT). Knowledge PR 630 merged
+  by squash (donations 1.96.0, zombie 1.29.0, harvest
+  1.59.0; squash 2cd992888); local main fast-forwarded.
+  Records PRs 627 and 615 clean, awaiting the 07:00
+  batch. Tools PR 425 still owner-gated (OD-20261108-01),
+  re-verified CLEAN against new main, re-verification
+  comment posted. Process note: checkout and pull ran in
+  the shared VPS main worktree at pass start, against the
+  standing rule; no change resulted, recorded for the
+  retro. Status: done. Full detail in
+  pr-integration/0450-run.md.
