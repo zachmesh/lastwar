@@ -3774,3 +3774,32 @@ modified: 2026-11-10T14:21:00Z
   queue-planning/2140-run.md.
 - Integrator pass pr-integration-2026-11-10-2130. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Tools PR #611 squash-merged (queue.py sweep-status, Refs #610; merge commit a8059f2f; local main fast-forwarded). Records PR #597 verified CLEAN at four heads seen this pass (503fd3797, 349a843af, 9a95c4b0e, 120efae10) and awaits the 23:00 batch; 4 verification comments posted. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main a8059f2f; 1 re-verification comment posted. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2130-run.md.
 - Integrator pass pr-integration-2026-11-10-2200. NON-batch pass: checker not due (outside every batch window, next batch 23:00), so no records PR merged. Knowledge PR #612 squash-merged (fold ticker-2028/2055/2122 records + retro A-01/A-02/A-03/A-06; merge commit e533edfd3; local main fast-forwarded). Records PR #597 verified CLEAN at three heads seen this pass (ec3c00c7, 4c9c926d7, 102e2985e) and awaits the 23:00 batch; 5 verification comments posted plus 1 correction. Tools PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main e533edfd3; 1 re-verification comment posted. Records PRs #351 and #301 still conflicting on the action-log file, 1900-pass conflict comments verified present. Status: done. Full detail in pr-integration/2200-run.md.
+
+## 21:57 to 22:19 - Ticker pass ticker-2154, arms-race done and zombie-invasion partial
+
+- Arms Race unit arms-race-2026-11-10-1803 done. Hero Advancement
+  phase (22:00-02:00), score 0 to 41,500 against thresholds 2,000 /
+  4,000 / 12,000: one hero level only, Morrison "The Reaper" Lv.124
+  to Lv.125 (about 83M Hero EXP, power +8,219). All three point
+  chests claimed in one tap (Skill Medal 1.6K, Arms Race Badge 6,
+  SR iron/food/coin chests 32 each, 5m speedups 68) plus the
+  cumulative counter chest (gold ticket 1, puzzle pieces 2, red gem
+  1); counter now 7/8. Ranking row rank 4, 50,500; ranking chest
+  preview only (SR chests 6 each) - the ended Base Building phase's
+  ranking reward was not found claimable on the page, still an open
+  question. Login first failed with an [E118] network error; the
+  second Reconnect tap cleared it. Completion sweep clean. Nothing
+  spent. Full detail in arms-race/2209-queue-run.md.
+
+- Zombie Invasion unit zombie-invasion-zombie-2026-11-10-002 partial
+  (ticker-2154, 22:12-22:19). Glacieradon page live, boss clue
+  counter now 40/40 with the challenge opening 2026-11-12 18:00;
+  next wave about 22:54. One Lv.10 kill (X:516 Y:394, Squad 1,
+  stamina 54 to 44) and its LOOT row claimed for 268,000 coins
+  (coin HUD 105.9M to 106.1M). Parallel dispatch missed: two map
+  taps landed on a Teleport tile and a Lv.28 Ironhead card instead
+  (squads_parallel 1, short round trip the binding limit). Lv.28
+  Ironhead sighted, not attacked (Suggested Power 2,396,500).
+  Store not visited; medal balance not re-read. Successor
+  enqueued to start now. Full detail in
+  zombie-invasion/2219-queue-run.md.
