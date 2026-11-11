@@ -1944,3 +1944,8 @@ of 2026-10-28.
   Full detail in pr-integration/1015-run.md.
 - Integrator pass pr-integration-2026-11-11-1030.
   Full detail in pr-integration/1030-run.md.
+## About 10:15 to 10:29 - Ticker pass ticker-1012, mail done
+
+- Mail-rewards (1029, ticker-1012, done): all six claimable categories walked. Event claimed 2x Zombie Invasion Intel Reward + 3x train mails (medals x530, hero EXP 4.4M, stamina items 10x4, coin 1.8M, food 1.4M, iron 1.4M, plus an unidentified blue item 3.0K); System claimed Maintenance Completed + Unclaimed Survey Reward (diamonds +400). Alliance, Regular, Battle Report, Favorite: Claim All pressed, nothing claimable. HUD verified: coin 127.8M to 129.6M, food 680.8M to 682.2M, diamonds 6,317 to 6,717; Mail red dot gone. In-app Purchases not opened (receipts only). Method note: computer.control coordinates are 0-1000 normalized, not window pixels. Detail in mail-rewards/1029-queue-run.md.
+
+- Alliance-gifts (1042, ticker-1012, done): Regular 310 + 2 late arrivals (Doom Walker Loot, Zombie Boss) and Premium 19 claimed; Gift Level 28, progress 206,145,210 to 206,168,170 (alliance-wide, allies also move it; 131,830 short of Level 29). Both tabs verified Claimed with no Claim All left; Alliance Gifts red dot gone. Method note: Premium Claim All sits at normalized (744,939), right of the Regular position — first attempt at Regular coordinates missed. Detail in alliance-gifts/1042-queue-run.md.
