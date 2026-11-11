@@ -2521,3 +2521,16 @@ of 2026-10-28.
   (no kills landed in-unit); medals 4150 derived, not live-read;
   Store not visited. Cleared false; successor 017 enqueued to
   start now. Detail in zombie-invasion/1456-queue-run.md.
+
+## 15:00 to about 15:08 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1500.
+  BATCH pass (checker plain and merge-aware both due,
+  window 15:00-16:00 PT): merged knowledge PR 654
+  (squash 1fce2c8e, Refs #650, #648, #652) and records
+  PR 643 (merge commit 533e4601, 42 commits). Tools PR
+  425 owner-gated (OD-20261108-01 still open), head
+  unchanged 721830b7f, re-verified CLEAN, comment
+  posted. Local main fast-forwarded to 533e4601. Slack
+  sync sent. Status: done.
+  Full detail in pr-integration/1500-run.md.
