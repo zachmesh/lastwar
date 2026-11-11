@@ -47,6 +47,19 @@ Usage:
              # the same overlay.
   queue.py [--root DIR] claim --unit UNIT --executor NAME
              [--lease-minutes 20]
+  queue.py [--root DIR] deadline --unit UNIT
+             (--expires-at ISO | --closes-in SECONDS)
+             [--priority N] [--reason TEXT]
+             # stamp a real deadline onto an inbox unit whose slot
+             # expiry is later than its true deadline (issue #623):
+             # a train unit staged to its slot end is picked by
+             # that expiry, so a boarding closing in minutes is
+             # invisible to next - the executor stamps the banner
+             # countdown when it sees it and next returns the
+             # train first. Only tightens: refuses a deadline at
+             # or after the current expiry, a past deadline, and
+             # any unit not in inbox; re-stamping the same value
+             # is a no-op. The stamp is recorded in the unit body.
   queue.py [--root DIR] complete --unit UNIT --status done
              [--summary TEXT] [--claimed-items a,b] [--evidence PATH]
              [--follow-up TEXT] [--stat key=value ...]
@@ -2599,6 +2612,133 @@ def cmd_claim(args):
     return 0
 
 
+def _parse_closes_in(text):
+    """Seconds from a banner countdown: an integer, or HH:MM:SS."""
+    try:
+        seconds = int(text)
+    except (TypeError, ValueError):
+        parts = (text or "").split(":")
+        if len(parts) != 3:
+            return None
+        try:
+            hours, minutes, seconds = (int(p) for p in parts)
+        except ValueError:
+            return None
+        seconds = hours * 3600 + minutes * 60 + seconds
+    return seconds if seconds > 0 else None
+
+
+def cmd_deadline(args):
+    # Real deadlines (issue #623): a unit's slot expiry is not
+    # always its true deadline - a train unit staged to its slot
+    # end is picked by that expiry, so a boarding closing in
+    # minutes is invisible to next and the pass hands out other
+    # work while the boarding closes. The executor stamps the
+    # boarding close when the banner shows it (countdown from
+    # the banner, or an absolute close), and next returns the
+    # train first. Only tightens: a deadline at or after the
+    # current expiry, a past deadline, and any unit not in
+    # inbox are refused, so a stamp can never widen a window
+    # or resurrect a closing. Re-stamping the same value is a
+    # no-op success, so a banner re-read is idempotent. The
+    # stamp is recorded in the unit body, and sync never
+    # rewrites it: production skips a (regular, planned_for)
+    # pair that already exists instead of re-minting it, and
+    # the aged priority-1 windowing only touches units with no
+    # planned_for, which a staged train unit always has.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"stamping into the live pool {root} (issue #598)")
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    if not any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        print(f"refused: pool root {root} holds no inbox, "
+              "claimed or done directory - the pool was not found, "
+              "nothing stamped (issue #510)")
+        return 1
+    if args.expires_at and args.closes_in:
+        print("refused: pass exactly one of --expires-at and "
+              "--closes-in")
+        return 1
+    stamp = now_utc()
+    if args.expires_at:
+        deadline = parse_iso(args.expires_at)
+        if deadline is None:
+            print(f"refused: --expires-at {args.expires_at!r} is not "
+                  "a UTC timestamp YYYY-MM-DDTHH:MM:SSZ")
+            return 1
+    elif args.closes_in:
+        seconds = _parse_closes_in(args.closes_in)
+        if seconds is None:
+            print(f"refused: --closes-in {args.closes_in!r} is not "
+                  "seconds or HH:MM:SS")
+            return 1
+        deadline = stamp + timedelta(seconds=seconds)
+    else:
+        print("refused: pass --expires-at or --closes-in")
+        return 1
+    if deadline <= stamp:
+        print(f"refused: deadline {iso(deadline)} is not in the "
+              "future - the boarding already closed, let reap "
+              "expire the unit instead of stamping a dead deadline")
+        return 1
+    state, path = find_unit(root, args.unit)
+    if state != "inbox":
+        print(f"cannot stamp {args.unit}: state is {state}")
+        return 1
+    if _has_done_record(root, args.unit):
+        print(f"cannot stamp {args.unit}: already has a done "
+              f"record - the inbox copy is stale, run sync to "
+              f"drop it instead of stamping it")
+        return 1
+    if has_completion_marker(root, args.unit):
+        print(f"cannot stamp {args.unit}: already closed in "
+              f"another worktree - the inbox copy is stale, run "
+              f"sync to drop it instead of stamping it")
+        return 1
+    fields, body = read_unit(path)
+    current = parse_iso(fields.get("expires_at", ""))
+    if current is not None and deadline >= current:
+        if deadline == current:
+            print(f"already stamped: {args.unit} expires_at is "
+                  f"already {iso(current)}")
+            return 0
+        print(f"refused: deadline {iso(deadline)} is not earlier "
+              f"than the current expiry {iso(current)} - deadline "
+              "only tightens, it never widens a window")
+        return 1
+    old_expires = fields.get("expires_at", "")
+    old_priority = fields.get("priority", 3)
+    fields["expires_at"] = iso(deadline)
+    if args.priority is not None:
+        fields["priority"] = args.priority
+    reason = args.reason or "no reason given"
+    note = (f"Deadline stamped {iso(deadline)} from "
+            f"{old_expires or 'no expiry'} ({reason}).")
+    body = (body or "").rstrip("\n") + "\n\n" + note + "\n"
+    write_unit(path, fields, body)
+    rank = None
+    total = 0
+    for f in sorted(
+            (f for f in list_units(root, "inbox")
+             if _actionable(f, stamp)
+             and not _has_done_record(root, f.get("unit"))
+             and not has_completion_marker(root, f.get("unit"))),
+            key=lambda f: pick_key(f, stamp)):
+        total += 1
+        if f.get("unit") == args.unit and rank is None:
+            rank = total
+    print(f"deadline {args.unit}: expires_at "
+          f"{old_expires or '-'} -> {iso(deadline)}"
+          + (f", priority {old_priority} -> {args.priority}"
+             if args.priority is not None else "")
+          + (f", pick rank {rank} of {total} actionable inbox units"
+             if rank is not None
+             else ", not actionable yet (not_before in the future)"))
+    return 0
+
 def _stat_number(value):
     """Coerce a stats scalar to a number, or None (retro _num)."""
     if isinstance(value, bool):
@@ -3799,6 +3939,14 @@ def main(argv=None):
     p.add_argument("--lease-minutes", type=int,
                    default=DEFAULT_LEASE_MINUTES)
     p.set_defaults(fn=cmd_claim)
+
+    p = sub.add_parser("deadline")
+    p.add_argument("--unit", required=True)
+    p.add_argument("--expires-at", default="")
+    p.add_argument("--closes-in", default="")
+    p.add_argument("--priority", type=int, default=None)
+    p.add_argument("--reason", default="")
+    p.set_defaults(fn=cmd_deadline)
 
     p = sub.add_parser("complete")
     p.add_argument("--unit", required=True)
