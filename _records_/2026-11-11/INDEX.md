@@ -2418,3 +2418,28 @@ of 2026-10-28.
   no-repeat rule. No Slack sync, no chat report
   (non-batch, no merges). Status: done.
   Full detail in pr-integration/1430-run.md.
+
+## 14:10 to 14:20 - Ticker pass ticker-1408, help unit 1030 done
+
+- Alliance-help (1410, ticker-1408, done): Help All pressed
+  twice for 3 ally requests (KaBoom420 healing, Comandante DT
+  Oil Output I research, Obiwanslostbro Oil Output I research,
+  the last arriving mid-unit); points 500/1,000 to 520/1,000
+  verified live on a reopened dialog. Bubble tile tap at
+  (602,712) delivered despite a no-change receipt; Alliance
+  button re-grounded to (652,711) snap-off in the 1920x1080
+  fullscreen window; dialog X ignores background taps, closed
+  via the panel back arrow. Session cc-624 dropped mid-unit,
+  recovered as cc-625. Detail in
+  alliance-help/1410-queue-run.md.
+
+## 14:22 to 14:35 - Ticker pass ticker-1408, mail unit 1030 partial
+
+- Mail-rewards (1422, ticker-1408, partial): Event Claim All
+  done - Zombie Invasion Intel Rewards and train arrival mails
+  paid medal 280, EXP 2.4M, Battle Data 1.5K, 10-stamina x2,
+  coin 969.0K, food 769.0K, iron 769.0K. Alliance, Battle
+  Report, System and Regular were NOT checked (pass budget ran
+  out); tracker untouched, next tick re-produces mail. Unit
+  finished about 5 minutes after its 14:30 expiry. Detail in
+  mail-rewards/1422-queue-run.md.
