@@ -1560,3 +1560,22 @@ of 2026-10-28.
   cannot decide it. The 1/30 remainder goes to the next staged
   donations unit (1003). Detail in
   alliance-donations/0733-queue-run.md.
+
+## 07:30 to about 07:42 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0730.
+  NON-batch pass (checker plain due yes clock-only,
+  merge-aware not due: PR #627 already merged 07:07:30 PT
+  in the 07:00-08:00 window; next batch point 11:00 PT).
+  Records PR 636 (2026-11-11, head 8c4c26ffb, CLEAN,
+  probe tree cbad55b0) awaits the 11:00 batch; records
+  PR 615 (2026-11-10, head 5f302d8cc3) still CONFLICTING
+  on the same 9 _queue_ files named at the 0700 pass,
+  re-probed identical this pass, conflict comment already
+  posted then, carried after a branch-side reconcile.
+  Tools PR 425 re-verified CLEAN against unchanged main
+  df82f25ad (merge-tree exit 0, tree 971fbdce), still
+  owner-gated (OD-20261108-01 open); no new comment, main
+  has not moved since the 0700 verification. No merges,
+  no PRs opened, no Slack sync. Status: done. Full detail
+  in pr-integration/0730-run.md.
