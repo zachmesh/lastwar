@@ -56,6 +56,11 @@ Usage:
              # required result.stats key, so an incomplete closing
              # is flagged in the result itself at the moment it is
              # made instead of surfacing only in the retro.
+             # complete also flags a closing whose duration runs
+             # over the 15-minute unit cap in result.stats_warnings
+             # and warns on stdout (exit still 0), so an overrun is
+             # visible in the unit file at the moment it is made
+             # instead of surfacing only in the retro (issue #608).
              # a short closing that names its overlay with
              # --stat blocker_overlay=<slug> records the
              # pool-level blocker (the slug maps to its clearing
@@ -175,6 +180,17 @@ Usage:
              # 1 when it is not, 2 when the roster or regular
              # cannot be read; read-only, and it resolves the root
              # to the live pool (issue #598).
+  queue.py [--root DIR] cap-audit [--start YYYY-MM-DD]
+             [--end YYYY-MM-DD]
+             # list every done closing whose duration runs over the
+             # 15-minute unit cap (900 seconds), by local finished
+             # date in the window (issue #608): the retro's Nov 4-10
+             # window held 12 such units, hand-counted from the
+             # pool - this command reproduces that list
+             # mechanically. Defaults cover the 7 days ending today
+             # local. Exit 0 when no closing is over the cap, 1
+             # when any is, 2 on a bad date; read-only, and it
+             # resolves the root to the live pool (issue #598).
 
 --root defaults to the repository _queue_ folder; it also accepts
 a repository root, resolved to its _queue_ folder, or a pool
@@ -197,6 +213,7 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 UNIT_CAP_MINUTES = 15           # owner rule 2026-10-28: per unit
+UNIT_CAP_SECONDS = UNIT_CAP_MINUTES * 60   # 900: the cap, in seconds
 # Issue #461: a same-holder re-acquire always renews the lease.
 # The 2026-11-08 rule renewed only within 60 seconds of expiry, but
 # the executor loop re-acquires at every unit boundary (design
@@ -2204,6 +2221,82 @@ def cmd_sweep_status(args):
         ensure_ascii=False))
     return 0 if complete else 1
 
+def cmd_cap_audit(args):
+    """List every done closing over the 15-minute unit cap.
+
+    Issue #608: the 2026-11-10 retro found 12 units in the Nov 4-10
+    window over 900 seconds (local finished dates) - trucks
+    2026-11-09-1857 at 1,226s, donations 2026-11-10-1343 at 1,140s
+    and 10 more - hand-counted from the pool, because no tool
+    listed them. This command reproduces that list mechanically:
+    every done unit whose result.finished_at falls in the window
+    (local dates) and whose result.duration_seconds is over
+    UNIT_CAP_SECONDS. All closing statuses count - done, partial
+    and failed all ran over the cap - and a done file with no
+    duration or no finished_at is skipped, not counted. Exit 0
+    when no closing is over the cap, 1 when any is, 2 on a bad
+    date - the gate command's exit-code convention (log_append.py),
+    so a retro run can gate on it.
+
+    Read-only: it writes nothing to the pool. It resolves the
+    root to the live pool (issue #598), so a copy running from a
+    delivery worktree reads the live pool, not the worktree's
+    stale copy.
+    """
+    root = live_pool_root(args.root)
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    if args.end:
+        try:
+            year, month, day = (int(x) for x in args.end.split("-"))
+            end = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --end {args.end!r} is not YYYY-MM-DD")
+            return 2
+    else:
+        end = datetime.now(LOCAL_TZ).date()
+    if args.start:
+        try:
+            year, month, day = (int(x) for x in args.start.split("-"))
+            start = datetime(year, month, day).date()
+        except ValueError:
+            print(f"refused: --start {args.start!r} is not YYYY-MM-DD")
+            return 2
+    else:
+        start = end - timedelta(days=6)
+    if start > end:
+        print(f"refused: --start {args.start!r} is after --end "
+              f"{args.end!r}")
+        return 2
+    over = []
+    for f in list_units(root, "done"):
+        result = f.get("result", {})
+        if not isinstance(result, dict):
+            continue
+        duration = result.get("duration_seconds")
+        if not isinstance(duration, int) or \
+                duration <= UNIT_CAP_SECONDS:
+            continue
+        finished = parse_iso(result.get("finished_at", ""))
+        if finished is None:
+            continue
+        if not (start <= finished.astimezone(LOCAL_TZ).date() <= end):
+            continue
+        over.append({"unit": f.get("unit"),
+                     "regular": f.get("regular"),
+                     "status": result.get("status", ""),
+                     "finished_at": result.get("finished_at", ""),
+                     "duration_seconds": duration})
+    over.sort(key=lambda e: (e["finished_at"], e["unit"]))
+    print(json.dumps({
+        "start": start.isoformat(), "end": end.isoformat(),
+        "cap_seconds": UNIT_CAP_SECONDS,
+        "over_cap_count": len(over), "over_cap": over},
+        ensure_ascii=False))
+    return 1 if over else 0
+
+
 def _sweep_enqueue_refusal(args):
     """Refusal message when a hand-enqueued zero-sweep unit does not
     match the reset-anchored geometry, or None when it may proceed.
@@ -2711,6 +2804,8 @@ def cmd_complete(args):
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
     achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
     blocker_bad = blocker_category_not_enum(stats)
+    over_cap = isinstance(duration, int) and \
+        duration > UNIT_CAP_SECONDS
     fields["result"] = {
         "status": args.status,
         "started_at": fields.get("claimed_at", ""),
@@ -2733,7 +2828,9 @@ def cmd_complete(args):
                            + (["achieved is screen total"]
                               if achieved_screen else [])
                            + (["blocker_category not in enum a-i"]
-                              if blocker_bad else [])),
+                              if blocker_bad else [])
+                           + (["duration exceeds 15-minute unit cap"]
+                              if over_cap else [])),
     }
     # Screen-blocking overlay (issue #436): a short closing that
     # names its overlay records the pool-level blocker, so the
@@ -2791,6 +2888,10 @@ def cmd_complete(args):
               f"this unit and gifts pay no score; the Gift "
               f"Level progress gain belongs in the summary and "
               f"resources_gained only")
+    if over_cap:
+        print(f"warning: {args.unit} ran {duration}s, over the "
+              f"{UNIT_CAP_MINUTES}-minute unit cap - split the "
+              f"task next time so a unit stays inside one pass")
     if blocker_note:
         print(blocker_note)
     # Completed-unit marker (issue #438): the done record above
@@ -3730,6 +3831,11 @@ def main(argv=None):
     p.add_argument("--date", default="")
     p.add_argument("--regulars-json", default="")
     p.set_defaults(fn=cmd_sweep_status)
+
+    p = sub.add_parser("cap-audit")
+    p.add_argument("--start", default="")
+    p.add_argument("--end", default="")
+    p.set_defaults(fn=cmd_cap_audit)
 
     p = sub.add_parser("stats")
     p.add_argument("--format", choices=["text", "yaml", "json"],
