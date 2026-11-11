@@ -2893,3 +2893,34 @@ modified: 2026-11-10T14:21:00Z
   over 24 hours, statements current. VPS root disk 73 percent,
   2.7G free. Status: no-op. Full detail in
   pr-catchall/1639-run.md.
+
+## 16:32 to about 16:56 - Knowledge organization pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-10-1632
+  (done). Worked from the 1532 run's watermark (substantive through
+  f530c19b7, meta through 63d30a7c5). PR #591 merged with 0 comments,
+  0 reviews - no feedback owed. Folded ticker-1538 (radar 1555) and
+  ticker-1604 (survivors 1615) into 2 profiles: radar-tasks 1.70.0
+  (stack day, Claim All-only bar with 11 rewards pending, no Quick
+  Execute offer - the offer flipped since 1146; stored-tasks "?"
+  indicator display-only, NEW! chest icon unresponsive to a
+  background click, tenth sighting, foreground tap remains the next
+  idea; dish re-grounded fresh at 53,717, first-tap open, second
+  consecutive A-2026-11-09-02 verification; restore lands about
+  17:37 PT, headroom 23+12=35 under the 40 cap; dish badge 11 with
+  pending 11, no match claimed; cross-read from the 1615 survivors
+  unit - 2 tasks completable at 0 stamina, unexplained), survivor-intake
+  1.50.0 (gate line not verified at the bottom-edge wall, brown-sign
+  gate section about 545,216; Profession Hall appoint control at
+  413,247 mis-tapped, not a survivor; bottom-right-corner alternative
+  still untried; Quick Dispatch still owed for the 0321 + 0844
+  recruits). Contradictions resolved (2): the 1615 record's "0321
+  also found no line" is wrong - 0321 verified a 2-survivor line
+  live and took the first in; and its "same as the 2026-10-28 to
+  2026-10-31 partials" framing is stale (closed history, broken
+  2055). No issue comments posted; no new issue filed. Profiles PR
+  #592, commit 92550cca6, OPEN + MERGEABLE + CLEAN, base main
+  9104aab09. Worktree note: VPS ~/lastwar-push FETCH_HEAD is racy
+  across concurrent jobs - records-branch reads in this run use the
+  explicit ref github/records-2026-11-10. Status: done. Full detail
+  in knowledge-organization/1632-run.md.
