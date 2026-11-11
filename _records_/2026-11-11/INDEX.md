@@ -369,3 +369,46 @@ of 2026-10-28.
   owner-gated, clean, unchanged (OD-20261108-01 open). No
   comments posted this pass (no-repeat rule). Status: done.
   Full detail in pr-integration/0230-run.md.
+
+## 02:14 to about 02:40 - Queue ticker pass (ticker-0212)
+
+- Own PRs first: records PR 618 (2026-11-11, post-0000 pass)
+  verified OPEN with zero comments, nothing to answer; records
+  PR 615 (2026-11-10) still open, awaiting the 03:00 batch.
+  No duplicate PR opened.
+- Gifts unit gifts-2026-11-10-2230 done: Claim All both tabs,
+  Regular 667, Premium 52; Gift Level 28 progress 205,158,210
+  to 205,177,930 (+19,720). Both tabs verified empty. Full
+  detail in alliance-gifts/0218-queue-run.md.
+- Help unit help-2026-11-10-2230 done: Help All pressed, ally
+  requests cleared; header stayed 80/1,000 before and after,
+  no points gain claimed. Full detail in
+  alliance-help/0220-queue-run.md.
+- Mail unit mail-2026-11-10-2230 done: Claim All in Alliance
+  (red gem x10, gold badge 50 x4) and Event tabs; one top row
+  of the Event dialog was cut off by the banner and is NOT
+  recorded. Delete All never pressed. Full detail in
+  mail-rewards/0222-queue-run.md.
+- Duel-score unit duel-score-2026-11-10-2230 done: duel day 3,
+  Age of Science, ends 2026-11-11 18:00 PT; personal daily
+  total 1,650,000 read live, gap 1,950,000 to the 3,600,000
+  target; all three personal chests claimed. Alliance
+  trailing [TFox] Fox 538,728,501 to 362,981,998. Full detail
+  in alliance-duel/0224-queue-run.md.
+- Star-ceremony unit star-ceremony-2026-11-10-2230 done: fresh
+  base-screen read, no ceremony trophy icon beside the
+  Alliance shield, no Star Ceremony waiting. Full detail in
+  alliance-duel/0225-queue-run.md.
+- Zombie-invasion unit zombie-invasion-zombie-2026-11-10-005
+  partial: 4 Lv.10 kills in two parallel pairs
+  (squads_parallel 2); 3 LOOT rows claimed for 804,000 coins
+  (coin HUD 117.4M to 118.2M). Squad 1 row (X:455 Y:409) never
+  appeared - its medal x10 missing too (Store header 4010
+  against 4020 expected); claiming promptly after the first
+  arrival, while a squad is still out, verified this unit.
+  Store 160-medal row is Iron Chest (SSR), not a Coin Chest;
+  no Coin Chest row established, no redemption. Stamina 3 at
+  unit end; inventory stamina count not checked, successor
+  must check before concluding exhaustion. Wave live,
+  successor 006 enqueued to start now. Full detail in
+  zombie-invasion/0238-queue-run.md.
