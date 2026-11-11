@@ -1718,3 +1718,17 @@ of 2026-10-28.
   new comment, main has not moved. No Slack sync owed.
   Status: done. Full detail in
   pr-integration/0815-run.md.
+- Integrator pass pr-integration-2026-11-11-0830.
+  NON-batch pass (checker due exit 1, outside every batch
+  window, next batch point 11:00 PT). No merges. Records PR
+  636 (2026-11-11, head 432d81db4, CLEAN, probe tree
+  ba000d12) awaits the 11:00 batch; records PR 615
+  (2026-11-10) reconciled branch-side by ticker-0804
+  (head dd865af64b9, CLEAN, probe tree 4980a466),
+  verification comment posted, rides the 11:00 batch.
+  Tools PR 425 re-verified CLEAN against unchanged main
+  683ee2a4f (merge-tree exit 0, tree ad3da8d28), still
+  owner-gated (OD-20261108-01 open); no new comment, main
+  has not moved since the 0800 verification. No Slack sync
+  owed. Status: done. Full detail in
+  pr-integration/0830-run.md.
