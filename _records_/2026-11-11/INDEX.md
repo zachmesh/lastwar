@@ -1621,3 +1621,22 @@ of 2026-10-28.
   0), 0 withdrawals, no new issue. Pool inbox 80, claimed 0,
   done 1554. Status: done. Full detail in
   queue-planning/0740-run.md.
+
+## 07:45 to about 07:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0745.
+  NON-batch pass (checker plain due yes clock-only,
+  merge-aware not due: PR #627 already merged 07:07:31 PT
+  in the 07:00-08:00 window; next batch point 11:00 PT).
+  Records PR 636 (2026-11-11, head 8e8ef746d, CLEAN,
+  probe tree 9842367e) awaits the 11:00 batch; records
+  PR 615 (2026-11-10, head 5f302d8cc3) still CONFLICTING
+  on the same 9 _queue_ files named at the 0700 pass,
+  re-probed identical this pass, conflict comment already
+  posted then, carried after a branch-side reconcile.
+  Tools PR 425 re-verified CLEAN against unchanged main
+  df82f25ad (merge-tree exit 0, tree 971fbdce), still
+  owner-gated (OD-20261108-01 open); no new comment, main
+  has not moved since the 0700 verification. No merges,
+  no PRs opened, no Slack sync. Status: done. Full detail
+  in pr-integration/0745-run.md.
