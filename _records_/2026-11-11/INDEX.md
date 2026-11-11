@@ -1950,3 +1950,18 @@ of 2026-10-28.
 
 - Alliance-gifts (1042, ticker-1012, done): Regular 310 + 2 late arrivals (Doom Walker Loot, Zombie Boss) and Premium 19 claimed; Gift Level 28, progress 206,145,210 to 206,168,170 (alliance-wide, allies also move it; 131,830 short of Level 29). Both tabs verified Claimed with no Claim All left; Alliance Gifts red dot gone. Method note: Premium Claim All sits at normalized (744,939), right of the Regular position — first attempt at Regular coordinates missed. Detail in alliance-gifts/1042-queue-run.md.
 - Tool-developer pass tool-development-2026-11-11-1032. No-op: own PR 425 still owner-gated (OD-20261108-01 open), head 0fb5a27f6, CONFLICTING on _tools_/INDEX.md against new main d3979d5cb since the 0945 integrator note, no unaddressed feedback and no rebase owed until the owner decides; all 51 open tooling issues already implemented and merged (newest #631 in PR #634, #300 trucks variant in PR #639 by the 0932 run); no new issue filed since the 0932 run; standing queue (c)(1)-(3) verified implemented on main. No code changed, no PR opened. Status: no-op. Full detail in tool-development/1032-run.md.
+## 10:39 to about 10:46 - PR catch-all pass
+
+- Catch-all pass pr-catchall-2026-11-11-1039. No adoption, no
+  fix, no hand-off. PRs 636, 615 and 425 all open; PR 636
+  (records 2026-11-11, head 7ba6c491) and PR 615 (records
+  2026-11-10, head dd865af64b9) both MERGEABLE and CLEAN,
+  awaiting the 11:00 batch; PR 425 turned CONFLICTING against
+  new main d3979d5cb (tools PR 639 changed the same
+  _tools_/INDEX.md rows), still owner-gated with no owner
+  decision (OD-20261108-01 open, fourth day). PRs 639 and 640
+  merged since the 0939 pass. 116 open issues, zero
+  unclassified, none new since the 0939 pass; owner-decision
+  issues 132, 154, 335, 514 and 517 all over 24 hours with
+  statements current. Status: no-op. Full detail in
+  pr-catchall/1039-run.md.
