@@ -455,3 +455,19 @@ of 2026-10-28.
   24 hours with statements current. Status: no-op. Full
   detail in pr-catchall/0242-run.md.
 
+
+## 02:32 to about 02:47 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-11-0232.
+  Implemented issue #623: `queue.py deadline` stamps a boarding
+  close onto an inbox train unit (banner countdown or absolute
+  close, optionally priority 1), so `next` picks it before units
+  whose slot expiry is later - the ticker-0155 miss staged the
+  train to its 02:30 slot end while boarding closed about
+  02:04:30. PR #625 opened (branch
+  work/train-boarding-close-623, commit 50622d004, Refs #623);
+  issue #623 commented. Validation on isolated /tmp fixtures
+  only: py_compile clean, 28/28 assertions passed. Own PR 425
+  still owner-gated (OD-20261108-01 open), re-verified CLEAN
+  against main a2c42a7a; no unaddressed feedback. Status: done.
+  Full detail in tool-development/0232-run.md.
