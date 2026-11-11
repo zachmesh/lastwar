@@ -1104,3 +1104,22 @@ of 2026-10-28.
   VPS main worktree at pass start, no checkout or pull,
   working tree untouched. Status: done. Full detail in
   pr-integration/0515-run.md.
+
+## 05:30 to about 05:38 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-0530.
+  NON-batch pass (checker plain and merge-aware both
+  not due, next batch 07:00 PT). No merges. Records PRs
+  627 (29 ahead) and 615 (14 ahead) clean, awaiting the
+  07:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01), head and main unchanged since the
+  0500 verification, merge-tree identical, no comment
+  posted per the no-repeat rule. Correction: the 0515
+  record wrongly claimed no 425 comment since 2026-11-09
+  - the thread shows 0330/0345/0445 re-verifications,
+  newest 12:48:40Z. Process note: containment probe
+  first ran with reversed --is-ancestor args and was
+  discarded and re-run correctly; record delivered from
+  a detached VPS worktree (local VM workspace busy with
+  another agent's in-flight work). Status: done. Full
+  detail in pr-integration/0530-run.md.
