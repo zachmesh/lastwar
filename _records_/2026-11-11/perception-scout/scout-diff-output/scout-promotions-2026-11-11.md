@@ -1,6 +1,6 @@
 ---
 title: Scout Promotion Proposals 2026-11-11
-created: 2026-11-12T01:46:06Z
+created: 2026-11-12T04:03:05Z
 description: Promotion or rejection proposals for candidates whose exploration completed - proposals only, never applied by this tool
 ---
 
