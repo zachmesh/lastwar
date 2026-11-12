@@ -731,3 +731,17 @@ of 2026-10-28.
   standing user rule, 96 percent (411M free) after. No Slack
   sync. Status: no-op. Full detail in
   pr-catchall/0539-run.md.
+## 05:45 to about 05:50 - PR integration 0545 run, NON-batch (checker not due, next batch 07:00)
+
+- Integrator pass pr-integration-2026-11-12-0545. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00): no merges. Records PR 685
+  (2026-11-12, head 009ff3aa4) re-verified CLEAN against
+  unchanged main 2f46eea9a (merge-tree 4e79f44d),
+  verification comment posted, awaits the 07:00 batch.
+  Tools PR 425 still owner-gated (OD-20261108-01 open),
+  re-verified CLEAN against unchanged main 2f46eea9a
+  (merge-tree f366c8f1, identical to the 0445, 0500, 0515
+  and 0530 verifications), no new comment. No Slack sync.
+  No arrivals during the pass; sweep clean. Status: done.
+  Full detail in pr-integration/0545-run.md.
