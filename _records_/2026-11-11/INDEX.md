@@ -3057,3 +3057,22 @@ of 2026-10-28.
   SSR chest re-check still open. Cleared false, successor 019
   enqueued to start now. Full detail in
   zombie-invasion/1834-queue-run.md.
+
+## 18:32 to about 18:44 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-11-1832.
+  Implemented issue #661: `queue.py validate --ref <git-ref>`
+  runs the pool-integrity checks against a branch tip's committed
+  _queue_ tree with no checkout, so a merge resolution is checked
+  before commit and a records PR is gated on its branch tip before
+  merging to main. Forensics: merge dd865af64b committed a
+  rename/add conflict unresolved and PR #615 carried three
+  conflict-marker unit files onto main. PR #662 opened (branch
+  work/queue-validate-ref, commit 47dbece7e5, Refs #661); issue
+  #661 commented. Validation on isolated /tmp fixtures only:
+  py_compile clean, 14/14 assertions passed; read-only proof on
+  the real history - --ref main and --ref 11f4b78e8a exit 1 with
+  the same 39 problems, --ref 11f4b78e8a^1 exit 0. Own PR 425
+  still owner-gated (OD-20261108-01 open), re-verified CLEAN
+  against main cc27135e15; no unaddressed feedback. Status: done.
+  Full detail in tool-development/1832-run.md.
