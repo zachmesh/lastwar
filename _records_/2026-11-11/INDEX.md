@@ -2936,3 +2936,20 @@ of 2026-10-28.
   main cc27135e1, no new comment. Local main
   fast-forwarded to cc27135e1. Slack sync sent. Status: done.
   Full detail in pr-integration/1745-run.md.
+
+## 17:40 to about 17:54 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-1740. Plan staged 0
+  units (71 already present, 4 skipped done-current, 2
+  skipped closed, 0 expired; roster stale warning, issue
+  #198). Sweep pair verified by status per #610: first pass
+  partial (1/23 ledger lines, ticker-1718), final pass still
+  in inbox (not_before 17:30 local, expires at the 19:00
+  reset instant); pair NOT complete, no enqueue needed, no
+  ledger-walk text appended (none exists to copy). Scout
+  diff on the new 2026-11-11 observation (scout-2026-11-10
+  pass, ticker-1634, 16:48 to 17:00 local) applied with 0
+  counts and 3 unexplained red dots (skull cycle timer,
+  "Others' Trucks" badge 4, "Recover" dot); 0 withdrawals,
+  no new issue. Pool inbox 77, claimed 0, done 1590.
+  Status: no-op. Full detail in queue-planning/1740-run.md.
