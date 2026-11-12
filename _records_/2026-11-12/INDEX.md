@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-12
 created: 2026-11-12T08:03:50Z
-modified: 2026-11-12T08:55:12Z
+modified: 2026-11-12T09:42:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; records PR 681 re-verified CLEAN at new tip 11ac21dc, awaiting the 03:00 batch; tools PR 425 owner-gated, re-verified CLEAN against new main 5d2b9d7e, no new comment; records/2026-11-12 branch created from main with this pass as its first commits; the 0004 queue ticker pass with 1 unit partial (zombie-invasion)
@@ -185,3 +185,29 @@ of 2026-10-28.
 ## 01:32 to about 01:40 - Tool developer 0132 run, issue #688 filed (screenshot-coordinate gap)
 
 - Tool-developer pass tool-development-2026-11-12-0132. Own PR #425 still owner-gated (OD-20261108-01 open), MERGEABLE/CLEAN at head 4f41cdd6a against main 6dea6746b, no author action owed. No unimplemented open tooling issue: newest still #672 (PR #676 merged); 0032 triage still stands. Genuine gap found in the frozen backlog: IMP-20261101-08 prong (1) unimplemented - no tool measures tap coordinates from a screenshot image (tapcal.py 1.5.0 covers prongs 2-4 only; grep finds no image decoding in _tools_/). Filed as issue #688 (tooling, idea) with evidence and scoping note rather than building an unspeced tool. No code changed; no Slack sync. Status: done. Full detail in tool-development/0132-run.md.
+
+## 01:34 to about 01:44 - Ticker pass ticker-0134, scout unit failed (control channel lock)
+
+- Own PRs first: records PR 685 (2026-11-12) OPEN and mergeable
+  (CLEAN), no comments, awaiting the 03:00 batch; records PR 681
+  (2026-11-11, post-2300 batch) OPEN and CLEAN, no comments;
+  tools PR 425 owned by lastwar-tool-developer, not this job.
+  No question addressed to this job.
+- Sync: reaped 0, expired 0, produced none (due 23, already
+  queued 21); dropped the stale inbox copy of
+  harvest-2026-11-11-2203, already closed on records/2026-11-12.
+  No zombie seeding needed (units 024 and 025 already in inbox).
+- Scout unit 006 (ticker-0134, failed, chain scout-2026-11-10):
+  the alliance remainder was not walked — the computer-control
+  channel locked after a session drop. The first input (Alliance
+  button click) failed with connection_changed (nothing
+  dispatched); every later input failed with outcome_unknown,
+  "a new local user submission is required before input can
+  resume", across three recovery attempts including two fresh
+  sessions (cc-693, cc-694). The game stayed live on the base
+  screen throughout (power 149,218,973, coin 145.7M, stamina 64,
+  read-only snaps working); this is a channel lock, not an
+  authorization problem. New failure mode filed as Issue #689
+  (tooling). Successor 007 enqueued; the next tick will hit the
+  same wall unless the channel clears. Full detail in
+  perception-scout/0141-queue-run.md.
