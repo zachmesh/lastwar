@@ -1272,3 +1272,34 @@ of 2026-10-28.
 
 ## 09:32 to about 10:03 - Tool development 0932 run, issue #694 follow-up implemented (PR 704 open)
 - Tool-developer pass tool-development-2026-11-12-0932. Issue #694 follow-up implemented as the live-pool handout: `next` resolves the given root through live_pool_root and reads the live inbox, `claim` claims the live-pool copy into the pass root; PR #704 open (branch work/next-live-pool, commit 3a3a2525), issue #694 commented; 24/24 fixture assertions pass, py_compile clean, live pool untouched. Own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 33cf659cd at head 4f41cdd6a, no author action owed; PR #696 merged 04:48 PT. Status: done. Full detail in tool-development/0932-run.md.
+## 09:41 to about 09:56 - Ticker pass ticker-0941, zombie-invasion unit failed (control channel lock, stale-tool handout)
+
+- Own PRs first: records PR 700 (2026-11-12) OPEN, no comments,
+  mergeable UNKNOWN; tools PR 425 owned by lastwar-tool-developer,
+  not this job. No question addressed to this job.
+- Sync: reaped 0, expired 0, produced none (due 23, already queued
+  23). No zombie seeding needed (unit 027 already in inbox).
+- Zombie-invasion unit 027 (ticker-0941, failed, chain
+  zombie-2026-11-10 seq 27): no game action was possible - the
+  computer-control channel lock from unit 006 persists about 8
+  hours. Three fresh sessions (cc-713, cc-714, cc-715) all failed
+  at the first input with the same outcome_unknown, "a new local
+  user submission is required before input can resume". Read-only
+  observation still works and the game stays live on the base
+  screen; this is a channel lock, not an authorization problem.
+  Sixteenth consecutive ticker pass blocked by the lock, seventh
+  unit burned on it. Successor 028 enqueued; the pass stopped
+  after this unit rather than cascading failed units. Full detail
+  in zombie-invasion/0943-queue-run.md.
+- Stale-tool handout (Issue #694): the pass's sync, token, next
+  and claim ran through the main working tree's `tools/queue.py`,
+  which predates the tools-to-`_tools_` move and PR #692 and does
+  not know the control-lock blocker - it handed out unit 027
+  although the blocker still stood. Verified after the failure
+  with the current tool from a fresh worktree: `next` there
+  returns empty while the blocker stands. The unit was completed
+  as failed with the current tool, which refreshed the blocker to
+  17:55:18Z (ages out 21:55Z, 13:55 PT). The main tree's stale
+  `tools/queue.py` must not be used for decisions again.
+- New evidence commented on Issue #689 (lock now about 8 hours,
+  seventh burned unit) and on Issue #694 (stale-tool handout).
