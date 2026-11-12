@@ -923,3 +923,28 @@ of 2026-10-28.
 ## 06:40 to about 06:51 - Queue planning 0640 run, 15 units staged, 8 expired, diff 0 counts, status done
 
 - Planner pass queue-planning-2026-11-12-0640. Plan staged 15 units for the 1800/1803/1830 slots (mail, help, gifts, train, star-ceremony, duel-score - 1830; harvest, radar, survivors, training, donations, arms-race - 1803; vip, daily-missions, scout - 1800), 64 already present, 1 skipped closed (zero-sweep-2026-11-11-1730), 0 reaped, 8 expired (6 0230 units already on the branch via ticker-0634, 2 0203 units riding this commit). Tonight's sweep pair already complete in the pool at stale [90,30] geometry (1630 from the 0440 run, 1730 from the 0540 run), both expiring 18:00 local; pre-reset sweep production skipped (06:00 hour run). Scout diff on the same 6-pass observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no new issues. Pool inbox 83, claimed 0, done 1661. Status: done. Full detail in queue-planning/0640-run.md.
+
+## 06:39 to about 06:58 - PR catch-all 0639 run, no-op (no adoption, no fix, no hand-off)
+
+- PR catch-all pass pr-catchall-2026-11-12-0639. Own PR 137
+  stays MERGED; no adopted open PR. Open PRs 685 (records
+  2026-11-12, head bd8ef775 at last check, mergeable UNKNOWN
+  while GitHub recomputes, last verified CLEAN by the
+  integrator at 0645 at head 1033a3ec3, awaits the 07:00 batch)
+  and 425 (tools log gate, head 4f41cdd6a, CLEAN, still
+  owner-gated OD-20261108-01, no owner decision) both name
+  owners matching their diffs; nothing is this job's. PRs 697
+  and 698 merged since the 0539 pass; main at 97f068d77e4a.
+  Issues: 135 open,
+  zero unclassified, zero lacking a class label, none new since
+  the 0539 pass. Owner-decision issues 132, 154, 335, 514 and
+  517 all over 24 hours, statements current; issue 514 deadline
+  2026-11-12 18:00 UTC, about 3 hours away. Branch-tip day
+  INDEX clean, no marker lines; branch-tip action-log ends in
+  a newline at the delivery tip (the missing-newline defect
+  seen at the earlier tip was healed by the ticker-0634
+  delivery). Two delivery attempts aborted safely on moved
+  tips; final delivery built on the tip re-fetched at build
+  time. VPS disk 88 percent (1.3G free), above the 500M flag threshold; /tmp/606 now past
+  6 hours old, no cleanup triggered. No Slack sync. Status:
+  no-op. Full detail in pr-catchall/0639-run.md.
