@@ -3164,3 +3164,27 @@ of 2026-10-28.
 ## About 19:45 to about 19:50 - PR integration 1945 run, non-batch pass, records PR awaiting 23:00 batch
 
 - Integrator pass lastwar-pr-integrator-2026-11-11-1945. NON-batch pass (checker plain due yes inside the 19:00-20:00 PT window, but merge-aware not due - PR 655 already merged 19:03:41 PT in this window at the 1900 batch pass; merges file /tmp/merges-today.json already listed 655). No merges. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 8be010ea), awaits the 23:00 batch; merged tree keeps main's _tools_ verbatim (queue.py --ref raw count 7, same as main). PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. No Slack sync (silent run). Status: done. Full detail in pr-integration/1945-run.md.
+
+## 19:32 to about 19:53 - Knowledge organization 1932 run, 5 profiles folded, PR 666, trade-day sweep
+
+- Organizer pass lastwar-knowledge-organizer-2026-11-11-1932,
+  first run after the 19:00 reset. Folded ticker-1822
+  zombie-invasion unit 018 partial (3 Lv.10 kills
+  sequential, 3 LOOT rows claimed 804,000 coins, coin
+  136.7M to 137.5M, stamina 88 to 59, medals_after 5100
+  derived) and ticker-1843 perception-scout events group
+  partial (Events hub strip walked, Arms Race Base
+  Building score 0 with 03:07:30 left and tier 3 at
+  30,000, Age of Oil Tech 9475/500 and Base Expansion II
+  22232/500 exceeded, 4 red dots seen with 0 explained)
+  plus queue-planning 1840 (12 staged, 6 expired,
+  sweep pair both partial per #610) into 5 profiles:
+  zombie-invasion 1.39.0, perception-scout 1.60.0,
+  arms-race 1.86.0, the-age-of-oil 1.1.0,
+  daily-activities 1.26.0 (ended trade day close).
+  Fuller trade-day consolidation sweep: watermark chain
+  continuous across the day's 19 organizer runs, no
+  ended-trade-day record left unfolded. PR #666 opened
+  (branch work/ko-1932-zombie-scout-arms-ageo, commit
+  4b76ab5c0d). Issues #595 and #477 commented. Full
+  detail in knowledge-organization/1932-run.md.
