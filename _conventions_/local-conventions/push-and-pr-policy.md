@@ -65,6 +65,23 @@ the run record, and left for its own pull request. A writer
 never waits for its records to reach main; the branch is its
 record, and main catches up on the integrator's cadence.
 
+Delivery gate (issue #422). Before a records-branch delivery
+bundles the working tree, it runs the log gate on the action
+log:
+
+    python3 _tools_/log_append.py gate \
+        --file _logs_/repo-actions/action-log.jsonl
+
+A non-zero gate blocks the bundle: the delivery stops, the run
+records the failure, and no malformed log reaches the branch.
+The gate repairs concatenated lines and drops blank lines in
+place (newlines only; the logged objects are verified
+unchanged), so a branch-side repair that never propagated back
+to the live tree is re-applied at the next delivery instead of
+being re-offered on every push. The repair the gate applies is
+a records change and rides the same date branch as the
+delivery.
+
 ## Records pull requests - batch cadence
 
 Owner decision, 2026-11-01 - records PRs are merged in
