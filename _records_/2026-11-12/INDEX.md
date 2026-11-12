@@ -1534,3 +1534,6 @@ of 2026-10-28.
 - Issues: 136 open, zero lacking a class label; new issue 705 already tooling-labeled, no triage needed.
 - VPS disk 91 percent (886M free); /tmp/606 gone; no bundles older than 6 hours, no cleanup needed.
 - Delivery: this INDEX and the action-log entry only (tier-1 paths) plus the run record; pushed to records/2026-11-12, verified with git ls-remote. Status: done. Full detail in pr-catchall/1139-run.md.
+
+## 11:32 to about 11:47 - Tool development 1132 run, issue #705 live-pool reap/expire implemented (PR 710 open)
+- Tool-developer pass tool-development-2026-11-12-1132. Issue #705 live-pool reap/expire implemented as rule R14 + changelog 0.22.0: `sync`, `plan` and `reap` resolve the given root through live_pool_root before the step-1 reap, expiry and stale-copy drops, so a worktree-root run expires the live pool instead of the snapshot; `sync` validates the live pool with the issue #441 guard. PR #710 open (branch work/sync-live-reap-expire-705, commit 957a69988), issue #705 commented; 39/39 fixture assertions pass, py_compile clean, live pool untouched. Own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 22601972 at head 4f41cdd6a, no author action owed; PR #706 merged as 96520ae0. Status: done. Full detail in tool-development/1132-run.md.
