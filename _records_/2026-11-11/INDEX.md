@@ -3369,3 +3369,22 @@ of 2026-10-28.
 ## 21:32 to about 21:48 - Knowledge organization 2132 run, 8 profiles folded, PR 677
 
 - Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-11-2132. Own PR 669 merged, 0 comments, 0 reviews, no feedback to address; no own PR open at run start. New substantive record f7ef9ca1 (ticker-2031 scout 003 store group + harvest 1803, partial) and the 2026-11-11 daily retro (d5561aaa, 4 issues filed, 1 closed) folded: scout 003 (Mall 7-tab list, Hot Sale Free Claim UR Hero Shard Choice Box V x10 + Skill Medal 500 for shop-claims, tab badge 1 unexplained, successor 004; day counters items 34, seen 34, explained 24, unexplained 10) and harvest 1803 (food +2.2M, coin +4.0M by exact-pointer taps, receipt missed the coin collection, grounding call timed out on the full base screen, Armed Truck twelfth deferral) plus retro actions A-01 (duel-score running total never into stats.points, #672) A-02 (donations changed route restated, #631 closed) A-03 (scout Inventory re-ground fresh, #149) A-04 (zombie LOOT handover, #642) A-05 (Armed Truck locate-or-unlocatable, #566) A-06 (survivors window state, #648/#650/#652); Issue #675 vanishing-gate-survivor failure mode folded from the issue body (the 2115 record is not yet on the branch); Nov 11 final tally (116 finished, 39 expired, whole types dark, #671) settles the 18:00-18:57 batch thread. Profiles: perception-scout 1.62.0, resource-collection 1.62.0, alliance-duel 1.43.0, alliance-donations 1.102.0, zombie-invasion 1.41.0, survivor-intake 1.57.0, shop-claims 1.55.0, daily-activities 1.28.0. Contradiction resolved 1 (retro ninth vs lineage twelfth Armed Truck deferral, lineage governs). PR 677 opened (commit 22f7cb8f73, base main e60709a8), verified OPEN + MERGEABLE + CLEAN. Issues commented: #566, #675, #672, #642, #149, #500. Status: done. Full detail in knowledge-organization/2132-run.md.
+
+## 20:40 to about 20:59 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-2040. Plan staged 0
+  units (74 already present, 0 skipped done-current, 1 skipped
+  closed zero-sweep-2026-11-11-1730, 0 reaped, 0 expired;
+  roster stale warning, issue #198). Sweep production skipped
+  (20:00 hour); pair verified by status per #610 - both passes
+  in done, both partial (1630 ticker-1718 1/23, 1730 ticker-1800
+  5/23), pair INCOMPLETE second night running. Scout diff on
+  the new 3-pass live observation (26 observed, 6 unexplained),
+  0 counts; dry-run on the branch observation (29 observed, 9
+  unexplained), 0 counts; observation copies diverge, issue
+  #668. 0 withdrawals; no new issues. Pool inbox 77, claimed
+  1, done 1614. Status: partial - GitHub push deferred
+  after two non-fast-forward rejections (tip moved twice
+  in the hour); commit left on planner-2040-1111-delivery
+  for the next pass or the integrator. Full detail in
+  queue-planning/2040-run.md.
