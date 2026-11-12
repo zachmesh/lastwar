@@ -2890,3 +2890,29 @@ of 2026-10-28.
   UTC. VPS root disk 91 percent (898M free, below the 1.0G
   flag threshold). Status: no-op. Full detail in
   pr-catchall/1739-run.md.
+
+## 17:18 to 17:27 - Ticker pass ticker-1718, zero-sweep unit partial
+
+- Zero sweep 001 of 2 (1726, ticker-1718, partial): Trade
+  Trucks counters read live - Today's Trade Count 1/5,
+  Plunder Count 0/4, about 95 minutes to the reset. Rule R3
+  checkpoint shortfall: trucks-2026-11-11-1457 raised to
+  priority 1 in this pass. Alliance Techs: Tech Donation
+  Today 4050 points (threshold 1000 met); the remaining
+  donation count was not read and stays unverified. Base HUD
+  live: power 149,218,973, food 689.4M, iron 1.0G, coin
+  136.7M, diamonds 13.22K. Remaining ledger lines pass to
+  the staged 17:30 sweep. Detail in
+  daily-activities/1726-queue-run.md.
+
+## 17:29 to 17:41 - Ticker pass ticker-1718, harvest unit partial
+
+- Resource collection (1740, ticker-1718, partial): all
+  farmland bubbles collected in one exact-pointer tap,
+  food 689.4M to 693.3M (+3.9M, HUD-verified). A coin-bubble
+  tap missed and opened the Farmland panel instead; about 8
+  iron and 4 to 5 coin bubbles remain for the next harvest
+  unit, and the Armed Truck was not checked. Tap method:
+  normalized 0-1000 window coordinates, snap_to_control
+  false collects; snapped taps open building panels. Detail
+  in resource-collection/1740-queue-run.md.
