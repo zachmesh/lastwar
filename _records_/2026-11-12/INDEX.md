@@ -633,3 +633,8 @@ of 2026-10-28.
   Merges synced to the owner Slack DM. No arrivals
   during the pass; sweep clean. Status: done. Full detail
   in pr-integration/0445-run.md.
+  Full detail in pr-catchall/0439-run.md.
+
+## 04:40 to about 04:51 - Queue planning 0440 run, 1 unit staged (zero-sweep 1630, stale geometry), diff 0 counts, status done
+
+- Planner pass queue-planning-2026-11-12-0440. Plan staged 1 unit (zero-sweep-2026-11-12-1630, 16:30 local slot, chain pre-reset-sweep-2026-11-12), 74 already present, 1 skipped closed (zero-sweep-2026-11-11-1730), 0 reaped, 0 expired. The 1630 unit was staged at the live roster's stale [90,30] geometry (main's roster is [120,60] since #614; gate PR #683 merged but absent from the live tree) - the 17:00 run's pair check must verify by status (#610). Pre-reset sweep production skipped (04:00 hour run); last night's pair closed both partial (1630 1/23, 1730 5/23). Scout diff on the same 6-pass observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no new issues. Pool inbox 79, claimed 0, done 1652. Status: done. Full detail in queue-planning/0440-run.md.
