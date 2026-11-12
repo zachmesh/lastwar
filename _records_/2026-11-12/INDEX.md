@@ -306,3 +306,7 @@ of 2026-10-28.
   re-verification comment posted. No arrivals during the pass;
   sweep clean. Status: done. Full detail in
   pr-integration/0230-run.md.
+
+## 02:32 to about 02:42 - Knowledge organization 0232 run, 5 profiles folded, PR #691 open
+
+- Knowledge-organizer pass knowledge-organization-2026-11-12-0232. Worked from the 0132 watermark: own PR #690 MERGED 01:48 PT (squash 8a3f8a2be) with 0 comments, 0 reviews, no feedback pending. Folded the ticker-0134 radar 0151 (failed, control channel lock second occurrence, dish re-grounded (55,594), two LastWar windows under one pid) and ticker-0204 help 0207 (failed, control channel lock third occurrence, reconcile cannot clear) records into 5 profiles (PR #691, commit 79614052f, OPEN + MERGEABLE + CLEAN at run end): radar-tasks 1.82.0, alliance-help 1.43.0, perception-scout 1.66.0, zombie-invasion 1.45.0, daily-activities 1.31.0. Contradictions resolved: 0; two-windows observation and Oil Well vs Aircraft Center recorded as standing tensions, not overwritten. Issue #595 commented (fourth Oil Well read). No new issue filed. Main did not move during the run (tip 8a3f8a2be). VPS root disk 97% at run start (374M free, 313M by run close). Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0232-run.md.
