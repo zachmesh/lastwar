@@ -488,3 +488,7 @@ of 2026-10-28.
   0x7d, the tool-development 0332 line); this delivery
   prepends the missing newline. Status: done. Full detail in
   pr-catchall/0339-run.md.
+
+## 03:40 to about 03:47 - Queue planning 0340 run, 5 units staged for 14:57, diff 0 counts, status done
+
+- Planner pass queue-planning-2026-11-12-0340. Plan staged 5 units for the 14:57 local slot (passes, secrets, treasures, trucks, events), 69 already present, 1 skipped closed (zero-sweep-2026-11-11-1730), 0 reaped, 0 expired. Pre-reset sweep pair not yet due (03:00 hour run); last night's pair closed both partial (1630 1/23, 1730 5/23). Scout diff on the same 6-pass observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no new issues. Pool inbox 78, claimed 0, done 1652. Rebuilt on the 0339 tip after the tip moved (first commit 3345bdb99 abandoned, never pushed). Status: done. Full detail in queue-planning/0340-run.md.
