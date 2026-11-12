@@ -240,3 +240,17 @@ of 2026-10-28.
   during the pass; sweep clean. Slack sync sent to the
   Trirvia DM (ts 1794477119.092709). Status: done. Full
   detail in pr-integration/0145-run.md.
+## 01:50 to about 01:57 - Ticker pass ticker-0134, radar unit failed (device input blocked)
+
+- Radar unit radar-2026-11-11-2203 (ticker-0134, failed): the
+  Mac computer-control channel refused every game input with
+  outcome_unknown ("a new local user submission is required"),
+  4 attempts across sessions cc-695, cc-696 and cc-697, so no
+  radar work was done and nothing was claimed. Read-only
+  inspection stayed live (base HUD: food 701.5M, coins 145.7M,
+  diamonds 6,717, power 149,218,973; dish candidate re-grounded
+  at (55,594)). Same lock the 01:34 scout pass filed as Issue
+  #689 minutes earlier; per that issue the pass stopped here,
+  zombie-invasion unit 024 stays in inbox for the next tick.
+  Duel day 4, Train Heroes, radar posture stack (live read).
+  Tracker untouched. Full detail in radar-tasks/0151-queue-run.md.
