@@ -3303,3 +3303,6 @@ of 2026-10-28.
   Issues #477 and #550 commented. The 18:00-18:57 batch
   units still have no execution record on the branch.
   Full detail in knowledge-organization/2032-run.md.
+## About 20:32 to about 20:52 - Tool development 2032 run, issue #668 implemented in PR #670
+
+- Tool-developer pass lastwar-tool-developer-2026-11-11-2032. Own PR 425 checked first: head 721830b7f, MERGEABLE/CLEAN, still owner-gated (OD-20261108-01 open), no new comment, no action owed. Issue #668 (scout observation writer drops the ticker-1843 section from the live copy, filed 19:51 PST) implemented in PR #670: _tools_/observation.py append/check (22/22 fixture assertions in /tmp, py_compile clean; control shows the pre-fix hand edit is flagged). Forensics: the 1919 writer's live copy was stale, not a deliberate replace - its counters were right (21 to 29) while the sections were wrong. PR #670 verified MERGEABLE/CLEAN at open; issue #668 commented. Status: done. Full detail in tool-development/2032-run.md.
