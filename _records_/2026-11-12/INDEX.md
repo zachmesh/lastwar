@@ -120,6 +120,22 @@ of 2026-10-28.
 ## 00:32 to about 01:05 - Knowledge organization 0032 run, 5 profiles folded, PR #687 open
 
 - Knowledge-organizer pass knowledge-organization-2026-11-12-0032. Worked from the 2332 watermark: own PR #684 MERGED 23:50 PT with 0 comments, 0 reviews, no feedback pending. Folded the ticker-2333 zombie-invasion 022 (2 Lv.10 parallel kills, 536,000 coins) and perception-scout 005 (alliance group partly walked, Gifts 523 + 69) records into 5 profiles (PR #687, commit ec3a52952, OPEN + MERGEABLE + CLEAN at run end): zombie-invasion 1.43.0, perception-scout 1.64.0, radar-tasks 1.81.0, survivor-intake 1.59.0, daily-activities 1.29.0. Closed the Issue #682 stranded notes (record landed as 9f6e149bb, rides PR #681 at the 03:00 batch) and settled the 18:00-18:57 batch at queue-file level (five 1857 units reaped expired 23:33 PT). Contradictions resolved: deploy-panel auto-select inconsistent across units; +10 stamina jump not a reliable mechanic. Issues #595 and #183 commented. No new issue filed. Main moved mid-run (PR #686 tools merged 00:49 PT, base 3fd6e10d8). VPS root disk 99% at run start, cleared an 18th time about 00:47 PT to 96%. Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0032-run.md.
+
+## 00:40 to about 01:00 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-12-0040. Plan staged 0
+  units (74 already present for the next 12 hours, 1 skipped
+  closed zero-sweep-2026-11-11-1730, 0 reaped/expired; roster
+  stale warning, issue #198). Sweep production skipped (00:00
+  hour), tonight's pair not yet staged, due from the 17:00 run.
+  Scout diff on the 2026-11-11 6-pass observation (52 observed,
+  11 unexplained) applied with 0 counts, 0 withdrawals, no new
+  issue. Pool inbox 78, claimed 0, done 1637. Status: partial
+  (planning no-op; push deferred, tip moved three times -
+  commit left on planner-0040-1112-delivery2 in ~/lastwar-push
+  for the next pass or the integrator).
+  Full detail in queue-planning/0040-run.md.
+
 ## 00:45 to about 00:55 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-12-0045. NON-batch
