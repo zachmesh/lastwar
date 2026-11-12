@@ -7,10 +7,10 @@ version: 1.0.0
 description: Day observation file for the reset day started 2026-11-10 19:00 local, appended to by every scout unit of the day
 status: unverified
 passes_completed: 0
-items_observed: 29
-red_dots_seen: 32
-red_dots_explained: 23
-unexplained_red_dots: 9
+items_observed: 34
+red_dots_seen: 34
+red_dots_explained: 24
+unexplained_red_dots: 10
 ---
 
 # Observation 2026-11-11
@@ -304,3 +304,70 @@ as the chain successor.
 - What the Desert Battlefield tab badge (!) marks.
 - The radar "1/40" counter meaning.
 - The grey skull pin's small red dot on the radar map.
+## Pass scout-2026-11-10 continued, unit ticker-2031, store group (partial)
+
+Chain unit 3 of pass scout-2026-11-10 (chain id scout-2026-11-10).
+Session about 20:33 to 20:38 local, computer session cc-664,
+Last War window 676414 (windowed 642x951). Observe-only
+throughout; nothing claimed, fought, dispatched, donated or
+bought. Full unit record at `perception-scout/2040-queue-run.md`.
+Next chain unit: store remainder (Official Event, Weekly Deal,
+Super Monthly Pass, Weekly Pass tabs; blue chest icon on Hot
+Deals) - to be enqueued by this unit as the chain successor.
+
+### Base screen re-read, live about 20:33 local
+
+- Power 149,218,973; food 694.9M, iron 1.0G, coin 138.3M,
+  diamonds 13.22K; stamina 53; Lv.30.
+- Cart top-right reads 6,717 with a red dot (count meaning
+  unverified - see Unknown items).
+- Events badge 3; VS timer about 21:26; radar 3d 21:36; skull
+  icon badge 1, countdown 00:00:35.
+- Task line: "Build: Oil Well [0/1]".
+
+### Mall (Store), opened from the cart icon, read live about 20:34 to 20:38 local
+
+- The Mall header carries a red dot; the tab bar scrolls
+  horizontally. Full tab list, left to right: Hot Sale Packs,
+  Official Event, Weekly Deal, Super Monthly Pass, Weekly
+  Pass, Diamond, Gold Brick Mall (7 tabs).
+- Hot Sale Packs (first tab, selected on entry): "HERO
+  SHARD/EXCLUSIVE WEAPON SHARD CHOICE PACK" - UR Hero Shard
+  Choice Box V x10, Skill Medal 500, timer 21:25:47,
+  Availability 1, green "Free Claim" button. NOT tapped
+  (observe-only; claiming belongs to the shop-claims unit).
+  A second pack card peeks at the bottom ("...e Weapon Shard
+  Choice"), unread. A blue chest icon stands bottom-left of
+  the page (meaning unverified).
+- Diamond tab: paid diamond packs only, all x2 "Initial Buy
+  Reward - Enjoy Double Diamonds": 10000 diamonds $99.99
+  (+1000 purple gems), 5000 $49.99 (+500), 2000 $19.99
+  (+200), 1000 $9.99 (+100), 500 $4.99 (+50), 100 $0.99
+  (+10). No free claim on this tab.
+- Gold Brick Mall tab: paid gold-brick packs only, "Extra 5%
+  Bonus" banner, "Initial Buy Reward / Free Gift" stickers
+  (bonus on purchase, not a free claim): x500 $4.99 (+500
+  gift), x1000 $9.99 (+1000), x100000 $999.9 (+5000), x50000
+  $499.9 (+2500), more rows below the fold, unread.
+- A red badge "1" sits on the Mall tab bar above the
+  Weekly Pass area (position suggests the Weekly Pass tab,
+  unverified) - UNEXPLAINED, not opened.
+- Tabs NOT walked in this unit: Official Event, Weekly Deal,
+  Super Monthly Pass, Weekly Pass. The first back-arrow tap
+  missed (coordinate error, hit the pack row instead); a
+  re-grounded tap at the arrow returned to the base screen.
+
+### Red dots seen in this unit (2)
+
+- MALL header red dot - explained: the Hot Sale Packs Free
+  Claim (UR Hero Shard Choice Box V x10 + Skill Medal 500)
+  is available; this also explains the base-screen cart red
+  dot.
+- Mall tab bar badge 1 - UNEXPLAINED, position suggests the
+  Weekly Pass tab.
+
+### Unknown items (2 new)
+
+- What the cart icon's 6,717 counts.
+- The blue chest icon at the bottom-left of the Hot Deals
+  page.

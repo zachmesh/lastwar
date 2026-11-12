@@ -3306,3 +3306,34 @@ of 2026-10-28.
 ## About 20:32 to about 20:52 - Tool development 2032 run, issue #668 implemented in PR #670
 
 - Tool-developer pass lastwar-tool-developer-2026-11-11-2032. Own PR 425 checked first: head 721830b7f, MERGEABLE/CLEAN, still owner-gated (OD-20261108-01 open), no new comment, no action owed. Issue #668 (scout observation writer drops the ticker-1843 section from the live copy, filed 19:51 PST) implemented in PR #670: _tools_/observation.py append/check (22/22 fixture assertions in /tmp, py_compile clean; control shows the pre-fix hand edit is flagged). Forensics: the 1919 writer's live copy was stale, not a deliberate replace - its counters were right (21 to 29) while the sections were wrong. PR #670 verified MERGEABLE/CLEAN at open; issue #668 commented. Status: done. Full detail in tool-development/2032-run.md.
+## 20:31 to about 20:40 - Ticker pass ticker-2031, scout unit 003 partial
+
+- Scout unit scout-scout-2026-11-10-003 partial: store group of
+  pass scout-2026-11-10 walked observe-only - Mall tab list (7
+  tabs: Hot Sale Packs, Official Event, Weekly Deal, Super
+  Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall); Hot Sale
+  Packs holds a Free Claim (UR Hero Shard Choice Box V x10 +
+  Skill Medal 500, timer 21:25:47, Availability 1, NOT tapped -
+  for the shop-claims unit); Diamond and Gold Brick Mall are
+  paid packs only. 2 red dots seen, 1 explained (MALL header
+  dot = the Free Claim, also explains the cart dot), 1
+  unexplained (tab bar badge 1, position suggests Weekly Pass).
+  Day counters now items 34, red dots seen 34, explained 24,
+  unexplained 10. 4 tabs unwalked (Official Event, Weekly Deal,
+  Super Monthly Pass, Weekly Pass); successor enqueued for the
+  store remainder. Full detail in
+  perception-scout/2040-queue-run.md and the day observation
+  file.
+
+## 20:41 to about 20:48 - Ticker pass ticker-2031, harvest unit 1803 partial
+
+- Harvest unit harvest-2026-11-11-1803 partial: food bubbles
+  collected in one exact-pointer tap (+2.2M, 694.9M to 697.1M
+  HUD) and one gold coin bubble at the left base edge collected
+  (+4.0M, 138.3M to 142.3M HUD - the tap receipt said no change,
+  the HUD before/after proves it). Iron bubbles (blue circles)
+  remain standing and the Armed Truck was not checked; both stay
+  for the next harvest unit. A visual_grounding call on the base
+  screenshot timed out after 180 seconds - do not spend one on
+  the full base screen again. Full detail in
+  resource-collection/2048-queue-run.md.
