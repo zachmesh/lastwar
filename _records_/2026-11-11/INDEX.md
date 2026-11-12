@@ -2698,3 +2698,29 @@ of 2026-10-28.
   owner-gated (OD-20261108-01 open), head and main
   unchanged since the 1600 re-verification. Status: done.
   Full detail in pr-integration/1615-run.md.
+
+## About 16:02 to about 16:19 - Ticker 1547 zombie-invasion unit 017
+
+- Partial — 2 Lv.10 kills dispatched in parallel (X:500 Y:417, X:436 Y:435),
+  squads_parallel 2; 4 LOOT rows claimed for 1,072,000 coins (2 handover
+  rows from unit 016 plus 2 own rows, each 268,000). Coin HUD 135.6M to
+  136.7M; stamina 80 to 61. Glacieradon Store read live: medal balance
+  5070; first-screen rows gold chest 120, gold bar 80/80, 50 Stamina 10
+  (Limit 3, available), crate 160 — no Coin Chest row on the first
+  screen; below-fold rows unread (one scroll produced no list movement).
+  Wave still live, cleared false, successor enqueued to start now.
+  Seeding note: a duplicate successor 018 was minted from the worktree
+  snapshot and removed the same minute — the live pool already held 017.
+  Full detail in zombie-invasion/1619-queue-run.md.
+
+## About 16:16 to about 16:26 - Ticker 1547 VIP unit vip-2026-11-10-1800
+
+- Done — Daily Freebie and login chest both claimed in one pass.
+  Login chest paid 120 VIP points (1,634,170 to 1,634,290, 5-day
+  streak, 140 tomorrow); freebie paid puzzle piece x2 plus food,
+  iron and coin crates x13 each, button now counts down 01:41:40.
+  Popularity popup dismissed (2 new likes, 1,825 total). VIP
+  Exclusive $99.99 and the store cart untouched. The "Alliance
+  Gifts received!" toast appeared twice with no claim tapped —
+  same unexplained transient as the 1507 pass. Full detail in
+  vip-rewards/1626-queue-run.md.
