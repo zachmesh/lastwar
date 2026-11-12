@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-12T05:32:17Z
+modified: 2026-11-12T07:32:17Z
 level: L1
-version: 1.55.0
+version: 1.56.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -58,6 +58,7 @@ grounded_in:
   - source: ticker-0234 shop-claims execution record 2026-11-11 0249 queue run (done, checked live, nothing claimable, Weekly Pass 18:00 reset twenty-second confirmation, Monthly Pass 11/11 Claimed; record commit 2abfb335c on records/2026-11-11)
   - source: ticker-0637 shop-claims execution record 2026-11-11 0656 queue run (partial, Free Supply ruby x10 iron x4, monthly already claimed 10/10, no owned weekly pass pickup, Hot Deals FREE GIFT check-in card unclaimed, carousel taps swipe; record commit f8ee03b36 on records/2026-11-11)
   - source: ticker-1507 shop-claims execution record 2026-11-11 1531 queue run (done, checked only, nothing claimable, Weekly Pass list rotated to three cards with the Iron card absent, monthly Days Left 10 unchanged intraday; record commit 0e87ad206 on records/2026-11-11)
+  - source: ticker-2244 perception-scout execution record 2026-11-11 2244 queue run (partial, store remainder walked, Monthly Pass Claim Reward available again, Hot Sale Free Claim still open, Mall tab badge 1 resolved; record commit ae91199c8 on records/2026-11-11)
 ---
 
 
@@ -1543,6 +1544,14 @@ the free and already paid for parts, never the paid unlocks.
 
 - Scout unit scout-scout-2026-11-10-003 (ticker-2031, 20:31-20:40 PT) walked the Mall store group observe-only and found a Free Claim for this unit: Hot Sale Packs tab, HERO SHARD/EXCLUSIVE WEAPON SHARD CHOICE PACK - UR Hero Shard Choice Box V x10 + Skill Medal 500, timer 21:25:47, Availability 1, NOT tapped. Evidence in `_records_/2026-11-11/perception-scout/2040-queue-run.md` (commit f7ef9ca1 on records/2026-11-11). The next shop-claims unit claims it - the timer read 21:25:47 at about 20:38 PT, so the window runs to about 18:04 PT 2026-11-12 (derived from the timer, not read live).
 - Diamond tab: paid packs only, all x2 Initial Buy Reward (10000 $99.99 down to 100 $0.99) - nothing free or claimable. Gold Brick Mall tab: paid gold-brick packs only, Extra 5% Bonus (x500 $4.99 up to x100000 $999.9); the "Free Gift" stickers are purchase bonuses, not free claims - do not tap them as free claims.
-- Carried as an unexplained dot for this unit to check: a red badge "1" on the Mall tab bar above the Weekly Pass area (position suggests the Weekly Pass tab, unverified) - seen by the scout, unexplained.
+- Carried as an unexplained dot for this unit to check: a red badge "1" on the Mall tab bar above the Weekly Pass area (position suggests the Weekly Pass tab, unverified) - seen by the scout, unexplained. (CORRECTION 2026-11-11 2244: resolved - the badge marks the Super Monthly Pass Claim Reward, available now; see the 2244 section below.)
 - Tabs the scout did NOT walk (Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass) stay for the scout successor 004, not for this unit - but if this unit opens the Mall for the Hot Sale claim, a glance at the Weekly Pass tab badge is cheap.
+- No diamonds or money spent by the scout (observe-only). No game was operated by this run and no queue code or cron definition was edited.
+
+## What the 2026-11-11 2244 scout read added - Monthly Pass Claim Reward available again, Hot Sale Free Claim still open, tab badge 1 resolved
+
+- Scout unit scout-scout-2026-11-10-004 (ticker-2244, 22:56-23:02 PT) walked the Mall store group observe-only. Evidence in `_records_/2026-11-11/perception-scout/2244-queue-run.md` (commit ae91199c8 on records/2026-11-11). The scout claimed nothing; both items below belong to this unit (Hot Sale claim) and the passes unit (Monthly Pass claim).
+- Monthly Pass Claim Reward AVAILABLE AGAIN: Super Monthly Pass tab, green "Claim Reward" button available now at about 23:00 PT (Days Left 10, Rewards Left 10, Daily Pickup grid of 5 items, Squad 4 Lv.20, Extension $24.99 paid, NOT tapped by the scout). This FLIPS the 0656 read, which had the Daily Pickup as Claimed (Days Left 10, Rewards Left 10) - the Claimed-to-available flip inside the same reset day is unexplained; the passes unit in the inbox (passes-2026-11-11-2257) should claim it now, and record whether the claim lands and what it pays. The Mall tab-bar badge "1" marks this claim (resolved by the scout - the badge sits over the Super Monthly Pass tab and stays with it across tab switches), so the badge is the signal for the passes unit: badge 1 present means a Monthly Pass claim is waiting.
+- Hot Sale Free Claim STILL OPEN at the 23:02 close: HERO SHARD/EXCLUSIVE WEAPON SHARD CHOICE PACK - UR Hero Shard Choice Box V x10 + Skill Medal 500, timer 19:03:25, Availability 1, green "Free Claim" button, NOT tapped by the scout. Timer check: the 2040 read was 21:25:47 at about 20:38 PT; 21:25:47 minus 19:03:25 is 2:22:22, matching the about 2h22m between the reads - the countdown is consistent, no reset or re-offer in between. The next shop-claims unit claims it; the window runs to about 18:05 PT 2026-11-12 on the timer.
+- Weekly Pass (scout read, for this unit's next visit): rewards reset at 18:00; Free Supply label; Legendary Take All $19.99; S2 Drone Components Weekly Pass $4.99; S1 Drone Parts Weekly Pass $4.99; rows below the fold unread. No free claim on the first screen. Weekly Deal (2026-11-9 to 2026-11-15): three paid packs only - Valor Badge $99.99, Base Upgrade $19.99, UR Set $49.99; no free claim. Official Event: web-store promo, ID POINTS 1000, Go not tapped, page 2 unread.
 - No diamonds or money spent by the scout (observe-only). No game was operated by this run and no queue code or cron definition was edited.
