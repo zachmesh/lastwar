@@ -878,3 +878,40 @@ of 2026-10-28.
   to the 0615 verification), no new comment. No merges,
   no arrivals during the pass; sweep clean. Status: done.
   Full detail in pr-integration/0630-run.md.
+
+## 06:34 to about 06:45 - Ticker pass ticker-0634, no unit executed (control-lock blocker stands)
+
+- Ticker pass ticker-0634. Own PRs first: records PR 685
+  (2026-11-12) OPEN, re-verified CLEAN by the integrator 0630
+  pass against main 84d41b4e, awaits the 07:00 batch; no
+  question addressed to this job, nothing to fix. Tools PR 425
+  owned by lastwar-tool-developer, not this job.
+- Ran from a fresh worktree on records/2026-11-12
+  (~/workspace/lastwar-worktrees/ticker-0634-1112-delivery)
+  with the current tool copy (_tools_/queue.py; R10 complied,
+  no stale-tool recurrence). The main working tree
+  ~/workspace/lastwar still sits on work/ops-execution-records
+  with another job's in-flight state and was not touched.
+- Sync: reaped 0, expired 6 (the 0230-slot duel-score, gifts,
+  help, mail, star-ceremony, train units, window passed),
+  produced 0 (25 due, 24 already queued, zombie-invasion
+  already has its unit 026 in inbox). Zombie seeding:
+  zombie-invasion unit 026 already in inbox, no seeding
+  needed; roster warning for zombie-invasion (issue #198)
+  stands.
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 11:19:16Z by ticker-0304
+  zombie unit 025 after 3 fresh sessions all failed at first
+  input with outcome_unknown) still stands, about 3.5 hours
+  old, under the 4-hour stale bound - next refuses by design,
+  so no unit was burned. Tenth consecutive tick blocked by
+  the lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534,
+  0604, this pass). The blocker reaps after 15:19:16Z
+  (07:19 PT); the next tick then probes with one input.
+  Token acquired and released.
+- Pool note: vip-2026-11-11-1800 still stalled (priority 1,
+  about 24h old) behind the lock; it cannot move until the
+  channel clears.
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl, _queue_ (6 expired
+  units).
