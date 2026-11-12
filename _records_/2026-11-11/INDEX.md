@@ -3028,3 +3028,19 @@ of 2026-10-28.
   comment. No merges; no sync-back owed; no Slack sync
   (silent run). Status: done.
   Full detail in pr-integration/1815-run.md.
+
+## 18:30 to about 18:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1830.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): records PR 655 head advanced
+  mid-pass by the 1815 run record only (6cbd479fc ->
+  1fa52a99a8), re-verified CLEAN against main cc27135e1
+  (merge-tree exit 0, tree 319f34df; merged tree
+  marker-free), re-verification commented, awaits 19:00
+  batch. Tools PR 425 still owner-gated (OD-20261108-01
+  open), head unchanged 721830b7f, re-verified CLEAN
+  against main cc27135e1 (merge-tree exit 0, tree
+  eff1ae24), no new comment. No merges; no sync-back
+  owed; no Slack sync (silent run). Status: done.
+  Full detail in pr-integration/1830-run.md.
