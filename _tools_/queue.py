@@ -24,6 +24,19 @@ decision from there fails loudly at the first command instead of
 losing the work at delivery. Set LASTWAR_QUEUE_ALLOW_TMP_ROOT=1
 only for isolated /tmp fixture validation of a new tool version.
 
+`next` decides on the live pool (issue #694): it resolves the
+given root through live_pool_root first, so a worktree-root
+`next` lists the live inbox, not the worktree snapshot - a unit
+minted live after the snapshot, and an overlay-clearing unit
+staged live, are both visible to the pick, and a unit already
+closed live is never handed out again from a stale snapshot
+copy. `claim` claims the live-pool copy into the pass root when
+the unit sits in the live inbox, so a unit `next` hands out
+from the live pool is claimable even when the snapshot never
+held it; a unit the live pool holds claimed or done is refused,
+and a unit the live pool does not hold at all falls back to
+the snapshot copy.
+
 This tool manages files only. It never touches the game or the device;
 executors do the playing and call this tool around their work.
 
@@ -3121,12 +3134,29 @@ def _est_minutes(fields):
 
 
 def cmd_next(args):
+    # Live-pool handout (issue #694): the candidates, the done
+    # suppression and the overlay-clearing search all read the
+    # live pool, not the given root's snapshot - production,
+    # token, blockers and markers already resolve there, and a
+    # worktree-root next that listed the snapshot handed out
+    # units already closed live while missing units minted live
+    # after the snapshot. The redirect note and the pool warning
+    # go to stderr, so stdout stays exactly one line: the unit
+    # id, or empty.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"next decides from the live pool {root} "
+              f"(issue #694)", file=sys.stderr)
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning, file=sys.stderr)
     # Pool integrity (issue #441): refuse to hand out a unit from a
     # corrupt pool - a phantom id claim can never find - instead of
     # printing it and letting the pass stall at claim time. Sync
     # runs the same check first in the normal ticker flow; this
     # covers a direct next call on a pool sync never saw.
-    problems = validate_pool(args.root)
+    problems = validate_pool(root)
     if problems:
         for problem in problems:
             print(problem, file=sys.stderr)
@@ -3136,16 +3166,16 @@ def cmd_next(args):
         return 1
     stamp = now_utc()
     candidates = sorted(
-        (f for f in list_units(args.root, "inbox")
+        (f for f in list_units(root, "inbox")
          if _actionable(f, stamp)
-         and not _has_done_record(args.root, f.get("unit"))
-         and not has_completion_marker(args.root, f.get("unit"))),
+         and not _has_done_record(root, f.get("unit"))
+         and not has_completion_marker(root, f.get("unit"))),
         key=lambda f: pick_key(f, stamp))
     # Control-channel lock (issue #689): no unit can clear it -
     # every unit needs input - so while one stands, hand out
     # nothing. The stale bound in sync re-opens the pool for one
     # probe after BLOCKER_STALE_HOURS.
-    for blocker in read_blockers(args.root):
+    for blocker in read_blockers(root):
         if blocker.get("kind") == "control-lock":
             print("")
             return 0
@@ -3155,14 +3185,14 @@ def cmd_next(args):
     # staged but not yet actionable - the next pass re-picks then.
     # Newest blocker first: the most recently recorded overlay is
     # the one on top of the screen.
-    for blocker in read_blockers(args.root):
-        clearing = [f for f in list_units(args.root, "inbox")
+    for blocker in read_blockers(root):
+        clearing = [f for f in list_units(root, "inbox")
                     if f.get("regular") ==
                     blocker["clearing_regular"]
-                    and not _has_done_record(args.root,
+                    and not _has_done_record(root,
                                              f.get("unit"))
                     and not has_completion_marker(
-                        args.root, f.get("unit"))]
+                        root, f.get("unit"))]
         if not clearing:
             # No unit can clear this overlay: nothing to wait for,
             # so this blocker does not steer the pick; a unit that
@@ -3190,11 +3220,41 @@ def cmd_next(args):
 
 
 def cmd_claim(args):
-    state, path = find_unit(args.root, args.unit)
-    if state != "inbox":
-        print(f"cannot claim {args.unit}: state is {state}")
+    # Live-pool claim (issue #694): next decides from the live
+    # pool, so the claim must find the unit there - a unit next
+    # hands out from the live inbox is claimed from the live
+    # inbox, moved into this root's claimed/ so complete and the
+    # delivery still see it in the pass tree. A unit the live
+    # pool holds claimed or done is refused: the snapshot copy
+    # is stale, and claiming it would re-execute a unit another
+    # pass already holds or closed. A unit the live pool does
+    # not hold at all falls back to this root's inbox, so a unit
+    # committed to the pass branch but not yet in the live
+    # working tree stays claimable. On a scratch root (no git)
+    # the live pool is this root, so the lookup collapses to
+    # today's behaviour. The move is one atomic rename; a
+    # cross-device failure refuses with nothing moved.
+    live = live_pool_root(args.root)
+    live_state, live_path = find_unit(live, args.unit)
+    if live_state == "inbox":
+        source = live_path
+        if live != os.path.abspath(args.root):
+            print(f"note: {args.root} is a linked-worktree pool; "
+                  f"claiming the live-pool unit into {args.root} "
+                  f"(issue #694)")
+    elif live_state in ("claimed", "done"):
+        print(f"cannot claim {args.unit}: state is {live_state} "
+              f"in the live pool - the inbox copy is stale, run "
+              f"sync to drop it instead of re-executing it")
         return 1
-    if _has_done_record(args.root, args.unit):
+    else:
+        state, path = find_unit(args.root, args.unit)
+        if state != "inbox":
+            print(f"cannot claim {args.unit}: state is {state}")
+            return 1
+        source = path
+    if _has_done_record(live, args.unit) or \
+            _has_done_record(args.root, args.unit):
         print(f"cannot claim {args.unit}: already has a done "
               f"record - the inbox copy is stale, run sync to "
               f"drop it instead of re-executing it")
@@ -3204,7 +3264,7 @@ def cmd_claim(args):
               f"another worktree - the inbox copy is stale, run "
               f"sync to drop it instead of re-executing it")
         return 1
-    fields, body = read_unit(path)
+    fields, body = read_unit(source)
     if not _actionable(fields, now_utc()):
         print(f"cannot claim {args.unit}: not before "
               f"{fields.get('not_before')}")
@@ -3220,7 +3280,27 @@ def cmd_claim(args):
         minutes=args.lease_minutes))
     os.makedirs(state_dir(args.root, "claimed"), exist_ok=True)
     target = unit_path(args.root, "claimed", args.unit)
-    os.rename(path, target)                      # atomic claim
+    try:
+        os.rename(source, target)                # atomic claim
+    except OSError as exc:
+        print(f"cannot claim {args.unit}: cannot move {source} "
+              f"to {target}: {exc}")
+        return 1
+    # A snapshot copy of a live-claimed unit is a stale
+    # duplicate: drop it so the delivery cannot re-add the unit
+    # to the committed inbox as pending. A failure here only
+    # warns - the claim already landed, and sync's branch
+    # reconciliation drops the stale copy once the done record
+    # lands (issue #446).
+    if live_state == "inbox" and \
+            live != os.path.abspath(args.root):
+        stale = unit_path(args.root, "inbox", args.unit)
+        if os.path.exists(stale):
+            try:
+                os.remove(stale)
+            except OSError as exc:
+                print(f"warning: cannot drop stale snapshot "
+                      f"copy {stale}: {exc}", file=sys.stderr)
     write_unit(target, fields, body)
     print(f"claimed {args.unit} by {args.executor} "
           f"until {fields['lease_until']}")
