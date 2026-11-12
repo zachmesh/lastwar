@@ -3262,3 +3262,4 @@ of 2026-10-28.
   SSR chest re-check still open. Cleared false, successor 021
   enqueued to start now. Full detail in
   zombie-invasion/2020-queue-run.md.
+- Integrator pass lastwar-pr-integrator-2026-11-11-2030. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). No merges, no new comments. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 05eebc6e; merged tree keeps main _tools_ verbatim), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main decf48bb59 (merge-tree 50929ec3, same tree as the 2000 and 2015 passes), no repeat comment per the no-repeat rule. Status: done. Full detail in pr-integration/2030-run.md.
