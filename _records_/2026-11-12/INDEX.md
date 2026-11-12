@@ -83,6 +83,40 @@ of 2026-10-28.
 
 - Catch-all pass pr-catchall-2026-11-12-0039. No-op: no adopted open PR (PR 137 stays merged); four open PRs scanned, none owned by this job - PR 686 tools (Owner lastwar-tool-developer, MERGEABLE/CLEAN at head f1e6285b), PR 685 records 2026-11-12 (Owner lastwar-pr-integrator, MERGEABLE/CLEAN at head 878978ea, rides the 03:00 batch), PR 681 records 2026-11-11 (Owner lastwar-pr-integrator, MERGEABLE/CLEAN at head 11ac21dc, rides the 03:00 batch), PR 425 tools log gate still owner-gated (OD-20261108-01 open, MERGEABLE/CLEAN at head 4f41cdd6a, integrator shepherding, newest comment the 2345 re-verification). Two PRs merged since the 2339 pass (683, 684); main head now 5d2b9d7e. One new issue since the 2339 pass (#682, labeled records, stranded ticker-2105 delivery); 132 open issues, zero unclassified. Owner-decision issues 132, 154, 335, 514 and 517 all over 24 hours with statements current; issue 514 decision deadline 2026-11-12 18:00 UTC. Branch-tip INDEX marker checks clean on both records branches; action-log tails end in a newline at the current tips. VPS root disk 99 percent full (162M free), below the 500M flag threshold; no files deleted by this job. No Slack sync. Status: done. Full detail in pr-catchall/0039-run.md.
 
+## 01:00 to about 01:15 - Ticker pass ticker-0100, zombie-invasion unit partial
+
+- Own PRs first: records PR 685 (2026-11-12) and PR 681 (2026-11-11,
+  post-2300 batch) both OPEN with no comments; nothing addressed to
+  this job. Tools PR 425 is owned by lastwar-tool-developer, not
+  this job.
+- Zombie Invasion unit 022 (ticker-0100, partial, chain continues):
+  event verified live (Glacieradon, 1d 16:52:42 left, next wave about
+  00:47); 2 Lv.10 kills, both Squad 1 sequential (X:489 Y:441, X:504
+  Y:410), squads_parallel 1 - Squad 1's round trip finished during
+  the second dispatch navigation (short round trips, not the march
+  cap of 4); 1 LOOT row claimed 268,000 coins (coin 143.4M to 143.7M
+  HUD), stamina 68 to 59. Fourth handover-style LOOT loss in this
+  chain: the X:489 Y:441 row never materialized (kill proven by the
+  +10 stamina bonus), 268,000 coins unrecovered. Store not visited,
+  medals unmeasured (+20 by row evidence). Successor 025 enqueued to
+  start now. Full detail in zombie-invasion/0114-queue-run.md.
+
+## 01:17 to about 01:26 - Ticker pass ticker-0100, resource-collection unit partial
+
+- Resource collection unit harvest-2026-11-11-2203 (ticker-0100,
+  partial): all three panel pools collected to Available 0 -
+  coin +1,999,342 (Owned 143.7M to 145.7M), food +3,078,487
+  (698.4M to 701.5M), iron +7,117,257 (Owned 1,023,418,672),
+  total 12,195,086. Food and iron panels each needed a repeat
+  tap (iron opened only on the third, re-grounded attempt);
+  iron panel X unresponsive, closed by swipe-back. Map bubbles
+  still standing after all three panels read Available 0
+  (second datapoint for the 0909 open question) - the Issue
+  #502 bubble test stays owed after the visual grounding tool
+  timed out. Armed Truck unchecked, twelfth deferral (Issue
+  #566), trade-screen method still untried. Full detail in
+  resource-collection/0126-queue-run.md.
+
 ## 00:32 to about 01:05 - Knowledge organization 0032 run, 5 profiles folded, PR #687 open
 
 - Knowledge-organizer pass knowledge-organization-2026-11-12-0032. Worked from the 2332 watermark: own PR #684 MERGED 23:50 PT with 0 comments, 0 reviews, no feedback pending. Folded the ticker-2333 zombie-invasion 022 (2 Lv.10 parallel kills, 536,000 coins) and perception-scout 005 (alliance group partly walked, Gifts 523 + 69) records into 5 profiles (PR #687, commit ec3a52952, OPEN + MERGEABLE + CLEAN at run end): zombie-invasion 1.43.0, perception-scout 1.64.0, radar-tasks 1.81.0, survivor-intake 1.59.0, daily-activities 1.29.0. Closed the Issue #682 stranded notes (record landed as 9f6e149bb, rides PR #681 at the 03:00 batch) and settled the 18:00-18:57 batch at queue-file level (five 1857 units reaped expired 23:33 PT). Contradictions resolved: deploy-panel auto-select inconsistent across units; +10 stamina jump not a reliable mechanic. Issues #595 and #183 commented. No new issue filed. Main moved mid-run (PR #686 tools merged 00:49 PT, base 3fd6e10d8). VPS root disk 99% at run start, cleared an 18th time about 00:47 PT to 96%. Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0032-run.md.
