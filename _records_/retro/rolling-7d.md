@@ -1,8 +1,8 @@
 ---
 title: Rolling 7 day metrics
 created: 2026-11-01T05:30:00Z
-modified: 2026-11-10T05:20:00Z
-version: 1.5.0
+modified: 2026-11-12T05:00:00Z
+version: 1.6.0
 description: Standing cross-day series beside the daily retro files, regenerated from unit results
 status: complete
 grounded_in:
@@ -579,3 +579,77 @@ remain the immutable source.
   before the 2300 window). Unit cap: 12 units over
   900 seconds in the window, 4 today.
 - Detail - daily retro 2026-11-10 in this folder.
+
+## Entry 2026-11-11
+
+- Derived from - 1629 done units, finished local
+  2026-11-05 to 2026-11-11, read 2026-11-12T05:24Z
+  from the records/2026-11-11 branch tip
+  dbec3539c57; the live pool holds 1614 done units
+  (738 in window, gap 126). Nov 11 is a partial
+  day at the snapshot (116 branch, finished_at
+  local; 76 by filename date, plus 2 done units
+  stranded off-branch in VPS commit f279d56d5,
+  #647). Nov 5 and Nov 6 carry zero done and zero
+  partial units in both pools - the known outage
+  days (Mac mini offline, named in the Nov 5 and
+  Nov 6 retros).
+- Totals - done 154, partial 225, skipped-needs-owner 6,
+  failed 88, expired 391. Executor time 163,156 seconds
+  (45.3 hours), median unit 274 seconds, p90 677 seconds.
+- Best types by done percent - scout 21 of 52, gifts 14
+  of 39, help 14 of 38, secrets 14 of 41, passes 13
+  of 41, mail 12 of 38, treasures 12 of 41.
+- Worst types by done percent - training 0 of 42,
+  zero-sweep 0 of 17, trucks 0 of 41, crystal-shop 0
+  of 2, glittering-market 0 of 2, ghost-ops 0 of 1,
+  donations 1 of 73, harvest 1 of 40, survivors 2 of
+  42, train 2 of 38.
+- Measurement state - numeric target over achieved
+  pairs 306, summed attainment 0.3067
+  (achieved_sum 9,047,633, target_sum 29,498,820);
+  the summed figure is NOT comparable: it is still
+  dominated by the duel-score running totals
+  (8,785,000 of the achieved sum). Points
+  1,653,678 reported, 3,678 honest (the
+  duel-score 1,650,000 running-total read in
+  duel-score-2026-11-10-2230 evades the tool's
+  dup-exclusion because its achieved is a
+  non-numeric string; the trucks 400,000
+  expected-score figure is now excluded by tool
+  1.5.4). Units carrying blocker_category: h 130,
+  e 123, f 21, c 36, none 78, g 6, d 5, a 2, b 2,
+  plus non-enum values session-drop 1, time 1,
+  unverified-close 1. Unverified closings 554
+  (64.1 percent), down 2.2 points on yesterday's
+  66.3 percent.
+- Threshold breaches - unexplained red dots 10
+  (6 distinct; diff-counted 9 only from the
+  frontmatter fallback, 0 structured items parsed,
+  coverage file stale at 29/9);
+  expired/unexecuted in day counts (39 branch,
+  50 live); quota attainment under 0.8 rolling
+  (donations 0.2214; trucks carries no pair and
+  its trade-day close is unknown for the fifth
+  day); unverified rate over 20 percent (64.3
+  percent, down 2.2 points week over week);
+  oldest open improvement over 7 days (#118, 9
+  days old - third day); daily standing job
+  artifact missing (ticker-0634 record, #342,
+  about 150 hours; Nov 10 planner 1840/1940
+  records never delivered, #607 - the gap is now
+  permanent; Nov 11 planner 2040 record not landed
+  at snapshot (pending); duel-score-2026-11-10-1803
+  lost;
+  stranded delivery #647 leaves 2 done units
+  invisible to the branch); ledger coverage 6 of
+  23 (sweep 001 ran 1 of 23, sweep 002 ran 5 of
+  23, seq-2 expires_at still 18:00 despite PR
+  #614); batch compliance 1 violation (PR 636
+  merged 11:07:03, second records merge in the
+  11:00 window after PR 615 at 11:06:27). Unit
+  cap: 13 units over 900 seconds in the window,
+  3 today. No new closed-improvement recurrence
+  this run (#149 is open, so its continuation is
+  not a new recurrence event).
+- Detail - daily retro 2026-11-11 in this folder.
