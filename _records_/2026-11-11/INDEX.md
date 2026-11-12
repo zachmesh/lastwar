@@ -3219,3 +3219,6 @@ of 2026-10-28.
   unexplained 5. Successor enqueued for the store group. Full
   detail in perception-scout/1946-queue-run.md and the day
   observation file.
+## About 19:32 to about 19:53 - Tool development 1932 run, issue #664 implemented in PR #667
+
+- Tool-developer pass lastwar-tool-developer-2026-11-11-1932. Own PR 425 checked first: head 721830b7f, MERGEABLE/CLEAN, still owner-gated (OD-20261108-01 open), no new comment, no action owed. Issue #664 (duplicate scout chain head, filed 18:57 PST) implemented in PR #667: queue.py enqueue --chain-id now refuses a chain head when the pool already holds the chain's head under another id or unsequenced units of the same chain (12/12 fixture assertions in /tmp, py_compile clean; control shows the pre-fix code mints the duplicate). Forensics: the staged head carries no chain_id at all, so the literal same-chain_id check suggested in the issue would not have caught it. PR #667 verified MERGEABLE/CLEAN at open; issue #664 commented. Status: done. Full detail in tool-development/1932-run.md.
