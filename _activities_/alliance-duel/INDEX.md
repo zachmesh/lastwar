@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-11T05:32:17Z
-version: 1.41.0
+modified: 2026-11-11T11:32:17Z
+version: 1.42.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -49,6 +49,7 @@ grounded_in:
   - source: ticker-0934 alliance-duel execution records 2026-11-10 0958 queue run (star ceremony checked only, no trophy icon, red skull badge 5 with 00:00:09) and 1004 queue run (duel total 1,650,000 read live twice, gap 1,950,000; record commit 226f5c37 on records/2026-11-10)
   - source: ticker-1314 alliance-duel execution records 2026-11-10 1327 queue run (star ceremony checked only, no trophy icon, duel total 1,650,000) and 1331 queue run (duel total 1,650,000 read live, gap 1,950,000; record commit d781dac9d on records/2026-11-10)
   - source: 2026-11-10 daily retro, execution-knowledge action A-2026-11-10-06 (Issue #609): schedule a duel-score unit after the last live read and before the duel rollover so the closing total is read, not inferred; Nov 10 last read 13:33, no closing read
+  - source: ticker-0212 alliance-duel execution records 2026-11-11 0224 and 0225 queue runs (done, duel total 1,650,000 read live on day 3 Age of Science, gap 1,950,000, alliance trailing TFox, no ceremony waiting; record commit b0615980f on records/2026-11-11)
 ---
 
 
@@ -1070,3 +1071,17 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - CORRECTION on the records' wording: both records say "Not the 19:00 reset closing read" - that 19:00 attribution is superseded by the settled about-18:00 rollover (see the 0151/0211 correction for the same stale wording). The day's closing read is the last read before about 18:00, not 19:00. These are mid-day reads; the closing read is still owed from the last duel-score unit before about 18:00.
 - No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
 - Result stats: target 3600000, achieved 1650000, gap 1950000, resources_gained none, costs about 3 minutes (1327) and 2 minutes (1331) play, verified yes, blocker_category none, points 0 (read-only units; the personal total is a read, not a score gained inside the unit), device_takeovers 0.
+
+## What the 2026-11-11 0224 and 0225 units added - day 3 Age of Science, duel total 1,650,000 again, gap 1,950,000, no ceremony waiting
+
+- Duel-score unit duel-score-2026-11-10-2230 by ticker-0212, 02:23 to 02:24 local, status done. Evidence in `_records_/2026-11-11/alliance-duel/0224-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539 on the owner Mac mini.
+- Star-ceremony unit star-ceremony-2026-11-10-2230 by ticker-0212, 02:25 local, status done (checked only). Evidence in `_records_/2026-11-11/alliance-duel/0225-queue-run.md` (commit b0615980f on records/2026-11-11). Computer session cc-539.
+- Theme: Age of Science, day 3. Personal daily total 1,650,000 read live on the panel. Target 3,600,000; gap 1,950,000. The three personal reward chests (40,000 / 150,000 / 540,000) all show claimed checkmarks. NOTE: 1,650,000 is the same figure as every read on the 11-10 duel day (0435, 1004, 1331) - the day-3 total at 02:23 happens to equal the day-2 figure; recorded as measured, no carry-over is asserted (the day-2 figure was read on a different theme day).
+- Scoring paths on the tab, read live: 1-min Research Speed-up +150, Tech Power +1pt +30, 1 Valor Badge +750, 1 Radar Task +30,000, Diamond packs +30 per diamond, Lv.1 Drone Component Chest +2,750.
+- Duel Progress cross-check: [AP3x] The Apex #2110 at 362,981,998 (40%) vs [TFox] Fox #2115 at 538,728,501 (60%). Today's winning alliance earns 2 Alliance Duel Scores. The Apex is trailing. Top members: [TFox]Mathewzetsu 22,693,950, [TFox]Satriaa Batang Hitam 18,403,594, [AP3x]별꼴오소리Teemo 15,199,150.
+- Timer arithmetic, eleventh and twelfth live timers pointing at the about-18:00 rollover (Issue #242 resolution): 15:36:51 left at the 02:23 read ends about 18:00; VS 15:35:15 at the 02:25 read ends about 18:00. Day ends 2026-11-11 18:00 PT per tools/duel.py posture (duel day 3, 15.6 hours left at the read, Win points 2, Radar posture: release).
+- No ceremony waiting at either read: no trophy icon beside the Alliance button. The Alliance button keeps a red dot (Store/Help residue, not a ceremony). Right rail at the 0225 read: Events (2), VS 15:35:15, radar 2d and 4d timers, the zombie icon with a 2 badge and a 00:00:13 timer, Alliance with a red dot, Mail and Inventory.
+- Side observation: diamonds read 6,287 at pass entry and 6,307 on the base screen after the mail claims, plus 20. No summary dialog in this pass itemised diamonds, so the source is unattributed here; recorded as observed.
+- Not the day closing read: the day rolls over about 18:00, and the day still has about 15.6 hours to run at the 02:23 read. The closing read is still owed from the last duel-score unit before about 18:00 (retro action A-2026-11-10-06, Issue #609; recheck 2026-11-11 retro).
+- No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
+- Result stats: target 3600000, achieved 1650000, gap 1950000, resources_gained none, costs about 1 minute (0224) and 1 minute (0225) play, verified yes, blocker_category none, points 0 (read-only units; the personal total is a read, not a score gained inside the unit), device_takeovers 0.

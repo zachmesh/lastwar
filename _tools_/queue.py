@@ -47,6 +47,19 @@ Usage:
              # the same overlay.
   queue.py [--root DIR] claim --unit UNIT --executor NAME
              [--lease-minutes 20]
+  queue.py [--root DIR] deadline --unit UNIT
+             (--expires-at ISO | --closes-in SECONDS)
+             [--priority N] [--reason TEXT]
+             # stamp a real deadline onto an inbox unit whose slot
+             # expiry is later than its true deadline (issue #623):
+             # a train unit staged to its slot end is picked by
+             # that expiry, so a boarding closing in minutes is
+             # invisible to next - the executor stamps the banner
+             # countdown when it sees it and next returns the
+             # train first. Only tightens: refuses a deadline at
+             # or after the current expiry, a past deadline, and
+             # any unit not in inbox; re-stamping the same value
+             # is a no-op. The stamp is recorded in the unit body.
   queue.py [--root DIR] complete --unit UNIT --status done
              [--summary TEXT] [--claimed-items a,b] [--evidence PATH]
              [--follow-up TEXT] [--stat key=value ...]
@@ -1201,8 +1214,25 @@ def plan_windows(item, now_local, horizon_end):
 
 
 def duel_window_text(regular, planned_local):
-    naive = planned_local.replace(tzinfo=None)
-    duel_day = (naive - DUEL_ANCHOR_LOCAL).days % 7 + 1
+    # Absolute 24h steps from the anchor (issue #603): the old
+    # naive wall-clock subtraction kept the previous duel day
+    # until 19:00 local, but since the 2026-11-02 daylight-saving
+    # end the roll is 18:00 PST (02:00 UTC, issue #242) - so a
+    # slot in the 18:00-19:00 hour was stamped one duel day
+    # behind, e.g. radar-2026-11-10-1803 "duel day 2 - radar
+    # stack" while the live day was 3 release. Timestamps are
+    # the absolute measure here, as in duel.py current() and in
+    # cycle_start_local's daily-reset branch: wall-clock
+    # arithmetic on an aware datetime sharing one tzinfo is not
+    # elapsed time. A naive caller time is read as schedule-local
+    # wall time, mirroring duel.py. Both call sites (sync, plan)
+    # pass an aware LOCAL_TZ planned_local.
+    if planned_local.tzinfo is None:
+        planned_local = planned_local.replace(tzinfo=LOCAL_TZ)
+    anchor = DUEL_ANCHOR_LOCAL.replace(tzinfo=LOCAL_TZ)
+    day_index = int((planned_local.timestamp()
+                     - anchor.timestamp()) // 86400)
+    duel_day = day_index % 7 + 1
     if regular == "radar":
         posture = "release" if duel_day in RADAR_RELEASE_DAYS \
             else "stack"
@@ -2582,6 +2612,133 @@ def cmd_claim(args):
     return 0
 
 
+def _parse_closes_in(text):
+    """Seconds from a banner countdown: an integer, or HH:MM:SS."""
+    try:
+        seconds = int(text)
+    except (TypeError, ValueError):
+        parts = (text or "").split(":")
+        if len(parts) != 3:
+            return None
+        try:
+            hours, minutes, seconds = (int(p) for p in parts)
+        except ValueError:
+            return None
+        seconds = hours * 3600 + minutes * 60 + seconds
+    return seconds if seconds > 0 else None
+
+
+def cmd_deadline(args):
+    # Real deadlines (issue #623): a unit's slot expiry is not
+    # always its true deadline - a train unit staged to its slot
+    # end is picked by that expiry, so a boarding closing in
+    # minutes is invisible to next and the pass hands out other
+    # work while the boarding closes. The executor stamps the
+    # boarding close when the banner shows it (countdown from
+    # the banner, or an absolute close), and next returns the
+    # train first. Only tightens: a deadline at or after the
+    # current expiry, a past deadline, and any unit not in
+    # inbox are refused, so a stamp can never widen a window
+    # or resurrect a closing. Re-stamping the same value is a
+    # no-op success, so a banner re-read is idempotent. The
+    # stamp is recorded in the unit body, and sync never
+    # rewrites it: production skips a (regular, planned_for)
+    # pair that already exists instead of re-minting it, and
+    # the aged priority-1 windowing only touches units with no
+    # planned_for, which a staged train unit always has.
+    root = live_pool_root(args.root)
+    if root != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"stamping into the live pool {root} (issue #598)")
+    warning = pool_root_warning(root)
+    if warning:
+        print(warning)
+    if not any(os.path.isdir(state_dir(root, s)) for s in STATES):
+        print(f"refused: pool root {root} holds no inbox, "
+              "claimed or done directory - the pool was not found, "
+              "nothing stamped (issue #510)")
+        return 1
+    if args.expires_at and args.closes_in:
+        print("refused: pass exactly one of --expires-at and "
+              "--closes-in")
+        return 1
+    stamp = now_utc()
+    if args.expires_at:
+        deadline = parse_iso(args.expires_at)
+        if deadline is None:
+            print(f"refused: --expires-at {args.expires_at!r} is not "
+                  "a UTC timestamp YYYY-MM-DDTHH:MM:SSZ")
+            return 1
+    elif args.closes_in:
+        seconds = _parse_closes_in(args.closes_in)
+        if seconds is None:
+            print(f"refused: --closes-in {args.closes_in!r} is not "
+                  "seconds or HH:MM:SS")
+            return 1
+        deadline = stamp + timedelta(seconds=seconds)
+    else:
+        print("refused: pass --expires-at or --closes-in")
+        return 1
+    if deadline <= stamp:
+        print(f"refused: deadline {iso(deadline)} is not in the "
+              "future - the boarding already closed, let reap "
+              "expire the unit instead of stamping a dead deadline")
+        return 1
+    state, path = find_unit(root, args.unit)
+    if state != "inbox":
+        print(f"cannot stamp {args.unit}: state is {state}")
+        return 1
+    if _has_done_record(root, args.unit):
+        print(f"cannot stamp {args.unit}: already has a done "
+              f"record - the inbox copy is stale, run sync to "
+              f"drop it instead of stamping it")
+        return 1
+    if has_completion_marker(root, args.unit):
+        print(f"cannot stamp {args.unit}: already closed in "
+              f"another worktree - the inbox copy is stale, run "
+              f"sync to drop it instead of stamping it")
+        return 1
+    fields, body = read_unit(path)
+    current = parse_iso(fields.get("expires_at", ""))
+    if current is not None and deadline >= current:
+        if deadline == current:
+            print(f"already stamped: {args.unit} expires_at is "
+                  f"already {iso(current)}")
+            return 0
+        print(f"refused: deadline {iso(deadline)} is not earlier "
+              f"than the current expiry {iso(current)} - deadline "
+              "only tightens, it never widens a window")
+        return 1
+    old_expires = fields.get("expires_at", "")
+    old_priority = fields.get("priority", 3)
+    fields["expires_at"] = iso(deadline)
+    if args.priority is not None:
+        fields["priority"] = args.priority
+    reason = args.reason or "no reason given"
+    note = (f"Deadline stamped {iso(deadline)} from "
+            f"{old_expires or 'no expiry'} ({reason}).")
+    body = (body or "").rstrip("\n") + "\n\n" + note + "\n"
+    write_unit(path, fields, body)
+    rank = None
+    total = 0
+    for f in sorted(
+            (f for f in list_units(root, "inbox")
+             if _actionable(f, stamp)
+             and not _has_done_record(root, f.get("unit"))
+             and not has_completion_marker(root, f.get("unit"))),
+            key=lambda f: pick_key(f, stamp)):
+        total += 1
+        if f.get("unit") == args.unit and rank is None:
+            rank = total
+    print(f"deadline {args.unit}: expires_at "
+          f"{old_expires or '-'} -> {iso(deadline)}"
+          + (f", priority {old_priority} -> {args.priority}"
+             if args.priority is not None else "")
+          + (f", pick rank {rank} of {total} actionable inbox units"
+             if rank is not None
+             else ", not actionable yet (not_before in the future)"))
+    return 0
+
 def _stat_number(value):
     """Coerce a stats scalar to a number, or None (retro _num)."""
     if isinstance(value, bool):
@@ -2716,6 +2873,41 @@ def points_is_progress_delta(stats, regular=None):
     return points is not None and points != 0
 
 
+def points_is_expected_score(stats, regular=None):
+    """True when stats.points is a Handbook-rate expected score on a trucks unit (issue #300).
+
+    points is score gained in this unit, for scoring types only
+    (task-unit-queue-design.md per-unit measurement table: duel,
+    Arms Race, radar). Trucks is not a scoring type - a trucks
+    unit never reads the VS panel; duel-score reads belong to
+    the duel-score regular, which verifies the gain live. A
+    points figure on a trucks closing is therefore a
+    Handbook-rate expected score by construction, not a unit
+    score: trucks-2026-11-09-2257 wrote points 400000 (4 times
+    the 100,000 Handbook rate from tools/duel.py), labeled in
+    its own record "expected duel points, Handbook rate,
+    pending live verification by the duel-score unit", while
+    its achieved is a dispatch/plunder count ("dispatch 4,
+    plunder 1"), so neither the equality detector nor the
+    no-achieved detector fires. The Nov 10 retro window summed
+    403,592 as points gained against an honest 3,592. This is
+    a warning, never a block, and it is scoped to trucks only:
+    the genuine non-equal gains stay counted - arms-race
+    2026-11-09-1003 points 2000 against achieved 8000 (a
+    rally kill, distinct from the phase total), donations
+    points 50, daily-missions points 100. The trucks profile
+    already carries the prevention rule (retro action
+    A-2026-11-10-01: never write an expected or Handbook-rate
+    score into stats.points); this is the detector half.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular != "trucks":
+        return False
+    points = _stat_number(stats.get("points"))
+    return points is not None and points != 0
+
+
 def achieved_is_screen_total(stats, regular=None):
     """True when stats.achieved is a screen total on a star-ceremony unit (issue #483).
 
@@ -2802,6 +2994,7 @@ def cmd_complete(args):
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
+    points_exp = points_is_expected_score(stats, fields.get("regular"))
     achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
     blocker_bad = blocker_category_not_enum(stats)
     over_cap = isinstance(duration, int) and \
@@ -2825,6 +3018,8 @@ def cmd_complete(args):
                               if points_noach else [])
                            + (["points is progress delta"]
                               if points_prog else [])
+                           + (["points is expected score"]
+                              if points_exp else [])
                            + (["achieved is screen total"]
                               if achieved_screen else [])
                            + (["blocker_category not in enum a-i"]
@@ -2888,6 +3083,12 @@ def cmd_complete(args):
               f"this unit and gifts pay no score; the Gift "
               f"Level progress gain belongs in the summary and "
               f"resources_gained only")
+    if points_exp:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"on a trucks unit - points is score gained in "
+              f"this unit and trucks pay no live-read score; a "
+              f"Handbook-rate expected score belongs in the "
+              f"summary only, verified live by the duel-score unit")
     if over_cap:
         print(f"warning: {args.unit} ran {duration}s, over the "
               f"{UNIT_CAP_MINUTES}-minute unit cap - split the "
@@ -3782,6 +3983,14 @@ def main(argv=None):
     p.add_argument("--lease-minutes", type=int,
                    default=DEFAULT_LEASE_MINUTES)
     p.set_defaults(fn=cmd_claim)
+
+    p = sub.add_parser("deadline")
+    p.add_argument("--unit", required=True)
+    p.add_argument("--expires-at", default="")
+    p.add_argument("--closes-in", default="")
+    p.add_argument("--priority", type=int, default=None)
+    p.add_argument("--reason", default="")
+    p.set_defaults(fn=cmd_deadline)
 
     p = sub.add_parser("complete")
     p.add_argument("--unit", required=True)

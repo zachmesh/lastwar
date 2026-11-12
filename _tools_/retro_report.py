@@ -113,7 +113,16 @@ What is counted, per section 14 -
     unit is counted under achieved_screen_excluded, never
     silently dropped. queue.py complete warns at close time so
     future star-ceremony closings carry the ceremony count
-    only.
+    only. A fifth exception (issue #300, Nov 10 variant): a
+    nonzero points value on a trucks unit is not summed
+    either - trucks pay no live-read score, so the figure
+    is a Handbook-rate expected score by construction (the
+    Nov 9 closing wrote 400,000 - 4 times the 100,000
+    Handbook rate - labeled expected in its own record,
+    against a dispatch/plunder-count achieved). Such points
+    are counted under points_expected_excluded, never
+    silently dropped, and queue.py complete warns at close
+    time so future trucks closings carry no points key.
 
 Data sources are only inside the repository - the done pool at
 _queue_/done and, as a fallback, the day INDEX files in
@@ -161,7 +170,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.5.3"
+TOOL_VERSION = "1.5.4"
 
 
 def _load_queue():
@@ -478,6 +487,8 @@ def _empty_bucket():
         "points_no_achieved_excluded_units": [],
         "points_progress_excluded": 0,
         "points_progress_excluded_units": [],
+        "points_expected_excluded": 0,
+        "points_expected_excluded_units": [],
         "achieved_screen_excluded": 0,
         "achieved_screen_excluded_units": [],
         "costs": {},
@@ -534,6 +545,7 @@ def _feed(bucket, unit):
     dup = getattr(Q, "points_duplicates_achieved", None)
     noach = getattr(Q, "points_without_achieved", None)
     prog = getattr(Q, "points_is_progress_delta", None)
+    exp = getattr(Q, "points_is_expected_score", None)
     if points is not None and dup is not None and dup(stats, unit.get("regular")):
         bucket["points_dup_excluded"] += 1
         bucket["points_dup_excluded_units"].append(unit["unit"])
@@ -543,6 +555,9 @@ def _feed(bucket, unit):
     elif points is not None and prog is not None and prog(stats, unit.get("regular")):
         bucket["points_progress_excluded"] += 1
         bucket["points_progress_excluded_units"].append(unit["unit"])
+    elif points is not None and exp is not None and exp(stats, unit.get("regular")):
+        bucket["points_expected_excluded"] += 1
+        bucket["points_expected_excluded_units"].append(unit["unit"])
     elif points is not None:
         bucket["points_total"] += points
         bucket["points_units"] += 1
@@ -625,6 +640,10 @@ def _summarise(bucket):
             "points_progress_excluded"],
         "points_progress_excluded_units": bucket[
             "points_progress_excluded_units"],
+        "points_expected_excluded": bucket[
+            "points_expected_excluded"],
+        "points_expected_excluded_units": bucket[
+            "points_expected_excluded_units"],
         "achieved_screen_excluded": bucket["achieved_screen_excluded"],
         "achieved_screen_excluded_units": bucket[
             "achieved_screen_excluded_units"],
