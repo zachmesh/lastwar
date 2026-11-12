@@ -528,3 +528,28 @@ of 2026-10-28.
   escalation. No arrivals during the pass; sweep clean.
   Status: done. Full detail in
   pr-integration/0400-run.md.
+
+## 04:04 to about 04:12 - Ticker pass ticker-0404, no unit executed (control-lock blocker stands)
+
+- Ticker pass ticker-0404. Own PRs first: records PR 685
+  (2026-11-12) re-verified CLEAN by the integrator 0400 pass
+  against main e4513df10, awaits the 07:00 batch; no question
+  addressed to this job, nothing to fix. Tools PR 425 still
+  owner-gated (OD-20261108-01 open), not this job's.
+- Sync expired 10 stale inbox units (duel-score, events, gifts,
+  mail, passes, secrets, star-ceremony, train, treasures, trucks
+  2026-11-11-2230/2257); 25 due regulars all already queued,
+  produced nothing new. Zombie chain: successor 026 already in
+  inbox, no seeding needed.
+- Execute loop handed out nothing: the R9 control-lock blocker
+  (Issue #689, recorded 11:19:16Z by ticker-0304 zombie unit 025
+  after 3 fresh sessions cc-703/704/705 all failed at first input
+  with outcome_unknown) still stands, 48 minutes old, under the
+  4-hour stale bound - `next` refuses by design, so no unit was
+  burned. Sixth consecutive blocked tick (0134, 0204, 0234, 0304
+  failed units; 0404 first guarded tick with no attempt). The
+  blocker reaps after 15:19:16Z (07:19 PT); the next tick then
+  probes with one input. No device session was opened by this
+  pass; no unit recorded failed. Token released.
+  Status: done (sync-only pass). Files: _queue_ expirations,
+  this INDEX, _logs_/repo-actions/action-log.jsonl.
