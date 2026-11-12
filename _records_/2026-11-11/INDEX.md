@@ -2687,3 +2687,14 @@ of 2026-10-28.
   main 82589fe4, comment posted. Local main
   fast-forwarded to 82589fe4. Slack sync sent. Status: done.
   Full detail in pr-integration/1600-run.md.
+
+## 16:15 to about 16:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1615.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): no merges, no comments;
+  records PR 655 awaits the 19:00 batch, merge-tree
+  CLEAN against main 82589fe4. Tools PR 425 still
+  owner-gated (OD-20261108-01 open), head and main
+  unchanged since the 1600 re-verification. Status: done.
+  Full detail in pr-integration/1615-run.md.
