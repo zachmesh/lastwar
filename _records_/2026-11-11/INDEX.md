@@ -3466,3 +3466,20 @@ of 2026-10-28.
 - Integrator pass lastwar-pr-integrator-2026-11-11-2230. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). No merges. Records PR 665 re-verified CLEAN at tip 1d4fa99536 (merge-tree exit 0, tree 805902fa), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), still CONFLICTING against unchanged main 3fdf864f (_tools_/INDEX.md), no new comment (nothing changed since the 2215 note). No sync-back owed; no Slack sync. Status: done. Full detail in pr-integration/2230-run.md.
 
 - 22:29 PT — Zombie Invasion unit 021 (ticker-2211, partial, chain continues): 2 Lv.10 kills in parallel (Squad 1 X:481 Y:397, Squad 2 X:488 Y:392), squads_parallel 2; both LOOT rows claimed for 536,000 coins; coin 142.3M → 142.9M HUD, food +536,000; stamina 25 → 6. First blind-batched dispatch misfired into a "MISSING ITEMS" Advanced Teleporter popup (no purchase, closed with X); verified step-by-step dispatch after. Deploy panel opened on Squad 1 again — manual squad-2 tab tap needed. Stamina 49 → 25 drop since unit 020 unexplained. Medals about 5,160 derived; Store/chest redemption still open. Full detail in zombie-invasion/2229-queue-run.md.
+
+## 22:32 to about 22:45 - Tool development pass
+
+- Tool-developer pass tool-development-2026-11-11-2232.
+  Own PR 425 re-resolved: head 721830b7f was CONFLICTING
+  against main 3fdf864f (_tools_/INDEX.md only); merged main
+  into work/log-append-delivery-gate (merge commit 4f41cdd6a,
+  pushed) - resolution takes main's INDEX.md whole and
+  re-applies the branch's log_append.py row wording; policy
+  amendment and log_append.py byte-identical to the reviewed
+  diff. Gate re-validated on the merged tree with /tmp
+  fixtures only (clean exit 0, #422-shape tail repaired
+  exit 0 and idempotent, unrepairable exit 1, missing exit
+  2); queue validate pool valid; tree_check OK. PR #425
+  commented. Still owner-gated (OD-20261108-01 open); branch
+  verified CLEAN against main 3fdf864f. Status: done.
+  Full detail in tool-development/2232-run.md.
