@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-12T03:32:17Z
+modified: 2026-11-12T04:32:17Z
 level: L1
-version: 1.26.0
+version: 1.27.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -559,4 +559,15 @@ claims cited below were read in this pass's passes unit
 - Power at the close: Total Power 149,218,973 (unchanged across the day's reads); coin 137.5M, food 694.1M, iron 1.0G at the 19:01 scout exit read. Zombie Invasion - Glacieradon live with about 1d 23h left at 19:00, next wave about 00:03, challenge opens 2026-11-12 18:00; unit 019 sits in inbox. Six 14:30-slot units expired unrun (train, star-ceremony, mail, help, gifts, duel-score), reaped by the planner.
 - Still open at the reset, carried to the next trade day: the trucks shortfall (dispatch -4, plunder -4); the donations remaining count; the VIP and mail fix-ups; the Age of Oil stage-1 badge claim state (Issue #477); the Coin Chest (SSR) row below the fold and the 480-medal tooltip in the Zombie Store; the skull cycle timer (Issue #498); the sync duplicate chain head (tooling Issue #664); the sweep pair incomplete (6 of 23 lines). No execution record for the 18:00-18:57 batch units (harvest-1803, mail-1830, events-1857, donations-1803, vip-1800, arms-race-1803, and the train, radar, daily-missions, duel-score and secrets units the 1730 sweep names as standing in inbox) has landed on the records branch at run close; their outcomes are not recorded here.
 - Next trade day: the planner 1840 staged 12 units (06:03/06:30 slots 2026-11-12: mail, help, gifts, harvest, radar, survivors, train, training, donations, arms-race, star-ceremony, duel-score).
+- No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
+
+## Queue-planning 1940 verification, 2026-11-11 19:40 - sweep pair both partial, 6 staged, Issue #668
+
+- Planner pass queue-planning-2026-11-11-1940, about 19:40 to 20:12 local, status done. Evidence in `_records_/2026-11-11/queue-planning/1940-run.md` (commit 2cf8ce514e on records/2026-11-11). This job only plans: it never controls the device and never plays the game.
+- Pre-reset sweep pair, verified BY STATUS per #610: both passes are in done, each carrying `status: partial` - first pass zero-sweep-2026-11-11-1630 by ticker-1718 (1 of 23 lines, trucks 1/5 dispatch 0/4 plunder), final pass zero-sweep-2026-11-11-1730 by ticker-1800 (5 of 23 lines, all non-zero). The pair is executed but NOT complete in the full-ledger sense: 6 of 23 lines read live, 17 covered only by the 18:00-18:57 batch units. No enqueue was needed and no ledger-walk task text was appended.
+- Plan: 6 units staged for the 2026-11-12 06:57/07:00 slots (passes, secrets, treasures, trucks, events, scout-midday); 68 already present, 0 reaped, 0 expired; 1 skipped closed (zero-sweep-2026-11-11-1730). Roster stale, carried (issue #198): building-queues, research and zombie-invasion missing from the loaded roster. Pool by_state at 19:47: inbox 78, claimed 0, done 1612.
+- Scout diff on the branch-merged 3-pass observation: observed 29, actionable 0, to enqueue 0, raises 0, candidates 0, unexplained red dots 9 (additive day total; 5 distinct still unexplained - see the perception-scout 1946 fold). Applied: 0 enqueued, 0 apply failures, net 0 new units. The diff is idempotent on both copies (live 2-pass: observed 21, unexplained 5). Queue cleanup: 0 withdrawals.
+- Issue filed by this run, tooling class, owned by lastwar-tool-developer (not this job): #668 - the scout observation writer replaces the previous continued pass instead of appending (the ticker-1843 section dropped by ticker-1919; the branch copy was repaired by the ticker delivery merge, the live file still holds base + 1919 only). The day-total counters are additive across passes (9 unexplained counts the Zombie Store dot twice and includes three items the 1946 pass later explained); a netting rule for the counters belongs with the same fix.
+- New trade day's first executions (after the 19:00 reset): zombie-invasion 019 (ticker-1919, 2 Lv.10 kills in parallel, 536,000 coins, coin 137.5M to 138.0M) and 020 (ticker-2001, 2 kills in parallel, 1 LOOT row claimed 268,000, Squad 1 row lost - third handover-style loss), perception-scout 002 (ticker-1919, events group remainder, 7 red dots, 5 explained, 2 unexplained). See the zombie-invasion 1936/2020 and perception-scout 1946 folds.
+- Still open at this run's close (20:32): NO execution record for the 18:00-18:57 batch units (harvest-1803, mail-1830, events-1857, donations-1803, vip-1800, arms-race-1803, and the train, radar, daily-missions, duel-score and secrets units the 1730 sweep names as standing in inbox) has landed on the records branch. Their outcomes are not recorded here - not asserted expired, not asserted executed. The fix-ups the sweeps raised to priority 1 remain unrecorded the same way.
 - No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.

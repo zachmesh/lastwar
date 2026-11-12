@@ -1,9 +1,9 @@
 ---
 title: The Age of Oil
 created: 2026-11-09T20:32:17Z
-modified: 2026-11-12T03:32:17Z
+modified: 2026-11-12T04:32:17Z
 level: L1
-version: 1.1.0
+version: 1.2.0
 description: Season II warzone collective-progression event in the Events hub - three warzone-wide counters with per-commander ranking rewards, ends about 2026-11-15 in the late afternoon PT, no recurring agent action
 status: unverified
 grounded_in:
@@ -13,6 +13,7 @@ grounded_in:
   - source: ticker-0204 event-claims execution record 2026-11-09 0224 queue run (partial, Age of Oil milestone 2 chest claimed after the 1914 blocker; record commit facef628c on records/2026-11-09)
   - source: ticker-0434 event-claims execution record 2026-11-09 0450 queue run (partial, Age of Oil milestones verified claimed, both chests gone; record commit b6ed78edd0 on records/2026-11-09)
   - source: ticker-1843 perception-scout execution record 2026-11-11 1850 queue run (partial, events group, Age of Oil stage 1 active with badge 1, Tech 9475/500 and Base Expansion II 22232/500 both exceeded, 3d 23:06:56 remaining, reward claim state unmeasured; record commit 7b944422a4 on records/2026-11-11)
+  - source: ticker-1919 perception-scout execution record 2026-11-11 1946 queue run (partial, events group remainder, Age of Oil Tech 9511/500 and Building Upgrades 22379/500, timer 3d 22:21:10, badge 1 explained as progress-track step 1, claim state still unmeasured; record commit c8d8022079 on records/2026-11-11)
 ---
 
 # The Age of Oil
@@ -76,6 +77,17 @@ candidate is tracked in GitHub Issue #477.
   verify. The 0450 verification (both milestone chests gone) is
   not re-litigated: this badge is a new signal, not the old
   milestone chests.
+- Counters, fourth live read 2026-11-11 19:33 PT (scout cross-read,
+  ticker-1919 unit 002, not an Age of Oil unit): Tech 9511/500,
+  Building 22379/500 - both exceeded, bars full; timer 3d 22:21:10
+  remaining. Stage 1 still active with badge 1. The badge is now
+  EXPLAINED as the progress-track step-1 marker (the first hub
+  tab's present/gift icon is the Age of Oil page; its badge 1
+  marks progress-track step 1) - see Issue #477. The reward claim
+  state is STILL UNMEASURED - the reward icons below each card
+  were not scrolled to or tapped in this read either; the badge's
+  meaning is settled, whether it is claimable is not. Handed to
+  the event-claims / diff unit to verify.
 - Cycle and deadline: one event window, ends about 2026-11-15 17:56 PT
   (derived from the 6d 06:20 timer at 11:36 PT; the 0829 timer implies
   the same end within a minute).
@@ -135,6 +147,12 @@ candidate is tracked in GitHub Issue #477.
   tab-bar "!". The Zombie Invasion tab also carried badge 1, and
   the base Events badge 2 is accounted for by those two. The "!"
   itself is not separately re-read; the attribution stays open.)
+  (2026-11-11 1946 update: the scout read the Desert Battlefield
+  tab carrying a red badge (!) - the attribution now leans Desert
+  Battlefield, still not proven as that tab's. The Age of Oil tab
+  badge 1 is now explained as the stage-1 badge, not a tab-bar
+  "!". The Desert tab badge is one of the two unexplained dots
+  from the 1946 pass.)
 
 ## What the 2026-11-09 1146 scout-discovery unit added - Age of Oil learned with ranking rewards, Base Expansion II icon corrected
 
@@ -171,3 +189,10 @@ candidate is tracked in GitHub Issue #477.
 - Live read, about 18:53 to 19:00 local: stage track: stage 1 active with a red badge 1; stages 2, 3, 4 locked. Play button top-right, not tapped. "Unlock Tech: The Age of Oil", 3d 23:06:56 remaining: "Complete a total of 500 Tech Research in this Warzone", 9475/500 - exceeded, bar full. "Unlock Stage: Base Expansion II", 3d 23:06:56: "Complete a total of 500 Building Upgrades in this Warzone", 22232/500 - exceeded, bar full.
 - Reward claim state UNMEASURED - the reward icons below each card were not scrolled to or tapped, so the stage-1 badge 1 is NOT proven to be a claimable reward; the exceeded counters are only a candidate cause. The 0450 verification (both milestone chests gone) is not re-litigated: this badge is a new signal, not the old milestone chests. See the updated Counters entry and Issue #477 (commented by this run).
 - Result stats: target read the Age of Oil page live; achieved counters and stage track read live, claim state unmeasured; resources_gained none; points 0; costs none (scout unit time); verified partial - counters, stage track and timer read live in the scout unit, claim state not verified; blocker_category none.
+
+## What the 2026-11-11 1946 scout cross-read added - Tech 9511/500 and Building Upgrades 22379/500, badge 1 explained as progress-track step 1, claim state still unmeasured
+
+- Cross-read only, not an Age of Oil unit execution: the ticker-1919 perception-scout events-group remainder unit (scout-scout-2026-11-10-002, about 19:33 to 19:46 local) walked the Events hub and re-read The Age of Oil page live. Evidence in `_records_/2026-11-11/perception-scout/1946-queue-run.md` (commit c8d8022079 on records/2026-11-11). Nothing claimed, nothing spent, nothing tapped beyond reading. The claim-state verification is handed to the event-claims / diff unit.
+- Live read, about 19:33 to 19:46 local: stage track: stage 1 active with a red badge 1; stages 2, 3, 4 locked. "Unlock Tech: The Age of Oil", 3d 22:21:10 remaining: "Complete a total of 500 Tech Research in this Warzone", 9511/500 - exceeded, bar full. "Unlock Stage: Base Expansion II", 3d 22:21:10: "Complete a total of 500 Building Upgrades in this Warzone", 22379/500 - exceeded, bar full. Counters still climbing since the 1850 read (9475/500 and 22232/500).
+- Badge meaning SETTLED: the first hub tab's icon (present/gift) is The Age of Oil page; its badge 1 marks progress-track step 1. This explains the tab badge the 1850 read recorded. Reward claim state UNMEASURED - the reward icons below each card were not scrolled to or tapped, so the stage-1 badge 1 is still NOT proven to be a claimable reward; the badge's meaning is settled, its claimability is not. See the updated Counters entry and Issue #477 (commented by this run).
+- Result stats: target read the Age of Oil page live; achieved counters, stage track and timer read live, badge meaning explained, claim state unmeasured; resources_gained none; points 0; costs none (scout unit time); verified partial - counters, stage track and timer read live in the scout unit, claim state not verified; blocker_category none.
