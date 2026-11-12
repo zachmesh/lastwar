@@ -1,9 +1,9 @@
 ---
 title: Event Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T11:32:17Z
+modified: 2026-11-12T06:32:17Z
 level: L1
-version: 1.40.0
+version: 1.41.0
 description: Checking event pages and claiming earned event rewards, one activity folder for event claim knowledge
 status: unverified
 grounded_in:
@@ -43,6 +43,7 @@ grounded_in:
   - source: ticker-1004 event-claims execution record 2026-11-10 1045 queue run (partial, 4 of 6 hub tabs read, Hero Advancement free paths cannot reach tier 3, Age of Oil stage-1 node info-only, Desert Storm registered, Wanted Boss Code 64 not out; record commit 2218eb3cd on records/2026-11-10)
   - source: ticker-1343 event-claims execution record 2026-11-10 1358 queue run (done, full 6-tab hub sweep, nothing claimable, 10:45 follow-up closed, Hero Advancement ends about 14:03 at score 0; record commit b2c2b7a43 on records/2026-11-10)
   - source: ticker-0234 event-claims execution record 2026-11-11 0305 queue run (done, full hub sweep, nothing claimable, hub roster changed - Survey Center out, Zombie Invasion in - Age of Oil stage-1 badge unresolved, Wanted Boss back to Code 39; record commit 2abfb335c on records/2026-11-11)
+  - source: ticker-2133 arms-race execution record 2026-11-11 2147 queue run (skipped-needs-owner, Age of Oil tab cross-read - Tech Research 9611/500, Building Upgrades 22680/500, 3d 20:08:22 left, stage track 1 of 4, badge 1, no claim located; record commit bca5a948c on records/2026-11-11)
 ---
 
 
@@ -1353,3 +1354,9 @@ that drag is the sweep-completeness check, not wasted motion.
 - Live reads: zombie event timer 2d 15:00:37; next wave 00:35:09. Wanted Boss best single attack 1,097,397,868.
 - No diamonds or money spent. No speedups burned. No paid button tapped. No other task type was executed in this unit.
 - Result stats: target 6 (six hub tabs swept), achieved 6, resources_gained none, costs about 6 minutes play, verified yes, blocker_category none, follow_up Age of Oil stage-1 badge claim (if any) re-check next events unit; zombie Store red dot for the zombie-invasion chain unit.
+
+## What the 2026-11-11 2147 arms-race-unit cross-read added - Age of Oil warzone totals advanced, stage 1 of 4, badge 1, nothing claimed
+
+- Cross-read only, not an events unit execution: the ticker-2133 arms-race unit (arms-race-2026-11-11-1803, 21:47-21:53 local) read the leftmost Events tab (Age of Oil season) from the Events screen. Evidence in `_records_/2026-11-11/arms-race/2147-queue-run.md` (commit bca5a948c on records/2026-11-11). Nothing explored or claimed here.
+- Live read: red "1" badge on the tab. "Unlock Tech: The Age of Oil - Complete a total of 500 Tech Research in this Warzone, 9611/500" and "Unlock Stage: Base Expansion II - Complete a total of 500 Building Upgrades in this Warzone, 22680/500", 3d 20:08:22 left, stage track 1 of 4. Against the 0305 full-hub sweep (6421/500 tech, 20418/500 upgrades, 4d 14:59 left): both warzone totals advanced and the timer is consistent (~19 h later); both goals are still exceeded with no Claim button located - the stage-1 badge claim, if any, remains unresolved. Commented on Issue #477 by this run.
+- Result stats: no events unit ran; nothing claimed, nothing spent; verified yes (tab read live in-unit); blocker_category none.

@@ -1,9 +1,9 @@
 ---
 title: Mail Rewards
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T23:32:17Z
+modified: 2026-11-12T06:32:17Z
 level: L1
-version: 1.40.0
+version: 1.41.0
 description: Claiming reward mail and checking report mail, one activity folder for mail knowledge
 status: unverified
 grounded_in:
@@ -46,6 +46,7 @@ grounded_in:
   - source: ticker-1012 mail-rewards execution record 2026-11-11 1029 queue run (done, every category walked, Event Zombie Invasion Intel + train mails and System Maintenance + Survey claimed, HUD deltas verify coin/food/diamonds exactly, normalized-coordinates correction; record commit c0c788be on records/2026-11-11)
   - source: ticker-1408 mail-rewards execution record 2026-11-11 1422 queue run (partial, Event Claim All paid medal 280, EXP 2.4M, Battle Data 1.5K, 10-stamina x2, coin 969.0K, food 769.0K, iron 769.0K, other categories unchecked, tap offset measured; record commit d00afba5a on records/2026-11-11)
   - source: ticker-1439 zombie-invasion execution record 2026-11-11 1456 queue run (partial, Glacieradon chain 016, mail already claimed by the 1422 mail unit, Claim All auto-advance to the next unread mail, mail-detail back arrow offset-miss with re-test owed; record commit 34be97f28 on records/2026-11-11)
+  - source: ticker-2133 troop-training execution record 2026-11-11 2136 queue run (partial, training unit's mail detour - President Mail 2110 Honoring Our Veterans read live, three unread President Mail, Alliance and Event gift icons unclaimed, nothing claimed; record commit bca5a948c on records/2026-11-11)
 ---
 
 
@@ -1038,3 +1039,9 @@ the next tick re-produces this regular as a fresh unit.
 - Recovery: menu Last War > Quit Last War, then open_app relaunch; the app returned to the base screen with state intact, windowed 642x951 (not fullscreen 1920x1080). See the zombie-invasion profile's QUALIFICATION in its Correction section - Quit + relaunch is a remote route back to windowed 642x951.
 - Result stats: no mail unit ran; nothing claimed by this unit, nothing spent. Verified yes (the already-claimed state and the offset arithmetic are same-unit reads against the 1422 record). Blocker_category c.
 - No diamonds or money spent. No mail was deleted (Delete All never pressed).
+
+## What the 2026-11-11 2136 training-unit mail detour added - President Mail 2110 read, Alliance and Event gift icons unclaimed, nothing claimed
+
+- Cross-read only, not a mail unit execution: the ticker-2133 training unit (training-2026-11-11-1803, 21:36-21:46 local) tapped the massed-troops yard area at norm (841,799) looking for the Drill Ground and opened Alliance mail instead. Evidence in `_records_/2026-11-11/troop-training/2136-queue-run.md` (commit bca5a948c on records/2026-11-11). The mail screens are not the training unit's work; the next training unit must not re-enter them.
+- Read live: "(President Mail) 2110 Honoring Our Veterans" (2026-11-11 16:34:14, 94 likes) and the mail list - three unread President Mail items (Y Espanol and two Veteran's Day), Maintenance Completed, Patch Notes. The Alliance and Event rows show gift icons - rewards unclaimed, corroborating the 1730 zero-sweep read. Nothing claimed in this unit; Delete All NOT tapped; Claim All NOT tapped. Mail closed back to the base screen.
+- Result stats: no mail unit ran; nothing claimed, nothing spent; verified yes (mail list read live in-unit); blocker_category none.

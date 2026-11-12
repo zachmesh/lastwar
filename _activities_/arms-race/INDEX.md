@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-12T03:32:17Z
+modified: 2026-11-12T06:32:17Z
 level: L1
-version: 1.86.0
+version: 1.87.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -92,6 +92,7 @@ grounded_in:
   - source: ticker-0534 arms-race execution record 2026-11-11 0535 queue run (skipped-needs-owner, Tech Research phase re-verified live, score 0, tier 3 unreachable inside red lines, no rewards claimable, 0004-timer citation withdrawn by correction, no-completion evidence now the 0553 live queue read; record commit a3ef6b276 on records/2026-11-11)
   - source: ticker-1332 arms-race execution record 2026-11-11 1347 queue run (partial, phase never read, Events entry failed twice - (645,62) opens the Mall, labelled Events icon (707,146) took two no-change taps, Mall exit back arrow (316,952); record commit ed2cb2614 on records/2026-11-11)
   - source: ticker-1843 perception-scout execution record 2026-11-11 1850 queue run (partial, events group, Arms Race Base Building phase read live - score 0, 03:07:30 left, tier 3 at 30,000, only the Building Power path inside the red lines, R4 flag for the arms-race unit; record commit 7b944422a4 on records/2026-11-11)
+  - source: ticker-2133 arms-race execution record 2026-11-11 2147 queue run (skipped-needs-owner, Base Building phase live, score 0, no in-scope scoring path - Lv.29 Aircraft Center completes about 02:30 PT after the phase, Oil Well identity disagreement persists per Issue #595, ranking chest preview only; record commit bca5a948c on records/2026-11-11)
 ---
 
 
@@ -2318,3 +2319,16 @@ slot. Evidence in
 - R4 flag, from the scout record: score 0 with 3h07m left and tier 3 at 30,000. Of the three paths, only Building Power +1 sits inside the red lines - the speed-up path burns speedup items and the diamond path is a purchase. The arms-race unit judges this phase under R4 from this read; the tier-3 target needs a Building Power gain of 30,000 inside the remaining phase time, and no building completion is evidenced in this read.
 - Task line, same pass (base screen about 18:51): "Build: Oil Well [0/1]" - the same label the 1726 and 1730 sweeps read. It is a datapoint for Issue #595 (Oil Well vs Lv.29 Aircraft Center identity): the queue panel (Lv.29 Aircraft Center) remains the authoritative upgrade identity and the timer disagreement stands; the base-screen "Build:" label is a quest indicator, not a finished upgrade. Commented on #595 by this run.
 - Result stats: target read live phase and score, meet tier-3 target just enough, claim earned rewards; achieved phase read live (Base Building, score 0, thresholds 6250/12500/30000) by cross-read, target judged by the arms-race unit under R4, no rewards claimable in this read; resources_gained none; points 0; costs none (scout unit time); verified partial - phase, score, thresholds and ranking row read live in the scout unit; blocker_category none.
+
+## What the 2026-11-11 2147 unit added - Base Building phase live, score 0, no in-scope scoring path, ranking preview only, skipped-needs-owner
+
+- Unit arms-race-2026-11-11-1803 by ticker-2133, 21:47-21:53 local, status skipped-needs-owner. Evidence in `_records_/2026-11-11/arms-race/2147-queue-run.md` (commit bca5a948c on records/2026-11-11). Computer session cc-672 on the owner Mac mini.
+- Live phase read, first unit in this phase: Base Building, Contest Segment Lv.29-30. Timer 00:10:41 at first read (00:07:14 at close) - the phase ends about 22:03 PT. The 14:03 unit expired unexecuted, so the phase was not checked early. This read confirms the 1850 scout cross-read (score 0, 03:07:30 left, tier 3 at 30,000) from inside an arms-race unit.
+- Score 0 at entry and at close. Thresholds 6,250 / 12,500 / 30,000 (ruby tags 2,360 / 4,800 / 11,800). Rank 8 in segment, #2110 [AP3x]Bears Lair, 0 points.
+- Scoring paths as displayed: Increase Building Power by 1pt +1; Use 1-min Construction Speed-up +10 (red line, never burned); Buy Packs containing Diamonds +30 per diamond (red line, never spent).
+- No in-scope scoring path: the "Increase Building Power" row opens the Building Queue - slot 1 holds the Lv.29 Aircraft Center upgrade in progress, Time Left 04:36:12, completing about 02:30 PT, after this phase ends; slots 2, 3 and 4 are Idle with Construct buttons. No building completes inside this phase. Starting a new construction on agent initiative is not allowed, and a fresh build could not complete in the remaining minutes anyway. The tier-3 target of 30,000 cannot be reached inside the red lines. Status follows the 0203 precedent for this same situation (Tech Research, score 0): skipped-needs-owner. Tracker skipped with this note.
+- Issue #595 identity disagreement persists: the base footer "Build: Oil Well [0/1]" disagrees with the queue's Aircraft Center as the active build - the Oil Well reads as a queued or available construction, not the active upgrade. The queue panel remains the authoritative upgrade identity and the timer disagreement stands. Commented on #595 by this run.
+- Completion sweep: cumulative counter chest top left 0/2, not claimable, no bounce. All three point chests locked at score 0, no red dots, no bounce. Ranking row chest tapped: contents preview only, no Claim button - UR Hero Universal Shard 1, Decoration Chest 1, Iron Chest (SR) 24, Food Chest (SR) 24, Coin Chest (SR) 24. Per the standing rule the phase ranking reward is claimed after the phase ends, in the next run.
+- Side observations (not this unit's work): the leftmost Events tab (Age of Oil season) carries a red "1" badge - "Unlock Tech: The Age of Oil - Complete a total of 500 Tech Research in this Warzone, 9611/500" and "Unlock Stage: Base Expansion II - Complete a total of 500 Building Upgrades in this Warzone, 22680/500", 3d 20:08:22 left, stage track 1 of 4. Folded into event-claims as a cross-read; commented on Issue #477. Zombie Invasion - Glacieradon: 1d 20:11:18 left, next wave of Invading Zombies in 00:05:58, Boss Search list Lv.90 (288km), Lv.85 (46km), Lv.85 (68km), Lv.80 (140km) - consistent with the standing end about 2026-11-13 18:00, no profile change. The zombie chain unit 021 waits in the inbox for the next tick.
+- Close: skipped-needs-owner. 0 points scored, 0 chests claimed, nothing claimable. No diamonds or money spent. No speedup burned. No building or research started. No stage swapped. No login or verification demanded. No "active on a different device" dialog appeared.
+- Result stats: target 30000 (tier-3 threshold, Base Building phase); achieved 0; resources_gained none; points 0; costs about 6 minutes, no items spent; verified yes (phase, score, thresholds, building queue and ranking preview all read live in-unit); blocker_category g; phase Base Building, score 0, thresholds 6250/12500/30000, device_takeovers 0.
