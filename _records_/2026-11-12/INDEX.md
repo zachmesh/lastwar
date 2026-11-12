@@ -782,3 +782,17 @@ of 2026-10-28.
   and 0530 verifications), no new comment. No Slack sync.
   No arrivals during the pass; sweep clean. Status: done.
   Full detail in pr-integration/0545-run.md.
+## 06:00 to about 06:10 - PR integration 0600 run, NON-batch (checker not due, next batch 07:00)
+
+- Integrator pass pr-integration-2026-11-12-0600. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00): no merges. Records PR 685
+  (2026-11-12, head 2e6d58af) re-verified CLEAN against
+  unchanged main 2f46eea9a (merge-tree 380e1c6e),
+  verification comment posted, awaits the 07:00 batch.
+  Tools PR 425 still owner-gated (OD-20261108-01 open),
+  re-verified CLEAN against unchanged main 2f46eea9a
+  (merge-tree f366c8f1, identical to the 0445, 0500, 0515,
+  0530 and 0545 verifications), no new comment. No Slack sync.
+  No arrivals during the pass; sweep clean. Status: done.
+  Full detail in pr-integration/0600-run.md.
