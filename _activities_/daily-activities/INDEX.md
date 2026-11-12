@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-12T09:32:17Z
+modified: 2026-11-12T10:32:17Z
 level: L1
-version: 1.30.0
+version: 1.31.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -28,6 +28,8 @@ grounded_in:
   - source: zero-sweep 001 execution record 2026-11-11 1726 queue run (partial, 1 of 23 ledger lines read live to a close, trucks dispatch 1/5 and plunder 0/4 shortfall, donations points 4050 live, remaining count unread, skull timer sixth sighting; record commit bec20570e on records/2026-11-11)
   - source: zero-sweep 002 execution record 2026-11-11 1730 queue run (partial, 5 of 23 ledger lines read live, bubbles and mail not at zero, Glacieradon next wave 00:52:52, four fix-up units raised to priority 1, PR 655 conflict resolved and loop-health gap filed as Issue #661; record commit 6cbd479fc on records/2026-11-11)
   - source: ticker-0100 execution records 2026-11-12 0114 and 0126 queue runs (zombie-invasion 022 re-executed from a stale inbox copy, harvest-2203 panel Collects 12,195,086, thirteen stale inbox units reaped expired; record commit 911d317f8 on records/2026-11-12)
+  - source: ticker-0134 execution record 2026-11-12 0151 queue run (radar-2203 failed, control channel outcome_unknown lock, Issue #689 second occurrence; record commit 889dda54f on records/2026-11-12)
+  - source: ticker-0204 execution record 2026-11-12 0207 queue run (help-2230 failed, control channel outcome_unknown lock, Issue #689 third occurrence; arms-race/donations/survivors/training 2203 expired unexecuted; record commit b23df0eba on records/2026-11-12)
 ---
 
 # Routine activities
@@ -593,4 +595,11 @@ claims cited below were read in this pass's passes unit
 - The ticker-0100 pass (commit 911d317f8 on records/2026-11-12) reaped 13 stale inbox units as expired at about 01:02 PT - status expired, "window passed before execution": donations-1803, events-1457/1857, passes-1457/1857, radar-1803, secrets-1457/1857, survivors-1803, treasures-1457/1857, trucks-1457/1857 (all 2026-11-11 units). CORRECTION - three of the thirteen are stale-branch artifacts, not new execution facts: radar-1803, survivors-1803 and training-1803 were EXECUTED on the 2026-11-11 branch (radar done, survivors partial, training partial - see the 18:00-18:57 batch section above), and the 0100 reaper on this branch marked their never-updated inbox copies expired. The genuine new expirations on this branch are the ten 1457/1857 units plus donations-1803 (already noted expired in the 0032 run). The 0032 run's "five 1857 units reaped expired 23:33" and this pass's reaping cover the same five 1857 units (events, passes, secrets, treasures, trucks) - the branch copies were reaped once per branch; the expiry itself is one fact.
 - The same pass executed the stale inbox copy of zombie-invasion unit 022 (see the zombie-invasion 0114 fold) - its completion rides on PR #681 (records/2026-11-11), unmerged at 01:00, so the branch queue still showed 022 in inbox while 023 was already done. The duplicate execution is a branch-sync artifact; the live pool is consistent (022 done, 023 done, 024 enqueued, 025 enqueued). The 0032 run's follow-up question - whether the 22:03/22:30/22:57 units executed - is now settled in part: harvest-2203 EXECUTED (0126 unit, panel Collects 12,195,086); the rest of the 22:03 batch (arms-race, donations, radar) and the 2230 units (duel-score, gifts, help, mail) and the 2257 units (events, passes) remain in inbox, unexecuted at this run's close. passes-2257 - the Monthly Pass Claim Reward - is still pending.
 - vip-2026-11-11-1800 and daily-missions-2026-11-11-1800 remain unreaped in inbox at the records tip - neither executed nor expired on the branch yet.
+- No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
+
+## Ticker-0134/0204, 2026-11-12 01:50-02:07 - control channel lock stops both passes, help-2230 failed, four 2203 units expired
+
+- The ticker-0134 pass (radar 0151, commit 889dda54f) and the ticker-0204 pass (help 0207, commit b23df0eba) both met the control channel outcome_unknown lock filed as Issue #689 and stopped per that issue: radar-2026-11-11-2203 FAILED (no radar work done, nothing claimed) and help-2026-11-11-2230 FAILED (0 helps, nothing claimed). Both are the same lock (second and third occurrences of the night, sessions cc-695-697 and cc-698-699, same window 676414, same error text, read-only inspection live throughout). The 0204 pass reaped four 2203 units as expired at about 02:05 PT - status expired, "window passed before execution": arms-race-2026-11-11-2203, donations-2026-11-11-2203, survivors-2026-11-11-2203, training-2026-11-11-2203. None of the four executed: no Armed Truck location attempt in the arms-race unit, so retro action A-2026-11-11-05 (Issue #566) verification is STILL UNMET - the thirteenth deferral recorded by the 0132 run stands as the last word.
+- The 0032 run's follow-up question - whether the 22:03/22:30/22:57 units executed - is now settled further: 22:03 - harvest EXECUTED (0126), arms-race/donations/survivors/training EXPIRED unexecuted, radar FAILED (0151); 22:30 - help FAILED (0207), duel-score/gifts/mail still in inbox, unexecuted; 22:57 - events/passes still in inbox, unexecuted. passes-2026-11-11-2257 - the Monthly Pass Claim Reward - is still pending. duel-score-2026-11-11-2230 still in inbox: the day-4 duel total is still unread (contrast Issue #673, day-3 total unknown).
+- New 0230 units are already staged in inbox (duel-score, gifts, help, mail, harvest, radar, arms-race, donations, events, passes) for the next ticks; the zombie-invasion unit 024 stays queued, blocked by the same lock in both passes. vip-2026-11-11-1800 and daily-missions-2026-11-11-1800 remain unreaped in inbox at the records tip - neither executed nor expired on the branch yet.
 - No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
