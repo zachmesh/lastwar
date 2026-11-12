@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-12T05:32:17Z
+modified: 2026-11-12T08:32:17Z
 level: L1
-version: 1.28.0
+version: 1.29.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -578,4 +578,11 @@ claims cited below were read in this pass's passes unit
 - Whole types went dark: events, train and star-ceremony units all expired - nothing ran in any of the three types - and no daily-missions unit of Nov 11 ran at all. All 3 duel-score units expired, so no duel total was read at all and the day-3 total is unknown (Issue #673, records class; see alliance-duel 1.43.0). The five 1457-slot units (trucks, treasures, secrets, passes, events) sit past-expiry in the branch inbox, unreaped at the retro snapshot (21:16). The failed unit is train-2026-11-10-2230 (finished 02:06 PST); the skipped unit is arms-race-2026-11-11-0203 (Tech Research, 0 of 30,000, OD-20261031-01 pattern).
 - Filed by the retro: Issue #671 (records class) - Nov 11 expiry pile-up, 39 expired, events/train/star-ceremony all dark, no daily-missions unit ran. Target: expired under 20 per day and no type fully expired. Verification: a Nov 12 day with expired under 20 and no type fully expired. Recheck: 2026-11-12 retro.
 - Account power flat at 149,218,973 all day, read live 51 times across Nov 11 records, from 19:16 PST Nov 10 to 19:44 PST Nov 11 - up 431,395 on the Nov 10 close 148,787,578, with no named cause for the rise, and no new step-down occurred.
+- No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
+
+## 18:00-18:57 batch reaping, 2026-11-11 23:33 - five 1857 units expired, passes-2257 still pending
+
+- The 18:00-18:57 batch outcome is now settled at queue-file level (commit 11ac21dce on records/2026-11-11, ticker-2333 pass): the five 1857 units (events, passes, secrets, treasures, trucks) were reaped as expired at 23:33 PT - status expired, "window passed before execution" - after the 2026-11-11 retro snapshot (21:16), which had left them sitting past-expiry in the inbox unreaped. The remaining 1803/1830 units resolve as: executed - harvest-1803 partial, radar-1803 done, survivors-1803 partial, training-1803 partial; expired - mail-1830, donations-1803, train-1830, duel-score-1830, gifts-1830, help-1830, star-ceremony-1830; skipped-needs-owner - arms-race-1803. This confirms the retro's 39-expired tally (Issue #671) at unit level and closes the open thread the 2032 run left.
+- passes-1857's expiry means the Monthly Pass Claim Reward was NOT claimed by that unit - the claim still rests on passes-2026-11-11-2257, still in inbox at the records tip, unexecuted. The 22:03/22:30/22:57 units (arms-race, donations, harvest, radar, survivors, training, duel-score, events, gifts, help, mail, passes, secrets, star-ceremony, train, treasures, trucks, scout) are still in inbox - their outcomes fall to later runs, in the new trade day's records.
+- vip-2026-11-11-1800 and daily-missions-2026-11-11-1800 are still unreaped in inbox at the records tip - neither executed nor expired on the branch yet.
 - No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
