@@ -1315,3 +1315,76 @@ of 2026-10-28.
 ## 10:30 to about 10:36 - PR integration 1030 run, NON-batch (checker: outside every batch window)
 
 - Integrator pass pr-integration-2026-11-12-1030. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 28 minutes away; merge-aware due --merges exit 1, same verdict, 27 minutes away). Records PR 700 (2026-11-12, head df8668ed18, 59 records-only commits) re-verified CLEAN (merge-tree exit 0, merged tree 2589c4c9); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main cc58a605c (merge-tree exit 0, merged tree a1802181; head unchanged 4f41cdd6a), no new comment (nothing changed since the 1015 re-verification). No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/1030-run.md.
+## 10:23 to about 10:40 - Ticker pass ticker-1023, sync-only (seventeenth consecutive blocked tick)
+
+- Own PRs first: records PR 700 (records/2026-11-12) is OPEN,
+  MERGEABLE/CLEAN, 0 comments, awaits the 11:00 batch - no new
+  PR is owed by this pass, no question addressed to this job.
+  Tools PR 425 is owned by lastwar-tool-developer, still
+  owner-gated, not this job's.
+- Branch handling: the main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched. This pass worked from a
+  fresh worktree ~/workspace/lastwar-wt-1023-ticker on
+  records/2026-11-12 at the live remote tip 62b1ff0a09 (the
+  stale ticker-0904 worktree, clean and finished, was removed
+  first). A fresh main worktree
+  ~/workspace/lastwar-worktrees/ticker-1023-main was created
+  through _tools_/pass_worktree.py (R10/R11) at main cc58a605c4.
+- Tool currency (R10): the records-branch copies of
+  tools/queue.py and _tools_/queue.py (both md5 8353ca15, 4571
+  lines) are STALE against main's _tools_/queue.py (md5
+  60d667cc, 4898 lines, PR #704 live-pool handout) - the
+  records branch predates the #704 merge. The pass's first
+  sync/next/token-acquire ran on that stale copy; every
+  decision was then re-verified with the current tool from the
+  fresh main worktree, and the stale-tool outputs were
+  confirmed, not trusted blind (see below). The main tree's
+  own tools/queue.py is also stale (0 control-lock matches) -
+  it must not be used for decisions (Issue #694).
+- Sync: stale-tool run reaped 0, expired 6, produced
+  research-2026-11-12-1003 and building-queues-2026-11-12-1003
+  (due 25, already queued 22), and reaped the 027 completion
+  marker. Current-tool re-run: reaped 0, expired 6, produced 0
+  (due 25, already queued 24 - research and building-queues
+  now queued), and reconciled two stale inbox copies against
+  the branch done pool - scout-scout-2026-11-10-008 and
+  zombie-invasion-zombie-2026-11-10-026, already done on
+  records/2026-11-12, dropped instead of re-executed. Live
+  inbox 64 after the stale sync, 62 after the current-tool
+  reconciliation; claimed 0; done 1705 (snapshot count).
+  Zombie seeding: no seeding needed - successor
+  zombie-invasion-zombie-2026-11-10-028 already sits in the
+  live inbox (chain zombie-2026-11-10, done 26, pending 1).
+- New tooling gap filed as Issue #705 (tooling): sync
+  reap/expire still acts on the worktree snapshot, not the
+  live pool. Both sync runs reported expired 6, but the 0603
+  set (arms-race, donations, harvest, radar, survivors,
+  training - expires_at 2026-11-12T18:03:00Z) was moved
+  inbox-to-done only inside the snapshots; verified 18:32Z
+  the live inbox still holds all 0603 files. The reconcile
+  and production paths already resolve live, so expire is the
+  remaining snapshot-only path after PR #704 (Refs #694) and
+  live_pool_root enqueue (Refs #598). No execution was
+  affected by this pass.
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 2026-11-12T17:55:18Z by
+  ticker-0941 zombie unit 027) still stands, about 35 minutes
+  old, under the 4-hour stale bound - the current tool's next
+  returned empty by design, reading the live pool, so no unit
+  was burned and no probe was attempted. Seventeenth
+  consecutive tick blocked by the lock (0134, 0204, 0234,
+  0304, 0334, 0404, 0504, 0534, 0604, 0634, 0704, 0737, 0804,
+  0834, 0904, 0941, this pass). The blocker reaps after
+  21:55:18Z (13:55 PT); the next tick after that probes with
+  one input. Token acquired and released. No new evidence for
+  Issue #689 beyond the continued stand - no comment posted
+  there. Occurrences still EIGHT.
+- Carry-forward, no action by this job: owner-decision Issue
+  #514 (Transfer Surge warzone transfer) stated its deadline
+  as 2026-11-12 18:00 UTC (10:00 PT), which passed during
+  this window with no owner decision recorded; the 2026-11-09
+  live-read comment notes the in-game countdown implies the
+  application phase may run to about 2026-11-13 02:00 UTC
+  (about 18:00 PT today), 8 hours later than stated. This job
+  takes no decision on it.
