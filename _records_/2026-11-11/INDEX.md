@@ -3044,3 +3044,16 @@ of 2026-10-28.
   eff1ae24), no new comment. No merges; no sync-back
   owed; no Slack sync (silent run). Status: done.
   Full detail in pr-integration/1830-run.md.
+
+## 18:22 to about 18:34 - Ticker pass ticker-1822, zombie-invasion unit 018 partial
+
+- Zombie unit zombie-invasion-zombie-2026-11-10-018 partial:
+  3 Lv.10 kills sequential (X:502 Y:406, X:497 Y:396,
+  X:505 Y:394), squads_parallel 1 - short round trips again,
+  each squad home before the next dispatch landed; 3 LOOT rows
+  claimed for 804,000 coins, coin 136.7M to 137.5M HUD,
+  stamina 88 to 59. Glacieradon live 1d 23:33:36, next wave
+  about 18:54. Store not visited; medals_after 5100 derived,
+  SSR chest re-check still open. Cleared false, successor 019
+  enqueued to start now. Full detail in
+  zombie-invasion/1834-queue-run.md.
