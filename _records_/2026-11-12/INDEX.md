@@ -1176,3 +1176,67 @@ of 2026-10-28.
 ## 09:15 to about 09:25 - PR integration 0915 run, NON-batch (checker: outside every batch window)
 
 - Integrator pass pr-integration-2026-11-12-0915. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 103 minutes away; merge-aware due --merges exit 1, same verdict, 99 minutes away). Records PR 700 (2026-11-12, head 615f33f32, 38 records-only commits) re-verified CLEAN at the unchanged head (merge-tree exit 0, merged tree 928033ba); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main 33cf659cd7 (merge-tree exit 0, merged tree 01dc976f, identical to the 0845/0900 probes; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/0915-run.md.
+
+## 09:04 to about 09:35 - Ticker pass ticker-0904, sync-only (fifteenth consecutive blocked tick)
+
+- Own PRs first: records PR 700 (records/2026-11-12) is OPEN,
+  MERGEABLE/CLEAN, 0 comments, awaits the 11:00 batch - no new
+  PR is owed by this pass, no question addressed to this job.
+  Tools PR 425 is owned by lastwar-tool-developer, still
+  owner-gated, not this job's.
+- Branch handling: the main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched. This pass worked from a
+  fresh worktree ~/workspace/lastwar-wt-0904-ticker-1112 on
+  records/2026-11-12. The stale ticker-0704 worktree was found
+  holding a diverged local branch (unrelated histories vs the
+  remote tip); its content was verified preserved on the remote
+  (diff purely additive, 9 files, no deletions) before the
+  worktree was removed and this one created, then reset hard to
+  the live remote tip 3539899e21. A fresh main worktree
+  ~/workspace/lastwar-worktrees/ticker-0904-main was created
+  through _tools_/pass_worktree.py (R10) at main 33cf659cd7.
+- Tool currency (R10): the records-branch copy of
+  _tools_/queue.py predates main's by 264 lines (no R10/R11
+  guards), so the pass's first sync ran on that stale copy -
+  output identical to the current-tool re-run (reaped 0,
+  expired 0, due 25, produced 0, already queued 24) and no
+  decision was taken from it; every decision command after
+  that ran on the current tool from the fresh main worktree.
+  The worktree is not under /tmp (R11 complied).
+- Sync (current tool): reaped 0, expired 0, produced 0 (due
+  25, already queued). No completion markers reaped.
+- Zombie seeding, corrected in-pass: the seeding check was
+  first run against the records-branch snapshot pool, which
+  holds no zombie unit, and enqueue minted
+  zombie-invasion-zombie-2026-11-10-028 into the live pool -
+  but 027 already sits in the live inbox (enqueued by
+  ticker-0704 at 15:29:17Z), so the seeding rule's precondition
+  (no zombie unit in inbox or claimed) was false. 028 was
+  removed minutes later, never claimed, while the blocker
+  stands; the live inbox is back to 82 units with 027 intact
+  as the chain successor. Lesson recorded: seeding checks run
+  against the live pool, where production lands by design
+  (issue #598 - enqueue resolves through live_pool_root);
+  the records-branch snapshot never holds live inbox units,
+  and blockers/ plus completed/ are live-only by _queue_/
+  .gitignore, never records. No execution was affected.
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 15:47:00Z by ticker-0737
+  scout unit 008) still stands, about 1 hour 40 minutes old,
+  under the 4-hour stale bound - next returned empty by
+  design, so no unit was burned and no probe was attempted.
+  Fifteenth consecutive tick blocked by the lock (0134, 0204,
+  0234, 0304, 0334, 0404, 0504, 0534, 0604, 0634, 0704, 0737,
+  0804, 0834, this pass). The blocker reaps after 19:47Z
+  (11:47 PT); the next tick then probes with one input.
+  Token acquired and released. No new evidence for Issue #689
+  beyond the continued stand - no comment posted there.
+- Issue #694 commented: live verification that the current
+  tool's next cannot hand out during the pause (shared
+  blocker-home read), the R10 stale-copy note, and the
+  pool-visibility reading that next lists candidates from the
+  given root inbox while production, token, blockers and
+  markers resolve to the shared live pool.
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
