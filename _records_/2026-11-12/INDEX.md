@@ -28,3 +28,17 @@ of 2026-10-28.
   was created from main 5d2b9d7e by this pass (INDEX and run
   record as its first commits). No Slack sync. Status: done.
   Full detail in pr-integration/0000-run.md.
+
+## 00:15 to about 00:25 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0015. NON-batch
+  pass per the checker (plain and merge-aware both not due,
+  outside every batch window, next batch 03:00): no merges.
+  Opened records PR 685 for records/2026-11-12 (branch
+  carried 2 commits beyond main, no PR). Records PR 681
+  re-verified CLEAN against main 5d2b9d7e, awaiting the
+  03:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01 open), re-verified CLEAN against main
+  5d2b9d7e, no new comment (PR unchanged since the 2345
+  review). No Slack sync. Status: done. Full detail in
+  pr-integration/0015-run.md.
