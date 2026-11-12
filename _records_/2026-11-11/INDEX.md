@@ -3339,3 +3339,35 @@ of 2026-10-28.
   resource-collection/2048-queue-run.md.
 - Integrator pass lastwar-pr-integrator-2026-11-11-2045. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). Merged knowledge PR 669 (squash 9e2b9f59) and tools PR 670 (squash e60709a8), both arrived mid-pass and reviewed clean. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 6649b0ce; merged tree keeps main _tools_ verbatim), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main e60709a8 (merge-tree 4de5f181), one re-verification comment. Local main fast-forwarded to e60709a8. Slack sync sent. Status: done. Full detail in pr-integration/2045-run.md.
 - Integrator pass lastwar-pr-integrator-2026-11-11-2100. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). No merges. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 7726fe05), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main e60709a8 (merge-tree 4de5f181), no new comment (nothing changed since the 2045 verification). No sync-back owed; no Slack sync. Status: done. Full detail in pr-integration/2100-run.md.
+
+## 21:05 to 21:12 - Ticker pass ticker-2105, radar unit 1803 done (stack)
+
+- Radar unit radar-2026-11-11-1803 done, duel day 4 stack
+  posture (live duel.py read governs over the unit's stale
+  "duel day 3 - radar release" window text). Entry recovered
+  by the changed method per rule R2: dish re-grounded fresh
+  at norm (55,702) and tapped with an exact-pointer tap
+  (snap_to_control false) - radar opened first try after the
+  1805 unit's two stale-coordinate failures. 5 tasks Quick
+  Executed (stamina 60 to 11); 7 rewards stacked unclaimed
+  (5 + 2 extra, the 0141 pattern); Claim All NOT tapped.
+  Bar still Claim All only after a 60s wait - the 2026-10-31
+  single-offer trap, 7 pending, named for the next unit.
+  Stored stayed 1/40 (counter does not track executions;
+  bar offer is the authority). Pins inventoried untapped
+  (6, incl. the small round brown pin from the 0505 unit).
+  Points 427 unchanged. Full detail in
+  radar-tasks/2105-queue-run.md.
+
+## 21:15 to 21:24 - Ticker pass ticker-2105, survivors unit 1803 partial
+
+- Survivors unit survivors-2026-11-11-1803 partial: one
+  "?" survivor at the Zombies gate (bubble norm (121,625),
+  figure (110,688)); three tap variants - figure tap,
+  bubble tap, long-press - all no-change, no recruit card
+  or dialog ever appeared; the bubble and figure then
+  vanished unverified, so 0 recruits claimed per rule R1.
+  A camera pan found no further survivors along the gate.
+  Quick Dispatch not run (no verified recruit). Tracker
+  untouched; the next tick re-produces the regular. Full
+  detail in survivor-intake/2115-queue-run.md.
