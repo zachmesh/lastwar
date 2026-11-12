@@ -254,7 +254,6 @@ of 2026-10-28.
   zombie-invasion unit 024 stays in inbox for the next tick.
   Duel day 4, Train Heroes, radar posture stack (live read).
   Tracker untouched. Full detail in radar-tasks/0151-queue-run.md.
-
 ## 02:00 to about 02:04 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-12-0200. NON-batch
@@ -267,3 +266,17 @@ of 2026-10-28.
   comment (unchanged since the 0115 verification). No arrivals
   during the pass; sweep clean. Status: done. Full detail in
   pr-integration/0200-run.md.
+
+## 02:06 to about 02:07 - Ticker pass ticker-0204, help unit failed (device input blocked)
+
+- Help unit help-2026-11-11-2230 (ticker-0204, failed): the
+  Mac computer-control channel refused every game input with
+  outcome_unknown ("a new local user submission is required"),
+  3 attempts across sessions cc-698 and cc-699, so no help
+  work was done and nothing was claimed. Read-only inspection
+  stayed live (Last War window 676414 on the base screen, no
+  dialog). Third occurrence of the lock filed as Issue #689
+  (after the 01:34 scout and 01:50 radar units); per that issue
+  the pass stopped here, zombie-invasion unit 024 stays in
+  inbox for the next tick. Tracker untouched. Full detail in
+  alliance-help/0207-queue-run.md.
