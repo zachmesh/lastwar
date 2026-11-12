@@ -804,3 +804,22 @@ of 2026-10-28.
 ## 05:32 to about 06:15 - Knowledge-organizer pass
 
 - Knowledge-organizer pass knowledge-organization-2026-11-12-0532. Worked from the 0432 watermark: own PR #695 MERGED 04:48 PT with 0 comments, 0 reviews, no feedback pending. Folded the ticker-0504 scout 007 failure (sixth #689 occurrence, lock persists 3.5h with no self-clear, R9 pause did not hold - first realized burn of the #694 stale-tool hazard) and the queue-planning 0440 run (zero-sweep-1630 staged at stale [90,30] geometry) into 4 profiles (PR #697, commit be539dd8, OPEN + MERGEABLE + CLEAN at run end): perception-scout 1.69.0, zombie-invasion 1.48.0, daily-activities 1.34.0, radar-tasks 1.85.0. Contradictions resolved: 1 (the 0432 "R9 pause VERIFIED" claim is superseded by the 0504 counterexample; annotated in place in all four profiles). Issue #682 verified landed as 9f6e149bb on records/2026-11-11 (rides merged PR #681) - closed from this job's side. Issues commented: #595 (seventh Oil Well read), #694 (0504 first burn). No new issue filed. VPS disk cleaned 98%/267M to 88%/1.2G (>6h bundles 96M + 13 stale -rec worktrees removed). Ticker-0534 record 2e6d58af and queue-planning 0540 record 0c985d4f landed during the run and belong to the next run. Main did not move during the run (tip 2f46eea9a). Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0532-run.md.
+
+## 06:15 to about 06:27 - PR integration 0615 run, NON-batch (checker not due, next batch 07:00)
+
+- Integrator pass pr-integration-2026-11-12-0615. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00): knowledge PR 697 MERGED
+  (squash 84d41b4e, 06:20:15 PT) - fold of the ticker-0504
+  scout 007 lock failure (sixth #689 occurrence, R9 pause
+  did not hold) + queue-planning 0440 into 4 profiles;
+  local main fast-forwarded 2f46eea9a -> 84d41b4e via
+  bundle. Records PR 685 (2026-11-12) re-verified CLEAN
+  twice (heads c5ce638b, then 1b0daf07 after the KO 0532
+  run record landed mid-pass), verification comments
+  posted, awaits the 07:00 batch. Tools PR 425 still
+  owner-gated (OD-20261108-01 open), re-verified CLEAN
+  against new main 84d41b4e (merge-tree 1dbad377), no new
+  comment. Slack sync posted to the owner Trirvia DM.
+  No arrivals during the pass; sweep clean. Status: done.
+  Full detail in pr-integration/0615-run.md.
