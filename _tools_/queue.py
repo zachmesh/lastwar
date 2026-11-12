@@ -10,6 +10,13 @@ reliably without scraping prose. Units move inbox -> claimed -> done
 by atomic rename, claims carry a lease, an executor batch is bounded
 to 15 minutes, and exactly one executor holds the device token.
 
+The decision commands (enqueue, sync, plan, sweep, next) run only
+from a copy identical to main's _tools_/queue.py (issue #694): a
+stale copy refuses, exit 1, so a pass that runs the tool from the
+main working tree fails loudly instead of deciding on old
+behaviour. Set LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 only for isolated
+/tmp fixture validation of a new tool version.
+
 This tool manages files only. It never touches the game or the device;
 executors do the playing and call this tool around their work.
 
@@ -1846,6 +1853,52 @@ def records_branch_done_units(root, branch):
     return done, None
 
 
+# Main fetch, shared (issues #606, #694): both the roster-freshness
+# check and the tool-currency guard read main without touching a
+# checked-out branch or the working tree. _fetch_main caches one
+# fetch per process per git directory, however many checks the run
+# performs.
+_MAIN_FETCH_CACHE = {"attempted": False, "ok": False, "warning": None,
+                     "dir": None}
+
+
+def _fetch_main(git_dir):
+    """Fetch main into the private ref, or (False, reason).
+
+    Returns (True, None) on success, (False, "no-remote") when
+    the repo has no usable remote, (False, "fetch-failed")
+    otherwise. The ref is ROSTER_FRESH_REF, the same private ref
+    the roster check already used, so a second fetch in one
+    process is a no-op fast-forward.
+    """
+    if (_MAIN_FETCH_CACHE["attempted"]
+            and _MAIN_FETCH_CACHE["dir"] == git_dir):
+        return _MAIN_FETCH_CACHE["ok"], _MAIN_FETCH_CACHE["warning"]
+    _MAIN_FETCH_CACHE["attempted"] = True
+    _MAIN_FETCH_CACHE["dir"] = git_dir
+    remote = _git_remote(git_dir)
+    if remote is None:
+        _MAIN_FETCH_CACHE["ok"] = False
+        _MAIN_FETCH_CACHE["warning"] = "no-remote"
+        return False, "no-remote"
+    try:
+        fetch = subprocess.run(
+            ["git", "-C", git_dir, "fetch", "--depth", "1", remote,
+             "+main:%s" % ROSTER_FRESH_REF],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        _MAIN_FETCH_CACHE["ok"] = False
+        _MAIN_FETCH_CACHE["warning"] = "fetch-failed"
+        return False, "fetch-failed"
+    if fetch.returncode != 0:
+        _MAIN_FETCH_CACHE["ok"] = False
+        _MAIN_FETCH_CACHE["warning"] = "fetch-failed"
+        return False, "fetch-failed"
+    _MAIN_FETCH_CACHE["ok"] = True
+    _MAIN_FETCH_CACHE["warning"] = None
+    return True, None
+
+
 def _main_roster_offsets(root):
     """slots_before_reset_minutes per regular on the main tip.
 
@@ -1867,23 +1920,14 @@ def _main_roster_offsets(root):
         return (_MAIN_ROSTER_OFFSETS_CACHE["offsets"],
                 _MAIN_ROSTER_OFFSETS_CACHE["warning"])
     _MAIN_ROSTER_OFFSETS_CACHE["attempted"] = True
-    remote = _git_remote(root)
-    if remote is None:
-        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
-            "no git remote, roster-freshness check skipped")
-        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
-    try:
-        fetch = subprocess.run(
-            ["git", "-C", root, "fetch", "--depth", "1", remote,
-             "+main:%s" % ROSTER_FRESH_REF],
-            capture_output=True, text=True, timeout=60)
-    except (OSError, subprocess.SubprocessError):
-        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
-            "fetch of main failed, roster-freshness check skipped")
-        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
-    if fetch.returncode != 0:
-        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
-            "fetch of main failed, roster-freshness check skipped")
+    fetched, fetch_reason = _fetch_main(root)
+    if not fetched:
+        if fetch_reason == "no-remote":
+            _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+                "no git remote, roster-freshness check skipped")
+        else:
+            _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+                "fetch of main failed, roster-freshness check skipped")
         return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
     try:
         show = subprocess.run(
@@ -1964,6 +2008,108 @@ def _roster_geometry_refusal(root, item):
           file=sys.stderr)
     return {"regular": item.get("id"), "local_offsets": local,
             "main_offsets": main}
+
+
+# ---------------------------------------------------------------------
+# Tool-currency guard (issue #694)
+# ---------------------------------------------------------------------
+
+TOOL_ALLOW_STALE_ENV = "LASTWAR_QUEUE_ALLOW_STALE_TOOL"
+TOOL_GUARDED_COMMANDS = ("enqueue", "sync", "plan", "sweep", "next")
+
+
+def _tool_dir():
+    """Directory holding this copy of queue.py, symlinks resolved."""
+    return os.path.dirname(os.path.realpath(__file__))
+
+
+def main_tool_source():
+    """This tool as main carries it, or (None, warning).
+
+    Fetches main into the private ref (shared with the roster
+    check) and reads _tools_/queue.py at that ref. Returns
+    (bytes, None) on success, or (None, warning) when main
+    cannot be read: no git remote, fetch failed, or no tool at
+    the ref. A caller that cannot read main warns and continues,
+    exactly like the branch reconcile: an unreadable main never
+    blocks the tick, but a readable main whose tool differs from
+    this copy is positive proof the running copy is stale.
+    """
+    fetched, reason = _fetch_main(_tool_dir())
+    if not fetched:
+        if reason == "no-remote":
+            return None, "no git remote, tool-currency check skipped"
+        return None, "fetch of main failed, tool-currency check skipped"
+    try:
+        show = subprocess.run(
+            ["git", "-C", _tool_dir(), "show",
+             "%s:_tools_/queue.py" % ROSTER_FRESH_REF],
+            capture_output=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return None, ("read of main tool failed, tool-currency check "
+                      "skipped")
+    if show.returncode != 0:
+        return None, ("read of main tool failed, tool-currency check "
+                      "skipped")
+    return show.stdout, None
+
+
+def tool_is_current():
+    """(True, None) when this copy matches main's queue.py.
+
+    Returns (True, None) when the running file is byte-identical
+    to main's copy, (False, None) when main's copy differs, and
+    (None, warning) when main cannot be read. The byte compare
+    cannot tell ahead from behind: any difference is stale for a
+    live pass, which must run main's tool - isolated fixture
+    validation of a new tool version sets
+    LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 instead.
+    """
+    try:
+        with open(os.path.realpath(__file__), "rb") as handle:
+            local = handle.read()
+    except OSError as exc:
+        return None, "cannot read this copy of queue.py (%s)" % exc
+    main_source, warning = main_tool_source()
+    if main_source is None:
+        return None, warning
+    return local == main_source, None
+
+
+def refuse_if_tool_stale(cmd):
+    """Refusal exit code when this copy is stale for a decision.
+
+    Issue #694: the ticker-0334 pass ran queue.py from the main
+    working tree - a checkout on another job's branch predating
+    PR #692 - and next handed out a unit during the R9
+    control-lock pause the stale copy could not see. The
+    decision commands (enqueue, sync, plan, sweep, next) refuse
+    - exit 1, nothing staged or handed out - when this copy
+    differs from main's _tools_/queue.py, so a stale pass fails
+    loudly instead of deciding on old behaviour. An unreadable
+    main warns and lets the command proceed, like the #606
+    roster check. Claim, complete and the token commands stay
+    unguarded: a pass that already decided must be able to
+    finish even if main advances mid-pass. Returns 1 on refusal,
+    else None.
+    """
+    if os.environ.get(TOOL_ALLOW_STALE_ENV) == "1":
+        print(f"warning: {TOOL_ALLOW_STALE_ENV}=1, tool-currency "
+              f"check bypassed for isolated validation (issue #694)",
+              file=sys.stderr)
+        return None
+    current, warning = tool_is_current()
+    if current is None:
+        print(f"warning: {warning} (issue #694)", file=sys.stderr)
+        return None
+    if current:
+        return None
+    print(f"{cmd} refused: this copy of queue.py differs from "
+          f"main's _tools_/queue.py - run the tool from a fresh "
+          f"main checkout (a pass worktree, never the main working "
+          f"tree) so the pass decides on current behaviour "
+          f"(issue #694)", file=sys.stderr)
+    return 1
 
 
 def drop_branch_done_duplicates(root, done_ids, branch):
@@ -4564,6 +4710,10 @@ def main(argv=None):
 
     args = parser.parse_args(argv)
     args.root = resolve_pool_root(os.path.abspath(args.root))
+    if args.cmd in TOOL_GUARDED_COMMANDS:
+        refusal = refuse_if_tool_stale(args.cmd)
+        if refusal is not None:
+            return refusal
     return args.fn(args)
 
 

@@ -481,6 +481,23 @@ one to the audit cause it answers.
   to 2026-10-27 lock cleared only when the owner submitted
   locally - so the probe cadence is a bound on wasted attempts,
   not a prediction that the lock will clear.
+- **R10 - run the tool from a fresh main checkout (issue #694).**
+  A pass runs `queue.py` only from a fresh main checkout - a pass
+  worktree created through `_tools_/pass_worktree.py`, never the
+  main working tree, which sits on another job's branch and can
+  predate main by days. The tool enforces it: `next`, `sync`,
+  `plan`, `sweep` and `enqueue` refuse, exit 1, when this copy
+  of `queue.py` differs from main's `_tools_/queue.py`, so a
+  stale pass fails loudly instead of deciding on old behaviour -
+  the ticker-0334 pass ran the main-tree copy predating PR #692
+  and `next` handed out a unit during the R9 control-lock pause
+  the stale copy could not see. An unreadable main warns and
+  lets the command proceed, like the #606 roster check.
+  `LASTWAR_QUEUE_ALLOW_STALE_TOOL=1` is test-only, for isolated
+  /tmp fixture validation of a new tool version. `claim`,
+  `complete` and the token commands stay unguarded, so a pass
+  that already decided can finish even if main advances
+  mid-pass.
 
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
@@ -818,6 +835,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.18.0, 2026-11-12 - section 11 gains rule R10 (tool-currency guard, issue #694): the decision commands refuse when this copy of queue.py differs from main's _tools_/queue.py, so a pass can no longer decide from a stale main-tree checkout; the worktree-tool rule is now enforced by the tool, not just documented.
 - 0.17.0, 2026-11-12 - section 11 gains rule R9 (control-lock pause, issue #689): a unit that meets the outcome_unknown control lock closes failed naming blocker_overlay=control-lock, queue.py records a pool-level blocker that pauses next until it ages out after 4 hours or a closing that sent input lifts it, so a locked night burns no failed units.
 - 0.16.0, 2026-11-07 - the four 19:00 mentions flagged as follow-up on #147 in 0.15.0 are rewritten to the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer): VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3). The dated 19:00 mentions in sections 1 and 9 stay: both describe the PDT era, when the reset was 19:00 local.
 - 0.14.0, 2026-11-01 - section 14 gains a cross-reference to
