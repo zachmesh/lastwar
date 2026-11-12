@@ -638,3 +638,18 @@ of 2026-10-28.
 ## 04:40 to about 04:51 - Queue planning 0440 run, 1 unit staged (zero-sweep 1630, stale geometry), diff 0 counts, status done
 
 - Planner pass queue-planning-2026-11-12-0440. Plan staged 1 unit (zero-sweep-2026-11-12-1630, 16:30 local slot, chain pre-reset-sweep-2026-11-12), 74 already present, 1 skipped closed (zero-sweep-2026-11-11-1730), 0 reaped, 0 expired. The 1630 unit was staged at the live roster's stale [90,30] geometry (main's roster is [120,60] since #614; gate PR #683 merged but absent from the live tree) - the 17:00 run's pair check must verify by status (#610). Pre-reset sweep production skipped (04:00 hour run); last night's pair closed both partial (1630 1/23, 1730 5/23). Scout diff on the same 6-pass observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no new issues. Pool inbox 79, claimed 0, done 1652. Status: done. Full detail in queue-planning/0440-run.md.
+
+## 05:00 to about 05:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0500. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00): no merges. Records PR 685
+  (2026-11-12, head 3f6d579b6) re-verified CLEAN against
+  unchanged main 2f46eea9a (merge-tree 416b0136),
+  verification comment posted, awaits the 07:00 batch.
+  Tools PR 425 still owner-gated (OD-20261108-01 open),
+  re-verified CLEAN against unchanged main 2f46eea9a
+  (merge-tree f366c8f1, identical to the 0445
+  verification), no new comment. No Slack sync. No
+  arrivals during the pass; sweep clean. Status: done.
+  Full detail in pr-integration/0500-run.md.
