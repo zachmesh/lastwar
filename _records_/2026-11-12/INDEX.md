@@ -1594,3 +1594,7 @@ of 2026-10-28.
   count twentieth, not nineteenth. New evidence commented on
   Issue #689 (device now fully offline; correction comment
   posted) and on Issue #694 (handout repeated, same cause).
+
+## 12:14 to about 12:22 - PR integration 1214 run, NON-batch (checker: not due - outside every batch window; PR 711 already reviewed at 1145, PR 708 awaits 15:00 batch, PR 425 owner-gated)
+
+- Integrator pass pr-integration-2026-11-12-1214. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 15:00 PT, 164 minutes away). Records PR 708 (2026-11-12) re-verified CLEAN at new head eab654635 (merge-tree 31a05a5e), awaits the 15:00 batch; NOT merged. Knowledge PR 711 head unchanged e3c3dfd0 since the 1145 review comment, no repeat comment per the no-repeat rule; author to amend the superseded #705 lines at the 1232 run. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN vs unchanged main a858a0fca (merge-tree 08e8515a, identical to the 1145 probe), no new comment. No merges, no new records PR, no local sync needed. Silent run - no Slack sync, no chat report. Sweep clean. Status: done. Full detail in pr-integration/1214-run.md.
