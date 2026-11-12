@@ -965,3 +965,6 @@ of 2026-10-28.
   main 97f068d7, comment posted. Merge synced to the owner
   Trirvia DM. No arrivals during the pass; sweep clean.
   Status: done. Full detail in pr-integration/0645-run.md.
+## 06:32 to about 07:11 - Tool development 0632 run, done
+
+- Tool-developer pass tool-development-2026-11-12-0632. Issue #429 follow-up guard implemented as PR #699 (branch work/tmp-worktree-guard-429, commit 87b9a085): queue.py decision commands (`next`, `sync`, `plan`, `sweep`, `enqueue`) now refuse exit 1 from a checkout under the system temp directory (rule R11, changelog 0.19.0); the 2026-11-08 retro run lost /tmp/retro-1108-branch after PR #432 had merged, so the opt-in creation tool needed this enforcement layer. Own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 97f068d7, no action owed. All 60 open tooling issues checked; the rest implemented or accounted for. Validation py_compile clean, 17/17 fixture assertions in /tmp/f429; live pool untouched. Status: done. Full detail in tool-development/0632-run.md.
