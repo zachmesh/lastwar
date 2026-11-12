@@ -1556,3 +1556,41 @@ of 2026-10-28.
 ## 11:40 to about 12:14 - Queue planning 1140 run
 
 - Planner pass queue-planning-2026-11-12-1140. Plan staged 26 units for the 1403/1630/1803/2203/2257 slots (passes, secrets, treasures, trucks, events - 2257; research and building-queues - 1403/1803/2203; zero-sweep - 1600/1700 new [120,60] geometry; 12 pre-reset fix-ups - 1630), 73 already present, 0 skipped done-current, 0 skipped closed, 0 reaped, 17 expired. Tool-copy note: the plan ran from the delivery worktree because the live tree's Nov 3 roster is stale; the branch-tip roster matches main 22601972 (building-queues/research as read-only regulars, zero-sweep [120,60]). Pre-reset sweep production skipped (11:00 hour run); tonight's chain pre-reset-sweep-2026-11-12 now holds two seq-1 and two seq-2 units (1630/1730 old geometry + 1600/1700 new geometry) and the plan staged one stillborn zero-sweep-2026-11-11-1700 (expired at creation) - tooling Issue #712 filed for both. The stillborn unit and the 5 0657 units were expired live by the ticker-1204 sync at 20:00:43Z (first live-pool expiry under R14, PR #710 merged during this run as a858a0fca); this commit carries 25 staged inbox files and 18 expired done files (12 at 18:45Z, 6 at 20:00:43Z), all byte-identical to the live pool. Scout diff on the same 6-pass 2026-11-11 observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no candidate profiles. First planner record to land since the 0640 run (0740 unlanded, no 0840/0940/1040 record); first two commits (0f4fb012ea, ebc6b5160d) abandoned when the tip moved twice, rebuilt on 674887d19a. Pool inbox 108, claimed 0, done 1677 at 11:50. Status: done. Full detail in queue-planning/1140-run.md.
+## 12:00 to about 12:15 - Ticker pass ticker-1200, scout unit failed (Mac mini offline, stale-tool handout repeated)
+
+- Own PRs first: records PR 708 (2026-11-12) OPEN, no comments,
+  mergeable MERGEABLE (clean), awaits the 15:00 batch. Knowledge
+  PR 711 and tools PR 425 are owned by other jobs; no question
+  addressed to this job.
+- Sync (main-tree tool): reaped 0, expired 6, produced none (due
+  23, already queued 23). No zombie seeding needed (a
+  zombie-invasion unit already sits in inbox, chain
+  zombie-2026-11-10).
+- Scout unit 009 (ticker-1200, failed, chain scout-2026-11-10
+  seq 9): no game action was possible - the Mac mini is now fully
+  OFFLINE (computer.session fails node_offline, no wake-up path;
+  recovery channel repair/health time out after 25s; last_seen
+  09:52 PT). Four recovery attempts failed. This is an escalation
+  from the input-path lock: unlike units 006-008 and 027, this
+  pass could not even do a read-only observe. Tenth occurrence
+  burned on the lock, twentieth consecutive blocked tick (1130
+  was the nineteenth, sync-only), lock age about 10.5 hours
+  since unit 006. Successor 010 enqueued; the pass stopped
+  after this unit rather than cascading failed units. Full
+  detail in perception-scout/1200-queue-run.md.
+- Stale-tool handout repeated (Issue #694): the pass's sync,
+  token, next and claim ran through the main tree's tools/queue.py,
+  which handed out 009 although the blocker stood. Verified after
+  the failure with the current tool (PR #692 worktree): next there
+  returns empty while the blocker stands. The unit was completed
+  as failed with the current tool, which refreshed the blocker to
+  20:08:13Z (ages out 00:08Z, 16:08 PT). The main tree's
+  tools/queue.py and _tools_/queue.py are byte-identical and both
+  predate #692; until #692 merges, ticker passes must run
+  next/claim/complete through a #692 worktree tool with --root on
+  the live pool.
+- Counts corrected against the branch tip before delivery (the
+  main-tree day INDEX this pass first read ends at 0941): tick
+  count twentieth, not nineteenth. New evidence commented on
+  Issue #689 (device now fully offline; correction comment
+  posted) and on Issue #694 (handout repeated, same cause).
