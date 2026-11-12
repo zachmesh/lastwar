@@ -2858,3 +2858,16 @@ of 2026-10-28.
   comment (main unchanged since the 1645 pass). No Slack
   sync (no merge, no new escalation). Status: done.
   Full detail in pr-integration/1715-run.md.
+
+## 17:30 to about 17:36 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1730.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): no merges. Records PR 655
+  (head 481633ec, 34 commits beyond main) awaits the
+  19:00 batch, merge-tree CLEAN against main 5142cda5.
+  Tools PR 425 still owner-gated (OD-20261108-01 open),
+  head unchanged 721830b7f, merge-tree CLEAN, no new
+  comment (main unchanged since the 1645 pass). No Slack
+  sync (no merge, no new escalation). Status: done.
+  Full detail in pr-integration/1730-run.md.
