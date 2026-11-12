@@ -1011,6 +1011,9 @@ of 2026-10-28.
   by this job. No Slack sync. Status: no-op. Full detail in
   pr-catchall/0739-run.md.
 
+## 07:40 to about 07:47 - Queue planning 0740 run, 5 units staged, 0 expired, diff 0 counts, status done
+
+- Planner pass queue-planning-2026-11-12-0740. Plan staged 5 units for the 1857 slots (passes, secrets, treasures, trucks, events), 73 already present, 0 skipped done-current, 1 skipped closed (zero-sweep-2026-11-11-1730), 0 reaped, 0 expired. Tonight's sweep pair already in the pool, both in inbox at stale [90,30] geometry (1630 from the 0440 run, 1730 from the 0540 run), both expiring 18:00 local; pre-reset sweep production skipped (07:00 hour run). Scout diff on the same 6-pass observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no new issues. Pool inbox 82, claimed 0, done 1662. Status: done. Full detail in queue-planning/0740-run.md.
 ## 07:45 to about 07:55 - PR integration 0745 run, NON-batch (checker merge-aware: 685 already merged in this window)
 
 - Integrator pass pr-integration-2026-11-12-0745. NON-batch pass per the merge-aware checker (due --merges: not due, PR #685 already merged 07:08:53 in the 07:00 window; plain clock-only due said yes, 13 minutes left - the merge-aware verdict governs per the first-pass rule). Records PR 700 (2026-11-12, head 7551f6e0d, 13 records-only commits) awaits the 11:00 batch; merge-tree probe exit 0 (merged tree 05418b00), would merge cleanly. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main e7bd1176 (merge-tree exit 0, merged tree 9f69bb5e - identical to the 0700/0715/0733 verifications), re-verification comment posted. No merges, no new records PR (all 12 older records branches contained in main), no Slack sync (non-batch, feedback-only). Sweep clean. Status: done. Full detail in pr-integration/0745-run.md.
