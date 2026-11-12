@@ -862,3 +862,19 @@ of 2026-10-28.
   Status: done (sync-only pass). Files: this INDEX,
   _logs_/repo-actions/action-log.jsonl, _queue_ (6 expired
   units).
+
+## 06:30 to about 06:35 - PR integration 0630 run, NON-batch (checker not due, next batch 07:00)
+
+- Integrator pass pr-integration-2026-11-12-0630. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00): no knowledge or code PR open
+  beyond the owner-gated tools PR 425. Records PR 685
+  (2026-11-12) re-verified CLEAN at new head 8a888200
+  (ticker-0604 sync-only pass record landed since the 0615
+  verification at 1b0daf07), verification comment posted,
+  awaits the 07:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01 open), re-verified CLEAN against
+  unchanged main 84d41b4e (merge-tree 1dbad377, identical
+  to the 0615 verification), no new comment. No merges,
+  no arrivals during the pass; sweep clean. Status: done.
+  Full detail in pr-integration/0630-run.md.
