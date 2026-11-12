@@ -52,6 +52,23 @@ entry route carries the window-state precondition - windowed
 642x951 AND frontmost - before any tap; a pass that finds the
 window zoomed stops and escalates instead of tapping.
 
+Version 1.4.0 narrows that diagnosis (issue #648 follow-up, flagged
+by the knowledge-organizer 1432 run, PR #654): same-unit on-screen
+evidence from ticker-1332 (training 1340, arms-race 1347) shows
+canvas taps DO land in the Zoom to Fit fullscreen framing while
+the app is frontmost - the back arrow returned to base and Iron
+Mine Lv.27 selected - while narrow controls miss, which the
+ticker-1408 measurement (issue #652) explains as a tap offset of
+about (-23 x, +10 y) normalized in the 1920x1080 window, not
+blocked input. So ignored taps while the app is frontmost no
+longer diagnose ZOOMED_WINDOW_INPUT_BLOCKED: a single ignored
+narrow-control tap in that state is an offset miss, handled by
+tapcal compensation (#652) and the per-control variant rule
+(#646). The diagnosis now fires only when the app is not
+frontmost - the 1259 signature, where no remote step restores
+input. A zoomed-frontmost pass proceeds; its recommendation names
+the offset path when ignored taps are present.
+
 This tool touches no device and no game state. It only reads an
 evidence JSON file the worker assembles from its own device calls
 and prints the classification. The worker runs the probe calls;
@@ -113,7 +130,9 @@ Diagnoses:
                       capture stream works, but the window sits
                       in Zoom to Fit (1920x1080, not the
                       windowed 642x951) and the app is not
-                      frontmost, so the canvas takes no input
+                      frontmost, so the canvas takes no input;
+                      ignored taps while frontmost are an offset
+                      miss (#652), not this diagnosis
   HEALTHY             window on-screen, capture works
   UNKNOWN             evidence too thin to tell; probe steps are owed
 
@@ -131,7 +150,7 @@ import argparse
 import json
 import sys
 
-TOOL_VERSION = "1.3.0"
+TOOL_VERSION = "1.4.0"
 
 CAPTURE_ERROR = "Failed to start stream due to audio/video capture failure"
 
@@ -176,11 +195,16 @@ PROBE_CHECKLIST = [
     'LastWar: record on_screen and brought_to_front.',
     '6. Before any tap: the window-state precondition is windowed '
     '642x951 AND frontmost. If the window is zoomed (Zoom to Fit '
-    'checked) or the app is not frontmost, do not tap: record '
+    'checked) AND the app is not frontmost, do not tap: record '
     'zoom_to_fit_checked and app_active, and classify '
-    'ZOOMED_WINDOW_INPUT_BLOCKED instead of tapping. Never click '
-    'the green zoom button as an activation step: it changes window '
-    'state instead of bringing the app forward.',
+    'ZOOMED_WINDOW_INPUT_BLOCKED instead of tapping. If the window '
+    'is zoomed but the app IS frontmost, taps land with the known '
+    'fullscreen offset (about -23 x, +10 y normalized, issue #652): '
+    'ground the point, compensate the aim, and use the working exit '
+    '(back arrow) when a narrow control misses - a single ignored '
+    'narrow-control tap there is an offset miss, not blocked input. '
+    'Never click the green zoom button as an activation step: it '
+    'changes window state instead of bringing the app forward.',
     'Stop after the checklist. Do not repeat capture attempts: with '
     'the off-screen signature, further attempts cannot succeed.',
 ]
@@ -227,8 +251,9 @@ RECOMMENDATIONS = {
         "calls under invoke_offline."
     ),
     "ZOOMED_WINDOW_INPUT_BLOCKED": (
-        "Stop the pass. Do not tap: the canvas takes no input in this "
-        "state, so every further tap burns budget and cannot land, and "
+        "Stop the pass. Do not tap: the window is zoomed and the app "
+        "is not frontmost, so the canvas takes no input in this "
+        "state, and every further tap burns budget and cannot land, and "
         "never click the green zoom button as an activation step - it "
         "changes window state instead of bringing the app forward, "
         "and is how the window got here. Recovery is one owner step "
@@ -432,16 +457,21 @@ def classify(evidence):
         diagnosis = "OFF_SCREEN_WINDOW"
         confidence = "medium"
     elif (on_screen is True and not capture_errors and zoom_checked
-            and (app_active is False or ignored_tap_count > 0)):
-        # Zoom to Fit with the app not frontmost, or with grounded
-        # taps already ignored: the canvas takes no input in this
-        # state, so this is not a healthy window even though the
-        # pixel stream works. High only when both halves of the
-        # signature are present; without tap evidence the pass
-        # stops on the zoomed state alone at medium confidence.
+            and app_active is False):
+        # Zoom to Fit with the app not frontmost: the canvas takes
+        # no input in this state (ticker-1259, issue #648), so this
+        # is not a healthy window even though the pixel stream
+        # works. High only when both halves of the signature are
+        # present; without tap evidence the pass stops on the
+        # zoomed-not-frontmost state alone at medium confidence.
+        # Ignored taps while the app IS frontmost do not diagnose
+        # here: ticker-1332 (training 1340, arms-race 1347) shows
+        # taps landing in the same Zoom to Fit fullscreen framing,
+        # and a narrow-control miss there is the #652 tap offset
+        # (about -23 x, +10 y), handled by tapcal compensation -
+        # so that evidence falls through to HEALTHY below.
         diagnosis = "ZOOMED_WINDOW_INPUT_BLOCKED"
-        confidence = ("high" if app_active is False
-                      and ignored_tap_count > 0 else "medium")
+        confidence = ("high" if ignored_tap_count > 0 else "medium")
     elif on_screen is True and not capture_errors:
         diagnosis = "HEALTHY"
         confidence = "high"
@@ -458,6 +488,21 @@ def classify(evidence):
         # or the device is offline.
         missing = []
 
+    recommendation = RECOMMENDATIONS[diagnosis]
+    if (diagnosis == "HEALTHY" and zoom_checked
+            and ignored_tap_count > 0):
+        # Zoomed and frontmost with ignored taps: the taps that
+        # landed prove input works, so the ignored ones are offset
+        # misses on narrow controls (#652) - compensate the aim
+        # (+23 x, -10 y) or use a wider control / the back arrow,
+        # do not re-aim at the same point.
+        recommendation += (
+            " The ignored tap(s) in this zoomed-frontmost state are "
+            "offset misses on narrow controls (issue #652, about "
+            "-23 x, +10 y normalized): compensate the aim or use a "
+            "wider control / the back arrow, do not re-aim at the "
+            "same point.")
+
     return {
         "tool_version": TOOL_VERSION,
         "diagnosis": diagnosis,
@@ -469,7 +514,7 @@ def classify(evidence):
                                    "ZOOMED_WINDOW_INPUT_BLOCKED"),
         "evidence": lines,
         "missing_probe_steps": missing,
-        "recommendation": RECOMMENDATIONS[diagnosis],
+        "recommendation": recommendation,
     }
 
 

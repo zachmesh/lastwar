@@ -14,37 +14,34 @@ chain_id: zombie-2026-11-10
 chain_seq: 22
 attempts: 1
 max_attempts: 3
-claimed_by: ticker-0100
-claimed_at: 2026-11-12T09:03:34Z
-lease_until: 2026-11-12T09:23:34Z
+claimed_by: ticker-2333
+claimed_at: 2026-11-12T07:34:18Z
+lease_until: 2026-11-12T07:54:18Z
 result:
   status: partial
-  started_at: 2026-11-12T09:03:34Z
-  finished_at: 2026-11-12T09:16:10Z
-  duration_seconds: 756
-  executor: ticker-0100
-  summary: 2 Lv.10 kills sequential X:489 Y:441 and X:504 Y:410, squads_parallel 1 (short round trips); 1 LOOT row claimed 268000 coins, coin 143.4M to 143.7M HUD; X:489 row never materialized (4th handover loss); stamina 68 to 59; cleared false, successor 025 enqueued
-  claimed: [loot-row-x504-y410-268000-coins]
+  started_at: 2026-11-12T07:34:18Z
+  finished_at: 2026-11-12T07:43:58Z
+  duration_seconds: 580
+  executor: ticker-2333
+  summary: 2 Lv.10 kills in parallel, both LOOT rows claimed, 536000 coins; cleared false, chain continues
+  claimed: [coins-536000]
   claimed_count: 1
-  evidence: _records_/2026-11-12/zombie-invasion/0114-queue-run.md
+  evidence: _records_/2026-11-11/zombie-invasion/2342-queue-run.md
   follow_up: none
   stats:
     zombies_killed: 2
     cleared: false
-    coin_before: 143.4M
-    coin_after: 143.7M
-    coins_collected: 268000
-    medals_before: unmeasured
-    medals_after: unmeasured
+    coin_before: 142900000
+    coin_after: 143400000
+    coins_collected: 536000
+    medals_before: 5160
+    medals_after: 5180
     chests_opened: 0
-    squads_parallel: 1
-    tasks_badge: 1
-    stamina_before: 68
-    stamina_after: 59
-    target: 2
-    achieved: 1
-    resources_gained: coin_268000_iron_268000_food_268000_exp_263000_medals_20_crate_1
-    costs: 20_stamina_12_minutes
+    squads_parallel: 2
+    target: kill wave zombies and claim LOOT
+    achieved: 2 Lv.10 kills dispatched in parallel, both LOOT rows claimed (536000 coins)
+    resources_gained: coins 536000, iron 536000, food 536000, medals 20, hero EXP 526000
+    costs: about 8 minutes, stamina 20 to 1
     verified: yes
     blocker_category: h
   stats_missing: []

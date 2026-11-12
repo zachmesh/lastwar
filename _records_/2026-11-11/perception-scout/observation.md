@@ -7,10 +7,10 @@ version: 1.0.0
 description: Day observation file for the reset day started 2026-11-10 19:00 local, appended to by every scout unit of the day
 status: unverified
 passes_completed: 0
-items_observed: 34
-red_dots_seen: 34
-red_dots_explained: 24
-unexplained_red_dots: 10
+items_observed: 52
+red_dots_seen: 42
+red_dots_explained: 30
+unexplained_red_dots: 11
 ---
 
 # Observation 2026-11-11
@@ -371,3 +371,221 @@ Deals) - to be enqueued by this unit as the chain successor.
 - What the cart icon's 6,717 counts.
 - The blue chest icon at the bottom-left of the Hot Deals
   page.
+
+## Pass scout-2026-11-10 continued, unit ticker-2244, store remainder (partial)
+
+Chain unit 4 of pass scout-2026-11-10 (chain id scout-2026-11-10).
+Session about 22:56 to 23:02 local, computer session cc-677,
+Last War window 676414 (windowed 642x951). Observe-only
+throughout; nothing claimed, fought, dispatched, donated or
+bought. Full unit record at
+`perception-scout/2244-queue-run.md`. Next chain unit: scout-alliance
+(Alliance, Mail, Inventory red dots) - to be enqueued by this
+unit as the chain successor.
+
+### Base screen re-read, live about 22:56 local
+
+- Power 149,218,973; food 697.6M, iron 1.0G, coin 142.9M,
+  diamonds 13.22K; stamina 11; Lv.30.
+- Cart top-right reads 6,717 with a red dot (count meaning
+  still unverified).
+- Events badge 3; VS timer about 19:08; Season II 1d 19:18;
+  radar 3d 19:08; skull icon badge 1.
+- Task line: "Build: Oil Well [0/1]".
+- Blue house marker now reads "31 km" (35 km at 19:01,
+  49 km at 16:50).
+- Toast during the Mall walk: "Alliance Gift (SR) received!"
+  (background arrival, not tapped).
+
+### Mall (Store), remaining tabs, read live about 22:58 to 23:02 local
+
+Tab bar left to right: Hot Sale Packs, Official Event, Weekly
+Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall
+(7 tabs, all now walked in this pass). The red badge "1" sits
+above the Super Monthly Pass tab - RESOLVED, see below.
+
+- Official Event: promo page only. "Visit the Last War Store
+  for more rewards!", gold bricks with a +5% coin, "Claim
+  points and redeem great rewards", "ID POINTS 1000", blue
+  "Go" button (not tapped - observe-only, opens the web
+  store). Page dots show 2 pages; page 2 unread.
+- Weekly Deal: 2026-11-9 00:00:00 to 2026-11-15 23:59:59.
+  Three paid packs, 1 purchase available each: Valor Badge
+  (Epic) $99.99; Base Upgrade (Epic) $19.99; UR Set (Elite)
+  $49.99. No free claim on this tab.
+- Super Monthly Pass: "Monthly Pass", Days Left 10. Squad 4
+  Lv.20 - "Unlock an extra squad!". Daily Pickup grid (5
+  items). "Get Now" with a Legendary badge. Rewards Left: 10.
+  Green "Claim Reward" button available now - NOT tapped
+  (observe-only; claiming belongs to the passes unit).
+  Monthly Pass Extension $24.99 (paid, not tapped). The tab
+  bar badge "1" sits squarely over this tab and stayed with
+  it across tab switches - EXPLAINED: it marks this claimable
+  Monthly Pass reward.
+- Weekly Pass: "Weekly Pass rewards reset at 18:00:00".
+  "Free Supply" chest graphic top-left (label, not a button).
+  Legendary "Instant Gain on Purchase" - Take All $19.99
+  (paid). S2 Drone Components Weekly Pass (Legendary),
+  Validity 7 Day(s): Daily Pickup x2, Total x7, Get Now
+  $4.99. S1 Drone Parts Weekly Pass (Epic), Validity 7
+  Day(s): Daily Pickup x15, Total x105, Get Now $4.99. More
+  rows below the fold, unread. No free claim on the first
+  screen.
+- Hot Sale Packs re-read (closing): HERO SHARD/EXCLUSIVE
+  WEAPON SHARD CHOICE PACK, UR Hero Shard Choice Box V x10
+  + Skill Medal 500, timer 19:03:25, Availability 1, green
+  "Free Claim" - still available, NOT tapped (belongs to the
+  shop-claims unit).
+
+### Blue chest icon, Hot Deals page bottom-left
+
+- Two single taps at the grounded centre (75, 749) produced
+  no change; a 1-second long-press at the same point opened
+  the chest lid (lid up, glowing, small round badge on its
+  right edge) with no panel, no reward and no claim. A
+  further single tap on the open chest changed nothing.
+- Meaning STILL UNKNOWN: it toggles open/closed on a
+  long-press but shows no reward or destination. A later unit
+  should try click_element on the chest control instead of
+  background coordinate taps.
+- The "Claimed" text the OCR reported once at 501,338 was a
+  transient misread - the Free Claim button stayed green and
+  available in the closing screenshot, so nothing was claimed
+  in this unit.
+
+### Red dots seen in this unit (3)
+
+- Mall tab bar badge 1 - EXPLAINED: the Super Monthly Pass
+  Claim Reward (see above). This resolves the 2040 unit's
+  unexplained dot.
+- MALL header red dot - explained: the Hot Sale Packs Free
+  Claim (UR Hero Shard Choice Box V x10 + Skill Medal 500).
+- Base-screen cart red dot - explained: the same Hot Sale
+  Packs Free Claim.
+
+### Unexplained red dots (0 new, day total 9)
+
+- The day total drops from 10 to 9 with the tab-bar badge
+  resolved. Still unexplained from earlier sections: the
+  skull cycle timer; the "Others' Trucks" tab badge 4; the
+  "Recover" button red dot; the Zombie Invasion Store button
+  red dot; the Desert Battlefield tab badge; the radar grey
+  skull pin's small red dot. (The day total is the file's
+  running counter; the per-section counts double-count the
+  Zombie Store dot across the 1843 and 1919 sections, so the
+  list above is the named set, not an exact sum.)
+  Note: the day seen total counts the re-seen badge dot
+  again (34 to 37) while the unexplained total drops by
+  the one resolution (10 to 9).
+
+### Unknown items (3 new)
+
+- The blue chest icon (carried): long-press opens its lid,
+  no panel or reward; meaning still unknown.
+- Official Event tab page 2 of the carousel, unread.
+- Weekly Pass rows below the fold, unread.
+
+## Pass scout-2026-11-10 continued, unit ticker-2333, alliance group (partial)
+
+Chain unit 005 of pass scout-2026-11-10 (chain id scout-2026-11-10).
+Session about 23:48 to 23:53 local, computer session cc-682.
+Observe-only throughout. Full unit record at
+`perception-scout/2359-queue-run.md`. Next chain unit: alliance
+remainder (Alliance Wars page, Alliance Store state, station
+and train panel, Mail six categories, world map pins and loot
+box) - to be enqueued by this unit as the chain successor.
+
+### Base screen re-read, live about 23:48 local
+
+- Top bar: power 149,218,973; food 698.1M, iron 1.0G, coin
+  143.4M, diamonds 6,717; stamina 2.
+- VS timer 18:13:43; Season II 1d 18:23:43; radar 3d 18:13:43.
+- Task line: "Build: Oil Well [0/1]". A Lv.10 Invading Zombies
+  target is still visible near the base (wave not cleared; the
+  next wave arrives about 23:57).
+- A 415.2K figure with a gold icon sits under the food bubble
+  on the Alliance Techs panel - meaning unverified, possibly
+  alliance contribution points; recorded as an unknown item.
+
+### Alliance panel, read live about 23:49 local
+
+- [AP3x] The Apex, Overall Rating 5.0, Leader Abyss Apex,
+  Power 13,720,619,209, Members 96/100, Language English.
+- Red dots on five buttons: Alliance Wars, Help, Alliance
+  Gifts, Alliance Store, Alliance Techs. No red dot on
+  Members, Assemble, Strength Ranking, Alliance Events,
+  Alliance City.
+- Bottom bar: back arrow, Record, Applicants, Alliance Star,
+  Settings.
+
+### Alliance Gifts, read live about 23:50 local
+
+- Gift Level 29, progress 1,134,980 / 257,900,000. "Claim
+  Alliance Gift, and increase Gift Level. Higher the level,
+  better the rewards, and unlock more alliance features."
+- Regular tab (Claim All badge 523): "Defeat the Doom Elite
+  for a Regular Alliance Gift" with a Go button. Rows, each
+  +10 purple gems with a Claim button: OttomanCobra Defeated
+  Doom Elite 23:59:47; Sanction Apex Defeated Zombie Boss
+  23:59:45; Sanction Apex Defeated Zombie Boss 23:56:31;
+  Sanction Apex Defeated Zombie Boss 23:54:13; more below
+  the fold.
+- Premium tab (Claim All badge 69): "Buy packs with Alliance
+  Gifts to reward every member a gift" with a Go button.
+  Rows: Alliance Gift (MR) +1000, 23:29:31, Someone purchased
+  Preparation Super Pack; Alliance Gift (SSR) +200, 23:24:56,
+  Someone purchased VIP Exclusive; Alliance Gift (SR) +100,
+  23:13:34, GoldenSonya purchased Preparation Premium Pack;
+  Alliance Gift (SR) +100, 23:13:07, GoldenSonya purchased
+  Preparation Premium Pack; more below the fold. "Hide your
+  name on Gifts" checkbox, unchecked.
+- The Gifts red dot is explained: 523 Regular plus 69 Premium
+  claimable gifts. Claiming belongs to the gifts unit, already
+  queued (gifts-2026-11-11-2230).
+
+### Help, read live about 23:52 local
+
+- "Today's points gained from Alliance Help: 0/1,000".
+- Requests waiting (4 visible): Bears Lair (the user) - Need
+  help with building Lv.30 Aircraft Center, "Time reduced:
+  3d 23:58:04"; Jerry Apex - Need help with Missile Expansion
+  II research; Dogo - Need help with building Lv.25 Barracks;
+  MesutCLK Apex - Need help with building Lv.27 Alliance
+  Support Hub (cut off at the fold).
+- Help All button present (green), not tapped - observe-only.
+- The Help red dot is explained: help requests waiting.
+
+### Alliance Techs, read live about 23:54 to 23:58 local
+
+- Development tab: Auto Rally Max Level; Quick Construction
+  8/10 with a red badge 1; Great Helper Max Level; a further
+  tech at 2/10 below, name cut off at the fold.
+- War tab: Unit Load Capacity 2/10; Quick Training 1/10;
+  Expert Trainer 2/10; three further techs at 5/10 each below
+  the fold, names unread.
+- Footer on both tabs: "Tech Donation Today: 4050" with a
+  trophy icon - "Requires at least 1000 contribution points
+  to earn the reward", threshold met.
+- The Techs red dot is explained as the Quick Construction
+  8/10 badge; the exact trigger (donation-able versus
+  upgrade-able) is unverified.
+- One stale_observation drop mid-unit (target app exited or
+  restarted); the window was re-selected (676414) with no
+  state lost.
+
+### Red dots seen in this unit (5)
+
+- Alliance Wars - UNEXPLAINED, page not opened.
+- Help - explained: help requests waiting (see Help).
+- Alliance Gifts - explained: 523 Regular plus 69 Premium
+  claimable gifts.
+- Alliance Store - UNEXPLAINED, page not opened (read for
+  state only when walked; its Buy button is a red line).
+- Alliance Techs - explained: Quick Construction 8/10 badge.
+
+### Unknown items (1 new)
+
+- The 415.2K gold-icon figure under the food bubble on the
+  Alliance Techs panel - meaning unverified.
+- Carried: blue chest meaning; Official Event page 2;
+  Weekly Pass below-fold rows.
