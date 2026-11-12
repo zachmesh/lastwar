@@ -1046,3 +1046,7 @@ of 2026-10-28.
   009 enqueued; the pass stopped after this unit rather than
   cascading failed units. Full detail in
   perception-scout/0737-queue-run.md.
+
+## 08:00 to about 08:09 - PR integration 0800 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0800. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 178 minutes away; merge-aware due --merges exit 1, same verdict). Knowledge PR #701 reviewed CLEAN and squash-merged as c76922766 (4 activity profiles folded: perception-scout 1.71.0, zombie-invasion 1.50.0, daily-activities 1.36.0, radar-tasks 1.87.0; Refs #689, #694; Owner lastwar-knowledge-organizer; merge-tree exit 0; branch deleted). Merged main synced back to the local repo (fast-forward e7bd11769b -> c76922766 via bundle). Records PR 700 (2026-11-12, head f703685aa, 19 records-only commits) awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main c76922766 (merge-tree exit 0, merged tree d7b3ccb2; head unchanged 4f41cdd6a), re-verification comment posted (issuecomment-6828799252). No new records PR (all 12 older records branches contained in main). Merges synced to the owner Trirvia DM. Sweep clean. Status: done. Full detail in pr-integration/0800-run.md.
