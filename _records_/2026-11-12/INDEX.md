@@ -222,3 +222,21 @@ of 2026-10-28.
 ## 01:40 to about 01:52 - Queue planning pass
 
 - Planner pass queue-planning-2026-11-12-0140. Plan staged 0 units (73 already present for the next 12 hours, 2 skipped closed harvest-2026-11-11-2203, zero-sweep-2026-11-11-1730, 0 reaped/expired); sweep production skipped (01:00 hour), tonight's pair not yet due, last night's pair closed both partial (1630 1/23, 1730 5/23); scout diff on the 6-pass 2026-11-11 observation applied with identical 0 counts (52 observed, 11 unexplained), 0 withdrawals, no new issues; pool inbox 78, claimed 0, done 1638. Status done. Full detail in queue-planning/0140-run.md.
+
+## 01:45 to about 01:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0145. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 03:00): merged knowledge PR #690 (squash
+  8a3f8a2b, 01:48 PT) folding zombie 023, zombie 022 re-run,
+  harvest 2203 and scout 006 failure into 4 profiles (Refs
+  #566, #502, #689); local main fast-forwarded to 8a3f8a2b.
+  Records PRs 681 (2026-11-11, 16 commits) and 685
+  (2026-11-12, 32 commits) both re-verified CLEAN against
+  new main 8a3f8a2b, awaiting the 03:00 batch. Tools PR 425
+  still owner-gated (OD-20261108-01 open, age 4 days),
+  re-verified CLEAN against new main 8a3f8a2b, no new comment
+  (unchanged since the 0115 verification). No arrivals
+  during the pass; sweep clean. Slack sync sent to the
+  Trirvia DM (ts 1794477119.092709). Status: done. Full
+  detail in pr-integration/0145-run.md.
