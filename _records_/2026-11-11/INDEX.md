@@ -3121,3 +3121,23 @@ of 2026-10-28.
 ## About 19:00 to about 19:10 - PR integration 1900 run, records PR batch-merged, trucks-1457 markers cleared
 
 - Integrator pass lastwar-pr-integrator-2026-11-11-1900. BATCH pass (checker due, window 19:00-20:00 PT). Merged records PR 655 with --merge (62 commits, merge commit 87ea0981f3, mergedAt 2026-11-12T03:03:42Z); branch survives for the day remainder; the merge cleared the conflict markers main carried on _queue_/inbox/trucks-2026-11-11-1457.md since PR 615 (0 markers on new main). PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. Fresh post-1900 records PR opened after this run record; local main synced to 87ea0981f3. Slack sync sent. Status: done. Full detail in pr-integration/1900-run.md.
+
+## 18:50 to about 19:01 - Ticker pass ticker-1843, perception-scout events group partial
+
+- Scout unit scout-scout-2026-11-10-001 partial (chain
+  scout-2026-11-10): a 16:54 sync duplicate of the chain head
+  already executed by ticker-1634, run as the events-group
+  unit instead of re-walking base. Events hub strip walked:
+  The Age of Oil (badge 1), Arms Race, Desert Battlefield,
+  Zombie Invasion (badge 1), Wanted Boss. Zombie Invasion
+  Glacieradon live 1d 23:09 left, challenge begins 2026-11-12
+  18:00, next wave about 00:03; Arms Race Base Building,
+  score 0, 03:07:30 left, tier 3 at 30,000, only the Building
+  Power path inside the red lines (R4 flag for the arms-race
+  unit); Age of Oil Tech 9475/500 and Base Expansion II
+  22232/500, both exceeded, stage-1 badge 1 claim state
+  unmeasured. 4 red dots seen, 0 explained (day total 7
+  unexplained); VS, Wanted Boss, Desert Battlefield and radar
+  unwalked - chain successor seq 002 enqueued. Full detail in
+  perception-scout/1850-queue-run.md and the day observation
+  file.

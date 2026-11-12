@@ -7,10 +7,10 @@ version: 1.0.0
 description: Day observation file for the reset day started 2026-11-10 19:00 local, appended to by every scout unit of the day
 status: unverified
 passes_completed: 0
-items_observed: 13
-red_dots_seen: 21
+items_observed: 21
+red_dots_seen: 25
 red_dots_explained: 18
-unexplained_red_dots: 3
+unexplained_red_dots: 7
 ---
 
 # Observation 2026-11-11
@@ -110,3 +110,87 @@ radar) - enqueued by this unit as the chain successor.
 - The second left-column icon (white truck) - target unverified.
 - The blue gift-box marker above the dispatched truck.
 - The "49 km" blue house marker.
+
+## Pass scout-2026-11-10 continued, unit ticker-1843, events group (partial)
+
+Chain scout-2026-11-10, seq 001 duplicate head (see the unit
+record) executed as the events-group unit. Session about
+18:50 to 19:01 local, computer session cc-657. Observe-only
+throughout. Full unit record at
+`perception-scout/1850-queue-run.md`. Next chain unit: seq 002
+(events remainder - VS/duel page, Wanted Boss, Desert
+Battlefield, radar, skull re-check), enqueued by this unit.
+
+### Events hub tab strip, read live about 18:53 local
+
+Left to right: The Age of Oil (red badge 1), Arms Race,
+Desert Battlefield, Zombie Invasion (red badge 1), Wanted
+Boss. Further tabs left of The Age of Oil unverified. Top
+banner: "Unknown Warzone are on a secret Ghost Ops in our
+Warzone! Send scouts!"
+
+### Zombie Invasion - Glacieradon, read live about 18:53 local
+
+- 1d 23:09:04 remaining; "Challenge begins in: 23:09:05";
+  "Your Timezone: 2026-11-12 18:00". 40/40 bar (meaning
+  unverified).
+- Store button red dot (not opened). Ranking, Rewards not
+  opened.
+- Alliance Finding: Lv.80 138km SAPPER1DOG 02:34:54; Lv.80
+  294km ANGEL777 Apex 02:36:13; Lv.85 208km SAPPER1DOG
+  02:39:49; Lv.80 212km SAPPER1DOG 02:40:08; fifth card cut
+  off. My Findings not opened.
+- Next wave in 00:03:41, then 00:02:54 on re-read. Event
+  LIVE, about 1d 23h left - zombie chain continues.
+
+### Arms Race - Base Building, read live about 18:57 local
+
+- Contest Segment Lv.29-30. Chest 0/2. Score 0.
+  03:07:30 remaining in the phase.
+- Tiers: 2,360 at 6,250; 4,800 at 12,500; 11,800 at 30,000.
+- Paths: Building Power +1 per pt; 1-min Construction
+  Speed-up +10; Buy Packs containing Diamonds +30.
+- Ranking: #2110 [AP3x]Bears Lair, segment rank 8, score 0.
+- Flag: only the Building Power path sits inside the red
+  lines; arms-race unit judges under R4.
+
+### The Age of Oil, read live about 18:59 local
+
+- Stage 1 active, red badge 1; stages 2-4 locked.
+- Unlock Tech: 9475/500 Tech Research, 3d 23:06:56 left.
+- Unlock Stage Base Expansion II: 22232/500 Building
+  Upgrades, 3d 23:06:56 left.
+- Reward claim state unmeasured; badge-1 cause unproven.
+
+### Base screen re-read, about 18:51 and 19:01 local
+
+- Power 149,218,973; food 694.1M, iron 1.0G, coin 137.5M,
+  diamonds 13.22K. "Build: Oil Well [0/1]". VS 23:09:49;
+  Season II 1d 23:19:49; radar 3d 23:09:49. Events badge 3.
+  Cart 6,717 red dot. Chat 99+.
+- Blue house marker now reads "35 km" (49 km at 16:50).
+
+### Red dots seen in this section (4)
+
+- Events icon badge 3 - unexplained (contains badged tabs;
+  third source unknown).
+- The Age of Oil tab badge 1 - unexplained (likely stage-1
+  reward, unproven).
+- Zombie Invasion tab badge 1 - unexplained (possibly the
+  imminent wave, unproven).
+- Zombie Store red dot - unexplained (store not opened).
+
+### Unexplained red dots (7, day total)
+
+- The 4 above, plus the 3 carried from the 1634 unit:
+  skull cycle timer; "Others' Trucks" tab badge 4;
+  "Recover" button red dot.
+
+### Unknown items (4, unchanged)
+
+- The small "9" beneath the Mission terminal.
+- The second left-column icon (white truck) - target
+  unverified.
+- The blue gift-box marker above the dispatched truck.
+- The "35 km" blue house marker (distance changed from
+  49 km; meaning unverified).
