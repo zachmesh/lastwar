@@ -3577,3 +3577,7 @@ of 2026-10-28.
   Quick Dispatch not run (no verified recruit). Tracker
   untouched; the next tick re-produces the regular. Full
   detail in survivor-intake/2115-queue-run.md.
+
+## 23:45 to about 23:56 - PR integration 2345 run, non-batch pass, PRs 683+684 merged, stranded 2105 delivery landed
+
+- PR integrator pass pr-integration-2026-11-11-2345. NON-batch pass (checker plain due, merge-aware not due: PR 665 already merged 23:09:03 PT in this window, first-pass rule per Issue #335). Merged #683 (tools roster-freshness gate, squash 958a5e74) and #684 (knowledge fold 4 profiles, squash 5d2b9d7e), both arrived mid-pass. Landed stranded ticker-2105 delivery 546fa2cc7 as 9f6e149bb (Issue #682; radar/survivors record files + INDEX entry + action-log line; done files corrected expired to done/partial). Records PR 681 (post-2300 batch, 12 commits) awaits the 03:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN vs new main 5d2b9d7e, one re-verification comment posted. Local main synced to 5d2b9d7e via bundle. Slack sync posted to the owner Trirvia DM. Status: done. Full detail in pr-integration/2345-run.md.
