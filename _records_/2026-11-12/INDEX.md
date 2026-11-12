@@ -383,3 +383,21 @@ of 2026-10-28.
 ## 02:40 to about 02:55 - Queue planning pass
 
 - Planner pass queue-planning-2026-11-12-0240. Plan staged 12 units for the 14:03/14:30 slots (mail, help, gifts, train, star-ceremony, duel-score at 14:30; harvest, radar, survivors, training, donations, arms-race at 14:03), 62 already present, 1 skipped closed zero-sweep-2026-11-11-1730, 0 reaped/expired; roster stale warning, issue #198. Sweep production skipped (02:00 hour), tonight's pair not yet staged, due from the 17:00 run; last night's pair closed both partial (1630 1/23, 1730 5/23). Scout diff on the 2026-11-11 6-pass observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no new issue. Picked up the stranded 0040 commit d57474d85 as f26a3122b99 (INDEX + action-log conflicts resolved chronologically); first commit 03ac9f59871 abandoned when the tip moved, rebuilt on 255acba7359. Pool inbox 78, claimed 0, done 1646. Status: done. Full detail in queue-planning/0240-run.md.
+## 02:45 to about 02:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0250. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 03:00): merged knowledge PR 691 (5 profiles
+  folded, Refs #689 and #595, squash fd510c1b) and tools PR
+  692 (control-lock blocker, Refs #689, queue design 0.17.0
+  rule R9, squash 2c5250b59); main 8a3f8a2b to 2c5250b59,
+  local main fast-forwarded. Records PRs 681 (2026-11-11,
+  16 commits) and 685 (2026-11-12, 55 commits) both
+  re-verified CLEAN against new main 2c5250b59, awaiting the
+  03:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01 open, age 4 days), re-verified CLEAN
+  against new main 2c5250b59, one re-verification comment
+  posted. Merges synced to the owner Slack DM. No arrivals
+  during the pass; sweep clean. Status: done. Full detail
+  in pr-integration/0250-run.md.
+
