@@ -3188,3 +3188,34 @@ of 2026-10-28.
   (branch work/ko-1932-zombie-scout-arms-ageo, commit
   4b76ab5c0d). Issues #595 and #477 commented. Full
   detail in knowledge-organization/1932-run.md.
+
+## 19:19 to about 19:36 - Ticker pass ticker-1919, zombie-invasion unit 019 partial
+
+- Zombie unit zombie-invasion-zombie-2026-11-10-019 partial:
+  2 Lv.10 kills in PARALLEL (X:505 Y:325 Squad 1, X:569 Y:369
+  Squad 2), squads_parallel 2 - the first parallel dispatch at
+  2 in this chain since unit 047; the longer 2:12/2:38 outbound
+  times on this wave made it possible. 2 LOOT rows claimed for
+  536,000 coins, coin 137.5M to 138.0M HUD, stamina 70 to 51.
+  Glacieradon live 1d 22:35:44, next wave about 19:54. One
+  computer session dropped mid-unit (cc-658 to cc-659), no
+  state lost. Store not visited; medals_after 5120 derived,
+  SSR chest re-check still open. Cleared false, successor 020
+  enqueued to start now. Full detail in
+  zombie-invasion/1936-queue-run.md.
+
+## 19:33 to about 19:46 - Ticker pass ticker-1919, scout unit 002 partial
+
+- Scout unit scout-scout-2026-11-10-002 partial: events group of
+  pass scout-2026-11-10 walked observe-only - all six Events
+  tabs (Age of Oil 9511/500 tech, 22379/500 building; Desert
+  Storm matchmaking 04:25:15, 20 sign-ups; Zombie 1d 22:25:35,
+  next wave 00:20:14; Wanted Boss Code 87 at server 00:00;
+  Community 500 diamonds already Claimed), Alliance Duel page
+  (Train Heroes, Apex 374,461,602 vs Fox 433,586,724) and radar
+  (Lv.13, 12 tasks restore in 03:59:00). 7 red dots seen, 5
+  explained, 2 unexplained (Zombie Store dot, Desert tab badge).
+  Day counters now items 21, red dots seen 28, explained 23,
+  unexplained 5. Successor enqueued for the store group. Full
+  detail in perception-scout/1946-queue-run.md and the day
+  observation file.
