@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-12T08:32:17Z
+modified: 2026-11-12T09:32:17Z
 level: L1
-version: 1.29.0
+version: 1.30.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -27,6 +27,7 @@ grounded_in:
   - source: zero-sweep 001 execution record 2026-11-10 1634 queue run (partial, 1 of 23 ledger lines read live, coin bubble standing, Secret Command Post read live, remaining lines pass to the 17:30 sweep; record commit 986c1877 on records/2026-11-10)
   - source: zero-sweep 001 execution record 2026-11-11 1726 queue run (partial, 1 of 23 ledger lines read live to a close, trucks dispatch 1/5 and plunder 0/4 shortfall, donations points 4050 live, remaining count unread, skull timer sixth sighting; record commit bec20570e on records/2026-11-11)
   - source: zero-sweep 002 execution record 2026-11-11 1730 queue run (partial, 5 of 23 ledger lines read live, bubbles and mail not at zero, Glacieradon next wave 00:52:52, four fix-up units raised to priority 1, PR 655 conflict resolved and loop-health gap filed as Issue #661; record commit 6cbd479fc on records/2026-11-11)
+  - source: ticker-0100 execution records 2026-11-12 0114 and 0126 queue runs (zombie-invasion 022 re-executed from a stale inbox copy, harvest-2203 panel Collects 12,195,086, thirteen stale inbox units reaped expired; record commit 911d317f8 on records/2026-11-12)
 ---
 
 # Routine activities
@@ -585,4 +586,11 @@ claims cited below were read in this pass's passes unit
 - The 18:00-18:57 batch outcome is now settled at queue-file level (commit 11ac21dce on records/2026-11-11, ticker-2333 pass): the five 1857 units (events, passes, secrets, treasures, trucks) were reaped as expired at 23:33 PT - status expired, "window passed before execution" - after the 2026-11-11 retro snapshot (21:16), which had left them sitting past-expiry in the inbox unreaped. The remaining 1803/1830 units resolve as: executed - harvest-1803 partial, radar-1803 done, survivors-1803 partial, training-1803 partial; expired - mail-1830, donations-1803, train-1830, duel-score-1830, gifts-1830, help-1830, star-ceremony-1830; skipped-needs-owner - arms-race-1803. This confirms the retro's 39-expired tally (Issue #671) at unit level and closes the open thread the 2032 run left.
 - passes-1857's expiry means the Monthly Pass Claim Reward was NOT claimed by that unit - the claim still rests on passes-2026-11-11-2257, still in inbox at the records tip, unexecuted. The 22:03/22:30/22:57 units (arms-race, donations, harvest, radar, survivors, training, duel-score, events, gifts, help, mail, passes, secrets, star-ceremony, train, treasures, trucks, scout) are still in inbox - their outcomes fall to later runs, in the new trade day's records.
 - vip-2026-11-11-1800 and daily-missions-2026-11-11-1800 are still unreaped in inbox at the records tip - neither executed nor expired on the branch yet.
+- No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
+
+## Ticker-0100 reaping, 2026-11-12 01:02 - thirteen stale inbox units expired, duplicate 022 executed, harvest-2203 collected
+
+- The ticker-0100 pass (commit 911d317f8 on records/2026-11-12) reaped 13 stale inbox units as expired at about 01:02 PT - status expired, "window passed before execution": donations-1803, events-1457/1857, passes-1457/1857, radar-1803, secrets-1457/1857, survivors-1803, treasures-1457/1857, trucks-1457/1857 (all 2026-11-11 units). CORRECTION - three of the thirteen are stale-branch artifacts, not new execution facts: radar-1803, survivors-1803 and training-1803 were EXECUTED on the 2026-11-11 branch (radar done, survivors partial, training partial - see the 18:00-18:57 batch section above), and the 0100 reaper on this branch marked their never-updated inbox copies expired. The genuine new expirations on this branch are the ten 1457/1857 units plus donations-1803 (already noted expired in the 0032 run). The 0032 run's "five 1857 units reaped expired 23:33" and this pass's reaping cover the same five 1857 units (events, passes, secrets, treasures, trucks) - the branch copies were reaped once per branch; the expiry itself is one fact.
+- The same pass executed the stale inbox copy of zombie-invasion unit 022 (see the zombie-invasion 0114 fold) - its completion rides on PR #681 (records/2026-11-11), unmerged at 01:00, so the branch queue still showed 022 in inbox while 023 was already done. The duplicate execution is a branch-sync artifact; the live pool is consistent (022 done, 023 done, 024 enqueued, 025 enqueued). The 0032 run's follow-up question - whether the 22:03/22:30/22:57 units executed - is now settled in part: harvest-2203 EXECUTED (0126 unit, panel Collects 12,195,086); the rest of the 22:03 batch (arms-race, donations, radar) and the 2230 units (duel-score, gifts, help, mail) and the 2257 units (events, passes) remain in inbox, unexecuted at this run's close. passes-2257 - the Monthly Pass Claim Reward - is still pending.
+- vip-2026-11-11-1800 and daily-missions-2026-11-11-1800 remain unreaped in inbox at the records tip - neither executed nor expired on the branch yet.
 - No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
