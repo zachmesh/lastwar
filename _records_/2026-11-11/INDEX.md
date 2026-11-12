@@ -3163,7 +3163,7 @@ of 2026-10-28.
   done. Full detail in pr-catchall/1939-run.md.
 ## About 19:45 to about 19:50 - PR integration 1945 run, non-batch pass, records PR awaiting 23:00 batch
 
-- Integrator pass lastwar-pr-integrator-2026-11-11-1945. NON-batch pass (checker plain due yes inside the 19:00-20:00 PT window, but merge-aware not due - PR 655 already merged 19:03:41 PT in this window at the 1900 batch pass; merges file /tmp/merges-today.json already listed 655). No merges. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 8be010ea), awaits the 23:00 batch; merged tree keeps main's _tools_ verbatim (queue.py --ref raw count 7, same as main). PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. No Slack sync (silent run). Status: done. Full detail in pr-integration/1945-run.md.
+- Integrator pass lastwar-pr-integrator-2026-11-11-1945. NON-batch pass (checker plain due yes inside the 19:00-20:00 PT window, but merge-aware not due - PR 655 already merged 19:03:41 PT in this window at the 1900 batch pass; merges file /tmp/merges-today.json already listed 655). PRs 666 (knowledge) and 667 (tools, Refs #664), opened mid-pass, reviewed CLEAN and squash-merged (668be677, decf48bb); issue #664 commented, not closed; local main fast-forwarded to decf48bb59. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 8be010ea), awaits the 23:00 batch; merged tree keeps main's _tools_ verbatim (queue.py --ref raw count 7, same as main). PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. Slack sync sent (2 merges). Status: done. Full detail in pr-integration/1945-run.md.
 
 ## 19:32 to about 19:53 - Knowledge organization 1932 run, 5 profiles folded, PR 666, trade-day sweep
 
