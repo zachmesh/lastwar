@@ -2724,3 +2724,13 @@ of 2026-10-28.
   Gifts received!" toast appeared twice with no claim tapped —
   same unexplained transient as the 1507 pass. Full detail in
   vip-rewards/1626-queue-run.md.
+## 16:30 to about 16:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1630.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): no merges, no comments;
+  records PR 655 awaits the 19:00 batch, merge-tree
+  CLEAN against main 82589fe4. Tools PR 425 still
+  owner-gated (OD-20261108-01 open), head and main
+  unchanged since the 1600 re-verification. Status: done.
+  Full detail in pr-integration/1630-run.md.
