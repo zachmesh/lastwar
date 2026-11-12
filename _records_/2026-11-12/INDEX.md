@@ -553,3 +553,18 @@ of 2026-10-28.
   pass; no unit recorded failed. Token released.
   Status: done (sync-only pass). Files: _queue_ expirations,
   this INDEX, _logs_/repo-actions/action-log.jsonl.
+
+## 04:15 to about 04:21 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0415. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00; PR #681 already merged
+  03:02:11 PT in the 03:00 window): no records merge.
+  Records PR 685 (2026-11-12, head 5d8072ccb)
+  re-verified CLEAN against main e4513df10, verification
+  comment posted, awaits the 07:00 batch. Tools PR 425
+  still owner-gated (OD-20261108-01 open), head and main
+  both unchanged since the 0400 verification, no new
+  comment (no-repeat rule), no new escalation. No arrivals
+  during the pass; sweep clean. Status: done. Full detail
+  in pr-integration/0415-run.md.
