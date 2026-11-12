@@ -731,6 +731,43 @@ of 2026-10-28.
   standing user rule, 96 percent (411M free) after. No Slack
   sync. Status: no-op. Full detail in
   pr-catchall/0539-run.md.
+## 05:34 to about 05:53 - Ticker pass ticker-0534, no unit executed (control-lock blocker stands; stale tool caught)
+
+- Ticker pass ticker-0534. Own PRs first: records PR 685
+  (2026-11-12) OPEN, re-verified CLEAN by the integrator 0530
+  pass against main 2f46eea9a, awaits the 07:00 batch; no
+  question addressed to this job, nothing to fix. Tools PR 425
+  owned by lastwar-tool-developer, not this job.
+- Stale tool caught before any claim (Issue #694, second live
+  occurrence): the pass started in the main working tree
+  ~/workspace/lastwar, on work/ops-execution-records with an
+  untracked _tools_/ carrying a pre-#692 queue.py (zero
+  mentions of control-lock, about 1700 lines differ from
+  main). Its sync and next ran: sync reaped 0, expired 0,
+  produced nothing (23 due, all already queued); the stale
+  next handed out zombie-invasion-zombie-2026-11-10-026
+  during the R9 pause. Caught by inspection - no claim, no
+  execution, no unit burned, no device session opened.
+  Re-ran from a fresh detached worktree of main with the
+  current tool: sync 0 reaped / 0 expired / 0 produced (25
+  due, all already queued, zombie successor 026 already in
+  inbox, no seeding needed); next empty. The guard cannot
+  protect a pass that never loads the current copy; follow-up
+  commented on Issue #694, noting R10 is not in the ticker
+  body, which still says to work in ~/workspace/lastwar.
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 11:19:16Z by ticker-0304
+  zombie unit 025 after 3 fresh sessions cc-703/704/705 all
+  failed at first input with outcome_unknown) still stands,
+  about 2 hours 20 minutes old, under the 4-hour stale
+  bound - next refuses by design, so no unit was burned.
+  Seventh consecutive tick blocked by the lock (0134, 0204,
+  0234, 0304 and 0504 failed units; 0404 and this pass
+  guarded ticks with no attempt). The blocker reaps after
+  15:19:16Z (07:19 PT); the next tick then probes with one
+  input. Token released.
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
 ## 05:45 to about 05:50 - PR integration 0545 run, NON-batch (checker not due, next batch 07:00)
 
 - Integrator pass pr-integration-2026-11-12-0545. NON-batch
