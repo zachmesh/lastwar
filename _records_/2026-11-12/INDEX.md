@@ -1303,3 +1303,6 @@ of 2026-10-28.
   `tools/queue.py` must not be used for decisions again.
 - New evidence commented on Issue #689 (lock now about 8 hours,
   seventh burned unit) and on Issue #694 (stale-tool handout).
+## 10:15 to about 10:20 - PR integration 1015 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-1015. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 48 minutes away; merge-aware due --merges exit 1, same verdict, 45 minutes away). Records PR 700 (2026-11-12, head 942ae271a, 53 records-only commits) re-verified CLEAN (merge-tree exit 0, merged tree dbfbfab8); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main cc58a605c (merge-tree exit 0, merged tree a1802181; head unchanged 4f41cdd6a), one re-verification comment posted (main advanced by PRs 703 and 704 since the 0945 comment). No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/1015-run.md.
