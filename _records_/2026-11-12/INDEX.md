@@ -1099,3 +1099,44 @@ of 2026-10-28.
 
 ## 08:32 to about 08:40 - Tool development 0832 run, no-op
 - Tool-developer pass tool-development-2026-11-12-0832. No-op: own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main c76922766 at head 4f41cdd6a (integrator 0800 pass), no author action owed; PR #696 merged 04:48 PT, PR #699 merged as e7bd11769; newest 30 open tooling issues verified implemented or accounted for this run, older 30 per the 0532 full verification, no new tooling issue filed; standing queue items (c)(1)-(3) re-verified implemented on main c76922766; issue #688 awaits scope decision, not built. Status: no-op. Full detail in tool-development/0832-run.md.
+
+## 08:34 to about 08:41 - Ticker pass ticker-0834, no unit executed (control-lock blocker stands)
+
+- Ticker pass ticker-0834. Own PRs first: records PR 700
+  (2026-11-12) OPEN, mergeable (CLEAN), no comments, awaits
+  the 11:00 batch; no question addressed to this job, nothing
+  to fix. Tools PR 425 owned by lastwar-tool-developer, not
+  this job.
+- Ran from a fresh worktree on records/2026-11-12 at d89cf3614b
+  (~/workspace/lastwar-wt-0834-ticker-1112, delivery branch
+  ticker-0834-1112-delivery) with the current tool copy
+  (_tools_/queue.py). The main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched.
+- Sync: reaped 0, expired 0, produced 0 (due 25, 24 already
+  queued; zombie-invasion is a chain regular, not sync-produced).
+  No completion markers reaped this pass. Zombie seeding:
+  zombie-invasion-zombie-2026-11-10-027 already sits in the live
+  inbox (82 units live), no seeding needed. Note for the next
+  reader: this worktree's snapshot pool shows no zombie unit -
+  production and next resolve to the live pool in the main
+  checkout, where 027 lives.
+- Execute loop handed out nothing: the R9 control-lock blocker
+  (Issue #689, recorded 15:47:00Z by ticker-0737 scout unit 008
+  after 3 fresh sessions all failed at first input with
+  outcome_unknown) still stands, about 55 minutes old, under the
+  4-hour stale bound - next returns empty by design, so no unit
+  was burned and no probe was attempted; a probe is due only once
+  the blocker ages out. Fourteenth consecutive tick blocked by
+  the lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534, 0604,
+  0634, 0704, 0737, 0804, this pass). The blocker reaps after
+  19:47Z (11:47 PT); the next tick then probes with one input.
+  Token acquired and released. No new evidence for Issue #689 -
+  no comment posted this pass.
+- Pool note: zombie-027, scout-009 and the pre-reset sweep pair
+  wait behind the lock; nothing can move until the channel clears
+  (a new local user submission on the Mac mini, per the error
+  text). The lock has now persisted about 7 hours since unit 006
+  first hit it at 01:34 PT, with no self-clear observed.
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
