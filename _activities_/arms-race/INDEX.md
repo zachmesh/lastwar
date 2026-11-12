@@ -1,9 +1,9 @@
 ---
 title: Arms Race
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-11T22:32:17Z
+modified: 2026-11-12T03:32:17Z
 level: L1
-version: 1.85.0
+version: 1.86.0
 description: The rotating Arms Race event - checking each phase and completing its tasks, one activity folder for Arms Race knowledge
 status: unverified
 grounded_in:
@@ -91,6 +91,7 @@ grounded_in:
   - source: ticker-2154 arms-race execution record 2026-11-10 2209 queue run (done, Hero Advancement phase met on one Morrison Lv.124 to Lv.125 level-up for 41,500 points, all three point chests and the cumulative counter chest claimed, Base Building phase closed with the Oil Well label still [0/1] and no finished upgrade landed, [E118] login recovery on the second Reconnect tap; record commit b11294e7f on records/2026-11-10)
   - source: ticker-0534 arms-race execution record 2026-11-11 0535 queue run (skipped-needs-owner, Tech Research phase re-verified live, score 0, tier 3 unreachable inside red lines, no rewards claimable, 0004-timer citation withdrawn by correction, no-completion evidence now the 0553 live queue read; record commit a3ef6b276 on records/2026-11-11)
   - source: ticker-1332 arms-race execution record 2026-11-11 1347 queue run (partial, phase never read, Events entry failed twice - (645,62) opens the Mall, labelled Events icon (707,146) took two no-change taps, Mall exit back arrow (316,952); record commit ed2cb2614 on records/2026-11-11)
+  - source: ticker-1843 perception-scout execution record 2026-11-11 1850 queue run (partial, events group, Arms Race Base Building phase read live - score 0, 03:07:30 left, tier 3 at 30,000, only the Building Power path inside the red lines, R4 flag for the arms-race unit; record commit 7b944422a4 on records/2026-11-11)
 ---
 
 
@@ -2308,3 +2309,12 @@ slot. Evidence in
 - Not done - stated plainly: phase, score, thresholds and timer unread; the R4 phase-start judgement for this phase was not made in this unit. Tier-3 target unknown; no scoring work done; no rewards claimed; completion sweep not run. The phase ends about 14:00 PT, minutes after this unit closes, so the next arms-race unit runs in the NEXT phase and reads fresh in any case. The miss for this phase is a late-pickup entry failure, not a red-line verdict.
 - Next-unit instruction: the Events icon must be re-grounded fresh from the base screen - the (645,62) point opens the Mall and is retired as an Events entry. The (707,146) point is the labelled Events icon but took two no-change taps in this unit, so the next unit must change the entry route before tapping it again (foreground click or another screen's Events entry), per R2. If the Mall opens again, exit with the back arrow at (316,952), not (262,958). The 0535 unit's (934,160) windowed-mode grounding does not apply.
 - Result stats: target read live phase and score, meet tier-3 target just enough, claim earned rewards; achieved phase never read, no scoring, no claims; resources_gained none; points 0; costs about 9 minutes; verified no - no live phase read in this unit; blocker_category c; phase unknown, score_before unknown, score_after unknown, device_takeovers 0.
+
+## What the 2026-11-11 1850 scout cross-read added - Base Building phase read live, score 0, 03:07:30 left, tier 3 at 30,000, R4 flag, partial
+
+- Cross-read only, not an arms-race unit execution: the ticker-1843 perception-scout events-group unit (scout-scout-2026-11-10-001, about 18:50 to 19:01 local) walked the Events hub and read the Arms Race page live. Evidence in `_records_/2026-11-11/perception-scout/1850-queue-run.md` (commit 7b944422a4 on records/2026-11-11). No scoring work done, no chest claimed, nothing spent. The arms-race unit arms-race-2026-11-11-1803 (in inbox) judges this phase under R4 from this read.
+- Live read, about 18:53 to 19:00 local: phase Base Building, Contest Segment Lv.29-30. Chest 0/2. Score 0 (star 0). 03:07:30 remaining in the phase at read - the phase ends about 22:00 PT. Tier rewards: 2,360 at 6,250 points; 4,800 at 12,500; 11,800 at 30,000 (tier 3). Scoring paths as displayed: Increase Building Power by 1pt, +1; Use 1-min Construction Speed-up, +10; Buy Packs containing Diamonds (1 Diamond), +30.
+- Ranking row: #2103 [WINA]Zhie688 above; #2110 [AP3x]Bears Lair, segment rank 8, score 0. Calendar button top-right, not opened.
+- R4 flag, from the scout record: score 0 with 3h07m left and tier 3 at 30,000. Of the three paths, only Building Power +1 sits inside the red lines - the speed-up path burns speedup items and the diamond path is a purchase. The arms-race unit judges this phase under R4 from this read; the tier-3 target needs a Building Power gain of 30,000 inside the remaining phase time, and no building completion is evidenced in this read.
+- Task line, same pass (base screen about 18:51): "Build: Oil Well [0/1]" - the same label the 1726 and 1730 sweeps read. It is a datapoint for Issue #595 (Oil Well vs Lv.29 Aircraft Center identity): the queue panel (Lv.29 Aircraft Center) remains the authoritative upgrade identity and the timer disagreement stands; the base-screen "Build:" label is a quest indicator, not a finished upgrade. Commented on #595 by this run.
+- Result stats: target read live phase and score, meet tier-3 target just enough, claim earned rewards; achieved phase read live (Base Building, score 0, thresholds 6250/12500/30000) by cross-read, target judged by the arms-race unit under R4, no rewards claimable in this read; resources_gained none; points 0; costs none (scout unit time); verified partial - phase, score, thresholds and ranking row read live in the scout unit; blocker_category none.
