@@ -3487,3 +3487,25 @@ of 2026-10-28.
 ## 22:39 to about 22:47 - PR catch-all 2239 run, no-op
 
 - Catch-all pass pr-catchall-2026-11-11-2239. No adoption, no fix, no hand-off. PR 665 head 87bf4bc6, mergeable UNKNOWN at fresh read (GitHub recomputing after PR 677 merged), last verified CLEAN by the integrator at 2230, rides the 23:00 batch. PR 425 head 4f41cdd6 after the tool-developer resolved the _tools_/INDEX.md conflict at 2232, now MERGEABLE/CLEAN, still owner-gated (OD-20261108-01 open). PR 677 merged in this pass window. 131 open issues, zero unclassified, 1 new (678, already labeled). Owner-decision issues 132, 154, 335, 514 and 517 all over 24 hours, statements current; issue 514 deadline 2026-11-12 18:00 UTC. Branch-tip day INDEX clean, no markers; action-log 1864 lines, ends in newline. VPS root disk 94 percent, 606M free, still above the 500M flag threshold. Status: no-op. Full detail in pr-catchall/2239-run.md.
+
+## 22:40 to about 22:48 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-2240. Plan staged 12
+  units for the 2026-11-12 10:03/10:30 slots (mail, help,
+  gifts, train, star-ceremony, duel-score at 10:30; harvest,
+  radar, survivors, training, donations, arms-race at 10:03;
+  62 already present, 0 skipped done-current, 1 skipped
+  closed zero-sweep-2026-11-11-1730, 0 reaped, 6 expired -
+  the 1830 units mail, help, gifts, train, star-ceremony,
+  duel-score; roster stale warning, issue #198). Sweep
+  production skipped (22:00 hour); pair verified by status
+  per #610 - both passes in done, both partial (1630
+  ticker-1718 1/23, 1730 ticker-1800 5/23), pair executed,
+  not complete in the full-ledger sense, second night
+  running. Scout diff on the healed 4-pass observation
+  (34 observed, 10 unexplained, same file the 2140 run
+  consumed) applied with 0 counts; 0 withdrawals; no new
+  issues. Branch scout-diff-output still reflects the 1940
+  run's 3-pass observation (29/9) and was not carried, per
+  precedent. Pool inbox 76, claimed 0, done 1629.
+  Status: done. Full detail in queue-planning/2240-run.md.
