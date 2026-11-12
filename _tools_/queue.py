@@ -166,6 +166,12 @@ Usage:
              # fix-up unit per ledger regular for each reset day
              # its windows cover (issue #147) - plan is the early
              # path, sweep the just-in-time one.
+             # refuses the reset-anchored slots when the roster
+             # this copy stages from is stale against main (issue
+             # #606): a stale tree used to stage the old pair
+             # geometry for a whole day after the roster moved,
+             # so plan exits 1 naming the stale regular instead
+             # of minting a wrong-geometry pair.
   queue.py [--root DIR] sweep [--regular zero-sweep]
              [--date YYYY-MM-DD] [--regulars-json FILE]
              # produce the pre-reset sweep pair for one reset day
@@ -194,7 +200,10 @@ Usage:
              # entry carries no fixup_regulars list, an empty
              # list, or an unknown fix-up regular (issue #147),
              # so a pair with no fix-ups cannot silently repeat
-             # the eighth-failure pattern
+             # the eighth-failure pattern; refuses also when
+             # this copy's roster geometry for the regular
+             # differs from main's (issue #606), so a stale
+             # tree cannot stage the old pair either.
   queue.py [--root DIR] sweep-status [--regular zero-sweep]
              [--date YYYY-MM-DD] [--regulars-json FILE]
              # report one reset day's sweep pair by result.status,
@@ -1429,6 +1438,18 @@ def _produce_for_window(root, item, planned_local, window="",
     planned_utc = planned_local.astimezone(timezone.utc)
     planned_iso = iso(planned_utc)
     expected = _sweep_slot_geometry(item, planned_local)
+    if expected is not None:
+        # Roster-freshness gate (issue #606), backstop: the
+        # producers pre-check this before staging anything for
+        # the regular (plan's per-item loop, sweep before its
+        # fix-ups), so a refusal here means a caller staged
+        # without pre-checking. Refuse the slot instead of
+        # minting a wrong-geometry unit, and record the refusal
+        # so the command exits 1 on it.
+        refusal = _roster_geometry_refusal(root, item)
+        if refusal is not None:
+            _ROSTER_FRESH_REFUSALS.append(refusal)
+            return None
     for state in STATES:
         for f in list_units(root, state):
             if f.get("regular") == regular and \
@@ -1695,6 +1716,18 @@ def _drop_done_duplicates(root):
 # ---------------------------------------------------------------------
 
 BRANCH_RECONCILE_REF = "refs/remotes/queue-reconcile"
+ROSTER_FRESH_REF = "refs/queue-fresh/main"
+
+
+# Roster-freshness gate (issue #606): slots staged from a roster
+# this copy has not refreshed against main. _main_roster_offsets
+# caches one fetch per process; _ROSTER_FRESH_REFUSALS collects
+# the regulars the production path refused to stage, so the
+# command can exit 1 on them instead of counting a refused slot
+# as already present.
+_MAIN_ROSTER_OFFSETS_CACHE = {"attempted": False, "offsets": None,
+                              "warning": None, "warned": False}
+_ROSTER_FRESH_REFUSALS = []
 
 
 def _git_remote(root):
@@ -1791,6 +1824,126 @@ def records_branch_done_units(root, branch):
         if unit:
             done.add(unit)
     return done, None
+
+
+def _main_roster_offsets(root):
+    """slots_before_reset_minutes per regular on the main tip.
+
+    Fetches main into a private ref (never a checked-out branch,
+    never the working tree), mirroring records_branch_done_units,
+    and reads _tools_/regulars.json at that ref. Returns
+    (offsets, None) on success - offsets maps regular id to its
+    sorted slot offsets - or (None, warning) when main cannot be
+    read: no git remote, fetch failed, no roster at the ref, or
+    an unparseable roster. A caller that cannot read main warns
+    and stages from the local roster, exactly like the branch
+    reconcile: an unreadable main never blocks the tick, but a
+    readable main whose geometry differs from the local roster
+    is positive proof the staging copy is stale (issue #606).
+    Cached per process: one fetch per invocation, however many
+    windows the run stages.
+    """
+    if _MAIN_ROSTER_OFFSETS_CACHE["attempted"]:
+        return (_MAIN_ROSTER_OFFSETS_CACHE["offsets"],
+                _MAIN_ROSTER_OFFSETS_CACHE["warning"])
+    _MAIN_ROSTER_OFFSETS_CACHE["attempted"] = True
+    remote = _git_remote(root)
+    if remote is None:
+        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+            "no git remote, roster-freshness check skipped")
+        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
+    try:
+        fetch = subprocess.run(
+            ["git", "-C", root, "fetch", "--depth", "1", remote,
+             "+main:%s" % ROSTER_FRESH_REF],
+            capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+            "fetch of main failed, roster-freshness check skipped")
+        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
+    if fetch.returncode != 0:
+        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+            "fetch of main failed, roster-freshness check skipped")
+        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
+    try:
+        show = subprocess.run(
+            ["git", "-C", root, "show",
+             "%s:_tools_/regulars.json" % ROSTER_FRESH_REF],
+            capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+            "read of main roster failed, roster-freshness check "
+            "skipped")
+        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
+    if show.returncode != 0:
+        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+            "read of main roster failed, roster-freshness check "
+            "skipped")
+        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
+    try:
+        main_regs = json.loads(show.stdout)["regulars"]
+    except (ValueError, KeyError, TypeError):
+        _MAIN_ROSTER_OFFSETS_CACHE["warning"] = (
+            "main roster unparseable, roster-freshness check "
+            "skipped")
+        return None, _MAIN_ROSTER_OFFSETS_CACHE["warning"]
+    offsets = {}
+    for entry in main_regs:
+        if not isinstance(entry, dict):
+            continue
+        rid = entry.get("id")
+        if not rid:
+            continue
+        offsets[rid] = _reset_anchored_offsets(entry)
+    _MAIN_ROSTER_OFFSETS_CACHE["offsets"] = offsets
+    return offsets, None
+
+
+def _roster_geometry_refusal(root, item):
+    """Refusal for a reset-anchored regular staged from a stale
+    roster, or None when staging may proceed.
+
+    Issue #606: the Nov 11 pair was staged at the old 16:30/17:30
+    geometry five hours after PR #614 moved the roster to 120/60,
+    because plan ran from a live tree still on a Nov 3 HEAD and
+    nothing compared its roster against main. A readable main
+    whose slot offsets differ from this copy's is positive proof
+    the staging copy is stale: the caller refuses the regular
+    outright - before any fix-up or window is staged, so a
+    refused sweep leaves no orphan fix-ups at the old midpoint
+    for the corrected re-run to duplicate - and names the remedy
+    (update this checkout's _tools_/regulars.json from main).
+    Returns None when the item is not reset-anchored, when main
+    cannot be read (warn once, fail-open like the branch
+    reconcile: a scratch root has no remote at all, and a failed
+    fetch must never block the tick), when main does not name
+    the regular, or when the geometries match.
+    """
+    if not _reset_anchored_offsets(item):
+        return None
+    main_offsets, fresh_warning = _main_roster_offsets(root)
+    if fresh_warning:
+        if not _MAIN_ROSTER_OFFSETS_CACHE["warned"]:
+            print(f"warning: {fresh_warning} (issue #606)",
+                  file=sys.stderr)
+            _MAIN_ROSTER_OFFSETS_CACHE["warned"] = True
+        return None
+    if main_offsets is None:
+        return None
+    main = main_offsets.get(item.get("id"))
+    if main is None:
+        return None
+    local = _reset_anchored_offsets(item)
+    if main == local:
+        return None
+    print(f"refused: {item.get('id')} roster is stale against "
+          f"main - this copy stages {local} minutes before the "
+          f"reset, main stages {main} - update this checkout's "
+          f"_tools_/regulars.json from main before staging "
+          f"(issue #606)",
+          file=sys.stderr)
+    return {"regular": item.get("id"), "local_offsets": local,
+            "main_offsets": main}
 
 
 def drop_branch_done_duplicates(root, done_ids, branch):
@@ -1895,6 +2048,17 @@ def cmd_plan(args):
     for item in regs:
         current = cycle_start_local(item, now_local)
         windows = plan_windows(item, now_local, horizon_end)
+        # Roster-freshness gate (issue #606): refuse the whole
+        # regular before any fix-up or window is staged, so a
+        # refused pair leaves no orphan fix-ups at the old
+        # midpoint for the corrected re-run to duplicate. The
+        # helper returns None for a non-reset-anchored item, so
+        # this runs for every regular and only ever fires for
+        # a reset-anchored one.
+        refusal = _roster_geometry_refusal(args.root, item)
+        if refusal is not None:
+            _ROSTER_FRESH_REFUSALS.append(refusal)
+            continue
         # Pre-reset fix-ups (issue #147): a reset-anchored regular
         # carrying fixup_regulars stages one fix-up unit per
         # ledger regular for each reset day its windows cover,
@@ -1959,9 +2123,10 @@ def cmd_plan(args):
                       "skipped_done_current": skipped_done,
                       "skipped_closed": skipped_closed,
                       "roster_stale_regulars": stale_roster,
+                      "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
                       "aged_p1_windowed": aged_p1_windowed},
                      ensure_ascii=False))
-    return 0
+    return 1 if _ROSTER_FRESH_REFUSALS else 0
 
 
 def _stage_sweep_fixups(root, regs, item, local_date, closed_ids=None):
@@ -2106,6 +2271,14 @@ def cmd_sweep(args):
               f"slots_before_reset_minutes) - a wall-clock pair "
               f"would repeat the issue #147 defect")
         return 1
+    # Roster-freshness gate (issue #606): refuse before any
+    # fix-up is staged, so a refused sweep leaves no orphan
+    # fix-ups at the old midpoint for the corrected re-run to
+    # duplicate.
+    refusal = _roster_geometry_refusal(args.root, item)
+    if refusal is not None:
+        _ROSTER_FRESH_REFUSALS.append(refusal)
+        return 1
     if args.date:
         try:
             year, month, day = (int(x) for x in args.date.split("-"))
@@ -2219,11 +2392,12 @@ def cmd_sweep(args):
         "regular": args.regular, "date": local_date.isoformat(),
         "reset_at": iso(reset_local.astimezone(timezone.utc)),
         "produced": produced, "already_present": already,
+        "roster_fresh_refusals": _ROSTER_FRESH_REFUSALS,
         "fixups_produced": fix["produced"],
         "fixups_already_present": fix["already_present"],
         "fixups_skipped_closed": fix["skipped_closed"]},
         ensure_ascii=False))
-    return 0
+    return 1 if _ROSTER_FRESH_REFUSALS else 0
 
 
 def cmd_sweep_status(args):
