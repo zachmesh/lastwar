@@ -2969,3 +2969,46 @@ of 2026-10-28.
   No merges; no sync-back owed; no Slack sync (silent
   run). Status: done.
   Full detail in pr-integration/1800-run.md.
+
+## 17:57 to about 18:15 - Ticker pass ticker-1800, zero-sweep seq 2
+
+- Own PRs first: records PR 655 (2026-11-11, post-1500 batch)
+  was CONFLICTING with no comments; resolved before game work
+  by merging main into the branch in a VPS worktree (merge
+  e535c029a, pushed, verified with ls-remote). The conflict
+  was _queue_/inbox/trucks-2026-11-11-1457.md: main carries a
+  copy with raw conflict markers from an earlier bad merge;
+  resolved by taking the clean branch version. The corrupted
+  file on main is filed as issue #661 from this pass.
+- Zero-sweep unit zero-sweep-2026-11-11-1730 partial
+  (by-design): base HUD live (power 149,218,973, food
+  693.3M, iron 1.0G, coin 136.7M, stamina 82); food, iron
+  and coin bubbles standing; mail Alliance and Event gifts
+  unclaimed with red dots on System, Regular and In-app
+  Purchases; Events badge 2 - Glacieradon live 1d 23:58:15
+  left, next wave in 00:52:52, Store red dot. Four fix-up
+  units raised to priority 1: harvest-2026-11-11-1803,
+  mail-2026-11-11-1830, events-2026-11-11-1857,
+  donations-2026-11-11-1803. Trucks 1/5 and 0/4 from the
+  seq-1 sweep stand; trucks-2026-11-11-1457 is already
+  priority 1. Full detail in
+  daily-activities/1730-queue-run.md.
+
+## 18:05 to about 18:13 - Ticker pass ticker-1800, radar unit partial
+
+- Radar unit radar-2026-11-11-1403 partial: the radar screen
+  was never reached. Duel day 4, radar posture stack
+  (complete, do not claim) per tools/duel.py; the unit
+  file's "duel day 3 - radar release" window text is stale.
+  The base left-column shortcut slot opened Special Forces
+  at normalized 47,242 and, after a metadata re-read, the
+  dish slot at 62,727 landed inside the Special Forces /
+  Tech flow instead of the radar - the rotating shortcut
+  has moved since its 2026-10-29 grounding. Exited cleanly
+  to base, nothing claimed, nothing spent. Next radar unit
+  must re-ground the dish icon from a fresh base screenshot
+  and verify the radar screen before any work. Incidental
+  live read of the TECH screen: Development 84%, Economy
+  98%, Hero 68%, Units 77%, Squad 1 Max Level, Squad 2 11%,
+  Squad 4 0%, Alliance Duel Max Level, Intercity Truck 95%.
+  Full detail in radar-tasks/1805-queue-run.md.
