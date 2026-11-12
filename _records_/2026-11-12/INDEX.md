@@ -405,3 +405,20 @@ of 2026-10-28.
 ## 03:00 to about 03:08 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-12-0300. BATCH pass per the checker (plain and merge-aware both due, 03:00-04:00 window, first pass in the window): merged records PR 681 (2026-11-11 post-2300 batch, 16 commits, merge commit 0dc85d79); records PR 685 (2026-11-12, 57 commits) conflicts with the new main (21 files, action-log plus 2026-11-11 queue files), commented on the PR, not merged, branch-side resolution for the 07:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open, age 4 days), re-verified CLEAN against new main 0dc85d79, one re-verification comment posted. Local main fast-forwarded to 0dc85d79. Merges synced to the owner Slack DM. No arrivals during the pass; sweep clean. Status: done. Full detail in pr-integration/0300-run.md.
+
+
+## 03:15 to about 03:28 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0315. NON-batch
+  pass per the checker (plain due, merge-aware not due:
+  PR #681 already merged 03:02:11 PT in this 03:00-04:00
+  window, next batch 07:00): no records merge. Records PR
+  685 (2026-11-12, 59 commits) still conflicts with main
+  0dc85d79 at new head 7c30af31 (24 files, up from 21 -
+  two rename/rename pairs), updated conflict comment
+  posted, branch-side resolution for the 07:00 batch.
+  Tools PR 425 still owner-gated (OD-20261108-01 open,
+  age 4 days), re-verified CLEAN against unchanged main
+  0dc85d79, no new comment. No merges, no Slack sync
+  (silent run). No arrivals during the pass; sweep clean.
+  Status: done. Full detail in pr-integration/0315-run.md.
