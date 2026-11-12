@@ -428,3 +428,21 @@ of 2026-10-28.
 
 - Ticker pass ticker-0304. Own PRs first: records PR 685 went CONFLICTING after PR 681 merged at 03:02 PT; resolved branch-side before any game work by merging main 0dc85d79 into records/2026-11-12 (21 files; _queue_/done 2026-11-11 files take main as authoritative; stale inbox duplicates scout-006 and zombie-023 removed; action-log union of both tails). The branch tip moved during the pass (integrator 0300 record); merged in at delivery.
 - Zombie-invasion unit 025 (chain zombie-2026-11-10 seq 25) failed: device input blocked (Issue 689), fourth consecutive ticker pass. Three fresh computer sessions (cc-703, cc-704, cc-705) all failed at the first input with outcome_unknown; a new local user submission is required before input can resume. Game verified live on the base screen by read-only snap (Total Power 149,218,973, coin 145.7M HUD, stamina 84, unchanged since 01:34). No kills, no claims, nothing spent. Control-lock blocker recorded at completion (rule R9, PR #692) - the pool pauses until the lock ages out (4 hours) or input succeeds; successor 026 enqueued in the same chain. Tracker untouched (failed unit). Token released. Status: failed. Full detail in zombie-invasion/0320-queue-run.md.
+
+
+## 03:30 to about 03:35 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0330. NON-batch
+  pass per the checker (plain due, merge-aware not due:
+  PR #681 already merged 03:02:11 PT in this 03:00-04:00
+  window, next batch 07:00): no records merge. Records PR
+  685 (2026-11-12, 66 commits) conflict resolved branch-side
+  by the author (merged main 0dc85d79 in, 21 files;
+  action-log union), re-verified CLEAN against unchanged
+  main 0dc85d79, verification comment posted, awaits the
+  07:00 batch. Tools PR 425 still owner-gated (OD-20261108-01
+  open, age 4 days), re-verified CLEAN against unchanged
+  main 0dc85d79, re-verification comment posted. No merges,
+  no Slack sync (silent run). No arrivals during the pass;
+  sweep clean. Status: done. Full detail in
+  pr-integration/0330-run.md.
