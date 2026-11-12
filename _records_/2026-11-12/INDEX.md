@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-12
 created: 2026-11-12T08:03:50Z
-modified: 2026-11-12T08:03:50Z
+modified: 2026-11-12T08:36:00Z
 level: L0
 version: 1.0.0
-description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; records PR 681 re-verified CLEAN at new tip 11ac21dc, awaiting the 03:00 batch; tools PR 425 owner-gated, re-verified CLEAN against new main 5d2b9d7e, no new comment; records/2026-11-12 branch created from main with this pass as its first commits
+description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; records PR 681 re-verified CLEAN at new tip 11ac21dc, awaiting the 03:00 batch; tools PR 425 owner-gated, re-verified CLEAN against new main 5d2b9d7e, no new comment; records/2026-11-12 branch created from main with this pass as its first commits; the 0004 queue ticker pass with 1 unit partial (zombie-invasion)
 status: unverified
 ---
 
@@ -42,3 +42,23 @@ of 2026-10-28.
   5d2b9d7e, no new comment (PR unchanged since the 2345
   review). No Slack sync. Status: done. Full detail in
   pr-integration/0015-run.md.
+
+## 00:04 to about 00:32 - Ticker pass ticker-0004, zombie-invasion unit partial
+
+- Own PRs first: records PR 681 (2026-11-11, post-2300 batch)
+  verified OPEN and mergeable (CLEAN) with no comments,
+  awaiting the 03:00 batch; tools PR 425 is owned by
+  lastwar-tool-developer, not this job. No question
+  addressed to this job.
+- Zombie Invasion unit 023 (ticker-0004, partial, chain
+  continues): event verified live (Glacieradon, 1d 17:37
+  left, next wave about 00:56); stamina refilled with one
+  50-stamina item (666 to 665, stamina 8 to 58 derived);
+  a Lv.10 target was found (card read live, despawn
+  11:28) but not dispatched — the unit cap arrived while
+  the attack button was being located, and one mis-tap
+  opened an ally base profile instead. No kills, no LOOT
+  rows claimed, coin 143.4M HUD unchanged, Store not
+  visited, medals not re-measured. Successor 024 enqueued
+  to start now. Full detail in
+  zombie-invasion/0030-queue-run.md.
