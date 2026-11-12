@@ -1521,3 +1521,6 @@ of 2026-10-28.
   paths); pushed to records/2026-11-12, verified with git
   ls-remote; new post-batch records PR opened after push
   (PR 700 merged at the 11:00 batch).
+## 11:26 to about 11:33 - PR integration 1126 run, NON-batch (checker merge-aware: PR #700 already merged in the 11:00 window)
+
+- Integrator pass pr-integration-2026-11-12-1126. NON-batch pass per the checker (plain due exit 0, 11:00 window, 33 minutes left at pass start; merge-aware due --merges exit 1, PR #700 already merged 11:09:48 PT in this window, next batch 15:00 PT). Records PR 708 (2026-11-12) re-verified CLEAN at head 136be4c6a (merge-tree 60374999), awaits the 15:00 batch; NOT merged. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN vs new main 22601972, one re-verification comment posted. No merges, no new records PR, no local sync needed. Silent run - no Slack sync, no chat report. Sweep clean. Status: done. Full detail in pr-integration/1126-run.md.
