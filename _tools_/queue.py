@@ -28,14 +28,28 @@ Usage:
              # instead of the worktree's, so a pass that delivers
              # via a worktree cannot strand a unit on the records
              # branch - the next tick reads the live pool only.
+             # enqueue refuses a chain head when the chain already
+             # has a staged unit under another id (issue #664):
+             # the tracker can still show a regular due while its
+             # head executes, and the (regular, planned_for)
+             # invariant cannot catch the second head because it
+             # carries an empty planned_for.
   queue.py [--root DIR] list [--state inbox|claimed|done]
-  queue.py [--root DIR] validate
+  queue.py [--root DIR] validate [--ref GIT-REF]
              # pool integrity (issue #441): exit 0 when every unit
              # file is free of conflict markers, duplicate
              # top-level frontmatter keys, a unit id that does not
              # match its file name, and a missing unit id; exit 1
              # listing each problem, for a pre-commit / pre-push
              # hook and for the sync/next guard below.
+             # --ref checks the committed _queue_ tree at a git
+             # ref instead of the working tree, with no checkout
+             # (issue #661): a merge resolution is checked with
+             # plain validate in the worktree before committing
+             # it, a records PR is gated with validate --ref
+             # <branch-tip> before it merges to main, and the
+             # retro loop-health check is validate --ref main.
+             # Exit 2 when the ref cannot be read at all.
   queue.py [--root DIR] next [--budget-minutes 15]
              # next refuses (exit 1) on a corrupt pool instead of
              # handing out a unit no file on disk matches.
@@ -494,6 +508,38 @@ def _frontmatter_top_keys(text):
     return keys, True
 
 
+def _validate_unit_text(rel, text):
+    """Pool-integrity problems in one unit file's text, as strings.
+
+    Shared by validate_pool (working tree) and validate_ref (a git
+    ref): the same checks must answer on both, so a branch tip is
+    judged by exactly the rule the working tree is judged by.
+    """
+    problems = []
+    for lineno, line in enumerate(text.splitlines(), 1):
+        if line.startswith(CONFLICT_MARKERS):
+            problems.append(
+                f"{rel}:{lineno}: unresolved conflict marker")
+    keys, has_fm = _frontmatter_top_keys(text)
+    if not has_fm:
+        problems.append(f"{rel}: no frontmatter block")
+        return problems
+    seen = set()
+    for key in keys:
+        if key in seen:
+            problems.append(
+                f"{rel}: duplicate top-level key {key!r}")
+        seen.add(key)
+    fields, _ = parse_frontmatter(text)
+    unit = fields.get("unit")
+    if not unit:
+        problems.append(f"{rel}: missing unit id")
+    elif f"{unit}.md" != os.path.basename(rel):
+        problems.append(
+            f"{rel}: unit id {unit!r} does not match file name")
+    return problems
+
+
 def validate_pool(root):
     """Pool-integrity problems in the unit files, as strings.
 
@@ -523,31 +569,94 @@ def validate_pool(root):
                 problems.append(f"{state}/{name}: unreadable: {exc}")
                 continue
             rel = f"{state}/{name}"
-            for lineno, line in enumerate(text.splitlines(), 1):
-                if line.startswith(CONFLICT_MARKERS):
-                    problems.append(
-                        f"{rel}:{lineno}: unresolved conflict marker")
-            keys, has_fm = _frontmatter_top_keys(text)
-            if not has_fm:
-                problems.append(f"{rel}: no frontmatter block")
-                continue
-            seen = set()
-            for key in keys:
-                if key in seen:
-                    problems.append(
-                        f"{rel}: duplicate top-level key {key!r}")
-                seen.add(key)
-            fields, _ = parse_frontmatter(text)
-            unit = fields.get("unit")
-            if not unit:
-                problems.append(f"{rel}: missing unit id")
-            elif f"{unit}.md" != name:
-                problems.append(
-                    f"{rel}: unit id {unit!r} does not match file name")
+            problems.extend(_validate_unit_text(rel, text))
     return problems
 
 
+def validate_ref(root, ref):
+    """Pool-integrity problems in the _queue_ tree at a git ref.
+
+    Issue #661: merge dd865af64b ("Merge main into
+    records/2026-11-10 to reconcile PR #615 queue conflicts")
+    committed a rename/add conflict unresolved, and the three
+    conflict-marker unit files it created (trucks, events,
+    secrets 2026-11-11-1457) rode the records PR onto main,
+    because validate only ever ran on a working tree: sync and
+    next guard the ticker's own pool, but no check ran on the
+    merge resolution before it was committed, and no check ran
+    on the branch tip before the records PR merged. This runs
+    the same per-file checks as validate_pool against the
+    committed tree, with no checkout: the pre-merge gate is
+    `validate --ref <branch-tip>` before `gh pr merge`, the
+    merge-resolution check is plain `validate` in the worktree
+    before committing the resolution, and the retro
+    loop-health check is `validate --ref main`. Returns
+    (problems, error): error is a short reason string when the
+    ref cannot be read at all (unknown ref, not a repo), and
+    None otherwise; problems is [] on a clean tree.
+
+    The tree is listed whole and filtered in Python: this
+    tool's root is the _queue_ subdir, not the repo top, so a
+    `_queue_` pathspec would be read relative to the caller's
+    working directory and silently match nothing - and ls-tree
+    names are cwd-relative too, so the listing needs
+    --full-name for the repo-root-relative filter below to
+    hold (same pitfall as records_branch_done_units).
+    """
+    try:
+        listing = subprocess.run(
+            ["git", "-C", root, "ls-tree", "-r", "--full-name",
+             "--name-only", ref],
+            capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError) as exc:
+        return [], f"cannot list tree at {ref!r}: {exc}"
+    if listing.returncode != 0:
+        detail = [line for line in (listing.stderr or "").splitlines()
+                  if line.strip()]
+        reason = detail[-1].strip() if detail else "git ls-tree failed"
+        return [], f"cannot list tree at {ref!r}: {reason[:120]}"
+    problems = []
+    for path in listing.stdout.splitlines():
+        name = path.strip()
+        parts = name.split("/")
+        if len(parts) != 3 or parts[0] != "_queue_":
+            continue
+        state, fname = parts[1], parts[2]
+        if state not in STATES or not fname.endswith(".md"):
+            continue
+        if fname == TOKEN_NAME:
+            continue
+        try:
+            shown = subprocess.run(
+                ["git", "-C", root, "show", f"{ref}:{name}"],
+                capture_output=True, text=True, timeout=30)
+        except (OSError, subprocess.SubprocessError) as exc:
+            problems.append(f"{state}/{fname}: unreadable at "
+                            f"{ref}: {exc}")
+            continue
+        if shown.returncode != 0:
+            problems.append(f"{state}/{fname}: unreadable at "
+                            f"{ref}: git show failed")
+            continue
+        rel = f"{state}/{fname}"
+        problems.extend(_validate_unit_text(rel, shown.stdout))
+    return problems, None
+
+
 def cmd_validate(args):
+    if getattr(args, "ref", ""):
+        problems, error = validate_ref(args.root, args.ref)
+        if error is not None:
+            print(error, file=sys.stderr)
+            return 2
+        for problem in problems:
+            print(problem)
+        if problems:
+            print(f"pool invalid at {args.ref}: {len(problems)} "
+                  f"problem(s) (issue #661)")
+            return 1
+        print(f"pool valid at {args.ref}")
+        return 0
     problems = validate_pool(args.root)
     for problem in problems:
         print(problem)
@@ -2403,6 +2512,65 @@ def _sweep_enqueue_refusal(args):
     return None
 
 
+def _chain_head_refusal(root, regular, chain_id, chain_seq):
+    """Refusal message when a chain head would duplicate work, or None.
+
+    Issue #664: the 16:54 sync minted a second scout chain head
+    (scout-scout-2026-11-10-001) while the plan-staged head
+    (scout-2026-11-10-1800) was still claimed - the tracker still
+    showed scout due mid-execution. The (regular, planned_for)
+    invariant could not catch it: the staged head carries
+    planned_for 2026-11-11T02:00:00Z while the enqueued head
+    carries an empty planned_for, and the staged head carries no
+    chain_id at all, so the literal same-chain_id check the issue
+    suggests would not have caught this incident either. Two
+    cases are refused loudly, scanning inbox, claimed and done:
+    - the chain already has units but none carries a sequence
+      number, so this mint would restart numbering at seq 1;
+    - no unit carries the chain id, but a unit id starts with
+      "<chain_id>-" - the plan-staged head for this chain under
+      its window id (enqueue chain ids follow the
+      "<regular>-<date>" convention, and plan mints
+      "<regular>-<date>-<HHMM>" for the same window).
+    A chain that already has numbered units is a continuation,
+    not a head, and passes: successors keep minting seq N+1. A
+    different chain of the same regular on the same date passes
+    too - its staged units do not carry this chain id as a
+    prefix (scout-discovery-2026-11-10 is not a prefix of
+    scout-2026-11-10-1800), so the discovery head is not blocked
+    by the base head. Limitation: a chain id that does not follow
+    the "<regular>-<date>" convention (scout-midday seeds
+    "scout-mid-<date>") cannot match its plan-staged head by
+    prefix; renaming it to the convention would extend the guard
+    to it.
+    """
+    same_chain = []
+    namesakes = []
+    prefix = chain_id + "-"
+    for state in STATES:
+        for f in list_units(root, state):
+            if f.get("chain_id") == chain_id:
+                same_chain.append((state, f.get("unit")))
+            elif (f.get("unit") or "").startswith(prefix):
+                namesakes.append((state, f.get("unit")))
+    if same_chain and chain_seq == 1:
+        detail = ", ".join(f"{u} ({s})" for s, u in same_chain)
+        return (f"refused: chain {chain_id} already has units "
+                f"({detail}) but none carries a sequence number - "
+                f"a seq 1 unit would restart the numbering; "
+                f"withdraw the unsequenced units and re-run "
+                f"(issue #664)")
+    if not same_chain and namesakes:
+        detail = ", ".join(f"{u} ({s})" for s, u in namesakes)
+        return (f"refused: chain {chain_id} already has a staged "
+                f"unit under another id ({detail}) - the head is "
+                f"already in the pool, so minting a second head "
+                f"would duplicate it; the (regular, planned_for) "
+                f"invariant cannot catch this because the new head "
+                f"carries an empty planned_for (issue #664)")
+    return None
+
+
 def cmd_enqueue(args):
     # Live-pool production (issue #598): resolve the pool first,
     # before the wrong-root gate and before anything is read or
@@ -2456,6 +2624,11 @@ def cmd_enqueue(args):
                           f"{args.regular}")
                     return 1
         chain_seq = chain_seq_next(root, args.chain_id)
+        refusal = _chain_head_refusal(
+            root, args.regular, args.chain_id, chain_seq)
+        if refusal is not None:
+            print(refusal)
+            return 1
         unit = f"{args.regular}-{args.chain_id}-{chain_seq:03d}"
     else:
         unit = f"{args.regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}"
@@ -2839,6 +3012,57 @@ def points_without_achieved(stats):
             and "achieved" not in stats)
 
 
+def points_duplicates_achieved_string(stats, regular=None):
+    """True when stats.points copies a total named in a string achieved (issue #672).
+
+    points is score gained in this unit, not a running total
+    read: a duel total read belongs in achieved only. The
+    equality detector cannot see the copy when achieved is a
+    descriptive string instead of a number - _stat_number
+    returns None for the string, so the comparison never
+    fires - and the no-achieved detector cannot fire either,
+    because the achieved key is present. The #672 variant is
+    that hole: duel-score-2026-11-10-2230 wrote points
+    1650000 beside achieved "personal total 1650000 read
+    live, gap 1950000", and the retro summed 1,653,678 as
+    points gained against an honest 3,678. This detector
+    compares points against every number named in the
+    achieved string; a match means points is the running
+    total named there, not score gained in the unit.
+
+    A string achieved that names no number equal to points
+    stays counted: daily-missions 2026-10-31-1900 carries
+    achieved "all-claimable-claimed" with points 40 - the
+    genuine 110-to-150 activity gain in its summary - and a
+    string naming only a different figure (a gap, a
+    before/after read) is not a copy either. Comma-grouped
+    totals ("1,650,000") match the same way. Radar is exempt,
+    mirroring points_duplicates_achieved. Zero points is not
+    flagged: a unit that gained nothing is not a total copy.
+    This is a warning, never a block.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular == "radar":
+        return False
+    points = _stat_number(stats.get("points"))
+    if points is None or points == 0:
+        return False
+    achieved = stats.get("achieved")
+    if not isinstance(achieved, str):
+        return False
+    if _stat_number(achieved) is not None:
+        return False
+    for token in re.findall(r"[\d,]+(?:\.\d+)?", achieved):
+        try:
+            number = float(token.replace(",", ""))
+        except ValueError:
+            continue
+        if number == points:
+            return True
+    return False
+
+
 def points_is_progress_delta(stats, regular=None):
     """True when stats.points is a progress-bar delta on a gifts unit (issue #300).
 
@@ -2993,6 +3217,8 @@ def cmd_complete(args):
     missing = missing_stats_keys(args.status, stats)
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
+    points_str_ach = points_duplicates_achieved_string(
+        stats, fields.get("regular"))
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
     points_exp = points_is_expected_score(stats, fields.get("regular"))
     achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
@@ -3016,6 +3242,8 @@ def cmd_complete(args):
                             if points_dup else [])
                            + (["points without achieved"]
                               if points_noach else [])
+                           + (["points duplicates achieved in string"]
+                              if points_str_ach else [])
                            + (["points is progress delta"]
                               if points_prog else [])
                            + (["points is expected score"]
@@ -3077,6 +3305,12 @@ def cmd_complete(args):
               f"and no stats.achieved - points is score gained "
               f"in this unit, not a running total read; a screen "
               f"total belongs in achieved only")
+    if points_str_ach:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"equal to a total named in its string "
+              f"stats.achieved - points is score gained in "
+              f"this unit, not a running total read; a duel "
+              f"total read belongs in achieved only")
     if points_prog:
         print(f"warning: {args.unit} closes with stats.points "
               f"on a gifts unit - points is score gained in "
@@ -3662,6 +3896,8 @@ def gather_stats(root):
               "stats_points_dup": 0, "stats_points_dup_units": [],
               "stats_points_no_achieved": 0,
               "stats_points_no_achieved_units": [],
+              "stats_points_dup_string": 0,
+              "stats_points_dup_string_units": [],
               "stats_blocker_not_enum": 0,
               "stats_blocker_not_enum_units": [],
               "stall_expired": 0, "stall_expired_units": [],
@@ -3769,6 +4005,12 @@ def gather_stats(root):
                     report["stats_points_no_achieved"] += 1
                     report["stats_points_no_achieved_units"].append(
                         f.get("unit"))
+                if points_duplicates_achieved_string(
+                        dup_stats if isinstance(dup_stats, dict)
+                        else {}, regular):
+                    report["stats_points_dup_string"] += 1
+                    report["stats_points_dup_string_units"].append(
+                        f.get("unit"))
                 if blocker_category_not_enum(
                         dup_stats if isinstance(dup_stats, dict)
                         else {}):
@@ -3839,6 +4081,10 @@ def cmd_stats(args):
               f"{report['stats_points_no_achieved']}")
         print("  stats_points_no_achieved_units: "
               f"[{', '.join(report['stats_points_no_achieved_units'])}]")
+        print(f"  stats_points_dup_string: "
+              f"{report['stats_points_dup_string']}")
+        print("  stats_points_dup_string_units: "
+              f"[{', '.join(report['stats_points_dup_string_units'])}]")
         print(f"  stats_blocker_not_enum: "
               f"{report['stats_blocker_not_enum']}")
         print("  stats_blocker_not_enum_units: "
@@ -3903,6 +4149,10 @@ def cmd_stats(args):
             print(f"  stats points without achieved: "
                   f"{report['stats_points_no_achieved']} "
                   f"({', '.join(report['stats_points_no_achieved_units'])})")
+        if report["stats_points_dup_string"]:
+            print(f"  stats points duplicates achieved in string: "
+                  f"{report['stats_points_dup_string']} "
+                  f"({', '.join(report['stats_points_dup_string_units'])})")
         if report["stats_blocker_not_enum"]:
             print(f"  stats blocker_category not in enum: "
                   f"{report['stats_blocker_not_enum']} "
@@ -3971,6 +4221,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_list)
 
     p = sub.add_parser("validate")
+    p.add_argument("--ref", default="")
     p.set_defaults(fn=cmd_validate)
 
     p = sub.add_parser("next")

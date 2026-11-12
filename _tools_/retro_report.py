@@ -122,7 +122,24 @@ What is counted, per section 14 -
     against a dispatch/plunder-count achieved). Such points
     are counted under points_expected_excluded, never
     silently dropped, and queue.py complete warns at close
-    time so future trucks closings carry no points key.
+    time so future trucks closings carry no points key. A
+    sixth exception (issue #672): a nonzero points value
+    beside a descriptive string stats.achieved that names
+    the same total is not summed either - the string form
+    defeats both the equality detector (the string is not a
+    number, so the comparison never fires) and the
+    no-achieved detector (the key is present): duel-score
+    2026-11-10-2230 wrote points 1,650,000 beside achieved
+    "personal total 1650000 read live, gap 1950000", and the
+    window summed 1,653,678 as points gained against an
+    honest 3,678. Such points are counted under
+    points_string_achieved_excluded, never silently dropped,
+    and queue.py complete warns at close time so future
+    closings carry the total in achieved only. A string
+    achieved that names no number equal to points stays
+    counted: daily-missions 2026-10-31-1900 carries achieved
+    "all-claimable-claimed" with points 40, the genuine
+    activity gain in its summary.
 
 Data sources are only inside the repository - the done pool at
 _queue_/done and, as a fallback, the day INDEX files in
@@ -170,7 +187,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
-TOOL_VERSION = "1.5.4"
+TOOL_VERSION = "1.5.5"
 
 
 def _load_queue():
@@ -483,6 +500,8 @@ def _empty_bucket():
         "points_units": 0,
         "points_dup_excluded": 0,
         "points_dup_excluded_units": [],
+        "points_string_achieved_excluded": 0,
+        "points_string_achieved_excluded_units": [],
         "points_no_achieved_excluded": 0,
         "points_no_achieved_excluded_units": [],
         "points_progress_excluded": 0,
@@ -543,12 +562,16 @@ def _feed(bucket, unit):
     bucket["resources_unparsed"].extend(unparsed)
     points = _num(stats.get("points"))
     dup = getattr(Q, "points_duplicates_achieved", None)
+    str_ach = getattr(Q, "points_duplicates_achieved_string", None)
     noach = getattr(Q, "points_without_achieved", None)
     prog = getattr(Q, "points_is_progress_delta", None)
     exp = getattr(Q, "points_is_expected_score", None)
     if points is not None and dup is not None and dup(stats, unit.get("regular")):
         bucket["points_dup_excluded"] += 1
         bucket["points_dup_excluded_units"].append(unit["unit"])
+    elif points is not None and str_ach is not None and str_ach(stats, unit.get("regular")):
+        bucket["points_string_achieved_excluded"] += 1
+        bucket["points_string_achieved_excluded_units"].append(unit["unit"])
     elif points is not None and noach is not None and noach(stats):
         bucket["points_no_achieved_excluded"] += 1
         bucket["points_no_achieved_excluded_units"].append(unit["unit"])
@@ -632,6 +655,10 @@ def _summarise(bucket):
         "points_dup_excluded": bucket["points_dup_excluded"],
         "points_dup_excluded_units": bucket[
             "points_dup_excluded_units"],
+        "points_string_achieved_excluded": bucket[
+            "points_string_achieved_excluded"],
+        "points_string_achieved_excluded_units": bucket[
+            "points_string_achieved_excluded_units"],
         "points_no_achieved_excluded": bucket[
             "points_no_achieved_excluded"],
         "points_no_achieved_excluded_units": bucket[

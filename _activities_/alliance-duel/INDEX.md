@@ -1,8 +1,8 @@
 ---
 title: Alliance Duel
 created: 2026-10-25T20:46:00Z
-modified: 2026-11-11T11:32:17Z
-version: 1.42.0
+modified: 2026-11-12T05:32:17Z
+version: 1.43.0
 description: The weekly Alliance Duel event and its Alliance Star Ceremony - themed days, points, reward chests and the weekly ceremony claim
 grounded_in:
   - source: task intaken at the owner direction on 2026-10-25, details to be confirmed in game the same day
@@ -190,7 +190,7 @@ decision (deferred, not ruled non-goals).
 - Each unit is read-only - open the duel panel from the gold VS
   medallion, read the personal daily total, and close with the
   unit result stats target 3600000, achieved set to the total
-  read live, and the gap target minus achieved. (2026-11-10 0435 update: stats.points for a read-only duel-score unit is 0 - the personal total is a read, not a score gained inside the unit; the 0435 unit was first completed with points 1,650,000 and the queue tool corrected it to 0. The achieved figure still carries the total read live. Same family as the gifts A-2026-11-09-01 rule: never write a read/progress figure into points.) Fragment scores
+  read live, and the gap target minus achieved. (2026-11-10 0435 update: stats.points for a read-only duel-score unit is 0 - the personal total is a read, not a score gained inside the unit; the 0435 unit was first completed with points 1,650,000 and the queue tool corrected it to 0. The achieved figure still carries the total read live. Same family as the gifts A-2026-11-09-01 rule: never write a read/progress figure into points.) (2026-11-11 retro action A-2026-11-11-01, Issues #672, Refs #300, #609: the rule is restated - never write a running total into stats.points; points holds live-read scored gains only, 0 for a read-only unit; a running-total read belongs in achieved as a string, never in points. Instance: duel-score-2026-11-10-2230 wrote points 1,650,000 with achieved a non-numeric string ('personal total 1650000 read live, gap 1950000'), evading the tool's points == achieved dup-exclusion and inflating the window points_total from 3,678 to 1,653,678. The 0435 precedent already stated the rule; the 2230 unit repeated the error in a new shape - the exclusion keys on points == achieved, and a string achieved slips past it. Verification: the next retro's window points total contains no unit whose points is a running-total read. Recheck: 2026-11-12 retro.) Fragment scores
   never substitute, and the Duel Progress mail is a cross-check
   only.
 - The last unit executed before the about-18:00 duel rollover
@@ -1085,3 +1085,9 @@ Measured in the 0108 star-ceremony unit (ticker-0104, window mode
 - Not the day closing read: the day rolls over about 18:00, and the day still has about 15.6 hours to run at the 02:23 read. The closing read is still owed from the last duel-score unit before about 18:00 (retro action A-2026-11-10-06, Issue #609; recheck 2026-11-11 retro).
 - No grinding was done: scoring by spending resources or speedups is the owner's decision, not part of a score read. No diamonds, money, speedups or stamina spent.
 - Result stats: target 3600000, achieved 1650000, gap 1950000, resources_gained none, costs about 1 minute (0224) and 1 minute (0225) play, verified yes, blocker_category none, points 0 (read-only units; the personal total is a read, not a score gained inside the unit), device_takeovers 0.
+
+## What the 2026-11-11 retro added for duel tracking - running-total rule restated, day-3 closing read missed, Issues #672 and #673
+
+- 2026-11-11 retro action A-2026-11-11-01 (Issues #672, Refs #300, #609): duel-score points - never write a running total into stats.points; points holds live-read scored gains only, and a running-total read belongs in achieved as a string, never in points. The 1,650,000 figure in the duel-score-2026-11-10-2230 unit is the instance. Tracked on the new duel-points issue #672 (class tooling/records). Verification: the next retro's window points total contains no unit whose points is a running-total read. Recheck: 2026-11-12 retro. Folded into the duel-score points bullet above; the 0435 precedent already stated the rule, the 2230 unit is the repeat in a new shape.
+- Nov 11 day-3 zero reads (Issue #673, records class): all 3 duel-score units expired, no duel total read at all, day-3 total unknown - the second day without a closing read. The A-2026-11-10-06 closing-read verification FAILED for Nov 11: the last live read was the day-2 total 1,650,000 (Nov 10, read twice), and Nov 11's units never ran. Target: at least one live duel total read per duel day, including a closing read before the 19:00 reset.
+- No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.
