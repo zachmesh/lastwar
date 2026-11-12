@@ -682,3 +682,15 @@ of 2026-10-28.
   within 3.5 hours. Successor 008 enqueued; the pass stopped
   after this unit rather than cascading failed units. Full
   detail in perception-scout/0504-queue-run.md.
+- Integrator pass pr-integration-2026-11-12-0530. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00): no merges. Records PR 685
+  (2026-11-12, head 9385757) re-verified CLEAN against
+  unchanged main 2f46eea9a (merge-tree e5f5bdaf),
+  verification comment posted, awaits the 07:00 batch.
+  Tools PR 425 still owner-gated (OD-20261108-01 open),
+  re-verified CLEAN against unchanged main 2f46eea9a
+  (merge-tree f366c8f1, identical to the 0445, 0500 and
+  0515 verifications), no new comment. No Slack sync. No
+  arrivals during the pass; sweep clean. Status: done.
+  Full detail in pr-integration/0530-run.md.
