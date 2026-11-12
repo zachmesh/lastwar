@@ -613,3 +613,23 @@ of 2026-10-28.
   below the 500M flag threshold. Branch-tip INDEX marker check
   clean; branch-tip action-log ends in a newline. Status: done.
   Full detail in pr-catchall/0439-run.md.
+
+## 04:45 to about 04:53 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0445. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00; PR #681 already merged
+  03:02:11 PT in the 03:00 window): no records merge.
+  Tools PR 696 (tool-currency guard, Refs #694)
+  squash-merged as 9740da7a7 and knowledge PR 695
+  (ticker-0334/0404 fold, Refs #689, #694) squash-merged
+  as 2f46eea9a; local main fast-forwarded e4513df10 to
+  2f46eea9a. Records PR 685 (2026-11-12, head d50eae0ce)
+  re-verified CLEAN against new main 2f46eea9a, verification
+  comment posted, awaits the 07:00 batch. Tools PR 425
+  still owner-gated (OD-20261108-01 open), re-verified
+  CLEAN against new main 2f46eea9a (main moved),
+  re-verification comment posted, no new escalation.
+  Merges synced to the owner Slack DM. No arrivals
+  during the pass; sweep clean. Status: done. Full detail
+  in pr-integration/0445-run.md.
