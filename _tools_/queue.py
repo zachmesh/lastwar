@@ -3012,6 +3012,57 @@ def points_without_achieved(stats):
             and "achieved" not in stats)
 
 
+def points_duplicates_achieved_string(stats, regular=None):
+    """True when stats.points copies a total named in a string achieved (issue #672).
+
+    points is score gained in this unit, not a running total
+    read: a duel total read belongs in achieved only. The
+    equality detector cannot see the copy when achieved is a
+    descriptive string instead of a number - _stat_number
+    returns None for the string, so the comparison never
+    fires - and the no-achieved detector cannot fire either,
+    because the achieved key is present. The #672 variant is
+    that hole: duel-score-2026-11-10-2230 wrote points
+    1650000 beside achieved "personal total 1650000 read
+    live, gap 1950000", and the retro summed 1,653,678 as
+    points gained against an honest 3,678. This detector
+    compares points against every number named in the
+    achieved string; a match means points is the running
+    total named there, not score gained in the unit.
+
+    A string achieved that names no number equal to points
+    stays counted: daily-missions 2026-10-31-1900 carries
+    achieved "all-claimable-claimed" with points 40 - the
+    genuine 110-to-150 activity gain in its summary - and a
+    string naming only a different figure (a gap, a
+    before/after read) is not a copy either. Comma-grouped
+    totals ("1,650,000") match the same way. Radar is exempt,
+    mirroring points_duplicates_achieved. Zero points is not
+    flagged: a unit that gained nothing is not a total copy.
+    This is a warning, never a block.
+    """
+    if not isinstance(stats, dict):
+        return False
+    if regular == "radar":
+        return False
+    points = _stat_number(stats.get("points"))
+    if points is None or points == 0:
+        return False
+    achieved = stats.get("achieved")
+    if not isinstance(achieved, str):
+        return False
+    if _stat_number(achieved) is not None:
+        return False
+    for token in re.findall(r"[\d,]+(?:\.\d+)?", achieved):
+        try:
+            number = float(token.replace(",", ""))
+        except ValueError:
+            continue
+        if number == points:
+            return True
+    return False
+
+
 def points_is_progress_delta(stats, regular=None):
     """True when stats.points is a progress-bar delta on a gifts unit (issue #300).
 
@@ -3166,6 +3217,8 @@ def cmd_complete(args):
     missing = missing_stats_keys(args.status, stats)
     points_dup = points_duplicates_achieved(stats, fields.get("regular"))
     points_noach = points_without_achieved(stats)
+    points_str_ach = points_duplicates_achieved_string(
+        stats, fields.get("regular"))
     points_prog = points_is_progress_delta(stats, fields.get("regular"))
     points_exp = points_is_expected_score(stats, fields.get("regular"))
     achieved_screen = achieved_is_screen_total(stats, fields.get("regular"))
@@ -3189,6 +3242,8 @@ def cmd_complete(args):
                             if points_dup else [])
                            + (["points without achieved"]
                               if points_noach else [])
+                           + (["points duplicates achieved in string"]
+                              if points_str_ach else [])
                            + (["points is progress delta"]
                               if points_prog else [])
                            + (["points is expected score"]
@@ -3250,6 +3305,12 @@ def cmd_complete(args):
               f"and no stats.achieved - points is score gained "
               f"in this unit, not a running total read; a screen "
               f"total belongs in achieved only")
+    if points_str_ach:
+        print(f"warning: {args.unit} closes with stats.points "
+              f"equal to a total named in its string "
+              f"stats.achieved - points is score gained in "
+              f"this unit, not a running total read; a duel "
+              f"total read belongs in achieved only")
     if points_prog:
         print(f"warning: {args.unit} closes with stats.points "
               f"on a gifts unit - points is score gained in "
@@ -3835,6 +3896,8 @@ def gather_stats(root):
               "stats_points_dup": 0, "stats_points_dup_units": [],
               "stats_points_no_achieved": 0,
               "stats_points_no_achieved_units": [],
+              "stats_points_dup_string": 0,
+              "stats_points_dup_string_units": [],
               "stats_blocker_not_enum": 0,
               "stats_blocker_not_enum_units": [],
               "stall_expired": 0, "stall_expired_units": [],
@@ -3942,6 +4005,12 @@ def gather_stats(root):
                     report["stats_points_no_achieved"] += 1
                     report["stats_points_no_achieved_units"].append(
                         f.get("unit"))
+                if points_duplicates_achieved_string(
+                        dup_stats if isinstance(dup_stats, dict)
+                        else {}, regular):
+                    report["stats_points_dup_string"] += 1
+                    report["stats_points_dup_string_units"].append(
+                        f.get("unit"))
                 if blocker_category_not_enum(
                         dup_stats if isinstance(dup_stats, dict)
                         else {}):
@@ -4012,6 +4081,10 @@ def cmd_stats(args):
               f"{report['stats_points_no_achieved']}")
         print("  stats_points_no_achieved_units: "
               f"[{', '.join(report['stats_points_no_achieved_units'])}]")
+        print(f"  stats_points_dup_string: "
+              f"{report['stats_points_dup_string']}")
+        print("  stats_points_dup_string_units: "
+              f"[{', '.join(report['stats_points_dup_string_units'])}]")
         print(f"  stats_blocker_not_enum: "
               f"{report['stats_blocker_not_enum']}")
         print("  stats_blocker_not_enum_units: "
@@ -4076,6 +4149,10 @@ def cmd_stats(args):
             print(f"  stats points without achieved: "
                   f"{report['stats_points_no_achieved']} "
                   f"({', '.join(report['stats_points_no_achieved_units'])})")
+        if report["stats_points_dup_string"]:
+            print(f"  stats points duplicates achieved in string: "
+                  f"{report['stats_points_dup_string']} "
+                  f"({', '.join(report['stats_points_dup_string_units'])})")
         if report["stats_blocker_not_enum"]:
             print(f"  stats blocker_category not in enum: "
                   f"{report['stats_blocker_not_enum']} "
