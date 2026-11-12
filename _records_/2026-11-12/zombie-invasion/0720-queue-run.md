@@ -83,4 +83,4 @@ status: unverified
   submission on the Mac mini is still required before input
   can resume).
 - Delivery: this record pushed to records/2026-11-12 (PR 700),
-  verified with git ls-remote; push hash <PUSH_HASH>.
+  verified with git ls-remote; push hash 59aa3cb7af.
