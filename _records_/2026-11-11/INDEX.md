@@ -3545,3 +3545,35 @@ of 2026-10-28.
 ## 23:32 to about 23:50 - Knowledge organization 2332 run, 4 profiles folded, PR 684 open, Issue 682 filed
 
 - Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-11-2332. Folded ticker-2105 radar 2105 + survivors 2115 (commit 546fa2cc7, read from the ticker-2105-delivery branch - STRANDED, never reached records/2026-11-11 or main) and ticker-2244 perception-scout 2244 (commit ae91199c8): radar-tasks 1.79.0 -> 1.80.0 (dish re-grounded (55,702) with exact-pointer tap, 5 tasks Quick Executed, 7 rewards stacked, stored counter does not track executions), survivor-intake 1.57.0 -> 1.58.0 (2115 re-verified against the record, every figure confirmed; retro action A-2026-11-11-06 VERIFIED - the next survivors unit reached the gate line with the windowed state verified), perception-scout 1.62.0 -> 1.63.0 (store group 7 of 7 Mall tabs, tab-bar badge 1 resolved to the Super Monthly Pass Claim Reward, blue chest lid opens on long-press), shop-claims 1.55.0 -> 1.56.0 (Monthly Pass Claim Reward available again, Hot Sale Free Claim still open). Contradictions resolved: 2040 badge position guess superseded, Monthly Pass Claimed-to-available flip recorded unexplained. Stranded ticker-2105 delivery filed as Issue #682 (records class) for the pr-integrator to land. Issues commented: #675 (re-verification), #444 (Mall strip walked, VIP-panel Store strip still unopened). Stale branch work/ko-2232-training-arms-2147 deleted (content already on main via PRs #679/#680). PR #684 opened, OPEN + MERGEABLE + CLEAN at run end. Status: done. Full detail in knowledge-organization/2332-run.md.
+
+## 21:05 to 21:12 - Ticker pass ticker-2105, radar unit 1803 done (stack)
+
+- Radar unit radar-2026-11-11-1803 done, duel day 4 stack
+  posture (live duel.py read governs over the unit's stale
+  "duel day 3 - radar release" window text). Entry recovered
+  by the changed method per rule R2: dish re-grounded fresh
+  at norm (55,702) and tapped with an exact-pointer tap
+  (snap_to_control false) - radar opened first try after the
+  1805 unit's two stale-coordinate failures. 5 tasks Quick
+  Executed (stamina 60 to 11); 7 rewards stacked unclaimed
+  (5 + 2 extra, the 0141 pattern); Claim All NOT tapped.
+  Bar still Claim All only after a 60s wait - the 2026-10-31
+  single-offer trap, 7 pending, named for the next unit.
+  Stored stayed 1/40 (counter does not track executions;
+  bar offer is the authority). Pins inventoried untapped
+  (6, incl. the small round brown pin from the 0505 unit).
+  Points 427 unchanged. Full detail in
+  radar-tasks/2105-queue-run.md.
+
+## 21:15 to 21:24 - Ticker pass ticker-2105, survivors unit 1803 partial
+
+- Survivors unit survivors-2026-11-11-1803 partial: one
+  "?" survivor at the Zombies gate (bubble norm (121,625),
+  figure (110,688)); three tap variants - figure tap,
+  bubble tap, long-press - all no-change, no recruit card
+  or dialog ever appeared; the bubble and figure then
+  vanished unverified, so 0 recruits claimed per rule R1.
+  A camera pan found no further survivors along the gate.
+  Quick Dispatch not run (no verified recruit). Tracker
+  untouched; the next tick re-produces the regular. Full
+  detail in survivor-intake/2115-queue-run.md.
