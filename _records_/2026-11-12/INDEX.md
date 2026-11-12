@@ -1054,3 +1054,41 @@ of 2026-10-28.
 ## 08:15 to about 08:20 - PR integration 0815 run, NON-batch (checker: outside every batch window)
 
 - Integrator pass pr-integration-2026-11-12-0815. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 163 minutes away; merge-aware due --merges exit 1, same verdict). No merges this pass. Records PR 700 (2026-11-12, head c8466604d, 21 records-only commits) awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main c76922766 (merge-tree exit 0, merged tree d7b3ccb2, identical to the 0800 verification; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). Sweep clean. Status: done. Full detail in pr-integration/0815-run.md.
+## 08:04 to about 08:19 - Ticker pass ticker-0804, no unit executed (control-lock blocker stands)
+
+- Ticker pass ticker-0804. Own PRs first: records PR 700
+  (2026-11-12) OPEN, no comments, awaits the 11:00 batch; no
+  question addressed to this job, nothing to fix. Tools PR 425
+  owned by lastwar-tool-developer, not this job.
+- Ran from a fresh worktree on records/2026-11-12 at c8466604d
+  (~/workspace/lastwar-wt-0804-ticker-1112, delivery branch
+  ticker-0804-1112-delivery) with the current tool copy
+  (_tools_/queue.py). The main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched.
+- Sync: reaped 0, expired 0, produced 0 (due 25, 24 already
+  queued; zombie-invasion is a chain regular, not sync-produced).
+  Two completion markers reaped from the shared pool
+  (scout-scout-2026-11-10-008, zombie-invasion-zombie-2026-11-10-026,
+  closings now landed in the records branch). Zombie seeding:
+  zombie-invasion-zombie-2026-11-10-027 already sits in the live
+  inbox, no seeding needed; roster warning for zombie-invasion
+  (issue #198) stands.
+- Execute loop handed out nothing: the R9 control-lock blocker
+  (Issue #689, recorded 15:47:00Z by ticker-0737 scout unit 008
+  after 3 fresh sessions all failed at first input with
+  outcome_unknown) still stands, about 30 minutes old, under the
+  4-hour stale bound - next refuses by design, so no unit was
+  burned and no probe was attempted; a probe is due only once the
+  blocker ages out. Thirteenth consecutive tick blocked by the
+  lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534, 0604,
+  0634, 0704, 0737, this pass). The blocker reaps after 19:47Z
+  (11:47 PT); the next tick then probes with one input. Token
+  acquired and released. No new evidence for Issue #689 - no
+  comment posted this pass.
+- Pool note: zombie-027, scout-009 and the pre-reset sweep pair
+  wait behind the lock; nothing can move until the channel clears
+  (a new local user submission on the Mac mini, per the error
+  text).
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
