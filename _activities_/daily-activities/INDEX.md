@@ -1,9 +1,9 @@
 ---
 title: Routine Activities
 created: 2026-10-25T17:56:00Z
-modified: 2026-11-12T04:32:17Z
+modified: 2026-11-12T05:32:17Z
 level: L1
-version: 1.27.0
+version: 1.28.0
 description: The umbrella checklist of the every four hours routine, linking one folder per activity type - kept under its original daily-activities folder name for link stability
 status: unverified
 grounded_in:
@@ -570,4 +570,12 @@ claims cited below were read in this pass's passes unit
 - Issue filed by this run, tooling class, owned by lastwar-tool-developer (not this job): #668 - the scout observation writer replaces the previous continued pass instead of appending (the ticker-1843 section dropped by ticker-1919; the branch copy was repaired by the ticker delivery merge, the live file still holds base + 1919 only). The day-total counters are additive across passes (9 unexplained counts the Zombie Store dot twice and includes three items the 1946 pass later explained); a netting rule for the counters belongs with the same fix.
 - New trade day's first executions (after the 19:00 reset): zombie-invasion 019 (ticker-1919, 2 Lv.10 kills in parallel, 536,000 coins, coin 137.5M to 138.0M) and 020 (ticker-2001, 2 kills in parallel, 1 LOOT row claimed 268,000, Squad 1 row lost - third handover-style loss), perception-scout 002 (ticker-1919, events group remainder, 7 red dots, 5 explained, 2 unexplained). See the zombie-invasion 1936/2020 and perception-scout 1946 folds.
 - Still open at this run's close (20:32): NO execution record for the 18:00-18:57 batch units (harvest-1803, mail-1830, events-1857, donations-1803, vip-1800, arms-race-1803, and the train, radar, daily-missions, duel-score and secrets units the 1730 sweep names as standing in inbox) has landed on the records branch. Their outcomes are not recorded here - not asserted expired, not asserted executed. The fix-ups the sweeps raised to priority 1 remain unrecorded the same way.
+- No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.
+
+## Retro 2026-11-11 final tally - Nov 11 closed at 116 finished, 39 expired, whole types dark, Issues #671 and #673
+
+- This settles the open thread the 2032 run left: the 18:00-18:57 batch units did NOT execute before the 19:00 reset - they expired. The 2026-11-11 daily retro (commit d5561aaa on records/2026-11-11) closes Nov 11 at 116 finished on the branch pool: done 21 (18 percent), partial 54, failed 1, expired 39, skipped 1, unverified 60 (52 percent). Expired 39 is up from 18 on Nov 10 and 17 on Nov 9.
+- Whole types went dark: events, train and star-ceremony units all expired - nothing ran in any of the three types - and no daily-missions unit of Nov 11 ran at all. All 3 duel-score units expired, so no duel total was read at all and the day-3 total is unknown (Issue #673, records class; see alliance-duel 1.43.0). The five 1457-slot units (trucks, treasures, secrets, passes, events) sit past-expiry in the branch inbox, unreaped at the retro snapshot (21:16). The failed unit is train-2026-11-10-2230 (finished 02:06 PST); the skipped unit is arms-race-2026-11-11-0203 (Tech Research, 0 of 30,000, OD-20261031-01 pattern).
+- Filed by the retro: Issue #671 (records class) - Nov 11 expiry pile-up, 39 expired, events/train/star-ceremony all dark, no daily-missions unit ran. Target: expired under 20 per day and no type fully expired. Verification: a Nov 12 day with expired under 20 and no type fully expired. Recheck: 2026-11-12 retro.
+- Account power flat at 149,218,973 all day, read live 51 times across Nov 11 records, from 19:16 PST Nov 10 to 19:44 PST Nov 11 - up 431,395 on the Nov 10 close 148,787,578, with no named cause for the rise, and no new step-down occurred.
 - No diamonds or money spent in the folded units. No game was operated by this run and no queue code or cron definition was edited.

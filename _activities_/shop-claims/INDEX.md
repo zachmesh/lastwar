@@ -1,9 +1,9 @@
 ---
 title: Shop Claims
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T23:32:17Z
+modified: 2026-11-12T05:32:17Z
 level: L1
-version: 1.54.0
+version: 1.55.0
 description: Free shop packs and pass daily gifts, one activity folder for shop claim knowledge
 status: unverified
 grounded_in:
@@ -1538,3 +1538,11 @@ the free and already paid for parts, never the paid unlocks.
 - Game left on the base screen: stamina 72 (regen plus 2 during the unit), coin 135.6M unchanged, gift badge still 2. The 2 pending LOOT rows belong to the zombie-invasion chain (unit 016 closed with both squads in flight); they were not touched - the zombie successor (017, already in the live inbox) claims them.
 - No diamonds or money spent. No price button tapped. Legendary Take All ($19.99) untouched. No donation, no assembly, no teleport.
 - Result stats: target all claimable pass/shop freebies for the slot; achieved 1 shop claim sweep performed; Free Supply verified already claimed, monthly daily gift verified already claimed, no owned weekly pickup exists; resources_gained none; points none; costs about 13 minutes, no stamina or items spent; verified yes - every figure above was read live on screen in this unit; blocker_category none.
+
+## What the 2026-11-11 2040 scout read added - Hot Sale Free Claim found for this unit, Diamond and Gold Brick Mall paid only
+
+- Scout unit scout-scout-2026-11-10-003 (ticker-2031, 20:31-20:40 PT) walked the Mall store group observe-only and found a Free Claim for this unit: Hot Sale Packs tab, HERO SHARD/EXCLUSIVE WEAPON SHARD CHOICE PACK - UR Hero Shard Choice Box V x10 + Skill Medal 500, timer 21:25:47, Availability 1, NOT tapped. Evidence in `_records_/2026-11-11/perception-scout/2040-queue-run.md` (commit f7ef9ca1 on records/2026-11-11). The next shop-claims unit claims it - the timer read 21:25:47 at about 20:38 PT, so the window runs to about 18:04 PT 2026-11-12 (derived from the timer, not read live).
+- Diamond tab: paid packs only, all x2 Initial Buy Reward (10000 $99.99 down to 100 $0.99) - nothing free or claimable. Gold Brick Mall tab: paid gold-brick packs only, Extra 5% Bonus (x500 $4.99 up to x100000 $999.9); the "Free Gift" stickers are purchase bonuses, not free claims - do not tap them as free claims.
+- Carried as an unexplained dot for this unit to check: a red badge "1" on the Mall tab bar above the Weekly Pass area (position suggests the Weekly Pass tab, unverified) - seen by the scout, unexplained.
+- Tabs the scout did NOT walk (Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass) stay for the scout successor 004, not for this unit - but if this unit opens the Mall for the Hot Sale claim, a glance at the Weekly Pass tab badge is cheap.
+- No diamonds or money spent by the scout (observe-only). No game was operated by this run and no queue code or cron definition was edited.
