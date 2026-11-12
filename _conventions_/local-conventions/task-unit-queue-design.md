@@ -500,6 +500,23 @@ one to the audit cause it answers.
   mid-pass.
 - **R11 - never decide from a checkout under the system temp directory (issue #429).**
   A pass worktree under /tmp can vanish mid-pass to the runtime's /tmp sweep - on 2026-11-07 three ticker passes lost their worktrees that way, and on 2026-11-08 the retro run lost /tmp/retro-1108-branch the same way, after the pass_worktree.py fix (PR #432) had already landed: the tool is opt-in, and a pass that creates its worktree with a bare `git worktree add` under /tmp never touches it. The tool enforces the location: `next`, `sync`, `plan`, `sweep` and `enqueue` refuse, exit 1, when this copy of `queue.py` - or the pool it would decide on - sits under the system temp directory (/tmp, or the platform temp dir from TMPDIR), so a pass in a doomed checkout fails loudly at its first decision instead of losing a finished unit's record at delivery. `LASTWAR_QUEUE_ALLOW_TMP_ROOT=1` is test-only, for isolated /tmp fixture validation of a new tool version. `claim`, `complete` and the token commands stay unguarded, so a pass that already decided can finish even if its worktree was created under /tmp.
+- **R12 - next and claim decide on the live pool (issue #694).**
+  `next` resolves the given root through the live pool before
+  it lists candidates, so a worktree-root `next` reads the
+  live inbox, not the worktree snapshot: a unit minted into
+  the live pool after the snapshot - a chain successor, a
+  planner-staged unit, an overlay-clearing unit - is visible
+  to the pick, and a unit already claimed or closed live is
+  never handed out again from a stale snapshot copy. `claim`
+  claims the live-pool copy into the pass root, so a unit
+  `next` hands out from the live pool is claimable even when
+  the snapshot never held it; the done record still lands in
+  the pass root, so the delivery is unchanged. A unit the
+  live pool holds claimed or done is refused instead of
+  claimed from the snapshot copy, and a unit the live pool
+  does not hold at all falls back to the snapshot copy, so a
+  unit committed to the pass branch but not yet in the live
+  working tree stays claimable.
 
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
@@ -837,6 +854,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.
 - 0.19.0, 2026-11-12 - section 11 gains rule R11 (worktree-location guard, issue #429): the decision commands refuse when this copy of queue.py - or the pool it would decide on - sits under the system temp directory, so a pass whose worktree was created under /tmp fails loudly at its first decision instead of losing its records to the runtime's /tmp sweep mid-pass; pass_worktree.py (PR #432) already refuses /tmp targets at creation, and this guard covers passes that never call it.
 - 0.18.0, 2026-11-12 - section 11 gains rule R10 (tool-currency guard, issue #694): the decision commands refuse when this copy of queue.py differs from main's _tools_/queue.py, so a pass can no longer decide from a stale main-tree checkout; the worktree-tool rule is now enforced by the tool, not just documented.
 - 0.17.0, 2026-11-12 - section 11 gains rule R9 (control-lock pause, issue #689): a unit that meets the outcome_unknown control lock closes failed naming blocker_overlay=control-lock, queue.py records a pool-level blocker that pauses next until it ages out after 4 hours or a closing that sent input lifts it, so a locked night burns no failed units.
