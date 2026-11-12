@@ -3405,3 +3405,7 @@ of 2026-10-28.
   Stranded 2040 commit picked up (7f55e47e rebased as e2aac640523)
   and delivered with this run to PR 665. Full detail in
   queue-planning/2140-run.md.
+
+## 21:45 to about 22:02 - PR integration 2145 run, NON-batch pass, no merges
+
+- Integrator pass lastwar-pr-integrator-2026-11-11-2145. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). No merges. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree bf11a6ce), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), still CONFLICTING against unchanged main 3fdf864f (_tools_/INDEX.md), no new comment (nothing changed since the 2130 conflict note). No sync-back owed; no Slack sync. Status: done. Full detail in pr-integration/2145-run.md.
