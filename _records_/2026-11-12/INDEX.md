@@ -668,3 +668,17 @@ of 2026-10-28.
   verifications), no new comment. No Slack sync. No
   arrivals during the pass; sweep clean. Status: done.
   Full detail in pr-integration/0515-run.md.
+- Scout unit 007 (ticker-0504, failed, chain scout-2026-11-10):
+  the alliance remainder was still not walked — the
+  computer-control channel lock from unit 006 persists. Three
+  recovery attempts (activate in fresh session cc-706, end and
+  restart as cc-707 plus activate, open_app LastWar) all failed
+  with the same outcome_unknown, "a new local user submission is
+  required before input can resume", about 3.5 hours after unit
+  006 hit it. Read-only observation still works and the game
+  stays live on the base screen (power 149,218,973); this is a
+  channel lock, not an authorization problem. New evidence
+  commented on Issue #689: the lock does not clear on its own
+  within 3.5 hours. Successor 008 enqueued; the pass stopped
+  after this unit rather than cascading failed units. Full
+  detail in perception-scout/0504-queue-run.md.
