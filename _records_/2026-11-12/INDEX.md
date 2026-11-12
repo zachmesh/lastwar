@@ -1092,3 +1092,7 @@ of 2026-10-28.
   text).
   Status: done (sync-only pass). Files: this INDEX,
   _logs_/repo-actions/action-log.jsonl.
+
+## 08:30 to about 08:40 - PR integration 0830 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0830. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 148 minutes away; merge-aware due --merges exit 1, same verdict). No merges this pass. Records PR 700 (2026-11-12, head d89cf3614b, 24 records-only commits) awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main c76922766 (merge-tree exit 0, merged tree d7b3ccb2, identical to the 0800 and 0815 verifications; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). Sweep clean. Status: done. Full detail in pr-integration/0830-run.md.
