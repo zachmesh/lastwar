@@ -3409,3 +3409,46 @@ of 2026-10-28.
 ## 21:45 to about 22:02 - PR integration 2145 run, NON-batch pass, no merges
 
 - Integrator pass lastwar-pr-integrator-2026-11-11-2145. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). No merges. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree bf11a6ce), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), still CONFLICTING against unchanged main 3fdf864f (_tools_/INDEX.md), no new comment (nothing changed since the 2130 conflict note). No sync-back owed; no Slack sync. Status: done. Full detail in pr-integration/2145-run.md.
+
+## 21:36 to 21:46 - Ticker pass ticker-2133, training unit 1803 partial (Drill Ground, 4th consecutive)
+
+- Training unit training-2026-11-11-1803 partial: Lv.27
+  barracks confirmed idle; pistol tap reproduces the live
+  toast "Drill Ground Full: Unable to add more units", so
+  the requeue block stands since 2026-11-10 21:46. Changed
+  method per rule R2: Building Details (paw) shows Training
+  Count +726 and instructors Karen, Javier, Jessica,
+  Elizabeth with Quick Dispatch - no Drill Ground link, no
+  troop-capacity figure. A tap on the massed-troops yard
+  opened Alliance mail instead (President Mail, Veterans
+  Day, read only; Alliance and Event gift icons noted for
+  the mail unit; Delete All and Claim All untouched).
+  Drill Ground building still not located live. Fourth
+  consecutive training partial on this blocker: Issue #678
+  filed (knowledge) and the blocker written into the
+  troop-training activity metadata. (Correction: the unit
+  ran 21:36-21:46 PT, 603 seconds, about 10 minutes - the
+  "about 16 minutes, past the cap" claim in this section
+  is withdrawn; see the correction in
+  troop-training/2136-queue-run.md.) Full detail in
+  troop-training/2136-queue-run.md.
+
+## 21:47 to 21:53 - Ticker pass ticker-2133, arms-race unit 1803 skipped-needs-owner
+
+- Arms Race unit arms-race-2026-11-11-1803
+  skipped-needs-owner: Base Building phase live
+  (Contest Segment Lv.29-30, timer 00:10:41 at first
+  read, ends about 22:03 PT), score 0 against
+  6,250 / 12,500 / 30,000. No in-scope scoring path:
+  the Lv.29 Aircraft Center upgrade finishes about
+  02:30 PT, after the phase; speedups and diamond
+  packs are red lines. Building Queue slots 2-4 Idle.
+  Completion sweep: cumulative chest 0/2, point chests
+  locked, ranking chest preview only (UR Hero Universal
+  Shard 1, Decoration Chest 1, Iron/Food/Coin Chest
+  (SR) 24 each), nothing claimable. Side notes: the Age
+  of Oil Events tab carries a red "1" badge (Tech
+  9611/500, Building Upgrades 22680/500) - for the scout
+  pass; Zombie Invasion next wave was 00:05:58 out at
+  first read, chain unit 021 waits in the inbox. Full
+  detail in arms-race/2147-queue-run.md.
