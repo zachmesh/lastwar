@@ -1240,3 +1240,6 @@ of 2026-10-28.
   markers resolve to the shared live pool.
   Status: done (sync-only pass). Files: this INDEX,
   _logs_/repo-actions/action-log.jsonl.
+## 09:30 to about 09:38 - PR integration 0930 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0930. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 88 minutes away; merge-aware due --merges exit 1, same verdict, 86 minutes away). Records PR 700 (2026-11-12, head 70caeb42b1, 40 records-only commits) re-verified CLEAN at the new head (merge-tree exit 0, merged tree fba99915); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main 33cf659cd7 (merge-tree exit 0, merged tree 01dc976f, identical to the 0845/0900/0915 probes; head unchanged 4f41cdd6a), no new comment per no-repeat rule. No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/0930-run.md.
