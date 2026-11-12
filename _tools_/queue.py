@@ -165,6 +165,11 @@ Usage:
              # one without hand-reading records; the 3-hour
              # active-window alert and its once-per-stall dedup
              # stay the summary job clause (issue #129).
+  queue.py version [--format text|json]
+             # print this copy's identity - resolved path, sha256,
+             # git HEAD and currency against main's copy - for a
+             # pass record to cite, so a stale-tool handout is
+             # diagnosable from the record alone (issue #694).
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: refuse (exit 1) on a
              # corrupt pool before reaping or staging anything
@@ -271,6 +276,7 @@ scalars, [a, b] flow lists, and mappings nested by 2 space indents
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -2131,6 +2137,74 @@ def refuse_if_tool_stale(cmd):
           f"tree) so the pass decides on current behaviour "
           f"(issue #694)", file=sys.stderr)
     return 1
+
+
+def _tool_identity():
+    """Identity of this copy of queue.py, for the version command.
+
+    Returns a dict: the resolved path of the invoked file, the
+    sha256 of this copy, the git HEAD of the checkout holding it
+    (or None outside a git checkout), and the currency of this
+    copy against main's _tools_/queue.py (issue #694) - current,
+    stale, or unknown when main cannot be read - plus main's
+    sha256 when readable. Pure reporting: it never refuses, so a
+    stale copy can still name itself stale and a copy under the
+    system temp directory still answers.
+    """
+    path = os.path.realpath(__file__)
+    try:
+        with open(path, "rb") as handle:
+            local = handle.read()
+    except OSError:
+        local = None
+    sha = hashlib.sha256(local).hexdigest() if local is not None else None
+    head = None
+    try:
+        rev = subprocess.run(
+            ["git", "-C", _tool_dir(), "rev-parse", "HEAD"],
+            capture_output=True, text=True, timeout=10)
+        if rev.returncode == 0:
+            head = rev.stdout.strip() or None
+    except (OSError, subprocess.SubprocessError):
+        head = None
+    main_source, warning = main_tool_source()
+    if main_source is None or local is None:
+        currency = "unknown"
+        main_sha = (hashlib.sha256(main_source).hexdigest()
+                    if main_source is not None else None)
+    else:
+        main_sha = hashlib.sha256(main_source).hexdigest()
+        currency = "current" if local == main_source else "stale"
+    return {"tool": "queue.py", "path": path, "sha256": sha,
+            "git_head": head, "currency": currency,
+            "main_sha256": main_sha, "currency_warning": warning}
+
+
+def cmd_version(args):
+    """Print this copy's identity (issue #694).
+
+    A pass record cites this output - resolved path, sha256, git
+    HEAD and currency against main - so a later stale-tool
+    handout is diagnosable from the record alone: the 0737
+    handover could not be attributed from its record because no
+    version, line count or worktree path was named. The command
+    is unguarded like claim and complete: it only reports, so a
+    stale copy still answers stale and a copy under the system
+    temp directory still answers. Exit 0 always.
+    """
+    identity = _tool_identity()
+    if args.format == "json":
+        print(json.dumps(identity, indent=2, sort_keys=True))
+        return 0
+    print("tool: %s" % identity["tool"])
+    print("path: %s" % identity["path"])
+    print("sha256: %s" % (identity["sha256"] or "unknown"))
+    print("git_head: %s" % (identity["git_head"] or "unknown"))
+    print("currency: %s" % identity["currency"])
+    print("main_sha256: %s" % (identity["main_sha256"] or "unknown"))
+    if identity["currency_warning"]:
+        print("currency_warning: %s" % identity["currency_warning"])
+    return 0
 
 
 # ---------------------------------------------------------------------
@@ -4881,6 +4955,11 @@ def main(argv=None):
     p.add_argument("--format", choices=["text", "yaml", "json"],
                    default="text")
     p.set_defaults(fn=cmd_stats)
+
+    p = sub.add_parser("version")
+    p.add_argument("--format", choices=["text", "json"],
+                   default="text")
+    p.set_defaults(fn=cmd_version)
 
     args = parser.parse_args(argv)
     args.root = resolve_pool_root(os.path.abspath(args.root))
