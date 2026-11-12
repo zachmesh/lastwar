@@ -2916,3 +2916,7 @@ of 2026-10-28.
   normalized 0-1000 window coordinates, snap_to_control
   false collects; snapped taps open building panels. Detail
   in resource-collection/1740-queue-run.md.
+
+## About 17:32 to about 17:47 - Knowledge organization 1732 run, 2 profiles folded, PR 659
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-11-1732. Folded ticker-1634 daily-missions 1638 + perception-scout 1648 records (commit 1fe3a5e69): daily-missions 1.12.0 -> 1.13.0 (one-tap claim sixth observation, 40/80 chest previews, Mission-list scroll failure), perception-scout 1.58.0 -> 1.59.0 (first perception of reset day 2026-11-11, Trade Trucks panel 1/5, Hero List 9 red dots, skull timer fifth sighting). PR 659 opened from work/ko-1732-missions-scout, 1 commit 7386e8614, base main 5142cda59, OPEN + MERGEABLE + CLEAN. Issue #498 commented (skull timer, comment 6811913090). No contradictions, no new issue filed. Status: done. Full detail in knowledge-organization/1732-run.md.
