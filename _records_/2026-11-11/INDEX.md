@@ -3100,3 +3100,21 @@ of 2026-10-28.
 ## About 18:45 to about 18:53 - PR integration 1845 run, 2 PRs merged, records PR awaits 19:00 batch
 
 - Integrator pass lastwar-pr-integrator-2026-11-11-1845. NON-batch pass (checker not due, next batch 19:00). Merged PR 663 (knowledge fold: resource-collection 1.61.0, daily-activities 1.25.0, radar-tasks 1.79.0) and PR 662 (tools: validate --ref pre-merge gate, Refs #661); local main synced cc27135e1 to 0c597c9724. Records PR 655 head 0f00e6ba32 re-verified CLEAN against new main, awaits 19:00 batch. PR 425 still owner-gated (OD-20261108-01 open). Slack sync sent (ts 1794451978.780979). Status: done. Full detail in pr-integration/1845-run.md.
+## 18:40 to about 18:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-1840. Plan staged 12
+  units for the 2026-11-12 06:03/06:30 slots (mail, help,
+  gifts, harvest, radar, survivors, train, training,
+  donations, arms-race, star-ceremony, duel-score; 59 already
+  present, 2 skipped done-current, 1 skipped closed
+  zero-sweep-2026-11-11-1730, 0 reaped, 6 expired 14:30
+  slots; roster stale warning, issue #198). Sweep production
+  skipped (18:00 hour); pair verified by status per #610 -
+  both passes in done, both partial (1630 ticker-1718 1/23,
+  1730 ticker-1800), pair executed, not complete in the
+  full-ledger sense. Scout diff on the 2026-11-11 observation
+  (scout-2026-11-10 pass, ticker-1634) re-applied with 0
+  counts and 3 unexplained red dots (skull cycle timer,
+  "Others' Trucks" badge 4, "Recover" dot); 0 withdrawals,
+  no new issue. Pool inbox 75, claimed 0, done 1605.
+  Status: done. Full detail in queue-planning/1840-run.md.
