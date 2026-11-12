@@ -1,9 +1,9 @@
 ---
 title: Zombie Invasion
 created: 2026-10-28T09:47:00Z
-modified: 2026-11-12T09:32:17Z
+modified: 2026-11-12T10:32:17Z
 level: L1
-version: 1.44.0
+version: 1.45.0
 description: Zombie Invasion event - sweeping zombies near the base for coins, one activity folder for zombie invasion knowledge
 status: unverified
 grounded_in:
@@ -46,6 +46,8 @@ grounded_in:
   - source: ticker-0004 zombie-invasion execution record 2026-11-12 0030 queue run (partial, Glacieradon chain 023, stamina refilled by 1x 50-stamina item 666 to 665, Lv.10 target found but not dispatched - unit cap reached while locating the attack button, blue arrow (386,783) is a base-visit button not the attack button, medals unmeasured, Store not visited, successor 024 enqueued; record commit a57a5ace5 on records/2026-11-12)
   - source: ticker-0100 zombie-invasion execution record 2026-11-12 0114 queue run (partial, Glacieradon chain 022 re-executed from a stale inbox copy, 2 Lv.10 kills sequential, squads_parallel 1, 1 LOOT row claimed 268,000 coins, fourth handover-style loss - X:489 row never materialized, medals +10 by the claimed row, Store not visited, successor 025 enqueued; record commit 911d317f8 on records/2026-11-12)
   - source: ticker-1843 perception-scout execution record 2026-11-11 1850 queue run (partial, events group, Zombie Invasion Glacieradon live 1d 23:09, next wave about 00:03, challenge begins 2026-11-12 18:00, Alliance Finding boss cards, Arms Race and Age of Oil read live; record commit 7b944422a4 on records/2026-11-11)
+  - source: ticker-0134 radar-tasks execution record 2026-11-12 0151 queue run (failed, control channel outcome_unknown lock, Issue #689; pass stopped before the zombie-invasion unit 024, which stays in inbox; record commit 889dda54f on records/2026-11-12)
+  - source: ticker-0204 alliance-help execution record 2026-11-12 0207 queue run (failed, control channel outcome_unknown lock, Issue #689 third occurrence; pass stopped before the zombie-invasion unit 024, which stays in inbox; record commit b23df0eba on records/2026-11-12)
 ---
 
 # Zombie invasion
@@ -1100,3 +1102,11 @@ execution.
 - Stamina after 59. No stamina item opened (stamina never bound). Cleared false: next wave in about 00:45 at close, zombies remain. Successor 025 enqueued to start now.
 - Result stats: zombies_killed 2 (Lv.10, X:489 Y:441 and X:504 Y:410); cleared false; coin_before 143.4M HUD; coin_after 143.7M HUD; coins_collected 268000; medals_before unmeasured; medals_after unmeasured (plus 20 by row evidence in the record; derived carry 5190 per the per-claimed-row rule); chests_opened 0; squads_parallel 1 (short round trips, not the march cap); tasks_badge 1; stamina_before 68; stamina_after 59; target 2 kills and all LOOT rows claimed; achieved 2 kills, 1 of 2 LOOT rows claimed; resources_gained coin 268000, iron 268000, food 268000, EXP 263000, medals 20, green crate 1 (row evidence; 10 medals unrecovered with the lost row per the per-claimed-row rule); costs 20 stamina, about 12 minutes; verified yes; blocker_category h (by-design partial, chain continues; the missing LOOT row is a handover loss, fourth in this chain).
 - No diamonds or money spent. No price tag tapped. No speedup burned. No assembly/teleport.
+
+## What the 2026-11-12 0134 and 0204 passes added - Glacieradon chain 024 still queued, blocked twice by the control channel lock, no kills, Issue #689
+
+- No zombie-invasion unit executed in either pass. The ticker-0134 pass (radar 0151, 01:50-01:57 PT) and the ticker-0204 pass (help 0207, 02:06-02:07 PT) both hit the control channel outcome_unknown lock filed as Issue #689 and stopped per that issue before reaching the zombie unit, so chain unit 024 (enqueued by the 0004 pass, successor of 023) stays in inbox for the next tick, which will hit the same wall unless the channel clears. Evidence in `_records_/2026-11-12/radar-tasks/0151-queue-run.md` (commit 889dda54f) and `_records_/2026-11-12/alliance-help/0207-queue-run.md` (commit b23df0eba), both on records/2026-11-12.
+- Chain state unchanged since the 0114 fold: 022 done, 023 done, 024 and 025 enqueued. No kills, no LOOT rows, no stamina spent, no Store visit in either pass. The open items stand: the 024 successor's first step is still the unit-022-grounded crossed-swords tap (500,753) directly after Search (untried - 023 never got there, and neither did any later unit); the Store re-check (SSR chest row, live medal balance, derived carry 5190) and the gift-badge re-check on entry for a late LOOT row are still owed to the next unit that actually runs.
+- The lock is the only blocker: three occurrences in one night (scout 006 at 01:34, radar 0151 at 01:50, help 0207 at 02:06), same window 676414, same error text, still locked at 02:07, only a local user submission clears it. The event itself is live (Glacieradon, challenge begins 2026-11-12 18:00, next wave about 00:45 after the 0114 close) - the chain is stalled on the channel, not on the game.
+- Result stats: zombies_killed 0 in both passes; coins_collected 0; costs 0 stamina, 0 items; verified yes for the queued state (024 in inbox at the records tip); blocker_category f (missing precondition - device input unavailable; control channel locked, Issue #689); follow_up the next tick retries 024; if the channel is still locked, the next pass records its own access failure per Issue #689.
+- No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.

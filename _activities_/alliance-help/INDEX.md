@@ -1,9 +1,9 @@
 ---
 title: Alliance Help
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T22:32:17Z
+modified: 2026-11-12T10:32:17Z
 level: L1
-version: 1.42.0
+version: 1.43.0
 description: Alliance Help All and individual ally helps, one activity folder for help knowledge
 status: unverified
 grounded_in:
@@ -44,6 +44,7 @@ grounded_in:
   - source: ticker-1806 alliance-help execution record 2026-11-10 1818 queue run (done, Help All pressed twice, 3 ally helps, header 0 to 40/1,000 after close and reopen, 20 points per help, third help's +20 pending the next unit's header read; record commit 20a62ff0 on records/2026-11-10)
   - source: ticker-0212 alliance-help execution record 2026-11-11 0220 queue run (done, Help All cleared all waiting ally requests, header 80/1,000 unchanged in-session, eighth in-session-unchanged datapoint; record commit b0615980f on records/2026-11-11)
   - source: ticker-1408 alliance-help execution record 2026-11-11 1410 queue run (done, Help All pressed twice for 3 ally helps, points 500 to 520 verified live on a reopened dialog, Alliance button opens in fullscreen at re-grounded (652,711) snap off, Help dialog X background-click-resistant, tap offset measured; record commit d00afba5a on records/2026-11-11)
+  - source: ticker-0204 alliance-help execution record 2026-11-12 0207 queue run (failed, control channel outcome_unknown lock, Issue #689 third occurrence, sessions cc-698 and cc-699, reconcile cannot clear the lock, no help work done; record commit b23df0eba on records/2026-11-12)
 ---
 
 
@@ -1022,3 +1023,12 @@ Measured in the 0135 help unit (ticker-0134, window mode
 - Figures read live on screen: food 687.5M, iron 1.0G, coin 134.7M, power 149,218,973, diamonds 6,717 at entry. No login or verification was demanded, and no different-device dialog appeared.
 - Result stats: target 3, achieved 3, points_gained 20, verified yes, blocker_category session-drop, device_takeovers 0.
 - No diamonds or money spent. No other task type was executed in this unit.
+
+## What the 2026-11-12 0207 unit added - control channel outcome_unknown lock, unit failed, Issue #689 third occurrence, no helps delivered
+
+- Unit help-2026-11-11-2230 by ticker-0204, 02:06 to 02:07 local, status failed: the Mac computer-control channel refused every game input with outcome_unknown ("a new local user submission is required"), 3 attempts across sessions cc-698 and cc-699, so no help work was done and nothing was claimed. Evidence in `_records_/2026-11-12/alliance-help/0207-queue-run.md` (commit b23df0eba on records/2026-11-12). Third occurrence of the lock filed as Issue #689 (after the 01:34 scout unit 006 and the 01:50 radar unit 0151, same window 676414, same error text). A comment on Issue #689 records this third occurrence.
+- The three attempts, the standard recovery count, all failed with the identical error text: open_app LastWar (cc-698), activate Last War window 676414 (cc-699, fresh session after ending cc-698), open_app LastWar again (cc-699). No further input was sent after the third attempt. New diagnostic detail from this unit: "The reconcile action cannot clear this state." New sessions do not clear the lock; only a local user submission on the Mac can, and the owner is asleep, so no local submission is available to a detached overnight pass.
+- Classification (recorded here so the next pass does not re-litigate it): this is NOT the "lacks owner-authorized device access" error - the owner authorization stands and is not in question - and it is NOT a different-device dialog, NOT a login demand, and NOT the Issue #648 zoom state (the window was windowed 642x951 throughout, per the observe). Read-only inspection worked: computer.observe returned the live Last War window 676414 on the base screen (HEROES and WORLD buttons visible, no dialog, no "active on a different device" dialog). The OCR text was too garbled to claim any numeric HUD figure from this observation, so none is claimed here.
+- Per Issue #689 the pass stopped here: no further unit was attempted this pass, and the zombie-invasion unit 024 stays in inbox for the next tick, which will hit the same wall unless the channel clears.
+- Result stats: target 1 (Help All pressed, waiting ally helps checked); achieved 0 helps - no game input was possible; resources_gained none; points 0; costs about 1 minute, no items spent; verified yes (the input block is observed on screen, not inferred; no closing figure is claimed); blocker_category f (missing precondition - device input unavailable; control channel locked, Issue #689); follow_up the next tick retries; if the channel is still locked, the next pass records its own access failure per Issue #689. The zombie-invasion unit 024 stays queued.
+- No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.
