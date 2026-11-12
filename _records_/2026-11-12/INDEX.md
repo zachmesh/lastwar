@@ -823,3 +823,42 @@ of 2026-10-28.
   comment. Slack sync posted to the owner Trirvia DM.
   No arrivals during the pass; sweep clean. Status: done.
   Full detail in pr-integration/0615-run.md.
+
+## 06:04 to about 06:30 - Ticker pass ticker-0604, no unit executed (control-lock blocker stands)
+
+- Ticker pass ticker-0604. Own PRs first: records PR 685
+  (2026-11-12) OPEN, re-verified CLEAN by the integrator 0600
+  pass against main 2f46eea9a, awaits the 07:00 batch; no
+  question addressed to this job, nothing to fix. Tools PR 425
+  owned by lastwar-tool-developer, not this job.
+- Ran from a fresh worktree on records/2026-11-12
+  (~/workspace/lastwar-wt-0604-ticker) with the current tool
+  copy (_tools_/queue.py, 12 control-lock mentions; R10
+  complied, no stale-tool recurrence). The main working tree
+  ~/workspace/lastwar still sits on work/ops-execution-records
+  with another job's in-flight state and was not touched.
+- Sync: reaped 0, expired 6 (the 0203-slot arms-race,
+  donations, harvest, radar, survivors, training units,
+  window passed), produced 2 (research-2026-11-12-0603,
+  building-queues-2026-11-12-0603) into the live pool (main
+  checkout inbox, issue #598 design); 25 due, 22 already
+  queued. Zombie seeding: zombie-invasion unit 026 already
+  in inbox, no seeding needed; roster warning for
+  zombie-invasion (issue #198) stands.
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 11:19:16Z by ticker-0304
+  zombie unit 025 after 3 fresh sessions cc-703/704/705 all
+  failed at first input with outcome_unknown) still stands,
+  about 3 hours old, under the 4-hour stale bound - next
+  refuses by design, so no unit was burned. Ninth
+  consecutive tick blocked by the lock (0134, 0204, 0234,
+  0304, 0334, 0404, 0504, 0534, this pass; the 0534 entry's
+  "seventh" missed the 0334 guarded tick). The blocker
+  reaps after 15:19:16Z (07:19 PT); the next tick then
+  probes with one input. Token acquired and released.
+- Pool note: vip-2026-11-11-1800 still stalled (priority 1,
+  23.5h old) behind the lock; it cannot move until the
+  channel clears.
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl, _queue_ (6 expired
+  units).
