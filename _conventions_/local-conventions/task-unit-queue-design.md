@@ -1,8 +1,8 @@
 ---
 title: Task Unit Queue Design
 created: 2026-10-28T10:22:00Z
-modified: 2026-11-07T12:32:17Z
-version: 0.16.0
+modified: 2026-11-12T10:40:00Z
+version: 0.17.0
 description: Run the routine as short task units drawn from a file queue instead of long segment runs - implemented 2026-10-28
 status: implemented
 grounded_in:
@@ -11,6 +11,7 @@ grounded_in:
   - source: miss audit of 2026-10-31 and the owner instruction of 2026-10-31 to reflect and fix
   - source: PR #267 merged 2026-11-04 (Refs #147) - zero-sweep slots reset-anchored (reset_utc 02:00, offsets 90/30 minutes)
   - source: organizer 0432 run 2026-11-07 (Refs #147) - the four 19:00 mentions flagged as follow-up in 0.15.0 rewritten to the absolute reset instant 02:00 UTC (VIP expiry, scout anchor, quota checkpoints, deadline list)
+  - source: Issue #689 (tooling) - outcome_unknown control lock after a session drop, implemented 2026-11-12 as the pool-level control-lock blocker and rule R9
 ---
 
 # Task unit queue design
@@ -462,6 +463,24 @@ one to the audit cause it answers.
   counts only units that failed their own objective, so the real
   blockers stay visible instead of hiding inside a raw partial
   count.
+- **R9 - control-lock pause (issue #689).** When a unit meets the
+  `outcome_unknown` control lock - every input refused after a
+  session drop, read-only inspection still live, new sessions do
+  not clear it - it stops after its recovery attempts, closes
+  failed naming the lock with
+  `--stat blocker_overlay=control-lock`, and the pass stops: no
+  further unit is attempted that tick. `queue.py` records the
+  pool-level control-lock blocker and `next` hands out nothing
+  while it stands, so a locked night burns no failed units. The
+  wait-and-retry rule is the 4-hour stale bound: `sync` reaps a
+  control-lock blocker older than 4 hours, the next tick probes
+  with one input, and a fresh `outcome_unknown` re-records it.
+  Any closing that sent input (done, partial, or
+  skipped-needs-owner, without naming the lock) lifts the
+  blocker. No self-clear has ever been observed - the 2026-10-26
+  to 2026-10-27 lock cleared only when the owner submitted
+  locally - so the probe cadence is a bound on wasted attempts,
+  not a prediction that the lock will clear.
 
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
@@ -799,6 +818,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.17.0, 2026-11-12 - section 11 gains rule R9 (control-lock pause, issue #689): a unit that meets the outcome_unknown control lock closes failed naming blocker_overlay=control-lock, queue.py records a pool-level blocker that pauses next until it ages out after 4 hours or a closing that sent input lifts it, so a locked night burns no failed units.
 - 0.16.0, 2026-11-07 - the four 19:00 mentions flagged as follow-up on #147 in 0.15.0 are rewritten to the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer): VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3). The dated 19:00 mentions in sections 1 and 9 stay: both describe the PDT era, when the reset was 19:00 local.
 - 0.14.0, 2026-11-01 - section 14 gains a cross-reference to
   the ops execution records standard: the loop's own
