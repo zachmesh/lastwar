@@ -3225,3 +3225,23 @@ of 2026-10-28.
 ## About 20:00 to about 20:05 - PR integration 2000 run, non-batch pass, records PR awaiting 23:00 batch
 
 - Integrator pass lastwar-pr-integrator-2026-11-11-2000. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). No merges. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree db5f42de; merged tree keeps main _tools_ verbatim, queue.py --ref count 7 same as main), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main decf48bb59 (merge-tree exit 0, tree 50929ec3), re-verification comment posted. Status: done. Full detail in pr-integration/2000-run.md.
+## 19:40 to about 20:12 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-11-1940. Plan staged 6
+  units for the 2026-11-12 06:57/07:00 slots (passes, secrets,
+  treasures, trucks, events, scout-midday; 68 already
+  present, 0 skipped done-current, 1 skipped closed
+  zero-sweep-2026-11-11-1730, 0 reaped, 0 expired; roster
+  stale warning, issue #198). Sweep production skipped
+  (19:00 hour); pair verified by status per #610 - both
+  passes in done, both partial (1630 ticker-1718 1/23,
+  1730 ticker-1800), pair executed, not complete in the
+  full-ledger sense. Scout diff first on the live 2-pass
+  observation (21 observed, 5 unexplained), then re-run on
+  the branch-merged 3-pass observation after the ticker
+  delivery moved the tip (29 observed, 9 unexplained
+  additive day total, 5 distinct still unexplained); both
+  runs 0 counts; 0 withdrawals; filed tooling issue #668
+  (observation writer replaces the previous continued pass
+  instead of appending). Pool inbox 78, claimed 0, done 1612.
+  Status: done. Full detail in queue-planning/1940-run.md.
