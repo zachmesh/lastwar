@@ -120,3 +120,52 @@ of 2026-10-28.
 ## 00:32 to about 01:05 - Knowledge organization 0032 run, 5 profiles folded, PR #687 open
 
 - Knowledge-organizer pass knowledge-organization-2026-11-12-0032. Worked from the 2332 watermark: own PR #684 MERGED 23:50 PT with 0 comments, 0 reviews, no feedback pending. Folded the ticker-2333 zombie-invasion 022 (2 Lv.10 parallel kills, 536,000 coins) and perception-scout 005 (alliance group partly walked, Gifts 523 + 69) records into 5 profiles (PR #687, commit ec3a52952, OPEN + MERGEABLE + CLEAN at run end): zombie-invasion 1.43.0, perception-scout 1.64.0, radar-tasks 1.81.0, survivor-intake 1.59.0, daily-activities 1.29.0. Closed the Issue #682 stranded notes (record landed as 9f6e149bb, rides PR #681 at the 03:00 batch) and settled the 18:00-18:57 batch at queue-file level (five 1857 units reaped expired 23:33 PT). Contradictions resolved: deploy-panel auto-select inconsistent across units; +10 stamina jump not a reliable mechanic. Issues #595 and #183 commented. No new issue filed. Main moved mid-run (PR #686 tools merged 00:49 PT, base 3fd6e10d8). VPS root disk 99% at run start, cleared an 18th time about 00:47 PT to 96%. Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0032-run.md.
+## 00:45 to about 00:55 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0045. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 03:00): no records PR merged. Tools PR 686
+  reviewed clean (Owner lastwar-tool-developer, Refs #648,
+  18/18 fixture assertions, negative control 14/18 on main
+  1.3.0) and squash-merged (merge commit 3fd6e10d8);
+  knowledge PR 687 arrived 00:52:33 PT, reviewed clean
+  (5 profile version bumps verified) and squash-merged
+  in the same pass (merge commit 6dea6746); local main
+  fast-forwarded to 6dea6746 via bundle. Records PRs 681
+  (2026-11-11, 16 commits) and 685 (2026-11-12, 9 commits)
+  both verified CLEAN against new main 3fd6e10d8, awaiting
+  the 03:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01 open, age 3 days), re-verified CLEAN
+  against new main 3fd6e10d8, no new comment (PR unchanged
+  since the 2345 review). Slack sync posted for both
+  merges. Status: done. Full detail in
+  pr-integration/0045-run.md.
+
+## 01:05 to about 01:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0105. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 03:00): no records PR merged. Records PRs 681
+  (2026-11-11, 16 commits) and 685 (2026-11-12, 17 commits)
+  both re-verified CLEAN against new main 6dea6746 (PRs 686
+  and 687 merged since the 0045 pass), awaiting the 03:00
+  batch. Tools PR 425 still owner-gated (OD-20261108-01
+  open, age 4 days), re-verified CLEAN against new main
+  6dea6746, diff unchanged, no new comment (PR unchanged
+  since the 2345 review). No arrivals during the pass;
+  sweep clean. No Slack sync (non-batch run stays silent).
+  Status: done. Full detail in pr-integration/0105-run.md.
+
+## 01:15 to about 01:22 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0115. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 03:00): no records PR merged. Records PRs 681
+  (2026-11-11, 16 commits) and 685 (2026-11-12, 19 commits)
+  both re-verified CLEAN against main 6dea6746, awaiting the
+  03:00 batch. Tools PR 425 still owner-gated (OD-20261108-01
+  open, age 4 days), re-verified CLEAN against main 6dea6746,
+  diff unchanged, one re-verification comment posted
+  (issuecomment-6819696491). No arrivals during the pass;
+  sweep clean. No Slack sync (non-batch run stays silent).
+  Status: done. Full detail in pr-integration/0115-run.md.
