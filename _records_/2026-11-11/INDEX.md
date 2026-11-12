@@ -2813,3 +2813,35 @@ of 2026-10-28.
   comment (main unchanged since the 1645 pass). No Slack
   sync (no merge, no new escalation). Status: done.
   Full detail in pr-integration/1700-run.md.
+
+## 16:38 to 16:47 - Ticker pass ticker-1634, daily-missions unit done
+
+- Daily-missions (1638, ticker-1634, done): Mission Daily Tasks -
+  one Claim tap on Help Allies 5 Times (20/5) cleared both
+  completed rows (Kill 5 zombies 5/5 also gone); activity star 80
+  to 100 live-read. The one-tap-clears-all mechanism is unverified
+  (same phenomenon as the 2026-11-10 1426 unit); the end state is
+  live-verified. The 40 and 80 point chests were already claimed
+  before this unit (taps opened contents previews only). Remaining
+  tasks incomplete and left undone per the activity metadata: Doom
+  Elite (0/1), Recruit Heroes (0/1), Attack a Commander (0/1,
+  PvP), Gather Food (0/10000). Below-fold rows not re-read: the
+  list would not scroll (quick drag, scroll action, slow staged
+  drag all no-change). Detail in
+  daily-missions/1638-queue-run.md.
+
+## 16:48 to 17:00 - Ticker pass ticker-1634, scout unit partial (base group)
+
+- Perception-scout (1648, ticker-1634, partial): chain head of
+  pass scout-2026-11-10, base group only. HUD live: power
+  149,218,973, food 689.4M, iron 1.0G, coin 136.7M, diamonds
+  13.22K, stamina 69. Trade Trucks panel via the left-column top
+  icon: Today's Trade Count 1/5, one truck out, three empty
+  slots, Others' Trucks badge 4, Recover red dot. Hero List:
+  16 heroes, red dots on 9 cards. Red dots seen 21, explained
+  18, unexplained 3 (skull cycle timer, Others' Trucks 4,
+  Recover dot); unknown items 4. Chain successor scout-events
+  enqueued as scout-scout-2026-11-10-001. Session cc-639 closed
+  itself between units; cc-643 replaced it. Detail in
+  perception-scout/1648-queue-run.md and
+  perception-scout/observation.md.
