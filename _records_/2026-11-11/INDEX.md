@@ -3337,3 +3337,4 @@ of 2026-10-28.
   screenshot timed out after 180 seconds - do not spend one on
   the full base screen again. Full detail in
   resource-collection/2048-queue-run.md.
+- Integrator pass lastwar-pr-integrator-2026-11-11-2045. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). Merged knowledge PR 669 (squash 9e2b9f59) and tools PR 670 (squash e60709a8), both arrived mid-pass and reviewed clean. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 6649b0ce; merged tree keeps main _tools_ verbatim), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main e60709a8 (merge-tree 4de5f181), one re-verification comment. Local main fast-forwarded to e60709a8. Slack sync sent. Status: done. Full detail in pr-integration/2045-run.md.
