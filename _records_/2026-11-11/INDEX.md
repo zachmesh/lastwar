@@ -3277,3 +3277,29 @@ of 2026-10-28.
   18:00 UTC. Branch-tip day INDEX clean of markers. VPS root disk
   96 percent, 455M free, below the 500M flag threshold. Status:
   done. Full detail in pr-catchall/2039-run.md.
+
+## 20:32 to about 20:52 - Knowledge organization 2032 run, 4 profiles folded, PR 669
+
+- Organizer pass lastwar-knowledge-organizer-2026-11-11-2032.
+  Folded zombie-invasion units 019 (ticker-1919, 2 Lv.10 kills
+  in parallel, 2 LOOT rows claimed 536,000 coins, coin
+  137.5M to 138.0M, medals_after 5120 derived) and 020
+  (ticker-2001, 2 Lv.10 kills in parallel, 1 LOOT row
+  claimed 268,000 coins, Squad 1 row lost - third
+  handover-style loss, medals_after 5140 derived), the
+  perception-scout 1946 events-group remainder (all six
+  Events tabs, Alliance Duel page, radar, 7 red dots seen
+  with 5 explained and 2 unexplained, day counters items
+  29, seen 32, explained 23, unexplained 9 additive with
+  5 distinct still unexplained) and queue-planning 1940
+  (sweep pair both partial per #610, 6 staged, 0 expired,
+  scout diff 29 observed, tooling issue #668) into 4
+  profiles: zombie-invasion 1.40.0, perception-scout
+  1.61.0, the-age-of-oil 1.2.0, daily-activities 1.27.0.
+  Contradiction resolved: the 1834 only-way (batched
+  no-read) parallel-dispatch line is superseded by unit
+  020. PR #669 opened (branch
+  work/ko-2032-zombie-scout-ageo-1940, commit 3c2d84fef5).
+  Issues #477 and #550 commented. The 18:00-18:57 batch
+  units still have no execution record on the branch.
+  Full detail in knowledge-organization/2032-run.md.
