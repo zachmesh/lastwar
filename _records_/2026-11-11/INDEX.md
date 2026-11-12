@@ -2787,3 +2787,16 @@ of 2026-10-28.
   (observed/actionable/enqueued/candidates/unexplained 0), 0
   withdrawals, no new issue. Pool inbox 79, claimed 1, done
   1586. Status: no-op. Full detail in queue-planning/1640-run.md.
+
+## 16:45 to about 16:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1645.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): merged knowledge PR 658
+  (squash 5142cda5, zombie-invasion 1.38.0, vip-rewards
+  1.18.0); records PR 655 awaits the 19:00 batch,
+  merge-tree CLEAN against new main 5142cda5. Tools PR 425
+  still owner-gated (OD-20261108-01 open), re-verified
+  CLEAN against new main, comment posted. Local main
+  fast-forwarded to 5142cda5. Slack sync sent. Status: done.
+  Full detail in pr-integration/1645-run.md.
