@@ -518,6 +518,20 @@ one to the audit cause it answers.
   unit committed to the pass branch but not yet in the live
   working tree stays claimable.
 
+- **R13 - every pass record cites the tool identity (issue #694).**
+  A pass runs `queue.py version` first and records its output -
+  the resolved path of the invoked copy, its sha256, the git HEAD
+  of the checkout holding it, and its currency against main's
+  copy - in the pass record, so a later stale-tool handout is
+  diagnosable from the record alone. The ticker-0737 handover
+  could not be attributed from its record because no version,
+  line count or worktree path was named: with the current tool
+  the control-lock path is closed, but without the identity in
+  the record the next occurrence of the same shape is
+  unattributable again. The command only reports, so a stale
+  copy still answers stale and a copy under the system temp
+  directory still answers; it never refuses.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -854,6 +868,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.21.0, 2026-11-12 - section 11 gains rule R13 (tool-identity evidence, issue #694): `queue.py version` prints this copy's identity - resolved path, sha256, git HEAD and currency against main - so a pass record cites it and a stale-tool handout is diagnosable from the record alone; the command only reports and never refuses.
 - 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.
 - 0.19.0, 2026-11-12 - section 11 gains rule R11 (worktree-location guard, issue #429): the decision commands refuse when this copy of queue.py - or the pool it would decide on - sits under the system temp directory, so a pass whose worktree was created under /tmp fails loudly at its first decision instead of losing its records to the runtime's /tmp sweep mid-pass; pass_worktree.py (PR #432) already refuses /tmp targets at creation, and this guard covers passes that never call it.
 - 0.18.0, 2026-11-12 - section 11 gains rule R10 (tool-currency guard, issue #694): the decision commands refuse when this copy of queue.py differs from main's _tools_/queue.py, so a pass can no longer decide from a stale main-tree checkout; the worktree-tool rule is now enforced by the tool, not just documented.
