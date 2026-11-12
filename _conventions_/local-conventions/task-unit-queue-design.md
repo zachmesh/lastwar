@@ -532,6 +532,21 @@ one to the audit cause it answers.
   copy still answers stale and a copy under the system temp
   directory still answers; it never refuses.
 
+- **R14 - sync, plan and reap reap and expire the live pool (issue #705).**
+  The step-1 reap, expiry and stale-copy drops resolve the given
+  root through live_pool_root before they touch anything, so a
+  worktree-root run expires the live pool instead of the snapshot:
+  an expired claim is released into the live inbox, a stale inbox
+  unit moves to live done with status expired, and a stale inbox
+  copy of a unit already closed in done - locally or on the
+  delivered records branch - is dropped from the live inbox.
+  Ticker-1023 expired the 0603 set in the snapshot while the live
+  inbox still held it, so the expired units stayed eligible to be
+  handed out late. The pool-integrity guard in sync now covers the
+  live pool too, since that is the pool being mutated; the aged
+  priority-1 windowing step still acts on the given root and is
+  not part of this rule.
+
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
 The [daily collection ledger](daily-collection-ledger.md) is the
@@ -868,6 +883,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.22.0, 2026-11-12 - section 11 gains rule R14 (live-pool reap/expire, issue #705): `sync`, `plan` and `reap` resolve the given root through live_pool_root before reaping expired claims, expiring stale inbox units and dropping stale inbox copies, so a worktree-root run expires the live pool instead of the snapshot; the pool-integrity guard in sync now covers the live pool.
 - 0.21.0, 2026-11-12 - section 11 gains rule R13 (tool-identity evidence, issue #694): `queue.py version` prints this copy's identity - resolved path, sha256, git HEAD and currency against main - so a pass record cites it and a stale-tool handout is diagnosable from the record alone; the command only reports and never refuses.
 - 0.20.0, 2026-11-12 - section 11 gains rule R12 (live-pool handout, issue #694): `next` resolves the given root through the live pool before listing candidates, so a worktree-root `next` reads the live inbox instead of the snapshot, and `claim` claims the live-pool copy into the pass root, so a unit handed out from the live pool is claimable even when the snapshot never held it.
 - 0.19.0, 2026-11-12 - section 11 gains rule R11 (worktree-location guard, issue #429): the decision commands refuse when this copy of queue.py - or the pool it would decide on - sits under the system temp directory, so a pass whose worktree was created under /tmp fails loudly at its first decision instead of losing its records to the runtime's /tmp sweep mid-pass; pass_worktree.py (PR #432) already refuses /tmp targets at creation, and this guard covers passes that never call it.
