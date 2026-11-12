@@ -3245,3 +3245,4 @@ of 2026-10-28.
   (observation writer replaces the previous continued pass
   instead of appending). Pool inbox 78, claimed 0, done 1612.
   Status: done. Full detail in queue-planning/1940-run.md.
+- Integrator pass lastwar-pr-integrator-2026-11-11-2015. NON-batch pass (checker plain and merge-aware both not due - outside every batch window, next batch 23:00 PT). No merges, no new comments. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree b3779c19; merged tree keeps main _tools_ verbatim), awaits the 23:00 batch. PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main decf48bb59 (merge-tree 50929ec3, same tree as the 2000 pass), no repeat comment per the no-repeat rule. Status: done. Full detail in pr-integration/2015-run.md.
