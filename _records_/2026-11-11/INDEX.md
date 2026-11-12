@@ -3525,3 +3525,7 @@ of 2026-10-28.
 ## 23:00 to about 23:18 - PR integration 2300 run, records PR 665 batch-merged
 
 - PR integrator pass pr-integration-2026-11-11-2300. BATCH pass (checker plain and merge-aware both due, 23:00 window; no merge in the window before this pass). Merged #665 (records 2026-11-11 post-1900 batch, 67 commits, merge commit 6ba53269e, 23:09:03 PT); action-log 1827 + 40 = 1867 lines, 0 lost, 0 markers in _queue_. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN vs main 40e7a194, no new comment. Fresh post-2300 records PR opened after the run record (number by the fill commit). Local main synced to 6ba53269e via bundle. Slack sync posted to the owner Trirvia DM. Status: done. Full detail in pr-integration/2300-run.md.
+
+## 23:15 to about 23:26 - PR integration 2315 run, non-batch pass
+
+- PR integrator pass pr-integration-2026-11-11-2315. NON-batch pass (checker plain due, merge-aware not due after the stale merges file was repaired: PR 665 already merged 23:09:03 PT in this window, first-pass rule per Issue #335). Records PR 681 (post-2300 batch, 2 commits) awaits the 03:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN vs main 6ba53269e, no new comment. No merges, no Slack sync. Status: done. Full detail in pr-integration/2315-run.md.
