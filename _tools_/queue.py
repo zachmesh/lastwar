@@ -28,6 +28,12 @@ Usage:
              # instead of the worktree's, so a pass that delivers
              # via a worktree cannot strand a unit on the records
              # branch - the next tick reads the live pool only.
+             # enqueue refuses a chain head when the chain already
+             # has a staged unit under another id (issue #664):
+             # the tracker can still show a regular due while its
+             # head executes, and the (regular, planned_for)
+             # invariant cannot catch the second head because it
+             # carries an empty planned_for.
   queue.py [--root DIR] list [--state inbox|claimed|done]
   queue.py [--root DIR] validate [--ref GIT-REF]
              # pool integrity (issue #441): exit 0 when every unit
@@ -2506,6 +2512,65 @@ def _sweep_enqueue_refusal(args):
     return None
 
 
+def _chain_head_refusal(root, regular, chain_id, chain_seq):
+    """Refusal message when a chain head would duplicate work, or None.
+
+    Issue #664: the 16:54 sync minted a second scout chain head
+    (scout-scout-2026-11-10-001) while the plan-staged head
+    (scout-2026-11-10-1800) was still claimed - the tracker still
+    showed scout due mid-execution. The (regular, planned_for)
+    invariant could not catch it: the staged head carries
+    planned_for 2026-11-11T02:00:00Z while the enqueued head
+    carries an empty planned_for, and the staged head carries no
+    chain_id at all, so the literal same-chain_id check the issue
+    suggests would not have caught this incident either. Two
+    cases are refused loudly, scanning inbox, claimed and done:
+    - the chain already has units but none carries a sequence
+      number, so this mint would restart numbering at seq 1;
+    - no unit carries the chain id, but a unit id starts with
+      "<chain_id>-" - the plan-staged head for this chain under
+      its window id (enqueue chain ids follow the
+      "<regular>-<date>" convention, and plan mints
+      "<regular>-<date>-<HHMM>" for the same window).
+    A chain that already has numbered units is a continuation,
+    not a head, and passes: successors keep minting seq N+1. A
+    different chain of the same regular on the same date passes
+    too - its staged units do not carry this chain id as a
+    prefix (scout-discovery-2026-11-10 is not a prefix of
+    scout-2026-11-10-1800), so the discovery head is not blocked
+    by the base head. Limitation: a chain id that does not follow
+    the "<regular>-<date>" convention (scout-midday seeds
+    "scout-mid-<date>") cannot match its plan-staged head by
+    prefix; renaming it to the convention would extend the guard
+    to it.
+    """
+    same_chain = []
+    namesakes = []
+    prefix = chain_id + "-"
+    for state in STATES:
+        for f in list_units(root, state):
+            if f.get("chain_id") == chain_id:
+                same_chain.append((state, f.get("unit")))
+            elif (f.get("unit") or "").startswith(prefix):
+                namesakes.append((state, f.get("unit")))
+    if same_chain and chain_seq == 1:
+        detail = ", ".join(f"{u} ({s})" for s, u in same_chain)
+        return (f"refused: chain {chain_id} already has units "
+                f"({detail}) but none carries a sequence number - "
+                f"a seq 1 unit would restart the numbering; "
+                f"withdraw the unsequenced units and re-run "
+                f"(issue #664)")
+    if not same_chain and namesakes:
+        detail = ", ".join(f"{u} ({s})" for s, u in namesakes)
+        return (f"refused: chain {chain_id} already has a staged "
+                f"unit under another id ({detail}) - the head is "
+                f"already in the pool, so minting a second head "
+                f"would duplicate it; the (regular, planned_for) "
+                f"invariant cannot catch this because the new head "
+                f"carries an empty planned_for (issue #664)")
+    return None
+
+
 def cmd_enqueue(args):
     # Live-pool production (issue #598): resolve the pool first,
     # before the wrong-root gate and before anything is read or
@@ -2559,6 +2624,11 @@ def cmd_enqueue(args):
                           f"{args.regular}")
                     return 1
         chain_seq = chain_seq_next(root, args.chain_id)
+        refusal = _chain_head_refusal(
+            root, args.regular, args.chain_id, chain_seq)
+        if refusal is not None:
+            print(refusal)
+            return 1
         unit = f"{args.regular}-{args.chain_id}-{chain_seq:03d}"
     else:
         unit = f"{args.regular}-{now_utc().strftime('%Y-%m-%d-%H%M')}"
