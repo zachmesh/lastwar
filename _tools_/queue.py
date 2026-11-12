@@ -29,13 +29,21 @@ Usage:
              # via a worktree cannot strand a unit on the records
              # branch - the next tick reads the live pool only.
   queue.py [--root DIR] list [--state inbox|claimed|done]
-  queue.py [--root DIR] validate
+  queue.py [--root DIR] validate [--ref GIT-REF]
              # pool integrity (issue #441): exit 0 when every unit
              # file is free of conflict markers, duplicate
              # top-level frontmatter keys, a unit id that does not
              # match its file name, and a missing unit id; exit 1
              # listing each problem, for a pre-commit / pre-push
              # hook and for the sync/next guard below.
+             # --ref checks the committed _queue_ tree at a git
+             # ref instead of the working tree, with no checkout
+             # (issue #661): a merge resolution is checked with
+             # plain validate in the worktree before committing
+             # it, a records PR is gated with validate --ref
+             # <branch-tip> before it merges to main, and the
+             # retro loop-health check is validate --ref main.
+             # Exit 2 when the ref cannot be read at all.
   queue.py [--root DIR] next [--budget-minutes 15]
              # next refuses (exit 1) on a corrupt pool instead of
              # handing out a unit no file on disk matches.
@@ -494,6 +502,38 @@ def _frontmatter_top_keys(text):
     return keys, True
 
 
+def _validate_unit_text(rel, text):
+    """Pool-integrity problems in one unit file's text, as strings.
+
+    Shared by validate_pool (working tree) and validate_ref (a git
+    ref): the same checks must answer on both, so a branch tip is
+    judged by exactly the rule the working tree is judged by.
+    """
+    problems = []
+    for lineno, line in enumerate(text.splitlines(), 1):
+        if line.startswith(CONFLICT_MARKERS):
+            problems.append(
+                f"{rel}:{lineno}: unresolved conflict marker")
+    keys, has_fm = _frontmatter_top_keys(text)
+    if not has_fm:
+        problems.append(f"{rel}: no frontmatter block")
+        return problems
+    seen = set()
+    for key in keys:
+        if key in seen:
+            problems.append(
+                f"{rel}: duplicate top-level key {key!r}")
+        seen.add(key)
+    fields, _ = parse_frontmatter(text)
+    unit = fields.get("unit")
+    if not unit:
+        problems.append(f"{rel}: missing unit id")
+    elif f"{unit}.md" != os.path.basename(rel):
+        problems.append(
+            f"{rel}: unit id {unit!r} does not match file name")
+    return problems
+
+
 def validate_pool(root):
     """Pool-integrity problems in the unit files, as strings.
 
@@ -523,31 +563,94 @@ def validate_pool(root):
                 problems.append(f"{state}/{name}: unreadable: {exc}")
                 continue
             rel = f"{state}/{name}"
-            for lineno, line in enumerate(text.splitlines(), 1):
-                if line.startswith(CONFLICT_MARKERS):
-                    problems.append(
-                        f"{rel}:{lineno}: unresolved conflict marker")
-            keys, has_fm = _frontmatter_top_keys(text)
-            if not has_fm:
-                problems.append(f"{rel}: no frontmatter block")
-                continue
-            seen = set()
-            for key in keys:
-                if key in seen:
-                    problems.append(
-                        f"{rel}: duplicate top-level key {key!r}")
-                seen.add(key)
-            fields, _ = parse_frontmatter(text)
-            unit = fields.get("unit")
-            if not unit:
-                problems.append(f"{rel}: missing unit id")
-            elif f"{unit}.md" != name:
-                problems.append(
-                    f"{rel}: unit id {unit!r} does not match file name")
+            problems.extend(_validate_unit_text(rel, text))
     return problems
 
 
+def validate_ref(root, ref):
+    """Pool-integrity problems in the _queue_ tree at a git ref.
+
+    Issue #661: merge dd865af64b ("Merge main into
+    records/2026-11-10 to reconcile PR #615 queue conflicts")
+    committed a rename/add conflict unresolved, and the three
+    conflict-marker unit files it created (trucks, events,
+    secrets 2026-11-11-1457) rode the records PR onto main,
+    because validate only ever ran on a working tree: sync and
+    next guard the ticker's own pool, but no check ran on the
+    merge resolution before it was committed, and no check ran
+    on the branch tip before the records PR merged. This runs
+    the same per-file checks as validate_pool against the
+    committed tree, with no checkout: the pre-merge gate is
+    `validate --ref <branch-tip>` before `gh pr merge`, the
+    merge-resolution check is plain `validate` in the worktree
+    before committing the resolution, and the retro
+    loop-health check is `validate --ref main`. Returns
+    (problems, error): error is a short reason string when the
+    ref cannot be read at all (unknown ref, not a repo), and
+    None otherwise; problems is [] on a clean tree.
+
+    The tree is listed whole and filtered in Python: this
+    tool's root is the _queue_ subdir, not the repo top, so a
+    `_queue_` pathspec would be read relative to the caller's
+    working directory and silently match nothing - and ls-tree
+    names are cwd-relative too, so the listing needs
+    --full-name for the repo-root-relative filter below to
+    hold (same pitfall as records_branch_done_units).
+    """
+    try:
+        listing = subprocess.run(
+            ["git", "-C", root, "ls-tree", "-r", "--full-name",
+             "--name-only", ref],
+            capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError) as exc:
+        return [], f"cannot list tree at {ref!r}: {exc}"
+    if listing.returncode != 0:
+        detail = [line for line in (listing.stderr or "").splitlines()
+                  if line.strip()]
+        reason = detail[-1].strip() if detail else "git ls-tree failed"
+        return [], f"cannot list tree at {ref!r}: {reason[:120]}"
+    problems = []
+    for path in listing.stdout.splitlines():
+        name = path.strip()
+        parts = name.split("/")
+        if len(parts) != 3 or parts[0] != "_queue_":
+            continue
+        state, fname = parts[1], parts[2]
+        if state not in STATES or not fname.endswith(".md"):
+            continue
+        if fname == TOKEN_NAME:
+            continue
+        try:
+            shown = subprocess.run(
+                ["git", "-C", root, "show", f"{ref}:{name}"],
+                capture_output=True, text=True, timeout=30)
+        except (OSError, subprocess.SubprocessError) as exc:
+            problems.append(f"{state}/{fname}: unreadable at "
+                            f"{ref}: {exc}")
+            continue
+        if shown.returncode != 0:
+            problems.append(f"{state}/{fname}: unreadable at "
+                            f"{ref}: git show failed")
+            continue
+        rel = f"{state}/{fname}"
+        problems.extend(_validate_unit_text(rel, shown.stdout))
+    return problems, None
+
+
 def cmd_validate(args):
+    if getattr(args, "ref", ""):
+        problems, error = validate_ref(args.root, args.ref)
+        if error is not None:
+            print(error, file=sys.stderr)
+            return 2
+        for problem in problems:
+            print(problem)
+        if problems:
+            print(f"pool invalid at {args.ref}: {len(problems)} "
+                  f"problem(s) (issue #661)")
+            return 1
+        print(f"pool valid at {args.ref}")
+        return 0
     problems = validate_pool(args.root)
     for problem in problems:
         print(problem)
@@ -3971,6 +4074,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_list)
 
     p = sub.add_parser("validate")
+    p.add_argument("--ref", default="")
     p.set_defaults(fn=cmd_validate)
 
     p = sub.add_parser("next")
