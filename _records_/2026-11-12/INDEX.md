@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-12
 created: 2026-11-12T08:03:50Z
-modified: 2026-11-12T08:36:00Z
+modified: 2026-11-12T08:43:27Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; records PR 681 re-verified CLEAN at new tip 11ac21dc, awaiting the 03:00 batch; tools PR 425 owner-gated, re-verified CLEAN against new main 5d2b9d7e, no new comment; records/2026-11-12 branch created from main with this pass as its first commits; the 0004 queue ticker pass with 1 unit partial (zombie-invasion)
@@ -62,3 +62,15 @@ of 2026-10-28.
   visited, medals not re-measured. Successor 024 enqueued
   to start now. Full detail in
   zombie-invasion/0030-queue-run.md.
+
+## 00:30 to about 00:38 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0030. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 03:00): no merges. Records PRs 681 (2026-11-11,
+  16 commits) and 685 (2026-11-12, 4 commits) both verified
+  CLEAN against main 5d2b9d7e, awaiting the 03:00 batch.
+  Tools PR 425 still owner-gated (OD-20261108-01 open),
+  re-verified CLEAN against main 5d2b9d7e, no new comment
+  (PR unchanged since the 2345 review). No Slack sync.
+  Status: done. Full detail in pr-integration/0030-run.md.
