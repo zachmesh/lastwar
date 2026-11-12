@@ -1707,3 +1707,83 @@ of 2026-10-28.
   returns; records PR 708 therefore does not yet contain this
   pass. No new PR is owed (708 already open, awaits the
   15:00 batch).
+
+## 13:34 to about 13:50 - Ticker pass ticker-1334, sync-only (twenty-second consecutive blocked tick)
+
+- Own PRs first: records PR 708 (2026-11-12) verified LIVE via
+  the GitHub public API (VPS gh unreachable, local gh not logged
+  in): OPEN, MERGEABLE/CLEAN, head 2f59c27047, base 2260197212, 0
+  comments, awaits the 15:00 batch - no question addressed to
+  this job. PR 711 (knowledge fold, head work/ko-1132-lock-1047)
+  and PR 425 (tools, still owner-gated OD-20261108-01) are owned
+  by other jobs. Records PR 700 merged at the 11:00 batch.
+  Issues: no new open issue since the pr-catchall 1239 read (138
+  open, newest #709 and #712, both tooling, class-labeled, zero
+  unclassified) - no issue action by this job.
+- Branch handling: the main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched. This pass worked from the
+  existing clean delivery worktree
+  ~/workspace/lastwar-worktrees/ticker-1304-delivery on
+  records/2026-11-12 at 441dc065ea (reused, no new worktree
+  needed) and a fresh main worktree
+  ~/workspace/lastwar-worktrees/ticker-1334-main at the remote
+  main tip a858a0fca (PR #710 merge, 11:52 PT). The first
+  ticker-1334-main creation landed on stale local main
+  2260197212 (the branch already existed, so pass_worktree
+  ignored --base) - caught by the version command (currency
+  stale), worktree removed, branch deleted, recreated at
+  a858a0fca. Local main branch still sits at 2260197212, one
+  merge behind remote main; moving it is the integrator's job,
+  not this pass's.
+- Tool currency (R10, Issue #694): current tool verified -
+  _tools_/queue.py sha256
+  366b3b76bf638befbc1d0cb81c6ba8417d21ef216e5cfb5fbc9fc903c1f476b0,
+  git_head a858a0fca, currency current (same tool as
+  ticker-1304). The delivery worktree's tools/queue.py and
+  _tools_/queue.py are both md5 8353ca15, STALE - neither was
+  used for decisions. All queue operations ran through the
+  current tool from the fresh main worktree.
+- Sync (current tool, live pool): reaped 0, expired 0,
+  blockers_reaped none, produced none (due 25, already queued
+  24) - identical shape to ticker-1304. Roster warning stands:
+  the live pool holds units for zombie-invasion, a regular
+  missing from the loaded roster (Issue #198). Live pool:
+  inbox 70, claimed 0, done 1699; newest executed closing
+  2026-11-12T17:55:18Z (232 min ago). No zombie seeding needed -
+  successor zombie-invasion-zombie-2026-11-10-028 already sits
+  in the live inbox (chain zombie-2026-11-10, done 26, pending
+  1); scout successor scout-scout-2026-11-10-010 also in inbox.
+- Execute loop handed out nothing: the R9 control-lock blocker
+  (Issue #689, recorded 2026-11-12T20:08:13Z by ticker-1200
+  scout unit 009) still stands, about 1 hour 41 minutes old,
+  under the 4-hour stale bound - the current tool's next
+  returned empty by design, reading the live pool, so no unit
+  was burned and no probe was attempted. Twenty-second
+  consecutive blocked tick since 0134 (the 12:34 tick left no
+  record). The blocker reaps after 00:08:13Z (16:08 PT); the
+  next tick after that probes with one input. Token acquired
+  and released. No game input sent, nothing spent, tracker
+  untouched. No new evidence for Issue #689 beyond the
+  continued stand - no comment posted there (gh write
+  unreachable this pass). Occurrences still TEN.
+- Carry-forward, no action by this job: owner-decision Issue
+  #514 (Transfer Surge) decision deadline passed 10:00 PT
+  with no owner decision recorded; the application phase may
+  run to about 2026-11-13 02:00 UTC (about 18:00 PT today).
+  This job takes no decision on it. VPS root disk 96 percent
+  (476M free) per the 1239 read, below the 500M flag threshold;
+  no files deleted by this job.
+- Delivery PARTIAL: this INDEX and the action-log entry only
+  (tier-1 paths) committed on records/2026-11-12 locally;
+  the push could NOT be completed - the standard bundle-to-VPS
+  route is blocked at the VPS SSH step (ssh
+  centos@66.179.249.233 fails Permission denied (publickey),
+  verified twice this pass). This matches the 2026-11-12
+  ~12:47 accident in which the VPS ~/.ssh was deleted during
+  a cleanup; recovery needs the IONOS console or another
+  machine holding a key and cannot be done from this VM. The
+  commit stays on the local records branch until VPS access
+  returns; records PR 708 therefore does not yet contain this
+  pass or the 1304 pass. No new PR is owed (708 already open,
+  awaits the 15:00 batch).
