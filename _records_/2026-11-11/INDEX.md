@@ -2674,3 +2674,16 @@ of 2026-10-28.
   correction was posted by the ticker unit itself). PR #657
   opened (1 commit 110946d39). Status: done. Full detail in
   knowledge-organization/1532-run.md.
+
+## 16:00 to about 16:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1600.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): merged knowledge PR 657
+  (squash 82589fe4, zombie/mail/shop/secrets profile
+  folds); records PR 655 awaits the 19:00 batch. Tools
+  PR 425 still owner-gated (OD-20261108-01 open), head
+  unchanged 721830b7f, re-verified CLEAN against new
+  main 82589fe4, comment posted. Local main
+  fast-forwarded to 82589fe4. Slack sync sent. Status: done.
+  Full detail in pr-integration/1600-run.md.
