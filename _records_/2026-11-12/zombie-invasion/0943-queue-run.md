@@ -81,5 +81,5 @@ status: unverified
   signature). Issue #694 commented this pass (stale-tool handout:
   the main tree's `tools/queue.py` decided on old behaviour and
   burned a unit the current tool would have held back).
-- Delivery: pushed 30bb0568ea1eb930d3beac6c61aba16b9dd30d70 to records/2026-11-12 (PR 700), verified with
+- Delivery: pushed bd144567eb20e22fee09afa98f5ad2c8d042b5de to records/2026-11-12 (PR 700), verified with
   git ls-remote.
