@@ -3094,3 +3094,6 @@ of 2026-10-28.
   (214M) cleaned per the standing user rule, 94 percent
   (633M free) after. Status: no-op. Full detail in
   pr-catchall/1839-run.md.
+## About 18:32 to about 18:47 - Knowledge organization 1832 run, 3 profiles folded, PR 663
+
+- Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-11-1832. Folded ticker-1718 harvest 1740 + zero-sweep 1726 and ticker-1800 zero-sweep 1730 + radar 1805 records (commits bec20570e, 6cbd479fc): resource-collection 1.60.0 -> 1.61.0 (exact-pointer tap method measured, eleventh food one-tap confirmation +3.9M, coin tap missed, Armed Truck eleventh deferral; Issue #660 hardened), daily-activities 1.24.0 -> 1.25.0 (trucks 1/5 and 0/4 shortfall, donations points 4050, skull timer sixth and seventh sightings, PR 655 conflict resolved, Issue #661 noted), radar-tasks 1.78.0 -> 1.79.0 (entry failed both attempts, rotating shortcut slot now opens Special Forces, duel day 4 stack posture). PR 663 opened from work/ko-1832-harvest-sweeps-radar, 1 commit f668200257, branch base main 82589fe42, OPEN + MERGEABLE + CLEAN. Issues commented: #498 (skull timer, comment 6812826219), #660 (tap method, comment 6812826431). No contradictions, no new issue filed. Status: done. Full detail in knowledge-organization/1832-run.md.
