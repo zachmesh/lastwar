@@ -181,3 +181,7 @@ of 2026-10-28.
   0115 verification). No arrivals during the pass; sweep clean.
   No Slack sync (non-batch run stays silent). Status: done.
   Full detail in pr-integration/0130-run.md.
+
+## 01:32 to about 01:40 - Tool developer 0132 run, issue #688 filed (screenshot-coordinate gap)
+
+- Tool-developer pass tool-development-2026-11-12-0132. Own PR #425 still owner-gated (OD-20261108-01 open), MERGEABLE/CLEAN at head 4f41cdd6a against main 6dea6746b, no author action owed. No unimplemented open tooling issue: newest still #672 (PR #676 merged); 0032 triage still stands. Genuine gap found in the frozen backlog: IMP-20261101-08 prong (1) unimplemented - no tool measures tap coordinates from a screenshot image (tapcal.py 1.5.0 covers prongs 2-4 only; grep finds no image decoding in _tools_/). Filed as issue #688 (tooling, idea) with evidence and scoping note rather than building an unspeced tool. No code changed; no Slack sync. Status: done. Full detail in tool-development/0132-run.md.
