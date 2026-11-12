@@ -2920,3 +2920,19 @@ of 2026-10-28.
 ## About 17:32 to about 17:47 - Knowledge organization 1732 run, 2 profiles folded, PR 659
 
 - Knowledge-organizer pass lastwar-knowledge-organizer-2026-11-11-1732. Folded ticker-1634 daily-missions 1638 + perception-scout 1648 records (commit 1fe3a5e69): daily-missions 1.12.0 -> 1.13.0 (one-tap claim sixth observation, 40/80 chest previews, Mission-list scroll failure), perception-scout 1.58.0 -> 1.59.0 (first perception of reset day 2026-11-11, Trade Trucks panel 1/5, Hero List 9 red dots, skull timer fifth sighting). PR 659 opened from work/ko-1732-missions-scout, 1 commit 7386e8614, base main 5142cda59, OPEN + MERGEABLE + CLEAN. Issue #498 commented (skull timer, comment 6811913090). No contradictions, no new issue filed. Status: done. Full detail in knowledge-organization/1732-run.md.
+
+## 17:45 to about 17:58 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1745.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): merged knowledge PR 659
+  (squash cc27135e1, daily-missions 1.13.0 +
+  perception-scout 1.59.0 folds); records PR 655
+  CONFLICTS with new main (trucks inbox file, markers
+  on main's copy), conflict commented, 19:00 batch
+  blocked until branch-side resolution. Tools PR 425
+  still owner-gated (OD-20261108-01 open), head
+  unchanged 721830b7f, re-verified CLEAN against new
+  main cc27135e1, no new comment. Local main
+  fast-forwarded to cc27135e1. Slack sync sent. Status: done.
+  Full detail in pr-integration/1745-run.md.
