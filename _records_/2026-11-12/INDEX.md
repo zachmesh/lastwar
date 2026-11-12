@@ -1017,3 +1017,32 @@ of 2026-10-28.
 ## 07:32 to about 07:55 - Knowledge-organizer pass
 
 - Knowledge-organizer pass knowledge-organization-2026-11-12-0732. Worked from the 0632 watermark: own PR #698 MERGED 06:48 PT with 0 comments, 0 reviews, no feedback pending. Folded the ticker-0634 sync-only pass (tenth blocked tick, 6 stale 0230 units expired), the queue-planning 0640 run (15 units staged for the 1800/1803/1830 slots, sweep pair complete at stale geometry, scout diff 0 counts) and the ticker-0704 pass (zombie 026 FAILED on the first R9 stale-bound probe - three fresh sessions blocked at the first input, eleventh blocked tick, seventh occurrence) into 4 profiles (PR #701, commit 67b4458fc, OPEN + MERGEABLE + CLEAN at run end): perception-scout 1.71.0, zombie-invasion 1.50.0, daily-activities 1.36.0, radar-tasks 1.87.0. Contradictions resolved: 1 (the R9 stale-bound probe expectation is now VERIFIED - the 4-hour wait does NOT clear the lock; the mechanism is corrected to reap-probe-fail-re-record). Issues commented: #689 (probe outcome + fold), #694 (third R10-clean pass + R11 merged). No new issue filed. Ticker-0734 record and queue-planning 0740 record not landed yet - they belong to the next run. Main did not move during the run (tip e7bd11769). VPS disk 91% at run start, cleaned to 86% (1.4G free) per the standing "Do not ask" rule (/tmp/606 482M + 52M of >6h bundles). Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0732-run.md.
+## 07:39 to about 07:47 - Ticker pass ticker-0737, scout unit failed (control channel lock)
+
+- Own PRs first: records PR 700 (2026-11-12) OPEN, no comments,
+  mergeable UNKNOWN, awaiting the 11:00 batch; tools PR 425 owned
+  by lastwar-tool-developer, not this job. No question addressed
+  to this job.
+- Sync: reaped 0, expired 0, produced none (due 23, already
+  queued 23); dropped the stale inbox copy of
+  zombie-invasion-zombie-2026-11-10-026, already closed in
+  another worktree. No zombie seeding needed (unit 027 already
+  in inbox).
+- Scout unit 008 (ticker-0737, failed, chain scout-2026-11-10):
+  the alliance remainder was still not walked — the
+  computer-control channel lock from unit 006 persists. Three
+  recovery attempts (activate in fresh session cc-711, end and
+  restart as cc-712 plus activate, open_app LastWar) all failed
+  with the same outcome_unknown, "a new local user submission is
+  required before input can resume", about 6 hours after unit
+  006 hit it — the twelfth consecutive ticker pass blocked by
+  the lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534,
+  0604, 0634, 0704, 0737), and the third scout-chain unit to
+  hit it (006, 007, 008). Read-only observation still works and
+  the game stays live on the base screen (power 149,218,973);
+  this is a channel lock, not an authorization problem. New
+  evidence commented on Issue #689: the lock does not clear on
+  its own within 6 hours; blocker re-recorded (R9). Successor
+  009 enqueued; the pass stopped after this unit rather than
+  cascading failed units. Full detail in
+  perception-scout/0737-queue-run.md.
