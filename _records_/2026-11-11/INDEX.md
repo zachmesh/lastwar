@@ -2953,3 +2953,19 @@ of 2026-10-28.
   "Others' Trucks" badge 4, "Recover" dot); 0 withdrawals,
   no new issue. Pool inbox 77, claimed 0, done 1590.
   Status: no-op. Full detail in queue-planning/1740-run.md.
+
+## 18:00 to about 18:06 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-11-1800.
+  NON-batch pass (checker not due, outside every batch
+  window, next batch 19:00): records PR 655 conflict
+  RESOLVED branch-side (e535c029a), re-verified CLEAN
+  against main cc27135e1 (merge-tree exit 0, tree
+  579352b3; merged tree marker-free), resolution
+  commented, awaits 19:00 batch. Tools PR 425 still
+  owner-gated (OD-20261108-01 open), head unchanged
+  721830b7f, re-verified CLEAN against main cc27135e1
+  (merge-tree exit 0, tree eff1ae24), no new comment.
+  No merges; no sync-back owed; no Slack sync (silent
+  run). Status: done.
+  Full detail in pr-integration/1800-run.md.
