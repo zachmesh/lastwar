@@ -142,6 +142,11 @@ Usage:
              # pass in a fresh worktree still sees a token held by a
              # pass still running; a non-repo root keeps its own token.
   queue.py [--root DIR] reap                      # expired leases to inbox
+             # reap, sync and plan resolve the reap/expire root
+             # through live_pool_root (issue #705): a worktree-root
+             # run reaps and expires the live pool, not the
+             # worktree snapshot, so expired units leave the live
+             # inbox instead of accumulating there.
              # reap, sync and plan warn on stdout (exit still 0)
              # when the root holds no pool state directory at
              # all, so a wrong root never reports a silent zero
@@ -172,9 +177,10 @@ Usage:
              # diagnosable from the record alone (issue #694).
   queue.py [--root DIR] sync [--due-json FILE]
              # one ticker production pass: refuse (exit 1) on a
-             # corrupt pool before reaping or staging anything
+             # corrupt live pool before reaping or staging anything
              # (issue #441), then reap, expire stale units, drop
              # inbox copies already closed in done (issue #213),
+             # all on the live pool (issue #705),
              # then drop inbox copies already done on today's
              # delivered records branch (issue #446) - a unit
              # completed in a detached worktree lands its done
@@ -1028,12 +1034,25 @@ def cmd_sync(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
+    # Live-pool reap/expire (issue #705): the step-1 reap, expiry
+    # and stale-copy drops below act on the live pool, not the
+    # worktree snapshot - a worktree-root sync used to expire the
+    # snapshot only, so expired units accumulated in the live
+    # inbox (ticker-1023: the 0603 set expired in the snapshot
+    # while the live inbox still held it). Resolve once here, so
+    # the pool-integrity guard below also covers the pool being
+    # mutated, and the JSON counts below describe live moves.
+    live = live_pool_root(args.root)
+    if live != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"sync reaps and expires the live pool {live} "
+              f"(issue #705)", file=sys.stderr)
     # Pool integrity (issue #441): a bad merge resolution that leaves
     # conflict markers or a duplicate unit id in a committed unit
     # file used to stay silent until next handed out a phantom unit
     # claim could never find. Refuse to reap or stage anything on a
     # corrupt pool - repair the unit files and re-run.
-    problems = validate_pool(args.root)
+    problems = validate_pool(live)
     if problems:
         for problem in problems:
             print(problem, file=sys.stderr)
@@ -1058,11 +1077,11 @@ def cmd_sync(args):
     # record on the branch, never in this pool, so the local drop
     # below cannot see it - without the branch drop the next tick
     # hands the same unit out again.
-    reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root, branch_done, branch)
-    stale_done_dropped = _drop_done_duplicates(args.root)
+    reaped = _reap_claimed(live)
+    expired = _expire_stale(live, branch_done, branch)
+    stale_done_dropped = _drop_done_duplicates(live)
     branch_done_dropped = drop_branch_done_duplicates(
-        args.root, branch_done, branch)
+        live, branch_done, branch)
     # Screen-blocking overlay (issue #436): drop blockers whose
     # clearing unit is gone, so a vanished clearing unit cannot
     # leave a stale blocker file in the live pool directory.
@@ -1649,7 +1668,10 @@ def _expire_stale(root, branch_done=None, branch=None):
     records branch, so expiry must not overwrite that result with
     a bogus miss either - the stale inbox copy is dropped
     instead. Callers that pass no branch set keep the old
-    behaviour; sync and plan fetch the branch first and pass it."""
+    behaviour; sync and plan fetch the branch first and pass it.
+    Callers pass the live pool root (issue #705): sync, plan and
+    reap resolve the given root through live_pool_root first, so
+    the expiry lands in the live inbox, not a worktree snapshot."""
     moved = 0
     stamp = now_utc()
     for f in list_units(root, "inbox"):
@@ -2338,11 +2360,19 @@ def cmd_plan(args):
     if branch_warning:
         print(f"warning: {branch_warning} (issue #446)",
               file=sys.stderr)
-    reaped = _reap_claimed(args.root)
-    expired = _expire_stale(args.root, branch_done, branch)
-    stale_done_dropped = _drop_done_duplicates(args.root)
+    # Live-pool reap/expire (issue #705): like sync, plan reaps,
+    # expires and drops stale inbox copies in the live pool, not
+    # the worktree snapshot.
+    live = live_pool_root(args.root)
+    if live != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"plan reaps and expires the live pool {live} "
+              f"(issue #705)", file=sys.stderr)
+    reaped = _reap_claimed(live)
+    expired = _expire_stale(live, branch_done, branch)
+    stale_done_dropped = _drop_done_duplicates(live)
     branch_done_dropped = drop_branch_done_duplicates(
-        args.root, branch_done, branch)
+        live, branch_done, branch)
     defs_path = args.regulars_json or os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "regulars.json")
     with open(defs_path, encoding="utf-8") as fh:
@@ -4503,8 +4533,15 @@ def cmd_reap(args):
     warning = pool_root_warning(args.root)
     if warning:
         print(warning)
-    moved = _reap_claimed(args.root)
-    expired = _expire_stale(args.root)
+    # Live-pool reap/expire (issue #705): like sync and plan,
+    # reap expires the live pool, not the worktree snapshot.
+    live = live_pool_root(args.root)
+    if live != os.path.abspath(args.root):
+        print(f"note: {args.root} is a linked-worktree pool; "
+              f"reap reaps and expires the live pool {live} "
+              f"(issue #705)", file=sys.stderr)
+    moved = _reap_claimed(live)
+    expired = _expire_stale(live)
     print(f"reaped {moved} expired claim(s), "
           f"expired {expired} stale unit(s)")
     return 0
