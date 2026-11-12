@@ -498,6 +498,8 @@ one to the audit cause it answers.
   `complete` and the token commands stay unguarded, so a pass
   that already decided can finish even if main advances
   mid-pass.
+- **R11 - never decide from a checkout under the system temp directory (issue #429).**
+  A pass worktree under /tmp can vanish mid-pass to the runtime's /tmp sweep - on 2026-11-07 three ticker passes lost their worktrees that way, and on 2026-11-08 the retro run lost /tmp/retro-1108-branch the same way, after the pass_worktree.py fix (PR #432) had already landed: the tool is opt-in, and a pass that creates its worktree with a bare `git worktree add` under /tmp never touches it. The tool enforces the location: `next`, `sync`, `plan`, `sweep` and `enqueue` refuse, exit 1, when this copy of `queue.py` - or the pool it would decide on - sits under the system temp directory (/tmp, or the platform temp dir from TMPDIR), so a pass in a doomed checkout fails loudly at its first decision instead of losing a finished unit's record at delivery. `LASTWAR_QUEUE_ALLOW_TMP_ROOT=1` is test-only, for isolated /tmp fixture validation of a new tool version. `claim`, `complete` and the token commands stay unguarded, so a pass that already decided can finish even if its worktree was created under /tmp.
 
 ## 12. The daily collection ledger and the pre-reset zero sweep
 
@@ -835,6 +837,7 @@ reached main unreviewed.
 
 ## Changelog
 
+- 0.19.0, 2026-11-12 - section 11 gains rule R11 (worktree-location guard, issue #429): the decision commands refuse when this copy of queue.py - or the pool it would decide on - sits under the system temp directory, so a pass whose worktree was created under /tmp fails loudly at its first decision instead of losing its records to the runtime's /tmp sweep mid-pass; pass_worktree.py (PR #432) already refuses /tmp targets at creation, and this guard covers passes that never call it.
 - 0.18.0, 2026-11-12 - section 11 gains rule R10 (tool-currency guard, issue #694): the decision commands refuse when this copy of queue.py differs from main's _tools_/queue.py, so a pass can no longer decide from a stale main-tree checkout; the worktree-tool rule is now enforced by the tool, not just documented.
 - 0.17.0, 2026-11-12 - section 11 gains rule R9 (control-lock pause, issue #689): a unit that meets the outcome_unknown control lock closes failed naming blocker_overlay=control-lock, queue.py records a pool-level blocker that pauses next until it ages out after 4 hours or a closing that sent input lifts it, so a locked night burns no failed units.
 - 0.16.0, 2026-11-07 - the four 19:00 mentions flagged as follow-up on #147 in 0.15.0 are rewritten to the absolute reset instant 02:00 UTC (about 18:00 PST in winter, 19:00 PDT in summer): VIP expiry (section 4), the scout anchor and the deadline list (section 13), and the quota checkpoints (rule R3). The dated 19:00 mentions in sections 1 and 9 stay: both describe the PDT era, when the reset was 19:00 local.

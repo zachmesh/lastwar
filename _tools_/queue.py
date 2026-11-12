@@ -17,6 +17,13 @@ main working tree fails loudly instead of deciding on old
 behaviour. Set LASTWAR_QUEUE_ALLOW_STALE_TOOL=1 only for isolated
 /tmp fixture validation of a new tool version.
 
+They also refuse when this copy - or the pool it would decide on -
+sits under the system temp directory (issue #429): a pass worktree
+under /tmp can vanish mid-pass to the runtime's /tmp sweep, so a
+decision from there fails loudly at the first command instead of
+losing the work at delivery. Set LASTWAR_QUEUE_ALLOW_TMP_ROOT=1
+only for isolated /tmp fixture validation of a new tool version.
+
 This tool manages files only. It never touches the game or the device;
 executors do the playing and call this tool around their work.
 
@@ -256,6 +263,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -2109,6 +2117,92 @@ def refuse_if_tool_stale(cmd):
           f"main checkout (a pass worktree, never the main working "
           f"tree) so the pass decides on current behaviour "
           f"(issue #694)", file=sys.stderr)
+    return 1
+
+
+# ---------------------------------------------------------------------
+# Worktree-location guard (issue #429)
+# ---------------------------------------------------------------------
+
+TOOL_ALLOW_TMP_ROOT_ENV = "LASTWAR_QUEUE_ALLOW_TMP_ROOT"
+
+
+def _temp_roots():
+    """System temp directories, symlinks resolved.
+
+    /tmp plus the platform temp dir (tempfile.gettempdir, which
+    honours TMPDIR): on this VM /tmp is a 512M tmpfs the runtime
+    wipes, and on the Mac TMPDIR is a per-user folder the OS
+    cleans. Both are the same hazard - a checkout under either
+    can vanish mid-pass.
+    """
+    roots = set()
+    for candidate in ("/tmp", tempfile.gettempdir()):
+        roots.add(os.path.realpath(candidate))
+    return roots
+
+
+def _is_under(path, root):
+    """True when realpath(path) is root or lives under it."""
+    path = os.path.realpath(path)
+    return path == root or path.startswith(root + os.sep)
+
+
+def _tmp_location(pool_root):
+    """(True, where) when a decision would run from a temp dir.
+
+    Checks the checkout holding this copy of queue.py (the parent
+    of _tools_/) and the pool --root resolves to: either one under
+    the system temp directory is a doomed checkout. Returns
+    (False, None) when neither is under a temp dir. Pure path
+    math, no fetch, so there is no unreadable-main case - the
+    bypass env is the only escape.
+    """
+    temps = _temp_roots()
+    for where, path in (("tool copy", os.path.dirname(_tool_dir())),
+                       ("pool", pool_root)):
+        for temp in temps:
+            if _is_under(path, temp):
+                return True, "%s %s sits under temp dir %s" % (
+                    where, path, temp)
+    return False, None
+
+
+def refuse_if_tmp_worktree(cmd, pool_root):
+    """Refusal exit code when a decision would run from /tmp.
+
+    Issue #429: on 2026-11-07 three ticker passes created their
+    worktrees under /tmp and all three vanished mid-pass to the
+    runtime's /tmp sweep, taking uncommitted records, INDEX
+    appends and unit completions with them; on 2026-11-08 the
+    retro run lost /tmp/retro-1108-branch the same way, after
+    PR #432 had already landed pass_worktree.py, which refuses
+    /tmp targets at creation - the tool is opt-in, and a pass
+    that creates its worktree with a bare `git worktree add`
+    under /tmp never touches it. So the decision commands
+    (enqueue, sync, plan, sweep, next) refuse - exit 1, nothing
+    staged or handed out - when this copy of queue.py, or the
+    pool it would decide on, sits under the system temp
+    directory, and the pass fails loudly at its first decision
+    instead of losing a finished unit's record at delivery.
+    LASTWAR_QUEUE_ALLOW_TMP_ROOT=1 bypasses only for isolated
+    /tmp fixture validation of a new tool version. Claim,
+    complete and the token commands stay unguarded, like the
+    #694 guard: a pass that already decided can finish even if
+    its worktree was created under /tmp. Returns 1 on refusal,
+    else None.
+    """
+    if os.environ.get(TOOL_ALLOW_TMP_ROOT_ENV) == "1":
+        print(f"warning: {TOOL_ALLOW_TMP_ROOT_ENV}=1, worktree-location "
+              f"check bypassed for isolated validation (issue #429)",
+              file=sys.stderr)
+        return None
+    is_tmp, where = _tmp_location(pool_root)
+    if not is_tmp:
+        return None
+    print(f"{cmd} refused: {where} - create the pass worktree under "
+          f"~/workspace/lastwar-worktrees/ (never /tmp) and run the "
+          f"tool from there (issue #429)", file=sys.stderr)
     return 1
 
 
@@ -4711,6 +4805,9 @@ def main(argv=None):
     args = parser.parse_args(argv)
     args.root = resolve_pool_root(os.path.abspath(args.root))
     if args.cmd in TOOL_GUARDED_COMMANDS:
+        refusal = refuse_if_tmp_worktree(args.cmd, args.root)
+        if refusal is not None:
+            return refusal
         refusal = refuse_if_tool_stale(args.cmd)
         if refusal is not None:
             return refusal
