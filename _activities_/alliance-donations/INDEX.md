@@ -1,9 +1,9 @@
 ---
 title: Alliance Donations
 created: 2026-10-25T18:58:00Z
-modified: 2026-11-11T18:32:17Z
+modified: 2026-11-12T05:32:17Z
 level: L1
-version: 1.101.0
+version: 1.102.0
 description: Donating to alliance technology, one activity folder for donation knowledge
 status: unverified
 grounded_in:
@@ -109,6 +109,7 @@ grounded_in:
   - source: ticker-1952 alliance-donations execution record 2026-11-10 2015 queue run (partial, re-read of the 1919 unverified close, 1 coin donation confirmed 2/30 to 1/30, second tap unknown behind a 00:14:47 cooldown timer, count read 2/30 at 20:12 while the footer sat post-reset at 550 - the count did NOT reset with the footer; record commit d29bc658c on records/2026-11-10)
   - source: ticker-2122 alliance-donations execution record 2026-11-10 2133 queue run (partial, re-read of the 2015 unverified close, 3 coin donations confirmed 4/30 to 1/30, fourth tap unknown behind a 00:14:25 cooldown timer, count replenished +3-4 between 20:15 and 21:26 with the footer flat at 700 - burst allowance evidence, radar exit solved at Home (927,952); record commit ccb00e883 on records/2026-11-10)
   - source: 2026-11-10 daily retro, execution-knowledge action A-2026-11-10-02 (Issues #148, #500): donations changed route - stop at the live-read 1/30, no tap from 1/30, hand the last donation to a named re-read unit after the cooldown
+  - source: 2026-11-11 daily retro, execution-knowledge action A-2026-11-11-02 (Issues #148, #500): donations changed route restated - stop at the live-read 1/30, no tap from 1/30, hand the last donation to a named re-read unit after the cooldown; Issue #631 closed with evidence (units 1249 and 1430 followed the route after PR #634)
   - source: ticker-2231 alliance-donations execution record 2026-11-10 2249 queue run (partial, 3 coin donations verified live 4/30 to 1/30 on Quick Construction, stopped at the 1/30 floor per the changed route, button stayed green with no cooldown timer, replenishment +3; record commit d22fd7cf1 on records/2026-11-10)
   - source: ticker-2312 alliance-donations execution record 2026-11-10 2319 queue run (partial, re-read of the 2133 unverified close, count live 2/30, 1 coin donation confirmed 2/30 to 1/30, second tap greyed with a 00:09:58 timer hiding the count, close unverified, footer 1400 to 1600, maintenance-shutdown banner; record commit a17f65702 on records/2026-11-10)
   - source: ticker-2334 alliance-donations execution record 2026-11-10 2354 queue run (partial, re-read after the 2319 cooldown, 1 coin donation verified live 2/30 to 1/30 on Quick Construction, stopped at the 1/30 floor per the changed route, replenishment +1 over about 40 minutes, re-read unit 0757 enqueued for 00:15 PT; record commit 5c07e8d40 on records/2026-11-10)
@@ -4176,3 +4177,10 @@ enqueued for after the cooldown (not before about
 - Close: partial. Two coin donations verified live (count 8/30 to 7/30 to 6/30, Tech EXP 3.7K to 3.8K), closing count read live at 6/30, tracker untouched (partial units do not move the tracker). The unit's expires_at (10:03 PT) passed during execution; the close is late against the slot but the count reads are live and complete for the work done. The Alliance Gifts tile carries a red dot (a gift notification arrived during the unit); no gift was opened - that is the gifts regular's work, not this unit's.
 - Result stats: target burn the Donation Count down from the live entry read, verified per tap; achieved live 8/30 read, 2 coin donations verified 8/30 to 6/30, stopped on pass budget; resources_gained 100 Tech EXP, 100 contribution points (2 donations at 50 each); points 0; costs about 11 minutes, 600 coins; verified yes; blocker_category h; donations_made 2, donation_count_before 8, donation_count_after 6 (live), tech_exp_before 3.7K, tech_exp_after 3.8K, footer 3950 (display only), cooldown none (button green at close), device_takeovers 0.
 - No diamonds or money spent. No priced button, Renew, paid unlock or Legendary Claim All tapped. No login or verification demanded. No "active on a different device" dialog appeared. The game was left on the base screen.
+
+## What the 2026-11-11 retro added - A-2026-11-11-02 changed route restated, Issue #631 closed, verification still owed
+
+- 2026-11-11 retro action A-2026-11-11-02 (Issues #148, #500): donations changed route - stop at the live-read 1/30, no tap from 1/30, and hand the last donation to a named re-read unit after the cooldown. The route held for the 1249 and 1430 units after PR #634; the 1157 breach is closed on #631. Tracked on Issues #148 and #500. Verification: a verified 0/30 close on the Nov 11 cycle, or a named re-read unit's live count. Recheck: 2026-11-12 retro.
+- Issue #631 CLOSED by the 2026-11-11 retro with evidence: PR #634 merged (tool-developer 1932 run); the post-merge donations units 1249 (06:25 PT) and 1430 (07:31 PT) followed the changed route - 2 donations verified live 3/30 to 1/30 on Rallied Attack, stopped at 1/30, no tap from 1/30. The stale-profile cause is fixed and the behaviour after the fix is the verification. A later breach reopens it.
+- No new donations unit ran between the 1004 unit and this run, so the route-compliance tally is unchanged (held in 0415, 0603, 1003, 1616, 1719, 2249, 2354, 0024, 0316, 0321, 0353, 0541, 0733, 1004; deviated in 2015, 2133, 2319, 0757, 0148, 0434, 0635). The verification above is still owed: no verified 0/30 close on the Nov 11 cycle has landed, and no named re-read unit's live count has been read since the 1004 close at 6/30.
+- No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.

@@ -1,9 +1,9 @@
 ---
 title: Perception Scout
 created: 2026-11-01T05:10:00Z
-modified: 2026-11-12T04:32:17Z
+modified: 2026-11-12T05:32:17Z
 level: L1
-version: 1.61.0
+version: 1.62.0
 description: The scout passes - walking the whole game interface to observe what is available to do, recording it as observed items, and handing the work to the owning regulars
 status: active
 grounded_in:
@@ -3875,3 +3875,19 @@ observe-only, nothing claimed). Evidence in
 - Observation-writer data loss, tooling Issue #668 (filed by the queue-planning 1940 run, owned by lastwar-tool-developer, not this job): the live observation file's second pass is this unit's 1919 pass; the branch copy's second pass was the 1843 pass. The 1919 unit updated the day counters FROM the 1843 state (items 13 to 21, red dots seen 21 to 28, explained 18 to 23, unexplained 3 to 5) while REPLACING the 1843 section - the writer holds base pass + latest continued pass only, not every pass as its frontmatter says ("appended to by every scout unit of the day"). The 1843 pass narrative survives only in 1850-queue-run.md on the branch and in git history - its detail (the small 9 beneath the Mission terminal, the second left-column icon (white truck), the blue gift-box marker above the dispatched truck, the 35 km blue house marker) is already folded in this profile's 1850 section, so no knowledge is lost from the profile. The branch copy was repaired by the ticker delivery merge (now 3 passes, cumulative counters); the live file still holds base + 1919 only. Timestamp oddity, noted not resolved: the 1919 pass records reads at 19:44 local while the observation file mtime is 19:41:41.
 - Unknown items carried (4, all first seen in this pass): what the Zombie Store dot marks; what the Desert Battlefield badge (!) marks; the radar "1/40" counter meaning; the grey skull pin's small red dot on the radar map. The scout_diff.py run is left for the successor unit - this unit's follow-up is the store-group successor, not a diff application.
 - Follow-up: chain successor seq 003 enqueued for the store group (scout-scout-2026-11-10-003 sits in inbox). The store-group successor re-checks the Zombie Store dot, the Desert Battlefield badge, the radar "1/40" counter and the grey skull pin dot.
+
+## What the 2026-11-11 2040 unit added - store group, Mall 7-tab list, Hot Sale Free Claim found for shop-claims, 1 red dot unexplained, successor 004, partial
+
+- Unit scout-scout-2026-11-10-003, chain scout-2026-11-10 seq 3, by ticker-2031, token acquired about 20:31 PT, claimed about 20:31, finished about 20:40 local, status partial - store group partly walked (3 of 7 Mall tabs), 1 red dot unexplained and 4 tabs unwalked; successor 004 enqueued. Evidence in `_records_/2026-11-11/perception-scout/2040-queue-run.md` (commit f7ef9ca1 on records/2026-11-11). Session cc-664 on the owner Mac mini, Last War window 676414 (windowed 642x951, not fullscreen); no drop, no "active on a different device" dialog, no access error. Observe-only throughout: nothing claimed, fought, dispatched, donated, dug or bought; no price tag tapped.
+- Base screen re-read at entry: power 149,218,973; food 694.9M, iron 1.0G, coin 138.3M, diamonds 13.22K; stamina 53.
+- Mall (Store) opened from the cart icon: full 7-tab list recorded (Hot Sale Packs, Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass, Diamond, Gold Brick Mall).
+- Hot Sale Packs tab: HERO SHARD/EXCLUSIVE WEAPON SHARD CHOICE PACK with a Free Claim (UR Hero Shard Choice Box V x10 + Skill Medal 500, timer 21:25:47, Availability 1) - observed only, NOT tapped; claiming belongs to the shop-claims unit (handed off, see shop-claims 1.55.0).
+- Diamond tab: paid packs only, all x2 Initial Buy Reward (10000 $99.99 down to 100 $0.99). Gold Brick Mall tab: paid gold-brick packs only, Extra 5% Bonus (x500 $4.99 up to x100000 $999.9); the "Free Gift" stickers are purchase bonuses, not free claims.
+- Red dots: 2 seen, 1 explained, 1 unexplained. Explained: the MALL header red dot is the Hot Sale Packs Free Claim; this also explains the base-screen cart red dot. Unexplained: a red badge "1" on the Mall tab bar above the Weekly Pass area (position suggests the Weekly Pass tab, unverified).
+- Unknown items: what the cart icon's 6,717 counts; the blue chest icon at the bottom-left of the Hot Deals page.
+- Tabs NOT walked: Official Event, Weekly Deal, Super Monthly Pass, Weekly Pass - successor 004's job.
+- Method notes: a scroll on the tab bar did nothing; a drag moved it (first drag revealed Diamond and Gold Brick Mall; a second drag confirmed the right end). The first back-arrow tap missed (coordinate error, hit the pack row); a re-grounded tap at the arrow returned to the base screen.
+- Day counters updated in the observation file: items 29 to 34, red dots seen 32 to 34, explained 23 to 24, unexplained 9 to 10.
+- 2026-11-11 retro action A-2026-11-11-03 (reopened Issue #149): scout Inventory entry - never reuse a grounded tap point after a view pan; re-ground fresh on every entry attempt. The (880,841) point is already retired in this profile (1521 section); the retro re-issues the rule because NO Nov 11 scout unit opened Inventory at all - no alliance/store pass ran, so the entry was never attempted - and the verification is still owed: a Nov 12 scout unit opens Inventory on a freshly grounded point and records its contents. Recheck: 2026-11-12 retro.
+- Result stats: surfaces_walked 1 (store, partial - 3 of 7 Mall tabs); items_observed 5; red_dots_seen 2; red_dots_explained 1; unexplained_red_dots 1; unknown_items 2; target walk the store surface group of pass scout-2026-11-10, observe-only; achieved Mall tab list recorded, Hot Sale Packs, Diamond and Gold Brick Mall tabs observed and recorded, 1 free claim found for shop-claims, 1 red dot unexplained, 4 tabs unwalked; resources_gained none (observe-only); costs about 9 minutes, no stamina or resources spent; verified yes; blocker_category h.
+- No diamonds or money spent. No game was operated by this run and no queue code or cron definition was edited.
