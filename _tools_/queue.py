@@ -92,7 +92,11 @@ Usage:
              # --stat blocker_overlay=<slug> records the
              # pool-level blocker (the slug maps to its clearing
              # regular in OVERLAY_CLEARING_REGULAR); a done
-             # closing by the clearing regular lifts it.
+             # closing by the clearing regular lifts it. The
+             # control-lock slug (issue #689) is the exception:
+             # it has no clearing regular, next hands out
+             # nothing while it stands, and any later closing
+             # that sent input lifts it.
              # every closing also records a completion marker in
              # the main checkout's _queue_/completed/ (issue
              # #438), so a unit closed in a detached worktree is
@@ -759,6 +763,22 @@ AGED_P1_WINDOW_HOURS = 4
 OVERLAY_CLEARING_REGULAR = {"star-ceremony": "star-ceremony"}
 BLOCKER_STALE_HOURS = 4
 BLOCKER_DIRNAME = "blockers"
+# Control-channel lock (issue #689): the outcome_unknown lock after
+# a session drop blocks every input action - read-only inspection
+# stays live, new sessions do not clear it, reconcile cannot clear
+# it. Evidence: 2026-10-26 to 2026-10-27 froze 18 consecutive
+# segment runs and cleared only when the owner submitted locally
+# on 2026-10-27; 2026-11-12 01:34-02:07 blocked three consecutive
+# ticker passes the same way. No self-clear has ever been observed.
+# A unit that closes short naming this slug records a pool-level
+# control-lock blocker; next hands out nothing while one stands,
+# so a locked night burns no failed units. The lock has no clearing
+# regular - any later closing that sent input (done, partial, or
+# skipped-needs-owner, without naming the lock) lifts it - and the
+# BLOCKER_STALE_HOURS bound is the wait-and-retry rule: sync reaps
+# a control-lock blocker older than 4 hours, the next tick probes
+# with one input, and a fresh outcome_unknown re-records it.
+CONTROL_LOCK_SLUG = "control-lock"
 # Completed-unit markers (issue #438): a unit closed in a detached
 # worktree leaves its done record in that worktree, so the main
 # tree's inbox still holds it and the next pass re-executes it -
@@ -2881,6 +2901,14 @@ def cmd_next(args):
          and not _has_done_record(args.root, f.get("unit"))
          and not has_completion_marker(args.root, f.get("unit"))),
         key=lambda f: pick_key(f, stamp))
+    # Control-channel lock (issue #689): no unit can clear it -
+    # every unit needs input - so while one stands, hand out
+    # nothing. The stale bound in sync re-opens the pool for one
+    # probe after BLOCKER_STALE_HOURS.
+    for blocker in read_blockers(args.root):
+        if blocker.get("kind") == "control-lock":
+            print("")
+            return 0
     # Screen-blocking overlay (issue #436): a recorded overlay
     # prefers the unit that clears it over every base-screen unit,
     # and pauses base-screen production while the clearing unit is
@@ -3443,10 +3471,19 @@ def cmd_complete(args):
             clearing = record_blocker(args.root, overlay,
                                       args.unit)
             if clearing:
-                blocker_note = (f"blocker recorded: overlay "
-                                f"{overlay} - next picks prefer "
-                                f"{clearing} units until one "
-                                f"closes done")
+                if overlay == CONTROL_LOCK_SLUG:
+                    blocker_note = (f"blocker recorded: control "
+                                    f"channel locked "
+                                    f"(outcome_unknown) - next "
+                                    f"hands out nothing until the "
+                                    f"blocker ages out "
+                                    f"({BLOCKER_STALE_HOURS}h) or "
+                                    f"input succeeds")
+                else:
+                    blocker_note = (f"blocker recorded: overlay "
+                                    f"{overlay} - next picks prefer "
+                                    f"{clearing} units until one "
+                                    f"closes done")
             else:
                 blocker_note = (f"warning: {args.unit} names "
                                 f"unknown overlay {overlay} - no "
@@ -3459,6 +3496,20 @@ def cmd_complete(args):
                     blocker_note = (f"blocker cleared: overlay "
                                     f"{blocker['overlay']} cleared "
                                     f"by {args.unit}")
+    # Control-channel lock (issue #689): a closing that sent input
+    # proves the channel is back, so done / partial /
+    # skipped-needs-owner without naming the lock lifts it. A
+    # failed closing proves nothing either way and leaves the
+    # blocker standing; the stale bound re-opens the pool for
+    # one probe after BLOCKER_STALE_HOURS.
+    if args.status in ("done", "partial", "skipped-needs-owner") \
+            and overlay != CONTROL_LOCK_SLUG:
+        for blocker in read_blockers(args.root):
+            if blocker.get("kind") == "control-lock":
+                if clear_blocker(args.root, blocker["overlay"]):
+                    blocker_note = (f"blocker cleared: control "
+                                    f"channel lock lifted by "
+                                    f"{args.unit} (input flowed)")
     target = unit_path(args.root, "done", args.unit)
     os.makedirs(state_dir(args.root, "done"), exist_ok=True)
     write_unit(path, fields, body)
@@ -3683,9 +3734,11 @@ def read_blockers(root):
 
     Each file is the small frontmatter the completion path wrote; a
     file that does not parse or names no clearing regular is
-    skipped, so a half-written record can never pause the pool.
-    The most recently recorded overlay is the one on top of the
-    screen, so newest-first is also the clearing order.
+    skipped, so a half-written record can never pause the pool -
+    except a control-lock blocker (issue #689), which carries a
+    kind row and no clearing regular by design. The most recently
+    recorded overlay is the one on top of the screen, so
+    newest-first is also the clearing order.
     """
     home = blocker_home(root)
     folder = os.path.join(home, BLOCKER_DIRNAME)
@@ -3698,11 +3751,15 @@ def read_blockers(root):
         fields, _ = read_unit(os.path.join(folder, name))
         overlay = fields.get("overlay", "")
         clearing = fields.get("clearing_regular", "")
-        if not overlay or not clearing:
+        kind = fields.get("kind", "overlay")
+        if not overlay:
+            continue
+        if not clearing and kind != "control-lock":
             continue
         recorded = parse_iso(fields.get("recorded_at", ""))
         out.append({"overlay": overlay,
                     "clearing_regular": clearing,
+                    "kind": kind,
                     "recorded_at": recorded,
                     "recorded_by": fields.get("recorded_by", ""),
                     "path": os.path.join(folder, name)})
@@ -3716,8 +3773,25 @@ def record_blocker(root, overlay, recorded_by):
 
     Returns the clearing regular, or "" when the overlay has no
     row in OVERLAY_CLEARING_REGULAR (the caller warns; a blocker
-    with no known clearing unit cannot be acted on).
+    with no known clearing unit cannot be acted on). The
+    control-lock slug (issue #689) is the exception: it has no
+    clearing regular by design, so it records a kind row instead
+    and returns the slug itself.
     """
+    if overlay == CONTROL_LOCK_SLUG:
+        home = blocker_home(root)
+        folder = os.path.join(home, BLOCKER_DIRNAME)
+        os.makedirs(folder, exist_ok=True)
+        lines = ["---",
+                 f"overlay: {overlay}",
+                 "kind: control-lock",
+                 f"recorded_at: {iso(now_utc())}",
+                 f"recorded_by: {recorded_by or ''}",
+                 "---", ""]
+        with open(os.path.join(folder, overlay + ".md"),
+                  "w", encoding="utf-8") as fh:
+            fh.write("\n".join(lines))
+        return CONTROL_LOCK_SLUG
     clearing = OVERLAY_CLEARING_REGULAR.get(overlay, "")
     if not clearing:
         return ""
@@ -3752,7 +3826,11 @@ def reap_stale_blockers(root):
     inbox or claimed and it was recorded over BLOCKER_STALE_HOURS
     ago; the picker already ignores a blocker with no clearing
     unit, so reaping changes no pick - it only keeps the live
-    directory from holding a blocker no pass can ever clear.
+    directory from holding a blocker no pass can ever clear. A
+    control-lock blocker (issue #689) has no clearing regular:
+    the same bound is its wait-and-retry rule, so it is stale
+    once it is over BLOCKER_STALE_HOURS old and the next tick
+    probes with one input.
     Returns the list of overlay slugs dropped.
     """
     stamp = now_utc()
@@ -3764,6 +3842,14 @@ def reap_stale_blockers(root):
     dropped = []
     for blocker in read_blockers(root):
         recorded = blocker["recorded_at"]
+        if blocker.get("kind") == "control-lock":
+            if recorded is not None and \
+                    (stamp - recorded).total_seconds() <= \
+                    BLOCKER_STALE_HOURS * 3600:
+                continue
+            if clear_blocker(root, blocker["overlay"]):
+                dropped.append(blocker["overlay"])
+            continue
         if blocker["clearing_regular"] in live:
             continue
         if recorded is not None and \
