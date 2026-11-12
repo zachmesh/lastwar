@@ -1425,3 +1425,99 @@ of 2026-10-28.
 ## 11:00 to about 11:20 - PR integration 1100 run, BATCH (checker: due, 11:00 window)
 
 - Integrator pass pr-integration-2026-11-12-1100. BATCH pass per the checker (plain due exit 0, 11:00 window, 52 minutes left at pass start; merge-aware re-check after the merge: PR #700 already merged in this window). Records PR 700 (2026-11-12) batch-merged as 22601972 (69 commits, 45 files, all records paths). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN vs new main c4bcd355f, one re-verification comment posted. New records PR follows this record's push for the post-batch appends, awaits the 15:00 batch. Local main synced to 22601972 via bundle. Merges synced to the Slack DM and reported in Chinese. Status: done. Full detail in pr-integration/1100-run.md.
+## 10:47 to about 11:22 - Ticker pass ticker-1047, sync-only (eighteenth consecutive blocked tick)
+
+- Own PRs first: records PR 700 (records/2026-11-12) MERGED at the 11:00 batch
+  during this pass; the post-batch records branch carries on
+  from the new main, and a new records PR is owed after push -
+  no question addressed to this job.
+  Tools PR 425 is owned by lastwar-tool-developer, still
+  owner-gated, not this job's. Tools PR 706 merged during this
+  window (main 96520ae0d4, queue.py version command) - that
+  merge is why the first fresh main worktree failed the #694
+  tool-currency guard (see below).
+- Branch handling: the main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched. This pass worked from a
+  fresh worktree ~/workspace/lastwar-wt-1047-ticker-1112 on
+  ticker-1047-1112-delivery at the live records tip 06a5d8a89.
+  A fresh main worktree ~/workspace/lastwar-worktrees/
+  ticker-1047-main was created through _tools_/pass_worktree.py
+  (R10/R11) at main 96520ae0d4; the first create reused the
+  stale branch ticker-1047-main at cc58a605c4 (pass_worktree
+  checks out an existing branch instead of creating from
+  --base), so the branch was deleted and the worktree recreated
+  before any decision was taken from it.
+- Tool currency (R10): the records-branch copies of
+  tools/queue.py and _tools_/queue.py (both md5 8353ca15, 4571
+  lines) are STALE against main's _tools_/queue.py (md5
+  abc3cbb841, 4977 lines, PR #706 live). The pass's first
+  sync/next/token-acquire ran on that stale copy; every
+  decision was then re-verified with the current tool from the
+  fresh main worktree, and the stale-tool outputs were
+  confirmed, not trusted blind (see below). Current tool
+  identity (version command): sha256 ba9bee077f113e751a45f60c
+  643b80d0e54005f765496c28078038f0ca2729fd, git_head
+  96520ae0d4, currency current. The main tree's own
+  tools/queue.py is also stale (md5 82ee98fe) - it must not be
+  used for decisions (Issue #694).
+- Sync: stale-tool run reaped 0, expired 12, produced none
+  (due 25, already queued 24); roster warning stands under
+  the stale copy (zombie-invasion missing from its roster,
+  Issue #198). Current-tool re-run: reaped 0, expired 17,
+  produced 0 (due 25, already queued 24), reconciled two
+  stale inbox copies against the branch done pool -
+  scout-scout-2026-11-10-008 and
+  zombie-invasion-zombie-2026-11-10-026, already done on
+  records/2026-11-12, dropped instead of re-executed;
+  roster_stale_regulars empty under the current roster.
+  Both syncs expired in their worktree snapshots only
+  (Issue #705): the snapshot moves were verified in each
+  worktree's git status and the delivery worktree's _queue_
+  changes were reverted before committing, so no snapshot
+  expiry lands in this delivery. Live-pool check on disk:
+  inbox 82 files; the 0603/0630 sets ARE expired in the live
+  pool (done, status expired, finished_at 18:45:00Z) together
+  with 2203/2230 units minted live at 10:45:00-10:45:09 PT -
+  a sync ran against the live pool at 10:45 PT, before this
+  pass started, with no action-log entry identifying the
+  writer (consistent with a late-starting tick running from
+  the main checkout, where args.root is the live pool). The
+  0257 set is absent from live inbox and live done because it
+  is genuinely done on records/2026-11-12 (executed earlier),
+  so branch reconciliation accounts for it. The 0657 set
+  (expired 18:57Z) still sits in the live inbox. A
+  confirmation/refinement comment was posted on Issue #705
+  (comment 6833345745): the snapshot-only mechanism is
+  confirmed in code for both tool copies, but the live-pool
+  symptom is partial - a main-checkout run does expire live.
+  Zombie seeding: no seeding needed - successor
+  zombie-invasion-zombie-2026-11-10-028 sits in the live
+  inbox (chain zombie-2026-11-10).
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 2026-11-12T17:55:18Z by
+  ticker-0941 zombie unit 027) still stands, about 1 hour
+  old, under the 4-hour stale bound - the current tool's next
+  returned empty by design, reading the live pool, so no unit
+  was burned and no probe was attempted. Eighteenth
+  consecutive tick blocked by the lock (0134, 0204, 0234,
+  0304, 0334, 0404, 0504, 0534, 0604, 0634, 0704, 0737, 0804,
+  0834, 0904, 0941, 1023, this pass). The blocker reaps after
+  21:55:18Z (13:55 PT); the next tick after that probes with
+  one input. Token acquired and released. No game input sent,
+  nothing spent, tracker untouched. No new evidence for
+  Issue #689 beyond the continued stand - no comment posted
+  there. Occurrences still NINE (corrected from EIGHT by the
+  knowledge-organization 1032 run, which found radar 0151 and
+  scout 007 omitted from the count; sync-only passes add
+  ticks, not occurrences).
+- Carry-forward, no action by this job: owner-decision Issue
+  #514 (Transfer Surge) decision deadline passed 10:00 PT
+  with no owner decision recorded (see ticker-1023 entry);
+  the 2026-11-09 live-read comment implies the application
+  phase may run to about 2026-11-13 02:00 UTC (about 18:00 PT
+  today). This job takes no decision on it.
+- Delivery: this INDEX and the action-log entry only (tier-1
+  paths); pushed to records/2026-11-12, verified with git
+  ls-remote; new post-batch records PR opened after push
+  (PR 700 merged at the 11:00 batch).
