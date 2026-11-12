@@ -26,13 +26,13 @@
  },
  "passes": {
   "status": "done",
-  "at": "2026-11-11T02:49:45-08:00",
-  "note": "Shop checked live, nothing claimable: free pack unavailable, no weekly pass owned, Monthly Pickup already Claimed"
+  "at": "2026-11-11T15:27:47-08:00",
+  "note": "Checked only, nothing claimable - Free Supply Claimed, monthly Claimed, weekly cards all offers"
  },
  "secrets": {
   "status": "done",
-  "at": "2026-11-11T06:51:21-08:00",
-  "note": "All 8 tasks read live; nothing claimable or deployable; assists 5/5 capped"
+  "at": "2026-11-11T15:35:32-08:00",
+  "note": "Checked only - 7 of 8 PERFECT, UR Rescue Officer unchanged, assists 5/5, recovery CLAIMED"
  },
  "events": {
   "status": "done",
@@ -53,5 +53,15 @@
   "status": "done",
   "at": "2026-11-11T12:40:28-08:00",
   "note": "Release day: 12 claimed, points 415 to 427, stored 0/40"
+ },
+ "vip": {
+  "status": "done",
+  "at": "2026-11-11T16:19:33-08:00",
+  "note": "Daily Freebie + login chest claimed, VIP points 1634170 to 1634290"
+ },
+ "daily-missions": {
+  "status": "done",
+  "at": "2026-11-11T16:47:03-08:00",
+  "note": "Claimed Help Allies and Kill 5 zombies; activity 80 to 100 points"
  }
 }
