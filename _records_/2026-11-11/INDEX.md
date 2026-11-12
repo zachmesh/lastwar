@@ -3118,3 +3118,6 @@ of 2026-10-28.
   "Others' Trucks" badge 4, "Recover" dot); 0 withdrawals,
   no new issue. Pool inbox 75, claimed 0, done 1605.
   Status: done. Full detail in queue-planning/1840-run.md.
+## About 19:00 to about 19:10 - PR integration 1900 run, records PR batch-merged, trucks-1457 markers cleared
+
+- Integrator pass lastwar-pr-integrator-2026-11-11-1900. BATCH pass (checker due, window 19:00-20:00 PT). Merged records PR 655 with --merge (62 commits, merge commit 87ea0981f3, mergedAt 2026-11-12T03:03:42Z); branch survives for the day remainder; the merge cleared the conflict markers main carried on _queue_/inbox/trucks-2026-11-11-1457.md since PR 615 (0 markers on new main). PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. Fresh post-1900 records PR opened after this run record; local main synced to 87ea0981f3. Slack sync sent. Status: done. Full detail in pr-integration/1900-run.md.
