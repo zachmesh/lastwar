@@ -3161,3 +3161,6 @@ of 2026-10-28.
   18:00 UTC. Branch-tip day INDEX clean of markers. VPS root disk
   93 percent, 692M free, below the 700M flag threshold. Status:
   done. Full detail in pr-catchall/1939-run.md.
+## About 19:45 to about 19:50 - PR integration 1945 run, non-batch pass, records PR awaiting 23:00 batch
+
+- Integrator pass lastwar-pr-integrator-2026-11-11-1945. NON-batch pass (checker plain due yes inside the 19:00-20:00 PT window, but merge-aware not due - PR 655 already merged 19:03:41 PT in this window at the 1900 batch pass; merges file /tmp/merges-today.json already listed 655). No merges. Records PR 665 re-verified CLEAN (merge-tree exit 0, tree 8be010ea), awaits the 23:00 batch; merged tree keeps main's _tools_ verbatim (queue.py --ref raw count 7, same as main). PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN, no new comment. No Slack sync (silent run). Status: done. Full detail in pr-integration/1945-run.md.
