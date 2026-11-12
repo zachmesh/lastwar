@@ -360,3 +360,6 @@ of 2026-10-28.
   no diamonds or money spent. Successor 025 is already in
   inbox, so no new unit was enqueued; tracker untouched. Token
   released. Full detail in zombie-invasion/0247-queue-run.md.
+## 02:32 to about 02:45 - Tool development 0245 run, issue #689 implemented, PR #692 open
+
+- Tool-developer pass tool-development-2026-11-12-0245. Own PR #425 still owner-gated (OD-20261108-01 open, age 4 days), re-verified CLEAN against main 8a3f8a2be, no author action owed. Implemented issue #689 as the pool-level control-lock blocker in PR #692 (branch work/control-lock-blocker, commit 3a7bcd470, MERGEABLE/CLEAN): next hands out nothing while a control-lock blocker stands; a done/partial close lifts it; sync reaps a lock older than 4 hours so the next tick probes with one input. Queue design 0.17.0 adds rule R9. Validated with 29 fixture assertions on an isolated /tmp scratch pool (run twice, all pass); py_compile clean; no live pool touched. Issue #689 commented. Status: done. Full detail in tool-development/0245-run.md.
