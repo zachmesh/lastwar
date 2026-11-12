@@ -965,3 +965,459 @@ of 2026-10-28.
   main 97f068d7, comment posted. Merge synced to the owner
   Trirvia DM. No arrivals during the pass; sweep clean.
   Status: done. Full detail in pr-integration/0645-run.md.
+## 06:32 to about 07:11 - Tool development 0632 run, done
+
+- Tool-developer pass tool-development-2026-11-12-0632. Issue #429 follow-up guard implemented as PR #699 (branch work/tmp-worktree-guard-429, commit 87b9a085): queue.py decision commands (`next`, `sync`, `plan`, `sweep`, `enqueue`) now refuse exit 1 from a checkout under the system temp directory (rule R11, changelog 0.19.0); the 2026-11-08 retro run lost /tmp/retro-1108-branch after PR #432 had merged, so the opt-in creation tool needed this enforcement layer. Own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 97f068d7, no action owed. All 60 open tooling issues checked; the rest implemented or accounted for. Validation py_compile clean, 17/17 fixture assertions in /tmp/f429; live pool untouched. Status: done. Full detail in tool-development/0632-run.md.
+## 07:00 to about 07:20 - PR integration 0700 run, BATCH (checker due, 07:00 window)
+
+- Integrator pass pr-integration-2026-11-12-0700. BATCH pass per the checker (due - 07:00 window, 55 minutes left at pass start; merge-aware re-check after the merge: not due, PR #685 already merged in this window). Records PR 685 (2026-11-12) batch-merged as b9bec1c9 (100 commits, 138 files, all records paths). Tools PR 699 reviewed CLEAN and squash-merged as e7bd1176 (queue.py /tmp guard, rule R11, Refs #429; issue #429 commented). New records PR 700 opened for post-batch appends, awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against the new main e7bd1176, comment posted. Merged main synced back to the local repo (fast-forward 97f068d7 -> e7bd1176). Merges synced to the owner Trirvia DM. Sweep clean. Status: done. Full detail in pr-integration/0700-run.md.
+## 07:15 to about 07:30 - PR integration 0715 run, NON-batch (checker merge-aware: 685 already merged in this window)
+
+- Integrator pass pr-integration-2026-11-12-0715. NON-batch pass per the merge-aware checker (due --merges: not due, PR #685 already merged 07:08:53 in the 07:00 window; plain clock-only due said yes, 36 minutes left - the merge-aware verdict governs per the first-pass rule). Records PR 700 (2026-11-12, head 4e2ccf20, 5 records-only commits) awaits the 11:00 batch; merge-tree probe exit 0 (merged tree 056a64b0), would merge cleanly. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main e7bd1176 (merge-tree exit 0, merged tree 9f69bb5e - identical to the 0700 verification), re-verification comment posted. No merges, no new records PR (all 12 older records branches contained in main), no Slack sync (non-batch, feedback-only). Sweep clean. Status: done. Full detail in pr-integration/0715-run.md.
+
+## 07:04 to about 07:35 - Ticker pass ticker-0704, zombie-invasion unit 026 failed (control-lock blocker, first R9 stale-bound probe)
+
+- Ticker pass ticker-0704. Own PRs first: records PR 685 MERGED 07:08 PT in the 07:00 batch; new records PR 700 OPEN for the same branch, awaits the 11:00 batch, no question addressed to this job, no new PR owed. Tools PR 425 owned by lastwar-tool-developer, not this job.
+- Ran from a fresh worktree on records/2026-11-12 (~/workspace/lastwar-wt-0704-ticker-1112) with the current tool copy (R10 complied). The main working tree still sits on work/ops-execution-records with another job's in-flight state and was not touched. Branch fast-forwarded mid-pass from 62f803c9a to 4e2ccf20 after git fetch --deepen=10 (the shallow-clone graft refused the merge until deepened).
+- Sync: reaped 0, expired 6 (the 0257-slot events, passes, secrets, treasures, trucks units and scout-midday-2026-11-11-0700), produced 0 (25 due, already queued); second sync at 07:20 reaped the control-lock blocker at its 4-hour stale bound (07:19:16 PT). Zombie seeding: unit 026 already in inbox, no seeding needed; roster warning for zombie-invasion (issue #198) stands.
+- Execute loop: after the blocker reaped, `next` handed out zombie-invasion unit 026 (chain zombie-2026-11-10 seq 26), claimed 07:20:49 PT. The probe: three fresh computer sessions cc-708, cc-709, cc-710 all failed at the first input (open_app LastWar) with outcome_unknown (Issue 689) - the fifth consecutive ticker pass whose probe input was blocked, and the first R9 stale-bound probe: the 4-hour wait-and-retry did NOT clear the lock. Game verified live on the base screen by read-only snap (power 149,218,973, coin 145.7M HUD, unchanged since 01:34); no kills, no claims, nothing spent. Unit closed failed; control-lock blocker re-recorded (R9), pool pauses until about 11:27 PT; successor 027 enqueued in the same chain (live pool). Tracker untouched. Token released.
+- Eleventh consecutive tick blocked by the lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534, 0604, 0634, this pass). Issue 689 commented. Status: done (failed-unit pass). Files: this INDEX, _logs_/repo-actions/action-log.jsonl, _queue_ (6 expired units, unit 026 done), _records_/2026-11-12/zombie-invasion/0720-queue-run.md.
+
+## 07:33 to about 07:38 - PR integration 0733 run, NON-batch (checker merge-aware: 685 already merged in this window)
+
+- Integrator pass pr-integration-2026-11-12-0733. NON-batch pass per the merge-aware checker (due --merges: not due, PR #685 already merged 07:08:53 in the 07:00 window; plain clock-only due said yes, 25 minutes left - the merge-aware verdict governs per the first-pass rule). Records PR 700 (2026-11-12, head 59aa3cb7a, 9 records-only commits) awaits the 11:00 batch; merge-tree probe exit 0 (merged tree d2bc134b), would merge cleanly. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main e7bd1176 (merge-tree exit 0, merged tree 9f69bb5e - identical to the 0700/0715 verifications), re-verification comment posted. No merges, no new records PR (all 12 older records branches contained in main), no Slack sync (non-batch, feedback-only). Sweep clean. Status: done. Full detail in pr-integration/0733-run.md.
+## 07:32 to about 07:38 - Tool development 0732 run, no-op
+
+- Tool-developer pass tool-development-2026-11-12-0732. No-op: own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main e7bd1176 at head 4f41cdd6a, no author action owed; PR #699 merged as e7bd1176; all 60 open tooling issues verified implemented or accounted for (none filed after 14:00Z; #429 implemented by merged PR #699 since the 0532 verification); standing queue items (c)(1)-(2) re-verified implemented on main e7bd1176, (c)(3) and the frozen backlog per the 0532 verification; issue #688 awaits scope decision, not built. Status: no-op. Full detail in tool-development/0732-run.md.
+
+## 07:39 to about 07:44 - PR catch-all 0739 run, no-op (no adoption, no fix)
+
+- PR catch-all pass pr-catchall-2026-11-12-0739. Own PR 137
+  stays merged; no adopted open PR. Two open PRs scanned, none
+  owned by this job - PR 700 records 2026-11-12 (Owner
+  lastwar-pr-integrator, head 7551f6e0, mergeable UNKNOWN while
+  GitHub recomputes, awaits the 11:00 batch), PR 425 tools log
+  gate still owner-gated (OD-20261108-01 open, MERGEABLE/CLEAN
+  at head 4f41cdd6a, integrator re-verified at 0733). Two PRs
+  merged since the 0639 pass (685 in the 07:00 batch, 699 at
+  15:09:51Z); main head now e7bd1176. 135 open issues, zero
+  unclassified, zero lacking a class label, none new since the
+  0639 pass. Owner-decision issues 132, 154, 335, 514 and 517
+  all over 24 hours with statements current; issue 514 decision
+  deadline 2026-11-12 18:00 UTC, about 2 hours away. Branch-tip
+  INDEX marker checks clean; action-log tail ends in a newline
+  at the 7551f6e0 tip (1934 lines). VPS root disk 85 percent
+  (1.5G free), above the 500M flag threshold; no files deleted
+  by this job. No Slack sync. Status: no-op. Full detail in
+  pr-catchall/0739-run.md.
+
+## 07:45 to about 07:55 - PR integration 0745 run, NON-batch (checker merge-aware: 685 already merged in this window)
+
+- Integrator pass pr-integration-2026-11-12-0745. NON-batch pass per the merge-aware checker (due --merges: not due, PR #685 already merged 07:08:53 in the 07:00 window; plain clock-only due said yes, 13 minutes left - the merge-aware verdict governs per the first-pass rule). Records PR 700 (2026-11-12, head 7551f6e0d, 13 records-only commits) awaits the 11:00 batch; merge-tree probe exit 0 (merged tree 05418b00), would merge cleanly. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main e7bd1176 (merge-tree exit 0, merged tree 9f69bb5e - identical to the 0700/0715/0733 verifications), re-verification comment posted. No merges, no new records PR (all 12 older records branches contained in main), no Slack sync (non-batch, feedback-only). Sweep clean. Status: done. Full detail in pr-integration/0745-run.md.
+## 07:32 to about 07:55 - Knowledge-organizer pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-12-0732. Worked from the 0632 watermark: own PR #698 MERGED 06:48 PT with 0 comments, 0 reviews, no feedback pending. Folded the ticker-0634 sync-only pass (tenth blocked tick, 6 stale 0230 units expired), the queue-planning 0640 run (15 units staged for the 1800/1803/1830 slots, sweep pair complete at stale geometry, scout diff 0 counts) and the ticker-0704 pass (zombie 026 FAILED on the first R9 stale-bound probe - three fresh sessions blocked at the first input, eleventh blocked tick, seventh occurrence) into 4 profiles (PR #701, commit 67b4458fc, OPEN + MERGEABLE + CLEAN at run end): perception-scout 1.71.0, zombie-invasion 1.50.0, daily-activities 1.36.0, radar-tasks 1.87.0. Contradictions resolved: 1 (the R9 stale-bound probe expectation is now VERIFIED - the 4-hour wait does NOT clear the lock; the mechanism is corrected to reap-probe-fail-re-record). Issues commented: #689 (probe outcome + fold), #694 (third R10-clean pass + R11 merged). No new issue filed. Ticker-0734 record and queue-planning 0740 record not landed yet - they belong to the next run. Main did not move during the run (tip e7bd11769). VPS disk 91% at run start, cleaned to 86% (1.4G free) per the standing "Do not ask" rule (/tmp/606 482M + 52M of >6h bundles). Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0732-run.md.
+## 07:39 to about 07:47 - Ticker pass ticker-0737, scout unit failed (control channel lock)
+
+- Own PRs first: records PR 700 (2026-11-12) OPEN, no comments,
+  mergeable UNKNOWN, awaiting the 11:00 batch; tools PR 425 owned
+  by lastwar-tool-developer, not this job. No question addressed
+  to this job.
+- Sync: reaped 0, expired 0, produced none (due 23, already
+  queued 23); dropped the stale inbox copy of
+  zombie-invasion-zombie-2026-11-10-026, already closed in
+  another worktree. No zombie seeding needed (unit 027 already
+  in inbox).
+- Scout unit 008 (ticker-0737, failed, chain scout-2026-11-10):
+  the alliance remainder was still not walked — the
+  computer-control channel lock from unit 006 persists. Three
+  recovery attempts (activate in fresh session cc-711, end and
+  restart as cc-712 plus activate, open_app LastWar) all failed
+  with the same outcome_unknown, "a new local user submission is
+  required before input can resume", about 6 hours after unit
+  006 hit it — the twelfth consecutive ticker pass blocked by
+  the lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534,
+  0604, 0634, 0704, 0737), and the third scout-chain unit to
+  hit it (006, 007, 008). Read-only observation still works and
+  the game stays live on the base screen (power 149,218,973);
+  this is a channel lock, not an authorization problem. New
+  evidence commented on Issue #689: the lock does not clear on
+  its own within 6 hours; blocker re-recorded (R9). Successor
+  009 enqueued; the pass stopped after this unit rather than
+  cascading failed units. Full detail in
+  perception-scout/0737-queue-run.md.
+
+## 08:00 to about 08:09 - PR integration 0800 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0800. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 178 minutes away; merge-aware due --merges exit 1, same verdict). Knowledge PR #701 reviewed CLEAN and squash-merged as c76922766 (4 activity profiles folded: perception-scout 1.71.0, zombie-invasion 1.50.0, daily-activities 1.36.0, radar-tasks 1.87.0; Refs #689, #694; Owner lastwar-knowledge-organizer; merge-tree exit 0; branch deleted). Merged main synced back to the local repo (fast-forward e7bd11769b -> c76922766 via bundle). Records PR 700 (2026-11-12, head f703685aa, 19 records-only commits) awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main c76922766 (merge-tree exit 0, merged tree d7b3ccb2; head unchanged 4f41cdd6a), re-verification comment posted (issuecomment-6828799252). No new records PR (all 12 older records branches contained in main). Merges synced to the owner Trirvia DM. Sweep clean. Status: done. Full detail in pr-integration/0800-run.md.
+
+## 08:15 to about 08:20 - PR integration 0815 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0815. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 163 minutes away; merge-aware due --merges exit 1, same verdict). No merges this pass. Records PR 700 (2026-11-12, head c8466604d, 21 records-only commits) awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main c76922766 (merge-tree exit 0, merged tree d7b3ccb2, identical to the 0800 verification; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). Sweep clean. Status: done. Full detail in pr-integration/0815-run.md.
+## 08:04 to about 08:19 - Ticker pass ticker-0804, no unit executed (control-lock blocker stands)
+
+- Ticker pass ticker-0804. Own PRs first: records PR 700
+  (2026-11-12) OPEN, no comments, awaits the 11:00 batch; no
+  question addressed to this job, nothing to fix. Tools PR 425
+  owned by lastwar-tool-developer, not this job.
+- Ran from a fresh worktree on records/2026-11-12 at c8466604d
+  (~/workspace/lastwar-wt-0804-ticker-1112, delivery branch
+  ticker-0804-1112-delivery) with the current tool copy
+  (_tools_/queue.py). The main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched.
+- Sync: reaped 0, expired 0, produced 0 (due 25, 24 already
+  queued; zombie-invasion is a chain regular, not sync-produced).
+  Two completion markers reaped from the shared pool
+  (scout-scout-2026-11-10-008, zombie-invasion-zombie-2026-11-10-026,
+  closings now landed in the records branch). Zombie seeding:
+  zombie-invasion-zombie-2026-11-10-027 already sits in the live
+  inbox, no seeding needed; roster warning for zombie-invasion
+  (issue #198) stands.
+- Execute loop handed out nothing: the R9 control-lock blocker
+  (Issue #689, recorded 15:47:00Z by ticker-0737 scout unit 008
+  after 3 fresh sessions all failed at first input with
+  outcome_unknown) still stands, about 30 minutes old, under the
+  4-hour stale bound - next refuses by design, so no unit was
+  burned and no probe was attempted; a probe is due only once the
+  blocker ages out. Thirteenth consecutive tick blocked by the
+  lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534, 0604,
+  0634, 0704, 0737, this pass). The blocker reaps after 19:47Z
+  (11:47 PT); the next tick then probes with one input. Token
+  acquired and released. No new evidence for Issue #689 - no
+  comment posted this pass.
+- Pool note: zombie-027, scout-009 and the pre-reset sweep pair
+  wait behind the lock; nothing can move until the channel clears
+  (a new local user submission on the Mac mini, per the error
+  text).
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
+
+## 08:30 to about 08:40 - PR integration 0830 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0830. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 148 minutes away; merge-aware due --merges exit 1, same verdict). No merges this pass. Records PR 700 (2026-11-12, head d89cf3614b, 24 records-only commits) awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main c76922766 (merge-tree exit 0, merged tree d7b3ccb2, identical to the 0800 and 0815 verifications; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). Sweep clean. Status: done. Full detail in pr-integration/0830-run.md.
+
+## 08:32 to about 08:40 - Tool development 0832 run, no-op
+- Tool-developer pass tool-development-2026-11-12-0832. No-op: own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main c76922766 at head 4f41cdd6a (integrator 0800 pass), no author action owed; PR #696 merged 04:48 PT, PR #699 merged as e7bd11769; newest 30 open tooling issues verified implemented or accounted for this run, older 30 per the 0532 full verification, no new tooling issue filed; standing queue items (c)(1)-(3) re-verified implemented on main c76922766; issue #688 awaits scope decision, not built. Status: no-op. Full detail in tool-development/0832-run.md.
+
+## 08:34 to about 08:41 - Ticker pass ticker-0834, no unit executed (control-lock blocker stands)
+
+- Ticker pass ticker-0834. Own PRs first: records PR 700
+  (2026-11-12) OPEN, mergeable (CLEAN), no comments, awaits
+  the 11:00 batch; no question addressed to this job, nothing
+  to fix. Tools PR 425 owned by lastwar-tool-developer, not
+  this job.
+- Ran from a fresh worktree on records/2026-11-12 at d89cf3614b
+  (~/workspace/lastwar-wt-0834-ticker-1112, delivery branch
+  ticker-0834-1112-delivery) with the current tool copy
+  (_tools_/queue.py). The main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched.
+- Sync: reaped 0, expired 0, produced 0 (due 25, 24 already
+  queued; zombie-invasion is a chain regular, not sync-produced).
+  No completion markers reaped this pass. Zombie seeding:
+  zombie-invasion-zombie-2026-11-10-027 already sits in the live
+  inbox (82 units live), no seeding needed. Note for the next
+  reader: this worktree's snapshot pool shows no zombie unit -
+  production and next resolve to the live pool in the main
+  checkout, where 027 lives.
+- Execute loop handed out nothing: the R9 control-lock blocker
+  (Issue #689, recorded 15:47:00Z by ticker-0737 scout unit 008
+  after 3 fresh sessions all failed at first input with
+  outcome_unknown) still stands, about 55 minutes old, under the
+  4-hour stale bound - next returns empty by design, so no unit
+  was burned and no probe was attempted; a probe is due only once
+  the blocker ages out. Fourteenth consecutive tick blocked by
+  the lock (0134, 0204, 0234, 0304, 0334, 0404, 0504, 0534, 0604,
+  0634, 0704, 0737, 0804, this pass). The blocker reaps after
+  19:47Z (11:47 PT); the next tick then probes with one input.
+  Token acquired and released. No new evidence for Issue #689 -
+  no comment posted this pass.
+- Pool note: zombie-027, scout-009 and the pre-reset sweep pair
+  wait behind the lock; nothing can move until the channel clears
+  (a new local user submission on the Mac mini, per the error
+  text). The lock has now persisted about 7 hours since unit 006
+  first hit it at 01:34 PT, with no self-clear observed.
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
+
+## 08:39 to about 08:47 - PR catch-all 0839 run, no-op (no adoption, no fix)
+
+- PR catch-all pass pr-catchall-2026-11-12-0839. Own PR 137
+  stays merged; no adopted open PR. Two open PRs scanned, none
+  owned by this job - PR 700 records 2026-11-12 (Owner
+  lastwar-pr-integrator, head a1bd23d7 at the final read,
+  MERGEABLE/CLEAN, awaits the 11:00
+  batch), PR 425 tools log
+  gate still owner-gated (OD-20261108-01 open, MERGEABLE/CLEAN
+  at head 4f41cdd6a, integrator re-verified at 0800 against new
+  main c76922766). One PR merged since the 0739 pass (701 at
+  16:02:48Z); main head now c7692276. 135 open issues, zero
+  unclassified, zero lacking a class label, none new since the
+  0739 pass. Owner-decision issues 132, 154, 335, 514 and 517
+  all over 24 hours with statements current; issue 514 decision
+  deadline 2026-11-12 18:00 UTC, about 1 hour away. Branch-tip
+  INDEX marker checks clean; action-log tail ends in a newline
+  at the a1bd23d7 tip (1944 lines). VPS root disk 88 percent
+  (1.2G free), above the 500M flag threshold; /tmp/606 gone,
+  removed by the knowledge-organizer 0732 cleanup; no files
+  deleted by this job. No Slack sync. Status: no-op. Full detail
+  in pr-catchall/0839-run.md.
+## 08:32 to about 08:52 - Knowledge-organizer pass
+
+- Knowledge-organizer pass knowledge-organization-2026-11-12-0832. Worked from the 0732 watermark: own PR #701 MERGED 08:02 PT with 0 comments, 0 reviews, no feedback pending. Folded the ticker-0737 pass (scout 008 FAILED on the control-lock - twelfth blocked tick, eighth occurrence, lock persists 6h with no self-clear) and the ticker-0804 sync-only pass (thirteenth blocked tick, no unit executed, no probe - the re-recorded blocker was about 30 minutes old) into 4 profiles (PR #702, commit 6932809b3, OPEN + MERGEABLE + CLEAN at run end): perception-scout 1.72.0, zombie-invasion 1.51.0, daily-activities 1.37.0, radar-tasks 1.88.0. Contradictions resolved: 1 (next-probe timing superseded - the re-recorded blocker reaps 19:47Z, 11:47 PT, not about 11:27 PT). R9 pause claim qualified by the 0737 handover anomaly (unit handed out while the 0704 blocker stood, about 13 minutes old; stale-tool burn vs pool-visibility race unresolved - open question on Issue #694). Issues commented: #689 (fold), #694 (anomaly question). No new issue filed. Ticker-0834 record landed during this run - it belongs to the next run. No ticker-0734 or queue-planning 0740 record landed today - closed as unlanded. Main did not move during the run (tip c76922766). VPS disk 89% at run start, cleaned to 88% (1.3G free) per the standing "Do not ask" rule (12 >6h-old .bundle files, 76M). Slack sync posted to the owner Trirvia DM. Status: done. Full detail in knowledge-organization/0832-run.md.
+
+## 08:45 to about 08:56 - PR integration 0845 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0845. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 133 minutes away; merge-aware due --merges exit 1, same verdict). Knowledge PR #702 arrived mid-pass (opened 08:48 PT), reviewed CLEAN and squash-merged as 33cf659cd7 (4 activity profiles folded: perception-scout 1.72.0, zombie-invasion 1.51.0, daily-activities 1.37.0, radar-tasks 1.88.0; Refs #689, #694; Owner lastwar-knowledge-organizer; merge-tree exit 0; branch deleted). Merged main synced back to the local repo (fast-forward c76922766 -> 33cf659cd7 via bundle). Records PR 700 (2026-11-12, head fbcf31cc, 32 records-only commits) awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main 33cf659cd7 (merge-tree exit 0, merged tree 01dc976f; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). Merge synced to the owner Trirvia DM. Sweep clean. Status: done. Full detail in pr-integration/0845-run.md.
+## 09:00 to about 09:07 - PR integration 0900 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0900. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 118 minutes away; merge-aware due --merges exit 1, same verdict, 115 minutes away). Records PR 700 (2026-11-12, head 3539899e, 36 records-only commits) re-verified CLEAN at the new head (merge-tree exit 0, merged tree f0388534); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main 33cf659cd7 (merge-tree exit 0, merged tree 01dc976f, identical to the 0845 probe; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/0900-run.md.
+## 09:15 to about 09:25 - PR integration 0915 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0915. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 103 minutes away; merge-aware due --merges exit 1, same verdict, 99 minutes away). Records PR 700 (2026-11-12, head 615f33f32, 38 records-only commits) re-verified CLEAN at the unchanged head (merge-tree exit 0, merged tree 928033ba); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main 33cf659cd7 (merge-tree exit 0, merged tree 01dc976f, identical to the 0845/0900 probes; head unchanged 4f41cdd6a), no new comment per the no-repeat rule. No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/0915-run.md.
+
+## 09:04 to about 09:35 - Ticker pass ticker-0904, sync-only (fifteenth consecutive blocked tick)
+
+- Own PRs first: records PR 700 (records/2026-11-12) is OPEN,
+  MERGEABLE/CLEAN, 0 comments, awaits the 11:00 batch - no new
+  PR is owed by this pass, no question addressed to this job.
+  Tools PR 425 is owned by lastwar-tool-developer, still
+  owner-gated, not this job's.
+- Branch handling: the main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched. This pass worked from a
+  fresh worktree ~/workspace/lastwar-wt-0904-ticker-1112 on
+  records/2026-11-12. The stale ticker-0704 worktree was found
+  holding a diverged local branch (unrelated histories vs the
+  remote tip); its content was verified preserved on the remote
+  (diff purely additive, 9 files, no deletions) before the
+  worktree was removed and this one created, then reset hard to
+  the live remote tip 3539899e21. A fresh main worktree
+  ~/workspace/lastwar-worktrees/ticker-0904-main was created
+  through _tools_/pass_worktree.py (R10) at main 33cf659cd7.
+- Tool currency (R10): the records-branch copy of
+  _tools_/queue.py predates main's by 264 lines (no R10/R11
+  guards), so the pass's first sync ran on that stale copy -
+  output identical to the current-tool re-run (reaped 0,
+  expired 0, due 25, produced 0, already queued 24) and no
+  decision was taken from it; every decision command after
+  that ran on the current tool from the fresh main worktree.
+  The worktree is not under /tmp (R11 complied).
+- Sync (current tool): reaped 0, expired 0, produced 0 (due
+  25, already queued). No completion markers reaped.
+- Zombie seeding, corrected in-pass: the seeding check was
+  first run against the records-branch snapshot pool, which
+  holds no zombie unit, and enqueue minted
+  zombie-invasion-zombie-2026-11-10-028 into the live pool -
+  but 027 already sits in the live inbox (enqueued by
+  ticker-0704 at 15:29:17Z), so the seeding rule's precondition
+  (no zombie unit in inbox or claimed) was false. 028 was
+  removed minutes later, never claimed, while the blocker
+  stands; the live inbox is back to 82 units with 027 intact
+  as the chain successor. Lesson recorded: seeding checks run
+  against the live pool, where production lands by design
+  (issue #598 - enqueue resolves through live_pool_root);
+  the records-branch snapshot never holds live inbox units,
+  and blockers/ plus completed/ are live-only by _queue_/
+  .gitignore, never records. No execution was affected.
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 15:47:00Z by ticker-0737
+  scout unit 008) still stands, about 1 hour 40 minutes old,
+  under the 4-hour stale bound - next returned empty by
+  design, so no unit was burned and no probe was attempted.
+  Fifteenth consecutive tick blocked by the lock (0134, 0204,
+  0234, 0304, 0334, 0404, 0504, 0534, 0604, 0634, 0704, 0737,
+  0804, 0834, this pass). The blocker reaps after 19:47Z
+  (11:47 PT); the next tick then probes with one input.
+  Token acquired and released. No new evidence for Issue #689
+  beyond the continued stand - no comment posted there.
+- Issue #694 commented: live verification that the current
+  tool's next cannot hand out during the pause (shared
+  blocker-home read), the R10 stale-copy note, and the
+  pool-visibility reading that next lists candidates from the
+  given root inbox while production, token, blockers and
+  markers resolve to the shared live pool.
+  Status: done (sync-only pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
+## 09:30 to about 09:38 - PR integration 0930 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0930. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 88 minutes away; merge-aware due --merges exit 1, same verdict, 86 minutes away). Records PR 700 (2026-11-12, head 70caeb42b1, 40 records-only commits) re-verified CLEAN at the new head (merge-tree exit 0, merged tree fba99915); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main 33cf659cd7 (merge-tree exit 0, merged tree 01dc976f, identical to the 0845/0900/0915 probes; head unchanged 4f41cdd6a), no new comment per no-repeat rule. No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/0930-run.md.
+
+## 09:39 to about 09:47 - PR catch-all 0939 run, no-op
+
+- Own PRs first: no adopted open PR (PR 137 stays merged).
+  Records PR 700 (2026-11-12) OPEN, MERGEABLE/CLEAN at head
+  97ab1294, no comments, awaiting the 11:00 batch; tools PR 425
+  owned by lastwar-tool-developer, not this job, head unchanged
+  4f41cdd6a, MERGEABLE/CLEAN, still owner-gated OD-20261108-01.
+  No question addressed to this job.
+- Issues: 135 open, none new since the 0839 pass, zero
+  unclassified, zero lacking a class label. Owner-decision
+  issues 132, 154, 335, 514 and 517 all over 24 hours with
+  statements current; issue 514 decision deadline 2026-11-12
+  18:00 UTC, about 18 minutes away at pass end.
+- No adoptions, no fixes, no hand-offs, no stale-owner flags.
+  VPS root disk 89 percent, 1.1G free, above the 500M flag
+  threshold.
+  Status: done (no-op pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl.
+
+## 09:45 to about 09:54 - PR integration 0945 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-0945. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 73 minutes away; merge-aware due --merges exit 1, same verdict, 71 minutes away). Records PR 700 (2026-11-12) re-verified CLEAN at heads 1114006b5 (44 commits, merge-tree 4195ac34) and abbb0d22a (47 commits, merge-tree b76702c0 vs new main cc58a605c); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 33cf659cd7 (merge-tree exit 0, merged tree 01dc976f, identical to the 0845/0900/0915/0930 probes; head unchanged 4f41cdd6a), one re-verification comment posted (main advanced by PR 702 since the 0800 comment). Knowledge PR 703 and tools PR 704 arrived mid-pass and were both reviewed and squash-merged (703 as f00273eb6, 704 as cc58a605c, branches deleted); local main synced to cc58a605c. No new records PR (all 12 older records branches contained in main). Merges reported per delivery rules. Sweep clean. Status: done. Full detail in pr-integration/0945-run.md.
+## 09:32 to about 09:57 - Knowledge organization 0932 run, 4 profiles folded (PR 703 open)
+
+- Knowledge-organizer pass knowledge-organization-2026-11-12-0932. Own PRs first: PR 702 MERGED 2026-11-12T16:51:53Z, 0 comments, 0 reviews - no feedback to address; no other own PR was open. Folded ticker-0834 (commit a1bd23d76, sync-only, fourteenth blocked tick) and ticker-0904 (commit 0e4935ae0, sync-only, fifteenth blocked tick) into perception-scout 1.73.0, zombie-invasion 1.52.0, daily-activities 1.38.0 and radar-tasks 1.89.0. Blocked-tick count FIFTEEN as of 0904; occurrences still EIGHT. RESOLVED the 0737 anomaly: the 0904 pass live-verified the current tool's next returns empty under a standing blocker and read the code - the handover predates the guard, the control-lock path is closed with the current tool, the snapshot-listing gap remains for non-lock overlays. Seeding correction: zombie 028 minted against the snapshot pool and removed minutes later, never claimed; 027 intact in the live inbox (82 units). The lock persists about 8h with no self-clear since 01:34 PT; the next probe is due only after the blocker reaps 19:47Z (11:47 PT). PR #703 opened (commit aa2617c9b, base main 33cf659cd7), OPEN + MERGEABLE + CLEAN at run end. Issues #689 (6831584243) and #694 (6831591611) commented; no new knowledge issue filed. No new retro; Retro A-2026-11-11-05 still unmet. VPS disk 89% / 1.1G free, nothing deleted (no bundle older than 6h). Status: done. Files: _records_/2026-11-12/knowledge-organization/0932-run.md, this INDEX, _logs_/repo-actions/action-log.jsonl.
+
+## 09:32 to about 10:03 - Tool development 0932 run, issue #694 follow-up implemented (PR 704 open)
+- Tool-developer pass tool-development-2026-11-12-0932. Issue #694 follow-up implemented as the live-pool handout: `next` resolves the given root through live_pool_root and reads the live inbox, `claim` claims the live-pool copy into the pass root; PR #704 open (branch work/next-live-pool, commit 3a3a2525), issue #694 commented; 24/24 fixture assertions pass, py_compile clean, live pool untouched. Own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main 33cf659cd at head 4f41cdd6a, no author action owed; PR #696 merged 04:48 PT. Status: done. Full detail in tool-development/0932-run.md.
+## 09:41 to about 09:56 - Ticker pass ticker-0941, zombie-invasion unit failed (control channel lock, stale-tool handout)
+
+- Own PRs first: records PR 700 (2026-11-12) OPEN, no comments,
+  mergeable UNKNOWN; tools PR 425 owned by lastwar-tool-developer,
+  not this job. No question addressed to this job.
+- Sync: reaped 0, expired 0, produced none (due 23, already queued
+  23). No zombie seeding needed (unit 027 already in inbox).
+- Zombie-invasion unit 027 (ticker-0941, failed, chain
+  zombie-2026-11-10 seq 27): no game action was possible - the
+  computer-control channel lock from unit 006 persists about 8
+  hours. Three fresh sessions (cc-713, cc-714, cc-715) all failed
+  at the first input with the same outcome_unknown, "a new local
+  user submission is required before input can resume". Read-only
+  observation still works and the game stays live on the base
+  screen; this is a channel lock, not an authorization problem.
+  Sixteenth consecutive ticker pass blocked by the lock, seventh
+  unit burned on it. Successor 028 enqueued; the pass stopped
+  after this unit rather than cascading failed units. Full detail
+  in zombie-invasion/0943-queue-run.md.
+- Stale-tool handout (Issue #694): the pass's sync, token, next
+  and claim ran through the main working tree's `tools/queue.py`,
+  which predates the tools-to-`_tools_` move and PR #692 and does
+  not know the control-lock blocker - it handed out unit 027
+  although the blocker still stood. Verified after the failure
+  with the current tool from a fresh worktree: `next` there
+  returns empty while the blocker stands. The unit was completed
+  as failed with the current tool, which refreshed the blocker to
+  17:55:18Z (ages out 21:55Z, 13:55 PT). The main tree's stale
+  `tools/queue.py` must not be used for decisions again.
+- New evidence commented on Issue #689 (lock now about 8 hours,
+  seventh burned unit) and on Issue #694 (stale-tool handout).
+
+## 10:15 to about 10:20 - PR integration 1015 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-1015. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 48 minutes away; merge-aware due --merges exit 1, same verdict, 45 minutes away). Records PR 700 (2026-11-12, head 942ae271a, 53 records-only commits) re-verified CLEAN (merge-tree exit 0, merged tree dbfbfab8); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main cc58a605c (merge-tree exit 0, merged tree a1802181; head unchanged 4f41cdd6a), one re-verification comment posted (main advanced by PRs 703 and 704 since the 0945 comment). No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/1015-run.md.
+
+## 10:19 to about 10:25 - PR integration 1019 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-1019. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 40 minutes away; merge-aware due --merges exit 1, same verdict, 38 minutes away). Records PR 700 (2026-11-12, head 62b1ff0a, 57 records-only commits) re-verified CLEAN (merge-tree exit 0, merged tree 337d7735); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main cc58a605c (merge-tree exit 0, merged tree a1802181; head unchanged 4f41cdd6a), no new comment (nothing changed since the 1015 re-verification). No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/1019-run.md.
+
+## 10:30 to about 10:36 - PR integration 1030 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-1030. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT, 28 minutes away; merge-aware due --merges exit 1, same verdict, 27 minutes away). Records PR 700 (2026-11-12, head df8668ed18, 59 records-only commits) re-verified CLEAN (merge-tree exit 0, merged tree 2589c4c9); NOT merged (non-batch), awaits the 11:00 batch. Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against unchanged main cc58a605c (merge-tree exit 0, merged tree a1802181; head unchanged 4f41cdd6a), no new comment (nothing changed since the 1015 re-verification). No new records PR (all 12 older records branches contained in main). No merges, no Slack sync (quiet non-batch run). Sweep clean. Status: done. Full detail in pr-integration/1030-run.md.
+## 10:23 to about 10:40 - Ticker pass ticker-1023, sync-only (seventeenth consecutive blocked tick)
+
+- Own PRs first: records PR 700 (records/2026-11-12) is OPEN,
+  MERGEABLE/CLEAN, 0 comments, awaits the 11:00 batch - no new
+  PR is owed by this pass, no question addressed to this job.
+  Tools PR 425 is owned by lastwar-tool-developer, still
+  owner-gated, not this job's.
+- Branch handling: the main working tree ~/workspace/lastwar
+  still sits on work/ops-execution-records with another job's
+  in-flight state and was not touched. This pass worked from a
+  fresh worktree ~/workspace/lastwar-wt-1023-ticker on
+  records/2026-11-12 at the live remote tip 62b1ff0a09 (the
+  stale ticker-0904 worktree, clean and finished, was removed
+  first). A fresh main worktree
+  ~/workspace/lastwar-worktrees/ticker-1023-main was created
+  through _tools_/pass_worktree.py (R10/R11) at main cc58a605c4.
+- Tool currency (R10): the records-branch copies of
+  tools/queue.py and _tools_/queue.py (both md5 8353ca15, 4571
+  lines) are STALE against main's _tools_/queue.py (md5
+  60d667cc, 4898 lines, PR #704 live-pool handout) - the
+  records branch predates the #704 merge. The pass's first
+  sync/next/token-acquire ran on that stale copy; every
+  decision was then re-verified with the current tool from the
+  fresh main worktree, and the stale-tool outputs were
+  confirmed, not trusted blind (see below). The main tree's
+  own tools/queue.py is also stale (0 control-lock matches) -
+  it must not be used for decisions (Issue #694).
+- Sync: stale-tool run reaped 0, expired 6, produced
+  research-2026-11-12-1003 and building-queues-2026-11-12-1003
+  (due 25, already queued 22), and reaped the 027 completion
+  marker. Current-tool re-run: reaped 0, expired 6, produced 0
+  (due 25, already queued 24 - research and building-queues
+  now queued), and reconciled two stale inbox copies against
+  the branch done pool - scout-scout-2026-11-10-008 and
+  zombie-invasion-zombie-2026-11-10-026, already done on
+  records/2026-11-12, dropped instead of re-executed. Live
+  inbox 64 after the stale sync, 62 after the current-tool
+  reconciliation; claimed 0; done 1705 (snapshot count).
+  Zombie seeding: no seeding needed - successor
+  zombie-invasion-zombie-2026-11-10-028 already sits in the
+  live inbox (chain zombie-2026-11-10, done 26, pending 1).
+- New tooling gap filed as Issue #705 (tooling): sync
+  reap/expire still acts on the worktree snapshot, not the
+  live pool. Both sync runs reported expired 6, but the 0603
+  set (arms-race, donations, harvest, radar, survivors,
+  training - expires_at 2026-11-12T18:03:00Z) was moved
+  inbox-to-done only inside the snapshots; verified 18:32Z
+  the live inbox still holds all 0603 files. The reconcile
+  and production paths already resolve live, so expire is the
+  remaining snapshot-only path after PR #704 (Refs #694) and
+  live_pool_root enqueue (Refs #598). No execution was
+  affected by this pass.
+- Execute loop handed out nothing: the R9 control-lock
+  blocker (Issue #689, recorded 2026-11-12T17:55:18Z by
+  ticker-0941 zombie unit 027) still stands, about 35 minutes
+  old, under the 4-hour stale bound - the current tool's next
+  returned empty by design, reading the live pool, so no unit
+  was burned and no probe was attempted. Seventeenth
+  consecutive tick blocked by the lock (0134, 0204, 0234,
+  0304, 0334, 0404, 0504, 0534, 0604, 0634, 0704, 0737, 0804,
+  0834, 0904, 0941, this pass). The blocker reaps after
+  21:55:18Z (13:55 PT); the next tick after that probes with
+  one input. Token acquired and released. No new evidence for
+  Issue #689 beyond the continued stand - no comment posted
+  there. Occurrences still EIGHT.
+- Carry-forward, no action by this job: owner-decision Issue
+  #514 (Transfer Surge warzone transfer) stated its deadline
+  as 2026-11-12 18:00 UTC (10:00 PT), which passed during
+  this window with no owner decision recorded; the 2026-11-09
+  live-read comment notes the in-game countdown implies the
+  application phase may run to about 2026-11-13 02:00 UTC
+  (about 18:00 PT today), 8 hours later than stated. This job
+  takes no decision on it.
+
+## 10:39 to about 10:53 - PR catch-all 1039 run, no-op
+
+- Own PRs first: no adopted open PR (PR 137 stays merged).
+  Records PR 700 (2026-11-12) OPEN, MERGEABLE/CLEAN at head
+  681b45aa, no comments, awaiting the 11:00 batch; tools PR 425
+  owned by lastwar-tool-developer, not this job, head unchanged
+  4f41cdd6a, MERGEABLE/CLEAN, still owner-gated OD-20261108-01.
+  No question addressed to this job.
+- Issues: 136 open, one new since the 0939 pass (#705, tooling,
+  already class-labeled), zero unclassified, zero lacking a class
+  label. Owner-decision issues 132, 154, 335, 514 and 517 all over
+  24 hours with statements current; issue 514 decision deadline
+  2026-11-12 18:00 UTC passed during this window with no owner
+  decision recorded; the application phase may run to about
+  2026-11-13 02:00 UTC per the 2026-11-09 live-read comment.
+- No adoptions, no fixes, no hand-offs, no stale-owner flags.
+  VPS root disk 89 percent, 1.1G free, above the 500M flag
+  threshold.
+  Status: done (no-op pass). Files: this INDEX,
+  _logs_/repo-actions/action-log.jsonl. Full detail in
+  pr-catchall/1039-run.md.
+
+## 10:32 to about 10:52 - Tool development 1032 run, issue #694 evidence rule implemented (PR 706 open)
+- Tool-developer pass tool-development-2026-11-12-1032. Issue #694 open question answered as `queue.py version`: resolved path, sha256, git HEAD and currency against main, so a pass record cites it and the next stale-tool-shaped handover is diagnosable from the record alone; rule R13 + changelog 0.21.0. PR #706 open (branch work/queue-version-command, commit beea1e6e4), issue #694 commented; 26/26 fixture assertions pass, py_compile clean, live pool untouched. Own PR #425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against main cc58a605c at head 4f41cdd6a, no author action owed; PR #704 merged as cc58a605c. Status: done. Full detail in tool-development/1032-run.md.
+
+## 10:32 to about 10:58 - Knowledge organization 1032 run, 4 profiles folded (PR 707 open)
+
+- Knowledge-organizer pass knowledge-organization-2026-11-12-1032. Own PRs first: PR 703 MERGED 2026-11-12T17:59:28Z, 0 comments, 0 reviews - no feedback to address; no other own PR was open. Folded ticker-0941 (commit bd144567e, zombie 027 FAILED on the lock, sixteenth blocked tick, ninth occurrence, stale-tool handout, blocker refreshed to 17:55:18Z) and ticker-1023 (commit 681b45aa5, sync-only, seventeenth blocked tick, no unit executed) into perception-scout 1.74.0, zombie-invasion 1.53.0, daily-activities 1.39.0 and radar-tasks 1.90.0. Blocked-tick count SEVENTEEN as of 1023; occurrences NINE. Contradictions resolved: (1) occurrences NINE, correcting the 0941 record's "seventh" and the 1023 record's "still EIGHT" against the day INDEX trail (radar 0151 and scout 007 omitted); (2) next probe after the re-recorded blocker reaps 21:55:18Z (13:55 PT), not 19:47Z; (3) the snapshot-listing gap is CLOSED for next/claim by PR #704 (merged cc58a605c) and remains only for sync reap/expire, filed as tooling Issue #705. The 0941 handout came from the stale main-tree tools/queue.py, not a #704 failure; the durable fix (fresh-worktree start) is still owed. The lock persists about 8.5h with no self-clear since 01:34 PT; successor 028 enqueued (new, created 17:55:34Z) and confirmed in the live inbox. PR #707 opened (commit 410812698, base main cc58a605c), OPEN + MERGEABLE + CLEAN at run end. Issues #689 (6832928073) and #694 (6832928575) commented; no new knowledge issue filed. No new retro; Retro A-2026-11-11-05 still unmet. Issue #514 deadline (18:00 UTC / 10:00 PT) passed with no owner decision; the application phase may run to about 18:00 PT today. VPS disk 90% / 1019M free after deleting 5 bundles older than 6h (~29MB). Status: done. Files: _records_/2026-11-12/knowledge-organization/1032-run.md, this INDEX, _logs_/repo-actions/action-log.jsonl.
+
+## 10:45 to about 11:03 - PR integration 1045 run, NON-batch (checker: outside every batch window)
+
+- Integrator pass pr-integration-2026-11-12-1045. NON-batch pass per the checker (plain due exit 1 "due: no - outside every batch window", next batch point 11:00 PT; merge-aware due --merges exit 1, same verdict). Merged tools PR 706 (queue.py version, Refs #694) as 96520ae0 and knowledge PR 707 (fold ticker-0941 + ticker-1023, Refs #689, #694, #705) as c4bcd355, both squash, branches deleted. Records PR 700 (2026-11-12) re-verified CLEAN at heads 06a5d8a8 and 6470883b, awaits the 11:00 batch; NOT merged (non-batch). Tools PR 425 still owner-gated (OD-20261108-01 open), re-verified CLEAN against new main 96520ae0, one re-verification comment posted. Local main synced to c4bcd355 via bundle. Merges synced to the Slack DM and reported in Chinese. No new records PR (all 12 older records branches contained in main). Sweep clean. Status: done. Full detail in pr-integration/1045-run.md.
