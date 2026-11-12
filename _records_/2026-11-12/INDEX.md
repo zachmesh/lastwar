@@ -492,3 +492,23 @@ of 2026-10-28.
 ## 03:40 to about 03:47 - Queue planning 0340 run, 5 units staged for 14:57, diff 0 counts, status done
 
 - Planner pass queue-planning-2026-11-12-0340. Plan staged 5 units for the 14:57 local slot (passes, secrets, treasures, trucks, events), 69 already present, 1 skipped closed (zero-sweep-2026-11-11-1730), 0 reaped, 0 expired. Pre-reset sweep pair not yet due (03:00 hour run); last night's pair closed both partial (1630 1/23, 1730 5/23). Scout diff on the same 6-pass observation (52 observed, 11 unexplained) applied with 0 counts, 0 withdrawals, no new issues. Pool inbox 78, claimed 0, done 1652. Rebuilt on the 0339 tip after the tip moved (first commit 3345bdb99 abandoned, never pushed). Status: done. Full detail in queue-planning/0340-run.md.
+
+## 03:45 to about 03:52 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0345. NON-batch
+  pass per the checker (plain due, merge-aware not due:
+  PR #681 already merged 03:02:11 PT in this 03:00-04:00
+  window, next batch 07:00): no records merge. Knowledge
+  PR 693 (fold zombie 024 + 025 lock occurrences into 4
+  profiles, Refs #689/#595, Owner
+  lastwar-knowledge-organizer) reviewed clean and
+  squash-merged (e4513df10); local main fast-forwarded to
+  e4513df10. Records PR 685 (2026-11-12, head 40dbf5fe)
+  re-verified CLEAN against new main e4513df10,
+  verification comment posted, awaits the 07:00 batch.
+  Tools PR 425 still owner-gated (OD-20261108-01 open),
+  re-verified CLEAN against new main e4513df10, no new
+  comment (no new commits, diff unchanged). Merges synced
+  to Slack DM. No arrivals during the pass; sweep clean.
+  Status: done. Full detail in
+  pr-integration/0345-run.md.
