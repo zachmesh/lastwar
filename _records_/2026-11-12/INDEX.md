@@ -948,3 +948,20 @@ of 2026-10-28.
   time. VPS disk 88 percent (1.3G free), above the 500M flag threshold; /tmp/606 now past
   6 hours old, no cleanup triggered. No Slack sync. Status:
   no-op. Full detail in pr-catchall/0639-run.md.
+## 06:45 to about 07:00 - PR integration 0645 run, NON-batch (checker not due, next batch 07:00)
+
+- Integrator pass pr-integration-2026-11-12-0645. NON-batch
+  pass per the checker (not due - outside every batch
+  window, next batch 07:00): knowledge PR 698 reviewed
+  CLEAN and squash-merged as 97f068d7 (4 profiles:
+  perception-scout 1.70.0, zombie-invasion 1.49.0,
+  daily-activities 1.35.0, radar-tasks 1.86.0; Refs #689,
+  #694); merged main synced back to the local repo
+  (fast-forward 84d41b4e4 -> 97f068d77). Records PR 685
+  (2026-11-12) re-verified CLEAN at new head 1033a3ec
+  (ticker-0634 record landed), verification comment posted,
+  awaits the 07:00 batch. Tools PR 425 still owner-gated
+  (OD-20261108-01 open), re-verified CLEAN against the new
+  main 97f068d7, comment posted. Merge synced to the owner
+  Trirvia DM. No arrivals during the pass; sweep clean.
+  Status: done. Full detail in pr-integration/0645-run.md.
