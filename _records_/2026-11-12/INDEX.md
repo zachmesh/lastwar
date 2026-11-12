@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-12
 created: 2026-11-12T08:03:50Z
-modified: 2026-11-12T10:20:12Z
+modified: 2026-11-12T10:53:00Z
 level: L0
 version: 1.0.0
 description: The 0000 PR integration pass - NON-batch pass (checker plain and merge-aware both not due, next batch 03:00 PT); no merges; records PR 681 re-verified CLEAN at new tip 11ac21dc, awaiting the 03:00 batch; tools PR 425 owner-gated, re-verified CLEAN against new main 5d2b9d7e, no new comment; records/2026-11-12 branch created from main with this pass as its first commits; the 0004 queue ticker pass with 1 unit partial (zombie-invasion)
@@ -333,3 +333,30 @@ of 2026-10-28.
   2026-11-12 18:00 UTC, about 7 hours away). VPS root disk
   97 percent, 371M free, still below the 500M flag threshold.
   Status: done. Full detail in pr-catchall/0239-run.md.
+## 02:34 to about 02:47 - Ticker pass ticker-0234, zombie-invasion unit failed (control channel lock)
+
+- Own PRs first: records PR 685 (2026-11-12) OPEN and mergeable
+  (CLEAN), no comments; records PR 681 (2026-11-11, post-2300
+  batch) OPEN and CLEAN, no comments; tools PR 425 is owned by
+  lastwar-tool-developer, not this job. No question addressed to
+  this job.
+- Sync: reaped 0, expired 7 (the 2026-11-11 2203/2230 stale inbox
+  copies already closed on records/2026-11-12), produced none
+  (due 23, already queued). No zombie seeding needed (units 024
+  and 025 already in inbox; chain zombie-2026-11-10).
+- Zombie-invasion unit 024 (ticker-0234, failed, chain
+  zombie-2026-11-10 seq 24): no game action was possible. The
+  computer-control channel locked at the first input in three
+  fresh sessions (cc-700, cc-701, cc-702) - every activate of
+  LastWar failed with outcome_unknown, "a new local user
+  submission is required before input can resume". This is the
+  same failure mode as ticker-0134 (scout 006, 01:34) and
+  ticker-0204 (help 2230, 02:04): the third consecutive ticker
+  pass blocked by Issue 689. The game stayed live on the base
+  screen throughout (read-only snap, observation
+  7D61CA3A-CAE0-4918-8EE4-0E2FD2C19690: Total Power 149,218,973,
+  coin 145.7M HUD, identical to the 01:34 reading, so no play
+  has happened since the channel locked). No kills, no claims,
+  no diamonds or money spent. Successor 025 is already in
+  inbox, so no new unit was enqueued; tracker untouched. Token
+  released. Full detail in zombie-invasion/0247-queue-run.md.
