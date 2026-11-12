@@ -106,3 +106,18 @@ of 2026-10-28.
   since the 2345 review). Slack sync posted for both
   merges. Status: done. Full detail in
   pr-integration/0045-run.md.
+
+## 01:05 to about 01:15 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-12-0105. NON-batch
+  pass per the checker (not due, outside every batch window,
+  next batch 03:00): no records PR merged. Records PRs 681
+  (2026-11-11, 16 commits) and 685 (2026-11-12, 17 commits)
+  both re-verified CLEAN against new main 6dea6746 (PRs 686
+  and 687 merged since the 0045 pass), awaiting the 03:00
+  batch. Tools PR 425 still owner-gated (OD-20261108-01
+  open, age 4 days), re-verified CLEAN against new main
+  6dea6746, diff unchanged, no new comment (PR unchanged
+  since the 2345 review). No arrivals during the pass;
+  sweep clean. No Slack sync (non-batch run stays silent).
+  Status: done. Full detail in pr-integration/0105-run.md.
