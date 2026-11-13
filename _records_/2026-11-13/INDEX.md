@@ -32,6 +32,9 @@ description: The 0540 queue planning pass - live-tree plan staged 16 (including 
 created: 2026-11-13T15:55:00Z
 modified: 2026-11-13T15:55:00Z
 description: The 0740 queue planning pass - live-tree plan staged 5 (1857 set) and expired the 6-unit 02:03/02:57 set, current-roster plan staged 0 (86 already present), sweep production skipped (07:00 hour), tonight's sweep chain holds four units with seqs [1, 1, 2, 2] (new occurrence of #712), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, twelfth consecutive planner run failing to commit), status partial
+created: 2026-11-13T17:22:00Z
+modified: 2026-11-13T17:22:00Z
+description: The 0840 queue planning pass - live-tree and current-roster plans staged 0 (all 12-hour slots already present), 0 expired, 0 reaped; tonight's sweep chain already holds four units with seqs [1, 1, 2, 2] (Issue #712); scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, twelfth consecutive planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -320,3 +323,25 @@ modified: 2026-11-14T11:45:00Z
   to commit); commit left on planner-0740-1113-delivery for
   the next pass or the integrator. Status partial.
   Full detail in queue-planning/0740-run.md.
+## 08:40 to about 09:22 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-0840. Live-tree plan
+  staged 0 units (78 already present for the next 12 hours, 0
+  reaped, 0 expired; roster stale for building-queues, research
+  and zombie-invasion, issue #198); current-roster plan staged
+  0 units (86 already present, 12 fixups already present,
+  roster stale only for zombie-invasion). Tonight's sweep chain
+  pre-reset-sweep-2026-11-13 already holds four units with seqs
+  [1, 1, 2, 2] (1600/1630/1700/1730) from disagreeing rosters
+  ([90, 30] live vs [120, 60] main) - open Issue #712; sweep
+  production skipped (09:00 hour run). Scout diff on the
+  6-pass 2026-11-11 observation (52 observed, 11 unexplained)
+  applied with 0 counts, 0 withdrawals, no new issues. Pool
+  inbox 101, claimed 0, done 1800; newest finished unit
+  2026-11-12T20:08:13Z (12:08 PT Nov 12), age 1270 minutes,
+  evidence stale - ticker execution stall continues. Push
+  could not land (VPS SSH outage persists, twelfth
+  consecutive planner run failing to commit); commit left on
+  planner-0840-1113-delivery for the next pass or the
+  integrator. Status: partial. Full detail in
+  queue-planning/0840-run.md.
