@@ -14,6 +14,9 @@ of 2026-10-28.
 created: 2026-11-13T08:59:00Z
 modified: 2026-11-13T08:59:00Z
 description: The 0040 queue planning pass - live-tree plan staged 0 (74 already present, 1 expired ghost-ops), current-roster plan staged 6 read-only units (research + building-queues 0203/0603/1003), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, seventh consecutive planner run failing to commit), status partial
+created: 2026-11-13T10:06:00Z
+modified: 2026-11-13T10:06:00Z
+description: The 0140 queue planning pass - live-tree plan staged 6 (1403 set), current-roster plan staged 2 read-only units (research + building-queues 1403), 8 expired (Nov 12 2203 set, unexecuted), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, eighth consecutive planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -169,3 +172,20 @@ modified: 2026-11-14T11:45:00Z
   to commit; commit left on planner-0040-1113-delivery.
   Status: partial. Full detail in
   queue-planning/0040-run.md.
+## 01:40 to about 02:07 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-0140. Live-tree
+  plan staged 6 units (harvest, radar, survivors, training,
+  donations, arms-race 2026-11-13-1403); current-roster plan
+  staged 2 read-only units (research + building-queues
+  2026-11-13-1403); 8 expired (Nov 12 2203 set,
+  unexecuted). Sweep production skipped (01:00 hour);
+  tonight's pair not yet staged, due from the 17:00 run.
+  Scout diff on the 6-pass 2026-11-11 observation applied
+  with 0 counts; 0 withdrawals; no new issues. Pool inbox
+  83, claimed 0, done 1769; newest finished unit
+  2026-11-12T20:08:13Z (ticker stall continues, 836
+  minutes). Push could not land - VPS SSH outage persists,
+  eighth consecutive planner run failing to commit; commit
+  left on planner-0140-1113-delivery. Status: partial.
+  Full detail in queue-planning/0140-run.md.
