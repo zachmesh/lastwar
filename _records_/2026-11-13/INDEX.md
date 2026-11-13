@@ -26,6 +26,9 @@ description: The 0340 queue planning pass - live-tree plan staged 0 (74 already 
 created: 2026-11-13T13:34:00Z
 modified: 2026-11-13T13:34:00Z
 description: The 0440 queue planning pass - live-tree plan staged 1 (zero-sweep 1630, stale-roster slot), current-roster plan staged 1 (zero-sweep 1700), tonight's sweep chain now holds three units with duplicated seq 1 (new occurrence of #712), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, tenth consecutive planner run failing to commit), status partial
+created: 2026-11-13T14:52:00Z
+modified: 2026-11-13T14:52:00Z
+description: The 0540 queue planning pass - live-tree plan staged 16 (including zero-sweep 1730) and expired the 14-unit 02-03/02-30 set, current-roster plan staged 2 (research and building-queues 1803), tonight's sweep chain now holds four units with seqs [1, 1, 2, 2] (new occurrence of #712), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, eleventh consecutive planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -263,3 +266,31 @@ modified: 2026-11-14T11:45:00Z
   failing to commit); commit left on
   planner-0440-1113-delivery for the next pass or the
   integrator. Status partial.
+## 05:40 to about 06:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-0540. Live-tree plan
+  staged 16 units (mail/help/gifts 1830,
+  harvest/radar/survivors/training/donations/arms-race 1803,
+  vip/daily-missions/scout 1800,
+  train/star-ceremony/duel-score 1830, zero-sweep 1730 - the
+  live roster's 30-minutes-before-reset slot, chain seq 2;
+  63 already present) and expired the 14-unit 02:03/02:30
+  Nov 13 set (unexecuted overnight, windows passed);
+  current-roster plan staged 2 units (research and
+  building-queues 1803; 85 already present, 12 fixups
+  already present). Tonight's sweep chain
+  pre-reset-sweep-2026-11-13 now holds four units with seqs
+  [1, 1, 2, 2] (1600, 1630, 1700 by the ticker sync and the
+  0440 run, 1730 by this run) from two disagreeing rosters
+  ([90, 30] live vs [120, 60] main) - a new occurrence of
+  open Issue #712. Sweep production skipped (06:00 hour);
+  the 17:00 run must check the chain before producing
+  anything. Scout diff on the 6-pass 2026-11-11 observation
+  applied with 0 counts (52 observed, 11 unexplained);
+  0 withdrawals; no new issues. Pool inbox 102, claimed 0,
+  done 1794; newest finished unit 2026-11-12T20:08:13Z
+  (12:08 PT Nov 12), 1117 minutes old - ticker execution
+  stall continues. Push could not land: VPS SSH outage
+  persists (eleventh consecutive planner run failing to
+  commit); commit left on planner-0540-1113-delivery for
+  the next pass or the integrator. Status partial.
