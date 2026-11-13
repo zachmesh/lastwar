@@ -29,6 +29,9 @@ description: The 0440 queue planning pass - live-tree plan staged 1 (zero-sweep 
 created: 2026-11-13T14:52:00Z
 modified: 2026-11-13T14:52:00Z
 description: The 0540 queue planning pass - live-tree plan staged 16 (including zero-sweep 1730) and expired the 14-unit 02-03/02-30 set, current-roster plan staged 2 (research and building-queues 1803), tonight's sweep chain now holds four units with seqs [1, 1, 2, 2] (new occurrence of #712), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, eleventh consecutive planner run failing to commit), status partial
+created: 2026-11-13T15:55:00Z
+modified: 2026-11-13T15:55:00Z
+description: The 0740 queue planning pass - live-tree plan staged 5 (1857 set) and expired the 6-unit 02:03/02:57 set, current-roster plan staged 0 (86 already present), sweep production skipped (07:00 hour), tonight's sweep chain holds four units with seqs [1, 1, 2, 2] (new occurrence of #712), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, twelfth consecutive planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -294,3 +297,26 @@ modified: 2026-11-14T11:45:00Z
   persists (eleventh consecutive planner run failing to
   commit); commit left on planner-0540-1113-delivery for
   the next pass or the integrator. Status partial.
+## 07:40 to about 08:09 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-0740. Live-tree plan
+  staged 5 units (passes, secrets, treasures, trucks, events
+  2026-11-13-1857; 73 already present) and expired the 6-unit
+  02:03/02:57 Nov 13 set (passes, secrets, treasures, trucks,
+  events 0257; training 0203 - unexecuted overnight, windows
+  passed); current-roster plan staged 0 units (86 already
+  present, 12 fixups already present; research and
+  building-queues 1803 already in the inbox). Sweep production
+  skipped (07:00 hour); tonight's chain
+  pre-reset-sweep-2026-11-13 already holds four units in inbox
+  (1600, 1630, 1700, 1730) with seqs [1, 1, 2, 2] - a new
+  occurrence of open Issue #712. Scout diff on the 6-pass
+  2026-11-11 observation applied with 0 counts (52 observed,
+  11 unexplained); 0 withdrawals; no new issues. Pool inbox
+  101, claimed 0, done 1800; newest finished unit
+  2026-11-12T20:08:13Z (12:08 PT Nov 12), 1191 minutes old -
+  ticker execution stall continues. Push could not land: VPS
+  SSH outage persists (twelfth consecutive planner run failing
+  to commit); commit left on planner-0740-1113-delivery for
+  the next pass or the integrator. Status partial.
+  Full detail in queue-planning/0740-run.md.
