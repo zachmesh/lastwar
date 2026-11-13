@@ -6,14 +6,14 @@ level: L0
 version: 1.0.0
 description: The 1408 queue ticker pass (scheduled 2026-11-12 14:04, executed 2026-11-13 14:15) with 1 unit failed (zombie-invasion, Mac offline)
 status: unverified
----
 
 # 2026-11-13
-
 All times America/Los_Angeles. Actor Muse, under the owner standing
 instruction of 2026-10-25 to run the regulars and the queue design
 of 2026-10-28.
-
+created: 2026-11-13T08:59:00Z
+modified: 2026-11-13T08:59:00Z
+description: The 0040 queue planning pass - live-tree plan staged 0 (74 already present, 1 expired ghost-ops), current-roster plan staged 6 read-only units (research + building-queues 0203/0603/1003), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, seventh consecutive planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -152,3 +152,20 @@ of 2026-10-28.
 modified: 2026-11-14T11:45:00Z
 ## 20:39 Nov 13 to about 03:45 Nov 14 - Daily retro pass (retro-review-2026-11-13-2039, done)
 - Retro file _records_/retro/2026-11-13.md and data appendix (684 branch units, 155 done, 256 expired, 33 failed, 7 skipped; unverified 53.2 percent, points 3,608; 9 threshold breaches). The branch pool forked from main and dropped 19 units that live only on the unmerged records/2026-11-12 branch (gap to live 177). Nov 13: 3 failed units on the branch snapshot (Mac offline), 0 done. Rolling series entry appended (v1.8.0); owner-decisions register v2.3.0 to v2.4.0, 10 open, all over 48 hours, no new item, no decision; the Nov 12 note on #514 is corrected (its GitHub close never landed - the issue is still open). GitHub issue actions ALL BLOCKED (VPS SSH down, unauthenticated API rate-limited, connector write path unproven after a service restart on a read) - 1 loop-dark issue drafted, 3 closes + 1 reopen + 4 comments drafted, none posted; full texts preserved in the retro file for the integrator. Post-snapshot: ticker-2041 zombie 030 failed 20:51 PT (14th occurrence) and ticker-2152 zombie 031 failed 03:43 PT Nov 14 (15th); the 23:00 batch passed with no merge (9th missed point for PR #708). Delivery blocked: VPS SSH Permission denied (publickey), verified twice; commit sits on local branch retro/2026-11-13-delivery. Run spanned about 7 hours wall-clock (service restarts between turns); snapshot unchanged during aggregation. Status: done. Full detail in retro-review/2039-run.md.
+## 00:40 to about 00:59 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-0040. Live-tree
+  plan staged 0 units (74 already present, 1 expired
+  ghost-ops-2026-11-12-0000); current-roster plan staged 6
+  read-only units (research + building-queues
+  2026-11-13-0203/0603/1003). Sweep production skipped
+  (00:00 hour); tonight's pair not yet staged, due from
+  the 17:00 run. Scout diff on the 6-pass 2026-11-11
+  observation applied with 0 counts; 0 withdrawals; no
+  new issues. Pool inbox 83, claimed 0, done 1761;
+  newest finished unit 2026-11-12T20:08:13Z (ticker stall
+  continues, 767 minutes). Push could not land - VPS SSH
+  outage persists, seventh consecutive planner run failing
+  to commit; commit left on planner-0040-1113-delivery.
+  Status: partial. Full detail in
+  queue-planning/0040-run.md.
