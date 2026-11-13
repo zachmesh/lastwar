@@ -41,6 +41,9 @@ description: The 0940 queue planning pass - live-tree plan staged 12 and current
 created: 2026-11-13T19:54:00Z
 modified: 2026-11-13T19:54:00Z
 description: The 1140 queue planning pass - live-tree plan staged 5 and current-roster plan staged 0 (5 total for the 2257 slot), 5 expired (0657 set, unexecuted); tonight's sweep chain already holds four units with seqs [1, 1, 2, 2] (Issue #712); scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, sixteenth consecutive planner run failing to commit), status partial
+created: 2026-11-13T21:04:00Z
+modified: 2026-11-13T21:04:00Z
+description: The 1240 queue planning pass - live-tree plan staged 0 and current-roster plan staged 0 (78 and 86 already present, 0 expired); tonight's sweep chain already holds four units with seqs [1, 1, 2, 2] (Issue #712); scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, seventeenth consecutive planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -400,3 +403,32 @@ modified: 2026-11-14T11:45:00Z
   on planner-1140-1113-delivery for the next pass or the
   integrator. Status: partial. Full detail in
   queue-planning/1140-run.md.
+## 12:40 to about 13:07 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-1240. Live-tree plan
+  staged 0 units (78 already present, 0 reaped, 0 expired -
+  the pool was already fully staged, including the 22:57
+  slot units the 1140 run staged; roster stale for
+  building-queues, research and zombie-invasion, issue #198);
+  current-roster plan staged 0 units (86 already present, 12
+  fixups already present; roster stale only for
+  zombie-invasion). The current-roster plan first refused
+  from a /tmp worktree (issue #429); the pass worktree was
+  moved to ~/workspace/lastwar-pi-1240-1113 and the plan
+  then ran. Tonight's sweep chain
+  pre-reset-sweep-2026-11-13 already holds four units with
+  seqs [1, 1, 2, 2] (1600/1630/1700/1730) from disagreeing
+  rosters ([90, 30] live vs [120, 60] main) - open Issue
+  #712; sweep production skipped (12:00 hour run). Scout
+  diff on the 6-pass 2026-11-11 observation (52 observed,
+  11 unexplained) applied with 0 counts, 0 withdrawals, no
+  new issues. Pool inbox 101, claimed 0, done 1819;
+  newest finished unit 2026-11-12T20:08:13Z (12:08 PT Nov
+  12), age 1491 minutes, evidence stale - ticker
+  execution stall continues. No 1040 planner run exists
+  (hourly :40 cadence skipped one slot with no trace).
+  Push could not land (VPS SSH outage persists, seventeenth
+  consecutive planner run failing to commit); commit left
+  on planner-1240-1113-delivery for the next pass or the
+  integrator. Status: partial. Full detail in
+  queue-planning/1240-run.md.
