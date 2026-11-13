@@ -17,6 +17,9 @@ description: The 0040 queue planning pass - live-tree plan staged 0 (74 already 
 created: 2026-11-13T10:06:00Z
 modified: 2026-11-13T10:06:00Z
 description: The 0140 queue planning pass - live-tree plan staged 6 (1403 set), current-roster plan staged 2 read-only units (research + building-queues 1403), 8 expired (Nov 12 2203 set, unexecuted), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, eighth consecutive planner run failing to commit), status partial
+created: 2026-11-13T11:13:00Z
+modified: 2026-11-13T11:13:00Z
+description: The 0240 queue planning pass - live-tree plan staged 11 (1430/1457 set), current-roster plan staged 0 (82 already present), 11 expired (Nov 12 2230/2257 set, unexecuted), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; push could not land (VPS SSH outage persists, ninth consecutive planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -189,3 +192,23 @@ modified: 2026-11-14T11:45:00Z
   eighth consecutive planner run failing to commit; commit
   left on planner-0140-1113-delivery. Status: partial.
   Full detail in queue-planning/0140-run.md.
+## 02:40 to about 03:14 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-0240. Live-tree
+  plan staged 11 units (mail, help, gifts, train,
+  star-ceremony, duel-score 2026-11-13-1430; passes,
+  secrets, treasures, trucks, events 2026-11-13-1457);
+  current-roster plan staged 0 (82 already present;
+  research + building-queues 1403 already in inbox from
+  the 0140 run, next boundary 1803 beyond the horizon);
+  11 expired (Nov 12 2230/2257 set, unexecuted). Sweep
+  production skipped (03:00 hour); tonight's pair not yet
+  staged, due from the 17:00 run. Scout diff on the
+  6-pass 2026-11-11 observation applied with 0 counts;
+  0 withdrawals; no new issues. Pool inbox 83, claimed 0,
+  done 1780; newest finished unit 2026-11-12T20:08:13Z
+  (ticker stall continues, 903 minutes). Push could not
+  land - VPS SSH outage persists, ninth consecutive
+  planner run failing to commit; commit left on
+  planner-0240-1113-delivery. Status: partial. Full detail
+  in queue-planning/0240-run.md.
