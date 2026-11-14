@@ -166,3 +166,20 @@ of 2026-10-28.
   login), so this pass's commit stays on the local
   records/2026-11-14 branch. Full detail in
   perception-scout/1204-queue-run.md.
+
+## 13:28 to about 13:40 - Queue ticker pass
+
+- Ticker pass ticker-1328. FAILED unit
+  zombie-invasion-zombie-2026-11-10-035 (chain zombie-2026-11-10):
+  the Mac mini is still offline (node_offline, last seen 2026-11-12
+  17:52:28Z); connection.health, environment.describe,
+  connection.repair and computer.session all failed (4 attempts).
+  No game state, no input, no attacks, no kills, no claims, tracker
+  untouched, successor 036 enqueued. Sync produced nothing (due 22,
+  all already queued). Own PRs: VPS gh route down and the public API
+  read-only fallback rate-limited this pass, so no fresh PR state;
+  last verified 13:08 PT - #708 still open, #711/#425 unchanged, no
+  PR for records/2026-11-14 exists yet and none could be opened (VPS
+  SSH down, no local gh login), so this pass's commit stays on the
+  local records/2026-11-14 branch. Full detail in
+  zombie-invasion/1333-queue-run.md.
