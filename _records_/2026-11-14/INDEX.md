@@ -63,3 +63,17 @@ of 2026-10-28.
   down, no local gh login), so this pass's commit stays on the
   local records/2026-11-14 branch. Full detail in
   zombie-invasion/0604-queue-run.md.
+
+## 07:04 to about 07:22 - Queue ticker pass
+
+- Ticker pass ticker-0704. FAILED unit
+  scout-scout-2026-11-10-012 (chain scout-2026-11-10): the Mac
+  mini is still offline (node_offline, last seen 2026-11-12
+  09:52 PT); connection.health, environment.describe,
+  computer.session and the recovery device's connection.repair
+  all failed (4 attempts). No surfaces walked, tracker
+  untouched, successor 013 enqueued. Records PR 708 still open,
+  no PR for records/2026-11-14 exists yet and none could be
+  opened (VPS SSH down, no local gh login), so this pass's commit
+  stays on the local records/2026-11-14 branch. Full detail in
+  perception-scout/0704-queue-run.md.
