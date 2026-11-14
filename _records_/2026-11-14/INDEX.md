@@ -115,3 +115,22 @@ of 2026-10-28.
   down, no local gh login), so this pass's commit stays on the
   local records/2026-11-14 branch. Full detail in
   zombie-invasion/0804-queue-run.md.
+
+## 09:34 to about 09:58 - Queue ticker pass
+
+- Ticker pass ticker-0934. FAILED unit
+  scout-scout-2026-11-10-013 (chain scout-2026-11-10): the Mac
+  mini is still offline (node_offline, last seen 2026-11-12
+  09:52 PT); device.list/describe, connection.health,
+  computer.session and the recovery device's connection.repair
+  all failed (4 attempts). No surfaces walked, tracker
+  untouched. Successor 014 hand-minted into the live inbox
+  after the tool's enqueue minted duplicate id 013 twice:
+  chain numbering scans only the live pool's inbox/claimed/done
+  and cannot see a unit completed in a linked worktree (only
+  the completed/ marker reaches the live pool). Pool validated.
+  Records PR 708 still open, no PR for records/2026-11-14
+  exists yet and none could be opened (VPS SSH down, no local
+  gh login), so this pass's commit stays on the local
+  records/2026-11-14 branch. Full detail in
+  perception-scout/0934-queue-run.md.
