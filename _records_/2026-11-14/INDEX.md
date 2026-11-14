@@ -41,6 +41,9 @@ description: The 0840 queue planning pass - live-tree plan staged 0 units (78 al
 created: 2026-11-14T17:47:00Z
 modified: 2026-11-14T17:47:00Z
 description: The 0940 queue planning pass - live-tree plan staged 0 units (78 already present) and expired 0, current-roster plan staged 0 more units (86 already present, 12 fixups already present); tonight's sweep chain pre-reset-sweep-2026-11-14 still holds four units in inbox with chain_seqs [1, 1, 2, 2] - the Issue #712 quadruplication recurs; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; newest finished unit is the ticker-0804 zombie unit failed 08:36 PT on Mac offline, regular execution still stalled; push could not land (VPS SSH outage persists, thirty-third consecutive planner run failing to commit), status partial
+created: 2026-11-14T18:57:00Z
+modified: 2026-11-14T18:57:00Z
+description: The 1040 queue planning pass - live-tree plan staged 12 units (66 already present) and expired 14, current-roster plan staged 2 more units (84 already present, 12 fixups already present); tonight's sweep chain pre-reset-sweep-2026-11-14 still holds four units in inbox with chain_seqs [1, 1, 2, 2] - the Issue #712 quadruplication recurs; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; newest finished unit is the ticker-0804 zombie unit failed 08:36 PT on Mac offline, regular execution still stalled; push could not land (VPS SSH outage persists, thirty-fourth consecutive planner run failing to commit), status partial
 ## 03:32 to about 03:40 - Tool-development pass
 
 - Tool-developer pass tool-development-2026-11-14-0332.
@@ -570,3 +573,33 @@ description: The 0940 queue planning pass - live-tree plan staged 0 units (78 al
   consecutive verified planner run failing to commit; commit
   left on planner-0940-1114-delivery. Full record:
   _records_/2026-11-14/queue-planning/0940-run.md.
+## 10:40 to about 10:57 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-14-1040. Live-tree plan
+  staged 12 units (66 already present, 0 reaped, 14 expired;
+  roster stale for building-queues, research and
+  zombie-invasion, issue #198; branch reconcile skipped,
+  issue #446); current-roster plan staged 2 more units
+  (research-2026-11-14-2203, building-queues-2026-11-14-2203;
+  84 already present, 12 fixups already present; roster stale
+  only for zombie-invasion). The 14 expired units are the
+  0603/0630 morning sets, expired unexecuted (Mac offline).
+  Tonight's sweep chain pre-reset-sweep-2026-11-14 still holds
+  four units in inbox with chain_seqs [1, 1, 2, 2] (1600 seq 1,
+  1630 seq 1, 1700 seq 2, 1730 seq 2), boilerplate body only -
+  the Issue #712 quadruplication recurs; last night's chain
+  already expired unexecuted (all four units done, finished
+  2026-11-14T02:13:56Z) - third night running without the
+  reset ledger walk; sweep production skipped (10:00 hour
+  run). Scout diff on the 6-pass 2026-11-11 observation (52
+  observed, 11 unexplained) applied with 0 counts, 0
+  withdrawals, no new issues. Pool inbox 101, claimed 0,
+  done 1957; newest finished unit 2026-11-14T16:36:32Z
+  (08:36 PT) - zombie-invasion-zombie-2026-11-10-033, status
+  failed, executor ticker-0804 (Mac still offline, last seen
+  2026-11-12T17:52:28Z; successor 034 enqueued); no regular
+  unit has finished successfully since 12:08 PT Nov 12. Push
+  could not land (VPS SSH outage persists) - thirty-fourth
+  consecutive verified planner run failing to commit; commit
+  left on planner-1040-1114-delivery. Full record:
+  _records_/2026-11-14/queue-planning/1040-run.md.
