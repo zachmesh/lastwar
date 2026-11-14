@@ -68,6 +68,9 @@ description: The 2040 queue planning pass - live-tree plan staged 0 units (74 al
 created: 2026-11-14T05:47:00Z
 modified: 2026-11-14T05:47:00Z
 description: The 2140 queue planning pass - live-tree plan staged 0 units (74 already present) and expired 0, current-roster plan staged 0 more (82 already present); tonight's sweep chain already expired unexecuted; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; newest finish is the ticker-2041 zombie-invasion unit 030 failed 20:49 PT, regular execution still stalled; push could not land (VPS SSH outage persists, twenty-fourth consecutive verified planner run failing to commit), status partial
+created: 2026-11-14T06:50:00Z
+modified: 2026-11-14T06:50:00Z
+description: The 2240 queue planning pass - live-tree plan staged 12 units (62 already present) and expired 14, current-roster plan staged 2 more units (80 already present); tonight's sweep chain already expired unexecuted; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; newest finish is the ticker-2152 zombie-invasion unit 031 failed 21:58 PT, regular execution still stalled; push could not land (VPS SSH outage persists, twenty-fifth consecutive verified planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -684,3 +687,30 @@ modified: 2026-11-14T11:45:00Z
   failing to commit); commit left on
   planner-2140-1113-delivery. Run record:
   queue-planning/2140-run.md.
+## 22:40 to about 22:50 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-2240 (scheduled 22:40,
+  started 22:40). Live-tree plan staged 12 units for the
+  2026-11-14 10:03/10:30 slots (62 already present, 0 reaped,
+  14 expired: the 2026-11-13 18:03 set x8 and 18:30 set x6,
+  all unexecuted; roster stale for building-queues, research
+  and zombie-invasion, issue #198); current-roster plan
+  staged 2 more units (research and building-queues at
+  10:03, 80 already present; roster stale only for
+  zombie-invasion). Tonight's sweep chain
+  pre-reset-sweep-2026-11-13 already expired unexecuted
+  (all four units done, status expired, finished
+  2026-11-14T02:13:56Z) - third night running without the
+  reset ledger walk; sweep production skipped (22:00 hour
+  run). Scout diff on the 6-pass 2026-11-11 observation (52
+  observed, 11 unexplained) applied with 0 counts, 0
+  withdrawals, no new issues. Pool inbox 83, claimed 0, done
+  1895; newest finished unit 2026-11-14T05:58:45Z (21:58 PT
+  Nov 13) - zombie-invasion-zombie-2026-11-10-031, status
+  failed, executor ticker-2152 (Mac still offline, last seen
+  2026-11-12T17:52:28Z); no regular unit has finished since
+  12:08 PT Nov 12. Push could not land - VPS SSH outage
+  persists (twenty-fifth consecutive verified planner run
+  failing to commit); commit left on
+  planner-2240-1113-delivery. Run record:
+  queue-planning/2240-run.md.
