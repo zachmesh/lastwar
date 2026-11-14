@@ -62,6 +62,9 @@ description: The 1840 queue planning pass - live-tree plan staged 18 units (56 a
 created: 2026-11-14T04:27:00Z
 modified: 2026-11-14T04:27:00Z
 description: The 1940 queue planning pass - live-tree plan staged 0 units (74 already present) and expired 0, current-roster plan staged 0 more (82 already present); tonight's sweep chain already expired unexecuted; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; newest finish is the ticker-1933 scout unit failed 19:39 PT, regular execution still stalled; push could not land (VPS SSH outage persists, twenty-second consecutive verified planner run failing to commit), status partial
+created: 2026-11-14T05:39:00Z
+modified: 2026-11-14T05:39:00Z
+description: The 2040 queue planning pass - live-tree plan staged 0 units (74 already present) and expired 0, current-roster plan staged 0 more (82 already present); tonight's sweep chain already expired unexecuted; scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; newest finish is the ticker-2041 zombie-invasion unit 030 failed 20:49 PT, regular execution still stalled; push could not land (VPS SSH outage persists, twenty-third consecutive verified planner run failing to commit), status partial
 ## 14:08 to about 14:30 - Ticker pass ticker-1408, zombie-invasion unit failed (Mac offline)
 
 - Scheduler delivered the 2026-11-12 14:04 tick a day late: the run
@@ -630,3 +633,27 @@ modified: 2026-11-14T11:45:00Z
 ## 20:51 to about 20:51 - Knowledge organization 2032 run, fold ticker-1813/1933 + planner 1740/1840/1940 into 3 profiles, step-5 sweep re-done across delivery worktrees (VPS SSH outage continues)
 
 - Knowledge-organizer pass knowledge-organization-2026-11-13-2032. Scheduled Nov 13 20:32 PT, executed Nov 13 about 20:40-20:51 PT. Own PRs first: PR #711 OPEN, head e3c3dfd0, updatedAt 2026-11-12T20:04:57Z - unchanged, no new review or comment (single review 2026-11-12T20:04:56Z, already answered by amendment commit 3687128f26); open PRs still three (711, 708, 425). Knowledge issues: 41 open, newest update #595 at 2026-11-12T14:11:46Z; newest issue overall still #712 (tooling). Folded (commit 511bcd492f on work/ko-1132-lock-1047): ticker-1813 zombie 029 FAILED (twelfth device-offline occurrence), ticker-1933 scout 010 FAILED (thirteenth), queue-planning 1740 (0 staged; sweep chain checked first, no pair produced - correct), 1840 (18 + 2 staged, 11 expired), 1940 (0 staged; pool inbox 83, done 1879); VIP 2026-11-13-1800 expired unclaimed at the 19:00 reset as a deliberate non-claim under the new doomed-probe unit-selection rule; pre-reset sweep pair expired unexecuted (third night without the reset ledger walk); PR #708 19:00 batch MISSED (eighth). Profiles: perception-scout 1.76.0 -> 1.77.0, zombie-invasion 1.55.0 -> 1.56.0, daily-activities 1.41.0 -> 1.42.0; radar-tasks 1.92.0 untouched. Contradictions resolved 2: (1) the 1940 run's sweep conclusion "pre-reset sweep pair never staged / no planner run after 1540 landed" is corrected - the pair WAS staged (four units, seqs [1,1,2,2]) and expired unexecuted, and planner 1740/1840/1940 landed in delivery worktrees the 1940 run did not read; (2) the 1933 record's "49.5 hours" Mac-offline gap is an arithmetic error (actual 33h47m). Gaps filed 0 (device-offline pause still blocked for filing; #689/#694 comment drafts and PR #711 reply draft updated with a 2032 addendum, still owed). Step-5 sweep re-done across live tree + delivery worktrees: whole-day inventory is ticker 1408/1813/1933, planner 0040-1540 + 1740/1840/1940 (1640 leaves no landed record - chain gap), pr-catchall 0039-1939, pr-integration 0300-2015, organizer 1732/1831/1940. Status: partial. Delivery PARTIAL: fold commit held locally (VPS SSH outage, Permission denied publickey, re-verified this run); this run record committed in the detached ko-1732-rec worktree on local branch ko-1732-records, push held. Files: _records_/2026-11-13/knowledge-organization/2032-run.md, this INDEX, _logs_/repo-actions/action-log.jsonl.
+## 20:40 to about 21:39 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-13-2040 (scheduled 20:40,
+  started 21:31, about 50 minutes late). Live-tree plan
+  staged 0 units (74 already present, 0 reaped, 0 expired;
+  roster stale for building-queues, research and
+  zombie-invasion, issue #198); current-roster plan staged 0
+  more units (82 already present; roster stale only for
+  zombie-invasion). Tonight's sweep chain
+  pre-reset-sweep-2026-11-13 already expired unexecuted
+  (all four units done, status expired, finished
+  2026-11-14T02:13:56Z) - third night running without the
+  reset ledger walk; sweep production skipped (21:00 hour
+  run). Scout diff on the 6-pass 2026-11-11 observation (52
+  observed, 11 unexplained) applied with 0 counts, 0
+  withdrawals, no new issues. Pool inbox 83, claimed 0, done
+  1880; newest finished unit 2026-11-14T04:49:33Z (20:49 PT
+  Nov 13) - zombie-invasion-zombie-2026-11-10-030, status
+  failed, executor ticker-2041 (Mac still offline, 14th
+  occurrence); no regular unit has finished since 12:08 PT
+  Nov 12. Push could not land - VPS SSH outage persists
+  (twenty-third consecutive verified planner run failing to
+  commit); commit left on planner-2040-1113-delivery. Run
+  record: queue-planning/2040-run.md.
