@@ -75,3 +75,22 @@ of 2026-10-28.
   stays on local records/2026-11-13 and no PR can be opened
   until the push succeeds. PR #708 will miss its 8th batch
   point at 19:00 PT tonight if the VPS is still down.
+- Scout unit 010 (ticker-1933, failed, chain
+  scout-2026-11-10 seq 10): the Mac mini is still unreachable
+  at the device transport - computer.session start failed
+  node_offline (no wake-up path, last seen 2026-11-12T17:52:28Z,
+  about 49.5h), connection.repair on the Mac failed the same
+  way, recovery-device repair and health both timed out at 25s.
+  No game state observable, no input sent, nothing spent. Same
+  NEW failure mode as units 028 and 029, not the Issue #689
+  outcome_unknown lock (no outcome_unknown observed, no
+  read-only snap possible): closed failed, blocker_category f,
+  no blocker_overlay. 13th occurrence of the device-offline
+  probe failure. Retro stats keys all present this time
+  (stats_missing empty). Successor 011 enqueued to start now.
+  Full detail in perception-scout/1933-queue-run.md.
+- Delivery PARTIAL: push blocked by the VPS SSH outage
+  (Permission denied publickey, about 31 hours); the commit
+  stays on local records/2026-11-13 and no PR can be opened
+  until the push succeeds. PR #708 has now missed its 8th batch
+  point (19:00 PT tonight).
