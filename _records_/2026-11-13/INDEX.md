@@ -49,3 +49,29 @@ of 2026-10-28.
 - Delivery PARTIAL: push blocked by the VPS SSH outage (Permission
   denied publickey); the commit stays on local records/2026-11-13
   and no PR can be opened until the push succeeds.
+- Zombie-invasion unit 029 (ticker-1813, failed, chain
+  zombie-2026-11-10 seq 29): the Mac mini is still unreachable
+  at the device transport - 2 computer.session starts failed
+  node_offline (no wake-up path, last seen 2026-11-12T17:52:28Z,
+  about 32.5h), connection.repair on the Mac failed the same
+  way, recovery-device repair timed out at 25s. No game state
+  observable, no input sent, nothing spent. Same NEW failure
+  mode as unit 028, not the Issue #689 outcome_unknown lock
+  (no outcome_unknown observed, no read-only snap possible):
+  closed failed, blocker_category f, no blocker_overlay. 12th
+  occurrence of the device-offline probe failure. Sync expired
+  27 units (16:30/17:00/17:30 and 14:03 windows), produced
+  none, due 22 already queued; live pool inbox 73, claimed 1,
+  done 1866. The pass's sync and claim first ran through the
+  main tree's stale queue.py (afe45a60, Nov 3) and were
+  verified afterwards with the current tool (366b3b76,
+  currency current, git_head a858a0fca); the local main tip
+  22601972 (PR #700 merge) is ahead of the remote main and
+  its queue.py reports stale, so it is not the current tool.
+  Successor 030 enqueued to start now. Full detail in
+  zombie-invasion/1823-queue-run.md.
+- Delivery PARTIAL: push blocked by the VPS SSH outage
+  (Permission denied publickey, about 30 hours); the commit
+  stays on local records/2026-11-13 and no PR can be opened
+  until the push succeeds. PR #708 will miss its 8th batch
+  point at 19:00 PT tonight if the VPS is still down.
