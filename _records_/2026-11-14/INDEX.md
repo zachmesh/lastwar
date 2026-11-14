@@ -64,6 +64,29 @@ of 2026-10-28.
   local records/2026-11-14 branch. Full detail in
   zombie-invasion/0604-queue-run.md.
 
+## 06:32 to about 08:52 - Tool-development pass
+
+- Tool-developer pass tool-development-2026-11-14-0632.
+  PARTIAL: issue #712 is implemented and validated on local
+  branch work/plan-window-filter (commit 924e89f748, based on
+  main a858a0fca8) - plan never stages a window whose expiry
+  already passed, and the production path refuses a second
+  unit with the same (chain_id, chain_seq); 18/18 fixture
+  assertions pass on isolated /tmp scratch pools, py_compile
+  clean. Correction: local branch work/plan-expired-chain-
+  dedupe-712 (b3d25979fc, 2026-11-13 17:19 PT) already
+  implements the same fix and was missed at run start, so
+  this run duplicated in-flight work - the earlier branch is
+  the delivery vehicle, this one is a validated backup; do
+  not open two PRs for #712. The PR could NOT be opened: VPS
+  SSH is still down (Permission denied since 2026-11-12) and
+  the GitHub App integration returns 403 on branch creation
+  and issue comments, so no push route exists; both branches
+  live only in the local clone. Own PR #425 is unchanged at
+  head 4f41cdd6a, still owner-gated on OD-20261108-01, no
+  author action owed. Full detail in
+  tool-development/0632-run.md.
+
 ## 07:04 to about 07:22 - Queue ticker pass
 
 - Ticker pass ticker-0704. FAILED unit
