@@ -1,10 +1,10 @@
 ---
 title: Play Record 2026-11-14
 created: 2026-11-14T11:34:43Z
-modified: 2026-11-14T11:34:43Z
+modified: 2026-11-14T12:57:03Z
 level: L0
 version: 1.0.0
-description: The 0332 tool-development pass - partial - VPS SSH down since 2026-11-12, PR route unavailable, issue 712 held unimplemented, own PR 425 still owner-gated
+description: The 0332 tool-development pass - partial - VPS SSH down since 2026-11-12, PR route unavailable, issue 712 held unimplemented, own PR 425 still owner-gated; the 0445 queue ticker pass - 1 unit failed (scout-011, Mac mini still offline since 2026-11-12, 4 recovery attempts failed), successor 012 enqueued, push/PR route still down
 status: unverified
 ---
 
@@ -35,3 +35,17 @@ of 2026-10-28.
   exists only in the local clone until the VPS route is
   restored. No Slack sync. Status: partial. Full detail in
   tool-development/0332-run.md.
+
+## 04:45 to about 04:53 - Queue ticker pass
+
+- Ticker pass ticker-0445. FAILED unit
+  scout-scout-2026-11-10-011 (chain scout-2026-11-10): the Mac
+  mini is still offline (node_offline, last seen 2026-11-12
+  09:52 PT); computer.session start, connection.health, and the
+  recovery device's health and repair all failed (4 attempts).
+  No surfaces walked, tracker untouched, successor 012 enqueued.
+  Records PR 708 still open, no comments, mergeable clean; no PR
+  for records/2026-11-14 exists yet and none could be opened
+  (VPS SSH down, no local gh login), so this pass's commit stays
+  on the local records/2026-11-14 branch. Full detail in
+  perception-scout/0453-queue-run.md.
