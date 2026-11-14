@@ -118,3 +118,34 @@ of 2026-10-28.
   stays on local records/2026-11-13 and no PR can be opened
   until the push succeeds. PR #708 has now missed its 8th batch
   point (19:00 PT tonight); next batch point 23:00 PT.
+- Zombie-invasion unit 031 (ticker-2152, failed, chain
+  zombie-2026-11-10 seq 31): the Mac mini is still unreachable
+  at the device transport - 2 computer.session starts failed
+  node_offline (no wake-up path, last seen 2026-11-12T17:52:28Z,
+  about 36h), connection.repair on the Mac failed the same
+  way, recovery-device repair timed out at 25s. No game state
+  observable, no input sent, nothing spent. Same NEW failure
+  mode as units 028, 029 and 030, not the Issue #689
+  outcome_unknown lock (no outcome_unknown observed, no
+  read-only snap possible): closed failed, blocker_category f,
+  no blocker_overlay. 15th occurrence of the device-offline
+  probe failure. `next` returned scout-scout-2026-11-10-011 and
+  it was not claimed (a real perception unit is not burned on
+  a doomed probe). Retro stats keys all present
+  (stats_missing empty). Successor 032 enqueued to start now.
+  The device-offline pause draft was retried for filing via
+  the connector issue_write: attempt 1 died in the service
+  restart (verified not created, newest open issue still
+  #712), attempt 2 returned 403 Resource not accessible by
+  integration - filing still blocked, the VPS gh route is the
+  path once SSH returns. The run stalled between the unit
+  close (21:58 PT Nov 13) and this record's writing (about
+  03:42 PT Nov 14) on a service and VM restart; no ticker
+  pass executed a unit in the gap. Full detail in
+  zombie-invasion/2157-queue-run.md.
+- Delivery PARTIAL: push blocked by the VPS SSH outage
+  (Permission denied publickey, about 39 hours); the commit
+  stays on local records/2026-11-13 and no PR can be opened
+  until the push succeeds. The pr-integration 2330 run
+  records the 23:00 batch as MISSED, the ninth missed batch;
+  next batch point 03:00 PT Nov 14.
