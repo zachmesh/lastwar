@@ -66,3 +66,7 @@ One scout chain unit per the perception design: walk the game interface surfaces
 ## Delivery (appended after the push attempt)
 
 - Push attempted about 07:24 PT: bundle ticker-0704-1114-records.bundle created (about 14.3 MB, verified); scp to centos@66.179.249.233 failed Permission denied (publickey) — the VPS SSH outage since 2026-11-12 about 12:46 PT persists. No PR opened (no gh login available locally, VPS gh unreachable). The pass is partial on delivery; the commit waits for the VPS route to be restored. No force push used.
+
+## Correction (appended 07:27 PT, verified against _queue_/done)
+
+- The failure paragraph above miscounts the scout-chain streak: unit 012 is the SIXTH consecutive failed unit in chain scout-2026-11-10 (007-012), not the fifth, and only the last four (009, 010, 011, 012) failed on node_offline. Units 007 (finished 2026-11-12T13:11:10Z) and 008 (2026-11-12T15:43:15Z) failed on the outcome_unknown control lock (Issue #689), a different failure mode. The "third consecutive ticker pass today" count (0445, 0604, 0704) stands. "The other 24 due regulars" should read "the other 24 due units".
