@@ -210,3 +210,19 @@ of 2026-10-28.
   be opened, so this pass's commit stays on the local
   records/2026-11-14 branch. Full detail in
   zombie-invasion/1600-queue-run.md.
+
+## 17:12 to about 17:20 - Queue ticker pass
+
+- Ticker pass ticker-1712. FAILED unit
+  scout-scout-2026-11-10-016 (chain scout-2026-11-10): the Mac mini
+  is still offline (node_offline, last seen 2026-11-12 17:52:28Z);
+  connection.health, computer.session, screen.snap and
+  connection.repair all failed (4 attempts). No game state, no
+  observation, no claims, tracker untouched, successor 017
+  enqueued. Sync produced nothing (due 22, all already queued).
+  Own PRs could not be re-checked live - VPS gh route down and
+  public GitHub API rate-limited until 01:42Z; citing the
+  ticker-1534 pass: #708, #711 and #425 still open, no PR for
+  records/2026-11-14 exists yet and none could be opened, so this
+  pass's commit stays on the local records/2026-11-14 branch. Full
+  detail in perception-scout/1712-queue-run.md.
