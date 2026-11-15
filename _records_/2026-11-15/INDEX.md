@@ -629,6 +629,12 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   (publickey), commit left on local planner-0340-1115-delivery,
   no PR for records/2026-11-15. Record:
   queue-planning/0340-run.md.
+- 05:40 PT, queue-planning 0540 run - partial, 1 unit staged
+  (zero-sweep 2026-11-15-1730, chain pre-reset-sweep-2026-11-15),
+  with 0 counts; 0 withdrawals; fourth consecutive planner run
+  (publickey), commit left on local planner-0540-1115-delivery,
+  no PR for records/2026-11-15. No 0440 record exists for today.
+  Record: queue-planning/0540-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
