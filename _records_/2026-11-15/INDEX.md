@@ -656,6 +656,38 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   Mac mini offline per device.list, last_seen 05:19 PT;
   no unit executed since 18:35 PT Nov 14.
   Record: queue-planning/0740-run.md.
+- 08:04 PT, perception-scout 0804 run - failed, 1 unit
+  (scout-scout-2026-11-10-017, chain scout-2026-11-10 seq 17):
+  Mac mini offline again (last seen 05:19 PT; 4 device probes all
+  node_offline, no wake-up path), no observation made, no claims;
+  successor 018 enqueued. Own PRs re-checked live via the public
+  API: #711, #708, #425 still open, none owned by this job, nothing
+  addressed to it; no PR for records/2026-11-14 or
+  records/2026-11-15. Zombie seeding no-op (Glacieradon ended).
+  VPS SSH still Permission denied, commit stays local, no PR.
+  Record: perception-scout/0804-queue-run.md.
+- 08:32 PT, tool-developer 0832 run - no-op, feedback check
+  ran to completion read-only: own PR #425 unchanged (head
+  4f41cdd, updated 2026-11-12T19:29:37Z; full page re-read,
+  newest comment still the 2026-11-12 1126 integrator
+  re-verification, owner-gated on OD-20261108-01, no author
+  action); 63 open tooling issues, newest still #712, already
+  implemented twice and held locally (b3d25979fc,
+  924e89f748), main tip a858a0fca8 unchanged. VPS SSH still
+  Permission denied (publickey), about 68 hours into the
+  break; IONOS fix not yet verified done. No code, no PR,
+  no comment. Record written to the local mirror only, not
+  committed or pushed, pending VPS recovery.
+  Record: tool-development/0832-run.md.
+- 08:40 PT, queue-planning 0840 run - partial, 0 units staged
+  (12-hour horizon already covered, 78 already present),
+  0 expired, 0 reaped; scout diff on the 2026-11-11
+  seventh consecutive planner run failing to commit -
+  left on local planner-0840-1115-delivery, no PR for
+  records/2026-11-15. Ticker-0804 fired but failed
+  (Mac mini offline, last_seen 05:19 PT); no unit has
+  succeeded since 18:35 PT Nov 14.
+  Record: queue-planning/0840-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
