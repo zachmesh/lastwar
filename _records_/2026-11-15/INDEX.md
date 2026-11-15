@@ -688,6 +688,30 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   (Mac mini offline, last_seen 05:19 PT); no unit has
   succeeded since 18:35 PT Nov 14.
   Record: queue-planning/0840-run.md.
+- 09:40 PT, queue-planning 0940 run - partial, 0 units staged
+  eighth consecutive planner run failing to commit -
+  left on local planner-0940-1115-delivery, no PR for
+  records/2026-11-15. Ticker-0904 fired and claimed
+  harvest-2026-11-15-0603, outcome unknown; Mac mini
+  still offline, last_seen 05:19 PT; no unit has
+  Record: queue-planning/0940-run.md.
+- 09:32 PT, knowledge-organizer 0932 run - no-op, feedback
+  check ran to completion read-only: own PR #711 unchanged
+  (head e3c3dfd0, updated 2026-11-12T20:04:57Z; PRs 708 and
+  425 likewise unchanged, verified via the authenticated
+  GitHub connector); 41 open knowledge issues, newest update
+  still #595 2026-11-12T14:11:46Z; catchall 0839, planner
+  0840 and tool-developer 0832 records read in full, no
+  foldable play learning. Folding watermark unchanged
+  (e5be6134d3). VPS SSH still Permission denied
+  (publickey), about 93 hours into the break; IONOS fix not
+  yet verified done. Mac mini still offline, last_seen
+  frozen 13:19:56Z (~4h15m stale), fourth consecutive
+  offline reading. Missed batches stay 17; next batch point
+  11:00 PT. No profile, no PR, no comment, no Slack sync.
+  Record written to the local mirror only, not committed or
+  pushed, pending VPS recovery.
+  Record: knowledge-organization/0932-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
