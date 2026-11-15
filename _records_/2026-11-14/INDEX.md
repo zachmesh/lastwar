@@ -1,7 +1,7 @@
 ---
 title: Play Record 2026-11-14
 created: 2026-11-14T11:34:43Z
-modified: 2026-11-14T14:08:17Z
+modified: 2026-11-15T02:43:13Z
 level: L0
 version: 1.0.0
 description: The 0332 tool-development pass - partial - VPS SSH down since 2026-11-12, PR route unavailable, issue 712 held unimplemented, own PR 425 still owner-gated; the 0445 queue ticker pass - 1 unit failed (scout-011, Mac mini still offline since 2026-11-12, 4 recovery attempts failed), successor 012 enqueued, push/PR route still down; the 0604 queue ticker pass - 1 unit failed (zombie-032, Mac mini still offline, 3 recovery attempts failed), successor 033 enqueued, push/PR route still down
@@ -226,3 +226,30 @@ of 2026-10-28.
   records/2026-11-14 exists yet and none could be opened, so this
   pass's commit stays on the local records/2026-11-14 branch. Full
   detail in perception-scout/1712-queue-run.md.
+
+## 18:25 to about 18:40 - Queue ticker pass
+
+- Ticker pass ticker-1804. FAILED unit
+  zombie-invasion-zombie-2026-11-10-037 (chain zombie-2026-11-10):
+  the Mac mini is back ONLINE (device.list connection_state online,
+  last_seen 2026-11-15T02:13:07Z) - first successful device access
+  since the 2026-11-12 outage. LastWar opened, account HidingAnt504
+  confirmed, base screen coin HUD 153.7M, stamina 120, power
+  147,344,687. The Glacieradon event has ENDED: the Events hub tab
+  bar holds six tabs (The Age of Oil, Arms Race, Desert Storm,
+  Winter Battlefield, Rampage Bosses, Community) and none is Zombie
+  Invasion; timer cross-check (unit 001: 2d 21:58 left on 2026-11-11,
+  unit 023: 1d 17:37 left on 2026-11-12) points at expiry about
+  2026-11-13 18:05 PT. No kills, no claims, nothing spent. Chain
+  zombie-2026-11-10 closed, no successor enqueued. Sync produced
+  nothing (due 22, all already queued) and expired 27 units.
+  regulars.py skip zombie-invasion refused (unknown regular id -
+  roster stale, Issue 198); the completion marker suppresses
+  re-picks instead. Own PRs checked via the GitHub connector
+  (VPS gh route down): #708, #711 and #425 still open, no PR for
+  records/2026-11-14 exists yet and none could be opened, so this
+  pass's commit stays on the local records/2026-11-14 branch. Gaps
+  noted for Issues: the sync seeded unit 037 about 22 hours after
+  the event expired, and _activities_/zombie-invasion/INDEX.md is
+  stale on the Glacieradon return. Full detail in
+  zombie-invasion/1833-queue-run.md.
