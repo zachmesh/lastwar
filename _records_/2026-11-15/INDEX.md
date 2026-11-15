@@ -791,6 +791,43 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   Ticker-1051 fired but failed (scout-scout-2026-11-10-018,
   Mac mini offline, last_seen 05:19 PT); no unit has
   Record: queue-planning/1140-run.md.
+- 11:59 PT, tool-development 1132 run - no-op, feedback check
+  owner-gated on OD-20261108-01, re-verified open in the
+  register on main, no author action); 63 open tooling
+  issues, newest still #712 (0 comments), already
+  about 71 hours into the break; IONOS fix not yet verified
+  Record: tool-development/1132-run.md.
+- 12:02 PT, ticker-1202 run - failed, 1 unit
+  (harvest-2026-11-15-1003, Mac mini offline, last_seen
+  05:19 PT; 5 device probes - connection.health,
+  environment.describe, computer.session all node_offline,
+  recovery-device health and repair both timed out; no
+  wake-up path; no collection, no claims, nothing spent).
+  Own PRs re-checked via public API: #711, #708, #425 open,
+  none owned by this job, no PR for records/2026-11-15.
+  Zombie seeding no-op, Glacieradon ended. VPS SSH still
+  Permission denied (publickey), commit stays local on
+  Record: resource-collection/1206-queue-run.md.
+- 12:32 PT, knowledge-organizer 1232 run - no-op, feedback
+  still #595 2026-11-12T14:11:46Z; catchall 1139, planner
+  1140 and ticker 1206 records read in full, no foldable
+  play learning. Folding watermark unchanged (e5be6134d3).
+  Missed batches stay 18; next batch point 15:00 PT. VPS
+  SSH still Permission denied (publickey), about 71h45m into
+  the break; IONOS fix not yet verified done. Mac mini still
+  offline, last_seen frozen 13:19:56Z (~7h13m stale),
+  seventh consecutive offline reading. No profile, no PR, no
+  comment, no Slack sync. Record written to the local mirror
+  only, not committed or pushed, pending VPS recovery.
+  Record: knowledge-organization/1232-run.md.
+- 12:40 PT, queue-planning 1240 run - partial, 0 units staged
+  (2257 set already present), 0 expired; scout diff on the
+  2026-11-11 observation applied with 0 counts; 0 withdrawals;
+  eleventh consecutive planner run failing to commit - VPS SSH
+  still Permission denied (publickey), commit left on local
+  planner-1240-1115-delivery, no PR for records/2026-11-15.
+  Ticker-1202 fired but failed (harvest-2026-11-15-1003,
+  Record: queue-planning/1240-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
