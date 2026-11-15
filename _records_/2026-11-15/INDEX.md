@@ -116,3 +116,17 @@ of 2026-10-28.
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed. Full detail in
   pr-integration/1020-run.md.
+
+- 10:51 PT, queue-ticker 1051 run - failed, 1 unit failed
+  (scout-scout-2026-11-10-018, chain scout-2026-11-10 seq 18,
+  Mac mini offline again, last_seen 05:19 PT, 5 device probes
+  all node_offline or invoke timeout, no wake-up path, no
+  observation, no claims, tracker untouched); sync reaped 0,
+  expired 0, due 22, produced 0; zombie seeding no-op
+  (Glacieradon ended); own PRs re-checked via public API
+  (#711, #708, #425, none owned by this job, no PR for
+  records/2026-11-15); pass stopped after this unit rather
+  than cascading failures; VPS SSH still Permission denied
+  (publickey), commit stays on local records/2026-11-15,
+  no PR.
+  Record: perception-scout/1051-queue-run.md.
