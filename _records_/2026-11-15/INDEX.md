@@ -65,3 +65,14 @@ of 2026-10-28.
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed. Full detail in
   pr-integration/0800-run.md.
+
+- 08:04 PT, perception-scout 0804 run - failed, 1 unit
+  (scout-scout-2026-11-10-017, chain scout-2026-11-10 seq 17):
+  Mac mini offline again (last seen 05:19 PT; 4 device probes all
+  node_offline, no wake-up path), no observation made, no claims;
+  successor 018 enqueued. Own PRs re-checked live via the public
+  API: #711, #708, #425 still open, none owned by this job, nothing
+  addressed to it; no PR for records/2026-11-14 or
+  records/2026-11-15. Zombie seeding no-op (Glacieradon ended).
+  VPS SSH still Permission denied, commit stays local, no PR.
+  Record: perception-scout/0804-queue-run.md.
