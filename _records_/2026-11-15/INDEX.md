@@ -19,6 +19,7 @@ created: 2026-11-15T10:30:00Z
 modified: 2026-11-15T10:30:00Z
 description: Day record for 2026-11-15 (America/Los_Angeles) - planner resumes after a 2.5-day gap, VPS SSH still down
 modified: 2026-11-15T11:35:00Z
+modified: 2026-11-15T18:55:00Z
 ## 06:45 to about 07:05 - PR integration 0655 run, FAILED (VPS SSH unreachable)
 
 - Integrator pass pr-integration-2026-11-15-0655. FAILED:
@@ -712,6 +713,34 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   Record written to the local mirror only, not committed or
   pushed, pending VPS recovery.
   Record: knowledge-organization/0932-run.md.
+- 09:34 PT, queue-ticker 0934 run - failed, 1 unit failed
+  (harvest-2026-11-15-0603, Mac mini offline again, last_seen
+  05:19 PT, 4 device probes all node_offline, no collection,
+  no claims, tracker untouched); sync reaped 0, expired 0,
+  due 22, produced 0; zombie seeding no-op (Glacieradon
+  ended); own PRs re-checked via public API (#711, #708,
+  #425, none owned by this job); pass stopped after this
+  unit rather than cascading failures; VPS SSH still
+  Permission denied (publickey), commit stays on local
+  records/2026-11-15, no PR.
+  Record: resource-collection/0934-queue-run.md.
+- 10:32 PT, knowledge-organizer 1032 run - no-op, feedback
+  still #595 2026-11-12T14:11:46Z; catchall 0939, planner
+  0940, resource-collection 0934 and integrator 1020 records
+  read in full, no foldable play learning. Folding watermark
+  unchanged (e5be6134d3). VPS SSH still Permission denied
+  (publickey), about 94 hours into the break; IONOS fix not
+  frozen 13:19:56Z (~5h15m stale), fifth consecutive
+  Record: knowledge-organization/1032-run.md.
+- 10:40 PT, queue-planning 1040 run - partial, 12 units staged
+  (2203/2230 set), 13 expired (0603/0630 set, unexecuted -
+  Mac mini offline); scout diff on the 2026-11-11
+  ninth consecutive planner run failing to commit -
+  left on local planner-1040-1115-delivery, no PR for
+  records/2026-11-15. Ticker-0934 fired but failed
+  (harvest-2026-11-15-0603, Mac mini offline, last_seen
+  05:19 PT); no unit has succeeded since 18:35 PT Nov 14.
+  Record: queue-planning/1040-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
