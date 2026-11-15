@@ -245,3 +245,37 @@ of 2026-10-28.
   denied (publickey), commit stays on local records/2026-11-15,
   no PR.
   Record: vip-rewards/1534-queue-run.md.
+
+## 15:45 to about 15:52 - PR integration 1545 run, FAILED (VPS SSH unreachable, non-batch pass)
+
+- Integrator pass pr-integration-2026-11-15-1545. FAILED:
+  VPS SSH returns "Permission denied (publickey)" - the
+  2026-11-12 ~/.ssh loss is still unrepaired (owner chose
+  the IONOS-console recovery on 2026-11-14, not yet
+  landed). Sixty-sixth consecutive failed pass for the
+  same break. No merge, comment or records push was
+  possible. Checker _tools_/records_batch.py run locally
+  from a main copy: DUE clock-only (exit 0, batch window
+  15:00-16:00 PT, 12 minutes left at check), but this
+  pass is NOT the batch pass - the 1542 pass (started
+  15:42:25 PT) was the first pass at or after 15:00 PT
+  and therefore the batch pass, and it could not merge
+  either: the 15:00 batch is the nineteenth missed batch,
+  counted at the 1542 pass. Read-only verification via
+  the public GitHub API only. Open PRs 708 (records
+  2026-11-12, head 2f59c270, 26 commits, CLEAN, batch
+  pass missed at 1542), 711 (knowledge, head e3c3dfd0
+  unchanged, held by the 1145 review on amending the
+  superseded #705 lines per PR 710), 425 (tools, head
+  4f41cdd6a unchanged, still owner-gated OD-20261108-01,
+  no owner decision). Main frozen at a858a0fca (PR 710,
+  2026-11-12 11:52 PT). No records branch after
+  2026-11-12; no new records PR to open. Note: the
+  1230, 1338 and 1542 passes ran between 1127 and this
+  one and none of their records is on the branch yet
+  (1230/1338 live-tree mirrors only, 1542 hidden-files
+  only) - they must be copied onto records/2026-11-15
+  on recovery. This record committed locally only on
+  records/2026-11-15, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed. Full
+  detail in pr-integration/1545-run.md.
