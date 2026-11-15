@@ -828,6 +828,56 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   planner-1240-1115-delivery, no PR for records/2026-11-15.
   Ticker-1202 fired but failed (harvest-2026-11-15-1003,
   Record: queue-planning/1240-run.md.
+- 13:04 PT, tool-development 1232 run - no-op, feedback check
+  (head 4f41cdd6ab, updated 2026-11-12T19:29:37Z, full
+  486-line thread re-read, newest comment still the 2026-11-12
+  1126 pass, still owner-gated on OD-20261108-01, no author
+  action); 63 open tooling issues, newest still #712 (0
+  comments), already implemented twice and held locally
+  pending the PR route - held branch tip b3d25979fc, second
+  commit 924e89f748 and td-712 bundle all re-verified intact;
+  main tip a858a0fca8 unchanged. VPS SSH still Permission
+  denied (publickey), about 72 hours into the break; IONOS fix
+  not yet verified done. No code, no PR, no comment, no Slack
+  sync. Record written to the local mirror only, not committed
+  or pushed, pending VPS recovery.
+  Record: tool-development/1232-run.md.
+- 13:31 PT, queue-ticker 1331 run - failed, 1 unit failed
+  (radar-2026-11-15-1003, Mac mini offline again,
+  last_seen 05:19 PT, 5 device probes - connection.health,
+  recovery-device health and repair both invoke timeout,
+  no wake-up path, no radar claims, tracker
+  untouched); sync reaped 0, expired 0, due 22, produced 0,
+  1 completion marker reaped (harvest-2026-11-15-1003);
+  zombie seeding no-op (Glacieradon ended); own PRs
+  re-checked via public API (#711, #708, #425, none owned
+  by this job, no PR for records/2026-11-15); pass stopped
+  after this unit rather than cascading failures; VPS SSH
+  still Permission denied (publickey), commit stays on local
+  Record: radar-tasks/1331-queue-run.md.
+- 13:32 PT, knowledge-organization 1332 run - no-op, worked
+  from the 1232 watermark (fold commit e5be6134d3, unchanged):
+  own PR 711 re-verified via the authenticated GitHub
+  connector (OPEN, head e3c3dfd0, updated 2026-11-12T20:04:57Z,
+  unchanged); PRs 708 and 425 likewise unchanged; 41 open
+  knowledge issues, newest update still #595
+  2026-11-12T14:11:46Z; catchall 1239, planner 1240,
+  integrator 1230, tool-dev 1232 and radar 1331 records read
+  in full, no foldable play learning. Folding watermark unchanged
+  (e5be6134d3). Missed batches stay 18; next batch point
+  15:00 PT. VPS SSH still Permission denied (publickey),
+  about 72h45m into the break; IONOS fix not yet verified
+  done. Mac mini still offline, last_seen frozen 13:19:56Z
+  (~8h13m stale), eighth consecutive offline reading. No
+  profile, no PR, no comment, no Slack sync. Record written
+  to the local mirror only, not committed or pushed, pending
+  VPS recovery.
+  Record: knowledge-organization/1332-run.md.
+- 13:40 PT, queue-planning 1340 run - partial, 0 units staged
+  twelfth consecutive planner run failing to commit - VPS SSH
+  planner-1340-1115-delivery, no PR for records/2026-11-15.
+  Ticker-1331 fired but failed (radar-2026-11-15-1003,
+  Record: queue-planning/1340-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
