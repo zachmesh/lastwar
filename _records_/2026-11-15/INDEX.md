@@ -217,3 +217,17 @@ of 2026-10-28.
   (publickey), commit stays on local records/2026-11-15,
   no PR.
   Record: shop-claims/1434-queue-run.md.
+- 15:04 PT, queue-ticker 1504 run - failed, 1 unit failed
+  (daily-missions-2026-11-14-1800, Mac mini offline again,
+  last_seen 05:19 PT, 4 device probes all node_offline,
+  no wake-up path, no missions claimed, tracker untouched);
+  sync reaped 0, expired 4 (the 2026-11-15-1057 set,
+  unexecuted), due 22, produced 0, 1 completion marker
+  reaped (passes-2026-11-15-1057); zombie seeding no-op
+  (Glacieradon ended); own PRs re-checked via authenticated
+  GitHub connector (#711, #708, #425, none owned by this job,
+  no PR for records/2026-11-15); pass stopped after this unit
+  rather than cascading failures; VPS SSH still Permission
+  denied (publickey), commit stays on local records/2026-11-15,
+  no PR.
+  Record: daily-missions/1504-queue-run.md.
