@@ -130,3 +130,30 @@ of 2026-10-28.
   (publickey), commit stays on local records/2026-11-15,
   no PR.
   Record: perception-scout/1051-queue-run.md.
+
+## 11:27 to about 11:33 - PR integration 1127 run, FAILED (VPS SSH unreachable, BATCH PASS missed)
+
+- Integrator pass pr-integration-2026-11-15-1127. FAILED:
+  VPS SSH returns "Permission denied (publickey)" - the
+  2026-11-12 ~/.ssh loss is still unrepaired (owner chose
+  the IONOS-console recovery on 2026-11-14, not yet
+  landed). Sixty-second consecutive failed pass for the
+  same break. No merge, comment or records push was
+  possible. Checker _tools_/records_batch.py run locally
+  from a main copy: DUE (exit 0, batch window 11:00-12:00
+  PT, 30 minutes left at check), so this pass IS a batch
+  pass - the first pass at or after 11:00 PT - and it
+  could not merge: the 11:00 batch is the eighteenth
+  missed batch. Read-only verification via the public
+  GitHub API only. Open PRs 708 (records 2026-11-12,
+  head 2f59c270, 26 commits, CLEAN, batch pass missed),
+  711 (knowledge, head e3c3dfd0 unchanged, held by the
+  1145 review on amending the superseded #705 lines per
+  PR 710), 425 (tools, head 4f41cdd6a unchanged, still
+  owner-gated OD-20261108-01, no owner decision). Main
+  frozen at a858a0fca (PR 710, 2026-11-12 11:52 PT). No
+  records branch after 2026-11-12; no new records PR to
+  open. This record committed locally only on
+  records/2026-11-15, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed. Full
+  detail in pr-integration/1127-run.md.
