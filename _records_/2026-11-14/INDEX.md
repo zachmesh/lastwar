@@ -253,3 +253,26 @@ of 2026-10-28.
   the event expired, and _activities_/zombie-invasion/INDEX.md is
   stale on the Glacieradon return. Full detail in
   zombie-invasion/1833-queue-run.md.
+
+## 20:39 to about 21:12 - Daily retro review pass
+
+- Retro pass retro-review-2026-11-14-2039. Aggregated the
+  records/2026-11-14 branch pool (tip 367158de20) with
+  _tools_/retro_report.py 1.5.5: window Nov 8-14, 613
+  executions, done 148 (24.1 percent), unverified 311
+  (50.7 percent), points 3,608, median 329s, p90 739s.
+  Nov 14 alone: 44 finished, 0 done, 12 failed, 32
+  expired. Wrote the retro file, the data appendix, the
+  owner-decisions register v2.5.0, rolling-7d v1.9.0 and
+  this record. Nine threshold breaches named; five new
+  issues DRAFTED (loop-dark Nov 12-14, zombie sync after
+  event end, enqueue duplicate-mint, doomed-probe picker,
+  zombie-profile stale) - none filed, every GitHub write
+  route unavailable (VPS SSH down, verified by direct
+  attempt; connector write path 403 for an unchanged
+  cause). Closes for #682/#672/#514 and the #631 reopen
+  re-drafted with Nov 14 confirmation, none posted.
+  Commit rides local branch retro/2026-11-14-delivery;
+  push not attempted (VPS SSH down); no PR opened for
+  records/2026-11-14. Full detail in
+  retro-review/2039-run.md.

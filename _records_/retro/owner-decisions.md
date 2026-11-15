@@ -1,8 +1,8 @@
 ---
 title: Owner decisions register
 created: 2026-11-01T05:42:09Z
-modified: 2026-11-14T05:00:00Z
-version: 2.4.0
+modified: 2026-11-15T05:00:00Z
+version: 2.5.0
 description: The standing register of items that only the owner can decide - each with its context, the exact decision needed, and its age - maintained by the daily retro and reported until decided
 status: active
 grounded_in:
@@ -536,3 +536,18 @@ one mention in a summary.
 - OD-20261109-01: DECIDED BY EXPIRY - see the Decided section. CORRECTION to the Nov 12 retro note: it said "Issue #514 closed by this retro" - wrong. The close was attempted Nov 12 and blocked by the GitHub App 403, so Issue #514 is still open on GitHub (re-verified open by the unauthenticated API read at this run's start). The register decision (decided by expiry, account stays in Warzone #2110) stands; the GitHub close does not. The close is re-drafted in the Nov 13 retro for the integrator.
 - OD-20261109-02: age 4 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open.
 - No new owner-decision items from the Nov 13 window: 0 skipped-needs-owner outcomes, and no owner-gated PR was escalated. All ten remaining items are open longer than 48 hours and are named in the Nov 13 retro chat report and Slack sync until decided.
+
+## 2026-11-14 retro notes (all items, ages recomputed)
+
+- OD-20261031-01: age 14 days. No new skipped-needs-owner on Nov 14 (no arms unit executed). No owner decision appeared in the records, chat or Slack DM.
+- OD-20261031-02: age 14 days, event-bound. Unaddressed a fourteenth day: no Nov 14 events unit executed at all, and no Nov 14 events record mentions the Day 07 tile or a decoration choice. Still NOT marked decided by expiry: no record states the Halloween event ended.
+- OD-20261031-03: age 14 days. No survivors unit executed Nov 14; Quick Dispatch still never ran. Decision unchanged.
+- OD-20261101-01: age 13 days, unaddressed.
+- OD-20261101-02: age 13 days, unaddressed.
+- OD-20261101-03: age 13 days. No Nov 14 record mentions the Season Photo actions; the 200 red diamonds stay unclaimed. No owner decision appeared.
+- OD-20261105-01: age 9 days. New evidence: 0 batch violations out of 0 merges today - all 5 windows so far saw no records merge at all (PR #708 still open at snapshot). PR #337 still implements branch (a), awaiting integrator review and adoption; the owner choice between (a) and (b) is still owed.
+- OD-20261108-01: age 6 days. PR #425 still open, still awaiting owner decision (integrator re-verified it CLEAN, 1945 pass, no new comment).
+- OD-20261108-02: age 6 days. No new drift evidence today; the 2152 verification (next pass starts from the current tool) stands met. Issue #415 still open.
+- OD-20261109-01: DECIDED BY EXPIRY - see the Decided section. The GitHub close is still unlanded (blocked by the GitHub App 403); the close is re-drafted in the Nov 14 retro for the integrator.
+- OD-20261109-02: age 5 days. Builders Hut Lv.26 upgrade decision still needed; Issue #517 still open.
+- No new owner-decision items from the Nov 14 window: 0 skipped-needs-owner outcomes, and no owner-gated PR was escalated. All ten remaining items are open longer than 48 hours and are named in the Nov 14 retro chat report and Slack sync until decided.
