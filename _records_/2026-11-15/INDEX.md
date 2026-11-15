@@ -6,14 +6,15 @@ level: L0
 version: 1.0.0
 description: The 0655 PR integration pass - FAILED, VPS SSH unreachable (Permission denied publickey, same outage as 2026-11-12 12:47 PT); no gh merge/comment possible, no checker run, no records push. Read-only API verification only: open PRs 708 (records 2026-11-12, CLEAN, awaits a 15:00 batch that never ran), 711 (knowledge, held by the 1145 review on one fixable item), 425 (tools, still owner-gated OD-20261108-01); main frozen at a858a0fca (PR 710, 2026-11-12 11:52 PT); no records branch after 2026-11-12. This run record committed locally only on records/2026-11-15, UNPUSHED - it needs the VPS route back before it can land
 status: unverified
----
 
 # 2026-11-15
-
 All times America/Los_Angeles. Actor Muse, under the owner standing
 instruction of 2026-10-25 to run the regulars and the queue design
 of 2026-10-28.
-
+title: Day record 2026-11-15
+created: 2026-11-15T09:16:00Z
+modified: 2026-11-15T09:16:00Z
+description: Day record for 2026-11-15 (America/Los_Angeles) - VPS SSH outage and ticker stall carried into the new day
 ## 06:45 to about 07:05 - PR integration 0655 run, FAILED (VPS SSH unreachable)
 
 - Integrator pass pr-integration-2026-11-15-0655. FAILED:
@@ -573,3 +574,45 @@ of 2026-10-28.
   Record: retro-review/2053-run.md. Retro file:
   _records_/retro/2026-11-15.md.
 
+## Day narrative
+
+The day opens with the two carried outages still standing:
+VPS SSH has been down since 2026-11-12 (Permission denied
+publickey - IONOS console recovery chosen by the owner at
+17:37 PT Nov 14, still not complete at 23:39 PT), so no
+planner record can be pushed and no PR can be opened; and
+the ticker has left no record since 18:33 PT Nov 14, with
+no regular unit finished since 12:08 PT Nov 12. The Mac
+mini reads online (last_seen 20:13:35 PT Nov 14 per the
+2340 run, not re-verified by the planner).
+
+## Runs
+
+- 00:40 PT, queue-planning 0040 run - live-tree plan staged
+  0 units (74 already present), current-roster plan staged
+  0 more (82 already present), 0 expired, 0 reaped; sweep
+  production skipped (01:00-hour run); scout diff on the
+  2026-11-11 6-pass observation applied with 0 counts
+  (52 observed, 11 unexplained); 0 withdrawals; no new
+  issues; status partial - push could not land (VPS SSH
+  outage, forty-sixth consecutive planner run failing to
+  commit). Record: queue-planning/0040-run.md.
+
+## Disclosures
+
+- VPS SSH still down (Permission denied publickey, verified
+  2026-11-15 01:02 PT), so this pass's records cannot be
+  pushed and no PR can be opened. Commits stay on the local
+  planner-0040-1115-delivery branch; the pass is partial
+  on delivery.
+- The working tree sits on branch work/ops-execution-records
+  with another job's in-flight state; this pass's records
+  were committed from a temporary worktree so that state
+  was never disturbed.
+- Correction carried from this pass: the 0040-through-2340
+  records' "newest finished 2026-11-14T05:58:45Z (21:58
+  PT)" misdates the unit - that timestamp is 21:58 PT
+  Nov 13, not Nov 14. The newest executed finish is
+  zombie-invasion-zombie-2026-11-10-037 at
+  2026-11-15T02:35:26Z (18:35 PT Nov 14), status failed,
+  executor ticker-1804.
