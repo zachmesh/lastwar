@@ -645,6 +645,17 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   Permission denied (publickey), commit left on local
   planner-0640-1115-delivery, no PR for records/2026-11-15.
   Record: queue-planning/0640-run.md.
+- 07:40 PT, queue-planning 0740 run - partial, 5 units staged
+  (passes, secrets, treasures, trucks, events
+  2026-11-15-1857), 6 expired (the 2026-11-15-0257 set
+  plus scout-midday-2026-11-14-0700, unexecuted); scout
+  diff on the 2026-11-11 observation applied with 0
+  counts; 0 withdrawals; sixth consecutive planner run
+  (publickey), commit left on local
+  planner-0740-1115-delivery, no PR for records/2026-11-15.
+  Mac mini offline per device.list, last_seen 05:19 PT;
+  no unit executed since 18:35 PT Nov 14.
+  Record: queue-planning/0740-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
