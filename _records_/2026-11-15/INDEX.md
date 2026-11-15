@@ -76,3 +76,15 @@ of 2026-10-28.
   records/2026-11-15. Zombie seeding no-op (Glacieradon ended).
   VPS SSH still Permission denied, commit stays local, no PR.
   Record: perception-scout/0804-queue-run.md.
+
+- 09:34 PT, queue-ticker 0934 run - failed, 1 unit failed
+  (harvest-2026-11-15-0603, Mac mini offline again, last_seen
+  05:19 PT, 4 device probes all node_offline, no collection,
+  no claims, tracker untouched); sync reaped 0, expired 0,
+  due 22, produced 0; zombie seeding no-op (Glacieradon
+  ended); own PRs re-checked via public API (#711, #708,
+  #425, none owned by this job); pass stopped after this
+  unit rather than cascading failures; VPS SSH still
+  Permission denied (publickey), commit stays on local
+  records/2026-11-15, no PR.
+  Record: resource-collection/0934-queue-run.md.
