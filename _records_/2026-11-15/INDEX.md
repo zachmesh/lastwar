@@ -231,3 +231,17 @@ of 2026-10-28.
   denied (publickey), commit stays on local records/2026-11-15,
   no PR.
   Record: daily-missions/1504-queue-run.md.
+- 15:34 PT, queue-ticker 1534 run - failed, 1 unit failed
+  (vip-2026-11-14-1800, Mac mini offline again,
+  last_seen 05:19 PT, 4 device probes all node_offline,
+  no wake-up path, no VIP freebie or login chest claimed,
+  tracker untouched); sync reaped 0, expired 0, due 22,
+  produced 0, 1 completion marker reaped
+  (daily-missions-2026-11-14-1800); zombie seeding no-op
+  (Glacieradon ended); own PRs re-checked via authenticated
+  GitHub connector (#711, #708, #425, none owned by this job,
+  no PR for records/2026-11-15); pass stopped after this unit
+  rather than cascading failures; VPS SSH still Permission
+  denied (publickey), commit stays on local records/2026-11-15,
+  no PR.
+  Record: vip-rewards/1534-queue-run.md.
