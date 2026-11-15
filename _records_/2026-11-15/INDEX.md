@@ -171,3 +171,19 @@ of 2026-10-28.
   still Permission denied (publickey), commit stays on local
   records/2026-11-15, no PR.
   Record: resource-collection/1206-queue-run.md.
+
+- 13:31 PT, queue-ticker 1331 run - failed, 1 unit failed
+  (radar-2026-11-15-1003, Mac mini offline again,
+  last_seen 05:19 PT, 5 device probes - connection.health,
+  environment.describe, computer.session all node_offline,
+  recovery-device health and repair both invoke timeout,
+  no wake-up path, no radar claims, tracker
+  untouched); sync reaped 0, expired 0, due 22, produced 0,
+  1 completion marker reaped (harvest-2026-11-15-1003);
+  zombie seeding no-op (Glacieradon ended); own PRs
+  re-checked via public API (#711, #708, #425, none owned
+  by this job, no PR for records/2026-11-15); pass stopped
+  after this unit rather than cascading failures; VPS SSH
+  still Permission denied (publickey), commit stays on local
+  records/2026-11-15, no PR.
+  Record: radar-tasks/1331-queue-run.md.
