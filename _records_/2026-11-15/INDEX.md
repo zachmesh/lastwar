@@ -635,6 +635,16 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   (publickey), commit left on local planner-0540-1115-delivery,
   no PR for records/2026-11-15. No 0440 record exists for today.
   Record: queue-planning/0540-run.md.
+- 06:40 PT, queue-planning 0640 run - partial, 15 units staged
+  2026-11-15-1830; harvest, radar, survivors, training,
+  donations, arms-race 2026-11-15-1803; daily-missions,
+  vip, scout 2026-11-15-1800), 14 expired (the 2026-11-15
+  0203/0230 set, unexecuted); scout diff on the 2026-11-11
+  observation applied with 0 counts; 0 withdrawals; fifth
+  consecutive planner run failing to commit - VPS SSH still
+  Permission denied (publickey), commit left on local
+  planner-0640-1115-delivery, no PR for records/2026-11-15.
+  Record: queue-planning/0640-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
