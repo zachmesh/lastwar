@@ -71,6 +71,9 @@ description: The 1940 queue planning pass - 6 units staged (live-tree plan for t
 created: 2026-11-15T05:12:00Z
 modified: 2026-11-15T05:12:00Z
 description: The 2040 queue planning pass - 0 units staged (live-tree and current-roster plans both staged 0; pool already holds every due slot), 0 expired, sweep step skipped (21:00-hour run; tonight's chain already expired unexecuted before the 19:00 reset, fourth night running without the reset ledger walk), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; ticker silence after 1804 explained - the 2004 ticker execution is parked on a pending GitHub issue-write approval card (requested 18:44:56 PT) and the schedule is flagged blocked on a stale device_offline probe while the Mac mini reads online (last_seen 20:13:35 PT); push could not land (VPS SSH outage persists, forty-third consecutive planner run failing to commit), status partial
+created: 2026-11-15T06:37:00Z
+modified: 2026-11-15T06:37:00Z
+description: The 2140 queue planning pass - 8 units staged (2026-11-15 1003 segment-1 set), 8 expired (2026-11-14 1803 set), sweep step skipped (22:00-hour run; tonight's chain already expired unexecuted before the 19:00 reset, fourth night running without the reset ledger walk), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; live-tree plan not re-run (stale-roster gap already documented by the 0540-through-2040 dual runs, issue #198); push could not land (VPS SSH outage persists, forty-fourth consecutive planner run failing to commit), status partial
 ## 03:32 to about 03:40 - Tool-development pass
 
 - Tool-developer pass tool-development-2026-11-14-0332.
@@ -908,3 +911,28 @@ description: The 2040 queue planning pass - 0 units staged (live-tree and curren
   SSH outage persists) - forty-third consecutive verified planner
   run failing to commit; commit left on planner-2040-1114-delivery.
   Full record: _records_/2026-11-14/queue-planning/2040-run.md.
+## 21:40 to about 22:37 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-14-2140 (scheduled
+  21:40:38, execution began about 22:11). Current-roster plan staged 8 units
+  (2026-11-15-1003 segment-1 set: harvest, radar, survivors, training,
+  research, building-queues, donations, arms-race; 74 already present, 0 reaped,
+  8 expired - the 2026-11-14-1803 set). Live-tree plan not re-run: the
+  stale-roster gap is already documented by the 0540-through-2040 dual runs
+  (issue #198) and the current-roster plan is the authoritative execution.
+  Sweep production skipped - 22:00-hour run, not 17:00-hour; tonight's chain
+  pre-reset-sweep-2026-11-14 holds four units, all already in done
+  with status expired, finished 2026-11-15T02:22:15Z (18:22:15 PT) -
+  the Issue #712 quadruplication; the 19:00 reset has passed, so the reset
+  ledger walk is missed for the fourth night running. Scout diff on the 6-pass
+  2026-11-11 observation (52 observed, 11 unexplained) applied with 0 counts,
+  0 withdrawals, no new issues. Pool inbox 82, claimed 0, done 2034; newest
+  finished unit at stats time (about 22:26 PT) is
+  zombie-invasion-zombie-2026-11-10-037, status failed, executor
+  ticker-1804, finished 18:35:26 PT - no unit has finished since. No ticker
+  record since 1804; the 2004 execution is parked on a pending GitHub
+  issue-write approval card and the 2134 pass left no record in the live tree.
+  Push could not land (VPS SSH outage persists) - forty-fourth consecutive
+  verified planner run failing to commit; commit left on
+  planner-2140-1114-delivery. Full record:
+  _records_/2026-11-14/queue-planning/2140-run.md.
