@@ -62,6 +62,9 @@ description: The 1540 queue planning pass - 5 units staged (live-tree, all for t
 created: 2026-11-15T01:27:00Z
 modified: 2026-11-15T01:28:00Z
 description: The 1640 queue planning pass - 0 units staged (every due slot already present in both plans), sweep pair for tonight's 19:00 reset verified present (quadrupled, Issue #712), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; newest finished unit is the ticker-1712 scout unit failed about 17:19 PT on Mac offline, regular execution still stalled; push could not land (VPS SSH outage persists, fortieth consecutive planner run failing to commit), status partial
+created: 2026-11-15T02:42:00Z
+modified: 2026-11-15T02:43:00Z
+description: The 1740 queue planning pass - 14 units staged (6 live-tree for the 2026-11-15 0603 slot, 8 current-roster for the 0603/0630 slots), 6 expired by the current-roster plan, sweep pair for tonight's 19:00 reset verified present but all four units already expired unexecuted (fourth night running without the reset ledger walk), scout diff on the 6-pass observation applied with 0 counts, 0 withdrawals, no new issues; Mac mini back online 17:29 PT and ticker-1804 entered the game 18:25 PT (first access since the Nov 12 outage) - execution has resumed; push could not land (VPS SSH outage persists, forty-first consecutive planner run failing to commit), status partial
 ## 03:32 to about 03:40 - Tool-development pass
 
 - Tool-developer pass tool-development-2026-11-14-0332.
@@ -802,3 +805,41 @@ description: The 1640 queue planning pass - 0 units staged (every due slot alrea
   fortieth consecutive verified planner run failing to
   commit; commit left on planner-1640-1114-delivery. Full
   record: _records_/2026-11-14/queue-planning/1640-run.md.
+## 17:40 to about 18:40 - Queue planning pass
+
+- Planner pass queue-planning-2026-11-14-1740 (scheduled
+  17:40:38, execution began about 18:26, so this run falls
+  in the 17:00 local hour). Live-tree plan staged 6 units
+  for the 2026-11-15 0603 slot (harvest, radar, survivors,
+  training, donations, arms-race; 67 already present, 0
+  reaped, 0 expired; roster stale for building-queues,
+  research and zombie-invasion, issue #198; branch
+  reconcile skipped, issue #446); current-roster plan
+  staged 8 more units (mail, help, gifts, train,
+  star-ceremony and duel-score for the 0630 slot, research
+  and building-queues for the 0603 slot; 73 already
+  present, 0 fixups, 0 reaped, 6 expired; roster stale for
+  zombie-invasion only). Tonight's sweep chain
+  pre-reset-sweep-2026-11-14 holds four units, all already
+  in done with status expired, finished 2026-11-15T02:22:15Z
+  (18:22:15 PT) - the Issue #712 quadruplication, boilerplate
+  body only; nothing was enqueued, and tonight's 19:00 reset
+  ledger walk is missed for the fourth night running. Scout
+  diff on the 6-pass 2026-11-11 observation (52 observed, 11
+  unexplained) applied with 0 counts, 0 withdrawals, no new
+  issues. Pool inbox 79, claimed 1, done 2014; newest
+  finished unit at stats time (about 18:31 PT) is
+  scout-scout-2026-11-10-016, status failed, executor
+  ticker-1712, finished about 17:19 PT. CORRECTION: the
+  Mac mini came back online at 17:29 PT and ticker-1804
+  entered the game at 18:25 PT (first access since the
+  Nov 12 outage, live read total power 147,344,687, coin
+  153.7M, stamina 120); its zombie-037 unit finished
+  18:35:26 PT failed only because the Glacieradon event
+  had ended, and the zombie chain is closed. Execution
+  has resumed. Push could not land (VPS SSH outage
+  persists) - forty-first consecutive verified planner
+  run failing to commit; commit left on
+  planner-1740-1114-delivery. Full record (with the
+  correction note):
+  _records_/2026-11-14/queue-planning/1740-run.md.
