@@ -15,6 +15,9 @@ title: Day record 2026-11-15
 created: 2026-11-15T09:16:00Z
 modified: 2026-11-15T09:16:00Z
 description: Day record for 2026-11-15 (America/Los_Angeles) - VPS SSH outage and ticker stall carried into the new day
+created: 2026-11-15T10:30:00Z
+modified: 2026-11-15T10:30:00Z
+description: Day record for 2026-11-15 (America/Los_Angeles) - planner resumes after a 2.5-day gap, VPS SSH still down
 ## 06:45 to about 07:05 - PR integration 0655 run, FAILED (VPS SSH unreachable)
 
 - Integrator pass pr-integration-2026-11-15-0655. FAILED:
@@ -598,6 +601,16 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   outage, forty-sixth consecutive planner run failing to
   commit). Record: queue-planning/0040-run.md.
 
+- 01:40 PT, queue-planning 0140 run - partial, 6 units staged
+  (harvest, radar, survivors, training, donations,
+  arms-race 2026-11-15-1403), 8 expired (the 2026-11-14
+  22:03 set, unexecuted); scout diff on the 2026-11-11
+  observation applied with 0 counts; 0 withdrawals;
+  first planner run since 2026-11-12 2040. Delivery
+  failed: VPS SSH still Permission denied (publickey),
+  commit left on local planner-0140-1115-delivery, no PR
+  for records/2026-11-15. Record:
+  queue-planning/0140-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
