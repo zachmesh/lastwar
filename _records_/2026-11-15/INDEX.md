@@ -741,6 +741,56 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   (harvest-2026-11-15-0603, Mac mini offline, last_seen
   05:19 PT); no unit has succeeded since 18:35 PT Nov 14.
   Record: queue-planning/1040-run.md.
+- 10:51 PT, tool-development 1032 run - no-op, feedback check
+  ran to completion read-only: own PR #425 unchanged
+  (head 4f41cdd6ab, updated 2026-11-12T19:29:37Z, still
+  owner-gated on OD-20261108-01, no author action); 63 open
+  tooling issues, newest still #712 (0 comments), already
+  implemented twice and held locally pending the PR route -
+  held branch tip b3d25979fc, second commit 924e89f748 and
+  td-712 bundle all re-verified intact; main tip a858a0fca8
+  unchanged. VPS SSH still Permission denied (publickey),
+  about 70 hours into the break; IONOS fix not yet verified
+  done. No code, no PR, no comment, no Slack sync. Record
+  written to the local mirror only, not committed or pushed,
+  pending VPS recovery.
+  Record: tool-development/1032-run.md.
+- 10:51 PT, queue-ticker 1051 run - failed, 1 unit failed
+  (scout-scout-2026-11-10-018, chain scout-2026-11-10 seq 18,
+  Mac mini offline again, last_seen 05:19 PT, 5 device probes
+  all node_offline or invoke timeout, no wake-up path, no
+  observation, no claims, tracker untouched); sync reaped 0,
+  expired 0, due 22, produced 0; zombie seeding no-op
+  (Glacieradon ended); own PRs re-checked via public API
+  (#711, #708, #425, none owned by this job, no PR for
+  records/2026-11-15); pass stopped after this unit rather
+  than cascading failures; VPS SSH still Permission denied
+  (publickey), commit stays on local records/2026-11-15,
+  no PR.
+  Record: perception-scout/1051-queue-run.md.
+- 11:32 PT, knowledge-organizer 1132 run - no-op, feedback
+  still #595 2026-11-12T14:11:46Z; catchall 1039, planner
+  1040, scout 1051, tool-developer 1032 and integrator 1127
+  records read in full, no foldable play learning.
+  Folding watermark unchanged (e5be6134d3). Missed batches
+  now 18 (11:00 batch missed, per integrator 1127); next
+  batch point 15:00 PT. VPS SSH still Permission denied
+  (publickey), about 71 hours into the break - correcting
+  the 1032 note's "94 hours" miscalculation; IONOS fix not
+  frozen 13:19:56Z (~6h15m stale), sixth consecutive
+  offline reading. No profile, no PR, no comment, no Slack
+  sync. Record written to the local mirror only, not
+  Record: knowledge-organization/1132-run.md.
+- 11:40 PT, queue-planning 1140 run - partial, 5 units staged
+  (2257 set), 5 expired (0657 set, unexecuted - Mac mini
+  offline); scout diff on the 2026-11-11 observation
+  applied with 0 counts; 0 withdrawals; tenth consecutive
+  planner run failing to commit - VPS SSH still Permission
+  denied (publickey), commit left on local
+  planner-1140-1115-delivery, no PR for records/2026-11-15.
+  Ticker-1051 fired but failed (scout-scout-2026-11-10-018,
+  Mac mini offline, last_seen 05:19 PT); no unit has
+  Record: queue-planning/1140-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
