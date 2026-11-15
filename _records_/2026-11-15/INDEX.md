@@ -621,6 +621,14 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   VPS SSH still Permission denied (publickey), commit
   left on local planner-0240-1115-delivery, no PR
   queue-planning/0240-run.md.
+- 03:40 PT, queue-planning 0340 run - partial, 1 unit staged
+  (zero-sweep 2026-11-15-1630, chain pre-reset-sweep-2026-11-15),
+  0 expired; scout diff on the 2026-11-11 observation applied
+  with 0 counts; 0 withdrawals; third consecutive planner run
+  failing to commit - VPS SSH still Permission denied
+  (publickey), commit left on local planner-0340-1115-delivery,
+  no PR for records/2026-11-15. Record:
+  queue-planning/0340-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
