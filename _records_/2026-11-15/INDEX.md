@@ -157,3 +157,17 @@ of 2026-10-28.
   records/2026-11-15, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed. Full
   detail in pr-integration/1127-run.md.
+- 12:02 PT, queue-ticker 1202 run - failed, 1 unit failed
+  (harvest-2026-11-15-1003, Mac mini offline again,
+  last_seen 05:19 PT, 5 device probes - connection.health,
+  environment.describe, computer.session all node_offline,
+  recovery-device health and repair both invoke timeout,
+  no wake-up path, no collection, no claims, tracker
+  untouched); sync reaped 0, expired 0, due 22, produced 0;
+  zombie seeding no-op (Glacieradon ended); own PRs
+  re-checked via public API (#711, #708, #425, none owned
+  by this job, no PR for records/2026-11-15); pass stopped
+  after this unit rather than cascading failures; VPS SSH
+  still Permission denied (publickey), commit stays on local
+  records/2026-11-15, no PR.
+  Record: resource-collection/1206-queue-run.md.
