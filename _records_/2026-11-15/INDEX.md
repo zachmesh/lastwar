@@ -1052,6 +1052,66 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   (publickey), commit left on local planner-1700-1115-delivery,
   no PR for records/2026-11-15.
   Record: queue-planning/1700-run.md.
+- 17:32 PT, knowledge-organization 1732 run - no-op, worked
+  from the 1632 watermark (fold commit e5be6134d3, planner
+  4f41cdd6, all updatedAt unchanged since the 1632 pass, so
+  re-checked (latest 2026-11-01, nothing new). Eight records
+  newer than the 1632 close read in full, none foldable:
+  pr-catchall 1539 (blocked, 73rd consecutive blocked pass,
+  issues 138 unchanged, 15:00 batch is the nineteenth missed
+  batch), tool-dev 1632 (no-op, PR 425 owner-gated, #712 held
+  locally), daily-activities 1644 (failed, ticker-1634
+  zero-sweep first pass unexecuted, Mac mini offline),
+  pr-integration 1645 (failed, 70th consecutive, non-batch),
+  pr-integration 1700 (failed, 71st consecutive, non-batch),
+  queue-planning 1700 (partial, 0 staged, 0 expired, sweep
+  pair present, 15th consecutive planner failing to commit),
+  pr-integration 1715 (failed, 72nd consecutive, non-batch),
+  resource-collection 1713 (failed, ticker-1713 harvest
+  unexecuted, Mac mini offline, read from branch commit
+  29dfdfa5a5, absent from the live-tree mirror). No profile
+  updated, no contradiction resolved, no stale item marked,
+  no gap filed. VPS SSH still Permission denied (publickey),
+  about 76h45m into the break; IONOS fix chosen 17:37 PT
+  Nov 14, not yet verified done about 24 hours later. Mac
+  mini still OFFLINE, last_seen frozen 13:19:56Z (05:19 PT),
+  about 12h12m stale, twelfth consecutive offline reading.
+  Missed batches stay 19 (no batch point in this run window;
+  next 19:00 PT). Last successful play execution remains
+  2026-11-14 18:35 PT. Delivery BLOCKED: record in local
+  mirror only with an identical backup in the goal
+  hidden_files; records-branch delivery owed at VPS recovery.
+  No Slack sync, no chat report - quiet no-op run.
+  Record: knowledge-organization/1732-run.md.
+- 18:02 PT, queue ticker ticker-1802 run - failed, 1 unit
+  (radar-2026-11-15-1403, duel day 7 stack, expired 18:03 PT
+  seconds before the claim landed); Mac mini offline again
+  (last seen 05:19 PT, 5 device probes all node_offline, no
+  wake-up path); no radar tasks executed, nothing spent;
+  tracker untouched; pass stopped after this unit rather than
+  cascading failed units; own PRs re-checked live via the
+  GitHub connector: #711, #708, #425 open, none owned by this
+  job, no PR for records/2026-11-15; zombie seeding no-op,
+  Glacieradon ended; VPS SSH still down so push/PR impossible,
+  commit stays local. Record: radar-tasks/1805-queue-run.md.
+- 17:40 PT, queue-planning 1740 run - partial, 6 units staged
+  (harvest, radar, survivors, training, donations, arms-race
+  2026-11-16-0603), 6 expired (the 1403 set, unexecuted);
+  sweep pair verified present with both passes done
+  unexecuted (1630 failed on offline Mac, 1730 expired) -
+  tonight's pre-reset zero sweep missed entirely, second
+  consecutive night; scout diff on the 2026-11-11
+  observation applied with 0 counts (52 observed, 11
+  unexplained red dots); 0 withdrawals; no new issues.
+  Pool inbox 72, claimed 0, done 2136; newest finished
+  18:07 PT is a FAILED radar (ticker-1802, Mac mini
+  offline, last_seen 05:19 PT) - no Nov 14-15 done file
+  carries a success status (190 expired, 10 failed).
+  Sixteenth consecutive planner run failing to commit -
+  VPS SSH Permission denied (publickey), commit left on
+  local planner-1740-1115-delivery, no PR for
+  records/2026-11-15.
+  Record: queue-planning/1740-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
