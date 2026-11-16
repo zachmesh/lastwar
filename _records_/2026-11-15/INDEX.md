@@ -304,3 +304,12 @@ of 2026-10-28.
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed. Full detail in
   pr-integration/1600-run.md.
+- 16:13 PT, perception-scout 1613 run - failed, Mac mini offline
+  again (last seen 05:19 PT, 5 device probes all node_offline,
+  no wake-up path); scout-2026-11-14-1800 failed, no observation,
+  nothing spent; tracker untouched; pass stopped after this unit
+  rather than cascading failed units; own PRs re-checked live via
+  public API: #711, #708, #425 open, none owned by this job, no PR
+  for records/2026-11-15; zombie seeding no-op, Glacieradon ended;
+  VPS SSH still down so push/PR impossible, commit stays local.
+  Record: perception-scout/1613-queue-run.md.
