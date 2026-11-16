@@ -1576,3 +1576,31 @@ Record: knowledge-organization/0332-run.md.
   on local planner-0940-1116-delivery, no PR for
   records/2026-11-16.
   Record: queue-planning/0940-run.md.
+## 10:04 to about 10:20 - Ticker pass ticker-1004
+
+- 10:04 PT, ticker pass ticker-1004 - failed, 1 unit: help
+  unit help-2026-11-16-0630 failed on the offline Mac (5 device
+  probes all offline/timeout, no wake-up path; no help work, no
+  claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Twenty-first consecutive
+  ticker pass to fail on the offline Mac (2143, 2204, 2234, 2304,
+  2334, 0004, 0112, 0134, 0204, 0234, 0304, 0334, 0404, 0528, 0604,
+  0634, 0704, 0734, 0804, 0834 before it). Own PRs re-checked via
+  the GitHub REST API (#711, #708, #425 only, heads and updated_at
+  unchanged since Nov 12, none owned by this job; no PR for
+  records/2026-11-16; comments read this pass - #708 none, #711 one
+  note not to this job, #425 owner-gated). Sync reaped 0 expired 4
+  due 22 produced 0; zombie seeding no-op, Glacieradon ended Nov 14.
+  Duel day 1 Radar Training release posture read from tools/duel.py
+  (claims score +30,000 per task) - the release stays missed while
+  the Mac is offline; the duel day runs until 18:00 PT Nov 16, so
+  the window is still open. VPS SSH still Permission denied
+  (publickey), about 93.6 hours into the break; Mac mini still
+  OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15), about 29h
+  stale. Missed batches stay 23 (next batch point 11:00 PT Nov 16).
+  Delivery BLOCKED: record in local mirror only with an identical
+  backup in the goal hidden_files; records-branch delivery owed at
+  VPS recovery. No Slack sync. Chat report owed per the ticker rule
+  (previous pass also access-failed); this pass's final message
+  carries it.
+  Record: alliance-help/1004-queue-run.md.
