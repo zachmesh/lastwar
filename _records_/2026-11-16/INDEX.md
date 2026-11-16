@@ -1938,3 +1938,33 @@ Record: knowledge-organization/0332-run.md.
   committed locally only on records/2026-11-16, UNPUSHED -
   push via the standard VPS route once SSH returns. Status:
   no-op. Full detail in tool-development/1232-run.md.
+
+## 12:44 to about 12:52 - PR integration 1230 run, FAILED (VPS SSH unreachable; checker NOT DUE, non-batch pass, missed batches stay 24)
+
+- PR-integrator pass pr-integration-2026-11-16-1230.
+  FAILED: VPS SSH returns "Permission denied (publickey)" -
+  the 2026-11-12 ~/.ssh loss is still unrepaired (owner
+  chose the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 2 days). Ninetieth consecutive
+  failed integrator pass, about 96h into the outage. No
+  merges, no comments, no records PR opened. Checker
+  _tools_/records_batch.py (local fallback from main
+  a858a0fca) reports NOT DUE on clock, merge-aware and
+  replay at 12:30:54 PT - this pass is a NON-batch pass,
+  so no records merge was owed and missed batches stay 24
+  (next batch point 15:00 PT Nov 16). Open PRs 711/708/425
+  unchanged since Nov 12 (heads e3c3dfd0, 2f59c270,
+  4f41cdd6); merge-tree exit 0 for all three against main
+  a858a0fca (trees f46bfda1, e05ec8b5, 08e8515a, identical
+  to all prior probes; the first attempts failed on the
+  shallow clone until the two-argument merge-tree form
+  was used). PR 711 feedback stands (no repeat comment
+  due); PR 425 still owner-gated (OD-20261108-01 open,
+  re-read stands from the 1232 tool-development run
+  today). Records branches: 13 via ls-remote, latest
+  records/2026-11-12, none for 11-13 to 11-16, so no new
+  records PR. Mac mini still offline (last_seen 05:19 PT
+  Nov 15). This record committed locally on
+  records/2026-11-16, UNPUSHED - push via the standard VPS
+  route once SSH returns. Status: failed. Full detail in
+  pr-integration/1230-run.md.
