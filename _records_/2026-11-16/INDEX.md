@@ -494,3 +494,36 @@ description: Day record for 2026-11-16 (America/Los_Angeles) - Mac mini still of
   left on local planner-0240-1116-delivery, no PR for
   records/2026-11-16.
   Record: queue-planning/0240-run.md.
+## 03:30 to about 03:44 - PR integration 0330 run, FAILED (VPS SSH unreachable)
+
+- PR-integrator pass pr-integration-2026-11-16-0330.
+  FAILED: VPS SSH returns "Permission denied
+  (publickey)" - the 2026-11-12 ~/.ssh loss is still
+  unrepaired (owner chose the IONOS-console recovery
+  on 2026-11-14, not yet landed, about 34 hours on).
+  Eighty-third consecutive failed integrator pass for
+  the same break, about 87.0 hours into the outage.
+  Checker gate _tools_/records_batch.py run locally
+  from a main copy - DUE (batch pass, 03:00-04:00 PT
+  window, 29 minutes left at the scheduled start), so
+  the 03:00 batch merge of PR 708 was owed and could
+  not run: missed batches rise 21 to 22. Read-only
+  verification via the GitHub connector and a local
+  HTTPS clone only: open PRs 711, 708 and 425, heads
+  and updated_at identical to the 0230 pass, all three
+  merge-tree exit 0 against main a858a0fca (merged
+  trees f46bfda1, e05ec8b5, 08e8515a, identical to the
+  0230 pass). PR 708 (records 2026-11-12) batch-owed
+  but unmerged, now awaits the 07:00 batch. PR 711
+  held on the standing 1145 review, no repeat comment
+  due. PR 425 still owner-gated on OD-20261108-01,
+  standing escalation from 2026-11-07 2245. No merges,
+  no comments, no records PR opened. Main frozen at
+  a858a0fca since 2026-11-12 11:52 PT; 13 records
+  branches, latest records/2026-11-12. Live-mirror git
+  status anomaly (2198 changed paths) independently
+  confirmed this pass; probes used refs only and were
+  unaffected. This record committed locally on
+  records/2026-11-16, UNPUSHED - push via the
+  standard VPS route once SSH returns. Status:
+  failed. Full detail in pr-integration/0330-run.md.
