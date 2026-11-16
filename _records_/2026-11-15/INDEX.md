@@ -459,3 +459,23 @@ of 2026-10-28.
   records/2026-11-15, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed. Full detail
   in pr-integration/1715-run.md.
+
+- 17:13 PT, Ticker pass ticker-1713 - FAILED (Mac mini offline)
+  - Ticker pass ticker-1713. FAILED: Mac mini offline since
+  05:19 PT (last seen 2026-11-15T13:19:56Z), no wake-up path;
+  3 device invoke attempts failed (connection.health
+  node_offline, recovery-device health and repair both timed
+  out after 25s). Harvest unit harvest-2026-11-15-1403
+  completed failed (blocker f, Issue #284), nothing collected,
+  nothing spent, tracker untouched. Sync: reaped 0, expired 0,
+  due 24, produced research-2026-11-15-1403 and
+  building-queues-2026-11-15-1403; 1 completion marker reaped
+  (zero-sweep-2026-11-15-1630). Zombie seeding no-op
+  (Glacieradon ended; no zombie unit in the live pool). Own
+  PRs re-checked via public API: 711, 708, 425 open, none
+  owned by this job, no PR for records/2026-11-15. Pass
+  stopped after this unit rather than cascading failed units.
+  This record committed locally only on
+  records/2026-11-15, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed. Full detail
+  in resource-collection/1713-queue-run.md.
