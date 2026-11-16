@@ -527,3 +527,155 @@ description: Day record for 2026-11-16 (America/Los_Angeles) - Mac mini still of
   records/2026-11-16, UNPUSHED - push via the
   standard VPS route once SSH returns. Status:
   failed. Full detail in pr-integration/0330-run.md.
+## 03:04 to about 03:12 - Ticker pass ticker-0304
+
+- Ticker pass ticker-0304 - failed, 1 unit: harvest
+  unit harvest-2026-11-16-0203 failed on the offline Mac (3 device
+  probes all node_offline, no wake-up path; no harvest work, no
+  claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Eleventh consecutive ticker
+  pass to fail on the offline Mac (2143, 2204, 2234, 2304, 2334, 0004,
+  0112, 0134, 0204, 0234 before it). Own PRs re-checked via the GitHub
+  connector (#711, #708, #425 only, heads and updated_at unchanged
+  since Nov 12, none owned by this job; no PR for records/2026-11-15
+  or records/2026-11-16; PR comment reads unavailable - pull_request_read
+  is a write-permission tool on the live MCP server and the list
+  comments field returns null). Sync reaped 0 expired 4 due 22
+  produced 0; completion marker reaped: passes-2026-11-15-2257;
+  zombie seeding no-op, Glacieradon ended Nov 14. Duel day 1 Radar
+  Training release posture read from tools/duel.py (claims score
+  +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window is
+  still open. VPS SSH still Permission denied (publickey), about 86.4
+  hours into the break; Mac mini still OFFLINE, last_seen frozen
+  13:19:56Z (05:19 PT Nov 15), about 21h50m stale. The 03:00 PT
+  integrator batch point passed during this window with no merge
+  possible, so missed batches rise to 22 (next batch point 07:00 PT
+  Nov 16). NEW: git status in the live mirror reports tools/*.py as
+  deleted while the files exist and run - pre-existing anomaly, no
+  commit attempted, do not commit from this tree until understood.
+  Delivery BLOCKED: record in local mirror only with an identical
+  backup in the goal hidden_files; records-branch delivery owed at
+  VPS recovery. No Slack sync. Chat report owed per the ticker rule
+  (previous pass also access-failed); this pass's final message
+  carries it.
+  Record: resource-collection/0304-queue-run.md.
+
+## 03:32 to about 03:36 - Knowledge organization run 0332 (NO-OP)
+
+Hourly knowledge-organizer pass, worked from the 0232 run's
+watermark (fold commit e5be6134d3). Own PRs first: PR 711
+(knowledge, Owner lastwar-knowledge-organizer), PR 708 and
+PR 425 re-verified via the authenticated GitHub connector -
+heads and updated_at unchanged since Nov 12, no new review
+or comment on any of them; the 1145 integrator review still
+holds PR 711 on amending the 705 general claims superseded
+by PR 710, and the held reply draft stays unposted until
+the VPS returns. Knowledge issues unchanged at 41 open,
+newest #595 2026-11-12T14:11:46Z. Four records newer than
+the 0232 close read in full, none foldable: queue-planning
+0240 (partial, 12 units staged, 23rd consecutive planner
+run failing to commit; NEW - done-files tally discrepancy:
+the 0040 run's 225 done files since Nov 14 18:35 PT is not
+reproducible by any of five counting methods, verified
+tally is 157 with 132 expired and 25 failed, the 225 is
+not repeated as fact), shop-claims 0234 (FAILED, tenth
+consecutive ticker pass failing on the offline Mac),
+resource-collection 0304 (FAILED, eleventh consecutive
+ticker pass failing on the offline Mac; the 03:00 PT
+batch point passed during this window, so missed batches
+rise to 22; NEW - git status in the live mirror reports
+tools/*.py as deleted, 2198 changed paths, while the files
+exist and run, pre-existing anomaly, do not commit from
+the live mirror until understood) and pr-integration 0230
+via its hidden_files backup (FAILED, 82nd consecutive
+failure, checker NOT DUE, merge trees identical to the
+0130 pass; ANSWERS the KO 0232 mirror-gap flag - the
+missing live-tree mirror copy is by design, the branch
+worktree is the delivery vehicle and mirror copies are a
+fallback only when the worktree was hazardous, so the flag
+is CLOSED, not carried). No profile updated, no
+contradiction resolved, no stale item marked, no gap
+filed. VPS SSH still Permission denied (publickey), about
+86.7 hours into the break; Mac mini still OFFLINE,
+last_seen frozen 13:19:56Z (05:19 PT Nov 15), about
+22h14m stale, twenty-second consecutive offline reading.
+Duel day 1 Radar Training RELEASE (+30,000 per task) runs
+until 18:00 PT Nov 16, window still open, release missed
+while the Mac stays offline. Delivery BLOCKED: record in
+local mirror only with an identical backup in the goal
+hidden_files; records-branch delivery owed at VPS
+recovery. No Slack sync. No chat report. Folding
+watermark unchanged (e5be6134d3).
+Record: knowledge-organization/0332-run.md.
+
+## 03:33 to about 03:52 - PR catch-all pass
+
+- 03:33 PT, pr-catchall 0239 run - blocked delivery, 83rd consecutive
+  blocked catch-all pass: VPS SSH still Permission denied (publickey),
+  about 87.1 hours into the outage; IONOS console recovery chosen
+  17:37 PT Nov 14 still not effective about 34.1 hours later. Open PRs
+  711, 708, 425 all unchanged since the Nov 12 1239 pass (heads and
+  updatedAt identical, Owner lines re-verified live via the GitHub
+  connector: knowledge-organizer / integrator / tool-developer); none
+  owned by this job. PR 137 stays merged (live re-verified via REST,
+  closed 2026-11-02T01:48:35Z by zachmesh). Issues: 138 total, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335, 514,
+  517 all unchanged. The 03:00 PT batch point passed during this
+  window with PR 708 still unmerged, so missed batches rise to 22.
+  No adoptions, fixes, replies, or hand-offs. No new stale-owner
+  flag; three already in force (708, 425, 711). Record is local
+  mirror only with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. Quiet run: no Slack
+  sync, no chat report.
+  Record: pr-catchall/0239-run.md.
+
+## 03:34 to about 03:48 - Ticker pass ticker-0334
+
+- 03:34 PT, ticker pass ticker-0334 - failed, 1 unit: radar
+  unit radar-2026-11-16-0203 failed on the offline Mac (3 device
+  probes all node_offline, no wake-up path; no radar work, no
+  claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Twelfth consecutive ticker
+  pass to fail on the offline Mac (2143, 2204, 2234, 2304, 2334,
+  0004, 0112, 0134, 0204, 0234, 0304 before it). Own PRs re-checked via the GitHub connector
+  (#711, #708, #425 only, heads and updated_at unchanged since Nov
+  12, none owned by this job; no PR for records/2026-11-15 or
+  records/2026-11-16; PR comment reads unavailable - the live MCP
+  server does not advertise a read-only PR detail tool). Sync reaped
+  0 expired 0 due 22 produced 0; zombie seeding no-op, Glacieradon
+  ended Nov 14. Duel day 1 Radar Training release posture read from
+  tools/duel.py (claims score +30,000 per task) - the release stays
+  missed while the Mac is offline; the duel day runs until 18:00 PT
+  Nov 16, so the window is still open. VPS SSH still Permission
+  denied (publickey), about 87 hours into the break; Mac mini
+  still OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15), about
+  22h27m stale. Missed batches stay 22 (next batch point 07:00 PT
+  Nov 16). Delivery BLOCKED: record in local mirror only with an
+  identical backup in the goal hidden_files; records-branch delivery
+  owed at VPS recovery. No Slack sync. Chat report owed per the
+  ticker rule (previous pass also access-failed); this pass's final
+  message carries it.
+  Record: radar-tasks/0334-queue-run.md.
+
+## 03:56 to about 04:03 - Queue planning pass
+
+- 03:40 PT, queue-planning 0340 run - partial, 5 units staged
+  (1457 slot; 68 already present), 0 reaped, 0
+  expired; skipped_closed [radar-2026-11-16-0203]; sweep
+  production not due (0340 slot) - tonight's pair not yet
+  produced, due at the 17:00-hour run; last night's pair
+  both passes done unexecuted (1630 failed on offline Mac,
+  1730 expired) - second consecutive missed pre-reset zero
+  sweep; scout diff on the 2026-11-11 observation applied
+  with 0 counts (52 observed, 11 unexplained red dots); 0
+  withdrawals; no new issues. Pool inbox 71, claimed 0,
+  done 2183; newest finished 03:44 PT is a FAILED radar
+  unit (ticker-0334, Mac mini offline, last_seen 05:19 PT)
+  - twelfth consecutive ticker pass to fail on the offline
+  Mac; 163 done files since Nov 14 18:35 PT by finished_at
+  (136 expired, 27 failed, 0 done). Twenty-fourth consecutive planner run failing to
+  commit - VPS SSH Permission denied (publickey), commit
+  left on local planner-0340-1116-delivery, no PR for
+  records/2026-11-16.
+  Record: queue-planning/0340-run.md.
