@@ -1224,3 +1224,43 @@ Record: knowledge-organization/0332-run.md.
   sync. Chat report owed per the ticker rule (previous pass also
   access-failed); this pass's final message carries it.
   Record: radar-tasks/0734-queue-run.md.
+## 08:00 to about 08:18 - PR integration 0800 run, FAILED (VPS SSH unreachable)
+
+- PR-integrator pass pr-integration-2026-11-16-0800.
+  FAILED: VPS SSH returns "Permission denied
+  (publickey)" - the 2026-11-12 ~/.ssh loss is still
+  unrepaired (owner chose the IONOS-console recovery
+  on 2026-11-14, not yet landed, about 2 days on).
+  Eighty-seventh consecutive failed integrator pass for
+  the same break, about 91.5 hours into the outage.
+  Count correction: the 0700 record labels itself the
+  eighty-first, but the chain 0015=80th ... 0545=85th
+  makes it the eighty-sixth; this pass is the
+  eighty-seventh. Checker gate _tools_/records_batch.py
+  run locally from a main copy - NOT DUE (non-batch pass,
+  next batch 11:00 PT, 166 minutes away), so no batch
+  merge was owed and missed batches stay 23. Read-only
+  verification via the GitHub connector and a local
+  HTTPS full clone only: open PRs 711, 708 and 425, heads
+  and updated_at identical to the 0700 pass, all three
+  merge-tree exit 0 against main a858a0fca (merged
+  trees f46bfda1, e05ec8b5, 08e8515a, identical to the
+  0700 pass). PR 708 (records 2026-11-12) unmerged,
+  awaits the 11:00 batch. PR 711 held on the standing
+  1145 review, no repeat comment due. PR 425 still
+  owner-gated on OD-20261108-01, standing escalation
+  from 2026-11-07 2245. No merges, no comments, no
+  records PR opened. Main frozen at a858a0fca since
+  2026-11-12 11:52 PT; 13 records branches, latest
+  records/2026-11-12. Probe note: the live mirror is a
+  shallow clone, so merge-tree and containment probes
+  fail there ("unrelated histories", false
+  NOT-contained); re-verified in a fresh full HTTPS
+  clone - later passes should probe in a full clone.
+  The 0700 record is backfilled into the branch by this
+  pass (verbatim, own commit); the records/2026-11-15
+  worktree hazard persists untouched. This record
+  committed locally on records/2026-11-16, UNPUSHED -
+  push via the standard VPS route once SSH returns.
+  Status: failed. Full detail in
+  pr-integration/0800-run.md.
