@@ -679,3 +679,22 @@ Record: knowledge-organization/0332-run.md.
   left on local planner-0340-1116-delivery, no PR for
   records/2026-11-16.
   Record: queue-planning/0340-run.md.
+## 04:04 to about 04:26 - Queue ticker 0404 run, FAILED (Mac mini offline)
+
+- Ticker pass ticker-0404. FAILED: Mac mini offline since
+  2026-11-15 05:19 PT (last seen 2026-11-15T13:19:56Z);
+  three computer.session probes, all node_offline with no
+  wake-up path. One unit claimed and closed failed:
+  survivors-2026-11-16-0203 (attempt 1 of 3, tracker
+  untouched); no game input, nothing claimed. Thirteenth
+  consecutive ticker pass to fail on the offline Mac
+  (ticker-0004 at 00:10 PT was the sixth; 0112, 0134,
+  0204, 0234, 0304 and 0334 followed with one failed unit
+  each, all node_offline). Sync: 22 due, 0 produced (all
+  already queued); zombie chain stays closed (Glacieradon
+  event ended). OWN PRS FIRST and the push/PR both
+  blocked: VPS SSH still Permission denied (publickey).
+  This record committed locally on branch
+  ticker-0404-1116-delivery, UNPUSHED - push via the
+  standard VPS route once SSH returns. Record:
+  survivor-intake/0404-queue-run.md.
