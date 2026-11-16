@@ -1773,3 +1773,142 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   local planner-2240-1115-delivery, no PR for
   records/2026-11-15.
   Record: queue-planning/2240-run.md.
+## 23:00 to about 23:26 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-15-2300.
+  FAILED, seventy-ninth consecutive failure for the
+  same break: VPS SSH publickey rejected once (about
+  23:15 PT; the rejection is server-side, local key
+  fingerprint re-verified this pass and unchanged), no
+  merges, no comments, no records PR opened. BATCH PASS
+  for records purposes: the checker
+  (_tools_/records_batch.py) reports DUE at the scheduled
+  pass start 23:00:54 PT (exit 0, batch window
+  23:00-24:00 PT) and at clock time, merge-aware agrees
+  - but the merge was impossible without the VPS, so the
+  23:00 batch is the twenty-first missed batch. The owner
+  selected the IONOS console recovery route on 2026-11-14;
+  it has still not landed about 2 days later. Open PRs
+  unchanged, all merge-tree exit 0 against main
+  a858a0fca: 708 records 2026-11-12 (head 2f59c270,
+  batch merge blocked), 711 held by the 1145 review
+  (head e3c3dfd0 unchanged), 425 owner-gated
+  OD-20261108-01 (head 4f41cdd6a unchanged, no owner
+  decision). Main frozen at a858a0fca. Branch commit
+  deferred as well: the records/2026-11-15 worktree
+  still holds another job's staged, uncommitted revert
+  of the branch tip 2e8b60b1, which this pass must not
+  disturb or absorb - this record is a mirror copy only
+  until a later pass can commit it to the branch. Full
+  detail in pr-integration/2300-run.md.
+
+## 23:32 to about 23:34 - Tool developer pass
+
+- Tool-developer pass tool-development-2026-11-15-2332.
+  NO-OP: VPS SSH still Permission denied (publickey), about
+  82.8 hours into the break; GitHub connector read shows the
+  same 3 open PRs with unchanged heads and updated_at (711
+  e3c3dfd0, 708 2f59c270, 425 4f41cdd6 - owner-gated
+  OD-20261108-01, no author action); newest tooling issue
+  still #712, already implemented and held locally (branch
+  work/plan-expired-chain-dedupe-712 tip b3d25979fc, diff
+  3 files 111+/3-, bundle intact), #709 next once the #712
+  PR opens; main frozen at a858a0fca. No code changed, no
+  PR opened, no comment posted, no Slack sync (quiet run).
+  Record: tool-development/2332-run.md (local mirror only,
+  uncommitted - records-branch push blocked by the VPS break).
+
+## 23:32 to about 23:40 - Knowledge organization pass
+
+- 23:32 PT, knowledge-organization 2332 run - no-op,
+  worked from the 2232 watermark (fold commit
+  e5be6134d3, planner 2140). Own PRs re-verified via
+  the authenticated GitHub connector (711 head
+  e3c3dfd0, 708 head 2f59c270, 425 head 4f41cdd6, all
+  updatedAt unchanged since the 2232 pass, so no new
+  review or comment on any of them; the 1145
+  integrator review still holds PR 711 on the one
+  fixable 705-amendment item, reply draft still held
+  until the VPS returns); knowledge issues
+  re-verified (41 open, newest update #595
+  2026-11-12T14:11:46Z, unchanged). Five records
+  newer than the 2232 close read in full, none
+  foldable: pr-catchall 2239 (blocked delivery, 79th
+  consecutive blocked pass, issues 138 unchanged),
+  pr-integration 2300 (failed, 79th consecutive
+  failed pass, checker DUE at 23:00:54 PT, batch
+  pass, 23:00 batch is the twenty-first missed
+  batch; branch commit deferred - the
+  records/2026-11-15 worktree holds another job's
+  staged, uncommitted revert of the branch tip),
+  queue-planning 2240 (partial, 11 units staged for
+  2026-11-16-1030/1057, 0 expired, scout diff 0
+  counts on the same Nov 11 23:53 6-pass observation,
+  sweep pair present with both passes done
+  unexecuted; twentieth consecutive planner run
+  failing to commit), resource-collection 2304
+  (failed, harvest-2026-11-15-2203 failed on the
+  offline Mac; duel day 1 Radar Training RELEASE
+  read from tools/duel.py, not from the screen, so
+  nothing foldable), shop-claims 2234 (failed,
+  passes-2026-11-15-1857 failed on the offline Mac;
+  same duel posture read, not from the screen). No
+  profile updated, no contradiction resolved, no
+  stale item marked, no gap filed. VPS SSH still
+  Permission denied (publickey), about 82.8 hours
+  into the break; Mac mini still OFFLINE, last_seen
+  frozen 13:19:56Z (05:19 PT), about 18h15m stale,
+  eighteenth consecutive offline reading. Missed
+  batches now 21 (next batch point 03:00 PT Nov 16).
+  Delivery BLOCKED: record in local mirror only with
+  an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No
+  Slack sync, no chat report - quiet no-op run.
+  Record: knowledge-organization/2332-run.md.
+
+- 23:34 PT, radar unit radar-2026-11-15-2203 failed on the
+  offline Mac (3 device probes all node_offline, no wake-up path;
+  no radar work, no claims, nothing spent; tracker untouched;
+  pass stopped after this unit rather than cascading failed
+  units). Own PRs re-verified via the public GitHub pulls page
+  (crawled 07:15Z: #711, #708, #425 only, no new PR, none owned
+  by this job; no PR for records/2026-11-15). Sync reaped 0
+  expired 0 due 22 produced 0; zombie seeding no-op,
+  Glacieradon ended Nov 14. Duel day 1 Radar Training release
+  posture read from tools/duel.py (claims score +30,000 per
+  task) - the release stays missed while the Mac is offline;
+  the duel day runs until 18:00 PT Nov 16, so the window is still
+  open. VPS SSH still Permission denied (publickey), about 82.8 hours
+  into the break; Mac mini still OFFLINE, last_seen frozen
+  13:19:56Z (05:19 PT), about 18h20m stale. Missed batches stay
+  21 (next batch point 03:00 PT Nov 16). Delivery BLOCKED:
+  record in local mirror only with an identical backup in the
+  goal hidden_files; records-branch delivery and the action-log
+  line owed at VPS recovery. No Slack sync. Chat report owed per
+  the ticker rule (previous pass also access-failed); this pass's
+  final message carries it.
+  Record: radar-tasks/2334-queue-run.md.
+
+## 23:40 to about 00:30 - Queue planning pass
+
+- 23:40 PT, queue-planning 2340 run - partial, 0 units staged
+  (next 12h horizon already covered by the 2240 run's
+  1030/1057 units; 73 already present), 0 expired;
+  skipped_closed ["survivors-2026-11-15-2203"]; sweep
+  production not due (2340 slot) - tonight's pair already
+  present with both passes done unexecuted (1630 failed
+  on offline Mac, 1730 expired) - tonight's pre-reset
+  zero sweep missed entirely, second consecutive night;
+  scout diff on the 2026-11-11 observation applied with
+  0 counts (52 observed, 11 unexplained red dots);
+  0 withdrawals; no new issues. Pool inbox 70, claimed
+  0, done 2167; newest finished 00:10 PT is a FAILED
+  survivors unit (ticker-0004, Mac mini offline,
+  last_seen 05:19 PT) - sixth consecutive ticker pass
+  to fail on the offline Mac; 224 done files since
+  Nov 14 18:35 PT: 197 expired, 27 failed, 0 done.
+  Twenty-first consecutive planner run failing to commit
+  - VPS SSH Permission denied (publickey), commit left on
+  local planner-2340-1115-delivery, no PR for
+  records/2026-11-15.
+  Record: queue-planning/2340-run.md.
