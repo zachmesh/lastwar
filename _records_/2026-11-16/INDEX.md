@@ -334,3 +334,36 @@ description: Day record for 2026-11-16 (America/Los_Angeles) - Mac mini still of
   local planner-0040-1116-delivery, no PR for
   records/2026-11-16.
   Record: queue-planning/0040-run.md.
+## 02:30 to about 02:40 - PR integration 0230 run, FAILED (VPS SSH unreachable)
+
+- PR-integrator pass pr-integration-2026-11-16-0230.
+  FAILED: VPS SSH returns "Permission denied
+  (publickey)" - the 2026-11-12 ~/.ssh loss is still
+  unrepaired (owner chose the IONOS-console recovery
+  on 2026-11-14, not yet landed, about 33 hours on).
+  Eighty-second consecutive failed integrator pass for
+  the same break, about 85.9 hours into the outage.
+  Checker gate _tools_/records_batch.py run locally
+  from a main copy - NOT DUE (non-batch pass, next
+  batch 03:00 PT), so no batch merge was owed and
+  missed batches stay 21. Read-only verification via
+  the GitHub connector and a local HTTPS clone only:
+  open PRs 711, 708 and 425, heads and updated_at
+  identical to the 0130 pass, all three merge-tree
+  exit 0 against main a858a0fca (merged trees
+  f46bfda1, e05ec8b5, 08e8515a, identical to the 0130
+  pass). PR 708 (records 2026-11-12) awaits the
+  03:00 batch. PR 711 held on the standing 1145
+  review, no repeat comment due. PR 425 still
+  owner-gated on OD-20261108-01, standing escalation
+  from 2026-11-07 2245. No merges, no comments, no
+  records PR opened. Main frozen at a858a0fca since
+  2026-11-12 11:52 PT; 13 records branches, latest
+  records/2026-11-12. KO 0232 flag answered in the
+  record: the 0130 record is committed on
+  records/2026-11-16 (3e0703be60) - the branch
+  worktree is the delivery vehicle, the live-tree
+  mirror is not. This record committed locally on
+  records/2026-11-16, UNPUSHED - push via the
+  standard VPS route once SSH returns. Status:
+  failed. Full detail in pr-integration/0230-run.md.
