@@ -1007,3 +1007,184 @@ Record: knowledge-organization/0332-run.md.
   message carries it.
   Record: resource-collection/0704-queue-run.md.
 
+## 06:32 to about 06:36 - Knowledge organization pass
+
+- 06:32 PT, knowledge-organizer 0632 run - NO-OP. Own PRs
+  first: PR 711/708/425 re-verified via the authenticated
+  GitHub connector, heads and updatedAt unchanged since
+  the 0532 pass (711 e3c3dfd0, 2026-11-12T20:04:57Z) - no
+  new review or comment; the 1145 integrator review still
+  holds PR 711 on one fixable item, reply draft stays
+  unposted until the VPS returns. Knowledge issues: 41
+  open, newest #595 2026-11-12T14:11:46Z, unchanged.
+  Three records newer than the 0532 close read in full -
+  troop-training 0528 (failed, 14th consecutive offline
+  ticker pass; 10 empty zombie unit files noted, tooling
+  issue owed at VPS recovery), mail-rewards 0604 (failed,
+  15th consecutive offline ticker pass; gap CLOSED: the
+  ten empty zombie files are gone, sync reaped them, no
+  issue owed), queue-planning 0540 (partial, 10 staged,
+  26th consecutive planner commit failure; done-files
+  tally now 168 by finished_at; 0404 evidence file still
+  absent, 0604 evidence file present) - none carries
+  foldable play learning. The 0528 zombie-file gap opened
+  and closed within this same window; recorded so the
+  next run does not re-open it. No profile updated, no
+  contradiction resolved, no stale item marked, no gap
+  filed. Folding watermark unchanged (e5be6134d3). VPS SSH
+  still Permission denied (publickey), about 89h50m into
+  the outage; Mac mini still OFFLINE, last_seen frozen
+  13:19:56Z (05:19 PT Nov 15), about 25h13m stale,
+  twenty-fifth consecutive offline reading. Missed batches
+  stay 22 (next batch point 07:00 PT Nov 16). Delivery
+  BLOCKED: record in local mirror only with an identical
+  backup in the goal hidden_files; records-branch delivery
+  owed at VPS recovery. No Slack sync. No chat report.
+  Record: knowledge-organization/0632-run.md.
+
+## 06:22 to about 06:37 - PR catch-all pass
+
+- 06:22 PT, pr-catchall 0539 run - blocked delivery, 85th consecutive
+  blocked catch-all pass: VPS SSH still Permission denied (publickey),
+  about 89.6 hours into the outage; IONOS console recovery chosen
+  17:37 PT Nov 14 still not effective about 36.8 hours later. Open PRs
+  711, 708, 425 all unchanged since the Nov 12 1239 pass (heads and
+  updatedAt identical, Owner lines re-verified live via the GitHub
+  connector: knowledge-organizer / integrator / tool-developer); none
+  owned by this job. PR 137 stays merged (live re-verified via REST,
+  closed 2026-11-02T01:48:35Z by zachmesh). Issues: 138 total, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335, 514,
+  517 all unchanged. No batch point passed during this window, so
+  missed batches stay 22 (next 07:00 PT). Chain gaps 1639 (Nov 15)
+  and 0339 (Nov 16) both still open, no new gap this pass. No
+  adoptions, fixes, replies, or hand-offs. No new stale-owner flag;
+  three already in force (708, 425, 711). Record is local mirror only
+  with an identical backup in the goal hidden_files; records-branch
+  delivery owed at VPS recovery. Quiet run: no Slack sync, no chat
+  report.
+  Record: pr-catchall/0539-run.md.
+- Ticker pass ticker-0634 - failed, 1 unit: passes
+  unit passes-2026-11-16-0257 failed on the offline Mac (7 device
+  probes: device.list, device.describe, connection.health on the Mac
+  node_offline, connection.repair and connection.health on the
+  recovery device both 25s timeouts, no wake-up path; no passes work,
+  no claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Sixteenth consecutive ticker
+  pass to fail on the offline Mac (2143, 2204, 2234, 2304, 2334, 0004,
+  0112, 0134, 0204, 0234, 0304, 0334, 0404, 0528, 0604 before it). Own PRs re-checked
+  via the GitHub connector (#711, #708, #425 only, heads and updated_at
+  unchanged since Nov 12, none owned by this job; no PR for
+  records/2026-11-16; no new comments). Sync reaped 0 expired 5 due 22
+  produced 0; expired units: train, star-ceremony, help, gifts and
+  duel-score 0230; completion marker reaped: mail-2026-11-16-0230;
+  zombie seeding no-op, Glacieradon ended Nov 14. Duel day 1 Radar
+  Training release posture read from tools/duel.py (claims score
+  +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window is
+  still open. VPS SSH still Permission denied
+  (publickey), about 90 hours into the break; Mac mini still
+  OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15), about 25h30m
+  stale. Missed integrator batches stay 22 (next batch point 07:00 PT
+  Nov 16). Delivery PARTIAL: record committed locally on
+  ticker-0634-1116-delivery, UNPUSHED, push pending VPS recovery;
+  mirror copy plus identical backup in the goal hidden_files. No Slack
+  sync. Chat report owed per the ticker rule (previous pass also
+  access-failed); this pass's final message carries it.
+  Record: shop-claims/0634-queue-run.md.
+## 07:00 to about 07:07 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-16-0700.
+  FAILED, eighty-first consecutive failure for the
+  same break: VPS SSH publickey rejected once (about
+  07:00 PT; the rejection is server-side, local key
+  fingerprint re-verified this pass and unchanged), no
+  merges, no comments, no records PR opened. BATCH pass
+  for records purposes: the checker
+  (_tools_/records_batch.py) reports DUE at clock time
+  about 07:05 PT (exit 0, batch window 07:00-08:00 PT)
+  and DUE merge-aware, so the 07:00 batch is the
+  twenty-third missed batch (the 03:00 batch of 11-16
+  was the twenty-second, counted by the 0634 ticker
+  pass; the replay at the scheduled trigger time
+  06:45:54 PT says NOT DUE only because the trigger
+  fired before the point while the run began inside
+  the window). The owner selected the IONOS console
+  recovery route on 2026-11-14; it has still not landed
+  about 2 days later. Open PRs unchanged, all
+  merge-tree exit 0 against main a858a0fca: 708 records
+  2026-11-12 (head 2f59c270, merge blocked), 711 held
+  by the 1145 review (head e3c3dfd0 unchanged), 425
+  owner-gated OD-20261108-01 (head 4f41cdd6a unchanged,
+  no owner decision). Main frozen at a858a0fca. Branch
+  commit deferred as well: the records/2026-11-15
+  worktree still holds another job's staged,
+  uncommitted revert of the branch tip 2e8b60b1, which
+  this pass must not disturb or absorb - this record is
+  a mirror copy only until a later pass can commit it
+  to the branch. Full detail in
+  pr-integration/0700-run.md.
+
+## 07:32 to about 07:37 - Knowledge organization pass
+
+- 07:32 PT, knowledge-organizer 0732 run - NO-OP. Own PRs
+  first: PR 711/708/425 re-verified via the authenticated
+  GitHub connector, heads and updatedAt unchanged since
+  the 0632 pass (711 e3c3dfd0, 2026-11-12T20:04:57Z) - no
+  new review or comment; the 1145 integrator review still
+  holds PR 711 on one fixable item, reply draft stays
+  unposted until the VPS returns. Knowledge issues: 41
+  open, newest #595 2026-11-12T14:11:46Z, unchanged.
+  Four records newer than the 0632 close read in full -
+  pr-catchall 0539 (BLOCKED DELIVERY, 85th consecutive
+  blocked catchall pass; issues totalCount 138 unchanged,
+  zero unclassified; chain gaps 1639 and 0339 still open,
+  no new gap; landed after the 0632 close), shop-claims
+  0634 (failed, 16th consecutive offline ticker pass;
+  expired 5 at 0230, marker reaped mail-0230), pr-integration
+  0700 (FAILED, 81st consecutive failed integrator pass;
+  checker DUE, 07:00 batch is the 23rd missed batch; all
+  three PRs merge-tree clean vs main a858a0fca; 2026-11-15
+  worktree hazard re-verified, record mirror-only),
+  resource-collection 0704 (failed, 17th consecutive
+  offline ticker pass; expired 5 at 0257, marker reaped
+  passes-0257; branch reconcile skipped, fetch of
+  records/2026-11-16 failed, issue #446; git status anomaly
+  now 2215 lines, up 11) - none carries foldable play
+  learning; Duel Radar release posture is tools/duel.py-only
+  and already in the profile. No profile updated, no
+  contradiction resolved, no stale item marked, no gap
+  filed. The 0528 zombie-file gap stays closed. Folding
+  watermark unchanged (e5be6134d3). VPS SSH still Permission
+  denied (publickey), about 90h48m into the outage; Mac mini
+  still OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15),
+  about 26h15m stale, twenty-sixth consecutive offline
+  reading. Missed batches now 23 (next batch point 11:00 PT
+  Nov 16). Delivery BLOCKED: record in local mirror only
+  with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack
+  sync. No chat report.
+  Record: knowledge-organization/0732-run.md.
+
+## 07:31 to about 07:41 - Queue planning pass
+
+- 06:40 PT, queue-planning 0640 run - partial, 11 units staged
+  (1830/1857 slots; 66 already present), 0 reaped, 0
+  expired; skipped_closed [harvest-2026-11-16-0603]; sweep
+  production not due (0640 slot) - tonight's pair already
+  complete in inbox (seq 1 zero-sweep 1630, seq 2 zero-sweep
+  1730, chain pre-reset-sweep-2026-11-16); last night's pair
+  both passes done unexecuted (1630 failed on offline Mac,
+  1730 expired) - second consecutive missed pre-reset zero
+  sweep; scout diff on the 2026-11-11 observation applied
+  with 0 counts (52 observed, 11 unexplained red dots); 0
+  withdrawals; no new issues. Pool inbox 76, claimed 0,
+  done 2200; newest finished 07:11 PT is a FAILED harvest
+  unit (ticker-0704, Mac mini offline, last_seen 05:19 PT
+  Nov 15) - seventeenth consecutive ticker pass to fail on
+  the offline Mac; 180 done files since Nov 14 18:35 PT
+  by finished_at (148 expired, 32 failed, 0 done).
+  Twenty-seventh consecutive planner run failing to commit
+  - VPS SSH Permission denied (publickey), commit left
+  on local planner-0640-1116-delivery, no PR for
+  records/2026-11-16.
+  Record: queue-planning/0640-run.md.
