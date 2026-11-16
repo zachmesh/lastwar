@@ -731,3 +731,82 @@ Record: knowledge-organization/0332-run.md.
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed. Full detail in
   pr-integration/0430-run.md.
+## 04:32 to about 04:34 - Knowledge organization pass
+
+- 04:32 PT, knowledge-organizer 0432 run - NO-OP. Own PRs
+  first: PR 711/708/425 re-verified via the authenticated
+  GitHub connector, heads and updatedAt unchanged since
+  the 0332 pass (711 e3c3dfd0, 2026-11-12T20:04:57Z) - no
+  new review or comment; the 1145 integrator review still
+  holds PR 711 on one fixable item, reply draft stays
+  unposted until the VPS returns. Knowledge issues: 41
+  open, newest #595 2026-11-12T14:11:46Z, unchanged.
+  Five records newer than the 0332 close read in full -
+  queue-planning 0340 (partial, 5 staged, 24th
+  consecutive planner commit failure; done-files tally
+  now 163 by finished_at), radar-tasks 0334 (FAILED,
+  12th consecutive ticker failure on the offline Mac),
+  pr-catchall 0239 (83rd blocked pass, issues 138,
+  missed batches 22), pr-integration 0330 (FAILED, 83rd
+  consecutive failure, checker DUE, 03:00 batch missed;
+  independently confirms the live-mirror git status
+  anomaly, 2198 lines), ticker-0404 (FAILED, 13th
+  consecutive ticker failure, survivors unit, physical
+  channel block) - none carries foldable play learning.
+  No profile updated, no contradiction resolved, no
+  stale item marked, no gap filed. Folding watermark
+  unchanged (e5be6134d3). VPS SSH still Permission
+  denied (publickey), about 87h45m into the outage;
+  Mac mini still OFFLINE, last_seen frozen 13:19:56Z
+  (05:19 PT Nov 15), about 23h15m stale, twenty-third
+  consecutive offline reading. Missed batches stay 22
+  (next batch point 07:00 PT Nov 16). Delivery BLOCKED:
+  record in local mirror only with an identical backup
+  in the goal hidden_files; records-branch delivery
+  owed at VPS recovery. No Slack sync. No chat report.
+  Record: knowledge-organization/0432-run.md.
+
+## 05:03 to about 05:18 - Queue planning pass
+
+- 04:40 PT, queue-planning 0440 run - partial, 1 unit staged
+  (1630 slot; 73 already present), 0 reaped, 0
+  expired; skipped_closed [survivors-2026-11-16-0203]; sweep
+  production not due (0440 slot) - seq 1 of tonight's pair
+  staged by plan, seq 2 due at the 17:00-hour run; last night's pair
+  both passes done unexecuted (1630 failed on offline Mac,
+  1730 expired) - second consecutive missed pre-reset zero
+  sweep; scout diff on the 2026-11-11 observation applied
+  with 0 counts (52 observed, 11 unexplained red dots); 0
+  withdrawals; no new issues. Pool inbox 71, claimed 0,
+  done 2184; newest finished 04:20 PT is a FAILED survivors
+  unit (ticker-0404, Mac mini offline, last_seen 05:19 PT)
+  - thirteenth consecutive ticker pass to fail on the offline
+  Mac; 164 done files since Nov 14 18:35 PT by finished_at
+  (136 expired, 28 failed, 0 done). Twenty-fifth consecutive planner run failing to
+  commit - VPS SSH Permission denied (publickey), commit
+  left on local planner-0440-1116-delivery, no PR for
+  records/2026-11-16.
+  Record: queue-planning/0440-run.md.
+
+## 05:01 to about 05:12 - PR catch-all pass
+
+- 05:01 PT, pr-catchall 0439 run - blocked delivery, 84th consecutive
+  blocked catch-all pass: VPS SSH still Permission denied (publickey),
+  about 88.3 hours into the outage; IONOS console recovery chosen
+  17:37 PT Nov 14 still not effective about 35.5 hours later. Open PRs
+  711, 708, 425 all unchanged since the Nov 12 1239 pass (heads and
+  updatedAt identical, Owner lines re-verified live via the GitHub
+  connector: knowledge-organizer / integrator / tool-developer); none
+  owned by this job. PR 137 stays merged (live re-verified via REST,
+  closed 2026-11-02T01:48:35Z by zachmesh). Issues: 138 total, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335, 514,
+  517 all unchanged. No batch point passed during this window, so
+  missed batches stay 22 (next 07:00 PT). NEW CHAIN GAP: no 0339
+  record exists for 2026-11-16 in the mirror, hidden_files or day
+  INDEX - second gap alongside 1639 on 2026-11-15. No adoptions,
+  fixes, replies, or hand-offs. No new stale-owner flag; three
+  already in force (708, 425, 711). Record is local mirror only with
+  an identical backup in the goal hidden_files; records-branch
+  delivery owed at VPS recovery. Quiet run: no Slack sync, no chat
+  report.
+  Record: pr-catchall/0439-run.md.
