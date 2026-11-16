@@ -992,6 +992,66 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   planner-1540-1115-delivery, no PR for records/2026-11-15.
   Ticker-1534 fired but failed (vip-2026-11-14-1800,
   Record: queue-planning/1540-run.md.
+- 16:13 PT, perception-scout 1613 run - failed, Mac mini offline
+  again (last seen 05:19 PT, 5 device probes all node_offline,
+  no wake-up path); scout-2026-11-14-1800 failed, no observation,
+  nothing spent; tracker untouched; pass stopped after this unit
+  rather than cascading failed units; own PRs re-checked live via
+  public API: #711, #708, #425 open, none owned by this job, no PR
+  for records/2026-11-15; zombie seeding no-op, Glacieradon ended;
+  VPS SSH still down so push/PR impossible, commit stays local.
+  Record: perception-scout/1613-queue-run.md.
+- 16:32 PT, knowledge-organization 1632 run - no-op, worked
+  from the 1532 watermark (fold commit e5be6134d3, planner
+  2140): own PRs re-verified via the authenticated GitHub
+  connector (711 head e3c3dfd0, 708 head 2f59c270, 425 head
+  4f41cdd6, all updatedAt unchanged since the 1532 pass, so
+  no new review or comment on any of them; the 1145
+  integrator review still holds PR 711 on the one fixable
+  705-amendment item, reply draft still held until the VPS
+  returns); knowledge issues re-verified (41 open, newest
+  update #595 2026-11-12T14:11:46Z, unchanged); retro dir
+  re-checked (latest 2026-11-01, nothing new). Seven records
+  newer than the 1532 close read in full, none foldable:
+  pr-catchall 1439 (blocked, 72nd consecutive blocked pass,
+  issues 138 unchanged), tool-dev 1532 (no-op, PR 425
+  owner-gated, #712 held locally), vip-rewards 1534 (failed,
+  ticker-1534 passes unit unexecuted, Mac mini offline),
+  pr-integration 1545 (failed, 15:00 batch is the nineteenth
+  missed batch, counted at the 1542 pass), pr-integration
+  1600 (failed, 67th consecutive, non-batch), pr-integration
+  1615 (failed, 68th consecutive, non-batch), perception-scout
+  1613 (failed, ticker-1604 scout unit unexecuted, Mac mini
+  offline, no observation). No profile updated, no
+  contradiction resolved, no stale item marked, no gap filed.
+  VPS SSH still Permission denied (publickey), about 75h45m
+  into the break; IONOS fix chosen 17:37 PT Nov 14, not yet
+  verified done about 23 hours later. Mac mini still OFFLINE,
+  last_seen frozen 13:19:56Z (05:19 PT), about 11h12m stale,
+  eleventh consecutive offline reading. Missed batches stay
+  19 (no batch point in this run window; next 19:00 PT).
+  Last successful play execution remains 2026-11-14 18:35 PT.
+  Record: knowledge-organization/1632-run.md.
+- 16:32 PT, tool-development 1632 run - no-op, feedback check
+  intact; issue #709 open with 0 comments, unfixed on main,
+  next candidate after the #712 PR opens, not taken this run.
+  VPS SSH still Permission denied (publickey), about 76.5
+  Record: tool-development/1632-run.md.
+- 16:44 PT, daily-activities 1644 run - failed, Mac mini offline
+  no wake-up path); zero-sweep-2026-11-15-1630 failed, no sweep,
+  Record: daily-activities/1644-queue-run.md.
+- 17:00 PT, queue-planning 1700 run - partial, 0 units staged, 0
+  expired; sweep pair verified present (1630 failed on offline Mac,
+  1730 still inbox); scout diff on the 2026-11-11 observation
+  applied with 0 counts (52 observed, 11 unexplained red dots);
+  0 withdrawals; no new issues. Pool inbox 73, claimed 0, done
+  2128; newest finished 16:45 PT is a FAILED sweep first pass
+  (ticker-1634, Mac mini offline, last_seen 05:19 PT) - no unit
+  has succeeded since 18:35 PT Nov 14. Fifteenth consecutive
+  planner run failing to commit - VPS SSH Permission denied
+  (publickey), commit left on local planner-1700-1115-delivery,
+  no PR for records/2026-11-15.
+  Record: queue-planning/1700-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
