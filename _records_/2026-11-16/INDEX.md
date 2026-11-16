@@ -1887,3 +1887,32 @@ Record: knowledge-organization/0332-run.md.
   (publickey), commit left on local
   planner-1140-1116-delivery, no PR for records/2026-11-16.
   Record: queue-planning/1140-run.md.
+## 12:34 to about 12:45 - Ticker pass ticker-1236
+
+- 12:34 PT, ticker pass ticker-1236 - failed, 1 unit: radar
+  unit radar-2026-11-16-1003 failed on the offline Mac (3 device
+  probes all node_offline, no wake-up path; no radar work, no tasks
+  claimed or executed, no pins worked, nothing spent; tracker
+  untouched; pass stopped after this unit rather than cascading
+  failed units). Twenty-third consecutive ticker pass to fail on
+  the offline Mac (1122 counted twenty-two at 11:22 PT; no ticker
+  unit finished between 1122 and this pass). Own PRs re-checked via
+  the public GitHub PR list (#711, #708, #425 only, none owned by
+  this job; no PR for records/2026-11-15 or records/2026-11-16;
+  unchanged since Nov 12). Sync reaped 0 expired 0 due 22 produced
+  0; completion marker reaped harvest-2026-11-16-1003; zombie seeding
+  no-op, event ended Oct 30 (Glacieradon Nov 14). Duel day 1 Radar
+  Training release posture read from tools/duel.py (claims score
+  +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window
+  is still open. VPS SSH still Permission denied (publickey), about
+  95.8 hours into the break; Mac mini still OFFLINE, last_seen
+  frozen 13:19:56Z (05:19 PT Nov 15), about 31h20m stale. Missed
+  batches 24 (next batch point 15:00 PT Nov 16). Delivery PARTIAL:
+  record committed locally on delivery branch
+  ticker-1236-1116-delivery, UNPUSHED, push pending VPS recovery;
+  live-tree mirror and identical backup in the goal hidden_files in
+  place. No Slack sync. Chat report owed per the ticker rule
+  (previous pass also access-failed); this pass's final message
+  carries it.
+  Record: radar-tasks/1236-queue-run.md.
