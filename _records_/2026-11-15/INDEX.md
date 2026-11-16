@@ -1112,6 +1112,51 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   local planner-1740-1115-delivery, no PR for
   records/2026-11-15.
   Record: queue-planning/1740-run.md.
+- 18:32 PT, tool-development 1832 run - no-op, VPS SSH still
+  Permission denied (publickey), about 77.8 hours into the
+  break; own PR 425 unchanged (head 4f41cdd6ab, owner-gated,
+  no author action), main unchanged a858a0fca8; 30 open
+  tooling issues, newest #712 already implemented and held
+  locally (b3d25979fc, verified intact), #709 next candidate
+  once the #712 PR opens; no code changed, no PR opened, no
+  comment posted. Record: tool-development/1832-run.md.
+- 18:32 PT, knowledge-organization 1832 run - no-op, worked
+  from the 1732 watermark (fold commit e5be6134d3, planner
+  4f41cdd6, all updatedAt unchanged since the 1732 pass, so
+  re-checked (latest 2026-11-01, nothing new). Four records
+  newer than the 1732 close read in full, none foldable:
+  pr-catchall 1739 (blocked, 74th consecutive blocked pass,
+  issues 138 unchanged), pr-integration 1745 (failed, 74th
+  consecutive failed pass, checker NOT DUE, non-batch),
+  queue-planning 1740 (partial, 6 staged, 6 expired, sweep
+  pair both done unexecuted - tonight's pre-reset zero sweep
+  missed entirely, second consecutive night; scout diff 0
+  counts; 16th consecutive planner run failing to commit;
+  new carried item for the retro: success-marker gap,
+  newest status-done unit radar-2026-11-11-1803 vs "no
+  success since 18:35 PT Nov 14"), radar-tasks 1805
+  (failed, ticker-1802 radar unit unexecuted, Mac mini
+  offline). No profile updated, no contradiction resolved,
+  no stale item marked, no gap filed. VPS SSH still
+  break; Mac mini still OFFLINE, last_seen frozen 13:19:56Z
+  (05:19 PT), about 13h13m stale, thirteenth consecutive
+  offline reading. Missed batches stay 19 (no batch point
+  in this run window; next 19:00 PT). Last successful play
+  execution remains 2026-11-14 18:35 PT. Delivery BLOCKED:
+  record in local mirror only with an identical backup in
+  the goal hidden_files; records-branch delivery owed at
+  VPS recovery. No Slack sync, no chat report - quiet no-op
+  run.
+  Record: knowledge-organization/1832-run.md.
+- 19:32 PT, tool-development 1932 run - no-op, VPS SSH still
+  Permission denied (publickey), about 78.8 hours into the
+  break; own PR 425 unchanged (head 4f41cdd6ab, owner-gated
+  OD-20261108-01, no author action, newest comment still the
+  2026-11-12 1126 integrator re-verification), main unchanged
+  a858a0fca8 so the 1332 merge-tree CLEAN verification still
+  stands; 63 open tooling issues (prior runs read 30, a
+  first-page count), newest #712 already implemented and held
+  comment posted. Record: tool-development/1932-run.md.
 ## Disclosures
 
 - VPS SSH still down (Permission denied publickey, verified
@@ -1130,3 +1175,134 @@ mini reads online (last_seen 20:13:35 PT Nov 14 per the
   zombie-invasion-zombie-2026-11-10-037 at
   2026-11-15T02:35:26Z (18:35 PT Nov 14), status failed,
   executor ticker-1804.
+## 18:30 to about 18:57 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-15-1830.
+  FAILED, seventy-fifth consecutive failure for the same
+  break: VPS SSH publickey rejected once (about 18:39
+  PT), no merges, no comments, no records PR opened.
+  Non-batch pass for records purposes: the checker
+  (_tools_/records_batch.py) reports NOT DUE, next batch
+  19:00 PT; missed batches stay NINETEEN (15:00 counted
+  as the nineteenth at the 1542 pass). The owner selected
+  the IONOS console recovery route on 2026-11-14; it has
+  still not landed about 2 days later. Open PRs
+  unchanged, all merge-tree exit 0 against main
+  a858a0fca: 708 records 2026-11-12 (head 2f59c270, batch
+  pass missed at 1542), 711 held by the 1145 review
+  (head e3c3dfd0 unchanged), 425 owner-gated
+  OD-20261108-01 (head 4f41cdd6a unchanged, no owner
+  decision). Main frozen at a858a0fca. Branch commit
+  deferred as well: the records/2026-11-15 worktree
+  holds another job's staged, uncommitted revert of
+  the branch tip 2e8b60b1, which this pass must not
+  disturb or absorb - this record is a mirror copy only
+  until a later pass can commit it to the branch. Full
+  detail in pr-integration/1830-run.md.
+
+## 19:22 to about 19:27 - Ticker pass ticker-1922
+
+- Harvest unit harvest-2026-11-15-1803 FAILED: Mac mini still
+  OFFLINE, last_seen frozen 13:19:56Z (05:19 PT), about 14h05m
+  stale, fourteenth consecutive offline reading. Five device
+  probes all node_offline, no wake-up path. Nothing executed,
+  nothing claimed, nothing spent. Pass stopped after this one
+  unit rather than cascading failed claims through the pool.
+  Own PRs re-checked live via the GitHub connector: 708/711/425
+  unchanged since Nov 12, none owned by this job, no PR for
+  records/2026-11-15. Zombie seeding no-op (event ended Nov 14).
+  VPS SSH still Permission denied (publickey), 76th consecutive
+  failure; delivery BLOCKED, record is a mirror copy in the live
+  tree only. Last successful play execution remains 2026-11-14
+  18:35 PT. The 19:00 PT reset is about 35 minutes away; VIP
+  freebie, 17:30 zero sweep and daily-missions units for this
+  reset day cannot be claimed while the Mac stays offline.
+  Record: resource-collection/1925-queue-run.md.
+
+## 19:32 to about 19:37 - Knowledge organization pass
+
+- 19:32 PT, knowledge-organization 1932 run - no-op with
+  trade-day sweep, worked from the 1832 watermark (fold
+  commit e5be6134d3, planner 2140). First run after the
+  19:00 local reset, so the step-5 fuller consolidation
+  sweep of the whole ended trade day was done: all 71
+  non-organizer records of 2026-11-15 enumerated by
+  status (18 pr-catchall blocked-delivery, 20
+  pr-integration failed, 16 queue-planning partial, 10
+  tool-development no-op, 11 failed execution records
+  across 7 activities); zero successful play executions
+  in the ended trade day (Nov 14 19:00 to Nov 15 19:00
+  PT), last success remains 2026-11-14 18:35 PT; VIP
+  freebie and daily-missions units for the reset day
+  expired unclaimed at the 19:00 reset, pre-reset zero
+  sweep missed entirely for the second consecutive
+  night. Own PRs re-verified via the authenticated
+  GitHub connector (711 head e3c3dfd0, 708 head
+  2f59c270, 425 head 4f41cdd6, all updatedAt unchanged
+  since the 1832 pass, so no new review or comment on
+  any of them; the 1145 integrator review still holds
+  PR 711 on the one fixable 705-amendment item, reply
+  draft still held until the VPS returns); knowledge
+  issues re-verified (41 open, newest update #595
+  2026-11-12T14:11:46Z, unchanged); retro dir
+  re-checked (latest 2026-11-01, nothing new). Four
+  records newer than the 1832 close read in full, none
+  foldable: pr-catchall 1839 (blocked, 75th consecutive
+  blocked pass, issues 138 unchanged), pr-integration
+  1830 (failed, 75th consecutive failed pass, checker
+  NOT DUE, non-batch; branch commit deferred - the
+  records/2026-11-15 worktree holds another job's
+  staged, uncommitted revert of the branch tip),
+  resource-collection 1925 (failed, ticker-1922 harvest
+  unit unexecuted, Mac mini offline); plus the
+  tool-development 1932 record, read in full as a late
+  arrival after this run's close (no-op, no foldable
+  learning). New carried gap, verified against current
+  main a858a0fca: the queue-design doc section 12 says
+  zero-sweep slots [90, 30] while the roster
+  `_tools_/regulars.json` on the same main carries
+  [120, 60] - not fixed and not filed (no PR/issue route
+  while the VPS is down), first knowledge item for the
+  next pass with VPS access, alongside the PR #711
+  amendment. New carried item for the retro
+  (record-consistency question, not a profile fold): the
+  1925 harvest record's batch/reset lines describe the
+  pre-19:00 state though written 19:22-19:27 PT
+  ("19:00 PT reset is about 35 minutes away"; "19:00 PT
+  integrator batch is the next batch point; 19 batches
+  missed") - at write time the reset had passed about 22
+  minutes earlier and the 19:00 batch was already the
+  20th miss. No profile updated, no contradiction
+  resolved, no stale item marked, no gap filed. VPS SSH still Permission denied
+  (publickey), about 78.8 hours into the break; Mac
+  mini still OFFLINE, last_seen frozen 13:19:56Z
+  (05:19 PT), about 14h12m stale, fourteenth
+  consecutive offline reading. Missed batches move 19
+  to 20 (the 19:00 PT batch point passed in this run
+  window with SSH still down; next 23:00 PT). Delivery
+  BLOCKED: record in local mirror only with an
+  identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No
+  Slack sync, no chat report - quiet no-op run.
+  Record: knowledge-organization/1932-run.md.
+
+- 18:40 PT, queue-planning 1840 run - partial, 12 units staged
+  (mail, help, gifts, train, star-ceremony, duel-score
+  2026-11-16-0630; passes, secrets, treasures, trucks, events
+  2026-11-16-0657; scout-midday 2026-11-16-0700), 0 expired;
+  sweep pair already present with both passes done
+  unexecuted (1630 failed on offline Mac, 1730 expired) -
+  tonight's pre-reset zero sweep missed entirely, second
+  consecutive night; scout diff on the 2026-11-11
+  observation applied with 0 counts (52 observed, 11
+  unexplained red dots); 0 withdrawals; no new issues.
+  Pool inbox 72, claimed 0, done 2148; newest finished
+  19:27 PT is a FAILED harvest (ticker-1922, Mac mini
+  offline, last_seen 05:19 PT) - no Nov 14-15 done file
+  carries a success status (128 files since Nov 14 18:35 PT:
+  114 expired, 14 failed, 0 done).
+  Seventeenth consecutive planner run failing to commit -
+  VPS SSH Permission denied (publickey), commit left on
+  local planner-1840-1115-delivery, no PR for
+  records/2026-11-15.
+  Record: queue-planning/1840-run.md.
