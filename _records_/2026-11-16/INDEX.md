@@ -1298,3 +1298,117 @@ Record: knowledge-organization/0332-run.md.
   rule (previous pass also access-failed); this pass's final message
   carries it.
   Record: survivor-intake/0804-queue-run.md.
+## 07:44 to about 07:48 - PR catch-all pass
+
+- 07:44 PT, pr-catchall 0739 run - blocked delivery, 86th consecutive
+  blocked catch-all pass: VPS SSH still Permission denied (publickey),
+  about 91.0 hours into the outage; IONOS console recovery chosen
+  17:37 PT Nov 14 still not effective about 38.2 hours later. Open PRs
+  711, 708, 425 all unchanged since the Nov 12 1239 pass (heads and
+  updatedAt identical, Owner lines re-verified live via the GitHub
+  connector: knowledge-organizer / integrator / tool-developer); none
+  owned by this job. PR 137 stays merged (live re-verified via REST,
+  closed 2026-11-02T01:48:35Z by zachmesh). Issues: 138 total, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335, 514,
+  517 all unchanged. The 07:00 PT batch point passed during this
+  window, so missed batches rise 22 to 23 (next 11:00 PT). NEW chain
+  gap found this pass: no 0639 record exists for 2026-11-16 anywhere
+  (mirror, hidden_files, day INDEX); gaps now three - 1639 (Nov 15),
+  0339 and 0639 (Nov 16). No adoptions, fixes, replies, or hand-offs.
+  No new stale-owner flag; three already in force (708, 425, 711).
+  Record is local mirror only with an identical backup in the goal
+  hidden_files; records-branch delivery owed at VPS recovery. Quiet
+  run: no Slack sync, no chat report.
+  Record: pr-catchall/0739-run.md.
+
+## 08:32 to about 08:41 - Knowledge organization pass
+
+- 08:32 PT, knowledge-organizer 0832 run - NO-OP. Own PRs
+  first: PR 711/708/425 re-verified via the authenticated
+  GitHub connector, heads and updatedAt unchanged since
+  the 0732 pass (711 e3c3dfd0, 2026-11-12T20:04:57Z) - no
+  new review or comment; the 1145 integrator review still
+  holds PR 711 on one fixable item, reply draft stays
+  unposted until the VPS returns. Knowledge issues: 41
+  open, newest #595 2026-11-12T14:11:46Z, unchanged. No
+  new retro (latest 2026-11-15.md already reviewed in
+  full at 2132 on 2026-11-15). Four records newer than the
+  0732 close read in full - queue-planning 0640 (partial,
+  11 staged / 0 expired, scout diff 0 counts on the
+  6-pass observation, 27th consecutive planner run
+  failing to commit; tonight's pre-reset sweep pair
+  already complete in inbox, last night's pair both done
+  unexecuted, second consecutive missed night),
+  pr-catchall 0739 (BLOCKED DELIVERY, 86th consecutive
+  blocked catchall pass; issues totalCount 138 unchanged,
+  zero unclassified; 07:00 batch passed in its window,
+  missed batches 22 to 23; NEW chain gap 0639 on
+  2026-11-16, third gap alongside 1639 and 0339),
+  radar-tasks 0734 (failed, 18th consecutive offline
+  ticker pass; 8 device probes all offline or timed out;
+  sync produced 2, research-0603 and building-queues-0603),
+  survivor-intake 0804 (failed, 19th consecutive offline
+  ticker pass; 5 device probes; sync produced 0; roster
+  stale warning, issue #198; branch reconcile skipped,
+  issue #446) - none carries foldable play learning;
+  Duel Radar release posture is tools/duel.py-only and
+  already in the profile. No profile updated, no
+  contradiction resolved, no stale item marked, no gap
+  filed. The 0528 zombie-file gap stays closed. Folding
+  watermark unchanged (e5be6134d3). VPS SSH still Permission
+  denied (publickey), about 91h50m into the outage; Mac mini
+  still OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15),
+  about 27h17m stale, twenty-seventh consecutive offline
+  reading. Missed batches stay 23 (next batch point 11:00 PT
+  Nov 16). Delivery BLOCKED: record in local mirror only
+  with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack
+  sync. No chat report.
+  Record: knowledge-organization/0832-run.md.
+
+## 08:43 to about 08:57 - Queue planning pass
+
+- 08:40 PT, queue-planning 0840 run - partial, 0 units staged
+  (12-hour horizon already fully covered; 76 already
+  present), 0 reaped, 0 expired; skipped_closed
+  [radar-2026-11-16-0603, survivors-2026-11-16-0603]; sweep
+  production not due (0840 slot) - tonight's pair already
+  complete in inbox (seq 1 zero-sweep 1630, seq 2 zero-sweep
+  1730, chain pre-reset-sweep-2026-11-16); last night's pair
+  both passes done unexecuted (1630 failed on offline Mac,
+  1730 expired) - second consecutive missed pre-reset zero
+  sweep; scout diff on the 2026-11-11 observation applied
+  with 0 counts (52 observed, 11 unexplained red dots); 0
+  withdrawals; no new issues. Pool inbox 76, claimed 0,
+  done 2201; newest finished 08:20 PT is a FAILED survivors
+  unit (ticker-0804, Mac mini offline, last_seen 05:19 PT
+  Nov 15) - nineteenth consecutive ticker pass to fail on
+  the offline Mac; 181 done files since Nov 14 18:35 PT
+  by finished_at (148 expired, 33 failed, 0 done).
+  Twenty-eighth consecutive planner run failing to commit
+  - VPS SSH Permission denied (publickey), commit left
+  on local planner-0840-1116-delivery, no PR for
+  records/2026-11-16.
+  Record: queue-planning/0840-run.md.
+
+## 08:50 to about 08:54 - PR catch-all pass
+
+- 08:50 PT, pr-catchall 0839 run - blocked delivery, 87th consecutive
+  blocked catch-all pass: VPS SSH still Permission denied (publickey),
+  about 92.1 hours into the outage; IONOS console recovery chosen
+  17:37 PT Nov 14 still not effective about 39.3 hours later. Open PRs
+  711, 708, 425 all unchanged since the Nov 12 1239 pass (heads and
+  updatedAt identical, Owner lines re-verified live via the GitHub
+  connector: knowledge-organizer / integrator / tool-developer); none
+  owned by this job. PR 137 stays merged (live re-verified via REST,
+  closed 2026-11-02T01:48:35Z by zachmesh). Issues: 138 total, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335, 514,
+  517 all unchanged. No batch point passed during this window, so
+  missed batches stay 23 (next 11:00 PT). No new chain gap; gaps
+  still three - 1639 (Nov 15), 0339 and 0639 (Nov 16). No adoptions,
+  fixes, replies, or hand-offs. No new stale-owner flag; three
+  already in force (708, 425, 711). Record is local mirror only
+  with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. Quiet run: no Slack
+  sync, no chat report.
+  Record: pr-catchall/0839-run.md.
