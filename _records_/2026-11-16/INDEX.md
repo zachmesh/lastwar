@@ -2336,3 +2336,34 @@ Record: knowledge-organization/0332-run.md.
   records/2026-11-16. NEW: 1340 slot gap on 2026-11-16 - no 1340
   record, branch or INDEX entry exists. Record:
   queue-planning/1440-run.md.
+## 15:01 to about 15:09 - Ticker pass ticker-1501
+
+- 15:01 PT, ticker pass ticker-1501 - failed, 1 unit: daily-missions
+  unit daily-missions-2026-11-15-1800 failed on the offline Mac (6
+  device probes all offline / node_offline, no wake-up path; no
+  daily-missions work, nothing claimed, nothing spent; tracker
+  untouched; pass stopped after this unit rather than cascading
+  failed units). Twenty-fifth consecutive ticker pass to fail on the
+  offline Mac (ticker-1343 counted twenty-four at 13:43 PT; no
+  ticker unit finished between 1343 and this pass). Own PRs
+  re-checked via the public GitHub REST API (#711, #708, #425 only,
+  none owned by this job; no PR for records/2026-11-16; heads and
+  updated_at unchanged since Nov 12; newest comments read, nothing
+  addressed to this job). Sync reaped 0 expired 5 (events, passes,
+  secrets, treasures, trucks, all 2026-11-16-1057) due 22 produced 0;
+  completion marker reaped survivors-2026-11-16-1003; zombie seeding
+  no-op, event ended (chain zombie-2026-11-10 closed). Duel day 1
+  Radar Training release posture read from tools/duel.py (claims
+  score +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window is
+  still open. VPS SSH still Permission denied (publickey), about 97.3
+  hours into the break; Mac mini still OFFLINE, last_seen frozen
+  13:19:56Z (05:19 PT Nov 15), about 33h48m stale. The 15:00 batch
+  point passed during this pass with no merge possible, so missed
+  batches rise to 25. Delivery PARTIAL: record committed locally on
+  delivery branch ticker-1501-1116-delivery, UNPUSHED, push pending
+  VPS recovery; live-tree mirror and identical backup in the goal
+  hidden_files in place. No Slack sync. Chat report owed per the
+  ticker rule (previous pass also access-failed); this pass's final
+  message carries it.
+  Record: daily-missions/1501-queue-run.md.
