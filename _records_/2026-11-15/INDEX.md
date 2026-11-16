@@ -533,3 +533,15 @@ of 2026-10-28.
   records/2026-11-15, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed. Full detail
   in pr-integration/1745-run.md.
+
+- 18:02 PT, queue ticker ticker-1802 run - failed, 1 unit
+  (radar-2026-11-15-1403, duel day 7 stack, expired 18:03 PT
+  seconds before the claim landed); Mac mini offline again
+  (last seen 05:19 PT, 5 device probes all node_offline, no
+  wake-up path); no radar tasks executed, nothing spent;
+  tracker untouched; pass stopped after this unit rather than
+  cascading failed units; own PRs re-checked live via the
+  GitHub connector: #711, #708, #425 open, none owned by this
+  job, no PR for records/2026-11-15; zombie seeding no-op,
+  Glacieradon ended; VPS SSH still down so push/PR impossible,
+  commit stays local. Record: radar-tasks/1805-queue-run.md.
