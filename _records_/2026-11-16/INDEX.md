@@ -1784,3 +1784,106 @@ Record: knowledge-organization/0332-run.md.
   records/2026-11-16, UNPUSHED - push via the standard VPS
   route once SSH returns. Status: failed. Full detail in
   pr-integration/1130-run.md.
+## 11:32 to about 11:37 - Knowledge-organizer pass
+
+- 11:32 PT, knowledge-organizer 1132 run - NO-OP. Own PRs
+  first: PR 711/708/425 re-verified via the authenticated
+  GitHub connector, heads and updatedAt unchanged since
+  the 1032 pass (711 e3c3dfd0, 2026-11-12T20:04:57Z) - no
+  new review or comment; the 1145 integrator review still
+  holds PR 711 on one fixable item, reply draft stays
+  unposted until the VPS returns. Knowledge issues: 41
+  open, newest #595 2026-11-12T14:11:46Z, unchanged. No
+  new retro (latest 2026-11-15.md already reviewed in
+  full at 2132 on 2026-11-15). Three records newer than the
+  1032 close read in full - pr-catchall 1039 (BLOCKED
+  DELIVERY, 89th consecutive blocked catchall pass;
+  issues totalCount 138 unchanged, zero unclassified;
+  the 11:00 PT batch point passed, missed batches rise
+  23 to 24; chain gaps still THREE - 1639, 0339, 0639,
+  no new gap), queue-planning 1040 (partial, 17 staged /
+  10 expired, scout diff 0 counts on the 6-pass
+  observation, 30th consecutive planner run failing to
+  commit; tonight's pre-reset sweep pair already complete
+  in inbox, last night's pair both done unexecuted,
+  second consecutive missed night; done files since Nov
+  14 18:35 PT 197 - 162 expired, 35 failed, 0 done;
+  roster staleness warning GONE this run, cause
+  unverified, #198 stays open for the retro), resource-
+  collection 1122 (ticker-1122 FAILED, 22nd consecutive
+  ticker pass to fail on the offline Mac; harvest unit
+  failed, nothing collected; Duel Radar release posture
+  is tools/duel.py-only and already in the profile) -
+  none carries foldable play learning. No profile
+  updated, no contradiction resolved, no stale item
+  marked, no gap filed. The 0528 zombie-file gap stays
+  closed. Folding watermark unchanged (e5be6134d3).
+  VPS SSH still Permission denied (publickey), about
+  94h45m into the outage; Mac mini still OFFLINE,
+  last_seen frozen 13:19:56Z (05:19 PT Nov 15), about
+  30h15m stale, thirtieth consecutive offline reading.
+  Missed batches now 24 (next batch point 15:00 PT
+  Nov 16). Delivery BLOCKED: record in local mirror
+  only with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack
+  sync. No chat report.
+  Record: knowledge-organization/1132-run.md.
+
+## 12:06 to about 12:11 - PR catch-all pass
+
+- 12:06 PT, pr-catchall 1139 run - BLOCKED DELIVERY. Own PRs
+  first: PR 137 stays MERGED (closed 2026-11-02T01:48:35Z by
+  zachmesh, live re-verified via the unauthenticated REST API);
+  this job has no adopted open PR. Open PRs 711, 708, 425
+  re-verified live via the unauthenticated REST API, heads and
+  updatedAt unchanged since the 1239 pass (711 e3c3dfd0,
+  2026-11-12T20:04:57Z; 708 2f59c270, 2026-11-12T20:44:37Z;
+  425 4f41cdd6, 2026-11-12T19:29:37Z) - Owner lines read live
+  from each body and diff file lists read live, all name a
+  rightful owner matching the diff (711 knowledge-organizer,
+  708 pr-integrator, 425 tool-developer); nothing adoptable,
+  no new question addressed to this job. Issues: 138 real
+  issues (141 REST rows incl. the 3 open PRs appearing as
+  issues), newest 712, zero unclassified; latest-updated real
+  issue #689 at 2026-11-12T20:11:54Z, unchanged.
+  Owner-decision issues 132, 154, 335, 514, 517 all unchanged
+  since the 1039 pass (updated_at identical). No batch point
+  in this run window, so missed batches stay 24. No new
+  stale-owner flag; the three flags from 1139/1239 remain in
+  force. VPS SSH still Permission denied (publickey), about
+  95.4 hours into the outage; owner chose the IONOS console
+  route 2026-11-14 17:37 PT, about 42.5 hours ago, still not
+  complete. Ninetieth consecutive blocked catchall pass;
+  chain gaps still THREE - 1639 (2026-11-15), 0339 and 0639
+  (2026-11-16), no new gap. Delivery BLOCKED: record in local
+  mirror only with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack sync.
+  No chat report. Record: pr-catchall/1139-run.md.
+
+## 12:24 to about 12:35 - Queue planning pass
+
+- 11:40 PT, queue-planning 1140 run - partial, 0 units staged
+  (77 already present, all 12h windows staged by earlier
+  runs), 0 reaped, 0 expired; skipped_closed
+  ["harvest-2026-11-16-1003"] (ticker-1122 finished it
+  FAILED at 11:30 PT on the offline Mac); roster_stale_regulars []
+  again - the building-queues/research warning is gone for
+  the second consecutive run (#198, change carried for the
+  retro); sweep production not due (1140 slot) - tonight's pair
+  already complete in inbox (seq 1 zero-sweep 1630, seq 2
+  zero-sweep 1730, chain pre-reset-sweep-2026-11-16); last
+  night's pair both passes done unexecuted (1630 failed on
+  offline Mac, 1730 expired) - second consecutive missed
+  pre-reset zero sweep; scout diff on the 2026-11-11
+  observation applied with 0 counts (52 observed, 11
+  unexplained red dots); 0 withdrawals; no new issues. Pool
+  inbox 76, claimed 0, done 2218; newest finished 11:30 PT
+  is a FAILED harvest unit (ticker-1122, Mac mini offline,
+  last_seen 05:19 PT Nov 15) - twenty-second consecutive
+  ticker pass to fail on the offline Mac; 198 done files
+  since Nov 14 18:35 PT by finished_at (162 expired, 36
+  failed, 0 done). Thirty-first consecutive planner run
+  failing to commit - VPS SSH Permission denied
+  (publickey), commit left on local
+  planner-1140-1116-delivery, no PR for records/2026-11-16.
+  Record: queue-planning/1140-run.md.
