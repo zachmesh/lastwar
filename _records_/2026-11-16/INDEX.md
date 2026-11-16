@@ -1412,3 +1412,37 @@ Record: knowledge-organization/0332-run.md.
   records-branch delivery owed at VPS recovery. Quiet run: no Slack
   sync, no chat report.
   Record: pr-catchall/0839-run.md.
+## 08:34 to about 09:00 - Ticker pass ticker-0834
+
+- Ticker pass ticker-0834 - failed, 1 unit: donations
+  unit donations-2026-11-16-0603 failed on the offline Mac (5 device
+  probes: device.list, device.describe, connection.health on the Mac
+  node_offline, connection.repair on the recovery device with target
+  "native" 25s timeout, connection.health on the recovery device
+  25s timeout, no wake-up path; no donation work, no claims, nothing
+  spent; tracker untouched; pass stopped after this unit rather than
+  cascading failed units). Twentieth consecutive ticker pass to fail
+  on the offline Mac (2143, 2204, 2234, 2304, 2334, 0004, 0112, 0134,
+  0204, 0234, 0304, 0334, 0404, 0528, 0604, 0634, 0704, 0734, 0804
+  before it). Own PRs re-checked via the GitHub connector (#711, #708,
+  #425 only, heads and updated_at unchanged since Nov 12, none owned
+  by this job; no PR for records/2026-11-16; no new comments visible).
+  Sync reaped 0 expired 0 due 22 produced 0, already queued 20;
+  skipped_closed radar-2026-11-16-0603; completion marker reaped
+  survivors-2026-11-16-0603; roster stale warning for building-queues
+  and research (issue #198); branch reconcile skipped (remote ref
+  missing, issue #446). Zombie seeding no-op, Glacieradon ended
+  Nov 14 and the chain zombie-2026-11-10 stays closed. Duel day 1
+  Radar Training release posture read from tools/duel.py (claims score
+  +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window is
+  still open. VPS SSH still Permission denied (publickey), about
+  92.2 hours into the break; Mac mini still OFFLINE, last_seen frozen
+  13:19:56Z (05:19 PT Nov 15), about 27h40m stale. Missed integrator
+  batches stay 23 (next batch point 11:00 PT Nov 16). Delivery PARTIAL:
+  record committed locally on ticker-0834-1116-delivery, UNPUSHED,
+  push pending VPS recovery; mirror copy plus identical backup in the
+  goal hidden_files. No Slack sync. Chat report owed per the ticker
+  rule (previous pass also access-failed); this pass's final message
+  carries it.
+  Record: alliance-donations/0834-queue-run.md.
