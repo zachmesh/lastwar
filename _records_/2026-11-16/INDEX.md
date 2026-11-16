@@ -935,3 +935,26 @@ Record: knowledge-organization/0332-run.md.
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed. Full detail in
   pr-integration/0545-run.md.
+## 06:20 to about 06:30 - Queue planning pass
+
+- 05:40 PT, queue-planning 0540 run - partial, 10 units staged
+  (1800/1803 slots; 68 already present), 0 reaped, 0
+  expired; skipped_closed [mail-2026-11-16-0230]; sweep
+  production not due (0540 slot) - tonight's pair now
+  complete in inbox (seq 1 staged by 0440 plan, seq 2 by
+  this run's plan); last night's pair both passes done
+  unexecuted (1630 failed on offline Mac, 1730 expired) -
+  second consecutive missed pre-reset zero sweep; scout
+  diff on the 2026-11-11 observation applied with 0
+  counts (52 observed, 11 unexplained red dots); 0
+  withdrawals; no new issues. Pool inbox 77, claimed 0,
+  done 2188; newest finished 06:09 PT is a FAILED mail
+  unit (ticker-0604, Mac mini offline, last_seen 05:19 PT
+  Nov 15) - fifteenth consecutive ticker pass to fail on
+  the offline Mac; 168 done files since Nov 14 18:35 PT
+  by finished_at (138 expired, 30 failed, 0 done).
+  Twenty-sixth consecutive planner run failing to commit
+  - VPS SSH Permission denied (publickey), commit left
+  on local planner-0540-1116-delivery, no PR for
+  records/2026-11-16.
+  Record: queue-planning/0540-run.md.
