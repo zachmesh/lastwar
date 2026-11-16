@@ -878,6 +878,30 @@ Record: knowledge-organization/0332-run.md.
   the ticker rule (previous pass also access-failed); this pass's final
   message carries it.
   Record: troop-training/0528-queue-run.md.
+- Ticker pass ticker-0604 - failed, 1 unit: mail
+  unit mail-2026-11-16-0230 failed on the offline Mac (6 device
+  probes all node_offline, no wake-up path; no mail work, no
+  unit rather than cascading failed units). Fifteenth consecutive ticker
+  0112, 0134, 0204, 0234, 0304, 0334, 0404, 0528 before it). Own PRs re-checked
+  via the GitHub connector (#711, #708, #425 only, heads and updated_at
+  unchanged since Nov 12, none owned by this job; no PR for
+  records/2026-11-16; no new comments). Sync reaped 0 expired 2 due 22
+  produced 0; completion marker reaped: training-2026-11-16-0203;
+  zombie seeding no-op, Glacieradon ended Nov 14. Duel day 1 Radar
+  Training release posture read from tools/duel.py (claims score
+  +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window is
+  still open. Gap closed: the ten empty 0-byte zombie-invasion unit
+  files noted at 0528 are gone from the inbox (zero zombie files),
+  no tooling issue owed. VPS SSH still Permission denied
+  (publickey), about 89 hours into the break; Mac mini still
+  OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15), about 24h49m
+  Nov 16). Delivery PARTIAL: record committed locally on
+  ticker-0604-1116-delivery, UNPUSHED, push pending VPS recovery;
+  mirror copy plus identical backup in the goal hidden_files. No Slack
+  sync. Chat report owed per the ticker rule (previous pass also
+  access-failed); this pass's final message carries it.
+  Record: mail-rewards/0604-queue-run.md.
 ## 05:45 to about 05:58 - PR integration 0545 run, FAILED (VPS SSH unreachable)
 
 - PR-integrator pass pr-integration-2026-11-16-0545.
