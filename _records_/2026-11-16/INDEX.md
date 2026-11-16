@@ -1188,3 +1188,39 @@ Record: knowledge-organization/0332-run.md.
   on local planner-0640-1116-delivery, no PR for
   records/2026-11-16.
   Record: queue-planning/0640-run.md.
+## 07:34 to about 07:55 - Ticker pass ticker-0734
+
+- Ticker pass ticker-0734 - failed, 1 unit: radar
+  unit radar-2026-11-16-0603 failed on the offline Mac (8 device
+  probes: device.list, device.describe on the Mac and its recovery
+  device, connection.health on the Mac x3 node_offline,
+  connection.repair and connection.health on the recovery device both
+  25s timeouts, no wake-up path; no radar work, no claims, nothing
+  spent; tracker untouched; pass stopped after this unit rather than
+  cascading failed units). Eighteenth consecutive ticker pass to fail
+  on the offline Mac (2143, 2204, 2234, 2304, 2334, 0004, 0112, 0134,
+  0204, 0234, 0304, 0334, 0404, 0528, 0604, 0634, 0704 before it).
+  Own PRs re-checked via the GitHub connector (#711, #708, #425 only,
+  heads and updated_at unchanged since Nov 12, none owned by this job;
+  no PR for records/2026-11-16; no new comments). Sync reaped 0
+  expired 0 due 24 produced 2 (research-2026-11-16-0603,
+  building-queues-2026-11-16-0603), already queued 21; completion
+  marker reaped: harvest-2026-11-16-0603; branch reconcile skipped
+  (remote ref missing, issue #446); roster stale warning for
+  zombie-invasion (issue #198). First worktree under /tmp refused by
+  the tool (issue #429); recreated under
+  ~/workspace/lastwar-worktrees/. Zombie seeding no-op, chain
+  zombie-2026-11-10 already holds a pending unit and the Glacieradon
+  event ended Nov 14. Duel day 1 Radar Training release posture read
+  from tools/duel.py (claims score +30,000 per task) - the release
+  stays missed while the Mac is offline; the duel day runs until 18:00
+  PT Nov 16, so the window is still open. VPS SSH still Permission
+  denied (publickey), about 91.2 hours into the break; Mac mini still
+  OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15), about 26h35m
+  stale. Missed integrator batches stay 23 (next batch point 11:00 PT
+  Nov 16). Delivery PARTIAL: record committed locally on
+  ticker-0734-1116-delivery, UNPUSHED, push pending VPS recovery;
+  mirror copy plus identical backup in the goal hidden_files. No Slack
+  sync. Chat report owed per the ticker rule (previous pass also
+  access-failed); this pass's final message carries it.
+  Record: radar-tasks/0734-queue-run.md.
