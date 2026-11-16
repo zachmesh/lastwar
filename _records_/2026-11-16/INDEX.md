@@ -810,3 +810,71 @@ Record: knowledge-organization/0332-run.md.
   delivery owed at VPS recovery. Quiet run: no Slack sync, no chat
   report.
   Record: pr-catchall/0439-run.md.
+
+## 05:32 to about 05:41 - Knowledge organization pass
+
+- 05:32 PT, knowledge-organizer 0532 run - NO-OP. Own PRs
+  first: PR 711/708/425 re-verified via the authenticated
+  GitHub connector, heads and updatedAt unchanged since
+  the 0432 pass (711 e3c3dfd0, 2026-11-12T20:04:57Z) - no
+  new review or comment; the 1145 integrator review still
+  holds PR 711 on one fixable item, reply draft stays
+  unposted until the VPS returns. Knowledge issues: 41
+  open, newest #595 2026-11-12T14:11:46Z, unchanged.
+  Three records newer than the 0432 close read in full -
+  queue-planning 0440 (partial, 1 staged, 25th
+  consecutive planner commit failure; done-files tally
+  now 164 by finished_at; new note: ticker-0404 evidence
+  file survivor-intake/0404-queue-run.md absent from the
+  live tree), pr-catchall 0439 (84th blocked pass, issues
+  138, missed batches 22; NEW CHAIN GAP: no 0339 record
+  for 2026-11-16), pr-integration 0430 (FAILED, 84th
+  consecutive failure, checker NOT DUE, missed batches
+  22; git status anomaly now 2204 lines; committed
+  locally, UNPUSHED) - none carries foldable play
+  learning. No ticker record newer than 0404 exists. No
+  profile updated, no contradiction resolved, no stale
+  item marked, no gap filed. Folding watermark unchanged
+  (e5be6134d3). VPS SSH still Permission denied
+  (publickey), about 88h50m into the outage; Mac mini
+  still OFFLINE, last_seen frozen 13:19:56Z (05:19 PT
+  Nov 15), about 24h21m stale, twenty-fourth consecutive
+  offline reading. Missed batches stay 22 (next batch
+  point 07:00 PT Nov 16). Delivery BLOCKED: record in
+  local mirror only with an identical backup in the goal
+  hidden_files; records-branch delivery owed at VPS
+  recovery. No Slack sync. No chat report.
+  Record: knowledge-organization/0532-run.md.
+
+## 05:28 to about 05:47 - Ticker pass ticker-0528
+
+- Ticker pass ticker-0528 - failed, 1 unit: training
+  unit training-2026-11-16-0203 failed on the offline Mac (5 device
+  probes all node_offline, no wake-up path; no training work, no
+  claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Fourteenth consecutive ticker
+  pass to fail on the offline Mac (2143, 2204, 2234, 2304, 2334, 0004,
+  0112, 0134, 0204, 0234, 0304, 0334, 0404 before it). Own PRs re-checked
+  via the public GitHub REST API (#711, #708, #425 only, all mergeable
+  and clean, heads and updated_at unchanged since Nov 12, none owned by
+  this job; no PR for records/2026-11-15 or records/2026-11-16; newest
+  comments read - #711 note is for the integrator and the next
+  knowledge-organizer run, #425 notes are Nov 8 and superseded, #708
+  has none). Sync reaped 0 expired 0 due 22 produced 0; completion
+  marker reaped: survivors-2026-11-16-0203; zombie seeding no-op,
+  Glacieradon ended Nov 14. Duel day 1 Radar Training release posture
+  read from tools/duel.py (claims score +30,000 per task) - the release
+  stays missed while the Mac is offline; the duel day runs until 18:00
+  PT Nov 16, so the window is still open. VPS SSH still Permission
+  denied (publickey), about 89 hours into the break; Mac mini still
+  OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15), about 24h15m
+  stale. Missed integrator batches stay 22 (next batch point 07:00 PT
+  Nov 16). NEW: ten empty 0-byte zombie-invasion unit files sit in the
+  inbox (zombie-2026-11-10-028 through -037); sync never reaps them -
+  tooling issue owed at VPS recovery, closest existing #705. Delivery
+  PARTIAL: record committed locally on ticker-0528-1116-delivery,
+  UNPUSHED, push pending VPS recovery; mirror copy plus identical
+  backup in the goal hidden_files. No Slack sync. Chat report owed per
+  the ticker rule (previous pass also access-failed); this pass's final
+  message carries it.
+  Record: troop-training/0528-queue-run.md.
