@@ -1916,3 +1916,25 @@ Record: knowledge-organization/0332-run.md.
   (previous pass also access-failed); this pass's final message
   carries it.
   Record: radar-tasks/1236-queue-run.md.
+## 12:32 to about 12:45 - Tool development 1232 run, NO-OP (VPS SSH unreachable)
+
+- Tool-developer pass tool-development-2026-11-16-1232. NO-OP:
+  VPS SSH returns "Permission denied (publickey)" - the
+  2026-11-12 ~/.ssh loss is still unrepaired (owner chose
+  the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 43h). No code change, no branch, no PR.
+  Read-only verification via public GitHub page reads and
+  local branch-tip checks only. Open PRs 711/708/425 all
+  unchanged since the 0232 run; own PR #425 (head 4f41cdd6,
+  updated 2026-11-12T19:29:37Z) still owner-gated on
+  OD-20261108-01 (re-read on current main this run, still
+  open, no decision line), no author action owed. Top
+  tooling issues already implemented on local branches
+  awaiting the same blocked route: #709 on
+  work/pass-worktree-base-709 (cff911b5db) and #712 on
+  work/plan-expired-chain-dedupe-712 (b3d25979fc), both
+  unmoved, neither pushed, no PR open for either. Main
+  frozen since 2026-11-12 (a858a0fca8). This record
+  committed locally only on records/2026-11-16, UNPUSHED -
+  push via the standard VPS route once SSH returns. Status:
+  no-op. Full detail in tool-development/1232-run.md.
