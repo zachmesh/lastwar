@@ -365,3 +365,13 @@ of 2026-10-28.
   records/2026-11-15, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed. Full detail
   in pr-integration/1630-run.md.
+
+- 16:44 PT, daily-activities 1644 run - failed, Mac mini offline
+  again (last seen 05:19 PT, 5 device probes all node_offline,
+  no wake-up path); zero-sweep-2026-11-15-1630 failed, no sweep,
+  nothing spent; tracker untouched; pass stopped after this unit
+  rather than cascading failed units; own PRs re-checked live via
+  public API: #711, #708, #425 open, none owned by this job, no PR
+  for records/2026-11-15; zombie seeding no-op, Glacieradon ended;
+  VPS SSH still down so push/PR impossible, commit stays local.
+  Record: daily-activities/1644-queue-run.md.
