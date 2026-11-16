@@ -367,3 +367,130 @@ description: Day record for 2026-11-16 (America/Los_Angeles) - Mac mini still of
   records/2026-11-16, UNPUSHED - push via the
   standard VPS route once SSH returns. Status:
   failed. Full detail in pr-integration/0230-run.md.
+## 02:04 to about 02:12 - Ticker pass ticker-0204
+
+- Ticker pass ticker-0204 - failed, 1 unit: mail
+  unit mail-2026-11-15-2230 failed on the offline Mac (3 device
+  probes all node_offline, no wake-up path; no mail work, no
+  claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Ninth consecutive ticker
+  pass to fail on the offline Mac (2143, 2204, 2234, 2304, 2334, 0004,
+  0112, 0134 before it). Own PRs re-checked via the GitHub connector
+  (#711, #708, #425 only, heads and updated_at unchanged since Nov
+  12, none owned by this job; no PR for records/2026-11-15 or
+  records/2026-11-16; PR comment reads unavailable - pull_request_read
+  is a write-permission tool on the live MCP server and the list
+  comments field returns null). Sync reaped 0 expired 1 due 22
+  produced 0; zombie seeding no-op, Glacieradon ended Nov 14. Duel
+  day 1 Radar Training release posture read from tools/duel.py (claims
+  score +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window is
+  still open. VPS SSH still Permission denied (publickey), about 85.4
+  hours into the break; Mac mini still OFFLINE, last_seen frozen
+  13:19:56Z (05:19 PT Nov 15), about 20h48m stale. Missed batches stay
+  21 (next batch point 03:00 PT Nov 16). Delivery BLOCKED: record in
+  local mirror only with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack sync. Chat
+  report owed per the ticker rule (previous pass also access-failed);
+  this pass's final message carries it.
+  Record: mail-rewards/0204-queue-run.md.
+
+## 02:26 to about 02:31 - PR catch-all pass
+
+- 02:26 PT, pr-catchall 0139 run - blocked delivery, 82nd consecutive
+  blocked catch-all pass: VPS SSH still Permission denied (publickey),
+  about 85.7 hours into the outage; IONOS console recovery chosen
+  17:37 PT Nov 14 still not effective about 32.8 hours later. Open PRs
+  711, 708, 425 all unchanged since the Nov 12 1239 pass (heads and
+  updatedAt identical, Owner lines re-verified live via the GitHub
+  connector: knowledge-organizer / integrator / tool-developer); none
+  owned by this job. PR 137 stays merged (live re-verified via REST,
+  closed 2026-11-02T01:48:35Z by zachmesh). Issues: 138 total, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335, 514,
+  517 all unchanged. Pagination correction: list_issues pages with
+  after, not cursor (cursor is silently ignored and returns page 1
+  again). No adoptions, fixes, replies, or hand-offs. No new
+  stale-owner flag; three already in force (708, 425, 711).
+  Missed batches stay 21 (no batch point in this window, next 03:00
+  PT). Record is local mirror only with an identical backup in the
+  goal hidden_files; records-branch delivery owed at VPS recovery.
+  Quiet run: no Slack sync, no chat report.
+  Record: pr-catchall/0139-run.md.
+
+## 02:32 to about 02:35 - Knowledge organization pass
+
+- 02:32 PT, knowledge-organization 0232 run - NO-OP: own PR 711
+  re-verified via the authenticated GitHub connector, OPEN, head
+  e3c3dfd0, updated_at 2026-11-12T20:04:57Z, unchanged; PRs 708 and
+  425 likewise unchanged; knowledge issues 41 open, newest update
+  #595 2026-11-12T14:11:46Z, unchanged. Five records read in full
+  (pr-catchall 0139, queue-planning 0040, arms-race 0134,
+  mail-rewards 0204, pr-integration 0130 via its hidden_files
+  backup) - no foldable play learning; every run since 2026-11-12
+  reports only the VPS transport break and the Mac mini offline
+  state. NEW this pass: the pr-integration 0130 record has no
+  mirror copy in _records_/2026-11-16/pr-integration/ (only its
+  hidden_files backup exists) though it states it was committed to
+  the records/2026-11-16 branch worktree - carried for the
+  retro/integrator. VPS SSH still Permission denied (publickey),
+  about 85h45m into the outage; IONOS console recovery chosen
+  17:37 PT Nov 14 still not effective about 33 hours later. Mac
+  mini still OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15),
+  about 21h14m stale, twenty-first consecutive offline reading.
+  Missed batches stay 21 (next batch point 03:00 PT Nov 16).
+  Delivery BLOCKED: record in local mirror only with an identical
+  backup in the goal hidden_files; records-branch delivery owed at
+  VPS recovery. No Slack sync. Chat report: none.
+  Record: knowledge-organization/0232-run.md.
+
+## 02:34 to about 02:41 - Ticker pass ticker-0234
+
+- Ticker pass ticker-0234 - failed, 1 unit: passes
+  unit passes-2026-11-15-2257 failed on the offline Mac (3 device
+  probes all node_offline, no wake-up path; no shop work, no
+  claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Tenth consecutive ticker
+  pass to fail on the offline Mac (2143, 2204, 2234, 2304, 2334, 0004,
+  0112, 0134, 0204 before it). Own PRs re-checked via the GitHub connector
+  (#711, #708, #425 only, heads and updated_at unchanged since Nov
+  12, none owned by this job; no PR for records/2026-11-15 or
+  records/2026-11-16; PR comment reads unavailable - pull_request_read
+  is a write-permission tool on the live MCP server and the list
+  comments field returns null). Sync reaped 0 expired 5 due 22
+  produced 0; zombie seeding no-op, Glacieradon ended Nov 14. Duel
+  day 1 Radar Training release posture read from tools/duel.py (claims
+  score +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window is
+  still open. VPS SSH still Permission denied (publickey), about 85.9
+  hours into the break; Mac mini still OFFLINE, last_seen frozen
+  13:19:56Z (05:19 PT Nov 15), about 21h20m stale. Missed batches stay
+  21 (next batch point 03:00 PT Nov 16). Delivery BLOCKED: record in
+  local mirror only with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack sync. Chat
+  report owed per the ticker rule (previous pass also access-failed);
+  this pass's final message carries it.
+  Record: shop-claims/0234-queue-run.md.
+
+## 02:47 to about 02:55 - Queue planning pass
+
+- 02:40 PT, queue-planning 0240 run - partial, 12 units staged
+  (1403/1430 slots; 61 already present), 0 reaped, 0
+  expired; skipped_closed [passes-2026-11-15-2257]; sweep
+  production not due (0240 slot) - tonight's pair not yet
+  produced, due at the 17:00-hour run; last night's pair
+  both passes done unexecuted (1630 failed on offline Mac,
+  1730 expired) - second consecutive missed pre-reset zero
+  sweep; scout diff on the 2026-11-11 observation applied
+  with 0 counts (52 observed, 11 unexplained red dots); 0
+  withdrawals; no new issues. Pool inbox 72, claimed 0,
+  done 2177; newest finished 02:39 PT is a FAILED passes
+  unit (ticker-0234, Mac mini offline, last_seen 05:19 PT)
+  - tenth consecutive ticker pass to fail on the offline
+  Mac; 157 done files since Nov 14 18:35 PT by finished_at
+  (132 expired, 25 failed, 0 done) - the 0040 run's 225 does
+  not reproduce under any counting method, flagged for the
+  retro. Twenty-third consecutive planner run failing to
+  commit - VPS SSH Permission denied (publickey), commit
+  left on local planner-0240-1116-delivery, no PR for
+  records/2026-11-16.
+  Record: queue-planning/0240-run.md.
