@@ -902,6 +902,22 @@ Record: knowledge-organization/0332-run.md.
   sync. Chat report owed per the ticker rule (previous pass also
   access-failed); this pass's final message carries it.
   Record: mail-rewards/0604-queue-run.md.
+- Ticker pass ticker-0634 - failed, 1 unit: passes
+  unit passes-2026-11-16-0257 failed on the offline Mac (7 device
+  probes: device.list, device.describe, connection.health on the Mac
+  node_offline, connection.repair and connection.health on the
+  recovery device both 25s timeouts, no wake-up path; no passes work,
+  no claims, nothing spent; tracker untouched; pass stopped after this
+  unit rather than cascading failed units). Sixteenth consecutive ticker
+  0112, 0134, 0204, 0234, 0304, 0334, 0404, 0528, 0604 before it). Own PRs re-checked
+  records/2026-11-16; no new comments). Sync reaped 0 expired 5 due 22
+  produced 0; expired units: train, star-ceremony, help, gifts and
+  duel-score 0230; completion marker reaped: mail-2026-11-16-0230;
+  still open. VPS SSH still Permission denied
+  (publickey), about 90 hours into the break; Mac mini still
+  OFFLINE, last_seen frozen 13:19:56Z (05:19 PT Nov 15), about 25h30m
+  ticker-0634-1116-delivery, UNPUSHED, push pending VPS recovery;
+  Record: shop-claims/0634-queue-run.md.
 ## 05:45 to about 05:58 - PR integration 0545 run, FAILED (VPS SSH unreachable)
 
 - PR-integrator pass pr-integration-2026-11-16-0545.
