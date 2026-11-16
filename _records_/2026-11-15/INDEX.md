@@ -479,3 +479,31 @@ of 2026-10-28.
   records/2026-11-15, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed. Full detail
   in resource-collection/1713-queue-run.md.
+
+- 17:38 PT, PR integration 1738 run - FAILED (VPS SSH unreachable)
+  - Integrator pass pr-integration-2026-11-15-1738. FAILED:
+  VPS SSH returns "Permission denied (publickey)" - the
+  2026-11-12 ~/.ssh loss is still unrepaired (owner chose
+  the IONOS-console recovery on 2026-11-14, not yet
+  landed, ~2 days later). No merge, comment, checker run
+  on the VPS or records push was possible. Seventy-third
+  consecutive failed integrator pass for the same break;
+  outage now about 77.0 hours. Checker gate
+  _tools_/records_batch.py run locally from a fresh main
+  clone - NOT DUE (exit 1, outside every batch window,
+  next batch 19:00 PT) - non-batch pass; the 15:00 batch
+  was counted as the nineteenth missed batch at the 1542
+  pass. Read-only verification via the public GitHub API
+  and a local HTTPS clone: open PRs 708 (records
+  2026-11-12, head 2f59c270, mergeable clean, batch pass
+  missed at 1542), 711 (knowledge, head e3c3dfd0
+  unchanged, held by the 1145 review on amending the
+  superseded #705 lines per PR 710, mergeable clean),
+  425 (tools, head 4f41cdd6a unchanged, still owner-gated
+  OD-20261108-01, no owner decision, mergeable clean).
+  Main frozen at a858a0fca (PR 710, 2026-11-12 11:52 PT).
+  No records branch after 2026-11-12; no new records PR
+  to open. This record committed locally only on
+  records/2026-11-15, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed. Full detail
+  in pr-integration/1738-run.md.
