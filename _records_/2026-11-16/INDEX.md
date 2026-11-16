@@ -35,3 +35,25 @@ of 2026-10-28.
   records/2026-11-16, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: no-op. Full detail
   in tool-development/0039-run.md.
+
+## 01:32 to about 01:44 - Tool development 0132 run, NO-OP (VPS SSH unreachable)
+
+- Tool-developer pass tool-development-2026-11-16-0132. NO-OP:
+  VPS SSH returns "Permission denied (publickey)" - the
+  2026-11-12 ~/.ssh loss is still unrepaired (owner chose
+  the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 32h). No code change, no branch, no PR.
+  Read-only verification via GitHub connector reads and
+  local branch-tip checks only. Open PRs 711/708/425 all
+  unchanged since the 0039 run 53 minutes earlier; own PR
+  #425 (head 4f41cdd6, updated 2026-11-12T19:29:37Z) still
+  owner-gated on OD-20261108-01, no author action owed.
+  Top tooling issues already implemented on local
+  branches awaiting the same blocked route: #709 on
+  work/pass-worktree-base-709 (cff911b5db) and #712 on
+  work/plan-expired-chain-dedupe-712 (b3d25979fc), both
+  unmoved, neither pushed, no PR open for either. Main
+  frozen since 2026-11-12. This record committed locally
+  only on records/2026-11-16, UNPUSHED - push via the
+  standard VPS route once SSH returns. Status: no-op. Full
+  detail in tool-development/0132-run.md.
