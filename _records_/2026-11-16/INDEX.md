@@ -2367,3 +2367,38 @@ Record: knowledge-organization/0332-run.md.
   ticker rule (previous pass also access-failed); this pass's final
   message carries it.
   Record: daily-missions/1501-queue-run.md.
+## 14:59 to about 15:12 - PR integration 1500 run, FAILED (VPS SSH unreachable; checker NOT DUE at pass start, non-batch pass, missed batches stay 24)
+
+- PR-integrator pass pr-integration-2026-11-16-1500.
+  FAILED: VPS SSH returns "Permission denied (publickey)" -
+  the 2026-11-12 ~/.ssh loss is still unrepaired (owner
+  chose the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 45.5 hours). Ninety-second consecutive
+  failed integrator pass, about 98.4h into the outage. No
+  merges, no comments, no records PR opened. Checker
+  _tools_/records_batch.py (local fallback from main
+  a858a0fca) reports NOT DUE at the trigger time
+  14.45.54 PT and at execution start 14.59.23 PT - this
+  pass is a NON-batch pass, so no records merge was owed
+  and missed batches stay 24; the clock-time reading
+  taken after the 15.00 point passed during the pass says
+  DUE, but it does not govern this pass - the next pass
+  will be the 15.00 batch pass. Open PRs 711/708/425
+  unchanged since Nov 12 (heads e3c3dfd0, 2f59c270,
+  4f41cdd6); merge-tree exit 0 for all three against main
+  a858a0fca (trees f46bfda1, e05ec8b5, 08e8515a, identical
+  to all prior probes). PR comments read directly from
+  the public REST API this pass: 711 newest is the
+  2026-11-12 integrator review, 708 has none, 425 newest
+  is the 2026-11-12 1126 re-verification - nothing new
+  addressed to this pass. PR 711 feedback stands (no
+  repeat comment due); PR 425 still owner-gated
+  (OD-20261108-01 open, re-read stands from the 1232
+  tool-development run today). Records branches: 13 via
+  ls-remote, latest records/2026-11-12, none for 11-13
+  to 11-16 on the remote, so no new records PR. Mac mini
+  still offline (last_seen 05:19 PT Nov 15, about 33h48m
+  stale per the ticker-1501 entry). This record committed
+  locally on records/2026-11-16, UNPUSHED - push via the
+  standard VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/1500-run.md.
