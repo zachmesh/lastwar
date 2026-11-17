@@ -3177,3 +3177,37 @@ Record: knowledge-organization/0332-run.md.
   26, the 19:00 batch missed. Record committed locally on
   ticker-1949-1116-delivery, UNPUSHED, push pending VPS recovery.
   Record: resource-collection/1949-queue-run.md.
+## 20:49 to about 20:54 - PR integration 2045 run, FAILED (VPS SSH unreachable; checker NOT DUE, non-batch pass, missed batches stay 26)
+
+- PR-integrator pass pr-integration-2026-11-16-2045.
+  FAILED: VPS SSH returns "Permission denied (publickey)" -
+  the 2026-11-12 ~/.ssh loss is still unrepaired (owner
+  chose the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 104 hours). Ninety-seventh
+  consecutive failed integrator pass. No merges, no
+  comments, no records PR opened. Checker
+  _tools_/records_batch.py (local fallback from main
+  a858a0fca) reports NOT DUE at the trigger time
+  20.45.54 PT, at clock time about 20.51 PT and
+  merge-aware - non-batch pass (the 19.00 window closed
+  at 20.00 PT, before the trigger fired), so no batch
+  merge was owed and missed batches stay 26; next batch
+  point 23.00 PT. Open PRs 711/708/425 unchanged since
+  Nov 12 (heads e3c3dfd0, 2f59c270, 4f41cdd6); merge-tree
+  exit 0 for all three against main a858a0fca (trees
+  f46bfda1, e05ec8b5, 08e8515a, identical to all prior
+  probes). PR comment detail not re-read this pass
+  (connector rejects the read tool); newest-comment
+  facts carried forward from the 1715 REST read,
+  verified only by unchanged updated_at and head SHAs -
+  nothing new addressed to this pass. PR 711 feedback
+  stands (no repeat comment due); PR 425 still
+  owner-gated (OD-20261108-01 open, re-read stands from
+  the 0015 pass). Records branches: 13 via ls-remote,
+  latest records/2026-11-12, none for 11-13 to 11-16 on
+  the remote, so no new records PR. Mac mini still
+  offline (last_seen 05:19 PT Nov 15, about 39h30m
+  stale). This record committed locally on
+  records/2026-11-16, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/2045-run.md.
