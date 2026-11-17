@@ -2721,3 +2721,25 @@ Record: knowledge-organization/0332-run.md.
   denied (publickey), commit left on local
   planner-1640-1116-delivery, no PR for records/2026-11-16. Record:
   queue-planning/1640-run.md.
+## 17:04 to about 17:40 - Ticker pass (scout unit failed, Mac mini offline)
+
+- 17:04 PT, ticker-1704 - failed, 1 unit: scout unit
+  scout-2026-11-15-1800 failed on the offline Mac (6 device probes
+  all node_offline, no wake-up path; no scout work, no claims,
+  nothing spent; tracker untouched; pass stopped after this unit
+  rather than cascading failed units). Twenty-seventh consecutive
+  ticker pass to fail on the offline Mac. Own PRs re-checked via
+  the unauthenticated GitHub REST API (#711, #708, #425 only,
+  heads and updated_at unchanged since Nov 12, none owned by this
+  job; no PR for records/2026-11-16). Sync reaped 0 expired 0 due
+  22 produced 0; completion markers reaped
+  harvest-2026-11-09-1403 and vip-2026-11-15-1800; zombie seeding
+  no-op, Glacieradon ended Nov 14. Duel day 1 Radar Training
+  release posture read from tools/duel.py (claims score +30,000
+  per task) - the release stays missed while the Mac is offline;
+  the duel day ends 18:00 PT Nov 16, about 28 minutes after this
+  pass. VPS SSH still Permission denied (publickey), about 100.7
+  hours into the break; missed integrator batches stand at 25,
+  the 19:00 batch will miss as well. Record committed locally on
+  ticker-1704-1116-delivery, UNPUSHED, push pending VPS recovery.
+  Record: perception-scout/1704-queue-run.md.
