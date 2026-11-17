@@ -1139,3 +1139,33 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   planner-0640-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17.
   Record: queue-planning/0640-run.md.
+## 07:22 to about 07:35 - Queue ticker pass (PROCESS FAILURE, R2 fourth occurrence)
+
+- 07:22 PT 2026-11-17, ticker-0722 - PROCESS FAILURE (not a
+  routine failed unit): the fullscreen-Space window-loss blocker
+  hit for the FOURTH consecutive ticker pass (0333 harvest 03:33,
+  0443 radar 04:43, 0534 help 06:06, now this probe). Mac mini
+  ONLINE, LastWar running (com.lastwar.ios), but three fresh
+  sessions (cc-14, cc-15, cc-16) all failed identically -
+  list_windows twice shows the same 10 windows with no LastWar
+  entry, screen.snap observation_unavailable, Finder window 28
+  activate refused geometry_mismatch (channel cannot bind ANY
+  window), open_app "LastWar" outcome_unknown with no window
+  appearing. Green zoom button not clicked; Mission Control pivot
+  not retried (0443 already failed it). No unit claimed, no unit
+  executed, nothing claimed or spent; token held 07:23-07:33 PT
+  and released. The owner was already told after the 2nd and 3rd
+  occurrences to exit fullscreen or restart the game at the Mac;
+  no recovery evidence as of 07:33 PT, and no game unit has run
+  since ticker-0214 gifts at 02:14 PT (176 Regular + 67 Premium).
+  Stalled priority-1 vip-2026-11-16-1800 (25.0h, reset-day window
+  expired 19:00 PT Nov 16, freebie lost). Sync: reaped 0, expired
+  1 (scout-midday-2026-11-16-0700), due 22, produced 0; zombie
+  chain stays closed. Own PRs re-verified via public list: #711,
+  #708, #425 only, none owned by this job. Tooling Issue filing
+  still owed at VPS recovery. Delivery blocked - VPS SSH still
+  Permission denied (publickey), about 114.3 hours into the
+  outage; record committed locally only on
+  ticker-0722-1117-delivery, UNPUSHED, push pending VPS recovery.
+  No PR opened for records/2026-11-17.
+  Record: queue-ticker/0722-process-failure.md.
