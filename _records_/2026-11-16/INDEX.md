@@ -3007,3 +3007,25 @@ Record: knowledge-organization/0332-run.md.
   locally on records/2026-11-16, UNPUSHED - push via the
   standard VPS route once SSH returns. Status: failed.
   Full detail in pr-integration/1830-run.md.
+## 18:37 to about 18:47 - Ticker pass (passes unit failed, Mac mini offline)
+
+- 18:37 PT, ticker-1842 - failed, 1 unit: passes unit
+  passes-2026-11-16-1457 failed on the offline Mac (5 device probes
+  all node_offline, no wake-up path; no passes work, no claims,
+  nothing spent; tracker untouched; pass stopped after this unit
+  rather than cascading failed units). Twenty-eighth consecutive
+  ticker pass to fail on the offline Mac. Own PRs re-checked via
+  the unauthenticated GitHub REST API (#711, #708, #425 only,
+  heads and updated_at unchanged since Nov 12, none owned by this
+  job; no PR for records/2026-11-16). Sync reaped 0 expired 0 due
+  22 produced 0; completion markers reaped
+  scout-2026-11-15-1800; zombie seeding no-op, event ended (live
+  check by unit 037 on Nov 15). Duel day 2 Base Expansion read
+  from tools/duel.py (radar posture STACK, do NOT claim; UR trucks
+  100,000 each; day ends 18:00 PT Nov 17); duel day 1 Radar
+  Training RELEASE window closed 18:00 PT Nov 16 with the whole
+  day missed. VPS SSH still Permission denied (publickey), about
+  101.9 hours into the break; missed integrator batches stand at
+  25, the 19:00 batch will miss as well. Record committed locally
+  on ticker-1842-1116-delivery, UNPUSHED, push pending VPS
+  recovery. Record: shop-claims/1842-queue-run.md.
