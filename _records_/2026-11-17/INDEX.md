@@ -1640,3 +1640,29 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   committed locally only on planner-0940-1117-delivery,
   UNPUSHED, push pending VPS recovery. No PR opened for
   records/2026-11-17. Record: queue-planning/0940-run.md.
+## 10:04 to about 10:15 - Queue ticker pass (failed unit, VPS SSH down)
+
+- 10:04 PT 2026-11-17, ticker-1004 - help unit failed (NINTH
+  consecutive occurrence of the fullscreen-Space window loss):
+  Mac mini online, LastWar process running but no window;
+  open_app LastWar three times (outcome_unknown, no window
+  after 15 and 20 second waits), activate twice
+  (ax_windows_empty, second time in a fresh session cc-24),
+  observe and screen.snap observation_unavailable; green zoom
+  button untouched. No game screen reached, no Help All
+  pressed, nothing claimed or spent. Unit
+  help-2026-11-17-0630 completed FAILED (blocker_category e);
+  tracker untouched. No game unit has executed since
+  ticker-0214 gifts at 02:14 PT, about eight hours of routine
+  now missed. Sync: reaped 0, expired 5, due 22, produced 0,
+  already queued 22; pool inbox 71, claimed 0, done 2314.
+  Zombie chain stays closed (event ended 2026-10-30). Own PRs:
+  VPS gh check impossible (SSH Permission denied); public PR
+  list re-read 18:13Z - exactly three open PRs (#711, #708,
+  #425), none owned by this job, no PR for records/2026-11-17.
+  Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 117 hours into the outage; record
+  committed locally only on ticker-1004-1117-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-17. Record:
+  alliance-help/1004-queue-run.md.
