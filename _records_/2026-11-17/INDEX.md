@@ -928,3 +928,75 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   planner-0540-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17.
   Record: queue-planning/0540-run.md.
+## 05:39 to about 05:56 - PR catch-all pass (blocked-delivery, VPS SSH down)
+
+- 05:39 PT 2026-11-17, pr-catchall 0539 - blocked-delivery:
+  106th consecutive blocked pass. VPS SSH still Permission
+  denied (publickey), about 113.1 hours into the break (IONOS
+  console route chosen 2026-11-14 17:37 PT still not complete
+  about 60.3 hours later). Read-only pass via the authenticated
+  GitHub connector: exactly three open PRs, all unchanged since
+  the 0439 pass - 711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0), 708 (records
+  2026-11-12, Owner lastwar-pr-integrator, head 2f59c270), 425
+  (tools log gate, Owner lastwar-tool-developer, head 4f41cdd6,
+  still owner-gated on OD-20261108-01, tenth day). PR 137 stays
+  merged (live re-verified 0139 pass). Open issues fully
+  re-read in 5 pages (30+30+30+30+18 = 138 real issues,
+  totalCount 138): zero unclassified, newest #712, latest
+  update 2026-11-12T20:11:54Z, nothing updated after
+  2026-11-12T20:44:37Z. Owner-decision issues 132, 154, 335,
+  514, 517 all unchanged and all waited over 24 hours (oldest
+  since 2026-11-02); statements current, no re-labelling, no
+  shepherd comment (read-only fallback). No adoption, fix,
+  reply, hand-off or new stale-owner flag; the 708 / 425 / 711
+  flags remain in force. Missed batches stay 28 (next batch
+  point 07:00 PT); chain gaps stay FIVE. Pending mirror-only
+  catchall records now 106. No Slack sync, quiet run, silent
+  in chat. Record is a LOCAL MIRROR COPY ONLY; records-branch
+  delivery blocked until VPS SSH is restored.
+  Record: pr-catchall/0539-run.md.
+
+## 06:06 to about 06:15 - Ticker pass ticker-0534 (failed unit, delivery blocked)
+
+- 06:06 PT 2026-11-17, ticker-0534 - 1 unit failed, pass stops
+  after it: help-2026-11-17-0230 FAILED. Mac mini online
+  (device.list last_seen 2026-11-17T13:31:32Z), LastWar running
+  (com.lastwar.ios) but exposes no window - same fullscreen-Space
+  loss as ticker-0333 and ticker-0443. Two computer sessions
+  (cc-12, cc-13): list_windows twice (same 10 windows, no
+  LastWar), open_app "Last War" / "LastWar" / "Last War:
+  Survival", activate LastWar twice (ax_windows_empty),
+  observe and screen.snap observation_unavailable. NEW this
+  pass: the channel cannot bind ANY window now - Finder window
+  28 and Chrome window 125 also refuse with geometry_mismatch
+  (agent_display=false), and Ctrl+Right is refused for lack of
+  a bound target. No game screen reached, no Help All pressed,
+  nothing claimed, nothing spent. Token held 06:05-06:14 PT,
+  released.
+- R2 THIRD consecutive occurrence of this blocker (0333
+  harvest, 0443 radar, 0534 help): entry-route change - no
+  further game unit can run until the window is recovered
+  (owner action at the Mac: leave fullscreen via View menu /
+  Mission Control, or a fresh launch into a normal Space;
+  open_app relaunch already tried, no bound window); the
+  green zoom button must never be clicked. Metadata write
+  deferred with reason (blocker is cross-type, proper home is
+  a shared tier-2 entry-route note, cannot ride the tier-1
+  records commit) - owed to the retro / the tooling issue.
+  A fourth identical failure is a process failure to report
+  to the owner. Tooling issue filing still owed at VPS
+  recovery (class tooling, no number yet).
+- Sync: reaped 0, expired 4, due 22, produced 0, already
+  queued 22; markers reaped: radar-2026-11-17-0203. Stats:
+  inbox 69, claimed 0, done 2296; stalled priority-1:
+  vip-2026-11-16-1800 (age 23.7h). Zombie chain stays closed
+  (event ended 2026-10-30; last live check 2026-11-15, no
+  Zombie Invasion tab). Own PRs: VPS gh unreachable; public
+  PR list read instead - exactly three open PRs (#711, #708,
+  #425), none owned by this job, no PR for records/2026-11-17.
+  Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 113 hours into the outage; record
+  committed locally only on ticker-0534-1117-delivery,
+  UNPUSHED. No Slack sync.
+  Record: alliance-help/0606-queue-run.md.
