@@ -3728,3 +3728,118 @@ Record: knowledge-organization/0332-run.md.
   no chat report - quiet run. Record:
   knowledge-organization/2232-run.md (local mirror only).
 
+## 23:12 to about 23:20 - PR catch-all pass (read-only, VPS SSH down)
+
+- 23:12 PT, pr-catchall-2239 - blocked delivery, 100th consecutive
+  blocked catchall pass: VPS SSH still Permission denied
+  (publickey), about 106.4 hours into the break (IONOS console
+  route chosen 2026-11-14 17:37 PT still not complete). Read-only
+  pass via the authenticated GitHub connector only (no REST calls
+  spent - all three heads identical to the 2139 pass, so the files
+  lists verified then are unchanged by construction): exactly
+  three open PRs, all unchanged since the 1539 pass - 711
+  (knowledge fold, Owner lastwar-knowledge-organizer, head
+  e3c3dfd0), 708 (records 2026-11-12, Owner
+  lastwar-pr-integrator, head 2f59c270), 425 (tools log gate,
+  Owner lastwar-tool-developer, head 4f41cdd6); named owners
+  match diffs, nothing adoptable, no owned PR (PR 137 stays
+  merged, live re-verified in the 2139 pass one hour earlier and
+  corroborated by zero repo activity since 2026-11-12T20:44:37Z).
+  138 real open issues, zero unclassified, newest 712;
+  owner-decision issues 132, 154, 335, 514, 517 all unchanged
+  (updated_at identical to 1539 pass), statements current. The
+  23:00 PT batch point passed unexecuted in this window, so
+  missed batches rise to 27 (next 03:00 PT 2026-11-17). No new
+  stale-owner flag; the 708/425/711 flags remain in force. Chain
+  gaps stay four - 1639 on 2026-11-15, 0339, 0639 and 1839 on
+  2026-11-16 (1839 firm since the 2039 pass). Mac mini back
+  ONLINE per the queue-planning 2240 note (ticker-2236 ran live
+  22:36-23:00 PT). No adoption, fix, reply, hand-off, Slack sync
+  or chat report - quiet run. Record is a LOCAL MIRROR COPY ONLY;
+  records-branch delivery blocked until VPS SSH is restored.
+  Pending mirror-only catchall records now 96 in total (11-12:
+  11; 11-13: 23; 11-14: 19; 11-15: 23; 11-16: 20 incl. this one).
+  Record: pr-catchall/2239-run.md.
+
+## 23:32 to about 23:36 - Tool developer pass (NO-OP, VPS SSH down)
+
+- 23:32 PT, tool-development-2332 - NO-OP. Own PR 425 (tools log
+  gate, head 4f41cdd6ab, mergeable): open-PR list re-read via the
+  authenticated GitHub connector, head and updated_at
+  2026-11-12T19:29:37Z unchanged since the 2232 pass; still
+  owner-gated on OD-20261108-01, no author action. Open tooling
+  issues newest #712 (updated 2026-11-12T19:54:59Z) and #709
+  (updated 2026-11-12T19:41:23Z) unchanged; #712 already
+  implemented and held locally (branch
+  work/plan-expired-chain-dedupe-712 tip b3d25979fc, 3 files
+  +111/-3; bundle td-712.bundle intact), not re-taken. Main still
+  a858a0fca8. VPS SSH still Permission denied (publickey), about
+  106.8 hours into the break; no PR route. No code change, no PR,
+  no comment, no Slack sync - quiet run. Record:
+  tool-development/2332-run.md (local mirror only).
+
+## 23:32 to about 23:44 - Knowledge organization pass (FOLD, partial delivery)
+
+- 23:32 PT, knowledge-organizer-2332 - FOLD, partial
+  delivery: ticker-2236 passes + secrets folded into
+  shop-claims 1.57.0 and secret-missions 1.39.0
+  (commit 02f16c08, branch work/ko-2332-ticker-2236,
+  bundle ko-2332-profile.bundle verified); PR owed at
+  VPS recovery. Passes: check-in FREE GIFT unreachable,
+  Go button has no Accessibility element (tooling gap);
+  Events-screen follow-up NOT retried (Events-hub dead
+  end stands); monthly grid read red diamonds 1000 vs
+  100 before, flagged for re-read. Secrets: 7 tasks
+  claimed in one tap, about 35.9M Hero EXP; 3 of 10
+  tasks plundered; duel day 2 UR 75,000 each
+  re-confirmed, credit unverified. Own PRs 711/708/425
+  re-verified live unchanged; knowledge issues 41
+  unchanged. Mac mini online, last_seen fresh 07:31:15Z
+  - the 2232 reachability question is settled, the Mac
+  is executing. VPS SSH still Permission denied
+  (publickey), about 106.8h into the break; missed
+  batches 27. Slack sync sent to the owner's DM.
+  Record: knowledge-organization/2332-run.md (local
+  mirror only).
+
+- 23:48 PT, ticker-2348 - 1 unit: harvest partial. Mac mini online,
+  Last War driven live; base HUD read twice, unchanged (food
+  643.5M, iron 1.0G, coin 27.7M, power 149,482,045, stamina 88-89).
+  Two candidate icons tapped at measured centres and neither
+  collected: the yellow diamond over the right-side building and
+  the small yellow icon over the purple building are not ready
+  bubbles - the next harvest unit must not re-tap them. A deselect
+  tap after a camera pan opened a "want to retrait it?" confirm
+  dialog; Cancel tapped at once, nothing retreated or spent (rule
+  R2 lesson: never tap blind after a pan, re-ground first).
+  Full-base sweep and Armed Truck check unexecuted at the 15 minute
+  cap. Tracker untouched (partial). Own PRs re-checked via the
+  GitHub connector (#711, #708, #425 only, none owned by this job;
+  no PR for records/2026-11-16). Sync reaped 0 expired 0 due 22
+  produced 0; zombie seeding no-op, event ended. VPS SSH still
+  Permission denied (publickey), about 106.4 hours into the break;
+  no bundle, no push, no PR. Records committed locally on
+  ticker-2348-1116-delivery, UNPUSHED, push pending VPS recovery.
+  Record: resource-collection/2348-queue-run.md.
+
+## 00:15 to about 00:30 - Queue planning pass (partial delivery, VPS SSH down)
+
+- 23:40 PT, queue-planning 2340 run - partial, 0 units staged
+  (pool already fully staged through 2026-11-17 morning; 73
+  already present, 0 expired; skipped_closed
+  harvest-2026-11-16-2203, executed live by ticker-2348).
+  Sweep production not due (00:00-hour run); tonight's pair
+  already expired unexecuted in the 1740 run - third
+  consecutive missed pre-reset ledger walk. Scout diff on
+  the 2026-11-11 6-pass observation applied with 0 counts,
+  52 observed, 11 unexplained red dots (idempotent); 0
+  withdrawals. Pool by_state: inbox 72, claimed 0, done 2274.
+  Done files since Nov 14 18:35 PT: 254 (205 expired, 43 failed,
+  1 done, 5 partial). Mac mini online: ticker-2348 ran live
+  23:48-23:56 PT, harvest partial (0 bubbles, full sweep
+  unexecuted at the 15m cap). Push could not land -
+  VPS SSH Permission denied (publickey), about 107h into the
+  outage; commit left on planner-2340-1116-delivery, no PR
+  for records/2026-11-16. Forty-first consecutive planner run
+  failing to commit, so a Chinese chat report is owed.
+  Record: queue-planning/2340-run.md.
