@@ -476,6 +476,27 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   batches now 30, 11:00 batch missed). Open PRs 711/708/425
   carried forward from the 0945 pass, verified only by
   Full detail in pr-integration/1100-run.md.
+- 11:34 PT 2026-11-17, ticker-1134 - failed (twelfth consecutive
+  occurrence of the fullscreen-Space window loss): radar unit
+  radar-2026-11-17-1003 claimed 11:36 and completed failed
+  after 274 seconds; Mac mini online, LastWar running, but no
+  LastWar window in list_windows, open_app outcome_unknown
+  twice across two fresh sessions (cc-29, cc-30), activate
+  ax_windows_empty, and the R2 pivot (Finder/Chrome activate,
+  control-right Space switch) failed at window selection with
+  geometry_mismatch / observation_required - no input
+  dispatched. Duel day 2, Base Expansion, radar posture STACK,
+  never reached. No game unit has executed since ticker-0214
+  gifts at 02:14 PT, about nine and a half hours of routine
+  now missed. Sync: reaped 0, expired 0, due 22, produced 0,
+  already queued 21; zombie chain stays closed. Own PRs
+  re-read from the public GitHub page 19:36Z (#711/#708/#425,
+  none owned by this job). Delivery blocked - VPS SSH still
+  Permission denied (publickey), about 118.5 hours into the
+  outage; record committed locally only on
+  ticker-1134-1117-delivery, UNPUSHED, push pending VPS
+  recovery. No PR opened for records/2026-11-17. Record:
+  radar-tasks/1134-queue-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
