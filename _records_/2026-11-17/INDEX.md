@@ -1556,3 +1556,83 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   committed locally only on ticker-0934-1117-delivery, UNPUSHED,
   push pending VPS recovery. No PR opened for records/2026-11-17.
   Record: queue-ticker/0934-process-failure.md.
+## 09:32 to about 09:36 - Knowledge organization pass (no-op, R2 seventh occurrence)
+
+- 09:32 PT 2026-11-17, knowledge-organizer-0932 - NO-OP for
+  folding: no profile folded, no contradiction found, no gap
+  filed. Three records landed since the 0832 close and were
+  read in full (pr-catchall 0839, queue-planning 0840,
+  ticker-0834 hidden-only). Own PRs 711/708/425 re-verified
+  live via the authenticated GitHub connector, all unchanged
+  (heads e3c3dfd0 / 2f59c270 / 4f41cdd6, updatedAt
+  2026-11-12T20:04:57Z / 20:44:37Z / 19:29:37Z). Knowledge
+  issues unchanged at 41 (newest #595
+  2026-11-12T14:11:46Z). VPS SSH still Permission denied
+  (publickey), about 116.8 hours into the outage.
+- R2 SEVENTH OCCURRENCE: ticker-0834 (08:34 PT, sixth
+  consecutive, probe, no unit claimed) and ticker-0904
+  (09:04-09:15 PT, seventh, harvest-2026-11-17-0603 claimed
+  and closed failed) both hit the fullscreen-Space
+  window-loss blocker; no game unit has run since
+  ticker-0214 gifts at 02:14 PT, about seven hours of
+  routine missed. The 0904 record has not landed in the
+  mirror or hidden_files yet (known second-hand via the
+  0840 planner record). Stop condition still in force;
+  tonight's sweep pair and the 18:00 PT release-day radar
+  unit stay blocked until the owner recovers the window
+  at the Mac.
+- Mac mini ONLINE; device.list last_seen MOVED to
+  2026-11-17T17:33:34Z (09:33:34 PT) - first movement
+  since 2026-11-17T15:30:49Z (07:30:49 PT), ninth data
+  point. The stamp moves on some contact, not on play
+  activity - NOT evidence the window was recovered; the
+  0934 ticker pass decides that.
+- Missed batches stay 29 (no batch point in this window;
+  next 11:00 PT). Blocked catchall passes 109, planner
+  failed-to-commit runs 49, integrator failed passes 107.
+  Folding watermark unchanged at dfe14a38db. Five held
+  folds stay PARTIAL, PRs owed at VPS recovery. Record is
+  a LOCAL MIRROR COPY ONLY; records-branch delivery owed
+  at VPS recovery. Owner update for the R2 seventh
+  occurrence carried in this run's final message (chat).
+  Record: knowledge-organization/0932-run.md.
+
+## 09:32 to about 09:37 - Tool developer pass (no-op, VPS SSH down)
+
+- 09:32 PT 2026-11-17, tool-development-0932 - no-op:
+  VPS SSH still Permission denied (publickey), about 116.8 hours
+  into the break. Open PRs re-read via the authenticated GitHub
+  connector: exactly three (#711, #708, #425), heads and updated_at
+  unchanged since Nov 12; own PR #425 still owner-gated on
+  OD-20261108-01, no author action needed. Tooling issues #712
+  and #709 unchanged; both already implemented and held locally
+  (#712 branch work/plan-expired-chain-dedupe-712, tip b3d25979fc,
+  bundle intact; #709 branch work/pass-worktree-base-709, tip
+  cff911b5db). No code changed, no PR opened, no comment posted, no
+  Slack sync. Record: tool-development/0932-run.md (local mirror
+  only).
+
+## 09:40 to about 09:47 - Queue planning pass (partial, VPS SSH down)
+
+- 09:40 PT 2026-11-17, queue-planning-0940 - partial (50th
+  consecutive planner run failing to commit): plan staged 0
+  units (pool already covers the 12-hour horizon through
+  about 21:41 local; already_present 78, skipped_closed [],
+  skipped_done_current 0, reaped 0, expired 0). Scout diff on
+  the 2026-11-11 6-pass observation applied with 0 counts
+  (observed 52, actionable 0, enqueued 0, unexplained red dots
+  11); 0 withdrawals; pool inbox 76, claimed 0, done 2309.
+  Ticker-0934 ran live 09:34-09:40 PT (PROCESS FAILURE,
+  eighth consecutive occurrence of the fullscreen-Space
+  window loss; no unit claimed, pool untouched); no game unit
+  has executed since ticker-0214 gifts at 02:14 PT, about
+  seven and a half hours of routine now missed. Pre-reset
+  sweep production not due (09:00-hour run); tonight's pair
+  is complete in the pool (1630 + 1730, text-fixed by the
+  0340/0540 runs) after three missed nights, but execution
+  depends on the Mac window recovering before 17:30.
+  Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 116.9 hours into the outage; record
+  committed locally only on planner-0940-1117-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-17. Record: queue-planning/0940-run.md.
