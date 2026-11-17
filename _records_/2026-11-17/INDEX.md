@@ -759,3 +759,63 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   only on planner-0340-1117-delivery, UNPUSHED, push pending
   VPS recovery. No PR opened for records/2026-11-17.
   Record: queue-planning/0340-run.md.
+## 04:43 to about 05:01 - Ticker pass ticker-0443 (failed, 1 unit)
+
+- 04:43 PT, ticker-0443 - failed, 1 unit: radar
+  radar-2026-11-17-0203 failed, game window never reached. Mac
+  mini ONLINE (last_seen 11:30:28Z), LastWar running
+  (com.lastwar.ios) but with NO window - the same state
+  ticker-0333 left at 03:41 PT when a green zoom click moved
+  the window to a native fullscreen Space the control channel
+  cannot see (ax_windows_empty). Three open_app attempts, one
+  activate, four list_windows reads: no LastWar window anywhere;
+  observe and screen.snap both observation_unavailable. Pivot:
+  open_app "Mission Control" also outcome_unknown with no
+  observable window. No HUD read, no radar entry, no tasks
+  executed, nothing claimed, nothing spent. Tracker untouched;
+  next tick re-produces radar. Second consecutive failed unit
+  with this blocker (0333 harvest, 0443 radar); per R2 the
+  third occurrence writes the blocker into activity metadata
+  and changes the entry route, and a tooling Issue filing is
+  owed at VPS recovery (gh unreachable while SSH is down).
+  Sync: 22 due, 0 produced (all already queued), 0 expired, 0
+  reaped; completion marker reaped harvest-2026-11-17-0203.
+  Zombie chain stays closed (event ended 2026-10-30, unit 066).
+  Own PRs: VPS gh check could not run (SSH down); other passes
+  today re-verified #711/#708/#425 only, none owned by this job.
+  Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 112 hours into the outage; record
+  committed locally only on ticker-0443-1117-delivery, UNPUSHED,
+  push pending VPS recovery. No PR opened for records/2026-11-17.
+  Record: radar-tasks/0443-queue-run.md.
+
+## 04:39 to about 04:50 - PR catch-all pass (read-only, VPS SSH down)
+
+- 04:39 PT 2026-11-17, pr-catchall-0439 - blocked delivery, 105th
+  consecutive blocked catchall pass: VPS SSH still Permission
+  denied (publickey), about 112.0 hours into the break (IONOS
+  console route chosen 2026-11-14 17:37 PT still not complete).
+  Read-only pass via the authenticated GitHub connector: exactly
+  three open PRs, all unchanged since the 0339 pass - 711
+  (knowledge fold, Owner lastwar-knowledge-organizer, head
+  e3c3dfd0, updated 2026-11-12T20:04:57Z), 708 (records
+  2026-11-12, Owner lastwar-pr-integrator, head 2f59c270,
+  updated 2026-11-12T20:44:37Z), 425 (tools log gate, Owner
+  lastwar-tool-developer, head 4f41cdd6, updated
+  2026-11-12T19:29:37Z, still owner-gated on OD-20261108-01,
+  tenth day); named owners match diffs, nothing adoptable, no
+  owned PR (PR 137 stays merged, corroborated by zero repo
+  activity since 2026-11-12T20:44:37Z). 138 real open issues,
+  zero unclassified (5 pages, totalCount 138); owner-decision
+  issues 132, 154, 335, 514, 517 all unchanged, all waited over
+  24 hours. Missed batches stay 28 (no batch point in this
+  window; next 07:00 PT). No new chain gap; gaps stay FIVE. No
+  new stale-owner flag; the 708/425/711 flags remain in force.
+  PENDING-COUNT CORRECTION: the 0339 record's 100 total
+  undercounted 2026-11-14 by 4 - a frontmatter audit shows all
+  23 mirror records for that day carry status blocked-delivery,
+  so the corrected pending total is 105 after this run. No
+  adoption, fix, reply, hand-off, Slack sync or chat report -
+  quiet run. Record is a LOCAL MIRROR COPY ONLY;
+  records-branch delivery blocked until VPS SSH is restored.
+  Record: pr-catchall/0439-run.md.
