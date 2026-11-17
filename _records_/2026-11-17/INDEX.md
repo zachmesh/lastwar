@@ -2739,3 +2739,30 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   record committed locally only on
   planner-1540-1117-delivery, no PR for records/2026-11-17.
   Record: queue-planning/1540-run.md.
+## 15:34 to about 15:55 - Queue ticker pass (process failure, LastWar window missing)
+
+- 15:34 PT 2026-11-17, ticker-1534 - process failure (R2, twentieth
+  consecutive occurrence). Mac mini ONLINE but last_seen unchanged
+  at 22:09:58Z since the 1434 read (about 100 minutes stale); LastWar
+  is in running_apps yet has no window at all: three computer
+  sessions (cc-41, cc-42, cc-43), open_app outcome_unknown x3,
+  activate brought_to_front false, ax_windows_empty, list_windows
+  and list_apps 0 LastWar windows, screen.snap and observe
+  unavailable, Ctrl+Right refused (observation_required). The
+  process (pid 11266) is alive but presents no window to the window
+  server. Probe classifies OFF_SCREEN_WINDOW, high confidence,
+  stop_pass yes (exit 10). Recovery is the owner step: click the
+  LastWar Dock icon once, then re-probe. The unit
+  daily-missions-2026-11-16-1800 was claimed at 15:37 PT before the
+  1504 record and the ticker-0534 route change were read, then
+  released back to inbox (not completed as failed) once the route
+  was found - no failed unit recorded, tracker untouched. No game
+  unit has executed since ticker-0214 gifts at 02:14 PT, about
+  thirteen and a half hours of routine now missed. Duel day 2 Base
+  Expansion: UR trucks and survivor intake score today, radar
+  stacks - all missed while the window is down. Delivery blocked -
+  VPS SSH still Permission denied (publickey), about 122.8 hours
+  into the outage; record committed locally only on
+  ticker-1534-1117-delivery, UNPUSHED, push pending VPS recovery.
+  No PR opened for records/2026-11-17. Record:
+  queue-ticker/1534-process-failure.md.
