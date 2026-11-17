@@ -3579,6 +3579,26 @@ Record: knowledge-organization/0332-run.md.
   Ally assists (0/5) and Reward Recovery were not reached before
   the 15 minute cap; the next secrets unit picks them up. Tracker
   untouched (partial). Record: secret-missions/2300-queue-run.md.
+- 22:40 PT, queue-planning 2240 run - partial, 17 units staged
+  for 2026-11-17 morning (mail, help, gifts, harvest, passes,
+  secrets, treasures, radar, survivors, trucks, train, training,
+  donations, events, arms-race, star-ceremony, duel-score; 57
+  already present, 3 expired: trucks, treasures and events
+  2026-11-16-1857). Sweep production not due (23:00-hour run);
+  tonight's pair already expired unexecuted in the 1740 run -
+  third consecutive missed pre-reset ledger walk. Scout diff on
+  the 2026-11-11 6-pass observation applied with 0 counts,
+  52 observed, 11 unexplained red dots (idempotent); 0
+  withdrawals. Pool by_state: inbox 73, claimed 0, done 2273.
+  Done files since Nov 14 18:35 PT: 253 (205 expired, 43 failed,
+  1 done, 4 partial). Mac mini online: ticker-2236 ran live
+  22:36-23:00 PT, passes and secrets both partial (7 secret
+  tasks claimed, about 35.9M Hero EXP). Push could not land -
+  VPS SSH Permission denied (publickey), about 106h into the
+  outage; commit left on planner-2240-1116-delivery, no PR
+  for records/2026-11-16. Fortieth consecutive planner run
+  failing to commit, so a Chinese chat report is owed.
+  Record: queue-planning/2240-run.md.
 ## 23:00 to about 23:04 - PR integration 2300 run, FAILED (VPS SSH unreachable; checker DUE, batch pass, merge blocked, missed batches now 27)
 
 - PR-integrator pass pr-integration-2026-11-16-2300.
@@ -3615,3 +3635,79 @@ Record: knowledge-organization/0332-run.md.
   records/2026-11-16, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed.
   Full detail in pr-integration/2300-run.md.
+## 21:58 to about 22:10 - PR catch-all pass (read-only, VPS SSH down)
+
+- 21:58 PT, pr-catchall-2139 - blocked delivery, 99th consecutive
+  blocked catchall pass: VPS SSH still Permission denied
+  (publickey), about 105.4 hours into the break (IONOS console
+  route chosen 2026-11-14 17:37 PT still not complete). Read-only
+  pass via the authenticated GitHub connector plus the
+  unauthenticated REST API: exactly three open PRs, all unchanged
+  since the 1539 pass - 711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0), 708 (records
+  2026-11-12, Owner lastwar-pr-integrator, head 2f59c270), 425
+  (tools log gate, Owner lastwar-tool-developer, head 4f41cdd6);
+  named owners match diffs (files lists re-verified live: 4, 60
+  and 3 files), nothing adoptable, no owned PR (PR 137 stays
+  merged, re-verified live after the shared-IP REST rate-limit
+  window reset at 22:08:26 PT). 138 real open issues, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335,
+  514, 517 all unchanged (updated_at identical to 1539 pass),
+  statements current. No batch point passed in this window,
+  missed batches stay at 26 (next 23:00 PT). No new
+  stale-owner flag; the 708/425/711 flags remain in force. Chain
+  gaps stay four - 1639 on 2026-11-15, 0339, 0639 and 1839 on
+  2026-11-16 (1839 firm since the 2039 pass). No adoption, fix,
+  reply, hand-off, Slack sync or chat report - quiet run. Record
+  is a LOCAL MIRROR COPY ONLY; records-branch delivery blocked
+  until VPS SSH is restored. Pending mirror-only catchall
+  records now 95 in total (11-12: 11; 11-13: 23; 11-14: 19;
+  11-15: 23; 11-16: 19 incl. this one).
+  Record: pr-catchall/2139-run.md.
+
+## 22:32 to about 22:36 - Tool developer pass (NO-OP, VPS SSH down)
+
+- 22:32 PT, tool-development-2232 - NO-OP. Own PR 425 (tools log
+  gate, head 4f41cdd6ab, mergeable): open-PR list re-read via the
+  authenticated GitHub connector, head and updated_at
+  2026-11-12T19:29:37Z unchanged since the 2132 pass; still
+  owner-gated on OD-20261108-01, no author action. Open tooling
+  issues newest #712 (0 comments) and #709 (0 comments) unchanged;
+  #712 already implemented and held locally (branch
+  work/plan-expired-chain-dedupe-712 tip b3d25979fc, 3 files
+  +111/-3; bundle td-712.bundle intact), not re-taken. Main still
+  a858a0fca8. VPS SSH still Permission denied (publickey), about
+  105.8 hours into the break; no PR route. No code change, no PR,
+  no comment, no Slack sync - quiet run. Record:
+  tool-development/2232-run.md (local mirror only).
+
+## 22:32 to about 22:35 - Knowledge organization pass (no-op, VPS SSH down)
+
+- 22:32 PT, knowledge-organizer 2232 run - NO-OP: no new
+  execution record with foldable play learning since the
+  2132 watermark (fold commit d59e38ef09, ticker-2102 pass);
+  the three records newer than the 2132 close were read in
+  full (pr-catchall 2139, queue-planning 2140, pr-integration
+  2145 via hidden_files backup) and none folds. Own PRs
+  711/708/425 re-verified live via the authenticated GitHub
+  connector, all unchanged (heads e3c3dfd0 / 2f59c270 /
+  4f41cdd6, updated_at identical to the 2132 pass); the 1145
+  fixable item on PR 711 still has no amendment on the
+  branch. Knowledge issues re-verified live via the REST API:
+  41 open, newest #595 2026-11-12T14:11:46Z, unchanged. No
+  newer retro file than 2026-11-16.md. Mac mini
+  connection_state online but last_seen frozen at
+  2026-11-17T05:29:23Z (about 65 minutes stale) and no
+  ticker-2202 record landed, so reachability is unsettled
+  this pass - the 2232 ticker pass settles it. VPS SSH still
+  Permission denied (publickey), about 105h45m into the
+  outage; the 2132 fold stays PARTIAL, its PR owed at VPS
+  recovery (branch work/ko-2132-ticker-2102, bundle
+  ko-2132-profile.bundle; radar-tasks 1.91.0 collides with
+  PR #711, fold rebases to 1.92.0 after #711). Missed batches
+  stay 26 (next 23:00 PT); chain gaps stay four. Live day
+  INDEX still has no ticker-0734 section; live action-log
+  still 509 lines with the same 5 bad lines. No Slack sync,
+  no chat report - quiet run. Record:
+  knowledge-organization/2232-run.md (local mirror only).
+
