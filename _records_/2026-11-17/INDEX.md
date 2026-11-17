@@ -11,6 +11,10 @@ status: unverified
 All times America/Los_Angeles. Actor Muse, under the owner standing
 instruction of 2026-10-25 to run the regulars and the queue design
 of 2026-10-28.
+title: Day record 2026-11-17
+created: 2026-11-17T08:36:00Z
+modified: 2026-11-17T08:36:00Z
+description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still down
 ## 00:00 to about 00:12 - PR integration pass
 
 - Integrator pass pr-integration-2026-11-17-0000.
@@ -104,3 +108,91 @@ of 2026-10-28.
   push via the standard VPS route once SSH returns.
   Status: failed.
   Full detail in pr-integration/0100-run.md.
+## Runs
+
+- 00:32 PT, tool-developer pass tool-development-0032 - no-op:
+  VPS SSH still Permission denied (publickey), about 107.8 hours
+  into the break. Open PRs re-read via the authenticated GitHub
+  connector: exactly three (#711, #708, #425), heads and updated_at
+  unchanged since Nov 12; own PR #425 still owner-gated on
+  OD-20261108-01, no author action needed. Tooling issues #712
+  and #709 unchanged; #712 implementation held locally (branch
+  work/plan-expired-chain-dedupe-712, tip b3d25979fc, bundle
+  intact). No code changed, no PR opened, no comment posted, no
+  Slack sync. Record: tool-development/0032-run.md (local mirror
+  only).
+
+## 00:32 to about 00:36 - Tool developer pass (no-op, VPS SSH down)
+
+- 00:32 PT 2026-11-17, tool-development-0032 - no-op, first pass
+  of the day: VPS SSH still Permission denied (publickey), about
+  107.8 hours into the break (IONOS console route chosen
+  2026-11-14 17:37 PT still not complete). Read-only pass via
+  the authenticated GitHub connector: exactly three open PRs,
+  all unchanged since the 2332 pass - 711 (knowledge fold, Owner
+  lastwar-knowledge-organizer, head e3c3dfd0), 708 (records
+  2026-11-12, Owner lastwar-pr-integrator, head 2f59c270), 425
+  (tools log gate, Owner lastwar-tool-developer, head 4f41cdd6,
+  updated 2026-11-12T19:29:37Z, still owner-gated on
+  OD-20261108-01, no author action). Tooling issues #712 and
+  #709 unchanged (updated 2026-11-12T19:54:59Z and 19:41:23Z);
+  #712 already implemented and held (branch tip b3d25979fc, 3
+  files, 111 insertions, 3 deletions; bundle 22,218,802 bytes
+  intact), #709 next once the #712 PR opens. Main still
+  a858a0fca8. Corroborated by pr-catchall 2339 (00:22 PT, 101st
+  consecutive blocked catchall pass) and queue-planning 2340
+  (41st consecutive planner run failing to commit). Mac mini
+  ONLINE (ticker-2348 ran live 23:48-23:56 PT). No new tooling
+  defect disclosed. No code change, no branch push, no PR, no
+  comment, no Slack sync - quiet run. Record is a LOCAL MIRROR
+  COPY ONLY; records-branch delivery blocked until VPS SSH is
+  restored.
+  Record: tool-development/0032-run.md.
+
+## 00:32 to about 00:41 - Knowledge organization pass (FOLD, partial delivery)
+
+- 00:32 PT 2026-11-17, knowledge-organizer-0032 - FOLD
+  (partial delivery): ticker-2348 harvest folded into
+  resource-collection 1.64.0 (commit fe0ef502dd, branch
+  work/ko-0032-ticker-2348, bundle ko-0032-profile.bundle
+  verified, PR owed at VPS recovery). Two new verified
+  non-bubble points (yellow diamond window (565,435) /
+  display (638,466); small yellow icon window (464,574) /
+  display (537,605), selects Wild Rhythm Lv.1); new pan
+  re-grounding rule (never tap blind after a camera pan - a
+  deselect tap at window (300,700) opened a "want to retrait
+  it?" confirm dialog, Cancel tapped at once, nothing
+  retreated or spent; the record's "rule R2" label is NOT
+  adopted, R2 is bubble-identity verification); Armed Truck
+  FOURTEENTH deferral in the lineage (Issue #566), retro
+  A-2026-11-11-05 verification STILL unmet. Own PRs
+  711/708/425 re-verified live unchanged via the
+  authenticated GitHub connector; knowledge issues unchanged
+  at 41 (newest #595 2026-11-12T14:11:46Z). Mac mini online
+  but device.list last_seen frozen at 2026-11-17T07:31:15Z,
+  not advancing despite live ticker-2348 execution
+  07:58-08:13Z - flagged, not read as last activity. VPS SSH
+  still Permission denied (publickey), about 107.3h into the
+  outage; missed batches 27 (next batch point 03:00 PT).
+  Record: knowledge-organization/0032-run.md (local mirror
+  only).
+
+## 00:40 to about 01:30 - Queue planning pass (partial, VPS SSH down)
+
+- 00:40 PT 2026-11-17, queue-planning-0040 - partial (42nd
+  consecutive planner run failing to commit): plan staged 0
+  units (already_present 73, skipped_done_current 1, reaped 0,
+  expired 0; pool fully staged through 10:30/10:57); scout diff
+  on the 2026-11-11 6-pass observation applied with 0 counts
+  (observed 52, actionable 0, enqueued 0, unexplained red dots
+  11); 0 withdrawals; pool inbox 71, claimed 0, done 2275.
+  Pre-reset sweep production not due (01:00-hour run); tonight's
+  pair not yet in the pool, the 17:00-hour run produces it.
+  Ticker-0101 ran live 01:01-01:16 PT (radar done, stamina 103
+  to 83). Own PRs #711/#708/#425 and owner-decision issues
+  unchanged (public API, read-only). Push and PR blocked - VPS
+  SSH still Permission denied (publickey), about 108 hours into
+  the outage; record committed locally only on
+  planner-0040-1117-delivery, UNPUSHED, push pending VPS
+  recovery. No PR opened for records/2026-11-17.
+  Record: queue-planning/0040-run.md.
