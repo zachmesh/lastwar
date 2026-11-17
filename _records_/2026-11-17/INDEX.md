@@ -497,6 +497,20 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   ticker-1134-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17. Record:
   radar-tasks/1134-queue-run.md.
+  1200-run.md - pr-integration 1200 run (FAILED, VPS SSH
+  stay 30, next batch 15:00 PT). Open PRs 711/708/425
+  carried forward from the 1100 pass, verified only by
+  first-hand this pass: only records/2026-11-12 carries
+  /tmp/records-merges.json was missing at pass start and
+  was recreated from the 1100 record (PR 700 merged
+  2026-11-12T11:09:47-08:00); a later pass should
+  re-verify that timestamp against gh once the VPS
+  returns. Local records/2026-11-17 exists (0000 pass),
+  UNPUSHED, push pending VPS recovery. This record
+  committed locally on records/2026-11-17, UNPUSHED -
+  push via the standard VPS route once SSH returns.
+  Status: failed.
+  Full detail in pr-integration/1200-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
