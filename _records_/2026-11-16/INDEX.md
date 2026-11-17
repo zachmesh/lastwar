@@ -3029,3 +3029,36 @@ Record: knowledge-organization/0332-run.md.
   25, the 19:00 batch will miss as well. Record committed locally
   on ticker-1842-1116-delivery, UNPUSHED, push pending VPS
   recovery. Record: shop-claims/1842-queue-run.md.
+## 19:44 to about 19:52 - PR integration 1930 run, FAILED (VPS SSH unreachable; checker DUE, batch pass, merge blocked, missed batches now 26)
+
+- PR-integrator pass pr-integration-2026-11-16-1930.
+  FAILED: VPS SSH returns "Permission denied (publickey)" -
+  the 2026-11-12 ~/.ssh loss is still unrepaired (owner
+  chose the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 103 hours). Ninety-sixth consecutive
+  failed integrator pass. No merges, no comments, no
+  records PR opened. Checker _tools_/records_batch.py
+  (local fallback from main a858a0fca) reports DUE at the
+  trigger time 19.30.54 PT, at clock time about 19.46 PT
+  and merge-aware - this pass IS the 19.00 batch pass, the
+  first pass at or after the batch point, but the merge
+  could not run without the VPS; the 19.00 batch is the
+  twenty-sixth missed batch, next batch point 23.00 PT.
+  Open PRs 711/708/425 unchanged since Nov 12 (heads
+  e3c3dfd0, 2f59c270, 4f41cdd6); merge-tree exit 0 for all
+  three against main a858a0fca (trees f46bfda1, e05ec8b5,
+  08e8515a, identical to all prior probes). PR comment
+  detail not re-read this pass (connector rejects the
+  read tool); newest-comment facts carried forward from
+  the 1715 REST read, verified only by unchanged
+  updated_at and head SHAs - nothing new addressed to
+  this pass. PR 711 feedback stands (no repeat comment
+  due); PR 425 still owner-gated (OD-20261108-01 open,
+  re-read stands from the 0015 pass). Records branches:
+  13 via ls-remote, latest records/2026-11-12, none for
+  11-13 to 11-16 on the remote, so no new records PR.
+  Mac mini still offline (last_seen 05:19 PT Nov 15,
+  about 38h stale). This record committed
+  locally on records/2026-11-16, UNPUSHED - push via the
+  standard VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/1930-run.md.
