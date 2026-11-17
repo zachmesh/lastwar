@@ -2743,6 +2743,50 @@ Record: knowledge-organization/0332-run.md.
   the 19:00 batch will miss as well. Record committed locally on
   ticker-1704-1116-delivery, UNPUSHED, push pending VPS recovery.
   Record: perception-scout/1704-queue-run.md.
+- 17:32 PT, knowledge-organizer 1732 run - NO-OP. Own PRs
+  first: PR 711 re-verified live via the unauthenticated
+  GitHub REST API this run (OPEN, head e3c3dfd0,
+  updated 2026-11-12T20:04:57Z, unchanged); issue comments
+  (1, newest 2026-11-12T19:55:59Z) and reviews (1,
+  COMMENTED 2026-11-12T20:04:56Z, integrator 1145 review)
+  re-read live, both unchanged - no new question, no new
+  numbered fix point; the held fix (amend 705 claims
+  superseded by PR 710) and reply draft stay unposted until
+  the VPS returns. PR 708/425 unchanged, corroborated by the
+  planner 1640 (17:17 PT) and scout 1704 (01:28Z) live
+  reads. Knowledge issues: 41 open, newest #595
+  2026-11-12T14:11:46Z, unchanged. No new retro (latest
+  2026-11-15.md already reviewed in full at 2132 on
+  2026-11-15). Two records newer than the 1632 close read
+  in full - queue-planning 1640 (partial, 0 units staged,
+  sweep pair task text appended, correcting the 1540
+  "already COMPLETE" verdict; new tooling gap recorded for
+  filing at VPS recovery - plan stages sweep units without
+  the ledger-walk task text, defect since about 2026-11-08;
+  35th consecutive planner run failing to commit; done
+  files since Nov 14 18:35 PT: 216 - 176 expired, 40
+  failed, 0 done) and perception-scout 1704 (FAILED, 27th
+  consecutive ticker pass failing on the offline Mac; Duel
+  day 1 Radar Training RELEASE, day ends 18:00 PT Nov 16,
+  release stays missed) - none foldable, no profile
+  updated, no contradiction resolved, no stale item
+  marked, no gap filed. No new pr-catchall run landed
+  since 1539; blocked catchall passes stay at 94. Carried
+  flag re-verified by own read: live INDEX (2,205 lines)
+  still has no ticker-0734 section header (only the 1632
+  run's own mentions, lines 1820, 1961 and 2140); live
+  action-log 505 lines with 5 bad lines (59, 106, 374,
+  380 bad JSON, 381 blank). Mac mini still OFFLINE,
+  last_seen frozen 2026-11-15T13:19:56Z, 36th consecutive
+  offline reading. VPS SSH still Permission denied
+  (publickey), about 100h45m into the outage; the IONOS
+  console recovery the owner chose 2026-11-14 17:37 PT is
+  still not landed, about 48 hours later. Delivery
+  BLOCKED: record in local mirror only with an identical
+  backup in the goal hidden_files; records-branch
+  delivery owed at VPS recovery. No Slack sync. No chat
+  report. Record:
+  knowledge-organization/1732-run.md.
 ## 17:28 to about 17:36 - PR integration 1715 run, FAILED (VPS SSH unreachable; checker NOT DUE, non-batch pass, missed batches stay 25)
 
 - PR-integrator pass pr-integration-2026-11-16-1715.
@@ -2776,3 +2820,158 @@ Record: knowledge-organization/0332-run.md.
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed.
   Full detail in pr-integration/1715-run.md.
+## 17:33 to about 17:38 - PR catch-all pass (read-only, VPS SSH down)
+
+- 17:33 PT, pr-catchall-1639 - blocked delivery, 95th consecutive
+  blocked catchall pass: VPS SSH still Permission denied
+  (publickey), about 101 hours into the break (IONOS console
+  route chosen 2026-11-14 17:37 PT still not complete). Read-only
+  pass via the unauthenticated GitHub REST API: exactly three open
+  PRs, all unchanged since the 1539 pass - 711 (knowledge fold,
+  Owner lastwar-knowledge-organizer, head e3c3dfd0), 708 (records
+  2026-11-12, Owner lastwar-pr-integrator, head 2f59c270), 425
+  (tools log gate, Owner lastwar-tool-developer, head 4f41cdd6);
+  named owners match diffs, nothing adoptable, no owned PR (PR
+  137 stays merged, re-verified live). 138 real open issues, zero
+  unclassified, newest 712; owner-decision issues 132, 154, 335,
+  514, 517 all unchanged (updated_at identical to 1539 pass),
+  statements current. No batch point passed in this window, missed
+  batches stay at 25 (next 19:00 PT). No new stale-owner flag;
+  the 708/425/711 flags remain in force. No adoption, fix, reply,
+  hand-off, Slack sync or chat report - quiet run. Record is a
+  LOCAL MIRROR COPY ONLY; records-branch delivery blocked until
+  VPS SSH is restored. Pending mirror-only catchall records now
+  91 in total (11-12: 11; 11-13: 23; 11-14: 19; 11-15: 23;
+  11-16: 15 incl. this one). Chain gaps still three - 1639 on
+  2026-11-15, 0339 and 0639 on 2026-11-16; no new gap this pass.
+  Record: pr-catchall/1639-run.md.
+
+## 17:32 to about 17:39 - Tool developer pass
+
+- Tool-developer pass tool-development-2026-11-16-1732.
+  NO-OP. Own PRs re-checked via the GitHub connector (3 open
+  PRs, unchanged since Nov 12): #711 knowledge, #708 records,
+  #425 tools (head 4f41cdd6ab, thread re-read via browser.open,
+  newest 2026-11-12 19:29:36Z integrator 1126 re-verification;
+  still owner-gated OD-20261108-01, no owner decision, no
+  author action). Open tooling issues newest #712 and #709,
+  both unchanged, both already implemented and held locally
+  pending the PR route (branch
+  work/plan-expired-chain-dedupe-712 tip b3d25979fc, 3 files,
+  111 insertions, 3 deletions; bundle td-712.bundle
+  22,218,802 bytes, both re-verified intact this run) - not
+  re-taken per step 2. Main still a858a0fca8. VPS SSH still
+  Permission denied (publickey), about 100.8 hours into the
+  break; no alternate PR route (local gh not logged in,
+  dtadpole login must not be used for this repo, GitHub
+  connector read-only for this repo). Delivery BLOCKED:
+  record in local mirror only with an identical backup in
+  the goal hidden_files; records-branch delivery owed at VPS
+  recovery. No Slack sync. Record:
+  tool-development/1732-run.md.
+
+## 18:32 to about 18:39 - Tool developer pass
+
+- Tool-developer pass tool-development-2026-11-16-1832.
+  NO-OP. Own PRs re-checked via the unauthenticated GitHub
+  REST API (3 open PRs, unchanged since Nov 12): #711
+  knowledge, #708 records, #425 tools (head 4f41cdd6ab,
+  comments pages 1-2 re-read, 135 total, newest
+  2026-11-12 19:29:36Z integrator 1126 re-verification;
+  still owner-gated OD-20261108-01, no owner decision, no
+  author action). Open tooling issues newest #712 and #709,
+  both unchanged (63 open tooling issues total), both already
+  implemented and held locally pending the PR route (branch
+  work/plan-expired-chain-dedupe-712 tip b3d25979fc, 3 files,
+  111 insertions, 3 deletions; bundle td-712.bundle
+  22,218,802 bytes; records-1112 tip 79c077c7f0 clean, all
+  re-verified intact this run) - not re-taken per step 2.
+  Main still a858a0fca8. VPS SSH still Permission denied
+  (publickey), about 101.8 hours into the break; no alternate
+  PR route (local gh not logged in, dtadpole login must not
+  be used for this repo, GitHub connector read-only for this
+  repo). Delivery BLOCKED: record in local mirror only with
+  an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack
+  sync. Record: tool-development/1832-run.md.
+
+## 18:32 to about 18:37 - Knowledge-organizer pass
+
+- 18:32 PT, knowledge-organizer 1832 run - NO-OP. Own PRs
+  first: PR 711 re-verified live via the unauthenticated
+  GitHub REST API this run (OPEN, head e3c3dfd0,
+  updated 2026-11-12T20:04:57Z, unchanged); issue comments
+  (1, newest 2026-11-12T19:55:59Z) and reviews (1,
+  COMMENTED 2026-11-12T20:04:56Z, integrator 1145 review)
+  re-read live, both unchanged - no new question, no new
+  numbered fix point; the held fix (amend 705 claims
+  superseded by PR 710) and reply draft stay unposted until
+  the VPS returns. PR 708/425 unchanged, corroborated by the
+  tool-development 1832 record's own live reads this hour.
+  Knowledge issues: 41 open, newest #595
+  2026-11-12T14:11:46Z, unchanged. No new retro (latest
+  2026-11-15.md already reviewed in full at 2132 on
+  2026-11-15). Three records newer than the 1732 close read
+  in full - pr-catchall 1639 (BLOCKED DELIVERY, 95th
+  consecutive blocked catchall pass; issues 138 real,
+  unchanged; missed batches stay at 25, no batch point
+  passed; chain gaps still THREE - 1639 on 2026-11-15,
+  0339 and 0639 on 2026-11-16), tool-development 1732
+  (NO-OP, PR 425 owner-gated, #712/#709 held locally) and
+  tool-development 1832 (NO-OP, same state, PR 425 comments
+  re-read 135 total, newest 2026-11-12T19:29:36Z; held #712
+  branch tip b3d25979fc intact) - none foldable, no profile
+  updated, no contradiction resolved, no stale item marked,
+  no gap filed. Duel day 1 ended 18:00 PT during this run
+  window; Radar Training RELEASE stays missed while the Mac
+  is offline - a status, not a profile correction. No new
+  pr-catchall run landed since 1639; blocked catchall passes
+  stay at 95. Carried flag re-verified by own read: live
+  INDEX (2,300 lines) still has no ticker-0734 section
+  header (only the 1632 and 1732 runs' own mentions, lines
+  1820, 1961, 2140 and 2237); live action-log 505 lines
+  with 5 bad lines (59, 106, 374, 380 bad JSON, 381 blank).
+  Mac mini still OFFLINE, last_seen frozen
+  2026-11-15T13:19:56Z, 37th consecutive offline reading.
+  VPS SSH still Permission denied (publickey), about 101h53m
+  into the outage; the IONOS console recovery the owner
+  chose 2026-11-14 17:37 PT is still not landed, about 49
+  hours later. Delivery BLOCKED: record in local mirror only
+  with an identical backup in the goal hidden_files;
+  records-branch delivery owed at VPS recovery. No Slack
+  sync. No chat report. Record:
+  knowledge-organization/1832-run.md.
+
+## 18:30 to about 18:38 - Queue planning pass
+
+- 17:40 PT, queue-planning 1740 run - partial, 12 units staged
+  (2026-11-17 06:03/06:30 slots), 61 already present, 14
+  expired, 0 reaped; roster_stale_regulars [] again - the
+  building-queues/research warning is gone for the seventh
+  consecutive run (#198, change carried for the retro);
+  sweep production due (17:00-hour run by scheduled time) -
+  tonight's pair already present and complete with the
+  ledger-walk task text at run start (seq 1 zero-sweep 1630,
+  seq 2 zero-sweep 1730, chain pre-reset-sweep-2026-11-16),
+  but BOTH expired unexecuted in this run's plan step - the
+  run started after the pair's 18:00 expiry, so tonight is
+  the THIRD consecutive missed pre-reset ledger walk (Nov 14,
+  Nov 15, Nov 16); no re-enqueue (body directs enqueue only
+  when absent at check; Mac offline so a re-enqueued pass
+  could not execute either). New gap noted: the tool-staged
+  pair expires 18:00 local, an hour before the reset, while
+  the body specifies expires-at the reset and a final pass
+  not-before 18:30 - a late-starting 17:00-hour run cannot
+  save the pair; to be filed with the sweep-text gap when
+  write access returns. Scout diff on the 2026-11-11 6-pass
+  observation applied with 0 counts (52 observed, 11
+  unexplained red dots, idempotent); 0 withdrawals. Pool
+  by_state: inbox 72, claimed 0, done 2251. Done files
+  since Nov 14 18:35 PT: 231 (190 expired, 41 failed, 0
+  done). Ticker 1704 failed on the offline Mac (27th
+  consecutive). Push could not land - VPS SSH Permission
+  denied (publickey), about 102h into the outage; commit
+  left on planner-1740-1116-delivery, no PR for
+  records/2026-11-16. Thirty-sixth consecutive planner run
+  failing to commit, so a Chinese chat report is owed.
+  Record: queue-planning/1740-run.md.
