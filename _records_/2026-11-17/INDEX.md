@@ -511,6 +511,18 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   push via the standard VPS route once SSH returns.
   Status: failed.
   Full detail in pr-integration/1200-run.md.
+  1320-run.md - pr-integration 1320 run (FAILED, VPS SSH
+  to all prior probes). PR comment detail re-read
+  first-hand this pass via the public GitHub API (unlike
+  the 0945 and 1200 passes): PR 711 has 1 comment, PR 708
+  has 0, PR 425 has 135 comments, latest 2026-11-12 -
+  nothing new addressed to this pass. PR 711 feedback
+  stands (no repeat comment due); PR 425 still
+  re-verified first-hand this pass: only records/2026-11-12
+  carries commits beyond main and it already has open PR
+  708. /tmp/records-merges.json was missing at pass start
+  and was recreated from the 1200 record (PR 700 merged
+  Full detail in pr-integration/1320-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
