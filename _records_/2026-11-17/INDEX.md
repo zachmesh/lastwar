@@ -1852,3 +1852,135 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   UNPUSHED, push pending VPS recovery. No PR opened for
   records/2026-11-17. Record:
   resource-collection/1104-queue-run.md.
+## 10:39 to about 11:20 - PR catch-all pass (blocked-delivery; 111th consecutive blocked pass)
+
+- 11:14 PT 2026-11-17, pr-catchall-1039 - blocked-delivery
+  (111th consecutive catchall pass blocked by the VPS outage):
+  VPS SSH still Permission denied (publickey), about 118.5
+  hours into the outage (IONOS console route chosen 2026-11-14
+  17:37 PT, still not complete about 65.6 hours later).
+  Read-only pass via the authenticated GitHub connector: 3 open
+  PRs all unchanged since the 0939 pass - #711
+  (knowledge-organizer, head e3c3dfd0), #708 (pr-integrator,
+  head 2f59c270), #425 (tool-developer, head 4f41cdd6, still
+  owner-gated OD-20261108-01, 10th day). Nothing adoptable; own
+  PR #137 stays merged. 138 real open issues, zero
+  unclassified; owner-decision issues #132/#154/#335/#514/#517
+  all unchanged, all waited over 24 hours. No new stale-owner
+  flag (708/425/711 flags remain in force). Missed batches rise
+  to 30 (11:00 PT batch point passed in this window with no
+  merge; next 15:00 PT). Chain gaps stay FIVE. No adoption,
+  fix, reply, hand-off, or Slack sync - quiet run. Record:
+  pr-catchall/1039-run.md (local mirror only; backup in goal
+  hidden_files; delivery deferred pending VPS recovery;
+  pending mirror-only catchall records now 111).
+
+## 11:32 to about 11:35 - Tool developer pass (no-op, VPS SSH down)
+
+- 11:32 PT 2026-11-17, tool-development-1132 - no-op:
+  VPS SSH still Permission denied (publickey), about 118.8 hours
+  into the break. Open PRs re-read via the public GitHub API:
+  exactly three (#711, #708, #425), heads and updated_at
+  unchanged since Nov 12; own PR #425 full comment list re-read
+  (135 comments, latest 2026-11-12 19:29:36Z integrator
+  re-verification, CLEAN, 0 reviews, 0 review comments), still
+  owner-gated on OD-20261108-01, no author action needed.
+  Tooling issues #712 and #709 unchanged (0 comments each);
+  both already implemented and held locally
+  (#712 branch work/plan-expired-chain-dedupe-712, tip b3d25979fc,
+  bundle intact; #709 branch work/pass-worktree-base-709, tip
+  cff911b5db). Main a858a0fca8 unchanged. No code changed, no PR
+  opened, no comment posted, no Slack sync. Record:
+  tool-development/1132-run.md (local mirror only).
+
+## 11:32 to about 11:38 - Knowledge organization pass (no-op, R2 eleventh occurrence)
+
+- 11:32 PT 2026-11-17, knowledge-organizer-1132 - NO-OP for
+  folding: no profile folded, no contradiction found, no gap
+  filed. Six records landed since the 1032 close and were
+  read in full (shop-claims 1034, resource-collection 1104,
+  pr-catchall 1039, queue-planning 1040, pr-integration 1100
+  hidden-only, tool-development 1132 landed during this run).
+  Own PRs 711/708/425 re-verified live via the authenticated
+  GitHub connector, all unchanged (heads e3c3dfd0 / 2f59c270 /
+  4f41cdd6, updatedAt 2026-11-12T20:04:57Z / 20:44:37Z /
+  19:29:37Z). Knowledge issues unchanged at 41 (newest
+  #595 2026-11-12T14:11:46Z). VPS SSH still Permission
+  denied (publickey), about 118.8 hours into the outage.
+- R2 ELEVENTH OCCURRENCE: ticker-1034 (10:36-10:52 PT, tenth
+  consecutive, passes unit failed; three fresh sessions,
+  open_app "LastWar" x3 outcome_unknown) and ticker-1104
+  (11:04-11:11 PT, eleventh, harvest unit failed; R2 pivot
+  failed at the selection step - Ctrl+Right refused
+  observation_required) both hit the fullscreen-Space
+  window-loss blocker; no game unit has run since ticker-0214
+  gifts at 02:14 PT, about nine hours of routine missed. New
+  evidence in the 1034 record: the channel cannot bind ANY
+  window (Finder 28 and Chrome 125 geometry_mismatch;
+  frontmost_app reports the assistant itself; F3 refused).
+  The (a) metadata write stays deferred to the retro / the
+  tooling issue, and the (b) stop condition is already in
+  force. Tonight's sweep pair and the 18:00 PT release-day
+  radar unit stay blocked until the owner recovers the window
+  at the Mac.
+- Mac mini ONLINE; device.list last_seen MOVED to
+  2026-11-17T18:40:31Z (10:40:31 PT) from 17:33:34Z
+  (09:33:34 PT) - eleventh data point; the stamp moved once
+  between the 1034 close and the 1104 probe and has not moved
+  since. The 1104 pass ran after the move and still found no
+  window, so the move is NOT evidence the window was
+  recovered. The 0532 reading stands with that nuance.
+- Missed batches rise to 30 (11:00 PT batch missed at the
+  1100 pass; next 15:00 PT). Blocked catchall passes 111,
+  planner failed-to-commit runs 51, integrator failed passes
+  109. Folding watermark unchanged at dfe14a38db. Five held
+  folds stay PARTIAL, PRs owed at VPS recovery. Record is
+  a LOCAL MIRROR COPY ONLY; records-branch delivery owed
+  at VPS recovery. Owner update for the R2 eleventh
+  occurrence goes in this run's final message (Chinese).
+  Record: knowledge-organization/1132-run.md (local mirror
+  only; backup in goal hidden_files/2026-11-17).
+- 11:34 PT 2026-11-17, ticker-1134 - failed (twelfth consecutive
+  occurrence of the fullscreen-Space window loss): radar unit
+  radar-2026-11-17-1003 claimed 11:36 and completed failed
+  after 274 seconds; Mac mini online, LastWar running, but no
+  LastWar window in list_windows, open_app outcome_unknown
+  twice across two fresh sessions (cc-29, cc-30), activate
+  ax_windows_empty, and the R2 pivot (Finder/Chrome activate,
+  control-right Space switch) failed at window selection with
+  geometry_mismatch / observation_required - no input
+  dispatched. Duel day 2, Base Expansion, radar posture STACK,
+  never reached. No game unit has executed since ticker-0214
+  gifts at 02:14 PT, about nine and a half hours of routine
+  now missed. Sync: reaped 0, expired 0, due 22, produced 0,
+  already queued 21; zombie chain stays closed. Own PRs
+  re-read from the public GitHub page 19:36Z (#711/#708/#425,
+  none owned by this job). Delivery blocked - VPS SSH still
+  Permission denied (publickey), about 118.5 hours into the
+  outage; record committed locally only on
+  ticker-1134-1117-delivery, UNPUSHED, push pending VPS
+  recovery. No PR opened for records/2026-11-17. Record:
+  radar-tasks/1134-queue-run.md.
+
+## 11:40 to about 11:50 - Queue planning pass (partial, VPS SSH down)
+
+- 11:40 PT 2026-11-17, queue-planning-1140 - partial (52nd
+  consecutive planner run failing to commit): plan staged 5
+  units (22:57 slots; already_present 72, reaped 0,
+  expired 0). Scout diff on the 2026-11-11 6-pass observation
+  applied with 0 counts (observed 52, actionable 0, enqueued 0,
+  unexplained red dots 11); 0 withdrawals; pool inbox 75,
+  claimed 0, done 2327. Ticker-1104 ran live 11:04-11:11 PT
+  (harvest FAILED, eleventh consecutive occurrence of the
+  fullscreen-Space window loss) and ticker-1134 ran live
+  11:34-11:41 PT (radar FAILED, twelfth consecutive occurrence);
+  no game unit has executed since ticker-0214 gifts at 02:14 PT,
+  about nine and a half hours of routine now missed.
+  Pre-reset sweep production not due (11:00-hour run); tonight's
+  pair is complete in the pool (1630 + 1730, ledger text
+  verified present this run) after three missed nights, but
+  execution depends on the Mac window recovering before 17:30.
+  Delivery blocked - VPS SSH still Permission denied
+  (publickey), about 118.9 hours into the outage; record
+  committed locally only on planner-1140-1117-delivery, no PR
+  for records/2026-11-17. Record: queue-planning/1140-run.md.
