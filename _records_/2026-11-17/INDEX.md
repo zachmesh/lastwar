@@ -2018,3 +2018,22 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   only on ticker-1204-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17. Record:
   survivor-intake/1211-queue-run.md.
+## 12:38 to about 12:44 - Donations ticker pass (failed, LastWar window missing)
+
+- 12:38 PT 2026-11-17, ticker-1234 - failed. Mac mini online but
+  last_seen unchanged at 20:02:14Z (about 41 minutes stale);
+  LastWar bound but 0 windows x2, open_app outcome_unknown,
+  activate ax_windows_empty. Probe classifies OFF_SCREEN_WINDOW,
+  high confidence, stop_pass yes. Recovery is the owner step:
+  click the LastWar Dock icon once, then re-probe. No donation
+  work executed, nothing claimed, tracker untouched. Fourteenth
+  consecutive ticker occurrence of the window loss; no game unit
+  has executed since ticker-0214 gifts at 02:14 PT, about ten and
+  a half hours of routine now missed. Duel day 2 Base Expansion:
+  UR trucks and survivor intake score today, radar stacks - all
+  missed while the window is down. Delivery blocked - VPS SSH
+  still Permission denied (publickey), about 119.8 hours into the
+  outage; record committed locally only on
+  ticker-1234-1117-delivery, UNPUSHED, push pending VPS recovery.
+  No PR opened for records/2026-11-17. Record:
+  alliance-donations/1240-queue-run.md.
