@@ -432,6 +432,11 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   records/2026-11-17, UNPUSHED - push via the standard
   VPS route once SSH returns. Status: failed.
   Full detail in pr-integration/0428-run.md.
+  0638-run.md - pr-integration 0638 run (FAILED, VPS SSH
+  carried forward from the 0428 pass, verified only by
+  records/2026-11-17 exists (0000 pass, tip f57c7ebd72
+  with the 0428 run record), UNPUSHED, push pending VPS
+  Full detail in pr-integration/0638-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
