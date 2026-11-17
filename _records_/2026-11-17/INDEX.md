@@ -230,3 +230,27 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed.
   Full detail in pr-integration/0215-run.md.
+
+## 02:14 to about 02:31 - Ticker pass ticker-0214
+
+- 02:14 PT 2026-11-17, ticker-0214 - 1 unit done, Mac mini online.
+  Sync: 22 due, 0 produced (all already queued), 4 expired, 0
+  reaped; completion marker reaped radar-2026-11-16-2203.
+  Zombie chain stays closed (event ended 2026-10-30, unit 066).
+  Own PRs first: open PRs #711, #708, #425 via the authenticated
+  GitHub connector - none owned by this job, heads and updated_at
+  unchanged since Nov 12.
+- gifts-2026-11-16-2230 done (finished about 02:28 PT, inside its
+  02:30 PT expires_at): 176 Regular + 67 Premium
+  alliance gifts claimed across five Claim All taps (171 + 1 + 2 +
+  2 Regular; Premium badge read 87 but the dialog claimed 67 -
+  open question, tab verified fully Claimed after). Gift Level 29
+  progress 15,808,080 to 15,821,690; my own points 9,760, the
+  extra 3,850 moved on other members' claims in the same windows -
+  the bar is alliance-wide, not personal (inference, unverified).
+  Base Total Power at entry 149,482,045. Tracker gifts done.
+  Record: alliance-gifts/0229-queue-run.md.
+- Push and PR blocked - VPS SSH still Permission denied
+  (publickey), about 109 hours into the outage; record committed
+  locally only on ticker-0214-1117-delivery, UNPUSHED, push
+  pending VPS recovery. No PR opened for records/2026-11-17.
