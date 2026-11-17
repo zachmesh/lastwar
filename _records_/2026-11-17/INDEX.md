@@ -370,3 +370,40 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   planner-0140-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17.
   Record: queue-planning/0140-run.md.
+## 03:23 to about 03:31 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-17-0323.
+  FAILED, one hundred and third consecutive failure for
+  the same break: VPS SSH publickey rejected once (about
+  03:23 PT; the rejection is server-side, key
+  fingerprint matches all prior verifications), no
+  merges, no comments, no records PR opened. BATCH pass
+  for records purposes: the checker
+  (_tools_/records_batch.py) reports DUE at the
+  scheduled pass start 03:15:54 PT (exit 0, batch
+  window 03:00-04:00 PT), at clock time and merge-aware
+  - so the 03:00 batch merge of PR 708 was owed and
+  blocked, and missed batches rise to 28; next batch
+  point 07:00 PT. Open PRs 711/708/425 unchanged since
+  Nov 12 (heads e3c3dfd0, 2f59c270, 4f41cdd6); merge-tree
+  exit 0 for all three against main a858a0fca (trees
+  f46bfda1, e05ec8b5, 08e8515a, identical to all prior
+  probes). PR comment detail not re-read this pass
+  (call-read-tool rejects pull_request_read, verified at
+  the 0000 pass); newest-comment facts carried forward
+  from the 0215 pass, verified only by unchanged
+  updated_at and head SHAs - nothing new addressed to
+  this pass. PR 711 feedback stands (no repeat comment
+  due); PR 425 still owner-gated (OD-20261108-01 open,
+  re-read stands from the 0015 pass). Records branches:
+  13 via ls-remote, latest records/2026-11-12, none for
+  11-13 to 11-17 on the remote, so no new records PR.
+  Containment re-verified this pass: only
+  records/2026-11-12 carries commits beyond main and it
+  already has open PR 708. Local records/2026-11-17
+  exists (0000 pass, tip ce5f214542 with the 0215 run
+  record), UNPUSHED, push pending VPS recovery. This
+  record committed locally on records/2026-11-17,
+  UNPUSHED - push via the standard VPS route once SSH
+  returns. Status: failed.
+  Full detail in pr-integration/0323-run.md.
