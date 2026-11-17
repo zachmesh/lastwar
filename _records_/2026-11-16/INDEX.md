@@ -3155,3 +3155,25 @@ Record: knowledge-organization/0332-run.md.
   for records/2026-11-16. Thirty-seventh consecutive
   planner run failing to commit, so a Chinese chat report
   is owed. Record: queue-planning/1940-run.md.
+## 19:49 to about 19:58 - Ticker pass (harvest unit failed, Mac mini offline)
+
+- 19:49 PT, ticker-1949 - failed, 1 unit: harvest unit
+  harvest-2026-11-16-1803 failed on the offline Mac (5 device probes
+  all node_offline, no wake-up path; no harvest work, no claims,
+  nothing spent; tracker untouched; pass stopped after this unit
+  rather than cascading failed units). Twenty-ninth consecutive
+  ticker pass to fail on the offline Mac. Own PRs re-checked via
+  the unauthenticated GitHub REST API (#711, #708, #425 only,
+  heads and updated_at unchanged since Nov 12, none owned by this
+  job; no PR for records/2026-11-16). Sync reaped 0 expired 0 due
+  22 produced 0; completion marker reaped
+  passes-2026-11-16-1457; zombie seeding no-op, event ended (live
+  check by unit 037 on Nov 15). Duel day 2 Base Expansion read
+  from tools/duel.py (radar posture STACK, do NOT claim; UR trucks
+  100,000 each; day ends 18:00 PT Nov 17); duel day 1 Radar
+  Training RELEASE window closed 18:00 PT Nov 16 with the whole
+  day missed. VPS SSH still Permission denied (publickey), about
+  103.1 hours into the break; missed integrator batches stand at
+  26, the 19:00 batch missed. Record committed locally on
+  ticker-1949-1116-delivery, UNPUSHED, push pending VPS recovery.
+  Record: resource-collection/1949-queue-run.md.
