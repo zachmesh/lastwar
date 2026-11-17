@@ -545,3 +545,29 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   only on planner-0240-1117-delivery, UNPUSHED, push pending
   VPS recovery. No PR opened for records/2026-11-17.
   Record: queue-planning/0240-run.md.
+## 03:33 to about 03:41 - Ticker pass ticker-0333 (failed, 1 unit)
+
+- 03:33 PT, ticker-0333 - failed, 1 unit: harvest
+  harvest-2026-11-17-0203 failed, game window lost. Mac mini
+  ONLINE (last_seen 11:30:28Z), Last War running on the Alliance
+  Gifts screen left over from the ticker-0214 gifts unit. Two
+  back-arrow taps at (40, 897) showed no change: the window was
+  in background mode covered by Chrome and background clicks do
+  not reach game controls, and the coordinates are normalized
+  0-1000, so the tap landed above the button (correct centre
+  about (62, 944)). The pivot click on the green zoom button
+  moved the window to a native fullscreen Space where this
+  control channel cannot see it (ax_windows_empty; list_windows
+  shows no LastWar window; app still running). Recovery failed:
+  Ctrl+Right and F3 went to Finder as navigation keys, Cmd+Tab
+  is refused by the channel as a system command. No HUD read,
+  no bubbles collected, no Armed Truck check, nothing spent.
+  Tracker untouched; next tick re-produces harvest. Own PRs
+  re-checked via the GitHub connector (#711, #708, #425 only,
+  none owned by this job; no PR for records/2026-11-16 or
+  records/2026-11-17). Sync reaped 0 expired 0 due 22 produced
+  0; zombie seeding no-op, event ended. VPS SSH still
+  Permission denied (publickey), about 110.9 hours into the
+  break; no bundle, no push, no PR. Record committed locally
+  on ticker-0333-1117-delivery, UNPUSHED, push pending VPS
+  recovery. Record: resource-collection/0333-queue-run.md.
