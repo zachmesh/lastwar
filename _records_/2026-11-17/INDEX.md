@@ -407,6 +407,31 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   UNPUSHED - push via the standard VPS route once SSH
   returns. Status: failed.
   Full detail in pr-integration/0323-run.md.
+  0428-run.md - pr-integration 0428 run (FAILED, VPS SSH
+  denied; checker NOT DUE, non-batch pass, missed batches
+  stay 28; next batch 07:00 PT). Open PRs 711/708/425
+  unchanged since Nov 12 (heads e3c3dfd0, 2f59c270,
+  4f41cdd6); merge-tree exit 0 for all three against main
+  a858a0fca (trees f46bfda1, e05ec8b5, 08e8515a, identical
+  to all prior probes). PR comment detail not re-read
+  this pass (call-read-tool rejects pull_request_read,
+  verified at the 0000 pass); newest-comment facts
+  carried forward from the 0323 pass, verified only by
+  unchanged updated_at and head SHAs - nothing new
+  addressed to this pass. PR 711 feedback stands (no
+  repeat comment due); PR 425 still owner-gated
+  (OD-20261108-01 open, re-read stands from the 0015
+  pass). Records branches: 13 via ls-remote, latest
+  records/2026-11-12, none for 11-13 to 11-17 on the
+  remote, so no new records PR. Containment re-verified
+  this pass: only records/2026-11-12 carries commits
+  beyond main and it already has open PR 708. Local
+  records/2026-11-17 exists (0000 pass, tip 6450539111
+  with the 0323 run record), UNPUSHED, push pending VPS
+  recovery. This record committed locally on
+  records/2026-11-17, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/0428-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
