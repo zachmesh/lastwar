@@ -471,6 +471,11 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   carried forward from the 0845 pass, verified only by
   records/2026-11-17 exists (0000 pass), UNPUSHED, push
   Full detail in pr-integration/0945-run.md.
+  1100-run.md - pr-integration 1100 run (FAILED, VPS SSH
+  denied; checker DUE, batch pass, merge blocked, missed
+  batches now 30, 11:00 batch missed). Open PRs 711/708/425
+  carried forward from the 0945 pass, verified only by
+  Full detail in pr-integration/1100-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
