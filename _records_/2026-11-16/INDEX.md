@@ -2553,3 +2553,38 @@ Record: knowledge-organization/0332-run.md.
   stand at 25, the 19:00 batch will miss as well. Record committed
   locally on ticker-1604-1116-delivery, UNPUSHED, push pending VPS
   recovery. Record: vip-rewards/1604-queue-run.md.
+## 16:15 to about 16:28 - PR integration 1600 run, FAILED (VPS SSH unreachable; checker NOT DUE, non-batch pass, 15:00 batch missed - 25th missed batch)
+
+- PR-integrator pass pr-integration-2026-11-16-1600.
+  FAILED: VPS SSH returns "Permission denied (publickey)" -
+  the 2026-11-12 ~/.ssh loss is still unrepaired (owner
+  chose the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 99.5 hours). Ninety-third consecutive
+  failed integrator pass. No merges, no comments, no
+  records PR opened. Checker _tools_/records_batch.py
+  (local fallback from main a858a0fca) reports NOT DUE at
+  the trigger time 16.00.54 PT, at execution start
+  16.15.24 PT and at clock time - this pass is a NON-batch
+  pass; the 15.00 window closed with no integrator pass
+  inside it, so this pass counts the 15.00 batch as the
+  twenty-fifth missed batch, reconciling the one-pass lag
+  the 1500 pass noted (ticker-1604 already counts 25).
+  Open PRs 711/708/425 unchanged since Nov 12 (heads
+  e3c3dfd0, 2f59c270, 4f41cdd6); merge-tree exit 0 for all
+  three against main a858a0fca (trees f46bfda1, e05ec8b5,
+  08e8515a, identical to all prior probes). PR comments
+  read directly from the public REST API this pass: 711
+  newest is the 2026-11-12 integrator review, 708 has
+  none, 425 newest is the 2026-11-12 1126 re-verification
+  (135 comments) - nothing new addressed to this pass.
+  PR 711 feedback stands (no repeat comment due); PR 425
+  still owner-gated (OD-20261108-01 open, re-read stands
+  from the 1232 tool-development run today). Records
+  branches: 13 via ls-remote, latest records/2026-11-12,
+  none for 11-13 to 11-16 on the remote, so no new
+  records PR; next batch point 19.00 PT. Mac mini still
+  offline (last_seen 05:19 PT Nov 15, about 35h stale per
+  the ticker-1604 entry). This record committed locally
+  on records/2026-11-16, UNPUSHED - push via the
+  standard VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/1600-run.md.
