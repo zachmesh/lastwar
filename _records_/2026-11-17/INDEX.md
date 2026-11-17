@@ -196,3 +196,37 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   planner-0040-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17.
   Record: queue-planning/0040-run.md.
+## 02:15 to about 02:28 - PR integration pass
+
+- Integrator pass pr-integration-2026-11-17-0215.
+  FAILED, one hundred and second consecutive failure for
+  the same break: VPS SSH publickey rejected once (about
+  02:19 PT; the rejection is server-side), no merges, no
+  comments, no records PR opened. NON-BATCH pass for
+  records purposes: the checker
+  (_tools_/records_batch.py) reports NOT DUE at the
+  scheduled pass start 02:15:54 PT (exit 1, outside
+  every batch window), at clock time and merge-aware -
+  so no batch merge was owed and missed batches stay 27;
+  next batch point 03:00 PT. Open PRs 711/708/425
+  unchanged since Nov 12 (heads e3c3dfd0, 2f59c270,
+  4f41cdd6); merge-tree exit 0 for all three against
+  main a858a0fca (trees f46bfda1, e05ec8b5, 08e8515a,
+  identical to all prior probes). PR comment detail not
+  re-read this pass (call-read-tool rejects
+  pull_request_read, verified at the 0000 pass);
+  newest-comment facts carried forward from the 0000
+  pass, verified only by unchanged updated_at and head
+  SHAs - nothing new addressed to this pass. PR 711
+  feedback stands (no repeat comment due); PR 425 still
+  owner-gated (OD-20261108-01 open, re-read stands from
+  the 0015 pass). Records branches: 13 via public API,
+  latest records/2026-11-12, none for 11-13 to 11-17 on
+  the remote, so no new records PR. Local
+  records/2026-11-17 exists (0000 pass, tip a6eeaf4f29)
+  and ticker-0101-1117-delivery adds the radar record
+  on top - both UNPUSHED, push pending VPS recovery.
+  This record committed locally on records/2026-11-17,
+  UNPUSHED - push via the standard VPS route once SSH
+  returns. Status: failed.
+  Full detail in pr-integration/0215-run.md.
