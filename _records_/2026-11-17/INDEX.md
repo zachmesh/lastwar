@@ -1809,3 +1809,25 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   outage; record committed locally only on
   planner-1040-1117-delivery, no PR for records/2026-11-17.
   Record: queue-planning/1040-run.md.
+## 11:04 to about 11:11 - Queue ticker pass (failed, game window lost)
+
+- 11:04 PT 2026-11-17, ticker-1104 - failed (eleventh consecutive
+  occurrence of the fullscreen-Space window loss): harvest
+  unit harvest-2026-11-17-1003 claimed 11:05 and completed
+  failed after 304 seconds; Mac mini online, LastWar running,
+  but no LastWar window in list_windows, open_app
+  outcome_unknown twice, activate ax_windows_empty, and an R2
+  pivot (Chrome activate, control-right Space switch) failed
+  at window selection with geometry_mismatch /
+  observation_required - no input dispatched. No game unit has
+  executed since ticker-0214 gifts at 02:14 PT, about nine
+  hours of routine now missed. Sync: reaped 0, expired 4, due
+  22, produced 0, already queued 21; stats inbox 72, claimed 0,
+  done 2325. Zombie chain stays closed. Own PRs re-read from
+  the public GitHub page 18:46Z (#711/#708/#425, none owned by
+  this job). Delivery blocked - VPS SSH still Permission
+  denied (publickey), about 118 hours into the outage; record
+  committed locally only on ticker-1104-1117-delivery,
+  UNPUSHED, push pending VPS recovery. No PR opened for
+  records/2026-11-17. Record:
+  resource-collection/1104-queue-run.md.
