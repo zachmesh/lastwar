@@ -2531,3 +2531,25 @@ Record: knowledge-organization/0332-run.md.
   commit left on local planner-1540-1116-delivery, no PR for
   records/2026-11-16. Record:
   queue-planning/1540-run.md.
+## 16:04 to about 16:25 - Ticker pass (VIP unit failed, Mac mini offline)
+
+- 16:04 PT, ticker-1604 - failed, 1 unit: vip unit
+  vip-2026-11-15-1800 failed on the offline Mac (6 device probes
+  all node_offline, no wake-up path; no VIP work, no claims,
+  nothing spent; tracker untouched; pass stopped after this unit
+  rather than cascading failed units). Twenty-sixth consecutive
+  ticker pass to fail on the offline Mac. Own PRs re-checked via
+  the unauthenticated GitHub REST API (#711, #708, #425 only,
+  heads and updated_at unchanged since Nov 12, none owned by this
+  job; no PR for records/2026-11-16). Sync reaped 0 expired 0 due
+  22 produced 0; completion markers reaped
+  daily-missions-2026-11-15-1800 and scout-2026-11-08-1800; zombie
+  seeding no-op, Glacieradon ended Nov 14. Duel day 1 Radar
+  Training release posture read from tools/duel.py (claims score
+  +30,000 per task) - the release stays missed while the Mac is
+  offline; the duel day runs until 18:00 PT Nov 16, so the window
+  is still open. VPS SSH still Permission denied (publickey),
+  about 99.4 hours into the break; missed integrator batches
+  stand at 25, the 19:00 batch will miss as well. Record committed
+  locally on ticker-1604-1116-delivery, UNPUSHED, push pending VPS
+  recovery. Record: vip-rewards/1604-queue-run.md.
