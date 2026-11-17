@@ -3579,3 +3579,39 @@ Record: knowledge-organization/0332-run.md.
   Ally assists (0/5) and Reward Recovery were not reached before
   the 15 minute cap; the next secrets unit picks them up. Tracker
   untouched (partial). Record: secret-missions/2300-queue-run.md.
+## 23:00 to about 23:04 - PR integration 2300 run, FAILED (VPS SSH unreachable; checker DUE, batch pass, merge blocked, missed batches now 27)
+
+- PR-integrator pass pr-integration-2026-11-16-2300.
+  FAILED: VPS SSH returns "Permission denied (publickey)" -
+  the 2026-11-12 ~/.ssh loss is still unrepaired (owner
+  chose the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 106 hours). Ninety-ninth
+  consecutive failed integrator pass. No merges, no
+  comments, no records PR opened. Checker
+  _tools_/records_batch.py (local fallback from main
+  a858a0fca) reports NOT DUE at the trigger time
+  22.45.54 PT (14 minutes before the 23.00 point) but DUE
+  at clock time about 23.01 PT and merge-aware - batch
+  pass, first pass at or after 23.00, so the 23.00 batch
+  merge of PR 708 was owed and was blocked by the
+  transport break; missed batches now 27 (next batch
+  point 03.00 PT Nov 17). Open PRs 711/708/425 unchanged
+  since Nov 12 (heads e3c3dfd0, 2f59c270, 4f41cdd6);
+  merge-tree exit 0 for all three against main a858a0fca
+  (trees f46bfda1, e05ec8b5, 08e8515a, identical to all
+  prior probes). PR comment detail not re-read this pass
+  (get_pull_request not advertised by the live MCP
+  server); newest-comment facts carried forward from
+  the 1715 REST read and the tool-developer 2232 pass
+  for PR 425, verified only by unchanged updated_at
+  and head SHAs - nothing new addressed to this pass.
+  PR 711 feedback stands (no repeat comment due); PR
+  425 still owner-gated (OD-20261108-01 open, re-read
+  stands from the 0015 pass). Records branches: 13 via
+  ls-remote, latest records/2026-11-12, none for 11-13
+  to 11-16 on the remote, so no new records PR. Mac mini
+  back online per ticker 2102 (21.02 PT) - context only,
+  VPS route still down. This record committed locally on
+  records/2026-11-16, UNPUSHED - push via the standard
+  VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/2300-run.md.
