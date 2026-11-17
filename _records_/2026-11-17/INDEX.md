@@ -1535,3 +1535,24 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   planner-0840-1117-delivery, UNPUSHED, push pending VPS
   recovery. No PR opened for records/2026-11-17.
   Record: queue-planning/0840-run.md.
+## 09:34 to about 09:40 - Queue ticker pass (process failure, eighth consecutive)
+
+- 09:34 PT 2026-11-17, ticker-0934 - process failure (R2, eighth
+  consecutive occurrence): Mac mini online with a fresh last_seen
+  (09:33:34 PT), LastWar running but no window - one fresh session
+  (cc-22), three probe attempts, all identical to the seven prior
+  passes: list_windows shows the same 10 windows, no LastWar entry;
+  open_app "Last War" open_failed (no such installed app);
+  open_app "LastWar" outcome_unknown with re-list unchanged. No
+  unit claimed this pass (probe-before-claim lesson from
+  ticker-0904 applied); radar-2026-11-17-0603 left in inbox. No
+  game unit has run since ticker-0214 gifts at 02:14 PT, about
+  seven and a half hours of routine now missed. Sync: reaped 0,
+  expired 0, due 22, produced 0; zombie chain stays closed. Own
+  PRs re-verified via public list at 17:39Z: #711, #708, #425
+  only, none owned by this job. Tooling Issue filing still owed
+  at VPS recovery. Delivery blocked - VPS SSH still Permission
+  denied (publickey), about 116.9 hours into the outage; record
+  committed locally only on ticker-0934-1117-delivery, UNPUSHED,
+  push pending VPS recovery. No PR opened for records/2026-11-17.
+  Record: queue-ticker/0934-process-failure.md.
