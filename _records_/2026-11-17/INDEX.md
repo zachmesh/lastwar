@@ -467,6 +467,10 @@ description: Day record for 2026-11-17 (America/Los_Angeles) - VPS SSH still dow
   records/2026-11-17 exists (0000 pass, tip 35b90359fc
   with the 0745 run record), UNPUSHED, push pending VPS
   Full detail in pr-integration/0845-run.md.
+  0945-run.md - pr-integration 0945 run (FAILED, VPS SSH
+  carried forward from the 0845 pass, verified only by
+  records/2026-11-17 exists (0000 pass), UNPUSHED, push
+  Full detail in pr-integration/0945-run.md.
 ## 02:32 to about 02:36 - Tool developer pass (no-op, VPS SSH down)
 
 - 02:32 PT 2026-11-17, tool-development-0232 - no-op: VPS SSH
