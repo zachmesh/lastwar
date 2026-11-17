@@ -3542,3 +3542,40 @@ Record: knowledge-organization/0332-run.md.
   for records/2026-11-16. Thirty-ninth consecutive
   planner run failing to commit, so a Chinese chat report
   is owed. Record: queue-planning/2140-run.md.
+## 22:36 to about 22:41 - Ticker pass (partial delivery)
+
+- 22:36 PT, ticker-2236 - 1 unit: passes partial. Mac mini online,
+  Last War driven live; base HUD unchanged from ticker-2102 (food
+  639.6M, iron 1.0G, coin 27.7M, power 149,482,045). Passes unit
+  passes-2026-11-16-1857 partial: nothing claimed - Weekly Pass
+  Free Supply chest already Claimed, S2 Drone Components and S1
+  Drone Parts weekly pass cards are $4.99 purchase offers (passes
+  lapsed since 2026-10-25, no Daily Pickup claimable), Super
+  Monthly Pass daily gift already Claimed (Squad 4 Lv.20, 5 days
+  and 5 rewards left); the Legendary Take All $19.99 row was seen
+  and left alone. Hot Deals shows no free pack; its check-in FREE
+  GIFT banner could not be opened - the carousel rotates on its
+  own, banner taps advance it, and three Go taps produced no
+  change (no Accessibility label for Go; background clicks do not
+  reach the bottom button) - the gift is unverified and may still
+  be claimable; next passes unit should try the base Events screen
+  instead. Tracker untouched (partial). Own PRs re-checked via the
+  public PR list (#711, #708, #425 only, none owned by this job;
+  no PR for records/2026-11-16). Sync reaped 0 expired 8 due 22
+  produced 0; zombie seeding no-op, event ended. VPS SSH still
+  Permission denied (publickey), about 105.8 hours into the break;
+  no bundle, no push, no PR. Records committed locally on
+  ticker-2236-1116-delivery, UNPUSHED, push pending VPS recovery.
+  Record: shop-claims/2240-queue-run.md.
+
+- 22:41 PT, ticker-2236 (continued) - 1 unit: secrets partial.
+  Secret Command Post: one Claim collected all finished tasks - 7
+  stamped PERFECT, including 3 UR tasks (Rescue Test Subject x2,
+  Rescue Missing Agent) worth 75,000 duel points each if day-2
+  completion credits (unverified); visible Hero EXP about 35.9M.
+  Three tasks were plundered by other players (Capture the Oil
+  Depot by [DanG]173 SkySoldier 18:37, Retrieve Raw Materials,
+  Retrieve Agent Profile); Plunder Others stays 0/3, untouched.
+  Ally assists (0/5) and Reward Recovery were not reached before
+  the 15 minute cap; the next secrets unit picks them up. Tracker
+  untouched (partial). Record: secret-missions/2300-queue-run.md.
