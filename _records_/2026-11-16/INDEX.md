@@ -3599,6 +3599,23 @@ Record: knowledge-organization/0332-run.md.
   for records/2026-11-16. Fortieth consecutive planner run
   failing to commit, so a Chinese chat report is owed.
   Record: queue-planning/2240-run.md.
+- 23:48 PT, ticker-2348 - 1 unit: harvest partial. Mac mini online,
+  Last War driven live; base HUD read twice, unchanged (food
+  643.5M, iron 1.0G, coin 27.7M, power 149,482,045, stamina 88-89).
+  Two candidate icons tapped at measured centres and neither
+  collected: the yellow diamond over the right-side building and
+  the small yellow icon over the purple building are not ready
+  bubbles - the next harvest unit must not re-tap them. A deselect
+  tap after a camera pan opened a "want to retrait it?" confirm
+  dialog; Cancel tapped at once, nothing retreated or spent (rule
+  R2 lesson: never tap blind after a pan, re-ground first).
+  Full-base sweep and Armed Truck check unexecuted at the 15 minute
+  cap. Tracker untouched (partial). Own PRs re-checked via the
+  GitHub connector (#711, #708, #425 only, none owned by this job;
+  no PR for records/2026-11-16). Sync reaped 0 expired 0 due 22
+  Permission denied (publickey), about 106.4 hours into the break;
+  ticker-2348-1116-delivery, UNPUSHED, push pending VPS recovery.
+  Record: resource-collection/2348-queue-run.md.
 ## 23:00 to about 23:04 - PR integration 2300 run, FAILED (VPS SSH unreachable; checker DUE, batch pass, merge blocked, missed batches now 27)
 
 - PR-integrator pass pr-integration-2026-11-16-2300.
