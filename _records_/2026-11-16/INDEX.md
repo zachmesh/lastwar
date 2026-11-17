@@ -2975,3 +2975,35 @@ Record: knowledge-organization/0332-run.md.
   records/2026-11-16. Thirty-sixth consecutive planner run
   failing to commit, so a Chinese chat report is owed.
   Record: queue-planning/1740-run.md.
+## 18:40 to about 18:46 - PR integration 1830 run, FAILED (VPS SSH unreachable; checker NOT DUE, non-batch pass, missed batches stay 25)
+
+- PR-integrator pass pr-integration-2026-11-16-1830.
+  FAILED: VPS SSH returns "Permission denied (publickey)" -
+  the 2026-11-12 ~/.ssh loss is still unrepaired (owner
+  chose the IONOS-console recovery on 2026-11-14, not yet
+  landed after about 101 hours). Ninety-fifth consecutive
+  failed integrator pass. No merges, no comments, no
+  records PR opened. Checker _tools_/records_batch.py
+  (local fallback from main a858a0fca) reports NOT DUE at
+  the trigger time 18.30.54 PT, at clock time about
+  18.42 PT and merge-aware - this pass is a NON-batch
+  pass; missed batches stay 25, next batch point 19.00 PT.
+  Open PRs 711/708/425 unchanged since Nov 12 (heads
+  e3c3dfd0, 2f59c270, 4f41cdd6); merge-tree exit 0 for all
+  three against main a858a0fca (trees f46bfda1, e05ec8b5,
+  08e8515a, identical to all prior probes). PR comment
+  detail not re-read this pass (connector rejects the
+  read tool); newest-comment facts carried forward from
+  the 1715 REST read, verified only by unchanged
+  updated_at and head SHAs - nothing new addressed to
+  this pass. PR 711 feedback stands (no repeat comment
+  due); PR 425 still owner-gated (OD-20261108-01 open,
+  re-read stands from the 0015 pass). Records branches:
+  13 via ls-remote, latest records/2026-11-12, none for
+  11-13 to 11-16 on the remote, so no new records PR.
+  Mac mini still offline (last_seen 05:19 PT Nov 15,
+  about 37h stale; ticker-1704 is the twenty-seventh
+  consecutive failed ticker pass). This record committed
+  locally on records/2026-11-16, UNPUSHED - push via the
+  standard VPS route once SSH returns. Status: failed.
+  Full detail in pr-integration/1830-run.md.
